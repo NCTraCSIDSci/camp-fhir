@@ -1,5 +1,5 @@
 // ${pojo.getPackageDeclaration()}
-package main.templateoutput.Model;
+package main.java.com.campfhir.model;
 // Generated ${date} by Hibernate Tools ${version}
 
 <#assign classbody>

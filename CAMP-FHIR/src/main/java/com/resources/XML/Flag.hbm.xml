@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Jun 6, 2022, 11:02:25 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Flag" optimistic-lock="none" table="Flag">
+        <id name="id" type="string">
+            <column length="64" name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="flagAthr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Flag_Athr"/>
+        </property>
+        <property name="flagCtgryCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Flag_Ctgry_Cdg_Cd"/>
+        </property>
+        <property name="flagCtgryCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Flag_Ctgry_Cdg_Dsply"/>
+        </property>
+        <property name="flagCtgryCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Flag_Ctgry_Cdg_Sys"/>
+        </property>
+        <property name="flagCtgryCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Flag_Ctgry_Cdg_UsrSltd"/>
+        </property>
+        <property name="flagCtgryCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Flag_Ctgry_Cdg_Vrsn"/>
+        </property>
+        <property name="flagCtgryTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Flag_Ctgry_Txt"/>
+        </property>
+        <property name="flagCdCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Flag_Cd_Cdg_Cd"/>
+        </property>
+        <property name="flagCdCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Flag_Cd_Cdg_Dsply"/>
+        </property>
+        <property name="flagCdCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Flag_Cd_Cdg_Sys"/>
+        </property>
+        <property name="flagCdCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Flag_Cd_Cdg_UsrSltd"/>
+        </property>
+        <property name="flagCdCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Flag_Cd_Cdg_Vrsn"/>
+        </property>
+        <property name="flagCdTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Flag_Cd_Txt"/>
+        </property>
+        <property name="flagEnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Flag_Enc"/>
+        </property>
+        <property name="flagIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Flag_Id_Assigner"/>
+        </property>
+        <property name="flagIdPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Flag_Id_Prd_End"/>
+        </property>
+        <property name="flagIdPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Flag_Id_Prd_Strt"/>
+        </property>
+        <property name="flagIdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Flag_Id_Sys"/>
+        </property>
+        <property name="flagIdTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Flag_Id_Typ_Cdg_Cd"/>
+        </property>
+        <property name="flagIdTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Flag_Id_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="flagIdTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Flag_Id_Typ_Cdg_Sys"/>
+        </property>
+        <property name="flagIdTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Flag_Id_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="flagIdTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Flag_Id_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="flagIdTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Flag_Id_Typ_Txt"/>
+        </property>
+        <property name="flagIdUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Flag_Id_Use"/>
+        </property>
+        <property name="flagIdVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Flag_Id_Vl"/>
+        </property>
+        <property name="flagPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Flag_Prd_End"/>
+        </property>
+        <property name="flagPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Flag_Prd_Strt"/>
+        </property>
+        <property name="flagSts" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Flag_Sts"/>
+        </property>
+        <property name="flagSbjct" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Flag_Sbjct"/>
+        </property>
+    </class>
+</hibernate-mapping>

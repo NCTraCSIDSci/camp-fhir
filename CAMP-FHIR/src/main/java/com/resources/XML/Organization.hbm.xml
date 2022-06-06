@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Jun 6, 2022, 11:02:25 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Organization" optimistic-lock="none" table="Organization">
+        <id name="id" type="string">
+            <column length="64" name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="orgnztnActive" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Active"/>
+        </property>
+        <property name="orgnztnAddrCity" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Addr_City"/>
+        </property>
+        <property name="orgnztnAddrCntry" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Addr_Cntry"/>
+        </property>
+        <property name="orgnztnAddrDistrict" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Addr_District"/>
+        </property>
+        <property name="orgnztnAddrLine" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Addr_Line"/>
+        </property>
+        <property name="orgnztnAddrPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Addr_Prd_End"/>
+        </property>
+        <property name="orgnztnAddrPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Addr_Prd_Strt"/>
+        </property>
+        <property name="orgnztnAddrPostalCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Addr_PostalCd"/>
+        </property>
+        <property name="orgnztnAddrState" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Addr_State"/>
+        </property>
+        <property name="orgnztnAddrTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Addr_Txt"/>
+        </property>
+        <property name="orgnztnAddrTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Addr_Typ"/>
+        </property>
+        <property name="orgnztnAddrUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Addr_Use"/>
+        </property>
+        <property name="orgnztnAlias" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Alias"/>
+        </property>
+        <property name="orgnztnCntctAddrCity" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Cntct_Addr_City"/>
+        </property>
+        <property name="orgnztnCntctAddrCntry" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Cntct_Addr_Cntry"/>
+        </property>
+        <property name="orgnztnCntctAddrDistrict" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Cntct_Addr_District"/>
+        </property>
+        <property name="orgnztnCntctAddrLine" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Cntct_Addr_Line"/>
+        </property>
+        <property name="orgnztnCntctAddrPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Cntct_Addr_Prd_End"/>
+        </property>
+        <property name="orgnztnCntctAddrPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Cntct_Addr_Prd_Strt"/>
+        </property>
+        <property name="orgnztnCntctAddrPostalCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Cntct_Addr_PostalCd"/>
+        </property>
+        <property name="orgnztnCntctAddrState" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Cntct_Addr_State"/>
+        </property>
+        <property name="orgnztnCntctAddrTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Cntct_Addr_Txt"/>
+        </property>
+        <property name="orgnztnCntctAddrTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Cntct_Addr_Typ"/>
+        </property>
+        <property name="orgnztnCntctAddrUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Cntct_Addr_Use"/>
+        </property>
+        <property name="orgnztnCntctNmFmly" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Cntct_Nm_Fmly"/>
+        </property>
+        <property name="orgnztnCntctNmGiven" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Cntct_Nm_Given"/>
+        </property>
+        <property name="orgnztnCntctNmPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Cntct_Nm_Prd_End"/>
+        </property>
+        <property name="orgnztnCntctNmPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Cntct_Nm_Prd_Strt"/>
+        </property>
+        <property name="orgnztnCntctNmPrefix" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Cntct_Nm_Prefix"/>
+        </property>
+        <property name="orgnztnCntctNmSuffix" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Cntct_Nm_Suffix"/>
+        </property>
+        <property name="orgnztnCntctNmTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Cntct_Nm_Txt"/>
+        </property>
+        <property name="orgnztnCntctNmUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Cntct_Nm_Use"/>
+        </property>
+        <property name="orgnztnCntctPrpseCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Cntct_Prpse_Cdg_Cd"/>
+        </property>
+        <property name="orgnztnCntctPrpseCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Cntct_Prpse_Cdg_Dsply"/>
+        </property>
+        <property name="orgnztnCntctPrpseCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Cntct_Prpse_Cdg_Sys"/>
+        </property>
+        <property name="orgnztnCntctPrpseCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Cntct_Prpse_Cdg_UsrSltd"/>
+        </property>
+        <property name="orgnztnCntctPrpseCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Cntct_Prpse_Cdg_Vrsn"/>
+        </property>
+        <property name="orgnztnCntctPrpseTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Cntct_Prpse_Txt"/>
+        </property>
+        <property name="orgnztnCntctTlcmPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Cntct_Tlcm_Prd_End"/>
+        </property>
+        <property name="orgnztnCntctTlcmPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Cntct_Tlcm_Prd_Strt"/>
+        </property>
+        <property name="orgnztnCntctTlcmRnk" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Cntct_Tlcm_Rnk"/>
+        </property>
+        <property name="orgnztnCntctTlcmSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Cntct_Tlcm_Sys"/>
+        </property>
+        <property name="orgnztnCntctTlcmUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Cntct_Tlcm_Use"/>
+        </property>
+        <property name="orgnztnCntctTlcmVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Cntct_Tlcm_Vl"/>
+        </property>
+        <property name="orgnztnEndpoint" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Endpoint"/>
+        </property>
+        <property name="orgnztnIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Id_Assigner"/>
+        </property>
+        <property name="orgnztnIdPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Id_Prd_End"/>
+        </property>
+        <property name="orgnztnIdPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Id_Prd_Strt"/>
+        </property>
+        <property name="orgnztnIdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Id_Sys"/>
+        </property>
+        <property name="orgnztnIdTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Id_Typ_Cdg_Cd"/>
+        </property>
+        <property name="orgnztnIdTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Id_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="orgnztnIdTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Id_Typ_Cdg_Sys"/>
+        </property>
+        <property name="orgnztnIdTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Id_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="orgnztnIdTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Id_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="orgnztnIdTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Id_Typ_Txt"/>
+        </property>
+        <property name="orgnztnIdUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Id_Use"/>
+        </property>
+        <property name="orgnztnIdVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Id_Vl"/>
+        </property>
+        <property name="orgnztnNm" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Nm"/>
+        </property>
+        <property name="orgnztnPartOf" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_PartOf"/>
+        </property>
+        <property name="orgnztnTlcmPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Tlcm_Prd_End"/>
+        </property>
+        <property name="orgnztnTlcmPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Tlcm_Prd_Strt"/>
+        </property>
+        <property name="orgnztnTlcmRnk" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Tlcm_Rnk"/>
+        </property>
+        <property name="orgnztnTlcmSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Tlcm_Sys"/>
+        </property>
+        <property name="orgnztnTlcmUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Tlcm_Use"/>
+        </property>
+        <property name="orgnztnTlcmVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Tlcm_Vl"/>
+        </property>
+        <property name="orgnztnTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Typ_Cdg_Cd"/>
+        </property>
+        <property name="orgnztnTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="orgnztnTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Typ_Cdg_Sys"/>
+        </property>
+        <property name="orgnztnTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="orgnztnTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="orgnztnTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Orgnztn_Typ_Txt"/>
+        </property>
+    </class>
+</hibernate-mapping>

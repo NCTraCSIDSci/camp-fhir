@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Feb 22, 2022, 7:13:58 PM by Hibernate Tools 5.6.1.Final
+// Generated Jun 6, 2022, 11:02:30 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -11,1523 +11,1176 @@ public class Condition  implements java.io.Serializable {
 
 
      private String id;
-     private String conditionAbatement;
-     private String conditionAbatementDateTime;
-     private String conditionAbatementPeriodEnd;
-     private String conditionAbatementPeriodStart;
-     private String conditionAbatementRangeHighCode;
-     private String conditionAbatementRangeHighCompartrCode;
-     private String conditionAbatementRangeHighSystem;
-     private String conditionAbatementRangeHighUnit;
-     private String conditionAbatementRangeHighValue;
-     private String conditionAbatementRangeLowCode;
-     private String conditionAbatementRangeLowCompartrCode;
-     private String conditionAbatementRangeLowSystem;
-     private String conditionAbatementRangeLowUnit;
-     private String conditionAbatementRangeLowValue;
-     private String conditionAbatementString;
-     private String conditionAsserter;
-     private String conditionBodySiteCodingCode;
-     private String conditionBodySiteCodingDisplay;
-     private String conditionBodySiteCodingSystem;
-     private String conditionBodySiteCodingUsrslt;
-     private String conditionBodySiteCodingVersion;
-     private String conditionBodySiteText;
-     private String conditionCategoryCodingCode;
-     private String conditionCategoryCodingDisplay;
-     private String conditionCategoryCodingSystem;
-     private String conditionCategoryCodingUsrslt;
-     private String conditionCategoryCodingVersion;
-     private String conditionCategoryText;
-     private String conditionClinicalStatusCodingCode;
-     private String conditionClinicalStatusCodingDisplay;
-     private String conditionClinicalStatusCodingSystem;
-     private String conditionClinicalStatusCodingUsrslt;
-     private String conditionClinicalStatusCodingVersion;
-     private String conditionClinicalStatusText;
-     private String conditionCodeCodingCode;
-     private String conditionCodeCodingDisplay;
-     private String conditionCodeCodingSystem;
-     private String conditionCodeCodingUsrslt;
-     private String conditionCodeCodingVersion;
-     private String conditionCodeText;
-     private String conditionEnc;
-     private String conditionEvidenceCodeCodingCode;
-     private String conditionEvidenceCodeCodingDisplay;
-     private String conditionEvidenceCodeCodingSystem;
-     private String conditionEvidenceCodeCodingUsrslt;
-     private String conditionEvidenceCodeCodingVersion;
-     private String conditionEvidenceCodeText;
-     private String conditionEvidenceDetail;
-     private String conditionIdAssigner;
-     private String conditionIdPeriodEnd;
-     private String conditionIdPeriodStart;
-     private String conditionIdSystem;
-     private String conditionIdTypeCodingCode;
-     private String conditionIdTypeCodingDisplay;
-     private String conditionIdTypeCodingSystem;
-     private String conditionIdTypeCodingUsrslt;
-     private String conditionIdTypeCodingVersion;
-     private String conditionIdTypeText;
-     private String conditionIdUseCode;
-     private String conditionIdValue;
-     private String conditionNoteAuthorReference;
-     private String conditionNoteAuthorString;
-     private String conditionNoteText;
-     private String conditionNoteTime;
-     private String conditionOn;
-     private String conditionOnDateTime;
-     private String conditionOnPeriodEnd;
-     private String conditionOnPeriodStart;
-     private String conditionOnRangeHighCode;
-     private String conditionOnRangeHighCompartrCode;
-     private String conditionOnRangeHighSystem;
-     private String conditionOnRangeHighUnit;
-     private String conditionOnRangeHighValue;
-     private String conditionOnRangeLowCode;
-     private String conditionOnRangeLowCompartrCode;
-     private String conditionOnRangeLowSystem;
-     private String conditionOnRangeLowUnit;
-     private String conditionOnRangeLowValue;
-     private String conditionOnString;
-     private String conditionRecordedDate;
-     private String conditionRecorder;
-     private String conditionSeverityCodingCode;
-     private String conditionSeverityCodingDisplay;
-     private String conditionSeverityCodingSystem;
-     private String conditionSeverityCodingUsrslt;
-     private String conditionSeverityCodingVersion;
-     private String conditionSeverityText;
-     private String conditionStageAssessment;
-     private String conditionStageSummaryCodingCode;
-     private String conditionStageSummaryCodingDisplay;
-     private String conditionStageSummaryCodingSystem;
-     private String conditionStageSummaryCodingUsrslt;
-     private String conditionStageSummaryCodingVersion;
-     private String conditionStageSummaryText;
-     private String conditionStageTypeCodingCode;
-     private String conditionStageTypeCodingDisplay;
-     private String conditionStageTypeCodingSystem;
-     private String conditionStageTypeCodingUsrslt;
-     private String conditionStageTypeCodingVersion;
-     private String conditionStageTypeText;
-     private String conditionSubject;
-     private String conditionVerificationStatusCodingCode;
-     private String conditionVerificationStatusCodingDisplay;
-     private String conditionVerificationStatusCodingSystem;
-     private String conditionVerificationStatusCodingUsrslt;
-     private String conditionVerificationStatusCodingVersion;
-     private String conditionVerificationStatusText;
+     private String cndtnAbatementDtTimeTyp;
+     private String cndtnAbatementPrdEnd;
+     private String cndtnAbatementPrdStrt;
+     private String cndtnAbatementRngHiCd;
+     private String cndtnAbatementRngHiCmprtr;
+     private String cndtnAbatementRngHiSys;
+     private String cndtnAbatementRngHiUnt;
+     private String cndtnAbatementRngHiVl;
+     private String cndtnAbatementRngLwCd;
+     private String cndtnAbatementRngLwCmprtr;
+     private String cndtnAbatementRngLwSys;
+     private String cndtnAbatementRngLwUnt;
+     private String cndtnAbatementRngLwVl;
+     private String cndtnAbatementStrgTyp;
+     private String cndtnAsserter;
+     private String cndtnBodySiteCdgCd;
+     private String cndtnBodySiteCdgDsply;
+     private String cndtnBodySiteCdgSys;
+     private String cndtnBodySiteCdgUsrSltd;
+     private String cndtnBodySiteCdgVrsn;
+     private String cndtnBodySiteTxt;
+     private String cndtnCtgryCdgCd;
+     private String cndtnCtgryCdgDsply;
+     private String cndtnCtgryCdgSys;
+     private String cndtnCtgryCdgUsrSltd;
+     private String cndtnCtgryCdgVrsn;
+     private String cndtnCtgryTxt;
+     private String cndtnClnclStsCdgCd;
+     private String cndtnClnclStsCdgDsply;
+     private String cndtnClnclStsCdgSys;
+     private String cndtnClnclStsCdgUsrSltd;
+     private String cndtnClnclStsCdgVrsn;
+     private String cndtnClnclStsTxt;
+     private String cndtnCdCdgCd;
+     private String cndtnCdCdgDsply;
+     private String cndtnCdCdgSys;
+     private String cndtnCdCdgUsrSltd;
+     private String cndtnCdCdgVrsn;
+     private String cndtnCdTxt;
+     private String cndtnEnc;
+     private String cndtnEvdnceCdCdgCd;
+     private String cndtnEvdnceCdCdgDsply;
+     private String cndtnEvdnceCdCdgSys;
+     private String cndtnEvdnceCdCdgUsrSltd;
+     private String cndtnEvdnceCdCdgVrsn;
+     private String cndtnEvdnceCdTxt;
+     private String cndtnEvdnceDtl;
+     private String cndtnIdAssigner;
+     private String cndtnIdPrdEnd;
+     private String cndtnIdPrdStrt;
+     private String cndtnIdSys;
+     private String cndtnIdTypCdgCd;
+     private String cndtnIdTypCdgDsply;
+     private String cndtnIdTypCdgSys;
+     private String cndtnIdTypCdgUsrSltd;
+     private String cndtnIdTypCdgVrsn;
+     private String cndtnIdTypTxt;
+     private String cndtnIdUse;
+     private String cndtnIdVl;
+     private String cndtnNtAthrRfrnc;
+     private String cndtnNtAthrStrgTyp;
+     private String cndtnNtTxt;
+     private String cndtnNtTime;
+     private String cndtnOnDtTimeTyp;
+     private String cndtnOnPrdEnd;
+     private String cndtnOnPrdStrt;
+     private String cndtnOnRngHiCd;
+     private String cndtnOnRngHiCmprtr;
+     private String cndtnOnRngHiSys;
+     private String cndtnOnRngHiUnt;
+     private String cndtnOnRngHiVl;
+     private String cndtnOnRngLwCd;
+     private String cndtnOnRngLwCmprtr;
+     private String cndtnOnRngLwSys;
+     private String cndtnOnRngLwUnt;
+     private String cndtnOnRngLwVl;
+     private String cndtnOnStrgTyp;
+     private String cndtnRecordedDt;
+     private String cndtnRecorder;
+     private String cndtnSeverityCdgCd;
+     private String cndtnSeverityCdgDsply;
+     private String cndtnSeverityCdgSys;
+     private String cndtnSeverityCdgUsrSltd;
+     private String cndtnSeverityCdgVrsn;
+     private String cndtnSeverityTxt;
+     private String cndtnStageAssmnt;
+     private String cndtnStageSummaryCdgCd;
+     private String cndtnStageSummaryCdgDsply;
+     private String cndtnStageSummaryCdgSys;
+     private String cndtnStageSummaryCdgUsrSltd;
+     private String cndtnStageSummaryCdgVrsn;
+     private String cndtnStageSummaryTxt;
+     private String cndtnStageTypCdgCd;
+     private String cndtnStageTypCdgDsply;
+     private String cndtnStageTypCdgSys;
+     private String cndtnStageTypCdgUsrSltd;
+     private String cndtnStageTypCdgVrsn;
+     private String cndtnStageTypTxt;
+     private String cndtnSbjct;
+     private String cndtnVrfctnStsCdgCd;
+     private String cndtnVrfctnStsCdgDsply;
+     private String cndtnVrfctnStsCdgSys;
+     private String cndtnVrfctnStsCdgUsrSltd;
+     private String cndtnVrfctnStsCdgVrsn;
+     private String cndtnVrfctnStsTxt;
 
     public Condition() {
     }
 
-    public Condition(String conditionAbatement, String conditionAbatementDateTime, String conditionAbatementPeriodEnd, String conditionAbatementPeriodStart, String conditionAbatementRangeHighCode, String conditionAbatementRangeHighCompartrCode, String conditionAbatementRangeHighSystem, String conditionAbatementRangeHighUnit, String conditionAbatementRangeHighValue, String conditionAbatementRangeLowCode, String conditionAbatementRangeLowCompartrCode, String conditionAbatementRangeLowSystem, String conditionAbatementRangeLowUnit, String conditionAbatementRangeLowValue, String conditionAbatementString, String conditionAsserter, String conditionBodySiteCodingCode, String conditionBodySiteCodingDisplay, String conditionBodySiteCodingSystem, String conditionBodySiteCodingUsrslt, String conditionBodySiteCodingVersion, String conditionBodySiteText, String conditionCategoryCodingCode, String conditionCategoryCodingDisplay, String conditionCategoryCodingSystem, String conditionCategoryCodingUsrslt, String conditionCategoryCodingVersion, String conditionCategoryText, String conditionClinicalStatusCodingCode, String conditionClinicalStatusCodingDisplay, String conditionClinicalStatusCodingSystem, String conditionClinicalStatusCodingUsrslt, String conditionClinicalStatusCodingVersion, String conditionClinicalStatusText, String conditionCodeCodingCode, String conditionCodeCodingDisplay, String conditionCodeCodingSystem, String conditionCodeCodingUsrslt, String conditionCodeCodingVersion, String conditionCodeText, String conditionEnc, String conditionEvidenceCodeCodingCode, String conditionEvidenceCodeCodingDisplay, String conditionEvidenceCodeCodingSystem, String conditionEvidenceCodeCodingUsrslt, String conditionEvidenceCodeCodingVersion, String conditionEvidenceCodeText, String conditionEvidenceDetail, String conditionIdAssigner, String conditionIdPeriodEnd, String conditionIdPeriodStart, String conditionIdSystem, String conditionIdTypeCodingCode, String conditionIdTypeCodingDisplay, String conditionIdTypeCodingSystem, String conditionIdTypeCodingUsrslt, String conditionIdTypeCodingVersion, String conditionIdTypeText, String conditionIdUseCode, String conditionIdValue, String conditionNoteAuthorReference, String conditionNoteAuthorString, String conditionNoteText, String conditionNoteTime, String conditionOn, String conditionOnDateTime, String conditionOnPeriodEnd, String conditionOnPeriodStart, String conditionOnRangeHighCode, String conditionOnRangeHighCompartrCode, String conditionOnRangeHighSystem, String conditionOnRangeHighUnit, String conditionOnRangeHighValue, String conditionOnRangeLowCode, String conditionOnRangeLowCompartrCode, String conditionOnRangeLowSystem, String conditionOnRangeLowUnit, String conditionOnRangeLowValue, String conditionOnString, String conditionRecordedDate, String conditionRecorder, String conditionSeverityCodingCode, String conditionSeverityCodingDisplay, String conditionSeverityCodingSystem, String conditionSeverityCodingUsrslt, String conditionSeverityCodingVersion, String conditionSeverityText, String conditionStageAssessment, String conditionStageSummaryCodingCode, String conditionStageSummaryCodingDisplay, String conditionStageSummaryCodingSystem, String conditionStageSummaryCodingUsrslt, String conditionStageSummaryCodingVersion, String conditionStageSummaryText, String conditionStageTypeCodingCode, String conditionStageTypeCodingDisplay, String conditionStageTypeCodingSystem, String conditionStageTypeCodingUsrslt, String conditionStageTypeCodingVersion, String conditionStageTypeText, String conditionSubject, String conditionVerificationStatusCodingCode, String conditionVerificationStatusCodingDisplay, String conditionVerificationStatusCodingSystem, String conditionVerificationStatusCodingUsrslt, String conditionVerificationStatusCodingVersion, String conditionVerificationStatusText) {
-       this.conditionAbatement = conditionAbatement;
-       this.conditionAbatementDateTime = conditionAbatementDateTime;
-       this.conditionAbatementPeriodEnd = conditionAbatementPeriodEnd;
-       this.conditionAbatementPeriodStart = conditionAbatementPeriodStart;
-       this.conditionAbatementRangeHighCode = conditionAbatementRangeHighCode;
-       this.conditionAbatementRangeHighCompartrCode = conditionAbatementRangeHighCompartrCode;
-       this.conditionAbatementRangeHighSystem = conditionAbatementRangeHighSystem;
-       this.conditionAbatementRangeHighUnit = conditionAbatementRangeHighUnit;
-       this.conditionAbatementRangeHighValue = conditionAbatementRangeHighValue;
-       this.conditionAbatementRangeLowCode = conditionAbatementRangeLowCode;
-       this.conditionAbatementRangeLowCompartrCode = conditionAbatementRangeLowCompartrCode;
-       this.conditionAbatementRangeLowSystem = conditionAbatementRangeLowSystem;
-       this.conditionAbatementRangeLowUnit = conditionAbatementRangeLowUnit;
-       this.conditionAbatementRangeLowValue = conditionAbatementRangeLowValue;
-       this.conditionAbatementString = conditionAbatementString;
-       this.conditionAsserter = conditionAsserter;
-       this.conditionBodySiteCodingCode = conditionBodySiteCodingCode;
-       this.conditionBodySiteCodingDisplay = conditionBodySiteCodingDisplay;
-       this.conditionBodySiteCodingSystem = conditionBodySiteCodingSystem;
-       this.conditionBodySiteCodingUsrslt = conditionBodySiteCodingUsrslt;
-       this.conditionBodySiteCodingVersion = conditionBodySiteCodingVersion;
-       this.conditionBodySiteText = conditionBodySiteText;
-       this.conditionCategoryCodingCode = conditionCategoryCodingCode;
-       this.conditionCategoryCodingDisplay = conditionCategoryCodingDisplay;
-       this.conditionCategoryCodingSystem = conditionCategoryCodingSystem;
-       this.conditionCategoryCodingUsrslt = conditionCategoryCodingUsrslt;
-       this.conditionCategoryCodingVersion = conditionCategoryCodingVersion;
-       this.conditionCategoryText = conditionCategoryText;
-       this.conditionClinicalStatusCodingCode = conditionClinicalStatusCodingCode;
-       this.conditionClinicalStatusCodingDisplay = conditionClinicalStatusCodingDisplay;
-       this.conditionClinicalStatusCodingSystem = conditionClinicalStatusCodingSystem;
-       this.conditionClinicalStatusCodingUsrslt = conditionClinicalStatusCodingUsrslt;
-       this.conditionClinicalStatusCodingVersion = conditionClinicalStatusCodingVersion;
-       this.conditionClinicalStatusText = conditionClinicalStatusText;
-       this.conditionCodeCodingCode = conditionCodeCodingCode;
-       this.conditionCodeCodingDisplay = conditionCodeCodingDisplay;
-       this.conditionCodeCodingSystem = conditionCodeCodingSystem;
-       this.conditionCodeCodingUsrslt = conditionCodeCodingUsrslt;
-       this.conditionCodeCodingVersion = conditionCodeCodingVersion;
-       this.conditionCodeText = conditionCodeText;
-       this.conditionEnc = conditionEnc;
-       this.conditionEvidenceCodeCodingCode = conditionEvidenceCodeCodingCode;
-       this.conditionEvidenceCodeCodingDisplay = conditionEvidenceCodeCodingDisplay;
-       this.conditionEvidenceCodeCodingSystem = conditionEvidenceCodeCodingSystem;
-       this.conditionEvidenceCodeCodingUsrslt = conditionEvidenceCodeCodingUsrslt;
-       this.conditionEvidenceCodeCodingVersion = conditionEvidenceCodeCodingVersion;
-       this.conditionEvidenceCodeText = conditionEvidenceCodeText;
-       this.conditionEvidenceDetail = conditionEvidenceDetail;
-       this.conditionIdAssigner = conditionIdAssigner;
-       this.conditionIdPeriodEnd = conditionIdPeriodEnd;
-       this.conditionIdPeriodStart = conditionIdPeriodStart;
-       this.conditionIdSystem = conditionIdSystem;
-       this.conditionIdTypeCodingCode = conditionIdTypeCodingCode;
-       this.conditionIdTypeCodingDisplay = conditionIdTypeCodingDisplay;
-       this.conditionIdTypeCodingSystem = conditionIdTypeCodingSystem;
-       this.conditionIdTypeCodingUsrslt = conditionIdTypeCodingUsrslt;
-       this.conditionIdTypeCodingVersion = conditionIdTypeCodingVersion;
-       this.conditionIdTypeText = conditionIdTypeText;
-       this.conditionIdUseCode = conditionIdUseCode;
-       this.conditionIdValue = conditionIdValue;
-       this.conditionNoteAuthorReference = conditionNoteAuthorReference;
-       this.conditionNoteAuthorString = conditionNoteAuthorString;
-       this.conditionNoteText = conditionNoteText;
-       this.conditionNoteTime = conditionNoteTime;
-       this.conditionOn = conditionOn;
-       this.conditionOnDateTime = conditionOnDateTime;
-       this.conditionOnPeriodEnd = conditionOnPeriodEnd;
-       this.conditionOnPeriodStart = conditionOnPeriodStart;
-       this.conditionOnRangeHighCode = conditionOnRangeHighCode;
-       this.conditionOnRangeHighCompartrCode = conditionOnRangeHighCompartrCode;
-       this.conditionOnRangeHighSystem = conditionOnRangeHighSystem;
-       this.conditionOnRangeHighUnit = conditionOnRangeHighUnit;
-       this.conditionOnRangeHighValue = conditionOnRangeHighValue;
-       this.conditionOnRangeLowCode = conditionOnRangeLowCode;
-       this.conditionOnRangeLowCompartrCode = conditionOnRangeLowCompartrCode;
-       this.conditionOnRangeLowSystem = conditionOnRangeLowSystem;
-       this.conditionOnRangeLowUnit = conditionOnRangeLowUnit;
-       this.conditionOnRangeLowValue = conditionOnRangeLowValue;
-       this.conditionOnString = conditionOnString;
-       this.conditionRecordedDate = conditionRecordedDate;
-       this.conditionRecorder = conditionRecorder;
-       this.conditionSeverityCodingCode = conditionSeverityCodingCode;
-       this.conditionSeverityCodingDisplay = conditionSeverityCodingDisplay;
-       this.conditionSeverityCodingSystem = conditionSeverityCodingSystem;
-       this.conditionSeverityCodingUsrslt = conditionSeverityCodingUsrslt;
-       this.conditionSeverityCodingVersion = conditionSeverityCodingVersion;
-       this.conditionSeverityText = conditionSeverityText;
-       this.conditionStageAssessment = conditionStageAssessment;
-       this.conditionStageSummaryCodingCode = conditionStageSummaryCodingCode;
-       this.conditionStageSummaryCodingDisplay = conditionStageSummaryCodingDisplay;
-       this.conditionStageSummaryCodingSystem = conditionStageSummaryCodingSystem;
-       this.conditionStageSummaryCodingUsrslt = conditionStageSummaryCodingUsrslt;
-       this.conditionStageSummaryCodingVersion = conditionStageSummaryCodingVersion;
-       this.conditionStageSummaryText = conditionStageSummaryText;
-       this.conditionStageTypeCodingCode = conditionStageTypeCodingCode;
-       this.conditionStageTypeCodingDisplay = conditionStageTypeCodingDisplay;
-       this.conditionStageTypeCodingSystem = conditionStageTypeCodingSystem;
-       this.conditionStageTypeCodingUsrslt = conditionStageTypeCodingUsrslt;
-       this.conditionStageTypeCodingVersion = conditionStageTypeCodingVersion;
-       this.conditionStageTypeText = conditionStageTypeText;
-       this.conditionSubject = conditionSubject;
-       this.conditionVerificationStatusCodingCode = conditionVerificationStatusCodingCode;
-       this.conditionVerificationStatusCodingDisplay = conditionVerificationStatusCodingDisplay;
-       this.conditionVerificationStatusCodingSystem = conditionVerificationStatusCodingSystem;
-       this.conditionVerificationStatusCodingUsrslt = conditionVerificationStatusCodingUsrslt;
-       this.conditionVerificationStatusCodingVersion = conditionVerificationStatusCodingVersion;
-       this.conditionVerificationStatusText = conditionVerificationStatusText;
-    }
    
-    public 
-    String 
-    getId()
-    {
+    public String getId() {
         return this.id;
     }
     
-    public void setId
-        (String id) 
-        {
-      this.id = id;
-}
-    public 
-    String 
-    getConditionAbatement()
-    {
-        return this.conditionAbatement;
-    }
-    
-    public void setConditionAbatement
-        (String conditionAbatement) 
-        {
-      this.conditionAbatement = conditionAbatement;
-}
-    public 
-    String 
-    getConditionAbatementDateTime()
-    {
-        return this.conditionAbatementDateTime;
-    }
-    
-    public void setConditionAbatementDateTime
-        (String conditionAbatementDateTime) 
-        {
-      this.conditionAbatementDateTime = conditionAbatementDateTime;
-}
-    public 
-    String 
-    getConditionAbatementPeriodEnd()
-    {
-        return this.conditionAbatementPeriodEnd;
-    }
-    
-    public void setConditionAbatementPeriodEnd
-        (String conditionAbatementPeriodEnd) 
-        {
-      this.conditionAbatementPeriodEnd = conditionAbatementPeriodEnd;
-}
-    public 
-    String 
-    getConditionAbatementPeriodStart()
-    {
-        return this.conditionAbatementPeriodStart;
-    }
-    
-    public void setConditionAbatementPeriodStart
-        (String conditionAbatementPeriodStart) 
-        {
-      this.conditionAbatementPeriodStart = conditionAbatementPeriodStart;
-}
-    public 
-    String 
-    getConditionAbatementRangeHighCode()
-    {
-        return this.conditionAbatementRangeHighCode;
-    }
-    
-    public void setConditionAbatementRangeHighCode
-        (String conditionAbatementRangeHighCode) 
-        {
-      this.conditionAbatementRangeHighCode = conditionAbatementRangeHighCode;
-}
-    public 
-    String 
-    getConditionAbatementRangeHighCompartrCode()
-    {
-        return this.conditionAbatementRangeHighCompartrCode;
-    }
-    
-    public void setConditionAbatementRangeHighCompartrCode
-        (String conditionAbatementRangeHighCompartrCode) 
-        {
-      this.conditionAbatementRangeHighCompartrCode = conditionAbatementRangeHighCompartrCode;
-}
-    public 
-    String 
-    getConditionAbatementRangeHighSystem()
-    {
-        return this.conditionAbatementRangeHighSystem;
-    }
-    
-    public void setConditionAbatementRangeHighSystem
-        (String conditionAbatementRangeHighSystem) 
-        {
-      this.conditionAbatementRangeHighSystem = conditionAbatementRangeHighSystem;
-}
-    public 
-    String 
-    getConditionAbatementRangeHighUnit()
-    {
-        return this.conditionAbatementRangeHighUnit;
-    }
-    
-    public void setConditionAbatementRangeHighUnit
-        (String conditionAbatementRangeHighUnit) 
-        {
-      this.conditionAbatementRangeHighUnit = conditionAbatementRangeHighUnit;
-}
-    public 
-    String 
-    getConditionAbatementRangeHighValue()
-    {
-        return this.conditionAbatementRangeHighValue;
-    }
-    
-    public void setConditionAbatementRangeHighValue
-        (String conditionAbatementRangeHighValue) 
-        {
-      this.conditionAbatementRangeHighValue = conditionAbatementRangeHighValue;
-}
-    public 
-    String 
-    getConditionAbatementRangeLowCode()
-    {
-        return this.conditionAbatementRangeLowCode;
-    }
-    
-    public void setConditionAbatementRangeLowCode
-        (String conditionAbatementRangeLowCode) 
-        {
-      this.conditionAbatementRangeLowCode = conditionAbatementRangeLowCode;
-}
-    public 
-    String 
-    getConditionAbatementRangeLowCompartrCode()
-    {
-        return this.conditionAbatementRangeLowCompartrCode;
-    }
-    
-    public void setConditionAbatementRangeLowCompartrCode
-        (String conditionAbatementRangeLowCompartrCode) 
-        {
-      this.conditionAbatementRangeLowCompartrCode = conditionAbatementRangeLowCompartrCode;
-}
-    public 
-    String 
-    getConditionAbatementRangeLowSystem()
-    {
-        return this.conditionAbatementRangeLowSystem;
-    }
-    
-    public void setConditionAbatementRangeLowSystem
-        (String conditionAbatementRangeLowSystem) 
-        {
-      this.conditionAbatementRangeLowSystem = conditionAbatementRangeLowSystem;
-}
-    public 
-    String 
-    getConditionAbatementRangeLowUnit()
-    {
-        return this.conditionAbatementRangeLowUnit;
-    }
-    
-    public void setConditionAbatementRangeLowUnit
-        (String conditionAbatementRangeLowUnit) 
-        {
-      this.conditionAbatementRangeLowUnit = conditionAbatementRangeLowUnit;
-}
-    public 
-    String 
-    getConditionAbatementRangeLowValue()
-    {
-        return this.conditionAbatementRangeLowValue;
-    }
-    
-    public void setConditionAbatementRangeLowValue
-        (String conditionAbatementRangeLowValue) 
-        {
-      this.conditionAbatementRangeLowValue = conditionAbatementRangeLowValue;
-}
-    public 
-    String 
-    getConditionAbatementString()
-    {
-        return this.conditionAbatementString;
-    }
-    
-    public void setConditionAbatementString
-        (String conditionAbatementString) 
-        {
-      this.conditionAbatementString = conditionAbatementString;
-}
-    public 
-    String 
-    getConditionAsserter()
-    {
-        return this.conditionAsserter;
-    }
-    
-    public void setConditionAsserter
-        (String conditionAsserter) 
-        {
-      this.conditionAsserter = conditionAsserter;
-}
-    public 
-    String 
-    getConditionBodySiteCodingCode()
-    {
-        return this.conditionBodySiteCodingCode;
-    }
-    
-    public void setConditionBodySiteCodingCode
-        (String conditionBodySiteCodingCode) 
-        {
-      this.conditionBodySiteCodingCode = conditionBodySiteCodingCode;
-}
-    public 
-    String 
-    getConditionBodySiteCodingDisplay()
-    {
-        return this.conditionBodySiteCodingDisplay;
-    }
-    
-    public void setConditionBodySiteCodingDisplay
-        (String conditionBodySiteCodingDisplay) 
-        {
-      this.conditionBodySiteCodingDisplay = conditionBodySiteCodingDisplay;
-}
-    public 
-    String 
-    getConditionBodySiteCodingSystem()
-    {
-        return this.conditionBodySiteCodingSystem;
-    }
-    
-    public void setConditionBodySiteCodingSystem
-        (String conditionBodySiteCodingSystem) 
-        {
-      this.conditionBodySiteCodingSystem = conditionBodySiteCodingSystem;
-}
-    public 
-    String 
-    getConditionBodySiteCodingUsrslt()
-    {
-        return this.conditionBodySiteCodingUsrslt;
-    }
-    
-    public void setConditionBodySiteCodingUsrslt
-        (String conditionBodySiteCodingUsrslt) 
-        {
-      this.conditionBodySiteCodingUsrslt = conditionBodySiteCodingUsrslt;
-}
-    public 
-    String 
-    getConditionBodySiteCodingVersion()
-    {
-        return this.conditionBodySiteCodingVersion;
-    }
-    
-    public void setConditionBodySiteCodingVersion
-        (String conditionBodySiteCodingVersion) 
-        {
-      this.conditionBodySiteCodingVersion = conditionBodySiteCodingVersion;
-}
-    public 
-    String 
-    getConditionBodySiteText()
-    {
-        return this.conditionBodySiteText;
-    }
-    
-    public void setConditionBodySiteText
-        (String conditionBodySiteText) 
-        {
-      this.conditionBodySiteText = conditionBodySiteText;
-}
-    public 
-    String 
-    getConditionCategoryCodingCode()
-    {
-        return this.conditionCategoryCodingCode;
-    }
-    
-    public void setConditionCategoryCodingCode
-        (String conditionCategoryCodingCode) 
-        {
-      this.conditionCategoryCodingCode = conditionCategoryCodingCode;
-}
-    public 
-    String 
-    getConditionCategoryCodingDisplay()
-    {
-        return this.conditionCategoryCodingDisplay;
-    }
-    
-    public void setConditionCategoryCodingDisplay
-        (String conditionCategoryCodingDisplay) 
-        {
-      this.conditionCategoryCodingDisplay = conditionCategoryCodingDisplay;
-}
-    public 
-    String 
-    getConditionCategoryCodingSystem()
-    {
-        return this.conditionCategoryCodingSystem;
-    }
-    
-    public void setConditionCategoryCodingSystem
-        (String conditionCategoryCodingSystem) 
-        {
-      this.conditionCategoryCodingSystem = conditionCategoryCodingSystem;
-}
-    public 
-    String 
-    getConditionCategoryCodingUsrslt()
-    {
-        return this.conditionCategoryCodingUsrslt;
-    }
-    
-    public void setConditionCategoryCodingUsrslt
-        (String conditionCategoryCodingUsrslt) 
-        {
-      this.conditionCategoryCodingUsrslt = conditionCategoryCodingUsrslt;
-}
-    public 
-    String 
-    getConditionCategoryCodingVersion()
-    {
-        return this.conditionCategoryCodingVersion;
-    }
-    
-    public void setConditionCategoryCodingVersion
-        (String conditionCategoryCodingVersion) 
-        {
-      this.conditionCategoryCodingVersion = conditionCategoryCodingVersion;
-}
-    public 
-    String 
-    getConditionCategoryText()
-    {
-        return this.conditionCategoryText;
-    }
-    
-    public void setConditionCategoryText
-        (String conditionCategoryText) 
-        {
-      this.conditionCategoryText = conditionCategoryText;
-}
-    public 
-    String 
-    getConditionClinicalStatusCodingCode()
-    {
-        return this.conditionClinicalStatusCodingCode;
-    }
-    
-    public void setConditionClinicalStatusCodingCode
-        (String conditionClinicalStatusCodingCode) 
-        {
-      this.conditionClinicalStatusCodingCode = conditionClinicalStatusCodingCode;
-}
-    public 
-    String 
-    getConditionClinicalStatusCodingDisplay()
-    {
-        return this.conditionClinicalStatusCodingDisplay;
-    }
-    
-    public void setConditionClinicalStatusCodingDisplay
-        (String conditionClinicalStatusCodingDisplay) 
-        {
-      this.conditionClinicalStatusCodingDisplay = conditionClinicalStatusCodingDisplay;
-}
-    public 
-    String 
-    getConditionClinicalStatusCodingSystem()
-    {
-        return this.conditionClinicalStatusCodingSystem;
-    }
-    
-    public void setConditionClinicalStatusCodingSystem
-        (String conditionClinicalStatusCodingSystem) 
-        {
-      this.conditionClinicalStatusCodingSystem = conditionClinicalStatusCodingSystem;
-}
-    public 
-    String 
-    getConditionClinicalStatusCodingUsrslt()
-    {
-        return this.conditionClinicalStatusCodingUsrslt;
-    }
-    
-    public void setConditionClinicalStatusCodingUsrslt
-        (String conditionClinicalStatusCodingUsrslt) 
-        {
-      this.conditionClinicalStatusCodingUsrslt = conditionClinicalStatusCodingUsrslt;
-}
-    public 
-    String 
-    getConditionClinicalStatusCodingVersion()
-    {
-        return this.conditionClinicalStatusCodingVersion;
-    }
-    
-    public void setConditionClinicalStatusCodingVersion
-        (String conditionClinicalStatusCodingVersion) 
-        {
-      this.conditionClinicalStatusCodingVersion = conditionClinicalStatusCodingVersion;
-}
-    public 
-    String 
-    getConditionClinicalStatusText()
-    {
-        return this.conditionClinicalStatusText;
-    }
-    
-    public void setConditionClinicalStatusText
-        (String conditionClinicalStatusText) 
-        {
-      this.conditionClinicalStatusText = conditionClinicalStatusText;
-}
-    public 
-    String 
-    getConditionCodeCodingCode()
-    {
-        return this.conditionCodeCodingCode;
-    }
-    
-    public void setConditionCodeCodingCode
-        (String conditionCodeCodingCode) 
-        {
-      this.conditionCodeCodingCode = conditionCodeCodingCode;
-}
-    public 
-    String 
-    getConditionCodeCodingDisplay()
-    {
-        return this.conditionCodeCodingDisplay;
-    }
-    
-    public void setConditionCodeCodingDisplay
-        (String conditionCodeCodingDisplay) 
-        {
-      this.conditionCodeCodingDisplay = conditionCodeCodingDisplay;
-}
-    public 
-    String 
-    getConditionCodeCodingSystem()
-    {
-        return this.conditionCodeCodingSystem;
-    }
-    
-    public void setConditionCodeCodingSystem
-        (String conditionCodeCodingSystem) 
-        {
-      this.conditionCodeCodingSystem = conditionCodeCodingSystem;
-}
-    public 
-    String 
-    getConditionCodeCodingUsrslt()
-    {
-        return this.conditionCodeCodingUsrslt;
-    }
-    
-    public void setConditionCodeCodingUsrslt
-        (String conditionCodeCodingUsrslt) 
-        {
-      this.conditionCodeCodingUsrslt = conditionCodeCodingUsrslt;
-}
-    public 
-    String 
-    getConditionCodeCodingVersion()
-    {
-        return this.conditionCodeCodingVersion;
-    }
-    
-    public void setConditionCodeCodingVersion
-        (String conditionCodeCodingVersion) 
-        {
-      this.conditionCodeCodingVersion = conditionCodeCodingVersion;
-}
-    public 
-    String 
-    getConditionCodeText()
-    {
-        return this.conditionCodeText;
-    }
-    
-    public void setConditionCodeText
-        (String conditionCodeText) 
-        {
-      this.conditionCodeText = conditionCodeText;
-}
-    public 
-    String 
-    getConditionEnc()
-    {
-        return this.conditionEnc;
-    }
-    
-    public void setConditionEnc
-        (String conditionEnc) 
-        {
-      this.conditionEnc = conditionEnc;
-}
-    public 
-    String 
-    getConditionEvidenceCodeCodingCode()
-    {
-        return this.conditionEvidenceCodeCodingCode;
-    }
-    
-    public void setConditionEvidenceCodeCodingCode
-        (String conditionEvidenceCodeCodingCode) 
-        {
-      this.conditionEvidenceCodeCodingCode = conditionEvidenceCodeCodingCode;
-}
-    public 
-    String 
-    getConditionEvidenceCodeCodingDisplay()
-    {
-        return this.conditionEvidenceCodeCodingDisplay;
-    }
-    
-    public void setConditionEvidenceCodeCodingDisplay
-        (String conditionEvidenceCodeCodingDisplay) 
-        {
-      this.conditionEvidenceCodeCodingDisplay = conditionEvidenceCodeCodingDisplay;
-}
-    public 
-    String 
-    getConditionEvidenceCodeCodingSystem()
-    {
-        return this.conditionEvidenceCodeCodingSystem;
-    }
-    
-    public void setConditionEvidenceCodeCodingSystem
-        (String conditionEvidenceCodeCodingSystem) 
-        {
-      this.conditionEvidenceCodeCodingSystem = conditionEvidenceCodeCodingSystem;
-}
-    public 
-    String 
-    getConditionEvidenceCodeCodingUsrslt()
-    {
-        return this.conditionEvidenceCodeCodingUsrslt;
-    }
-    
-    public void setConditionEvidenceCodeCodingUsrslt
-        (String conditionEvidenceCodeCodingUsrslt) 
-        {
-      this.conditionEvidenceCodeCodingUsrslt = conditionEvidenceCodeCodingUsrslt;
-}
-    public 
-    String 
-    getConditionEvidenceCodeCodingVersion()
-    {
-        return this.conditionEvidenceCodeCodingVersion;
-    }
-    
-    public void setConditionEvidenceCodeCodingVersion
-        (String conditionEvidenceCodeCodingVersion) 
-        {
-      this.conditionEvidenceCodeCodingVersion = conditionEvidenceCodeCodingVersion;
-}
-    public 
-    String 
-    getConditionEvidenceCodeText()
-    {
-        return this.conditionEvidenceCodeText;
-    }
-    
-    public void setConditionEvidenceCodeText
-        (String conditionEvidenceCodeText) 
-        {
-      this.conditionEvidenceCodeText = conditionEvidenceCodeText;
-}
-    public 
-    String 
-    getConditionEvidenceDetail()
-    {
-        return this.conditionEvidenceDetail;
-    }
-    
-    public void setConditionEvidenceDetail
-        (String conditionEvidenceDetail) 
-        {
-      this.conditionEvidenceDetail = conditionEvidenceDetail;
-}
-    public 
-    String 
-    getConditionIdAssigner()
-    {
-        return this.conditionIdAssigner;
-    }
-    
-    public void setConditionIdAssigner
-        (String conditionIdAssigner) 
-        {
-      this.conditionIdAssigner = conditionIdAssigner;
-}
-    public 
-    String 
-    getConditionIdPeriodEnd()
-    {
-        return this.conditionIdPeriodEnd;
-    }
-    
-    public void setConditionIdPeriodEnd
-        (String conditionIdPeriodEnd) 
-        {
-      this.conditionIdPeriodEnd = conditionIdPeriodEnd;
-}
-    public 
-    String 
-    getConditionIdPeriodStart()
-    {
-        return this.conditionIdPeriodStart;
-    }
-    
-    public void setConditionIdPeriodStart
-        (String conditionIdPeriodStart) 
-        {
-      this.conditionIdPeriodStart = conditionIdPeriodStart;
-}
-    public 
-    String 
-    getConditionIdSystem()
-    {
-        return this.conditionIdSystem;
-    }
-    
-    public void setConditionIdSystem
-        (String conditionIdSystem) 
-        {
-      this.conditionIdSystem = conditionIdSystem;
-}
-    public 
-    String 
-    getConditionIdTypeCodingCode()
-    {
-        return this.conditionIdTypeCodingCode;
-    }
-    
-    public void setConditionIdTypeCodingCode
-        (String conditionIdTypeCodingCode) 
-        {
-      this.conditionIdTypeCodingCode = conditionIdTypeCodingCode;
-}
-    public 
-    String 
-    getConditionIdTypeCodingDisplay()
-    {
-        return this.conditionIdTypeCodingDisplay;
-    }
-    
-    public void setConditionIdTypeCodingDisplay
-        (String conditionIdTypeCodingDisplay) 
-        {
-      this.conditionIdTypeCodingDisplay = conditionIdTypeCodingDisplay;
-}
-    public 
-    String 
-    getConditionIdTypeCodingSystem()
-    {
-        return this.conditionIdTypeCodingSystem;
-    }
-    
-    public void setConditionIdTypeCodingSystem
-        (String conditionIdTypeCodingSystem) 
-        {
-      this.conditionIdTypeCodingSystem = conditionIdTypeCodingSystem;
-}
-    public 
-    String 
-    getConditionIdTypeCodingUsrslt()
-    {
-        return this.conditionIdTypeCodingUsrslt;
-    }
-    
-    public void setConditionIdTypeCodingUsrslt
-        (String conditionIdTypeCodingUsrslt) 
-        {
-      this.conditionIdTypeCodingUsrslt = conditionIdTypeCodingUsrslt;
-}
-    public 
-    String 
-    getConditionIdTypeCodingVersion()
-    {
-        return this.conditionIdTypeCodingVersion;
-    }
-    
-    public void setConditionIdTypeCodingVersion
-        (String conditionIdTypeCodingVersion) 
-        {
-      this.conditionIdTypeCodingVersion = conditionIdTypeCodingVersion;
-}
-    public 
-    String 
-    getConditionIdTypeText()
-    {
-        return this.conditionIdTypeText;
-    }
-    
-    public void setConditionIdTypeText
-        (String conditionIdTypeText) 
-        {
-      this.conditionIdTypeText = conditionIdTypeText;
-}
-    public 
-    String 
-    getConditionIdUseCode()
-    {
-        return this.conditionIdUseCode;
-    }
-    
-    public void setConditionIdUseCode
-        (String conditionIdUseCode) 
-        {
-      this.conditionIdUseCode = conditionIdUseCode;
-}
-    public 
-    String 
-    getConditionIdValue()
-    {
-        return this.conditionIdValue;
-    }
-    
-    public void setConditionIdValue
-        (String conditionIdValue) 
-        {
-      this.conditionIdValue = conditionIdValue;
-}
-    public 
-    String 
-    getConditionNoteAuthorReference()
-    {
-        return this.conditionNoteAuthorReference;
-    }
-    
-    public void setConditionNoteAuthorReference
-        (String conditionNoteAuthorReference) 
-        {
-      this.conditionNoteAuthorReference = conditionNoteAuthorReference;
-}
-    public 
-    String 
-    getConditionNoteAuthorString()
-    {
-        return this.conditionNoteAuthorString;
-    }
-    
-    public void setConditionNoteAuthorString
-        (String conditionNoteAuthorString) 
-        {
-      this.conditionNoteAuthorString = conditionNoteAuthorString;
-}
-    public 
-    String 
-    getConditionNoteText()
-    {
-        return this.conditionNoteText;
-    }
-    
-    public void setConditionNoteText
-        (String conditionNoteText) 
-        {
-      this.conditionNoteText = conditionNoteText;
-}
-    public 
-    String 
-    getConditionNoteTime()
-    {
-        return this.conditionNoteTime;
-    }
-    
-    public void setConditionNoteTime
-        (String conditionNoteTime) 
-        {
-      this.conditionNoteTime = conditionNoteTime;
-}
-    public 
-    String 
-    getConditionOn()
-    {
-        return this.conditionOn;
-    }
-    
-    public void setConditionOn
-        (String conditionOn) 
-        {
-      this.conditionOn = conditionOn;
-}
-    public 
-    String 
-    getConditionOnDateTime()
-    {
-        return this.conditionOnDateTime;
-    }
-    
-    public void setConditionOnDateTime
-        (String conditionOnDateTime) 
-        {
-      this.conditionOnDateTime = conditionOnDateTime;
-}
-    public 
-    String 
-    getConditionOnPeriodEnd()
-    {
-        return this.conditionOnPeriodEnd;
-    }
-    
-    public void setConditionOnPeriodEnd
-        (String conditionOnPeriodEnd) 
-        {
-      this.conditionOnPeriodEnd = conditionOnPeriodEnd;
-}
-    public 
-    String 
-    getConditionOnPeriodStart()
-    {
-        return this.conditionOnPeriodStart;
-    }
-    
-    public void setConditionOnPeriodStart
-        (String conditionOnPeriodStart) 
-        {
-      this.conditionOnPeriodStart = conditionOnPeriodStart;
-}
-    public 
-    String 
-    getConditionOnRangeHighCode()
-    {
-        return this.conditionOnRangeHighCode;
-    }
-    
-    public void setConditionOnRangeHighCode
-        (String conditionOnRangeHighCode) 
-        {
-      this.conditionOnRangeHighCode = conditionOnRangeHighCode;
-}
-    public 
-    String 
-    getConditionOnRangeHighCompartrCode()
-    {
-        return this.conditionOnRangeHighCompartrCode;
-    }
-    
-    public void setConditionOnRangeHighCompartrCode
-        (String conditionOnRangeHighCompartrCode) 
-        {
-      this.conditionOnRangeHighCompartrCode = conditionOnRangeHighCompartrCode;
-}
-    public 
-    String 
-    getConditionOnRangeHighSystem()
-    {
-        return this.conditionOnRangeHighSystem;
-    }
-    
-    public void setConditionOnRangeHighSystem
-        (String conditionOnRangeHighSystem) 
-        {
-      this.conditionOnRangeHighSystem = conditionOnRangeHighSystem;
-}
-    public 
-    String 
-    getConditionOnRangeHighUnit()
-    {
-        return this.conditionOnRangeHighUnit;
-    }
-    
-    public void setConditionOnRangeHighUnit
-        (String conditionOnRangeHighUnit) 
-        {
-      this.conditionOnRangeHighUnit = conditionOnRangeHighUnit;
-}
-    public 
-    String 
-    getConditionOnRangeHighValue()
-    {
-        return this.conditionOnRangeHighValue;
-    }
-    
-    public void setConditionOnRangeHighValue
-        (String conditionOnRangeHighValue) 
-        {
-      this.conditionOnRangeHighValue = conditionOnRangeHighValue;
-}
-    public 
-    String 
-    getConditionOnRangeLowCode()
-    {
-        return this.conditionOnRangeLowCode;
-    }
-    
-    public void setConditionOnRangeLowCode
-        (String conditionOnRangeLowCode) 
-        {
-      this.conditionOnRangeLowCode = conditionOnRangeLowCode;
-}
-    public 
-    String 
-    getConditionOnRangeLowCompartrCode()
-    {
-        return this.conditionOnRangeLowCompartrCode;
-    }
-    
-    public void setConditionOnRangeLowCompartrCode
-        (String conditionOnRangeLowCompartrCode) 
-        {
-      this.conditionOnRangeLowCompartrCode = conditionOnRangeLowCompartrCode;
-}
-    public 
-    String 
-    getConditionOnRangeLowSystem()
-    {
-        return this.conditionOnRangeLowSystem;
-    }
-    
-    public void setConditionOnRangeLowSystem
-        (String conditionOnRangeLowSystem) 
-        {
-      this.conditionOnRangeLowSystem = conditionOnRangeLowSystem;
-}
-    public 
-    String 
-    getConditionOnRangeLowUnit()
-    {
-        return this.conditionOnRangeLowUnit;
-    }
-    
-    public void setConditionOnRangeLowUnit
-        (String conditionOnRangeLowUnit) 
-        {
-      this.conditionOnRangeLowUnit = conditionOnRangeLowUnit;
-}
-    public 
-    String 
-    getConditionOnRangeLowValue()
-    {
-        return this.conditionOnRangeLowValue;
-    }
-    
-    public void setConditionOnRangeLowValue
-        (String conditionOnRangeLowValue) 
-        {
-      this.conditionOnRangeLowValue = conditionOnRangeLowValue;
-}
-    public 
-    String 
-    getConditionOnString()
-    {
-        return this.conditionOnString;
-    }
-    
-    public void setConditionOnString
-        (String conditionOnString) 
-        {
-      this.conditionOnString = conditionOnString;
-}
-    public 
-    String 
-    getConditionRecordedDate()
-    {
-        return this.conditionRecordedDate;
-    }
-    
-    public void setConditionRecordedDate
-        (String conditionRecordedDate) 
-        {
-      this.conditionRecordedDate = conditionRecordedDate;
-}
-    public 
-    String 
-    getConditionRecorder()
-    {
-        return this.conditionRecorder;
-    }
-    
-    public void setConditionRecorder
-        (String conditionRecorder) 
-        {
-      this.conditionRecorder = conditionRecorder;
-}
-    public 
-    String 
-    getConditionSeverityCodingCode()
-    {
-        return this.conditionSeverityCodingCode;
-    }
-    
-    public void setConditionSeverityCodingCode
-        (String conditionSeverityCodingCode) 
-        {
-      this.conditionSeverityCodingCode = conditionSeverityCodingCode;
-}
-    public 
-    String 
-    getConditionSeverityCodingDisplay()
-    {
-        return this.conditionSeverityCodingDisplay;
-    }
-    
-    public void setConditionSeverityCodingDisplay
-        (String conditionSeverityCodingDisplay) 
-        {
-      this.conditionSeverityCodingDisplay = conditionSeverityCodingDisplay;
-}
-    public 
-    String 
-    getConditionSeverityCodingSystem()
-    {
-        return this.conditionSeverityCodingSystem;
-    }
-    
-    public void setConditionSeverityCodingSystem
-        (String conditionSeverityCodingSystem) 
-        {
-      this.conditionSeverityCodingSystem = conditionSeverityCodingSystem;
-}
-    public 
-    String 
-    getConditionSeverityCodingUsrslt()
-    {
-        return this.conditionSeverityCodingUsrslt;
-    }
-    
-    public void setConditionSeverityCodingUsrslt
-        (String conditionSeverityCodingUsrslt) 
-        {
-      this.conditionSeverityCodingUsrslt = conditionSeverityCodingUsrslt;
-}
-    public 
-    String 
-    getConditionSeverityCodingVersion()
-    {
-        return this.conditionSeverityCodingVersion;
-    }
-    
-    public void setConditionSeverityCodingVersion
-        (String conditionSeverityCodingVersion) 
-        {
-      this.conditionSeverityCodingVersion = conditionSeverityCodingVersion;
-}
-    public 
-    String 
-    getConditionSeverityText()
-    {
-        return this.conditionSeverityText;
-    }
-    
-    public void setConditionSeverityText
-        (String conditionSeverityText) 
-        {
-      this.conditionSeverityText = conditionSeverityText;
-}
-    public 
-    String 
-    getConditionStageAssessment()
-    {
-        return this.conditionStageAssessment;
-    }
-    
-    public void setConditionStageAssessment
-        (String conditionStageAssessment) 
-        {
-      this.conditionStageAssessment = conditionStageAssessment;
-}
-    public 
-    String 
-    getConditionStageSummaryCodingCode()
-    {
-        return this.conditionStageSummaryCodingCode;
-    }
-    
-    public void setConditionStageSummaryCodingCode
-        (String conditionStageSummaryCodingCode) 
-        {
-      this.conditionStageSummaryCodingCode = conditionStageSummaryCodingCode;
-}
-    public 
-    String 
-    getConditionStageSummaryCodingDisplay()
-    {
-        return this.conditionStageSummaryCodingDisplay;
-    }
-    
-    public void setConditionStageSummaryCodingDisplay
-        (String conditionStageSummaryCodingDisplay) 
-        {
-      this.conditionStageSummaryCodingDisplay = conditionStageSummaryCodingDisplay;
-}
-    public 
-    String 
-    getConditionStageSummaryCodingSystem()
-    {
-        return this.conditionStageSummaryCodingSystem;
-    }
-    
-    public void setConditionStageSummaryCodingSystem
-        (String conditionStageSummaryCodingSystem) 
-        {
-      this.conditionStageSummaryCodingSystem = conditionStageSummaryCodingSystem;
-}
-    public 
-    String 
-    getConditionStageSummaryCodingUsrslt()
-    {
-        return this.conditionStageSummaryCodingUsrslt;
-    }
-    
-    public void setConditionStageSummaryCodingUsrslt
-        (String conditionStageSummaryCodingUsrslt) 
-        {
-      this.conditionStageSummaryCodingUsrslt = conditionStageSummaryCodingUsrslt;
-}
-    public 
-    String 
-    getConditionStageSummaryCodingVersion()
-    {
-        return this.conditionStageSummaryCodingVersion;
-    }
-    
-    public void setConditionStageSummaryCodingVersion
-        (String conditionStageSummaryCodingVersion) 
-        {
-      this.conditionStageSummaryCodingVersion = conditionStageSummaryCodingVersion;
-}
-    public 
-    String 
-    getConditionStageSummaryText()
-    {
-        return this.conditionStageSummaryText;
-    }
-    
-    public void setConditionStageSummaryText
-        (String conditionStageSummaryText) 
-        {
-      this.conditionStageSummaryText = conditionStageSummaryText;
-}
-    public 
-    String 
-    getConditionStageTypeCodingCode()
-    {
-        return this.conditionStageTypeCodingCode;
-    }
-    
-    public void setConditionStageTypeCodingCode
-        (String conditionStageTypeCodingCode) 
-        {
-      this.conditionStageTypeCodingCode = conditionStageTypeCodingCode;
-}
-    public 
-    String 
-    getConditionStageTypeCodingDisplay()
-    {
-        return this.conditionStageTypeCodingDisplay;
-    }
-    
-    public void setConditionStageTypeCodingDisplay
-        (String conditionStageTypeCodingDisplay) 
-        {
-      this.conditionStageTypeCodingDisplay = conditionStageTypeCodingDisplay;
-}
-    public 
-    String 
-    getConditionStageTypeCodingSystem()
-    {
-        return this.conditionStageTypeCodingSystem;
-    }
-    
-    public void setConditionStageTypeCodingSystem
-        (String conditionStageTypeCodingSystem) 
-        {
-      this.conditionStageTypeCodingSystem = conditionStageTypeCodingSystem;
-}
-    public 
-    String 
-    getConditionStageTypeCodingUsrslt()
-    {
-        return this.conditionStageTypeCodingUsrslt;
-    }
-    
-    public void setConditionStageTypeCodingUsrslt
-        (String conditionStageTypeCodingUsrslt) 
-        {
-      this.conditionStageTypeCodingUsrslt = conditionStageTypeCodingUsrslt;
-}
-    public 
-    String 
-    getConditionStageTypeCodingVersion()
-    {
-        return this.conditionStageTypeCodingVersion;
-    }
-    
-    public void setConditionStageTypeCodingVersion
-        (String conditionStageTypeCodingVersion) 
-        {
-      this.conditionStageTypeCodingVersion = conditionStageTypeCodingVersion;
-}
-    public 
-    String 
-    getConditionStageTypeText()
-    {
-        return this.conditionStageTypeText;
-    }
-    
-    public void setConditionStageTypeText
-        (String conditionStageTypeText) 
-        {
-      this.conditionStageTypeText = conditionStageTypeText;
-}
-    public 
-    String 
-    getConditionSubject()
-    {
-        return this.conditionSubject;
-    }
-    
-    public void setConditionSubject
-        (String conditionSubject) 
-        {
-      this.conditionSubject = conditionSubject;
-}
-    public 
-    String 
-    getConditionVerificationStatusCodingCode()
-    {
-        return this.conditionVerificationStatusCodingCode;
-    }
-    
-    public void setConditionVerificationStatusCodingCode
-        (String conditionVerificationStatusCodingCode) 
-        {
-      this.conditionVerificationStatusCodingCode = conditionVerificationStatusCodingCode;
-}
-    public 
-    String 
-    getConditionVerificationStatusCodingDisplay()
-    {
-        return this.conditionVerificationStatusCodingDisplay;
-    }
-    
-    public void setConditionVerificationStatusCodingDisplay
-        (String conditionVerificationStatusCodingDisplay) 
-        {
-      this.conditionVerificationStatusCodingDisplay = conditionVerificationStatusCodingDisplay;
-}
-    public 
-    String 
-    getConditionVerificationStatusCodingSystem()
-    {
-        return this.conditionVerificationStatusCodingSystem;
-    }
-    
-    public void setConditionVerificationStatusCodingSystem
-        (String conditionVerificationStatusCodingSystem) 
-        {
-      this.conditionVerificationStatusCodingSystem = conditionVerificationStatusCodingSystem;
-}
-    public 
-    String 
-    getConditionVerificationStatusCodingUsrslt()
-    {
-        return this.conditionVerificationStatusCodingUsrslt;
-    }
-    
-    public void setConditionVerificationStatusCodingUsrslt
-        (String conditionVerificationStatusCodingUsrslt) 
-        {
-      this.conditionVerificationStatusCodingUsrslt = conditionVerificationStatusCodingUsrslt;
-}
-    public 
-    String 
-    getConditionVerificationStatusCodingVersion()
-    {
-        return this.conditionVerificationStatusCodingVersion;
-    }
-    
-    public void setConditionVerificationStatusCodingVersion
-        (String conditionVerificationStatusCodingVersion) 
-        {
-      this.conditionVerificationStatusCodingVersion = conditionVerificationStatusCodingVersion;
-}
-    public 
-    String 
-    getConditionVerificationStatusText()
-    {
-        return this.conditionVerificationStatusText;
-    }
-    
-    public void setConditionVerificationStatusText
-        (String conditionVerificationStatusText) 
-        {
-      this.conditionVerificationStatusText = conditionVerificationStatusText;
-}
+    public void setId(String id) {
+        this.id = id;
+    }
+    
+    
+    
+    public String getCndtnAbatementDtTimeTyp() {
+        return this.cndtnAbatementDtTimeTyp;
+    }
+    
+    public void setCndtnAbatementDtTimeTyp(String cndtnAbatementDtTimeTyp) {
+        this.cndtnAbatementDtTimeTyp = cndtnAbatementDtTimeTyp;
+    }
+    
+    
+    
+    public String getCndtnAbatementPrdEnd() {
+        return this.cndtnAbatementPrdEnd;
+    }
+    
+    public void setCndtnAbatementPrdEnd(String cndtnAbatementPrdEnd) {
+        this.cndtnAbatementPrdEnd = cndtnAbatementPrdEnd;
+    }
+    
+    
+    
+    public String getCndtnAbatementPrdStrt() {
+        return this.cndtnAbatementPrdStrt;
+    }
+    
+    public void setCndtnAbatementPrdStrt(String cndtnAbatementPrdStrt) {
+        this.cndtnAbatementPrdStrt = cndtnAbatementPrdStrt;
+    }
+    
+    
+    
+    public String getCndtnAbatementRngHiCd() {
+        return this.cndtnAbatementRngHiCd;
+    }
+    
+    public void setCndtnAbatementRngHiCd(String cndtnAbatementRngHiCd) {
+        this.cndtnAbatementRngHiCd = cndtnAbatementRngHiCd;
+    }
+    
+    
+    
+    public String getCndtnAbatementRngHiCmprtr() {
+        return this.cndtnAbatementRngHiCmprtr;
+    }
+    
+    public void setCndtnAbatementRngHiCmprtr(String cndtnAbatementRngHiCmprtr) {
+        this.cndtnAbatementRngHiCmprtr = cndtnAbatementRngHiCmprtr;
+    }
+    
+    
+    
+    public String getCndtnAbatementRngHiSys() {
+        return this.cndtnAbatementRngHiSys;
+    }
+    
+    public void setCndtnAbatementRngHiSys(String cndtnAbatementRngHiSys) {
+        this.cndtnAbatementRngHiSys = cndtnAbatementRngHiSys;
+    }
+    
+    
+    
+    public String getCndtnAbatementRngHiUnt() {
+        return this.cndtnAbatementRngHiUnt;
+    }
+    
+    public void setCndtnAbatementRngHiUnt(String cndtnAbatementRngHiUnt) {
+        this.cndtnAbatementRngHiUnt = cndtnAbatementRngHiUnt;
+    }
+    
+    
+    
+    public String getCndtnAbatementRngHiVl() {
+        return this.cndtnAbatementRngHiVl;
+    }
+    
+    public void setCndtnAbatementRngHiVl(String cndtnAbatementRngHiVl) {
+        this.cndtnAbatementRngHiVl = cndtnAbatementRngHiVl;
+    }
+    
+    
+    
+    public String getCndtnAbatementRngLwCd() {
+        return this.cndtnAbatementRngLwCd;
+    }
+    
+    public void setCndtnAbatementRngLwCd(String cndtnAbatementRngLwCd) {
+        this.cndtnAbatementRngLwCd = cndtnAbatementRngLwCd;
+    }
+    
+    
+    
+    public String getCndtnAbatementRngLwCmprtr() {
+        return this.cndtnAbatementRngLwCmprtr;
+    }
+    
+    public void setCndtnAbatementRngLwCmprtr(String cndtnAbatementRngLwCmprtr) {
+        this.cndtnAbatementRngLwCmprtr = cndtnAbatementRngLwCmprtr;
+    }
+    
+    
+    
+    public String getCndtnAbatementRngLwSys() {
+        return this.cndtnAbatementRngLwSys;
+    }
+    
+    public void setCndtnAbatementRngLwSys(String cndtnAbatementRngLwSys) {
+        this.cndtnAbatementRngLwSys = cndtnAbatementRngLwSys;
+    }
+    
+    
+    
+    public String getCndtnAbatementRngLwUnt() {
+        return this.cndtnAbatementRngLwUnt;
+    }
+    
+    public void setCndtnAbatementRngLwUnt(String cndtnAbatementRngLwUnt) {
+        this.cndtnAbatementRngLwUnt = cndtnAbatementRngLwUnt;
+    }
+    
+    
+    
+    public String getCndtnAbatementRngLwVl() {
+        return this.cndtnAbatementRngLwVl;
+    }
+    
+    public void setCndtnAbatementRngLwVl(String cndtnAbatementRngLwVl) {
+        this.cndtnAbatementRngLwVl = cndtnAbatementRngLwVl;
+    }
+    
+    
+    
+    public String getCndtnAbatementStrgTyp() {
+        return this.cndtnAbatementStrgTyp;
+    }
+    
+    public void setCndtnAbatementStrgTyp(String cndtnAbatementStrgTyp) {
+        this.cndtnAbatementStrgTyp = cndtnAbatementStrgTyp;
+    }
+    
+    
+    
+    public String getCndtnAsserter() {
+        return this.cndtnAsserter;
+    }
+    
+    public void setCndtnAsserter(String cndtnAsserter) {
+        this.cndtnAsserter = cndtnAsserter;
+    }
+    
+    
+    
+    public String getCndtnBodySiteCdgCd() {
+        return this.cndtnBodySiteCdgCd;
+    }
+    
+    public void setCndtnBodySiteCdgCd(String cndtnBodySiteCdgCd) {
+        this.cndtnBodySiteCdgCd = cndtnBodySiteCdgCd;
+    }
+    
+    
+    
+    public String getCndtnBodySiteCdgDsply() {
+        return this.cndtnBodySiteCdgDsply;
+    }
+    
+    public void setCndtnBodySiteCdgDsply(String cndtnBodySiteCdgDsply) {
+        this.cndtnBodySiteCdgDsply = cndtnBodySiteCdgDsply;
+    }
+    
+    
+    
+    public String getCndtnBodySiteCdgSys() {
+        return this.cndtnBodySiteCdgSys;
+    }
+    
+    public void setCndtnBodySiteCdgSys(String cndtnBodySiteCdgSys) {
+        this.cndtnBodySiteCdgSys = cndtnBodySiteCdgSys;
+    }
+    
+    
+    
+    public String getCndtnBodySiteCdgUsrSltd() {
+        return this.cndtnBodySiteCdgUsrSltd;
+    }
+    
+    public void setCndtnBodySiteCdgUsrSltd(String cndtnBodySiteCdgUsrSltd) {
+        this.cndtnBodySiteCdgUsrSltd = cndtnBodySiteCdgUsrSltd;
+    }
+    
+    
+    
+    public String getCndtnBodySiteCdgVrsn() {
+        return this.cndtnBodySiteCdgVrsn;
+    }
+    
+    public void setCndtnBodySiteCdgVrsn(String cndtnBodySiteCdgVrsn) {
+        this.cndtnBodySiteCdgVrsn = cndtnBodySiteCdgVrsn;
+    }
+    
+    
+    
+    public String getCndtnBodySiteTxt() {
+        return this.cndtnBodySiteTxt;
+    }
+    
+    public void setCndtnBodySiteTxt(String cndtnBodySiteTxt) {
+        this.cndtnBodySiteTxt = cndtnBodySiteTxt;
+    }
+    
+    
+    
+    public String getCndtnCtgryCdgCd() {
+        return this.cndtnCtgryCdgCd;
+    }
+    
+    public void setCndtnCtgryCdgCd(String cndtnCtgryCdgCd) {
+        this.cndtnCtgryCdgCd = cndtnCtgryCdgCd;
+    }
+    
+    
+    
+    public String getCndtnCtgryCdgDsply() {
+        return this.cndtnCtgryCdgDsply;
+    }
+    
+    public void setCndtnCtgryCdgDsply(String cndtnCtgryCdgDsply) {
+        this.cndtnCtgryCdgDsply = cndtnCtgryCdgDsply;
+    }
+    
+    
+    
+    public String getCndtnCtgryCdgSys() {
+        return this.cndtnCtgryCdgSys;
+    }
+    
+    public void setCndtnCtgryCdgSys(String cndtnCtgryCdgSys) {
+        this.cndtnCtgryCdgSys = cndtnCtgryCdgSys;
+    }
+    
+    
+    
+    public String getCndtnCtgryCdgUsrSltd() {
+        return this.cndtnCtgryCdgUsrSltd;
+    }
+    
+    public void setCndtnCtgryCdgUsrSltd(String cndtnCtgryCdgUsrSltd) {
+        this.cndtnCtgryCdgUsrSltd = cndtnCtgryCdgUsrSltd;
+    }
+    
+    
+    
+    public String getCndtnCtgryCdgVrsn() {
+        return this.cndtnCtgryCdgVrsn;
+    }
+    
+    public void setCndtnCtgryCdgVrsn(String cndtnCtgryCdgVrsn) {
+        this.cndtnCtgryCdgVrsn = cndtnCtgryCdgVrsn;
+    }
+    
+    
+    
+    public String getCndtnCtgryTxt() {
+        return this.cndtnCtgryTxt;
+    }
+    
+    public void setCndtnCtgryTxt(String cndtnCtgryTxt) {
+        this.cndtnCtgryTxt = cndtnCtgryTxt;
+    }
+    
+    
+    
+    public String getCndtnClnclStsCdgCd() {
+        return this.cndtnClnclStsCdgCd;
+    }
+    
+    public void setCndtnClnclStsCdgCd(String cndtnClnclStsCdgCd) {
+        this.cndtnClnclStsCdgCd = cndtnClnclStsCdgCd;
+    }
+    
+    
+    
+    public String getCndtnClnclStsCdgDsply() {
+        return this.cndtnClnclStsCdgDsply;
+    }
+    
+    public void setCndtnClnclStsCdgDsply(String cndtnClnclStsCdgDsply) {
+        this.cndtnClnclStsCdgDsply = cndtnClnclStsCdgDsply;
+    }
+    
+    
+    
+    public String getCndtnClnclStsCdgSys() {
+        return this.cndtnClnclStsCdgSys;
+    }
+    
+    public void setCndtnClnclStsCdgSys(String cndtnClnclStsCdgSys) {
+        this.cndtnClnclStsCdgSys = cndtnClnclStsCdgSys;
+    }
+    
+    
+    
+    public String getCndtnClnclStsCdgUsrSltd() {
+        return this.cndtnClnclStsCdgUsrSltd;
+    }
+    
+    public void setCndtnClnclStsCdgUsrSltd(String cndtnClnclStsCdgUsrSltd) {
+        this.cndtnClnclStsCdgUsrSltd = cndtnClnclStsCdgUsrSltd;
+    }
+    
+    
+    
+    public String getCndtnClnclStsCdgVrsn() {
+        return this.cndtnClnclStsCdgVrsn;
+    }
+    
+    public void setCndtnClnclStsCdgVrsn(String cndtnClnclStsCdgVrsn) {
+        this.cndtnClnclStsCdgVrsn = cndtnClnclStsCdgVrsn;
+    }
+    
+    
+    
+    public String getCndtnClnclStsTxt() {
+        return this.cndtnClnclStsTxt;
+    }
+    
+    public void setCndtnClnclStsTxt(String cndtnClnclStsTxt) {
+        this.cndtnClnclStsTxt = cndtnClnclStsTxt;
+    }
+    
+    
+    
+    public String getCndtnCdCdgCd() {
+        return this.cndtnCdCdgCd;
+    }
+    
+    public void setCndtnCdCdgCd(String cndtnCdCdgCd) {
+        this.cndtnCdCdgCd = cndtnCdCdgCd;
+    }
+    
+    
+    
+    public String getCndtnCdCdgDsply() {
+        return this.cndtnCdCdgDsply;
+    }
+    
+    public void setCndtnCdCdgDsply(String cndtnCdCdgDsply) {
+        this.cndtnCdCdgDsply = cndtnCdCdgDsply;
+    }
+    
+    
+    
+    public String getCndtnCdCdgSys() {
+        return this.cndtnCdCdgSys;
+    }
+    
+    public void setCndtnCdCdgSys(String cndtnCdCdgSys) {
+        this.cndtnCdCdgSys = cndtnCdCdgSys;
+    }
+    
+    
+    
+    public String getCndtnCdCdgUsrSltd() {
+        return this.cndtnCdCdgUsrSltd;
+    }
+    
+    public void setCndtnCdCdgUsrSltd(String cndtnCdCdgUsrSltd) {
+        this.cndtnCdCdgUsrSltd = cndtnCdCdgUsrSltd;
+    }
+    
+    
+    
+    public String getCndtnCdCdgVrsn() {
+        return this.cndtnCdCdgVrsn;
+    }
+    
+    public void setCndtnCdCdgVrsn(String cndtnCdCdgVrsn) {
+        this.cndtnCdCdgVrsn = cndtnCdCdgVrsn;
+    }
+    
+    
+    
+    public String getCndtnCdTxt() {
+        return this.cndtnCdTxt;
+    }
+    
+    public void setCndtnCdTxt(String cndtnCdTxt) {
+        this.cndtnCdTxt = cndtnCdTxt;
+    }
+    
+    
+    
+    public String getCndtnEnc() {
+        return this.cndtnEnc;
+    }
+    
+    public void setCndtnEnc(String cndtnEnc) {
+        this.cndtnEnc = cndtnEnc;
+    }
+    
+    
+    
+    public String getCndtnEvdnceCdCdgCd() {
+        return this.cndtnEvdnceCdCdgCd;
+    }
+    
+    public void setCndtnEvdnceCdCdgCd(String cndtnEvdnceCdCdgCd) {
+        this.cndtnEvdnceCdCdgCd = cndtnEvdnceCdCdgCd;
+    }
+    
+    
+    
+    public String getCndtnEvdnceCdCdgDsply() {
+        return this.cndtnEvdnceCdCdgDsply;
+    }
+    
+    public void setCndtnEvdnceCdCdgDsply(String cndtnEvdnceCdCdgDsply) {
+        this.cndtnEvdnceCdCdgDsply = cndtnEvdnceCdCdgDsply;
+    }
+    
+    
+    
+    public String getCndtnEvdnceCdCdgSys() {
+        return this.cndtnEvdnceCdCdgSys;
+    }
+    
+    public void setCndtnEvdnceCdCdgSys(String cndtnEvdnceCdCdgSys) {
+        this.cndtnEvdnceCdCdgSys = cndtnEvdnceCdCdgSys;
+    }
+    
+    
+    
+    public String getCndtnEvdnceCdCdgUsrSltd() {
+        return this.cndtnEvdnceCdCdgUsrSltd;
+    }
+    
+    public void setCndtnEvdnceCdCdgUsrSltd(String cndtnEvdnceCdCdgUsrSltd) {
+        this.cndtnEvdnceCdCdgUsrSltd = cndtnEvdnceCdCdgUsrSltd;
+    }
+    
+    
+    
+    public String getCndtnEvdnceCdCdgVrsn() {
+        return this.cndtnEvdnceCdCdgVrsn;
+    }
+    
+    public void setCndtnEvdnceCdCdgVrsn(String cndtnEvdnceCdCdgVrsn) {
+        this.cndtnEvdnceCdCdgVrsn = cndtnEvdnceCdCdgVrsn;
+    }
+    
+    
+    
+    public String getCndtnEvdnceCdTxt() {
+        return this.cndtnEvdnceCdTxt;
+    }
+    
+    public void setCndtnEvdnceCdTxt(String cndtnEvdnceCdTxt) {
+        this.cndtnEvdnceCdTxt = cndtnEvdnceCdTxt;
+    }
+    
+    
+    
+    public String getCndtnEvdnceDtl() {
+        return this.cndtnEvdnceDtl;
+    }
+    
+    public void setCndtnEvdnceDtl(String cndtnEvdnceDtl) {
+        this.cndtnEvdnceDtl = cndtnEvdnceDtl;
+    }
+    
+    
+    
+    public String getCndtnIdAssigner() {
+        return this.cndtnIdAssigner;
+    }
+    
+    public void setCndtnIdAssigner(String cndtnIdAssigner) {
+        this.cndtnIdAssigner = cndtnIdAssigner;
+    }
+    
+    
+    
+    public String getCndtnIdPrdEnd() {
+        return this.cndtnIdPrdEnd;
+    }
+    
+    public void setCndtnIdPrdEnd(String cndtnIdPrdEnd) {
+        this.cndtnIdPrdEnd = cndtnIdPrdEnd;
+    }
+    
+    
+    
+    public String getCndtnIdPrdStrt() {
+        return this.cndtnIdPrdStrt;
+    }
+    
+    public void setCndtnIdPrdStrt(String cndtnIdPrdStrt) {
+        this.cndtnIdPrdStrt = cndtnIdPrdStrt;
+    }
+    
+    
+    
+    public String getCndtnIdSys() {
+        return this.cndtnIdSys;
+    }
+    
+    public void setCndtnIdSys(String cndtnIdSys) {
+        this.cndtnIdSys = cndtnIdSys;
+    }
+    
+    
+    
+    public String getCndtnIdTypCdgCd() {
+        return this.cndtnIdTypCdgCd;
+    }
+    
+    public void setCndtnIdTypCdgCd(String cndtnIdTypCdgCd) {
+        this.cndtnIdTypCdgCd = cndtnIdTypCdgCd;
+    }
+    
+    
+    
+    public String getCndtnIdTypCdgDsply() {
+        return this.cndtnIdTypCdgDsply;
+    }
+    
+    public void setCndtnIdTypCdgDsply(String cndtnIdTypCdgDsply) {
+        this.cndtnIdTypCdgDsply = cndtnIdTypCdgDsply;
+    }
+    
+    
+    
+    public String getCndtnIdTypCdgSys() {
+        return this.cndtnIdTypCdgSys;
+    }
+    
+    public void setCndtnIdTypCdgSys(String cndtnIdTypCdgSys) {
+        this.cndtnIdTypCdgSys = cndtnIdTypCdgSys;
+    }
+    
+    
+    
+    public String getCndtnIdTypCdgUsrSltd() {
+        return this.cndtnIdTypCdgUsrSltd;
+    }
+    
+    public void setCndtnIdTypCdgUsrSltd(String cndtnIdTypCdgUsrSltd) {
+        this.cndtnIdTypCdgUsrSltd = cndtnIdTypCdgUsrSltd;
+    }
+    
+    
+    
+    public String getCndtnIdTypCdgVrsn() {
+        return this.cndtnIdTypCdgVrsn;
+    }
+    
+    public void setCndtnIdTypCdgVrsn(String cndtnIdTypCdgVrsn) {
+        this.cndtnIdTypCdgVrsn = cndtnIdTypCdgVrsn;
+    }
+    
+    
+    
+    public String getCndtnIdTypTxt() {
+        return this.cndtnIdTypTxt;
+    }
+    
+    public void setCndtnIdTypTxt(String cndtnIdTypTxt) {
+        this.cndtnIdTypTxt = cndtnIdTypTxt;
+    }
+    
+    
+    
+    public String getCndtnIdUse() {
+        return this.cndtnIdUse;
+    }
+    
+    public void setCndtnIdUse(String cndtnIdUse) {
+        this.cndtnIdUse = cndtnIdUse;
+    }
+    
+    
+    
+    public String getCndtnIdVl() {
+        return this.cndtnIdVl;
+    }
+    
+    public void setCndtnIdVl(String cndtnIdVl) {
+        this.cndtnIdVl = cndtnIdVl;
+    }
+    
+    
+    
+    public String getCndtnNtAthrRfrnc() {
+        return this.cndtnNtAthrRfrnc;
+    }
+    
+    public void setCndtnNtAthrRfrnc(String cndtnNtAthrRfrnc) {
+        this.cndtnNtAthrRfrnc = cndtnNtAthrRfrnc;
+    }
+    
+    
+    
+    public String getCndtnNtAthrStrgTyp() {
+        return this.cndtnNtAthrStrgTyp;
+    }
+    
+    public void setCndtnNtAthrStrgTyp(String cndtnNtAthrStrgTyp) {
+        this.cndtnNtAthrStrgTyp = cndtnNtAthrStrgTyp;
+    }
+    
+    
+    
+    public String getCndtnNtTxt() {
+        return this.cndtnNtTxt;
+    }
+    
+    public void setCndtnNtTxt(String cndtnNtTxt) {
+        this.cndtnNtTxt = cndtnNtTxt;
+    }
+    
+    
+    
+    public String getCndtnNtTime() {
+        return this.cndtnNtTime;
+    }
+    
+    public void setCndtnNtTime(String cndtnNtTime) {
+        this.cndtnNtTime = cndtnNtTime;
+    }
+    
+    
+    
+    public String getCndtnOnDtTimeTyp() {
+        return this.cndtnOnDtTimeTyp;
+    }
+    
+    public void setCndtnOnDtTimeTyp(String cndtnOnDtTimeTyp) {
+        this.cndtnOnDtTimeTyp = cndtnOnDtTimeTyp;
+    }
+    
+    
+    
+    public String getCndtnOnPrdEnd() {
+        return this.cndtnOnPrdEnd;
+    }
+    
+    public void setCndtnOnPrdEnd(String cndtnOnPrdEnd) {
+        this.cndtnOnPrdEnd = cndtnOnPrdEnd;
+    }
+    
+    
+    
+    public String getCndtnOnPrdStrt() {
+        return this.cndtnOnPrdStrt;
+    }
+    
+    public void setCndtnOnPrdStrt(String cndtnOnPrdStrt) {
+        this.cndtnOnPrdStrt = cndtnOnPrdStrt;
+    }
+    
+    
+    
+    public String getCndtnOnRngHiCd() {
+        return this.cndtnOnRngHiCd;
+    }
+    
+    public void setCndtnOnRngHiCd(String cndtnOnRngHiCd) {
+        this.cndtnOnRngHiCd = cndtnOnRngHiCd;
+    }
+    
+    
+    
+    public String getCndtnOnRngHiCmprtr() {
+        return this.cndtnOnRngHiCmprtr;
+    }
+    
+    public void setCndtnOnRngHiCmprtr(String cndtnOnRngHiCmprtr) {
+        this.cndtnOnRngHiCmprtr = cndtnOnRngHiCmprtr;
+    }
+    
+    
+    
+    public String getCndtnOnRngHiSys() {
+        return this.cndtnOnRngHiSys;
+    }
+    
+    public void setCndtnOnRngHiSys(String cndtnOnRngHiSys) {
+        this.cndtnOnRngHiSys = cndtnOnRngHiSys;
+    }
+    
+    
+    
+    public String getCndtnOnRngHiUnt() {
+        return this.cndtnOnRngHiUnt;
+    }
+    
+    public void setCndtnOnRngHiUnt(String cndtnOnRngHiUnt) {
+        this.cndtnOnRngHiUnt = cndtnOnRngHiUnt;
+    }
+    
+    
+    
+    public String getCndtnOnRngHiVl() {
+        return this.cndtnOnRngHiVl;
+    }
+    
+    public void setCndtnOnRngHiVl(String cndtnOnRngHiVl) {
+        this.cndtnOnRngHiVl = cndtnOnRngHiVl;
+    }
+    
+    
+    
+    public String getCndtnOnRngLwCd() {
+        return this.cndtnOnRngLwCd;
+    }
+    
+    public void setCndtnOnRngLwCd(String cndtnOnRngLwCd) {
+        this.cndtnOnRngLwCd = cndtnOnRngLwCd;
+    }
+    
+    
+    
+    public String getCndtnOnRngLwCmprtr() {
+        return this.cndtnOnRngLwCmprtr;
+    }
+    
+    public void setCndtnOnRngLwCmprtr(String cndtnOnRngLwCmprtr) {
+        this.cndtnOnRngLwCmprtr = cndtnOnRngLwCmprtr;
+    }
+    
+    
+    
+    public String getCndtnOnRngLwSys() {
+        return this.cndtnOnRngLwSys;
+    }
+    
+    public void setCndtnOnRngLwSys(String cndtnOnRngLwSys) {
+        this.cndtnOnRngLwSys = cndtnOnRngLwSys;
+    }
+    
+    
+    
+    public String getCndtnOnRngLwUnt() {
+        return this.cndtnOnRngLwUnt;
+    }
+    
+    public void setCndtnOnRngLwUnt(String cndtnOnRngLwUnt) {
+        this.cndtnOnRngLwUnt = cndtnOnRngLwUnt;
+    }
+    
+    
+    
+    public String getCndtnOnRngLwVl() {
+        return this.cndtnOnRngLwVl;
+    }
+    
+    public void setCndtnOnRngLwVl(String cndtnOnRngLwVl) {
+        this.cndtnOnRngLwVl = cndtnOnRngLwVl;
+    }
+    
+    
+    
+    public String getCndtnOnStrgTyp() {
+        return this.cndtnOnStrgTyp;
+    }
+    
+    public void setCndtnOnStrgTyp(String cndtnOnStrgTyp) {
+        this.cndtnOnStrgTyp = cndtnOnStrgTyp;
+    }
+    
+    
+    
+    public String getCndtnRecordedDt() {
+        return this.cndtnRecordedDt;
+    }
+    
+    public void setCndtnRecordedDt(String cndtnRecordedDt) {
+        this.cndtnRecordedDt = cndtnRecordedDt;
+    }
+    
+    
+    
+    public String getCndtnRecorder() {
+        return this.cndtnRecorder;
+    }
+    
+    public void setCndtnRecorder(String cndtnRecorder) {
+        this.cndtnRecorder = cndtnRecorder;
+    }
+    
+    
+    
+    public String getCndtnSeverityCdgCd() {
+        return this.cndtnSeverityCdgCd;
+    }
+    
+    public void setCndtnSeverityCdgCd(String cndtnSeverityCdgCd) {
+        this.cndtnSeverityCdgCd = cndtnSeverityCdgCd;
+    }
+    
+    
+    
+    public String getCndtnSeverityCdgDsply() {
+        return this.cndtnSeverityCdgDsply;
+    }
+    
+    public void setCndtnSeverityCdgDsply(String cndtnSeverityCdgDsply) {
+        this.cndtnSeverityCdgDsply = cndtnSeverityCdgDsply;
+    }
+    
+    
+    
+    public String getCndtnSeverityCdgSys() {
+        return this.cndtnSeverityCdgSys;
+    }
+    
+    public void setCndtnSeverityCdgSys(String cndtnSeverityCdgSys) {
+        this.cndtnSeverityCdgSys = cndtnSeverityCdgSys;
+    }
+    
+    
+    
+    public String getCndtnSeverityCdgUsrSltd() {
+        return this.cndtnSeverityCdgUsrSltd;
+    }
+    
+    public void setCndtnSeverityCdgUsrSltd(String cndtnSeverityCdgUsrSltd) {
+        this.cndtnSeverityCdgUsrSltd = cndtnSeverityCdgUsrSltd;
+    }
+    
+    
+    
+    public String getCndtnSeverityCdgVrsn() {
+        return this.cndtnSeverityCdgVrsn;
+    }
+    
+    public void setCndtnSeverityCdgVrsn(String cndtnSeverityCdgVrsn) {
+        this.cndtnSeverityCdgVrsn = cndtnSeverityCdgVrsn;
+    }
+    
+    
+    
+    public String getCndtnSeverityTxt() {
+        return this.cndtnSeverityTxt;
+    }
+    
+    public void setCndtnSeverityTxt(String cndtnSeverityTxt) {
+        this.cndtnSeverityTxt = cndtnSeverityTxt;
+    }
+    
+    
+    
+    public String getCndtnStageAssmnt() {
+        return this.cndtnStageAssmnt;
+    }
+    
+    public void setCndtnStageAssmnt(String cndtnStageAssmnt) {
+        this.cndtnStageAssmnt = cndtnStageAssmnt;
+    }
+    
+    
+    
+    public String getCndtnStageSummaryCdgCd() {
+        return this.cndtnStageSummaryCdgCd;
+    }
+    
+    public void setCndtnStageSummaryCdgCd(String cndtnStageSummaryCdgCd) {
+        this.cndtnStageSummaryCdgCd = cndtnStageSummaryCdgCd;
+    }
+    
+    
+    
+    public String getCndtnStageSummaryCdgDsply() {
+        return this.cndtnStageSummaryCdgDsply;
+    }
+    
+    public void setCndtnStageSummaryCdgDsply(String cndtnStageSummaryCdgDsply) {
+        this.cndtnStageSummaryCdgDsply = cndtnStageSummaryCdgDsply;
+    }
+    
+    
+    
+    public String getCndtnStageSummaryCdgSys() {
+        return this.cndtnStageSummaryCdgSys;
+    }
+    
+    public void setCndtnStageSummaryCdgSys(String cndtnStageSummaryCdgSys) {
+        this.cndtnStageSummaryCdgSys = cndtnStageSummaryCdgSys;
+    }
+    
+    
+    
+    public String getCndtnStageSummaryCdgUsrSltd() {
+        return this.cndtnStageSummaryCdgUsrSltd;
+    }
+    
+    public void setCndtnStageSummaryCdgUsrSltd(String cndtnStageSummaryCdgUsrSltd) {
+        this.cndtnStageSummaryCdgUsrSltd = cndtnStageSummaryCdgUsrSltd;
+    }
+    
+    
+    
+    public String getCndtnStageSummaryCdgVrsn() {
+        return this.cndtnStageSummaryCdgVrsn;
+    }
+    
+    public void setCndtnStageSummaryCdgVrsn(String cndtnStageSummaryCdgVrsn) {
+        this.cndtnStageSummaryCdgVrsn = cndtnStageSummaryCdgVrsn;
+    }
+    
+    
+    
+    public String getCndtnStageSummaryTxt() {
+        return this.cndtnStageSummaryTxt;
+    }
+    
+    public void setCndtnStageSummaryTxt(String cndtnStageSummaryTxt) {
+        this.cndtnStageSummaryTxt = cndtnStageSummaryTxt;
+    }
+    
+    
+    
+    public String getCndtnStageTypCdgCd() {
+        return this.cndtnStageTypCdgCd;
+    }
+    
+    public void setCndtnStageTypCdgCd(String cndtnStageTypCdgCd) {
+        this.cndtnStageTypCdgCd = cndtnStageTypCdgCd;
+    }
+    
+    
+    
+    public String getCndtnStageTypCdgDsply() {
+        return this.cndtnStageTypCdgDsply;
+    }
+    
+    public void setCndtnStageTypCdgDsply(String cndtnStageTypCdgDsply) {
+        this.cndtnStageTypCdgDsply = cndtnStageTypCdgDsply;
+    }
+    
+    
+    
+    public String getCndtnStageTypCdgSys() {
+        return this.cndtnStageTypCdgSys;
+    }
+    
+    public void setCndtnStageTypCdgSys(String cndtnStageTypCdgSys) {
+        this.cndtnStageTypCdgSys = cndtnStageTypCdgSys;
+    }
+    
+    
+    
+    public String getCndtnStageTypCdgUsrSltd() {
+        return this.cndtnStageTypCdgUsrSltd;
+    }
+    
+    public void setCndtnStageTypCdgUsrSltd(String cndtnStageTypCdgUsrSltd) {
+        this.cndtnStageTypCdgUsrSltd = cndtnStageTypCdgUsrSltd;
+    }
+    
+    
+    
+    public String getCndtnStageTypCdgVrsn() {
+        return this.cndtnStageTypCdgVrsn;
+    }
+    
+    public void setCndtnStageTypCdgVrsn(String cndtnStageTypCdgVrsn) {
+        this.cndtnStageTypCdgVrsn = cndtnStageTypCdgVrsn;
+    }
+    
+    
+    
+    public String getCndtnStageTypTxt() {
+        return this.cndtnStageTypTxt;
+    }
+    
+    public void setCndtnStageTypTxt(String cndtnStageTypTxt) {
+        this.cndtnStageTypTxt = cndtnStageTypTxt;
+    }
+    
+    
+    
+    public String getCndtnSbjct() {
+        return this.cndtnSbjct;
+    }
+    
+    public void setCndtnSbjct(String cndtnSbjct) {
+        this.cndtnSbjct = cndtnSbjct;
+    }
+    
+    
+    
+    public String getCndtnVrfctnStsCdgCd() {
+        return this.cndtnVrfctnStsCdgCd;
+    }
+    
+    public void setCndtnVrfctnStsCdgCd(String cndtnVrfctnStsCdgCd) {
+        this.cndtnVrfctnStsCdgCd = cndtnVrfctnStsCdgCd;
+    }
+    
+    
+    
+    public String getCndtnVrfctnStsCdgDsply() {
+        return this.cndtnVrfctnStsCdgDsply;
+    }
+    
+    public void setCndtnVrfctnStsCdgDsply(String cndtnVrfctnStsCdgDsply) {
+        this.cndtnVrfctnStsCdgDsply = cndtnVrfctnStsCdgDsply;
+    }
+    
+    
+    
+    public String getCndtnVrfctnStsCdgSys() {
+        return this.cndtnVrfctnStsCdgSys;
+    }
+    
+    public void setCndtnVrfctnStsCdgSys(String cndtnVrfctnStsCdgSys) {
+        this.cndtnVrfctnStsCdgSys = cndtnVrfctnStsCdgSys;
+    }
+    
+    
+    
+    public String getCndtnVrfctnStsCdgUsrSltd() {
+        return this.cndtnVrfctnStsCdgUsrSltd;
+    }
+    
+    public void setCndtnVrfctnStsCdgUsrSltd(String cndtnVrfctnStsCdgUsrSltd) {
+        this.cndtnVrfctnStsCdgUsrSltd = cndtnVrfctnStsCdgUsrSltd;
+    }
+    
+    
+    
+    public String getCndtnVrfctnStsCdgVrsn() {
+        return this.cndtnVrfctnStsCdgVrsn;
+    }
+    
+    public void setCndtnVrfctnStsCdgVrsn(String cndtnVrfctnStsCdgVrsn) {
+        this.cndtnVrfctnStsCdgVrsn = cndtnVrfctnStsCdgVrsn;
+    }
+    
+    
+    
+    public String getCndtnVrfctnStsTxt() {
+        return this.cndtnVrfctnStsTxt;
+    }
+    
+    public void setCndtnVrfctnStsTxt(String cndtnVrfctnStsTxt) {
+        this.cndtnVrfctnStsTxt = cndtnVrfctnStsTxt;
+    }
+    
+    
+    
 
 
 

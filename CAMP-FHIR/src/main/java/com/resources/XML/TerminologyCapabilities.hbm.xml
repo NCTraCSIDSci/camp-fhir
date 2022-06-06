@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Jun 6, 2022, 11:02:25 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="TerminologyCapabilities" optimistic-lock="none" table="TerminologyCapabilities">
+        <id name="id" type="string">
+            <column length="64" name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="trminologyCpnltiesClosureTranslation" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_Closure_Translation"/>
+        </property>
+        <property name="trminologyCpnltiesCdSrch" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_CdSrch"/>
+        </property>
+        <property name="trminologyCpnltiesCdSysSubsumption" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_CdSys_Subsumption"/>
+        </property>
+        <property name="trminologyCpnltiesCdSysUri" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_CdSys_Uri"/>
+        </property>
+        <property name="trminologyCpnltiesCdSysVrsnCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_CdSys_Vrsn_Cd"/>
+        </property>
+        <property name="trminologyCpnltiesCdSysVrsnCmpsitional" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_CdSys_Vrsn_Cmpsitional"/>
+        </property>
+        <property name="trminologyCpnltiesCdSysVrsnFltrCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_CdSys_Vrsn_Fltr_Cd"/>
+        </property>
+        <property name="trminologyCpnltiesCdSysVrsnFltrOp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_CdSys_Vrsn_Fltr_Op"/>
+        </property>
+        <property name="trminologyCpnltiesCdSysVrsnIsDefault" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_CdSys_Vrsn_IsDefault"/>
+        </property>
+        <property name="trminologyCpnltiesCdSysVrsnLnguage" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_CdSys_Vrsn_Lnguage"/>
+        </property>
+        <property name="trminologyCpnltiesCdSysVrsnPrpty" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_CdSys_Vrsn_Prpty"/>
+        </property>
+        <property name="trminologyCpnltiesCntctNm" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_Cntct_Nm"/>
+        </property>
+        <property name="trminologyCpnltiesCntctTlcmPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_Cntct_Tlcm_Prd_End"/>
+        </property>
+        <property name="trminologyCpnltiesCntctTlcmPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_Cntct_Tlcm_Prd_Strt"/>
+        </property>
+        <property name="trminologyCpnltiesCntctTlcmRnk" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_Cntct_Tlcm_Rnk"/>
+        </property>
+        <property name="trminologyCpnltiesCntctTlcmSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_Cntct_Tlcm_Sys"/>
+        </property>
+        <property name="trminologyCpnltiesCntctTlcmUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_Cntct_Tlcm_Use"/>
+        </property>
+        <property name="trminologyCpnltiesCntctTlcmVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_Cntct_Tlcm_Vl"/>
+        </property>
+        <property name="trminologyCpnltiesCopyright" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_Copyright"/>
+        </property>
+        <property name="trminologyCpnltiesDt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_Dt"/>
+        </property>
+        <property name="trminologyCpnltiesDscrptn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_Dscrptn"/>
+        </property>
+        <property name="trminologyCpnltiesExpansionHierarchical" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_Expansion_Hierarchical"/>
+        </property>
+        <property name="trminologyCpnltiesExpansionIncomplete" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_Expansion_Incomplete"/>
+        </property>
+        <property name="trminologyCpnltiesExpansionPaging" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_Expansion_Paging"/>
+        </property>
+        <property name="trminologyCpnltiesExpansionPrmtrDocation" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_Expansion_Prmtr_Docation"/>
+        </property>
+        <property name="trminologyCpnltiesExpansionPrmtrNm" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_Expansion_Prmtr_Nm"/>
+        </property>
+        <property name="trminologyCpnltiesExpansionTxtFltr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_Expansion_TxtFltr"/>
+        </property>
+        <property name="trminologyCpnltiesExprmtl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_Exprmtl"/>
+        </property>
+        <property name="trminologyCpnltiesImplementationDscrptn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_Implementation_Dscrptn"/>
+        </property>
+        <property name="trminologyCpnltiesImplementationUrl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_Implementation_Url"/>
+        </property>
+        <property name="trminologyCpnltiesJrsdctnCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_Jrsdctn_Cdg_Cd"/>
+        </property>
+        <property name="trminologyCpnltiesJrsdctnCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_Jrsdctn_Cdg_Dsply"/>
+        </property>
+        <property name="trminologyCpnltiesJrsdctnCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_Jrsdctn_Cdg_Sys"/>
+        </property>
+        <property name="trminologyCpnltiesJrsdctnCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_Jrsdctn_Cdg_UsrSltd"/>
+        </property>
+        <property name="trminologyCpnltiesJrsdctnCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_Jrsdctn_Cdg_Vrsn"/>
+        </property>
+        <property name="trminologyCpnltiesJrsdctnTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_Jrsdctn_Txt"/>
+        </property>
+        <property name="trminologyCpnltiesKind" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_Kind"/>
+        </property>
+        <property name="trminologyCpnltiesLockedDt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_LockedDt"/>
+        </property>
+        <property name="trminologyCpnltiesNm" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_Nm"/>
+        </property>
+        <property name="trminologyCpnltiesPblshr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_Pblshr"/>
+        </property>
+        <property name="trminologyCpnltiesPrpse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_Prpse"/>
+        </property>
+        <property name="trminologyCpnltiesSoftwareNm" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_Software_Nm"/>
+        </property>
+        <property name="trminologyCpnltiesSoftwareVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_Software_Vrsn"/>
+        </property>
+        <property name="trminologyCpnltiesSts" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_Sts"/>
+        </property>
+        <property name="trminologyCpnltiesTtl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_Ttl"/>
+        </property>
+        <property name="trminologyCpnltiesTranslationNeedsMap" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_Translation_NeedsMap"/>
+        </property>
+        <property name="trminologyCpnltiesUrl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_Url"/>
+        </property>
+        <property name="trminologyCpnltiesUseCntxtCdCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_UseCntxt_Cd_Cd"/>
+        </property>
+        <property name="trminologyCpnltiesUseCntxtCdDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_UseCntxt_Cd_Dsply"/>
+        </property>
+        <property name="trminologyCpnltiesUseCntxtCdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_UseCntxt_Cd_Sys"/>
+        </property>
+        <property name="trminologyCpnltiesUseCntxtCdUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_UseCntxt_Cd_UsrSltd"/>
+        </property>
+        <property name="trminologyCpnltiesUseCntxtCdVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_UseCntxt_Cd_Vrsn"/>
+        </property>
+        <property name="trminologyCpnltiesUseCntxtVlCdbleCncptCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_UseCntxt_VlCdbleCncpt_Cdg_Cd"/>
+        </property>
+        <property name="trminologyCpnltiesUseCntxtVlCdbleCncptCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_UseCntxt_VlCdbleCncpt_Cdg_Dsply"/>
+        </property>
+        <property name="trminologyCpnltiesUseCntxtVlCdbleCncptCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_UseCntxt_VlCdbleCncpt_Cdg_Sys"/>
+        </property>
+        <property name="trminologyCpnltiesUseCntxtVlCdbleCncptCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_UseCntxt_VlCdbleCncpt_Cdg_UsrSltd"/>
+        </property>
+        <property name="trminologyCpnltiesUseCntxtVlCdbleCncptCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_UseCntxt_VlCdbleCncpt_Cdg_Vrsn"/>
+        </property>
+        <property name="trminologyCpnltiesUseCntxtVlCdbleCncptTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_UseCntxt_VlCdbleCncpt_Txt"/>
+        </property>
+        <property name="trminologyCpnltiesUseCntxtVlQntyCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_UseCntxt_VlQnty_Cd"/>
+        </property>
+        <property name="trminologyCpnltiesUseCntxtVlQntyCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_UseCntxt_VlQnty_Cmprtr"/>
+        </property>
+        <property name="trminologyCpnltiesUseCntxtVlQntySys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_UseCntxt_VlQnty_Sys"/>
+        </property>
+        <property name="trminologyCpnltiesUseCntxtVlQntyUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_UseCntxt_VlQnty_Unt"/>
+        </property>
+        <property name="trminologyCpnltiesUseCntxtVlQntyVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_UseCntxt_VlQnty_Vl"/>
+        </property>
+        <property name="trminologyCpnltiesUseCntxtVlRngHiCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_UseCntxt_VlRng_Hi_Cd"/>
+        </property>
+        <property name="trminologyCpnltiesUseCntxtVlRngHiCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_UseCntxt_VlRng_Hi_Cmprtr"/>
+        </property>
+        <property name="trminologyCpnltiesUseCntxtVlRngHiSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_UseCntxt_VlRng_Hi_Sys"/>
+        </property>
+        <property name="trminologyCpnltiesUseCntxtVlRngHiUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_UseCntxt_VlRng_Hi_Unt"/>
+        </property>
+        <property name="trminologyCpnltiesUseCntxtVlRngHiVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_UseCntxt_VlRng_Hi_Vl"/>
+        </property>
+        <property name="trminologyCpnltiesUseCntxtVlRngLwCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_UseCntxt_VlRng_Lw_Cd"/>
+        </property>
+        <property name="trminologyCpnltiesUseCntxtVlRngLwCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_UseCntxt_VlRng_Lw_Cmprtr"/>
+        </property>
+        <property name="trminologyCpnltiesUseCntxtVlRngLwSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_UseCntxt_VlRng_Lw_Sys"/>
+        </property>
+        <property name="trminologyCpnltiesUseCntxtVlRngLwUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_UseCntxt_VlRng_Lw_Unt"/>
+        </property>
+        <property name="trminologyCpnltiesUseCntxtVlRngLwVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_UseCntxt_VlRng_Lw_Vl"/>
+        </property>
+        <property name="trminologyCpnltiesUseCntxtVlRfrnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_UseCntxt_VlRfrnc"/>
+        </property>
+        <property name="trminologyCpnltiesValidateCdTranslations" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_ValidateCd_Translations"/>
+        </property>
+        <property name="trminologyCpnltiesVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TrminologyCpnlties_Vrsn"/>
+        </property>
+    </class>
+</hibernate-mapping>

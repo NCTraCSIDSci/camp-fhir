@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Feb 22, 2022, 7:23:19 PM by Hibernate Tools 5.6.1.Final
+// Generated Jun 6, 2022, 11:02:30 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -11,3767 +11,3134 @@ public class Observation  implements java.io.Serializable {
 
 
      private String id;
-     private String obsBasedOn;
-     private String obsBodySiteCodingCode;
-     private String obsBodySiteCodingDisplay;
-     private String obsBodySiteCodingSystem;
-     private String obsBodySiteCodingUsrslt;
-     private String obsBodySiteCodingVersion;
-     private String obsBodySiteText;
-     private String obsCategoryCodingCode;
-     private String obsCategoryCodingDisplay;
-     private String obsCategoryCodingSystem;
-     private String obsCategoryCodingUsrslt;
-     private String obsCategoryCodingVersion;
-     private String obsCategoryText;
-     private String obsCodeCodingCode;
-     private String obsCodeCodingDisplay;
-     private String obsCodeCodingSystem;
-     private String obsCodeCodingUsrslt;
-     private String obsCodeCodingVersion;
-     private String obsCodeText;
-     private String obsComponentCodeCodingCode;
-     private String obsComponentCodeCodingDisplay;
-     private String obsComponentCodeCodingSystem;
-     private String obsComponentCodeCodingUsrslt;
-     private String obsComponentCodeCodingVersion;
-     private String obsComponentCodeText;
-     private String obsComponentDataAbsentReasonCodingCode;
-     private String obsComponentDataAbsentReasonCodingDisplay;
-     private String obsComponentDataAbsentReasonCodingSystem;
-     private String obsComponentDataAbsentReasonCodingUsrslt;
-     private String obsComponentDataAbsentReasonCodingVersion;
-     private String obsComponentDataAbsentReasonText;
-     private String obsComponentInterpretationCodingCode;
-     private String obsComponentInterpretationCodingDisplay;
-     private String obsComponentInterpretationCodingSystem;
-     private String obsComponentInterpretationCodingUsrslt;
-     private String obsComponentInterpretationCodingVersion;
-     private String obsComponentInterpretationText;
-     private String obsComponentReferenceRangeAgeHighCode;
-     private String obsComponentReferenceRangeAgeHighCompartrCode;
-     private String obsComponentReferenceRangeAgeHighSystem;
-     private String obsComponentReferenceRangeAgeHighUnit;
-     private String obsComponentReferenceRangeAgeHighValue;
-     private String obsComponentReferenceRangeAgeLowCode;
-     private String obsComponentReferenceRangeAgeLowCompartrCode;
-     private String obsComponentReferenceRangeAgeLowSystem;
-     private String obsComponentReferenceRangeAgeLowUnit;
-     private String obsComponentReferenceRangeAgeLowValue;
-     private String obsComponentReferenceRangeAppliesToCodingCode;
-     private String obsComponentReferenceRangeAppliesToCodingDisplay;
-     private String obsComponentReferenceRangeAppliesToCodingSystem;
-     private String obsComponentReferenceRangeAppliesToCodingUsrslt;
-     private String obsComponentReferenceRangeAppliesToCodingVersion;
-     private String obsComponentReferenceRangeAppliesToText;
-     private String obsComponentReferenceRangeHighCode;
-     private String obsComponentReferenceRangeHighCompartrCode;
-     private String obsComponentReferenceRangeHighSystem;
-     private String obsComponentReferenceRangeHighUnit;
-     private String obsComponentReferenceRangeHighValue;
-     private String obsComponentReferenceRangeLowCode;
-     private String obsComponentReferenceRangeLowCompartrCode;
-     private String obsComponentReferenceRangeLowSystem;
-     private String obsComponentReferenceRangeLowUnit;
-     private String obsComponentReferenceRangeLowValue;
-     private String obsComponentReferenceRangeText;
-     private String obsComponentReferenceRangeTypeCodingCode;
-     private String obsComponentReferenceRangeTypeCodingDisplay;
-     private String obsComponentReferenceRangeTypeCodingSystem;
-     private String obsComponentReferenceRangeTypeCodingUsrslt;
-     private String obsComponentReferenceRangeTypeCodingVersion;
-     private String obsComponentReferenceRangeTypeText;
-     private String observationComponentValueBoolean;
-     private String obsComponentValueCodeableConceptCodingCode;
-     private String obsComponentValueCodeableConceptCodingDisplay;
-     private String obsComponentValueCodeableConceptCodingSystem;
-     private String obsComponentValueCodeableConceptCodingUsrslt;
-     private String obsComponentValueCodeableConceptCodingVersion;
-     private String obsComponentValueCodeableConceptText;
-     private String observationComponentValueDateTime;
-     private String observationComponentValueInteger;
-     private String obsComponentValuePeriodEnd;
-     private String obsComponentValuePeriodStart;
-     private String obsComponentValueQuantityCode;
-     private String obsComponentValueQuantityCompartrCode;
-     private String obsComponentValueQuantitySystem;
-     private String obsComponentValueQuantityUnit;
-     private String obsComponentValueQuantityValue;
-     private String obsComponentValueRangeHighCode;
-     private String obsComponentValueRangeHighCompartrCode;
-     private String obsComponentValueRangeHighSystem;
-     private String obsComponentValueRangeHighUnit;
-     private String obsComponentValueRangeHighValue;
-     private String obsComponentValueRangeLowCode;
-     private String obsComponentValueRangeLowCompartrCode;
-     private String obsComponentValueRangeLowSystem;
-     private String obsComponentValueRangeLowUnit;
-     private String obsComponentValueRangeLowValue;
-     private String obsComponentValueRatioDenomCode;
-     private String obsComponentValueRatioDenomCompartrCode;
-     private String obsComponentValueRatioDenomSystem;
-     private String obsComponentValueRatioDenomUnit;
-     private String obsComponentValueRatioDenomValue;
-     private String obsComponentValueRatioNumeratorCode;
-     private String obsComponentValueRatioNumeratorCompartrCode;
-     private String obsComponentValueRatioNumeratorSystem;
-     private String obsComponentValueRatioNumeratorUnit;
-     private String obsComponentValueRatioNumeratorValue;
-     private String obsComponentValueSampledDataData;
-     private String obsComponentValueSampledDataDimensions;
-     private String obsComponentValueSampledDataFactor;
-     private String obsComponentValueSampledDataLowerLimit;
-     private String obsComponentValueSampledDataOriginCode;
-     private String obsComponentValueSampledDataOriginCompartrCode;
-     private String obsComponentValueSampledDataOriginSystem;
-     private String obsComponentValueSampledDataOriginUnit;
-     private String obsComponentValueSampledDataOriginValue;
-     private String obsComponentValueSampledDataPeriod;
-     private String obsComponentValueSampledDataUpperLimit;
-     private String observationComponentValueString;
-     private String observationComponentValueTime;
-     private String obsDataAbsentReasonCodingCode;
-     private String obsDataAbsentReasonCodingDisplay;
-     private String obsDataAbsentReasonCodingSystem;
-     private String obsDataAbsentReasonCodingUsrslt;
-     private String obsDataAbsentReasonCodingVersion;
-     private String obsDataAbsentReasonText;
-     private String obsDerivedFrom;
-     private String obsDevice;
-     private String observationEffectiveDateTime;
-     private String observationEffectiveInstant;
-     private String obsEffectivePeriodEnd;
-     private String obsEffectivePeriodStart;
-     private String obsEffectiveTimingCodeCodingCode;
-     private String obsEffectiveTimingCodeCodingDisplay;
-     private String obsEffectiveTimingCodeCodingSystem;
-     private String obsEffectiveTimingCodeCodingUsrslt;
-     private String obsEffectiveTimingCodeCodingVersion;
-     private String obsEffectiveTimingCodeText;
-     private String obsEffectiveTimingEvent;
-     private String obsEffectiveTimingRepeatBoundsDurationCode;
-     private String obsEffectiveTimingRepeatBoundsDurationCompartrCode;
-     private String obsEffectiveTimingRepeatBoundsDurationSystem;
-     private String obsEffectiveTimingRepeatBoundsDurationUnit;
-     private String obsEffectiveTimingRepeatBoundsDurationValue;
-     private String obsEffectiveTimingRepeatBoundsPeriodEnd;
-     private String obsEffectiveTimingRepeatBoundsPeriodStart;
-     private String obsEffectiveTimingRepeatBoundsRangeHighCode;
-     private String obsEffectiveTimingRepeatBoundsRangeHighCompartrCode;
-     private String obsEffectiveTimingRepeatBoundsRangeHighSystem;
-     private String obsEffectiveTimingRepeatBoundsRangeHighUnit;
-     private String obsEffectiveTimingRepeatBoundsRangeHighValue;
-     private String obsEffectiveTimingRepeatBoundsRangeLowCode;
-     private String obsEffectiveTimingRepeatBoundsRangeLowCompartrCode;
-     private String obsEffectiveTimingRepeatBoundsRangeLowSystem;
-     private String obsEffectiveTimingRepeatBoundsRangeLowUnit;
-     private String obsEffectiveTimingRepeatBoundsRangeLowValue;
-     private String obsEffectiveTimingRepeatCount;
-     private String obsEffectiveTimingRepeatCountMax;
-     private String obsEffectiveTimingRepeatDayOfWeekCode;
-     private String obsEffectiveTimingRepeatDuration;
-     private String obsEffectiveTimingRepeatDurationMax;
-     private String obsEffectiveTimingRepeatDurationUnitCode;
-     private String obsEffectiveTimingRepeatFrequency;
-     private String obsEffectiveTimingRepeatFrequencyMax;
-     private String obsEffectiveTimingRepeatOff;
-     private String obsEffectiveTimingRepeatPeriod;
-     private String obsEffectiveTimingRepeatPeriodMax;
-     private String obsEffectiveTimingRepeatPeriodUnitCode;
-     private String obsEffectiveTimingRepeatTimeOfDay;
-     private String obsEffectiveTimingRepeatWhenCode;
-     private String obsEnc;
-     private String obsFocus;
-     private String obsHasMember;
-     private String obsIdAssigner;
-     private String obsIdPeriodEnd;
-     private String obsIdPeriodStart;
-     private String obsIdSystem;
-     private String obsIdTypeCodingCode;
-     private String obsIdTypeCodingDisplay;
-     private String obsIdTypeCodingSystem;
-     private String obsIdTypeCodingUsrslt;
-     private String obsIdTypeCodingVersion;
-     private String obsIdTypeText;
-     private String obsIdUseCode;
-     private String obsIdValue;
-     private String obsInterpretationCodingCode;
-     private String obsInterpretationCodingDisplay;
-     private String obsInterpretationCodingSystem;
-     private String obsInterpretationCodingUsrslt;
-     private String obsInterpretationCodingVersion;
-     private String obsInterpretationText;
-     private String obsIssued;
-     private String obsMethodCodingCode;
-     private String obsMethodCodingDisplay;
-     private String obsMethodCodingSystem;
-     private String obsMethodCodingUsrslt;
-     private String obsMethodCodingVersion;
-     private String obsMethodText;
-     private String observationNoteAuthorReference;
-     private String observationNoteAuthorString;
-     private String obsNoteText;
-     private String obsNoteTime;
-     private String obsPartOf;
-     private String obsPerformer;
-     private String obsReferenceRangeAgeHighCode;
-     private String obsReferenceRangeAgeHighCompartrCode;
-     private String obsReferenceRangeAgeHighSystem;
-     private String obsReferenceRangeAgeHighUnit;
-     private String obsReferenceRangeAgeHighValue;
-     private String obsReferenceRangeAgeLowCode;
-     private String obsReferenceRangeAgeLowCompartrCode;
-     private String obsReferenceRangeAgeLowSystem;
-     private String obsReferenceRangeAgeLowUnit;
-     private String obsReferenceRangeAgeLowValue;
-     private String obsReferenceRangeAppliesToCodingCode;
-     private String obsReferenceRangeAppliesToCodingDisplay;
-     private String obsReferenceRangeAppliesToCodingSystem;
-     private String obsReferenceRangeAppliesToCodingUsrslt;
-     private String obsReferenceRangeAppliesToCodingVersion;
-     private String obsReferenceRangeAppliesToText;
-     private String obsReferenceRangeHighCode;
-     private String obsReferenceRangeHighCompartrCode;
-     private String obsReferenceRangeHighSystem;
-     private String obsReferenceRangeHighUnit;
-     private String obsReferenceRangeHighValue;
-     private String obsReferenceRangeLowCode;
-     private String obsReferenceRangeLowCompartrCode;
-     private String obsReferenceRangeLowSystem;
-     private String obsReferenceRangeLowUnit;
-     private String obsReferenceRangeLowValue;
-     private String obsReferenceRangeText;
-     private String obsReferenceRangeTypeCodingCode;
-     private String obsReferenceRangeTypeCodingDisplay;
-     private String obsReferenceRangeTypeCodingSystem;
-     private String obsReferenceRangeTypeCodingUsrslt;
-     private String obsReferenceRangeTypeCodingVersion;
-     private String obsReferenceRangeTypeText;
-     private String obsSpecimen;
-     private String obsStatusCode;
-     private String obsSubject;
-     private String observationValueBoolean;
-     private String obsValueCodeableConceptCodingCode;
-     private String obsValueCodeableConceptCodingDisplay;
-     private String obsValueCodeableConceptCodingSystem;
-     private String obsValueCodeableConceptCodingUsrslt;
-     private String obsValueCodeableConceptCodingVersion;
-     private String obsValueCodeableConceptText;
-     private String observationValueDateTime;
-     private String observationValueInteger;
-     private String obsValuePeriodEnd;
-     private String obsValuePeriodStart;
-     private String obsValueQuantityCode;
-     private String obsValueQuantityCompartrCode;
-     private String obsValueQuantitySystem;
-     private String obsValueQuantityUnit;
-     private String obsValueQuantityValue;
-     private String obsValueRangeHighCode;
-     private String obsValueRangeHighCompartrCode;
-     private String obsValueRangeHighSystem;
-     private String obsValueRangeHighUnit;
-     private String obsValueRangeHighValue;
-     private String obsValueRangeLowCode;
-     private String obsValueRangeLowCompartrCode;
-     private String obsValueRangeLowSystem;
-     private String obsValueRangeLowUnit;
-     private String obsValueRangeLowValue;
-     private String obsValueRatioDenomCode;
-     private String obsValueRatioDenomCompartrCode;
-     private String obsValueRatioDenomSystem;
-     private String obsValueRatioDenomUnit;
-     private String obsValueRatioDenomValue;
-     private String obsValueRatioNumeratorCode;
-     private String obsValueRatioNumeratorCompartrCode;
-     private String obsValueRatioNumeratorSystem;
-     private String obsValueRatioNumeratorUnit;
-     private String obsValueRatioNumeratorValue;
-     private String obsValueSampledDataData;
-     private String obsValueSampledDataDimensions;
-     private String obsValueSampledDataFactor;
-     private String obsValueSampledDataLowerLimit;
-     private String obsValueSampledDataOriginCode;
-     private String obsValueSampledDataOriginCompartrCode;
-     private String obsValueSampledDataOriginSystem;
-     private String obsValueSampledDataOriginUnit;
-     private String obsValueSampledDataOriginValue;
-     private String obsValueSampledDataPeriod;
-     private String obsValueSampledDataUpperLimit;
-     private String observationValueString;
-     private String observationValueTime;
+     private String obsrvtnBasedOn;
+     private String obsrvtnBodySiteCdgCd;
+     private String obsrvtnBodySiteCdgDsply;
+     private String obsrvtnBodySiteCdgSys;
+     private String obsrvtnBodySiteCdgUsrSltd;
+     private String obsrvtnBodySiteCdgVrsn;
+     private String obsrvtnBodySiteTxt;
+     private String obsrvtnCtgryCdgCd;
+     private String obsrvtnCtgryCdgDsply;
+     private String obsrvtnCtgryCdgSys;
+     private String obsrvtnCtgryCdgUsrSltd;
+     private String obsrvtnCtgryCdgVrsn;
+     private String obsrvtnCtgryTxt;
+     private String obsrvtnCdCdgCd;
+     private String obsrvtnCdCdgDsply;
+     private String obsrvtnCdCdgSys;
+     private String obsrvtnCdCdgUsrSltd;
+     private String obsrvtnCdCdgVrsn;
+     private String obsrvtnCdTxt;
+     private String obsrvtnCmpntCdCdgCd;
+     private String obsrvtnCmpntCdCdgDsply;
+     private String obsrvtnCmpntCdCdgSys;
+     private String obsrvtnCmpntCdCdgUsrSltd;
+     private String obsrvtnCmpntCdCdgVrsn;
+     private String obsrvtnCmpntCdTxt;
+     private String obsrvtnCmpntDataAbsentRsnCdgCd;
+     private String obsrvtnCmpntDataAbsentRsnCdgDsply;
+     private String obsrvtnCmpntDataAbsentRsnCdgSys;
+     private String obsrvtnCmpntDataAbsentRsnCdgUsrSltd;
+     private String obsrvtnCmpntDataAbsentRsnCdgVrsn;
+     private String obsrvtnCmpntDataAbsentRsnTxt;
+     private String obsrvtnCmpntInterpretationCdgCd;
+     private String obsrvtnCmpntInterpretationCdgDsply;
+     private String obsrvtnCmpntInterpretationCdgSys;
+     private String obsrvtnCmpntInterpretationCdgUsrSltd;
+     private String obsrvtnCmpntInterpretationCdgVrsn;
+     private String obsrvtnCmpntInterpretationTxt;
+     private String obsrvtnCmpntRfrncRngAgeHiCd;
+     private String obsrvtnCmpntRfrncRngAgeHiCmprtr;
+     private String obsrvtnCmpntRfrncRngAgeHiSys;
+     private String obsrvtnCmpntRfrncRngAgeHiUnt;
+     private String obsrvtnCmpntRfrncRngAgeHiVl;
+     private String obsrvtnCmpntRfrncRngAgeLwCd;
+     private String obsrvtnCmpntRfrncRngAgeLwCmprtr;
+     private String obsrvtnCmpntRfrncRngAgeLwSys;
+     private String obsrvtnCmpntRfrncRngAgeLwUnt;
+     private String obsrvtnCmpntRfrncRngAgeLwVl;
+     private String obsrvtnCmpntRfrncRngAppliesToCdgCd;
+     private String obsrvtnCmpntRfrncRngAppliesToCdgDsply;
+     private String obsrvtnCmpntRfrncRngAppliesToCdgSys;
+     private String obsrvtnCmpntRfrncRngAppliesToCdgUsrSltd;
+     private String obsrvtnCmpntRfrncRngAppliesToCdgVrsn;
+     private String obsrvtnCmpntRfrncRngAppliesToTxt;
+     private String obsrvtnCmpntRfrncRngHiCd;
+     private String obsrvtnCmpntRfrncRngHiCmprtr;
+     private String obsrvtnCmpntRfrncRngHiSys;
+     private String obsrvtnCmpntRfrncRngHiUnt;
+     private String obsrvtnCmpntRfrncRngHiVl;
+     private String obsrvtnCmpntRfrncRngLwCd;
+     private String obsrvtnCmpntRfrncRngLwCmprtr;
+     private String obsrvtnCmpntRfrncRngLwSys;
+     private String obsrvtnCmpntRfrncRngLwUnt;
+     private String obsrvtnCmpntRfrncRngLwVl;
+     private String obsrvtnCmpntRfrncRngTxt;
+     private String obsrvtnCmpntRfrncRngTypCdgCd;
+     private String obsrvtnCmpntRfrncRngTypCdgDsply;
+     private String obsrvtnCmpntRfrncRngTypCdgSys;
+     private String obsrvtnCmpntRfrncRngTypCdgUsrSltd;
+     private String obsrvtnCmpntRfrncRngTypCdgVrsn;
+     private String obsrvtnCmpntRfrncRngTypTxt;
+     private String obsrvtnCmpntVlBooleanTyp;
+     private String obsrvtnCmpntVlCdbleCncptCdgCd;
+     private String obsrvtnCmpntVlCdbleCncptCdgDsply;
+     private String obsrvtnCmpntVlCdbleCncptCdgSys;
+     private String obsrvtnCmpntVlCdbleCncptCdgUsrSltd;
+     private String obsrvtnCmpntVlCdbleCncptCdgVrsn;
+     private String obsrvtnCmpntVlCdbleCncptTxt;
+     private String obsrvtnCmpntVlDtTimeTyp;
+     private String obsrvtnCmpntVlIntegerTyp;
+     private String obsrvtnCmpntVlPrdEnd;
+     private String obsrvtnCmpntVlPrdStrt;
+     private String obsrvtnCmpntVlQntyCd;
+     private String obsrvtnCmpntVlQntyCmprtr;
+     private String obsrvtnCmpntVlQntySys;
+     private String obsrvtnCmpntVlQntyUnt;
+     private String obsrvtnCmpntVlQntyVl;
+     private String obsrvtnCmpntVlRngHiCd;
+     private String obsrvtnCmpntVlRngHiCmprtr;
+     private String obsrvtnCmpntVlRngHiSys;
+     private String obsrvtnCmpntVlRngHiUnt;
+     private String obsrvtnCmpntVlRngHiVl;
+     private String obsrvtnCmpntVlRngLwCd;
+     private String obsrvtnCmpntVlRngLwCmprtr;
+     private String obsrvtnCmpntVlRngLwSys;
+     private String obsrvtnCmpntVlRngLwUnt;
+     private String obsrvtnCmpntVlRngLwVl;
+     private String obsrvtnCmpntVlRtioDnmntrCd;
+     private String obsrvtnCmpntVlRtioDnmntrCmprtr;
+     private String obsrvtnCmpntVlRtioDnmntrSys;
+     private String obsrvtnCmpntVlRtioDnmntrUnt;
+     private String obsrvtnCmpntVlRtioDnmntrVl;
+     private String obsrvtnCmpntVlRtioNmrtrCd;
+     private String obsrvtnCmpntVlRtioNmrtrCmprtr;
+     private String obsrvtnCmpntVlRtioNmrtrSys;
+     private String obsrvtnCmpntVlRtioNmrtrUnt;
+     private String obsrvtnCmpntVlRtioNmrtrVl;
+     private String obsrvtnCmpntVlSampledDataData;
+     private String obsrvtnCmpntVlSampledDataDimensions;
+     private String obsrvtnCmpntVlSampledDataFactor;
+     private String obsrvtnCmpntVlSampledDataLwerLmt;
+     private String obsrvtnCmpntVlSampledDataOriginCd;
+     private String obsrvtnCmpntVlSampledDataOriginCmprtr;
+     private String obsrvtnCmpntVlSampledDataOriginSys;
+     private String obsrvtnCmpntVlSampledDataOriginUnt;
+     private String obsrvtnCmpntVlSampledDataOriginVl;
+     private String obsrvtnCmpntVlSampledDataPrd;
+     private String obsrvtnCmpntVlSampledDataUpperLmt;
+     private String obsrvtnCmpntVlStrgTyp;
+     private String obsrvtnCmpntVlTimeTyp;
+     private String obsrvtnDataAbsentRsnCdgCd;
+     private String obsrvtnDataAbsentRsnCdgDsply;
+     private String obsrvtnDataAbsentRsnCdgSys;
+     private String obsrvtnDataAbsentRsnCdgUsrSltd;
+     private String obsrvtnDataAbsentRsnCdgVrsn;
+     private String obsrvtnDataAbsentRsnTxt;
+     private String obsrvtnDerivedFrom;
+     private String obsrvtnDvc;
+     private String obsrvtnEfctiveDtTimeTyp;
+     private String obsrvtnEfctiveInstantTyp;
+     private String obsrvtnEfctivePrdEnd;
+     private String obsrvtnEfctivePrdStrt;
+     private String obsrvtnEfctiveTmgCdCdgCd;
+     private String obsrvtnEfctiveTmgCdCdgDsply;
+     private String obsrvtnEfctiveTmgCdCdgSys;
+     private String obsrvtnEfctiveTmgCdCdgUsrSltd;
+     private String obsrvtnEfctiveTmgCdCdgVrsn;
+     private String obsrvtnEfctiveTmgCdTxt;
+     private String obsrvtnEfctiveTmgEvnt;
+     private String obsrvtnEfctiveTmgRptBndsPrdEnd;
+     private String obsrvtnEfctiveTmgRptBndsPrdStrt;
+     private String obsrvtnEfctiveTmgRptBndsRngHiCd;
+     private String obsrvtnEfctiveTmgRptBndsRngHiCmprtr;
+     private String obsrvtnEfctiveTmgRptBndsRngHiSys;
+     private String obsrvtnEfctiveTmgRptBndsRngHiUnt;
+     private String obsrvtnEfctiveTmgRptBndsRngHiVl;
+     private String obsrvtnEfctiveTmgRptBndsRngLwCd;
+     private String obsrvtnEfctiveTmgRptBndsRngLwCmprtr;
+     private String obsrvtnEfctiveTmgRptBndsRngLwSys;
+     private String obsrvtnEfctiveTmgRptBndsRngLwUnt;
+     private String obsrvtnEfctiveTmgRptBndsRngLwVl;
+     private String obsrvtnEfctiveTmgRptCnt;
+     private String obsrvtnEfctiveTmgRptCntMx;
+     private String obsrvtnEfctiveTmgRptDayOfWeek;
+     private String obsrvtnEfctiveTmgRptDuration;
+     private String obsrvtnEfctiveTmgRptDurationMx;
+     private String obsrvtnEfctiveTmgRptDurationUnt;
+     private String obsrvtnEfctiveTmgRptFrqncy;
+     private String obsrvtnEfctiveTmgRptFrqncyMx;
+     private String obsrvtnEfctiveTmgRptOff;
+     private String obsrvtnEfctiveTmgRptPrd;
+     private String obsrvtnEfctiveTmgRptPrdMx;
+     private String obsrvtnEfctiveTmgRptPrdUnt;
+     private String obsrvtnEfctiveTmgRptTimeOfDay;
+     private String obsrvtnEfctiveTmgRptWhen;
+     private String obsrvtnEnc;
+     private String obsrvtnFocus;
+     private String obsrvtnHasMmbr;
+     private String obsrvtnIdAssigner;
+     private String obsrvtnIdPrdEnd;
+     private String obsrvtnIdPrdStrt;
+     private String obsrvtnIdSys;
+     private String obsrvtnIdTypCdgCd;
+     private String obsrvtnIdTypCdgDsply;
+     private String obsrvtnIdTypCdgSys;
+     private String obsrvtnIdTypCdgUsrSltd;
+     private String obsrvtnIdTypCdgVrsn;
+     private String obsrvtnIdTypTxt;
+     private String obsrvtnIdUse;
+     private String obsrvtnIdVl;
+     private String obsrvtnInterpretationCdgCd;
+     private String obsrvtnInterpretationCdgDsply;
+     private String obsrvtnInterpretationCdgSys;
+     private String obsrvtnInterpretationCdgUsrSltd;
+     private String obsrvtnInterpretationCdgVrsn;
+     private String obsrvtnInterpretationTxt;
+     private String obsrvtnIssued;
+     private String obsrvtnMthdCdgCd;
+     private String obsrvtnMthdCdgDsply;
+     private String obsrvtnMthdCdgSys;
+     private String obsrvtnMthdCdgUsrSltd;
+     private String obsrvtnMthdCdgVrsn;
+     private String obsrvtnMthdTxt;
+     private String obsrvtnNtAthrRfrnc;
+     private String obsrvtnNtAthrStrgTyp;
+     private String obsrvtnNtTxt;
+     private String obsrvtnNtTime;
+     private String obsrvtnPartOf;
+     private String obsrvtnPrfrmr;
+     private String obsrvtnRfrncRngAgeHiCd;
+     private String obsrvtnRfrncRngAgeHiCmprtr;
+     private String obsrvtnRfrncRngAgeHiSys;
+     private String obsrvtnRfrncRngAgeHiUnt;
+     private String obsrvtnRfrncRngAgeHiVl;
+     private String obsrvtnRfrncRngAgeLwCd;
+     private String obsrvtnRfrncRngAgeLwCmprtr;
+     private String obsrvtnRfrncRngAgeLwSys;
+     private String obsrvtnRfrncRngAgeLwUnt;
+     private String obsrvtnRfrncRngAgeLwVl;
+     private String obsrvtnRfrncRngAppliesToCdgCd;
+     private String obsrvtnRfrncRngAppliesToCdgDsply;
+     private String obsrvtnRfrncRngAppliesToCdgSys;
+     private String obsrvtnRfrncRngAppliesToCdgUsrSltd;
+     private String obsrvtnRfrncRngAppliesToCdgVrsn;
+     private String obsrvtnRfrncRngAppliesToTxt;
+     private String obsrvtnRfrncRngHiCd;
+     private String obsrvtnRfrncRngHiCmprtr;
+     private String obsrvtnRfrncRngHiSys;
+     private String obsrvtnRfrncRngHiUnt;
+     private String obsrvtnRfrncRngHiVl;
+     private String obsrvtnRfrncRngLwCd;
+     private String obsrvtnRfrncRngLwCmprtr;
+     private String obsrvtnRfrncRngLwSys;
+     private String obsrvtnRfrncRngLwUnt;
+     private String obsrvtnRfrncRngLwVl;
+     private String obsrvtnRfrncRngTxt;
+     private String obsrvtnRfrncRngTypCdgCd;
+     private String obsrvtnRfrncRngTypCdgDsply;
+     private String obsrvtnRfrncRngTypCdgSys;
+     private String obsrvtnRfrncRngTypCdgUsrSltd;
+     private String obsrvtnRfrncRngTypCdgVrsn;
+     private String obsrvtnRfrncRngTypTxt;
+     private String obsrvtnSpcmn;
+     private String obsrvtnSts;
+     private String obsrvtnSbjct;
+     private String obsrvtnVlBooleanTyp;
+     private String obsrvtnVlCdbleCncptCdgCd;
+     private String obsrvtnVlCdbleCncptCdgDsply;
+     private String obsrvtnVlCdbleCncptCdgSys;
+     private String obsrvtnVlCdbleCncptCdgUsrSltd;
+     private String obsrvtnVlCdbleCncptCdgVrsn;
+     private String obsrvtnVlCdbleCncptTxt;
+     private String obsrvtnVlDtTimeTyp;
+     private String obsrvtnVlIntegerTyp;
+     private String obsrvtnVlPrdEnd;
+     private String obsrvtnVlPrdStrt;
+     private String obsrvtnVlQntyCd;
+     private String obsrvtnVlQntyCmprtr;
+     private String obsrvtnVlQntySys;
+     private String obsrvtnVlQntyUnt;
+     private String obsrvtnVlQntyVl;
+     private String obsrvtnVlRngHiCd;
+     private String obsrvtnVlRngHiCmprtr;
+     private String obsrvtnVlRngHiSys;
+     private String obsrvtnVlRngHiUnt;
+     private String obsrvtnVlRngHiVl;
+     private String obsrvtnVlRngLwCd;
+     private String obsrvtnVlRngLwCmprtr;
+     private String obsrvtnVlRngLwSys;
+     private String obsrvtnVlRngLwUnt;
+     private String obsrvtnVlRngLwVl;
+     private String obsrvtnVlRtioDnmntrCd;
+     private String obsrvtnVlRtioDnmntrCmprtr;
+     private String obsrvtnVlRtioDnmntrSys;
+     private String obsrvtnVlRtioDnmntrUnt;
+     private String obsrvtnVlRtioDnmntrVl;
+     private String obsrvtnVlRtioNmrtrCd;
+     private String obsrvtnVlRtioNmrtrCmprtr;
+     private String obsrvtnVlRtioNmrtrSys;
+     private String obsrvtnVlRtioNmrtrUnt;
+     private String obsrvtnVlRtioNmrtrVl;
+     private String obsrvtnVlSampledDataData;
+     private String obsrvtnVlSampledDataDimensions;
+     private String obsrvtnVlSampledDataFactor;
+     private String obsrvtnVlSampledDataLwerLmt;
+     private String obsrvtnVlSampledDataOriginCd;
+     private String obsrvtnVlSampledDataOriginCmprtr;
+     private String obsrvtnVlSampledDataOriginSys;
+     private String obsrvtnVlSampledDataOriginUnt;
+     private String obsrvtnVlSampledDataOriginVl;
+     private String obsrvtnVlSampledDataPrd;
+     private String obsrvtnVlSampledDataUpperLmt;
+     private String obsrvtnVlStrgTyp;
+     private String obsrvtnVlTimeTyp;
 
     public Observation() {
     }
 
    
-    public 
-    String 
-    getId()
-    {
+    public String getId() {
         return this.id;
     }
     
-    public void setId
-        (String id) 
-        {
-      this.id = id;
-}
-    public 
-    String 
-    getObsBasedOn()
-    {
-        return this.obsBasedOn;
-    }
-    
-    public void setObsBasedOn
-        (String obsBasedOn) 
-        {
-      this.obsBasedOn = obsBasedOn;
-}
-    public 
-    String 
-    getObsBodySiteCodingCode()
-    {
-        return this.obsBodySiteCodingCode;
-    }
-    
-    public void setObsBodySiteCodingCode
-        (String obsBodySiteCodingCode) 
-        {
-      this.obsBodySiteCodingCode = obsBodySiteCodingCode;
-}
-    public 
-    String 
-    getObsBodySiteCodingDisplay()
-    {
-        return this.obsBodySiteCodingDisplay;
-    }
-    
-    public void setObsBodySiteCodingDisplay
-        (String obsBodySiteCodingDisplay) 
-        {
-      this.obsBodySiteCodingDisplay = obsBodySiteCodingDisplay;
-}
-    public 
-    String 
-    getObsBodySiteCodingSystem()
-    {
-        return this.obsBodySiteCodingSystem;
-    }
-    
-    public void setObsBodySiteCodingSystem
-        (String obsBodySiteCodingSystem) 
-        {
-      this.obsBodySiteCodingSystem = obsBodySiteCodingSystem;
-}
-    public 
-    String 
-    getObsBodySiteCodingUsrslt()
-    {
-        return this.obsBodySiteCodingUsrslt;
-    }
-    
-    public void setObsBodySiteCodingUsrslt
-        (String obsBodySiteCodingUsrslt) 
-        {
-      this.obsBodySiteCodingUsrslt = obsBodySiteCodingUsrslt;
-}
-    public 
-    String 
-    getObsBodySiteCodingVersion()
-    {
-        return this.obsBodySiteCodingVersion;
-    }
-    
-    public void setObsBodySiteCodingVersion
-        (String obsBodySiteCodingVersion) 
-        {
-      this.obsBodySiteCodingVersion = obsBodySiteCodingVersion;
-}
-    public 
-    String 
-    getObsBodySiteText()
-    {
-        return this.obsBodySiteText;
-    }
-    
-    public void setObsBodySiteText
-        (String obsBodySiteText) 
-        {
-      this.obsBodySiteText = obsBodySiteText;
-}
-    public 
-    String 
-    getObsCategoryCodingCode()
-    {
-        return this.obsCategoryCodingCode;
-    }
-    
-    public void setObsCategoryCodingCode
-        (String obsCategoryCodingCode) 
-        {
-      this.obsCategoryCodingCode = obsCategoryCodingCode;
-}
-    public 
-    String 
-    getObsCategoryCodingDisplay()
-    {
-        return this.obsCategoryCodingDisplay;
-    }
-    
-    public void setObsCategoryCodingDisplay
-        (String obsCategoryCodingDisplay) 
-        {
-      this.obsCategoryCodingDisplay = obsCategoryCodingDisplay;
-}
-    public 
-    String 
-    getObsCategoryCodingSystem()
-    {
-        return this.obsCategoryCodingSystem;
-    }
-    
-    public void setObsCategoryCodingSystem
-        (String obsCategoryCodingSystem) 
-        {
-      this.obsCategoryCodingSystem = obsCategoryCodingSystem;
-}
-    public 
-    String 
-    getObsCategoryCodingUsrslt()
-    {
-        return this.obsCategoryCodingUsrslt;
-    }
-    
-    public void setObsCategoryCodingUsrslt
-        (String obsCategoryCodingUsrslt) 
-        {
-      this.obsCategoryCodingUsrslt = obsCategoryCodingUsrslt;
-}
-    public 
-    String 
-    getObsCategoryCodingVersion()
-    {
-        return this.obsCategoryCodingVersion;
-    }
-    
-    public void setObsCategoryCodingVersion
-        (String obsCategoryCodingVersion) 
-        {
-      this.obsCategoryCodingVersion = obsCategoryCodingVersion;
-}
-    public 
-    String 
-    getObsCategoryText()
-    {
-        return this.obsCategoryText;
-    }
-    
-    public void setObsCategoryText
-        (String obsCategoryText) 
-        {
-      this.obsCategoryText = obsCategoryText;
-}
-    public 
-    String 
-    getObsCodeCodingCode()
-    {
-        return this.obsCodeCodingCode;
-    }
-    
-    public void setObsCodeCodingCode
-        (String obsCodeCodingCode) 
-        {
-      this.obsCodeCodingCode = obsCodeCodingCode;
-}
-    public 
-    String 
-    getObsCodeCodingDisplay()
-    {
-        return this.obsCodeCodingDisplay;
-    }
-    
-    public void setObsCodeCodingDisplay
-        (String obsCodeCodingDisplay) 
-        {
-      this.obsCodeCodingDisplay = obsCodeCodingDisplay;
-}
-    public 
-    String 
-    getObsCodeCodingSystem()
-    {
-        return this.obsCodeCodingSystem;
-    }
-    
-    public void setObsCodeCodingSystem
-        (String obsCodeCodingSystem) 
-        {
-      this.obsCodeCodingSystem = obsCodeCodingSystem;
-}
-    public 
-    String 
-    getObsCodeCodingUsrslt()
-    {
-        return this.obsCodeCodingUsrslt;
-    }
-    
-    public void setObsCodeCodingUsrslt
-        (String obsCodeCodingUsrslt) 
-        {
-      this.obsCodeCodingUsrslt = obsCodeCodingUsrslt;
-}
-    public 
-    String 
-    getObsCodeCodingVersion()
-    {
-        return this.obsCodeCodingVersion;
-    }
-    
-    public void setObsCodeCodingVersion
-        (String obsCodeCodingVersion) 
-        {
-      this.obsCodeCodingVersion = obsCodeCodingVersion;
-}
-    public 
-    String 
-    getObsCodeText()
-    {
-        return this.obsCodeText;
-    }
-    
-    public void setObsCodeText
-        (String obsCodeText) 
-        {
-      this.obsCodeText = obsCodeText;
-}
-    public 
-    String 
-    getObsComponentCodeCodingCode()
-    {
-        return this.obsComponentCodeCodingCode;
-    }
-    
-    public void setObsComponentCodeCodingCode
-        (String obsComponentCodeCodingCode) 
-        {
-      this.obsComponentCodeCodingCode = obsComponentCodeCodingCode;
-}
-    public 
-    String 
-    getObsComponentCodeCodingDisplay()
-    {
-        return this.obsComponentCodeCodingDisplay;
-    }
-    
-    public void setObsComponentCodeCodingDisplay
-        (String obsComponentCodeCodingDisplay) 
-        {
-      this.obsComponentCodeCodingDisplay = obsComponentCodeCodingDisplay;
-}
-    public 
-    String 
-    getObsComponentCodeCodingSystem()
-    {
-        return this.obsComponentCodeCodingSystem;
-    }
-    
-    public void setObsComponentCodeCodingSystem
-        (String obsComponentCodeCodingSystem) 
-        {
-      this.obsComponentCodeCodingSystem = obsComponentCodeCodingSystem;
-}
-    public 
-    String 
-    getObsComponentCodeCodingUsrslt()
-    {
-        return this.obsComponentCodeCodingUsrslt;
-    }
-    
-    public void setObsComponentCodeCodingUsrslt
-        (String obsComponentCodeCodingUsrslt) 
-        {
-      this.obsComponentCodeCodingUsrslt = obsComponentCodeCodingUsrslt;
-}
-    public 
-    String 
-    getObsComponentCodeCodingVersion()
-    {
-        return this.obsComponentCodeCodingVersion;
-    }
-    
-    public void setObsComponentCodeCodingVersion
-        (String obsComponentCodeCodingVersion) 
-        {
-      this.obsComponentCodeCodingVersion = obsComponentCodeCodingVersion;
-}
-    public 
-    String 
-    getObsComponentCodeText()
-    {
-        return this.obsComponentCodeText;
-    }
-    
-    public void setObsComponentCodeText
-        (String obsComponentCodeText) 
-        {
-      this.obsComponentCodeText = obsComponentCodeText;
-}
-    public 
-    String 
-    getObsComponentDataAbsentReasonCodingCode()
-    {
-        return this.obsComponentDataAbsentReasonCodingCode;
-    }
-    
-    public void setObsComponentDataAbsentReasonCodingCode
-        (String obsComponentDataAbsentReasonCodingCode) 
-        {
-      this.obsComponentDataAbsentReasonCodingCode = obsComponentDataAbsentReasonCodingCode;
-}
-    public 
-    String 
-    getObsComponentDataAbsentReasonCodingDisplay()
-    {
-        return this.obsComponentDataAbsentReasonCodingDisplay;
-    }
-    
-    public void setObsComponentDataAbsentReasonCodingDisplay
-        (String obsComponentDataAbsentReasonCodingDisplay) 
-        {
-      this.obsComponentDataAbsentReasonCodingDisplay = obsComponentDataAbsentReasonCodingDisplay;
-}
-    public 
-    String 
-    getObsComponentDataAbsentReasonCodingSystem()
-    {
-        return this.obsComponentDataAbsentReasonCodingSystem;
-    }
-    
-    public void setObsComponentDataAbsentReasonCodingSystem
-        (String obsComponentDataAbsentReasonCodingSystem) 
-        {
-      this.obsComponentDataAbsentReasonCodingSystem = obsComponentDataAbsentReasonCodingSystem;
-}
-    public 
-    String 
-    getObsComponentDataAbsentReasonCodingUsrslt()
-    {
-        return this.obsComponentDataAbsentReasonCodingUsrslt;
-    }
-    
-    public void setObsComponentDataAbsentReasonCodingUsrslt
-        (String obsComponentDataAbsentReasonCodingUsrslt) 
-        {
-      this.obsComponentDataAbsentReasonCodingUsrslt = obsComponentDataAbsentReasonCodingUsrslt;
-}
-    public 
-    String 
-    getObsComponentDataAbsentReasonCodingVersion()
-    {
-        return this.obsComponentDataAbsentReasonCodingVersion;
-    }
-    
-    public void setObsComponentDataAbsentReasonCodingVersion
-        (String obsComponentDataAbsentReasonCodingVersion) 
-        {
-      this.obsComponentDataAbsentReasonCodingVersion = obsComponentDataAbsentReasonCodingVersion;
-}
-    public 
-    String 
-    getObsComponentDataAbsentReasonText()
-    {
-        return this.obsComponentDataAbsentReasonText;
-    }
-    
-    public void setObsComponentDataAbsentReasonText
-        (String obsComponentDataAbsentReasonText) 
-        {
-      this.obsComponentDataAbsentReasonText = obsComponentDataAbsentReasonText;
-}
-    public 
-    String 
-    getObsComponentInterpretationCodingCode()
-    {
-        return this.obsComponentInterpretationCodingCode;
-    }
-    
-    public void setObsComponentInterpretationCodingCode
-        (String obsComponentInterpretationCodingCode) 
-        {
-      this.obsComponentInterpretationCodingCode = obsComponentInterpretationCodingCode;
-}
-    public 
-    String 
-    getObsComponentInterpretationCodingDisplay()
-    {
-        return this.obsComponentInterpretationCodingDisplay;
-    }
-    
-    public void setObsComponentInterpretationCodingDisplay
-        (String obsComponentInterpretationCodingDisplay) 
-        {
-      this.obsComponentInterpretationCodingDisplay = obsComponentInterpretationCodingDisplay;
-}
-    public 
-    String 
-    getObsComponentInterpretationCodingSystem()
-    {
-        return this.obsComponentInterpretationCodingSystem;
-    }
-    
-    public void setObsComponentInterpretationCodingSystem
-        (String obsComponentInterpretationCodingSystem) 
-        {
-      this.obsComponentInterpretationCodingSystem = obsComponentInterpretationCodingSystem;
-}
-    public 
-    String 
-    getObsComponentInterpretationCodingUsrslt()
-    {
-        return this.obsComponentInterpretationCodingUsrslt;
-    }
-    
-    public void setObsComponentInterpretationCodingUsrslt
-        (String obsComponentInterpretationCodingUsrslt) 
-        {
-      this.obsComponentInterpretationCodingUsrslt = obsComponentInterpretationCodingUsrslt;
-}
-    public 
-    String 
-    getObsComponentInterpretationCodingVersion()
-    {
-        return this.obsComponentInterpretationCodingVersion;
-    }
-    
-    public void setObsComponentInterpretationCodingVersion
-        (String obsComponentInterpretationCodingVersion) 
-        {
-      this.obsComponentInterpretationCodingVersion = obsComponentInterpretationCodingVersion;
-}
-    public 
-    String 
-    getObsComponentInterpretationText()
-    {
-        return this.obsComponentInterpretationText;
-    }
-    
-    public void setObsComponentInterpretationText
-        (String obsComponentInterpretationText) 
-        {
-      this.obsComponentInterpretationText = obsComponentInterpretationText;
-}
-    public 
-    String 
-    getObsComponentReferenceRangeAgeHighCode()
-    {
-        return this.obsComponentReferenceRangeAgeHighCode;
-    }
-    
-    public void setObsComponentReferenceRangeAgeHighCode
-        (String obsComponentReferenceRangeAgeHighCode) 
-        {
-      this.obsComponentReferenceRangeAgeHighCode = obsComponentReferenceRangeAgeHighCode;
-}
-    public 
-    String 
-    getObsComponentReferenceRangeAgeHighCompartrCode()
-    {
-        return this.obsComponentReferenceRangeAgeHighCompartrCode;
-    }
-    
-    public void setObsComponentReferenceRangeAgeHighCompartrCode
-        (String obsComponentReferenceRangeAgeHighCompartrCode) 
-        {
-      this.obsComponentReferenceRangeAgeHighCompartrCode = obsComponentReferenceRangeAgeHighCompartrCode;
-}
-    public 
-    String 
-    getObsComponentReferenceRangeAgeHighSystem()
-    {
-        return this.obsComponentReferenceRangeAgeHighSystem;
-    }
-    
-    public void setObsComponentReferenceRangeAgeHighSystem
-        (String obsComponentReferenceRangeAgeHighSystem) 
-        {
-      this.obsComponentReferenceRangeAgeHighSystem = obsComponentReferenceRangeAgeHighSystem;
-}
-    public 
-    String 
-    getObsComponentReferenceRangeAgeHighUnit()
-    {
-        return this.obsComponentReferenceRangeAgeHighUnit;
-    }
-    
-    public void setObsComponentReferenceRangeAgeHighUnit
-        (String obsComponentReferenceRangeAgeHighUnit) 
-        {
-      this.obsComponentReferenceRangeAgeHighUnit = obsComponentReferenceRangeAgeHighUnit;
-}
-    public 
-    String 
-    getObsComponentReferenceRangeAgeHighValue()
-    {
-        return this.obsComponentReferenceRangeAgeHighValue;
-    }
-    
-    public void setObsComponentReferenceRangeAgeHighValue
-        (String obsComponentReferenceRangeAgeHighValue) 
-        {
-      this.obsComponentReferenceRangeAgeHighValue = obsComponentReferenceRangeAgeHighValue;
-}
-    public 
-    String 
-    getObsComponentReferenceRangeAgeLowCode()
-    {
-        return this.obsComponentReferenceRangeAgeLowCode;
-    }
-    
-    public void setObsComponentReferenceRangeAgeLowCode
-        (String obsComponentReferenceRangeAgeLowCode) 
-        {
-      this.obsComponentReferenceRangeAgeLowCode = obsComponentReferenceRangeAgeLowCode;
-}
-    public 
-    String 
-    getObsComponentReferenceRangeAgeLowCompartrCode()
-    {
-        return this.obsComponentReferenceRangeAgeLowCompartrCode;
-    }
-    
-    public void setObsComponentReferenceRangeAgeLowCompartrCode
-        (String obsComponentReferenceRangeAgeLowCompartrCode) 
-        {
-      this.obsComponentReferenceRangeAgeLowCompartrCode = obsComponentReferenceRangeAgeLowCompartrCode;
-}
-    public 
-    String 
-    getObsComponentReferenceRangeAgeLowSystem()
-    {
-        return this.obsComponentReferenceRangeAgeLowSystem;
-    }
-    
-    public void setObsComponentReferenceRangeAgeLowSystem
-        (String obsComponentReferenceRangeAgeLowSystem) 
-        {
-      this.obsComponentReferenceRangeAgeLowSystem = obsComponentReferenceRangeAgeLowSystem;
-}
-    public 
-    String 
-    getObsComponentReferenceRangeAgeLowUnit()
-    {
-        return this.obsComponentReferenceRangeAgeLowUnit;
-    }
-    
-    public void setObsComponentReferenceRangeAgeLowUnit
-        (String obsComponentReferenceRangeAgeLowUnit) 
-        {
-      this.obsComponentReferenceRangeAgeLowUnit = obsComponentReferenceRangeAgeLowUnit;
-}
-    public 
-    String 
-    getObsComponentReferenceRangeAgeLowValue()
-    {
-        return this.obsComponentReferenceRangeAgeLowValue;
-    }
-    
-    public void setObsComponentReferenceRangeAgeLowValue
-        (String obsComponentReferenceRangeAgeLowValue) 
-        {
-      this.obsComponentReferenceRangeAgeLowValue = obsComponentReferenceRangeAgeLowValue;
-}
-    public 
-    String 
-    getObsComponentReferenceRangeAppliesToCodingCode()
-    {
-        return this.obsComponentReferenceRangeAppliesToCodingCode;
-    }
-    
-    public void setObsComponentReferenceRangeAppliesToCodingCode
-        (String obsComponentReferenceRangeAppliesToCodingCode) 
-        {
-      this.obsComponentReferenceRangeAppliesToCodingCode = obsComponentReferenceRangeAppliesToCodingCode;
-}
-    public 
-    String 
-    getObsComponentReferenceRangeAppliesToCodingDisplay()
-    {
-        return this.obsComponentReferenceRangeAppliesToCodingDisplay;
-    }
-    
-    public void setObsComponentReferenceRangeAppliesToCodingDisplay
-        (String obsComponentReferenceRangeAppliesToCodingDisplay) 
-        {
-      this.obsComponentReferenceRangeAppliesToCodingDisplay = obsComponentReferenceRangeAppliesToCodingDisplay;
-}
-    public 
-    String 
-    getObsComponentReferenceRangeAppliesToCodingSystem()
-    {
-        return this.obsComponentReferenceRangeAppliesToCodingSystem;
-    }
-    
-    public void setObsComponentReferenceRangeAppliesToCodingSystem
-        (String obsComponentReferenceRangeAppliesToCodingSystem) 
-        {
-      this.obsComponentReferenceRangeAppliesToCodingSystem = obsComponentReferenceRangeAppliesToCodingSystem;
-}
-    public 
-    String 
-    getObsComponentReferenceRangeAppliesToCodingUsrslt()
-    {
-        return this.obsComponentReferenceRangeAppliesToCodingUsrslt;
-    }
-    
-    public void setObsComponentReferenceRangeAppliesToCodingUsrslt
-        (String obsComponentReferenceRangeAppliesToCodingUsrslt) 
-        {
-      this.obsComponentReferenceRangeAppliesToCodingUsrslt = obsComponentReferenceRangeAppliesToCodingUsrslt;
-}
-    public 
-    String 
-    getObsComponentReferenceRangeAppliesToCodingVersion()
-    {
-        return this.obsComponentReferenceRangeAppliesToCodingVersion;
-    }
-    
-    public void setObsComponentReferenceRangeAppliesToCodingVersion
-        (String obsComponentReferenceRangeAppliesToCodingVersion) 
-        {
-      this.obsComponentReferenceRangeAppliesToCodingVersion = obsComponentReferenceRangeAppliesToCodingVersion;
-}
-    public 
-    String 
-    getObsComponentReferenceRangeAppliesToText()
-    {
-        return this.obsComponentReferenceRangeAppliesToText;
-    }
-    
-    public void setObsComponentReferenceRangeAppliesToText
-        (String obsComponentReferenceRangeAppliesToText) 
-        {
-      this.obsComponentReferenceRangeAppliesToText = obsComponentReferenceRangeAppliesToText;
-}
-    public 
-    String 
-    getObsComponentReferenceRangeHighCode()
-    {
-        return this.obsComponentReferenceRangeHighCode;
-    }
-    
-    public void setObsComponentReferenceRangeHighCode
-        (String obsComponentReferenceRangeHighCode) 
-        {
-      this.obsComponentReferenceRangeHighCode = obsComponentReferenceRangeHighCode;
-}
-    public 
-    String 
-    getObsComponentReferenceRangeHighCompartrCode()
-    {
-        return this.obsComponentReferenceRangeHighCompartrCode;
-    }
-    
-    public void setObsComponentReferenceRangeHighCompartrCode
-        (String obsComponentReferenceRangeHighCompartrCode) 
-        {
-      this.obsComponentReferenceRangeHighCompartrCode = obsComponentReferenceRangeHighCompartrCode;
-}
-    public 
-    String 
-    getObsComponentReferenceRangeHighSystem()
-    {
-        return this.obsComponentReferenceRangeHighSystem;
-    }
-    
-    public void setObsComponentReferenceRangeHighSystem
-        (String obsComponentReferenceRangeHighSystem) 
-        {
-      this.obsComponentReferenceRangeHighSystem = obsComponentReferenceRangeHighSystem;
-}
-    public 
-    String 
-    getObsComponentReferenceRangeHighUnit()
-    {
-        return this.obsComponentReferenceRangeHighUnit;
-    }
-    
-    public void setObsComponentReferenceRangeHighUnit
-        (String obsComponentReferenceRangeHighUnit) 
-        {
-      this.obsComponentReferenceRangeHighUnit = obsComponentReferenceRangeHighUnit;
-}
-    public 
-    String 
-    getObsComponentReferenceRangeHighValue()
-    {
-        return this.obsComponentReferenceRangeHighValue;
-    }
-    
-    public void setObsComponentReferenceRangeHighValue
-        (String obsComponentReferenceRangeHighValue) 
-        {
-      this.obsComponentReferenceRangeHighValue = obsComponentReferenceRangeHighValue;
-}
-    public 
-    String 
-    getObsComponentReferenceRangeLowCode()
-    {
-        return this.obsComponentReferenceRangeLowCode;
-    }
-    
-    public void setObsComponentReferenceRangeLowCode
-        (String obsComponentReferenceRangeLowCode) 
-        {
-      this.obsComponentReferenceRangeLowCode = obsComponentReferenceRangeLowCode;
-}
-    public 
-    String 
-    getObsComponentReferenceRangeLowCompartrCode()
-    {
-        return this.obsComponentReferenceRangeLowCompartrCode;
-    }
-    
-    public void setObsComponentReferenceRangeLowCompartrCode
-        (String obsComponentReferenceRangeLowCompartrCode) 
-        {
-      this.obsComponentReferenceRangeLowCompartrCode = obsComponentReferenceRangeLowCompartrCode;
-}
-    public 
-    String 
-    getObsComponentReferenceRangeLowSystem()
-    {
-        return this.obsComponentReferenceRangeLowSystem;
-    }
-    
-    public void setObsComponentReferenceRangeLowSystem
-        (String obsComponentReferenceRangeLowSystem) 
-        {
-      this.obsComponentReferenceRangeLowSystem = obsComponentReferenceRangeLowSystem;
-}
-    public 
-    String 
-    getObsComponentReferenceRangeLowUnit()
-    {
-        return this.obsComponentReferenceRangeLowUnit;
-    }
-    
-    public void setObsComponentReferenceRangeLowUnit
-        (String obsComponentReferenceRangeLowUnit) 
-        {
-      this.obsComponentReferenceRangeLowUnit = obsComponentReferenceRangeLowUnit;
-}
-    public 
-    String 
-    getObsComponentReferenceRangeLowValue()
-    {
-        return this.obsComponentReferenceRangeLowValue;
-    }
-    
-    public void setObsComponentReferenceRangeLowValue
-        (String obsComponentReferenceRangeLowValue) 
-        {
-      this.obsComponentReferenceRangeLowValue = obsComponentReferenceRangeLowValue;
-}
-    public 
-    String 
-    getObsComponentReferenceRangeText()
-    {
-        return this.obsComponentReferenceRangeText;
-    }
-    
-    public void setObsComponentReferenceRangeText
-        (String obsComponentReferenceRangeText) 
-        {
-      this.obsComponentReferenceRangeText = obsComponentReferenceRangeText;
-}
-    public 
-    String 
-    getObsComponentReferenceRangeTypeCodingCode()
-    {
-        return this.obsComponentReferenceRangeTypeCodingCode;
-    }
-    
-    public void setObsComponentReferenceRangeTypeCodingCode
-        (String obsComponentReferenceRangeTypeCodingCode) 
-        {
-      this.obsComponentReferenceRangeTypeCodingCode = obsComponentReferenceRangeTypeCodingCode;
-}
-    public 
-    String 
-    getObsComponentReferenceRangeTypeCodingDisplay()
-    {
-        return this.obsComponentReferenceRangeTypeCodingDisplay;
-    }
-    
-    public void setObsComponentReferenceRangeTypeCodingDisplay
-        (String obsComponentReferenceRangeTypeCodingDisplay) 
-        {
-      this.obsComponentReferenceRangeTypeCodingDisplay = obsComponentReferenceRangeTypeCodingDisplay;
-}
-    public 
-    String 
-    getObsComponentReferenceRangeTypeCodingSystem()
-    {
-        return this.obsComponentReferenceRangeTypeCodingSystem;
-    }
-    
-    public void setObsComponentReferenceRangeTypeCodingSystem
-        (String obsComponentReferenceRangeTypeCodingSystem) 
-        {
-      this.obsComponentReferenceRangeTypeCodingSystem = obsComponentReferenceRangeTypeCodingSystem;
-}
-    public 
-    String 
-    getObsComponentReferenceRangeTypeCodingUsrslt()
-    {
-        return this.obsComponentReferenceRangeTypeCodingUsrslt;
-    }
-    
-    public void setObsComponentReferenceRangeTypeCodingUsrslt
-        (String obsComponentReferenceRangeTypeCodingUsrslt) 
-        {
-      this.obsComponentReferenceRangeTypeCodingUsrslt = obsComponentReferenceRangeTypeCodingUsrslt;
-}
-    public 
-    String 
-    getObsComponentReferenceRangeTypeCodingVersion()
-    {
-        return this.obsComponentReferenceRangeTypeCodingVersion;
-    }
-    
-    public void setObsComponentReferenceRangeTypeCodingVersion
-        (String obsComponentReferenceRangeTypeCodingVersion) 
-        {
-      this.obsComponentReferenceRangeTypeCodingVersion = obsComponentReferenceRangeTypeCodingVersion;
-}
-    public 
-    String 
-    getObsComponentReferenceRangeTypeText()
-    {
-        return this.obsComponentReferenceRangeTypeText;
-    }
-    
-    public void setObsComponentReferenceRangeTypeText
-        (String obsComponentReferenceRangeTypeText) 
-        {
-      this.obsComponentReferenceRangeTypeText = obsComponentReferenceRangeTypeText;
-}
-    public 
-    String 
-    getObservationComponentValueBoolean()
-    {
-        return this.observationComponentValueBoolean;
-    }
-    
-    public void setObservationComponentValueBoolean
-        (String observationComponentValueBoolean) 
-        {
-      this.observationComponentValueBoolean = observationComponentValueBoolean;
-}
-    public 
-    String 
-    getObsComponentValueCodeableConceptCodingCode()
-    {
-        return this.obsComponentValueCodeableConceptCodingCode;
-    }
-    
-    public void setObsComponentValueCodeableConceptCodingCode
-        (String obsComponentValueCodeableConceptCodingCode) 
-        {
-      this.obsComponentValueCodeableConceptCodingCode = obsComponentValueCodeableConceptCodingCode;
-}
-    public 
-    String 
-    getObsComponentValueCodeableConceptCodingDisplay()
-    {
-        return this.obsComponentValueCodeableConceptCodingDisplay;
-    }
-    
-    public void setObsComponentValueCodeableConceptCodingDisplay
-        (String obsComponentValueCodeableConceptCodingDisplay) 
-        {
-      this.obsComponentValueCodeableConceptCodingDisplay = obsComponentValueCodeableConceptCodingDisplay;
-}
-    public 
-    String 
-    getObsComponentValueCodeableConceptCodingSystem()
-    {
-        return this.obsComponentValueCodeableConceptCodingSystem;
-    }
-    
-    public void setObsComponentValueCodeableConceptCodingSystem
-        (String obsComponentValueCodeableConceptCodingSystem) 
-        {
-      this.obsComponentValueCodeableConceptCodingSystem = obsComponentValueCodeableConceptCodingSystem;
-}
-    public 
-    String 
-    getObsComponentValueCodeableConceptCodingUsrslt()
-    {
-        return this.obsComponentValueCodeableConceptCodingUsrslt;
-    }
-    
-    public void setObsComponentValueCodeableConceptCodingUsrslt
-        (String obsComponentValueCodeableConceptCodingUsrslt) 
-        {
-      this.obsComponentValueCodeableConceptCodingUsrslt = obsComponentValueCodeableConceptCodingUsrslt;
-}
-    public 
-    String 
-    getObsComponentValueCodeableConceptCodingVersion()
-    {
-        return this.obsComponentValueCodeableConceptCodingVersion;
-    }
-    
-    public void setObsComponentValueCodeableConceptCodingVersion
-        (String obsComponentValueCodeableConceptCodingVersion) 
-        {
-      this.obsComponentValueCodeableConceptCodingVersion = obsComponentValueCodeableConceptCodingVersion;
-}
-    public 
-    String 
-    getObsComponentValueCodeableConceptText()
-    {
-        return this.obsComponentValueCodeableConceptText;
-    }
-    
-    public void setObsComponentValueCodeableConceptText
-        (String obsComponentValueCodeableConceptText) 
-        {
-      this.obsComponentValueCodeableConceptText = obsComponentValueCodeableConceptText;
-}
-    public 
-    String 
-    getObservationComponentValueDateTime()
-    {
-        return this.observationComponentValueDateTime;
-    }
-    
-    public void setObservationComponentValueDateTime
-        (String observationComponentValueDateTime) 
-        {
-      this.observationComponentValueDateTime = observationComponentValueDateTime;
-}
-    public 
-    String 
-    getObservationComponentValueInteger()
-    {
-        return this.observationComponentValueInteger;
-    }
-    
-    public void setObservationComponentValueInteger
-        (String observationComponentValueInteger) 
-        {
-      this.observationComponentValueInteger = observationComponentValueInteger;
-}
-    public 
-    String 
-    getObsComponentValuePeriodEnd()
-    {
-        return this.obsComponentValuePeriodEnd;
-    }
-    
-    public void setObsComponentValuePeriodEnd
-        (String obsComponentValuePeriodEnd) 
-        {
-      this.obsComponentValuePeriodEnd = obsComponentValuePeriodEnd;
-}
-    public 
-    String 
-    getObsComponentValuePeriodStart()
-    {
-        return this.obsComponentValuePeriodStart;
-    }
-    
-    public void setObsComponentValuePeriodStart
-        (String obsComponentValuePeriodStart) 
-        {
-      this.obsComponentValuePeriodStart = obsComponentValuePeriodStart;
-}
-    public 
-    String 
-    getObsComponentValueQuantityCode()
-    {
-        return this.obsComponentValueQuantityCode;
-    }
-    
-    public void setObsComponentValueQuantityCode
-        (String obsComponentValueQuantityCode) 
-        {
-      this.obsComponentValueQuantityCode = obsComponentValueQuantityCode;
-}
-    public 
-    String 
-    getObsComponentValueQuantityCompartrCode()
-    {
-        return this.obsComponentValueQuantityCompartrCode;
-    }
-    
-    public void setObsComponentValueQuantityCompartrCode
-        (String obsComponentValueQuantityCompartrCode) 
-        {
-      this.obsComponentValueQuantityCompartrCode = obsComponentValueQuantityCompartrCode;
-}
-    public 
-    String 
-    getObsComponentValueQuantitySystem()
-    {
-        return this.obsComponentValueQuantitySystem;
-    }
-    
-    public void setObsComponentValueQuantitySystem
-        (String obsComponentValueQuantitySystem) 
-        {
-      this.obsComponentValueQuantitySystem = obsComponentValueQuantitySystem;
-}
-    public 
-    String 
-    getObsComponentValueQuantityUnit()
-    {
-        return this.obsComponentValueQuantityUnit;
-    }
-    
-    public void setObsComponentValueQuantityUnit
-        (String obsComponentValueQuantityUnit) 
-        {
-      this.obsComponentValueQuantityUnit = obsComponentValueQuantityUnit;
-}
-    public 
-    String 
-    getObsComponentValueQuantityValue()
-    {
-        return this.obsComponentValueQuantityValue;
-    }
-    
-    public void setObsComponentValueQuantityValue
-        (String obsComponentValueQuantityValue) 
-        {
-      this.obsComponentValueQuantityValue = obsComponentValueQuantityValue;
-}
-    public 
-    String 
-    getObsComponentValueRangeHighCode()
-    {
-        return this.obsComponentValueRangeHighCode;
-    }
-    
-    public void setObsComponentValueRangeHighCode
-        (String obsComponentValueRangeHighCode) 
-        {
-      this.obsComponentValueRangeHighCode = obsComponentValueRangeHighCode;
-}
-    public 
-    String 
-    getObsComponentValueRangeHighCompartrCode()
-    {
-        return this.obsComponentValueRangeHighCompartrCode;
-    }
-    
-    public void setObsComponentValueRangeHighCompartrCode
-        (String obsComponentValueRangeHighCompartrCode) 
-        {
-      this.obsComponentValueRangeHighCompartrCode = obsComponentValueRangeHighCompartrCode;
-}
-    public 
-    String 
-    getObsComponentValueRangeHighSystem()
-    {
-        return this.obsComponentValueRangeHighSystem;
-    }
-    
-    public void setObsComponentValueRangeHighSystem
-        (String obsComponentValueRangeHighSystem) 
-        {
-      this.obsComponentValueRangeHighSystem = obsComponentValueRangeHighSystem;
-}
-    public 
-    String 
-    getObsComponentValueRangeHighUnit()
-    {
-        return this.obsComponentValueRangeHighUnit;
-    }
-    
-    public void setObsComponentValueRangeHighUnit
-        (String obsComponentValueRangeHighUnit) 
-        {
-      this.obsComponentValueRangeHighUnit = obsComponentValueRangeHighUnit;
-}
-    public 
-    String 
-    getObsComponentValueRangeHighValue()
-    {
-        return this.obsComponentValueRangeHighValue;
-    }
-    
-    public void setObsComponentValueRangeHighValue
-        (String obsComponentValueRangeHighValue) 
-        {
-      this.obsComponentValueRangeHighValue = obsComponentValueRangeHighValue;
-}
-    public 
-    String 
-    getObsComponentValueRangeLowCode()
-    {
-        return this.obsComponentValueRangeLowCode;
-    }
-    
-    public void setObsComponentValueRangeLowCode
-        (String obsComponentValueRangeLowCode) 
-        {
-      this.obsComponentValueRangeLowCode = obsComponentValueRangeLowCode;
-}
-    public 
-    String 
-    getObsComponentValueRangeLowCompartrCode()
-    {
-        return this.obsComponentValueRangeLowCompartrCode;
-    }
-    
-    public void setObsComponentValueRangeLowCompartrCode
-        (String obsComponentValueRangeLowCompartrCode) 
-        {
-      this.obsComponentValueRangeLowCompartrCode = obsComponentValueRangeLowCompartrCode;
-}
-    public 
-    String 
-    getObsComponentValueRangeLowSystem()
-    {
-        return this.obsComponentValueRangeLowSystem;
-    }
-    
-    public void setObsComponentValueRangeLowSystem
-        (String obsComponentValueRangeLowSystem) 
-        {
-      this.obsComponentValueRangeLowSystem = obsComponentValueRangeLowSystem;
-}
-    public 
-    String 
-    getObsComponentValueRangeLowUnit()
-    {
-        return this.obsComponentValueRangeLowUnit;
-    }
-    
-    public void setObsComponentValueRangeLowUnit
-        (String obsComponentValueRangeLowUnit) 
-        {
-      this.obsComponentValueRangeLowUnit = obsComponentValueRangeLowUnit;
-}
-    public 
-    String 
-    getObsComponentValueRangeLowValue()
-    {
-        return this.obsComponentValueRangeLowValue;
-    }
-    
-    public void setObsComponentValueRangeLowValue
-        (String obsComponentValueRangeLowValue) 
-        {
-      this.obsComponentValueRangeLowValue = obsComponentValueRangeLowValue;
-}
-    public 
-    String 
-    getObsComponentValueRatioDenomCode()
-    {
-        return this.obsComponentValueRatioDenomCode;
-    }
-    
-    public void setObsComponentValueRatioDenomCode
-        (String obsComponentValueRatioDenomCode) 
-        {
-      this.obsComponentValueRatioDenomCode = obsComponentValueRatioDenomCode;
-}
-    public 
-    String 
-    getObsComponentValueRatioDenomCompartrCode()
-    {
-        return this.obsComponentValueRatioDenomCompartrCode;
-    }
-    
-    public void setObsComponentValueRatioDenomCompartrCode
-        (String obsComponentValueRatioDenomCompartrCode) 
-        {
-      this.obsComponentValueRatioDenomCompartrCode = obsComponentValueRatioDenomCompartrCode;
-}
-    public 
-    String 
-    getObsComponentValueRatioDenomSystem()
-    {
-        return this.obsComponentValueRatioDenomSystem;
-    }
-    
-    public void setObsComponentValueRatioDenomSystem
-        (String obsComponentValueRatioDenomSystem) 
-        {
-      this.obsComponentValueRatioDenomSystem = obsComponentValueRatioDenomSystem;
-}
-    public 
-    String 
-    getObsComponentValueRatioDenomUnit()
-    {
-        return this.obsComponentValueRatioDenomUnit;
-    }
-    
-    public void setObsComponentValueRatioDenomUnit
-        (String obsComponentValueRatioDenomUnit) 
-        {
-      this.obsComponentValueRatioDenomUnit = obsComponentValueRatioDenomUnit;
-}
-    public 
-    String 
-    getObsComponentValueRatioDenomValue()
-    {
-        return this.obsComponentValueRatioDenomValue;
-    }
-    
-    public void setObsComponentValueRatioDenomValue
-        (String obsComponentValueRatioDenomValue) 
-        {
-      this.obsComponentValueRatioDenomValue = obsComponentValueRatioDenomValue;
-}
-    public 
-    String 
-    getObsComponentValueRatioNumeratorCode()
-    {
-        return this.obsComponentValueRatioNumeratorCode;
-    }
-    
-    public void setObsComponentValueRatioNumeratorCode
-        (String obsComponentValueRatioNumeratorCode) 
-        {
-      this.obsComponentValueRatioNumeratorCode = obsComponentValueRatioNumeratorCode;
-}
-    public 
-    String 
-    getObsComponentValueRatioNumeratorCompartrCode()
-    {
-        return this.obsComponentValueRatioNumeratorCompartrCode;
-    }
-    
-    public void setObsComponentValueRatioNumeratorCompartrCode
-        (String obsComponentValueRatioNumeratorCompartrCode) 
-        {
-      this.obsComponentValueRatioNumeratorCompartrCode = obsComponentValueRatioNumeratorCompartrCode;
-}
-    public 
-    String 
-    getObsComponentValueRatioNumeratorSystem()
-    {
-        return this.obsComponentValueRatioNumeratorSystem;
-    }
-    
-    public void setObsComponentValueRatioNumeratorSystem
-        (String obsComponentValueRatioNumeratorSystem) 
-        {
-      this.obsComponentValueRatioNumeratorSystem = obsComponentValueRatioNumeratorSystem;
-}
-    public 
-    String 
-    getObsComponentValueRatioNumeratorUnit()
-    {
-        return this.obsComponentValueRatioNumeratorUnit;
-    }
-    
-    public void setObsComponentValueRatioNumeratorUnit
-        (String obsComponentValueRatioNumeratorUnit) 
-        {
-      this.obsComponentValueRatioNumeratorUnit = obsComponentValueRatioNumeratorUnit;
-}
-    public 
-    String 
-    getObsComponentValueRatioNumeratorValue()
-    {
-        return this.obsComponentValueRatioNumeratorValue;
-    }
-    
-    public void setObsComponentValueRatioNumeratorValue
-        (String obsComponentValueRatioNumeratorValue) 
-        {
-      this.obsComponentValueRatioNumeratorValue = obsComponentValueRatioNumeratorValue;
-}
-    public 
-    String 
-    getObsComponentValueSampledDataData()
-    {
-        return this.obsComponentValueSampledDataData;
-    }
-    
-    public void setObsComponentValueSampledDataData
-        (String obsComponentValueSampledDataData) 
-        {
-      this.obsComponentValueSampledDataData = obsComponentValueSampledDataData;
-}
-    public 
-    String 
-    getObsComponentValueSampledDataDimensions()
-    {
-        return this.obsComponentValueSampledDataDimensions;
-    }
-    
-    public void setObsComponentValueSampledDataDimensions
-        (String obsComponentValueSampledDataDimensions) 
-        {
-      this.obsComponentValueSampledDataDimensions = obsComponentValueSampledDataDimensions;
-}
-    public 
-    String 
-    getObsComponentValueSampledDataFactor()
-    {
-        return this.obsComponentValueSampledDataFactor;
-    }
-    
-    public void setObsComponentValueSampledDataFactor
-        (String obsComponentValueSampledDataFactor) 
-        {
-      this.obsComponentValueSampledDataFactor = obsComponentValueSampledDataFactor;
-}
-    public 
-    String 
-    getObsComponentValueSampledDataLowerLimit()
-    {
-        return this.obsComponentValueSampledDataLowerLimit;
-    }
-    
-    public void setObsComponentValueSampledDataLowerLimit
-        (String obsComponentValueSampledDataLowerLimit) 
-        {
-      this.obsComponentValueSampledDataLowerLimit = obsComponentValueSampledDataLowerLimit;
-}
-    public 
-    String 
-    getObsComponentValueSampledDataOriginCode()
-    {
-        return this.obsComponentValueSampledDataOriginCode;
-    }
-    
-    public void setObsComponentValueSampledDataOriginCode
-        (String obsComponentValueSampledDataOriginCode) 
-        {
-      this.obsComponentValueSampledDataOriginCode = obsComponentValueSampledDataOriginCode;
-}
-    public 
-    String 
-    getObsComponentValueSampledDataOriginCompartrCode()
-    {
-        return this.obsComponentValueSampledDataOriginCompartrCode;
-    }
-    
-    public void setObsComponentValueSampledDataOriginCompartrCode
-        (String obsComponentValueSampledDataOriginCompartrCode) 
-        {
-      this.obsComponentValueSampledDataOriginCompartrCode = obsComponentValueSampledDataOriginCompartrCode;
-}
-    public 
-    String 
-    getObsComponentValueSampledDataOriginSystem()
-    {
-        return this.obsComponentValueSampledDataOriginSystem;
-    }
-    
-    public void setObsComponentValueSampledDataOriginSystem
-        (String obsComponentValueSampledDataOriginSystem) 
-        {
-      this.obsComponentValueSampledDataOriginSystem = obsComponentValueSampledDataOriginSystem;
-}
-    public 
-    String 
-    getObsComponentValueSampledDataOriginUnit()
-    {
-        return this.obsComponentValueSampledDataOriginUnit;
-    }
-    
-    public void setObsComponentValueSampledDataOriginUnit
-        (String obsComponentValueSampledDataOriginUnit) 
-        {
-      this.obsComponentValueSampledDataOriginUnit = obsComponentValueSampledDataOriginUnit;
-}
-    public 
-    String 
-    getObsComponentValueSampledDataOriginValue()
-    {
-        return this.obsComponentValueSampledDataOriginValue;
-    }
-    
-    public void setObsComponentValueSampledDataOriginValue
-        (String obsComponentValueSampledDataOriginValue) 
-        {
-      this.obsComponentValueSampledDataOriginValue = obsComponentValueSampledDataOriginValue;
-}
-    public 
-    String 
-    getObsComponentValueSampledDataPeriod()
-    {
-        return this.obsComponentValueSampledDataPeriod;
-    }
-    
-    public void setObsComponentValueSampledDataPeriod
-        (String obsComponentValueSampledDataPeriod) 
-        {
-      this.obsComponentValueSampledDataPeriod = obsComponentValueSampledDataPeriod;
-}
-    public 
-    String 
-    getObsComponentValueSampledDataUpperLimit()
-    {
-        return this.obsComponentValueSampledDataUpperLimit;
-    }
-    
-    public void setObsComponentValueSampledDataUpperLimit
-        (String obsComponentValueSampledDataUpperLimit) 
-        {
-      this.obsComponentValueSampledDataUpperLimit = obsComponentValueSampledDataUpperLimit;
-}
-    public 
-    String 
-    getObservationComponentValueString()
-    {
-        return this.observationComponentValueString;
-    }
-    
-    public void setObservationComponentValueString
-        (String observationComponentValueString) 
-        {
-      this.observationComponentValueString = observationComponentValueString;
-}
-    public 
-    String 
-    getObservationComponentValueTime()
-    {
-        return this.observationComponentValueTime;
-    }
-    
-    public void setObservationComponentValueTime
-        (String observationComponentValueTime) 
-        {
-      this.observationComponentValueTime = observationComponentValueTime;
-}
-    public 
-    String 
-    getObsDataAbsentReasonCodingCode()
-    {
-        return this.obsDataAbsentReasonCodingCode;
-    }
-    
-    public void setObsDataAbsentReasonCodingCode
-        (String obsDataAbsentReasonCodingCode) 
-        {
-      this.obsDataAbsentReasonCodingCode = obsDataAbsentReasonCodingCode;
-}
-    public 
-    String 
-    getObsDataAbsentReasonCodingDisplay()
-    {
-        return this.obsDataAbsentReasonCodingDisplay;
-    }
-    
-    public void setObsDataAbsentReasonCodingDisplay
-        (String obsDataAbsentReasonCodingDisplay) 
-        {
-      this.obsDataAbsentReasonCodingDisplay = obsDataAbsentReasonCodingDisplay;
-}
-    public 
-    String 
-    getObsDataAbsentReasonCodingSystem()
-    {
-        return this.obsDataAbsentReasonCodingSystem;
-    }
-    
-    public void setObsDataAbsentReasonCodingSystem
-        (String obsDataAbsentReasonCodingSystem) 
-        {
-      this.obsDataAbsentReasonCodingSystem = obsDataAbsentReasonCodingSystem;
-}
-    public 
-    String 
-    getObsDataAbsentReasonCodingUsrslt()
-    {
-        return this.obsDataAbsentReasonCodingUsrslt;
-    }
-    
-    public void setObsDataAbsentReasonCodingUsrslt
-        (String obsDataAbsentReasonCodingUsrslt) 
-        {
-      this.obsDataAbsentReasonCodingUsrslt = obsDataAbsentReasonCodingUsrslt;
-}
-    public 
-    String 
-    getObsDataAbsentReasonCodingVersion()
-    {
-        return this.obsDataAbsentReasonCodingVersion;
-    }
-    
-    public void setObsDataAbsentReasonCodingVersion
-        (String obsDataAbsentReasonCodingVersion) 
-        {
-      this.obsDataAbsentReasonCodingVersion = obsDataAbsentReasonCodingVersion;
-}
-    public 
-    String 
-    getObsDataAbsentReasonText()
-    {
-        return this.obsDataAbsentReasonText;
-    }
-    
-    public void setObsDataAbsentReasonText
-        (String obsDataAbsentReasonText) 
-        {
-      this.obsDataAbsentReasonText = obsDataAbsentReasonText;
-}
-    public 
-    String 
-    getObsDerivedFrom()
-    {
-        return this.obsDerivedFrom;
-    }
-    
-    public void setObsDerivedFrom
-        (String obsDerivedFrom) 
-        {
-      this.obsDerivedFrom = obsDerivedFrom;
-}
-    public 
-    String 
-    getObsDevice()
-    {
-        return this.obsDevice;
-    }
-    
-    public void setObsDevice
-        (String obsDevice) 
-        {
-      this.obsDevice = obsDevice;
-}
-    public 
-    String 
-    getObservationEffectiveDateTime()
-    {
-        return this.observationEffectiveDateTime;
-    }
-    
-    public void setObservationEffectiveDateTime
-        (String observationEffectiveDateTime) 
-        {
-      this.observationEffectiveDateTime = observationEffectiveDateTime;
-}
-    public 
-    String 
-    getObservationEffectiveInstant()
-    {
-        return this.observationEffectiveInstant;
-    }
-    
-    public void setObservationEffectiveInstant
-        (String observationEffectiveInstant) 
-        {
-      this.observationEffectiveInstant = observationEffectiveInstant;
-}
-    public 
-    String 
-    getObsEffectivePeriodEnd()
-    {
-        return this.obsEffectivePeriodEnd;
-    }
-    
-    public void setObsEffectivePeriodEnd
-        (String obsEffectivePeriodEnd) 
-        {
-      this.obsEffectivePeriodEnd = obsEffectivePeriodEnd;
-}
-    public 
-    String 
-    getObsEffectivePeriodStart()
-    {
-        return this.obsEffectivePeriodStart;
-    }
-    
-    public void setObsEffectivePeriodStart
-        (String obsEffectivePeriodStart) 
-        {
-      this.obsEffectivePeriodStart = obsEffectivePeriodStart;
-}
-    public 
-    String 
-    getObsEffectiveTimingCodeCodingCode()
-    {
-        return this.obsEffectiveTimingCodeCodingCode;
-    }
-    
-    public void setObsEffectiveTimingCodeCodingCode
-        (String obsEffectiveTimingCodeCodingCode) 
-        {
-      this.obsEffectiveTimingCodeCodingCode = obsEffectiveTimingCodeCodingCode;
-}
-    public 
-    String 
-    getObsEffectiveTimingCodeCodingDisplay()
-    {
-        return this.obsEffectiveTimingCodeCodingDisplay;
-    }
-    
-    public void setObsEffectiveTimingCodeCodingDisplay
-        (String obsEffectiveTimingCodeCodingDisplay) 
-        {
-      this.obsEffectiveTimingCodeCodingDisplay = obsEffectiveTimingCodeCodingDisplay;
-}
-    public 
-    String 
-    getObsEffectiveTimingCodeCodingSystem()
-    {
-        return this.obsEffectiveTimingCodeCodingSystem;
-    }
-    
-    public void setObsEffectiveTimingCodeCodingSystem
-        (String obsEffectiveTimingCodeCodingSystem) 
-        {
-      this.obsEffectiveTimingCodeCodingSystem = obsEffectiveTimingCodeCodingSystem;
-}
-    public 
-    String 
-    getObsEffectiveTimingCodeCodingUsrslt()
-    {
-        return this.obsEffectiveTimingCodeCodingUsrslt;
-    }
-    
-    public void setObsEffectiveTimingCodeCodingUsrslt
-        (String obsEffectiveTimingCodeCodingUsrslt) 
-        {
-      this.obsEffectiveTimingCodeCodingUsrslt = obsEffectiveTimingCodeCodingUsrslt;
-}
-    public 
-    String 
-    getObsEffectiveTimingCodeCodingVersion()
-    {
-        return this.obsEffectiveTimingCodeCodingVersion;
-    }
-    
-    public void setObsEffectiveTimingCodeCodingVersion
-        (String obsEffectiveTimingCodeCodingVersion) 
-        {
-      this.obsEffectiveTimingCodeCodingVersion = obsEffectiveTimingCodeCodingVersion;
-}
-    public 
-    String 
-    getObsEffectiveTimingCodeText()
-    {
-        return this.obsEffectiveTimingCodeText;
-    }
-    
-    public void setObsEffectiveTimingCodeText
-        (String obsEffectiveTimingCodeText) 
-        {
-      this.obsEffectiveTimingCodeText = obsEffectiveTimingCodeText;
-}
-    public 
-    String 
-    getObsEffectiveTimingEvent()
-    {
-        return this.obsEffectiveTimingEvent;
-    }
-    
-    public void setObsEffectiveTimingEvent
-        (String obsEffectiveTimingEvent) 
-        {
-      this.obsEffectiveTimingEvent = obsEffectiveTimingEvent;
-}
-    public 
-    String 
-    getObsEffectiveTimingRepeatBoundsDurationCode()
-    {
-        return this.obsEffectiveTimingRepeatBoundsDurationCode;
-    }
-    
-    public void setObsEffectiveTimingRepeatBoundsDurationCode
-        (String obsEffectiveTimingRepeatBoundsDurationCode) 
-        {
-      this.obsEffectiveTimingRepeatBoundsDurationCode = obsEffectiveTimingRepeatBoundsDurationCode;
-}
-    public 
-    String 
-    getObsEffectiveTimingRepeatBoundsDurationCompartrCode()
-    {
-        return this.obsEffectiveTimingRepeatBoundsDurationCompartrCode;
-    }
-    
-    public void setObsEffectiveTimingRepeatBoundsDurationCompartrCode
-        (String obsEffectiveTimingRepeatBoundsDurationCompartrCode) 
-        {
-      this.obsEffectiveTimingRepeatBoundsDurationCompartrCode = obsEffectiveTimingRepeatBoundsDurationCompartrCode;
-}
-    public 
-    String 
-    getObsEffectiveTimingRepeatBoundsDurationSystem()
-    {
-        return this.obsEffectiveTimingRepeatBoundsDurationSystem;
-    }
-    
-    public void setObsEffectiveTimingRepeatBoundsDurationSystem
-        (String obsEffectiveTimingRepeatBoundsDurationSystem) 
-        {
-      this.obsEffectiveTimingRepeatBoundsDurationSystem = obsEffectiveTimingRepeatBoundsDurationSystem;
-}
-    public 
-    String 
-    getObsEffectiveTimingRepeatBoundsDurationUnit()
-    {
-        return this.obsEffectiveTimingRepeatBoundsDurationUnit;
-    }
-    
-    public void setObsEffectiveTimingRepeatBoundsDurationUnit
-        (String obsEffectiveTimingRepeatBoundsDurationUnit) 
-        {
-      this.obsEffectiveTimingRepeatBoundsDurationUnit = obsEffectiveTimingRepeatBoundsDurationUnit;
-}
-    public 
-    String 
-    getObsEffectiveTimingRepeatBoundsDurationValue()
-    {
-        return this.obsEffectiveTimingRepeatBoundsDurationValue;
-    }
-    
-    public void setObsEffectiveTimingRepeatBoundsDurationValue
-        (String obsEffectiveTimingRepeatBoundsDurationValue) 
-        {
-      this.obsEffectiveTimingRepeatBoundsDurationValue = obsEffectiveTimingRepeatBoundsDurationValue;
-}
-    public 
-    String 
-    getObsEffectiveTimingRepeatBoundsPeriodEnd()
-    {
-        return this.obsEffectiveTimingRepeatBoundsPeriodEnd;
-    }
-    
-    public void setObsEffectiveTimingRepeatBoundsPeriodEnd
-        (String obsEffectiveTimingRepeatBoundsPeriodEnd) 
-        {
-      this.obsEffectiveTimingRepeatBoundsPeriodEnd = obsEffectiveTimingRepeatBoundsPeriodEnd;
-}
-    public 
-    String 
-    getObsEffectiveTimingRepeatBoundsPeriodStart()
-    {
-        return this.obsEffectiveTimingRepeatBoundsPeriodStart;
-    }
-    
-    public void setObsEffectiveTimingRepeatBoundsPeriodStart
-        (String obsEffectiveTimingRepeatBoundsPeriodStart) 
-        {
-      this.obsEffectiveTimingRepeatBoundsPeriodStart = obsEffectiveTimingRepeatBoundsPeriodStart;
-}
-    public 
-    String 
-    getObsEffectiveTimingRepeatBoundsRangeHighCode()
-    {
-        return this.obsEffectiveTimingRepeatBoundsRangeHighCode;
-    }
-    
-    public void setObsEffectiveTimingRepeatBoundsRangeHighCode
-        (String obsEffectiveTimingRepeatBoundsRangeHighCode) 
-        {
-      this.obsEffectiveTimingRepeatBoundsRangeHighCode = obsEffectiveTimingRepeatBoundsRangeHighCode;
-}
-    public 
-    String 
-    getObsEffectiveTimingRepeatBoundsRangeHighCompartrCode()
-    {
-        return this.obsEffectiveTimingRepeatBoundsRangeHighCompartrCode;
-    }
-    
-    public void setObsEffectiveTimingRepeatBoundsRangeHighCompartrCode
-        (String obsEffectiveTimingRepeatBoundsRangeHighCompartrCode) 
-        {
-      this.obsEffectiveTimingRepeatBoundsRangeHighCompartrCode = obsEffectiveTimingRepeatBoundsRangeHighCompartrCode;
-}
-    public 
-    String 
-    getObsEffectiveTimingRepeatBoundsRangeHighSystem()
-    {
-        return this.obsEffectiveTimingRepeatBoundsRangeHighSystem;
-    }
-    
-    public void setObsEffectiveTimingRepeatBoundsRangeHighSystem
-        (String obsEffectiveTimingRepeatBoundsRangeHighSystem) 
-        {
-      this.obsEffectiveTimingRepeatBoundsRangeHighSystem = obsEffectiveTimingRepeatBoundsRangeHighSystem;
-}
-    public 
-    String 
-    getObsEffectiveTimingRepeatBoundsRangeHighUnit()
-    {
-        return this.obsEffectiveTimingRepeatBoundsRangeHighUnit;
-    }
-    
-    public void setObsEffectiveTimingRepeatBoundsRangeHighUnit
-        (String obsEffectiveTimingRepeatBoundsRangeHighUnit) 
-        {
-      this.obsEffectiveTimingRepeatBoundsRangeHighUnit = obsEffectiveTimingRepeatBoundsRangeHighUnit;
-}
-    public 
-    String 
-    getObsEffectiveTimingRepeatBoundsRangeHighValue()
-    {
-        return this.obsEffectiveTimingRepeatBoundsRangeHighValue;
-    }
-    
-    public void setObsEffectiveTimingRepeatBoundsRangeHighValue
-        (String obsEffectiveTimingRepeatBoundsRangeHighValue) 
-        {
-      this.obsEffectiveTimingRepeatBoundsRangeHighValue = obsEffectiveTimingRepeatBoundsRangeHighValue;
-}
-    public 
-    String 
-    getObsEffectiveTimingRepeatBoundsRangeLowCode()
-    {
-        return this.obsEffectiveTimingRepeatBoundsRangeLowCode;
-    }
-    
-    public void setObsEffectiveTimingRepeatBoundsRangeLowCode
-        (String obsEffectiveTimingRepeatBoundsRangeLowCode) 
-        {
-      this.obsEffectiveTimingRepeatBoundsRangeLowCode = obsEffectiveTimingRepeatBoundsRangeLowCode;
-}
-    public 
-    String 
-    getObsEffectiveTimingRepeatBoundsRangeLowCompartrCode()
-    {
-        return this.obsEffectiveTimingRepeatBoundsRangeLowCompartrCode;
-    }
-    
-    public void setObsEffectiveTimingRepeatBoundsRangeLowCompartrCode
-        (String obsEffectiveTimingRepeatBoundsRangeLowCompartrCode) 
-        {
-      this.obsEffectiveTimingRepeatBoundsRangeLowCompartrCode = obsEffectiveTimingRepeatBoundsRangeLowCompartrCode;
-}
-    public 
-    String 
-    getObsEffectiveTimingRepeatBoundsRangeLowSystem()
-    {
-        return this.obsEffectiveTimingRepeatBoundsRangeLowSystem;
-    }
-    
-    public void setObsEffectiveTimingRepeatBoundsRangeLowSystem
-        (String obsEffectiveTimingRepeatBoundsRangeLowSystem) 
-        {
-      this.obsEffectiveTimingRepeatBoundsRangeLowSystem = obsEffectiveTimingRepeatBoundsRangeLowSystem;
-}
-    public 
-    String 
-    getObsEffectiveTimingRepeatBoundsRangeLowUnit()
-    {
-        return this.obsEffectiveTimingRepeatBoundsRangeLowUnit;
-    }
-    
-    public void setObsEffectiveTimingRepeatBoundsRangeLowUnit
-        (String obsEffectiveTimingRepeatBoundsRangeLowUnit) 
-        {
-      this.obsEffectiveTimingRepeatBoundsRangeLowUnit = obsEffectiveTimingRepeatBoundsRangeLowUnit;
-}
-    public 
-    String 
-    getObsEffectiveTimingRepeatBoundsRangeLowValue()
-    {
-        return this.obsEffectiveTimingRepeatBoundsRangeLowValue;
-    }
-    
-    public void setObsEffectiveTimingRepeatBoundsRangeLowValue
-        (String obsEffectiveTimingRepeatBoundsRangeLowValue) 
-        {
-      this.obsEffectiveTimingRepeatBoundsRangeLowValue = obsEffectiveTimingRepeatBoundsRangeLowValue;
-}
-    public 
-    String 
-    getObsEffectiveTimingRepeatCount()
-    {
-        return this.obsEffectiveTimingRepeatCount;
-    }
-    
-    public void setObsEffectiveTimingRepeatCount
-        (String obsEffectiveTimingRepeatCount) 
-        {
-      this.obsEffectiveTimingRepeatCount = obsEffectiveTimingRepeatCount;
-}
-    public 
-    String 
-    getObsEffectiveTimingRepeatCountMax()
-    {
-        return this.obsEffectiveTimingRepeatCountMax;
-    }
-    
-    public void setObsEffectiveTimingRepeatCountMax
-        (String obsEffectiveTimingRepeatCountMax) 
-        {
-      this.obsEffectiveTimingRepeatCountMax = obsEffectiveTimingRepeatCountMax;
-}
-    public 
-    String 
-    getObsEffectiveTimingRepeatDayOfWeekCode()
-    {
-        return this.obsEffectiveTimingRepeatDayOfWeekCode;
-    }
-    
-    public void setObsEffectiveTimingRepeatDayOfWeekCode
-        (String obsEffectiveTimingRepeatDayOfWeekCode) 
-        {
-      this.obsEffectiveTimingRepeatDayOfWeekCode = obsEffectiveTimingRepeatDayOfWeekCode;
-}
-    public 
-    String 
-    getObsEffectiveTimingRepeatDuration()
-    {
-        return this.obsEffectiveTimingRepeatDuration;
-    }
-    
-    public void setObsEffectiveTimingRepeatDuration
-        (String obsEffectiveTimingRepeatDuration) 
-        {
-      this.obsEffectiveTimingRepeatDuration = obsEffectiveTimingRepeatDuration;
-}
-    public 
-    String 
-    getObsEffectiveTimingRepeatDurationMax()
-    {
-        return this.obsEffectiveTimingRepeatDurationMax;
-    }
-    
-    public void setObsEffectiveTimingRepeatDurationMax
-        (String obsEffectiveTimingRepeatDurationMax) 
-        {
-      this.obsEffectiveTimingRepeatDurationMax = obsEffectiveTimingRepeatDurationMax;
-}
-    public 
-    String 
-    getObsEffectiveTimingRepeatDurationUnitCode()
-    {
-        return this.obsEffectiveTimingRepeatDurationUnitCode;
-    }
-    
-    public void setObsEffectiveTimingRepeatDurationUnitCode
-        (String obsEffectiveTimingRepeatDurationUnitCode) 
-        {
-      this.obsEffectiveTimingRepeatDurationUnitCode = obsEffectiveTimingRepeatDurationUnitCode;
-}
-    public 
-    String 
-    getObsEffectiveTimingRepeatFrequency()
-    {
-        return this.obsEffectiveTimingRepeatFrequency;
-    }
-    
-    public void setObsEffectiveTimingRepeatFrequency
-        (String obsEffectiveTimingRepeatFrequency) 
-        {
-      this.obsEffectiveTimingRepeatFrequency = obsEffectiveTimingRepeatFrequency;
-}
-    public 
-    String 
-    getObsEffectiveTimingRepeatFrequencyMax()
-    {
-        return this.obsEffectiveTimingRepeatFrequencyMax;
-    }
-    
-    public void setObsEffectiveTimingRepeatFrequencyMax
-        (String obsEffectiveTimingRepeatFrequencyMax) 
-        {
-      this.obsEffectiveTimingRepeatFrequencyMax = obsEffectiveTimingRepeatFrequencyMax;
-}
-    public 
-    String 
-    getObsEffectiveTimingRepeatOff()
-    {
-        return this.obsEffectiveTimingRepeatOff;
-    }
-    
-    public void setObsEffectiveTimingRepeatOff
-        (String obsEffectiveTimingRepeatOff) 
-        {
-      this.obsEffectiveTimingRepeatOff = obsEffectiveTimingRepeatOff;
-}
-    public 
-    String 
-    getObsEffectiveTimingRepeatPeriod()
-    {
-        return this.obsEffectiveTimingRepeatPeriod;
-    }
-    
-    public void setObsEffectiveTimingRepeatPeriod
-        (String obsEffectiveTimingRepeatPeriod) 
-        {
-      this.obsEffectiveTimingRepeatPeriod = obsEffectiveTimingRepeatPeriod;
-}
-    public 
-    String 
-    getObsEffectiveTimingRepeatPeriodMax()
-    {
-        return this.obsEffectiveTimingRepeatPeriodMax;
-    }
-    
-    public void setObsEffectiveTimingRepeatPeriodMax
-        (String obsEffectiveTimingRepeatPeriodMax) 
-        {
-      this.obsEffectiveTimingRepeatPeriodMax = obsEffectiveTimingRepeatPeriodMax;
-}
-    public 
-    String 
-    getObsEffectiveTimingRepeatPeriodUnitCode()
-    {
-        return this.obsEffectiveTimingRepeatPeriodUnitCode;
-    }
-    
-    public void setObsEffectiveTimingRepeatPeriodUnitCode
-        (String obsEffectiveTimingRepeatPeriodUnitCode) 
-        {
-      this.obsEffectiveTimingRepeatPeriodUnitCode = obsEffectiveTimingRepeatPeriodUnitCode;
-}
-    public 
-    String 
-    getObsEffectiveTimingRepeatTimeOfDay()
-    {
-        return this.obsEffectiveTimingRepeatTimeOfDay;
-    }
-    
-    public void setObsEffectiveTimingRepeatTimeOfDay
-        (String obsEffectiveTimingRepeatTimeOfDay) 
-        {
-      this.obsEffectiveTimingRepeatTimeOfDay = obsEffectiveTimingRepeatTimeOfDay;
-}
-    public 
-    String 
-    getObsEffectiveTimingRepeatWhenCode()
-    {
-        return this.obsEffectiveTimingRepeatWhenCode;
-    }
-    
-    public void setObsEffectiveTimingRepeatWhenCode
-        (String obsEffectiveTimingRepeatWhenCode) 
-        {
-      this.obsEffectiveTimingRepeatWhenCode = obsEffectiveTimingRepeatWhenCode;
-}
-    public 
-    String 
-    getObsEnc()
-    {
-        return this.obsEnc;
-    }
-    
-    public void setObsEnc
-        (String obsEnc) 
-        {
-      this.obsEnc = obsEnc;
-}
-    public 
-    String 
-    getObsFocus()
-    {
-        return this.obsFocus;
-    }
-    
-    public void setObsFocus
-        (String obsFocus) 
-        {
-      this.obsFocus = obsFocus;
-}
-    public 
-    String 
-    getObsHasMember()
-    {
-        return this.obsHasMember;
-    }
-    
-    public void setObsHasMember
-        (String obsHasMember) 
-        {
-      this.obsHasMember = obsHasMember;
-}
-    public 
-    String 
-    getObsIdAssigner()
-    {
-        return this.obsIdAssigner;
-    }
-    
-    public void setObsIdAssigner
-        (String obsIdAssigner) 
-        {
-      this.obsIdAssigner = obsIdAssigner;
-}
-    public 
-    String 
-    getObsIdPeriodEnd()
-    {
-        return this.obsIdPeriodEnd;
-    }
-    
-    public void setObsIdPeriodEnd
-        (String obsIdPeriodEnd) 
-        {
-      this.obsIdPeriodEnd = obsIdPeriodEnd;
-}
-    public 
-    String 
-    getObsIdPeriodStart()
-    {
-        return this.obsIdPeriodStart;
-    }
-    
-    public void setObsIdPeriodStart
-        (String obsIdPeriodStart) 
-        {
-      this.obsIdPeriodStart = obsIdPeriodStart;
-}
-    public 
-    String 
-    getObsIdSystem()
-    {
-        return this.obsIdSystem;
-    }
-    
-    public void setObsIdSystem
-        (String obsIdSystem) 
-        {
-      this.obsIdSystem = obsIdSystem;
-}
-    public 
-    String 
-    getObsIdTypeCodingCode()
-    {
-        return this.obsIdTypeCodingCode;
-    }
-    
-    public void setObsIdTypeCodingCode
-        (String obsIdTypeCodingCode) 
-        {
-      this.obsIdTypeCodingCode = obsIdTypeCodingCode;
-}
-    public 
-    String 
-    getObsIdTypeCodingDisplay()
-    {
-        return this.obsIdTypeCodingDisplay;
-    }
-    
-    public void setObsIdTypeCodingDisplay
-        (String obsIdTypeCodingDisplay) 
-        {
-      this.obsIdTypeCodingDisplay = obsIdTypeCodingDisplay;
-}
-    public 
-    String 
-    getObsIdTypeCodingSystem()
-    {
-        return this.obsIdTypeCodingSystem;
-    }
-    
-    public void setObsIdTypeCodingSystem
-        (String obsIdTypeCodingSystem) 
-        {
-      this.obsIdTypeCodingSystem = obsIdTypeCodingSystem;
-}
-    public 
-    String 
-    getObsIdTypeCodingUsrslt()
-    {
-        return this.obsIdTypeCodingUsrslt;
-    }
-    
-    public void setObsIdTypeCodingUsrslt
-        (String obsIdTypeCodingUsrslt) 
-        {
-      this.obsIdTypeCodingUsrslt = obsIdTypeCodingUsrslt;
-}
-    public 
-    String 
-    getObsIdTypeCodingVersion()
-    {
-        return this.obsIdTypeCodingVersion;
-    }
-    
-    public void setObsIdTypeCodingVersion
-        (String obsIdTypeCodingVersion) 
-        {
-      this.obsIdTypeCodingVersion = obsIdTypeCodingVersion;
-}
-    public 
-    String 
-    getObsIdTypeText()
-    {
-        return this.obsIdTypeText;
-    }
-    
-    public void setObsIdTypeText
-        (String obsIdTypeText) 
-        {
-      this.obsIdTypeText = obsIdTypeText;
-}
-    public 
-    String 
-    getObsIdUseCode()
-    {
-        return this.obsIdUseCode;
-    }
-    
-    public void setObsIdUseCode
-        (String obsIdUseCode) 
-        {
-      this.obsIdUseCode = obsIdUseCode;
-}
-    public 
-    String 
-    getObsIdValue()
-    {
-        return this.obsIdValue;
-    }
-    
-    public void setObsIdValue
-        (String obsIdValue) 
-        {
-      this.obsIdValue = obsIdValue;
-}
-    public 
-    String 
-    getObsInterpretationCodingCode()
-    {
-        return this.obsInterpretationCodingCode;
-    }
-    
-    public void setObsInterpretationCodingCode
-        (String obsInterpretationCodingCode) 
-        {
-      this.obsInterpretationCodingCode = obsInterpretationCodingCode;
-}
-    public 
-    String 
-    getObsInterpretationCodingDisplay()
-    {
-        return this.obsInterpretationCodingDisplay;
-    }
-    
-    public void setObsInterpretationCodingDisplay
-        (String obsInterpretationCodingDisplay) 
-        {
-      this.obsInterpretationCodingDisplay = obsInterpretationCodingDisplay;
-}
-    public 
-    String 
-    getObsInterpretationCodingSystem()
-    {
-        return this.obsInterpretationCodingSystem;
-    }
-    
-    public void setObsInterpretationCodingSystem
-        (String obsInterpretationCodingSystem) 
-        {
-      this.obsInterpretationCodingSystem = obsInterpretationCodingSystem;
-}
-    public 
-    String 
-    getObsInterpretationCodingUsrslt()
-    {
-        return this.obsInterpretationCodingUsrslt;
-    }
-    
-    public void setObsInterpretationCodingUsrslt
-        (String obsInterpretationCodingUsrslt) 
-        {
-      this.obsInterpretationCodingUsrslt = obsInterpretationCodingUsrslt;
-}
-    public 
-    String 
-    getObsInterpretationCodingVersion()
-    {
-        return this.obsInterpretationCodingVersion;
-    }
-    
-    public void setObsInterpretationCodingVersion
-        (String obsInterpretationCodingVersion) 
-        {
-      this.obsInterpretationCodingVersion = obsInterpretationCodingVersion;
-}
-    public 
-    String 
-    getObsInterpretationText()
-    {
-        return this.obsInterpretationText;
-    }
-    
-    public void setObsInterpretationText
-        (String obsInterpretationText) 
-        {
-      this.obsInterpretationText = obsInterpretationText;
-}
-    public 
-    String 
-    getObsIssued()
-    {
-        return this.obsIssued;
-    }
-    
-    public void setObsIssued
-        (String obsIssued) 
-        {
-      this.obsIssued = obsIssued;
-}
-    public 
-    String 
-    getObsMethodCodingCode()
-    {
-        return this.obsMethodCodingCode;
-    }
-    
-    public void setObsMethodCodingCode
-        (String obsMethodCodingCode) 
-        {
-      this.obsMethodCodingCode = obsMethodCodingCode;
-}
-    public 
-    String 
-    getObsMethodCodingDisplay()
-    {
-        return this.obsMethodCodingDisplay;
-    }
-    
-    public void setObsMethodCodingDisplay
-        (String obsMethodCodingDisplay) 
-        {
-      this.obsMethodCodingDisplay = obsMethodCodingDisplay;
-}
-    public 
-    String 
-    getObsMethodCodingSystem()
-    {
-        return this.obsMethodCodingSystem;
-    }
-    
-    public void setObsMethodCodingSystem
-        (String obsMethodCodingSystem) 
-        {
-      this.obsMethodCodingSystem = obsMethodCodingSystem;
-}
-    public 
-    String 
-    getObsMethodCodingUsrslt()
-    {
-        return this.obsMethodCodingUsrslt;
-    }
-    
-    public void setObsMethodCodingUsrslt
-        (String obsMethodCodingUsrslt) 
-        {
-      this.obsMethodCodingUsrslt = obsMethodCodingUsrslt;
-}
-    public 
-    String 
-    getObsMethodCodingVersion()
-    {
-        return this.obsMethodCodingVersion;
-    }
-    
-    public void setObsMethodCodingVersion
-        (String obsMethodCodingVersion) 
-        {
-      this.obsMethodCodingVersion = obsMethodCodingVersion;
-}
-    public 
-    String 
-    getObsMethodText()
-    {
-        return this.obsMethodText;
-    }
-    
-    public void setObsMethodText
-        (String obsMethodText) 
-        {
-      this.obsMethodText = obsMethodText;
-}
-    public 
-    String 
-    getObservationNoteAuthorReference()
-    {
-        return this.observationNoteAuthorReference;
-    }
-    
-    public void setObservationNoteAuthorReference
-        (String observationNoteAuthorReference) 
-        {
-      this.observationNoteAuthorReference = observationNoteAuthorReference;
-}
-    public 
-    String 
-    getObservationNoteAuthorString()
-    {
-        return this.observationNoteAuthorString;
-    }
-    
-    public void setObservationNoteAuthorString
-        (String observationNoteAuthorString) 
-        {
-      this.observationNoteAuthorString = observationNoteAuthorString;
-}
-    public 
-    String 
-    getObsNoteText()
-    {
-        return this.obsNoteText;
-    }
-    
-    public void setObsNoteText
-        (String obsNoteText) 
-        {
-      this.obsNoteText = obsNoteText;
-}
-    public 
-    String 
-    getObsNoteTime()
-    {
-        return this.obsNoteTime;
-    }
-    
-    public void setObsNoteTime
-        (String obsNoteTime) 
-        {
-      this.obsNoteTime = obsNoteTime;
-}
-    public 
-    String 
-    getObsPartOf()
-    {
-        return this.obsPartOf;
-    }
-    
-    public void setObsPartOf
-        (String obsPartOf) 
-        {
-      this.obsPartOf = obsPartOf;
-}
-    public 
-    String 
-    getObsPerformer()
-    {
-        return this.obsPerformer;
-    }
-    
-    public void setObsPerformer
-        (String obsPerformer) 
-        {
-      this.obsPerformer = obsPerformer;
-}
-    public 
-    String 
-    getObsReferenceRangeAgeHighCode()
-    {
-        return this.obsReferenceRangeAgeHighCode;
-    }
-    
-    public void setObsReferenceRangeAgeHighCode
-        (String obsReferenceRangeAgeHighCode) 
-        {
-      this.obsReferenceRangeAgeHighCode = obsReferenceRangeAgeHighCode;
-}
-    public 
-    String 
-    getObsReferenceRangeAgeHighCompartrCode()
-    {
-        return this.obsReferenceRangeAgeHighCompartrCode;
-    }
-    
-    public void setObsReferenceRangeAgeHighCompartrCode
-        (String obsReferenceRangeAgeHighCompartrCode) 
-        {
-      this.obsReferenceRangeAgeHighCompartrCode = obsReferenceRangeAgeHighCompartrCode;
-}
-    public 
-    String 
-    getObsReferenceRangeAgeHighSystem()
-    {
-        return this.obsReferenceRangeAgeHighSystem;
-    }
-    
-    public void setObsReferenceRangeAgeHighSystem
-        (String obsReferenceRangeAgeHighSystem) 
-        {
-      this.obsReferenceRangeAgeHighSystem = obsReferenceRangeAgeHighSystem;
-}
-    public 
-    String 
-    getObsReferenceRangeAgeHighUnit()
-    {
-        return this.obsReferenceRangeAgeHighUnit;
-    }
-    
-    public void setObsReferenceRangeAgeHighUnit
-        (String obsReferenceRangeAgeHighUnit) 
-        {
-      this.obsReferenceRangeAgeHighUnit = obsReferenceRangeAgeHighUnit;
-}
-    public 
-    String 
-    getObsReferenceRangeAgeHighValue()
-    {
-        return this.obsReferenceRangeAgeHighValue;
-    }
-    
-    public void setObsReferenceRangeAgeHighValue
-        (String obsReferenceRangeAgeHighValue) 
-        {
-      this.obsReferenceRangeAgeHighValue = obsReferenceRangeAgeHighValue;
-}
-    public 
-    String 
-    getObsReferenceRangeAgeLowCode()
-    {
-        return this.obsReferenceRangeAgeLowCode;
-    }
-    
-    public void setObsReferenceRangeAgeLowCode
-        (String obsReferenceRangeAgeLowCode) 
-        {
-      this.obsReferenceRangeAgeLowCode = obsReferenceRangeAgeLowCode;
-}
-    public 
-    String 
-    getObsReferenceRangeAgeLowCompartrCode()
-    {
-        return this.obsReferenceRangeAgeLowCompartrCode;
-    }
-    
-    public void setObsReferenceRangeAgeLowCompartrCode
-        (String obsReferenceRangeAgeLowCompartrCode) 
-        {
-      this.obsReferenceRangeAgeLowCompartrCode = obsReferenceRangeAgeLowCompartrCode;
-}
-    public 
-    String 
-    getObsReferenceRangeAgeLowSystem()
-    {
-        return this.obsReferenceRangeAgeLowSystem;
-    }
-    
-    public void setObsReferenceRangeAgeLowSystem
-        (String obsReferenceRangeAgeLowSystem) 
-        {
-      this.obsReferenceRangeAgeLowSystem = obsReferenceRangeAgeLowSystem;
-}
-    public 
-    String 
-    getObsReferenceRangeAgeLowUnit()
-    {
-        return this.obsReferenceRangeAgeLowUnit;
-    }
-    
-    public void setObsReferenceRangeAgeLowUnit
-        (String obsReferenceRangeAgeLowUnit) 
-        {
-      this.obsReferenceRangeAgeLowUnit = obsReferenceRangeAgeLowUnit;
-}
-    public 
-    String 
-    getObsReferenceRangeAgeLowValue()
-    {
-        return this.obsReferenceRangeAgeLowValue;
-    }
-    
-    public void setObsReferenceRangeAgeLowValue
-        (String obsReferenceRangeAgeLowValue) 
-        {
-      this.obsReferenceRangeAgeLowValue = obsReferenceRangeAgeLowValue;
-}
-    public 
-    String 
-    getObsReferenceRangeAppliesToCodingCode()
-    {
-        return this.obsReferenceRangeAppliesToCodingCode;
-    }
-    
-    public void setObsReferenceRangeAppliesToCodingCode
-        (String obsReferenceRangeAppliesToCodingCode) 
-        {
-      this.obsReferenceRangeAppliesToCodingCode = obsReferenceRangeAppliesToCodingCode;
-}
-    public 
-    String 
-    getObsReferenceRangeAppliesToCodingDisplay()
-    {
-        return this.obsReferenceRangeAppliesToCodingDisplay;
-    }
-    
-    public void setObsReferenceRangeAppliesToCodingDisplay
-        (String obsReferenceRangeAppliesToCodingDisplay) 
-        {
-      this.obsReferenceRangeAppliesToCodingDisplay = obsReferenceRangeAppliesToCodingDisplay;
-}
-    public 
-    String 
-    getObsReferenceRangeAppliesToCodingSystem()
-    {
-        return this.obsReferenceRangeAppliesToCodingSystem;
-    }
-    
-    public void setObsReferenceRangeAppliesToCodingSystem
-        (String obsReferenceRangeAppliesToCodingSystem) 
-        {
-      this.obsReferenceRangeAppliesToCodingSystem = obsReferenceRangeAppliesToCodingSystem;
-}
-    public 
-    String 
-    getObsReferenceRangeAppliesToCodingUsrslt()
-    {
-        return this.obsReferenceRangeAppliesToCodingUsrslt;
-    }
-    
-    public void setObsReferenceRangeAppliesToCodingUsrslt
-        (String obsReferenceRangeAppliesToCodingUsrslt) 
-        {
-      this.obsReferenceRangeAppliesToCodingUsrslt = obsReferenceRangeAppliesToCodingUsrslt;
-}
-    public 
-    String 
-    getObsReferenceRangeAppliesToCodingVersion()
-    {
-        return this.obsReferenceRangeAppliesToCodingVersion;
-    }
-    
-    public void setObsReferenceRangeAppliesToCodingVersion
-        (String obsReferenceRangeAppliesToCodingVersion) 
-        {
-      this.obsReferenceRangeAppliesToCodingVersion = obsReferenceRangeAppliesToCodingVersion;
-}
-    public 
-    String 
-    getObsReferenceRangeAppliesToText()
-    {
-        return this.obsReferenceRangeAppliesToText;
-    }
-    
-    public void setObsReferenceRangeAppliesToText
-        (String obsReferenceRangeAppliesToText) 
-        {
-      this.obsReferenceRangeAppliesToText = obsReferenceRangeAppliesToText;
-}
-    public 
-    String 
-    getObsReferenceRangeHighCode()
-    {
-        return this.obsReferenceRangeHighCode;
-    }
-    
-    public void setObsReferenceRangeHighCode
-        (String obsReferenceRangeHighCode) 
-        {
-      this.obsReferenceRangeHighCode = obsReferenceRangeHighCode;
-}
-    public 
-    String 
-    getObsReferenceRangeHighCompartrCode()
-    {
-        return this.obsReferenceRangeHighCompartrCode;
-    }
-    
-    public void setObsReferenceRangeHighCompartrCode
-        (String obsReferenceRangeHighCompartrCode) 
-        {
-      this.obsReferenceRangeHighCompartrCode = obsReferenceRangeHighCompartrCode;
-}
-    public 
-    String 
-    getObsReferenceRangeHighSystem()
-    {
-        return this.obsReferenceRangeHighSystem;
-    }
-    
-    public void setObsReferenceRangeHighSystem
-        (String obsReferenceRangeHighSystem) 
-        {
-      this.obsReferenceRangeHighSystem = obsReferenceRangeHighSystem;
-}
-    public 
-    String 
-    getObsReferenceRangeHighUnit()
-    {
-        return this.obsReferenceRangeHighUnit;
-    }
-    
-    public void setObsReferenceRangeHighUnit
-        (String obsReferenceRangeHighUnit) 
-        {
-      this.obsReferenceRangeHighUnit = obsReferenceRangeHighUnit;
-}
-    public 
-    String 
-    getObsReferenceRangeHighValue()
-    {
-        return this.obsReferenceRangeHighValue;
-    }
-    
-    public void setObsReferenceRangeHighValue
-        (String obsReferenceRangeHighValue) 
-        {
-      this.obsReferenceRangeHighValue = obsReferenceRangeHighValue;
-}
-    public 
-    String 
-    getObsReferenceRangeLowCode()
-    {
-        return this.obsReferenceRangeLowCode;
-    }
-    
-    public void setObsReferenceRangeLowCode
-        (String obsReferenceRangeLowCode) 
-        {
-      this.obsReferenceRangeLowCode = obsReferenceRangeLowCode;
-}
-    public 
-    String 
-    getObsReferenceRangeLowCompartrCode()
-    {
-        return this.obsReferenceRangeLowCompartrCode;
-    }
-    
-    public void setObsReferenceRangeLowCompartrCode
-        (String obsReferenceRangeLowCompartrCode) 
-        {
-      this.obsReferenceRangeLowCompartrCode = obsReferenceRangeLowCompartrCode;
-}
-    public 
-    String 
-    getObsReferenceRangeLowSystem()
-    {
-        return this.obsReferenceRangeLowSystem;
-    }
-    
-    public void setObsReferenceRangeLowSystem
-        (String obsReferenceRangeLowSystem) 
-        {
-      this.obsReferenceRangeLowSystem = obsReferenceRangeLowSystem;
-}
-    public 
-    String 
-    getObsReferenceRangeLowUnit()
-    {
-        return this.obsReferenceRangeLowUnit;
-    }
-    
-    public void setObsReferenceRangeLowUnit
-        (String obsReferenceRangeLowUnit) 
-        {
-      this.obsReferenceRangeLowUnit = obsReferenceRangeLowUnit;
-}
-    public 
-    String 
-    getObsReferenceRangeLowValue()
-    {
-        return this.obsReferenceRangeLowValue;
-    }
-    
-    public void setObsReferenceRangeLowValue
-        (String obsReferenceRangeLowValue) 
-        {
-      this.obsReferenceRangeLowValue = obsReferenceRangeLowValue;
-}
-    public 
-    String 
-    getObsReferenceRangeText()
-    {
-        return this.obsReferenceRangeText;
-    }
-    
-    public void setObsReferenceRangeText
-        (String obsReferenceRangeText) 
-        {
-      this.obsReferenceRangeText = obsReferenceRangeText;
-}
-    public 
-    String 
-    getObsReferenceRangeTypeCodingCode()
-    {
-        return this.obsReferenceRangeTypeCodingCode;
-    }
-    
-    public void setObsReferenceRangeTypeCodingCode
-        (String obsReferenceRangeTypeCodingCode) 
-        {
-      this.obsReferenceRangeTypeCodingCode = obsReferenceRangeTypeCodingCode;
-}
-    public 
-    String 
-    getObsReferenceRangeTypeCodingDisplay()
-    {
-        return this.obsReferenceRangeTypeCodingDisplay;
-    }
-    
-    public void setObsReferenceRangeTypeCodingDisplay
-        (String obsReferenceRangeTypeCodingDisplay) 
-        {
-      this.obsReferenceRangeTypeCodingDisplay = obsReferenceRangeTypeCodingDisplay;
-}
-    public 
-    String 
-    getObsReferenceRangeTypeCodingSystem()
-    {
-        return this.obsReferenceRangeTypeCodingSystem;
-    }
-    
-    public void setObsReferenceRangeTypeCodingSystem
-        (String obsReferenceRangeTypeCodingSystem) 
-        {
-      this.obsReferenceRangeTypeCodingSystem = obsReferenceRangeTypeCodingSystem;
-}
-    public 
-    String 
-    getObsReferenceRangeTypeCodingUsrslt()
-    {
-        return this.obsReferenceRangeTypeCodingUsrslt;
-    }
-    
-    public void setObsReferenceRangeTypeCodingUsrslt
-        (String obsReferenceRangeTypeCodingUsrslt) 
-        {
-      this.obsReferenceRangeTypeCodingUsrslt = obsReferenceRangeTypeCodingUsrslt;
-}
-    public 
-    String 
-    getObsReferenceRangeTypeCodingVersion()
-    {
-        return this.obsReferenceRangeTypeCodingVersion;
-    }
-    
-    public void setObsReferenceRangeTypeCodingVersion
-        (String obsReferenceRangeTypeCodingVersion) 
-        {
-      this.obsReferenceRangeTypeCodingVersion = obsReferenceRangeTypeCodingVersion;
-}
-    public 
-    String 
-    getObsReferenceRangeTypeText()
-    {
-        return this.obsReferenceRangeTypeText;
-    }
-    
-    public void setObsReferenceRangeTypeText
-        (String obsReferenceRangeTypeText) 
-        {
-      this.obsReferenceRangeTypeText = obsReferenceRangeTypeText;
-}
-    public 
-    String 
-    getObsSpecimen()
-    {
-        return this.obsSpecimen;
-    }
-    
-    public void setObsSpecimen
-        (String obsSpecimen) 
-        {
-      this.obsSpecimen = obsSpecimen;
-}
-    public 
-    String 
-    getObsStatusCode()
-    {
-        return this.obsStatusCode;
-    }
-    
-    public void setObsStatusCode
-        (String obsStatusCode) 
-        {
-      this.obsStatusCode = obsStatusCode;
-}
-    public 
-    String 
-    getObsSubject()
-    {
-        return this.obsSubject;
-    }
-    
-    public void setObsSubject
-        (String obsSubject) 
-        {
-      this.obsSubject = obsSubject;
-}
-    public 
-    String 
-    getObservationValueBoolean()
-    {
-        return this.observationValueBoolean;
-    }
-    
-    public void setObservationValueBoolean
-        (String observationValueBoolean) 
-        {
-      this.observationValueBoolean = observationValueBoolean;
-}
-    public 
-    String 
-    getObsValueCodeableConceptCodingCode()
-    {
-        return this.obsValueCodeableConceptCodingCode;
-    }
-    
-    public void setObsValueCodeableConceptCodingCode
-        (String obsValueCodeableConceptCodingCode) 
-        {
-      this.obsValueCodeableConceptCodingCode = obsValueCodeableConceptCodingCode;
-}
-    public 
-    String 
-    getObsValueCodeableConceptCodingDisplay()
-    {
-        return this.obsValueCodeableConceptCodingDisplay;
-    }
-    
-    public void setObsValueCodeableConceptCodingDisplay
-        (String obsValueCodeableConceptCodingDisplay) 
-        {
-      this.obsValueCodeableConceptCodingDisplay = obsValueCodeableConceptCodingDisplay;
-}
-    public 
-    String 
-    getObsValueCodeableConceptCodingSystem()
-    {
-        return this.obsValueCodeableConceptCodingSystem;
-    }
-    
-    public void setObsValueCodeableConceptCodingSystem
-        (String obsValueCodeableConceptCodingSystem) 
-        {
-      this.obsValueCodeableConceptCodingSystem = obsValueCodeableConceptCodingSystem;
-}
-    public 
-    String 
-    getObsValueCodeableConceptCodingUsrslt()
-    {
-        return this.obsValueCodeableConceptCodingUsrslt;
-    }
-    
-    public void setObsValueCodeableConceptCodingUsrslt
-        (String obsValueCodeableConceptCodingUsrslt) 
-        {
-      this.obsValueCodeableConceptCodingUsrslt = obsValueCodeableConceptCodingUsrslt;
-}
-    public 
-    String 
-    getObsValueCodeableConceptCodingVersion()
-    {
-        return this.obsValueCodeableConceptCodingVersion;
-    }
-    
-    public void setObsValueCodeableConceptCodingVersion
-        (String obsValueCodeableConceptCodingVersion) 
-        {
-      this.obsValueCodeableConceptCodingVersion = obsValueCodeableConceptCodingVersion;
-}
-    public 
-    String 
-    getObsValueCodeableConceptText()
-    {
-        return this.obsValueCodeableConceptText;
-    }
-    
-    public void setObsValueCodeableConceptText
-        (String obsValueCodeableConceptText) 
-        {
-      this.obsValueCodeableConceptText = obsValueCodeableConceptText;
-}
-    public 
-    String 
-    getObservationValueDateTime()
-    {
-        return this.observationValueDateTime;
-    }
-    
-    public void setObservationValueDateTime
-        (String observationValueDateTime) 
-        {
-      this.observationValueDateTime = observationValueDateTime;
-}
-    public 
-    String 
-    getObservationValueInteger()
-    {
-        return this.observationValueInteger;
-    }
-    
-    public void setObservationValueInteger
-        (String observationValueInteger) 
-        {
-      this.observationValueInteger = observationValueInteger;
-}
-    public 
-    String 
-    getObsValuePeriodEnd()
-    {
-        return this.obsValuePeriodEnd;
-    }
-    
-    public void setObsValuePeriodEnd
-        (String obsValuePeriodEnd) 
-        {
-      this.obsValuePeriodEnd = obsValuePeriodEnd;
-}
-    public 
-    String 
-    getObsValuePeriodStart()
-    {
-        return this.obsValuePeriodStart;
-    }
-    
-    public void setObsValuePeriodStart
-        (String obsValuePeriodStart) 
-        {
-      this.obsValuePeriodStart = obsValuePeriodStart;
-}
-    public 
-    String 
-    getObsValueQuantityCode()
-    {
-        return this.obsValueQuantityCode;
-    }
-    
-    public void setObsValueQuantityCode
-        (String obsValueQuantityCode) 
-        {
-      this.obsValueQuantityCode = obsValueQuantityCode;
-}
-    public 
-    String 
-    getObsValueQuantityCompartrCode()
-    {
-        return this.obsValueQuantityCompartrCode;
-    }
-    
-    public void setObsValueQuantityCompartrCode
-        (String obsValueQuantityCompartrCode) 
-        {
-      this.obsValueQuantityCompartrCode = obsValueQuantityCompartrCode;
-}
-    public 
-    String 
-    getObsValueQuantitySystem()
-    {
-        return this.obsValueQuantitySystem;
-    }
-    
-    public void setObsValueQuantitySystem
-        (String obsValueQuantitySystem) 
-        {
-      this.obsValueQuantitySystem = obsValueQuantitySystem;
-}
-    public 
-    String 
-    getObsValueQuantityUnit()
-    {
-        return this.obsValueQuantityUnit;
-    }
-    
-    public void setObsValueQuantityUnit
-        (String obsValueQuantityUnit) 
-        {
-      this.obsValueQuantityUnit = obsValueQuantityUnit;
-}
-    public 
-    String 
-    getObsValueQuantityValue()
-    {
-        return this.obsValueQuantityValue;
-    }
-    
-    public void setObsValueQuantityValue
-        (String obsValueQuantityValue) 
-        {
-      this.obsValueQuantityValue = obsValueQuantityValue;
-}
-    public 
-    String 
-    getObsValueRangeHighCode()
-    {
-        return this.obsValueRangeHighCode;
-    }
-    
-    public void setObsValueRangeHighCode
-        (String obsValueRangeHighCode) 
-        {
-      this.obsValueRangeHighCode = obsValueRangeHighCode;
-}
-    public 
-    String 
-    getObsValueRangeHighCompartrCode()
-    {
-        return this.obsValueRangeHighCompartrCode;
-    }
-    
-    public void setObsValueRangeHighCompartrCode
-        (String obsValueRangeHighCompartrCode) 
-        {
-      this.obsValueRangeHighCompartrCode = obsValueRangeHighCompartrCode;
-}
-    public 
-    String 
-    getObsValueRangeHighSystem()
-    {
-        return this.obsValueRangeHighSystem;
-    }
-    
-    public void setObsValueRangeHighSystem
-        (String obsValueRangeHighSystem) 
-        {
-      this.obsValueRangeHighSystem = obsValueRangeHighSystem;
-}
-    public 
-    String 
-    getObsValueRangeHighUnit()
-    {
-        return this.obsValueRangeHighUnit;
-    }
-    
-    public void setObsValueRangeHighUnit
-        (String obsValueRangeHighUnit) 
-        {
-      this.obsValueRangeHighUnit = obsValueRangeHighUnit;
-}
-    public 
-    String 
-    getObsValueRangeHighValue()
-    {
-        return this.obsValueRangeHighValue;
-    }
-    
-    public void setObsValueRangeHighValue
-        (String obsValueRangeHighValue) 
-        {
-      this.obsValueRangeHighValue = obsValueRangeHighValue;
-}
-    public 
-    String 
-    getObsValueRangeLowCode()
-    {
-        return this.obsValueRangeLowCode;
-    }
-    
-    public void setObsValueRangeLowCode
-        (String obsValueRangeLowCode) 
-        {
-      this.obsValueRangeLowCode = obsValueRangeLowCode;
-}
-    public 
-    String 
-    getObsValueRangeLowCompartrCode()
-    {
-        return this.obsValueRangeLowCompartrCode;
-    }
-    
-    public void setObsValueRangeLowCompartrCode
-        (String obsValueRangeLowCompartrCode) 
-        {
-      this.obsValueRangeLowCompartrCode = obsValueRangeLowCompartrCode;
-}
-    public 
-    String 
-    getObsValueRangeLowSystem()
-    {
-        return this.obsValueRangeLowSystem;
-    }
-    
-    public void setObsValueRangeLowSystem
-        (String obsValueRangeLowSystem) 
-        {
-      this.obsValueRangeLowSystem = obsValueRangeLowSystem;
-}
-    public 
-    String 
-    getObsValueRangeLowUnit()
-    {
-        return this.obsValueRangeLowUnit;
-    }
-    
-    public void setObsValueRangeLowUnit
-        (String obsValueRangeLowUnit) 
-        {
-      this.obsValueRangeLowUnit = obsValueRangeLowUnit;
-}
-    public 
-    String 
-    getObsValueRangeLowValue()
-    {
-        return this.obsValueRangeLowValue;
-    }
-    
-    public void setObsValueRangeLowValue
-        (String obsValueRangeLowValue) 
-        {
-      this.obsValueRangeLowValue = obsValueRangeLowValue;
-}
-    public 
-    String 
-    getObsValueRatioDenomCode()
-    {
-        return this.obsValueRatioDenomCode;
-    }
-    
-    public void setObsValueRatioDenomCode
-        (String obsValueRatioDenomCode) 
-        {
-      this.obsValueRatioDenomCode = obsValueRatioDenomCode;
-}
-    public 
-    String 
-    getObsValueRatioDenomCompartrCode()
-    {
-        return this.obsValueRatioDenomCompartrCode;
-    }
-    
-    public void setObsValueRatioDenomCompartrCode
-        (String obsValueRatioDenomCompartrCode) 
-        {
-      this.obsValueRatioDenomCompartrCode = obsValueRatioDenomCompartrCode;
-}
-    public 
-    String 
-    getObsValueRatioDenomSystem()
-    {
-        return this.obsValueRatioDenomSystem;
-    }
-    
-    public void setObsValueRatioDenomSystem
-        (String obsValueRatioDenomSystem) 
-        {
-      this.obsValueRatioDenomSystem = obsValueRatioDenomSystem;
-}
-    public 
-    String 
-    getObsValueRatioDenomUnit()
-    {
-        return this.obsValueRatioDenomUnit;
-    }
-    
-    public void setObsValueRatioDenomUnit
-        (String obsValueRatioDenomUnit) 
-        {
-      this.obsValueRatioDenomUnit = obsValueRatioDenomUnit;
-}
-    public 
-    String 
-    getObsValueRatioDenomValue()
-    {
-        return this.obsValueRatioDenomValue;
-    }
-    
-    public void setObsValueRatioDenomValue
-        (String obsValueRatioDenomValue) 
-        {
-      this.obsValueRatioDenomValue = obsValueRatioDenomValue;
-}
-    public 
-    String 
-    getObsValueRatioNumeratorCode()
-    {
-        return this.obsValueRatioNumeratorCode;
-    }
-    
-    public void setObsValueRatioNumeratorCode
-        (String obsValueRatioNumeratorCode) 
-        {
-      this.obsValueRatioNumeratorCode = obsValueRatioNumeratorCode;
-}
-    public 
-    String 
-    getObsValueRatioNumeratorCompartrCode()
-    {
-        return this.obsValueRatioNumeratorCompartrCode;
-    }
-    
-    public void setObsValueRatioNumeratorCompartrCode
-        (String obsValueRatioNumeratorCompartrCode) 
-        {
-      this.obsValueRatioNumeratorCompartrCode = obsValueRatioNumeratorCompartrCode;
-}
-    public 
-    String 
-    getObsValueRatioNumeratorSystem()
-    {
-        return this.obsValueRatioNumeratorSystem;
-    }
-    
-    public void setObsValueRatioNumeratorSystem
-        (String obsValueRatioNumeratorSystem) 
-        {
-      this.obsValueRatioNumeratorSystem = obsValueRatioNumeratorSystem;
-}
-    public 
-    String 
-    getObsValueRatioNumeratorUnit()
-    {
-        return this.obsValueRatioNumeratorUnit;
-    }
-    
-    public void setObsValueRatioNumeratorUnit
-        (String obsValueRatioNumeratorUnit) 
-        {
-      this.obsValueRatioNumeratorUnit = obsValueRatioNumeratorUnit;
-}
-    public 
-    String 
-    getObsValueRatioNumeratorValue()
-    {
-        return this.obsValueRatioNumeratorValue;
-    }
-    
-    public void setObsValueRatioNumeratorValue
-        (String obsValueRatioNumeratorValue) 
-        {
-      this.obsValueRatioNumeratorValue = obsValueRatioNumeratorValue;
-}
-    public 
-    String 
-    getObsValueSampledDataData()
-    {
-        return this.obsValueSampledDataData;
-    }
-    
-    public void setObsValueSampledDataData
-        (String obsValueSampledDataData) 
-        {
-      this.obsValueSampledDataData = obsValueSampledDataData;
-}
-    public 
-    String 
-    getObsValueSampledDataDimensions()
-    {
-        return this.obsValueSampledDataDimensions;
-    }
-    
-    public void setObsValueSampledDataDimensions
-        (String obsValueSampledDataDimensions) 
-        {
-      this.obsValueSampledDataDimensions = obsValueSampledDataDimensions;
-}
-    public 
-    String 
-    getObsValueSampledDataFactor()
-    {
-        return this.obsValueSampledDataFactor;
-    }
-    
-    public void setObsValueSampledDataFactor
-        (String obsValueSampledDataFactor) 
-        {
-      this.obsValueSampledDataFactor = obsValueSampledDataFactor;
-}
-    public 
-    String 
-    getObsValueSampledDataLowerLimit()
-    {
-        return this.obsValueSampledDataLowerLimit;
-    }
-    
-    public void setObsValueSampledDataLowerLimit
-        (String obsValueSampledDataLowerLimit) 
-        {
-      this.obsValueSampledDataLowerLimit = obsValueSampledDataLowerLimit;
-}
-    public 
-    String 
-    getObsValueSampledDataOriginCode()
-    {
-        return this.obsValueSampledDataOriginCode;
-    }
-    
-    public void setObsValueSampledDataOriginCode
-        (String obsValueSampledDataOriginCode) 
-        {
-      this.obsValueSampledDataOriginCode = obsValueSampledDataOriginCode;
-}
-    public 
-    String 
-    getObsValueSampledDataOriginCompartrCode()
-    {
-        return this.obsValueSampledDataOriginCompartrCode;
-    }
-    
-    public void setObsValueSampledDataOriginCompartrCode
-        (String obsValueSampledDataOriginCompartrCode) 
-        {
-      this.obsValueSampledDataOriginCompartrCode = obsValueSampledDataOriginCompartrCode;
-}
-    public 
-    String 
-    getObsValueSampledDataOriginSystem()
-    {
-        return this.obsValueSampledDataOriginSystem;
-    }
-    
-    public void setObsValueSampledDataOriginSystem
-        (String obsValueSampledDataOriginSystem) 
-        {
-      this.obsValueSampledDataOriginSystem = obsValueSampledDataOriginSystem;
-}
-    public 
-    String 
-    getObsValueSampledDataOriginUnit()
-    {
-        return this.obsValueSampledDataOriginUnit;
-    }
-    
-    public void setObsValueSampledDataOriginUnit
-        (String obsValueSampledDataOriginUnit) 
-        {
-      this.obsValueSampledDataOriginUnit = obsValueSampledDataOriginUnit;
-}
-    public 
-    String 
-    getObsValueSampledDataOriginValue()
-    {
-        return this.obsValueSampledDataOriginValue;
-    }
-    
-    public void setObsValueSampledDataOriginValue
-        (String obsValueSampledDataOriginValue) 
-        {
-      this.obsValueSampledDataOriginValue = obsValueSampledDataOriginValue;
-}
-    public 
-    String 
-    getObsValueSampledDataPeriod()
-    {
-        return this.obsValueSampledDataPeriod;
-    }
-    
-    public void setObsValueSampledDataPeriod
-        (String obsValueSampledDataPeriod) 
-        {
-      this.obsValueSampledDataPeriod = obsValueSampledDataPeriod;
-}
-    public 
-    String 
-    getObsValueSampledDataUpperLimit()
-    {
-        return this.obsValueSampledDataUpperLimit;
-    }
-    
-    public void setObsValueSampledDataUpperLimit
-        (String obsValueSampledDataUpperLimit) 
-        {
-      this.obsValueSampledDataUpperLimit = obsValueSampledDataUpperLimit;
-}
-    public 
-    String 
-    getObservationValueString()
-    {
-        return this.observationValueString;
-    }
-    
-    public void setObservationValueString
-        (String observationValueString) 
-        {
-      this.observationValueString = observationValueString;
-}
-    public 
-    String 
-    getObservationValueTime()
-    {
-        return this.observationValueTime;
-    }
-    
-    public void setObservationValueTime
-        (String observationValueTime) 
-        {
-      this.observationValueTime = observationValueTime;
-}
+    public void setId(String id) {
+        this.id = id;
+    }
+    
+    
+    
+    public String getObsrvtnBasedOn() {
+        return this.obsrvtnBasedOn;
+    }
+    
+    public void setObsrvtnBasedOn(String obsrvtnBasedOn) {
+        this.obsrvtnBasedOn = obsrvtnBasedOn;
+    }
+    
+    
+    
+    public String getObsrvtnBodySiteCdgCd() {
+        return this.obsrvtnBodySiteCdgCd;
+    }
+    
+    public void setObsrvtnBodySiteCdgCd(String obsrvtnBodySiteCdgCd) {
+        this.obsrvtnBodySiteCdgCd = obsrvtnBodySiteCdgCd;
+    }
+    
+    
+    
+    public String getObsrvtnBodySiteCdgDsply() {
+        return this.obsrvtnBodySiteCdgDsply;
+    }
+    
+    public void setObsrvtnBodySiteCdgDsply(String obsrvtnBodySiteCdgDsply) {
+        this.obsrvtnBodySiteCdgDsply = obsrvtnBodySiteCdgDsply;
+    }
+    
+    
+    
+    public String getObsrvtnBodySiteCdgSys() {
+        return this.obsrvtnBodySiteCdgSys;
+    }
+    
+    public void setObsrvtnBodySiteCdgSys(String obsrvtnBodySiteCdgSys) {
+        this.obsrvtnBodySiteCdgSys = obsrvtnBodySiteCdgSys;
+    }
+    
+    
+    
+    public String getObsrvtnBodySiteCdgUsrSltd() {
+        return this.obsrvtnBodySiteCdgUsrSltd;
+    }
+    
+    public void setObsrvtnBodySiteCdgUsrSltd(String obsrvtnBodySiteCdgUsrSltd) {
+        this.obsrvtnBodySiteCdgUsrSltd = obsrvtnBodySiteCdgUsrSltd;
+    }
+    
+    
+    
+    public String getObsrvtnBodySiteCdgVrsn() {
+        return this.obsrvtnBodySiteCdgVrsn;
+    }
+    
+    public void setObsrvtnBodySiteCdgVrsn(String obsrvtnBodySiteCdgVrsn) {
+        this.obsrvtnBodySiteCdgVrsn = obsrvtnBodySiteCdgVrsn;
+    }
+    
+    
+    
+    public String getObsrvtnBodySiteTxt() {
+        return this.obsrvtnBodySiteTxt;
+    }
+    
+    public void setObsrvtnBodySiteTxt(String obsrvtnBodySiteTxt) {
+        this.obsrvtnBodySiteTxt = obsrvtnBodySiteTxt;
+    }
+    
+    
+    
+    public String getObsrvtnCtgryCdgCd() {
+        return this.obsrvtnCtgryCdgCd;
+    }
+    
+    public void setObsrvtnCtgryCdgCd(String obsrvtnCtgryCdgCd) {
+        this.obsrvtnCtgryCdgCd = obsrvtnCtgryCdgCd;
+    }
+    
+    
+    
+    public String getObsrvtnCtgryCdgDsply() {
+        return this.obsrvtnCtgryCdgDsply;
+    }
+    
+    public void setObsrvtnCtgryCdgDsply(String obsrvtnCtgryCdgDsply) {
+        this.obsrvtnCtgryCdgDsply = obsrvtnCtgryCdgDsply;
+    }
+    
+    
+    
+    public String getObsrvtnCtgryCdgSys() {
+        return this.obsrvtnCtgryCdgSys;
+    }
+    
+    public void setObsrvtnCtgryCdgSys(String obsrvtnCtgryCdgSys) {
+        this.obsrvtnCtgryCdgSys = obsrvtnCtgryCdgSys;
+    }
+    
+    
+    
+    public String getObsrvtnCtgryCdgUsrSltd() {
+        return this.obsrvtnCtgryCdgUsrSltd;
+    }
+    
+    public void setObsrvtnCtgryCdgUsrSltd(String obsrvtnCtgryCdgUsrSltd) {
+        this.obsrvtnCtgryCdgUsrSltd = obsrvtnCtgryCdgUsrSltd;
+    }
+    
+    
+    
+    public String getObsrvtnCtgryCdgVrsn() {
+        return this.obsrvtnCtgryCdgVrsn;
+    }
+    
+    public void setObsrvtnCtgryCdgVrsn(String obsrvtnCtgryCdgVrsn) {
+        this.obsrvtnCtgryCdgVrsn = obsrvtnCtgryCdgVrsn;
+    }
+    
+    
+    
+    public String getObsrvtnCtgryTxt() {
+        return this.obsrvtnCtgryTxt;
+    }
+    
+    public void setObsrvtnCtgryTxt(String obsrvtnCtgryTxt) {
+        this.obsrvtnCtgryTxt = obsrvtnCtgryTxt;
+    }
+    
+    
+    
+    public String getObsrvtnCdCdgCd() {
+        return this.obsrvtnCdCdgCd;
+    }
+    
+    public void setObsrvtnCdCdgCd(String obsrvtnCdCdgCd) {
+        this.obsrvtnCdCdgCd = obsrvtnCdCdgCd;
+    }
+    
+    
+    
+    public String getObsrvtnCdCdgDsply() {
+        return this.obsrvtnCdCdgDsply;
+    }
+    
+    public void setObsrvtnCdCdgDsply(String obsrvtnCdCdgDsply) {
+        this.obsrvtnCdCdgDsply = obsrvtnCdCdgDsply;
+    }
+    
+    
+    
+    public String getObsrvtnCdCdgSys() {
+        return this.obsrvtnCdCdgSys;
+    }
+    
+    public void setObsrvtnCdCdgSys(String obsrvtnCdCdgSys) {
+        this.obsrvtnCdCdgSys = obsrvtnCdCdgSys;
+    }
+    
+    
+    
+    public String getObsrvtnCdCdgUsrSltd() {
+        return this.obsrvtnCdCdgUsrSltd;
+    }
+    
+    public void setObsrvtnCdCdgUsrSltd(String obsrvtnCdCdgUsrSltd) {
+        this.obsrvtnCdCdgUsrSltd = obsrvtnCdCdgUsrSltd;
+    }
+    
+    
+    
+    public String getObsrvtnCdCdgVrsn() {
+        return this.obsrvtnCdCdgVrsn;
+    }
+    
+    public void setObsrvtnCdCdgVrsn(String obsrvtnCdCdgVrsn) {
+        this.obsrvtnCdCdgVrsn = obsrvtnCdCdgVrsn;
+    }
+    
+    
+    
+    public String getObsrvtnCdTxt() {
+        return this.obsrvtnCdTxt;
+    }
+    
+    public void setObsrvtnCdTxt(String obsrvtnCdTxt) {
+        this.obsrvtnCdTxt = obsrvtnCdTxt;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntCdCdgCd() {
+        return this.obsrvtnCmpntCdCdgCd;
+    }
+    
+    public void setObsrvtnCmpntCdCdgCd(String obsrvtnCmpntCdCdgCd) {
+        this.obsrvtnCmpntCdCdgCd = obsrvtnCmpntCdCdgCd;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntCdCdgDsply() {
+        return this.obsrvtnCmpntCdCdgDsply;
+    }
+    
+    public void setObsrvtnCmpntCdCdgDsply(String obsrvtnCmpntCdCdgDsply) {
+        this.obsrvtnCmpntCdCdgDsply = obsrvtnCmpntCdCdgDsply;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntCdCdgSys() {
+        return this.obsrvtnCmpntCdCdgSys;
+    }
+    
+    public void setObsrvtnCmpntCdCdgSys(String obsrvtnCmpntCdCdgSys) {
+        this.obsrvtnCmpntCdCdgSys = obsrvtnCmpntCdCdgSys;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntCdCdgUsrSltd() {
+        return this.obsrvtnCmpntCdCdgUsrSltd;
+    }
+    
+    public void setObsrvtnCmpntCdCdgUsrSltd(String obsrvtnCmpntCdCdgUsrSltd) {
+        this.obsrvtnCmpntCdCdgUsrSltd = obsrvtnCmpntCdCdgUsrSltd;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntCdCdgVrsn() {
+        return this.obsrvtnCmpntCdCdgVrsn;
+    }
+    
+    public void setObsrvtnCmpntCdCdgVrsn(String obsrvtnCmpntCdCdgVrsn) {
+        this.obsrvtnCmpntCdCdgVrsn = obsrvtnCmpntCdCdgVrsn;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntCdTxt() {
+        return this.obsrvtnCmpntCdTxt;
+    }
+    
+    public void setObsrvtnCmpntCdTxt(String obsrvtnCmpntCdTxt) {
+        this.obsrvtnCmpntCdTxt = obsrvtnCmpntCdTxt;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntDataAbsentRsnCdgCd() {
+        return this.obsrvtnCmpntDataAbsentRsnCdgCd;
+    }
+    
+    public void setObsrvtnCmpntDataAbsentRsnCdgCd(String obsrvtnCmpntDataAbsentRsnCdgCd) {
+        this.obsrvtnCmpntDataAbsentRsnCdgCd = obsrvtnCmpntDataAbsentRsnCdgCd;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntDataAbsentRsnCdgDsply() {
+        return this.obsrvtnCmpntDataAbsentRsnCdgDsply;
+    }
+    
+    public void setObsrvtnCmpntDataAbsentRsnCdgDsply(String obsrvtnCmpntDataAbsentRsnCdgDsply) {
+        this.obsrvtnCmpntDataAbsentRsnCdgDsply = obsrvtnCmpntDataAbsentRsnCdgDsply;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntDataAbsentRsnCdgSys() {
+        return this.obsrvtnCmpntDataAbsentRsnCdgSys;
+    }
+    
+    public void setObsrvtnCmpntDataAbsentRsnCdgSys(String obsrvtnCmpntDataAbsentRsnCdgSys) {
+        this.obsrvtnCmpntDataAbsentRsnCdgSys = obsrvtnCmpntDataAbsentRsnCdgSys;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntDataAbsentRsnCdgUsrSltd() {
+        return this.obsrvtnCmpntDataAbsentRsnCdgUsrSltd;
+    }
+    
+    public void setObsrvtnCmpntDataAbsentRsnCdgUsrSltd(String obsrvtnCmpntDataAbsentRsnCdgUsrSltd) {
+        this.obsrvtnCmpntDataAbsentRsnCdgUsrSltd = obsrvtnCmpntDataAbsentRsnCdgUsrSltd;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntDataAbsentRsnCdgVrsn() {
+        return this.obsrvtnCmpntDataAbsentRsnCdgVrsn;
+    }
+    
+    public void setObsrvtnCmpntDataAbsentRsnCdgVrsn(String obsrvtnCmpntDataAbsentRsnCdgVrsn) {
+        this.obsrvtnCmpntDataAbsentRsnCdgVrsn = obsrvtnCmpntDataAbsentRsnCdgVrsn;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntDataAbsentRsnTxt() {
+        return this.obsrvtnCmpntDataAbsentRsnTxt;
+    }
+    
+    public void setObsrvtnCmpntDataAbsentRsnTxt(String obsrvtnCmpntDataAbsentRsnTxt) {
+        this.obsrvtnCmpntDataAbsentRsnTxt = obsrvtnCmpntDataAbsentRsnTxt;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntInterpretationCdgCd() {
+        return this.obsrvtnCmpntInterpretationCdgCd;
+    }
+    
+    public void setObsrvtnCmpntInterpretationCdgCd(String obsrvtnCmpntInterpretationCdgCd) {
+        this.obsrvtnCmpntInterpretationCdgCd = obsrvtnCmpntInterpretationCdgCd;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntInterpretationCdgDsply() {
+        return this.obsrvtnCmpntInterpretationCdgDsply;
+    }
+    
+    public void setObsrvtnCmpntInterpretationCdgDsply(String obsrvtnCmpntInterpretationCdgDsply) {
+        this.obsrvtnCmpntInterpretationCdgDsply = obsrvtnCmpntInterpretationCdgDsply;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntInterpretationCdgSys() {
+        return this.obsrvtnCmpntInterpretationCdgSys;
+    }
+    
+    public void setObsrvtnCmpntInterpretationCdgSys(String obsrvtnCmpntInterpretationCdgSys) {
+        this.obsrvtnCmpntInterpretationCdgSys = obsrvtnCmpntInterpretationCdgSys;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntInterpretationCdgUsrSltd() {
+        return this.obsrvtnCmpntInterpretationCdgUsrSltd;
+    }
+    
+    public void setObsrvtnCmpntInterpretationCdgUsrSltd(String obsrvtnCmpntInterpretationCdgUsrSltd) {
+        this.obsrvtnCmpntInterpretationCdgUsrSltd = obsrvtnCmpntInterpretationCdgUsrSltd;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntInterpretationCdgVrsn() {
+        return this.obsrvtnCmpntInterpretationCdgVrsn;
+    }
+    
+    public void setObsrvtnCmpntInterpretationCdgVrsn(String obsrvtnCmpntInterpretationCdgVrsn) {
+        this.obsrvtnCmpntInterpretationCdgVrsn = obsrvtnCmpntInterpretationCdgVrsn;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntInterpretationTxt() {
+        return this.obsrvtnCmpntInterpretationTxt;
+    }
+    
+    public void setObsrvtnCmpntInterpretationTxt(String obsrvtnCmpntInterpretationTxt) {
+        this.obsrvtnCmpntInterpretationTxt = obsrvtnCmpntInterpretationTxt;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntRfrncRngAgeHiCd() {
+        return this.obsrvtnCmpntRfrncRngAgeHiCd;
+    }
+    
+    public void setObsrvtnCmpntRfrncRngAgeHiCd(String obsrvtnCmpntRfrncRngAgeHiCd) {
+        this.obsrvtnCmpntRfrncRngAgeHiCd = obsrvtnCmpntRfrncRngAgeHiCd;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntRfrncRngAgeHiCmprtr() {
+        return this.obsrvtnCmpntRfrncRngAgeHiCmprtr;
+    }
+    
+    public void setObsrvtnCmpntRfrncRngAgeHiCmprtr(String obsrvtnCmpntRfrncRngAgeHiCmprtr) {
+        this.obsrvtnCmpntRfrncRngAgeHiCmprtr = obsrvtnCmpntRfrncRngAgeHiCmprtr;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntRfrncRngAgeHiSys() {
+        return this.obsrvtnCmpntRfrncRngAgeHiSys;
+    }
+    
+    public void setObsrvtnCmpntRfrncRngAgeHiSys(String obsrvtnCmpntRfrncRngAgeHiSys) {
+        this.obsrvtnCmpntRfrncRngAgeHiSys = obsrvtnCmpntRfrncRngAgeHiSys;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntRfrncRngAgeHiUnt() {
+        return this.obsrvtnCmpntRfrncRngAgeHiUnt;
+    }
+    
+    public void setObsrvtnCmpntRfrncRngAgeHiUnt(String obsrvtnCmpntRfrncRngAgeHiUnt) {
+        this.obsrvtnCmpntRfrncRngAgeHiUnt = obsrvtnCmpntRfrncRngAgeHiUnt;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntRfrncRngAgeHiVl() {
+        return this.obsrvtnCmpntRfrncRngAgeHiVl;
+    }
+    
+    public void setObsrvtnCmpntRfrncRngAgeHiVl(String obsrvtnCmpntRfrncRngAgeHiVl) {
+        this.obsrvtnCmpntRfrncRngAgeHiVl = obsrvtnCmpntRfrncRngAgeHiVl;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntRfrncRngAgeLwCd() {
+        return this.obsrvtnCmpntRfrncRngAgeLwCd;
+    }
+    
+    public void setObsrvtnCmpntRfrncRngAgeLwCd(String obsrvtnCmpntRfrncRngAgeLwCd) {
+        this.obsrvtnCmpntRfrncRngAgeLwCd = obsrvtnCmpntRfrncRngAgeLwCd;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntRfrncRngAgeLwCmprtr() {
+        return this.obsrvtnCmpntRfrncRngAgeLwCmprtr;
+    }
+    
+    public void setObsrvtnCmpntRfrncRngAgeLwCmprtr(String obsrvtnCmpntRfrncRngAgeLwCmprtr) {
+        this.obsrvtnCmpntRfrncRngAgeLwCmprtr = obsrvtnCmpntRfrncRngAgeLwCmprtr;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntRfrncRngAgeLwSys() {
+        return this.obsrvtnCmpntRfrncRngAgeLwSys;
+    }
+    
+    public void setObsrvtnCmpntRfrncRngAgeLwSys(String obsrvtnCmpntRfrncRngAgeLwSys) {
+        this.obsrvtnCmpntRfrncRngAgeLwSys = obsrvtnCmpntRfrncRngAgeLwSys;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntRfrncRngAgeLwUnt() {
+        return this.obsrvtnCmpntRfrncRngAgeLwUnt;
+    }
+    
+    public void setObsrvtnCmpntRfrncRngAgeLwUnt(String obsrvtnCmpntRfrncRngAgeLwUnt) {
+        this.obsrvtnCmpntRfrncRngAgeLwUnt = obsrvtnCmpntRfrncRngAgeLwUnt;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntRfrncRngAgeLwVl() {
+        return this.obsrvtnCmpntRfrncRngAgeLwVl;
+    }
+    
+    public void setObsrvtnCmpntRfrncRngAgeLwVl(String obsrvtnCmpntRfrncRngAgeLwVl) {
+        this.obsrvtnCmpntRfrncRngAgeLwVl = obsrvtnCmpntRfrncRngAgeLwVl;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntRfrncRngAppliesToCdgCd() {
+        return this.obsrvtnCmpntRfrncRngAppliesToCdgCd;
+    }
+    
+    public void setObsrvtnCmpntRfrncRngAppliesToCdgCd(String obsrvtnCmpntRfrncRngAppliesToCdgCd) {
+        this.obsrvtnCmpntRfrncRngAppliesToCdgCd = obsrvtnCmpntRfrncRngAppliesToCdgCd;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntRfrncRngAppliesToCdgDsply() {
+        return this.obsrvtnCmpntRfrncRngAppliesToCdgDsply;
+    }
+    
+    public void setObsrvtnCmpntRfrncRngAppliesToCdgDsply(String obsrvtnCmpntRfrncRngAppliesToCdgDsply) {
+        this.obsrvtnCmpntRfrncRngAppliesToCdgDsply = obsrvtnCmpntRfrncRngAppliesToCdgDsply;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntRfrncRngAppliesToCdgSys() {
+        return this.obsrvtnCmpntRfrncRngAppliesToCdgSys;
+    }
+    
+    public void setObsrvtnCmpntRfrncRngAppliesToCdgSys(String obsrvtnCmpntRfrncRngAppliesToCdgSys) {
+        this.obsrvtnCmpntRfrncRngAppliesToCdgSys = obsrvtnCmpntRfrncRngAppliesToCdgSys;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntRfrncRngAppliesToCdgUsrSltd() {
+        return this.obsrvtnCmpntRfrncRngAppliesToCdgUsrSltd;
+    }
+    
+    public void setObsrvtnCmpntRfrncRngAppliesToCdgUsrSltd(String obsrvtnCmpntRfrncRngAppliesToCdgUsrSltd) {
+        this.obsrvtnCmpntRfrncRngAppliesToCdgUsrSltd = obsrvtnCmpntRfrncRngAppliesToCdgUsrSltd;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntRfrncRngAppliesToCdgVrsn() {
+        return this.obsrvtnCmpntRfrncRngAppliesToCdgVrsn;
+    }
+    
+    public void setObsrvtnCmpntRfrncRngAppliesToCdgVrsn(String obsrvtnCmpntRfrncRngAppliesToCdgVrsn) {
+        this.obsrvtnCmpntRfrncRngAppliesToCdgVrsn = obsrvtnCmpntRfrncRngAppliesToCdgVrsn;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntRfrncRngAppliesToTxt() {
+        return this.obsrvtnCmpntRfrncRngAppliesToTxt;
+    }
+    
+    public void setObsrvtnCmpntRfrncRngAppliesToTxt(String obsrvtnCmpntRfrncRngAppliesToTxt) {
+        this.obsrvtnCmpntRfrncRngAppliesToTxt = obsrvtnCmpntRfrncRngAppliesToTxt;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntRfrncRngHiCd() {
+        return this.obsrvtnCmpntRfrncRngHiCd;
+    }
+    
+    public void setObsrvtnCmpntRfrncRngHiCd(String obsrvtnCmpntRfrncRngHiCd) {
+        this.obsrvtnCmpntRfrncRngHiCd = obsrvtnCmpntRfrncRngHiCd;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntRfrncRngHiCmprtr() {
+        return this.obsrvtnCmpntRfrncRngHiCmprtr;
+    }
+    
+    public void setObsrvtnCmpntRfrncRngHiCmprtr(String obsrvtnCmpntRfrncRngHiCmprtr) {
+        this.obsrvtnCmpntRfrncRngHiCmprtr = obsrvtnCmpntRfrncRngHiCmprtr;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntRfrncRngHiSys() {
+        return this.obsrvtnCmpntRfrncRngHiSys;
+    }
+    
+    public void setObsrvtnCmpntRfrncRngHiSys(String obsrvtnCmpntRfrncRngHiSys) {
+        this.obsrvtnCmpntRfrncRngHiSys = obsrvtnCmpntRfrncRngHiSys;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntRfrncRngHiUnt() {
+        return this.obsrvtnCmpntRfrncRngHiUnt;
+    }
+    
+    public void setObsrvtnCmpntRfrncRngHiUnt(String obsrvtnCmpntRfrncRngHiUnt) {
+        this.obsrvtnCmpntRfrncRngHiUnt = obsrvtnCmpntRfrncRngHiUnt;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntRfrncRngHiVl() {
+        return this.obsrvtnCmpntRfrncRngHiVl;
+    }
+    
+    public void setObsrvtnCmpntRfrncRngHiVl(String obsrvtnCmpntRfrncRngHiVl) {
+        this.obsrvtnCmpntRfrncRngHiVl = obsrvtnCmpntRfrncRngHiVl;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntRfrncRngLwCd() {
+        return this.obsrvtnCmpntRfrncRngLwCd;
+    }
+    
+    public void setObsrvtnCmpntRfrncRngLwCd(String obsrvtnCmpntRfrncRngLwCd) {
+        this.obsrvtnCmpntRfrncRngLwCd = obsrvtnCmpntRfrncRngLwCd;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntRfrncRngLwCmprtr() {
+        return this.obsrvtnCmpntRfrncRngLwCmprtr;
+    }
+    
+    public void setObsrvtnCmpntRfrncRngLwCmprtr(String obsrvtnCmpntRfrncRngLwCmprtr) {
+        this.obsrvtnCmpntRfrncRngLwCmprtr = obsrvtnCmpntRfrncRngLwCmprtr;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntRfrncRngLwSys() {
+        return this.obsrvtnCmpntRfrncRngLwSys;
+    }
+    
+    public void setObsrvtnCmpntRfrncRngLwSys(String obsrvtnCmpntRfrncRngLwSys) {
+        this.obsrvtnCmpntRfrncRngLwSys = obsrvtnCmpntRfrncRngLwSys;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntRfrncRngLwUnt() {
+        return this.obsrvtnCmpntRfrncRngLwUnt;
+    }
+    
+    public void setObsrvtnCmpntRfrncRngLwUnt(String obsrvtnCmpntRfrncRngLwUnt) {
+        this.obsrvtnCmpntRfrncRngLwUnt = obsrvtnCmpntRfrncRngLwUnt;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntRfrncRngLwVl() {
+        return this.obsrvtnCmpntRfrncRngLwVl;
+    }
+    
+    public void setObsrvtnCmpntRfrncRngLwVl(String obsrvtnCmpntRfrncRngLwVl) {
+        this.obsrvtnCmpntRfrncRngLwVl = obsrvtnCmpntRfrncRngLwVl;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntRfrncRngTxt() {
+        return this.obsrvtnCmpntRfrncRngTxt;
+    }
+    
+    public void setObsrvtnCmpntRfrncRngTxt(String obsrvtnCmpntRfrncRngTxt) {
+        this.obsrvtnCmpntRfrncRngTxt = obsrvtnCmpntRfrncRngTxt;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntRfrncRngTypCdgCd() {
+        return this.obsrvtnCmpntRfrncRngTypCdgCd;
+    }
+    
+    public void setObsrvtnCmpntRfrncRngTypCdgCd(String obsrvtnCmpntRfrncRngTypCdgCd) {
+        this.obsrvtnCmpntRfrncRngTypCdgCd = obsrvtnCmpntRfrncRngTypCdgCd;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntRfrncRngTypCdgDsply() {
+        return this.obsrvtnCmpntRfrncRngTypCdgDsply;
+    }
+    
+    public void setObsrvtnCmpntRfrncRngTypCdgDsply(String obsrvtnCmpntRfrncRngTypCdgDsply) {
+        this.obsrvtnCmpntRfrncRngTypCdgDsply = obsrvtnCmpntRfrncRngTypCdgDsply;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntRfrncRngTypCdgSys() {
+        return this.obsrvtnCmpntRfrncRngTypCdgSys;
+    }
+    
+    public void setObsrvtnCmpntRfrncRngTypCdgSys(String obsrvtnCmpntRfrncRngTypCdgSys) {
+        this.obsrvtnCmpntRfrncRngTypCdgSys = obsrvtnCmpntRfrncRngTypCdgSys;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntRfrncRngTypCdgUsrSltd() {
+        return this.obsrvtnCmpntRfrncRngTypCdgUsrSltd;
+    }
+    
+    public void setObsrvtnCmpntRfrncRngTypCdgUsrSltd(String obsrvtnCmpntRfrncRngTypCdgUsrSltd) {
+        this.obsrvtnCmpntRfrncRngTypCdgUsrSltd = obsrvtnCmpntRfrncRngTypCdgUsrSltd;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntRfrncRngTypCdgVrsn() {
+        return this.obsrvtnCmpntRfrncRngTypCdgVrsn;
+    }
+    
+    public void setObsrvtnCmpntRfrncRngTypCdgVrsn(String obsrvtnCmpntRfrncRngTypCdgVrsn) {
+        this.obsrvtnCmpntRfrncRngTypCdgVrsn = obsrvtnCmpntRfrncRngTypCdgVrsn;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntRfrncRngTypTxt() {
+        return this.obsrvtnCmpntRfrncRngTypTxt;
+    }
+    
+    public void setObsrvtnCmpntRfrncRngTypTxt(String obsrvtnCmpntRfrncRngTypTxt) {
+        this.obsrvtnCmpntRfrncRngTypTxt = obsrvtnCmpntRfrncRngTypTxt;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntVlBooleanTyp() {
+        return this.obsrvtnCmpntVlBooleanTyp;
+    }
+    
+    public void setObsrvtnCmpntVlBooleanTyp(String obsrvtnCmpntVlBooleanTyp) {
+        this.obsrvtnCmpntVlBooleanTyp = obsrvtnCmpntVlBooleanTyp;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntVlCdbleCncptCdgCd() {
+        return this.obsrvtnCmpntVlCdbleCncptCdgCd;
+    }
+    
+    public void setObsrvtnCmpntVlCdbleCncptCdgCd(String obsrvtnCmpntVlCdbleCncptCdgCd) {
+        this.obsrvtnCmpntVlCdbleCncptCdgCd = obsrvtnCmpntVlCdbleCncptCdgCd;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntVlCdbleCncptCdgDsply() {
+        return this.obsrvtnCmpntVlCdbleCncptCdgDsply;
+    }
+    
+    public void setObsrvtnCmpntVlCdbleCncptCdgDsply(String obsrvtnCmpntVlCdbleCncptCdgDsply) {
+        this.obsrvtnCmpntVlCdbleCncptCdgDsply = obsrvtnCmpntVlCdbleCncptCdgDsply;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntVlCdbleCncptCdgSys() {
+        return this.obsrvtnCmpntVlCdbleCncptCdgSys;
+    }
+    
+    public void setObsrvtnCmpntVlCdbleCncptCdgSys(String obsrvtnCmpntVlCdbleCncptCdgSys) {
+        this.obsrvtnCmpntVlCdbleCncptCdgSys = obsrvtnCmpntVlCdbleCncptCdgSys;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntVlCdbleCncptCdgUsrSltd() {
+        return this.obsrvtnCmpntVlCdbleCncptCdgUsrSltd;
+    }
+    
+    public void setObsrvtnCmpntVlCdbleCncptCdgUsrSltd(String obsrvtnCmpntVlCdbleCncptCdgUsrSltd) {
+        this.obsrvtnCmpntVlCdbleCncptCdgUsrSltd = obsrvtnCmpntVlCdbleCncptCdgUsrSltd;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntVlCdbleCncptCdgVrsn() {
+        return this.obsrvtnCmpntVlCdbleCncptCdgVrsn;
+    }
+    
+    public void setObsrvtnCmpntVlCdbleCncptCdgVrsn(String obsrvtnCmpntVlCdbleCncptCdgVrsn) {
+        this.obsrvtnCmpntVlCdbleCncptCdgVrsn = obsrvtnCmpntVlCdbleCncptCdgVrsn;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntVlCdbleCncptTxt() {
+        return this.obsrvtnCmpntVlCdbleCncptTxt;
+    }
+    
+    public void setObsrvtnCmpntVlCdbleCncptTxt(String obsrvtnCmpntVlCdbleCncptTxt) {
+        this.obsrvtnCmpntVlCdbleCncptTxt = obsrvtnCmpntVlCdbleCncptTxt;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntVlDtTimeTyp() {
+        return this.obsrvtnCmpntVlDtTimeTyp;
+    }
+    
+    public void setObsrvtnCmpntVlDtTimeTyp(String obsrvtnCmpntVlDtTimeTyp) {
+        this.obsrvtnCmpntVlDtTimeTyp = obsrvtnCmpntVlDtTimeTyp;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntVlIntegerTyp() {
+        return this.obsrvtnCmpntVlIntegerTyp;
+    }
+    
+    public void setObsrvtnCmpntVlIntegerTyp(String obsrvtnCmpntVlIntegerTyp) {
+        this.obsrvtnCmpntVlIntegerTyp = obsrvtnCmpntVlIntegerTyp;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntVlPrdEnd() {
+        return this.obsrvtnCmpntVlPrdEnd;
+    }
+    
+    public void setObsrvtnCmpntVlPrdEnd(String obsrvtnCmpntVlPrdEnd) {
+        this.obsrvtnCmpntVlPrdEnd = obsrvtnCmpntVlPrdEnd;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntVlPrdStrt() {
+        return this.obsrvtnCmpntVlPrdStrt;
+    }
+    
+    public void setObsrvtnCmpntVlPrdStrt(String obsrvtnCmpntVlPrdStrt) {
+        this.obsrvtnCmpntVlPrdStrt = obsrvtnCmpntVlPrdStrt;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntVlQntyCd() {
+        return this.obsrvtnCmpntVlQntyCd;
+    }
+    
+    public void setObsrvtnCmpntVlQntyCd(String obsrvtnCmpntVlQntyCd) {
+        this.obsrvtnCmpntVlQntyCd = obsrvtnCmpntVlQntyCd;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntVlQntyCmprtr() {
+        return this.obsrvtnCmpntVlQntyCmprtr;
+    }
+    
+    public void setObsrvtnCmpntVlQntyCmprtr(String obsrvtnCmpntVlQntyCmprtr) {
+        this.obsrvtnCmpntVlQntyCmprtr = obsrvtnCmpntVlQntyCmprtr;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntVlQntySys() {
+        return this.obsrvtnCmpntVlQntySys;
+    }
+    
+    public void setObsrvtnCmpntVlQntySys(String obsrvtnCmpntVlQntySys) {
+        this.obsrvtnCmpntVlQntySys = obsrvtnCmpntVlQntySys;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntVlQntyUnt() {
+        return this.obsrvtnCmpntVlQntyUnt;
+    }
+    
+    public void setObsrvtnCmpntVlQntyUnt(String obsrvtnCmpntVlQntyUnt) {
+        this.obsrvtnCmpntVlQntyUnt = obsrvtnCmpntVlQntyUnt;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntVlQntyVl() {
+        return this.obsrvtnCmpntVlQntyVl;
+    }
+    
+    public void setObsrvtnCmpntVlQntyVl(String obsrvtnCmpntVlQntyVl) {
+        this.obsrvtnCmpntVlQntyVl = obsrvtnCmpntVlQntyVl;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntVlRngHiCd() {
+        return this.obsrvtnCmpntVlRngHiCd;
+    }
+    
+    public void setObsrvtnCmpntVlRngHiCd(String obsrvtnCmpntVlRngHiCd) {
+        this.obsrvtnCmpntVlRngHiCd = obsrvtnCmpntVlRngHiCd;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntVlRngHiCmprtr() {
+        return this.obsrvtnCmpntVlRngHiCmprtr;
+    }
+    
+    public void setObsrvtnCmpntVlRngHiCmprtr(String obsrvtnCmpntVlRngHiCmprtr) {
+        this.obsrvtnCmpntVlRngHiCmprtr = obsrvtnCmpntVlRngHiCmprtr;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntVlRngHiSys() {
+        return this.obsrvtnCmpntVlRngHiSys;
+    }
+    
+    public void setObsrvtnCmpntVlRngHiSys(String obsrvtnCmpntVlRngHiSys) {
+        this.obsrvtnCmpntVlRngHiSys = obsrvtnCmpntVlRngHiSys;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntVlRngHiUnt() {
+        return this.obsrvtnCmpntVlRngHiUnt;
+    }
+    
+    public void setObsrvtnCmpntVlRngHiUnt(String obsrvtnCmpntVlRngHiUnt) {
+        this.obsrvtnCmpntVlRngHiUnt = obsrvtnCmpntVlRngHiUnt;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntVlRngHiVl() {
+        return this.obsrvtnCmpntVlRngHiVl;
+    }
+    
+    public void setObsrvtnCmpntVlRngHiVl(String obsrvtnCmpntVlRngHiVl) {
+        this.obsrvtnCmpntVlRngHiVl = obsrvtnCmpntVlRngHiVl;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntVlRngLwCd() {
+        return this.obsrvtnCmpntVlRngLwCd;
+    }
+    
+    public void setObsrvtnCmpntVlRngLwCd(String obsrvtnCmpntVlRngLwCd) {
+        this.obsrvtnCmpntVlRngLwCd = obsrvtnCmpntVlRngLwCd;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntVlRngLwCmprtr() {
+        return this.obsrvtnCmpntVlRngLwCmprtr;
+    }
+    
+    public void setObsrvtnCmpntVlRngLwCmprtr(String obsrvtnCmpntVlRngLwCmprtr) {
+        this.obsrvtnCmpntVlRngLwCmprtr = obsrvtnCmpntVlRngLwCmprtr;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntVlRngLwSys() {
+        return this.obsrvtnCmpntVlRngLwSys;
+    }
+    
+    public void setObsrvtnCmpntVlRngLwSys(String obsrvtnCmpntVlRngLwSys) {
+        this.obsrvtnCmpntVlRngLwSys = obsrvtnCmpntVlRngLwSys;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntVlRngLwUnt() {
+        return this.obsrvtnCmpntVlRngLwUnt;
+    }
+    
+    public void setObsrvtnCmpntVlRngLwUnt(String obsrvtnCmpntVlRngLwUnt) {
+        this.obsrvtnCmpntVlRngLwUnt = obsrvtnCmpntVlRngLwUnt;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntVlRngLwVl() {
+        return this.obsrvtnCmpntVlRngLwVl;
+    }
+    
+    public void setObsrvtnCmpntVlRngLwVl(String obsrvtnCmpntVlRngLwVl) {
+        this.obsrvtnCmpntVlRngLwVl = obsrvtnCmpntVlRngLwVl;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntVlRtioDnmntrCd() {
+        return this.obsrvtnCmpntVlRtioDnmntrCd;
+    }
+    
+    public void setObsrvtnCmpntVlRtioDnmntrCd(String obsrvtnCmpntVlRtioDnmntrCd) {
+        this.obsrvtnCmpntVlRtioDnmntrCd = obsrvtnCmpntVlRtioDnmntrCd;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntVlRtioDnmntrCmprtr() {
+        return this.obsrvtnCmpntVlRtioDnmntrCmprtr;
+    }
+    
+    public void setObsrvtnCmpntVlRtioDnmntrCmprtr(String obsrvtnCmpntVlRtioDnmntrCmprtr) {
+        this.obsrvtnCmpntVlRtioDnmntrCmprtr = obsrvtnCmpntVlRtioDnmntrCmprtr;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntVlRtioDnmntrSys() {
+        return this.obsrvtnCmpntVlRtioDnmntrSys;
+    }
+    
+    public void setObsrvtnCmpntVlRtioDnmntrSys(String obsrvtnCmpntVlRtioDnmntrSys) {
+        this.obsrvtnCmpntVlRtioDnmntrSys = obsrvtnCmpntVlRtioDnmntrSys;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntVlRtioDnmntrUnt() {
+        return this.obsrvtnCmpntVlRtioDnmntrUnt;
+    }
+    
+    public void setObsrvtnCmpntVlRtioDnmntrUnt(String obsrvtnCmpntVlRtioDnmntrUnt) {
+        this.obsrvtnCmpntVlRtioDnmntrUnt = obsrvtnCmpntVlRtioDnmntrUnt;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntVlRtioDnmntrVl() {
+        return this.obsrvtnCmpntVlRtioDnmntrVl;
+    }
+    
+    public void setObsrvtnCmpntVlRtioDnmntrVl(String obsrvtnCmpntVlRtioDnmntrVl) {
+        this.obsrvtnCmpntVlRtioDnmntrVl = obsrvtnCmpntVlRtioDnmntrVl;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntVlRtioNmrtrCd() {
+        return this.obsrvtnCmpntVlRtioNmrtrCd;
+    }
+    
+    public void setObsrvtnCmpntVlRtioNmrtrCd(String obsrvtnCmpntVlRtioNmrtrCd) {
+        this.obsrvtnCmpntVlRtioNmrtrCd = obsrvtnCmpntVlRtioNmrtrCd;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntVlRtioNmrtrCmprtr() {
+        return this.obsrvtnCmpntVlRtioNmrtrCmprtr;
+    }
+    
+    public void setObsrvtnCmpntVlRtioNmrtrCmprtr(String obsrvtnCmpntVlRtioNmrtrCmprtr) {
+        this.obsrvtnCmpntVlRtioNmrtrCmprtr = obsrvtnCmpntVlRtioNmrtrCmprtr;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntVlRtioNmrtrSys() {
+        return this.obsrvtnCmpntVlRtioNmrtrSys;
+    }
+    
+    public void setObsrvtnCmpntVlRtioNmrtrSys(String obsrvtnCmpntVlRtioNmrtrSys) {
+        this.obsrvtnCmpntVlRtioNmrtrSys = obsrvtnCmpntVlRtioNmrtrSys;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntVlRtioNmrtrUnt() {
+        return this.obsrvtnCmpntVlRtioNmrtrUnt;
+    }
+    
+    public void setObsrvtnCmpntVlRtioNmrtrUnt(String obsrvtnCmpntVlRtioNmrtrUnt) {
+        this.obsrvtnCmpntVlRtioNmrtrUnt = obsrvtnCmpntVlRtioNmrtrUnt;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntVlRtioNmrtrVl() {
+        return this.obsrvtnCmpntVlRtioNmrtrVl;
+    }
+    
+    public void setObsrvtnCmpntVlRtioNmrtrVl(String obsrvtnCmpntVlRtioNmrtrVl) {
+        this.obsrvtnCmpntVlRtioNmrtrVl = obsrvtnCmpntVlRtioNmrtrVl;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntVlSampledDataData() {
+        return this.obsrvtnCmpntVlSampledDataData;
+    }
+    
+    public void setObsrvtnCmpntVlSampledDataData(String obsrvtnCmpntVlSampledDataData) {
+        this.obsrvtnCmpntVlSampledDataData = obsrvtnCmpntVlSampledDataData;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntVlSampledDataDimensions() {
+        return this.obsrvtnCmpntVlSampledDataDimensions;
+    }
+    
+    public void setObsrvtnCmpntVlSampledDataDimensions(String obsrvtnCmpntVlSampledDataDimensions) {
+        this.obsrvtnCmpntVlSampledDataDimensions = obsrvtnCmpntVlSampledDataDimensions;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntVlSampledDataFactor() {
+        return this.obsrvtnCmpntVlSampledDataFactor;
+    }
+    
+    public void setObsrvtnCmpntVlSampledDataFactor(String obsrvtnCmpntVlSampledDataFactor) {
+        this.obsrvtnCmpntVlSampledDataFactor = obsrvtnCmpntVlSampledDataFactor;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntVlSampledDataLwerLmt() {
+        return this.obsrvtnCmpntVlSampledDataLwerLmt;
+    }
+    
+    public void setObsrvtnCmpntVlSampledDataLwerLmt(String obsrvtnCmpntVlSampledDataLwerLmt) {
+        this.obsrvtnCmpntVlSampledDataLwerLmt = obsrvtnCmpntVlSampledDataLwerLmt;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntVlSampledDataOriginCd() {
+        return this.obsrvtnCmpntVlSampledDataOriginCd;
+    }
+    
+    public void setObsrvtnCmpntVlSampledDataOriginCd(String obsrvtnCmpntVlSampledDataOriginCd) {
+        this.obsrvtnCmpntVlSampledDataOriginCd = obsrvtnCmpntVlSampledDataOriginCd;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntVlSampledDataOriginCmprtr() {
+        return this.obsrvtnCmpntVlSampledDataOriginCmprtr;
+    }
+    
+    public void setObsrvtnCmpntVlSampledDataOriginCmprtr(String obsrvtnCmpntVlSampledDataOriginCmprtr) {
+        this.obsrvtnCmpntVlSampledDataOriginCmprtr = obsrvtnCmpntVlSampledDataOriginCmprtr;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntVlSampledDataOriginSys() {
+        return this.obsrvtnCmpntVlSampledDataOriginSys;
+    }
+    
+    public void setObsrvtnCmpntVlSampledDataOriginSys(String obsrvtnCmpntVlSampledDataOriginSys) {
+        this.obsrvtnCmpntVlSampledDataOriginSys = obsrvtnCmpntVlSampledDataOriginSys;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntVlSampledDataOriginUnt() {
+        return this.obsrvtnCmpntVlSampledDataOriginUnt;
+    }
+    
+    public void setObsrvtnCmpntVlSampledDataOriginUnt(String obsrvtnCmpntVlSampledDataOriginUnt) {
+        this.obsrvtnCmpntVlSampledDataOriginUnt = obsrvtnCmpntVlSampledDataOriginUnt;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntVlSampledDataOriginVl() {
+        return this.obsrvtnCmpntVlSampledDataOriginVl;
+    }
+    
+    public void setObsrvtnCmpntVlSampledDataOriginVl(String obsrvtnCmpntVlSampledDataOriginVl) {
+        this.obsrvtnCmpntVlSampledDataOriginVl = obsrvtnCmpntVlSampledDataOriginVl;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntVlSampledDataPrd() {
+        return this.obsrvtnCmpntVlSampledDataPrd;
+    }
+    
+    public void setObsrvtnCmpntVlSampledDataPrd(String obsrvtnCmpntVlSampledDataPrd) {
+        this.obsrvtnCmpntVlSampledDataPrd = obsrvtnCmpntVlSampledDataPrd;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntVlSampledDataUpperLmt() {
+        return this.obsrvtnCmpntVlSampledDataUpperLmt;
+    }
+    
+    public void setObsrvtnCmpntVlSampledDataUpperLmt(String obsrvtnCmpntVlSampledDataUpperLmt) {
+        this.obsrvtnCmpntVlSampledDataUpperLmt = obsrvtnCmpntVlSampledDataUpperLmt;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntVlStrgTyp() {
+        return this.obsrvtnCmpntVlStrgTyp;
+    }
+    
+    public void setObsrvtnCmpntVlStrgTyp(String obsrvtnCmpntVlStrgTyp) {
+        this.obsrvtnCmpntVlStrgTyp = obsrvtnCmpntVlStrgTyp;
+    }
+    
+    
+    
+    public String getObsrvtnCmpntVlTimeTyp() {
+        return this.obsrvtnCmpntVlTimeTyp;
+    }
+    
+    public void setObsrvtnCmpntVlTimeTyp(String obsrvtnCmpntVlTimeTyp) {
+        this.obsrvtnCmpntVlTimeTyp = obsrvtnCmpntVlTimeTyp;
+    }
+    
+    
+    
+    public String getObsrvtnDataAbsentRsnCdgCd() {
+        return this.obsrvtnDataAbsentRsnCdgCd;
+    }
+    
+    public void setObsrvtnDataAbsentRsnCdgCd(String obsrvtnDataAbsentRsnCdgCd) {
+        this.obsrvtnDataAbsentRsnCdgCd = obsrvtnDataAbsentRsnCdgCd;
+    }
+    
+    
+    
+    public String getObsrvtnDataAbsentRsnCdgDsply() {
+        return this.obsrvtnDataAbsentRsnCdgDsply;
+    }
+    
+    public void setObsrvtnDataAbsentRsnCdgDsply(String obsrvtnDataAbsentRsnCdgDsply) {
+        this.obsrvtnDataAbsentRsnCdgDsply = obsrvtnDataAbsentRsnCdgDsply;
+    }
+    
+    
+    
+    public String getObsrvtnDataAbsentRsnCdgSys() {
+        return this.obsrvtnDataAbsentRsnCdgSys;
+    }
+    
+    public void setObsrvtnDataAbsentRsnCdgSys(String obsrvtnDataAbsentRsnCdgSys) {
+        this.obsrvtnDataAbsentRsnCdgSys = obsrvtnDataAbsentRsnCdgSys;
+    }
+    
+    
+    
+    public String getObsrvtnDataAbsentRsnCdgUsrSltd() {
+        return this.obsrvtnDataAbsentRsnCdgUsrSltd;
+    }
+    
+    public void setObsrvtnDataAbsentRsnCdgUsrSltd(String obsrvtnDataAbsentRsnCdgUsrSltd) {
+        this.obsrvtnDataAbsentRsnCdgUsrSltd = obsrvtnDataAbsentRsnCdgUsrSltd;
+    }
+    
+    
+    
+    public String getObsrvtnDataAbsentRsnCdgVrsn() {
+        return this.obsrvtnDataAbsentRsnCdgVrsn;
+    }
+    
+    public void setObsrvtnDataAbsentRsnCdgVrsn(String obsrvtnDataAbsentRsnCdgVrsn) {
+        this.obsrvtnDataAbsentRsnCdgVrsn = obsrvtnDataAbsentRsnCdgVrsn;
+    }
+    
+    
+    
+    public String getObsrvtnDataAbsentRsnTxt() {
+        return this.obsrvtnDataAbsentRsnTxt;
+    }
+    
+    public void setObsrvtnDataAbsentRsnTxt(String obsrvtnDataAbsentRsnTxt) {
+        this.obsrvtnDataAbsentRsnTxt = obsrvtnDataAbsentRsnTxt;
+    }
+    
+    
+    
+    public String getObsrvtnDerivedFrom() {
+        return this.obsrvtnDerivedFrom;
+    }
+    
+    public void setObsrvtnDerivedFrom(String obsrvtnDerivedFrom) {
+        this.obsrvtnDerivedFrom = obsrvtnDerivedFrom;
+    }
+    
+    
+    
+    public String getObsrvtnDvc() {
+        return this.obsrvtnDvc;
+    }
+    
+    public void setObsrvtnDvc(String obsrvtnDvc) {
+        this.obsrvtnDvc = obsrvtnDvc;
+    }
+    
+    
+    
+    public String getObsrvtnEfctiveDtTimeTyp() {
+        return this.obsrvtnEfctiveDtTimeTyp;
+    }
+    
+    public void setObsrvtnEfctiveDtTimeTyp(String obsrvtnEfctiveDtTimeTyp) {
+        this.obsrvtnEfctiveDtTimeTyp = obsrvtnEfctiveDtTimeTyp;
+    }
+    
+    
+    
+    public String getObsrvtnEfctiveInstantTyp() {
+        return this.obsrvtnEfctiveInstantTyp;
+    }
+    
+    public void setObsrvtnEfctiveInstantTyp(String obsrvtnEfctiveInstantTyp) {
+        this.obsrvtnEfctiveInstantTyp = obsrvtnEfctiveInstantTyp;
+    }
+    
+    
+    
+    public String getObsrvtnEfctivePrdEnd() {
+        return this.obsrvtnEfctivePrdEnd;
+    }
+    
+    public void setObsrvtnEfctivePrdEnd(String obsrvtnEfctivePrdEnd) {
+        this.obsrvtnEfctivePrdEnd = obsrvtnEfctivePrdEnd;
+    }
+    
+    
+    
+    public String getObsrvtnEfctivePrdStrt() {
+        return this.obsrvtnEfctivePrdStrt;
+    }
+    
+    public void setObsrvtnEfctivePrdStrt(String obsrvtnEfctivePrdStrt) {
+        this.obsrvtnEfctivePrdStrt = obsrvtnEfctivePrdStrt;
+    }
+    
+    
+    
+    public String getObsrvtnEfctiveTmgCdCdgCd() {
+        return this.obsrvtnEfctiveTmgCdCdgCd;
+    }
+    
+    public void setObsrvtnEfctiveTmgCdCdgCd(String obsrvtnEfctiveTmgCdCdgCd) {
+        this.obsrvtnEfctiveTmgCdCdgCd = obsrvtnEfctiveTmgCdCdgCd;
+    }
+    
+    
+    
+    public String getObsrvtnEfctiveTmgCdCdgDsply() {
+        return this.obsrvtnEfctiveTmgCdCdgDsply;
+    }
+    
+    public void setObsrvtnEfctiveTmgCdCdgDsply(String obsrvtnEfctiveTmgCdCdgDsply) {
+        this.obsrvtnEfctiveTmgCdCdgDsply = obsrvtnEfctiveTmgCdCdgDsply;
+    }
+    
+    
+    
+    public String getObsrvtnEfctiveTmgCdCdgSys() {
+        return this.obsrvtnEfctiveTmgCdCdgSys;
+    }
+    
+    public void setObsrvtnEfctiveTmgCdCdgSys(String obsrvtnEfctiveTmgCdCdgSys) {
+        this.obsrvtnEfctiveTmgCdCdgSys = obsrvtnEfctiveTmgCdCdgSys;
+    }
+    
+    
+    
+    public String getObsrvtnEfctiveTmgCdCdgUsrSltd() {
+        return this.obsrvtnEfctiveTmgCdCdgUsrSltd;
+    }
+    
+    public void setObsrvtnEfctiveTmgCdCdgUsrSltd(String obsrvtnEfctiveTmgCdCdgUsrSltd) {
+        this.obsrvtnEfctiveTmgCdCdgUsrSltd = obsrvtnEfctiveTmgCdCdgUsrSltd;
+    }
+    
+    
+    
+    public String getObsrvtnEfctiveTmgCdCdgVrsn() {
+        return this.obsrvtnEfctiveTmgCdCdgVrsn;
+    }
+    
+    public void setObsrvtnEfctiveTmgCdCdgVrsn(String obsrvtnEfctiveTmgCdCdgVrsn) {
+        this.obsrvtnEfctiveTmgCdCdgVrsn = obsrvtnEfctiveTmgCdCdgVrsn;
+    }
+    
+    
+    
+    public String getObsrvtnEfctiveTmgCdTxt() {
+        return this.obsrvtnEfctiveTmgCdTxt;
+    }
+    
+    public void setObsrvtnEfctiveTmgCdTxt(String obsrvtnEfctiveTmgCdTxt) {
+        this.obsrvtnEfctiveTmgCdTxt = obsrvtnEfctiveTmgCdTxt;
+    }
+    
+    
+    
+    public String getObsrvtnEfctiveTmgEvnt() {
+        return this.obsrvtnEfctiveTmgEvnt;
+    }
+    
+    public void setObsrvtnEfctiveTmgEvnt(String obsrvtnEfctiveTmgEvnt) {
+        this.obsrvtnEfctiveTmgEvnt = obsrvtnEfctiveTmgEvnt;
+    }
+    
+    
+    
+    public String getObsrvtnEfctiveTmgRptBndsPrdEnd() {
+        return this.obsrvtnEfctiveTmgRptBndsPrdEnd;
+    }
+    
+    public void setObsrvtnEfctiveTmgRptBndsPrdEnd(String obsrvtnEfctiveTmgRptBndsPrdEnd) {
+        this.obsrvtnEfctiveTmgRptBndsPrdEnd = obsrvtnEfctiveTmgRptBndsPrdEnd;
+    }
+    
+    
+    
+    public String getObsrvtnEfctiveTmgRptBndsPrdStrt() {
+        return this.obsrvtnEfctiveTmgRptBndsPrdStrt;
+    }
+    
+    public void setObsrvtnEfctiveTmgRptBndsPrdStrt(String obsrvtnEfctiveTmgRptBndsPrdStrt) {
+        this.obsrvtnEfctiveTmgRptBndsPrdStrt = obsrvtnEfctiveTmgRptBndsPrdStrt;
+    }
+    
+    
+    
+    public String getObsrvtnEfctiveTmgRptBndsRngHiCd() {
+        return this.obsrvtnEfctiveTmgRptBndsRngHiCd;
+    }
+    
+    public void setObsrvtnEfctiveTmgRptBndsRngHiCd(String obsrvtnEfctiveTmgRptBndsRngHiCd) {
+        this.obsrvtnEfctiveTmgRptBndsRngHiCd = obsrvtnEfctiveTmgRptBndsRngHiCd;
+    }
+    
+    
+    
+    public String getObsrvtnEfctiveTmgRptBndsRngHiCmprtr() {
+        return this.obsrvtnEfctiveTmgRptBndsRngHiCmprtr;
+    }
+    
+    public void setObsrvtnEfctiveTmgRptBndsRngHiCmprtr(String obsrvtnEfctiveTmgRptBndsRngHiCmprtr) {
+        this.obsrvtnEfctiveTmgRptBndsRngHiCmprtr = obsrvtnEfctiveTmgRptBndsRngHiCmprtr;
+    }
+    
+    
+    
+    public String getObsrvtnEfctiveTmgRptBndsRngHiSys() {
+        return this.obsrvtnEfctiveTmgRptBndsRngHiSys;
+    }
+    
+    public void setObsrvtnEfctiveTmgRptBndsRngHiSys(String obsrvtnEfctiveTmgRptBndsRngHiSys) {
+        this.obsrvtnEfctiveTmgRptBndsRngHiSys = obsrvtnEfctiveTmgRptBndsRngHiSys;
+    }
+    
+    
+    
+    public String getObsrvtnEfctiveTmgRptBndsRngHiUnt() {
+        return this.obsrvtnEfctiveTmgRptBndsRngHiUnt;
+    }
+    
+    public void setObsrvtnEfctiveTmgRptBndsRngHiUnt(String obsrvtnEfctiveTmgRptBndsRngHiUnt) {
+        this.obsrvtnEfctiveTmgRptBndsRngHiUnt = obsrvtnEfctiveTmgRptBndsRngHiUnt;
+    }
+    
+    
+    
+    public String getObsrvtnEfctiveTmgRptBndsRngHiVl() {
+        return this.obsrvtnEfctiveTmgRptBndsRngHiVl;
+    }
+    
+    public void setObsrvtnEfctiveTmgRptBndsRngHiVl(String obsrvtnEfctiveTmgRptBndsRngHiVl) {
+        this.obsrvtnEfctiveTmgRptBndsRngHiVl = obsrvtnEfctiveTmgRptBndsRngHiVl;
+    }
+    
+    
+    
+    public String getObsrvtnEfctiveTmgRptBndsRngLwCd() {
+        return this.obsrvtnEfctiveTmgRptBndsRngLwCd;
+    }
+    
+    public void setObsrvtnEfctiveTmgRptBndsRngLwCd(String obsrvtnEfctiveTmgRptBndsRngLwCd) {
+        this.obsrvtnEfctiveTmgRptBndsRngLwCd = obsrvtnEfctiveTmgRptBndsRngLwCd;
+    }
+    
+    
+    
+    public String getObsrvtnEfctiveTmgRptBndsRngLwCmprtr() {
+        return this.obsrvtnEfctiveTmgRptBndsRngLwCmprtr;
+    }
+    
+    public void setObsrvtnEfctiveTmgRptBndsRngLwCmprtr(String obsrvtnEfctiveTmgRptBndsRngLwCmprtr) {
+        this.obsrvtnEfctiveTmgRptBndsRngLwCmprtr = obsrvtnEfctiveTmgRptBndsRngLwCmprtr;
+    }
+    
+    
+    
+    public String getObsrvtnEfctiveTmgRptBndsRngLwSys() {
+        return this.obsrvtnEfctiveTmgRptBndsRngLwSys;
+    }
+    
+    public void setObsrvtnEfctiveTmgRptBndsRngLwSys(String obsrvtnEfctiveTmgRptBndsRngLwSys) {
+        this.obsrvtnEfctiveTmgRptBndsRngLwSys = obsrvtnEfctiveTmgRptBndsRngLwSys;
+    }
+    
+    
+    
+    public String getObsrvtnEfctiveTmgRptBndsRngLwUnt() {
+        return this.obsrvtnEfctiveTmgRptBndsRngLwUnt;
+    }
+    
+    public void setObsrvtnEfctiveTmgRptBndsRngLwUnt(String obsrvtnEfctiveTmgRptBndsRngLwUnt) {
+        this.obsrvtnEfctiveTmgRptBndsRngLwUnt = obsrvtnEfctiveTmgRptBndsRngLwUnt;
+    }
+    
+    
+    
+    public String getObsrvtnEfctiveTmgRptBndsRngLwVl() {
+        return this.obsrvtnEfctiveTmgRptBndsRngLwVl;
+    }
+    
+    public void setObsrvtnEfctiveTmgRptBndsRngLwVl(String obsrvtnEfctiveTmgRptBndsRngLwVl) {
+        this.obsrvtnEfctiveTmgRptBndsRngLwVl = obsrvtnEfctiveTmgRptBndsRngLwVl;
+    }
+    
+    
+    
+    public String getObsrvtnEfctiveTmgRptCnt() {
+        return this.obsrvtnEfctiveTmgRptCnt;
+    }
+    
+    public void setObsrvtnEfctiveTmgRptCnt(String obsrvtnEfctiveTmgRptCnt) {
+        this.obsrvtnEfctiveTmgRptCnt = obsrvtnEfctiveTmgRptCnt;
+    }
+    
+    
+    
+    public String getObsrvtnEfctiveTmgRptCntMx() {
+        return this.obsrvtnEfctiveTmgRptCntMx;
+    }
+    
+    public void setObsrvtnEfctiveTmgRptCntMx(String obsrvtnEfctiveTmgRptCntMx) {
+        this.obsrvtnEfctiveTmgRptCntMx = obsrvtnEfctiveTmgRptCntMx;
+    }
+    
+    
+    
+    public String getObsrvtnEfctiveTmgRptDayOfWeek() {
+        return this.obsrvtnEfctiveTmgRptDayOfWeek;
+    }
+    
+    public void setObsrvtnEfctiveTmgRptDayOfWeek(String obsrvtnEfctiveTmgRptDayOfWeek) {
+        this.obsrvtnEfctiveTmgRptDayOfWeek = obsrvtnEfctiveTmgRptDayOfWeek;
+    }
+    
+    
+    
+    public String getObsrvtnEfctiveTmgRptDuration() {
+        return this.obsrvtnEfctiveTmgRptDuration;
+    }
+    
+    public void setObsrvtnEfctiveTmgRptDuration(String obsrvtnEfctiveTmgRptDuration) {
+        this.obsrvtnEfctiveTmgRptDuration = obsrvtnEfctiveTmgRptDuration;
+    }
+    
+    
+    
+    public String getObsrvtnEfctiveTmgRptDurationMx() {
+        return this.obsrvtnEfctiveTmgRptDurationMx;
+    }
+    
+    public void setObsrvtnEfctiveTmgRptDurationMx(String obsrvtnEfctiveTmgRptDurationMx) {
+        this.obsrvtnEfctiveTmgRptDurationMx = obsrvtnEfctiveTmgRptDurationMx;
+    }
+    
+    
+    
+    public String getObsrvtnEfctiveTmgRptDurationUnt() {
+        return this.obsrvtnEfctiveTmgRptDurationUnt;
+    }
+    
+    public void setObsrvtnEfctiveTmgRptDurationUnt(String obsrvtnEfctiveTmgRptDurationUnt) {
+        this.obsrvtnEfctiveTmgRptDurationUnt = obsrvtnEfctiveTmgRptDurationUnt;
+    }
+    
+    
+    
+    public String getObsrvtnEfctiveTmgRptFrqncy() {
+        return this.obsrvtnEfctiveTmgRptFrqncy;
+    }
+    
+    public void setObsrvtnEfctiveTmgRptFrqncy(String obsrvtnEfctiveTmgRptFrqncy) {
+        this.obsrvtnEfctiveTmgRptFrqncy = obsrvtnEfctiveTmgRptFrqncy;
+    }
+    
+    
+    
+    public String getObsrvtnEfctiveTmgRptFrqncyMx() {
+        return this.obsrvtnEfctiveTmgRptFrqncyMx;
+    }
+    
+    public void setObsrvtnEfctiveTmgRptFrqncyMx(String obsrvtnEfctiveTmgRptFrqncyMx) {
+        this.obsrvtnEfctiveTmgRptFrqncyMx = obsrvtnEfctiveTmgRptFrqncyMx;
+    }
+    
+    
+    
+    public String getObsrvtnEfctiveTmgRptOff() {
+        return this.obsrvtnEfctiveTmgRptOff;
+    }
+    
+    public void setObsrvtnEfctiveTmgRptOff(String obsrvtnEfctiveTmgRptOff) {
+        this.obsrvtnEfctiveTmgRptOff = obsrvtnEfctiveTmgRptOff;
+    }
+    
+    
+    
+    public String getObsrvtnEfctiveTmgRptPrd() {
+        return this.obsrvtnEfctiveTmgRptPrd;
+    }
+    
+    public void setObsrvtnEfctiveTmgRptPrd(String obsrvtnEfctiveTmgRptPrd) {
+        this.obsrvtnEfctiveTmgRptPrd = obsrvtnEfctiveTmgRptPrd;
+    }
+    
+    
+    
+    public String getObsrvtnEfctiveTmgRptPrdMx() {
+        return this.obsrvtnEfctiveTmgRptPrdMx;
+    }
+    
+    public void setObsrvtnEfctiveTmgRptPrdMx(String obsrvtnEfctiveTmgRptPrdMx) {
+        this.obsrvtnEfctiveTmgRptPrdMx = obsrvtnEfctiveTmgRptPrdMx;
+    }
+    
+    
+    
+    public String getObsrvtnEfctiveTmgRptPrdUnt() {
+        return this.obsrvtnEfctiveTmgRptPrdUnt;
+    }
+    
+    public void setObsrvtnEfctiveTmgRptPrdUnt(String obsrvtnEfctiveTmgRptPrdUnt) {
+        this.obsrvtnEfctiveTmgRptPrdUnt = obsrvtnEfctiveTmgRptPrdUnt;
+    }
+    
+    
+    
+    public String getObsrvtnEfctiveTmgRptTimeOfDay() {
+        return this.obsrvtnEfctiveTmgRptTimeOfDay;
+    }
+    
+    public void setObsrvtnEfctiveTmgRptTimeOfDay(String obsrvtnEfctiveTmgRptTimeOfDay) {
+        this.obsrvtnEfctiveTmgRptTimeOfDay = obsrvtnEfctiveTmgRptTimeOfDay;
+    }
+    
+    
+    
+    public String getObsrvtnEfctiveTmgRptWhen() {
+        return this.obsrvtnEfctiveTmgRptWhen;
+    }
+    
+    public void setObsrvtnEfctiveTmgRptWhen(String obsrvtnEfctiveTmgRptWhen) {
+        this.obsrvtnEfctiveTmgRptWhen = obsrvtnEfctiveTmgRptWhen;
+    }
+    
+    
+    
+    public String getObsrvtnEnc() {
+        return this.obsrvtnEnc;
+    }
+    
+    public void setObsrvtnEnc(String obsrvtnEnc) {
+        this.obsrvtnEnc = obsrvtnEnc;
+    }
+    
+    
+    
+    public String getObsrvtnFocus() {
+        return this.obsrvtnFocus;
+    }
+    
+    public void setObsrvtnFocus(String obsrvtnFocus) {
+        this.obsrvtnFocus = obsrvtnFocus;
+    }
+    
+    
+    
+    public String getObsrvtnHasMmbr() {
+        return this.obsrvtnHasMmbr;
+    }
+    
+    public void setObsrvtnHasMmbr(String obsrvtnHasMmbr) {
+        this.obsrvtnHasMmbr = obsrvtnHasMmbr;
+    }
+    
+    
+    
+    public String getObsrvtnIdAssigner() {
+        return this.obsrvtnIdAssigner;
+    }
+    
+    public void setObsrvtnIdAssigner(String obsrvtnIdAssigner) {
+        this.obsrvtnIdAssigner = obsrvtnIdAssigner;
+    }
+    
+    
+    
+    public String getObsrvtnIdPrdEnd() {
+        return this.obsrvtnIdPrdEnd;
+    }
+    
+    public void setObsrvtnIdPrdEnd(String obsrvtnIdPrdEnd) {
+        this.obsrvtnIdPrdEnd = obsrvtnIdPrdEnd;
+    }
+    
+    
+    
+    public String getObsrvtnIdPrdStrt() {
+        return this.obsrvtnIdPrdStrt;
+    }
+    
+    public void setObsrvtnIdPrdStrt(String obsrvtnIdPrdStrt) {
+        this.obsrvtnIdPrdStrt = obsrvtnIdPrdStrt;
+    }
+    
+    
+    
+    public String getObsrvtnIdSys() {
+        return this.obsrvtnIdSys;
+    }
+    
+    public void setObsrvtnIdSys(String obsrvtnIdSys) {
+        this.obsrvtnIdSys = obsrvtnIdSys;
+    }
+    
+    
+    
+    public String getObsrvtnIdTypCdgCd() {
+        return this.obsrvtnIdTypCdgCd;
+    }
+    
+    public void setObsrvtnIdTypCdgCd(String obsrvtnIdTypCdgCd) {
+        this.obsrvtnIdTypCdgCd = obsrvtnIdTypCdgCd;
+    }
+    
+    
+    
+    public String getObsrvtnIdTypCdgDsply() {
+        return this.obsrvtnIdTypCdgDsply;
+    }
+    
+    public void setObsrvtnIdTypCdgDsply(String obsrvtnIdTypCdgDsply) {
+        this.obsrvtnIdTypCdgDsply = obsrvtnIdTypCdgDsply;
+    }
+    
+    
+    
+    public String getObsrvtnIdTypCdgSys() {
+        return this.obsrvtnIdTypCdgSys;
+    }
+    
+    public void setObsrvtnIdTypCdgSys(String obsrvtnIdTypCdgSys) {
+        this.obsrvtnIdTypCdgSys = obsrvtnIdTypCdgSys;
+    }
+    
+    
+    
+    public String getObsrvtnIdTypCdgUsrSltd() {
+        return this.obsrvtnIdTypCdgUsrSltd;
+    }
+    
+    public void setObsrvtnIdTypCdgUsrSltd(String obsrvtnIdTypCdgUsrSltd) {
+        this.obsrvtnIdTypCdgUsrSltd = obsrvtnIdTypCdgUsrSltd;
+    }
+    
+    
+    
+    public String getObsrvtnIdTypCdgVrsn() {
+        return this.obsrvtnIdTypCdgVrsn;
+    }
+    
+    public void setObsrvtnIdTypCdgVrsn(String obsrvtnIdTypCdgVrsn) {
+        this.obsrvtnIdTypCdgVrsn = obsrvtnIdTypCdgVrsn;
+    }
+    
+    
+    
+    public String getObsrvtnIdTypTxt() {
+        return this.obsrvtnIdTypTxt;
+    }
+    
+    public void setObsrvtnIdTypTxt(String obsrvtnIdTypTxt) {
+        this.obsrvtnIdTypTxt = obsrvtnIdTypTxt;
+    }
+    
+    
+    
+    public String getObsrvtnIdUse() {
+        return this.obsrvtnIdUse;
+    }
+    
+    public void setObsrvtnIdUse(String obsrvtnIdUse) {
+        this.obsrvtnIdUse = obsrvtnIdUse;
+    }
+    
+    
+    
+    public String getObsrvtnIdVl() {
+        return this.obsrvtnIdVl;
+    }
+    
+    public void setObsrvtnIdVl(String obsrvtnIdVl) {
+        this.obsrvtnIdVl = obsrvtnIdVl;
+    }
+    
+    
+    
+    public String getObsrvtnInterpretationCdgCd() {
+        return this.obsrvtnInterpretationCdgCd;
+    }
+    
+    public void setObsrvtnInterpretationCdgCd(String obsrvtnInterpretationCdgCd) {
+        this.obsrvtnInterpretationCdgCd = obsrvtnInterpretationCdgCd;
+    }
+    
+    
+    
+    public String getObsrvtnInterpretationCdgDsply() {
+        return this.obsrvtnInterpretationCdgDsply;
+    }
+    
+    public void setObsrvtnInterpretationCdgDsply(String obsrvtnInterpretationCdgDsply) {
+        this.obsrvtnInterpretationCdgDsply = obsrvtnInterpretationCdgDsply;
+    }
+    
+    
+    
+    public String getObsrvtnInterpretationCdgSys() {
+        return this.obsrvtnInterpretationCdgSys;
+    }
+    
+    public void setObsrvtnInterpretationCdgSys(String obsrvtnInterpretationCdgSys) {
+        this.obsrvtnInterpretationCdgSys = obsrvtnInterpretationCdgSys;
+    }
+    
+    
+    
+    public String getObsrvtnInterpretationCdgUsrSltd() {
+        return this.obsrvtnInterpretationCdgUsrSltd;
+    }
+    
+    public void setObsrvtnInterpretationCdgUsrSltd(String obsrvtnInterpretationCdgUsrSltd) {
+        this.obsrvtnInterpretationCdgUsrSltd = obsrvtnInterpretationCdgUsrSltd;
+    }
+    
+    
+    
+    public String getObsrvtnInterpretationCdgVrsn() {
+        return this.obsrvtnInterpretationCdgVrsn;
+    }
+    
+    public void setObsrvtnInterpretationCdgVrsn(String obsrvtnInterpretationCdgVrsn) {
+        this.obsrvtnInterpretationCdgVrsn = obsrvtnInterpretationCdgVrsn;
+    }
+    
+    
+    
+    public String getObsrvtnInterpretationTxt() {
+        return this.obsrvtnInterpretationTxt;
+    }
+    
+    public void setObsrvtnInterpretationTxt(String obsrvtnInterpretationTxt) {
+        this.obsrvtnInterpretationTxt = obsrvtnInterpretationTxt;
+    }
+    
+    
+    
+    public String getObsrvtnIssued() {
+        return this.obsrvtnIssued;
+    }
+    
+    public void setObsrvtnIssued(String obsrvtnIssued) {
+        this.obsrvtnIssued = obsrvtnIssued;
+    }
+    
+    
+    
+    public String getObsrvtnMthdCdgCd() {
+        return this.obsrvtnMthdCdgCd;
+    }
+    
+    public void setObsrvtnMthdCdgCd(String obsrvtnMthdCdgCd) {
+        this.obsrvtnMthdCdgCd = obsrvtnMthdCdgCd;
+    }
+    
+    
+    
+    public String getObsrvtnMthdCdgDsply() {
+        return this.obsrvtnMthdCdgDsply;
+    }
+    
+    public void setObsrvtnMthdCdgDsply(String obsrvtnMthdCdgDsply) {
+        this.obsrvtnMthdCdgDsply = obsrvtnMthdCdgDsply;
+    }
+    
+    
+    
+    public String getObsrvtnMthdCdgSys() {
+        return this.obsrvtnMthdCdgSys;
+    }
+    
+    public void setObsrvtnMthdCdgSys(String obsrvtnMthdCdgSys) {
+        this.obsrvtnMthdCdgSys = obsrvtnMthdCdgSys;
+    }
+    
+    
+    
+    public String getObsrvtnMthdCdgUsrSltd() {
+        return this.obsrvtnMthdCdgUsrSltd;
+    }
+    
+    public void setObsrvtnMthdCdgUsrSltd(String obsrvtnMthdCdgUsrSltd) {
+        this.obsrvtnMthdCdgUsrSltd = obsrvtnMthdCdgUsrSltd;
+    }
+    
+    
+    
+    public String getObsrvtnMthdCdgVrsn() {
+        return this.obsrvtnMthdCdgVrsn;
+    }
+    
+    public void setObsrvtnMthdCdgVrsn(String obsrvtnMthdCdgVrsn) {
+        this.obsrvtnMthdCdgVrsn = obsrvtnMthdCdgVrsn;
+    }
+    
+    
+    
+    public String getObsrvtnMthdTxt() {
+        return this.obsrvtnMthdTxt;
+    }
+    
+    public void setObsrvtnMthdTxt(String obsrvtnMthdTxt) {
+        this.obsrvtnMthdTxt = obsrvtnMthdTxt;
+    }
+    
+    
+    
+    public String getObsrvtnNtAthrRfrnc() {
+        return this.obsrvtnNtAthrRfrnc;
+    }
+    
+    public void setObsrvtnNtAthrRfrnc(String obsrvtnNtAthrRfrnc) {
+        this.obsrvtnNtAthrRfrnc = obsrvtnNtAthrRfrnc;
+    }
+    
+    
+    
+    public String getObsrvtnNtAthrStrgTyp() {
+        return this.obsrvtnNtAthrStrgTyp;
+    }
+    
+    public void setObsrvtnNtAthrStrgTyp(String obsrvtnNtAthrStrgTyp) {
+        this.obsrvtnNtAthrStrgTyp = obsrvtnNtAthrStrgTyp;
+    }
+    
+    
+    
+    public String getObsrvtnNtTxt() {
+        return this.obsrvtnNtTxt;
+    }
+    
+    public void setObsrvtnNtTxt(String obsrvtnNtTxt) {
+        this.obsrvtnNtTxt = obsrvtnNtTxt;
+    }
+    
+    
+    
+    public String getObsrvtnNtTime() {
+        return this.obsrvtnNtTime;
+    }
+    
+    public void setObsrvtnNtTime(String obsrvtnNtTime) {
+        this.obsrvtnNtTime = obsrvtnNtTime;
+    }
+    
+    
+    
+    public String getObsrvtnPartOf() {
+        return this.obsrvtnPartOf;
+    }
+    
+    public void setObsrvtnPartOf(String obsrvtnPartOf) {
+        this.obsrvtnPartOf = obsrvtnPartOf;
+    }
+    
+    
+    
+    public String getObsrvtnPrfrmr() {
+        return this.obsrvtnPrfrmr;
+    }
+    
+    public void setObsrvtnPrfrmr(String obsrvtnPrfrmr) {
+        this.obsrvtnPrfrmr = obsrvtnPrfrmr;
+    }
+    
+    
+    
+    public String getObsrvtnRfrncRngAgeHiCd() {
+        return this.obsrvtnRfrncRngAgeHiCd;
+    }
+    
+    public void setObsrvtnRfrncRngAgeHiCd(String obsrvtnRfrncRngAgeHiCd) {
+        this.obsrvtnRfrncRngAgeHiCd = obsrvtnRfrncRngAgeHiCd;
+    }
+    
+    
+    
+    public String getObsrvtnRfrncRngAgeHiCmprtr() {
+        return this.obsrvtnRfrncRngAgeHiCmprtr;
+    }
+    
+    public void setObsrvtnRfrncRngAgeHiCmprtr(String obsrvtnRfrncRngAgeHiCmprtr) {
+        this.obsrvtnRfrncRngAgeHiCmprtr = obsrvtnRfrncRngAgeHiCmprtr;
+    }
+    
+    
+    
+    public String getObsrvtnRfrncRngAgeHiSys() {
+        return this.obsrvtnRfrncRngAgeHiSys;
+    }
+    
+    public void setObsrvtnRfrncRngAgeHiSys(String obsrvtnRfrncRngAgeHiSys) {
+        this.obsrvtnRfrncRngAgeHiSys = obsrvtnRfrncRngAgeHiSys;
+    }
+    
+    
+    
+    public String getObsrvtnRfrncRngAgeHiUnt() {
+        return this.obsrvtnRfrncRngAgeHiUnt;
+    }
+    
+    public void setObsrvtnRfrncRngAgeHiUnt(String obsrvtnRfrncRngAgeHiUnt) {
+        this.obsrvtnRfrncRngAgeHiUnt = obsrvtnRfrncRngAgeHiUnt;
+    }
+    
+    
+    
+    public String getObsrvtnRfrncRngAgeHiVl() {
+        return this.obsrvtnRfrncRngAgeHiVl;
+    }
+    
+    public void setObsrvtnRfrncRngAgeHiVl(String obsrvtnRfrncRngAgeHiVl) {
+        this.obsrvtnRfrncRngAgeHiVl = obsrvtnRfrncRngAgeHiVl;
+    }
+    
+    
+    
+    public String getObsrvtnRfrncRngAgeLwCd() {
+        return this.obsrvtnRfrncRngAgeLwCd;
+    }
+    
+    public void setObsrvtnRfrncRngAgeLwCd(String obsrvtnRfrncRngAgeLwCd) {
+        this.obsrvtnRfrncRngAgeLwCd = obsrvtnRfrncRngAgeLwCd;
+    }
+    
+    
+    
+    public String getObsrvtnRfrncRngAgeLwCmprtr() {
+        return this.obsrvtnRfrncRngAgeLwCmprtr;
+    }
+    
+    public void setObsrvtnRfrncRngAgeLwCmprtr(String obsrvtnRfrncRngAgeLwCmprtr) {
+        this.obsrvtnRfrncRngAgeLwCmprtr = obsrvtnRfrncRngAgeLwCmprtr;
+    }
+    
+    
+    
+    public String getObsrvtnRfrncRngAgeLwSys() {
+        return this.obsrvtnRfrncRngAgeLwSys;
+    }
+    
+    public void setObsrvtnRfrncRngAgeLwSys(String obsrvtnRfrncRngAgeLwSys) {
+        this.obsrvtnRfrncRngAgeLwSys = obsrvtnRfrncRngAgeLwSys;
+    }
+    
+    
+    
+    public String getObsrvtnRfrncRngAgeLwUnt() {
+        return this.obsrvtnRfrncRngAgeLwUnt;
+    }
+    
+    public void setObsrvtnRfrncRngAgeLwUnt(String obsrvtnRfrncRngAgeLwUnt) {
+        this.obsrvtnRfrncRngAgeLwUnt = obsrvtnRfrncRngAgeLwUnt;
+    }
+    
+    
+    
+    public String getObsrvtnRfrncRngAgeLwVl() {
+        return this.obsrvtnRfrncRngAgeLwVl;
+    }
+    
+    public void setObsrvtnRfrncRngAgeLwVl(String obsrvtnRfrncRngAgeLwVl) {
+        this.obsrvtnRfrncRngAgeLwVl = obsrvtnRfrncRngAgeLwVl;
+    }
+    
+    
+    
+    public String getObsrvtnRfrncRngAppliesToCdgCd() {
+        return this.obsrvtnRfrncRngAppliesToCdgCd;
+    }
+    
+    public void setObsrvtnRfrncRngAppliesToCdgCd(String obsrvtnRfrncRngAppliesToCdgCd) {
+        this.obsrvtnRfrncRngAppliesToCdgCd = obsrvtnRfrncRngAppliesToCdgCd;
+    }
+    
+    
+    
+    public String getObsrvtnRfrncRngAppliesToCdgDsply() {
+        return this.obsrvtnRfrncRngAppliesToCdgDsply;
+    }
+    
+    public void setObsrvtnRfrncRngAppliesToCdgDsply(String obsrvtnRfrncRngAppliesToCdgDsply) {
+        this.obsrvtnRfrncRngAppliesToCdgDsply = obsrvtnRfrncRngAppliesToCdgDsply;
+    }
+    
+    
+    
+    public String getObsrvtnRfrncRngAppliesToCdgSys() {
+        return this.obsrvtnRfrncRngAppliesToCdgSys;
+    }
+    
+    public void setObsrvtnRfrncRngAppliesToCdgSys(String obsrvtnRfrncRngAppliesToCdgSys) {
+        this.obsrvtnRfrncRngAppliesToCdgSys = obsrvtnRfrncRngAppliesToCdgSys;
+    }
+    
+    
+    
+    public String getObsrvtnRfrncRngAppliesToCdgUsrSltd() {
+        return this.obsrvtnRfrncRngAppliesToCdgUsrSltd;
+    }
+    
+    public void setObsrvtnRfrncRngAppliesToCdgUsrSltd(String obsrvtnRfrncRngAppliesToCdgUsrSltd) {
+        this.obsrvtnRfrncRngAppliesToCdgUsrSltd = obsrvtnRfrncRngAppliesToCdgUsrSltd;
+    }
+    
+    
+    
+    public String getObsrvtnRfrncRngAppliesToCdgVrsn() {
+        return this.obsrvtnRfrncRngAppliesToCdgVrsn;
+    }
+    
+    public void setObsrvtnRfrncRngAppliesToCdgVrsn(String obsrvtnRfrncRngAppliesToCdgVrsn) {
+        this.obsrvtnRfrncRngAppliesToCdgVrsn = obsrvtnRfrncRngAppliesToCdgVrsn;
+    }
+    
+    
+    
+    public String getObsrvtnRfrncRngAppliesToTxt() {
+        return this.obsrvtnRfrncRngAppliesToTxt;
+    }
+    
+    public void setObsrvtnRfrncRngAppliesToTxt(String obsrvtnRfrncRngAppliesToTxt) {
+        this.obsrvtnRfrncRngAppliesToTxt = obsrvtnRfrncRngAppliesToTxt;
+    }
+    
+    
+    
+    public String getObsrvtnRfrncRngHiCd() {
+        return this.obsrvtnRfrncRngHiCd;
+    }
+    
+    public void setObsrvtnRfrncRngHiCd(String obsrvtnRfrncRngHiCd) {
+        this.obsrvtnRfrncRngHiCd = obsrvtnRfrncRngHiCd;
+    }
+    
+    
+    
+    public String getObsrvtnRfrncRngHiCmprtr() {
+        return this.obsrvtnRfrncRngHiCmprtr;
+    }
+    
+    public void setObsrvtnRfrncRngHiCmprtr(String obsrvtnRfrncRngHiCmprtr) {
+        this.obsrvtnRfrncRngHiCmprtr = obsrvtnRfrncRngHiCmprtr;
+    }
+    
+    
+    
+    public String getObsrvtnRfrncRngHiSys() {
+        return this.obsrvtnRfrncRngHiSys;
+    }
+    
+    public void setObsrvtnRfrncRngHiSys(String obsrvtnRfrncRngHiSys) {
+        this.obsrvtnRfrncRngHiSys = obsrvtnRfrncRngHiSys;
+    }
+    
+    
+    
+    public String getObsrvtnRfrncRngHiUnt() {
+        return this.obsrvtnRfrncRngHiUnt;
+    }
+    
+    public void setObsrvtnRfrncRngHiUnt(String obsrvtnRfrncRngHiUnt) {
+        this.obsrvtnRfrncRngHiUnt = obsrvtnRfrncRngHiUnt;
+    }
+    
+    
+    
+    public String getObsrvtnRfrncRngHiVl() {
+        return this.obsrvtnRfrncRngHiVl;
+    }
+    
+    public void setObsrvtnRfrncRngHiVl(String obsrvtnRfrncRngHiVl) {
+        this.obsrvtnRfrncRngHiVl = obsrvtnRfrncRngHiVl;
+    }
+    
+    
+    
+    public String getObsrvtnRfrncRngLwCd() {
+        return this.obsrvtnRfrncRngLwCd;
+    }
+    
+    public void setObsrvtnRfrncRngLwCd(String obsrvtnRfrncRngLwCd) {
+        this.obsrvtnRfrncRngLwCd = obsrvtnRfrncRngLwCd;
+    }
+    
+    
+    
+    public String getObsrvtnRfrncRngLwCmprtr() {
+        return this.obsrvtnRfrncRngLwCmprtr;
+    }
+    
+    public void setObsrvtnRfrncRngLwCmprtr(String obsrvtnRfrncRngLwCmprtr) {
+        this.obsrvtnRfrncRngLwCmprtr = obsrvtnRfrncRngLwCmprtr;
+    }
+    
+    
+    
+    public String getObsrvtnRfrncRngLwSys() {
+        return this.obsrvtnRfrncRngLwSys;
+    }
+    
+    public void setObsrvtnRfrncRngLwSys(String obsrvtnRfrncRngLwSys) {
+        this.obsrvtnRfrncRngLwSys = obsrvtnRfrncRngLwSys;
+    }
+    
+    
+    
+    public String getObsrvtnRfrncRngLwUnt() {
+        return this.obsrvtnRfrncRngLwUnt;
+    }
+    
+    public void setObsrvtnRfrncRngLwUnt(String obsrvtnRfrncRngLwUnt) {
+        this.obsrvtnRfrncRngLwUnt = obsrvtnRfrncRngLwUnt;
+    }
+    
+    
+    
+    public String getObsrvtnRfrncRngLwVl() {
+        return this.obsrvtnRfrncRngLwVl;
+    }
+    
+    public void setObsrvtnRfrncRngLwVl(String obsrvtnRfrncRngLwVl) {
+        this.obsrvtnRfrncRngLwVl = obsrvtnRfrncRngLwVl;
+    }
+    
+    
+    
+    public String getObsrvtnRfrncRngTxt() {
+        return this.obsrvtnRfrncRngTxt;
+    }
+    
+    public void setObsrvtnRfrncRngTxt(String obsrvtnRfrncRngTxt) {
+        this.obsrvtnRfrncRngTxt = obsrvtnRfrncRngTxt;
+    }
+    
+    
+    
+    public String getObsrvtnRfrncRngTypCdgCd() {
+        return this.obsrvtnRfrncRngTypCdgCd;
+    }
+    
+    public void setObsrvtnRfrncRngTypCdgCd(String obsrvtnRfrncRngTypCdgCd) {
+        this.obsrvtnRfrncRngTypCdgCd = obsrvtnRfrncRngTypCdgCd;
+    }
+    
+    
+    
+    public String getObsrvtnRfrncRngTypCdgDsply() {
+        return this.obsrvtnRfrncRngTypCdgDsply;
+    }
+    
+    public void setObsrvtnRfrncRngTypCdgDsply(String obsrvtnRfrncRngTypCdgDsply) {
+        this.obsrvtnRfrncRngTypCdgDsply = obsrvtnRfrncRngTypCdgDsply;
+    }
+    
+    
+    
+    public String getObsrvtnRfrncRngTypCdgSys() {
+        return this.obsrvtnRfrncRngTypCdgSys;
+    }
+    
+    public void setObsrvtnRfrncRngTypCdgSys(String obsrvtnRfrncRngTypCdgSys) {
+        this.obsrvtnRfrncRngTypCdgSys = obsrvtnRfrncRngTypCdgSys;
+    }
+    
+    
+    
+    public String getObsrvtnRfrncRngTypCdgUsrSltd() {
+        return this.obsrvtnRfrncRngTypCdgUsrSltd;
+    }
+    
+    public void setObsrvtnRfrncRngTypCdgUsrSltd(String obsrvtnRfrncRngTypCdgUsrSltd) {
+        this.obsrvtnRfrncRngTypCdgUsrSltd = obsrvtnRfrncRngTypCdgUsrSltd;
+    }
+    
+    
+    
+    public String getObsrvtnRfrncRngTypCdgVrsn() {
+        return this.obsrvtnRfrncRngTypCdgVrsn;
+    }
+    
+    public void setObsrvtnRfrncRngTypCdgVrsn(String obsrvtnRfrncRngTypCdgVrsn) {
+        this.obsrvtnRfrncRngTypCdgVrsn = obsrvtnRfrncRngTypCdgVrsn;
+    }
+    
+    
+    
+    public String getObsrvtnRfrncRngTypTxt() {
+        return this.obsrvtnRfrncRngTypTxt;
+    }
+    
+    public void setObsrvtnRfrncRngTypTxt(String obsrvtnRfrncRngTypTxt) {
+        this.obsrvtnRfrncRngTypTxt = obsrvtnRfrncRngTypTxt;
+    }
+    
+    
+    
+    public String getObsrvtnSpcmn() {
+        return this.obsrvtnSpcmn;
+    }
+    
+    public void setObsrvtnSpcmn(String obsrvtnSpcmn) {
+        this.obsrvtnSpcmn = obsrvtnSpcmn;
+    }
+    
+    
+    
+    public String getObsrvtnSts() {
+        return this.obsrvtnSts;
+    }
+    
+    public void setObsrvtnSts(String obsrvtnSts) {
+        this.obsrvtnSts = obsrvtnSts;
+    }
+    
+    
+    
+    public String getObsrvtnSbjct() {
+        return this.obsrvtnSbjct;
+    }
+    
+    public void setObsrvtnSbjct(String obsrvtnSbjct) {
+        this.obsrvtnSbjct = obsrvtnSbjct;
+    }
+    
+    
+    
+    public String getObsrvtnVlBooleanTyp() {
+        return this.obsrvtnVlBooleanTyp;
+    }
+    
+    public void setObsrvtnVlBooleanTyp(String obsrvtnVlBooleanTyp) {
+        this.obsrvtnVlBooleanTyp = obsrvtnVlBooleanTyp;
+    }
+    
+    
+    
+    public String getObsrvtnVlCdbleCncptCdgCd() {
+        return this.obsrvtnVlCdbleCncptCdgCd;
+    }
+    
+    public void setObsrvtnVlCdbleCncptCdgCd(String obsrvtnVlCdbleCncptCdgCd) {
+        this.obsrvtnVlCdbleCncptCdgCd = obsrvtnVlCdbleCncptCdgCd;
+    }
+    
+    
+    
+    public String getObsrvtnVlCdbleCncptCdgDsply() {
+        return this.obsrvtnVlCdbleCncptCdgDsply;
+    }
+    
+    public void setObsrvtnVlCdbleCncptCdgDsply(String obsrvtnVlCdbleCncptCdgDsply) {
+        this.obsrvtnVlCdbleCncptCdgDsply = obsrvtnVlCdbleCncptCdgDsply;
+    }
+    
+    
+    
+    public String getObsrvtnVlCdbleCncptCdgSys() {
+        return this.obsrvtnVlCdbleCncptCdgSys;
+    }
+    
+    public void setObsrvtnVlCdbleCncptCdgSys(String obsrvtnVlCdbleCncptCdgSys) {
+        this.obsrvtnVlCdbleCncptCdgSys = obsrvtnVlCdbleCncptCdgSys;
+    }
+    
+    
+    
+    public String getObsrvtnVlCdbleCncptCdgUsrSltd() {
+        return this.obsrvtnVlCdbleCncptCdgUsrSltd;
+    }
+    
+    public void setObsrvtnVlCdbleCncptCdgUsrSltd(String obsrvtnVlCdbleCncptCdgUsrSltd) {
+        this.obsrvtnVlCdbleCncptCdgUsrSltd = obsrvtnVlCdbleCncptCdgUsrSltd;
+    }
+    
+    
+    
+    public String getObsrvtnVlCdbleCncptCdgVrsn() {
+        return this.obsrvtnVlCdbleCncptCdgVrsn;
+    }
+    
+    public void setObsrvtnVlCdbleCncptCdgVrsn(String obsrvtnVlCdbleCncptCdgVrsn) {
+        this.obsrvtnVlCdbleCncptCdgVrsn = obsrvtnVlCdbleCncptCdgVrsn;
+    }
+    
+    
+    
+    public String getObsrvtnVlCdbleCncptTxt() {
+        return this.obsrvtnVlCdbleCncptTxt;
+    }
+    
+    public void setObsrvtnVlCdbleCncptTxt(String obsrvtnVlCdbleCncptTxt) {
+        this.obsrvtnVlCdbleCncptTxt = obsrvtnVlCdbleCncptTxt;
+    }
+    
+    
+    
+    public String getObsrvtnVlDtTimeTyp() {
+        return this.obsrvtnVlDtTimeTyp;
+    }
+    
+    public void setObsrvtnVlDtTimeTyp(String obsrvtnVlDtTimeTyp) {
+        this.obsrvtnVlDtTimeTyp = obsrvtnVlDtTimeTyp;
+    }
+    
+    
+    
+    public String getObsrvtnVlIntegerTyp() {
+        return this.obsrvtnVlIntegerTyp;
+    }
+    
+    public void setObsrvtnVlIntegerTyp(String obsrvtnVlIntegerTyp) {
+        this.obsrvtnVlIntegerTyp = obsrvtnVlIntegerTyp;
+    }
+    
+    
+    
+    public String getObsrvtnVlPrdEnd() {
+        return this.obsrvtnVlPrdEnd;
+    }
+    
+    public void setObsrvtnVlPrdEnd(String obsrvtnVlPrdEnd) {
+        this.obsrvtnVlPrdEnd = obsrvtnVlPrdEnd;
+    }
+    
+    
+    
+    public String getObsrvtnVlPrdStrt() {
+        return this.obsrvtnVlPrdStrt;
+    }
+    
+    public void setObsrvtnVlPrdStrt(String obsrvtnVlPrdStrt) {
+        this.obsrvtnVlPrdStrt = obsrvtnVlPrdStrt;
+    }
+    
+    
+    
+    public String getObsrvtnVlQntyCd() {
+        return this.obsrvtnVlQntyCd;
+    }
+    
+    public void setObsrvtnVlQntyCd(String obsrvtnVlQntyCd) {
+        this.obsrvtnVlQntyCd = obsrvtnVlQntyCd;
+    }
+    
+    
+    
+    public String getObsrvtnVlQntyCmprtr() {
+        return this.obsrvtnVlQntyCmprtr;
+    }
+    
+    public void setObsrvtnVlQntyCmprtr(String obsrvtnVlQntyCmprtr) {
+        this.obsrvtnVlQntyCmprtr = obsrvtnVlQntyCmprtr;
+    }
+    
+    
+    
+    public String getObsrvtnVlQntySys() {
+        return this.obsrvtnVlQntySys;
+    }
+    
+    public void setObsrvtnVlQntySys(String obsrvtnVlQntySys) {
+        this.obsrvtnVlQntySys = obsrvtnVlQntySys;
+    }
+    
+    
+    
+    public String getObsrvtnVlQntyUnt() {
+        return this.obsrvtnVlQntyUnt;
+    }
+    
+    public void setObsrvtnVlQntyUnt(String obsrvtnVlQntyUnt) {
+        this.obsrvtnVlQntyUnt = obsrvtnVlQntyUnt;
+    }
+    
+    
+    
+    public String getObsrvtnVlQntyVl() {
+        return this.obsrvtnVlQntyVl;
+    }
+    
+    public void setObsrvtnVlQntyVl(String obsrvtnVlQntyVl) {
+        this.obsrvtnVlQntyVl = obsrvtnVlQntyVl;
+    }
+    
+    
+    
+    public String getObsrvtnVlRngHiCd() {
+        return this.obsrvtnVlRngHiCd;
+    }
+    
+    public void setObsrvtnVlRngHiCd(String obsrvtnVlRngHiCd) {
+        this.obsrvtnVlRngHiCd = obsrvtnVlRngHiCd;
+    }
+    
+    
+    
+    public String getObsrvtnVlRngHiCmprtr() {
+        return this.obsrvtnVlRngHiCmprtr;
+    }
+    
+    public void setObsrvtnVlRngHiCmprtr(String obsrvtnVlRngHiCmprtr) {
+        this.obsrvtnVlRngHiCmprtr = obsrvtnVlRngHiCmprtr;
+    }
+    
+    
+    
+    public String getObsrvtnVlRngHiSys() {
+        return this.obsrvtnVlRngHiSys;
+    }
+    
+    public void setObsrvtnVlRngHiSys(String obsrvtnVlRngHiSys) {
+        this.obsrvtnVlRngHiSys = obsrvtnVlRngHiSys;
+    }
+    
+    
+    
+    public String getObsrvtnVlRngHiUnt() {
+        return this.obsrvtnVlRngHiUnt;
+    }
+    
+    public void setObsrvtnVlRngHiUnt(String obsrvtnVlRngHiUnt) {
+        this.obsrvtnVlRngHiUnt = obsrvtnVlRngHiUnt;
+    }
+    
+    
+    
+    public String getObsrvtnVlRngHiVl() {
+        return this.obsrvtnVlRngHiVl;
+    }
+    
+    public void setObsrvtnVlRngHiVl(String obsrvtnVlRngHiVl) {
+        this.obsrvtnVlRngHiVl = obsrvtnVlRngHiVl;
+    }
+    
+    
+    
+    public String getObsrvtnVlRngLwCd() {
+        return this.obsrvtnVlRngLwCd;
+    }
+    
+    public void setObsrvtnVlRngLwCd(String obsrvtnVlRngLwCd) {
+        this.obsrvtnVlRngLwCd = obsrvtnVlRngLwCd;
+    }
+    
+    
+    
+    public String getObsrvtnVlRngLwCmprtr() {
+        return this.obsrvtnVlRngLwCmprtr;
+    }
+    
+    public void setObsrvtnVlRngLwCmprtr(String obsrvtnVlRngLwCmprtr) {
+        this.obsrvtnVlRngLwCmprtr = obsrvtnVlRngLwCmprtr;
+    }
+    
+    
+    
+    public String getObsrvtnVlRngLwSys() {
+        return this.obsrvtnVlRngLwSys;
+    }
+    
+    public void setObsrvtnVlRngLwSys(String obsrvtnVlRngLwSys) {
+        this.obsrvtnVlRngLwSys = obsrvtnVlRngLwSys;
+    }
+    
+    
+    
+    public String getObsrvtnVlRngLwUnt() {
+        return this.obsrvtnVlRngLwUnt;
+    }
+    
+    public void setObsrvtnVlRngLwUnt(String obsrvtnVlRngLwUnt) {
+        this.obsrvtnVlRngLwUnt = obsrvtnVlRngLwUnt;
+    }
+    
+    
+    
+    public String getObsrvtnVlRngLwVl() {
+        return this.obsrvtnVlRngLwVl;
+    }
+    
+    public void setObsrvtnVlRngLwVl(String obsrvtnVlRngLwVl) {
+        this.obsrvtnVlRngLwVl = obsrvtnVlRngLwVl;
+    }
+    
+    
+    
+    public String getObsrvtnVlRtioDnmntrCd() {
+        return this.obsrvtnVlRtioDnmntrCd;
+    }
+    
+    public void setObsrvtnVlRtioDnmntrCd(String obsrvtnVlRtioDnmntrCd) {
+        this.obsrvtnVlRtioDnmntrCd = obsrvtnVlRtioDnmntrCd;
+    }
+    
+    
+    
+    public String getObsrvtnVlRtioDnmntrCmprtr() {
+        return this.obsrvtnVlRtioDnmntrCmprtr;
+    }
+    
+    public void setObsrvtnVlRtioDnmntrCmprtr(String obsrvtnVlRtioDnmntrCmprtr) {
+        this.obsrvtnVlRtioDnmntrCmprtr = obsrvtnVlRtioDnmntrCmprtr;
+    }
+    
+    
+    
+    public String getObsrvtnVlRtioDnmntrSys() {
+        return this.obsrvtnVlRtioDnmntrSys;
+    }
+    
+    public void setObsrvtnVlRtioDnmntrSys(String obsrvtnVlRtioDnmntrSys) {
+        this.obsrvtnVlRtioDnmntrSys = obsrvtnVlRtioDnmntrSys;
+    }
+    
+    
+    
+    public String getObsrvtnVlRtioDnmntrUnt() {
+        return this.obsrvtnVlRtioDnmntrUnt;
+    }
+    
+    public void setObsrvtnVlRtioDnmntrUnt(String obsrvtnVlRtioDnmntrUnt) {
+        this.obsrvtnVlRtioDnmntrUnt = obsrvtnVlRtioDnmntrUnt;
+    }
+    
+    
+    
+    public String getObsrvtnVlRtioDnmntrVl() {
+        return this.obsrvtnVlRtioDnmntrVl;
+    }
+    
+    public void setObsrvtnVlRtioDnmntrVl(String obsrvtnVlRtioDnmntrVl) {
+        this.obsrvtnVlRtioDnmntrVl = obsrvtnVlRtioDnmntrVl;
+    }
+    
+    
+    
+    public String getObsrvtnVlRtioNmrtrCd() {
+        return this.obsrvtnVlRtioNmrtrCd;
+    }
+    
+    public void setObsrvtnVlRtioNmrtrCd(String obsrvtnVlRtioNmrtrCd) {
+        this.obsrvtnVlRtioNmrtrCd = obsrvtnVlRtioNmrtrCd;
+    }
+    
+    
+    
+    public String getObsrvtnVlRtioNmrtrCmprtr() {
+        return this.obsrvtnVlRtioNmrtrCmprtr;
+    }
+    
+    public void setObsrvtnVlRtioNmrtrCmprtr(String obsrvtnVlRtioNmrtrCmprtr) {
+        this.obsrvtnVlRtioNmrtrCmprtr = obsrvtnVlRtioNmrtrCmprtr;
+    }
+    
+    
+    
+    public String getObsrvtnVlRtioNmrtrSys() {
+        return this.obsrvtnVlRtioNmrtrSys;
+    }
+    
+    public void setObsrvtnVlRtioNmrtrSys(String obsrvtnVlRtioNmrtrSys) {
+        this.obsrvtnVlRtioNmrtrSys = obsrvtnVlRtioNmrtrSys;
+    }
+    
+    
+    
+    public String getObsrvtnVlRtioNmrtrUnt() {
+        return this.obsrvtnVlRtioNmrtrUnt;
+    }
+    
+    public void setObsrvtnVlRtioNmrtrUnt(String obsrvtnVlRtioNmrtrUnt) {
+        this.obsrvtnVlRtioNmrtrUnt = obsrvtnVlRtioNmrtrUnt;
+    }
+    
+    
+    
+    public String getObsrvtnVlRtioNmrtrVl() {
+        return this.obsrvtnVlRtioNmrtrVl;
+    }
+    
+    public void setObsrvtnVlRtioNmrtrVl(String obsrvtnVlRtioNmrtrVl) {
+        this.obsrvtnVlRtioNmrtrVl = obsrvtnVlRtioNmrtrVl;
+    }
+    
+    
+    
+    public String getObsrvtnVlSampledDataData() {
+        return this.obsrvtnVlSampledDataData;
+    }
+    
+    public void setObsrvtnVlSampledDataData(String obsrvtnVlSampledDataData) {
+        this.obsrvtnVlSampledDataData = obsrvtnVlSampledDataData;
+    }
+    
+    
+    
+    public String getObsrvtnVlSampledDataDimensions() {
+        return this.obsrvtnVlSampledDataDimensions;
+    }
+    
+    public void setObsrvtnVlSampledDataDimensions(String obsrvtnVlSampledDataDimensions) {
+        this.obsrvtnVlSampledDataDimensions = obsrvtnVlSampledDataDimensions;
+    }
+    
+    
+    
+    public String getObsrvtnVlSampledDataFactor() {
+        return this.obsrvtnVlSampledDataFactor;
+    }
+    
+    public void setObsrvtnVlSampledDataFactor(String obsrvtnVlSampledDataFactor) {
+        this.obsrvtnVlSampledDataFactor = obsrvtnVlSampledDataFactor;
+    }
+    
+    
+    
+    public String getObsrvtnVlSampledDataLwerLmt() {
+        return this.obsrvtnVlSampledDataLwerLmt;
+    }
+    
+    public void setObsrvtnVlSampledDataLwerLmt(String obsrvtnVlSampledDataLwerLmt) {
+        this.obsrvtnVlSampledDataLwerLmt = obsrvtnVlSampledDataLwerLmt;
+    }
+    
+    
+    
+    public String getObsrvtnVlSampledDataOriginCd() {
+        return this.obsrvtnVlSampledDataOriginCd;
+    }
+    
+    public void setObsrvtnVlSampledDataOriginCd(String obsrvtnVlSampledDataOriginCd) {
+        this.obsrvtnVlSampledDataOriginCd = obsrvtnVlSampledDataOriginCd;
+    }
+    
+    
+    
+    public String getObsrvtnVlSampledDataOriginCmprtr() {
+        return this.obsrvtnVlSampledDataOriginCmprtr;
+    }
+    
+    public void setObsrvtnVlSampledDataOriginCmprtr(String obsrvtnVlSampledDataOriginCmprtr) {
+        this.obsrvtnVlSampledDataOriginCmprtr = obsrvtnVlSampledDataOriginCmprtr;
+    }
+    
+    
+    
+    public String getObsrvtnVlSampledDataOriginSys() {
+        return this.obsrvtnVlSampledDataOriginSys;
+    }
+    
+    public void setObsrvtnVlSampledDataOriginSys(String obsrvtnVlSampledDataOriginSys) {
+        this.obsrvtnVlSampledDataOriginSys = obsrvtnVlSampledDataOriginSys;
+    }
+    
+    
+    
+    public String getObsrvtnVlSampledDataOriginUnt() {
+        return this.obsrvtnVlSampledDataOriginUnt;
+    }
+    
+    public void setObsrvtnVlSampledDataOriginUnt(String obsrvtnVlSampledDataOriginUnt) {
+        this.obsrvtnVlSampledDataOriginUnt = obsrvtnVlSampledDataOriginUnt;
+    }
+    
+    
+    
+    public String getObsrvtnVlSampledDataOriginVl() {
+        return this.obsrvtnVlSampledDataOriginVl;
+    }
+    
+    public void setObsrvtnVlSampledDataOriginVl(String obsrvtnVlSampledDataOriginVl) {
+        this.obsrvtnVlSampledDataOriginVl = obsrvtnVlSampledDataOriginVl;
+    }
+    
+    
+    
+    public String getObsrvtnVlSampledDataPrd() {
+        return this.obsrvtnVlSampledDataPrd;
+    }
+    
+    public void setObsrvtnVlSampledDataPrd(String obsrvtnVlSampledDataPrd) {
+        this.obsrvtnVlSampledDataPrd = obsrvtnVlSampledDataPrd;
+    }
+    
+    
+    
+    public String getObsrvtnVlSampledDataUpperLmt() {
+        return this.obsrvtnVlSampledDataUpperLmt;
+    }
+    
+    public void setObsrvtnVlSampledDataUpperLmt(String obsrvtnVlSampledDataUpperLmt) {
+        this.obsrvtnVlSampledDataUpperLmt = obsrvtnVlSampledDataUpperLmt;
+    }
+    
+    
+    
+    public String getObsrvtnVlStrgTyp() {
+        return this.obsrvtnVlStrgTyp;
+    }
+    
+    public void setObsrvtnVlStrgTyp(String obsrvtnVlStrgTyp) {
+        this.obsrvtnVlStrgTyp = obsrvtnVlStrgTyp;
+    }
+    
+    
+    
+    public String getObsrvtnVlTimeTyp() {
+        return this.obsrvtnVlTimeTyp;
+    }
+    
+    public void setObsrvtnVlTimeTyp(String obsrvtnVlTimeTyp) {
+        this.obsrvtnVlTimeTyp = obsrvtnVlTimeTyp;
+    }
+    
+    
+    
 
 
 

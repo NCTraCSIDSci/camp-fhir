@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Jun 6, 2022, 11:02:25 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="ResearchStudy" optimistic-lock="none" table="ResearchStudy">
+        <id name="id" type="string">
+            <column length="64" name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="rsrchStdyArmDscrptn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Arm_Dscrptn"/>
+        </property>
+        <property name="rsrchStdyArmNm" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Arm_Nm"/>
+        </property>
+        <property name="rsrchStdyArmTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Arm_Typ_Cdg_Cd"/>
+        </property>
+        <property name="rsrchStdyArmTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Arm_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="rsrchStdyArmTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Arm_Typ_Cdg_Sys"/>
+        </property>
+        <property name="rsrchStdyArmTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Arm_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="rsrchStdyArmTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Arm_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="rsrchStdyArmTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Arm_Typ_Txt"/>
+        </property>
+        <property name="rsrchStdyCtgryCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Ctgry_Cdg_Cd"/>
+        </property>
+        <property name="rsrchStdyCtgryCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Ctgry_Cdg_Dsply"/>
+        </property>
+        <property name="rsrchStdyCtgryCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Ctgry_Cdg_Sys"/>
+        </property>
+        <property name="rsrchStdyCtgryCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Ctgry_Cdg_UsrSltd"/>
+        </property>
+        <property name="rsrchStdyCtgryCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Ctgry_Cdg_Vrsn"/>
+        </property>
+        <property name="rsrchStdyCtgryTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Ctgry_Txt"/>
+        </property>
+        <property name="rsrchStdyCndtnCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Cndtn_Cdg_Cd"/>
+        </property>
+        <property name="rsrchStdyCndtnCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Cndtn_Cdg_Dsply"/>
+        </property>
+        <property name="rsrchStdyCndtnCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Cndtn_Cdg_Sys"/>
+        </property>
+        <property name="rsrchStdyCndtnCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Cndtn_Cdg_UsrSltd"/>
+        </property>
+        <property name="rsrchStdyCndtnCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Cndtn_Cdg_Vrsn"/>
+        </property>
+        <property name="rsrchStdyCndtnTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Cndtn_Txt"/>
+        </property>
+        <property name="rsrchStdyCntctNm" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Cntct_Nm"/>
+        </property>
+        <property name="rsrchStdyCntctTlcmPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Cntct_Tlcm_Prd_End"/>
+        </property>
+        <property name="rsrchStdyCntctTlcmPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Cntct_Tlcm_Prd_Strt"/>
+        </property>
+        <property name="rsrchStdyCntctTlcmRnk" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Cntct_Tlcm_Rnk"/>
+        </property>
+        <property name="rsrchStdyCntctTlcmSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Cntct_Tlcm_Sys"/>
+        </property>
+        <property name="rsrchStdyCntctTlcmUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Cntct_Tlcm_Use"/>
+        </property>
+        <property name="rsrchStdyCntctTlcmVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Cntct_Tlcm_Vl"/>
+        </property>
+        <property name="rsrchStdyDscrptn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Dscrptn"/>
+        </property>
+        <property name="rsrchStdyEnrollment" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Enrollment"/>
+        </property>
+        <property name="rsrchStdyFocusCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Focus_Cdg_Cd"/>
+        </property>
+        <property name="rsrchStdyFocusCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Focus_Cdg_Dsply"/>
+        </property>
+        <property name="rsrchStdyFocusCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Focus_Cdg_Sys"/>
+        </property>
+        <property name="rsrchStdyFocusCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Focus_Cdg_UsrSltd"/>
+        </property>
+        <property name="rsrchStdyFocusCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Focus_Cdg_Vrsn"/>
+        </property>
+        <property name="rsrchStdyFocusTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Focus_Txt"/>
+        </property>
+        <property name="rsrchStdyIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Id_Assigner"/>
+        </property>
+        <property name="rsrchStdyIdPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Id_Prd_End"/>
+        </property>
+        <property name="rsrchStdyIdPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Id_Prd_Strt"/>
+        </property>
+        <property name="rsrchStdyIdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Id_Sys"/>
+        </property>
+        <property name="rsrchStdyIdTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Id_Typ_Cdg_Cd"/>
+        </property>
+        <property name="rsrchStdyIdTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Id_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="rsrchStdyIdTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Id_Typ_Cdg_Sys"/>
+        </property>
+        <property name="rsrchStdyIdTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Id_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="rsrchStdyIdTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Id_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="rsrchStdyIdTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Id_Typ_Txt"/>
+        </property>
+        <property name="rsrchStdyIdUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Id_Use"/>
+        </property>
+        <property name="rsrchStdyIdVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Id_Vl"/>
+        </property>
+        <property name="rsrchStdyKeywordCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Keyword_Cdg_Cd"/>
+        </property>
+        <property name="rsrchStdyKeywordCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Keyword_Cdg_Dsply"/>
+        </property>
+        <property name="rsrchStdyKeywordCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Keyword_Cdg_Sys"/>
+        </property>
+        <property name="rsrchStdyKeywordCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Keyword_Cdg_UsrSltd"/>
+        </property>
+        <property name="rsrchStdyKeywordCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Keyword_Cdg_Vrsn"/>
+        </property>
+        <property name="rsrchStdyKeywordTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Keyword_Txt"/>
+        </property>
+        <property name="rsrchStdyLctnCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Lctn_Cdg_Cd"/>
+        </property>
+        <property name="rsrchStdyLctnCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Lctn_Cdg_Dsply"/>
+        </property>
+        <property name="rsrchStdyLctnCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Lctn_Cdg_Sys"/>
+        </property>
+        <property name="rsrchStdyLctnCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Lctn_Cdg_UsrSltd"/>
+        </property>
+        <property name="rsrchStdyLctnCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Lctn_Cdg_Vrsn"/>
+        </property>
+        <property name="rsrchStdyLctnTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Lctn_Txt"/>
+        </property>
+        <property name="rsrchStdyNtAthrRfrnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Nt_AthrRfrnc"/>
+        </property>
+        <property name="rsrchStdyNtAthrStrgTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Nt_AthrStrgTyp"/>
+        </property>
+        <property name="rsrchStdyNtTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Nt_Txt"/>
+        </property>
+        <property name="rsrchStdyNtTime" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Nt_Time"/>
+        </property>
+        <property name="rsrchStdyObjectiveNm" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Objective_Nm"/>
+        </property>
+        <property name="rsrchStdyObjectiveTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Objective_Typ_Cdg_Cd"/>
+        </property>
+        <property name="rsrchStdyObjectiveTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Objective_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="rsrchStdyObjectiveTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Objective_Typ_Cdg_Sys"/>
+        </property>
+        <property name="rsrchStdyObjectiveTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Objective_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="rsrchStdyObjectiveTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Objective_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="rsrchStdyObjectiveTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Objective_Typ_Txt"/>
+        </property>
+        <property name="rsrchStdyPartOf" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_PartOf"/>
+        </property>
+        <property name="rsrchStdyPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Prd_End"/>
+        </property>
+        <property name="rsrchStdyPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Prd_Strt"/>
+        </property>
+        <property name="rsrchStdyPhaseCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Phase_Cdg_Cd"/>
+        </property>
+        <property name="rsrchStdyPhaseCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Phase_Cdg_Dsply"/>
+        </property>
+        <property name="rsrchStdyPhaseCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Phase_Cdg_Sys"/>
+        </property>
+        <property name="rsrchStdyPhaseCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Phase_Cdg_UsrSltd"/>
+        </property>
+        <property name="rsrchStdyPhaseCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Phase_Cdg_Vrsn"/>
+        </property>
+        <property name="rsrchStdyPhaseTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Phase_Txt"/>
+        </property>
+        <property name="rsrchStdyPrimaryPrpseTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_PrimaryPrpseTyp_Cdg_Cd"/>
+        </property>
+        <property name="rsrchStdyPrimaryPrpseTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_PrimaryPrpseTyp_Cdg_Dsply"/>
+        </property>
+        <property name="rsrchStdyPrimaryPrpseTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_PrimaryPrpseTyp_Cdg_Sys"/>
+        </property>
+        <property name="rsrchStdyPrimaryPrpseTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_PrimaryPrpseTyp_Cdg_UsrSltd"/>
+        </property>
+        <property name="rsrchStdyPrimaryPrpseTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_PrimaryPrpseTyp_Cdg_Vrsn"/>
+        </property>
+        <property name="rsrchStdyPrimaryPrpseTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_PrimaryPrpseTyp_Txt"/>
+        </property>
+        <property name="rsrchStdyPrincipalInvestigator" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_PrincipalInvestigator"/>
+        </property>
+        <property name="rsrchStdyProtocol" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Protocol"/>
+        </property>
+        <property name="rsrchStdyRsnStoppedCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_RsnStopped_Cdg_Cd"/>
+        </property>
+        <property name="rsrchStdyRsnStoppedCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_RsnStopped_Cdg_Dsply"/>
+        </property>
+        <property name="rsrchStdyRsnStoppedCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_RsnStopped_Cdg_Sys"/>
+        </property>
+        <property name="rsrchStdyRsnStoppedCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_RsnStopped_Cdg_UsrSltd"/>
+        </property>
+        <property name="rsrchStdyRsnStoppedCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_RsnStopped_Cdg_Vrsn"/>
+        </property>
+        <property name="rsrchStdyRsnStoppedTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_RsnStopped_Txt"/>
+        </property>
+        <property name="rsrchStdyRltedArtfctCitation" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_RltedArtfct_Citation"/>
+        </property>
+        <property name="rsrchStdyRltedArtfctDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_RltedArtfct_Dsply"/>
+        </property>
+        <property name="rsrchStdyRltedArtfctDocCntntTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_RltedArtfct_Doc_CntntTyp"/>
+        </property>
+        <property name="rsrchStdyRltedArtfctDocCreation" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_RltedArtfct_Doc_Creation"/>
+        </property>
+        <property name="rsrchStdyRltedArtfctDocData" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_RltedArtfct_Doc_Data"/>
+        </property>
+        <property name="rsrchStdyRltedArtfctDocHash" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_RltedArtfct_Doc_Hash"/>
+        </property>
+        <property name="rsrchStdyRltedArtfctDocLnguage" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_RltedArtfct_Doc_Lnguage"/>
+        </property>
+        <property name="rsrchStdyRltedArtfctDocSz" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_RltedArtfct_Doc_Sz"/>
+        </property>
+        <property name="rsrchStdyRltedArtfctDocTtl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_RltedArtfct_Doc_Ttl"/>
+        </property>
+        <property name="rsrchStdyRltedArtfctDocUrl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_RltedArtfct_Doc_Url"/>
+        </property>
+        <property name="rsrchStdyRltedArtfctLbl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_RltedArtfct_Lbl"/>
+        </property>
+        <property name="rsrchStdyRltedArtfctRsrc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_RltedArtfct_Rsrc"/>
+        </property>
+        <property name="rsrchStdyRltedArtfctTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_RltedArtfct_Typ"/>
+        </property>
+        <property name="rsrchStdyRltedArtfctUrl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_RltedArtfct_Url"/>
+        </property>
+        <property name="rsrchStdySite" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Site"/>
+        </property>
+        <property name="rsrchStdySponsor" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Sponsor"/>
+        </property>
+        <property name="rsrchStdySts" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Sts"/>
+        </property>
+        <property name="rsrchStdyTtl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchStdy_Ttl"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,1822 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Jun 6, 2022, 11:02:25 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="PlanDefinition" optimistic-lock="none" table="PlanDefinition">
+        <id name="id" type="string">
+            <column length="64" name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="plnDfnActnCardinalityBehavior" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_CardinalityBehavior"/>
+        </property>
+        <property name="plnDfnActnCdCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Cd_Cdg_Cd"/>
+        </property>
+        <property name="plnDfnActnCdCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Cd_Cdg_Dsply"/>
+        </property>
+        <property name="plnDfnActnCdCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Cd_Cdg_Sys"/>
+        </property>
+        <property name="plnDfnActnCdCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Cd_Cdg_UsrSltd"/>
+        </property>
+        <property name="plnDfnActnCdCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Cd_Cdg_Vrsn"/>
+        </property>
+        <property name="plnDfnActnCdTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Cd_Txt"/>
+        </property>
+        <property name="plnDfnActnCndtnExprsnDscrptn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Cndtn_Exprsn_Dscrptn"/>
+        </property>
+        <property name="plnDfnActnCndtnExprsnExprsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Cndtn_Exprsn_Exprsn"/>
+        </property>
+        <property name="plnDfnActnCndtnExprsnLnguage" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Cndtn_Exprsn_Lnguage"/>
+        </property>
+        <property name="plnDfnActnCndtnExprsnNm" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Cndtn_Exprsn_Nm"/>
+        </property>
+        <property name="plnDfnActnCndtnExprsnRfrnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Cndtn_Exprsn_Rfrnc"/>
+        </property>
+        <property name="plnDfnActnCndtnKind" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Cndtn_Kind"/>
+        </property>
+        <property name="plnDfnActnDfnCanonicalTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_DfnCanonicalTyp"/>
+        </property>
+        <property name="plnDfnActnDfnUriTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_DfnUriTyp"/>
+        </property>
+        <property name="plnDfnActnDscrptn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Dscrptn"/>
+        </property>
+        <property name="plnDfnActnDocationCitation" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Docation_Citation"/>
+        </property>
+        <property name="plnDfnActnDocationDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Docation_Dsply"/>
+        </property>
+        <property name="plnDfnActnDocationDocCntntTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Docation_Doc_CntntTyp"/>
+        </property>
+        <property name="plnDfnActnDocationDocCreation" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Docation_Doc_Creation"/>
+        </property>
+        <property name="plnDfnActnDocationDocData" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Docation_Doc_Data"/>
+        </property>
+        <property name="plnDfnActnDocationDocHash" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Docation_Doc_Hash"/>
+        </property>
+        <property name="plnDfnActnDocationDocLnguage" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Docation_Doc_Lnguage"/>
+        </property>
+        <property name="plnDfnActnDocationDocSz" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Docation_Doc_Sz"/>
+        </property>
+        <property name="plnDfnActnDocationDocTtl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Docation_Doc_Ttl"/>
+        </property>
+        <property name="plnDfnActnDocationDocUrl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Docation_Doc_Url"/>
+        </property>
+        <property name="plnDfnActnDocationLbl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Docation_Lbl"/>
+        </property>
+        <property name="plnDfnActnDocationRsrc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Docation_Rsrc"/>
+        </property>
+        <property name="plnDfnActnDocationTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Docation_Typ"/>
+        </property>
+        <property name="plnDfnActnDocationUrl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Docation_Url"/>
+        </property>
+        <property name="plnDfnActnDynamicVlExprsnDscrptn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_DynamicVl_Exprsn_Dscrptn"/>
+        </property>
+        <property name="plnDfnActnDynamicVlExprsnExprsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_DynamicVl_Exprsn_Exprsn"/>
+        </property>
+        <property name="plnDfnActnDynamicVlExprsnLnguage" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_DynamicVl_Exprsn_Lnguage"/>
+        </property>
+        <property name="plnDfnActnDynamicVlExprsnNm" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_DynamicVl_Exprsn_Nm"/>
+        </property>
+        <property name="plnDfnActnDynamicVlExprsnRfrnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_DynamicVl_Exprsn_Rfrnc"/>
+        </property>
+        <property name="plnDfnActnDynamicVlPath" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_DynamicVl_Path"/>
+        </property>
+        <property name="plnDfnActnGoalId" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_GoalId"/>
+        </property>
+        <property name="plnDfnActnGrpingBehavior" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_GrpingBehavior"/>
+        </property>
+        <property name="plnDfnActnInputCdFltrCdCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Input_CdFltr_Cd_Cd"/>
+        </property>
+        <property name="plnDfnActnInputCdFltrCdDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Input_CdFltr_Cd_Dsply"/>
+        </property>
+        <property name="plnDfnActnInputCdFltrCdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Input_CdFltr_Cd_Sys"/>
+        </property>
+        <property name="plnDfnActnInputCdFltrCdUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Input_CdFltr_Cd_UsrSltd"/>
+        </property>
+        <property name="plnDfnActnInputCdFltrCdVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Input_CdFltr_Cd_Vrsn"/>
+        </property>
+        <property name="plnDfnActnInputCdFltrPath" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Input_CdFltr_Path"/>
+        </property>
+        <property name="plnDfnActnInputCdFltrSrchParam" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Input_CdFltr_SrchParam"/>
+        </property>
+        <property name="plnDfnActnInputCdFltrVlSt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Input_CdFltr_VlSt"/>
+        </property>
+        <property name="plnDfnActnInputDtFltrPath" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Input_DtFltr_Path"/>
+        </property>
+        <property name="plnDfnActnInputDtFltrSrchParam" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Input_DtFltr_SrchParam"/>
+        </property>
+        <property name="plnDfnActnInputDtFltrVlDtTimeTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Input_DtFltr_VlDtTimeTyp"/>
+        </property>
+        <property name="plnDfnActnInputDtFltrVlPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Input_DtFltr_VlPrd_End"/>
+        </property>
+        <property name="plnDfnActnInputDtFltrVlPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Input_DtFltr_VlPrd_Strt"/>
+        </property>
+        <property name="plnDfnActnInputLmt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Input_Lmt"/>
+        </property>
+        <property name="plnDfnActnInputMustSupport" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Input_MustSupport"/>
+        </property>
+        <property name="plnDfnActnInputProfile" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Input_Profile"/>
+        </property>
+        <property name="plnDfnActnInputSortDirection" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Input_Sort_Direction"/>
+        </property>
+        <property name="plnDfnActnInputSortPath" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Input_Sort_Path"/>
+        </property>
+        <property name="plnDfnActnInputSbjctCdbleCncptCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Input_SbjctCdbleCncpt_Cdg_Cd"/>
+        </property>
+        <property name="plnDfnActnInputSbjctCdbleCncptCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Input_SbjctCdbleCncpt_Cdg_Dsply"/>
+        </property>
+        <property name="plnDfnActnInputSbjctCdbleCncptCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Input_SbjctCdbleCncpt_Cdg_Sys"/>
+        </property>
+        <property name="plnDfnActnInputSbjctCdbleCncptCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Input_SbjctCdbleCncpt_Cdg_UsrSltd"/>
+        </property>
+        <property name="plnDfnActnInputSbjctCdbleCncptCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Input_SbjctCdbleCncpt_Cdg_Vrsn"/>
+        </property>
+        <property name="plnDfnActnInputSbjctCdbleCncptTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Input_SbjctCdbleCncpt_Txt"/>
+        </property>
+        <property name="plnDfnActnInputSbjctRfrnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Input_SbjctRfrnc"/>
+        </property>
+        <property name="plnDfnActnInputTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Input_Typ"/>
+        </property>
+        <property name="plnDfnActnOutputCdFltrCdCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Output_CdFltr_Cd_Cd"/>
+        </property>
+        <property name="plnDfnActnOutputCdFltrCdDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Output_CdFltr_Cd_Dsply"/>
+        </property>
+        <property name="plnDfnActnOutputCdFltrCdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Output_CdFltr_Cd_Sys"/>
+        </property>
+        <property name="plnDfnActnOutputCdFltrCdUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Output_CdFltr_Cd_UsrSltd"/>
+        </property>
+        <property name="plnDfnActnOutputCdFltrCdVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Output_CdFltr_Cd_Vrsn"/>
+        </property>
+        <property name="plnDfnActnOutputCdFltrPath" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Output_CdFltr_Path"/>
+        </property>
+        <property name="plnDfnActnOutputCdFltrSrchParam" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Output_CdFltr_SrchParam"/>
+        </property>
+        <property name="plnDfnActnOutputCdFltrVlSt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Output_CdFltr_VlSt"/>
+        </property>
+        <property name="plnDfnActnOutputDtFltrPath" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Output_DtFltr_Path"/>
+        </property>
+        <property name="plnDfnActnOutputDtFltrSrchParam" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Output_DtFltr_SrchParam"/>
+        </property>
+        <property name="plnDfnActnOutputDtFltrVlDtTimeTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Output_DtFltr_VlDtTimeTyp"/>
+        </property>
+        <property name="plnDfnActnOutputDtFltrVlPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Output_DtFltr_VlPrd_End"/>
+        </property>
+        <property name="plnDfnActnOutputDtFltrVlPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Output_DtFltr_VlPrd_Strt"/>
+        </property>
+        <property name="plnDfnActnOutputLmt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Output_Lmt"/>
+        </property>
+        <property name="plnDfnActnOutputMustSupport" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Output_MustSupport"/>
+        </property>
+        <property name="plnDfnActnOutputProfile" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Output_Profile"/>
+        </property>
+        <property name="plnDfnActnOutputSortDirection" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Output_Sort_Direction"/>
+        </property>
+        <property name="plnDfnActnOutputSortPath" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Output_Sort_Path"/>
+        </property>
+        <property name="plnDfnActnOutputSbjctCdbleCncptCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Output_SbjctCdbleCncpt_Cdg_Cd"/>
+        </property>
+        <property name="plnDfnActnOutputSbjctCdbleCncptCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Output_SbjctCdbleCncpt_Cdg_Dsply"/>
+        </property>
+        <property name="plnDfnActnOutputSbjctCdbleCncptCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Output_SbjctCdbleCncpt_Cdg_Sys"/>
+        </property>
+        <property name="plnDfnActnOutputSbjctCdbleCncptCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Output_SbjctCdbleCncpt_Cdg_UsrSltd"/>
+        </property>
+        <property name="plnDfnActnOutputSbjctCdbleCncptCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Output_SbjctCdbleCncpt_Cdg_Vrsn"/>
+        </property>
+        <property name="plnDfnActnOutputSbjctCdbleCncptTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Output_SbjctCdbleCncpt_Txt"/>
+        </property>
+        <property name="plnDfnActnOutputSbjctRfrnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Output_SbjctRfrnc"/>
+        </property>
+        <property name="plnDfnActnOutputTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Output_Typ"/>
+        </property>
+        <property name="plnDfnActnPrtcpntRoleCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Prtcpnt_Role_Cdg_Cd"/>
+        </property>
+        <property name="plnDfnActnPrtcpntRoleCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Prtcpnt_Role_Cdg_Dsply"/>
+        </property>
+        <property name="plnDfnActnPrtcpntRoleCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Prtcpnt_Role_Cdg_Sys"/>
+        </property>
+        <property name="plnDfnActnPrtcpntRoleCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Prtcpnt_Role_Cdg_UsrSltd"/>
+        </property>
+        <property name="plnDfnActnPrtcpntRoleCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Prtcpnt_Role_Cdg_Vrsn"/>
+        </property>
+        <property name="plnDfnActnPrtcpntRoleTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Prtcpnt_Role_Txt"/>
+        </property>
+        <property name="plnDfnActnPrtcpntTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Prtcpnt_Typ"/>
+        </property>
+        <property name="plnDfnActnPrecheckBehavior" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_PrecheckBehavior"/>
+        </property>
+        <property name="plnDfnActnPrefix" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Prefix"/>
+        </property>
+        <property name="plnDfnActnPriority" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Priority"/>
+        </property>
+        <property name="plnDfnActnRsnCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Rsn_Cdg_Cd"/>
+        </property>
+        <property name="plnDfnActnRsnCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Rsn_Cdg_Dsply"/>
+        </property>
+        <property name="plnDfnActnRsnCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Rsn_Cdg_Sys"/>
+        </property>
+        <property name="plnDfnActnRsnCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Rsn_Cdg_UsrSltd"/>
+        </property>
+        <property name="plnDfnActnRsnCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Rsn_Cdg_Vrsn"/>
+        </property>
+        <property name="plnDfnActnRsnTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Rsn_Txt"/>
+        </property>
+        <property name="plnDfnActnRltedActnActnId" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_RltedActn_ActnId"/>
+        </property>
+        <property name="plnDfnActnRltedActnOffRngHiCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_RltedActn_OffRng_Hi_Cd"/>
+        </property>
+        <property name="plnDfnActnRltedActnOffRngHiCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_RltedActn_OffRng_Hi_Cmprtr"/>
+        </property>
+        <property name="plnDfnActnRltedActnOffRngHiSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_RltedActn_OffRng_Hi_Sys"/>
+        </property>
+        <property name="plnDfnActnRltedActnOffRngHiUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_RltedActn_OffRng_Hi_Unt"/>
+        </property>
+        <property name="plnDfnActnRltedActnOffRngHiVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_RltedActn_OffRng_Hi_Vl"/>
+        </property>
+        <property name="plnDfnActnRltedActnOffRngLwCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_RltedActn_OffRng_Lw_Cd"/>
+        </property>
+        <property name="plnDfnActnRltedActnOffRngLwCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_RltedActn_OffRng_Lw_Cmprtr"/>
+        </property>
+        <property name="plnDfnActnRltedActnOffRngLwSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_RltedActn_OffRng_Lw_Sys"/>
+        </property>
+        <property name="plnDfnActnRltedActnOffRngLwUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_RltedActn_OffRng_Lw_Unt"/>
+        </property>
+        <property name="plnDfnActnRltedActnOffRngLwVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_RltedActn_OffRng_Lw_Vl"/>
+        </property>
+        <property name="plnDfnActnRltedActnRltnship" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_RltedActn_Rltnship"/>
+        </property>
+        <property name="plnDfnActnRequiredBehavior" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_RequiredBehavior"/>
+        </property>
+        <property name="plnDfnActnSelectionBehavior" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_SelectionBehavior"/>
+        </property>
+        <property name="plnDfnActnSbjctCdbleCncptCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_SbjctCdbleCncpt_Cdg_Cd"/>
+        </property>
+        <property name="plnDfnActnSbjctCdbleCncptCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_SbjctCdbleCncpt_Cdg_Dsply"/>
+        </property>
+        <property name="plnDfnActnSbjctCdbleCncptCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_SbjctCdbleCncpt_Cdg_Sys"/>
+        </property>
+        <property name="plnDfnActnSbjctCdbleCncptCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_SbjctCdbleCncpt_Cdg_UsrSltd"/>
+        </property>
+        <property name="plnDfnActnSbjctCdbleCncptCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_SbjctCdbleCncpt_Cdg_Vrsn"/>
+        </property>
+        <property name="plnDfnActnSbjctCdbleCncptTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_SbjctCdbleCncpt_Txt"/>
+        </property>
+        <property name="plnDfnActnSbjctRfrnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_SbjctRfrnc"/>
+        </property>
+        <property name="plnDfnActnTxtEquivalent" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TxtEquivalent"/>
+        </property>
+        <property name="plnDfnActnTmgDtTimeTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgDtTimeTyp"/>
+        </property>
+        <property name="plnDfnActnTmgPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgPrd_End"/>
+        </property>
+        <property name="plnDfnActnTmgPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgPrd_Strt"/>
+        </property>
+        <property name="plnDfnActnTmgRngHiCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgRng_Hi_Cd"/>
+        </property>
+        <property name="plnDfnActnTmgRngHiCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgRng_Hi_Cmprtr"/>
+        </property>
+        <property name="plnDfnActnTmgRngHiSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgRng_Hi_Sys"/>
+        </property>
+        <property name="plnDfnActnTmgRngHiUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgRng_Hi_Unt"/>
+        </property>
+        <property name="plnDfnActnTmgRngHiVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgRng_Hi_Vl"/>
+        </property>
+        <property name="plnDfnActnTmgRngLwCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgRng_Lw_Cd"/>
+        </property>
+        <property name="plnDfnActnTmgRngLwCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgRng_Lw_Cmprtr"/>
+        </property>
+        <property name="plnDfnActnTmgRngLwSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgRng_Lw_Sys"/>
+        </property>
+        <property name="plnDfnActnTmgRngLwUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgRng_Lw_Unt"/>
+        </property>
+        <property name="plnDfnActnTmgRngLwVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgRng_Lw_Vl"/>
+        </property>
+        <property name="plnDfnActnTmgTmgCdCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgTmg_Cd_Cdg_Cd"/>
+        </property>
+        <property name="plnDfnActnTmgTmgCdCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgTmg_Cd_Cdg_Dsply"/>
+        </property>
+        <property name="plnDfnActnTmgTmgCdCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgTmg_Cd_Cdg_Sys"/>
+        </property>
+        <property name="plnDfnActnTmgTmgCdCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgTmg_Cd_Cdg_UsrSltd"/>
+        </property>
+        <property name="plnDfnActnTmgTmgCdCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgTmg_Cd_Cdg_Vrsn"/>
+        </property>
+        <property name="plnDfnActnTmgTmgCdTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgTmg_Cd_Txt"/>
+        </property>
+        <property name="plnDfnActnTmgTmgEvnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgTmg_Evnt"/>
+        </property>
+        <property name="plnDfnActnTmgTmgRptBndsPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgTmg_Rpt_BndsPrd_End"/>
+        </property>
+        <property name="plnDfnActnTmgTmgRptBndsPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgTmg_Rpt_BndsPrd_Strt"/>
+        </property>
+        <property name="plnDfnActnTmgTmgRptBndsRngHiCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgTmg_Rpt_BndsRng_Hi_Cd"/>
+        </property>
+        <property name="plnDfnActnTmgTmgRptBndsRngHiCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgTmg_Rpt_BndsRng_Hi_Cmprtr"/>
+        </property>
+        <property name="plnDfnActnTmgTmgRptBndsRngHiSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgTmg_Rpt_BndsRng_Hi_Sys"/>
+        </property>
+        <property name="plnDfnActnTmgTmgRptBndsRngHiUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgTmg_Rpt_BndsRng_Hi_Unt"/>
+        </property>
+        <property name="plnDfnActnTmgTmgRptBndsRngHiVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgTmg_Rpt_BndsRng_Hi_Vl"/>
+        </property>
+        <property name="plnDfnActnTmgTmgRptBndsRngLwCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgTmg_Rpt_BndsRng_Lw_Cd"/>
+        </property>
+        <property name="plnDfnActnTmgTmgRptBndsRngLwCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgTmg_Rpt_BndsRng_Lw_Cmprtr"/>
+        </property>
+        <property name="plnDfnActnTmgTmgRptBndsRngLwSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgTmg_Rpt_BndsRng_Lw_Sys"/>
+        </property>
+        <property name="plnDfnActnTmgTmgRptBndsRngLwUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgTmg_Rpt_BndsRng_Lw_Unt"/>
+        </property>
+        <property name="plnDfnActnTmgTmgRptBndsRngLwVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgTmg_Rpt_BndsRng_Lw_Vl"/>
+        </property>
+        <property name="plnDfnActnTmgTmgRptCnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgTmg_Rpt_Cnt"/>
+        </property>
+        <property name="plnDfnActnTmgTmgRptCntMx" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgTmg_Rpt_CntMx"/>
+        </property>
+        <property name="plnDfnActnTmgTmgRptDayOfWeek" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgTmg_Rpt_DayOfWeek"/>
+        </property>
+        <property name="plnDfnActnTmgTmgRptDuration" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgTmg_Rpt_Duration"/>
+        </property>
+        <property name="plnDfnActnTmgTmgRptDurationMx" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgTmg_Rpt_DurationMx"/>
+        </property>
+        <property name="plnDfnActnTmgTmgRptDurationUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgTmg_Rpt_DurationUnt"/>
+        </property>
+        <property name="plnDfnActnTmgTmgRptFrqncy" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgTmg_Rpt_Frqncy"/>
+        </property>
+        <property name="plnDfnActnTmgTmgRptFrqncyMx" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgTmg_Rpt_FrqncyMx"/>
+        </property>
+        <property name="plnDfnActnTmgTmgRptOff" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgTmg_Rpt_Off"/>
+        </property>
+        <property name="plnDfnActnTmgTmgRptPrd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgTmg_Rpt_Prd"/>
+        </property>
+        <property name="plnDfnActnTmgTmgRptPrdMx" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgTmg_Rpt_PrdMx"/>
+        </property>
+        <property name="plnDfnActnTmgTmgRptPrdUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgTmg_Rpt_PrdUnt"/>
+        </property>
+        <property name="plnDfnActnTmgTmgRptTimeOfDay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgTmg_Rpt_TimeOfDay"/>
+        </property>
+        <property name="plnDfnActnTmgTmgRptWhen" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgTmg_Rpt_When"/>
+        </property>
+        <property name="plnDfnActnTtl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Ttl"/>
+        </property>
+        <property name="plnDfnActnTransform" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Transform"/>
+        </property>
+        <property name="plnDfnActnTrgrCndtnDscrptn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_Cndtn_Dscrptn"/>
+        </property>
+        <property name="plnDfnActnTrgrCndtnExprsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_Cndtn_Exprsn"/>
+        </property>
+        <property name="plnDfnActnTrgrCndtnLnguage" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_Cndtn_Lnguage"/>
+        </property>
+        <property name="plnDfnActnTrgrCndtnNm" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_Cndtn_Nm"/>
+        </property>
+        <property name="plnDfnActnTrgrCndtnRfrnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_Cndtn_Rfrnc"/>
+        </property>
+        <property name="plnDfnActnTrgrDataCdFltrCdCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_Data_CdFltr_Cd_Cd"/>
+        </property>
+        <property name="plnDfnActnTrgrDataCdFltrCdDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_Data_CdFltr_Cd_Dsply"/>
+        </property>
+        <property name="plnDfnActnTrgrDataCdFltrCdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_Data_CdFltr_Cd_Sys"/>
+        </property>
+        <property name="plnDfnActnTrgrDataCdFltrCdUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_Data_CdFltr_Cd_UsrSltd"/>
+        </property>
+        <property name="plnDfnActnTrgrDataCdFltrCdVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_Data_CdFltr_Cd_Vrsn"/>
+        </property>
+        <property name="plnDfnActnTrgrDataCdFltrPath" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_Data_CdFltr_Path"/>
+        </property>
+        <property name="plnDfnActnTrgrDataCdFltrSrchParam" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_Data_CdFltr_SrchParam"/>
+        </property>
+        <property name="plnDfnActnTrgrDataCdFltrVlSt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_Data_CdFltr_VlSt"/>
+        </property>
+        <property name="plnDfnActnTrgrDataDtFltrPath" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_Data_DtFltr_Path"/>
+        </property>
+        <property name="plnDfnActnTrgrDataDtFltrSrchParam" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_Data_DtFltr_SrchParam"/>
+        </property>
+        <property name="plnDfnActnTrgrDataDtFltrVlDtTimeTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_Data_DtFltr_VlDtTimeTyp"/>
+        </property>
+        <property name="plnDfnActnTrgrDataDtFltrVlPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_Data_DtFltr_VlPrd_End"/>
+        </property>
+        <property name="plnDfnActnTrgrDataDtFltrVlPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_Data_DtFltr_VlPrd_Strt"/>
+        </property>
+        <property name="plnDfnActnTrgrDataLmt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_Data_Lmt"/>
+        </property>
+        <property name="plnDfnActnTrgrDataMustSupport" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_Data_MustSupport"/>
+        </property>
+        <property name="plnDfnActnTrgrDataProfile" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_Data_Profile"/>
+        </property>
+        <property name="plnDfnActnTrgrDataSortDirection" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_Data_Sort_Direction"/>
+        </property>
+        <property name="plnDfnActnTrgrDataSortPath" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_Data_Sort_Path"/>
+        </property>
+        <property name="plnDfnActnTrgrDataSbjctCdbleCncptCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_Data_SbjctCdbleCncpt_Cdg_Cd"/>
+        </property>
+        <property name="plnDfnActnTrgrDataSbjctCdbleCncptCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_Data_SbjctCdbleCncpt_Cdg_Dsply"/>
+        </property>
+        <property name="plnDfnActnTrgrDataSbjctCdbleCncptCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_Data_SbjctCdbleCncpt_Cdg_Sys"/>
+        </property>
+        <property name="plnDfnActnTrgrDataSbjctCdbleCncptCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_Data_SbjctCdbleCncpt_Cdg_UsrSltd"/>
+        </property>
+        <property name="plnDfnActnTrgrDataSbjctCdbleCncptCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_Data_SbjctCdbleCncpt_Cdg_Vrsn"/>
+        </property>
+        <property name="plnDfnActnTrgrDataSbjctCdbleCncptTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_Data_SbjctCdbleCncpt_Txt"/>
+        </property>
+        <property name="plnDfnActnTrgrDataSbjctRfrnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_Data_SbjctRfrnc"/>
+        </property>
+        <property name="plnDfnActnTrgrDataTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_Data_Typ"/>
+        </property>
+        <property name="plnDfnActnTrgrNm" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_Nm"/>
+        </property>
+        <property name="plnDfnActnTrgrTmgDtTimeTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_TmgDtTimeTyp"/>
+        </property>
+        <property name="plnDfnActnTrgrTmgDtTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_TmgDtTyp"/>
+        </property>
+        <property name="plnDfnActnTrgrTmgRfrnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_TmgRfrnc"/>
+        </property>
+        <property name="plnDfnActnTrgrTmgTmgCdCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_TmgTmg_Cd_Cdg_Cd"/>
+        </property>
+        <property name="plnDfnActnTrgrTmgTmgCdCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_TmgTmg_Cd_Cdg_Dsply"/>
+        </property>
+        <property name="plnDfnActnTrgrTmgTmgCdCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_TmgTmg_Cd_Cdg_Sys"/>
+        </property>
+        <property name="plnDfnActnTrgrTmgTmgCdCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_TmgTmg_Cd_Cdg_UsrSltd"/>
+        </property>
+        <property name="plnDfnActnTrgrTmgTmgCdCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_TmgTmg_Cd_Cdg_Vrsn"/>
+        </property>
+        <property name="plnDfnActnTrgrTmgTmgCdTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_TmgTmg_Cd_Txt"/>
+        </property>
+        <property name="plnDfnActnTrgrTmgTmgEvnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_TmgTmg_Evnt"/>
+        </property>
+        <property name="plnDfnActnTrgrTmgTmgRptBndsPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_TmgTmg_Rpt_BndsPrd_End"/>
+        </property>
+        <property name="plnDfnActnTrgrTmgTmgRptBndsPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_TmgTmg_Rpt_BndsPrd_Strt"/>
+        </property>
+        <property name="plnDfnActnTrgrTmgTmgRptBndsRngHiCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_TmgTmg_Rpt_BndsRng_Hi_Cd"/>
+        </property>
+        <property name="plnDfnActnTrgrTmgTmgRptBndsRngHiCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_TmgTmg_Rpt_BndsRng_Hi_Cmprtr"/>
+        </property>
+        <property name="plnDfnActnTrgrTmgTmgRptBndsRngHiSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_TmgTmg_Rpt_BndsRng_Hi_Sys"/>
+        </property>
+        <property name="plnDfnActnTrgrTmgTmgRptBndsRngHiUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_TmgTmg_Rpt_BndsRng_Hi_Unt"/>
+        </property>
+        <property name="plnDfnActnTrgrTmgTmgRptBndsRngHiVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_TmgTmg_Rpt_BndsRng_Hi_Vl"/>
+        </property>
+        <property name="plnDfnActnTrgrTmgTmgRptBndsRngLwCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_TmgTmg_Rpt_BndsRng_Lw_Cd"/>
+        </property>
+        <property name="plnDfnActnTrgrTmgTmgRptBndsRngLwCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_TmgTmg_Rpt_BndsRng_Lw_Cmprtr"/>
+        </property>
+        <property name="plnDfnActnTrgrTmgTmgRptBndsRngLwSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_TmgTmg_Rpt_BndsRng_Lw_Sys"/>
+        </property>
+        <property name="plnDfnActnTrgrTmgTmgRptBndsRngLwUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_TmgTmg_Rpt_BndsRng_Lw_Unt"/>
+        </property>
+        <property name="plnDfnActnTrgrTmgTmgRptBndsRngLwVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_TmgTmg_Rpt_BndsRng_Lw_Vl"/>
+        </property>
+        <property name="plnDfnActnTrgrTmgTmgRptCnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_TmgTmg_Rpt_Cnt"/>
+        </property>
+        <property name="plnDfnActnTrgrTmgTmgRptCntMx" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_TmgTmg_Rpt_CntMx"/>
+        </property>
+        <property name="plnDfnActnTrgrTmgTmgRptDayOfWeek" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_TmgTmg_Rpt_DayOfWeek"/>
+        </property>
+        <property name="plnDfnActnTrgrTmgTmgRptDuration" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_TmgTmg_Rpt_Duration"/>
+        </property>
+        <property name="plnDfnActnTrgrTmgTmgRptDurationMx" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_TmgTmg_Rpt_DurationMx"/>
+        </property>
+        <property name="plnDfnActnTrgrTmgTmgRptDurationUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_TmgTmg_Rpt_DurationUnt"/>
+        </property>
+        <property name="plnDfnActnTrgrTmgTmgRptFrqncy" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_TmgTmg_Rpt_Frqncy"/>
+        </property>
+        <property name="plnDfnActnTrgrTmgTmgRptFrqncyMx" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_TmgTmg_Rpt_FrqncyMx"/>
+        </property>
+        <property name="plnDfnActnTrgrTmgTmgRptOff" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_TmgTmg_Rpt_Off"/>
+        </property>
+        <property name="plnDfnActnTrgrTmgTmgRptPrd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_TmgTmg_Rpt_Prd"/>
+        </property>
+        <property name="plnDfnActnTrgrTmgTmgRptPrdMx" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_TmgTmg_Rpt_PrdMx"/>
+        </property>
+        <property name="plnDfnActnTrgrTmgTmgRptPrdUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_TmgTmg_Rpt_PrdUnt"/>
+        </property>
+        <property name="plnDfnActnTrgrTmgTmgRptTimeOfDay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_TmgTmg_Rpt_TimeOfDay"/>
+        </property>
+        <property name="plnDfnActnTrgrTmgTmgRptWhen" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_TmgTmg_Rpt_When"/>
+        </property>
+        <property name="plnDfnActnTrgrTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_Typ"/>
+        </property>
+        <property name="plnDfnActnTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Typ_Cdg_Cd"/>
+        </property>
+        <property name="plnDfnActnTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="plnDfnActnTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Typ_Cdg_Sys"/>
+        </property>
+        <property name="plnDfnActnTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="plnDfnActnTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="plnDfnActnTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Typ_Txt"/>
+        </property>
+        <property name="plnDfnApprovalDt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_ApprovalDt"/>
+        </property>
+        <property name="plnDfnAthrNm" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Athr_Nm"/>
+        </property>
+        <property name="plnDfnAthrTlcmPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Athr_Tlcm_Prd_End"/>
+        </property>
+        <property name="plnDfnAthrTlcmPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Athr_Tlcm_Prd_Strt"/>
+        </property>
+        <property name="plnDfnAthrTlcmRnk" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Athr_Tlcm_Rnk"/>
+        </property>
+        <property name="plnDfnAthrTlcmSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Athr_Tlcm_Sys"/>
+        </property>
+        <property name="plnDfnAthrTlcmUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Athr_Tlcm_Use"/>
+        </property>
+        <property name="plnDfnAthrTlcmVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Athr_Tlcm_Vl"/>
+        </property>
+        <property name="plnDfnCntctNm" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Cntct_Nm"/>
+        </property>
+        <property name="plnDfnCntctTlcmPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Cntct_Tlcm_Prd_End"/>
+        </property>
+        <property name="plnDfnCntctTlcmPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Cntct_Tlcm_Prd_Strt"/>
+        </property>
+        <property name="plnDfnCntctTlcmRnk" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Cntct_Tlcm_Rnk"/>
+        </property>
+        <property name="plnDfnCntctTlcmSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Cntct_Tlcm_Sys"/>
+        </property>
+        <property name="plnDfnCntctTlcmUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Cntct_Tlcm_Use"/>
+        </property>
+        <property name="plnDfnCntctTlcmVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Cntct_Tlcm_Vl"/>
+        </property>
+        <property name="plnDfnCopyright" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Copyright"/>
+        </property>
+        <property name="plnDfnDt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Dt"/>
+        </property>
+        <property name="plnDfnDscrptn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Dscrptn"/>
+        </property>
+        <property name="plnDfnEditorNm" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Editor_Nm"/>
+        </property>
+        <property name="plnDfnEditorTlcmPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Editor_Tlcm_Prd_End"/>
+        </property>
+        <property name="plnDfnEditorTlcmPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Editor_Tlcm_Prd_Strt"/>
+        </property>
+        <property name="plnDfnEditorTlcmRnk" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Editor_Tlcm_Rnk"/>
+        </property>
+        <property name="plnDfnEditorTlcmSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Editor_Tlcm_Sys"/>
+        </property>
+        <property name="plnDfnEditorTlcmUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Editor_Tlcm_Use"/>
+        </property>
+        <property name="plnDfnEditorTlcmVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Editor_Tlcm_Vl"/>
+        </property>
+        <property name="plnDfnEfctivePrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_EfctivePrd_End"/>
+        </property>
+        <property name="plnDfnEfctivePrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_EfctivePrd_Strt"/>
+        </property>
+        <property name="plnDfnEndsrNm" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Endsr_Nm"/>
+        </property>
+        <property name="plnDfnEndsrTlcmPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Endsr_Tlcm_Prd_End"/>
+        </property>
+        <property name="plnDfnEndsrTlcmPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Endsr_Tlcm_Prd_Strt"/>
+        </property>
+        <property name="plnDfnEndsrTlcmRnk" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Endsr_Tlcm_Rnk"/>
+        </property>
+        <property name="plnDfnEndsrTlcmSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Endsr_Tlcm_Sys"/>
+        </property>
+        <property name="plnDfnEndsrTlcmUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Endsr_Tlcm_Use"/>
+        </property>
+        <property name="plnDfnEndsrTlcmVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Endsr_Tlcm_Vl"/>
+        </property>
+        <property name="plnDfnExprmtl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Exprmtl"/>
+        </property>
+        <property name="plnDfnGoalAddresCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Addres_Cdg_Cd"/>
+        </property>
+        <property name="plnDfnGoalAddresCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Addres_Cdg_Dsply"/>
+        </property>
+        <property name="plnDfnGoalAddresCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Addres_Cdg_Sys"/>
+        </property>
+        <property name="plnDfnGoalAddresCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Addres_Cdg_UsrSltd"/>
+        </property>
+        <property name="plnDfnGoalAddresCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Addres_Cdg_Vrsn"/>
+        </property>
+        <property name="plnDfnGoalAddresTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Addres_Txt"/>
+        </property>
+        <property name="plnDfnGoalCtgryCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Ctgry_Cdg_Cd"/>
+        </property>
+        <property name="plnDfnGoalCtgryCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Ctgry_Cdg_Dsply"/>
+        </property>
+        <property name="plnDfnGoalCtgryCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Ctgry_Cdg_Sys"/>
+        </property>
+        <property name="plnDfnGoalCtgryCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Ctgry_Cdg_UsrSltd"/>
+        </property>
+        <property name="plnDfnGoalCtgryCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Ctgry_Cdg_Vrsn"/>
+        </property>
+        <property name="plnDfnGoalCtgryTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Ctgry_Txt"/>
+        </property>
+        <property name="plnDfnGoalDscrptnCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Dscrptn_Cdg_Cd"/>
+        </property>
+        <property name="plnDfnGoalDscrptnCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Dscrptn_Cdg_Dsply"/>
+        </property>
+        <property name="plnDfnGoalDscrptnCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Dscrptn_Cdg_Sys"/>
+        </property>
+        <property name="plnDfnGoalDscrptnCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Dscrptn_Cdg_UsrSltd"/>
+        </property>
+        <property name="plnDfnGoalDscrptnCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Dscrptn_Cdg_Vrsn"/>
+        </property>
+        <property name="plnDfnGoalDscrptnTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Dscrptn_Txt"/>
+        </property>
+        <property name="plnDfnGoalDocationCitation" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Docation_Citation"/>
+        </property>
+        <property name="plnDfnGoalDocationDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Docation_Dsply"/>
+        </property>
+        <property name="plnDfnGoalDocationDocCntntTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Docation_Doc_CntntTyp"/>
+        </property>
+        <property name="plnDfnGoalDocationDocCreation" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Docation_Doc_Creation"/>
+        </property>
+        <property name="plnDfnGoalDocationDocData" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Docation_Doc_Data"/>
+        </property>
+        <property name="plnDfnGoalDocationDocHash" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Docation_Doc_Hash"/>
+        </property>
+        <property name="plnDfnGoalDocationDocLnguage" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Docation_Doc_Lnguage"/>
+        </property>
+        <property name="plnDfnGoalDocationDocSz" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Docation_Doc_Sz"/>
+        </property>
+        <property name="plnDfnGoalDocationDocTtl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Docation_Doc_Ttl"/>
+        </property>
+        <property name="plnDfnGoalDocationDocUrl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Docation_Doc_Url"/>
+        </property>
+        <property name="plnDfnGoalDocationLbl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Docation_Lbl"/>
+        </property>
+        <property name="plnDfnGoalDocationRsrc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Docation_Rsrc"/>
+        </property>
+        <property name="plnDfnGoalDocationTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Docation_Typ"/>
+        </property>
+        <property name="plnDfnGoalDocationUrl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Docation_Url"/>
+        </property>
+        <property name="plnDfnGoalPriorityCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Priority_Cdg_Cd"/>
+        </property>
+        <property name="plnDfnGoalPriorityCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Priority_Cdg_Dsply"/>
+        </property>
+        <property name="plnDfnGoalPriorityCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Priority_Cdg_Sys"/>
+        </property>
+        <property name="plnDfnGoalPriorityCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Priority_Cdg_UsrSltd"/>
+        </property>
+        <property name="plnDfnGoalPriorityCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Priority_Cdg_Vrsn"/>
+        </property>
+        <property name="plnDfnGoalPriorityTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Priority_Txt"/>
+        </property>
+        <property name="plnDfnGoalStrtCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Strt_Cdg_Cd"/>
+        </property>
+        <property name="plnDfnGoalStrtCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Strt_Cdg_Dsply"/>
+        </property>
+        <property name="plnDfnGoalStrtCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Strt_Cdg_Sys"/>
+        </property>
+        <property name="plnDfnGoalStrtCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Strt_Cdg_UsrSltd"/>
+        </property>
+        <property name="plnDfnGoalStrtCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Strt_Cdg_Vrsn"/>
+        </property>
+        <property name="plnDfnGoalStrtTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Strt_Txt"/>
+        </property>
+        <property name="plnDfnGoalTarDtlCdbleCncptCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Tar_DtlCdbleCncpt_Cdg_Cd"/>
+        </property>
+        <property name="plnDfnGoalTarDtlCdbleCncptCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Tar_DtlCdbleCncpt_Cdg_Dsply"/>
+        </property>
+        <property name="plnDfnGoalTarDtlCdbleCncptCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Tar_DtlCdbleCncpt_Cdg_Sys"/>
+        </property>
+        <property name="plnDfnGoalTarDtlCdbleCncptCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Tar_DtlCdbleCncpt_Cdg_UsrSltd"/>
+        </property>
+        <property name="plnDfnGoalTarDtlCdbleCncptCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Tar_DtlCdbleCncpt_Cdg_Vrsn"/>
+        </property>
+        <property name="plnDfnGoalTarDtlCdbleCncptTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Tar_DtlCdbleCncpt_Txt"/>
+        </property>
+        <property name="plnDfnGoalTarDtlQntyCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Tar_DtlQnty_Cd"/>
+        </property>
+        <property name="plnDfnGoalTarDtlQntyCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Tar_DtlQnty_Cmprtr"/>
+        </property>
+        <property name="plnDfnGoalTarDtlQntySys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Tar_DtlQnty_Sys"/>
+        </property>
+        <property name="plnDfnGoalTarDtlQntyUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Tar_DtlQnty_Unt"/>
+        </property>
+        <property name="plnDfnGoalTarDtlQntyVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Tar_DtlQnty_Vl"/>
+        </property>
+        <property name="plnDfnGoalTarDtlRngHiCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Tar_DtlRng_Hi_Cd"/>
+        </property>
+        <property name="plnDfnGoalTarDtlRngHiCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Tar_DtlRng_Hi_Cmprtr"/>
+        </property>
+        <property name="plnDfnGoalTarDtlRngHiSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Tar_DtlRng_Hi_Sys"/>
+        </property>
+        <property name="plnDfnGoalTarDtlRngHiUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Tar_DtlRng_Hi_Unt"/>
+        </property>
+        <property name="plnDfnGoalTarDtlRngHiVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Tar_DtlRng_Hi_Vl"/>
+        </property>
+        <property name="plnDfnGoalTarDtlRngLwCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Tar_DtlRng_Lw_Cd"/>
+        </property>
+        <property name="plnDfnGoalTarDtlRngLwCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Tar_DtlRng_Lw_Cmprtr"/>
+        </property>
+        <property name="plnDfnGoalTarDtlRngLwSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Tar_DtlRng_Lw_Sys"/>
+        </property>
+        <property name="plnDfnGoalTarDtlRngLwUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Tar_DtlRng_Lw_Unt"/>
+        </property>
+        <property name="plnDfnGoalTarDtlRngLwVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Tar_DtlRng_Lw_Vl"/>
+        </property>
+        <property name="plnDfnGoalTarMsrCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Tar_Msr_Cdg_Cd"/>
+        </property>
+        <property name="plnDfnGoalTarMsrCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Tar_Msr_Cdg_Dsply"/>
+        </property>
+        <property name="plnDfnGoalTarMsrCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Tar_Msr_Cdg_Sys"/>
+        </property>
+        <property name="plnDfnGoalTarMsrCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Tar_Msr_Cdg_UsrSltd"/>
+        </property>
+        <property name="plnDfnGoalTarMsrCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Tar_Msr_Cdg_Vrsn"/>
+        </property>
+        <property name="plnDfnGoalTarMsrTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Tar_Msr_Txt"/>
+        </property>
+        <property name="plnDfnIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Id_Assigner"/>
+        </property>
+        <property name="plnDfnIdPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Id_Prd_End"/>
+        </property>
+        <property name="plnDfnIdPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Id_Prd_Strt"/>
+        </property>
+        <property name="plnDfnIdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Id_Sys"/>
+        </property>
+        <property name="plnDfnIdTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Id_Typ_Cdg_Cd"/>
+        </property>
+        <property name="plnDfnIdTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Id_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="plnDfnIdTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Id_Typ_Cdg_Sys"/>
+        </property>
+        <property name="plnDfnIdTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Id_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="plnDfnIdTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Id_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="plnDfnIdTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Id_Typ_Txt"/>
+        </property>
+        <property name="plnDfnIdUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Id_Use"/>
+        </property>
+        <property name="plnDfnIdVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Id_Vl"/>
+        </property>
+        <property name="plnDfnJrsdctnCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Jrsdctn_Cdg_Cd"/>
+        </property>
+        <property name="plnDfnJrsdctnCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Jrsdctn_Cdg_Dsply"/>
+        </property>
+        <property name="plnDfnJrsdctnCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Jrsdctn_Cdg_Sys"/>
+        </property>
+        <property name="plnDfnJrsdctnCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Jrsdctn_Cdg_UsrSltd"/>
+        </property>
+        <property name="plnDfnJrsdctnCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Jrsdctn_Cdg_Vrsn"/>
+        </property>
+        <property name="plnDfnJrsdctnTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Jrsdctn_Txt"/>
+        </property>
+        <property name="plnDfnLastReviewDt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_LastReviewDt"/>
+        </property>
+        <property name="plnDfnLibrary" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Library"/>
+        </property>
+        <property name="plnDfnNm" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Nm"/>
+        </property>
+        <property name="plnDfnPblshr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Pblshr"/>
+        </property>
+        <property name="plnDfnPrpse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Prpse"/>
+        </property>
+        <property name="plnDfnRltedArtfctCitation" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_RltedArtfct_Citation"/>
+        </property>
+        <property name="plnDfnRltedArtfctDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_RltedArtfct_Dsply"/>
+        </property>
+        <property name="plnDfnRltedArtfctDocCntntTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_RltedArtfct_Doc_CntntTyp"/>
+        </property>
+        <property name="plnDfnRltedArtfctDocCreation" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_RltedArtfct_Doc_Creation"/>
+        </property>
+        <property name="plnDfnRltedArtfctDocData" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_RltedArtfct_Doc_Data"/>
+        </property>
+        <property name="plnDfnRltedArtfctDocHash" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_RltedArtfct_Doc_Hash"/>
+        </property>
+        <property name="plnDfnRltedArtfctDocLnguage" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_RltedArtfct_Doc_Lnguage"/>
+        </property>
+        <property name="plnDfnRltedArtfctDocSz" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_RltedArtfct_Doc_Sz"/>
+        </property>
+        <property name="plnDfnRltedArtfctDocTtl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_RltedArtfct_Doc_Ttl"/>
+        </property>
+        <property name="plnDfnRltedArtfctDocUrl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_RltedArtfct_Doc_Url"/>
+        </property>
+        <property name="plnDfnRltedArtfctLbl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_RltedArtfct_Lbl"/>
+        </property>
+        <property name="plnDfnRltedArtfctRsrc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_RltedArtfct_Rsrc"/>
+        </property>
+        <property name="plnDfnRltedArtfctTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_RltedArtfct_Typ"/>
+        </property>
+        <property name="plnDfnRltedArtfctUrl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_RltedArtfct_Url"/>
+        </property>
+        <property name="plnDfnRviewrNm" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Rviewr_Nm"/>
+        </property>
+        <property name="plnDfnRviewrTlcmPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Rviewr_Tlcm_Prd_End"/>
+        </property>
+        <property name="plnDfnRviewrTlcmPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Rviewr_Tlcm_Prd_Strt"/>
+        </property>
+        <property name="plnDfnRviewrTlcmRnk" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Rviewr_Tlcm_Rnk"/>
+        </property>
+        <property name="plnDfnRviewrTlcmSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Rviewr_Tlcm_Sys"/>
+        </property>
+        <property name="plnDfnRviewrTlcmUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Rviewr_Tlcm_Use"/>
+        </property>
+        <property name="plnDfnRviewrTlcmVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Rviewr_Tlcm_Vl"/>
+        </property>
+        <property name="plnDfnSts" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Sts"/>
+        </property>
+        <property name="plnDfnSbjctCdbleCncptCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_SbjctCdbleCncpt_Cdg_Cd"/>
+        </property>
+        <property name="plnDfnSbjctCdbleCncptCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_SbjctCdbleCncpt_Cdg_Dsply"/>
+        </property>
+        <property name="plnDfnSbjctCdbleCncptCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_SbjctCdbleCncpt_Cdg_Sys"/>
+        </property>
+        <property name="plnDfnSbjctCdbleCncptCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_SbjctCdbleCncpt_Cdg_UsrSltd"/>
+        </property>
+        <property name="plnDfnSbjctCdbleCncptCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_SbjctCdbleCncpt_Cdg_Vrsn"/>
+        </property>
+        <property name="plnDfnSbjctCdbleCncptTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_SbjctCdbleCncpt_Txt"/>
+        </property>
+        <property name="plnDfnSbjctRfrnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_SbjctRfrnc"/>
+        </property>
+        <property name="plnDfnSubtitle" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Subtitle"/>
+        </property>
+        <property name="plnDfnTtl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Ttl"/>
+        </property>
+        <property name="plnDfnTopicCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Topic_Cdg_Cd"/>
+        </property>
+        <property name="plnDfnTopicCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Topic_Cdg_Dsply"/>
+        </property>
+        <property name="plnDfnTopicCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Topic_Cdg_Sys"/>
+        </property>
+        <property name="plnDfnTopicCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Topic_Cdg_UsrSltd"/>
+        </property>
+        <property name="plnDfnTopicCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Topic_Cdg_Vrsn"/>
+        </property>
+        <property name="plnDfnTopicTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Topic_Txt"/>
+        </property>
+        <property name="plnDfnTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Typ_Cdg_Cd"/>
+        </property>
+        <property name="plnDfnTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="plnDfnTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Typ_Cdg_Sys"/>
+        </property>
+        <property name="plnDfnTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="plnDfnTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="plnDfnTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Typ_Txt"/>
+        </property>
+        <property name="plnDfnUrl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Url"/>
+        </property>
+        <property name="plnDfnUsg" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Usg"/>
+        </property>
+        <property name="plnDfnUseCntxtCdCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_UseCntxt_Cd_Cd"/>
+        </property>
+        <property name="plnDfnUseCntxtCdDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_UseCntxt_Cd_Dsply"/>
+        </property>
+        <property name="plnDfnUseCntxtCdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_UseCntxt_Cd_Sys"/>
+        </property>
+        <property name="plnDfnUseCntxtCdUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_UseCntxt_Cd_UsrSltd"/>
+        </property>
+        <property name="plnDfnUseCntxtCdVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_UseCntxt_Cd_Vrsn"/>
+        </property>
+        <property name="plnDfnUseCntxtVlCdbleCncptCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_UseCntxt_VlCdbleCncpt_Cdg_Cd"/>
+        </property>
+        <property name="plnDfnUseCntxtVlCdbleCncptCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_UseCntxt_VlCdbleCncpt_Cdg_Dsply"/>
+        </property>
+        <property name="plnDfnUseCntxtVlCdbleCncptCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_UseCntxt_VlCdbleCncpt_Cdg_Sys"/>
+        </property>
+        <property name="plnDfnUseCntxtVlCdbleCncptCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_UseCntxt_VlCdbleCncpt_Cdg_UsrSltd"/>
+        </property>
+        <property name="plnDfnUseCntxtVlCdbleCncptCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_UseCntxt_VlCdbleCncpt_Cdg_Vrsn"/>
+        </property>
+        <property name="plnDfnUseCntxtVlCdbleCncptTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_UseCntxt_VlCdbleCncpt_Txt"/>
+        </property>
+        <property name="plnDfnUseCntxtVlQntyCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_UseCntxt_VlQnty_Cd"/>
+        </property>
+        <property name="plnDfnUseCntxtVlQntyCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_UseCntxt_VlQnty_Cmprtr"/>
+        </property>
+        <property name="plnDfnUseCntxtVlQntySys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_UseCntxt_VlQnty_Sys"/>
+        </property>
+        <property name="plnDfnUseCntxtVlQntyUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_UseCntxt_VlQnty_Unt"/>
+        </property>
+        <property name="plnDfnUseCntxtVlQntyVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_UseCntxt_VlQnty_Vl"/>
+        </property>
+        <property name="plnDfnUseCntxtVlRngHiCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_UseCntxt_VlRng_Hi_Cd"/>
+        </property>
+        <property name="plnDfnUseCntxtVlRngHiCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_UseCntxt_VlRng_Hi_Cmprtr"/>
+        </property>
+        <property name="plnDfnUseCntxtVlRngHiSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_UseCntxt_VlRng_Hi_Sys"/>
+        </property>
+        <property name="plnDfnUseCntxtVlRngHiUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_UseCntxt_VlRng_Hi_Unt"/>
+        </property>
+        <property name="plnDfnUseCntxtVlRngHiVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_UseCntxt_VlRng_Hi_Vl"/>
+        </property>
+        <property name="plnDfnUseCntxtVlRngLwCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_UseCntxt_VlRng_Lw_Cd"/>
+        </property>
+        <property name="plnDfnUseCntxtVlRngLwCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_UseCntxt_VlRng_Lw_Cmprtr"/>
+        </property>
+        <property name="plnDfnUseCntxtVlRngLwSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_UseCntxt_VlRng_Lw_Sys"/>
+        </property>
+        <property name="plnDfnUseCntxtVlRngLwUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_UseCntxt_VlRng_Lw_Unt"/>
+        </property>
+        <property name="plnDfnUseCntxtVlRngLwVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_UseCntxt_VlRng_Lw_Vl"/>
+        </property>
+        <property name="plnDfnUseCntxtVlRfrnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_UseCntxt_VlRfrnc"/>
+        </property>
+        <property name="plnDfnVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Vrsn"/>
+        </property>
+    </class>
+</hibernate-mapping>

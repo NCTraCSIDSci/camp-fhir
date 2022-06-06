@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Jun 6, 2022, 11:02:25 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="CatalogEntry" optimistic-lock="none" table="CatalogEntry">
+        <id name="id" type="string">
+            <column length="64" name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="catalogEntryAddtnlCrctrstcCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CatalogEntry_AddtnlCrctrstc_Cdg_Cd"/>
+        </property>
+        <property name="catalogEntryAddtnlCrctrstcCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CatalogEntry_AddtnlCrctrstc_Cdg_Dsply"/>
+        </property>
+        <property name="catalogEntryAddtnlCrctrstcCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CatalogEntry_AddtnlCrctrstc_Cdg_Sys"/>
+        </property>
+        <property name="catalogEntryAddtnlCrctrstcCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CatalogEntry_AddtnlCrctrstc_Cdg_UsrSltd"/>
+        </property>
+        <property name="catalogEntryAddtnlCrctrstcCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CatalogEntry_AddtnlCrctrstc_Cdg_Vrsn"/>
+        </property>
+        <property name="catalogEntryAddtnlCrctrstcTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CatalogEntry_AddtnlCrctrstc_Txt"/>
+        </property>
+        <property name="catalogEntryAddtnlClsfctnCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CatalogEntry_AddtnlClsfctn_Cdg_Cd"/>
+        </property>
+        <property name="catalogEntryAddtnlClsfctnCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CatalogEntry_AddtnlClsfctn_Cdg_Dsply"/>
+        </property>
+        <property name="catalogEntryAddtnlClsfctnCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CatalogEntry_AddtnlClsfctn_Cdg_Sys"/>
+        </property>
+        <property name="catalogEntryAddtnlClsfctnCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CatalogEntry_AddtnlClsfctn_Cdg_UsrSltd"/>
+        </property>
+        <property name="catalogEntryAddtnlClsfctnCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CatalogEntry_AddtnlClsfctn_Cdg_Vrsn"/>
+        </property>
+        <property name="catalogEntryAddtnlClsfctnTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CatalogEntry_AddtnlClsfctn_Txt"/>
+        </property>
+        <property name="catalogEntryAddtnlIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CatalogEntry_AddtnlId_Assigner"/>
+        </property>
+        <property name="catalogEntryAddtnlIdPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CatalogEntry_AddtnlId_Prd_End"/>
+        </property>
+        <property name="catalogEntryAddtnlIdPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CatalogEntry_AddtnlId_Prd_Strt"/>
+        </property>
+        <property name="catalogEntryAddtnlIdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CatalogEntry_AddtnlId_Sys"/>
+        </property>
+        <property name="catalogEntryAddtnlIdTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CatalogEntry_AddtnlId_Typ_Cdg_Cd"/>
+        </property>
+        <property name="catalogEntryAddtnlIdTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CatalogEntry_AddtnlId_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="catalogEntryAddtnlIdTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CatalogEntry_AddtnlId_Typ_Cdg_Sys"/>
+        </property>
+        <property name="catalogEntryAddtnlIdTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CatalogEntry_AddtnlId_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="catalogEntryAddtnlIdTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CatalogEntry_AddtnlId_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="catalogEntryAddtnlIdTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CatalogEntry_AddtnlId_Typ_Txt"/>
+        </property>
+        <property name="catalogEntryAddtnlIdUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CatalogEntry_AddtnlId_Use"/>
+        </property>
+        <property name="catalogEntryAddtnlIdVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CatalogEntry_AddtnlId_Vl"/>
+        </property>
+        <property name="catalogEntryClsfctnCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CatalogEntry_Clsfctn_Cdg_Cd"/>
+        </property>
+        <property name="catalogEntryClsfctnCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CatalogEntry_Clsfctn_Cdg_Dsply"/>
+        </property>
+        <property name="catalogEntryClsfctnCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CatalogEntry_Clsfctn_Cdg_Sys"/>
+        </property>
+        <property name="catalogEntryClsfctnCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CatalogEntry_Clsfctn_Cdg_UsrSltd"/>
+        </property>
+        <property name="catalogEntryClsfctnCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CatalogEntry_Clsfctn_Cdg_Vrsn"/>
+        </property>
+        <property name="catalogEntryClsfctnTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CatalogEntry_Clsfctn_Txt"/>
+        </property>
+        <property name="catalogEntryIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CatalogEntry_Id_Assigner"/>
+        </property>
+        <property name="catalogEntryIdPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CatalogEntry_Id_Prd_End"/>
+        </property>
+        <property name="catalogEntryIdPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CatalogEntry_Id_Prd_Strt"/>
+        </property>
+        <property name="catalogEntryIdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CatalogEntry_Id_Sys"/>
+        </property>
+        <property name="catalogEntryIdTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CatalogEntry_Id_Typ_Cdg_Cd"/>
+        </property>
+        <property name="catalogEntryIdTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CatalogEntry_Id_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="catalogEntryIdTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CatalogEntry_Id_Typ_Cdg_Sys"/>
+        </property>
+        <property name="catalogEntryIdTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CatalogEntry_Id_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="catalogEntryIdTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CatalogEntry_Id_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="catalogEntryIdTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CatalogEntry_Id_Typ_Txt"/>
+        </property>
+        <property name="catalogEntryIdUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CatalogEntry_Id_Use"/>
+        </property>
+        <property name="catalogEntryIdVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CatalogEntry_Id_Vl"/>
+        </property>
+        <property name="catalogEntryLastUpdated" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CatalogEntry_LastUpdated"/>
+        </property>
+        <property name="catalogEntryOrdrable" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CatalogEntry_Ordrable"/>
+        </property>
+        <property name="catalogEntryRfrncdItm" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CatalogEntry_RfrncdItm"/>
+        </property>
+        <property name="catalogEntryRltedEntryItm" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CatalogEntry_RltedEntry_Itm"/>
+        </property>
+        <property name="catalogEntryRltedEntryRelationtype" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CatalogEntry_RltedEntry_Relationtype"/>
+        </property>
+        <property name="catalogEntrySts" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CatalogEntry_Sts"/>
+        </property>
+        <property name="catalogEntryTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CatalogEntry_Typ_Cdg_Cd"/>
+        </property>
+        <property name="catalogEntryTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CatalogEntry_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="catalogEntryTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CatalogEntry_Typ_Cdg_Sys"/>
+        </property>
+        <property name="catalogEntryTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CatalogEntry_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="catalogEntryTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CatalogEntry_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="catalogEntryTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CatalogEntry_Typ_Txt"/>
+        </property>
+        <property name="catalogEntryValidTo" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CatalogEntry_ValidTo"/>
+        </property>
+        <property name="catalogEntryValidityPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CatalogEntry_ValidityPrd_End"/>
+        </property>
+        <property name="catalogEntryValidityPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CatalogEntry_ValidityPrd_Strt"/>
+        </property>
+    </class>
+</hibernate-mapping>

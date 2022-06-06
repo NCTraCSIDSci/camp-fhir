@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Jun 6, 2022, 11:02:25 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="ResearchSubject" optimistic-lock="none" table="ResearchSubject">
+        <id name="id" type="string">
+            <column length="64" name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="rsrchSbjctActualArm" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchSbjct_ActualArm"/>
+        </property>
+        <property name="rsrchSbjctAssignedArm" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchSbjct_AssignedArm"/>
+        </property>
+        <property name="rsrchSbjctCnsnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchSbjct_Cnsnt"/>
+        </property>
+        <property name="rsrchSbjctIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchSbjct_Id_Assigner"/>
+        </property>
+        <property name="rsrchSbjctIdPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchSbjct_Id_Prd_End"/>
+        </property>
+        <property name="rsrchSbjctIdPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchSbjct_Id_Prd_Strt"/>
+        </property>
+        <property name="rsrchSbjctIdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchSbjct_Id_Sys"/>
+        </property>
+        <property name="rsrchSbjctIdTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchSbjct_Id_Typ_Cdg_Cd"/>
+        </property>
+        <property name="rsrchSbjctIdTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchSbjct_Id_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="rsrchSbjctIdTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchSbjct_Id_Typ_Cdg_Sys"/>
+        </property>
+        <property name="rsrchSbjctIdTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchSbjct_Id_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="rsrchSbjctIdTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchSbjct_Id_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="rsrchSbjctIdTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchSbjct_Id_Typ_Txt"/>
+        </property>
+        <property name="rsrchSbjctIdUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchSbjct_Id_Use"/>
+        </property>
+        <property name="rsrchSbjctIdVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchSbjct_Id_Vl"/>
+        </property>
+        <property name="rsrchSbjctIndividual" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchSbjct_Individual"/>
+        </property>
+        <property name="rsrchSbjctPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchSbjct_Prd_End"/>
+        </property>
+        <property name="rsrchSbjctPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchSbjct_Prd_Strt"/>
+        </property>
+        <property name="rsrchSbjctSts" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchSbjct_Sts"/>
+        </property>
+        <property name="rsrchSbjctStdy" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RsrchSbjct_Stdy"/>
+        </property>
+    </class>
+</hibernate-mapping>

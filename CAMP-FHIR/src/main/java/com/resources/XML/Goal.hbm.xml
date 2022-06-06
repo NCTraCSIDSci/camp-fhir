@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Jun 6, 2022, 11:02:25 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Goal" optimistic-lock="none" table="Goal">
+        <id name="id" type="string">
+            <column length="64" name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="goalAchievementStsCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_AchievementSts_Cdg_Cd"/>
+        </property>
+        <property name="goalAchievementStsCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_AchievementSts_Cdg_Dsply"/>
+        </property>
+        <property name="goalAchievementStsCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_AchievementSts_Cdg_Sys"/>
+        </property>
+        <property name="goalAchievementStsCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_AchievementSts_Cdg_UsrSltd"/>
+        </property>
+        <property name="goalAchievementStsCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_AchievementSts_Cdg_Vrsn"/>
+        </property>
+        <property name="goalAchievementStsTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_AchievementSts_Txt"/>
+        </property>
+        <property name="goalAddres" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Addres"/>
+        </property>
+        <property name="goalCtgryCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Ctgry_Cdg_Cd"/>
+        </property>
+        <property name="goalCtgryCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Ctgry_Cdg_Dsply"/>
+        </property>
+        <property name="goalCtgryCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Ctgry_Cdg_Sys"/>
+        </property>
+        <property name="goalCtgryCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Ctgry_Cdg_UsrSltd"/>
+        </property>
+        <property name="goalCtgryCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Ctgry_Cdg_Vrsn"/>
+        </property>
+        <property name="goalCtgryTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Ctgry_Txt"/>
+        </property>
+        <property name="goalDscrptnCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Dscrptn_Cdg_Cd"/>
+        </property>
+        <property name="goalDscrptnCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Dscrptn_Cdg_Dsply"/>
+        </property>
+        <property name="goalDscrptnCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Dscrptn_Cdg_Sys"/>
+        </property>
+        <property name="goalDscrptnCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Dscrptn_Cdg_UsrSltd"/>
+        </property>
+        <property name="goalDscrptnCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Dscrptn_Cdg_Vrsn"/>
+        </property>
+        <property name="goalDscrptnTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Dscrptn_Txt"/>
+        </property>
+        <property name="goalExpressedBy" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_ExpressedBy"/>
+        </property>
+        <property name="goalIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Id_Assigner"/>
+        </property>
+        <property name="goalIdPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Id_Prd_End"/>
+        </property>
+        <property name="goalIdPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Id_Prd_Strt"/>
+        </property>
+        <property name="goalIdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Id_Sys"/>
+        </property>
+        <property name="goalIdTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Id_Typ_Cdg_Cd"/>
+        </property>
+        <property name="goalIdTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Id_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="goalIdTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Id_Typ_Cdg_Sys"/>
+        </property>
+        <property name="goalIdTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Id_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="goalIdTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Id_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="goalIdTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Id_Typ_Txt"/>
+        </property>
+        <property name="goalIdUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Id_Use"/>
+        </property>
+        <property name="goalIdVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Id_Vl"/>
+        </property>
+        <property name="goalLifecycleSts" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_LifecycleSts"/>
+        </property>
+        <property name="goalNtAthrRfrnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Nt_AthrRfrnc"/>
+        </property>
+        <property name="goalNtAthrStrgTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Nt_AthrStrgTyp"/>
+        </property>
+        <property name="goalNtTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Nt_Txt"/>
+        </property>
+        <property name="goalNtTime" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Nt_Time"/>
+        </property>
+        <property name="goalOutcomeCdCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_OutcomeCd_Cdg_Cd"/>
+        </property>
+        <property name="goalOutcomeCdCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_OutcomeCd_Cdg_Dsply"/>
+        </property>
+        <property name="goalOutcomeCdCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_OutcomeCd_Cdg_Sys"/>
+        </property>
+        <property name="goalOutcomeCdCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_OutcomeCd_Cdg_UsrSltd"/>
+        </property>
+        <property name="goalOutcomeCdCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_OutcomeCd_Cdg_Vrsn"/>
+        </property>
+        <property name="goalOutcomeCdTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_OutcomeCd_Txt"/>
+        </property>
+        <property name="goalOutcomeRfrnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_OutcomeRfrnc"/>
+        </property>
+        <property name="goalPriorityCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Priority_Cdg_Cd"/>
+        </property>
+        <property name="goalPriorityCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Priority_Cdg_Dsply"/>
+        </property>
+        <property name="goalPriorityCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Priority_Cdg_Sys"/>
+        </property>
+        <property name="goalPriorityCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Priority_Cdg_UsrSltd"/>
+        </property>
+        <property name="goalPriorityCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Priority_Cdg_Vrsn"/>
+        </property>
+        <property name="goalPriorityTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Priority_Txt"/>
+        </property>
+        <property name="goalStrtCdbleCncptCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_StrtCdbleCncpt_Cdg_Cd"/>
+        </property>
+        <property name="goalStrtCdbleCncptCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_StrtCdbleCncpt_Cdg_Dsply"/>
+        </property>
+        <property name="goalStrtCdbleCncptCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_StrtCdbleCncpt_Cdg_Sys"/>
+        </property>
+        <property name="goalStrtCdbleCncptCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_StrtCdbleCncpt_Cdg_UsrSltd"/>
+        </property>
+        <property name="goalStrtCdbleCncptCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_StrtCdbleCncpt_Cdg_Vrsn"/>
+        </property>
+        <property name="goalStrtCdbleCncptTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_StrtCdbleCncpt_Txt"/>
+        </property>
+        <property name="goalStrtDtTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_StrtDtTyp"/>
+        </property>
+        <property name="goalStsDt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_StsDt"/>
+        </property>
+        <property name="goalStsRsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_StsRsn"/>
+        </property>
+        <property name="goalSbjct" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Sbjct"/>
+        </property>
+        <property name="goalTarDtlBooleanTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Tar_DtlBooleanTyp"/>
+        </property>
+        <property name="goalTarDtlCdbleCncptCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Tar_DtlCdbleCncpt_Cdg_Cd"/>
+        </property>
+        <property name="goalTarDtlCdbleCncptCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Tar_DtlCdbleCncpt_Cdg_Dsply"/>
+        </property>
+        <property name="goalTarDtlCdbleCncptCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Tar_DtlCdbleCncpt_Cdg_Sys"/>
+        </property>
+        <property name="goalTarDtlCdbleCncptCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Tar_DtlCdbleCncpt_Cdg_UsrSltd"/>
+        </property>
+        <property name="goalTarDtlCdbleCncptCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Tar_DtlCdbleCncpt_Cdg_Vrsn"/>
+        </property>
+        <property name="goalTarDtlCdbleCncptTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Tar_DtlCdbleCncpt_Txt"/>
+        </property>
+        <property name="goalTarDtlIntegerTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Tar_DtlIntegerTyp"/>
+        </property>
+        <property name="goalTarDtlQntyCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Tar_DtlQnty_Cd"/>
+        </property>
+        <property name="goalTarDtlQntyCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Tar_DtlQnty_Cmprtr"/>
+        </property>
+        <property name="goalTarDtlQntySys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Tar_DtlQnty_Sys"/>
+        </property>
+        <property name="goalTarDtlQntyUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Tar_DtlQnty_Unt"/>
+        </property>
+        <property name="goalTarDtlQntyVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Tar_DtlQnty_Vl"/>
+        </property>
+        <property name="goalTarDtlRngHiCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Tar_DtlRng_Hi_Cd"/>
+        </property>
+        <property name="goalTarDtlRngHiCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Tar_DtlRng_Hi_Cmprtr"/>
+        </property>
+        <property name="goalTarDtlRngHiSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Tar_DtlRng_Hi_Sys"/>
+        </property>
+        <property name="goalTarDtlRngHiUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Tar_DtlRng_Hi_Unt"/>
+        </property>
+        <property name="goalTarDtlRngHiVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Tar_DtlRng_Hi_Vl"/>
+        </property>
+        <property name="goalTarDtlRngLwCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Tar_DtlRng_Lw_Cd"/>
+        </property>
+        <property name="goalTarDtlRngLwCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Tar_DtlRng_Lw_Cmprtr"/>
+        </property>
+        <property name="goalTarDtlRngLwSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Tar_DtlRng_Lw_Sys"/>
+        </property>
+        <property name="goalTarDtlRngLwUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Tar_DtlRng_Lw_Unt"/>
+        </property>
+        <property name="goalTarDtlRngLwVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Tar_DtlRng_Lw_Vl"/>
+        </property>
+        <property name="goalTarDtlRtioDnmntrCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Tar_DtlRtio_Dnmntr_Cd"/>
+        </property>
+        <property name="goalTarDtlRtioDnmntrCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Tar_DtlRtio_Dnmntr_Cmprtr"/>
+        </property>
+        <property name="goalTarDtlRtioDnmntrSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Tar_DtlRtio_Dnmntr_Sys"/>
+        </property>
+        <property name="goalTarDtlRtioDnmntrUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Tar_DtlRtio_Dnmntr_Unt"/>
+        </property>
+        <property name="goalTarDtlRtioDnmntrVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Tar_DtlRtio_Dnmntr_Vl"/>
+        </property>
+        <property name="goalTarDtlRtioNmrtrCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Tar_DtlRtio_Nmrtr_Cd"/>
+        </property>
+        <property name="goalTarDtlRtioNmrtrCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Tar_DtlRtio_Nmrtr_Cmprtr"/>
+        </property>
+        <property name="goalTarDtlRtioNmrtrSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Tar_DtlRtio_Nmrtr_Sys"/>
+        </property>
+        <property name="goalTarDtlRtioNmrtrUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Tar_DtlRtio_Nmrtr_Unt"/>
+        </property>
+        <property name="goalTarDtlRtioNmrtrVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Tar_DtlRtio_Nmrtr_Vl"/>
+        </property>
+        <property name="goalTarDtlStrgTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Tar_DtlStrgTyp"/>
+        </property>
+        <property name="goalTarDueDtTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Tar_DueDtTyp"/>
+        </property>
+        <property name="goalTarMsrCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Tar_Msr_Cdg_Cd"/>
+        </property>
+        <property name="goalTarMsrCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Tar_Msr_Cdg_Dsply"/>
+        </property>
+        <property name="goalTarMsrCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Tar_Msr_Cdg_Sys"/>
+        </property>
+        <property name="goalTarMsrCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Tar_Msr_Cdg_UsrSltd"/>
+        </property>
+        <property name="goalTarMsrCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Tar_Msr_Cdg_Vrsn"/>
+        </property>
+        <property name="goalTarMsrTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Goal_Tar_Msr_Txt"/>
+        </property>
+    </class>
+</hibernate-mapping>

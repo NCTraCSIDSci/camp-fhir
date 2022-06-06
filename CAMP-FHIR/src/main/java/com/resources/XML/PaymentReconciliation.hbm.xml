@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Jun 6, 2022, 11:02:25 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="PaymentReconciliation" optimistic-lock="none" table="PaymentReconciliation">
+        <id name="id" type="string">
+            <column length="64" name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="pymntRecncliatnCreated" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_Created"/>
+        </property>
+        <property name="pymntRecncliatnDtlAmntCrncy" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_Dtl_Amnt_Crncy"/>
+        </property>
+        <property name="pymntRecncliatnDtlAmntVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_Dtl_Amnt_Vl"/>
+        </property>
+        <property name="pymntRecncliatnDtlDt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_Dtl_Dt"/>
+        </property>
+        <property name="pymntRecncliatnDtlIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_Dtl_Id_Assigner"/>
+        </property>
+        <property name="pymntRecncliatnDtlIdPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_Dtl_Id_Prd_End"/>
+        </property>
+        <property name="pymntRecncliatnDtlIdPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_Dtl_Id_Prd_Strt"/>
+        </property>
+        <property name="pymntRecncliatnDtlIdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_Dtl_Id_Sys"/>
+        </property>
+        <property name="pymntRecncliatnDtlIdTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_Dtl_Id_Typ_Cdg_Cd"/>
+        </property>
+        <property name="pymntRecncliatnDtlIdTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_Dtl_Id_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="pymntRecncliatnDtlIdTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_Dtl_Id_Typ_Cdg_Sys"/>
+        </property>
+        <property name="pymntRecncliatnDtlIdTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_Dtl_Id_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="pymntRecncliatnDtlIdTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_Dtl_Id_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="pymntRecncliatnDtlIdTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_Dtl_Id_Typ_Txt"/>
+        </property>
+        <property name="pymntRecncliatnDtlIdUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_Dtl_Id_Use"/>
+        </property>
+        <property name="pymntRecncliatnDtlIdVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_Dtl_Id_Vl"/>
+        </property>
+        <property name="pymntRecncliatnDtlPayee" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_Dtl_Payee"/>
+        </property>
+        <property name="pymntRecncliatnDtlPredecessorAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_Dtl_Predecessor_Assigner"/>
+        </property>
+        <property name="pymntRecncliatnDtlPredecessorPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_Dtl_Predecessor_Prd_End"/>
+        </property>
+        <property name="pymntRecncliatnDtlPredecessorPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_Dtl_Predecessor_Prd_Strt"/>
+        </property>
+        <property name="pymntRecncliatnDtlPredecessorSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_Dtl_Predecessor_Sys"/>
+        </property>
+        <property name="pymntRecncliatnDtlPredecessorTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_Dtl_Predecessor_Typ_Cdg_Cd"/>
+        </property>
+        <property name="pymntRecncliatnDtlPredecessorTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_Dtl_Predecessor_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="pymntRecncliatnDtlPredecessorTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_Dtl_Predecessor_Typ_Cdg_Sys"/>
+        </property>
+        <property name="pymntRecncliatnDtlPredecessorTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_Dtl_Predecessor_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="pymntRecncliatnDtlPredecessorTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_Dtl_Predecessor_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="pymntRecncliatnDtlPredecessorTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_Dtl_Predecessor_Typ_Txt"/>
+        </property>
+        <property name="pymntRecncliatnDtlPredecessorUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_Dtl_Predecessor_Use"/>
+        </property>
+        <property name="pymntRecncliatnDtlPredecessorVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_Dtl_Predecessor_Vl"/>
+        </property>
+        <property name="pymntRecncliatnDtlRqst" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_Dtl_Rqst"/>
+        </property>
+        <property name="pymntRecncliatnDtlRsps" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_Dtl_Rsps"/>
+        </property>
+        <property name="pymntRecncliatnDtlResponsible" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_Dtl_Responsible"/>
+        </property>
+        <property name="pymntRecncliatnDtlSubmitter" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_Dtl_Submitter"/>
+        </property>
+        <property name="pymntRecncliatnDtlTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_Dtl_Typ_Cdg_Cd"/>
+        </property>
+        <property name="pymntRecncliatnDtlTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_Dtl_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="pymntRecncliatnDtlTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_Dtl_Typ_Cdg_Sys"/>
+        </property>
+        <property name="pymntRecncliatnDtlTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_Dtl_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="pymntRecncliatnDtlTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_Dtl_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="pymntRecncliatnDtlTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_Dtl_Typ_Txt"/>
+        </property>
+        <property name="pymntRecncliatnDisposition" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_Disposition"/>
+        </property>
+        <property name="pymntRecncliatnFrmCdCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_FrmCd_Cdg_Cd"/>
+        </property>
+        <property name="pymntRecncliatnFrmCdCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_FrmCd_Cdg_Dsply"/>
+        </property>
+        <property name="pymntRecncliatnFrmCdCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_FrmCd_Cdg_Sys"/>
+        </property>
+        <property name="pymntRecncliatnFrmCdCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_FrmCd_Cdg_UsrSltd"/>
+        </property>
+        <property name="pymntRecncliatnFrmCdCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_FrmCd_Cdg_Vrsn"/>
+        </property>
+        <property name="pymntRecncliatnFrmCdTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_FrmCd_Txt"/>
+        </property>
+        <property name="pymntRecncliatnIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_Id_Assigner"/>
+        </property>
+        <property name="pymntRecncliatnIdPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_Id_Prd_End"/>
+        </property>
+        <property name="pymntRecncliatnIdPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_Id_Prd_Strt"/>
+        </property>
+        <property name="pymntRecncliatnIdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_Id_Sys"/>
+        </property>
+        <property name="pymntRecncliatnIdTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_Id_Typ_Cdg_Cd"/>
+        </property>
+        <property name="pymntRecncliatnIdTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_Id_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="pymntRecncliatnIdTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_Id_Typ_Cdg_Sys"/>
+        </property>
+        <property name="pymntRecncliatnIdTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_Id_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="pymntRecncliatnIdTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_Id_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="pymntRecncliatnIdTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_Id_Typ_Txt"/>
+        </property>
+        <property name="pymntRecncliatnIdUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_Id_Use"/>
+        </property>
+        <property name="pymntRecncliatnIdVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_Id_Vl"/>
+        </property>
+        <property name="pymntRecncliatnOutcome" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_Outcome"/>
+        </property>
+        <property name="pymntRecncliatnPymntAmntCrncy" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_PymntAmnt_Crncy"/>
+        </property>
+        <property name="pymntRecncliatnPymntAmntVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_PymntAmnt_Vl"/>
+        </property>
+        <property name="pymntRecncliatnPymntDt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_PymntDt"/>
+        </property>
+        <property name="pymntRecncliatnPymntIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_PymntId_Assigner"/>
+        </property>
+        <property name="pymntRecncliatnPymntIdPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_PymntId_Prd_End"/>
+        </property>
+        <property name="pymntRecncliatnPymntIdPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_PymntId_Prd_Strt"/>
+        </property>
+        <property name="pymntRecncliatnPymntIdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_PymntId_Sys"/>
+        </property>
+        <property name="pymntRecncliatnPymntIdTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_PymntId_Typ_Cdg_Cd"/>
+        </property>
+        <property name="pymntRecncliatnPymntIdTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_PymntId_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="pymntRecncliatnPymntIdTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_PymntId_Typ_Cdg_Sys"/>
+        </property>
+        <property name="pymntRecncliatnPymntIdTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_PymntId_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="pymntRecncliatnPymntIdTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_PymntId_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="pymntRecncliatnPymntIdTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_PymntId_Typ_Txt"/>
+        </property>
+        <property name="pymntRecncliatnPymntIdUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_PymntId_Use"/>
+        </property>
+        <property name="pymntRecncliatnPymntIdVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_PymntId_Vl"/>
+        </property>
+        <property name="pymntRecncliatnPymntIssuer" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_PymntIssuer"/>
+        </property>
+        <property name="pymntRecncliatnPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_Prd_End"/>
+        </property>
+        <property name="pymntRecncliatnPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_Prd_Strt"/>
+        </property>
+        <property name="pymntRecncliatnProcessNtTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_ProcessNt_Txt"/>
+        </property>
+        <property name="pymntRecncliatnProcessNtTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_ProcessNt_Typ"/>
+        </property>
+        <property name="pymntRecncliatnRqst" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_Rqst"/>
+        </property>
+        <property name="pymntRecncliatnRqstor" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_Rqstor"/>
+        </property>
+        <property name="pymntRecncliatnSts" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PymntRecncliatn_Sts"/>
+        </property>
+    </class>
+</hibernate-mapping>

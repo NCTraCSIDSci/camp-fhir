@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Feb 22, 2022, 7:13:58 PM by Hibernate Tools 5.6.1.Final
+// Generated Jun 6, 2022, 11:02:30 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -11,1540 +11,1167 @@ public class Patient  implements java.io.Serializable {
 
 
      private String id;
-     private String patientActive;
-     private String patientAddressCity;
-     private String patientAddressCountry;
-     private String patientAddressDistrict;
-     private String patientAddressLine;
-     private String patientAddressPeriodEnd;
-     private String patientAddressPeriodStart;
-     private String patientAddressPostalCode;
-     private String patientAddressState;
-     private String patientAddressText;
-     private String patientAddressTypeCode;
-     private String patientAddressUseCode;
-     private String patientBirthDate;
-     private String patientCommnLangCodingCode;
-     private String patientCommnLangCodingDisplay;
-     private String patientCommnLangCodingSystem;
-     private String patientCommnLangCodingUsrslt;
-     private String patientCommnLangCodingVersion;
-     private String patientCommnLangText;
-     private String patientCommnPreferred;
-     private String patientContactAddressCity;
-     private String patientContactAddressCountry;
-     private String patientContactAddressDistrict;
-     private String patientContactAddressLine;
-     private String patientContactAddressPeriodEnd;
-     private String patientContactAddressPeriodStart;
-     private String patientContactAddressPostalCode;
-     private String patientContactAddressState;
-     private String patientContactAddressText;
-     private String patientContactAddressTypeCode;
-     private String patientContactAddressUseCode;
-     private String patientContactGenderCode;
-     private String patientContactNameFamily;
-     private String patientContactNameGiven;
-     private String patientContactNamePeriodEnd;
-     private String patientContactNamePeriodStart;
-     private String patientContactNamePrefix;
-     private String patientContactNameSuffix;
-     private String patientContactNameText;
-     private String patientContactNameUseCode;
-     private String patientContactOrganization;
-     private String patientContactPeriodEnd;
-     private String patientContactPeriodStart;
-     private String patientContactRelationshipCodingCode;
-     private String patientContactRelationshipCodingDisplay;
-     private String patientContactRelationshipCodingSystem;
-     private String patientContactRelationshipCodingUsrslt;
-     private String patientContactRelationshipCodingVersion;
-     private String patientContactRelationshipText;
-     private String patientContactTelecomPeriodEnd;
-     private String patientContactTelecomPeriodStart;
-     private String patientContactTelecomRank;
-     private String patientContactTelecomSystemCode;
-     private String patientContactTelecomUseCode;
-     private String patientContactTelecomValue;
-     private String patientDeceasedBoolean;
-     private String patientDeceasedDateTime;
-     private String patientGenderCode;
-     private String patientGeneralPract;
-     private String patientIdAssigner;
-     private String patientIdPeriodEnd;
-     private String patientIdPeriodStart;
-     private String patientIdSystem;
-     private String patientIdTypeCodingCode;
-     private String patientIdTypeCodingDisplay;
-     private String patientIdTypeCodingSystem;
-     private String patientIdTypeCodingUsrslt;
-     private String patientIdTypeCodingVersion;
-     private String patientIdTypeText;
-     private String patientIdUseCode;
-     private String patientIdValue;
-     private String patientLinkOther;
-     private String patientLinkTypeCode;
-     private String patientManagingOrganization;
-     private String patientMaritalStatusCodingCode;
-     private String patientMaritalStatusCodingDisplay;
-     private String patientMaritalStatusCodingSystem;
-     private String patientMaritalStatusCodingUsrslt;
-     private String patientMaritalStatusCodingVersion;
-     private String patientMaritalStatusText;
-     private String patientMultipleBirthBoolean;
-     private String patientMultipleBirthInteger;
-     private String patientNameFamily;
-     private String patientNameGiven;
-     private String patientNamePeriodEnd;
-     private String patientNamePeriodStart;
-     private String patientNamePrefix;
-     private String patientNameSuffix;
-     private String patientNameText;
-     private String patientNameUseCode;
-     private String patientPhotoContentType;
-     private String patientPhotoCreation;
-     private String patientPhotoData;
-     private String patientPhotoHash;
-     private String patientPhotoLang;
-     private String patientPhotoSize;
-     private String patientPhotoTitle;
-     private String patientPhotoUrl;
-     private String patientTelecomPeriodEnd;
-     private String patientTelecomPeriodStart;
-     private String patientTelecomRank;
-     private String patientTelecomSystemCode;
-     private String patientTelecomUseCode;
-     private String patientTelecomValue;
-     private String patientRaceValue;
-     private String patientEthnicityValue;
-     private String patientAddressExtensionLatitudeValue;
-     private String patientAddressExtensionLongitudeValue;
+     private String pntActive;
+     private String pntAddrCity;
+     private String pntAddrCntry;
+     private String pntAddrDistrict;
+     private String pntAddrLine;
+     private String pntAddrPrdEnd;
+     private String pntAddrPrdStrt;
+     private String pntAddrPostalCd;
+     private String pntAddrState;
+     private String pntAddrTxt;
+     private String pntAddrTyp;
+     private String pntAddrUse;
+     private String pntBirthDt;
+     private String pntCmmnctnLnguageCdgCd;
+     private String pntCmmnctnLnguageCdgDsply;
+     private String pntCmmnctnLnguageCdgSys;
+     private String pntCmmnctnLnguageCdgUsrSltd;
+     private String pntCmmnctnLnguageCdgVrsn;
+     private String pntCmmnctnLnguageTxt;
+     private String pntCmmnctnPreferred;
+     private String pntCntctAddrCity;
+     private String pntCntctAddrCntry;
+     private String pntCntctAddrDistrict;
+     private String pntCntctAddrLine;
+     private String pntCntctAddrPrdEnd;
+     private String pntCntctAddrPrdStrt;
+     private String pntCntctAddrPostalCd;
+     private String pntCntctAddrState;
+     private String pntCntctAddrTxt;
+     private String pntCntctAddrTyp;
+     private String pntCntctAddrUse;
+     private String pntCntctGender;
+     private String pntCntctNmFmly;
+     private String pntCntctNmGiven;
+     private String pntCntctNmPrdEnd;
+     private String pntCntctNmPrdStrt;
+     private String pntCntctNmPrefix;
+     private String pntCntctNmSuffix;
+     private String pntCntctNmTxt;
+     private String pntCntctNmUse;
+     private String pntCntctOrgnztn;
+     private String pntCntctPrdEnd;
+     private String pntCntctPrdStrt;
+     private String pntCntctRltnshipCdgCd;
+     private String pntCntctRltnshipCdgDsply;
+     private String pntCntctRltnshipCdgSys;
+     private String pntCntctRltnshipCdgUsrSltd;
+     private String pntCntctRltnshipCdgVrsn;
+     private String pntCntctRltnshipTxt;
+     private String pntCntctTlcmPrdEnd;
+     private String pntCntctTlcmPrdStrt;
+     private String pntCntctTlcmRnk;
+     private String pntCntctTlcmSys;
+     private String pntCntctTlcmUse;
+     private String pntCntctTlcmVl;
+     private String pntDeceasedBooleanTyp;
+     private String pntDeceasedDtTimeTyp;
+     private String pntGender;
+     private String pntGeneralPrctitnr;
+     private String pntIdAssigner;
+     private String pntIdPrdEnd;
+     private String pntIdPrdStrt;
+     private String pntIdSys;
+     private String pntIdTypCdgCd;
+     private String pntIdTypCdgDsply;
+     private String pntIdTypCdgSys;
+     private String pntIdTypCdgUsrSltd;
+     private String pntIdTypCdgVrsn;
+     private String pntIdTypTxt;
+     private String pntIdUse;
+     private String pntIdVl;
+     private String pntLinkOther;
+     private String pntLinkTyp;
+     private String pntManagingOrgnztn;
+     private String pntMaritalStsCdgCd;
+     private String pntMaritalStsCdgDsply;
+     private String pntMaritalStsCdgSys;
+     private String pntMaritalStsCdgUsrSltd;
+     private String pntMaritalStsCdgVrsn;
+     private String pntMaritalStsTxt;
+     private String pntMultipleBirthBooleanTyp;
+     private String pntMultipleBirthIntegerTyp;
+     private String pntNmFmly;
+     private String pntNmGiven;
+     private String pntNmPrdEnd;
+     private String pntNmPrdStrt;
+     private String pntNmPrefix;
+     private String pntNmSuffix;
+     private String pntNmTxt;
+     private String pntNmUse;
+     private String pntPhotoCntntTyp;
+     private String pntPhotoCreation;
+     private String pntPhotoData;
+     private String pntPhotoHash;
+     private String pntPhotoLnguage;
+     private String pntPhotoSz;
+     private String pntPhotoTtl;
+     private String pntPhotoUrl;
+     private String pntTlcmPrdEnd;
+     private String pntTlcmPrdStrt;
+     private String pntTlcmRnk;
+     private String pntTlcmSys;
+     private String pntTlcmUse;
+     private String pntTlcmVl;
 
     public Patient() {
     }
 
-    public Patient(String patientActive, String patientAddressCity, String patientAddressCountry, String patientAddressDistrict, String patientAddressLine, String patientAddressPeriodEnd, String patientAddressPeriodStart, String patientAddressPostalCode, String patientAddressState, String patientAddressText, String patientAddressTypeCode, String patientAddressUseCode, String patientBirthDate, String patientCommnLangCodingCode, String patientCommnLangCodingDisplay, String patientCommnLangCodingSystem, String patientCommnLangCodingUsrslt, String patientCommnLangCodingVersion, String patientCommnLangText, String patientCommnPreferred, String patientContactAddressCity, String patientContactAddressCountry, String patientContactAddressDistrict, String patientContactAddressLine, String patientContactAddressPeriodEnd, String patientContactAddressPeriodStart, String patientContactAddressPostalCode, String patientContactAddressState, String patientContactAddressText, String patientContactAddressTypeCode, String patientContactAddressUseCode, String patientContactGenderCode, String patientContactNameFamily, String patientContactNameGiven, String patientContactNamePeriodEnd, String patientContactNamePeriodStart, String patientContactNamePrefix, String patientContactNameSuffix, String patientContactNameText, String patientContactNameUseCode, String patientContactOrganization, String patientContactPeriodEnd, String patientContactPeriodStart, String patientContactRelationshipCodingCode, String patientContactRelationshipCodingDisplay, String patientContactRelationshipCodingSystem, String patientContactRelationshipCodingUsrslt, String patientContactRelationshipCodingVersion, String patientContactRelationshipText, String patientContactTelecomPeriodEnd, String patientContactTelecomPeriodStart, String patientContactTelecomRank, String patientContactTelecomSystemCode, String patientContactTelecomUseCode, String patientContactTelecomValue, String patientDeceasedBoolean, String patientDeceasedDateTime, String patientGenderCode, String patientGeneralPract, String patientIdAssigner, String patientIdPeriodEnd, String patientIdPeriodStart, String patientIdSystem, String patientIdTypeCodingCode, String patientIdTypeCodingDisplay, String patientIdTypeCodingSystem, String patientIdTypeCodingUsrslt, String patientIdTypeCodingVersion, String patientIdTypeText, String patientIdUseCode, String patientIdValue, String patientLinkOther, String patientLinkTypeCode, String patientManagingOrganization, String patientMaritalStatusCodingCode, String patientMaritalStatusCodingDisplay, String patientMaritalStatusCodingSystem, String patientMaritalStatusCodingUsrslt, String patientMaritalStatusCodingVersion, String patientMaritalStatusText, String patientMultipleBirthBoolean, String patientMultipleBirthInteger, String patientNameFamily, String patientNameGiven, String patientNamePeriodEnd, String patientNamePeriodStart, String patientNamePrefix, String patientNameSuffix, String patientNameText, String patientNameUseCode, String patientPhotoContentType, String patientPhotoCreation, String patientPhotoData, String patientPhotoHash, String patientPhotoLang, String patientPhotoSize, String patientPhotoTitle, String patientPhotoUrl, String patientTelecomPeriodEnd, String patientTelecomPeriodStart, String patientTelecomRank, String patientTelecomSystemCode, String patientTelecomUseCode, String patientTelecomValue, String patientRaceValue ,String patientEthnicityValue, String patientAddressExtensionLatitudeValue, String patientAddressExtensionLongitudeValue) {
-       this.patientActive = patientActive;
-       this.patientAddressCity = patientAddressCity;
-       this.patientAddressCountry = patientAddressCountry;
-       this.patientAddressDistrict = patientAddressDistrict;
-       this.patientAddressLine = patientAddressLine;
-       this.patientAddressPeriodEnd = patientAddressPeriodEnd;
-       this.patientAddressPeriodStart = patientAddressPeriodStart;
-       this.patientAddressPostalCode = patientAddressPostalCode;
-       this.patientAddressState = patientAddressState;
-       this.patientAddressText = patientAddressText;
-       this.patientAddressTypeCode = patientAddressTypeCode;
-       this.patientAddressUseCode = patientAddressUseCode;
-       this.patientBirthDate = patientBirthDate;
-       this.patientCommnLangCodingCode = patientCommnLangCodingCode;
-       this.patientCommnLangCodingDisplay = patientCommnLangCodingDisplay;
-       this.patientCommnLangCodingSystem = patientCommnLangCodingSystem;
-       this.patientCommnLangCodingUsrslt = patientCommnLangCodingUsrslt;
-       this.patientCommnLangCodingVersion = patientCommnLangCodingVersion;
-       this.patientCommnLangText = patientCommnLangText;
-       this.patientCommnPreferred = patientCommnPreferred;
-       this.patientContactAddressCity = patientContactAddressCity;
-       this.patientContactAddressCountry = patientContactAddressCountry;
-       this.patientContactAddressDistrict = patientContactAddressDistrict;
-       this.patientContactAddressLine = patientContactAddressLine;
-       this.patientContactAddressPeriodEnd = patientContactAddressPeriodEnd;
-       this.patientContactAddressPeriodStart = patientContactAddressPeriodStart;
-       this.patientContactAddressPostalCode = patientContactAddressPostalCode;
-       this.patientContactAddressState = patientContactAddressState;
-       this.patientContactAddressText = patientContactAddressText;
-       this.patientContactAddressTypeCode = patientContactAddressTypeCode;
-       this.patientContactAddressUseCode = patientContactAddressUseCode;
-       this.patientContactGenderCode = patientContactGenderCode;
-       this.patientContactNameFamily = patientContactNameFamily;
-       this.patientContactNameGiven = patientContactNameGiven;
-       this.patientContactNamePeriodEnd = patientContactNamePeriodEnd;
-       this.patientContactNamePeriodStart = patientContactNamePeriodStart;
-       this.patientContactNamePrefix = patientContactNamePrefix;
-       this.patientContactNameSuffix = patientContactNameSuffix;
-       this.patientContactNameText = patientContactNameText;
-       this.patientContactNameUseCode = patientContactNameUseCode;
-       this.patientContactOrganization = patientContactOrganization;
-       this.patientContactPeriodEnd = patientContactPeriodEnd;
-       this.patientContactPeriodStart = patientContactPeriodStart;
-       this.patientContactRelationshipCodingCode = patientContactRelationshipCodingCode;
-       this.patientContactRelationshipCodingDisplay = patientContactRelationshipCodingDisplay;
-       this.patientContactRelationshipCodingSystem = patientContactRelationshipCodingSystem;
-       this.patientContactRelationshipCodingUsrslt = patientContactRelationshipCodingUsrslt;
-       this.patientContactRelationshipCodingVersion = patientContactRelationshipCodingVersion;
-       this.patientContactRelationshipText = patientContactRelationshipText;
-       this.patientContactTelecomPeriodEnd = patientContactTelecomPeriodEnd;
-       this.patientContactTelecomPeriodStart = patientContactTelecomPeriodStart;
-       this.patientContactTelecomRank = patientContactTelecomRank;
-       this.patientContactTelecomSystemCode = patientContactTelecomSystemCode;
-       this.patientContactTelecomUseCode = patientContactTelecomUseCode;
-       this.patientContactTelecomValue = patientContactTelecomValue;
-       this.patientDeceasedBoolean = patientDeceasedBoolean;
-       this.patientDeceasedDateTime = patientDeceasedDateTime;
-       this.patientGenderCode = patientGenderCode;
-       this.patientGeneralPract = patientGeneralPract;
-       this.patientIdAssigner = patientIdAssigner;
-       this.patientIdPeriodEnd = patientIdPeriodEnd;
-       this.patientIdPeriodStart = patientIdPeriodStart;
-       this.patientIdSystem = patientIdSystem;
-       this.patientIdTypeCodingCode = patientIdTypeCodingCode;
-       this.patientIdTypeCodingDisplay = patientIdTypeCodingDisplay;
-       this.patientIdTypeCodingSystem = patientIdTypeCodingSystem;
-       this.patientIdTypeCodingUsrslt = patientIdTypeCodingUsrslt;
-       this.patientIdTypeCodingVersion = patientIdTypeCodingVersion;
-       this.patientIdTypeText = patientIdTypeText;
-       this.patientIdUseCode = patientIdUseCode;
-       this.patientIdValue = patientIdValue;
-       this.patientLinkOther = patientLinkOther;
-       this.patientLinkTypeCode = patientLinkTypeCode;
-       this.patientManagingOrganization = patientManagingOrganization;
-       this.patientMaritalStatusCodingCode = patientMaritalStatusCodingCode;
-       this.patientMaritalStatusCodingDisplay = patientMaritalStatusCodingDisplay;
-       this.patientMaritalStatusCodingSystem = patientMaritalStatusCodingSystem;
-       this.patientMaritalStatusCodingUsrslt = patientMaritalStatusCodingUsrslt;
-       this.patientMaritalStatusCodingVersion = patientMaritalStatusCodingVersion;
-       this.patientMaritalStatusText = patientMaritalStatusText;
-       this.patientMultipleBirthBoolean = patientMultipleBirthBoolean;
-       this.patientMultipleBirthInteger = patientMultipleBirthInteger;
-       this.patientNameFamily = patientNameFamily;
-       this.patientNameGiven = patientNameGiven;
-       this.patientNamePeriodEnd = patientNamePeriodEnd;
-       this.patientNamePeriodStart = patientNamePeriodStart;
-       this.patientNamePrefix = patientNamePrefix;
-       this.patientNameSuffix = patientNameSuffix;
-       this.patientNameText = patientNameText;
-       this.patientNameUseCode = patientNameUseCode;
-       this.patientPhotoContentType = patientPhotoContentType;
-       this.patientPhotoCreation = patientPhotoCreation;
-       this.patientPhotoData = patientPhotoData;
-       this.patientPhotoHash = patientPhotoHash;
-       this.patientPhotoLang = patientPhotoLang;
-       this.patientPhotoSize = patientPhotoSize;
-       this.patientPhotoTitle = patientPhotoTitle;
-       this.patientPhotoUrl = patientPhotoUrl;
-       this.patientTelecomPeriodEnd = patientTelecomPeriodEnd;
-       this.patientTelecomPeriodStart = patientTelecomPeriodStart;
-       this.patientTelecomRank = patientTelecomRank;
-       this.patientTelecomSystemCode = patientTelecomSystemCode;
-       this.patientTelecomUseCode = patientTelecomUseCode;
-       this.patientTelecomValue = patientTelecomValue;
-       this.patientRaceValue = patientRaceValue;
-       this.patientEthnicityValue = patientEthnicityValue;
-       this.patientAddressExtensionLatitudeValue = patientAddressExtensionLatitudeValue;
-       this.patientAddressExtensionLongitudeValue = patientAddressExtensionLatitudeValue;
-
-    }
    
-    public 
-    String 
-    getId()
-    {
+    public String getId() {
         return this.id;
     }
     
-    public void setId
-        (String id) 
-        {
-      this.id = id;
-}
-    public 
-    String 
-    getPatientActive()
-    {
-        return this.patientActive;
-    }
-    
-    public void setPatientActive
-        (String patientActive) 
-        {
-      this.patientActive = patientActive;
-}
-    public 
-    String 
-    getPatientAddressCity()
-    {
-        return this.patientAddressCity;
-    }
-    
-    public void setPatientAddressCity
-        (String patientAddressCity) 
-        {
-      this.patientAddressCity = patientAddressCity;
-}
-    public 
-    String 
-    getPatientAddressCountry()
-    {
-        return this.patientAddressCountry;
-    }
-    
-    public void setPatientAddressCountry
-        (String patientAddressCountry) 
-        {
-      this.patientAddressCountry = patientAddressCountry;
-}
-    public 
-    String 
-    getPatientAddressDistrict()
-    {
-        return this.patientAddressDistrict;
-    }
-    
-    public void setPatientAddressDistrict
-        (String patientAddressDistrict) 
-        {
-      this.patientAddressDistrict = patientAddressDistrict;
-}
-    public 
-    String 
-    getPatientAddressLine()
-    {
-        return this.patientAddressLine;
-    }
-    
-    public void setPatientAddressLine
-        (String patientAddressLine) 
-        {
-      this.patientAddressLine = patientAddressLine;
-}
-    public 
-    String 
-    getPatientAddressPeriodEnd()
-    {
-        return this.patientAddressPeriodEnd;
-    }
-    
-    public void setPatientAddressPeriodEnd
-        (String patientAddressPeriodEnd) 
-        {
-      this.patientAddressPeriodEnd = patientAddressPeriodEnd;
-}
-    public 
-    String 
-    getPatientAddressPeriodStart()
-    {
-        return this.patientAddressPeriodStart;
-    }
-    
-    public void setPatientAddressPeriodStart
-        (String patientAddressPeriodStart) 
-        {
-      this.patientAddressPeriodStart = patientAddressPeriodStart;
-}
-    public 
-    String 
-    getPatientAddressPostalCode()
-    {
-        return this.patientAddressPostalCode;
-    }
-    
-    public void setPatientAddressPostalCode
-        (String patientAddressPostalCode) 
-        {
-      this.patientAddressPostalCode = patientAddressPostalCode;
-}
-    public 
-    String 
-    getPatientAddressState()
-    {
-        return this.patientAddressState;
-    }
-    
-    public void setPatientAddressState
-        (String patientAddressState) 
-        {
-      this.patientAddressState = patientAddressState;
-}
-    public 
-    String 
-    getPatientAddressText()
-    {
-        return this.patientAddressText;
-    }
-    
-    public void setPatientAddressText
-        (String patientAddressText) 
-        {
-      this.patientAddressText = patientAddressText;
-}
-    public 
-    String 
-    getPatientAddressTypeCode()
-    {
-        return this.patientAddressTypeCode;
-    }
-    
-    public void setPatientAddressTypeCode
-        (String patientAddressTypeCode) 
-        {
-      this.patientAddressTypeCode = patientAddressTypeCode;
-}
-    public 
-    String 
-    getPatientAddressUseCode()
-    {
-        return this.patientAddressUseCode;
-    }
-    
-    public void setPatientAddressUseCode
-        (String patientAddressUseCode) 
-        {
-      this.patientAddressUseCode = patientAddressUseCode;
-}
-    public 
-    String 
-    getPatientBirthDate()
-    {
-        return this.patientBirthDate;
-    }
-    
-    public void setPatientBirthDate
-        (String patientBirthDate) 
-        {
-      this.patientBirthDate = patientBirthDate;
-}
-    public 
-    String 
-    getPatientCommnLangCodingCode()
-    {
-        return this.patientCommnLangCodingCode;
-    }
-    
-    public void setPatientCommnLangCodingCode
-        (String patientCommnLangCodingCode) 
-        {
-      this.patientCommnLangCodingCode = patientCommnLangCodingCode;
-}
-    public 
-    String 
-    getPatientCommnLangCodingDisplay()
-    {
-        return this.patientCommnLangCodingDisplay;
-    }
-    
-    public void setPatientCommnLangCodingDisplay
-        (String patientCommnLangCodingDisplay) 
-        {
-      this.patientCommnLangCodingDisplay = patientCommnLangCodingDisplay;
-}
-    public 
-    String 
-    getPatientCommnLangCodingSystem()
-    {
-        return this.patientCommnLangCodingSystem;
-    }
-    
-    public void setPatientCommnLangCodingSystem
-        (String patientCommnLangCodingSystem) 
-        {
-      this.patientCommnLangCodingSystem = patientCommnLangCodingSystem;
-}
-    public 
-    String 
-    getPatientCommnLangCodingUsrslt()
-    {
-        return this.patientCommnLangCodingUsrslt;
-    }
-    
-    public void setPatientCommnLangCodingUsrslt
-        (String patientCommnLangCodingUsrslt) 
-        {
-      this.patientCommnLangCodingUsrslt = patientCommnLangCodingUsrslt;
-}
-    public 
-    String 
-    getPatientCommnLangCodingVersion()
-    {
-        return this.patientCommnLangCodingVersion;
-    }
-    
-    public void setPatientCommnLangCodingVersion
-        (String patientCommnLangCodingVersion) 
-        {
-      this.patientCommnLangCodingVersion = patientCommnLangCodingVersion;
-}
-    public 
-    String 
-    getPatientCommnLangText()
-    {
-        return this.patientCommnLangText;
-    }
-    
-    public void setPatientCommnLangText
-        (String patientCommnLangText) 
-        {
-      this.patientCommnLangText = patientCommnLangText;
-}
-    public 
-    String 
-    getPatientCommnPreferred()
-    {
-        return this.patientCommnPreferred;
-    }
-    
-    public void setPatientCommnPreferred
-        (String patientCommnPreferred) 
-        {
-      this.patientCommnPreferred = patientCommnPreferred;
-}
-    public 
-    String 
-    getPatientContactAddressCity()
-    {
-        return this.patientContactAddressCity;
-    }
-    
-    public void setPatientContactAddressCity
-        (String patientContactAddressCity) 
-        {
-      this.patientContactAddressCity = patientContactAddressCity;
-}
-    public 
-    String 
-    getPatientContactAddressCountry()
-    {
-        return this.patientContactAddressCountry;
-    }
-    
-    public void setPatientContactAddressCountry
-        (String patientContactAddressCountry) 
-        {
-      this.patientContactAddressCountry = patientContactAddressCountry;
-}
-    public 
-    String 
-    getPatientContactAddressDistrict()
-    {
-        return this.patientContactAddressDistrict;
-    }
-    
-    public void setPatientContactAddressDistrict
-        (String patientContactAddressDistrict) 
-        {
-      this.patientContactAddressDistrict = patientContactAddressDistrict;
-}
-    public 
-    String 
-    getPatientContactAddressLine()
-    {
-        return this.patientContactAddressLine;
-    }
-    
-    public void setPatientContactAddressLine
-        (String patientContactAddressLine) 
-        {
-      this.patientContactAddressLine = patientContactAddressLine;
-}
-    public 
-    String 
-    getPatientContactAddressPeriodEnd()
-    {
-        return this.patientContactAddressPeriodEnd;
-    }
-    
-    public void setPatientContactAddressPeriodEnd
-        (String patientContactAddressPeriodEnd) 
-        {
-      this.patientContactAddressPeriodEnd = patientContactAddressPeriodEnd;
-}
-    public 
-    String 
-    getPatientContactAddressPeriodStart()
-    {
-        return this.patientContactAddressPeriodStart;
-    }
-    
-    public void setPatientContactAddressPeriodStart
-        (String patientContactAddressPeriodStart) 
-        {
-      this.patientContactAddressPeriodStart = patientContactAddressPeriodStart;
-}
-    public 
-    String 
-    getPatientContactAddressPostalCode()
-    {
-        return this.patientContactAddressPostalCode;
-    }
-    
-    public void setPatientContactAddressPostalCode
-        (String patientContactAddressPostalCode) 
-        {
-      this.patientContactAddressPostalCode = patientContactAddressPostalCode;
-}
-    public 
-    String 
-    getPatientContactAddressState()
-    {
-        return this.patientContactAddressState;
-    }
-    
-    public void setPatientContactAddressState
-        (String patientContactAddressState) 
-        {
-      this.patientContactAddressState = patientContactAddressState;
-}
-    public 
-    String 
-    getPatientContactAddressText()
-    {
-        return this.patientContactAddressText;
-    }
-    
-    public void setPatientContactAddressText
-        (String patientContactAddressText) 
-        {
-      this.patientContactAddressText = patientContactAddressText;
-}
-    public 
-    String 
-    getPatientContactAddressTypeCode()
-    {
-        return this.patientContactAddressTypeCode;
-    }
-    
-    public void setPatientContactAddressTypeCode
-        (String patientContactAddressTypeCode) 
-        {
-      this.patientContactAddressTypeCode = patientContactAddressTypeCode;
-}
-    public 
-    String 
-    getPatientContactAddressUseCode()
-    {
-        return this.patientContactAddressUseCode;
-    }
-    
-    public void setPatientContactAddressUseCode
-        (String patientContactAddressUseCode) 
-        {
-      this.patientContactAddressUseCode = patientContactAddressUseCode;
-}
-    public 
-    String 
-    getPatientContactGenderCode()
-    {
-        return this.patientContactGenderCode;
-    }
-    
-    public void setPatientContactGenderCode
-        (String patientContactGenderCode) 
-        {
-      this.patientContactGenderCode = patientContactGenderCode;
-}
-    public 
-    String 
-    getPatientContactNameFamily()
-    {
-        return this.patientContactNameFamily;
-    }
-    
-    public void setPatientContactNameFamily
-        (String patientContactNameFamily) 
-        {
-      this.patientContactNameFamily = patientContactNameFamily;
-}
-    public 
-    String 
-    getPatientContactNameGiven()
-    {
-        return this.patientContactNameGiven;
-    }
-    
-    public void setPatientContactNameGiven
-        (String patientContactNameGiven) 
-        {
-      this.patientContactNameGiven = patientContactNameGiven;
-}
-    public 
-    String 
-    getPatientContactNamePeriodEnd()
-    {
-        return this.patientContactNamePeriodEnd;
-    }
-    
-    public void setPatientContactNamePeriodEnd
-        (String patientContactNamePeriodEnd) 
-        {
-      this.patientContactNamePeriodEnd = patientContactNamePeriodEnd;
-}
-    public 
-    String 
-    getPatientContactNamePeriodStart()
-    {
-        return this.patientContactNamePeriodStart;
-    }
-    
-    public void setPatientContactNamePeriodStart
-        (String patientContactNamePeriodStart) 
-        {
-      this.patientContactNamePeriodStart = patientContactNamePeriodStart;
-}
-    public 
-    String 
-    getPatientContactNamePrefix()
-    {
-        return this.patientContactNamePrefix;
-    }
-    
-    public void setPatientContactNamePrefix
-        (String patientContactNamePrefix) 
-        {
-      this.patientContactNamePrefix = patientContactNamePrefix;
-}
-    public 
-    String 
-    getPatientContactNameSuffix()
-    {
-        return this.patientContactNameSuffix;
-    }
-    
-    public void setPatientContactNameSuffix
-        (String patientContactNameSuffix) 
-        {
-      this.patientContactNameSuffix = patientContactNameSuffix;
-}
-    public 
-    String 
-    getPatientContactNameText()
-    {
-        return this.patientContactNameText;
-    }
-    
-    public void setPatientContactNameText
-        (String patientContactNameText) 
-        {
-      this.patientContactNameText = patientContactNameText;
-}
-    public 
-    String 
-    getPatientContactNameUseCode()
-    {
-        return this.patientContactNameUseCode;
-    }
-    
-    public void setPatientContactNameUseCode
-        (String patientContactNameUseCode) 
-        {
-      this.patientContactNameUseCode = patientContactNameUseCode;
-}
-    public 
-    String 
-    getPatientContactOrganization()
-    {
-        return this.patientContactOrganization;
-    }
-    
-    public void setPatientContactOrganization
-        (String patientContactOrganization) 
-        {
-      this.patientContactOrganization = patientContactOrganization;
-}
-    public 
-    String 
-    getPatientContactPeriodEnd()
-    {
-        return this.patientContactPeriodEnd;
-    }
-    
-    public void setPatientContactPeriodEnd
-        (String patientContactPeriodEnd) 
-        {
-      this.patientContactPeriodEnd = patientContactPeriodEnd;
-}
-    public 
-    String 
-    getPatientContactPeriodStart()
-    {
-        return this.patientContactPeriodStart;
-    }
-    
-    public void setPatientContactPeriodStart
-        (String patientContactPeriodStart) 
-        {
-      this.patientContactPeriodStart = patientContactPeriodStart;
-}
-    public 
-    String 
-    getPatientContactRelationshipCodingCode()
-    {
-        return this.patientContactRelationshipCodingCode;
-    }
-    
-    public void setPatientContactRelationshipCodingCode
-        (String patientContactRelationshipCodingCode) 
-        {
-      this.patientContactRelationshipCodingCode = patientContactRelationshipCodingCode;
-}
-    public 
-    String 
-    getPatientContactRelationshipCodingDisplay()
-    {
-        return this.patientContactRelationshipCodingDisplay;
-    }
-    
-    public void setPatientContactRelationshipCodingDisplay
-        (String patientContactRelationshipCodingDisplay) 
-        {
-      this.patientContactRelationshipCodingDisplay = patientContactRelationshipCodingDisplay;
-}
-    public 
-    String 
-    getPatientContactRelationshipCodingSystem()
-    {
-        return this.patientContactRelationshipCodingSystem;
-    }
-    
-    public void setPatientContactRelationshipCodingSystem
-        (String patientContactRelationshipCodingSystem) 
-        {
-      this.patientContactRelationshipCodingSystem = patientContactRelationshipCodingSystem;
-}
-    public 
-    String 
-    getPatientContactRelationshipCodingUsrslt()
-    {
-        return this.patientContactRelationshipCodingUsrslt;
-    }
-    
-    public void setPatientContactRelationshipCodingUsrslt
-        (String patientContactRelationshipCodingUsrslt) 
-        {
-      this.patientContactRelationshipCodingUsrslt = patientContactRelationshipCodingUsrslt;
-}
-    public 
-    String 
-    getPatientContactRelationshipCodingVersion()
-    {
-        return this.patientContactRelationshipCodingVersion;
-    }
-    
-    public void setPatientContactRelationshipCodingVersion
-        (String patientContactRelationshipCodingVersion) 
-        {
-      this.patientContactRelationshipCodingVersion = patientContactRelationshipCodingVersion;
-}
-    public 
-    String 
-    getPatientContactRelationshipText()
-    {
-        return this.patientContactRelationshipText;
-    }
-    
-    public void setPatientContactRelationshipText
-        (String patientContactRelationshipText) 
-        {
-      this.patientContactRelationshipText = patientContactRelationshipText;
-}
-    public 
-    String 
-    getPatientContactTelecomPeriodEnd()
-    {
-        return this.patientContactTelecomPeriodEnd;
-    }
-    
-    public void setPatientContactTelecomPeriodEnd
-        (String patientContactTelecomPeriodEnd) 
-        {
-      this.patientContactTelecomPeriodEnd = patientContactTelecomPeriodEnd;
-}
-    public 
-    String 
-    getPatientContactTelecomPeriodStart()
-    {
-        return this.patientContactTelecomPeriodStart;
-    }
-    
-    public void setPatientContactTelecomPeriodStart
-        (String patientContactTelecomPeriodStart) 
-        {
-      this.patientContactTelecomPeriodStart = patientContactTelecomPeriodStart;
-}
-    public 
-    String 
-    getPatientContactTelecomRank()
-    {
-        return this.patientContactTelecomRank;
-    }
-    
-    public void setPatientContactTelecomRank
-        (String patientContactTelecomRank) 
-        {
-      this.patientContactTelecomRank = patientContactTelecomRank;
-}
-    public 
-    String 
-    getPatientContactTelecomSystemCode()
-    {
-        return this.patientContactTelecomSystemCode;
-    }
-    
-    public void setPatientContactTelecomSystemCode
-        (String patientContactTelecomSystemCode) 
-        {
-      this.patientContactTelecomSystemCode = patientContactTelecomSystemCode;
-}
-    public 
-    String 
-    getPatientContactTelecomUseCode()
-    {
-        return this.patientContactTelecomUseCode;
-    }
-    
-    public void setPatientContactTelecomUseCode
-        (String patientContactTelecomUseCode) 
-        {
-      this.patientContactTelecomUseCode = patientContactTelecomUseCode;
-}
-    public 
-    String 
-    getPatientContactTelecomValue()
-    {
-        return this.patientContactTelecomValue;
-    }
-    
-    public void setPatientContactTelecomValue
-        (String patientContactTelecomValue) 
-        {
-      this.patientContactTelecomValue = patientContactTelecomValue;
-}
-    public 
-    String 
-    getPatientDeceasedBoolean()
-    {
-        return this.patientDeceasedBoolean;
-    }
-    
-    public void setPatientDeceasedBoolean
-        (String patientDeceasedBoolean) 
-        {
-      this.patientDeceasedBoolean = patientDeceasedBoolean;
-}
-    public 
-    String 
-    getPatientDeceasedDateTime()
-    {
-        return this.patientDeceasedDateTime;
-    }
-    
-    public void setPatientDeceasedDateTime
-        (String patientDeceasedDateTime) 
-        {
-      this.patientDeceasedDateTime = patientDeceasedDateTime;
-}
-    public 
-    String 
-    getPatientGenderCode()
-    {
-        return this.patientGenderCode;
-    }
-    
-    public void setPatientGenderCode
-        (String patientGenderCode) 
-        {
-      this.patientGenderCode = patientGenderCode;
-}
-    public 
-    String 
-    getPatientGeneralPract()
-    {
-        return this.patientGeneralPract;
-    }
-    
-    public void setPatientGeneralPract
-        (String patientGeneralPract) 
-        {
-      this.patientGeneralPract = patientGeneralPract;
-}
-    public 
-    String 
-    getPatientIdAssigner()
-    {
-        return this.patientIdAssigner;
-    }
-    
-    public void setPatientIdAssigner
-        (String patientIdAssigner) 
-        {
-      this.patientIdAssigner = patientIdAssigner;
-}
-    public 
-    String 
-    getPatientIdPeriodEnd()
-    {
-        return this.patientIdPeriodEnd;
-    }
-    
-    public void setPatientIdPeriodEnd
-        (String patientIdPeriodEnd) 
-        {
-      this.patientIdPeriodEnd = patientIdPeriodEnd;
-}
-    public 
-    String 
-    getPatientIdPeriodStart()
-    {
-        return this.patientIdPeriodStart;
-    }
-    
-    public void setPatientIdPeriodStart
-        (String patientIdPeriodStart) 
-        {
-      this.patientIdPeriodStart = patientIdPeriodStart;
-}
-    public 
-    String 
-    getPatientIdSystem()
-    {
-        return this.patientIdSystem;
-    }
-    
-    public void setPatientIdSystem
-        (String patientIdSystem) 
-        {
-      this.patientIdSystem = patientIdSystem;
-}
-    public 
-    String 
-    getPatientIdTypeCodingCode()
-    {
-        return this.patientIdTypeCodingCode;
-    }
-    
-    public void setPatientIdTypeCodingCode
-        (String patientIdTypeCodingCode) 
-        {
-      this.patientIdTypeCodingCode = patientIdTypeCodingCode;
-}
-    public 
-    String 
-    getPatientIdTypeCodingDisplay()
-    {
-        return this.patientIdTypeCodingDisplay;
-    }
-    
-    public void setPatientIdTypeCodingDisplay
-        (String patientIdTypeCodingDisplay) 
-        {
-      this.patientIdTypeCodingDisplay = patientIdTypeCodingDisplay;
-}
-    public 
-    String 
-    getPatientIdTypeCodingSystem()
-    {
-        return this.patientIdTypeCodingSystem;
-    }
-    
-    public void setPatientIdTypeCodingSystem
-        (String patientIdTypeCodingSystem) 
-        {
-      this.patientIdTypeCodingSystem = patientIdTypeCodingSystem;
-}
-    public 
-    String 
-    getPatientIdTypeCodingUsrslt()
-    {
-        return this.patientIdTypeCodingUsrslt;
-    }
-    
-    public void setPatientIdTypeCodingUsrslt
-        (String patientIdTypeCodingUsrslt) 
-        {
-      this.patientIdTypeCodingUsrslt = patientIdTypeCodingUsrslt;
-}
-    public 
-    String 
-    getPatientIdTypeCodingVersion()
-    {
-        return this.patientIdTypeCodingVersion;
-    }
-    
-    public void setPatientIdTypeCodingVersion
-        (String patientIdTypeCodingVersion) 
-        {
-      this.patientIdTypeCodingVersion = patientIdTypeCodingVersion;
-}
-    public 
-    String 
-    getPatientIdTypeText()
-    {
-        return this.patientIdTypeText;
-    }
-    
-    public void setPatientIdTypeText
-        (String patientIdTypeText) 
-        {
-      this.patientIdTypeText = patientIdTypeText;
-}
-    public 
-    String 
-    getPatientIdUseCode()
-    {
-        return this.patientIdUseCode;
-    }
-    
-    public void setPatientIdUseCode
-        (String patientIdUseCode) 
-        {
-      this.patientIdUseCode = patientIdUseCode;
-}
-    public 
-    String 
-    getPatientIdValue()
-    {
-        return this.patientIdValue;
-    }
-    
-    public void setPatientIdValue
-        (String patientIdValue) 
-        {
-      this.patientIdValue = patientIdValue;
-}
-    public 
-    String 
-    getPatientLinkOther()
-    {
-        return this.patientLinkOther;
-    }
-    
-    public void setPatientLinkOther
-        (String patientLinkOther) 
-        {
-      this.patientLinkOther = patientLinkOther;
-}
-    public 
-    String 
-    getPatientLinkTypeCode()
-    {
-        return this.patientLinkTypeCode;
-    }
-    
-    public void setPatientLinkTypeCode
-        (String patientLinkTypeCode) 
-        {
-      this.patientLinkTypeCode = patientLinkTypeCode;
-}
-    public 
-    String 
-    getPatientManagingOrganization()
-    {
-        return this.patientManagingOrganization;
-    }
-    
-    public void setPatientManagingOrganization
-        (String patientManagingOrganization) 
-        {
-      this.patientManagingOrganization = patientManagingOrganization;
-}
-    public 
-    String 
-    getPatientMaritalStatusCodingCode()
-    {
-        return this.patientMaritalStatusCodingCode;
-    }
-    
-    public void setPatientMaritalStatusCodingCode
-        (String patientMaritalStatusCodingCode) 
-        {
-      this.patientMaritalStatusCodingCode = patientMaritalStatusCodingCode;
-}
-    public 
-    String 
-    getPatientMaritalStatusCodingDisplay()
-    {
-        return this.patientMaritalStatusCodingDisplay;
-    }
-    
-    public void setPatientMaritalStatusCodingDisplay
-        (String patientMaritalStatusCodingDisplay) 
-        {
-      this.patientMaritalStatusCodingDisplay = patientMaritalStatusCodingDisplay;
-}
-    public 
-    String 
-    getPatientMaritalStatusCodingSystem()
-    {
-        return this.patientMaritalStatusCodingSystem;
-    }
-    
-    public void setPatientMaritalStatusCodingSystem
-        (String patientMaritalStatusCodingSystem) 
-        {
-      this.patientMaritalStatusCodingSystem = patientMaritalStatusCodingSystem;
-}
-    public 
-    String 
-    getPatientMaritalStatusCodingUsrslt()
-    {
-        return this.patientMaritalStatusCodingUsrslt;
-    }
-    
-    public void setPatientMaritalStatusCodingUsrslt
-        (String patientMaritalStatusCodingUsrslt) 
-        {
-      this.patientMaritalStatusCodingUsrslt = patientMaritalStatusCodingUsrslt;
-}
-    public 
-    String 
-    getPatientMaritalStatusCodingVersion()
-    {
-        return this.patientMaritalStatusCodingVersion;
-    }
-    
-    public void setPatientMaritalStatusCodingVersion
-        (String patientMaritalStatusCodingVersion) 
-        {
-      this.patientMaritalStatusCodingVersion = patientMaritalStatusCodingVersion;
-}
-    public 
-    String 
-    getPatientMaritalStatusText()
-    {
-        return this.patientMaritalStatusText;
-    }
-    
-    public void setPatientMaritalStatusText
-        (String patientMaritalStatusText) 
-        {
-      this.patientMaritalStatusText = patientMaritalStatusText;
-}
-    public 
-    String 
-    getPatientMultipleBirthBoolean()
-    {
-        return this.patientMultipleBirthBoolean;
-    }
-    
-    public void setPatientMultipleBirthBoolean
-        (String patientMultipleBirthBoolean) 
-        {
-      this.patientMultipleBirthBoolean = patientMultipleBirthBoolean;
-}
-    public 
-    String 
-    getPatientMultipleBirthInteger()
-    {
-        return this.patientMultipleBirthInteger;
-    }
-    
-    public void setPatientMultipleBirthInteger
-        (String patientMultipleBirthInteger) 
-        {
-      this.patientMultipleBirthInteger = patientMultipleBirthInteger;
-}
-    public 
-    String 
-    getPatientNameFamily()
-    {
-        return this.patientNameFamily;
-    }
-    
-    public void setPatientNameFamily
-        (String patientNameFamily) 
-        {
-      this.patientNameFamily = patientNameFamily;
-}
-    public 
-    String 
-    getPatientNameGiven()
-    {
-        return this.patientNameGiven;
-    }
-    
-    public void setPatientNameGiven
-        (String patientNameGiven) 
-        {
-      this.patientNameGiven = patientNameGiven;
-}
-    public 
-    String 
-    getPatientNamePeriodEnd()
-    {
-        return this.patientNamePeriodEnd;
-    }
-    
-    public void setPatientNamePeriodEnd
-        (String patientNamePeriodEnd) 
-        {
-      this.patientNamePeriodEnd = patientNamePeriodEnd;
-}
-    public 
-    String 
-    getPatientNamePeriodStart()
-    {
-        return this.patientNamePeriodStart;
-    }
-    
-    public void setPatientNamePeriodStart
-        (String patientNamePeriodStart) 
-        {
-      this.patientNamePeriodStart = patientNamePeriodStart;
-}
-    public 
-    String 
-    getPatientNamePrefix()
-    {
-        return this.patientNamePrefix;
-    }
-    
-    public void setPatientNamePrefix
-        (String patientNamePrefix) 
-        {
-      this.patientNamePrefix = patientNamePrefix;
-}
-    public 
-    String 
-    getPatientNameSuffix()
-    {
-        return this.patientNameSuffix;
-    }
-    
-    public void setPatientNameSuffix
-        (String patientNameSuffix) 
-        {
-      this.patientNameSuffix = patientNameSuffix;
-}
-    public 
-    String 
-    getPatientNameText()
-    {
-        return this.patientNameText;
-    }
-    
-    public void setPatientNameText
-        (String patientNameText) 
-        {
-      this.patientNameText = patientNameText;
-}
-    public 
-    String 
-    getPatientNameUseCode()
-    {
-        return this.patientNameUseCode;
-    }
-    
-    public void setPatientNameUseCode
-        (String patientNameUseCode) 
-        {
-      this.patientNameUseCode = patientNameUseCode;
-}
-    public 
-    String 
-    getPatientPhotoContentType()
-    {
-        return this.patientPhotoContentType;
-    }
-    
-    public void setPatientPhotoContentType
-        (String patientPhotoContentType) 
-        {
-      this.patientPhotoContentType = patientPhotoContentType;
-}
-    public 
-    String 
-    getPatientPhotoCreation()
-    {
-        return this.patientPhotoCreation;
-    }
-    
-    public void setPatientPhotoCreation
-        (String patientPhotoCreation) 
-        {
-      this.patientPhotoCreation = patientPhotoCreation;
-}
-    public 
-    String 
-    getPatientPhotoData()
-    {
-        return this.patientPhotoData;
-    }
-    
-    public void setPatientPhotoData
-        (String patientPhotoData) 
-        {
-      this.patientPhotoData = patientPhotoData;
-}
-    public 
-    String 
-    getPatientPhotoHash()
-    {
-        return this.patientPhotoHash;
-    }
-    
-    public void setPatientPhotoHash
-        (String patientPhotoHash) 
-        {
-      this.patientPhotoHash = patientPhotoHash;
-}
-    public 
-    String 
-    getPatientPhotoLang()
-    {
-        return this.patientPhotoLang;
-    }
-    
-    public void setPatientPhotoLang
-        (String patientPhotoLang) 
-        {
-      this.patientPhotoLang = patientPhotoLang;
-}
-    public 
-    String 
-    getPatientPhotoSize()
-    {
-        return this.patientPhotoSize;
-    }
-    
-    public void setPatientPhotoSize
-        (String patientPhotoSize) 
-        {
-      this.patientPhotoSize = patientPhotoSize;
-}
-    public 
-    String 
-    getPatientPhotoTitle()
-    {
-        return this.patientPhotoTitle;
-    }
-    
-    public void setPatientPhotoTitle
-        (String patientPhotoTitle) 
-        {
-      this.patientPhotoTitle = patientPhotoTitle;
-}
-    public 
-    String 
-    getPatientPhotoUrl()
-    {
-        return this.patientPhotoUrl;
-    }
-    
-    public void setPatientPhotoUrl
-        (String patientPhotoUrl) 
-        {
-      this.patientPhotoUrl = patientPhotoUrl;
-}
-    public 
-    String 
-    getPatientTelecomPeriodEnd()
-    {
-        return this.patientTelecomPeriodEnd;
-    }
-    
-    public void setPatientTelecomPeriodEnd
-        (String patientTelecomPeriodEnd) 
-        {
-      this.patientTelecomPeriodEnd = patientTelecomPeriodEnd;
-}
-    public 
-    String 
-    getPatientTelecomPeriodStart()
-    {
-        return this.patientTelecomPeriodStart;
-    }
-    
-    public void setPatientTelecomPeriodStart
-        (String patientTelecomPeriodStart) 
-        {
-      this.patientTelecomPeriodStart = patientTelecomPeriodStart;
-}
-    public 
-    String 
-    getPatientTelecomRank()
-    {
-        return this.patientTelecomRank;
-    }
-    
-    public void setPatientTelecomRank
-        (String patientTelecomRank) 
-        {
-      this.patientTelecomRank = patientTelecomRank;
-}
-    public 
-    String 
-    getPatientTelecomSystemCode()
-    {
-        return this.patientTelecomSystemCode;
-    }
-    
-    public void setPatientTelecomSystemCode
-        (String patientTelecomSystemCode) 
-        {
-      this.patientTelecomSystemCode = patientTelecomSystemCode;
-}
-    public 
-    String 
-    getPatientTelecomUseCode()
-    {
-        return this.patientTelecomUseCode;
-    }
-    
-    public void setPatientTelecomUseCode
-        (String patientTelecomUseCode) 
-        {
-      this.patientTelecomUseCode = patientTelecomUseCode;
-}
-    public 
-    String 
-    getPatientTelecomValue()
-    {
-        return this.patientTelecomValue;
-    }
-    
-    public void setPatientTelecomValue
-        (String patientTelecomValue) 
-        {
-      this.patientTelecomValue = patientTelecomValue;
-}
+    public void setId(String id) {
+        this.id = id;
+    }
+    
+    
+    
+    public String getPntActive() {
+        return this.pntActive;
+    }
+    
+    public void setPntActive(String pntActive) {
+        this.pntActive = pntActive;
+    }
+    
+    
+    
+    public String getPntAddrCity() {
+        return this.pntAddrCity;
+    }
+    
+    public void setPntAddrCity(String pntAddrCity) {
+        this.pntAddrCity = pntAddrCity;
+    }
+    
+    
+    
+    public String getPntAddrCntry() {
+        return this.pntAddrCntry;
+    }
+    
+    public void setPntAddrCntry(String pntAddrCntry) {
+        this.pntAddrCntry = pntAddrCntry;
+    }
+    
+    
+    
+    public String getPntAddrDistrict() {
+        return this.pntAddrDistrict;
+    }
+    
+    public void setPntAddrDistrict(String pntAddrDistrict) {
+        this.pntAddrDistrict = pntAddrDistrict;
+    }
+    
+    
+    
+    public String getPntAddrLine() {
+        return this.pntAddrLine;
+    }
+    
+    public void setPntAddrLine(String pntAddrLine) {
+        this.pntAddrLine = pntAddrLine;
+    }
+    
+    
+    
+    public String getPntAddrPrdEnd() {
+        return this.pntAddrPrdEnd;
+    }
+    
+    public void setPntAddrPrdEnd(String pntAddrPrdEnd) {
+        this.pntAddrPrdEnd = pntAddrPrdEnd;
+    }
+    
+    
+    
+    public String getPntAddrPrdStrt() {
+        return this.pntAddrPrdStrt;
+    }
+    
+    public void setPntAddrPrdStrt(String pntAddrPrdStrt) {
+        this.pntAddrPrdStrt = pntAddrPrdStrt;
+    }
+    
+    
+    
+    public String getPntAddrPostalCd() {
+        return this.pntAddrPostalCd;
+    }
+    
+    public void setPntAddrPostalCd(String pntAddrPostalCd) {
+        this.pntAddrPostalCd = pntAddrPostalCd;
+    }
+    
+    
+    
+    public String getPntAddrState() {
+        return this.pntAddrState;
+    }
+    
+    public void setPntAddrState(String pntAddrState) {
+        this.pntAddrState = pntAddrState;
+    }
+    
+    
+    
+    public String getPntAddrTxt() {
+        return this.pntAddrTxt;
+    }
+    
+    public void setPntAddrTxt(String pntAddrTxt) {
+        this.pntAddrTxt = pntAddrTxt;
+    }
+    
+    
+    
+    public String getPntAddrTyp() {
+        return this.pntAddrTyp;
+    }
+    
+    public void setPntAddrTyp(String pntAddrTyp) {
+        this.pntAddrTyp = pntAddrTyp;
+    }
+    
+    
+    
+    public String getPntAddrUse() {
+        return this.pntAddrUse;
+    }
+    
+    public void setPntAddrUse(String pntAddrUse) {
+        this.pntAddrUse = pntAddrUse;
+    }
+    
+    
+    
+    public String getPntBirthDt() {
+        return this.pntBirthDt;
+    }
+    
+    public void setPntBirthDt(String pntBirthDt) {
+        this.pntBirthDt = pntBirthDt;
+    }
+    
+    
+    
+    public String getPntCmmnctnLnguageCdgCd() {
+        return this.pntCmmnctnLnguageCdgCd;
+    }
+    
+    public void setPntCmmnctnLnguageCdgCd(String pntCmmnctnLnguageCdgCd) {
+        this.pntCmmnctnLnguageCdgCd = pntCmmnctnLnguageCdgCd;
+    }
+    
+    
+    
+    public String getPntCmmnctnLnguageCdgDsply() {
+        return this.pntCmmnctnLnguageCdgDsply;
+    }
+    
+    public void setPntCmmnctnLnguageCdgDsply(String pntCmmnctnLnguageCdgDsply) {
+        this.pntCmmnctnLnguageCdgDsply = pntCmmnctnLnguageCdgDsply;
+    }
+    
+    
+    
+    public String getPntCmmnctnLnguageCdgSys() {
+        return this.pntCmmnctnLnguageCdgSys;
+    }
+    
+    public void setPntCmmnctnLnguageCdgSys(String pntCmmnctnLnguageCdgSys) {
+        this.pntCmmnctnLnguageCdgSys = pntCmmnctnLnguageCdgSys;
+    }
+    
+    
+    
+    public String getPntCmmnctnLnguageCdgUsrSltd() {
+        return this.pntCmmnctnLnguageCdgUsrSltd;
+    }
+    
+    public void setPntCmmnctnLnguageCdgUsrSltd(String pntCmmnctnLnguageCdgUsrSltd) {
+        this.pntCmmnctnLnguageCdgUsrSltd = pntCmmnctnLnguageCdgUsrSltd;
+    }
+    
+    
+    
+    public String getPntCmmnctnLnguageCdgVrsn() {
+        return this.pntCmmnctnLnguageCdgVrsn;
+    }
+    
+    public void setPntCmmnctnLnguageCdgVrsn(String pntCmmnctnLnguageCdgVrsn) {
+        this.pntCmmnctnLnguageCdgVrsn = pntCmmnctnLnguageCdgVrsn;
+    }
+    
+    
+    
+    public String getPntCmmnctnLnguageTxt() {
+        return this.pntCmmnctnLnguageTxt;
+    }
+    
+    public void setPntCmmnctnLnguageTxt(String pntCmmnctnLnguageTxt) {
+        this.pntCmmnctnLnguageTxt = pntCmmnctnLnguageTxt;
+    }
+    
+    
+    
+    public String getPntCmmnctnPreferred() {
+        return this.pntCmmnctnPreferred;
+    }
+    
+    public void setPntCmmnctnPreferred(String pntCmmnctnPreferred) {
+        this.pntCmmnctnPreferred = pntCmmnctnPreferred;
+    }
+    
+    
+    
+    public String getPntCntctAddrCity() {
+        return this.pntCntctAddrCity;
+    }
+    
+    public void setPntCntctAddrCity(String pntCntctAddrCity) {
+        this.pntCntctAddrCity = pntCntctAddrCity;
+    }
+    
+    
+    
+    public String getPntCntctAddrCntry() {
+        return this.pntCntctAddrCntry;
+    }
+    
+    public void setPntCntctAddrCntry(String pntCntctAddrCntry) {
+        this.pntCntctAddrCntry = pntCntctAddrCntry;
+    }
+    
+    
+    
+    public String getPntCntctAddrDistrict() {
+        return this.pntCntctAddrDistrict;
+    }
+    
+    public void setPntCntctAddrDistrict(String pntCntctAddrDistrict) {
+        this.pntCntctAddrDistrict = pntCntctAddrDistrict;
+    }
+    
+    
+    
+    public String getPntCntctAddrLine() {
+        return this.pntCntctAddrLine;
+    }
+    
+    public void setPntCntctAddrLine(String pntCntctAddrLine) {
+        this.pntCntctAddrLine = pntCntctAddrLine;
+    }
+    
+    
+    
+    public String getPntCntctAddrPrdEnd() {
+        return this.pntCntctAddrPrdEnd;
+    }
+    
+    public void setPntCntctAddrPrdEnd(String pntCntctAddrPrdEnd) {
+        this.pntCntctAddrPrdEnd = pntCntctAddrPrdEnd;
+    }
+    
+    
+    
+    public String getPntCntctAddrPrdStrt() {
+        return this.pntCntctAddrPrdStrt;
+    }
+    
+    public void setPntCntctAddrPrdStrt(String pntCntctAddrPrdStrt) {
+        this.pntCntctAddrPrdStrt = pntCntctAddrPrdStrt;
+    }
+    
+    
+    
+    public String getPntCntctAddrPostalCd() {
+        return this.pntCntctAddrPostalCd;
+    }
+    
+    public void setPntCntctAddrPostalCd(String pntCntctAddrPostalCd) {
+        this.pntCntctAddrPostalCd = pntCntctAddrPostalCd;
+    }
+    
+    
+    
+    public String getPntCntctAddrState() {
+        return this.pntCntctAddrState;
+    }
+    
+    public void setPntCntctAddrState(String pntCntctAddrState) {
+        this.pntCntctAddrState = pntCntctAddrState;
+    }
+    
+    
+    
+    public String getPntCntctAddrTxt() {
+        return this.pntCntctAddrTxt;
+    }
+    
+    public void setPntCntctAddrTxt(String pntCntctAddrTxt) {
+        this.pntCntctAddrTxt = pntCntctAddrTxt;
+    }
+    
+    
+    
+    public String getPntCntctAddrTyp() {
+        return this.pntCntctAddrTyp;
+    }
+    
+    public void setPntCntctAddrTyp(String pntCntctAddrTyp) {
+        this.pntCntctAddrTyp = pntCntctAddrTyp;
+    }
+    
+    
+    
+    public String getPntCntctAddrUse() {
+        return this.pntCntctAddrUse;
+    }
+    
+    public void setPntCntctAddrUse(String pntCntctAddrUse) {
+        this.pntCntctAddrUse = pntCntctAddrUse;
+    }
+    
+    
+    
+    public String getPntCntctGender() {
+        return this.pntCntctGender;
+    }
+    
+    public void setPntCntctGender(String pntCntctGender) {
+        this.pntCntctGender = pntCntctGender;
+    }
+    
+    
+    
+    public String getPntCntctNmFmly() {
+        return this.pntCntctNmFmly;
+    }
+    
+    public void setPntCntctNmFmly(String pntCntctNmFmly) {
+        this.pntCntctNmFmly = pntCntctNmFmly;
+    }
+    
+    
+    
+    public String getPntCntctNmGiven() {
+        return this.pntCntctNmGiven;
+    }
+    
+    public void setPntCntctNmGiven(String pntCntctNmGiven) {
+        this.pntCntctNmGiven = pntCntctNmGiven;
+    }
+    
+    
+    
+    public String getPntCntctNmPrdEnd() {
+        return this.pntCntctNmPrdEnd;
+    }
+    
+    public void setPntCntctNmPrdEnd(String pntCntctNmPrdEnd) {
+        this.pntCntctNmPrdEnd = pntCntctNmPrdEnd;
+    }
+    
+    
+    
+    public String getPntCntctNmPrdStrt() {
+        return this.pntCntctNmPrdStrt;
+    }
+    
+    public void setPntCntctNmPrdStrt(String pntCntctNmPrdStrt) {
+        this.pntCntctNmPrdStrt = pntCntctNmPrdStrt;
+    }
+    
+    
+    
+    public String getPntCntctNmPrefix() {
+        return this.pntCntctNmPrefix;
+    }
+    
+    public void setPntCntctNmPrefix(String pntCntctNmPrefix) {
+        this.pntCntctNmPrefix = pntCntctNmPrefix;
+    }
+    
+    
+    
+    public String getPntCntctNmSuffix() {
+        return this.pntCntctNmSuffix;
+    }
+    
+    public void setPntCntctNmSuffix(String pntCntctNmSuffix) {
+        this.pntCntctNmSuffix = pntCntctNmSuffix;
+    }
+    
+    
+    
+    public String getPntCntctNmTxt() {
+        return this.pntCntctNmTxt;
+    }
+    
+    public void setPntCntctNmTxt(String pntCntctNmTxt) {
+        this.pntCntctNmTxt = pntCntctNmTxt;
+    }
+    
+    
+    
+    public String getPntCntctNmUse() {
+        return this.pntCntctNmUse;
+    }
+    
+    public void setPntCntctNmUse(String pntCntctNmUse) {
+        this.pntCntctNmUse = pntCntctNmUse;
+    }
+    
+    
+    
+    public String getPntCntctOrgnztn() {
+        return this.pntCntctOrgnztn;
+    }
+    
+    public void setPntCntctOrgnztn(String pntCntctOrgnztn) {
+        this.pntCntctOrgnztn = pntCntctOrgnztn;
+    }
+    
+    
+    
+    public String getPntCntctPrdEnd() {
+        return this.pntCntctPrdEnd;
+    }
+    
+    public void setPntCntctPrdEnd(String pntCntctPrdEnd) {
+        this.pntCntctPrdEnd = pntCntctPrdEnd;
+    }
+    
+    
+    
+    public String getPntCntctPrdStrt() {
+        return this.pntCntctPrdStrt;
+    }
+    
+    public void setPntCntctPrdStrt(String pntCntctPrdStrt) {
+        this.pntCntctPrdStrt = pntCntctPrdStrt;
+    }
+    
+    
+    
+    public String getPntCntctRltnshipCdgCd() {
+        return this.pntCntctRltnshipCdgCd;
+    }
+    
+    public void setPntCntctRltnshipCdgCd(String pntCntctRltnshipCdgCd) {
+        this.pntCntctRltnshipCdgCd = pntCntctRltnshipCdgCd;
+    }
+    
+    
+    
+    public String getPntCntctRltnshipCdgDsply() {
+        return this.pntCntctRltnshipCdgDsply;
+    }
+    
+    public void setPntCntctRltnshipCdgDsply(String pntCntctRltnshipCdgDsply) {
+        this.pntCntctRltnshipCdgDsply = pntCntctRltnshipCdgDsply;
+    }
+    
+    
+    
+    public String getPntCntctRltnshipCdgSys() {
+        return this.pntCntctRltnshipCdgSys;
+    }
+    
+    public void setPntCntctRltnshipCdgSys(String pntCntctRltnshipCdgSys) {
+        this.pntCntctRltnshipCdgSys = pntCntctRltnshipCdgSys;
+    }
+    
+    
+    
+    public String getPntCntctRltnshipCdgUsrSltd() {
+        return this.pntCntctRltnshipCdgUsrSltd;
+    }
+    
+    public void setPntCntctRltnshipCdgUsrSltd(String pntCntctRltnshipCdgUsrSltd) {
+        this.pntCntctRltnshipCdgUsrSltd = pntCntctRltnshipCdgUsrSltd;
+    }
+    
+    
+    
+    public String getPntCntctRltnshipCdgVrsn() {
+        return this.pntCntctRltnshipCdgVrsn;
+    }
+    
+    public void setPntCntctRltnshipCdgVrsn(String pntCntctRltnshipCdgVrsn) {
+        this.pntCntctRltnshipCdgVrsn = pntCntctRltnshipCdgVrsn;
+    }
+    
+    
+    
+    public String getPntCntctRltnshipTxt() {
+        return this.pntCntctRltnshipTxt;
+    }
+    
+    public void setPntCntctRltnshipTxt(String pntCntctRltnshipTxt) {
+        this.pntCntctRltnshipTxt = pntCntctRltnshipTxt;
+    }
+    
+    
+    
+    public String getPntCntctTlcmPrdEnd() {
+        return this.pntCntctTlcmPrdEnd;
+    }
+    
+    public void setPntCntctTlcmPrdEnd(String pntCntctTlcmPrdEnd) {
+        this.pntCntctTlcmPrdEnd = pntCntctTlcmPrdEnd;
+    }
+    
+    
+    
+    public String getPntCntctTlcmPrdStrt() {
+        return this.pntCntctTlcmPrdStrt;
+    }
+    
+    public void setPntCntctTlcmPrdStrt(String pntCntctTlcmPrdStrt) {
+        this.pntCntctTlcmPrdStrt = pntCntctTlcmPrdStrt;
+    }
+    
+    
+    
+    public String getPntCntctTlcmRnk() {
+        return this.pntCntctTlcmRnk;
+    }
+    
+    public void setPntCntctTlcmRnk(String pntCntctTlcmRnk) {
+        this.pntCntctTlcmRnk = pntCntctTlcmRnk;
+    }
+    
+    
+    
+    public String getPntCntctTlcmSys() {
+        return this.pntCntctTlcmSys;
+    }
+    
+    public void setPntCntctTlcmSys(String pntCntctTlcmSys) {
+        this.pntCntctTlcmSys = pntCntctTlcmSys;
+    }
+    
+    
+    
+    public String getPntCntctTlcmUse() {
+        return this.pntCntctTlcmUse;
+    }
+    
+    public void setPntCntctTlcmUse(String pntCntctTlcmUse) {
+        this.pntCntctTlcmUse = pntCntctTlcmUse;
+    }
+    
+    
+    
+    public String getPntCntctTlcmVl() {
+        return this.pntCntctTlcmVl;
+    }
+    
+    public void setPntCntctTlcmVl(String pntCntctTlcmVl) {
+        this.pntCntctTlcmVl = pntCntctTlcmVl;
+    }
+    
+    
+    
+    public String getPntDeceasedBooleanTyp() {
+        return this.pntDeceasedBooleanTyp;
+    }
+    
+    public void setPntDeceasedBooleanTyp(String pntDeceasedBooleanTyp) {
+        this.pntDeceasedBooleanTyp = pntDeceasedBooleanTyp;
+    }
+    
+    
+    
+    public String getPntDeceasedDtTimeTyp() {
+        return this.pntDeceasedDtTimeTyp;
+    }
+    
+    public void setPntDeceasedDtTimeTyp(String pntDeceasedDtTimeTyp) {
+        this.pntDeceasedDtTimeTyp = pntDeceasedDtTimeTyp;
+    }
+    
+    
+    
+    public String getPntGender() {
+        return this.pntGender;
+    }
+    
+    public void setPntGender(String pntGender) {
+        this.pntGender = pntGender;
+    }
+    
+    
+    
+    public String getPntGeneralPrctitnr() {
+        return this.pntGeneralPrctitnr;
+    }
+    
+    public void setPntGeneralPrctitnr(String pntGeneralPrctitnr) {
+        this.pntGeneralPrctitnr = pntGeneralPrctitnr;
+    }
+    
+    
+    
+    public String getPntIdAssigner() {
+        return this.pntIdAssigner;
+    }
+    
+    public void setPntIdAssigner(String pntIdAssigner) {
+        this.pntIdAssigner = pntIdAssigner;
+    }
+    
+    
+    
+    public String getPntIdPrdEnd() {
+        return this.pntIdPrdEnd;
+    }
+    
+    public void setPntIdPrdEnd(String pntIdPrdEnd) {
+        this.pntIdPrdEnd = pntIdPrdEnd;
+    }
+    
+    
+    
+    public String getPntIdPrdStrt() {
+        return this.pntIdPrdStrt;
+    }
+    
+    public void setPntIdPrdStrt(String pntIdPrdStrt) {
+        this.pntIdPrdStrt = pntIdPrdStrt;
+    }
+    
+    
+    
+    public String getPntIdSys() {
+        return this.pntIdSys;
+    }
+    
+    public void setPntIdSys(String pntIdSys) {
+        this.pntIdSys = pntIdSys;
+    }
+    
+    
+    
+    public String getPntIdTypCdgCd() {
+        return this.pntIdTypCdgCd;
+    }
+    
+    public void setPntIdTypCdgCd(String pntIdTypCdgCd) {
+        this.pntIdTypCdgCd = pntIdTypCdgCd;
+    }
+    
+    
+    
+    public String getPntIdTypCdgDsply() {
+        return this.pntIdTypCdgDsply;
+    }
+    
+    public void setPntIdTypCdgDsply(String pntIdTypCdgDsply) {
+        this.pntIdTypCdgDsply = pntIdTypCdgDsply;
+    }
+    
+    
+    
+    public String getPntIdTypCdgSys() {
+        return this.pntIdTypCdgSys;
+    }
+    
+    public void setPntIdTypCdgSys(String pntIdTypCdgSys) {
+        this.pntIdTypCdgSys = pntIdTypCdgSys;
+    }
+    
+    
+    
+    public String getPntIdTypCdgUsrSltd() {
+        return this.pntIdTypCdgUsrSltd;
+    }
+    
+    public void setPntIdTypCdgUsrSltd(String pntIdTypCdgUsrSltd) {
+        this.pntIdTypCdgUsrSltd = pntIdTypCdgUsrSltd;
+    }
+    
+    
+    
+    public String getPntIdTypCdgVrsn() {
+        return this.pntIdTypCdgVrsn;
+    }
+    
+    public void setPntIdTypCdgVrsn(String pntIdTypCdgVrsn) {
+        this.pntIdTypCdgVrsn = pntIdTypCdgVrsn;
+    }
+    
+    
+    
+    public String getPntIdTypTxt() {
+        return this.pntIdTypTxt;
+    }
+    
+    public void setPntIdTypTxt(String pntIdTypTxt) {
+        this.pntIdTypTxt = pntIdTypTxt;
+    }
+    
+    
+    
+    public String getPntIdUse() {
+        return this.pntIdUse;
+    }
+    
+    public void setPntIdUse(String pntIdUse) {
+        this.pntIdUse = pntIdUse;
+    }
+    
+    
+    
+    public String getPntIdVl() {
+        return this.pntIdVl;
+    }
+    
+    public void setPntIdVl(String pntIdVl) {
+        this.pntIdVl = pntIdVl;
+    }
+    
+    
+    
+    public String getPntLinkOther() {
+        return this.pntLinkOther;
+    }
+    
+    public void setPntLinkOther(String pntLinkOther) {
+        this.pntLinkOther = pntLinkOther;
+    }
+    
+    
+    
+    public String getPntLinkTyp() {
+        return this.pntLinkTyp;
+    }
+    
+    public void setPntLinkTyp(String pntLinkTyp) {
+        this.pntLinkTyp = pntLinkTyp;
+    }
+    
+    
+    
+    public String getPntManagingOrgnztn() {
+        return this.pntManagingOrgnztn;
+    }
+    
+    public void setPntManagingOrgnztn(String pntManagingOrgnztn) {
+        this.pntManagingOrgnztn = pntManagingOrgnztn;
+    }
+    
+    
+    
+    public String getPntMaritalStsCdgCd() {
+        return this.pntMaritalStsCdgCd;
+    }
+    
+    public void setPntMaritalStsCdgCd(String pntMaritalStsCdgCd) {
+        this.pntMaritalStsCdgCd = pntMaritalStsCdgCd;
+    }
+    
+    
+    
+    public String getPntMaritalStsCdgDsply() {
+        return this.pntMaritalStsCdgDsply;
+    }
+    
+    public void setPntMaritalStsCdgDsply(String pntMaritalStsCdgDsply) {
+        this.pntMaritalStsCdgDsply = pntMaritalStsCdgDsply;
+    }
+    
+    
+    
+    public String getPntMaritalStsCdgSys() {
+        return this.pntMaritalStsCdgSys;
+    }
+    
+    public void setPntMaritalStsCdgSys(String pntMaritalStsCdgSys) {
+        this.pntMaritalStsCdgSys = pntMaritalStsCdgSys;
+    }
+    
+    
+    
+    public String getPntMaritalStsCdgUsrSltd() {
+        return this.pntMaritalStsCdgUsrSltd;
+    }
+    
+    public void setPntMaritalStsCdgUsrSltd(String pntMaritalStsCdgUsrSltd) {
+        this.pntMaritalStsCdgUsrSltd = pntMaritalStsCdgUsrSltd;
+    }
+    
+    
+    
+    public String getPntMaritalStsCdgVrsn() {
+        return this.pntMaritalStsCdgVrsn;
+    }
+    
+    public void setPntMaritalStsCdgVrsn(String pntMaritalStsCdgVrsn) {
+        this.pntMaritalStsCdgVrsn = pntMaritalStsCdgVrsn;
+    }
+    
+    
+    
+    public String getPntMaritalStsTxt() {
+        return this.pntMaritalStsTxt;
+    }
+    
+    public void setPntMaritalStsTxt(String pntMaritalStsTxt) {
+        this.pntMaritalStsTxt = pntMaritalStsTxt;
+    }
+    
+    
+    
+    public String getPntMultipleBirthBooleanTyp() {
+        return this.pntMultipleBirthBooleanTyp;
+    }
+    
+    public void setPntMultipleBirthBooleanTyp(String pntMultipleBirthBooleanTyp) {
+        this.pntMultipleBirthBooleanTyp = pntMultipleBirthBooleanTyp;
+    }
+    
+    
+    
+    public String getPntMultipleBirthIntegerTyp() {
+        return this.pntMultipleBirthIntegerTyp;
+    }
+    
+    public void setPntMultipleBirthIntegerTyp(String pntMultipleBirthIntegerTyp) {
+        this.pntMultipleBirthIntegerTyp = pntMultipleBirthIntegerTyp;
+    }
+    
+    
+    
+    public String getPntNmFmly() {
+        return this.pntNmFmly;
+    }
+    
+    public void setPntNmFmly(String pntNmFmly) {
+        this.pntNmFmly = pntNmFmly;
+    }
+    
+    
+    
+    public String getPntNmGiven() {
+        return this.pntNmGiven;
+    }
+    
+    public void setPntNmGiven(String pntNmGiven) {
+        this.pntNmGiven = pntNmGiven;
+    }
+    
+    
+    
+    public String getPntNmPrdEnd() {
+        return this.pntNmPrdEnd;
+    }
+    
+    public void setPntNmPrdEnd(String pntNmPrdEnd) {
+        this.pntNmPrdEnd = pntNmPrdEnd;
+    }
+    
+    
+    
+    public String getPntNmPrdStrt() {
+        return this.pntNmPrdStrt;
+    }
+    
+    public void setPntNmPrdStrt(String pntNmPrdStrt) {
+        this.pntNmPrdStrt = pntNmPrdStrt;
+    }
+    
+    
+    
+    public String getPntNmPrefix() {
+        return this.pntNmPrefix;
+    }
+    
+    public void setPntNmPrefix(String pntNmPrefix) {
+        this.pntNmPrefix = pntNmPrefix;
+    }
+    
+    
+    
+    public String getPntNmSuffix() {
+        return this.pntNmSuffix;
+    }
+    
+    public void setPntNmSuffix(String pntNmSuffix) {
+        this.pntNmSuffix = pntNmSuffix;
+    }
+    
+    
+    
+    public String getPntNmTxt() {
+        return this.pntNmTxt;
+    }
+    
+    public void setPntNmTxt(String pntNmTxt) {
+        this.pntNmTxt = pntNmTxt;
+    }
+    
+    
+    
+    public String getPntNmUse() {
+        return this.pntNmUse;
+    }
+    
+    public void setPntNmUse(String pntNmUse) {
+        this.pntNmUse = pntNmUse;
+    }
+    
+    
+    
+    public String getPntPhotoCntntTyp() {
+        return this.pntPhotoCntntTyp;
+    }
+    
+    public void setPntPhotoCntntTyp(String pntPhotoCntntTyp) {
+        this.pntPhotoCntntTyp = pntPhotoCntntTyp;
+    }
+    
+    
+    
+    public String getPntPhotoCreation() {
+        return this.pntPhotoCreation;
+    }
+    
+    public void setPntPhotoCreation(String pntPhotoCreation) {
+        this.pntPhotoCreation = pntPhotoCreation;
+    }
+    
+    
+    
+    public String getPntPhotoData() {
+        return this.pntPhotoData;
+    }
+    
+    public void setPntPhotoData(String pntPhotoData) {
+        this.pntPhotoData = pntPhotoData;
+    }
+    
+    
+    
+    public String getPntPhotoHash() {
+        return this.pntPhotoHash;
+    }
+    
+    public void setPntPhotoHash(String pntPhotoHash) {
+        this.pntPhotoHash = pntPhotoHash;
+    }
+    
+    
+    
+    public String getPntPhotoLnguage() {
+        return this.pntPhotoLnguage;
+    }
+    
+    public void setPntPhotoLnguage(String pntPhotoLnguage) {
+        this.pntPhotoLnguage = pntPhotoLnguage;
+    }
+    
+    
+    
+    public String getPntPhotoSz() {
+        return this.pntPhotoSz;
+    }
+    
+    public void setPntPhotoSz(String pntPhotoSz) {
+        this.pntPhotoSz = pntPhotoSz;
+    }
+    
+    
+    
+    public String getPntPhotoTtl() {
+        return this.pntPhotoTtl;
+    }
+    
+    public void setPntPhotoTtl(String pntPhotoTtl) {
+        this.pntPhotoTtl = pntPhotoTtl;
+    }
+    
+    
+    
+    public String getPntPhotoUrl() {
+        return this.pntPhotoUrl;
+    }
+    
+    public void setPntPhotoUrl(String pntPhotoUrl) {
+        this.pntPhotoUrl = pntPhotoUrl;
+    }
+    
+    
+    
+    public String getPntTlcmPrdEnd() {
+        return this.pntTlcmPrdEnd;
+    }
+    
+    public void setPntTlcmPrdEnd(String pntTlcmPrdEnd) {
+        this.pntTlcmPrdEnd = pntTlcmPrdEnd;
+    }
+    
+    
+    
+    public String getPntTlcmPrdStrt() {
+        return this.pntTlcmPrdStrt;
+    }
+    
+    public void setPntTlcmPrdStrt(String pntTlcmPrdStrt) {
+        this.pntTlcmPrdStrt = pntTlcmPrdStrt;
+    }
+    
+    
+    
+    public String getPntTlcmRnk() {
+        return this.pntTlcmRnk;
+    }
+    
+    public void setPntTlcmRnk(String pntTlcmRnk) {
+        this.pntTlcmRnk = pntTlcmRnk;
+    }
+    
+    
+    
+    public String getPntTlcmSys() {
+        return this.pntTlcmSys;
+    }
+    
+    public void setPntTlcmSys(String pntTlcmSys) {
+        this.pntTlcmSys = pntTlcmSys;
+    }
+    
+    
+    
+    public String getPntTlcmUse() {
+        return this.pntTlcmUse;
+    }
+    
+    public void setPntTlcmUse(String pntTlcmUse) {
+        this.pntTlcmUse = pntTlcmUse;
+    }
+    
+    
+    
+    public String getPntTlcmVl() {
+        return this.pntTlcmVl;
+    }
+    
+    public void setPntTlcmVl(String pntTlcmVl) {
+        this.pntTlcmVl = pntTlcmVl;
+    }
+    
+    
+    
 
 
-    public 
-    String 
-    getPatientRaceValue()
-    {
-        return this.patientRaceValue;
-    }
-    
-    public void setPatientRaceValue
-        (String patientRace) 
-        {
-      this.patientRaceValue = patientRace;
-}
-    public 
-    String 
-    getPatientEthnicityValue()
-    {
-        return this.patientEthnicityValue;
-    }
-    
-    public void setPatientEthnicityValue
-        (String patientEthnicityValue) 
-        {
-      this.patientEthnicityValue = patientEthnicityValue;
-}
-    public 
-    String 
-    getPatientAddressExtensionLatitudeValue()
-    {
-        return this.patientAddressExtensionLatitudeValue;
-    }
-    
-    public void setPatientAddressExtensionLatitudeValue
-        (String patientAddressExtensionLatitudeValue) 
-        {
-    		this.patientAddressExtensionLatitudeValue = patientAddressExtensionLatitudeValue;
-        }
-    public 
-    String 
-    getPatientAddressExtensionLongitudeValue()
-    {
-        return this.patientAddressExtensionLongitudeValue;
-    }
-    
-    public void setPatientAddressExtensionLongitudeValue
-        (String patientAddressExtensionLongitudeValue) 
-        {
-    		this.patientAddressExtensionLongitudeValue = patientAddressExtensionLongitudeValue;
-        }
 
 
 }

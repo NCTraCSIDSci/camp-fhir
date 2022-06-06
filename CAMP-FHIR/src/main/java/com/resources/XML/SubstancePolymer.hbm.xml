@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Jun 6, 2022, 11:02:25 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="SubstancePolymer" optimistic-lock="none" table="SubstancePolymer">
+        <id name="id" type="string">
+            <column length="64" name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="sbstncPlymrClsCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Cls__Cdg_Cd"/>
+        </property>
+        <property name="sbstncPlymrClsCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Cls__Cdg_Dsply"/>
+        </property>
+        <property name="sbstncPlymrClsCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Cls__Cdg_Sys"/>
+        </property>
+        <property name="sbstncPlymrClsCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Cls__Cdg_UsrSltd"/>
+        </property>
+        <property name="sbstncPlymrClsCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Cls__Cdg_Vrsn"/>
+        </property>
+        <property name="sbstncPlymrClsTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Cls__Txt"/>
+        </property>
+        <property name="sbstncPlymrCopolymerConnectivityCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_CopolymerConnectivity_Cdg_Cd"/>
+        </property>
+        <property name="sbstncPlymrCopolymerConnectivityCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_CopolymerConnectivity_Cdg_Dsply"/>
+        </property>
+        <property name="sbstncPlymrCopolymerConnectivityCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_CopolymerConnectivity_Cdg_Sys"/>
+        </property>
+        <property name="sbstncPlymrCopolymerConnectivityCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_CopolymerConnectivity_Cdg_UsrSltd"/>
+        </property>
+        <property name="sbstncPlymrCopolymerConnectivityCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_CopolymerConnectivity_Cdg_Vrsn"/>
+        </property>
+        <property name="sbstncPlymrCopolymerConnectivityTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_CopolymerConnectivity_Txt"/>
+        </property>
+        <property name="sbstncPlymrGeometryCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Geometry_Cdg_Cd"/>
+        </property>
+        <property name="sbstncPlymrGeometryCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Geometry_Cdg_Dsply"/>
+        </property>
+        <property name="sbstncPlymrGeometryCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Geometry_Cdg_Sys"/>
+        </property>
+        <property name="sbstncPlymrGeometryCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Geometry_Cdg_UsrSltd"/>
+        </property>
+        <property name="sbstncPlymrGeometryCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Geometry_Cdg_Vrsn"/>
+        </property>
+        <property name="sbstncPlymrGeometryTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Geometry_Txt"/>
+        </property>
+        <property name="sbstncPlymrModification" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Modification"/>
+        </property>
+        <property name="sbstncPlymrMonomerStRtioTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_MonomerSt_RtioTyp_Cdg_Cd"/>
+        </property>
+        <property name="sbstncPlymrMonomerStRtioTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_MonomerSt_RtioTyp_Cdg_Dsply"/>
+        </property>
+        <property name="sbstncPlymrMonomerStRtioTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_MonomerSt_RtioTyp_Cdg_Sys"/>
+        </property>
+        <property name="sbstncPlymrMonomerStRtioTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_MonomerSt_RtioTyp_Cdg_UsrSltd"/>
+        </property>
+        <property name="sbstncPlymrMonomerStRtioTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_MonomerSt_RtioTyp_Cdg_Vrsn"/>
+        </property>
+        <property name="sbstncPlymrMonomerStRtioTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_MonomerSt_RtioTyp_Txt"/>
+        </property>
+        <property name="sbstncPlymrMonomerStStrtingMtrlAmntAmntQntyCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_MonomerSt_StrtingMtrl_Amnt_AmntQnty_Cd"/>
+        </property>
+        <property name="sbstncPlymrMonomerStStrtingMtrlAmntAmntQntyCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_MonomerSt_StrtingMtrl_Amnt_AmntQnty_Cmprtr"/>
+        </property>
+        <property name="sbstncPlymrMonomerStStrtingMtrlAmntAmntQntySys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_MonomerSt_StrtingMtrl_Amnt_AmntQnty_Sys"/>
+        </property>
+        <property name="sbstncPlymrMonomerStStrtingMtrlAmntAmntQntyUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_MonomerSt_StrtingMtrl_Amnt_AmntQnty_Unt"/>
+        </property>
+        <property name="sbstncPlymrMonomerStStrtingMtrlAmntAmntQntyVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_MonomerSt_StrtingMtrl_Amnt_AmntQnty_Vl"/>
+        </property>
+        <property name="sbstncPlymrMonomerStStrtingMtrlAmntAmntRngHiCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_MonomerSt_StrtingMtrl_Amnt_AmntRng_Hi_Cd"/>
+        </property>
+        <property name="sbstncPlymrMonomerStStrtingMtrlAmntAmntRngHiCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_MonomerSt_StrtingMtrl_Amnt_AmntRng_Hi_Cmprtr"/>
+        </property>
+        <property name="sbstncPlymrMonomerStStrtingMtrlAmntAmntRngHiSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_MonomerSt_StrtingMtrl_Amnt_AmntRng_Hi_Sys"/>
+        </property>
+        <property name="sbstncPlymrMonomerStStrtingMtrlAmntAmntRngHiUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_MonomerSt_StrtingMtrl_Amnt_AmntRng_Hi_Unt"/>
+        </property>
+        <property name="sbstncPlymrMonomerStStrtingMtrlAmntAmntRngHiVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_MonomerSt_StrtingMtrl_Amnt_AmntRng_Hi_Vl"/>
+        </property>
+        <property name="sbstncPlymrMonomerStStrtingMtrlAmntAmntRngLwCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_MonomerSt_StrtingMtrl_Amnt_AmntRng_Lw_Cd"/>
+        </property>
+        <property name="sbstncPlymrMonomerStStrtingMtrlAmntAmntRngLwCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_MonomerSt_StrtingMtrl_Amnt_AmntRng_Lw_Cmprtr"/>
+        </property>
+        <property name="sbstncPlymrMonomerStStrtingMtrlAmntAmntRngLwSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_MonomerSt_StrtingMtrl_Amnt_AmntRng_Lw_Sys"/>
+        </property>
+        <property name="sbstncPlymrMonomerStStrtingMtrlAmntAmntRngLwUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_MonomerSt_StrtingMtrl_Amnt_AmntRng_Lw_Unt"/>
+        </property>
+        <property name="sbstncPlymrMonomerStStrtingMtrlAmntAmntRngLwVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_MonomerSt_StrtingMtrl_Amnt_AmntRng_Lw_Vl"/>
+        </property>
+        <property name="sbstncPlymrMonomerStStrtingMtrlAmntAmntStrgTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_MonomerSt_StrtingMtrl_Amnt_AmntStrgTyp"/>
+        </property>
+        <property name="sbstncPlymrMonomerStStrtingMtrlAmntAmntTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_MonomerSt_StrtingMtrl_Amnt_AmntTxt"/>
+        </property>
+        <property name="sbstncPlymrMonomerStStrtingMtrlAmntAmntTxtElmnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_MonomerSt_StrtingMtrl_Amnt_AmntTxtElmnt"/>
+        </property>
+        <property name="sbstncPlymrMonomerStStrtingMtrlAmntAmntTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_MonomerSt_StrtingMtrl_Amnt_AmntTyp_Cdg_Cd"/>
+        </property>
+        <property name="sbstncPlymrMonomerStStrtingMtrlAmntAmntTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_MonomerSt_StrtingMtrl_Amnt_AmntTyp_Cdg_Dsply"/>
+        </property>
+        <property name="sbstncPlymrMonomerStStrtingMtrlAmntAmntTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_MonomerSt_StrtingMtrl_Amnt_AmntTyp_Cdg_Sys"/>
+        </property>
+        <property name="sbstncPlymrMonomerStStrtingMtrlAmntAmntTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_MonomerSt_StrtingMtrl_Amnt_AmntTyp_Cdg_UsrSltd"/>
+        </property>
+        <property name="sbstncPlymrMonomerStStrtingMtrlAmntAmntTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_MonomerSt_StrtingMtrl_Amnt_AmntTyp_Cdg_Vrsn"/>
+        </property>
+        <property name="sbstncPlymrMonomerStStrtingMtrlAmntAmntTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_MonomerSt_StrtingMtrl_Amnt_AmntTyp_Txt"/>
+        </property>
+        <property name="sbstncPlymrMonomerStStrtingMtrlAmntRfrncRngHiLmtCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_MonomerSt_StrtingMtrl_Amnt_RfrncRng_HiLmt_Cd"/>
+        </property>
+        <property name="sbstncPlymrMonomerStStrtingMtrlAmntRfrncRngHiLmtCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_MonomerSt_StrtingMtrl_Amnt_RfrncRng_HiLmt_Cmprtr"/>
+        </property>
+        <property name="sbstncPlymrMonomerStStrtingMtrlAmntRfrncRngHiLmtSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_MonomerSt_StrtingMtrl_Amnt_RfrncRng_HiLmt_Sys"/>
+        </property>
+        <property name="sbstncPlymrMonomerStStrtingMtrlAmntRfrncRngHiLmtUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_MonomerSt_StrtingMtrl_Amnt_RfrncRng_HiLmt_Unt"/>
+        </property>
+        <property name="sbstncPlymrMonomerStStrtingMtrlAmntRfrncRngHiLmtVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_MonomerSt_StrtingMtrl_Amnt_RfrncRng_HiLmt_Vl"/>
+        </property>
+        <property name="sbstncPlymrMonomerStStrtingMtrlAmntRfrncRngLwLmtCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_MonomerSt_StrtingMtrl_Amnt_RfrncRng_LwLmt_Cd"/>
+        </property>
+        <property name="sbstncPlymrMonomerStStrtingMtrlAmntRfrncRngLwLmtCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_MonomerSt_StrtingMtrl_Amnt_RfrncRng_LwLmt_Cmprtr"/>
+        </property>
+        <property name="sbstncPlymrMonomerStStrtingMtrlAmntRfrncRngLwLmtSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_MonomerSt_StrtingMtrl_Amnt_RfrncRng_LwLmt_Sys"/>
+        </property>
+        <property name="sbstncPlymrMonomerStStrtingMtrlAmntRfrncRngLwLmtUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_MonomerSt_StrtingMtrl_Amnt_RfrncRng_LwLmt_Unt"/>
+        </property>
+        <property name="sbstncPlymrMonomerStStrtingMtrlAmntRfrncRngLwLmtVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_MonomerSt_StrtingMtrl_Amnt_RfrncRng_LwLmt_Vl"/>
+        </property>
+        <property name="sbstncPlymrMonomerStStrtingMtrlIsDefining" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_MonomerSt_StrtingMtrl_IsDefining"/>
+        </property>
+        <property name="sbstncPlymrMonomerStStrtingMtrlMtrlCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_MonomerSt_StrtingMtrl_Mtrl_Cdg_Cd"/>
+        </property>
+        <property name="sbstncPlymrMonomerStStrtingMtrlMtrlCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_MonomerSt_StrtingMtrl_Mtrl_Cdg_Dsply"/>
+        </property>
+        <property name="sbstncPlymrMonomerStStrtingMtrlMtrlCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_MonomerSt_StrtingMtrl_Mtrl_Cdg_Sys"/>
+        </property>
+        <property name="sbstncPlymrMonomerStStrtingMtrlMtrlCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_MonomerSt_StrtingMtrl_Mtrl_Cdg_UsrSltd"/>
+        </property>
+        <property name="sbstncPlymrMonomerStStrtingMtrlMtrlCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_MonomerSt_StrtingMtrl_Mtrl_Cdg_Vrsn"/>
+        </property>
+        <property name="sbstncPlymrMonomerStStrtingMtrlMtrlTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_MonomerSt_StrtingMtrl_Mtrl_Txt"/>
+        </property>
+        <property name="sbstncPlymrMonomerStStrtingMtrlTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_MonomerSt_StrtingMtrl_Typ_Cdg_Cd"/>
+        </property>
+        <property name="sbstncPlymrMonomerStStrtingMtrlTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_MonomerSt_StrtingMtrl_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="sbstncPlymrMonomerStStrtingMtrlTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_MonomerSt_StrtingMtrl_Typ_Cdg_Sys"/>
+        </property>
+        <property name="sbstncPlymrMonomerStStrtingMtrlTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_MonomerSt_StrtingMtrl_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="sbstncPlymrMonomerStStrtingMtrlTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_MonomerSt_StrtingMtrl_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="sbstncPlymrMonomerStStrtingMtrlTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_MonomerSt_StrtingMtrl_Typ_Txt"/>
+        </property>
+        <property name="sbstncPlymrRptAverageMoleclrFrmula" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_AverageMoleclrFrmula"/>
+        </property>
+        <property name="sbstncPlymrRptNmbrOfUnts" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_NmbrOfUnts"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntAmntAmntQntyCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_Amnt_AmntQnty_Cd"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntAmntAmntQntyCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_Amnt_AmntQnty_Cmprtr"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntAmntAmntQntySys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_Amnt_AmntQnty_Sys"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntAmntAmntQntyUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_Amnt_AmntQnty_Unt"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntAmntAmntQntyVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_Amnt_AmntQnty_Vl"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntAmntAmntRngHiCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_Amnt_AmntRng_Hi_Cd"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntAmntAmntRngHiCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_Amnt_AmntRng_Hi_Cmprtr"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntAmntAmntRngHiSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_Amnt_AmntRng_Hi_Sys"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntAmntAmntRngHiUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_Amnt_AmntRng_Hi_Unt"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntAmntAmntRngHiVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_Amnt_AmntRng_Hi_Vl"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntAmntAmntRngLwCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_Amnt_AmntRng_Lw_Cd"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntAmntAmntRngLwCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_Amnt_AmntRng_Lw_Cmprtr"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntAmntAmntRngLwSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_Amnt_AmntRng_Lw_Sys"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntAmntAmntRngLwUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_Amnt_AmntRng_Lw_Unt"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntAmntAmntRngLwVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_Amnt_AmntRng_Lw_Vl"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntAmntAmntStrgTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_Amnt_AmntStrgTyp"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntAmntAmntTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_Amnt_AmntTxt"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntAmntAmntTxtElmnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_Amnt_AmntTxtElmnt"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntAmntAmntTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_Amnt_AmntTyp_Cdg_Cd"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntAmntAmntTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_Amnt_AmntTyp_Cdg_Dsply"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntAmntAmntTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_Amnt_AmntTyp_Cdg_Sys"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntAmntAmntTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_Amnt_AmntTyp_Cdg_UsrSltd"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntAmntAmntTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_Amnt_AmntTyp_Cdg_Vrsn"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntAmntAmntTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_Amnt_AmntTyp_Txt"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntAmntRfrncRngHiLmtCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_Amnt_RfrncRng_HiLmt_Cd"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntAmntRfrncRngHiLmtCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_Amnt_RfrncRng_HiLmt_Cmprtr"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntAmntRfrncRngHiLmtSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_Amnt_RfrncRng_HiLmt_Sys"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntAmntRfrncRngHiLmtUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_Amnt_RfrncRng_HiLmt_Unt"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntAmntRfrncRngHiLmtVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_Amnt_RfrncRng_HiLmt_Vl"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntAmntRfrncRngLwLmtCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_Amnt_RfrncRng_LwLmt_Cd"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntAmntRfrncRngLwLmtCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_Amnt_RfrncRng_LwLmt_Cmprtr"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntAmntRfrncRngLwLmtSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_Amnt_RfrncRng_LwLmt_Sys"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntAmntRfrncRngLwLmtUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_Amnt_RfrncRng_LwLmt_Unt"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntAmntRfrncRngLwLmtVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_Amnt_RfrncRng_LwLmt_Vl"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntDgrOfPlymrstnAmntAmntQntyCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_DgrOfPlymrstn_Amnt_AmntQnty_Cd"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntDgrOfPlymrstnAmntAmntQntyCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_DgrOfPlymrstn_Amnt_AmntQnty_Cmprtr"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntDgrOfPlymrstnAmntAmntQntySys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_DgrOfPlymrstn_Amnt_AmntQnty_Sys"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntDgrOfPlymrstnAmntAmntQntyUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_DgrOfPlymrstn_Amnt_AmntQnty_Unt"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntDgrOfPlymrstnAmntAmntQntyVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_DgrOfPlymrstn_Amnt_AmntQnty_Vl"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntDgrOfPlymrstnAmntAmntRngHiCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_DgrOfPlymrstn_Amnt_AmntRng_Hi_Cd"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntDgrOfPlymrstnAmntAmntRngHiCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_DgrOfPlymrstn_Amnt_AmntRng_Hi_Cmprtr"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntDgrOfPlymrstnAmntAmntRngHiSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_DgrOfPlymrstn_Amnt_AmntRng_Hi_Sys"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntDgrOfPlymrstnAmntAmntRngHiUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_DgrOfPlymrstn_Amnt_AmntRng_Hi_Unt"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntDgrOfPlymrstnAmntAmntRngHiVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_DgrOfPlymrstn_Amnt_AmntRng_Hi_Vl"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntDgrOfPlymrstnAmntAmntRngLwCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_DgrOfPlymrstn_Amnt_AmntRng_Lw_Cd"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntDgrOfPlymrstnAmntAmntRngLwCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_DgrOfPlymrstn_Amnt_AmntRng_Lw_Cmprtr"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntDgrOfPlymrstnAmntAmntRngLwSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_DgrOfPlymrstn_Amnt_AmntRng_Lw_Sys"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntDgrOfPlymrstnAmntAmntRngLwUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_DgrOfPlymrstn_Amnt_AmntRng_Lw_Unt"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntDgrOfPlymrstnAmntAmntRngLwVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_DgrOfPlymrstn_Amnt_AmntRng_Lw_Vl"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntDgrOfPlymrstnAmntAmntStrgTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_DgrOfPlymrstn_Amnt_AmntStrgTyp"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntDgrOfPlymrstnAmntAmntTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_DgrOfPlymrstn_Amnt_AmntTxt"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntDgrOfPlymrstnAmntAmntTxtElmnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_DgrOfPlymrstn_Amnt_AmntTxtElmnt"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntDgrOfPlymrstnAmntAmntTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_DgrOfPlymrstn_Amnt_AmntTyp_Cdg_Cd"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntDgrOfPlymrstnAmntAmntTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_DgrOfPlymrstn_Amnt_AmntTyp_Cdg_Dsply"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntDgrOfPlymrstnAmntAmntTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_DgrOfPlymrstn_Amnt_AmntTyp_Cdg_Sys"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntDgrOfPlymrstnAmntAmntTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_DgrOfPlymrstn_Amnt_AmntTyp_Cdg_UsrSltd"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntDgrOfPlymrstnAmntAmntTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_DgrOfPlymrstn_Amnt_AmntTyp_Cdg_Vrsn"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntDgrOfPlymrstnAmntAmntTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_DgrOfPlymrstn_Amnt_AmntTyp_Txt"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntDgrOfPlymrstnAmntRfrncRngHiLmtCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_DgrOfPlymrstn_Amnt_RfrncRng_HiLmt_Cd"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntDgrOfPlymrstnAmntRfrncRngHiLmtCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_DgrOfPlymrstn_Amnt_RfrncRng_HiLmt_Cmprtr"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntDgrOfPlymrstnAmntRfrncRngHiLmtSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_DgrOfPlymrstn_Amnt_RfrncRng_HiLmt_Sys"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntDgrOfPlymrstnAmntRfrncRngHiLmtUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_DgrOfPlymrstn_Amnt_RfrncRng_HiLmt_Unt"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntDgrOfPlymrstnAmntRfrncRngHiLmtVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_DgrOfPlymrstn_Amnt_RfrncRng_HiLmt_Vl"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntDgrOfPlymrstnAmntRfrncRngLwLmtCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_DgrOfPlymrstn_Amnt_RfrncRng_LwLmt_Cd"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntDgrOfPlymrstnAmntRfrncRngLwLmtCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_DgrOfPlymrstn_Amnt_RfrncRng_LwLmt_Cmprtr"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntDgrOfPlymrstnAmntRfrncRngLwLmtSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_DgrOfPlymrstn_Amnt_RfrncRng_LwLmt_Sys"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntDgrOfPlymrstnAmntRfrncRngLwLmtUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_DgrOfPlymrstn_Amnt_RfrncRng_LwLmt_Unt"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntDgrOfPlymrstnAmntRfrncRngLwLmtVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_DgrOfPlymrstn_Amnt_RfrncRng_LwLmt_Vl"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntDgrOfPlymrstnDegreeCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_DgrOfPlymrstn_Degree_Cdg_Cd"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntDgrOfPlymrstnDegreeCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_DgrOfPlymrstn_Degree_Cdg_Dsply"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntDgrOfPlymrstnDegreeCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_DgrOfPlymrstn_Degree_Cdg_Sys"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntDgrOfPlymrstnDegreeCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_DgrOfPlymrstn_Degree_Cdg_UsrSltd"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntDgrOfPlymrstnDegreeCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_DgrOfPlymrstn_Degree_Cdg_Vrsn"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntDgrOfPlymrstnDegreeTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_DgrOfPlymrstn_Degree_Txt"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntOrientationOfPlymrisationCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_OrientationOfPlymrisation_Cdg_Cd"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntOrientationOfPlymrisationCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_OrientationOfPlymrisation_Cdg_Dsply"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntOrientationOfPlymrisationCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_OrientationOfPlymrisation_Cdg_Sys"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntOrientationOfPlymrisationCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_OrientationOfPlymrisation_Cdg_UsrSltd"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntOrientationOfPlymrisationCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_OrientationOfPlymrisation_Cdg_Vrsn"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntOrientationOfPlymrisationTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_OrientationOfPlymrisation_Txt"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntRptUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_RptUnt"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntStrctrlRprsnttnAttchmntCntntTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_StrctrlRprsnttn_Attchmnt_CntntTyp"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntStrctrlRprsnttnAttchmntCreation" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_StrctrlRprsnttn_Attchmnt_Creation"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntStrctrlRprsnttnAttchmntData" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_StrctrlRprsnttn_Attchmnt_Data"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntStrctrlRprsnttnAttchmntHash" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_StrctrlRprsnttn_Attchmnt_Hash"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntStrctrlRprsnttnAttchmntLnguage" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_StrctrlRprsnttn_Attchmnt_Lnguage"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntStrctrlRprsnttnAttchmntSz" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_StrctrlRprsnttn_Attchmnt_Sz"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntStrctrlRprsnttnAttchmntTtl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_StrctrlRprsnttn_Attchmnt_Ttl"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntStrctrlRprsnttnAttchmntUrl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_StrctrlRprsnttn_Attchmnt_Url"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntStrctrlRprsnttnRepresentation" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_StrctrlRprsnttn_Representation"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntStrctrlRprsnttnTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_StrctrlRprsnttn_Typ_Cdg_Cd"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntStrctrlRprsnttnTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_StrctrlRprsnttn_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntStrctrlRprsnttnTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_StrctrlRprsnttn_Typ_Cdg_Sys"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntStrctrlRprsnttnTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_StrctrlRprsnttn_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntStrctrlRprsnttnTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_StrctrlRprsnttn_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntStrctrlRprsnttnTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUnt_StrctrlRprsnttn_Typ_Txt"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntAmntTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUntAmntTyp_Cdg_Cd"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntAmntTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUntAmntTyp_Cdg_Dsply"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntAmntTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUntAmntTyp_Cdg_Sys"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntAmntTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUntAmntTyp_Cdg_UsrSltd"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntAmntTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUntAmntTyp_Cdg_Vrsn"/>
+        </property>
+        <property name="sbstncPlymrRptRptUntAmntTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncPlymr_Rpt_RptUntAmntTyp_Txt"/>
+        </property>
+    </class>
+</hibernate-mapping>

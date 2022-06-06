@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Jun 6, 2022, 11:02:25 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="MolecularSequence" optimistic-lock="none" table="MolecularSequence">
+        <id name="id" type="string">
+            <column length="64" name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="moleclrSqncCoordinateSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_CoordinateSys"/>
+        </property>
+        <property name="moleclrSqncDvc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Dvc"/>
+        </property>
+        <property name="moleclrSqncIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Id_Assigner"/>
+        </property>
+        <property name="moleclrSqncIdPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Id_Prd_End"/>
+        </property>
+        <property name="moleclrSqncIdPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Id_Prd_Strt"/>
+        </property>
+        <property name="moleclrSqncIdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Id_Sys"/>
+        </property>
+        <property name="moleclrSqncIdTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Id_Typ_Cdg_Cd"/>
+        </property>
+        <property name="moleclrSqncIdTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Id_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="moleclrSqncIdTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Id_Typ_Cdg_Sys"/>
+        </property>
+        <property name="moleclrSqncIdTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Id_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="moleclrSqncIdTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Id_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="moleclrSqncIdTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Id_Typ_Txt"/>
+        </property>
+        <property name="moleclrSqncIdUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Id_Use"/>
+        </property>
+        <property name="moleclrSqncIdVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Id_Vl"/>
+        </property>
+        <property name="moleclrSqncObservedSeq" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_ObservedSeq"/>
+        </property>
+        <property name="moleclrSqncPnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Pnt"/>
+        </property>
+        <property name="moleclrSqncPrfrmr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Prfrmr"/>
+        </property>
+        <property name="moleclrSqncPointer" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Pointer"/>
+        </property>
+        <property name="moleclrSqncQualityEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Quality_End"/>
+        </property>
+        <property name="moleclrSqncQualityFscore" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Quality_FScore"/>
+        </property>
+        <property name="moleclrSqncQualityGtFp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Quality_GtFP"/>
+        </property>
+        <property name="moleclrSqncQualityMthdCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Quality_Mthd_Cdg_Cd"/>
+        </property>
+        <property name="moleclrSqncQualityMthdCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Quality_Mthd_Cdg_Dsply"/>
+        </property>
+        <property name="moleclrSqncQualityMthdCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Quality_Mthd_Cdg_Sys"/>
+        </property>
+        <property name="moleclrSqncQualityMthdCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Quality_Mthd_Cdg_UsrSltd"/>
+        </property>
+        <property name="moleclrSqncQualityMthdCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Quality_Mthd_Cdg_Vrsn"/>
+        </property>
+        <property name="moleclrSqncQualityMthdTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Quality_Mthd_Txt"/>
+        </property>
+        <property name="moleclrSqncQualityPrecision" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Quality_Precision"/>
+        </property>
+        <property name="moleclrSqncQualityQueryFp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Quality_QueryFP"/>
+        </property>
+        <property name="moleclrSqncQualityQueryTp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Quality_QueryTP"/>
+        </property>
+        <property name="moleclrSqncQualityRecall" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Quality_Recall"/>
+        </property>
+        <property name="moleclrSqncQualityRocFmsr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Quality_Roc_FMsr"/>
+        </property>
+        <property name="moleclrSqncQualityRocNumFn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Quality_Roc_NumFN"/>
+        </property>
+        <property name="moleclrSqncQualityRocNumFp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Quality_Roc_NumFP"/>
+        </property>
+        <property name="moleclrSqncQualityRocNumTp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Quality_Roc_NumTP"/>
+        </property>
+        <property name="moleclrSqncQualityRocPrecision" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Quality_Roc_Precision"/>
+        </property>
+        <property name="moleclrSqncQualityRocScore" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Quality_Roc_Score"/>
+        </property>
+        <property name="moleclrSqncQualityRocSensitivity" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Quality_Roc_Sensitivity"/>
+        </property>
+        <property name="moleclrSqncQualityScoreCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Quality_Score_Cd"/>
+        </property>
+        <property name="moleclrSqncQualityScoreCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Quality_Score_Cmprtr"/>
+        </property>
+        <property name="moleclrSqncQualityScoreSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Quality_Score_Sys"/>
+        </property>
+        <property name="moleclrSqncQualityScoreUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Quality_Score_Unt"/>
+        </property>
+        <property name="moleclrSqncQualityScoreVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Quality_Score_Vl"/>
+        </property>
+        <property name="moleclrSqncQualityStandardSqncCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Quality_StandardSqnc_Cdg_Cd"/>
+        </property>
+        <property name="moleclrSqncQualityStandardSqncCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Quality_StandardSqnc_Cdg_Dsply"/>
+        </property>
+        <property name="moleclrSqncQualityStandardSqncCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Quality_StandardSqnc_Cdg_Sys"/>
+        </property>
+        <property name="moleclrSqncQualityStandardSqncCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Quality_StandardSqnc_Cdg_UsrSltd"/>
+        </property>
+        <property name="moleclrSqncQualityStandardSqncCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Quality_StandardSqnc_Cdg_Vrsn"/>
+        </property>
+        <property name="moleclrSqncQualityStandardSqncTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Quality_StandardSqnc_Txt"/>
+        </property>
+        <property name="moleclrSqncQualityStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Quality_Strt"/>
+        </property>
+        <property name="moleclrSqncQualityTruthFn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Quality_TruthFN"/>
+        </property>
+        <property name="moleclrSqncQualityTruthTp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Quality_TruthTP"/>
+        </property>
+        <property name="moleclrSqncQualityTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Quality_Typ"/>
+        </property>
+        <property name="moleclrSqncQntyCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Qnty_Cd"/>
+        </property>
+        <property name="moleclrSqncQntyCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Qnty_Cmprtr"/>
+        </property>
+        <property name="moleclrSqncQntySys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Qnty_Sys"/>
+        </property>
+        <property name="moleclrSqncQntyUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Qnty_Unt"/>
+        </property>
+        <property name="moleclrSqncQntyVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Qnty_Vl"/>
+        </property>
+        <property name="moleclrSqncReadCvg" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_ReadCvg"/>
+        </property>
+        <property name="moleclrSqncRfrncSeqChromosomeCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_RfrncSeq_Chromosome_Cdg_Cd"/>
+        </property>
+        <property name="moleclrSqncRfrncSeqChromosomeCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_RfrncSeq_Chromosome_Cdg_Dsply"/>
+        </property>
+        <property name="moleclrSqncRfrncSeqChromosomeCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_RfrncSeq_Chromosome_Cdg_Sys"/>
+        </property>
+        <property name="moleclrSqncRfrncSeqChromosomeCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_RfrncSeq_Chromosome_Cdg_UsrSltd"/>
+        </property>
+        <property name="moleclrSqncRfrncSeqChromosomeCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_RfrncSeq_Chromosome_Cdg_Vrsn"/>
+        </property>
+        <property name="moleclrSqncRfrncSeqChromosomeTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_RfrncSeq_Chromosome_Txt"/>
+        </property>
+        <property name="moleclrSqncRfrncSeqGenomeBuild" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_RfrncSeq_GenomeBuild"/>
+        </property>
+        <property name="moleclrSqncRfrncSeqOrientation" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_RfrncSeq_Orientation"/>
+        </property>
+        <property name="moleclrSqncRfrncSeqRfrncSeqIdCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_RfrncSeq_RfrncSeqId_Cdg_Cd"/>
+        </property>
+        <property name="moleclrSqncRfrncSeqRfrncSeqIdCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_RfrncSeq_RfrncSeqId_Cdg_Dsply"/>
+        </property>
+        <property name="moleclrSqncRfrncSeqRfrncSeqIdCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_RfrncSeq_RfrncSeqId_Cdg_Sys"/>
+        </property>
+        <property name="moleclrSqncRfrncSeqRfrncSeqIdCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_RfrncSeq_RfrncSeqId_Cdg_UsrSltd"/>
+        </property>
+        <property name="moleclrSqncRfrncSeqRfrncSeqIdCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_RfrncSeq_RfrncSeqId_Cdg_Vrsn"/>
+        </property>
+        <property name="moleclrSqncRfrncSeqRfrncSeqIdTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_RfrncSeq_RfrncSeqId_Txt"/>
+        </property>
+        <property name="moleclrSqncRfrncSeqRfrncSeqPointer" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_RfrncSeq_RfrncSeqPointer"/>
+        </property>
+        <property name="moleclrSqncRfrncSeqRfrncSeqStrg" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_RfrncSeq_RfrncSeqStrg"/>
+        </property>
+        <property name="moleclrSqncRfrncSeqStrand" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_RfrncSeq_Strand"/>
+        </property>
+        <property name="moleclrSqncRfrncSeqWindowEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_RfrncSeq_WindowEnd"/>
+        </property>
+        <property name="moleclrSqncRfrncSeqWindowStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_RfrncSeq_WindowStrt"/>
+        </property>
+        <property name="moleclrSqncRepositoryDataId" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Repository_DataId"/>
+        </property>
+        <property name="moleclrSqncRepositoryNm" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Repository_Nm"/>
+        </property>
+        <property name="moleclrSqncRepositoryReadId" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Repository_ReadId"/>
+        </property>
+        <property name="moleclrSqncRepositoryTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Repository_Typ"/>
+        </property>
+        <property name="moleclrSqncRepositoryUrl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Repository_Url"/>
+        </property>
+        <property name="moleclrSqncRepositoryVariantId" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Repository_VariantId"/>
+        </property>
+        <property name="moleclrSqncSpcmn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Spcmn"/>
+        </property>
+        <property name="moleclrSqncStrctrVariantExact" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_StrctrVariant_Exact"/>
+        </property>
+        <property name="moleclrSqncStrctrVariantInnerEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_StrctrVariant_Inner_End"/>
+        </property>
+        <property name="moleclrSqncStrctrVariantInnerStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_StrctrVariant_Inner_Strt"/>
+        </property>
+        <property name="moleclrSqncStrctrVariantLength" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_StrctrVariant_Length"/>
+        </property>
+        <property name="moleclrSqncStrctrVariantOuterEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_StrctrVariant_Outer_End"/>
+        </property>
+        <property name="moleclrSqncStrctrVariantOuterStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_StrctrVariant_Outer_Strt"/>
+        </property>
+        <property name="moleclrSqncStrctrVariantVariantTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_StrctrVariant_VariantTyp_Cdg_Cd"/>
+        </property>
+        <property name="moleclrSqncStrctrVariantVariantTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_StrctrVariant_VariantTyp_Cdg_Dsply"/>
+        </property>
+        <property name="moleclrSqncStrctrVariantVariantTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_StrctrVariant_VariantTyp_Cdg_Sys"/>
+        </property>
+        <property name="moleclrSqncStrctrVariantVariantTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_StrctrVariant_VariantTyp_Cdg_UsrSltd"/>
+        </property>
+        <property name="moleclrSqncStrctrVariantVariantTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_StrctrVariant_VariantTyp_Cdg_Vrsn"/>
+        </property>
+        <property name="moleclrSqncStrctrVariantVariantTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_StrctrVariant_VariantTyp_Txt"/>
+        </property>
+        <property name="moleclrSqncTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Typ"/>
+        </property>
+        <property name="moleclrSqncVariantCigar" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Variant_Cigar"/>
+        </property>
+        <property name="moleclrSqncVariantEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Variant_End"/>
+        </property>
+        <property name="moleclrSqncVariantObservedAllele" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Variant_ObservedAllele"/>
+        </property>
+        <property name="moleclrSqncVariantRfrncAllele" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Variant_RfrncAllele"/>
+        </property>
+        <property name="moleclrSqncVariantStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Variant_Strt"/>
+        </property>
+        <property name="moleclrSqncVariantVariantPointer" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MoleclrSqnc_Variant_VariantPointer"/>
+        </property>
+    </class>
+</hibernate-mapping>

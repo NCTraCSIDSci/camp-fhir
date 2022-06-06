@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Feb 22, 2022, 7:13:58 PM by Hibernate Tools 5.6.1.Final
+// Generated Jun 6, 2022, 11:02:30 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -12,1984 +12,1549 @@ public class Encounter  implements java.io.Serializable {
 
      private String id;
      private String encAccount;
-     private String encAppointment;
+     private String encAppmnt;
      private String encBasedOn;
-     private String encClassHistoryClassCode;
-     private String encClassHistoryClassDisplay;
-     private String encClassHistoryClassSystem;
-     private String encClassHistoryClassUsrslt;
-     private String encClassHistoryClassVersion;
-     private String encClassHistoryPeriodEnd;
-     private String encClassHistoryPeriodStart;
-     private String encClassCode;
-     private String encClassDisplay;
-     private String encClassSystem;
-     private String encClassUsrslt;
-     private String encClassVersion;
-     private String encDiagnosisCondition;
-     private String encDiagnosisRank;
-     private String encDiagnosisUseCodingCode;
-     private String encDiagnosisUseCodingDisplay;
-     private String encDiagnosisUseCodingSystem;
-     private String encDiagnosisUseCodingUsrslt;
-     private String encDiagnosisUseCodingVersion;
-     private String encDiagnosisUseText;
+     private String encClsHisClsCd;
+     private String encClsHisClsDsply;
+     private String encClsHisClsSys;
+     private String encClsHisClsUsrSltd;
+     private String encClsHisClsVrsn;
+     private String encClsHisPrdEnd;
+     private String encClsHisPrdStrt;
+     private String encClsCd;
+     private String encClsDsply;
+     private String encClsSys;
+     private String encClsUsrSltd;
+     private String encClsVrsn;
+     private String encDgnsisCndtn;
+     private String encDgnsisRnk;
+     private String encDgnsisUseCdgCd;
+     private String encDgnsisUseCdgDsply;
+     private String encDgnsisUseCdgSys;
+     private String encDgnsisUseCdgUsrSltd;
+     private String encDgnsisUseCdgVrsn;
+     private String encDgnsisUseTxt;
      private String encEpisodeOfCare;
-     private String encHospitalizationAdmitSourceCodingCode;
-     private String encHospitalizationAdmitSourceCodingDisplay;
-     private String encHospitalizationAdmitSourceCodingSystem;
-     private String encHospitalizationAdmitSourceCodingUsrslt;
-     private String encHospitalizationAdmitSourceCodingVersion;
-     private String encHospitalizationAdmitSourceText;
+     private String encHospitalizationAdmitSrcCdgCd;
+     private String encHospitalizationAdmitSrcCdgDsply;
+     private String encHospitalizationAdmitSrcCdgSys;
+     private String encHospitalizationAdmitSrcCdgUsrSltd;
+     private String encHospitalizationAdmitSrcCdgVrsn;
+     private String encHospitalizationAdmitSrcTxt;
      private String encHospitalizationDestination;
-     private String encHospitalizationDietPreferenceCodingCode;
-     private String encHospitalizationDietPreferenceCodingDisplay;
-     private String encHospitalizationDietPreferenceCodingSystem;
-     private String encHospitalizationDietPreferenceCodingUsrslt;
-     private String encHospitalizationDietPreferenceCodingVersion;
-     private String encHospitalizationDietPreferenceText;
-     private String encHospitalizationDischargeDispositionCodingCode;
-     private String encHospitalizationDischargeDispositionCodingDisplay;
-     private String encHospitalizationDischargeDispositionCodingSystem;
-     private String encHospitalizationDischargeDispositionCodingUsrslt;
-     private String encHospitalizationDischargeDispositionCodingVersion;
-     private String encHospitalizationDischargeDispositionText;
+     private String encHospitalizationDietPreferenceCdgCd;
+     private String encHospitalizationDietPreferenceCdgDsply;
+     private String encHospitalizationDietPreferenceCdgSys;
+     private String encHospitalizationDietPreferenceCdgUsrSltd;
+     private String encHospitalizationDietPreferenceCdgVrsn;
+     private String encHospitalizationDietPreferenceTxt;
+     private String encHospitalizationDischargeDispositionCdgCd;
+     private String encHospitalizationDischargeDispositionCdgDsply;
+     private String encHospitalizationDischargeDispositionCdgSys;
+     private String encHospitalizationDischargeDispositionCdgUsrSltd;
+     private String encHospitalizationDischargeDispositionCdgVrsn;
+     private String encHospitalizationDischargeDispositionTxt;
      private String encHospitalizationOrigin;
      private String encHospitalizationPreAdmissionIdAssigner;
-     private String encHospitalizationPreAdmissionIdPeriodEnd;
-     private String encHospitalizationPreAdmissionIdPeriodStart;
-     private String encHospitalizationPreAdmissionIdSystem;
-     private String encHospitalizationPreAdmissionIdTypeCodingCode;
-     private String encHospitalizationPreAdmissionIdTypeCodingDisplay;
-     private String encHospitalizationPreAdmissionIdTypeCodingSystem;
-     private String encHospitalizationPreAdmissionIdTypeCodingUsrslt;
-     private String encHospitalizationPreAdmissionIdTypeCodingVersion;
-     private String encHospitalizationPreAdmissionIdTypeText;
-     private String encHospitalizationPreAdmissionIdUseCode;
-     private String encHospitalizationPreAdmissionIdValue;
-     private String encHospitalizationReAdmissionCodingCode;
-     private String encHospitalizationReAdmissionCodingDisplay;
-     private String encHospitalizationReAdmissionCodingSystem;
-     private String encHospitalizationReAdmissionCodingUsrslt;
-     private String encHospitalizationReAdmissionCodingVersion;
-     private String encHospitalizationReAdmissionText;
-     private String encHospitalizationSpecialArrangementCodingCode;
-     private String encHospitalizationSpecialArrangementCodingDisplay;
-     private String encHospitalizationSpecialArrangementCodingSystem;
-     private String encHospitalizationSpecialArrangementCodingUsrslt;
-     private String encHospitalizationSpecialArrangementCodingVersion;
-     private String encHospitalizationSpecialArrangementText;
-     private String encHospitalizationSpecialCourtesyCodingCode;
-     private String encHospitalizationSpecialCourtesyCodingDisplay;
-     private String encHospitalizationSpecialCourtesyCodingSystem;
-     private String encHospitalizationSpecialCourtesyCodingUsrslt;
-     private String encHospitalizationSpecialCourtesyCodingVersion;
-     private String encHospitalizationSpecialCourtesyText;
+     private String encHospitalizationPreAdmissionIdPrdEnd;
+     private String encHospitalizationPreAdmissionIdPrdStrt;
+     private String encHospitalizationPreAdmissionIdSys;
+     private String encHospitalizationPreAdmissionIdTypCdgCd;
+     private String encHospitalizationPreAdmissionIdTypCdgDsply;
+     private String encHospitalizationPreAdmissionIdTypCdgSys;
+     private String encHospitalizationPreAdmissionIdTypCdgUsrSltd;
+     private String encHospitalizationPreAdmissionIdTypCdgVrsn;
+     private String encHospitalizationPreAdmissionIdTypTxt;
+     private String encHospitalizationPreAdmissionIdUse;
+     private String encHospitalizationPreAdmissionIdVl;
+     private String encHospitalizationReAdmissionCdgCd;
+     private String encHospitalizationReAdmissionCdgDsply;
+     private String encHospitalizationReAdmissionCdgSys;
+     private String encHospitalizationReAdmissionCdgUsrSltd;
+     private String encHospitalizationReAdmissionCdgVrsn;
+     private String encHospitalizationReAdmissionTxt;
+     private String encHospitalizationSpclArrangementCdgCd;
+     private String encHospitalizationSpclArrangementCdgDsply;
+     private String encHospitalizationSpclArrangementCdgSys;
+     private String encHospitalizationSpclArrangementCdgUsrSltd;
+     private String encHospitalizationSpclArrangementCdgVrsn;
+     private String encHospitalizationSpclArrangementTxt;
+     private String encHospitalizationSpclCourtesyCdgCd;
+     private String encHospitalizationSpclCourtesyCdgDsply;
+     private String encHospitalizationSpclCourtesyCdgSys;
+     private String encHospitalizationSpclCourtesyCdgUsrSltd;
+     private String encHospitalizationSpclCourtesyCdgVrsn;
+     private String encHospitalizationSpclCourtesyTxt;
      private String encIdAssigner;
-     private String encIdPeriodEnd;
-     private String encIdPeriodStart;
-     private String encIdSystem;
-     private String encIdTypeCodingCode;
-     private String encIdTypeCodingDisplay;
-     private String encIdTypeCodingSystem;
-     private String encIdTypeCodingUsrslt;
-     private String encIdTypeCodingVersion;
-     private String encIdTypeText;
-     private String encIdUseCode;
-     private String encIdValue;
-     private String encLength;
-     private String encLocationLocation;
-     private String encLocationPeriodEnd;
-     private String encLocationPeriodStart;
-     private String encLocationPhysicalTypeCodingCode;
-     private String encLocationPhysicalTypeCodingDisplay;
-     private String encLocationPhysicalTypeCodingSystem;
-     private String encLocationPhysicalTypeCodingUsrslt;
-     private String encLocationPhysicalTypeCodingVersion;
-     private String encLocationPhysicalTypeText;
-     private String encLocationStatusCode;
+     private String encIdPrdEnd;
+     private String encIdPrdStrt;
+     private String encIdSys;
+     private String encIdTypCdgCd;
+     private String encIdTypCdgDsply;
+     private String encIdTypCdgSys;
+     private String encIdTypCdgUsrSltd;
+     private String encIdTypCdgVrsn;
+     private String encIdTypTxt;
+     private String encIdUse;
+     private String encIdVl;
+     private String encLctnLctn;
+     private String encLctnPrdEnd;
+     private String encLctnPrdStrt;
+     private String encLctnPhysclTypCdgCd;
+     private String encLctnPhysclTypCdgDsply;
+     private String encLctnPhysclTypCdgSys;
+     private String encLctnPhysclTypCdgUsrSltd;
+     private String encLctnPhysclTypCdgVrsn;
+     private String encLctnPhysclTypTxt;
+     private String encLctnSts;
      private String encPartOf;
-     private String encParticipantIndividual;
-     private String encParticipantPeriodEnd;
-     private String encParticipantPeriodStart;
-     private String encParticipantTypeCodingCode;
-     private String encParticipantTypeCodingDisplay;
-     private String encParticipantTypeCodingSystem;
-     private String encParticipantTypeCodingUsrslt;
-     private String encParticipantTypeCodingVersion;
-     private String encParticipantTypeText;
-     private String encPeriodEnd;
-     private String encPeriodStart;
-     private String encPriorityCodingCode;
-     private String encPriorityCodingDisplay;
-     private String encPriorityCodingSystem;
-     private String encPriorityCodingUsrslt;
-     private String encPriorityCodingVersion;
-     private String encPriorityText;
-     private String encReasonCodeCodingCode;
-     private String encReasonCodeCodingDisplay;
-     private String encReasonCodeCodingSystem;
-     private String encReasonCodeCodingUsrslt;
-     private String encReasonCodeCodingVersion;
-     private String encReasonCodeText;
-     private String encReasonReference;
-     private String encServiceProvider;
-     private String encServiceTypeCodingCode;
-     private String encServiceTypeCodingDisplay;
-     private String encServiceTypeCodingSystem;
-     private String encServiceTypeCodingUsrslt;
-     private String encServiceTypeCodingVersion;
-     private String encServiceTypeText;
-     private String encStatusCode;
-     private String encStatusHistoryPeriodEnd;
-     private String encStatusHistoryPeriodStart;
-     private String encStatusHistoryStatusCode;
-     private String encSubject;
-     private String encTypeCodingCode;
-     private String encTypeCodingDisplay;
-     private String encTypeCodingSystem;
-     private String encTypeCodingUsrslt;
-     private String encTypeCodingVersion;
-     private String encTypeText;
+     private String encPrtcpntIndividual;
+     private String encPrtcpntPrdEnd;
+     private String encPrtcpntPrdStrt;
+     private String encPrtcpntTypCdgCd;
+     private String encPrtcpntTypCdgDsply;
+     private String encPrtcpntTypCdgSys;
+     private String encPrtcpntTypCdgUsrSltd;
+     private String encPrtcpntTypCdgVrsn;
+     private String encPrtcpntTypTxt;
+     private String encPrdEnd;
+     private String encPrdStrt;
+     private String encPriorityCdgCd;
+     private String encPriorityCdgDsply;
+     private String encPriorityCdgSys;
+     private String encPriorityCdgUsrSltd;
+     private String encPriorityCdgVrsn;
+     private String encPriorityTxt;
+     private String encRsnCdCdgCd;
+     private String encRsnCdCdgDsply;
+     private String encRsnCdCdgSys;
+     private String encRsnCdCdgUsrSltd;
+     private String encRsnCdCdgVrsn;
+     private String encRsnCdTxt;
+     private String encRsnRfrnc;
+     private String encSrvProvider;
+     private String encSrvTypCdgCd;
+     private String encSrvTypCdgDsply;
+     private String encSrvTypCdgSys;
+     private String encSrvTypCdgUsrSltd;
+     private String encSrvTypCdgVrsn;
+     private String encSrvTypTxt;
+     private String encSts;
+     private String encStsHisPrdEnd;
+     private String encStsHisPrdStrt;
+     private String encStsHisSts;
+     private String encSbjct;
+     private String encTypCdgCd;
+     private String encTypCdgDsply;
+     private String encTypCdgSys;
+     private String encTypCdgUsrSltd;
+     private String encTypCdgVrsn;
+     private String encTypTxt;
 
     public Encounter() {
     }
 
-    public Encounter(String encAccount, String encAppointment, String encBasedOn, String encClassHistoryClassCode, String encClassHistoryClassDisplay, String encClassHistoryClassSystem, String encClassHistoryClassUsrslt, String encClassHistoryClassVersion, String encClassHistoryPeriodEnd, String encClassHistoryPeriodStart, String encClassCode, String encClassDisplay, String encClassSystem, String encClassUsrslt, String encClassVersion, String encDiagnosisCondition, String encDiagnosisRank, String encDiagnosisUseCodingCode, String encDiagnosisUseCodingDisplay, String encDiagnosisUseCodingSystem, String encDiagnosisUseCodingUsrslt, String encDiagnosisUseCodingVersion, String encDiagnosisUseText, String encEpisodeOfCare, String encHospitalizationAdmitSourceCodingCode, String encHospitalizationAdmitSourceCodingDisplay, String encHospitalizationAdmitSourceCodingSystem, String encHospitalizationAdmitSourceCodingUsrslt, String encHospitalizationAdmitSourceCodingVersion, String encHospitalizationAdmitSourceText, String encHospitalizationDestination, String encHospitalizationDietPreferenceCodingCode, String encHospitalizationDietPreferenceCodingDisplay, String encHospitalizationDietPreferenceCodingSystem, String encHospitalizationDietPreferenceCodingUsrslt, String encHospitalizationDietPreferenceCodingVersion, String encHospitalizationDietPreferenceText, String encHospitalizationDischargeDispositionCodingCode, String encHospitalizationDischargeDispositionCodingDisplay, String encHospitalizationDischargeDispositionCodingSystem, String encHospitalizationDischargeDispositionCodingUsrslt, String encHospitalizationDischargeDispositionCodingVersion, String encHospitalizationDischargeDispositionText, String encHospitalizationOrigin, String encHospitalizationPreAdmissionIdAssigner, String encHospitalizationPreAdmissionIdPeriodEnd, String encHospitalizationPreAdmissionIdPeriodStart, String encHospitalizationPreAdmissionIdSystem, String encHospitalizationPreAdmissionIdTypeCodingCode, String encHospitalizationPreAdmissionIdTypeCodingDisplay, String encHospitalizationPreAdmissionIdTypeCodingSystem, String encHospitalizationPreAdmissionIdTypeCodingUsrslt, String encHospitalizationPreAdmissionIdTypeCodingVersion, String encHospitalizationPreAdmissionIdTypeText, String encHospitalizationPreAdmissionIdUseCode, String encHospitalizationPreAdmissionIdValue, String encHospitalizationReAdmissionCodingCode, String encHospitalizationReAdmissionCodingDisplay, String encHospitalizationReAdmissionCodingSystem, String encHospitalizationReAdmissionCodingUsrslt, String encHospitalizationReAdmissionCodingVersion, String encHospitalizationReAdmissionText, String encHospitalizationSpecialArrangementCodingCode, String encHospitalizationSpecialArrangementCodingDisplay, String encHospitalizationSpecialArrangementCodingSystem, String encHospitalizationSpecialArrangementCodingUsrslt, String encHospitalizationSpecialArrangementCodingVersion, String encHospitalizationSpecialArrangementText, String encHospitalizationSpecialCourtesyCodingCode, String encHospitalizationSpecialCourtesyCodingDisplay, String encHospitalizationSpecialCourtesyCodingSystem, String encHospitalizationSpecialCourtesyCodingUsrslt, String encHospitalizationSpecialCourtesyCodingVersion, String encHospitalizationSpecialCourtesyText, String encIdAssigner, String encIdPeriodEnd, String encIdPeriodStart, String encIdSystem, String encIdTypeCodingCode, String encIdTypeCodingDisplay, String encIdTypeCodingSystem, String encIdTypeCodingUsrslt, String encIdTypeCodingVersion, String encIdTypeText, String encIdUseCode, String encIdValue, String encLength, String encLocationLocation, String encLocationPeriodEnd, String encLocationPeriodStart, String encLocationPhysicalTypeCodingCode, String encLocationPhysicalTypeCodingDisplay, String encLocationPhysicalTypeCodingSystem, String encLocationPhysicalTypeCodingUsrslt, String encLocationPhysicalTypeCodingVersion, String encLocationPhysicalTypeText, String encLocationStatusCode, String encPartOf, String encParticipantIndividual, String encParticipantPeriodEnd, String encParticipantPeriodStart, String encParticipantTypeCodingCode, String encParticipantTypeCodingDisplay, String encParticipantTypeCodingSystem, String encParticipantTypeCodingUsrslt, String encParticipantTypeCodingVersion, String encParticipantTypeText, String encPeriodEnd, String encPeriodStart, String encPriorityCodingCode, String encPriorityCodingDisplay, String encPriorityCodingSystem, String encPriorityCodingUsrslt, String encPriorityCodingVersion, String encPriorityText, String encReasonCodeCodingCode, String encReasonCodeCodingDisplay, String encReasonCodeCodingSystem, String encReasonCodeCodingUsrslt, String encReasonCodeCodingVersion, String encReasonCodeText, String encReasonReference, String encServiceProvider, String encServiceTypeCodingCode, String encServiceTypeCodingDisplay, String encServiceTypeCodingSystem, String encServiceTypeCodingUsrslt, String encServiceTypeCodingVersion, String encServiceTypeText, String encStatusCode, String encStatusHistoryPeriodEnd, String encStatusHistoryPeriodStart, String encStatusHistoryStatusCode, String encSubject, String encTypeCodingCode, String encTypeCodingDisplay, String encTypeCodingSystem, String encTypeCodingUsrslt, String encTypeCodingVersion, String encTypeText) {
-       this.encAccount = encAccount;
-       this.encAppointment = encAppointment;
-       this.encBasedOn = encBasedOn;
-       this.encClassHistoryClassCode = encClassHistoryClassCode;
-       this.encClassHistoryClassDisplay = encClassHistoryClassDisplay;
-       this.encClassHistoryClassSystem = encClassHistoryClassSystem;
-       this.encClassHistoryClassUsrslt = encClassHistoryClassUsrslt;
-       this.encClassHistoryClassVersion = encClassHistoryClassVersion;
-       this.encClassHistoryPeriodEnd = encClassHistoryPeriodEnd;
-       this.encClassHistoryPeriodStart = encClassHistoryPeriodStart;
-       this.encClassCode = encClassCode;
-       this.encClassDisplay = encClassDisplay;
-       this.encClassSystem = encClassSystem;
-       this.encClassUsrslt = encClassUsrslt;
-       this.encClassVersion = encClassVersion;
-       this.encDiagnosisCondition = encDiagnosisCondition;
-       this.encDiagnosisRank = encDiagnosisRank;
-       this.encDiagnosisUseCodingCode = encDiagnosisUseCodingCode;
-       this.encDiagnosisUseCodingDisplay = encDiagnosisUseCodingDisplay;
-       this.encDiagnosisUseCodingSystem = encDiagnosisUseCodingSystem;
-       this.encDiagnosisUseCodingUsrslt = encDiagnosisUseCodingUsrslt;
-       this.encDiagnosisUseCodingVersion = encDiagnosisUseCodingVersion;
-       this.encDiagnosisUseText = encDiagnosisUseText;
-       this.encEpisodeOfCare = encEpisodeOfCare;
-       this.encHospitalizationAdmitSourceCodingCode = encHospitalizationAdmitSourceCodingCode;
-       this.encHospitalizationAdmitSourceCodingDisplay = encHospitalizationAdmitSourceCodingDisplay;
-       this.encHospitalizationAdmitSourceCodingSystem = encHospitalizationAdmitSourceCodingSystem;
-       this.encHospitalizationAdmitSourceCodingUsrslt = encHospitalizationAdmitSourceCodingUsrslt;
-       this.encHospitalizationAdmitSourceCodingVersion = encHospitalizationAdmitSourceCodingVersion;
-       this.encHospitalizationAdmitSourceText = encHospitalizationAdmitSourceText;
-       this.encHospitalizationDestination = encHospitalizationDestination;
-       this.encHospitalizationDietPreferenceCodingCode = encHospitalizationDietPreferenceCodingCode;
-       this.encHospitalizationDietPreferenceCodingDisplay = encHospitalizationDietPreferenceCodingDisplay;
-       this.encHospitalizationDietPreferenceCodingSystem = encHospitalizationDietPreferenceCodingSystem;
-       this.encHospitalizationDietPreferenceCodingUsrslt = encHospitalizationDietPreferenceCodingUsrslt;
-       this.encHospitalizationDietPreferenceCodingVersion = encHospitalizationDietPreferenceCodingVersion;
-       this.encHospitalizationDietPreferenceText = encHospitalizationDietPreferenceText;
-       this.encHospitalizationDischargeDispositionCodingCode = encHospitalizationDischargeDispositionCodingCode;
-       this.encHospitalizationDischargeDispositionCodingDisplay = encHospitalizationDischargeDispositionCodingDisplay;
-       this.encHospitalizationDischargeDispositionCodingSystem = encHospitalizationDischargeDispositionCodingSystem;
-       this.encHospitalizationDischargeDispositionCodingUsrslt = encHospitalizationDischargeDispositionCodingUsrslt;
-       this.encHospitalizationDischargeDispositionCodingVersion = encHospitalizationDischargeDispositionCodingVersion;
-       this.encHospitalizationDischargeDispositionText = encHospitalizationDischargeDispositionText;
-       this.encHospitalizationOrigin = encHospitalizationOrigin;
-       this.encHospitalizationPreAdmissionIdAssigner = encHospitalizationPreAdmissionIdAssigner;
-       this.encHospitalizationPreAdmissionIdPeriodEnd = encHospitalizationPreAdmissionIdPeriodEnd;
-       this.encHospitalizationPreAdmissionIdPeriodStart = encHospitalizationPreAdmissionIdPeriodStart;
-       this.encHospitalizationPreAdmissionIdSystem = encHospitalizationPreAdmissionIdSystem;
-       this.encHospitalizationPreAdmissionIdTypeCodingCode = encHospitalizationPreAdmissionIdTypeCodingCode;
-       this.encHospitalizationPreAdmissionIdTypeCodingDisplay = encHospitalizationPreAdmissionIdTypeCodingDisplay;
-       this.encHospitalizationPreAdmissionIdTypeCodingSystem = encHospitalizationPreAdmissionIdTypeCodingSystem;
-       this.encHospitalizationPreAdmissionIdTypeCodingUsrslt = encHospitalizationPreAdmissionIdTypeCodingUsrslt;
-       this.encHospitalizationPreAdmissionIdTypeCodingVersion = encHospitalizationPreAdmissionIdTypeCodingVersion;
-       this.encHospitalizationPreAdmissionIdTypeText = encHospitalizationPreAdmissionIdTypeText;
-       this.encHospitalizationPreAdmissionIdUseCode = encHospitalizationPreAdmissionIdUseCode;
-       this.encHospitalizationPreAdmissionIdValue = encHospitalizationPreAdmissionIdValue;
-       this.encHospitalizationReAdmissionCodingCode = encHospitalizationReAdmissionCodingCode;
-       this.encHospitalizationReAdmissionCodingDisplay = encHospitalizationReAdmissionCodingDisplay;
-       this.encHospitalizationReAdmissionCodingSystem = encHospitalizationReAdmissionCodingSystem;
-       this.encHospitalizationReAdmissionCodingUsrslt = encHospitalizationReAdmissionCodingUsrslt;
-       this.encHospitalizationReAdmissionCodingVersion = encHospitalizationReAdmissionCodingVersion;
-       this.encHospitalizationReAdmissionText = encHospitalizationReAdmissionText;
-       this.encHospitalizationSpecialArrangementCodingCode = encHospitalizationSpecialArrangementCodingCode;
-       this.encHospitalizationSpecialArrangementCodingDisplay = encHospitalizationSpecialArrangementCodingDisplay;
-       this.encHospitalizationSpecialArrangementCodingSystem = encHospitalizationSpecialArrangementCodingSystem;
-       this.encHospitalizationSpecialArrangementCodingUsrslt = encHospitalizationSpecialArrangementCodingUsrslt;
-       this.encHospitalizationSpecialArrangementCodingVersion = encHospitalizationSpecialArrangementCodingVersion;
-       this.encHospitalizationSpecialArrangementText = encHospitalizationSpecialArrangementText;
-       this.encHospitalizationSpecialCourtesyCodingCode = encHospitalizationSpecialCourtesyCodingCode;
-       this.encHospitalizationSpecialCourtesyCodingDisplay = encHospitalizationSpecialCourtesyCodingDisplay;
-       this.encHospitalizationSpecialCourtesyCodingSystem = encHospitalizationSpecialCourtesyCodingSystem;
-       this.encHospitalizationSpecialCourtesyCodingUsrslt = encHospitalizationSpecialCourtesyCodingUsrslt;
-       this.encHospitalizationSpecialCourtesyCodingVersion = encHospitalizationSpecialCourtesyCodingVersion;
-       this.encHospitalizationSpecialCourtesyText = encHospitalizationSpecialCourtesyText;
-       this.encIdAssigner = encIdAssigner;
-       this.encIdPeriodEnd = encIdPeriodEnd;
-       this.encIdPeriodStart = encIdPeriodStart;
-       this.encIdSystem = encIdSystem;
-       this.encIdTypeCodingCode = encIdTypeCodingCode;
-       this.encIdTypeCodingDisplay = encIdTypeCodingDisplay;
-       this.encIdTypeCodingSystem = encIdTypeCodingSystem;
-       this.encIdTypeCodingUsrslt = encIdTypeCodingUsrslt;
-       this.encIdTypeCodingVersion = encIdTypeCodingVersion;
-       this.encIdTypeText = encIdTypeText;
-       this.encIdUseCode = encIdUseCode;
-       this.encIdValue = encIdValue;
-       this.encLength = encLength;
-       this.encLocationLocation = encLocationLocation;
-       this.encLocationPeriodEnd = encLocationPeriodEnd;
-       this.encLocationPeriodStart = encLocationPeriodStart;
-       this.encLocationPhysicalTypeCodingCode = encLocationPhysicalTypeCodingCode;
-       this.encLocationPhysicalTypeCodingDisplay = encLocationPhysicalTypeCodingDisplay;
-       this.encLocationPhysicalTypeCodingSystem = encLocationPhysicalTypeCodingSystem;
-       this.encLocationPhysicalTypeCodingUsrslt = encLocationPhysicalTypeCodingUsrslt;
-       this.encLocationPhysicalTypeCodingVersion = encLocationPhysicalTypeCodingVersion;
-       this.encLocationPhysicalTypeText = encLocationPhysicalTypeText;
-       this.encLocationStatusCode = encLocationStatusCode;
-       this.encPartOf = encPartOf;
-       this.encParticipantIndividual = encParticipantIndividual;
-       this.encParticipantPeriodEnd = encParticipantPeriodEnd;
-       this.encParticipantPeriodStart = encParticipantPeriodStart;
-       this.encParticipantTypeCodingCode = encParticipantTypeCodingCode;
-       this.encParticipantTypeCodingDisplay = encParticipantTypeCodingDisplay;
-       this.encParticipantTypeCodingSystem = encParticipantTypeCodingSystem;
-       this.encParticipantTypeCodingUsrslt = encParticipantTypeCodingUsrslt;
-       this.encParticipantTypeCodingVersion = encParticipantTypeCodingVersion;
-       this.encParticipantTypeText = encParticipantTypeText;
-       this.encPeriodEnd = encPeriodEnd;
-       this.encPeriodStart = encPeriodStart;
-       this.encPriorityCodingCode = encPriorityCodingCode;
-       this.encPriorityCodingDisplay = encPriorityCodingDisplay;
-       this.encPriorityCodingSystem = encPriorityCodingSystem;
-       this.encPriorityCodingUsrslt = encPriorityCodingUsrslt;
-       this.encPriorityCodingVersion = encPriorityCodingVersion;
-       this.encPriorityText = encPriorityText;
-       this.encReasonCodeCodingCode = encReasonCodeCodingCode;
-       this.encReasonCodeCodingDisplay = encReasonCodeCodingDisplay;
-       this.encReasonCodeCodingSystem = encReasonCodeCodingSystem;
-       this.encReasonCodeCodingUsrslt = encReasonCodeCodingUsrslt;
-       this.encReasonCodeCodingVersion = encReasonCodeCodingVersion;
-       this.encReasonCodeText = encReasonCodeText;
-       this.encReasonReference = encReasonReference;
-       this.encServiceProvider = encServiceProvider;
-       this.encServiceTypeCodingCode = encServiceTypeCodingCode;
-       this.encServiceTypeCodingDisplay = encServiceTypeCodingDisplay;
-       this.encServiceTypeCodingSystem = encServiceTypeCodingSystem;
-       this.encServiceTypeCodingUsrslt = encServiceTypeCodingUsrslt;
-       this.encServiceTypeCodingVersion = encServiceTypeCodingVersion;
-       this.encServiceTypeText = encServiceTypeText;
-       this.encStatusCode = encStatusCode;
-       this.encStatusHistoryPeriodEnd = encStatusHistoryPeriodEnd;
-       this.encStatusHistoryPeriodStart = encStatusHistoryPeriodStart;
-       this.encStatusHistoryStatusCode = encStatusHistoryStatusCode;
-       this.encSubject = encSubject;
-       this.encTypeCodingCode = encTypeCodingCode;
-       this.encTypeCodingDisplay = encTypeCodingDisplay;
-       this.encTypeCodingSystem = encTypeCodingSystem;
-       this.encTypeCodingUsrslt = encTypeCodingUsrslt;
-       this.encTypeCodingVersion = encTypeCodingVersion;
-       this.encTypeText = encTypeText;
-    }
    
-    public 
-    String 
-    getId()
-    {
+    public String getId() {
         return this.id;
     }
     
-    public void setId
-        (String id) 
-        {
-      this.id = id;
-}
-    public 
-    String 
-    getEncAccount()
-    {
+    public void setId(String id) {
+        this.id = id;
+    }
+    
+    
+    
+    public String getEncAccount() {
         return this.encAccount;
     }
     
-    public void setEncAccount
-        (String encAccount) 
-        {
-      this.encAccount = encAccount;
-}
-    public 
-    String 
-    getEncAppointment()
-    {
-        return this.encAppointment;
+    public void setEncAccount(String encAccount) {
+        this.encAccount = encAccount;
     }
     
-    public void setEncAppointment
-        (String encAppointment) 
-        {
-      this.encAppointment = encAppointment;
-}
-    public 
-    String 
-    getEncBasedOn()
-    {
+    
+    
+    public String getEncAppmnt() {
+        return this.encAppmnt;
+    }
+    
+    public void setEncAppmnt(String encAppmnt) {
+        this.encAppmnt = encAppmnt;
+    }
+    
+    
+    
+    public String getEncBasedOn() {
         return this.encBasedOn;
     }
     
-    public void setEncBasedOn
-        (String encBasedOn) 
-        {
-      this.encBasedOn = encBasedOn;
-}
-    public 
-    String 
-    getEncClassHistoryClassCode()
-    {
-        return this.encClassHistoryClassCode;
+    public void setEncBasedOn(String encBasedOn) {
+        this.encBasedOn = encBasedOn;
     }
     
-    public void setEncClassHistoryClassCode
-        (String encClassHistoryClassCode) 
-        {
-      this.encClassHistoryClassCode = encClassHistoryClassCode;
-}
-    public 
-    String 
-    getEncClassHistoryClassDisplay()
-    {
-        return this.encClassHistoryClassDisplay;
+    
+    
+    public String getEncClsHisClsCd() {
+        return this.encClsHisClsCd;
     }
     
-    public void setEncClassHistoryClassDisplay
-        (String encClassHistoryClassDisplay) 
-        {
-      this.encClassHistoryClassDisplay = encClassHistoryClassDisplay;
-}
-    public 
-    String 
-    getEncClassHistoryClassSystem()
-    {
-        return this.encClassHistoryClassSystem;
+    public void setEncClsHisClsCd(String encClsHisClsCd) {
+        this.encClsHisClsCd = encClsHisClsCd;
     }
     
-    public void setEncClassHistoryClassSystem
-        (String encClassHistoryClassSystem) 
-        {
-      this.encClassHistoryClassSystem = encClassHistoryClassSystem;
-}
-    public 
-    String 
-    getEncClassHistoryClassUsrslt()
-    {
-        return this.encClassHistoryClassUsrslt;
+    
+    
+    public String getEncClsHisClsDsply() {
+        return this.encClsHisClsDsply;
     }
     
-    public void setEncClassHistoryClassUsrslt
-        (String encClassHistoryClassUsrslt) 
-        {
-      this.encClassHistoryClassUsrslt = encClassHistoryClassUsrslt;
-}
-    public 
-    String 
-    getEncClassHistoryClassVersion()
-    {
-        return this.encClassHistoryClassVersion;
+    public void setEncClsHisClsDsply(String encClsHisClsDsply) {
+        this.encClsHisClsDsply = encClsHisClsDsply;
     }
     
-    public void setEncClassHistoryClassVersion
-        (String encClassHistoryClassVersion) 
-        {
-      this.encClassHistoryClassVersion = encClassHistoryClassVersion;
-}
-    public 
-    String 
-    getEncClassHistoryPeriodEnd()
-    {
-        return this.encClassHistoryPeriodEnd;
+    
+    
+    public String getEncClsHisClsSys() {
+        return this.encClsHisClsSys;
     }
     
-    public void setEncClassHistoryPeriodEnd
-        (String encClassHistoryPeriodEnd) 
-        {
-      this.encClassHistoryPeriodEnd = encClassHistoryPeriodEnd;
-}
-    public 
-    String 
-    getEncClassHistoryPeriodStart()
-    {
-        return this.encClassHistoryPeriodStart;
+    public void setEncClsHisClsSys(String encClsHisClsSys) {
+        this.encClsHisClsSys = encClsHisClsSys;
     }
     
-    public void setEncClassHistoryPeriodStart
-        (String encClassHistoryPeriodStart) 
-        {
-      this.encClassHistoryPeriodStart = encClassHistoryPeriodStart;
-}
-    public 
-    String 
-    getEncClassCode()
-    {
-        return this.encClassCode;
+    
+    
+    public String getEncClsHisClsUsrSltd() {
+        return this.encClsHisClsUsrSltd;
     }
     
-    public void setEncClassCode
-        (String encClassCode) 
-        {
-      this.encClassCode = encClassCode;
-}
-    public 
-    String 
-    getEncClassDisplay()
-    {
-        return this.encClassDisplay;
+    public void setEncClsHisClsUsrSltd(String encClsHisClsUsrSltd) {
+        this.encClsHisClsUsrSltd = encClsHisClsUsrSltd;
     }
     
-    public void setEncClassDisplay
-        (String encClassDisplay) 
-        {
-      this.encClassDisplay = encClassDisplay;
-}
-    public 
-    String 
-    getEncClassSystem()
-    {
-        return this.encClassSystem;
+    
+    
+    public String getEncClsHisClsVrsn() {
+        return this.encClsHisClsVrsn;
     }
     
-    public void setEncClassSystem
-        (String encClassSystem) 
-        {
-      this.encClassSystem = encClassSystem;
-}
-    public 
-    String 
-    getEncClassUsrslt()
-    {
-        return this.encClassUsrslt;
+    public void setEncClsHisClsVrsn(String encClsHisClsVrsn) {
+        this.encClsHisClsVrsn = encClsHisClsVrsn;
     }
     
-    public void setEncClassUsrslt
-        (String encClassUsrslt) 
-        {
-      this.encClassUsrslt = encClassUsrslt;
-}
-    public 
-    String 
-    getEncClassVersion()
-    {
-        return this.encClassVersion;
+    
+    
+    public String getEncClsHisPrdEnd() {
+        return this.encClsHisPrdEnd;
     }
     
-    public void setEncClassVersion
-        (String encClassVersion) 
-        {
-      this.encClassVersion = encClassVersion;
-}
-    public 
-    String 
-    getEncDiagnosisCondition()
-    {
-        return this.encDiagnosisCondition;
+    public void setEncClsHisPrdEnd(String encClsHisPrdEnd) {
+        this.encClsHisPrdEnd = encClsHisPrdEnd;
     }
     
-    public void setEncDiagnosisCondition
-        (String encDiagnosisCondition) 
-        {
-      this.encDiagnosisCondition = encDiagnosisCondition;
-}
-    public 
-    String 
-    getEncDiagnosisRank()
-    {
-        return this.encDiagnosisRank;
+    
+    
+    public String getEncClsHisPrdStrt() {
+        return this.encClsHisPrdStrt;
     }
     
-    public void setEncDiagnosisRank
-        (String encDiagnosisRank) 
-        {
-      this.encDiagnosisRank = encDiagnosisRank;
-}
-    public 
-    String 
-    getEncDiagnosisUseCodingCode()
-    {
-        return this.encDiagnosisUseCodingCode;
+    public void setEncClsHisPrdStrt(String encClsHisPrdStrt) {
+        this.encClsHisPrdStrt = encClsHisPrdStrt;
     }
     
-    public void setEncDiagnosisUseCodingCode
-        (String encDiagnosisUseCodingCode) 
-        {
-      this.encDiagnosisUseCodingCode = encDiagnosisUseCodingCode;
-}
-    public 
-    String 
-    getEncDiagnosisUseCodingDisplay()
-    {
-        return this.encDiagnosisUseCodingDisplay;
+    
+    
+    public String getEncClsCd() {
+        return this.encClsCd;
     }
     
-    public void setEncDiagnosisUseCodingDisplay
-        (String encDiagnosisUseCodingDisplay) 
-        {
-      this.encDiagnosisUseCodingDisplay = encDiagnosisUseCodingDisplay;
-}
-    public 
-    String 
-    getEncDiagnosisUseCodingSystem()
-    {
-        return this.encDiagnosisUseCodingSystem;
+    public void setEncClsCd(String encClsCd) {
+        this.encClsCd = encClsCd;
     }
     
-    public void setEncDiagnosisUseCodingSystem
-        (String encDiagnosisUseCodingSystem) 
-        {
-      this.encDiagnosisUseCodingSystem = encDiagnosisUseCodingSystem;
-}
-    public 
-    String 
-    getEncDiagnosisUseCodingUsrslt()
-    {
-        return this.encDiagnosisUseCodingUsrslt;
+    
+    
+    public String getEncClsDsply() {
+        return this.encClsDsply;
     }
     
-    public void setEncDiagnosisUseCodingUsrslt
-        (String encDiagnosisUseCodingUsrslt) 
-        {
-      this.encDiagnosisUseCodingUsrslt = encDiagnosisUseCodingUsrslt;
-}
-    public 
-    String 
-    getEncDiagnosisUseCodingVersion()
-    {
-        return this.encDiagnosisUseCodingVersion;
+    public void setEncClsDsply(String encClsDsply) {
+        this.encClsDsply = encClsDsply;
     }
     
-    public void setEncDiagnosisUseCodingVersion
-        (String encDiagnosisUseCodingVersion) 
-        {
-      this.encDiagnosisUseCodingVersion = encDiagnosisUseCodingVersion;
-}
-    public 
-    String 
-    getEncDiagnosisUseText()
-    {
-        return this.encDiagnosisUseText;
+    
+    
+    public String getEncClsSys() {
+        return this.encClsSys;
     }
     
-    public void setEncDiagnosisUseText
-        (String encDiagnosisUseText) 
-        {
-      this.encDiagnosisUseText = encDiagnosisUseText;
-}
-    public 
-    String 
-    getEncEpisodeOfCare()
-    {
+    public void setEncClsSys(String encClsSys) {
+        this.encClsSys = encClsSys;
+    }
+    
+    
+    
+    public String getEncClsUsrSltd() {
+        return this.encClsUsrSltd;
+    }
+    
+    public void setEncClsUsrSltd(String encClsUsrSltd) {
+        this.encClsUsrSltd = encClsUsrSltd;
+    }
+    
+    
+    
+    public String getEncClsVrsn() {
+        return this.encClsVrsn;
+    }
+    
+    public void setEncClsVrsn(String encClsVrsn) {
+        this.encClsVrsn = encClsVrsn;
+    }
+    
+    
+    
+    public String getEncDgnsisCndtn() {
+        return this.encDgnsisCndtn;
+    }
+    
+    public void setEncDgnsisCndtn(String encDgnsisCndtn) {
+        this.encDgnsisCndtn = encDgnsisCndtn;
+    }
+    
+    
+    
+    public String getEncDgnsisRnk() {
+        return this.encDgnsisRnk;
+    }
+    
+    public void setEncDgnsisRnk(String encDgnsisRnk) {
+        this.encDgnsisRnk = encDgnsisRnk;
+    }
+    
+    
+    
+    public String getEncDgnsisUseCdgCd() {
+        return this.encDgnsisUseCdgCd;
+    }
+    
+    public void setEncDgnsisUseCdgCd(String encDgnsisUseCdgCd) {
+        this.encDgnsisUseCdgCd = encDgnsisUseCdgCd;
+    }
+    
+    
+    
+    public String getEncDgnsisUseCdgDsply() {
+        return this.encDgnsisUseCdgDsply;
+    }
+    
+    public void setEncDgnsisUseCdgDsply(String encDgnsisUseCdgDsply) {
+        this.encDgnsisUseCdgDsply = encDgnsisUseCdgDsply;
+    }
+    
+    
+    
+    public String getEncDgnsisUseCdgSys() {
+        return this.encDgnsisUseCdgSys;
+    }
+    
+    public void setEncDgnsisUseCdgSys(String encDgnsisUseCdgSys) {
+        this.encDgnsisUseCdgSys = encDgnsisUseCdgSys;
+    }
+    
+    
+    
+    public String getEncDgnsisUseCdgUsrSltd() {
+        return this.encDgnsisUseCdgUsrSltd;
+    }
+    
+    public void setEncDgnsisUseCdgUsrSltd(String encDgnsisUseCdgUsrSltd) {
+        this.encDgnsisUseCdgUsrSltd = encDgnsisUseCdgUsrSltd;
+    }
+    
+    
+    
+    public String getEncDgnsisUseCdgVrsn() {
+        return this.encDgnsisUseCdgVrsn;
+    }
+    
+    public void setEncDgnsisUseCdgVrsn(String encDgnsisUseCdgVrsn) {
+        this.encDgnsisUseCdgVrsn = encDgnsisUseCdgVrsn;
+    }
+    
+    
+    
+    public String getEncDgnsisUseTxt() {
+        return this.encDgnsisUseTxt;
+    }
+    
+    public void setEncDgnsisUseTxt(String encDgnsisUseTxt) {
+        this.encDgnsisUseTxt = encDgnsisUseTxt;
+    }
+    
+    
+    
+    public String getEncEpisodeOfCare() {
         return this.encEpisodeOfCare;
     }
     
-    public void setEncEpisodeOfCare
-        (String encEpisodeOfCare) 
-        {
-      this.encEpisodeOfCare = encEpisodeOfCare;
-}
-    public 
-    String 
-    getEncHospitalizationAdmitSourceCodingCode()
-    {
-        return this.encHospitalizationAdmitSourceCodingCode;
+    public void setEncEpisodeOfCare(String encEpisodeOfCare) {
+        this.encEpisodeOfCare = encEpisodeOfCare;
     }
     
-    public void setEncHospitalizationAdmitSourceCodingCode
-        (String encHospitalizationAdmitSourceCodingCode) 
-        {
-      this.encHospitalizationAdmitSourceCodingCode = encHospitalizationAdmitSourceCodingCode;
-}
-    public 
-    String 
-    getEncHospitalizationAdmitSourceCodingDisplay()
-    {
-        return this.encHospitalizationAdmitSourceCodingDisplay;
+    
+    
+    public String getEncHospitalizationAdmitSrcCdgCd() {
+        return this.encHospitalizationAdmitSrcCdgCd;
     }
     
-    public void setEncHospitalizationAdmitSourceCodingDisplay
-        (String encHospitalizationAdmitSourceCodingDisplay) 
-        {
-      this.encHospitalizationAdmitSourceCodingDisplay = encHospitalizationAdmitSourceCodingDisplay;
-}
-    public 
-    String 
-    getEncHospitalizationAdmitSourceCodingSystem()
-    {
-        return this.encHospitalizationAdmitSourceCodingSystem;
+    public void setEncHospitalizationAdmitSrcCdgCd(String encHospitalizationAdmitSrcCdgCd) {
+        this.encHospitalizationAdmitSrcCdgCd = encHospitalizationAdmitSrcCdgCd;
     }
     
-    public void setEncHospitalizationAdmitSourceCodingSystem
-        (String encHospitalizationAdmitSourceCodingSystem) 
-        {
-      this.encHospitalizationAdmitSourceCodingSystem = encHospitalizationAdmitSourceCodingSystem;
-}
-    public 
-    String 
-    getEncHospitalizationAdmitSourceCodingUsrslt()
-    {
-        return this.encHospitalizationAdmitSourceCodingUsrslt;
+    
+    
+    public String getEncHospitalizationAdmitSrcCdgDsply() {
+        return this.encHospitalizationAdmitSrcCdgDsply;
     }
     
-    public void setEncHospitalizationAdmitSourceCodingUsrslt
-        (String encHospitalizationAdmitSourceCodingUsrslt) 
-        {
-      this.encHospitalizationAdmitSourceCodingUsrslt = encHospitalizationAdmitSourceCodingUsrslt;
-}
-    public 
-    String 
-    getEncHospitalizationAdmitSourceCodingVersion()
-    {
-        return this.encHospitalizationAdmitSourceCodingVersion;
+    public void setEncHospitalizationAdmitSrcCdgDsply(String encHospitalizationAdmitSrcCdgDsply) {
+        this.encHospitalizationAdmitSrcCdgDsply = encHospitalizationAdmitSrcCdgDsply;
     }
     
-    public void setEncHospitalizationAdmitSourceCodingVersion
-        (String encHospitalizationAdmitSourceCodingVersion) 
-        {
-      this.encHospitalizationAdmitSourceCodingVersion = encHospitalizationAdmitSourceCodingVersion;
-}
-    public 
-    String 
-    getEncHospitalizationAdmitSourceText()
-    {
-        return this.encHospitalizationAdmitSourceText;
+    
+    
+    public String getEncHospitalizationAdmitSrcCdgSys() {
+        return this.encHospitalizationAdmitSrcCdgSys;
     }
     
-    public void setEncHospitalizationAdmitSourceText
-        (String encHospitalizationAdmitSourceText) 
-        {
-      this.encHospitalizationAdmitSourceText = encHospitalizationAdmitSourceText;
-}
-    public 
-    String 
-    getEncHospitalizationDestination()
-    {
+    public void setEncHospitalizationAdmitSrcCdgSys(String encHospitalizationAdmitSrcCdgSys) {
+        this.encHospitalizationAdmitSrcCdgSys = encHospitalizationAdmitSrcCdgSys;
+    }
+    
+    
+    
+    public String getEncHospitalizationAdmitSrcCdgUsrSltd() {
+        return this.encHospitalizationAdmitSrcCdgUsrSltd;
+    }
+    
+    public void setEncHospitalizationAdmitSrcCdgUsrSltd(String encHospitalizationAdmitSrcCdgUsrSltd) {
+        this.encHospitalizationAdmitSrcCdgUsrSltd = encHospitalizationAdmitSrcCdgUsrSltd;
+    }
+    
+    
+    
+    public String getEncHospitalizationAdmitSrcCdgVrsn() {
+        return this.encHospitalizationAdmitSrcCdgVrsn;
+    }
+    
+    public void setEncHospitalizationAdmitSrcCdgVrsn(String encHospitalizationAdmitSrcCdgVrsn) {
+        this.encHospitalizationAdmitSrcCdgVrsn = encHospitalizationAdmitSrcCdgVrsn;
+    }
+    
+    
+    
+    public String getEncHospitalizationAdmitSrcTxt() {
+        return this.encHospitalizationAdmitSrcTxt;
+    }
+    
+    public void setEncHospitalizationAdmitSrcTxt(String encHospitalizationAdmitSrcTxt) {
+        this.encHospitalizationAdmitSrcTxt = encHospitalizationAdmitSrcTxt;
+    }
+    
+    
+    
+    public String getEncHospitalizationDestination() {
         return this.encHospitalizationDestination;
     }
     
-    public void setEncHospitalizationDestination
-        (String encHospitalizationDestination) 
-        {
-      this.encHospitalizationDestination = encHospitalizationDestination;
-}
-    public 
-    String 
-    getEncHospitalizationDietPreferenceCodingCode()
-    {
-        return this.encHospitalizationDietPreferenceCodingCode;
+    public void setEncHospitalizationDestination(String encHospitalizationDestination) {
+        this.encHospitalizationDestination = encHospitalizationDestination;
     }
     
-    public void setEncHospitalizationDietPreferenceCodingCode
-        (String encHospitalizationDietPreferenceCodingCode) 
-        {
-      this.encHospitalizationDietPreferenceCodingCode = encHospitalizationDietPreferenceCodingCode;
-}
-    public 
-    String 
-    getEncHospitalizationDietPreferenceCodingDisplay()
-    {
-        return this.encHospitalizationDietPreferenceCodingDisplay;
+    
+    
+    public String getEncHospitalizationDietPreferenceCdgCd() {
+        return this.encHospitalizationDietPreferenceCdgCd;
     }
     
-    public void setEncHospitalizationDietPreferenceCodingDisplay
-        (String encHospitalizationDietPreferenceCodingDisplay) 
-        {
-      this.encHospitalizationDietPreferenceCodingDisplay = encHospitalizationDietPreferenceCodingDisplay;
-}
-    public 
-    String 
-    getEncHospitalizationDietPreferenceCodingSystem()
-    {
-        return this.encHospitalizationDietPreferenceCodingSystem;
+    public void setEncHospitalizationDietPreferenceCdgCd(String encHospitalizationDietPreferenceCdgCd) {
+        this.encHospitalizationDietPreferenceCdgCd = encHospitalizationDietPreferenceCdgCd;
     }
     
-    public void setEncHospitalizationDietPreferenceCodingSystem
-        (String encHospitalizationDietPreferenceCodingSystem) 
-        {
-      this.encHospitalizationDietPreferenceCodingSystem = encHospitalizationDietPreferenceCodingSystem;
-}
-    public 
-    String 
-    getEncHospitalizationDietPreferenceCodingUsrslt()
-    {
-        return this.encHospitalizationDietPreferenceCodingUsrslt;
+    
+    
+    public String getEncHospitalizationDietPreferenceCdgDsply() {
+        return this.encHospitalizationDietPreferenceCdgDsply;
     }
     
-    public void setEncHospitalizationDietPreferenceCodingUsrslt
-        (String encHospitalizationDietPreferenceCodingUsrslt) 
-        {
-      this.encHospitalizationDietPreferenceCodingUsrslt = encHospitalizationDietPreferenceCodingUsrslt;
-}
-    public 
-    String 
-    getEncHospitalizationDietPreferenceCodingVersion()
-    {
-        return this.encHospitalizationDietPreferenceCodingVersion;
+    public void setEncHospitalizationDietPreferenceCdgDsply(String encHospitalizationDietPreferenceCdgDsply) {
+        this.encHospitalizationDietPreferenceCdgDsply = encHospitalizationDietPreferenceCdgDsply;
     }
     
-    public void setEncHospitalizationDietPreferenceCodingVersion
-        (String encHospitalizationDietPreferenceCodingVersion) 
-        {
-      this.encHospitalizationDietPreferenceCodingVersion = encHospitalizationDietPreferenceCodingVersion;
-}
-    public 
-    String 
-    getEncHospitalizationDietPreferenceText()
-    {
-        return this.encHospitalizationDietPreferenceText;
+    
+    
+    public String getEncHospitalizationDietPreferenceCdgSys() {
+        return this.encHospitalizationDietPreferenceCdgSys;
     }
     
-    public void setEncHospitalizationDietPreferenceText
-        (String encHospitalizationDietPreferenceText) 
-        {
-      this.encHospitalizationDietPreferenceText = encHospitalizationDietPreferenceText;
-}
-    public 
-    String 
-    getEncHospitalizationDischargeDispositionCodingCode()
-    {
-        return this.encHospitalizationDischargeDispositionCodingCode;
+    public void setEncHospitalizationDietPreferenceCdgSys(String encHospitalizationDietPreferenceCdgSys) {
+        this.encHospitalizationDietPreferenceCdgSys = encHospitalizationDietPreferenceCdgSys;
     }
     
-    public void setEncHospitalizationDischargeDispositionCodingCode
-        (String encHospitalizationDischargeDispositionCodingCode) 
-        {
-      this.encHospitalizationDischargeDispositionCodingCode = encHospitalizationDischargeDispositionCodingCode;
-}
-    public 
-    String 
-    getEncHospitalizationDischargeDispositionCodingDisplay()
-    {
-        return this.encHospitalizationDischargeDispositionCodingDisplay;
+    
+    
+    public String getEncHospitalizationDietPreferenceCdgUsrSltd() {
+        return this.encHospitalizationDietPreferenceCdgUsrSltd;
     }
     
-    public void setEncHospitalizationDischargeDispositionCodingDisplay
-        (String encHospitalizationDischargeDispositionCodingDisplay) 
-        {
-      this.encHospitalizationDischargeDispositionCodingDisplay = encHospitalizationDischargeDispositionCodingDisplay;
-}
-    public 
-    String 
-    getEncHospitalizationDischargeDispositionCodingSystem()
-    {
-        return this.encHospitalizationDischargeDispositionCodingSystem;
+    public void setEncHospitalizationDietPreferenceCdgUsrSltd(String encHospitalizationDietPreferenceCdgUsrSltd) {
+        this.encHospitalizationDietPreferenceCdgUsrSltd = encHospitalizationDietPreferenceCdgUsrSltd;
     }
     
-    public void setEncHospitalizationDischargeDispositionCodingSystem
-        (String encHospitalizationDischargeDispositionCodingSystem) 
-        {
-      this.encHospitalizationDischargeDispositionCodingSystem = encHospitalizationDischargeDispositionCodingSystem;
-}
-    public 
-    String 
-    getEncHospitalizationDischargeDispositionCodingUsrslt()
-    {
-        return this.encHospitalizationDischargeDispositionCodingUsrslt;
+    
+    
+    public String getEncHospitalizationDietPreferenceCdgVrsn() {
+        return this.encHospitalizationDietPreferenceCdgVrsn;
     }
     
-    public void setEncHospitalizationDischargeDispositionCodingUsrslt
-        (String encHospitalizationDischargeDispositionCodingUsrslt) 
-        {
-      this.encHospitalizationDischargeDispositionCodingUsrslt = encHospitalizationDischargeDispositionCodingUsrslt;
-}
-    public 
-    String 
-    getEncHospitalizationDischargeDispositionCodingVersion()
-    {
-        return this.encHospitalizationDischargeDispositionCodingVersion;
+    public void setEncHospitalizationDietPreferenceCdgVrsn(String encHospitalizationDietPreferenceCdgVrsn) {
+        this.encHospitalizationDietPreferenceCdgVrsn = encHospitalizationDietPreferenceCdgVrsn;
     }
     
-    public void setEncHospitalizationDischargeDispositionCodingVersion
-        (String encHospitalizationDischargeDispositionCodingVersion) 
-        {
-      this.encHospitalizationDischargeDispositionCodingVersion = encHospitalizationDischargeDispositionCodingVersion;
-}
-    public 
-    String 
-    getEncHospitalizationDischargeDispositionText()
-    {
-        return this.encHospitalizationDischargeDispositionText;
+    
+    
+    public String getEncHospitalizationDietPreferenceTxt() {
+        return this.encHospitalizationDietPreferenceTxt;
     }
     
-    public void setEncHospitalizationDischargeDispositionText
-        (String encHospitalizationDischargeDispositionText) 
-        {
-      this.encHospitalizationDischargeDispositionText = encHospitalizationDischargeDispositionText;
-}
-    public 
-    String 
-    getEncHospitalizationOrigin()
-    {
+    public void setEncHospitalizationDietPreferenceTxt(String encHospitalizationDietPreferenceTxt) {
+        this.encHospitalizationDietPreferenceTxt = encHospitalizationDietPreferenceTxt;
+    }
+    
+    
+    
+    public String getEncHospitalizationDischargeDispositionCdgCd() {
+        return this.encHospitalizationDischargeDispositionCdgCd;
+    }
+    
+    public void setEncHospitalizationDischargeDispositionCdgCd(String encHospitalizationDischargeDispositionCdgCd) {
+        this.encHospitalizationDischargeDispositionCdgCd = encHospitalizationDischargeDispositionCdgCd;
+    }
+    
+    
+    
+    public String getEncHospitalizationDischargeDispositionCdgDsply() {
+        return this.encHospitalizationDischargeDispositionCdgDsply;
+    }
+    
+    public void setEncHospitalizationDischargeDispositionCdgDsply(String encHospitalizationDischargeDispositionCdgDsply) {
+        this.encHospitalizationDischargeDispositionCdgDsply = encHospitalizationDischargeDispositionCdgDsply;
+    }
+    
+    
+    
+    public String getEncHospitalizationDischargeDispositionCdgSys() {
+        return this.encHospitalizationDischargeDispositionCdgSys;
+    }
+    
+    public void setEncHospitalizationDischargeDispositionCdgSys(String encHospitalizationDischargeDispositionCdgSys) {
+        this.encHospitalizationDischargeDispositionCdgSys = encHospitalizationDischargeDispositionCdgSys;
+    }
+    
+    
+    
+    public String getEncHospitalizationDischargeDispositionCdgUsrSltd() {
+        return this.encHospitalizationDischargeDispositionCdgUsrSltd;
+    }
+    
+    public void setEncHospitalizationDischargeDispositionCdgUsrSltd(String encHospitalizationDischargeDispositionCdgUsrSltd) {
+        this.encHospitalizationDischargeDispositionCdgUsrSltd = encHospitalizationDischargeDispositionCdgUsrSltd;
+    }
+    
+    
+    
+    public String getEncHospitalizationDischargeDispositionCdgVrsn() {
+        return this.encHospitalizationDischargeDispositionCdgVrsn;
+    }
+    
+    public void setEncHospitalizationDischargeDispositionCdgVrsn(String encHospitalizationDischargeDispositionCdgVrsn) {
+        this.encHospitalizationDischargeDispositionCdgVrsn = encHospitalizationDischargeDispositionCdgVrsn;
+    }
+    
+    
+    
+    public String getEncHospitalizationDischargeDispositionTxt() {
+        return this.encHospitalizationDischargeDispositionTxt;
+    }
+    
+    public void setEncHospitalizationDischargeDispositionTxt(String encHospitalizationDischargeDispositionTxt) {
+        this.encHospitalizationDischargeDispositionTxt = encHospitalizationDischargeDispositionTxt;
+    }
+    
+    
+    
+    public String getEncHospitalizationOrigin() {
         return this.encHospitalizationOrigin;
     }
     
-    public void setEncHospitalizationOrigin
-        (String encHospitalizationOrigin) 
-        {
-      this.encHospitalizationOrigin = encHospitalizationOrigin;
-}
-    public 
-    String 
-    getEncHospitalizationPreAdmissionIdAssigner()
-    {
+    public void setEncHospitalizationOrigin(String encHospitalizationOrigin) {
+        this.encHospitalizationOrigin = encHospitalizationOrigin;
+    }
+    
+    
+    
+    public String getEncHospitalizationPreAdmissionIdAssigner() {
         return this.encHospitalizationPreAdmissionIdAssigner;
     }
     
-    public void setEncHospitalizationPreAdmissionIdAssigner
-        (String encHospitalizationPreAdmissionIdAssigner) 
-        {
-      this.encHospitalizationPreAdmissionIdAssigner = encHospitalizationPreAdmissionIdAssigner;
-}
-    public 
-    String 
-    getEncHospitalizationPreAdmissionIdPeriodEnd()
-    {
-        return this.encHospitalizationPreAdmissionIdPeriodEnd;
+    public void setEncHospitalizationPreAdmissionIdAssigner(String encHospitalizationPreAdmissionIdAssigner) {
+        this.encHospitalizationPreAdmissionIdAssigner = encHospitalizationPreAdmissionIdAssigner;
     }
     
-    public void setEncHospitalizationPreAdmissionIdPeriodEnd
-        (String encHospitalizationPreAdmissionIdPeriodEnd) 
-        {
-      this.encHospitalizationPreAdmissionIdPeriodEnd = encHospitalizationPreAdmissionIdPeriodEnd;
-}
-    public 
-    String 
-    getEncHospitalizationPreAdmissionIdPeriodStart()
-    {
-        return this.encHospitalizationPreAdmissionIdPeriodStart;
+    
+    
+    public String getEncHospitalizationPreAdmissionIdPrdEnd() {
+        return this.encHospitalizationPreAdmissionIdPrdEnd;
     }
     
-    public void setEncHospitalizationPreAdmissionIdPeriodStart
-        (String encHospitalizationPreAdmissionIdPeriodStart) 
-        {
-      this.encHospitalizationPreAdmissionIdPeriodStart = encHospitalizationPreAdmissionIdPeriodStart;
-}
-    public 
-    String 
-    getEncHospitalizationPreAdmissionIdSystem()
-    {
-        return this.encHospitalizationPreAdmissionIdSystem;
+    public void setEncHospitalizationPreAdmissionIdPrdEnd(String encHospitalizationPreAdmissionIdPrdEnd) {
+        this.encHospitalizationPreAdmissionIdPrdEnd = encHospitalizationPreAdmissionIdPrdEnd;
     }
     
-    public void setEncHospitalizationPreAdmissionIdSystem
-        (String encHospitalizationPreAdmissionIdSystem) 
-        {
-      this.encHospitalizationPreAdmissionIdSystem = encHospitalizationPreAdmissionIdSystem;
-}
-    public 
-    String 
-    getEncHospitalizationPreAdmissionIdTypeCodingCode()
-    {
-        return this.encHospitalizationPreAdmissionIdTypeCodingCode;
+    
+    
+    public String getEncHospitalizationPreAdmissionIdPrdStrt() {
+        return this.encHospitalizationPreAdmissionIdPrdStrt;
     }
     
-    public void setEncHospitalizationPreAdmissionIdTypeCodingCode
-        (String encHospitalizationPreAdmissionIdTypeCodingCode) 
-        {
-      this.encHospitalizationPreAdmissionIdTypeCodingCode = encHospitalizationPreAdmissionIdTypeCodingCode;
-}
-    public 
-    String 
-    getEncHospitalizationPreAdmissionIdTypeCodingDisplay()
-    {
-        return this.encHospitalizationPreAdmissionIdTypeCodingDisplay;
+    public void setEncHospitalizationPreAdmissionIdPrdStrt(String encHospitalizationPreAdmissionIdPrdStrt) {
+        this.encHospitalizationPreAdmissionIdPrdStrt = encHospitalizationPreAdmissionIdPrdStrt;
     }
     
-    public void setEncHospitalizationPreAdmissionIdTypeCodingDisplay
-        (String encHospitalizationPreAdmissionIdTypeCodingDisplay) 
-        {
-      this.encHospitalizationPreAdmissionIdTypeCodingDisplay = encHospitalizationPreAdmissionIdTypeCodingDisplay;
-}
-    public 
-    String 
-    getEncHospitalizationPreAdmissionIdTypeCodingSystem()
-    {
-        return this.encHospitalizationPreAdmissionIdTypeCodingSystem;
+    
+    
+    public String getEncHospitalizationPreAdmissionIdSys() {
+        return this.encHospitalizationPreAdmissionIdSys;
     }
     
-    public void setEncHospitalizationPreAdmissionIdTypeCodingSystem
-        (String encHospitalizationPreAdmissionIdTypeCodingSystem) 
-        {
-      this.encHospitalizationPreAdmissionIdTypeCodingSystem = encHospitalizationPreAdmissionIdTypeCodingSystem;
-}
-    public 
-    String 
-    getEncHospitalizationPreAdmissionIdTypeCodingUsrslt()
-    {
-        return this.encHospitalizationPreAdmissionIdTypeCodingUsrslt;
+    public void setEncHospitalizationPreAdmissionIdSys(String encHospitalizationPreAdmissionIdSys) {
+        this.encHospitalizationPreAdmissionIdSys = encHospitalizationPreAdmissionIdSys;
     }
     
-    public void setEncHospitalizationPreAdmissionIdTypeCodingUsrslt
-        (String encHospitalizationPreAdmissionIdTypeCodingUsrslt) 
-        {
-      this.encHospitalizationPreAdmissionIdTypeCodingUsrslt = encHospitalizationPreAdmissionIdTypeCodingUsrslt;
-}
-    public 
-    String 
-    getEncHospitalizationPreAdmissionIdTypeCodingVersion()
-    {
-        return this.encHospitalizationPreAdmissionIdTypeCodingVersion;
+    
+    
+    public String getEncHospitalizationPreAdmissionIdTypCdgCd() {
+        return this.encHospitalizationPreAdmissionIdTypCdgCd;
     }
     
-    public void setEncHospitalizationPreAdmissionIdTypeCodingVersion
-        (String encHospitalizationPreAdmissionIdTypeCodingVersion) 
-        {
-      this.encHospitalizationPreAdmissionIdTypeCodingVersion = encHospitalizationPreAdmissionIdTypeCodingVersion;
-}
-    public 
-    String 
-    getEncHospitalizationPreAdmissionIdTypeText()
-    {
-        return this.encHospitalizationPreAdmissionIdTypeText;
+    public void setEncHospitalizationPreAdmissionIdTypCdgCd(String encHospitalizationPreAdmissionIdTypCdgCd) {
+        this.encHospitalizationPreAdmissionIdTypCdgCd = encHospitalizationPreAdmissionIdTypCdgCd;
     }
     
-    public void setEncHospitalizationPreAdmissionIdTypeText
-        (String encHospitalizationPreAdmissionIdTypeText) 
-        {
-      this.encHospitalizationPreAdmissionIdTypeText = encHospitalizationPreAdmissionIdTypeText;
-}
-    public 
-    String 
-    getEncHospitalizationPreAdmissionIdUseCode()
-    {
-        return this.encHospitalizationPreAdmissionIdUseCode;
+    
+    
+    public String getEncHospitalizationPreAdmissionIdTypCdgDsply() {
+        return this.encHospitalizationPreAdmissionIdTypCdgDsply;
     }
     
-    public void setEncHospitalizationPreAdmissionIdUseCode
-        (String encHospitalizationPreAdmissionIdUseCode) 
-        {
-      this.encHospitalizationPreAdmissionIdUseCode = encHospitalizationPreAdmissionIdUseCode;
-}
-    public 
-    String 
-    getEncHospitalizationPreAdmissionIdValue()
-    {
-        return this.encHospitalizationPreAdmissionIdValue;
+    public void setEncHospitalizationPreAdmissionIdTypCdgDsply(String encHospitalizationPreAdmissionIdTypCdgDsply) {
+        this.encHospitalizationPreAdmissionIdTypCdgDsply = encHospitalizationPreAdmissionIdTypCdgDsply;
     }
     
-    public void setEncHospitalizationPreAdmissionIdValue
-        (String encHospitalizationPreAdmissionIdValue) 
-        {
-      this.encHospitalizationPreAdmissionIdValue = encHospitalizationPreAdmissionIdValue;
-}
-    public 
-    String 
-    getEncHospitalizationReAdmissionCodingCode()
-    {
-        return this.encHospitalizationReAdmissionCodingCode;
+    
+    
+    public String getEncHospitalizationPreAdmissionIdTypCdgSys() {
+        return this.encHospitalizationPreAdmissionIdTypCdgSys;
     }
     
-    public void setEncHospitalizationReAdmissionCodingCode
-        (String encHospitalizationReAdmissionCodingCode) 
-        {
-      this.encHospitalizationReAdmissionCodingCode = encHospitalizationReAdmissionCodingCode;
-}
-    public 
-    String 
-    getEncHospitalizationReAdmissionCodingDisplay()
-    {
-        return this.encHospitalizationReAdmissionCodingDisplay;
+    public void setEncHospitalizationPreAdmissionIdTypCdgSys(String encHospitalizationPreAdmissionIdTypCdgSys) {
+        this.encHospitalizationPreAdmissionIdTypCdgSys = encHospitalizationPreAdmissionIdTypCdgSys;
     }
     
-    public void setEncHospitalizationReAdmissionCodingDisplay
-        (String encHospitalizationReAdmissionCodingDisplay) 
-        {
-      this.encHospitalizationReAdmissionCodingDisplay = encHospitalizationReAdmissionCodingDisplay;
-}
-    public 
-    String 
-    getEncHospitalizationReAdmissionCodingSystem()
-    {
-        return this.encHospitalizationReAdmissionCodingSystem;
+    
+    
+    public String getEncHospitalizationPreAdmissionIdTypCdgUsrSltd() {
+        return this.encHospitalizationPreAdmissionIdTypCdgUsrSltd;
     }
     
-    public void setEncHospitalizationReAdmissionCodingSystem
-        (String encHospitalizationReAdmissionCodingSystem) 
-        {
-      this.encHospitalizationReAdmissionCodingSystem = encHospitalizationReAdmissionCodingSystem;
-}
-    public 
-    String 
-    getEncHospitalizationReAdmissionCodingUsrslt()
-    {
-        return this.encHospitalizationReAdmissionCodingUsrslt;
+    public void setEncHospitalizationPreAdmissionIdTypCdgUsrSltd(String encHospitalizationPreAdmissionIdTypCdgUsrSltd) {
+        this.encHospitalizationPreAdmissionIdTypCdgUsrSltd = encHospitalizationPreAdmissionIdTypCdgUsrSltd;
     }
     
-    public void setEncHospitalizationReAdmissionCodingUsrslt
-        (String encHospitalizationReAdmissionCodingUsrslt) 
-        {
-      this.encHospitalizationReAdmissionCodingUsrslt = encHospitalizationReAdmissionCodingUsrslt;
-}
-    public 
-    String 
-    getEncHospitalizationReAdmissionCodingVersion()
-    {
-        return this.encHospitalizationReAdmissionCodingVersion;
+    
+    
+    public String getEncHospitalizationPreAdmissionIdTypCdgVrsn() {
+        return this.encHospitalizationPreAdmissionIdTypCdgVrsn;
     }
     
-    public void setEncHospitalizationReAdmissionCodingVersion
-        (String encHospitalizationReAdmissionCodingVersion) 
-        {
-      this.encHospitalizationReAdmissionCodingVersion = encHospitalizationReAdmissionCodingVersion;
-}
-    public 
-    String 
-    getEncHospitalizationReAdmissionText()
-    {
-        return this.encHospitalizationReAdmissionText;
+    public void setEncHospitalizationPreAdmissionIdTypCdgVrsn(String encHospitalizationPreAdmissionIdTypCdgVrsn) {
+        this.encHospitalizationPreAdmissionIdTypCdgVrsn = encHospitalizationPreAdmissionIdTypCdgVrsn;
     }
     
-    public void setEncHospitalizationReAdmissionText
-        (String encHospitalizationReAdmissionText) 
-        {
-      this.encHospitalizationReAdmissionText = encHospitalizationReAdmissionText;
-}
-    public 
-    String 
-    getEncHospitalizationSpecialArrangementCodingCode()
-    {
-        return this.encHospitalizationSpecialArrangementCodingCode;
+    
+    
+    public String getEncHospitalizationPreAdmissionIdTypTxt() {
+        return this.encHospitalizationPreAdmissionIdTypTxt;
     }
     
-    public void setEncHospitalizationSpecialArrangementCodingCode
-        (String encHospitalizationSpecialArrangementCodingCode) 
-        {
-      this.encHospitalizationSpecialArrangementCodingCode = encHospitalizationSpecialArrangementCodingCode;
-}
-    public 
-    String 
-    getEncHospitalizationSpecialArrangementCodingDisplay()
-    {
-        return this.encHospitalizationSpecialArrangementCodingDisplay;
+    public void setEncHospitalizationPreAdmissionIdTypTxt(String encHospitalizationPreAdmissionIdTypTxt) {
+        this.encHospitalizationPreAdmissionIdTypTxt = encHospitalizationPreAdmissionIdTypTxt;
     }
     
-    public void setEncHospitalizationSpecialArrangementCodingDisplay
-        (String encHospitalizationSpecialArrangementCodingDisplay) 
-        {
-      this.encHospitalizationSpecialArrangementCodingDisplay = encHospitalizationSpecialArrangementCodingDisplay;
-}
-    public 
-    String 
-    getEncHospitalizationSpecialArrangementCodingSystem()
-    {
-        return this.encHospitalizationSpecialArrangementCodingSystem;
+    
+    
+    public String getEncHospitalizationPreAdmissionIdUse() {
+        return this.encHospitalizationPreAdmissionIdUse;
     }
     
-    public void setEncHospitalizationSpecialArrangementCodingSystem
-        (String encHospitalizationSpecialArrangementCodingSystem) 
-        {
-      this.encHospitalizationSpecialArrangementCodingSystem = encHospitalizationSpecialArrangementCodingSystem;
-}
-    public 
-    String 
-    getEncHospitalizationSpecialArrangementCodingUsrslt()
-    {
-        return this.encHospitalizationSpecialArrangementCodingUsrslt;
+    public void setEncHospitalizationPreAdmissionIdUse(String encHospitalizationPreAdmissionIdUse) {
+        this.encHospitalizationPreAdmissionIdUse = encHospitalizationPreAdmissionIdUse;
     }
     
-    public void setEncHospitalizationSpecialArrangementCodingUsrslt
-        (String encHospitalizationSpecialArrangementCodingUsrslt) 
-        {
-      this.encHospitalizationSpecialArrangementCodingUsrslt = encHospitalizationSpecialArrangementCodingUsrslt;
-}
-    public 
-    String 
-    getEncHospitalizationSpecialArrangementCodingVersion()
-    {
-        return this.encHospitalizationSpecialArrangementCodingVersion;
+    
+    
+    public String getEncHospitalizationPreAdmissionIdVl() {
+        return this.encHospitalizationPreAdmissionIdVl;
     }
     
-    public void setEncHospitalizationSpecialArrangementCodingVersion
-        (String encHospitalizationSpecialArrangementCodingVersion) 
-        {
-      this.encHospitalizationSpecialArrangementCodingVersion = encHospitalizationSpecialArrangementCodingVersion;
-}
-    public 
-    String 
-    getEncHospitalizationSpecialArrangementText()
-    {
-        return this.encHospitalizationSpecialArrangementText;
+    public void setEncHospitalizationPreAdmissionIdVl(String encHospitalizationPreAdmissionIdVl) {
+        this.encHospitalizationPreAdmissionIdVl = encHospitalizationPreAdmissionIdVl;
     }
     
-    public void setEncHospitalizationSpecialArrangementText
-        (String encHospitalizationSpecialArrangementText) 
-        {
-      this.encHospitalizationSpecialArrangementText = encHospitalizationSpecialArrangementText;
-}
-    public 
-    String 
-    getEncHospitalizationSpecialCourtesyCodingCode()
-    {
-        return this.encHospitalizationSpecialCourtesyCodingCode;
+    
+    
+    public String getEncHospitalizationReAdmissionCdgCd() {
+        return this.encHospitalizationReAdmissionCdgCd;
     }
     
-    public void setEncHospitalizationSpecialCourtesyCodingCode
-        (String encHospitalizationSpecialCourtesyCodingCode) 
-        {
-      this.encHospitalizationSpecialCourtesyCodingCode = encHospitalizationSpecialCourtesyCodingCode;
-}
-    public 
-    String 
-    getEncHospitalizationSpecialCourtesyCodingDisplay()
-    {
-        return this.encHospitalizationSpecialCourtesyCodingDisplay;
+    public void setEncHospitalizationReAdmissionCdgCd(String encHospitalizationReAdmissionCdgCd) {
+        this.encHospitalizationReAdmissionCdgCd = encHospitalizationReAdmissionCdgCd;
     }
     
-    public void setEncHospitalizationSpecialCourtesyCodingDisplay
-        (String encHospitalizationSpecialCourtesyCodingDisplay) 
-        {
-      this.encHospitalizationSpecialCourtesyCodingDisplay = encHospitalizationSpecialCourtesyCodingDisplay;
-}
-    public 
-    String 
-    getEncHospitalizationSpecialCourtesyCodingSystem()
-    {
-        return this.encHospitalizationSpecialCourtesyCodingSystem;
+    
+    
+    public String getEncHospitalizationReAdmissionCdgDsply() {
+        return this.encHospitalizationReAdmissionCdgDsply;
     }
     
-    public void setEncHospitalizationSpecialCourtesyCodingSystem
-        (String encHospitalizationSpecialCourtesyCodingSystem) 
-        {
-      this.encHospitalizationSpecialCourtesyCodingSystem = encHospitalizationSpecialCourtesyCodingSystem;
-}
-    public 
-    String 
-    getEncHospitalizationSpecialCourtesyCodingUsrslt()
-    {
-        return this.encHospitalizationSpecialCourtesyCodingUsrslt;
+    public void setEncHospitalizationReAdmissionCdgDsply(String encHospitalizationReAdmissionCdgDsply) {
+        this.encHospitalizationReAdmissionCdgDsply = encHospitalizationReAdmissionCdgDsply;
     }
     
-    public void setEncHospitalizationSpecialCourtesyCodingUsrslt
-        (String encHospitalizationSpecialCourtesyCodingUsrslt) 
-        {
-      this.encHospitalizationSpecialCourtesyCodingUsrslt = encHospitalizationSpecialCourtesyCodingUsrslt;
-}
-    public 
-    String 
-    getEncHospitalizationSpecialCourtesyCodingVersion()
-    {
-        return this.encHospitalizationSpecialCourtesyCodingVersion;
+    
+    
+    public String getEncHospitalizationReAdmissionCdgSys() {
+        return this.encHospitalizationReAdmissionCdgSys;
     }
     
-    public void setEncHospitalizationSpecialCourtesyCodingVersion
-        (String encHospitalizationSpecialCourtesyCodingVersion) 
-        {
-      this.encHospitalizationSpecialCourtesyCodingVersion = encHospitalizationSpecialCourtesyCodingVersion;
-}
-    public 
-    String 
-    getEncHospitalizationSpecialCourtesyText()
-    {
-        return this.encHospitalizationSpecialCourtesyText;
+    public void setEncHospitalizationReAdmissionCdgSys(String encHospitalizationReAdmissionCdgSys) {
+        this.encHospitalizationReAdmissionCdgSys = encHospitalizationReAdmissionCdgSys;
     }
     
-    public void setEncHospitalizationSpecialCourtesyText
-        (String encHospitalizationSpecialCourtesyText) 
-        {
-      this.encHospitalizationSpecialCourtesyText = encHospitalizationSpecialCourtesyText;
-}
-    public 
-    String 
-    getEncIdAssigner()
-    {
+    
+    
+    public String getEncHospitalizationReAdmissionCdgUsrSltd() {
+        return this.encHospitalizationReAdmissionCdgUsrSltd;
+    }
+    
+    public void setEncHospitalizationReAdmissionCdgUsrSltd(String encHospitalizationReAdmissionCdgUsrSltd) {
+        this.encHospitalizationReAdmissionCdgUsrSltd = encHospitalizationReAdmissionCdgUsrSltd;
+    }
+    
+    
+    
+    public String getEncHospitalizationReAdmissionCdgVrsn() {
+        return this.encHospitalizationReAdmissionCdgVrsn;
+    }
+    
+    public void setEncHospitalizationReAdmissionCdgVrsn(String encHospitalizationReAdmissionCdgVrsn) {
+        this.encHospitalizationReAdmissionCdgVrsn = encHospitalizationReAdmissionCdgVrsn;
+    }
+    
+    
+    
+    public String getEncHospitalizationReAdmissionTxt() {
+        return this.encHospitalizationReAdmissionTxt;
+    }
+    
+    public void setEncHospitalizationReAdmissionTxt(String encHospitalizationReAdmissionTxt) {
+        this.encHospitalizationReAdmissionTxt = encHospitalizationReAdmissionTxt;
+    }
+    
+    
+    
+    public String getEncHospitalizationSpclArrangementCdgCd() {
+        return this.encHospitalizationSpclArrangementCdgCd;
+    }
+    
+    public void setEncHospitalizationSpclArrangementCdgCd(String encHospitalizationSpclArrangementCdgCd) {
+        this.encHospitalizationSpclArrangementCdgCd = encHospitalizationSpclArrangementCdgCd;
+    }
+    
+    
+    
+    public String getEncHospitalizationSpclArrangementCdgDsply() {
+        return this.encHospitalizationSpclArrangementCdgDsply;
+    }
+    
+    public void setEncHospitalizationSpclArrangementCdgDsply(String encHospitalizationSpclArrangementCdgDsply) {
+        this.encHospitalizationSpclArrangementCdgDsply = encHospitalizationSpclArrangementCdgDsply;
+    }
+    
+    
+    
+    public String getEncHospitalizationSpclArrangementCdgSys() {
+        return this.encHospitalizationSpclArrangementCdgSys;
+    }
+    
+    public void setEncHospitalizationSpclArrangementCdgSys(String encHospitalizationSpclArrangementCdgSys) {
+        this.encHospitalizationSpclArrangementCdgSys = encHospitalizationSpclArrangementCdgSys;
+    }
+    
+    
+    
+    public String getEncHospitalizationSpclArrangementCdgUsrSltd() {
+        return this.encHospitalizationSpclArrangementCdgUsrSltd;
+    }
+    
+    public void setEncHospitalizationSpclArrangementCdgUsrSltd(String encHospitalizationSpclArrangementCdgUsrSltd) {
+        this.encHospitalizationSpclArrangementCdgUsrSltd = encHospitalizationSpclArrangementCdgUsrSltd;
+    }
+    
+    
+    
+    public String getEncHospitalizationSpclArrangementCdgVrsn() {
+        return this.encHospitalizationSpclArrangementCdgVrsn;
+    }
+    
+    public void setEncHospitalizationSpclArrangementCdgVrsn(String encHospitalizationSpclArrangementCdgVrsn) {
+        this.encHospitalizationSpclArrangementCdgVrsn = encHospitalizationSpclArrangementCdgVrsn;
+    }
+    
+    
+    
+    public String getEncHospitalizationSpclArrangementTxt() {
+        return this.encHospitalizationSpclArrangementTxt;
+    }
+    
+    public void setEncHospitalizationSpclArrangementTxt(String encHospitalizationSpclArrangementTxt) {
+        this.encHospitalizationSpclArrangementTxt = encHospitalizationSpclArrangementTxt;
+    }
+    
+    
+    
+    public String getEncHospitalizationSpclCourtesyCdgCd() {
+        return this.encHospitalizationSpclCourtesyCdgCd;
+    }
+    
+    public void setEncHospitalizationSpclCourtesyCdgCd(String encHospitalizationSpclCourtesyCdgCd) {
+        this.encHospitalizationSpclCourtesyCdgCd = encHospitalizationSpclCourtesyCdgCd;
+    }
+    
+    
+    
+    public String getEncHospitalizationSpclCourtesyCdgDsply() {
+        return this.encHospitalizationSpclCourtesyCdgDsply;
+    }
+    
+    public void setEncHospitalizationSpclCourtesyCdgDsply(String encHospitalizationSpclCourtesyCdgDsply) {
+        this.encHospitalizationSpclCourtesyCdgDsply = encHospitalizationSpclCourtesyCdgDsply;
+    }
+    
+    
+    
+    public String getEncHospitalizationSpclCourtesyCdgSys() {
+        return this.encHospitalizationSpclCourtesyCdgSys;
+    }
+    
+    public void setEncHospitalizationSpclCourtesyCdgSys(String encHospitalizationSpclCourtesyCdgSys) {
+        this.encHospitalizationSpclCourtesyCdgSys = encHospitalizationSpclCourtesyCdgSys;
+    }
+    
+    
+    
+    public String getEncHospitalizationSpclCourtesyCdgUsrSltd() {
+        return this.encHospitalizationSpclCourtesyCdgUsrSltd;
+    }
+    
+    public void setEncHospitalizationSpclCourtesyCdgUsrSltd(String encHospitalizationSpclCourtesyCdgUsrSltd) {
+        this.encHospitalizationSpclCourtesyCdgUsrSltd = encHospitalizationSpclCourtesyCdgUsrSltd;
+    }
+    
+    
+    
+    public String getEncHospitalizationSpclCourtesyCdgVrsn() {
+        return this.encHospitalizationSpclCourtesyCdgVrsn;
+    }
+    
+    public void setEncHospitalizationSpclCourtesyCdgVrsn(String encHospitalizationSpclCourtesyCdgVrsn) {
+        this.encHospitalizationSpclCourtesyCdgVrsn = encHospitalizationSpclCourtesyCdgVrsn;
+    }
+    
+    
+    
+    public String getEncHospitalizationSpclCourtesyTxt() {
+        return this.encHospitalizationSpclCourtesyTxt;
+    }
+    
+    public void setEncHospitalizationSpclCourtesyTxt(String encHospitalizationSpclCourtesyTxt) {
+        this.encHospitalizationSpclCourtesyTxt = encHospitalizationSpclCourtesyTxt;
+    }
+    
+    
+    
+    public String getEncIdAssigner() {
         return this.encIdAssigner;
     }
     
-    public void setEncIdAssigner
-        (String encIdAssigner) 
-        {
-      this.encIdAssigner = encIdAssigner;
-}
-    public 
-    String 
-    getEncIdPeriodEnd()
-    {
-        return this.encIdPeriodEnd;
+    public void setEncIdAssigner(String encIdAssigner) {
+        this.encIdAssigner = encIdAssigner;
     }
     
-    public void setEncIdPeriodEnd
-        (String encIdPeriodEnd) 
-        {
-      this.encIdPeriodEnd = encIdPeriodEnd;
-}
-    public 
-    String 
-    getEncIdPeriodStart()
-    {
-        return this.encIdPeriodStart;
+    
+    
+    public String getEncIdPrdEnd() {
+        return this.encIdPrdEnd;
     }
     
-    public void setEncIdPeriodStart
-        (String encIdPeriodStart) 
-        {
-      this.encIdPeriodStart = encIdPeriodStart;
-}
-    public 
-    String 
-    getEncIdSystem()
-    {
-        return this.encIdSystem;
+    public void setEncIdPrdEnd(String encIdPrdEnd) {
+        this.encIdPrdEnd = encIdPrdEnd;
     }
     
-    public void setEncIdSystem
-        (String encIdSystem) 
-        {
-      this.encIdSystem = encIdSystem;
-}
-    public 
-    String 
-    getEncIdTypeCodingCode()
-    {
-        return this.encIdTypeCodingCode;
+    
+    
+    public String getEncIdPrdStrt() {
+        return this.encIdPrdStrt;
     }
     
-    public void setEncIdTypeCodingCode
-        (String encIdTypeCodingCode) 
-        {
-      this.encIdTypeCodingCode = encIdTypeCodingCode;
-}
-    public 
-    String 
-    getEncIdTypeCodingDisplay()
-    {
-        return this.encIdTypeCodingDisplay;
+    public void setEncIdPrdStrt(String encIdPrdStrt) {
+        this.encIdPrdStrt = encIdPrdStrt;
     }
     
-    public void setEncIdTypeCodingDisplay
-        (String encIdTypeCodingDisplay) 
-        {
-      this.encIdTypeCodingDisplay = encIdTypeCodingDisplay;
-}
-    public 
-    String 
-    getEncIdTypeCodingSystem()
-    {
-        return this.encIdTypeCodingSystem;
+    
+    
+    public String getEncIdSys() {
+        return this.encIdSys;
     }
     
-    public void setEncIdTypeCodingSystem
-        (String encIdTypeCodingSystem) 
-        {
-      this.encIdTypeCodingSystem = encIdTypeCodingSystem;
-}
-    public 
-    String 
-    getEncIdTypeCodingUsrslt()
-    {
-        return this.encIdTypeCodingUsrslt;
+    public void setEncIdSys(String encIdSys) {
+        this.encIdSys = encIdSys;
     }
     
-    public void setEncIdTypeCodingUsrslt
-        (String encIdTypeCodingUsrslt) 
-        {
-      this.encIdTypeCodingUsrslt = encIdTypeCodingUsrslt;
-}
-    public 
-    String 
-    getEncIdTypeCodingVersion()
-    {
-        return this.encIdTypeCodingVersion;
+    
+    
+    public String getEncIdTypCdgCd() {
+        return this.encIdTypCdgCd;
     }
     
-    public void setEncIdTypeCodingVersion
-        (String encIdTypeCodingVersion) 
-        {
-      this.encIdTypeCodingVersion = encIdTypeCodingVersion;
-}
-    public 
-    String 
-    getEncIdTypeText()
-    {
-        return this.encIdTypeText;
+    public void setEncIdTypCdgCd(String encIdTypCdgCd) {
+        this.encIdTypCdgCd = encIdTypCdgCd;
     }
     
-    public void setEncIdTypeText
-        (String encIdTypeText) 
-        {
-      this.encIdTypeText = encIdTypeText;
-}
-    public 
-    String 
-    getEncIdUseCode()
-    {
-        return this.encIdUseCode;
+    
+    
+    public String getEncIdTypCdgDsply() {
+        return this.encIdTypCdgDsply;
     }
     
-    public void setEncIdUseCode
-        (String encIdUseCode) 
-        {
-      this.encIdUseCode = encIdUseCode;
-}
-    public 
-    String 
-    getEncIdValue()
-    {
-        return this.encIdValue;
+    public void setEncIdTypCdgDsply(String encIdTypCdgDsply) {
+        this.encIdTypCdgDsply = encIdTypCdgDsply;
     }
     
-    public void setEncIdValue
-        (String encIdValue) 
-        {
-      this.encIdValue = encIdValue;
-}
-    public 
-    String 
-    getEncLength()
-    {
-        return this.encLength;
+    
+    
+    public String getEncIdTypCdgSys() {
+        return this.encIdTypCdgSys;
     }
     
-    public void setEncLength
-        (String encLength) 
-        {
-      this.encLength = encLength;
-}
-    public 
-    String 
-    getEncLocationLocation()
-    {
-        return this.encLocationLocation;
+    public void setEncIdTypCdgSys(String encIdTypCdgSys) {
+        this.encIdTypCdgSys = encIdTypCdgSys;
     }
     
-    public void setEncLocationLocation
-        (String encLocationLocation) 
-        {
-      this.encLocationLocation = encLocationLocation;
-}
-    public 
-    String 
-    getEncLocationPeriodEnd()
-    {
-        return this.encLocationPeriodEnd;
+    
+    
+    public String getEncIdTypCdgUsrSltd() {
+        return this.encIdTypCdgUsrSltd;
     }
     
-    public void setEncLocationPeriodEnd
-        (String encLocationPeriodEnd) 
-        {
-      this.encLocationPeriodEnd = encLocationPeriodEnd;
-}
-    public 
-    String 
-    getEncLocationPeriodStart()
-    {
-        return this.encLocationPeriodStart;
+    public void setEncIdTypCdgUsrSltd(String encIdTypCdgUsrSltd) {
+        this.encIdTypCdgUsrSltd = encIdTypCdgUsrSltd;
     }
     
-    public void setEncLocationPeriodStart
-        (String encLocationPeriodStart) 
-        {
-      this.encLocationPeriodStart = encLocationPeriodStart;
-}
-    public 
-    String 
-    getEncLocationPhysicalTypeCodingCode()
-    {
-        return this.encLocationPhysicalTypeCodingCode;
+    
+    
+    public String getEncIdTypCdgVrsn() {
+        return this.encIdTypCdgVrsn;
     }
     
-    public void setEncLocationPhysicalTypeCodingCode
-        (String encLocationPhysicalTypeCodingCode) 
-        {
-      this.encLocationPhysicalTypeCodingCode = encLocationPhysicalTypeCodingCode;
-}
-    public 
-    String 
-    getEncLocationPhysicalTypeCodingDisplay()
-    {
-        return this.encLocationPhysicalTypeCodingDisplay;
+    public void setEncIdTypCdgVrsn(String encIdTypCdgVrsn) {
+        this.encIdTypCdgVrsn = encIdTypCdgVrsn;
     }
     
-    public void setEncLocationPhysicalTypeCodingDisplay
-        (String encLocationPhysicalTypeCodingDisplay) 
-        {
-      this.encLocationPhysicalTypeCodingDisplay = encLocationPhysicalTypeCodingDisplay;
-}
-    public 
-    String 
-    getEncLocationPhysicalTypeCodingSystem()
-    {
-        return this.encLocationPhysicalTypeCodingSystem;
+    
+    
+    public String getEncIdTypTxt() {
+        return this.encIdTypTxt;
     }
     
-    public void setEncLocationPhysicalTypeCodingSystem
-        (String encLocationPhysicalTypeCodingSystem) 
-        {
-      this.encLocationPhysicalTypeCodingSystem = encLocationPhysicalTypeCodingSystem;
-}
-    public 
-    String 
-    getEncLocationPhysicalTypeCodingUsrslt()
-    {
-        return this.encLocationPhysicalTypeCodingUsrslt;
+    public void setEncIdTypTxt(String encIdTypTxt) {
+        this.encIdTypTxt = encIdTypTxt;
     }
     
-    public void setEncLocationPhysicalTypeCodingUsrslt
-        (String encLocationPhysicalTypeCodingUsrslt) 
-        {
-      this.encLocationPhysicalTypeCodingUsrslt = encLocationPhysicalTypeCodingUsrslt;
-}
-    public 
-    String 
-    getEncLocationPhysicalTypeCodingVersion()
-    {
-        return this.encLocationPhysicalTypeCodingVersion;
+    
+    
+    public String getEncIdUse() {
+        return this.encIdUse;
     }
     
-    public void setEncLocationPhysicalTypeCodingVersion
-        (String encLocationPhysicalTypeCodingVersion) 
-        {
-      this.encLocationPhysicalTypeCodingVersion = encLocationPhysicalTypeCodingVersion;
-}
-    public 
-    String 
-    getEncLocationPhysicalTypeText()
-    {
-        return this.encLocationPhysicalTypeText;
+    public void setEncIdUse(String encIdUse) {
+        this.encIdUse = encIdUse;
     }
     
-    public void setEncLocationPhysicalTypeText
-        (String encLocationPhysicalTypeText) 
-        {
-      this.encLocationPhysicalTypeText = encLocationPhysicalTypeText;
-}
-    public 
-    String 
-    getEncLocationStatusCode()
-    {
-        return this.encLocationStatusCode;
+    
+    
+    public String getEncIdVl() {
+        return this.encIdVl;
     }
     
-    public void setEncLocationStatusCode
-        (String encLocationStatusCode) 
-        {
-      this.encLocationStatusCode = encLocationStatusCode;
-}
-    public 
-    String 
-    getEncPartOf()
-    {
+    public void setEncIdVl(String encIdVl) {
+        this.encIdVl = encIdVl;
+    }
+    
+    
+    
+    public String getEncLctnLctn() {
+        return this.encLctnLctn;
+    }
+    
+    public void setEncLctnLctn(String encLctnLctn) {
+        this.encLctnLctn = encLctnLctn;
+    }
+    
+    
+    
+    public String getEncLctnPrdEnd() {
+        return this.encLctnPrdEnd;
+    }
+    
+    public void setEncLctnPrdEnd(String encLctnPrdEnd) {
+        this.encLctnPrdEnd = encLctnPrdEnd;
+    }
+    
+    
+    
+    public String getEncLctnPrdStrt() {
+        return this.encLctnPrdStrt;
+    }
+    
+    public void setEncLctnPrdStrt(String encLctnPrdStrt) {
+        this.encLctnPrdStrt = encLctnPrdStrt;
+    }
+    
+    
+    
+    public String getEncLctnPhysclTypCdgCd() {
+        return this.encLctnPhysclTypCdgCd;
+    }
+    
+    public void setEncLctnPhysclTypCdgCd(String encLctnPhysclTypCdgCd) {
+        this.encLctnPhysclTypCdgCd = encLctnPhysclTypCdgCd;
+    }
+    
+    
+    
+    public String getEncLctnPhysclTypCdgDsply() {
+        return this.encLctnPhysclTypCdgDsply;
+    }
+    
+    public void setEncLctnPhysclTypCdgDsply(String encLctnPhysclTypCdgDsply) {
+        this.encLctnPhysclTypCdgDsply = encLctnPhysclTypCdgDsply;
+    }
+    
+    
+    
+    public String getEncLctnPhysclTypCdgSys() {
+        return this.encLctnPhysclTypCdgSys;
+    }
+    
+    public void setEncLctnPhysclTypCdgSys(String encLctnPhysclTypCdgSys) {
+        this.encLctnPhysclTypCdgSys = encLctnPhysclTypCdgSys;
+    }
+    
+    
+    
+    public String getEncLctnPhysclTypCdgUsrSltd() {
+        return this.encLctnPhysclTypCdgUsrSltd;
+    }
+    
+    public void setEncLctnPhysclTypCdgUsrSltd(String encLctnPhysclTypCdgUsrSltd) {
+        this.encLctnPhysclTypCdgUsrSltd = encLctnPhysclTypCdgUsrSltd;
+    }
+    
+    
+    
+    public String getEncLctnPhysclTypCdgVrsn() {
+        return this.encLctnPhysclTypCdgVrsn;
+    }
+    
+    public void setEncLctnPhysclTypCdgVrsn(String encLctnPhysclTypCdgVrsn) {
+        this.encLctnPhysclTypCdgVrsn = encLctnPhysclTypCdgVrsn;
+    }
+    
+    
+    
+    public String getEncLctnPhysclTypTxt() {
+        return this.encLctnPhysclTypTxt;
+    }
+    
+    public void setEncLctnPhysclTypTxt(String encLctnPhysclTypTxt) {
+        this.encLctnPhysclTypTxt = encLctnPhysclTypTxt;
+    }
+    
+    
+    
+    public String getEncLctnSts() {
+        return this.encLctnSts;
+    }
+    
+    public void setEncLctnSts(String encLctnSts) {
+        this.encLctnSts = encLctnSts;
+    }
+    
+    
+    
+    public String getEncPartOf() {
         return this.encPartOf;
     }
     
-    public void setEncPartOf
-        (String encPartOf) 
-        {
-      this.encPartOf = encPartOf;
-}
-    public 
-    String 
-    getEncParticipantIndividual()
-    {
-        return this.encParticipantIndividual;
+    public void setEncPartOf(String encPartOf) {
+        this.encPartOf = encPartOf;
     }
     
-    public void setEncParticipantIndividual
-        (String encParticipantIndividual) 
-        {
-      this.encParticipantIndividual = encParticipantIndividual;
-}
-    public 
-    String 
-    getEncParticipantPeriodEnd()
-    {
-        return this.encParticipantPeriodEnd;
+    
+    
+    public String getEncPrtcpntIndividual() {
+        return this.encPrtcpntIndividual;
     }
     
-    public void setEncParticipantPeriodEnd
-        (String encParticipantPeriodEnd) 
-        {
-      this.encParticipantPeriodEnd = encParticipantPeriodEnd;
-}
-    public 
-    String 
-    getEncParticipantPeriodStart()
-    {
-        return this.encParticipantPeriodStart;
+    public void setEncPrtcpntIndividual(String encPrtcpntIndividual) {
+        this.encPrtcpntIndividual = encPrtcpntIndividual;
     }
     
-    public void setEncParticipantPeriodStart
-        (String encParticipantPeriodStart) 
-        {
-      this.encParticipantPeriodStart = encParticipantPeriodStart;
-}
-    public 
-    String 
-    getEncParticipantTypeCodingCode()
-    {
-        return this.encParticipantTypeCodingCode;
+    
+    
+    public String getEncPrtcpntPrdEnd() {
+        return this.encPrtcpntPrdEnd;
     }
     
-    public void setEncParticipantTypeCodingCode
-        (String encParticipantTypeCodingCode) 
-        {
-      this.encParticipantTypeCodingCode = encParticipantTypeCodingCode;
-}
-    public 
-    String 
-    getEncParticipantTypeCodingDisplay()
-    {
-        return this.encParticipantTypeCodingDisplay;
+    public void setEncPrtcpntPrdEnd(String encPrtcpntPrdEnd) {
+        this.encPrtcpntPrdEnd = encPrtcpntPrdEnd;
     }
     
-    public void setEncParticipantTypeCodingDisplay
-        (String encParticipantTypeCodingDisplay) 
-        {
-      this.encParticipantTypeCodingDisplay = encParticipantTypeCodingDisplay;
-}
-    public 
-    String 
-    getEncParticipantTypeCodingSystem()
-    {
-        return this.encParticipantTypeCodingSystem;
+    
+    
+    public String getEncPrtcpntPrdStrt() {
+        return this.encPrtcpntPrdStrt;
     }
     
-    public void setEncParticipantTypeCodingSystem
-        (String encParticipantTypeCodingSystem) 
-        {
-      this.encParticipantTypeCodingSystem = encParticipantTypeCodingSystem;
-}
-    public 
-    String 
-    getEncParticipantTypeCodingUsrslt()
-    {
-        return this.encParticipantTypeCodingUsrslt;
+    public void setEncPrtcpntPrdStrt(String encPrtcpntPrdStrt) {
+        this.encPrtcpntPrdStrt = encPrtcpntPrdStrt;
     }
     
-    public void setEncParticipantTypeCodingUsrslt
-        (String encParticipantTypeCodingUsrslt) 
-        {
-      this.encParticipantTypeCodingUsrslt = encParticipantTypeCodingUsrslt;
-}
-    public 
-    String 
-    getEncParticipantTypeCodingVersion()
-    {
-        return this.encParticipantTypeCodingVersion;
+    
+    
+    public String getEncPrtcpntTypCdgCd() {
+        return this.encPrtcpntTypCdgCd;
     }
     
-    public void setEncParticipantTypeCodingVersion
-        (String encParticipantTypeCodingVersion) 
-        {
-      this.encParticipantTypeCodingVersion = encParticipantTypeCodingVersion;
-}
-    public 
-    String 
-    getEncParticipantTypeText()
-    {
-        return this.encParticipantTypeText;
+    public void setEncPrtcpntTypCdgCd(String encPrtcpntTypCdgCd) {
+        this.encPrtcpntTypCdgCd = encPrtcpntTypCdgCd;
     }
     
-    public void setEncParticipantTypeText
-        (String encParticipantTypeText) 
-        {
-      this.encParticipantTypeText = encParticipantTypeText;
-}
-    public 
-    String 
-    getEncPeriodEnd()
-    {
-        return this.encPeriodEnd;
+    
+    
+    public String getEncPrtcpntTypCdgDsply() {
+        return this.encPrtcpntTypCdgDsply;
     }
     
-    public void setEncPeriodEnd
-        (String encPeriodEnd) 
-        {
-      this.encPeriodEnd = encPeriodEnd;
-}
-    public 
-    String 
-    getEncPeriodStart()
-    {
-        return this.encPeriodStart;
+    public void setEncPrtcpntTypCdgDsply(String encPrtcpntTypCdgDsply) {
+        this.encPrtcpntTypCdgDsply = encPrtcpntTypCdgDsply;
     }
     
-    public void setEncPeriodStart
-        (String encPeriodStart) 
-        {
-      this.encPeriodStart = encPeriodStart;
-}
-    public 
-    String 
-    getEncPriorityCodingCode()
-    {
-        return this.encPriorityCodingCode;
+    
+    
+    public String getEncPrtcpntTypCdgSys() {
+        return this.encPrtcpntTypCdgSys;
     }
     
-    public void setEncPriorityCodingCode
-        (String encPriorityCodingCode) 
-        {
-      this.encPriorityCodingCode = encPriorityCodingCode;
-}
-    public 
-    String 
-    getEncPriorityCodingDisplay()
-    {
-        return this.encPriorityCodingDisplay;
+    public void setEncPrtcpntTypCdgSys(String encPrtcpntTypCdgSys) {
+        this.encPrtcpntTypCdgSys = encPrtcpntTypCdgSys;
     }
     
-    public void setEncPriorityCodingDisplay
-        (String encPriorityCodingDisplay) 
-        {
-      this.encPriorityCodingDisplay = encPriorityCodingDisplay;
-}
-    public 
-    String 
-    getEncPriorityCodingSystem()
-    {
-        return this.encPriorityCodingSystem;
+    
+    
+    public String getEncPrtcpntTypCdgUsrSltd() {
+        return this.encPrtcpntTypCdgUsrSltd;
     }
     
-    public void setEncPriorityCodingSystem
-        (String encPriorityCodingSystem) 
-        {
-      this.encPriorityCodingSystem = encPriorityCodingSystem;
-}
-    public 
-    String 
-    getEncPriorityCodingUsrslt()
-    {
-        return this.encPriorityCodingUsrslt;
+    public void setEncPrtcpntTypCdgUsrSltd(String encPrtcpntTypCdgUsrSltd) {
+        this.encPrtcpntTypCdgUsrSltd = encPrtcpntTypCdgUsrSltd;
     }
     
-    public void setEncPriorityCodingUsrslt
-        (String encPriorityCodingUsrslt) 
-        {
-      this.encPriorityCodingUsrslt = encPriorityCodingUsrslt;
-}
-    public 
-    String 
-    getEncPriorityCodingVersion()
-    {
-        return this.encPriorityCodingVersion;
+    
+    
+    public String getEncPrtcpntTypCdgVrsn() {
+        return this.encPrtcpntTypCdgVrsn;
     }
     
-    public void setEncPriorityCodingVersion
-        (String encPriorityCodingVersion) 
-        {
-      this.encPriorityCodingVersion = encPriorityCodingVersion;
-}
-    public 
-    String 
-    getEncPriorityText()
-    {
-        return this.encPriorityText;
+    public void setEncPrtcpntTypCdgVrsn(String encPrtcpntTypCdgVrsn) {
+        this.encPrtcpntTypCdgVrsn = encPrtcpntTypCdgVrsn;
     }
     
-    public void setEncPriorityText
-        (String encPriorityText) 
-        {
-      this.encPriorityText = encPriorityText;
-}
-    public 
-    String 
-    getEncReasonCodeCodingCode()
-    {
-        return this.encReasonCodeCodingCode;
+    
+    
+    public String getEncPrtcpntTypTxt() {
+        return this.encPrtcpntTypTxt;
     }
     
-    public void setEncReasonCodeCodingCode
-        (String encReasonCodeCodingCode) 
-        {
-      this.encReasonCodeCodingCode = encReasonCodeCodingCode;
-}
-    public 
-    String 
-    getEncReasonCodeCodingDisplay()
-    {
-        return this.encReasonCodeCodingDisplay;
+    public void setEncPrtcpntTypTxt(String encPrtcpntTypTxt) {
+        this.encPrtcpntTypTxt = encPrtcpntTypTxt;
     }
     
-    public void setEncReasonCodeCodingDisplay
-        (String encReasonCodeCodingDisplay) 
-        {
-      this.encReasonCodeCodingDisplay = encReasonCodeCodingDisplay;
-}
-    public 
-    String 
-    getEncReasonCodeCodingSystem()
-    {
-        return this.encReasonCodeCodingSystem;
+    
+    
+    public String getEncPrdEnd() {
+        return this.encPrdEnd;
     }
     
-    public void setEncReasonCodeCodingSystem
-        (String encReasonCodeCodingSystem) 
-        {
-      this.encReasonCodeCodingSystem = encReasonCodeCodingSystem;
-}
-    public 
-    String 
-    getEncReasonCodeCodingUsrslt()
-    {
-        return this.encReasonCodeCodingUsrslt;
+    public void setEncPrdEnd(String encPrdEnd) {
+        this.encPrdEnd = encPrdEnd;
     }
     
-    public void setEncReasonCodeCodingUsrslt
-        (String encReasonCodeCodingUsrslt) 
-        {
-      this.encReasonCodeCodingUsrslt = encReasonCodeCodingUsrslt;
-}
-    public 
-    String 
-    getEncReasonCodeCodingVersion()
-    {
-        return this.encReasonCodeCodingVersion;
+    
+    
+    public String getEncPrdStrt() {
+        return this.encPrdStrt;
     }
     
-    public void setEncReasonCodeCodingVersion
-        (String encReasonCodeCodingVersion) 
-        {
-      this.encReasonCodeCodingVersion = encReasonCodeCodingVersion;
-}
-    public 
-    String 
-    getEncReasonCodeText()
-    {
-        return this.encReasonCodeText;
+    public void setEncPrdStrt(String encPrdStrt) {
+        this.encPrdStrt = encPrdStrt;
     }
     
-    public void setEncReasonCodeText
-        (String encReasonCodeText) 
-        {
-      this.encReasonCodeText = encReasonCodeText;
-}
-    public 
-    String 
-    getEncReasonReference()
-    {
-        return this.encReasonReference;
+    
+    
+    public String getEncPriorityCdgCd() {
+        return this.encPriorityCdgCd;
     }
     
-    public void setEncReasonReference
-        (String encReasonReference) 
-        {
-      this.encReasonReference = encReasonReference;
-}
-    public 
-    String 
-    getEncServiceProvider()
-    {
-        return this.encServiceProvider;
+    public void setEncPriorityCdgCd(String encPriorityCdgCd) {
+        this.encPriorityCdgCd = encPriorityCdgCd;
     }
     
-    public void setEncServiceProvider
-        (String encServiceProvider) 
-        {
-      this.encServiceProvider = encServiceProvider;
-}
-    public 
-    String 
-    getEncServiceTypeCodingCode()
-    {
-        return this.encServiceTypeCodingCode;
+    
+    
+    public String getEncPriorityCdgDsply() {
+        return this.encPriorityCdgDsply;
     }
     
-    public void setEncServiceTypeCodingCode
-        (String encServiceTypeCodingCode) 
-        {
-      this.encServiceTypeCodingCode = encServiceTypeCodingCode;
-}
-    public 
-    String 
-    getEncServiceTypeCodingDisplay()
-    {
-        return this.encServiceTypeCodingDisplay;
+    public void setEncPriorityCdgDsply(String encPriorityCdgDsply) {
+        this.encPriorityCdgDsply = encPriorityCdgDsply;
     }
     
-    public void setEncServiceTypeCodingDisplay
-        (String encServiceTypeCodingDisplay) 
-        {
-      this.encServiceTypeCodingDisplay = encServiceTypeCodingDisplay;
-}
-    public 
-    String 
-    getEncServiceTypeCodingSystem()
-    {
-        return this.encServiceTypeCodingSystem;
+    
+    
+    public String getEncPriorityCdgSys() {
+        return this.encPriorityCdgSys;
     }
     
-    public void setEncServiceTypeCodingSystem
-        (String encServiceTypeCodingSystem) 
-        {
-      this.encServiceTypeCodingSystem = encServiceTypeCodingSystem;
-}
-    public 
-    String 
-    getEncServiceTypeCodingUsrslt()
-    {
-        return this.encServiceTypeCodingUsrslt;
+    public void setEncPriorityCdgSys(String encPriorityCdgSys) {
+        this.encPriorityCdgSys = encPriorityCdgSys;
     }
     
-    public void setEncServiceTypeCodingUsrslt
-        (String encServiceTypeCodingUsrslt) 
-        {
-      this.encServiceTypeCodingUsrslt = encServiceTypeCodingUsrslt;
-}
-    public 
-    String 
-    getEncServiceTypeCodingVersion()
-    {
-        return this.encServiceTypeCodingVersion;
+    
+    
+    public String getEncPriorityCdgUsrSltd() {
+        return this.encPriorityCdgUsrSltd;
     }
     
-    public void setEncServiceTypeCodingVersion
-        (String encServiceTypeCodingVersion) 
-        {
-      this.encServiceTypeCodingVersion = encServiceTypeCodingVersion;
-}
-    public 
-    String 
-    getEncServiceTypeText()
-    {
-        return this.encServiceTypeText;
+    public void setEncPriorityCdgUsrSltd(String encPriorityCdgUsrSltd) {
+        this.encPriorityCdgUsrSltd = encPriorityCdgUsrSltd;
     }
     
-    public void setEncServiceTypeText
-        (String encServiceTypeText) 
-        {
-      this.encServiceTypeText = encServiceTypeText;
-}
-    public 
-    String 
-    getEncStatusCode()
-    {
-        return this.encStatusCode;
+    
+    
+    public String getEncPriorityCdgVrsn() {
+        return this.encPriorityCdgVrsn;
     }
     
-    public void setEncStatusCode
-        (String encStatusCode) 
-        {
-      this.encStatusCode = encStatusCode;
-}
-    public 
-    String 
-    getEncStatusHistoryPeriodEnd()
-    {
-        return this.encStatusHistoryPeriodEnd;
+    public void setEncPriorityCdgVrsn(String encPriorityCdgVrsn) {
+        this.encPriorityCdgVrsn = encPriorityCdgVrsn;
     }
     
-    public void setEncStatusHistoryPeriodEnd
-        (String encStatusHistoryPeriodEnd) 
-        {
-      this.encStatusHistoryPeriodEnd = encStatusHistoryPeriodEnd;
-}
-    public 
-    String 
-    getEncStatusHistoryPeriodStart()
-    {
-        return this.encStatusHistoryPeriodStart;
+    
+    
+    public String getEncPriorityTxt() {
+        return this.encPriorityTxt;
     }
     
-    public void setEncStatusHistoryPeriodStart
-        (String encStatusHistoryPeriodStart) 
-        {
-      this.encStatusHistoryPeriodStart = encStatusHistoryPeriodStart;
-}
-    public 
-    String 
-    getEncStatusHistoryStatusCode()
-    {
-        return this.encStatusHistoryStatusCode;
+    public void setEncPriorityTxt(String encPriorityTxt) {
+        this.encPriorityTxt = encPriorityTxt;
     }
     
-    public void setEncStatusHistoryStatusCode
-        (String encStatusHistoryStatusCode) 
-        {
-      this.encStatusHistoryStatusCode = encStatusHistoryStatusCode;
-}
-    public 
-    String 
-    getEncSubject()
-    {
-        return this.encSubject;
+    
+    
+    public String getEncRsnCdCdgCd() {
+        return this.encRsnCdCdgCd;
     }
     
-    public void setEncSubject
-        (String encSubject) 
-        {
-      this.encSubject = encSubject;
-}
-    public 
-    String 
-    getEncTypeCodingCode()
-    {
-        return this.encTypeCodingCode;
+    public void setEncRsnCdCdgCd(String encRsnCdCdgCd) {
+        this.encRsnCdCdgCd = encRsnCdCdgCd;
     }
     
-    public void setEncTypeCodingCode
-        (String encTypeCodingCode) 
-        {
-      this.encTypeCodingCode = encTypeCodingCode;
-}
-    public 
-    String 
-    getEncTypeCodingDisplay()
-    {
-        return this.encTypeCodingDisplay;
+    
+    
+    public String getEncRsnCdCdgDsply() {
+        return this.encRsnCdCdgDsply;
     }
     
-    public void setEncTypeCodingDisplay
-        (String encTypeCodingDisplay) 
-        {
-      this.encTypeCodingDisplay = encTypeCodingDisplay;
-}
-    public 
-    String 
-    getEncTypeCodingSystem()
-    {
-        return this.encTypeCodingSystem;
+    public void setEncRsnCdCdgDsply(String encRsnCdCdgDsply) {
+        this.encRsnCdCdgDsply = encRsnCdCdgDsply;
     }
     
-    public void setEncTypeCodingSystem
-        (String encTypeCodingSystem) 
-        {
-      this.encTypeCodingSystem = encTypeCodingSystem;
-}
-    public 
-    String 
-    getEncTypeCodingUsrslt()
-    {
-        return this.encTypeCodingUsrslt;
+    
+    
+    public String getEncRsnCdCdgSys() {
+        return this.encRsnCdCdgSys;
     }
     
-    public void setEncTypeCodingUsrslt
-        (String encTypeCodingUsrslt) 
-        {
-      this.encTypeCodingUsrslt = encTypeCodingUsrslt;
-}
-    public 
-    String 
-    getEncTypeCodingVersion()
-    {
-        return this.encTypeCodingVersion;
+    public void setEncRsnCdCdgSys(String encRsnCdCdgSys) {
+        this.encRsnCdCdgSys = encRsnCdCdgSys;
     }
     
-    public void setEncTypeCodingVersion
-        (String encTypeCodingVersion) 
-        {
-      this.encTypeCodingVersion = encTypeCodingVersion;
-}
-    public 
-    String 
-    getEncTypeText()
-    {
-        return this.encTypeText;
+    
+    
+    public String getEncRsnCdCdgUsrSltd() {
+        return this.encRsnCdCdgUsrSltd;
     }
     
-    public void setEncTypeText
-        (String encTypeText) 
-        {
-      this.encTypeText = encTypeText;
-}
+    public void setEncRsnCdCdgUsrSltd(String encRsnCdCdgUsrSltd) {
+        this.encRsnCdCdgUsrSltd = encRsnCdCdgUsrSltd;
+    }
+    
+    
+    
+    public String getEncRsnCdCdgVrsn() {
+        return this.encRsnCdCdgVrsn;
+    }
+    
+    public void setEncRsnCdCdgVrsn(String encRsnCdCdgVrsn) {
+        this.encRsnCdCdgVrsn = encRsnCdCdgVrsn;
+    }
+    
+    
+    
+    public String getEncRsnCdTxt() {
+        return this.encRsnCdTxt;
+    }
+    
+    public void setEncRsnCdTxt(String encRsnCdTxt) {
+        this.encRsnCdTxt = encRsnCdTxt;
+    }
+    
+    
+    
+    public String getEncRsnRfrnc() {
+        return this.encRsnRfrnc;
+    }
+    
+    public void setEncRsnRfrnc(String encRsnRfrnc) {
+        this.encRsnRfrnc = encRsnRfrnc;
+    }
+    
+    
+    
+    public String getEncSrvProvider() {
+        return this.encSrvProvider;
+    }
+    
+    public void setEncSrvProvider(String encSrvProvider) {
+        this.encSrvProvider = encSrvProvider;
+    }
+    
+    
+    
+    public String getEncSrvTypCdgCd() {
+        return this.encSrvTypCdgCd;
+    }
+    
+    public void setEncSrvTypCdgCd(String encSrvTypCdgCd) {
+        this.encSrvTypCdgCd = encSrvTypCdgCd;
+    }
+    
+    
+    
+    public String getEncSrvTypCdgDsply() {
+        return this.encSrvTypCdgDsply;
+    }
+    
+    public void setEncSrvTypCdgDsply(String encSrvTypCdgDsply) {
+        this.encSrvTypCdgDsply = encSrvTypCdgDsply;
+    }
+    
+    
+    
+    public String getEncSrvTypCdgSys() {
+        return this.encSrvTypCdgSys;
+    }
+    
+    public void setEncSrvTypCdgSys(String encSrvTypCdgSys) {
+        this.encSrvTypCdgSys = encSrvTypCdgSys;
+    }
+    
+    
+    
+    public String getEncSrvTypCdgUsrSltd() {
+        return this.encSrvTypCdgUsrSltd;
+    }
+    
+    public void setEncSrvTypCdgUsrSltd(String encSrvTypCdgUsrSltd) {
+        this.encSrvTypCdgUsrSltd = encSrvTypCdgUsrSltd;
+    }
+    
+    
+    
+    public String getEncSrvTypCdgVrsn() {
+        return this.encSrvTypCdgVrsn;
+    }
+    
+    public void setEncSrvTypCdgVrsn(String encSrvTypCdgVrsn) {
+        this.encSrvTypCdgVrsn = encSrvTypCdgVrsn;
+    }
+    
+    
+    
+    public String getEncSrvTypTxt() {
+        return this.encSrvTypTxt;
+    }
+    
+    public void setEncSrvTypTxt(String encSrvTypTxt) {
+        this.encSrvTypTxt = encSrvTypTxt;
+    }
+    
+    
+    
+    public String getEncSts() {
+        return this.encSts;
+    }
+    
+    public void setEncSts(String encSts) {
+        this.encSts = encSts;
+    }
+    
+    
+    
+    public String getEncStsHisPrdEnd() {
+        return this.encStsHisPrdEnd;
+    }
+    
+    public void setEncStsHisPrdEnd(String encStsHisPrdEnd) {
+        this.encStsHisPrdEnd = encStsHisPrdEnd;
+    }
+    
+    
+    
+    public String getEncStsHisPrdStrt() {
+        return this.encStsHisPrdStrt;
+    }
+    
+    public void setEncStsHisPrdStrt(String encStsHisPrdStrt) {
+        this.encStsHisPrdStrt = encStsHisPrdStrt;
+    }
+    
+    
+    
+    public String getEncStsHisSts() {
+        return this.encStsHisSts;
+    }
+    
+    public void setEncStsHisSts(String encStsHisSts) {
+        this.encStsHisSts = encStsHisSts;
+    }
+    
+    
+    
+    public String getEncSbjct() {
+        return this.encSbjct;
+    }
+    
+    public void setEncSbjct(String encSbjct) {
+        this.encSbjct = encSbjct;
+    }
+    
+    
+    
+    public String getEncTypCdgCd() {
+        return this.encTypCdgCd;
+    }
+    
+    public void setEncTypCdgCd(String encTypCdgCd) {
+        this.encTypCdgCd = encTypCdgCd;
+    }
+    
+    
+    
+    public String getEncTypCdgDsply() {
+        return this.encTypCdgDsply;
+    }
+    
+    public void setEncTypCdgDsply(String encTypCdgDsply) {
+        this.encTypCdgDsply = encTypCdgDsply;
+    }
+    
+    
+    
+    public String getEncTypCdgSys() {
+        return this.encTypCdgSys;
+    }
+    
+    public void setEncTypCdgSys(String encTypCdgSys) {
+        this.encTypCdgSys = encTypCdgSys;
+    }
+    
+    
+    
+    public String getEncTypCdgUsrSltd() {
+        return this.encTypCdgUsrSltd;
+    }
+    
+    public void setEncTypCdgUsrSltd(String encTypCdgUsrSltd) {
+        this.encTypCdgUsrSltd = encTypCdgUsrSltd;
+    }
+    
+    
+    
+    public String getEncTypCdgVrsn() {
+        return this.encTypCdgVrsn;
+    }
+    
+    public void setEncTypCdgVrsn(String encTypCdgVrsn) {
+        this.encTypCdgVrsn = encTypCdgVrsn;
+    }
+    
+    
+    
+    public String getEncTypTxt() {
+        return this.encTypTxt;
+    }
+    
+    public void setEncTypTxt(String encTypTxt) {
+        this.encTypTxt = encTypTxt;
+    }
+    
+    
+    
 
 
 

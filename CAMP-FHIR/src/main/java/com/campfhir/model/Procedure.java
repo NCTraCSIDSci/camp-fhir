@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Feb 22, 2022, 7:13:58 PM by Hibernate Tools 5.6.1.Final
+// Generated Jun 6, 2022, 11:02:30 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -11,1621 +11,1264 @@ public class Procedure  implements java.io.Serializable {
 
 
      private String id;
-     private String procedureAsserter;
-     private String procedureBasedOn;
-     private String procedureBodySiteCodingCode;
-     private String procedureBodySiteCodingDisplay;
-     private String procedureBodySiteCodingSystem;
-     private String procedureBodySiteCodingUsrslt;
-     private String procedureBodySiteCodingVersion;
-     private String procedureBodySiteText;
-     private String procedureCategoryCodingCode;
-     private String procedureCategoryCodingDisplay;
-     private String procedureCategoryCodingSystem;
-     private String procedureCategoryCodingUsrslt;
-     private String procedureCategoryCodingVersion;
-     private String procedureCategoryText;
-     private String procedureCodeCodingCode;
-     private String procedureCodeCodingDisplay;
-     private String procedureCodeCodingSystem;
-     private String procedureCodeCodingUsrslt;
-     private String procedureCodeCodingVersion;
-     private String procedureCodeText;
-     private String procedureComplicationCodingCode;
-     private String procedureComplicationCodingDisplay;
-     private String procedureComplicationCodingSystem;
-     private String procedureComplicationCodingUsrslt;
-     private String procedureComplicationCodingVersion;
-     private String procedureComplicationText;
-     private String procedureComplicationDetail;
-     private String procedureEnc;
-     private String procedureFocalDeviceActionCodingCode;
-     private String procedureFocalDeviceActionCodingDisplay;
-     private String procedureFocalDeviceActionCodingSystem;
-     private String procedureFocalDeviceActionCodingUsrslt;
-     private String procedureFocalDeviceActionCodingVersion;
-     private String procedureFocalDeviceActionText;
-     private String procedureFocalDeviceManipulated;
-     private String procedureFollowUpCodingCode;
-     private String procedureFollowUpCodingDisplay;
-     private String procedureFollowUpCodingSystem;
-     private String procedureFollowUpCodingUsrslt;
-     private String procedureFollowUpCodingVersion;
-     private String procedureFollowUpText;
-     private String procedureIdAssigner;
-     private String procedureIdPeriodEnd;
-     private String procedureIdPeriodStart;
-     private String procedureIdSystem;
-     private String procedureIdTypeCodingCode;
-     private String procedureIdTypeCodingDisplay;
-     private String procedureIdTypeCodingSystem;
-     private String procedureIdTypeCodingUsrslt;
-     private String procedureIdTypeCodingVersion;
-     private String procedureIdTypeText;
-     private String procedureIdUseCode;
-     private String procedureIdValue;
-     private String procedureInstantiatesCanonical;
-     private String procedureInstantiatesUri;
-     private String procedureLocation;
-     private String procedureNoteAuthorReference;
-     private String procedureNoteAuthorString;
-     private String procedureNoteText;
-     private String procedureNoteTime;
-     private String procedureOutcomeCodingCode;
-     private String procedureOutcomeCodingDisplay;
-     private String procedureOutcomeCodingSystem;
-     private String procedureOutcomeCodingUsrslt;
-     private String procedureOutcomeCodingVersion;
-     private String procedureOutcomeText;
-     private String procedurePartOf;
-     private String procedurePerformed;
-     private String procedurePerformedDateTime;
-     private String procedurePerformedPeriodEnd;
-     private String procedurePerformedPeriodStart;
-     private String procedurePerformedRangeHighCode;
-     private String procedurePerformedRangeHighCompartrCode;
-     private String procedurePerformedRangeHighSystem;
-     private String procedurePerformedRangeHighUnit;
-     private String procedurePerformedRangeHighValue;
-     private String procedurePerformedRangeLowCode;
-     private String procedurePerformedRangeLowCompartrCode;
-     private String procedurePerformedRangeLowSystem;
-     private String procedurePerformedRangeLowUnit;
-     private String procedurePerformedRangeLowValue;
-     private String procedurePerformedString;
-     private String procedurePerformerActor;
-     private String procedurePerformerFunctionCodingCode;
-     private String procedurePerformerFunctionCodingDisplay;
-     private String procedurePerformerFunctionCodingSystem;
-     private String procedurePerformerFunctionCodingUsrslt;
-     private String procedurePerformerFunctionCodingVersion;
-     private String procedurePerformerFunctionText;
-     private String procedurePerformerOnBehalfOf;
-     private String procedureReasonCodeCodingCode;
-     private String procedureReasonCodeCodingDisplay;
-     private String procedureReasonCodeCodingSystem;
-     private String procedureReasonCodeCodingUsrslt;
-     private String procedureReasonCodeCodingVersion;
-     private String procedureReasonCodeText;
-     private String procedureReasonReference;
-     private String procedureRecorder;
-     private String procedureReport;
-     private String procedureStatusCode;
-     private String procedureStatusReasonCodingCode;
-     private String procedureStatusReasonCodingDisplay;
-     private String procedureStatusReasonCodingSystem;
-     private String procedureStatusReasonCodingUsrslt;
-     private String procedureStatusReasonCodingVersion;
-     private String procedureStatusReasonText;
-     private String procedureSubject;
-     private String procedureUsedCodeCodingCode;
-     private String procedureUsedCodeCodingDisplay;
-     private String procedureUsedCodeCodingSystem;
-     private String procedureUsedCodeCodingUsrslt;
-     private String procedureUsedCodeCodingVersion;
-     private String procedureUsedCodeText;
-     private String procedureUsedReference;
+     private String prcdrAsserter;
+     private String prcdrBasedOn;
+     private String prcdrBodySiteCdgCd;
+     private String prcdrBodySiteCdgDsply;
+     private String prcdrBodySiteCdgSys;
+     private String prcdrBodySiteCdgUsrSltd;
+     private String prcdrBodySiteCdgVrsn;
+     private String prcdrBodySiteTxt;
+     private String prcdrCtgryCdgCd;
+     private String prcdrCtgryCdgDsply;
+     private String prcdrCtgryCdgSys;
+     private String prcdrCtgryCdgUsrSltd;
+     private String prcdrCtgryCdgVrsn;
+     private String prcdrCtgryTxt;
+     private String prcdrCdCdgCd;
+     private String prcdrCdCdgDsply;
+     private String prcdrCdCdgSys;
+     private String prcdrCdCdgUsrSltd;
+     private String prcdrCdCdgVrsn;
+     private String prcdrCdTxt;
+     private String prcdrComplicationCdgCd;
+     private String prcdrComplicationCdgDsply;
+     private String prcdrComplicationCdgSys;
+     private String prcdrComplicationCdgUsrSltd;
+     private String prcdrComplicationCdgVrsn;
+     private String prcdrComplicationTxt;
+     private String prcdrComplicationDtl;
+     private String prcdrEnc;
+     private String prcdrFocalDvcActnCdgCd;
+     private String prcdrFocalDvcActnCdgDsply;
+     private String prcdrFocalDvcActnCdgSys;
+     private String prcdrFocalDvcActnCdgUsrSltd;
+     private String prcdrFocalDvcActnCdgVrsn;
+     private String prcdrFocalDvcActnTxt;
+     private String prcdrFocalDvcManipulated;
+     private String prcdrFollowUpCdgCd;
+     private String prcdrFollowUpCdgDsply;
+     private String prcdrFollowUpCdgSys;
+     private String prcdrFollowUpCdgUsrSltd;
+     private String prcdrFollowUpCdgVrsn;
+     private String prcdrFollowUpTxt;
+     private String prcdrIdAssigner;
+     private String prcdrIdPrdEnd;
+     private String prcdrIdPrdStrt;
+     private String prcdrIdSys;
+     private String prcdrIdTypCdgCd;
+     private String prcdrIdTypCdgDsply;
+     private String prcdrIdTypCdgSys;
+     private String prcdrIdTypCdgUsrSltd;
+     private String prcdrIdTypCdgVrsn;
+     private String prcdrIdTypTxt;
+     private String prcdrIdUse;
+     private String prcdrIdVl;
+     private String prcdrInstantiatesCanonical;
+     private String prcdrInstantiatesUri;
+     private String prcdrLctn;
+     private String prcdrNtAthrRfrnc;
+     private String prcdrNtAthrStrgTyp;
+     private String prcdrNtTxt;
+     private String prcdrNtTime;
+     private String prcdrOutcomeCdgCd;
+     private String prcdrOutcomeCdgDsply;
+     private String prcdrOutcomeCdgSys;
+     private String prcdrOutcomeCdgUsrSltd;
+     private String prcdrOutcomeCdgVrsn;
+     private String prcdrOutcomeTxt;
+     private String prcdrPartOf;
+     private String prcdrPerformedDtTimeTyp;
+     private String prcdrPerformedPrdEnd;
+     private String prcdrPerformedPrdStrt;
+     private String prcdrPerformedRngHiCd;
+     private String prcdrPerformedRngHiCmprtr;
+     private String prcdrPerformedRngHiSys;
+     private String prcdrPerformedRngHiUnt;
+     private String prcdrPerformedRngHiVl;
+     private String prcdrPerformedRngLwCd;
+     private String prcdrPerformedRngLwCmprtr;
+     private String prcdrPerformedRngLwSys;
+     private String prcdrPerformedRngLwUnt;
+     private String prcdrPerformedRngLwVl;
+     private String prcdrPerformedStrgTyp;
+     private String prcdrPrfrmrActor;
+     private String prcdrPrfrmrFunctionCdgCd;
+     private String prcdrPrfrmrFunctionCdgDsply;
+     private String prcdrPrfrmrFunctionCdgSys;
+     private String prcdrPrfrmrFunctionCdgUsrSltd;
+     private String prcdrPrfrmrFunctionCdgVrsn;
+     private String prcdrPrfrmrFunctionTxt;
+     private String prcdrPrfrmrOnBehalfOf;
+     private String prcdrRsnCdCdgCd;
+     private String prcdrRsnCdCdgDsply;
+     private String prcdrRsnCdCdgSys;
+     private String prcdrRsnCdCdgUsrSltd;
+     private String prcdrRsnCdCdgVrsn;
+     private String prcdrRsnCdTxt;
+     private String prcdrRsnRfrnc;
+     private String prcdrRecorder;
+     private String prcdrRpt;
+     private String prcdrSts;
+     private String prcdrStsRsnCdgCd;
+     private String prcdrStsRsnCdgDsply;
+     private String prcdrStsRsnCdgSys;
+     private String prcdrStsRsnCdgUsrSltd;
+     private String prcdrStsRsnCdgVrsn;
+     private String prcdrStsRsnTxt;
+     private String prcdrSbjct;
+     private String prcdrUsedCdCdgCd;
+     private String prcdrUsedCdCdgDsply;
+     private String prcdrUsedCdCdgSys;
+     private String prcdrUsedCdCdgUsrSltd;
+     private String prcdrUsedCdCdgVrsn;
+     private String prcdrUsedCdTxt;
+     private String prcdrUsedRfrnc;
 
     public Procedure() {
     }
 
-    public Procedure(String procedureAsserter, String procedureBasedOn, String procedureBodySiteCodingCode, String procedureBodySiteCodingDisplay, String procedureBodySiteCodingSystem, String procedureBodySiteCodingUsrslt, String procedureBodySiteCodingVersion, String procedureBodySiteText, String procedureCategoryCodingCode, String procedureCategoryCodingDisplay, String procedureCategoryCodingSystem, String procedureCategoryCodingUsrslt, String procedureCategoryCodingVersion, String procedureCategoryText, String procedureCodeCodingCode, String procedureCodeCodingDisplay, String procedureCodeCodingSystem, String procedureCodeCodingUsrslt, String procedureCodeCodingVersion, String procedureCodeText, String procedureComplicationCodingCode, String procedureComplicationCodingDisplay, String procedureComplicationCodingSystem, String procedureComplicationCodingUsrslt, String procedureComplicationCodingVersion, String procedureComplicationText, String procedureComplicationDetail, String procedureEnc, String procedureFocalDeviceActionCodingCode, String procedureFocalDeviceActionCodingDisplay, String procedureFocalDeviceActionCodingSystem, String procedureFocalDeviceActionCodingUsrslt, String procedureFocalDeviceActionCodingVersion, String procedureFocalDeviceActionText, String procedureFocalDeviceManipulated, String procedureFollowUpCodingCode, String procedureFollowUpCodingDisplay, String procedureFollowUpCodingSystem, String procedureFollowUpCodingUsrslt, String procedureFollowUpCodingVersion, String procedureFollowUpText, String procedureIdAssigner, String procedureIdPeriodEnd, String procedureIdPeriodStart, String procedureIdSystem, String procedureIdTypeCodingCode, String procedureIdTypeCodingDisplay, String procedureIdTypeCodingSystem, String procedureIdTypeCodingUsrslt, String procedureIdTypeCodingVersion, String procedureIdTypeText, String procedureIdUseCode, String procedureIdValue, String procedureInstantiatesCanonical, String procedureInstantiatesUri, String procedureLocation, String procedureNoteAuthorReference, String procedureNoteAuthorString, String procedureNoteText, String procedureNoteTime, String procedureOutcomeCodingCode, String procedureOutcomeCodingDisplay, String procedureOutcomeCodingSystem, String procedureOutcomeCodingUsrslt, String procedureOutcomeCodingVersion, String procedureOutcomeText, String procedurePartOf, String procedurePerformed, String procedurePerformedDateTime, String procedurePerformedPeriodEnd, String procedurePerformedPeriodStart, String procedurePerformedRangeHighCode, String procedurePerformedRangeHighCompartrCode, String procedurePerformedRangeHighSystem, String procedurePerformedRangeHighUnit, String procedurePerformedRangeHighValue, String procedurePerformedRangeLowCode, String procedurePerformedRangeLowCompartrCode, String procedurePerformedRangeLowSystem, String procedurePerformedRangeLowUnit, String procedurePerformedRangeLowValue, String procedurePerformedString, String procedurePerformerActor, String procedurePerformerFunctionCodingCode, String procedurePerformerFunctionCodingDisplay, String procedurePerformerFunctionCodingSystem, String procedurePerformerFunctionCodingUsrslt, String procedurePerformerFunctionCodingVersion, String procedurePerformerFunctionText, String procedurePerformerOnBehalfOf, String procedureReasonCodeCodingCode, String procedureReasonCodeCodingDisplay, String procedureReasonCodeCodingSystem, String procedureReasonCodeCodingUsrslt, String procedureReasonCodeCodingVersion, String procedureReasonCodeText, String procedureReasonReference, String procedureRecorder, String procedureReport, String procedureStatusCode, String procedureStatusReasonCodingCode, String procedureStatusReasonCodingDisplay, String procedureStatusReasonCodingSystem, String procedureStatusReasonCodingUsrslt, String procedureStatusReasonCodingVersion, String procedureStatusReasonText, String procedureSubject, String procedureUsedCodeCodingCode, String procedureUsedCodeCodingDisplay, String procedureUsedCodeCodingSystem, String procedureUsedCodeCodingUsrslt, String procedureUsedCodeCodingVersion, String procedureUsedCodeText, String procedureUsedReference) {
-       this.procedureAsserter = procedureAsserter;
-       this.procedureBasedOn = procedureBasedOn;
-       this.procedureBodySiteCodingCode = procedureBodySiteCodingCode;
-       this.procedureBodySiteCodingDisplay = procedureBodySiteCodingDisplay;
-       this.procedureBodySiteCodingSystem = procedureBodySiteCodingSystem;
-       this.procedureBodySiteCodingUsrslt = procedureBodySiteCodingUsrslt;
-       this.procedureBodySiteCodingVersion = procedureBodySiteCodingVersion;
-       this.procedureBodySiteText = procedureBodySiteText;
-       this.procedureCategoryCodingCode = procedureCategoryCodingCode;
-       this.procedureCategoryCodingDisplay = procedureCategoryCodingDisplay;
-       this.procedureCategoryCodingSystem = procedureCategoryCodingSystem;
-       this.procedureCategoryCodingUsrslt = procedureCategoryCodingUsrslt;
-       this.procedureCategoryCodingVersion = procedureCategoryCodingVersion;
-       this.procedureCategoryText = procedureCategoryText;
-       this.procedureCodeCodingCode = procedureCodeCodingCode;
-       this.procedureCodeCodingDisplay = procedureCodeCodingDisplay;
-       this.procedureCodeCodingSystem = procedureCodeCodingSystem;
-       this.procedureCodeCodingUsrslt = procedureCodeCodingUsrslt;
-       this.procedureCodeCodingVersion = procedureCodeCodingVersion;
-       this.procedureCodeText = procedureCodeText;
-       this.procedureComplicationCodingCode = procedureComplicationCodingCode;
-       this.procedureComplicationCodingDisplay = procedureComplicationCodingDisplay;
-       this.procedureComplicationCodingSystem = procedureComplicationCodingSystem;
-       this.procedureComplicationCodingUsrslt = procedureComplicationCodingUsrslt;
-       this.procedureComplicationCodingVersion = procedureComplicationCodingVersion;
-       this.procedureComplicationText = procedureComplicationText;
-       this.procedureComplicationDetail = procedureComplicationDetail;
-       this.procedureEnc = procedureEnc;
-       this.procedureFocalDeviceActionCodingCode = procedureFocalDeviceActionCodingCode;
-       this.procedureFocalDeviceActionCodingDisplay = procedureFocalDeviceActionCodingDisplay;
-       this.procedureFocalDeviceActionCodingSystem = procedureFocalDeviceActionCodingSystem;
-       this.procedureFocalDeviceActionCodingUsrslt = procedureFocalDeviceActionCodingUsrslt;
-       this.procedureFocalDeviceActionCodingVersion = procedureFocalDeviceActionCodingVersion;
-       this.procedureFocalDeviceActionText = procedureFocalDeviceActionText;
-       this.procedureFocalDeviceManipulated = procedureFocalDeviceManipulated;
-       this.procedureFollowUpCodingCode = procedureFollowUpCodingCode;
-       this.procedureFollowUpCodingDisplay = procedureFollowUpCodingDisplay;
-       this.procedureFollowUpCodingSystem = procedureFollowUpCodingSystem;
-       this.procedureFollowUpCodingUsrslt = procedureFollowUpCodingUsrslt;
-       this.procedureFollowUpCodingVersion = procedureFollowUpCodingVersion;
-       this.procedureFollowUpText = procedureFollowUpText;
-       this.procedureIdAssigner = procedureIdAssigner;
-       this.procedureIdPeriodEnd = procedureIdPeriodEnd;
-       this.procedureIdPeriodStart = procedureIdPeriodStart;
-       this.procedureIdSystem = procedureIdSystem;
-       this.procedureIdTypeCodingCode = procedureIdTypeCodingCode;
-       this.procedureIdTypeCodingDisplay = procedureIdTypeCodingDisplay;
-       this.procedureIdTypeCodingSystem = procedureIdTypeCodingSystem;
-       this.procedureIdTypeCodingUsrslt = procedureIdTypeCodingUsrslt;
-       this.procedureIdTypeCodingVersion = procedureIdTypeCodingVersion;
-       this.procedureIdTypeText = procedureIdTypeText;
-       this.procedureIdUseCode = procedureIdUseCode;
-       this.procedureIdValue = procedureIdValue;
-       this.procedureInstantiatesCanonical = procedureInstantiatesCanonical;
-       this.procedureInstantiatesUri = procedureInstantiatesUri;
-       this.procedureLocation = procedureLocation;
-       this.procedureNoteAuthorReference = procedureNoteAuthorReference;
-       this.procedureNoteAuthorString = procedureNoteAuthorString;
-       this.procedureNoteText = procedureNoteText;
-       this.procedureNoteTime = procedureNoteTime;
-       this.procedureOutcomeCodingCode = procedureOutcomeCodingCode;
-       this.procedureOutcomeCodingDisplay = procedureOutcomeCodingDisplay;
-       this.procedureOutcomeCodingSystem = procedureOutcomeCodingSystem;
-       this.procedureOutcomeCodingUsrslt = procedureOutcomeCodingUsrslt;
-       this.procedureOutcomeCodingVersion = procedureOutcomeCodingVersion;
-       this.procedureOutcomeText = procedureOutcomeText;
-       this.procedurePartOf = procedurePartOf;
-       this.procedurePerformed = procedurePerformed;
-       this.procedurePerformedDateTime = procedurePerformedDateTime;
-       this.procedurePerformedPeriodEnd = procedurePerformedPeriodEnd;
-       this.procedurePerformedPeriodStart = procedurePerformedPeriodStart;
-       this.procedurePerformedRangeHighCode = procedurePerformedRangeHighCode;
-       this.procedurePerformedRangeHighCompartrCode = procedurePerformedRangeHighCompartrCode;
-       this.procedurePerformedRangeHighSystem = procedurePerformedRangeHighSystem;
-       this.procedurePerformedRangeHighUnit = procedurePerformedRangeHighUnit;
-       this.procedurePerformedRangeHighValue = procedurePerformedRangeHighValue;
-       this.procedurePerformedRangeLowCode = procedurePerformedRangeLowCode;
-       this.procedurePerformedRangeLowCompartrCode = procedurePerformedRangeLowCompartrCode;
-       this.procedurePerformedRangeLowSystem = procedurePerformedRangeLowSystem;
-       this.procedurePerformedRangeLowUnit = procedurePerformedRangeLowUnit;
-       this.procedurePerformedRangeLowValue = procedurePerformedRangeLowValue;
-       this.procedurePerformedString = procedurePerformedString;
-       this.procedurePerformerActor = procedurePerformerActor;
-       this.procedurePerformerFunctionCodingCode = procedurePerformerFunctionCodingCode;
-       this.procedurePerformerFunctionCodingDisplay = procedurePerformerFunctionCodingDisplay;
-       this.procedurePerformerFunctionCodingSystem = procedurePerformerFunctionCodingSystem;
-       this.procedurePerformerFunctionCodingUsrslt = procedurePerformerFunctionCodingUsrslt;
-       this.procedurePerformerFunctionCodingVersion = procedurePerformerFunctionCodingVersion;
-       this.procedurePerformerFunctionText = procedurePerformerFunctionText;
-       this.procedurePerformerOnBehalfOf = procedurePerformerOnBehalfOf;
-       this.procedureReasonCodeCodingCode = procedureReasonCodeCodingCode;
-       this.procedureReasonCodeCodingDisplay = procedureReasonCodeCodingDisplay;
-       this.procedureReasonCodeCodingSystem = procedureReasonCodeCodingSystem;
-       this.procedureReasonCodeCodingUsrslt = procedureReasonCodeCodingUsrslt;
-       this.procedureReasonCodeCodingVersion = procedureReasonCodeCodingVersion;
-       this.procedureReasonCodeText = procedureReasonCodeText;
-       this.procedureReasonReference = procedureReasonReference;
-       this.procedureRecorder = procedureRecorder;
-       this.procedureReport = procedureReport;
-       this.procedureStatusCode = procedureStatusCode;
-       this.procedureStatusReasonCodingCode = procedureStatusReasonCodingCode;
-       this.procedureStatusReasonCodingDisplay = procedureStatusReasonCodingDisplay;
-       this.procedureStatusReasonCodingSystem = procedureStatusReasonCodingSystem;
-       this.procedureStatusReasonCodingUsrslt = procedureStatusReasonCodingUsrslt;
-       this.procedureStatusReasonCodingVersion = procedureStatusReasonCodingVersion;
-       this.procedureStatusReasonText = procedureStatusReasonText;
-       this.procedureSubject = procedureSubject;
-       this.procedureUsedCodeCodingCode = procedureUsedCodeCodingCode;
-       this.procedureUsedCodeCodingDisplay = procedureUsedCodeCodingDisplay;
-       this.procedureUsedCodeCodingSystem = procedureUsedCodeCodingSystem;
-       this.procedureUsedCodeCodingUsrslt = procedureUsedCodeCodingUsrslt;
-       this.procedureUsedCodeCodingVersion = procedureUsedCodeCodingVersion;
-       this.procedureUsedCodeText = procedureUsedCodeText;
-       this.procedureUsedReference = procedureUsedReference;
-    }
    
-    public 
-    String 
-    getId()
-    {
+    public String getId() {
         return this.id;
     }
     
-    public void setId
-        (String id) 
-        {
-      this.id = id;
-}
-    public 
-    String 
-    getProcedureAsserter()
-    {
-        return this.procedureAsserter;
-    }
-    
-    public void setProcedureAsserter
-        (String procedureAsserter) 
-        {
-      this.procedureAsserter = procedureAsserter;
-}
-    public 
-    String 
-    getProcedureBasedOn()
-    {
-        return this.procedureBasedOn;
-    }
-    
-    public void setProcedureBasedOn
-        (String procedureBasedOn) 
-        {
-      this.procedureBasedOn = procedureBasedOn;
-}
-    public 
-    String 
-    getProcedureBodySiteCodingCode()
-    {
-        return this.procedureBodySiteCodingCode;
-    }
-    
-    public void setProcedureBodySiteCodingCode
-        (String procedureBodySiteCodingCode) 
-        {
-      this.procedureBodySiteCodingCode = procedureBodySiteCodingCode;
-}
-    public 
-    String 
-    getProcedureBodySiteCodingDisplay()
-    {
-        return this.procedureBodySiteCodingDisplay;
-    }
-    
-    public void setProcedureBodySiteCodingDisplay
-        (String procedureBodySiteCodingDisplay) 
-        {
-      this.procedureBodySiteCodingDisplay = procedureBodySiteCodingDisplay;
-}
-    public 
-    String 
-    getProcedureBodySiteCodingSystem()
-    {
-        return this.procedureBodySiteCodingSystem;
-    }
-    
-    public void setProcedureBodySiteCodingSystem
-        (String procedureBodySiteCodingSystem) 
-        {
-      this.procedureBodySiteCodingSystem = procedureBodySiteCodingSystem;
-}
-    public 
-    String 
-    getProcedureBodySiteCodingUsrslt()
-    {
-        return this.procedureBodySiteCodingUsrslt;
-    }
-    
-    public void setProcedureBodySiteCodingUsrslt
-        (String procedureBodySiteCodingUsrslt) 
-        {
-      this.procedureBodySiteCodingUsrslt = procedureBodySiteCodingUsrslt;
-}
-    public 
-    String 
-    getProcedureBodySiteCodingVersion()
-    {
-        return this.procedureBodySiteCodingVersion;
-    }
-    
-    public void setProcedureBodySiteCodingVersion
-        (String procedureBodySiteCodingVersion) 
-        {
-      this.procedureBodySiteCodingVersion = procedureBodySiteCodingVersion;
-}
-    public 
-    String 
-    getProcedureBodySiteText()
-    {
-        return this.procedureBodySiteText;
-    }
-    
-    public void setProcedureBodySiteText
-        (String procedureBodySiteText) 
-        {
-      this.procedureBodySiteText = procedureBodySiteText;
-}
-    public 
-    String 
-    getProcedureCategoryCodingCode()
-    {
-        return this.procedureCategoryCodingCode;
-    }
-    
-    public void setProcedureCategoryCodingCode
-        (String procedureCategoryCodingCode) 
-        {
-      this.procedureCategoryCodingCode = procedureCategoryCodingCode;
-}
-    public 
-    String 
-    getProcedureCategoryCodingDisplay()
-    {
-        return this.procedureCategoryCodingDisplay;
-    }
-    
-    public void setProcedureCategoryCodingDisplay
-        (String procedureCategoryCodingDisplay) 
-        {
-      this.procedureCategoryCodingDisplay = procedureCategoryCodingDisplay;
-}
-    public 
-    String 
-    getProcedureCategoryCodingSystem()
-    {
-        return this.procedureCategoryCodingSystem;
-    }
-    
-    public void setProcedureCategoryCodingSystem
-        (String procedureCategoryCodingSystem) 
-        {
-      this.procedureCategoryCodingSystem = procedureCategoryCodingSystem;
-}
-    public 
-    String 
-    getProcedureCategoryCodingUsrslt()
-    {
-        return this.procedureCategoryCodingUsrslt;
-    }
-    
-    public void setProcedureCategoryCodingUsrslt
-        (String procedureCategoryCodingUsrslt) 
-        {
-      this.procedureCategoryCodingUsrslt = procedureCategoryCodingUsrslt;
-}
-    public 
-    String 
-    getProcedureCategoryCodingVersion()
-    {
-        return this.procedureCategoryCodingVersion;
-    }
-    
-    public void setProcedureCategoryCodingVersion
-        (String procedureCategoryCodingVersion) 
-        {
-      this.procedureCategoryCodingVersion = procedureCategoryCodingVersion;
-}
-    public 
-    String 
-    getProcedureCategoryText()
-    {
-        return this.procedureCategoryText;
-    }
-    
-    public void setProcedureCategoryText
-        (String procedureCategoryText) 
-        {
-      this.procedureCategoryText = procedureCategoryText;
-}
-    public 
-    String 
-    getProcedureCodeCodingCode()
-    {
-        return this.procedureCodeCodingCode;
-    }
-    
-    public void setProcedureCodeCodingCode
-        (String procedureCodeCodingCode) 
-        {
-      this.procedureCodeCodingCode = procedureCodeCodingCode;
-}
-    public 
-    String 
-    getProcedureCodeCodingDisplay()
-    {
-        return this.procedureCodeCodingDisplay;
-    }
-    
-    public void setProcedureCodeCodingDisplay
-        (String procedureCodeCodingDisplay) 
-        {
-      this.procedureCodeCodingDisplay = procedureCodeCodingDisplay;
-}
-    public 
-    String 
-    getProcedureCodeCodingSystem()
-    {
-        return this.procedureCodeCodingSystem;
-    }
-    
-    public void setProcedureCodeCodingSystem
-        (String procedureCodeCodingSystem) 
-        {
-      this.procedureCodeCodingSystem = procedureCodeCodingSystem;
-}
-    public 
-    String 
-    getProcedureCodeCodingUsrslt()
-    {
-        return this.procedureCodeCodingUsrslt;
-    }
-    
-    public void setProcedureCodeCodingUsrslt
-        (String procedureCodeCodingUsrslt) 
-        {
-      this.procedureCodeCodingUsrslt = procedureCodeCodingUsrslt;
-}
-    public 
-    String 
-    getProcedureCodeCodingVersion()
-    {
-        return this.procedureCodeCodingVersion;
-    }
-    
-    public void setProcedureCodeCodingVersion
-        (String procedureCodeCodingVersion) 
-        {
-      this.procedureCodeCodingVersion = procedureCodeCodingVersion;
-}
-    public 
-    String 
-    getProcedureCodeText()
-    {
-        return this.procedureCodeText;
-    }
-    
-    public void setProcedureCodeText
-        (String procedureCodeText) 
-        {
-      this.procedureCodeText = procedureCodeText;
-}
-    public 
-    String 
-    getProcedureComplicationCodingCode()
-    {
-        return this.procedureComplicationCodingCode;
-    }
-    
-    public void setProcedureComplicationCodingCode
-        (String procedureComplicationCodingCode) 
-        {
-      this.procedureComplicationCodingCode = procedureComplicationCodingCode;
-}
-    public 
-    String 
-    getProcedureComplicationCodingDisplay()
-    {
-        return this.procedureComplicationCodingDisplay;
-    }
-    
-    public void setProcedureComplicationCodingDisplay
-        (String procedureComplicationCodingDisplay) 
-        {
-      this.procedureComplicationCodingDisplay = procedureComplicationCodingDisplay;
-}
-    public 
-    String 
-    getProcedureComplicationCodingSystem()
-    {
-        return this.procedureComplicationCodingSystem;
-    }
-    
-    public void setProcedureComplicationCodingSystem
-        (String procedureComplicationCodingSystem) 
-        {
-      this.procedureComplicationCodingSystem = procedureComplicationCodingSystem;
-}
-    public 
-    String 
-    getProcedureComplicationCodingUsrslt()
-    {
-        return this.procedureComplicationCodingUsrslt;
-    }
-    
-    public void setProcedureComplicationCodingUsrslt
-        (String procedureComplicationCodingUsrslt) 
-        {
-      this.procedureComplicationCodingUsrslt = procedureComplicationCodingUsrslt;
-}
-    public 
-    String 
-    getProcedureComplicationCodingVersion()
-    {
-        return this.procedureComplicationCodingVersion;
-    }
-    
-    public void setProcedureComplicationCodingVersion
-        (String procedureComplicationCodingVersion) 
-        {
-      this.procedureComplicationCodingVersion = procedureComplicationCodingVersion;
-}
-    public 
-    String 
-    getProcedureComplicationText()
-    {
-        return this.procedureComplicationText;
-    }
-    
-    public void setProcedureComplicationText
-        (String procedureComplicationText) 
-        {
-      this.procedureComplicationText = procedureComplicationText;
-}
-    public 
-    String 
-    getProcedureComplicationDetail()
-    {
-        return this.procedureComplicationDetail;
-    }
-    
-    public void setProcedureComplicationDetail
-        (String procedureComplicationDetail) 
-        {
-      this.procedureComplicationDetail = procedureComplicationDetail;
-}
-    public 
-    String 
-    getProcedureEnc()
-    {
-        return this.procedureEnc;
-    }
-    
-    public void setProcedureEnc
-        (String procedureEnc) 
-        {
-      this.procedureEnc = procedureEnc;
-}
-    public 
-    String 
-    getProcedureFocalDeviceActionCodingCode()
-    {
-        return this.procedureFocalDeviceActionCodingCode;
-    }
-    
-    public void setProcedureFocalDeviceActionCodingCode
-        (String procedureFocalDeviceActionCodingCode) 
-        {
-      this.procedureFocalDeviceActionCodingCode = procedureFocalDeviceActionCodingCode;
-}
-    public 
-    String 
-    getProcedureFocalDeviceActionCodingDisplay()
-    {
-        return this.procedureFocalDeviceActionCodingDisplay;
-    }
-    
-    public void setProcedureFocalDeviceActionCodingDisplay
-        (String procedureFocalDeviceActionCodingDisplay) 
-        {
-      this.procedureFocalDeviceActionCodingDisplay = procedureFocalDeviceActionCodingDisplay;
-}
-    public 
-    String 
-    getProcedureFocalDeviceActionCodingSystem()
-    {
-        return this.procedureFocalDeviceActionCodingSystem;
-    }
-    
-    public void setProcedureFocalDeviceActionCodingSystem
-        (String procedureFocalDeviceActionCodingSystem) 
-        {
-      this.procedureFocalDeviceActionCodingSystem = procedureFocalDeviceActionCodingSystem;
-}
-    public 
-    String 
-    getProcedureFocalDeviceActionCodingUsrslt()
-    {
-        return this.procedureFocalDeviceActionCodingUsrslt;
-    }
-    
-    public void setProcedureFocalDeviceActionCodingUsrslt
-        (String procedureFocalDeviceActionCodingUsrslt) 
-        {
-      this.procedureFocalDeviceActionCodingUsrslt = procedureFocalDeviceActionCodingUsrslt;
-}
-    public 
-    String 
-    getProcedureFocalDeviceActionCodingVersion()
-    {
-        return this.procedureFocalDeviceActionCodingVersion;
-    }
-    
-    public void setProcedureFocalDeviceActionCodingVersion
-        (String procedureFocalDeviceActionCodingVersion) 
-        {
-      this.procedureFocalDeviceActionCodingVersion = procedureFocalDeviceActionCodingVersion;
-}
-    public 
-    String 
-    getProcedureFocalDeviceActionText()
-    {
-        return this.procedureFocalDeviceActionText;
-    }
-    
-    public void setProcedureFocalDeviceActionText
-        (String procedureFocalDeviceActionText) 
-        {
-      this.procedureFocalDeviceActionText = procedureFocalDeviceActionText;
-}
-    public 
-    String 
-    getProcedureFocalDeviceManipulated()
-    {
-        return this.procedureFocalDeviceManipulated;
-    }
-    
-    public void setProcedureFocalDeviceManipulated
-        (String procedureFocalDeviceManipulated) 
-        {
-      this.procedureFocalDeviceManipulated = procedureFocalDeviceManipulated;
-}
-    public 
-    String 
-    getProcedureFollowUpCodingCode()
-    {
-        return this.procedureFollowUpCodingCode;
-    }
-    
-    public void setProcedureFollowUpCodingCode
-        (String procedureFollowUpCodingCode) 
-        {
-      this.procedureFollowUpCodingCode = procedureFollowUpCodingCode;
-}
-    public 
-    String 
-    getProcedureFollowUpCodingDisplay()
-    {
-        return this.procedureFollowUpCodingDisplay;
-    }
-    
-    public void setProcedureFollowUpCodingDisplay
-        (String procedureFollowUpCodingDisplay) 
-        {
-      this.procedureFollowUpCodingDisplay = procedureFollowUpCodingDisplay;
-}
-    public 
-    String 
-    getProcedureFollowUpCodingSystem()
-    {
-        return this.procedureFollowUpCodingSystem;
-    }
-    
-    public void setProcedureFollowUpCodingSystem
-        (String procedureFollowUpCodingSystem) 
-        {
-      this.procedureFollowUpCodingSystem = procedureFollowUpCodingSystem;
-}
-    public 
-    String 
-    getProcedureFollowUpCodingUsrslt()
-    {
-        return this.procedureFollowUpCodingUsrslt;
-    }
-    
-    public void setProcedureFollowUpCodingUsrslt
-        (String procedureFollowUpCodingUsrslt) 
-        {
-      this.procedureFollowUpCodingUsrslt = procedureFollowUpCodingUsrslt;
-}
-    public 
-    String 
-    getProcedureFollowUpCodingVersion()
-    {
-        return this.procedureFollowUpCodingVersion;
-    }
-    
-    public void setProcedureFollowUpCodingVersion
-        (String procedureFollowUpCodingVersion) 
-        {
-      this.procedureFollowUpCodingVersion = procedureFollowUpCodingVersion;
-}
-    public 
-    String 
-    getProcedureFollowUpText()
-    {
-        return this.procedureFollowUpText;
-    }
-    
-    public void setProcedureFollowUpText
-        (String procedureFollowUpText) 
-        {
-      this.procedureFollowUpText = procedureFollowUpText;
-}
-    public 
-    String 
-    getProcedureIdAssigner()
-    {
-        return this.procedureIdAssigner;
-    }
-    
-    public void setProcedureIdAssigner
-        (String procedureIdAssigner) 
-        {
-      this.procedureIdAssigner = procedureIdAssigner;
-}
-    public 
-    String 
-    getProcedureIdPeriodEnd()
-    {
-        return this.procedureIdPeriodEnd;
-    }
-    
-    public void setProcedureIdPeriodEnd
-        (String procedureIdPeriodEnd) 
-        {
-      this.procedureIdPeriodEnd = procedureIdPeriodEnd;
-}
-    public 
-    String 
-    getProcedureIdPeriodStart()
-    {
-        return this.procedureIdPeriodStart;
-    }
-    
-    public void setProcedureIdPeriodStart
-        (String procedureIdPeriodStart) 
-        {
-      this.procedureIdPeriodStart = procedureIdPeriodStart;
-}
-    public 
-    String 
-    getProcedureIdSystem()
-    {
-        return this.procedureIdSystem;
-    }
-    
-    public void setProcedureIdSystem
-        (String procedureIdSystem) 
-        {
-      this.procedureIdSystem = procedureIdSystem;
-}
-    public 
-    String 
-    getProcedureIdTypeCodingCode()
-    {
-        return this.procedureIdTypeCodingCode;
-    }
-    
-    public void setProcedureIdTypeCodingCode
-        (String procedureIdTypeCodingCode) 
-        {
-      this.procedureIdTypeCodingCode = procedureIdTypeCodingCode;
-}
-    public 
-    String 
-    getProcedureIdTypeCodingDisplay()
-    {
-        return this.procedureIdTypeCodingDisplay;
-    }
-    
-    public void setProcedureIdTypeCodingDisplay
-        (String procedureIdTypeCodingDisplay) 
-        {
-      this.procedureIdTypeCodingDisplay = procedureIdTypeCodingDisplay;
-}
-    public 
-    String 
-    getProcedureIdTypeCodingSystem()
-    {
-        return this.procedureIdTypeCodingSystem;
-    }
-    
-    public void setProcedureIdTypeCodingSystem
-        (String procedureIdTypeCodingSystem) 
-        {
-      this.procedureIdTypeCodingSystem = procedureIdTypeCodingSystem;
-}
-    public 
-    String 
-    getProcedureIdTypeCodingUsrslt()
-    {
-        return this.procedureIdTypeCodingUsrslt;
-    }
-    
-    public void setProcedureIdTypeCodingUsrslt
-        (String procedureIdTypeCodingUsrslt) 
-        {
-      this.procedureIdTypeCodingUsrslt = procedureIdTypeCodingUsrslt;
-}
-    public 
-    String 
-    getProcedureIdTypeCodingVersion()
-    {
-        return this.procedureIdTypeCodingVersion;
-    }
-    
-    public void setProcedureIdTypeCodingVersion
-        (String procedureIdTypeCodingVersion) 
-        {
-      this.procedureIdTypeCodingVersion = procedureIdTypeCodingVersion;
-}
-    public 
-    String 
-    getProcedureIdTypeText()
-    {
-        return this.procedureIdTypeText;
-    }
-    
-    public void setProcedureIdTypeText
-        (String procedureIdTypeText) 
-        {
-      this.procedureIdTypeText = procedureIdTypeText;
-}
-    public 
-    String 
-    getProcedureIdUseCode()
-    {
-        return this.procedureIdUseCode;
-    }
-    
-    public void setProcedureIdUseCode
-        (String procedureIdUseCode) 
-        {
-      this.procedureIdUseCode = procedureIdUseCode;
-}
-    public 
-    String 
-    getProcedureIdValue()
-    {
-        return this.procedureIdValue;
-    }
-    
-    public void setProcedureIdValue
-        (String procedureIdValue) 
-        {
-      this.procedureIdValue = procedureIdValue;
-}
-    public 
-    String 
-    getProcedureInstantiatesCanonical()
-    {
-        return this.procedureInstantiatesCanonical;
-    }
-    
-    public void setProcedureInstantiatesCanonical
-        (String procedureInstantiatesCanonical) 
-        {
-      this.procedureInstantiatesCanonical = procedureInstantiatesCanonical;
-}
-    public 
-    String 
-    getProcedureInstantiatesUri()
-    {
-        return this.procedureInstantiatesUri;
-    }
-    
-    public void setProcedureInstantiatesUri
-        (String procedureInstantiatesUri) 
-        {
-      this.procedureInstantiatesUri = procedureInstantiatesUri;
-}
-    public 
-    String 
-    getProcedureLocation()
-    {
-        return this.procedureLocation;
-    }
-    
-    public void setProcedureLocation
-        (String procedureLocation) 
-        {
-      this.procedureLocation = procedureLocation;
-}
-    public 
-    String 
-    getProcedureNoteAuthorReference()
-    {
-        return this.procedureNoteAuthorReference;
-    }
-    
-    public void setProcedureNoteAuthorReference
-        (String procedureNoteAuthorReference) 
-        {
-      this.procedureNoteAuthorReference = procedureNoteAuthorReference;
-}
-    public 
-    String 
-    getProcedureNoteAuthorString()
-    {
-        return this.procedureNoteAuthorString;
-    }
-    
-    public void setProcedureNoteAuthorString
-        (String procedureNoteAuthorString) 
-        {
-      this.procedureNoteAuthorString = procedureNoteAuthorString;
-}
-    public 
-    String 
-    getProcedureNoteText()
-    {
-        return this.procedureNoteText;
-    }
-    
-    public void setProcedureNoteText
-        (String procedureNoteText) 
-        {
-      this.procedureNoteText = procedureNoteText;
-}
-    public 
-    String 
-    getProcedureNoteTime()
-    {
-        return this.procedureNoteTime;
-    }
-    
-    public void setProcedureNoteTime
-        (String procedureNoteTime) 
-        {
-      this.procedureNoteTime = procedureNoteTime;
-}
-    public 
-    String 
-    getProcedureOutcomeCodingCode()
-    {
-        return this.procedureOutcomeCodingCode;
-    }
-    
-    public void setProcedureOutcomeCodingCode
-        (String procedureOutcomeCodingCode) 
-        {
-      this.procedureOutcomeCodingCode = procedureOutcomeCodingCode;
-}
-    public 
-    String 
-    getProcedureOutcomeCodingDisplay()
-    {
-        return this.procedureOutcomeCodingDisplay;
-    }
-    
-    public void setProcedureOutcomeCodingDisplay
-        (String procedureOutcomeCodingDisplay) 
-        {
-      this.procedureOutcomeCodingDisplay = procedureOutcomeCodingDisplay;
-}
-    public 
-    String 
-    getProcedureOutcomeCodingSystem()
-    {
-        return this.procedureOutcomeCodingSystem;
-    }
-    
-    public void setProcedureOutcomeCodingSystem
-        (String procedureOutcomeCodingSystem) 
-        {
-      this.procedureOutcomeCodingSystem = procedureOutcomeCodingSystem;
-}
-    public 
-    String 
-    getProcedureOutcomeCodingUsrslt()
-    {
-        return this.procedureOutcomeCodingUsrslt;
-    }
-    
-    public void setProcedureOutcomeCodingUsrslt
-        (String procedureOutcomeCodingUsrslt) 
-        {
-      this.procedureOutcomeCodingUsrslt = procedureOutcomeCodingUsrslt;
-}
-    public 
-    String 
-    getProcedureOutcomeCodingVersion()
-    {
-        return this.procedureOutcomeCodingVersion;
-    }
-    
-    public void setProcedureOutcomeCodingVersion
-        (String procedureOutcomeCodingVersion) 
-        {
-      this.procedureOutcomeCodingVersion = procedureOutcomeCodingVersion;
-}
-    public 
-    String 
-    getProcedureOutcomeText()
-    {
-        return this.procedureOutcomeText;
-    }
-    
-    public void setProcedureOutcomeText
-        (String procedureOutcomeText) 
-        {
-      this.procedureOutcomeText = procedureOutcomeText;
-}
-    public 
-    String 
-    getProcedurePartOf()
-    {
-        return this.procedurePartOf;
-    }
-    
-    public void setProcedurePartOf
-        (String procedurePartOf) 
-        {
-      this.procedurePartOf = procedurePartOf;
-}
-    public 
-    String 
-    getProcedurePerformed()
-    {
-        return this.procedurePerformed;
-    }
-    
-    public void setProcedurePerformed
-        (String procedurePerformed) 
-        {
-      this.procedurePerformed = procedurePerformed;
-}
-    public 
-    String 
-    getProcedurePerformedDateTime()
-    {
-        return this.procedurePerformedDateTime;
-    }
-    
-    public void setProcedurePerformedDateTime
-        (String procedurePerformedDateTime) 
-        {
-      this.procedurePerformedDateTime = procedurePerformedDateTime;
-}
-    public 
-    String 
-    getProcedurePerformedPeriodEnd()
-    {
-        return this.procedurePerformedPeriodEnd;
-    }
-    
-    public void setProcedurePerformedPeriodEnd
-        (String procedurePerformedPeriodEnd) 
-        {
-      this.procedurePerformedPeriodEnd = procedurePerformedPeriodEnd;
-}
-    public 
-    String 
-    getProcedurePerformedPeriodStart()
-    {
-        return this.procedurePerformedPeriodStart;
-    }
-    
-    public void setProcedurePerformedPeriodStart
-        (String procedurePerformedPeriodStart) 
-        {
-      this.procedurePerformedPeriodStart = procedurePerformedPeriodStart;
-}
-    public 
-    String 
-    getProcedurePerformedRangeHighCode()
-    {
-        return this.procedurePerformedRangeHighCode;
-    }
-    
-    public void setProcedurePerformedRangeHighCode
-        (String procedurePerformedRangeHighCode) 
-        {
-      this.procedurePerformedRangeHighCode = procedurePerformedRangeHighCode;
-}
-    public 
-    String 
-    getProcedurePerformedRangeHighCompartrCode()
-    {
-        return this.procedurePerformedRangeHighCompartrCode;
-    }
-    
-    public void setProcedurePerformedRangeHighCompartrCode
-        (String procedurePerformedRangeHighCompartrCode) 
-        {
-      this.procedurePerformedRangeHighCompartrCode = procedurePerformedRangeHighCompartrCode;
-}
-    public 
-    String 
-    getProcedurePerformedRangeHighSystem()
-    {
-        return this.procedurePerformedRangeHighSystem;
-    }
-    
-    public void setProcedurePerformedRangeHighSystem
-        (String procedurePerformedRangeHighSystem) 
-        {
-      this.procedurePerformedRangeHighSystem = procedurePerformedRangeHighSystem;
-}
-    public 
-    String 
-    getProcedurePerformedRangeHighUnit()
-    {
-        return this.procedurePerformedRangeHighUnit;
-    }
-    
-    public void setProcedurePerformedRangeHighUnit
-        (String procedurePerformedRangeHighUnit) 
-        {
-      this.procedurePerformedRangeHighUnit = procedurePerformedRangeHighUnit;
-}
-    public 
-    String 
-    getProcedurePerformedRangeHighValue()
-    {
-        return this.procedurePerformedRangeHighValue;
-    }
-    
-    public void setProcedurePerformedRangeHighValue
-        (String procedurePerformedRangeHighValue) 
-        {
-      this.procedurePerformedRangeHighValue = procedurePerformedRangeHighValue;
-}
-    public 
-    String 
-    getProcedurePerformedRangeLowCode()
-    {
-        return this.procedurePerformedRangeLowCode;
-    }
-    
-    public void setProcedurePerformedRangeLowCode
-        (String procedurePerformedRangeLowCode) 
-        {
-      this.procedurePerformedRangeLowCode = procedurePerformedRangeLowCode;
-}
-    public 
-    String 
-    getProcedurePerformedRangeLowCompartrCode()
-    {
-        return this.procedurePerformedRangeLowCompartrCode;
-    }
-    
-    public void setProcedurePerformedRangeLowCompartrCode
-        (String procedurePerformedRangeLowCompartrCode) 
-        {
-      this.procedurePerformedRangeLowCompartrCode = procedurePerformedRangeLowCompartrCode;
-}
-    public 
-    String 
-    getProcedurePerformedRangeLowSystem()
-    {
-        return this.procedurePerformedRangeLowSystem;
-    }
-    
-    public void setProcedurePerformedRangeLowSystem
-        (String procedurePerformedRangeLowSystem) 
-        {
-      this.procedurePerformedRangeLowSystem = procedurePerformedRangeLowSystem;
-}
-    public 
-    String 
-    getProcedurePerformedRangeLowUnit()
-    {
-        return this.procedurePerformedRangeLowUnit;
-    }
-    
-    public void setProcedurePerformedRangeLowUnit
-        (String procedurePerformedRangeLowUnit) 
-        {
-      this.procedurePerformedRangeLowUnit = procedurePerformedRangeLowUnit;
-}
-    public 
-    String 
-    getProcedurePerformedRangeLowValue()
-    {
-        return this.procedurePerformedRangeLowValue;
-    }
-    
-    public void setProcedurePerformedRangeLowValue
-        (String procedurePerformedRangeLowValue) 
-        {
-      this.procedurePerformedRangeLowValue = procedurePerformedRangeLowValue;
-}
-    public 
-    String 
-    getProcedurePerformedString()
-    {
-        return this.procedurePerformedString;
-    }
-    
-    public void setProcedurePerformedString
-        (String procedurePerformedString) 
-        {
-      this.procedurePerformedString = procedurePerformedString;
-}
-    public 
-    String 
-    getProcedurePerformerActor()
-    {
-        return this.procedurePerformerActor;
-    }
-    
-    public void setProcedurePerformerActor
-        (String procedurePerformerActor) 
-        {
-      this.procedurePerformerActor = procedurePerformerActor;
-}
-    public 
-    String 
-    getProcedurePerformerFunctionCodingCode()
-    {
-        return this.procedurePerformerFunctionCodingCode;
-    }
-    
-    public void setProcedurePerformerFunctionCodingCode
-        (String procedurePerformerFunctionCodingCode) 
-        {
-      this.procedurePerformerFunctionCodingCode = procedurePerformerFunctionCodingCode;
-}
-    public 
-    String 
-    getProcedurePerformerFunctionCodingDisplay()
-    {
-        return this.procedurePerformerFunctionCodingDisplay;
-    }
-    
-    public void setProcedurePerformerFunctionCodingDisplay
-        (String procedurePerformerFunctionCodingDisplay) 
-        {
-      this.procedurePerformerFunctionCodingDisplay = procedurePerformerFunctionCodingDisplay;
-}
-    public 
-    String 
-    getProcedurePerformerFunctionCodingSystem()
-    {
-        return this.procedurePerformerFunctionCodingSystem;
-    }
-    
-    public void setProcedurePerformerFunctionCodingSystem
-        (String procedurePerformerFunctionCodingSystem) 
-        {
-      this.procedurePerformerFunctionCodingSystem = procedurePerformerFunctionCodingSystem;
-}
-    public 
-    String 
-    getProcedurePerformerFunctionCodingUsrslt()
-    {
-        return this.procedurePerformerFunctionCodingUsrslt;
-    }
-    
-    public void setProcedurePerformerFunctionCodingUsrslt
-        (String procedurePerformerFunctionCodingUsrslt) 
-        {
-      this.procedurePerformerFunctionCodingUsrslt = procedurePerformerFunctionCodingUsrslt;
-}
-    public 
-    String 
-    getProcedurePerformerFunctionCodingVersion()
-    {
-        return this.procedurePerformerFunctionCodingVersion;
-    }
-    
-    public void setProcedurePerformerFunctionCodingVersion
-        (String procedurePerformerFunctionCodingVersion) 
-        {
-      this.procedurePerformerFunctionCodingVersion = procedurePerformerFunctionCodingVersion;
-}
-    public 
-    String 
-    getProcedurePerformerFunctionText()
-    {
-        return this.procedurePerformerFunctionText;
-    }
-    
-    public void setProcedurePerformerFunctionText
-        (String procedurePerformerFunctionText) 
-        {
-      this.procedurePerformerFunctionText = procedurePerformerFunctionText;
-}
-    public 
-    String 
-    getProcedurePerformerOnBehalfOf()
-    {
-        return this.procedurePerformerOnBehalfOf;
-    }
-    
-    public void setProcedurePerformerOnBehalfOf
-        (String procedurePerformerOnBehalfOf) 
-        {
-      this.procedurePerformerOnBehalfOf = procedurePerformerOnBehalfOf;
-}
-    public 
-    String 
-    getProcedureReasonCodeCodingCode()
-    {
-        return this.procedureReasonCodeCodingCode;
-    }
-    
-    public void setProcedureReasonCodeCodingCode
-        (String procedureReasonCodeCodingCode) 
-        {
-      this.procedureReasonCodeCodingCode = procedureReasonCodeCodingCode;
-}
-    public 
-    String 
-    getProcedureReasonCodeCodingDisplay()
-    {
-        return this.procedureReasonCodeCodingDisplay;
-    }
-    
-    public void setProcedureReasonCodeCodingDisplay
-        (String procedureReasonCodeCodingDisplay) 
-        {
-      this.procedureReasonCodeCodingDisplay = procedureReasonCodeCodingDisplay;
-}
-    public 
-    String 
-    getProcedureReasonCodeCodingSystem()
-    {
-        return this.procedureReasonCodeCodingSystem;
-    }
-    
-    public void setProcedureReasonCodeCodingSystem
-        (String procedureReasonCodeCodingSystem) 
-        {
-      this.procedureReasonCodeCodingSystem = procedureReasonCodeCodingSystem;
-}
-    public 
-    String 
-    getProcedureReasonCodeCodingUsrslt()
-    {
-        return this.procedureReasonCodeCodingUsrslt;
-    }
-    
-    public void setProcedureReasonCodeCodingUsrslt
-        (String procedureReasonCodeCodingUsrslt) 
-        {
-      this.procedureReasonCodeCodingUsrslt = procedureReasonCodeCodingUsrslt;
-}
-    public 
-    String 
-    getProcedureReasonCodeCodingVersion()
-    {
-        return this.procedureReasonCodeCodingVersion;
-    }
-    
-    public void setProcedureReasonCodeCodingVersion
-        (String procedureReasonCodeCodingVersion) 
-        {
-      this.procedureReasonCodeCodingVersion = procedureReasonCodeCodingVersion;
-}
-    public 
-    String 
-    getProcedureReasonCodeText()
-    {
-        return this.procedureReasonCodeText;
-    }
-    
-    public void setProcedureReasonCodeText
-        (String procedureReasonCodeText) 
-        {
-      this.procedureReasonCodeText = procedureReasonCodeText;
-}
-    public 
-    String 
-    getProcedureReasonReference()
-    {
-        return this.procedureReasonReference;
-    }
-    
-    public void setProcedureReasonReference
-        (String procedureReasonReference) 
-        {
-      this.procedureReasonReference = procedureReasonReference;
-}
-    public 
-    String 
-    getProcedureRecorder()
-    {
-        return this.procedureRecorder;
-    }
-    
-    public void setProcedureRecorder
-        (String procedureRecorder) 
-        {
-      this.procedureRecorder = procedureRecorder;
-}
-    public 
-    String 
-    getProcedureReport()
-    {
-        return this.procedureReport;
-    }
-    
-    public void setProcedureReport
-        (String procedureReport) 
-        {
-      this.procedureReport = procedureReport;
-}
-    public 
-    String 
-    getProcedureStatusCode()
-    {
-        return this.procedureStatusCode;
-    }
-    
-    public void setProcedureStatusCode
-        (String procedureStatusCode) 
-        {
-      this.procedureStatusCode = procedureStatusCode;
-}
-    public 
-    String 
-    getProcedureStatusReasonCodingCode()
-    {
-        return this.procedureStatusReasonCodingCode;
-    }
-    
-    public void setProcedureStatusReasonCodingCode
-        (String procedureStatusReasonCodingCode) 
-        {
-      this.procedureStatusReasonCodingCode = procedureStatusReasonCodingCode;
-}
-    public 
-    String 
-    getProcedureStatusReasonCodingDisplay()
-    {
-        return this.procedureStatusReasonCodingDisplay;
-    }
-    
-    public void setProcedureStatusReasonCodingDisplay
-        (String procedureStatusReasonCodingDisplay) 
-        {
-      this.procedureStatusReasonCodingDisplay = procedureStatusReasonCodingDisplay;
-}
-    public 
-    String 
-    getProcedureStatusReasonCodingSystem()
-    {
-        return this.procedureStatusReasonCodingSystem;
-    }
-    
-    public void setProcedureStatusReasonCodingSystem
-        (String procedureStatusReasonCodingSystem) 
-        {
-      this.procedureStatusReasonCodingSystem = procedureStatusReasonCodingSystem;
-}
-    public 
-    String 
-    getProcedureStatusReasonCodingUsrslt()
-    {
-        return this.procedureStatusReasonCodingUsrslt;
-    }
-    
-    public void setProcedureStatusReasonCodingUsrslt
-        (String procedureStatusReasonCodingUsrslt) 
-        {
-      this.procedureStatusReasonCodingUsrslt = procedureStatusReasonCodingUsrslt;
-}
-    public 
-    String 
-    getProcedureStatusReasonCodingVersion()
-    {
-        return this.procedureStatusReasonCodingVersion;
-    }
-    
-    public void setProcedureStatusReasonCodingVersion
-        (String procedureStatusReasonCodingVersion) 
-        {
-      this.procedureStatusReasonCodingVersion = procedureStatusReasonCodingVersion;
-}
-    public 
-    String 
-    getProcedureStatusReasonText()
-    {
-        return this.procedureStatusReasonText;
-    }
-    
-    public void setProcedureStatusReasonText
-        (String procedureStatusReasonText) 
-        {
-      this.procedureStatusReasonText = procedureStatusReasonText;
-}
-    public 
-    String 
-    getProcedureSubject()
-    {
-        return this.procedureSubject;
-    }
-    
-    public void setProcedureSubject
-        (String procedureSubject) 
-        {
-      this.procedureSubject = procedureSubject;
-}
-    public 
-    String 
-    getProcedureUsedCodeCodingCode()
-    {
-        return this.procedureUsedCodeCodingCode;
-    }
-    
-    public void setProcedureUsedCodeCodingCode
-        (String procedureUsedCodeCodingCode) 
-        {
-      this.procedureUsedCodeCodingCode = procedureUsedCodeCodingCode;
-}
-    public 
-    String 
-    getProcedureUsedCodeCodingDisplay()
-    {
-        return this.procedureUsedCodeCodingDisplay;
-    }
-    
-    public void setProcedureUsedCodeCodingDisplay
-        (String procedureUsedCodeCodingDisplay) 
-        {
-      this.procedureUsedCodeCodingDisplay = procedureUsedCodeCodingDisplay;
-}
-    public 
-    String 
-    getProcedureUsedCodeCodingSystem()
-    {
-        return this.procedureUsedCodeCodingSystem;
-    }
-    
-    public void setProcedureUsedCodeCodingSystem
-        (String procedureUsedCodeCodingSystem) 
-        {
-      this.procedureUsedCodeCodingSystem = procedureUsedCodeCodingSystem;
-}
-    public 
-    String 
-    getProcedureUsedCodeCodingUsrslt()
-    {
-        return this.procedureUsedCodeCodingUsrslt;
-    }
-    
-    public void setProcedureUsedCodeCodingUsrslt
-        (String procedureUsedCodeCodingUsrslt) 
-        {
-      this.procedureUsedCodeCodingUsrslt = procedureUsedCodeCodingUsrslt;
-}
-    public 
-    String 
-    getProcedureUsedCodeCodingVersion()
-    {
-        return this.procedureUsedCodeCodingVersion;
-    }
-    
-    public void setProcedureUsedCodeCodingVersion
-        (String procedureUsedCodeCodingVersion) 
-        {
-      this.procedureUsedCodeCodingVersion = procedureUsedCodeCodingVersion;
-}
-    public 
-    String 
-    getProcedureUsedCodeText()
-    {
-        return this.procedureUsedCodeText;
-    }
-    
-    public void setProcedureUsedCodeText
-        (String procedureUsedCodeText) 
-        {
-      this.procedureUsedCodeText = procedureUsedCodeText;
-}
-    public 
-    String 
-    getProcedureUsedReference()
-    {
-        return this.procedureUsedReference;
-    }
-    
-    public void setProcedureUsedReference
-        (String procedureUsedReference) 
-        {
-      this.procedureUsedReference = procedureUsedReference;
-}
+    public void setId(String id) {
+        this.id = id;
+    }
+    
+    
+    
+    public String getPrcdrAsserter() {
+        return this.prcdrAsserter;
+    }
+    
+    public void setPrcdrAsserter(String prcdrAsserter) {
+        this.prcdrAsserter = prcdrAsserter;
+    }
+    
+    
+    
+    public String getPrcdrBasedOn() {
+        return this.prcdrBasedOn;
+    }
+    
+    public void setPrcdrBasedOn(String prcdrBasedOn) {
+        this.prcdrBasedOn = prcdrBasedOn;
+    }
+    
+    
+    
+    public String getPrcdrBodySiteCdgCd() {
+        return this.prcdrBodySiteCdgCd;
+    }
+    
+    public void setPrcdrBodySiteCdgCd(String prcdrBodySiteCdgCd) {
+        this.prcdrBodySiteCdgCd = prcdrBodySiteCdgCd;
+    }
+    
+    
+    
+    public String getPrcdrBodySiteCdgDsply() {
+        return this.prcdrBodySiteCdgDsply;
+    }
+    
+    public void setPrcdrBodySiteCdgDsply(String prcdrBodySiteCdgDsply) {
+        this.prcdrBodySiteCdgDsply = prcdrBodySiteCdgDsply;
+    }
+    
+    
+    
+    public String getPrcdrBodySiteCdgSys() {
+        return this.prcdrBodySiteCdgSys;
+    }
+    
+    public void setPrcdrBodySiteCdgSys(String prcdrBodySiteCdgSys) {
+        this.prcdrBodySiteCdgSys = prcdrBodySiteCdgSys;
+    }
+    
+    
+    
+    public String getPrcdrBodySiteCdgUsrSltd() {
+        return this.prcdrBodySiteCdgUsrSltd;
+    }
+    
+    public void setPrcdrBodySiteCdgUsrSltd(String prcdrBodySiteCdgUsrSltd) {
+        this.prcdrBodySiteCdgUsrSltd = prcdrBodySiteCdgUsrSltd;
+    }
+    
+    
+    
+    public String getPrcdrBodySiteCdgVrsn() {
+        return this.prcdrBodySiteCdgVrsn;
+    }
+    
+    public void setPrcdrBodySiteCdgVrsn(String prcdrBodySiteCdgVrsn) {
+        this.prcdrBodySiteCdgVrsn = prcdrBodySiteCdgVrsn;
+    }
+    
+    
+    
+    public String getPrcdrBodySiteTxt() {
+        return this.prcdrBodySiteTxt;
+    }
+    
+    public void setPrcdrBodySiteTxt(String prcdrBodySiteTxt) {
+        this.prcdrBodySiteTxt = prcdrBodySiteTxt;
+    }
+    
+    
+    
+    public String getPrcdrCtgryCdgCd() {
+        return this.prcdrCtgryCdgCd;
+    }
+    
+    public void setPrcdrCtgryCdgCd(String prcdrCtgryCdgCd) {
+        this.prcdrCtgryCdgCd = prcdrCtgryCdgCd;
+    }
+    
+    
+    
+    public String getPrcdrCtgryCdgDsply() {
+        return this.prcdrCtgryCdgDsply;
+    }
+    
+    public void setPrcdrCtgryCdgDsply(String prcdrCtgryCdgDsply) {
+        this.prcdrCtgryCdgDsply = prcdrCtgryCdgDsply;
+    }
+    
+    
+    
+    public String getPrcdrCtgryCdgSys() {
+        return this.prcdrCtgryCdgSys;
+    }
+    
+    public void setPrcdrCtgryCdgSys(String prcdrCtgryCdgSys) {
+        this.prcdrCtgryCdgSys = prcdrCtgryCdgSys;
+    }
+    
+    
+    
+    public String getPrcdrCtgryCdgUsrSltd() {
+        return this.prcdrCtgryCdgUsrSltd;
+    }
+    
+    public void setPrcdrCtgryCdgUsrSltd(String prcdrCtgryCdgUsrSltd) {
+        this.prcdrCtgryCdgUsrSltd = prcdrCtgryCdgUsrSltd;
+    }
+    
+    
+    
+    public String getPrcdrCtgryCdgVrsn() {
+        return this.prcdrCtgryCdgVrsn;
+    }
+    
+    public void setPrcdrCtgryCdgVrsn(String prcdrCtgryCdgVrsn) {
+        this.prcdrCtgryCdgVrsn = prcdrCtgryCdgVrsn;
+    }
+    
+    
+    
+    public String getPrcdrCtgryTxt() {
+        return this.prcdrCtgryTxt;
+    }
+    
+    public void setPrcdrCtgryTxt(String prcdrCtgryTxt) {
+        this.prcdrCtgryTxt = prcdrCtgryTxt;
+    }
+    
+    
+    
+    public String getPrcdrCdCdgCd() {
+        return this.prcdrCdCdgCd;
+    }
+    
+    public void setPrcdrCdCdgCd(String prcdrCdCdgCd) {
+        this.prcdrCdCdgCd = prcdrCdCdgCd;
+    }
+    
+    
+    
+    public String getPrcdrCdCdgDsply() {
+        return this.prcdrCdCdgDsply;
+    }
+    
+    public void setPrcdrCdCdgDsply(String prcdrCdCdgDsply) {
+        this.prcdrCdCdgDsply = prcdrCdCdgDsply;
+    }
+    
+    
+    
+    public String getPrcdrCdCdgSys() {
+        return this.prcdrCdCdgSys;
+    }
+    
+    public void setPrcdrCdCdgSys(String prcdrCdCdgSys) {
+        this.prcdrCdCdgSys = prcdrCdCdgSys;
+    }
+    
+    
+    
+    public String getPrcdrCdCdgUsrSltd() {
+        return this.prcdrCdCdgUsrSltd;
+    }
+    
+    public void setPrcdrCdCdgUsrSltd(String prcdrCdCdgUsrSltd) {
+        this.prcdrCdCdgUsrSltd = prcdrCdCdgUsrSltd;
+    }
+    
+    
+    
+    public String getPrcdrCdCdgVrsn() {
+        return this.prcdrCdCdgVrsn;
+    }
+    
+    public void setPrcdrCdCdgVrsn(String prcdrCdCdgVrsn) {
+        this.prcdrCdCdgVrsn = prcdrCdCdgVrsn;
+    }
+    
+    
+    
+    public String getPrcdrCdTxt() {
+        return this.prcdrCdTxt;
+    }
+    
+    public void setPrcdrCdTxt(String prcdrCdTxt) {
+        this.prcdrCdTxt = prcdrCdTxt;
+    }
+    
+    
+    
+    public String getPrcdrComplicationCdgCd() {
+        return this.prcdrComplicationCdgCd;
+    }
+    
+    public void setPrcdrComplicationCdgCd(String prcdrComplicationCdgCd) {
+        this.prcdrComplicationCdgCd = prcdrComplicationCdgCd;
+    }
+    
+    
+    
+    public String getPrcdrComplicationCdgDsply() {
+        return this.prcdrComplicationCdgDsply;
+    }
+    
+    public void setPrcdrComplicationCdgDsply(String prcdrComplicationCdgDsply) {
+        this.prcdrComplicationCdgDsply = prcdrComplicationCdgDsply;
+    }
+    
+    
+    
+    public String getPrcdrComplicationCdgSys() {
+        return this.prcdrComplicationCdgSys;
+    }
+    
+    public void setPrcdrComplicationCdgSys(String prcdrComplicationCdgSys) {
+        this.prcdrComplicationCdgSys = prcdrComplicationCdgSys;
+    }
+    
+    
+    
+    public String getPrcdrComplicationCdgUsrSltd() {
+        return this.prcdrComplicationCdgUsrSltd;
+    }
+    
+    public void setPrcdrComplicationCdgUsrSltd(String prcdrComplicationCdgUsrSltd) {
+        this.prcdrComplicationCdgUsrSltd = prcdrComplicationCdgUsrSltd;
+    }
+    
+    
+    
+    public String getPrcdrComplicationCdgVrsn() {
+        return this.prcdrComplicationCdgVrsn;
+    }
+    
+    public void setPrcdrComplicationCdgVrsn(String prcdrComplicationCdgVrsn) {
+        this.prcdrComplicationCdgVrsn = prcdrComplicationCdgVrsn;
+    }
+    
+    
+    
+    public String getPrcdrComplicationTxt() {
+        return this.prcdrComplicationTxt;
+    }
+    
+    public void setPrcdrComplicationTxt(String prcdrComplicationTxt) {
+        this.prcdrComplicationTxt = prcdrComplicationTxt;
+    }
+    
+    
+    
+    public String getPrcdrComplicationDtl() {
+        return this.prcdrComplicationDtl;
+    }
+    
+    public void setPrcdrComplicationDtl(String prcdrComplicationDtl) {
+        this.prcdrComplicationDtl = prcdrComplicationDtl;
+    }
+    
+    
+    
+    public String getPrcdrEnc() {
+        return this.prcdrEnc;
+    }
+    
+    public void setPrcdrEnc(String prcdrEnc) {
+        this.prcdrEnc = prcdrEnc;
+    }
+    
+    
+    
+    public String getPrcdrFocalDvcActnCdgCd() {
+        return this.prcdrFocalDvcActnCdgCd;
+    }
+    
+    public void setPrcdrFocalDvcActnCdgCd(String prcdrFocalDvcActnCdgCd) {
+        this.prcdrFocalDvcActnCdgCd = prcdrFocalDvcActnCdgCd;
+    }
+    
+    
+    
+    public String getPrcdrFocalDvcActnCdgDsply() {
+        return this.prcdrFocalDvcActnCdgDsply;
+    }
+    
+    public void setPrcdrFocalDvcActnCdgDsply(String prcdrFocalDvcActnCdgDsply) {
+        this.prcdrFocalDvcActnCdgDsply = prcdrFocalDvcActnCdgDsply;
+    }
+    
+    
+    
+    public String getPrcdrFocalDvcActnCdgSys() {
+        return this.prcdrFocalDvcActnCdgSys;
+    }
+    
+    public void setPrcdrFocalDvcActnCdgSys(String prcdrFocalDvcActnCdgSys) {
+        this.prcdrFocalDvcActnCdgSys = prcdrFocalDvcActnCdgSys;
+    }
+    
+    
+    
+    public String getPrcdrFocalDvcActnCdgUsrSltd() {
+        return this.prcdrFocalDvcActnCdgUsrSltd;
+    }
+    
+    public void setPrcdrFocalDvcActnCdgUsrSltd(String prcdrFocalDvcActnCdgUsrSltd) {
+        this.prcdrFocalDvcActnCdgUsrSltd = prcdrFocalDvcActnCdgUsrSltd;
+    }
+    
+    
+    
+    public String getPrcdrFocalDvcActnCdgVrsn() {
+        return this.prcdrFocalDvcActnCdgVrsn;
+    }
+    
+    public void setPrcdrFocalDvcActnCdgVrsn(String prcdrFocalDvcActnCdgVrsn) {
+        this.prcdrFocalDvcActnCdgVrsn = prcdrFocalDvcActnCdgVrsn;
+    }
+    
+    
+    
+    public String getPrcdrFocalDvcActnTxt() {
+        return this.prcdrFocalDvcActnTxt;
+    }
+    
+    public void setPrcdrFocalDvcActnTxt(String prcdrFocalDvcActnTxt) {
+        this.prcdrFocalDvcActnTxt = prcdrFocalDvcActnTxt;
+    }
+    
+    
+    
+    public String getPrcdrFocalDvcManipulated() {
+        return this.prcdrFocalDvcManipulated;
+    }
+    
+    public void setPrcdrFocalDvcManipulated(String prcdrFocalDvcManipulated) {
+        this.prcdrFocalDvcManipulated = prcdrFocalDvcManipulated;
+    }
+    
+    
+    
+    public String getPrcdrFollowUpCdgCd() {
+        return this.prcdrFollowUpCdgCd;
+    }
+    
+    public void setPrcdrFollowUpCdgCd(String prcdrFollowUpCdgCd) {
+        this.prcdrFollowUpCdgCd = prcdrFollowUpCdgCd;
+    }
+    
+    
+    
+    public String getPrcdrFollowUpCdgDsply() {
+        return this.prcdrFollowUpCdgDsply;
+    }
+    
+    public void setPrcdrFollowUpCdgDsply(String prcdrFollowUpCdgDsply) {
+        this.prcdrFollowUpCdgDsply = prcdrFollowUpCdgDsply;
+    }
+    
+    
+    
+    public String getPrcdrFollowUpCdgSys() {
+        return this.prcdrFollowUpCdgSys;
+    }
+    
+    public void setPrcdrFollowUpCdgSys(String prcdrFollowUpCdgSys) {
+        this.prcdrFollowUpCdgSys = prcdrFollowUpCdgSys;
+    }
+    
+    
+    
+    public String getPrcdrFollowUpCdgUsrSltd() {
+        return this.prcdrFollowUpCdgUsrSltd;
+    }
+    
+    public void setPrcdrFollowUpCdgUsrSltd(String prcdrFollowUpCdgUsrSltd) {
+        this.prcdrFollowUpCdgUsrSltd = prcdrFollowUpCdgUsrSltd;
+    }
+    
+    
+    
+    public String getPrcdrFollowUpCdgVrsn() {
+        return this.prcdrFollowUpCdgVrsn;
+    }
+    
+    public void setPrcdrFollowUpCdgVrsn(String prcdrFollowUpCdgVrsn) {
+        this.prcdrFollowUpCdgVrsn = prcdrFollowUpCdgVrsn;
+    }
+    
+    
+    
+    public String getPrcdrFollowUpTxt() {
+        return this.prcdrFollowUpTxt;
+    }
+    
+    public void setPrcdrFollowUpTxt(String prcdrFollowUpTxt) {
+        this.prcdrFollowUpTxt = prcdrFollowUpTxt;
+    }
+    
+    
+    
+    public String getPrcdrIdAssigner() {
+        return this.prcdrIdAssigner;
+    }
+    
+    public void setPrcdrIdAssigner(String prcdrIdAssigner) {
+        this.prcdrIdAssigner = prcdrIdAssigner;
+    }
+    
+    
+    
+    public String getPrcdrIdPrdEnd() {
+        return this.prcdrIdPrdEnd;
+    }
+    
+    public void setPrcdrIdPrdEnd(String prcdrIdPrdEnd) {
+        this.prcdrIdPrdEnd = prcdrIdPrdEnd;
+    }
+    
+    
+    
+    public String getPrcdrIdPrdStrt() {
+        return this.prcdrIdPrdStrt;
+    }
+    
+    public void setPrcdrIdPrdStrt(String prcdrIdPrdStrt) {
+        this.prcdrIdPrdStrt = prcdrIdPrdStrt;
+    }
+    
+    
+    
+    public String getPrcdrIdSys() {
+        return this.prcdrIdSys;
+    }
+    
+    public void setPrcdrIdSys(String prcdrIdSys) {
+        this.prcdrIdSys = prcdrIdSys;
+    }
+    
+    
+    
+    public String getPrcdrIdTypCdgCd() {
+        return this.prcdrIdTypCdgCd;
+    }
+    
+    public void setPrcdrIdTypCdgCd(String prcdrIdTypCdgCd) {
+        this.prcdrIdTypCdgCd = prcdrIdTypCdgCd;
+    }
+    
+    
+    
+    public String getPrcdrIdTypCdgDsply() {
+        return this.prcdrIdTypCdgDsply;
+    }
+    
+    public void setPrcdrIdTypCdgDsply(String prcdrIdTypCdgDsply) {
+        this.prcdrIdTypCdgDsply = prcdrIdTypCdgDsply;
+    }
+    
+    
+    
+    public String getPrcdrIdTypCdgSys() {
+        return this.prcdrIdTypCdgSys;
+    }
+    
+    public void setPrcdrIdTypCdgSys(String prcdrIdTypCdgSys) {
+        this.prcdrIdTypCdgSys = prcdrIdTypCdgSys;
+    }
+    
+    
+    
+    public String getPrcdrIdTypCdgUsrSltd() {
+        return this.prcdrIdTypCdgUsrSltd;
+    }
+    
+    public void setPrcdrIdTypCdgUsrSltd(String prcdrIdTypCdgUsrSltd) {
+        this.prcdrIdTypCdgUsrSltd = prcdrIdTypCdgUsrSltd;
+    }
+    
+    
+    
+    public String getPrcdrIdTypCdgVrsn() {
+        return this.prcdrIdTypCdgVrsn;
+    }
+    
+    public void setPrcdrIdTypCdgVrsn(String prcdrIdTypCdgVrsn) {
+        this.prcdrIdTypCdgVrsn = prcdrIdTypCdgVrsn;
+    }
+    
+    
+    
+    public String getPrcdrIdTypTxt() {
+        return this.prcdrIdTypTxt;
+    }
+    
+    public void setPrcdrIdTypTxt(String prcdrIdTypTxt) {
+        this.prcdrIdTypTxt = prcdrIdTypTxt;
+    }
+    
+    
+    
+    public String getPrcdrIdUse() {
+        return this.prcdrIdUse;
+    }
+    
+    public void setPrcdrIdUse(String prcdrIdUse) {
+        this.prcdrIdUse = prcdrIdUse;
+    }
+    
+    
+    
+    public String getPrcdrIdVl() {
+        return this.prcdrIdVl;
+    }
+    
+    public void setPrcdrIdVl(String prcdrIdVl) {
+        this.prcdrIdVl = prcdrIdVl;
+    }
+    
+    
+    
+    public String getPrcdrInstantiatesCanonical() {
+        return this.prcdrInstantiatesCanonical;
+    }
+    
+    public void setPrcdrInstantiatesCanonical(String prcdrInstantiatesCanonical) {
+        this.prcdrInstantiatesCanonical = prcdrInstantiatesCanonical;
+    }
+    
+    
+    
+    public String getPrcdrInstantiatesUri() {
+        return this.prcdrInstantiatesUri;
+    }
+    
+    public void setPrcdrInstantiatesUri(String prcdrInstantiatesUri) {
+        this.prcdrInstantiatesUri = prcdrInstantiatesUri;
+    }
+    
+    
+    
+    public String getPrcdrLctn() {
+        return this.prcdrLctn;
+    }
+    
+    public void setPrcdrLctn(String prcdrLctn) {
+        this.prcdrLctn = prcdrLctn;
+    }
+    
+    
+    
+    public String getPrcdrNtAthrRfrnc() {
+        return this.prcdrNtAthrRfrnc;
+    }
+    
+    public void setPrcdrNtAthrRfrnc(String prcdrNtAthrRfrnc) {
+        this.prcdrNtAthrRfrnc = prcdrNtAthrRfrnc;
+    }
+    
+    
+    
+    public String getPrcdrNtAthrStrgTyp() {
+        return this.prcdrNtAthrStrgTyp;
+    }
+    
+    public void setPrcdrNtAthrStrgTyp(String prcdrNtAthrStrgTyp) {
+        this.prcdrNtAthrStrgTyp = prcdrNtAthrStrgTyp;
+    }
+    
+    
+    
+    public String getPrcdrNtTxt() {
+        return this.prcdrNtTxt;
+    }
+    
+    public void setPrcdrNtTxt(String prcdrNtTxt) {
+        this.prcdrNtTxt = prcdrNtTxt;
+    }
+    
+    
+    
+    public String getPrcdrNtTime() {
+        return this.prcdrNtTime;
+    }
+    
+    public void setPrcdrNtTime(String prcdrNtTime) {
+        this.prcdrNtTime = prcdrNtTime;
+    }
+    
+    
+    
+    public String getPrcdrOutcomeCdgCd() {
+        return this.prcdrOutcomeCdgCd;
+    }
+    
+    public void setPrcdrOutcomeCdgCd(String prcdrOutcomeCdgCd) {
+        this.prcdrOutcomeCdgCd = prcdrOutcomeCdgCd;
+    }
+    
+    
+    
+    public String getPrcdrOutcomeCdgDsply() {
+        return this.prcdrOutcomeCdgDsply;
+    }
+    
+    public void setPrcdrOutcomeCdgDsply(String prcdrOutcomeCdgDsply) {
+        this.prcdrOutcomeCdgDsply = prcdrOutcomeCdgDsply;
+    }
+    
+    
+    
+    public String getPrcdrOutcomeCdgSys() {
+        return this.prcdrOutcomeCdgSys;
+    }
+    
+    public void setPrcdrOutcomeCdgSys(String prcdrOutcomeCdgSys) {
+        this.prcdrOutcomeCdgSys = prcdrOutcomeCdgSys;
+    }
+    
+    
+    
+    public String getPrcdrOutcomeCdgUsrSltd() {
+        return this.prcdrOutcomeCdgUsrSltd;
+    }
+    
+    public void setPrcdrOutcomeCdgUsrSltd(String prcdrOutcomeCdgUsrSltd) {
+        this.prcdrOutcomeCdgUsrSltd = prcdrOutcomeCdgUsrSltd;
+    }
+    
+    
+    
+    public String getPrcdrOutcomeCdgVrsn() {
+        return this.prcdrOutcomeCdgVrsn;
+    }
+    
+    public void setPrcdrOutcomeCdgVrsn(String prcdrOutcomeCdgVrsn) {
+        this.prcdrOutcomeCdgVrsn = prcdrOutcomeCdgVrsn;
+    }
+    
+    
+    
+    public String getPrcdrOutcomeTxt() {
+        return this.prcdrOutcomeTxt;
+    }
+    
+    public void setPrcdrOutcomeTxt(String prcdrOutcomeTxt) {
+        this.prcdrOutcomeTxt = prcdrOutcomeTxt;
+    }
+    
+    
+    
+    public String getPrcdrPartOf() {
+        return this.prcdrPartOf;
+    }
+    
+    public void setPrcdrPartOf(String prcdrPartOf) {
+        this.prcdrPartOf = prcdrPartOf;
+    }
+    
+    
+    
+    public String getPrcdrPerformedDtTimeTyp() {
+        return this.prcdrPerformedDtTimeTyp;
+    }
+    
+    public void setPrcdrPerformedDtTimeTyp(String prcdrPerformedDtTimeTyp) {
+        this.prcdrPerformedDtTimeTyp = prcdrPerformedDtTimeTyp;
+    }
+    
+    
+    
+    public String getPrcdrPerformedPrdEnd() {
+        return this.prcdrPerformedPrdEnd;
+    }
+    
+    public void setPrcdrPerformedPrdEnd(String prcdrPerformedPrdEnd) {
+        this.prcdrPerformedPrdEnd = prcdrPerformedPrdEnd;
+    }
+    
+    
+    
+    public String getPrcdrPerformedPrdStrt() {
+        return this.prcdrPerformedPrdStrt;
+    }
+    
+    public void setPrcdrPerformedPrdStrt(String prcdrPerformedPrdStrt) {
+        this.prcdrPerformedPrdStrt = prcdrPerformedPrdStrt;
+    }
+    
+    
+    
+    public String getPrcdrPerformedRngHiCd() {
+        return this.prcdrPerformedRngHiCd;
+    }
+    
+    public void setPrcdrPerformedRngHiCd(String prcdrPerformedRngHiCd) {
+        this.prcdrPerformedRngHiCd = prcdrPerformedRngHiCd;
+    }
+    
+    
+    
+    public String getPrcdrPerformedRngHiCmprtr() {
+        return this.prcdrPerformedRngHiCmprtr;
+    }
+    
+    public void setPrcdrPerformedRngHiCmprtr(String prcdrPerformedRngHiCmprtr) {
+        this.prcdrPerformedRngHiCmprtr = prcdrPerformedRngHiCmprtr;
+    }
+    
+    
+    
+    public String getPrcdrPerformedRngHiSys() {
+        return this.prcdrPerformedRngHiSys;
+    }
+    
+    public void setPrcdrPerformedRngHiSys(String prcdrPerformedRngHiSys) {
+        this.prcdrPerformedRngHiSys = prcdrPerformedRngHiSys;
+    }
+    
+    
+    
+    public String getPrcdrPerformedRngHiUnt() {
+        return this.prcdrPerformedRngHiUnt;
+    }
+    
+    public void setPrcdrPerformedRngHiUnt(String prcdrPerformedRngHiUnt) {
+        this.prcdrPerformedRngHiUnt = prcdrPerformedRngHiUnt;
+    }
+    
+    
+    
+    public String getPrcdrPerformedRngHiVl() {
+        return this.prcdrPerformedRngHiVl;
+    }
+    
+    public void setPrcdrPerformedRngHiVl(String prcdrPerformedRngHiVl) {
+        this.prcdrPerformedRngHiVl = prcdrPerformedRngHiVl;
+    }
+    
+    
+    
+    public String getPrcdrPerformedRngLwCd() {
+        return this.prcdrPerformedRngLwCd;
+    }
+    
+    public void setPrcdrPerformedRngLwCd(String prcdrPerformedRngLwCd) {
+        this.prcdrPerformedRngLwCd = prcdrPerformedRngLwCd;
+    }
+    
+    
+    
+    public String getPrcdrPerformedRngLwCmprtr() {
+        return this.prcdrPerformedRngLwCmprtr;
+    }
+    
+    public void setPrcdrPerformedRngLwCmprtr(String prcdrPerformedRngLwCmprtr) {
+        this.prcdrPerformedRngLwCmprtr = prcdrPerformedRngLwCmprtr;
+    }
+    
+    
+    
+    public String getPrcdrPerformedRngLwSys() {
+        return this.prcdrPerformedRngLwSys;
+    }
+    
+    public void setPrcdrPerformedRngLwSys(String prcdrPerformedRngLwSys) {
+        this.prcdrPerformedRngLwSys = prcdrPerformedRngLwSys;
+    }
+    
+    
+    
+    public String getPrcdrPerformedRngLwUnt() {
+        return this.prcdrPerformedRngLwUnt;
+    }
+    
+    public void setPrcdrPerformedRngLwUnt(String prcdrPerformedRngLwUnt) {
+        this.prcdrPerformedRngLwUnt = prcdrPerformedRngLwUnt;
+    }
+    
+    
+    
+    public String getPrcdrPerformedRngLwVl() {
+        return this.prcdrPerformedRngLwVl;
+    }
+    
+    public void setPrcdrPerformedRngLwVl(String prcdrPerformedRngLwVl) {
+        this.prcdrPerformedRngLwVl = prcdrPerformedRngLwVl;
+    }
+    
+    
+    
+    public String getPrcdrPerformedStrgTyp() {
+        return this.prcdrPerformedStrgTyp;
+    }
+    
+    public void setPrcdrPerformedStrgTyp(String prcdrPerformedStrgTyp) {
+        this.prcdrPerformedStrgTyp = prcdrPerformedStrgTyp;
+    }
+    
+    
+    
+    public String getPrcdrPrfrmrActor() {
+        return this.prcdrPrfrmrActor;
+    }
+    
+    public void setPrcdrPrfrmrActor(String prcdrPrfrmrActor) {
+        this.prcdrPrfrmrActor = prcdrPrfrmrActor;
+    }
+    
+    
+    
+    public String getPrcdrPrfrmrFunctionCdgCd() {
+        return this.prcdrPrfrmrFunctionCdgCd;
+    }
+    
+    public void setPrcdrPrfrmrFunctionCdgCd(String prcdrPrfrmrFunctionCdgCd) {
+        this.prcdrPrfrmrFunctionCdgCd = prcdrPrfrmrFunctionCdgCd;
+    }
+    
+    
+    
+    public String getPrcdrPrfrmrFunctionCdgDsply() {
+        return this.prcdrPrfrmrFunctionCdgDsply;
+    }
+    
+    public void setPrcdrPrfrmrFunctionCdgDsply(String prcdrPrfrmrFunctionCdgDsply) {
+        this.prcdrPrfrmrFunctionCdgDsply = prcdrPrfrmrFunctionCdgDsply;
+    }
+    
+    
+    
+    public String getPrcdrPrfrmrFunctionCdgSys() {
+        return this.prcdrPrfrmrFunctionCdgSys;
+    }
+    
+    public void setPrcdrPrfrmrFunctionCdgSys(String prcdrPrfrmrFunctionCdgSys) {
+        this.prcdrPrfrmrFunctionCdgSys = prcdrPrfrmrFunctionCdgSys;
+    }
+    
+    
+    
+    public String getPrcdrPrfrmrFunctionCdgUsrSltd() {
+        return this.prcdrPrfrmrFunctionCdgUsrSltd;
+    }
+    
+    public void setPrcdrPrfrmrFunctionCdgUsrSltd(String prcdrPrfrmrFunctionCdgUsrSltd) {
+        this.prcdrPrfrmrFunctionCdgUsrSltd = prcdrPrfrmrFunctionCdgUsrSltd;
+    }
+    
+    
+    
+    public String getPrcdrPrfrmrFunctionCdgVrsn() {
+        return this.prcdrPrfrmrFunctionCdgVrsn;
+    }
+    
+    public void setPrcdrPrfrmrFunctionCdgVrsn(String prcdrPrfrmrFunctionCdgVrsn) {
+        this.prcdrPrfrmrFunctionCdgVrsn = prcdrPrfrmrFunctionCdgVrsn;
+    }
+    
+    
+    
+    public String getPrcdrPrfrmrFunctionTxt() {
+        return this.prcdrPrfrmrFunctionTxt;
+    }
+    
+    public void setPrcdrPrfrmrFunctionTxt(String prcdrPrfrmrFunctionTxt) {
+        this.prcdrPrfrmrFunctionTxt = prcdrPrfrmrFunctionTxt;
+    }
+    
+    
+    
+    public String getPrcdrPrfrmrOnBehalfOf() {
+        return this.prcdrPrfrmrOnBehalfOf;
+    }
+    
+    public void setPrcdrPrfrmrOnBehalfOf(String prcdrPrfrmrOnBehalfOf) {
+        this.prcdrPrfrmrOnBehalfOf = prcdrPrfrmrOnBehalfOf;
+    }
+    
+    
+    
+    public String getPrcdrRsnCdCdgCd() {
+        return this.prcdrRsnCdCdgCd;
+    }
+    
+    public void setPrcdrRsnCdCdgCd(String prcdrRsnCdCdgCd) {
+        this.prcdrRsnCdCdgCd = prcdrRsnCdCdgCd;
+    }
+    
+    
+    
+    public String getPrcdrRsnCdCdgDsply() {
+        return this.prcdrRsnCdCdgDsply;
+    }
+    
+    public void setPrcdrRsnCdCdgDsply(String prcdrRsnCdCdgDsply) {
+        this.prcdrRsnCdCdgDsply = prcdrRsnCdCdgDsply;
+    }
+    
+    
+    
+    public String getPrcdrRsnCdCdgSys() {
+        return this.prcdrRsnCdCdgSys;
+    }
+    
+    public void setPrcdrRsnCdCdgSys(String prcdrRsnCdCdgSys) {
+        this.prcdrRsnCdCdgSys = prcdrRsnCdCdgSys;
+    }
+    
+    
+    
+    public String getPrcdrRsnCdCdgUsrSltd() {
+        return this.prcdrRsnCdCdgUsrSltd;
+    }
+    
+    public void setPrcdrRsnCdCdgUsrSltd(String prcdrRsnCdCdgUsrSltd) {
+        this.prcdrRsnCdCdgUsrSltd = prcdrRsnCdCdgUsrSltd;
+    }
+    
+    
+    
+    public String getPrcdrRsnCdCdgVrsn() {
+        return this.prcdrRsnCdCdgVrsn;
+    }
+    
+    public void setPrcdrRsnCdCdgVrsn(String prcdrRsnCdCdgVrsn) {
+        this.prcdrRsnCdCdgVrsn = prcdrRsnCdCdgVrsn;
+    }
+    
+    
+    
+    public String getPrcdrRsnCdTxt() {
+        return this.prcdrRsnCdTxt;
+    }
+    
+    public void setPrcdrRsnCdTxt(String prcdrRsnCdTxt) {
+        this.prcdrRsnCdTxt = prcdrRsnCdTxt;
+    }
+    
+    
+    
+    public String getPrcdrRsnRfrnc() {
+        return this.prcdrRsnRfrnc;
+    }
+    
+    public void setPrcdrRsnRfrnc(String prcdrRsnRfrnc) {
+        this.prcdrRsnRfrnc = prcdrRsnRfrnc;
+    }
+    
+    
+    
+    public String getPrcdrRecorder() {
+        return this.prcdrRecorder;
+    }
+    
+    public void setPrcdrRecorder(String prcdrRecorder) {
+        this.prcdrRecorder = prcdrRecorder;
+    }
+    
+    
+    
+    public String getPrcdrRpt() {
+        return this.prcdrRpt;
+    }
+    
+    public void setPrcdrRpt(String prcdrRpt) {
+        this.prcdrRpt = prcdrRpt;
+    }
+    
+    
+    
+    public String getPrcdrSts() {
+        return this.prcdrSts;
+    }
+    
+    public void setPrcdrSts(String prcdrSts) {
+        this.prcdrSts = prcdrSts;
+    }
+    
+    
+    
+    public String getPrcdrStsRsnCdgCd() {
+        return this.prcdrStsRsnCdgCd;
+    }
+    
+    public void setPrcdrStsRsnCdgCd(String prcdrStsRsnCdgCd) {
+        this.prcdrStsRsnCdgCd = prcdrStsRsnCdgCd;
+    }
+    
+    
+    
+    public String getPrcdrStsRsnCdgDsply() {
+        return this.prcdrStsRsnCdgDsply;
+    }
+    
+    public void setPrcdrStsRsnCdgDsply(String prcdrStsRsnCdgDsply) {
+        this.prcdrStsRsnCdgDsply = prcdrStsRsnCdgDsply;
+    }
+    
+    
+    
+    public String getPrcdrStsRsnCdgSys() {
+        return this.prcdrStsRsnCdgSys;
+    }
+    
+    public void setPrcdrStsRsnCdgSys(String prcdrStsRsnCdgSys) {
+        this.prcdrStsRsnCdgSys = prcdrStsRsnCdgSys;
+    }
+    
+    
+    
+    public String getPrcdrStsRsnCdgUsrSltd() {
+        return this.prcdrStsRsnCdgUsrSltd;
+    }
+    
+    public void setPrcdrStsRsnCdgUsrSltd(String prcdrStsRsnCdgUsrSltd) {
+        this.prcdrStsRsnCdgUsrSltd = prcdrStsRsnCdgUsrSltd;
+    }
+    
+    
+    
+    public String getPrcdrStsRsnCdgVrsn() {
+        return this.prcdrStsRsnCdgVrsn;
+    }
+    
+    public void setPrcdrStsRsnCdgVrsn(String prcdrStsRsnCdgVrsn) {
+        this.prcdrStsRsnCdgVrsn = prcdrStsRsnCdgVrsn;
+    }
+    
+    
+    
+    public String getPrcdrStsRsnTxt() {
+        return this.prcdrStsRsnTxt;
+    }
+    
+    public void setPrcdrStsRsnTxt(String prcdrStsRsnTxt) {
+        this.prcdrStsRsnTxt = prcdrStsRsnTxt;
+    }
+    
+    
+    
+    public String getPrcdrSbjct() {
+        return this.prcdrSbjct;
+    }
+    
+    public void setPrcdrSbjct(String prcdrSbjct) {
+        this.prcdrSbjct = prcdrSbjct;
+    }
+    
+    
+    
+    public String getPrcdrUsedCdCdgCd() {
+        return this.prcdrUsedCdCdgCd;
+    }
+    
+    public void setPrcdrUsedCdCdgCd(String prcdrUsedCdCdgCd) {
+        this.prcdrUsedCdCdgCd = prcdrUsedCdCdgCd;
+    }
+    
+    
+    
+    public String getPrcdrUsedCdCdgDsply() {
+        return this.prcdrUsedCdCdgDsply;
+    }
+    
+    public void setPrcdrUsedCdCdgDsply(String prcdrUsedCdCdgDsply) {
+        this.prcdrUsedCdCdgDsply = prcdrUsedCdCdgDsply;
+    }
+    
+    
+    
+    public String getPrcdrUsedCdCdgSys() {
+        return this.prcdrUsedCdCdgSys;
+    }
+    
+    public void setPrcdrUsedCdCdgSys(String prcdrUsedCdCdgSys) {
+        this.prcdrUsedCdCdgSys = prcdrUsedCdCdgSys;
+    }
+    
+    
+    
+    public String getPrcdrUsedCdCdgUsrSltd() {
+        return this.prcdrUsedCdCdgUsrSltd;
+    }
+    
+    public void setPrcdrUsedCdCdgUsrSltd(String prcdrUsedCdCdgUsrSltd) {
+        this.prcdrUsedCdCdgUsrSltd = prcdrUsedCdCdgUsrSltd;
+    }
+    
+    
+    
+    public String getPrcdrUsedCdCdgVrsn() {
+        return this.prcdrUsedCdCdgVrsn;
+    }
+    
+    public void setPrcdrUsedCdCdgVrsn(String prcdrUsedCdCdgVrsn) {
+        this.prcdrUsedCdCdgVrsn = prcdrUsedCdCdgVrsn;
+    }
+    
+    
+    
+    public String getPrcdrUsedCdTxt() {
+        return this.prcdrUsedCdTxt;
+    }
+    
+    public void setPrcdrUsedCdTxt(String prcdrUsedCdTxt) {
+        this.prcdrUsedCdTxt = prcdrUsedCdTxt;
+    }
+    
+    
+    
+    public String getPrcdrUsedRfrnc() {
+        return this.prcdrUsedRfrnc;
+    }
+    
+    public void setPrcdrUsedRfrnc(String prcdrUsedRfrnc) {
+        this.prcdrUsedRfrnc = prcdrUsedRfrnc;
+    }
+    
+    
+    
 
 
 

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Jun 6, 2022, 11:02:25 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="MedicinalProductInteraction" optimistic-lock="none" table="MedicinalProductInteraction">
+        <id name="id" type="string">
+            <column length="64" name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="mdcnlPrdctInteractionDscrptn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctInteraction_Dscrptn"/>
+        </property>
+        <property name="mdcnlPrdctInteractionEfctCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctInteraction_Efct_Cdg_Cd"/>
+        </property>
+        <property name="mdcnlPrdctInteractionEfctCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctInteraction_Efct_Cdg_Dsply"/>
+        </property>
+        <property name="mdcnlPrdctInteractionEfctCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctInteraction_Efct_Cdg_Sys"/>
+        </property>
+        <property name="mdcnlPrdctInteractionEfctCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctInteraction_Efct_Cdg_UsrSltd"/>
+        </property>
+        <property name="mdcnlPrdctInteractionEfctCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctInteraction_Efct_Cdg_Vrsn"/>
+        </property>
+        <property name="mdcnlPrdctInteractionEfctTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctInteraction_Efct_Txt"/>
+        </property>
+        <property name="mdcnlPrdctInteractionIncidenceCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctInteraction_Incidence_Cdg_Cd"/>
+        </property>
+        <property name="mdcnlPrdctInteractionIncidenceCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctInteraction_Incidence_Cdg_Dsply"/>
+        </property>
+        <property name="mdcnlPrdctInteractionIncidenceCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctInteraction_Incidence_Cdg_Sys"/>
+        </property>
+        <property name="mdcnlPrdctInteractionIncidenceCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctInteraction_Incidence_Cdg_UsrSltd"/>
+        </property>
+        <property name="mdcnlPrdctInteractionIncidenceCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctInteraction_Incidence_Cdg_Vrsn"/>
+        </property>
+        <property name="mdcnlPrdctInteractionIncidenceTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctInteraction_Incidence_Txt"/>
+        </property>
+        <property name="mdcnlPrdctInteractionInteractantItmCdbleCncptCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctInteraction_Interactant_ItmCdbleCncpt_Cdg_Cd"/>
+        </property>
+        <property name="mdcnlPrdctInteractionInteractantItmCdbleCncptCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctInteraction_Interactant_ItmCdbleCncpt_Cdg_Dsply"/>
+        </property>
+        <property name="mdcnlPrdctInteractionInteractantItmCdbleCncptCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctInteraction_Interactant_ItmCdbleCncpt_Cdg_Sys"/>
+        </property>
+        <property name="mdcnlPrdctInteractionInteractantItmCdbleCncptCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctInteraction_Interactant_ItmCdbleCncpt_Cdg_UsrSltd"/>
+        </property>
+        <property name="mdcnlPrdctInteractionInteractantItmCdbleCncptCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctInteraction_Interactant_ItmCdbleCncpt_Cdg_Vrsn"/>
+        </property>
+        <property name="mdcnlPrdctInteractionInteractantItmCdbleCncptTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctInteraction_Interactant_ItmCdbleCncpt_Txt"/>
+        </property>
+        <property name="mdcnlPrdctInteractionInteractantItmRfrnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctInteraction_Interactant_ItmRfrnc"/>
+        </property>
+        <property name="mdcnlPrdctInteractionManagementCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctInteraction_Management_Cdg_Cd"/>
+        </property>
+        <property name="mdcnlPrdctInteractionManagementCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctInteraction_Management_Cdg_Dsply"/>
+        </property>
+        <property name="mdcnlPrdctInteractionManagementCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctInteraction_Management_Cdg_Sys"/>
+        </property>
+        <property name="mdcnlPrdctInteractionManagementCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctInteraction_Management_Cdg_UsrSltd"/>
+        </property>
+        <property name="mdcnlPrdctInteractionManagementCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctInteraction_Management_Cdg_Vrsn"/>
+        </property>
+        <property name="mdcnlPrdctInteractionManagementTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctInteraction_Management_Txt"/>
+        </property>
+        <property name="mdcnlPrdctInteractionSbjct" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctInteraction_Sbjct"/>
+        </property>
+        <property name="mdcnlPrdctInteractionTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctInteraction_Typ_Cdg_Cd"/>
+        </property>
+        <property name="mdcnlPrdctInteractionTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctInteraction_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="mdcnlPrdctInteractionTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctInteraction_Typ_Cdg_Sys"/>
+        </property>
+        <property name="mdcnlPrdctInteractionTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctInteraction_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="mdcnlPrdctInteractionTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctInteraction_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="mdcnlPrdctInteractionTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctInteraction_Typ_Txt"/>
+        </property>
+    </class>
+</hibernate-mapping>

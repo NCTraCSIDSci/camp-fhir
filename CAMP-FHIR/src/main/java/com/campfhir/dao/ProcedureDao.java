@@ -1,10 +1,11 @@
+//// default package
 package main.java.com.campfhir.dao;
+// Generated on Jun 6, 2022, 11:02:34 AM 
+
 
 import java.io.IOException;
-import java.util.List;
-
 import javax.xml.parsers.ParserConfigurationException;
-
+import main.java.utils.HibernateBaseDB;
 import org.hibernate.ScrollMode;
 import org.hibernate.ScrollableResults;
 import org.hibernate.Session;
@@ -14,40 +15,35 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.xml.sax.SAXException;
 
-import main.java.com.campfhir.model.Procedure;
-
-import main.java.utils.HibernateBaseDB;
-
 /**
-*
-* @author  James Champion
-* @version 1.0
-* @since   2019-02-08 
-*/
-public class ProcedureDao implements ProcedureDaoInterface<Procedure, String> 
-{
+ *  object for domain model class Procedure.
+ * @see .Procedure
+ * @author Paul Kovach
+ */
+
+public class ProcedureDao {
+
 	private Session currentSession;
 	private SessionFactory sessionFactory;
 	
 	private Transaction currentTransaction;
 
 	public ProcedureDao() {}
-
-	public Session openCurrentSession() throws ParserConfigurationException, SAXException, IOException 
+	
+    public Session openCurrentSession() throws ParserConfigurationException, SAXException, IOException 
 	{
-		sessionFactory = HibernateBaseDB.getSessionFactory();
+		sessionFactory =  HibernateBaseDB.getSessionFactory();
 		currentSession = sessionFactory.openSession();
 		return currentSession;
 	}
-
-	public Session openCurrentSessionwithTransaction() throws ParserConfigurationException, SAXException, IOException 
+    
+    public Session openCurrentSessionwithTransaction() throws ParserConfigurationException, SAXException, IOException 
 	{
 		sessionFactory = HibernateBaseDB.getSessionFactory();
 		currentSession = sessionFactory.openSession();
 		currentTransaction = currentSession.beginTransaction();
 		return currentSession;
 	}
-	
 	public void closeCurrentSession() 
 	{
 		currentSession.close();
@@ -58,16 +54,16 @@ public class ProcedureDao implements ProcedureDaoInterface<Procedure, String>
 		currentTransaction.commit();
 		currentSession.close();
 	}
-	
-	private static SessionFactory getSessionFactory() 
-	{
+    
+    private static SessionFactory getSessionFactory() 
+	{ 
 		Configuration configuration = new Configuration().configure();
 		StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder()
 				.applySettings(configuration.getProperties());
 		SessionFactory sessionFactory = configuration.buildSessionFactory(builder.build());
 		return sessionFactory;
 	}
-
+	
 	public Session getCurrentSession() 
 	{
 		return currentSession;
@@ -88,23 +84,23 @@ public class ProcedureDao implements ProcedureDaoInterface<Procedure, String>
 		this.currentTransaction = currentTransaction;
 	}
 
-	public void persist(Procedure entity) 
+	public void persist( main.java.com.campfhir.model.Procedure entity) 
 	{
 		getCurrentSession().save(entity);
 	}
 
-	public void update(Procedure entity) 
+	public void update( main.java.com.campfhir.model.Procedure entity) 
 	{
 		getCurrentSession().update(entity);
 	}
 
-	public Procedure findById(String id) 
+	public  main.java.com.campfhir.model.Procedure findById(String id) 
 	{
-		Procedure procedure = (Procedure) getCurrentSession().get(Procedure.class, id);
-		return procedure; 
+		main.java.com.campfhir.model.Procedure resource = (main.java.com.campfhir.model.Procedure) getCurrentSession().get(main.java.com.campfhir.model.Procedure.class, id);
+		return resource; 
 	}
-
-	public void delete(Procedure entity) 
+	
+	public void delete(main.java.com.campfhir.model.Procedure entity) 
 	{
 		getCurrentSession().delete(entity);
 	}
@@ -112,19 +108,24 @@ public class ProcedureDao implements ProcedureDaoInterface<Procedure, String>
 	@SuppressWarnings("unchecked")
 	public ScrollableResults findAll() 
 	{
-		ScrollableResults procedures = getCurrentSession().createQuery("FROM Procedure")
+		return getCurrentSession().createQuery("FROM Procedure")
+				.setReadOnly(true)
+
+		        .setCacheable(true)
+		    .scroll(ScrollMode.FORWARD_ONLY);
+	}
+	
+	public ScrollableResults findAll(int start, int max) 
+	{
+		ScrollableResults resources = getCurrentSession().createQuery("FROM Procedure")
+				.setFirstResult(start)
+				.setMaxResults(max)
 				.setReadOnly(true)
 		        .setCacheable(true)
-			    .scroll(ScrollMode.FORWARD_ONLY);
-		
-		return procedures;
+		    .scroll(ScrollMode.FORWARD_ONLY);
+		return resources;
 	}
 
-	public void deleteAll() 
-	{
-//		List<Procedure> entityList = findAll();
-//		for (Procedure entity : entityList) {
-//			delete(entity);
-//		}
-	}
+
 }
+

@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Jun 6, 2022, 11:02:25 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="FamilyMemberHistory" optimistic-lock="none" table="FamilyMemberHistory">
+        <id name="id" type="string">
+            <column length="64" name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="fmlyMmbrHisAgeRngHiCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_AgeRng_Hi_Cd"/>
+        </property>
+        <property name="fmlyMmbrHisAgeRngHiCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_AgeRng_Hi_Cmprtr"/>
+        </property>
+        <property name="fmlyMmbrHisAgeRngHiSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_AgeRng_Hi_Sys"/>
+        </property>
+        <property name="fmlyMmbrHisAgeRngHiUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_AgeRng_Hi_Unt"/>
+        </property>
+        <property name="fmlyMmbrHisAgeRngHiVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_AgeRng_Hi_Vl"/>
+        </property>
+        <property name="fmlyMmbrHisAgeRngLwCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_AgeRng_Lw_Cd"/>
+        </property>
+        <property name="fmlyMmbrHisAgeRngLwCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_AgeRng_Lw_Cmprtr"/>
+        </property>
+        <property name="fmlyMmbrHisAgeRngLwSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_AgeRng_Lw_Sys"/>
+        </property>
+        <property name="fmlyMmbrHisAgeRngLwUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_AgeRng_Lw_Unt"/>
+        </property>
+        <property name="fmlyMmbrHisAgeRngLwVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_AgeRng_Lw_Vl"/>
+        </property>
+        <property name="fmlyMmbrHisAgeStrgTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_AgeStrgTyp"/>
+        </property>
+        <property name="fmlyMmbrHisBornDtTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_BornDtTyp"/>
+        </property>
+        <property name="fmlyMmbrHisBornPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_BornPrd_End"/>
+        </property>
+        <property name="fmlyMmbrHisBornPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_BornPrd_Strt"/>
+        </property>
+        <property name="fmlyMmbrHisBornStrgTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_BornStrgTyp"/>
+        </property>
+        <property name="fmlyMmbrHisCndtnCdCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Cndtn_Cd_Cdg_Cd"/>
+        </property>
+        <property name="fmlyMmbrHisCndtnCdCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Cndtn_Cd_Cdg_Dsply"/>
+        </property>
+        <property name="fmlyMmbrHisCndtnCdCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Cndtn_Cd_Cdg_Sys"/>
+        </property>
+        <property name="fmlyMmbrHisCndtnCdCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Cndtn_Cd_Cdg_UsrSltd"/>
+        </property>
+        <property name="fmlyMmbrHisCndtnCdCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Cndtn_Cd_Cdg_Vrsn"/>
+        </property>
+        <property name="fmlyMmbrHisCndtnCdTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Cndtn_Cd_Txt"/>
+        </property>
+        <property name="fmlyMmbrHisCndtnContributedToDeath" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Cndtn_ContributedToDeath"/>
+        </property>
+        <property name="fmlyMmbrHisCndtnNtAthrRfrnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Cndtn_Nt_AthrRfrnc"/>
+        </property>
+        <property name="fmlyMmbrHisCndtnNtAthrStrgTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Cndtn_Nt_AthrStrgTyp"/>
+        </property>
+        <property name="fmlyMmbrHisCndtnNtTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Cndtn_Nt_Txt"/>
+        </property>
+        <property name="fmlyMmbrHisCndtnNtTime" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Cndtn_Nt_Time"/>
+        </property>
+        <property name="fmlyMmbrHisCndtnOnPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Cndtn_OnPrd_End"/>
+        </property>
+        <property name="fmlyMmbrHisCndtnOnPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Cndtn_OnPrd_Strt"/>
+        </property>
+        <property name="fmlyMmbrHisCndtnOnRngHiCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Cndtn_OnRng_Hi_Cd"/>
+        </property>
+        <property name="fmlyMmbrHisCndtnOnRngHiCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Cndtn_OnRng_Hi_Cmprtr"/>
+        </property>
+        <property name="fmlyMmbrHisCndtnOnRngHiSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Cndtn_OnRng_Hi_Sys"/>
+        </property>
+        <property name="fmlyMmbrHisCndtnOnRngHiUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Cndtn_OnRng_Hi_Unt"/>
+        </property>
+        <property name="fmlyMmbrHisCndtnOnRngHiVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Cndtn_OnRng_Hi_Vl"/>
+        </property>
+        <property name="fmlyMmbrHisCndtnOnRngLwCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Cndtn_OnRng_Lw_Cd"/>
+        </property>
+        <property name="fmlyMmbrHisCndtnOnRngLwCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Cndtn_OnRng_Lw_Cmprtr"/>
+        </property>
+        <property name="fmlyMmbrHisCndtnOnRngLwSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Cndtn_OnRng_Lw_Sys"/>
+        </property>
+        <property name="fmlyMmbrHisCndtnOnRngLwUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Cndtn_OnRng_Lw_Unt"/>
+        </property>
+        <property name="fmlyMmbrHisCndtnOnRngLwVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Cndtn_OnRng_Lw_Vl"/>
+        </property>
+        <property name="fmlyMmbrHisCndtnOnStrgTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Cndtn_OnStrgTyp"/>
+        </property>
+        <property name="fmlyMmbrHisCndtnOutcomeCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Cndtn_Outcome_Cdg_Cd"/>
+        </property>
+        <property name="fmlyMmbrHisCndtnOutcomeCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Cndtn_Outcome_Cdg_Dsply"/>
+        </property>
+        <property name="fmlyMmbrHisCndtnOutcomeCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Cndtn_Outcome_Cdg_Sys"/>
+        </property>
+        <property name="fmlyMmbrHisCndtnOutcomeCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Cndtn_Outcome_Cdg_UsrSltd"/>
+        </property>
+        <property name="fmlyMmbrHisCndtnOutcomeCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Cndtn_Outcome_Cdg_Vrsn"/>
+        </property>
+        <property name="fmlyMmbrHisCndtnOutcomeTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Cndtn_Outcome_Txt"/>
+        </property>
+        <property name="fmlyMmbrHisDataAbsentRsnCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_DataAbsentRsn_Cdg_Cd"/>
+        </property>
+        <property name="fmlyMmbrHisDataAbsentRsnCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_DataAbsentRsn_Cdg_Dsply"/>
+        </property>
+        <property name="fmlyMmbrHisDataAbsentRsnCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_DataAbsentRsn_Cdg_Sys"/>
+        </property>
+        <property name="fmlyMmbrHisDataAbsentRsnCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_DataAbsentRsn_Cdg_UsrSltd"/>
+        </property>
+        <property name="fmlyMmbrHisDataAbsentRsnCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_DataAbsentRsn_Cdg_Vrsn"/>
+        </property>
+        <property name="fmlyMmbrHisDataAbsentRsnTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_DataAbsentRsn_Txt"/>
+        </property>
+        <property name="fmlyMmbrHisDt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Dt"/>
+        </property>
+        <property name="fmlyMmbrHisDeceasedBooleanTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_DeceasedBooleanTyp"/>
+        </property>
+        <property name="fmlyMmbrHisDeceasedDtTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_DeceasedDtTyp"/>
+        </property>
+        <property name="fmlyMmbrHisDeceasedRngHiCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_DeceasedRng_Hi_Cd"/>
+        </property>
+        <property name="fmlyMmbrHisDeceasedRngHiCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_DeceasedRng_Hi_Cmprtr"/>
+        </property>
+        <property name="fmlyMmbrHisDeceasedRngHiSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_DeceasedRng_Hi_Sys"/>
+        </property>
+        <property name="fmlyMmbrHisDeceasedRngHiUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_DeceasedRng_Hi_Unt"/>
+        </property>
+        <property name="fmlyMmbrHisDeceasedRngHiVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_DeceasedRng_Hi_Vl"/>
+        </property>
+        <property name="fmlyMmbrHisDeceasedRngLwCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_DeceasedRng_Lw_Cd"/>
+        </property>
+        <property name="fmlyMmbrHisDeceasedRngLwCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_DeceasedRng_Lw_Cmprtr"/>
+        </property>
+        <property name="fmlyMmbrHisDeceasedRngLwSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_DeceasedRng_Lw_Sys"/>
+        </property>
+        <property name="fmlyMmbrHisDeceasedRngLwUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_DeceasedRng_Lw_Unt"/>
+        </property>
+        <property name="fmlyMmbrHisDeceasedRngLwVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_DeceasedRng_Lw_Vl"/>
+        </property>
+        <property name="fmlyMmbrHisDeceasedStrgTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_DeceasedStrgTyp"/>
+        </property>
+        <property name="fmlyMmbrHisEstmtdAge" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_EstmtdAge"/>
+        </property>
+        <property name="fmlyMmbrHisIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Id_Assigner"/>
+        </property>
+        <property name="fmlyMmbrHisIdPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Id_Prd_End"/>
+        </property>
+        <property name="fmlyMmbrHisIdPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Id_Prd_Strt"/>
+        </property>
+        <property name="fmlyMmbrHisIdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Id_Sys"/>
+        </property>
+        <property name="fmlyMmbrHisIdTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Id_Typ_Cdg_Cd"/>
+        </property>
+        <property name="fmlyMmbrHisIdTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Id_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="fmlyMmbrHisIdTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Id_Typ_Cdg_Sys"/>
+        </property>
+        <property name="fmlyMmbrHisIdTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Id_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="fmlyMmbrHisIdTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Id_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="fmlyMmbrHisIdTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Id_Typ_Txt"/>
+        </property>
+        <property name="fmlyMmbrHisIdUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Id_Use"/>
+        </property>
+        <property name="fmlyMmbrHisIdVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Id_Vl"/>
+        </property>
+        <property name="fmlyMmbrHisInstantiatesCanonical" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_InstantiatesCanonical"/>
+        </property>
+        <property name="fmlyMmbrHisInstantiatesUri" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_InstantiatesUri"/>
+        </property>
+        <property name="fmlyMmbrHisNm" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Nm"/>
+        </property>
+        <property name="fmlyMmbrHisNtAthrRfrnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Nt_AthrRfrnc"/>
+        </property>
+        <property name="fmlyMmbrHisNtAthrStrgTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Nt_AthrStrgTyp"/>
+        </property>
+        <property name="fmlyMmbrHisNtTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Nt_Txt"/>
+        </property>
+        <property name="fmlyMmbrHisNtTime" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Nt_Time"/>
+        </property>
+        <property name="fmlyMmbrHisPnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Pnt"/>
+        </property>
+        <property name="fmlyMmbrHisRsnCdCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_RsnCd_Cdg_Cd"/>
+        </property>
+        <property name="fmlyMmbrHisRsnCdCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_RsnCd_Cdg_Dsply"/>
+        </property>
+        <property name="fmlyMmbrHisRsnCdCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_RsnCd_Cdg_Sys"/>
+        </property>
+        <property name="fmlyMmbrHisRsnCdCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_RsnCd_Cdg_UsrSltd"/>
+        </property>
+        <property name="fmlyMmbrHisRsnCdCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_RsnCd_Cdg_Vrsn"/>
+        </property>
+        <property name="fmlyMmbrHisRsnCdTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_RsnCd_Txt"/>
+        </property>
+        <property name="fmlyMmbrHisRsnRfrnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_RsnRfrnc"/>
+        </property>
+        <property name="fmlyMmbrHisRltnshipCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Rltnship_Cdg_Cd"/>
+        </property>
+        <property name="fmlyMmbrHisRltnshipCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Rltnship_Cdg_Dsply"/>
+        </property>
+        <property name="fmlyMmbrHisRltnshipCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Rltnship_Cdg_Sys"/>
+        </property>
+        <property name="fmlyMmbrHisRltnshipCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Rltnship_Cdg_UsrSltd"/>
+        </property>
+        <property name="fmlyMmbrHisRltnshipCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Rltnship_Cdg_Vrsn"/>
+        </property>
+        <property name="fmlyMmbrHisRltnshipTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Rltnship_Txt"/>
+        </property>
+        <property name="fmlyMmbrHisSexCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Sex_Cdg_Cd"/>
+        </property>
+        <property name="fmlyMmbrHisSexCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Sex_Cdg_Dsply"/>
+        </property>
+        <property name="fmlyMmbrHisSexCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Sex_Cdg_Sys"/>
+        </property>
+        <property name="fmlyMmbrHisSexCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Sex_Cdg_UsrSltd"/>
+        </property>
+        <property name="fmlyMmbrHisSexCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Sex_Cdg_Vrsn"/>
+        </property>
+        <property name="fmlyMmbrHisSexTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Sex_Txt"/>
+        </property>
+        <property name="fmlyMmbrHisSts" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Sts"/>
+        </property>
+    </class>
+</hibernate-mapping>

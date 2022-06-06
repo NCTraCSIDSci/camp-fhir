@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Jun 6, 2022, 11:02:25 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Composition" optimistic-lock="none" table="Composition">
+        <id name="id" type="string">
+            <column length="64" name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="cmpsitionAttesterMode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Attester_Mode"/>
+        </property>
+        <property name="cmpsitionAttesterParty" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Attester_Party"/>
+        </property>
+        <property name="cmpsitionAttesterTime" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Attester_Time"/>
+        </property>
+        <property name="cmpsitionAthr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Athr"/>
+        </property>
+        <property name="cmpsitionCtgryCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Ctgry_Cdg_Cd"/>
+        </property>
+        <property name="cmpsitionCtgryCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Ctgry_Cdg_Dsply"/>
+        </property>
+        <property name="cmpsitionCtgryCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Ctgry_Cdg_Sys"/>
+        </property>
+        <property name="cmpsitionCtgryCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Ctgry_Cdg_UsrSltd"/>
+        </property>
+        <property name="cmpsitionCtgryCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Ctgry_Cdg_Vrsn"/>
+        </property>
+        <property name="cmpsitionCtgryTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Ctgry_Txt"/>
+        </property>
+        <property name="cmpsitionConfidentiality" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Confidentiality"/>
+        </property>
+        <property name="cmpsitionCustodian" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Custodian"/>
+        </property>
+        <property name="cmpsitionDt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Dt"/>
+        </property>
+        <property name="cmpsitionEnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Enc"/>
+        </property>
+        <property name="cmpsitionEvntCdCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Evnt_Cd_Cdg_Cd"/>
+        </property>
+        <property name="cmpsitionEvntCdCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Evnt_Cd_Cdg_Dsply"/>
+        </property>
+        <property name="cmpsitionEvntCdCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Evnt_Cd_Cdg_Sys"/>
+        </property>
+        <property name="cmpsitionEvntCdCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Evnt_Cd_Cdg_UsrSltd"/>
+        </property>
+        <property name="cmpsitionEvntCdCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Evnt_Cd_Cdg_Vrsn"/>
+        </property>
+        <property name="cmpsitionEvntCdTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Evnt_Cd_Txt"/>
+        </property>
+        <property name="cmpsitionEvntDtl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Evnt_Dtl"/>
+        </property>
+        <property name="cmpsitionEvntPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Evnt_Prd_End"/>
+        </property>
+        <property name="cmpsitionEvntPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Evnt_Prd_Strt"/>
+        </property>
+        <property name="cmpsitionIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Id_Assigner"/>
+        </property>
+        <property name="cmpsitionIdPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Id_Prd_End"/>
+        </property>
+        <property name="cmpsitionIdPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Id_Prd_Strt"/>
+        </property>
+        <property name="cmpsitionIdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Id_Sys"/>
+        </property>
+        <property name="cmpsitionIdTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Id_Typ_Cdg_Cd"/>
+        </property>
+        <property name="cmpsitionIdTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Id_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="cmpsitionIdTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Id_Typ_Cdg_Sys"/>
+        </property>
+        <property name="cmpsitionIdTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Id_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="cmpsitionIdTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Id_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="cmpsitionIdTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Id_Typ_Txt"/>
+        </property>
+        <property name="cmpsitionIdUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Id_Use"/>
+        </property>
+        <property name="cmpsitionIdVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Id_Vl"/>
+        </property>
+        <property name="cmpsitionRelatesToCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_RelatesTo_Cd"/>
+        </property>
+        <property name="cmpsitionRelatesToTargetIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_RelatesTo_TargetId_Assigner"/>
+        </property>
+        <property name="cmpsitionRelatesToTargetIdPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_RelatesTo_TargetId_Prd_End"/>
+        </property>
+        <property name="cmpsitionRelatesToTargetIdPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_RelatesTo_TargetId_Prd_Strt"/>
+        </property>
+        <property name="cmpsitionRelatesToTargetIdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_RelatesTo_TargetId_Sys"/>
+        </property>
+        <property name="cmpsitionRelatesToTargetIdTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_RelatesTo_TargetId_Typ_Cdg_Cd"/>
+        </property>
+        <property name="cmpsitionRelatesToTargetIdTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_RelatesTo_TargetId_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="cmpsitionRelatesToTargetIdTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_RelatesTo_TargetId_Typ_Cdg_Sys"/>
+        </property>
+        <property name="cmpsitionRelatesToTargetIdTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_RelatesTo_TargetId_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="cmpsitionRelatesToTargetIdTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_RelatesTo_TargetId_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="cmpsitionRelatesToTargetIdTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_RelatesTo_TargetId_Typ_Txt"/>
+        </property>
+        <property name="cmpsitionRelatesToTargetIdUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_RelatesTo_TargetId_Use"/>
+        </property>
+        <property name="cmpsitionRelatesToTargetIdVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_RelatesTo_TargetId_Vl"/>
+        </property>
+        <property name="cmpsitionRelatesToTarRfrnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_RelatesTo_TarRfrnc"/>
+        </property>
+        <property name="cmpsitionSectionAthr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Section_Athr"/>
+        </property>
+        <property name="cmpsitionSectionCdCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Section_Cd_Cdg_Cd"/>
+        </property>
+        <property name="cmpsitionSectionCdCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Section_Cd_Cdg_Dsply"/>
+        </property>
+        <property name="cmpsitionSectionCdCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Section_Cd_Cdg_Sys"/>
+        </property>
+        <property name="cmpsitionSectionCdCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Section_Cd_Cdg_UsrSltd"/>
+        </property>
+        <property name="cmpsitionSectionCdCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Section_Cd_Cdg_Vrsn"/>
+        </property>
+        <property name="cmpsitionSectionCdTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Section_Cd_Txt"/>
+        </property>
+        <property name="cmpsitionSectionEmptyRsnCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Section_EmptyRsn_Cdg_Cd"/>
+        </property>
+        <property name="cmpsitionSectionEmptyRsnCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Section_EmptyRsn_Cdg_Dsply"/>
+        </property>
+        <property name="cmpsitionSectionEmptyRsnCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Section_EmptyRsn_Cdg_Sys"/>
+        </property>
+        <property name="cmpsitionSectionEmptyRsnCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Section_EmptyRsn_Cdg_UsrSltd"/>
+        </property>
+        <property name="cmpsitionSectionEmptyRsnCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Section_EmptyRsn_Cdg_Vrsn"/>
+        </property>
+        <property name="cmpsitionSectionEmptyRsnTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Section_EmptyRsn_Txt"/>
+        </property>
+        <property name="cmpsitionSectionEntry" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Section_Entry"/>
+        </property>
+        <property name="cmpsitionSectionFocus" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Section_Focus"/>
+        </property>
+        <property name="cmpsitionSectionMode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Section_Mode"/>
+        </property>
+        <property name="cmpsitionSectionOrdredByCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Section_OrdredBy_Cdg_Cd"/>
+        </property>
+        <property name="cmpsitionSectionOrdredByCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Section_OrdredBy_Cdg_Dsply"/>
+        </property>
+        <property name="cmpsitionSectionOrdredByCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Section_OrdredBy_Cdg_Sys"/>
+        </property>
+        <property name="cmpsitionSectionOrdredByCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Section_OrdredBy_Cdg_UsrSltd"/>
+        </property>
+        <property name="cmpsitionSectionOrdredByCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Section_OrdredBy_Cdg_Vrsn"/>
+        </property>
+        <property name="cmpsitionSectionOrdredByTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Section_OrdredBy_Txt"/>
+        </property>
+        <property name="cmpsitionSectionTxtDivDivAsStrg" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Section_Txt_Div_DivAsStrg"/>
+        </property>
+        <property name="cmpsitionSectionTxtDivStsAsStrg" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Section_Txt_Div_StsAsStrg"/>
+        </property>
+        <property name="cmpsitionSectionTxtSts" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Section_Txt_Sts"/>
+        </property>
+        <property name="cmpsitionSectionTtl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Section_Ttl"/>
+        </property>
+        <property name="cmpsitionSts" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Sts"/>
+        </property>
+        <property name="cmpsitionSbjct" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Sbjct"/>
+        </property>
+        <property name="cmpsitionTtl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Ttl"/>
+        </property>
+        <property name="cmpsitionTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Typ_Cdg_Cd"/>
+        </property>
+        <property name="cmpsitionTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="cmpsitionTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Typ_Cdg_Sys"/>
+        </property>
+        <property name="cmpsitionTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="cmpsitionTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="cmpsitionTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cmpsition_Typ_Txt"/>
+        </property>
+    </class>
+</hibernate-mapping>

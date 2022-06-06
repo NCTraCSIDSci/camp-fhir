@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Jun 6, 2022, 11:02:25 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="InsurancePlan" optimistic-lock="none" table="InsurancePlan">
+        <id name="id" type="string">
+            <column length="64" name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="insrncPlnAdministeredBy" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_AdministeredBy"/>
+        </property>
+        <property name="insrncPlnAlias" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Alias"/>
+        </property>
+        <property name="insrncPlnCntctAddrCity" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Cntct_Addr_City"/>
+        </property>
+        <property name="insrncPlnCntctAddrCntry" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Cntct_Addr_Cntry"/>
+        </property>
+        <property name="insrncPlnCntctAddrDistrict" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Cntct_Addr_District"/>
+        </property>
+        <property name="insrncPlnCntctAddrLine" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Cntct_Addr_Line"/>
+        </property>
+        <property name="insrncPlnCntctAddrPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Cntct_Addr_Prd_End"/>
+        </property>
+        <property name="insrncPlnCntctAddrPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Cntct_Addr_Prd_Strt"/>
+        </property>
+        <property name="insrncPlnCntctAddrPostalCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Cntct_Addr_PostalCd"/>
+        </property>
+        <property name="insrncPlnCntctAddrState" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Cntct_Addr_State"/>
+        </property>
+        <property name="insrncPlnCntctAddrTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Cntct_Addr_Txt"/>
+        </property>
+        <property name="insrncPlnCntctAddrTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Cntct_Addr_Typ"/>
+        </property>
+        <property name="insrncPlnCntctAddrUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Cntct_Addr_Use"/>
+        </property>
+        <property name="insrncPlnCntctNmFmly" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Cntct_Nm_Fmly"/>
+        </property>
+        <property name="insrncPlnCntctNmGiven" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Cntct_Nm_Given"/>
+        </property>
+        <property name="insrncPlnCntctNmPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Cntct_Nm_Prd_End"/>
+        </property>
+        <property name="insrncPlnCntctNmPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Cntct_Nm_Prd_Strt"/>
+        </property>
+        <property name="insrncPlnCntctNmPrefix" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Cntct_Nm_Prefix"/>
+        </property>
+        <property name="insrncPlnCntctNmSuffix" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Cntct_Nm_Suffix"/>
+        </property>
+        <property name="insrncPlnCntctNmTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Cntct_Nm_Txt"/>
+        </property>
+        <property name="insrncPlnCntctNmUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Cntct_Nm_Use"/>
+        </property>
+        <property name="insrncPlnCntctPrpseCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Cntct_Prpse_Cdg_Cd"/>
+        </property>
+        <property name="insrncPlnCntctPrpseCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Cntct_Prpse_Cdg_Dsply"/>
+        </property>
+        <property name="insrncPlnCntctPrpseCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Cntct_Prpse_Cdg_Sys"/>
+        </property>
+        <property name="insrncPlnCntctPrpseCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Cntct_Prpse_Cdg_UsrSltd"/>
+        </property>
+        <property name="insrncPlnCntctPrpseCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Cntct_Prpse_Cdg_Vrsn"/>
+        </property>
+        <property name="insrncPlnCntctPrpseTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Cntct_Prpse_Txt"/>
+        </property>
+        <property name="insrncPlnCntctTlcmPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Cntct_Tlcm_Prd_End"/>
+        </property>
+        <property name="insrncPlnCntctTlcmPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Cntct_Tlcm_Prd_Strt"/>
+        </property>
+        <property name="insrncPlnCntctTlcmRnk" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Cntct_Tlcm_Rnk"/>
+        </property>
+        <property name="insrncPlnCntctTlcmSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Cntct_Tlcm_Sys"/>
+        </property>
+        <property name="insrncPlnCntctTlcmUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Cntct_Tlcm_Use"/>
+        </property>
+        <property name="insrncPlnCntctTlcmVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Cntct_Tlcm_Vl"/>
+        </property>
+        <property name="insrncPlnCvgBnftLmtCdCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Cvg_Bnft_Lmt_Cd_Cdg_Cd"/>
+        </property>
+        <property name="insrncPlnCvgBnftLmtCdCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Cvg_Bnft_Lmt_Cd_Cdg_Dsply"/>
+        </property>
+        <property name="insrncPlnCvgBnftLmtCdCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Cvg_Bnft_Lmt_Cd_Cdg_Sys"/>
+        </property>
+        <property name="insrncPlnCvgBnftLmtCdCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Cvg_Bnft_Lmt_Cd_Cdg_UsrSltd"/>
+        </property>
+        <property name="insrncPlnCvgBnftLmtCdCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Cvg_Bnft_Lmt_Cd_Cdg_Vrsn"/>
+        </property>
+        <property name="insrncPlnCvgBnftLmtCdTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Cvg_Bnft_Lmt_Cd_Txt"/>
+        </property>
+        <property name="insrncPlnCvgBnftLmtVlCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Cvg_Bnft_Lmt_Vl_Cd"/>
+        </property>
+        <property name="insrncPlnCvgBnftLmtVlCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Cvg_Bnft_Lmt_Vl_Cmprtr"/>
+        </property>
+        <property name="insrncPlnCvgBnftLmtVlSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Cvg_Bnft_Lmt_Vl_Sys"/>
+        </property>
+        <property name="insrncPlnCvgBnftLmtVlUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Cvg_Bnft_Lmt_Vl_Unt"/>
+        </property>
+        <property name="insrncPlnCvgBnftLmtVlVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Cvg_Bnft_Lmt_Vl_Vl"/>
+        </property>
+        <property name="insrncPlnCvgBnftRqrment" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Cvg_Bnft_Rqrment"/>
+        </property>
+        <property name="insrncPlnCvgBnftTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Cvg_Bnft_Typ_Cdg_Cd"/>
+        </property>
+        <property name="insrncPlnCvgBnftTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Cvg_Bnft_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="insrncPlnCvgBnftTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Cvg_Bnft_Typ_Cdg_Sys"/>
+        </property>
+        <property name="insrncPlnCvgBnftTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Cvg_Bnft_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="insrncPlnCvgBnftTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Cvg_Bnft_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="insrncPlnCvgBnftTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Cvg_Bnft_Typ_Txt"/>
+        </property>
+        <property name="insrncPlnCvgNetwork" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Cvg_Network"/>
+        </property>
+        <property name="insrncPlnCvgTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Cvg_Typ_Cdg_Cd"/>
+        </property>
+        <property name="insrncPlnCvgTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Cvg_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="insrncPlnCvgTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Cvg_Typ_Cdg_Sys"/>
+        </property>
+        <property name="insrncPlnCvgTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Cvg_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="insrncPlnCvgTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Cvg_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="insrncPlnCvgTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Cvg_Typ_Txt"/>
+        </property>
+        <property name="insrncPlnCvgArea" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_CvgArea"/>
+        </property>
+        <property name="insrncPlnEndpoint" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Endpoint"/>
+        </property>
+        <property name="insrncPlnIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Id_Assigner"/>
+        </property>
+        <property name="insrncPlnIdPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Id_Prd_End"/>
+        </property>
+        <property name="insrncPlnIdPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Id_Prd_Strt"/>
+        </property>
+        <property name="insrncPlnIdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Id_Sys"/>
+        </property>
+        <property name="insrncPlnIdTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Id_Typ_Cdg_Cd"/>
+        </property>
+        <property name="insrncPlnIdTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Id_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="insrncPlnIdTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Id_Typ_Cdg_Sys"/>
+        </property>
+        <property name="insrncPlnIdTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Id_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="insrncPlnIdTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Id_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="insrncPlnIdTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Id_Typ_Txt"/>
+        </property>
+        <property name="insrncPlnIdUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Id_Use"/>
+        </property>
+        <property name="insrncPlnIdVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Id_Vl"/>
+        </property>
+        <property name="insrncPlnNm" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Nm"/>
+        </property>
+        <property name="insrncPlnNetwork" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Network"/>
+        </property>
+        <property name="insrncPlnOwnedBy" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_OwnedBy"/>
+        </property>
+        <property name="insrncPlnPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Prd_End"/>
+        </property>
+        <property name="insrncPlnPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Prd_Strt"/>
+        </property>
+        <property name="insrncPlnPlnCvgArea" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_CvgArea"/>
+        </property>
+        <property name="insrncPlnPlnGeneralCstComment" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_GeneralCst_Comment"/>
+        </property>
+        <property name="insrncPlnPlnGeneralCstCstCrncy" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_GeneralCst_Cst_Crncy"/>
+        </property>
+        <property name="insrncPlnPlnGeneralCstCstVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_GeneralCst_Cst_Vl"/>
+        </property>
+        <property name="insrncPlnPlnGeneralCstGrpSz" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_GeneralCst_GrpSz"/>
+        </property>
+        <property name="insrncPlnPlnGeneralCstTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_GeneralCst_Typ_Cdg_Cd"/>
+        </property>
+        <property name="insrncPlnPlnGeneralCstTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_GeneralCst_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="insrncPlnPlnGeneralCstTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_GeneralCst_Typ_Cdg_Sys"/>
+        </property>
+        <property name="insrncPlnPlnGeneralCstTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_GeneralCst_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="insrncPlnPlnGeneralCstTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_GeneralCst_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="insrncPlnPlnGeneralCstTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_GeneralCst_Typ_Txt"/>
+        </property>
+        <property name="insrncPlnPlnIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_Id_Assigner"/>
+        </property>
+        <property name="insrncPlnPlnIdPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_Id_Prd_End"/>
+        </property>
+        <property name="insrncPlnPlnIdPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_Id_Prd_Strt"/>
+        </property>
+        <property name="insrncPlnPlnIdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_Id_Sys"/>
+        </property>
+        <property name="insrncPlnPlnIdTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_Id_Typ_Cdg_Cd"/>
+        </property>
+        <property name="insrncPlnPlnIdTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_Id_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="insrncPlnPlnIdTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_Id_Typ_Cdg_Sys"/>
+        </property>
+        <property name="insrncPlnPlnIdTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_Id_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="insrncPlnPlnIdTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_Id_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="insrncPlnPlnIdTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_Id_Typ_Txt"/>
+        </property>
+        <property name="insrncPlnPlnIdUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_Id_Use"/>
+        </property>
+        <property name="insrncPlnPlnIdVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_Id_Vl"/>
+        </property>
+        <property name="insrncPlnPlnNetwork" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_Network"/>
+        </property>
+        <property name="insrncPlnPlnSpecificCstBnftCstApplicabilityCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_SpecificCst_Bnft_Cst_Applicability_Cdg_Cd"/>
+        </property>
+        <property name="insrncPlnPlnSpecificCstBnftCstApplicabilityCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_SpecificCst_Bnft_Cst_Applicability_Cdg_Dsply"/>
+        </property>
+        <property name="insrncPlnPlnSpecificCstBnftCstApplicabilityCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_SpecificCst_Bnft_Cst_Applicability_Cdg_Sys"/>
+        </property>
+        <property name="insrncPlnPlnSpecificCstBnftCstApplicabilityCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_SpecificCst_Bnft_Cst_Applicability_Cdg_UsrSltd"/>
+        </property>
+        <property name="insrncPlnPlnSpecificCstBnftCstApplicabilityCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_SpecificCst_Bnft_Cst_Applicability_Cdg_Vrsn"/>
+        </property>
+        <property name="insrncPlnPlnSpecificCstBnftCstApplicabilityTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_SpecificCst_Bnft_Cst_Applicability_Txt"/>
+        </property>
+        <property name="insrncPlnPlnSpecificCstBnftCstQualifiersCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_SpecificCst_Bnft_Cst_Qualifiers_Cdg_Cd"/>
+        </property>
+        <property name="insrncPlnPlnSpecificCstBnftCstQualifiersCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_SpecificCst_Bnft_Cst_Qualifiers_Cdg_Dsply"/>
+        </property>
+        <property name="insrncPlnPlnSpecificCstBnftCstQualifiersCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_SpecificCst_Bnft_Cst_Qualifiers_Cdg_Sys"/>
+        </property>
+        <property name="insrncPlnPlnSpecificCstBnftCstQualifiersCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_SpecificCst_Bnft_Cst_Qualifiers_Cdg_UsrSltd"/>
+        </property>
+        <property name="insrncPlnPlnSpecificCstBnftCstQualifiersCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_SpecificCst_Bnft_Cst_Qualifiers_Cdg_Vrsn"/>
+        </property>
+        <property name="insrncPlnPlnSpecificCstBnftCstQualifiersTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_SpecificCst_Bnft_Cst_Qualifiers_Txt"/>
+        </property>
+        <property name="insrncPlnPlnSpecificCstBnftCstTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_SpecificCst_Bnft_Cst_Typ_Cdg_Cd"/>
+        </property>
+        <property name="insrncPlnPlnSpecificCstBnftCstTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_SpecificCst_Bnft_Cst_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="insrncPlnPlnSpecificCstBnftCstTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_SpecificCst_Bnft_Cst_Typ_Cdg_Sys"/>
+        </property>
+        <property name="insrncPlnPlnSpecificCstBnftCstTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_SpecificCst_Bnft_Cst_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="insrncPlnPlnSpecificCstBnftCstTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_SpecificCst_Bnft_Cst_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="insrncPlnPlnSpecificCstBnftCstTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_SpecificCst_Bnft_Cst_Typ_Txt"/>
+        </property>
+        <property name="insrncPlnPlnSpecificCstBnftCstVlCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_SpecificCst_Bnft_Cst_Vl_Cd"/>
+        </property>
+        <property name="insrncPlnPlnSpecificCstBnftCstVlCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_SpecificCst_Bnft_Cst_Vl_Cmprtr"/>
+        </property>
+        <property name="insrncPlnPlnSpecificCstBnftCstVlSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_SpecificCst_Bnft_Cst_Vl_Sys"/>
+        </property>
+        <property name="insrncPlnPlnSpecificCstBnftCstVlUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_SpecificCst_Bnft_Cst_Vl_Unt"/>
+        </property>
+        <property name="insrncPlnPlnSpecificCstBnftCstVlVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_SpecificCst_Bnft_Cst_Vl_Vl"/>
+        </property>
+        <property name="insrncPlnPlnSpecificCstBnftTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_SpecificCst_Bnft_Typ_Cdg_Cd"/>
+        </property>
+        <property name="insrncPlnPlnSpecificCstBnftTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_SpecificCst_Bnft_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="insrncPlnPlnSpecificCstBnftTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_SpecificCst_Bnft_Typ_Cdg_Sys"/>
+        </property>
+        <property name="insrncPlnPlnSpecificCstBnftTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_SpecificCst_Bnft_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="insrncPlnPlnSpecificCstBnftTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_SpecificCst_Bnft_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="insrncPlnPlnSpecificCstBnftTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_SpecificCst_Bnft_Typ_Txt"/>
+        </property>
+        <property name="insrncPlnPlnSpecificCstCtgryCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_SpecificCst_Ctgry_Cdg_Cd"/>
+        </property>
+        <property name="insrncPlnPlnSpecificCstCtgryCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_SpecificCst_Ctgry_Cdg_Dsply"/>
+        </property>
+        <property name="insrncPlnPlnSpecificCstCtgryCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_SpecificCst_Ctgry_Cdg_Sys"/>
+        </property>
+        <property name="insrncPlnPlnSpecificCstCtgryCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_SpecificCst_Ctgry_Cdg_UsrSltd"/>
+        </property>
+        <property name="insrncPlnPlnSpecificCstCtgryCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_SpecificCst_Ctgry_Cdg_Vrsn"/>
+        </property>
+        <property name="insrncPlnPlnSpecificCstCtgryTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_SpecificCst_Ctgry_Txt"/>
+        </property>
+        <property name="insrncPlnPlnTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_Typ_Cdg_Cd"/>
+        </property>
+        <property name="insrncPlnPlnTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="insrncPlnPlnTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_Typ_Cdg_Sys"/>
+        </property>
+        <property name="insrncPlnPlnTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="insrncPlnPlnTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="insrncPlnPlnTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Pln_Typ_Txt"/>
+        </property>
+        <property name="insrncPlnSts" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Sts"/>
+        </property>
+        <property name="insrncPlnTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Typ_Cdg_Cd"/>
+        </property>
+        <property name="insrncPlnTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="insrncPlnTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Typ_Cdg_Sys"/>
+        </property>
+        <property name="insrncPlnTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="insrncPlnTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="insrncPlnTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="InsrncPln_Typ_Txt"/>
+        </property>
+    </class>
+</hibernate-mapping>

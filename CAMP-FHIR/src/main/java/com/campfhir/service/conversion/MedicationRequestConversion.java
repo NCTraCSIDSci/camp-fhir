@@ -10,1446 +10,1303 @@ public class MedicationRequestConversion
 		/******************** id ********************************************************************************/
 		medicationrequest.setId(m.getId());
 
-		/******************** Medreq_AuthoredOn ********************************************************************************/
-		if(m.getMedreqAuthoredOn() != null) {
-			java.text.SimpleDateFormat MedreqAuthoredOnsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date MedreqAuthoredOndate = MedreqAuthoredOnsdf.parse(m.getMedreqAuthoredOn());
-			medicationrequest.setAuthoredOn(MedreqAuthoredOndate);
-		}
-		/******************** Medreq_BasedOn ********************************************************************************/
-		if(m.getMedreqBasedOn() != null) {
-			org.hl7.fhir.r4.model.Reference MedreqBasedOnref = new org.hl7.fhir.r4.model.Reference();
-			medicationrequest.addBasedOn(MedreqBasedOnref.setReference(m.getMedreqBasedOn()));
-		}
-
-		org.hl7.fhir.r4.model.CodeableConcept medicationrequestaddcategory = medicationrequest.addCategory();
-
-
-		org.hl7.fhir.r4.model.Coding medicationrequestaddcategoryaddcoding = medicationrequestaddcategory.addCoding();
-
-		/******************** Medreq_Category_Coding_Code ********************************************************************************/
-		if(m.getMedreqCategoryCodingCode() != null) {
-			medicationrequestaddcategoryaddcoding.setCode(m.getMedreqCategoryCodingCode());
-		}
-		/******************** Medreq_Category_Coding_Display ********************************************************************************/
-		if(m.getMedreqCategoryCodingDisplay() != null) {
-			medicationrequestaddcategoryaddcoding.setDisplay(m.getMedreqCategoryCodingDisplay());
-		}
-		/******************** Medreq_Category_Coding_System ********************************************************************************/
-		if(m.getMedreqCategoryCodingSystem() != null) {
-			medicationrequestaddcategoryaddcoding.setSystem(m.getMedreqCategoryCodingSystem());
-		}
-		/******************** Medreq_Category_Coding_Usrslt ********************************************************************************/
-		if(m.getMedreqCategoryCodingUsrslt() != null) {
-			medicationrequestaddcategoryaddcoding.setUserSelected(Boolean.parseBoolean(m.getMedreqCategoryCodingUsrslt()));
-		}
-		/******************** Medreq_Category_Coding_Version ********************************************************************************/
-		if(m.getMedreqCategoryCodingVersion() != null) {
-			medicationrequestaddcategoryaddcoding.setVersion(m.getMedreqCategoryCodingVersion());
-		}
-		/******************** Medreq_Category_Text ********************************************************************************/
-		if(m.getMedreqCategoryText() != null) {
-			medicationrequestaddcategory.setText(m.getMedreqCategoryText());
-		}
-
-		org.hl7.fhir.r4.model.CodeableConcept medicationrequestsetcourseoftherapytype = new org.hl7.fhir.r4.model.CodeableConcept();
-		medicationrequest.setCourseOfTherapyType(medicationrequestsetcourseoftherapytype);
-
-
-		org.hl7.fhir.r4.model.Coding medicationrequestsetcourseoftherapytypeaddcoding = medicationrequestsetcourseoftherapytype.addCoding();
-
-		/******************** Medreq_CourseOfTherapyType_Coding_Code ********************************************************************************/
-		if(m.getMedreqCourseOfTherapyTypeCodingCode() != null) {
-			medicationrequestsetcourseoftherapytypeaddcoding.setCode(m.getMedreqCourseOfTherapyTypeCodingCode());
-		}
-		/******************** Medreq_CourseOfTherapyType_Coding_Display ********************************************************************************/
-		if(m.getMedreqCourseOfTherapyTypeCodingDisplay() != null) {
-			medicationrequestsetcourseoftherapytypeaddcoding.setDisplay(m.getMedreqCourseOfTherapyTypeCodingDisplay());
-		}
-		/******************** Medreq_CourseOfTherapyType_Coding_System ********************************************************************************/
-		if(m.getMedreqCourseOfTherapyTypeCodingSystem() != null) {
-			medicationrequestsetcourseoftherapytypeaddcoding.setSystem(m.getMedreqCourseOfTherapyTypeCodingSystem());
-		}
-		/******************** Medreq_CourseOfTherapyType_Coding_Usrslt ********************************************************************************/
-		if(m.getMedreqCourseOfTherapyTypeCodingUsrslt() != null) {
-			medicationrequestsetcourseoftherapytypeaddcoding.setUserSelected(Boolean.parseBoolean(m.getMedreqCourseOfTherapyTypeCodingUsrslt()));
-		}
-		/******************** Medreq_CourseOfTherapyType_Coding_Version ********************************************************************************/
-		if(m.getMedreqCourseOfTherapyTypeCodingVersion() != null) {
-			medicationrequestsetcourseoftherapytypeaddcoding.setVersion(m.getMedreqCourseOfTherapyTypeCodingVersion());
-		}
-		/******************** Medreq_CourseOfTherapyType_Text ********************************************************************************/
-		if(m.getMedreqCourseOfTherapyTypeText() != null) {
-			medicationrequestsetcourseoftherapytype.setText(m.getMedreqCourseOfTherapyTypeText());
-		}
-		/******************** Medreq_DetectedIssue ********************************************************************************/
-		if(m.getMedreqDetectedIssue() != null) {
-			org.hl7.fhir.r4.model.Reference MedreqDetectedIssueref = new org.hl7.fhir.r4.model.Reference();
-			medicationrequest.addDetectedIssue(MedreqDetectedIssueref.setReference(m.getMedreqDetectedIssue()));
-		}
-
-		org.hl7.fhir.r4.model.MedicationRequest.MedicationRequestDispenseRequestComponent medicationrequestsetdispenserequest = new org.hl7.fhir.r4.model.MedicationRequest.MedicationRequestDispenseRequestComponent();
-		medicationrequest.setDispenseRequest(medicationrequestsetdispenserequest);
-
-		/******************** Medreq_DispenseRequest_DispenseInterval ********************************************************************************/
-		if(m.getMedreqDispenseRequestDispenseInterval() != null) {
-			org.hl7.fhir.r4.model.Duration MedreqDispenseRequestDispenseIntervaldur = new org.hl7.fhir.r4.model.Duration();
-			medicationrequestsetdispenserequest.setDispenseInterval((org.hl7.fhir.r4.model.Duration)MedreqDispenseRequestDispenseIntervaldur.setValue(Double.parseDouble(m.getMedreqDispenseRequestDispenseInterval())));
-		}
-		/******************** Medreq_DispenseRequest_ExpectedSupplyDuration ********************************************************************************/
-		if(m.getMedreqDispenseRequestExpectedSupplyDuration() != null) {
-			org.hl7.fhir.r4.model.Duration MedreqDispenseRequestExpectedSupplyDurationdur = new org.hl7.fhir.r4.model.Duration();
-			medicationrequestsetdispenserequest.setExpectedSupplyDuration((org.hl7.fhir.r4.model.Duration)MedreqDispenseRequestExpectedSupplyDurationdur.setValue(Double.parseDouble(m.getMedreqDispenseRequestExpectedSupplyDuration())));
-		}
-
-		org.hl7.fhir.r4.model.MedicationRequest.MedicationRequestDispenseRequestInitialFillComponent medicationrequestsetdispenserequestsetinitialfill = new org.hl7.fhir.r4.model.MedicationRequest.MedicationRequestDispenseRequestInitialFillComponent();
-		medicationrequestsetdispenserequest.setInitialFill(medicationrequestsetdispenserequestsetinitialfill);
-
-		/******************** Medreq_DispenseRequest_InitialFill_Duration ********************************************************************************/
-		if(m.getMedreqDispenseRequestInitialFillDuration() != null) {
-			org.hl7.fhir.r4.model.Duration MedreqDispenseRequestInitialFillDurationdur = new org.hl7.fhir.r4.model.Duration();
-			medicationrequestsetdispenserequestsetinitialfill.setDuration((org.hl7.fhir.r4.model.Duration)MedreqDispenseRequestInitialFillDurationdur.setValue(Double.parseDouble(m.getMedreqDispenseRequestInitialFillDuration())));
-		}
-
-		org.hl7.fhir.r4.model.Quantity medicationrequestsetdispenserequestsetinitialfillsetquantity = new org.hl7.fhir.r4.model.Quantity();
-		medicationrequestsetdispenserequestsetinitialfill.setQuantity(medicationrequestsetdispenserequestsetinitialfillsetquantity);
-
-		/******************** Medreq_DispenseRequest_InitialFill_Quantity_Code ********************************************************************************/
-		if(m.getMedreqDispenseRequestInitialFillQuantityCode() != null) {
-			medicationrequestsetdispenserequestsetinitialfillsetquantity.setCode(m.getMedreqDispenseRequestInitialFillQuantityCode());
-		}
-
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicationrequestsetdispenserequestsetinitialfillsetquantitysetcomparatorEnumFactory = new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-
-		/******************** Medreq_DispenseRequest_InitialFill_Quantity_Compartr_Code ********************************************************************************/
-		if(m.getMedreqDispenseRequestInitialFillQuantityCompartrCode() != null) {
-			medicationrequestsetdispenserequestsetinitialfillsetquantity.setComparator(medicationrequestsetdispenserequestsetinitialfillsetquantitysetcomparatorEnumFactory.fromCode(m.getMedreqDispenseRequestInitialFillQuantityCompartrCode()));
-
-		}
-		/******************** Medreq_DispenseRequest_InitialFill_Quantity_System ********************************************************************************/
-		if(m.getMedreqDispenseRequestInitialFillQuantitySystem() != null) {
-			medicationrequestsetdispenserequestsetinitialfillsetquantity.setSystem(m.getMedreqDispenseRequestInitialFillQuantitySystem());
-		}
-		/******************** Medreq_DispenseRequest_InitialFill_Quantity_Unit ********************************************************************************/
-		if(m.getMedreqDispenseRequestInitialFillQuantityUnit() != null) {
-			medicationrequestsetdispenserequestsetinitialfillsetquantity.setUnit(m.getMedreqDispenseRequestInitialFillQuantityUnit());
-		}
-		/******************** Medreq_DispenseRequest_InitialFill_Quantity_Value ********************************************************************************/
-		if(m.getMedreqDispenseRequestInitialFillQuantityValue() != null) {
-			medicationrequestsetdispenserequestsetinitialfillsetquantity.setValue(Double.parseDouble((m.getMedreqDispenseRequestInitialFillQuantityValue())));
-		}
-		/******************** Medreq_DispenseRequest_NumberOfRepeatsAllowed ********************************************************************************/
-		if(m.getMedreqDispenseRequestNumberOfRepeatsAllowed() != null) {
-			medicationrequestsetdispenserequest.setNumberOfRepeatsAllowed(Integer.parseInt(m.getMedreqDispenseRequestNumberOfRepeatsAllowed()));
-		}
-		/******************** Medreq_DispenseRequest_Performer ********************************************************************************/
-		if(m.getMedreqDispenseRequestPerformer() != null) {
-			org.hl7.fhir.r4.model.Reference MedreqDispenseRequestPerformerref = new org.hl7.fhir.r4.model.Reference();
-			medicationrequestsetdispenserequest.setPerformer(MedreqDispenseRequestPerformerref.setReference(m.getMedreqDispenseRequestPerformer()));
-		}
-
-		org.hl7.fhir.r4.model.Quantity medicationrequestsetdispenserequestsetquantity = new org.hl7.fhir.r4.model.Quantity();
-		medicationrequestsetdispenserequest.setQuantity(medicationrequestsetdispenserequestsetquantity);
-
-		/******************** Medreq_DispenseRequest_Quantity_Code ********************************************************************************/
-		if(m.getMedreqDispenseRequestQuantityCode() != null) {
-			medicationrequestsetdispenserequestsetquantity.setCode(m.getMedreqDispenseRequestQuantityCode());
-		}
-
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicationrequestsetdispenserequestsetquantitysetcomparatorEnumFactory = new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-
-		/******************** Medreq_DispenseRequest_Quantity_Compartr_Code ********************************************************************************/
-		if(m.getMedreqDispenseRequestQuantityCompartrCode() != null) {
-			medicationrequestsetdispenserequestsetquantity.setComparator(medicationrequestsetdispenserequestsetquantitysetcomparatorEnumFactory.fromCode(m.getMedreqDispenseRequestQuantityCompartrCode()));
-
-		}
-		/******************** Medreq_DispenseRequest_Quantity_System ********************************************************************************/
-		if(m.getMedreqDispenseRequestQuantitySystem() != null) {
-			medicationrequestsetdispenserequestsetquantity.setSystem(m.getMedreqDispenseRequestQuantitySystem());
-		}
-		/******************** Medreq_DispenseRequest_Quantity_Unit ********************************************************************************/
-		if(m.getMedreqDispenseRequestQuantityUnit() != null) {
-			medicationrequestsetdispenserequestsetquantity.setUnit(m.getMedreqDispenseRequestQuantityUnit());
-		}
-		/******************** Medreq_DispenseRequest_Quantity_Value ********************************************************************************/
-		if(m.getMedreqDispenseRequestQuantityValue() != null) {
-			medicationrequestsetdispenserequestsetquantity.setValue(Double.parseDouble((m.getMedreqDispenseRequestQuantityValue())));
-		}
-
-		org.hl7.fhir.r4.model.Period medicationrequestsetdispenserequestsetvalidityperiod = new org.hl7.fhir.r4.model.Period();
-		medicationrequestsetdispenserequest.setValidityPeriod(medicationrequestsetdispenserequestsetvalidityperiod);
-
-		/******************** Medreq_DispenseRequest_ValidityPeriod_End ********************************************************************************/
-		if(m.getMedreqDispenseRequestValidityPeriodEnd() != null) {
-			java.text.SimpleDateFormat MedreqDispenseRequestValidityPeriodEndsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date MedreqDispenseRequestValidityPeriodEnddate = MedreqDispenseRequestValidityPeriodEndsdf.parse(m.getMedreqDispenseRequestValidityPeriodEnd());
-			medicationrequestsetdispenserequestsetvalidityperiod.setEnd(MedreqDispenseRequestValidityPeriodEnddate);
-		}
-		/******************** Medreq_DispenseRequest_ValidityPeriod_Start ********************************************************************************/
-		if(m.getMedreqDispenseRequestValidityPeriodStart() != null) {
-			java.text.SimpleDateFormat MedreqDispenseRequestValidityPeriodStartsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date MedreqDispenseRequestValidityPeriodStartdate = MedreqDispenseRequestValidityPeriodStartsdf.parse(m.getMedreqDispenseRequestValidityPeriodStart());
-			medicationrequestsetdispenserequestsetvalidityperiod.setStart(MedreqDispenseRequestValidityPeriodStartdate);
-		}
-		/******************** Medreq_DoNotPerform ********************************************************************************/
-		if(m.getMedreqDoNotPerform() != null) {
-			medicationrequest.setDoNotPerform(Boolean.parseBoolean(m.getMedreqDoNotPerform()));
-		}
-
-		org.hl7.fhir.r4.model.Dosage medicationrequestadddosageinstruction = medicationrequest.addDosageInstruction();
-
-
-		org.hl7.fhir.r4.model.CodeableConcept medicationrequestadddosageinstructionaddadditionalinstruction = medicationrequestadddosageinstruction.addAdditionalInstruction();
-
-
-		org.hl7.fhir.r4.model.Coding medicationrequestadddosageinstructionaddadditionalinstructionaddcoding = medicationrequestadddosageinstructionaddadditionalinstruction.addCoding();
-
-		/******************** Medreq_Doseins_AdditionalInstruction_Coding_Code ********************************************************************************/
-		if(m.getMedreqDoseinsAdditionalInstructionCodingCode() != null) {
-			medicationrequestadddosageinstructionaddadditionalinstructionaddcoding.setCode(m.getMedreqDoseinsAdditionalInstructionCodingCode());
-		}
-		/******************** Medreq_Doseins_AdditionalInstruction_Coding_Display ********************************************************************************/
-		if(m.getMedreqDoseinsAdditionalInstructionCodingDisplay() != null) {
-			medicationrequestadddosageinstructionaddadditionalinstructionaddcoding.setDisplay(m.getMedreqDoseinsAdditionalInstructionCodingDisplay());
-		}
-		/******************** Medreq_Doseins_AdditionalInstruction_Coding_System ********************************************************************************/
-		if(m.getMedreqDoseinsAdditionalInstructionCodingSystem() != null) {
-			medicationrequestadddosageinstructionaddadditionalinstructionaddcoding.setSystem(m.getMedreqDoseinsAdditionalInstructionCodingSystem());
-		}
-		/******************** Medreq_Doseins_AdditionalInstruction_Coding_Usrslt ********************************************************************************/
-		if(m.getMedreqDoseinsAdditionalInstructionCodingUsrslt() != null) {
-			medicationrequestadddosageinstructionaddadditionalinstructionaddcoding.setUserSelected(Boolean.parseBoolean(m.getMedreqDoseinsAdditionalInstructionCodingUsrslt()));
-		}
-		/******************** Medreq_Doseins_AdditionalInstruction_Coding_Version ********************************************************************************/
-		if(m.getMedreqDoseinsAdditionalInstructionCodingVersion() != null) {
-			medicationrequestadddosageinstructionaddadditionalinstructionaddcoding.setVersion(m.getMedreqDoseinsAdditionalInstructionCodingVersion());
-		}
-		/******************** Medreq_Doseins_AdditionalInstruction_Text ********************************************************************************/
-		if(m.getMedreqDoseinsAdditionalInstructionText() != null) {
-			medicationrequestadddosageinstructionaddadditionalinstruction.setText(m.getMedreqDoseinsAdditionalInstructionText());
-		}
-		/******************** Medicationrequest_DosageInstruction_AsNeededBoolean ********************************************************************************/
-		if(m.getMedicationrequestDosageInstructionAsNeededBoolean() != null) {
-			medicationrequestadddosageinstruction.setAsNeeded(new org.hl7.fhir.r4.model.BooleanType(m.getMedicationrequestDosageInstructionAsNeededBoolean()));
-		}
-
-		if( m.getMedreqDoseinsAsNeededCodeableConceptCodingCode() != null || m.getMedreqDoseinsAsNeededCodeableConceptCodingDisplay() != null || m.getMedreqDoseinsAsNeededCodeableConceptCodingSystem() != null || m.getMedreqDoseinsAsNeededCodeableConceptCodingUsrslt() != null || m.getMedreqDoseinsAsNeededCodeableConceptCodingVersion() != null || m.getMedreqDoseinsAsNeededCodeableConceptText() != null ) {
-			org.hl7.fhir.r4.model.CodeableConcept medicationrequestadddosageinstructionsetasneededCodeableConcept = new org.hl7.fhir.r4.model.CodeableConcept();
-			medicationrequestadddosageinstruction.setAsNeeded(medicationrequestadddosageinstructionsetasneededCodeableConcept);
-
-
-		org.hl7.fhir.r4.model.Coding medicationrequestadddosageinstructionsetasneededCodeableConceptaddcoding = medicationrequestadddosageinstructionsetasneededCodeableConcept.addCoding();
-
-		/******************** Medreq_Doseins_AsNeeded_CodeableConcept_Coding_Code ********************************************************************************/
-		if(m.getMedreqDoseinsAsNeededCodeableConceptCodingCode() != null) {
-			medicationrequestadddosageinstructionsetasneededCodeableConceptaddcoding.setCode(m.getMedreqDoseinsAsNeededCodeableConceptCodingCode());
-		}
-		/******************** Medreq_Doseins_AsNeeded_CodeableConcept_Coding_Display ********************************************************************************/
-		if(m.getMedreqDoseinsAsNeededCodeableConceptCodingDisplay() != null) {
-			medicationrequestadddosageinstructionsetasneededCodeableConceptaddcoding.setDisplay(m.getMedreqDoseinsAsNeededCodeableConceptCodingDisplay());
-		}
-		/******************** Medreq_Doseins_AsNeeded_CodeableConcept_Coding_System ********************************************************************************/
-		if(m.getMedreqDoseinsAsNeededCodeableConceptCodingSystem() != null) {
-			medicationrequestadddosageinstructionsetasneededCodeableConceptaddcoding.setSystem(m.getMedreqDoseinsAsNeededCodeableConceptCodingSystem());
-		}
-		/******************** Medreq_Doseins_AsNeeded_CodeableConcept_Coding_Usrslt ********************************************************************************/
-		if(m.getMedreqDoseinsAsNeededCodeableConceptCodingUsrslt() != null) {
-			medicationrequestadddosageinstructionsetasneededCodeableConceptaddcoding.setUserSelected(Boolean.parseBoolean(m.getMedreqDoseinsAsNeededCodeableConceptCodingUsrslt()));
-		}
-		/******************** Medreq_Doseins_AsNeeded_CodeableConcept_Coding_Version ********************************************************************************/
-		if(m.getMedreqDoseinsAsNeededCodeableConceptCodingVersion() != null) {
-			medicationrequestadddosageinstructionsetasneededCodeableConceptaddcoding.setVersion(m.getMedreqDoseinsAsNeededCodeableConceptCodingVersion());
-		}
-		/******************** Medreq_Doseins_AsNeeded_CodeableConcept_Text ********************************************************************************/
-		if(m.getMedreqDoseinsAsNeededCodeableConceptText() != null) {
-			medicationrequestadddosageinstructionsetasneededCodeableConcept.setText(m.getMedreqDoseinsAsNeededCodeableConceptText());
-		}
-		}
-
-		org.hl7.fhir.r4.model.Dosage.DosageDoseAndRateComponent medicationrequestadddosageinstructionadddoseandrate = medicationrequestadddosageinstruction.addDoseAndRate();
-
-
-		if( m.getMedreqDoseinsDoseAndRateDoseQuantityCode() != null || m.getMedreqDoseinsDoseAndRateDoseQuantityCompartrCode() != null || m.getMedreqDoseinsDoseAndRateDoseQuantitySystem() != null || m.getMedreqDoseinsDoseAndRateDoseQuantityUnit() != null || m.getMedreqDoseinsDoseAndRateDoseQuantityValue() != null ) {
-			org.hl7.fhir.r4.model.Quantity medicationrequestadddosageinstructionadddoseandratesetdoseQuantity = new org.hl7.fhir.r4.model.Quantity();
-			medicationrequestadddosageinstructionadddoseandrate.setDose(medicationrequestadddosageinstructionadddoseandratesetdoseQuantity);
-
-		/******************** Medreq_Doseins_DoseAndRate_Dose_Quantity_Code ********************************************************************************/
-		if(m.getMedreqDoseinsDoseAndRateDoseQuantityCode() != null) {
-			medicationrequestadddosageinstructionadddoseandratesetdoseQuantity.setCode(m.getMedreqDoseinsDoseAndRateDoseQuantityCode());
-		}
-
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicationrequestadddosageinstructionadddoseandratesetdoseQuantitysetcomparatorEnumFactory = new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-
-		/******************** Medreq_Doseins_DoseAndRate_Dose_Quantity_Compartr_Code ********************************************************************************/
-		if(m.getMedreqDoseinsDoseAndRateDoseQuantityCompartrCode() != null) {
-			medicationrequestadddosageinstructionadddoseandratesetdoseQuantity.setComparator(medicationrequestadddosageinstructionadddoseandratesetdoseQuantitysetcomparatorEnumFactory.fromCode(m.getMedreqDoseinsDoseAndRateDoseQuantityCompartrCode()));
-
-		}
-		/******************** Medreq_Doseins_DoseAndRate_Dose_Quantity_System ********************************************************************************/
-		if(m.getMedreqDoseinsDoseAndRateDoseQuantitySystem() != null) {
-			medicationrequestadddosageinstructionadddoseandratesetdoseQuantity.setSystem(m.getMedreqDoseinsDoseAndRateDoseQuantitySystem());
-		}
-		/******************** Medreq_Doseins_DoseAndRate_Dose_Quantity_Unit ********************************************************************************/
-		if(m.getMedreqDoseinsDoseAndRateDoseQuantityUnit() != null) {
-			medicationrequestadddosageinstructionadddoseandratesetdoseQuantity.setUnit(m.getMedreqDoseinsDoseAndRateDoseQuantityUnit());
-		}
-		/******************** Medreq_Doseins_DoseAndRate_Dose_Quantity_Value ********************************************************************************/
-		if(m.getMedreqDoseinsDoseAndRateDoseQuantityValue() != null) {
-			medicationrequestadddosageinstructionadddoseandratesetdoseQuantity.setValue(Double.parseDouble((m.getMedreqDoseinsDoseAndRateDoseQuantityValue())));
-		}
-		}
-
-		if( m.getMedreqDoseinsDoseAndRateDoseRangeHighCode() != null || m.getMedreqDoseinsDoseAndRateDoseRangeHighCompartrCode() != null || m.getMedreqDoseinsDoseAndRateDoseRangeHighSystem() != null || m.getMedreqDoseinsDoseAndRateDoseRangeHighUnit() != null || m.getMedreqDoseinsDoseAndRateDoseRangeHighValue() != null || m.getMedreqDoseinsDoseAndRateDoseRangeLowCode() != null || m.getMedreqDoseinsDoseAndRateDoseRangeLowCompartrCode() != null || m.getMedreqDoseinsDoseAndRateDoseRangeLowSystem() != null || m.getMedreqDoseinsDoseAndRateDoseRangeLowUnit() != null || m.getMedreqDoseinsDoseAndRateDoseRangeLowValue() != null ) {
-			org.hl7.fhir.r4.model.Range medicationrequestadddosageinstructionadddoseandratesetdoseRange = new org.hl7.fhir.r4.model.Range();
-			medicationrequestadddosageinstructionadddoseandrate.setDose(medicationrequestadddosageinstructionadddoseandratesetdoseRange);
-
-
-		org.hl7.fhir.r4.model.Quantity medicationrequestadddosageinstructionadddoseandratesetdoseRangesethigh = new org.hl7.fhir.r4.model.Quantity();
-		medicationrequestadddosageinstructionadddoseandratesetdoseRange.setHigh(medicationrequestadddosageinstructionadddoseandratesetdoseRangesethigh);
-
-		/******************** Medreq_Doseins_DoseAndRate_Dose_Range_High_Code ********************************************************************************/
-		if(m.getMedreqDoseinsDoseAndRateDoseRangeHighCode() != null) {
-			medicationrequestadddosageinstructionadddoseandratesetdoseRangesethigh.setCode(m.getMedreqDoseinsDoseAndRateDoseRangeHighCode());
-		}
-
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicationrequestadddosageinstructionadddoseandratesetdoseRangesethighsetcomparatorEnumFactory = new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-
-		/******************** Medreq_Doseins_DoseAndRate_Dose_Range_High_Compartr_Code ********************************************************************************/
-		if(m.getMedreqDoseinsDoseAndRateDoseRangeHighCompartrCode() != null) {
-			medicationrequestadddosageinstructionadddoseandratesetdoseRangesethigh.setComparator(medicationrequestadddosageinstructionadddoseandratesetdoseRangesethighsetcomparatorEnumFactory.fromCode(m.getMedreqDoseinsDoseAndRateDoseRangeHighCompartrCode()));
-
-		}
-		/******************** Medreq_Doseins_DoseAndRate_Dose_Range_High_System ********************************************************************************/
-		if(m.getMedreqDoseinsDoseAndRateDoseRangeHighSystem() != null) {
-			medicationrequestadddosageinstructionadddoseandratesetdoseRangesethigh.setSystem(m.getMedreqDoseinsDoseAndRateDoseRangeHighSystem());
-		}
-		/******************** Medreq_Doseins_DoseAndRate_Dose_Range_High_Unit ********************************************************************************/
-		if(m.getMedreqDoseinsDoseAndRateDoseRangeHighUnit() != null) {
-			medicationrequestadddosageinstructionadddoseandratesetdoseRangesethigh.setUnit(m.getMedreqDoseinsDoseAndRateDoseRangeHighUnit());
-		}
-		/******************** Medreq_Doseins_DoseAndRate_Dose_Range_High_Value ********************************************************************************/
-		if(m.getMedreqDoseinsDoseAndRateDoseRangeHighValue() != null) {
-			medicationrequestadddosageinstructionadddoseandratesetdoseRangesethigh.setValue(Double.parseDouble((m.getMedreqDoseinsDoseAndRateDoseRangeHighValue())));
-		}
-
-		org.hl7.fhir.r4.model.Quantity medicationrequestadddosageinstructionadddoseandratesetdoseRangesetlow = new org.hl7.fhir.r4.model.Quantity();
-		medicationrequestadddosageinstructionadddoseandratesetdoseRange.setLow(medicationrequestadddosageinstructionadddoseandratesetdoseRangesetlow);
-
-		/******************** Medreq_Doseins_DoseAndRate_Dose_Range_Low_Code ********************************************************************************/
-		if(m.getMedreqDoseinsDoseAndRateDoseRangeLowCode() != null) {
-			medicationrequestadddosageinstructionadddoseandratesetdoseRangesetlow.setCode(m.getMedreqDoseinsDoseAndRateDoseRangeLowCode());
-		}
-
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicationrequestadddosageinstructionadddoseandratesetdoseRangesetlowsetcomparatorEnumFactory = new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-
-		/******************** Medreq_Doseins_DoseAndRate_Dose_Range_Low_Compartr_Code ********************************************************************************/
-		if(m.getMedreqDoseinsDoseAndRateDoseRangeLowCompartrCode() != null) {
-			medicationrequestadddosageinstructionadddoseandratesetdoseRangesetlow.setComparator(medicationrequestadddosageinstructionadddoseandratesetdoseRangesetlowsetcomparatorEnumFactory.fromCode(m.getMedreqDoseinsDoseAndRateDoseRangeLowCompartrCode()));
-
-		}
-		/******************** Medreq_Doseins_DoseAndRate_Dose_Range_Low_System ********************************************************************************/
-		if(m.getMedreqDoseinsDoseAndRateDoseRangeLowSystem() != null) {
-			medicationrequestadddosageinstructionadddoseandratesetdoseRangesetlow.setSystem(m.getMedreqDoseinsDoseAndRateDoseRangeLowSystem());
-		}
-		/******************** Medreq_Doseins_DoseAndRate_Dose_Range_Low_Unit ********************************************************************************/
-		if(m.getMedreqDoseinsDoseAndRateDoseRangeLowUnit() != null) {
-			medicationrequestadddosageinstructionadddoseandratesetdoseRangesetlow.setUnit(m.getMedreqDoseinsDoseAndRateDoseRangeLowUnit());
-		}
-		/******************** Medreq_Doseins_DoseAndRate_Dose_Range_Low_Value ********************************************************************************/
-		if(m.getMedreqDoseinsDoseAndRateDoseRangeLowValue() != null) {
-			medicationrequestadddosageinstructionadddoseandratesetdoseRangesetlow.setValue(Double.parseDouble((m.getMedreqDoseinsDoseAndRateDoseRangeLowValue())));
-		}
-		}
-
-		if( m.getMedreqDoseinsDoseAndRateRateQuantityCode() != null || m.getMedreqDoseinsDoseAndRateRateQuantityCompartrCode() != null || m.getMedreqDoseinsDoseAndRateRateQuantitySystem() != null || m.getMedreqDoseinsDoseAndRateRateQuantityUnit() != null || m.getMedreqDoseinsDoseAndRateRateQuantityValue() != null ) {
-			org.hl7.fhir.r4.model.Quantity medicationrequestadddosageinstructionadddoseandratesetrateQuantity = new org.hl7.fhir.r4.model.Quantity();
-			medicationrequestadddosageinstructionadddoseandrate.setRate(medicationrequestadddosageinstructionadddoseandratesetrateQuantity);
-
-		/******************** Medreq_Doseins_DoseAndRate_Rate_Quantity_Code ********************************************************************************/
-		if(m.getMedreqDoseinsDoseAndRateRateQuantityCode() != null) {
-			medicationrequestadddosageinstructionadddoseandratesetrateQuantity.setCode(m.getMedreqDoseinsDoseAndRateRateQuantityCode());
-		}
-
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicationrequestadddosageinstructionadddoseandratesetrateQuantitysetcomparatorEnumFactory = new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-
-		/******************** Medreq_Doseins_DoseAndRate_Rate_Quantity_Compartr_Code ********************************************************************************/
-		if(m.getMedreqDoseinsDoseAndRateRateQuantityCompartrCode() != null) {
-			medicationrequestadddosageinstructionadddoseandratesetrateQuantity.setComparator(medicationrequestadddosageinstructionadddoseandratesetrateQuantitysetcomparatorEnumFactory.fromCode(m.getMedreqDoseinsDoseAndRateRateQuantityCompartrCode()));
-
-		}
-		/******************** Medreq_Doseins_DoseAndRate_Rate_Quantity_System ********************************************************************************/
-		if(m.getMedreqDoseinsDoseAndRateRateQuantitySystem() != null) {
-			medicationrequestadddosageinstructionadddoseandratesetrateQuantity.setSystem(m.getMedreqDoseinsDoseAndRateRateQuantitySystem());
-		}
-		/******************** Medreq_Doseins_DoseAndRate_Rate_Quantity_Unit ********************************************************************************/
-		if(m.getMedreqDoseinsDoseAndRateRateQuantityUnit() != null) {
-			medicationrequestadddosageinstructionadddoseandratesetrateQuantity.setUnit(m.getMedreqDoseinsDoseAndRateRateQuantityUnit());
-		}
-		/******************** Medreq_Doseins_DoseAndRate_Rate_Quantity_Value ********************************************************************************/
-		if(m.getMedreqDoseinsDoseAndRateRateQuantityValue() != null) {
-			medicationrequestadddosageinstructionadddoseandratesetrateQuantity.setValue(Double.parseDouble((m.getMedreqDoseinsDoseAndRateRateQuantityValue())));
-		}
-		}
-
-		if( m.getMedreqDoseinsDoseAndRateRateRangeHighCode() != null || m.getMedreqDoseinsDoseAndRateRateRangeHighCompartrCode() != null || m.getMedreqDoseinsDoseAndRateRateRangeHighSystem() != null || m.getMedreqDoseinsDoseAndRateRateRangeHighUnit() != null || m.getMedreqDoseinsDoseAndRateRateRangeHighValue() != null || m.getMedreqDoseinsDoseAndRateRateRangeLowCode() != null || m.getMedreqDoseinsDoseAndRateRateRangeLowCompartrCode() != null || m.getMedreqDoseinsDoseAndRateRateRangeLowSystem() != null || m.getMedreqDoseinsDoseAndRateRateRangeLowUnit() != null || m.getMedreqDoseinsDoseAndRateRateRangeLowValue() != null ) {
-			org.hl7.fhir.r4.model.Range medicationrequestadddosageinstructionadddoseandratesetrateRange = new org.hl7.fhir.r4.model.Range();
-			medicationrequestadddosageinstructionadddoseandrate.setRate(medicationrequestadddosageinstructionadddoseandratesetrateRange);
-
-
-		org.hl7.fhir.r4.model.Quantity medicationrequestadddosageinstructionadddoseandratesetrateRangesethigh = new org.hl7.fhir.r4.model.Quantity();
-		medicationrequestadddosageinstructionadddoseandratesetrateRange.setHigh(medicationrequestadddosageinstructionadddoseandratesetrateRangesethigh);
-
-		/******************** Medreq_Doseins_DoseAndRate_Rate_Range_High_Code ********************************************************************************/
-		if(m.getMedreqDoseinsDoseAndRateRateRangeHighCode() != null) {
-			medicationrequestadddosageinstructionadddoseandratesetrateRangesethigh.setCode(m.getMedreqDoseinsDoseAndRateRateRangeHighCode());
-		}
-
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicationrequestadddosageinstructionadddoseandratesetrateRangesethighsetcomparatorEnumFactory = new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-
-		/******************** Medreq_Doseins_DoseAndRate_Rate_Range_High_Compartr_Code ********************************************************************************/
-		if(m.getMedreqDoseinsDoseAndRateRateRangeHighCompartrCode() != null) {
-			medicationrequestadddosageinstructionadddoseandratesetrateRangesethigh.setComparator(medicationrequestadddosageinstructionadddoseandratesetrateRangesethighsetcomparatorEnumFactory.fromCode(m.getMedreqDoseinsDoseAndRateRateRangeHighCompartrCode()));
-
-		}
-		/******************** Medreq_Doseins_DoseAndRate_Rate_Range_High_System ********************************************************************************/
-		if(m.getMedreqDoseinsDoseAndRateRateRangeHighSystem() != null) {
-			medicationrequestadddosageinstructionadddoseandratesetrateRangesethigh.setSystem(m.getMedreqDoseinsDoseAndRateRateRangeHighSystem());
-		}
-		/******************** Medreq_Doseins_DoseAndRate_Rate_Range_High_Unit ********************************************************************************/
-		if(m.getMedreqDoseinsDoseAndRateRateRangeHighUnit() != null) {
-			medicationrequestadddosageinstructionadddoseandratesetrateRangesethigh.setUnit(m.getMedreqDoseinsDoseAndRateRateRangeHighUnit());
-		}
-		/******************** Medreq_Doseins_DoseAndRate_Rate_Range_High_Value ********************************************************************************/
-		if(m.getMedreqDoseinsDoseAndRateRateRangeHighValue() != null) {
-			medicationrequestadddosageinstructionadddoseandratesetrateRangesethigh.setValue(Double.parseDouble((m.getMedreqDoseinsDoseAndRateRateRangeHighValue())));
-		}
-
-		org.hl7.fhir.r4.model.Quantity medicationrequestadddosageinstructionadddoseandratesetrateRangesetlow = new org.hl7.fhir.r4.model.Quantity();
-		medicationrequestadddosageinstructionadddoseandratesetrateRange.setLow(medicationrequestadddosageinstructionadddoseandratesetrateRangesetlow);
-
-		/******************** Medreq_Doseins_DoseAndRate_Rate_Range_Low_Code ********************************************************************************/
-		if(m.getMedreqDoseinsDoseAndRateRateRangeLowCode() != null) {
-			medicationrequestadddosageinstructionadddoseandratesetrateRangesetlow.setCode(m.getMedreqDoseinsDoseAndRateRateRangeLowCode());
-		}
-
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicationrequestadddosageinstructionadddoseandratesetrateRangesetlowsetcomparatorEnumFactory = new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-
-		/******************** Medreq_Doseins_DoseAndRate_Rate_Range_Low_Compartr_Code ********************************************************************************/
-		if(m.getMedreqDoseinsDoseAndRateRateRangeLowCompartrCode() != null) {
-			medicationrequestadddosageinstructionadddoseandratesetrateRangesetlow.setComparator(medicationrequestadddosageinstructionadddoseandratesetrateRangesetlowsetcomparatorEnumFactory.fromCode(m.getMedreqDoseinsDoseAndRateRateRangeLowCompartrCode()));
-
-		}
-		/******************** Medreq_Doseins_DoseAndRate_Rate_Range_Low_System ********************************************************************************/
-		if(m.getMedreqDoseinsDoseAndRateRateRangeLowSystem() != null) {
-			medicationrequestadddosageinstructionadddoseandratesetrateRangesetlow.setSystem(m.getMedreqDoseinsDoseAndRateRateRangeLowSystem());
-		}
-		/******************** Medreq_Doseins_DoseAndRate_Rate_Range_Low_Unit ********************************************************************************/
-		if(m.getMedreqDoseinsDoseAndRateRateRangeLowUnit() != null) {
-			medicationrequestadddosageinstructionadddoseandratesetrateRangesetlow.setUnit(m.getMedreqDoseinsDoseAndRateRateRangeLowUnit());
-		}
-		/******************** Medreq_Doseins_DoseAndRate_Rate_Range_Low_Value ********************************************************************************/
-		if(m.getMedreqDoseinsDoseAndRateRateRangeLowValue() != null) {
-			medicationrequestadddosageinstructionadddoseandratesetrateRangesetlow.setValue(Double.parseDouble((m.getMedreqDoseinsDoseAndRateRateRangeLowValue())));
-		}
-		}
-
-		if( m.getMedreqDoseinsDoseAndRateRateRatioDenomCode() != null || m.getMedreqDoseinsDoseAndRateRateRatioDenomCompartrCode() != null || m.getMedreqDoseinsDoseAndRateRateRatioDenomSystem() != null || m.getMedreqDoseinsDoseAndRateRateRatioDenomUnit() != null || m.getMedreqDoseinsDoseAndRateRateRatioDenomValue() != null || m.getMedreqDoseinsDoseAndRateRateRatioNumeratorCode() != null || m.getMedreqDoseinsDoseAndRateRateRatioNumeratorCompartrCode() != null || m.getMedreqDoseinsDoseAndRateRateRatioNumeratorSystem() != null || m.getMedreqDoseinsDoseAndRateRateRatioNumeratorUnit() != null || m.getMedreqDoseinsDoseAndRateRateRatioNumeratorValue() != null ) {
-			org.hl7.fhir.r4.model.Ratio medicationrequestadddosageinstructionadddoseandratesetrateRatio = new org.hl7.fhir.r4.model.Ratio();
-			medicationrequestadddosageinstructionadddoseandrate.setRate(medicationrequestadddosageinstructionadddoseandratesetrateRatio);
-
-
-		org.hl7.fhir.r4.model.Quantity medicationrequestadddosageinstructionadddoseandratesetrateRatiosetdenominator = new org.hl7.fhir.r4.model.Quantity();
-		medicationrequestadddosageinstructionadddoseandratesetrateRatio.setDenominator(medicationrequestadddosageinstructionadddoseandratesetrateRatiosetdenominator);
-
-		/******************** Medreq_Doseins_DoseAndRate_Rate_Ratio_Denom_Code ********************************************************************************/
-		if(m.getMedreqDoseinsDoseAndRateRateRatioDenomCode() != null) {
-			medicationrequestadddosageinstructionadddoseandratesetrateRatiosetdenominator.setCode(m.getMedreqDoseinsDoseAndRateRateRatioDenomCode());
-		}
-
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicationrequestadddosageinstructionadddoseandratesetrateRatiosetdenominatorsetcomparatorEnumFactory = new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-
-		/******************** Medreq_Doseins_DoseAndRate_Rate_Ratio_Denom_Compartr_Code ********************************************************************************/
-		if(m.getMedreqDoseinsDoseAndRateRateRatioDenomCompartrCode() != null) {
-			medicationrequestadddosageinstructionadddoseandratesetrateRatiosetdenominator.setComparator(medicationrequestadddosageinstructionadddoseandratesetrateRatiosetdenominatorsetcomparatorEnumFactory.fromCode(m.getMedreqDoseinsDoseAndRateRateRatioDenomCompartrCode()));
-
-		}
-		/******************** Medreq_Doseins_DoseAndRate_Rate_Ratio_Denom_System ********************************************************************************/
-		if(m.getMedreqDoseinsDoseAndRateRateRatioDenomSystem() != null) {
-			medicationrequestadddosageinstructionadddoseandratesetrateRatiosetdenominator.setSystem(m.getMedreqDoseinsDoseAndRateRateRatioDenomSystem());
-		}
-		/******************** Medreq_Doseins_DoseAndRate_Rate_Ratio_Denom_Unit ********************************************************************************/
-		if(m.getMedreqDoseinsDoseAndRateRateRatioDenomUnit() != null) {
-			medicationrequestadddosageinstructionadddoseandratesetrateRatiosetdenominator.setUnit(m.getMedreqDoseinsDoseAndRateRateRatioDenomUnit());
-		}
-		/******************** Medreq_Doseins_DoseAndRate_Rate_Ratio_Denom_Value ********************************************************************************/
-		if(m.getMedreqDoseinsDoseAndRateRateRatioDenomValue() != null) {
-			medicationrequestadddosageinstructionadddoseandratesetrateRatiosetdenominator.setValue(Double.parseDouble((m.getMedreqDoseinsDoseAndRateRateRatioDenomValue())));
-		}
-
-		org.hl7.fhir.r4.model.Quantity medicationrequestadddosageinstructionadddoseandratesetrateRatiosetnumerator = new org.hl7.fhir.r4.model.Quantity();
-		medicationrequestadddosageinstructionadddoseandratesetrateRatio.setNumerator(medicationrequestadddosageinstructionadddoseandratesetrateRatiosetnumerator);
-
-		/******************** Medreq_Doseins_DoseAndRate_Rate_Ratio_Numerator_Code ********************************************************************************/
-		if(m.getMedreqDoseinsDoseAndRateRateRatioNumeratorCode() != null) {
-			medicationrequestadddosageinstructionadddoseandratesetrateRatiosetnumerator.setCode(m.getMedreqDoseinsDoseAndRateRateRatioNumeratorCode());
-		}
-
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicationrequestadddosageinstructionadddoseandratesetrateRatiosetnumeratorsetcomparatorEnumFactory = new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-
-		/******************** Medreq_Doseins_DoseAndRate_Rate_Ratio_Numerator_Compartr_Code ********************************************************************************/
-		if(m.getMedreqDoseinsDoseAndRateRateRatioNumeratorCompartrCode() != null) {
-			medicationrequestadddosageinstructionadddoseandratesetrateRatiosetnumerator.setComparator(medicationrequestadddosageinstructionadddoseandratesetrateRatiosetnumeratorsetcomparatorEnumFactory.fromCode(m.getMedreqDoseinsDoseAndRateRateRatioNumeratorCompartrCode()));
-
-		}
-		/******************** Medreq_Doseins_DoseAndRate_Rate_Ratio_Numerator_System ********************************************************************************/
-		if(m.getMedreqDoseinsDoseAndRateRateRatioNumeratorSystem() != null) {
-			medicationrequestadddosageinstructionadddoseandratesetrateRatiosetnumerator.setSystem(m.getMedreqDoseinsDoseAndRateRateRatioNumeratorSystem());
-		}
-		/******************** Medreq_Doseins_DoseAndRate_Rate_Ratio_Numerator_Unit ********************************************************************************/
-		if(m.getMedreqDoseinsDoseAndRateRateRatioNumeratorUnit() != null) {
-			medicationrequestadddosageinstructionadddoseandratesetrateRatiosetnumerator.setUnit(m.getMedreqDoseinsDoseAndRateRateRatioNumeratorUnit());
-		}
-		/******************** Medreq_Doseins_DoseAndRate_Rate_Ratio_Numerator_Value ********************************************************************************/
-		if(m.getMedreqDoseinsDoseAndRateRateRatioNumeratorValue() != null) {
-			medicationrequestadddosageinstructionadddoseandratesetrateRatiosetnumerator.setValue(Double.parseDouble((m.getMedreqDoseinsDoseAndRateRateRatioNumeratorValue())));
-		}
-		}
-
-		org.hl7.fhir.r4.model.CodeableConcept medicationrequestadddosageinstructionadddoseandratesettype = new org.hl7.fhir.r4.model.CodeableConcept();
-		medicationrequestadddosageinstructionadddoseandrate.setType(medicationrequestadddosageinstructionadddoseandratesettype);
-
-
-		org.hl7.fhir.r4.model.Coding medicationrequestadddosageinstructionadddoseandratesettypeaddcoding = medicationrequestadddosageinstructionadddoseandratesettype.addCoding();
-
-		/******************** Medreq_Doseins_DoseAndRate_Type_Coding_Code ********************************************************************************/
-		if(m.getMedreqDoseinsDoseAndRateTypeCodingCode() != null) {
-			medicationrequestadddosageinstructionadddoseandratesettypeaddcoding.setCode(m.getMedreqDoseinsDoseAndRateTypeCodingCode());
-		}
-		/******************** Medreq_Doseins_DoseAndRate_Type_Coding_Display ********************************************************************************/
-		if(m.getMedreqDoseinsDoseAndRateTypeCodingDisplay() != null) {
-			medicationrequestadddosageinstructionadddoseandratesettypeaddcoding.setDisplay(m.getMedreqDoseinsDoseAndRateTypeCodingDisplay());
-		}
-		/******************** Medreq_Doseins_DoseAndRate_Type_Coding_System ********************************************************************************/
-		if(m.getMedreqDoseinsDoseAndRateTypeCodingSystem() != null) {
-			medicationrequestadddosageinstructionadddoseandratesettypeaddcoding.setSystem(m.getMedreqDoseinsDoseAndRateTypeCodingSystem());
-		}
-		/******************** Medreq_Doseins_DoseAndRate_Type_Coding_Usrslt ********************************************************************************/
-		if(m.getMedreqDoseinsDoseAndRateTypeCodingUsrslt() != null) {
-			medicationrequestadddosageinstructionadddoseandratesettypeaddcoding.setUserSelected(Boolean.parseBoolean(m.getMedreqDoseinsDoseAndRateTypeCodingUsrslt()));
-		}
-		/******************** Medreq_Doseins_DoseAndRate_Type_Coding_Version ********************************************************************************/
-		if(m.getMedreqDoseinsDoseAndRateTypeCodingVersion() != null) {
-			medicationrequestadddosageinstructionadddoseandratesettypeaddcoding.setVersion(m.getMedreqDoseinsDoseAndRateTypeCodingVersion());
-		}
-		/******************** Medreq_Doseins_DoseAndRate_Type_Text ********************************************************************************/
-		if(m.getMedreqDoseinsDoseAndRateTypeText() != null) {
-			medicationrequestadddosageinstructionadddoseandratesettype.setText(m.getMedreqDoseinsDoseAndRateTypeText());
-		}
-
-		org.hl7.fhir.r4.model.Quantity medicationrequestadddosageinstructionsetmaxdoseperadministration = new org.hl7.fhir.r4.model.Quantity();
-		medicationrequestadddosageinstruction.setMaxDosePerAdministration(medicationrequestadddosageinstructionsetmaxdoseperadministration);
-
-		/******************** Medreq_Doseins_MaxDosePerAdministration_Code ********************************************************************************/
-		if(m.getMedreqDoseinsMaxDosePerAdministrationCode() != null) {
-			medicationrequestadddosageinstructionsetmaxdoseperadministration.setCode(m.getMedreqDoseinsMaxDosePerAdministrationCode());
-		}
-
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicationrequestadddosageinstructionsetmaxdoseperadministrationsetcomparatorEnumFactory = new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-
-		/******************** Medreq_Doseins_MaxDosePerAdministration_Compartr_Code ********************************************************************************/
-		if(m.getMedreqDoseinsMaxDosePerAdministrationCompartrCode() != null) {
-			medicationrequestadddosageinstructionsetmaxdoseperadministration.setComparator(medicationrequestadddosageinstructionsetmaxdoseperadministrationsetcomparatorEnumFactory.fromCode(m.getMedreqDoseinsMaxDosePerAdministrationCompartrCode()));
-
-		}
-		/******************** Medreq_Doseins_MaxDosePerAdministration_System ********************************************************************************/
-		if(m.getMedreqDoseinsMaxDosePerAdministrationSystem() != null) {
-			medicationrequestadddosageinstructionsetmaxdoseperadministration.setSystem(m.getMedreqDoseinsMaxDosePerAdministrationSystem());
-		}
-		/******************** Medreq_Doseins_MaxDosePerAdministration_Unit ********************************************************************************/
-		if(m.getMedreqDoseinsMaxDosePerAdministrationUnit() != null) {
-			medicationrequestadddosageinstructionsetmaxdoseperadministration.setUnit(m.getMedreqDoseinsMaxDosePerAdministrationUnit());
-		}
-		/******************** Medreq_Doseins_MaxDosePerAdministration_Value ********************************************************************************/
-		if(m.getMedreqDoseinsMaxDosePerAdministrationValue() != null) {
-			medicationrequestadddosageinstructionsetmaxdoseperadministration.setValue(Double.parseDouble((m.getMedreqDoseinsMaxDosePerAdministrationValue())));
-		}
-
-		org.hl7.fhir.r4.model.Quantity medicationrequestadddosageinstructionsetmaxdoseperlifetime = new org.hl7.fhir.r4.model.Quantity();
-		medicationrequestadddosageinstruction.setMaxDosePerLifetime(medicationrequestadddosageinstructionsetmaxdoseperlifetime);
-
-		/******************** Medreq_Doseins_MaxDosePerLifetime_Code ********************************************************************************/
-		if(m.getMedreqDoseinsMaxDosePerLifetimeCode() != null) {
-			medicationrequestadddosageinstructionsetmaxdoseperlifetime.setCode(m.getMedreqDoseinsMaxDosePerLifetimeCode());
-		}
-
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicationrequestadddosageinstructionsetmaxdoseperlifetimesetcomparatorEnumFactory = new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-
-		/******************** Medreq_Doseins_MaxDosePerLifetime_Compartr_Code ********************************************************************************/
-		if(m.getMedreqDoseinsMaxDosePerLifetimeCompartrCode() != null) {
-			medicationrequestadddosageinstructionsetmaxdoseperlifetime.setComparator(medicationrequestadddosageinstructionsetmaxdoseperlifetimesetcomparatorEnumFactory.fromCode(m.getMedreqDoseinsMaxDosePerLifetimeCompartrCode()));
-
-		}
-		/******************** Medreq_Doseins_MaxDosePerLifetime_System ********************************************************************************/
-		if(m.getMedreqDoseinsMaxDosePerLifetimeSystem() != null) {
-			medicationrequestadddosageinstructionsetmaxdoseperlifetime.setSystem(m.getMedreqDoseinsMaxDosePerLifetimeSystem());
-		}
-		/******************** Medreq_Doseins_MaxDosePerLifetime_Unit ********************************************************************************/
-		if(m.getMedreqDoseinsMaxDosePerLifetimeUnit() != null) {
-			medicationrequestadddosageinstructionsetmaxdoseperlifetime.setUnit(m.getMedreqDoseinsMaxDosePerLifetimeUnit());
-		}
-		/******************** Medreq_Doseins_MaxDosePerLifetime_Value ********************************************************************************/
-		if(m.getMedreqDoseinsMaxDosePerLifetimeValue() != null) {
-			medicationrequestadddosageinstructionsetmaxdoseperlifetime.setValue(Double.parseDouble((m.getMedreqDoseinsMaxDosePerLifetimeValue())));
-		}
-
-		org.hl7.fhir.r4.model.Ratio medicationrequestadddosageinstructionsetmaxdoseperperiod = new org.hl7.fhir.r4.model.Ratio();
-		medicationrequestadddosageinstruction.setMaxDosePerPeriod(medicationrequestadddosageinstructionsetmaxdoseperperiod);
-
-
-		org.hl7.fhir.r4.model.Quantity medicationrequestadddosageinstructionsetmaxdoseperperiodsetdenominator = new org.hl7.fhir.r4.model.Quantity();
-		medicationrequestadddosageinstructionsetmaxdoseperperiod.setDenominator(medicationrequestadddosageinstructionsetmaxdoseperperiodsetdenominator);
-
-		/******************** Medreq_Doseins_MaxDosePerPeriod_Denom_Code ********************************************************************************/
-		if(m.getMedreqDoseinsMaxDosePerPeriodDenomCode() != null) {
-			medicationrequestadddosageinstructionsetmaxdoseperperiodsetdenominator.setCode(m.getMedreqDoseinsMaxDosePerPeriodDenomCode());
-		}
-
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicationrequestadddosageinstructionsetmaxdoseperperiodsetdenominatorsetcomparatorEnumFactory = new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-
-		/******************** Medreq_Doseins_MaxDosePerPeriod_Denom_Compartr_Code ********************************************************************************/
-		if(m.getMedreqDoseinsMaxDosePerPeriodDenomCompartrCode() != null) {
-			medicationrequestadddosageinstructionsetmaxdoseperperiodsetdenominator.setComparator(medicationrequestadddosageinstructionsetmaxdoseperperiodsetdenominatorsetcomparatorEnumFactory.fromCode(m.getMedreqDoseinsMaxDosePerPeriodDenomCompartrCode()));
-
-		}
-		/******************** Medreq_Doseins_MaxDosePerPeriod_Denom_System ********************************************************************************/
-		if(m.getMedreqDoseinsMaxDosePerPeriodDenomSystem() != null) {
-			medicationrequestadddosageinstructionsetmaxdoseperperiodsetdenominator.setSystem(m.getMedreqDoseinsMaxDosePerPeriodDenomSystem());
-		}
-		/******************** Medreq_Doseins_MaxDosePerPeriod_Denom_Unit ********************************************************************************/
-		if(m.getMedreqDoseinsMaxDosePerPeriodDenomUnit() != null) {
-			medicationrequestadddosageinstructionsetmaxdoseperperiodsetdenominator.setUnit(m.getMedreqDoseinsMaxDosePerPeriodDenomUnit());
-		}
-		/******************** Medreq_Doseins_MaxDosePerPeriod_Denom_Value ********************************************************************************/
-		if(m.getMedreqDoseinsMaxDosePerPeriodDenomValue() != null) {
-			medicationrequestadddosageinstructionsetmaxdoseperperiodsetdenominator.setValue(Double.parseDouble((m.getMedreqDoseinsMaxDosePerPeriodDenomValue())));
-		}
-
-		org.hl7.fhir.r4.model.Quantity medicationrequestadddosageinstructionsetmaxdoseperperiodsetnumerator = new org.hl7.fhir.r4.model.Quantity();
-		medicationrequestadddosageinstructionsetmaxdoseperperiod.setNumerator(medicationrequestadddosageinstructionsetmaxdoseperperiodsetnumerator);
-
-		/******************** Medreq_Doseins_MaxDosePerPeriod_Numerator_Code ********************************************************************************/
-		if(m.getMedreqDoseinsMaxDosePerPeriodNumeratorCode() != null) {
-			medicationrequestadddosageinstructionsetmaxdoseperperiodsetnumerator.setCode(m.getMedreqDoseinsMaxDosePerPeriodNumeratorCode());
-		}
-
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicationrequestadddosageinstructionsetmaxdoseperperiodsetnumeratorsetcomparatorEnumFactory = new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-
-		/******************** Medreq_Doseins_MaxDosePerPeriod_Numerator_Compartr_Code ********************************************************************************/
-		if(m.getMedreqDoseinsMaxDosePerPeriodNumeratorCompartrCode() != null) {
-			medicationrequestadddosageinstructionsetmaxdoseperperiodsetnumerator.setComparator(medicationrequestadddosageinstructionsetmaxdoseperperiodsetnumeratorsetcomparatorEnumFactory.fromCode(m.getMedreqDoseinsMaxDosePerPeriodNumeratorCompartrCode()));
-
-		}
-		/******************** Medreq_Doseins_MaxDosePerPeriod_Numerator_System ********************************************************************************/
-		if(m.getMedreqDoseinsMaxDosePerPeriodNumeratorSystem() != null) {
-			medicationrequestadddosageinstructionsetmaxdoseperperiodsetnumerator.setSystem(m.getMedreqDoseinsMaxDosePerPeriodNumeratorSystem());
-		}
-		/******************** Medreq_Doseins_MaxDosePerPeriod_Numerator_Unit ********************************************************************************/
-		if(m.getMedreqDoseinsMaxDosePerPeriodNumeratorUnit() != null) {
-			medicationrequestadddosageinstructionsetmaxdoseperperiodsetnumerator.setUnit(m.getMedreqDoseinsMaxDosePerPeriodNumeratorUnit());
-		}
-		/******************** Medreq_Doseins_MaxDosePerPeriod_Numerator_Value ********************************************************************************/
-		if(m.getMedreqDoseinsMaxDosePerPeriodNumeratorValue() != null) {
-			medicationrequestadddosageinstructionsetmaxdoseperperiodsetnumerator.setValue(Double.parseDouble((m.getMedreqDoseinsMaxDosePerPeriodNumeratorValue())));
-		}
-
-		org.hl7.fhir.r4.model.CodeableConcept medicationrequestadddosageinstructionsetmethod = new org.hl7.fhir.r4.model.CodeableConcept();
-		medicationrequestadddosageinstruction.setMethod(medicationrequestadddosageinstructionsetmethod);
-
-
-		org.hl7.fhir.r4.model.Coding medicationrequestadddosageinstructionsetmethodaddcoding = medicationrequestadddosageinstructionsetmethod.addCoding();
-
-		/******************** Medreq_Doseins_Method_Coding_Code ********************************************************************************/
-		if(m.getMedreqDoseinsMethodCodingCode() != null) {
-			medicationrequestadddosageinstructionsetmethodaddcoding.setCode(m.getMedreqDoseinsMethodCodingCode());
-		}
-		/******************** Medreq_Doseins_Method_Coding_Display ********************************************************************************/
-		if(m.getMedreqDoseinsMethodCodingDisplay() != null) {
-			medicationrequestadddosageinstructionsetmethodaddcoding.setDisplay(m.getMedreqDoseinsMethodCodingDisplay());
-		}
-		/******************** Medreq_Doseins_Method_Coding_System ********************************************************************************/
-		if(m.getMedreqDoseinsMethodCodingSystem() != null) {
-			medicationrequestadddosageinstructionsetmethodaddcoding.setSystem(m.getMedreqDoseinsMethodCodingSystem());
-		}
-		/******************** Medreq_Doseins_Method_Coding_Usrslt ********************************************************************************/
-		if(m.getMedreqDoseinsMethodCodingUsrslt() != null) {
-			medicationrequestadddosageinstructionsetmethodaddcoding.setUserSelected(Boolean.parseBoolean(m.getMedreqDoseinsMethodCodingUsrslt()));
-		}
-		/******************** Medreq_Doseins_Method_Coding_Version ********************************************************************************/
-		if(m.getMedreqDoseinsMethodCodingVersion() != null) {
-			medicationrequestadddosageinstructionsetmethodaddcoding.setVersion(m.getMedreqDoseinsMethodCodingVersion());
-		}
-		/******************** Medreq_Doseins_Method_Text ********************************************************************************/
-		if(m.getMedreqDoseinsMethodText() != null) {
-			medicationrequestadddosageinstructionsetmethod.setText(m.getMedreqDoseinsMethodText());
-		}
-		/******************** Medreq_Doseins_PatientInstruction ********************************************************************************/
-		if(m.getMedreqDoseinsPatientInstruction() != null) {
-			medicationrequestadddosageinstruction.setPatientInstruction(m.getMedreqDoseinsPatientInstruction());
-		}
-
-		org.hl7.fhir.r4.model.CodeableConcept medicationrequestadddosageinstructionsetroute = new org.hl7.fhir.r4.model.CodeableConcept();
-		medicationrequestadddosageinstruction.setRoute(medicationrequestadddosageinstructionsetroute);
-
-
-		org.hl7.fhir.r4.model.Coding medicationrequestadddosageinstructionsetrouteaddcoding = medicationrequestadddosageinstructionsetroute.addCoding();
-
-		/******************** Medreq_Doseins_Route_Coding_Code ********************************************************************************/
-		if(m.getMedreqDoseinsRouteCodingCode() != null) {
-			medicationrequestadddosageinstructionsetrouteaddcoding.setCode(m.getMedreqDoseinsRouteCodingCode());
-		}
-		/******************** Medreq_Doseins_Route_Coding_Display ********************************************************************************/
-		if(m.getMedreqDoseinsRouteCodingDisplay() != null) {
-			medicationrequestadddosageinstructionsetrouteaddcoding.setDisplay(m.getMedreqDoseinsRouteCodingDisplay());
-		}
-		/******************** Medreq_Doseins_Route_Coding_System ********************************************************************************/
-		if(m.getMedreqDoseinsRouteCodingSystem() != null) {
-			medicationrequestadddosageinstructionsetrouteaddcoding.setSystem(m.getMedreqDoseinsRouteCodingSystem());
-		}
-		/******************** Medreq_Doseins_Route_Coding_Usrslt ********************************************************************************/
-		if(m.getMedreqDoseinsRouteCodingUsrslt() != null) {
-			medicationrequestadddosageinstructionsetrouteaddcoding.setUserSelected(Boolean.parseBoolean(m.getMedreqDoseinsRouteCodingUsrslt()));
-		}
-		/******************** Medreq_Doseins_Route_Coding_Version ********************************************************************************/
-		if(m.getMedreqDoseinsRouteCodingVersion() != null) {
-			medicationrequestadddosageinstructionsetrouteaddcoding.setVersion(m.getMedreqDoseinsRouteCodingVersion());
-		}
-		/******************** Medreq_Doseins_Route_Text ********************************************************************************/
-		if(m.getMedreqDoseinsRouteText() != null) {
-			medicationrequestadddosageinstructionsetroute.setText(m.getMedreqDoseinsRouteText());
-		}
-		/******************** Medreq_Doseins_Sequence ********************************************************************************/
-		if(m.getMedreqDoseinsSequence() != null) {
-			medicationrequestadddosageinstruction.setSequence(Integer.parseInt(m.getMedreqDoseinsSequence()));
-		}
-
-		org.hl7.fhir.r4.model.CodeableConcept medicationrequestadddosageinstructionsetsite = new org.hl7.fhir.r4.model.CodeableConcept();
-		medicationrequestadddosageinstruction.setSite(medicationrequestadddosageinstructionsetsite);
-
-
-		org.hl7.fhir.r4.model.Coding medicationrequestadddosageinstructionsetsiteaddcoding = medicationrequestadddosageinstructionsetsite.addCoding();
-
-		/******************** Medreq_Doseins_Site_Coding_Code ********************************************************************************/
-		if(m.getMedreqDoseinsSiteCodingCode() != null) {
-			medicationrequestadddosageinstructionsetsiteaddcoding.setCode(m.getMedreqDoseinsSiteCodingCode());
-		}
-		/******************** Medreq_Doseins_Site_Coding_Display ********************************************************************************/
-		if(m.getMedreqDoseinsSiteCodingDisplay() != null) {
-			medicationrequestadddosageinstructionsetsiteaddcoding.setDisplay(m.getMedreqDoseinsSiteCodingDisplay());
-		}
-		/******************** Medreq_Doseins_Site_Coding_System ********************************************************************************/
-		if(m.getMedreqDoseinsSiteCodingSystem() != null) {
-			medicationrequestadddosageinstructionsetsiteaddcoding.setSystem(m.getMedreqDoseinsSiteCodingSystem());
-		}
-		/******************** Medreq_Doseins_Site_Coding_Usrslt ********************************************************************************/
-		if(m.getMedreqDoseinsSiteCodingUsrslt() != null) {
-			medicationrequestadddosageinstructionsetsiteaddcoding.setUserSelected(Boolean.parseBoolean(m.getMedreqDoseinsSiteCodingUsrslt()));
-		}
-		/******************** Medreq_Doseins_Site_Coding_Version ********************************************************************************/
-		if(m.getMedreqDoseinsSiteCodingVersion() != null) {
-			medicationrequestadddosageinstructionsetsiteaddcoding.setVersion(m.getMedreqDoseinsSiteCodingVersion());
-		}
-		/******************** Medreq_Doseins_Site_Text ********************************************************************************/
-		if(m.getMedreqDoseinsSiteText() != null) {
-			medicationrequestadddosageinstructionsetsite.setText(m.getMedreqDoseinsSiteText());
-		}
-		/******************** Medreq_Doseins_Text ********************************************************************************/
-		if(m.getMedreqDoseinsText() != null) {
-			medicationrequestadddosageinstruction.setText(m.getMedreqDoseinsText());
-		}
-
-		org.hl7.fhir.r4.model.Timing medicationrequestadddosageinstructionsettiming = new org.hl7.fhir.r4.model.Timing();
-		medicationrequestadddosageinstruction.setTiming(medicationrequestadddosageinstructionsettiming);
-
-
-		org.hl7.fhir.r4.model.CodeableConcept medicationrequestadddosageinstructionsettimingsetcode = new org.hl7.fhir.r4.model.CodeableConcept();
-		medicationrequestadddosageinstructionsettiming.setCode(medicationrequestadddosageinstructionsettimingsetcode);
-
-
-		org.hl7.fhir.r4.model.Coding medicationrequestadddosageinstructionsettimingsetcodeaddcoding = medicationrequestadddosageinstructionsettimingsetcode.addCoding();
-
-		/******************** Medreq_Doseins_Timing_Code_Coding_Code ********************************************************************************/
-		if(m.getMedreqDoseinsTimingCodeCodingCode() != null) {
-			medicationrequestadddosageinstructionsettimingsetcodeaddcoding.setCode(m.getMedreqDoseinsTimingCodeCodingCode());
-		}
-		/******************** Medreq_Doseins_Timing_Code_Coding_Display ********************************************************************************/
-		if(m.getMedreqDoseinsTimingCodeCodingDisplay() != null) {
-			medicationrequestadddosageinstructionsettimingsetcodeaddcoding.setDisplay(m.getMedreqDoseinsTimingCodeCodingDisplay());
-		}
-		/******************** Medreq_Doseins_Timing_Code_Coding_System ********************************************************************************/
-		if(m.getMedreqDoseinsTimingCodeCodingSystem() != null) {
-			medicationrequestadddosageinstructionsettimingsetcodeaddcoding.setSystem(m.getMedreqDoseinsTimingCodeCodingSystem());
-		}
-		/******************** Medreq_Doseins_Timing_Code_Coding_Usrslt ********************************************************************************/
-		if(m.getMedreqDoseinsTimingCodeCodingUsrslt() != null) {
-			medicationrequestadddosageinstructionsettimingsetcodeaddcoding.setUserSelected(Boolean.parseBoolean(m.getMedreqDoseinsTimingCodeCodingUsrslt()));
-		}
-		/******************** Medreq_Doseins_Timing_Code_Coding_Version ********************************************************************************/
-		if(m.getMedreqDoseinsTimingCodeCodingVersion() != null) {
-			medicationrequestadddosageinstructionsettimingsetcodeaddcoding.setVersion(m.getMedreqDoseinsTimingCodeCodingVersion());
-		}
-		/******************** Medreq_Doseins_Timing_Code_Text ********************************************************************************/
-		if(m.getMedreqDoseinsTimingCodeText() != null) {
-			medicationrequestadddosageinstructionsettimingsetcode.setText(m.getMedreqDoseinsTimingCodeText());
-		}
-		/******************** Medreq_Doseins_Timing_Event ********************************************************************************/
-		if(m.getMedreqDoseinsTimingEvent() != null) {
-			java.text.SimpleDateFormat MedreqDoseinsTimingEventsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date MedreqDoseinsTimingEventdate = MedreqDoseinsTimingEventsdf.parse(m.getMedreqDoseinsTimingEvent());
-			medicationrequestadddosageinstructionsettiming.addEvent(MedreqDoseinsTimingEventdate);
-		}
-
-		org.hl7.fhir.r4.model.Timing.TimingRepeatComponent medicationrequestadddosageinstructionsettimingsetrepeat = new org.hl7.fhir.r4.model.Timing.TimingRepeatComponent();
-		medicationrequestadddosageinstructionsettiming.setRepeat(medicationrequestadddosageinstructionsettimingsetrepeat);
-
-
-		if( m.getMedreqDoseinsTimingRepeatBoundsDurationCode() != null || m.getMedreqDoseinsTimingRepeatBoundsDurationCompartrCode() != null || m.getMedreqDoseinsTimingRepeatBoundsDurationSystem() != null || m.getMedreqDoseinsTimingRepeatBoundsDurationUnit() != null || m.getMedreqDoseinsTimingRepeatBoundsDurationValue() != null ) {
-			org.hl7.fhir.r4.model.Duration medicationrequestadddosageinstructionsettimingsetrepeatsetboundsDuration = new org.hl7.fhir.r4.model.Duration();
-			medicationrequestadddosageinstructionsettimingsetrepeat.setBounds(medicationrequestadddosageinstructionsettimingsetrepeatsetboundsDuration);
-
-		/******************** Medreq_Doseins_Timing_Repeat_Bounds_Duration_Code ********************************************************************************/
-		if(m.getMedreqDoseinsTimingRepeatBoundsDurationCode() != null) {
-			medicationrequestadddosageinstructionsettimingsetrepeatsetboundsDuration.setCode(m.getMedreqDoseinsTimingRepeatBoundsDurationCode());
-		}
-
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicationrequestadddosageinstructionsettimingsetrepeatsetboundsDurationsetcomparatorEnumFactory = new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-
-		/******************** Medreq_Doseins_Timing_Repeat_Bounds_Duration_Compartr_Code ********************************************************************************/
-		if(m.getMedreqDoseinsTimingRepeatBoundsDurationCompartrCode() != null) {
-			medicationrequestadddosageinstructionsettimingsetrepeatsetboundsDuration.setComparator(medicationrequestadddosageinstructionsettimingsetrepeatsetboundsDurationsetcomparatorEnumFactory.fromCode(m.getMedreqDoseinsTimingRepeatBoundsDurationCompartrCode()));
-
-		}
-		/******************** Medreq_Doseins_Timing_Repeat_Bounds_Duration_System ********************************************************************************/
-		if(m.getMedreqDoseinsTimingRepeatBoundsDurationSystem() != null) {
-			medicationrequestadddosageinstructionsettimingsetrepeatsetboundsDuration.setSystem(m.getMedreqDoseinsTimingRepeatBoundsDurationSystem());
-		}
-		/******************** Medreq_Doseins_Timing_Repeat_Bounds_Duration_Unit ********************************************************************************/
-		if(m.getMedreqDoseinsTimingRepeatBoundsDurationUnit() != null) {
-			medicationrequestadddosageinstructionsettimingsetrepeatsetboundsDuration.setUnit(m.getMedreqDoseinsTimingRepeatBoundsDurationUnit());
-		}
-		/******************** Medreq_Doseins_Timing_Repeat_Bounds_Duration_Value ********************************************************************************/
-		if(m.getMedreqDoseinsTimingRepeatBoundsDurationValue() != null) {
-			medicationrequestadddosageinstructionsettimingsetrepeatsetboundsDuration.setValue(Double.parseDouble((m.getMedreqDoseinsTimingRepeatBoundsDurationValue())));
-		}
-		}
-
-		if( m.getMedreqDoseinsTimingRepeatBoundsPeriodEnd() != null || m.getMedreqDoseinsTimingRepeatBoundsPeriodStart() != null ) {
-			org.hl7.fhir.r4.model.Period medicationrequestadddosageinstructionsettimingsetrepeatsetboundsPeriod = new org.hl7.fhir.r4.model.Period();
-			medicationrequestadddosageinstructionsettimingsetrepeat.setBounds(medicationrequestadddosageinstructionsettimingsetrepeatsetboundsPeriod);
-
-		/******************** Medreq_Doseins_Timing_Repeat_Bounds_Period_End ********************************************************************************/
-		if(m.getMedreqDoseinsTimingRepeatBoundsPeriodEnd() != null) {
-			java.text.SimpleDateFormat MedreqDoseinsTimingRepeatBoundsPeriodEndsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date MedreqDoseinsTimingRepeatBoundsPeriodEnddate = MedreqDoseinsTimingRepeatBoundsPeriodEndsdf.parse(m.getMedreqDoseinsTimingRepeatBoundsPeriodEnd());
-			medicationrequestadddosageinstructionsettimingsetrepeatsetboundsPeriod.setEnd(MedreqDoseinsTimingRepeatBoundsPeriodEnddate);
-		}
-		/******************** Medreq_Doseins_Timing_Repeat_Bounds_Period_Start ********************************************************************************/
-		if(m.getMedreqDoseinsTimingRepeatBoundsPeriodStart() != null) {
-			java.text.SimpleDateFormat MedreqDoseinsTimingRepeatBoundsPeriodStartsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date MedreqDoseinsTimingRepeatBoundsPeriodStartdate = MedreqDoseinsTimingRepeatBoundsPeriodStartsdf.parse(m.getMedreqDoseinsTimingRepeatBoundsPeriodStart());
-			medicationrequestadddosageinstructionsettimingsetrepeatsetboundsPeriod.setStart(MedreqDoseinsTimingRepeatBoundsPeriodStartdate);
-		}
-		}
-
-		if( m.getMedreqDoseinsTimingRepeatBoundsRangeHighCode() != null || m.getMedreqDoseinsTimingRepeatBoundsRangeHighCompartrCode() != null || m.getMedreqDoseinsTimingRepeatBoundsRangeHighSystem() != null || m.getMedreqDoseinsTimingRepeatBoundsRangeHighUnit() != null || m.getMedreqDoseinsTimingRepeatBoundsRangeHighValue() != null || m.getMedreqDoseinsTimingRepeatBoundsRangeLowCode() != null || m.getMedreqDoseinsTimingRepeatBoundsRangeLowCompartrCode() != null || m.getMedreqDoseinsTimingRepeatBoundsRangeLowSystem() != null || m.getMedreqDoseinsTimingRepeatBoundsRangeLowUnit() != null || m.getMedreqDoseinsTimingRepeatBoundsRangeLowValue() != null ) {
-			org.hl7.fhir.r4.model.Range medicationrequestadddosageinstructionsettimingsetrepeatsetboundsRange = new org.hl7.fhir.r4.model.Range();
-			medicationrequestadddosageinstructionsettimingsetrepeat.setBounds(medicationrequestadddosageinstructionsettimingsetrepeatsetboundsRange);
-
-
-		org.hl7.fhir.r4.model.Quantity medicationrequestadddosageinstructionsettimingsetrepeatsetboundsRangesethigh = new org.hl7.fhir.r4.model.Quantity();
-		medicationrequestadddosageinstructionsettimingsetrepeatsetboundsRange.setHigh(medicationrequestadddosageinstructionsettimingsetrepeatsetboundsRangesethigh);
-
-		/******************** Medreq_Doseins_Timing_Repeat_Bounds_Range_High_Code ********************************************************************************/
-		if(m.getMedreqDoseinsTimingRepeatBoundsRangeHighCode() != null) {
-			medicationrequestadddosageinstructionsettimingsetrepeatsetboundsRangesethigh.setCode(m.getMedreqDoseinsTimingRepeatBoundsRangeHighCode());
-		}
-
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicationrequestadddosageinstructionsettimingsetrepeatsetboundsRangesethighsetcomparatorEnumFactory = new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-
-		/******************** Medreq_Doseins_Timing_Repeat_Bounds_Range_High_Compartr_Code ********************************************************************************/
-		if(m.getMedreqDoseinsTimingRepeatBoundsRangeHighCompartrCode() != null) {
-			medicationrequestadddosageinstructionsettimingsetrepeatsetboundsRangesethigh.setComparator(medicationrequestadddosageinstructionsettimingsetrepeatsetboundsRangesethighsetcomparatorEnumFactory.fromCode(m.getMedreqDoseinsTimingRepeatBoundsRangeHighCompartrCode()));
-
-		}
-		/******************** Medreq_Doseins_Timing_Repeat_Bounds_Range_High_System ********************************************************************************/
-		if(m.getMedreqDoseinsTimingRepeatBoundsRangeHighSystem() != null) {
-			medicationrequestadddosageinstructionsettimingsetrepeatsetboundsRangesethigh.setSystem(m.getMedreqDoseinsTimingRepeatBoundsRangeHighSystem());
-		}
-		/******************** Medreq_Doseins_Timing_Repeat_Bounds_Range_High_Unit ********************************************************************************/
-		if(m.getMedreqDoseinsTimingRepeatBoundsRangeHighUnit() != null) {
-			medicationrequestadddosageinstructionsettimingsetrepeatsetboundsRangesethigh.setUnit(m.getMedreqDoseinsTimingRepeatBoundsRangeHighUnit());
-		}
-		/******************** Medreq_Doseins_Timing_Repeat_Bounds_Range_High_Value ********************************************************************************/
-		if(m.getMedreqDoseinsTimingRepeatBoundsRangeHighValue() != null) {
-			medicationrequestadddosageinstructionsettimingsetrepeatsetboundsRangesethigh.setValue(Double.parseDouble((m.getMedreqDoseinsTimingRepeatBoundsRangeHighValue())));
-		}
-
-		org.hl7.fhir.r4.model.Quantity medicationrequestadddosageinstructionsettimingsetrepeatsetboundsRangesetlow = new org.hl7.fhir.r4.model.Quantity();
-		medicationrequestadddosageinstructionsettimingsetrepeatsetboundsRange.setLow(medicationrequestadddosageinstructionsettimingsetrepeatsetboundsRangesetlow);
-
-		/******************** Medreq_Doseins_Timing_Repeat_Bounds_Range_Low_Code ********************************************************************************/
-		if(m.getMedreqDoseinsTimingRepeatBoundsRangeLowCode() != null) {
-			medicationrequestadddosageinstructionsettimingsetrepeatsetboundsRangesetlow.setCode(m.getMedreqDoseinsTimingRepeatBoundsRangeLowCode());
-		}
-
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicationrequestadddosageinstructionsettimingsetrepeatsetboundsRangesetlowsetcomparatorEnumFactory = new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-
-		/******************** Medreq_Doseins_Timing_Repeat_Bounds_Range_Low_Compartr_Code ********************************************************************************/
-		if(m.getMedreqDoseinsTimingRepeatBoundsRangeLowCompartrCode() != null) {
-			medicationrequestadddosageinstructionsettimingsetrepeatsetboundsRangesetlow.setComparator(medicationrequestadddosageinstructionsettimingsetrepeatsetboundsRangesetlowsetcomparatorEnumFactory.fromCode(m.getMedreqDoseinsTimingRepeatBoundsRangeLowCompartrCode()));
-
-		}
-		/******************** Medreq_Doseins_Timing_Repeat_Bounds_Range_Low_System ********************************************************************************/
-		if(m.getMedreqDoseinsTimingRepeatBoundsRangeLowSystem() != null) {
-			medicationrequestadddosageinstructionsettimingsetrepeatsetboundsRangesetlow.setSystem(m.getMedreqDoseinsTimingRepeatBoundsRangeLowSystem());
-		}
-		/******************** Medreq_Doseins_Timing_Repeat_Bounds_Range_Low_Unit ********************************************************************************/
-		if(m.getMedreqDoseinsTimingRepeatBoundsRangeLowUnit() != null) {
-			medicationrequestadddosageinstructionsettimingsetrepeatsetboundsRangesetlow.setUnit(m.getMedreqDoseinsTimingRepeatBoundsRangeLowUnit());
-		}
-		/******************** Medreq_Doseins_Timing_Repeat_Bounds_Range_Low_Value ********************************************************************************/
-		if(m.getMedreqDoseinsTimingRepeatBoundsRangeLowValue() != null) {
-			medicationrequestadddosageinstructionsettimingsetrepeatsetboundsRangesetlow.setValue(Double.parseDouble((m.getMedreqDoseinsTimingRepeatBoundsRangeLowValue())));
-		}
-		}
-		/******************** Medreq_Doseins_Timing_Repeat_Count ********************************************************************************/
-		if(m.getMedreqDoseinsTimingRepeatCount() != null) {
-			medicationrequestadddosageinstructionsettimingsetrepeat.setCount(Integer.parseInt(m.getMedreqDoseinsTimingRepeatCount()));
-		}
-		/******************** Medreq_Doseins_Timing_Repeat_CountMax ********************************************************************************/
-		if(m.getMedreqDoseinsTimingRepeatCountMax() != null) {
-			medicationrequestadddosageinstructionsettimingsetrepeat.setCountMax(Integer.parseInt(m.getMedreqDoseinsTimingRepeatCountMax()));
-		}
-
-		org.hl7.fhir.r4.model.Timing.DayOfWeekEnumFactory medicationrequestadddosageinstructionsettimingsetrepeatadddayofweekEnumFactory = new org.hl7.fhir.r4.model.Timing.DayOfWeekEnumFactory();
-
-		/******************** Medreq_Doseins_Timing_Repeat_DayOfWeek_Code ********************************************************************************/
-		if(m.getMedreqDoseinsTimingRepeatDayOfWeekCode() != null) {
-			medicationrequestadddosageinstructionsettimingsetrepeat.addDayOfWeek(medicationrequestadddosageinstructionsettimingsetrepeatadddayofweekEnumFactory.fromCode(m.getMedreqDoseinsTimingRepeatDayOfWeekCode()));
-
-		}
-		/******************** Medreq_Doseins_Timing_Repeat_Duration ********************************************************************************/
-		if(m.getMedreqDoseinsTimingRepeatDuration() != null) {
-			medicationrequestadddosageinstructionsettimingsetrepeat.setDuration(Double.parseDouble((m.getMedreqDoseinsTimingRepeatDuration())));
-		}
-		/******************** Medreq_Doseins_Timing_Repeat_DurationMax ********************************************************************************/
-		if(m.getMedreqDoseinsTimingRepeatDurationMax() != null) {
-			medicationrequestadddosageinstructionsettimingsetrepeat.setDurationMax(Double.parseDouble((m.getMedreqDoseinsTimingRepeatDurationMax())));
-		}
-
-		org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory medicationrequestadddosageinstructionsettimingsetrepeatsetdurationunitEnumFactory = new org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory();
-
-		/******************** Medreq_Doseins_Timing_Repeat_DurationUnit_Code ********************************************************************************/
-		if(m.getMedreqDoseinsTimingRepeatDurationUnitCode() != null) {
-			medicationrequestadddosageinstructionsettimingsetrepeat.setDurationUnit(medicationrequestadddosageinstructionsettimingsetrepeatsetdurationunitEnumFactory.fromCode(m.getMedreqDoseinsTimingRepeatDurationUnitCode()));
-
-		}
-		/******************** Medreq_Doseins_Timing_Repeat_Frequency ********************************************************************************/
-		if(m.getMedreqDoseinsTimingRepeatFrequency() != null) {
-			medicationrequestadddosageinstructionsettimingsetrepeat.setFrequency(Integer.parseInt(m.getMedreqDoseinsTimingRepeatFrequency()));
-		}
-		/******************** Medreq_Doseins_Timing_Repeat_FrequencyMax ********************************************************************************/
-		if(m.getMedreqDoseinsTimingRepeatFrequencyMax() != null) {
-			medicationrequestadddosageinstructionsettimingsetrepeat.setFrequencyMax(Integer.parseInt(m.getMedreqDoseinsTimingRepeatFrequencyMax()));
-		}
-		/******************** Medreq_Doseins_Timing_Repeat_Off ********************************************************************************/
-		if(m.getMedreqDoseinsTimingRepeatOff() != null) {
-			medicationrequestadddosageinstructionsettimingsetrepeat.setOffset(Integer.parseInt(m.getMedreqDoseinsTimingRepeatOff()));
-		}
-		/******************** Medreq_Doseins_Timing_Repeat_Period ********************************************************************************/
-		if(m.getMedreqDoseinsTimingRepeatPeriod() != null) {
-			medicationrequestadddosageinstructionsettimingsetrepeat.setPeriod(Double.parseDouble((m.getMedreqDoseinsTimingRepeatPeriod())));
-		}
-		/******************** Medreq_Doseins_Timing_Repeat_PeriodMax ********************************************************************************/
-		if(m.getMedreqDoseinsTimingRepeatPeriodMax() != null) {
-			medicationrequestadddosageinstructionsettimingsetrepeat.setPeriodMax(Double.parseDouble((m.getMedreqDoseinsTimingRepeatPeriodMax())));
-		}
-
-		org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory medicationrequestadddosageinstructionsettimingsetrepeatsetperiodunitEnumFactory = new org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory();
-
-		/******************** Medreq_Doseins_Timing_Repeat_PeriodUnit_Code ********************************************************************************/
-		if(m.getMedreqDoseinsTimingRepeatPeriodUnitCode() != null) {
-			medicationrequestadddosageinstructionsettimingsetrepeat.setPeriodUnit(medicationrequestadddosageinstructionsettimingsetrepeatsetperiodunitEnumFactory.fromCode(m.getMedreqDoseinsTimingRepeatPeriodUnitCode()));
-
-		}
-		/******************** Medreq_Doseins_Timing_Repeat_TimeOfDay ********************************************************************************/
-		if(m.getMedreqDoseinsTimingRepeatTimeOfDay() != null) {
-			medicationrequestadddosageinstructionsettimingsetrepeat.addTimeOfDay(m.getMedreqDoseinsTimingRepeatTimeOfDay());
-		}
-
-		org.hl7.fhir.r4.model.Timing.EventTimingEnumFactory medicationrequestadddosageinstructionsettimingsetrepeataddwhenEnumFactory = new org.hl7.fhir.r4.model.Timing.EventTimingEnumFactory();
-
-		/******************** Medreq_Doseins_Timing_Repeat_When_Code ********************************************************************************/
-		if(m.getMedreqDoseinsTimingRepeatWhenCode() != null) {
-			medicationrequestadddosageinstructionsettimingsetrepeat.addWhen(medicationrequestadddosageinstructionsettimingsetrepeataddwhenEnumFactory.fromCode(m.getMedreqDoseinsTimingRepeatWhenCode()));
-
-		}
-		/******************** Medreq_Enc ********************************************************************************/
-		if(m.getMedreqEnc() != null) {
-			org.hl7.fhir.r4.model.Reference MedreqEncref = new org.hl7.fhir.r4.model.Reference();
-			medicationrequest.setEncounter(MedreqEncref.setReference(m.getMedreqEnc()));
-		}
-		/******************** Medreq_EventHistory ********************************************************************************/
-		if(m.getMedreqEventHistory() != null) {
-			org.hl7.fhir.r4.model.Reference MedreqEventHistoryref = new org.hl7.fhir.r4.model.Reference();
-			medicationrequest.addEventHistory(MedreqEventHistoryref.setReference(m.getMedreqEventHistory()));
-		}
-
-		org.hl7.fhir.r4.model.Identifier medicationrequestsetgroupidentifier = new org.hl7.fhir.r4.model.Identifier();
-		medicationrequest.setGroupIdentifier(medicationrequestsetgroupidentifier);
-
-		/******************** Medreq_GroupId_Assigner ********************************************************************************/
-		if(m.getMedreqGroupIdAssigner() != null) {
-			org.hl7.fhir.r4.model.Reference MedreqGroupIdAssignerref = new org.hl7.fhir.r4.model.Reference();
-			medicationrequestsetgroupidentifier.setAssigner(MedreqGroupIdAssignerref.setReference(m.getMedreqGroupIdAssigner()));
-		}
-
-		org.hl7.fhir.r4.model.Period medicationrequestsetgroupidentifiersetperiod = new org.hl7.fhir.r4.model.Period();
-		medicationrequestsetgroupidentifier.setPeriod(medicationrequestsetgroupidentifiersetperiod);
-
-		/******************** Medreq_GroupId_Period_End ********************************************************************************/
-		if(m.getMedreqGroupIdPeriodEnd() != null) {
-			java.text.SimpleDateFormat MedreqGroupIdPeriodEndsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date MedreqGroupIdPeriodEnddate = MedreqGroupIdPeriodEndsdf.parse(m.getMedreqGroupIdPeriodEnd());
-			medicationrequestsetgroupidentifiersetperiod.setEnd(MedreqGroupIdPeriodEnddate);
-		}
-		/******************** Medreq_GroupId_Period_Start ********************************************************************************/
-		if(m.getMedreqGroupIdPeriodStart() != null) {
-			java.text.SimpleDateFormat MedreqGroupIdPeriodStartsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date MedreqGroupIdPeriodStartdate = MedreqGroupIdPeriodStartsdf.parse(m.getMedreqGroupIdPeriodStart());
-			medicationrequestsetgroupidentifiersetperiod.setStart(MedreqGroupIdPeriodStartdate);
-		}
-		/******************** Medreq_GroupId_System ********************************************************************************/
-		if(m.getMedreqGroupIdSystem() != null) {
-			medicationrequestsetgroupidentifier.setSystem(m.getMedreqGroupIdSystem());
-		}
-
-		org.hl7.fhir.r4.model.CodeableConcept medicationrequestsetgroupidentifiersettype = new org.hl7.fhir.r4.model.CodeableConcept();
-		medicationrequestsetgroupidentifier.setType(medicationrequestsetgroupidentifiersettype);
-
-
-		org.hl7.fhir.r4.model.Coding medicationrequestsetgroupidentifiersettypeaddcoding = medicationrequestsetgroupidentifiersettype.addCoding();
-
-		/******************** Medreq_GroupId_Type_Coding_Code ********************************************************************************/
-		if(m.getMedreqGroupIdTypeCodingCode() != null) {
-			medicationrequestsetgroupidentifiersettypeaddcoding.setCode(m.getMedreqGroupIdTypeCodingCode());
-		}
-		/******************** Medreq_GroupId_Type_Coding_Display ********************************************************************************/
-		if(m.getMedreqGroupIdTypeCodingDisplay() != null) {
-			medicationrequestsetgroupidentifiersettypeaddcoding.setDisplay(m.getMedreqGroupIdTypeCodingDisplay());
-		}
-		/******************** Medreq_GroupId_Type_Coding_System ********************************************************************************/
-		if(m.getMedreqGroupIdTypeCodingSystem() != null) {
-			medicationrequestsetgroupidentifiersettypeaddcoding.setSystem(m.getMedreqGroupIdTypeCodingSystem());
-		}
-		/******************** Medreq_GroupId_Type_Coding_Usrslt ********************************************************************************/
-		if(m.getMedreqGroupIdTypeCodingUsrslt() != null) {
-			medicationrequestsetgroupidentifiersettypeaddcoding.setUserSelected(Boolean.parseBoolean(m.getMedreqGroupIdTypeCodingUsrslt()));
-		}
-		/******************** Medreq_GroupId_Type_Coding_Version ********************************************************************************/
-		if(m.getMedreqGroupIdTypeCodingVersion() != null) {
-			medicationrequestsetgroupidentifiersettypeaddcoding.setVersion(m.getMedreqGroupIdTypeCodingVersion());
-		}
-		/******************** Medreq_GroupId_Type_Text ********************************************************************************/
-		if(m.getMedreqGroupIdTypeText() != null) {
-			medicationrequestsetgroupidentifiersettype.setText(m.getMedreqGroupIdTypeText());
-		}
-
-		org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory medicationrequestsetgroupidentifiersetuseEnumFactory = new org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory();
-
-		/******************** Medreq_GroupId_Use_Code ********************************************************************************/
-		if(m.getMedreqGroupIdUseCode() != null) {
-			medicationrequestsetgroupidentifier.setUse(medicationrequestsetgroupidentifiersetuseEnumFactory.fromCode(m.getMedreqGroupIdUseCode()));
-
-		}
-		/******************** Medreq_GroupId_Value ********************************************************************************/
-		if(m.getMedreqGroupIdValue() != null) {
-			medicationrequestsetgroupidentifier.setValue(m.getMedreqGroupIdValue());
-		}
-
-		org.hl7.fhir.r4.model.Identifier medicationrequestaddidentifier = medicationrequest.addIdentifier();
-
-		/******************** Medreq_Id_Assigner ********************************************************************************/
-		if(m.getMedreqIdAssigner() != null) {
-			org.hl7.fhir.r4.model.Reference MedreqIdAssignerref = new org.hl7.fhir.r4.model.Reference();
-			medicationrequestaddidentifier.setAssigner(MedreqIdAssignerref.setReference(m.getMedreqIdAssigner()));
-		}
-
-		org.hl7.fhir.r4.model.Period medicationrequestaddidentifiersetperiod = new org.hl7.fhir.r4.model.Period();
-		medicationrequestaddidentifier.setPeriod(medicationrequestaddidentifiersetperiod);
-
-		/******************** Medreq_Id_Period_End ********************************************************************************/
-		if(m.getMedreqIdPeriodEnd() != null) {
-			java.text.SimpleDateFormat MedreqIdPeriodEndsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date MedreqIdPeriodEnddate = MedreqIdPeriodEndsdf.parse(m.getMedreqIdPeriodEnd());
-			medicationrequestaddidentifiersetperiod.setEnd(MedreqIdPeriodEnddate);
-		}
-		/******************** Medreq_Id_Period_Start ********************************************************************************/
-		if(m.getMedreqIdPeriodStart() != null) {
-			java.text.SimpleDateFormat MedreqIdPeriodStartsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date MedreqIdPeriodStartdate = MedreqIdPeriodStartsdf.parse(m.getMedreqIdPeriodStart());
-			medicationrequestaddidentifiersetperiod.setStart(MedreqIdPeriodStartdate);
-		}
-		/******************** Medreq_Id_System ********************************************************************************/
-		if(m.getMedreqIdSystem() != null) {
-			medicationrequestaddidentifier.setSystem(m.getMedreqIdSystem());
-		}
-
-		org.hl7.fhir.r4.model.CodeableConcept medicationrequestaddidentifiersettype = new org.hl7.fhir.r4.model.CodeableConcept();
-		medicationrequestaddidentifier.setType(medicationrequestaddidentifiersettype);
-
-
-		org.hl7.fhir.r4.model.Coding medicationrequestaddidentifiersettypeaddcoding = medicationrequestaddidentifiersettype.addCoding();
-
-		/******************** Medreq_Id_Type_Coding_Code ********************************************************************************/
-		if(m.getMedreqIdTypeCodingCode() != null) {
-			medicationrequestaddidentifiersettypeaddcoding.setCode(m.getMedreqIdTypeCodingCode());
-		}
-		/******************** Medreq_Id_Type_Coding_Display ********************************************************************************/
-		if(m.getMedreqIdTypeCodingDisplay() != null) {
-			medicationrequestaddidentifiersettypeaddcoding.setDisplay(m.getMedreqIdTypeCodingDisplay());
-		}
-		/******************** Medreq_Id_Type_Coding_System ********************************************************************************/
-		if(m.getMedreqIdTypeCodingSystem() != null) {
-			medicationrequestaddidentifiersettypeaddcoding.setSystem(m.getMedreqIdTypeCodingSystem());
-		}
-		/******************** Medreq_Id_Type_Coding_Usrslt ********************************************************************************/
-		if(m.getMedreqIdTypeCodingUsrslt() != null) {
-			medicationrequestaddidentifiersettypeaddcoding.setUserSelected(Boolean.parseBoolean(m.getMedreqIdTypeCodingUsrslt()));
-		}
-		/******************** Medreq_Id_Type_Coding_Version ********************************************************************************/
-		if(m.getMedreqIdTypeCodingVersion() != null) {
-			medicationrequestaddidentifiersettypeaddcoding.setVersion(m.getMedreqIdTypeCodingVersion());
-		}
-		/******************** Medreq_Id_Type_Text ********************************************************************************/
-		if(m.getMedreqIdTypeText() != null) {
-			medicationrequestaddidentifiersettype.setText(m.getMedreqIdTypeText());
-		}
-
-		org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory medicationrequestaddidentifiersetuseEnumFactory = new org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory();
-
-		/******************** Medreq_Id_Use_Code ********************************************************************************/
-		if(m.getMedreqIdUseCode() != null) {
-			medicationrequestaddidentifier.setUse(medicationrequestaddidentifiersetuseEnumFactory.fromCode(m.getMedreqIdUseCode()));
-
-		}
-		/******************** Medreq_Id_Value ********************************************************************************/
-		if(m.getMedreqIdValue() != null) {
-			medicationrequestaddidentifier.setValue(m.getMedreqIdValue());
-		}
-		/******************** Medreq_InstantiatesCanonical ********************************************************************************/
-		if(m.getMedreqInstantiatesCanonical() != null) {
-			medicationrequest.addInstantiatesCanonical(m.getMedreqInstantiatesCanonical());
-		}
-		/******************** Medreq_InstantiatesUri ********************************************************************************/
-		if(m.getMedreqInstantiatesUri() != null) {
-			medicationrequest.addInstantiatesUri(m.getMedreqInstantiatesUri());
-		}
-		/******************** Medreq_Insurance ********************************************************************************/
-		if(m.getMedreqInsurance() != null) {
-			org.hl7.fhir.r4.model.Reference MedreqInsuranceref = new org.hl7.fhir.r4.model.Reference();
-			medicationrequest.addInsurance(MedreqInsuranceref.setReference(m.getMedreqInsurance()));
-		}
-
-		org.hl7.fhir.r4.model.MedicationRequest.MedicationRequestIntentEnumFactory medicationrequestsetintentEnumFactory = new org.hl7.fhir.r4.model.MedicationRequest.MedicationRequestIntentEnumFactory();
-
-		/******************** Medreq_Intent_Code ********************************************************************************/
-		if(m.getMedreqIntentCode() != null) {
-			medicationrequest.setIntent(medicationrequestsetintentEnumFactory.fromCode(m.getMedreqIntentCode()));
-
-		}
-
-		if( m.getMedreqMedicationCodeableConceptCodingCode() != null || m.getMedreqMedicationCodeableConceptCodingDisplay() != null || m.getMedreqMedicationCodeableConceptCodingSystem() != null || m.getMedreqMedicationCodeableConceptCodingUsrslt() != null || m.getMedreqMedicationCodeableConceptCodingVersion() != null || m.getMedreqMedicationCodeableConceptText() != null ) {
-			org.hl7.fhir.r4.model.CodeableConcept medicationrequestsetmedicationCodeableConcept = new org.hl7.fhir.r4.model.CodeableConcept();
-			medicationrequest.setMedication(medicationrequestsetmedicationCodeableConcept);
-
-
-		org.hl7.fhir.r4.model.Coding medicationrequestsetmedicationCodeableConceptaddcoding = medicationrequestsetmedicationCodeableConcept.addCoding();
-
-		/******************** Medreq_Medication_CodeableConcept_Coding_Code ********************************************************************************/
-		if(m.getMedreqMedicationCodeableConceptCodingCode() != null) {
-			medicationrequestsetmedicationCodeableConceptaddcoding.setCode(m.getMedreqMedicationCodeableConceptCodingCode());
-		}
-		/******************** Medreq_Medication_CodeableConcept_Coding_Display ********************************************************************************/
-		if(m.getMedreqMedicationCodeableConceptCodingDisplay() != null) {
-			medicationrequestsetmedicationCodeableConceptaddcoding.setDisplay(m.getMedreqMedicationCodeableConceptCodingDisplay());
-		}
-		/******************** Medreq_Medication_CodeableConcept_Coding_System ********************************************************************************/
-		if(m.getMedreqMedicationCodeableConceptCodingSystem() != null) {
-			medicationrequestsetmedicationCodeableConceptaddcoding.setSystem(m.getMedreqMedicationCodeableConceptCodingSystem());
-		}
-		/******************** Medreq_Medication_CodeableConcept_Coding_Usrslt ********************************************************************************/
-		if(m.getMedreqMedicationCodeableConceptCodingUsrslt() != null) {
-			medicationrequestsetmedicationCodeableConceptaddcoding.setUserSelected(Boolean.parseBoolean(m.getMedreqMedicationCodeableConceptCodingUsrslt()));
-		}
-		/******************** Medreq_Medication_CodeableConcept_Coding_Version ********************************************************************************/
-		if(m.getMedreqMedicationCodeableConceptCodingVersion() != null) {
-			medicationrequestsetmedicationCodeableConceptaddcoding.setVersion(m.getMedreqMedicationCodeableConceptCodingVersion());
-		}
-		/******************** Medreq_Medication_CodeableConcept_Text ********************************************************************************/
-		if(m.getMedreqMedicationCodeableConceptText() != null) {
-			medicationrequestsetmedicationCodeableConcept.setText(m.getMedreqMedicationCodeableConceptText());
-		}
-		}
-		/******************** Medicationrequest_MedicationReference ********************************************************************************/
-		if(m.getMedicationrequestMedicationReference() != null) {
-			org.hl7.fhir.r4.model.Reference MedicationrequestMedicationReferenceref = new org.hl7.fhir.r4.model.Reference();
-			medicationrequest.setMedication(MedicationrequestMedicationReferenceref.setReference(m.getMedicationrequestMedicationReference()));
-		}
-
-		org.hl7.fhir.r4.model.Annotation medicationrequestaddnote = medicationrequest.addNote();
-
-		/******************** Medicationrequest_Note_AuthorReference ********************************************************************************/
-		if(m.getMedicationrequestNoteAuthorReference() != null) {
-			org.hl7.fhir.r4.model.Reference MedicationrequestNoteAuthorReferenceref = new org.hl7.fhir.r4.model.Reference();
-			medicationrequestaddnote.setAuthor(MedicationrequestNoteAuthorReferenceref.setReference(m.getMedicationrequestNoteAuthorReference()));
-		}
-		/******************** Medicationrequest_Note_AuthorString ********************************************************************************/
-		if(m.getMedicationrequestNoteAuthorString() != null) {
-			medicationrequestaddnote.setAuthor(new org.hl7.fhir.r4.model.StringType(m.getMedicationrequestNoteAuthorString()));
-		}
-		/******************** Medreq_Note_Text ********************************************************************************/
-		if(m.getMedreqNoteText() != null) {
-			medicationrequestaddnote.setText(m.getMedreqNoteText());
-		}
-		/******************** Medreq_Note_Time ********************************************************************************/
-		if(m.getMedreqNoteTime() != null) {
-			java.text.SimpleDateFormat MedreqNoteTimesdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date MedreqNoteTimedate = MedreqNoteTimesdf.parse(m.getMedreqNoteTime());
-			medicationrequestaddnote.setTime(MedreqNoteTimedate);
-		}
-		/******************** Medreq_Performer ********************************************************************************/
-		if(m.getMedreqPerformer() != null) {
-			org.hl7.fhir.r4.model.Reference MedreqPerformerref = new org.hl7.fhir.r4.model.Reference();
-			medicationrequest.setPerformer(MedreqPerformerref.setReference(m.getMedreqPerformer()));
-		}
-
-		org.hl7.fhir.r4.model.CodeableConcept medicationrequestsetperformertype = new org.hl7.fhir.r4.model.CodeableConcept();
-		medicationrequest.setPerformerType(medicationrequestsetperformertype);
-
-
-		org.hl7.fhir.r4.model.Coding medicationrequestsetperformertypeaddcoding = medicationrequestsetperformertype.addCoding();
-
-		/******************** Medreq_PerformerType_Coding_Code ********************************************************************************/
-		if(m.getMedreqPerformerTypeCodingCode() != null) {
-			medicationrequestsetperformertypeaddcoding.setCode(m.getMedreqPerformerTypeCodingCode());
-		}
-		/******************** Medreq_PerformerType_Coding_Display ********************************************************************************/
-		if(m.getMedreqPerformerTypeCodingDisplay() != null) {
-			medicationrequestsetperformertypeaddcoding.setDisplay(m.getMedreqPerformerTypeCodingDisplay());
-		}
-		/******************** Medreq_PerformerType_Coding_System ********************************************************************************/
-		if(m.getMedreqPerformerTypeCodingSystem() != null) {
-			medicationrequestsetperformertypeaddcoding.setSystem(m.getMedreqPerformerTypeCodingSystem());
-		}
-		/******************** Medreq_PerformerType_Coding_Usrslt ********************************************************************************/
-		if(m.getMedreqPerformerTypeCodingUsrslt() != null) {
-			medicationrequestsetperformertypeaddcoding.setUserSelected(Boolean.parseBoolean(m.getMedreqPerformerTypeCodingUsrslt()));
-		}
-		/******************** Medreq_PerformerType_Coding_Version ********************************************************************************/
-		if(m.getMedreqPerformerTypeCodingVersion() != null) {
-			medicationrequestsetperformertypeaddcoding.setVersion(m.getMedreqPerformerTypeCodingVersion());
-		}
-		/******************** Medreq_PerformerType_Text ********************************************************************************/
-		if(m.getMedreqPerformerTypeText() != null) {
-			medicationrequestsetperformertype.setText(m.getMedreqPerformerTypeText());
-		}
-		/******************** Medreq_PriorPrescription ********************************************************************************/
-		if(m.getMedreqPriorPrescription() != null) {
-			org.hl7.fhir.r4.model.Reference MedreqPriorPrescriptionref = new org.hl7.fhir.r4.model.Reference();
-			medicationrequest.setPriorPrescription(MedreqPriorPrescriptionref.setReference(m.getMedreqPriorPrescription()));
-		}
-
-		org.hl7.fhir.r4.model.MedicationRequest.MedicationRequestPriorityEnumFactory medicationrequestsetpriorityEnumFactory = new org.hl7.fhir.r4.model.MedicationRequest.MedicationRequestPriorityEnumFactory();
-
-		/******************** Medreq_Priority_Code ********************************************************************************/
-		if(m.getMedreqPriorityCode() != null) {
-			medicationrequest.setPriority(medicationrequestsetpriorityEnumFactory.fromCode(m.getMedreqPriorityCode()));
-
-		}
-
-		org.hl7.fhir.r4.model.CodeableConcept medicationrequestaddreasoncode = medicationrequest.addReasonCode();
-
-
-		org.hl7.fhir.r4.model.Coding medicationrequestaddreasoncodeaddcoding = medicationrequestaddreasoncode.addCoding();
-
-		/******************** Medreq_ReasonCode_Coding_Code ********************************************************************************/
-		if(m.getMedreqReasonCodeCodingCode() != null) {
-			medicationrequestaddreasoncodeaddcoding.setCode(m.getMedreqReasonCodeCodingCode());
-		}
-		/******************** Medreq_ReasonCode_Coding_Display ********************************************************************************/
-		if(m.getMedreqReasonCodeCodingDisplay() != null) {
-			medicationrequestaddreasoncodeaddcoding.setDisplay(m.getMedreqReasonCodeCodingDisplay());
-		}
-		/******************** Medreq_ReasonCode_Coding_System ********************************************************************************/
-		if(m.getMedreqReasonCodeCodingSystem() != null) {
-			medicationrequestaddreasoncodeaddcoding.setSystem(m.getMedreqReasonCodeCodingSystem());
-		}
-		/******************** Medreq_ReasonCode_Coding_Usrslt ********************************************************************************/
-		if(m.getMedreqReasonCodeCodingUsrslt() != null) {
-			medicationrequestaddreasoncodeaddcoding.setUserSelected(Boolean.parseBoolean(m.getMedreqReasonCodeCodingUsrslt()));
-		}
-		/******************** Medreq_ReasonCode_Coding_Version ********************************************************************************/
-		if(m.getMedreqReasonCodeCodingVersion() != null) {
-			medicationrequestaddreasoncodeaddcoding.setVersion(m.getMedreqReasonCodeCodingVersion());
-		}
-		/******************** Medreq_ReasonCode_Text ********************************************************************************/
-		if(m.getMedreqReasonCodeText() != null) {
-			medicationrequestaddreasoncode.setText(m.getMedreqReasonCodeText());
-		}
-		/******************** Medreq_ReasonReference ********************************************************************************/
-		if(m.getMedreqReasonReference() != null) {
-			org.hl7.fhir.r4.model.Reference MedreqReasonReferenceref = new org.hl7.fhir.r4.model.Reference();
-			medicationrequest.addReasonReference(MedreqReasonReferenceref.setReference(m.getMedreqReasonReference()));
-		}
-		/******************** Medreq_Recorder ********************************************************************************/
-		if(m.getMedreqRecorder() != null) {
-			org.hl7.fhir.r4.model.Reference MedreqRecorderref = new org.hl7.fhir.r4.model.Reference();
-			medicationrequest.setRecorder(MedreqRecorderref.setReference(m.getMedreqRecorder()));
-		}
-		/******************** Medicationrequest_ReportedBoolean ********************************************************************************/
-		if(m.getMedicationrequestReportedBoolean() != null) {
-			medicationrequest.setReported(new org.hl7.fhir.r4.model.BooleanType(m.getMedicationrequestReportedBoolean()));
-		}
-		/******************** Medicationrequest_ReportedReference ********************************************************************************/
-		if(m.getMedicationrequestReportedReference() != null) {
-			org.hl7.fhir.r4.model.Reference MedicationrequestReportedReferenceref = new org.hl7.fhir.r4.model.Reference();
-			medicationrequest.setReported(MedicationrequestReportedReferenceref.setReference(m.getMedicationrequestReportedReference()));
-		}
-		/******************** Medreq_Requester ********************************************************************************/
-		if(m.getMedreqRequester() != null) {
-			org.hl7.fhir.r4.model.Reference MedreqRequesterref = new org.hl7.fhir.r4.model.Reference();
-			medicationrequest.setRequester(MedreqRequesterref.setReference(m.getMedreqRequester()));
-		}
-
-		org.hl7.fhir.r4.model.MedicationRequest.MedicationRequestStatusEnumFactory medicationrequestsetstatusEnumFactory = new org.hl7.fhir.r4.model.MedicationRequest.MedicationRequestStatusEnumFactory();
-
-		/******************** Medreq_Status_Code ********************************************************************************/
-		if(m.getMedreqStatusCode() != null) {
-			medicationrequest.setStatus(medicationrequestsetstatusEnumFactory.fromCode(m.getMedreqStatusCode()));
-
-		}
-
-		org.hl7.fhir.r4.model.CodeableConcept medicationrequestsetstatusreason = new org.hl7.fhir.r4.model.CodeableConcept();
-		medicationrequest.setStatusReason(medicationrequestsetstatusreason);
-
-
-		org.hl7.fhir.r4.model.Coding medicationrequestsetstatusreasonaddcoding = medicationrequestsetstatusreason.addCoding();
-
-		/******************** Medreq_StatusReason_Coding_Code ********************************************************************************/
-		if(m.getMedreqStatusReasonCodingCode() != null) {
-			medicationrequestsetstatusreasonaddcoding.setCode(m.getMedreqStatusReasonCodingCode());
-		}
-		/******************** Medreq_StatusReason_Coding_Display ********************************************************************************/
-		if(m.getMedreqStatusReasonCodingDisplay() != null) {
-			medicationrequestsetstatusreasonaddcoding.setDisplay(m.getMedreqStatusReasonCodingDisplay());
-		}
-		/******************** Medreq_StatusReason_Coding_System ********************************************************************************/
-		if(m.getMedreqStatusReasonCodingSystem() != null) {
-			medicationrequestsetstatusreasonaddcoding.setSystem(m.getMedreqStatusReasonCodingSystem());
-		}
-		/******************** Medreq_StatusReason_Coding_Usrslt ********************************************************************************/
-		if(m.getMedreqStatusReasonCodingUsrslt() != null) {
-			medicationrequestsetstatusreasonaddcoding.setUserSelected(Boolean.parseBoolean(m.getMedreqStatusReasonCodingUsrslt()));
-		}
-		/******************** Medreq_StatusReason_Coding_Version ********************************************************************************/
-		if(m.getMedreqStatusReasonCodingVersion() != null) {
-			medicationrequestsetstatusreasonaddcoding.setVersion(m.getMedreqStatusReasonCodingVersion());
-		}
-		/******************** Medreq_StatusReason_Text ********************************************************************************/
-		if(m.getMedreqStatusReasonText() != null) {
-			medicationrequestsetstatusreason.setText(m.getMedreqStatusReasonText());
-		}
-		/******************** Medreq_Subject ********************************************************************************/
-		if(m.getMedreqSubject() != null) {
-			org.hl7.fhir.r4.model.Reference MedreqSubjectref = new org.hl7.fhir.r4.model.Reference();
-			medicationrequest.setSubject(MedreqSubjectref.setReference(m.getMedreqSubject()));
-		}
-
-		org.hl7.fhir.r4.model.MedicationRequest.MedicationRequestSubstitutionComponent medicationrequestsetsubstitution = new org.hl7.fhir.r4.model.MedicationRequest.MedicationRequestSubstitutionComponent();
-		medicationrequest.setSubstitution(medicationrequestsetsubstitution);
-
-		/******************** Medicationrequest_Substitution_AllowedBoolean ********************************************************************************/
-		if(m.getMedicationrequestSubstitutionAllowedBoolean() != null) {
-			medicationrequestsetsubstitution.setAllowed(new org.hl7.fhir.r4.model.BooleanType(m.getMedicationrequestSubstitutionAllowedBoolean()));
-		}
-
-		if( m.getMedreqSubstitutionAllowedCodeableConceptCodingCode() != null || m.getMedreqSubstitutionAllowedCodeableConceptCodingDisplay() != null || m.getMedreqSubstitutionAllowedCodeableConceptCodingSystem() != null || m.getMedreqSubstitutionAllowedCodeableConceptCodingUsrslt() != null || m.getMedreqSubstitutionAllowedCodeableConceptCodingVersion() != null || m.getMedreqSubstitutionAllowedCodeableConceptText() != null ) {
-			org.hl7.fhir.r4.model.CodeableConcept medicationrequestsetsubstitutionsetallowedCodeableConcept = new org.hl7.fhir.r4.model.CodeableConcept();
-			medicationrequestsetsubstitution.setAllowed(medicationrequestsetsubstitutionsetallowedCodeableConcept);
-
-
-		org.hl7.fhir.r4.model.Coding medicationrequestsetsubstitutionsetallowedCodeableConceptaddcoding = medicationrequestsetsubstitutionsetallowedCodeableConcept.addCoding();
-
-		/******************** Medreq_Substitution_Allowed_CodeableConcept_Coding_Code ********************************************************************************/
-		if(m.getMedreqSubstitutionAllowedCodeableConceptCodingCode() != null) {
-			medicationrequestsetsubstitutionsetallowedCodeableConceptaddcoding.setCode(m.getMedreqSubstitutionAllowedCodeableConceptCodingCode());
-		}
-		/******************** Medreq_Substitution_Allowed_CodeableConcept_Coding_Display ********************************************************************************/
-		if(m.getMedreqSubstitutionAllowedCodeableConceptCodingDisplay() != null) {
-			medicationrequestsetsubstitutionsetallowedCodeableConceptaddcoding.setDisplay(m.getMedreqSubstitutionAllowedCodeableConceptCodingDisplay());
-		}
-		/******************** Medreq_Substitution_Allowed_CodeableConcept_Coding_System ********************************************************************************/
-		if(m.getMedreqSubstitutionAllowedCodeableConceptCodingSystem() != null) {
-			medicationrequestsetsubstitutionsetallowedCodeableConceptaddcoding.setSystem(m.getMedreqSubstitutionAllowedCodeableConceptCodingSystem());
-		}
-		/******************** Medreq_Substitution_Allowed_CodeableConcept_Coding_Usrslt ********************************************************************************/
-		if(m.getMedreqSubstitutionAllowedCodeableConceptCodingUsrslt() != null) {
-			medicationrequestsetsubstitutionsetallowedCodeableConceptaddcoding.setUserSelected(Boolean.parseBoolean(m.getMedreqSubstitutionAllowedCodeableConceptCodingUsrslt()));
-		}
-		/******************** Medreq_Substitution_Allowed_CodeableConcept_Coding_Version ********************************************************************************/
-		if(m.getMedreqSubstitutionAllowedCodeableConceptCodingVersion() != null) {
-			medicationrequestsetsubstitutionsetallowedCodeableConceptaddcoding.setVersion(m.getMedreqSubstitutionAllowedCodeableConceptCodingVersion());
-		}
-		/******************** Medreq_Substitution_Allowed_CodeableConcept_Text ********************************************************************************/
-		if(m.getMedreqSubstitutionAllowedCodeableConceptText() != null) {
-			medicationrequestsetsubstitutionsetallowedCodeableConcept.setText(m.getMedreqSubstitutionAllowedCodeableConceptText());
-		}
-		}
-
-		org.hl7.fhir.r4.model.CodeableConcept medicationrequestsetsubstitutionsetreason = new org.hl7.fhir.r4.model.CodeableConcept();
-		medicationrequestsetsubstitution.setReason(medicationrequestsetsubstitutionsetreason);
-
-
-		org.hl7.fhir.r4.model.Coding medicationrequestsetsubstitutionsetreasonaddcoding = medicationrequestsetsubstitutionsetreason.addCoding();
-
-		/******************** Medreq_Substitution_Reason_Coding_Code ********************************************************************************/
-		if(m.getMedreqSubstitutionReasonCodingCode() != null) {
-			medicationrequestsetsubstitutionsetreasonaddcoding.setCode(m.getMedreqSubstitutionReasonCodingCode());
-		}
-		/******************** Medreq_Substitution_Reason_Coding_Display ********************************************************************************/
-		if(m.getMedreqSubstitutionReasonCodingDisplay() != null) {
-			medicationrequestsetsubstitutionsetreasonaddcoding.setDisplay(m.getMedreqSubstitutionReasonCodingDisplay());
-		}
-		/******************** Medreq_Substitution_Reason_Coding_System ********************************************************************************/
-		if(m.getMedreqSubstitutionReasonCodingSystem() != null) {
-			medicationrequestsetsubstitutionsetreasonaddcoding.setSystem(m.getMedreqSubstitutionReasonCodingSystem());
-		}
-		/******************** Medreq_Substitution_Reason_Coding_Usrslt ********************************************************************************/
-		if(m.getMedreqSubstitutionReasonCodingUsrslt() != null) {
-			medicationrequestsetsubstitutionsetreasonaddcoding.setUserSelected(Boolean.parseBoolean(m.getMedreqSubstitutionReasonCodingUsrslt()));
-		}
-		/******************** Medreq_Substitution_Reason_Coding_Version ********************************************************************************/
-		if(m.getMedreqSubstitutionReasonCodingVersion() != null) {
-			medicationrequestsetsubstitutionsetreasonaddcoding.setVersion(m.getMedreqSubstitutionReasonCodingVersion());
-		}
-		/******************** Medreq_Substitution_Reason_Text ********************************************************************************/
-		if(m.getMedreqSubstitutionReasonText() != null) {
-			medicationrequestsetsubstitutionsetreason.setText(m.getMedreqSubstitutionReasonText());
-		}
-		/******************** Medreq_SupportingInformation ********************************************************************************/
-		if(m.getMedreqSupportingInformation() != null) {
-			org.hl7.fhir.r4.model.Reference MedreqSupportingInformationref = new org.hl7.fhir.r4.model.Reference();
-			medicationrequest.addSupportingInformation(MedreqSupportingInformationref.setReference(m.getMedreqSupportingInformation()));
+		/******************** MdctnRqst_AthredOn ********************************************************************************/
+		if(m.getMdctnRqstAthredOn() != null) {
+			java.text.SimpleDateFormat MdctnRqst_AthredOnsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date MdctnRqst_AthredOndate = MdctnRqst_AthredOnsdf.parse(m.getMdctnRqstAthredOn());
+			medicationrequest.setAuthoredOn(MdctnRqst_AthredOndate);
+		}
+		/******************** MdctnRqst_BasedOn ********************************************************************************/
+		if(m.getMdctnRqstBasedOn() != null) {
+			medicationrequest.addBasedOn( new org.hl7.fhir.r4.model.Reference(m.getMdctnRqstBasedOn()));
+		}
+		/******************** medicationrequestcategory ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept medicationrequestcategory =  new org.hl7.fhir.r4.model.CodeableConcept();
+		medicationrequest.addCategory(medicationrequestcategory);
+
+		/******************** medicationrequestcategorycoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding medicationrequestcategorycoding =  new org.hl7.fhir.r4.model.Coding();
+		medicationrequestcategory.addCoding(medicationrequestcategorycoding);
+
+		/******************** MdctnRqst_Ctgry_Cdg_Cd ********************************************************************************/
+		if(m.getMdctnRqstCtgryCdgCd() != null) {
+			medicationrequestcategorycoding.setCode(m.getMdctnRqstCtgryCdgCd());
+		}
+		/******************** MdctnRqst_Ctgry_Cdg_Dsply ********************************************************************************/
+		if(m.getMdctnRqstCtgryCdgDsply() != null) {
+			medicationrequestcategorycoding.setDisplay(m.getMdctnRqstCtgryCdgDsply());
+		}
+		/******************** MdctnRqst_Ctgry_Cdg_Sys ********************************************************************************/
+		if(m.getMdctnRqstCtgryCdgSys() != null) {
+			medicationrequestcategorycoding.setSystem(m.getMdctnRqstCtgryCdgSys());
+		}
+		/******************** MdctnRqst_Ctgry_Cdg_UsrSltd ********************************************************************************/
+		if(m.getMdctnRqstCtgryCdgUsrSltd() != null) {
+			medicationrequestcategorycoding.setUserSelected(Boolean.parseBoolean(m.getMdctnRqstCtgryCdgUsrSltd()));
+		}
+		/******************** MdctnRqst_Ctgry_Cdg_Vrsn ********************************************************************************/
+		if(m.getMdctnRqstCtgryCdgVrsn() != null) {
+			medicationrequestcategorycoding.setVersion(m.getMdctnRqstCtgryCdgVrsn());
+		}
+		/******************** MdctnRqst_Ctgry_Txt ********************************************************************************/
+		if(m.getMdctnRqstCtgryTxt() != null) {
+			medicationrequestcategory.setText(m.getMdctnRqstCtgryTxt());
+		}
+		/******************** medicationrequestcourseoftherapytype ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept medicationrequestcourseoftherapytype =  new org.hl7.fhir.r4.model.CodeableConcept();
+		medicationrequest.setCourseOfTherapyType(medicationrequestcourseoftherapytype);
+
+		/******************** medicationrequestcourseoftherapytypecoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding medicationrequestcourseoftherapytypecoding =  new org.hl7.fhir.r4.model.Coding();
+		medicationrequestcourseoftherapytype.addCoding(medicationrequestcourseoftherapytypecoding);
+
+		/******************** MdctnRqst_CourseOfThrpyTyp_Cdg_Cd ********************************************************************************/
+		if(m.getMdctnRqstCourseOfThrpyTypCdgCd() != null) {
+			medicationrequestcourseoftherapytypecoding.setCode(m.getMdctnRqstCourseOfThrpyTypCdgCd());
+		}
+		/******************** MdctnRqst_CourseOfThrpyTyp_Cdg_Dsply ********************************************************************************/
+		if(m.getMdctnRqstCourseOfThrpyTypCdgDsply() != null) {
+			medicationrequestcourseoftherapytypecoding.setDisplay(m.getMdctnRqstCourseOfThrpyTypCdgDsply());
+		}
+		/******************** MdctnRqst_CourseOfThrpyTyp_Cdg_Sys ********************************************************************************/
+		if(m.getMdctnRqstCourseOfThrpyTypCdgSys() != null) {
+			medicationrequestcourseoftherapytypecoding.setSystem(m.getMdctnRqstCourseOfThrpyTypCdgSys());
+		}
+		/******************** MdctnRqst_CourseOfThrpyTyp_Cdg_UsrSltd ********************************************************************************/
+		if(m.getMdctnRqstCourseOfThrpyTypCdgUsrSltd() != null) {
+			medicationrequestcourseoftherapytypecoding.setUserSelected(Boolean.parseBoolean(m.getMdctnRqstCourseOfThrpyTypCdgUsrSltd()));
+		}
+		/******************** MdctnRqst_CourseOfThrpyTyp_Cdg_Vrsn ********************************************************************************/
+		if(m.getMdctnRqstCourseOfThrpyTypCdgVrsn() != null) {
+			medicationrequestcourseoftherapytypecoding.setVersion(m.getMdctnRqstCourseOfThrpyTypCdgVrsn());
+		}
+		/******************** MdctnRqst_CourseOfThrpyTyp_Txt ********************************************************************************/
+		if(m.getMdctnRqstCourseOfThrpyTypTxt() != null) {
+			medicationrequestcourseoftherapytype.setText(m.getMdctnRqstCourseOfThrpyTypTxt());
+		}
+		/******************** MdctnRqst_DetectedIssue ********************************************************************************/
+		if(m.getMdctnRqstDetectedIssue() != null) {
+			medicationrequest.addDetectedIssue( new org.hl7.fhir.r4.model.Reference(m.getMdctnRqstDetectedIssue()));
+		}
+		/******************** medicationrequestdispenserequest ********************************************************************************/
+		org.hl7.fhir.r4.model.MedicationRequest.MedicationRequestDispenseRequestComponent medicationrequestdispenserequest =  new org.hl7.fhir.r4.model.MedicationRequest.MedicationRequestDispenseRequestComponent();
+		medicationrequest.setDispenseRequest(medicationrequestdispenserequest);
+
+		/******************** medicationrequestdispenserequestdispenseinterval ********************************************************************************/
+		org.hl7.fhir.r4.model.Duration medicationrequestdispenserequestdispenseinterval =  new org.hl7.fhir.r4.model.Duration();
+		medicationrequestdispenserequest.setDispenseInterval(medicationrequestdispenserequestdispenseinterval);
+
+		/******************** medicationrequestdispenserequestexpectedsupplyduration ********************************************************************************/
+		org.hl7.fhir.r4.model.Duration medicationrequestdispenserequestexpectedsupplyduration =  new org.hl7.fhir.r4.model.Duration();
+		medicationrequestdispenserequest.setExpectedSupplyDuration(medicationrequestdispenserequestexpectedsupplyduration);
+
+		/******************** medicationrequestdispenserequestinitialfill ********************************************************************************/
+		org.hl7.fhir.r4.model.MedicationRequest.MedicationRequestDispenseRequestInitialFillComponent medicationrequestdispenserequestinitialfill =  new org.hl7.fhir.r4.model.MedicationRequest.MedicationRequestDispenseRequestInitialFillComponent();
+		medicationrequestdispenserequest.setInitialFill(medicationrequestdispenserequestinitialfill);
+
+		/******************** medicationrequestdispenserequestinitialfillduration ********************************************************************************/
+		org.hl7.fhir.r4.model.Duration medicationrequestdispenserequestinitialfillduration =  new org.hl7.fhir.r4.model.Duration();
+		medicationrequestdispenserequestinitialfill.setDuration(medicationrequestdispenserequestinitialfillduration);
+
+		/******************** medicationrequestdispenserequestinitialfillquantity ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity medicationrequestdispenserequestinitialfillquantity =  new org.hl7.fhir.r4.model.Quantity();
+		medicationrequestdispenserequestinitialfill.setQuantity(medicationrequestdispenserequestinitialfillquantity);
+
+		/******************** MdctnRqst_DispnsRqst_InitialFill_Qnty_Cd ********************************************************************************/
+		if(m.getMdctnRqstDispnsRqstInitialFillQntyCd() != null) {
+			medicationrequestdispenserequestinitialfillquantity.setCode(m.getMdctnRqstDispnsRqstInitialFillQntyCd());
+		}
+		/******************** medicationrequestdispenserequestinitialfillquantitycomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicationrequestdispenserequestinitialfillquantitycomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		medicationrequestdispenserequestinitialfillquantity.setComparator(medicationrequestdispenserequestinitialfillquantitycomparator.fromCode(m.getMdctnRqstDispnsRqstInitialFillQntyCmprtr()));
+
+		/******************** MdctnRqst_DispnsRqst_InitialFill_Qnty_Sys ********************************************************************************/
+		if(m.getMdctnRqstDispnsRqstInitialFillQntySys() != null) {
+			medicationrequestdispenserequestinitialfillquantity.setSystem(m.getMdctnRqstDispnsRqstInitialFillQntySys());
+		}
+		/******************** MdctnRqst_DispnsRqst_InitialFill_Qnty_Unt ********************************************************************************/
+		if(m.getMdctnRqstDispnsRqstInitialFillQntyUnt() != null) {
+			medicationrequestdispenserequestinitialfillquantity.setUnit(m.getMdctnRqstDispnsRqstInitialFillQntyUnt());
+		}
+		/******************** MdctnRqst_DispnsRqst_InitialFill_Qnty_Vl ********************************************************************************/
+		if(m.getMdctnRqstDispnsRqstInitialFillQntyVl() != null) {
+			medicationrequestdispenserequestinitialfillquantity.setValue(Double.parseDouble((m.getMdctnRqstDispnsRqstInitialFillQntyVl())));
+		}
+		/******************** MdctnRqst_DispnsRqst_NmbrOfRptsAllowed ********************************************************************************/
+		if(m.getMdctnRqstDispnsRqstNmbrOfRptsAllowed() != null) {
+			medicationrequestdispenserequest.setNumberOfRepeatsAllowed(Integer.parseInt(m.getMdctnRqstDispnsRqstNmbrOfRptsAllowed()));
+		}
+		/******************** MdctnRqst_DispnsRqst_Prfrmr ********************************************************************************/
+		if(m.getMdctnRqstDispnsRqstPrfrmr() != null) {
+			medicationrequestdispenserequest.setPerformer( new org.hl7.fhir.r4.model.Reference(m.getMdctnRqstDispnsRqstPrfrmr()));
+		}
+		/******************** medicationrequestdispenserequestquantity ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity medicationrequestdispenserequestquantity =  new org.hl7.fhir.r4.model.Quantity();
+		medicationrequestdispenserequest.setQuantity(medicationrequestdispenserequestquantity);
+
+		/******************** MdctnRqst_DispnsRqst_Qnty_Cd ********************************************************************************/
+		if(m.getMdctnRqstDispnsRqstQntyCd() != null) {
+			medicationrequestdispenserequestquantity.setCode(m.getMdctnRqstDispnsRqstQntyCd());
+		}
+		/******************** medicationrequestdispenserequestquantitycomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicationrequestdispenserequestquantitycomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		medicationrequestdispenserequestquantity.setComparator(medicationrequestdispenserequestquantitycomparator.fromCode(m.getMdctnRqstDispnsRqstQntyCmprtr()));
+
+		/******************** MdctnRqst_DispnsRqst_Qnty_Sys ********************************************************************************/
+		if(m.getMdctnRqstDispnsRqstQntySys() != null) {
+			medicationrequestdispenserequestquantity.setSystem(m.getMdctnRqstDispnsRqstQntySys());
+		}
+		/******************** MdctnRqst_DispnsRqst_Qnty_Unt ********************************************************************************/
+		if(m.getMdctnRqstDispnsRqstQntyUnt() != null) {
+			medicationrequestdispenserequestquantity.setUnit(m.getMdctnRqstDispnsRqstQntyUnt());
+		}
+		/******************** MdctnRqst_DispnsRqst_Qnty_Vl ********************************************************************************/
+		if(m.getMdctnRqstDispnsRqstQntyVl() != null) {
+			medicationrequestdispenserequestquantity.setValue(Double.parseDouble((m.getMdctnRqstDispnsRqstQntyVl())));
+		}
+		/******************** medicationrequestdispenserequestvalidityperiod ********************************************************************************/
+		org.hl7.fhir.r4.model.Period medicationrequestdispenserequestvalidityperiod =  new org.hl7.fhir.r4.model.Period();
+		medicationrequestdispenserequest.setValidityPeriod(medicationrequestdispenserequestvalidityperiod);
+
+		/******************** MdctnRqst_DispnsRqst_ValidityPrd_End ********************************************************************************/
+		if(m.getMdctnRqstDispnsRqstValidityPrdEnd() != null) {
+			java.text.SimpleDateFormat MdctnRqst_DispnsRqst_ValidityPrd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date MdctnRqst_DispnsRqst_ValidityPrd_Enddate = MdctnRqst_DispnsRqst_ValidityPrd_Endsdf.parse(m.getMdctnRqstDispnsRqstValidityPrdEnd());
+			medicationrequestdispenserequestvalidityperiod.setEnd(MdctnRqst_DispnsRqst_ValidityPrd_Enddate);
+		}
+		/******************** MdctnRqst_DispnsRqst_ValidityPrd_Strt ********************************************************************************/
+		if(m.getMdctnRqstDispnsRqstValidityPrdStrt() != null) {
+			java.text.SimpleDateFormat MdctnRqst_DispnsRqst_ValidityPrd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date MdctnRqst_DispnsRqst_ValidityPrd_Strtdate = MdctnRqst_DispnsRqst_ValidityPrd_Strtsdf.parse(m.getMdctnRqstDispnsRqstValidityPrdStrt());
+			medicationrequestdispenserequestvalidityperiod.setStart(MdctnRqst_DispnsRqst_ValidityPrd_Strtdate);
+		}
+		/******************** MdctnRqst_DoNotPerform ********************************************************************************/
+		if(m.getMdctnRqstDoNotPerform() != null) {
+			medicationrequest.setDoNotPerform(Boolean.parseBoolean(m.getMdctnRqstDoNotPerform()));
+		}
+		/******************** medicationrequestdosageinstruction ********************************************************************************/
+		org.hl7.fhir.r4.model.Dosage medicationrequestdosageinstruction =  new org.hl7.fhir.r4.model.Dosage();
+		medicationrequest.addDosageInstruction(medicationrequestdosageinstruction);
+
+		/******************** medicationrequestdosageinstructionadditionalinstruction ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept medicationrequestdosageinstructionadditionalinstruction =  new org.hl7.fhir.r4.model.CodeableConcept();
+		medicationrequestdosageinstruction.addAdditionalInstruction(medicationrequestdosageinstructionadditionalinstruction);
+
+		/******************** medicationrequestdosageinstructionadditionalinstructioncoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding medicationrequestdosageinstructionadditionalinstructioncoding =  new org.hl7.fhir.r4.model.Coding();
+		medicationrequestdosageinstructionadditionalinstruction.addCoding(medicationrequestdosageinstructionadditionalinstructioncoding);
+
+		/******************** MdctnRqst_DsgInstrctn_AddtnlInstrctn_Cdg_Cd ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnAddtnlInstrctnCdgCd() != null) {
+			medicationrequestdosageinstructionadditionalinstructioncoding.setCode(m.getMdctnRqstDsgInstrctnAddtnlInstrctnCdgCd());
+		}
+		/******************** MdctnRqst_DsgInstrctn_AddtnlInstrctn_Cdg_Dsply ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnAddtnlInstrctnCdgDsply() != null) {
+			medicationrequestdosageinstructionadditionalinstructioncoding.setDisplay(m.getMdctnRqstDsgInstrctnAddtnlInstrctnCdgDsply());
+		}
+		/******************** MdctnRqst_DsgInstrctn_AddtnlInstrctn_Cdg_Sys ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnAddtnlInstrctnCdgSys() != null) {
+			medicationrequestdosageinstructionadditionalinstructioncoding.setSystem(m.getMdctnRqstDsgInstrctnAddtnlInstrctnCdgSys());
+		}
+		/******************** MdctnRqst_DsgInstrctn_AddtnlInstrctn_Cdg_UsrSltd ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnAddtnlInstrctnCdgUsrSltd() != null) {
+			medicationrequestdosageinstructionadditionalinstructioncoding.setUserSelected(Boolean.parseBoolean(m.getMdctnRqstDsgInstrctnAddtnlInstrctnCdgUsrSltd()));
+		}
+		/******************** MdctnRqst_DsgInstrctn_AddtnlInstrctn_Cdg_Vrsn ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnAddtnlInstrctnCdgVrsn() != null) {
+			medicationrequestdosageinstructionadditionalinstructioncoding.setVersion(m.getMdctnRqstDsgInstrctnAddtnlInstrctnCdgVrsn());
+		}
+		/******************** MdctnRqst_DsgInstrctn_AddtnlInstrctn_Txt ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnAddtnlInstrctnTxt() != null) {
+			medicationrequestdosageinstructionadditionalinstruction.setText(m.getMdctnRqstDsgInstrctnAddtnlInstrctnTxt());
+		}
+		/******************** MdctnRqst_DsgInstrctn_AsNdBooleanTyp ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnAsNdBooleanTyp() != null) {
+			medicationrequestdosageinstruction.setAsNeeded( new org.hl7.fhir.r4.model.BooleanType(m.getMdctnRqstDsgInstrctnAsNdBooleanTyp()));
+		}
+		/******************** medicationrequestdosageinstructionasneededcodeableconcept ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept medicationrequestdosageinstructionasneededcodeableconcept =  new org.hl7.fhir.r4.model.CodeableConcept();
+		medicationrequestdosageinstruction.setAsNeeded(medicationrequestdosageinstructionasneededcodeableconcept);
+
+		/******************** medicationrequestdosageinstructionasneededcodeableconceptcoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding medicationrequestdosageinstructionasneededcodeableconceptcoding =  new org.hl7.fhir.r4.model.Coding();
+		medicationrequestdosageinstructionasneededcodeableconcept.addCoding(medicationrequestdosageinstructionasneededcodeableconceptcoding);
+
+		/******************** MdctnRqst_DsgInstrctn_AsNdCdbleCncpt_Cdg_Cd ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnAsNdCdbleCncptCdgCd() != null) {
+			medicationrequestdosageinstructionasneededcodeableconceptcoding.setCode(m.getMdctnRqstDsgInstrctnAsNdCdbleCncptCdgCd());
+		}
+		/******************** MdctnRqst_DsgInstrctn_AsNdCdbleCncpt_Cdg_Dsply ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnAsNdCdbleCncptCdgDsply() != null) {
+			medicationrequestdosageinstructionasneededcodeableconceptcoding.setDisplay(m.getMdctnRqstDsgInstrctnAsNdCdbleCncptCdgDsply());
+		}
+		/******************** MdctnRqst_DsgInstrctn_AsNdCdbleCncpt_Cdg_Sys ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnAsNdCdbleCncptCdgSys() != null) {
+			medicationrequestdosageinstructionasneededcodeableconceptcoding.setSystem(m.getMdctnRqstDsgInstrctnAsNdCdbleCncptCdgSys());
+		}
+		/******************** MdctnRqst_DsgInstrctn_AsNdCdbleCncpt_Cdg_UsrSltd ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnAsNdCdbleCncptCdgUsrSltd() != null) {
+			medicationrequestdosageinstructionasneededcodeableconceptcoding.setUserSelected(Boolean.parseBoolean(m.getMdctnRqstDsgInstrctnAsNdCdbleCncptCdgUsrSltd()));
+		}
+		/******************** MdctnRqst_DsgInstrctn_AsNdCdbleCncpt_Cdg_Vrsn ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnAsNdCdbleCncptCdgVrsn() != null) {
+			medicationrequestdosageinstructionasneededcodeableconceptcoding.setVersion(m.getMdctnRqstDsgInstrctnAsNdCdbleCncptCdgVrsn());
+		}
+		/******************** MdctnRqst_DsgInstrctn_AsNdCdbleCncpt_Txt ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnAsNdCdbleCncptTxt() != null) {
+			medicationrequestdosageinstructionasneededcodeableconcept.setText(m.getMdctnRqstDsgInstrctnAsNdCdbleCncptTxt());
+		}
+		/******************** medicationrequestdosageinstructiondoseandrate ********************************************************************************/
+		org.hl7.fhir.r4.model.Dosage.DosageDoseAndRateComponent medicationrequestdosageinstructiondoseandrate =  new org.hl7.fhir.r4.model.Dosage.DosageDoseAndRateComponent();
+		medicationrequestdosageinstruction.addDoseAndRate(medicationrequestdosageinstructiondoseandrate);
+
+		/******************** medicationrequestdosageinstructiondoseandratedosequantity ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity medicationrequestdosageinstructiondoseandratedosequantity =  new org.hl7.fhir.r4.model.Quantity();
+		medicationrequestdosageinstructiondoseandrate.setDose(medicationrequestdosageinstructiondoseandratedosequantity);
+
+		/******************** MdctnRqst_DsgInstrctn_DoseAndRt_DoseQnty_Cd ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnDoseAndRtDoseQntyCd() != null) {
+			medicationrequestdosageinstructiondoseandratedosequantity.setCode(m.getMdctnRqstDsgInstrctnDoseAndRtDoseQntyCd());
+		}
+		/******************** medicationrequestdosageinstructiondoseandratedosequantitycomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicationrequestdosageinstructiondoseandratedosequantitycomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		medicationrequestdosageinstructiondoseandratedosequantity.setComparator(medicationrequestdosageinstructiondoseandratedosequantitycomparator.fromCode(m.getMdctnRqstDsgInstrctnDoseAndRtDoseQntyCmprtr()));
+
+		/******************** MdctnRqst_DsgInstrctn_DoseAndRt_DoseQnty_Sys ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnDoseAndRtDoseQntySys() != null) {
+			medicationrequestdosageinstructiondoseandratedosequantity.setSystem(m.getMdctnRqstDsgInstrctnDoseAndRtDoseQntySys());
+		}
+		/******************** MdctnRqst_DsgInstrctn_DoseAndRt_DoseQnty_Unt ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnDoseAndRtDoseQntyUnt() != null) {
+			medicationrequestdosageinstructiondoseandratedosequantity.setUnit(m.getMdctnRqstDsgInstrctnDoseAndRtDoseQntyUnt());
+		}
+		/******************** MdctnRqst_DsgInstrctn_DoseAndRt_DoseQnty_Vl ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnDoseAndRtDoseQntyVl() != null) {
+			medicationrequestdosageinstructiondoseandratedosequantity.setValue(Double.parseDouble((m.getMdctnRqstDsgInstrctnDoseAndRtDoseQntyVl())));
+		}
+		/******************** medicationrequestdosageinstructiondoseandratedoserange ********************************************************************************/
+		org.hl7.fhir.r4.model.Range medicationrequestdosageinstructiondoseandratedoserange =  new org.hl7.fhir.r4.model.Range();
+		medicationrequestdosageinstructiondoseandrate.setDose(medicationrequestdosageinstructiondoseandratedoserange);
+
+		/******************** medicationrequestdosageinstructiondoseandratedoserangehigh ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity medicationrequestdosageinstructiondoseandratedoserangehigh =  new org.hl7.fhir.r4.model.Quantity();
+		medicationrequestdosageinstructiondoseandratedoserange.setHigh(medicationrequestdosageinstructiondoseandratedoserangehigh);
+
+		/******************** MdctnRqst_DsgInstrctn_DoseAndRt_DoseRng_Hi_Cd ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnDoseAndRtDoseRngHiCd() != null) {
+			medicationrequestdosageinstructiondoseandratedoserangehigh.setCode(m.getMdctnRqstDsgInstrctnDoseAndRtDoseRngHiCd());
+		}
+		/******************** medicationrequestdosageinstructiondoseandratedoserangehighcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicationrequestdosageinstructiondoseandratedoserangehighcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		medicationrequestdosageinstructiondoseandratedoserangehigh.setComparator(medicationrequestdosageinstructiondoseandratedoserangehighcomparator.fromCode(m.getMdctnRqstDsgInstrctnDoseAndRtDoseRngHiCmprtr()));
+
+		/******************** MdctnRqst_DsgInstrctn_DoseAndRt_DoseRng_Hi_Sys ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnDoseAndRtDoseRngHiSys() != null) {
+			medicationrequestdosageinstructiondoseandratedoserangehigh.setSystem(m.getMdctnRqstDsgInstrctnDoseAndRtDoseRngHiSys());
+		}
+		/******************** MdctnRqst_DsgInstrctn_DoseAndRt_DoseRng_Hi_Unt ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnDoseAndRtDoseRngHiUnt() != null) {
+			medicationrequestdosageinstructiondoseandratedoserangehigh.setUnit(m.getMdctnRqstDsgInstrctnDoseAndRtDoseRngHiUnt());
+		}
+		/******************** MdctnRqst_DsgInstrctn_DoseAndRt_DoseRng_Hi_Vl ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnDoseAndRtDoseRngHiVl() != null) {
+			medicationrequestdosageinstructiondoseandratedoserangehigh.setValue(Double.parseDouble((m.getMdctnRqstDsgInstrctnDoseAndRtDoseRngHiVl())));
+		}
+		/******************** medicationrequestdosageinstructiondoseandratedoserangelow ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity medicationrequestdosageinstructiondoseandratedoserangelow =  new org.hl7.fhir.r4.model.Quantity();
+		medicationrequestdosageinstructiondoseandratedoserange.setLow(medicationrequestdosageinstructiondoseandratedoserangelow);
+
+		/******************** MdctnRqst_DsgInstrctn_DoseAndRt_DoseRng_Lw_Cd ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnDoseAndRtDoseRngLwCd() != null) {
+			medicationrequestdosageinstructiondoseandratedoserangelow.setCode(m.getMdctnRqstDsgInstrctnDoseAndRtDoseRngLwCd());
+		}
+		/******************** medicationrequestdosageinstructiondoseandratedoserangelowcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicationrequestdosageinstructiondoseandratedoserangelowcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		medicationrequestdosageinstructiondoseandratedoserangelow.setComparator(medicationrequestdosageinstructiondoseandratedoserangelowcomparator.fromCode(m.getMdctnRqstDsgInstrctnDoseAndRtDoseRngLwCmprtr()));
+
+		/******************** MdctnRqst_DsgInstrctn_DoseAndRt_DoseRng_Lw_Sys ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnDoseAndRtDoseRngLwSys() != null) {
+			medicationrequestdosageinstructiondoseandratedoserangelow.setSystem(m.getMdctnRqstDsgInstrctnDoseAndRtDoseRngLwSys());
+		}
+		/******************** MdctnRqst_DsgInstrctn_DoseAndRt_DoseRng_Lw_Unt ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnDoseAndRtDoseRngLwUnt() != null) {
+			medicationrequestdosageinstructiondoseandratedoserangelow.setUnit(m.getMdctnRqstDsgInstrctnDoseAndRtDoseRngLwUnt());
+		}
+		/******************** MdctnRqst_DsgInstrctn_DoseAndRt_DoseRng_Lw_Vl ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnDoseAndRtDoseRngLwVl() != null) {
+			medicationrequestdosageinstructiondoseandratedoserangelow.setValue(Double.parseDouble((m.getMdctnRqstDsgInstrctnDoseAndRtDoseRngLwVl())));
+		}
+		/******************** medicationrequestdosageinstructiondoseandrateratequantity ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity medicationrequestdosageinstructiondoseandrateratequantity =  new org.hl7.fhir.r4.model.Quantity();
+		medicationrequestdosageinstructiondoseandrate.setRate(medicationrequestdosageinstructiondoseandrateratequantity);
+
+		/******************** MdctnRqst_DsgInstrctn_DoseAndRt_RtQnty_Cd ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnDoseAndRtRtQntyCd() != null) {
+			medicationrequestdosageinstructiondoseandrateratequantity.setCode(m.getMdctnRqstDsgInstrctnDoseAndRtRtQntyCd());
+		}
+		/******************** medicationrequestdosageinstructiondoseandrateratequantitycomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicationrequestdosageinstructiondoseandrateratequantitycomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		medicationrequestdosageinstructiondoseandrateratequantity.setComparator(medicationrequestdosageinstructiondoseandrateratequantitycomparator.fromCode(m.getMdctnRqstDsgInstrctnDoseAndRtRtQntyCmprtr()));
+
+		/******************** MdctnRqst_DsgInstrctn_DoseAndRt_RtQnty_Sys ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnDoseAndRtRtQntySys() != null) {
+			medicationrequestdosageinstructiondoseandrateratequantity.setSystem(m.getMdctnRqstDsgInstrctnDoseAndRtRtQntySys());
+		}
+		/******************** MdctnRqst_DsgInstrctn_DoseAndRt_RtQnty_Unt ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnDoseAndRtRtQntyUnt() != null) {
+			medicationrequestdosageinstructiondoseandrateratequantity.setUnit(m.getMdctnRqstDsgInstrctnDoseAndRtRtQntyUnt());
+		}
+		/******************** MdctnRqst_DsgInstrctn_DoseAndRt_RtQnty_Vl ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnDoseAndRtRtQntyVl() != null) {
+			medicationrequestdosageinstructiondoseandrateratequantity.setValue(Double.parseDouble((m.getMdctnRqstDsgInstrctnDoseAndRtRtQntyVl())));
+		}
+		/******************** medicationrequestdosageinstructiondoseandrateraterange ********************************************************************************/
+		org.hl7.fhir.r4.model.Range medicationrequestdosageinstructiondoseandrateraterange =  new org.hl7.fhir.r4.model.Range();
+		medicationrequestdosageinstructiondoseandrate.setRate(medicationrequestdosageinstructiondoseandrateraterange);
+
+		/******************** medicationrequestdosageinstructiondoseandrateraterangehigh ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity medicationrequestdosageinstructiondoseandrateraterangehigh =  new org.hl7.fhir.r4.model.Quantity();
+		medicationrequestdosageinstructiondoseandrateraterange.setHigh(medicationrequestdosageinstructiondoseandrateraterangehigh);
+
+		/******************** MdctnRqst_DsgInstrctn_DoseAndRt_RtRng_Hi_Cd ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnDoseAndRtRtRngHiCd() != null) {
+			medicationrequestdosageinstructiondoseandrateraterangehigh.setCode(m.getMdctnRqstDsgInstrctnDoseAndRtRtRngHiCd());
+		}
+		/******************** medicationrequestdosageinstructiondoseandrateraterangehighcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicationrequestdosageinstructiondoseandrateraterangehighcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		medicationrequestdosageinstructiondoseandrateraterangehigh.setComparator(medicationrequestdosageinstructiondoseandrateraterangehighcomparator.fromCode(m.getMdctnRqstDsgInstrctnDoseAndRtRtRngHiCmprtr()));
+
+		/******************** MdctnRqst_DsgInstrctn_DoseAndRt_RtRng_Hi_Sys ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnDoseAndRtRtRngHiSys() != null) {
+			medicationrequestdosageinstructiondoseandrateraterangehigh.setSystem(m.getMdctnRqstDsgInstrctnDoseAndRtRtRngHiSys());
+		}
+		/******************** MdctnRqst_DsgInstrctn_DoseAndRt_RtRng_Hi_Unt ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnDoseAndRtRtRngHiUnt() != null) {
+			medicationrequestdosageinstructiondoseandrateraterangehigh.setUnit(m.getMdctnRqstDsgInstrctnDoseAndRtRtRngHiUnt());
+		}
+		/******************** MdctnRqst_DsgInstrctn_DoseAndRt_RtRng_Hi_Vl ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnDoseAndRtRtRngHiVl() != null) {
+			medicationrequestdosageinstructiondoseandrateraterangehigh.setValue(Double.parseDouble((m.getMdctnRqstDsgInstrctnDoseAndRtRtRngHiVl())));
+		}
+		/******************** medicationrequestdosageinstructiondoseandrateraterangelow ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity medicationrequestdosageinstructiondoseandrateraterangelow =  new org.hl7.fhir.r4.model.Quantity();
+		medicationrequestdosageinstructiondoseandrateraterange.setLow(medicationrequestdosageinstructiondoseandrateraterangelow);
+
+		/******************** MdctnRqst_DsgInstrctn_DoseAndRt_RtRng_Lw_Cd ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnDoseAndRtRtRngLwCd() != null) {
+			medicationrequestdosageinstructiondoseandrateraterangelow.setCode(m.getMdctnRqstDsgInstrctnDoseAndRtRtRngLwCd());
+		}
+		/******************** medicationrequestdosageinstructiondoseandrateraterangelowcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicationrequestdosageinstructiondoseandrateraterangelowcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		medicationrequestdosageinstructiondoseandrateraterangelow.setComparator(medicationrequestdosageinstructiondoseandrateraterangelowcomparator.fromCode(m.getMdctnRqstDsgInstrctnDoseAndRtRtRngLwCmprtr()));
+
+		/******************** MdctnRqst_DsgInstrctn_DoseAndRt_RtRng_Lw_Sys ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnDoseAndRtRtRngLwSys() != null) {
+			medicationrequestdosageinstructiondoseandrateraterangelow.setSystem(m.getMdctnRqstDsgInstrctnDoseAndRtRtRngLwSys());
+		}
+		/******************** MdctnRqst_DsgInstrctn_DoseAndRt_RtRng_Lw_Unt ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnDoseAndRtRtRngLwUnt() != null) {
+			medicationrequestdosageinstructiondoseandrateraterangelow.setUnit(m.getMdctnRqstDsgInstrctnDoseAndRtRtRngLwUnt());
+		}
+		/******************** MdctnRqst_DsgInstrctn_DoseAndRt_RtRng_Lw_Vl ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnDoseAndRtRtRngLwVl() != null) {
+			medicationrequestdosageinstructiondoseandrateraterangelow.setValue(Double.parseDouble((m.getMdctnRqstDsgInstrctnDoseAndRtRtRngLwVl())));
+		}
+		/******************** medicationrequestdosageinstructiondoseandraterateratio ********************************************************************************/
+		org.hl7.fhir.r4.model.Ratio medicationrequestdosageinstructiondoseandraterateratio =  new org.hl7.fhir.r4.model.Ratio();
+		medicationrequestdosageinstructiondoseandrate.setRate(medicationrequestdosageinstructiondoseandraterateratio);
+
+		/******************** medicationrequestdosageinstructiondoseandraterateratiodenominator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity medicationrequestdosageinstructiondoseandraterateratiodenominator =  new org.hl7.fhir.r4.model.Quantity();
+		medicationrequestdosageinstructiondoseandraterateratio.setDenominator(medicationrequestdosageinstructiondoseandraterateratiodenominator);
+
+		/******************** MdctnRqst_DsgInstrctn_DoseAndRt_RtRtio_Dnmntr_Cd ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrCd() != null) {
+			medicationrequestdosageinstructiondoseandraterateratiodenominator.setCode(m.getMdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrCd());
+		}
+		/******************** medicationrequestdosageinstructiondoseandraterateratiodenominatorcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicationrequestdosageinstructiondoseandraterateratiodenominatorcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		medicationrequestdosageinstructiondoseandraterateratiodenominator.setComparator(medicationrequestdosageinstructiondoseandraterateratiodenominatorcomparator.fromCode(m.getMdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrCmprtr()));
+
+		/******************** MdctnRqst_DsgInstrctn_DoseAndRt_RtRtio_Dnmntr_Sys ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrSys() != null) {
+			medicationrequestdosageinstructiondoseandraterateratiodenominator.setSystem(m.getMdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrSys());
+		}
+		/******************** MdctnRqst_DsgInstrctn_DoseAndRt_RtRtio_Dnmntr_Unt ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrUnt() != null) {
+			medicationrequestdosageinstructiondoseandraterateratiodenominator.setUnit(m.getMdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrUnt());
+		}
+		/******************** MdctnRqst_DsgInstrctn_DoseAndRt_RtRtio_Dnmntr_Vl ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrVl() != null) {
+			medicationrequestdosageinstructiondoseandraterateratiodenominator.setValue(Double.parseDouble((m.getMdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrVl())));
+		}
+		/******************** medicationrequestdosageinstructiondoseandrateraterationumerator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity medicationrequestdosageinstructiondoseandrateraterationumerator =  new org.hl7.fhir.r4.model.Quantity();
+		medicationrequestdosageinstructiondoseandraterateratio.setNumerator(medicationrequestdosageinstructiondoseandrateraterationumerator);
+
+		/******************** MdctnRqst_DsgInstrctn_DoseAndRt_RtRtio_Nmrtr_Cd ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrCd() != null) {
+			medicationrequestdosageinstructiondoseandrateraterationumerator.setCode(m.getMdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrCd());
+		}
+		/******************** medicationrequestdosageinstructiondoseandrateraterationumeratorcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicationrequestdosageinstructiondoseandrateraterationumeratorcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		medicationrequestdosageinstructiondoseandrateraterationumerator.setComparator(medicationrequestdosageinstructiondoseandrateraterationumeratorcomparator.fromCode(m.getMdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrCmprtr()));
+
+		/******************** MdctnRqst_DsgInstrctn_DoseAndRt_RtRtio_Nmrtr_Sys ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrSys() != null) {
+			medicationrequestdosageinstructiondoseandrateraterationumerator.setSystem(m.getMdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrSys());
+		}
+		/******************** MdctnRqst_DsgInstrctn_DoseAndRt_RtRtio_Nmrtr_Unt ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrUnt() != null) {
+			medicationrequestdosageinstructiondoseandrateraterationumerator.setUnit(m.getMdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrUnt());
+		}
+		/******************** MdctnRqst_DsgInstrctn_DoseAndRt_RtRtio_Nmrtr_Vl ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrVl() != null) {
+			medicationrequestdosageinstructiondoseandrateraterationumerator.setValue(Double.parseDouble((m.getMdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrVl())));
+		}
+		/******************** medicationrequestdosageinstructiondoseandratetype ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept medicationrequestdosageinstructiondoseandratetype =  new org.hl7.fhir.r4.model.CodeableConcept();
+		medicationrequestdosageinstructiondoseandrate.setType(medicationrequestdosageinstructiondoseandratetype);
+
+		/******************** medicationrequestdosageinstructiondoseandratetypecoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding medicationrequestdosageinstructiondoseandratetypecoding =  new org.hl7.fhir.r4.model.Coding();
+		medicationrequestdosageinstructiondoseandratetype.addCoding(medicationrequestdosageinstructiondoseandratetypecoding);
+
+		/******************** MdctnRqst_DsgInstrctn_DoseAndRt_Typ_Cdg_Cd ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnDoseAndRtTypCdgCd() != null) {
+			medicationrequestdosageinstructiondoseandratetypecoding.setCode(m.getMdctnRqstDsgInstrctnDoseAndRtTypCdgCd());
+		}
+		/******************** MdctnRqst_DsgInstrctn_DoseAndRt_Typ_Cdg_Dsply ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnDoseAndRtTypCdgDsply() != null) {
+			medicationrequestdosageinstructiondoseandratetypecoding.setDisplay(m.getMdctnRqstDsgInstrctnDoseAndRtTypCdgDsply());
+		}
+		/******************** MdctnRqst_DsgInstrctn_DoseAndRt_Typ_Cdg_Sys ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnDoseAndRtTypCdgSys() != null) {
+			medicationrequestdosageinstructiondoseandratetypecoding.setSystem(m.getMdctnRqstDsgInstrctnDoseAndRtTypCdgSys());
+		}
+		/******************** MdctnRqst_DsgInstrctn_DoseAndRt_Typ_Cdg_UsrSltd ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnDoseAndRtTypCdgUsrSltd() != null) {
+			medicationrequestdosageinstructiondoseandratetypecoding.setUserSelected(Boolean.parseBoolean(m.getMdctnRqstDsgInstrctnDoseAndRtTypCdgUsrSltd()));
+		}
+		/******************** MdctnRqst_DsgInstrctn_DoseAndRt_Typ_Cdg_Vrsn ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnDoseAndRtTypCdgVrsn() != null) {
+			medicationrequestdosageinstructiondoseandratetypecoding.setVersion(m.getMdctnRqstDsgInstrctnDoseAndRtTypCdgVrsn());
+		}
+		/******************** MdctnRqst_DsgInstrctn_DoseAndRt_Typ_Txt ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnDoseAndRtTypTxt() != null) {
+			medicationrequestdosageinstructiondoseandratetype.setText(m.getMdctnRqstDsgInstrctnDoseAndRtTypTxt());
+		}
+		/******************** medicationrequestdosageinstructionmaxdoseperadministration ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity medicationrequestdosageinstructionmaxdoseperadministration =  new org.hl7.fhir.r4.model.Quantity();
+		medicationrequestdosageinstruction.setMaxDosePerAdministration(medicationrequestdosageinstructionmaxdoseperadministration);
+
+		/******************** MdctnRqst_DsgInstrctn_MxDosePerAdmnstn_Cd ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnMxDosePerAdmnstnCd() != null) {
+			medicationrequestdosageinstructionmaxdoseperadministration.setCode(m.getMdctnRqstDsgInstrctnMxDosePerAdmnstnCd());
+		}
+		/******************** medicationrequestdosageinstructionmaxdoseperadministrationcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicationrequestdosageinstructionmaxdoseperadministrationcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		medicationrequestdosageinstructionmaxdoseperadministration.setComparator(medicationrequestdosageinstructionmaxdoseperadministrationcomparator.fromCode(m.getMdctnRqstDsgInstrctnMxDosePerAdmnstnCmprtr()));
+
+		/******************** MdctnRqst_DsgInstrctn_MxDosePerAdmnstn_Sys ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnMxDosePerAdmnstnSys() != null) {
+			medicationrequestdosageinstructionmaxdoseperadministration.setSystem(m.getMdctnRqstDsgInstrctnMxDosePerAdmnstnSys());
+		}
+		/******************** MdctnRqst_DsgInstrctn_MxDosePerAdmnstn_Unt ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnMxDosePerAdmnstnUnt() != null) {
+			medicationrequestdosageinstructionmaxdoseperadministration.setUnit(m.getMdctnRqstDsgInstrctnMxDosePerAdmnstnUnt());
+		}
+		/******************** MdctnRqst_DsgInstrctn_MxDosePerAdmnstn_Vl ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnMxDosePerAdmnstnVl() != null) {
+			medicationrequestdosageinstructionmaxdoseperadministration.setValue(Double.parseDouble((m.getMdctnRqstDsgInstrctnMxDosePerAdmnstnVl())));
+		}
+		/******************** medicationrequestdosageinstructionmaxdoseperlifetime ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity medicationrequestdosageinstructionmaxdoseperlifetime =  new org.hl7.fhir.r4.model.Quantity();
+		medicationrequestdosageinstruction.setMaxDosePerLifetime(medicationrequestdosageinstructionmaxdoseperlifetime);
+
+		/******************** MdctnRqst_DsgInstrctn_MxDosePerLifetime_Cd ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnMxDosePerLifetimeCd() != null) {
+			medicationrequestdosageinstructionmaxdoseperlifetime.setCode(m.getMdctnRqstDsgInstrctnMxDosePerLifetimeCd());
+		}
+		/******************** medicationrequestdosageinstructionmaxdoseperlifetimecomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicationrequestdosageinstructionmaxdoseperlifetimecomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		medicationrequestdosageinstructionmaxdoseperlifetime.setComparator(medicationrequestdosageinstructionmaxdoseperlifetimecomparator.fromCode(m.getMdctnRqstDsgInstrctnMxDosePerLifetimeCmprtr()));
+
+		/******************** MdctnRqst_DsgInstrctn_MxDosePerLifetime_Sys ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnMxDosePerLifetimeSys() != null) {
+			medicationrequestdosageinstructionmaxdoseperlifetime.setSystem(m.getMdctnRqstDsgInstrctnMxDosePerLifetimeSys());
+		}
+		/******************** MdctnRqst_DsgInstrctn_MxDosePerLifetime_Unt ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnMxDosePerLifetimeUnt() != null) {
+			medicationrequestdosageinstructionmaxdoseperlifetime.setUnit(m.getMdctnRqstDsgInstrctnMxDosePerLifetimeUnt());
+		}
+		/******************** MdctnRqst_DsgInstrctn_MxDosePerLifetime_Vl ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnMxDosePerLifetimeVl() != null) {
+			medicationrequestdosageinstructionmaxdoseperlifetime.setValue(Double.parseDouble((m.getMdctnRqstDsgInstrctnMxDosePerLifetimeVl())));
+		}
+		/******************** medicationrequestdosageinstructionmaxdoseperperiod ********************************************************************************/
+		org.hl7.fhir.r4.model.Ratio medicationrequestdosageinstructionmaxdoseperperiod =  new org.hl7.fhir.r4.model.Ratio();
+		medicationrequestdosageinstruction.setMaxDosePerPeriod(medicationrequestdosageinstructionmaxdoseperperiod);
+
+		/******************** medicationrequestdosageinstructionmaxdoseperperioddenominator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity medicationrequestdosageinstructionmaxdoseperperioddenominator =  new org.hl7.fhir.r4.model.Quantity();
+		medicationrequestdosageinstructionmaxdoseperperiod.setDenominator(medicationrequestdosageinstructionmaxdoseperperioddenominator);
+
+		/******************** MdctnRqst_DsgInstrctn_MxDosePerPrd_Dnmntr_Cd ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnMxDosePerPrdDnmntrCd() != null) {
+			medicationrequestdosageinstructionmaxdoseperperioddenominator.setCode(m.getMdctnRqstDsgInstrctnMxDosePerPrdDnmntrCd());
+		}
+		/******************** medicationrequestdosageinstructionmaxdoseperperioddenominatorcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicationrequestdosageinstructionmaxdoseperperioddenominatorcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		medicationrequestdosageinstructionmaxdoseperperioddenominator.setComparator(medicationrequestdosageinstructionmaxdoseperperioddenominatorcomparator.fromCode(m.getMdctnRqstDsgInstrctnMxDosePerPrdDnmntrCmprtr()));
+
+		/******************** MdctnRqst_DsgInstrctn_MxDosePerPrd_Dnmntr_Sys ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnMxDosePerPrdDnmntrSys() != null) {
+			medicationrequestdosageinstructionmaxdoseperperioddenominator.setSystem(m.getMdctnRqstDsgInstrctnMxDosePerPrdDnmntrSys());
+		}
+		/******************** MdctnRqst_DsgInstrctn_MxDosePerPrd_Dnmntr_Unt ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnMxDosePerPrdDnmntrUnt() != null) {
+			medicationrequestdosageinstructionmaxdoseperperioddenominator.setUnit(m.getMdctnRqstDsgInstrctnMxDosePerPrdDnmntrUnt());
+		}
+		/******************** MdctnRqst_DsgInstrctn_MxDosePerPrd_Dnmntr_Vl ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnMxDosePerPrdDnmntrVl() != null) {
+			medicationrequestdosageinstructionmaxdoseperperioddenominator.setValue(Double.parseDouble((m.getMdctnRqstDsgInstrctnMxDosePerPrdDnmntrVl())));
+		}
+		/******************** medicationrequestdosageinstructionmaxdoseperperiodnumerator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity medicationrequestdosageinstructionmaxdoseperperiodnumerator =  new org.hl7.fhir.r4.model.Quantity();
+		medicationrequestdosageinstructionmaxdoseperperiod.setNumerator(medicationrequestdosageinstructionmaxdoseperperiodnumerator);
+
+		/******************** MdctnRqst_DsgInstrctn_MxDosePerPrd_Nmrtr_Cd ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnMxDosePerPrdNmrtrCd() != null) {
+			medicationrequestdosageinstructionmaxdoseperperiodnumerator.setCode(m.getMdctnRqstDsgInstrctnMxDosePerPrdNmrtrCd());
+		}
+		/******************** medicationrequestdosageinstructionmaxdoseperperiodnumeratorcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicationrequestdosageinstructionmaxdoseperperiodnumeratorcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		medicationrequestdosageinstructionmaxdoseperperiodnumerator.setComparator(medicationrequestdosageinstructionmaxdoseperperiodnumeratorcomparator.fromCode(m.getMdctnRqstDsgInstrctnMxDosePerPrdNmrtrCmprtr()));
+
+		/******************** MdctnRqst_DsgInstrctn_MxDosePerPrd_Nmrtr_Sys ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnMxDosePerPrdNmrtrSys() != null) {
+			medicationrequestdosageinstructionmaxdoseperperiodnumerator.setSystem(m.getMdctnRqstDsgInstrctnMxDosePerPrdNmrtrSys());
+		}
+		/******************** MdctnRqst_DsgInstrctn_MxDosePerPrd_Nmrtr_Unt ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnMxDosePerPrdNmrtrUnt() != null) {
+			medicationrequestdosageinstructionmaxdoseperperiodnumerator.setUnit(m.getMdctnRqstDsgInstrctnMxDosePerPrdNmrtrUnt());
+		}
+		/******************** MdctnRqst_DsgInstrctn_MxDosePerPrd_Nmrtr_Vl ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnMxDosePerPrdNmrtrVl() != null) {
+			medicationrequestdosageinstructionmaxdoseperperiodnumerator.setValue(Double.parseDouble((m.getMdctnRqstDsgInstrctnMxDosePerPrdNmrtrVl())));
+		}
+		/******************** medicationrequestdosageinstructionmethod ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept medicationrequestdosageinstructionmethod =  new org.hl7.fhir.r4.model.CodeableConcept();
+		medicationrequestdosageinstruction.setMethod(medicationrequestdosageinstructionmethod);
+
+		/******************** medicationrequestdosageinstructionmethodcoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding medicationrequestdosageinstructionmethodcoding =  new org.hl7.fhir.r4.model.Coding();
+		medicationrequestdosageinstructionmethod.addCoding(medicationrequestdosageinstructionmethodcoding);
+
+		/******************** MdctnRqst_DsgInstrctn_Mthd_Cdg_Cd ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnMthdCdgCd() != null) {
+			medicationrequestdosageinstructionmethodcoding.setCode(m.getMdctnRqstDsgInstrctnMthdCdgCd());
+		}
+		/******************** MdctnRqst_DsgInstrctn_Mthd_Cdg_Dsply ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnMthdCdgDsply() != null) {
+			medicationrequestdosageinstructionmethodcoding.setDisplay(m.getMdctnRqstDsgInstrctnMthdCdgDsply());
+		}
+		/******************** MdctnRqst_DsgInstrctn_Mthd_Cdg_Sys ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnMthdCdgSys() != null) {
+			medicationrequestdosageinstructionmethodcoding.setSystem(m.getMdctnRqstDsgInstrctnMthdCdgSys());
+		}
+		/******************** MdctnRqst_DsgInstrctn_Mthd_Cdg_UsrSltd ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnMthdCdgUsrSltd() != null) {
+			medicationrequestdosageinstructionmethodcoding.setUserSelected(Boolean.parseBoolean(m.getMdctnRqstDsgInstrctnMthdCdgUsrSltd()));
+		}
+		/******************** MdctnRqst_DsgInstrctn_Mthd_Cdg_Vrsn ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnMthdCdgVrsn() != null) {
+			medicationrequestdosageinstructionmethodcoding.setVersion(m.getMdctnRqstDsgInstrctnMthdCdgVrsn());
+		}
+		/******************** MdctnRqst_DsgInstrctn_Mthd_Txt ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnMthdTxt() != null) {
+			medicationrequestdosageinstructionmethod.setText(m.getMdctnRqstDsgInstrctnMthdTxt());
+		}
+		/******************** MdctnRqst_DsgInstrctn_PntInstrctn ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnPntInstrctn() != null) {
+			medicationrequestdosageinstruction.setPatientInstruction(m.getMdctnRqstDsgInstrctnPntInstrctn());
+		}
+		/******************** medicationrequestdosageinstructionroute ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept medicationrequestdosageinstructionroute =  new org.hl7.fhir.r4.model.CodeableConcept();
+		medicationrequestdosageinstruction.setRoute(medicationrequestdosageinstructionroute);
+
+		/******************** medicationrequestdosageinstructionroutecoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding medicationrequestdosageinstructionroutecoding =  new org.hl7.fhir.r4.model.Coding();
+		medicationrequestdosageinstructionroute.addCoding(medicationrequestdosageinstructionroutecoding);
+
+		/******************** MdctnRqst_DsgInstrctn_Route_Cdg_Cd ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnRouteCdgCd() != null) {
+			medicationrequestdosageinstructionroutecoding.setCode(m.getMdctnRqstDsgInstrctnRouteCdgCd());
+		}
+		/******************** MdctnRqst_DsgInstrctn_Route_Cdg_Dsply ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnRouteCdgDsply() != null) {
+			medicationrequestdosageinstructionroutecoding.setDisplay(m.getMdctnRqstDsgInstrctnRouteCdgDsply());
+		}
+		/******************** MdctnRqst_DsgInstrctn_Route_Cdg_Sys ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnRouteCdgSys() != null) {
+			medicationrequestdosageinstructionroutecoding.setSystem(m.getMdctnRqstDsgInstrctnRouteCdgSys());
+		}
+		/******************** MdctnRqst_DsgInstrctn_Route_Cdg_UsrSltd ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnRouteCdgUsrSltd() != null) {
+			medicationrequestdosageinstructionroutecoding.setUserSelected(Boolean.parseBoolean(m.getMdctnRqstDsgInstrctnRouteCdgUsrSltd()));
+		}
+		/******************** MdctnRqst_DsgInstrctn_Route_Cdg_Vrsn ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnRouteCdgVrsn() != null) {
+			medicationrequestdosageinstructionroutecoding.setVersion(m.getMdctnRqstDsgInstrctnRouteCdgVrsn());
+		}
+		/******************** MdctnRqst_DsgInstrctn_Route_Txt ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnRouteTxt() != null) {
+			medicationrequestdosageinstructionroute.setText(m.getMdctnRqstDsgInstrctnRouteTxt());
+		}
+		/******************** MdctnRqst_DsgInstrctn_Sqnc ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnSqnc() != null) {
+			medicationrequestdosageinstruction.setSequence(Integer.parseInt(m.getMdctnRqstDsgInstrctnSqnc()));
+		}
+		/******************** medicationrequestdosageinstructionsite ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept medicationrequestdosageinstructionsite =  new org.hl7.fhir.r4.model.CodeableConcept();
+		medicationrequestdosageinstruction.setSite(medicationrequestdosageinstructionsite);
+
+		/******************** medicationrequestdosageinstructionsitecoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding medicationrequestdosageinstructionsitecoding =  new org.hl7.fhir.r4.model.Coding();
+		medicationrequestdosageinstructionsite.addCoding(medicationrequestdosageinstructionsitecoding);
+
+		/******************** MdctnRqst_DsgInstrctn_Site_Cdg_Cd ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnSiteCdgCd() != null) {
+			medicationrequestdosageinstructionsitecoding.setCode(m.getMdctnRqstDsgInstrctnSiteCdgCd());
+		}
+		/******************** MdctnRqst_DsgInstrctn_Site_Cdg_Dsply ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnSiteCdgDsply() != null) {
+			medicationrequestdosageinstructionsitecoding.setDisplay(m.getMdctnRqstDsgInstrctnSiteCdgDsply());
+		}
+		/******************** MdctnRqst_DsgInstrctn_Site_Cdg_Sys ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnSiteCdgSys() != null) {
+			medicationrequestdosageinstructionsitecoding.setSystem(m.getMdctnRqstDsgInstrctnSiteCdgSys());
+		}
+		/******************** MdctnRqst_DsgInstrctn_Site_Cdg_UsrSltd ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnSiteCdgUsrSltd() != null) {
+			medicationrequestdosageinstructionsitecoding.setUserSelected(Boolean.parseBoolean(m.getMdctnRqstDsgInstrctnSiteCdgUsrSltd()));
+		}
+		/******************** MdctnRqst_DsgInstrctn_Site_Cdg_Vrsn ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnSiteCdgVrsn() != null) {
+			medicationrequestdosageinstructionsitecoding.setVersion(m.getMdctnRqstDsgInstrctnSiteCdgVrsn());
+		}
+		/******************** MdctnRqst_DsgInstrctn_Site_Txt ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnSiteTxt() != null) {
+			medicationrequestdosageinstructionsite.setText(m.getMdctnRqstDsgInstrctnSiteTxt());
+		}
+		/******************** MdctnRqst_DsgInstrctn_Txt ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnTxt() != null) {
+			medicationrequestdosageinstruction.setText(m.getMdctnRqstDsgInstrctnTxt());
+		}
+		/******************** medicationrequestdosageinstructiontiming ********************************************************************************/
+		org.hl7.fhir.r4.model.Timing medicationrequestdosageinstructiontiming =  new org.hl7.fhir.r4.model.Timing();
+		medicationrequestdosageinstruction.setTiming(medicationrequestdosageinstructiontiming);
+
+		/******************** medicationrequestdosageinstructiontimingcode ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept medicationrequestdosageinstructiontimingcode =  new org.hl7.fhir.r4.model.CodeableConcept();
+		medicationrequestdosageinstructiontiming.setCode(medicationrequestdosageinstructiontimingcode);
+
+		/******************** medicationrequestdosageinstructiontimingcodecoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding medicationrequestdosageinstructiontimingcodecoding =  new org.hl7.fhir.r4.model.Coding();
+		medicationrequestdosageinstructiontimingcode.addCoding(medicationrequestdosageinstructiontimingcodecoding);
+
+		/******************** MdctnRqst_DsgInstrctn_Tmg_Cd_Cdg_Cd ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnTmgCdCdgCd() != null) {
+			medicationrequestdosageinstructiontimingcodecoding.setCode(m.getMdctnRqstDsgInstrctnTmgCdCdgCd());
+		}
+		/******************** MdctnRqst_DsgInstrctn_Tmg_Cd_Cdg_Dsply ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnTmgCdCdgDsply() != null) {
+			medicationrequestdosageinstructiontimingcodecoding.setDisplay(m.getMdctnRqstDsgInstrctnTmgCdCdgDsply());
+		}
+		/******************** MdctnRqst_DsgInstrctn_Tmg_Cd_Cdg_Sys ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnTmgCdCdgSys() != null) {
+			medicationrequestdosageinstructiontimingcodecoding.setSystem(m.getMdctnRqstDsgInstrctnTmgCdCdgSys());
+		}
+		/******************** MdctnRqst_DsgInstrctn_Tmg_Cd_Cdg_UsrSltd ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnTmgCdCdgUsrSltd() != null) {
+			medicationrequestdosageinstructiontimingcodecoding.setUserSelected(Boolean.parseBoolean(m.getMdctnRqstDsgInstrctnTmgCdCdgUsrSltd()));
+		}
+		/******************** MdctnRqst_DsgInstrctn_Tmg_Cd_Cdg_Vrsn ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnTmgCdCdgVrsn() != null) {
+			medicationrequestdosageinstructiontimingcodecoding.setVersion(m.getMdctnRqstDsgInstrctnTmgCdCdgVrsn());
+		}
+		/******************** MdctnRqst_DsgInstrctn_Tmg_Cd_Txt ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnTmgCdTxt() != null) {
+			medicationrequestdosageinstructiontimingcode.setText(m.getMdctnRqstDsgInstrctnTmgCdTxt());
+		}
+		/******************** MdctnRqst_DsgInstrctn_Tmg_Evnt ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnTmgEvnt() != null) {
+			java.text.SimpleDateFormat MdctnRqst_DsgInstrctn_Tmg_Evntsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date MdctnRqst_DsgInstrctn_Tmg_Evntdate = MdctnRqst_DsgInstrctn_Tmg_Evntsdf.parse(m.getMdctnRqstDsgInstrctnTmgEvnt());
+			medicationrequestdosageinstructiontiming.addEvent(MdctnRqst_DsgInstrctn_Tmg_Evntdate);
+		}
+		/******************** medicationrequestdosageinstructiontimingrepeat ********************************************************************************/
+		org.hl7.fhir.r4.model.Timing.TimingRepeatComponent medicationrequestdosageinstructiontimingrepeat =  new org.hl7.fhir.r4.model.Timing.TimingRepeatComponent();
+		medicationrequestdosageinstructiontiming.setRepeat(medicationrequestdosageinstructiontimingrepeat);
+
+		/******************** medicationrequestdosageinstructiontimingrepeatboundsduration ********************************************************************************/
+		org.hl7.fhir.r4.model.Duration medicationrequestdosageinstructiontimingrepeatboundsduration =  new org.hl7.fhir.r4.model.Duration();
+		medicationrequestdosageinstructiontimingrepeat.setBounds(medicationrequestdosageinstructiontimingrepeatboundsduration);
+
+		/******************** medicationrequestdosageinstructiontimingrepeatboundsperiod ********************************************************************************/
+		org.hl7.fhir.r4.model.Period medicationrequestdosageinstructiontimingrepeatboundsperiod =  new org.hl7.fhir.r4.model.Period();
+		medicationrequestdosageinstructiontimingrepeat.setBounds(medicationrequestdosageinstructiontimingrepeatboundsperiod);
+
+		/******************** MdctnRqst_DsgInstrctn_Tmg_Rpt_BndsPrd_End ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnTmgRptBndsPrdEnd() != null) {
+			java.text.SimpleDateFormat MdctnRqst_DsgInstrctn_Tmg_Rpt_BndsPrd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date MdctnRqst_DsgInstrctn_Tmg_Rpt_BndsPrd_Enddate = MdctnRqst_DsgInstrctn_Tmg_Rpt_BndsPrd_Endsdf.parse(m.getMdctnRqstDsgInstrctnTmgRptBndsPrdEnd());
+			medicationrequestdosageinstructiontimingrepeatboundsperiod.setEnd(MdctnRqst_DsgInstrctn_Tmg_Rpt_BndsPrd_Enddate);
+		}
+		/******************** MdctnRqst_DsgInstrctn_Tmg_Rpt_BndsPrd_Strt ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnTmgRptBndsPrdStrt() != null) {
+			java.text.SimpleDateFormat MdctnRqst_DsgInstrctn_Tmg_Rpt_BndsPrd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date MdctnRqst_DsgInstrctn_Tmg_Rpt_BndsPrd_Strtdate = MdctnRqst_DsgInstrctn_Tmg_Rpt_BndsPrd_Strtsdf.parse(m.getMdctnRqstDsgInstrctnTmgRptBndsPrdStrt());
+			medicationrequestdosageinstructiontimingrepeatboundsperiod.setStart(MdctnRqst_DsgInstrctn_Tmg_Rpt_BndsPrd_Strtdate);
+		}
+		/******************** medicationrequestdosageinstructiontimingrepeatboundsrange ********************************************************************************/
+		org.hl7.fhir.r4.model.Range medicationrequestdosageinstructiontimingrepeatboundsrange =  new org.hl7.fhir.r4.model.Range();
+		medicationrequestdosageinstructiontimingrepeat.setBounds(medicationrequestdosageinstructiontimingrepeatboundsrange);
+
+		/******************** medicationrequestdosageinstructiontimingrepeatboundsrangehigh ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity medicationrequestdosageinstructiontimingrepeatboundsrangehigh =  new org.hl7.fhir.r4.model.Quantity();
+		medicationrequestdosageinstructiontimingrepeatboundsrange.setHigh(medicationrequestdosageinstructiontimingrepeatboundsrangehigh);
+
+		/******************** MdctnRqst_DsgInstrctn_Tmg_Rpt_BndsRng_Hi_Cd ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnTmgRptBndsRngHiCd() != null) {
+			medicationrequestdosageinstructiontimingrepeatboundsrangehigh.setCode(m.getMdctnRqstDsgInstrctnTmgRptBndsRngHiCd());
+		}
+		/******************** medicationrequestdosageinstructiontimingrepeatboundsrangehighcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicationrequestdosageinstructiontimingrepeatboundsrangehighcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		medicationrequestdosageinstructiontimingrepeatboundsrangehigh.setComparator(medicationrequestdosageinstructiontimingrepeatboundsrangehighcomparator.fromCode(m.getMdctnRqstDsgInstrctnTmgRptBndsRngHiCmprtr()));
+
+		/******************** MdctnRqst_DsgInstrctn_Tmg_Rpt_BndsRng_Hi_Sys ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnTmgRptBndsRngHiSys() != null) {
+			medicationrequestdosageinstructiontimingrepeatboundsrangehigh.setSystem(m.getMdctnRqstDsgInstrctnTmgRptBndsRngHiSys());
+		}
+		/******************** MdctnRqst_DsgInstrctn_Tmg_Rpt_BndsRng_Hi_Unt ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnTmgRptBndsRngHiUnt() != null) {
+			medicationrequestdosageinstructiontimingrepeatboundsrangehigh.setUnit(m.getMdctnRqstDsgInstrctnTmgRptBndsRngHiUnt());
+		}
+		/******************** MdctnRqst_DsgInstrctn_Tmg_Rpt_BndsRng_Hi_Vl ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnTmgRptBndsRngHiVl() != null) {
+			medicationrequestdosageinstructiontimingrepeatboundsrangehigh.setValue(Double.parseDouble((m.getMdctnRqstDsgInstrctnTmgRptBndsRngHiVl())));
+		}
+		/******************** medicationrequestdosageinstructiontimingrepeatboundsrangelow ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity medicationrequestdosageinstructiontimingrepeatboundsrangelow =  new org.hl7.fhir.r4.model.Quantity();
+		medicationrequestdosageinstructiontimingrepeatboundsrange.setLow(medicationrequestdosageinstructiontimingrepeatboundsrangelow);
+
+		/******************** MdctnRqst_DsgInstrctn_Tmg_Rpt_BndsRng_Lw_Cd ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnTmgRptBndsRngLwCd() != null) {
+			medicationrequestdosageinstructiontimingrepeatboundsrangelow.setCode(m.getMdctnRqstDsgInstrctnTmgRptBndsRngLwCd());
+		}
+		/******************** medicationrequestdosageinstructiontimingrepeatboundsrangelowcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicationrequestdosageinstructiontimingrepeatboundsrangelowcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		medicationrequestdosageinstructiontimingrepeatboundsrangelow.setComparator(medicationrequestdosageinstructiontimingrepeatboundsrangelowcomparator.fromCode(m.getMdctnRqstDsgInstrctnTmgRptBndsRngLwCmprtr()));
+
+		/******************** MdctnRqst_DsgInstrctn_Tmg_Rpt_BndsRng_Lw_Sys ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnTmgRptBndsRngLwSys() != null) {
+			medicationrequestdosageinstructiontimingrepeatboundsrangelow.setSystem(m.getMdctnRqstDsgInstrctnTmgRptBndsRngLwSys());
+		}
+		/******************** MdctnRqst_DsgInstrctn_Tmg_Rpt_BndsRng_Lw_Unt ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnTmgRptBndsRngLwUnt() != null) {
+			medicationrequestdosageinstructiontimingrepeatboundsrangelow.setUnit(m.getMdctnRqstDsgInstrctnTmgRptBndsRngLwUnt());
+		}
+		/******************** MdctnRqst_DsgInstrctn_Tmg_Rpt_BndsRng_Lw_Vl ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnTmgRptBndsRngLwVl() != null) {
+			medicationrequestdosageinstructiontimingrepeatboundsrangelow.setValue(Double.parseDouble((m.getMdctnRqstDsgInstrctnTmgRptBndsRngLwVl())));
+		}
+		/******************** MdctnRqst_DsgInstrctn_Tmg_Rpt_Cnt ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnTmgRptCnt() != null) {
+			medicationrequestdosageinstructiontimingrepeat.setCount(Integer.parseInt(m.getMdctnRqstDsgInstrctnTmgRptCnt()));
+		}
+		/******************** MdctnRqst_DsgInstrctn_Tmg_Rpt_CntMx ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnTmgRptCntMx() != null) {
+			medicationrequestdosageinstructiontimingrepeat.setCountMax(Integer.parseInt(m.getMdctnRqstDsgInstrctnTmgRptCntMx()));
+		}
+		/******************** medicationrequestdosageinstructiontimingrepeatdayofweek ********************************************************************************/
+		org.hl7.fhir.r4.model.Timing.DayOfWeekEnumFactory medicationrequestdosageinstructiontimingrepeatdayofweek =  new org.hl7.fhir.r4.model.Timing.DayOfWeekEnumFactory();
+		medicationrequestdosageinstructiontimingrepeat.addDayOfWeek(medicationrequestdosageinstructiontimingrepeatdayofweek.fromCode(m.getMdctnRqstDsgInstrctnTmgRptDayOfWeek()));
+
+		/******************** MdctnRqst_DsgInstrctn_Tmg_Rpt_Duration ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnTmgRptDuration() != null) {
+			medicationrequestdosageinstructiontimingrepeat.setDuration(Double.parseDouble((m.getMdctnRqstDsgInstrctnTmgRptDuration())));
+		}
+		/******************** MdctnRqst_DsgInstrctn_Tmg_Rpt_DurationMx ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnTmgRptDurationMx() != null) {
+			medicationrequestdosageinstructiontimingrepeat.setDurationMax(Double.parseDouble((m.getMdctnRqstDsgInstrctnTmgRptDurationMx())));
+		}
+		/******************** medicationrequestdosageinstructiontimingrepeatdurationunit ********************************************************************************/
+		org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory medicationrequestdosageinstructiontimingrepeatdurationunit =  new org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory();
+		medicationrequestdosageinstructiontimingrepeat.setDurationUnit(medicationrequestdosageinstructiontimingrepeatdurationunit.fromCode(m.getMdctnRqstDsgInstrctnTmgRptDurationUnt()));
+
+		/******************** MdctnRqst_DsgInstrctn_Tmg_Rpt_Frqncy ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnTmgRptFrqncy() != null) {
+			medicationrequestdosageinstructiontimingrepeat.setFrequency(Integer.parseInt(m.getMdctnRqstDsgInstrctnTmgRptFrqncy()));
+		}
+		/******************** MdctnRqst_DsgInstrctn_Tmg_Rpt_FrqncyMx ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnTmgRptFrqncyMx() != null) {
+			medicationrequestdosageinstructiontimingrepeat.setFrequencyMax(Integer.parseInt(m.getMdctnRqstDsgInstrctnTmgRptFrqncyMx()));
+		}
+		/******************** MdctnRqst_DsgInstrctn_Tmg_Rpt_Off ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnTmgRptOff() != null) {
+			medicationrequestdosageinstructiontimingrepeat.setOffset(Integer.parseInt(m.getMdctnRqstDsgInstrctnTmgRptOff()));
+		}
+		/******************** MdctnRqst_DsgInstrctn_Tmg_Rpt_Prd ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnTmgRptPrd() != null) {
+			medicationrequestdosageinstructiontimingrepeat.setPeriod(Double.parseDouble((m.getMdctnRqstDsgInstrctnTmgRptPrd())));
+		}
+		/******************** MdctnRqst_DsgInstrctn_Tmg_Rpt_PrdMx ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnTmgRptPrdMx() != null) {
+			medicationrequestdosageinstructiontimingrepeat.setPeriodMax(Double.parseDouble((m.getMdctnRqstDsgInstrctnTmgRptPrdMx())));
+		}
+		/******************** medicationrequestdosageinstructiontimingrepeatperiodunit ********************************************************************************/
+		org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory medicationrequestdosageinstructiontimingrepeatperiodunit =  new org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory();
+		medicationrequestdosageinstructiontimingrepeat.setPeriodUnit(medicationrequestdosageinstructiontimingrepeatperiodunit.fromCode(m.getMdctnRqstDsgInstrctnTmgRptPrdUnt()));
+
+		/******************** MdctnRqst_DsgInstrctn_Tmg_Rpt_TimeOfDay ********************************************************************************/
+		if(m.getMdctnRqstDsgInstrctnTmgRptTimeOfDay() != null) {
+			medicationrequestdosageinstructiontimingrepeat.addTimeOfDay(m.getMdctnRqstDsgInstrctnTmgRptTimeOfDay());
+		}
+		/******************** medicationrequestdosageinstructiontimingrepeatwhen ********************************************************************************/
+		org.hl7.fhir.r4.model.Timing.EventTimingEnumFactory medicationrequestdosageinstructiontimingrepeatwhen =  new org.hl7.fhir.r4.model.Timing.EventTimingEnumFactory();
+		medicationrequestdosageinstructiontimingrepeat.addWhen(medicationrequestdosageinstructiontimingrepeatwhen.fromCode(m.getMdctnRqstDsgInstrctnTmgRptWhen()));
+
+		/******************** MdctnRqst_Enc ********************************************************************************/
+		if(m.getMdctnRqstEnc() != null) {
+			medicationrequest.setEncounter( new org.hl7.fhir.r4.model.Reference(m.getMdctnRqstEnc()));
+		}
+		/******************** MdctnRqst_EvntHis ********************************************************************************/
+		if(m.getMdctnRqstEvntHis() != null) {
+			medicationrequest.addEventHistory( new org.hl7.fhir.r4.model.Reference(m.getMdctnRqstEvntHis()));
+		}
+		/******************** medicationrequestgroupidentifier ********************************************************************************/
+		org.hl7.fhir.r4.model.Identifier medicationrequestgroupidentifier =  new org.hl7.fhir.r4.model.Identifier();
+		medicationrequest.setGroupIdentifier(medicationrequestgroupidentifier);
+
+		/******************** MdctnRqst_GrpId_Assigner ********************************************************************************/
+		if(m.getMdctnRqstGrpIdAssigner() != null) {
+			medicationrequestgroupidentifier.setAssigner( new org.hl7.fhir.r4.model.Reference(m.getMdctnRqstGrpIdAssigner()));
+		}
+		/******************** medicationrequestgroupidentifierperiod ********************************************************************************/
+		org.hl7.fhir.r4.model.Period medicationrequestgroupidentifierperiod =  new org.hl7.fhir.r4.model.Period();
+		medicationrequestgroupidentifier.setPeriod(medicationrequestgroupidentifierperiod);
+
+		/******************** MdctnRqst_GrpId_Prd_End ********************************************************************************/
+		if(m.getMdctnRqstGrpIdPrdEnd() != null) {
+			java.text.SimpleDateFormat MdctnRqst_GrpId_Prd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date MdctnRqst_GrpId_Prd_Enddate = MdctnRqst_GrpId_Prd_Endsdf.parse(m.getMdctnRqstGrpIdPrdEnd());
+			medicationrequestgroupidentifierperiod.setEnd(MdctnRqst_GrpId_Prd_Enddate);
+		}
+		/******************** MdctnRqst_GrpId_Prd_Strt ********************************************************************************/
+		if(m.getMdctnRqstGrpIdPrdStrt() != null) {
+			java.text.SimpleDateFormat MdctnRqst_GrpId_Prd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date MdctnRqst_GrpId_Prd_Strtdate = MdctnRqst_GrpId_Prd_Strtsdf.parse(m.getMdctnRqstGrpIdPrdStrt());
+			medicationrequestgroupidentifierperiod.setStart(MdctnRqst_GrpId_Prd_Strtdate);
+		}
+		/******************** MdctnRqst_GrpId_Sys ********************************************************************************/
+		if(m.getMdctnRqstGrpIdSys() != null) {
+			medicationrequestgroupidentifier.setSystem(m.getMdctnRqstGrpIdSys());
+		}
+		/******************** medicationrequestgroupidentifiertype ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept medicationrequestgroupidentifiertype =  new org.hl7.fhir.r4.model.CodeableConcept();
+		medicationrequestgroupidentifier.setType(medicationrequestgroupidentifiertype);
+
+		/******************** medicationrequestgroupidentifiertypecoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding medicationrequestgroupidentifiertypecoding =  new org.hl7.fhir.r4.model.Coding();
+		medicationrequestgroupidentifiertype.addCoding(medicationrequestgroupidentifiertypecoding);
+
+		/******************** MdctnRqst_GrpId_Typ_Cdg_Cd ********************************************************************************/
+		if(m.getMdctnRqstGrpIdTypCdgCd() != null) {
+			medicationrequestgroupidentifiertypecoding.setCode(m.getMdctnRqstGrpIdTypCdgCd());
+		}
+		/******************** MdctnRqst_GrpId_Typ_Cdg_Dsply ********************************************************************************/
+		if(m.getMdctnRqstGrpIdTypCdgDsply() != null) {
+			medicationrequestgroupidentifiertypecoding.setDisplay(m.getMdctnRqstGrpIdTypCdgDsply());
+		}
+		/******************** MdctnRqst_GrpId_Typ_Cdg_Sys ********************************************************************************/
+		if(m.getMdctnRqstGrpIdTypCdgSys() != null) {
+			medicationrequestgroupidentifiertypecoding.setSystem(m.getMdctnRqstGrpIdTypCdgSys());
+		}
+		/******************** MdctnRqst_GrpId_Typ_Cdg_UsrSltd ********************************************************************************/
+		if(m.getMdctnRqstGrpIdTypCdgUsrSltd() != null) {
+			medicationrequestgroupidentifiertypecoding.setUserSelected(Boolean.parseBoolean(m.getMdctnRqstGrpIdTypCdgUsrSltd()));
+		}
+		/******************** MdctnRqst_GrpId_Typ_Cdg_Vrsn ********************************************************************************/
+		if(m.getMdctnRqstGrpIdTypCdgVrsn() != null) {
+			medicationrequestgroupidentifiertypecoding.setVersion(m.getMdctnRqstGrpIdTypCdgVrsn());
+		}
+		/******************** MdctnRqst_GrpId_Typ_Txt ********************************************************************************/
+		if(m.getMdctnRqstGrpIdTypTxt() != null) {
+			medicationrequestgroupidentifiertype.setText(m.getMdctnRqstGrpIdTypTxt());
+		}
+		/******************** medicationrequestgroupidentifieruse ********************************************************************************/
+		org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory medicationrequestgroupidentifieruse =  new org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory();
+		medicationrequestgroupidentifier.setUse(medicationrequestgroupidentifieruse.fromCode(m.getMdctnRqstGrpIdUse()));
+
+		/******************** MdctnRqst_GrpId_Vl ********************************************************************************/
+		if(m.getMdctnRqstGrpIdVl() != null) {
+			medicationrequestgroupidentifier.setValue(m.getMdctnRqstGrpIdVl());
+		}
+		/******************** medicationrequestidentifier ********************************************************************************/
+		org.hl7.fhir.r4.model.Identifier medicationrequestidentifier =  new org.hl7.fhir.r4.model.Identifier();
+		medicationrequest.addIdentifier(medicationrequestidentifier);
+
+		/******************** MdctnRqst_Id_Assigner ********************************************************************************/
+		if(m.getMdctnRqstIdAssigner() != null) {
+			medicationrequestidentifier.setAssigner( new org.hl7.fhir.r4.model.Reference(m.getMdctnRqstIdAssigner()));
+		}
+		/******************** medicationrequestidentifierperiod ********************************************************************************/
+		org.hl7.fhir.r4.model.Period medicationrequestidentifierperiod =  new org.hl7.fhir.r4.model.Period();
+		medicationrequestidentifier.setPeriod(medicationrequestidentifierperiod);
+
+		/******************** MdctnRqst_Id_Prd_End ********************************************************************************/
+		if(m.getMdctnRqstIdPrdEnd() != null) {
+			java.text.SimpleDateFormat MdctnRqst_Id_Prd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date MdctnRqst_Id_Prd_Enddate = MdctnRqst_Id_Prd_Endsdf.parse(m.getMdctnRqstIdPrdEnd());
+			medicationrequestidentifierperiod.setEnd(MdctnRqst_Id_Prd_Enddate);
+		}
+		/******************** MdctnRqst_Id_Prd_Strt ********************************************************************************/
+		if(m.getMdctnRqstIdPrdStrt() != null) {
+			java.text.SimpleDateFormat MdctnRqst_Id_Prd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date MdctnRqst_Id_Prd_Strtdate = MdctnRqst_Id_Prd_Strtsdf.parse(m.getMdctnRqstIdPrdStrt());
+			medicationrequestidentifierperiod.setStart(MdctnRqst_Id_Prd_Strtdate);
+		}
+		/******************** MdctnRqst_Id_Sys ********************************************************************************/
+		if(m.getMdctnRqstIdSys() != null) {
+			medicationrequestidentifier.setSystem(m.getMdctnRqstIdSys());
+		}
+		/******************** medicationrequestidentifiertype ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept medicationrequestidentifiertype =  new org.hl7.fhir.r4.model.CodeableConcept();
+		medicationrequestidentifier.setType(medicationrequestidentifiertype);
+
+		/******************** medicationrequestidentifiertypecoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding medicationrequestidentifiertypecoding =  new org.hl7.fhir.r4.model.Coding();
+		medicationrequestidentifiertype.addCoding(medicationrequestidentifiertypecoding);
+
+		/******************** MdctnRqst_Id_Typ_Cdg_Cd ********************************************************************************/
+		if(m.getMdctnRqstIdTypCdgCd() != null) {
+			medicationrequestidentifiertypecoding.setCode(m.getMdctnRqstIdTypCdgCd());
+		}
+		/******************** MdctnRqst_Id_Typ_Cdg_Dsply ********************************************************************************/
+		if(m.getMdctnRqstIdTypCdgDsply() != null) {
+			medicationrequestidentifiertypecoding.setDisplay(m.getMdctnRqstIdTypCdgDsply());
+		}
+		/******************** MdctnRqst_Id_Typ_Cdg_Sys ********************************************************************************/
+		if(m.getMdctnRqstIdTypCdgSys() != null) {
+			medicationrequestidentifiertypecoding.setSystem(m.getMdctnRqstIdTypCdgSys());
+		}
+		/******************** MdctnRqst_Id_Typ_Cdg_UsrSltd ********************************************************************************/
+		if(m.getMdctnRqstIdTypCdgUsrSltd() != null) {
+			medicationrequestidentifiertypecoding.setUserSelected(Boolean.parseBoolean(m.getMdctnRqstIdTypCdgUsrSltd()));
+		}
+		/******************** MdctnRqst_Id_Typ_Cdg_Vrsn ********************************************************************************/
+		if(m.getMdctnRqstIdTypCdgVrsn() != null) {
+			medicationrequestidentifiertypecoding.setVersion(m.getMdctnRqstIdTypCdgVrsn());
+		}
+		/******************** MdctnRqst_Id_Typ_Txt ********************************************************************************/
+		if(m.getMdctnRqstIdTypTxt() != null) {
+			medicationrequestidentifiertype.setText(m.getMdctnRqstIdTypTxt());
+		}
+		/******************** medicationrequestidentifieruse ********************************************************************************/
+		org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory medicationrequestidentifieruse =  new org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory();
+		medicationrequestidentifier.setUse(medicationrequestidentifieruse.fromCode(m.getMdctnRqstIdUse()));
+
+		/******************** MdctnRqst_Id_Vl ********************************************************************************/
+		if(m.getMdctnRqstIdVl() != null) {
+			medicationrequestidentifier.setValue(m.getMdctnRqstIdVl());
+		}
+		/******************** MdctnRqst_InstantiatesCanonical ********************************************************************************/
+		if(m.getMdctnRqstInstantiatesCanonical() != null) {
+			medicationrequest.addInstantiatesCanonical(m.getMdctnRqstInstantiatesCanonical());
+		}
+		/******************** MdctnRqst_InstantiatesUri ********************************************************************************/
+		if(m.getMdctnRqstInstantiatesUri() != null) {
+			medicationrequest.addInstantiatesUri(m.getMdctnRqstInstantiatesUri());
+		}
+		/******************** MdctnRqst_Insrnc ********************************************************************************/
+		if(m.getMdctnRqstInsrnc() != null) {
+			medicationrequest.addInsurance( new org.hl7.fhir.r4.model.Reference(m.getMdctnRqstInsrnc()));
+		}
+		/******************** medicationrequestintent ********************************************************************************/
+		org.hl7.fhir.r4.model.MedicationRequest.MedicationRequestIntentEnumFactory medicationrequestintent =  new org.hl7.fhir.r4.model.MedicationRequest.MedicationRequestIntentEnumFactory();
+		medicationrequest.setIntent(medicationrequestintent.fromCode(m.getMdctnRqstIntent()));
+
+		/******************** medicationrequestmedicationcodeableconcept ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept medicationrequestmedicationcodeableconcept =  new org.hl7.fhir.r4.model.CodeableConcept();
+		medicationrequest.setMedication(medicationrequestmedicationcodeableconcept);
+
+		/******************** medicationrequestmedicationcodeableconceptcoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding medicationrequestmedicationcodeableconceptcoding =  new org.hl7.fhir.r4.model.Coding();
+		medicationrequestmedicationcodeableconcept.addCoding(medicationrequestmedicationcodeableconceptcoding);
+
+		/******************** MdctnRqst_MdctnCdbleCncpt_Cdg_Cd ********************************************************************************/
+		if(m.getMdctnRqstMdctnCdbleCncptCdgCd() != null) {
+			medicationrequestmedicationcodeableconceptcoding.setCode(m.getMdctnRqstMdctnCdbleCncptCdgCd());
+		}
+		/******************** MdctnRqst_MdctnCdbleCncpt_Cdg_Dsply ********************************************************************************/
+		if(m.getMdctnRqstMdctnCdbleCncptCdgDsply() != null) {
+			medicationrequestmedicationcodeableconceptcoding.setDisplay(m.getMdctnRqstMdctnCdbleCncptCdgDsply());
+		}
+		/******************** MdctnRqst_MdctnCdbleCncpt_Cdg_Sys ********************************************************************************/
+		if(m.getMdctnRqstMdctnCdbleCncptCdgSys() != null) {
+			medicationrequestmedicationcodeableconceptcoding.setSystem(m.getMdctnRqstMdctnCdbleCncptCdgSys());
+		}
+		/******************** MdctnRqst_MdctnCdbleCncpt_Cdg_UsrSltd ********************************************************************************/
+		if(m.getMdctnRqstMdctnCdbleCncptCdgUsrSltd() != null) {
+			medicationrequestmedicationcodeableconceptcoding.setUserSelected(Boolean.parseBoolean(m.getMdctnRqstMdctnCdbleCncptCdgUsrSltd()));
+		}
+		/******************** MdctnRqst_MdctnCdbleCncpt_Cdg_Vrsn ********************************************************************************/
+		if(m.getMdctnRqstMdctnCdbleCncptCdgVrsn() != null) {
+			medicationrequestmedicationcodeableconceptcoding.setVersion(m.getMdctnRqstMdctnCdbleCncptCdgVrsn());
+		}
+		/******************** MdctnRqst_MdctnCdbleCncpt_Txt ********************************************************************************/
+		if(m.getMdctnRqstMdctnCdbleCncptTxt() != null) {
+			medicationrequestmedicationcodeableconcept.setText(m.getMdctnRqstMdctnCdbleCncptTxt());
+		}
+		/******************** MdctnRqst_MdctnRfrnc ********************************************************************************/
+		if(m.getMdctnRqstMdctnRfrnc() != null) {
+			medicationrequest.setMedication( new org.hl7.fhir.r4.model.Reference(m.getMdctnRqstMdctnRfrnc()));
+		}
+		/******************** medicationrequestnote ********************************************************************************/
+		org.hl7.fhir.r4.model.Annotation medicationrequestnote =  new org.hl7.fhir.r4.model.Annotation();
+		medicationrequest.addNote(medicationrequestnote);
+
+		/******************** MdctnRqst_Nt_AthrRfrnc ********************************************************************************/
+		if(m.getMdctnRqstNtAthrRfrnc() != null) {
+			medicationrequestnote.setAuthor( new org.hl7.fhir.r4.model.Reference(m.getMdctnRqstNtAthrRfrnc()));
+		}
+		/******************** MdctnRqst_Nt_AthrStrgTyp ********************************************************************************/
+		if(m.getMdctnRqstNtAthrStrgTyp() != null) {
+			medicationrequestnote.setAuthor( new org.hl7.fhir.r4.model.StringType(m.getMdctnRqstNtAthrStrgTyp()));
+		}
+		/******************** MdctnRqst_Nt_Txt ********************************************************************************/
+		if(m.getMdctnRqstNtTxt() != null) {
+			medicationrequestnote.setText(m.getMdctnRqstNtTxt());
+		}
+		/******************** MdctnRqst_Nt_Time ********************************************************************************/
+		if(m.getMdctnRqstNtTime() != null) {
+			java.text.SimpleDateFormat MdctnRqst_Nt_Timesdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date MdctnRqst_Nt_Timedate = MdctnRqst_Nt_Timesdf.parse(m.getMdctnRqstNtTime());
+			medicationrequestnote.setTime(MdctnRqst_Nt_Timedate);
+		}
+		/******************** MdctnRqst_Prfrmr ********************************************************************************/
+		if(m.getMdctnRqstPrfrmr() != null) {
+			medicationrequest.setPerformer( new org.hl7.fhir.r4.model.Reference(m.getMdctnRqstPrfrmr()));
+		}
+		/******************** medicationrequestperformertype ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept medicationrequestperformertype =  new org.hl7.fhir.r4.model.CodeableConcept();
+		medicationrequest.setPerformerType(medicationrequestperformertype);
+
+		/******************** medicationrequestperformertypecoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding medicationrequestperformertypecoding =  new org.hl7.fhir.r4.model.Coding();
+		medicationrequestperformertype.addCoding(medicationrequestperformertypecoding);
+
+		/******************** MdctnRqst_PrfrmrTyp_Cdg_Cd ********************************************************************************/
+		if(m.getMdctnRqstPrfrmrTypCdgCd() != null) {
+			medicationrequestperformertypecoding.setCode(m.getMdctnRqstPrfrmrTypCdgCd());
+		}
+		/******************** MdctnRqst_PrfrmrTyp_Cdg_Dsply ********************************************************************************/
+		if(m.getMdctnRqstPrfrmrTypCdgDsply() != null) {
+			medicationrequestperformertypecoding.setDisplay(m.getMdctnRqstPrfrmrTypCdgDsply());
+		}
+		/******************** MdctnRqst_PrfrmrTyp_Cdg_Sys ********************************************************************************/
+		if(m.getMdctnRqstPrfrmrTypCdgSys() != null) {
+			medicationrequestperformertypecoding.setSystem(m.getMdctnRqstPrfrmrTypCdgSys());
+		}
+		/******************** MdctnRqst_PrfrmrTyp_Cdg_UsrSltd ********************************************************************************/
+		if(m.getMdctnRqstPrfrmrTypCdgUsrSltd() != null) {
+			medicationrequestperformertypecoding.setUserSelected(Boolean.parseBoolean(m.getMdctnRqstPrfrmrTypCdgUsrSltd()));
+		}
+		/******************** MdctnRqst_PrfrmrTyp_Cdg_Vrsn ********************************************************************************/
+		if(m.getMdctnRqstPrfrmrTypCdgVrsn() != null) {
+			medicationrequestperformertypecoding.setVersion(m.getMdctnRqstPrfrmrTypCdgVrsn());
+		}
+		/******************** MdctnRqst_PrfrmrTyp_Txt ********************************************************************************/
+		if(m.getMdctnRqstPrfrmrTypTxt() != null) {
+			medicationrequestperformertype.setText(m.getMdctnRqstPrfrmrTypTxt());
+		}
+		/******************** MdctnRqst_PriorPrescription ********************************************************************************/
+		if(m.getMdctnRqstPriorPrescription() != null) {
+			medicationrequest.setPriorPrescription( new org.hl7.fhir.r4.model.Reference(m.getMdctnRqstPriorPrescription()));
+		}
+		/******************** medicationrequestpriority ********************************************************************************/
+		org.hl7.fhir.r4.model.MedicationRequest.MedicationRequestPriorityEnumFactory medicationrequestpriority =  new org.hl7.fhir.r4.model.MedicationRequest.MedicationRequestPriorityEnumFactory();
+		medicationrequest.setPriority(medicationrequestpriority.fromCode(m.getMdctnRqstPriority()));
+
+		/******************** medicationrequestreasoncode ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept medicationrequestreasoncode =  new org.hl7.fhir.r4.model.CodeableConcept();
+		medicationrequest.addReasonCode(medicationrequestreasoncode);
+
+		/******************** medicationrequestreasoncodecoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding medicationrequestreasoncodecoding =  new org.hl7.fhir.r4.model.Coding();
+		medicationrequestreasoncode.addCoding(medicationrequestreasoncodecoding);
+
+		/******************** MdctnRqst_RsnCd_Cdg_Cd ********************************************************************************/
+		if(m.getMdctnRqstRsnCdCdgCd() != null) {
+			medicationrequestreasoncodecoding.setCode(m.getMdctnRqstRsnCdCdgCd());
+		}
+		/******************** MdctnRqst_RsnCd_Cdg_Dsply ********************************************************************************/
+		if(m.getMdctnRqstRsnCdCdgDsply() != null) {
+			medicationrequestreasoncodecoding.setDisplay(m.getMdctnRqstRsnCdCdgDsply());
+		}
+		/******************** MdctnRqst_RsnCd_Cdg_Sys ********************************************************************************/
+		if(m.getMdctnRqstRsnCdCdgSys() != null) {
+			medicationrequestreasoncodecoding.setSystem(m.getMdctnRqstRsnCdCdgSys());
+		}
+		/******************** MdctnRqst_RsnCd_Cdg_UsrSltd ********************************************************************************/
+		if(m.getMdctnRqstRsnCdCdgUsrSltd() != null) {
+			medicationrequestreasoncodecoding.setUserSelected(Boolean.parseBoolean(m.getMdctnRqstRsnCdCdgUsrSltd()));
+		}
+		/******************** MdctnRqst_RsnCd_Cdg_Vrsn ********************************************************************************/
+		if(m.getMdctnRqstRsnCdCdgVrsn() != null) {
+			medicationrequestreasoncodecoding.setVersion(m.getMdctnRqstRsnCdCdgVrsn());
+		}
+		/******************** MdctnRqst_RsnCd_Txt ********************************************************************************/
+		if(m.getMdctnRqstRsnCdTxt() != null) {
+			medicationrequestreasoncode.setText(m.getMdctnRqstRsnCdTxt());
+		}
+		/******************** MdctnRqst_RsnRfrnc ********************************************************************************/
+		if(m.getMdctnRqstRsnRfrnc() != null) {
+			medicationrequest.addReasonReference( new org.hl7.fhir.r4.model.Reference(m.getMdctnRqstRsnRfrnc()));
+		}
+		/******************** MdctnRqst_Recorder ********************************************************************************/
+		if(m.getMdctnRqstRecorder() != null) {
+			medicationrequest.setRecorder( new org.hl7.fhir.r4.model.Reference(m.getMdctnRqstRecorder()));
+		}
+		/******************** MdctnRqst_RptedBooleanTyp ********************************************************************************/
+		if(m.getMdctnRqstRptedBooleanTyp() != null) {
+			medicationrequest.setReported( new org.hl7.fhir.r4.model.BooleanType(m.getMdctnRqstRptedBooleanTyp()));
+		}
+		/******************** MdctnRqst_RptedRfrnc ********************************************************************************/
+		if(m.getMdctnRqstRptedRfrnc() != null) {
+			medicationrequest.setReported( new org.hl7.fhir.r4.model.Reference(m.getMdctnRqstRptedRfrnc()));
+		}
+		/******************** MdctnRqst_Rqster ********************************************************************************/
+		if(m.getMdctnRqstRqster() != null) {
+			medicationrequest.setRequester( new org.hl7.fhir.r4.model.Reference(m.getMdctnRqstRqster()));
+		}
+		/******************** medicationrequeststatus ********************************************************************************/
+		org.hl7.fhir.r4.model.MedicationRequest.MedicationRequestStatusEnumFactory medicationrequeststatus =  new org.hl7.fhir.r4.model.MedicationRequest.MedicationRequestStatusEnumFactory();
+		medicationrequest.setStatus(medicationrequeststatus.fromCode(m.getMdctnRqstSts()));
+
+		/******************** medicationrequeststatusreason ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept medicationrequeststatusreason =  new org.hl7.fhir.r4.model.CodeableConcept();
+		medicationrequest.setStatusReason(medicationrequeststatusreason);
+
+		/******************** medicationrequeststatusreasoncoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding medicationrequeststatusreasoncoding =  new org.hl7.fhir.r4.model.Coding();
+		medicationrequeststatusreason.addCoding(medicationrequeststatusreasoncoding);
+
+		/******************** MdctnRqst_StsRsn_Cdg_Cd ********************************************************************************/
+		if(m.getMdctnRqstStsRsnCdgCd() != null) {
+			medicationrequeststatusreasoncoding.setCode(m.getMdctnRqstStsRsnCdgCd());
+		}
+		/******************** MdctnRqst_StsRsn_Cdg_Dsply ********************************************************************************/
+		if(m.getMdctnRqstStsRsnCdgDsply() != null) {
+			medicationrequeststatusreasoncoding.setDisplay(m.getMdctnRqstStsRsnCdgDsply());
+		}
+		/******************** MdctnRqst_StsRsn_Cdg_Sys ********************************************************************************/
+		if(m.getMdctnRqstStsRsnCdgSys() != null) {
+			medicationrequeststatusreasoncoding.setSystem(m.getMdctnRqstStsRsnCdgSys());
+		}
+		/******************** MdctnRqst_StsRsn_Cdg_UsrSltd ********************************************************************************/
+		if(m.getMdctnRqstStsRsnCdgUsrSltd() != null) {
+			medicationrequeststatusreasoncoding.setUserSelected(Boolean.parseBoolean(m.getMdctnRqstStsRsnCdgUsrSltd()));
+		}
+		/******************** MdctnRqst_StsRsn_Cdg_Vrsn ********************************************************************************/
+		if(m.getMdctnRqstStsRsnCdgVrsn() != null) {
+			medicationrequeststatusreasoncoding.setVersion(m.getMdctnRqstStsRsnCdgVrsn());
+		}
+		/******************** MdctnRqst_StsRsn_Txt ********************************************************************************/
+		if(m.getMdctnRqstStsRsnTxt() != null) {
+			medicationrequeststatusreason.setText(m.getMdctnRqstStsRsnTxt());
+		}
+		/******************** MdctnRqst_Sbjct ********************************************************************************/
+		if(m.getMdctnRqstSbjct() != null) {
+			medicationrequest.setSubject( new org.hl7.fhir.r4.model.Reference(m.getMdctnRqstSbjct()));
+		}
+		/******************** medicationrequestsubstitution ********************************************************************************/
+		org.hl7.fhir.r4.model.MedicationRequest.MedicationRequestSubstitutionComponent medicationrequestsubstitution =  new org.hl7.fhir.r4.model.MedicationRequest.MedicationRequestSubstitutionComponent();
+		medicationrequest.setSubstitution(medicationrequestsubstitution);
+
+		/******************** MdctnRqst_Substitution_AllowedBooleanTyp ********************************************************************************/
+		if(m.getMdctnRqstSubstitutionAllowedBooleanTyp() != null) {
+			medicationrequestsubstitution.setAllowed( new org.hl7.fhir.r4.model.BooleanType(m.getMdctnRqstSubstitutionAllowedBooleanTyp()));
+		}
+		/******************** medicationrequestsubstitutionallowedcodeableconcept ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept medicationrequestsubstitutionallowedcodeableconcept =  new org.hl7.fhir.r4.model.CodeableConcept();
+		medicationrequestsubstitution.setAllowed(medicationrequestsubstitutionallowedcodeableconcept);
+
+		/******************** medicationrequestsubstitutionallowedcodeableconceptcoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding medicationrequestsubstitutionallowedcodeableconceptcoding =  new org.hl7.fhir.r4.model.Coding();
+		medicationrequestsubstitutionallowedcodeableconcept.addCoding(medicationrequestsubstitutionallowedcodeableconceptcoding);
+
+		/******************** MdctnRqst_Substitution_AllowedCdbleCncpt_Cdg_Cd ********************************************************************************/
+		if(m.getMdctnRqstSubstitutionAllowedCdbleCncptCdgCd() != null) {
+			medicationrequestsubstitutionallowedcodeableconceptcoding.setCode(m.getMdctnRqstSubstitutionAllowedCdbleCncptCdgCd());
+		}
+		/******************** MdctnRqst_Substitution_AllowedCdbleCncpt_Cdg_Dsply ********************************************************************************/
+		if(m.getMdctnRqstSubstitutionAllowedCdbleCncptCdgDsply() != null) {
+			medicationrequestsubstitutionallowedcodeableconceptcoding.setDisplay(m.getMdctnRqstSubstitutionAllowedCdbleCncptCdgDsply());
+		}
+		/******************** MdctnRqst_Substitution_AllowedCdbleCncpt_Cdg_Sys ********************************************************************************/
+		if(m.getMdctnRqstSubstitutionAllowedCdbleCncptCdgSys() != null) {
+			medicationrequestsubstitutionallowedcodeableconceptcoding.setSystem(m.getMdctnRqstSubstitutionAllowedCdbleCncptCdgSys());
+		}
+		/******************** MdctnRqst_Substitution_AllowedCdbleCncpt_Cdg_UsrSltd ********************************************************************************/
+		if(m.getMdctnRqstSubstitutionAllowedCdbleCncptCdgUsrSltd() != null) {
+			medicationrequestsubstitutionallowedcodeableconceptcoding.setUserSelected(Boolean.parseBoolean(m.getMdctnRqstSubstitutionAllowedCdbleCncptCdgUsrSltd()));
+		}
+		/******************** MdctnRqst_Substitution_AllowedCdbleCncpt_Cdg_Vrsn ********************************************************************************/
+		if(m.getMdctnRqstSubstitutionAllowedCdbleCncptCdgVrsn() != null) {
+			medicationrequestsubstitutionallowedcodeableconceptcoding.setVersion(m.getMdctnRqstSubstitutionAllowedCdbleCncptCdgVrsn());
+		}
+		/******************** MdctnRqst_Substitution_AllowedCdbleCncpt_Txt ********************************************************************************/
+		if(m.getMdctnRqstSubstitutionAllowedCdbleCncptTxt() != null) {
+			medicationrequestsubstitutionallowedcodeableconcept.setText(m.getMdctnRqstSubstitutionAllowedCdbleCncptTxt());
+		}
+		/******************** medicationrequestsubstitutionreason ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept medicationrequestsubstitutionreason =  new org.hl7.fhir.r4.model.CodeableConcept();
+		medicationrequestsubstitution.setReason(medicationrequestsubstitutionreason);
+
+		/******************** medicationrequestsubstitutionreasoncoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding medicationrequestsubstitutionreasoncoding =  new org.hl7.fhir.r4.model.Coding();
+		medicationrequestsubstitutionreason.addCoding(medicationrequestsubstitutionreasoncoding);
+
+		/******************** MdctnRqst_Substitution_Rsn_Cdg_Cd ********************************************************************************/
+		if(m.getMdctnRqstSubstitutionRsnCdgCd() != null) {
+			medicationrequestsubstitutionreasoncoding.setCode(m.getMdctnRqstSubstitutionRsnCdgCd());
+		}
+		/******************** MdctnRqst_Substitution_Rsn_Cdg_Dsply ********************************************************************************/
+		if(m.getMdctnRqstSubstitutionRsnCdgDsply() != null) {
+			medicationrequestsubstitutionreasoncoding.setDisplay(m.getMdctnRqstSubstitutionRsnCdgDsply());
+		}
+		/******************** MdctnRqst_Substitution_Rsn_Cdg_Sys ********************************************************************************/
+		if(m.getMdctnRqstSubstitutionRsnCdgSys() != null) {
+			medicationrequestsubstitutionreasoncoding.setSystem(m.getMdctnRqstSubstitutionRsnCdgSys());
+		}
+		/******************** MdctnRqst_Substitution_Rsn_Cdg_UsrSltd ********************************************************************************/
+		if(m.getMdctnRqstSubstitutionRsnCdgUsrSltd() != null) {
+			medicationrequestsubstitutionreasoncoding.setUserSelected(Boolean.parseBoolean(m.getMdctnRqstSubstitutionRsnCdgUsrSltd()));
+		}
+		/******************** MdctnRqst_Substitution_Rsn_Cdg_Vrsn ********************************************************************************/
+		if(m.getMdctnRqstSubstitutionRsnCdgVrsn() != null) {
+			medicationrequestsubstitutionreasoncoding.setVersion(m.getMdctnRqstSubstitutionRsnCdgVrsn());
+		}
+		/******************** MdctnRqst_Substitution_Rsn_Txt ********************************************************************************/
+		if(m.getMdctnRqstSubstitutionRsnTxt() != null) {
+			medicationrequestsubstitutionreason.setText(m.getMdctnRqstSubstitutionRsnTxt());
+		}
+		/******************** MdctnRqst_SprtingInfo ********************************************************************************/
+		if(m.getMdctnRqstSprtingInfo() != null) {
+			medicationrequest.addSupportingInformation( new org.hl7.fhir.r4.model.Reference(m.getMdctnRqstSprtingInfo()));
 		}
 		return medicationrequest;
 	}

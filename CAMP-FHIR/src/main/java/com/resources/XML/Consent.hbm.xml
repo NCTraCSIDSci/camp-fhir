@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Jun 6, 2022, 11:02:25 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Consent" optimistic-lock="none" table="Consent">
+        <id name="id" type="string">
+            <column length="64" name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="cnsntCtgryCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Ctgry_Cdg_Cd"/>
+        </property>
+        <property name="cnsntCtgryCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Ctgry_Cdg_Dsply"/>
+        </property>
+        <property name="cnsntCtgryCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Ctgry_Cdg_Sys"/>
+        </property>
+        <property name="cnsntCtgryCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Ctgry_Cdg_UsrSltd"/>
+        </property>
+        <property name="cnsntCtgryCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Ctgry_Cdg_Vrsn"/>
+        </property>
+        <property name="cnsntCtgryTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Ctgry_Txt"/>
+        </property>
+        <property name="cnsntDtTime" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_DtTime"/>
+        </property>
+        <property name="cnsntIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Id_Assigner"/>
+        </property>
+        <property name="cnsntIdPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Id_Prd_End"/>
+        </property>
+        <property name="cnsntIdPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Id_Prd_Strt"/>
+        </property>
+        <property name="cnsntIdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Id_Sys"/>
+        </property>
+        <property name="cnsntIdTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Id_Typ_Cdg_Cd"/>
+        </property>
+        <property name="cnsntIdTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Id_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="cnsntIdTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Id_Typ_Cdg_Sys"/>
+        </property>
+        <property name="cnsntIdTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Id_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="cnsntIdTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Id_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="cnsntIdTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Id_Typ_Txt"/>
+        </property>
+        <property name="cnsntIdUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Id_Use"/>
+        </property>
+        <property name="cnsntIdVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Id_Vl"/>
+        </property>
+        <property name="cnsntOrgnztn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Orgnztn"/>
+        </property>
+        <property name="cnsntPnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Pnt"/>
+        </property>
+        <property name="cnsntPrfrmr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Prfrmr"/>
+        </property>
+        <property name="cnsntPolicyAthrity" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Policy_Athrity"/>
+        </property>
+        <property name="cnsntPolicyUri" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Policy_Uri"/>
+        </property>
+        <property name="cnsntPolicyRuleCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_PolicyRule_Cdg_Cd"/>
+        </property>
+        <property name="cnsntPolicyRuleCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_PolicyRule_Cdg_Dsply"/>
+        </property>
+        <property name="cnsntPolicyRuleCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_PolicyRule_Cdg_Sys"/>
+        </property>
+        <property name="cnsntPolicyRuleCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_PolicyRule_Cdg_UsrSltd"/>
+        </property>
+        <property name="cnsntPolicyRuleCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_PolicyRule_Cdg_Vrsn"/>
+        </property>
+        <property name="cnsntPolicyRuleTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_PolicyRule_Txt"/>
+        </property>
+        <property name="cnsntProvisionActnCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Provision_Actn_Cdg_Cd"/>
+        </property>
+        <property name="cnsntProvisionActnCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Provision_Actn_Cdg_Dsply"/>
+        </property>
+        <property name="cnsntProvisionActnCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Provision_Actn_Cdg_Sys"/>
+        </property>
+        <property name="cnsntProvisionActnCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Provision_Actn_Cdg_UsrSltd"/>
+        </property>
+        <property name="cnsntProvisionActnCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Provision_Actn_Cdg_Vrsn"/>
+        </property>
+        <property name="cnsntProvisionActnTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Provision_Actn_Txt"/>
+        </property>
+        <property name="cnsntProvisionActorRfrnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Provision_Actor_Rfrnc"/>
+        </property>
+        <property name="cnsntProvisionActorRoleCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Provision_Actor_Role_Cdg_Cd"/>
+        </property>
+        <property name="cnsntProvisionActorRoleCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Provision_Actor_Role_Cdg_Dsply"/>
+        </property>
+        <property name="cnsntProvisionActorRoleCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Provision_Actor_Role_Cdg_Sys"/>
+        </property>
+        <property name="cnsntProvisionActorRoleCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Provision_Actor_Role_Cdg_UsrSltd"/>
+        </property>
+        <property name="cnsntProvisionActorRoleCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Provision_Actor_Role_Cdg_Vrsn"/>
+        </property>
+        <property name="cnsntProvisionActorRoleTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Provision_Actor_Role_Txt"/>
+        </property>
+        <property name="cnsntProvisionClsCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Provision_Cls__Cd"/>
+        </property>
+        <property name="cnsntProvisionClsDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Provision_Cls__Dsply"/>
+        </property>
+        <property name="cnsntProvisionClsSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Provision_Cls__Sys"/>
+        </property>
+        <property name="cnsntProvisionClsUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Provision_Cls__UsrSltd"/>
+        </property>
+        <property name="cnsntProvisionClsVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Provision_Cls__Vrsn"/>
+        </property>
+        <property name="cnsntProvisionCdCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Provision_Cd_Cdg_Cd"/>
+        </property>
+        <property name="cnsntProvisionCdCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Provision_Cd_Cdg_Dsply"/>
+        </property>
+        <property name="cnsntProvisionCdCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Provision_Cd_Cdg_Sys"/>
+        </property>
+        <property name="cnsntProvisionCdCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Provision_Cd_Cdg_UsrSltd"/>
+        </property>
+        <property name="cnsntProvisionCdCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Provision_Cd_Cdg_Vrsn"/>
+        </property>
+        <property name="cnsntProvisionCdTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Provision_Cd_Txt"/>
+        </property>
+        <property name="cnsntProvisionDataMeaning" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Provision_Data_Meaning"/>
+        </property>
+        <property name="cnsntProvisionDataRfrnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Provision_Data_Rfrnc"/>
+        </property>
+        <property name="cnsntProvisionDataPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Provision_DataPrd_End"/>
+        </property>
+        <property name="cnsntProvisionDataPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Provision_DataPrd_Strt"/>
+        </property>
+        <property name="cnsntProvisionPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Provision_Prd_End"/>
+        </property>
+        <property name="cnsntProvisionPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Provision_Prd_Strt"/>
+        </property>
+        <property name="cnsntProvisionPrpseCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Provision_Prpse_Cd"/>
+        </property>
+        <property name="cnsntProvisionPrpseDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Provision_Prpse_Dsply"/>
+        </property>
+        <property name="cnsntProvisionPrpseSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Provision_Prpse_Sys"/>
+        </property>
+        <property name="cnsntProvisionPrpseUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Provision_Prpse_UsrSltd"/>
+        </property>
+        <property name="cnsntProvisionPrpseVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Provision_Prpse_Vrsn"/>
+        </property>
+        <property name="cnsntProvisionSecurityLblCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Provision_SecurityLbl_Cd"/>
+        </property>
+        <property name="cnsntProvisionSecurityLblDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Provision_SecurityLbl_Dsply"/>
+        </property>
+        <property name="cnsntProvisionSecurityLblSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Provision_SecurityLbl_Sys"/>
+        </property>
+        <property name="cnsntProvisionSecurityLblUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Provision_SecurityLbl_UsrSltd"/>
+        </property>
+        <property name="cnsntProvisionSecurityLblVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Provision_SecurityLbl_Vrsn"/>
+        </property>
+        <property name="cnsntProvisionTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Provision_Typ"/>
+        </property>
+        <property name="cnsntScopeCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Scope_Cdg_Cd"/>
+        </property>
+        <property name="cnsntScopeCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Scope_Cdg_Dsply"/>
+        </property>
+        <property name="cnsntScopeCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Scope_Cdg_Sys"/>
+        </property>
+        <property name="cnsntScopeCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Scope_Cdg_UsrSltd"/>
+        </property>
+        <property name="cnsntScopeCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Scope_Cdg_Vrsn"/>
+        </property>
+        <property name="cnsntScopeTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Scope_Txt"/>
+        </property>
+        <property name="cnsntSrcAttchmntCntntTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_SrcAttchmnt_CntntTyp"/>
+        </property>
+        <property name="cnsntSrcAttchmntCreation" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_SrcAttchmnt_Creation"/>
+        </property>
+        <property name="cnsntSrcAttchmntData" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_SrcAttchmnt_Data"/>
+        </property>
+        <property name="cnsntSrcAttchmntHash" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_SrcAttchmnt_Hash"/>
+        </property>
+        <property name="cnsntSrcAttchmntLnguage" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_SrcAttchmnt_Lnguage"/>
+        </property>
+        <property name="cnsntSrcAttchmntSz" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_SrcAttchmnt_Sz"/>
+        </property>
+        <property name="cnsntSrcAttchmntTtl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_SrcAttchmnt_Ttl"/>
+        </property>
+        <property name="cnsntSrcAttchmntUrl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_SrcAttchmnt_Url"/>
+        </property>
+        <property name="cnsntSrcRfrnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_SrcRfrnc"/>
+        </property>
+        <property name="cnsntSts" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Sts"/>
+        </property>
+        <property name="cnsntVrfctnVrfctnDt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Vrfctn_VrfctnDt"/>
+        </property>
+        <property name="cnsntVrfctnVerified" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Vrfctn_Verified"/>
+        </property>
+        <property name="cnsntVrfctnVerifiedWith" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cnsnt_Vrfctn_VerifiedWith"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Jun 6, 2022, 11:02:25 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="QuestionnaireResponse" optimistic-lock="none" table="QuestionnaireResponse">
+        <id name="id" type="string">
+            <column length="64" name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="qstnaireRspsAthr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="QstnaireRsps_Athr"/>
+        </property>
+        <property name="qstnaireRspsAthred" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="QstnaireRsps_Athred"/>
+        </property>
+        <property name="qstnaireRspsBasedOn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="QstnaireRsps_BasedOn"/>
+        </property>
+        <property name="qstnaireRspsEnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="QstnaireRsps_Enc"/>
+        </property>
+        <property name="qstnaireRspsIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="QstnaireRsps_Id_Assigner"/>
+        </property>
+        <property name="qstnaireRspsIdPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="QstnaireRsps_Id_Prd_End"/>
+        </property>
+        <property name="qstnaireRspsIdPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="QstnaireRsps_Id_Prd_Strt"/>
+        </property>
+        <property name="qstnaireRspsIdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="QstnaireRsps_Id_Sys"/>
+        </property>
+        <property name="qstnaireRspsIdTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="QstnaireRsps_Id_Typ_Cdg_Cd"/>
+        </property>
+        <property name="qstnaireRspsIdTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="QstnaireRsps_Id_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="qstnaireRspsIdTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="QstnaireRsps_Id_Typ_Cdg_Sys"/>
+        </property>
+        <property name="qstnaireRspsIdTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="QstnaireRsps_Id_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="qstnaireRspsIdTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="QstnaireRsps_Id_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="qstnaireRspsIdTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="QstnaireRsps_Id_Typ_Txt"/>
+        </property>
+        <property name="qstnaireRspsIdUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="QstnaireRsps_Id_Use"/>
+        </property>
+        <property name="qstnaireRspsIdVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="QstnaireRsps_Id_Vl"/>
+        </property>
+        <property name="qstnaireRspsItmAnsVlAttchmntCntntTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="QstnaireRsps_Itm_Ans_VlAttchmnt_CntntTyp"/>
+        </property>
+        <property name="qstnaireRspsItmAnsVlAttchmntCreation" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="QstnaireRsps_Itm_Ans_VlAttchmnt_Creation"/>
+        </property>
+        <property name="qstnaireRspsItmAnsVlAttchmntData" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="QstnaireRsps_Itm_Ans_VlAttchmnt_Data"/>
+        </property>
+        <property name="qstnaireRspsItmAnsVlAttchmntHash" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="QstnaireRsps_Itm_Ans_VlAttchmnt_Hash"/>
+        </property>
+        <property name="qstnaireRspsItmAnsVlAttchmntLnguage" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="QstnaireRsps_Itm_Ans_VlAttchmnt_Lnguage"/>
+        </property>
+        <property name="qstnaireRspsItmAnsVlAttchmntSz" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="QstnaireRsps_Itm_Ans_VlAttchmnt_Sz"/>
+        </property>
+        <property name="qstnaireRspsItmAnsVlAttchmntTtl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="QstnaireRsps_Itm_Ans_VlAttchmnt_Ttl"/>
+        </property>
+        <property name="qstnaireRspsItmAnsVlAttchmntUrl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="QstnaireRsps_Itm_Ans_VlAttchmnt_Url"/>
+        </property>
+        <property name="qstnaireRspsItmAnsVlBooleanTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="QstnaireRsps_Itm_Ans_VlBooleanTyp"/>
+        </property>
+        <property name="qstnaireRspsItmAnsVlCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="QstnaireRsps_Itm_Ans_VlCdg_Cd"/>
+        </property>
+        <property name="qstnaireRspsItmAnsVlCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="QstnaireRsps_Itm_Ans_VlCdg_Dsply"/>
+        </property>
+        <property name="qstnaireRspsItmAnsVlCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="QstnaireRsps_Itm_Ans_VlCdg_Sys"/>
+        </property>
+        <property name="qstnaireRspsItmAnsVlCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="QstnaireRsps_Itm_Ans_VlCdg_UsrSltd"/>
+        </property>
+        <property name="qstnaireRspsItmAnsVlCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="QstnaireRsps_Itm_Ans_VlCdg_Vrsn"/>
+        </property>
+        <property name="qstnaireRspsItmAnsVlDtTimeTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="QstnaireRsps_Itm_Ans_VlDtTimeTyp"/>
+        </property>
+        <property name="qstnaireRspsItmAnsVlDtTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="QstnaireRsps_Itm_Ans_VlDtTyp"/>
+        </property>
+        <property name="qstnaireRspsItmAnsVlDecimalTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="QstnaireRsps_Itm_Ans_VlDecimalTyp"/>
+        </property>
+        <property name="qstnaireRspsItmAnsVlIntegerTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="QstnaireRsps_Itm_Ans_VlIntegerTyp"/>
+        </property>
+        <property name="qstnaireRspsItmAnsVlQntyCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="QstnaireRsps_Itm_Ans_VlQnty_Cd"/>
+        </property>
+        <property name="qstnaireRspsItmAnsVlQntyCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="QstnaireRsps_Itm_Ans_VlQnty_Cmprtr"/>
+        </property>
+        <property name="qstnaireRspsItmAnsVlQntySys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="QstnaireRsps_Itm_Ans_VlQnty_Sys"/>
+        </property>
+        <property name="qstnaireRspsItmAnsVlQntyUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="QstnaireRsps_Itm_Ans_VlQnty_Unt"/>
+        </property>
+        <property name="qstnaireRspsItmAnsVlQntyVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="QstnaireRsps_Itm_Ans_VlQnty_Vl"/>
+        </property>
+        <property name="qstnaireRspsItmAnsVlRfrnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="QstnaireRsps_Itm_Ans_VlRfrnc"/>
+        </property>
+        <property name="qstnaireRspsItmAnsVlStrgTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="QstnaireRsps_Itm_Ans_VlStrgTyp"/>
+        </property>
+        <property name="qstnaireRspsItmAnsVlTimeTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="QstnaireRsps_Itm_Ans_VlTimeTyp"/>
+        </property>
+        <property name="qstnaireRspsItmAnsVlUriTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="QstnaireRsps_Itm_Ans_VlUriTyp"/>
+        </property>
+        <property name="qstnaireRspsItmDfn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="QstnaireRsps_Itm_Dfn"/>
+        </property>
+        <property name="qstnaireRspsItmLinkId" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="QstnaireRsps_Itm_LinkId"/>
+        </property>
+        <property name="qstnaireRspsItmTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="QstnaireRsps_Itm_Txt"/>
+        </property>
+        <property name="qstnaireRspsPartOf" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="QstnaireRsps_PartOf"/>
+        </property>
+        <property name="qstnaireRspsQstnaire" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="QstnaireRsps_Qstnaire"/>
+        </property>
+        <property name="qstnaireRspsSrc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="QstnaireRsps_Src"/>
+        </property>
+        <property name="qstnaireRspsSts" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="QstnaireRsps_Sts"/>
+        </property>
+        <property name="qstnaireRspsSbjct" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="QstnaireRsps_Sbjct"/>
+        </property>
+    </class>
+</hibernate-mapping>

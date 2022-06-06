@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Jun 6, 2022, 11:02:25 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="BodyStructure" optimistic-lock="none" table="BodyStructure">
+        <id name="id" type="string">
+            <column length="64" name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="bodyStrctrActive" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="BodyStrctr_Active"/>
+        </property>
+        <property name="bodyStrctrDscrptn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="BodyStrctr_Dscrptn"/>
+        </property>
+        <property name="bodyStrctrIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="BodyStrctr_Id_Assigner"/>
+        </property>
+        <property name="bodyStrctrIdPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="BodyStrctr_Id_Prd_End"/>
+        </property>
+        <property name="bodyStrctrIdPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="BodyStrctr_Id_Prd_Strt"/>
+        </property>
+        <property name="bodyStrctrIdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="BodyStrctr_Id_Sys"/>
+        </property>
+        <property name="bodyStrctrIdTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="BodyStrctr_Id_Typ_Cdg_Cd"/>
+        </property>
+        <property name="bodyStrctrIdTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="BodyStrctr_Id_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="bodyStrctrIdTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="BodyStrctr_Id_Typ_Cdg_Sys"/>
+        </property>
+        <property name="bodyStrctrIdTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="BodyStrctr_Id_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="bodyStrctrIdTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="BodyStrctr_Id_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="bodyStrctrIdTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="BodyStrctr_Id_Typ_Txt"/>
+        </property>
+        <property name="bodyStrctrIdUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="BodyStrctr_Id_Use"/>
+        </property>
+        <property name="bodyStrctrIdVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="BodyStrctr_Id_Vl"/>
+        </property>
+        <property name="bodyStrctrImageCntntTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="BodyStrctr_Image_CntntTyp"/>
+        </property>
+        <property name="bodyStrctrImageCreation" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="BodyStrctr_Image_Creation"/>
+        </property>
+        <property name="bodyStrctrImageData" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="BodyStrctr_Image_Data"/>
+        </property>
+        <property name="bodyStrctrImageHash" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="BodyStrctr_Image_Hash"/>
+        </property>
+        <property name="bodyStrctrImageLnguage" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="BodyStrctr_Image_Lnguage"/>
+        </property>
+        <property name="bodyStrctrImageSz" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="BodyStrctr_Image_Sz"/>
+        </property>
+        <property name="bodyStrctrImageTtl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="BodyStrctr_Image_Ttl"/>
+        </property>
+        <property name="bodyStrctrImageUrl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="BodyStrctr_Image_Url"/>
+        </property>
+        <property name="bodyStrctrLctnCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="BodyStrctr_Lctn_Cdg_Cd"/>
+        </property>
+        <property name="bodyStrctrLctnCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="BodyStrctr_Lctn_Cdg_Dsply"/>
+        </property>
+        <property name="bodyStrctrLctnCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="BodyStrctr_Lctn_Cdg_Sys"/>
+        </property>
+        <property name="bodyStrctrLctnCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="BodyStrctr_Lctn_Cdg_UsrSltd"/>
+        </property>
+        <property name="bodyStrctrLctnCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="BodyStrctr_Lctn_Cdg_Vrsn"/>
+        </property>
+        <property name="bodyStrctrLctnTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="BodyStrctr_Lctn_Txt"/>
+        </property>
+        <property name="bodyStrctrLctnQualifierCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="BodyStrctr_LctnQualifier_Cdg_Cd"/>
+        </property>
+        <property name="bodyStrctrLctnQualifierCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="BodyStrctr_LctnQualifier_Cdg_Dsply"/>
+        </property>
+        <property name="bodyStrctrLctnQualifierCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="BodyStrctr_LctnQualifier_Cdg_Sys"/>
+        </property>
+        <property name="bodyStrctrLctnQualifierCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="BodyStrctr_LctnQualifier_Cdg_UsrSltd"/>
+        </property>
+        <property name="bodyStrctrLctnQualifierCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="BodyStrctr_LctnQualifier_Cdg_Vrsn"/>
+        </property>
+        <property name="bodyStrctrLctnQualifierTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="BodyStrctr_LctnQualifier_Txt"/>
+        </property>
+        <property name="bodyStrctrMorphologyCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="BodyStrctr_Morphology_Cdg_Cd"/>
+        </property>
+        <property name="bodyStrctrMorphologyCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="BodyStrctr_Morphology_Cdg_Dsply"/>
+        </property>
+        <property name="bodyStrctrMorphologyCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="BodyStrctr_Morphology_Cdg_Sys"/>
+        </property>
+        <property name="bodyStrctrMorphologyCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="BodyStrctr_Morphology_Cdg_UsrSltd"/>
+        </property>
+        <property name="bodyStrctrMorphologyCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="BodyStrctr_Morphology_Cdg_Vrsn"/>
+        </property>
+        <property name="bodyStrctrMorphologyTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="BodyStrctr_Morphology_Txt"/>
+        </property>
+        <property name="bodyStrctrPnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="BodyStrctr_Pnt"/>
+        </property>
+    </class>
+</hibernate-mapping>

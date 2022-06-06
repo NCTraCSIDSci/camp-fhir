@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Jun 6, 2022, 11:02:25 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="ChargeItem" optimistic-lock="none" table="ChargeItem">
+        <id name="id" type="string">
+            <column length="64" name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="chrgItmAccount" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_Account"/>
+        </property>
+        <property name="chrgItmBodysiteCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_Bodysite_Cdg_Cd"/>
+        </property>
+        <property name="chrgItmBodysiteCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_Bodysite_Cdg_Dsply"/>
+        </property>
+        <property name="chrgItmBodysiteCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_Bodysite_Cdg_Sys"/>
+        </property>
+        <property name="chrgItmBodysiteCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_Bodysite_Cdg_UsrSltd"/>
+        </property>
+        <property name="chrgItmBodysiteCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_Bodysite_Cdg_Vrsn"/>
+        </property>
+        <property name="chrgItmBodysiteTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_Bodysite_Txt"/>
+        </property>
+        <property name="chrgItmCdCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_Cd_Cdg_Cd"/>
+        </property>
+        <property name="chrgItmCdCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_Cd_Cdg_Dsply"/>
+        </property>
+        <property name="chrgItmCdCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_Cd_Cdg_Sys"/>
+        </property>
+        <property name="chrgItmCdCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_Cd_Cdg_UsrSltd"/>
+        </property>
+        <property name="chrgItmCdCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_Cd_Cdg_Vrsn"/>
+        </property>
+        <property name="chrgItmCdTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_Cd_Txt"/>
+        </property>
+        <property name="chrgItmCntxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_Cntxt"/>
+        </property>
+        <property name="chrgItmCstCenter" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_CstCenter"/>
+        </property>
+        <property name="chrgItmDfnCanonical" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_DfnCanonical"/>
+        </property>
+        <property name="chrgItmDfnUri" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_DfnUri"/>
+        </property>
+        <property name="chrgItmEnteredDt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_EnteredDt"/>
+        </property>
+        <property name="chrgItmEnterer" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_Enterer"/>
+        </property>
+        <property name="chrgItmFactorOverride" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_FactorOverride"/>
+        </property>
+        <property name="chrgItmIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_Id_Assigner"/>
+        </property>
+        <property name="chrgItmIdPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_Id_Prd_End"/>
+        </property>
+        <property name="chrgItmIdPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_Id_Prd_Strt"/>
+        </property>
+        <property name="chrgItmIdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_Id_Sys"/>
+        </property>
+        <property name="chrgItmIdTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_Id_Typ_Cdg_Cd"/>
+        </property>
+        <property name="chrgItmIdTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_Id_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="chrgItmIdTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_Id_Typ_Cdg_Sys"/>
+        </property>
+        <property name="chrgItmIdTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_Id_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="chrgItmIdTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_Id_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="chrgItmIdTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_Id_Typ_Txt"/>
+        </property>
+        <property name="chrgItmIdUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_Id_Use"/>
+        </property>
+        <property name="chrgItmIdVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_Id_Vl"/>
+        </property>
+        <property name="chrgItmNtAthrRfrnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_Nt_AthrRfrnc"/>
+        </property>
+        <property name="chrgItmNtAthrStrgTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_Nt_AthrStrgTyp"/>
+        </property>
+        <property name="chrgItmNtTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_Nt_Txt"/>
+        </property>
+        <property name="chrgItmNtTime" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_Nt_Time"/>
+        </property>
+        <property name="chrgItmOccrnceDtTimeTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_OccrnceDtTimeTyp"/>
+        </property>
+        <property name="chrgItmOccrncePrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_OccrncePrd_End"/>
+        </property>
+        <property name="chrgItmOccrncePrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_OccrncePrd_Strt"/>
+        </property>
+        <property name="chrgItmOccrnceTmgCdCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_OccrnceTmg_Cd_Cdg_Cd"/>
+        </property>
+        <property name="chrgItmOccrnceTmgCdCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_OccrnceTmg_Cd_Cdg_Dsply"/>
+        </property>
+        <property name="chrgItmOccrnceTmgCdCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_OccrnceTmg_Cd_Cdg_Sys"/>
+        </property>
+        <property name="chrgItmOccrnceTmgCdCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_OccrnceTmg_Cd_Cdg_UsrSltd"/>
+        </property>
+        <property name="chrgItmOccrnceTmgCdCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_OccrnceTmg_Cd_Cdg_Vrsn"/>
+        </property>
+        <property name="chrgItmOccrnceTmgCdTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_OccrnceTmg_Cd_Txt"/>
+        </property>
+        <property name="chrgItmOccrnceTmgEvnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_OccrnceTmg_Evnt"/>
+        </property>
+        <property name="chrgItmOccrnceTmgRptBndsPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_OccrnceTmg_Rpt_BndsPrd_End"/>
+        </property>
+        <property name="chrgItmOccrnceTmgRptBndsPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_OccrnceTmg_Rpt_BndsPrd_Strt"/>
+        </property>
+        <property name="chrgItmOccrnceTmgRptBndsRngHiCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_OccrnceTmg_Rpt_BndsRng_Hi_Cd"/>
+        </property>
+        <property name="chrgItmOccrnceTmgRptBndsRngHiCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_OccrnceTmg_Rpt_BndsRng_Hi_Cmprtr"/>
+        </property>
+        <property name="chrgItmOccrnceTmgRptBndsRngHiSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_OccrnceTmg_Rpt_BndsRng_Hi_Sys"/>
+        </property>
+        <property name="chrgItmOccrnceTmgRptBndsRngHiUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_OccrnceTmg_Rpt_BndsRng_Hi_Unt"/>
+        </property>
+        <property name="chrgItmOccrnceTmgRptBndsRngHiVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_OccrnceTmg_Rpt_BndsRng_Hi_Vl"/>
+        </property>
+        <property name="chrgItmOccrnceTmgRptBndsRngLwCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_OccrnceTmg_Rpt_BndsRng_Lw_Cd"/>
+        </property>
+        <property name="chrgItmOccrnceTmgRptBndsRngLwCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_OccrnceTmg_Rpt_BndsRng_Lw_Cmprtr"/>
+        </property>
+        <property name="chrgItmOccrnceTmgRptBndsRngLwSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_OccrnceTmg_Rpt_BndsRng_Lw_Sys"/>
+        </property>
+        <property name="chrgItmOccrnceTmgRptBndsRngLwUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_OccrnceTmg_Rpt_BndsRng_Lw_Unt"/>
+        </property>
+        <property name="chrgItmOccrnceTmgRptBndsRngLwVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_OccrnceTmg_Rpt_BndsRng_Lw_Vl"/>
+        </property>
+        <property name="chrgItmOccrnceTmgRptCnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_OccrnceTmg_Rpt_Cnt"/>
+        </property>
+        <property name="chrgItmOccrnceTmgRptCntMx" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_OccrnceTmg_Rpt_CntMx"/>
+        </property>
+        <property name="chrgItmOccrnceTmgRptDayOfWeek" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_OccrnceTmg_Rpt_DayOfWeek"/>
+        </property>
+        <property name="chrgItmOccrnceTmgRptDuration" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_OccrnceTmg_Rpt_Duration"/>
+        </property>
+        <property name="chrgItmOccrnceTmgRptDurationMx" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_OccrnceTmg_Rpt_DurationMx"/>
+        </property>
+        <property name="chrgItmOccrnceTmgRptDurationUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_OccrnceTmg_Rpt_DurationUnt"/>
+        </property>
+        <property name="chrgItmOccrnceTmgRptFrqncy" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_OccrnceTmg_Rpt_Frqncy"/>
+        </property>
+        <property name="chrgItmOccrnceTmgRptFrqncyMx" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_OccrnceTmg_Rpt_FrqncyMx"/>
+        </property>
+        <property name="chrgItmOccrnceTmgRptOff" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_OccrnceTmg_Rpt_Off"/>
+        </property>
+        <property name="chrgItmOccrnceTmgRptPrd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_OccrnceTmg_Rpt_Prd"/>
+        </property>
+        <property name="chrgItmOccrnceTmgRptPrdMx" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_OccrnceTmg_Rpt_PrdMx"/>
+        </property>
+        <property name="chrgItmOccrnceTmgRptPrdUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_OccrnceTmg_Rpt_PrdUnt"/>
+        </property>
+        <property name="chrgItmOccrnceTmgRptTimeOfDay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_OccrnceTmg_Rpt_TimeOfDay"/>
+        </property>
+        <property name="chrgItmOccrnceTmgRptWhen" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_OccrnceTmg_Rpt_When"/>
+        </property>
+        <property name="chrgItmOverrideRsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_OverrideRsn"/>
+        </property>
+        <property name="chrgItmPartOf" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_PartOf"/>
+        </property>
+        <property name="chrgItmPrfrmrActor" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_Prfrmr_Actor"/>
+        </property>
+        <property name="chrgItmPrfrmrFunctionCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_Prfrmr_Function_Cdg_Cd"/>
+        </property>
+        <property name="chrgItmPrfrmrFunctionCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_Prfrmr_Function_Cdg_Dsply"/>
+        </property>
+        <property name="chrgItmPrfrmrFunctionCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_Prfrmr_Function_Cdg_Sys"/>
+        </property>
+        <property name="chrgItmPrfrmrFunctionCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_Prfrmr_Function_Cdg_UsrSltd"/>
+        </property>
+        <property name="chrgItmPrfrmrFunctionCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_Prfrmr_Function_Cdg_Vrsn"/>
+        </property>
+        <property name="chrgItmPrfrmrFunctionTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_Prfrmr_Function_Txt"/>
+        </property>
+        <property name="chrgItmPerformingOrgnztn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_PerformingOrgnztn"/>
+        </property>
+        <property name="chrgItmPriceOverrideCrncy" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_PriceOverride_Crncy"/>
+        </property>
+        <property name="chrgItmPriceOverrideVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_PriceOverride_Vl"/>
+        </property>
+        <property name="chrgItmPrdctCdbleCncptCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_PrdctCdbleCncpt_Cdg_Cd"/>
+        </property>
+        <property name="chrgItmPrdctCdbleCncptCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_PrdctCdbleCncpt_Cdg_Dsply"/>
+        </property>
+        <property name="chrgItmPrdctCdbleCncptCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_PrdctCdbleCncpt_Cdg_Sys"/>
+        </property>
+        <property name="chrgItmPrdctCdbleCncptCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_PrdctCdbleCncpt_Cdg_UsrSltd"/>
+        </property>
+        <property name="chrgItmPrdctCdbleCncptCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_PrdctCdbleCncpt_Cdg_Vrsn"/>
+        </property>
+        <property name="chrgItmPrdctCdbleCncptTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_PrdctCdbleCncpt_Txt"/>
+        </property>
+        <property name="chrgItmPrdctRfrnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_PrdctRfrnc"/>
+        </property>
+        <property name="chrgItmQntyCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_Qnty_Cd"/>
+        </property>
+        <property name="chrgItmQntyCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_Qnty_Cmprtr"/>
+        </property>
+        <property name="chrgItmQntySys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_Qnty_Sys"/>
+        </property>
+        <property name="chrgItmQntyUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_Qnty_Unt"/>
+        </property>
+        <property name="chrgItmQntyVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_Qnty_Vl"/>
+        </property>
+        <property name="chrgItmRsnCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_Rsn_Cdg_Cd"/>
+        </property>
+        <property name="chrgItmRsnCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_Rsn_Cdg_Dsply"/>
+        </property>
+        <property name="chrgItmRsnCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_Rsn_Cdg_Sys"/>
+        </property>
+        <property name="chrgItmRsnCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_Rsn_Cdg_UsrSltd"/>
+        </property>
+        <property name="chrgItmRsnCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_Rsn_Cdg_Vrsn"/>
+        </property>
+        <property name="chrgItmRsnTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_Rsn_Txt"/>
+        </property>
+        <property name="chrgItmRqstingOrgnztn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_RqstingOrgnztn"/>
+        </property>
+        <property name="chrgItmSrv" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_Srv"/>
+        </property>
+        <property name="chrgItmSts" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_Sts"/>
+        </property>
+        <property name="chrgItmSbjct" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_Sbjct"/>
+        </property>
+        <property name="chrgItmSprtingInfo" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ChrgItm_SprtingInfo"/>
+        </property>
+    </class>
+</hibernate-mapping>

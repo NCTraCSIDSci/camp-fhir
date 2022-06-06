@@ -1,54 +1,49 @@
+//// default package
 package main.java.com.campfhir.dao;
+// Generated on Jun 6, 2022, 11:02:34 AM 
+
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-
 import javax.xml.parsers.ParserConfigurationException;
-
+import main.java.utils.HibernateBaseDB;
 import org.hibernate.ScrollMode;
 import org.hibernate.ScrollableResults;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.StatelessSession;
 import org.hibernate.Transaction;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.xml.sax.SAXException;
 
-import main.java.com.campfhir.model.Condition;
-import main.java.utils.HibernateBaseDB;
-
 /**
-*
-* @author  James Champion
-* @version 1.0
-* @since   2019-02-08 
-*/
-public class ConditionDao implements ConditionDaoInterface<Condition, String> 
-{
+ *  object for domain model class Condition.
+ * @see .Condition
+ * @author Paul Kovach
+ */
+
+public class ConditionDao {
+
 	private Session currentSession;
 	private SessionFactory sessionFactory;
 	
 	private Transaction currentTransaction;
 
 	public ConditionDao() {}
-
-	public Session openCurrentSession() throws ParserConfigurationException, SAXException, IOException 
+	
+    public Session openCurrentSession() throws ParserConfigurationException, SAXException, IOException 
 	{
-		sessionFactory = HibernateBaseDB.getSessionFactory();
+		sessionFactory =  HibernateBaseDB.getSessionFactory();
 		currentSession = sessionFactory.openSession();
 		return currentSession;
 	}
-
-	public Session openCurrentSessionwithTransaction() throws ParserConfigurationException, SAXException, IOException 
+    
+    public Session openCurrentSessionwithTransaction() throws ParserConfigurationException, SAXException, IOException 
 	{
 		sessionFactory = HibernateBaseDB.getSessionFactory();
 		currentSession = sessionFactory.openSession();
 		currentTransaction = currentSession.beginTransaction();
 		return currentSession;
 	}
-	
 	public void closeCurrentSession() 
 	{
 		currentSession.close();
@@ -59,16 +54,16 @@ public class ConditionDao implements ConditionDaoInterface<Condition, String>
 		currentTransaction.commit();
 		currentSession.close();
 	}
-	
-	private static SessionFactory getSessionFactory() 
-	{
+    
+    private static SessionFactory getSessionFactory() 
+	{ 
 		Configuration configuration = new Configuration().configure();
 		StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder()
 				.applySettings(configuration.getProperties());
 		SessionFactory sessionFactory = configuration.buildSessionFactory(builder.build());
 		return sessionFactory;
 	}
-
+	
 	public Session getCurrentSession() 
 	{
 		return currentSession;
@@ -89,33 +84,23 @@ public class ConditionDao implements ConditionDaoInterface<Condition, String>
 		this.currentTransaction = currentTransaction;
 	}
 
-	public void persist(Condition entity) 
+	public void persist( main.java.com.campfhir.model.Condition entity) 
 	{
 		getCurrentSession().save(entity);
 	}
 
-	public void update(Condition entity) 
+	public void update( main.java.com.campfhir.model.Condition entity) 
 	{
 		getCurrentSession().update(entity);
 	}
 
-	public Condition findById(String id) 
+	public  main.java.com.campfhir.model.Condition findById(String id) 
 	{
-		Condition condition = (Condition) getCurrentSession().get(Condition.class, id);
-		return condition; 
+		main.java.com.campfhir.model.Condition resource = (main.java.com.campfhir.model.Condition) getCurrentSession().get(main.java.com.campfhir.model.Condition.class, id);
+		return resource; 
 	}
 	
-	@SuppressWarnings("unchecked")
-	public List<Condition> findByPatientId(String id)
-	{
-//		Query query = getCurrentSession().createQuery("FROM Condition WHERE CON_IDENTIFIER = '"+id+"'");
-//		
-//		List<Condition> condition = (List<Condition>) query.list();
-//		
-		return null;
-	}
-
-	public void delete(Condition entity) 
+	public void delete(main.java.com.campfhir.model.Condition entity) 
 	{
 		getCurrentSession().delete(entity);
 	}
@@ -129,12 +114,18 @@ public class ConditionDao implements ConditionDaoInterface<Condition, String>
 		        .setCacheable(true)
 		    .scroll(ScrollMode.FORWARD_ONLY);
 	}
-
-	public void deleteAll() 
+	
+	public ScrollableResults findAll(int start, int max) 
 	{
-//		List<Condition> entityList = findAll();
-//		for (Condition entity : entityList) {
-//			delete(entity);
-//		}
+		ScrollableResults resources = getCurrentSession().createQuery("FROM Condition")
+				.setFirstResult(start)
+				.setMaxResults(max)
+				.setReadOnly(true)
+		        .setCacheable(true)
+		    .scroll(ScrollMode.FORWARD_ONLY);
+		return resources;
 	}
+
+
 }
+

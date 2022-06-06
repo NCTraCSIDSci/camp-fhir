@@ -10,440 +10,417 @@ public class PractitionerConversion
 		/******************** id ********************************************************************************/
 		practitioner.setId(p.getId());
 
-		/******************** Pract_Active ********************************************************************************/
-		if(p.getPractActive() != null) {
-			practitioner.setActive(Boolean.parseBoolean(p.getPractActive()));
-		}
-
-		org.hl7.fhir.r4.model.Address practitioneraddaddress = practitioner.addAddress();
-
-		/******************** Pract_Address_City ********************************************************************************/
-		if(p.getPractAddressCity() != null) {
-			practitioneraddaddress.setCity(p.getPractAddressCity());
-		}
-		/******************** Pract_Address_Country ********************************************************************************/
-		if(p.getPractAddressCountry() != null) {
-			practitioneraddaddress.setCountry(p.getPractAddressCountry());
-		}
-		/******************** Pract_Address_District ********************************************************************************/
-		if(p.getPractAddressDistrict() != null) {
-			practitioneraddaddress.setDistrict(p.getPractAddressDistrict());
-		}
-		/******************** Pract_Address_Line ********************************************************************************/
-		if(p.getPractAddressLine() != null) {
-			practitioneraddaddress.addLine(p.getPractAddressLine());
-		}
-
-		org.hl7.fhir.r4.model.Period practitioneraddaddresssetperiod = new org.hl7.fhir.r4.model.Period();
-		practitioneraddaddress.setPeriod(practitioneraddaddresssetperiod);
-
-		/******************** Pract_Address_Period_End ********************************************************************************/
-		if(p.getPractAddressPeriodEnd() != null) {
-			java.text.SimpleDateFormat PractAddressPeriodEndsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date PractAddressPeriodEnddate = PractAddressPeriodEndsdf.parse(p.getPractAddressPeriodEnd());
-			practitioneraddaddresssetperiod.setEnd(PractAddressPeriodEnddate);
-		}
-		/******************** Pract_Address_Period_Start ********************************************************************************/
-		if(p.getPractAddressPeriodStart() != null) {
-			java.text.SimpleDateFormat PractAddressPeriodStartsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date PractAddressPeriodStartdate = PractAddressPeriodStartsdf.parse(p.getPractAddressPeriodStart());
-			practitioneraddaddresssetperiod.setStart(PractAddressPeriodStartdate);
-		}
-		/******************** Pract_Address_PostalCode ********************************************************************************/
-		if(p.getPractAddressPostalCode() != null) {
-			practitioneraddaddress.setPostalCode(p.getPractAddressPostalCode());
-		}
-		/******************** Pract_Address_State ********************************************************************************/
-		if(p.getPractAddressState() != null) {
-			practitioneraddaddress.setState(p.getPractAddressState());
-		}
-		/******************** Pract_Address_Text ********************************************************************************/
-		if(p.getPractAddressText() != null) {
-			practitioneraddaddress.setText(p.getPractAddressText());
-		}
-
-		org.hl7.fhir.r4.model.Address.AddressTypeEnumFactory practitioneraddaddresssettypeEnumFactory = new org.hl7.fhir.r4.model.Address.AddressTypeEnumFactory();
-
-		/******************** Pract_Address_Type_Code ********************************************************************************/
-		if(p.getPractAddressTypeCode() != null) {
-			practitioneraddaddress.setType(practitioneraddaddresssettypeEnumFactory.fromCode(p.getPractAddressTypeCode()));
-
-		}
-
-		org.hl7.fhir.r4.model.Address.AddressUseEnumFactory practitioneraddaddresssetuseEnumFactory = new org.hl7.fhir.r4.model.Address.AddressUseEnumFactory();
-
-		/******************** Pract_Address_Use_Code ********************************************************************************/
-		if(p.getPractAddressUseCode() != null) {
-			practitioneraddaddress.setUse(practitioneraddaddresssetuseEnumFactory.fromCode(p.getPractAddressUseCode()));
-
-		}
-		/******************** Pract_BirthDate ********************************************************************************/
-		if(p.getPractBirthDate() != null) {
-			java.text.SimpleDateFormat PractBirthDatesdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date PractBirthDatedate = PractBirthDatesdf.parse(p.getPractBirthDate());
-			practitioner.setBirthDate(PractBirthDatedate);
-		}
-
-		org.hl7.fhir.r4.model.CodeableConcept practitioneraddcommunication = practitioner.addCommunication();
-
-
-		org.hl7.fhir.r4.model.Coding practitioneraddcommunicationaddcoding = practitioneraddcommunication.addCoding();
-
-		/******************** Pract_Commn_Coding_Code ********************************************************************************/
-		if(p.getPractCommnCodingCode() != null) {
-			practitioneraddcommunicationaddcoding.setCode(p.getPractCommnCodingCode());
-		}
-		/******************** Pract_Commn_Coding_Display ********************************************************************************/
-		if(p.getPractCommnCodingDisplay() != null) {
-			practitioneraddcommunicationaddcoding.setDisplay(p.getPractCommnCodingDisplay());
-		}
-		/******************** Pract_Commn_Coding_System ********************************************************************************/
-		if(p.getPractCommnCodingSystem() != null) {
-			practitioneraddcommunicationaddcoding.setSystem(p.getPractCommnCodingSystem());
-		}
-		/******************** Pract_Commn_Coding_Usrslt ********************************************************************************/
-		if(p.getPractCommnCodingUsrslt() != null) {
-			practitioneraddcommunicationaddcoding.setUserSelected(Boolean.parseBoolean(p.getPractCommnCodingUsrslt()));
-		}
-		/******************** Pract_Commn_Coding_Version ********************************************************************************/
-		if(p.getPractCommnCodingVersion() != null) {
-			practitioneraddcommunicationaddcoding.setVersion(p.getPractCommnCodingVersion());
-		}
-		/******************** Pract_Commn_Text ********************************************************************************/
-		if(p.getPractCommnText() != null) {
-			practitioneraddcommunication.setText(p.getPractCommnText());
-		}
-
-		org.hl7.fhir.r4.model.Enumerations.AdministrativeGenderEnumFactory practitionersetgenderEnumFactory = new org.hl7.fhir.r4.model.Enumerations.AdministrativeGenderEnumFactory();
-
-		/******************** Pract_Gender_Code ********************************************************************************/
-		if(p.getPractGenderCode() != null) {
-			practitioner.setGender(practitionersetgenderEnumFactory.fromCode(p.getPractGenderCode()));
-
-		}
-
-		org.hl7.fhir.r4.model.Identifier practitioneraddidentifier = practitioner.addIdentifier();
-
-		/******************** Pract_Id_Assigner ********************************************************************************/
-		if(p.getPractIdAssigner() != null) {
-			org.hl7.fhir.r4.model.Reference PractIdAssignerref = new org.hl7.fhir.r4.model.Reference();
-			practitioneraddidentifier.setAssigner(PractIdAssignerref.setReference(p.getPractIdAssigner()));
-		}
-
-		org.hl7.fhir.r4.model.Period practitioneraddidentifiersetperiod = new org.hl7.fhir.r4.model.Period();
-		practitioneraddidentifier.setPeriod(practitioneraddidentifiersetperiod);
-
-		/******************** Pract_Id_Period_End ********************************************************************************/
-		if(p.getPractIdPeriodEnd() != null) {
-			java.text.SimpleDateFormat PractIdPeriodEndsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date PractIdPeriodEnddate = PractIdPeriodEndsdf.parse(p.getPractIdPeriodEnd());
-			practitioneraddidentifiersetperiod.setEnd(PractIdPeriodEnddate);
-		}
-		/******************** Pract_Id_Period_Start ********************************************************************************/
-		if(p.getPractIdPeriodStart() != null) {
-			java.text.SimpleDateFormat PractIdPeriodStartsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date PractIdPeriodStartdate = PractIdPeriodStartsdf.parse(p.getPractIdPeriodStart());
-			practitioneraddidentifiersetperiod.setStart(PractIdPeriodStartdate);
-		}
-		/******************** Pract_Id_System ********************************************************************************/
-		if(p.getPractIdSystem() != null) {
-			practitioneraddidentifier.setSystem(p.getPractIdSystem());
-		}
-
-		org.hl7.fhir.r4.model.CodeableConcept practitioneraddidentifiersettype = new org.hl7.fhir.r4.model.CodeableConcept();
-		practitioneraddidentifier.setType(practitioneraddidentifiersettype);
-
-
-		org.hl7.fhir.r4.model.Coding practitioneraddidentifiersettypeaddcoding = practitioneraddidentifiersettype.addCoding();
-
-		/******************** Pract_Id_Type_Coding_Code ********************************************************************************/
-		if(p.getPractIdTypeCodingCode() != null) {
-			practitioneraddidentifiersettypeaddcoding.setCode(p.getPractIdTypeCodingCode());
-		}
-		/******************** Pract_Id_Type_Coding_Display ********************************************************************************/
-		if(p.getPractIdTypeCodingDisplay() != null) {
-			practitioneraddidentifiersettypeaddcoding.setDisplay(p.getPractIdTypeCodingDisplay());
-		}
-		/******************** Pract_Id_Type_Coding_System ********************************************************************************/
-		if(p.getPractIdTypeCodingSystem() != null) {
-			practitioneraddidentifiersettypeaddcoding.setSystem(p.getPractIdTypeCodingSystem());
-		}
-		/******************** Pract_Id_Type_Coding_Usrslt ********************************************************************************/
-		if(p.getPractIdTypeCodingUsrslt() != null) {
-			practitioneraddidentifiersettypeaddcoding.setUserSelected(Boolean.parseBoolean(p.getPractIdTypeCodingUsrslt()));
-		}
-		/******************** Pract_Id_Type_Coding_Version ********************************************************************************/
-		if(p.getPractIdTypeCodingVersion() != null) {
-			practitioneraddidentifiersettypeaddcoding.setVersion(p.getPractIdTypeCodingVersion());
-		}
-		/******************** Pract_Id_Type_Text ********************************************************************************/
-		if(p.getPractIdTypeText() != null) {
-			practitioneraddidentifiersettype.setText(p.getPractIdTypeText());
-		}
-
-		org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory practitioneraddidentifiersetuseEnumFactory = new org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory();
-
-		/******************** Pract_Id_Use_Code ********************************************************************************/
-		if(p.getPractIdUseCode() != null) {
-			practitioneraddidentifier.setUse(practitioneraddidentifiersetuseEnumFactory.fromCode(p.getPractIdUseCode()));
-
-		}
-		/******************** Pract_Id_Value ********************************************************************************/
-		if(p.getPractIdValue() != null) {
-			practitioneraddidentifier.setValue(p.getPractIdValue());
-		}
-
-		org.hl7.fhir.r4.model.HumanName practitioneraddname = practitioner.addName();
-
-		/******************** Pract_Name_Family ********************************************************************************/
-		if(p.getPractNameFamily() != null) {
-			practitioneraddname.setFamily(p.getPractNameFamily());
-		}
-		/******************** Pract_Name_Given ********************************************************************************/
-		if(p.getPractNameGiven() != null) {
-			practitioneraddname.addGiven(p.getPractNameGiven());
-		}
-
-		org.hl7.fhir.r4.model.Period practitioneraddnamesetperiod = new org.hl7.fhir.r4.model.Period();
-		practitioneraddname.setPeriod(practitioneraddnamesetperiod);
-
-		/******************** Pract_Name_Period_End ********************************************************************************/
-		if(p.getPractNamePeriodEnd() != null) {
-			java.text.SimpleDateFormat PractNamePeriodEndsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date PractNamePeriodEnddate = PractNamePeriodEndsdf.parse(p.getPractNamePeriodEnd());
-			practitioneraddnamesetperiod.setEnd(PractNamePeriodEnddate);
-		}
-		/******************** Pract_Name_Period_Start ********************************************************************************/
-		if(p.getPractNamePeriodStart() != null) {
-			java.text.SimpleDateFormat PractNamePeriodStartsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date PractNamePeriodStartdate = PractNamePeriodStartsdf.parse(p.getPractNamePeriodStart());
-			practitioneraddnamesetperiod.setStart(PractNamePeriodStartdate);
-		}
-		/******************** Pract_Name_Prefix ********************************************************************************/
-		if(p.getPractNamePrefix() != null) {
-			practitioneraddname.addPrefix(p.getPractNamePrefix());
-		}
-		/******************** Pract_Name_Suffix ********************************************************************************/
-		if(p.getPractNameSuffix() != null) {
-			practitioneraddname.addSuffix(p.getPractNameSuffix());
-		}
-		/******************** Pract_Name_Text ********************************************************************************/
-		if(p.getPractNameText() != null) {
-			practitioneraddname.setText(p.getPractNameText());
-		}
-
-		org.hl7.fhir.r4.model.HumanName.NameUseEnumFactory practitioneraddnamesetuseEnumFactory = new org.hl7.fhir.r4.model.HumanName.NameUseEnumFactory();
-
-		/******************** Pract_Name_Use_Code ********************************************************************************/
-		if(p.getPractNameUseCode() != null) {
-			practitioneraddname.setUse(practitioneraddnamesetuseEnumFactory.fromCode(p.getPractNameUseCode()));
-
-		}
-
-		org.hl7.fhir.r4.model.Attachment practitioneraddphoto = practitioner.addPhoto();
-
-		/******************** Pract_Photo_ContentType ********************************************************************************/
-		if(p.getPractPhotoContentType() != null) {
-			practitioneraddphoto.setContentType(p.getPractPhotoContentType());
-		}
-		/******************** Pract_Photo_Creation ********************************************************************************/
-		if(p.getPractPhotoCreation() != null) {
-			java.text.SimpleDateFormat PractPhotoCreationsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date PractPhotoCreationdate = PractPhotoCreationsdf.parse(p.getPractPhotoCreation());
-			practitioneraddphoto.setCreation(PractPhotoCreationdate);
-		}
-		/******************** Pract_Photo_Data ********************************************************************************/
-		if(p.getPractPhotoData() != null) {
-			practitioneraddphoto.setDataElement(new org.hl7.fhir.r4.model.Base64BinaryType(p.getPractPhotoData()));
-		}
-		/******************** Pract_Photo_Hash ********************************************************************************/
-		if(p.getPractPhotoHash() != null) {
-			practitioneraddphoto.setHashElement(new org.hl7.fhir.r4.model.Base64BinaryType(p.getPractPhotoHash()));
-		}
-		/******************** Pract_Photo_Lang ********************************************************************************/
-		if(p.getPractPhotoLang() != null) {
-			practitioneraddphoto.setLanguage(p.getPractPhotoLang());
-		}
-		/******************** Pract_Photo_Size ********************************************************************************/
-		if(p.getPractPhotoSize() != null) {
-			practitioneraddphoto.setSize(Integer.parseInt(p.getPractPhotoSize()));
-		}
-		/******************** Pract_Photo_Title ********************************************************************************/
-		if(p.getPractPhotoTitle() != null) {
-			practitioneraddphoto.setTitle(p.getPractPhotoTitle());
-		}
-		/******************** Pract_Photo_Url ********************************************************************************/
-		if(p.getPractPhotoUrl() != null) {
-			practitioneraddphoto.setUrl(p.getPractPhotoUrl());
-		}
-
-		org.hl7.fhir.r4.model.Practitioner.PractitionerQualificationComponent practitioneraddqualification = practitioner.addQualification();
-
-
-		org.hl7.fhir.r4.model.CodeableConcept practitioneraddqualificationsetcode = new org.hl7.fhir.r4.model.CodeableConcept();
-		practitioneraddqualification.setCode(practitioneraddqualificationsetcode);
-
-
-		org.hl7.fhir.r4.model.Coding practitioneraddqualificationsetcodeaddcoding = practitioneraddqualificationsetcode.addCoding();
-
-		/******************** Pract_Qualification_Code_Coding_Code ********************************************************************************/
-		if(p.getPractQualificationCodeCodingCode() != null) {
-			practitioneraddqualificationsetcodeaddcoding.setCode(p.getPractQualificationCodeCodingCode());
-		}
-		/******************** Pract_Qualification_Code_Coding_Display ********************************************************************************/
-		if(p.getPractQualificationCodeCodingDisplay() != null) {
-			practitioneraddqualificationsetcodeaddcoding.setDisplay(p.getPractQualificationCodeCodingDisplay());
-		}
-		/******************** Pract_Qualification_Code_Coding_System ********************************************************************************/
-		if(p.getPractQualificationCodeCodingSystem() != null) {
-			practitioneraddqualificationsetcodeaddcoding.setSystem(p.getPractQualificationCodeCodingSystem());
-		}
-		/******************** Pract_Qualification_Code_Coding_Usrslt ********************************************************************************/
-		if(p.getPractQualificationCodeCodingUsrslt() != null) {
-			practitioneraddqualificationsetcodeaddcoding.setUserSelected(Boolean.parseBoolean(p.getPractQualificationCodeCodingUsrslt()));
-		}
-		/******************** Pract_Qualification_Code_Coding_Version ********************************************************************************/
-		if(p.getPractQualificationCodeCodingVersion() != null) {
-			practitioneraddqualificationsetcodeaddcoding.setVersion(p.getPractQualificationCodeCodingVersion());
-		}
-		/******************** Pract_Qualification_Code_Text ********************************************************************************/
-		if(p.getPractQualificationCodeText() != null) {
-			practitioneraddqualificationsetcode.setText(p.getPractQualificationCodeText());
-		}
-
-		org.hl7.fhir.r4.model.Identifier practitioneraddqualificationaddidentifier = practitioneraddqualification.addIdentifier();
-
-		/******************** Pract_Qualification_Id_Assigner ********************************************************************************/
-		if(p.getPractQualificationIdAssigner() != null) {
-			org.hl7.fhir.r4.model.Reference PractQualificationIdAssignerref = new org.hl7.fhir.r4.model.Reference();
-			practitioneraddqualificationaddidentifier.setAssigner(PractQualificationIdAssignerref.setReference(p.getPractQualificationIdAssigner()));
-		}
-
-		org.hl7.fhir.r4.model.Period practitioneraddqualificationaddidentifiersetperiod = new org.hl7.fhir.r4.model.Period();
-		practitioneraddqualificationaddidentifier.setPeriod(practitioneraddqualificationaddidentifiersetperiod);
-
-		/******************** Pract_Qualification_Id_Period_End ********************************************************************************/
-		if(p.getPractQualificationIdPeriodEnd() != null) {
-			java.text.SimpleDateFormat PractQualificationIdPeriodEndsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date PractQualificationIdPeriodEnddate = PractQualificationIdPeriodEndsdf.parse(p.getPractQualificationIdPeriodEnd());
-			practitioneraddqualificationaddidentifiersetperiod.setEnd(PractQualificationIdPeriodEnddate);
-		}
-		/******************** Pract_Qualification_Id_Period_Start ********************************************************************************/
-		if(p.getPractQualificationIdPeriodStart() != null) {
-			java.text.SimpleDateFormat PractQualificationIdPeriodStartsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date PractQualificationIdPeriodStartdate = PractQualificationIdPeriodStartsdf.parse(p.getPractQualificationIdPeriodStart());
-			practitioneraddqualificationaddidentifiersetperiod.setStart(PractQualificationIdPeriodStartdate);
-		}
-		/******************** Pract_Qualification_Id_System ********************************************************************************/
-		if(p.getPractQualificationIdSystem() != null) {
-			practitioneraddqualificationaddidentifier.setSystem(p.getPractQualificationIdSystem());
-		}
-
-		org.hl7.fhir.r4.model.CodeableConcept practitioneraddqualificationaddidentifiersettype = new org.hl7.fhir.r4.model.CodeableConcept();
-		practitioneraddqualificationaddidentifier.setType(practitioneraddqualificationaddidentifiersettype);
-
-
-		org.hl7.fhir.r4.model.Coding practitioneraddqualificationaddidentifiersettypeaddcoding = practitioneraddqualificationaddidentifiersettype.addCoding();
-
-		/******************** Pract_Qualification_Id_Type_Coding_Code ********************************************************************************/
-		if(p.getPractQualificationIdTypeCodingCode() != null) {
-			practitioneraddqualificationaddidentifiersettypeaddcoding.setCode(p.getPractQualificationIdTypeCodingCode());
-		}
-		/******************** Pract_Qualification_Id_Type_Coding_Display ********************************************************************************/
-		if(p.getPractQualificationIdTypeCodingDisplay() != null) {
-			practitioneraddqualificationaddidentifiersettypeaddcoding.setDisplay(p.getPractQualificationIdTypeCodingDisplay());
-		}
-		/******************** Pract_Qualification_Id_Type_Coding_System ********************************************************************************/
-		if(p.getPractQualificationIdTypeCodingSystem() != null) {
-			practitioneraddqualificationaddidentifiersettypeaddcoding.setSystem(p.getPractQualificationIdTypeCodingSystem());
-		}
-		/******************** Pract_Qualification_Id_Type_Coding_Usrslt ********************************************************************************/
-		if(p.getPractQualificationIdTypeCodingUsrslt() != null) {
-			practitioneraddqualificationaddidentifiersettypeaddcoding.setUserSelected(Boolean.parseBoolean(p.getPractQualificationIdTypeCodingUsrslt()));
-		}
-		/******************** Pract_Qualification_Id_Type_Coding_Version ********************************************************************************/
-		if(p.getPractQualificationIdTypeCodingVersion() != null) {
-			practitioneraddqualificationaddidentifiersettypeaddcoding.setVersion(p.getPractQualificationIdTypeCodingVersion());
-		}
-		/******************** Pract_Qualification_Id_Type_Text ********************************************************************************/
-		if(p.getPractQualificationIdTypeText() != null) {
-			practitioneraddqualificationaddidentifiersettype.setText(p.getPractQualificationIdTypeText());
-		}
-
-		org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory practitioneraddqualificationaddidentifiersetuseEnumFactory = new org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory();
-
-		/******************** Pract_Qualification_Id_Use_Code ********************************************************************************/
-		if(p.getPractQualificationIdUseCode() != null) {
-			practitioneraddqualificationaddidentifier.setUse(practitioneraddqualificationaddidentifiersetuseEnumFactory.fromCode(p.getPractQualificationIdUseCode()));
-
-		}
-		/******************** Pract_Qualification_Id_Value ********************************************************************************/
-		if(p.getPractQualificationIdValue() != null) {
-			practitioneraddqualificationaddidentifier.setValue(p.getPractQualificationIdValue());
-		}
-		/******************** Pract_Qualification_Issuer ********************************************************************************/
-		if(p.getPractQualificationIssuer() != null) {
-			org.hl7.fhir.r4.model.Reference PractQualificationIssuerref = new org.hl7.fhir.r4.model.Reference();
-			practitioneraddqualification.setIssuer(PractQualificationIssuerref.setReference(p.getPractQualificationIssuer()));
-		}
-
-		org.hl7.fhir.r4.model.Period practitioneraddqualificationsetperiod = new org.hl7.fhir.r4.model.Period();
-		practitioneraddqualification.setPeriod(practitioneraddqualificationsetperiod);
-
-		/******************** Pract_Qualification_Period_End ********************************************************************************/
-		if(p.getPractQualificationPeriodEnd() != null) {
-			java.text.SimpleDateFormat PractQualificationPeriodEndsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date PractQualificationPeriodEnddate = PractQualificationPeriodEndsdf.parse(p.getPractQualificationPeriodEnd());
-			practitioneraddqualificationsetperiod.setEnd(PractQualificationPeriodEnddate);
-		}
-		/******************** Pract_Qualification_Period_Start ********************************************************************************/
-		if(p.getPractQualificationPeriodStart() != null) {
-			java.text.SimpleDateFormat PractQualificationPeriodStartsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date PractQualificationPeriodStartdate = PractQualificationPeriodStartsdf.parse(p.getPractQualificationPeriodStart());
-			practitioneraddqualificationsetperiod.setStart(PractQualificationPeriodStartdate);
-		}
-
-		org.hl7.fhir.r4.model.ContactPoint practitioneraddtelecom = practitioner.addTelecom();
-
-
-		org.hl7.fhir.r4.model.Period practitioneraddtelecomsetperiod = new org.hl7.fhir.r4.model.Period();
-		practitioneraddtelecom.setPeriod(practitioneraddtelecomsetperiod);
-
-		/******************** Pract_Telecom_Period_End ********************************************************************************/
-		if(p.getPractTelecomPeriodEnd() != null) {
-			java.text.SimpleDateFormat PractTelecomPeriodEndsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date PractTelecomPeriodEnddate = PractTelecomPeriodEndsdf.parse(p.getPractTelecomPeriodEnd());
-			practitioneraddtelecomsetperiod.setEnd(PractTelecomPeriodEnddate);
-		}
-		/******************** Pract_Telecom_Period_Start ********************************************************************************/
-		if(p.getPractTelecomPeriodStart() != null) {
-			java.text.SimpleDateFormat PractTelecomPeriodStartsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date PractTelecomPeriodStartdate = PractTelecomPeriodStartsdf.parse(p.getPractTelecomPeriodStart());
-			practitioneraddtelecomsetperiod.setStart(PractTelecomPeriodStartdate);
-		}
-		/******************** Pract_Telecom_Rank ********************************************************************************/
-		if(p.getPractTelecomRank() != null) {
-			practitioneraddtelecom.setRank(Integer.parseInt(p.getPractTelecomRank()));
-		}
-
-		org.hl7.fhir.r4.model.ContactPoint.ContactPointSystemEnumFactory practitioneraddtelecomsetsystemEnumFactory = new org.hl7.fhir.r4.model.ContactPoint.ContactPointSystemEnumFactory();
-
-		/******************** Pract_Telecom_System_Code ********************************************************************************/
-		if(p.getPractTelecomSystemCode() != null) {
-			practitioneraddtelecom.setSystem(practitioneraddtelecomsetsystemEnumFactory.fromCode(p.getPractTelecomSystemCode()));
-
-		}
-
-		org.hl7.fhir.r4.model.ContactPoint.ContactPointUseEnumFactory practitioneraddtelecomsetuseEnumFactory = new org.hl7.fhir.r4.model.ContactPoint.ContactPointUseEnumFactory();
-
-		/******************** Pract_Telecom_Use_Code ********************************************************************************/
-		if(p.getPractTelecomUseCode() != null) {
-			practitioneraddtelecom.setUse(practitioneraddtelecomsetuseEnumFactory.fromCode(p.getPractTelecomUseCode()));
-
-		}
-		/******************** Pract_Telecom_Value ********************************************************************************/
-		if(p.getPractTelecomValue() != null) {
-			practitioneraddtelecom.setValue(p.getPractTelecomValue());
+		/******************** Prctitnr_Active ********************************************************************************/
+		if(p.getPrctitnrActive() != null) {
+			practitioner.setActive(Boolean.parseBoolean(p.getPrctitnrActive()));
+		}
+		/******************** practitioneraddress ********************************************************************************/
+		org.hl7.fhir.r4.model.Address practitioneraddress =  new org.hl7.fhir.r4.model.Address();
+		practitioner.addAddress(practitioneraddress);
+
+		/******************** Prctitnr_Addr_City ********************************************************************************/
+		if(p.getPrctitnrAddrCity() != null) {
+			practitioneraddress.setCity(p.getPrctitnrAddrCity());
+		}
+		/******************** Prctitnr_Addr_Cntry ********************************************************************************/
+		if(p.getPrctitnrAddrCntry() != null) {
+			practitioneraddress.setCountry(p.getPrctitnrAddrCntry());
+		}
+		/******************** Prctitnr_Addr_District ********************************************************************************/
+		if(p.getPrctitnrAddrDistrict() != null) {
+			practitioneraddress.setDistrict(p.getPrctitnrAddrDistrict());
+		}
+		/******************** Prctitnr_Addr_Line ********************************************************************************/
+		if(p.getPrctitnrAddrLine() != null) {
+			practitioneraddress.addLine(p.getPrctitnrAddrLine());
+		}
+		/******************** practitioneraddressperiod ********************************************************************************/
+		org.hl7.fhir.r4.model.Period practitioneraddressperiod =  new org.hl7.fhir.r4.model.Period();
+		practitioneraddress.setPeriod(practitioneraddressperiod);
+
+		/******************** Prctitnr_Addr_Prd_End ********************************************************************************/
+		if(p.getPrctitnrAddrPrdEnd() != null) {
+			java.text.SimpleDateFormat Prctitnr_Addr_Prd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Prctitnr_Addr_Prd_Enddate = Prctitnr_Addr_Prd_Endsdf.parse(p.getPrctitnrAddrPrdEnd());
+			practitioneraddressperiod.setEnd(Prctitnr_Addr_Prd_Enddate);
+		}
+		/******************** Prctitnr_Addr_Prd_Strt ********************************************************************************/
+		if(p.getPrctitnrAddrPrdStrt() != null) {
+			java.text.SimpleDateFormat Prctitnr_Addr_Prd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Prctitnr_Addr_Prd_Strtdate = Prctitnr_Addr_Prd_Strtsdf.parse(p.getPrctitnrAddrPrdStrt());
+			practitioneraddressperiod.setStart(Prctitnr_Addr_Prd_Strtdate);
+		}
+		/******************** Prctitnr_Addr_PostalCd ********************************************************************************/
+		if(p.getPrctitnrAddrPostalCd() != null) {
+			practitioneraddress.setPostalCode(p.getPrctitnrAddrPostalCd());
+		}
+		/******************** Prctitnr_Addr_State ********************************************************************************/
+		if(p.getPrctitnrAddrState() != null) {
+			practitioneraddress.setState(p.getPrctitnrAddrState());
+		}
+		/******************** Prctitnr_Addr_Txt ********************************************************************************/
+		if(p.getPrctitnrAddrTxt() != null) {
+			practitioneraddress.setText(p.getPrctitnrAddrTxt());
+		}
+		/******************** practitioneraddresstype ********************************************************************************/
+		org.hl7.fhir.r4.model.Address.AddressTypeEnumFactory practitioneraddresstype =  new org.hl7.fhir.r4.model.Address.AddressTypeEnumFactory();
+		practitioneraddress.setType(practitioneraddresstype.fromCode(p.getPrctitnrAddrTyp()));
+
+		/******************** practitioneraddressuse ********************************************************************************/
+		org.hl7.fhir.r4.model.Address.AddressUseEnumFactory practitioneraddressuse =  new org.hl7.fhir.r4.model.Address.AddressUseEnumFactory();
+		practitioneraddress.setUse(practitioneraddressuse.fromCode(p.getPrctitnrAddrUse()));
+
+		/******************** Prctitnr_BirthDt ********************************************************************************/
+		if(p.getPrctitnrBirthDt() != null) {
+			java.text.SimpleDateFormat Prctitnr_BirthDtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Prctitnr_BirthDtdate = Prctitnr_BirthDtsdf.parse(p.getPrctitnrBirthDt());
+			practitioner.setBirthDate(Prctitnr_BirthDtdate);
+		}
+		/******************** practitionercommunication ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept practitionercommunication =  new org.hl7.fhir.r4.model.CodeableConcept();
+		practitioner.addCommunication(practitionercommunication);
+
+		/******************** practitionercommunicationcoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding practitionercommunicationcoding =  new org.hl7.fhir.r4.model.Coding();
+		practitionercommunication.addCoding(practitionercommunicationcoding);
+
+		/******************** Prctitnr_Cmmnctn_Cdg_Cd ********************************************************************************/
+		if(p.getPrctitnrCmmnctnCdgCd() != null) {
+			practitionercommunicationcoding.setCode(p.getPrctitnrCmmnctnCdgCd());
+		}
+		/******************** Prctitnr_Cmmnctn_Cdg_Dsply ********************************************************************************/
+		if(p.getPrctitnrCmmnctnCdgDsply() != null) {
+			practitionercommunicationcoding.setDisplay(p.getPrctitnrCmmnctnCdgDsply());
+		}
+		/******************** Prctitnr_Cmmnctn_Cdg_Sys ********************************************************************************/
+		if(p.getPrctitnrCmmnctnCdgSys() != null) {
+			practitionercommunicationcoding.setSystem(p.getPrctitnrCmmnctnCdgSys());
+		}
+		/******************** Prctitnr_Cmmnctn_Cdg_UsrSltd ********************************************************************************/
+		if(p.getPrctitnrCmmnctnCdgUsrSltd() != null) {
+			practitionercommunicationcoding.setUserSelected(Boolean.parseBoolean(p.getPrctitnrCmmnctnCdgUsrSltd()));
+		}
+		/******************** Prctitnr_Cmmnctn_Cdg_Vrsn ********************************************************************************/
+		if(p.getPrctitnrCmmnctnCdgVrsn() != null) {
+			practitionercommunicationcoding.setVersion(p.getPrctitnrCmmnctnCdgVrsn());
+		}
+		/******************** Prctitnr_Cmmnctn_Txt ********************************************************************************/
+		if(p.getPrctitnrCmmnctnTxt() != null) {
+			practitionercommunication.setText(p.getPrctitnrCmmnctnTxt());
+		}
+		/******************** practitionergender ********************************************************************************/
+		org.hl7.fhir.r4.model.Enumerations.AdministrativeGenderEnumFactory practitionergender =  new org.hl7.fhir.r4.model.Enumerations.AdministrativeGenderEnumFactory();
+		practitioner.setGender(practitionergender.fromCode(p.getPrctitnrGender()));
+
+		/******************** practitioneridentifier ********************************************************************************/
+		org.hl7.fhir.r4.model.Identifier practitioneridentifier =  new org.hl7.fhir.r4.model.Identifier();
+		practitioner.addIdentifier(practitioneridentifier);
+
+		/******************** Prctitnr_Id_Assigner ********************************************************************************/
+		if(p.getPrctitnrIdAssigner() != null) {
+			practitioneridentifier.setAssigner( new org.hl7.fhir.r4.model.Reference(p.getPrctitnrIdAssigner()));
+		}
+		/******************** practitioneridentifierperiod ********************************************************************************/
+		org.hl7.fhir.r4.model.Period practitioneridentifierperiod =  new org.hl7.fhir.r4.model.Period();
+		practitioneridentifier.setPeriod(practitioneridentifierperiod);
+
+		/******************** Prctitnr_Id_Prd_End ********************************************************************************/
+		if(p.getPrctitnrIdPrdEnd() != null) {
+			java.text.SimpleDateFormat Prctitnr_Id_Prd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Prctitnr_Id_Prd_Enddate = Prctitnr_Id_Prd_Endsdf.parse(p.getPrctitnrIdPrdEnd());
+			practitioneridentifierperiod.setEnd(Prctitnr_Id_Prd_Enddate);
+		}
+		/******************** Prctitnr_Id_Prd_Strt ********************************************************************************/
+		if(p.getPrctitnrIdPrdStrt() != null) {
+			java.text.SimpleDateFormat Prctitnr_Id_Prd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Prctitnr_Id_Prd_Strtdate = Prctitnr_Id_Prd_Strtsdf.parse(p.getPrctitnrIdPrdStrt());
+			practitioneridentifierperiod.setStart(Prctitnr_Id_Prd_Strtdate);
+		}
+		/******************** Prctitnr_Id_Sys ********************************************************************************/
+		if(p.getPrctitnrIdSys() != null) {
+			practitioneridentifier.setSystem(p.getPrctitnrIdSys());
+		}
+		/******************** practitioneridentifiertype ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept practitioneridentifiertype =  new org.hl7.fhir.r4.model.CodeableConcept();
+		practitioneridentifier.setType(practitioneridentifiertype);
+
+		/******************** practitioneridentifiertypecoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding practitioneridentifiertypecoding =  new org.hl7.fhir.r4.model.Coding();
+		practitioneridentifiertype.addCoding(practitioneridentifiertypecoding);
+
+		/******************** Prctitnr_Id_Typ_Cdg_Cd ********************************************************************************/
+		if(p.getPrctitnrIdTypCdgCd() != null) {
+			practitioneridentifiertypecoding.setCode(p.getPrctitnrIdTypCdgCd());
+		}
+		/******************** Prctitnr_Id_Typ_Cdg_Dsply ********************************************************************************/
+		if(p.getPrctitnrIdTypCdgDsply() != null) {
+			practitioneridentifiertypecoding.setDisplay(p.getPrctitnrIdTypCdgDsply());
+		}
+		/******************** Prctitnr_Id_Typ_Cdg_Sys ********************************************************************************/
+		if(p.getPrctitnrIdTypCdgSys() != null) {
+			practitioneridentifiertypecoding.setSystem(p.getPrctitnrIdTypCdgSys());
+		}
+		/******************** Prctitnr_Id_Typ_Cdg_UsrSltd ********************************************************************************/
+		if(p.getPrctitnrIdTypCdgUsrSltd() != null) {
+			practitioneridentifiertypecoding.setUserSelected(Boolean.parseBoolean(p.getPrctitnrIdTypCdgUsrSltd()));
+		}
+		/******************** Prctitnr_Id_Typ_Cdg_Vrsn ********************************************************************************/
+		if(p.getPrctitnrIdTypCdgVrsn() != null) {
+			practitioneridentifiertypecoding.setVersion(p.getPrctitnrIdTypCdgVrsn());
+		}
+		/******************** Prctitnr_Id_Typ_Txt ********************************************************************************/
+		if(p.getPrctitnrIdTypTxt() != null) {
+			practitioneridentifiertype.setText(p.getPrctitnrIdTypTxt());
+		}
+		/******************** practitioneridentifieruse ********************************************************************************/
+		org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory practitioneridentifieruse =  new org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory();
+		practitioneridentifier.setUse(practitioneridentifieruse.fromCode(p.getPrctitnrIdUse()));
+
+		/******************** Prctitnr_Id_Vl ********************************************************************************/
+		if(p.getPrctitnrIdVl() != null) {
+			practitioneridentifier.setValue(p.getPrctitnrIdVl());
+		}
+		/******************** practitionername ********************************************************************************/
+		org.hl7.fhir.r4.model.HumanName practitionername =  new org.hl7.fhir.r4.model.HumanName();
+		practitioner.addName(practitionername);
+
+		/******************** Prctitnr_Nm_Fmly ********************************************************************************/
+		if(p.getPrctitnrNmFmly() != null) {
+			practitionername.setFamily(p.getPrctitnrNmFmly());
+		}
+		/******************** Prctitnr_Nm_Given ********************************************************************************/
+		if(p.getPrctitnrNmGiven() != null) {
+			practitionername.addGiven(p.getPrctitnrNmGiven());
+		}
+		/******************** practitionernameperiod ********************************************************************************/
+		org.hl7.fhir.r4.model.Period practitionernameperiod =  new org.hl7.fhir.r4.model.Period();
+		practitionername.setPeriod(practitionernameperiod);
+
+		/******************** Prctitnr_Nm_Prd_End ********************************************************************************/
+		if(p.getPrctitnrNmPrdEnd() != null) {
+			java.text.SimpleDateFormat Prctitnr_Nm_Prd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Prctitnr_Nm_Prd_Enddate = Prctitnr_Nm_Prd_Endsdf.parse(p.getPrctitnrNmPrdEnd());
+			practitionernameperiod.setEnd(Prctitnr_Nm_Prd_Enddate);
+		}
+		/******************** Prctitnr_Nm_Prd_Strt ********************************************************************************/
+		if(p.getPrctitnrNmPrdStrt() != null) {
+			java.text.SimpleDateFormat Prctitnr_Nm_Prd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Prctitnr_Nm_Prd_Strtdate = Prctitnr_Nm_Prd_Strtsdf.parse(p.getPrctitnrNmPrdStrt());
+			practitionernameperiod.setStart(Prctitnr_Nm_Prd_Strtdate);
+		}
+		/******************** Prctitnr_Nm_Prefix ********************************************************************************/
+		if(p.getPrctitnrNmPrefix() != null) {
+			practitionername.addPrefix(p.getPrctitnrNmPrefix());
+		}
+		/******************** Prctitnr_Nm_Suffix ********************************************************************************/
+		if(p.getPrctitnrNmSuffix() != null) {
+			practitionername.addSuffix(p.getPrctitnrNmSuffix());
+		}
+		/******************** Prctitnr_Nm_Txt ********************************************************************************/
+		if(p.getPrctitnrNmTxt() != null) {
+			practitionername.setText(p.getPrctitnrNmTxt());
+		}
+		/******************** practitionernameuse ********************************************************************************/
+		org.hl7.fhir.r4.model.HumanName.NameUseEnumFactory practitionernameuse =  new org.hl7.fhir.r4.model.HumanName.NameUseEnumFactory();
+		practitionername.setUse(practitionernameuse.fromCode(p.getPrctitnrNmUse()));
+
+		/******************** practitionerphoto ********************************************************************************/
+		org.hl7.fhir.r4.model.Attachment practitionerphoto =  new org.hl7.fhir.r4.model.Attachment();
+		practitioner.addPhoto(practitionerphoto);
+
+		/******************** Prctitnr_Photo_CntntTyp ********************************************************************************/
+		if(p.getPrctitnrPhotoCntntTyp() != null) {
+			practitionerphoto.setContentType(p.getPrctitnrPhotoCntntTyp());
+		}
+		/******************** Prctitnr_Photo_Creation ********************************************************************************/
+		if(p.getPrctitnrPhotoCreation() != null) {
+			java.text.SimpleDateFormat Prctitnr_Photo_Creationsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Prctitnr_Photo_Creationdate = Prctitnr_Photo_Creationsdf.parse(p.getPrctitnrPhotoCreation());
+			practitionerphoto.setCreation(Prctitnr_Photo_Creationdate);
+		}
+		/******************** Prctitnr_Photo_Data ********************************************************************************/
+		if(p.getPrctitnrPhotoData() != null) {
+			practitionerphoto.setDataElement(new org.hl7.fhir.r4.model.Base64BinaryType(p.getPrctitnrPhotoData()));
+		}
+		/******************** Prctitnr_Photo_Hash ********************************************************************************/
+		if(p.getPrctitnrPhotoHash() != null) {
+			practitionerphoto.setHashElement(new org.hl7.fhir.r4.model.Base64BinaryType(p.getPrctitnrPhotoHash()));
+		}
+		/******************** Prctitnr_Photo_Lnguage ********************************************************************************/
+		if(p.getPrctitnrPhotoLnguage() != null) {
+			practitionerphoto.setLanguage(p.getPrctitnrPhotoLnguage());
+		}
+		/******************** Prctitnr_Photo_Sz ********************************************************************************/
+		if(p.getPrctitnrPhotoSz() != null) {
+			practitionerphoto.setSize(Integer.parseInt(p.getPrctitnrPhotoSz()));
+		}
+		/******************** Prctitnr_Photo_Ttl ********************************************************************************/
+		if(p.getPrctitnrPhotoTtl() != null) {
+			practitionerphoto.setTitle(p.getPrctitnrPhotoTtl());
+		}
+		/******************** Prctitnr_Photo_Url ********************************************************************************/
+		if(p.getPrctitnrPhotoUrl() != null) {
+			practitionerphoto.setUrl(p.getPrctitnrPhotoUrl());
+		}
+		/******************** practitionerqualification ********************************************************************************/
+		org.hl7.fhir.r4.model.Practitioner.PractitionerQualificationComponent practitionerqualification =  new org.hl7.fhir.r4.model.Practitioner.PractitionerQualificationComponent();
+		practitioner.addQualification(practitionerqualification);
+
+		/******************** practitionerqualificationcode ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept practitionerqualificationcode =  new org.hl7.fhir.r4.model.CodeableConcept();
+		practitionerqualification.setCode(practitionerqualificationcode);
+
+		/******************** practitionerqualificationcodecoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding practitionerqualificationcodecoding =  new org.hl7.fhir.r4.model.Coding();
+		practitionerqualificationcode.addCoding(practitionerqualificationcodecoding);
+
+		/******************** Prctitnr_Qualification_Cd_Cdg_Cd ********************************************************************************/
+		if(p.getPrctitnrQualificationCdCdgCd() != null) {
+			practitionerqualificationcodecoding.setCode(p.getPrctitnrQualificationCdCdgCd());
+		}
+		/******************** Prctitnr_Qualification_Cd_Cdg_Dsply ********************************************************************************/
+		if(p.getPrctitnrQualificationCdCdgDsply() != null) {
+			practitionerqualificationcodecoding.setDisplay(p.getPrctitnrQualificationCdCdgDsply());
+		}
+		/******************** Prctitnr_Qualification_Cd_Cdg_Sys ********************************************************************************/
+		if(p.getPrctitnrQualificationCdCdgSys() != null) {
+			practitionerqualificationcodecoding.setSystem(p.getPrctitnrQualificationCdCdgSys());
+		}
+		/******************** Prctitnr_Qualification_Cd_Cdg_UsrSltd ********************************************************************************/
+		if(p.getPrctitnrQualificationCdCdgUsrSltd() != null) {
+			practitionerqualificationcodecoding.setUserSelected(Boolean.parseBoolean(p.getPrctitnrQualificationCdCdgUsrSltd()));
+		}
+		/******************** Prctitnr_Qualification_Cd_Cdg_Vrsn ********************************************************************************/
+		if(p.getPrctitnrQualificationCdCdgVrsn() != null) {
+			practitionerqualificationcodecoding.setVersion(p.getPrctitnrQualificationCdCdgVrsn());
+		}
+		/******************** Prctitnr_Qualification_Cd_Txt ********************************************************************************/
+		if(p.getPrctitnrQualificationCdTxt() != null) {
+			practitionerqualificationcode.setText(p.getPrctitnrQualificationCdTxt());
+		}
+		/******************** practitionerqualificationidentifier ********************************************************************************/
+		org.hl7.fhir.r4.model.Identifier practitionerqualificationidentifier =  new org.hl7.fhir.r4.model.Identifier();
+		practitionerqualification.addIdentifier(practitionerqualificationidentifier);
+
+		/******************** Prctitnr_Qualification_Id_Assigner ********************************************************************************/
+		if(p.getPrctitnrQualificationIdAssigner() != null) {
+			practitionerqualificationidentifier.setAssigner( new org.hl7.fhir.r4.model.Reference(p.getPrctitnrQualificationIdAssigner()));
+		}
+		/******************** practitionerqualificationidentifierperiod ********************************************************************************/
+		org.hl7.fhir.r4.model.Period practitionerqualificationidentifierperiod =  new org.hl7.fhir.r4.model.Period();
+		practitionerqualificationidentifier.setPeriod(practitionerqualificationidentifierperiod);
+
+		/******************** Prctitnr_Qualification_Id_Prd_End ********************************************************************************/
+		if(p.getPrctitnrQualificationIdPrdEnd() != null) {
+			java.text.SimpleDateFormat Prctitnr_Qualification_Id_Prd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Prctitnr_Qualification_Id_Prd_Enddate = Prctitnr_Qualification_Id_Prd_Endsdf.parse(p.getPrctitnrQualificationIdPrdEnd());
+			practitionerqualificationidentifierperiod.setEnd(Prctitnr_Qualification_Id_Prd_Enddate);
+		}
+		/******************** Prctitnr_Qualification_Id_Prd_Strt ********************************************************************************/
+		if(p.getPrctitnrQualificationIdPrdStrt() != null) {
+			java.text.SimpleDateFormat Prctitnr_Qualification_Id_Prd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Prctitnr_Qualification_Id_Prd_Strtdate = Prctitnr_Qualification_Id_Prd_Strtsdf.parse(p.getPrctitnrQualificationIdPrdStrt());
+			practitionerqualificationidentifierperiod.setStart(Prctitnr_Qualification_Id_Prd_Strtdate);
+		}
+		/******************** Prctitnr_Qualification_Id_Sys ********************************************************************************/
+		if(p.getPrctitnrQualificationIdSys() != null) {
+			practitionerqualificationidentifier.setSystem(p.getPrctitnrQualificationIdSys());
+		}
+		/******************** practitionerqualificationidentifiertype ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept practitionerqualificationidentifiertype =  new org.hl7.fhir.r4.model.CodeableConcept();
+		practitionerqualificationidentifier.setType(practitionerqualificationidentifiertype);
+
+		/******************** practitionerqualificationidentifiertypecoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding practitionerqualificationidentifiertypecoding =  new org.hl7.fhir.r4.model.Coding();
+		practitionerqualificationidentifiertype.addCoding(practitionerqualificationidentifiertypecoding);
+
+		/******************** Prctitnr_Qualification_Id_Typ_Cdg_Cd ********************************************************************************/
+		if(p.getPrctitnrQualificationIdTypCdgCd() != null) {
+			practitionerqualificationidentifiertypecoding.setCode(p.getPrctitnrQualificationIdTypCdgCd());
+		}
+		/******************** Prctitnr_Qualification_Id_Typ_Cdg_Dsply ********************************************************************************/
+		if(p.getPrctitnrQualificationIdTypCdgDsply() != null) {
+			practitionerqualificationidentifiertypecoding.setDisplay(p.getPrctitnrQualificationIdTypCdgDsply());
+		}
+		/******************** Prctitnr_Qualification_Id_Typ_Cdg_Sys ********************************************************************************/
+		if(p.getPrctitnrQualificationIdTypCdgSys() != null) {
+			practitionerqualificationidentifiertypecoding.setSystem(p.getPrctitnrQualificationIdTypCdgSys());
+		}
+		/******************** Prctitnr_Qualification_Id_Typ_Cdg_UsrSltd ********************************************************************************/
+		if(p.getPrctitnrQualificationIdTypCdgUsrSltd() != null) {
+			practitionerqualificationidentifiertypecoding.setUserSelected(Boolean.parseBoolean(p.getPrctitnrQualificationIdTypCdgUsrSltd()));
+		}
+		/******************** Prctitnr_Qualification_Id_Typ_Cdg_Vrsn ********************************************************************************/
+		if(p.getPrctitnrQualificationIdTypCdgVrsn() != null) {
+			practitionerqualificationidentifiertypecoding.setVersion(p.getPrctitnrQualificationIdTypCdgVrsn());
+		}
+		/******************** Prctitnr_Qualification_Id_Typ_Txt ********************************************************************************/
+		if(p.getPrctitnrQualificationIdTypTxt() != null) {
+			practitionerqualificationidentifiertype.setText(p.getPrctitnrQualificationIdTypTxt());
+		}
+		/******************** practitionerqualificationidentifieruse ********************************************************************************/
+		org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory practitionerqualificationidentifieruse =  new org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory();
+		practitionerqualificationidentifier.setUse(practitionerqualificationidentifieruse.fromCode(p.getPrctitnrQualificationIdUse()));
+
+		/******************** Prctitnr_Qualification_Id_Vl ********************************************************************************/
+		if(p.getPrctitnrQualificationIdVl() != null) {
+			practitionerqualificationidentifier.setValue(p.getPrctitnrQualificationIdVl());
+		}
+		/******************** Prctitnr_Qualification_Issuer ********************************************************************************/
+		if(p.getPrctitnrQualificationIssuer() != null) {
+			practitionerqualification.setIssuer( new org.hl7.fhir.r4.model.Reference(p.getPrctitnrQualificationIssuer()));
+		}
+		/******************** practitionerqualificationperiod ********************************************************************************/
+		org.hl7.fhir.r4.model.Period practitionerqualificationperiod =  new org.hl7.fhir.r4.model.Period();
+		practitionerqualification.setPeriod(practitionerqualificationperiod);
+
+		/******************** Prctitnr_Qualification_Prd_End ********************************************************************************/
+		if(p.getPrctitnrQualificationPrdEnd() != null) {
+			java.text.SimpleDateFormat Prctitnr_Qualification_Prd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Prctitnr_Qualification_Prd_Enddate = Prctitnr_Qualification_Prd_Endsdf.parse(p.getPrctitnrQualificationPrdEnd());
+			practitionerqualificationperiod.setEnd(Prctitnr_Qualification_Prd_Enddate);
+		}
+		/******************** Prctitnr_Qualification_Prd_Strt ********************************************************************************/
+		if(p.getPrctitnrQualificationPrdStrt() != null) {
+			java.text.SimpleDateFormat Prctitnr_Qualification_Prd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Prctitnr_Qualification_Prd_Strtdate = Prctitnr_Qualification_Prd_Strtsdf.parse(p.getPrctitnrQualificationPrdStrt());
+			practitionerqualificationperiod.setStart(Prctitnr_Qualification_Prd_Strtdate);
+		}
+		/******************** practitionertelecom ********************************************************************************/
+		org.hl7.fhir.r4.model.ContactPoint practitionertelecom =  new org.hl7.fhir.r4.model.ContactPoint();
+		practitioner.addTelecom(practitionertelecom);
+
+		/******************** practitionertelecomperiod ********************************************************************************/
+		org.hl7.fhir.r4.model.Period practitionertelecomperiod =  new org.hl7.fhir.r4.model.Period();
+		practitionertelecom.setPeriod(practitionertelecomperiod);
+
+		/******************** Prctitnr_Tlcm_Prd_End ********************************************************************************/
+		if(p.getPrctitnrTlcmPrdEnd() != null) {
+			java.text.SimpleDateFormat Prctitnr_Tlcm_Prd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Prctitnr_Tlcm_Prd_Enddate = Prctitnr_Tlcm_Prd_Endsdf.parse(p.getPrctitnrTlcmPrdEnd());
+			practitionertelecomperiod.setEnd(Prctitnr_Tlcm_Prd_Enddate);
+		}
+		/******************** Prctitnr_Tlcm_Prd_Strt ********************************************************************************/
+		if(p.getPrctitnrTlcmPrdStrt() != null) {
+			java.text.SimpleDateFormat Prctitnr_Tlcm_Prd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Prctitnr_Tlcm_Prd_Strtdate = Prctitnr_Tlcm_Prd_Strtsdf.parse(p.getPrctitnrTlcmPrdStrt());
+			practitionertelecomperiod.setStart(Prctitnr_Tlcm_Prd_Strtdate);
+		}
+		/******************** Prctitnr_Tlcm_Rnk ********************************************************************************/
+		if(p.getPrctitnrTlcmRnk() != null) {
+			practitionertelecom.setRank(Integer.parseInt(p.getPrctitnrTlcmRnk()));
+		}
+		/******************** practitionertelecomsystem ********************************************************************************/
+		org.hl7.fhir.r4.model.ContactPoint.ContactPointSystemEnumFactory practitionertelecomsystem =  new org.hl7.fhir.r4.model.ContactPoint.ContactPointSystemEnumFactory();
+		practitionertelecom.setSystem(practitionertelecomsystem.fromCode(p.getPrctitnrTlcmSys()));
+
+		/******************** practitionertelecomuse ********************************************************************************/
+		org.hl7.fhir.r4.model.ContactPoint.ContactPointUseEnumFactory practitionertelecomuse =  new org.hl7.fhir.r4.model.ContactPoint.ContactPointUseEnumFactory();
+		practitionertelecom.setUse(practitionertelecomuse.fromCode(p.getPrctitnrTlcmUse()));
+
+		/******************** Prctitnr_Tlcm_Vl ********************************************************************************/
+		if(p.getPrctitnrTlcmVl() != null) {
+			practitionertelecom.setValue(p.getPrctitnrTlcmVl());
 		}
 		return practitioner;
 	}

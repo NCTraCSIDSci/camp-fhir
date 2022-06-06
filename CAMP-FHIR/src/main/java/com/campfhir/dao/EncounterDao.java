@@ -1,11 +1,11 @@
+//// default package
 package main.java.com.campfhir.dao;
+// Generated on Jun 6, 2022, 11:02:34 AM 
+
 
 import java.io.IOException;
-import java.util.List;
-
 import javax.xml.parsers.ParserConfigurationException;
-
-import org.hibernate.Query;
+import main.java.utils.HibernateBaseDB;
 import org.hibernate.ScrollMode;
 import org.hibernate.ScrollableResults;
 import org.hibernate.Session;
@@ -15,40 +15,35 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.xml.sax.SAXException;
 
-import main.java.com.campfhir.model.Encounter;
-
-import main.java.utils.HibernateBaseDB;
-
 /**
-*
-* @author  James Champion
-* @version 1.0
-* @since   2019-02-08 
-*/
-public class EncounterDao implements EncounterDaoInterface<Encounter, String> 
-{
+ *  object for domain model class Encounter.
+ * @see .Encounter
+ * @author Paul Kovach
+ */
+
+public class EncounterDao {
+
 	private Session currentSession;
 	private SessionFactory sessionFactory;
 	
 	private Transaction currentTransaction;
 
 	public EncounterDao() {}
-
-	public Session openCurrentSession() throws ParserConfigurationException, SAXException, IOException 
+	
+    public Session openCurrentSession() throws ParserConfigurationException, SAXException, IOException 
 	{
-		sessionFactory = HibernateBaseDB.getSessionFactory();
+		sessionFactory =  HibernateBaseDB.getSessionFactory();
 		currentSession = sessionFactory.openSession();
 		return currentSession;
 	}
-
-	public Session openCurrentSessionwithTransaction() throws ParserConfigurationException, SAXException, IOException 
+    
+    public Session openCurrentSessionwithTransaction() throws ParserConfigurationException, SAXException, IOException 
 	{
 		sessionFactory = HibernateBaseDB.getSessionFactory();
 		currentSession = sessionFactory.openSession();
 		currentTransaction = currentSession.beginTransaction();
 		return currentSession;
 	}
-	
 	public void closeCurrentSession() 
 	{
 		currentSession.close();
@@ -59,16 +54,16 @@ public class EncounterDao implements EncounterDaoInterface<Encounter, String>
 		currentTransaction.commit();
 		currentSession.close();
 	}
-	
-	private static SessionFactory getSessionFactory() 
-	{
+    
+    private static SessionFactory getSessionFactory() 
+	{ 
 		Configuration configuration = new Configuration().configure();
 		StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder()
 				.applySettings(configuration.getProperties());
 		SessionFactory sessionFactory = configuration.buildSessionFactory(builder.build());
 		return sessionFactory;
 	}
-
+	
 	public Session getCurrentSession() 
 	{
 		return currentSession;
@@ -89,32 +84,23 @@ public class EncounterDao implements EncounterDaoInterface<Encounter, String>
 		this.currentTransaction = currentTransaction;
 	}
 
-	public void persist(Encounter entity) 
+	public void persist( main.java.com.campfhir.model.Encounter entity) 
 	{
 		getCurrentSession().save(entity);
 	}
 
-	public void update(Encounter entity) 
+	public void update( main.java.com.campfhir.model.Encounter entity) 
 	{
 		getCurrentSession().update(entity);
 	}
 
-	public Encounter findById(String id) 
+	public  main.java.com.campfhir.model.Encounter findById(String id) 
 	{
-		Encounter encounter = (Encounter) getCurrentSession().get(Encounter.class, id);
-		return encounter; 
+		main.java.com.campfhir.model.Encounter resource = (main.java.com.campfhir.model.Encounter) getCurrentSession().get(main.java.com.campfhir.model.Encounter.class, id);
+		return resource; 
 	}
-
-	public List<Encounter> findByPatientId(String id) 
-	{
-		Query query = getCurrentSession().createQuery("FROM Encounter where ENC_SUBJECT_REFERENCE = 'Patient/"+id+"'");
-		
-		List<Encounter> encounters = (List<Encounter>) query.list();
-		
-		return encounters; 
-	}
-
-	public void delete(Encounter entity) 
+	
+	public void delete(main.java.com.campfhir.model.Encounter entity) 
 	{
 		getCurrentSession().delete(entity);
 	}
@@ -122,19 +108,24 @@ public class EncounterDao implements EncounterDaoInterface<Encounter, String>
 	@SuppressWarnings("unchecked")
 	public ScrollableResults findAll() 
 	{
-		ScrollableResults encounters = getCurrentSession().createQuery("FROM Encounter")
+		return getCurrentSession().createQuery("FROM Encounter")
+				.setReadOnly(true)
+
+		        .setCacheable(true)
+		    .scroll(ScrollMode.FORWARD_ONLY);
+	}
+	
+	public ScrollableResults findAll(int start, int max) 
+	{
+		ScrollableResults resources = getCurrentSession().createQuery("FROM Encounter")
+				.setFirstResult(start)
+				.setMaxResults(max)
 				.setReadOnly(true)
 		        .setCacheable(true)
 		    .scroll(ScrollMode.FORWARD_ONLY);
-		
-		return encounters;
+		return resources;
 	}
 
-	public void deleteAll() 
-	{
-//		List<Encounter> entityList = findAll();
-//		for (Encounter entity : entityList) {
-//			delete(entity);
-//		}
-	}
+
 }
+

@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Feb 22, 2022, 7:13:58 PM by Hibernate Tools 5.6.1.Final
+// Generated Jun 6, 2022, 11:02:30 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -11,1075 +11,846 @@ public class Practitioner  implements java.io.Serializable {
 
 
      private String id;
-     private String practActive;
-     private String practAddressCity;
-     private String practAddressCountry;
-     private String practAddressDistrict;
-     private String practAddressLine;
-     private String practAddressPeriodEnd;
-     private String practAddressPeriodStart;
-     private String practAddressPostalCode;
-     private String practAddressState;
-     private String practAddressText;
-     private String practAddressTypeCode;
-     private String practAddressUseCode;
-     private String practBirthDate;
-     private String practCommnCodingCode;
-     private String practCommnCodingDisplay;
-     private String practCommnCodingSystem;
-     private String practCommnCodingUsrslt;
-     private String practCommnCodingVersion;
-     private String practCommnText;
-     private String practGenderCode;
-     private String practIdAssigner;
-     private String practIdPeriodEnd;
-     private String practIdPeriodStart;
-     private String practIdSystem;
-     private String practIdTypeCodingCode;
-     private String practIdTypeCodingDisplay;
-     private String practIdTypeCodingSystem;
-     private String practIdTypeCodingUsrslt;
-     private String practIdTypeCodingVersion;
-     private String practIdTypeText;
-     private String practIdUseCode;
-     private String practIdValue;
-     private String practNameFamily;
-     private String practNameGiven;
-     private String practNamePeriodEnd;
-     private String practNamePeriodStart;
-     private String practNamePrefix;
-     private String practNameSuffix;
-     private String practNameText;
-     private String practNameUseCode;
-     private String practPhotoContentType;
-     private String practPhotoCreation;
-     private String practPhotoData;
-     private String practPhotoHash;
-     private String practPhotoLang;
-     private String practPhotoSize;
-     private String practPhotoTitle;
-     private String practPhotoUrl;
-     private String practQualificationCodeCodingCode;
-     private String practQualificationCodeCodingDisplay;
-     private String practQualificationCodeCodingSystem;
-     private String practQualificationCodeCodingUsrslt;
-     private String practQualificationCodeCodingVersion;
-     private String practQualificationCodeText;
-     private String practQualificationIdAssigner;
-     private String practQualificationIdPeriodEnd;
-     private String practQualificationIdPeriodStart;
-     private String practQualificationIdSystem;
-     private String practQualificationIdTypeCodingCode;
-     private String practQualificationIdTypeCodingDisplay;
-     private String practQualificationIdTypeCodingSystem;
-     private String practQualificationIdTypeCodingUsrslt;
-     private String practQualificationIdTypeCodingVersion;
-     private String practQualificationIdTypeText;
-     private String practQualificationIdUseCode;
-     private String practQualificationIdValue;
-     private String practQualificationIssuer;
-     private String practQualificationPeriodEnd;
-     private String practQualificationPeriodStart;
-     private String practTelecomPeriodEnd;
-     private String practTelecomPeriodStart;
-     private String practTelecomRank;
-     private String practTelecomSystemCode;
-     private String practTelecomUseCode;
-     private String practTelecomValue;
+     private String prctitnrActive;
+     private String prctitnrAddrCity;
+     private String prctitnrAddrCntry;
+     private String prctitnrAddrDistrict;
+     private String prctitnrAddrLine;
+     private String prctitnrAddrPrdEnd;
+     private String prctitnrAddrPrdStrt;
+     private String prctitnrAddrPostalCd;
+     private String prctitnrAddrState;
+     private String prctitnrAddrTxt;
+     private String prctitnrAddrTyp;
+     private String prctitnrAddrUse;
+     private String prctitnrBirthDt;
+     private String prctitnrCmmnctnCdgCd;
+     private String prctitnrCmmnctnCdgDsply;
+     private String prctitnrCmmnctnCdgSys;
+     private String prctitnrCmmnctnCdgUsrSltd;
+     private String prctitnrCmmnctnCdgVrsn;
+     private String prctitnrCmmnctnTxt;
+     private String prctitnrGender;
+     private String prctitnrIdAssigner;
+     private String prctitnrIdPrdEnd;
+     private String prctitnrIdPrdStrt;
+     private String prctitnrIdSys;
+     private String prctitnrIdTypCdgCd;
+     private String prctitnrIdTypCdgDsply;
+     private String prctitnrIdTypCdgSys;
+     private String prctitnrIdTypCdgUsrSltd;
+     private String prctitnrIdTypCdgVrsn;
+     private String prctitnrIdTypTxt;
+     private String prctitnrIdUse;
+     private String prctitnrIdVl;
+     private String prctitnrNmFmly;
+     private String prctitnrNmGiven;
+     private String prctitnrNmPrdEnd;
+     private String prctitnrNmPrdStrt;
+     private String prctitnrNmPrefix;
+     private String prctitnrNmSuffix;
+     private String prctitnrNmTxt;
+     private String prctitnrNmUse;
+     private String prctitnrPhotoCntntTyp;
+     private String prctitnrPhotoCreation;
+     private String prctitnrPhotoData;
+     private String prctitnrPhotoHash;
+     private String prctitnrPhotoLnguage;
+     private String prctitnrPhotoSz;
+     private String prctitnrPhotoTtl;
+     private String prctitnrPhotoUrl;
+     private String prctitnrQualificationCdCdgCd;
+     private String prctitnrQualificationCdCdgDsply;
+     private String prctitnrQualificationCdCdgSys;
+     private String prctitnrQualificationCdCdgUsrSltd;
+     private String prctitnrQualificationCdCdgVrsn;
+     private String prctitnrQualificationCdTxt;
+     private String prctitnrQualificationIdAssigner;
+     private String prctitnrQualificationIdPrdEnd;
+     private String prctitnrQualificationIdPrdStrt;
+     private String prctitnrQualificationIdSys;
+     private String prctitnrQualificationIdTypCdgCd;
+     private String prctitnrQualificationIdTypCdgDsply;
+     private String prctitnrQualificationIdTypCdgSys;
+     private String prctitnrQualificationIdTypCdgUsrSltd;
+     private String prctitnrQualificationIdTypCdgVrsn;
+     private String prctitnrQualificationIdTypTxt;
+     private String prctitnrQualificationIdUse;
+     private String prctitnrQualificationIdVl;
+     private String prctitnrQualificationIssuer;
+     private String prctitnrQualificationPrdEnd;
+     private String prctitnrQualificationPrdStrt;
+     private String prctitnrTlcmPrdEnd;
+     private String prctitnrTlcmPrdStrt;
+     private String prctitnrTlcmRnk;
+     private String prctitnrTlcmSys;
+     private String prctitnrTlcmUse;
+     private String prctitnrTlcmVl;
 
     public Practitioner() {
     }
 
-    public Practitioner(String practActive, String practAddressCity, String practAddressCountry, String practAddressDistrict, String practAddressLine, String practAddressPeriodEnd, String practAddressPeriodStart, String practAddressPostalCode, String practAddressState, String practAddressText, String practAddressTypeCode, String practAddressUseCode, String practBirthDate, String practCommnCodingCode, String practCommnCodingDisplay, String practCommnCodingSystem, String practCommnCodingUsrslt, String practCommnCodingVersion, String practCommnText, String practGenderCode, String practIdAssigner, String practIdPeriodEnd, String practIdPeriodStart, String practIdSystem, String practIdTypeCodingCode, String practIdTypeCodingDisplay, String practIdTypeCodingSystem, String practIdTypeCodingUsrslt, String practIdTypeCodingVersion, String practIdTypeText, String practIdUseCode, String practIdValue, String practNameFamily, String practNameGiven, String practNamePeriodEnd, String practNamePeriodStart, String practNamePrefix, String practNameSuffix, String practNameText, String practNameUseCode, String practPhotoContentType, String practPhotoCreation, String practPhotoData, String practPhotoHash, String practPhotoLang, String practPhotoSize, String practPhotoTitle, String practPhotoUrl, String practQualificationCodeCodingCode, String practQualificationCodeCodingDisplay, String practQualificationCodeCodingSystem, String practQualificationCodeCodingUsrslt, String practQualificationCodeCodingVersion, String practQualificationCodeText, String practQualificationIdAssigner, String practQualificationIdPeriodEnd, String practQualificationIdPeriodStart, String practQualificationIdSystem, String practQualificationIdTypeCodingCode, String practQualificationIdTypeCodingDisplay, String practQualificationIdTypeCodingSystem, String practQualificationIdTypeCodingUsrslt, String practQualificationIdTypeCodingVersion, String practQualificationIdTypeText, String practQualificationIdUseCode, String practQualificationIdValue, String practQualificationIssuer, String practQualificationPeriodEnd, String practQualificationPeriodStart, String practTelecomPeriodEnd, String practTelecomPeriodStart, String practTelecomRank, String practTelecomSystemCode, String practTelecomUseCode, String practTelecomValue) {
-       this.practActive = practActive;
-       this.practAddressCity = practAddressCity;
-       this.practAddressCountry = practAddressCountry;
-       this.practAddressDistrict = practAddressDistrict;
-       this.practAddressLine = practAddressLine;
-       this.practAddressPeriodEnd = practAddressPeriodEnd;
-       this.practAddressPeriodStart = practAddressPeriodStart;
-       this.practAddressPostalCode = practAddressPostalCode;
-       this.practAddressState = practAddressState;
-       this.practAddressText = practAddressText;
-       this.practAddressTypeCode = practAddressTypeCode;
-       this.practAddressUseCode = practAddressUseCode;
-       this.practBirthDate = practBirthDate;
-       this.practCommnCodingCode = practCommnCodingCode;
-       this.practCommnCodingDisplay = practCommnCodingDisplay;
-       this.practCommnCodingSystem = practCommnCodingSystem;
-       this.practCommnCodingUsrslt = practCommnCodingUsrslt;
-       this.practCommnCodingVersion = practCommnCodingVersion;
-       this.practCommnText = practCommnText;
-       this.practGenderCode = practGenderCode;
-       this.practIdAssigner = practIdAssigner;
-       this.practIdPeriodEnd = practIdPeriodEnd;
-       this.practIdPeriodStart = practIdPeriodStart;
-       this.practIdSystem = practIdSystem;
-       this.practIdTypeCodingCode = practIdTypeCodingCode;
-       this.practIdTypeCodingDisplay = practIdTypeCodingDisplay;
-       this.practIdTypeCodingSystem = practIdTypeCodingSystem;
-       this.practIdTypeCodingUsrslt = practIdTypeCodingUsrslt;
-       this.practIdTypeCodingVersion = practIdTypeCodingVersion;
-       this.practIdTypeText = practIdTypeText;
-       this.practIdUseCode = practIdUseCode;
-       this.practIdValue = practIdValue;
-       this.practNameFamily = practNameFamily;
-       this.practNameGiven = practNameGiven;
-       this.practNamePeriodEnd = practNamePeriodEnd;
-       this.practNamePeriodStart = practNamePeriodStart;
-       this.practNamePrefix = practNamePrefix;
-       this.practNameSuffix = practNameSuffix;
-       this.practNameText = practNameText;
-       this.practNameUseCode = practNameUseCode;
-       this.practPhotoContentType = practPhotoContentType;
-       this.practPhotoCreation = practPhotoCreation;
-       this.practPhotoData = practPhotoData;
-       this.practPhotoHash = practPhotoHash;
-       this.practPhotoLang = practPhotoLang;
-       this.practPhotoSize = practPhotoSize;
-       this.practPhotoTitle = practPhotoTitle;
-       this.practPhotoUrl = practPhotoUrl;
-       this.practQualificationCodeCodingCode = practQualificationCodeCodingCode;
-       this.practQualificationCodeCodingDisplay = practQualificationCodeCodingDisplay;
-       this.practQualificationCodeCodingSystem = practQualificationCodeCodingSystem;
-       this.practQualificationCodeCodingUsrslt = practQualificationCodeCodingUsrslt;
-       this.practQualificationCodeCodingVersion = practQualificationCodeCodingVersion;
-       this.practQualificationCodeText = practQualificationCodeText;
-       this.practQualificationIdAssigner = practQualificationIdAssigner;
-       this.practQualificationIdPeriodEnd = practQualificationIdPeriodEnd;
-       this.practQualificationIdPeriodStart = practQualificationIdPeriodStart;
-       this.practQualificationIdSystem = practQualificationIdSystem;
-       this.practQualificationIdTypeCodingCode = practQualificationIdTypeCodingCode;
-       this.practQualificationIdTypeCodingDisplay = practQualificationIdTypeCodingDisplay;
-       this.practQualificationIdTypeCodingSystem = practQualificationIdTypeCodingSystem;
-       this.practQualificationIdTypeCodingUsrslt = practQualificationIdTypeCodingUsrslt;
-       this.practQualificationIdTypeCodingVersion = practQualificationIdTypeCodingVersion;
-       this.practQualificationIdTypeText = practQualificationIdTypeText;
-       this.practQualificationIdUseCode = practQualificationIdUseCode;
-       this.practQualificationIdValue = practQualificationIdValue;
-       this.practQualificationIssuer = practQualificationIssuer;
-       this.practQualificationPeriodEnd = practQualificationPeriodEnd;
-       this.practQualificationPeriodStart = practQualificationPeriodStart;
-       this.practTelecomPeriodEnd = practTelecomPeriodEnd;
-       this.practTelecomPeriodStart = practTelecomPeriodStart;
-       this.practTelecomRank = practTelecomRank;
-       this.practTelecomSystemCode = practTelecomSystemCode;
-       this.practTelecomUseCode = practTelecomUseCode;
-       this.practTelecomValue = practTelecomValue;
-    }
    
-    public 
-    String 
-    getId()
-    {
+    public String getId() {
         return this.id;
     }
     
-    public void setId
-        (String id) 
-        {
-      this.id = id;
-}
-    public 
-    String 
-    getPractActive()
-    {
-        return this.practActive;
-    }
-    
-    public void setPractActive
-        (String practActive) 
-        {
-      this.practActive = practActive;
-}
-    public 
-    String 
-    getPractAddressCity()
-    {
-        return this.practAddressCity;
-    }
-    
-    public void setPractAddressCity
-        (String practAddressCity) 
-        {
-      this.practAddressCity = practAddressCity;
-}
-    public 
-    String 
-    getPractAddressCountry()
-    {
-        return this.practAddressCountry;
-    }
-    
-    public void setPractAddressCountry
-        (String practAddressCountry) 
-        {
-      this.practAddressCountry = practAddressCountry;
-}
-    public 
-    String 
-    getPractAddressDistrict()
-    {
-        return this.practAddressDistrict;
-    }
-    
-    public void setPractAddressDistrict
-        (String practAddressDistrict) 
-        {
-      this.practAddressDistrict = practAddressDistrict;
-}
-    public 
-    String 
-    getPractAddressLine()
-    {
-        return this.practAddressLine;
-    }
-    
-    public void setPractAddressLine
-        (String practAddressLine) 
-        {
-      this.practAddressLine = practAddressLine;
-}
-    public 
-    String 
-    getPractAddressPeriodEnd()
-    {
-        return this.practAddressPeriodEnd;
-    }
-    
-    public void setPractAddressPeriodEnd
-        (String practAddressPeriodEnd) 
-        {
-      this.practAddressPeriodEnd = practAddressPeriodEnd;
-}
-    public 
-    String 
-    getPractAddressPeriodStart()
-    {
-        return this.practAddressPeriodStart;
-    }
-    
-    public void setPractAddressPeriodStart
-        (String practAddressPeriodStart) 
-        {
-      this.practAddressPeriodStart = practAddressPeriodStart;
-}
-    public 
-    String 
-    getPractAddressPostalCode()
-    {
-        return this.practAddressPostalCode;
-    }
-    
-    public void setPractAddressPostalCode
-        (String practAddressPostalCode) 
-        {
-      this.practAddressPostalCode = practAddressPostalCode;
-}
-    public 
-    String 
-    getPractAddressState()
-    {
-        return this.practAddressState;
-    }
-    
-    public void setPractAddressState
-        (String practAddressState) 
-        {
-      this.practAddressState = practAddressState;
-}
-    public 
-    String 
-    getPractAddressText()
-    {
-        return this.practAddressText;
-    }
-    
-    public void setPractAddressText
-        (String practAddressText) 
-        {
-      this.practAddressText = practAddressText;
-}
-    public 
-    String 
-    getPractAddressTypeCode()
-    {
-        return this.practAddressTypeCode;
-    }
-    
-    public void setPractAddressTypeCode
-        (String practAddressTypeCode) 
-        {
-      this.practAddressTypeCode = practAddressTypeCode;
-}
-    public 
-    String 
-    getPractAddressUseCode()
-    {
-        return this.practAddressUseCode;
-    }
-    
-    public void setPractAddressUseCode
-        (String practAddressUseCode) 
-        {
-      this.practAddressUseCode = practAddressUseCode;
-}
-    public 
-    String 
-    getPractBirthDate()
-    {
-        return this.practBirthDate;
-    }
-    
-    public void setPractBirthDate
-        (String practBirthDate) 
-        {
-      this.practBirthDate = practBirthDate;
-}
-    public 
-    String 
-    getPractCommnCodingCode()
-    {
-        return this.practCommnCodingCode;
-    }
-    
-    public void setPractCommnCodingCode
-        (String practCommnCodingCode) 
-        {
-      this.practCommnCodingCode = practCommnCodingCode;
-}
-    public 
-    String 
-    getPractCommnCodingDisplay()
-    {
-        return this.practCommnCodingDisplay;
-    }
-    
-    public void setPractCommnCodingDisplay
-        (String practCommnCodingDisplay) 
-        {
-      this.practCommnCodingDisplay = practCommnCodingDisplay;
-}
-    public 
-    String 
-    getPractCommnCodingSystem()
-    {
-        return this.practCommnCodingSystem;
-    }
-    
-    public void setPractCommnCodingSystem
-        (String practCommnCodingSystem) 
-        {
-      this.practCommnCodingSystem = practCommnCodingSystem;
-}
-    public 
-    String 
-    getPractCommnCodingUsrslt()
-    {
-        return this.practCommnCodingUsrslt;
-    }
-    
-    public void setPractCommnCodingUsrslt
-        (String practCommnCodingUsrslt) 
-        {
-      this.practCommnCodingUsrslt = practCommnCodingUsrslt;
-}
-    public 
-    String 
-    getPractCommnCodingVersion()
-    {
-        return this.practCommnCodingVersion;
-    }
-    
-    public void setPractCommnCodingVersion
-        (String practCommnCodingVersion) 
-        {
-      this.practCommnCodingVersion = practCommnCodingVersion;
-}
-    public 
-    String 
-    getPractCommnText()
-    {
-        return this.practCommnText;
-    }
-    
-    public void setPractCommnText
-        (String practCommnText) 
-        {
-      this.practCommnText = practCommnText;
-}
-    public 
-    String 
-    getPractGenderCode()
-    {
-        return this.practGenderCode;
-    }
-    
-    public void setPractGenderCode
-        (String practGenderCode) 
-        {
-      this.practGenderCode = practGenderCode;
-}
-    public 
-    String 
-    getPractIdAssigner()
-    {
-        return this.practIdAssigner;
-    }
-    
-    public void setPractIdAssigner
-        (String practIdAssigner) 
-        {
-      this.practIdAssigner = practIdAssigner;
-}
-    public 
-    String 
-    getPractIdPeriodEnd()
-    {
-        return this.practIdPeriodEnd;
-    }
-    
-    public void setPractIdPeriodEnd
-        (String practIdPeriodEnd) 
-        {
-      this.practIdPeriodEnd = practIdPeriodEnd;
-}
-    public 
-    String 
-    getPractIdPeriodStart()
-    {
-        return this.practIdPeriodStart;
-    }
-    
-    public void setPractIdPeriodStart
-        (String practIdPeriodStart) 
-        {
-      this.practIdPeriodStart = practIdPeriodStart;
-}
-    public 
-    String 
-    getPractIdSystem()
-    {
-        return this.practIdSystem;
-    }
-    
-    public void setPractIdSystem
-        (String practIdSystem) 
-        {
-      this.practIdSystem = practIdSystem;
-}
-    public 
-    String 
-    getPractIdTypeCodingCode()
-    {
-        return this.practIdTypeCodingCode;
-    }
-    
-    public void setPractIdTypeCodingCode
-        (String practIdTypeCodingCode) 
-        {
-      this.practIdTypeCodingCode = practIdTypeCodingCode;
-}
-    public 
-    String 
-    getPractIdTypeCodingDisplay()
-    {
-        return this.practIdTypeCodingDisplay;
-    }
-    
-    public void setPractIdTypeCodingDisplay
-        (String practIdTypeCodingDisplay) 
-        {
-      this.practIdTypeCodingDisplay = practIdTypeCodingDisplay;
-}
-    public 
-    String 
-    getPractIdTypeCodingSystem()
-    {
-        return this.practIdTypeCodingSystem;
-    }
-    
-    public void setPractIdTypeCodingSystem
-        (String practIdTypeCodingSystem) 
-        {
-      this.practIdTypeCodingSystem = practIdTypeCodingSystem;
-}
-    public 
-    String 
-    getPractIdTypeCodingUsrslt()
-    {
-        return this.practIdTypeCodingUsrslt;
-    }
-    
-    public void setPractIdTypeCodingUsrslt
-        (String practIdTypeCodingUsrslt) 
-        {
-      this.practIdTypeCodingUsrslt = practIdTypeCodingUsrslt;
-}
-    public 
-    String 
-    getPractIdTypeCodingVersion()
-    {
-        return this.practIdTypeCodingVersion;
-    }
-    
-    public void setPractIdTypeCodingVersion
-        (String practIdTypeCodingVersion) 
-        {
-      this.practIdTypeCodingVersion = practIdTypeCodingVersion;
-}
-    public 
-    String 
-    getPractIdTypeText()
-    {
-        return this.practIdTypeText;
-    }
-    
-    public void setPractIdTypeText
-        (String practIdTypeText) 
-        {
-      this.practIdTypeText = practIdTypeText;
-}
-    public 
-    String 
-    getPractIdUseCode()
-    {
-        return this.practIdUseCode;
-    }
-    
-    public void setPractIdUseCode
-        (String practIdUseCode) 
-        {
-      this.practIdUseCode = practIdUseCode;
-}
-    public 
-    String 
-    getPractIdValue()
-    {
-        return this.practIdValue;
-    }
-    
-    public void setPractIdValue
-        (String practIdValue) 
-        {
-      this.practIdValue = practIdValue;
-}
-    public 
-    String 
-    getPractNameFamily()
-    {
-        return this.practNameFamily;
-    }
-    
-    public void setPractNameFamily
-        (String practNameFamily) 
-        {
-      this.practNameFamily = practNameFamily;
-}
-    public 
-    String 
-    getPractNameGiven()
-    {
-        return this.practNameGiven;
-    }
-    
-    public void setPractNameGiven
-        (String practNameGiven) 
-        {
-      this.practNameGiven = practNameGiven;
-}
-    public 
-    String 
-    getPractNamePeriodEnd()
-    {
-        return this.practNamePeriodEnd;
-    }
-    
-    public void setPractNamePeriodEnd
-        (String practNamePeriodEnd) 
-        {
-      this.practNamePeriodEnd = practNamePeriodEnd;
-}
-    public 
-    String 
-    getPractNamePeriodStart()
-    {
-        return this.practNamePeriodStart;
-    }
-    
-    public void setPractNamePeriodStart
-        (String practNamePeriodStart) 
-        {
-      this.practNamePeriodStart = practNamePeriodStart;
-}
-    public 
-    String 
-    getPractNamePrefix()
-    {
-        return this.practNamePrefix;
-    }
-    
-    public void setPractNamePrefix
-        (String practNamePrefix) 
-        {
-      this.practNamePrefix = practNamePrefix;
-}
-    public 
-    String 
-    getPractNameSuffix()
-    {
-        return this.practNameSuffix;
-    }
-    
-    public void setPractNameSuffix
-        (String practNameSuffix) 
-        {
-      this.practNameSuffix = practNameSuffix;
-}
-    public 
-    String 
-    getPractNameText()
-    {
-        return this.practNameText;
-    }
-    
-    public void setPractNameText
-        (String practNameText) 
-        {
-      this.practNameText = practNameText;
-}
-    public 
-    String 
-    getPractNameUseCode()
-    {
-        return this.practNameUseCode;
-    }
-    
-    public void setPractNameUseCode
-        (String practNameUseCode) 
-        {
-      this.practNameUseCode = practNameUseCode;
-}
-    public 
-    String 
-    getPractPhotoContentType()
-    {
-        return this.practPhotoContentType;
-    }
-    
-    public void setPractPhotoContentType
-        (String practPhotoContentType) 
-        {
-      this.practPhotoContentType = practPhotoContentType;
-}
-    public 
-    String 
-    getPractPhotoCreation()
-    {
-        return this.practPhotoCreation;
-    }
-    
-    public void setPractPhotoCreation
-        (String practPhotoCreation) 
-        {
-      this.practPhotoCreation = practPhotoCreation;
-}
-    public 
-    String 
-    getPractPhotoData()
-    {
-        return this.practPhotoData;
-    }
-    
-    public void setPractPhotoData
-        (String practPhotoData) 
-        {
-      this.practPhotoData = practPhotoData;
-}
-    public 
-    String 
-    getPractPhotoHash()
-    {
-        return this.practPhotoHash;
-    }
-    
-    public void setPractPhotoHash
-        (String practPhotoHash) 
-        {
-      this.practPhotoHash = practPhotoHash;
-}
-    public 
-    String 
-    getPractPhotoLang()
-    {
-        return this.practPhotoLang;
-    }
-    
-    public void setPractPhotoLang
-        (String practPhotoLang) 
-        {
-      this.practPhotoLang = practPhotoLang;
-}
-    public 
-    String 
-    getPractPhotoSize()
-    {
-        return this.practPhotoSize;
-    }
-    
-    public void setPractPhotoSize
-        (String practPhotoSize) 
-        {
-      this.practPhotoSize = practPhotoSize;
-}
-    public 
-    String 
-    getPractPhotoTitle()
-    {
-        return this.practPhotoTitle;
-    }
-    
-    public void setPractPhotoTitle
-        (String practPhotoTitle) 
-        {
-      this.practPhotoTitle = practPhotoTitle;
-}
-    public 
-    String 
-    getPractPhotoUrl()
-    {
-        return this.practPhotoUrl;
-    }
-    
-    public void setPractPhotoUrl
-        (String practPhotoUrl) 
-        {
-      this.practPhotoUrl = practPhotoUrl;
-}
-    public 
-    String 
-    getPractQualificationCodeCodingCode()
-    {
-        return this.practQualificationCodeCodingCode;
-    }
-    
-    public void setPractQualificationCodeCodingCode
-        (String practQualificationCodeCodingCode) 
-        {
-      this.practQualificationCodeCodingCode = practQualificationCodeCodingCode;
-}
-    public 
-    String 
-    getPractQualificationCodeCodingDisplay()
-    {
-        return this.practQualificationCodeCodingDisplay;
-    }
-    
-    public void setPractQualificationCodeCodingDisplay
-        (String practQualificationCodeCodingDisplay) 
-        {
-      this.practQualificationCodeCodingDisplay = practQualificationCodeCodingDisplay;
-}
-    public 
-    String 
-    getPractQualificationCodeCodingSystem()
-    {
-        return this.practQualificationCodeCodingSystem;
-    }
-    
-    public void setPractQualificationCodeCodingSystem
-        (String practQualificationCodeCodingSystem) 
-        {
-      this.practQualificationCodeCodingSystem = practQualificationCodeCodingSystem;
-}
-    public 
-    String 
-    getPractQualificationCodeCodingUsrslt()
-    {
-        return this.practQualificationCodeCodingUsrslt;
-    }
-    
-    public void setPractQualificationCodeCodingUsrslt
-        (String practQualificationCodeCodingUsrslt) 
-        {
-      this.practQualificationCodeCodingUsrslt = practQualificationCodeCodingUsrslt;
-}
-    public 
-    String 
-    getPractQualificationCodeCodingVersion()
-    {
-        return this.practQualificationCodeCodingVersion;
-    }
-    
-    public void setPractQualificationCodeCodingVersion
-        (String practQualificationCodeCodingVersion) 
-        {
-      this.practQualificationCodeCodingVersion = practQualificationCodeCodingVersion;
-}
-    public 
-    String 
-    getPractQualificationCodeText()
-    {
-        return this.practQualificationCodeText;
-    }
-    
-    public void setPractQualificationCodeText
-        (String practQualificationCodeText) 
-        {
-      this.practQualificationCodeText = practQualificationCodeText;
-}
-    public 
-    String 
-    getPractQualificationIdAssigner()
-    {
-        return this.practQualificationIdAssigner;
-    }
-    
-    public void setPractQualificationIdAssigner
-        (String practQualificationIdAssigner) 
-        {
-      this.practQualificationIdAssigner = practQualificationIdAssigner;
-}
-    public 
-    String 
-    getPractQualificationIdPeriodEnd()
-    {
-        return this.practQualificationIdPeriodEnd;
-    }
-    
-    public void setPractQualificationIdPeriodEnd
-        (String practQualificationIdPeriodEnd) 
-        {
-      this.practQualificationIdPeriodEnd = practQualificationIdPeriodEnd;
-}
-    public 
-    String 
-    getPractQualificationIdPeriodStart()
-    {
-        return this.practQualificationIdPeriodStart;
-    }
-    
-    public void setPractQualificationIdPeriodStart
-        (String practQualificationIdPeriodStart) 
-        {
-      this.practQualificationIdPeriodStart = practQualificationIdPeriodStart;
-}
-    public 
-    String 
-    getPractQualificationIdSystem()
-    {
-        return this.practQualificationIdSystem;
-    }
-    
-    public void setPractQualificationIdSystem
-        (String practQualificationIdSystem) 
-        {
-      this.practQualificationIdSystem = practQualificationIdSystem;
-}
-    public 
-    String 
-    getPractQualificationIdTypeCodingCode()
-    {
-        return this.practQualificationIdTypeCodingCode;
-    }
-    
-    public void setPractQualificationIdTypeCodingCode
-        (String practQualificationIdTypeCodingCode) 
-        {
-      this.practQualificationIdTypeCodingCode = practQualificationIdTypeCodingCode;
-}
-    public 
-    String 
-    getPractQualificationIdTypeCodingDisplay()
-    {
-        return this.practQualificationIdTypeCodingDisplay;
-    }
-    
-    public void setPractQualificationIdTypeCodingDisplay
-        (String practQualificationIdTypeCodingDisplay) 
-        {
-      this.practQualificationIdTypeCodingDisplay = practQualificationIdTypeCodingDisplay;
-}
-    public 
-    String 
-    getPractQualificationIdTypeCodingSystem()
-    {
-        return this.practQualificationIdTypeCodingSystem;
-    }
-    
-    public void setPractQualificationIdTypeCodingSystem
-        (String practQualificationIdTypeCodingSystem) 
-        {
-      this.practQualificationIdTypeCodingSystem = practQualificationIdTypeCodingSystem;
-}
-    public 
-    String 
-    getPractQualificationIdTypeCodingUsrslt()
-    {
-        return this.practQualificationIdTypeCodingUsrslt;
-    }
-    
-    public void setPractQualificationIdTypeCodingUsrslt
-        (String practQualificationIdTypeCodingUsrslt) 
-        {
-      this.practQualificationIdTypeCodingUsrslt = practQualificationIdTypeCodingUsrslt;
-}
-    public 
-    String 
-    getPractQualificationIdTypeCodingVersion()
-    {
-        return this.practQualificationIdTypeCodingVersion;
-    }
-    
-    public void setPractQualificationIdTypeCodingVersion
-        (String practQualificationIdTypeCodingVersion) 
-        {
-      this.practQualificationIdTypeCodingVersion = practQualificationIdTypeCodingVersion;
-}
-    public 
-    String 
-    getPractQualificationIdTypeText()
-    {
-        return this.practQualificationIdTypeText;
-    }
-    
-    public void setPractQualificationIdTypeText
-        (String practQualificationIdTypeText) 
-        {
-      this.practQualificationIdTypeText = practQualificationIdTypeText;
-}
-    public 
-    String 
-    getPractQualificationIdUseCode()
-    {
-        return this.practQualificationIdUseCode;
-    }
-    
-    public void setPractQualificationIdUseCode
-        (String practQualificationIdUseCode) 
-        {
-      this.practQualificationIdUseCode = practQualificationIdUseCode;
-}
-    public 
-    String 
-    getPractQualificationIdValue()
-    {
-        return this.practQualificationIdValue;
-    }
-    
-    public void setPractQualificationIdValue
-        (String practQualificationIdValue) 
-        {
-      this.practQualificationIdValue = practQualificationIdValue;
-}
-    public 
-    String 
-    getPractQualificationIssuer()
-    {
-        return this.practQualificationIssuer;
-    }
-    
-    public void setPractQualificationIssuer
-        (String practQualificationIssuer) 
-        {
-      this.practQualificationIssuer = practQualificationIssuer;
-}
-    public 
-    String 
-    getPractQualificationPeriodEnd()
-    {
-        return this.practQualificationPeriodEnd;
-    }
-    
-    public void setPractQualificationPeriodEnd
-        (String practQualificationPeriodEnd) 
-        {
-      this.practQualificationPeriodEnd = practQualificationPeriodEnd;
-}
-    public 
-    String 
-    getPractQualificationPeriodStart()
-    {
-        return this.practQualificationPeriodStart;
-    }
-    
-    public void setPractQualificationPeriodStart
-        (String practQualificationPeriodStart) 
-        {
-      this.practQualificationPeriodStart = practQualificationPeriodStart;
-}
-    public 
-    String 
-    getPractTelecomPeriodEnd()
-    {
-        return this.practTelecomPeriodEnd;
-    }
-    
-    public void setPractTelecomPeriodEnd
-        (String practTelecomPeriodEnd) 
-        {
-      this.practTelecomPeriodEnd = practTelecomPeriodEnd;
-}
-    public 
-    String 
-    getPractTelecomPeriodStart()
-    {
-        return this.practTelecomPeriodStart;
-    }
-    
-    public void setPractTelecomPeriodStart
-        (String practTelecomPeriodStart) 
-        {
-      this.practTelecomPeriodStart = practTelecomPeriodStart;
-}
-    public 
-    String 
-    getPractTelecomRank()
-    {
-        return this.practTelecomRank;
-    }
-    
-    public void setPractTelecomRank
-        (String practTelecomRank) 
-        {
-      this.practTelecomRank = practTelecomRank;
-}
-    public 
-    String 
-    getPractTelecomSystemCode()
-    {
-        return this.practTelecomSystemCode;
-    }
-    
-    public void setPractTelecomSystemCode
-        (String practTelecomSystemCode) 
-        {
-      this.practTelecomSystemCode = practTelecomSystemCode;
-}
-    public 
-    String 
-    getPractTelecomUseCode()
-    {
-        return this.practTelecomUseCode;
-    }
-    
-    public void setPractTelecomUseCode
-        (String practTelecomUseCode) 
-        {
-      this.practTelecomUseCode = practTelecomUseCode;
-}
-    public 
-    String 
-    getPractTelecomValue()
-    {
-        return this.practTelecomValue;
-    }
-    
-    public void setPractTelecomValue
-        (String practTelecomValue) 
-        {
-      this.practTelecomValue = practTelecomValue;
-}
+    public void setId(String id) {
+        this.id = id;
+    }
+    
+    
+    
+    public String getPrctitnrActive() {
+        return this.prctitnrActive;
+    }
+    
+    public void setPrctitnrActive(String prctitnrActive) {
+        this.prctitnrActive = prctitnrActive;
+    }
+    
+    
+    
+    public String getPrctitnrAddrCity() {
+        return this.prctitnrAddrCity;
+    }
+    
+    public void setPrctitnrAddrCity(String prctitnrAddrCity) {
+        this.prctitnrAddrCity = prctitnrAddrCity;
+    }
+    
+    
+    
+    public String getPrctitnrAddrCntry() {
+        return this.prctitnrAddrCntry;
+    }
+    
+    public void setPrctitnrAddrCntry(String prctitnrAddrCntry) {
+        this.prctitnrAddrCntry = prctitnrAddrCntry;
+    }
+    
+    
+    
+    public String getPrctitnrAddrDistrict() {
+        return this.prctitnrAddrDistrict;
+    }
+    
+    public void setPrctitnrAddrDistrict(String prctitnrAddrDistrict) {
+        this.prctitnrAddrDistrict = prctitnrAddrDistrict;
+    }
+    
+    
+    
+    public String getPrctitnrAddrLine() {
+        return this.prctitnrAddrLine;
+    }
+    
+    public void setPrctitnrAddrLine(String prctitnrAddrLine) {
+        this.prctitnrAddrLine = prctitnrAddrLine;
+    }
+    
+    
+    
+    public String getPrctitnrAddrPrdEnd() {
+        return this.prctitnrAddrPrdEnd;
+    }
+    
+    public void setPrctitnrAddrPrdEnd(String prctitnrAddrPrdEnd) {
+        this.prctitnrAddrPrdEnd = prctitnrAddrPrdEnd;
+    }
+    
+    
+    
+    public String getPrctitnrAddrPrdStrt() {
+        return this.prctitnrAddrPrdStrt;
+    }
+    
+    public void setPrctitnrAddrPrdStrt(String prctitnrAddrPrdStrt) {
+        this.prctitnrAddrPrdStrt = prctitnrAddrPrdStrt;
+    }
+    
+    
+    
+    public String getPrctitnrAddrPostalCd() {
+        return this.prctitnrAddrPostalCd;
+    }
+    
+    public void setPrctitnrAddrPostalCd(String prctitnrAddrPostalCd) {
+        this.prctitnrAddrPostalCd = prctitnrAddrPostalCd;
+    }
+    
+    
+    
+    public String getPrctitnrAddrState() {
+        return this.prctitnrAddrState;
+    }
+    
+    public void setPrctitnrAddrState(String prctitnrAddrState) {
+        this.prctitnrAddrState = prctitnrAddrState;
+    }
+    
+    
+    
+    public String getPrctitnrAddrTxt() {
+        return this.prctitnrAddrTxt;
+    }
+    
+    public void setPrctitnrAddrTxt(String prctitnrAddrTxt) {
+        this.prctitnrAddrTxt = prctitnrAddrTxt;
+    }
+    
+    
+    
+    public String getPrctitnrAddrTyp() {
+        return this.prctitnrAddrTyp;
+    }
+    
+    public void setPrctitnrAddrTyp(String prctitnrAddrTyp) {
+        this.prctitnrAddrTyp = prctitnrAddrTyp;
+    }
+    
+    
+    
+    public String getPrctitnrAddrUse() {
+        return this.prctitnrAddrUse;
+    }
+    
+    public void setPrctitnrAddrUse(String prctitnrAddrUse) {
+        this.prctitnrAddrUse = prctitnrAddrUse;
+    }
+    
+    
+    
+    public String getPrctitnrBirthDt() {
+        return this.prctitnrBirthDt;
+    }
+    
+    public void setPrctitnrBirthDt(String prctitnrBirthDt) {
+        this.prctitnrBirthDt = prctitnrBirthDt;
+    }
+    
+    
+    
+    public String getPrctitnrCmmnctnCdgCd() {
+        return this.prctitnrCmmnctnCdgCd;
+    }
+    
+    public void setPrctitnrCmmnctnCdgCd(String prctitnrCmmnctnCdgCd) {
+        this.prctitnrCmmnctnCdgCd = prctitnrCmmnctnCdgCd;
+    }
+    
+    
+    
+    public String getPrctitnrCmmnctnCdgDsply() {
+        return this.prctitnrCmmnctnCdgDsply;
+    }
+    
+    public void setPrctitnrCmmnctnCdgDsply(String prctitnrCmmnctnCdgDsply) {
+        this.prctitnrCmmnctnCdgDsply = prctitnrCmmnctnCdgDsply;
+    }
+    
+    
+    
+    public String getPrctitnrCmmnctnCdgSys() {
+        return this.prctitnrCmmnctnCdgSys;
+    }
+    
+    public void setPrctitnrCmmnctnCdgSys(String prctitnrCmmnctnCdgSys) {
+        this.prctitnrCmmnctnCdgSys = prctitnrCmmnctnCdgSys;
+    }
+    
+    
+    
+    public String getPrctitnrCmmnctnCdgUsrSltd() {
+        return this.prctitnrCmmnctnCdgUsrSltd;
+    }
+    
+    public void setPrctitnrCmmnctnCdgUsrSltd(String prctitnrCmmnctnCdgUsrSltd) {
+        this.prctitnrCmmnctnCdgUsrSltd = prctitnrCmmnctnCdgUsrSltd;
+    }
+    
+    
+    
+    public String getPrctitnrCmmnctnCdgVrsn() {
+        return this.prctitnrCmmnctnCdgVrsn;
+    }
+    
+    public void setPrctitnrCmmnctnCdgVrsn(String prctitnrCmmnctnCdgVrsn) {
+        this.prctitnrCmmnctnCdgVrsn = prctitnrCmmnctnCdgVrsn;
+    }
+    
+    
+    
+    public String getPrctitnrCmmnctnTxt() {
+        return this.prctitnrCmmnctnTxt;
+    }
+    
+    public void setPrctitnrCmmnctnTxt(String prctitnrCmmnctnTxt) {
+        this.prctitnrCmmnctnTxt = prctitnrCmmnctnTxt;
+    }
+    
+    
+    
+    public String getPrctitnrGender() {
+        return this.prctitnrGender;
+    }
+    
+    public void setPrctitnrGender(String prctitnrGender) {
+        this.prctitnrGender = prctitnrGender;
+    }
+    
+    
+    
+    public String getPrctitnrIdAssigner() {
+        return this.prctitnrIdAssigner;
+    }
+    
+    public void setPrctitnrIdAssigner(String prctitnrIdAssigner) {
+        this.prctitnrIdAssigner = prctitnrIdAssigner;
+    }
+    
+    
+    
+    public String getPrctitnrIdPrdEnd() {
+        return this.prctitnrIdPrdEnd;
+    }
+    
+    public void setPrctitnrIdPrdEnd(String prctitnrIdPrdEnd) {
+        this.prctitnrIdPrdEnd = prctitnrIdPrdEnd;
+    }
+    
+    
+    
+    public String getPrctitnrIdPrdStrt() {
+        return this.prctitnrIdPrdStrt;
+    }
+    
+    public void setPrctitnrIdPrdStrt(String prctitnrIdPrdStrt) {
+        this.prctitnrIdPrdStrt = prctitnrIdPrdStrt;
+    }
+    
+    
+    
+    public String getPrctitnrIdSys() {
+        return this.prctitnrIdSys;
+    }
+    
+    public void setPrctitnrIdSys(String prctitnrIdSys) {
+        this.prctitnrIdSys = prctitnrIdSys;
+    }
+    
+    
+    
+    public String getPrctitnrIdTypCdgCd() {
+        return this.prctitnrIdTypCdgCd;
+    }
+    
+    public void setPrctitnrIdTypCdgCd(String prctitnrIdTypCdgCd) {
+        this.prctitnrIdTypCdgCd = prctitnrIdTypCdgCd;
+    }
+    
+    
+    
+    public String getPrctitnrIdTypCdgDsply() {
+        return this.prctitnrIdTypCdgDsply;
+    }
+    
+    public void setPrctitnrIdTypCdgDsply(String prctitnrIdTypCdgDsply) {
+        this.prctitnrIdTypCdgDsply = prctitnrIdTypCdgDsply;
+    }
+    
+    
+    
+    public String getPrctitnrIdTypCdgSys() {
+        return this.prctitnrIdTypCdgSys;
+    }
+    
+    public void setPrctitnrIdTypCdgSys(String prctitnrIdTypCdgSys) {
+        this.prctitnrIdTypCdgSys = prctitnrIdTypCdgSys;
+    }
+    
+    
+    
+    public String getPrctitnrIdTypCdgUsrSltd() {
+        return this.prctitnrIdTypCdgUsrSltd;
+    }
+    
+    public void setPrctitnrIdTypCdgUsrSltd(String prctitnrIdTypCdgUsrSltd) {
+        this.prctitnrIdTypCdgUsrSltd = prctitnrIdTypCdgUsrSltd;
+    }
+    
+    
+    
+    public String getPrctitnrIdTypCdgVrsn() {
+        return this.prctitnrIdTypCdgVrsn;
+    }
+    
+    public void setPrctitnrIdTypCdgVrsn(String prctitnrIdTypCdgVrsn) {
+        this.prctitnrIdTypCdgVrsn = prctitnrIdTypCdgVrsn;
+    }
+    
+    
+    
+    public String getPrctitnrIdTypTxt() {
+        return this.prctitnrIdTypTxt;
+    }
+    
+    public void setPrctitnrIdTypTxt(String prctitnrIdTypTxt) {
+        this.prctitnrIdTypTxt = prctitnrIdTypTxt;
+    }
+    
+    
+    
+    public String getPrctitnrIdUse() {
+        return this.prctitnrIdUse;
+    }
+    
+    public void setPrctitnrIdUse(String prctitnrIdUse) {
+        this.prctitnrIdUse = prctitnrIdUse;
+    }
+    
+    
+    
+    public String getPrctitnrIdVl() {
+        return this.prctitnrIdVl;
+    }
+    
+    public void setPrctitnrIdVl(String prctitnrIdVl) {
+        this.prctitnrIdVl = prctitnrIdVl;
+    }
+    
+    
+    
+    public String getPrctitnrNmFmly() {
+        return this.prctitnrNmFmly;
+    }
+    
+    public void setPrctitnrNmFmly(String prctitnrNmFmly) {
+        this.prctitnrNmFmly = prctitnrNmFmly;
+    }
+    
+    
+    
+    public String getPrctitnrNmGiven() {
+        return this.prctitnrNmGiven;
+    }
+    
+    public void setPrctitnrNmGiven(String prctitnrNmGiven) {
+        this.prctitnrNmGiven = prctitnrNmGiven;
+    }
+    
+    
+    
+    public String getPrctitnrNmPrdEnd() {
+        return this.prctitnrNmPrdEnd;
+    }
+    
+    public void setPrctitnrNmPrdEnd(String prctitnrNmPrdEnd) {
+        this.prctitnrNmPrdEnd = prctitnrNmPrdEnd;
+    }
+    
+    
+    
+    public String getPrctitnrNmPrdStrt() {
+        return this.prctitnrNmPrdStrt;
+    }
+    
+    public void setPrctitnrNmPrdStrt(String prctitnrNmPrdStrt) {
+        this.prctitnrNmPrdStrt = prctitnrNmPrdStrt;
+    }
+    
+    
+    
+    public String getPrctitnrNmPrefix() {
+        return this.prctitnrNmPrefix;
+    }
+    
+    public void setPrctitnrNmPrefix(String prctitnrNmPrefix) {
+        this.prctitnrNmPrefix = prctitnrNmPrefix;
+    }
+    
+    
+    
+    public String getPrctitnrNmSuffix() {
+        return this.prctitnrNmSuffix;
+    }
+    
+    public void setPrctitnrNmSuffix(String prctitnrNmSuffix) {
+        this.prctitnrNmSuffix = prctitnrNmSuffix;
+    }
+    
+    
+    
+    public String getPrctitnrNmTxt() {
+        return this.prctitnrNmTxt;
+    }
+    
+    public void setPrctitnrNmTxt(String prctitnrNmTxt) {
+        this.prctitnrNmTxt = prctitnrNmTxt;
+    }
+    
+    
+    
+    public String getPrctitnrNmUse() {
+        return this.prctitnrNmUse;
+    }
+    
+    public void setPrctitnrNmUse(String prctitnrNmUse) {
+        this.prctitnrNmUse = prctitnrNmUse;
+    }
+    
+    
+    
+    public String getPrctitnrPhotoCntntTyp() {
+        return this.prctitnrPhotoCntntTyp;
+    }
+    
+    public void setPrctitnrPhotoCntntTyp(String prctitnrPhotoCntntTyp) {
+        this.prctitnrPhotoCntntTyp = prctitnrPhotoCntntTyp;
+    }
+    
+    
+    
+    public String getPrctitnrPhotoCreation() {
+        return this.prctitnrPhotoCreation;
+    }
+    
+    public void setPrctitnrPhotoCreation(String prctitnrPhotoCreation) {
+        this.prctitnrPhotoCreation = prctitnrPhotoCreation;
+    }
+    
+    
+    
+    public String getPrctitnrPhotoData() {
+        return this.prctitnrPhotoData;
+    }
+    
+    public void setPrctitnrPhotoData(String prctitnrPhotoData) {
+        this.prctitnrPhotoData = prctitnrPhotoData;
+    }
+    
+    
+    
+    public String getPrctitnrPhotoHash() {
+        return this.prctitnrPhotoHash;
+    }
+    
+    public void setPrctitnrPhotoHash(String prctitnrPhotoHash) {
+        this.prctitnrPhotoHash = prctitnrPhotoHash;
+    }
+    
+    
+    
+    public String getPrctitnrPhotoLnguage() {
+        return this.prctitnrPhotoLnguage;
+    }
+    
+    public void setPrctitnrPhotoLnguage(String prctitnrPhotoLnguage) {
+        this.prctitnrPhotoLnguage = prctitnrPhotoLnguage;
+    }
+    
+    
+    
+    public String getPrctitnrPhotoSz() {
+        return this.prctitnrPhotoSz;
+    }
+    
+    public void setPrctitnrPhotoSz(String prctitnrPhotoSz) {
+        this.prctitnrPhotoSz = prctitnrPhotoSz;
+    }
+    
+    
+    
+    public String getPrctitnrPhotoTtl() {
+        return this.prctitnrPhotoTtl;
+    }
+    
+    public void setPrctitnrPhotoTtl(String prctitnrPhotoTtl) {
+        this.prctitnrPhotoTtl = prctitnrPhotoTtl;
+    }
+    
+    
+    
+    public String getPrctitnrPhotoUrl() {
+        return this.prctitnrPhotoUrl;
+    }
+    
+    public void setPrctitnrPhotoUrl(String prctitnrPhotoUrl) {
+        this.prctitnrPhotoUrl = prctitnrPhotoUrl;
+    }
+    
+    
+    
+    public String getPrctitnrQualificationCdCdgCd() {
+        return this.prctitnrQualificationCdCdgCd;
+    }
+    
+    public void setPrctitnrQualificationCdCdgCd(String prctitnrQualificationCdCdgCd) {
+        this.prctitnrQualificationCdCdgCd = prctitnrQualificationCdCdgCd;
+    }
+    
+    
+    
+    public String getPrctitnrQualificationCdCdgDsply() {
+        return this.prctitnrQualificationCdCdgDsply;
+    }
+    
+    public void setPrctitnrQualificationCdCdgDsply(String prctitnrQualificationCdCdgDsply) {
+        this.prctitnrQualificationCdCdgDsply = prctitnrQualificationCdCdgDsply;
+    }
+    
+    
+    
+    public String getPrctitnrQualificationCdCdgSys() {
+        return this.prctitnrQualificationCdCdgSys;
+    }
+    
+    public void setPrctitnrQualificationCdCdgSys(String prctitnrQualificationCdCdgSys) {
+        this.prctitnrQualificationCdCdgSys = prctitnrQualificationCdCdgSys;
+    }
+    
+    
+    
+    public String getPrctitnrQualificationCdCdgUsrSltd() {
+        return this.prctitnrQualificationCdCdgUsrSltd;
+    }
+    
+    public void setPrctitnrQualificationCdCdgUsrSltd(String prctitnrQualificationCdCdgUsrSltd) {
+        this.prctitnrQualificationCdCdgUsrSltd = prctitnrQualificationCdCdgUsrSltd;
+    }
+    
+    
+    
+    public String getPrctitnrQualificationCdCdgVrsn() {
+        return this.prctitnrQualificationCdCdgVrsn;
+    }
+    
+    public void setPrctitnrQualificationCdCdgVrsn(String prctitnrQualificationCdCdgVrsn) {
+        this.prctitnrQualificationCdCdgVrsn = prctitnrQualificationCdCdgVrsn;
+    }
+    
+    
+    
+    public String getPrctitnrQualificationCdTxt() {
+        return this.prctitnrQualificationCdTxt;
+    }
+    
+    public void setPrctitnrQualificationCdTxt(String prctitnrQualificationCdTxt) {
+        this.prctitnrQualificationCdTxt = prctitnrQualificationCdTxt;
+    }
+    
+    
+    
+    public String getPrctitnrQualificationIdAssigner() {
+        return this.prctitnrQualificationIdAssigner;
+    }
+    
+    public void setPrctitnrQualificationIdAssigner(String prctitnrQualificationIdAssigner) {
+        this.prctitnrQualificationIdAssigner = prctitnrQualificationIdAssigner;
+    }
+    
+    
+    
+    public String getPrctitnrQualificationIdPrdEnd() {
+        return this.prctitnrQualificationIdPrdEnd;
+    }
+    
+    public void setPrctitnrQualificationIdPrdEnd(String prctitnrQualificationIdPrdEnd) {
+        this.prctitnrQualificationIdPrdEnd = prctitnrQualificationIdPrdEnd;
+    }
+    
+    
+    
+    public String getPrctitnrQualificationIdPrdStrt() {
+        return this.prctitnrQualificationIdPrdStrt;
+    }
+    
+    public void setPrctitnrQualificationIdPrdStrt(String prctitnrQualificationIdPrdStrt) {
+        this.prctitnrQualificationIdPrdStrt = prctitnrQualificationIdPrdStrt;
+    }
+    
+    
+    
+    public String getPrctitnrQualificationIdSys() {
+        return this.prctitnrQualificationIdSys;
+    }
+    
+    public void setPrctitnrQualificationIdSys(String prctitnrQualificationIdSys) {
+        this.prctitnrQualificationIdSys = prctitnrQualificationIdSys;
+    }
+    
+    
+    
+    public String getPrctitnrQualificationIdTypCdgCd() {
+        return this.prctitnrQualificationIdTypCdgCd;
+    }
+    
+    public void setPrctitnrQualificationIdTypCdgCd(String prctitnrQualificationIdTypCdgCd) {
+        this.prctitnrQualificationIdTypCdgCd = prctitnrQualificationIdTypCdgCd;
+    }
+    
+    
+    
+    public String getPrctitnrQualificationIdTypCdgDsply() {
+        return this.prctitnrQualificationIdTypCdgDsply;
+    }
+    
+    public void setPrctitnrQualificationIdTypCdgDsply(String prctitnrQualificationIdTypCdgDsply) {
+        this.prctitnrQualificationIdTypCdgDsply = prctitnrQualificationIdTypCdgDsply;
+    }
+    
+    
+    
+    public String getPrctitnrQualificationIdTypCdgSys() {
+        return this.prctitnrQualificationIdTypCdgSys;
+    }
+    
+    public void setPrctitnrQualificationIdTypCdgSys(String prctitnrQualificationIdTypCdgSys) {
+        this.prctitnrQualificationIdTypCdgSys = prctitnrQualificationIdTypCdgSys;
+    }
+    
+    
+    
+    public String getPrctitnrQualificationIdTypCdgUsrSltd() {
+        return this.prctitnrQualificationIdTypCdgUsrSltd;
+    }
+    
+    public void setPrctitnrQualificationIdTypCdgUsrSltd(String prctitnrQualificationIdTypCdgUsrSltd) {
+        this.prctitnrQualificationIdTypCdgUsrSltd = prctitnrQualificationIdTypCdgUsrSltd;
+    }
+    
+    
+    
+    public String getPrctitnrQualificationIdTypCdgVrsn() {
+        return this.prctitnrQualificationIdTypCdgVrsn;
+    }
+    
+    public void setPrctitnrQualificationIdTypCdgVrsn(String prctitnrQualificationIdTypCdgVrsn) {
+        this.prctitnrQualificationIdTypCdgVrsn = prctitnrQualificationIdTypCdgVrsn;
+    }
+    
+    
+    
+    public String getPrctitnrQualificationIdTypTxt() {
+        return this.prctitnrQualificationIdTypTxt;
+    }
+    
+    public void setPrctitnrQualificationIdTypTxt(String prctitnrQualificationIdTypTxt) {
+        this.prctitnrQualificationIdTypTxt = prctitnrQualificationIdTypTxt;
+    }
+    
+    
+    
+    public String getPrctitnrQualificationIdUse() {
+        return this.prctitnrQualificationIdUse;
+    }
+    
+    public void setPrctitnrQualificationIdUse(String prctitnrQualificationIdUse) {
+        this.prctitnrQualificationIdUse = prctitnrQualificationIdUse;
+    }
+    
+    
+    
+    public String getPrctitnrQualificationIdVl() {
+        return this.prctitnrQualificationIdVl;
+    }
+    
+    public void setPrctitnrQualificationIdVl(String prctitnrQualificationIdVl) {
+        this.prctitnrQualificationIdVl = prctitnrQualificationIdVl;
+    }
+    
+    
+    
+    public String getPrctitnrQualificationIssuer() {
+        return this.prctitnrQualificationIssuer;
+    }
+    
+    public void setPrctitnrQualificationIssuer(String prctitnrQualificationIssuer) {
+        this.prctitnrQualificationIssuer = prctitnrQualificationIssuer;
+    }
+    
+    
+    
+    public String getPrctitnrQualificationPrdEnd() {
+        return this.prctitnrQualificationPrdEnd;
+    }
+    
+    public void setPrctitnrQualificationPrdEnd(String prctitnrQualificationPrdEnd) {
+        this.prctitnrQualificationPrdEnd = prctitnrQualificationPrdEnd;
+    }
+    
+    
+    
+    public String getPrctitnrQualificationPrdStrt() {
+        return this.prctitnrQualificationPrdStrt;
+    }
+    
+    public void setPrctitnrQualificationPrdStrt(String prctitnrQualificationPrdStrt) {
+        this.prctitnrQualificationPrdStrt = prctitnrQualificationPrdStrt;
+    }
+    
+    
+    
+    public String getPrctitnrTlcmPrdEnd() {
+        return this.prctitnrTlcmPrdEnd;
+    }
+    
+    public void setPrctitnrTlcmPrdEnd(String prctitnrTlcmPrdEnd) {
+        this.prctitnrTlcmPrdEnd = prctitnrTlcmPrdEnd;
+    }
+    
+    
+    
+    public String getPrctitnrTlcmPrdStrt() {
+        return this.prctitnrTlcmPrdStrt;
+    }
+    
+    public void setPrctitnrTlcmPrdStrt(String prctitnrTlcmPrdStrt) {
+        this.prctitnrTlcmPrdStrt = prctitnrTlcmPrdStrt;
+    }
+    
+    
+    
+    public String getPrctitnrTlcmRnk() {
+        return this.prctitnrTlcmRnk;
+    }
+    
+    public void setPrctitnrTlcmRnk(String prctitnrTlcmRnk) {
+        this.prctitnrTlcmRnk = prctitnrTlcmRnk;
+    }
+    
+    
+    
+    public String getPrctitnrTlcmSys() {
+        return this.prctitnrTlcmSys;
+    }
+    
+    public void setPrctitnrTlcmSys(String prctitnrTlcmSys) {
+        this.prctitnrTlcmSys = prctitnrTlcmSys;
+    }
+    
+    
+    
+    public String getPrctitnrTlcmUse() {
+        return this.prctitnrTlcmUse;
+    }
+    
+    public void setPrctitnrTlcmUse(String prctitnrTlcmUse) {
+        this.prctitnrTlcmUse = prctitnrTlcmUse;
+    }
+    
+    
+    
+    public String getPrctitnrTlcmVl() {
+        return this.prctitnrTlcmVl;
+    }
+    
+    public void setPrctitnrTlcmVl(String prctitnrTlcmVl) {
+        this.prctitnrTlcmVl = prctitnrTlcmVl;
+    }
+    
+    
+    
 
 
 

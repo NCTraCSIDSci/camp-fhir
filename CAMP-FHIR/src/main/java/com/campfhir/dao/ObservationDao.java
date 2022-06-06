@@ -1,10 +1,11 @@
+//// default package
 package main.java.com.campfhir.dao;
+// Generated on Jun 6, 2022, 11:02:34 AM 
+
 
 import java.io.IOException;
-import java.util.List;
-
 import javax.xml.parsers.ParserConfigurationException;
-
+import main.java.utils.HibernateBaseDB;
 import org.hibernate.ScrollMode;
 import org.hibernate.ScrollableResults;
 import org.hibernate.Session;
@@ -14,42 +15,35 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.xml.sax.SAXException;
 
-import main.java.com.campfhir.model.Lab;
-import main.java.com.campfhir.model.Observation;
-import main.java.com.campfhir.model.Vital;
-
-import main.java.utils.HibernateBaseDB;
-
 /**
-*
-* @author  James Champion
-* @version 1.0
-* @since   2019-02-08 
-*/
-public class ObservationDao implements ObservationDaoInterface<Observation, String> 
-{
+ *  object for domain model class Observation.
+ * @see .Observation
+ * @author Paul Kovach
+ */
+
+public class ObservationDao {
+
 	private Session currentSession;
 	private SessionFactory sessionFactory;
 	
 	private Transaction currentTransaction;
 
 	public ObservationDao() {}
-
-	public Session openCurrentSession() throws ParserConfigurationException, SAXException, IOException 
+	
+    public Session openCurrentSession() throws ParserConfigurationException, SAXException, IOException 
 	{
-		sessionFactory = HibernateBaseDB.getSessionFactory();
+		sessionFactory =  HibernateBaseDB.getSessionFactory();
 		currentSession = sessionFactory.openSession();
 		return currentSession;
 	}
-
-	public Session openCurrentSessionwithTransaction() throws ParserConfigurationException, SAXException, IOException 
+    
+    public Session openCurrentSessionwithTransaction() throws ParserConfigurationException, SAXException, IOException 
 	{
 		sessionFactory = HibernateBaseDB.getSessionFactory();
 		currentSession = sessionFactory.openSession();
 		currentTransaction = currentSession.beginTransaction();
 		return currentSession;
 	}
-	
 	public void closeCurrentSession() 
 	{
 		currentSession.close();
@@ -60,16 +54,16 @@ public class ObservationDao implements ObservationDaoInterface<Observation, Stri
 		currentTransaction.commit();
 		currentSession.close();
 	}
-	
-	private static SessionFactory getSessionFactory() 
-	{
+    
+    private static SessionFactory getSessionFactory() 
+	{ 
 		Configuration configuration = new Configuration().configure();
 		StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder()
 				.applySettings(configuration.getProperties());
 		SessionFactory sessionFactory = configuration.buildSessionFactory(builder.build());
 		return sessionFactory;
 	}
-
+	
 	public Session getCurrentSession() 
 	{
 		return currentSession;
@@ -90,58 +84,48 @@ public class ObservationDao implements ObservationDaoInterface<Observation, Stri
 		this.currentTransaction = currentTransaction;
 	}
 
-	public void persist(Observation entity) 
+	public void persist( main.java.com.campfhir.model.Observation entity) 
 	{
 		getCurrentSession().save(entity);
 	}
 
-	public void update(Observation entity) 
+	public void update( main.java.com.campfhir.model.Observation entity) 
 	{
 		getCurrentSession().update(entity);
 	}
 
-	public Observation findById(String id) 
+	public  main.java.com.campfhir.model.Observation findById(String id) 
 	{
-		Observation observation = (Observation) getCurrentSession().get(Observation.class, id);
-		return observation; 
+		main.java.com.campfhir.model.Observation resource = (main.java.com.campfhir.model.Observation) getCurrentSession().get(main.java.com.campfhir.model.Observation.class, id);
+		return resource; 
 	}
-
-	public void delete(Observation entity) 
+	
+	public void delete(main.java.com.campfhir.model.Observation entity) 
 	{
 		getCurrentSession().delete(entity);
 	}
 
 	@SuppressWarnings("unchecked")
 	public ScrollableResults findAll() 
-	{		
-		ScrollableResults o = getCurrentSession().createQuery("FROM Observation")
-			    .scroll(ScrollMode.FORWARD_ONLY);
-		return o;
-	}
-
-	@SuppressWarnings("unchecked")
-	public ScrollableResults findAllLab() 
-	{		
-		ScrollableResults labs = getCurrentSession().createQuery("FROM Lab")
+	{
+		return getCurrentSession().createQuery("FROM Observation")
 				.setReadOnly(true)
-		        .setCacheable(true)
-			    .scroll(ScrollMode.FORWARD_ONLY);
-		return labs;
-	}
 
-	@SuppressWarnings("unchecked")
-	public ScrollableResults findAllVital() 
-	{		
-		ScrollableResults vitals = getCurrentSession().createQuery("FROM Vital")
-				.setReadOnly(true)
 		        .setCacheable(true)
-			    .scroll(ScrollMode.FORWARD_ONLY);
-		return vitals;
+		    .scroll(ScrollMode.FORWARD_ONLY);
 	}
 	
-	public void deleteAll() {
-		// TODO Auto-generated method stub
-		
+	public ScrollableResults findAll(int start, int max) 
+	{
+		ScrollableResults resources = getCurrentSession().createQuery("FROM Observation")
+				.setFirstResult(start)
+				.setMaxResults(max)
+				.setReadOnly(true)
+		        .setCacheable(true)
+		    .scroll(ScrollMode.FORWARD_ONLY);
+		return resources;
 	}
 
+
 }
+

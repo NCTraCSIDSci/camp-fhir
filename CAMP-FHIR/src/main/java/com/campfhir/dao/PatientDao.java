@@ -1,11 +1,11 @@
+//// default package
 package main.java.com.campfhir.dao;
+// Generated on Jun 6, 2022, 11:02:34 AM 
+
 
 import java.io.IOException;
-
-
 import javax.xml.parsers.ParserConfigurationException;
-
-
+import main.java.utils.HibernateBaseDB;
 import org.hibernate.ScrollMode;
 import org.hibernate.ScrollableResults;
 import org.hibernate.Session;
@@ -15,42 +15,35 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.xml.sax.SAXException;
 
-import main.java.com.campfhir.model.Patient;
-
-import main.java.utils.HibernateBaseDB;
-
 /**
-*
-* @author  James Champion
-* @version 1.0
-* @since   2019-02-08 
-*/
-public class PatientDao implements PatientDaoInterface<Patient, String> 
-{
+ *  object for domain model class Patient.
+ * @see .Patient
+ * @author Paul Kovach
+ */
+
+public class PatientDao {
+
 	private Session currentSession;
 	private SessionFactory sessionFactory;
 	
 	private Transaction currentTransaction;
 
 	public PatientDao() {}
-
-	public Session openCurrentSession() 
-			throws ParserConfigurationException, SAXException, IOException 
+	
+    public Session openCurrentSession() throws ParserConfigurationException, SAXException, IOException 
 	{
-		sessionFactory = HibernateBaseDB.getSessionFactory();
+		sessionFactory =  HibernateBaseDB.getSessionFactory();
 		currentSession = sessionFactory.openSession();
 		return currentSession;
 	}
-
-	public Session openCurrentSessionwithTransaction() 
-			throws ParserConfigurationException, SAXException, IOException 
+    
+    public Session openCurrentSessionwithTransaction() throws ParserConfigurationException, SAXException, IOException 
 	{
 		sessionFactory = HibernateBaseDB.getSessionFactory();
 		currentSession = sessionFactory.openSession();
 		currentTransaction = currentSession.beginTransaction();
 		return currentSession;
 	}
-	
 	public void closeCurrentSession() 
 	{
 		currentSession.close();
@@ -61,16 +54,16 @@ public class PatientDao implements PatientDaoInterface<Patient, String>
 		currentTransaction.commit();
 		currentSession.close();
 	}
-	
-	private static SessionFactory getSessionFactory() 
-	{
+    
+    private static SessionFactory getSessionFactory() 
+	{ 
 		Configuration configuration = new Configuration().configure();
 		StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder()
 				.applySettings(configuration.getProperties());
 		SessionFactory sessionFactory = configuration.buildSessionFactory(builder.build());
 		return sessionFactory;
 	}
-
+	
 	public Session getCurrentSession() 
 	{
 		return currentSession;
@@ -91,52 +84,48 @@ public class PatientDao implements PatientDaoInterface<Patient, String>
 		this.currentTransaction = currentTransaction;
 	}
 
-	public void persist(Patient entity) 
+	public void persist( main.java.com.campfhir.model.Patient entity) 
 	{
 		getCurrentSession().save(entity);
 	}
 
-	public void update(Patient entity) 
+	public void update( main.java.com.campfhir.model.Patient entity) 
 	{
 		getCurrentSession().update(entity);
 	}
 
-	public Patient findById(String id) 
+	public  main.java.com.campfhir.model.Patient findById(String id) 
 	{
-		Patient patient = (Patient) getCurrentSession().get(Patient.class, id);
-		return patient; 
+		main.java.com.campfhir.model.Patient resource = (main.java.com.campfhir.model.Patient) getCurrentSession().get(main.java.com.campfhir.model.Patient.class, id);
+		return resource; 
 	}
-
-	public void delete(Patient entity) 
+	
+	public void delete(main.java.com.campfhir.model.Patient entity) 
 	{
 		getCurrentSession().delete(entity);
 	}
 
+	@SuppressWarnings("unchecked")
+	public ScrollableResults findAll() 
+	{
+		return getCurrentSession().createQuery("FROM Patient")
+				.setReadOnly(true)
+
+		        .setCacheable(true)
+		    .scroll(ScrollMode.FORWARD_ONLY);
+	}
+	
 	public ScrollableResults findAll(int start, int max) 
 	{
-		ScrollableResults patients = getCurrentSession().createQuery("FROM Patient order by PNT_IDENTIFIER ASC")
+		ScrollableResults resources = getCurrentSession().createQuery("FROM Patient")
 				.setFirstResult(start)
 				.setMaxResults(max)
 				.setReadOnly(true)
 		        .setCacheable(true)
 		    .scroll(ScrollMode.FORWARD_ONLY);
-
-		return patients;
-	}
-	
-	public ScrollableResults findAll() 
-	{
-		ScrollableResults patients = getCurrentSession().createQuery("FROM Patient")
-				.setReadOnly(true)
-		        .setCacheable(true)
-		    .scroll(ScrollMode.FORWARD_ONLY);
-		
-
-		return patients;
+		return resources;
 	}
 
-	public void deleteAll() 
-	{
 
-	}
 }
+

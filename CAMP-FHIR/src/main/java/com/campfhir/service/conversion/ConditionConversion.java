@@ -10,600 +10,581 @@ public class ConditionConversion
 		/******************** id ********************************************************************************/
 		condition.setId(c.getId());
 
-		/******************** Condition_Abatement ********************************************************************************/
-		if(c.getConditionAbatement() != null) {
-			condition.setAbatement(new org.hl7.fhir.r4.model.StringType(c.getConditionAbatement()));
-		}
-		/******************** Condition_AbatementDateTime ********************************************************************************/
-		if(c.getConditionAbatementDateTime() != null) {
-			condition.setAbatement(new org.hl7.fhir.r4.model.DateTimeType(c.getConditionAbatementDateTime()));
-		}
-
-		if( c.getConditionAbatementPeriodEnd() != null || c.getConditionAbatementPeriodStart() != null ) {
-			org.hl7.fhir.r4.model.Period conditionsetabatementPeriod = new org.hl7.fhir.r4.model.Period();
-			condition.setAbatement(conditionsetabatementPeriod); 
-
-		/******************** Condition_Abatement_Period_End ********************************************************************************/
-		if(c.getConditionAbatementPeriodEnd() != null) {
-			java.text.SimpleDateFormat ConditionAbatementPeriodEndsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date ConditionAbatementPeriodEnddate = ConditionAbatementPeriodEndsdf.parse(c.getConditionAbatementPeriodEnd());
-			conditionsetabatementPeriod.setEnd(ConditionAbatementPeriodEnddate);
-		}
-		/******************** Condition_Abatement_Period_Start ********************************************************************************/
-		if(c.getConditionAbatementPeriodStart() != null) {
-			java.text.SimpleDateFormat ConditionAbatementPeriodStartsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date ConditionAbatementPeriodStartdate = ConditionAbatementPeriodStartsdf.parse(c.getConditionAbatementPeriodStart());
-			conditionsetabatementPeriod.setStart(ConditionAbatementPeriodStartdate);
-		}
-		}
-
-		if( c.getConditionAbatementRangeHighCode() != null || c.getConditionAbatementRangeHighCompartrCode() != null || c.getConditionAbatementRangeHighSystem() != null || c.getConditionAbatementRangeHighUnit() != null || c.getConditionAbatementRangeHighValue() != null || c.getConditionAbatementRangeLowCode() != null || c.getConditionAbatementRangeLowCompartrCode() != null || c.getConditionAbatementRangeLowSystem() != null || c.getConditionAbatementRangeLowUnit() != null || c.getConditionAbatementRangeLowValue() != null ) {
-			org.hl7.fhir.r4.model.Range conditionsetabatementRange = new org.hl7.fhir.r4.model.Range();
-			condition.setAbatement(conditionsetabatementRange);
-
-
-		org.hl7.fhir.r4.model.Quantity conditionsetabatementRangesethigh = new org.hl7.fhir.r4.model.Quantity();
-		conditionsetabatementRange.setHigh(conditionsetabatementRangesethigh);
-
-		/******************** Condition_Abatement_Range_High_Code ********************************************************************************/
-		if(c.getConditionAbatementRangeHighCode() != null) {
-			conditionsetabatementRangesethigh.setCode(c.getConditionAbatementRangeHighCode());
-		}
-
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory conditionsetabatementRangesethighsetcomparatorEnumFactory = new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-
-		/******************** Condition_Abatement_Range_High_Compartr_Code ********************************************************************************/
-		if(c.getConditionAbatementRangeHighCompartrCode() != null) {
-			conditionsetabatementRangesethigh.setComparator(conditionsetabatementRangesethighsetcomparatorEnumFactory.fromCode(c.getConditionAbatementRangeHighCompartrCode()));
-
-		}
-		/******************** Condition_Abatement_Range_High_System ********************************************************************************/
-		if(c.getConditionAbatementRangeHighSystem() != null) {
-			conditionsetabatementRangesethigh.setSystem(c.getConditionAbatementRangeHighSystem());
-		}
-		/******************** Condition_Abatement_Range_High_Unit ********************************************************************************/
-		if(c.getConditionAbatementRangeHighUnit() != null) {
-			conditionsetabatementRangesethigh.setUnit(c.getConditionAbatementRangeHighUnit());
-		}
-		/******************** Condition_Abatement_Range_High_Value ********************************************************************************/
-		if(c.getConditionAbatementRangeHighValue() != null) {
-			conditionsetabatementRangesethigh.setValue(Double.parseDouble((c.getConditionAbatementRangeHighValue())));
-		}
-
-		org.hl7.fhir.r4.model.Quantity conditionsetabatementRangesetlow = new org.hl7.fhir.r4.model.Quantity();
-		conditionsetabatementRange.setLow(conditionsetabatementRangesetlow);
-
-		/******************** Condition_Abatement_Range_Low_Code ********************************************************************************/
-		if(c.getConditionAbatementRangeLowCode() != null) {
-			conditionsetabatementRangesetlow.setCode(c.getConditionAbatementRangeLowCode());
-		}
-
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory conditionsetabatementRangesetlowsetcomparatorEnumFactory = new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-
-		/******************** Condition_Abatement_Range_Low_Compartr_Code ********************************************************************************/
-		if(c.getConditionAbatementRangeLowCompartrCode() != null) {
-			conditionsetabatementRangesetlow.setComparator(conditionsetabatementRangesetlowsetcomparatorEnumFactory.fromCode(c.getConditionAbatementRangeLowCompartrCode()));
-
-		}
-		/******************** Condition_Abatement_Range_Low_System ********************************************************************************/
-		if(c.getConditionAbatementRangeLowSystem() != null) {
-			conditionsetabatementRangesetlow.setSystem(c.getConditionAbatementRangeLowSystem());
-		}
-		/******************** Condition_Abatement_Range_Low_Unit ********************************************************************************/
-		if(c.getConditionAbatementRangeLowUnit() != null) {
-			conditionsetabatementRangesetlow.setUnit(c.getConditionAbatementRangeLowUnit());
-		}
-		/******************** Condition_Abatement_Range_Low_Value ********************************************************************************/
-		if(c.getConditionAbatementRangeLowValue() != null) {
-			conditionsetabatementRangesetlow.setValue(Double.parseDouble((c.getConditionAbatementRangeLowValue())));
-		}
-		}
-		/******************** Condition_AbatementString ********************************************************************************/
-		if(c.getConditionAbatementString() != null) {
-			condition.setAbatement(new org.hl7.fhir.r4.model.StringType(c.getConditionAbatementString()));
-		}
-		/******************** Condition_Asserter ********************************************************************************/
-		if(c.getConditionAsserter() != null) {
-			org.hl7.fhir.r4.model.Reference ConditionAsserterref = new org.hl7.fhir.r4.model.Reference();
-			condition.setAsserter(ConditionAsserterref.setReference(c.getConditionAsserter()));
-		}
-
-		org.hl7.fhir.r4.model.CodeableConcept conditionaddbodysite = condition.addBodySite();
-
-
-		org.hl7.fhir.r4.model.Coding conditionaddbodysiteaddcoding = conditionaddbodysite.addCoding();
-
-		/******************** Condition_BodySite_Coding_Code ********************************************************************************/
-		if(c.getConditionBodySiteCodingCode() != null) {
-			conditionaddbodysiteaddcoding.setCode(c.getConditionBodySiteCodingCode());
-		}
-		/******************** Condition_BodySite_Coding_Display ********************************************************************************/
-		if(c.getConditionBodySiteCodingDisplay() != null) {
-			conditionaddbodysiteaddcoding.setDisplay(c.getConditionBodySiteCodingDisplay());
-		}
-		/******************** Condition_BodySite_Coding_System ********************************************************************************/
-		if(c.getConditionBodySiteCodingSystem() != null) {
-			conditionaddbodysiteaddcoding.setSystem(c.getConditionBodySiteCodingSystem());
-		}
-		/******************** Condition_BodySite_Coding_Usrslt ********************************************************************************/
-		if(c.getConditionBodySiteCodingUsrslt() != null) {
-			conditionaddbodysiteaddcoding.setUserSelected(Boolean.parseBoolean(c.getConditionBodySiteCodingUsrslt()));
-		}
-		/******************** Condition_BodySite_Coding_Version ********************************************************************************/
-		if(c.getConditionBodySiteCodingVersion() != null) {
-			conditionaddbodysiteaddcoding.setVersion(c.getConditionBodySiteCodingVersion());
-		}
-		/******************** Condition_BodySite_Text ********************************************************************************/
-		if(c.getConditionBodySiteText() != null) {
-			conditionaddbodysite.setText(c.getConditionBodySiteText());
-		}
-
-		org.hl7.fhir.r4.model.CodeableConcept conditionaddcategory = condition.addCategory();
-
-
-		org.hl7.fhir.r4.model.Coding conditionaddcategoryaddcoding = conditionaddcategory.addCoding();
-
-		/******************** Condition_Category_Coding_Code ********************************************************************************/
-		if(c.getConditionCategoryCodingCode() != null) {
-			conditionaddcategoryaddcoding.setCode(c.getConditionCategoryCodingCode());
-		}
-		/******************** Condition_Category_Coding_Display ********************************************************************************/
-		if(c.getConditionCategoryCodingDisplay() != null) {
-			conditionaddcategoryaddcoding.setDisplay(c.getConditionCategoryCodingDisplay());
-		}
-		/******************** Condition_Category_Coding_System ********************************************************************************/
-		if(c.getConditionCategoryCodingSystem() != null) {
-			conditionaddcategoryaddcoding.setSystem(c.getConditionCategoryCodingSystem());
-		}
-		/******************** Condition_Category_Coding_Usrslt ********************************************************************************/
-		if(c.getConditionCategoryCodingUsrslt() != null) {
-			conditionaddcategoryaddcoding.setUserSelected(Boolean.parseBoolean(c.getConditionCategoryCodingUsrslt()));
-		}
-		/******************** Condition_Category_Coding_Version ********************************************************************************/
-		if(c.getConditionCategoryCodingVersion() != null) {
-			conditionaddcategoryaddcoding.setVersion(c.getConditionCategoryCodingVersion());
-		}
-		/******************** Condition_Category_Text ********************************************************************************/
-		if(c.getConditionCategoryText() != null) {
-			conditionaddcategory.setText(c.getConditionCategoryText());
-		}
-
-		org.hl7.fhir.r4.model.CodeableConcept conditionsetclinicalstatus = new org.hl7.fhir.r4.model.CodeableConcept();
-		condition.setClinicalStatus(conditionsetclinicalstatus);
-
-
-		org.hl7.fhir.r4.model.Coding conditionsetclinicalstatusaddcoding = conditionsetclinicalstatus.addCoding();
-
-		/******************** Condition_ClinicalStatus_Coding_Code ********************************************************************************/
-		if(c.getConditionClinicalStatusCodingCode() != null) {
-			conditionsetclinicalstatusaddcoding.setCode(c.getConditionClinicalStatusCodingCode());
-		}
-		/******************** Condition_ClinicalStatus_Coding_Display ********************************************************************************/
-		if(c.getConditionClinicalStatusCodingDisplay() != null) {
-			conditionsetclinicalstatusaddcoding.setDisplay(c.getConditionClinicalStatusCodingDisplay());
-		}
-		/******************** Condition_ClinicalStatus_Coding_System ********************************************************************************/
-		if(c.getConditionClinicalStatusCodingSystem() != null) {
-			conditionsetclinicalstatusaddcoding.setSystem(c.getConditionClinicalStatusCodingSystem());
-		}
-		/******************** Condition_ClinicalStatus_Coding_Usrslt ********************************************************************************/
-		if(c.getConditionClinicalStatusCodingUsrslt() != null) {
-			conditionsetclinicalstatusaddcoding.setUserSelected(Boolean.parseBoolean(c.getConditionClinicalStatusCodingUsrslt()));
-		}
-		/******************** Condition_ClinicalStatus_Coding_Version ********************************************************************************/
-		if(c.getConditionClinicalStatusCodingVersion() != null) {
-			conditionsetclinicalstatusaddcoding.setVersion(c.getConditionClinicalStatusCodingVersion());
-		}
-		/******************** Condition_ClinicalStatus_Text ********************************************************************************/
-		if(c.getConditionClinicalStatusText() != null) {
-			conditionsetclinicalstatus.setText(c.getConditionClinicalStatusText());
-		}
-
-		org.hl7.fhir.r4.model.CodeableConcept conditionsetcode = new org.hl7.fhir.r4.model.CodeableConcept();
-		condition.setCode(conditionsetcode);
-
-
-		org.hl7.fhir.r4.model.Coding conditionsetcodeaddcoding = conditionsetcode.addCoding();
-
-		/******************** Condition_Code_Coding_Code ********************************************************************************/
-		if(c.getConditionCodeCodingCode() != null) {
-			conditionsetcodeaddcoding.setCode(c.getConditionCodeCodingCode());
-		}
-		/******************** Condition_Code_Coding_Display ********************************************************************************/
-		if(c.getConditionCodeCodingDisplay() != null) {
-			conditionsetcodeaddcoding.setDisplay(c.getConditionCodeCodingDisplay());
-		}
-		/******************** Condition_Code_Coding_System ********************************************************************************/
-		if(c.getConditionCodeCodingSystem() != null) {
-			conditionsetcodeaddcoding.setSystem(c.getConditionCodeCodingSystem());
-		}
-		/******************** Condition_Code_Coding_Usrslt ********************************************************************************/
-		if(c.getConditionCodeCodingUsrslt() != null) {
-			conditionsetcodeaddcoding.setUserSelected(Boolean.parseBoolean(c.getConditionCodeCodingUsrslt()));
-		}
-		/******************** Condition_Code_Coding_Version ********************************************************************************/
-		if(c.getConditionCodeCodingVersion() != null) {
-			conditionsetcodeaddcoding.setVersion(c.getConditionCodeCodingVersion());
-		}
-		/******************** Condition_Code_Text ********************************************************************************/
-		if(c.getConditionCodeText() != null) {
-			conditionsetcode.setText(c.getConditionCodeText());
-		}
-		/******************** Condition_Enc ********************************************************************************/
-		if(c.getConditionEnc() != null) {
-			org.hl7.fhir.r4.model.Reference ConditionEncref = new org.hl7.fhir.r4.model.Reference();
-			condition.setEncounter(ConditionEncref.setReference(c.getConditionEnc()));
-		}
-
-		org.hl7.fhir.r4.model.Condition.ConditionEvidenceComponent conditionaddevidence = condition.addEvidence();
-
-
-		org.hl7.fhir.r4.model.CodeableConcept conditionaddevidenceaddcode = conditionaddevidence.addCode();
-
-
-		org.hl7.fhir.r4.model.Coding conditionaddevidenceaddcodeaddcoding = conditionaddevidenceaddcode.addCoding();
-
-		/******************** Condition_Evidence_Code_Coding_Code ********************************************************************************/
-		if(c.getConditionEvidenceCodeCodingCode() != null) {
-			conditionaddevidenceaddcodeaddcoding.setCode(c.getConditionEvidenceCodeCodingCode());
-		}
-		/******************** Condition_Evidence_Code_Coding_Display ********************************************************************************/
-		if(c.getConditionEvidenceCodeCodingDisplay() != null) {
-			conditionaddevidenceaddcodeaddcoding.setDisplay(c.getConditionEvidenceCodeCodingDisplay());
-		}
-		/******************** Condition_Evidence_Code_Coding_System ********************************************************************************/
-		if(c.getConditionEvidenceCodeCodingSystem() != null) {
-			conditionaddevidenceaddcodeaddcoding.setSystem(c.getConditionEvidenceCodeCodingSystem());
-		}
-		/******************** Condition_Evidence_Code_Coding_Usrslt ********************************************************************************/
-		if(c.getConditionEvidenceCodeCodingUsrslt() != null) {
-			conditionaddevidenceaddcodeaddcoding.setUserSelected(Boolean.parseBoolean(c.getConditionEvidenceCodeCodingUsrslt()));
-		}
-		/******************** Condition_Evidence_Code_Coding_Version ********************************************************************************/
-		if(c.getConditionEvidenceCodeCodingVersion() != null) {
-			conditionaddevidenceaddcodeaddcoding.setVersion(c.getConditionEvidenceCodeCodingVersion());
-		}
-		/******************** Condition_Evidence_Code_Text ********************************************************************************/
-		if(c.getConditionEvidenceCodeText() != null) {
-			conditionaddevidenceaddcode.setText(c.getConditionEvidenceCodeText());
-		}
-		/******************** Condition_Evidence_Detail ********************************************************************************/
-		if(c.getConditionEvidenceDetail() != null) {
-			org.hl7.fhir.r4.model.Reference ConditionEvidenceDetailref = new org.hl7.fhir.r4.model.Reference();
-			conditionaddevidence.addDetail(ConditionEvidenceDetailref.setReference(c.getConditionEvidenceDetail()));
-		}
-
-		org.hl7.fhir.r4.model.Identifier conditionaddidentifier = condition.addIdentifier();
-
-		/******************** Condition_Id_Assigner ********************************************************************************/
-		if(c.getConditionIdAssigner() != null) {
-			org.hl7.fhir.r4.model.Reference ConditionIdAssignerref = new org.hl7.fhir.r4.model.Reference();
-			conditionaddidentifier.setAssigner(ConditionIdAssignerref.setReference(c.getConditionIdAssigner()));
-		}
-
-		org.hl7.fhir.r4.model.Period conditionaddidentifiersetperiod = new org.hl7.fhir.r4.model.Period();
-		conditionaddidentifier.setPeriod(conditionaddidentifiersetperiod);
-
-		/******************** Condition_Id_Period_End ********************************************************************************/
-		if(c.getConditionIdPeriodEnd() != null) {
-			java.text.SimpleDateFormat ConditionIdPeriodEndsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date ConditionIdPeriodEnddate = ConditionIdPeriodEndsdf.parse(c.getConditionIdPeriodEnd());
-			conditionaddidentifiersetperiod.setEnd(ConditionIdPeriodEnddate);
-		}
-		/******************** Condition_Id_Period_Start ********************************************************************************/
-		if(c.getConditionIdPeriodStart() != null) {
-			java.text.SimpleDateFormat ConditionIdPeriodStartsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date ConditionIdPeriodStartdate = ConditionIdPeriodStartsdf.parse(c.getConditionIdPeriodStart());
-			conditionaddidentifiersetperiod.setStart(ConditionIdPeriodStartdate);
-		}
-		/******************** Condition_Id_System ********************************************************************************/
-		if(c.getConditionIdSystem() != null) {
-			conditionaddidentifier.setSystem(c.getConditionIdSystem());
-		}
-
-		org.hl7.fhir.r4.model.CodeableConcept conditionaddidentifiersettype = new org.hl7.fhir.r4.model.CodeableConcept();
-		conditionaddidentifier.setType(conditionaddidentifiersettype);
-
-
-		org.hl7.fhir.r4.model.Coding conditionaddidentifiersettypeaddcoding = conditionaddidentifiersettype.addCoding();
-
-		/******************** Condition_Id_Type_Coding_Code ********************************************************************************/
-		if(c.getConditionIdTypeCodingCode() != null) {
-			conditionaddidentifiersettypeaddcoding.setCode(c.getConditionIdTypeCodingCode());
-		}
-		/******************** Condition_Id_Type_Coding_Display ********************************************************************************/
-		if(c.getConditionIdTypeCodingDisplay() != null) {
-			conditionaddidentifiersettypeaddcoding.setDisplay(c.getConditionIdTypeCodingDisplay());
-		}
-		/******************** Condition_Id_Type_Coding_System ********************************************************************************/
-		if(c.getConditionIdTypeCodingSystem() != null) {
-			conditionaddidentifiersettypeaddcoding.setSystem(c.getConditionIdTypeCodingSystem());
-		}
-		/******************** Condition_Id_Type_Coding_Usrslt ********************************************************************************/
-		if(c.getConditionIdTypeCodingUsrslt() != null) {
-			conditionaddidentifiersettypeaddcoding.setUserSelected(Boolean.parseBoolean(c.getConditionIdTypeCodingUsrslt()));
-		}
-		/******************** Condition_Id_Type_Coding_Version ********************************************************************************/
-		if(c.getConditionIdTypeCodingVersion() != null) {
-			conditionaddidentifiersettypeaddcoding.setVersion(c.getConditionIdTypeCodingVersion());
-		}
-		/******************** Condition_Id_Type_Text ********************************************************************************/
-		if(c.getConditionIdTypeText() != null) {
-			conditionaddidentifiersettype.setText(c.getConditionIdTypeText());
-		}
-
-		org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory conditionaddidentifiersetuseEnumFactory = new org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory();
-
-		/******************** Condition_Id_Use_Code ********************************************************************************/
-		if(c.getConditionIdUseCode() != null) {
-			conditionaddidentifier.setUse(conditionaddidentifiersetuseEnumFactory.fromCode(c.getConditionIdUseCode()));
-
-		}
-		/******************** Condition_Id_Value ********************************************************************************/
-		if(c.getConditionIdValue() != null) {
-			conditionaddidentifier.setValue(c.getConditionIdValue());
-		}
-
-		org.hl7.fhir.r4.model.Annotation conditionaddnote = condition.addNote();
-
-		/******************** Condition_Note_AuthorReference ********************************************************************************/
-		if(c.getConditionNoteAuthorReference() != null) {
-			org.hl7.fhir.r4.model.Reference ConditionNoteAuthorReferenceref = new org.hl7.fhir.r4.model.Reference();
-			conditionaddnote.setAuthor(ConditionNoteAuthorReferenceref.setReference(c.getConditionNoteAuthorReference()));
-		}
-		/******************** Condition_Note_AuthorString ********************************************************************************/
-		if(c.getConditionNoteAuthorString() != null) {
-			conditionaddnote.setAuthor(new org.hl7.fhir.r4.model.StringType(c.getConditionNoteAuthorString()));
-		}
-		/******************** Condition_Note_Text ********************************************************************************/
-		if(c.getConditionNoteText() != null) {
-			conditionaddnote.setText(c.getConditionNoteText());
-		}
-		/******************** Condition_Note_Time ********************************************************************************/
-		if(c.getConditionNoteTime() != null) {
-			java.text.SimpleDateFormat ConditionNoteTimesdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date ConditionNoteTimedate = ConditionNoteTimesdf.parse(c.getConditionNoteTime());
-			conditionaddnote.setTime(ConditionNoteTimedate);
-		}
-		/******************** Condition_On ********************************************************************************/
-		if(c.getConditionOn() != null) {
-			condition.setOnset(new org.hl7.fhir.r4.model.StringType(c.getConditionOn()));
-		}
-		/******************** Condition_OnDateTime ********************************************************************************/
-		if(c.getConditionOnDateTime() != null) {
-			condition.setOnset(new org.hl7.fhir.r4.model.DateTimeType(c.getConditionOnDateTime()));
-		}
-
-		if( c.getConditionOnPeriodEnd() != null || c.getConditionOnPeriodStart() != null ) {
-			org.hl7.fhir.r4.model.Period conditionsetonsetPeriod = new org.hl7.fhir.r4.model.Period();
-			condition.setOnset(conditionsetonsetPeriod);
-
-		/******************** Condition_On_Period_End ********************************************************************************/
-		if(c.getConditionOnPeriodEnd() != null) {
-			java.text.SimpleDateFormat ConditionOnPeriodEndsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date ConditionOnPeriodEnddate = ConditionOnPeriodEndsdf.parse(c.getConditionOnPeriodEnd());
-			conditionsetonsetPeriod.setEnd(ConditionOnPeriodEnddate);
-		}
-		/******************** Condition_On_Period_Start ********************************************************************************/
-		if(c.getConditionOnPeriodStart() != null) {
-			java.text.SimpleDateFormat ConditionOnPeriodStartsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date ConditionOnPeriodStartdate = ConditionOnPeriodStartsdf.parse(c.getConditionOnPeriodStart());
-			conditionsetonsetPeriod.setStart(ConditionOnPeriodStartdate);
-		}
-		}
-
-		if( c.getConditionOnRangeHighCode() != null || c.getConditionOnRangeHighCompartrCode() != null || c.getConditionOnRangeHighSystem() != null || c.getConditionOnRangeHighUnit() != null || c.getConditionOnRangeHighValue() != null || c.getConditionOnRangeLowCode() != null || c.getConditionOnRangeLowCompartrCode() != null || c.getConditionOnRangeLowSystem() != null || c.getConditionOnRangeLowUnit() != null || c.getConditionOnRangeLowValue() != null ) {
-			org.hl7.fhir.r4.model.Range conditionsetonsetRange = new org.hl7.fhir.r4.model.Range();
-			condition.setOnset(conditionsetonsetRange);
-
-
-		org.hl7.fhir.r4.model.Quantity conditionsetonsetRangesethigh = new org.hl7.fhir.r4.model.Quantity();
-		conditionsetonsetRange.setHigh(conditionsetonsetRangesethigh);
-
-		/******************** Condition_On_Range_High_Code ********************************************************************************/
-		if(c.getConditionOnRangeHighCode() != null) {
-			conditionsetonsetRangesethigh.setCode(c.getConditionOnRangeHighCode());
-		}
-
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory conditionsetonsetRangesethighsetcomparatorEnumFactory = new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-
-		/******************** Condition_On_Range_High_Compartr_Code ********************************************************************************/
-		if(c.getConditionOnRangeHighCompartrCode() != null) {
-			conditionsetonsetRangesethigh.setComparator(conditionsetonsetRangesethighsetcomparatorEnumFactory.fromCode(c.getConditionOnRangeHighCompartrCode()));
-
-		}
-		/******************** Condition_On_Range_High_System ********************************************************************************/
-		if(c.getConditionOnRangeHighSystem() != null) {
-			conditionsetonsetRangesethigh.setSystem(c.getConditionOnRangeHighSystem());
-		}
-		/******************** Condition_On_Range_High_Unit ********************************************************************************/
-		if(c.getConditionOnRangeHighUnit() != null) {
-			conditionsetonsetRangesethigh.setUnit(c.getConditionOnRangeHighUnit());
-		}
-		/******************** Condition_On_Range_High_Value ********************************************************************************/
-		if(c.getConditionOnRangeHighValue() != null) {
-			conditionsetonsetRangesethigh.setValue(Double.parseDouble((c.getConditionOnRangeHighValue())));
-		}
-
-		org.hl7.fhir.r4.model.Quantity conditionsetonsetRangesetlow = new org.hl7.fhir.r4.model.Quantity();
-		conditionsetonsetRange.setLow(conditionsetonsetRangesetlow);
-
-		/******************** Condition_On_Range_Low_Code ********************************************************************************/
-		if(c.getConditionOnRangeLowCode() != null) {
-			conditionsetonsetRangesetlow.setCode(c.getConditionOnRangeLowCode());
-		}
-
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory conditionsetonsetRangesetlowsetcomparatorEnumFactory = new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-
-		/******************** Condition_On_Range_Low_Compartr_Code ********************************************************************************/
-		if(c.getConditionOnRangeLowCompartrCode() != null) {
-			conditionsetonsetRangesetlow.setComparator(conditionsetonsetRangesetlowsetcomparatorEnumFactory.fromCode(c.getConditionOnRangeLowCompartrCode()));
-
-		}
-		/******************** Condition_On_Range_Low_System ********************************************************************************/
-		if(c.getConditionOnRangeLowSystem() != null) {
-			conditionsetonsetRangesetlow.setSystem(c.getConditionOnRangeLowSystem());
-		}
-		/******************** Condition_On_Range_Low_Unit ********************************************************************************/
-		if(c.getConditionOnRangeLowUnit() != null) {
-			conditionsetonsetRangesetlow.setUnit(c.getConditionOnRangeLowUnit());
-		}
-		/******************** Condition_On_Range_Low_Value ********************************************************************************/
-		if(c.getConditionOnRangeLowValue() != null) {
-			conditionsetonsetRangesetlow.setValue(Double.parseDouble((c.getConditionOnRangeLowValue())));
-		}
-		}
-		/******************** Condition_OnString ********************************************************************************/
-		if(c.getConditionOnString() != null) {
-			condition.setOnset(new org.hl7.fhir.r4.model.StringType(c.getConditionOnString()));
-		}
-		/******************** Condition_RecordedDate ********************************************************************************/
-		if(c.getConditionRecordedDate() != null) {
-			java.text.SimpleDateFormat ConditionRecordedDatesdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date ConditionRecordedDatedate = ConditionRecordedDatesdf.parse(c.getConditionRecordedDate());
-			condition.setRecordedDate(ConditionRecordedDatedate);
-		}
-		/******************** Condition_Recorder ********************************************************************************/
-		if(c.getConditionRecorder() != null) {
-			org.hl7.fhir.r4.model.Reference ConditionRecorderref = new org.hl7.fhir.r4.model.Reference();
-			condition.setRecorder(ConditionRecorderref.setReference(c.getConditionRecorder()));
-		}
-
-		org.hl7.fhir.r4.model.CodeableConcept conditionsetseverity = new org.hl7.fhir.r4.model.CodeableConcept();
-		condition.setSeverity(conditionsetseverity);
-
-
-		org.hl7.fhir.r4.model.Coding conditionsetseverityaddcoding = conditionsetseverity.addCoding();
-
-		/******************** Condition_Severity_Coding_Code ********************************************************************************/
-		if(c.getConditionSeverityCodingCode() != null) {
-			conditionsetseverityaddcoding.setCode(c.getConditionSeverityCodingCode());
-		}
-		/******************** Condition_Severity_Coding_Display ********************************************************************************/
-		if(c.getConditionSeverityCodingDisplay() != null) {
-			conditionsetseverityaddcoding.setDisplay(c.getConditionSeverityCodingDisplay());
-		}
-		/******************** Condition_Severity_Coding_System ********************************************************************************/
-		if(c.getConditionSeverityCodingSystem() != null) {
-			conditionsetseverityaddcoding.setSystem(c.getConditionSeverityCodingSystem());
-		}
-		/******************** Condition_Severity_Coding_Usrslt ********************************************************************************/
-		if(c.getConditionSeverityCodingUsrslt() != null) {
-			conditionsetseverityaddcoding.setUserSelected(Boolean.parseBoolean(c.getConditionSeverityCodingUsrslt()));
-		}
-		/******************** Condition_Severity_Coding_Version ********************************************************************************/
-		if(c.getConditionSeverityCodingVersion() != null) {
-			conditionsetseverityaddcoding.setVersion(c.getConditionSeverityCodingVersion());
-		}
-		/******************** Condition_Severity_Text ********************************************************************************/
-		if(c.getConditionSeverityText() != null) {
-			conditionsetseverity.setText(c.getConditionSeverityText());
-		}
-
-		org.hl7.fhir.r4.model.Condition.ConditionStageComponent conditionaddstage = condition.addStage();
-
-		/******************** Condition_Stage_Assessment ********************************************************************************/
-		if(c.getConditionStageAssessment() != null) {
-			org.hl7.fhir.r4.model.Reference ConditionStageAssessmentref = new org.hl7.fhir.r4.model.Reference();
-			conditionaddstage.addAssessment(ConditionStageAssessmentref.setReference(c.getConditionStageAssessment()));
-		}
-
-		org.hl7.fhir.r4.model.CodeableConcept conditionaddstagesetsummary = new org.hl7.fhir.r4.model.CodeableConcept();
-		conditionaddstage.setSummary(conditionaddstagesetsummary);
-
-
-		org.hl7.fhir.r4.model.Coding conditionaddstagesetsummaryaddcoding = conditionaddstagesetsummary.addCoding();
-
-		/******************** Condition_Stage_Summary_Coding_Code ********************************************************************************/
-		if(c.getConditionStageSummaryCodingCode() != null) {
-			conditionaddstagesetsummaryaddcoding.setCode(c.getConditionStageSummaryCodingCode());
-		}
-		/******************** Condition_Stage_Summary_Coding_Display ********************************************************************************/
-		if(c.getConditionStageSummaryCodingDisplay() != null) {
-			conditionaddstagesetsummaryaddcoding.setDisplay(c.getConditionStageSummaryCodingDisplay());
-		}
-		/******************** Condition_Stage_Summary_Coding_System ********************************************************************************/
-		if(c.getConditionStageSummaryCodingSystem() != null) {
-			conditionaddstagesetsummaryaddcoding.setSystem(c.getConditionStageSummaryCodingSystem());
-		}
-		/******************** Condition_Stage_Summary_Coding_Usrslt ********************************************************************************/
-		if(c.getConditionStageSummaryCodingUsrslt() != null) {
-			conditionaddstagesetsummaryaddcoding.setUserSelected(Boolean.parseBoolean(c.getConditionStageSummaryCodingUsrslt()));
-		}
-		/******************** Condition_Stage_Summary_Coding_Version ********************************************************************************/
-		if(c.getConditionStageSummaryCodingVersion() != null) {
-			conditionaddstagesetsummaryaddcoding.setVersion(c.getConditionStageSummaryCodingVersion());
-		}
-		/******************** Condition_Stage_Summary_Text ********************************************************************************/
-		if(c.getConditionStageSummaryText() != null) {
-			conditionaddstagesetsummary.setText(c.getConditionStageSummaryText());
-		}
-
-		org.hl7.fhir.r4.model.CodeableConcept conditionaddstagesettype = new org.hl7.fhir.r4.model.CodeableConcept();
-		conditionaddstage.setType(conditionaddstagesettype);
-
-
-		org.hl7.fhir.r4.model.Coding conditionaddstagesettypeaddcoding = conditionaddstagesettype.addCoding();
-
-		/******************** Condition_Stage_Type_Coding_Code ********************************************************************************/
-		if(c.getConditionStageTypeCodingCode() != null) {
-			conditionaddstagesettypeaddcoding.setCode(c.getConditionStageTypeCodingCode());
-		}
-		/******************** Condition_Stage_Type_Coding_Display ********************************************************************************/
-		if(c.getConditionStageTypeCodingDisplay() != null) {
-			conditionaddstagesettypeaddcoding.setDisplay(c.getConditionStageTypeCodingDisplay());
-		}
-		/******************** Condition_Stage_Type_Coding_System ********************************************************************************/
-		if(c.getConditionStageTypeCodingSystem() != null) {
-			conditionaddstagesettypeaddcoding.setSystem(c.getConditionStageTypeCodingSystem());
-		}
-		/******************** Condition_Stage_Type_Coding_Usrslt ********************************************************************************/
-		if(c.getConditionStageTypeCodingUsrslt() != null) {
-			conditionaddstagesettypeaddcoding.setUserSelected(Boolean.parseBoolean(c.getConditionStageTypeCodingUsrslt()));
-		}
-		/******************** Condition_Stage_Type_Coding_Version ********************************************************************************/
-		if(c.getConditionStageTypeCodingVersion() != null) {
-			conditionaddstagesettypeaddcoding.setVersion(c.getConditionStageTypeCodingVersion());
-		}
-		/******************** Condition_Stage_Type_Text ********************************************************************************/
-		if(c.getConditionStageTypeText() != null) {
-			conditionaddstagesettype.setText(c.getConditionStageTypeText());
-		}
-		/******************** Condition_Subject ********************************************************************************/
-		if(c.getConditionSubject() != null) {
-			org.hl7.fhir.r4.model.Reference ConditionSubjectref = new org.hl7.fhir.r4.model.Reference();
-			condition.setSubject(ConditionSubjectref.setReference(c.getConditionSubject()));
-		}
-
-		org.hl7.fhir.r4.model.CodeableConcept conditionsetverificationstatus = new org.hl7.fhir.r4.model.CodeableConcept();
-		condition.setVerificationStatus(conditionsetverificationstatus);
-
-
-		org.hl7.fhir.r4.model.Coding conditionsetverificationstatusaddcoding = conditionsetverificationstatus.addCoding();
-
-		/******************** Condition_VerificationStatus_Coding_Code ********************************************************************************/
-		if(c.getConditionVerificationStatusCodingCode() != null) {
-			conditionsetverificationstatusaddcoding.setCode(c.getConditionVerificationStatusCodingCode());
-		}
-		/******************** Condition_VerificationStatus_Coding_Display ********************************************************************************/
-		if(c.getConditionVerificationStatusCodingDisplay() != null) {
-			conditionsetverificationstatusaddcoding.setDisplay(c.getConditionVerificationStatusCodingDisplay());
-		}
-		/******************** Condition_VerificationStatus_Coding_System ********************************************************************************/
-		if(c.getConditionVerificationStatusCodingSystem() != null) {
-			conditionsetverificationstatusaddcoding.setSystem(c.getConditionVerificationStatusCodingSystem());
-		}
-		/******************** Condition_VerificationStatus_Coding_Usrslt ********************************************************************************/
-		if(c.getConditionVerificationStatusCodingUsrslt() != null) {
-			conditionsetverificationstatusaddcoding.setUserSelected(Boolean.parseBoolean(c.getConditionVerificationStatusCodingUsrslt()));
-		}
-		/******************** Condition_VerificationStatus_Coding_Version ********************************************************************************/
-		if(c.getConditionVerificationStatusCodingVersion() != null) {
-			conditionsetverificationstatusaddcoding.setVersion(c.getConditionVerificationStatusCodingVersion());
-		}
-		/******************** Condition_VerificationStatus_Text ********************************************************************************/
-		if(c.getConditionVerificationStatusText() != null) {
-			conditionsetverificationstatus.setText(c.getConditionVerificationStatusText());
+		/******************** conditionabatementage ********************************************************************************/
+		org.hl7.fhir.r4.model.Age conditionabatementage =  new org.hl7.fhir.r4.model.Age();
+		condition.setAbatement(conditionabatementage);
+
+		/******************** Cndtn_AbatementDtTimeTyp ********************************************************************************/
+		if(c.getCndtnAbatementDtTimeTyp() != null) {
+			condition.setAbatement( new org.hl7.fhir.r4.model.DateTimeType(c.getCndtnAbatementDtTimeTyp()));
+		}
+		/******************** conditionabatementperiod ********************************************************************************/
+		org.hl7.fhir.r4.model.Period conditionabatementperiod =  new org.hl7.fhir.r4.model.Period();
+		condition.setAbatement(conditionabatementperiod);
+
+		/******************** Cndtn_AbatementPrd_End ********************************************************************************/
+		if(c.getCndtnAbatementPrdEnd() != null) {
+			java.text.SimpleDateFormat Cndtn_AbatementPrd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Cndtn_AbatementPrd_Enddate = Cndtn_AbatementPrd_Endsdf.parse(c.getCndtnAbatementPrdEnd());
+			conditionabatementperiod.setEnd(Cndtn_AbatementPrd_Enddate);
+		}
+		/******************** Cndtn_AbatementPrd_Strt ********************************************************************************/
+		if(c.getCndtnAbatementPrdStrt() != null) {
+			java.text.SimpleDateFormat Cndtn_AbatementPrd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Cndtn_AbatementPrd_Strtdate = Cndtn_AbatementPrd_Strtsdf.parse(c.getCndtnAbatementPrdStrt());
+			conditionabatementperiod.setStart(Cndtn_AbatementPrd_Strtdate);
+		}
+		/******************** conditionabatementrange ********************************************************************************/
+		org.hl7.fhir.r4.model.Range conditionabatementrange =  new org.hl7.fhir.r4.model.Range();
+		condition.setAbatement(conditionabatementrange);
+
+		/******************** conditionabatementrangehigh ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity conditionabatementrangehigh =  new org.hl7.fhir.r4.model.Quantity();
+		conditionabatementrange.setHigh(conditionabatementrangehigh);
+
+		/******************** Cndtn_AbatementRng_Hi_Cd ********************************************************************************/
+		if(c.getCndtnAbatementRngHiCd() != null) {
+			conditionabatementrangehigh.setCode(c.getCndtnAbatementRngHiCd());
+		}
+		/******************** conditionabatementrangehighcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory conditionabatementrangehighcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		conditionabatementrangehigh.setComparator(conditionabatementrangehighcomparator.fromCode(c.getCndtnAbatementRngHiCmprtr()));
+
+		/******************** Cndtn_AbatementRng_Hi_Sys ********************************************************************************/
+		if(c.getCndtnAbatementRngHiSys() != null) {
+			conditionabatementrangehigh.setSystem(c.getCndtnAbatementRngHiSys());
+		}
+		/******************** Cndtn_AbatementRng_Hi_Unt ********************************************************************************/
+		if(c.getCndtnAbatementRngHiUnt() != null) {
+			conditionabatementrangehigh.setUnit(c.getCndtnAbatementRngHiUnt());
+		}
+		/******************** Cndtn_AbatementRng_Hi_Vl ********************************************************************************/
+		if(c.getCndtnAbatementRngHiVl() != null) {
+			conditionabatementrangehigh.setValue(Double.parseDouble((c.getCndtnAbatementRngHiVl())));
+		}
+		/******************** conditionabatementrangelow ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity conditionabatementrangelow =  new org.hl7.fhir.r4.model.Quantity();
+		conditionabatementrange.setLow(conditionabatementrangelow);
+
+		/******************** Cndtn_AbatementRng_Lw_Cd ********************************************************************************/
+		if(c.getCndtnAbatementRngLwCd() != null) {
+			conditionabatementrangelow.setCode(c.getCndtnAbatementRngLwCd());
+		}
+		/******************** conditionabatementrangelowcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory conditionabatementrangelowcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		conditionabatementrangelow.setComparator(conditionabatementrangelowcomparator.fromCode(c.getCndtnAbatementRngLwCmprtr()));
+
+		/******************** Cndtn_AbatementRng_Lw_Sys ********************************************************************************/
+		if(c.getCndtnAbatementRngLwSys() != null) {
+			conditionabatementrangelow.setSystem(c.getCndtnAbatementRngLwSys());
+		}
+		/******************** Cndtn_AbatementRng_Lw_Unt ********************************************************************************/
+		if(c.getCndtnAbatementRngLwUnt() != null) {
+			conditionabatementrangelow.setUnit(c.getCndtnAbatementRngLwUnt());
+		}
+		/******************** Cndtn_AbatementRng_Lw_Vl ********************************************************************************/
+		if(c.getCndtnAbatementRngLwVl() != null) {
+			conditionabatementrangelow.setValue(Double.parseDouble((c.getCndtnAbatementRngLwVl())));
+		}
+		/******************** Cndtn_AbatementStrgTyp ********************************************************************************/
+		if(c.getCndtnAbatementStrgTyp() != null) {
+			condition.setAbatement( new org.hl7.fhir.r4.model.StringType(c.getCndtnAbatementStrgTyp()));
+		}
+		/******************** Cndtn_Asserter ********************************************************************************/
+		if(c.getCndtnAsserter() != null) {
+			condition.setAsserter( new org.hl7.fhir.r4.model.Reference(c.getCndtnAsserter()));
+		}
+		/******************** conditionbodysite ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept conditionbodysite =  new org.hl7.fhir.r4.model.CodeableConcept();
+		condition.addBodySite(conditionbodysite);
+
+		/******************** conditionbodysitecoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding conditionbodysitecoding =  new org.hl7.fhir.r4.model.Coding();
+		conditionbodysite.addCoding(conditionbodysitecoding);
+
+		/******************** Cndtn_BodySite_Cdg_Cd ********************************************************************************/
+		if(c.getCndtnBodySiteCdgCd() != null) {
+			conditionbodysitecoding.setCode(c.getCndtnBodySiteCdgCd());
+		}
+		/******************** Cndtn_BodySite_Cdg_Dsply ********************************************************************************/
+		if(c.getCndtnBodySiteCdgDsply() != null) {
+			conditionbodysitecoding.setDisplay(c.getCndtnBodySiteCdgDsply());
+		}
+		/******************** Cndtn_BodySite_Cdg_Sys ********************************************************************************/
+		if(c.getCndtnBodySiteCdgSys() != null) {
+			conditionbodysitecoding.setSystem(c.getCndtnBodySiteCdgSys());
+		}
+		/******************** Cndtn_BodySite_Cdg_UsrSltd ********************************************************************************/
+		if(c.getCndtnBodySiteCdgUsrSltd() != null) {
+			conditionbodysitecoding.setUserSelected(Boolean.parseBoolean(c.getCndtnBodySiteCdgUsrSltd()));
+		}
+		/******************** Cndtn_BodySite_Cdg_Vrsn ********************************************************************************/
+		if(c.getCndtnBodySiteCdgVrsn() != null) {
+			conditionbodysitecoding.setVersion(c.getCndtnBodySiteCdgVrsn());
+		}
+		/******************** Cndtn_BodySite_Txt ********************************************************************************/
+		if(c.getCndtnBodySiteTxt() != null) {
+			conditionbodysite.setText(c.getCndtnBodySiteTxt());
+		}
+		/******************** conditioncategory ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept conditioncategory =  new org.hl7.fhir.r4.model.CodeableConcept();
+		condition.addCategory(conditioncategory);
+
+		/******************** conditioncategorycoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding conditioncategorycoding =  new org.hl7.fhir.r4.model.Coding();
+		conditioncategory.addCoding(conditioncategorycoding);
+
+		/******************** Cndtn_Ctgry_Cdg_Cd ********************************************************************************/
+		if(c.getCndtnCtgryCdgCd() != null) {
+			conditioncategorycoding.setCode(c.getCndtnCtgryCdgCd());
+		}
+		/******************** Cndtn_Ctgry_Cdg_Dsply ********************************************************************************/
+		if(c.getCndtnCtgryCdgDsply() != null) {
+			conditioncategorycoding.setDisplay(c.getCndtnCtgryCdgDsply());
+		}
+		/******************** Cndtn_Ctgry_Cdg_Sys ********************************************************************************/
+		if(c.getCndtnCtgryCdgSys() != null) {
+			conditioncategorycoding.setSystem(c.getCndtnCtgryCdgSys());
+		}
+		/******************** Cndtn_Ctgry_Cdg_UsrSltd ********************************************************************************/
+		if(c.getCndtnCtgryCdgUsrSltd() != null) {
+			conditioncategorycoding.setUserSelected(Boolean.parseBoolean(c.getCndtnCtgryCdgUsrSltd()));
+		}
+		/******************** Cndtn_Ctgry_Cdg_Vrsn ********************************************************************************/
+		if(c.getCndtnCtgryCdgVrsn() != null) {
+			conditioncategorycoding.setVersion(c.getCndtnCtgryCdgVrsn());
+		}
+		/******************** Cndtn_Ctgry_Txt ********************************************************************************/
+		if(c.getCndtnCtgryTxt() != null) {
+			conditioncategory.setText(c.getCndtnCtgryTxt());
+		}
+		/******************** conditionclinicalstatus ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept conditionclinicalstatus =  new org.hl7.fhir.r4.model.CodeableConcept();
+		condition.setClinicalStatus(conditionclinicalstatus);
+
+		/******************** conditionclinicalstatuscoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding conditionclinicalstatuscoding =  new org.hl7.fhir.r4.model.Coding();
+		conditionclinicalstatus.addCoding(conditionclinicalstatuscoding);
+
+		/******************** Cndtn_ClnclSts_Cdg_Cd ********************************************************************************/
+		if(c.getCndtnClnclStsCdgCd() != null) {
+			conditionclinicalstatuscoding.setCode(c.getCndtnClnclStsCdgCd());
+		}
+		/******************** Cndtn_ClnclSts_Cdg_Dsply ********************************************************************************/
+		if(c.getCndtnClnclStsCdgDsply() != null) {
+			conditionclinicalstatuscoding.setDisplay(c.getCndtnClnclStsCdgDsply());
+		}
+		/******************** Cndtn_ClnclSts_Cdg_Sys ********************************************************************************/
+		if(c.getCndtnClnclStsCdgSys() != null) {
+			conditionclinicalstatuscoding.setSystem(c.getCndtnClnclStsCdgSys());
+		}
+		/******************** Cndtn_ClnclSts_Cdg_UsrSltd ********************************************************************************/
+		if(c.getCndtnClnclStsCdgUsrSltd() != null) {
+			conditionclinicalstatuscoding.setUserSelected(Boolean.parseBoolean(c.getCndtnClnclStsCdgUsrSltd()));
+		}
+		/******************** Cndtn_ClnclSts_Cdg_Vrsn ********************************************************************************/
+		if(c.getCndtnClnclStsCdgVrsn() != null) {
+			conditionclinicalstatuscoding.setVersion(c.getCndtnClnclStsCdgVrsn());
+		}
+		/******************** Cndtn_ClnclSts_Txt ********************************************************************************/
+		if(c.getCndtnClnclStsTxt() != null) {
+			conditionclinicalstatus.setText(c.getCndtnClnclStsTxt());
+		}
+		/******************** conditioncode ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept conditioncode =  new org.hl7.fhir.r4.model.CodeableConcept();
+		condition.setCode(conditioncode);
+
+		/******************** conditioncodecoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding conditioncodecoding =  new org.hl7.fhir.r4.model.Coding();
+		conditioncode.addCoding(conditioncodecoding);
+
+		/******************** Cndtn_Cd_Cdg_Cd ********************************************************************************/
+		if(c.getCndtnCdCdgCd() != null) {
+			conditioncodecoding.setCode(c.getCndtnCdCdgCd());
+		}
+		/******************** Cndtn_Cd_Cdg_Dsply ********************************************************************************/
+		if(c.getCndtnCdCdgDsply() != null) {
+			conditioncodecoding.setDisplay(c.getCndtnCdCdgDsply());
+		}
+		/******************** Cndtn_Cd_Cdg_Sys ********************************************************************************/
+		if(c.getCndtnCdCdgSys() != null) {
+			conditioncodecoding.setSystem(c.getCndtnCdCdgSys());
+		}
+		/******************** Cndtn_Cd_Cdg_UsrSltd ********************************************************************************/
+		if(c.getCndtnCdCdgUsrSltd() != null) {
+			conditioncodecoding.setUserSelected(Boolean.parseBoolean(c.getCndtnCdCdgUsrSltd()));
+		}
+		/******************** Cndtn_Cd_Cdg_Vrsn ********************************************************************************/
+		if(c.getCndtnCdCdgVrsn() != null) {
+			conditioncodecoding.setVersion(c.getCndtnCdCdgVrsn());
+		}
+		/******************** Cndtn_Cd_Txt ********************************************************************************/
+		if(c.getCndtnCdTxt() != null) {
+			conditioncode.setText(c.getCndtnCdTxt());
+		}
+		/******************** Cndtn_Enc ********************************************************************************/
+		if(c.getCndtnEnc() != null) {
+			condition.setEncounter( new org.hl7.fhir.r4.model.Reference(c.getCndtnEnc()));
+		}
+		/******************** conditionevidence ********************************************************************************/
+		org.hl7.fhir.r4.model.Condition.ConditionEvidenceComponent conditionevidence =  new org.hl7.fhir.r4.model.Condition.ConditionEvidenceComponent();
+		condition.addEvidence(conditionevidence);
+
+		/******************** conditionevidencecode ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept conditionevidencecode =  new org.hl7.fhir.r4.model.CodeableConcept();
+		conditionevidence.addCode(conditionevidencecode);
+
+		/******************** conditionevidencecodecoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding conditionevidencecodecoding =  new org.hl7.fhir.r4.model.Coding();
+		conditionevidencecode.addCoding(conditionevidencecodecoding);
+
+		/******************** Cndtn_Evdnce_Cd_Cdg_Cd ********************************************************************************/
+		if(c.getCndtnEvdnceCdCdgCd() != null) {
+			conditionevidencecodecoding.setCode(c.getCndtnEvdnceCdCdgCd());
+		}
+		/******************** Cndtn_Evdnce_Cd_Cdg_Dsply ********************************************************************************/
+		if(c.getCndtnEvdnceCdCdgDsply() != null) {
+			conditionevidencecodecoding.setDisplay(c.getCndtnEvdnceCdCdgDsply());
+		}
+		/******************** Cndtn_Evdnce_Cd_Cdg_Sys ********************************************************************************/
+		if(c.getCndtnEvdnceCdCdgSys() != null) {
+			conditionevidencecodecoding.setSystem(c.getCndtnEvdnceCdCdgSys());
+		}
+		/******************** Cndtn_Evdnce_Cd_Cdg_UsrSltd ********************************************************************************/
+		if(c.getCndtnEvdnceCdCdgUsrSltd() != null) {
+			conditionevidencecodecoding.setUserSelected(Boolean.parseBoolean(c.getCndtnEvdnceCdCdgUsrSltd()));
+		}
+		/******************** Cndtn_Evdnce_Cd_Cdg_Vrsn ********************************************************************************/
+		if(c.getCndtnEvdnceCdCdgVrsn() != null) {
+			conditionevidencecodecoding.setVersion(c.getCndtnEvdnceCdCdgVrsn());
+		}
+		/******************** Cndtn_Evdnce_Cd_Txt ********************************************************************************/
+		if(c.getCndtnEvdnceCdTxt() != null) {
+			conditionevidencecode.setText(c.getCndtnEvdnceCdTxt());
+		}
+		/******************** Cndtn_Evdnce_Dtl ********************************************************************************/
+		if(c.getCndtnEvdnceDtl() != null) {
+			conditionevidence.addDetail( new org.hl7.fhir.r4.model.Reference(c.getCndtnEvdnceDtl()));
+		}
+		/******************** conditionidentifier ********************************************************************************/
+		org.hl7.fhir.r4.model.Identifier conditionidentifier =  new org.hl7.fhir.r4.model.Identifier();
+		condition.addIdentifier(conditionidentifier);
+
+		/******************** Cndtn_Id_Assigner ********************************************************************************/
+		if(c.getCndtnIdAssigner() != null) {
+			conditionidentifier.setAssigner( new org.hl7.fhir.r4.model.Reference(c.getCndtnIdAssigner()));
+		}
+		/******************** conditionidentifierperiod ********************************************************************************/
+		org.hl7.fhir.r4.model.Period conditionidentifierperiod =  new org.hl7.fhir.r4.model.Period();
+		conditionidentifier.setPeriod(conditionidentifierperiod);
+
+		/******************** Cndtn_Id_Prd_End ********************************************************************************/
+		if(c.getCndtnIdPrdEnd() != null) {
+			java.text.SimpleDateFormat Cndtn_Id_Prd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Cndtn_Id_Prd_Enddate = Cndtn_Id_Prd_Endsdf.parse(c.getCndtnIdPrdEnd());
+			conditionidentifierperiod.setEnd(Cndtn_Id_Prd_Enddate);
+		}
+		/******************** Cndtn_Id_Prd_Strt ********************************************************************************/
+		if(c.getCndtnIdPrdStrt() != null) {
+			java.text.SimpleDateFormat Cndtn_Id_Prd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Cndtn_Id_Prd_Strtdate = Cndtn_Id_Prd_Strtsdf.parse(c.getCndtnIdPrdStrt());
+			conditionidentifierperiod.setStart(Cndtn_Id_Prd_Strtdate);
+		}
+		/******************** Cndtn_Id_Sys ********************************************************************************/
+		if(c.getCndtnIdSys() != null) {
+			conditionidentifier.setSystem(c.getCndtnIdSys());
+		}
+		/******************** conditionidentifiertype ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept conditionidentifiertype =  new org.hl7.fhir.r4.model.CodeableConcept();
+		conditionidentifier.setType(conditionidentifiertype);
+
+		/******************** conditionidentifiertypecoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding conditionidentifiertypecoding =  new org.hl7.fhir.r4.model.Coding();
+		conditionidentifiertype.addCoding(conditionidentifiertypecoding);
+
+		/******************** Cndtn_Id_Typ_Cdg_Cd ********************************************************************************/
+		if(c.getCndtnIdTypCdgCd() != null) {
+			conditionidentifiertypecoding.setCode(c.getCndtnIdTypCdgCd());
+		}
+		/******************** Cndtn_Id_Typ_Cdg_Dsply ********************************************************************************/
+		if(c.getCndtnIdTypCdgDsply() != null) {
+			conditionidentifiertypecoding.setDisplay(c.getCndtnIdTypCdgDsply());
+		}
+		/******************** Cndtn_Id_Typ_Cdg_Sys ********************************************************************************/
+		if(c.getCndtnIdTypCdgSys() != null) {
+			conditionidentifiertypecoding.setSystem(c.getCndtnIdTypCdgSys());
+		}
+		/******************** Cndtn_Id_Typ_Cdg_UsrSltd ********************************************************************************/
+		if(c.getCndtnIdTypCdgUsrSltd() != null) {
+			conditionidentifiertypecoding.setUserSelected(Boolean.parseBoolean(c.getCndtnIdTypCdgUsrSltd()));
+		}
+		/******************** Cndtn_Id_Typ_Cdg_Vrsn ********************************************************************************/
+		if(c.getCndtnIdTypCdgVrsn() != null) {
+			conditionidentifiertypecoding.setVersion(c.getCndtnIdTypCdgVrsn());
+		}
+		/******************** Cndtn_Id_Typ_Txt ********************************************************************************/
+		if(c.getCndtnIdTypTxt() != null) {
+			conditionidentifiertype.setText(c.getCndtnIdTypTxt());
+		}
+		/******************** conditionidentifieruse ********************************************************************************/
+		org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory conditionidentifieruse =  new org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory();
+		conditionidentifier.setUse(conditionidentifieruse.fromCode(c.getCndtnIdUse()));
+
+		/******************** Cndtn_Id_Vl ********************************************************************************/
+		if(c.getCndtnIdVl() != null) {
+			conditionidentifier.setValue(c.getCndtnIdVl());
+		}
+		/******************** conditionnote ********************************************************************************/
+		org.hl7.fhir.r4.model.Annotation conditionnote =  new org.hl7.fhir.r4.model.Annotation();
+		condition.addNote(conditionnote);
+
+		/******************** Cndtn_Nt_AthrRfrnc ********************************************************************************/
+		if(c.getCndtnNtAthrRfrnc() != null) {
+			conditionnote.setAuthor( new org.hl7.fhir.r4.model.Reference(c.getCndtnNtAthrRfrnc()));
+		}
+		/******************** Cndtn_Nt_AthrStrgTyp ********************************************************************************/
+		if(c.getCndtnNtAthrStrgTyp() != null) {
+			conditionnote.setAuthor( new org.hl7.fhir.r4.model.StringType(c.getCndtnNtAthrStrgTyp()));
+		}
+		/******************** Cndtn_Nt_Txt ********************************************************************************/
+		if(c.getCndtnNtTxt() != null) {
+			conditionnote.setText(c.getCndtnNtTxt());
+		}
+		/******************** Cndtn_Nt_Time ********************************************************************************/
+		if(c.getCndtnNtTime() != null) {
+			java.text.SimpleDateFormat Cndtn_Nt_Timesdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Cndtn_Nt_Timedate = Cndtn_Nt_Timesdf.parse(c.getCndtnNtTime());
+			conditionnote.setTime(Cndtn_Nt_Timedate);
+		}
+		/******************** conditiononage ********************************************************************************/
+		org.hl7.fhir.r4.model.Age conditiononage =  new org.hl7.fhir.r4.model.Age();
+		condition.setOnset(conditiononage);
+
+		/******************** Cndtn_OnDtTimeTyp ********************************************************************************/
+		if(c.getCndtnOnDtTimeTyp() != null) {
+			condition.setOnset( new org.hl7.fhir.r4.model.DateTimeType(c.getCndtnOnDtTimeTyp()));
+		}
+		/******************** conditiononperiod ********************************************************************************/
+		org.hl7.fhir.r4.model.Period conditiononperiod =  new org.hl7.fhir.r4.model.Period();
+		condition.setOnset(conditiononperiod);
+
+		/******************** Cndtn_OnPrd_End ********************************************************************************/
+		if(c.getCndtnOnPrdEnd() != null) {
+			java.text.SimpleDateFormat Cndtn_OnPrd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Cndtn_OnPrd_Enddate = Cndtn_OnPrd_Endsdf.parse(c.getCndtnOnPrdEnd());
+			conditiononperiod.setEnd(Cndtn_OnPrd_Enddate);
+		}
+		/******************** Cndtn_OnPrd_Strt ********************************************************************************/
+		if(c.getCndtnOnPrdStrt() != null) {
+			java.text.SimpleDateFormat Cndtn_OnPrd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Cndtn_OnPrd_Strtdate = Cndtn_OnPrd_Strtsdf.parse(c.getCndtnOnPrdStrt());
+			conditiononperiod.setStart(Cndtn_OnPrd_Strtdate);
+		}
+		/******************** conditiononrange ********************************************************************************/
+		org.hl7.fhir.r4.model.Range conditiononrange =  new org.hl7.fhir.r4.model.Range();
+		condition.setOnset(conditiononrange);
+
+		/******************** conditiononrangehigh ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity conditiononrangehigh =  new org.hl7.fhir.r4.model.Quantity();
+		conditiononrange.setHigh(conditiononrangehigh);
+
+		/******************** Cndtn_OnRng_Hi_Cd ********************************************************************************/
+		if(c.getCndtnOnRngHiCd() != null) {
+			conditiononrangehigh.setCode(c.getCndtnOnRngHiCd());
+		}
+		/******************** conditiononrangehighcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory conditiononrangehighcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		conditiononrangehigh.setComparator(conditiononrangehighcomparator.fromCode(c.getCndtnOnRngHiCmprtr()));
+
+		/******************** Cndtn_OnRng_Hi_Sys ********************************************************************************/
+		if(c.getCndtnOnRngHiSys() != null) {
+			conditiononrangehigh.setSystem(c.getCndtnOnRngHiSys());
+		}
+		/******************** Cndtn_OnRng_Hi_Unt ********************************************************************************/
+		if(c.getCndtnOnRngHiUnt() != null) {
+			conditiononrangehigh.setUnit(c.getCndtnOnRngHiUnt());
+		}
+		/******************** Cndtn_OnRng_Hi_Vl ********************************************************************************/
+		if(c.getCndtnOnRngHiVl() != null) {
+			conditiononrangehigh.setValue(Double.parseDouble((c.getCndtnOnRngHiVl())));
+		}
+		/******************** conditiononrangelow ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity conditiononrangelow =  new org.hl7.fhir.r4.model.Quantity();
+		conditiononrange.setLow(conditiononrangelow);
+
+		/******************** Cndtn_OnRng_Lw_Cd ********************************************************************************/
+		if(c.getCndtnOnRngLwCd() != null) {
+			conditiononrangelow.setCode(c.getCndtnOnRngLwCd());
+		}
+		/******************** conditiononrangelowcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory conditiononrangelowcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		conditiononrangelow.setComparator(conditiononrangelowcomparator.fromCode(c.getCndtnOnRngLwCmprtr()));
+
+		/******************** Cndtn_OnRng_Lw_Sys ********************************************************************************/
+		if(c.getCndtnOnRngLwSys() != null) {
+			conditiononrangelow.setSystem(c.getCndtnOnRngLwSys());
+		}
+		/******************** Cndtn_OnRng_Lw_Unt ********************************************************************************/
+		if(c.getCndtnOnRngLwUnt() != null) {
+			conditiononrangelow.setUnit(c.getCndtnOnRngLwUnt());
+		}
+		/******************** Cndtn_OnRng_Lw_Vl ********************************************************************************/
+		if(c.getCndtnOnRngLwVl() != null) {
+			conditiononrangelow.setValue(Double.parseDouble((c.getCndtnOnRngLwVl())));
+		}
+		/******************** Cndtn_OnStrgTyp ********************************************************************************/
+		if(c.getCndtnOnStrgTyp() != null) {
+			condition.setOnset( new org.hl7.fhir.r4.model.StringType(c.getCndtnOnStrgTyp()));
+		}
+		/******************** Cndtn_RecordedDt ********************************************************************************/
+		if(c.getCndtnRecordedDt() != null) {
+			java.text.SimpleDateFormat Cndtn_RecordedDtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Cndtn_RecordedDtdate = Cndtn_RecordedDtsdf.parse(c.getCndtnRecordedDt());
+			condition.setRecordedDate(Cndtn_RecordedDtdate);
+		}
+		/******************** Cndtn_Recorder ********************************************************************************/
+		if(c.getCndtnRecorder() != null) {
+			condition.setRecorder( new org.hl7.fhir.r4.model.Reference(c.getCndtnRecorder()));
+		}
+		/******************** conditionseverity ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept conditionseverity =  new org.hl7.fhir.r4.model.CodeableConcept();
+		condition.setSeverity(conditionseverity);
+
+		/******************** conditionseveritycoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding conditionseveritycoding =  new org.hl7.fhir.r4.model.Coding();
+		conditionseverity.addCoding(conditionseveritycoding);
+
+		/******************** Cndtn_Severity_Cdg_Cd ********************************************************************************/
+		if(c.getCndtnSeverityCdgCd() != null) {
+			conditionseveritycoding.setCode(c.getCndtnSeverityCdgCd());
+		}
+		/******************** Cndtn_Severity_Cdg_Dsply ********************************************************************************/
+		if(c.getCndtnSeverityCdgDsply() != null) {
+			conditionseveritycoding.setDisplay(c.getCndtnSeverityCdgDsply());
+		}
+		/******************** Cndtn_Severity_Cdg_Sys ********************************************************************************/
+		if(c.getCndtnSeverityCdgSys() != null) {
+			conditionseveritycoding.setSystem(c.getCndtnSeverityCdgSys());
+		}
+		/******************** Cndtn_Severity_Cdg_UsrSltd ********************************************************************************/
+		if(c.getCndtnSeverityCdgUsrSltd() != null) {
+			conditionseveritycoding.setUserSelected(Boolean.parseBoolean(c.getCndtnSeverityCdgUsrSltd()));
+		}
+		/******************** Cndtn_Severity_Cdg_Vrsn ********************************************************************************/
+		if(c.getCndtnSeverityCdgVrsn() != null) {
+			conditionseveritycoding.setVersion(c.getCndtnSeverityCdgVrsn());
+		}
+		/******************** Cndtn_Severity_Txt ********************************************************************************/
+		if(c.getCndtnSeverityTxt() != null) {
+			conditionseverity.setText(c.getCndtnSeverityTxt());
+		}
+		/******************** conditionstage ********************************************************************************/
+		org.hl7.fhir.r4.model.Condition.ConditionStageComponent conditionstage =  new org.hl7.fhir.r4.model.Condition.ConditionStageComponent();
+		condition.addStage(conditionstage);
+
+		/******************** Cndtn_Stage_Assmnt ********************************************************************************/
+		if(c.getCndtnStageAssmnt() != null) {
+			conditionstage.addAssessment( new org.hl7.fhir.r4.model.Reference(c.getCndtnStageAssmnt()));
+		}
+		/******************** conditionstagesummary ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept conditionstagesummary =  new org.hl7.fhir.r4.model.CodeableConcept();
+		conditionstage.setSummary(conditionstagesummary);
+
+		/******************** conditionstagesummarycoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding conditionstagesummarycoding =  new org.hl7.fhir.r4.model.Coding();
+		conditionstagesummary.addCoding(conditionstagesummarycoding);
+
+		/******************** Cndtn_Stage_Summary_Cdg_Cd ********************************************************************************/
+		if(c.getCndtnStageSummaryCdgCd() != null) {
+			conditionstagesummarycoding.setCode(c.getCndtnStageSummaryCdgCd());
+		}
+		/******************** Cndtn_Stage_Summary_Cdg_Dsply ********************************************************************************/
+		if(c.getCndtnStageSummaryCdgDsply() != null) {
+			conditionstagesummarycoding.setDisplay(c.getCndtnStageSummaryCdgDsply());
+		}
+		/******************** Cndtn_Stage_Summary_Cdg_Sys ********************************************************************************/
+		if(c.getCndtnStageSummaryCdgSys() != null) {
+			conditionstagesummarycoding.setSystem(c.getCndtnStageSummaryCdgSys());
+		}
+		/******************** Cndtn_Stage_Summary_Cdg_UsrSltd ********************************************************************************/
+		if(c.getCndtnStageSummaryCdgUsrSltd() != null) {
+			conditionstagesummarycoding.setUserSelected(Boolean.parseBoolean(c.getCndtnStageSummaryCdgUsrSltd()));
+		}
+		/******************** Cndtn_Stage_Summary_Cdg_Vrsn ********************************************************************************/
+		if(c.getCndtnStageSummaryCdgVrsn() != null) {
+			conditionstagesummarycoding.setVersion(c.getCndtnStageSummaryCdgVrsn());
+		}
+		/******************** Cndtn_Stage_Summary_Txt ********************************************************************************/
+		if(c.getCndtnStageSummaryTxt() != null) {
+			conditionstagesummary.setText(c.getCndtnStageSummaryTxt());
+		}
+		/******************** conditionstagetype ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept conditionstagetype =  new org.hl7.fhir.r4.model.CodeableConcept();
+		conditionstage.setType(conditionstagetype);
+
+		/******************** conditionstagetypecoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding conditionstagetypecoding =  new org.hl7.fhir.r4.model.Coding();
+		conditionstagetype.addCoding(conditionstagetypecoding);
+
+		/******************** Cndtn_Stage_Typ_Cdg_Cd ********************************************************************************/
+		if(c.getCndtnStageTypCdgCd() != null) {
+			conditionstagetypecoding.setCode(c.getCndtnStageTypCdgCd());
+		}
+		/******************** Cndtn_Stage_Typ_Cdg_Dsply ********************************************************************************/
+		if(c.getCndtnStageTypCdgDsply() != null) {
+			conditionstagetypecoding.setDisplay(c.getCndtnStageTypCdgDsply());
+		}
+		/******************** Cndtn_Stage_Typ_Cdg_Sys ********************************************************************************/
+		if(c.getCndtnStageTypCdgSys() != null) {
+			conditionstagetypecoding.setSystem(c.getCndtnStageTypCdgSys());
+		}
+		/******************** Cndtn_Stage_Typ_Cdg_UsrSltd ********************************************************************************/
+		if(c.getCndtnStageTypCdgUsrSltd() != null) {
+			conditionstagetypecoding.setUserSelected(Boolean.parseBoolean(c.getCndtnStageTypCdgUsrSltd()));
+		}
+		/******************** Cndtn_Stage_Typ_Cdg_Vrsn ********************************************************************************/
+		if(c.getCndtnStageTypCdgVrsn() != null) {
+			conditionstagetypecoding.setVersion(c.getCndtnStageTypCdgVrsn());
+		}
+		/******************** Cndtn_Stage_Typ_Txt ********************************************************************************/
+		if(c.getCndtnStageTypTxt() != null) {
+			conditionstagetype.setText(c.getCndtnStageTypTxt());
+		}
+		/******************** Cndtn_Sbjct ********************************************************************************/
+		if(c.getCndtnSbjct() != null) {
+			condition.setSubject( new org.hl7.fhir.r4.model.Reference(c.getCndtnSbjct()));
+		}
+		/******************** conditionverificationstatus ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept conditionverificationstatus =  new org.hl7.fhir.r4.model.CodeableConcept();
+		condition.setVerificationStatus(conditionverificationstatus);
+
+		/******************** conditionverificationstatuscoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding conditionverificationstatuscoding =  new org.hl7.fhir.r4.model.Coding();
+		conditionverificationstatus.addCoding(conditionverificationstatuscoding);
+
+		/******************** Cndtn_VrfctnSts_Cdg_Cd ********************************************************************************/
+		if(c.getCndtnVrfctnStsCdgCd() != null) {
+			conditionverificationstatuscoding.setCode(c.getCndtnVrfctnStsCdgCd());
+		}
+		/******************** Cndtn_VrfctnSts_Cdg_Dsply ********************************************************************************/
+		if(c.getCndtnVrfctnStsCdgDsply() != null) {
+			conditionverificationstatuscoding.setDisplay(c.getCndtnVrfctnStsCdgDsply());
+		}
+		/******************** Cndtn_VrfctnSts_Cdg_Sys ********************************************************************************/
+		if(c.getCndtnVrfctnStsCdgSys() != null) {
+			conditionverificationstatuscoding.setSystem(c.getCndtnVrfctnStsCdgSys());
+		}
+		/******************** Cndtn_VrfctnSts_Cdg_UsrSltd ********************************************************************************/
+		if(c.getCndtnVrfctnStsCdgUsrSltd() != null) {
+			conditionverificationstatuscoding.setUserSelected(Boolean.parseBoolean(c.getCndtnVrfctnStsCdgUsrSltd()));
+		}
+		/******************** Cndtn_VrfctnSts_Cdg_Vrsn ********************************************************************************/
+		if(c.getCndtnVrfctnStsCdgVrsn() != null) {
+			conditionverificationstatuscoding.setVersion(c.getCndtnVrfctnStsCdgVrsn());
+		}
+		/******************** Cndtn_VrfctnSts_Txt ********************************************************************************/
+		if(c.getCndtnVrfctnStsTxt() != null) {
+			conditionverificationstatus.setText(c.getCndtnVrfctnStsTxt());
 		}
 		return condition;
 	}

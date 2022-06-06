@@ -1,5 +1,5 @@
 //${pojo.getPackageDeclaration()}
-package main.templateoutput.Dao;
+package main.java.com.campfhir.dao;
 // Generated on ${date} 
 
 <#assign classbody>
@@ -72,23 +72,23 @@ public class ${declarationName}Dao {
 		this.currentTransaction = currentTransaction;
 	}
 
-	public void persist( ${pojo.importType("main.templateoutput.Model.${declarationName}")} entity) 
+	public void persist( ${pojo.importType("main.java.com.campfhir.model.${declarationName}")} entity) 
 	{
 		getCurrentSession().save(entity);
 	}
 
-	public void update( ${pojo.importType("main.templateoutput.Model.${declarationName}")} entity) 
+	public void update( ${pojo.importType("main.java.com.campfhir.model.${declarationName}")} entity) 
 	{
 		getCurrentSession().update(entity);
 	}
 
-	public  ${pojo.importType("main.templateoutput.Model.${declarationName}")} findById(String id) 
+	public  ${pojo.importType("main.java.com.campfhir.model.${declarationName}")} findById(String id) 
 	{
-		${pojo.importType("main.templateoutput.Model.${declarationName}")} resource = (${pojo.importType("main.templateoutput.Model.${declarationName}")}) getCurrentSession().get(${pojo.importType("main.templateoutput.Model.${declarationName}")}.class, id);
+		${pojo.importType("main.java.com.campfhir.model.${declarationName}")} resource = (${pojo.importType("main.java.com.campfhir.model.${declarationName}")}) getCurrentSession().get(${pojo.importType("main.java.com.campfhir.model.${declarationName}")}.class, id);
 		return resource; 
 	}
 	
-	public void delete(${pojo.importType("main.templateoutput.Model.${declarationName}")} entity) 
+	public void delete(${pojo.importType("main.java.com.campfhir.model.${declarationName}")} entity) 
 	{
 		getCurrentSession().delete(entity);
 	}

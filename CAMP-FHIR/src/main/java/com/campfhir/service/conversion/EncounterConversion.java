@@ -12,788 +12,779 @@ public class EncounterConversion
 
 		/******************** Enc_Account ********************************************************************************/
 		if(e.getEncAccount() != null) {
-			org.hl7.fhir.r4.model.Reference EncAccountref = new org.hl7.fhir.r4.model.Reference();
-			encounter.addAccount(EncAccountref.setReference(e.getEncAccount()));
+			encounter.addAccount( new org.hl7.fhir.r4.model.Reference(e.getEncAccount()));
 		}
-		/******************** Enc_Appointment ********************************************************************************/
-		if(e.getEncAppointment() != null) {
-			org.hl7.fhir.r4.model.Reference EncAppointmentref = new org.hl7.fhir.r4.model.Reference();
-			encounter.addAppointment(EncAppointmentref.setReference(e.getEncAppointment()));
+		/******************** Enc_Appmnt ********************************************************************************/
+		if(e.getEncAppmnt() != null) {
+			encounter.addAppointment( new org.hl7.fhir.r4.model.Reference(e.getEncAppmnt()));
 		}
 		/******************** Enc_BasedOn ********************************************************************************/
 		if(e.getEncBasedOn() != null) {
-			org.hl7.fhir.r4.model.Reference EncBasedOnref = new org.hl7.fhir.r4.model.Reference();
-			encounter.addBasedOn(EncBasedOnref.setReference(e.getEncBasedOn()));
+			encounter.addBasedOn( new org.hl7.fhir.r4.model.Reference(e.getEncBasedOn()));
 		}
+		/******************** encounterclasshistory ********************************************************************************/
+		org.hl7.fhir.r4.model.Encounter.ClassHistoryComponent encounterclasshistory =  new org.hl7.fhir.r4.model.Encounter.ClassHistoryComponent();
+		encounter.addClassHistory(encounterclasshistory);
 
-		org.hl7.fhir.r4.model.Encounter.ClassHistoryComponent encounteraddclasshistory = encounter.addClassHistory();
+		/******************** encounterclasshistoryclass_ ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding encounterclasshistoryclass =  new org.hl7.fhir.r4.model.Coding();
+		encounterclasshistory.setClass_(encounterclasshistoryclass);
 
+		/******************** Enc_ClsHis_Cls__Cd ********************************************************************************/
+		if(e.getEncClsHisClsCd() != null) {
+			encounterclasshistoryclass.setCode(e.getEncClsHisClsCd());
+		}
+		/******************** Enc_ClsHis_Cls__Dsply ********************************************************************************/
+		if(e.getEncClsHisClsDsply() != null) {
+			encounterclasshistoryclass.setDisplay(e.getEncClsHisClsDsply());
+		}
+		/******************** Enc_ClsHis_Cls__Sys ********************************************************************************/
+		if(e.getEncClsHisClsSys() != null) {
+			encounterclasshistoryclass.setSystem(e.getEncClsHisClsSys());
+		}
+		/******************** Enc_ClsHis_Cls__UsrSltd ********************************************************************************/
+		if(e.getEncClsHisClsUsrSltd() != null) {
+			encounterclasshistoryclass.setUserSelected(Boolean.parseBoolean(e.getEncClsHisClsUsrSltd()));
+		}
+		/******************** Enc_ClsHis_Cls__Vrsn ********************************************************************************/
+		if(e.getEncClsHisClsVrsn() != null) {
+			encounterclasshistoryclass.setVersion(e.getEncClsHisClsVrsn());
+		}
+		/******************** encounterclasshistoryperiod ********************************************************************************/
+		org.hl7.fhir.r4.model.Period encounterclasshistoryperiod =  new org.hl7.fhir.r4.model.Period();
+		encounterclasshistory.setPeriod(encounterclasshistoryperiod);
 
-		org.hl7.fhir.r4.model.Coding encounteraddclasshistorysetclass_ = new org.hl7.fhir.r4.model.Coding();
-		encounteraddclasshistory.setClass_(encounteraddclasshistorysetclass_);
+		/******************** Enc_ClsHis_Prd_End ********************************************************************************/
+		if(e.getEncClsHisPrdEnd() != null) {
+			java.text.SimpleDateFormat Enc_ClsHis_Prd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Enc_ClsHis_Prd_Enddate = Enc_ClsHis_Prd_Endsdf.parse(e.getEncClsHisPrdEnd());
+			encounterclasshistoryperiod.setEnd(Enc_ClsHis_Prd_Enddate);
+		}
+		/******************** Enc_ClsHis_Prd_Strt ********************************************************************************/
+		if(e.getEncClsHisPrdStrt() != null) {
+			java.text.SimpleDateFormat Enc_ClsHis_Prd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Enc_ClsHis_Prd_Strtdate = Enc_ClsHis_Prd_Strtsdf.parse(e.getEncClsHisPrdStrt());
+			encounterclasshistoryperiod.setStart(Enc_ClsHis_Prd_Strtdate);
+		}
+		/******************** encounterclass_ ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding encounterclass =  new org.hl7.fhir.r4.model.Coding();
+		encounter.setClass_(encounterclass);
 
-		/******************** Enc_ClassHistory_Class__Code ********************************************************************************/
-		if(e.getEncClassHistoryClassCode() != null) {
-			encounteraddclasshistorysetclass_.setCode(e.getEncClassHistoryClassCode());
+		/******************** Enc_Cls__Cd ********************************************************************************/
+		if(e.getEncClsCd() != null) {
+			encounterclass.setCode(e.getEncClsCd());
 		}
-		/******************** Enc_ClassHistory_Class__Display ********************************************************************************/
-		if(e.getEncClassHistoryClassDisplay() != null) {
-			encounteraddclasshistorysetclass_.setDisplay(e.getEncClassHistoryClassDisplay());
+		/******************** Enc_Cls__Dsply ********************************************************************************/
+		if(e.getEncClsDsply() != null) {
+			encounterclass.setDisplay(e.getEncClsDsply());
 		}
-		/******************** Enc_ClassHistory_Class__System ********************************************************************************/
-		if(e.getEncClassHistoryClassSystem() != null) {
-			encounteraddclasshistorysetclass_.setSystem(e.getEncClassHistoryClassSystem());
+		/******************** Enc_Cls__Sys ********************************************************************************/
+		if(e.getEncClsSys() != null) {
+			encounterclass.setSystem(e.getEncClsSys());
 		}
-		/******************** Enc_ClassHistory_Class__Usrslt ********************************************************************************/
-		if(e.getEncClassHistoryClassUsrslt() != null) {
-			encounteraddclasshistorysetclass_.setUserSelected(Boolean.parseBoolean(e.getEncClassHistoryClassUsrslt()));
+		/******************** Enc_Cls__UsrSltd ********************************************************************************/
+		if(e.getEncClsUsrSltd() != null) {
+			encounterclass.setUserSelected(Boolean.parseBoolean(e.getEncClsUsrSltd()));
 		}
-		/******************** Enc_ClassHistory_Class__Version ********************************************************************************/
-		if(e.getEncClassHistoryClassVersion() != null) {
-			encounteraddclasshistorysetclass_.setVersion(e.getEncClassHistoryClassVersion());
+		/******************** Enc_Cls__Vrsn ********************************************************************************/
+		if(e.getEncClsVrsn() != null) {
+			encounterclass.setVersion(e.getEncClsVrsn());
 		}
+		/******************** encounterdiagnosis ********************************************************************************/
+		org.hl7.fhir.r4.model.Encounter.DiagnosisComponent encounterdiagnosis =  new org.hl7.fhir.r4.model.Encounter.DiagnosisComponent();
+		encounter.addDiagnosis(encounterdiagnosis);
 
-		org.hl7.fhir.r4.model.Period encounteraddclasshistorysetperiod = new org.hl7.fhir.r4.model.Period();
-		encounteraddclasshistory.setPeriod(encounteraddclasshistorysetperiod);
+		/******************** Enc_Dgnsis_Cndtn ********************************************************************************/
+		if(e.getEncDgnsisCndtn() != null) {
+			encounterdiagnosis.setCondition( new org.hl7.fhir.r4.model.Reference(e.getEncDgnsisCndtn()));
+		}
+		/******************** Enc_Dgnsis_Rnk ********************************************************************************/
+		if(e.getEncDgnsisRnk() != null) {
+			encounterdiagnosis.setRank(Integer.parseInt(e.getEncDgnsisRnk()));
+		}
+		/******************** encounterdiagnosisuse ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept encounterdiagnosisuse =  new org.hl7.fhir.r4.model.CodeableConcept();
+		encounterdiagnosis.setUse(encounterdiagnosisuse);
 
-		/******************** Enc_ClassHistory_Period_End ********************************************************************************/
-		if(e.getEncClassHistoryPeriodEnd() != null) {
-			java.text.SimpleDateFormat EncClassHistoryPeriodEndsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date EncClassHistoryPeriodEnddate = EncClassHistoryPeriodEndsdf.parse(e.getEncClassHistoryPeriodEnd());
-			encounteraddclasshistorysetperiod.setEnd(EncClassHistoryPeriodEnddate);
-		}
-		/******************** Enc_ClassHistory_Period_Start ********************************************************************************/
-		if(e.getEncClassHistoryPeriodStart() != null) {
-			java.text.SimpleDateFormat EncClassHistoryPeriodStartsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date EncClassHistoryPeriodStartdate = EncClassHistoryPeriodStartsdf.parse(e.getEncClassHistoryPeriodStart());
-			encounteraddclasshistorysetperiod.setStart(EncClassHistoryPeriodStartdate);
-		}
+		/******************** encounterdiagnosisusecoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding encounterdiagnosisusecoding =  new org.hl7.fhir.r4.model.Coding();
+		encounterdiagnosisuse.addCoding(encounterdiagnosisusecoding);
 
-		org.hl7.fhir.r4.model.Coding encountersetclass_ = new org.hl7.fhir.r4.model.Coding();
-		encounter.setClass_(encountersetclass_);
-
-		/******************** Enc_Class__Code ********************************************************************************/
-		if(e.getEncClassCode() != null) {
-			encountersetclass_.setCode(e.getEncClassCode());
+		/******************** Enc_Dgnsis_Use_Cdg_Cd ********************************************************************************/
+		if(e.getEncDgnsisUseCdgCd() != null) {
+			encounterdiagnosisusecoding.setCode(e.getEncDgnsisUseCdgCd());
 		}
-		/******************** Enc_Class__Display ********************************************************************************/
-		if(e.getEncClassDisplay() != null) {
-			encountersetclass_.setDisplay(e.getEncClassDisplay());
+		/******************** Enc_Dgnsis_Use_Cdg_Dsply ********************************************************************************/
+		if(e.getEncDgnsisUseCdgDsply() != null) {
+			encounterdiagnosisusecoding.setDisplay(e.getEncDgnsisUseCdgDsply());
 		}
-		/******************** Enc_Class__System ********************************************************************************/
-		if(e.getEncClassSystem() != null) {
-			encountersetclass_.setSystem(e.getEncClassSystem());
+		/******************** Enc_Dgnsis_Use_Cdg_Sys ********************************************************************************/
+		if(e.getEncDgnsisUseCdgSys() != null) {
+			encounterdiagnosisusecoding.setSystem(e.getEncDgnsisUseCdgSys());
 		}
-		/******************** Enc_Class__Usrslt ********************************************************************************/
-		if(e.getEncClassUsrslt() != null) {
-			encountersetclass_.setUserSelected(Boolean.parseBoolean(e.getEncClassUsrslt()));
+		/******************** Enc_Dgnsis_Use_Cdg_UsrSltd ********************************************************************************/
+		if(e.getEncDgnsisUseCdgUsrSltd() != null) {
+			encounterdiagnosisusecoding.setUserSelected(Boolean.parseBoolean(e.getEncDgnsisUseCdgUsrSltd()));
 		}
-		/******************** Enc_Class__Version ********************************************************************************/
-		if(e.getEncClassVersion() != null) {
-			encountersetclass_.setVersion(e.getEncClassVersion());
+		/******************** Enc_Dgnsis_Use_Cdg_Vrsn ********************************************************************************/
+		if(e.getEncDgnsisUseCdgVrsn() != null) {
+			encounterdiagnosisusecoding.setVersion(e.getEncDgnsisUseCdgVrsn());
 		}
-
-		org.hl7.fhir.r4.model.Encounter.DiagnosisComponent encounteradddiagnosis = encounter.addDiagnosis();
-
-		/******************** Enc_Diagnosis_Condition ********************************************************************************/
-		if(e.getEncDiagnosisCondition() != null) {
-			org.hl7.fhir.r4.model.Reference EncDiagnosisConditionref = new org.hl7.fhir.r4.model.Reference();
-			encounteradddiagnosis.setCondition(EncDiagnosisConditionref.setReference(e.getEncDiagnosisCondition()));
-		}
-		/******************** Enc_Diagnosis_Rank ********************************************************************************/
-		if(e.getEncDiagnosisRank() != null) {
-			encounteradddiagnosis.setRank(Integer.parseInt(e.getEncDiagnosisRank()));
-		}
-
-		org.hl7.fhir.r4.model.CodeableConcept encounteradddiagnosissetuse = new org.hl7.fhir.r4.model.CodeableConcept();
-		encounteradddiagnosis.setUse(encounteradddiagnosissetuse);
-
-
-		org.hl7.fhir.r4.model.Coding encounteradddiagnosissetuseaddcoding = encounteradddiagnosissetuse.addCoding();
-
-		/******************** Enc_Diagnosis_Use_Coding_Code ********************************************************************************/
-		if(e.getEncDiagnosisUseCodingCode() != null) {
-			encounteradddiagnosissetuseaddcoding.setCode(e.getEncDiagnosisUseCodingCode());
-		}
-		/******************** Enc_Diagnosis_Use_Coding_Display ********************************************************************************/
-		if(e.getEncDiagnosisUseCodingDisplay() != null) {
-			encounteradddiagnosissetuseaddcoding.setDisplay(e.getEncDiagnosisUseCodingDisplay());
-		}
-		/******************** Enc_Diagnosis_Use_Coding_System ********************************************************************************/
-		if(e.getEncDiagnosisUseCodingSystem() != null) {
-			encounteradddiagnosissetuseaddcoding.setSystem(e.getEncDiagnosisUseCodingSystem());
-		}
-		/******************** Enc_Diagnosis_Use_Coding_Usrslt ********************************************************************************/
-		if(e.getEncDiagnosisUseCodingUsrslt() != null) {
-			encounteradddiagnosissetuseaddcoding.setUserSelected(Boolean.parseBoolean(e.getEncDiagnosisUseCodingUsrslt()));
-		}
-		/******************** Enc_Diagnosis_Use_Coding_Version ********************************************************************************/
-		if(e.getEncDiagnosisUseCodingVersion() != null) {
-			encounteradddiagnosissetuseaddcoding.setVersion(e.getEncDiagnosisUseCodingVersion());
-		}
-		/******************** Enc_Diagnosis_Use_Text ********************************************************************************/
-		if(e.getEncDiagnosisUseText() != null) {
-			encounteradddiagnosissetuse.setText(e.getEncDiagnosisUseText());
+		/******************** Enc_Dgnsis_Use_Txt ********************************************************************************/
+		if(e.getEncDgnsisUseTxt() != null) {
+			encounterdiagnosisuse.setText(e.getEncDgnsisUseTxt());
 		}
 		/******************** Enc_EpisodeOfCare ********************************************************************************/
 		if(e.getEncEpisodeOfCare() != null) {
-			org.hl7.fhir.r4.model.Reference EncEpisodeOfCareref = new org.hl7.fhir.r4.model.Reference();
-			encounter.addEpisodeOfCare(EncEpisodeOfCareref.setReference(e.getEncEpisodeOfCare()));
+			encounter.addEpisodeOfCare( new org.hl7.fhir.r4.model.Reference(e.getEncEpisodeOfCare()));
 		}
+		/******************** encounterhospitalization ********************************************************************************/
+		org.hl7.fhir.r4.model.Encounter.EncounterHospitalizationComponent encounterhospitalization =  new org.hl7.fhir.r4.model.Encounter.EncounterHospitalizationComponent();
+		encounter.setHospitalization(encounterhospitalization);
 
-		org.hl7.fhir.r4.model.Encounter.EncounterHospitalizationComponent encountersethospitalization = new org.hl7.fhir.r4.model.Encounter.EncounterHospitalizationComponent();
-		encounter.setHospitalization(encountersethospitalization);
+		/******************** encounterhospitalizationadmitsource ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept encounterhospitalizationadmitsource =  new org.hl7.fhir.r4.model.CodeableConcept();
+		encounterhospitalization.setAdmitSource(encounterhospitalizationadmitsource);
 
+		/******************** encounterhospitalizationadmitsourcecoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding encounterhospitalizationadmitsourcecoding =  new org.hl7.fhir.r4.model.Coding();
+		encounterhospitalizationadmitsource.addCoding(encounterhospitalizationadmitsourcecoding);
 
-		org.hl7.fhir.r4.model.CodeableConcept encountersethospitalizationsetadmitsource = new org.hl7.fhir.r4.model.CodeableConcept();
-		encountersethospitalization.setAdmitSource(encountersethospitalizationsetadmitsource);
-
-
-		org.hl7.fhir.r4.model.Coding encountersethospitalizationsetadmitsourceaddcoding = encountersethospitalizationsetadmitsource.addCoding();
-
-		/******************** Enc_Hospitalization_AdmitSource_Coding_Code ********************************************************************************/
-		if(e.getEncHospitalizationAdmitSourceCodingCode() != null) {
-			encountersethospitalizationsetadmitsourceaddcoding.setCode(e.getEncHospitalizationAdmitSourceCodingCode());
+		/******************** Enc_Hospitalization_AdmitSrc_Cdg_Cd ********************************************************************************/
+		if(e.getEncHospitalizationAdmitSrcCdgCd() != null) {
+			encounterhospitalizationadmitsourcecoding.setCode(e.getEncHospitalizationAdmitSrcCdgCd());
 		}
-		/******************** Enc_Hospitalization_AdmitSource_Coding_Display ********************************************************************************/
-		if(e.getEncHospitalizationAdmitSourceCodingDisplay() != null) {
-			encountersethospitalizationsetadmitsourceaddcoding.setDisplay(e.getEncHospitalizationAdmitSourceCodingDisplay());
+		/******************** Enc_Hospitalization_AdmitSrc_Cdg_Dsply ********************************************************************************/
+		if(e.getEncHospitalizationAdmitSrcCdgDsply() != null) {
+			encounterhospitalizationadmitsourcecoding.setDisplay(e.getEncHospitalizationAdmitSrcCdgDsply());
 		}
-		/******************** Enc_Hospitalization_AdmitSource_Coding_System ********************************************************************************/
-		if(e.getEncHospitalizationAdmitSourceCodingSystem() != null) {
-			encountersethospitalizationsetadmitsourceaddcoding.setSystem(e.getEncHospitalizationAdmitSourceCodingSystem());
+		/******************** Enc_Hospitalization_AdmitSrc_Cdg_Sys ********************************************************************************/
+		if(e.getEncHospitalizationAdmitSrcCdgSys() != null) {
+			encounterhospitalizationadmitsourcecoding.setSystem(e.getEncHospitalizationAdmitSrcCdgSys());
 		}
-		/******************** Enc_Hospitalization_AdmitSource_Coding_Usrslt ********************************************************************************/
-		if(e.getEncHospitalizationAdmitSourceCodingUsrslt() != null) {
-			encountersethospitalizationsetadmitsourceaddcoding.setUserSelected(Boolean.parseBoolean(e.getEncHospitalizationAdmitSourceCodingUsrslt()));
+		/******************** Enc_Hospitalization_AdmitSrc_Cdg_UsrSltd ********************************************************************************/
+		if(e.getEncHospitalizationAdmitSrcCdgUsrSltd() != null) {
+			encounterhospitalizationadmitsourcecoding.setUserSelected(Boolean.parseBoolean(e.getEncHospitalizationAdmitSrcCdgUsrSltd()));
 		}
-		/******************** Enc_Hospitalization_AdmitSource_Coding_Version ********************************************************************************/
-		if(e.getEncHospitalizationAdmitSourceCodingVersion() != null) {
-			encountersethospitalizationsetadmitsourceaddcoding.setVersion(e.getEncHospitalizationAdmitSourceCodingVersion());
+		/******************** Enc_Hospitalization_AdmitSrc_Cdg_Vrsn ********************************************************************************/
+		if(e.getEncHospitalizationAdmitSrcCdgVrsn() != null) {
+			encounterhospitalizationadmitsourcecoding.setVersion(e.getEncHospitalizationAdmitSrcCdgVrsn());
 		}
-		/******************** Enc_Hospitalization_AdmitSource_Text ********************************************************************************/
-		if(e.getEncHospitalizationAdmitSourceText() != null) {
-			encountersethospitalizationsetadmitsource.setText(e.getEncHospitalizationAdmitSourceText());
+		/******************** Enc_Hospitalization_AdmitSrc_Txt ********************************************************************************/
+		if(e.getEncHospitalizationAdmitSrcTxt() != null) {
+			encounterhospitalizationadmitsource.setText(e.getEncHospitalizationAdmitSrcTxt());
 		}
 		/******************** Enc_Hospitalization_Destination ********************************************************************************/
 		if(e.getEncHospitalizationDestination() != null) {
-			org.hl7.fhir.r4.model.Reference EncHospitalizationDestinationref = new org.hl7.fhir.r4.model.Reference();
-			encountersethospitalization.setDestination(EncHospitalizationDestinationref.setReference(e.getEncHospitalizationDestination()));
+			encounterhospitalization.setDestination( new org.hl7.fhir.r4.model.Reference(e.getEncHospitalizationDestination()));
 		}
+		/******************** encounterhospitalizationdietpreference ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept encounterhospitalizationdietpreference =  new org.hl7.fhir.r4.model.CodeableConcept();
+		encounterhospitalization.addDietPreference(encounterhospitalizationdietpreference);
 
-		org.hl7.fhir.r4.model.CodeableConcept encountersethospitalizationadddietpreference = encountersethospitalization.addDietPreference();
+		/******************** encounterhospitalizationdietpreferencecoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding encounterhospitalizationdietpreferencecoding =  new org.hl7.fhir.r4.model.Coding();
+		encounterhospitalizationdietpreference.addCoding(encounterhospitalizationdietpreferencecoding);
 
+		/******************** Enc_Hospitalization_DietPreference_Cdg_Cd ********************************************************************************/
+		if(e.getEncHospitalizationDietPreferenceCdgCd() != null) {
+			encounterhospitalizationdietpreferencecoding.setCode(e.getEncHospitalizationDietPreferenceCdgCd());
+		}
+		/******************** Enc_Hospitalization_DietPreference_Cdg_Dsply ********************************************************************************/
+		if(e.getEncHospitalizationDietPreferenceCdgDsply() != null) {
+			encounterhospitalizationdietpreferencecoding.setDisplay(e.getEncHospitalizationDietPreferenceCdgDsply());
+		}
+		/******************** Enc_Hospitalization_DietPreference_Cdg_Sys ********************************************************************************/
+		if(e.getEncHospitalizationDietPreferenceCdgSys() != null) {
+			encounterhospitalizationdietpreferencecoding.setSystem(e.getEncHospitalizationDietPreferenceCdgSys());
+		}
+		/******************** Enc_Hospitalization_DietPreference_Cdg_UsrSltd ********************************************************************************/
+		if(e.getEncHospitalizationDietPreferenceCdgUsrSltd() != null) {
+			encounterhospitalizationdietpreferencecoding.setUserSelected(Boolean.parseBoolean(e.getEncHospitalizationDietPreferenceCdgUsrSltd()));
+		}
+		/******************** Enc_Hospitalization_DietPreference_Cdg_Vrsn ********************************************************************************/
+		if(e.getEncHospitalizationDietPreferenceCdgVrsn() != null) {
+			encounterhospitalizationdietpreferencecoding.setVersion(e.getEncHospitalizationDietPreferenceCdgVrsn());
+		}
+		/******************** Enc_Hospitalization_DietPreference_Txt ********************************************************************************/
+		if(e.getEncHospitalizationDietPreferenceTxt() != null) {
+			encounterhospitalizationdietpreference.setText(e.getEncHospitalizationDietPreferenceTxt());
+		}
+		/******************** encounterhospitalizationdischargedisposition ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept encounterhospitalizationdischargedisposition =  new org.hl7.fhir.r4.model.CodeableConcept();
+		encounterhospitalization.setDischargeDisposition(encounterhospitalizationdischargedisposition);
 
-		org.hl7.fhir.r4.model.Coding encountersethospitalizationadddietpreferenceaddcoding = encountersethospitalizationadddietpreference.addCoding();
+		/******************** encounterhospitalizationdischargedispositioncoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding encounterhospitalizationdischargedispositioncoding =  new org.hl7.fhir.r4.model.Coding();
+		encounterhospitalizationdischargedisposition.addCoding(encounterhospitalizationdischargedispositioncoding);
 
-		/******************** Enc_Hospitalization_DietPreference_Coding_Code ********************************************************************************/
-		if(e.getEncHospitalizationDietPreferenceCodingCode() != null) {
-			encountersethospitalizationadddietpreferenceaddcoding.setCode(e.getEncHospitalizationDietPreferenceCodingCode());
+		/******************** Enc_Hospitalization_DischargeDisposition_Cdg_Cd ********************************************************************************/
+		if(e.getEncHospitalizationDischargeDispositionCdgCd() != null) {
+			encounterhospitalizationdischargedispositioncoding.setCode(e.getEncHospitalizationDischargeDispositionCdgCd());
 		}
-		/******************** Enc_Hospitalization_DietPreference_Coding_Display ********************************************************************************/
-		if(e.getEncHospitalizationDietPreferenceCodingDisplay() != null) {
-			encountersethospitalizationadddietpreferenceaddcoding.setDisplay(e.getEncHospitalizationDietPreferenceCodingDisplay());
+		/******************** Enc_Hospitalization_DischargeDisposition_Cdg_Dsply ********************************************************************************/
+		if(e.getEncHospitalizationDischargeDispositionCdgDsply() != null) {
+			encounterhospitalizationdischargedispositioncoding.setDisplay(e.getEncHospitalizationDischargeDispositionCdgDsply());
 		}
-		/******************** Enc_Hospitalization_DietPreference_Coding_System ********************************************************************************/
-		if(e.getEncHospitalizationDietPreferenceCodingSystem() != null) {
-			encountersethospitalizationadddietpreferenceaddcoding.setSystem(e.getEncHospitalizationDietPreferenceCodingSystem());
+		/******************** Enc_Hospitalization_DischargeDisposition_Cdg_Sys ********************************************************************************/
+		if(e.getEncHospitalizationDischargeDispositionCdgSys() != null) {
+			encounterhospitalizationdischargedispositioncoding.setSystem(e.getEncHospitalizationDischargeDispositionCdgSys());
 		}
-		/******************** Enc_Hospitalization_DietPreference_Coding_Usrslt ********************************************************************************/
-		if(e.getEncHospitalizationDietPreferenceCodingUsrslt() != null) {
-			encountersethospitalizationadddietpreferenceaddcoding.setUserSelected(Boolean.parseBoolean(e.getEncHospitalizationDietPreferenceCodingUsrslt()));
+		/******************** Enc_Hospitalization_DischargeDisposition_Cdg_UsrSltd ********************************************************************************/
+		if(e.getEncHospitalizationDischargeDispositionCdgUsrSltd() != null) {
+			encounterhospitalizationdischargedispositioncoding.setUserSelected(Boolean.parseBoolean(e.getEncHospitalizationDischargeDispositionCdgUsrSltd()));
 		}
-		/******************** Enc_Hospitalization_DietPreference_Coding_Version ********************************************************************************/
-		if(e.getEncHospitalizationDietPreferenceCodingVersion() != null) {
-			encountersethospitalizationadddietpreferenceaddcoding.setVersion(e.getEncHospitalizationDietPreferenceCodingVersion());
+		/******************** Enc_Hospitalization_DischargeDisposition_Cdg_Vrsn ********************************************************************************/
+		if(e.getEncHospitalizationDischargeDispositionCdgVrsn() != null) {
+			encounterhospitalizationdischargedispositioncoding.setVersion(e.getEncHospitalizationDischargeDispositionCdgVrsn());
 		}
-		/******************** Enc_Hospitalization_DietPreference_Text ********************************************************************************/
-		if(e.getEncHospitalizationDietPreferenceText() != null) {
-			encountersethospitalizationadddietpreference.setText(e.getEncHospitalizationDietPreferenceText());
-		}
-
-		org.hl7.fhir.r4.model.CodeableConcept encountersethospitalizationsetdischargedisposition = new org.hl7.fhir.r4.model.CodeableConcept();
-		encountersethospitalization.setDischargeDisposition(encountersethospitalizationsetdischargedisposition);
-
-
-		org.hl7.fhir.r4.model.Coding encountersethospitalizationsetdischargedispositionaddcoding = encountersethospitalizationsetdischargedisposition.addCoding();
-
-		/******************** Enc_Hospitalization_DischargeDisposition_Coding_Code ********************************************************************************/
-		if(e.getEncHospitalizationDischargeDispositionCodingCode() != null) {
-			encountersethospitalizationsetdischargedispositionaddcoding.setCode(e.getEncHospitalizationDischargeDispositionCodingCode());
-		}
-		/******************** Enc_Hospitalization_DischargeDisposition_Coding_Display ********************************************************************************/
-		if(e.getEncHospitalizationDischargeDispositionCodingDisplay() != null) {
-			encountersethospitalizationsetdischargedispositionaddcoding.setDisplay(e.getEncHospitalizationDischargeDispositionCodingDisplay());
-		}
-		/******************** Enc_Hospitalization_DischargeDisposition_Coding_System ********************************************************************************/
-		if(e.getEncHospitalizationDischargeDispositionCodingSystem() != null) {
-			encountersethospitalizationsetdischargedispositionaddcoding.setSystem(e.getEncHospitalizationDischargeDispositionCodingSystem());
-		}
-		/******************** Enc_Hospitalization_DischargeDisposition_Coding_Usrslt ********************************************************************************/
-		if(e.getEncHospitalizationDischargeDispositionCodingUsrslt() != null) {
-			encountersethospitalizationsetdischargedispositionaddcoding.setUserSelected(Boolean.parseBoolean(e.getEncHospitalizationDischargeDispositionCodingUsrslt()));
-		}
-		/******************** Enc_Hospitalization_DischargeDisposition_Coding_Version ********************************************************************************/
-		if(e.getEncHospitalizationDischargeDispositionCodingVersion() != null) {
-			encountersethospitalizationsetdischargedispositionaddcoding.setVersion(e.getEncHospitalizationDischargeDispositionCodingVersion());
-		}
-		/******************** Enc_Hospitalization_DischargeDisposition_Text ********************************************************************************/
-		if(e.getEncHospitalizationDischargeDispositionText() != null) {
-			encountersethospitalizationsetdischargedisposition.setText(e.getEncHospitalizationDischargeDispositionText());
+		/******************** Enc_Hospitalization_DischargeDisposition_Txt ********************************************************************************/
+		if(e.getEncHospitalizationDischargeDispositionTxt() != null) {
+			encounterhospitalizationdischargedisposition.setText(e.getEncHospitalizationDischargeDispositionTxt());
 		}
 		/******************** Enc_Hospitalization_Origin ********************************************************************************/
 		if(e.getEncHospitalizationOrigin() != null) {
-			org.hl7.fhir.r4.model.Reference EncHospitalizationOriginref = new org.hl7.fhir.r4.model.Reference();
-			encountersethospitalization.setOrigin(EncHospitalizationOriginref.setReference(e.getEncHospitalizationOrigin()));
+			encounterhospitalization.setOrigin( new org.hl7.fhir.r4.model.Reference(e.getEncHospitalizationOrigin()));
 		}
-
-		org.hl7.fhir.r4.model.Identifier encountersethospitalizationsetpreadmissionidentifier = new org.hl7.fhir.r4.model.Identifier();
-		encountersethospitalization.setPreAdmissionIdentifier(encountersethospitalizationsetpreadmissionidentifier);
+		/******************** encounterhospitalizationpreadmissionidentifier ********************************************************************************/
+		org.hl7.fhir.r4.model.Identifier encounterhospitalizationpreadmissionidentifier =  new org.hl7.fhir.r4.model.Identifier();
+		encounterhospitalization.setPreAdmissionIdentifier(encounterhospitalizationpreadmissionidentifier);
 
 		/******************** Enc_Hospitalization_PreAdmissionId_Assigner ********************************************************************************/
 		if(e.getEncHospitalizationPreAdmissionIdAssigner() != null) {
-			org.hl7.fhir.r4.model.Reference EncHospitalizationPreAdmissionIdAssignerref = new org.hl7.fhir.r4.model.Reference();
-			encountersethospitalizationsetpreadmissionidentifier.setAssigner(EncHospitalizationPreAdmissionIdAssignerref.setReference(e.getEncHospitalizationPreAdmissionIdAssigner()));
+			encounterhospitalizationpreadmissionidentifier.setAssigner( new org.hl7.fhir.r4.model.Reference(e.getEncHospitalizationPreAdmissionIdAssigner()));
 		}
+		/******************** encounterhospitalizationpreadmissionidentifierperiod ********************************************************************************/
+		org.hl7.fhir.r4.model.Period encounterhospitalizationpreadmissionidentifierperiod =  new org.hl7.fhir.r4.model.Period();
+		encounterhospitalizationpreadmissionidentifier.setPeriod(encounterhospitalizationpreadmissionidentifierperiod);
 
-		org.hl7.fhir.r4.model.Period encountersethospitalizationsetpreadmissionidentifiersetperiod = new org.hl7.fhir.r4.model.Period();
-		encountersethospitalizationsetpreadmissionidentifier.setPeriod(encountersethospitalizationsetpreadmissionidentifiersetperiod);
+		/******************** Enc_Hospitalization_PreAdmissionId_Prd_End ********************************************************************************/
+		if(e.getEncHospitalizationPreAdmissionIdPrdEnd() != null) {
+			java.text.SimpleDateFormat Enc_Hospitalization_PreAdmissionId_Prd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Enc_Hospitalization_PreAdmissionId_Prd_Enddate = Enc_Hospitalization_PreAdmissionId_Prd_Endsdf.parse(e.getEncHospitalizationPreAdmissionIdPrdEnd());
+			encounterhospitalizationpreadmissionidentifierperiod.setEnd(Enc_Hospitalization_PreAdmissionId_Prd_Enddate);
+		}
+		/******************** Enc_Hospitalization_PreAdmissionId_Prd_Strt ********************************************************************************/
+		if(e.getEncHospitalizationPreAdmissionIdPrdStrt() != null) {
+			java.text.SimpleDateFormat Enc_Hospitalization_PreAdmissionId_Prd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Enc_Hospitalization_PreAdmissionId_Prd_Strtdate = Enc_Hospitalization_PreAdmissionId_Prd_Strtsdf.parse(e.getEncHospitalizationPreAdmissionIdPrdStrt());
+			encounterhospitalizationpreadmissionidentifierperiod.setStart(Enc_Hospitalization_PreAdmissionId_Prd_Strtdate);
+		}
+		/******************** Enc_Hospitalization_PreAdmissionId_Sys ********************************************************************************/
+		if(e.getEncHospitalizationPreAdmissionIdSys() != null) {
+			encounterhospitalizationpreadmissionidentifier.setSystem(e.getEncHospitalizationPreAdmissionIdSys());
+		}
+		/******************** encounterhospitalizationpreadmissionidentifiertype ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept encounterhospitalizationpreadmissionidentifiertype =  new org.hl7.fhir.r4.model.CodeableConcept();
+		encounterhospitalizationpreadmissionidentifier.setType(encounterhospitalizationpreadmissionidentifiertype);
 
-		/******************** Enc_Hospitalization_PreAdmissionId_Period_End ********************************************************************************/
-		if(e.getEncHospitalizationPreAdmissionIdPeriodEnd() != null) {
-			java.text.SimpleDateFormat EncHospitalizationPreAdmissionIdPeriodEndsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date EncHospitalizationPreAdmissionIdPeriodEnddate = EncHospitalizationPreAdmissionIdPeriodEndsdf.parse(e.getEncHospitalizationPreAdmissionIdPeriodEnd());
-			encountersethospitalizationsetpreadmissionidentifiersetperiod.setEnd(EncHospitalizationPreAdmissionIdPeriodEnddate);
-		}
-		/******************** Enc_Hospitalization_PreAdmissionId_Period_Start ********************************************************************************/
-		if(e.getEncHospitalizationPreAdmissionIdPeriodStart() != null) {
-			java.text.SimpleDateFormat EncHospitalizationPreAdmissionIdPeriodStartsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date EncHospitalizationPreAdmissionIdPeriodStartdate = EncHospitalizationPreAdmissionIdPeriodStartsdf.parse(e.getEncHospitalizationPreAdmissionIdPeriodStart());
-			encountersethospitalizationsetpreadmissionidentifiersetperiod.setStart(EncHospitalizationPreAdmissionIdPeriodStartdate);
-		}
-		/******************** Enc_Hospitalization_PreAdmissionId_System ********************************************************************************/
-		if(e.getEncHospitalizationPreAdmissionIdSystem() != null) {
-			encountersethospitalizationsetpreadmissionidentifier.setSystem(e.getEncHospitalizationPreAdmissionIdSystem());
-		}
+		/******************** encounterhospitalizationpreadmissionidentifiertypecoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding encounterhospitalizationpreadmissionidentifiertypecoding =  new org.hl7.fhir.r4.model.Coding();
+		encounterhospitalizationpreadmissionidentifiertype.addCoding(encounterhospitalizationpreadmissionidentifiertypecoding);
 
-		org.hl7.fhir.r4.model.CodeableConcept encountersethospitalizationsetpreadmissionidentifiersettype = new org.hl7.fhir.r4.model.CodeableConcept();
-		encountersethospitalizationsetpreadmissionidentifier.setType(encountersethospitalizationsetpreadmissionidentifiersettype);
+		/******************** Enc_Hospitalization_PreAdmissionId_Typ_Cdg_Cd ********************************************************************************/
+		if(e.getEncHospitalizationPreAdmissionIdTypCdgCd() != null) {
+			encounterhospitalizationpreadmissionidentifiertypecoding.setCode(e.getEncHospitalizationPreAdmissionIdTypCdgCd());
+		}
+		/******************** Enc_Hospitalization_PreAdmissionId_Typ_Cdg_Dsply ********************************************************************************/
+		if(e.getEncHospitalizationPreAdmissionIdTypCdgDsply() != null) {
+			encounterhospitalizationpreadmissionidentifiertypecoding.setDisplay(e.getEncHospitalizationPreAdmissionIdTypCdgDsply());
+		}
+		/******************** Enc_Hospitalization_PreAdmissionId_Typ_Cdg_Sys ********************************************************************************/
+		if(e.getEncHospitalizationPreAdmissionIdTypCdgSys() != null) {
+			encounterhospitalizationpreadmissionidentifiertypecoding.setSystem(e.getEncHospitalizationPreAdmissionIdTypCdgSys());
+		}
+		/******************** Enc_Hospitalization_PreAdmissionId_Typ_Cdg_UsrSltd ********************************************************************************/
+		if(e.getEncHospitalizationPreAdmissionIdTypCdgUsrSltd() != null) {
+			encounterhospitalizationpreadmissionidentifiertypecoding.setUserSelected(Boolean.parseBoolean(e.getEncHospitalizationPreAdmissionIdTypCdgUsrSltd()));
+		}
+		/******************** Enc_Hospitalization_PreAdmissionId_Typ_Cdg_Vrsn ********************************************************************************/
+		if(e.getEncHospitalizationPreAdmissionIdTypCdgVrsn() != null) {
+			encounterhospitalizationpreadmissionidentifiertypecoding.setVersion(e.getEncHospitalizationPreAdmissionIdTypCdgVrsn());
+		}
+		/******************** Enc_Hospitalization_PreAdmissionId_Typ_Txt ********************************************************************************/
+		if(e.getEncHospitalizationPreAdmissionIdTypTxt() != null) {
+			encounterhospitalizationpreadmissionidentifiertype.setText(e.getEncHospitalizationPreAdmissionIdTypTxt());
+		}
+		/******************** encounterhospitalizationpreadmissionidentifieruse ********************************************************************************/
+		org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory encounterhospitalizationpreadmissionidentifieruse =  new org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory();
+		encounterhospitalizationpreadmissionidentifier.setUse(encounterhospitalizationpreadmissionidentifieruse.fromCode(e.getEncHospitalizationPreAdmissionIdUse()));
 
+		/******************** Enc_Hospitalization_PreAdmissionId_Vl ********************************************************************************/
+		if(e.getEncHospitalizationPreAdmissionIdVl() != null) {
+			encounterhospitalizationpreadmissionidentifier.setValue(e.getEncHospitalizationPreAdmissionIdVl());
+		}
+		/******************** encounterhospitalizationreadmission ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept encounterhospitalizationreadmission =  new org.hl7.fhir.r4.model.CodeableConcept();
+		encounterhospitalization.setReAdmission(encounterhospitalizationreadmission);
 
-		org.hl7.fhir.r4.model.Coding encountersethospitalizationsetpreadmissionidentifiersettypeaddcoding = encountersethospitalizationsetpreadmissionidentifiersettype.addCoding();
+		/******************** encounterhospitalizationreadmissioncoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding encounterhospitalizationreadmissioncoding =  new org.hl7.fhir.r4.model.Coding();
+		encounterhospitalizationreadmission.addCoding(encounterhospitalizationreadmissioncoding);
 
-		/******************** Enc_Hospitalization_PreAdmissionId_Type_Coding_Code ********************************************************************************/
-		if(e.getEncHospitalizationPreAdmissionIdTypeCodingCode() != null) {
-			encountersethospitalizationsetpreadmissionidentifiersettypeaddcoding.setCode(e.getEncHospitalizationPreAdmissionIdTypeCodingCode());
+		/******************** Enc_Hospitalization_ReAdmission_Cdg_Cd ********************************************************************************/
+		if(e.getEncHospitalizationReAdmissionCdgCd() != null) {
+			encounterhospitalizationreadmissioncoding.setCode(e.getEncHospitalizationReAdmissionCdgCd());
 		}
-		/******************** Enc_Hospitalization_PreAdmissionId_Type_Coding_Display ********************************************************************************/
-		if(e.getEncHospitalizationPreAdmissionIdTypeCodingDisplay() != null) {
-			encountersethospitalizationsetpreadmissionidentifiersettypeaddcoding.setDisplay(e.getEncHospitalizationPreAdmissionIdTypeCodingDisplay());
+		/******************** Enc_Hospitalization_ReAdmission_Cdg_Dsply ********************************************************************************/
+		if(e.getEncHospitalizationReAdmissionCdgDsply() != null) {
+			encounterhospitalizationreadmissioncoding.setDisplay(e.getEncHospitalizationReAdmissionCdgDsply());
 		}
-		/******************** Enc_Hospitalization_PreAdmissionId_Type_Coding_System ********************************************************************************/
-		if(e.getEncHospitalizationPreAdmissionIdTypeCodingSystem() != null) {
-			encountersethospitalizationsetpreadmissionidentifiersettypeaddcoding.setSystem(e.getEncHospitalizationPreAdmissionIdTypeCodingSystem());
+		/******************** Enc_Hospitalization_ReAdmission_Cdg_Sys ********************************************************************************/
+		if(e.getEncHospitalizationReAdmissionCdgSys() != null) {
+			encounterhospitalizationreadmissioncoding.setSystem(e.getEncHospitalizationReAdmissionCdgSys());
 		}
-		/******************** Enc_Hospitalization_PreAdmissionId_Type_Coding_Usrslt ********************************************************************************/
-		if(e.getEncHospitalizationPreAdmissionIdTypeCodingUsrslt() != null) {
-			encountersethospitalizationsetpreadmissionidentifiersettypeaddcoding.setUserSelected(Boolean.parseBoolean(e.getEncHospitalizationPreAdmissionIdTypeCodingUsrslt()));
+		/******************** Enc_Hospitalization_ReAdmission_Cdg_UsrSltd ********************************************************************************/
+		if(e.getEncHospitalizationReAdmissionCdgUsrSltd() != null) {
+			encounterhospitalizationreadmissioncoding.setUserSelected(Boolean.parseBoolean(e.getEncHospitalizationReAdmissionCdgUsrSltd()));
 		}
-		/******************** Enc_Hospitalization_PreAdmissionId_Type_Coding_Version ********************************************************************************/
-		if(e.getEncHospitalizationPreAdmissionIdTypeCodingVersion() != null) {
-			encountersethospitalizationsetpreadmissionidentifiersettypeaddcoding.setVersion(e.getEncHospitalizationPreAdmissionIdTypeCodingVersion());
+		/******************** Enc_Hospitalization_ReAdmission_Cdg_Vrsn ********************************************************************************/
+		if(e.getEncHospitalizationReAdmissionCdgVrsn() != null) {
+			encounterhospitalizationreadmissioncoding.setVersion(e.getEncHospitalizationReAdmissionCdgVrsn());
 		}
-		/******************** Enc_Hospitalization_PreAdmissionId_Type_Text ********************************************************************************/
-		if(e.getEncHospitalizationPreAdmissionIdTypeText() != null) {
-			encountersethospitalizationsetpreadmissionidentifiersettype.setText(e.getEncHospitalizationPreAdmissionIdTypeText());
+		/******************** Enc_Hospitalization_ReAdmission_Txt ********************************************************************************/
+		if(e.getEncHospitalizationReAdmissionTxt() != null) {
+			encounterhospitalizationreadmission.setText(e.getEncHospitalizationReAdmissionTxt());
 		}
+		/******************** encounterhospitalizationspecialarrangement ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept encounterhospitalizationspecialarrangement =  new org.hl7.fhir.r4.model.CodeableConcept();
+		encounterhospitalization.addSpecialArrangement(encounterhospitalizationspecialarrangement);
 
-		org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory encountersethospitalizationsetpreadmissionidentifiersetuseEnumFactory = new org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory();
+		/******************** encounterhospitalizationspecialarrangementcoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding encounterhospitalizationspecialarrangementcoding =  new org.hl7.fhir.r4.model.Coding();
+		encounterhospitalizationspecialarrangement.addCoding(encounterhospitalizationspecialarrangementcoding);
 
-		/******************** Enc_Hospitalization_PreAdmissionId_Use_Code ********************************************************************************/
-		if(e.getEncHospitalizationPreAdmissionIdUseCode() != null) {
-			encountersethospitalizationsetpreadmissionidentifier.setUse(encountersethospitalizationsetpreadmissionidentifiersetuseEnumFactory.fromCode(e.getEncHospitalizationPreAdmissionIdUseCode()));
+		/******************** Enc_Hospitalization_SpclArrangement_Cdg_Cd ********************************************************************************/
+		if(e.getEncHospitalizationSpclArrangementCdgCd() != null) {
+			encounterhospitalizationspecialarrangementcoding.setCode(e.getEncHospitalizationSpclArrangementCdgCd());
+		}
+		/******************** Enc_Hospitalization_SpclArrangement_Cdg_Dsply ********************************************************************************/
+		if(e.getEncHospitalizationSpclArrangementCdgDsply() != null) {
+			encounterhospitalizationspecialarrangementcoding.setDisplay(e.getEncHospitalizationSpclArrangementCdgDsply());
+		}
+		/******************** Enc_Hospitalization_SpclArrangement_Cdg_Sys ********************************************************************************/
+		if(e.getEncHospitalizationSpclArrangementCdgSys() != null) {
+			encounterhospitalizationspecialarrangementcoding.setSystem(e.getEncHospitalizationSpclArrangementCdgSys());
+		}
+		/******************** Enc_Hospitalization_SpclArrangement_Cdg_UsrSltd ********************************************************************************/
+		if(e.getEncHospitalizationSpclArrangementCdgUsrSltd() != null) {
+			encounterhospitalizationspecialarrangementcoding.setUserSelected(Boolean.parseBoolean(e.getEncHospitalizationSpclArrangementCdgUsrSltd()));
+		}
+		/******************** Enc_Hospitalization_SpclArrangement_Cdg_Vrsn ********************************************************************************/
+		if(e.getEncHospitalizationSpclArrangementCdgVrsn() != null) {
+			encounterhospitalizationspecialarrangementcoding.setVersion(e.getEncHospitalizationSpclArrangementCdgVrsn());
+		}
+		/******************** Enc_Hospitalization_SpclArrangement_Txt ********************************************************************************/
+		if(e.getEncHospitalizationSpclArrangementTxt() != null) {
+			encounterhospitalizationspecialarrangement.setText(e.getEncHospitalizationSpclArrangementTxt());
+		}
+		/******************** encounterhospitalizationspecialcourtesy ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept encounterhospitalizationspecialcourtesy =  new org.hl7.fhir.r4.model.CodeableConcept();
+		encounterhospitalization.addSpecialCourtesy(encounterhospitalizationspecialcourtesy);
 
-		}
-		/******************** Enc_Hospitalization_PreAdmissionId_Value ********************************************************************************/
-		if(e.getEncHospitalizationPreAdmissionIdValue() != null) {
-			encountersethospitalizationsetpreadmissionidentifier.setValue(e.getEncHospitalizationPreAdmissionIdValue());
-		}
+		/******************** encounterhospitalizationspecialcourtesycoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding encounterhospitalizationspecialcourtesycoding =  new org.hl7.fhir.r4.model.Coding();
+		encounterhospitalizationspecialcourtesy.addCoding(encounterhospitalizationspecialcourtesycoding);
 
-		org.hl7.fhir.r4.model.CodeableConcept encountersethospitalizationsetreadmission = new org.hl7.fhir.r4.model.CodeableConcept();
-		encountersethospitalization.setReAdmission(encountersethospitalizationsetreadmission);
-
-
-		org.hl7.fhir.r4.model.Coding encountersethospitalizationsetreadmissionaddcoding = encountersethospitalizationsetreadmission.addCoding();
-
-		/******************** Enc_Hospitalization_ReAdmission_Coding_Code ********************************************************************************/
-		if(e.getEncHospitalizationReAdmissionCodingCode() != null) {
-			encountersethospitalizationsetreadmissionaddcoding.setCode(e.getEncHospitalizationReAdmissionCodingCode());
+		/******************** Enc_Hospitalization_SpclCourtesy_Cdg_Cd ********************************************************************************/
+		if(e.getEncHospitalizationSpclCourtesyCdgCd() != null) {
+			encounterhospitalizationspecialcourtesycoding.setCode(e.getEncHospitalizationSpclCourtesyCdgCd());
 		}
-		/******************** Enc_Hospitalization_ReAdmission_Coding_Display ********************************************************************************/
-		if(e.getEncHospitalizationReAdmissionCodingDisplay() != null) {
-			encountersethospitalizationsetreadmissionaddcoding.setDisplay(e.getEncHospitalizationReAdmissionCodingDisplay());
+		/******************** Enc_Hospitalization_SpclCourtesy_Cdg_Dsply ********************************************************************************/
+		if(e.getEncHospitalizationSpclCourtesyCdgDsply() != null) {
+			encounterhospitalizationspecialcourtesycoding.setDisplay(e.getEncHospitalizationSpclCourtesyCdgDsply());
 		}
-		/******************** Enc_Hospitalization_ReAdmission_Coding_System ********************************************************************************/
-		if(e.getEncHospitalizationReAdmissionCodingSystem() != null) {
-			encountersethospitalizationsetreadmissionaddcoding.setSystem(e.getEncHospitalizationReAdmissionCodingSystem());
+		/******************** Enc_Hospitalization_SpclCourtesy_Cdg_Sys ********************************************************************************/
+		if(e.getEncHospitalizationSpclCourtesyCdgSys() != null) {
+			encounterhospitalizationspecialcourtesycoding.setSystem(e.getEncHospitalizationSpclCourtesyCdgSys());
 		}
-		/******************** Enc_Hospitalization_ReAdmission_Coding_Usrslt ********************************************************************************/
-		if(e.getEncHospitalizationReAdmissionCodingUsrslt() != null) {
-			encountersethospitalizationsetreadmissionaddcoding.setUserSelected(Boolean.parseBoolean(e.getEncHospitalizationReAdmissionCodingUsrslt()));
+		/******************** Enc_Hospitalization_SpclCourtesy_Cdg_UsrSltd ********************************************************************************/
+		if(e.getEncHospitalizationSpclCourtesyCdgUsrSltd() != null) {
+			encounterhospitalizationspecialcourtesycoding.setUserSelected(Boolean.parseBoolean(e.getEncHospitalizationSpclCourtesyCdgUsrSltd()));
 		}
-		/******************** Enc_Hospitalization_ReAdmission_Coding_Version ********************************************************************************/
-		if(e.getEncHospitalizationReAdmissionCodingVersion() != null) {
-			encountersethospitalizationsetreadmissionaddcoding.setVersion(e.getEncHospitalizationReAdmissionCodingVersion());
+		/******************** Enc_Hospitalization_SpclCourtesy_Cdg_Vrsn ********************************************************************************/
+		if(e.getEncHospitalizationSpclCourtesyCdgVrsn() != null) {
+			encounterhospitalizationspecialcourtesycoding.setVersion(e.getEncHospitalizationSpclCourtesyCdgVrsn());
 		}
-		/******************** Enc_Hospitalization_ReAdmission_Text ********************************************************************************/
-		if(e.getEncHospitalizationReAdmissionText() != null) {
-			encountersethospitalizationsetreadmission.setText(e.getEncHospitalizationReAdmissionText());
+		/******************** Enc_Hospitalization_SpclCourtesy_Txt ********************************************************************************/
+		if(e.getEncHospitalizationSpclCourtesyTxt() != null) {
+			encounterhospitalizationspecialcourtesy.setText(e.getEncHospitalizationSpclCourtesyTxt());
 		}
-
-		org.hl7.fhir.r4.model.CodeableConcept encountersethospitalizationaddspecialarrangement = encountersethospitalization.addSpecialArrangement();
-
-
-		org.hl7.fhir.r4.model.Coding encountersethospitalizationaddspecialarrangementaddcoding = encountersethospitalizationaddspecialarrangement.addCoding();
-
-		/******************** Enc_Hospitalization_SpecialArrangement_Coding_Code ********************************************************************************/
-		if(e.getEncHospitalizationSpecialArrangementCodingCode() != null) {
-			encountersethospitalizationaddspecialarrangementaddcoding.setCode(e.getEncHospitalizationSpecialArrangementCodingCode());
-		}
-		/******************** Enc_Hospitalization_SpecialArrangement_Coding_Display ********************************************************************************/
-		if(e.getEncHospitalizationSpecialArrangementCodingDisplay() != null) {
-			encountersethospitalizationaddspecialarrangementaddcoding.setDisplay(e.getEncHospitalizationSpecialArrangementCodingDisplay());
-		}
-		/******************** Enc_Hospitalization_SpecialArrangement_Coding_System ********************************************************************************/
-		if(e.getEncHospitalizationSpecialArrangementCodingSystem() != null) {
-			encountersethospitalizationaddspecialarrangementaddcoding.setSystem(e.getEncHospitalizationSpecialArrangementCodingSystem());
-		}
-		/******************** Enc_Hospitalization_SpecialArrangement_Coding_Usrslt ********************************************************************************/
-		if(e.getEncHospitalizationSpecialArrangementCodingUsrslt() != null) {
-			encountersethospitalizationaddspecialarrangementaddcoding.setUserSelected(Boolean.parseBoolean(e.getEncHospitalizationSpecialArrangementCodingUsrslt()));
-		}
-		/******************** Enc_Hospitalization_SpecialArrangement_Coding_Version ********************************************************************************/
-		if(e.getEncHospitalizationSpecialArrangementCodingVersion() != null) {
-			encountersethospitalizationaddspecialarrangementaddcoding.setVersion(e.getEncHospitalizationSpecialArrangementCodingVersion());
-		}
-		/******************** Enc_Hospitalization_SpecialArrangement_Text ********************************************************************************/
-		if(e.getEncHospitalizationSpecialArrangementText() != null) {
-			encountersethospitalizationaddspecialarrangement.setText(e.getEncHospitalizationSpecialArrangementText());
-		}
-
-		org.hl7.fhir.r4.model.CodeableConcept encountersethospitalizationaddspecialcourtesy = encountersethospitalization.addSpecialCourtesy();
-
-
-		org.hl7.fhir.r4.model.Coding encountersethospitalizationaddspecialcourtesyaddcoding = encountersethospitalizationaddspecialcourtesy.addCoding();
-
-		/******************** Enc_Hospitalization_SpecialCourtesy_Coding_Code ********************************************************************************/
-		if(e.getEncHospitalizationSpecialCourtesyCodingCode() != null) {
-			encountersethospitalizationaddspecialcourtesyaddcoding.setCode(e.getEncHospitalizationSpecialCourtesyCodingCode());
-		}
-		/******************** Enc_Hospitalization_SpecialCourtesy_Coding_Display ********************************************************************************/
-		if(e.getEncHospitalizationSpecialCourtesyCodingDisplay() != null) {
-			encountersethospitalizationaddspecialcourtesyaddcoding.setDisplay(e.getEncHospitalizationSpecialCourtesyCodingDisplay());
-		}
-		/******************** Enc_Hospitalization_SpecialCourtesy_Coding_System ********************************************************************************/
-		if(e.getEncHospitalizationSpecialCourtesyCodingSystem() != null) {
-			encountersethospitalizationaddspecialcourtesyaddcoding.setSystem(e.getEncHospitalizationSpecialCourtesyCodingSystem());
-		}
-		/******************** Enc_Hospitalization_SpecialCourtesy_Coding_Usrslt ********************************************************************************/
-		if(e.getEncHospitalizationSpecialCourtesyCodingUsrslt() != null) {
-			encountersethospitalizationaddspecialcourtesyaddcoding.setUserSelected(Boolean.parseBoolean(e.getEncHospitalizationSpecialCourtesyCodingUsrslt()));
-		}
-		/******************** Enc_Hospitalization_SpecialCourtesy_Coding_Version ********************************************************************************/
-		if(e.getEncHospitalizationSpecialCourtesyCodingVersion() != null) {
-			encountersethospitalizationaddspecialcourtesyaddcoding.setVersion(e.getEncHospitalizationSpecialCourtesyCodingVersion());
-		}
-		/******************** Enc_Hospitalization_SpecialCourtesy_Text ********************************************************************************/
-		if(e.getEncHospitalizationSpecialCourtesyText() != null) {
-			encountersethospitalizationaddspecialcourtesy.setText(e.getEncHospitalizationSpecialCourtesyText());
-		}
-
-		org.hl7.fhir.r4.model.Identifier encounteraddidentifier = encounter.addIdentifier();
+		/******************** encounteridentifier ********************************************************************************/
+		org.hl7.fhir.r4.model.Identifier encounteridentifier =  new org.hl7.fhir.r4.model.Identifier();
+		encounter.addIdentifier(encounteridentifier);
 
 		/******************** Enc_Id_Assigner ********************************************************************************/
 		if(e.getEncIdAssigner() != null) {
-			org.hl7.fhir.r4.model.Reference EncIdAssignerref = new org.hl7.fhir.r4.model.Reference();
-			encounteraddidentifier.setAssigner(EncIdAssignerref.setReference(e.getEncIdAssigner()));
+			encounteridentifier.setAssigner( new org.hl7.fhir.r4.model.Reference(e.getEncIdAssigner()));
 		}
+		/******************** encounteridentifierperiod ********************************************************************************/
+		org.hl7.fhir.r4.model.Period encounteridentifierperiod =  new org.hl7.fhir.r4.model.Period();
+		encounteridentifier.setPeriod(encounteridentifierperiod);
 
-		org.hl7.fhir.r4.model.Period encounteraddidentifiersetperiod = new org.hl7.fhir.r4.model.Period();
-		encounteraddidentifier.setPeriod(encounteraddidentifiersetperiod);
+		/******************** Enc_Id_Prd_End ********************************************************************************/
+		if(e.getEncIdPrdEnd() != null) {
+			java.text.SimpleDateFormat Enc_Id_Prd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Enc_Id_Prd_Enddate = Enc_Id_Prd_Endsdf.parse(e.getEncIdPrdEnd());
+			encounteridentifierperiod.setEnd(Enc_Id_Prd_Enddate);
+		}
+		/******************** Enc_Id_Prd_Strt ********************************************************************************/
+		if(e.getEncIdPrdStrt() != null) {
+			java.text.SimpleDateFormat Enc_Id_Prd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Enc_Id_Prd_Strtdate = Enc_Id_Prd_Strtsdf.parse(e.getEncIdPrdStrt());
+			encounteridentifierperiod.setStart(Enc_Id_Prd_Strtdate);
+		}
+		/******************** Enc_Id_Sys ********************************************************************************/
+		if(e.getEncIdSys() != null) {
+			encounteridentifier.setSystem(e.getEncIdSys());
+		}
+		/******************** encounteridentifiertype ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept encounteridentifiertype =  new org.hl7.fhir.r4.model.CodeableConcept();
+		encounteridentifier.setType(encounteridentifiertype);
 
-		/******************** Enc_Id_Period_End ********************************************************************************/
-		if(e.getEncIdPeriodEnd() != null) {
-			java.text.SimpleDateFormat EncIdPeriodEndsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date EncIdPeriodEnddate = EncIdPeriodEndsdf.parse(e.getEncIdPeriodEnd());
-			encounteraddidentifiersetperiod.setEnd(EncIdPeriodEnddate);
-		}
-		/******************** Enc_Id_Period_Start ********************************************************************************/
-		if(e.getEncIdPeriodStart() != null) {
-			java.text.SimpleDateFormat EncIdPeriodStartsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date EncIdPeriodStartdate = EncIdPeriodStartsdf.parse(e.getEncIdPeriodStart());
-			encounteraddidentifiersetperiod.setStart(EncIdPeriodStartdate);
-		}
-		/******************** Enc_Id_System ********************************************************************************/
-		if(e.getEncIdSystem() != null) {
-			encounteraddidentifier.setSystem(e.getEncIdSystem());
-		}
+		/******************** encounteridentifiertypecoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding encounteridentifiertypecoding =  new org.hl7.fhir.r4.model.Coding();
+		encounteridentifiertype.addCoding(encounteridentifiertypecoding);
 
-		org.hl7.fhir.r4.model.CodeableConcept encounteraddidentifiersettype = new org.hl7.fhir.r4.model.CodeableConcept();
-		encounteraddidentifier.setType(encounteraddidentifiersettype);
+		/******************** Enc_Id_Typ_Cdg_Cd ********************************************************************************/
+		if(e.getEncIdTypCdgCd() != null) {
+			encounteridentifiertypecoding.setCode(e.getEncIdTypCdgCd());
+		}
+		/******************** Enc_Id_Typ_Cdg_Dsply ********************************************************************************/
+		if(e.getEncIdTypCdgDsply() != null) {
+			encounteridentifiertypecoding.setDisplay(e.getEncIdTypCdgDsply());
+		}
+		/******************** Enc_Id_Typ_Cdg_Sys ********************************************************************************/
+		if(e.getEncIdTypCdgSys() != null) {
+			encounteridentifiertypecoding.setSystem(e.getEncIdTypCdgSys());
+		}
+		/******************** Enc_Id_Typ_Cdg_UsrSltd ********************************************************************************/
+		if(e.getEncIdTypCdgUsrSltd() != null) {
+			encounteridentifiertypecoding.setUserSelected(Boolean.parseBoolean(e.getEncIdTypCdgUsrSltd()));
+		}
+		/******************** Enc_Id_Typ_Cdg_Vrsn ********************************************************************************/
+		if(e.getEncIdTypCdgVrsn() != null) {
+			encounteridentifiertypecoding.setVersion(e.getEncIdTypCdgVrsn());
+		}
+		/******************** Enc_Id_Typ_Txt ********************************************************************************/
+		if(e.getEncIdTypTxt() != null) {
+			encounteridentifiertype.setText(e.getEncIdTypTxt());
+		}
+		/******************** encounteridentifieruse ********************************************************************************/
+		org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory encounteridentifieruse =  new org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory();
+		encounteridentifier.setUse(encounteridentifieruse.fromCode(e.getEncIdUse()));
 
+		/******************** Enc_Id_Vl ********************************************************************************/
+		if(e.getEncIdVl() != null) {
+			encounteridentifier.setValue(e.getEncIdVl());
+		}
+		/******************** encounterlength ********************************************************************************/
+		org.hl7.fhir.r4.model.Duration encounterlength =  new org.hl7.fhir.r4.model.Duration();
+		encounter.setLength(encounterlength);
 
-		org.hl7.fhir.r4.model.Coding encounteraddidentifiersettypeaddcoding = encounteraddidentifiersettype.addCoding();
+		/******************** encounterlocation ********************************************************************************/
+		org.hl7.fhir.r4.model.Encounter.EncounterLocationComponent encounterlocation =  new org.hl7.fhir.r4.model.Encounter.EncounterLocationComponent();
+		encounter.addLocation(encounterlocation);
 
-		/******************** Enc_Id_Type_Coding_Code ********************************************************************************/
-		if(e.getEncIdTypeCodingCode() != null) {
-			encounteraddidentifiersettypeaddcoding.setCode(e.getEncIdTypeCodingCode());
+		/******************** Enc_Lctn_Lctn ********************************************************************************/
+		if(e.getEncLctnLctn() != null) {
+			encounterlocation.setLocation( new org.hl7.fhir.r4.model.Reference(e.getEncLctnLctn()));
 		}
-		/******************** Enc_Id_Type_Coding_Display ********************************************************************************/
-		if(e.getEncIdTypeCodingDisplay() != null) {
-			encounteraddidentifiersettypeaddcoding.setDisplay(e.getEncIdTypeCodingDisplay());
-		}
-		/******************** Enc_Id_Type_Coding_System ********************************************************************************/
-		if(e.getEncIdTypeCodingSystem() != null) {
-			encounteraddidentifiersettypeaddcoding.setSystem(e.getEncIdTypeCodingSystem());
-		}
-		/******************** Enc_Id_Type_Coding_Usrslt ********************************************************************************/
-		if(e.getEncIdTypeCodingUsrslt() != null) {
-			encounteraddidentifiersettypeaddcoding.setUserSelected(Boolean.parseBoolean(e.getEncIdTypeCodingUsrslt()));
-		}
-		/******************** Enc_Id_Type_Coding_Version ********************************************************************************/
-		if(e.getEncIdTypeCodingVersion() != null) {
-			encounteraddidentifiersettypeaddcoding.setVersion(e.getEncIdTypeCodingVersion());
-		}
-		/******************** Enc_Id_Type_Text ********************************************************************************/
-		if(e.getEncIdTypeText() != null) {
-			encounteraddidentifiersettype.setText(e.getEncIdTypeText());
-		}
+		/******************** encounterlocationperiod ********************************************************************************/
+		org.hl7.fhir.r4.model.Period encounterlocationperiod =  new org.hl7.fhir.r4.model.Period();
+		encounterlocation.setPeriod(encounterlocationperiod);
 
-		org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory encounteraddidentifiersetuseEnumFactory = new org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory();
-
-		/******************** Enc_Id_Use_Code ********************************************************************************/
-		if(e.getEncIdUseCode() != null) {
-			encounteraddidentifier.setUse(encounteraddidentifiersetuseEnumFactory.fromCode(e.getEncIdUseCode()));
-
+		/******************** Enc_Lctn_Prd_End ********************************************************************************/
+		if(e.getEncLctnPrdEnd() != null) {
+			java.text.SimpleDateFormat Enc_Lctn_Prd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Enc_Lctn_Prd_Enddate = Enc_Lctn_Prd_Endsdf.parse(e.getEncLctnPrdEnd());
+			encounterlocationperiod.setEnd(Enc_Lctn_Prd_Enddate);
 		}
-		/******************** Enc_Id_Value ********************************************************************************/
-		if(e.getEncIdValue() != null) {
-			encounteraddidentifier.setValue(e.getEncIdValue());
+		/******************** Enc_Lctn_Prd_Strt ********************************************************************************/
+		if(e.getEncLctnPrdStrt() != null) {
+			java.text.SimpleDateFormat Enc_Lctn_Prd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Enc_Lctn_Prd_Strtdate = Enc_Lctn_Prd_Strtsdf.parse(e.getEncLctnPrdStrt());
+			encounterlocationperiod.setStart(Enc_Lctn_Prd_Strtdate);
 		}
-		/******************** Enc_Length ********************************************************************************/
-		if(e.getEncLength() != null) {
-			org.hl7.fhir.r4.model.Duration EncLengthdur = new org.hl7.fhir.r4.model.Duration();
-			encounter.setLength((org.hl7.fhir.r4.model.Duration)EncLengthdur.setValue(Double.parseDouble(e.getEncLength())));
-		}
+		/******************** encounterlocationphysicaltype ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept encounterlocationphysicaltype =  new org.hl7.fhir.r4.model.CodeableConcept();
+		encounterlocation.setPhysicalType(encounterlocationphysicaltype);
 
-		org.hl7.fhir.r4.model.Encounter.EncounterLocationComponent encounteraddlocation = encounter.addLocation();
+		/******************** encounterlocationphysicaltypecoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding encounterlocationphysicaltypecoding =  new org.hl7.fhir.r4.model.Coding();
+		encounterlocationphysicaltype.addCoding(encounterlocationphysicaltypecoding);
 
-		/******************** Enc_Location_Location ********************************************************************************/
-		if(e.getEncLocationLocation() != null) {
-			org.hl7.fhir.r4.model.Reference EncLocationLocationref = new org.hl7.fhir.r4.model.Reference();
-			encounteraddlocation.setLocation(EncLocationLocationref.setReference(e.getEncLocationLocation()));
+		/******************** Enc_Lctn_PhysclTyp_Cdg_Cd ********************************************************************************/
+		if(e.getEncLctnPhysclTypCdgCd() != null) {
+			encounterlocationphysicaltypecoding.setCode(e.getEncLctnPhysclTypCdgCd());
 		}
+		/******************** Enc_Lctn_PhysclTyp_Cdg_Dsply ********************************************************************************/
+		if(e.getEncLctnPhysclTypCdgDsply() != null) {
+			encounterlocationphysicaltypecoding.setDisplay(e.getEncLctnPhysclTypCdgDsply());
+		}
+		/******************** Enc_Lctn_PhysclTyp_Cdg_Sys ********************************************************************************/
+		if(e.getEncLctnPhysclTypCdgSys() != null) {
+			encounterlocationphysicaltypecoding.setSystem(e.getEncLctnPhysclTypCdgSys());
+		}
+		/******************** Enc_Lctn_PhysclTyp_Cdg_UsrSltd ********************************************************************************/
+		if(e.getEncLctnPhysclTypCdgUsrSltd() != null) {
+			encounterlocationphysicaltypecoding.setUserSelected(Boolean.parseBoolean(e.getEncLctnPhysclTypCdgUsrSltd()));
+		}
+		/******************** Enc_Lctn_PhysclTyp_Cdg_Vrsn ********************************************************************************/
+		if(e.getEncLctnPhysclTypCdgVrsn() != null) {
+			encounterlocationphysicaltypecoding.setVersion(e.getEncLctnPhysclTypCdgVrsn());
+		}
+		/******************** Enc_Lctn_PhysclTyp_Txt ********************************************************************************/
+		if(e.getEncLctnPhysclTypTxt() != null) {
+			encounterlocationphysicaltype.setText(e.getEncLctnPhysclTypTxt());
+		}
+		/******************** encounterlocationstatus ********************************************************************************/
+		org.hl7.fhir.r4.model.Encounter.EncounterLocationStatusEnumFactory encounterlocationstatus =  new org.hl7.fhir.r4.model.Encounter.EncounterLocationStatusEnumFactory();
+		encounterlocation.setStatus(encounterlocationstatus.fromCode(e.getEncLctnSts()));
 
-		org.hl7.fhir.r4.model.Period encounteraddlocationsetperiod = new org.hl7.fhir.r4.model.Period();
-		encounteraddlocation.setPeriod(encounteraddlocationsetperiod);
-
-		/******************** Enc_Location_Period_End ********************************************************************************/
-		if(e.getEncLocationPeriodEnd() != null) {
-			java.text.SimpleDateFormat EncLocationPeriodEndsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date EncLocationPeriodEnddate = EncLocationPeriodEndsdf.parse(e.getEncLocationPeriodEnd());
-			encounteraddlocationsetperiod.setEnd(EncLocationPeriodEnddate);
-		}
-		/******************** Enc_Location_Period_Start ********************************************************************************/
-		if(e.getEncLocationPeriodStart() != null) {
-			java.text.SimpleDateFormat EncLocationPeriodStartsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date EncLocationPeriodStartdate = EncLocationPeriodStartsdf.parse(e.getEncLocationPeriodStart());
-			encounteraddlocationsetperiod.setStart(EncLocationPeriodStartdate);
-		}
-
-		org.hl7.fhir.r4.model.CodeableConcept encounteraddlocationsetphysicaltype = new org.hl7.fhir.r4.model.CodeableConcept();
-		encounteraddlocation.setPhysicalType(encounteraddlocationsetphysicaltype);
-
-
-		org.hl7.fhir.r4.model.Coding encounteraddlocationsetphysicaltypeaddcoding = encounteraddlocationsetphysicaltype.addCoding();
-
-		/******************** Enc_Location_PhysicalType_Coding_Code ********************************************************************************/
-		if(e.getEncLocationPhysicalTypeCodingCode() != null) {
-			encounteraddlocationsetphysicaltypeaddcoding.setCode(e.getEncLocationPhysicalTypeCodingCode());
-		}
-		/******************** Enc_Location_PhysicalType_Coding_Display ********************************************************************************/
-		if(e.getEncLocationPhysicalTypeCodingDisplay() != null) {
-			encounteraddlocationsetphysicaltypeaddcoding.setDisplay(e.getEncLocationPhysicalTypeCodingDisplay());
-		}
-		/******************** Enc_Location_PhysicalType_Coding_System ********************************************************************************/
-		if(e.getEncLocationPhysicalTypeCodingSystem() != null) {
-			encounteraddlocationsetphysicaltypeaddcoding.setSystem(e.getEncLocationPhysicalTypeCodingSystem());
-		}
-		/******************** Enc_Location_PhysicalType_Coding_Usrslt ********************************************************************************/
-		if(e.getEncLocationPhysicalTypeCodingUsrslt() != null) {
-			encounteraddlocationsetphysicaltypeaddcoding.setUserSelected(Boolean.parseBoolean(e.getEncLocationPhysicalTypeCodingUsrslt()));
-		}
-		/******************** Enc_Location_PhysicalType_Coding_Version ********************************************************************************/
-		if(e.getEncLocationPhysicalTypeCodingVersion() != null) {
-			encounteraddlocationsetphysicaltypeaddcoding.setVersion(e.getEncLocationPhysicalTypeCodingVersion());
-		}
-		/******************** Enc_Location_PhysicalType_Text ********************************************************************************/
-		if(e.getEncLocationPhysicalTypeText() != null) {
-			encounteraddlocationsetphysicaltype.setText(e.getEncLocationPhysicalTypeText());
-		}
-
-		org.hl7.fhir.r4.model.Encounter.EncounterLocationStatusEnumFactory encounteraddlocationsetstatusEnumFactory = new org.hl7.fhir.r4.model.Encounter.EncounterLocationStatusEnumFactory();
-
-		/******************** Enc_Location_Status_Code ********************************************************************************/
-		if(e.getEncLocationStatusCode() != null) {
-			encounteraddlocation.setStatus(encounteraddlocationsetstatusEnumFactory.fromCode(e.getEncLocationStatusCode()));
-
-		}
 		/******************** Enc_PartOf ********************************************************************************/
 		if(e.getEncPartOf() != null) {
-			org.hl7.fhir.r4.model.Reference EncPartOfref = new org.hl7.fhir.r4.model.Reference();
-			encounter.setPartOf(EncPartOfref.setReference(e.getEncPartOf()));
+			encounter.setPartOf( new org.hl7.fhir.r4.model.Reference(e.getEncPartOf()));
 		}
+		/******************** encounterparticipant ********************************************************************************/
+		org.hl7.fhir.r4.model.Encounter.EncounterParticipantComponent encounterparticipant =  new org.hl7.fhir.r4.model.Encounter.EncounterParticipantComponent();
+		encounter.addParticipant(encounterparticipant);
 
-		org.hl7.fhir.r4.model.Encounter.EncounterParticipantComponent encounteraddparticipant = encounter.addParticipant();
+		/******************** Enc_Prtcpnt_Individual ********************************************************************************/
+		if(e.getEncPrtcpntIndividual() != null) {
+			encounterparticipant.setIndividual( new org.hl7.fhir.r4.model.Reference(e.getEncPrtcpntIndividual()));
+		}
+		/******************** encounterparticipantperiod ********************************************************************************/
+		org.hl7.fhir.r4.model.Period encounterparticipantperiod =  new org.hl7.fhir.r4.model.Period();
+		encounterparticipant.setPeriod(encounterparticipantperiod);
 
-		/******************** Enc_Participant_Individual ********************************************************************************/
-		if(e.getEncParticipantIndividual() != null) {
-			org.hl7.fhir.r4.model.Reference EncParticipantIndividualref = new org.hl7.fhir.r4.model.Reference();
-			encounteraddparticipant.setIndividual(EncParticipantIndividualref.setReference(e.getEncParticipantIndividual()));
+		/******************** Enc_Prtcpnt_Prd_End ********************************************************************************/
+		if(e.getEncPrtcpntPrdEnd() != null) {
+			java.text.SimpleDateFormat Enc_Prtcpnt_Prd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Enc_Prtcpnt_Prd_Enddate = Enc_Prtcpnt_Prd_Endsdf.parse(e.getEncPrtcpntPrdEnd());
+			encounterparticipantperiod.setEnd(Enc_Prtcpnt_Prd_Enddate);
 		}
+		/******************** Enc_Prtcpnt_Prd_Strt ********************************************************************************/
+		if(e.getEncPrtcpntPrdStrt() != null) {
+			java.text.SimpleDateFormat Enc_Prtcpnt_Prd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Enc_Prtcpnt_Prd_Strtdate = Enc_Prtcpnt_Prd_Strtsdf.parse(e.getEncPrtcpntPrdStrt());
+			encounterparticipantperiod.setStart(Enc_Prtcpnt_Prd_Strtdate);
+		}
+		/******************** encounterparticipanttype ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept encounterparticipanttype =  new org.hl7.fhir.r4.model.CodeableConcept();
+		encounterparticipant.addType(encounterparticipanttype);
 
-		org.hl7.fhir.r4.model.Period encounteraddparticipantsetperiod = new org.hl7.fhir.r4.model.Period();
-		encounteraddparticipant.setPeriod(encounteraddparticipantsetperiod);
+		/******************** encounterparticipanttypecoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding encounterparticipanttypecoding =  new org.hl7.fhir.r4.model.Coding();
+		encounterparticipanttype.addCoding(encounterparticipanttypecoding);
 
-		/******************** Enc_Participant_Period_End ********************************************************************************/
-		if(e.getEncParticipantPeriodEnd() != null) {
-			java.text.SimpleDateFormat EncParticipantPeriodEndsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date EncParticipantPeriodEnddate = EncParticipantPeriodEndsdf.parse(e.getEncParticipantPeriodEnd());
-			encounteraddparticipantsetperiod.setEnd(EncParticipantPeriodEnddate);
+		/******************** Enc_Prtcpnt_Typ_Cdg_Cd ********************************************************************************/
+		if(e.getEncPrtcpntTypCdgCd() != null) {
+			encounterparticipanttypecoding.setCode(e.getEncPrtcpntTypCdgCd());
 		}
-		/******************** Enc_Participant_Period_Start ********************************************************************************/
-		if(e.getEncParticipantPeriodStart() != null) {
-			java.text.SimpleDateFormat EncParticipantPeriodStartsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date EncParticipantPeriodStartdate = EncParticipantPeriodStartsdf.parse(e.getEncParticipantPeriodStart());
-			encounteraddparticipantsetperiod.setStart(EncParticipantPeriodStartdate);
+		/******************** Enc_Prtcpnt_Typ_Cdg_Dsply ********************************************************************************/
+		if(e.getEncPrtcpntTypCdgDsply() != null) {
+			encounterparticipanttypecoding.setDisplay(e.getEncPrtcpntTypCdgDsply());
 		}
+		/******************** Enc_Prtcpnt_Typ_Cdg_Sys ********************************************************************************/
+		if(e.getEncPrtcpntTypCdgSys() != null) {
+			encounterparticipanttypecoding.setSystem(e.getEncPrtcpntTypCdgSys());
+		}
+		/******************** Enc_Prtcpnt_Typ_Cdg_UsrSltd ********************************************************************************/
+		if(e.getEncPrtcpntTypCdgUsrSltd() != null) {
+			encounterparticipanttypecoding.setUserSelected(Boolean.parseBoolean(e.getEncPrtcpntTypCdgUsrSltd()));
+		}
+		/******************** Enc_Prtcpnt_Typ_Cdg_Vrsn ********************************************************************************/
+		if(e.getEncPrtcpntTypCdgVrsn() != null) {
+			encounterparticipanttypecoding.setVersion(e.getEncPrtcpntTypCdgVrsn());
+		}
+		/******************** Enc_Prtcpnt_Typ_Txt ********************************************************************************/
+		if(e.getEncPrtcpntTypTxt() != null) {
+			encounterparticipanttype.setText(e.getEncPrtcpntTypTxt());
+		}
+		/******************** encounterperiod ********************************************************************************/
+		org.hl7.fhir.r4.model.Period encounterperiod =  new org.hl7.fhir.r4.model.Period();
+		encounter.setPeriod(encounterperiod);
 
-		org.hl7.fhir.r4.model.CodeableConcept encounteraddparticipantaddtype = encounteraddparticipant.addType();
+		/******************** Enc_Prd_End ********************************************************************************/
+		if(e.getEncPrdEnd() != null) {
+			java.text.SimpleDateFormat Enc_Prd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Enc_Prd_Enddate = Enc_Prd_Endsdf.parse(e.getEncPrdEnd());
+			encounterperiod.setEnd(Enc_Prd_Enddate);
+		}
+		/******************** Enc_Prd_Strt ********************************************************************************/
+		if(e.getEncPrdStrt() != null) {
+			java.text.SimpleDateFormat Enc_Prd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Enc_Prd_Strtdate = Enc_Prd_Strtsdf.parse(e.getEncPrdStrt());
+			encounterperiod.setStart(Enc_Prd_Strtdate);
+		}
+		/******************** encounterpriority ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept encounterpriority =  new org.hl7.fhir.r4.model.CodeableConcept();
+		encounter.setPriority(encounterpriority);
 
+		/******************** encounterprioritycoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding encounterprioritycoding =  new org.hl7.fhir.r4.model.Coding();
+		encounterpriority.addCoding(encounterprioritycoding);
 
-		org.hl7.fhir.r4.model.Coding encounteraddparticipantaddtypeaddcoding = encounteraddparticipantaddtype.addCoding();
+		/******************** Enc_Priority_Cdg_Cd ********************************************************************************/
+		if(e.getEncPriorityCdgCd() != null) {
+			encounterprioritycoding.setCode(e.getEncPriorityCdgCd());
+		}
+		/******************** Enc_Priority_Cdg_Dsply ********************************************************************************/
+		if(e.getEncPriorityCdgDsply() != null) {
+			encounterprioritycoding.setDisplay(e.getEncPriorityCdgDsply());
+		}
+		/******************** Enc_Priority_Cdg_Sys ********************************************************************************/
+		if(e.getEncPriorityCdgSys() != null) {
+			encounterprioritycoding.setSystem(e.getEncPriorityCdgSys());
+		}
+		/******************** Enc_Priority_Cdg_UsrSltd ********************************************************************************/
+		if(e.getEncPriorityCdgUsrSltd() != null) {
+			encounterprioritycoding.setUserSelected(Boolean.parseBoolean(e.getEncPriorityCdgUsrSltd()));
+		}
+		/******************** Enc_Priority_Cdg_Vrsn ********************************************************************************/
+		if(e.getEncPriorityCdgVrsn() != null) {
+			encounterprioritycoding.setVersion(e.getEncPriorityCdgVrsn());
+		}
+		/******************** Enc_Priority_Txt ********************************************************************************/
+		if(e.getEncPriorityTxt() != null) {
+			encounterpriority.setText(e.getEncPriorityTxt());
+		}
+		/******************** encounterreasoncode ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept encounterreasoncode =  new org.hl7.fhir.r4.model.CodeableConcept();
+		encounter.addReasonCode(encounterreasoncode);
 
-		/******************** Enc_Participant_Type_Coding_Code ********************************************************************************/
-		if(e.getEncParticipantTypeCodingCode() != null) {
-			encounteraddparticipantaddtypeaddcoding.setCode(e.getEncParticipantTypeCodingCode());
-		}
-		/******************** Enc_Participant_Type_Coding_Display ********************************************************************************/
-		if(e.getEncParticipantTypeCodingDisplay() != null) {
-			encounteraddparticipantaddtypeaddcoding.setDisplay(e.getEncParticipantTypeCodingDisplay());
-		}
-		/******************** Enc_Participant_Type_Coding_System ********************************************************************************/
-		if(e.getEncParticipantTypeCodingSystem() != null) {
-			encounteraddparticipantaddtypeaddcoding.setSystem(e.getEncParticipantTypeCodingSystem());
-		}
-		/******************** Enc_Participant_Type_Coding_Usrslt ********************************************************************************/
-		if(e.getEncParticipantTypeCodingUsrslt() != null) {
-			encounteraddparticipantaddtypeaddcoding.setUserSelected(Boolean.parseBoolean(e.getEncParticipantTypeCodingUsrslt()));
-		}
-		/******************** Enc_Participant_Type_Coding_Version ********************************************************************************/
-		if(e.getEncParticipantTypeCodingVersion() != null) {
-			encounteraddparticipantaddtypeaddcoding.setVersion(e.getEncParticipantTypeCodingVersion());
-		}
-		/******************** Enc_Participant_Type_Text ********************************************************************************/
-		if(e.getEncParticipantTypeText() != null) {
-			encounteraddparticipantaddtype.setText(e.getEncParticipantTypeText());
-		}
+		/******************** encounterreasoncodecoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding encounterreasoncodecoding =  new org.hl7.fhir.r4.model.Coding();
+		encounterreasoncode.addCoding(encounterreasoncodecoding);
 
-		org.hl7.fhir.r4.model.Period encountersetperiod = new org.hl7.fhir.r4.model.Period();
-		encounter.setPeriod(encountersetperiod);
+		/******************** Enc_RsnCd_Cdg_Cd ********************************************************************************/
+		if(e.getEncRsnCdCdgCd() != null) {
+			encounterreasoncodecoding.setCode(e.getEncRsnCdCdgCd());
+		}
+		/******************** Enc_RsnCd_Cdg_Dsply ********************************************************************************/
+		if(e.getEncRsnCdCdgDsply() != null) {
+			encounterreasoncodecoding.setDisplay(e.getEncRsnCdCdgDsply());
+		}
+		/******************** Enc_RsnCd_Cdg_Sys ********************************************************************************/
+		if(e.getEncRsnCdCdgSys() != null) {
+			encounterreasoncodecoding.setSystem(e.getEncRsnCdCdgSys());
+		}
+		/******************** Enc_RsnCd_Cdg_UsrSltd ********************************************************************************/
+		if(e.getEncRsnCdCdgUsrSltd() != null) {
+			encounterreasoncodecoding.setUserSelected(Boolean.parseBoolean(e.getEncRsnCdCdgUsrSltd()));
+		}
+		/******************** Enc_RsnCd_Cdg_Vrsn ********************************************************************************/
+		if(e.getEncRsnCdCdgVrsn() != null) {
+			encounterreasoncodecoding.setVersion(e.getEncRsnCdCdgVrsn());
+		}
+		/******************** Enc_RsnCd_Txt ********************************************************************************/
+		if(e.getEncRsnCdTxt() != null) {
+			encounterreasoncode.setText(e.getEncRsnCdTxt());
+		}
+		/******************** Enc_RsnRfrnc ********************************************************************************/
+		if(e.getEncRsnRfrnc() != null) {
+			encounter.addReasonReference( new org.hl7.fhir.r4.model.Reference(e.getEncRsnRfrnc()));
+		}
+		/******************** Enc_SrvProvider ********************************************************************************/
+		if(e.getEncSrvProvider() != null) {
+			encounter.setServiceProvider( new org.hl7.fhir.r4.model.Reference(e.getEncSrvProvider()));
+		}
+		/******************** encounterservicetype ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept encounterservicetype =  new org.hl7.fhir.r4.model.CodeableConcept();
+		encounter.setServiceType(encounterservicetype);
 
-		/******************** Enc_Period_End ********************************************************************************/
-		if(e.getEncPeriodEnd() != null) {
-			java.text.SimpleDateFormat EncPeriodEndsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date EncPeriodEnddate = EncPeriodEndsdf.parse(e.getEncPeriodEnd());
-			encountersetperiod.setEnd(EncPeriodEnddate);
-		}
-		/******************** Enc_Period_Start ********************************************************************************/
-		if(e.getEncPeriodStart() != null) {
-			java.text.SimpleDateFormat EncPeriodStartsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date EncPeriodStartdate = EncPeriodStartsdf.parse(e.getEncPeriodStart());
-			encountersetperiod.setStart(EncPeriodStartdate);
-		}
+		/******************** encounterservicetypecoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding encounterservicetypecoding =  new org.hl7.fhir.r4.model.Coding();
+		encounterservicetype.addCoding(encounterservicetypecoding);
 
-		org.hl7.fhir.r4.model.CodeableConcept encountersetpriority = new org.hl7.fhir.r4.model.CodeableConcept();
-		encounter.setPriority(encountersetpriority);
+		/******************** Enc_SrvTyp_Cdg_Cd ********************************************************************************/
+		if(e.getEncSrvTypCdgCd() != null) {
+			encounterservicetypecoding.setCode(e.getEncSrvTypCdgCd());
+		}
+		/******************** Enc_SrvTyp_Cdg_Dsply ********************************************************************************/
+		if(e.getEncSrvTypCdgDsply() != null) {
+			encounterservicetypecoding.setDisplay(e.getEncSrvTypCdgDsply());
+		}
+		/******************** Enc_SrvTyp_Cdg_Sys ********************************************************************************/
+		if(e.getEncSrvTypCdgSys() != null) {
+			encounterservicetypecoding.setSystem(e.getEncSrvTypCdgSys());
+		}
+		/******************** Enc_SrvTyp_Cdg_UsrSltd ********************************************************************************/
+		if(e.getEncSrvTypCdgUsrSltd() != null) {
+			encounterservicetypecoding.setUserSelected(Boolean.parseBoolean(e.getEncSrvTypCdgUsrSltd()));
+		}
+		/******************** Enc_SrvTyp_Cdg_Vrsn ********************************************************************************/
+		if(e.getEncSrvTypCdgVrsn() != null) {
+			encounterservicetypecoding.setVersion(e.getEncSrvTypCdgVrsn());
+		}
+		/******************** Enc_SrvTyp_Txt ********************************************************************************/
+		if(e.getEncSrvTypTxt() != null) {
+			encounterservicetype.setText(e.getEncSrvTypTxt());
+		}
+		/******************** encounterstatus ********************************************************************************/
+		org.hl7.fhir.r4.model.Encounter.EncounterStatusEnumFactory encounterstatus =  new org.hl7.fhir.r4.model.Encounter.EncounterStatusEnumFactory();
+		encounter.setStatus(encounterstatus.fromCode(e.getEncSts()));
 
+		/******************** encounterstatushistory ********************************************************************************/
+		org.hl7.fhir.r4.model.Encounter.StatusHistoryComponent encounterstatushistory =  new org.hl7.fhir.r4.model.Encounter.StatusHistoryComponent();
+		encounter.addStatusHistory(encounterstatushistory);
 
-		org.hl7.fhir.r4.model.Coding encountersetpriorityaddcoding = encountersetpriority.addCoding();
+		/******************** encounterstatushistoryperiod ********************************************************************************/
+		org.hl7.fhir.r4.model.Period encounterstatushistoryperiod =  new org.hl7.fhir.r4.model.Period();
+		encounterstatushistory.setPeriod(encounterstatushistoryperiod);
 
-		/******************** Enc_Priority_Coding_Code ********************************************************************************/
-		if(e.getEncPriorityCodingCode() != null) {
-			encountersetpriorityaddcoding.setCode(e.getEncPriorityCodingCode());
+		/******************** Enc_StsHis_Prd_End ********************************************************************************/
+		if(e.getEncStsHisPrdEnd() != null) {
+			java.text.SimpleDateFormat Enc_StsHis_Prd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Enc_StsHis_Prd_Enddate = Enc_StsHis_Prd_Endsdf.parse(e.getEncStsHisPrdEnd());
+			encounterstatushistoryperiod.setEnd(Enc_StsHis_Prd_Enddate);
 		}
-		/******************** Enc_Priority_Coding_Display ********************************************************************************/
-		if(e.getEncPriorityCodingDisplay() != null) {
-			encountersetpriorityaddcoding.setDisplay(e.getEncPriorityCodingDisplay());
+		/******************** Enc_StsHis_Prd_Strt ********************************************************************************/
+		if(e.getEncStsHisPrdStrt() != null) {
+			java.text.SimpleDateFormat Enc_StsHis_Prd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Enc_StsHis_Prd_Strtdate = Enc_StsHis_Prd_Strtsdf.parse(e.getEncStsHisPrdStrt());
+			encounterstatushistoryperiod.setStart(Enc_StsHis_Prd_Strtdate);
 		}
-		/******************** Enc_Priority_Coding_System ********************************************************************************/
-		if(e.getEncPriorityCodingSystem() != null) {
-			encountersetpriorityaddcoding.setSystem(e.getEncPriorityCodingSystem());
-		}
-		/******************** Enc_Priority_Coding_Usrslt ********************************************************************************/
-		if(e.getEncPriorityCodingUsrslt() != null) {
-			encountersetpriorityaddcoding.setUserSelected(Boolean.parseBoolean(e.getEncPriorityCodingUsrslt()));
-		}
-		/******************** Enc_Priority_Coding_Version ********************************************************************************/
-		if(e.getEncPriorityCodingVersion() != null) {
-			encountersetpriorityaddcoding.setVersion(e.getEncPriorityCodingVersion());
-		}
-		/******************** Enc_Priority_Text ********************************************************************************/
-		if(e.getEncPriorityText() != null) {
-			encountersetpriority.setText(e.getEncPriorityText());
-		}
+		/******************** encounterstatushistorystatus ********************************************************************************/
+		org.hl7.fhir.r4.model.Encounter.EncounterStatusEnumFactory encounterstatushistorystatus =  new org.hl7.fhir.r4.model.Encounter.EncounterStatusEnumFactory();
+		encounterstatushistory.setStatus(encounterstatushistorystatus.fromCode(e.getEncStsHisSts()));
 
-		org.hl7.fhir.r4.model.CodeableConcept encounteraddreasoncode = encounter.addReasonCode();
+		/******************** Enc_Sbjct ********************************************************************************/
+		if(e.getEncSbjct() != null) {
+			encounter.setSubject( new org.hl7.fhir.r4.model.Reference(e.getEncSbjct()));
+		}
+		/******************** encountertype ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept encountertype =  new org.hl7.fhir.r4.model.CodeableConcept();
+		encounter.addType(encountertype);
 
+		/******************** encountertypecoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding encountertypecoding =  new org.hl7.fhir.r4.model.Coding();
+		encountertype.addCoding(encountertypecoding);
 
-		org.hl7.fhir.r4.model.Coding encounteraddreasoncodeaddcoding = encounteraddreasoncode.addCoding();
-
-		/******************** Enc_ReasonCode_Coding_Code ********************************************************************************/
-		if(e.getEncReasonCodeCodingCode() != null) {
-			encounteraddreasoncodeaddcoding.setCode(e.getEncReasonCodeCodingCode());
+		/******************** Enc_Typ_Cdg_Cd ********************************************************************************/
+		if(e.getEncTypCdgCd() != null) {
+			encountertypecoding.setCode(e.getEncTypCdgCd());
 		}
-		/******************** Enc_ReasonCode_Coding_Display ********************************************************************************/
-		if(e.getEncReasonCodeCodingDisplay() != null) {
-			encounteraddreasoncodeaddcoding.setDisplay(e.getEncReasonCodeCodingDisplay());
+		/******************** Enc_Typ_Cdg_Dsply ********************************************************************************/
+		if(e.getEncTypCdgDsply() != null) {
+			encountertypecoding.setDisplay(e.getEncTypCdgDsply());
 		}
-		/******************** Enc_ReasonCode_Coding_System ********************************************************************************/
-		if(e.getEncReasonCodeCodingSystem() != null) {
-			encounteraddreasoncodeaddcoding.setSystem(e.getEncReasonCodeCodingSystem());
+		/******************** Enc_Typ_Cdg_Sys ********************************************************************************/
+		if(e.getEncTypCdgSys() != null) {
+			encountertypecoding.setSystem(e.getEncTypCdgSys());
 		}
-		/******************** Enc_ReasonCode_Coding_Usrslt ********************************************************************************/
-		if(e.getEncReasonCodeCodingUsrslt() != null) {
-			encounteraddreasoncodeaddcoding.setUserSelected(Boolean.parseBoolean(e.getEncReasonCodeCodingUsrslt()));
+		/******************** Enc_Typ_Cdg_UsrSltd ********************************************************************************/
+		if(e.getEncTypCdgUsrSltd() != null) {
+			encountertypecoding.setUserSelected(Boolean.parseBoolean(e.getEncTypCdgUsrSltd()));
 		}
-		/******************** Enc_ReasonCode_Coding_Version ********************************************************************************/
-		if(e.getEncReasonCodeCodingVersion() != null) {
-			encounteraddreasoncodeaddcoding.setVersion(e.getEncReasonCodeCodingVersion());
+		/******************** Enc_Typ_Cdg_Vrsn ********************************************************************************/
+		if(e.getEncTypCdgVrsn() != null) {
+			encountertypecoding.setVersion(e.getEncTypCdgVrsn());
 		}
-		/******************** Enc_ReasonCode_Text ********************************************************************************/
-		if(e.getEncReasonCodeText() != null) {
-			encounteraddreasoncode.setText(e.getEncReasonCodeText());
-		}
-		/******************** Enc_ReasonReference ********************************************************************************/
-		if(e.getEncReasonReference() != null) {
-			org.hl7.fhir.r4.model.Reference EncReasonReferenceref = new org.hl7.fhir.r4.model.Reference();
-			encounter.addReasonReference(EncReasonReferenceref.setReference(e.getEncReasonReference()));
-		}
-		/******************** Enc_ServiceProvider ********************************************************************************/
-		if(e.getEncServiceProvider() != null) {
-			org.hl7.fhir.r4.model.Reference EncServiceProviderref = new org.hl7.fhir.r4.model.Reference();
-			encounter.setServiceProvider(EncServiceProviderref.setReference(e.getEncServiceProvider()));
-		}
-
-		org.hl7.fhir.r4.model.CodeableConcept encountersetservicetype = new org.hl7.fhir.r4.model.CodeableConcept();
-		encounter.setServiceType(encountersetservicetype);
-
-
-		org.hl7.fhir.r4.model.Coding encountersetservicetypeaddcoding = encountersetservicetype.addCoding();
-
-		/******************** Enc_ServiceType_Coding_Code ********************************************************************************/
-		if(e.getEncServiceTypeCodingCode() != null) {
-			encountersetservicetypeaddcoding.setCode(e.getEncServiceTypeCodingCode());
-		}
-		/******************** Enc_ServiceType_Coding_Display ********************************************************************************/
-		if(e.getEncServiceTypeCodingDisplay() != null) {
-			encountersetservicetypeaddcoding.setDisplay(e.getEncServiceTypeCodingDisplay());
-		}
-		/******************** Enc_ServiceType_Coding_System ********************************************************************************/
-		if(e.getEncServiceTypeCodingSystem() != null) {
-			encountersetservicetypeaddcoding.setSystem(e.getEncServiceTypeCodingSystem());
-		}
-		/******************** Enc_ServiceType_Coding_Usrslt ********************************************************************************/
-		if(e.getEncServiceTypeCodingUsrslt() != null) {
-			encountersetservicetypeaddcoding.setUserSelected(Boolean.parseBoolean(e.getEncServiceTypeCodingUsrslt()));
-		}
-		/******************** Enc_ServiceType_Coding_Version ********************************************************************************/
-		if(e.getEncServiceTypeCodingVersion() != null) {
-			encountersetservicetypeaddcoding.setVersion(e.getEncServiceTypeCodingVersion());
-		}
-		/******************** Enc_ServiceType_Text ********************************************************************************/
-		if(e.getEncServiceTypeText() != null) {
-			encountersetservicetype.setText(e.getEncServiceTypeText());
-		}
-
-		org.hl7.fhir.r4.model.Encounter.EncounterStatusEnumFactory encountersetstatusEnumFactory = new org.hl7.fhir.r4.model.Encounter.EncounterStatusEnumFactory();
-
-		/******************** Enc_Status_Code ********************************************************************************/
-		if(e.getEncStatusCode() != null) {
-			encounter.setStatus(encountersetstatusEnumFactory.fromCode(e.getEncStatusCode()));
-
-		}
-
-		org.hl7.fhir.r4.model.Encounter.StatusHistoryComponent encounteraddstatushistory = encounter.addStatusHistory();
-
-
-		org.hl7.fhir.r4.model.Period encounteraddstatushistorysetperiod = new org.hl7.fhir.r4.model.Period();
-		encounteraddstatushistory.setPeriod(encounteraddstatushistorysetperiod);
-
-		/******************** Enc_StatusHistory_Period_End ********************************************************************************/
-		if(e.getEncStatusHistoryPeriodEnd() != null) {
-			java.text.SimpleDateFormat EncStatusHistoryPeriodEndsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date EncStatusHistoryPeriodEnddate = EncStatusHistoryPeriodEndsdf.parse(e.getEncStatusHistoryPeriodEnd());
-			encounteraddstatushistorysetperiod.setEnd(EncStatusHistoryPeriodEnddate);
-		}
-		/******************** Enc_StatusHistory_Period_Start ********************************************************************************/
-		if(e.getEncStatusHistoryPeriodStart() != null) {
-			java.text.SimpleDateFormat EncStatusHistoryPeriodStartsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date EncStatusHistoryPeriodStartdate = EncStatusHistoryPeriodStartsdf.parse(e.getEncStatusHistoryPeriodStart());
-			encounteraddstatushistorysetperiod.setStart(EncStatusHistoryPeriodStartdate);
-		}
-
-		org.hl7.fhir.r4.model.Encounter.EncounterStatusEnumFactory encounteraddstatushistorysetstatusEnumFactory = new org.hl7.fhir.r4.model.Encounter.EncounterStatusEnumFactory();
-
-		/******************** Enc_StatusHistory_Status_Code ********************************************************************************/
-		if(e.getEncStatusHistoryStatusCode() != null) {
-			encounteraddstatushistory.setStatus(encounteraddstatushistorysetstatusEnumFactory.fromCode(e.getEncStatusHistoryStatusCode()));
-
-		}
-		/******************** Enc_Subject ********************************************************************************/
-		if(e.getEncSubject() != null) {
-			org.hl7.fhir.r4.model.Reference EncSubjectref = new org.hl7.fhir.r4.model.Reference();
-			encounter.setSubject(EncSubjectref.setReference(e.getEncSubject()));
-		}
-
-		org.hl7.fhir.r4.model.CodeableConcept encounteraddtype = encounter.addType();
-
-
-		org.hl7.fhir.r4.model.Coding encounteraddtypeaddcoding = encounteraddtype.addCoding();
-
-		/******************** Enc_Type_Coding_Code ********************************************************************************/
-		if(e.getEncTypeCodingCode() != null) {
-			encounteraddtypeaddcoding.setCode(e.getEncTypeCodingCode());
-		}
-		/******************** Enc_Type_Coding_Display ********************************************************************************/
-		if(e.getEncTypeCodingDisplay() != null) {
-			encounteraddtypeaddcoding.setDisplay(e.getEncTypeCodingDisplay());
-		}
-		/******************** Enc_Type_Coding_System ********************************************************************************/
-		if(e.getEncTypeCodingSystem() != null) {
-			encounteraddtypeaddcoding.setSystem(e.getEncTypeCodingSystem());
-		}
-		/******************** Enc_Type_Coding_Usrslt ********************************************************************************/
-		if(e.getEncTypeCodingUsrslt() != null) {
-			encounteraddtypeaddcoding.setUserSelected(Boolean.parseBoolean(e.getEncTypeCodingUsrslt()));
-		}
-		/******************** Enc_Type_Coding_Version ********************************************************************************/
-		if(e.getEncTypeCodingVersion() != null) {
-			encounteraddtypeaddcoding.setVersion(e.getEncTypeCodingVersion());
-		}
-		/******************** Enc_Type_Text ********************************************************************************/
-		if(e.getEncTypeText() != null) {
-			encounteraddtype.setText(e.getEncTypeText());
+		/******************** Enc_Typ_Txt ********************************************************************************/
+		if(e.getEncTypTxt() != null) {
+			encountertype.setText(e.getEncTypTxt());
 		}
 		return encounter;
 	}

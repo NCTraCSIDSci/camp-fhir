@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Jun 6, 2022, 11:02:25 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Schedule" optimistic-lock="none" table="Schedule">
+        <id name="id" type="string">
+            <column length="64" name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="schdlActive" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Schdl_Active"/>
+        </property>
+        <property name="schdlActor" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Schdl_Actor"/>
+        </property>
+        <property name="schdlComment" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Schdl_Comment"/>
+        </property>
+        <property name="schdlIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Schdl_Id_Assigner"/>
+        </property>
+        <property name="schdlIdPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Schdl_Id_Prd_End"/>
+        </property>
+        <property name="schdlIdPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Schdl_Id_Prd_Strt"/>
+        </property>
+        <property name="schdlIdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Schdl_Id_Sys"/>
+        </property>
+        <property name="schdlIdTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Schdl_Id_Typ_Cdg_Cd"/>
+        </property>
+        <property name="schdlIdTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Schdl_Id_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="schdlIdTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Schdl_Id_Typ_Cdg_Sys"/>
+        </property>
+        <property name="schdlIdTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Schdl_Id_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="schdlIdTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Schdl_Id_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="schdlIdTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Schdl_Id_Typ_Txt"/>
+        </property>
+        <property name="schdlIdUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Schdl_Id_Use"/>
+        </property>
+        <property name="schdlIdVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Schdl_Id_Vl"/>
+        </property>
+        <property name="schdlPlnningHorizonEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Schdl_PlnningHorizon_End"/>
+        </property>
+        <property name="schdlPlnningHorizonStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Schdl_PlnningHorizon_Strt"/>
+        </property>
+        <property name="schdlSrvCtgryCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Schdl_SrvCtgry_Cdg_Cd"/>
+        </property>
+        <property name="schdlSrvCtgryCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Schdl_SrvCtgry_Cdg_Dsply"/>
+        </property>
+        <property name="schdlSrvCtgryCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Schdl_SrvCtgry_Cdg_Sys"/>
+        </property>
+        <property name="schdlSrvCtgryCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Schdl_SrvCtgry_Cdg_UsrSltd"/>
+        </property>
+        <property name="schdlSrvCtgryCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Schdl_SrvCtgry_Cdg_Vrsn"/>
+        </property>
+        <property name="schdlSrvCtgryTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Schdl_SrvCtgry_Txt"/>
+        </property>
+        <property name="schdlSrvTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Schdl_SrvTyp_Cdg_Cd"/>
+        </property>
+        <property name="schdlSrvTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Schdl_SrvTyp_Cdg_Dsply"/>
+        </property>
+        <property name="schdlSrvTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Schdl_SrvTyp_Cdg_Sys"/>
+        </property>
+        <property name="schdlSrvTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Schdl_SrvTyp_Cdg_UsrSltd"/>
+        </property>
+        <property name="schdlSrvTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Schdl_SrvTyp_Cdg_Vrsn"/>
+        </property>
+        <property name="schdlSrvTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Schdl_SrvTyp_Txt"/>
+        </property>
+        <property name="schdlSpcltyCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Schdl_Spclty_Cdg_Cd"/>
+        </property>
+        <property name="schdlSpcltyCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Schdl_Spclty_Cdg_Dsply"/>
+        </property>
+        <property name="schdlSpcltyCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Schdl_Spclty_Cdg_Sys"/>
+        </property>
+        <property name="schdlSpcltyCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Schdl_Spclty_Cdg_UsrSltd"/>
+        </property>
+        <property name="schdlSpcltyCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Schdl_Spclty_Cdg_Vrsn"/>
+        </property>
+        <property name="schdlSpcltyTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Schdl_Spclty_Txt"/>
+        </property>
+    </class>
+</hibernate-mapping>

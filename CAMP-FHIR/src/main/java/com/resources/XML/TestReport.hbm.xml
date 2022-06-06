@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Jun 6, 2022, 11:02:25 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="TestReport" optimistic-lock="none" table="TestReport">
+        <id name="id" type="string">
+            <column length="64" name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="tstRptIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TstRpt_Id_Assigner"/>
+        </property>
+        <property name="tstRptIdPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TstRpt_Id_Prd_End"/>
+        </property>
+        <property name="tstRptIdPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TstRpt_Id_Prd_Strt"/>
+        </property>
+        <property name="tstRptIdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TstRpt_Id_Sys"/>
+        </property>
+        <property name="tstRptIdTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TstRpt_Id_Typ_Cdg_Cd"/>
+        </property>
+        <property name="tstRptIdTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TstRpt_Id_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="tstRptIdTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TstRpt_Id_Typ_Cdg_Sys"/>
+        </property>
+        <property name="tstRptIdTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TstRpt_Id_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="tstRptIdTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TstRpt_Id_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="tstRptIdTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TstRpt_Id_Typ_Txt"/>
+        </property>
+        <property name="tstRptIdUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TstRpt_Id_Use"/>
+        </property>
+        <property name="tstRptIdVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TstRpt_Id_Vl"/>
+        </property>
+        <property name="tstRptIssued" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TstRpt_Issued"/>
+        </property>
+        <property name="tstRptNm" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TstRpt_Nm"/>
+        </property>
+        <property name="tstRptPrtcpntDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TstRpt_Prtcpnt_Dsply"/>
+        </property>
+        <property name="tstRptPrtcpntTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TstRpt_Prtcpnt_Typ"/>
+        </property>
+        <property name="tstRptPrtcpntUri" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TstRpt_Prtcpnt_Uri"/>
+        </property>
+        <property name="tstRptRslt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TstRpt_Rslt"/>
+        </property>
+        <property name="tstRptScore" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TstRpt_Score"/>
+        </property>
+        <property name="tstRptStupActnAssertDtl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TstRpt_Stup_Actn_Assert_Dtl"/>
+        </property>
+        <property name="tstRptStupActnAssertMsg" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TstRpt_Stup_Actn_Assert_Msg"/>
+        </property>
+        <property name="tstRptStupActnAssertRslt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TstRpt_Stup_Actn_Assert_Rslt"/>
+        </property>
+        <property name="tstRptStupActnOprtnDtl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TstRpt_Stup_Actn_Oprtn_Dtl"/>
+        </property>
+        <property name="tstRptStupActnOprtnMsg" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TstRpt_Stup_Actn_Oprtn_Msg"/>
+        </property>
+        <property name="tstRptStupActnOprtnRslt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TstRpt_Stup_Actn_Oprtn_Rslt"/>
+        </property>
+        <property name="tstRptSts" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TstRpt_Sts"/>
+        </property>
+        <property name="tstRptTeardownActnOprtnDtl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TstRpt_Teardown_Actn_Oprtn_Dtl"/>
+        </property>
+        <property name="tstRptTeardownActnOprtnMsg" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TstRpt_Teardown_Actn_Oprtn_Msg"/>
+        </property>
+        <property name="tstRptTeardownActnOprtnRslt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TstRpt_Teardown_Actn_Oprtn_Rslt"/>
+        </property>
+        <property name="tstRptTstActnAssertDtl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TstRpt_Tst_Actn_Assert_Dtl"/>
+        </property>
+        <property name="tstRptTstActnAssertMsg" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TstRpt_Tst_Actn_Assert_Msg"/>
+        </property>
+        <property name="tstRptTstActnAssertRslt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TstRpt_Tst_Actn_Assert_Rslt"/>
+        </property>
+        <property name="tstRptTstActnOprtnDtl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TstRpt_Tst_Actn_Oprtn_Dtl"/>
+        </property>
+        <property name="tstRptTstActnOprtnMsg" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TstRpt_Tst_Actn_Oprtn_Msg"/>
+        </property>
+        <property name="tstRptTstActnOprtnRslt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TstRpt_Tst_Actn_Oprtn_Rslt"/>
+        </property>
+        <property name="tstRptTstDscrptn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TstRpt_Tst_Dscrptn"/>
+        </property>
+        <property name="tstRptTstNm" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TstRpt_Tst_Nm"/>
+        </property>
+        <property name="tstRptTstScrpt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TstRpt_TstScrpt"/>
+        </property>
+        <property name="tstRptTster" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="TstRpt_Tster"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Jun 6, 2022, 11:02:25 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="GuidanceResponse" optimistic-lock="none" table="GuidanceResponse">
+        <id name="id" type="string">
+            <column length="64" name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="guidnceRspsDataRqrmentCdFltrCdCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_DataRqrment_CdFltr_Cd_Cd"/>
+        </property>
+        <property name="guidnceRspsDataRqrmentCdFltrCdDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_DataRqrment_CdFltr_Cd_Dsply"/>
+        </property>
+        <property name="guidnceRspsDataRqrmentCdFltrCdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_DataRqrment_CdFltr_Cd_Sys"/>
+        </property>
+        <property name="guidnceRspsDataRqrmentCdFltrCdUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_DataRqrment_CdFltr_Cd_UsrSltd"/>
+        </property>
+        <property name="guidnceRspsDataRqrmentCdFltrCdVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_DataRqrment_CdFltr_Cd_Vrsn"/>
+        </property>
+        <property name="guidnceRspsDataRqrmentCdFltrPath" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_DataRqrment_CdFltr_Path"/>
+        </property>
+        <property name="guidnceRspsDataRqrmentCdFltrSrchParam" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_DataRqrment_CdFltr_SrchParam"/>
+        </property>
+        <property name="guidnceRspsDataRqrmentCdFltrVlSt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_DataRqrment_CdFltr_VlSt"/>
+        </property>
+        <property name="guidnceRspsDataRqrmentDtFltrPath" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_DataRqrment_DtFltr_Path"/>
+        </property>
+        <property name="guidnceRspsDataRqrmentDtFltrSrchParam" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_DataRqrment_DtFltr_SrchParam"/>
+        </property>
+        <property name="guidnceRspsDataRqrmentDtFltrVlDtTimeTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_DataRqrment_DtFltr_VlDtTimeTyp"/>
+        </property>
+        <property name="guidnceRspsDataRqrmentDtFltrVlPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_DataRqrment_DtFltr_VlPrd_End"/>
+        </property>
+        <property name="guidnceRspsDataRqrmentDtFltrVlPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_DataRqrment_DtFltr_VlPrd_Strt"/>
+        </property>
+        <property name="guidnceRspsDataRqrmentLmt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_DataRqrment_Lmt"/>
+        </property>
+        <property name="guidnceRspsDataRqrmentMustSupport" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_DataRqrment_MustSupport"/>
+        </property>
+        <property name="guidnceRspsDataRqrmentProfile" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_DataRqrment_Profile"/>
+        </property>
+        <property name="guidnceRspsDataRqrmentSortDirection" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_DataRqrment_Sort_Direction"/>
+        </property>
+        <property name="guidnceRspsDataRqrmentSortPath" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_DataRqrment_Sort_Path"/>
+        </property>
+        <property name="guidnceRspsDataRqrmentSbjctCdbleCncptCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_DataRqrment_SbjctCdbleCncpt_Cdg_Cd"/>
+        </property>
+        <property name="guidnceRspsDataRqrmentSbjctCdbleCncptCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_DataRqrment_SbjctCdbleCncpt_Cdg_Dsply"/>
+        </property>
+        <property name="guidnceRspsDataRqrmentSbjctCdbleCncptCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_DataRqrment_SbjctCdbleCncpt_Cdg_Sys"/>
+        </property>
+        <property name="guidnceRspsDataRqrmentSbjctCdbleCncptCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_DataRqrment_SbjctCdbleCncpt_Cdg_UsrSltd"/>
+        </property>
+        <property name="guidnceRspsDataRqrmentSbjctCdbleCncptCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_DataRqrment_SbjctCdbleCncpt_Cdg_Vrsn"/>
+        </property>
+        <property name="guidnceRspsDataRqrmentSbjctCdbleCncptTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_DataRqrment_SbjctCdbleCncpt_Txt"/>
+        </property>
+        <property name="guidnceRspsDataRqrmentSbjctRfrnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_DataRqrment_SbjctRfrnc"/>
+        </property>
+        <property name="guidnceRspsDataRqrmentTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_DataRqrment_Typ"/>
+        </property>
+        <property name="guidnceRspsEnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_Enc"/>
+        </property>
+        <property name="guidnceRspsEvaluationMsg" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_EvaluationMsg"/>
+        </property>
+        <property name="guidnceRspsIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_Id_Assigner"/>
+        </property>
+        <property name="guidnceRspsIdPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_Id_Prd_End"/>
+        </property>
+        <property name="guidnceRspsIdPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_Id_Prd_Strt"/>
+        </property>
+        <property name="guidnceRspsIdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_Id_Sys"/>
+        </property>
+        <property name="guidnceRspsIdTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_Id_Typ_Cdg_Cd"/>
+        </property>
+        <property name="guidnceRspsIdTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_Id_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="guidnceRspsIdTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_Id_Typ_Cdg_Sys"/>
+        </property>
+        <property name="guidnceRspsIdTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_Id_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="guidnceRspsIdTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_Id_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="guidnceRspsIdTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_Id_Typ_Txt"/>
+        </property>
+        <property name="guidnceRspsIdUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_Id_Use"/>
+        </property>
+        <property name="guidnceRspsIdVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_Id_Vl"/>
+        </property>
+        <property name="guidnceRspsModuleCanonicalTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_ModuleCanonicalTyp"/>
+        </property>
+        <property name="guidnceRspsModuleCdbleCncptCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_ModuleCdbleCncpt_Cdg_Cd"/>
+        </property>
+        <property name="guidnceRspsModuleCdbleCncptCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_ModuleCdbleCncpt_Cdg_Dsply"/>
+        </property>
+        <property name="guidnceRspsModuleCdbleCncptCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_ModuleCdbleCncpt_Cdg_Sys"/>
+        </property>
+        <property name="guidnceRspsModuleCdbleCncptCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_ModuleCdbleCncpt_Cdg_UsrSltd"/>
+        </property>
+        <property name="guidnceRspsModuleCdbleCncptCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_ModuleCdbleCncpt_Cdg_Vrsn"/>
+        </property>
+        <property name="guidnceRspsModuleCdbleCncptTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_ModuleCdbleCncpt_Txt"/>
+        </property>
+        <property name="guidnceRspsModuleUriTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_ModuleUriTyp"/>
+        </property>
+        <property name="guidnceRspsNtAthrRfrnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_Nt_AthrRfrnc"/>
+        </property>
+        <property name="guidnceRspsNtAthrStrgTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_Nt_AthrStrgTyp"/>
+        </property>
+        <property name="guidnceRspsNtTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_Nt_Txt"/>
+        </property>
+        <property name="guidnceRspsNtTime" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_Nt_Time"/>
+        </property>
+        <property name="guidnceRspsOccrnceDtTime" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_OccrnceDtTime"/>
+        </property>
+        <property name="guidnceRspsOutputPrmtrs" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_OutputPrmtrs"/>
+        </property>
+        <property name="guidnceRspsPrfrmr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_Prfrmr"/>
+        </property>
+        <property name="guidnceRspsRsnCdCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_RsnCd_Cdg_Cd"/>
+        </property>
+        <property name="guidnceRspsRsnCdCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_RsnCd_Cdg_Dsply"/>
+        </property>
+        <property name="guidnceRspsRsnCdCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_RsnCd_Cdg_Sys"/>
+        </property>
+        <property name="guidnceRspsRsnCdCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_RsnCd_Cdg_UsrSltd"/>
+        </property>
+        <property name="guidnceRspsRsnCdCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_RsnCd_Cdg_Vrsn"/>
+        </property>
+        <property name="guidnceRspsRsnCdTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_RsnCd_Txt"/>
+        </property>
+        <property name="guidnceRspsRsnRfrnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_RsnRfrnc"/>
+        </property>
+        <property name="guidnceRspsRqstIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_RqstId_Assigner"/>
+        </property>
+        <property name="guidnceRspsRqstIdPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_RqstId_Prd_End"/>
+        </property>
+        <property name="guidnceRspsRqstIdPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_RqstId_Prd_Strt"/>
+        </property>
+        <property name="guidnceRspsRqstIdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_RqstId_Sys"/>
+        </property>
+        <property name="guidnceRspsRqstIdTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_RqstId_Typ_Cdg_Cd"/>
+        </property>
+        <property name="guidnceRspsRqstIdTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_RqstId_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="guidnceRspsRqstIdTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_RqstId_Typ_Cdg_Sys"/>
+        </property>
+        <property name="guidnceRspsRqstIdTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_RqstId_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="guidnceRspsRqstIdTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_RqstId_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="guidnceRspsRqstIdTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_RqstId_Typ_Txt"/>
+        </property>
+        <property name="guidnceRspsRqstIdUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_RqstId_Use"/>
+        </property>
+        <property name="guidnceRspsRqstIdVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_RqstId_Vl"/>
+        </property>
+        <property name="guidnceRspsRslt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_Rslt"/>
+        </property>
+        <property name="guidnceRspsSts" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_Sts"/>
+        </property>
+        <property name="guidnceRspsSbjct" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_Sbjct"/>
+        </property>
+    </class>
+</hibernate-mapping>

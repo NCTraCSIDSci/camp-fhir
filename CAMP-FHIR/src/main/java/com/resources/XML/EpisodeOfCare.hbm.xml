@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Jun 6, 2022, 11:02:25 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="EpisodeOfCare" optimistic-lock="none" table="EpisodeOfCare">
+        <id name="id" type="string">
+            <column length="64" name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="episodeOfCareAccount" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EpisodeOfCare_Account"/>
+        </property>
+        <property name="episodeOfCareCareManager" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EpisodeOfCare_CareManager"/>
+        </property>
+        <property name="episodeOfCareDgnsisCndtn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EpisodeOfCare_Dgnsis_Cndtn"/>
+        </property>
+        <property name="episodeOfCareDgnsisRnk" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EpisodeOfCare_Dgnsis_Rnk"/>
+        </property>
+        <property name="episodeOfCareDgnsisRoleCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EpisodeOfCare_Dgnsis_Role_Cdg_Cd"/>
+        </property>
+        <property name="episodeOfCareDgnsisRoleCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EpisodeOfCare_Dgnsis_Role_Cdg_Dsply"/>
+        </property>
+        <property name="episodeOfCareDgnsisRoleCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EpisodeOfCare_Dgnsis_Role_Cdg_Sys"/>
+        </property>
+        <property name="episodeOfCareDgnsisRoleCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EpisodeOfCare_Dgnsis_Role_Cdg_UsrSltd"/>
+        </property>
+        <property name="episodeOfCareDgnsisRoleCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EpisodeOfCare_Dgnsis_Role_Cdg_Vrsn"/>
+        </property>
+        <property name="episodeOfCareDgnsisRoleTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EpisodeOfCare_Dgnsis_Role_Txt"/>
+        </property>
+        <property name="episodeOfCareIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EpisodeOfCare_Id_Assigner"/>
+        </property>
+        <property name="episodeOfCareIdPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EpisodeOfCare_Id_Prd_End"/>
+        </property>
+        <property name="episodeOfCareIdPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EpisodeOfCare_Id_Prd_Strt"/>
+        </property>
+        <property name="episodeOfCareIdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EpisodeOfCare_Id_Sys"/>
+        </property>
+        <property name="episodeOfCareIdTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EpisodeOfCare_Id_Typ_Cdg_Cd"/>
+        </property>
+        <property name="episodeOfCareIdTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EpisodeOfCare_Id_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="episodeOfCareIdTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EpisodeOfCare_Id_Typ_Cdg_Sys"/>
+        </property>
+        <property name="episodeOfCareIdTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EpisodeOfCare_Id_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="episodeOfCareIdTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EpisodeOfCare_Id_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="episodeOfCareIdTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EpisodeOfCare_Id_Typ_Txt"/>
+        </property>
+        <property name="episodeOfCareIdUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EpisodeOfCare_Id_Use"/>
+        </property>
+        <property name="episodeOfCareIdVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EpisodeOfCare_Id_Vl"/>
+        </property>
+        <property name="episodeOfCareManagingOrgnztn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EpisodeOfCare_ManagingOrgnztn"/>
+        </property>
+        <property name="episodeOfCarePnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EpisodeOfCare_Pnt"/>
+        </property>
+        <property name="episodeOfCarePrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EpisodeOfCare_Prd_End"/>
+        </property>
+        <property name="episodeOfCarePrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EpisodeOfCare_Prd_Strt"/>
+        </property>
+        <property name="episodeOfCareReferralRqst" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EpisodeOfCare_ReferralRqst"/>
+        </property>
+        <property name="episodeOfCareSts" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EpisodeOfCare_Sts"/>
+        </property>
+        <property name="episodeOfCareStsHisPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EpisodeOfCare_StsHis_Prd_End"/>
+        </property>
+        <property name="episodeOfCareStsHisPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EpisodeOfCare_StsHis_Prd_Strt"/>
+        </property>
+        <property name="episodeOfCareStsHisSts" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EpisodeOfCare_StsHis_Sts"/>
+        </property>
+        <property name="episodeOfCareTeam" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EpisodeOfCare_Team"/>
+        </property>
+        <property name="episodeOfCareTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EpisodeOfCare_Typ_Cdg_Cd"/>
+        </property>
+        <property name="episodeOfCareTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EpisodeOfCare_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="episodeOfCareTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EpisodeOfCare_Typ_Cdg_Sys"/>
+        </property>
+        <property name="episodeOfCareTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EpisodeOfCare_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="episodeOfCareTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EpisodeOfCare_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="episodeOfCareTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EpisodeOfCare_Typ_Txt"/>
+        </property>
+    </class>
+</hibernate-mapping>

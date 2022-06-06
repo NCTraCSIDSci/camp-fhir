@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Jun 6, 2022, 11:02:25 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Immunization" optimistic-lock="none" table="Immunization">
+        <id name="id" type="string">
+            <column length="64" name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="immnztnDoseQntyCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_DoseQnty_Cd"/>
+        </property>
+        <property name="immnztnDoseQntyCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_DoseQnty_Cmprtr"/>
+        </property>
+        <property name="immnztnDoseQntySys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_DoseQnty_Sys"/>
+        </property>
+        <property name="immnztnDoseQntyUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_DoseQnty_Unt"/>
+        </property>
+        <property name="immnztnDoseQntyVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_DoseQnty_Vl"/>
+        </property>
+        <property name="immnztnEducationDocTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_Education_DocTyp"/>
+        </property>
+        <property name="immnztnEducationPrsnttnDt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_Education_PrsnttnDt"/>
+        </property>
+        <property name="immnztnEducationPublicationDt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_Education_PublicationDt"/>
+        </property>
+        <property name="immnztnEducationRfrnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_Education_Rfrnc"/>
+        </property>
+        <property name="immnztnEnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_Enc"/>
+        </property>
+        <property name="immnztnExpirationDt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_ExpirationDt"/>
+        </property>
+        <property name="immnztnFundingSrcCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_FundingSrc_Cdg_Cd"/>
+        </property>
+        <property name="immnztnFundingSrcCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_FundingSrc_Cdg_Dsply"/>
+        </property>
+        <property name="immnztnFundingSrcCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_FundingSrc_Cdg_Sys"/>
+        </property>
+        <property name="immnztnFundingSrcCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_FundingSrc_Cdg_UsrSltd"/>
+        </property>
+        <property name="immnztnFundingSrcCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_FundingSrc_Cdg_Vrsn"/>
+        </property>
+        <property name="immnztnFundingSrcTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_FundingSrc_Txt"/>
+        </property>
+        <property name="immnztnIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_Id_Assigner"/>
+        </property>
+        <property name="immnztnIdPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_Id_Prd_End"/>
+        </property>
+        <property name="immnztnIdPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_Id_Prd_Strt"/>
+        </property>
+        <property name="immnztnIdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_Id_Sys"/>
+        </property>
+        <property name="immnztnIdTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_Id_Typ_Cdg_Cd"/>
+        </property>
+        <property name="immnztnIdTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_Id_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="immnztnIdTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_Id_Typ_Cdg_Sys"/>
+        </property>
+        <property name="immnztnIdTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_Id_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="immnztnIdTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_Id_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="immnztnIdTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_Id_Typ_Txt"/>
+        </property>
+        <property name="immnztnIdUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_Id_Use"/>
+        </property>
+        <property name="immnztnIdVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_Id_Vl"/>
+        </property>
+        <property name="immnztnIsSubpotent" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_IsSubpotent"/>
+        </property>
+        <property name="immnztnLctn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_Lctn"/>
+        </property>
+        <property name="immnztnLotNmbr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_LotNmbr"/>
+        </property>
+        <property name="immnztnManufacturer" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_Manufacturer"/>
+        </property>
+        <property name="immnztnNtAthrRfrnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_Nt_AthrRfrnc"/>
+        </property>
+        <property name="immnztnNtAthrStrgTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_Nt_AthrStrgTyp"/>
+        </property>
+        <property name="immnztnNtTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_Nt_Txt"/>
+        </property>
+        <property name="immnztnNtTime" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_Nt_Time"/>
+        </property>
+        <property name="immnztnOccrnceDtTimeTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_OccrnceDtTimeTyp"/>
+        </property>
+        <property name="immnztnOccrnceStrgTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_OccrnceStrgTyp"/>
+        </property>
+        <property name="immnztnPnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_Pnt"/>
+        </property>
+        <property name="immnztnPrfrmrActor" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_Prfrmr_Actor"/>
+        </property>
+        <property name="immnztnPrfrmrFunctionCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_Prfrmr_Function_Cdg_Cd"/>
+        </property>
+        <property name="immnztnPrfrmrFunctionCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_Prfrmr_Function_Cdg_Dsply"/>
+        </property>
+        <property name="immnztnPrfrmrFunctionCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_Prfrmr_Function_Cdg_Sys"/>
+        </property>
+        <property name="immnztnPrfrmrFunctionCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_Prfrmr_Function_Cdg_UsrSltd"/>
+        </property>
+        <property name="immnztnPrfrmrFunctionCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_Prfrmr_Function_Cdg_Vrsn"/>
+        </property>
+        <property name="immnztnPrfrmrFunctionTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_Prfrmr_Function_Txt"/>
+        </property>
+        <property name="immnztnPrimarySrc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_PrimarySrc"/>
+        </property>
+        <property name="immnztnPrgrmElgbltyCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_PrgrmElgblty_Cdg_Cd"/>
+        </property>
+        <property name="immnztnPrgrmElgbltyCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_PrgrmElgblty_Cdg_Dsply"/>
+        </property>
+        <property name="immnztnPrgrmElgbltyCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_PrgrmElgblty_Cdg_Sys"/>
+        </property>
+        <property name="immnztnPrgrmElgbltyCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_PrgrmElgblty_Cdg_UsrSltd"/>
+        </property>
+        <property name="immnztnPrgrmElgbltyCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_PrgrmElgblty_Cdg_Vrsn"/>
+        </property>
+        <property name="immnztnPrgrmElgbltyTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_PrgrmElgblty_Txt"/>
+        </property>
+        <property name="immnztnProtocolAppliedAthrity" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_ProtocolApplied_Athrity"/>
+        </property>
+        <property name="immnztnProtocolAppliedDoseNmbrPositiveIntTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_ProtocolApplied_DoseNmbrPositiveIntTyp"/>
+        </property>
+        <property name="immnztnProtocolAppliedDoseNmbrStrgTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_ProtocolApplied_DoseNmbrStrgTyp"/>
+        </property>
+        <property name="immnztnProtocolAppliedSeries" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_ProtocolApplied_Series"/>
+        </property>
+        <property name="immnztnProtocolAppliedSeriesDosesPositiveIntTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_ProtocolApplied_SeriesDosesPositiveIntTyp"/>
+        </property>
+        <property name="immnztnProtocolAppliedSeriesDosesStrgTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_ProtocolApplied_SeriesDosesStrgTyp"/>
+        </property>
+        <property name="immnztnProtocolAppliedTarDiseaseCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_ProtocolApplied_TarDisease_Cdg_Cd"/>
+        </property>
+        <property name="immnztnProtocolAppliedTarDiseaseCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_ProtocolApplied_TarDisease_Cdg_Dsply"/>
+        </property>
+        <property name="immnztnProtocolAppliedTarDiseaseCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_ProtocolApplied_TarDisease_Cdg_Sys"/>
+        </property>
+        <property name="immnztnProtocolAppliedTarDiseaseCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_ProtocolApplied_TarDisease_Cdg_UsrSltd"/>
+        </property>
+        <property name="immnztnProtocolAppliedTarDiseaseCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_ProtocolApplied_TarDisease_Cdg_Vrsn"/>
+        </property>
+        <property name="immnztnProtocolAppliedTarDiseaseTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_ProtocolApplied_TarDisease_Txt"/>
+        </property>
+        <property name="immnztnReactionDt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_Reaction_Dt"/>
+        </property>
+        <property name="immnztnReactionDtl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_Reaction_Dtl"/>
+        </property>
+        <property name="immnztnReactionRpted" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_Reaction_Rpted"/>
+        </property>
+        <property name="immnztnRsnCdCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_RsnCd_Cdg_Cd"/>
+        </property>
+        <property name="immnztnRsnCdCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_RsnCd_Cdg_Dsply"/>
+        </property>
+        <property name="immnztnRsnCdCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_RsnCd_Cdg_Sys"/>
+        </property>
+        <property name="immnztnRsnCdCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_RsnCd_Cdg_UsrSltd"/>
+        </property>
+        <property name="immnztnRsnCdCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_RsnCd_Cdg_Vrsn"/>
+        </property>
+        <property name="immnztnRsnCdTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_RsnCd_Txt"/>
+        </property>
+        <property name="immnztnRsnRfrnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_RsnRfrnc"/>
+        </property>
+        <property name="immnztnRecorded" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_Recorded"/>
+        </property>
+        <property name="immnztnRptOriginCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_RptOrigin_Cdg_Cd"/>
+        </property>
+        <property name="immnztnRptOriginCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_RptOrigin_Cdg_Dsply"/>
+        </property>
+        <property name="immnztnRptOriginCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_RptOrigin_Cdg_Sys"/>
+        </property>
+        <property name="immnztnRptOriginCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_RptOrigin_Cdg_UsrSltd"/>
+        </property>
+        <property name="immnztnRptOriginCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_RptOrigin_Cdg_Vrsn"/>
+        </property>
+        <property name="immnztnRptOriginTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_RptOrigin_Txt"/>
+        </property>
+        <property name="immnztnRouteCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_Route_Cdg_Cd"/>
+        </property>
+        <property name="immnztnRouteCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_Route_Cdg_Dsply"/>
+        </property>
+        <property name="immnztnRouteCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_Route_Cdg_Sys"/>
+        </property>
+        <property name="immnztnRouteCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_Route_Cdg_UsrSltd"/>
+        </property>
+        <property name="immnztnRouteCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_Route_Cdg_Vrsn"/>
+        </property>
+        <property name="immnztnRouteTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_Route_Txt"/>
+        </property>
+        <property name="immnztnSiteCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_Site_Cdg_Cd"/>
+        </property>
+        <property name="immnztnSiteCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_Site_Cdg_Dsply"/>
+        </property>
+        <property name="immnztnSiteCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_Site_Cdg_Sys"/>
+        </property>
+        <property name="immnztnSiteCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_Site_Cdg_UsrSltd"/>
+        </property>
+        <property name="immnztnSiteCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_Site_Cdg_Vrsn"/>
+        </property>
+        <property name="immnztnSiteTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_Site_Txt"/>
+        </property>
+        <property name="immnztnSts" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_Sts"/>
+        </property>
+        <property name="immnztnStsRsnCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_StsRsn_Cdg_Cd"/>
+        </property>
+        <property name="immnztnStsRsnCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_StsRsn_Cdg_Dsply"/>
+        </property>
+        <property name="immnztnStsRsnCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_StsRsn_Cdg_Sys"/>
+        </property>
+        <property name="immnztnStsRsnCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_StsRsn_Cdg_UsrSltd"/>
+        </property>
+        <property name="immnztnStsRsnCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_StsRsn_Cdg_Vrsn"/>
+        </property>
+        <property name="immnztnStsRsnTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_StsRsn_Txt"/>
+        </property>
+        <property name="immnztnSubpotentRsnCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_SubpotentRsn_Cdg_Cd"/>
+        </property>
+        <property name="immnztnSubpotentRsnCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_SubpotentRsn_Cdg_Dsply"/>
+        </property>
+        <property name="immnztnSubpotentRsnCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_SubpotentRsn_Cdg_Sys"/>
+        </property>
+        <property name="immnztnSubpotentRsnCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_SubpotentRsn_Cdg_UsrSltd"/>
+        </property>
+        <property name="immnztnSubpotentRsnCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_SubpotentRsn_Cdg_Vrsn"/>
+        </property>
+        <property name="immnztnSubpotentRsnTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_SubpotentRsn_Txt"/>
+        </property>
+        <property name="immnztnVaccineCdCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_VaccineCd_Cdg_Cd"/>
+        </property>
+        <property name="immnztnVaccineCdCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_VaccineCd_Cdg_Dsply"/>
+        </property>
+        <property name="immnztnVaccineCdCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_VaccineCd_Cdg_Sys"/>
+        </property>
+        <property name="immnztnVaccineCdCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_VaccineCd_Cdg_UsrSltd"/>
+        </property>
+        <property name="immnztnVaccineCdCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_VaccineCd_Cdg_Vrsn"/>
+        </property>
+        <property name="immnztnVaccineCdTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Immnztn_VaccineCd_Txt"/>
+        </property>
+    </class>
+</hibernate-mapping>

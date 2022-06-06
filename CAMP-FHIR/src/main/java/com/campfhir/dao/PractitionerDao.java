@@ -1,11 +1,11 @@
+//// default package
 package main.java.com.campfhir.dao;
+// Generated on Jun 6, 2022, 11:02:34 AM 
+
 
 import java.io.IOException;
-import java.util.List;
-
 import javax.xml.parsers.ParserConfigurationException;
-
-import org.hibernate.Query;
+import main.java.utils.HibernateBaseDB;
 import org.hibernate.ScrollMode;
 import org.hibernate.ScrollableResults;
 import org.hibernate.Session;
@@ -15,40 +15,35 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.xml.sax.SAXException;
 
-import main.java.com.campfhir.model.Practitioner;
-
-import main.java.utils.HibernateBaseDB;
-
 /**
-*
-* @author  James Champion
-* @version 1.0
-* @since   2019-02-08 
-*/
-public class PractitionerDao implements PractitionerDaoInterface<Practitioner, String> 
-{
+ *  object for domain model class Practitioner.
+ * @see .Practitioner
+ * @author Paul Kovach
+ */
+
+public class PractitionerDao {
+
 	private Session currentSession;
 	private SessionFactory sessionFactory;
 	
 	private Transaction currentTransaction;
 
 	public PractitionerDao() {}
-
-	public Session openCurrentSession() throws ParserConfigurationException, SAXException, IOException 
+	
+    public Session openCurrentSession() throws ParserConfigurationException, SAXException, IOException 
 	{
-		sessionFactory = HibernateBaseDB.getSessionFactory();
+		sessionFactory =  HibernateBaseDB.getSessionFactory();
 		currentSession = sessionFactory.openSession();
 		return currentSession;
 	}
-
-	public Session openCurrentSessionwithTransaction() throws ParserConfigurationException, SAXException, IOException 
+    
+    public Session openCurrentSessionwithTransaction() throws ParserConfigurationException, SAXException, IOException 
 	{
 		sessionFactory = HibernateBaseDB.getSessionFactory();
 		currentSession = sessionFactory.openSession();
 		currentTransaction = currentSession.beginTransaction();
 		return currentSession;
 	}
-	
 	public void closeCurrentSession() 
 	{
 		currentSession.close();
@@ -59,16 +54,16 @@ public class PractitionerDao implements PractitionerDaoInterface<Practitioner, S
 		currentTransaction.commit();
 		currentSession.close();
 	}
-	
-	private static SessionFactory getSessionFactory() 
-	{
+    
+    private static SessionFactory getSessionFactory() 
+	{ 
 		Configuration configuration = new Configuration().configure();
 		StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder()
 				.applySettings(configuration.getProperties());
 		SessionFactory sessionFactory = configuration.buildSessionFactory(builder.build());
 		return sessionFactory;
 	}
-
+	
 	public Session getCurrentSession() 
 	{
 		return currentSession;
@@ -89,33 +84,23 @@ public class PractitionerDao implements PractitionerDaoInterface<Practitioner, S
 		this.currentTransaction = currentTransaction;
 	}
 
-	public void persist(Practitioner entity) 
+	public void persist( main.java.com.campfhir.model.Practitioner entity) 
 	{
 		getCurrentSession().save(entity);
 	}
 
-	public void update(Practitioner entity) 
+	public void update( main.java.com.campfhir.model.Practitioner entity) 
 	{
 		getCurrentSession().update(entity);
 	}
 
-	public Practitioner findById(String id) 
+	public  main.java.com.campfhir.model.Practitioner findById(String id) 
 	{
-		Practitioner practitioner = (Practitioner) getCurrentSession().get(Practitioner.class, id);
-		return practitioner; 
+		main.java.com.campfhir.model.Practitioner resource = (main.java.com.campfhir.model.Practitioner) getCurrentSession().get(main.java.com.campfhir.model.Practitioner.class, id);
+		return resource; 
 	}
 	
-	@SuppressWarnings("unchecked")
-	public List<Practitioner> findByPractitionerId(String id)
-	{
-		Query query = getCurrentSession().createQuery("FROM Practitioner WHERE con_subject_reference = '"+id+"'");
-		
-		List<Practitioner> practitioner = (List<Practitioner>) query.list();
-		
-		return practitioner;
-	}
-
-	public void delete(Practitioner entity) 
+	public void delete(main.java.com.campfhir.model.Practitioner entity) 
 	{
 		getCurrentSession().delete(entity);
 	}
@@ -123,19 +108,24 @@ public class PractitionerDao implements PractitionerDaoInterface<Practitioner, S
 	@SuppressWarnings("unchecked")
 	public ScrollableResults findAll() 
 	{
-		ScrollableResults practitioners = getCurrentSession().createQuery("FROM Practitioner")
+		return getCurrentSession().createQuery("FROM Practitioner")
+				.setReadOnly(true)
+
+		        .setCacheable(true)
+		    .scroll(ScrollMode.FORWARD_ONLY);
+	}
+	
+	public ScrollableResults findAll(int start, int max) 
+	{
+		ScrollableResults resources = getCurrentSession().createQuery("FROM Practitioner")
+				.setFirstResult(start)
+				.setMaxResults(max)
 				.setReadOnly(true)
 		        .setCacheable(true)
 		    .scroll(ScrollMode.FORWARD_ONLY);
-	
-		return practitioners;
+		return resources;
 	}
 
-	public void deleteAll() 
-	{
-//		List<Practitioner> entityList = findAll();
-//		for (Practitioner entity : entityList) {
-//			delete(entity);
-//		}
-	}
+
 }
+

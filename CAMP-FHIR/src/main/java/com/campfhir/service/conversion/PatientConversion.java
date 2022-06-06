@@ -1,10 +1,5 @@
 package main.java.com.campfhir.service.conversion;
 import java.text.ParseException;
-
-import org.hl7.fhir.r4.model.DecimalType;
-import org.hl7.fhir.r4.model.Extension;
-import org.hl7.fhir.r4.model.StringType;
-
 import main.java.com.campfhir.model.Patient;
 public class PatientConversion 
 {
@@ -15,646 +10,566 @@ public class PatientConversion
 		/******************** id ********************************************************************************/
 		patient.setId(p.getId());
 
-		/******************** Patient_Active ********************************************************************************/
-		if(p.getPatientActive() != null) {
-			patient.setActive(Boolean.parseBoolean(p.getPatientActive()));
+		/******************** Pnt_Active ********************************************************************************/
+		if(p.getPntActive() != null) {
+			patient.setActive(Boolean.parseBoolean(p.getPntActive()));
+		}
+		/******************** patientaddress ********************************************************************************/
+		org.hl7.fhir.r4.model.Address patientaddress =  new org.hl7.fhir.r4.model.Address();
+		patient.addAddress(patientaddress);
+
+		/******************** Pnt_Addr_City ********************************************************************************/
+		if(p.getPntAddrCity() != null) {
+			patientaddress.setCity(p.getPntAddrCity());
+		}
+		/******************** Pnt_Addr_Cntry ********************************************************************************/
+		if(p.getPntAddrCntry() != null) {
+			patientaddress.setCountry(p.getPntAddrCntry());
+		}
+		/******************** Pnt_Addr_District ********************************************************************************/
+		if(p.getPntAddrDistrict() != null) {
+			patientaddress.setDistrict(p.getPntAddrDistrict());
+		}
+		/******************** Pnt_Addr_Line ********************************************************************************/
+		if(p.getPntAddrLine() != null) {
+			patientaddress.addLine(p.getPntAddrLine());
+		}
+		/******************** patientaddressperiod ********************************************************************************/
+		org.hl7.fhir.r4.model.Period patientaddressperiod =  new org.hl7.fhir.r4.model.Period();
+		patientaddress.setPeriod(patientaddressperiod);
+
+		/******************** Pnt_Addr_Prd_End ********************************************************************************/
+		if(p.getPntAddrPrdEnd() != null) {
+			java.text.SimpleDateFormat Pnt_Addr_Prd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Pnt_Addr_Prd_Enddate = Pnt_Addr_Prd_Endsdf.parse(p.getPntAddrPrdEnd());
+			patientaddressperiod.setEnd(Pnt_Addr_Prd_Enddate);
+		}
+		/******************** Pnt_Addr_Prd_Strt ********************************************************************************/
+		if(p.getPntAddrPrdStrt() != null) {
+			java.text.SimpleDateFormat Pnt_Addr_Prd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Pnt_Addr_Prd_Strtdate = Pnt_Addr_Prd_Strtsdf.parse(p.getPntAddrPrdStrt());
+			patientaddressperiod.setStart(Pnt_Addr_Prd_Strtdate);
+		}
+		/******************** Pnt_Addr_PostalCd ********************************************************************************/
+		if(p.getPntAddrPostalCd() != null) {
+			patientaddress.setPostalCode(p.getPntAddrPostalCd());
+		}
+		/******************** Pnt_Addr_State ********************************************************************************/
+		if(p.getPntAddrState() != null) {
+			patientaddress.setState(p.getPntAddrState());
+		}
+		/******************** Pnt_Addr_Txt ********************************************************************************/
+		if(p.getPntAddrTxt() != null) {
+			patientaddress.setText(p.getPntAddrTxt());
+		}
+		/******************** patientaddresstype ********************************************************************************/
+		org.hl7.fhir.r4.model.Address.AddressTypeEnumFactory patientaddresstype =  new org.hl7.fhir.r4.model.Address.AddressTypeEnumFactory();
+		patientaddress.setType(patientaddresstype.fromCode(p.getPntAddrTyp()));
+
+		/******************** patientaddressuse ********************************************************************************/
+		org.hl7.fhir.r4.model.Address.AddressUseEnumFactory patientaddressuse =  new org.hl7.fhir.r4.model.Address.AddressUseEnumFactory();
+		patientaddress.setUse(patientaddressuse.fromCode(p.getPntAddrUse()));
+
+		/******************** Pnt_BirthDt ********************************************************************************/
+		if(p.getPntBirthDt() != null) {
+			java.text.SimpleDateFormat Pnt_BirthDtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Pnt_BirthDtdate = Pnt_BirthDtsdf.parse(p.getPntBirthDt());
+			patient.setBirthDate(Pnt_BirthDtdate);
+		}
+		/******************** patientcommunication ********************************************************************************/
+		org.hl7.fhir.r4.model.Patient.PatientCommunicationComponent patientcommunication =  new org.hl7.fhir.r4.model.Patient.PatientCommunicationComponent();
+		patient.addCommunication(patientcommunication);
+
+		/******************** patientcommunicationlanguage ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept patientcommunicationlanguage =  new org.hl7.fhir.r4.model.CodeableConcept();
+		patientcommunication.setLanguage(patientcommunicationlanguage);
+
+		/******************** patientcommunicationlanguagecoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding patientcommunicationlanguagecoding =  new org.hl7.fhir.r4.model.Coding();
+		patientcommunicationlanguage.addCoding(patientcommunicationlanguagecoding);
+
+		/******************** Pnt_Cmmnctn_Lnguage_Cdg_Cd ********************************************************************************/
+		if(p.getPntCmmnctnLnguageCdgCd() != null) {
+			patientcommunicationlanguagecoding.setCode(p.getPntCmmnctnLnguageCdgCd());
+		}
+		/******************** Pnt_Cmmnctn_Lnguage_Cdg_Dsply ********************************************************************************/
+		if(p.getPntCmmnctnLnguageCdgDsply() != null) {
+			patientcommunicationlanguagecoding.setDisplay(p.getPntCmmnctnLnguageCdgDsply());
+		}
+		/******************** Pnt_Cmmnctn_Lnguage_Cdg_Sys ********************************************************************************/
+		if(p.getPntCmmnctnLnguageCdgSys() != null) {
+			patientcommunicationlanguagecoding.setSystem(p.getPntCmmnctnLnguageCdgSys());
+		}
+		/******************** Pnt_Cmmnctn_Lnguage_Cdg_UsrSltd ********************************************************************************/
+		if(p.getPntCmmnctnLnguageCdgUsrSltd() != null) {
+			patientcommunicationlanguagecoding.setUserSelected(Boolean.parseBoolean(p.getPntCmmnctnLnguageCdgUsrSltd()));
+		}
+		/******************** Pnt_Cmmnctn_Lnguage_Cdg_Vrsn ********************************************************************************/
+		if(p.getPntCmmnctnLnguageCdgVrsn() != null) {
+			patientcommunicationlanguagecoding.setVersion(p.getPntCmmnctnLnguageCdgVrsn());
+		}
+		/******************** Pnt_Cmmnctn_Lnguage_Txt ********************************************************************************/
+		if(p.getPntCmmnctnLnguageTxt() != null) {
+			patientcommunicationlanguage.setText(p.getPntCmmnctnLnguageTxt());
+		}
+		/******************** Pnt_Cmmnctn_Preferred ********************************************************************************/
+		if(p.getPntCmmnctnPreferred() != null) {
+			patientcommunication.setPreferred(Boolean.parseBoolean(p.getPntCmmnctnPreferred()));
+		}
+		/******************** patientcontact ********************************************************************************/
+		org.hl7.fhir.r4.model.Patient.ContactComponent patientcontact =  new org.hl7.fhir.r4.model.Patient.ContactComponent();
+		patient.addContact(patientcontact);
+
+		/******************** patientcontactaddress ********************************************************************************/
+		org.hl7.fhir.r4.model.Address patientcontactaddress =  new org.hl7.fhir.r4.model.Address();
+		patientcontact.setAddress(patientcontactaddress);
+
+		/******************** Pnt_Cntct_Addr_City ********************************************************************************/
+		if(p.getPntCntctAddrCity() != null) {
+			patientcontactaddress.setCity(p.getPntCntctAddrCity());
+		}
+		/******************** Pnt_Cntct_Addr_Cntry ********************************************************************************/
+		if(p.getPntCntctAddrCntry() != null) {
+			patientcontactaddress.setCountry(p.getPntCntctAddrCntry());
+		}
+		/******************** Pnt_Cntct_Addr_District ********************************************************************************/
+		if(p.getPntCntctAddrDistrict() != null) {
+			patientcontactaddress.setDistrict(p.getPntCntctAddrDistrict());
+		}
+		/******************** Pnt_Cntct_Addr_Line ********************************************************************************/
+		if(p.getPntCntctAddrLine() != null) {
+			patientcontactaddress.addLine(p.getPntCntctAddrLine());
+		}
+		/******************** patientcontactaddressperiod ********************************************************************************/
+		org.hl7.fhir.r4.model.Period patientcontactaddressperiod =  new org.hl7.fhir.r4.model.Period();
+		patientcontactaddress.setPeriod(patientcontactaddressperiod);
+
+		/******************** Pnt_Cntct_Addr_Prd_End ********************************************************************************/
+		if(p.getPntCntctAddrPrdEnd() != null) {
+			java.text.SimpleDateFormat Pnt_Cntct_Addr_Prd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Pnt_Cntct_Addr_Prd_Enddate = Pnt_Cntct_Addr_Prd_Endsdf.parse(p.getPntCntctAddrPrdEnd());
+			patientcontactaddressperiod.setEnd(Pnt_Cntct_Addr_Prd_Enddate);
+		}
+		/******************** Pnt_Cntct_Addr_Prd_Strt ********************************************************************************/
+		if(p.getPntCntctAddrPrdStrt() != null) {
+			java.text.SimpleDateFormat Pnt_Cntct_Addr_Prd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Pnt_Cntct_Addr_Prd_Strtdate = Pnt_Cntct_Addr_Prd_Strtsdf.parse(p.getPntCntctAddrPrdStrt());
+			patientcontactaddressperiod.setStart(Pnt_Cntct_Addr_Prd_Strtdate);
+		}
+		/******************** Pnt_Cntct_Addr_PostalCd ********************************************************************************/
+		if(p.getPntCntctAddrPostalCd() != null) {
+			patientcontactaddress.setPostalCode(p.getPntCntctAddrPostalCd());
+		}
+		/******************** Pnt_Cntct_Addr_State ********************************************************************************/
+		if(p.getPntCntctAddrState() != null) {
+			patientcontactaddress.setState(p.getPntCntctAddrState());
+		}
+		/******************** Pnt_Cntct_Addr_Txt ********************************************************************************/
+		if(p.getPntCntctAddrTxt() != null) {
+			patientcontactaddress.setText(p.getPntCntctAddrTxt());
+		}
+		/******************** patientcontactaddresstype ********************************************************************************/
+		org.hl7.fhir.r4.model.Address.AddressTypeEnumFactory patientcontactaddresstype =  new org.hl7.fhir.r4.model.Address.AddressTypeEnumFactory();
+		patientcontactaddress.setType(patientcontactaddresstype.fromCode(p.getPntCntctAddrTyp()));
+
+		/******************** patientcontactaddressuse ********************************************************************************/
+		org.hl7.fhir.r4.model.Address.AddressUseEnumFactory patientcontactaddressuse =  new org.hl7.fhir.r4.model.Address.AddressUseEnumFactory();
+		patientcontactaddress.setUse(patientcontactaddressuse.fromCode(p.getPntCntctAddrUse()));
+
+		/******************** patientcontactgender ********************************************************************************/
+		org.hl7.fhir.r4.model.Enumerations.AdministrativeGenderEnumFactory patientcontactgender =  new org.hl7.fhir.r4.model.Enumerations.AdministrativeGenderEnumFactory();
+		patientcontact.setGender(patientcontactgender.fromCode(p.getPntCntctGender()));
+
+		/******************** patientcontactname ********************************************************************************/
+		org.hl7.fhir.r4.model.HumanName patientcontactname =  new org.hl7.fhir.r4.model.HumanName();
+		patientcontact.setName(patientcontactname);
+
+		/******************** Pnt_Cntct_Nm_Fmly ********************************************************************************/
+		if(p.getPntCntctNmFmly() != null) {
+			patientcontactname.setFamily(p.getPntCntctNmFmly());
+		}
+		/******************** Pnt_Cntct_Nm_Given ********************************************************************************/
+		if(p.getPntCntctNmGiven() != null) {
+			patientcontactname.addGiven(p.getPntCntctNmGiven());
+		}
+		/******************** patientcontactnameperiod ********************************************************************************/
+		org.hl7.fhir.r4.model.Period patientcontactnameperiod =  new org.hl7.fhir.r4.model.Period();
+		patientcontactname.setPeriod(patientcontactnameperiod);
+
+		/******************** Pnt_Cntct_Nm_Prd_End ********************************************************************************/
+		if(p.getPntCntctNmPrdEnd() != null) {
+			java.text.SimpleDateFormat Pnt_Cntct_Nm_Prd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Pnt_Cntct_Nm_Prd_Enddate = Pnt_Cntct_Nm_Prd_Endsdf.parse(p.getPntCntctNmPrdEnd());
+			patientcontactnameperiod.setEnd(Pnt_Cntct_Nm_Prd_Enddate);
+		}
+		/******************** Pnt_Cntct_Nm_Prd_Strt ********************************************************************************/
+		if(p.getPntCntctNmPrdStrt() != null) {
+			java.text.SimpleDateFormat Pnt_Cntct_Nm_Prd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Pnt_Cntct_Nm_Prd_Strtdate = Pnt_Cntct_Nm_Prd_Strtsdf.parse(p.getPntCntctNmPrdStrt());
+			patientcontactnameperiod.setStart(Pnt_Cntct_Nm_Prd_Strtdate);
+		}
+		/******************** Pnt_Cntct_Nm_Prefix ********************************************************************************/
+		if(p.getPntCntctNmPrefix() != null) {
+			patientcontactname.addPrefix(p.getPntCntctNmPrefix());
+		}
+		/******************** Pnt_Cntct_Nm_Suffix ********************************************************************************/
+		if(p.getPntCntctNmSuffix() != null) {
+			patientcontactname.addSuffix(p.getPntCntctNmSuffix());
+		}
+		/******************** Pnt_Cntct_Nm_Txt ********************************************************************************/
+		if(p.getPntCntctNmTxt() != null) {
+			patientcontactname.setText(p.getPntCntctNmTxt());
+		}
+		/******************** patientcontactnameuse ********************************************************************************/
+		org.hl7.fhir.r4.model.HumanName.NameUseEnumFactory patientcontactnameuse =  new org.hl7.fhir.r4.model.HumanName.NameUseEnumFactory();
+		patientcontactname.setUse(patientcontactnameuse.fromCode(p.getPntCntctNmUse()));
+
+		/******************** Pnt_Cntct_Orgnztn ********************************************************************************/
+		if(p.getPntCntctOrgnztn() != null) {
+			patientcontact.setOrganization( new org.hl7.fhir.r4.model.Reference(p.getPntCntctOrgnztn()));
+		}
+		/******************** patientcontactperiod ********************************************************************************/
+		org.hl7.fhir.r4.model.Period patientcontactperiod =  new org.hl7.fhir.r4.model.Period();
+		patientcontact.setPeriod(patientcontactperiod);
+
+		/******************** Pnt_Cntct_Prd_End ********************************************************************************/
+		if(p.getPntCntctPrdEnd() != null) {
+			java.text.SimpleDateFormat Pnt_Cntct_Prd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Pnt_Cntct_Prd_Enddate = Pnt_Cntct_Prd_Endsdf.parse(p.getPntCntctPrdEnd());
+			patientcontactperiod.setEnd(Pnt_Cntct_Prd_Enddate);
+		}
+		/******************** Pnt_Cntct_Prd_Strt ********************************************************************************/
+		if(p.getPntCntctPrdStrt() != null) {
+			java.text.SimpleDateFormat Pnt_Cntct_Prd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Pnt_Cntct_Prd_Strtdate = Pnt_Cntct_Prd_Strtsdf.parse(p.getPntCntctPrdStrt());
+			patientcontactperiod.setStart(Pnt_Cntct_Prd_Strtdate);
+		}
+		/******************** patientcontactrelationship ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept patientcontactrelationship =  new org.hl7.fhir.r4.model.CodeableConcept();
+		patientcontact.addRelationship(patientcontactrelationship);
+
+		/******************** patientcontactrelationshipcoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding patientcontactrelationshipcoding =  new org.hl7.fhir.r4.model.Coding();
+		patientcontactrelationship.addCoding(patientcontactrelationshipcoding);
+
+		/******************** Pnt_Cntct_Rltnship_Cdg_Cd ********************************************************************************/
+		if(p.getPntCntctRltnshipCdgCd() != null) {
+			patientcontactrelationshipcoding.setCode(p.getPntCntctRltnshipCdgCd());
+		}
+		/******************** Pnt_Cntct_Rltnship_Cdg_Dsply ********************************************************************************/
+		if(p.getPntCntctRltnshipCdgDsply() != null) {
+			patientcontactrelationshipcoding.setDisplay(p.getPntCntctRltnshipCdgDsply());
+		}
+		/******************** Pnt_Cntct_Rltnship_Cdg_Sys ********************************************************************************/
+		if(p.getPntCntctRltnshipCdgSys() != null) {
+			patientcontactrelationshipcoding.setSystem(p.getPntCntctRltnshipCdgSys());
+		}
+		/******************** Pnt_Cntct_Rltnship_Cdg_UsrSltd ********************************************************************************/
+		if(p.getPntCntctRltnshipCdgUsrSltd() != null) {
+			patientcontactrelationshipcoding.setUserSelected(Boolean.parseBoolean(p.getPntCntctRltnshipCdgUsrSltd()));
+		}
+		/******************** Pnt_Cntct_Rltnship_Cdg_Vrsn ********************************************************************************/
+		if(p.getPntCntctRltnshipCdgVrsn() != null) {
+			patientcontactrelationshipcoding.setVersion(p.getPntCntctRltnshipCdgVrsn());
+		}
+		/******************** Pnt_Cntct_Rltnship_Txt ********************************************************************************/
+		if(p.getPntCntctRltnshipTxt() != null) {
+			patientcontactrelationship.setText(p.getPntCntctRltnshipTxt());
+		}
+		/******************** patientcontacttelecom ********************************************************************************/
+		org.hl7.fhir.r4.model.ContactPoint patientcontacttelecom =  new org.hl7.fhir.r4.model.ContactPoint();
+		patientcontact.addTelecom(patientcontacttelecom);
+
+		/******************** patientcontacttelecomperiod ********************************************************************************/
+		org.hl7.fhir.r4.model.Period patientcontacttelecomperiod =  new org.hl7.fhir.r4.model.Period();
+		patientcontacttelecom.setPeriod(patientcontacttelecomperiod);
+
+		/******************** Pnt_Cntct_Tlcm_Prd_End ********************************************************************************/
+		if(p.getPntCntctTlcmPrdEnd() != null) {
+			java.text.SimpleDateFormat Pnt_Cntct_Tlcm_Prd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Pnt_Cntct_Tlcm_Prd_Enddate = Pnt_Cntct_Tlcm_Prd_Endsdf.parse(p.getPntCntctTlcmPrdEnd());
+			patientcontacttelecomperiod.setEnd(Pnt_Cntct_Tlcm_Prd_Enddate);
+		}
+		/******************** Pnt_Cntct_Tlcm_Prd_Strt ********************************************************************************/
+		if(p.getPntCntctTlcmPrdStrt() != null) {
+			java.text.SimpleDateFormat Pnt_Cntct_Tlcm_Prd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Pnt_Cntct_Tlcm_Prd_Strtdate = Pnt_Cntct_Tlcm_Prd_Strtsdf.parse(p.getPntCntctTlcmPrdStrt());
+			patientcontacttelecomperiod.setStart(Pnt_Cntct_Tlcm_Prd_Strtdate);
+		}
+		/******************** Pnt_Cntct_Tlcm_Rnk ********************************************************************************/
+		if(p.getPntCntctTlcmRnk() != null) {
+			patientcontacttelecom.setRank(Integer.parseInt(p.getPntCntctTlcmRnk()));
+		}
+		/******************** patientcontacttelecomsystem ********************************************************************************/
+		org.hl7.fhir.r4.model.ContactPoint.ContactPointSystemEnumFactory patientcontacttelecomsystem =  new org.hl7.fhir.r4.model.ContactPoint.ContactPointSystemEnumFactory();
+		patientcontacttelecom.setSystem(patientcontacttelecomsystem.fromCode(p.getPntCntctTlcmSys()));
+
+		/******************** patientcontacttelecomuse ********************************************************************************/
+		org.hl7.fhir.r4.model.ContactPoint.ContactPointUseEnumFactory patientcontacttelecomuse =  new org.hl7.fhir.r4.model.ContactPoint.ContactPointUseEnumFactory();
+		patientcontacttelecom.setUse(patientcontacttelecomuse.fromCode(p.getPntCntctTlcmUse()));
+
+		/******************** Pnt_Cntct_Tlcm_Vl ********************************************************************************/
+		if(p.getPntCntctTlcmVl() != null) {
+			patientcontacttelecom.setValue(p.getPntCntctTlcmVl());
+		}
+		/******************** Pnt_DeceasedBooleanTyp ********************************************************************************/
+		if(p.getPntDeceasedBooleanTyp() != null) {
+			patient.setDeceased( new org.hl7.fhir.r4.model.BooleanType(p.getPntDeceasedBooleanTyp()));
+		}
+		/******************** Pnt_DeceasedDtTimeTyp ********************************************************************************/
+		if(p.getPntDeceasedDtTimeTyp() != null) {
+			patient.setDeceased( new org.hl7.fhir.r4.model.DateTimeType(p.getPntDeceasedDtTimeTyp()));
+		}
+		/******************** patientgender ********************************************************************************/
+		org.hl7.fhir.r4.model.Enumerations.AdministrativeGenderEnumFactory patientgender =  new org.hl7.fhir.r4.model.Enumerations.AdministrativeGenderEnumFactory();
+		patient.setGender(patientgender.fromCode(p.getPntGender()));
+
+		/******************** Pnt_GeneralPrctitnr ********************************************************************************/
+		if(p.getPntGeneralPrctitnr() != null) {
+			patient.addGeneralPractitioner( new org.hl7.fhir.r4.model.Reference(p.getPntGeneralPrctitnr()));
+		}
+		/******************** patientidentifier ********************************************************************************/
+		org.hl7.fhir.r4.model.Identifier patientidentifier =  new org.hl7.fhir.r4.model.Identifier();
+		patient.addIdentifier(patientidentifier);
+
+		/******************** Pnt_Id_Assigner ********************************************************************************/
+		if(p.getPntIdAssigner() != null) {
+			patientidentifier.setAssigner( new org.hl7.fhir.r4.model.Reference(p.getPntIdAssigner()));
+		}
+		/******************** patientidentifierperiod ********************************************************************************/
+		org.hl7.fhir.r4.model.Period patientidentifierperiod =  new org.hl7.fhir.r4.model.Period();
+		patientidentifier.setPeriod(patientidentifierperiod);
+
+		/******************** Pnt_Id_Prd_End ********************************************************************************/
+		if(p.getPntIdPrdEnd() != null) {
+			java.text.SimpleDateFormat Pnt_Id_Prd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Pnt_Id_Prd_Enddate = Pnt_Id_Prd_Endsdf.parse(p.getPntIdPrdEnd());
+			patientidentifierperiod.setEnd(Pnt_Id_Prd_Enddate);
+		}
+		/******************** Pnt_Id_Prd_Strt ********************************************************************************/
+		if(p.getPntIdPrdStrt() != null) {
+			java.text.SimpleDateFormat Pnt_Id_Prd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Pnt_Id_Prd_Strtdate = Pnt_Id_Prd_Strtsdf.parse(p.getPntIdPrdStrt());
+			patientidentifierperiod.setStart(Pnt_Id_Prd_Strtdate);
+		}
+		/******************** Pnt_Id_Sys ********************************************************************************/
+		if(p.getPntIdSys() != null) {
+			patientidentifier.setSystem(p.getPntIdSys());
+		}
+		/******************** patientidentifiertype ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept patientidentifiertype =  new org.hl7.fhir.r4.model.CodeableConcept();
+		patientidentifier.setType(patientidentifiertype);
+
+		/******************** patientidentifiertypecoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding patientidentifiertypecoding =  new org.hl7.fhir.r4.model.Coding();
+		patientidentifiertype.addCoding(patientidentifiertypecoding);
+
+		/******************** Pnt_Id_Typ_Cdg_Cd ********************************************************************************/
+		if(p.getPntIdTypCdgCd() != null) {
+			patientidentifiertypecoding.setCode(p.getPntIdTypCdgCd());
+		}
+		/******************** Pnt_Id_Typ_Cdg_Dsply ********************************************************************************/
+		if(p.getPntIdTypCdgDsply() != null) {
+			patientidentifiertypecoding.setDisplay(p.getPntIdTypCdgDsply());
+		}
+		/******************** Pnt_Id_Typ_Cdg_Sys ********************************************************************************/
+		if(p.getPntIdTypCdgSys() != null) {
+			patientidentifiertypecoding.setSystem(p.getPntIdTypCdgSys());
+		}
+		/******************** Pnt_Id_Typ_Cdg_UsrSltd ********************************************************************************/
+		if(p.getPntIdTypCdgUsrSltd() != null) {
+			patientidentifiertypecoding.setUserSelected(Boolean.parseBoolean(p.getPntIdTypCdgUsrSltd()));
+		}
+		/******************** Pnt_Id_Typ_Cdg_Vrsn ********************************************************************************/
+		if(p.getPntIdTypCdgVrsn() != null) {
+			patientidentifiertypecoding.setVersion(p.getPntIdTypCdgVrsn());
+		}
+		/******************** Pnt_Id_Typ_Txt ********************************************************************************/
+		if(p.getPntIdTypTxt() != null) {
+			patientidentifiertype.setText(p.getPntIdTypTxt());
+		}
+		/******************** patientidentifieruse ********************************************************************************/
+		org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory patientidentifieruse =  new org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory();
+		patientidentifier.setUse(patientidentifieruse.fromCode(p.getPntIdUse()));
+
+		/******************** Pnt_Id_Vl ********************************************************************************/
+		if(p.getPntIdVl() != null) {
+			patientidentifier.setValue(p.getPntIdVl());
+		}
+		/******************** patientlink ********************************************************************************/
+		org.hl7.fhir.r4.model.Patient.PatientLinkComponent patientlink =  new org.hl7.fhir.r4.model.Patient.PatientLinkComponent();
+		patient.addLink(patientlink);
+
+		/******************** Pnt_Link_Other ********************************************************************************/
+		if(p.getPntLinkOther() != null) {
+			patientlink.setOther( new org.hl7.fhir.r4.model.Reference(p.getPntLinkOther()));
+		}
+		/******************** patientlinktype ********************************************************************************/
+		org.hl7.fhir.r4.model.Patient.LinkTypeEnumFactory patientlinktype =  new org.hl7.fhir.r4.model.Patient.LinkTypeEnumFactory();
+		patientlink.setType(patientlinktype.fromCode(p.getPntLinkTyp()));
+
+		/******************** Pnt_ManagingOrgnztn ********************************************************************************/
+		if(p.getPntManagingOrgnztn() != null) {
+			patient.setManagingOrganization( new org.hl7.fhir.r4.model.Reference(p.getPntManagingOrgnztn()));
+		}
+		/******************** patientmaritalstatus ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept patientmaritalstatus =  new org.hl7.fhir.r4.model.CodeableConcept();
+		patient.setMaritalStatus(patientmaritalstatus);
+
+		/******************** patientmaritalstatuscoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding patientmaritalstatuscoding =  new org.hl7.fhir.r4.model.Coding();
+		patientmaritalstatus.addCoding(patientmaritalstatuscoding);
+
+		/******************** Pnt_MaritalSts_Cdg_Cd ********************************************************************************/
+		if(p.getPntMaritalStsCdgCd() != null) {
+			patientmaritalstatuscoding.setCode(p.getPntMaritalStsCdgCd());
+		}
+		/******************** Pnt_MaritalSts_Cdg_Dsply ********************************************************************************/
+		if(p.getPntMaritalStsCdgDsply() != null) {
+			patientmaritalstatuscoding.setDisplay(p.getPntMaritalStsCdgDsply());
+		}
+		/******************** Pnt_MaritalSts_Cdg_Sys ********************************************************************************/
+		if(p.getPntMaritalStsCdgSys() != null) {
+			patientmaritalstatuscoding.setSystem(p.getPntMaritalStsCdgSys());
+		}
+		/******************** Pnt_MaritalSts_Cdg_UsrSltd ********************************************************************************/
+		if(p.getPntMaritalStsCdgUsrSltd() != null) {
+			patientmaritalstatuscoding.setUserSelected(Boolean.parseBoolean(p.getPntMaritalStsCdgUsrSltd()));
+		}
+		/******************** Pnt_MaritalSts_Cdg_Vrsn ********************************************************************************/
+		if(p.getPntMaritalStsCdgVrsn() != null) {
+			patientmaritalstatuscoding.setVersion(p.getPntMaritalStsCdgVrsn());
+		}
+		/******************** Pnt_MaritalSts_Txt ********************************************************************************/
+		if(p.getPntMaritalStsTxt() != null) {
+			patientmaritalstatus.setText(p.getPntMaritalStsTxt());
+		}
+		/******************** Pnt_MultipleBirthBooleanTyp ********************************************************************************/
+		if(p.getPntMultipleBirthBooleanTyp() != null) {
+			patient.setMultipleBirth( new org.hl7.fhir.r4.model.BooleanType(p.getPntMultipleBirthBooleanTyp()));
+		}
+		/******************** Pnt_MultipleBirthIntegerTyp ********************************************************************************/
+		if(p.getPntMultipleBirthIntegerTyp() != null) {
+			patient.setMultipleBirth( new org.hl7.fhir.r4.model.IntegerType(p.getPntMultipleBirthIntegerTyp()));
+		}
+		/******************** patientname ********************************************************************************/
+		org.hl7.fhir.r4.model.HumanName patientname =  new org.hl7.fhir.r4.model.HumanName();
+		patient.addName(patientname);
+
+		/******************** Pnt_Nm_Fmly ********************************************************************************/
+		if(p.getPntNmFmly() != null) {
+			patientname.setFamily(p.getPntNmFmly());
+		}
+		/******************** Pnt_Nm_Given ********************************************************************************/
+		if(p.getPntNmGiven() != null) {
+			patientname.addGiven(p.getPntNmGiven());
+		}
+		/******************** patientnameperiod ********************************************************************************/
+		org.hl7.fhir.r4.model.Period patientnameperiod =  new org.hl7.fhir.r4.model.Period();
+		patientname.setPeriod(patientnameperiod);
+
+		/******************** Pnt_Nm_Prd_End ********************************************************************************/
+		if(p.getPntNmPrdEnd() != null) {
+			java.text.SimpleDateFormat Pnt_Nm_Prd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Pnt_Nm_Prd_Enddate = Pnt_Nm_Prd_Endsdf.parse(p.getPntNmPrdEnd());
+			patientnameperiod.setEnd(Pnt_Nm_Prd_Enddate);
+		}
+		/******************** Pnt_Nm_Prd_Strt ********************************************************************************/
+		if(p.getPntNmPrdStrt() != null) {
+			java.text.SimpleDateFormat Pnt_Nm_Prd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Pnt_Nm_Prd_Strtdate = Pnt_Nm_Prd_Strtsdf.parse(p.getPntNmPrdStrt());
+			patientnameperiod.setStart(Pnt_Nm_Prd_Strtdate);
+		}
+		/******************** Pnt_Nm_Prefix ********************************************************************************/
+		if(p.getPntNmPrefix() != null) {
+			patientname.addPrefix(p.getPntNmPrefix());
+		}
+		/******************** Pnt_Nm_Suffix ********************************************************************************/
+		if(p.getPntNmSuffix() != null) {
+			patientname.addSuffix(p.getPntNmSuffix());
+		}
+		/******************** Pnt_Nm_Txt ********************************************************************************/
+		if(p.getPntNmTxt() != null) {
+			patientname.setText(p.getPntNmTxt());
+		}
+		/******************** patientnameuse ********************************************************************************/
+		org.hl7.fhir.r4.model.HumanName.NameUseEnumFactory patientnameuse =  new org.hl7.fhir.r4.model.HumanName.NameUseEnumFactory();
+		patientname.setUse(patientnameuse.fromCode(p.getPntNmUse()));
+
+		/******************** patientphoto ********************************************************************************/
+		org.hl7.fhir.r4.model.Attachment patientphoto =  new org.hl7.fhir.r4.model.Attachment();
+		patient.addPhoto(patientphoto);
+
+		/******************** Pnt_Photo_CntntTyp ********************************************************************************/
+		if(p.getPntPhotoCntntTyp() != null) {
+			patientphoto.setContentType(p.getPntPhotoCntntTyp());
+		}
+		/******************** Pnt_Photo_Creation ********************************************************************************/
+		if(p.getPntPhotoCreation() != null) {
+			java.text.SimpleDateFormat Pnt_Photo_Creationsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Pnt_Photo_Creationdate = Pnt_Photo_Creationsdf.parse(p.getPntPhotoCreation());
+			patientphoto.setCreation(Pnt_Photo_Creationdate);
+		}
+		/******************** Pnt_Photo_Data ********************************************************************************/
+		if(p.getPntPhotoData() != null) {
+			patientphoto.setDataElement(new org.hl7.fhir.r4.model.Base64BinaryType(p.getPntPhotoData()));
+		}
+		/******************** Pnt_Photo_Hash ********************************************************************************/
+		if(p.getPntPhotoHash() != null) {
+			patientphoto.setHashElement(new org.hl7.fhir.r4.model.Base64BinaryType(p.getPntPhotoHash()));
+		}
+		/******************** Pnt_Photo_Lnguage ********************************************************************************/
+		if(p.getPntPhotoLnguage() != null) {
+			patientphoto.setLanguage(p.getPntPhotoLnguage());
+		}
+		/******************** Pnt_Photo_Sz ********************************************************************************/
+		if(p.getPntPhotoSz() != null) {
+			patientphoto.setSize(Integer.parseInt(p.getPntPhotoSz()));
+		}
+		/******************** Pnt_Photo_Ttl ********************************************************************************/
+		if(p.getPntPhotoTtl() != null) {
+			patientphoto.setTitle(p.getPntPhotoTtl());
+		}
+		/******************** Pnt_Photo_Url ********************************************************************************/
+		if(p.getPntPhotoUrl() != null) {
+			patientphoto.setUrl(p.getPntPhotoUrl());
+		}
+		/******************** patienttelecom ********************************************************************************/
+		org.hl7.fhir.r4.model.ContactPoint patienttelecom =  new org.hl7.fhir.r4.model.ContactPoint();
+		patient.addTelecom(patienttelecom);
+
+		/******************** patienttelecomperiod ********************************************************************************/
+		org.hl7.fhir.r4.model.Period patienttelecomperiod =  new org.hl7.fhir.r4.model.Period();
+		patienttelecom.setPeriod(patienttelecomperiod);
+
+		/******************** Pnt_Tlcm_Prd_End ********************************************************************************/
+		if(p.getPntTlcmPrdEnd() != null) {
+			java.text.SimpleDateFormat Pnt_Tlcm_Prd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Pnt_Tlcm_Prd_Enddate = Pnt_Tlcm_Prd_Endsdf.parse(p.getPntTlcmPrdEnd());
+			patienttelecomperiod.setEnd(Pnt_Tlcm_Prd_Enddate);
+		}
+		/******************** Pnt_Tlcm_Prd_Strt ********************************************************************************/
+		if(p.getPntTlcmPrdStrt() != null) {
+			java.text.SimpleDateFormat Pnt_Tlcm_Prd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Pnt_Tlcm_Prd_Strtdate = Pnt_Tlcm_Prd_Strtsdf.parse(p.getPntTlcmPrdStrt());
+			patienttelecomperiod.setStart(Pnt_Tlcm_Prd_Strtdate);
+		}
+		/******************** Pnt_Tlcm_Rnk ********************************************************************************/
+		if(p.getPntTlcmRnk() != null) {
+			patienttelecom.setRank(Integer.parseInt(p.getPntTlcmRnk()));
+		}
+		/******************** patienttelecomsystem ********************************************************************************/
+		org.hl7.fhir.r4.model.ContactPoint.ContactPointSystemEnumFactory patienttelecomsystem =  new org.hl7.fhir.r4.model.ContactPoint.ContactPointSystemEnumFactory();
+		patienttelecom.setSystem(patienttelecomsystem.fromCode(p.getPntTlcmSys()));
+
+		/******************** patienttelecomuse ********************************************************************************/
+		org.hl7.fhir.r4.model.ContactPoint.ContactPointUseEnumFactory patienttelecomuse =  new org.hl7.fhir.r4.model.ContactPoint.ContactPointUseEnumFactory();
+		patienttelecom.setUse(patienttelecomuse.fromCode(p.getPntTlcmUse()));
+
+		/******************** Pnt_Tlcm_Vl ********************************************************************************/
+		if(p.getPntTlcmVl() != null) {
+			patienttelecom.setValue(p.getPntTlcmVl());
 		}
-
-		org.hl7.fhir.r4.model.Address patientaddaddress = patient.addAddress();
-
-		/******************** Patient_Address_City ********************************************************************************/
-		if(p.getPatientAddressCity() != null) {
-			patientaddaddress.setCity(p.getPatientAddressCity());
-		}
-		/******************** Patient_Address_Country ********************************************************************************/
-		if(p.getPatientAddressCountry() != null) {
-			patientaddaddress.setCountry(p.getPatientAddressCountry());
-		}
-		/******************** Patient_Address_District ********************************************************************************/
-		if(p.getPatientAddressDistrict() != null) {
-			patientaddaddress.setDistrict(p.getPatientAddressDistrict());
-		}
-		/******************** Patient_Address_Line ********************************************************************************/
-		if(p.getPatientAddressLine() != null) {
-			patientaddaddress.addLine(p.getPatientAddressLine());
-		}
-
-		org.hl7.fhir.r4.model.Period patientaddaddresssetperiod = new org.hl7.fhir.r4.model.Period();
-		patientaddaddress.setPeriod(patientaddaddresssetperiod);
-
-		/******************** Patient_Address_Period_End ********************************************************************************/
-		if(p.getPatientAddressPeriodEnd() != null) {
-			java.text.SimpleDateFormat PatientAddressPeriodEndsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date PatientAddressPeriodEnddate = PatientAddressPeriodEndsdf.parse(p.getPatientAddressPeriodEnd());
-			patientaddaddresssetperiod.setEnd(PatientAddressPeriodEnddate);
-		}
-		/******************** Patient_Address_Period_Start ********************************************************************************/
-		if(p.getPatientAddressPeriodStart() != null) {
-			java.text.SimpleDateFormat PatientAddressPeriodStartsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date PatientAddressPeriodStartdate = PatientAddressPeriodStartsdf.parse(p.getPatientAddressPeriodStart());
-			patientaddaddresssetperiod.setStart(PatientAddressPeriodStartdate);
-		}
-		/******************** Patient_Address_PostalCode ********************************************************************************/
-		if(p.getPatientAddressPostalCode() != null) {
-			patientaddaddress.setPostalCode(p.getPatientAddressPostalCode());
-		}
-		/******************** Patient_Address_State ********************************************************************************/
-		if(p.getPatientAddressState() != null) {
-			patientaddaddress.setState(p.getPatientAddressState());
-		}
-		/******************** Patient_Address_Text ********************************************************************************/
-		if(p.getPatientAddressText() != null) {
-			patientaddaddress.setText(p.getPatientAddressText());
-		}
-
-		org.hl7.fhir.r4.model.Address.AddressTypeEnumFactory patientaddaddresssettypeEnumFactory = new org.hl7.fhir.r4.model.Address.AddressTypeEnumFactory();
-
-		/******************** Patient_Address_Type_Code ********************************************************************************/
-		if(p.getPatientAddressTypeCode() != null) {
-			patientaddaddress.setType(patientaddaddresssettypeEnumFactory.fromCode(p.getPatientAddressTypeCode()));
-
-		}
-
-		org.hl7.fhir.r4.model.Address.AddressUseEnumFactory patientaddaddresssetuseEnumFactory = new org.hl7.fhir.r4.model.Address.AddressUseEnumFactory();
-
-		/******************** Patient_Address_Use_Code ********************************************************************************/
-		if(p.getPatientAddressUseCode() != null) {
-			patientaddaddress.setUse(patientaddaddresssetuseEnumFactory.fromCode(p.getPatientAddressUseCode()));
-
-		}
-
-		if(p.getPatientAddressExtensionLatitudeValue()!=null && p.getPatientAddressExtensionLongitudeValue() != null)
-		{
-			Extension geolocation = patientaddaddress.addExtension();
-			
-			/******************** PNT_ADDRESS_EXT_LAT_VALUE ****************************************************************
-			 * PNT_ADDRESS_EXT_LAT_VALUE maps to Patient / address / extension / latitude / value
-			 ***************************************************************************************************************/
-		    geolocation.addExtension("Latitude", new DecimalType(p.getPatientAddressExtensionLatitudeValue()));
-		    
-			/******************** PNT_ADDRESS_EXT_LONG_VALUE ***************************************************************
-			 * PNT_ADDRESS_EXT_LONG_VALUE maps to Patient / address / extension / longitude / value
-			 ***************************************************************************************************************/
-		    geolocation.addExtension("Longitude", new DecimalType(p.getPatientAddressExtensionLongitudeValue()));
-		}
-
-		
-		
-		/******************** Patient_BirthDate ********************************************************************************/
-		if(p.getPatientBirthDate() != null) {
-			java.text.SimpleDateFormat PatientBirthDatesdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date PatientBirthDatedate = PatientBirthDatesdf.parse(p.getPatientBirthDate());
-			patient.setBirthDate(PatientBirthDatedate);
-		}
-
-		org.hl7.fhir.r4.model.Patient.PatientCommunicationComponent patientaddcommunication = patient.addCommunication();
-
-
-		org.hl7.fhir.r4.model.CodeableConcept patientaddcommunicationsetlanguage = new org.hl7.fhir.r4.model.CodeableConcept();
-		patientaddcommunication.setLanguage(patientaddcommunicationsetlanguage);
-
-
-		org.hl7.fhir.r4.model.Coding patientaddcommunicationsetlanguageaddcoding = patientaddcommunicationsetlanguage.addCoding();
-
-		/******************** Patient_Commn_Lang_Coding_Code ********************************************************************************/
-		if(p.getPatientCommnLangCodingCode() != null) {
-			patientaddcommunicationsetlanguageaddcoding.setCode(p.getPatientCommnLangCodingCode());
-		}
-		/******************** Patient_Commn_Lang_Coding_Display ********************************************************************************/
-		if(p.getPatientCommnLangCodingDisplay() != null) {
-			patientaddcommunicationsetlanguageaddcoding.setDisplay(p.getPatientCommnLangCodingDisplay());
-		}
-		/******************** Patient_Commn_Lang_Coding_System ********************************************************************************/
-		if(p.getPatientCommnLangCodingSystem() != null) {
-			patientaddcommunicationsetlanguageaddcoding.setSystem(p.getPatientCommnLangCodingSystem());
-		}
-		/******************** Patient_Commn_Lang_Coding_Usrslt ********************************************************************************/
-		if(p.getPatientCommnLangCodingUsrslt() != null) {
-			patientaddcommunicationsetlanguageaddcoding.setUserSelected(Boolean.parseBoolean(p.getPatientCommnLangCodingUsrslt()));
-		}
-		/******************** Patient_Commn_Lang_Coding_Version ********************************************************************************/
-		if(p.getPatientCommnLangCodingVersion() != null) {
-			patientaddcommunicationsetlanguageaddcoding.setVersion(p.getPatientCommnLangCodingVersion());
-		}
-		/******************** Patient_Commn_Lang_Text ********************************************************************************/
-		if(p.getPatientCommnLangText() != null) {
-			patientaddcommunicationsetlanguage.setText(p.getPatientCommnLangText());
-		}
-		/******************** Patient_Commn_Preferred ********************************************************************************/
-		if(p.getPatientCommnPreferred() != null) {
-			patientaddcommunication.setPreferred(Boolean.parseBoolean(p.getPatientCommnPreferred()));
-		}
-
-		org.hl7.fhir.r4.model.Patient.ContactComponent patientaddcontact = patient.addContact();
-
-
-		org.hl7.fhir.r4.model.Address patientaddcontactsetaddress = new org.hl7.fhir.r4.model.Address();
-		patientaddcontact.setAddress(patientaddcontactsetaddress);
-
-		/******************** Patient_Contact_Address_City ********************************************************************************/
-		if(p.getPatientContactAddressCity() != null) {
-			patientaddcontactsetaddress.setCity(p.getPatientContactAddressCity());
-		}
-		/******************** Patient_Contact_Address_Country ********************************************************************************/
-		if(p.getPatientContactAddressCountry() != null) {
-			patientaddcontactsetaddress.setCountry(p.getPatientContactAddressCountry());
-		}
-		/******************** Patient_Contact_Address_District ********************************************************************************/
-		if(p.getPatientContactAddressDistrict() != null) {
-			patientaddcontactsetaddress.setDistrict(p.getPatientContactAddressDistrict());
-		}
-		/******************** Patient_Contact_Address_Line ********************************************************************************/
-		if(p.getPatientContactAddressLine() != null) {
-			patientaddcontactsetaddress.addLine(p.getPatientContactAddressLine());
-		}
-
-		org.hl7.fhir.r4.model.Period patientaddcontactsetaddresssetperiod = new org.hl7.fhir.r4.model.Period();
-		patientaddcontactsetaddress.setPeriod(patientaddcontactsetaddresssetperiod);
-
-		/******************** Patient_Contact_Address_Period_End ********************************************************************************/
-		if(p.getPatientContactAddressPeriodEnd() != null) {
-			java.text.SimpleDateFormat PatientContactAddressPeriodEndsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date PatientContactAddressPeriodEnddate = PatientContactAddressPeriodEndsdf.parse(p.getPatientContactAddressPeriodEnd());
-			patientaddcontactsetaddresssetperiod.setEnd(PatientContactAddressPeriodEnddate);
-		}
-		/******************** Patient_Contact_Address_Period_Start ********************************************************************************/
-		if(p.getPatientContactAddressPeriodStart() != null) {
-			java.text.SimpleDateFormat PatientContactAddressPeriodStartsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date PatientContactAddressPeriodStartdate = PatientContactAddressPeriodStartsdf.parse(p.getPatientContactAddressPeriodStart());
-			patientaddcontactsetaddresssetperiod.setStart(PatientContactAddressPeriodStartdate);
-		}
-		/******************** Patient_Contact_Address_PostalCode ********************************************************************************/
-		if(p.getPatientContactAddressPostalCode() != null) {
-			patientaddcontactsetaddress.setPostalCode(p.getPatientContactAddressPostalCode());
-		}
-		/******************** Patient_Contact_Address_State ********************************************************************************/
-		if(p.getPatientContactAddressState() != null) {
-			patientaddcontactsetaddress.setState(p.getPatientContactAddressState());
-		}
-		/******************** Patient_Contact_Address_Text ********************************************************************************/
-		if(p.getPatientContactAddressText() != null) {
-			patientaddcontactsetaddress.setText(p.getPatientContactAddressText());
-		}
-
-		org.hl7.fhir.r4.model.Address.AddressTypeEnumFactory patientaddcontactsetaddresssettypeEnumFactory = new org.hl7.fhir.r4.model.Address.AddressTypeEnumFactory();
-
-		/******************** Patient_Contact_Address_Type_Code ********************************************************************************/
-		if(p.getPatientContactAddressTypeCode() != null) {
-			patientaddcontactsetaddress.setType(patientaddcontactsetaddresssettypeEnumFactory.fromCode(p.getPatientContactAddressTypeCode()));
-
-		}
-
-		org.hl7.fhir.r4.model.Address.AddressUseEnumFactory patientaddcontactsetaddresssetuseEnumFactory = new org.hl7.fhir.r4.model.Address.AddressUseEnumFactory();
-
-		/******************** Patient_Contact_Address_Use_Code ********************************************************************************/
-		if(p.getPatientContactAddressUseCode() != null) {
-			patientaddcontactsetaddress.setUse(patientaddcontactsetaddresssetuseEnumFactory.fromCode(p.getPatientContactAddressUseCode()));
-
-		}
-
-		org.hl7.fhir.r4.model.Enumerations.AdministrativeGenderEnumFactory patientaddcontactsetgenderEnumFactory = new org.hl7.fhir.r4.model.Enumerations.AdministrativeGenderEnumFactory();
-
-		/******************** Patient_Contact_Gender_Code ********************************************************************************/
-		if(p.getPatientContactGenderCode() != null) {
-			patientaddcontact.setGender(patientaddcontactsetgenderEnumFactory.fromCode(p.getPatientContactGenderCode()));
-
-		}
-
-		org.hl7.fhir.r4.model.HumanName patientaddcontactsetname = new org.hl7.fhir.r4.model.HumanName();
-		patientaddcontact.setName(patientaddcontactsetname);
-
-		/******************** Patient_Contact_Name_Family ********************************************************************************/
-		if(p.getPatientContactNameFamily() != null) {
-			patientaddcontactsetname.setFamily(p.getPatientContactNameFamily());
-		}
-		/******************** Patient_Contact_Name_Given ********************************************************************************/
-		if(p.getPatientContactNameGiven() != null) {
-			patientaddcontactsetname.addGiven(p.getPatientContactNameGiven());
-		}
-
-		org.hl7.fhir.r4.model.Period patientaddcontactsetnamesetperiod = new org.hl7.fhir.r4.model.Period();
-		patientaddcontactsetname.setPeriod(patientaddcontactsetnamesetperiod);
-
-		/******************** Patient_Contact_Name_Period_End ********************************************************************************/
-		if(p.getPatientContactNamePeriodEnd() != null) {
-			java.text.SimpleDateFormat PatientContactNamePeriodEndsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date PatientContactNamePeriodEnddate = PatientContactNamePeriodEndsdf.parse(p.getPatientContactNamePeriodEnd());
-			patientaddcontactsetnamesetperiod.setEnd(PatientContactNamePeriodEnddate);
-		}
-		/******************** Patient_Contact_Name_Period_Start ********************************************************************************/
-		if(p.getPatientContactNamePeriodStart() != null) {
-			java.text.SimpleDateFormat PatientContactNamePeriodStartsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date PatientContactNamePeriodStartdate = PatientContactNamePeriodStartsdf.parse(p.getPatientContactNamePeriodStart());
-			patientaddcontactsetnamesetperiod.setStart(PatientContactNamePeriodStartdate);
-		}
-		/******************** Patient_Contact_Name_Prefix ********************************************************************************/
-		if(p.getPatientContactNamePrefix() != null) {
-			patientaddcontactsetname.addPrefix(p.getPatientContactNamePrefix());
-		}
-		/******************** Patient_Contact_Name_Suffix ********************************************************************************/
-		if(p.getPatientContactNameSuffix() != null) {
-			patientaddcontactsetname.addSuffix(p.getPatientContactNameSuffix());
-		}
-		/******************** Patient_Contact_Name_Text ********************************************************************************/
-		if(p.getPatientContactNameText() != null) {
-			patientaddcontactsetname.setText(p.getPatientContactNameText());
-		}
-
-		org.hl7.fhir.r4.model.HumanName.NameUseEnumFactory patientaddcontactsetnamesetuseEnumFactory = new org.hl7.fhir.r4.model.HumanName.NameUseEnumFactory();
-
-		/******************** Patient_Contact_Name_Use_Code ********************************************************************************/
-		if(p.getPatientContactNameUseCode() != null) {
-			patientaddcontactsetname.setUse(patientaddcontactsetnamesetuseEnumFactory.fromCode(p.getPatientContactNameUseCode()));
-
-		}
-		/******************** Patient_Contact_Organization ********************************************************************************/
-		if(p.getPatientContactOrganization() != null) {
-			org.hl7.fhir.r4.model.Reference PatientContactOrganizationref = new org.hl7.fhir.r4.model.Reference();
-			patientaddcontact.setOrganization(PatientContactOrganizationref.setReference(p.getPatientContactOrganization()));
-		}
-
-		org.hl7.fhir.r4.model.Period patientaddcontactsetperiod = new org.hl7.fhir.r4.model.Period();
-		patientaddcontact.setPeriod(patientaddcontactsetperiod);
-
-		/******************** Patient_Contact_Period_End ********************************************************************************/
-		if(p.getPatientContactPeriodEnd() != null) {
-			java.text.SimpleDateFormat PatientContactPeriodEndsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date PatientContactPeriodEnddate = PatientContactPeriodEndsdf.parse(p.getPatientContactPeriodEnd());
-			patientaddcontactsetperiod.setEnd(PatientContactPeriodEnddate);
-		}
-		/******************** Patient_Contact_Period_Start ********************************************************************************/
-		if(p.getPatientContactPeriodStart() != null) {
-			java.text.SimpleDateFormat PatientContactPeriodStartsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date PatientContactPeriodStartdate = PatientContactPeriodStartsdf.parse(p.getPatientContactPeriodStart());
-			patientaddcontactsetperiod.setStart(PatientContactPeriodStartdate);
-		}
-
-		org.hl7.fhir.r4.model.CodeableConcept patientaddcontactaddrelationship = patientaddcontact.addRelationship();
-
-
-		org.hl7.fhir.r4.model.Coding patientaddcontactaddrelationshipaddcoding = patientaddcontactaddrelationship.addCoding();
-
-		/******************** Patient_Contact_Relationship_Coding_Code ********************************************************************************/
-		if(p.getPatientContactRelationshipCodingCode() != null) {
-			patientaddcontactaddrelationshipaddcoding.setCode(p.getPatientContactRelationshipCodingCode());
-		}
-		/******************** Patient_Contact_Relationship_Coding_Display ********************************************************************************/
-		if(p.getPatientContactRelationshipCodingDisplay() != null) {
-			patientaddcontactaddrelationshipaddcoding.setDisplay(p.getPatientContactRelationshipCodingDisplay());
-		}
-		/******************** Patient_Contact_Relationship_Coding_System ********************************************************************************/
-		if(p.getPatientContactRelationshipCodingSystem() != null) {
-			patientaddcontactaddrelationshipaddcoding.setSystem(p.getPatientContactRelationshipCodingSystem());
-		}
-		/******************** Patient_Contact_Relationship_Coding_Usrslt ********************************************************************************/
-		if(p.getPatientContactRelationshipCodingUsrslt() != null) {
-			patientaddcontactaddrelationshipaddcoding.setUserSelected(Boolean.parseBoolean(p.getPatientContactRelationshipCodingUsrslt()));
-		}
-		/******************** Patient_Contact_Relationship_Coding_Version ********************************************************************************/
-		if(p.getPatientContactRelationshipCodingVersion() != null) {
-			patientaddcontactaddrelationshipaddcoding.setVersion(p.getPatientContactRelationshipCodingVersion());
-		}
-		/******************** Patient_Contact_Relationship_Text ********************************************************************************/
-		if(p.getPatientContactRelationshipText() != null) {
-			patientaddcontactaddrelationship.setText(p.getPatientContactRelationshipText());
-		}
-
-		org.hl7.fhir.r4.model.ContactPoint patientaddcontactaddtelecom = patientaddcontact.addTelecom();
-
-
-		org.hl7.fhir.r4.model.Period patientaddcontactaddtelecomsetperiod = new org.hl7.fhir.r4.model.Period();
-		patientaddcontactaddtelecom.setPeriod(patientaddcontactaddtelecomsetperiod);
-
-		/******************** Patient_Contact_Telecom_Period_End ********************************************************************************/
-		if(p.getPatientContactTelecomPeriodEnd() != null) {
-			java.text.SimpleDateFormat PatientContactTelecomPeriodEndsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date PatientContactTelecomPeriodEnddate = PatientContactTelecomPeriodEndsdf.parse(p.getPatientContactTelecomPeriodEnd());
-			patientaddcontactaddtelecomsetperiod.setEnd(PatientContactTelecomPeriodEnddate);
-		}
-		/******************** Patient_Contact_Telecom_Period_Start ********************************************************************************/
-		if(p.getPatientContactTelecomPeriodStart() != null) {
-			java.text.SimpleDateFormat PatientContactTelecomPeriodStartsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date PatientContactTelecomPeriodStartdate = PatientContactTelecomPeriodStartsdf.parse(p.getPatientContactTelecomPeriodStart());
-			patientaddcontactaddtelecomsetperiod.setStart(PatientContactTelecomPeriodStartdate);
-		}
-		/******************** Patient_Contact_Telecom_Rank ********************************************************************************/
-		if(p.getPatientContactTelecomRank() != null) {
-			patientaddcontactaddtelecom.setRank(Integer.parseInt(p.getPatientContactTelecomRank()));
-		}
-
-		org.hl7.fhir.r4.model.ContactPoint.ContactPointSystemEnumFactory patientaddcontactaddtelecomsetsystemEnumFactory = new org.hl7.fhir.r4.model.ContactPoint.ContactPointSystemEnumFactory();
-
-		/******************** Patient_Contact_Telecom_System_Code ********************************************************************************/
-		if(p.getPatientContactTelecomSystemCode() != null) {
-			patientaddcontactaddtelecom.setSystem(patientaddcontactaddtelecomsetsystemEnumFactory.fromCode(p.getPatientContactTelecomSystemCode()));
-
-		}
-
-		org.hl7.fhir.r4.model.ContactPoint.ContactPointUseEnumFactory patientaddcontactaddtelecomsetuseEnumFactory = new org.hl7.fhir.r4.model.ContactPoint.ContactPointUseEnumFactory();
-
-		/******************** Patient_Contact_Telecom_Use_Code ********************************************************************************/
-		if(p.getPatientContactTelecomUseCode() != null) {
-			patientaddcontactaddtelecom.setUse(patientaddcontactaddtelecomsetuseEnumFactory.fromCode(p.getPatientContactTelecomUseCode()));
-
-		}
-		/******************** Patient_Contact_Telecom_Value ********************************************************************************/
-		if(p.getPatientContactTelecomValue() != null) {
-			patientaddcontactaddtelecom.setValue(p.getPatientContactTelecomValue());
-		}
-		/******************** Patient_DeceasedBoolean ********************************************************************************/
-		if(p.getPatientDeceasedBoolean() != null) {
-			patient.setDeceased(new org.hl7.fhir.r4.model.BooleanType(p.getPatientDeceasedBoolean()));
-		}
-		/******************** Patient_DeceasedDateTime ********************************************************************************/
-		if(p.getPatientDeceasedDateTime() != null) {
-			patient.setDeceased(new org.hl7.fhir.r4.model.DateTimeType(p.getPatientDeceasedDateTime()));
-		}
-
-		org.hl7.fhir.r4.model.Enumerations.AdministrativeGenderEnumFactory patientsetgenderEnumFactory = new org.hl7.fhir.r4.model.Enumerations.AdministrativeGenderEnumFactory();
-
-		/******************** Patient_Gender_Code ********************************************************************************/
-		if(p.getPatientGenderCode() != null) {
-			patient.setGender(patientsetgenderEnumFactory.fromCode(p.getPatientGenderCode()));
-
-		}
-		/******************** Patient_GeneralPract ********************************************************************************/
-		if(p.getPatientGeneralPract() != null) {
-			org.hl7.fhir.r4.model.Reference PatientGeneralPractref = new org.hl7.fhir.r4.model.Reference();
-			patient.addGeneralPractitioner(PatientGeneralPractref.setReference(p.getPatientGeneralPract()));
-		}
-
-		org.hl7.fhir.r4.model.Identifier patientaddidentifier = patient.addIdentifier();
-
-		/******************** Patient_Id_Assigner ********************************************************************************/
-		if(p.getPatientIdAssigner() != null) {
-			org.hl7.fhir.r4.model.Reference PatientIdAssignerref = new org.hl7.fhir.r4.model.Reference();
-			patientaddidentifier.setAssigner(PatientIdAssignerref.setReference(p.getPatientIdAssigner()));
-		}
-
-		org.hl7.fhir.r4.model.Period patientaddidentifiersetperiod = new org.hl7.fhir.r4.model.Period();
-		patientaddidentifier.setPeriod(patientaddidentifiersetperiod);
-
-		/******************** Patient_Id_Period_End ********************************************************************************/
-		if(p.getPatientIdPeriodEnd() != null) {
-			java.text.SimpleDateFormat PatientIdPeriodEndsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date PatientIdPeriodEnddate = PatientIdPeriodEndsdf.parse(p.getPatientIdPeriodEnd());
-			patientaddidentifiersetperiod.setEnd(PatientIdPeriodEnddate);
-		}
-		/******************** Patient_Id_Period_Start ********************************************************************************/
-		if(p.getPatientIdPeriodStart() != null) {
-			java.text.SimpleDateFormat PatientIdPeriodStartsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date PatientIdPeriodStartdate = PatientIdPeriodStartsdf.parse(p.getPatientIdPeriodStart());
-			patientaddidentifiersetperiod.setStart(PatientIdPeriodStartdate);
-		}
-		/******************** Patient_Id_System ********************************************************************************/
-		if(p.getPatientIdSystem() != null) {
-			patientaddidentifier.setSystem(p.getPatientIdSystem());
-		}
-
-		org.hl7.fhir.r4.model.CodeableConcept patientaddidentifiersettype = new org.hl7.fhir.r4.model.CodeableConcept();
-		patientaddidentifier.setType(patientaddidentifiersettype);
-
-
-		org.hl7.fhir.r4.model.Coding patientaddidentifiersettypeaddcoding = patientaddidentifiersettype.addCoding();
-
-		/******************** Patient_Id_Type_Coding_Code ********************************************************************************/
-		if(p.getPatientIdTypeCodingCode() != null) {
-			patientaddidentifiersettypeaddcoding.setCode(p.getPatientIdTypeCodingCode());
-		}
-		/******************** Patient_Id_Type_Coding_Display ********************************************************************************/
-		if(p.getPatientIdTypeCodingDisplay() != null) {
-			patientaddidentifiersettypeaddcoding.setDisplay(p.getPatientIdTypeCodingDisplay());
-		}
-		/******************** Patient_Id_Type_Coding_System ********************************************************************************/
-		if(p.getPatientIdTypeCodingSystem() != null) {
-			patientaddidentifiersettypeaddcoding.setSystem(p.getPatientIdTypeCodingSystem());
-		}
-		/******************** Patient_Id_Type_Coding_Usrslt ********************************************************************************/
-		if(p.getPatientIdTypeCodingUsrslt() != null) {
-			patientaddidentifiersettypeaddcoding.setUserSelected(Boolean.parseBoolean(p.getPatientIdTypeCodingUsrslt()));
-		}
-		/******************** Patient_Id_Type_Coding_Version ********************************************************************************/
-		if(p.getPatientIdTypeCodingVersion() != null) {
-			patientaddidentifiersettypeaddcoding.setVersion(p.getPatientIdTypeCodingVersion());
-		}
-		/******************** Patient_Id_Type_Text ********************************************************************************/
-		if(p.getPatientIdTypeText() != null) {
-			patientaddidentifiersettype.setText(p.getPatientIdTypeText());
-		}
-
-		org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory patientaddidentifiersetuseEnumFactory = new org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory();
-
-		/******************** Patient_Id_Use_Code ********************************************************************************/
-		if(p.getPatientIdUseCode() != null) {
-			patientaddidentifier.setUse(patientaddidentifiersetuseEnumFactory.fromCode(p.getPatientIdUseCode()));
-
-		}
-		/******************** Patient_Id_Value ********************************************************************************/
-		if(p.getPatientIdValue() != null) {
-			patientaddidentifier.setValue(p.getPatientIdValue());
-		}
-
-		org.hl7.fhir.r4.model.Patient.PatientLinkComponent patientaddlink = patient.addLink();
-
-		/******************** Patient_Link_Other ********************************************************************************/
-		if(p.getPatientLinkOther() != null) {
-			org.hl7.fhir.r4.model.Reference PatientLinkOtherref = new org.hl7.fhir.r4.model.Reference();
-			patientaddlink.setOther(PatientLinkOtherref.setReference(p.getPatientLinkOther()));
-		}
-
-		org.hl7.fhir.r4.model.Patient.LinkTypeEnumFactory patientaddlinksettypeEnumFactory = new org.hl7.fhir.r4.model.Patient.LinkTypeEnumFactory();
-
-		/******************** Patient_Link_Type_Code ********************************************************************************/
-		if(p.getPatientLinkTypeCode() != null) {
-			patientaddlink.setType(patientaddlinksettypeEnumFactory.fromCode(p.getPatientLinkTypeCode()));
-
-		}
-		/******************** Patient_ManagingOrganization ********************************************************************************/
-		if(p.getPatientManagingOrganization() != null) {
-			org.hl7.fhir.r4.model.Reference PatientManagingOrganizationref = new org.hl7.fhir.r4.model.Reference();
-			patient.setManagingOrganization(PatientManagingOrganizationref.setReference(p.getPatientManagingOrganization()));
-		}
-
-		org.hl7.fhir.r4.model.CodeableConcept patientsetmaritalstatus = new org.hl7.fhir.r4.model.CodeableConcept();
-		patient.setMaritalStatus(patientsetmaritalstatus);
-
-
-		org.hl7.fhir.r4.model.Coding patientsetmaritalstatusaddcoding = patientsetmaritalstatus.addCoding();
-
-		/******************** Patient_MaritalStatus_Coding_Code ********************************************************************************/
-		if(p.getPatientMaritalStatusCodingCode() != null) {
-			patientsetmaritalstatusaddcoding.setCode(p.getPatientMaritalStatusCodingCode());
-		}
-		/******************** Patient_MaritalStatus_Coding_Display ********************************************************************************/
-		if(p.getPatientMaritalStatusCodingDisplay() != null) {
-			patientsetmaritalstatusaddcoding.setDisplay(p.getPatientMaritalStatusCodingDisplay());
-		}
-		/******************** Patient_MaritalStatus_Coding_System ********************************************************************************/
-		if(p.getPatientMaritalStatusCodingSystem() != null) {
-			patientsetmaritalstatusaddcoding.setSystem(p.getPatientMaritalStatusCodingSystem());
-		}
-		/******************** Patient_MaritalStatus_Coding_Usrslt ********************************************************************************/
-		if(p.getPatientMaritalStatusCodingUsrslt() != null) {
-			patientsetmaritalstatusaddcoding.setUserSelected(Boolean.parseBoolean(p.getPatientMaritalStatusCodingUsrslt()));
-		}
-		/******************** Patient_MaritalStatus_Coding_Version ********************************************************************************/
-		if(p.getPatientMaritalStatusCodingVersion() != null) {
-			patientsetmaritalstatusaddcoding.setVersion(p.getPatientMaritalStatusCodingVersion());
-		}
-		/******************** Patient_MaritalStatus_Text ********************************************************************************/
-		if(p.getPatientMaritalStatusText() != null) {
-			patientsetmaritalstatus.setText(p.getPatientMaritalStatusText());
-		}
-		/******************** Patient_MultipleBirthBoolean ********************************************************************************/
-		if(p.getPatientMultipleBirthBoolean() != null) {
-			patient.setMultipleBirth(new org.hl7.fhir.r4.model.BooleanType(p.getPatientMultipleBirthBoolean()));
-		}
-		/******************** Patient_MultipleBirthInteger ********************************************************************************/
-		if(p.getPatientMultipleBirthInteger() != null) {
-			patient.setMultipleBirth(new org.hl7.fhir.r4.model.IntegerType(p.getPatientMultipleBirthInteger()));
-		}
-
-		org.hl7.fhir.r4.model.HumanName patientaddname = patient.addName();
-
-		/******************** Patient_Name_Family ********************************************************************************/
-		if(p.getPatientNameFamily() != null) {
-			patientaddname.setFamily(p.getPatientNameFamily());
-		}
-		/******************** Patient_Name_Given ********************************************************************************/
-		if(p.getPatientNameGiven() != null) {
-			patientaddname.addGiven(p.getPatientNameGiven());
-		}
-
-		org.hl7.fhir.r4.model.Period patientaddnamesetperiod = new org.hl7.fhir.r4.model.Period();
-		patientaddname.setPeriod(patientaddnamesetperiod);
-
-		/******************** Patient_Name_Period_End ********************************************************************************/
-		if(p.getPatientNamePeriodEnd() != null) {
-			java.text.SimpleDateFormat PatientNamePeriodEndsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date PatientNamePeriodEnddate = PatientNamePeriodEndsdf.parse(p.getPatientNamePeriodEnd());
-			patientaddnamesetperiod.setEnd(PatientNamePeriodEnddate);
-		}
-		/******************** Patient_Name_Period_Start ********************************************************************************/
-		if(p.getPatientNamePeriodStart() != null) {
-			java.text.SimpleDateFormat PatientNamePeriodStartsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date PatientNamePeriodStartdate = PatientNamePeriodStartsdf.parse(p.getPatientNamePeriodStart());
-			patientaddnamesetperiod.setStart(PatientNamePeriodStartdate);
-		}
-		/******************** Patient_Name_Prefix ********************************************************************************/
-		if(p.getPatientNamePrefix() != null) {
-			patientaddname.addPrefix(p.getPatientNamePrefix());
-		}
-		/******************** Patient_Name_Suffix ********************************************************************************/
-		if(p.getPatientNameSuffix() != null) {
-			patientaddname.addSuffix(p.getPatientNameSuffix());
-		}
-		/******************** Patient_Name_Text ********************************************************************************/
-		if(p.getPatientNameText() != null) {
-			patientaddname.setText(p.getPatientNameText());
-		}
-
-		org.hl7.fhir.r4.model.HumanName.NameUseEnumFactory patientaddnamesetuseEnumFactory = new org.hl7.fhir.r4.model.HumanName.NameUseEnumFactory();
-
-		/******************** Patient_Name_Use_Code ********************************************************************************/
-		if(p.getPatientNameUseCode() != null) {
-			patientaddname.setUse(patientaddnamesetuseEnumFactory.fromCode(p.getPatientNameUseCode()));
-
-		}
-
-		org.hl7.fhir.r4.model.Attachment patientaddphoto = patient.addPhoto();
-
-		/******************** Patient_Photo_ContentType ********************************************************************************/
-		if(p.getPatientPhotoContentType() != null) {
-			patientaddphoto.setContentType(p.getPatientPhotoContentType());
-		}
-		/******************** Patient_Photo_Creation ********************************************************************************/
-		if(p.getPatientPhotoCreation() != null) {
-			java.text.SimpleDateFormat PatientPhotoCreationsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date PatientPhotoCreationdate = PatientPhotoCreationsdf.parse(p.getPatientPhotoCreation());
-			patientaddphoto.setCreation(PatientPhotoCreationdate);
-		}
-		/******************** Patient_Photo_Data ********************************************************************************/
-		if(p.getPatientPhotoData() != null) {
-			patientaddphoto.setDataElement(new org.hl7.fhir.r4.model.Base64BinaryType(p.getPatientPhotoData()));
-		}
-		/******************** Patient_Photo_Hash ********************************************************************************/
-		if(p.getPatientPhotoHash() != null) {
-			patientaddphoto.setHashElement(new org.hl7.fhir.r4.model.Base64BinaryType(p.getPatientPhotoHash()));
-		}
-		/******************** Patient_Photo_Lang ********************************************************************************/
-		if(p.getPatientPhotoLang() != null) {
-			patientaddphoto.setLanguage(p.getPatientPhotoLang());
-		}
-		/******************** Patient_Photo_Size ********************************************************************************/
-		if(p.getPatientPhotoSize() != null) {
-			patientaddphoto.setSize(Integer.parseInt(p.getPatientPhotoSize()));
-		}
-		/******************** Patient_Photo_Title ********************************************************************************/
-		if(p.getPatientPhotoTitle() != null) {
-			patientaddphoto.setTitle(p.getPatientPhotoTitle());
-		}
-		/******************** Patient_Photo_Url ********************************************************************************/
-		if(p.getPatientPhotoUrl() != null) {
-			patientaddphoto.setUrl(p.getPatientPhotoUrl());
-		}
-
-		org.hl7.fhir.r4.model.ContactPoint patientaddtelecom = patient.addTelecom();
-
-
-		org.hl7.fhir.r4.model.Period patientaddtelecomsetperiod = new org.hl7.fhir.r4.model.Period();
-		patientaddtelecom.setPeriod(patientaddtelecomsetperiod);
-
-		/******************** Patient_Telecom_Period_End ********************************************************************************/
-		if(p.getPatientTelecomPeriodEnd() != null) {
-			java.text.SimpleDateFormat PatientTelecomPeriodEndsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date PatientTelecomPeriodEnddate = PatientTelecomPeriodEndsdf.parse(p.getPatientTelecomPeriodEnd());
-			patientaddtelecomsetperiod.setEnd(PatientTelecomPeriodEnddate);
-		}
-		/******************** Patient_Telecom_Period_Start ********************************************************************************/
-		if(p.getPatientTelecomPeriodStart() != null) {
-			java.text.SimpleDateFormat PatientTelecomPeriodStartsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date PatientTelecomPeriodStartdate = PatientTelecomPeriodStartsdf.parse(p.getPatientTelecomPeriodStart());
-			patientaddtelecomsetperiod.setStart(PatientTelecomPeriodStartdate);
-		}
-		/******************** Patient_Telecom_Rank ********************************************************************************/
-		if(p.getPatientTelecomRank() != null) {
-			patientaddtelecom.setRank(Integer.parseInt(p.getPatientTelecomRank()));
-		}
-
-		org.hl7.fhir.r4.model.ContactPoint.ContactPointSystemEnumFactory patientaddtelecomsetsystemEnumFactory = new org.hl7.fhir.r4.model.ContactPoint.ContactPointSystemEnumFactory();
-
-		/******************** Patient_Telecom_System_Code ********************************************************************************/
-		if(p.getPatientTelecomSystemCode() != null) {
-			patientaddtelecom.setSystem(patientaddtelecomsetsystemEnumFactory.fromCode(p.getPatientTelecomSystemCode()));
-
-		}
-
-		org.hl7.fhir.r4.model.ContactPoint.ContactPointUseEnumFactory patientaddtelecomsetuseEnumFactory = new org.hl7.fhir.r4.model.ContactPoint.ContactPointUseEnumFactory();
-
-		/******************** Patient_Telecom_Use_Code ********************************************************************************/
-		if(p.getPatientTelecomUseCode() != null) {
-			patientaddtelecom.setUse(patientaddtelecomsetuseEnumFactory.fromCode(p.getPatientTelecomUseCode()));
-
-		}
-		/******************** Patient_Telecom_Value ********************************************************************************/
-		if(p.getPatientTelecomValue() != null) {
-			patientaddtelecom.setValue(p.getPatientTelecomValue());
-		}
-		
-		/******************** PNT_RACE **************************************************************************************
-		 * PNT_RACE maps to Patient / extension / race / coding / code
-		 ********************************************************************************************************************/
-		Extension race = new Extension().setUrl("http://terminology.hl7.org/ValueSet/v3-Race").setValue(new StringType(p.getPatientRaceValue())); 
-		patient.addExtension(race);
-
-		/******************** PNT_ETHNICITY *********************************************************************************
-		 * PNT_ETHNICITY maps to Patient / extension / ethnicity / coding / code
-		 ********************************************************************************************************************/
-		Extension ethnicity = new Extension().setUrl("http://hl7.org/fhir/v3/Ethnicity").setValue(new StringType(p.getPatientEthnicityValue())); 
-		patient.addExtension(ethnicity);
-		
-		
-		
 		return patient;
 	}
 }

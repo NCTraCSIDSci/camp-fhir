@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Jun 6, 2022, 11:02:25 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="DocumentManifest" optimistic-lock="none" table="DocumentManifest">
+        <id name="id" type="string">
+            <column length="64" name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="docManifestAthr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocManifest_Athr"/>
+        </property>
+        <property name="docManifestCntnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocManifest_Cntnt"/>
+        </property>
+        <property name="docManifestCreated" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocManifest_Created"/>
+        </property>
+        <property name="docManifestDscrptn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocManifest_Dscrptn"/>
+        </property>
+        <property name="docManifestIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocManifest_Id_Assigner"/>
+        </property>
+        <property name="docManifestIdPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocManifest_Id_Prd_End"/>
+        </property>
+        <property name="docManifestIdPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocManifest_Id_Prd_Strt"/>
+        </property>
+        <property name="docManifestIdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocManifest_Id_Sys"/>
+        </property>
+        <property name="docManifestIdTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocManifest_Id_Typ_Cdg_Cd"/>
+        </property>
+        <property name="docManifestIdTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocManifest_Id_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="docManifestIdTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocManifest_Id_Typ_Cdg_Sys"/>
+        </property>
+        <property name="docManifestIdTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocManifest_Id_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="docManifestIdTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocManifest_Id_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="docManifestIdTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocManifest_Id_Typ_Txt"/>
+        </property>
+        <property name="docManifestIdUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocManifest_Id_Use"/>
+        </property>
+        <property name="docManifestIdVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocManifest_Id_Vl"/>
+        </property>
+        <property name="docManifestMasterIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocManifest_MasterId_Assigner"/>
+        </property>
+        <property name="docManifestMasterIdPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocManifest_MasterId_Prd_End"/>
+        </property>
+        <property name="docManifestMasterIdPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocManifest_MasterId_Prd_Strt"/>
+        </property>
+        <property name="docManifestMasterIdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocManifest_MasterId_Sys"/>
+        </property>
+        <property name="docManifestMasterIdTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocManifest_MasterId_Typ_Cdg_Cd"/>
+        </property>
+        <property name="docManifestMasterIdTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocManifest_MasterId_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="docManifestMasterIdTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocManifest_MasterId_Typ_Cdg_Sys"/>
+        </property>
+        <property name="docManifestMasterIdTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocManifest_MasterId_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="docManifestMasterIdTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocManifest_MasterId_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="docManifestMasterIdTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocManifest_MasterId_Typ_Txt"/>
+        </property>
+        <property name="docManifestMasterIdUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocManifest_MasterId_Use"/>
+        </property>
+        <property name="docManifestMasterIdVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocManifest_MasterId_Vl"/>
+        </property>
+        <property name="docManifestRecipient" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocManifest_Recipient"/>
+        </property>
+        <property name="docManifestRltedIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocManifest_Rlted_Id_Assigner"/>
+        </property>
+        <property name="docManifestRltedIdPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocManifest_Rlted_Id_Prd_End"/>
+        </property>
+        <property name="docManifestRltedIdPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocManifest_Rlted_Id_Prd_Strt"/>
+        </property>
+        <property name="docManifestRltedIdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocManifest_Rlted_Id_Sys"/>
+        </property>
+        <property name="docManifestRltedIdTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocManifest_Rlted_Id_Typ_Cdg_Cd"/>
+        </property>
+        <property name="docManifestRltedIdTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocManifest_Rlted_Id_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="docManifestRltedIdTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocManifest_Rlted_Id_Typ_Cdg_Sys"/>
+        </property>
+        <property name="docManifestRltedIdTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocManifest_Rlted_Id_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="docManifestRltedIdTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocManifest_Rlted_Id_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="docManifestRltedIdTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocManifest_Rlted_Id_Typ_Txt"/>
+        </property>
+        <property name="docManifestRltedIdUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocManifest_Rlted_Id_Use"/>
+        </property>
+        <property name="docManifestRltedIdVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocManifest_Rlted_Id_Vl"/>
+        </property>
+        <property name="docManifestRltedRef" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocManifest_Rlted_Ref"/>
+        </property>
+        <property name="docManifestSrc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocManifest_Src"/>
+        </property>
+        <property name="docManifestSts" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocManifest_Sts"/>
+        </property>
+        <property name="docManifestSbjct" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocManifest_Sbjct"/>
+        </property>
+        <property name="docManifestTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocManifest_Typ_Cdg_Cd"/>
+        </property>
+        <property name="docManifestTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocManifest_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="docManifestTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocManifest_Typ_Cdg_Sys"/>
+        </property>
+        <property name="docManifestTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocManifest_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="docManifestTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocManifest_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="docManifestTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocManifest_Typ_Txt"/>
+        </property>
+    </class>
+</hibernate-mapping>

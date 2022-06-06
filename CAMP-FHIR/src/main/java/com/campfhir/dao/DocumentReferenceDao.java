@@ -1,10 +1,11 @@
+//// default package
 package main.java.com.campfhir.dao;
+// Generated on Jun 6, 2022, 11:02:34 AM 
+
 
 import java.io.IOException;
-import java.util.List;
-
 import javax.xml.parsers.ParserConfigurationException;
-
+import main.java.utils.HibernateBaseDB;
 import org.hibernate.ScrollMode;
 import org.hibernate.ScrollableResults;
 import org.hibernate.Session;
@@ -14,39 +15,35 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.xml.sax.SAXException;
 
-import main.java.com.campfhir.model.DocumentReference;
-import main.java.utils.HibernateBaseDB;
-
 /**
-*
-* @author  James Champion
-* @version 1.0
-* @since   2021-02-22 
-*/
-public class DocumentReferenceDao implements DocumentReferenceDaoInterface<DocumentReference, String> 
-{
+ *  object for domain model class DocumentReference.
+ * @see .DocumentReference
+ * @author Paul Kovach
+ */
+
+public class DocumentReferenceDao {
+
 	private Session currentSession;
 	private SessionFactory sessionFactory;
 	
 	private Transaction currentTransaction;
 
 	public DocumentReferenceDao() {}
-
-	public Session openCurrentSession() throws ParserConfigurationException, SAXException, IOException 
+	
+    public Session openCurrentSession() throws ParserConfigurationException, SAXException, IOException 
 	{
-		sessionFactory = HibernateBaseDB.getSessionFactory();
+		sessionFactory =  HibernateBaseDB.getSessionFactory();
 		currentSession = sessionFactory.openSession();
 		return currentSession;
 	}
-
-	public Session openCurrentSessionwithTransaction() throws ParserConfigurationException, SAXException, IOException 
+    
+    public Session openCurrentSessionwithTransaction() throws ParserConfigurationException, SAXException, IOException 
 	{
 		sessionFactory = HibernateBaseDB.getSessionFactory();
 		currentSession = sessionFactory.openSession();
 		currentTransaction = currentSession.beginTransaction();
 		return currentSession;
 	}
-	
 	public void closeCurrentSession() 
 	{
 		currentSession.close();
@@ -57,16 +54,16 @@ public class DocumentReferenceDao implements DocumentReferenceDaoInterface<Docum
 		currentTransaction.commit();
 		currentSession.close();
 	}
-	
-	private static SessionFactory getSessionFactory() 
-	{
+    
+    private static SessionFactory getSessionFactory() 
+	{ 
 		Configuration configuration = new Configuration().configure();
 		StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder()
 				.applySettings(configuration.getProperties());
 		SessionFactory sessionFactory = configuration.buildSessionFactory(builder.build());
 		return sessionFactory;
 	}
-
+	
 	public Session getCurrentSession() 
 	{
 		return currentSession;
@@ -87,33 +84,23 @@ public class DocumentReferenceDao implements DocumentReferenceDaoInterface<Docum
 		this.currentTransaction = currentTransaction;
 	}
 
-	public void persist(DocumentReference entity) 
+	public void persist( main.java.com.campfhir.model.DocumentReference entity) 
 	{
 		getCurrentSession().save(entity);
 	}
 
-	public void update(DocumentReference entity) 
+	public void update( main.java.com.campfhir.model.DocumentReference entity) 
 	{
 		getCurrentSession().update(entity);
 	}
 
-	public DocumentReference findById(String id) 
+	public  main.java.com.campfhir.model.DocumentReference findById(String id) 
 	{
-		DocumentReference documentReference = (DocumentReference) getCurrentSession().get(DocumentReference.class, id);
-		return documentReference; 
+		main.java.com.campfhir.model.DocumentReference resource = (main.java.com.campfhir.model.DocumentReference) getCurrentSession().get(main.java.com.campfhir.model.DocumentReference.class, id);
+		return resource; 
 	}
 	
-	@SuppressWarnings("unchecked")
-	public List<DocumentReference> findByPatientId(String id)
-	{
-//		Query query = getCurrentSession().createQuery("FROM DocumentReference");
-//		
-//		List<DocumentReference> documentReference = (List<DocumentReference>) query.list();
-//		
-		return null;//documentReference;
-	}
-
-	public void delete(DocumentReference entity) 
+	public void delete(main.java.com.campfhir.model.DocumentReference entity) 
 	{
 		getCurrentSession().delete(entity);
 	}
@@ -123,15 +110,22 @@ public class DocumentReferenceDao implements DocumentReferenceDaoInterface<Docum
 	{
 		return getCurrentSession().createQuery("FROM DocumentReference")
 				.setReadOnly(true)
+
 		        .setCacheable(true)
 		    .scroll(ScrollMode.FORWARD_ONLY);
 	}
-
-	public void deleteAll() 
+	
+	public ScrollableResults findAll(int start, int max) 
 	{
-//		List<DocumentReference> entityList = findAll();
-//		for (DocumentReference entity : entityList) {
-//			delete(entity);
-//		}
+		ScrollableResults resources = getCurrentSession().createQuery("FROM DocumentReference")
+				.setFirstResult(start)
+				.setMaxResults(max)
+				.setReadOnly(true)
+		        .setCacheable(true)
+		    .scroll(ScrollMode.FORWARD_ONLY);
+		return resources;
 	}
+
+
 }
+

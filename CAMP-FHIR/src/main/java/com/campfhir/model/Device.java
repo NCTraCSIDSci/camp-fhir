@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Feb 22, 2022, 7:13:58 PM by Hibernate Tools 5.6.1.Final
+// Generated Jun 6, 2022, 11:02:30 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -11,1509 +11,1187 @@ public class Device  implements java.io.Serializable {
 
 
      private String id;
-     private String deviceContactPeriodEnd;
-     private String deviceContactPeriodStart;
-     private String deviceContactRank;
-     private String deviceContactSystemCode;
-     private String deviceContactUseCode;
-     private String deviceContactValue;
-     private String deviceDefinition;
-     private String deviceDeviceNameName;
-     private String deviceDeviceNameTypeCode;
-     private String deviceDistinctId;
-     private String deviceExpirationDate;
-     private String deviceIdAssigner;
-     private String deviceIdPeriodEnd;
-     private String deviceIdPeriodStart;
-     private String deviceIdSystem;
-     private String deviceIdTypeCodingCode;
-     private String deviceIdTypeCodingDisplay;
-     private String deviceIdTypeCodingSystem;
-     private String deviceIdTypeCodingUsrslt;
-     private String deviceIdTypeCodingVersion;
-     private String deviceIdTypeText;
-     private String deviceIdUseCode;
-     private String deviceIdValue;
-     private String deviceLocation;
-     private String deviceLotNumber;
-     private String deviceManufactureDate;
-     private String deviceManufacturer;
-     private String deviceModelNumber;
-     private String deviceNoteAuthorReference;
-     private String deviceNoteAuthorString;
-     private String deviceNoteText;
-     private String deviceNoteTime;
-     private String deviceOwner;
-     private String deviceParent;
-     private String devicePartNumber;
-     private String devicePatient;
-     private String devicePropertyTypeCodingCode;
-     private String devicePropertyTypeCodingDisplay;
-     private String devicePropertyTypeCodingSystem;
-     private String devicePropertyTypeCodingUsrslt;
-     private String devicePropertyTypeCodingVersion;
-     private String devicePropertyTypeText;
-     private String devicePropertyValueCodeCodingCode;
-     private String devicePropertyValueCodeCodingDisplay;
-     private String devicePropertyValueCodeCodingSystem;
-     private String devicePropertyValueCodeCodingUsrslt;
-     private String devicePropertyValueCodeCodingVersion;
-     private String devicePropertyValueCodeText;
-     private String devicePropertyValueQuantityCode;
-     private String devicePropertyValueQuantityCompartrCode;
-     private String devicePropertyValueQuantitySystem;
-     private String devicePropertyValueQuantityUnit;
-     private String devicePropertyValueQuantityValue;
-     private String deviceSafetyCodingCode;
-     private String deviceSafetyCodingDisplay;
-     private String deviceSafetyCodingSystem;
-     private String deviceSafetyCodingUsrslt;
-     private String deviceSafetyCodingVersion;
-     private String deviceSafetyText;
-     private String deviceSerialNumber;
-     private String deviceSpecializationSystemTypeCodingCode;
-     private String deviceSpecializationSystemTypeCodingDisplay;
-     private String deviceSpecializationSystemTypeCodingSystem;
-     private String deviceSpecializationSystemTypeCodingUsrslt;
-     private String deviceSpecializationSystemTypeCodingVersion;
-     private String deviceSpecializationSystemTypeText;
-     private String deviceSpecializationVersion;
-     private String deviceStatusCode;
-     private String deviceStatusReasonCodingCode;
-     private String deviceStatusReasonCodingDisplay;
-     private String deviceStatusReasonCodingSystem;
-     private String deviceStatusReasonCodingUsrslt;
-     private String deviceStatusReasonCodingVersion;
-     private String deviceStatusReasonText;
-     private String deviceTypeCodingCode;
-     private String deviceTypeCodingDisplay;
-     private String deviceTypeCodingSystem;
-     private String deviceTypeCodingUsrslt;
-     private String deviceTypeCodingVersion;
-     private String deviceTypeText;
-     private String deviceUdiCarrierCarrierAidc;
-     private String deviceUdiCarrierCarrierHrf;
-     private String deviceUdiCarrierDeviceId;
-     private String deviceUdiCarrierEntryTypeCode;
-     private String deviceUdiCarrierIssuer;
-     private String deviceUdiCarrierJurisdiction;
-     private String deviceUrl;
-     private String deviceVersionComponentAssigner;
-     private String deviceVersionComponentPeriodEnd;
-     private String deviceVersionComponentPeriodStart;
-     private String deviceVersionComponentSystem;
-     private String deviceVersionComponentTypeCodingCode;
-     private String deviceVersionComponentTypeCodingDisplay;
-     private String deviceVersionComponentTypeCodingSystem;
-     private String deviceVersionComponentTypeCodingUsrslt;
-     private String deviceVersionComponentTypeCodingVersion;
-     private String deviceVersionComponentTypeText;
-     private String deviceVersionComponentUseCode;
-     private String deviceVersionComponentValue;
-     private String deviceVersionTypeCodingCode;
-     private String deviceVersionTypeCodingDisplay;
-     private String deviceVersionTypeCodingSystem;
-     private String deviceVersionTypeCodingUsrslt;
-     private String deviceVersionTypeCodingVersion;
-     private String deviceVersionTypeText;
-     private String deviceVersionValue;
+     private String dvcCntctPrdEnd;
+     private String dvcCntctPrdStrt;
+     private String dvcCntctRnk;
+     private String dvcCntctSys;
+     private String dvcCntctUse;
+     private String dvcCntctVl;
+     private String dvcDfn;
+     private String dvcDvcNmNm;
+     private String dvcDvcNmTyp;
+     private String dvcDistinctId;
+     private String dvcExpirationDt;
+     private String dvcIdAssigner;
+     private String dvcIdPrdEnd;
+     private String dvcIdPrdStrt;
+     private String dvcIdSys;
+     private String dvcIdTypCdgCd;
+     private String dvcIdTypCdgDsply;
+     private String dvcIdTypCdgSys;
+     private String dvcIdTypCdgUsrSltd;
+     private String dvcIdTypCdgVrsn;
+     private String dvcIdTypTxt;
+     private String dvcIdUse;
+     private String dvcIdVl;
+     private String dvcLctn;
+     private String dvcLotNmbr;
+     private String dvcManufactureDt;
+     private String dvcManufacturer;
+     private String dvcModelNmbr;
+     private String dvcNtAthrRfrnc;
+     private String dvcNtAthrStrgTyp;
+     private String dvcNtTxt;
+     private String dvcNtTime;
+     private String dvcOwner;
+     private String dvcParent;
+     private String dvcPartNmbr;
+     private String dvcPnt;
+     private String dvcPrptyTypCdgCd;
+     private String dvcPrptyTypCdgDsply;
+     private String dvcPrptyTypCdgSys;
+     private String dvcPrptyTypCdgUsrSltd;
+     private String dvcPrptyTypCdgVrsn;
+     private String dvcPrptyTypTxt;
+     private String dvcPrptyVlCdCdgCd;
+     private String dvcPrptyVlCdCdgDsply;
+     private String dvcPrptyVlCdCdgSys;
+     private String dvcPrptyVlCdCdgUsrSltd;
+     private String dvcPrptyVlCdCdgVrsn;
+     private String dvcPrptyVlCdTxt;
+     private String dvcPrptyVlQntyCd;
+     private String dvcPrptyVlQntyCmprtr;
+     private String dvcPrptyVlQntySys;
+     private String dvcPrptyVlQntyUnt;
+     private String dvcPrptyVlQntyVl;
+     private String dvcSafetyCdgCd;
+     private String dvcSafetyCdgDsply;
+     private String dvcSafetyCdgSys;
+     private String dvcSafetyCdgUsrSltd;
+     private String dvcSafetyCdgVrsn;
+     private String dvcSafetyTxt;
+     private String dvcSerialNmbr;
+     private String dvcSpclizationSysTypCdgCd;
+     private String dvcSpclizationSysTypCdgDsply;
+     private String dvcSpclizationSysTypCdgSys;
+     private String dvcSpclizationSysTypCdgUsrSltd;
+     private String dvcSpclizationSysTypCdgVrsn;
+     private String dvcSpclizationSysTypTxt;
+     private String dvcSpclizationVrsn;
+     private String dvcSts;
+     private String dvcStsRsnCdgCd;
+     private String dvcStsRsnCdgDsply;
+     private String dvcStsRsnCdgSys;
+     private String dvcStsRsnCdgUsrSltd;
+     private String dvcStsRsnCdgVrsn;
+     private String dvcStsRsnTxt;
+     private String dvcTypCdgCd;
+     private String dvcTypCdgDsply;
+     private String dvcTypCdgSys;
+     private String dvcTypCdgUsrSltd;
+     private String dvcTypCdgVrsn;
+     private String dvcTypTxt;
+     private String dvcUdiCarrierCarrierAidc;
+     private String dvcUdiCarrierCarrierHrf;
+     private String dvcUdiCarrierDvcId;
+     private String dvcUdiCarrierEntryTyp;
+     private String dvcUdiCarrierIssuer;
+     private String dvcUdiCarrierJrsdctn;
+     private String dvcUrl;
+     private String dvcVrsnCmpntAssigner;
+     private String dvcVrsnCmpntPrdEnd;
+     private String dvcVrsnCmpntPrdStrt;
+     private String dvcVrsnCmpntSys;
+     private String dvcVrsnCmpntTypCdgCd;
+     private String dvcVrsnCmpntTypCdgDsply;
+     private String dvcVrsnCmpntTypCdgSys;
+     private String dvcVrsnCmpntTypCdgUsrSltd;
+     private String dvcVrsnCmpntTypCdgVrsn;
+     private String dvcVrsnCmpntTypTxt;
+     private String dvcVrsnCmpntUse;
+     private String dvcVrsnCmpntVl;
+     private String dvcVrsnTypCdgCd;
+     private String dvcVrsnTypCdgDsply;
+     private String dvcVrsnTypCdgSys;
+     private String dvcVrsnTypCdgUsrSltd;
+     private String dvcVrsnTypCdgVrsn;
+     private String dvcVrsnTypTxt;
+     private String dvcVrsnVl;
 
     public Device() {
     }
 
-    public Device(String deviceContactPeriodEnd, String deviceContactPeriodStart, String deviceContactRank, String deviceContactSystemCode, String deviceContactUseCode, String deviceContactValue, String deviceDefinition, String deviceDeviceNameName, String deviceDeviceNameTypeCode, String deviceDistinctId, String deviceExpirationDate, String deviceIdAssigner, String deviceIdPeriodEnd, String deviceIdPeriodStart, String deviceIdSystem, String deviceIdTypeCodingCode, String deviceIdTypeCodingDisplay, String deviceIdTypeCodingSystem, String deviceIdTypeCodingUsrslt, String deviceIdTypeCodingVersion, String deviceIdTypeText, String deviceIdUseCode, String deviceIdValue, String deviceLocation, String deviceLotNumber, String deviceManufactureDate, String deviceManufacturer, String deviceModelNumber, String deviceNoteAuthorReference, String deviceNoteAuthorString, String deviceNoteText, String deviceNoteTime, String deviceOwner, String deviceParent, String devicePartNumber, String devicePatient, String devicePropertyTypeCodingCode, String devicePropertyTypeCodingDisplay, String devicePropertyTypeCodingSystem, String devicePropertyTypeCodingUsrslt, String devicePropertyTypeCodingVersion, String devicePropertyTypeText, String devicePropertyValueCodeCodingCode, String devicePropertyValueCodeCodingDisplay, String devicePropertyValueCodeCodingSystem, String devicePropertyValueCodeCodingUsrslt, String devicePropertyValueCodeCodingVersion, String devicePropertyValueCodeText, String devicePropertyValueQuantityCode, String devicePropertyValueQuantityCompartrCode, String devicePropertyValueQuantitySystem, String devicePropertyValueQuantityUnit, String devicePropertyValueQuantityValue, String deviceSafetyCodingCode, String deviceSafetyCodingDisplay, String deviceSafetyCodingSystem, String deviceSafetyCodingUsrslt, String deviceSafetyCodingVersion, String deviceSafetyText, String deviceSerialNumber, String deviceSpecializationSystemTypeCodingCode, String deviceSpecializationSystemTypeCodingDisplay, String deviceSpecializationSystemTypeCodingSystem, String deviceSpecializationSystemTypeCodingUsrslt, String deviceSpecializationSystemTypeCodingVersion, String deviceSpecializationSystemTypeText, String deviceSpecializationVersion, String deviceStatusCode, String deviceStatusReasonCodingCode, String deviceStatusReasonCodingDisplay, String deviceStatusReasonCodingSystem, String deviceStatusReasonCodingUsrslt, String deviceStatusReasonCodingVersion, String deviceStatusReasonText, String deviceTypeCodingCode, String deviceTypeCodingDisplay, String deviceTypeCodingSystem, String deviceTypeCodingUsrslt, String deviceTypeCodingVersion, String deviceTypeText, String deviceUdiCarrierCarrierAidc, String deviceUdiCarrierCarrierHrf, String deviceUdiCarrierDeviceId, String deviceUdiCarrierEntryTypeCode, String deviceUdiCarrierIssuer, String deviceUdiCarrierJurisdiction, String deviceUrl, String deviceVersionComponentAssigner, String deviceVersionComponentPeriodEnd, String deviceVersionComponentPeriodStart, String deviceVersionComponentSystem, String deviceVersionComponentTypeCodingCode, String deviceVersionComponentTypeCodingDisplay, String deviceVersionComponentTypeCodingSystem, String deviceVersionComponentTypeCodingUsrslt, String deviceVersionComponentTypeCodingVersion, String deviceVersionComponentTypeText, String deviceVersionComponentUseCode, String deviceVersionComponentValue, String deviceVersionTypeCodingCode, String deviceVersionTypeCodingDisplay, String deviceVersionTypeCodingSystem, String deviceVersionTypeCodingUsrslt, String deviceVersionTypeCodingVersion, String deviceVersionTypeText, String deviceVersionValue) {
-       this.deviceContactPeriodEnd = deviceContactPeriodEnd;
-       this.deviceContactPeriodStart = deviceContactPeriodStart;
-       this.deviceContactRank = deviceContactRank;
-       this.deviceContactSystemCode = deviceContactSystemCode;
-       this.deviceContactUseCode = deviceContactUseCode;
-       this.deviceContactValue = deviceContactValue;
-       this.deviceDefinition = deviceDefinition;
-       this.deviceDeviceNameName = deviceDeviceNameName;
-       this.deviceDeviceNameTypeCode = deviceDeviceNameTypeCode;
-       this.deviceDistinctId = deviceDistinctId;
-       this.deviceExpirationDate = deviceExpirationDate;
-       this.deviceIdAssigner = deviceIdAssigner;
-       this.deviceIdPeriodEnd = deviceIdPeriodEnd;
-       this.deviceIdPeriodStart = deviceIdPeriodStart;
-       this.deviceIdSystem = deviceIdSystem;
-       this.deviceIdTypeCodingCode = deviceIdTypeCodingCode;
-       this.deviceIdTypeCodingDisplay = deviceIdTypeCodingDisplay;
-       this.deviceIdTypeCodingSystem = deviceIdTypeCodingSystem;
-       this.deviceIdTypeCodingUsrslt = deviceIdTypeCodingUsrslt;
-       this.deviceIdTypeCodingVersion = deviceIdTypeCodingVersion;
-       this.deviceIdTypeText = deviceIdTypeText;
-       this.deviceIdUseCode = deviceIdUseCode;
-       this.deviceIdValue = deviceIdValue;
-       this.deviceLocation = deviceLocation;
-       this.deviceLotNumber = deviceLotNumber;
-       this.deviceManufactureDate = deviceManufactureDate;
-       this.deviceManufacturer = deviceManufacturer;
-       this.deviceModelNumber = deviceModelNumber;
-       this.deviceNoteAuthorReference = deviceNoteAuthorReference;
-       this.deviceNoteAuthorString = deviceNoteAuthorString;
-       this.deviceNoteText = deviceNoteText;
-       this.deviceNoteTime = deviceNoteTime;
-       this.deviceOwner = deviceOwner;
-       this.deviceParent = deviceParent;
-       this.devicePartNumber = devicePartNumber;
-       this.devicePatient = devicePatient;
-       this.devicePropertyTypeCodingCode = devicePropertyTypeCodingCode;
-       this.devicePropertyTypeCodingDisplay = devicePropertyTypeCodingDisplay;
-       this.devicePropertyTypeCodingSystem = devicePropertyTypeCodingSystem;
-       this.devicePropertyTypeCodingUsrslt = devicePropertyTypeCodingUsrslt;
-       this.devicePropertyTypeCodingVersion = devicePropertyTypeCodingVersion;
-       this.devicePropertyTypeText = devicePropertyTypeText;
-       this.devicePropertyValueCodeCodingCode = devicePropertyValueCodeCodingCode;
-       this.devicePropertyValueCodeCodingDisplay = devicePropertyValueCodeCodingDisplay;
-       this.devicePropertyValueCodeCodingSystem = devicePropertyValueCodeCodingSystem;
-       this.devicePropertyValueCodeCodingUsrslt = devicePropertyValueCodeCodingUsrslt;
-       this.devicePropertyValueCodeCodingVersion = devicePropertyValueCodeCodingVersion;
-       this.devicePropertyValueCodeText = devicePropertyValueCodeText;
-       this.devicePropertyValueQuantityCode = devicePropertyValueQuantityCode;
-       this.devicePropertyValueQuantityCompartrCode = devicePropertyValueQuantityCompartrCode;
-       this.devicePropertyValueQuantitySystem = devicePropertyValueQuantitySystem;
-       this.devicePropertyValueQuantityUnit = devicePropertyValueQuantityUnit;
-       this.devicePropertyValueQuantityValue = devicePropertyValueQuantityValue;
-       this.deviceSafetyCodingCode = deviceSafetyCodingCode;
-       this.deviceSafetyCodingDisplay = deviceSafetyCodingDisplay;
-       this.deviceSafetyCodingSystem = deviceSafetyCodingSystem;
-       this.deviceSafetyCodingUsrslt = deviceSafetyCodingUsrslt;
-       this.deviceSafetyCodingVersion = deviceSafetyCodingVersion;
-       this.deviceSafetyText = deviceSafetyText;
-       this.deviceSerialNumber = deviceSerialNumber;
-       this.deviceSpecializationSystemTypeCodingCode = deviceSpecializationSystemTypeCodingCode;
-       this.deviceSpecializationSystemTypeCodingDisplay = deviceSpecializationSystemTypeCodingDisplay;
-       this.deviceSpecializationSystemTypeCodingSystem = deviceSpecializationSystemTypeCodingSystem;
-       this.deviceSpecializationSystemTypeCodingUsrslt = deviceSpecializationSystemTypeCodingUsrslt;
-       this.deviceSpecializationSystemTypeCodingVersion = deviceSpecializationSystemTypeCodingVersion;
-       this.deviceSpecializationSystemTypeText = deviceSpecializationSystemTypeText;
-       this.deviceSpecializationVersion = deviceSpecializationVersion;
-       this.deviceStatusCode = deviceStatusCode;
-       this.deviceStatusReasonCodingCode = deviceStatusReasonCodingCode;
-       this.deviceStatusReasonCodingDisplay = deviceStatusReasonCodingDisplay;
-       this.deviceStatusReasonCodingSystem = deviceStatusReasonCodingSystem;
-       this.deviceStatusReasonCodingUsrslt = deviceStatusReasonCodingUsrslt;
-       this.deviceStatusReasonCodingVersion = deviceStatusReasonCodingVersion;
-       this.deviceStatusReasonText = deviceStatusReasonText;
-       this.deviceTypeCodingCode = deviceTypeCodingCode;
-       this.deviceTypeCodingDisplay = deviceTypeCodingDisplay;
-       this.deviceTypeCodingSystem = deviceTypeCodingSystem;
-       this.deviceTypeCodingUsrslt = deviceTypeCodingUsrslt;
-       this.deviceTypeCodingVersion = deviceTypeCodingVersion;
-       this.deviceTypeText = deviceTypeText;
-       this.deviceUdiCarrierCarrierAidc = deviceUdiCarrierCarrierAidc;
-       this.deviceUdiCarrierCarrierHrf = deviceUdiCarrierCarrierHrf;
-       this.deviceUdiCarrierDeviceId = deviceUdiCarrierDeviceId;
-       this.deviceUdiCarrierEntryTypeCode = deviceUdiCarrierEntryTypeCode;
-       this.deviceUdiCarrierIssuer = deviceUdiCarrierIssuer;
-       this.deviceUdiCarrierJurisdiction = deviceUdiCarrierJurisdiction;
-       this.deviceUrl = deviceUrl;
-       this.deviceVersionComponentAssigner = deviceVersionComponentAssigner;
-       this.deviceVersionComponentPeriodEnd = deviceVersionComponentPeriodEnd;
-       this.deviceVersionComponentPeriodStart = deviceVersionComponentPeriodStart;
-       this.deviceVersionComponentSystem = deviceVersionComponentSystem;
-       this.deviceVersionComponentTypeCodingCode = deviceVersionComponentTypeCodingCode;
-       this.deviceVersionComponentTypeCodingDisplay = deviceVersionComponentTypeCodingDisplay;
-       this.deviceVersionComponentTypeCodingSystem = deviceVersionComponentTypeCodingSystem;
-       this.deviceVersionComponentTypeCodingUsrslt = deviceVersionComponentTypeCodingUsrslt;
-       this.deviceVersionComponentTypeCodingVersion = deviceVersionComponentTypeCodingVersion;
-       this.deviceVersionComponentTypeText = deviceVersionComponentTypeText;
-       this.deviceVersionComponentUseCode = deviceVersionComponentUseCode;
-       this.deviceVersionComponentValue = deviceVersionComponentValue;
-       this.deviceVersionTypeCodingCode = deviceVersionTypeCodingCode;
-       this.deviceVersionTypeCodingDisplay = deviceVersionTypeCodingDisplay;
-       this.deviceVersionTypeCodingSystem = deviceVersionTypeCodingSystem;
-       this.deviceVersionTypeCodingUsrslt = deviceVersionTypeCodingUsrslt;
-       this.deviceVersionTypeCodingVersion = deviceVersionTypeCodingVersion;
-       this.deviceVersionTypeText = deviceVersionTypeText;
-       this.deviceVersionValue = deviceVersionValue;
-    }
    
-    public 
-    String 
-    getId()
-    {
+    public String getId() {
         return this.id;
     }
     
-    public void setId
-        (String id) 
-        {
-      this.id = id;
-}
-    public 
-    String 
-    getDeviceContactPeriodEnd()
-    {
-        return this.deviceContactPeriodEnd;
-    }
-    
-    public void setDeviceContactPeriodEnd
-        (String deviceContactPeriodEnd) 
-        {
-      this.deviceContactPeriodEnd = deviceContactPeriodEnd;
-}
-    public 
-    String 
-    getDeviceContactPeriodStart()
-    {
-        return this.deviceContactPeriodStart;
-    }
-    
-    public void setDeviceContactPeriodStart
-        (String deviceContactPeriodStart) 
-        {
-      this.deviceContactPeriodStart = deviceContactPeriodStart;
-}
-    public 
-    String 
-    getDeviceContactRank()
-    {
-        return this.deviceContactRank;
-    }
-    
-    public void setDeviceContactRank
-        (String deviceContactRank) 
-        {
-      this.deviceContactRank = deviceContactRank;
-}
-    public 
-    String 
-    getDeviceContactSystemCode()
-    {
-        return this.deviceContactSystemCode;
-    }
-    
-    public void setDeviceContactSystemCode
-        (String deviceContactSystemCode) 
-        {
-      this.deviceContactSystemCode = deviceContactSystemCode;
-}
-    public 
-    String 
-    getDeviceContactUseCode()
-    {
-        return this.deviceContactUseCode;
-    }
-    
-    public void setDeviceContactUseCode
-        (String deviceContactUseCode) 
-        {
-      this.deviceContactUseCode = deviceContactUseCode;
-}
-    public 
-    String 
-    getDeviceContactValue()
-    {
-        return this.deviceContactValue;
-    }
-    
-    public void setDeviceContactValue
-        (String deviceContactValue) 
-        {
-      this.deviceContactValue = deviceContactValue;
-}
-    public 
-    String 
-    getDeviceDefinition()
-    {
-        return this.deviceDefinition;
-    }
-    
-    public void setDeviceDefinition
-        (String deviceDefinition) 
-        {
-      this.deviceDefinition = deviceDefinition;
-}
-    public 
-    String 
-    getDeviceDeviceNameName()
-    {
-        return this.deviceDeviceNameName;
-    }
-    
-    public void setDeviceDeviceNameName
-        (String deviceDeviceNameName) 
-        {
-      this.deviceDeviceNameName = deviceDeviceNameName;
-}
-    public 
-    String 
-    getDeviceDeviceNameTypeCode()
-    {
-        return this.deviceDeviceNameTypeCode;
-    }
-    
-    public void setDeviceDeviceNameTypeCode
-        (String deviceDeviceNameTypeCode) 
-        {
-      this.deviceDeviceNameTypeCode = deviceDeviceNameTypeCode;
-}
-    public 
-    String 
-    getDeviceDistinctId()
-    {
-        return this.deviceDistinctId;
-    }
-    
-    public void setDeviceDistinctId
-        (String deviceDistinctId) 
-        {
-      this.deviceDistinctId = deviceDistinctId;
-}
-    public 
-    String 
-    getDeviceExpirationDate()
-    {
-        return this.deviceExpirationDate;
-    }
-    
-    public void setDeviceExpirationDate
-        (String deviceExpirationDate) 
-        {
-      this.deviceExpirationDate = deviceExpirationDate;
-}
-    public 
-    String 
-    getDeviceIdAssigner()
-    {
-        return this.deviceIdAssigner;
-    }
-    
-    public void setDeviceIdAssigner
-        (String deviceIdAssigner) 
-        {
-      this.deviceIdAssigner = deviceIdAssigner;
-}
-    public 
-    String 
-    getDeviceIdPeriodEnd()
-    {
-        return this.deviceIdPeriodEnd;
-    }
-    
-    public void setDeviceIdPeriodEnd
-        (String deviceIdPeriodEnd) 
-        {
-      this.deviceIdPeriodEnd = deviceIdPeriodEnd;
-}
-    public 
-    String 
-    getDeviceIdPeriodStart()
-    {
-        return this.deviceIdPeriodStart;
-    }
-    
-    public void setDeviceIdPeriodStart
-        (String deviceIdPeriodStart) 
-        {
-      this.deviceIdPeriodStart = deviceIdPeriodStart;
-}
-    public 
-    String 
-    getDeviceIdSystem()
-    {
-        return this.deviceIdSystem;
-    }
-    
-    public void setDeviceIdSystem
-        (String deviceIdSystem) 
-        {
-      this.deviceIdSystem = deviceIdSystem;
-}
-    public 
-    String 
-    getDeviceIdTypeCodingCode()
-    {
-        return this.deviceIdTypeCodingCode;
-    }
-    
-    public void setDeviceIdTypeCodingCode
-        (String deviceIdTypeCodingCode) 
-        {
-      this.deviceIdTypeCodingCode = deviceIdTypeCodingCode;
-}
-    public 
-    String 
-    getDeviceIdTypeCodingDisplay()
-    {
-        return this.deviceIdTypeCodingDisplay;
-    }
-    
-    public void setDeviceIdTypeCodingDisplay
-        (String deviceIdTypeCodingDisplay) 
-        {
-      this.deviceIdTypeCodingDisplay = deviceIdTypeCodingDisplay;
-}
-    public 
-    String 
-    getDeviceIdTypeCodingSystem()
-    {
-        return this.deviceIdTypeCodingSystem;
-    }
-    
-    public void setDeviceIdTypeCodingSystem
-        (String deviceIdTypeCodingSystem) 
-        {
-      this.deviceIdTypeCodingSystem = deviceIdTypeCodingSystem;
-}
-    public 
-    String 
-    getDeviceIdTypeCodingUsrslt()
-    {
-        return this.deviceIdTypeCodingUsrslt;
-    }
-    
-    public void setDeviceIdTypeCodingUsrslt
-        (String deviceIdTypeCodingUsrslt) 
-        {
-      this.deviceIdTypeCodingUsrslt = deviceIdTypeCodingUsrslt;
-}
-    public 
-    String 
-    getDeviceIdTypeCodingVersion()
-    {
-        return this.deviceIdTypeCodingVersion;
-    }
-    
-    public void setDeviceIdTypeCodingVersion
-        (String deviceIdTypeCodingVersion) 
-        {
-      this.deviceIdTypeCodingVersion = deviceIdTypeCodingVersion;
-}
-    public 
-    String 
-    getDeviceIdTypeText()
-    {
-        return this.deviceIdTypeText;
-    }
-    
-    public void setDeviceIdTypeText
-        (String deviceIdTypeText) 
-        {
-      this.deviceIdTypeText = deviceIdTypeText;
-}
-    public 
-    String 
-    getDeviceIdUseCode()
-    {
-        return this.deviceIdUseCode;
-    }
-    
-    public void setDeviceIdUseCode
-        (String deviceIdUseCode) 
-        {
-      this.deviceIdUseCode = deviceIdUseCode;
-}
-    public 
-    String 
-    getDeviceIdValue()
-    {
-        return this.deviceIdValue;
-    }
-    
-    public void setDeviceIdValue
-        (String deviceIdValue) 
-        {
-      this.deviceIdValue = deviceIdValue;
-}
-    public 
-    String 
-    getDeviceLocation()
-    {
-        return this.deviceLocation;
-    }
-    
-    public void setDeviceLocation
-        (String deviceLocation) 
-        {
-      this.deviceLocation = deviceLocation;
-}
-    public 
-    String 
-    getDeviceLotNumber()
-    {
-        return this.deviceLotNumber;
-    }
-    
-    public void setDeviceLotNumber
-        (String deviceLotNumber) 
-        {
-      this.deviceLotNumber = deviceLotNumber;
-}
-    public 
-    String 
-    getDeviceManufactureDate()
-    {
-        return this.deviceManufactureDate;
-    }
-    
-    public void setDeviceManufactureDate
-        (String deviceManufactureDate) 
-        {
-      this.deviceManufactureDate = deviceManufactureDate;
-}
-    public 
-    String 
-    getDeviceManufacturer()
-    {
-        return this.deviceManufacturer;
-    }
-    
-    public void setDeviceManufacturer
-        (String deviceManufacturer) 
-        {
-      this.deviceManufacturer = deviceManufacturer;
-}
-    public 
-    String 
-    getDeviceModelNumber()
-    {
-        return this.deviceModelNumber;
-    }
-    
-    public void setDeviceModelNumber
-        (String deviceModelNumber) 
-        {
-      this.deviceModelNumber = deviceModelNumber;
-}
-    public 
-    String 
-    getDeviceNoteAuthorReference()
-    {
-        return this.deviceNoteAuthorReference;
-    }
-    
-    public void setDeviceNoteAuthorReference
-        (String deviceNoteAuthorReference) 
-        {
-      this.deviceNoteAuthorReference = deviceNoteAuthorReference;
-}
-    public 
-    String 
-    getDeviceNoteAuthorString()
-    {
-        return this.deviceNoteAuthorString;
-    }
-    
-    public void setDeviceNoteAuthorString
-        (String deviceNoteAuthorString) 
-        {
-      this.deviceNoteAuthorString = deviceNoteAuthorString;
-}
-    public 
-    String 
-    getDeviceNoteText()
-    {
-        return this.deviceNoteText;
-    }
-    
-    public void setDeviceNoteText
-        (String deviceNoteText) 
-        {
-      this.deviceNoteText = deviceNoteText;
-}
-    public 
-    String 
-    getDeviceNoteTime()
-    {
-        return this.deviceNoteTime;
-    }
-    
-    public void setDeviceNoteTime
-        (String deviceNoteTime) 
-        {
-      this.deviceNoteTime = deviceNoteTime;
-}
-    public 
-    String 
-    getDeviceOwner()
-    {
-        return this.deviceOwner;
-    }
-    
-    public void setDeviceOwner
-        (String deviceOwner) 
-        {
-      this.deviceOwner = deviceOwner;
-}
-    public 
-    String 
-    getDeviceParent()
-    {
-        return this.deviceParent;
-    }
-    
-    public void setDeviceParent
-        (String deviceParent) 
-        {
-      this.deviceParent = deviceParent;
-}
-    public 
-    String 
-    getDevicePartNumber()
-    {
-        return this.devicePartNumber;
-    }
-    
-    public void setDevicePartNumber
-        (String devicePartNumber) 
-        {
-      this.devicePartNumber = devicePartNumber;
-}
-    public 
-    String 
-    getDevicePatient()
-    {
-        return this.devicePatient;
-    }
-    
-    public void setDevicePatient
-        (String devicePatient) 
-        {
-      this.devicePatient = devicePatient;
-}
-    public 
-    String 
-    getDevicePropertyTypeCodingCode()
-    {
-        return this.devicePropertyTypeCodingCode;
-    }
-    
-    public void setDevicePropertyTypeCodingCode
-        (String devicePropertyTypeCodingCode) 
-        {
-      this.devicePropertyTypeCodingCode = devicePropertyTypeCodingCode;
-}
-    public 
-    String 
-    getDevicePropertyTypeCodingDisplay()
-    {
-        return this.devicePropertyTypeCodingDisplay;
-    }
-    
-    public void setDevicePropertyTypeCodingDisplay
-        (String devicePropertyTypeCodingDisplay) 
-        {
-      this.devicePropertyTypeCodingDisplay = devicePropertyTypeCodingDisplay;
-}
-    public 
-    String 
-    getDevicePropertyTypeCodingSystem()
-    {
-        return this.devicePropertyTypeCodingSystem;
-    }
-    
-    public void setDevicePropertyTypeCodingSystem
-        (String devicePropertyTypeCodingSystem) 
-        {
-      this.devicePropertyTypeCodingSystem = devicePropertyTypeCodingSystem;
-}
-    public 
-    String 
-    getDevicePropertyTypeCodingUsrslt()
-    {
-        return this.devicePropertyTypeCodingUsrslt;
-    }
-    
-    public void setDevicePropertyTypeCodingUsrslt
-        (String devicePropertyTypeCodingUsrslt) 
-        {
-      this.devicePropertyTypeCodingUsrslt = devicePropertyTypeCodingUsrslt;
-}
-    public 
-    String 
-    getDevicePropertyTypeCodingVersion()
-    {
-        return this.devicePropertyTypeCodingVersion;
-    }
-    
-    public void setDevicePropertyTypeCodingVersion
-        (String devicePropertyTypeCodingVersion) 
-        {
-      this.devicePropertyTypeCodingVersion = devicePropertyTypeCodingVersion;
-}
-    public 
-    String 
-    getDevicePropertyTypeText()
-    {
-        return this.devicePropertyTypeText;
-    }
-    
-    public void setDevicePropertyTypeText
-        (String devicePropertyTypeText) 
-        {
-      this.devicePropertyTypeText = devicePropertyTypeText;
-}
-    public 
-    String 
-    getDevicePropertyValueCodeCodingCode()
-    {
-        return this.devicePropertyValueCodeCodingCode;
-    }
-    
-    public void setDevicePropertyValueCodeCodingCode
-        (String devicePropertyValueCodeCodingCode) 
-        {
-      this.devicePropertyValueCodeCodingCode = devicePropertyValueCodeCodingCode;
-}
-    public 
-    String 
-    getDevicePropertyValueCodeCodingDisplay()
-    {
-        return this.devicePropertyValueCodeCodingDisplay;
-    }
-    
-    public void setDevicePropertyValueCodeCodingDisplay
-        (String devicePropertyValueCodeCodingDisplay) 
-        {
-      this.devicePropertyValueCodeCodingDisplay = devicePropertyValueCodeCodingDisplay;
-}
-    public 
-    String 
-    getDevicePropertyValueCodeCodingSystem()
-    {
-        return this.devicePropertyValueCodeCodingSystem;
-    }
-    
-    public void setDevicePropertyValueCodeCodingSystem
-        (String devicePropertyValueCodeCodingSystem) 
-        {
-      this.devicePropertyValueCodeCodingSystem = devicePropertyValueCodeCodingSystem;
-}
-    public 
-    String 
-    getDevicePropertyValueCodeCodingUsrslt()
-    {
-        return this.devicePropertyValueCodeCodingUsrslt;
-    }
-    
-    public void setDevicePropertyValueCodeCodingUsrslt
-        (String devicePropertyValueCodeCodingUsrslt) 
-        {
-      this.devicePropertyValueCodeCodingUsrslt = devicePropertyValueCodeCodingUsrslt;
-}
-    public 
-    String 
-    getDevicePropertyValueCodeCodingVersion()
-    {
-        return this.devicePropertyValueCodeCodingVersion;
-    }
-    
-    public void setDevicePropertyValueCodeCodingVersion
-        (String devicePropertyValueCodeCodingVersion) 
-        {
-      this.devicePropertyValueCodeCodingVersion = devicePropertyValueCodeCodingVersion;
-}
-    public 
-    String 
-    getDevicePropertyValueCodeText()
-    {
-        return this.devicePropertyValueCodeText;
-    }
-    
-    public void setDevicePropertyValueCodeText
-        (String devicePropertyValueCodeText) 
-        {
-      this.devicePropertyValueCodeText = devicePropertyValueCodeText;
-}
-    public 
-    String 
-    getDevicePropertyValueQuantityCode()
-    {
-        return this.devicePropertyValueQuantityCode;
-    }
-    
-    public void setDevicePropertyValueQuantityCode
-        (String devicePropertyValueQuantityCode) 
-        {
-      this.devicePropertyValueQuantityCode = devicePropertyValueQuantityCode;
-}
-    public 
-    String 
-    getDevicePropertyValueQuantityCompartrCode()
-    {
-        return this.devicePropertyValueQuantityCompartrCode;
-    }
-    
-    public void setDevicePropertyValueQuantityCompartrCode
-        (String devicePropertyValueQuantityCompartrCode) 
-        {
-      this.devicePropertyValueQuantityCompartrCode = devicePropertyValueQuantityCompartrCode;
-}
-    public 
-    String 
-    getDevicePropertyValueQuantitySystem()
-    {
-        return this.devicePropertyValueQuantitySystem;
-    }
-    
-    public void setDevicePropertyValueQuantitySystem
-        (String devicePropertyValueQuantitySystem) 
-        {
-      this.devicePropertyValueQuantitySystem = devicePropertyValueQuantitySystem;
-}
-    public 
-    String 
-    getDevicePropertyValueQuantityUnit()
-    {
-        return this.devicePropertyValueQuantityUnit;
-    }
-    
-    public void setDevicePropertyValueQuantityUnit
-        (String devicePropertyValueQuantityUnit) 
-        {
-      this.devicePropertyValueQuantityUnit = devicePropertyValueQuantityUnit;
-}
-    public 
-    String 
-    getDevicePropertyValueQuantityValue()
-    {
-        return this.devicePropertyValueQuantityValue;
-    }
-    
-    public void setDevicePropertyValueQuantityValue
-        (String devicePropertyValueQuantityValue) 
-        {
-      this.devicePropertyValueQuantityValue = devicePropertyValueQuantityValue;
-}
-    public 
-    String 
-    getDeviceSafetyCodingCode()
-    {
-        return this.deviceSafetyCodingCode;
-    }
-    
-    public void setDeviceSafetyCodingCode
-        (String deviceSafetyCodingCode) 
-        {
-      this.deviceSafetyCodingCode = deviceSafetyCodingCode;
-}
-    public 
-    String 
-    getDeviceSafetyCodingDisplay()
-    {
-        return this.deviceSafetyCodingDisplay;
-    }
-    
-    public void setDeviceSafetyCodingDisplay
-        (String deviceSafetyCodingDisplay) 
-        {
-      this.deviceSafetyCodingDisplay = deviceSafetyCodingDisplay;
-}
-    public 
-    String 
-    getDeviceSafetyCodingSystem()
-    {
-        return this.deviceSafetyCodingSystem;
-    }
-    
-    public void setDeviceSafetyCodingSystem
-        (String deviceSafetyCodingSystem) 
-        {
-      this.deviceSafetyCodingSystem = deviceSafetyCodingSystem;
-}
-    public 
-    String 
-    getDeviceSafetyCodingUsrslt()
-    {
-        return this.deviceSafetyCodingUsrslt;
-    }
-    
-    public void setDeviceSafetyCodingUsrslt
-        (String deviceSafetyCodingUsrslt) 
-        {
-      this.deviceSafetyCodingUsrslt = deviceSafetyCodingUsrslt;
-}
-    public 
-    String 
-    getDeviceSafetyCodingVersion()
-    {
-        return this.deviceSafetyCodingVersion;
-    }
-    
-    public void setDeviceSafetyCodingVersion
-        (String deviceSafetyCodingVersion) 
-        {
-      this.deviceSafetyCodingVersion = deviceSafetyCodingVersion;
-}
-    public 
-    String 
-    getDeviceSafetyText()
-    {
-        return this.deviceSafetyText;
-    }
-    
-    public void setDeviceSafetyText
-        (String deviceSafetyText) 
-        {
-      this.deviceSafetyText = deviceSafetyText;
-}
-    public 
-    String 
-    getDeviceSerialNumber()
-    {
-        return this.deviceSerialNumber;
-    }
-    
-    public void setDeviceSerialNumber
-        (String deviceSerialNumber) 
-        {
-      this.deviceSerialNumber = deviceSerialNumber;
-}
-    public 
-    String 
-    getDeviceSpecializationSystemTypeCodingCode()
-    {
-        return this.deviceSpecializationSystemTypeCodingCode;
-    }
-    
-    public void setDeviceSpecializationSystemTypeCodingCode
-        (String deviceSpecializationSystemTypeCodingCode) 
-        {
-      this.deviceSpecializationSystemTypeCodingCode = deviceSpecializationSystemTypeCodingCode;
-}
-    public 
-    String 
-    getDeviceSpecializationSystemTypeCodingDisplay()
-    {
-        return this.deviceSpecializationSystemTypeCodingDisplay;
-    }
-    
-    public void setDeviceSpecializationSystemTypeCodingDisplay
-        (String deviceSpecializationSystemTypeCodingDisplay) 
-        {
-      this.deviceSpecializationSystemTypeCodingDisplay = deviceSpecializationSystemTypeCodingDisplay;
-}
-    public 
-    String 
-    getDeviceSpecializationSystemTypeCodingSystem()
-    {
-        return this.deviceSpecializationSystemTypeCodingSystem;
-    }
-    
-    public void setDeviceSpecializationSystemTypeCodingSystem
-        (String deviceSpecializationSystemTypeCodingSystem) 
-        {
-      this.deviceSpecializationSystemTypeCodingSystem = deviceSpecializationSystemTypeCodingSystem;
-}
-    public 
-    String 
-    getDeviceSpecializationSystemTypeCodingUsrslt()
-    {
-        return this.deviceSpecializationSystemTypeCodingUsrslt;
-    }
-    
-    public void setDeviceSpecializationSystemTypeCodingUsrslt
-        (String deviceSpecializationSystemTypeCodingUsrslt) 
-        {
-      this.deviceSpecializationSystemTypeCodingUsrslt = deviceSpecializationSystemTypeCodingUsrslt;
-}
-    public 
-    String 
-    getDeviceSpecializationSystemTypeCodingVersion()
-    {
-        return this.deviceSpecializationSystemTypeCodingVersion;
-    }
-    
-    public void setDeviceSpecializationSystemTypeCodingVersion
-        (String deviceSpecializationSystemTypeCodingVersion) 
-        {
-      this.deviceSpecializationSystemTypeCodingVersion = deviceSpecializationSystemTypeCodingVersion;
-}
-    public 
-    String 
-    getDeviceSpecializationSystemTypeText()
-    {
-        return this.deviceSpecializationSystemTypeText;
-    }
-    
-    public void setDeviceSpecializationSystemTypeText
-        (String deviceSpecializationSystemTypeText) 
-        {
-      this.deviceSpecializationSystemTypeText = deviceSpecializationSystemTypeText;
-}
-    public 
-    String 
-    getDeviceSpecializationVersion()
-    {
-        return this.deviceSpecializationVersion;
-    }
-    
-    public void setDeviceSpecializationVersion
-        (String deviceSpecializationVersion) 
-        {
-      this.deviceSpecializationVersion = deviceSpecializationVersion;
-}
-    public 
-    String 
-    getDeviceStatusCode()
-    {
-        return this.deviceStatusCode;
-    }
-    
-    public void setDeviceStatusCode
-        (String deviceStatusCode) 
-        {
-      this.deviceStatusCode = deviceStatusCode;
-}
-    public 
-    String 
-    getDeviceStatusReasonCodingCode()
-    {
-        return this.deviceStatusReasonCodingCode;
-    }
-    
-    public void setDeviceStatusReasonCodingCode
-        (String deviceStatusReasonCodingCode) 
-        {
-      this.deviceStatusReasonCodingCode = deviceStatusReasonCodingCode;
-}
-    public 
-    String 
-    getDeviceStatusReasonCodingDisplay()
-    {
-        return this.deviceStatusReasonCodingDisplay;
-    }
-    
-    public void setDeviceStatusReasonCodingDisplay
-        (String deviceStatusReasonCodingDisplay) 
-        {
-      this.deviceStatusReasonCodingDisplay = deviceStatusReasonCodingDisplay;
-}
-    public 
-    String 
-    getDeviceStatusReasonCodingSystem()
-    {
-        return this.deviceStatusReasonCodingSystem;
-    }
-    
-    public void setDeviceStatusReasonCodingSystem
-        (String deviceStatusReasonCodingSystem) 
-        {
-      this.deviceStatusReasonCodingSystem = deviceStatusReasonCodingSystem;
-}
-    public 
-    String 
-    getDeviceStatusReasonCodingUsrslt()
-    {
-        return this.deviceStatusReasonCodingUsrslt;
-    }
-    
-    public void setDeviceStatusReasonCodingUsrslt
-        (String deviceStatusReasonCodingUsrslt) 
-        {
-      this.deviceStatusReasonCodingUsrslt = deviceStatusReasonCodingUsrslt;
-}
-    public 
-    String 
-    getDeviceStatusReasonCodingVersion()
-    {
-        return this.deviceStatusReasonCodingVersion;
-    }
-    
-    public void setDeviceStatusReasonCodingVersion
-        (String deviceStatusReasonCodingVersion) 
-        {
-      this.deviceStatusReasonCodingVersion = deviceStatusReasonCodingVersion;
-}
-    public 
-    String 
-    getDeviceStatusReasonText()
-    {
-        return this.deviceStatusReasonText;
-    }
-    
-    public void setDeviceStatusReasonText
-        (String deviceStatusReasonText) 
-        {
-      this.deviceStatusReasonText = deviceStatusReasonText;
-}
-    public 
-    String 
-    getDeviceTypeCodingCode()
-    {
-        return this.deviceTypeCodingCode;
-    }
-    
-    public void setDeviceTypeCodingCode
-        (String deviceTypeCodingCode) 
-        {
-      this.deviceTypeCodingCode = deviceTypeCodingCode;
-}
-    public 
-    String 
-    getDeviceTypeCodingDisplay()
-    {
-        return this.deviceTypeCodingDisplay;
-    }
-    
-    public void setDeviceTypeCodingDisplay
-        (String deviceTypeCodingDisplay) 
-        {
-      this.deviceTypeCodingDisplay = deviceTypeCodingDisplay;
-}
-    public 
-    String 
-    getDeviceTypeCodingSystem()
-    {
-        return this.deviceTypeCodingSystem;
-    }
-    
-    public void setDeviceTypeCodingSystem
-        (String deviceTypeCodingSystem) 
-        {
-      this.deviceTypeCodingSystem = deviceTypeCodingSystem;
-}
-    public 
-    String 
-    getDeviceTypeCodingUsrslt()
-    {
-        return this.deviceTypeCodingUsrslt;
-    }
-    
-    public void setDeviceTypeCodingUsrslt
-        (String deviceTypeCodingUsrslt) 
-        {
-      this.deviceTypeCodingUsrslt = deviceTypeCodingUsrslt;
-}
-    public 
-    String 
-    getDeviceTypeCodingVersion()
-    {
-        return this.deviceTypeCodingVersion;
-    }
-    
-    public void setDeviceTypeCodingVersion
-        (String deviceTypeCodingVersion) 
-        {
-      this.deviceTypeCodingVersion = deviceTypeCodingVersion;
-}
-    public 
-    String 
-    getDeviceTypeText()
-    {
-        return this.deviceTypeText;
-    }
-    
-    public void setDeviceTypeText
-        (String deviceTypeText) 
-        {
-      this.deviceTypeText = deviceTypeText;
-}
-    public 
-    String 
-    getDeviceUdiCarrierCarrierAidc()
-    {
-        return this.deviceUdiCarrierCarrierAidc;
-    }
-    
-    public void setDeviceUdiCarrierCarrierAidc
-        (String deviceUdiCarrierCarrierAidc) 
-        {
-      this.deviceUdiCarrierCarrierAidc = deviceUdiCarrierCarrierAidc;
-}
-    public 
-    String 
-    getDeviceUdiCarrierCarrierHrf()
-    {
-        return this.deviceUdiCarrierCarrierHrf;
-    }
-    
-    public void setDeviceUdiCarrierCarrierHrf
-        (String deviceUdiCarrierCarrierHrf) 
-        {
-      this.deviceUdiCarrierCarrierHrf = deviceUdiCarrierCarrierHrf;
-}
-    public 
-    String 
-    getDeviceUdiCarrierDeviceId()
-    {
-        return this.deviceUdiCarrierDeviceId;
-    }
-    
-    public void setDeviceUdiCarrierDeviceId
-        (String deviceUdiCarrierDeviceId) 
-        {
-      this.deviceUdiCarrierDeviceId = deviceUdiCarrierDeviceId;
-}
-    public 
-    String 
-    getDeviceUdiCarrierEntryTypeCode()
-    {
-        return this.deviceUdiCarrierEntryTypeCode;
-    }
-    
-    public void setDeviceUdiCarrierEntryTypeCode
-        (String deviceUdiCarrierEntryTypeCode) 
-        {
-      this.deviceUdiCarrierEntryTypeCode = deviceUdiCarrierEntryTypeCode;
-}
-    public 
-    String 
-    getDeviceUdiCarrierIssuer()
-    {
-        return this.deviceUdiCarrierIssuer;
-    }
-    
-    public void setDeviceUdiCarrierIssuer
-        (String deviceUdiCarrierIssuer) 
-        {
-      this.deviceUdiCarrierIssuer = deviceUdiCarrierIssuer;
-}
-    public 
-    String 
-    getDeviceUdiCarrierJurisdiction()
-    {
-        return this.deviceUdiCarrierJurisdiction;
-    }
-    
-    public void setDeviceUdiCarrierJurisdiction
-        (String deviceUdiCarrierJurisdiction) 
-        {
-      this.deviceUdiCarrierJurisdiction = deviceUdiCarrierJurisdiction;
-}
-    public 
-    String 
-    getDeviceUrl()
-    {
-        return this.deviceUrl;
-    }
-    
-    public void setDeviceUrl
-        (String deviceUrl) 
-        {
-      this.deviceUrl = deviceUrl;
-}
-    public 
-    String 
-    getDeviceVersionComponentAssigner()
-    {
-        return this.deviceVersionComponentAssigner;
-    }
-    
-    public void setDeviceVersionComponentAssigner
-        (String deviceVersionComponentAssigner) 
-        {
-      this.deviceVersionComponentAssigner = deviceVersionComponentAssigner;
-}
-    public 
-    String 
-    getDeviceVersionComponentPeriodEnd()
-    {
-        return this.deviceVersionComponentPeriodEnd;
-    }
-    
-    public void setDeviceVersionComponentPeriodEnd
-        (String deviceVersionComponentPeriodEnd) 
-        {
-      this.deviceVersionComponentPeriodEnd = deviceVersionComponentPeriodEnd;
-}
-    public 
-    String 
-    getDeviceVersionComponentPeriodStart()
-    {
-        return this.deviceVersionComponentPeriodStart;
-    }
-    
-    public void setDeviceVersionComponentPeriodStart
-        (String deviceVersionComponentPeriodStart) 
-        {
-      this.deviceVersionComponentPeriodStart = deviceVersionComponentPeriodStart;
-}
-    public 
-    String 
-    getDeviceVersionComponentSystem()
-    {
-        return this.deviceVersionComponentSystem;
-    }
-    
-    public void setDeviceVersionComponentSystem
-        (String deviceVersionComponentSystem) 
-        {
-      this.deviceVersionComponentSystem = deviceVersionComponentSystem;
-}
-    public 
-    String 
-    getDeviceVersionComponentTypeCodingCode()
-    {
-        return this.deviceVersionComponentTypeCodingCode;
-    }
-    
-    public void setDeviceVersionComponentTypeCodingCode
-        (String deviceVersionComponentTypeCodingCode) 
-        {
-      this.deviceVersionComponentTypeCodingCode = deviceVersionComponentTypeCodingCode;
-}
-    public 
-    String 
-    getDeviceVersionComponentTypeCodingDisplay()
-    {
-        return this.deviceVersionComponentTypeCodingDisplay;
-    }
-    
-    public void setDeviceVersionComponentTypeCodingDisplay
-        (String deviceVersionComponentTypeCodingDisplay) 
-        {
-      this.deviceVersionComponentTypeCodingDisplay = deviceVersionComponentTypeCodingDisplay;
-}
-    public 
-    String 
-    getDeviceVersionComponentTypeCodingSystem()
-    {
-        return this.deviceVersionComponentTypeCodingSystem;
-    }
-    
-    public void setDeviceVersionComponentTypeCodingSystem
-        (String deviceVersionComponentTypeCodingSystem) 
-        {
-      this.deviceVersionComponentTypeCodingSystem = deviceVersionComponentTypeCodingSystem;
-}
-    public 
-    String 
-    getDeviceVersionComponentTypeCodingUsrslt()
-    {
-        return this.deviceVersionComponentTypeCodingUsrslt;
-    }
-    
-    public void setDeviceVersionComponentTypeCodingUsrslt
-        (String deviceVersionComponentTypeCodingUsrslt) 
-        {
-      this.deviceVersionComponentTypeCodingUsrslt = deviceVersionComponentTypeCodingUsrslt;
-}
-    public 
-    String 
-    getDeviceVersionComponentTypeCodingVersion()
-    {
-        return this.deviceVersionComponentTypeCodingVersion;
-    }
-    
-    public void setDeviceVersionComponentTypeCodingVersion
-        (String deviceVersionComponentTypeCodingVersion) 
-        {
-      this.deviceVersionComponentTypeCodingVersion = deviceVersionComponentTypeCodingVersion;
-}
-    public 
-    String 
-    getDeviceVersionComponentTypeText()
-    {
-        return this.deviceVersionComponentTypeText;
-    }
-    
-    public void setDeviceVersionComponentTypeText
-        (String deviceVersionComponentTypeText) 
-        {
-      this.deviceVersionComponentTypeText = deviceVersionComponentTypeText;
-}
-    public 
-    String 
-    getDeviceVersionComponentUseCode()
-    {
-        return this.deviceVersionComponentUseCode;
-    }
-    
-    public void setDeviceVersionComponentUseCode
-        (String deviceVersionComponentUseCode) 
-        {
-      this.deviceVersionComponentUseCode = deviceVersionComponentUseCode;
-}
-    public 
-    String 
-    getDeviceVersionComponentValue()
-    {
-        return this.deviceVersionComponentValue;
-    }
-    
-    public void setDeviceVersionComponentValue
-        (String deviceVersionComponentValue) 
-        {
-      this.deviceVersionComponentValue = deviceVersionComponentValue;
-}
-    public 
-    String 
-    getDeviceVersionTypeCodingCode()
-    {
-        return this.deviceVersionTypeCodingCode;
-    }
-    
-    public void setDeviceVersionTypeCodingCode
-        (String deviceVersionTypeCodingCode) 
-        {
-      this.deviceVersionTypeCodingCode = deviceVersionTypeCodingCode;
-}
-    public 
-    String 
-    getDeviceVersionTypeCodingDisplay()
-    {
-        return this.deviceVersionTypeCodingDisplay;
-    }
-    
-    public void setDeviceVersionTypeCodingDisplay
-        (String deviceVersionTypeCodingDisplay) 
-        {
-      this.deviceVersionTypeCodingDisplay = deviceVersionTypeCodingDisplay;
-}
-    public 
-    String 
-    getDeviceVersionTypeCodingSystem()
-    {
-        return this.deviceVersionTypeCodingSystem;
-    }
-    
-    public void setDeviceVersionTypeCodingSystem
-        (String deviceVersionTypeCodingSystem) 
-        {
-      this.deviceVersionTypeCodingSystem = deviceVersionTypeCodingSystem;
-}
-    public 
-    String 
-    getDeviceVersionTypeCodingUsrslt()
-    {
-        return this.deviceVersionTypeCodingUsrslt;
-    }
-    
-    public void setDeviceVersionTypeCodingUsrslt
-        (String deviceVersionTypeCodingUsrslt) 
-        {
-      this.deviceVersionTypeCodingUsrslt = deviceVersionTypeCodingUsrslt;
-}
-    public 
-    String 
-    getDeviceVersionTypeCodingVersion()
-    {
-        return this.deviceVersionTypeCodingVersion;
-    }
-    
-    public void setDeviceVersionTypeCodingVersion
-        (String deviceVersionTypeCodingVersion) 
-        {
-      this.deviceVersionTypeCodingVersion = deviceVersionTypeCodingVersion;
-}
-    public 
-    String 
-    getDeviceVersionTypeText()
-    {
-        return this.deviceVersionTypeText;
-    }
-    
-    public void setDeviceVersionTypeText
-        (String deviceVersionTypeText) 
-        {
-      this.deviceVersionTypeText = deviceVersionTypeText;
-}
-    public 
-    String 
-    getDeviceVersionValue()
-    {
-        return this.deviceVersionValue;
-    }
-    
-    public void setDeviceVersionValue
-        (String deviceVersionValue) 
-        {
-      this.deviceVersionValue = deviceVersionValue;
-}
+    public void setId(String id) {
+        this.id = id;
+    }
+    
+    
+    
+    public String getDvcCntctPrdEnd() {
+        return this.dvcCntctPrdEnd;
+    }
+    
+    public void setDvcCntctPrdEnd(String dvcCntctPrdEnd) {
+        this.dvcCntctPrdEnd = dvcCntctPrdEnd;
+    }
+    
+    
+    
+    public String getDvcCntctPrdStrt() {
+        return this.dvcCntctPrdStrt;
+    }
+    
+    public void setDvcCntctPrdStrt(String dvcCntctPrdStrt) {
+        this.dvcCntctPrdStrt = dvcCntctPrdStrt;
+    }
+    
+    
+    
+    public String getDvcCntctRnk() {
+        return this.dvcCntctRnk;
+    }
+    
+    public void setDvcCntctRnk(String dvcCntctRnk) {
+        this.dvcCntctRnk = dvcCntctRnk;
+    }
+    
+    
+    
+    public String getDvcCntctSys() {
+        return this.dvcCntctSys;
+    }
+    
+    public void setDvcCntctSys(String dvcCntctSys) {
+        this.dvcCntctSys = dvcCntctSys;
+    }
+    
+    
+    
+    public String getDvcCntctUse() {
+        return this.dvcCntctUse;
+    }
+    
+    public void setDvcCntctUse(String dvcCntctUse) {
+        this.dvcCntctUse = dvcCntctUse;
+    }
+    
+    
+    
+    public String getDvcCntctVl() {
+        return this.dvcCntctVl;
+    }
+    
+    public void setDvcCntctVl(String dvcCntctVl) {
+        this.dvcCntctVl = dvcCntctVl;
+    }
+    
+    
+    
+    public String getDvcDfn() {
+        return this.dvcDfn;
+    }
+    
+    public void setDvcDfn(String dvcDfn) {
+        this.dvcDfn = dvcDfn;
+    }
+    
+    
+    
+    public String getDvcDvcNmNm() {
+        return this.dvcDvcNmNm;
+    }
+    
+    public void setDvcDvcNmNm(String dvcDvcNmNm) {
+        this.dvcDvcNmNm = dvcDvcNmNm;
+    }
+    
+    
+    
+    public String getDvcDvcNmTyp() {
+        return this.dvcDvcNmTyp;
+    }
+    
+    public void setDvcDvcNmTyp(String dvcDvcNmTyp) {
+        this.dvcDvcNmTyp = dvcDvcNmTyp;
+    }
+    
+    
+    
+    public String getDvcDistinctId() {
+        return this.dvcDistinctId;
+    }
+    
+    public void setDvcDistinctId(String dvcDistinctId) {
+        this.dvcDistinctId = dvcDistinctId;
+    }
+    
+    
+    
+    public String getDvcExpirationDt() {
+        return this.dvcExpirationDt;
+    }
+    
+    public void setDvcExpirationDt(String dvcExpirationDt) {
+        this.dvcExpirationDt = dvcExpirationDt;
+    }
+    
+    
+    
+    public String getDvcIdAssigner() {
+        return this.dvcIdAssigner;
+    }
+    
+    public void setDvcIdAssigner(String dvcIdAssigner) {
+        this.dvcIdAssigner = dvcIdAssigner;
+    }
+    
+    
+    
+    public String getDvcIdPrdEnd() {
+        return this.dvcIdPrdEnd;
+    }
+    
+    public void setDvcIdPrdEnd(String dvcIdPrdEnd) {
+        this.dvcIdPrdEnd = dvcIdPrdEnd;
+    }
+    
+    
+    
+    public String getDvcIdPrdStrt() {
+        return this.dvcIdPrdStrt;
+    }
+    
+    public void setDvcIdPrdStrt(String dvcIdPrdStrt) {
+        this.dvcIdPrdStrt = dvcIdPrdStrt;
+    }
+    
+    
+    
+    public String getDvcIdSys() {
+        return this.dvcIdSys;
+    }
+    
+    public void setDvcIdSys(String dvcIdSys) {
+        this.dvcIdSys = dvcIdSys;
+    }
+    
+    
+    
+    public String getDvcIdTypCdgCd() {
+        return this.dvcIdTypCdgCd;
+    }
+    
+    public void setDvcIdTypCdgCd(String dvcIdTypCdgCd) {
+        this.dvcIdTypCdgCd = dvcIdTypCdgCd;
+    }
+    
+    
+    
+    public String getDvcIdTypCdgDsply() {
+        return this.dvcIdTypCdgDsply;
+    }
+    
+    public void setDvcIdTypCdgDsply(String dvcIdTypCdgDsply) {
+        this.dvcIdTypCdgDsply = dvcIdTypCdgDsply;
+    }
+    
+    
+    
+    public String getDvcIdTypCdgSys() {
+        return this.dvcIdTypCdgSys;
+    }
+    
+    public void setDvcIdTypCdgSys(String dvcIdTypCdgSys) {
+        this.dvcIdTypCdgSys = dvcIdTypCdgSys;
+    }
+    
+    
+    
+    public String getDvcIdTypCdgUsrSltd() {
+        return this.dvcIdTypCdgUsrSltd;
+    }
+    
+    public void setDvcIdTypCdgUsrSltd(String dvcIdTypCdgUsrSltd) {
+        this.dvcIdTypCdgUsrSltd = dvcIdTypCdgUsrSltd;
+    }
+    
+    
+    
+    public String getDvcIdTypCdgVrsn() {
+        return this.dvcIdTypCdgVrsn;
+    }
+    
+    public void setDvcIdTypCdgVrsn(String dvcIdTypCdgVrsn) {
+        this.dvcIdTypCdgVrsn = dvcIdTypCdgVrsn;
+    }
+    
+    
+    
+    public String getDvcIdTypTxt() {
+        return this.dvcIdTypTxt;
+    }
+    
+    public void setDvcIdTypTxt(String dvcIdTypTxt) {
+        this.dvcIdTypTxt = dvcIdTypTxt;
+    }
+    
+    
+    
+    public String getDvcIdUse() {
+        return this.dvcIdUse;
+    }
+    
+    public void setDvcIdUse(String dvcIdUse) {
+        this.dvcIdUse = dvcIdUse;
+    }
+    
+    
+    
+    public String getDvcIdVl() {
+        return this.dvcIdVl;
+    }
+    
+    public void setDvcIdVl(String dvcIdVl) {
+        this.dvcIdVl = dvcIdVl;
+    }
+    
+    
+    
+    public String getDvcLctn() {
+        return this.dvcLctn;
+    }
+    
+    public void setDvcLctn(String dvcLctn) {
+        this.dvcLctn = dvcLctn;
+    }
+    
+    
+    
+    public String getDvcLotNmbr() {
+        return this.dvcLotNmbr;
+    }
+    
+    public void setDvcLotNmbr(String dvcLotNmbr) {
+        this.dvcLotNmbr = dvcLotNmbr;
+    }
+    
+    
+    
+    public String getDvcManufactureDt() {
+        return this.dvcManufactureDt;
+    }
+    
+    public void setDvcManufactureDt(String dvcManufactureDt) {
+        this.dvcManufactureDt = dvcManufactureDt;
+    }
+    
+    
+    
+    public String getDvcManufacturer() {
+        return this.dvcManufacturer;
+    }
+    
+    public void setDvcManufacturer(String dvcManufacturer) {
+        this.dvcManufacturer = dvcManufacturer;
+    }
+    
+    
+    
+    public String getDvcModelNmbr() {
+        return this.dvcModelNmbr;
+    }
+    
+    public void setDvcModelNmbr(String dvcModelNmbr) {
+        this.dvcModelNmbr = dvcModelNmbr;
+    }
+    
+    
+    
+    public String getDvcNtAthrRfrnc() {
+        return this.dvcNtAthrRfrnc;
+    }
+    
+    public void setDvcNtAthrRfrnc(String dvcNtAthrRfrnc) {
+        this.dvcNtAthrRfrnc = dvcNtAthrRfrnc;
+    }
+    
+    
+    
+    public String getDvcNtAthrStrgTyp() {
+        return this.dvcNtAthrStrgTyp;
+    }
+    
+    public void setDvcNtAthrStrgTyp(String dvcNtAthrStrgTyp) {
+        this.dvcNtAthrStrgTyp = dvcNtAthrStrgTyp;
+    }
+    
+    
+    
+    public String getDvcNtTxt() {
+        return this.dvcNtTxt;
+    }
+    
+    public void setDvcNtTxt(String dvcNtTxt) {
+        this.dvcNtTxt = dvcNtTxt;
+    }
+    
+    
+    
+    public String getDvcNtTime() {
+        return this.dvcNtTime;
+    }
+    
+    public void setDvcNtTime(String dvcNtTime) {
+        this.dvcNtTime = dvcNtTime;
+    }
+    
+    
+    
+    public String getDvcOwner() {
+        return this.dvcOwner;
+    }
+    
+    public void setDvcOwner(String dvcOwner) {
+        this.dvcOwner = dvcOwner;
+    }
+    
+    
+    
+    public String getDvcParent() {
+        return this.dvcParent;
+    }
+    
+    public void setDvcParent(String dvcParent) {
+        this.dvcParent = dvcParent;
+    }
+    
+    
+    
+    public String getDvcPartNmbr() {
+        return this.dvcPartNmbr;
+    }
+    
+    public void setDvcPartNmbr(String dvcPartNmbr) {
+        this.dvcPartNmbr = dvcPartNmbr;
+    }
+    
+    
+    
+    public String getDvcPnt() {
+        return this.dvcPnt;
+    }
+    
+    public void setDvcPnt(String dvcPnt) {
+        this.dvcPnt = dvcPnt;
+    }
+    
+    
+    
+    public String getDvcPrptyTypCdgCd() {
+        return this.dvcPrptyTypCdgCd;
+    }
+    
+    public void setDvcPrptyTypCdgCd(String dvcPrptyTypCdgCd) {
+        this.dvcPrptyTypCdgCd = dvcPrptyTypCdgCd;
+    }
+    
+    
+    
+    public String getDvcPrptyTypCdgDsply() {
+        return this.dvcPrptyTypCdgDsply;
+    }
+    
+    public void setDvcPrptyTypCdgDsply(String dvcPrptyTypCdgDsply) {
+        this.dvcPrptyTypCdgDsply = dvcPrptyTypCdgDsply;
+    }
+    
+    
+    
+    public String getDvcPrptyTypCdgSys() {
+        return this.dvcPrptyTypCdgSys;
+    }
+    
+    public void setDvcPrptyTypCdgSys(String dvcPrptyTypCdgSys) {
+        this.dvcPrptyTypCdgSys = dvcPrptyTypCdgSys;
+    }
+    
+    
+    
+    public String getDvcPrptyTypCdgUsrSltd() {
+        return this.dvcPrptyTypCdgUsrSltd;
+    }
+    
+    public void setDvcPrptyTypCdgUsrSltd(String dvcPrptyTypCdgUsrSltd) {
+        this.dvcPrptyTypCdgUsrSltd = dvcPrptyTypCdgUsrSltd;
+    }
+    
+    
+    
+    public String getDvcPrptyTypCdgVrsn() {
+        return this.dvcPrptyTypCdgVrsn;
+    }
+    
+    public void setDvcPrptyTypCdgVrsn(String dvcPrptyTypCdgVrsn) {
+        this.dvcPrptyTypCdgVrsn = dvcPrptyTypCdgVrsn;
+    }
+    
+    
+    
+    public String getDvcPrptyTypTxt() {
+        return this.dvcPrptyTypTxt;
+    }
+    
+    public void setDvcPrptyTypTxt(String dvcPrptyTypTxt) {
+        this.dvcPrptyTypTxt = dvcPrptyTypTxt;
+    }
+    
+    
+    
+    public String getDvcPrptyVlCdCdgCd() {
+        return this.dvcPrptyVlCdCdgCd;
+    }
+    
+    public void setDvcPrptyVlCdCdgCd(String dvcPrptyVlCdCdgCd) {
+        this.dvcPrptyVlCdCdgCd = dvcPrptyVlCdCdgCd;
+    }
+    
+    
+    
+    public String getDvcPrptyVlCdCdgDsply() {
+        return this.dvcPrptyVlCdCdgDsply;
+    }
+    
+    public void setDvcPrptyVlCdCdgDsply(String dvcPrptyVlCdCdgDsply) {
+        this.dvcPrptyVlCdCdgDsply = dvcPrptyVlCdCdgDsply;
+    }
+    
+    
+    
+    public String getDvcPrptyVlCdCdgSys() {
+        return this.dvcPrptyVlCdCdgSys;
+    }
+    
+    public void setDvcPrptyVlCdCdgSys(String dvcPrptyVlCdCdgSys) {
+        this.dvcPrptyVlCdCdgSys = dvcPrptyVlCdCdgSys;
+    }
+    
+    
+    
+    public String getDvcPrptyVlCdCdgUsrSltd() {
+        return this.dvcPrptyVlCdCdgUsrSltd;
+    }
+    
+    public void setDvcPrptyVlCdCdgUsrSltd(String dvcPrptyVlCdCdgUsrSltd) {
+        this.dvcPrptyVlCdCdgUsrSltd = dvcPrptyVlCdCdgUsrSltd;
+    }
+    
+    
+    
+    public String getDvcPrptyVlCdCdgVrsn() {
+        return this.dvcPrptyVlCdCdgVrsn;
+    }
+    
+    public void setDvcPrptyVlCdCdgVrsn(String dvcPrptyVlCdCdgVrsn) {
+        this.dvcPrptyVlCdCdgVrsn = dvcPrptyVlCdCdgVrsn;
+    }
+    
+    
+    
+    public String getDvcPrptyVlCdTxt() {
+        return this.dvcPrptyVlCdTxt;
+    }
+    
+    public void setDvcPrptyVlCdTxt(String dvcPrptyVlCdTxt) {
+        this.dvcPrptyVlCdTxt = dvcPrptyVlCdTxt;
+    }
+    
+    
+    
+    public String getDvcPrptyVlQntyCd() {
+        return this.dvcPrptyVlQntyCd;
+    }
+    
+    public void setDvcPrptyVlQntyCd(String dvcPrptyVlQntyCd) {
+        this.dvcPrptyVlQntyCd = dvcPrptyVlQntyCd;
+    }
+    
+    
+    
+    public String getDvcPrptyVlQntyCmprtr() {
+        return this.dvcPrptyVlQntyCmprtr;
+    }
+    
+    public void setDvcPrptyVlQntyCmprtr(String dvcPrptyVlQntyCmprtr) {
+        this.dvcPrptyVlQntyCmprtr = dvcPrptyVlQntyCmprtr;
+    }
+    
+    
+    
+    public String getDvcPrptyVlQntySys() {
+        return this.dvcPrptyVlQntySys;
+    }
+    
+    public void setDvcPrptyVlQntySys(String dvcPrptyVlQntySys) {
+        this.dvcPrptyVlQntySys = dvcPrptyVlQntySys;
+    }
+    
+    
+    
+    public String getDvcPrptyVlQntyUnt() {
+        return this.dvcPrptyVlQntyUnt;
+    }
+    
+    public void setDvcPrptyVlQntyUnt(String dvcPrptyVlQntyUnt) {
+        this.dvcPrptyVlQntyUnt = dvcPrptyVlQntyUnt;
+    }
+    
+    
+    
+    public String getDvcPrptyVlQntyVl() {
+        return this.dvcPrptyVlQntyVl;
+    }
+    
+    public void setDvcPrptyVlQntyVl(String dvcPrptyVlQntyVl) {
+        this.dvcPrptyVlQntyVl = dvcPrptyVlQntyVl;
+    }
+    
+    
+    
+    public String getDvcSafetyCdgCd() {
+        return this.dvcSafetyCdgCd;
+    }
+    
+    public void setDvcSafetyCdgCd(String dvcSafetyCdgCd) {
+        this.dvcSafetyCdgCd = dvcSafetyCdgCd;
+    }
+    
+    
+    
+    public String getDvcSafetyCdgDsply() {
+        return this.dvcSafetyCdgDsply;
+    }
+    
+    public void setDvcSafetyCdgDsply(String dvcSafetyCdgDsply) {
+        this.dvcSafetyCdgDsply = dvcSafetyCdgDsply;
+    }
+    
+    
+    
+    public String getDvcSafetyCdgSys() {
+        return this.dvcSafetyCdgSys;
+    }
+    
+    public void setDvcSafetyCdgSys(String dvcSafetyCdgSys) {
+        this.dvcSafetyCdgSys = dvcSafetyCdgSys;
+    }
+    
+    
+    
+    public String getDvcSafetyCdgUsrSltd() {
+        return this.dvcSafetyCdgUsrSltd;
+    }
+    
+    public void setDvcSafetyCdgUsrSltd(String dvcSafetyCdgUsrSltd) {
+        this.dvcSafetyCdgUsrSltd = dvcSafetyCdgUsrSltd;
+    }
+    
+    
+    
+    public String getDvcSafetyCdgVrsn() {
+        return this.dvcSafetyCdgVrsn;
+    }
+    
+    public void setDvcSafetyCdgVrsn(String dvcSafetyCdgVrsn) {
+        this.dvcSafetyCdgVrsn = dvcSafetyCdgVrsn;
+    }
+    
+    
+    
+    public String getDvcSafetyTxt() {
+        return this.dvcSafetyTxt;
+    }
+    
+    public void setDvcSafetyTxt(String dvcSafetyTxt) {
+        this.dvcSafetyTxt = dvcSafetyTxt;
+    }
+    
+    
+    
+    public String getDvcSerialNmbr() {
+        return this.dvcSerialNmbr;
+    }
+    
+    public void setDvcSerialNmbr(String dvcSerialNmbr) {
+        this.dvcSerialNmbr = dvcSerialNmbr;
+    }
+    
+    
+    
+    public String getDvcSpclizationSysTypCdgCd() {
+        return this.dvcSpclizationSysTypCdgCd;
+    }
+    
+    public void setDvcSpclizationSysTypCdgCd(String dvcSpclizationSysTypCdgCd) {
+        this.dvcSpclizationSysTypCdgCd = dvcSpclizationSysTypCdgCd;
+    }
+    
+    
+    
+    public String getDvcSpclizationSysTypCdgDsply() {
+        return this.dvcSpclizationSysTypCdgDsply;
+    }
+    
+    public void setDvcSpclizationSysTypCdgDsply(String dvcSpclizationSysTypCdgDsply) {
+        this.dvcSpclizationSysTypCdgDsply = dvcSpclizationSysTypCdgDsply;
+    }
+    
+    
+    
+    public String getDvcSpclizationSysTypCdgSys() {
+        return this.dvcSpclizationSysTypCdgSys;
+    }
+    
+    public void setDvcSpclizationSysTypCdgSys(String dvcSpclizationSysTypCdgSys) {
+        this.dvcSpclizationSysTypCdgSys = dvcSpclizationSysTypCdgSys;
+    }
+    
+    
+    
+    public String getDvcSpclizationSysTypCdgUsrSltd() {
+        return this.dvcSpclizationSysTypCdgUsrSltd;
+    }
+    
+    public void setDvcSpclizationSysTypCdgUsrSltd(String dvcSpclizationSysTypCdgUsrSltd) {
+        this.dvcSpclizationSysTypCdgUsrSltd = dvcSpclizationSysTypCdgUsrSltd;
+    }
+    
+    
+    
+    public String getDvcSpclizationSysTypCdgVrsn() {
+        return this.dvcSpclizationSysTypCdgVrsn;
+    }
+    
+    public void setDvcSpclizationSysTypCdgVrsn(String dvcSpclizationSysTypCdgVrsn) {
+        this.dvcSpclizationSysTypCdgVrsn = dvcSpclizationSysTypCdgVrsn;
+    }
+    
+    
+    
+    public String getDvcSpclizationSysTypTxt() {
+        return this.dvcSpclizationSysTypTxt;
+    }
+    
+    public void setDvcSpclizationSysTypTxt(String dvcSpclizationSysTypTxt) {
+        this.dvcSpclizationSysTypTxt = dvcSpclizationSysTypTxt;
+    }
+    
+    
+    
+    public String getDvcSpclizationVrsn() {
+        return this.dvcSpclizationVrsn;
+    }
+    
+    public void setDvcSpclizationVrsn(String dvcSpclizationVrsn) {
+        this.dvcSpclizationVrsn = dvcSpclizationVrsn;
+    }
+    
+    
+    
+    public String getDvcSts() {
+        return this.dvcSts;
+    }
+    
+    public void setDvcSts(String dvcSts) {
+        this.dvcSts = dvcSts;
+    }
+    
+    
+    
+    public String getDvcStsRsnCdgCd() {
+        return this.dvcStsRsnCdgCd;
+    }
+    
+    public void setDvcStsRsnCdgCd(String dvcStsRsnCdgCd) {
+        this.dvcStsRsnCdgCd = dvcStsRsnCdgCd;
+    }
+    
+    
+    
+    public String getDvcStsRsnCdgDsply() {
+        return this.dvcStsRsnCdgDsply;
+    }
+    
+    public void setDvcStsRsnCdgDsply(String dvcStsRsnCdgDsply) {
+        this.dvcStsRsnCdgDsply = dvcStsRsnCdgDsply;
+    }
+    
+    
+    
+    public String getDvcStsRsnCdgSys() {
+        return this.dvcStsRsnCdgSys;
+    }
+    
+    public void setDvcStsRsnCdgSys(String dvcStsRsnCdgSys) {
+        this.dvcStsRsnCdgSys = dvcStsRsnCdgSys;
+    }
+    
+    
+    
+    public String getDvcStsRsnCdgUsrSltd() {
+        return this.dvcStsRsnCdgUsrSltd;
+    }
+    
+    public void setDvcStsRsnCdgUsrSltd(String dvcStsRsnCdgUsrSltd) {
+        this.dvcStsRsnCdgUsrSltd = dvcStsRsnCdgUsrSltd;
+    }
+    
+    
+    
+    public String getDvcStsRsnCdgVrsn() {
+        return this.dvcStsRsnCdgVrsn;
+    }
+    
+    public void setDvcStsRsnCdgVrsn(String dvcStsRsnCdgVrsn) {
+        this.dvcStsRsnCdgVrsn = dvcStsRsnCdgVrsn;
+    }
+    
+    
+    
+    public String getDvcStsRsnTxt() {
+        return this.dvcStsRsnTxt;
+    }
+    
+    public void setDvcStsRsnTxt(String dvcStsRsnTxt) {
+        this.dvcStsRsnTxt = dvcStsRsnTxt;
+    }
+    
+    
+    
+    public String getDvcTypCdgCd() {
+        return this.dvcTypCdgCd;
+    }
+    
+    public void setDvcTypCdgCd(String dvcTypCdgCd) {
+        this.dvcTypCdgCd = dvcTypCdgCd;
+    }
+    
+    
+    
+    public String getDvcTypCdgDsply() {
+        return this.dvcTypCdgDsply;
+    }
+    
+    public void setDvcTypCdgDsply(String dvcTypCdgDsply) {
+        this.dvcTypCdgDsply = dvcTypCdgDsply;
+    }
+    
+    
+    
+    public String getDvcTypCdgSys() {
+        return this.dvcTypCdgSys;
+    }
+    
+    public void setDvcTypCdgSys(String dvcTypCdgSys) {
+        this.dvcTypCdgSys = dvcTypCdgSys;
+    }
+    
+    
+    
+    public String getDvcTypCdgUsrSltd() {
+        return this.dvcTypCdgUsrSltd;
+    }
+    
+    public void setDvcTypCdgUsrSltd(String dvcTypCdgUsrSltd) {
+        this.dvcTypCdgUsrSltd = dvcTypCdgUsrSltd;
+    }
+    
+    
+    
+    public String getDvcTypCdgVrsn() {
+        return this.dvcTypCdgVrsn;
+    }
+    
+    public void setDvcTypCdgVrsn(String dvcTypCdgVrsn) {
+        this.dvcTypCdgVrsn = dvcTypCdgVrsn;
+    }
+    
+    
+    
+    public String getDvcTypTxt() {
+        return this.dvcTypTxt;
+    }
+    
+    public void setDvcTypTxt(String dvcTypTxt) {
+        this.dvcTypTxt = dvcTypTxt;
+    }
+    
+    
+    
+    public String getDvcUdiCarrierCarrierAidc() {
+        return this.dvcUdiCarrierCarrierAidc;
+    }
+    
+    public void setDvcUdiCarrierCarrierAidc(String dvcUdiCarrierCarrierAidc) {
+        this.dvcUdiCarrierCarrierAidc = dvcUdiCarrierCarrierAidc;
+    }
+    
+    
+    
+    public String getDvcUdiCarrierCarrierHrf() {
+        return this.dvcUdiCarrierCarrierHrf;
+    }
+    
+    public void setDvcUdiCarrierCarrierHrf(String dvcUdiCarrierCarrierHrf) {
+        this.dvcUdiCarrierCarrierHrf = dvcUdiCarrierCarrierHrf;
+    }
+    
+    
+    
+    public String getDvcUdiCarrierDvcId() {
+        return this.dvcUdiCarrierDvcId;
+    }
+    
+    public void setDvcUdiCarrierDvcId(String dvcUdiCarrierDvcId) {
+        this.dvcUdiCarrierDvcId = dvcUdiCarrierDvcId;
+    }
+    
+    
+    
+    public String getDvcUdiCarrierEntryTyp() {
+        return this.dvcUdiCarrierEntryTyp;
+    }
+    
+    public void setDvcUdiCarrierEntryTyp(String dvcUdiCarrierEntryTyp) {
+        this.dvcUdiCarrierEntryTyp = dvcUdiCarrierEntryTyp;
+    }
+    
+    
+    
+    public String getDvcUdiCarrierIssuer() {
+        return this.dvcUdiCarrierIssuer;
+    }
+    
+    public void setDvcUdiCarrierIssuer(String dvcUdiCarrierIssuer) {
+        this.dvcUdiCarrierIssuer = dvcUdiCarrierIssuer;
+    }
+    
+    
+    
+    public String getDvcUdiCarrierJrsdctn() {
+        return this.dvcUdiCarrierJrsdctn;
+    }
+    
+    public void setDvcUdiCarrierJrsdctn(String dvcUdiCarrierJrsdctn) {
+        this.dvcUdiCarrierJrsdctn = dvcUdiCarrierJrsdctn;
+    }
+    
+    
+    
+    public String getDvcUrl() {
+        return this.dvcUrl;
+    }
+    
+    public void setDvcUrl(String dvcUrl) {
+        this.dvcUrl = dvcUrl;
+    }
+    
+    
+    
+    public String getDvcVrsnCmpntAssigner() {
+        return this.dvcVrsnCmpntAssigner;
+    }
+    
+    public void setDvcVrsnCmpntAssigner(String dvcVrsnCmpntAssigner) {
+        this.dvcVrsnCmpntAssigner = dvcVrsnCmpntAssigner;
+    }
+    
+    
+    
+    public String getDvcVrsnCmpntPrdEnd() {
+        return this.dvcVrsnCmpntPrdEnd;
+    }
+    
+    public void setDvcVrsnCmpntPrdEnd(String dvcVrsnCmpntPrdEnd) {
+        this.dvcVrsnCmpntPrdEnd = dvcVrsnCmpntPrdEnd;
+    }
+    
+    
+    
+    public String getDvcVrsnCmpntPrdStrt() {
+        return this.dvcVrsnCmpntPrdStrt;
+    }
+    
+    public void setDvcVrsnCmpntPrdStrt(String dvcVrsnCmpntPrdStrt) {
+        this.dvcVrsnCmpntPrdStrt = dvcVrsnCmpntPrdStrt;
+    }
+    
+    
+    
+    public String getDvcVrsnCmpntSys() {
+        return this.dvcVrsnCmpntSys;
+    }
+    
+    public void setDvcVrsnCmpntSys(String dvcVrsnCmpntSys) {
+        this.dvcVrsnCmpntSys = dvcVrsnCmpntSys;
+    }
+    
+    
+    
+    public String getDvcVrsnCmpntTypCdgCd() {
+        return this.dvcVrsnCmpntTypCdgCd;
+    }
+    
+    public void setDvcVrsnCmpntTypCdgCd(String dvcVrsnCmpntTypCdgCd) {
+        this.dvcVrsnCmpntTypCdgCd = dvcVrsnCmpntTypCdgCd;
+    }
+    
+    
+    
+    public String getDvcVrsnCmpntTypCdgDsply() {
+        return this.dvcVrsnCmpntTypCdgDsply;
+    }
+    
+    public void setDvcVrsnCmpntTypCdgDsply(String dvcVrsnCmpntTypCdgDsply) {
+        this.dvcVrsnCmpntTypCdgDsply = dvcVrsnCmpntTypCdgDsply;
+    }
+    
+    
+    
+    public String getDvcVrsnCmpntTypCdgSys() {
+        return this.dvcVrsnCmpntTypCdgSys;
+    }
+    
+    public void setDvcVrsnCmpntTypCdgSys(String dvcVrsnCmpntTypCdgSys) {
+        this.dvcVrsnCmpntTypCdgSys = dvcVrsnCmpntTypCdgSys;
+    }
+    
+    
+    
+    public String getDvcVrsnCmpntTypCdgUsrSltd() {
+        return this.dvcVrsnCmpntTypCdgUsrSltd;
+    }
+    
+    public void setDvcVrsnCmpntTypCdgUsrSltd(String dvcVrsnCmpntTypCdgUsrSltd) {
+        this.dvcVrsnCmpntTypCdgUsrSltd = dvcVrsnCmpntTypCdgUsrSltd;
+    }
+    
+    
+    
+    public String getDvcVrsnCmpntTypCdgVrsn() {
+        return this.dvcVrsnCmpntTypCdgVrsn;
+    }
+    
+    public void setDvcVrsnCmpntTypCdgVrsn(String dvcVrsnCmpntTypCdgVrsn) {
+        this.dvcVrsnCmpntTypCdgVrsn = dvcVrsnCmpntTypCdgVrsn;
+    }
+    
+    
+    
+    public String getDvcVrsnCmpntTypTxt() {
+        return this.dvcVrsnCmpntTypTxt;
+    }
+    
+    public void setDvcVrsnCmpntTypTxt(String dvcVrsnCmpntTypTxt) {
+        this.dvcVrsnCmpntTypTxt = dvcVrsnCmpntTypTxt;
+    }
+    
+    
+    
+    public String getDvcVrsnCmpntUse() {
+        return this.dvcVrsnCmpntUse;
+    }
+    
+    public void setDvcVrsnCmpntUse(String dvcVrsnCmpntUse) {
+        this.dvcVrsnCmpntUse = dvcVrsnCmpntUse;
+    }
+    
+    
+    
+    public String getDvcVrsnCmpntVl() {
+        return this.dvcVrsnCmpntVl;
+    }
+    
+    public void setDvcVrsnCmpntVl(String dvcVrsnCmpntVl) {
+        this.dvcVrsnCmpntVl = dvcVrsnCmpntVl;
+    }
+    
+    
+    
+    public String getDvcVrsnTypCdgCd() {
+        return this.dvcVrsnTypCdgCd;
+    }
+    
+    public void setDvcVrsnTypCdgCd(String dvcVrsnTypCdgCd) {
+        this.dvcVrsnTypCdgCd = dvcVrsnTypCdgCd;
+    }
+    
+    
+    
+    public String getDvcVrsnTypCdgDsply() {
+        return this.dvcVrsnTypCdgDsply;
+    }
+    
+    public void setDvcVrsnTypCdgDsply(String dvcVrsnTypCdgDsply) {
+        this.dvcVrsnTypCdgDsply = dvcVrsnTypCdgDsply;
+    }
+    
+    
+    
+    public String getDvcVrsnTypCdgSys() {
+        return this.dvcVrsnTypCdgSys;
+    }
+    
+    public void setDvcVrsnTypCdgSys(String dvcVrsnTypCdgSys) {
+        this.dvcVrsnTypCdgSys = dvcVrsnTypCdgSys;
+    }
+    
+    
+    
+    public String getDvcVrsnTypCdgUsrSltd() {
+        return this.dvcVrsnTypCdgUsrSltd;
+    }
+    
+    public void setDvcVrsnTypCdgUsrSltd(String dvcVrsnTypCdgUsrSltd) {
+        this.dvcVrsnTypCdgUsrSltd = dvcVrsnTypCdgUsrSltd;
+    }
+    
+    
+    
+    public String getDvcVrsnTypCdgVrsn() {
+        return this.dvcVrsnTypCdgVrsn;
+    }
+    
+    public void setDvcVrsnTypCdgVrsn(String dvcVrsnTypCdgVrsn) {
+        this.dvcVrsnTypCdgVrsn = dvcVrsnTypCdgVrsn;
+    }
+    
+    
+    
+    public String getDvcVrsnTypTxt() {
+        return this.dvcVrsnTypTxt;
+    }
+    
+    public void setDvcVrsnTypTxt(String dvcVrsnTypTxt) {
+        this.dvcVrsnTypTxt = dvcVrsnTypTxt;
+    }
+    
+    
+    
+    public String getDvcVrsnVl() {
+        return this.dvcVrsnVl;
+    }
+    
+    public void setDvcVrsnVl(String dvcVrsnVl) {
+        this.dvcVrsnVl = dvcVrsnVl;
+    }
+    
+    
+    
 
 
 

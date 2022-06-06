@@ -10,1630 +10,1475 @@ public class ObservationConversion
 		/******************** id ********************************************************************************/
 		observation.setId(o.getId());
 
-		/******************** Obs_BasedOn ********************************************************************************/
-		if(o.getObsBasedOn() != null) {
-			org.hl7.fhir.r4.model.Reference ObsBasedOnref = new org.hl7.fhir.r4.model.Reference();
-			observation.addBasedOn(ObsBasedOnref.setReference(o.getObsBasedOn()));
-		}
-
-		org.hl7.fhir.r4.model.CodeableConcept observationsetbodysite = new org.hl7.fhir.r4.model.CodeableConcept();
-		observation.setBodySite(observationsetbodysite);
-
-
-		org.hl7.fhir.r4.model.Coding observationsetbodysiteaddcoding = observationsetbodysite.addCoding();
-
-		/******************** Obs_BodySite_Coding_Code ********************************************************************************/
-		if(o.getObsBodySiteCodingCode() != null) {
-			observationsetbodysiteaddcoding.setCode(o.getObsBodySiteCodingCode());
-		}
-		/******************** Obs_BodySite_Coding_Display ********************************************************************************/
-		if(o.getObsBodySiteCodingDisplay() != null) {
-			observationsetbodysiteaddcoding.setDisplay(o.getObsBodySiteCodingDisplay());
-		}
-		/******************** Obs_BodySite_Coding_System ********************************************************************************/
-		if(o.getObsBodySiteCodingSystem() != null) {
-			observationsetbodysiteaddcoding.setSystem(o.getObsBodySiteCodingSystem());
-		}
-		/******************** Obs_BodySite_Coding_Usrslt ********************************************************************************/
-		if(o.getObsBodySiteCodingUsrslt() != null) {
-			observationsetbodysiteaddcoding.setUserSelected(Boolean.parseBoolean(o.getObsBodySiteCodingUsrslt()));
-		}
-		/******************** Obs_BodySite_Coding_Version ********************************************************************************/
-		if(o.getObsBodySiteCodingVersion() != null) {
-			observationsetbodysiteaddcoding.setVersion(o.getObsBodySiteCodingVersion());
-		}
-		/******************** Obs_BodySite_Text ********************************************************************************/
-		if(o.getObsBodySiteText() != null) {
-			observationsetbodysite.setText(o.getObsBodySiteText());
-		}
-
-		org.hl7.fhir.r4.model.CodeableConcept observationaddcategory = observation.addCategory();
-
-
-		org.hl7.fhir.r4.model.Coding observationaddcategoryaddcoding = observationaddcategory.addCoding();
-
-		/******************** Obs_Category_Coding_Code ********************************************************************************/
-		if(o.getObsCategoryCodingCode() != null) {
-			observationaddcategoryaddcoding.setCode(o.getObsCategoryCodingCode());
-		}
-		/******************** Obs_Category_Coding_Display ********************************************************************************/
-		if(o.getObsCategoryCodingDisplay() != null) {
-			observationaddcategoryaddcoding.setDisplay(o.getObsCategoryCodingDisplay());
-		}
-		/******************** Obs_Category_Coding_System ********************************************************************************/
-		if(o.getObsCategoryCodingSystem() != null) {
-			observationaddcategoryaddcoding.setSystem(o.getObsCategoryCodingSystem());
-		}
-		/******************** Obs_Category_Coding_Usrslt ********************************************************************************/
-		if(o.getObsCategoryCodingUsrslt() != null) {
-			observationaddcategoryaddcoding.setUserSelected(Boolean.parseBoolean(o.getObsCategoryCodingUsrslt()));
-		}
-		/******************** Obs_Category_Coding_Version ********************************************************************************/
-		if(o.getObsCategoryCodingVersion() != null) {
-			observationaddcategoryaddcoding.setVersion(o.getObsCategoryCodingVersion());
-		}
-		/******************** Obs_Category_Text ********************************************************************************/
-		if(o.getObsCategoryText() != null) {
-			observationaddcategory.setText(o.getObsCategoryText());
-		}
-
-		org.hl7.fhir.r4.model.CodeableConcept observationsetcode = new org.hl7.fhir.r4.model.CodeableConcept();
-		observation.setCode(observationsetcode);
-
-
-		org.hl7.fhir.r4.model.Coding observationsetcodeaddcoding = observationsetcode.addCoding();
-
-		/******************** Obs_Code_Coding_Code ********************************************************************************/
-		if(o.getObsCodeCodingCode() != null) {
-			observationsetcodeaddcoding.setCode(o.getObsCodeCodingCode());
-		}
-		/******************** Obs_Code_Coding_Display ********************************************************************************/
-		if(o.getObsCodeCodingDisplay() != null) {
-			observationsetcodeaddcoding.setDisplay(o.getObsCodeCodingDisplay());
-		}
-		/******************** Obs_Code_Coding_System ********************************************************************************/
-		if(o.getObsCodeCodingSystem() != null) {
-			observationsetcodeaddcoding.setSystem(o.getObsCodeCodingSystem());
-		}
-		/******************** Obs_Code_Coding_Usrslt ********************************************************************************/
-		if(o.getObsCodeCodingUsrslt() != null) {
-			observationsetcodeaddcoding.setUserSelected(Boolean.parseBoolean(o.getObsCodeCodingUsrslt()));
-		}
-		/******************** Obs_Code_Coding_Version ********************************************************************************/
-		if(o.getObsCodeCodingVersion() != null) {
-			observationsetcodeaddcoding.setVersion(o.getObsCodeCodingVersion());
-		}
-		/******************** Obs_Code_Text ********************************************************************************/
-		if(o.getObsCodeText() != null) {
-			observationsetcode.setText(o.getObsCodeText());
-		}
-
-		org.hl7.fhir.r4.model.Observation.ObservationComponentComponent observationaddcomponent = observation.addComponent();
-
-
-		org.hl7.fhir.r4.model.CodeableConcept observationaddcomponentsetcode = new org.hl7.fhir.r4.model.CodeableConcept();
-		observationaddcomponent.setCode(observationaddcomponentsetcode);
-
-
-		org.hl7.fhir.r4.model.Coding observationaddcomponentsetcodeaddcoding = observationaddcomponentsetcode.addCoding();
-
-		/******************** Obs_Component_Code_Coding_Code ********************************************************************************/
-		if(o.getObsComponentCodeCodingCode() != null) {
-			observationaddcomponentsetcodeaddcoding.setCode(o.getObsComponentCodeCodingCode());
-		}
-		/******************** Obs_Component_Code_Coding_Display ********************************************************************************/
-		if(o.getObsComponentCodeCodingDisplay() != null) {
-			observationaddcomponentsetcodeaddcoding.setDisplay(o.getObsComponentCodeCodingDisplay());
-		}
-		/******************** Obs_Component_Code_Coding_System ********************************************************************************/
-		if(o.getObsComponentCodeCodingSystem() != null) {
-			observationaddcomponentsetcodeaddcoding.setSystem(o.getObsComponentCodeCodingSystem());
-		}
-		/******************** Obs_Component_Code_Coding_Usrslt ********************************************************************************/
-		if(o.getObsComponentCodeCodingUsrslt() != null) {
-			observationaddcomponentsetcodeaddcoding.setUserSelected(Boolean.parseBoolean(o.getObsComponentCodeCodingUsrslt()));
-		}
-		/******************** Obs_Component_Code_Coding_Version ********************************************************************************/
-		if(o.getObsComponentCodeCodingVersion() != null) {
-			observationaddcomponentsetcodeaddcoding.setVersion(o.getObsComponentCodeCodingVersion());
-		}
-		/******************** Obs_Component_Code_Text ********************************************************************************/
-		if(o.getObsComponentCodeText() != null) {
-			observationaddcomponentsetcode.setText(o.getObsComponentCodeText());
-		}
-
-		org.hl7.fhir.r4.model.CodeableConcept observationaddcomponentsetdataabsentreason = new org.hl7.fhir.r4.model.CodeableConcept();
-		observationaddcomponent.setDataAbsentReason(observationaddcomponentsetdataabsentreason);
-
-
-		org.hl7.fhir.r4.model.Coding observationaddcomponentsetdataabsentreasonaddcoding = observationaddcomponentsetdataabsentreason.addCoding();
-
-		/******************** Obs_Component_DataAbsentReason_Coding_Code ********************************************************************************/
-		if(o.getObsComponentDataAbsentReasonCodingCode() != null) { 
-			observationaddcomponentsetdataabsentreasonaddcoding.setCode(o.getObsComponentDataAbsentReasonCodingCode());
-		}
-		/******************** Obs_Component_DataAbsentReason_Coding_Display ********************************************************************************/
-		if(o.getObsComponentDataAbsentReasonCodingDisplay() != null) {
-			observationaddcomponentsetdataabsentreasonaddcoding.setDisplay(o.getObsComponentDataAbsentReasonCodingDisplay());
-		}
-		/******************** Obs_Component_DataAbsentReason_Coding_System ********************************************************************************/
-		if(o.getObsComponentDataAbsentReasonCodingSystem() != null) {
-			observationaddcomponentsetdataabsentreasonaddcoding.setSystem(o.getObsComponentDataAbsentReasonCodingSystem());
-		}
-		/******************** Obs_Component_DataAbsentReason_Coding_Usrslt ********************************************************************************/
-		if(o.getObsComponentDataAbsentReasonCodingUsrslt() != null) {
-			observationaddcomponentsetdataabsentreasonaddcoding.setUserSelected(Boolean.parseBoolean(o.getObsComponentDataAbsentReasonCodingUsrslt()));
-		}
-		/******************** Obs_Component_DataAbsentReason_Coding_Version ********************************************************************************/
-		if(o.getObsComponentDataAbsentReasonCodingVersion() != null) {
-			observationaddcomponentsetdataabsentreasonaddcoding.setVersion(o.getObsComponentDataAbsentReasonCodingVersion());
-		}
-		/******************** Obs_Component_DataAbsentReason_Text ********************************************************************************/
-		if(o.getObsComponentDataAbsentReasonText() != null) {
-			observationaddcomponentsetdataabsentreason.setText(o.getObsComponentDataAbsentReasonText());
-		}
-
-		org.hl7.fhir.r4.model.CodeableConcept observationaddcomponentaddinterpretation = observationaddcomponent.addInterpretation();
-
-
-		org.hl7.fhir.r4.model.Coding observationaddcomponentaddinterpretationaddcoding = observationaddcomponentaddinterpretation.addCoding();
-
-		/******************** Obs_Component_Interpretation_Coding_Code ********************************************************************************/
-		if(o.getObsComponentInterpretationCodingCode() != null) {
-			observationaddcomponentaddinterpretationaddcoding.setCode(o.getObsComponentInterpretationCodingCode());
-		}
-		/******************** Obs_Component_Interpretation_Coding_Display ********************************************************************************/
-		if(o.getObsComponentInterpretationCodingDisplay() != null) {
-			observationaddcomponentaddinterpretationaddcoding.setDisplay(o.getObsComponentInterpretationCodingDisplay());
-		}
-		/******************** Obs_Component_Interpretation_Coding_System ********************************************************************************/
-		if(o.getObsComponentInterpretationCodingSystem() != null) {
-			observationaddcomponentaddinterpretationaddcoding.setSystem(o.getObsComponentInterpretationCodingSystem());
-		}
-		/******************** Obs_Component_Interpretation_Coding_Usrslt ********************************************************************************/
-		if(o.getObsComponentInterpretationCodingUsrslt() != null) {
-			observationaddcomponentaddinterpretationaddcoding.setUserSelected(Boolean.parseBoolean(o.getObsComponentInterpretationCodingUsrslt()));
-		}
-		/******************** Obs_Component_Interpretation_Coding_Version ********************************************************************************/
-		if(o.getObsComponentInterpretationCodingVersion() != null) {
-			observationaddcomponentaddinterpretationaddcoding.setVersion(o.getObsComponentInterpretationCodingVersion());
-		}
-		/******************** Obs_Component_Interpretation_Text ********************************************************************************/
-		if(o.getObsComponentInterpretationText() != null) {
-			observationaddcomponentaddinterpretation.setText(o.getObsComponentInterpretationText());
-		}
-
-		org.hl7.fhir.r4.model.Observation.ObservationReferenceRangeComponent observationaddcomponentaddreferencerange = observationaddcomponent.addReferenceRange();
-
-
-		org.hl7.fhir.r4.model.Range observationaddcomponentaddreferencerangesetage = new org.hl7.fhir.r4.model.Range();
-		observationaddcomponentaddreferencerange.setAge(observationaddcomponentaddreferencerangesetage);
-
-
-		org.hl7.fhir.r4.model.Quantity observationaddcomponentaddreferencerangesetagesethigh = new org.hl7.fhir.r4.model.Quantity();
-		observationaddcomponentaddreferencerangesetage.setHigh(observationaddcomponentaddreferencerangesetagesethigh);
-
-		/******************** Obs_Component_ReferenceRange_Age_High_Code ********************************************************************************/
-		if(o.getObsComponentReferenceRangeAgeHighCode() != null) {
-			observationaddcomponentaddreferencerangesetagesethigh.setCode(o.getObsComponentReferenceRangeAgeHighCode());
-		}
-
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory observationaddcomponentaddreferencerangesetagesethighsetcomparatorEnumFactory = new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-
-		/******************** Obs_Component_ReferenceRange_Age_High_Compartr_Code ********************************************************************************/
-		if(o.getObsComponentReferenceRangeAgeHighCompartrCode() != null) {
-			observationaddcomponentaddreferencerangesetagesethigh.setComparator(observationaddcomponentaddreferencerangesetagesethighsetcomparatorEnumFactory.fromCode(o.getObsComponentReferenceRangeAgeHighCompartrCode()));
-
-		}
-		/******************** Obs_Component_ReferenceRange_Age_High_System ********************************************************************************/
-		if(o.getObsComponentReferenceRangeAgeHighSystem() != null) {
-			observationaddcomponentaddreferencerangesetagesethigh.setSystem(o.getObsComponentReferenceRangeAgeHighSystem());
-		}
-		/******************** Obs_Component_ReferenceRange_Age_High_Unit ********************************************************************************/
-		if(o.getObsComponentReferenceRangeAgeHighUnit() != null) {
-			observationaddcomponentaddreferencerangesetagesethigh.setUnit(o.getObsComponentReferenceRangeAgeHighUnit());
-		}
-		/******************** Obs_Component_ReferenceRange_Age_High_Value ********************************************************************************/
-		if(o.getObsComponentReferenceRangeAgeHighValue() != null) {
-			observationaddcomponentaddreferencerangesetagesethigh.setValue(Double.parseDouble((o.getObsComponentReferenceRangeAgeHighValue())));
-		}
-
-		org.hl7.fhir.r4.model.Quantity observationaddcomponentaddreferencerangesetagesetlow = new org.hl7.fhir.r4.model.Quantity();
-		observationaddcomponentaddreferencerangesetage.setLow(observationaddcomponentaddreferencerangesetagesetlow);
-
-		/******************** Obs_Component_ReferenceRange_Age_Low_Code ********************************************************************************/
-		if(o.getObsComponentReferenceRangeAgeLowCode() != null) {
-			observationaddcomponentaddreferencerangesetagesetlow.setCode(o.getObsComponentReferenceRangeAgeLowCode());
-		}
-
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory observationaddcomponentaddreferencerangesetagesetlowsetcomparatorEnumFactory = new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-
-		/******************** Obs_Component_ReferenceRange_Age_Low_Compartr_Code ********************************************************************************/
-		if(o.getObsComponentReferenceRangeAgeLowCompartrCode() != null) {
-			observationaddcomponentaddreferencerangesetagesetlow.setComparator(observationaddcomponentaddreferencerangesetagesetlowsetcomparatorEnumFactory.fromCode(o.getObsComponentReferenceRangeAgeLowCompartrCode()));
-
-		}
-		/******************** Obs_Component_ReferenceRange_Age_Low_System ********************************************************************************/
-		if(o.getObsComponentReferenceRangeAgeLowSystem() != null) {
-			observationaddcomponentaddreferencerangesetagesetlow.setSystem(o.getObsComponentReferenceRangeAgeLowSystem());
-		}
-		/******************** Obs_Component_ReferenceRange_Age_Low_Unit ********************************************************************************/
-		if(o.getObsComponentReferenceRangeAgeLowUnit() != null) {
-			observationaddcomponentaddreferencerangesetagesetlow.setUnit(o.getObsComponentReferenceRangeAgeLowUnit());
-		}
-		/******************** Obs_Component_ReferenceRange_Age_Low_Value ********************************************************************************/
-		if(o.getObsComponentReferenceRangeAgeLowValue() != null) {
-			observationaddcomponentaddreferencerangesetagesetlow.setValue(Double.parseDouble((o.getObsComponentReferenceRangeAgeLowValue())));
-		}
-
-		org.hl7.fhir.r4.model.CodeableConcept observationaddcomponentaddreferencerangeaddappliesto = observationaddcomponentaddreferencerange.addAppliesTo();
-
-
-		org.hl7.fhir.r4.model.Coding observationaddcomponentaddreferencerangeaddappliestoaddcoding = observationaddcomponentaddreferencerangeaddappliesto.addCoding();
-
-		/******************** Obs_Component_ReferenceRange_AppliesTo_Coding_Code ********************************************************************************/
-		if(o.getObsComponentReferenceRangeAppliesToCodingCode() != null) {
-			observationaddcomponentaddreferencerangeaddappliestoaddcoding.setCode(o.getObsComponentReferenceRangeAppliesToCodingCode());
-		}
-		/******************** Obs_Component_ReferenceRange_AppliesTo_Coding_Display ********************************************************************************/
-		if(o.getObsComponentReferenceRangeAppliesToCodingDisplay() != null) {
-			observationaddcomponentaddreferencerangeaddappliestoaddcoding.setDisplay(o.getObsComponentReferenceRangeAppliesToCodingDisplay());
-		}
-		/******************** Obs_Component_ReferenceRange_AppliesTo_Coding_System ********************************************************************************/
-		if(o.getObsComponentReferenceRangeAppliesToCodingSystem() != null) {
-			observationaddcomponentaddreferencerangeaddappliestoaddcoding.setSystem(o.getObsComponentReferenceRangeAppliesToCodingSystem());
-		}
-		/******************** Obs_Component_ReferenceRange_AppliesTo_Coding_Usrslt ********************************************************************************/
-		if(o.getObsComponentReferenceRangeAppliesToCodingUsrslt() != null) {
-			observationaddcomponentaddreferencerangeaddappliestoaddcoding.setUserSelected(Boolean.parseBoolean(o.getObsComponentReferenceRangeAppliesToCodingUsrslt()));
-		}
-		/******************** Obs_Component_ReferenceRange_AppliesTo_Coding_Version ********************************************************************************/
-		if(o.getObsComponentReferenceRangeAppliesToCodingVersion() != null) {
-			observationaddcomponentaddreferencerangeaddappliestoaddcoding.setVersion(o.getObsComponentReferenceRangeAppliesToCodingVersion());
-		}
-		/******************** Obs_Component_ReferenceRange_AppliesTo_Text ********************************************************************************/
-		if(o.getObsComponentReferenceRangeAppliesToText() != null) {
-			observationaddcomponentaddreferencerangeaddappliesto.setText(o.getObsComponentReferenceRangeAppliesToText());
-		}
-
-		org.hl7.fhir.r4.model.Quantity observationaddcomponentaddreferencerangesethigh = new org.hl7.fhir.r4.model.Quantity();
-		observationaddcomponentaddreferencerange.setHigh(observationaddcomponentaddreferencerangesethigh);
-
-		/******************** Obs_Component_ReferenceRange_High_Code ********************************************************************************/
-		if(o.getObsComponentReferenceRangeHighCode() != null) {
-			observationaddcomponentaddreferencerangesethigh.setCode(o.getObsComponentReferenceRangeHighCode());
-		}
-
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory observationaddcomponentaddreferencerangesethighsetcomparatorEnumFactory = new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-
-		/******************** Obs_Component_ReferenceRange_High_Compartr_Code ********************************************************************************/
-		if(o.getObsComponentReferenceRangeHighCompartrCode() != null) {
-			observationaddcomponentaddreferencerangesethigh.setComparator(observationaddcomponentaddreferencerangesethighsetcomparatorEnumFactory.fromCode(o.getObsComponentReferenceRangeHighCompartrCode()));
-
-		}
-		/******************** Obs_Component_ReferenceRange_High_System ********************************************************************************/
-		if(o.getObsComponentReferenceRangeHighSystem() != null) {
-			observationaddcomponentaddreferencerangesethigh.setSystem(o.getObsComponentReferenceRangeHighSystem());
-		}
-		/******************** Obs_Component_ReferenceRange_High_Unit ********************************************************************************/
-		if(o.getObsComponentReferenceRangeHighUnit() != null) {
-			observationaddcomponentaddreferencerangesethigh.setUnit(o.getObsComponentReferenceRangeHighUnit());
-		}
-		/******************** Obs_Component_ReferenceRange_High_Value ********************************************************************************/
-		if(o.getObsComponentReferenceRangeHighValue() != null) {
-			observationaddcomponentaddreferencerangesethigh.setValue(Double.parseDouble((o.getObsComponentReferenceRangeHighValue())));
-		}
-
-		org.hl7.fhir.r4.model.Quantity observationaddcomponentaddreferencerangesetlow = new org.hl7.fhir.r4.model.Quantity();
-		observationaddcomponentaddreferencerange.setLow(observationaddcomponentaddreferencerangesetlow);
-
-		/******************** Obs_Component_ReferenceRange_Low_Code ********************************************************************************/
-		if(o.getObsComponentReferenceRangeLowCode() != null) {
-			observationaddcomponentaddreferencerangesetlow.setCode(o.getObsComponentReferenceRangeLowCode());
-		}
-
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory observationaddcomponentaddreferencerangesetlowsetcomparatorEnumFactory = new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-
-		/******************** Obs_Component_ReferenceRange_Low_Compartr_Code ********************************************************************************/
-		if(o.getObsComponentReferenceRangeLowCompartrCode() != null) {
-			observationaddcomponentaddreferencerangesetlow.setComparator(observationaddcomponentaddreferencerangesetlowsetcomparatorEnumFactory.fromCode(o.getObsComponentReferenceRangeLowCompartrCode()));
-
-		}
-		/******************** Obs_Component_ReferenceRange_Low_System ********************************************************************************/
-		if(o.getObsComponentReferenceRangeLowSystem() != null) {
-			observationaddcomponentaddreferencerangesetlow.setSystem(o.getObsComponentReferenceRangeLowSystem());
-		}
-		/******************** Obs_Component_ReferenceRange_Low_Unit ********************************************************************************/
-		if(o.getObsComponentReferenceRangeLowUnit() != null) {
-			observationaddcomponentaddreferencerangesetlow.setUnit(o.getObsComponentReferenceRangeLowUnit());
-		}
-		/******************** Obs_Component_ReferenceRange_Low_Value ********************************************************************************/
-		if(o.getObsComponentReferenceRangeLowValue() != null) {
-			observationaddcomponentaddreferencerangesetlow.setValue(Double.parseDouble((o.getObsComponentReferenceRangeLowValue())));
-		}
-		/******************** Obs_Component_ReferenceRange_Text ********************************************************************************/
-		if(o.getObsComponentReferenceRangeText() != null) {
-			observationaddcomponentaddreferencerange.setText(o.getObsComponentReferenceRangeText());
-		}
-
-		org.hl7.fhir.r4.model.CodeableConcept observationaddcomponentaddreferencerangesettype = new org.hl7.fhir.r4.model.CodeableConcept();
-		observationaddcomponentaddreferencerange.setType(observationaddcomponentaddreferencerangesettype);
-
-
-		org.hl7.fhir.r4.model.Coding observationaddcomponentaddreferencerangesettypeaddcoding = observationaddcomponentaddreferencerangesettype.addCoding();
-
-		/******************** Obs_Component_ReferenceRange_Type_Coding_Code ********************************************************************************/
-		if(o.getObsComponentReferenceRangeTypeCodingCode() != null) {
-			observationaddcomponentaddreferencerangesettypeaddcoding.setCode(o.getObsComponentReferenceRangeTypeCodingCode());
-		}
-		/******************** Obs_Component_ReferenceRange_Type_Coding_Display ********************************************************************************/
-		if(o.getObsComponentReferenceRangeTypeCodingDisplay() != null) {
-			observationaddcomponentaddreferencerangesettypeaddcoding.setDisplay(o.getObsComponentReferenceRangeTypeCodingDisplay());
-		}
-		/******************** Obs_Component_ReferenceRange_Type_Coding_System ********************************************************************************/
-		if(o.getObsComponentReferenceRangeTypeCodingSystem() != null) {
-			observationaddcomponentaddreferencerangesettypeaddcoding.setSystem(o.getObsComponentReferenceRangeTypeCodingSystem());
-		}
-		/******************** Obs_Component_ReferenceRange_Type_Coding_Usrslt ********************************************************************************/
-		if(o.getObsComponentReferenceRangeTypeCodingUsrslt() != null) {
-			observationaddcomponentaddreferencerangesettypeaddcoding.setUserSelected(Boolean.parseBoolean(o.getObsComponentReferenceRangeTypeCodingUsrslt()));
-		}
-		/******************** Obs_Component_ReferenceRange_Type_Coding_Version ********************************************************************************/
-		if(o.getObsComponentReferenceRangeTypeCodingVersion() != null) {
-			observationaddcomponentaddreferencerangesettypeaddcoding.setVersion(o.getObsComponentReferenceRangeTypeCodingVersion());
-		}
-		/******************** Obs_Component_ReferenceRange_Type_Text ********************************************************************************/
-		if(o.getObsComponentReferenceRangeTypeText() != null) {
-			observationaddcomponentaddreferencerangesettype.setText(o.getObsComponentReferenceRangeTypeText());
-		}
-		/******************** Observation_Component_ValueBoolean ********************************************************************************/
-		if(o.getObservationComponentValueBoolean() != null) {
-			observationaddcomponent.setValue(new org.hl7.fhir.r4.model.BooleanType(o.getObservationComponentValueBoolean()));
-		}
-
-		if( o.getObsComponentValueCodeableConceptCodingCode() != null || o.getObsComponentValueCodeableConceptCodingDisplay() != null || o.getObsComponentValueCodeableConceptCodingSystem() != null || o.getObsComponentValueCodeableConceptCodingUsrslt() != null || o.getObsComponentValueCodeableConceptCodingVersion() != null || o.getObsComponentValueCodeableConceptText() != null ) {
-			org.hl7.fhir.r4.model.CodeableConcept observationaddcomponentsetvalueCodeableConcept = new org.hl7.fhir.r4.model.CodeableConcept();
-			observationaddcomponent.setValue(observationaddcomponentsetvalueCodeableConcept);
-
-
-		org.hl7.fhir.r4.model.Coding observationaddcomponentsetvalueCodeableConceptaddcoding = observationaddcomponentsetvalueCodeableConcept.addCoding();
-
-		/******************** Obs_Component_Value_CodeableConcept_Coding_Code ********************************************************************************/
-		if(o.getObsComponentValueCodeableConceptCodingCode() != null) {
-			observationaddcomponentsetvalueCodeableConceptaddcoding.setCode(o.getObsComponentValueCodeableConceptCodingCode());
-		}
-		/******************** Obs_Component_Value_CodeableConcept_Coding_Display ********************************************************************************/
-		if(o.getObsComponentValueCodeableConceptCodingDisplay() != null) {
-			observationaddcomponentsetvalueCodeableConceptaddcoding.setDisplay(o.getObsComponentValueCodeableConceptCodingDisplay());
-		}
-		/******************** Obs_Component_Value_CodeableConcept_Coding_System ********************************************************************************/
-		if(o.getObsComponentValueCodeableConceptCodingSystem() != null) {
-			observationaddcomponentsetvalueCodeableConceptaddcoding.setSystem(o.getObsComponentValueCodeableConceptCodingSystem());
-		}
-		/******************** Obs_Component_Value_CodeableConcept_Coding_Usrslt ********************************************************************************/
-		if(o.getObsComponentValueCodeableConceptCodingUsrslt() != null) {
-			observationaddcomponentsetvalueCodeableConceptaddcoding.setUserSelected(Boolean.parseBoolean(o.getObsComponentValueCodeableConceptCodingUsrslt()));
-		}
-		/******************** Obs_Component_Value_CodeableConcept_Coding_Version ********************************************************************************/
-		if(o.getObsComponentValueCodeableConceptCodingVersion() != null) {
-			observationaddcomponentsetvalueCodeableConceptaddcoding.setVersion(o.getObsComponentValueCodeableConceptCodingVersion());
-		}
-		/******************** Obs_Component_Value_CodeableConcept_Text ********************************************************************************/
-		if(o.getObsComponentValueCodeableConceptText() != null) {
-			observationaddcomponentsetvalueCodeableConcept.setText(o.getObsComponentValueCodeableConceptText());
-		}
-		}
-		/******************** Observation_Component_ValueDateTime ********************************************************************************/
-		if(o.getObservationComponentValueDateTime() != null) {
-			observationaddcomponent.setValue(new org.hl7.fhir.r4.model.DateTimeType(o.getObservationComponentValueDateTime()));
-		}
-		/******************** Observation_Component_ValueInteger ********************************************************************************/
-		if(o.getObservationComponentValueInteger() != null) {
-			observationaddcomponent.setValue(new org.hl7.fhir.r4.model.IntegerType(o.getObservationComponentValueInteger()));
-		}
-
-		if( o.getObsComponentValuePeriodEnd() != null || o.getObsComponentValuePeriodStart() != null ) {
-			org.hl7.fhir.r4.model.Period observationaddcomponentsetvaluePeriod = new org.hl7.fhir.r4.model.Period();
-			observationaddcomponent.setValue(observationaddcomponentsetvaluePeriod);
-
-		/******************** Obs_Component_Value_Period_End ********************************************************************************/
-		if(o.getObsComponentValuePeriodEnd() != null) {
-			java.text.SimpleDateFormat ObsComponentValuePeriodEndsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date ObsComponentValuePeriodEnddate = ObsComponentValuePeriodEndsdf.parse(o.getObsComponentValuePeriodEnd());
-			observationaddcomponentsetvaluePeriod.setEnd(ObsComponentValuePeriodEnddate);
-		}
-		/******************** Obs_Component_Value_Period_Start ********************************************************************************/
-		if(o.getObsComponentValuePeriodStart() != null) {
-			java.text.SimpleDateFormat ObsComponentValuePeriodStartsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date ObsComponentValuePeriodStartdate = ObsComponentValuePeriodStartsdf.parse(o.getObsComponentValuePeriodStart());
-			observationaddcomponentsetvaluePeriod.setStart(ObsComponentValuePeriodStartdate);
-		}
-		}
-
-		if( o.getObsComponentValueQuantityCode() != null || o.getObsComponentValueQuantityCompartrCode() != null || o.getObsComponentValueQuantitySystem() != null || o.getObsComponentValueQuantityUnit() != null || o.getObsComponentValueQuantityValue() != null ) {
-			org.hl7.fhir.r4.model.Quantity observationaddcomponentsetvalueQuantity = new org.hl7.fhir.r4.model.Quantity();
-			observationaddcomponent.setValue(observationaddcomponentsetvalueQuantity);
-
-		/******************** Obs_Component_Value_Quantity_Code ********************************************************************************/
-		if(o.getObsComponentValueQuantityCode() != null) {
-			observationaddcomponentsetvalueQuantity.setCode(o.getObsComponentValueQuantityCode());
-		}
-
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory observationaddcomponentsetvalueQuantitysetcomparatorEnumFactory = new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-
-		/******************** Obs_Component_Value_Quantity_Compartr_Code ********************************************************************************/
-		if(o.getObsComponentValueQuantityCompartrCode() != null) {
-			observationaddcomponentsetvalueQuantity.setComparator(observationaddcomponentsetvalueQuantitysetcomparatorEnumFactory.fromCode(o.getObsComponentValueQuantityCompartrCode()));
-
-		}
-		/******************** Obs_Component_Value_Quantity_System ********************************************************************************/
-		if(o.getObsComponentValueQuantitySystem() != null) {
-			observationaddcomponentsetvalueQuantity.setSystem(o.getObsComponentValueQuantitySystem());
-		}
-		/******************** Obs_Component_Value_Quantity_Unit ********************************************************************************/
-		if(o.getObsComponentValueQuantityUnit() != null) {
-			observationaddcomponentsetvalueQuantity.setUnit(o.getObsComponentValueQuantityUnit());
-		}
-		/******************** Obs_Component_Value_Quantity_Value ********************************************************************************/
-		if(o.getObsComponentValueQuantityValue() != null) {
-			observationaddcomponentsetvalueQuantity.setValue(Double.parseDouble((o.getObsComponentValueQuantityValue())));
-		}
-		}
-
-		if( o.getObsComponentValueRangeHighCode() != null || o.getObsComponentValueRangeHighCompartrCode() != null || o.getObsComponentValueRangeHighSystem() != null || o.getObsComponentValueRangeHighUnit() != null || o.getObsComponentValueRangeHighValue() != null || o.getObsComponentValueRangeLowCode() != null || o.getObsComponentValueRangeLowCompartrCode() != null || o.getObsComponentValueRangeLowSystem() != null || o.getObsComponentValueRangeLowUnit() != null || o.getObsComponentValueRangeLowValue() != null ) {
-			org.hl7.fhir.r4.model.Range observationaddcomponentsetvalueRange = new org.hl7.fhir.r4.model.Range();
-			observationaddcomponent.setValue(observationaddcomponentsetvalueRange);
-
-
-		org.hl7.fhir.r4.model.Quantity observationaddcomponentsetvalueRangesethigh = new org.hl7.fhir.r4.model.Quantity();
-		observationaddcomponentsetvalueRange.setHigh(observationaddcomponentsetvalueRangesethigh);
-
-		/******************** Obs_Component_Value_Range_High_Code ********************************************************************************/
-		if(o.getObsComponentValueRangeHighCode() != null) {
-			observationaddcomponentsetvalueRangesethigh.setCode(o.getObsComponentValueRangeHighCode());
-		}
-
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory observationaddcomponentsetvalueRangesethighsetcomparatorEnumFactory = new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-
-		/******************** Obs_Component_Value_Range_High_Compartr_Code ********************************************************************************/
-		if(o.getObsComponentValueRangeHighCompartrCode() != null) {
-			observationaddcomponentsetvalueRangesethigh.setComparator(observationaddcomponentsetvalueRangesethighsetcomparatorEnumFactory.fromCode(o.getObsComponentValueRangeHighCompartrCode()));
-
-		}
-		/******************** Obs_Component_Value_Range_High_System ********************************************************************************/
-		if(o.getObsComponentValueRangeHighSystem() != null) {
-			observationaddcomponentsetvalueRangesethigh.setSystem(o.getObsComponentValueRangeHighSystem());
-		}
-		/******************** Obs_Component_Value_Range_High_Unit ********************************************************************************/
-		if(o.getObsComponentValueRangeHighUnit() != null) {
-			observationaddcomponentsetvalueRangesethigh.setUnit(o.getObsComponentValueRangeHighUnit());
-		}
-		/******************** Obs_Component_Value_Range_High_Value ********************************************************************************/
-		if(o.getObsComponentValueRangeHighValue() != null) {
-			observationaddcomponentsetvalueRangesethigh.setValue(Double.parseDouble((o.getObsComponentValueRangeHighValue())));
-		}
-
-		org.hl7.fhir.r4.model.Quantity observationaddcomponentsetvalueRangesetlow = new org.hl7.fhir.r4.model.Quantity();
-		observationaddcomponentsetvalueRange.setLow(observationaddcomponentsetvalueRangesetlow);
-
-		/******************** Obs_Component_Value_Range_Low_Code ********************************************************************************/
-		if(o.getObsComponentValueRangeLowCode() != null) {
-			observationaddcomponentsetvalueRangesetlow.setCode(o.getObsComponentValueRangeLowCode());
-		}
-
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory observationaddcomponentsetvalueRangesetlowsetcomparatorEnumFactory = new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-
-		/******************** Obs_Component_Value_Range_Low_Compartr_Code ********************************************************************************/
-		if(o.getObsComponentValueRangeLowCompartrCode() != null) {
-			observationaddcomponentsetvalueRangesetlow.setComparator(observationaddcomponentsetvalueRangesetlowsetcomparatorEnumFactory.fromCode(o.getObsComponentValueRangeLowCompartrCode()));
-
-		}
-		/******************** Obs_Component_Value_Range_Low_System ********************************************************************************/
-		if(o.getObsComponentValueRangeLowSystem() != null) {
-			observationaddcomponentsetvalueRangesetlow.setSystem(o.getObsComponentValueRangeLowSystem());
-		}
-		/******************** Obs_Component_Value_Range_Low_Unit ********************************************************************************/
-		if(o.getObsComponentValueRangeLowUnit() != null) {
-			observationaddcomponentsetvalueRangesetlow.setUnit(o.getObsComponentValueRangeLowUnit());
-		}
-		/******************** Obs_Component_Value_Range_Low_Value ********************************************************************************/
-		if(o.getObsComponentValueRangeLowValue() != null) {
-			observationaddcomponentsetvalueRangesetlow.setValue(Double.parseDouble((o.getObsComponentValueRangeLowValue())));
-		}
-		}
-
-		if( o.getObsComponentValueRatioDenomCode() != null || o.getObsComponentValueRatioDenomCompartrCode() != null || o.getObsComponentValueRatioDenomSystem() != null || o.getObsComponentValueRatioDenomUnit() != null || o.getObsComponentValueRatioDenomValue() != null || o.getObsComponentValueRatioNumeratorCode() != null || o.getObsComponentValueRatioNumeratorCompartrCode() != null || o.getObsComponentValueRatioNumeratorSystem() != null || o.getObsComponentValueRatioNumeratorUnit() != null || o.getObsComponentValueRatioNumeratorValue() != null ) {
-			org.hl7.fhir.r4.model.Ratio observationaddcomponentsetvalueRatio = new org.hl7.fhir.r4.model.Ratio();
-			observationaddcomponent.setValue(observationaddcomponentsetvalueRatio);
-
-
-		org.hl7.fhir.r4.model.Quantity observationaddcomponentsetvalueRatiosetdenominator = new org.hl7.fhir.r4.model.Quantity();
-		observationaddcomponentsetvalueRatio.setDenominator(observationaddcomponentsetvalueRatiosetdenominator);
-
-		/******************** Obs_Component_Value_Ratio_Denom_Code ********************************************************************************/
-		if(o.getObsComponentValueRatioDenomCode() != null) {
-			observationaddcomponentsetvalueRatiosetdenominator.setCode(o.getObsComponentValueRatioDenomCode());
-		}
-
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory observationaddcomponentsetvalueRatiosetdenominatorsetcomparatorEnumFactory = new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-
-		/******************** Obs_Component_Value_Ratio_Denom_Compartr_Code ********************************************************************************/
-		if(o.getObsComponentValueRatioDenomCompartrCode() != null) {
-			observationaddcomponentsetvalueRatiosetdenominator.setComparator(observationaddcomponentsetvalueRatiosetdenominatorsetcomparatorEnumFactory.fromCode(o.getObsComponentValueRatioDenomCompartrCode()));
-
-		}
-		/******************** Obs_Component_Value_Ratio_Denom_System ********************************************************************************/
-		if(o.getObsComponentValueRatioDenomSystem() != null) {
-			observationaddcomponentsetvalueRatiosetdenominator.setSystem(o.getObsComponentValueRatioDenomSystem());
-		}
-		/******************** Obs_Component_Value_Ratio_Denom_Unit ********************************************************************************/
-		if(o.getObsComponentValueRatioDenomUnit() != null) {
-			observationaddcomponentsetvalueRatiosetdenominator.setUnit(o.getObsComponentValueRatioDenomUnit());
-		}
-		/******************** Obs_Component_Value_Ratio_Denom_Value ********************************************************************************/
-		if(o.getObsComponentValueRatioDenomValue() != null) {
-			observationaddcomponentsetvalueRatiosetdenominator.setValue(Double.parseDouble((o.getObsComponentValueRatioDenomValue())));
-		}
-
-		org.hl7.fhir.r4.model.Quantity observationaddcomponentsetvalueRatiosetnumerator = new org.hl7.fhir.r4.model.Quantity();
-		observationaddcomponentsetvalueRatio.setNumerator(observationaddcomponentsetvalueRatiosetnumerator);
-
-		/******************** Obs_Component_Value_Ratio_Numerator_Code ********************************************************************************/
-		if(o.getObsComponentValueRatioNumeratorCode() != null) {
-			observationaddcomponentsetvalueRatiosetnumerator.setCode(o.getObsComponentValueRatioNumeratorCode());
-		}
-
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory observationaddcomponentsetvalueRatiosetnumeratorsetcomparatorEnumFactory = new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-
-		/******************** Obs_Component_Value_Ratio_Numerator_Compartr_Code ********************************************************************************/
-		if(o.getObsComponentValueRatioNumeratorCompartrCode() != null) {
-			observationaddcomponentsetvalueRatiosetnumerator.setComparator(observationaddcomponentsetvalueRatiosetnumeratorsetcomparatorEnumFactory.fromCode(o.getObsComponentValueRatioNumeratorCompartrCode()));
-
-		}
-		/******************** Obs_Component_Value_Ratio_Numerator_System ********************************************************************************/
-		if(o.getObsComponentValueRatioNumeratorSystem() != null) {
-			observationaddcomponentsetvalueRatiosetnumerator.setSystem(o.getObsComponentValueRatioNumeratorSystem());
-		}
-		/******************** Obs_Component_Value_Ratio_Numerator_Unit ********************************************************************************/
-		if(o.getObsComponentValueRatioNumeratorUnit() != null) {
-			observationaddcomponentsetvalueRatiosetnumerator.setUnit(o.getObsComponentValueRatioNumeratorUnit());
-		}
-		/******************** Obs_Component_Value_Ratio_Numerator_Value ********************************************************************************/
-		if(o.getObsComponentValueRatioNumeratorValue() != null) {
-			observationaddcomponentsetvalueRatiosetnumerator.setValue(Double.parseDouble((o.getObsComponentValueRatioNumeratorValue())));
-		}
-		}
-
-		if( o.getObsComponentValueSampledDataData() != null || o.getObsComponentValueSampledDataDimensions() != null || o.getObsComponentValueSampledDataFactor() != null || o.getObsComponentValueSampledDataLowerLimit() != null || o.getObsComponentValueSampledDataOriginCode() != null || o.getObsComponentValueSampledDataOriginCompartrCode() != null || o.getObsComponentValueSampledDataOriginSystem() != null || o.getObsComponentValueSampledDataOriginUnit() != null || o.getObsComponentValueSampledDataOriginValue() != null || o.getObsComponentValueSampledDataPeriod() != null || o.getObsComponentValueSampledDataUpperLimit() != null ) {
-			org.hl7.fhir.r4.model.SampledData observationaddcomponentsetvalueSampledData = new org.hl7.fhir.r4.model.SampledData();
-			observationaddcomponent.setValue(observationaddcomponentsetvalueSampledData);
-
-		/******************** Obs_Component_Value_SampledData_Data ********************************************************************************/
-		if(o.getObsComponentValueSampledDataData() != null) {
-			observationaddcomponentsetvalueSampledData.setData(o.getObsComponentValueSampledDataData());
-		}
-		/******************** Obs_Component_Value_SampledData_Dimensions ********************************************************************************/
-		if(o.getObsComponentValueSampledDataDimensions() != null) {
-			observationaddcomponentsetvalueSampledData.setDimensions(Integer.parseInt(o.getObsComponentValueSampledDataDimensions()));
-		}
-		/******************** Obs_Component_Value_SampledData_Factor ********************************************************************************/
-		if(o.getObsComponentValueSampledDataFactor() != null) {
-			observationaddcomponentsetvalueSampledData.setFactor(Double.parseDouble((o.getObsComponentValueSampledDataFactor())));
-		}
-		/******************** Obs_Component_Value_SampledData_LowerLimit ********************************************************************************/
-		if(o.getObsComponentValueSampledDataLowerLimit() != null) {
-			observationaddcomponentsetvalueSampledData.setLowerLimit(Double.parseDouble((o.getObsComponentValueSampledDataLowerLimit())));
-		}
-
-		org.hl7.fhir.r4.model.Quantity observationaddcomponentsetvalueSampledDatasetorigin = new org.hl7.fhir.r4.model.Quantity();
-		observationaddcomponentsetvalueSampledData.setOrigin(observationaddcomponentsetvalueSampledDatasetorigin);
-
-		/******************** Obs_Component_Value_SampledData_Origin_Code ********************************************************************************/
-		if(o.getObsComponentValueSampledDataOriginCode() != null) {
-			observationaddcomponentsetvalueSampledDatasetorigin.setCode(o.getObsComponentValueSampledDataOriginCode());
-		}
-
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory observationaddcomponentsetvalueSampledDatasetoriginsetcomparatorEnumFactory = new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-
-		/******************** Obs_Component_Value_SampledData_Origin_Compartr_Code ********************************************************************************/
-		if(o.getObsComponentValueSampledDataOriginCompartrCode() != null) {
-			observationaddcomponentsetvalueSampledDatasetorigin.setComparator(observationaddcomponentsetvalueSampledDatasetoriginsetcomparatorEnumFactory.fromCode(o.getObsComponentValueSampledDataOriginCompartrCode()));
-
-		}
-		/******************** Obs_Component_Value_SampledData_Origin_System ********************************************************************************/
-		if(o.getObsComponentValueSampledDataOriginSystem() != null) {
-			observationaddcomponentsetvalueSampledDatasetorigin.setSystem(o.getObsComponentValueSampledDataOriginSystem());
-		}
-		/******************** Obs_Component_Value_SampledData_Origin_Unit ********************************************************************************/
-		if(o.getObsComponentValueSampledDataOriginUnit() != null) {
-			observationaddcomponentsetvalueSampledDatasetorigin.setUnit(o.getObsComponentValueSampledDataOriginUnit());
-		}
-		/******************** Obs_Component_Value_SampledData_Origin_Value ********************************************************************************/
-		if(o.getObsComponentValueSampledDataOriginValue() != null) {
-			observationaddcomponentsetvalueSampledDatasetorigin.setValue(Double.parseDouble((o.getObsComponentValueSampledDataOriginValue())));
-		}
-		/******************** Obs_Component_Value_SampledData_Period ********************************************************************************/
-		if(o.getObsComponentValueSampledDataPeriod() != null) {
-			observationaddcomponentsetvalueSampledData.setPeriod(Double.parseDouble((o.getObsComponentValueSampledDataPeriod())));
-		}
-		/******************** Obs_Component_Value_SampledData_UpperLimit ********************************************************************************/
-		if(o.getObsComponentValueSampledDataUpperLimit() != null) {
-			observationaddcomponentsetvalueSampledData.setUpperLimit(Double.parseDouble((o.getObsComponentValueSampledDataUpperLimit())));
-		}
-		}
-		/******************** Observation_Component_ValueString ********************************************************************************/
-		if(o.getObservationComponentValueString() != null) {
-			observationaddcomponent.setValue(new org.hl7.fhir.r4.model.StringType(o.getObservationComponentValueString()));
-		}
-		/******************** Observation_Component_ValueTime ********************************************************************************/
-		if(o.getObservationComponentValueTime() != null) {
-			observationaddcomponent.setValue(new org.hl7.fhir.r4.model.TimeType(o.getObservationComponentValueTime()));
-		}
-
-		org.hl7.fhir.r4.model.CodeableConcept observationsetdataabsentreason = new org.hl7.fhir.r4.model.CodeableConcept();
-		observation.setDataAbsentReason(observationsetdataabsentreason);
-
-
-		org.hl7.fhir.r4.model.Coding observationsetdataabsentreasonaddcoding = observationsetdataabsentreason.addCoding();
-
-		/******************** Obs_DataAbsentReason_Coding_Code ********************************************************************************/
-		if(o.getObsDataAbsentReasonCodingCode() != null) {
-			observationsetdataabsentreasonaddcoding.setCode(o.getObsDataAbsentReasonCodingCode());
-		}
-		/******************** Obs_DataAbsentReason_Coding_Display ********************************************************************************/
-		if(o.getObsDataAbsentReasonCodingDisplay() != null) {
-			observationsetdataabsentreasonaddcoding.setDisplay(o.getObsDataAbsentReasonCodingDisplay());
-		}
-		/******************** Obs_DataAbsentReason_Coding_System ********************************************************************************/
-		if(o.getObsDataAbsentReasonCodingSystem() != null) {
-			observationsetdataabsentreasonaddcoding.setSystem(o.getObsDataAbsentReasonCodingSystem());
-		}
-		/******************** Obs_DataAbsentReason_Coding_Usrslt ********************************************************************************/
-		if(o.getObsDataAbsentReasonCodingUsrslt() != null) {
-			observationsetdataabsentreasonaddcoding.setUserSelected(Boolean.parseBoolean(o.getObsDataAbsentReasonCodingUsrslt()));
-		}
-		/******************** Obs_DataAbsentReason_Coding_Version ********************************************************************************/
-		if(o.getObsDataAbsentReasonCodingVersion() != null) {
-			observationsetdataabsentreasonaddcoding.setVersion(o.getObsDataAbsentReasonCodingVersion());
-		}
-		/******************** Obs_DataAbsentReason_Text ********************************************************************************/
-		if(o.getObsDataAbsentReasonText() != null) {
-			observationsetdataabsentreason.setText(o.getObsDataAbsentReasonText());
-		}
-		/******************** Obs_DerivedFrom ********************************************************************************/
-		if(o.getObsDerivedFrom() != null) {
-			org.hl7.fhir.r4.model.Reference ObsDerivedFromref = new org.hl7.fhir.r4.model.Reference();
-			observation.addDerivedFrom(ObsDerivedFromref.setReference(o.getObsDerivedFrom()));
-		}
-		/******************** Obs_Device ********************************************************************************/
-		if(o.getObsDevice() != null) {
-			org.hl7.fhir.r4.model.Reference ObsDeviceref = new org.hl7.fhir.r4.model.Reference();
-			observation.setDevice(ObsDeviceref.setReference(o.getObsDevice()));
-		}
-		/******************** Observation_EffectiveDateTime ********************************************************************************/
-		if(o.getObservationEffectiveDateTime() != null) {
-			observation.setEffective(new org.hl7.fhir.r4.model.DateTimeType(o.getObservationEffectiveDateTime()));
-		}
-		/******************** Observation_EffectiveInstant ********************************************************************************/
-		if(o.getObservationEffectiveInstant() != null) {
-			observation.setEffective(new org.hl7.fhir.r4.model.InstantType(o.getObservationEffectiveInstant()));
-		}
-
-		if( o.getObsEffectivePeriodEnd() != null || o.getObsEffectivePeriodStart() != null ) {
-			org.hl7.fhir.r4.model.Period observationseteffectivePeriod = new org.hl7.fhir.r4.model.Period();
-			observation.setEffective(observationseteffectivePeriod);
-
-		/******************** Obs_Effective_Period_End ********************************************************************************/
-		if(o.getObsEffectivePeriodEnd() != null) {
-			java.text.SimpleDateFormat ObsEffectivePeriodEndsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date ObsEffectivePeriodEnddate = ObsEffectivePeriodEndsdf.parse(o.getObsEffectivePeriodEnd());
-			observationseteffectivePeriod.setEnd(ObsEffectivePeriodEnddate);
-		}
-		/******************** Obs_Effective_Period_Start ********************************************************************************/
-		if(o.getObsEffectivePeriodStart() != null) {
-			java.text.SimpleDateFormat ObsEffectivePeriodStartsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date ObsEffectivePeriodStartdate = ObsEffectivePeriodStartsdf.parse(o.getObsEffectivePeriodStart());
-			observationseteffectivePeriod.setStart(ObsEffectivePeriodStartdate);
-		}
-		}
-
-		if( o.getObsEffectiveTimingCodeCodingCode() != null || o.getObsEffectiveTimingCodeCodingDisplay() != null || o.getObsEffectiveTimingCodeCodingSystem() != null || o.getObsEffectiveTimingCodeCodingUsrslt() != null || o.getObsEffectiveTimingCodeCodingVersion() != null || o.getObsEffectiveTimingCodeText() != null || o.getObsEffectiveTimingEvent() != null || o.getObsEffectiveTimingRepeatBoundsDurationCode() != null || o.getObsEffectiveTimingRepeatBoundsDurationCompartrCode() != null || o.getObsEffectiveTimingRepeatBoundsDurationSystem() != null || o.getObsEffectiveTimingRepeatBoundsDurationUnit() != null || o.getObsEffectiveTimingRepeatBoundsDurationValue() != null || o.getObsEffectiveTimingRepeatBoundsPeriodEnd() != null || o.getObsEffectiveTimingRepeatBoundsPeriodStart() != null || o.getObsEffectiveTimingRepeatBoundsRangeHighCode() != null || o.getObsEffectiveTimingRepeatBoundsRangeHighCompartrCode() != null || o.getObsEffectiveTimingRepeatBoundsRangeHighSystem() != null || o.getObsEffectiveTimingRepeatBoundsRangeHighUnit() != null || o.getObsEffectiveTimingRepeatBoundsRangeHighValue() != null || o.getObsEffectiveTimingRepeatBoundsRangeLowCode() != null || o.getObsEffectiveTimingRepeatBoundsRangeLowCompartrCode() != null || o.getObsEffectiveTimingRepeatBoundsRangeLowSystem() != null || o.getObsEffectiveTimingRepeatBoundsRangeLowUnit() != null || o.getObsEffectiveTimingRepeatBoundsRangeLowValue() != null || o.getObsEffectiveTimingRepeatCount() != null || o.getObsEffectiveTimingRepeatCountMax() != null || o.getObsEffectiveTimingRepeatDayOfWeekCode() != null || o.getObsEffectiveTimingRepeatDuration() != null || o.getObsEffectiveTimingRepeatDurationMax() != null || o.getObsEffectiveTimingRepeatDurationUnitCode() != null || o.getObsEffectiveTimingRepeatFrequency() != null || o.getObsEffectiveTimingRepeatFrequencyMax() != null || o.getObsEffectiveTimingRepeatOff() != null || o.getObsEffectiveTimingRepeatPeriod() != null || o.getObsEffectiveTimingRepeatPeriodMax() != null || o.getObsEffectiveTimingRepeatPeriodUnitCode() != null || o.getObsEffectiveTimingRepeatTimeOfDay() != null || o.getObsEffectiveTimingRepeatWhenCode() != null ) {
-			org.hl7.fhir.r4.model.Timing observationseteffectiveTiming = new org.hl7.fhir.r4.model.Timing();
-			observation.setEffective(observationseteffectiveTiming);
-
-
-		org.hl7.fhir.r4.model.CodeableConcept observationseteffectiveTimingsetcode = new org.hl7.fhir.r4.model.CodeableConcept();
-		observationseteffectiveTiming.setCode(observationseteffectiveTimingsetcode);
-
-
-		org.hl7.fhir.r4.model.Coding observationseteffectiveTimingsetcodeaddcoding = observationseteffectiveTimingsetcode.addCoding();
-
-		/******************** Obs_Effective_Timing_Code_Coding_Code ********************************************************************************/
-		if(o.getObsEffectiveTimingCodeCodingCode() != null) {
-			observationseteffectiveTimingsetcodeaddcoding.setCode(o.getObsEffectiveTimingCodeCodingCode());
-		}
-		/******************** Obs_Effective_Timing_Code_Coding_Display ********************************************************************************/
-		if(o.getObsEffectiveTimingCodeCodingDisplay() != null) {
-			observationseteffectiveTimingsetcodeaddcoding.setDisplay(o.getObsEffectiveTimingCodeCodingDisplay());
-		}
-		/******************** Obs_Effective_Timing_Code_Coding_System ********************************************************************************/
-		if(o.getObsEffectiveTimingCodeCodingSystem() != null) {
-			observationseteffectiveTimingsetcodeaddcoding.setSystem(o.getObsEffectiveTimingCodeCodingSystem());
-		}
-		/******************** Obs_Effective_Timing_Code_Coding_Usrslt ********************************************************************************/
-		if(o.getObsEffectiveTimingCodeCodingUsrslt() != null) {
-			observationseteffectiveTimingsetcodeaddcoding.setUserSelected(Boolean.parseBoolean(o.getObsEffectiveTimingCodeCodingUsrslt()));
-		}
-		/******************** Obs_Effective_Timing_Code_Coding_Version ********************************************************************************/
-		if(o.getObsEffectiveTimingCodeCodingVersion() != null) {
-			observationseteffectiveTimingsetcodeaddcoding.setVersion(o.getObsEffectiveTimingCodeCodingVersion());
-		}
-		/******************** Obs_Effective_Timing_Code_Text ********************************************************************************/
-		if(o.getObsEffectiveTimingCodeText() != null) {
-			observationseteffectiveTimingsetcode.setText(o.getObsEffectiveTimingCodeText());
-		}
-		/******************** Obs_Effective_Timing_Event ********************************************************************************/
-		if(o.getObsEffectiveTimingEvent() != null) {
-			java.text.SimpleDateFormat ObsEffectiveTimingEventsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date ObsEffectiveTimingEventdate = ObsEffectiveTimingEventsdf.parse(o.getObsEffectiveTimingEvent());
-			observationseteffectiveTiming.addEvent(ObsEffectiveTimingEventdate);
-		}
-
-		org.hl7.fhir.r4.model.Timing.TimingRepeatComponent observationseteffectiveTimingsetrepeat = new org.hl7.fhir.r4.model.Timing.TimingRepeatComponent();
-		observationseteffectiveTiming.setRepeat(observationseteffectiveTimingsetrepeat);
-
-
-		if( o.getObsEffectiveTimingRepeatBoundsDurationCode() != null || o.getObsEffectiveTimingRepeatBoundsDurationCompartrCode() != null || o.getObsEffectiveTimingRepeatBoundsDurationSystem() != null || o.getObsEffectiveTimingRepeatBoundsDurationUnit() != null || o.getObsEffectiveTimingRepeatBoundsDurationValue() != null ) {
-			org.hl7.fhir.r4.model.Duration observationseteffectiveTimingsetrepeatsetboundsDuration = new org.hl7.fhir.r4.model.Duration();
-			observationseteffectiveTimingsetrepeat.setBounds(observationseteffectiveTimingsetrepeatsetboundsDuration);
-
-		/******************** Obs_Effective_Timing_Repeat_Bounds_Duration_Code ********************************************************************************/
-		if(o.getObsEffectiveTimingRepeatBoundsDurationCode() != null) {
-			observationseteffectiveTimingsetrepeatsetboundsDuration.setCode(o.getObsEffectiveTimingRepeatBoundsDurationCode());
-		}
-
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory observationseteffectiveTimingsetrepeatsetboundsDurationsetcomparatorEnumFactory = new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-
-		/******************** Obs_Effective_Timing_Repeat_Bounds_Duration_Compartr_Code ********************************************************************************/
-		if(o.getObsEffectiveTimingRepeatBoundsDurationCompartrCode() != null) {
-			observationseteffectiveTimingsetrepeatsetboundsDuration.setComparator(observationseteffectiveTimingsetrepeatsetboundsDurationsetcomparatorEnumFactory.fromCode(o.getObsEffectiveTimingRepeatBoundsDurationCompartrCode()));
-
-		} 
-		/******************** Obs_Effective_Timing_Repeat_Bounds_Duration_System ********************************************************************************/
-		if(o.getObsEffectiveTimingRepeatBoundsDurationSystem() != null) {
-			observationseteffectiveTimingsetrepeatsetboundsDuration.setSystem(o.getObsEffectiveTimingRepeatBoundsDurationSystem());
-		}
-		/******************** Obs_Effective_Timing_Repeat_Bounds_Duration_Unit ********************************************************************************/
-		if(o.getObsEffectiveTimingRepeatBoundsDurationUnit() != null) {
-			observationseteffectiveTimingsetrepeatsetboundsDuration.setUnit(o.getObsEffectiveTimingRepeatBoundsDurationUnit());
-		}
-		/******************** Obs_Effective_Timing_Repeat_Bounds_Duration_Value ********************************************************************************/
-		if(o.getObsEffectiveTimingRepeatBoundsDurationValue() != null) {
-			observationseteffectiveTimingsetrepeatsetboundsDuration.setValue(Double.parseDouble((o.getObsEffectiveTimingRepeatBoundsDurationValue())));
-		}
-		}
-
-		if( o.getObsEffectiveTimingRepeatBoundsPeriodEnd() != null || o.getObsEffectiveTimingRepeatBoundsPeriodStart() != null ) {
-			org.hl7.fhir.r4.model.Period observationseteffectiveTimingsetrepeatsetboundsPeriod = new org.hl7.fhir.r4.model.Period();
-			observationseteffectiveTimingsetrepeat.setBounds(observationseteffectiveTimingsetrepeatsetboundsPeriod);
-
-		/******************** Obs_Effective_Timing_Repeat_Bounds_Period_End ********************************************************************************/
-		if(o.getObsEffectiveTimingRepeatBoundsPeriodEnd() != null) {
-			java.text.SimpleDateFormat ObsEffectiveTimingRepeatBoundsPeriodEndsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date ObsEffectiveTimingRepeatBoundsPeriodEnddate = ObsEffectiveTimingRepeatBoundsPeriodEndsdf.parse(o.getObsEffectiveTimingRepeatBoundsPeriodEnd());
-			observationseteffectiveTimingsetrepeatsetboundsPeriod.setEnd(ObsEffectiveTimingRepeatBoundsPeriodEnddate);
-		}
-		/******************** Obs_Effective_Timing_Repeat_Bounds_Period_Start ********************************************************************************/
-		if(o.getObsEffectiveTimingRepeatBoundsPeriodStart() != null) {
-			java.text.SimpleDateFormat ObsEffectiveTimingRepeatBoundsPeriodStartsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date ObsEffectiveTimingRepeatBoundsPeriodStartdate = ObsEffectiveTimingRepeatBoundsPeriodStartsdf.parse(o.getObsEffectiveTimingRepeatBoundsPeriodStart());
-			observationseteffectiveTimingsetrepeatsetboundsPeriod.setStart(ObsEffectiveTimingRepeatBoundsPeriodStartdate);
-		}
-		}
-
-		if( o.getObsEffectiveTimingRepeatBoundsRangeHighCode() != null || o.getObsEffectiveTimingRepeatBoundsRangeHighCompartrCode() != null || o.getObsEffectiveTimingRepeatBoundsRangeHighSystem() != null || o.getObsEffectiveTimingRepeatBoundsRangeHighUnit() != null || o.getObsEffectiveTimingRepeatBoundsRangeHighValue() != null || o.getObsEffectiveTimingRepeatBoundsRangeLowCode() != null || o.getObsEffectiveTimingRepeatBoundsRangeLowCompartrCode() != null || o.getObsEffectiveTimingRepeatBoundsRangeLowSystem() != null || o.getObsEffectiveTimingRepeatBoundsRangeLowUnit() != null || o.getObsEffectiveTimingRepeatBoundsRangeLowValue() != null ) {
-			org.hl7.fhir.r4.model.Range observationseteffectiveTimingsetrepeatsetboundsRange = new org.hl7.fhir.r4.model.Range();
-			observationseteffectiveTimingsetrepeat.setBounds(observationseteffectiveTimingsetrepeatsetboundsRange);
-
-
-		org.hl7.fhir.r4.model.Quantity observationseteffectiveTimingsetrepeatsetboundsRangesethigh = new org.hl7.fhir.r4.model.Quantity();
-		observationseteffectiveTimingsetrepeatsetboundsRange.setHigh(observationseteffectiveTimingsetrepeatsetboundsRangesethigh);
-
-		/******************** Obs_Effective_Timing_Repeat_Bounds_Range_High_Code ********************************************************************************/
-		if(o.getObsEffectiveTimingRepeatBoundsRangeHighCode() != null) {
-			observationseteffectiveTimingsetrepeatsetboundsRangesethigh.setCode(o.getObsEffectiveTimingRepeatBoundsRangeHighCode());
-		}
-
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory observationseteffectiveTimingsetrepeatsetboundsRangesethighsetcomparatorEnumFactory = new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-
-		/******************** Obs_Effective_Timing_Repeat_Bounds_Range_High_Compartr_Code ********************************************************************************/
-		if(o.getObsEffectiveTimingRepeatBoundsRangeHighCompartrCode() != null) {
-			observationseteffectiveTimingsetrepeatsetboundsRangesethigh.setComparator(observationseteffectiveTimingsetrepeatsetboundsRangesethighsetcomparatorEnumFactory.fromCode(o.getObsEffectiveTimingRepeatBoundsRangeHighCompartrCode()));
-
-		}
-		/******************** Obs_Effective_Timing_Repeat_Bounds_Range_High_System ********************************************************************************/
-		if(o.getObsEffectiveTimingRepeatBoundsRangeHighSystem() != null) {
-			observationseteffectiveTimingsetrepeatsetboundsRangesethigh.setSystem(o.getObsEffectiveTimingRepeatBoundsRangeHighSystem());
-		}
-		/******************** Obs_Effective_Timing_Repeat_Bounds_Range_High_Unit ********************************************************************************/
-		if(o.getObsEffectiveTimingRepeatBoundsRangeHighUnit() != null) {
-			observationseteffectiveTimingsetrepeatsetboundsRangesethigh.setUnit(o.getObsEffectiveTimingRepeatBoundsRangeHighUnit());
-		}
-		/******************** Obs_Effective_Timing_Repeat_Bounds_Range_High_Value ********************************************************************************/
-		if(o.getObsEffectiveTimingRepeatBoundsRangeHighValue() != null) {
-			observationseteffectiveTimingsetrepeatsetboundsRangesethigh.setValue(Double.parseDouble((o.getObsEffectiveTimingRepeatBoundsRangeHighValue())));
-		}
-
-		org.hl7.fhir.r4.model.Quantity observationseteffectiveTimingsetrepeatsetboundsRangesetlow = new org.hl7.fhir.r4.model.Quantity();
-		observationseteffectiveTimingsetrepeatsetboundsRange.setLow(observationseteffectiveTimingsetrepeatsetboundsRangesetlow);
-
-		/******************** Obs_Effective_Timing_Repeat_Bounds_Range_Low_Code ********************************************************************************/
-		if(o.getObsEffectiveTimingRepeatBoundsRangeLowCode() != null) {
-			observationseteffectiveTimingsetrepeatsetboundsRangesetlow.setCode(o.getObsEffectiveTimingRepeatBoundsRangeLowCode());
-		}
-
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory observationseteffectiveTimingsetrepeatsetboundsRangesetlowsetcomparatorEnumFactory = new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-
-		/******************** Obs_Effective_Timing_Repeat_Bounds_Range_Low_Compartr_Code ********************************************************************************/
-		if(o.getObsEffectiveTimingRepeatBoundsRangeLowCompartrCode() != null) {
-			observationseteffectiveTimingsetrepeatsetboundsRangesetlow.setComparator(observationseteffectiveTimingsetrepeatsetboundsRangesetlowsetcomparatorEnumFactory.fromCode(o.getObsEffectiveTimingRepeatBoundsRangeLowCompartrCode()));
-
-		}
-		/******************** Obs_Effective_Timing_Repeat_Bounds_Range_Low_System ********************************************************************************/
-		if(o.getObsEffectiveTimingRepeatBoundsRangeLowSystem() != null) {
-			observationseteffectiveTimingsetrepeatsetboundsRangesetlow.setSystem(o.getObsEffectiveTimingRepeatBoundsRangeLowSystem());
-		}
-		/******************** Obs_Effective_Timing_Repeat_Bounds_Range_Low_Unit ********************************************************************************/
-		if(o.getObsEffectiveTimingRepeatBoundsRangeLowUnit() != null) {
-			observationseteffectiveTimingsetrepeatsetboundsRangesetlow.setUnit(o.getObsEffectiveTimingRepeatBoundsRangeLowUnit());
-		}
-		/******************** Obs_Effective_Timing_Repeat_Bounds_Range_Low_Value ********************************************************************************/
-		if(o.getObsEffectiveTimingRepeatBoundsRangeLowValue() != null) {
-			observationseteffectiveTimingsetrepeatsetboundsRangesetlow.setValue(Double.parseDouble((o.getObsEffectiveTimingRepeatBoundsRangeLowValue())));
-		}
-		}
-		/******************** Obs_Effective_Timing_Repeat_Count ********************************************************************************/
-		if(o.getObsEffectiveTimingRepeatCount() != null) {
-			observationseteffectiveTimingsetrepeat.setCount(Integer.parseInt(o.getObsEffectiveTimingRepeatCount()));
-		}
-		/******************** Obs_Effective_Timing_Repeat_CountMax ********************************************************************************/
-		if(o.getObsEffectiveTimingRepeatCountMax() != null) {
-			observationseteffectiveTimingsetrepeat.setCountMax(Integer.parseInt(o.getObsEffectiveTimingRepeatCountMax()));
-		}
-
-		org.hl7.fhir.r4.model.Timing.DayOfWeekEnumFactory observationseteffectiveTimingsetrepeatadddayofweekEnumFactory = new org.hl7.fhir.r4.model.Timing.DayOfWeekEnumFactory();
-
-		/******************** Obs_Effective_Timing_Repeat_DayOfWeek_Code ********************************************************************************/
-		if(o.getObsEffectiveTimingRepeatDayOfWeekCode() != null) {
-			observationseteffectiveTimingsetrepeat.addDayOfWeek(observationseteffectiveTimingsetrepeatadddayofweekEnumFactory.fromCode(o.getObsEffectiveTimingRepeatDayOfWeekCode()));
-
-		}
-		/******************** Obs_Effective_Timing_Repeat_Duration ********************************************************************************/
-		if(o.getObsEffectiveTimingRepeatDuration() != null) {
-			observationseteffectiveTimingsetrepeat.setDuration(Double.parseDouble((o.getObsEffectiveTimingRepeatDuration())));
-		}
-		/******************** Obs_Effective_Timing_Repeat_DurationMax ********************************************************************************/
-		if(o.getObsEffectiveTimingRepeatDurationMax() != null) {
-			observationseteffectiveTimingsetrepeat.setDurationMax(Double.parseDouble((o.getObsEffectiveTimingRepeatDurationMax())));
-		}
-
-		org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory observationseteffectiveTimingsetrepeatsetdurationunitEnumFactory = new org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory();
-
-		/******************** Obs_Effective_Timing_Repeat_DurationUnit_Code ********************************************************************************/
-		if(o.getObsEffectiveTimingRepeatDurationUnitCode() != null) {
-			observationseteffectiveTimingsetrepeat.setDurationUnit(observationseteffectiveTimingsetrepeatsetdurationunitEnumFactory.fromCode(o.getObsEffectiveTimingRepeatDurationUnitCode()));
-
-		}
-		/******************** Obs_Effective_Timing_Repeat_Frequency ********************************************************************************/
-		if(o.getObsEffectiveTimingRepeatFrequency() != null) {
-			observationseteffectiveTimingsetrepeat.setFrequency(Integer.parseInt(o.getObsEffectiveTimingRepeatFrequency()));
-		}
-		/******************** Obs_Effective_Timing_Repeat_FrequencyMax ********************************************************************************/
-		if(o.getObsEffectiveTimingRepeatFrequencyMax() != null) {
-			observationseteffectiveTimingsetrepeat.setFrequencyMax(Integer.parseInt(o.getObsEffectiveTimingRepeatFrequencyMax()));
-		}
-		/******************** Obs_Effective_Timing_Repeat_Off ********************************************************************************/
-		if(o.getObsEffectiveTimingRepeatOff() != null) {
-			observationseteffectiveTimingsetrepeat.setOffset(Integer.parseInt(o.getObsEffectiveTimingRepeatOff()));
-		}
-		/******************** Obs_Effective_Timing_Repeat_Period ********************************************************************************/
-		if(o.getObsEffectiveTimingRepeatPeriod() != null) {
-			observationseteffectiveTimingsetrepeat.setPeriod(Double.parseDouble((o.getObsEffectiveTimingRepeatPeriod())));
-		}
-		/******************** Obs_Effective_Timing_Repeat_PeriodMax ********************************************************************************/
-		if(o.getObsEffectiveTimingRepeatPeriodMax() != null) {
-			observationseteffectiveTimingsetrepeat.setPeriodMax(Double.parseDouble((o.getObsEffectiveTimingRepeatPeriodMax())));
-		}
-
-		org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory observationseteffectiveTimingsetrepeatsetperiodunitEnumFactory = new org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory();
-
-		/******************** Obs_Effective_Timing_Repeat_PeriodUnit_Code ********************************************************************************/
-		if(o.getObsEffectiveTimingRepeatPeriodUnitCode() != null) {
-			observationseteffectiveTimingsetrepeat.setPeriodUnit(observationseteffectiveTimingsetrepeatsetperiodunitEnumFactory.fromCode(o.getObsEffectiveTimingRepeatPeriodUnitCode()));
-
-		}
-		/******************** Obs_Effective_Timing_Repeat_TimeOfDay ********************************************************************************/
-		if(o.getObsEffectiveTimingRepeatTimeOfDay() != null) {
-			observationseteffectiveTimingsetrepeat.addTimeOfDay(o.getObsEffectiveTimingRepeatTimeOfDay());
-		}
-
-		org.hl7.fhir.r4.model.Timing.EventTimingEnumFactory observationseteffectiveTimingsetrepeataddwhenEnumFactory = new org.hl7.fhir.r4.model.Timing.EventTimingEnumFactory();
-
-		/******************** Obs_Effective_Timing_Repeat_When_Code ********************************************************************************/
-		if(o.getObsEffectiveTimingRepeatWhenCode() != null) {
-			observationseteffectiveTimingsetrepeat.addWhen(observationseteffectiveTimingsetrepeataddwhenEnumFactory.fromCode(o.getObsEffectiveTimingRepeatWhenCode()));
-
-		}
-		}
-		/******************** Obs_Enc ********************************************************************************/
-		if(o.getObsEnc() != null) {
-			org.hl7.fhir.r4.model.Reference ObsEncref = new org.hl7.fhir.r4.model.Reference();
-			observation.setEncounter(ObsEncref.setReference(o.getObsEnc()));
-		}
-		/******************** Obs_Focus ********************************************************************************/
-		if(o.getObsFocus() != null) {
-			org.hl7.fhir.r4.model.Reference ObsFocusref = new org.hl7.fhir.r4.model.Reference();
-			observation.addFocus(ObsFocusref.setReference(o.getObsFocus()));
-		}
-		/******************** Obs_HasMember ********************************************************************************/
-		if(o.getObsHasMember() != null) {
-			org.hl7.fhir.r4.model.Reference ObsHasMemberref = new org.hl7.fhir.r4.model.Reference();
-			observation.addHasMember(ObsHasMemberref.setReference(o.getObsHasMember()));
-		}
-
-		org.hl7.fhir.r4.model.Identifier observationaddidentifier = observation.addIdentifier();
-
-		/******************** Obs_Id_Assigner ********************************************************************************/
-		if(o.getObsIdAssigner() != null) {
-			org.hl7.fhir.r4.model.Reference ObsIdAssignerref = new org.hl7.fhir.r4.model.Reference();
-			observationaddidentifier.setAssigner(ObsIdAssignerref.setReference(o.getObsIdAssigner()));
-		}
-
-		org.hl7.fhir.r4.model.Period observationaddidentifiersetperiod = new org.hl7.fhir.r4.model.Period();
-		observationaddidentifier.setPeriod(observationaddidentifiersetperiod);
-
-		/******************** Obs_Id_Period_End ********************************************************************************/
-		if(o.getObsIdPeriodEnd() != null) {
-			java.text.SimpleDateFormat ObsIdPeriodEndsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date ObsIdPeriodEnddate = ObsIdPeriodEndsdf.parse(o.getObsIdPeriodEnd());
-			observationaddidentifiersetperiod.setEnd(ObsIdPeriodEnddate);
-		}
-		/******************** Obs_Id_Period_Start ********************************************************************************/
-		if(o.getObsIdPeriodStart() != null) {
-			java.text.SimpleDateFormat ObsIdPeriodStartsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date ObsIdPeriodStartdate = ObsIdPeriodStartsdf.parse(o.getObsIdPeriodStart());
-			observationaddidentifiersetperiod.setStart(ObsIdPeriodStartdate);
-		}
-		/******************** Obs_Id_System ********************************************************************************/
-		if(o.getObsIdSystem() != null) {
-			observationaddidentifier.setSystem(o.getObsIdSystem());
-		}
-
-		org.hl7.fhir.r4.model.CodeableConcept observationaddidentifiersettype = new org.hl7.fhir.r4.model.CodeableConcept();
-		observationaddidentifier.setType(observationaddidentifiersettype);
-
-
-		org.hl7.fhir.r4.model.Coding observationaddidentifiersettypeaddcoding = observationaddidentifiersettype.addCoding();
-
-		/******************** Obs_Id_Type_Coding_Code ********************************************************************************/
-		if(o.getObsIdTypeCodingCode() != null) {
-			observationaddidentifiersettypeaddcoding.setCode(o.getObsIdTypeCodingCode());
-		}
-		/******************** Obs_Id_Type_Coding_Display ********************************************************************************/
-		if(o.getObsIdTypeCodingDisplay() != null) {
-			observationaddidentifiersettypeaddcoding.setDisplay(o.getObsIdTypeCodingDisplay());
-		}
-		/******************** Obs_Id_Type_Coding_System ********************************************************************************/
-		if(o.getObsIdTypeCodingSystem() != null) {
-			observationaddidentifiersettypeaddcoding.setSystem(o.getObsIdTypeCodingSystem());
-		}
-		/******************** Obs_Id_Type_Coding_Usrslt ********************************************************************************/
-		if(o.getObsIdTypeCodingUsrslt() != null) {
-			observationaddidentifiersettypeaddcoding.setUserSelected(Boolean.parseBoolean(o.getObsIdTypeCodingUsrslt()));
-		}
-		/******************** Obs_Id_Type_Coding_Version ********************************************************************************/
-		if(o.getObsIdTypeCodingVersion() != null) {
-			observationaddidentifiersettypeaddcoding.setVersion(o.getObsIdTypeCodingVersion());
-		}
-		/******************** Obs_Id_Type_Text ********************************************************************************/
-		if(o.getObsIdTypeText() != null) {
-			observationaddidentifiersettype.setText(o.getObsIdTypeText());
-		}
-
-		org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory observationaddidentifiersetuseEnumFactory = new org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory();
-
-		/******************** Obs_Id_Use_Code ********************************************************************************/
-		if(o.getObsIdUseCode() != null) {
-			observationaddidentifier.setUse(observationaddidentifiersetuseEnumFactory.fromCode(o.getObsIdUseCode()));
-
-		}
-		/******************** Obs_Id_Value ********************************************************************************/
-		if(o.getObsIdValue() != null) {
-			observationaddidentifier.setValue(o.getObsIdValue());
-		}
-
-		org.hl7.fhir.r4.model.CodeableConcept observationaddinterpretation = observation.addInterpretation();
-
-
-		org.hl7.fhir.r4.model.Coding observationaddinterpretationaddcoding = observationaddinterpretation.addCoding();
-
-		/******************** Obs_Interpretation_Coding_Code ********************************************************************************/
-		if(o.getObsInterpretationCodingCode() != null) {
-			observationaddinterpretationaddcoding.setCode(o.getObsInterpretationCodingCode());
-		}
-		/******************** Obs_Interpretation_Coding_Display ********************************************************************************/
-		if(o.getObsInterpretationCodingDisplay() != null) {
-			observationaddinterpretationaddcoding.setDisplay(o.getObsInterpretationCodingDisplay());
-		}
-		/******************** Obs_Interpretation_Coding_System ********************************************************************************/
-		if(o.getObsInterpretationCodingSystem() != null) {
-			observationaddinterpretationaddcoding.setSystem(o.getObsInterpretationCodingSystem());
-		}
-		/******************** Obs_Interpretation_Coding_Usrslt ********************************************************************************/
-		if(o.getObsInterpretationCodingUsrslt() != null) {
-			observationaddinterpretationaddcoding.setUserSelected(Boolean.parseBoolean(o.getObsInterpretationCodingUsrslt()));
-		}
-		/******************** Obs_Interpretation_Coding_Version ********************************************************************************/
-		if(o.getObsInterpretationCodingVersion() != null) {
-			observationaddinterpretationaddcoding.setVersion(o.getObsInterpretationCodingVersion());
-		}
-		/******************** Obs_Interpretation_Text ********************************************************************************/
-		if(o.getObsInterpretationText() != null) {
-			observationaddinterpretation.setText(o.getObsInterpretationText());
-		}
-		/******************** Obs_Issued ********************************************************************************/
-		if(o.getObsIssued() != null) {
-			java.text.SimpleDateFormat ObsIssuedsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date ObsIssueddate = ObsIssuedsdf.parse(o.getObsIssued());
-			observation.setIssued(ObsIssueddate);
-		}
-
-		org.hl7.fhir.r4.model.CodeableConcept observationsetmethod = new org.hl7.fhir.r4.model.CodeableConcept();
-		observation.setMethod(observationsetmethod);
-
-
-		org.hl7.fhir.r4.model.Coding observationsetmethodaddcoding = observationsetmethod.addCoding();
-
-		/******************** Obs_Method_Coding_Code ********************************************************************************/
-		if(o.getObsMethodCodingCode() != null) {
-			observationsetmethodaddcoding.setCode(o.getObsMethodCodingCode());
-		}
-		/******************** Obs_Method_Coding_Display ********************************************************************************/
-		if(o.getObsMethodCodingDisplay() != null) {
-			observationsetmethodaddcoding.setDisplay(o.getObsMethodCodingDisplay());
-		}
-		/******************** Obs_Method_Coding_System ********************************************************************************/
-		if(o.getObsMethodCodingSystem() != null) {
-			observationsetmethodaddcoding.setSystem(o.getObsMethodCodingSystem());
-		}
-		/******************** Obs_Method_Coding_Usrslt ********************************************************************************/
-		if(o.getObsMethodCodingUsrslt() != null) {
-			observationsetmethodaddcoding.setUserSelected(Boolean.parseBoolean(o.getObsMethodCodingUsrslt()));
-		}
-		/******************** Obs_Method_Coding_Version ********************************************************************************/
-		if(o.getObsMethodCodingVersion() != null) {
-			observationsetmethodaddcoding.setVersion(o.getObsMethodCodingVersion());
-		}
-		/******************** Obs_Method_Text ********************************************************************************/
-		if(o.getObsMethodText() != null) {
-			observationsetmethod.setText(o.getObsMethodText());
-		}
-
-		org.hl7.fhir.r4.model.Annotation observationaddnote = observation.addNote();
-
-		/******************** Observation_Note_AuthorReference ********************************************************************************/
-		if(o.getObservationNoteAuthorReference() != null) {
-			org.hl7.fhir.r4.model.Reference ObservationNoteAuthorReferenceref = new org.hl7.fhir.r4.model.Reference();
-			observationaddnote.setAuthor(ObservationNoteAuthorReferenceref.setReference(o.getObservationNoteAuthorReference()));
-		}
-		/******************** Observation_Note_AuthorString ********************************************************************************/
-		if(o.getObservationNoteAuthorString() != null) {
-			observationaddnote.setAuthor(new org.hl7.fhir.r4.model.StringType(o.getObservationNoteAuthorString()));
-		}
-		/******************** Obs_Note_Text ********************************************************************************/
-		if(o.getObsNoteText() != null) {
-			observationaddnote.setText(o.getObsNoteText());
-		}
-		/******************** Obs_Note_Time ********************************************************************************/
-		if(o.getObsNoteTime() != null) {
-			java.text.SimpleDateFormat ObsNoteTimesdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date ObsNoteTimedate = ObsNoteTimesdf.parse(o.getObsNoteTime());
-			observationaddnote.setTime(ObsNoteTimedate);
-		}
-		/******************** Obs_PartOf ********************************************************************************/
-		if(o.getObsPartOf() != null) {
-			org.hl7.fhir.r4.model.Reference ObsPartOfref = new org.hl7.fhir.r4.model.Reference();
-			observation.addPartOf(ObsPartOfref.setReference(o.getObsPartOf()));
-		}
-		/******************** Obs_Performer ********************************************************************************/
-		if(o.getObsPerformer() != null) {
-			org.hl7.fhir.r4.model.Reference ObsPerformerref = new org.hl7.fhir.r4.model.Reference();
-			observation.addPerformer(ObsPerformerref.setReference(o.getObsPerformer()));
-		}
-
-		org.hl7.fhir.r4.model.Observation.ObservationReferenceRangeComponent observationaddreferencerange = observation.addReferenceRange();
-
-
-		org.hl7.fhir.r4.model.Range observationaddreferencerangesetage = new org.hl7.fhir.r4.model.Range();
-		observationaddreferencerange.setAge(observationaddreferencerangesetage);
-
-
-		org.hl7.fhir.r4.model.Quantity observationaddreferencerangesetagesethigh = new org.hl7.fhir.r4.model.Quantity();
-		observationaddreferencerangesetage.setHigh(observationaddreferencerangesetagesethigh);
-
-		/******************** Obs_ReferenceRange_Age_High_Code ********************************************************************************/
-		if(o.getObsReferenceRangeAgeHighCode() != null) {
-			observationaddreferencerangesetagesethigh.setCode(o.getObsReferenceRangeAgeHighCode());
-		}
-
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory observationaddreferencerangesetagesethighsetcomparatorEnumFactory = new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-
-		/******************** Obs_ReferenceRange_Age_High_Compartr_Code ********************************************************************************/
-		if(o.getObsReferenceRangeAgeHighCompartrCode() != null) {
-			observationaddreferencerangesetagesethigh.setComparator(observationaddreferencerangesetagesethighsetcomparatorEnumFactory.fromCode(o.getObsReferenceRangeAgeHighCompartrCode()));
-
-		}
-		/******************** Obs_ReferenceRange_Age_High_System ********************************************************************************/
-		if(o.getObsReferenceRangeAgeHighSystem() != null) {
-			observationaddreferencerangesetagesethigh.setSystem(o.getObsReferenceRangeAgeHighSystem());
-		}
-		/******************** Obs_ReferenceRange_Age_High_Unit ********************************************************************************/
-		if(o.getObsReferenceRangeAgeHighUnit() != null) {
-			observationaddreferencerangesetagesethigh.setUnit(o.getObsReferenceRangeAgeHighUnit());
-		}
-		/******************** Obs_ReferenceRange_Age_High_Value ********************************************************************************/
-		if(o.getObsReferenceRangeAgeHighValue() != null) {
-			observationaddreferencerangesetagesethigh.setValue(Double.parseDouble((o.getObsReferenceRangeAgeHighValue())));
-		}
-
-		org.hl7.fhir.r4.model.Quantity observationaddreferencerangesetagesetlow = new org.hl7.fhir.r4.model.Quantity();
-		observationaddreferencerangesetage.setLow(observationaddreferencerangesetagesetlow);
-
-		/******************** Obs_ReferenceRange_Age_Low_Code ********************************************************************************/
-		if(o.getObsReferenceRangeAgeLowCode() != null) {
-			observationaddreferencerangesetagesetlow.setCode(o.getObsReferenceRangeAgeLowCode());
-		}
-
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory observationaddreferencerangesetagesetlowsetcomparatorEnumFactory = new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-
-		/******************** Obs_ReferenceRange_Age_Low_Compartr_Code ********************************************************************************/
-		if(o.getObsReferenceRangeAgeLowCompartrCode() != null) {
-			observationaddreferencerangesetagesetlow.setComparator(observationaddreferencerangesetagesetlowsetcomparatorEnumFactory.fromCode(o.getObsReferenceRangeAgeLowCompartrCode()));
-
-		}
-		/******************** Obs_ReferenceRange_Age_Low_System ********************************************************************************/
-		if(o.getObsReferenceRangeAgeLowSystem() != null) {
-			observationaddreferencerangesetagesetlow.setSystem(o.getObsReferenceRangeAgeLowSystem());
-		}
-		/******************** Obs_ReferenceRange_Age_Low_Unit ********************************************************************************/
-		if(o.getObsReferenceRangeAgeLowUnit() != null) {
-			observationaddreferencerangesetagesetlow.setUnit(o.getObsReferenceRangeAgeLowUnit());
-		}
-		/******************** Obs_ReferenceRange_Age_Low_Value ********************************************************************************/
-		if(o.getObsReferenceRangeAgeLowValue() != null) {
-			observationaddreferencerangesetagesetlow.setValue(Double.parseDouble((o.getObsReferenceRangeAgeLowValue())));
-		}
-
-		org.hl7.fhir.r4.model.CodeableConcept observationaddreferencerangeaddappliesto = observationaddreferencerange.addAppliesTo();
-
-
-		org.hl7.fhir.r4.model.Coding observationaddreferencerangeaddappliestoaddcoding = observationaddreferencerangeaddappliesto.addCoding();
-
-		/******************** Obs_ReferenceRange_AppliesTo_Coding_Code ********************************************************************************/
-		if(o.getObsReferenceRangeAppliesToCodingCode() != null) {
-			observationaddreferencerangeaddappliestoaddcoding.setCode(o.getObsReferenceRangeAppliesToCodingCode());
-		}
-		/******************** Obs_ReferenceRange_AppliesTo_Coding_Display ********************************************************************************/
-		if(o.getObsReferenceRangeAppliesToCodingDisplay() != null) {
-			observationaddreferencerangeaddappliestoaddcoding.setDisplay(o.getObsReferenceRangeAppliesToCodingDisplay());
-		}
-		/******************** Obs_ReferenceRange_AppliesTo_Coding_System ********************************************************************************/
-		if(o.getObsReferenceRangeAppliesToCodingSystem() != null) {
-			observationaddreferencerangeaddappliestoaddcoding.setSystem(o.getObsReferenceRangeAppliesToCodingSystem());
-		}
-		/******************** Obs_ReferenceRange_AppliesTo_Coding_Usrslt ********************************************************************************/
-		if(o.getObsReferenceRangeAppliesToCodingUsrslt() != null) {
-			observationaddreferencerangeaddappliestoaddcoding.setUserSelected(Boolean.parseBoolean(o.getObsReferenceRangeAppliesToCodingUsrslt()));
-		}
-		/******************** Obs_ReferenceRange_AppliesTo_Coding_Version ********************************************************************************/
-		if(o.getObsReferenceRangeAppliesToCodingVersion() != null) {
-			observationaddreferencerangeaddappliestoaddcoding.setVersion(o.getObsReferenceRangeAppliesToCodingVersion());
-		}
-		/******************** Obs_ReferenceRange_AppliesTo_Text ********************************************************************************/
-		if(o.getObsReferenceRangeAppliesToText() != null) {
-			observationaddreferencerangeaddappliesto.setText(o.getObsReferenceRangeAppliesToText());
-		}
-
-		org.hl7.fhir.r4.model.Quantity observationaddreferencerangesethigh = new org.hl7.fhir.r4.model.Quantity();
-		observationaddreferencerange.setHigh(observationaddreferencerangesethigh);
-
-		/******************** Obs_ReferenceRange_High_Code ********************************************************************************/
-		if(o.getObsReferenceRangeHighCode() != null) {
-			observationaddreferencerangesethigh.setCode(o.getObsReferenceRangeHighCode());
-		}
-
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory observationaddreferencerangesethighsetcomparatorEnumFactory = new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-
-		/******************** Obs_ReferenceRange_High_Compartr_Code ********************************************************************************/
-		if(o.getObsReferenceRangeHighCompartrCode() != null) {
-			observationaddreferencerangesethigh.setComparator(observationaddreferencerangesethighsetcomparatorEnumFactory.fromCode(o.getObsReferenceRangeHighCompartrCode()));
-
-		}
-		/******************** Obs_ReferenceRange_High_System ********************************************************************************/
-		if(o.getObsReferenceRangeHighSystem() != null) {
-			observationaddreferencerangesethigh.setSystem(o.getObsReferenceRangeHighSystem());
-		}
-		/******************** Obs_ReferenceRange_High_Unit ********************************************************************************/
-		if(o.getObsReferenceRangeHighUnit() != null) {
-			observationaddreferencerangesethigh.setUnit(o.getObsReferenceRangeHighUnit());
-		}
-		/******************** Obs_ReferenceRange_High_Value ********************************************************************************/
-		if(o.getObsReferenceRangeHighValue() != null) {
-			observationaddreferencerangesethigh.setValue(Double.parseDouble((o.getObsReferenceRangeHighValue())));
-		}
-
-		org.hl7.fhir.r4.model.Quantity observationaddreferencerangesetlow = new org.hl7.fhir.r4.model.Quantity();
-		observationaddreferencerange.setLow(observationaddreferencerangesetlow);
-
-		/******************** Obs_ReferenceRange_Low_Code ********************************************************************************/
-		if(o.getObsReferenceRangeLowCode() != null) {
-			observationaddreferencerangesetlow.setCode(o.getObsReferenceRangeLowCode());
-		}
-
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory observationaddreferencerangesetlowsetcomparatorEnumFactory = new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-
-		/******************** Obs_ReferenceRange_Low_Compartr_Code ********************************************************************************/
-		if(o.getObsReferenceRangeLowCompartrCode() != null) {
-			observationaddreferencerangesetlow.setComparator(observationaddreferencerangesetlowsetcomparatorEnumFactory.fromCode(o.getObsReferenceRangeLowCompartrCode()));
-
-		}
-		/******************** Obs_ReferenceRange_Low_System ********************************************************************************/
-		if(o.getObsReferenceRangeLowSystem() != null) {
-			observationaddreferencerangesetlow.setSystem(o.getObsReferenceRangeLowSystem());
-		}
-		/******************** Obs_ReferenceRange_Low_Unit ********************************************************************************/
-		if(o.getObsReferenceRangeLowUnit() != null) {
-			observationaddreferencerangesetlow.setUnit(o.getObsReferenceRangeLowUnit());
-		}
-		/******************** Obs_ReferenceRange_Low_Value ********************************************************************************/
-		if(o.getObsReferenceRangeLowValue() != null) {
-			observationaddreferencerangesetlow.setValue(Double.parseDouble((o.getObsReferenceRangeLowValue())));
-		}
-		/******************** Obs_ReferenceRange_Text ********************************************************************************/
-		if(o.getObsReferenceRangeText() != null) {
-			observationaddreferencerange.setText(o.getObsReferenceRangeText());
-		}
-
-		org.hl7.fhir.r4.model.CodeableConcept observationaddreferencerangesettype = new org.hl7.fhir.r4.model.CodeableConcept();
-		observationaddreferencerange.setType(observationaddreferencerangesettype);
-
-
-		org.hl7.fhir.r4.model.Coding observationaddreferencerangesettypeaddcoding = observationaddreferencerangesettype.addCoding();
-
-		/******************** Obs_ReferenceRange_Type_Coding_Code ********************************************************************************/
-		if(o.getObsReferenceRangeTypeCodingCode() != null) {
-			observationaddreferencerangesettypeaddcoding.setCode(o.getObsReferenceRangeTypeCodingCode());
-		}
-		/******************** Obs_ReferenceRange_Type_Coding_Display ********************************************************************************/
-		if(o.getObsReferenceRangeTypeCodingDisplay() != null) {
-			observationaddreferencerangesettypeaddcoding.setDisplay(o.getObsReferenceRangeTypeCodingDisplay());
-		}
-		/******************** Obs_ReferenceRange_Type_Coding_System ********************************************************************************/
-		if(o.getObsReferenceRangeTypeCodingSystem() != null) {
-			observationaddreferencerangesettypeaddcoding.setSystem(o.getObsReferenceRangeTypeCodingSystem());
-		}
-		/******************** Obs_ReferenceRange_Type_Coding_Usrslt ********************************************************************************/
-		if(o.getObsReferenceRangeTypeCodingUsrslt() != null) {
-			observationaddreferencerangesettypeaddcoding.setUserSelected(Boolean.parseBoolean(o.getObsReferenceRangeTypeCodingUsrslt()));
-		}
-		/******************** Obs_ReferenceRange_Type_Coding_Version ********************************************************************************/
-		if(o.getObsReferenceRangeTypeCodingVersion() != null) {
-			observationaddreferencerangesettypeaddcoding.setVersion(o.getObsReferenceRangeTypeCodingVersion());
-		}
-		/******************** Obs_ReferenceRange_Type_Text ********************************************************************************/
-		if(o.getObsReferenceRangeTypeText() != null) {
-			observationaddreferencerangesettype.setText(o.getObsReferenceRangeTypeText());
-		}
-		/******************** Obs_Specimen ********************************************************************************/
-		if(o.getObsSpecimen() != null) {
-			org.hl7.fhir.r4.model.Reference ObsSpecimenref = new org.hl7.fhir.r4.model.Reference();
-			observation.setSpecimen(ObsSpecimenref.setReference(o.getObsSpecimen()));
-		}
-
-		org.hl7.fhir.r4.model.Observation.ObservationStatusEnumFactory observationsetstatusEnumFactory = new org.hl7.fhir.r4.model.Observation.ObservationStatusEnumFactory();
-
-		/******************** Obs_Status_Code ********************************************************************************/
-		if(o.getObsStatusCode() != null) {
-			observation.setStatus(observationsetstatusEnumFactory.fromCode(o.getObsStatusCode()));
-
-		}
-		/******************** Obs_Subject ********************************************************************************/
-		if(o.getObsSubject() != null) {
-			org.hl7.fhir.r4.model.Reference ObsSubjectref = new org.hl7.fhir.r4.model.Reference();
-			observation.setSubject(ObsSubjectref.setReference(o.getObsSubject()));
-		}
-		/******************** Observation_ValueBoolean ********************************************************************************/
-		if(o.getObservationValueBoolean() != null) {
-			observation.setValue(new org.hl7.fhir.r4.model.BooleanType(o.getObservationValueBoolean()));
-		}
-
-		if( o.getObsValueCodeableConceptCodingCode() != null || o.getObsValueCodeableConceptCodingDisplay() != null || o.getObsValueCodeableConceptCodingSystem() != null || o.getObsValueCodeableConceptCodingUsrslt() != null || o.getObsValueCodeableConceptCodingVersion() != null || o.getObsValueCodeableConceptText() != null ) {
-			org.hl7.fhir.r4.model.CodeableConcept observationsetvalueCodeableConcept = new org.hl7.fhir.r4.model.CodeableConcept();
-			observation.setValue(observationsetvalueCodeableConcept);
-
-
-		org.hl7.fhir.r4.model.Coding observationsetvalueCodeableConceptaddcoding = observationsetvalueCodeableConcept.addCoding();
-
-		/******************** Obs_Value_CodeableConcept_Coding_Code ********************************************************************************/
-		if(o.getObsValueCodeableConceptCodingCode() != null) {
-			observationsetvalueCodeableConceptaddcoding.setCode(o.getObsValueCodeableConceptCodingCode());
-		}
-		/******************** Obs_Value_CodeableConcept_Coding_Display ********************************************************************************/
-		if(o.getObsValueCodeableConceptCodingDisplay() != null) {
-			observationsetvalueCodeableConceptaddcoding.setDisplay(o.getObsValueCodeableConceptCodingDisplay());
-		}
-		/******************** Obs_Value_CodeableConcept_Coding_System ********************************************************************************/
-		if(o.getObsValueCodeableConceptCodingSystem() != null) {
-			observationsetvalueCodeableConceptaddcoding.setSystem(o.getObsValueCodeableConceptCodingSystem());
-		}
-		/******************** Obs_Value_CodeableConcept_Coding_Usrslt ********************************************************************************/
-		if(o.getObsValueCodeableConceptCodingUsrslt() != null) {
-			observationsetvalueCodeableConceptaddcoding.setUserSelected(Boolean.parseBoolean(o.getObsValueCodeableConceptCodingUsrslt()));
-		}
-		/******************** Obs_Value_CodeableConcept_Coding_Version ********************************************************************************/
-		if(o.getObsValueCodeableConceptCodingVersion() != null) {
-			observationsetvalueCodeableConceptaddcoding.setVersion(o.getObsValueCodeableConceptCodingVersion());
-		}
-		/******************** Obs_Value_CodeableConcept_Text ********************************************************************************/
-		if(o.getObsValueCodeableConceptText() != null) {
-			observationsetvalueCodeableConcept.setText(o.getObsValueCodeableConceptText());
-		}
-		}
-		/******************** Observation_ValueDateTime ********************************************************************************/
-		if(o.getObservationValueDateTime() != null) {
-			observation.setValue(new org.hl7.fhir.r4.model.DateTimeType(o.getObservationValueDateTime()));
-		}
-		/******************** Observation_ValueInteger ********************************************************************************/
-		if(o.getObservationValueInteger() != null) {
-			observation.setValue(new org.hl7.fhir.r4.model.IntegerType(o.getObservationValueInteger()));
-		}
-
-		if( o.getObsValuePeriodEnd() != null || o.getObsValuePeriodStart() != null ) {
-			org.hl7.fhir.r4.model.Period observationsetvaluePeriod = new org.hl7.fhir.r4.model.Period();
-			observation.setValue(observationsetvaluePeriod);
-
-		/******************** Obs_Value_Period_End ********************************************************************************/
-		if(o.getObsValuePeriodEnd() != null) {
-			java.text.SimpleDateFormat ObsValuePeriodEndsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date ObsValuePeriodEnddate = ObsValuePeriodEndsdf.parse(o.getObsValuePeriodEnd());
-			observationsetvaluePeriod.setEnd(ObsValuePeriodEnddate);
-		}
-		/******************** Obs_Value_Period_Start ********************************************************************************/
-		if(o.getObsValuePeriodStart() != null) {
-			java.text.SimpleDateFormat ObsValuePeriodStartsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date ObsValuePeriodStartdate = ObsValuePeriodStartsdf.parse(o.getObsValuePeriodStart());
-			observationsetvaluePeriod.setStart(ObsValuePeriodStartdate);
-		}
-		}
-
-		if( o.getObsValueQuantityCode() != null || o.getObsValueQuantityCompartrCode() != null || o.getObsValueQuantitySystem() != null || o.getObsValueQuantityUnit() != null || o.getObsValueQuantityValue() != null ) {
-			org.hl7.fhir.r4.model.Quantity observationsetvalueQuantity = new org.hl7.fhir.r4.model.Quantity();
-			observation.setValue(observationsetvalueQuantity);
-
-		/******************** Obs_Value_Quantity_Code ********************************************************************************/
-		if(o.getObsValueQuantityCode() != null) {
-			observationsetvalueQuantity.setCode(o.getObsValueQuantityCode());
-		}
-
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory observationsetvalueQuantitysetcomparatorEnumFactory = new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-
-		/******************** Obs_Value_Quantity_Compartr_Code ********************************************************************************/
-		if(o.getObsValueQuantityCompartrCode() != null) {
-			observationsetvalueQuantity.setComparator(observationsetvalueQuantitysetcomparatorEnumFactory.fromCode(o.getObsValueQuantityCompartrCode()));
-
-		}
-		/******************** Obs_Value_Quantity_System ********************************************************************************/
-		if(o.getObsValueQuantitySystem() != null) {
-			observationsetvalueQuantity.setSystem(o.getObsValueQuantitySystem());
-		}
-		/******************** Obs_Value_Quantity_Unit ********************************************************************************/
-		if(o.getObsValueQuantityUnit() != null) {
-			observationsetvalueQuantity.setUnit(o.getObsValueQuantityUnit());
-		}
-		/******************** Obs_Value_Quantity_Value ********************************************************************************/
-		if(o.getObsValueQuantityValue() != null) {
-			observationsetvalueQuantity.setValue(Double.parseDouble((o.getObsValueQuantityValue())));
-		}
-		}
-
-		if( o.getObsValueRangeHighCode() != null || o.getObsValueRangeHighCompartrCode() != null || o.getObsValueRangeHighSystem() != null || o.getObsValueRangeHighUnit() != null || o.getObsValueRangeHighValue() != null || o.getObsValueRangeLowCode() != null || o.getObsValueRangeLowCompartrCode() != null || o.getObsValueRangeLowSystem() != null || o.getObsValueRangeLowUnit() != null || o.getObsValueRangeLowValue() != null ) {
-			org.hl7.fhir.r4.model.Range observationsetvalueRange = new org.hl7.fhir.r4.model.Range();
-			observation.setValue(observationsetvalueRange);
-
-
-		org.hl7.fhir.r4.model.Quantity observationsetvalueRangesethigh = new org.hl7.fhir.r4.model.Quantity();
-		observationsetvalueRange.setHigh(observationsetvalueRangesethigh);
-
-		/******************** Obs_Value_Range_High_Code ********************************************************************************/
-		if(o.getObsValueRangeHighCode() != null) {
-			observationsetvalueRangesethigh.setCode(o.getObsValueRangeHighCode());
-		}
-
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory observationsetvalueRangesethighsetcomparatorEnumFactory = new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-
-		/******************** Obs_Value_Range_High_Compartr_Code ********************************************************************************/
-		if(o.getObsValueRangeHighCompartrCode() != null) {
-			observationsetvalueRangesethigh.setComparator(observationsetvalueRangesethighsetcomparatorEnumFactory.fromCode(o.getObsValueRangeHighCompartrCode()));
-
-		}
-		/******************** Obs_Value_Range_High_System ********************************************************************************/
-		if(o.getObsValueRangeHighSystem() != null) {
-			observationsetvalueRangesethigh.setSystem(o.getObsValueRangeHighSystem());
-		}
-		/******************** Obs_Value_Range_High_Unit ********************************************************************************/
-		if(o.getObsValueRangeHighUnit() != null) {
-			observationsetvalueRangesethigh.setUnit(o.getObsValueRangeHighUnit());
-		}
-		/******************** Obs_Value_Range_High_Value ********************************************************************************/
-		if(o.getObsValueRangeHighValue() != null) {
-			observationsetvalueRangesethigh.setValue(Double.parseDouble((o.getObsValueRangeHighValue())));
-		}
-
-		org.hl7.fhir.r4.model.Quantity observationsetvalueRangesetlow = new org.hl7.fhir.r4.model.Quantity();
-		observationsetvalueRange.setLow(observationsetvalueRangesetlow);
-
-		/******************** Obs_Value_Range_Low_Code ********************************************************************************/
-		if(o.getObsValueRangeLowCode() != null) {
-			observationsetvalueRangesetlow.setCode(o.getObsValueRangeLowCode());
-		}
-
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory observationsetvalueRangesetlowsetcomparatorEnumFactory = new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-
-		/******************** Obs_Value_Range_Low_Compartr_Code ********************************************************************************/
-		if(o.getObsValueRangeLowCompartrCode() != null) {
-			observationsetvalueRangesetlow.setComparator(observationsetvalueRangesetlowsetcomparatorEnumFactory.fromCode(o.getObsValueRangeLowCompartrCode()));
-
-		}
-		/******************** Obs_Value_Range_Low_System ********************************************************************************/
-		if(o.getObsValueRangeLowSystem() != null) {
-			observationsetvalueRangesetlow.setSystem(o.getObsValueRangeLowSystem());
-		}
-		/******************** Obs_Value_Range_Low_Unit ********************************************************************************/
-		if(o.getObsValueRangeLowUnit() != null) {
-			observationsetvalueRangesetlow.setUnit(o.getObsValueRangeLowUnit());
-		}
-		/******************** Obs_Value_Range_Low_Value ********************************************************************************/
-		if(o.getObsValueRangeLowValue() != null) {
-			observationsetvalueRangesetlow.setValue(Double.parseDouble((o.getObsValueRangeLowValue())));
-		}
-		}
-
-		if( o.getObsValueRatioDenomCode() != null || o.getObsValueRatioDenomCompartrCode() != null || o.getObsValueRatioDenomSystem() != null || o.getObsValueRatioDenomUnit() != null || o.getObsValueRatioDenomValue() != null || o.getObsValueRatioNumeratorCode() != null || o.getObsValueRatioNumeratorCompartrCode() != null || o.getObsValueRatioNumeratorSystem() != null || o.getObsValueRatioNumeratorUnit() != null || o.getObsValueRatioNumeratorValue() != null ) {
-			org.hl7.fhir.r4.model.Ratio observationsetvalueRatio = new org.hl7.fhir.r4.model.Ratio();
-			observation.setValue(observationsetvalueRatio);
-
-
-		org.hl7.fhir.r4.model.Quantity observationsetvalueRatiosetdenominator = new org.hl7.fhir.r4.model.Quantity();
-		observationsetvalueRatio.setDenominator(observationsetvalueRatiosetdenominator);
-
-		/******************** Obs_Value_Ratio_Denom_Code ********************************************************************************/
-		if(o.getObsValueRatioDenomCode() != null) {
-			observationsetvalueRatiosetdenominator.setCode(o.getObsValueRatioDenomCode());
-		}
-
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory observationsetvalueRatiosetdenominatorsetcomparatorEnumFactory = new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-
-		/******************** Obs_Value_Ratio_Denom_Compartr_Code ********************************************************************************/
-		if(o.getObsValueRatioDenomCompartrCode() != null) {
-			observationsetvalueRatiosetdenominator.setComparator(observationsetvalueRatiosetdenominatorsetcomparatorEnumFactory.fromCode(o.getObsValueRatioDenomCompartrCode()));
-
-		}
-		/******************** Obs_Value_Ratio_Denom_System ********************************************************************************/
-		if(o.getObsValueRatioDenomSystem() != null) {
-			observationsetvalueRatiosetdenominator.setSystem(o.getObsValueRatioDenomSystem());
-		}
-		/******************** Obs_Value_Ratio_Denom_Unit ********************************************************************************/
-		if(o.getObsValueRatioDenomUnit() != null) {
-			observationsetvalueRatiosetdenominator.setUnit(o.getObsValueRatioDenomUnit());
-		}
-		/******************** Obs_Value_Ratio_Denom_Value ********************************************************************************/
-		if(o.getObsValueRatioDenomValue() != null) {
-			observationsetvalueRatiosetdenominator.setValue(Double.parseDouble((o.getObsValueRatioDenomValue())));
-		}
-
-		org.hl7.fhir.r4.model.Quantity observationsetvalueRatiosetnumerator = new org.hl7.fhir.r4.model.Quantity();
-		observationsetvalueRatio.setNumerator(observationsetvalueRatiosetnumerator);
-
-		/******************** Obs_Value_Ratio_Numerator_Code ********************************************************************************/
-		if(o.getObsValueRatioNumeratorCode() != null) {
-			observationsetvalueRatiosetnumerator.setCode(o.getObsValueRatioNumeratorCode());
-		}
-
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory observationsetvalueRatiosetnumeratorsetcomparatorEnumFactory = new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-
-		/******************** Obs_Value_Ratio_Numerator_Compartr_Code ********************************************************************************/
-		if(o.getObsValueRatioNumeratorCompartrCode() != null) {
-			observationsetvalueRatiosetnumerator.setComparator(observationsetvalueRatiosetnumeratorsetcomparatorEnumFactory.fromCode(o.getObsValueRatioNumeratorCompartrCode()));
-
-		}
-		/******************** Obs_Value_Ratio_Numerator_System ********************************************************************************/
-		if(o.getObsValueRatioNumeratorSystem() != null) {
-			observationsetvalueRatiosetnumerator.setSystem(o.getObsValueRatioNumeratorSystem());
-		}
-		/******************** Obs_Value_Ratio_Numerator_Unit ********************************************************************************/
-		if(o.getObsValueRatioNumeratorUnit() != null) {
-			observationsetvalueRatiosetnumerator.setUnit(o.getObsValueRatioNumeratorUnit());
-		}
-		/******************** Obs_Value_Ratio_Numerator_Value ********************************************************************************/
-		if(o.getObsValueRatioNumeratorValue() != null) {
-			observationsetvalueRatiosetnumerator.setValue(Double.parseDouble((o.getObsValueRatioNumeratorValue())));
-		}
-		}
-
-		if( o.getObsValueSampledDataData() != null || o.getObsValueSampledDataDimensions() != null || o.getObsValueSampledDataFactor() != null || o.getObsValueSampledDataLowerLimit() != null || o.getObsValueSampledDataOriginCode() != null || o.getObsValueSampledDataOriginCompartrCode() != null || o.getObsValueSampledDataOriginSystem() != null || o.getObsValueSampledDataOriginUnit() != null || o.getObsValueSampledDataOriginValue() != null || o.getObsValueSampledDataPeriod() != null || o.getObsValueSampledDataUpperLimit() != null ) {
-			org.hl7.fhir.r4.model.SampledData observationsetvalueSampledData = new org.hl7.fhir.r4.model.SampledData();
-			observation.setValue(observationsetvalueSampledData);
-
-		/******************** Obs_Value_SampledData_Data ********************************************************************************/
-		if(o.getObsValueSampledDataData() != null) {
-			observationsetvalueSampledData.setData(o.getObsValueSampledDataData());
-		}
-		/******************** Obs_Value_SampledData_Dimensions ********************************************************************************/
-		if(o.getObsValueSampledDataDimensions() != null) {
-			observationsetvalueSampledData.setDimensions(Integer.parseInt(o.getObsValueSampledDataDimensions()));
-		}
-		/******************** Obs_Value_SampledData_Factor ********************************************************************************/
-		if(o.getObsValueSampledDataFactor() != null) {
-			observationsetvalueSampledData.setFactor(Double.parseDouble((o.getObsValueSampledDataFactor())));
-		}
-		/******************** Obs_Value_SampledData_LowerLimit ********************************************************************************/
-		if(o.getObsValueSampledDataLowerLimit() != null) {
-			observationsetvalueSampledData.setLowerLimit(Double.parseDouble((o.getObsValueSampledDataLowerLimit())));
-		}
-
-		org.hl7.fhir.r4.model.Quantity observationsetvalueSampledDatasetorigin = new org.hl7.fhir.r4.model.Quantity();
-		observationsetvalueSampledData.setOrigin(observationsetvalueSampledDatasetorigin);
-
-		/******************** Obs_Value_SampledData_Origin_Code ********************************************************************************/
-		if(o.getObsValueSampledDataOriginCode() != null) {
-			observationsetvalueSampledDatasetorigin.setCode(o.getObsValueSampledDataOriginCode());
-		}
-
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory observationsetvalueSampledDatasetoriginsetcomparatorEnumFactory = new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-
-		/******************** Obs_Value_SampledData_Origin_Compartr_Code ********************************************************************************/
-		if(o.getObsValueSampledDataOriginCompartrCode() != null) {
-			observationsetvalueSampledDatasetorigin.setComparator(observationsetvalueSampledDatasetoriginsetcomparatorEnumFactory.fromCode(o.getObsValueSampledDataOriginCompartrCode()));
-
-		}
-		/******************** Obs_Value_SampledData_Origin_System ********************************************************************************/
-		if(o.getObsValueSampledDataOriginSystem() != null) {
-			observationsetvalueSampledDatasetorigin.setSystem(o.getObsValueSampledDataOriginSystem());
-		}
-		/******************** Obs_Value_SampledData_Origin_Unit ********************************************************************************/
-		if(o.getObsValueSampledDataOriginUnit() != null) {
-			observationsetvalueSampledDatasetorigin.setUnit(o.getObsValueSampledDataOriginUnit());
-		}
-		/******************** Obs_Value_SampledData_Origin_Value ********************************************************************************/
-		if(o.getObsValueSampledDataOriginValue() != null) {
-			observationsetvalueSampledDatasetorigin.setValue(Double.parseDouble((o.getObsValueSampledDataOriginValue())));
-		}
-		/******************** Obs_Value_SampledData_Period ********************************************************************************/
-		if(o.getObsValueSampledDataPeriod() != null) {
-			observationsetvalueSampledData.setPeriod(Double.parseDouble((o.getObsValueSampledDataPeriod())));
-		}
-		/******************** Obs_Value_SampledData_UpperLimit ********************************************************************************/
-		if(o.getObsValueSampledDataUpperLimit() != null) {
-			observationsetvalueSampledData.setUpperLimit(Double.parseDouble((o.getObsValueSampledDataUpperLimit())));
-		}
-		}
-		/******************** Observation_ValueString ********************************************************************************/
-		if(o.getObservationValueString() != null) {
-			observation.setValue(new org.hl7.fhir.r4.model.StringType(o.getObservationValueString()));
-		}
-		/******************** Observation_ValueTime ********************************************************************************/
-		if(o.getObservationValueTime() != null) {
-			observation.setValue(new org.hl7.fhir.r4.model.TimeType(o.getObservationValueTime()));
+		/******************** Obsrvtn_BasedOn ********************************************************************************/
+		if(o.getObsrvtnBasedOn() != null) {
+			observation.addBasedOn( new org.hl7.fhir.r4.model.Reference(o.getObsrvtnBasedOn()));
+		}
+		/******************** observationbodysite ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept observationbodysite =  new org.hl7.fhir.r4.model.CodeableConcept();
+		observation.setBodySite(observationbodysite);
+
+		/******************** observationbodysitecoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding observationbodysitecoding =  new org.hl7.fhir.r4.model.Coding();
+		observationbodysite.addCoding(observationbodysitecoding);
+
+		/******************** Obsrvtn_BodySite_Cdg_Cd ********************************************************************************/
+		if(o.getObsrvtnBodySiteCdgCd() != null) {
+			observationbodysitecoding.setCode(o.getObsrvtnBodySiteCdgCd());
+		}
+		/******************** Obsrvtn_BodySite_Cdg_Dsply ********************************************************************************/
+		if(o.getObsrvtnBodySiteCdgDsply() != null) {
+			observationbodysitecoding.setDisplay(o.getObsrvtnBodySiteCdgDsply());
+		}
+		/******************** Obsrvtn_BodySite_Cdg_Sys ********************************************************************************/
+		if(o.getObsrvtnBodySiteCdgSys() != null) {
+			observationbodysitecoding.setSystem(o.getObsrvtnBodySiteCdgSys());
+		}
+		/******************** Obsrvtn_BodySite_Cdg_UsrSltd ********************************************************************************/
+		if(o.getObsrvtnBodySiteCdgUsrSltd() != null) {
+			observationbodysitecoding.setUserSelected(Boolean.parseBoolean(o.getObsrvtnBodySiteCdgUsrSltd()));
+		}
+		/******************** Obsrvtn_BodySite_Cdg_Vrsn ********************************************************************************/
+		if(o.getObsrvtnBodySiteCdgVrsn() != null) {
+			observationbodysitecoding.setVersion(o.getObsrvtnBodySiteCdgVrsn());
+		}
+		/******************** Obsrvtn_BodySite_Txt ********************************************************************************/
+		if(o.getObsrvtnBodySiteTxt() != null) {
+			observationbodysite.setText(o.getObsrvtnBodySiteTxt());
+		}
+		/******************** observationcategory ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept observationcategory =  new org.hl7.fhir.r4.model.CodeableConcept();
+		observation.addCategory(observationcategory);
+
+		/******************** observationcategorycoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding observationcategorycoding =  new org.hl7.fhir.r4.model.Coding();
+		observationcategory.addCoding(observationcategorycoding);
+
+		/******************** Obsrvtn_Ctgry_Cdg_Cd ********************************************************************************/
+		if(o.getObsrvtnCtgryCdgCd() != null) {
+			observationcategorycoding.setCode(o.getObsrvtnCtgryCdgCd());
+		}
+		/******************** Obsrvtn_Ctgry_Cdg_Dsply ********************************************************************************/
+		if(o.getObsrvtnCtgryCdgDsply() != null) {
+			observationcategorycoding.setDisplay(o.getObsrvtnCtgryCdgDsply());
+		}
+		/******************** Obsrvtn_Ctgry_Cdg_Sys ********************************************************************************/
+		if(o.getObsrvtnCtgryCdgSys() != null) {
+			observationcategorycoding.setSystem(o.getObsrvtnCtgryCdgSys());
+		}
+		/******************** Obsrvtn_Ctgry_Cdg_UsrSltd ********************************************************************************/
+		if(o.getObsrvtnCtgryCdgUsrSltd() != null) {
+			observationcategorycoding.setUserSelected(Boolean.parseBoolean(o.getObsrvtnCtgryCdgUsrSltd()));
+		}
+		/******************** Obsrvtn_Ctgry_Cdg_Vrsn ********************************************************************************/
+		if(o.getObsrvtnCtgryCdgVrsn() != null) {
+			observationcategorycoding.setVersion(o.getObsrvtnCtgryCdgVrsn());
+		}
+		/******************** Obsrvtn_Ctgry_Txt ********************************************************************************/
+		if(o.getObsrvtnCtgryTxt() != null) {
+			observationcategory.setText(o.getObsrvtnCtgryTxt());
+		}
+		/******************** observationcode ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept observationcode =  new org.hl7.fhir.r4.model.CodeableConcept();
+		observation.setCode(observationcode);
+
+		/******************** observationcodecoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding observationcodecoding =  new org.hl7.fhir.r4.model.Coding();
+		observationcode.addCoding(observationcodecoding);
+
+		/******************** Obsrvtn_Cd_Cdg_Cd ********************************************************************************/
+		if(o.getObsrvtnCdCdgCd() != null) {
+			observationcodecoding.setCode(o.getObsrvtnCdCdgCd());
+		}
+		/******************** Obsrvtn_Cd_Cdg_Dsply ********************************************************************************/
+		if(o.getObsrvtnCdCdgDsply() != null) {
+			observationcodecoding.setDisplay(o.getObsrvtnCdCdgDsply());
+		}
+		/******************** Obsrvtn_Cd_Cdg_Sys ********************************************************************************/
+		if(o.getObsrvtnCdCdgSys() != null) {
+			observationcodecoding.setSystem(o.getObsrvtnCdCdgSys());
+		}
+		/******************** Obsrvtn_Cd_Cdg_UsrSltd ********************************************************************************/
+		if(o.getObsrvtnCdCdgUsrSltd() != null) {
+			observationcodecoding.setUserSelected(Boolean.parseBoolean(o.getObsrvtnCdCdgUsrSltd()));
+		}
+		/******************** Obsrvtn_Cd_Cdg_Vrsn ********************************************************************************/
+		if(o.getObsrvtnCdCdgVrsn() != null) {
+			observationcodecoding.setVersion(o.getObsrvtnCdCdgVrsn());
+		}
+		/******************** Obsrvtn_Cd_Txt ********************************************************************************/
+		if(o.getObsrvtnCdTxt() != null) {
+			observationcode.setText(o.getObsrvtnCdTxt());
+		}
+		/******************** observationcomponent ********************************************************************************/
+		org.hl7.fhir.r4.model.Observation.ObservationComponentComponent observationcomponent =  new org.hl7.fhir.r4.model.Observation.ObservationComponentComponent();
+		observation.addComponent(observationcomponent);
+
+		/******************** observationcomponentcode ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept observationcomponentcode =  new org.hl7.fhir.r4.model.CodeableConcept();
+		observationcomponent.setCode(observationcomponentcode);
+
+		/******************** observationcomponentcodecoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding observationcomponentcodecoding =  new org.hl7.fhir.r4.model.Coding();
+		observationcomponentcode.addCoding(observationcomponentcodecoding);
+
+		/******************** Obsrvtn_Cmpnt_Cd_Cdg_Cd ********************************************************************************/
+		if(o.getObsrvtnCmpntCdCdgCd() != null) {
+			observationcomponentcodecoding.setCode(o.getObsrvtnCmpntCdCdgCd());
+		}
+		/******************** Obsrvtn_Cmpnt_Cd_Cdg_Dsply ********************************************************************************/
+		if(o.getObsrvtnCmpntCdCdgDsply() != null) {
+			observationcomponentcodecoding.setDisplay(o.getObsrvtnCmpntCdCdgDsply());
+		}
+		/******************** Obsrvtn_Cmpnt_Cd_Cdg_Sys ********************************************************************************/
+		if(o.getObsrvtnCmpntCdCdgSys() != null) {
+			observationcomponentcodecoding.setSystem(o.getObsrvtnCmpntCdCdgSys());
+		}
+		/******************** Obsrvtn_Cmpnt_Cd_Cdg_UsrSltd ********************************************************************************/
+		if(o.getObsrvtnCmpntCdCdgUsrSltd() != null) {
+			observationcomponentcodecoding.setUserSelected(Boolean.parseBoolean(o.getObsrvtnCmpntCdCdgUsrSltd()));
+		}
+		/******************** Obsrvtn_Cmpnt_Cd_Cdg_Vrsn ********************************************************************************/
+		if(o.getObsrvtnCmpntCdCdgVrsn() != null) {
+			observationcomponentcodecoding.setVersion(o.getObsrvtnCmpntCdCdgVrsn());
+		}
+		/******************** Obsrvtn_Cmpnt_Cd_Txt ********************************************************************************/
+		if(o.getObsrvtnCmpntCdTxt() != null) {
+			observationcomponentcode.setText(o.getObsrvtnCmpntCdTxt());
+		}
+		/******************** observationcomponentdataabsentreason ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept observationcomponentdataabsentreason =  new org.hl7.fhir.r4.model.CodeableConcept();
+		observationcomponent.setDataAbsentReason(observationcomponentdataabsentreason);
+
+		/******************** observationcomponentdataabsentreasoncoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding observationcomponentdataabsentreasoncoding =  new org.hl7.fhir.r4.model.Coding();
+		observationcomponentdataabsentreason.addCoding(observationcomponentdataabsentreasoncoding);
+
+		/******************** Obsrvtn_Cmpnt_DataAbsentRsn_Cdg_Cd ********************************************************************************/
+		if(o.getObsrvtnCmpntDataAbsentRsnCdgCd() != null) {
+			observationcomponentdataabsentreasoncoding.setCode(o.getObsrvtnCmpntDataAbsentRsnCdgCd());
+		}
+		/******************** Obsrvtn_Cmpnt_DataAbsentRsn_Cdg_Dsply ********************************************************************************/
+		if(o.getObsrvtnCmpntDataAbsentRsnCdgDsply() != null) {
+			observationcomponentdataabsentreasoncoding.setDisplay(o.getObsrvtnCmpntDataAbsentRsnCdgDsply());
+		}
+		/******************** Obsrvtn_Cmpnt_DataAbsentRsn_Cdg_Sys ********************************************************************************/
+		if(o.getObsrvtnCmpntDataAbsentRsnCdgSys() != null) {
+			observationcomponentdataabsentreasoncoding.setSystem(o.getObsrvtnCmpntDataAbsentRsnCdgSys());
+		}
+		/******************** Obsrvtn_Cmpnt_DataAbsentRsn_Cdg_UsrSltd ********************************************************************************/
+		if(o.getObsrvtnCmpntDataAbsentRsnCdgUsrSltd() != null) {
+			observationcomponentdataabsentreasoncoding.setUserSelected(Boolean.parseBoolean(o.getObsrvtnCmpntDataAbsentRsnCdgUsrSltd()));
+		}
+		/******************** Obsrvtn_Cmpnt_DataAbsentRsn_Cdg_Vrsn ********************************************************************************/
+		if(o.getObsrvtnCmpntDataAbsentRsnCdgVrsn() != null) {
+			observationcomponentdataabsentreasoncoding.setVersion(o.getObsrvtnCmpntDataAbsentRsnCdgVrsn());
+		}
+		/******************** Obsrvtn_Cmpnt_DataAbsentRsn_Txt ********************************************************************************/
+		if(o.getObsrvtnCmpntDataAbsentRsnTxt() != null) {
+			observationcomponentdataabsentreason.setText(o.getObsrvtnCmpntDataAbsentRsnTxt());
+		}
+		/******************** observationcomponentinterpretation ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept observationcomponentinterpretation =  new org.hl7.fhir.r4.model.CodeableConcept();
+		observationcomponent.addInterpretation(observationcomponentinterpretation);
+
+		/******************** observationcomponentinterpretationcoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding observationcomponentinterpretationcoding =  new org.hl7.fhir.r4.model.Coding();
+		observationcomponentinterpretation.addCoding(observationcomponentinterpretationcoding);
+
+		/******************** Obsrvtn_Cmpnt_Interpretation_Cdg_Cd ********************************************************************************/
+		if(o.getObsrvtnCmpntInterpretationCdgCd() != null) {
+			observationcomponentinterpretationcoding.setCode(o.getObsrvtnCmpntInterpretationCdgCd());
+		}
+		/******************** Obsrvtn_Cmpnt_Interpretation_Cdg_Dsply ********************************************************************************/
+		if(o.getObsrvtnCmpntInterpretationCdgDsply() != null) {
+			observationcomponentinterpretationcoding.setDisplay(o.getObsrvtnCmpntInterpretationCdgDsply());
+		}
+		/******************** Obsrvtn_Cmpnt_Interpretation_Cdg_Sys ********************************************************************************/
+		if(o.getObsrvtnCmpntInterpretationCdgSys() != null) {
+			observationcomponentinterpretationcoding.setSystem(o.getObsrvtnCmpntInterpretationCdgSys());
+		}
+		/******************** Obsrvtn_Cmpnt_Interpretation_Cdg_UsrSltd ********************************************************************************/
+		if(o.getObsrvtnCmpntInterpretationCdgUsrSltd() != null) {
+			observationcomponentinterpretationcoding.setUserSelected(Boolean.parseBoolean(o.getObsrvtnCmpntInterpretationCdgUsrSltd()));
+		}
+		/******************** Obsrvtn_Cmpnt_Interpretation_Cdg_Vrsn ********************************************************************************/
+		if(o.getObsrvtnCmpntInterpretationCdgVrsn() != null) {
+			observationcomponentinterpretationcoding.setVersion(o.getObsrvtnCmpntInterpretationCdgVrsn());
+		}
+		/******************** Obsrvtn_Cmpnt_Interpretation_Txt ********************************************************************************/
+		if(o.getObsrvtnCmpntInterpretationTxt() != null) {
+			observationcomponentinterpretation.setText(o.getObsrvtnCmpntInterpretationTxt());
+		}
+		/******************** observationcomponentreferencerange ********************************************************************************/
+		org.hl7.fhir.r4.model.Observation.ObservationReferenceRangeComponent observationcomponentreferencerange =  new org.hl7.fhir.r4.model.Observation.ObservationReferenceRangeComponent();
+		observationcomponent.addReferenceRange(observationcomponentreferencerange);
+
+		/******************** observationcomponentreferencerangeage ********************************************************************************/
+		org.hl7.fhir.r4.model.Range observationcomponentreferencerangeage =  new org.hl7.fhir.r4.model.Range();
+		observationcomponentreferencerange.setAge(observationcomponentreferencerangeage);
+
+		/******************** observationcomponentreferencerangeagehigh ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity observationcomponentreferencerangeagehigh =  new org.hl7.fhir.r4.model.Quantity();
+		observationcomponentreferencerangeage.setHigh(observationcomponentreferencerangeagehigh);
+
+		/******************** Obsrvtn_Cmpnt_RfrncRng_Age_Hi_Cd ********************************************************************************/
+		if(o.getObsrvtnCmpntRfrncRngAgeHiCd() != null) {
+			observationcomponentreferencerangeagehigh.setCode(o.getObsrvtnCmpntRfrncRngAgeHiCd());
+		}
+		/******************** observationcomponentreferencerangeagehighcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory observationcomponentreferencerangeagehighcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		observationcomponentreferencerangeagehigh.setComparator(observationcomponentreferencerangeagehighcomparator.fromCode(o.getObsrvtnCmpntRfrncRngAgeHiCmprtr()));
+
+		/******************** Obsrvtn_Cmpnt_RfrncRng_Age_Hi_Sys ********************************************************************************/
+		if(o.getObsrvtnCmpntRfrncRngAgeHiSys() != null) {
+			observationcomponentreferencerangeagehigh.setSystem(o.getObsrvtnCmpntRfrncRngAgeHiSys());
+		}
+		/******************** Obsrvtn_Cmpnt_RfrncRng_Age_Hi_Unt ********************************************************************************/
+		if(o.getObsrvtnCmpntRfrncRngAgeHiUnt() != null) {
+			observationcomponentreferencerangeagehigh.setUnit(o.getObsrvtnCmpntRfrncRngAgeHiUnt());
+		}
+		/******************** Obsrvtn_Cmpnt_RfrncRng_Age_Hi_Vl ********************************************************************************/
+		if(o.getObsrvtnCmpntRfrncRngAgeHiVl() != null) {
+			observationcomponentreferencerangeagehigh.setValue(Double.parseDouble((o.getObsrvtnCmpntRfrncRngAgeHiVl())));
+		}
+		/******************** observationcomponentreferencerangeagelow ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity observationcomponentreferencerangeagelow =  new org.hl7.fhir.r4.model.Quantity();
+		observationcomponentreferencerangeage.setLow(observationcomponentreferencerangeagelow);
+
+		/******************** Obsrvtn_Cmpnt_RfrncRng_Age_Lw_Cd ********************************************************************************/
+		if(o.getObsrvtnCmpntRfrncRngAgeLwCd() != null) {
+			observationcomponentreferencerangeagelow.setCode(o.getObsrvtnCmpntRfrncRngAgeLwCd());
+		}
+		/******************** observationcomponentreferencerangeagelowcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory observationcomponentreferencerangeagelowcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		observationcomponentreferencerangeagelow.setComparator(observationcomponentreferencerangeagelowcomparator.fromCode(o.getObsrvtnCmpntRfrncRngAgeLwCmprtr()));
+
+		/******************** Obsrvtn_Cmpnt_RfrncRng_Age_Lw_Sys ********************************************************************************/
+		if(o.getObsrvtnCmpntRfrncRngAgeLwSys() != null) {
+			observationcomponentreferencerangeagelow.setSystem(o.getObsrvtnCmpntRfrncRngAgeLwSys());
+		}
+		/******************** Obsrvtn_Cmpnt_RfrncRng_Age_Lw_Unt ********************************************************************************/
+		if(o.getObsrvtnCmpntRfrncRngAgeLwUnt() != null) {
+			observationcomponentreferencerangeagelow.setUnit(o.getObsrvtnCmpntRfrncRngAgeLwUnt());
+		}
+		/******************** Obsrvtn_Cmpnt_RfrncRng_Age_Lw_Vl ********************************************************************************/
+		if(o.getObsrvtnCmpntRfrncRngAgeLwVl() != null) {
+			observationcomponentreferencerangeagelow.setValue(Double.parseDouble((o.getObsrvtnCmpntRfrncRngAgeLwVl())));
+		}
+		/******************** observationcomponentreferencerangeappliesto ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept observationcomponentreferencerangeappliesto =  new org.hl7.fhir.r4.model.CodeableConcept();
+		observationcomponentreferencerange.addAppliesTo(observationcomponentreferencerangeappliesto);
+
+		/******************** observationcomponentreferencerangeappliestocoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding observationcomponentreferencerangeappliestocoding =  new org.hl7.fhir.r4.model.Coding();
+		observationcomponentreferencerangeappliesto.addCoding(observationcomponentreferencerangeappliestocoding);
+
+		/******************** Obsrvtn_Cmpnt_RfrncRng_AppliesTo_Cdg_Cd ********************************************************************************/
+		if(o.getObsrvtnCmpntRfrncRngAppliesToCdgCd() != null) {
+			observationcomponentreferencerangeappliestocoding.setCode(o.getObsrvtnCmpntRfrncRngAppliesToCdgCd());
+		}
+		/******************** Obsrvtn_Cmpnt_RfrncRng_AppliesTo_Cdg_Dsply ********************************************************************************/
+		if(o.getObsrvtnCmpntRfrncRngAppliesToCdgDsply() != null) {
+			observationcomponentreferencerangeappliestocoding.setDisplay(o.getObsrvtnCmpntRfrncRngAppliesToCdgDsply());
+		}
+		/******************** Obsrvtn_Cmpnt_RfrncRng_AppliesTo_Cdg_Sys ********************************************************************************/
+		if(o.getObsrvtnCmpntRfrncRngAppliesToCdgSys() != null) {
+			observationcomponentreferencerangeappliestocoding.setSystem(o.getObsrvtnCmpntRfrncRngAppliesToCdgSys());
+		}
+		/******************** Obsrvtn_Cmpnt_RfrncRng_AppliesTo_Cdg_UsrSltd ********************************************************************************/
+		if(o.getObsrvtnCmpntRfrncRngAppliesToCdgUsrSltd() != null) {
+			observationcomponentreferencerangeappliestocoding.setUserSelected(Boolean.parseBoolean(o.getObsrvtnCmpntRfrncRngAppliesToCdgUsrSltd()));
+		}
+		/******************** Obsrvtn_Cmpnt_RfrncRng_AppliesTo_Cdg_Vrsn ********************************************************************************/
+		if(o.getObsrvtnCmpntRfrncRngAppliesToCdgVrsn() != null) {
+			observationcomponentreferencerangeappliestocoding.setVersion(o.getObsrvtnCmpntRfrncRngAppliesToCdgVrsn());
+		}
+		/******************** Obsrvtn_Cmpnt_RfrncRng_AppliesTo_Txt ********************************************************************************/
+		if(o.getObsrvtnCmpntRfrncRngAppliesToTxt() != null) {
+			observationcomponentreferencerangeappliesto.setText(o.getObsrvtnCmpntRfrncRngAppliesToTxt());
+		}
+		/******************** observationcomponentreferencerangehigh ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity observationcomponentreferencerangehigh =  new org.hl7.fhir.r4.model.Quantity();
+		observationcomponentreferencerange.setHigh(observationcomponentreferencerangehigh);
+
+		/******************** Obsrvtn_Cmpnt_RfrncRng_Hi_Cd ********************************************************************************/
+		if(o.getObsrvtnCmpntRfrncRngHiCd() != null) {
+			observationcomponentreferencerangehigh.setCode(o.getObsrvtnCmpntRfrncRngHiCd());
+		}
+		/******************** observationcomponentreferencerangehighcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory observationcomponentreferencerangehighcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		observationcomponentreferencerangehigh.setComparator(observationcomponentreferencerangehighcomparator.fromCode(o.getObsrvtnCmpntRfrncRngHiCmprtr()));
+
+		/******************** Obsrvtn_Cmpnt_RfrncRng_Hi_Sys ********************************************************************************/
+		if(o.getObsrvtnCmpntRfrncRngHiSys() != null) {
+			observationcomponentreferencerangehigh.setSystem(o.getObsrvtnCmpntRfrncRngHiSys());
+		}
+		/******************** Obsrvtn_Cmpnt_RfrncRng_Hi_Unt ********************************************************************************/
+		if(o.getObsrvtnCmpntRfrncRngHiUnt() != null) {
+			observationcomponentreferencerangehigh.setUnit(o.getObsrvtnCmpntRfrncRngHiUnt());
+		}
+		/******************** Obsrvtn_Cmpnt_RfrncRng_Hi_Vl ********************************************************************************/
+		if(o.getObsrvtnCmpntRfrncRngHiVl() != null) {
+			observationcomponentreferencerangehigh.setValue(Double.parseDouble((o.getObsrvtnCmpntRfrncRngHiVl())));
+		}
+		/******************** observationcomponentreferencerangelow ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity observationcomponentreferencerangelow =  new org.hl7.fhir.r4.model.Quantity();
+		observationcomponentreferencerange.setLow(observationcomponentreferencerangelow);
+
+		/******************** Obsrvtn_Cmpnt_RfrncRng_Lw_Cd ********************************************************************************/
+		if(o.getObsrvtnCmpntRfrncRngLwCd() != null) {
+			observationcomponentreferencerangelow.setCode(o.getObsrvtnCmpntRfrncRngLwCd());
+		}
+		/******************** observationcomponentreferencerangelowcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory observationcomponentreferencerangelowcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		observationcomponentreferencerangelow.setComparator(observationcomponentreferencerangelowcomparator.fromCode(o.getObsrvtnCmpntRfrncRngLwCmprtr()));
+
+		/******************** Obsrvtn_Cmpnt_RfrncRng_Lw_Sys ********************************************************************************/
+		if(o.getObsrvtnCmpntRfrncRngLwSys() != null) {
+			observationcomponentreferencerangelow.setSystem(o.getObsrvtnCmpntRfrncRngLwSys());
+		}
+		/******************** Obsrvtn_Cmpnt_RfrncRng_Lw_Unt ********************************************************************************/
+		if(o.getObsrvtnCmpntRfrncRngLwUnt() != null) {
+			observationcomponentreferencerangelow.setUnit(o.getObsrvtnCmpntRfrncRngLwUnt());
+		}
+		/******************** Obsrvtn_Cmpnt_RfrncRng_Lw_Vl ********************************************************************************/
+		if(o.getObsrvtnCmpntRfrncRngLwVl() != null) {
+			observationcomponentreferencerangelow.setValue(Double.parseDouble((o.getObsrvtnCmpntRfrncRngLwVl())));
+		}
+		/******************** Obsrvtn_Cmpnt_RfrncRng_Txt ********************************************************************************/
+		if(o.getObsrvtnCmpntRfrncRngTxt() != null) {
+			observationcomponentreferencerange.setText(o.getObsrvtnCmpntRfrncRngTxt());
+		}
+		/******************** observationcomponentreferencerangetype ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept observationcomponentreferencerangetype =  new org.hl7.fhir.r4.model.CodeableConcept();
+		observationcomponentreferencerange.setType(observationcomponentreferencerangetype);
+
+		/******************** observationcomponentreferencerangetypecoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding observationcomponentreferencerangetypecoding =  new org.hl7.fhir.r4.model.Coding();
+		observationcomponentreferencerangetype.addCoding(observationcomponentreferencerangetypecoding);
+
+		/******************** Obsrvtn_Cmpnt_RfrncRng_Typ_Cdg_Cd ********************************************************************************/
+		if(o.getObsrvtnCmpntRfrncRngTypCdgCd() != null) {
+			observationcomponentreferencerangetypecoding.setCode(o.getObsrvtnCmpntRfrncRngTypCdgCd());
+		}
+		/******************** Obsrvtn_Cmpnt_RfrncRng_Typ_Cdg_Dsply ********************************************************************************/
+		if(o.getObsrvtnCmpntRfrncRngTypCdgDsply() != null) {
+			observationcomponentreferencerangetypecoding.setDisplay(o.getObsrvtnCmpntRfrncRngTypCdgDsply());
+		}
+		/******************** Obsrvtn_Cmpnt_RfrncRng_Typ_Cdg_Sys ********************************************************************************/
+		if(o.getObsrvtnCmpntRfrncRngTypCdgSys() != null) {
+			observationcomponentreferencerangetypecoding.setSystem(o.getObsrvtnCmpntRfrncRngTypCdgSys());
+		}
+		/******************** Obsrvtn_Cmpnt_RfrncRng_Typ_Cdg_UsrSltd ********************************************************************************/
+		if(o.getObsrvtnCmpntRfrncRngTypCdgUsrSltd() != null) {
+			observationcomponentreferencerangetypecoding.setUserSelected(Boolean.parseBoolean(o.getObsrvtnCmpntRfrncRngTypCdgUsrSltd()));
+		}
+		/******************** Obsrvtn_Cmpnt_RfrncRng_Typ_Cdg_Vrsn ********************************************************************************/
+		if(o.getObsrvtnCmpntRfrncRngTypCdgVrsn() != null) {
+			observationcomponentreferencerangetypecoding.setVersion(o.getObsrvtnCmpntRfrncRngTypCdgVrsn());
+		}
+		/******************** Obsrvtn_Cmpnt_RfrncRng_Typ_Txt ********************************************************************************/
+		if(o.getObsrvtnCmpntRfrncRngTypTxt() != null) {
+			observationcomponentreferencerangetype.setText(o.getObsrvtnCmpntRfrncRngTypTxt());
+		}
+		/******************** Obsrvtn_Cmpnt_VlBooleanTyp ********************************************************************************/
+		if(o.getObsrvtnCmpntVlBooleanTyp() != null) {
+			observationcomponent.setValue( new org.hl7.fhir.r4.model.BooleanType(o.getObsrvtnCmpntVlBooleanTyp()));
+		}
+		/******************** observationcomponentvaluecodeableconcept ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept observationcomponentvaluecodeableconcept =  new org.hl7.fhir.r4.model.CodeableConcept();
+		observationcomponent.setValue(observationcomponentvaluecodeableconcept);
+
+		/******************** observationcomponentvaluecodeableconceptcoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding observationcomponentvaluecodeableconceptcoding =  new org.hl7.fhir.r4.model.Coding();
+		observationcomponentvaluecodeableconcept.addCoding(observationcomponentvaluecodeableconceptcoding);
+
+		/******************** Obsrvtn_Cmpnt_VlCdbleCncpt_Cdg_Cd ********************************************************************************/
+		if(o.getObsrvtnCmpntVlCdbleCncptCdgCd() != null) {
+			observationcomponentvaluecodeableconceptcoding.setCode(o.getObsrvtnCmpntVlCdbleCncptCdgCd());
+		}
+		/******************** Obsrvtn_Cmpnt_VlCdbleCncpt_Cdg_Dsply ********************************************************************************/
+		if(o.getObsrvtnCmpntVlCdbleCncptCdgDsply() != null) {
+			observationcomponentvaluecodeableconceptcoding.setDisplay(o.getObsrvtnCmpntVlCdbleCncptCdgDsply());
+		}
+		/******************** Obsrvtn_Cmpnt_VlCdbleCncpt_Cdg_Sys ********************************************************************************/
+		if(o.getObsrvtnCmpntVlCdbleCncptCdgSys() != null) {
+			observationcomponentvaluecodeableconceptcoding.setSystem(o.getObsrvtnCmpntVlCdbleCncptCdgSys());
+		}
+		/******************** Obsrvtn_Cmpnt_VlCdbleCncpt_Cdg_UsrSltd ********************************************************************************/
+		if(o.getObsrvtnCmpntVlCdbleCncptCdgUsrSltd() != null) {
+			observationcomponentvaluecodeableconceptcoding.setUserSelected(Boolean.parseBoolean(o.getObsrvtnCmpntVlCdbleCncptCdgUsrSltd()));
+		}
+		/******************** Obsrvtn_Cmpnt_VlCdbleCncpt_Cdg_Vrsn ********************************************************************************/
+		if(o.getObsrvtnCmpntVlCdbleCncptCdgVrsn() != null) {
+			observationcomponentvaluecodeableconceptcoding.setVersion(o.getObsrvtnCmpntVlCdbleCncptCdgVrsn());
+		}
+		/******************** Obsrvtn_Cmpnt_VlCdbleCncpt_Txt ********************************************************************************/
+		if(o.getObsrvtnCmpntVlCdbleCncptTxt() != null) {
+			observationcomponentvaluecodeableconcept.setText(o.getObsrvtnCmpntVlCdbleCncptTxt());
+		}
+		/******************** Obsrvtn_Cmpnt_VlDtTimeTyp ********************************************************************************/
+		if(o.getObsrvtnCmpntVlDtTimeTyp() != null) {
+			observationcomponent.setValue( new org.hl7.fhir.r4.model.DateTimeType(o.getObsrvtnCmpntVlDtTimeTyp()));
+		}
+		/******************** Obsrvtn_Cmpnt_VlIntegerTyp ********************************************************************************/
+		if(o.getObsrvtnCmpntVlIntegerTyp() != null) {
+			observationcomponent.setValue( new org.hl7.fhir.r4.model.IntegerType(o.getObsrvtnCmpntVlIntegerTyp()));
+		}
+		/******************** observationcomponentvalueperiod ********************************************************************************/
+		org.hl7.fhir.r4.model.Period observationcomponentvalueperiod =  new org.hl7.fhir.r4.model.Period();
+		observationcomponent.setValue(observationcomponentvalueperiod);
+
+		/******************** Obsrvtn_Cmpnt_VlPrd_End ********************************************************************************/
+		if(o.getObsrvtnCmpntVlPrdEnd() != null) {
+			java.text.SimpleDateFormat Obsrvtn_Cmpnt_VlPrd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Obsrvtn_Cmpnt_VlPrd_Enddate = Obsrvtn_Cmpnt_VlPrd_Endsdf.parse(o.getObsrvtnCmpntVlPrdEnd());
+			observationcomponentvalueperiod.setEnd(Obsrvtn_Cmpnt_VlPrd_Enddate);
+		}
+		/******************** Obsrvtn_Cmpnt_VlPrd_Strt ********************************************************************************/
+		if(o.getObsrvtnCmpntVlPrdStrt() != null) {
+			java.text.SimpleDateFormat Obsrvtn_Cmpnt_VlPrd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Obsrvtn_Cmpnt_VlPrd_Strtdate = Obsrvtn_Cmpnt_VlPrd_Strtsdf.parse(o.getObsrvtnCmpntVlPrdStrt());
+			observationcomponentvalueperiod.setStart(Obsrvtn_Cmpnt_VlPrd_Strtdate);
+		}
+		/******************** observationcomponentvaluequantity ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity observationcomponentvaluequantity =  new org.hl7.fhir.r4.model.Quantity();
+		observationcomponent.setValue(observationcomponentvaluequantity);
+
+		/******************** Obsrvtn_Cmpnt_VlQnty_Cd ********************************************************************************/
+		if(o.getObsrvtnCmpntVlQntyCd() != null) {
+			observationcomponentvaluequantity.setCode(o.getObsrvtnCmpntVlQntyCd());
+		}
+		/******************** observationcomponentvaluequantitycomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory observationcomponentvaluequantitycomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		observationcomponentvaluequantity.setComparator(observationcomponentvaluequantitycomparator.fromCode(o.getObsrvtnCmpntVlQntyCmprtr()));
+
+		/******************** Obsrvtn_Cmpnt_VlQnty_Sys ********************************************************************************/
+		if(o.getObsrvtnCmpntVlQntySys() != null) {
+			observationcomponentvaluequantity.setSystem(o.getObsrvtnCmpntVlQntySys());
+		}
+		/******************** Obsrvtn_Cmpnt_VlQnty_Unt ********************************************************************************/
+		if(o.getObsrvtnCmpntVlQntyUnt() != null) {
+			observationcomponentvaluequantity.setUnit(o.getObsrvtnCmpntVlQntyUnt());
+		}
+		/******************** Obsrvtn_Cmpnt_VlQnty_Vl ********************************************************************************/
+		if(o.getObsrvtnCmpntVlQntyVl() != null) {
+			observationcomponentvaluequantity.setValue(Double.parseDouble((o.getObsrvtnCmpntVlQntyVl())));
+		}
+		/******************** observationcomponentvaluerange ********************************************************************************/
+		org.hl7.fhir.r4.model.Range observationcomponentvaluerange =  new org.hl7.fhir.r4.model.Range();
+		observationcomponent.setValue(observationcomponentvaluerange);
+
+		/******************** observationcomponentvaluerangehigh ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity observationcomponentvaluerangehigh =  new org.hl7.fhir.r4.model.Quantity();
+		observationcomponentvaluerange.setHigh(observationcomponentvaluerangehigh);
+
+		/******************** Obsrvtn_Cmpnt_VlRng_Hi_Cd ********************************************************************************/
+		if(o.getObsrvtnCmpntVlRngHiCd() != null) {
+			observationcomponentvaluerangehigh.setCode(o.getObsrvtnCmpntVlRngHiCd());
+		}
+		/******************** observationcomponentvaluerangehighcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory observationcomponentvaluerangehighcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		observationcomponentvaluerangehigh.setComparator(observationcomponentvaluerangehighcomparator.fromCode(o.getObsrvtnCmpntVlRngHiCmprtr()));
+
+		/******************** Obsrvtn_Cmpnt_VlRng_Hi_Sys ********************************************************************************/
+		if(o.getObsrvtnCmpntVlRngHiSys() != null) {
+			observationcomponentvaluerangehigh.setSystem(o.getObsrvtnCmpntVlRngHiSys());
+		}
+		/******************** Obsrvtn_Cmpnt_VlRng_Hi_Unt ********************************************************************************/
+		if(o.getObsrvtnCmpntVlRngHiUnt() != null) {
+			observationcomponentvaluerangehigh.setUnit(o.getObsrvtnCmpntVlRngHiUnt());
+		}
+		/******************** Obsrvtn_Cmpnt_VlRng_Hi_Vl ********************************************************************************/
+		if(o.getObsrvtnCmpntVlRngHiVl() != null) {
+			observationcomponentvaluerangehigh.setValue(Double.parseDouble((o.getObsrvtnCmpntVlRngHiVl())));
+		}
+		/******************** observationcomponentvaluerangelow ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity observationcomponentvaluerangelow =  new org.hl7.fhir.r4.model.Quantity();
+		observationcomponentvaluerange.setLow(observationcomponentvaluerangelow);
+
+		/******************** Obsrvtn_Cmpnt_VlRng_Lw_Cd ********************************************************************************/
+		if(o.getObsrvtnCmpntVlRngLwCd() != null) {
+			observationcomponentvaluerangelow.setCode(o.getObsrvtnCmpntVlRngLwCd());
+		}
+		/******************** observationcomponentvaluerangelowcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory observationcomponentvaluerangelowcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		observationcomponentvaluerangelow.setComparator(observationcomponentvaluerangelowcomparator.fromCode(o.getObsrvtnCmpntVlRngLwCmprtr()));
+
+		/******************** Obsrvtn_Cmpnt_VlRng_Lw_Sys ********************************************************************************/
+		if(o.getObsrvtnCmpntVlRngLwSys() != null) {
+			observationcomponentvaluerangelow.setSystem(o.getObsrvtnCmpntVlRngLwSys());
+		}
+		/******************** Obsrvtn_Cmpnt_VlRng_Lw_Unt ********************************************************************************/
+		if(o.getObsrvtnCmpntVlRngLwUnt() != null) {
+			observationcomponentvaluerangelow.setUnit(o.getObsrvtnCmpntVlRngLwUnt());
+		}
+		/******************** Obsrvtn_Cmpnt_VlRng_Lw_Vl ********************************************************************************/
+		if(o.getObsrvtnCmpntVlRngLwVl() != null) {
+			observationcomponentvaluerangelow.setValue(Double.parseDouble((o.getObsrvtnCmpntVlRngLwVl())));
+		}
+		/******************** observationcomponentvalueratio ********************************************************************************/
+		org.hl7.fhir.r4.model.Ratio observationcomponentvalueratio =  new org.hl7.fhir.r4.model.Ratio();
+		observationcomponent.setValue(observationcomponentvalueratio);
+
+		/******************** observationcomponentvalueratiodenominator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity observationcomponentvalueratiodenominator =  new org.hl7.fhir.r4.model.Quantity();
+		observationcomponentvalueratio.setDenominator(observationcomponentvalueratiodenominator);
+
+		/******************** Obsrvtn_Cmpnt_VlRtio_Dnmntr_Cd ********************************************************************************/
+		if(o.getObsrvtnCmpntVlRtioDnmntrCd() != null) {
+			observationcomponentvalueratiodenominator.setCode(o.getObsrvtnCmpntVlRtioDnmntrCd());
+		}
+		/******************** observationcomponentvalueratiodenominatorcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory observationcomponentvalueratiodenominatorcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		observationcomponentvalueratiodenominator.setComparator(observationcomponentvalueratiodenominatorcomparator.fromCode(o.getObsrvtnCmpntVlRtioDnmntrCmprtr()));
+
+		/******************** Obsrvtn_Cmpnt_VlRtio_Dnmntr_Sys ********************************************************************************/
+		if(o.getObsrvtnCmpntVlRtioDnmntrSys() != null) {
+			observationcomponentvalueratiodenominator.setSystem(o.getObsrvtnCmpntVlRtioDnmntrSys());
+		}
+		/******************** Obsrvtn_Cmpnt_VlRtio_Dnmntr_Unt ********************************************************************************/
+		if(o.getObsrvtnCmpntVlRtioDnmntrUnt() != null) {
+			observationcomponentvalueratiodenominator.setUnit(o.getObsrvtnCmpntVlRtioDnmntrUnt());
+		}
+		/******************** Obsrvtn_Cmpnt_VlRtio_Dnmntr_Vl ********************************************************************************/
+		if(o.getObsrvtnCmpntVlRtioDnmntrVl() != null) {
+			observationcomponentvalueratiodenominator.setValue(Double.parseDouble((o.getObsrvtnCmpntVlRtioDnmntrVl())));
+		}
+		/******************** observationcomponentvaluerationumerator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity observationcomponentvaluerationumerator =  new org.hl7.fhir.r4.model.Quantity();
+		observationcomponentvalueratio.setNumerator(observationcomponentvaluerationumerator);
+
+		/******************** Obsrvtn_Cmpnt_VlRtio_Nmrtr_Cd ********************************************************************************/
+		if(o.getObsrvtnCmpntVlRtioNmrtrCd() != null) {
+			observationcomponentvaluerationumerator.setCode(o.getObsrvtnCmpntVlRtioNmrtrCd());
+		}
+		/******************** observationcomponentvaluerationumeratorcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory observationcomponentvaluerationumeratorcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		observationcomponentvaluerationumerator.setComparator(observationcomponentvaluerationumeratorcomparator.fromCode(o.getObsrvtnCmpntVlRtioNmrtrCmprtr()));
+
+		/******************** Obsrvtn_Cmpnt_VlRtio_Nmrtr_Sys ********************************************************************************/
+		if(o.getObsrvtnCmpntVlRtioNmrtrSys() != null) {
+			observationcomponentvaluerationumerator.setSystem(o.getObsrvtnCmpntVlRtioNmrtrSys());
+		}
+		/******************** Obsrvtn_Cmpnt_VlRtio_Nmrtr_Unt ********************************************************************************/
+		if(o.getObsrvtnCmpntVlRtioNmrtrUnt() != null) {
+			observationcomponentvaluerationumerator.setUnit(o.getObsrvtnCmpntVlRtioNmrtrUnt());
+		}
+		/******************** Obsrvtn_Cmpnt_VlRtio_Nmrtr_Vl ********************************************************************************/
+		if(o.getObsrvtnCmpntVlRtioNmrtrVl() != null) {
+			observationcomponentvaluerationumerator.setValue(Double.parseDouble((o.getObsrvtnCmpntVlRtioNmrtrVl())));
+		}
+		/******************** observationcomponentvaluesampleddata ********************************************************************************/
+		org.hl7.fhir.r4.model.SampledData observationcomponentvaluesampleddata =  new org.hl7.fhir.r4.model.SampledData();
+		observationcomponent.setValue(observationcomponentvaluesampleddata);
+
+		/******************** Obsrvtn_Cmpnt_VlSampledData_Data ********************************************************************************/
+		if(o.getObsrvtnCmpntVlSampledDataData() != null) {
+			observationcomponentvaluesampleddata.setData(o.getObsrvtnCmpntVlSampledDataData());
+		}
+		/******************** Obsrvtn_Cmpnt_VlSampledData_Dimensions ********************************************************************************/
+		if(o.getObsrvtnCmpntVlSampledDataDimensions() != null) {
+			observationcomponentvaluesampleddata.setDimensions(Integer.parseInt(o.getObsrvtnCmpntVlSampledDataDimensions()));
+		}
+		/******************** Obsrvtn_Cmpnt_VlSampledData_Factor ********************************************************************************/
+		if(o.getObsrvtnCmpntVlSampledDataFactor() != null) {
+			observationcomponentvaluesampleddata.setFactor(Double.parseDouble((o.getObsrvtnCmpntVlSampledDataFactor())));
+		}
+		/******************** Obsrvtn_Cmpnt_VlSampledData_LwerLmt ********************************************************************************/
+		if(o.getObsrvtnCmpntVlSampledDataLwerLmt() != null) {
+			observationcomponentvaluesampleddata.setLowerLimit(Double.parseDouble((o.getObsrvtnCmpntVlSampledDataLwerLmt())));
+		}
+		/******************** observationcomponentvaluesampleddataorigin ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity observationcomponentvaluesampleddataorigin =  new org.hl7.fhir.r4.model.Quantity();
+		observationcomponentvaluesampleddata.setOrigin(observationcomponentvaluesampleddataorigin);
+
+		/******************** Obsrvtn_Cmpnt_VlSampledData_Origin_Cd ********************************************************************************/
+		if(o.getObsrvtnCmpntVlSampledDataOriginCd() != null) {
+			observationcomponentvaluesampleddataorigin.setCode(o.getObsrvtnCmpntVlSampledDataOriginCd());
+		}
+		/******************** observationcomponentvaluesampleddataorigincomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory observationcomponentvaluesampleddataorigincomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		observationcomponentvaluesampleddataorigin.setComparator(observationcomponentvaluesampleddataorigincomparator.fromCode(o.getObsrvtnCmpntVlSampledDataOriginCmprtr()));
+
+		/******************** Obsrvtn_Cmpnt_VlSampledData_Origin_Sys ********************************************************************************/
+		if(o.getObsrvtnCmpntVlSampledDataOriginSys() != null) {
+			observationcomponentvaluesampleddataorigin.setSystem(o.getObsrvtnCmpntVlSampledDataOriginSys());
+		}
+		/******************** Obsrvtn_Cmpnt_VlSampledData_Origin_Unt ********************************************************************************/
+		if(o.getObsrvtnCmpntVlSampledDataOriginUnt() != null) {
+			observationcomponentvaluesampleddataorigin.setUnit(o.getObsrvtnCmpntVlSampledDataOriginUnt());
+		}
+		/******************** Obsrvtn_Cmpnt_VlSampledData_Origin_Vl ********************************************************************************/
+		if(o.getObsrvtnCmpntVlSampledDataOriginVl() != null) {
+			observationcomponentvaluesampleddataorigin.setValue(Double.parseDouble((o.getObsrvtnCmpntVlSampledDataOriginVl())));
+		}
+		/******************** Obsrvtn_Cmpnt_VlSampledData_Prd ********************************************************************************/
+		if(o.getObsrvtnCmpntVlSampledDataPrd() != null) {
+			observationcomponentvaluesampleddata.setPeriod(Double.parseDouble((o.getObsrvtnCmpntVlSampledDataPrd())));
+		}
+		/******************** Obsrvtn_Cmpnt_VlSampledData_UpperLmt ********************************************************************************/
+		if(o.getObsrvtnCmpntVlSampledDataUpperLmt() != null) {
+			observationcomponentvaluesampleddata.setUpperLimit(Double.parseDouble((o.getObsrvtnCmpntVlSampledDataUpperLmt())));
+		}
+		/******************** Obsrvtn_Cmpnt_VlStrgTyp ********************************************************************************/
+		if(o.getObsrvtnCmpntVlStrgTyp() != null) {
+			observationcomponent.setValue( new org.hl7.fhir.r4.model.StringType(o.getObsrvtnCmpntVlStrgTyp()));
+		}
+		/******************** Obsrvtn_Cmpnt_VlTimeTyp ********************************************************************************/
+		if(o.getObsrvtnCmpntVlTimeTyp() != null) {
+			observationcomponent.setValue( new org.hl7.fhir.r4.model.TimeType(o.getObsrvtnCmpntVlTimeTyp()));
+		}
+		/******************** observationdataabsentreason ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept observationdataabsentreason =  new org.hl7.fhir.r4.model.CodeableConcept();
+		observation.setDataAbsentReason(observationdataabsentreason);
+
+		/******************** observationdataabsentreasoncoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding observationdataabsentreasoncoding =  new org.hl7.fhir.r4.model.Coding();
+		observationdataabsentreason.addCoding(observationdataabsentreasoncoding);
+
+		/******************** Obsrvtn_DataAbsentRsn_Cdg_Cd ********************************************************************************/
+		if(o.getObsrvtnDataAbsentRsnCdgCd() != null) {
+			observationdataabsentreasoncoding.setCode(o.getObsrvtnDataAbsentRsnCdgCd());
+		}
+		/******************** Obsrvtn_DataAbsentRsn_Cdg_Dsply ********************************************************************************/
+		if(o.getObsrvtnDataAbsentRsnCdgDsply() != null) {
+			observationdataabsentreasoncoding.setDisplay(o.getObsrvtnDataAbsentRsnCdgDsply());
+		}
+		/******************** Obsrvtn_DataAbsentRsn_Cdg_Sys ********************************************************************************/
+		if(o.getObsrvtnDataAbsentRsnCdgSys() != null) {
+			observationdataabsentreasoncoding.setSystem(o.getObsrvtnDataAbsentRsnCdgSys());
+		}
+		/******************** Obsrvtn_DataAbsentRsn_Cdg_UsrSltd ********************************************************************************/
+		if(o.getObsrvtnDataAbsentRsnCdgUsrSltd() != null) {
+			observationdataabsentreasoncoding.setUserSelected(Boolean.parseBoolean(o.getObsrvtnDataAbsentRsnCdgUsrSltd()));
+		}
+		/******************** Obsrvtn_DataAbsentRsn_Cdg_Vrsn ********************************************************************************/
+		if(o.getObsrvtnDataAbsentRsnCdgVrsn() != null) {
+			observationdataabsentreasoncoding.setVersion(o.getObsrvtnDataAbsentRsnCdgVrsn());
+		}
+		/******************** Obsrvtn_DataAbsentRsn_Txt ********************************************************************************/
+		if(o.getObsrvtnDataAbsentRsnTxt() != null) {
+			observationdataabsentreason.setText(o.getObsrvtnDataAbsentRsnTxt());
+		}
+		/******************** Obsrvtn_DerivedFrom ********************************************************************************/
+		if(o.getObsrvtnDerivedFrom() != null) {
+			observation.addDerivedFrom( new org.hl7.fhir.r4.model.Reference(o.getObsrvtnDerivedFrom()));
+		}
+		/******************** Obsrvtn_Dvc ********************************************************************************/
+		if(o.getObsrvtnDvc() != null) {
+			observation.setDevice( new org.hl7.fhir.r4.model.Reference(o.getObsrvtnDvc()));
+		}
+		/******************** Obsrvtn_EfctiveDtTimeTyp ********************************************************************************/
+		if(o.getObsrvtnEfctiveDtTimeTyp() != null) {
+			observation.setEffective( new org.hl7.fhir.r4.model.DateTimeType(o.getObsrvtnEfctiveDtTimeTyp()));
+		}
+		/******************** Obsrvtn_EfctiveInstantTyp ********************************************************************************/
+		if(o.getObsrvtnEfctiveInstantTyp() != null) {
+			observation.setEffective( new org.hl7.fhir.r4.model.InstantType(o.getObsrvtnEfctiveInstantTyp()));
+		}
+		/******************** observationeffectiveperiod ********************************************************************************/
+		org.hl7.fhir.r4.model.Period observationeffectiveperiod =  new org.hl7.fhir.r4.model.Period();
+		observation.setEffective(observationeffectiveperiod);
+
+		/******************** Obsrvtn_EfctivePrd_End ********************************************************************************/
+		if(o.getObsrvtnEfctivePrdEnd() != null) {
+			java.text.SimpleDateFormat Obsrvtn_EfctivePrd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Obsrvtn_EfctivePrd_Enddate = Obsrvtn_EfctivePrd_Endsdf.parse(o.getObsrvtnEfctivePrdEnd());
+			observationeffectiveperiod.setEnd(Obsrvtn_EfctivePrd_Enddate);
+		}
+		/******************** Obsrvtn_EfctivePrd_Strt ********************************************************************************/
+		if(o.getObsrvtnEfctivePrdStrt() != null) {
+			java.text.SimpleDateFormat Obsrvtn_EfctivePrd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Obsrvtn_EfctivePrd_Strtdate = Obsrvtn_EfctivePrd_Strtsdf.parse(o.getObsrvtnEfctivePrdStrt());
+			observationeffectiveperiod.setStart(Obsrvtn_EfctivePrd_Strtdate);
+		}
+		/******************** observationeffectivetiming ********************************************************************************/
+		org.hl7.fhir.r4.model.Timing observationeffectivetiming =  new org.hl7.fhir.r4.model.Timing();
+		observation.setEffective(observationeffectivetiming);
+
+		/******************** observationeffectivetimingcode ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept observationeffectivetimingcode =  new org.hl7.fhir.r4.model.CodeableConcept();
+		observationeffectivetiming.setCode(observationeffectivetimingcode);
+
+		/******************** observationeffectivetimingcodecoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding observationeffectivetimingcodecoding =  new org.hl7.fhir.r4.model.Coding();
+		observationeffectivetimingcode.addCoding(observationeffectivetimingcodecoding);
+
+		/******************** Obsrvtn_EfctiveTmg_Cd_Cdg_Cd ********************************************************************************/
+		if(o.getObsrvtnEfctiveTmgCdCdgCd() != null) {
+			observationeffectivetimingcodecoding.setCode(o.getObsrvtnEfctiveTmgCdCdgCd());
+		}
+		/******************** Obsrvtn_EfctiveTmg_Cd_Cdg_Dsply ********************************************************************************/
+		if(o.getObsrvtnEfctiveTmgCdCdgDsply() != null) {
+			observationeffectivetimingcodecoding.setDisplay(o.getObsrvtnEfctiveTmgCdCdgDsply());
+		}
+		/******************** Obsrvtn_EfctiveTmg_Cd_Cdg_Sys ********************************************************************************/
+		if(o.getObsrvtnEfctiveTmgCdCdgSys() != null) {
+			observationeffectivetimingcodecoding.setSystem(o.getObsrvtnEfctiveTmgCdCdgSys());
+		}
+		/******************** Obsrvtn_EfctiveTmg_Cd_Cdg_UsrSltd ********************************************************************************/
+		if(o.getObsrvtnEfctiveTmgCdCdgUsrSltd() != null) {
+			observationeffectivetimingcodecoding.setUserSelected(Boolean.parseBoolean(o.getObsrvtnEfctiveTmgCdCdgUsrSltd()));
+		}
+		/******************** Obsrvtn_EfctiveTmg_Cd_Cdg_Vrsn ********************************************************************************/
+		if(o.getObsrvtnEfctiveTmgCdCdgVrsn() != null) {
+			observationeffectivetimingcodecoding.setVersion(o.getObsrvtnEfctiveTmgCdCdgVrsn());
+		}
+		/******************** Obsrvtn_EfctiveTmg_Cd_Txt ********************************************************************************/
+		if(o.getObsrvtnEfctiveTmgCdTxt() != null) {
+			observationeffectivetimingcode.setText(o.getObsrvtnEfctiveTmgCdTxt());
+		}
+		/******************** Obsrvtn_EfctiveTmg_Evnt ********************************************************************************/
+		if(o.getObsrvtnEfctiveTmgEvnt() != null) {
+			java.text.SimpleDateFormat Obsrvtn_EfctiveTmg_Evntsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Obsrvtn_EfctiveTmg_Evntdate = Obsrvtn_EfctiveTmg_Evntsdf.parse(o.getObsrvtnEfctiveTmgEvnt());
+			observationeffectivetiming.addEvent(Obsrvtn_EfctiveTmg_Evntdate);
+		}
+		/******************** observationeffectivetimingrepeat ********************************************************************************/
+		org.hl7.fhir.r4.model.Timing.TimingRepeatComponent observationeffectivetimingrepeat =  new org.hl7.fhir.r4.model.Timing.TimingRepeatComponent();
+		observationeffectivetiming.setRepeat(observationeffectivetimingrepeat);
+
+		/******************** observationeffectivetimingrepeatboundsduration ********************************************************************************/
+		org.hl7.fhir.r4.model.Duration observationeffectivetimingrepeatboundsduration =  new org.hl7.fhir.r4.model.Duration();
+		observationeffectivetimingrepeat.setBounds(observationeffectivetimingrepeatboundsduration);
+
+		/******************** observationeffectivetimingrepeatboundsperiod ********************************************************************************/
+		org.hl7.fhir.r4.model.Period observationeffectivetimingrepeatboundsperiod =  new org.hl7.fhir.r4.model.Period();
+		observationeffectivetimingrepeat.setBounds(observationeffectivetimingrepeatboundsperiod);
+
+		/******************** Obsrvtn_EfctiveTmg_Rpt_BndsPrd_End ********************************************************************************/
+		if(o.getObsrvtnEfctiveTmgRptBndsPrdEnd() != null) {
+			java.text.SimpleDateFormat Obsrvtn_EfctiveTmg_Rpt_BndsPrd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Obsrvtn_EfctiveTmg_Rpt_BndsPrd_Enddate = Obsrvtn_EfctiveTmg_Rpt_BndsPrd_Endsdf.parse(o.getObsrvtnEfctiveTmgRptBndsPrdEnd());
+			observationeffectivetimingrepeatboundsperiod.setEnd(Obsrvtn_EfctiveTmg_Rpt_BndsPrd_Enddate);
+		}
+		/******************** Obsrvtn_EfctiveTmg_Rpt_BndsPrd_Strt ********************************************************************************/
+		if(o.getObsrvtnEfctiveTmgRptBndsPrdStrt() != null) {
+			java.text.SimpleDateFormat Obsrvtn_EfctiveTmg_Rpt_BndsPrd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Obsrvtn_EfctiveTmg_Rpt_BndsPrd_Strtdate = Obsrvtn_EfctiveTmg_Rpt_BndsPrd_Strtsdf.parse(o.getObsrvtnEfctiveTmgRptBndsPrdStrt());
+			observationeffectivetimingrepeatboundsperiod.setStart(Obsrvtn_EfctiveTmg_Rpt_BndsPrd_Strtdate);
+		}
+		/******************** observationeffectivetimingrepeatboundsrange ********************************************************************************/
+		org.hl7.fhir.r4.model.Range observationeffectivetimingrepeatboundsrange =  new org.hl7.fhir.r4.model.Range();
+		observationeffectivetimingrepeat.setBounds(observationeffectivetimingrepeatboundsrange);
+
+		/******************** observationeffectivetimingrepeatboundsrangehigh ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity observationeffectivetimingrepeatboundsrangehigh =  new org.hl7.fhir.r4.model.Quantity();
+		observationeffectivetimingrepeatboundsrange.setHigh(observationeffectivetimingrepeatboundsrangehigh);
+
+		/******************** Obsrvtn_EfctiveTmg_Rpt_BndsRng_Hi_Cd ********************************************************************************/
+		if(o.getObsrvtnEfctiveTmgRptBndsRngHiCd() != null) {
+			observationeffectivetimingrepeatboundsrangehigh.setCode(o.getObsrvtnEfctiveTmgRptBndsRngHiCd());
+		}
+		/******************** observationeffectivetimingrepeatboundsrangehighcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory observationeffectivetimingrepeatboundsrangehighcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		observationeffectivetimingrepeatboundsrangehigh.setComparator(observationeffectivetimingrepeatboundsrangehighcomparator.fromCode(o.getObsrvtnEfctiveTmgRptBndsRngHiCmprtr()));
+
+		/******************** Obsrvtn_EfctiveTmg_Rpt_BndsRng_Hi_Sys ********************************************************************************/
+		if(o.getObsrvtnEfctiveTmgRptBndsRngHiSys() != null) {
+			observationeffectivetimingrepeatboundsrangehigh.setSystem(o.getObsrvtnEfctiveTmgRptBndsRngHiSys());
+		}
+		/******************** Obsrvtn_EfctiveTmg_Rpt_BndsRng_Hi_Unt ********************************************************************************/
+		if(o.getObsrvtnEfctiveTmgRptBndsRngHiUnt() != null) {
+			observationeffectivetimingrepeatboundsrangehigh.setUnit(o.getObsrvtnEfctiveTmgRptBndsRngHiUnt());
+		}
+		/******************** Obsrvtn_EfctiveTmg_Rpt_BndsRng_Hi_Vl ********************************************************************************/
+		if(o.getObsrvtnEfctiveTmgRptBndsRngHiVl() != null) {
+			observationeffectivetimingrepeatboundsrangehigh.setValue(Double.parseDouble((o.getObsrvtnEfctiveTmgRptBndsRngHiVl())));
+		}
+		/******************** observationeffectivetimingrepeatboundsrangelow ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity observationeffectivetimingrepeatboundsrangelow =  new org.hl7.fhir.r4.model.Quantity();
+		observationeffectivetimingrepeatboundsrange.setLow(observationeffectivetimingrepeatboundsrangelow);
+
+		/******************** Obsrvtn_EfctiveTmg_Rpt_BndsRng_Lw_Cd ********************************************************************************/
+		if(o.getObsrvtnEfctiveTmgRptBndsRngLwCd() != null) {
+			observationeffectivetimingrepeatboundsrangelow.setCode(o.getObsrvtnEfctiveTmgRptBndsRngLwCd());
+		}
+		/******************** observationeffectivetimingrepeatboundsrangelowcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory observationeffectivetimingrepeatboundsrangelowcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		observationeffectivetimingrepeatboundsrangelow.setComparator(observationeffectivetimingrepeatboundsrangelowcomparator.fromCode(o.getObsrvtnEfctiveTmgRptBndsRngLwCmprtr()));
+
+		/******************** Obsrvtn_EfctiveTmg_Rpt_BndsRng_Lw_Sys ********************************************************************************/
+		if(o.getObsrvtnEfctiveTmgRptBndsRngLwSys() != null) {
+			observationeffectivetimingrepeatboundsrangelow.setSystem(o.getObsrvtnEfctiveTmgRptBndsRngLwSys());
+		}
+		/******************** Obsrvtn_EfctiveTmg_Rpt_BndsRng_Lw_Unt ********************************************************************************/
+		if(o.getObsrvtnEfctiveTmgRptBndsRngLwUnt() != null) {
+			observationeffectivetimingrepeatboundsrangelow.setUnit(o.getObsrvtnEfctiveTmgRptBndsRngLwUnt());
+		}
+		/******************** Obsrvtn_EfctiveTmg_Rpt_BndsRng_Lw_Vl ********************************************************************************/
+		if(o.getObsrvtnEfctiveTmgRptBndsRngLwVl() != null) {
+			observationeffectivetimingrepeatboundsrangelow.setValue(Double.parseDouble((o.getObsrvtnEfctiveTmgRptBndsRngLwVl())));
+		}
+		/******************** Obsrvtn_EfctiveTmg_Rpt_Cnt ********************************************************************************/
+		if(o.getObsrvtnEfctiveTmgRptCnt() != null) {
+			observationeffectivetimingrepeat.setCount(Integer.parseInt(o.getObsrvtnEfctiveTmgRptCnt()));
+		}
+		/******************** Obsrvtn_EfctiveTmg_Rpt_CntMx ********************************************************************************/
+		if(o.getObsrvtnEfctiveTmgRptCntMx() != null) {
+			observationeffectivetimingrepeat.setCountMax(Integer.parseInt(o.getObsrvtnEfctiveTmgRptCntMx()));
+		}
+		/******************** observationeffectivetimingrepeatdayofweek ********************************************************************************/
+		org.hl7.fhir.r4.model.Timing.DayOfWeekEnumFactory observationeffectivetimingrepeatdayofweek =  new org.hl7.fhir.r4.model.Timing.DayOfWeekEnumFactory();
+		observationeffectivetimingrepeat.addDayOfWeek(observationeffectivetimingrepeatdayofweek.fromCode(o.getObsrvtnEfctiveTmgRptDayOfWeek()));
+
+		/******************** Obsrvtn_EfctiveTmg_Rpt_Duration ********************************************************************************/
+		if(o.getObsrvtnEfctiveTmgRptDuration() != null) {
+			observationeffectivetimingrepeat.setDuration(Double.parseDouble((o.getObsrvtnEfctiveTmgRptDuration())));
+		}
+		/******************** Obsrvtn_EfctiveTmg_Rpt_DurationMx ********************************************************************************/
+		if(o.getObsrvtnEfctiveTmgRptDurationMx() != null) {
+			observationeffectivetimingrepeat.setDurationMax(Double.parseDouble((o.getObsrvtnEfctiveTmgRptDurationMx())));
+		}
+		/******************** observationeffectivetimingrepeatdurationunit ********************************************************************************/
+		org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory observationeffectivetimingrepeatdurationunit =  new org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory();
+		observationeffectivetimingrepeat.setDurationUnit(observationeffectivetimingrepeatdurationunit.fromCode(o.getObsrvtnEfctiveTmgRptDurationUnt()));
+
+		/******************** Obsrvtn_EfctiveTmg_Rpt_Frqncy ********************************************************************************/
+		if(o.getObsrvtnEfctiveTmgRptFrqncy() != null) {
+			observationeffectivetimingrepeat.setFrequency(Integer.parseInt(o.getObsrvtnEfctiveTmgRptFrqncy()));
+		}
+		/******************** Obsrvtn_EfctiveTmg_Rpt_FrqncyMx ********************************************************************************/
+		if(o.getObsrvtnEfctiveTmgRptFrqncyMx() != null) {
+			observationeffectivetimingrepeat.setFrequencyMax(Integer.parseInt(o.getObsrvtnEfctiveTmgRptFrqncyMx()));
+		}
+		/******************** Obsrvtn_EfctiveTmg_Rpt_Off ********************************************************************************/
+		if(o.getObsrvtnEfctiveTmgRptOff() != null) {
+			observationeffectivetimingrepeat.setOffset(Integer.parseInt(o.getObsrvtnEfctiveTmgRptOff()));
+		}
+		/******************** Obsrvtn_EfctiveTmg_Rpt_Prd ********************************************************************************/
+		if(o.getObsrvtnEfctiveTmgRptPrd() != null) {
+			observationeffectivetimingrepeat.setPeriod(Double.parseDouble((o.getObsrvtnEfctiveTmgRptPrd())));
+		}
+		/******************** Obsrvtn_EfctiveTmg_Rpt_PrdMx ********************************************************************************/
+		if(o.getObsrvtnEfctiveTmgRptPrdMx() != null) {
+			observationeffectivetimingrepeat.setPeriodMax(Double.parseDouble((o.getObsrvtnEfctiveTmgRptPrdMx())));
+		}
+		/******************** observationeffectivetimingrepeatperiodunit ********************************************************************************/
+		org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory observationeffectivetimingrepeatperiodunit =  new org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory();
+		observationeffectivetimingrepeat.setPeriodUnit(observationeffectivetimingrepeatperiodunit.fromCode(o.getObsrvtnEfctiveTmgRptPrdUnt()));
+
+		/******************** Obsrvtn_EfctiveTmg_Rpt_TimeOfDay ********************************************************************************/
+		if(o.getObsrvtnEfctiveTmgRptTimeOfDay() != null) {
+			observationeffectivetimingrepeat.addTimeOfDay(o.getObsrvtnEfctiveTmgRptTimeOfDay());
+		}
+		/******************** observationeffectivetimingrepeatwhen ********************************************************************************/
+		org.hl7.fhir.r4.model.Timing.EventTimingEnumFactory observationeffectivetimingrepeatwhen =  new org.hl7.fhir.r4.model.Timing.EventTimingEnumFactory();
+		observationeffectivetimingrepeat.addWhen(observationeffectivetimingrepeatwhen.fromCode(o.getObsrvtnEfctiveTmgRptWhen()));
+
+		/******************** Obsrvtn_Enc ********************************************************************************/
+		if(o.getObsrvtnEnc() != null) {
+			observation.setEncounter( new org.hl7.fhir.r4.model.Reference(o.getObsrvtnEnc()));
+		}
+		/******************** Obsrvtn_Focus ********************************************************************************/
+		if(o.getObsrvtnFocus() != null) {
+			observation.addFocus( new org.hl7.fhir.r4.model.Reference(o.getObsrvtnFocus()));
+		}
+		/******************** Obsrvtn_HasMmbr ********************************************************************************/
+		if(o.getObsrvtnHasMmbr() != null) {
+			observation.addHasMember( new org.hl7.fhir.r4.model.Reference(o.getObsrvtnHasMmbr()));
+		}
+		/******************** observationidentifier ********************************************************************************/
+		org.hl7.fhir.r4.model.Identifier observationidentifier =  new org.hl7.fhir.r4.model.Identifier();
+		observation.addIdentifier(observationidentifier);
+
+		/******************** Obsrvtn_Id_Assigner ********************************************************************************/
+		if(o.getObsrvtnIdAssigner() != null) {
+			observationidentifier.setAssigner( new org.hl7.fhir.r4.model.Reference(o.getObsrvtnIdAssigner()));
+		}
+		/******************** observationidentifierperiod ********************************************************************************/
+		org.hl7.fhir.r4.model.Period observationidentifierperiod =  new org.hl7.fhir.r4.model.Period();
+		observationidentifier.setPeriod(observationidentifierperiod);
+
+		/******************** Obsrvtn_Id_Prd_End ********************************************************************************/
+		if(o.getObsrvtnIdPrdEnd() != null) {
+			java.text.SimpleDateFormat Obsrvtn_Id_Prd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Obsrvtn_Id_Prd_Enddate = Obsrvtn_Id_Prd_Endsdf.parse(o.getObsrvtnIdPrdEnd());
+			observationidentifierperiod.setEnd(Obsrvtn_Id_Prd_Enddate);
+		}
+		/******************** Obsrvtn_Id_Prd_Strt ********************************************************************************/
+		if(o.getObsrvtnIdPrdStrt() != null) {
+			java.text.SimpleDateFormat Obsrvtn_Id_Prd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Obsrvtn_Id_Prd_Strtdate = Obsrvtn_Id_Prd_Strtsdf.parse(o.getObsrvtnIdPrdStrt());
+			observationidentifierperiod.setStart(Obsrvtn_Id_Prd_Strtdate);
+		}
+		/******************** Obsrvtn_Id_Sys ********************************************************************************/
+		if(o.getObsrvtnIdSys() != null) {
+			observationidentifier.setSystem(o.getObsrvtnIdSys());
+		}
+		/******************** observationidentifiertype ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept observationidentifiertype =  new org.hl7.fhir.r4.model.CodeableConcept();
+		observationidentifier.setType(observationidentifiertype);
+
+		/******************** observationidentifiertypecoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding observationidentifiertypecoding =  new org.hl7.fhir.r4.model.Coding();
+		observationidentifiertype.addCoding(observationidentifiertypecoding);
+
+		/******************** Obsrvtn_Id_Typ_Cdg_Cd ********************************************************************************/
+		if(o.getObsrvtnIdTypCdgCd() != null) {
+			observationidentifiertypecoding.setCode(o.getObsrvtnIdTypCdgCd());
+		}
+		/******************** Obsrvtn_Id_Typ_Cdg_Dsply ********************************************************************************/
+		if(o.getObsrvtnIdTypCdgDsply() != null) {
+			observationidentifiertypecoding.setDisplay(o.getObsrvtnIdTypCdgDsply());
+		}
+		/******************** Obsrvtn_Id_Typ_Cdg_Sys ********************************************************************************/
+		if(o.getObsrvtnIdTypCdgSys() != null) {
+			observationidentifiertypecoding.setSystem(o.getObsrvtnIdTypCdgSys());
+		}
+		/******************** Obsrvtn_Id_Typ_Cdg_UsrSltd ********************************************************************************/
+		if(o.getObsrvtnIdTypCdgUsrSltd() != null) {
+			observationidentifiertypecoding.setUserSelected(Boolean.parseBoolean(o.getObsrvtnIdTypCdgUsrSltd()));
+		}
+		/******************** Obsrvtn_Id_Typ_Cdg_Vrsn ********************************************************************************/
+		if(o.getObsrvtnIdTypCdgVrsn() != null) {
+			observationidentifiertypecoding.setVersion(o.getObsrvtnIdTypCdgVrsn());
+		}
+		/******************** Obsrvtn_Id_Typ_Txt ********************************************************************************/
+		if(o.getObsrvtnIdTypTxt() != null) {
+			observationidentifiertype.setText(o.getObsrvtnIdTypTxt());
+		}
+		/******************** observationidentifieruse ********************************************************************************/
+		org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory observationidentifieruse =  new org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory();
+		observationidentifier.setUse(observationidentifieruse.fromCode(o.getObsrvtnIdUse()));
+
+		/******************** Obsrvtn_Id_Vl ********************************************************************************/
+		if(o.getObsrvtnIdVl() != null) {
+			observationidentifier.setValue(o.getObsrvtnIdVl());
+		}
+		/******************** observationinterpretation ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept observationinterpretation =  new org.hl7.fhir.r4.model.CodeableConcept();
+		observation.addInterpretation(observationinterpretation);
+
+		/******************** observationinterpretationcoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding observationinterpretationcoding =  new org.hl7.fhir.r4.model.Coding();
+		observationinterpretation.addCoding(observationinterpretationcoding);
+
+		/******************** Obsrvtn_Interpretation_Cdg_Cd ********************************************************************************/
+		if(o.getObsrvtnInterpretationCdgCd() != null) {
+			observationinterpretationcoding.setCode(o.getObsrvtnInterpretationCdgCd());
+		}
+		/******************** Obsrvtn_Interpretation_Cdg_Dsply ********************************************************************************/
+		if(o.getObsrvtnInterpretationCdgDsply() != null) {
+			observationinterpretationcoding.setDisplay(o.getObsrvtnInterpretationCdgDsply());
+		}
+		/******************** Obsrvtn_Interpretation_Cdg_Sys ********************************************************************************/
+		if(o.getObsrvtnInterpretationCdgSys() != null) {
+			observationinterpretationcoding.setSystem(o.getObsrvtnInterpretationCdgSys());
+		}
+		/******************** Obsrvtn_Interpretation_Cdg_UsrSltd ********************************************************************************/
+		if(o.getObsrvtnInterpretationCdgUsrSltd() != null) {
+			observationinterpretationcoding.setUserSelected(Boolean.parseBoolean(o.getObsrvtnInterpretationCdgUsrSltd()));
+		}
+		/******************** Obsrvtn_Interpretation_Cdg_Vrsn ********************************************************************************/
+		if(o.getObsrvtnInterpretationCdgVrsn() != null) {
+			observationinterpretationcoding.setVersion(o.getObsrvtnInterpretationCdgVrsn());
+		}
+		/******************** Obsrvtn_Interpretation_Txt ********************************************************************************/
+		if(o.getObsrvtnInterpretationTxt() != null) {
+			observationinterpretation.setText(o.getObsrvtnInterpretationTxt());
+		}
+		/******************** Obsrvtn_Issued ********************************************************************************/
+		if(o.getObsrvtnIssued() != null) {
+			java.text.SimpleDateFormat Obsrvtn_Issuedsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Obsrvtn_Issueddate = Obsrvtn_Issuedsdf.parse(o.getObsrvtnIssued());
+			observation.setIssued(Obsrvtn_Issueddate);
+		}
+		/******************** observationmethod ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept observationmethod =  new org.hl7.fhir.r4.model.CodeableConcept();
+		observation.setMethod(observationmethod);
+
+		/******************** observationmethodcoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding observationmethodcoding =  new org.hl7.fhir.r4.model.Coding();
+		observationmethod.addCoding(observationmethodcoding);
+
+		/******************** Obsrvtn_Mthd_Cdg_Cd ********************************************************************************/
+		if(o.getObsrvtnMthdCdgCd() != null) {
+			observationmethodcoding.setCode(o.getObsrvtnMthdCdgCd());
+		}
+		/******************** Obsrvtn_Mthd_Cdg_Dsply ********************************************************************************/
+		if(o.getObsrvtnMthdCdgDsply() != null) {
+			observationmethodcoding.setDisplay(o.getObsrvtnMthdCdgDsply());
+		}
+		/******************** Obsrvtn_Mthd_Cdg_Sys ********************************************************************************/
+		if(o.getObsrvtnMthdCdgSys() != null) {
+			observationmethodcoding.setSystem(o.getObsrvtnMthdCdgSys());
+		}
+		/******************** Obsrvtn_Mthd_Cdg_UsrSltd ********************************************************************************/
+		if(o.getObsrvtnMthdCdgUsrSltd() != null) {
+			observationmethodcoding.setUserSelected(Boolean.parseBoolean(o.getObsrvtnMthdCdgUsrSltd()));
+		}
+		/******************** Obsrvtn_Mthd_Cdg_Vrsn ********************************************************************************/
+		if(o.getObsrvtnMthdCdgVrsn() != null) {
+			observationmethodcoding.setVersion(o.getObsrvtnMthdCdgVrsn());
+		}
+		/******************** Obsrvtn_Mthd_Txt ********************************************************************************/
+		if(o.getObsrvtnMthdTxt() != null) {
+			observationmethod.setText(o.getObsrvtnMthdTxt());
+		}
+		/******************** observationnote ********************************************************************************/
+		org.hl7.fhir.r4.model.Annotation observationnote =  new org.hl7.fhir.r4.model.Annotation();
+		observation.addNote(observationnote);
+
+		/******************** Obsrvtn_Nt_AthrRfrnc ********************************************************************************/
+		if(o.getObsrvtnNtAthrRfrnc() != null) {
+			observationnote.setAuthor( new org.hl7.fhir.r4.model.Reference(o.getObsrvtnNtAthrRfrnc()));
+		}
+		/******************** Obsrvtn_Nt_AthrStrgTyp ********************************************************************************/
+		if(o.getObsrvtnNtAthrStrgTyp() != null) {
+			observationnote.setAuthor( new org.hl7.fhir.r4.model.StringType(o.getObsrvtnNtAthrStrgTyp()));
+		}
+		/******************** Obsrvtn_Nt_Txt ********************************************************************************/
+		if(o.getObsrvtnNtTxt() != null) {
+			observationnote.setText(o.getObsrvtnNtTxt());
+		}
+		/******************** Obsrvtn_Nt_Time ********************************************************************************/
+		if(o.getObsrvtnNtTime() != null) {
+			java.text.SimpleDateFormat Obsrvtn_Nt_Timesdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Obsrvtn_Nt_Timedate = Obsrvtn_Nt_Timesdf.parse(o.getObsrvtnNtTime());
+			observationnote.setTime(Obsrvtn_Nt_Timedate);
+		}
+		/******************** Obsrvtn_PartOf ********************************************************************************/
+		if(o.getObsrvtnPartOf() != null) {
+			observation.addPartOf( new org.hl7.fhir.r4.model.Reference(o.getObsrvtnPartOf()));
+		}
+		/******************** Obsrvtn_Prfrmr ********************************************************************************/
+		if(o.getObsrvtnPrfrmr() != null) {
+			observation.addPerformer( new org.hl7.fhir.r4.model.Reference(o.getObsrvtnPrfrmr()));
+		}
+		/******************** observationreferencerange ********************************************************************************/
+		org.hl7.fhir.r4.model.Observation.ObservationReferenceRangeComponent observationreferencerange =  new org.hl7.fhir.r4.model.Observation.ObservationReferenceRangeComponent();
+		observation.addReferenceRange(observationreferencerange);
+
+		/******************** observationreferencerangeage ********************************************************************************/
+		org.hl7.fhir.r4.model.Range observationreferencerangeage =  new org.hl7.fhir.r4.model.Range();
+		observationreferencerange.setAge(observationreferencerangeage);
+
+		/******************** observationreferencerangeagehigh ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity observationreferencerangeagehigh =  new org.hl7.fhir.r4.model.Quantity();
+		observationreferencerangeage.setHigh(observationreferencerangeagehigh);
+
+		/******************** Obsrvtn_RfrncRng_Age_Hi_Cd ********************************************************************************/
+		if(o.getObsrvtnRfrncRngAgeHiCd() != null) {
+			observationreferencerangeagehigh.setCode(o.getObsrvtnRfrncRngAgeHiCd());
+		}
+		/******************** observationreferencerangeagehighcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory observationreferencerangeagehighcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		observationreferencerangeagehigh.setComparator(observationreferencerangeagehighcomparator.fromCode(o.getObsrvtnRfrncRngAgeHiCmprtr()));
+
+		/******************** Obsrvtn_RfrncRng_Age_Hi_Sys ********************************************************************************/
+		if(o.getObsrvtnRfrncRngAgeHiSys() != null) {
+			observationreferencerangeagehigh.setSystem(o.getObsrvtnRfrncRngAgeHiSys());
+		}
+		/******************** Obsrvtn_RfrncRng_Age_Hi_Unt ********************************************************************************/
+		if(o.getObsrvtnRfrncRngAgeHiUnt() != null) {
+			observationreferencerangeagehigh.setUnit(o.getObsrvtnRfrncRngAgeHiUnt());
+		}
+		/******************** Obsrvtn_RfrncRng_Age_Hi_Vl ********************************************************************************/
+		if(o.getObsrvtnRfrncRngAgeHiVl() != null) {
+			observationreferencerangeagehigh.setValue(Double.parseDouble((o.getObsrvtnRfrncRngAgeHiVl())));
+		}
+		/******************** observationreferencerangeagelow ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity observationreferencerangeagelow =  new org.hl7.fhir.r4.model.Quantity();
+		observationreferencerangeage.setLow(observationreferencerangeagelow);
+
+		/******************** Obsrvtn_RfrncRng_Age_Lw_Cd ********************************************************************************/
+		if(o.getObsrvtnRfrncRngAgeLwCd() != null) {
+			observationreferencerangeagelow.setCode(o.getObsrvtnRfrncRngAgeLwCd());
+		}
+		/******************** observationreferencerangeagelowcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory observationreferencerangeagelowcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		observationreferencerangeagelow.setComparator(observationreferencerangeagelowcomparator.fromCode(o.getObsrvtnRfrncRngAgeLwCmprtr()));
+
+		/******************** Obsrvtn_RfrncRng_Age_Lw_Sys ********************************************************************************/
+		if(o.getObsrvtnRfrncRngAgeLwSys() != null) {
+			observationreferencerangeagelow.setSystem(o.getObsrvtnRfrncRngAgeLwSys());
+		}
+		/******************** Obsrvtn_RfrncRng_Age_Lw_Unt ********************************************************************************/
+		if(o.getObsrvtnRfrncRngAgeLwUnt() != null) {
+			observationreferencerangeagelow.setUnit(o.getObsrvtnRfrncRngAgeLwUnt());
+		}
+		/******************** Obsrvtn_RfrncRng_Age_Lw_Vl ********************************************************************************/
+		if(o.getObsrvtnRfrncRngAgeLwVl() != null) {
+			observationreferencerangeagelow.setValue(Double.parseDouble((o.getObsrvtnRfrncRngAgeLwVl())));
+		}
+		/******************** observationreferencerangeappliesto ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept observationreferencerangeappliesto =  new org.hl7.fhir.r4.model.CodeableConcept();
+		observationreferencerange.addAppliesTo(observationreferencerangeappliesto);
+
+		/******************** observationreferencerangeappliestocoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding observationreferencerangeappliestocoding =  new org.hl7.fhir.r4.model.Coding();
+		observationreferencerangeappliesto.addCoding(observationreferencerangeappliestocoding);
+
+		/******************** Obsrvtn_RfrncRng_AppliesTo_Cdg_Cd ********************************************************************************/
+		if(o.getObsrvtnRfrncRngAppliesToCdgCd() != null) {
+			observationreferencerangeappliestocoding.setCode(o.getObsrvtnRfrncRngAppliesToCdgCd());
+		}
+		/******************** Obsrvtn_RfrncRng_AppliesTo_Cdg_Dsply ********************************************************************************/
+		if(o.getObsrvtnRfrncRngAppliesToCdgDsply() != null) {
+			observationreferencerangeappliestocoding.setDisplay(o.getObsrvtnRfrncRngAppliesToCdgDsply());
+		}
+		/******************** Obsrvtn_RfrncRng_AppliesTo_Cdg_Sys ********************************************************************************/
+		if(o.getObsrvtnRfrncRngAppliesToCdgSys() != null) {
+			observationreferencerangeappliestocoding.setSystem(o.getObsrvtnRfrncRngAppliesToCdgSys());
+		}
+		/******************** Obsrvtn_RfrncRng_AppliesTo_Cdg_UsrSltd ********************************************************************************/
+		if(o.getObsrvtnRfrncRngAppliesToCdgUsrSltd() != null) {
+			observationreferencerangeappliestocoding.setUserSelected(Boolean.parseBoolean(o.getObsrvtnRfrncRngAppliesToCdgUsrSltd()));
+		}
+		/******************** Obsrvtn_RfrncRng_AppliesTo_Cdg_Vrsn ********************************************************************************/
+		if(o.getObsrvtnRfrncRngAppliesToCdgVrsn() != null) {
+			observationreferencerangeappliestocoding.setVersion(o.getObsrvtnRfrncRngAppliesToCdgVrsn());
+		}
+		/******************** Obsrvtn_RfrncRng_AppliesTo_Txt ********************************************************************************/
+		if(o.getObsrvtnRfrncRngAppliesToTxt() != null) {
+			observationreferencerangeappliesto.setText(o.getObsrvtnRfrncRngAppliesToTxt());
+		}
+		/******************** observationreferencerangehigh ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity observationreferencerangehigh =  new org.hl7.fhir.r4.model.Quantity();
+		observationreferencerange.setHigh(observationreferencerangehigh);
+
+		/******************** Obsrvtn_RfrncRng_Hi_Cd ********************************************************************************/
+		if(o.getObsrvtnRfrncRngHiCd() != null) {
+			observationreferencerangehigh.setCode(o.getObsrvtnRfrncRngHiCd());
+		}
+		/******************** observationreferencerangehighcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory observationreferencerangehighcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		observationreferencerangehigh.setComparator(observationreferencerangehighcomparator.fromCode(o.getObsrvtnRfrncRngHiCmprtr()));
+
+		/******************** Obsrvtn_RfrncRng_Hi_Sys ********************************************************************************/
+		if(o.getObsrvtnRfrncRngHiSys() != null) {
+			observationreferencerangehigh.setSystem(o.getObsrvtnRfrncRngHiSys());
+		}
+		/******************** Obsrvtn_RfrncRng_Hi_Unt ********************************************************************************/
+		if(o.getObsrvtnRfrncRngHiUnt() != null) {
+			observationreferencerangehigh.setUnit(o.getObsrvtnRfrncRngHiUnt());
+		}
+		/******************** Obsrvtn_RfrncRng_Hi_Vl ********************************************************************************/
+		if(o.getObsrvtnRfrncRngHiVl() != null) {
+			observationreferencerangehigh.setValue(Double.parseDouble((o.getObsrvtnRfrncRngHiVl())));
+		}
+		/******************** observationreferencerangelow ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity observationreferencerangelow =  new org.hl7.fhir.r4.model.Quantity();
+		observationreferencerange.setLow(observationreferencerangelow);
+
+		/******************** Obsrvtn_RfrncRng_Lw_Cd ********************************************************************************/
+		if(o.getObsrvtnRfrncRngLwCd() != null) {
+			observationreferencerangelow.setCode(o.getObsrvtnRfrncRngLwCd());
+		}
+		/******************** observationreferencerangelowcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory observationreferencerangelowcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		observationreferencerangelow.setComparator(observationreferencerangelowcomparator.fromCode(o.getObsrvtnRfrncRngLwCmprtr()));
+
+		/******************** Obsrvtn_RfrncRng_Lw_Sys ********************************************************************************/
+		if(o.getObsrvtnRfrncRngLwSys() != null) {
+			observationreferencerangelow.setSystem(o.getObsrvtnRfrncRngLwSys());
+		}
+		/******************** Obsrvtn_RfrncRng_Lw_Unt ********************************************************************************/
+		if(o.getObsrvtnRfrncRngLwUnt() != null) {
+			observationreferencerangelow.setUnit(o.getObsrvtnRfrncRngLwUnt());
+		}
+		/******************** Obsrvtn_RfrncRng_Lw_Vl ********************************************************************************/
+		if(o.getObsrvtnRfrncRngLwVl() != null) {
+			observationreferencerangelow.setValue(Double.parseDouble((o.getObsrvtnRfrncRngLwVl())));
+		}
+		/******************** Obsrvtn_RfrncRng_Txt ********************************************************************************/
+		if(o.getObsrvtnRfrncRngTxt() != null) {
+			observationreferencerange.setText(o.getObsrvtnRfrncRngTxt());
+		}
+		/******************** observationreferencerangetype ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept observationreferencerangetype =  new org.hl7.fhir.r4.model.CodeableConcept();
+		observationreferencerange.setType(observationreferencerangetype);
+
+		/******************** observationreferencerangetypecoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding observationreferencerangetypecoding =  new org.hl7.fhir.r4.model.Coding();
+		observationreferencerangetype.addCoding(observationreferencerangetypecoding);
+
+		/******************** Obsrvtn_RfrncRng_Typ_Cdg_Cd ********************************************************************************/
+		if(o.getObsrvtnRfrncRngTypCdgCd() != null) {
+			observationreferencerangetypecoding.setCode(o.getObsrvtnRfrncRngTypCdgCd());
+		}
+		/******************** Obsrvtn_RfrncRng_Typ_Cdg_Dsply ********************************************************************************/
+		if(o.getObsrvtnRfrncRngTypCdgDsply() != null) {
+			observationreferencerangetypecoding.setDisplay(o.getObsrvtnRfrncRngTypCdgDsply());
+		}
+		/******************** Obsrvtn_RfrncRng_Typ_Cdg_Sys ********************************************************************************/
+		if(o.getObsrvtnRfrncRngTypCdgSys() != null) {
+			observationreferencerangetypecoding.setSystem(o.getObsrvtnRfrncRngTypCdgSys());
+		}
+		/******************** Obsrvtn_RfrncRng_Typ_Cdg_UsrSltd ********************************************************************************/
+		if(o.getObsrvtnRfrncRngTypCdgUsrSltd() != null) {
+			observationreferencerangetypecoding.setUserSelected(Boolean.parseBoolean(o.getObsrvtnRfrncRngTypCdgUsrSltd()));
+		}
+		/******************** Obsrvtn_RfrncRng_Typ_Cdg_Vrsn ********************************************************************************/
+		if(o.getObsrvtnRfrncRngTypCdgVrsn() != null) {
+			observationreferencerangetypecoding.setVersion(o.getObsrvtnRfrncRngTypCdgVrsn());
+		}
+		/******************** Obsrvtn_RfrncRng_Typ_Txt ********************************************************************************/
+		if(o.getObsrvtnRfrncRngTypTxt() != null) {
+			observationreferencerangetype.setText(o.getObsrvtnRfrncRngTypTxt());
+		}
+		/******************** Obsrvtn_Spcmn ********************************************************************************/
+		if(o.getObsrvtnSpcmn() != null) {
+			observation.setSpecimen( new org.hl7.fhir.r4.model.Reference(o.getObsrvtnSpcmn()));
+		}
+		/******************** observationstatus ********************************************************************************/
+		org.hl7.fhir.r4.model.Observation.ObservationStatusEnumFactory observationstatus =  new org.hl7.fhir.r4.model.Observation.ObservationStatusEnumFactory();
+		observation.setStatus(observationstatus.fromCode(o.getObsrvtnSts()));
+
+		/******************** Obsrvtn_Sbjct ********************************************************************************/
+		if(o.getObsrvtnSbjct() != null) {
+			observation.setSubject( new org.hl7.fhir.r4.model.Reference(o.getObsrvtnSbjct()));
+		}
+		/******************** Obsrvtn_VlBooleanTyp ********************************************************************************/
+		if(o.getObsrvtnVlBooleanTyp() != null) {
+			observation.setValue( new org.hl7.fhir.r4.model.BooleanType(o.getObsrvtnVlBooleanTyp()));
+		}
+		/******************** observationvaluecodeableconcept ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept observationvaluecodeableconcept =  new org.hl7.fhir.r4.model.CodeableConcept();
+		observation.setValue(observationvaluecodeableconcept);
+
+		/******************** observationvaluecodeableconceptcoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding observationvaluecodeableconceptcoding =  new org.hl7.fhir.r4.model.Coding();
+		observationvaluecodeableconcept.addCoding(observationvaluecodeableconceptcoding);
+
+		/******************** Obsrvtn_VlCdbleCncpt_Cdg_Cd ********************************************************************************/
+		if(o.getObsrvtnVlCdbleCncptCdgCd() != null) {
+			observationvaluecodeableconceptcoding.setCode(o.getObsrvtnVlCdbleCncptCdgCd());
+		}
+		/******************** Obsrvtn_VlCdbleCncpt_Cdg_Dsply ********************************************************************************/
+		if(o.getObsrvtnVlCdbleCncptCdgDsply() != null) {
+			observationvaluecodeableconceptcoding.setDisplay(o.getObsrvtnVlCdbleCncptCdgDsply());
+		}
+		/******************** Obsrvtn_VlCdbleCncpt_Cdg_Sys ********************************************************************************/
+		if(o.getObsrvtnVlCdbleCncptCdgSys() != null) {
+			observationvaluecodeableconceptcoding.setSystem(o.getObsrvtnVlCdbleCncptCdgSys());
+		}
+		/******************** Obsrvtn_VlCdbleCncpt_Cdg_UsrSltd ********************************************************************************/
+		if(o.getObsrvtnVlCdbleCncptCdgUsrSltd() != null) {
+			observationvaluecodeableconceptcoding.setUserSelected(Boolean.parseBoolean(o.getObsrvtnVlCdbleCncptCdgUsrSltd()));
+		}
+		/******************** Obsrvtn_VlCdbleCncpt_Cdg_Vrsn ********************************************************************************/
+		if(o.getObsrvtnVlCdbleCncptCdgVrsn() != null) {
+			observationvaluecodeableconceptcoding.setVersion(o.getObsrvtnVlCdbleCncptCdgVrsn());
+		}
+		/******************** Obsrvtn_VlCdbleCncpt_Txt ********************************************************************************/
+		if(o.getObsrvtnVlCdbleCncptTxt() != null) {
+			observationvaluecodeableconcept.setText(o.getObsrvtnVlCdbleCncptTxt());
+		}
+		/******************** Obsrvtn_VlDtTimeTyp ********************************************************************************/
+		if(o.getObsrvtnVlDtTimeTyp() != null) {
+			observation.setValue( new org.hl7.fhir.r4.model.DateTimeType(o.getObsrvtnVlDtTimeTyp()));
+		}
+		/******************** Obsrvtn_VlIntegerTyp ********************************************************************************/
+		if(o.getObsrvtnVlIntegerTyp() != null) {
+			observation.setValue( new org.hl7.fhir.r4.model.IntegerType(o.getObsrvtnVlIntegerTyp()));
+		}
+		/******************** observationvalueperiod ********************************************************************************/
+		org.hl7.fhir.r4.model.Period observationvalueperiod =  new org.hl7.fhir.r4.model.Period();
+		observation.setValue(observationvalueperiod);
+
+		/******************** Obsrvtn_VlPrd_End ********************************************************************************/
+		if(o.getObsrvtnVlPrdEnd() != null) {
+			java.text.SimpleDateFormat Obsrvtn_VlPrd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Obsrvtn_VlPrd_Enddate = Obsrvtn_VlPrd_Endsdf.parse(o.getObsrvtnVlPrdEnd());
+			observationvalueperiod.setEnd(Obsrvtn_VlPrd_Enddate);
+		}
+		/******************** Obsrvtn_VlPrd_Strt ********************************************************************************/
+		if(o.getObsrvtnVlPrdStrt() != null) {
+			java.text.SimpleDateFormat Obsrvtn_VlPrd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date Obsrvtn_VlPrd_Strtdate = Obsrvtn_VlPrd_Strtsdf.parse(o.getObsrvtnVlPrdStrt());
+			observationvalueperiod.setStart(Obsrvtn_VlPrd_Strtdate);
+		}
+		/******************** observationvaluequantity ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity observationvaluequantity =  new org.hl7.fhir.r4.model.Quantity();
+		observation.setValue(observationvaluequantity);
+
+		/******************** Obsrvtn_VlQnty_Cd ********************************************************************************/
+		if(o.getObsrvtnVlQntyCd() != null) {
+			observationvaluequantity.setCode(o.getObsrvtnVlQntyCd());
+		}
+		/******************** observationvaluequantitycomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory observationvaluequantitycomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		observationvaluequantity.setComparator(observationvaluequantitycomparator.fromCode(o.getObsrvtnVlQntyCmprtr()));
+
+		/******************** Obsrvtn_VlQnty_Sys ********************************************************************************/
+		if(o.getObsrvtnVlQntySys() != null) {
+			observationvaluequantity.setSystem(o.getObsrvtnVlQntySys());
+		}
+		/******************** Obsrvtn_VlQnty_Unt ********************************************************************************/
+		if(o.getObsrvtnVlQntyUnt() != null) {
+			observationvaluequantity.setUnit(o.getObsrvtnVlQntyUnt());
+		}
+		/******************** Obsrvtn_VlQnty_Vl ********************************************************************************/
+		if(o.getObsrvtnVlQntyVl() != null) {
+			observationvaluequantity.setValue(Double.parseDouble((o.getObsrvtnVlQntyVl())));
+		}
+		/******************** observationvaluerange ********************************************************************************/
+		org.hl7.fhir.r4.model.Range observationvaluerange =  new org.hl7.fhir.r4.model.Range();
+		observation.setValue(observationvaluerange);
+
+		/******************** observationvaluerangehigh ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity observationvaluerangehigh =  new org.hl7.fhir.r4.model.Quantity();
+		observationvaluerange.setHigh(observationvaluerangehigh);
+
+		/******************** Obsrvtn_VlRng_Hi_Cd ********************************************************************************/
+		if(o.getObsrvtnVlRngHiCd() != null) {
+			observationvaluerangehigh.setCode(o.getObsrvtnVlRngHiCd());
+		}
+		/******************** observationvaluerangehighcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory observationvaluerangehighcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		observationvaluerangehigh.setComparator(observationvaluerangehighcomparator.fromCode(o.getObsrvtnVlRngHiCmprtr()));
+
+		/******************** Obsrvtn_VlRng_Hi_Sys ********************************************************************************/
+		if(o.getObsrvtnVlRngHiSys() != null) {
+			observationvaluerangehigh.setSystem(o.getObsrvtnVlRngHiSys());
+		}
+		/******************** Obsrvtn_VlRng_Hi_Unt ********************************************************************************/
+		if(o.getObsrvtnVlRngHiUnt() != null) {
+			observationvaluerangehigh.setUnit(o.getObsrvtnVlRngHiUnt());
+		}
+		/******************** Obsrvtn_VlRng_Hi_Vl ********************************************************************************/
+		if(o.getObsrvtnVlRngHiVl() != null) {
+			observationvaluerangehigh.setValue(Double.parseDouble((o.getObsrvtnVlRngHiVl())));
+		}
+		/******************** observationvaluerangelow ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity observationvaluerangelow =  new org.hl7.fhir.r4.model.Quantity();
+		observationvaluerange.setLow(observationvaluerangelow);
+
+		/******************** Obsrvtn_VlRng_Lw_Cd ********************************************************************************/
+		if(o.getObsrvtnVlRngLwCd() != null) {
+			observationvaluerangelow.setCode(o.getObsrvtnVlRngLwCd());
+		}
+		/******************** observationvaluerangelowcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory observationvaluerangelowcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		observationvaluerangelow.setComparator(observationvaluerangelowcomparator.fromCode(o.getObsrvtnVlRngLwCmprtr()));
+
+		/******************** Obsrvtn_VlRng_Lw_Sys ********************************************************************************/
+		if(o.getObsrvtnVlRngLwSys() != null) {
+			observationvaluerangelow.setSystem(o.getObsrvtnVlRngLwSys());
+		}
+		/******************** Obsrvtn_VlRng_Lw_Unt ********************************************************************************/
+		if(o.getObsrvtnVlRngLwUnt() != null) {
+			observationvaluerangelow.setUnit(o.getObsrvtnVlRngLwUnt());
+		}
+		/******************** Obsrvtn_VlRng_Lw_Vl ********************************************************************************/
+		if(o.getObsrvtnVlRngLwVl() != null) {
+			observationvaluerangelow.setValue(Double.parseDouble((o.getObsrvtnVlRngLwVl())));
+		}
+		/******************** observationvalueratio ********************************************************************************/
+		org.hl7.fhir.r4.model.Ratio observationvalueratio =  new org.hl7.fhir.r4.model.Ratio();
+		observation.setValue(observationvalueratio);
+
+		/******************** observationvalueratiodenominator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity observationvalueratiodenominator =  new org.hl7.fhir.r4.model.Quantity();
+		observationvalueratio.setDenominator(observationvalueratiodenominator);
+
+		/******************** Obsrvtn_VlRtio_Dnmntr_Cd ********************************************************************************/
+		if(o.getObsrvtnVlRtioDnmntrCd() != null) {
+			observationvalueratiodenominator.setCode(o.getObsrvtnVlRtioDnmntrCd());
+		}
+		/******************** observationvalueratiodenominatorcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory observationvalueratiodenominatorcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		observationvalueratiodenominator.setComparator(observationvalueratiodenominatorcomparator.fromCode(o.getObsrvtnVlRtioDnmntrCmprtr()));
+
+		/******************** Obsrvtn_VlRtio_Dnmntr_Sys ********************************************************************************/
+		if(o.getObsrvtnVlRtioDnmntrSys() != null) {
+			observationvalueratiodenominator.setSystem(o.getObsrvtnVlRtioDnmntrSys());
+		}
+		/******************** Obsrvtn_VlRtio_Dnmntr_Unt ********************************************************************************/
+		if(o.getObsrvtnVlRtioDnmntrUnt() != null) {
+			observationvalueratiodenominator.setUnit(o.getObsrvtnVlRtioDnmntrUnt());
+		}
+		/******************** Obsrvtn_VlRtio_Dnmntr_Vl ********************************************************************************/
+		if(o.getObsrvtnVlRtioDnmntrVl() != null) {
+			observationvalueratiodenominator.setValue(Double.parseDouble((o.getObsrvtnVlRtioDnmntrVl())));
+		}
+		/******************** observationvaluerationumerator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity observationvaluerationumerator =  new org.hl7.fhir.r4.model.Quantity();
+		observationvalueratio.setNumerator(observationvaluerationumerator);
+
+		/******************** Obsrvtn_VlRtio_Nmrtr_Cd ********************************************************************************/
+		if(o.getObsrvtnVlRtioNmrtrCd() != null) {
+			observationvaluerationumerator.setCode(o.getObsrvtnVlRtioNmrtrCd());
+		}
+		/******************** observationvaluerationumeratorcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory observationvaluerationumeratorcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		observationvaluerationumerator.setComparator(observationvaluerationumeratorcomparator.fromCode(o.getObsrvtnVlRtioNmrtrCmprtr()));
+
+		/******************** Obsrvtn_VlRtio_Nmrtr_Sys ********************************************************************************/
+		if(o.getObsrvtnVlRtioNmrtrSys() != null) {
+			observationvaluerationumerator.setSystem(o.getObsrvtnVlRtioNmrtrSys());
+		}
+		/******************** Obsrvtn_VlRtio_Nmrtr_Unt ********************************************************************************/
+		if(o.getObsrvtnVlRtioNmrtrUnt() != null) {
+			observationvaluerationumerator.setUnit(o.getObsrvtnVlRtioNmrtrUnt());
+		}
+		/******************** Obsrvtn_VlRtio_Nmrtr_Vl ********************************************************************************/
+		if(o.getObsrvtnVlRtioNmrtrVl() != null) {
+			observationvaluerationumerator.setValue(Double.parseDouble((o.getObsrvtnVlRtioNmrtrVl())));
+		}
+		/******************** observationvaluesampleddata ********************************************************************************/
+		org.hl7.fhir.r4.model.SampledData observationvaluesampleddata =  new org.hl7.fhir.r4.model.SampledData();
+		observation.setValue(observationvaluesampleddata);
+
+		/******************** Obsrvtn_VlSampledData_Data ********************************************************************************/
+		if(o.getObsrvtnVlSampledDataData() != null) {
+			observationvaluesampleddata.setData(o.getObsrvtnVlSampledDataData());
+		}
+		/******************** Obsrvtn_VlSampledData_Dimensions ********************************************************************************/
+		if(o.getObsrvtnVlSampledDataDimensions() != null) {
+			observationvaluesampleddata.setDimensions(Integer.parseInt(o.getObsrvtnVlSampledDataDimensions()));
+		}
+		/******************** Obsrvtn_VlSampledData_Factor ********************************************************************************/
+		if(o.getObsrvtnVlSampledDataFactor() != null) {
+			observationvaluesampleddata.setFactor(Double.parseDouble((o.getObsrvtnVlSampledDataFactor())));
+		}
+		/******************** Obsrvtn_VlSampledData_LwerLmt ********************************************************************************/
+		if(o.getObsrvtnVlSampledDataLwerLmt() != null) {
+			observationvaluesampleddata.setLowerLimit(Double.parseDouble((o.getObsrvtnVlSampledDataLwerLmt())));
+		}
+		/******************** observationvaluesampleddataorigin ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity observationvaluesampleddataorigin =  new org.hl7.fhir.r4.model.Quantity();
+		observationvaluesampleddata.setOrigin(observationvaluesampleddataorigin);
+
+		/******************** Obsrvtn_VlSampledData_Origin_Cd ********************************************************************************/
+		if(o.getObsrvtnVlSampledDataOriginCd() != null) {
+			observationvaluesampleddataorigin.setCode(o.getObsrvtnVlSampledDataOriginCd());
+		}
+		/******************** observationvaluesampleddataorigincomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory observationvaluesampleddataorigincomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		observationvaluesampleddataorigin.setComparator(observationvaluesampleddataorigincomparator.fromCode(o.getObsrvtnVlSampledDataOriginCmprtr()));
+
+		/******************** Obsrvtn_VlSampledData_Origin_Sys ********************************************************************************/
+		if(o.getObsrvtnVlSampledDataOriginSys() != null) {
+			observationvaluesampleddataorigin.setSystem(o.getObsrvtnVlSampledDataOriginSys());
+		}
+		/******************** Obsrvtn_VlSampledData_Origin_Unt ********************************************************************************/
+		if(o.getObsrvtnVlSampledDataOriginUnt() != null) {
+			observationvaluesampleddataorigin.setUnit(o.getObsrvtnVlSampledDataOriginUnt());
+		}
+		/******************** Obsrvtn_VlSampledData_Origin_Vl ********************************************************************************/
+		if(o.getObsrvtnVlSampledDataOriginVl() != null) {
+			observationvaluesampleddataorigin.setValue(Double.parseDouble((o.getObsrvtnVlSampledDataOriginVl())));
+		}
+		/******************** Obsrvtn_VlSampledData_Prd ********************************************************************************/
+		if(o.getObsrvtnVlSampledDataPrd() != null) {
+			observationvaluesampleddata.setPeriod(Double.parseDouble((o.getObsrvtnVlSampledDataPrd())));
+		}
+		/******************** Obsrvtn_VlSampledData_UpperLmt ********************************************************************************/
+		if(o.getObsrvtnVlSampledDataUpperLmt() != null) {
+			observationvaluesampleddata.setUpperLimit(Double.parseDouble((o.getObsrvtnVlSampledDataUpperLmt())));
+		}
+		/******************** Obsrvtn_VlStrgTyp ********************************************************************************/
+		if(o.getObsrvtnVlStrgTyp() != null) {
+			observation.setValue( new org.hl7.fhir.r4.model.StringType(o.getObsrvtnVlStrgTyp()));
+		}
+		/******************** Obsrvtn_VlTimeTyp ********************************************************************************/
+		if(o.getObsrvtnVlTimeTyp() != null) {
+			observation.setValue( new org.hl7.fhir.r4.model.TimeType(o.getObsrvtnVlTimeTyp()));
 		}
 		return observation;
 	}

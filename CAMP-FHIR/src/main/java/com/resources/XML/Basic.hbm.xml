@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Jun 6, 2022, 11:02:25 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Basic" optimistic-lock="none" table="Basic">
+        <id name="id" type="string">
+            <column length="64" name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="basicAthr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Basic_Athr"/>
+        </property>
+        <property name="basicCdCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Basic_Cd_Cdg_Cd"/>
+        </property>
+        <property name="basicCdCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Basic_Cd_Cdg_Dsply"/>
+        </property>
+        <property name="basicCdCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Basic_Cd_Cdg_Sys"/>
+        </property>
+        <property name="basicCdCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Basic_Cd_Cdg_UsrSltd"/>
+        </property>
+        <property name="basicCdCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Basic_Cd_Cdg_Vrsn"/>
+        </property>
+        <property name="basicCdTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Basic_Cd_Txt"/>
+        </property>
+        <property name="basicCreated" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Basic_Created"/>
+        </property>
+        <property name="basicIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Basic_Id_Assigner"/>
+        </property>
+        <property name="basicIdPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Basic_Id_Prd_End"/>
+        </property>
+        <property name="basicIdPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Basic_Id_Prd_Strt"/>
+        </property>
+        <property name="basicIdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Basic_Id_Sys"/>
+        </property>
+        <property name="basicIdTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Basic_Id_Typ_Cdg_Cd"/>
+        </property>
+        <property name="basicIdTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Basic_Id_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="basicIdTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Basic_Id_Typ_Cdg_Sys"/>
+        </property>
+        <property name="basicIdTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Basic_Id_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="basicIdTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Basic_Id_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="basicIdTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Basic_Id_Typ_Txt"/>
+        </property>
+        <property name="basicIdUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Basic_Id_Use"/>
+        </property>
+        <property name="basicIdVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Basic_Id_Vl"/>
+        </property>
+        <property name="basicSbjct" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Basic_Sbjct"/>
+        </property>
+    </class>
+</hibernate-mapping>

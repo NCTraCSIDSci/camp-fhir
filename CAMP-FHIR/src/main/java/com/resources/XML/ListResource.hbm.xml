@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Jun 6, 2022, 11:02:25 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="ListResource" optimistic-lock="none" table="ListResource">
+        <id name="id" type="string">
+            <column length="64" name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="listRsrcCdCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ListRsrc_Cd_Cdg_Cd"/>
+        </property>
+        <property name="listRsrcCdCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ListRsrc_Cd_Cdg_Dsply"/>
+        </property>
+        <property name="listRsrcCdCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ListRsrc_Cd_Cdg_Sys"/>
+        </property>
+        <property name="listRsrcCdCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ListRsrc_Cd_Cdg_UsrSltd"/>
+        </property>
+        <property name="listRsrcCdCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ListRsrc_Cd_Cdg_Vrsn"/>
+        </property>
+        <property name="listRsrcCdTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ListRsrc_Cd_Txt"/>
+        </property>
+        <property name="listRsrcDt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ListRsrc_Dt"/>
+        </property>
+        <property name="listRsrcEmptyRsnCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ListRsrc_EmptyRsn_Cdg_Cd"/>
+        </property>
+        <property name="listRsrcEmptyRsnCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ListRsrc_EmptyRsn_Cdg_Dsply"/>
+        </property>
+        <property name="listRsrcEmptyRsnCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ListRsrc_EmptyRsn_Cdg_Sys"/>
+        </property>
+        <property name="listRsrcEmptyRsnCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ListRsrc_EmptyRsn_Cdg_UsrSltd"/>
+        </property>
+        <property name="listRsrcEmptyRsnCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ListRsrc_EmptyRsn_Cdg_Vrsn"/>
+        </property>
+        <property name="listRsrcEmptyRsnTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ListRsrc_EmptyRsn_Txt"/>
+        </property>
+        <property name="listRsrcEnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ListRsrc_Enc"/>
+        </property>
+        <property name="listRsrcEntryDt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ListRsrc_Entry_Dt"/>
+        </property>
+        <property name="listRsrcEntryDeleted" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ListRsrc_Entry_Deleted"/>
+        </property>
+        <property name="listRsrcEntryFlagCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ListRsrc_Entry_Flag_Cdg_Cd"/>
+        </property>
+        <property name="listRsrcEntryFlagCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ListRsrc_Entry_Flag_Cdg_Dsply"/>
+        </property>
+        <property name="listRsrcEntryFlagCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ListRsrc_Entry_Flag_Cdg_Sys"/>
+        </property>
+        <property name="listRsrcEntryFlagCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ListRsrc_Entry_Flag_Cdg_UsrSltd"/>
+        </property>
+        <property name="listRsrcEntryFlagCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ListRsrc_Entry_Flag_Cdg_Vrsn"/>
+        </property>
+        <property name="listRsrcEntryFlagTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ListRsrc_Entry_Flag_Txt"/>
+        </property>
+        <property name="listRsrcEntryItm" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ListRsrc_Entry_Itm"/>
+        </property>
+        <property name="listRsrcIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ListRsrc_Id_Assigner"/>
+        </property>
+        <property name="listRsrcIdPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ListRsrc_Id_Prd_End"/>
+        </property>
+        <property name="listRsrcIdPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ListRsrc_Id_Prd_Strt"/>
+        </property>
+        <property name="listRsrcIdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ListRsrc_Id_Sys"/>
+        </property>
+        <property name="listRsrcIdTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ListRsrc_Id_Typ_Cdg_Cd"/>
+        </property>
+        <property name="listRsrcIdTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ListRsrc_Id_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="listRsrcIdTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ListRsrc_Id_Typ_Cdg_Sys"/>
+        </property>
+        <property name="listRsrcIdTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ListRsrc_Id_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="listRsrcIdTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ListRsrc_Id_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="listRsrcIdTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ListRsrc_Id_Typ_Txt"/>
+        </property>
+        <property name="listRsrcIdUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ListRsrc_Id_Use"/>
+        </property>
+        <property name="listRsrcIdVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ListRsrc_Id_Vl"/>
+        </property>
+        <property name="listRsrcMode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ListRsrc_Mode"/>
+        </property>
+        <property name="listRsrcNtAthrRfrnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ListRsrc_Nt_AthrRfrnc"/>
+        </property>
+        <property name="listRsrcNtAthrStrgTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ListRsrc_Nt_AthrStrgTyp"/>
+        </property>
+        <property name="listRsrcNtTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ListRsrc_Nt_Txt"/>
+        </property>
+        <property name="listRsrcNtTime" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ListRsrc_Nt_Time"/>
+        </property>
+        <property name="listRsrcOrdredByCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ListRsrc_OrdredBy_Cdg_Cd"/>
+        </property>
+        <property name="listRsrcOrdredByCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ListRsrc_OrdredBy_Cdg_Dsply"/>
+        </property>
+        <property name="listRsrcOrdredByCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ListRsrc_OrdredBy_Cdg_Sys"/>
+        </property>
+        <property name="listRsrcOrdredByCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ListRsrc_OrdredBy_Cdg_UsrSltd"/>
+        </property>
+        <property name="listRsrcOrdredByCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ListRsrc_OrdredBy_Cdg_Vrsn"/>
+        </property>
+        <property name="listRsrcOrdredByTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ListRsrc_OrdredBy_Txt"/>
+        </property>
+        <property name="listRsrcSrc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ListRsrc_Src"/>
+        </property>
+        <property name="listRsrcSts" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ListRsrc_Sts"/>
+        </property>
+        <property name="listRsrcSbjct" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ListRsrc_Sbjct"/>
+        </property>
+        <property name="listRsrcTtl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ListRsrc_Ttl"/>
+        </property>
+    </class>
+</hibernate-mapping>

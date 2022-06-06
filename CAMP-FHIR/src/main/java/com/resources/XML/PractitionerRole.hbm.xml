@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Jun 6, 2022, 11:02:25 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="PractitionerRole" optimistic-lock="none" table="PractitionerRole">
+        <id name="id" type="string">
+            <column length="64" name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="prctitnrRoleActive" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PrctitnrRole_Active"/>
+        </property>
+        <property name="prctitnrRoleAvailabilityExceptions" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PrctitnrRole_AvailabilityExceptions"/>
+        </property>
+        <property name="prctitnrRoleAvailableTimeAllDay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PrctitnrRole_AvailableTime_AllDay"/>
+        </property>
+        <property name="prctitnrRoleAvailableTimeAvailableEndTime" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PrctitnrRole_AvailableTime_AvailableEndTime"/>
+        </property>
+        <property name="prctitnrRoleAvailableTimeAvailableStrtTime" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PrctitnrRole_AvailableTime_AvailableStrtTime"/>
+        </property>
+        <property name="prctitnrRoleAvailableTimeDaysOfWeek" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PrctitnrRole_AvailableTime_DaysOfWeek"/>
+        </property>
+        <property name="prctitnrRoleCdCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PrctitnrRole_Cd_Cdg_Cd"/>
+        </property>
+        <property name="prctitnrRoleCdCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PrctitnrRole_Cd_Cdg_Dsply"/>
+        </property>
+        <property name="prctitnrRoleCdCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PrctitnrRole_Cd_Cdg_Sys"/>
+        </property>
+        <property name="prctitnrRoleCdCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PrctitnrRole_Cd_Cdg_UsrSltd"/>
+        </property>
+        <property name="prctitnrRoleCdCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PrctitnrRole_Cd_Cdg_Vrsn"/>
+        </property>
+        <property name="prctitnrRoleCdTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PrctitnrRole_Cd_Txt"/>
+        </property>
+        <property name="prctitnrRoleEndpoint" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PrctitnrRole_Endpoint"/>
+        </property>
+        <property name="prctitnrRoleHlthcrSrv" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PrctitnrRole_HlthcrSrv"/>
+        </property>
+        <property name="prctitnrRoleIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PrctitnrRole_Id_Assigner"/>
+        </property>
+        <property name="prctitnrRoleIdPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PrctitnrRole_Id_Prd_End"/>
+        </property>
+        <property name="prctitnrRoleIdPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PrctitnrRole_Id_Prd_Strt"/>
+        </property>
+        <property name="prctitnrRoleIdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PrctitnrRole_Id_Sys"/>
+        </property>
+        <property name="prctitnrRoleIdTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PrctitnrRole_Id_Typ_Cdg_Cd"/>
+        </property>
+        <property name="prctitnrRoleIdTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PrctitnrRole_Id_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="prctitnrRoleIdTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PrctitnrRole_Id_Typ_Cdg_Sys"/>
+        </property>
+        <property name="prctitnrRoleIdTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PrctitnrRole_Id_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="prctitnrRoleIdTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PrctitnrRole_Id_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="prctitnrRoleIdTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PrctitnrRole_Id_Typ_Txt"/>
+        </property>
+        <property name="prctitnrRoleIdUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PrctitnrRole_Id_Use"/>
+        </property>
+        <property name="prctitnrRoleIdVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PrctitnrRole_Id_Vl"/>
+        </property>
+        <property name="prctitnrRoleLctn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PrctitnrRole_Lctn"/>
+        </property>
+        <property name="prctitnrRoleNotAvailableDscrptn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PrctitnrRole_NotAvailable_Dscrptn"/>
+        </property>
+        <property name="prctitnrRoleNotAvailableDuringEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PrctitnrRole_NotAvailable_During_End"/>
+        </property>
+        <property name="prctitnrRoleNotAvailableDuringStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PrctitnrRole_NotAvailable_During_Strt"/>
+        </property>
+        <property name="prctitnrRoleOrgnztn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PrctitnrRole_Orgnztn"/>
+        </property>
+        <property name="prctitnrRolePrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PrctitnrRole_Prd_End"/>
+        </property>
+        <property name="prctitnrRolePrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PrctitnrRole_Prd_Strt"/>
+        </property>
+        <property name="prctitnrRolePrctitnr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PrctitnrRole_Prctitnr"/>
+        </property>
+        <property name="prctitnrRoleSpcltyCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PrctitnrRole_Spclty_Cdg_Cd"/>
+        </property>
+        <property name="prctitnrRoleSpcltyCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PrctitnrRole_Spclty_Cdg_Dsply"/>
+        </property>
+        <property name="prctitnrRoleSpcltyCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PrctitnrRole_Spclty_Cdg_Sys"/>
+        </property>
+        <property name="prctitnrRoleSpcltyCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PrctitnrRole_Spclty_Cdg_UsrSltd"/>
+        </property>
+        <property name="prctitnrRoleSpcltyCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PrctitnrRole_Spclty_Cdg_Vrsn"/>
+        </property>
+        <property name="prctitnrRoleSpcltyTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PrctitnrRole_Spclty_Txt"/>
+        </property>
+        <property name="prctitnrRoleTlcmPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PrctitnrRole_Tlcm_Prd_End"/>
+        </property>
+        <property name="prctitnrRoleTlcmPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PrctitnrRole_Tlcm_Prd_Strt"/>
+        </property>
+        <property name="prctitnrRoleTlcmRnk" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PrctitnrRole_Tlcm_Rnk"/>
+        </property>
+        <property name="prctitnrRoleTlcmSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PrctitnrRole_Tlcm_Sys"/>
+        </property>
+        <property name="prctitnrRoleTlcmUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PrctitnrRole_Tlcm_Use"/>
+        </property>
+        <property name="prctitnrRoleTlcmVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PrctitnrRole_Tlcm_Vl"/>
+        </property>
+    </class>
+</hibernate-mapping>

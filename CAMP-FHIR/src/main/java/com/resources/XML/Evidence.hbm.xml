@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Jun 6, 2022, 11:02:25 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Evidence" optimistic-lock="none" table="Evidence">
+        <id name="id" type="string">
+            <column length="64" name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="evdnceApprovalDt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_ApprovalDt"/>
+        </property>
+        <property name="evdnceAthrNm" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Athr_Nm"/>
+        </property>
+        <property name="evdnceAthrTlcmPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Athr_Tlcm_Prd_End"/>
+        </property>
+        <property name="evdnceAthrTlcmPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Athr_Tlcm_Prd_Strt"/>
+        </property>
+        <property name="evdnceAthrTlcmRnk" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Athr_Tlcm_Rnk"/>
+        </property>
+        <property name="evdnceAthrTlcmSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Athr_Tlcm_Sys"/>
+        </property>
+        <property name="evdnceAthrTlcmUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Athr_Tlcm_Use"/>
+        </property>
+        <property name="evdnceAthrTlcmVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Athr_Tlcm_Vl"/>
+        </property>
+        <property name="evdnceCntctNm" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Cntct_Nm"/>
+        </property>
+        <property name="evdnceCntctTlcmPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Cntct_Tlcm_Prd_End"/>
+        </property>
+        <property name="evdnceCntctTlcmPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Cntct_Tlcm_Prd_Strt"/>
+        </property>
+        <property name="evdnceCntctTlcmRnk" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Cntct_Tlcm_Rnk"/>
+        </property>
+        <property name="evdnceCntctTlcmSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Cntct_Tlcm_Sys"/>
+        </property>
+        <property name="evdnceCntctTlcmUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Cntct_Tlcm_Use"/>
+        </property>
+        <property name="evdnceCntctTlcmVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Cntct_Tlcm_Vl"/>
+        </property>
+        <property name="evdnceCopyright" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Copyright"/>
+        </property>
+        <property name="evdnceDt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Dt"/>
+        </property>
+        <property name="evdnceDscrptn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Dscrptn"/>
+        </property>
+        <property name="evdnceEditorNm" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Editor_Nm"/>
+        </property>
+        <property name="evdnceEditorTlcmPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Editor_Tlcm_Prd_End"/>
+        </property>
+        <property name="evdnceEditorTlcmPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Editor_Tlcm_Prd_Strt"/>
+        </property>
+        <property name="evdnceEditorTlcmRnk" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Editor_Tlcm_Rnk"/>
+        </property>
+        <property name="evdnceEditorTlcmSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Editor_Tlcm_Sys"/>
+        </property>
+        <property name="evdnceEditorTlcmUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Editor_Tlcm_Use"/>
+        </property>
+        <property name="evdnceEditorTlcmVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Editor_Tlcm_Vl"/>
+        </property>
+        <property name="evdnceEfctivePrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_EfctivePrd_End"/>
+        </property>
+        <property name="evdnceEfctivePrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_EfctivePrd_Strt"/>
+        </property>
+        <property name="evdnceEndsrNm" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Endsr_Nm"/>
+        </property>
+        <property name="evdnceEndsrTlcmPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Endsr_Tlcm_Prd_End"/>
+        </property>
+        <property name="evdnceEndsrTlcmPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Endsr_Tlcm_Prd_Strt"/>
+        </property>
+        <property name="evdnceEndsrTlcmRnk" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Endsr_Tlcm_Rnk"/>
+        </property>
+        <property name="evdnceEndsrTlcmSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Endsr_Tlcm_Sys"/>
+        </property>
+        <property name="evdnceEndsrTlcmUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Endsr_Tlcm_Use"/>
+        </property>
+        <property name="evdnceEndsrTlcmVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Endsr_Tlcm_Vl"/>
+        </property>
+        <property name="evdnceExposureBackground" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_ExposureBackground"/>
+        </property>
+        <property name="evdnceExposureVariant" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_ExposureVariant"/>
+        </property>
+        <property name="evdnceIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Id_Assigner"/>
+        </property>
+        <property name="evdnceIdPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Id_Prd_End"/>
+        </property>
+        <property name="evdnceIdPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Id_Prd_Strt"/>
+        </property>
+        <property name="evdnceIdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Id_Sys"/>
+        </property>
+        <property name="evdnceIdTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Id_Typ_Cdg_Cd"/>
+        </property>
+        <property name="evdnceIdTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Id_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="evdnceIdTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Id_Typ_Cdg_Sys"/>
+        </property>
+        <property name="evdnceIdTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Id_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="evdnceIdTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Id_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="evdnceIdTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Id_Typ_Txt"/>
+        </property>
+        <property name="evdnceIdUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Id_Use"/>
+        </property>
+        <property name="evdnceIdVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Id_Vl"/>
+        </property>
+        <property name="evdnceJrsdctnCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Jrsdctn_Cdg_Cd"/>
+        </property>
+        <property name="evdnceJrsdctnCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Jrsdctn_Cdg_Dsply"/>
+        </property>
+        <property name="evdnceJrsdctnCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Jrsdctn_Cdg_Sys"/>
+        </property>
+        <property name="evdnceJrsdctnCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Jrsdctn_Cdg_UsrSltd"/>
+        </property>
+        <property name="evdnceJrsdctnCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Jrsdctn_Cdg_Vrsn"/>
+        </property>
+        <property name="evdnceJrsdctnTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Jrsdctn_Txt"/>
+        </property>
+        <property name="evdnceLastReviewDt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_LastReviewDt"/>
+        </property>
+        <property name="evdnceNm" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Nm"/>
+        </property>
+        <property name="evdnceNtAthrRfrnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Nt_AthrRfrnc"/>
+        </property>
+        <property name="evdnceNtAthrStrgTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Nt_AthrStrgTyp"/>
+        </property>
+        <property name="evdnceNtTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Nt_Txt"/>
+        </property>
+        <property name="evdnceNtTime" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Nt_Time"/>
+        </property>
+        <property name="evdnceOutcome" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Outcome"/>
+        </property>
+        <property name="evdncePblshr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Pblshr"/>
+        </property>
+        <property name="evdnceRltedArtfctCitation" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_RltedArtfct_Citation"/>
+        </property>
+        <property name="evdnceRltedArtfctDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_RltedArtfct_Dsply"/>
+        </property>
+        <property name="evdnceRltedArtfctDocCntntTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_RltedArtfct_Doc_CntntTyp"/>
+        </property>
+        <property name="evdnceRltedArtfctDocCreation" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_RltedArtfct_Doc_Creation"/>
+        </property>
+        <property name="evdnceRltedArtfctDocData" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_RltedArtfct_Doc_Data"/>
+        </property>
+        <property name="evdnceRltedArtfctDocHash" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_RltedArtfct_Doc_Hash"/>
+        </property>
+        <property name="evdnceRltedArtfctDocLnguage" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_RltedArtfct_Doc_Lnguage"/>
+        </property>
+        <property name="evdnceRltedArtfctDocSz" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_RltedArtfct_Doc_Sz"/>
+        </property>
+        <property name="evdnceRltedArtfctDocTtl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_RltedArtfct_Doc_Ttl"/>
+        </property>
+        <property name="evdnceRltedArtfctDocUrl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_RltedArtfct_Doc_Url"/>
+        </property>
+        <property name="evdnceRltedArtfctLbl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_RltedArtfct_Lbl"/>
+        </property>
+        <property name="evdnceRltedArtfctRsrc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_RltedArtfct_Rsrc"/>
+        </property>
+        <property name="evdnceRltedArtfctTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_RltedArtfct_Typ"/>
+        </property>
+        <property name="evdnceRltedArtfctUrl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_RltedArtfct_Url"/>
+        </property>
+        <property name="evdnceRviewrNm" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Rviewr_Nm"/>
+        </property>
+        <property name="evdnceRviewrTlcmPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Rviewr_Tlcm_Prd_End"/>
+        </property>
+        <property name="evdnceRviewrTlcmPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Rviewr_Tlcm_Prd_Strt"/>
+        </property>
+        <property name="evdnceRviewrTlcmRnk" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Rviewr_Tlcm_Rnk"/>
+        </property>
+        <property name="evdnceRviewrTlcmSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Rviewr_Tlcm_Sys"/>
+        </property>
+        <property name="evdnceRviewrTlcmUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Rviewr_Tlcm_Use"/>
+        </property>
+        <property name="evdnceRviewrTlcmVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Rviewr_Tlcm_Vl"/>
+        </property>
+        <property name="evdnceShortTtl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_ShortTtl"/>
+        </property>
+        <property name="evdnceSts" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Sts"/>
+        </property>
+        <property name="evdnceSubtitle" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Subtitle"/>
+        </property>
+        <property name="evdnceTtl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Ttl"/>
+        </property>
+        <property name="evdnceTopicCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Topic_Cdg_Cd"/>
+        </property>
+        <property name="evdnceTopicCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Topic_Cdg_Dsply"/>
+        </property>
+        <property name="evdnceTopicCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Topic_Cdg_Sys"/>
+        </property>
+        <property name="evdnceTopicCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Topic_Cdg_UsrSltd"/>
+        </property>
+        <property name="evdnceTopicCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Topic_Cdg_Vrsn"/>
+        </property>
+        <property name="evdnceTopicTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Topic_Txt"/>
+        </property>
+        <property name="evdnceUrl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Url"/>
+        </property>
+        <property name="evdnceUseCntxtCdCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_UseCntxt_Cd_Cd"/>
+        </property>
+        <property name="evdnceUseCntxtCdDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_UseCntxt_Cd_Dsply"/>
+        </property>
+        <property name="evdnceUseCntxtCdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_UseCntxt_Cd_Sys"/>
+        </property>
+        <property name="evdnceUseCntxtCdUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_UseCntxt_Cd_UsrSltd"/>
+        </property>
+        <property name="evdnceUseCntxtCdVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_UseCntxt_Cd_Vrsn"/>
+        </property>
+        <property name="evdnceUseCntxtVlCdbleCncptCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_UseCntxt_VlCdbleCncpt_Cdg_Cd"/>
+        </property>
+        <property name="evdnceUseCntxtVlCdbleCncptCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_UseCntxt_VlCdbleCncpt_Cdg_Dsply"/>
+        </property>
+        <property name="evdnceUseCntxtVlCdbleCncptCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_UseCntxt_VlCdbleCncpt_Cdg_Sys"/>
+        </property>
+        <property name="evdnceUseCntxtVlCdbleCncptCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_UseCntxt_VlCdbleCncpt_Cdg_UsrSltd"/>
+        </property>
+        <property name="evdnceUseCntxtVlCdbleCncptCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_UseCntxt_VlCdbleCncpt_Cdg_Vrsn"/>
+        </property>
+        <property name="evdnceUseCntxtVlCdbleCncptTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_UseCntxt_VlCdbleCncpt_Txt"/>
+        </property>
+        <property name="evdnceUseCntxtVlQntyCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_UseCntxt_VlQnty_Cd"/>
+        </property>
+        <property name="evdnceUseCntxtVlQntyCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_UseCntxt_VlQnty_Cmprtr"/>
+        </property>
+        <property name="evdnceUseCntxtVlQntySys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_UseCntxt_VlQnty_Sys"/>
+        </property>
+        <property name="evdnceUseCntxtVlQntyUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_UseCntxt_VlQnty_Unt"/>
+        </property>
+        <property name="evdnceUseCntxtVlQntyVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_UseCntxt_VlQnty_Vl"/>
+        </property>
+        <property name="evdnceUseCntxtVlRngHiCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_UseCntxt_VlRng_Hi_Cd"/>
+        </property>
+        <property name="evdnceUseCntxtVlRngHiCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_UseCntxt_VlRng_Hi_Cmprtr"/>
+        </property>
+        <property name="evdnceUseCntxtVlRngHiSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_UseCntxt_VlRng_Hi_Sys"/>
+        </property>
+        <property name="evdnceUseCntxtVlRngHiUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_UseCntxt_VlRng_Hi_Unt"/>
+        </property>
+        <property name="evdnceUseCntxtVlRngHiVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_UseCntxt_VlRng_Hi_Vl"/>
+        </property>
+        <property name="evdnceUseCntxtVlRngLwCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_UseCntxt_VlRng_Lw_Cd"/>
+        </property>
+        <property name="evdnceUseCntxtVlRngLwCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_UseCntxt_VlRng_Lw_Cmprtr"/>
+        </property>
+        <property name="evdnceUseCntxtVlRngLwSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_UseCntxt_VlRng_Lw_Sys"/>
+        </property>
+        <property name="evdnceUseCntxtVlRngLwUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_UseCntxt_VlRng_Lw_Unt"/>
+        </property>
+        <property name="evdnceUseCntxtVlRngLwVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_UseCntxt_VlRng_Lw_Vl"/>
+        </property>
+        <property name="evdnceUseCntxtVlRfrnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_UseCntxt_VlRfrnc"/>
+        </property>
+        <property name="evdnceVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Evdnce_Vrsn"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,1142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Jun 6, 2022, 11:02:25 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Observation" optimistic-lock="none" table="Observation">
+        <id name="id" type="string">
+            <column length="64" name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="obsrvtnBasedOn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_BasedOn"/>
+        </property>
+        <property name="obsrvtnBodySiteCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_BodySite_Cdg_Cd"/>
+        </property>
+        <property name="obsrvtnBodySiteCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_BodySite_Cdg_Dsply"/>
+        </property>
+        <property name="obsrvtnBodySiteCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_BodySite_Cdg_Sys"/>
+        </property>
+        <property name="obsrvtnBodySiteCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_BodySite_Cdg_UsrSltd"/>
+        </property>
+        <property name="obsrvtnBodySiteCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_BodySite_Cdg_Vrsn"/>
+        </property>
+        <property name="obsrvtnBodySiteTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_BodySite_Txt"/>
+        </property>
+        <property name="obsrvtnCtgryCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Ctgry_Cdg_Cd"/>
+        </property>
+        <property name="obsrvtnCtgryCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Ctgry_Cdg_Dsply"/>
+        </property>
+        <property name="obsrvtnCtgryCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Ctgry_Cdg_Sys"/>
+        </property>
+        <property name="obsrvtnCtgryCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Ctgry_Cdg_UsrSltd"/>
+        </property>
+        <property name="obsrvtnCtgryCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Ctgry_Cdg_Vrsn"/>
+        </property>
+        <property name="obsrvtnCtgryTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Ctgry_Txt"/>
+        </property>
+        <property name="obsrvtnCdCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cd_Cdg_Cd"/>
+        </property>
+        <property name="obsrvtnCdCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cd_Cdg_Dsply"/>
+        </property>
+        <property name="obsrvtnCdCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cd_Cdg_Sys"/>
+        </property>
+        <property name="obsrvtnCdCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cd_Cdg_UsrSltd"/>
+        </property>
+        <property name="obsrvtnCdCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cd_Cdg_Vrsn"/>
+        </property>
+        <property name="obsrvtnCdTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cd_Txt"/>
+        </property>
+        <property name="obsrvtnCmpntCdCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_Cd_Cdg_Cd"/>
+        </property>
+        <property name="obsrvtnCmpntCdCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_Cd_Cdg_Dsply"/>
+        </property>
+        <property name="obsrvtnCmpntCdCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_Cd_Cdg_Sys"/>
+        </property>
+        <property name="obsrvtnCmpntCdCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_Cd_Cdg_UsrSltd"/>
+        </property>
+        <property name="obsrvtnCmpntCdCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_Cd_Cdg_Vrsn"/>
+        </property>
+        <property name="obsrvtnCmpntCdTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_Cd_Txt"/>
+        </property>
+        <property name="obsrvtnCmpntDataAbsentRsnCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_DataAbsentRsn_Cdg_Cd"/>
+        </property>
+        <property name="obsrvtnCmpntDataAbsentRsnCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_DataAbsentRsn_Cdg_Dsply"/>
+        </property>
+        <property name="obsrvtnCmpntDataAbsentRsnCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_DataAbsentRsn_Cdg_Sys"/>
+        </property>
+        <property name="obsrvtnCmpntDataAbsentRsnCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_DataAbsentRsn_Cdg_UsrSltd"/>
+        </property>
+        <property name="obsrvtnCmpntDataAbsentRsnCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_DataAbsentRsn_Cdg_Vrsn"/>
+        </property>
+        <property name="obsrvtnCmpntDataAbsentRsnTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_DataAbsentRsn_Txt"/>
+        </property>
+        <property name="obsrvtnCmpntInterpretationCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_Interpretation_Cdg_Cd"/>
+        </property>
+        <property name="obsrvtnCmpntInterpretationCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_Interpretation_Cdg_Dsply"/>
+        </property>
+        <property name="obsrvtnCmpntInterpretationCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_Interpretation_Cdg_Sys"/>
+        </property>
+        <property name="obsrvtnCmpntInterpretationCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_Interpretation_Cdg_UsrSltd"/>
+        </property>
+        <property name="obsrvtnCmpntInterpretationCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_Interpretation_Cdg_Vrsn"/>
+        </property>
+        <property name="obsrvtnCmpntInterpretationTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_Interpretation_Txt"/>
+        </property>
+        <property name="obsrvtnCmpntRfrncRngAgeHiCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_RfrncRng_Age_Hi_Cd"/>
+        </property>
+        <property name="obsrvtnCmpntRfrncRngAgeHiCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_RfrncRng_Age_Hi_Cmprtr"/>
+        </property>
+        <property name="obsrvtnCmpntRfrncRngAgeHiSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_RfrncRng_Age_Hi_Sys"/>
+        </property>
+        <property name="obsrvtnCmpntRfrncRngAgeHiUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_RfrncRng_Age_Hi_Unt"/>
+        </property>
+        <property name="obsrvtnCmpntRfrncRngAgeHiVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_RfrncRng_Age_Hi_Vl"/>
+        </property>
+        <property name="obsrvtnCmpntRfrncRngAgeLwCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_RfrncRng_Age_Lw_Cd"/>
+        </property>
+        <property name="obsrvtnCmpntRfrncRngAgeLwCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_RfrncRng_Age_Lw_Cmprtr"/>
+        </property>
+        <property name="obsrvtnCmpntRfrncRngAgeLwSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_RfrncRng_Age_Lw_Sys"/>
+        </property>
+        <property name="obsrvtnCmpntRfrncRngAgeLwUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_RfrncRng_Age_Lw_Unt"/>
+        </property>
+        <property name="obsrvtnCmpntRfrncRngAgeLwVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_RfrncRng_Age_Lw_Vl"/>
+        </property>
+        <property name="obsrvtnCmpntRfrncRngAppliesToCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_RfrncRng_AppliesTo_Cdg_Cd"/>
+        </property>
+        <property name="obsrvtnCmpntRfrncRngAppliesToCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_RfrncRng_AppliesTo_Cdg_Dsply"/>
+        </property>
+        <property name="obsrvtnCmpntRfrncRngAppliesToCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_RfrncRng_AppliesTo_Cdg_Sys"/>
+        </property>
+        <property name="obsrvtnCmpntRfrncRngAppliesToCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_RfrncRng_AppliesTo_Cdg_UsrSltd"/>
+        </property>
+        <property name="obsrvtnCmpntRfrncRngAppliesToCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_RfrncRng_AppliesTo_Cdg_Vrsn"/>
+        </property>
+        <property name="obsrvtnCmpntRfrncRngAppliesToTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_RfrncRng_AppliesTo_Txt"/>
+        </property>
+        <property name="obsrvtnCmpntRfrncRngHiCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_RfrncRng_Hi_Cd"/>
+        </property>
+        <property name="obsrvtnCmpntRfrncRngHiCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_RfrncRng_Hi_Cmprtr"/>
+        </property>
+        <property name="obsrvtnCmpntRfrncRngHiSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_RfrncRng_Hi_Sys"/>
+        </property>
+        <property name="obsrvtnCmpntRfrncRngHiUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_RfrncRng_Hi_Unt"/>
+        </property>
+        <property name="obsrvtnCmpntRfrncRngHiVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_RfrncRng_Hi_Vl"/>
+        </property>
+        <property name="obsrvtnCmpntRfrncRngLwCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_RfrncRng_Lw_Cd"/>
+        </property>
+        <property name="obsrvtnCmpntRfrncRngLwCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_RfrncRng_Lw_Cmprtr"/>
+        </property>
+        <property name="obsrvtnCmpntRfrncRngLwSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_RfrncRng_Lw_Sys"/>
+        </property>
+        <property name="obsrvtnCmpntRfrncRngLwUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_RfrncRng_Lw_Unt"/>
+        </property>
+        <property name="obsrvtnCmpntRfrncRngLwVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_RfrncRng_Lw_Vl"/>
+        </property>
+        <property name="obsrvtnCmpntRfrncRngTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_RfrncRng_Txt"/>
+        </property>
+        <property name="obsrvtnCmpntRfrncRngTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_RfrncRng_Typ_Cdg_Cd"/>
+        </property>
+        <property name="obsrvtnCmpntRfrncRngTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_RfrncRng_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="obsrvtnCmpntRfrncRngTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_RfrncRng_Typ_Cdg_Sys"/>
+        </property>
+        <property name="obsrvtnCmpntRfrncRngTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_RfrncRng_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="obsrvtnCmpntRfrncRngTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_RfrncRng_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="obsrvtnCmpntRfrncRngTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_RfrncRng_Typ_Txt"/>
+        </property>
+        <property name="obsrvtnCmpntVlBooleanTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_VlBooleanTyp"/>
+        </property>
+        <property name="obsrvtnCmpntVlCdbleCncptCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_VlCdbleCncpt_Cdg_Cd"/>
+        </property>
+        <property name="obsrvtnCmpntVlCdbleCncptCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_VlCdbleCncpt_Cdg_Dsply"/>
+        </property>
+        <property name="obsrvtnCmpntVlCdbleCncptCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_VlCdbleCncpt_Cdg_Sys"/>
+        </property>
+        <property name="obsrvtnCmpntVlCdbleCncptCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_VlCdbleCncpt_Cdg_UsrSltd"/>
+        </property>
+        <property name="obsrvtnCmpntVlCdbleCncptCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_VlCdbleCncpt_Cdg_Vrsn"/>
+        </property>
+        <property name="obsrvtnCmpntVlCdbleCncptTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_VlCdbleCncpt_Txt"/>
+        </property>
+        <property name="obsrvtnCmpntVlDtTimeTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_VlDtTimeTyp"/>
+        </property>
+        <property name="obsrvtnCmpntVlIntegerTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_VlIntegerTyp"/>
+        </property>
+        <property name="obsrvtnCmpntVlPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_VlPrd_End"/>
+        </property>
+        <property name="obsrvtnCmpntVlPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_VlPrd_Strt"/>
+        </property>
+        <property name="obsrvtnCmpntVlQntyCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_VlQnty_Cd"/>
+        </property>
+        <property name="obsrvtnCmpntVlQntyCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_VlQnty_Cmprtr"/>
+        </property>
+        <property name="obsrvtnCmpntVlQntySys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_VlQnty_Sys"/>
+        </property>
+        <property name="obsrvtnCmpntVlQntyUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_VlQnty_Unt"/>
+        </property>
+        <property name="obsrvtnCmpntVlQntyVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_VlQnty_Vl"/>
+        </property>
+        <property name="obsrvtnCmpntVlRngHiCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_VlRng_Hi_Cd"/>
+        </property>
+        <property name="obsrvtnCmpntVlRngHiCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_VlRng_Hi_Cmprtr"/>
+        </property>
+        <property name="obsrvtnCmpntVlRngHiSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_VlRng_Hi_Sys"/>
+        </property>
+        <property name="obsrvtnCmpntVlRngHiUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_VlRng_Hi_Unt"/>
+        </property>
+        <property name="obsrvtnCmpntVlRngHiVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_VlRng_Hi_Vl"/>
+        </property>
+        <property name="obsrvtnCmpntVlRngLwCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_VlRng_Lw_Cd"/>
+        </property>
+        <property name="obsrvtnCmpntVlRngLwCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_VlRng_Lw_Cmprtr"/>
+        </property>
+        <property name="obsrvtnCmpntVlRngLwSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_VlRng_Lw_Sys"/>
+        </property>
+        <property name="obsrvtnCmpntVlRngLwUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_VlRng_Lw_Unt"/>
+        </property>
+        <property name="obsrvtnCmpntVlRngLwVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_VlRng_Lw_Vl"/>
+        </property>
+        <property name="obsrvtnCmpntVlRtioDnmntrCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_VlRtio_Dnmntr_Cd"/>
+        </property>
+        <property name="obsrvtnCmpntVlRtioDnmntrCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_VlRtio_Dnmntr_Cmprtr"/>
+        </property>
+        <property name="obsrvtnCmpntVlRtioDnmntrSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_VlRtio_Dnmntr_Sys"/>
+        </property>
+        <property name="obsrvtnCmpntVlRtioDnmntrUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_VlRtio_Dnmntr_Unt"/>
+        </property>
+        <property name="obsrvtnCmpntVlRtioDnmntrVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_VlRtio_Dnmntr_Vl"/>
+        </property>
+        <property name="obsrvtnCmpntVlRtioNmrtrCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_VlRtio_Nmrtr_Cd"/>
+        </property>
+        <property name="obsrvtnCmpntVlRtioNmrtrCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_VlRtio_Nmrtr_Cmprtr"/>
+        </property>
+        <property name="obsrvtnCmpntVlRtioNmrtrSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_VlRtio_Nmrtr_Sys"/>
+        </property>
+        <property name="obsrvtnCmpntVlRtioNmrtrUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_VlRtio_Nmrtr_Unt"/>
+        </property>
+        <property name="obsrvtnCmpntVlRtioNmrtrVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_VlRtio_Nmrtr_Vl"/>
+        </property>
+        <property name="obsrvtnCmpntVlSampledDataData" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_VlSampledData_Data"/>
+        </property>
+        <property name="obsrvtnCmpntVlSampledDataDimensions" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_VlSampledData_Dimensions"/>
+        </property>
+        <property name="obsrvtnCmpntVlSampledDataFactor" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_VlSampledData_Factor"/>
+        </property>
+        <property name="obsrvtnCmpntVlSampledDataLwerLmt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_VlSampledData_LwerLmt"/>
+        </property>
+        <property name="obsrvtnCmpntVlSampledDataOriginCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_VlSampledData_Origin_Cd"/>
+        </property>
+        <property name="obsrvtnCmpntVlSampledDataOriginCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_VlSampledData_Origin_Cmprtr"/>
+        </property>
+        <property name="obsrvtnCmpntVlSampledDataOriginSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_VlSampledData_Origin_Sys"/>
+        </property>
+        <property name="obsrvtnCmpntVlSampledDataOriginUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_VlSampledData_Origin_Unt"/>
+        </property>
+        <property name="obsrvtnCmpntVlSampledDataOriginVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_VlSampledData_Origin_Vl"/>
+        </property>
+        <property name="obsrvtnCmpntVlSampledDataPrd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_VlSampledData_Prd"/>
+        </property>
+        <property name="obsrvtnCmpntVlSampledDataUpperLmt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_VlSampledData_UpperLmt"/>
+        </property>
+        <property name="obsrvtnCmpntVlStrgTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_VlStrgTyp"/>
+        </property>
+        <property name="obsrvtnCmpntVlTimeTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Cmpnt_VlTimeTyp"/>
+        </property>
+        <property name="obsrvtnDataAbsentRsnCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_DataAbsentRsn_Cdg_Cd"/>
+        </property>
+        <property name="obsrvtnDataAbsentRsnCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_DataAbsentRsn_Cdg_Dsply"/>
+        </property>
+        <property name="obsrvtnDataAbsentRsnCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_DataAbsentRsn_Cdg_Sys"/>
+        </property>
+        <property name="obsrvtnDataAbsentRsnCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_DataAbsentRsn_Cdg_UsrSltd"/>
+        </property>
+        <property name="obsrvtnDataAbsentRsnCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_DataAbsentRsn_Cdg_Vrsn"/>
+        </property>
+        <property name="obsrvtnDataAbsentRsnTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_DataAbsentRsn_Txt"/>
+        </property>
+        <property name="obsrvtnDerivedFrom" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_DerivedFrom"/>
+        </property>
+        <property name="obsrvtnDvc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Dvc"/>
+        </property>
+        <property name="obsrvtnEfctiveDtTimeTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_EfctiveDtTimeTyp"/>
+        </property>
+        <property name="obsrvtnEfctiveInstantTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_EfctiveInstantTyp"/>
+        </property>
+        <property name="obsrvtnEfctivePrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_EfctivePrd_End"/>
+        </property>
+        <property name="obsrvtnEfctivePrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_EfctivePrd_Strt"/>
+        </property>
+        <property name="obsrvtnEfctiveTmgCdCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_EfctiveTmg_Cd_Cdg_Cd"/>
+        </property>
+        <property name="obsrvtnEfctiveTmgCdCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_EfctiveTmg_Cd_Cdg_Dsply"/>
+        </property>
+        <property name="obsrvtnEfctiveTmgCdCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_EfctiveTmg_Cd_Cdg_Sys"/>
+        </property>
+        <property name="obsrvtnEfctiveTmgCdCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_EfctiveTmg_Cd_Cdg_UsrSltd"/>
+        </property>
+        <property name="obsrvtnEfctiveTmgCdCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_EfctiveTmg_Cd_Cdg_Vrsn"/>
+        </property>
+        <property name="obsrvtnEfctiveTmgCdTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_EfctiveTmg_Cd_Txt"/>
+        </property>
+        <property name="obsrvtnEfctiveTmgEvnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_EfctiveTmg_Evnt"/>
+        </property>
+        <property name="obsrvtnEfctiveTmgRptBndsPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_EfctiveTmg_Rpt_BndsPrd_End"/>
+        </property>
+        <property name="obsrvtnEfctiveTmgRptBndsPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_EfctiveTmg_Rpt_BndsPrd_Strt"/>
+        </property>
+        <property name="obsrvtnEfctiveTmgRptBndsRngHiCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_EfctiveTmg_Rpt_BndsRng_Hi_Cd"/>
+        </property>
+        <property name="obsrvtnEfctiveTmgRptBndsRngHiCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_EfctiveTmg_Rpt_BndsRng_Hi_Cmprtr"/>
+        </property>
+        <property name="obsrvtnEfctiveTmgRptBndsRngHiSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_EfctiveTmg_Rpt_BndsRng_Hi_Sys"/>
+        </property>
+        <property name="obsrvtnEfctiveTmgRptBndsRngHiUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_EfctiveTmg_Rpt_BndsRng_Hi_Unt"/>
+        </property>
+        <property name="obsrvtnEfctiveTmgRptBndsRngHiVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_EfctiveTmg_Rpt_BndsRng_Hi_Vl"/>
+        </property>
+        <property name="obsrvtnEfctiveTmgRptBndsRngLwCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_EfctiveTmg_Rpt_BndsRng_Lw_Cd"/>
+        </property>
+        <property name="obsrvtnEfctiveTmgRptBndsRngLwCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_EfctiveTmg_Rpt_BndsRng_Lw_Cmprtr"/>
+        </property>
+        <property name="obsrvtnEfctiveTmgRptBndsRngLwSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_EfctiveTmg_Rpt_BndsRng_Lw_Sys"/>
+        </property>
+        <property name="obsrvtnEfctiveTmgRptBndsRngLwUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_EfctiveTmg_Rpt_BndsRng_Lw_Unt"/>
+        </property>
+        <property name="obsrvtnEfctiveTmgRptBndsRngLwVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_EfctiveTmg_Rpt_BndsRng_Lw_Vl"/>
+        </property>
+        <property name="obsrvtnEfctiveTmgRptCnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_EfctiveTmg_Rpt_Cnt"/>
+        </property>
+        <property name="obsrvtnEfctiveTmgRptCntMx" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_EfctiveTmg_Rpt_CntMx"/>
+        </property>
+        <property name="obsrvtnEfctiveTmgRptDayOfWeek" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_EfctiveTmg_Rpt_DayOfWeek"/>
+        </property>
+        <property name="obsrvtnEfctiveTmgRptDuration" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_EfctiveTmg_Rpt_Duration"/>
+        </property>
+        <property name="obsrvtnEfctiveTmgRptDurationMx" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_EfctiveTmg_Rpt_DurationMx"/>
+        </property>
+        <property name="obsrvtnEfctiveTmgRptDurationUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_EfctiveTmg_Rpt_DurationUnt"/>
+        </property>
+        <property name="obsrvtnEfctiveTmgRptFrqncy" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_EfctiveTmg_Rpt_Frqncy"/>
+        </property>
+        <property name="obsrvtnEfctiveTmgRptFrqncyMx" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_EfctiveTmg_Rpt_FrqncyMx"/>
+        </property>
+        <property name="obsrvtnEfctiveTmgRptOff" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_EfctiveTmg_Rpt_Off"/>
+        </property>
+        <property name="obsrvtnEfctiveTmgRptPrd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_EfctiveTmg_Rpt_Prd"/>
+        </property>
+        <property name="obsrvtnEfctiveTmgRptPrdMx" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_EfctiveTmg_Rpt_PrdMx"/>
+        </property>
+        <property name="obsrvtnEfctiveTmgRptPrdUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_EfctiveTmg_Rpt_PrdUnt"/>
+        </property>
+        <property name="obsrvtnEfctiveTmgRptTimeOfDay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_EfctiveTmg_Rpt_TimeOfDay"/>
+        </property>
+        <property name="obsrvtnEfctiveTmgRptWhen" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_EfctiveTmg_Rpt_When"/>
+        </property>
+        <property name="obsrvtnEnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Enc"/>
+        </property>
+        <property name="obsrvtnFocus" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Focus"/>
+        </property>
+        <property name="obsrvtnHasMmbr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_HasMmbr"/>
+        </property>
+        <property name="obsrvtnIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Id_Assigner"/>
+        </property>
+        <property name="obsrvtnIdPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Id_Prd_End"/>
+        </property>
+        <property name="obsrvtnIdPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Id_Prd_Strt"/>
+        </property>
+        <property name="obsrvtnIdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Id_Sys"/>
+        </property>
+        <property name="obsrvtnIdTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Id_Typ_Cdg_Cd"/>
+        </property>
+        <property name="obsrvtnIdTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Id_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="obsrvtnIdTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Id_Typ_Cdg_Sys"/>
+        </property>
+        <property name="obsrvtnIdTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Id_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="obsrvtnIdTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Id_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="obsrvtnIdTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Id_Typ_Txt"/>
+        </property>
+        <property name="obsrvtnIdUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Id_Use"/>
+        </property>
+        <property name="obsrvtnIdVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Id_Vl"/>
+        </property>
+        <property name="obsrvtnInterpretationCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Interpretation_Cdg_Cd"/>
+        </property>
+        <property name="obsrvtnInterpretationCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Interpretation_Cdg_Dsply"/>
+        </property>
+        <property name="obsrvtnInterpretationCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Interpretation_Cdg_Sys"/>
+        </property>
+        <property name="obsrvtnInterpretationCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Interpretation_Cdg_UsrSltd"/>
+        </property>
+        <property name="obsrvtnInterpretationCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Interpretation_Cdg_Vrsn"/>
+        </property>
+        <property name="obsrvtnInterpretationTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Interpretation_Txt"/>
+        </property>
+        <property name="obsrvtnIssued" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Issued"/>
+        </property>
+        <property name="obsrvtnMthdCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Mthd_Cdg_Cd"/>
+        </property>
+        <property name="obsrvtnMthdCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Mthd_Cdg_Dsply"/>
+        </property>
+        <property name="obsrvtnMthdCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Mthd_Cdg_Sys"/>
+        </property>
+        <property name="obsrvtnMthdCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Mthd_Cdg_UsrSltd"/>
+        </property>
+        <property name="obsrvtnMthdCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Mthd_Cdg_Vrsn"/>
+        </property>
+        <property name="obsrvtnMthdTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Mthd_Txt"/>
+        </property>
+        <property name="obsrvtnNtAthrRfrnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Nt_AthrRfrnc"/>
+        </property>
+        <property name="obsrvtnNtAthrStrgTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Nt_AthrStrgTyp"/>
+        </property>
+        <property name="obsrvtnNtTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Nt_Txt"/>
+        </property>
+        <property name="obsrvtnNtTime" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Nt_Time"/>
+        </property>
+        <property name="obsrvtnPartOf" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_PartOf"/>
+        </property>
+        <property name="obsrvtnPrfrmr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Prfrmr"/>
+        </property>
+        <property name="obsrvtnRfrncRngAgeHiCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_RfrncRng_Age_Hi_Cd"/>
+        </property>
+        <property name="obsrvtnRfrncRngAgeHiCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_RfrncRng_Age_Hi_Cmprtr"/>
+        </property>
+        <property name="obsrvtnRfrncRngAgeHiSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_RfrncRng_Age_Hi_Sys"/>
+        </property>
+        <property name="obsrvtnRfrncRngAgeHiUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_RfrncRng_Age_Hi_Unt"/>
+        </property>
+        <property name="obsrvtnRfrncRngAgeHiVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_RfrncRng_Age_Hi_Vl"/>
+        </property>
+        <property name="obsrvtnRfrncRngAgeLwCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_RfrncRng_Age_Lw_Cd"/>
+        </property>
+        <property name="obsrvtnRfrncRngAgeLwCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_RfrncRng_Age_Lw_Cmprtr"/>
+        </property>
+        <property name="obsrvtnRfrncRngAgeLwSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_RfrncRng_Age_Lw_Sys"/>
+        </property>
+        <property name="obsrvtnRfrncRngAgeLwUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_RfrncRng_Age_Lw_Unt"/>
+        </property>
+        <property name="obsrvtnRfrncRngAgeLwVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_RfrncRng_Age_Lw_Vl"/>
+        </property>
+        <property name="obsrvtnRfrncRngAppliesToCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_RfrncRng_AppliesTo_Cdg_Cd"/>
+        </property>
+        <property name="obsrvtnRfrncRngAppliesToCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_RfrncRng_AppliesTo_Cdg_Dsply"/>
+        </property>
+        <property name="obsrvtnRfrncRngAppliesToCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_RfrncRng_AppliesTo_Cdg_Sys"/>
+        </property>
+        <property name="obsrvtnRfrncRngAppliesToCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_RfrncRng_AppliesTo_Cdg_UsrSltd"/>
+        </property>
+        <property name="obsrvtnRfrncRngAppliesToCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_RfrncRng_AppliesTo_Cdg_Vrsn"/>
+        </property>
+        <property name="obsrvtnRfrncRngAppliesToTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_RfrncRng_AppliesTo_Txt"/>
+        </property>
+        <property name="obsrvtnRfrncRngHiCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_RfrncRng_Hi_Cd"/>
+        </property>
+        <property name="obsrvtnRfrncRngHiCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_RfrncRng_Hi_Cmprtr"/>
+        </property>
+        <property name="obsrvtnRfrncRngHiSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_RfrncRng_Hi_Sys"/>
+        </property>
+        <property name="obsrvtnRfrncRngHiUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_RfrncRng_Hi_Unt"/>
+        </property>
+        <property name="obsrvtnRfrncRngHiVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_RfrncRng_Hi_Vl"/>
+        </property>
+        <property name="obsrvtnRfrncRngLwCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_RfrncRng_Lw_Cd"/>
+        </property>
+        <property name="obsrvtnRfrncRngLwCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_RfrncRng_Lw_Cmprtr"/>
+        </property>
+        <property name="obsrvtnRfrncRngLwSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_RfrncRng_Lw_Sys"/>
+        </property>
+        <property name="obsrvtnRfrncRngLwUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_RfrncRng_Lw_Unt"/>
+        </property>
+        <property name="obsrvtnRfrncRngLwVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_RfrncRng_Lw_Vl"/>
+        </property>
+        <property name="obsrvtnRfrncRngTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_RfrncRng_Txt"/>
+        </property>
+        <property name="obsrvtnRfrncRngTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_RfrncRng_Typ_Cdg_Cd"/>
+        </property>
+        <property name="obsrvtnRfrncRngTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_RfrncRng_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="obsrvtnRfrncRngTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_RfrncRng_Typ_Cdg_Sys"/>
+        </property>
+        <property name="obsrvtnRfrncRngTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_RfrncRng_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="obsrvtnRfrncRngTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_RfrncRng_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="obsrvtnRfrncRngTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_RfrncRng_Typ_Txt"/>
+        </property>
+        <property name="obsrvtnSpcmn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Spcmn"/>
+        </property>
+        <property name="obsrvtnSts" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Sts"/>
+        </property>
+        <property name="obsrvtnSbjct" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_Sbjct"/>
+        </property>
+        <property name="obsrvtnVlBooleanTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_VlBooleanTyp"/>
+        </property>
+        <property name="obsrvtnVlCdbleCncptCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_VlCdbleCncpt_Cdg_Cd"/>
+        </property>
+        <property name="obsrvtnVlCdbleCncptCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_VlCdbleCncpt_Cdg_Dsply"/>
+        </property>
+        <property name="obsrvtnVlCdbleCncptCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_VlCdbleCncpt_Cdg_Sys"/>
+        </property>
+        <property name="obsrvtnVlCdbleCncptCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_VlCdbleCncpt_Cdg_UsrSltd"/>
+        </property>
+        <property name="obsrvtnVlCdbleCncptCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_VlCdbleCncpt_Cdg_Vrsn"/>
+        </property>
+        <property name="obsrvtnVlCdbleCncptTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_VlCdbleCncpt_Txt"/>
+        </property>
+        <property name="obsrvtnVlDtTimeTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_VlDtTimeTyp"/>
+        </property>
+        <property name="obsrvtnVlIntegerTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_VlIntegerTyp"/>
+        </property>
+        <property name="obsrvtnVlPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_VlPrd_End"/>
+        </property>
+        <property name="obsrvtnVlPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_VlPrd_Strt"/>
+        </property>
+        <property name="obsrvtnVlQntyCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_VlQnty_Cd"/>
+        </property>
+        <property name="obsrvtnVlQntyCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_VlQnty_Cmprtr"/>
+        </property>
+        <property name="obsrvtnVlQntySys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_VlQnty_Sys"/>
+        </property>
+        <property name="obsrvtnVlQntyUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_VlQnty_Unt"/>
+        </property>
+        <property name="obsrvtnVlQntyVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_VlQnty_Vl"/>
+        </property>
+        <property name="obsrvtnVlRngHiCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_VlRng_Hi_Cd"/>
+        </property>
+        <property name="obsrvtnVlRngHiCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_VlRng_Hi_Cmprtr"/>
+        </property>
+        <property name="obsrvtnVlRngHiSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_VlRng_Hi_Sys"/>
+        </property>
+        <property name="obsrvtnVlRngHiUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_VlRng_Hi_Unt"/>
+        </property>
+        <property name="obsrvtnVlRngHiVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_VlRng_Hi_Vl"/>
+        </property>
+        <property name="obsrvtnVlRngLwCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_VlRng_Lw_Cd"/>
+        </property>
+        <property name="obsrvtnVlRngLwCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_VlRng_Lw_Cmprtr"/>
+        </property>
+        <property name="obsrvtnVlRngLwSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_VlRng_Lw_Sys"/>
+        </property>
+        <property name="obsrvtnVlRngLwUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_VlRng_Lw_Unt"/>
+        </property>
+        <property name="obsrvtnVlRngLwVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_VlRng_Lw_Vl"/>
+        </property>
+        <property name="obsrvtnVlRtioDnmntrCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_VlRtio_Dnmntr_Cd"/>
+        </property>
+        <property name="obsrvtnVlRtioDnmntrCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_VlRtio_Dnmntr_Cmprtr"/>
+        </property>
+        <property name="obsrvtnVlRtioDnmntrSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_VlRtio_Dnmntr_Sys"/>
+        </property>
+        <property name="obsrvtnVlRtioDnmntrUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_VlRtio_Dnmntr_Unt"/>
+        </property>
+        <property name="obsrvtnVlRtioDnmntrVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_VlRtio_Dnmntr_Vl"/>
+        </property>
+        <property name="obsrvtnVlRtioNmrtrCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_VlRtio_Nmrtr_Cd"/>
+        </property>
+        <property name="obsrvtnVlRtioNmrtrCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_VlRtio_Nmrtr_Cmprtr"/>
+        </property>
+        <property name="obsrvtnVlRtioNmrtrSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_VlRtio_Nmrtr_Sys"/>
+        </property>
+        <property name="obsrvtnVlRtioNmrtrUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_VlRtio_Nmrtr_Unt"/>
+        </property>
+        <property name="obsrvtnVlRtioNmrtrVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_VlRtio_Nmrtr_Vl"/>
+        </property>
+        <property name="obsrvtnVlSampledDataData" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_VlSampledData_Data"/>
+        </property>
+        <property name="obsrvtnVlSampledDataDimensions" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_VlSampledData_Dimensions"/>
+        </property>
+        <property name="obsrvtnVlSampledDataFactor" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_VlSampledData_Factor"/>
+        </property>
+        <property name="obsrvtnVlSampledDataLwerLmt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_VlSampledData_LwerLmt"/>
+        </property>
+        <property name="obsrvtnVlSampledDataOriginCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_VlSampledData_Origin_Cd"/>
+        </property>
+        <property name="obsrvtnVlSampledDataOriginCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_VlSampledData_Origin_Cmprtr"/>
+        </property>
+        <property name="obsrvtnVlSampledDataOriginSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_VlSampledData_Origin_Sys"/>
+        </property>
+        <property name="obsrvtnVlSampledDataOriginUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_VlSampledData_Origin_Unt"/>
+        </property>
+        <property name="obsrvtnVlSampledDataOriginVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_VlSampledData_Origin_Vl"/>
+        </property>
+        <property name="obsrvtnVlSampledDataPrd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_VlSampledData_Prd"/>
+        </property>
+        <property name="obsrvtnVlSampledDataUpperLmt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_VlSampledData_UpperLmt"/>
+        </property>
+        <property name="obsrvtnVlStrgTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_VlStrgTyp"/>
+        </property>
+        <property name="obsrvtnVlTimeTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_VlTimeTyp"/>
+        </property>
+    </class>
+</hibernate-mapping>
