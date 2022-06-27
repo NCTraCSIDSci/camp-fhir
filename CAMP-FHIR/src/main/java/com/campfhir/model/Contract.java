@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Jun 6, 2022, 11:02:30 AM by Hibernate Tools 5.6.1.Final
+// Generated Jun 27, 2022, 10:40:10 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -162,6 +162,11 @@ public class Contract  implements java.io.Serializable {
      private String cnctTrmActnOccrnceTmgCdCdgVrsn;
      private String cnctTrmActnOccrnceTmgCdTxt;
      private String cnctTrmActnOccrnceTmgEvnt;
+     private String cnctTrmActnOccrnceTmgRptBndsDurationCd;
+     private String cnctTrmActnOccrnceTmgRptBndsDurationCmprtr;
+     private String cnctTrmActnOccrnceTmgRptBndsDurationSys;
+     private String cnctTrmActnOccrnceTmgRptBndsDurationUnt;
+     private String cnctTrmActnOccrnceTmgRptBndsDurationVl;
      private String cnctTrmActnOccrnceTmgRptBndsPrdEnd;
      private String cnctTrmActnOccrnceTmgRptBndsPrdStrt;
      private String cnctTrmActnOccrnceTmgRptBndsRngHiCd;
@@ -1999,6 +2004,56 @@ public class Contract  implements java.io.Serializable {
     
     public void setCnctTrmActnOccrnceTmgEvnt(String cnctTrmActnOccrnceTmgEvnt) {
         this.cnctTrmActnOccrnceTmgEvnt = cnctTrmActnOccrnceTmgEvnt;
+    }
+    
+    
+    
+    public String getCnctTrmActnOccrnceTmgRptBndsDurationCd() {
+        return this.cnctTrmActnOccrnceTmgRptBndsDurationCd;
+    }
+    
+    public void setCnctTrmActnOccrnceTmgRptBndsDurationCd(String cnctTrmActnOccrnceTmgRptBndsDurationCd) {
+        this.cnctTrmActnOccrnceTmgRptBndsDurationCd = cnctTrmActnOccrnceTmgRptBndsDurationCd;
+    }
+    
+    
+    
+    public String getCnctTrmActnOccrnceTmgRptBndsDurationCmprtr() {
+        return this.cnctTrmActnOccrnceTmgRptBndsDurationCmprtr;
+    }
+    
+    public void setCnctTrmActnOccrnceTmgRptBndsDurationCmprtr(String cnctTrmActnOccrnceTmgRptBndsDurationCmprtr) {
+        this.cnctTrmActnOccrnceTmgRptBndsDurationCmprtr = cnctTrmActnOccrnceTmgRptBndsDurationCmprtr;
+    }
+    
+    
+    
+    public String getCnctTrmActnOccrnceTmgRptBndsDurationSys() {
+        return this.cnctTrmActnOccrnceTmgRptBndsDurationSys;
+    }
+    
+    public void setCnctTrmActnOccrnceTmgRptBndsDurationSys(String cnctTrmActnOccrnceTmgRptBndsDurationSys) {
+        this.cnctTrmActnOccrnceTmgRptBndsDurationSys = cnctTrmActnOccrnceTmgRptBndsDurationSys;
+    }
+    
+    
+    
+    public String getCnctTrmActnOccrnceTmgRptBndsDurationUnt() {
+        return this.cnctTrmActnOccrnceTmgRptBndsDurationUnt;
+    }
+    
+    public void setCnctTrmActnOccrnceTmgRptBndsDurationUnt(String cnctTrmActnOccrnceTmgRptBndsDurationUnt) {
+        this.cnctTrmActnOccrnceTmgRptBndsDurationUnt = cnctTrmActnOccrnceTmgRptBndsDurationUnt;
+    }
+    
+    
+    
+    public String getCnctTrmActnOccrnceTmgRptBndsDurationVl() {
+        return this.cnctTrmActnOccrnceTmgRptBndsDurationVl;
+    }
+    
+    public void setCnctTrmActnOccrnceTmgRptBndsDurationVl(String cnctTrmActnOccrnceTmgRptBndsDurationVl) {
+        this.cnctTrmActnOccrnceTmgRptBndsDurationVl = cnctTrmActnOccrnceTmgRptBndsDurationVl;
     }
     
     

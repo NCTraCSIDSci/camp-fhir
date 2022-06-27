@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Jun 6, 2022, 11:02:30 AM by Hibernate Tools 5.6.1.Final
+// Generated Jun 27, 2022, 10:40:10 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -128,6 +128,11 @@ public class MedicationStatement  implements java.io.Serializable {
      private String mdctnStmntDsgTmgCdCdgVrsn;
      private String mdctnStmntDsgTmgCdTxt;
      private String mdctnStmntDsgTmgEvnt;
+     private String mdctnStmntDsgTmgRptBndsDurationCd;
+     private String mdctnStmntDsgTmgRptBndsDurationCmprtr;
+     private String mdctnStmntDsgTmgRptBndsDurationSys;
+     private String mdctnStmntDsgTmgRptBndsDurationUnt;
+     private String mdctnStmntDsgTmgRptBndsDurationVl;
      private String mdctnStmntDsgTmgRptBndsPrdEnd;
      private String mdctnStmntDsgTmgRptBndsPrdStrt;
      private String mdctnStmntDsgTmgRptBndsRngHiCd;
@@ -1378,6 +1383,56 @@ public class MedicationStatement  implements java.io.Serializable {
     
     public void setMdctnStmntDsgTmgEvnt(String mdctnStmntDsgTmgEvnt) {
         this.mdctnStmntDsgTmgEvnt = mdctnStmntDsgTmgEvnt;
+    }
+    
+    
+    
+    public String getMdctnStmntDsgTmgRptBndsDurationCd() {
+        return this.mdctnStmntDsgTmgRptBndsDurationCd;
+    }
+    
+    public void setMdctnStmntDsgTmgRptBndsDurationCd(String mdctnStmntDsgTmgRptBndsDurationCd) {
+        this.mdctnStmntDsgTmgRptBndsDurationCd = mdctnStmntDsgTmgRptBndsDurationCd;
+    }
+    
+    
+    
+    public String getMdctnStmntDsgTmgRptBndsDurationCmprtr() {
+        return this.mdctnStmntDsgTmgRptBndsDurationCmprtr;
+    }
+    
+    public void setMdctnStmntDsgTmgRptBndsDurationCmprtr(String mdctnStmntDsgTmgRptBndsDurationCmprtr) {
+        this.mdctnStmntDsgTmgRptBndsDurationCmprtr = mdctnStmntDsgTmgRptBndsDurationCmprtr;
+    }
+    
+    
+    
+    public String getMdctnStmntDsgTmgRptBndsDurationSys() {
+        return this.mdctnStmntDsgTmgRptBndsDurationSys;
+    }
+    
+    public void setMdctnStmntDsgTmgRptBndsDurationSys(String mdctnStmntDsgTmgRptBndsDurationSys) {
+        this.mdctnStmntDsgTmgRptBndsDurationSys = mdctnStmntDsgTmgRptBndsDurationSys;
+    }
+    
+    
+    
+    public String getMdctnStmntDsgTmgRptBndsDurationUnt() {
+        return this.mdctnStmntDsgTmgRptBndsDurationUnt;
+    }
+    
+    public void setMdctnStmntDsgTmgRptBndsDurationUnt(String mdctnStmntDsgTmgRptBndsDurationUnt) {
+        this.mdctnStmntDsgTmgRptBndsDurationUnt = mdctnStmntDsgTmgRptBndsDurationUnt;
+    }
+    
+    
+    
+    public String getMdctnStmntDsgTmgRptBndsDurationVl() {
+        return this.mdctnStmntDsgTmgRptBndsDurationVl;
+    }
+    
+    public void setMdctnStmntDsgTmgRptBndsDurationVl(String mdctnStmntDsgTmgRptBndsDurationVl) {
+        this.mdctnStmntDsgTmgRptBndsDurationVl = mdctnStmntDsgTmgRptBndsDurationVl;
     }
     
     

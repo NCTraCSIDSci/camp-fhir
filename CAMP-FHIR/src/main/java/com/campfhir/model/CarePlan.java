@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Jun 6, 2022, 11:02:30 AM by Hibernate Tools 5.6.1.Final
+// Generated Jun 27, 2022, 10:40:10 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -59,6 +59,11 @@ public class CarePlan  implements java.io.Serializable {
      private String carePlnActvtyDtlSchdldTmgCdCdgVrsn;
      private String carePlnActvtyDtlSchdldTmgCdTxt;
      private String carePlnActvtyDtlSchdldTmgEvnt;
+     private String carePlnActvtyDtlSchdldTmgRptBndsDurationCd;
+     private String carePlnActvtyDtlSchdldTmgRptBndsDurationCmprtr;
+     private String carePlnActvtyDtlSchdldTmgRptBndsDurationSys;
+     private String carePlnActvtyDtlSchdldTmgRptBndsDurationUnt;
+     private String carePlnActvtyDtlSchdldTmgRptBndsDurationVl;
      private String carePlnActvtyDtlSchdldTmgRptBndsPrdEnd;
      private String carePlnActvtyDtlSchdldTmgRptBndsPrdStrt;
      private String carePlnActvtyDtlSchdldTmgRptBndsRngHiCd;
@@ -637,6 +642,56 @@ public class CarePlan  implements java.io.Serializable {
     
     public void setCarePlnActvtyDtlSchdldTmgEvnt(String carePlnActvtyDtlSchdldTmgEvnt) {
         this.carePlnActvtyDtlSchdldTmgEvnt = carePlnActvtyDtlSchdldTmgEvnt;
+    }
+    
+    
+    
+    public String getCarePlnActvtyDtlSchdldTmgRptBndsDurationCd() {
+        return this.carePlnActvtyDtlSchdldTmgRptBndsDurationCd;
+    }
+    
+    public void setCarePlnActvtyDtlSchdldTmgRptBndsDurationCd(String carePlnActvtyDtlSchdldTmgRptBndsDurationCd) {
+        this.carePlnActvtyDtlSchdldTmgRptBndsDurationCd = carePlnActvtyDtlSchdldTmgRptBndsDurationCd;
+    }
+    
+    
+    
+    public String getCarePlnActvtyDtlSchdldTmgRptBndsDurationCmprtr() {
+        return this.carePlnActvtyDtlSchdldTmgRptBndsDurationCmprtr;
+    }
+    
+    public void setCarePlnActvtyDtlSchdldTmgRptBndsDurationCmprtr(String carePlnActvtyDtlSchdldTmgRptBndsDurationCmprtr) {
+        this.carePlnActvtyDtlSchdldTmgRptBndsDurationCmprtr = carePlnActvtyDtlSchdldTmgRptBndsDurationCmprtr;
+    }
+    
+    
+    
+    public String getCarePlnActvtyDtlSchdldTmgRptBndsDurationSys() {
+        return this.carePlnActvtyDtlSchdldTmgRptBndsDurationSys;
+    }
+    
+    public void setCarePlnActvtyDtlSchdldTmgRptBndsDurationSys(String carePlnActvtyDtlSchdldTmgRptBndsDurationSys) {
+        this.carePlnActvtyDtlSchdldTmgRptBndsDurationSys = carePlnActvtyDtlSchdldTmgRptBndsDurationSys;
+    }
+    
+    
+    
+    public String getCarePlnActvtyDtlSchdldTmgRptBndsDurationUnt() {
+        return this.carePlnActvtyDtlSchdldTmgRptBndsDurationUnt;
+    }
+    
+    public void setCarePlnActvtyDtlSchdldTmgRptBndsDurationUnt(String carePlnActvtyDtlSchdldTmgRptBndsDurationUnt) {
+        this.carePlnActvtyDtlSchdldTmgRptBndsDurationUnt = carePlnActvtyDtlSchdldTmgRptBndsDurationUnt;
+    }
+    
+    
+    
+    public String getCarePlnActvtyDtlSchdldTmgRptBndsDurationVl() {
+        return this.carePlnActvtyDtlSchdldTmgRptBndsDurationVl;
+    }
+    
+    public void setCarePlnActvtyDtlSchdldTmgRptBndsDurationVl(String carePlnActvtyDtlSchdldTmgRptBndsDurationVl) {
+        this.carePlnActvtyDtlSchdldTmgRptBndsDurationVl = carePlnActvtyDtlSchdldTmgRptBndsDurationVl;
     }
     
     

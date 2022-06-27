@@ -62,7 +62,7 @@ class CreateBiDirectionalCode
 
          	//get all add methods with one parameters, with a return type of the fhir model class that we are in
          	//if(className.equals("patient")) {
-         	if(!className.equals("examplescenario") & !className.equals("structuremap") & !className.equals("graphdefinition") & !className.equals("implementationguide")) {
+         	if(!className.equals("examplescenario") & !className.equals("structuremap") & !className.equals("graphdefinition") & !className.equals("implementationguide") & !className.equals("metadataresource")) {
          		//writing head of conversion file
          		 conversionWriter.write("package main.java.com.campfhir.service.bidirectionalconversion;");
                  conversionWriter.write(System.lineSeparator());
@@ -189,12 +189,23 @@ class CreateBiDirectionalCode
 	 				if (!enumType )  {	 	 				
 	 				if(!parameterIsNotAModelThatNeedsToBeRecursed) {
 			 			if(!parameterClass.getName().equals("org.hl7.fhir.r4.model.Reference") & !parameterClass.getName().startsWith("org.hl7.fhir.utilities")) { 
-			 				recurseThroughClasses(parameterClass, hibernateFieldName , currentMethod, conversionWriter, reflections); }
+			 				if((parameterClass.getName().contains(".Age") |parameterClass.getName().contains(".Count")|parameterClass.getName().contains(".Duration"))) {
+		 						org.hl7.fhir.r4.model.Quantity quant = new org.hl7.fhir.r4.model.Quantity();
+			 					recurseThroughClasses(quant.getClass(), hibernateFieldName, currentMethod,  conversionWriter, reflections); 
+			 				} else {
+			 					recurseThroughClasses(parameterClass, hibernateFieldName , currentMethod, conversionWriter, reflections); }
+			 				}
 		 				}
 		 				//otherwise send the return type into the 
 		 				else {// if(returncls != null && returncls.getPackageName().equals("org.hl7.fhir.r4.model") && !returncls.getName().equals("org.hl7.fhir.r4.model.Type")) {
-			 				if(!returncls.getName().equals("org.hl7.fhir.r4.model.Reference")  & !returncls.getName().startsWith("org.hl7.fhir.utilities")) { 
-			 					recurseThroughClasses(returncls, hibernateFieldName, currentMethod,  conversionWriter, reflections);
+//			 				if(!returncls.getName().equals("org.hl7.fhir.r4.model.Reference")  & !returncls.getName().startsWith("org.hl7.fhir.utilities")) { 
+//			 					recurseThroughClasses(returncls, hibernateFieldName, currentMethod,  conversionWriter, reflections);
+//			 				}
+		 					if((returncls.getName().contains(".Age") |returncls.getName().contains(".Count")|returncls.getName().contains(".Duration"))) {
+		 						org.hl7.fhir.r4.model.Quantity quant = new org.hl7.fhir.r4.model.Quantity();
+			 					recurseThroughClasses(quant.getClass(), hibernateFieldName, currentMethod,  conversionWriter, reflections); 
+			 				} else {
+			 					recurseThroughClasses(returncls, hibernateFieldName, currentMethod,  conversionWriter,  reflections); 
 			 				}
 			 			}
 	 				}

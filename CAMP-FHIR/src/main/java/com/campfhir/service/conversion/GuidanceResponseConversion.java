@@ -74,6 +74,26 @@ public class GuidanceResponseConversion
 		org.hl7.fhir.r4.model.Duration guidanceresponsedatarequirementdatefiltervalueduration =  new org.hl7.fhir.r4.model.Duration();
 		guidanceresponsedatarequirementdatefilter.setValue(guidanceresponsedatarequirementdatefiltervalueduration);
 
+		/******************** GuidnceRsps_DataRqrment_DtFltr_VlDuration_Cd ********************************************************************************/
+		if(g.getGuidnceRspsDataRqrmentDtFltrVlDurationCd() != null) {
+			guidanceresponsedatarequirementdatefiltervalueduration.setCode(g.getGuidnceRspsDataRqrmentDtFltrVlDurationCd());
+		}
+		/******************** guidanceresponsedatarequirementdatefiltervaluedurationcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory guidanceresponsedatarequirementdatefiltervaluedurationcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		guidanceresponsedatarequirementdatefiltervalueduration.setComparator(guidanceresponsedatarequirementdatefiltervaluedurationcomparator.fromCode(g.getGuidnceRspsDataRqrmentDtFltrVlDurationCmprtr()));
+
+		/******************** GuidnceRsps_DataRqrment_DtFltr_VlDuration_Sys ********************************************************************************/
+		if(g.getGuidnceRspsDataRqrmentDtFltrVlDurationSys() != null) {
+			guidanceresponsedatarequirementdatefiltervalueduration.setSystem(g.getGuidnceRspsDataRqrmentDtFltrVlDurationSys());
+		}
+		/******************** GuidnceRsps_DataRqrment_DtFltr_VlDuration_Unt ********************************************************************************/
+		if(g.getGuidnceRspsDataRqrmentDtFltrVlDurationUnt() != null) {
+			guidanceresponsedatarequirementdatefiltervalueduration.setUnit(g.getGuidnceRspsDataRqrmentDtFltrVlDurationUnt());
+		}
+		/******************** GuidnceRsps_DataRqrment_DtFltr_VlDuration_Vl ********************************************************************************/
+		if(g.getGuidnceRspsDataRqrmentDtFltrVlDurationVl() != null) {
+			guidanceresponsedatarequirementdatefiltervalueduration.setValue(Double.parseDouble((g.getGuidnceRspsDataRqrmentDtFltrVlDurationVl())));
+		}
 		/******************** guidanceresponsedatarequirementdatefiltervalueperiod ********************************************************************************/
 		org.hl7.fhir.r4.model.Period guidanceresponsedatarequirementdatefiltervalueperiod =  new org.hl7.fhir.r4.model.Period();
 		guidanceresponsedatarequirementdatefilter.setValue(guidanceresponsedatarequirementdatefiltervalueperiod);

@@ -440,7 +440,7 @@ public class ObservationDefinitionConversion
 
 		/******************** ObsrvtnDfn_QuantitativeDtls_ConversionFactor ********************************************************************************/
 		if(o.getObsrvtnDfnQuantitativeDtlsConversionFactor() != null) {
-			observationdefinitionquantitativedetails.setConversionFactor(Double.parseDouble((o.getObsrvtnDfnQuantitativeDtlsConversionFactor())));
+			observationdefinitionquantitativedetails.setConversionFactor(new java.math.BigDecimal((o.getObsrvtnDfnQuantitativeDtlsConversionFactor())));
 		}
 		/******************** observationdefinitionquantitativedetailscustomaryunit ********************************************************************************/
 		org.hl7.fhir.r4.model.CodeableConcept observationdefinitionquantitativedetailscustomaryunit =  new org.hl7.fhir.r4.model.CodeableConcept();

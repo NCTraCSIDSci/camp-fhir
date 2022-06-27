@@ -510,6 +510,26 @@ public class GoalConversion
 		org.hl7.fhir.r4.model.Duration goaltardueduration =  new org.hl7.fhir.r4.model.Duration();
 		goaltar.setDue(goaltardueduration);
 
+		/******************** Goal_Tar_DueDuration_Cd ********************************************************************************/
+		if(g.getGoalTarDueDurationCd() != null) {
+			goaltardueduration.setCode(g.getGoalTarDueDurationCd());
+		}
+		/******************** goaltarduedurationcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory goaltarduedurationcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		goaltardueduration.setComparator(goaltarduedurationcomparator.fromCode(g.getGoalTarDueDurationCmprtr()));
+
+		/******************** Goal_Tar_DueDuration_Sys ********************************************************************************/
+		if(g.getGoalTarDueDurationSys() != null) {
+			goaltardueduration.setSystem(g.getGoalTarDueDurationSys());
+		}
+		/******************** Goal_Tar_DueDuration_Unt ********************************************************************************/
+		if(g.getGoalTarDueDurationUnt() != null) {
+			goaltardueduration.setUnit(g.getGoalTarDueDurationUnt());
+		}
+		/******************** Goal_Tar_DueDuration_Vl ********************************************************************************/
+		if(g.getGoalTarDueDurationVl() != null) {
+			goaltardueduration.setValue(Double.parseDouble((g.getGoalTarDueDurationVl())));
+		}
 		/******************** goaltarmeasure ********************************************************************************/
 		org.hl7.fhir.r4.model.CodeableConcept goaltarmeasure =  new org.hl7.fhir.r4.model.CodeableConcept();
 		goaltar.setMeasure(goaltarmeasure);

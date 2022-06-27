@@ -588,7 +588,7 @@ public class ObservationConversion
 		}
 		/******************** Obsrvtn_Cmpnt_VlSampledData_LwerLmt ********************************************************************************/
 		if(o.getObsrvtnCmpntVlSampledDataLwerLmt() != null) {
-			observationcomponentvaluesampleddata.setLowerLimit(Double.parseDouble((o.getObsrvtnCmpntVlSampledDataLwerLmt())));
+			observationcomponentvaluesampleddata.setLowerLimit(new java.math.BigDecimal((o.getObsrvtnCmpntVlSampledDataLwerLmt())));
 		}
 		/******************** observationcomponentvaluesampleddataorigin ********************************************************************************/
 		org.hl7.fhir.r4.model.Quantity observationcomponentvaluesampleddataorigin =  new org.hl7.fhir.r4.model.Quantity();
@@ -616,11 +616,11 @@ public class ObservationConversion
 		}
 		/******************** Obsrvtn_Cmpnt_VlSampledData_Prd ********************************************************************************/
 		if(o.getObsrvtnCmpntVlSampledDataPrd() != null) {
-			observationcomponentvaluesampleddata.setPeriod(Double.parseDouble((o.getObsrvtnCmpntVlSampledDataPrd())));
+			observationcomponentvaluesampleddata.setPeriod(new java.math.BigDecimal((o.getObsrvtnCmpntVlSampledDataPrd())));
 		}
 		/******************** Obsrvtn_Cmpnt_VlSampledData_UpperLmt ********************************************************************************/
 		if(o.getObsrvtnCmpntVlSampledDataUpperLmt() != null) {
-			observationcomponentvaluesampleddata.setUpperLimit(Double.parseDouble((o.getObsrvtnCmpntVlSampledDataUpperLmt())));
+			observationcomponentvaluesampleddata.setUpperLimit(new java.math.BigDecimal((o.getObsrvtnCmpntVlSampledDataUpperLmt())));
 		}
 		/******************** Obsrvtn_Cmpnt_VlStrgTyp ********************************************************************************/
 		if(o.getObsrvtnCmpntVlStrgTyp() != null) {
@@ -744,6 +744,26 @@ public class ObservationConversion
 		org.hl7.fhir.r4.model.Duration observationeffectivetimingrepeatboundsduration =  new org.hl7.fhir.r4.model.Duration();
 		observationeffectivetimingrepeat.setBounds(observationeffectivetimingrepeatboundsduration);
 
+		/******************** Obsrvtn_EfctiveTmg_Rpt_BndsDuration_Cd ********************************************************************************/
+		if(o.getObsrvtnEfctiveTmgRptBndsDurationCd() != null) {
+			observationeffectivetimingrepeatboundsduration.setCode(o.getObsrvtnEfctiveTmgRptBndsDurationCd());
+		}
+		/******************** observationeffectivetimingrepeatboundsdurationcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory observationeffectivetimingrepeatboundsdurationcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		observationeffectivetimingrepeatboundsduration.setComparator(observationeffectivetimingrepeatboundsdurationcomparator.fromCode(o.getObsrvtnEfctiveTmgRptBndsDurationCmprtr()));
+
+		/******************** Obsrvtn_EfctiveTmg_Rpt_BndsDuration_Sys ********************************************************************************/
+		if(o.getObsrvtnEfctiveTmgRptBndsDurationSys() != null) {
+			observationeffectivetimingrepeatboundsduration.setSystem(o.getObsrvtnEfctiveTmgRptBndsDurationSys());
+		}
+		/******************** Obsrvtn_EfctiveTmg_Rpt_BndsDuration_Unt ********************************************************************************/
+		if(o.getObsrvtnEfctiveTmgRptBndsDurationUnt() != null) {
+			observationeffectivetimingrepeatboundsduration.setUnit(o.getObsrvtnEfctiveTmgRptBndsDurationUnt());
+		}
+		/******************** Obsrvtn_EfctiveTmg_Rpt_BndsDuration_Vl ********************************************************************************/
+		if(o.getObsrvtnEfctiveTmgRptBndsDurationVl() != null) {
+			observationeffectivetimingrepeatboundsduration.setValue(Double.parseDouble((o.getObsrvtnEfctiveTmgRptBndsDurationVl())));
+		}
 		/******************** observationeffectivetimingrepeatboundsperiod ********************************************************************************/
 		org.hl7.fhir.r4.model.Period observationeffectivetimingrepeatboundsperiod =  new org.hl7.fhir.r4.model.Period();
 		observationeffectivetimingrepeat.setBounds(observationeffectivetimingrepeatboundsperiod);
@@ -854,7 +874,7 @@ public class ObservationConversion
 		}
 		/******************** Obsrvtn_EfctiveTmg_Rpt_PrdMx ********************************************************************************/
 		if(o.getObsrvtnEfctiveTmgRptPrdMx() != null) {
-			observationeffectivetimingrepeat.setPeriodMax(Double.parseDouble((o.getObsrvtnEfctiveTmgRptPrdMx())));
+			observationeffectivetimingrepeat.setPeriodMax(new java.math.BigDecimal((o.getObsrvtnEfctiveTmgRptPrdMx())));
 		}
 		/******************** observationeffectivetimingrepeatperiodunit ********************************************************************************/
 		org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory observationeffectivetimingrepeatperiodunit =  new org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory();
@@ -1438,7 +1458,7 @@ public class ObservationConversion
 		}
 		/******************** Obsrvtn_VlSampledData_LwerLmt ********************************************************************************/
 		if(o.getObsrvtnVlSampledDataLwerLmt() != null) {
-			observationvaluesampleddata.setLowerLimit(Double.parseDouble((o.getObsrvtnVlSampledDataLwerLmt())));
+			observationvaluesampleddata.setLowerLimit(new java.math.BigDecimal((o.getObsrvtnVlSampledDataLwerLmt())));
 		}
 		/******************** observationvaluesampleddataorigin ********************************************************************************/
 		org.hl7.fhir.r4.model.Quantity observationvaluesampleddataorigin =  new org.hl7.fhir.r4.model.Quantity();
@@ -1466,11 +1486,11 @@ public class ObservationConversion
 		}
 		/******************** Obsrvtn_VlSampledData_Prd ********************************************************************************/
 		if(o.getObsrvtnVlSampledDataPrd() != null) {
-			observationvaluesampleddata.setPeriod(Double.parseDouble((o.getObsrvtnVlSampledDataPrd())));
+			observationvaluesampleddata.setPeriod(new java.math.BigDecimal((o.getObsrvtnVlSampledDataPrd())));
 		}
 		/******************** Obsrvtn_VlSampledData_UpperLmt ********************************************************************************/
 		if(o.getObsrvtnVlSampledDataUpperLmt() != null) {
-			observationvaluesampleddata.setUpperLimit(Double.parseDouble((o.getObsrvtnVlSampledDataUpperLmt())));
+			observationvaluesampleddata.setUpperLimit(new java.math.BigDecimal((o.getObsrvtnVlSampledDataUpperLmt())));
 		}
 		/******************** Obsrvtn_VlStrgTyp ********************************************************************************/
 		if(o.getObsrvtnVlStrgTyp() != null) {

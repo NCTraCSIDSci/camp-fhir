@@ -482,6 +482,26 @@ public class EncounterConversion
 		org.hl7.fhir.r4.model.Duration encounterlength =  new org.hl7.fhir.r4.model.Duration();
 		encounter.setLength(encounterlength);
 
+		/******************** Enc_Length_Cd ********************************************************************************/
+		if(e.getEncLengthCd() != null) {
+			encounterlength.setCode(e.getEncLengthCd());
+		}
+		/******************** encounterlengthcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory encounterlengthcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		encounterlength.setComparator(encounterlengthcomparator.fromCode(e.getEncLengthCmprtr()));
+
+		/******************** Enc_Length_Sys ********************************************************************************/
+		if(e.getEncLengthSys() != null) {
+			encounterlength.setSystem(e.getEncLengthSys());
+		}
+		/******************** Enc_Length_Unt ********************************************************************************/
+		if(e.getEncLengthUnt() != null) {
+			encounterlength.setUnit(e.getEncLengthUnt());
+		}
+		/******************** Enc_Length_Vl ********************************************************************************/
+		if(e.getEncLengthVl() != null) {
+			encounterlength.setValue(Double.parseDouble((e.getEncLengthVl())));
+		}
 		/******************** encounterlocation ********************************************************************************/
 		org.hl7.fhir.r4.model.Encounter.EncounterLocationComponent encounterlocation =  new org.hl7.fhir.r4.model.Encounter.EncounterLocationComponent();
 		encounter.addLocation(encounterlocation);

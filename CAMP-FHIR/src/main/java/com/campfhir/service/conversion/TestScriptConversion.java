@@ -384,7 +384,7 @@ public class TestScriptConversion
 		org.hl7.fhir.r4.model.TestScript.TestScriptRequestMethodCodeEnumFactory testscriptsetupactionassertrequestmethod =  new org.hl7.fhir.r4.model.TestScript.TestScriptRequestMethodCodeEnumFactory();
 		testscriptsetupactionassert.setRequestMethod(testscriptsetupactionassertrequestmethod.fromCode(t.getTstScrptStupActnAssertRqstMthd()));
 
-		/******************** TstScrpt_Stup_Actn_Assert_RqstURL ********************************************************************************/
+		/******************** TstScrpt_Stup_Actn_Assert_RqstUrl ********************************************************************************/
 		if(t.getTstScrptStupActnAssertRqstUrl() != null) {
 			testscriptsetupactionassert.setRequestURL(t.getTstScrptStupActnAssertRqstUrl());
 		}
@@ -696,7 +696,7 @@ public class TestScriptConversion
 		org.hl7.fhir.r4.model.TestScript.TestScriptRequestMethodCodeEnumFactory testscripttestactionassertrequestmethod =  new org.hl7.fhir.r4.model.TestScript.TestScriptRequestMethodCodeEnumFactory();
 		testscripttestactionassert.setRequestMethod(testscripttestactionassertrequestmethod.fromCode(t.getTstScrptTstActnAssertRqstMthd()));
 
-		/******************** TstScrpt_Tst_Actn_Assert_RqstURL ********************************************************************************/
+		/******************** TstScrpt_Tst_Actn_Assert_RqstUrl ********************************************************************************/
 		if(t.getTstScrptTstActnAssertRqstUrl() != null) {
 			testscripttestactionassert.setRequestURL(t.getTstScrptTstActnAssertRqstUrl());
 		}

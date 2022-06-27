@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Jun 6, 2022, 11:02:25 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 27, 2022, 10:39:49 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="PlanDefinition" optimistic-lock="none" table="PlanDefinition">
         <id name="id" type="string">
@@ -202,6 +202,26 @@
             <meta attribute="resource-type"/>
             <column length="65535" name="PlnDfn_Actn_Input_DtFltr_VlDtTimeTyp"/>
         </property>
+        <property name="plnDfnActnInputDtFltrVlDurationCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Input_DtFltr_VlDuration_Cd"/>
+        </property>
+        <property name="plnDfnActnInputDtFltrVlDurationCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Input_DtFltr_VlDuration_Cmprtr"/>
+        </property>
+        <property name="plnDfnActnInputDtFltrVlDurationSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Input_DtFltr_VlDuration_Sys"/>
+        </property>
+        <property name="plnDfnActnInputDtFltrVlDurationUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Input_DtFltr_VlDuration_Unt"/>
+        </property>
+        <property name="plnDfnActnInputDtFltrVlDurationVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Input_DtFltr_VlDuration_Vl"/>
+        </property>
         <property name="plnDfnActnInputDtFltrVlPrdEnd" type="string">
             <meta attribute="resource-type"/>
             <column length="65535" name="PlnDfn_Actn_Input_DtFltr_VlPrd_End"/>
@@ -305,6 +325,26 @@
         <property name="plnDfnActnOutputDtFltrVlDtTimeTyp" type="string">
             <meta attribute="resource-type"/>
             <column length="65535" name="PlnDfn_Actn_Output_DtFltr_VlDtTimeTyp"/>
+        </property>
+        <property name="plnDfnActnOutputDtFltrVlDurationCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Output_DtFltr_VlDuration_Cd"/>
+        </property>
+        <property name="plnDfnActnOutputDtFltrVlDurationCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Output_DtFltr_VlDuration_Cmprtr"/>
+        </property>
+        <property name="plnDfnActnOutputDtFltrVlDurationSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Output_DtFltr_VlDuration_Sys"/>
+        </property>
+        <property name="plnDfnActnOutputDtFltrVlDurationUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Output_DtFltr_VlDuration_Unt"/>
+        </property>
+        <property name="plnDfnActnOutputDtFltrVlDurationVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Output_DtFltr_VlDuration_Vl"/>
         </property>
         <property name="plnDfnActnOutputDtFltrVlPrdEnd" type="string">
             <meta attribute="resource-type"/>
@@ -434,6 +474,26 @@
             <meta attribute="resource-type"/>
             <column length="65535" name="PlnDfn_Actn_RltedActn_ActnId"/>
         </property>
+        <property name="plnDfnActnRltedActnOffDurationCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_RltedActn_OffDuration_Cd"/>
+        </property>
+        <property name="plnDfnActnRltedActnOffDurationCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_RltedActn_OffDuration_Cmprtr"/>
+        </property>
+        <property name="plnDfnActnRltedActnOffDurationSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_RltedActn_OffDuration_Sys"/>
+        </property>
+        <property name="plnDfnActnRltedActnOffDurationUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_RltedActn_OffDuration_Unt"/>
+        </property>
+        <property name="plnDfnActnRltedActnOffDurationVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_RltedActn_OffDuration_Vl"/>
+        </property>
         <property name="plnDfnActnRltedActnOffRngHiCd" type="string">
             <meta attribute="resource-type"/>
             <column length="65535" name="PlnDfn_Actn_RltedActn_OffRng_Hi_Cd"/>
@@ -518,9 +578,49 @@
             <meta attribute="resource-type"/>
             <column length="65535" name="PlnDfn_Actn_TxtEquivalent"/>
         </property>
+        <property name="plnDfnActnTmgAgeCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgAge_Cd"/>
+        </property>
+        <property name="plnDfnActnTmgAgeCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgAge_Cmprtr"/>
+        </property>
+        <property name="plnDfnActnTmgAgeSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgAge_Sys"/>
+        </property>
+        <property name="plnDfnActnTmgAgeUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgAge_Unt"/>
+        </property>
+        <property name="plnDfnActnTmgAgeVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgAge_Vl"/>
+        </property>
         <property name="plnDfnActnTmgDtTimeTyp" type="string">
             <meta attribute="resource-type"/>
             <column length="65535" name="PlnDfn_Actn_TmgDtTimeTyp"/>
+        </property>
+        <property name="plnDfnActnTmgDurationCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgDuration_Cd"/>
+        </property>
+        <property name="plnDfnActnTmgDurationCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgDuration_Cmprtr"/>
+        </property>
+        <property name="plnDfnActnTmgDurationSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgDuration_Sys"/>
+        </property>
+        <property name="plnDfnActnTmgDurationUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgDuration_Unt"/>
+        </property>
+        <property name="plnDfnActnTmgDurationVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgDuration_Vl"/>
         </property>
         <property name="plnDfnActnTmgPrdEnd" type="string">
             <meta attribute="resource-type"/>
@@ -597,6 +697,26 @@
         <property name="plnDfnActnTmgTmgEvnt" type="string">
             <meta attribute="resource-type"/>
             <column length="65535" name="PlnDfn_Actn_TmgTmg_Evnt"/>
+        </property>
+        <property name="plnDfnActnTmgTmgRptBndsDurationCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgTmg_Rpt_BndsDuration_Cd"/>
+        </property>
+        <property name="plnDfnActnTmgTmgRptBndsDurationCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgTmg_Rpt_BndsDuration_Cmprtr"/>
+        </property>
+        <property name="plnDfnActnTmgTmgRptBndsDurationSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgTmg_Rpt_BndsDuration_Sys"/>
+        </property>
+        <property name="plnDfnActnTmgTmgRptBndsDurationUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgTmg_Rpt_BndsDuration_Unt"/>
+        </property>
+        <property name="plnDfnActnTmgTmgRptBndsDurationVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_TmgTmg_Rpt_BndsDuration_Vl"/>
         </property>
         <property name="plnDfnActnTmgTmgRptBndsPrdEnd" type="string">
             <meta attribute="resource-type"/>
@@ -774,6 +894,26 @@
             <meta attribute="resource-type"/>
             <column length="65535" name="PlnDfn_Actn_Trgr_Data_DtFltr_VlDtTimeTyp"/>
         </property>
+        <property name="plnDfnActnTrgrDataDtFltrVlDurationCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_Data_DtFltr_VlDuration_Cd"/>
+        </property>
+        <property name="plnDfnActnTrgrDataDtFltrVlDurationCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_Data_DtFltr_VlDuration_Cmprtr"/>
+        </property>
+        <property name="plnDfnActnTrgrDataDtFltrVlDurationSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_Data_DtFltr_VlDuration_Sys"/>
+        </property>
+        <property name="plnDfnActnTrgrDataDtFltrVlDurationUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_Data_DtFltr_VlDuration_Unt"/>
+        </property>
+        <property name="plnDfnActnTrgrDataDtFltrVlDurationVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_Data_DtFltr_VlDuration_Vl"/>
+        </property>
         <property name="plnDfnActnTrgrDataDtFltrVlPrdEnd" type="string">
             <meta attribute="resource-type"/>
             <column length="65535" name="PlnDfn_Actn_Trgr_Data_DtFltr_VlPrd_End"/>
@@ -877,6 +1017,26 @@
         <property name="plnDfnActnTrgrTmgTmgEvnt" type="string">
             <meta attribute="resource-type"/>
             <column length="65535" name="PlnDfn_Actn_Trgr_TmgTmg_Evnt"/>
+        </property>
+        <property name="plnDfnActnTrgrTmgTmgRptBndsDurationCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_TmgTmg_Rpt_BndsDuration_Cd"/>
+        </property>
+        <property name="plnDfnActnTrgrTmgTmgRptBndsDurationCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_TmgTmg_Rpt_BndsDuration_Cmprtr"/>
+        </property>
+        <property name="plnDfnActnTrgrTmgTmgRptBndsDurationSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_TmgTmg_Rpt_BndsDuration_Sys"/>
+        </property>
+        <property name="plnDfnActnTrgrTmgTmgRptBndsDurationUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_TmgTmg_Rpt_BndsDuration_Unt"/>
+        </property>
+        <property name="plnDfnActnTrgrTmgTmgRptBndsDurationVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Actn_Trgr_TmgTmg_Rpt_BndsDuration_Vl"/>
         </property>
         <property name="plnDfnActnTrgrTmgTmgRptBndsPrdEnd" type="string">
             <meta attribute="resource-type"/>
@@ -1409,6 +1569,26 @@
         <property name="plnDfnGoalTarDtlRngLwVl" type="string">
             <meta attribute="resource-type"/>
             <column length="65535" name="PlnDfn_Goal_Tar_DtlRng_Lw_Vl"/>
+        </property>
+        <property name="plnDfnGoalTarDueCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Tar_Due_Cd"/>
+        </property>
+        <property name="plnDfnGoalTarDueCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Tar_Due_Cmprtr"/>
+        </property>
+        <property name="plnDfnGoalTarDueSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Tar_Due_Sys"/>
+        </property>
+        <property name="plnDfnGoalTarDueUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Tar_Due_Unt"/>
+        </property>
+        <property name="plnDfnGoalTarDueVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="PlnDfn_Goal_Tar_Due_Vl"/>
         </property>
         <property name="plnDfnGoalTarMsrCdgCd" type="string">
             <meta attribute="resource-type"/>

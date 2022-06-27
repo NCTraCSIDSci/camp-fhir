@@ -652,6 +652,26 @@ public class MedicationDispenseConversion
 		org.hl7.fhir.r4.model.Duration medicationdispensedosageinstructiontimingrepeatboundsduration =  new org.hl7.fhir.r4.model.Duration();
 		medicationdispensedosageinstructiontimingrepeat.setBounds(medicationdispensedosageinstructiontimingrepeatboundsduration);
 
+		/******************** MdctnDispns_DsgInstrctn_Tmg_Rpt_BndsDuration_Cd ********************************************************************************/
+		if(m.getMdctnDispnsDsgInstrctnTmgRptBndsDurationCd() != null) {
+			medicationdispensedosageinstructiontimingrepeatboundsduration.setCode(m.getMdctnDispnsDsgInstrctnTmgRptBndsDurationCd());
+		}
+		/******************** medicationdispensedosageinstructiontimingrepeatboundsdurationcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicationdispensedosageinstructiontimingrepeatboundsdurationcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		medicationdispensedosageinstructiontimingrepeatboundsduration.setComparator(medicationdispensedosageinstructiontimingrepeatboundsdurationcomparator.fromCode(m.getMdctnDispnsDsgInstrctnTmgRptBndsDurationCmprtr()));
+
+		/******************** MdctnDispns_DsgInstrctn_Tmg_Rpt_BndsDuration_Sys ********************************************************************************/
+		if(m.getMdctnDispnsDsgInstrctnTmgRptBndsDurationSys() != null) {
+			medicationdispensedosageinstructiontimingrepeatboundsduration.setSystem(m.getMdctnDispnsDsgInstrctnTmgRptBndsDurationSys());
+		}
+		/******************** MdctnDispns_DsgInstrctn_Tmg_Rpt_BndsDuration_Unt ********************************************************************************/
+		if(m.getMdctnDispnsDsgInstrctnTmgRptBndsDurationUnt() != null) {
+			medicationdispensedosageinstructiontimingrepeatboundsduration.setUnit(m.getMdctnDispnsDsgInstrctnTmgRptBndsDurationUnt());
+		}
+		/******************** MdctnDispns_DsgInstrctn_Tmg_Rpt_BndsDuration_Vl ********************************************************************************/
+		if(m.getMdctnDispnsDsgInstrctnTmgRptBndsDurationVl() != null) {
+			medicationdispensedosageinstructiontimingrepeatboundsduration.setValue(Double.parseDouble((m.getMdctnDispnsDsgInstrctnTmgRptBndsDurationVl())));
+		}
 		/******************** medicationdispensedosageinstructiontimingrepeatboundsperiod ********************************************************************************/
 		org.hl7.fhir.r4.model.Period medicationdispensedosageinstructiontimingrepeatboundsperiod =  new org.hl7.fhir.r4.model.Period();
 		medicationdispensedosageinstructiontimingrepeat.setBounds(medicationdispensedosageinstructiontimingrepeatboundsperiod);
@@ -762,7 +782,7 @@ public class MedicationDispenseConversion
 		}
 		/******************** MdctnDispns_DsgInstrctn_Tmg_Rpt_PrdMx ********************************************************************************/
 		if(m.getMdctnDispnsDsgInstrctnTmgRptPrdMx() != null) {
-			medicationdispensedosageinstructiontimingrepeat.setPeriodMax(Double.parseDouble((m.getMdctnDispnsDsgInstrctnTmgRptPrdMx())));
+			medicationdispensedosageinstructiontimingrepeat.setPeriodMax(new java.math.BigDecimal((m.getMdctnDispnsDsgInstrctnTmgRptPrdMx())));
 		}
 		/******************** medicationdispensedosageinstructiontimingrepeatperiodunit ********************************************************************************/
 		org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory medicationdispensedosageinstructiontimingrepeatperiodunit =  new org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory();

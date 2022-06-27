@@ -268,6 +268,26 @@ public class DeviceUseStatementConversion
 		org.hl7.fhir.r4.model.Duration deviceusestatementtimingtimingrepeatboundsduration =  new org.hl7.fhir.r4.model.Duration();
 		deviceusestatementtimingtimingrepeat.setBounds(deviceusestatementtimingtimingrepeatboundsduration);
 
+		/******************** DvcUseStmnt_TmgTmg_Rpt_BndsDuration_Cd ********************************************************************************/
+		if(d.getDvcUseStmntTmgTmgRptBndsDurationCd() != null) {
+			deviceusestatementtimingtimingrepeatboundsduration.setCode(d.getDvcUseStmntTmgTmgRptBndsDurationCd());
+		}
+		/******************** deviceusestatementtimingtimingrepeatboundsdurationcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory deviceusestatementtimingtimingrepeatboundsdurationcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		deviceusestatementtimingtimingrepeatboundsduration.setComparator(deviceusestatementtimingtimingrepeatboundsdurationcomparator.fromCode(d.getDvcUseStmntTmgTmgRptBndsDurationCmprtr()));
+
+		/******************** DvcUseStmnt_TmgTmg_Rpt_BndsDuration_Sys ********************************************************************************/
+		if(d.getDvcUseStmntTmgTmgRptBndsDurationSys() != null) {
+			deviceusestatementtimingtimingrepeatboundsduration.setSystem(d.getDvcUseStmntTmgTmgRptBndsDurationSys());
+		}
+		/******************** DvcUseStmnt_TmgTmg_Rpt_BndsDuration_Unt ********************************************************************************/
+		if(d.getDvcUseStmntTmgTmgRptBndsDurationUnt() != null) {
+			deviceusestatementtimingtimingrepeatboundsduration.setUnit(d.getDvcUseStmntTmgTmgRptBndsDurationUnt());
+		}
+		/******************** DvcUseStmnt_TmgTmg_Rpt_BndsDuration_Vl ********************************************************************************/
+		if(d.getDvcUseStmntTmgTmgRptBndsDurationVl() != null) {
+			deviceusestatementtimingtimingrepeatboundsduration.setValue(Double.parseDouble((d.getDvcUseStmntTmgTmgRptBndsDurationVl())));
+		}
 		/******************** deviceusestatementtimingtimingrepeatboundsperiod ********************************************************************************/
 		org.hl7.fhir.r4.model.Period deviceusestatementtimingtimingrepeatboundsperiod =  new org.hl7.fhir.r4.model.Period();
 		deviceusestatementtimingtimingrepeat.setBounds(deviceusestatementtimingtimingrepeatboundsperiod);
@@ -378,7 +398,7 @@ public class DeviceUseStatementConversion
 		}
 		/******************** DvcUseStmnt_TmgTmg_Rpt_PrdMx ********************************************************************************/
 		if(d.getDvcUseStmntTmgTmgRptPrdMx() != null) {
-			deviceusestatementtimingtimingrepeat.setPeriodMax(Double.parseDouble((d.getDvcUseStmntTmgTmgRptPrdMx())));
+			deviceusestatementtimingtimingrepeat.setPeriodMax(new java.math.BigDecimal((d.getDvcUseStmntTmgTmgRptPrdMx())));
 		}
 		/******************** deviceusestatementtimingtimingrepeatperiodunit ********************************************************************************/
 		org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory deviceusestatementtimingtimingrepeatperiodunit =  new org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory();

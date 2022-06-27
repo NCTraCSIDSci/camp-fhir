@@ -114,7 +114,7 @@ public class MediaConversion
 		}
 		/******************** Media_Duration ********************************************************************************/
 		if(m.getMediaDuration() != null) {
-			media.setDuration(Double.parseDouble((m.getMediaDuration())));
+			media.setDuration(new java.math.BigDecimal((m.getMediaDuration())));
 		}
 		/******************** Media_Enc ********************************************************************************/
 		if(m.getMediaEnc() != null) {

@@ -25,6 +25,10 @@ public class MessageHeaderBidirectionalConversion
 		if(messageheadersource.hasEndpoint()) {
 			m.setMsgHeaderSrcEndpoint(String.valueOf(messageheadersource.getEndpoint()));
 		}
+		/******************** MsgHeader_Src_Software ********************************************************************************/
+		if(messageheadersource.hasSoftware()) {
+			m.setMsgHeaderSrcSoftware(String.valueOf(messageheadersource.getSoftware()));
+		}
 		/******************** messageheadersourcecontact ********************************************************************************/
 		org.hl7.fhir.r4.model.ContactPoint messageheadersourcecontact = messageheadersource.getContact();
 
@@ -32,21 +36,21 @@ public class MessageHeaderBidirectionalConversion
 		if(messageheadersourcecontact.hasValue()) {
 			m.setMsgHeaderSrcCntctVl(String.valueOf(messageheadersourcecontact.getValue()));
 		}
-		/******************** messageheadersourcecontactsystem ********************************************************************************/
-		org.hl7.fhir.r4.model.ContactPoint.ContactPointSystem messageheadersourcecontactsystem = messageheadersourcecontact.getSystem();
-		m.setMsgHeaderSrcCntctSys(messageheadersourcecontactsystem.toCode());
-
 		/******************** messageheadersourcecontactperiod ********************************************************************************/
 		org.hl7.fhir.r4.model.Period messageheadersourcecontactperiod = messageheadersourcecontact.getPeriod();
 
-		/******************** MsgHeader_Src_Cntct_Prd_End ********************************************************************************/
-		if(messageheadersourcecontactperiod.hasEnd()) {
-			m.setMsgHeaderSrcCntctPrdEnd(String.valueOf(messageheadersourcecontactperiod.getEnd()));
-		}
 		/******************** MsgHeader_Src_Cntct_Prd_Strt ********************************************************************************/
 		if(messageheadersourcecontactperiod.hasStart()) {
 			m.setMsgHeaderSrcCntctPrdStrt(String.valueOf(messageheadersourcecontactperiod.getStart()));
 		}
+		/******************** MsgHeader_Src_Cntct_Prd_End ********************************************************************************/
+		if(messageheadersourcecontactperiod.hasEnd()) {
+			m.setMsgHeaderSrcCntctPrdEnd(String.valueOf(messageheadersourcecontactperiod.getEnd()));
+		}
+		/******************** messageheadersourcecontactsystem ********************************************************************************/
+		org.hl7.fhir.r4.model.ContactPoint.ContactPointSystem messageheadersourcecontactsystem = messageheadersourcecontact.getSystem();
+		m.setMsgHeaderSrcCntctSys(messageheadersourcecontactsystem.toCode());
+
 		/******************** messageheadersourcecontactuse ********************************************************************************/
 		org.hl7.fhir.r4.model.ContactPoint.ContactPointUse messageheadersourcecontactuse = messageheadersourcecontact.getUse();
 		m.setMsgHeaderSrcCntctUse(messageheadersourcecontactuse.toCode());
@@ -55,97 +59,74 @@ public class MessageHeaderBidirectionalConversion
 		if(messageheadersourcecontact.hasRank()) {
 			m.setMsgHeaderSrcCntctRnk(String.valueOf(messageheadersourcecontact.getRank()));
 		}
-		/******************** MsgHeader_Src_Software ********************************************************************************/
-		if(messageheadersource.hasSoftware()) {
-			m.setMsgHeaderSrcSoftware(String.valueOf(messageheadersource.getSoftware()));
-		}
 		/******************** messageheaderreason ********************************************************************************/
 		org.hl7.fhir.r4.model.CodeableConcept messageheaderreason = messageheader.getReason();
 
+		/******************** MsgHeader_Rsn_Txt ********************************************************************************/
+		if(messageheaderreason.hasText()) {
+			m.setMsgHeaderRsnTxt(String.valueOf(messageheaderreason.getText()));
+		}
 		/******************** messageheaderreasoncoding ********************************************************************************/
 		org.hl7.fhir.r4.model.Coding messageheaderreasoncoding = messageheaderreason.getCodingFirstRep();
 
-		/******************** MsgHeader_Rsn_Cdg_Dsply ********************************************************************************/
-		if(messageheaderreasoncoding.hasDisplay()) {
-			m.setMsgHeaderRsnCdgDsply(String.valueOf(messageheaderreasoncoding.getDisplay()));
-		}
 		/******************** MsgHeader_Rsn_Cdg_Vrsn ********************************************************************************/
 		if(messageheaderreasoncoding.hasVersion()) {
 			m.setMsgHeaderRsnCdgVrsn(String.valueOf(messageheaderreasoncoding.getVersion()));
+		}
+		/******************** MsgHeader_Rsn_Cdg_Dsply ********************************************************************************/
+		if(messageheaderreasoncoding.hasDisplay()) {
+			m.setMsgHeaderRsnCdgDsply(String.valueOf(messageheaderreasoncoding.getDisplay()));
 		}
 		/******************** MsgHeader_Rsn_Cdg_Cd ********************************************************************************/
 		if(messageheaderreasoncoding.hasCode()) {
 			m.setMsgHeaderRsnCdgCd(String.valueOf(messageheaderreasoncoding.getCode()));
 		}
-		/******************** MsgHeader_Rsn_Cdg_Sys ********************************************************************************/
-		if(messageheaderreasoncoding.hasSystem()) {
-			m.setMsgHeaderRsnCdgSys(String.valueOf(messageheaderreasoncoding.getSystem()));
-		}
 		/******************** MsgHeader_Rsn_Cdg_UsrSltd ********************************************************************************/
 		if(messageheaderreasoncoding.hasUserSelected()) {
 			m.setMsgHeaderRsnCdgUsrSltd(String.valueOf(messageheaderreasoncoding.getUserSelected()));
 		}
-		/******************** MsgHeader_Rsn_Txt ********************************************************************************/
-		if(messageheaderreason.hasText()) {
-			m.setMsgHeaderRsnTxt(String.valueOf(messageheaderreason.getText()));
-		}
-		/******************** messageheaderdestination ********************************************************************************/
-		org.hl7.fhir.r4.model.MessageHeader.MessageDestinationComponent messageheaderdestination = messageheader.getDestinationFirstRep();
-
-		/******************** MsgHeader_Destination_Nm ********************************************************************************/
-		if(messageheaderdestination.hasName()) {
-			m.setMsgHeaderDestinationNm(String.valueOf(messageheaderdestination.getName()));
-		}
-		/******************** MsgHeader_Destination_Endpoint ********************************************************************************/
-		if(messageheaderdestination.hasEndpoint()) {
-			m.setMsgHeaderDestinationEndpoint(String.valueOf(messageheaderdestination.getEndpoint()));
-		}
-		/******************** MsgHeader_Destination_Receiver ********************************************************************************/
-		if(messageheaderdestination.hasReceiver()) {
-			m.setMsgHeaderDestinationReceiver(String.valueOf(messageheaderdestination.getReceiver()));
-		}
-		/******************** MsgHeader_Athr ********************************************************************************/
-		if(messageheader.hasAuthor()) {
-			m.setMsgHeaderAthr(String.valueOf(messageheader.getAuthor()));
+		/******************** MsgHeader_Rsn_Cdg_Sys ********************************************************************************/
+		if(messageheaderreasoncoding.hasSystem()) {
+			m.setMsgHeaderRsnCdgSys(String.valueOf(messageheaderreasoncoding.getSystem()));
 		}
 		/******************** MsgHeader_Focus ********************************************************************************/
 		if(messageheader.hasFocus()) {
 			m.setMsgHeaderFocus(String.valueOf(messageheader.getFocusFirstRep()));
 		}
-		/******************** MsgHeader_Responsible ********************************************************************************/
-		if(messageheader.hasResponsible()) {
-			m.setMsgHeaderResponsible(String.valueOf(messageheader.getResponsible()));
-		}
-		/******************** MsgHeader_Sender ********************************************************************************/
-		if(messageheader.hasSender()) {
-			m.setMsgHeaderSender(String.valueOf(messageheader.getSender()));
-		}
-		/******************** MsgHeader_EvntUriTyp ********************************************************************************/
-		if(messageheader.hasEventUriType()) {
-			m.setMsgHeaderEvntUriTyp(String.valueOf(messageheader.getEventUriType()));
-		}
 		/******************** messageheadereventcoding ********************************************************************************/
 		org.hl7.fhir.r4.model.Coding messageheadereventcoding = messageheader.getEventCoding();
 
-		/******************** MsgHeader_EvntCdg_Dsply ********************************************************************************/
-		if(messageheadereventcoding.hasDisplay()) {
-			m.setMsgHeaderEvntCdgDsply(String.valueOf(messageheadereventcoding.getDisplay()));
-		}
 		/******************** MsgHeader_EvntCdg_Vrsn ********************************************************************************/
 		if(messageheadereventcoding.hasVersion()) {
 			m.setMsgHeaderEvntCdgVrsn(String.valueOf(messageheadereventcoding.getVersion()));
+		}
+		/******************** MsgHeader_EvntCdg_Dsply ********************************************************************************/
+		if(messageheadereventcoding.hasDisplay()) {
+			m.setMsgHeaderEvntCdgDsply(String.valueOf(messageheadereventcoding.getDisplay()));
 		}
 		/******************** MsgHeader_EvntCdg_Cd ********************************************************************************/
 		if(messageheadereventcoding.hasCode()) {
 			m.setMsgHeaderEvntCdgCd(String.valueOf(messageheadereventcoding.getCode()));
 		}
+		/******************** MsgHeader_EvntCdg_UsrSltd ********************************************************************************/
+		if(messageheadereventcoding.hasUserSelected()) {
+			m.setMsgHeaderEvntCdgUsrSltd(String.valueOf(messageheadereventcoding.getUserSelected()));
+		}
 		/******************** MsgHeader_EvntCdg_Sys ********************************************************************************/
 		if(messageheadereventcoding.hasSystem()) {
 			m.setMsgHeaderEvntCdgSys(String.valueOf(messageheadereventcoding.getSystem()));
 		}
-		/******************** MsgHeader_EvntCdg_UsrSltd ********************************************************************************/
-		if(messageheadereventcoding.hasUserSelected()) {
-			m.setMsgHeaderEvntCdgUsrSltd(String.valueOf(messageheadereventcoding.getUserSelected()));
+		/******************** MsgHeader_EvntUriTyp ********************************************************************************/
+		if(messageheader.hasEventUriType()) {
+			m.setMsgHeaderEvntUriTyp(String.valueOf(messageheader.getEventUriType()));
+		}
+		/******************** MsgHeader_Sender ********************************************************************************/
+		if(messageheader.hasSender()) {
+			m.setMsgHeaderSender(String.valueOf(messageheader.getSender()));
+		}
+		/******************** MsgHeader_Responsible ********************************************************************************/
+		if(messageheader.hasResponsible()) {
+			m.setMsgHeaderResponsible(String.valueOf(messageheader.getResponsible()));
 		}
 		/******************** MsgHeader_Enterer ********************************************************************************/
 		if(messageheader.hasEnterer()) {
@@ -165,6 +146,25 @@ public class MessageHeaderBidirectionalConversion
 		/******************** MsgHeader_Rsps_Dtls ********************************************************************************/
 		if(messageheaderresponse.hasDetails()) {
 			m.setMsgHeaderRspsDtls(String.valueOf(messageheaderresponse.getDetails()));
+		}
+		/******************** MsgHeader_Athr ********************************************************************************/
+		if(messageheader.hasAuthor()) {
+			m.setMsgHeaderAthr(String.valueOf(messageheader.getAuthor()));
+		}
+		/******************** messageheaderdestination ********************************************************************************/
+		org.hl7.fhir.r4.model.MessageHeader.MessageDestinationComponent messageheaderdestination = messageheader.getDestinationFirstRep();
+
+		/******************** MsgHeader_Destination_Nm ********************************************************************************/
+		if(messageheaderdestination.hasName()) {
+			m.setMsgHeaderDestinationNm(String.valueOf(messageheaderdestination.getName()));
+		}
+		/******************** MsgHeader_Destination_Endpoint ********************************************************************************/
+		if(messageheaderdestination.hasEndpoint()) {
+			m.setMsgHeaderDestinationEndpoint(String.valueOf(messageheaderdestination.getEndpoint()));
+		}
+		/******************** MsgHeader_Destination_Receiver ********************************************************************************/
+		if(messageheaderdestination.hasReceiver()) {
+			m.setMsgHeaderDestinationReceiver(String.valueOf(messageheaderdestination.getReceiver()));
 		}
 		return m;
 	}

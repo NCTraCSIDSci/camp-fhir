@@ -184,6 +184,26 @@ public class RequestGroupConversion
 		org.hl7.fhir.r4.model.Duration requestgroupactionrelatedactionoffduration =  new org.hl7.fhir.r4.model.Duration();
 		requestgroupactionrelatedaction.setOffset(requestgroupactionrelatedactionoffduration);
 
+		/******************** RqstGrp_Actn_RltedActn_OffDuration_Cd ********************************************************************************/
+		if(r.getRqstGrpActnRltedActnOffDurationCd() != null) {
+			requestgroupactionrelatedactionoffduration.setCode(r.getRqstGrpActnRltedActnOffDurationCd());
+		}
+		/******************** requestgroupactionrelatedactionoffdurationcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory requestgroupactionrelatedactionoffdurationcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		requestgroupactionrelatedactionoffduration.setComparator(requestgroupactionrelatedactionoffdurationcomparator.fromCode(r.getRqstGrpActnRltedActnOffDurationCmprtr()));
+
+		/******************** RqstGrp_Actn_RltedActn_OffDuration_Sys ********************************************************************************/
+		if(r.getRqstGrpActnRltedActnOffDurationSys() != null) {
+			requestgroupactionrelatedactionoffduration.setSystem(r.getRqstGrpActnRltedActnOffDurationSys());
+		}
+		/******************** RqstGrp_Actn_RltedActn_OffDuration_Unt ********************************************************************************/
+		if(r.getRqstGrpActnRltedActnOffDurationUnt() != null) {
+			requestgroupactionrelatedactionoffduration.setUnit(r.getRqstGrpActnRltedActnOffDurationUnt());
+		}
+		/******************** RqstGrp_Actn_RltedActn_OffDuration_Vl ********************************************************************************/
+		if(r.getRqstGrpActnRltedActnOffDurationVl() != null) {
+			requestgroupactionrelatedactionoffduration.setValue(Double.parseDouble((r.getRqstGrpActnRltedActnOffDurationVl())));
+		}
 		/******************** requestgroupactionrelatedactionoffrange ********************************************************************************/
 		org.hl7.fhir.r4.model.Range requestgroupactionrelatedactionoffrange =  new org.hl7.fhir.r4.model.Range();
 		requestgroupactionrelatedaction.setOffset(requestgroupactionrelatedactionoffrange);
@@ -260,6 +280,26 @@ public class RequestGroupConversion
 		org.hl7.fhir.r4.model.Age requestgroupactiontimingage =  new org.hl7.fhir.r4.model.Age();
 		requestgroupaction.setTiming(requestgroupactiontimingage);
 
+		/******************** RqstGrp_Actn_TmgAge_Cd ********************************************************************************/
+		if(r.getRqstGrpActnTmgAgeCd() != null) {
+			requestgroupactiontimingage.setCode(r.getRqstGrpActnTmgAgeCd());
+		}
+		/******************** requestgroupactiontimingagecomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory requestgroupactiontimingagecomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		requestgroupactiontimingage.setComparator(requestgroupactiontimingagecomparator.fromCode(r.getRqstGrpActnTmgAgeCmprtr()));
+
+		/******************** RqstGrp_Actn_TmgAge_Sys ********************************************************************************/
+		if(r.getRqstGrpActnTmgAgeSys() != null) {
+			requestgroupactiontimingage.setSystem(r.getRqstGrpActnTmgAgeSys());
+		}
+		/******************** RqstGrp_Actn_TmgAge_Unt ********************************************************************************/
+		if(r.getRqstGrpActnTmgAgeUnt() != null) {
+			requestgroupactiontimingage.setUnit(r.getRqstGrpActnTmgAgeUnt());
+		}
+		/******************** RqstGrp_Actn_TmgAge_Vl ********************************************************************************/
+		if(r.getRqstGrpActnTmgAgeVl() != null) {
+			requestgroupactiontimingage.setValue(Double.parseDouble((r.getRqstGrpActnTmgAgeVl())));
+		}
 		/******************** RqstGrp_Actn_TmgDtTimeTyp ********************************************************************************/
 		if(r.getRqstGrpActnTmgDtTimeTyp() != null) {
 			requestgroupaction.setTiming( new org.hl7.fhir.r4.model.DateTimeType(r.getRqstGrpActnTmgDtTimeTyp()));
@@ -268,6 +308,26 @@ public class RequestGroupConversion
 		org.hl7.fhir.r4.model.Duration requestgroupactiontimingduration =  new org.hl7.fhir.r4.model.Duration();
 		requestgroupaction.setTiming(requestgroupactiontimingduration);
 
+		/******************** RqstGrp_Actn_TmgDuration_Cd ********************************************************************************/
+		if(r.getRqstGrpActnTmgDurationCd() != null) {
+			requestgroupactiontimingduration.setCode(r.getRqstGrpActnTmgDurationCd());
+		}
+		/******************** requestgroupactiontimingdurationcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory requestgroupactiontimingdurationcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		requestgroupactiontimingduration.setComparator(requestgroupactiontimingdurationcomparator.fromCode(r.getRqstGrpActnTmgDurationCmprtr()));
+
+		/******************** RqstGrp_Actn_TmgDuration_Sys ********************************************************************************/
+		if(r.getRqstGrpActnTmgDurationSys() != null) {
+			requestgroupactiontimingduration.setSystem(r.getRqstGrpActnTmgDurationSys());
+		}
+		/******************** RqstGrp_Actn_TmgDuration_Unt ********************************************************************************/
+		if(r.getRqstGrpActnTmgDurationUnt() != null) {
+			requestgroupactiontimingduration.setUnit(r.getRqstGrpActnTmgDurationUnt());
+		}
+		/******************** RqstGrp_Actn_TmgDuration_Vl ********************************************************************************/
+		if(r.getRqstGrpActnTmgDurationVl() != null) {
+			requestgroupactiontimingduration.setValue(Double.parseDouble((r.getRqstGrpActnTmgDurationVl())));
+		}
 		/******************** requestgroupactiontimingperiod ********************************************************************************/
 		org.hl7.fhir.r4.model.Period requestgroupactiontimingperiod =  new org.hl7.fhir.r4.model.Period();
 		requestgroupaction.setTiming(requestgroupactiontimingperiod);
@@ -386,6 +446,26 @@ public class RequestGroupConversion
 		org.hl7.fhir.r4.model.Duration requestgroupactiontimingtimingrepeatboundsduration =  new org.hl7.fhir.r4.model.Duration();
 		requestgroupactiontimingtimingrepeat.setBounds(requestgroupactiontimingtimingrepeatboundsduration);
 
+		/******************** RqstGrp_Actn_TmgTmg_Rpt_BndsDuration_Cd ********************************************************************************/
+		if(r.getRqstGrpActnTmgTmgRptBndsDurationCd() != null) {
+			requestgroupactiontimingtimingrepeatboundsduration.setCode(r.getRqstGrpActnTmgTmgRptBndsDurationCd());
+		}
+		/******************** requestgroupactiontimingtimingrepeatboundsdurationcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory requestgroupactiontimingtimingrepeatboundsdurationcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		requestgroupactiontimingtimingrepeatboundsduration.setComparator(requestgroupactiontimingtimingrepeatboundsdurationcomparator.fromCode(r.getRqstGrpActnTmgTmgRptBndsDurationCmprtr()));
+
+		/******************** RqstGrp_Actn_TmgTmg_Rpt_BndsDuration_Sys ********************************************************************************/
+		if(r.getRqstGrpActnTmgTmgRptBndsDurationSys() != null) {
+			requestgroupactiontimingtimingrepeatboundsduration.setSystem(r.getRqstGrpActnTmgTmgRptBndsDurationSys());
+		}
+		/******************** RqstGrp_Actn_TmgTmg_Rpt_BndsDuration_Unt ********************************************************************************/
+		if(r.getRqstGrpActnTmgTmgRptBndsDurationUnt() != null) {
+			requestgroupactiontimingtimingrepeatboundsduration.setUnit(r.getRqstGrpActnTmgTmgRptBndsDurationUnt());
+		}
+		/******************** RqstGrp_Actn_TmgTmg_Rpt_BndsDuration_Vl ********************************************************************************/
+		if(r.getRqstGrpActnTmgTmgRptBndsDurationVl() != null) {
+			requestgroupactiontimingtimingrepeatboundsduration.setValue(Double.parseDouble((r.getRqstGrpActnTmgTmgRptBndsDurationVl())));
+		}
 		/******************** requestgroupactiontimingtimingrepeatboundsperiod ********************************************************************************/
 		org.hl7.fhir.r4.model.Period requestgroupactiontimingtimingrepeatboundsperiod =  new org.hl7.fhir.r4.model.Period();
 		requestgroupactiontimingtimingrepeat.setBounds(requestgroupactiontimingtimingrepeatboundsperiod);
@@ -496,7 +576,7 @@ public class RequestGroupConversion
 		}
 		/******************** RqstGrp_Actn_TmgTmg_Rpt_PrdMx ********************************************************************************/
 		if(r.getRqstGrpActnTmgTmgRptPrdMx() != null) {
-			requestgroupactiontimingtimingrepeat.setPeriodMax(Double.parseDouble((r.getRqstGrpActnTmgTmgRptPrdMx())));
+			requestgroupactiontimingtimingrepeat.setPeriodMax(new java.math.BigDecimal((r.getRqstGrpActnTmgTmgRptPrdMx())));
 		}
 		/******************** requestgroupactiontimingtimingrepeatperiodunit ********************************************************************************/
 		org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory requestgroupactiontimingtimingrepeatperiodunit =  new org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory();

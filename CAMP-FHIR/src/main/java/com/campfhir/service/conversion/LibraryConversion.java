@@ -210,6 +210,26 @@ public class LibraryConversion
 		org.hl7.fhir.r4.model.Duration librarydatarequirementdatefiltervalueduration =  new org.hl7.fhir.r4.model.Duration();
 		librarydatarequirementdatefilter.setValue(librarydatarequirementdatefiltervalueduration);
 
+		/******************** Library_DataRqrment_DtFltr_VlDuration_Cd ********************************************************************************/
+		if(l.getLibraryDataRqrmentDtFltrVlDurationCd() != null) {
+			librarydatarequirementdatefiltervalueduration.setCode(l.getLibraryDataRqrmentDtFltrVlDurationCd());
+		}
+		/******************** librarydatarequirementdatefiltervaluedurationcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory librarydatarequirementdatefiltervaluedurationcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		librarydatarequirementdatefiltervalueduration.setComparator(librarydatarequirementdatefiltervaluedurationcomparator.fromCode(l.getLibraryDataRqrmentDtFltrVlDurationCmprtr()));
+
+		/******************** Library_DataRqrment_DtFltr_VlDuration_Sys ********************************************************************************/
+		if(l.getLibraryDataRqrmentDtFltrVlDurationSys() != null) {
+			librarydatarequirementdatefiltervalueduration.setSystem(l.getLibraryDataRqrmentDtFltrVlDurationSys());
+		}
+		/******************** Library_DataRqrment_DtFltr_VlDuration_Unt ********************************************************************************/
+		if(l.getLibraryDataRqrmentDtFltrVlDurationUnt() != null) {
+			librarydatarequirementdatefiltervalueduration.setUnit(l.getLibraryDataRqrmentDtFltrVlDurationUnt());
+		}
+		/******************** Library_DataRqrment_DtFltr_VlDuration_Vl ********************************************************************************/
+		if(l.getLibraryDataRqrmentDtFltrVlDurationVl() != null) {
+			librarydatarequirementdatefiltervalueduration.setValue(Double.parseDouble((l.getLibraryDataRqrmentDtFltrVlDurationVl())));
+		}
 		/******************** librarydatarequirementdatefiltervalueperiod ********************************************************************************/
 		org.hl7.fhir.r4.model.Period librarydatarequirementdatefiltervalueperiod =  new org.hl7.fhir.r4.model.Period();
 		librarydatarequirementdatefilter.setValue(librarydatarequirementdatefiltervalueperiod);

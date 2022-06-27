@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Jun 6, 2022, 11:02:30 AM by Hibernate Tools 5.6.1.Final
+// Generated Jun 27, 2022, 10:40:10 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -49,6 +49,11 @@ public class SupplyRequest  implements java.io.Serializable {
      private String spplyRqstOccrnceTmgCdCdgVrsn;
      private String spplyRqstOccrnceTmgCdTxt;
      private String spplyRqstOccrnceTmgEvnt;
+     private String spplyRqstOccrnceTmgRptBndsDurationCd;
+     private String spplyRqstOccrnceTmgRptBndsDurationCmprtr;
+     private String spplyRqstOccrnceTmgRptBndsDurationSys;
+     private String spplyRqstOccrnceTmgRptBndsDurationUnt;
+     private String spplyRqstOccrnceTmgRptBndsDurationVl;
      private String spplyRqstOccrnceTmgRptBndsPrdEnd;
      private String spplyRqstOccrnceTmgRptBndsPrdStrt;
      private String spplyRqstOccrnceTmgRptBndsRngHiCd;
@@ -510,6 +515,56 @@ public class SupplyRequest  implements java.io.Serializable {
     
     public void setSpplyRqstOccrnceTmgEvnt(String spplyRqstOccrnceTmgEvnt) {
         this.spplyRqstOccrnceTmgEvnt = spplyRqstOccrnceTmgEvnt;
+    }
+    
+    
+    
+    public String getSpplyRqstOccrnceTmgRptBndsDurationCd() {
+        return this.spplyRqstOccrnceTmgRptBndsDurationCd;
+    }
+    
+    public void setSpplyRqstOccrnceTmgRptBndsDurationCd(String spplyRqstOccrnceTmgRptBndsDurationCd) {
+        this.spplyRqstOccrnceTmgRptBndsDurationCd = spplyRqstOccrnceTmgRptBndsDurationCd;
+    }
+    
+    
+    
+    public String getSpplyRqstOccrnceTmgRptBndsDurationCmprtr() {
+        return this.spplyRqstOccrnceTmgRptBndsDurationCmprtr;
+    }
+    
+    public void setSpplyRqstOccrnceTmgRptBndsDurationCmprtr(String spplyRqstOccrnceTmgRptBndsDurationCmprtr) {
+        this.spplyRqstOccrnceTmgRptBndsDurationCmprtr = spplyRqstOccrnceTmgRptBndsDurationCmprtr;
+    }
+    
+    
+    
+    public String getSpplyRqstOccrnceTmgRptBndsDurationSys() {
+        return this.spplyRqstOccrnceTmgRptBndsDurationSys;
+    }
+    
+    public void setSpplyRqstOccrnceTmgRptBndsDurationSys(String spplyRqstOccrnceTmgRptBndsDurationSys) {
+        this.spplyRqstOccrnceTmgRptBndsDurationSys = spplyRqstOccrnceTmgRptBndsDurationSys;
+    }
+    
+    
+    
+    public String getSpplyRqstOccrnceTmgRptBndsDurationUnt() {
+        return this.spplyRqstOccrnceTmgRptBndsDurationUnt;
+    }
+    
+    public void setSpplyRqstOccrnceTmgRptBndsDurationUnt(String spplyRqstOccrnceTmgRptBndsDurationUnt) {
+        this.spplyRqstOccrnceTmgRptBndsDurationUnt = spplyRqstOccrnceTmgRptBndsDurationUnt;
+    }
+    
+    
+    
+    public String getSpplyRqstOccrnceTmgRptBndsDurationVl() {
+        return this.spplyRqstOccrnceTmgRptBndsDurationVl;
+    }
+    
+    public void setSpplyRqstOccrnceTmgRptBndsDurationVl(String spplyRqstOccrnceTmgRptBndsDurationVl) {
+        this.spplyRqstOccrnceTmgRptBndsDurationVl = spplyRqstOccrnceTmgRptBndsDurationVl;
     }
     
     

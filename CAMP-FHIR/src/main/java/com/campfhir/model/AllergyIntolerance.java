@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Jun 6, 2022, 11:02:30 AM by Hibernate Tools 5.6.1.Final
+// Generated Jun 27, 2022, 10:40:10 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -44,6 +44,11 @@ public class AllergyIntolerance  implements java.io.Serializable {
      private String alrgyIntoleranceNtAthrStrgTyp;
      private String alrgyIntoleranceNtTxt;
      private String alrgyIntoleranceNtTime;
+     private String alrgyIntoleranceOnAgeCd;
+     private String alrgyIntoleranceOnAgeCmprtr;
+     private String alrgyIntoleranceOnAgeSys;
+     private String alrgyIntoleranceOnAgeUnt;
+     private String alrgyIntoleranceOnAgeVl;
      private String alrgyIntoleranceOnDtTimeTyp;
      private String alrgyIntoleranceOnPrdEnd;
      private String alrgyIntoleranceOnPrdStrt;
@@ -434,6 +439,56 @@ public class AllergyIntolerance  implements java.io.Serializable {
     
     public void setAlrgyIntoleranceNtTime(String alrgyIntoleranceNtTime) {
         this.alrgyIntoleranceNtTime = alrgyIntoleranceNtTime;
+    }
+    
+    
+    
+    public String getAlrgyIntoleranceOnAgeCd() {
+        return this.alrgyIntoleranceOnAgeCd;
+    }
+    
+    public void setAlrgyIntoleranceOnAgeCd(String alrgyIntoleranceOnAgeCd) {
+        this.alrgyIntoleranceOnAgeCd = alrgyIntoleranceOnAgeCd;
+    }
+    
+    
+    
+    public String getAlrgyIntoleranceOnAgeCmprtr() {
+        return this.alrgyIntoleranceOnAgeCmprtr;
+    }
+    
+    public void setAlrgyIntoleranceOnAgeCmprtr(String alrgyIntoleranceOnAgeCmprtr) {
+        this.alrgyIntoleranceOnAgeCmprtr = alrgyIntoleranceOnAgeCmprtr;
+    }
+    
+    
+    
+    public String getAlrgyIntoleranceOnAgeSys() {
+        return this.alrgyIntoleranceOnAgeSys;
+    }
+    
+    public void setAlrgyIntoleranceOnAgeSys(String alrgyIntoleranceOnAgeSys) {
+        this.alrgyIntoleranceOnAgeSys = alrgyIntoleranceOnAgeSys;
+    }
+    
+    
+    
+    public String getAlrgyIntoleranceOnAgeUnt() {
+        return this.alrgyIntoleranceOnAgeUnt;
+    }
+    
+    public void setAlrgyIntoleranceOnAgeUnt(String alrgyIntoleranceOnAgeUnt) {
+        this.alrgyIntoleranceOnAgeUnt = alrgyIntoleranceOnAgeUnt;
+    }
+    
+    
+    
+    public String getAlrgyIntoleranceOnAgeVl() {
+        return this.alrgyIntoleranceOnAgeVl;
+    }
+    
+    public void setAlrgyIntoleranceOnAgeVl(String alrgyIntoleranceOnAgeVl) {
+        this.alrgyIntoleranceOnAgeVl = alrgyIntoleranceOnAgeVl;
     }
     
     

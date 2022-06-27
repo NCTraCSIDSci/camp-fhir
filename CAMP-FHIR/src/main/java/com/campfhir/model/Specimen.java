@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Jun 6, 2022, 11:02:30 AM by Hibernate Tools 5.6.1.Final
+// Generated Jun 27, 2022, 10:40:10 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -33,12 +33,22 @@ public class Specimen  implements java.io.Serializable {
      private String spcmnCollectionCollectedPrdEnd;
      private String spcmnCollectionCollectedPrdStrt;
      private String spcmnCollectionCollector;
+     private String spcmnCollectionDurationCd;
+     private String spcmnCollectionDurationCmprtr;
+     private String spcmnCollectionDurationSys;
+     private String spcmnCollectionDurationUnt;
+     private String spcmnCollectionDurationVl;
      private String spcmnCollectionFastingStsCdbleCncptCdgCd;
      private String spcmnCollectionFastingStsCdbleCncptCdgDsply;
      private String spcmnCollectionFastingStsCdbleCncptCdgSys;
      private String spcmnCollectionFastingStsCdbleCncptCdgUsrSltd;
      private String spcmnCollectionFastingStsCdbleCncptCdgVrsn;
      private String spcmnCollectionFastingStsCdbleCncptTxt;
+     private String spcmnCollectionFastingStsDurationCd;
+     private String spcmnCollectionFastingStsDurationCmprtr;
+     private String spcmnCollectionFastingStsDurationSys;
+     private String spcmnCollectionFastingStsDurationUnt;
+     private String spcmnCollectionFastingStsDurationVl;
      private String spcmnCollectionMthdCdgCd;
      private String spcmnCollectionMthdCdgDsply;
      private String spcmnCollectionMthdCdgSys;
@@ -365,6 +375,56 @@ public class Specimen  implements java.io.Serializable {
     
     
     
+    public String getSpcmnCollectionDurationCd() {
+        return this.spcmnCollectionDurationCd;
+    }
+    
+    public void setSpcmnCollectionDurationCd(String spcmnCollectionDurationCd) {
+        this.spcmnCollectionDurationCd = spcmnCollectionDurationCd;
+    }
+    
+    
+    
+    public String getSpcmnCollectionDurationCmprtr() {
+        return this.spcmnCollectionDurationCmprtr;
+    }
+    
+    public void setSpcmnCollectionDurationCmprtr(String spcmnCollectionDurationCmprtr) {
+        this.spcmnCollectionDurationCmprtr = spcmnCollectionDurationCmprtr;
+    }
+    
+    
+    
+    public String getSpcmnCollectionDurationSys() {
+        return this.spcmnCollectionDurationSys;
+    }
+    
+    public void setSpcmnCollectionDurationSys(String spcmnCollectionDurationSys) {
+        this.spcmnCollectionDurationSys = spcmnCollectionDurationSys;
+    }
+    
+    
+    
+    public String getSpcmnCollectionDurationUnt() {
+        return this.spcmnCollectionDurationUnt;
+    }
+    
+    public void setSpcmnCollectionDurationUnt(String spcmnCollectionDurationUnt) {
+        this.spcmnCollectionDurationUnt = spcmnCollectionDurationUnt;
+    }
+    
+    
+    
+    public String getSpcmnCollectionDurationVl() {
+        return this.spcmnCollectionDurationVl;
+    }
+    
+    public void setSpcmnCollectionDurationVl(String spcmnCollectionDurationVl) {
+        this.spcmnCollectionDurationVl = spcmnCollectionDurationVl;
+    }
+    
+    
+    
     public String getSpcmnCollectionFastingStsCdbleCncptCdgCd() {
         return this.spcmnCollectionFastingStsCdbleCncptCdgCd;
     }
@@ -421,6 +481,56 @@ public class Specimen  implements java.io.Serializable {
     
     public void setSpcmnCollectionFastingStsCdbleCncptTxt(String spcmnCollectionFastingStsCdbleCncptTxt) {
         this.spcmnCollectionFastingStsCdbleCncptTxt = spcmnCollectionFastingStsCdbleCncptTxt;
+    }
+    
+    
+    
+    public String getSpcmnCollectionFastingStsDurationCd() {
+        return this.spcmnCollectionFastingStsDurationCd;
+    }
+    
+    public void setSpcmnCollectionFastingStsDurationCd(String spcmnCollectionFastingStsDurationCd) {
+        this.spcmnCollectionFastingStsDurationCd = spcmnCollectionFastingStsDurationCd;
+    }
+    
+    
+    
+    public String getSpcmnCollectionFastingStsDurationCmprtr() {
+        return this.spcmnCollectionFastingStsDurationCmprtr;
+    }
+    
+    public void setSpcmnCollectionFastingStsDurationCmprtr(String spcmnCollectionFastingStsDurationCmprtr) {
+        this.spcmnCollectionFastingStsDurationCmprtr = spcmnCollectionFastingStsDurationCmprtr;
+    }
+    
+    
+    
+    public String getSpcmnCollectionFastingStsDurationSys() {
+        return this.spcmnCollectionFastingStsDurationSys;
+    }
+    
+    public void setSpcmnCollectionFastingStsDurationSys(String spcmnCollectionFastingStsDurationSys) {
+        this.spcmnCollectionFastingStsDurationSys = spcmnCollectionFastingStsDurationSys;
+    }
+    
+    
+    
+    public String getSpcmnCollectionFastingStsDurationUnt() {
+        return this.spcmnCollectionFastingStsDurationUnt;
+    }
+    
+    public void setSpcmnCollectionFastingStsDurationUnt(String spcmnCollectionFastingStsDurationUnt) {
+        this.spcmnCollectionFastingStsDurationUnt = spcmnCollectionFastingStsDurationUnt;
+    }
+    
+    
+    
+    public String getSpcmnCollectionFastingStsDurationVl() {
+        return this.spcmnCollectionFastingStsDurationVl;
+    }
+    
+    public void setSpcmnCollectionFastingStsDurationVl(String spcmnCollectionFastingStsDurationVl) {
+        this.spcmnCollectionFastingStsDurationVl = spcmnCollectionFastingStsDurationVl;
     }
     
     

@@ -14,6 +14,26 @@ public class ConditionConversion
 		org.hl7.fhir.r4.model.Age conditionabatementage =  new org.hl7.fhir.r4.model.Age();
 		condition.setAbatement(conditionabatementage);
 
+		/******************** Cndtn_AbatementAge_Cd ********************************************************************************/
+		if(c.getCndtnAbatementAgeCd() != null) {
+			conditionabatementage.setCode(c.getCndtnAbatementAgeCd());
+		}
+		/******************** conditionabatementagecomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory conditionabatementagecomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		conditionabatementage.setComparator(conditionabatementagecomparator.fromCode(c.getCndtnAbatementAgeCmprtr()));
+
+		/******************** Cndtn_AbatementAge_Sys ********************************************************************************/
+		if(c.getCndtnAbatementAgeSys() != null) {
+			conditionabatementage.setSystem(c.getCndtnAbatementAgeSys());
+		}
+		/******************** Cndtn_AbatementAge_Unt ********************************************************************************/
+		if(c.getCndtnAbatementAgeUnt() != null) {
+			conditionabatementage.setUnit(c.getCndtnAbatementAgeUnt());
+		}
+		/******************** Cndtn_AbatementAge_Vl ********************************************************************************/
+		if(c.getCndtnAbatementAgeVl() != null) {
+			conditionabatementage.setValue(Double.parseDouble((c.getCndtnAbatementAgeVl())));
+		}
 		/******************** Cndtn_AbatementDtTimeTyp ********************************************************************************/
 		if(c.getCndtnAbatementDtTimeTyp() != null) {
 			condition.setAbatement( new org.hl7.fhir.r4.model.DateTimeType(c.getCndtnAbatementDtTimeTyp()));
@@ -360,6 +380,26 @@ public class ConditionConversion
 		org.hl7.fhir.r4.model.Age conditiononage =  new org.hl7.fhir.r4.model.Age();
 		condition.setOnset(conditiononage);
 
+		/******************** Cndtn_OnAge_Cd ********************************************************************************/
+		if(c.getCndtnOnAgeCd() != null) {
+			conditiononage.setCode(c.getCndtnOnAgeCd());
+		}
+		/******************** conditiononagecomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory conditiononagecomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		conditiononage.setComparator(conditiononagecomparator.fromCode(c.getCndtnOnAgeCmprtr()));
+
+		/******************** Cndtn_OnAge_Sys ********************************************************************************/
+		if(c.getCndtnOnAgeSys() != null) {
+			conditiononage.setSystem(c.getCndtnOnAgeSys());
+		}
+		/******************** Cndtn_OnAge_Unt ********************************************************************************/
+		if(c.getCndtnOnAgeUnt() != null) {
+			conditiononage.setUnit(c.getCndtnOnAgeUnt());
+		}
+		/******************** Cndtn_OnAge_Vl ********************************************************************************/
+		if(c.getCndtnOnAgeVl() != null) {
+			conditiononage.setValue(Double.parseDouble((c.getCndtnOnAgeVl())));
+		}
 		/******************** Cndtn_OnDtTimeTyp ********************************************************************************/
 		if(c.getCndtnOnDtTimeTyp() != null) {
 			condition.setOnset( new org.hl7.fhir.r4.model.DateTimeType(c.getCndtnOnDtTimeTyp()));

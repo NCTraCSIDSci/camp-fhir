@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Jun 6, 2022, 11:02:25 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 27, 2022, 10:39:49 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Observation" optimistic-lock="none" table="Observation">
         <id name="id" type="string">
@@ -557,6 +557,26 @@
         <property name="obsrvtnEfctiveTmgEvnt" type="string">
             <meta attribute="resource-type"/>
             <column length="65535" name="Obsrvtn_EfctiveTmg_Evnt"/>
+        </property>
+        <property name="obsrvtnEfctiveTmgRptBndsDurationCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_EfctiveTmg_Rpt_BndsDuration_Cd"/>
+        </property>
+        <property name="obsrvtnEfctiveTmgRptBndsDurationCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_EfctiveTmg_Rpt_BndsDuration_Cmprtr"/>
+        </property>
+        <property name="obsrvtnEfctiveTmgRptBndsDurationSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_EfctiveTmg_Rpt_BndsDuration_Sys"/>
+        </property>
+        <property name="obsrvtnEfctiveTmgRptBndsDurationUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_EfctiveTmg_Rpt_BndsDuration_Unt"/>
+        </property>
+        <property name="obsrvtnEfctiveTmgRptBndsDurationVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Obsrvtn_EfctiveTmg_Rpt_BndsDuration_Vl"/>
         </property>
         <property name="obsrvtnEfctiveTmgRptBndsPrdEnd" type="string">
             <meta attribute="resource-type"/>

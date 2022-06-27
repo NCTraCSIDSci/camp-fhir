@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Jun 6, 2022, 11:02:25 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 27, 2022, 10:39:49 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="EventDefinition" optimistic-lock="none" table="EventDefinition">
         <id name="id" type="string">
@@ -446,6 +446,26 @@
             <meta attribute="resource-type"/>
             <column length="65535" name="EvntDfn_Trgr_Data_DtFltr_VlDtTimeTyp"/>
         </property>
+        <property name="evntDfnTrgrDataDtFltrVlDurationCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EvntDfn_Trgr_Data_DtFltr_VlDuration_Cd"/>
+        </property>
+        <property name="evntDfnTrgrDataDtFltrVlDurationCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EvntDfn_Trgr_Data_DtFltr_VlDuration_Cmprtr"/>
+        </property>
+        <property name="evntDfnTrgrDataDtFltrVlDurationSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EvntDfn_Trgr_Data_DtFltr_VlDuration_Sys"/>
+        </property>
+        <property name="evntDfnTrgrDataDtFltrVlDurationUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EvntDfn_Trgr_Data_DtFltr_VlDuration_Unt"/>
+        </property>
+        <property name="evntDfnTrgrDataDtFltrVlDurationVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EvntDfn_Trgr_Data_DtFltr_VlDuration_Vl"/>
+        </property>
         <property name="evntDfnTrgrDataDtFltrVlPrdEnd" type="string">
             <meta attribute="resource-type"/>
             <column length="65535" name="EvntDfn_Trgr_Data_DtFltr_VlPrd_End"/>
@@ -549,6 +569,26 @@
         <property name="evntDfnTrgrTmgTmgEvnt" type="string">
             <meta attribute="resource-type"/>
             <column length="65535" name="EvntDfn_Trgr_TmgTmg_Evnt"/>
+        </property>
+        <property name="evntDfnTrgrTmgTmgRptBndsDurationCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EvntDfn_Trgr_TmgTmg_Rpt_BndsDuration_Cd"/>
+        </property>
+        <property name="evntDfnTrgrTmgTmgRptBndsDurationCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EvntDfn_Trgr_TmgTmg_Rpt_BndsDuration_Cmprtr"/>
+        </property>
+        <property name="evntDfnTrgrTmgTmgRptBndsDurationSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EvntDfn_Trgr_TmgTmg_Rpt_BndsDuration_Sys"/>
+        </property>
+        <property name="evntDfnTrgrTmgTmgRptBndsDurationUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EvntDfn_Trgr_TmgTmg_Rpt_BndsDuration_Unt"/>
+        </property>
+        <property name="evntDfnTrgrTmgTmgRptBndsDurationVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EvntDfn_Trgr_TmgTmg_Rpt_BndsDuration_Vl"/>
         </property>
         <property name="evntDfnTrgrTmgTmgRptBndsPrdEnd" type="string">
             <meta attribute="resource-type"/>

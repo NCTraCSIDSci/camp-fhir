@@ -17,10 +17,6 @@ public class OperationOutcomeBidirectionalConversion
 		org.hl7.fhir.r4.model.OperationOutcome.IssueType operationoutcomeissuecode = operationoutcomeissue.getCode();
 		o.setOprtnOutcomeIssueCd(operationoutcomeissuecode.toCode());
 
-		/******************** operationoutcomeissueseverity ********************************************************************************/
-		org.hl7.fhir.r4.model.OperationOutcome.IssueSeverity operationoutcomeissueseverity = operationoutcomeissue.getSeverity();
-		o.setOprtnOutcomeIssueSeverity(operationoutcomeissueseverity.toCode());
-
 		/******************** OprtnOutcome_Issue_Diagnostics ********************************************************************************/
 		if(operationoutcomeissue.hasDiagnostics()) {
 			o.setOprtnOutcomeIssueDiagnostics(String.valueOf(operationoutcomeissue.getDiagnostics()));
@@ -28,33 +24,37 @@ public class OperationOutcomeBidirectionalConversion
 		/******************** operationoutcomeissuedetails ********************************************************************************/
 		org.hl7.fhir.r4.model.CodeableConcept operationoutcomeissuedetails = operationoutcomeissue.getDetails();
 
+		/******************** OprtnOutcome_Issue_Dtls_Txt ********************************************************************************/
+		if(operationoutcomeissuedetails.hasText()) {
+			o.setOprtnOutcomeIssueDtlsTxt(String.valueOf(operationoutcomeissuedetails.getText()));
+		}
 		/******************** operationoutcomeissuedetailscoding ********************************************************************************/
 		org.hl7.fhir.r4.model.Coding operationoutcomeissuedetailscoding = operationoutcomeissuedetails.getCodingFirstRep();
 
-		/******************** OprtnOutcome_Issue_Dtls_Cdg_Dsply ********************************************************************************/
-		if(operationoutcomeissuedetailscoding.hasDisplay()) {
-			o.setOprtnOutcomeIssueDtlsCdgDsply(String.valueOf(operationoutcomeissuedetailscoding.getDisplay()));
-		}
 		/******************** OprtnOutcome_Issue_Dtls_Cdg_Vrsn ********************************************************************************/
 		if(operationoutcomeissuedetailscoding.hasVersion()) {
 			o.setOprtnOutcomeIssueDtlsCdgVrsn(String.valueOf(operationoutcomeissuedetailscoding.getVersion()));
+		}
+		/******************** OprtnOutcome_Issue_Dtls_Cdg_Dsply ********************************************************************************/
+		if(operationoutcomeissuedetailscoding.hasDisplay()) {
+			o.setOprtnOutcomeIssueDtlsCdgDsply(String.valueOf(operationoutcomeissuedetailscoding.getDisplay()));
 		}
 		/******************** OprtnOutcome_Issue_Dtls_Cdg_Cd ********************************************************************************/
 		if(operationoutcomeissuedetailscoding.hasCode()) {
 			o.setOprtnOutcomeIssueDtlsCdgCd(String.valueOf(operationoutcomeissuedetailscoding.getCode()));
 		}
-		/******************** OprtnOutcome_Issue_Dtls_Cdg_Sys ********************************************************************************/
-		if(operationoutcomeissuedetailscoding.hasSystem()) {
-			o.setOprtnOutcomeIssueDtlsCdgSys(String.valueOf(operationoutcomeissuedetailscoding.getSystem()));
-		}
 		/******************** OprtnOutcome_Issue_Dtls_Cdg_UsrSltd ********************************************************************************/
 		if(operationoutcomeissuedetailscoding.hasUserSelected()) {
 			o.setOprtnOutcomeIssueDtlsCdgUsrSltd(String.valueOf(operationoutcomeissuedetailscoding.getUserSelected()));
 		}
-		/******************** OprtnOutcome_Issue_Dtls_Txt ********************************************************************************/
-		if(operationoutcomeissuedetails.hasText()) {
-			o.setOprtnOutcomeIssueDtlsTxt(String.valueOf(operationoutcomeissuedetails.getText()));
+		/******************** OprtnOutcome_Issue_Dtls_Cdg_Sys ********************************************************************************/
+		if(operationoutcomeissuedetailscoding.hasSystem()) {
+			o.setOprtnOutcomeIssueDtlsCdgSys(String.valueOf(operationoutcomeissuedetailscoding.getSystem()));
 		}
+		/******************** operationoutcomeissueseverity ********************************************************************************/
+		org.hl7.fhir.r4.model.OperationOutcome.IssueSeverity operationoutcomeissueseverity = operationoutcomeissue.getSeverity();
+		o.setOprtnOutcomeIssueSeverity(operationoutcomeissueseverity.toCode());
+
 		return o;
 	}
 }

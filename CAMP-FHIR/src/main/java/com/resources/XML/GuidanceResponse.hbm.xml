@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Jun 6, 2022, 11:02:25 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 27, 2022, 10:39:49 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="GuidanceResponse" optimistic-lock="none" table="GuidanceResponse">
         <id name="id" type="string">
@@ -49,6 +49,26 @@
         <property name="guidnceRspsDataRqrmentDtFltrVlDtTimeTyp" type="string">
             <meta attribute="resource-type"/>
             <column length="65535" name="GuidnceRsps_DataRqrment_DtFltr_VlDtTimeTyp"/>
+        </property>
+        <property name="guidnceRspsDataRqrmentDtFltrVlDurationCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_DataRqrment_DtFltr_VlDuration_Cd"/>
+        </property>
+        <property name="guidnceRspsDataRqrmentDtFltrVlDurationCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_DataRqrment_DtFltr_VlDuration_Cmprtr"/>
+        </property>
+        <property name="guidnceRspsDataRqrmentDtFltrVlDurationSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_DataRqrment_DtFltr_VlDuration_Sys"/>
+        </property>
+        <property name="guidnceRspsDataRqrmentDtFltrVlDurationUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_DataRqrment_DtFltr_VlDuration_Unt"/>
+        </property>
+        <property name="guidnceRspsDataRqrmentDtFltrVlDurationVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="GuidnceRsps_DataRqrment_DtFltr_VlDuration_Vl"/>
         </property>
         <property name="guidnceRspsDataRqrmentDtFltrVlPrdEnd" type="string">
             <meta attribute="resource-type"/>

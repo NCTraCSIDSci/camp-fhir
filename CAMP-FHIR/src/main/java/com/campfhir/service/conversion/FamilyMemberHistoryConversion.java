@@ -14,6 +14,26 @@ public class FamilyMemberHistoryConversion
 		org.hl7.fhir.r4.model.Age familymemberhistoryageage =  new org.hl7.fhir.r4.model.Age();
 		familymemberhistory.setAge(familymemberhistoryageage);
 
+		/******************** FmlyMmbrHis_AgeAge_Cd ********************************************************************************/
+		if(f.getFmlyMmbrHisAgeAgeCd() != null) {
+			familymemberhistoryageage.setCode(f.getFmlyMmbrHisAgeAgeCd());
+		}
+		/******************** familymemberhistoryageagecomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory familymemberhistoryageagecomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		familymemberhistoryageage.setComparator(familymemberhistoryageagecomparator.fromCode(f.getFmlyMmbrHisAgeAgeCmprtr()));
+
+		/******************** FmlyMmbrHis_AgeAge_Sys ********************************************************************************/
+		if(f.getFmlyMmbrHisAgeAgeSys() != null) {
+			familymemberhistoryageage.setSystem(f.getFmlyMmbrHisAgeAgeSys());
+		}
+		/******************** FmlyMmbrHis_AgeAge_Unt ********************************************************************************/
+		if(f.getFmlyMmbrHisAgeAgeUnt() != null) {
+			familymemberhistoryageage.setUnit(f.getFmlyMmbrHisAgeAgeUnt());
+		}
+		/******************** FmlyMmbrHis_AgeAge_Vl ********************************************************************************/
+		if(f.getFmlyMmbrHisAgeAgeVl() != null) {
+			familymemberhistoryageage.setValue(Double.parseDouble((f.getFmlyMmbrHisAgeAgeVl())));
+		}
 		/******************** familymemberhistoryagerange ********************************************************************************/
 		org.hl7.fhir.r4.model.Range familymemberhistoryagerange =  new org.hl7.fhir.r4.model.Range();
 		familymemberhistory.setAge(familymemberhistoryagerange);
@@ -160,6 +180,26 @@ public class FamilyMemberHistoryConversion
 		org.hl7.fhir.r4.model.Age familymemberhistoryconditiononage =  new org.hl7.fhir.r4.model.Age();
 		familymemberhistorycondition.setOnset(familymemberhistoryconditiononage);
 
+		/******************** FmlyMmbrHis_Cndtn_OnAge_Cd ********************************************************************************/
+		if(f.getFmlyMmbrHisCndtnOnAgeCd() != null) {
+			familymemberhistoryconditiononage.setCode(f.getFmlyMmbrHisCndtnOnAgeCd());
+		}
+		/******************** familymemberhistoryconditiononagecomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory familymemberhistoryconditiononagecomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		familymemberhistoryconditiononage.setComparator(familymemberhistoryconditiononagecomparator.fromCode(f.getFmlyMmbrHisCndtnOnAgeCmprtr()));
+
+		/******************** FmlyMmbrHis_Cndtn_OnAge_Sys ********************************************************************************/
+		if(f.getFmlyMmbrHisCndtnOnAgeSys() != null) {
+			familymemberhistoryconditiononage.setSystem(f.getFmlyMmbrHisCndtnOnAgeSys());
+		}
+		/******************** FmlyMmbrHis_Cndtn_OnAge_Unt ********************************************************************************/
+		if(f.getFmlyMmbrHisCndtnOnAgeUnt() != null) {
+			familymemberhistoryconditiononage.setUnit(f.getFmlyMmbrHisCndtnOnAgeUnt());
+		}
+		/******************** FmlyMmbrHis_Cndtn_OnAge_Vl ********************************************************************************/
+		if(f.getFmlyMmbrHisCndtnOnAgeVl() != null) {
+			familymemberhistoryconditiononage.setValue(Double.parseDouble((f.getFmlyMmbrHisCndtnOnAgeVl())));
+		}
 		/******************** familymemberhistoryconditiononperiod ********************************************************************************/
 		org.hl7.fhir.r4.model.Period familymemberhistoryconditiononperiod =  new org.hl7.fhir.r4.model.Period();
 		familymemberhistorycondition.setOnset(familymemberhistoryconditiononperiod);
@@ -306,6 +346,26 @@ public class FamilyMemberHistoryConversion
 		org.hl7.fhir.r4.model.Age familymemberhistorydeceasedage =  new org.hl7.fhir.r4.model.Age();
 		familymemberhistory.setDeceased(familymemberhistorydeceasedage);
 
+		/******************** FmlyMmbrHis_DeceasedAge_Cd ********************************************************************************/
+		if(f.getFmlyMmbrHisDeceasedAgeCd() != null) {
+			familymemberhistorydeceasedage.setCode(f.getFmlyMmbrHisDeceasedAgeCd());
+		}
+		/******************** familymemberhistorydeceasedagecomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory familymemberhistorydeceasedagecomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		familymemberhistorydeceasedage.setComparator(familymemberhistorydeceasedagecomparator.fromCode(f.getFmlyMmbrHisDeceasedAgeCmprtr()));
+
+		/******************** FmlyMmbrHis_DeceasedAge_Sys ********************************************************************************/
+		if(f.getFmlyMmbrHisDeceasedAgeSys() != null) {
+			familymemberhistorydeceasedage.setSystem(f.getFmlyMmbrHisDeceasedAgeSys());
+		}
+		/******************** FmlyMmbrHis_DeceasedAge_Unt ********************************************************************************/
+		if(f.getFmlyMmbrHisDeceasedAgeUnt() != null) {
+			familymemberhistorydeceasedage.setUnit(f.getFmlyMmbrHisDeceasedAgeUnt());
+		}
+		/******************** FmlyMmbrHis_DeceasedAge_Vl ********************************************************************************/
+		if(f.getFmlyMmbrHisDeceasedAgeVl() != null) {
+			familymemberhistorydeceasedage.setValue(Double.parseDouble((f.getFmlyMmbrHisDeceasedAgeVl())));
+		}
 		/******************** FmlyMmbrHis_DeceasedBooleanTyp ********************************************************************************/
 		if(f.getFmlyMmbrHisDeceasedBooleanTyp() != null) {
 			familymemberhistory.setDeceased( new org.hl7.fhir.r4.model.BooleanType(f.getFmlyMmbrHisDeceasedBooleanTyp()));

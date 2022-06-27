@@ -13,40 +13,36 @@ public class DocumentManifestBidirectionalConversion
 		/******************** documentmanifesttype ********************************************************************************/
 		org.hl7.fhir.r4.model.CodeableConcept documentmanifesttype = documentmanifest.getType();
 
+		/******************** DocManifest_Typ_Txt ********************************************************************************/
+		if(documentmanifesttype.hasText()) {
+			d.setDocManifestTypTxt(String.valueOf(documentmanifesttype.getText()));
+		}
 		/******************** documentmanifesttypecoding ********************************************************************************/
 		org.hl7.fhir.r4.model.Coding documentmanifesttypecoding = documentmanifesttype.getCodingFirstRep();
 
-		/******************** DocManifest_Typ_Cdg_Dsply ********************************************************************************/
-		if(documentmanifesttypecoding.hasDisplay()) {
-			d.setDocManifestTypCdgDsply(String.valueOf(documentmanifesttypecoding.getDisplay()));
-		}
 		/******************** DocManifest_Typ_Cdg_Vrsn ********************************************************************************/
 		if(documentmanifesttypecoding.hasVersion()) {
 			d.setDocManifestTypCdgVrsn(String.valueOf(documentmanifesttypecoding.getVersion()));
+		}
+		/******************** DocManifest_Typ_Cdg_Dsply ********************************************************************************/
+		if(documentmanifesttypecoding.hasDisplay()) {
+			d.setDocManifestTypCdgDsply(String.valueOf(documentmanifesttypecoding.getDisplay()));
 		}
 		/******************** DocManifest_Typ_Cdg_Cd ********************************************************************************/
 		if(documentmanifesttypecoding.hasCode()) {
 			d.setDocManifestTypCdgCd(String.valueOf(documentmanifesttypecoding.getCode()));
 		}
-		/******************** DocManifest_Typ_Cdg_Sys ********************************************************************************/
-		if(documentmanifesttypecoding.hasSystem()) {
-			d.setDocManifestTypCdgSys(String.valueOf(documentmanifesttypecoding.getSystem()));
-		}
 		/******************** DocManifest_Typ_Cdg_UsrSltd ********************************************************************************/
 		if(documentmanifesttypecoding.hasUserSelected()) {
 			d.setDocManifestTypCdgUsrSltd(String.valueOf(documentmanifesttypecoding.getUserSelected()));
 		}
-		/******************** DocManifest_Typ_Txt ********************************************************************************/
-		if(documentmanifesttype.hasText()) {
-			d.setDocManifestTypTxt(String.valueOf(documentmanifesttype.getText()));
+		/******************** DocManifest_Typ_Cdg_Sys ********************************************************************************/
+		if(documentmanifesttypecoding.hasSystem()) {
+			d.setDocManifestTypCdgSys(String.valueOf(documentmanifesttypecoding.getSystem()));
 		}
 		/******************** DocManifest_Src ********************************************************************************/
 		if(documentmanifest.hasSource()) {
 			d.setDocManifestSrc(String.valueOf(documentmanifest.getSource()));
-		}
-		/******************** DocManifest_Recipient ********************************************************************************/
-		if(documentmanifest.hasRecipient()) {
-			d.setDocManifestRecipient(String.valueOf(documentmanifest.getRecipientFirstRep()));
 		}
 		/******************** DocManifest_Sbjct ********************************************************************************/
 		if(documentmanifest.hasSubject()) {
@@ -63,74 +59,6 @@ public class DocumentManifestBidirectionalConversion
 		/******************** DocManifest_Created ********************************************************************************/
 		if(documentmanifest.hasCreated()) {
 			d.setDocManifestCreated(String.valueOf(documentmanifest.getCreated()));
-		}
-		/******************** documentmanifestidentifier ********************************************************************************/
-		org.hl7.fhir.r4.model.Identifier documentmanifestidentifier = documentmanifest.getIdentifierFirstRep();
-
-		/******************** DocManifest_Id_Vl ********************************************************************************/
-		if(documentmanifestidentifier.hasValue()) {
-			d.setDocManifestIdVl(String.valueOf(documentmanifestidentifier.getValue()));
-		}
-		/******************** documentmanifestidentifiertype ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept documentmanifestidentifiertype = documentmanifestidentifier.getType();
-
-		/******************** documentmanifestidentifiertypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding documentmanifestidentifiertypecoding = documentmanifestidentifiertype.getCodingFirstRep();
-
-		/******************** DocManifest_Id_Typ_Cdg_Dsply ********************************************************************************/
-		if(documentmanifestidentifiertypecoding.hasDisplay()) {
-			d.setDocManifestIdTypCdgDsply(String.valueOf(documentmanifestidentifiertypecoding.getDisplay()));
-		}
-		/******************** DocManifest_Id_Typ_Cdg_Vrsn ********************************************************************************/
-		if(documentmanifestidentifiertypecoding.hasVersion()) {
-			d.setDocManifestIdTypCdgVrsn(String.valueOf(documentmanifestidentifiertypecoding.getVersion()));
-		}
-		/******************** DocManifest_Id_Typ_Cdg_Cd ********************************************************************************/
-		if(documentmanifestidentifiertypecoding.hasCode()) {
-			d.setDocManifestIdTypCdgCd(String.valueOf(documentmanifestidentifiertypecoding.getCode()));
-		}
-		/******************** DocManifest_Id_Typ_Cdg_Sys ********************************************************************************/
-		if(documentmanifestidentifiertypecoding.hasSystem()) {
-			d.setDocManifestIdTypCdgSys(String.valueOf(documentmanifestidentifiertypecoding.getSystem()));
-		}
-		/******************** DocManifest_Id_Typ_Cdg_UsrSltd ********************************************************************************/
-		if(documentmanifestidentifiertypecoding.hasUserSelected()) {
-			d.setDocManifestIdTypCdgUsrSltd(String.valueOf(documentmanifestidentifiertypecoding.getUserSelected()));
-		}
-		/******************** DocManifest_Id_Typ_Txt ********************************************************************************/
-		if(documentmanifestidentifiertype.hasText()) {
-			d.setDocManifestIdTypTxt(String.valueOf(documentmanifestidentifiertype.getText()));
-		}
-		/******************** DocManifest_Id_Sys ********************************************************************************/
-		if(documentmanifestidentifier.hasSystem()) {
-			d.setDocManifestIdSys(String.valueOf(documentmanifestidentifier.getSystem()));
-		}
-		/******************** DocManifest_Id_Assigner ********************************************************************************/
-		if(documentmanifestidentifier.hasAssigner()) {
-			d.setDocManifestIdAssigner(String.valueOf(documentmanifestidentifier.getAssigner()));
-		}
-		/******************** documentmanifestidentifierperiod ********************************************************************************/
-		org.hl7.fhir.r4.model.Period documentmanifestidentifierperiod = documentmanifestidentifier.getPeriod();
-
-		/******************** DocManifest_Id_Prd_End ********************************************************************************/
-		if(documentmanifestidentifierperiod.hasEnd()) {
-			d.setDocManifestIdPrdEnd(String.valueOf(documentmanifestidentifierperiod.getEnd()));
-		}
-		/******************** DocManifest_Id_Prd_Strt ********************************************************************************/
-		if(documentmanifestidentifierperiod.hasStart()) {
-			d.setDocManifestIdPrdStrt(String.valueOf(documentmanifestidentifierperiod.getStart()));
-		}
-		/******************** documentmanifestidentifieruse ********************************************************************************/
-		org.hl7.fhir.r4.model.Identifier.IdentifierUse documentmanifestidentifieruse = documentmanifestidentifier.getUse();
-		d.setDocManifestIdUse(documentmanifestidentifieruse.toCode());
-
-		/******************** DocManifest_Athr ********************************************************************************/
-		if(documentmanifest.hasAuthor()) {
-			d.setDocManifestAthr(String.valueOf(documentmanifest.getAuthorFirstRep()));
-		}
-		/******************** DocManifest_Cntnt ********************************************************************************/
-		if(documentmanifest.hasContent()) {
-			d.setDocManifestCntnt(String.valueOf(documentmanifest.getContentFirstRep()));
 		}
 		/******************** documentmanifestrelated ********************************************************************************/
 		org.hl7.fhir.r4.model.DocumentManifest.DocumentManifestRelatedComponent documentmanifestrelated = documentmanifest.getRelatedFirstRep();
@@ -149,56 +77,68 @@ public class DocumentManifestBidirectionalConversion
 		/******************** documentmanifestrelatedidentifiertype ********************************************************************************/
 		org.hl7.fhir.r4.model.CodeableConcept documentmanifestrelatedidentifiertype = documentmanifestrelatedidentifier.getType();
 
+		/******************** DocManifest_Rlted_Id_Typ_Txt ********************************************************************************/
+		if(documentmanifestrelatedidentifiertype.hasText()) {
+			d.setDocManifestRltedIdTypTxt(String.valueOf(documentmanifestrelatedidentifiertype.getText()));
+		}
 		/******************** documentmanifestrelatedidentifiertypecoding ********************************************************************************/
 		org.hl7.fhir.r4.model.Coding documentmanifestrelatedidentifiertypecoding = documentmanifestrelatedidentifiertype.getCodingFirstRep();
 
-		/******************** DocManifest_Rlted_Id_Typ_Cdg_Dsply ********************************************************************************/
-		if(documentmanifestrelatedidentifiertypecoding.hasDisplay()) {
-			d.setDocManifestRltedIdTypCdgDsply(String.valueOf(documentmanifestrelatedidentifiertypecoding.getDisplay()));
-		}
 		/******************** DocManifest_Rlted_Id_Typ_Cdg_Vrsn ********************************************************************************/
 		if(documentmanifestrelatedidentifiertypecoding.hasVersion()) {
 			d.setDocManifestRltedIdTypCdgVrsn(String.valueOf(documentmanifestrelatedidentifiertypecoding.getVersion()));
+		}
+		/******************** DocManifest_Rlted_Id_Typ_Cdg_Dsply ********************************************************************************/
+		if(documentmanifestrelatedidentifiertypecoding.hasDisplay()) {
+			d.setDocManifestRltedIdTypCdgDsply(String.valueOf(documentmanifestrelatedidentifiertypecoding.getDisplay()));
 		}
 		/******************** DocManifest_Rlted_Id_Typ_Cdg_Cd ********************************************************************************/
 		if(documentmanifestrelatedidentifiertypecoding.hasCode()) {
 			d.setDocManifestRltedIdTypCdgCd(String.valueOf(documentmanifestrelatedidentifiertypecoding.getCode()));
 		}
-		/******************** DocManifest_Rlted_Id_Typ_Cdg_Sys ********************************************************************************/
-		if(documentmanifestrelatedidentifiertypecoding.hasSystem()) {
-			d.setDocManifestRltedIdTypCdgSys(String.valueOf(documentmanifestrelatedidentifiertypecoding.getSystem()));
-		}
 		/******************** DocManifest_Rlted_Id_Typ_Cdg_UsrSltd ********************************************************************************/
 		if(documentmanifestrelatedidentifiertypecoding.hasUserSelected()) {
 			d.setDocManifestRltedIdTypCdgUsrSltd(String.valueOf(documentmanifestrelatedidentifiertypecoding.getUserSelected()));
 		}
-		/******************** DocManifest_Rlted_Id_Typ_Txt ********************************************************************************/
-		if(documentmanifestrelatedidentifiertype.hasText()) {
-			d.setDocManifestRltedIdTypTxt(String.valueOf(documentmanifestrelatedidentifiertype.getText()));
+		/******************** DocManifest_Rlted_Id_Typ_Cdg_Sys ********************************************************************************/
+		if(documentmanifestrelatedidentifiertypecoding.hasSystem()) {
+			d.setDocManifestRltedIdTypCdgSys(String.valueOf(documentmanifestrelatedidentifiertypecoding.getSystem()));
 		}
-		/******************** DocManifest_Rlted_Id_Sys ********************************************************************************/
-		if(documentmanifestrelatedidentifier.hasSystem()) {
-			d.setDocManifestRltedIdSys(String.valueOf(documentmanifestrelatedidentifier.getSystem()));
+		/******************** documentmanifestrelatedidentifierperiod ********************************************************************************/
+		org.hl7.fhir.r4.model.Period documentmanifestrelatedidentifierperiod = documentmanifestrelatedidentifier.getPeriod();
+
+		/******************** DocManifest_Rlted_Id_Prd_Strt ********************************************************************************/
+		if(documentmanifestrelatedidentifierperiod.hasStart()) {
+			d.setDocManifestRltedIdPrdStrt(String.valueOf(documentmanifestrelatedidentifierperiod.getStart()));
+		}
+		/******************** DocManifest_Rlted_Id_Prd_End ********************************************************************************/
+		if(documentmanifestrelatedidentifierperiod.hasEnd()) {
+			d.setDocManifestRltedIdPrdEnd(String.valueOf(documentmanifestrelatedidentifierperiod.getEnd()));
 		}
 		/******************** DocManifest_Rlted_Id_Assigner ********************************************************************************/
 		if(documentmanifestrelatedidentifier.hasAssigner()) {
 			d.setDocManifestRltedIdAssigner(String.valueOf(documentmanifestrelatedidentifier.getAssigner()));
 		}
-		/******************** documentmanifestrelatedidentifierperiod ********************************************************************************/
-		org.hl7.fhir.r4.model.Period documentmanifestrelatedidentifierperiod = documentmanifestrelatedidentifier.getPeriod();
-
-		/******************** DocManifest_Rlted_Id_Prd_End ********************************************************************************/
-		if(documentmanifestrelatedidentifierperiod.hasEnd()) {
-			d.setDocManifestRltedIdPrdEnd(String.valueOf(documentmanifestrelatedidentifierperiod.getEnd()));
-		}
-		/******************** DocManifest_Rlted_Id_Prd_Strt ********************************************************************************/
-		if(documentmanifestrelatedidentifierperiod.hasStart()) {
-			d.setDocManifestRltedIdPrdStrt(String.valueOf(documentmanifestrelatedidentifierperiod.getStart()));
+		/******************** DocManifest_Rlted_Id_Sys ********************************************************************************/
+		if(documentmanifestrelatedidentifier.hasSystem()) {
+			d.setDocManifestRltedIdSys(String.valueOf(documentmanifestrelatedidentifier.getSystem()));
 		}
 		/******************** documentmanifestrelatedidentifieruse ********************************************************************************/
 		org.hl7.fhir.r4.model.Identifier.IdentifierUse documentmanifestrelatedidentifieruse = documentmanifestrelatedidentifier.getUse();
 		d.setDocManifestRltedIdUse(documentmanifestrelatedidentifieruse.toCode());
 
+		/******************** DocManifest_Recipient ********************************************************************************/
+		if(documentmanifest.hasRecipient()) {
+			d.setDocManifestRecipient(String.valueOf(documentmanifest.getRecipientFirstRep()));
+		}
+		/******************** DocManifest_Athr ********************************************************************************/
+		if(documentmanifest.hasAuthor()) {
+			d.setDocManifestAthr(String.valueOf(documentmanifest.getAuthorFirstRep()));
+		}
+		/******************** DocManifest_Cntnt ********************************************************************************/
+		if(documentmanifest.hasContent()) {
+			d.setDocManifestCntnt(String.valueOf(documentmanifest.getContentFirstRep()));
+		}
 		/******************** documentmanifestmasteridentifier ********************************************************************************/
 		org.hl7.fhir.r4.model.Identifier documentmanifestmasteridentifier = documentmanifest.getMasterIdentifier();
 
@@ -209,55 +149,115 @@ public class DocumentManifestBidirectionalConversion
 		/******************** documentmanifestmasteridentifiertype ********************************************************************************/
 		org.hl7.fhir.r4.model.CodeableConcept documentmanifestmasteridentifiertype = documentmanifestmasteridentifier.getType();
 
+		/******************** DocManifest_MasterId_Typ_Txt ********************************************************************************/
+		if(documentmanifestmasteridentifiertype.hasText()) {
+			d.setDocManifestMasterIdTypTxt(String.valueOf(documentmanifestmasteridentifiertype.getText()));
+		}
 		/******************** documentmanifestmasteridentifiertypecoding ********************************************************************************/
 		org.hl7.fhir.r4.model.Coding documentmanifestmasteridentifiertypecoding = documentmanifestmasteridentifiertype.getCodingFirstRep();
 
-		/******************** DocManifest_MasterId_Typ_Cdg_Dsply ********************************************************************************/
-		if(documentmanifestmasteridentifiertypecoding.hasDisplay()) {
-			d.setDocManifestMasterIdTypCdgDsply(String.valueOf(documentmanifestmasteridentifiertypecoding.getDisplay()));
-		}
 		/******************** DocManifest_MasterId_Typ_Cdg_Vrsn ********************************************************************************/
 		if(documentmanifestmasteridentifiertypecoding.hasVersion()) {
 			d.setDocManifestMasterIdTypCdgVrsn(String.valueOf(documentmanifestmasteridentifiertypecoding.getVersion()));
+		}
+		/******************** DocManifest_MasterId_Typ_Cdg_Dsply ********************************************************************************/
+		if(documentmanifestmasteridentifiertypecoding.hasDisplay()) {
+			d.setDocManifestMasterIdTypCdgDsply(String.valueOf(documentmanifestmasteridentifiertypecoding.getDisplay()));
 		}
 		/******************** DocManifest_MasterId_Typ_Cdg_Cd ********************************************************************************/
 		if(documentmanifestmasteridentifiertypecoding.hasCode()) {
 			d.setDocManifestMasterIdTypCdgCd(String.valueOf(documentmanifestmasteridentifiertypecoding.getCode()));
 		}
-		/******************** DocManifest_MasterId_Typ_Cdg_Sys ********************************************************************************/
-		if(documentmanifestmasteridentifiertypecoding.hasSystem()) {
-			d.setDocManifestMasterIdTypCdgSys(String.valueOf(documentmanifestmasteridentifiertypecoding.getSystem()));
-		}
 		/******************** DocManifest_MasterId_Typ_Cdg_UsrSltd ********************************************************************************/
 		if(documentmanifestmasteridentifiertypecoding.hasUserSelected()) {
 			d.setDocManifestMasterIdTypCdgUsrSltd(String.valueOf(documentmanifestmasteridentifiertypecoding.getUserSelected()));
 		}
-		/******************** DocManifest_MasterId_Typ_Txt ********************************************************************************/
-		if(documentmanifestmasteridentifiertype.hasText()) {
-			d.setDocManifestMasterIdTypTxt(String.valueOf(documentmanifestmasteridentifiertype.getText()));
+		/******************** DocManifest_MasterId_Typ_Cdg_Sys ********************************************************************************/
+		if(documentmanifestmasteridentifiertypecoding.hasSystem()) {
+			d.setDocManifestMasterIdTypCdgSys(String.valueOf(documentmanifestmasteridentifiertypecoding.getSystem()));
 		}
-		/******************** DocManifest_MasterId_Sys ********************************************************************************/
-		if(documentmanifestmasteridentifier.hasSystem()) {
-			d.setDocManifestMasterIdSys(String.valueOf(documentmanifestmasteridentifier.getSystem()));
+		/******************** documentmanifestmasteridentifierperiod ********************************************************************************/
+		org.hl7.fhir.r4.model.Period documentmanifestmasteridentifierperiod = documentmanifestmasteridentifier.getPeriod();
+
+		/******************** DocManifest_MasterId_Prd_Strt ********************************************************************************/
+		if(documentmanifestmasteridentifierperiod.hasStart()) {
+			d.setDocManifestMasterIdPrdStrt(String.valueOf(documentmanifestmasteridentifierperiod.getStart()));
+		}
+		/******************** DocManifest_MasterId_Prd_End ********************************************************************************/
+		if(documentmanifestmasteridentifierperiod.hasEnd()) {
+			d.setDocManifestMasterIdPrdEnd(String.valueOf(documentmanifestmasteridentifierperiod.getEnd()));
 		}
 		/******************** DocManifest_MasterId_Assigner ********************************************************************************/
 		if(documentmanifestmasteridentifier.hasAssigner()) {
 			d.setDocManifestMasterIdAssigner(String.valueOf(documentmanifestmasteridentifier.getAssigner()));
 		}
-		/******************** documentmanifestmasteridentifierperiod ********************************************************************************/
-		org.hl7.fhir.r4.model.Period documentmanifestmasteridentifierperiod = documentmanifestmasteridentifier.getPeriod();
-
-		/******************** DocManifest_MasterId_Prd_End ********************************************************************************/
-		if(documentmanifestmasteridentifierperiod.hasEnd()) {
-			d.setDocManifestMasterIdPrdEnd(String.valueOf(documentmanifestmasteridentifierperiod.getEnd()));
-		}
-		/******************** DocManifest_MasterId_Prd_Strt ********************************************************************************/
-		if(documentmanifestmasteridentifierperiod.hasStart()) {
-			d.setDocManifestMasterIdPrdStrt(String.valueOf(documentmanifestmasteridentifierperiod.getStart()));
+		/******************** DocManifest_MasterId_Sys ********************************************************************************/
+		if(documentmanifestmasteridentifier.hasSystem()) {
+			d.setDocManifestMasterIdSys(String.valueOf(documentmanifestmasteridentifier.getSystem()));
 		}
 		/******************** documentmanifestmasteridentifieruse ********************************************************************************/
 		org.hl7.fhir.r4.model.Identifier.IdentifierUse documentmanifestmasteridentifieruse = documentmanifestmasteridentifier.getUse();
 		d.setDocManifestMasterIdUse(documentmanifestmasteridentifieruse.toCode());
+
+		/******************** documentmanifestidentifier ********************************************************************************/
+		org.hl7.fhir.r4.model.Identifier documentmanifestidentifier = documentmanifest.getIdentifierFirstRep();
+
+		/******************** DocManifest_Id_Vl ********************************************************************************/
+		if(documentmanifestidentifier.hasValue()) {
+			d.setDocManifestIdVl(String.valueOf(documentmanifestidentifier.getValue()));
+		}
+		/******************** documentmanifestidentifiertype ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept documentmanifestidentifiertype = documentmanifestidentifier.getType();
+
+		/******************** DocManifest_Id_Typ_Txt ********************************************************************************/
+		if(documentmanifestidentifiertype.hasText()) {
+			d.setDocManifestIdTypTxt(String.valueOf(documentmanifestidentifiertype.getText()));
+		}
+		/******************** documentmanifestidentifiertypecoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding documentmanifestidentifiertypecoding = documentmanifestidentifiertype.getCodingFirstRep();
+
+		/******************** DocManifest_Id_Typ_Cdg_Vrsn ********************************************************************************/
+		if(documentmanifestidentifiertypecoding.hasVersion()) {
+			d.setDocManifestIdTypCdgVrsn(String.valueOf(documentmanifestidentifiertypecoding.getVersion()));
+		}
+		/******************** DocManifest_Id_Typ_Cdg_Dsply ********************************************************************************/
+		if(documentmanifestidentifiertypecoding.hasDisplay()) {
+			d.setDocManifestIdTypCdgDsply(String.valueOf(documentmanifestidentifiertypecoding.getDisplay()));
+		}
+		/******************** DocManifest_Id_Typ_Cdg_Cd ********************************************************************************/
+		if(documentmanifestidentifiertypecoding.hasCode()) {
+			d.setDocManifestIdTypCdgCd(String.valueOf(documentmanifestidentifiertypecoding.getCode()));
+		}
+		/******************** DocManifest_Id_Typ_Cdg_UsrSltd ********************************************************************************/
+		if(documentmanifestidentifiertypecoding.hasUserSelected()) {
+			d.setDocManifestIdTypCdgUsrSltd(String.valueOf(documentmanifestidentifiertypecoding.getUserSelected()));
+		}
+		/******************** DocManifest_Id_Typ_Cdg_Sys ********************************************************************************/
+		if(documentmanifestidentifiertypecoding.hasSystem()) {
+			d.setDocManifestIdTypCdgSys(String.valueOf(documentmanifestidentifiertypecoding.getSystem()));
+		}
+		/******************** documentmanifestidentifierperiod ********************************************************************************/
+		org.hl7.fhir.r4.model.Period documentmanifestidentifierperiod = documentmanifestidentifier.getPeriod();
+
+		/******************** DocManifest_Id_Prd_Strt ********************************************************************************/
+		if(documentmanifestidentifierperiod.hasStart()) {
+			d.setDocManifestIdPrdStrt(String.valueOf(documentmanifestidentifierperiod.getStart()));
+		}
+		/******************** DocManifest_Id_Prd_End ********************************************************************************/
+		if(documentmanifestidentifierperiod.hasEnd()) {
+			d.setDocManifestIdPrdEnd(String.valueOf(documentmanifestidentifierperiod.getEnd()));
+		}
+		/******************** DocManifest_Id_Assigner ********************************************************************************/
+		if(documentmanifestidentifier.hasAssigner()) {
+			d.setDocManifestIdAssigner(String.valueOf(documentmanifestidentifier.getAssigner()));
+		}
+		/******************** DocManifest_Id_Sys ********************************************************************************/
+		if(documentmanifestidentifier.hasSystem()) {
+			d.setDocManifestIdSys(String.valueOf(documentmanifestidentifier.getSystem()));
+		}
+		/******************** documentmanifestidentifieruse ********************************************************************************/
+		org.hl7.fhir.r4.model.Identifier.IdentifierUse documentmanifestidentifieruse = documentmanifestidentifier.getUse();
+		d.setDocManifestIdUse(documentmanifestidentifieruse.toCode());
 
 		return d;
 	}

@@ -63,7 +63,7 @@ class CreateConversionCode
 
          	//            Set<Method> getters = ReflectionUtils.getAllMethods(cls,ReflectionUtils.withModifier(Modifier.PUBLIC), ReflectionUtils.withPrefix("get"));
          	//get all add methods with one parameters, with a return type of the fhir model class that we are in
-         	if(!className.equals("examplescenario") & !className.equals("structuremap") & !className.equals("graphdefinition") & !className.equals("implementationguide")) {
+         	if(!className.equals("examplescenario") & !className.equals("structuremap") & !className.equals("graphdefinition") & !className.equals("implementationguide") & !className.equals("metadataresource")) {
          		//writing head of conversion file
          		 conversionWriter.write("package main.java.com.campfhir.service.conversion;");
                  conversionWriter.write(System.lineSeparator());
@@ -177,25 +177,40 @@ class CreateConversionCode
 	 					conversionWriter.write("\t\t/******************** "+ newMethodNameToChainOffOf+" ********************************************************************************/");
 
 		 				conversionWriter.write(System.lineSeparator());
-		 				conversionWriter.write("\t\t"+returnType  + " "+newMethodNameToChainOffOf+" =  new " + returnType+ "();"); // currentMethod, cls, hibernateFieldName, parentMethod, conversionWriter, sqlWriter);
+		 				conversionWriter.write("\t\t"+returnType  + " "+newMethodNameToChainOffOf.replace("_", "")+" =  new " + returnType+ "();"); // currentMethod, cls, hibernateFieldName, parentMethod, conversionWriter, sqlWriter);
 		 	 			conversionWriter.write(System.lineSeparator());
 		 	 			//if enum factory then add fromCode to the code otherwise use the default 
 		 	 			if(returnType.contains("EnumFactory")) { //java.lang.Character.toLowerCase(hibernateFieldName.charAt(0)) + ".get" + newhibernateFieldName.replace("_", "") + "()"
-		 	 				conversionWriter.write("\t\t" + hibernateFieldName.toLowerCase().replace("_", "") + "." + currentMethod.getName() + "("+newMethodNameToChainOffOf+".fromCode(" +java.lang.Character.toLowerCase(hibernateFieldName.charAt(0)) + ".get" + replaceTermsWithAbbreviations(hibernateFieldName.replace("_","") +currentMethod.getName().replace("set","").replace("add","").replace("get", "").replace("_","")) +"())"+");\n"); // currentMethod, cls, hibernateFieldName, parentMethod, conversionWriter, sqlWriter);
+		 	 				conversionWriter.write("\t\t" + hibernateFieldName.toLowerCase().replace("_", "") + "." + currentMethod.getName() + "("+newMethodNameToChainOffOf+".fromCode(" +java.lang.Character.toLowerCase(hibernateFieldName.charAt(0)) + ".get" + replaceTermsWithAbbreviations(hibernateFieldName.replace("_","") +currentMethod.getName().replaceFirst("set","").replaceFirst("add","").replaceFirst("get", "").replace("_","")) +"())"+");\n"); // currentMethod, cls, hibernateFieldName, parentMethod, conversionWriter, sqlWriter);
 		 	 				sqlWriter.write(replaceTermsWithAbbreviations(hibernateFieldName+"_"+currentMethod.getName().replace("set","").replace("add","").replace("get", "")) + " TEXT,\r\n");
 		 	 			} else {
-		 	 				conversionWriter.write("\t\t" + hibernateFieldName.toLowerCase().replace("_", "") + "." + (!XmethodName.equals("DO NOT MATCH") ? XmethodName.replace("get", "set") : currentMethod.getName()) + "("+newMethodNameToChainOffOf+");\n"); // currentMethod, cls, hibernateFieldName, parentMethod, conversionWriter, sqlWriter);
+		 	 				conversionWriter.write("\t\t" + hibernateFieldName.toLowerCase().replace("_", "") + "." + (!XmethodName.equals("DO NOT MATCH") ? XmethodName.replaceFirst("get", "set").replace("Base64Binary", "Base64binary").replace("_", "") : currentMethod.getName().replace("Base64Binary", "Base64binary") ) + "("+newMethodNameToChainOffOf.replace("_", "")+");\n"); // currentMethod, cls, hibernateFieldName, parentMethod, conversionWriter, sqlWriter);
 		 	 			}
 		 				conversionWriter.write(System.lineSeparator());
 	 				}
  				
 	 				//if the parameter is a model that needs to be recursed then send the parameter class
+	 				
 	 				if(!parameterIsNotAModelThatNeedsToBeRecursed) {
-		 				if(!parameterClass.getName().equals("org.hl7.fhir.r4.model.Reference")) { recurseThroughClasses(parameterClass, hibernateFieldName , currentMethod, conversionWriter,  sqlWriter); }
+		 				if(!parameterClass.getName().equals("org.hl7.fhir.r4.model.Reference")) {
+		 					if((parameterClass.getName().contains(".Age") |parameterClass.getName().contains(".Count")|parameterClass.getName().contains(".Duration"))) {
+		 						org.hl7.fhir.r4.model.Quantity quant = new org.hl7.fhir.r4.model.Quantity();
+			 					recurseThroughClasses(quant.getClass(), hibernateFieldName, currentMethod,  conversionWriter,  sqlWriter); 
+			 				} else {
+			 					recurseThroughClasses(parameterClass, hibernateFieldName , currentMethod, conversionWriter,  sqlWriter); 
+			 				}
+		 				}
 	 				}
 	 				//otherwise send the return type into the 
 	 				else {// if(returncls != null && returncls.getPackageName().equals("org.hl7.fhir.r4.model") && !returncls.getName().equals("org.hl7.fhir.r4.model.Type")) {
-		 				if(!returncls.getName().equals("org.hl7.fhir.r4.model.Reference")) { recurseThroughClasses(returncls, hibernateFieldName, currentMethod,  conversionWriter,  sqlWriter); }
+		 				if(!returncls.getName().equals("org.hl7.fhir.r4.model.Reference")) { 
+		 					if((returncls.getName().contains(".Age") |returncls.getName().contains(".Count")|returncls.getName().contains(".Duration"))) {
+		 						org.hl7.fhir.r4.model.Quantity quant = new org.hl7.fhir.r4.model.Quantity();
+			 					recurseThroughClasses(quant.getClass(), hibernateFieldName, currentMethod,  conversionWriter,  sqlWriter); 
+			 				} else {
+			 					recurseThroughClasses(returncls, hibernateFieldName, currentMethod,  conversionWriter,  sqlWriter); 
+			 				}
+			 			}
 		 			}
  			}
  		 }
@@ -204,7 +219,7 @@ class CreateConversionCode
     
     public static void writeMethodToFiles(Method currentMethod, Class parentClass , String hibernateFieldName, String XmethodName, Method  parentMethod, FileWriter conversionWriter, FileWriter sqlWriter) throws IOException {
     		//carries over the methodName if the current method deals with an X typed field
-    		String methodName =  !XmethodName.equals("DO NOT MATCH") ? XmethodName.replace("get", "set") : currentMethod.getName();
+    		String methodName =  !XmethodName.equals("DO NOT MATCH") ? XmethodName.replaceFirst("get", "set") : currentMethod.getName();
     		
 			//System.out.println(currentMethod.toString());
 			String classname = parentClass.getName().split("\\.")[parentClass.getName().split("\\.").length -1];
@@ -214,7 +229,7 @@ class CreateConversionCode
 			//String parameterType =  currentMethod.getParameters().length > 0 ? currentMethod.getParameters()[0].getType().getName().toString() : "";
 			String parameterType =  XmethodName.equals("DO NOT MATCH") ? currentMethod.getParameters().length > 0 ? currentMethod.getParameters()[0].getType().getName().toString() : "" : currentMethod.getReturnType().getName() ;
 
-			String hibernateGetterName = java.lang.Character.toLowerCase(hibernateFieldName.charAt(0)) + ".get" + newhibernateFieldName.replace("_", "") + "()";
+			String hibernateGetterName = java.lang.Character.toLowerCase(hibernateFieldName.charAt(0)) + ".get" + newhibernateFieldName.replace("_", "").replace("Base64Binary", "Base64binary").replace("US", "Us")  + "()";
 			hibernateGetterName = replaceTermsWithAbbreviations(hibernateGetterName);
 			
 			conversionWriter.write("\t\t/******************** "+ newhibernateFieldName+" ********************************************************************************/");
@@ -235,10 +250,12 @@ class CreateConversionCode
     		} else if(parameterType.equals("[B")) {
     			conversionWriter.write("\t\t\t"+newMethodNameToChainOffOf + "." + methodName + "Element(new org.hl7.fhir.r4.model.Base64BinaryType("+hibernateGetterName+"));" );
     		}
-    		else if(parameterType.equals( "java.math.BigDecimal") | parameterType.equals("double") | parameterType.equals("long")) {
+    		else if( parameterType.equals("double") | parameterType.equals("long")) {
     			
     			conversionWriter.write("\t\t\t"+newMethodNameToChainOffOf + "." + methodName + "(Double.parseDouble(("+hibernateGetterName+")));" );
-    		} else if(parameterType.equals("org.hl7.fhir.r4.model.Duration") ) {
+    		} else if (parameterType.equals( "java.math.BigDecimal") ) {
+    			conversionWriter.write("\t\t\t"+newMethodNameToChainOffOf + "." + methodName + "(new java.math.BigDecimal(("+hibernateGetterName+")));" );
+    		}else if(parameterType.equals("org.hl7.fhir.r4.model.Duration") ) {
     			conversionWriter.write("\t\t\torg.hl7.fhir.r4.model.Duration " + methodName+"dur = new org.hl7.fhir.r4.model.Duration();");
     			conversionWriter.write(System.lineSeparator());
     			conversionWriter.write("\t\t\t"+newMethodNameToChainOffOf + "." + methodName + "((org.hl7.fhir.r4.model.Duration)"+ methodName+"dur.setValue(Double.parseDouble(" +hibernateGetterName+")));" );
@@ -347,6 +364,10 @@ class CreateConversionCode
      	for (Method method : getMultiTypeMethods) {
      	    String nameOfMethod = "get" + method.getName().replaceFirst("set", "").replaceFirst("add", "");
          	Set<Method> getTypesForMethods = ReflectionUtils.getMethods(cls,ReflectionUtils.withModifier(Modifier.PUBLIC), ReflectionUtils.withPrefix(nameOfMethod), ReflectionUtils.withParametersCount(0));
+         	Set<Method> removegetElementSetters = ReflectionUtils.getMethods(cls,ReflectionUtils.withModifier(Modifier.PUBLIC), ReflectionUtils.withPrefix(nameOfMethod), ReflectionUtils.withParametersCount(0), ReflectionUtils.withPattern(".*[.]{1}set.*Element\\(.*"));
+         	Set<Method> removegetTargetSetters = ReflectionUtils.getMethods(cls,ReflectionUtils.withModifier(Modifier.PUBLIC), ReflectionUtils.withPrefix(nameOfMethod), ReflectionUtils.withParametersCount(0), ReflectionUtils.withPattern(".*[.]{1}set.*Target\\(.*"));
+         	allSetters.removeAll(removegetElementSetters);
+         	allSetters.removeAll(removegetTargetSetters);
          	allSetters.addAll(getTypesForMethods);
      	}
      	

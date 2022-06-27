@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Jun 6, 2022, 11:02:30 AM by Hibernate Tools 5.6.1.Final
+// Generated Jun 27, 2022, 10:40:10 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -45,6 +45,11 @@ public class RequestGroup  implements java.io.Serializable {
      private String rqstGrpActnPrefix;
      private String rqstGrpActnPriority;
      private String rqstGrpActnRltedActnActnId;
+     private String rqstGrpActnRltedActnOffDurationCd;
+     private String rqstGrpActnRltedActnOffDurationCmprtr;
+     private String rqstGrpActnRltedActnOffDurationSys;
+     private String rqstGrpActnRltedActnOffDurationUnt;
+     private String rqstGrpActnRltedActnOffDurationVl;
      private String rqstGrpActnRltedActnOffRngHiCd;
      private String rqstGrpActnRltedActnOffRngHiCmprtr;
      private String rqstGrpActnRltedActnOffRngHiSys;
@@ -60,7 +65,17 @@ public class RequestGroup  implements java.io.Serializable {
      private String rqstGrpActnRsrc;
      private String rqstGrpActnSelectionBehavior;
      private String rqstGrpActnTxtEquivalent;
+     private String rqstGrpActnTmgAgeCd;
+     private String rqstGrpActnTmgAgeCmprtr;
+     private String rqstGrpActnTmgAgeSys;
+     private String rqstGrpActnTmgAgeUnt;
+     private String rqstGrpActnTmgAgeVl;
      private String rqstGrpActnTmgDtTimeTyp;
+     private String rqstGrpActnTmgDurationCd;
+     private String rqstGrpActnTmgDurationCmprtr;
+     private String rqstGrpActnTmgDurationSys;
+     private String rqstGrpActnTmgDurationUnt;
+     private String rqstGrpActnTmgDurationVl;
      private String rqstGrpActnTmgPrdEnd;
      private String rqstGrpActnTmgPrdStrt;
      private String rqstGrpActnTmgRngHiCd;
@@ -80,6 +95,11 @@ public class RequestGroup  implements java.io.Serializable {
      private String rqstGrpActnTmgTmgCdCdgVrsn;
      private String rqstGrpActnTmgTmgCdTxt;
      private String rqstGrpActnTmgTmgEvnt;
+     private String rqstGrpActnTmgTmgRptBndsDurationCd;
+     private String rqstGrpActnTmgTmgRptBndsDurationCmprtr;
+     private String rqstGrpActnTmgTmgRptBndsDurationSys;
+     private String rqstGrpActnTmgTmgRptBndsDurationUnt;
+     private String rqstGrpActnTmgTmgRptBndsDurationVl;
      private String rqstGrpActnTmgTmgRptBndsPrdEnd;
      private String rqstGrpActnTmgTmgRptBndsPrdStrt;
      private String rqstGrpActnTmgTmgRptBndsRngHiCd;
@@ -520,6 +540,56 @@ public class RequestGroup  implements java.io.Serializable {
     
     
     
+    public String getRqstGrpActnRltedActnOffDurationCd() {
+        return this.rqstGrpActnRltedActnOffDurationCd;
+    }
+    
+    public void setRqstGrpActnRltedActnOffDurationCd(String rqstGrpActnRltedActnOffDurationCd) {
+        this.rqstGrpActnRltedActnOffDurationCd = rqstGrpActnRltedActnOffDurationCd;
+    }
+    
+    
+    
+    public String getRqstGrpActnRltedActnOffDurationCmprtr() {
+        return this.rqstGrpActnRltedActnOffDurationCmprtr;
+    }
+    
+    public void setRqstGrpActnRltedActnOffDurationCmprtr(String rqstGrpActnRltedActnOffDurationCmprtr) {
+        this.rqstGrpActnRltedActnOffDurationCmprtr = rqstGrpActnRltedActnOffDurationCmprtr;
+    }
+    
+    
+    
+    public String getRqstGrpActnRltedActnOffDurationSys() {
+        return this.rqstGrpActnRltedActnOffDurationSys;
+    }
+    
+    public void setRqstGrpActnRltedActnOffDurationSys(String rqstGrpActnRltedActnOffDurationSys) {
+        this.rqstGrpActnRltedActnOffDurationSys = rqstGrpActnRltedActnOffDurationSys;
+    }
+    
+    
+    
+    public String getRqstGrpActnRltedActnOffDurationUnt() {
+        return this.rqstGrpActnRltedActnOffDurationUnt;
+    }
+    
+    public void setRqstGrpActnRltedActnOffDurationUnt(String rqstGrpActnRltedActnOffDurationUnt) {
+        this.rqstGrpActnRltedActnOffDurationUnt = rqstGrpActnRltedActnOffDurationUnt;
+    }
+    
+    
+    
+    public String getRqstGrpActnRltedActnOffDurationVl() {
+        return this.rqstGrpActnRltedActnOffDurationVl;
+    }
+    
+    public void setRqstGrpActnRltedActnOffDurationVl(String rqstGrpActnRltedActnOffDurationVl) {
+        this.rqstGrpActnRltedActnOffDurationVl = rqstGrpActnRltedActnOffDurationVl;
+    }
+    
+    
+    
     public String getRqstGrpActnRltedActnOffRngHiCd() {
         return this.rqstGrpActnRltedActnOffRngHiCd;
     }
@@ -670,12 +740,112 @@ public class RequestGroup  implements java.io.Serializable {
     
     
     
+    public String getRqstGrpActnTmgAgeCd() {
+        return this.rqstGrpActnTmgAgeCd;
+    }
+    
+    public void setRqstGrpActnTmgAgeCd(String rqstGrpActnTmgAgeCd) {
+        this.rqstGrpActnTmgAgeCd = rqstGrpActnTmgAgeCd;
+    }
+    
+    
+    
+    public String getRqstGrpActnTmgAgeCmprtr() {
+        return this.rqstGrpActnTmgAgeCmprtr;
+    }
+    
+    public void setRqstGrpActnTmgAgeCmprtr(String rqstGrpActnTmgAgeCmprtr) {
+        this.rqstGrpActnTmgAgeCmprtr = rqstGrpActnTmgAgeCmprtr;
+    }
+    
+    
+    
+    public String getRqstGrpActnTmgAgeSys() {
+        return this.rqstGrpActnTmgAgeSys;
+    }
+    
+    public void setRqstGrpActnTmgAgeSys(String rqstGrpActnTmgAgeSys) {
+        this.rqstGrpActnTmgAgeSys = rqstGrpActnTmgAgeSys;
+    }
+    
+    
+    
+    public String getRqstGrpActnTmgAgeUnt() {
+        return this.rqstGrpActnTmgAgeUnt;
+    }
+    
+    public void setRqstGrpActnTmgAgeUnt(String rqstGrpActnTmgAgeUnt) {
+        this.rqstGrpActnTmgAgeUnt = rqstGrpActnTmgAgeUnt;
+    }
+    
+    
+    
+    public String getRqstGrpActnTmgAgeVl() {
+        return this.rqstGrpActnTmgAgeVl;
+    }
+    
+    public void setRqstGrpActnTmgAgeVl(String rqstGrpActnTmgAgeVl) {
+        this.rqstGrpActnTmgAgeVl = rqstGrpActnTmgAgeVl;
+    }
+    
+    
+    
     public String getRqstGrpActnTmgDtTimeTyp() {
         return this.rqstGrpActnTmgDtTimeTyp;
     }
     
     public void setRqstGrpActnTmgDtTimeTyp(String rqstGrpActnTmgDtTimeTyp) {
         this.rqstGrpActnTmgDtTimeTyp = rqstGrpActnTmgDtTimeTyp;
+    }
+    
+    
+    
+    public String getRqstGrpActnTmgDurationCd() {
+        return this.rqstGrpActnTmgDurationCd;
+    }
+    
+    public void setRqstGrpActnTmgDurationCd(String rqstGrpActnTmgDurationCd) {
+        this.rqstGrpActnTmgDurationCd = rqstGrpActnTmgDurationCd;
+    }
+    
+    
+    
+    public String getRqstGrpActnTmgDurationCmprtr() {
+        return this.rqstGrpActnTmgDurationCmprtr;
+    }
+    
+    public void setRqstGrpActnTmgDurationCmprtr(String rqstGrpActnTmgDurationCmprtr) {
+        this.rqstGrpActnTmgDurationCmprtr = rqstGrpActnTmgDurationCmprtr;
+    }
+    
+    
+    
+    public String getRqstGrpActnTmgDurationSys() {
+        return this.rqstGrpActnTmgDurationSys;
+    }
+    
+    public void setRqstGrpActnTmgDurationSys(String rqstGrpActnTmgDurationSys) {
+        this.rqstGrpActnTmgDurationSys = rqstGrpActnTmgDurationSys;
+    }
+    
+    
+    
+    public String getRqstGrpActnTmgDurationUnt() {
+        return this.rqstGrpActnTmgDurationUnt;
+    }
+    
+    public void setRqstGrpActnTmgDurationUnt(String rqstGrpActnTmgDurationUnt) {
+        this.rqstGrpActnTmgDurationUnt = rqstGrpActnTmgDurationUnt;
+    }
+    
+    
+    
+    public String getRqstGrpActnTmgDurationVl() {
+        return this.rqstGrpActnTmgDurationVl;
+    }
+    
+    public void setRqstGrpActnTmgDurationVl(String rqstGrpActnTmgDurationVl) {
+        this.rqstGrpActnTmgDurationVl = rqstGrpActnTmgDurationVl;
     }
     
     
@@ -866,6 +1036,56 @@ public class RequestGroup  implements java.io.Serializable {
     
     public void setRqstGrpActnTmgTmgEvnt(String rqstGrpActnTmgTmgEvnt) {
         this.rqstGrpActnTmgTmgEvnt = rqstGrpActnTmgTmgEvnt;
+    }
+    
+    
+    
+    public String getRqstGrpActnTmgTmgRptBndsDurationCd() {
+        return this.rqstGrpActnTmgTmgRptBndsDurationCd;
+    }
+    
+    public void setRqstGrpActnTmgTmgRptBndsDurationCd(String rqstGrpActnTmgTmgRptBndsDurationCd) {
+        this.rqstGrpActnTmgTmgRptBndsDurationCd = rqstGrpActnTmgTmgRptBndsDurationCd;
+    }
+    
+    
+    
+    public String getRqstGrpActnTmgTmgRptBndsDurationCmprtr() {
+        return this.rqstGrpActnTmgTmgRptBndsDurationCmprtr;
+    }
+    
+    public void setRqstGrpActnTmgTmgRptBndsDurationCmprtr(String rqstGrpActnTmgTmgRptBndsDurationCmprtr) {
+        this.rqstGrpActnTmgTmgRptBndsDurationCmprtr = rqstGrpActnTmgTmgRptBndsDurationCmprtr;
+    }
+    
+    
+    
+    public String getRqstGrpActnTmgTmgRptBndsDurationSys() {
+        return this.rqstGrpActnTmgTmgRptBndsDurationSys;
+    }
+    
+    public void setRqstGrpActnTmgTmgRptBndsDurationSys(String rqstGrpActnTmgTmgRptBndsDurationSys) {
+        this.rqstGrpActnTmgTmgRptBndsDurationSys = rqstGrpActnTmgTmgRptBndsDurationSys;
+    }
+    
+    
+    
+    public String getRqstGrpActnTmgTmgRptBndsDurationUnt() {
+        return this.rqstGrpActnTmgTmgRptBndsDurationUnt;
+    }
+    
+    public void setRqstGrpActnTmgTmgRptBndsDurationUnt(String rqstGrpActnTmgTmgRptBndsDurationUnt) {
+        this.rqstGrpActnTmgTmgRptBndsDurationUnt = rqstGrpActnTmgTmgRptBndsDurationUnt;
+    }
+    
+    
+    
+    public String getRqstGrpActnTmgTmgRptBndsDurationVl() {
+        return this.rqstGrpActnTmgTmgRptBndsDurationVl;
+    }
+    
+    public void setRqstGrpActnTmgTmgRptBndsDurationVl(String rqstGrpActnTmgTmgRptBndsDurationVl) {
+        this.rqstGrpActnTmgTmgRptBndsDurationVl = rqstGrpActnTmgTmgRptBndsDurationVl;
     }
     
     

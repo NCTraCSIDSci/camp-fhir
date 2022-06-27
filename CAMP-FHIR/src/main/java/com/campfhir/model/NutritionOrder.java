@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Jun 6, 2022, 11:02:30 AM by Hibernate Tools 5.6.1.Final
+// Generated Jun 27, 2022, 10:40:10 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -48,6 +48,11 @@ public class NutritionOrder  implements java.io.Serializable {
      private String ntritnOrdrEnteralFrmulaAdmnstnSchdlCdCdgVrsn;
      private String ntritnOrdrEnteralFrmulaAdmnstnSchdlCdTxt;
      private String ntritnOrdrEnteralFrmulaAdmnstnSchdlEvnt;
+     private String ntritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationCd;
+     private String ntritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationCmprtr;
+     private String ntritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationSys;
+     private String ntritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationUnt;
+     private String ntritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationVl;
      private String ntritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsPrdEnd;
      private String ntritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsPrdStrt;
      private String ntritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsRngHiCd;
@@ -155,6 +160,11 @@ public class NutritionOrder  implements java.io.Serializable {
      private String ntritnOrdrOralDietSchdlCdCdgVrsn;
      private String ntritnOrdrOralDietSchdlCdTxt;
      private String ntritnOrdrOralDietSchdlEvnt;
+     private String ntritnOrdrOralDietSchdlRptBndsDurationCd;
+     private String ntritnOrdrOralDietSchdlRptBndsDurationCmprtr;
+     private String ntritnOrdrOralDietSchdlRptBndsDurationSys;
+     private String ntritnOrdrOralDietSchdlRptBndsDurationUnt;
+     private String ntritnOrdrOralDietSchdlRptBndsDurationVl;
      private String ntritnOrdrOralDietSchdlRptBndsPrdEnd;
      private String ntritnOrdrOralDietSchdlRptBndsPrdStrt;
      private String ntritnOrdrOralDietSchdlRptBndsRngHiCd;
@@ -216,6 +226,11 @@ public class NutritionOrder  implements java.io.Serializable {
      private String ntritnOrdrSupplementSchdlCdCdgVrsn;
      private String ntritnOrdrSupplementSchdlCdTxt;
      private String ntritnOrdrSupplementSchdlEvnt;
+     private String ntritnOrdrSupplementSchdlRptBndsDurationCd;
+     private String ntritnOrdrSupplementSchdlRptBndsDurationCmprtr;
+     private String ntritnOrdrSupplementSchdlRptBndsDurationSys;
+     private String ntritnOrdrSupplementSchdlRptBndsDurationUnt;
+     private String ntritnOrdrSupplementSchdlRptBndsDurationVl;
      private String ntritnOrdrSupplementSchdlRptBndsPrdEnd;
      private String ntritnOrdrSupplementSchdlRptBndsPrdStrt;
      private String ntritnOrdrSupplementSchdlRptBndsRngHiCd;
@@ -629,6 +644,56 @@ public class NutritionOrder  implements java.io.Serializable {
     
     public void setNtritnOrdrEnteralFrmulaAdmnstnSchdlEvnt(String ntritnOrdrEnteralFrmulaAdmnstnSchdlEvnt) {
         this.ntritnOrdrEnteralFrmulaAdmnstnSchdlEvnt = ntritnOrdrEnteralFrmulaAdmnstnSchdlEvnt;
+    }
+    
+    
+    
+    public String getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationCd() {
+        return this.ntritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationCd;
+    }
+    
+    public void setNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationCd(String ntritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationCd) {
+        this.ntritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationCd = ntritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationCd;
+    }
+    
+    
+    
+    public String getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationCmprtr() {
+        return this.ntritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationCmprtr;
+    }
+    
+    public void setNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationCmprtr(String ntritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationCmprtr) {
+        this.ntritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationCmprtr = ntritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationCmprtr;
+    }
+    
+    
+    
+    public String getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationSys() {
+        return this.ntritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationSys;
+    }
+    
+    public void setNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationSys(String ntritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationSys) {
+        this.ntritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationSys = ntritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationSys;
+    }
+    
+    
+    
+    public String getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationUnt() {
+        return this.ntritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationUnt;
+    }
+    
+    public void setNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationUnt(String ntritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationUnt) {
+        this.ntritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationUnt = ntritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationUnt;
+    }
+    
+    
+    
+    public String getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationVl() {
+        return this.ntritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationVl;
+    }
+    
+    public void setNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationVl(String ntritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationVl) {
+        this.ntritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationVl = ntritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationVl;
     }
     
     
@@ -1703,6 +1768,56 @@ public class NutritionOrder  implements java.io.Serializable {
     
     
     
+    public String getNtritnOrdrOralDietSchdlRptBndsDurationCd() {
+        return this.ntritnOrdrOralDietSchdlRptBndsDurationCd;
+    }
+    
+    public void setNtritnOrdrOralDietSchdlRptBndsDurationCd(String ntritnOrdrOralDietSchdlRptBndsDurationCd) {
+        this.ntritnOrdrOralDietSchdlRptBndsDurationCd = ntritnOrdrOralDietSchdlRptBndsDurationCd;
+    }
+    
+    
+    
+    public String getNtritnOrdrOralDietSchdlRptBndsDurationCmprtr() {
+        return this.ntritnOrdrOralDietSchdlRptBndsDurationCmprtr;
+    }
+    
+    public void setNtritnOrdrOralDietSchdlRptBndsDurationCmprtr(String ntritnOrdrOralDietSchdlRptBndsDurationCmprtr) {
+        this.ntritnOrdrOralDietSchdlRptBndsDurationCmprtr = ntritnOrdrOralDietSchdlRptBndsDurationCmprtr;
+    }
+    
+    
+    
+    public String getNtritnOrdrOralDietSchdlRptBndsDurationSys() {
+        return this.ntritnOrdrOralDietSchdlRptBndsDurationSys;
+    }
+    
+    public void setNtritnOrdrOralDietSchdlRptBndsDurationSys(String ntritnOrdrOralDietSchdlRptBndsDurationSys) {
+        this.ntritnOrdrOralDietSchdlRptBndsDurationSys = ntritnOrdrOralDietSchdlRptBndsDurationSys;
+    }
+    
+    
+    
+    public String getNtritnOrdrOralDietSchdlRptBndsDurationUnt() {
+        return this.ntritnOrdrOralDietSchdlRptBndsDurationUnt;
+    }
+    
+    public void setNtritnOrdrOralDietSchdlRptBndsDurationUnt(String ntritnOrdrOralDietSchdlRptBndsDurationUnt) {
+        this.ntritnOrdrOralDietSchdlRptBndsDurationUnt = ntritnOrdrOralDietSchdlRptBndsDurationUnt;
+    }
+    
+    
+    
+    public String getNtritnOrdrOralDietSchdlRptBndsDurationVl() {
+        return this.ntritnOrdrOralDietSchdlRptBndsDurationVl;
+    }
+    
+    public void setNtritnOrdrOralDietSchdlRptBndsDurationVl(String ntritnOrdrOralDietSchdlRptBndsDurationVl) {
+        this.ntritnOrdrOralDietSchdlRptBndsDurationVl = ntritnOrdrOralDietSchdlRptBndsDurationVl;
+    }
+    
+    
+    
     public String getNtritnOrdrOralDietSchdlRptBndsPrdEnd() {
         return this.ntritnOrdrOralDietSchdlRptBndsPrdEnd;
     }
@@ -2309,6 +2424,56 @@ public class NutritionOrder  implements java.io.Serializable {
     
     public void setNtritnOrdrSupplementSchdlEvnt(String ntritnOrdrSupplementSchdlEvnt) {
         this.ntritnOrdrSupplementSchdlEvnt = ntritnOrdrSupplementSchdlEvnt;
+    }
+    
+    
+    
+    public String getNtritnOrdrSupplementSchdlRptBndsDurationCd() {
+        return this.ntritnOrdrSupplementSchdlRptBndsDurationCd;
+    }
+    
+    public void setNtritnOrdrSupplementSchdlRptBndsDurationCd(String ntritnOrdrSupplementSchdlRptBndsDurationCd) {
+        this.ntritnOrdrSupplementSchdlRptBndsDurationCd = ntritnOrdrSupplementSchdlRptBndsDurationCd;
+    }
+    
+    
+    
+    public String getNtritnOrdrSupplementSchdlRptBndsDurationCmprtr() {
+        return this.ntritnOrdrSupplementSchdlRptBndsDurationCmprtr;
+    }
+    
+    public void setNtritnOrdrSupplementSchdlRptBndsDurationCmprtr(String ntritnOrdrSupplementSchdlRptBndsDurationCmprtr) {
+        this.ntritnOrdrSupplementSchdlRptBndsDurationCmprtr = ntritnOrdrSupplementSchdlRptBndsDurationCmprtr;
+    }
+    
+    
+    
+    public String getNtritnOrdrSupplementSchdlRptBndsDurationSys() {
+        return this.ntritnOrdrSupplementSchdlRptBndsDurationSys;
+    }
+    
+    public void setNtritnOrdrSupplementSchdlRptBndsDurationSys(String ntritnOrdrSupplementSchdlRptBndsDurationSys) {
+        this.ntritnOrdrSupplementSchdlRptBndsDurationSys = ntritnOrdrSupplementSchdlRptBndsDurationSys;
+    }
+    
+    
+    
+    public String getNtritnOrdrSupplementSchdlRptBndsDurationUnt() {
+        return this.ntritnOrdrSupplementSchdlRptBndsDurationUnt;
+    }
+    
+    public void setNtritnOrdrSupplementSchdlRptBndsDurationUnt(String ntritnOrdrSupplementSchdlRptBndsDurationUnt) {
+        this.ntritnOrdrSupplementSchdlRptBndsDurationUnt = ntritnOrdrSupplementSchdlRptBndsDurationUnt;
+    }
+    
+    
+    
+    public String getNtritnOrdrSupplementSchdlRptBndsDurationVl() {
+        return this.ntritnOrdrSupplementSchdlRptBndsDurationVl;
+    }
+    
+    public void setNtritnOrdrSupplementSchdlRptBndsDurationVl(String ntritnOrdrSupplementSchdlRptBndsDurationVl) {
+        this.ntritnOrdrSupplementSchdlRptBndsDurationVl = ntritnOrdrSupplementSchdlRptBndsDurationVl;
     }
     
     

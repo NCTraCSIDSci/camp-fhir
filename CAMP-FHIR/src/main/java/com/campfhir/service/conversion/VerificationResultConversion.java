@@ -258,6 +258,26 @@ public class VerificationResultConversion
 		org.hl7.fhir.r4.model.Duration verificationresultfrequencyrepeatboundsduration =  new org.hl7.fhir.r4.model.Duration();
 		verificationresultfrequencyrepeat.setBounds(verificationresultfrequencyrepeatboundsduration);
 
+		/******************** VrfctnRslt_Frqncy_Rpt_BndsDuration_Cd ********************************************************************************/
+		if(v.getVrfctnRsltFrqncyRptBndsDurationCd() != null) {
+			verificationresultfrequencyrepeatboundsduration.setCode(v.getVrfctnRsltFrqncyRptBndsDurationCd());
+		}
+		/******************** verificationresultfrequencyrepeatboundsdurationcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory verificationresultfrequencyrepeatboundsdurationcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		verificationresultfrequencyrepeatboundsduration.setComparator(verificationresultfrequencyrepeatboundsdurationcomparator.fromCode(v.getVrfctnRsltFrqncyRptBndsDurationCmprtr()));
+
+		/******************** VrfctnRslt_Frqncy_Rpt_BndsDuration_Sys ********************************************************************************/
+		if(v.getVrfctnRsltFrqncyRptBndsDurationSys() != null) {
+			verificationresultfrequencyrepeatboundsduration.setSystem(v.getVrfctnRsltFrqncyRptBndsDurationSys());
+		}
+		/******************** VrfctnRslt_Frqncy_Rpt_BndsDuration_Unt ********************************************************************************/
+		if(v.getVrfctnRsltFrqncyRptBndsDurationUnt() != null) {
+			verificationresultfrequencyrepeatboundsduration.setUnit(v.getVrfctnRsltFrqncyRptBndsDurationUnt());
+		}
+		/******************** VrfctnRslt_Frqncy_Rpt_BndsDuration_Vl ********************************************************************************/
+		if(v.getVrfctnRsltFrqncyRptBndsDurationVl() != null) {
+			verificationresultfrequencyrepeatboundsduration.setValue(Double.parseDouble((v.getVrfctnRsltFrqncyRptBndsDurationVl())));
+		}
 		/******************** verificationresultfrequencyrepeatboundsperiod ********************************************************************************/
 		org.hl7.fhir.r4.model.Period verificationresultfrequencyrepeatboundsperiod =  new org.hl7.fhir.r4.model.Period();
 		verificationresultfrequencyrepeat.setBounds(verificationresultfrequencyrepeatboundsperiod);
@@ -368,7 +388,7 @@ public class VerificationResultConversion
 		}
 		/******************** VrfctnRslt_Frqncy_Rpt_PrdMx ********************************************************************************/
 		if(v.getVrfctnRsltFrqncyRptPrdMx() != null) {
-			verificationresultfrequencyrepeat.setPeriodMax(Double.parseDouble((v.getVrfctnRsltFrqncyRptPrdMx())));
+			verificationresultfrequencyrepeat.setPeriodMax(new java.math.BigDecimal((v.getVrfctnRsltFrqncyRptPrdMx())));
 		}
 		/******************** verificationresultfrequencyrepeatperiodunit ********************************************************************************/
 		org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory verificationresultfrequencyrepeatperiodunit =  new org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory();

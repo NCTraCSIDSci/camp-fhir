@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Jun 6, 2022, 11:02:30 AM by Hibernate Tools 5.6.1.Final
+// Generated Jun 27, 2022, 10:40:10 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -35,6 +35,11 @@ public class SupplyDelivery  implements java.io.Serializable {
      private String spplyDlvryOccrnceTmgCdCdgVrsn;
      private String spplyDlvryOccrnceTmgCdTxt;
      private String spplyDlvryOccrnceTmgEvnt;
+     private String spplyDlvryOccrnceTmgRptBndsDurationCd;
+     private String spplyDlvryOccrnceTmgRptBndsDurationCmprtr;
+     private String spplyDlvryOccrnceTmgRptBndsDurationSys;
+     private String spplyDlvryOccrnceTmgRptBndsDurationUnt;
+     private String spplyDlvryOccrnceTmgRptBndsDurationVl;
      private String spplyDlvryOccrnceTmgRptBndsPrdEnd;
      private String spplyDlvryOccrnceTmgRptBndsPrdStrt;
      private String spplyDlvryOccrnceTmgRptBndsRngHiCd;
@@ -335,6 +340,56 @@ public class SupplyDelivery  implements java.io.Serializable {
     
     public void setSpplyDlvryOccrnceTmgEvnt(String spplyDlvryOccrnceTmgEvnt) {
         this.spplyDlvryOccrnceTmgEvnt = spplyDlvryOccrnceTmgEvnt;
+    }
+    
+    
+    
+    public String getSpplyDlvryOccrnceTmgRptBndsDurationCd() {
+        return this.spplyDlvryOccrnceTmgRptBndsDurationCd;
+    }
+    
+    public void setSpplyDlvryOccrnceTmgRptBndsDurationCd(String spplyDlvryOccrnceTmgRptBndsDurationCd) {
+        this.spplyDlvryOccrnceTmgRptBndsDurationCd = spplyDlvryOccrnceTmgRptBndsDurationCd;
+    }
+    
+    
+    
+    public String getSpplyDlvryOccrnceTmgRptBndsDurationCmprtr() {
+        return this.spplyDlvryOccrnceTmgRptBndsDurationCmprtr;
+    }
+    
+    public void setSpplyDlvryOccrnceTmgRptBndsDurationCmprtr(String spplyDlvryOccrnceTmgRptBndsDurationCmprtr) {
+        this.spplyDlvryOccrnceTmgRptBndsDurationCmprtr = spplyDlvryOccrnceTmgRptBndsDurationCmprtr;
+    }
+    
+    
+    
+    public String getSpplyDlvryOccrnceTmgRptBndsDurationSys() {
+        return this.spplyDlvryOccrnceTmgRptBndsDurationSys;
+    }
+    
+    public void setSpplyDlvryOccrnceTmgRptBndsDurationSys(String spplyDlvryOccrnceTmgRptBndsDurationSys) {
+        this.spplyDlvryOccrnceTmgRptBndsDurationSys = spplyDlvryOccrnceTmgRptBndsDurationSys;
+    }
+    
+    
+    
+    public String getSpplyDlvryOccrnceTmgRptBndsDurationUnt() {
+        return this.spplyDlvryOccrnceTmgRptBndsDurationUnt;
+    }
+    
+    public void setSpplyDlvryOccrnceTmgRptBndsDurationUnt(String spplyDlvryOccrnceTmgRptBndsDurationUnt) {
+        this.spplyDlvryOccrnceTmgRptBndsDurationUnt = spplyDlvryOccrnceTmgRptBndsDurationUnt;
+    }
+    
+    
+    
+    public String getSpplyDlvryOccrnceTmgRptBndsDurationVl() {
+        return this.spplyDlvryOccrnceTmgRptBndsDurationVl;
+    }
+    
+    public void setSpplyDlvryOccrnceTmgRptBndsDurationVl(String spplyDlvryOccrnceTmgRptBndsDurationVl) {
+        this.spplyDlvryOccrnceTmgRptBndsDurationVl = spplyDlvryOccrnceTmgRptBndsDurationVl;
     }
     
     

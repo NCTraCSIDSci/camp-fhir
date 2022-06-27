@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Jun 6, 2022, 11:02:25 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 27, 2022, 10:39:49 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="ServiceRequest" optimistic-lock="none" table="ServiceRequest">
         <id name="id" type="string">
@@ -269,6 +269,26 @@
         <property name="srvRqstOccrnceTmgEvnt" type="string">
             <meta attribute="resource-type"/>
             <column length="65535" name="SrvRqst_OccrnceTmg_Evnt"/>
+        </property>
+        <property name="srvRqstOccrnceTmgRptBndsDurationCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SrvRqst_OccrnceTmg_Rpt_BndsDuration_Cd"/>
+        </property>
+        <property name="srvRqstOccrnceTmgRptBndsDurationCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SrvRqst_OccrnceTmg_Rpt_BndsDuration_Cmprtr"/>
+        </property>
+        <property name="srvRqstOccrnceTmgRptBndsDurationSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SrvRqst_OccrnceTmg_Rpt_BndsDuration_Sys"/>
+        </property>
+        <property name="srvRqstOccrnceTmgRptBndsDurationUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SrvRqst_OccrnceTmg_Rpt_BndsDuration_Unt"/>
+        </property>
+        <property name="srvRqstOccrnceTmgRptBndsDurationVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SrvRqst_OccrnceTmg_Rpt_BndsDuration_Vl"/>
         </property>
         <property name="srvRqstOccrnceTmgRptBndsPrdEnd" type="string">
             <meta attribute="resource-type"/>

@@ -304,6 +304,26 @@ public class DeviceRequestConversion
 		org.hl7.fhir.r4.model.Duration devicerequestoccurrencetimingrepeatboundsduration =  new org.hl7.fhir.r4.model.Duration();
 		devicerequestoccurrencetimingrepeat.setBounds(devicerequestoccurrencetimingrepeatboundsduration);
 
+		/******************** DvcRqst_OccrnceTmg_Rpt_BndsDuration_Cd ********************************************************************************/
+		if(d.getDvcRqstOccrnceTmgRptBndsDurationCd() != null) {
+			devicerequestoccurrencetimingrepeatboundsduration.setCode(d.getDvcRqstOccrnceTmgRptBndsDurationCd());
+		}
+		/******************** devicerequestoccurrencetimingrepeatboundsdurationcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory devicerequestoccurrencetimingrepeatboundsdurationcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		devicerequestoccurrencetimingrepeatboundsduration.setComparator(devicerequestoccurrencetimingrepeatboundsdurationcomparator.fromCode(d.getDvcRqstOccrnceTmgRptBndsDurationCmprtr()));
+
+		/******************** DvcRqst_OccrnceTmg_Rpt_BndsDuration_Sys ********************************************************************************/
+		if(d.getDvcRqstOccrnceTmgRptBndsDurationSys() != null) {
+			devicerequestoccurrencetimingrepeatboundsduration.setSystem(d.getDvcRqstOccrnceTmgRptBndsDurationSys());
+		}
+		/******************** DvcRqst_OccrnceTmg_Rpt_BndsDuration_Unt ********************************************************************************/
+		if(d.getDvcRqstOccrnceTmgRptBndsDurationUnt() != null) {
+			devicerequestoccurrencetimingrepeatboundsduration.setUnit(d.getDvcRqstOccrnceTmgRptBndsDurationUnt());
+		}
+		/******************** DvcRqst_OccrnceTmg_Rpt_BndsDuration_Vl ********************************************************************************/
+		if(d.getDvcRqstOccrnceTmgRptBndsDurationVl() != null) {
+			devicerequestoccurrencetimingrepeatboundsduration.setValue(Double.parseDouble((d.getDvcRqstOccrnceTmgRptBndsDurationVl())));
+		}
 		/******************** devicerequestoccurrencetimingrepeatboundsperiod ********************************************************************************/
 		org.hl7.fhir.r4.model.Period devicerequestoccurrencetimingrepeatboundsperiod =  new org.hl7.fhir.r4.model.Period();
 		devicerequestoccurrencetimingrepeat.setBounds(devicerequestoccurrencetimingrepeatboundsperiod);
@@ -414,7 +434,7 @@ public class DeviceRequestConversion
 		}
 		/******************** DvcRqst_OccrnceTmg_Rpt_PrdMx ********************************************************************************/
 		if(d.getDvcRqstOccrnceTmgRptPrdMx() != null) {
-			devicerequestoccurrencetimingrepeat.setPeriodMax(Double.parseDouble((d.getDvcRqstOccrnceTmgRptPrdMx())));
+			devicerequestoccurrencetimingrepeat.setPeriodMax(new java.math.BigDecimal((d.getDvcRqstOccrnceTmgRptPrdMx())));
 		}
 		/******************** devicerequestoccurrencetimingrepeatperiodunit ********************************************************************************/
 		org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory devicerequestoccurrencetimingrepeatperiodunit =  new org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory();

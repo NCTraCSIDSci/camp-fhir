@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Jun 6, 2022, 11:02:25 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 27, 2022, 10:39:49 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="AllergyIntolerance" optimistic-lock="none" table="AllergyIntolerance">
         <id name="id" type="string">
@@ -137,6 +137,26 @@
         <property name="alrgyIntoleranceNtTime" type="string">
             <meta attribute="resource-type"/>
             <column length="65535" name="AlrgyIntolerance_Nt_Time"/>
+        </property>
+        <property name="alrgyIntoleranceOnAgeCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AlrgyIntolerance_OnAge_Cd"/>
+        </property>
+        <property name="alrgyIntoleranceOnAgeCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AlrgyIntolerance_OnAge_Cmprtr"/>
+        </property>
+        <property name="alrgyIntoleranceOnAgeSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AlrgyIntolerance_OnAge_Sys"/>
+        </property>
+        <property name="alrgyIntoleranceOnAgeUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AlrgyIntolerance_OnAge_Unt"/>
+        </property>
+        <property name="alrgyIntoleranceOnAgeVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AlrgyIntolerance_OnAge_Vl"/>
         </property>
         <property name="alrgyIntoleranceOnDtTimeTyp" type="string">
             <meta attribute="resource-type"/>

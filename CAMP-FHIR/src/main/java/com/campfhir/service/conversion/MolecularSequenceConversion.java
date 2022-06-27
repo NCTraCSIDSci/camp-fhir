@@ -1,5 +1,4 @@
 package main.java.com.campfhir.service.conversion;
-import java.math.BigDecimal;
 import java.text.ParseException;
 import main.java.com.campfhir.model.MolecularSequence;
 public class MolecularSequenceConversion 
@@ -111,11 +110,11 @@ public class MolecularSequenceConversion
 		if(m.getMoleclrSqncQualityEnd() != null) {
 			molecularsequencequality.setEnd(Integer.parseInt(m.getMoleclrSqncQualityEnd()));
 		}
-		/******************** MoleclrSqnc_Quality_FScore ********************************************************************************/
+		/******************** MoleclrSqnc_Quality_Fscore ********************************************************************************/
 		if(m.getMoleclrSqncQualityFscore() != null) {
 			molecularsequencequality.setFScore(Double.parseDouble((m.getMoleclrSqncQualityFscore())));
 		}
-		/******************** MoleclrSqnc_Quality_GtFP ********************************************************************************/
+		/******************** MoleclrSqnc_Quality_GtFp ********************************************************************************/
 		if(m.getMoleclrSqncQualityGtFp() != null) {
 			molecularsequencequality.setGtFP(Double.parseDouble((m.getMoleclrSqncQualityGtFp())));
 		}
@@ -153,13 +152,13 @@ public class MolecularSequenceConversion
 		}
 		/******************** MoleclrSqnc_Quality_Precision ********************************************************************************/
 		if(m.getMoleclrSqncQualityPrecision() != null) {
-			molecularsequencequality.setPrecision(Double.parseDouble((m.getMoleclrSqncQualityPrecision())));
+			molecularsequencequality.setPrecision(new java.math.BigDecimal((m.getMoleclrSqncQualityPrecision())));
 		}
-		/******************** MoleclrSqnc_Quality_QueryFP ********************************************************************************/
+		/******************** MoleclrSqnc_Quality_QueryFp ********************************************************************************/
 		if(m.getMoleclrSqncQualityQueryFp() != null) {
 			molecularsequencequality.setQueryFP(Double.parseDouble((m.getMoleclrSqncQualityQueryFp())));
 		}
-		/******************** MoleclrSqnc_Quality_QueryTP ********************************************************************************/
+		/******************** MoleclrSqnc_Quality_QueryTp ********************************************************************************/
 		if(m.getMoleclrSqncQualityQueryTp() != null) {
 			molecularsequencequality.setQueryTP(Double.parseDouble((m.getMoleclrSqncQualityQueryTp())));
 		}
@@ -171,25 +170,25 @@ public class MolecularSequenceConversion
 		org.hl7.fhir.r4.model.MolecularSequence.MolecularSequenceQualityRocComponent molecularsequencequalityroc =  new org.hl7.fhir.r4.model.MolecularSequence.MolecularSequenceQualityRocComponent();
 		molecularsequencequality.setRoc(molecularsequencequalityroc);
 
-		/******************** MoleclrSqnc_Quality_Roc_FMsr ********************************************************************************/
+		/******************** MoleclrSqnc_Quality_Roc_Fmsr ********************************************************************************/
 		if(m.getMoleclrSqncQualityRocFmsr() != null) {
-			molecularsequencequalityroc.addFMeasure( new BigDecimal(m.getMoleclrSqncQualityRocFmsr()) );
+			molecularsequencequalityroc.addFMeasure(new java.math.BigDecimal((m.getMoleclrSqncQualityRocFmsr())));
 		}
-		/******************** MoleclrSqnc_Quality_Roc_NumFN ********************************************************************************/
+		/******************** MoleclrSqnc_Quality_Roc_NumFn ********************************************************************************/
 		if(m.getMoleclrSqncQualityRocNumFn() != null) {
 			molecularsequencequalityroc.addNumFN(Integer.parseInt(m.getMoleclrSqncQualityRocNumFn()));
 		}
-		/******************** MoleclrSqnc_Quality_Roc_NumFP ********************************************************************************/
+		/******************** MoleclrSqnc_Quality_Roc_NumFp ********************************************************************************/
 		if(m.getMoleclrSqncQualityRocNumFp() != null) {
 			molecularsequencequalityroc.addNumFP(Integer.parseInt(m.getMoleclrSqncQualityRocNumFp()));
 		}
-		/******************** MoleclrSqnc_Quality_Roc_NumTP ********************************************************************************/
+		/******************** MoleclrSqnc_Quality_Roc_NumTp ********************************************************************************/
 		if(m.getMoleclrSqncQualityRocNumTp() != null) {
 			molecularsequencequalityroc.addNumTP(Integer.parseInt(m.getMoleclrSqncQualityRocNumTp()));
 		}
 		/******************** MoleclrSqnc_Quality_Roc_Precision ********************************************************************************/
 		if(m.getMoleclrSqncQualityRocPrecision() != null) {
-			molecularsequencequalityroc.addPrecision(new BigDecimal((m.getMoleclrSqncQualityRocPrecision())));
+			molecularsequencequalityroc.addPrecision(new java.math.BigDecimal((m.getMoleclrSqncQualityRocPrecision())));
 		}
 		/******************** MoleclrSqnc_Quality_Roc_Score ********************************************************************************/
 		if(m.getMoleclrSqncQualityRocScore() != null) {
@@ -197,7 +196,7 @@ public class MolecularSequenceConversion
 		}
 		/******************** MoleclrSqnc_Quality_Roc_Sensitivity ********************************************************************************/
 		if(m.getMoleclrSqncQualityRocSensitivity() != null) {
-			molecularsequencequalityroc.addSensitivity(new BigDecimal((m.getMoleclrSqncQualityRocSensitivity())));
+			molecularsequencequalityroc.addSensitivity(new java.math.BigDecimal((m.getMoleclrSqncQualityRocSensitivity())));
 		}
 		/******************** molecularsequencequalityscore ********************************************************************************/
 		org.hl7.fhir.r4.model.Quantity molecularsequencequalityscore =  new org.hl7.fhir.r4.model.Quantity();
@@ -259,11 +258,11 @@ public class MolecularSequenceConversion
 		if(m.getMoleclrSqncQualityStrt() != null) {
 			molecularsequencequality.setStart(Integer.parseInt(m.getMoleclrSqncQualityStrt()));
 		}
-		/******************** MoleclrSqnc_Quality_TruthFN ********************************************************************************/
+		/******************** MoleclrSqnc_Quality_TruthFn ********************************************************************************/
 		if(m.getMoleclrSqncQualityTruthFn() != null) {
-			molecularsequencequality.setTruthFN(Double.parseDouble((m.getMoleclrSqncQualityTruthFn())));
+			molecularsequencequality.setTruthFN(new java.math.BigDecimal((m.getMoleclrSqncQualityTruthFn())));
 		}
-		/******************** MoleclrSqnc_Quality_TruthTP ********************************************************************************/
+		/******************** MoleclrSqnc_Quality_TruthTp ********************************************************************************/
 		if(m.getMoleclrSqncQualityTruthTp() != null) {
 			molecularsequencequality.setTruthTP(Double.parseDouble((m.getMoleclrSqncQualityTruthTp())));
 		}

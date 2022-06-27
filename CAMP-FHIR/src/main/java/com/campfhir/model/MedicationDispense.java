@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Jun 6, 2022, 11:02:30 AM by Hibernate Tools 5.6.1.Final
+// Generated Jun 27, 2022, 10:40:10 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -133,6 +133,11 @@ public class MedicationDispense  implements java.io.Serializable {
      private String mdctnDispnsDsgInstrctnTmgCdCdgVrsn;
      private String mdctnDispnsDsgInstrctnTmgCdTxt;
      private String mdctnDispnsDsgInstrctnTmgEvnt;
+     private String mdctnDispnsDsgInstrctnTmgRptBndsDurationCd;
+     private String mdctnDispnsDsgInstrctnTmgRptBndsDurationCmprtr;
+     private String mdctnDispnsDsgInstrctnTmgRptBndsDurationSys;
+     private String mdctnDispnsDsgInstrctnTmgRptBndsDurationUnt;
+     private String mdctnDispnsDsgInstrctnTmgRptBndsDurationVl;
      private String mdctnDispnsDsgInstrctnTmgRptBndsPrdEnd;
      private String mdctnDispnsDsgInstrctnTmgRptBndsPrdStrt;
      private String mdctnDispnsDsgInstrctnTmgRptBndsRngHiCd;
@@ -1461,6 +1466,56 @@ public class MedicationDispense  implements java.io.Serializable {
     
     public void setMdctnDispnsDsgInstrctnTmgEvnt(String mdctnDispnsDsgInstrctnTmgEvnt) {
         this.mdctnDispnsDsgInstrctnTmgEvnt = mdctnDispnsDsgInstrctnTmgEvnt;
+    }
+    
+    
+    
+    public String getMdctnDispnsDsgInstrctnTmgRptBndsDurationCd() {
+        return this.mdctnDispnsDsgInstrctnTmgRptBndsDurationCd;
+    }
+    
+    public void setMdctnDispnsDsgInstrctnTmgRptBndsDurationCd(String mdctnDispnsDsgInstrctnTmgRptBndsDurationCd) {
+        this.mdctnDispnsDsgInstrctnTmgRptBndsDurationCd = mdctnDispnsDsgInstrctnTmgRptBndsDurationCd;
+    }
+    
+    
+    
+    public String getMdctnDispnsDsgInstrctnTmgRptBndsDurationCmprtr() {
+        return this.mdctnDispnsDsgInstrctnTmgRptBndsDurationCmprtr;
+    }
+    
+    public void setMdctnDispnsDsgInstrctnTmgRptBndsDurationCmprtr(String mdctnDispnsDsgInstrctnTmgRptBndsDurationCmprtr) {
+        this.mdctnDispnsDsgInstrctnTmgRptBndsDurationCmprtr = mdctnDispnsDsgInstrctnTmgRptBndsDurationCmprtr;
+    }
+    
+    
+    
+    public String getMdctnDispnsDsgInstrctnTmgRptBndsDurationSys() {
+        return this.mdctnDispnsDsgInstrctnTmgRptBndsDurationSys;
+    }
+    
+    public void setMdctnDispnsDsgInstrctnTmgRptBndsDurationSys(String mdctnDispnsDsgInstrctnTmgRptBndsDurationSys) {
+        this.mdctnDispnsDsgInstrctnTmgRptBndsDurationSys = mdctnDispnsDsgInstrctnTmgRptBndsDurationSys;
+    }
+    
+    
+    
+    public String getMdctnDispnsDsgInstrctnTmgRptBndsDurationUnt() {
+        return this.mdctnDispnsDsgInstrctnTmgRptBndsDurationUnt;
+    }
+    
+    public void setMdctnDispnsDsgInstrctnTmgRptBndsDurationUnt(String mdctnDispnsDsgInstrctnTmgRptBndsDurationUnt) {
+        this.mdctnDispnsDsgInstrctnTmgRptBndsDurationUnt = mdctnDispnsDsgInstrctnTmgRptBndsDurationUnt;
+    }
+    
+    
+    
+    public String getMdctnDispnsDsgInstrctnTmgRptBndsDurationVl() {
+        return this.mdctnDispnsDsgInstrctnTmgRptBndsDurationVl;
+    }
+    
+    public void setMdctnDispnsDsgInstrctnTmgRptBndsDurationVl(String mdctnDispnsDsgInstrctnTmgRptBndsDurationVl) {
+        this.mdctnDispnsDsgInstrctnTmgRptBndsDurationVl = mdctnDispnsDsgInstrctnTmgRptBndsDurationVl;
     }
     
     

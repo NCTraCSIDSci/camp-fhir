@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Jun 6, 2022, 11:02:30 AM by Hibernate Tools 5.6.1.Final
+// Generated Jun 27, 2022, 10:40:10 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -22,6 +22,11 @@ public class GuidanceResponse  implements java.io.Serializable {
      private String guidnceRspsDataRqrmentDtFltrPath;
      private String guidnceRspsDataRqrmentDtFltrSrchParam;
      private String guidnceRspsDataRqrmentDtFltrVlDtTimeTyp;
+     private String guidnceRspsDataRqrmentDtFltrVlDurationCd;
+     private String guidnceRspsDataRqrmentDtFltrVlDurationCmprtr;
+     private String guidnceRspsDataRqrmentDtFltrVlDurationSys;
+     private String guidnceRspsDataRqrmentDtFltrVlDurationUnt;
+     private String guidnceRspsDataRqrmentDtFltrVlDurationVl;
      private String guidnceRspsDataRqrmentDtFltrVlPrdEnd;
      private String guidnceRspsDataRqrmentDtFltrVlPrdStrt;
      private String guidnceRspsDataRqrmentLmt;
@@ -209,6 +214,56 @@ public class GuidanceResponse  implements java.io.Serializable {
     
     public void setGuidnceRspsDataRqrmentDtFltrVlDtTimeTyp(String guidnceRspsDataRqrmentDtFltrVlDtTimeTyp) {
         this.guidnceRspsDataRqrmentDtFltrVlDtTimeTyp = guidnceRspsDataRqrmentDtFltrVlDtTimeTyp;
+    }
+    
+    
+    
+    public String getGuidnceRspsDataRqrmentDtFltrVlDurationCd() {
+        return this.guidnceRspsDataRqrmentDtFltrVlDurationCd;
+    }
+    
+    public void setGuidnceRspsDataRqrmentDtFltrVlDurationCd(String guidnceRspsDataRqrmentDtFltrVlDurationCd) {
+        this.guidnceRspsDataRqrmentDtFltrVlDurationCd = guidnceRspsDataRqrmentDtFltrVlDurationCd;
+    }
+    
+    
+    
+    public String getGuidnceRspsDataRqrmentDtFltrVlDurationCmprtr() {
+        return this.guidnceRspsDataRqrmentDtFltrVlDurationCmprtr;
+    }
+    
+    public void setGuidnceRspsDataRqrmentDtFltrVlDurationCmprtr(String guidnceRspsDataRqrmentDtFltrVlDurationCmprtr) {
+        this.guidnceRspsDataRqrmentDtFltrVlDurationCmprtr = guidnceRspsDataRqrmentDtFltrVlDurationCmprtr;
+    }
+    
+    
+    
+    public String getGuidnceRspsDataRqrmentDtFltrVlDurationSys() {
+        return this.guidnceRspsDataRqrmentDtFltrVlDurationSys;
+    }
+    
+    public void setGuidnceRspsDataRqrmentDtFltrVlDurationSys(String guidnceRspsDataRqrmentDtFltrVlDurationSys) {
+        this.guidnceRspsDataRqrmentDtFltrVlDurationSys = guidnceRspsDataRqrmentDtFltrVlDurationSys;
+    }
+    
+    
+    
+    public String getGuidnceRspsDataRqrmentDtFltrVlDurationUnt() {
+        return this.guidnceRspsDataRqrmentDtFltrVlDurationUnt;
+    }
+    
+    public void setGuidnceRspsDataRqrmentDtFltrVlDurationUnt(String guidnceRspsDataRqrmentDtFltrVlDurationUnt) {
+        this.guidnceRspsDataRqrmentDtFltrVlDurationUnt = guidnceRspsDataRqrmentDtFltrVlDurationUnt;
+    }
+    
+    
+    
+    public String getGuidnceRspsDataRqrmentDtFltrVlDurationVl() {
+        return this.guidnceRspsDataRqrmentDtFltrVlDurationVl;
+    }
+    
+    public void setGuidnceRspsDataRqrmentDtFltrVlDurationVl(String guidnceRspsDataRqrmentDtFltrVlDurationVl) {
+        this.guidnceRspsDataRqrmentDtFltrVlDurationVl = guidnceRspsDataRqrmentDtFltrVlDurationVl;
     }
     
     

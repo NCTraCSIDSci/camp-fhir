@@ -18,21 +18,17 @@ public class SearchParameterBidirectionalConversion
 		org.hl7.fhir.r4.model.Enumerations.SearchParamType searchparametertype = searchparameter.getType();
 		s.setSrchPrmtrTyp(searchparametertype.toCode());
 
-		/******************** SrchPrmtr_Vrsn ********************************************************************************/
-		if(searchparameter.hasVersion()) {
-			s.setSrchPrmtrVrsn(String.valueOf(searchparameter.getVersion()));
-		}
 		/******************** SrchPrmtr_Dt ********************************************************************************/
 		if(searchparameter.hasDate()) {
 			s.setSrchPrmtrDt(String.valueOf(searchparameter.getDate()));
 		}
+		/******************** SrchPrmtr_Vrsn ********************************************************************************/
+		if(searchparameter.hasVersion()) {
+			s.setSrchPrmtrVrsn(String.valueOf(searchparameter.getVersion()));
+		}
 		/******************** SrchPrmtr_Cd ********************************************************************************/
 		if(searchparameter.hasCode()) {
 			s.setSrchPrmtrCd(String.valueOf(searchparameter.getCode()));
-		}
-		/******************** SrchPrmtr_Url ********************************************************************************/
-		if(searchparameter.hasUrl()) {
-			s.setSrchPrmtrUrl(String.valueOf(searchparameter.getUrl()));
 		}
 		/******************** searchparametercomponent ********************************************************************************/
 		org.hl7.fhir.r4.model.SearchParameter.SearchParameterComponentComponent searchparametercomponent = searchparameter.getComponentFirstRep();
@@ -45,35 +41,90 @@ public class SearchParameterBidirectionalConversion
 		if(searchparametercomponent.hasExpression()) {
 			s.setSrchPrmtrCmpntExprsn(String.valueOf(searchparametercomponent.getExpression()));
 		}
-		/******************** searchparameterjurisdiction ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept searchparameterjurisdiction = searchparameter.getJurisdictionFirstRep();
+		/******************** searchparameterstatus ********************************************************************************/
+		org.hl7.fhir.r4.model.Enumerations.PublicationStatus searchparameterstatus = searchparameter.getStatus();
+		s.setSrchPrmtrSts(searchparameterstatus.toCode());
 
-		/******************** searchparameterjurisdictioncoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding searchparameterjurisdictioncoding = searchparameterjurisdiction.getCodingFirstRep();
+		/******************** SrchPrmtr_Dscrptn ********************************************************************************/
+		if(searchparameter.hasDescription()) {
+			s.setSrchPrmtrDscrptn(String.valueOf(searchparameter.getDescription()));
+		}
+		/******************** SrchPrmtr_Url ********************************************************************************/
+		if(searchparameter.hasUrl()) {
+			s.setSrchPrmtrUrl(String.valueOf(searchparameter.getUrl()));
+		}
+		/******************** SrchPrmtr_Pblshr ********************************************************************************/
+		if(searchparameter.hasPublisher()) {
+			s.setSrchPrmtrPblshr(String.valueOf(searchparameter.getPublisher()));
+		}
+		/******************** SrchPrmtr_Exprmtl ********************************************************************************/
+		if(searchparameter.hasExperimental()) {
+			s.setSrchPrmtrExprmtl(String.valueOf(searchparameter.getExperimental()));
+		}
+		/******************** SrchPrmtr_Prpse ********************************************************************************/
+		if(searchparameter.hasPurpose()) {
+			s.setSrchPrmtrPrpse(String.valueOf(searchparameter.getPurpose()));
+		}
+		/******************** searchparametercontact ********************************************************************************/
+		org.hl7.fhir.r4.model.ContactDetail searchparametercontact = searchparameter.getContactFirstRep();
 
-		/******************** SrchPrmtr_Jrsdctn_Cdg_Dsply ********************************************************************************/
-		if(searchparameterjurisdictioncoding.hasDisplay()) {
-			s.setSrchPrmtrJrsdctnCdgDsply(String.valueOf(searchparameterjurisdictioncoding.getDisplay()));
+		/******************** SrchPrmtr_Cntct_Nm ********************************************************************************/
+		if(searchparametercontact.hasName()) {
+			s.setSrchPrmtrCntctNm(String.valueOf(searchparametercontact.getName()));
 		}
-		/******************** SrchPrmtr_Jrsdctn_Cdg_Vrsn ********************************************************************************/
-		if(searchparameterjurisdictioncoding.hasVersion()) {
-			s.setSrchPrmtrJrsdctnCdgVrsn(String.valueOf(searchparameterjurisdictioncoding.getVersion()));
+		/******************** searchparametercontacttelecom ********************************************************************************/
+		org.hl7.fhir.r4.model.ContactPoint searchparametercontacttelecom = searchparametercontact.getTelecomFirstRep();
+
+		/******************** SrchPrmtr_Cntct_Tlcm_Vl ********************************************************************************/
+		if(searchparametercontacttelecom.hasValue()) {
+			s.setSrchPrmtrCntctTlcmVl(String.valueOf(searchparametercontacttelecom.getValue()));
 		}
-		/******************** SrchPrmtr_Jrsdctn_Cdg_Cd ********************************************************************************/
-		if(searchparameterjurisdictioncoding.hasCode()) {
-			s.setSrchPrmtrJrsdctnCdgCd(String.valueOf(searchparameterjurisdictioncoding.getCode()));
+		/******************** searchparametercontacttelecomperiod ********************************************************************************/
+		org.hl7.fhir.r4.model.Period searchparametercontacttelecomperiod = searchparametercontacttelecom.getPeriod();
+
+		/******************** SrchPrmtr_Cntct_Tlcm_Prd_Strt ********************************************************************************/
+		if(searchparametercontacttelecomperiod.hasStart()) {
+			s.setSrchPrmtrCntctTlcmPrdStrt(String.valueOf(searchparametercontacttelecomperiod.getStart()));
 		}
-		/******************** SrchPrmtr_Jrsdctn_Cdg_Sys ********************************************************************************/
-		if(searchparameterjurisdictioncoding.hasSystem()) {
-			s.setSrchPrmtrJrsdctnCdgSys(String.valueOf(searchparameterjurisdictioncoding.getSystem()));
+		/******************** SrchPrmtr_Cntct_Tlcm_Prd_End ********************************************************************************/
+		if(searchparametercontacttelecomperiod.hasEnd()) {
+			s.setSrchPrmtrCntctTlcmPrdEnd(String.valueOf(searchparametercontacttelecomperiod.getEnd()));
 		}
-		/******************** SrchPrmtr_Jrsdctn_Cdg_UsrSltd ********************************************************************************/
-		if(searchparameterjurisdictioncoding.hasUserSelected()) {
-			s.setSrchPrmtrJrsdctnCdgUsrSltd(String.valueOf(searchparameterjurisdictioncoding.getUserSelected()));
+		/******************** searchparametercontacttelecomsystem ********************************************************************************/
+		org.hl7.fhir.r4.model.ContactPoint.ContactPointSystem searchparametercontacttelecomsystem = searchparametercontacttelecom.getSystem();
+		s.setSrchPrmtrCntctTlcmSys(searchparametercontacttelecomsystem.toCode());
+
+		/******************** searchparametercontacttelecomuse ********************************************************************************/
+		org.hl7.fhir.r4.model.ContactPoint.ContactPointUse searchparametercontacttelecomuse = searchparametercontacttelecom.getUse();
+		s.setSrchPrmtrCntctTlcmUse(searchparametercontacttelecomuse.toCode());
+
+		/******************** SrchPrmtr_Cntct_Tlcm_Rnk ********************************************************************************/
+		if(searchparametercontacttelecom.hasRank()) {
+			s.setSrchPrmtrCntctTlcmRnk(String.valueOf(searchparametercontacttelecom.getRank()));
 		}
-		/******************** SrchPrmtr_Jrsdctn_Txt ********************************************************************************/
-		if(searchparameterjurisdiction.hasText()) {
-			s.setSrchPrmtrJrsdctnTxt(String.valueOf(searchparameterjurisdiction.getText()));
+		/******************** SrchPrmtr_DerivedFrom ********************************************************************************/
+		if(searchparameter.hasDerivedFrom()) {
+			s.setSrchPrmtrDerivedFrom(String.valueOf(searchparameter.getDerivedFrom()));
+		}
+		/******************** SrchPrmtr_Exprsn ********************************************************************************/
+		if(searchparameter.hasExpression()) {
+			s.setSrchPrmtrExprsn(String.valueOf(searchparameter.getExpression()));
+		}
+		/******************** SrchPrmtr_MultipleOr ********************************************************************************/
+		if(searchparameter.hasMultipleOr()) {
+			s.setSrchPrmtrMultipleOr(String.valueOf(searchparameter.getMultipleOr()));
+		}
+		/******************** searchparameterxpathusage ********************************************************************************/
+		org.hl7.fhir.r4.model.SearchParameter.XPathUsageType searchparameterxpathusage = searchparameter.getXpathUsage();
+		s.setSrchPrmtrXpathUsg(searchparameterxpathusage.toCode());
+
+		/******************** SrchPrmtr_Xpath ********************************************************************************/
+		if(searchparameter.hasXpath()) {
+			s.setSrchPrmtrXpath(String.valueOf(searchparameter.getXpath()));
+		}
+		/******************** SrchPrmtr_MultipleAnd ********************************************************************************/
+		if(searchparameter.hasMultipleAnd()) {
+			s.setSrchPrmtrMultipleAnd(String.valueOf(searchparameter.getMultipleAnd()));
 		}
 		/******************** searchparameterusecontext ********************************************************************************/
 		org.hl7.fhir.r4.model.UsageContext searchparameterusecontext = searchparameter.getUseContextFirstRep();
@@ -81,51 +132,51 @@ public class SearchParameterBidirectionalConversion
 		/******************** searchparameterusecontextcode ********************************************************************************/
 		org.hl7.fhir.r4.model.Coding searchparameterusecontextcode = searchparameterusecontext.getCode();
 
-		/******************** SrchPrmtr_UseCntxt_Cd_Dsply ********************************************************************************/
-		if(searchparameterusecontextcode.hasDisplay()) {
-			s.setSrchPrmtrUseCntxtCdDsply(String.valueOf(searchparameterusecontextcode.getDisplay()));
-		}
 		/******************** SrchPrmtr_UseCntxt_Cd_Vrsn ********************************************************************************/
 		if(searchparameterusecontextcode.hasVersion()) {
 			s.setSrchPrmtrUseCntxtCdVrsn(String.valueOf(searchparameterusecontextcode.getVersion()));
 		}
-		/******************** SrchPrmtr_UseCntxt_Cd_Sys ********************************************************************************/
-		if(searchparameterusecontextcode.hasSystem()) {
-			s.setSrchPrmtrUseCntxtCdSys(String.valueOf(searchparameterusecontextcode.getSystem()));
+		/******************** SrchPrmtr_UseCntxt_Cd_Dsply ********************************************************************************/
+		if(searchparameterusecontextcode.hasDisplay()) {
+			s.setSrchPrmtrUseCntxtCdDsply(String.valueOf(searchparameterusecontextcode.getDisplay()));
 		}
 		/******************** SrchPrmtr_UseCntxt_Cd_UsrSltd ********************************************************************************/
 		if(searchparameterusecontextcode.hasUserSelected()) {
 			s.setSrchPrmtrUseCntxtCdUsrSltd(String.valueOf(searchparameterusecontextcode.getUserSelected()));
 		}
+		/******************** SrchPrmtr_UseCntxt_Cd_Sys ********************************************************************************/
+		if(searchparameterusecontextcode.hasSystem()) {
+			s.setSrchPrmtrUseCntxtCdSys(String.valueOf(searchparameterusecontextcode.getSystem()));
+		}
 		/******************** searchparameterusecontextvaluecodeableconcept ********************************************************************************/
 		org.hl7.fhir.r4.model.CodeableConcept searchparameterusecontextvaluecodeableconcept = searchparameterusecontext.getValueCodeableConcept();
 
+		/******************** SrchPrmtr_UseCntxt_VlCdbleCncpt_Txt ********************************************************************************/
+		if(searchparameterusecontextvaluecodeableconcept.hasText()) {
+			s.setSrchPrmtrUseCntxtVlCdbleCncptTxt(String.valueOf(searchparameterusecontextvaluecodeableconcept.getText()));
+		}
 		/******************** searchparameterusecontextvaluecodeableconceptcoding ********************************************************************************/
 		org.hl7.fhir.r4.model.Coding searchparameterusecontextvaluecodeableconceptcoding = searchparameterusecontextvaluecodeableconcept.getCodingFirstRep();
 
-		/******************** SrchPrmtr_UseCntxt_VlCdbleCncpt_Cdg_Dsply ********************************************************************************/
-		if(searchparameterusecontextvaluecodeableconceptcoding.hasDisplay()) {
-			s.setSrchPrmtrUseCntxtVlCdbleCncptCdgDsply(String.valueOf(searchparameterusecontextvaluecodeableconceptcoding.getDisplay()));
-		}
 		/******************** SrchPrmtr_UseCntxt_VlCdbleCncpt_Cdg_Vrsn ********************************************************************************/
 		if(searchparameterusecontextvaluecodeableconceptcoding.hasVersion()) {
 			s.setSrchPrmtrUseCntxtVlCdbleCncptCdgVrsn(String.valueOf(searchparameterusecontextvaluecodeableconceptcoding.getVersion()));
+		}
+		/******************** SrchPrmtr_UseCntxt_VlCdbleCncpt_Cdg_Dsply ********************************************************************************/
+		if(searchparameterusecontextvaluecodeableconceptcoding.hasDisplay()) {
+			s.setSrchPrmtrUseCntxtVlCdbleCncptCdgDsply(String.valueOf(searchparameterusecontextvaluecodeableconceptcoding.getDisplay()));
 		}
 		/******************** SrchPrmtr_UseCntxt_VlCdbleCncpt_Cdg_Cd ********************************************************************************/
 		if(searchparameterusecontextvaluecodeableconceptcoding.hasCode()) {
 			s.setSrchPrmtrUseCntxtVlCdbleCncptCdgCd(String.valueOf(searchparameterusecontextvaluecodeableconceptcoding.getCode()));
 		}
-		/******************** SrchPrmtr_UseCntxt_VlCdbleCncpt_Cdg_Sys ********************************************************************************/
-		if(searchparameterusecontextvaluecodeableconceptcoding.hasSystem()) {
-			s.setSrchPrmtrUseCntxtVlCdbleCncptCdgSys(String.valueOf(searchparameterusecontextvaluecodeableconceptcoding.getSystem()));
-		}
 		/******************** SrchPrmtr_UseCntxt_VlCdbleCncpt_Cdg_UsrSltd ********************************************************************************/
 		if(searchparameterusecontextvaluecodeableconceptcoding.hasUserSelected()) {
 			s.setSrchPrmtrUseCntxtVlCdbleCncptCdgUsrSltd(String.valueOf(searchparameterusecontextvaluecodeableconceptcoding.getUserSelected()));
 		}
-		/******************** SrchPrmtr_UseCntxt_VlCdbleCncpt_Txt ********************************************************************************/
-		if(searchparameterusecontextvaluecodeableconcept.hasText()) {
-			s.setSrchPrmtrUseCntxtVlCdbleCncptTxt(String.valueOf(searchparameterusecontextvaluecodeableconcept.getText()));
+		/******************** SrchPrmtr_UseCntxt_VlCdbleCncpt_Cdg_Sys ********************************************************************************/
+		if(searchparameterusecontextvaluecodeableconceptcoding.hasSystem()) {
+			s.setSrchPrmtrUseCntxtVlCdbleCncptCdgSys(String.valueOf(searchparameterusecontextvaluecodeableconceptcoding.getSystem()));
 		}
 		/******************** searchparameterusecontextvaluequantity ********************************************************************************/
 		org.hl7.fhir.r4.model.Quantity searchparameterusecontextvaluequantity = searchparameterusecontext.getValueQuantity();
@@ -142,13 +193,13 @@ public class SearchParameterBidirectionalConversion
 		if(searchparameterusecontextvaluequantity.hasCode()) {
 			s.setSrchPrmtrUseCntxtVlQntyCd(String.valueOf(searchparameterusecontextvaluequantity.getCode()));
 		}
-		/******************** SrchPrmtr_UseCntxt_VlQnty_Sys ********************************************************************************/
-		if(searchparameterusecontextvaluequantity.hasSystem()) {
-			s.setSrchPrmtrUseCntxtVlQntySys(String.valueOf(searchparameterusecontextvaluequantity.getSystem()));
-		}
 		/******************** SrchPrmtr_UseCntxt_VlQnty_Unt ********************************************************************************/
 		if(searchparameterusecontextvaluequantity.hasUnit()) {
 			s.setSrchPrmtrUseCntxtVlQntyUnt(String.valueOf(searchparameterusecontextvaluequantity.getUnit()));
+		}
+		/******************** SrchPrmtr_UseCntxt_VlQnty_Sys ********************************************************************************/
+		if(searchparameterusecontextvaluequantity.hasSystem()) {
+			s.setSrchPrmtrUseCntxtVlQntySys(String.valueOf(searchparameterusecontextvaluequantity.getSystem()));
 		}
 		/******************** searchparameterusecontextvaluerange ********************************************************************************/
 		org.hl7.fhir.r4.model.Range searchparameterusecontextvaluerange = searchparameterusecontext.getValueRange();
@@ -168,13 +219,13 @@ public class SearchParameterBidirectionalConversion
 		if(searchparameterusecontextvaluerangelow.hasCode()) {
 			s.setSrchPrmtrUseCntxtVlRngLwCd(String.valueOf(searchparameterusecontextvaluerangelow.getCode()));
 		}
-		/******************** SrchPrmtr_UseCntxt_VlRng_Lw_Sys ********************************************************************************/
-		if(searchparameterusecontextvaluerangelow.hasSystem()) {
-			s.setSrchPrmtrUseCntxtVlRngLwSys(String.valueOf(searchparameterusecontextvaluerangelow.getSystem()));
-		}
 		/******************** SrchPrmtr_UseCntxt_VlRng_Lw_Unt ********************************************************************************/
 		if(searchparameterusecontextvaluerangelow.hasUnit()) {
 			s.setSrchPrmtrUseCntxtVlRngLwUnt(String.valueOf(searchparameterusecontextvaluerangelow.getUnit()));
+		}
+		/******************** SrchPrmtr_UseCntxt_VlRng_Lw_Sys ********************************************************************************/
+		if(searchparameterusecontextvaluerangelow.hasSystem()) {
+			s.setSrchPrmtrUseCntxtVlRngLwSys(String.valueOf(searchparameterusecontextvaluerangelow.getSystem()));
 		}
 		/******************** searchparameterusecontextvaluerangehigh ********************************************************************************/
 		org.hl7.fhir.r4.model.Quantity searchparameterusecontextvaluerangehigh = searchparameterusecontextvaluerange.getHigh();
@@ -191,98 +242,47 @@ public class SearchParameterBidirectionalConversion
 		if(searchparameterusecontextvaluerangehigh.hasCode()) {
 			s.setSrchPrmtrUseCntxtVlRngHiCd(String.valueOf(searchparameterusecontextvaluerangehigh.getCode()));
 		}
-		/******************** SrchPrmtr_UseCntxt_VlRng_Hi_Sys ********************************************************************************/
-		if(searchparameterusecontextvaluerangehigh.hasSystem()) {
-			s.setSrchPrmtrUseCntxtVlRngHiSys(String.valueOf(searchparameterusecontextvaluerangehigh.getSystem()));
-		}
 		/******************** SrchPrmtr_UseCntxt_VlRng_Hi_Unt ********************************************************************************/
 		if(searchparameterusecontextvaluerangehigh.hasUnit()) {
 			s.setSrchPrmtrUseCntxtVlRngHiUnt(String.valueOf(searchparameterusecontextvaluerangehigh.getUnit()));
+		}
+		/******************** SrchPrmtr_UseCntxt_VlRng_Hi_Sys ********************************************************************************/
+		if(searchparameterusecontextvaluerangehigh.hasSystem()) {
+			s.setSrchPrmtrUseCntxtVlRngHiSys(String.valueOf(searchparameterusecontextvaluerangehigh.getSystem()));
 		}
 		/******************** SrchPrmtr_UseCntxt_VlRfrnc ********************************************************************************/
 		if(searchparameterusecontext.hasValueReference()) {
 			s.setSrchPrmtrUseCntxtVlRfrnc(String.valueOf(searchparameterusecontext.getValueReference()));
 		}
-		/******************** searchparameterstatus ********************************************************************************/
-		org.hl7.fhir.r4.model.Enumerations.PublicationStatus searchparameterstatus = searchparameter.getStatus();
-		s.setSrchPrmtrSts(searchparameterstatus.toCode());
+		/******************** searchparameterjurisdiction ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept searchparameterjurisdiction = searchparameter.getJurisdictionFirstRep();
 
-		/******************** SrchPrmtr_Dscrptn ********************************************************************************/
-		if(searchparameter.hasDescription()) {
-			s.setSrchPrmtrDscrptn(String.valueOf(searchparameter.getDescription()));
+		/******************** SrchPrmtr_Jrsdctn_Txt ********************************************************************************/
+		if(searchparameterjurisdiction.hasText()) {
+			s.setSrchPrmtrJrsdctnTxt(String.valueOf(searchparameterjurisdiction.getText()));
 		}
-		/******************** searchparametercontact ********************************************************************************/
-		org.hl7.fhir.r4.model.ContactDetail searchparametercontact = searchparameter.getContactFirstRep();
+		/******************** searchparameterjurisdictioncoding ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding searchparameterjurisdictioncoding = searchparameterjurisdiction.getCodingFirstRep();
 
-		/******************** SrchPrmtr_Cntct_Nm ********************************************************************************/
-		if(searchparametercontact.hasName()) {
-			s.setSrchPrmtrCntctNm(String.valueOf(searchparametercontact.getName()));
+		/******************** SrchPrmtr_Jrsdctn_Cdg_Vrsn ********************************************************************************/
+		if(searchparameterjurisdictioncoding.hasVersion()) {
+			s.setSrchPrmtrJrsdctnCdgVrsn(String.valueOf(searchparameterjurisdictioncoding.getVersion()));
 		}
-		/******************** searchparametercontacttelecom ********************************************************************************/
-		org.hl7.fhir.r4.model.ContactPoint searchparametercontacttelecom = searchparametercontact.getTelecomFirstRep();
-
-		/******************** SrchPrmtr_Cntct_Tlcm_Vl ********************************************************************************/
-		if(searchparametercontacttelecom.hasValue()) {
-			s.setSrchPrmtrCntctTlcmVl(String.valueOf(searchparametercontacttelecom.getValue()));
+		/******************** SrchPrmtr_Jrsdctn_Cdg_Dsply ********************************************************************************/
+		if(searchparameterjurisdictioncoding.hasDisplay()) {
+			s.setSrchPrmtrJrsdctnCdgDsply(String.valueOf(searchparameterjurisdictioncoding.getDisplay()));
 		}
-		/******************** searchparametercontacttelecomsystem ********************************************************************************/
-		org.hl7.fhir.r4.model.ContactPoint.ContactPointSystem searchparametercontacttelecomsystem = searchparametercontacttelecom.getSystem();
-		s.setSrchPrmtrCntctTlcmSys(searchparametercontacttelecomsystem.toCode());
-
-		/******************** searchparametercontacttelecomperiod ********************************************************************************/
-		org.hl7.fhir.r4.model.Period searchparametercontacttelecomperiod = searchparametercontacttelecom.getPeriod();
-
-		/******************** SrchPrmtr_Cntct_Tlcm_Prd_End ********************************************************************************/
-		if(searchparametercontacttelecomperiod.hasEnd()) {
-			s.setSrchPrmtrCntctTlcmPrdEnd(String.valueOf(searchparametercontacttelecomperiod.getEnd()));
+		/******************** SrchPrmtr_Jrsdctn_Cdg_Cd ********************************************************************************/
+		if(searchparameterjurisdictioncoding.hasCode()) {
+			s.setSrchPrmtrJrsdctnCdgCd(String.valueOf(searchparameterjurisdictioncoding.getCode()));
 		}
-		/******************** SrchPrmtr_Cntct_Tlcm_Prd_Strt ********************************************************************************/
-		if(searchparametercontacttelecomperiod.hasStart()) {
-			s.setSrchPrmtrCntctTlcmPrdStrt(String.valueOf(searchparametercontacttelecomperiod.getStart()));
+		/******************** SrchPrmtr_Jrsdctn_Cdg_UsrSltd ********************************************************************************/
+		if(searchparameterjurisdictioncoding.hasUserSelected()) {
+			s.setSrchPrmtrJrsdctnCdgUsrSltd(String.valueOf(searchparameterjurisdictioncoding.getUserSelected()));
 		}
-		/******************** searchparametercontacttelecomuse ********************************************************************************/
-		org.hl7.fhir.r4.model.ContactPoint.ContactPointUse searchparametercontacttelecomuse = searchparametercontacttelecom.getUse();
-		s.setSrchPrmtrCntctTlcmUse(searchparametercontacttelecomuse.toCode());
-
-		/******************** SrchPrmtr_Cntct_Tlcm_Rnk ********************************************************************************/
-		if(searchparametercontacttelecom.hasRank()) {
-			s.setSrchPrmtrCntctTlcmRnk(String.valueOf(searchparametercontacttelecom.getRank()));
-		}
-		/******************** SrchPrmtr_DerivedFrom ********************************************************************************/
-		if(searchparameter.hasDerivedFrom()) {
-			s.setSrchPrmtrDerivedFrom(String.valueOf(searchparameter.getDerivedFrom()));
-		}
-		/******************** SrchPrmtr_Exprmtl ********************************************************************************/
-		if(searchparameter.hasExperimental()) {
-			s.setSrchPrmtrExprmtl(String.valueOf(searchparameter.getExperimental()));
-		}
-		/******************** SrchPrmtr_Pblshr ********************************************************************************/
-		if(searchparameter.hasPublisher()) {
-			s.setSrchPrmtrPblshr(String.valueOf(searchparameter.getPublisher()));
-		}
-		/******************** SrchPrmtr_Prpse ********************************************************************************/
-		if(searchparameter.hasPurpose()) {
-			s.setSrchPrmtrPrpse(String.valueOf(searchparameter.getPurpose()));
-		}
-		/******************** searchparameterxpathusage ********************************************************************************/
-		org.hl7.fhir.r4.model.SearchParameter.XPathUsageType searchparameterxpathusage = searchparameter.getXpathUsage();
-		s.setSrchPrmtrXpathUsg(searchparameterxpathusage.toCode());
-
-		/******************** SrchPrmtr_Exprsn ********************************************************************************/
-		if(searchparameter.hasExpression()) {
-			s.setSrchPrmtrExprsn(String.valueOf(searchparameter.getExpression()));
-		}
-		/******************** SrchPrmtr_MultipleAnd ********************************************************************************/
-		if(searchparameter.hasMultipleAnd()) {
-			s.setSrchPrmtrMultipleAnd(String.valueOf(searchparameter.getMultipleAnd()));
-		}
-		/******************** SrchPrmtr_Xpath ********************************************************************************/
-		if(searchparameter.hasXpath()) {
-			s.setSrchPrmtrXpath(String.valueOf(searchparameter.getXpath()));
-		}
-		/******************** SrchPrmtr_MultipleOr ********************************************************************************/
-		if(searchparameter.hasMultipleOr()) {
-			s.setSrchPrmtrMultipleOr(String.valueOf(searchparameter.getMultipleOr()));
+		/******************** SrchPrmtr_Jrsdctn_Cdg_Sys ********************************************************************************/
+		if(searchparameterjurisdictioncoding.hasSystem()) {
+			s.setSrchPrmtrJrsdctnCdgSys(String.valueOf(searchparameterjurisdictioncoding.getSystem()));
 		}
 		return s;
 	}

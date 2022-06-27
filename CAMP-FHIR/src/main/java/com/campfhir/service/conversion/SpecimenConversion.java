@@ -142,6 +142,26 @@ public class SpecimenConversion
 		org.hl7.fhir.r4.model.Duration specimencollectionduration =  new org.hl7.fhir.r4.model.Duration();
 		specimencollection.setDuration(specimencollectionduration);
 
+		/******************** Spcmn_Collection_Duration_Cd ********************************************************************************/
+		if(s.getSpcmnCollectionDurationCd() != null) {
+			specimencollectionduration.setCode(s.getSpcmnCollectionDurationCd());
+		}
+		/******************** specimencollectiondurationcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory specimencollectiondurationcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		specimencollectionduration.setComparator(specimencollectiondurationcomparator.fromCode(s.getSpcmnCollectionDurationCmprtr()));
+
+		/******************** Spcmn_Collection_Duration_Sys ********************************************************************************/
+		if(s.getSpcmnCollectionDurationSys() != null) {
+			specimencollectionduration.setSystem(s.getSpcmnCollectionDurationSys());
+		}
+		/******************** Spcmn_Collection_Duration_Unt ********************************************************************************/
+		if(s.getSpcmnCollectionDurationUnt() != null) {
+			specimencollectionduration.setUnit(s.getSpcmnCollectionDurationUnt());
+		}
+		/******************** Spcmn_Collection_Duration_Vl ********************************************************************************/
+		if(s.getSpcmnCollectionDurationVl() != null) {
+			specimencollectionduration.setValue(Double.parseDouble((s.getSpcmnCollectionDurationVl())));
+		}
 		/******************** specimencollectionfastingstatuscodeableconcept ********************************************************************************/
 		org.hl7.fhir.r4.model.CodeableConcept specimencollectionfastingstatuscodeableconcept =  new org.hl7.fhir.r4.model.CodeableConcept();
 		specimencollection.setFastingStatus(specimencollectionfastingstatuscodeableconcept);
@@ -178,6 +198,26 @@ public class SpecimenConversion
 		org.hl7.fhir.r4.model.Duration specimencollectionfastingstatusduration =  new org.hl7.fhir.r4.model.Duration();
 		specimencollection.setFastingStatus(specimencollectionfastingstatusduration);
 
+		/******************** Spcmn_Collection_FastingStsDuration_Cd ********************************************************************************/
+		if(s.getSpcmnCollectionFastingStsDurationCd() != null) {
+			specimencollectionfastingstatusduration.setCode(s.getSpcmnCollectionFastingStsDurationCd());
+		}
+		/******************** specimencollectionfastingstatusdurationcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory specimencollectionfastingstatusdurationcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		specimencollectionfastingstatusduration.setComparator(specimencollectionfastingstatusdurationcomparator.fromCode(s.getSpcmnCollectionFastingStsDurationCmprtr()));
+
+		/******************** Spcmn_Collection_FastingStsDuration_Sys ********************************************************************************/
+		if(s.getSpcmnCollectionFastingStsDurationSys() != null) {
+			specimencollectionfastingstatusduration.setSystem(s.getSpcmnCollectionFastingStsDurationSys());
+		}
+		/******************** Spcmn_Collection_FastingStsDuration_Unt ********************************************************************************/
+		if(s.getSpcmnCollectionFastingStsDurationUnt() != null) {
+			specimencollectionfastingstatusduration.setUnit(s.getSpcmnCollectionFastingStsDurationUnt());
+		}
+		/******************** Spcmn_Collection_FastingStsDuration_Vl ********************************************************************************/
+		if(s.getSpcmnCollectionFastingStsDurationVl() != null) {
+			specimencollectionfastingstatusduration.setValue(Double.parseDouble((s.getSpcmnCollectionFastingStsDurationVl())));
+		}
 		/******************** specimencollectionmethod ********************************************************************************/
 		org.hl7.fhir.r4.model.CodeableConcept specimencollectionmethod =  new org.hl7.fhir.r4.model.CodeableConcept();
 		specimencollection.setMethod(specimencollectionmethod);

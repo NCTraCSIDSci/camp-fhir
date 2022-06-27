@@ -394,6 +394,26 @@ public class SpecimenDefinitionConversion
 		org.hl7.fhir.r4.model.Duration specimendefinitiontypetestedhandlingmaxduration =  new org.hl7.fhir.r4.model.Duration();
 		specimendefinitiontypetestedhandling.setMaxDuration(specimendefinitiontypetestedhandlingmaxduration);
 
+		/******************** SpcmnDfn_TypTsted_Handling_MxDuration_Cd ********************************************************************************/
+		if(s.getSpcmnDfnTypTstedHandlingMxDurationCd() != null) {
+			specimendefinitiontypetestedhandlingmaxduration.setCode(s.getSpcmnDfnTypTstedHandlingMxDurationCd());
+		}
+		/******************** specimendefinitiontypetestedhandlingmaxdurationcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory specimendefinitiontypetestedhandlingmaxdurationcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		specimendefinitiontypetestedhandlingmaxduration.setComparator(specimendefinitiontypetestedhandlingmaxdurationcomparator.fromCode(s.getSpcmnDfnTypTstedHandlingMxDurationCmprtr()));
+
+		/******************** SpcmnDfn_TypTsted_Handling_MxDuration_Sys ********************************************************************************/
+		if(s.getSpcmnDfnTypTstedHandlingMxDurationSys() != null) {
+			specimendefinitiontypetestedhandlingmaxduration.setSystem(s.getSpcmnDfnTypTstedHandlingMxDurationSys());
+		}
+		/******************** SpcmnDfn_TypTsted_Handling_MxDuration_Unt ********************************************************************************/
+		if(s.getSpcmnDfnTypTstedHandlingMxDurationUnt() != null) {
+			specimendefinitiontypetestedhandlingmaxduration.setUnit(s.getSpcmnDfnTypTstedHandlingMxDurationUnt());
+		}
+		/******************** SpcmnDfn_TypTsted_Handling_MxDuration_Vl ********************************************************************************/
+		if(s.getSpcmnDfnTypTstedHandlingMxDurationVl() != null) {
+			specimendefinitiontypetestedhandlingmaxduration.setValue(Double.parseDouble((s.getSpcmnDfnTypTstedHandlingMxDurationVl())));
+		}
 		/******************** specimendefinitiontypetestedhandlingtemperaturequalifier ********************************************************************************/
 		org.hl7.fhir.r4.model.CodeableConcept specimendefinitiontypetestedhandlingtemperaturequalifier =  new org.hl7.fhir.r4.model.CodeableConcept();
 		specimendefinitiontypetestedhandling.setTemperatureQualifier(specimendefinitiontypetestedhandlingtemperaturequalifier);
@@ -526,6 +546,26 @@ public class SpecimenDefinitionConversion
 		org.hl7.fhir.r4.model.Duration specimendefinitiontypetestedretentiontime =  new org.hl7.fhir.r4.model.Duration();
 		specimendefinitiontypetested.setRetentionTime(specimendefinitiontypetestedretentiontime);
 
+		/******************** SpcmnDfn_TypTsted_RetentionTime_Cd ********************************************************************************/
+		if(s.getSpcmnDfnTypTstedRetentionTimeCd() != null) {
+			specimendefinitiontypetestedretentiontime.setCode(s.getSpcmnDfnTypTstedRetentionTimeCd());
+		}
+		/******************** specimendefinitiontypetestedretentiontimecomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory specimendefinitiontypetestedretentiontimecomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		specimendefinitiontypetestedretentiontime.setComparator(specimendefinitiontypetestedretentiontimecomparator.fromCode(s.getSpcmnDfnTypTstedRetentionTimeCmprtr()));
+
+		/******************** SpcmnDfn_TypTsted_RetentionTime_Sys ********************************************************************************/
+		if(s.getSpcmnDfnTypTstedRetentionTimeSys() != null) {
+			specimendefinitiontypetestedretentiontime.setSystem(s.getSpcmnDfnTypTstedRetentionTimeSys());
+		}
+		/******************** SpcmnDfn_TypTsted_RetentionTime_Unt ********************************************************************************/
+		if(s.getSpcmnDfnTypTstedRetentionTimeUnt() != null) {
+			specimendefinitiontypetestedretentiontime.setUnit(s.getSpcmnDfnTypTstedRetentionTimeUnt());
+		}
+		/******************** SpcmnDfn_TypTsted_RetentionTime_Vl ********************************************************************************/
+		if(s.getSpcmnDfnTypTstedRetentionTimeVl() != null) {
+			specimendefinitiontypetestedretentiontime.setValue(Double.parseDouble((s.getSpcmnDfnTypTstedRetentionTimeVl())));
+		}
 		/******************** specimendefinitiontypetestedtype ********************************************************************************/
 		org.hl7.fhir.r4.model.CodeableConcept specimendefinitiontypetestedtype =  new org.hl7.fhir.r4.model.CodeableConcept();
 		specimendefinitiontypetested.setType(specimendefinitiontypetestedtype);

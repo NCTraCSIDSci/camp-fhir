@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Jun 6, 2022, 11:02:30 AM by Hibernate Tools 5.6.1.Final
+// Generated Jun 27, 2022, 10:40:10 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -46,6 +46,11 @@ public class Library  implements java.io.Serializable {
      private String libraryDataRqrmentDtFltrPath;
      private String libraryDataRqrmentDtFltrSrchParam;
      private String libraryDataRqrmentDtFltrVlDtTimeTyp;
+     private String libraryDataRqrmentDtFltrVlDurationCd;
+     private String libraryDataRqrmentDtFltrVlDurationCmprtr;
+     private String libraryDataRqrmentDtFltrVlDurationSys;
+     private String libraryDataRqrmentDtFltrVlDurationUnt;
+     private String libraryDataRqrmentDtFltrVlDurationVl;
      private String libraryDataRqrmentDtFltrVlPrdEnd;
      private String libraryDataRqrmentDtFltrVlPrdStrt;
      private String libraryDataRqrmentLmt;
@@ -543,6 +548,56 @@ public class Library  implements java.io.Serializable {
     
     public void setLibraryDataRqrmentDtFltrVlDtTimeTyp(String libraryDataRqrmentDtFltrVlDtTimeTyp) {
         this.libraryDataRqrmentDtFltrVlDtTimeTyp = libraryDataRqrmentDtFltrVlDtTimeTyp;
+    }
+    
+    
+    
+    public String getLibraryDataRqrmentDtFltrVlDurationCd() {
+        return this.libraryDataRqrmentDtFltrVlDurationCd;
+    }
+    
+    public void setLibraryDataRqrmentDtFltrVlDurationCd(String libraryDataRqrmentDtFltrVlDurationCd) {
+        this.libraryDataRqrmentDtFltrVlDurationCd = libraryDataRqrmentDtFltrVlDurationCd;
+    }
+    
+    
+    
+    public String getLibraryDataRqrmentDtFltrVlDurationCmprtr() {
+        return this.libraryDataRqrmentDtFltrVlDurationCmprtr;
+    }
+    
+    public void setLibraryDataRqrmentDtFltrVlDurationCmprtr(String libraryDataRqrmentDtFltrVlDurationCmprtr) {
+        this.libraryDataRqrmentDtFltrVlDurationCmprtr = libraryDataRqrmentDtFltrVlDurationCmprtr;
+    }
+    
+    
+    
+    public String getLibraryDataRqrmentDtFltrVlDurationSys() {
+        return this.libraryDataRqrmentDtFltrVlDurationSys;
+    }
+    
+    public void setLibraryDataRqrmentDtFltrVlDurationSys(String libraryDataRqrmentDtFltrVlDurationSys) {
+        this.libraryDataRqrmentDtFltrVlDurationSys = libraryDataRqrmentDtFltrVlDurationSys;
+    }
+    
+    
+    
+    public String getLibraryDataRqrmentDtFltrVlDurationUnt() {
+        return this.libraryDataRqrmentDtFltrVlDurationUnt;
+    }
+    
+    public void setLibraryDataRqrmentDtFltrVlDurationUnt(String libraryDataRqrmentDtFltrVlDurationUnt) {
+        this.libraryDataRqrmentDtFltrVlDurationUnt = libraryDataRqrmentDtFltrVlDurationUnt;
+    }
+    
+    
+    
+    public String getLibraryDataRqrmentDtFltrVlDurationVl() {
+        return this.libraryDataRqrmentDtFltrVlDurationVl;
+    }
+    
+    public void setLibraryDataRqrmentDtFltrVlDurationVl(String libraryDataRqrmentDtFltrVlDurationVl) {
+        this.libraryDataRqrmentDtFltrVlDurationVl = libraryDataRqrmentDtFltrVlDurationVl;
     }
     
     

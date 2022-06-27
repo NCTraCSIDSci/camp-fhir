@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Jun 6, 2022, 11:02:30 AM by Hibernate Tools 5.6.1.Final
+// Generated Jun 27, 2022, 10:40:10 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -60,6 +60,11 @@ public class PlanDefinition  implements java.io.Serializable {
      private String plnDfnActnInputDtFltrPath;
      private String plnDfnActnInputDtFltrSrchParam;
      private String plnDfnActnInputDtFltrVlDtTimeTyp;
+     private String plnDfnActnInputDtFltrVlDurationCd;
+     private String plnDfnActnInputDtFltrVlDurationCmprtr;
+     private String plnDfnActnInputDtFltrVlDurationSys;
+     private String plnDfnActnInputDtFltrVlDurationUnt;
+     private String plnDfnActnInputDtFltrVlDurationVl;
      private String plnDfnActnInputDtFltrVlPrdEnd;
      private String plnDfnActnInputDtFltrVlPrdStrt;
      private String plnDfnActnInputLmt;
@@ -86,6 +91,11 @@ public class PlanDefinition  implements java.io.Serializable {
      private String plnDfnActnOutputDtFltrPath;
      private String plnDfnActnOutputDtFltrSrchParam;
      private String plnDfnActnOutputDtFltrVlDtTimeTyp;
+     private String plnDfnActnOutputDtFltrVlDurationCd;
+     private String plnDfnActnOutputDtFltrVlDurationCmprtr;
+     private String plnDfnActnOutputDtFltrVlDurationSys;
+     private String plnDfnActnOutputDtFltrVlDurationUnt;
+     private String plnDfnActnOutputDtFltrVlDurationVl;
      private String plnDfnActnOutputDtFltrVlPrdEnd;
      private String plnDfnActnOutputDtFltrVlPrdStrt;
      private String plnDfnActnOutputLmt;
@@ -118,6 +128,11 @@ public class PlanDefinition  implements java.io.Serializable {
      private String plnDfnActnRsnCdgVrsn;
      private String plnDfnActnRsnTxt;
      private String plnDfnActnRltedActnActnId;
+     private String plnDfnActnRltedActnOffDurationCd;
+     private String plnDfnActnRltedActnOffDurationCmprtr;
+     private String plnDfnActnRltedActnOffDurationSys;
+     private String plnDfnActnRltedActnOffDurationUnt;
+     private String plnDfnActnRltedActnOffDurationVl;
      private String plnDfnActnRltedActnOffRngHiCd;
      private String plnDfnActnRltedActnOffRngHiCmprtr;
      private String plnDfnActnRltedActnOffRngHiSys;
@@ -139,7 +154,17 @@ public class PlanDefinition  implements java.io.Serializable {
      private String plnDfnActnSbjctCdbleCncptTxt;
      private String plnDfnActnSbjctRfrnc;
      private String plnDfnActnTxtEquivalent;
+     private String plnDfnActnTmgAgeCd;
+     private String plnDfnActnTmgAgeCmprtr;
+     private String plnDfnActnTmgAgeSys;
+     private String plnDfnActnTmgAgeUnt;
+     private String plnDfnActnTmgAgeVl;
      private String plnDfnActnTmgDtTimeTyp;
+     private String plnDfnActnTmgDurationCd;
+     private String plnDfnActnTmgDurationCmprtr;
+     private String plnDfnActnTmgDurationSys;
+     private String plnDfnActnTmgDurationUnt;
+     private String plnDfnActnTmgDurationVl;
      private String plnDfnActnTmgPrdEnd;
      private String plnDfnActnTmgPrdStrt;
      private String plnDfnActnTmgRngHiCd;
@@ -159,6 +184,11 @@ public class PlanDefinition  implements java.io.Serializable {
      private String plnDfnActnTmgTmgCdCdgVrsn;
      private String plnDfnActnTmgTmgCdTxt;
      private String plnDfnActnTmgTmgEvnt;
+     private String plnDfnActnTmgTmgRptBndsDurationCd;
+     private String plnDfnActnTmgTmgRptBndsDurationCmprtr;
+     private String plnDfnActnTmgTmgRptBndsDurationSys;
+     private String plnDfnActnTmgTmgRptBndsDurationUnt;
+     private String plnDfnActnTmgTmgRptBndsDurationVl;
      private String plnDfnActnTmgTmgRptBndsPrdEnd;
      private String plnDfnActnTmgTmgRptBndsPrdStrt;
      private String plnDfnActnTmgTmgRptBndsRngHiCd;
@@ -203,6 +233,11 @@ public class PlanDefinition  implements java.io.Serializable {
      private String plnDfnActnTrgrDataDtFltrPath;
      private String plnDfnActnTrgrDataDtFltrSrchParam;
      private String plnDfnActnTrgrDataDtFltrVlDtTimeTyp;
+     private String plnDfnActnTrgrDataDtFltrVlDurationCd;
+     private String plnDfnActnTrgrDataDtFltrVlDurationCmprtr;
+     private String plnDfnActnTrgrDataDtFltrVlDurationSys;
+     private String plnDfnActnTrgrDataDtFltrVlDurationUnt;
+     private String plnDfnActnTrgrDataDtFltrVlDurationVl;
      private String plnDfnActnTrgrDataDtFltrVlPrdEnd;
      private String plnDfnActnTrgrDataDtFltrVlPrdStrt;
      private String plnDfnActnTrgrDataLmt;
@@ -229,6 +264,11 @@ public class PlanDefinition  implements java.io.Serializable {
      private String plnDfnActnTrgrTmgTmgCdCdgVrsn;
      private String plnDfnActnTrgrTmgTmgCdTxt;
      private String plnDfnActnTrgrTmgTmgEvnt;
+     private String plnDfnActnTrgrTmgTmgRptBndsDurationCd;
+     private String plnDfnActnTrgrTmgTmgRptBndsDurationCmprtr;
+     private String plnDfnActnTrgrTmgTmgRptBndsDurationSys;
+     private String plnDfnActnTrgrTmgTmgRptBndsDurationUnt;
+     private String plnDfnActnTrgrTmgTmgRptBndsDurationVl;
      private String plnDfnActnTrgrTmgTmgRptBndsPrdEnd;
      private String plnDfnActnTrgrTmgTmgRptBndsPrdStrt;
      private String plnDfnActnTrgrTmgTmgRptBndsRngHiCd;
@@ -362,6 +402,11 @@ public class PlanDefinition  implements java.io.Serializable {
      private String plnDfnGoalTarDtlRngLwSys;
      private String plnDfnGoalTarDtlRngLwUnt;
      private String plnDfnGoalTarDtlRngLwVl;
+     private String plnDfnGoalTarDueCd;
+     private String plnDfnGoalTarDueCmprtr;
+     private String plnDfnGoalTarDueSys;
+     private String plnDfnGoalTarDueUnt;
+     private String plnDfnGoalTarDueVl;
      private String plnDfnGoalTarMsrCdgCd;
      private String plnDfnGoalTarMsrCdgDsply;
      private String plnDfnGoalTarMsrCdgSys;
@@ -969,6 +1014,56 @@ public class PlanDefinition  implements java.io.Serializable {
     
     
     
+    public String getPlnDfnActnInputDtFltrVlDurationCd() {
+        return this.plnDfnActnInputDtFltrVlDurationCd;
+    }
+    
+    public void setPlnDfnActnInputDtFltrVlDurationCd(String plnDfnActnInputDtFltrVlDurationCd) {
+        this.plnDfnActnInputDtFltrVlDurationCd = plnDfnActnInputDtFltrVlDurationCd;
+    }
+    
+    
+    
+    public String getPlnDfnActnInputDtFltrVlDurationCmprtr() {
+        return this.plnDfnActnInputDtFltrVlDurationCmprtr;
+    }
+    
+    public void setPlnDfnActnInputDtFltrVlDurationCmprtr(String plnDfnActnInputDtFltrVlDurationCmprtr) {
+        this.plnDfnActnInputDtFltrVlDurationCmprtr = plnDfnActnInputDtFltrVlDurationCmprtr;
+    }
+    
+    
+    
+    public String getPlnDfnActnInputDtFltrVlDurationSys() {
+        return this.plnDfnActnInputDtFltrVlDurationSys;
+    }
+    
+    public void setPlnDfnActnInputDtFltrVlDurationSys(String plnDfnActnInputDtFltrVlDurationSys) {
+        this.plnDfnActnInputDtFltrVlDurationSys = plnDfnActnInputDtFltrVlDurationSys;
+    }
+    
+    
+    
+    public String getPlnDfnActnInputDtFltrVlDurationUnt() {
+        return this.plnDfnActnInputDtFltrVlDurationUnt;
+    }
+    
+    public void setPlnDfnActnInputDtFltrVlDurationUnt(String plnDfnActnInputDtFltrVlDurationUnt) {
+        this.plnDfnActnInputDtFltrVlDurationUnt = plnDfnActnInputDtFltrVlDurationUnt;
+    }
+    
+    
+    
+    public String getPlnDfnActnInputDtFltrVlDurationVl() {
+        return this.plnDfnActnInputDtFltrVlDurationVl;
+    }
+    
+    public void setPlnDfnActnInputDtFltrVlDurationVl(String plnDfnActnInputDtFltrVlDurationVl) {
+        this.plnDfnActnInputDtFltrVlDurationVl = plnDfnActnInputDtFltrVlDurationVl;
+    }
+    
+    
+    
     public String getPlnDfnActnInputDtFltrVlPrdEnd() {
         return this.plnDfnActnInputDtFltrVlPrdEnd;
     }
@@ -1225,6 +1320,56 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnOutputDtFltrVlDtTimeTyp(String plnDfnActnOutputDtFltrVlDtTimeTyp) {
         this.plnDfnActnOutputDtFltrVlDtTimeTyp = plnDfnActnOutputDtFltrVlDtTimeTyp;
+    }
+    
+    
+    
+    public String getPlnDfnActnOutputDtFltrVlDurationCd() {
+        return this.plnDfnActnOutputDtFltrVlDurationCd;
+    }
+    
+    public void setPlnDfnActnOutputDtFltrVlDurationCd(String plnDfnActnOutputDtFltrVlDurationCd) {
+        this.plnDfnActnOutputDtFltrVlDurationCd = plnDfnActnOutputDtFltrVlDurationCd;
+    }
+    
+    
+    
+    public String getPlnDfnActnOutputDtFltrVlDurationCmprtr() {
+        return this.plnDfnActnOutputDtFltrVlDurationCmprtr;
+    }
+    
+    public void setPlnDfnActnOutputDtFltrVlDurationCmprtr(String plnDfnActnOutputDtFltrVlDurationCmprtr) {
+        this.plnDfnActnOutputDtFltrVlDurationCmprtr = plnDfnActnOutputDtFltrVlDurationCmprtr;
+    }
+    
+    
+    
+    public String getPlnDfnActnOutputDtFltrVlDurationSys() {
+        return this.plnDfnActnOutputDtFltrVlDurationSys;
+    }
+    
+    public void setPlnDfnActnOutputDtFltrVlDurationSys(String plnDfnActnOutputDtFltrVlDurationSys) {
+        this.plnDfnActnOutputDtFltrVlDurationSys = plnDfnActnOutputDtFltrVlDurationSys;
+    }
+    
+    
+    
+    public String getPlnDfnActnOutputDtFltrVlDurationUnt() {
+        return this.plnDfnActnOutputDtFltrVlDurationUnt;
+    }
+    
+    public void setPlnDfnActnOutputDtFltrVlDurationUnt(String plnDfnActnOutputDtFltrVlDurationUnt) {
+        this.plnDfnActnOutputDtFltrVlDurationUnt = plnDfnActnOutputDtFltrVlDurationUnt;
+    }
+    
+    
+    
+    public String getPlnDfnActnOutputDtFltrVlDurationVl() {
+        return this.plnDfnActnOutputDtFltrVlDurationVl;
+    }
+    
+    public void setPlnDfnActnOutputDtFltrVlDurationVl(String plnDfnActnOutputDtFltrVlDurationVl) {
+        this.plnDfnActnOutputDtFltrVlDurationVl = plnDfnActnOutputDtFltrVlDurationVl;
     }
     
     
@@ -1549,6 +1694,56 @@ public class PlanDefinition  implements java.io.Serializable {
     
     
     
+    public String getPlnDfnActnRltedActnOffDurationCd() {
+        return this.plnDfnActnRltedActnOffDurationCd;
+    }
+    
+    public void setPlnDfnActnRltedActnOffDurationCd(String plnDfnActnRltedActnOffDurationCd) {
+        this.plnDfnActnRltedActnOffDurationCd = plnDfnActnRltedActnOffDurationCd;
+    }
+    
+    
+    
+    public String getPlnDfnActnRltedActnOffDurationCmprtr() {
+        return this.plnDfnActnRltedActnOffDurationCmprtr;
+    }
+    
+    public void setPlnDfnActnRltedActnOffDurationCmprtr(String plnDfnActnRltedActnOffDurationCmprtr) {
+        this.plnDfnActnRltedActnOffDurationCmprtr = plnDfnActnRltedActnOffDurationCmprtr;
+    }
+    
+    
+    
+    public String getPlnDfnActnRltedActnOffDurationSys() {
+        return this.plnDfnActnRltedActnOffDurationSys;
+    }
+    
+    public void setPlnDfnActnRltedActnOffDurationSys(String plnDfnActnRltedActnOffDurationSys) {
+        this.plnDfnActnRltedActnOffDurationSys = plnDfnActnRltedActnOffDurationSys;
+    }
+    
+    
+    
+    public String getPlnDfnActnRltedActnOffDurationUnt() {
+        return this.plnDfnActnRltedActnOffDurationUnt;
+    }
+    
+    public void setPlnDfnActnRltedActnOffDurationUnt(String plnDfnActnRltedActnOffDurationUnt) {
+        this.plnDfnActnRltedActnOffDurationUnt = plnDfnActnRltedActnOffDurationUnt;
+    }
+    
+    
+    
+    public String getPlnDfnActnRltedActnOffDurationVl() {
+        return this.plnDfnActnRltedActnOffDurationVl;
+    }
+    
+    public void setPlnDfnActnRltedActnOffDurationVl(String plnDfnActnRltedActnOffDurationVl) {
+        this.plnDfnActnRltedActnOffDurationVl = plnDfnActnRltedActnOffDurationVl;
+    }
+    
+    
+    
     public String getPlnDfnActnRltedActnOffRngHiCd() {
         return this.plnDfnActnRltedActnOffRngHiCd;
     }
@@ -1759,12 +1954,112 @@ public class PlanDefinition  implements java.io.Serializable {
     
     
     
+    public String getPlnDfnActnTmgAgeCd() {
+        return this.plnDfnActnTmgAgeCd;
+    }
+    
+    public void setPlnDfnActnTmgAgeCd(String plnDfnActnTmgAgeCd) {
+        this.plnDfnActnTmgAgeCd = plnDfnActnTmgAgeCd;
+    }
+    
+    
+    
+    public String getPlnDfnActnTmgAgeCmprtr() {
+        return this.plnDfnActnTmgAgeCmprtr;
+    }
+    
+    public void setPlnDfnActnTmgAgeCmprtr(String plnDfnActnTmgAgeCmprtr) {
+        this.plnDfnActnTmgAgeCmprtr = plnDfnActnTmgAgeCmprtr;
+    }
+    
+    
+    
+    public String getPlnDfnActnTmgAgeSys() {
+        return this.plnDfnActnTmgAgeSys;
+    }
+    
+    public void setPlnDfnActnTmgAgeSys(String plnDfnActnTmgAgeSys) {
+        this.plnDfnActnTmgAgeSys = plnDfnActnTmgAgeSys;
+    }
+    
+    
+    
+    public String getPlnDfnActnTmgAgeUnt() {
+        return this.plnDfnActnTmgAgeUnt;
+    }
+    
+    public void setPlnDfnActnTmgAgeUnt(String plnDfnActnTmgAgeUnt) {
+        this.plnDfnActnTmgAgeUnt = plnDfnActnTmgAgeUnt;
+    }
+    
+    
+    
+    public String getPlnDfnActnTmgAgeVl() {
+        return this.plnDfnActnTmgAgeVl;
+    }
+    
+    public void setPlnDfnActnTmgAgeVl(String plnDfnActnTmgAgeVl) {
+        this.plnDfnActnTmgAgeVl = plnDfnActnTmgAgeVl;
+    }
+    
+    
+    
     public String getPlnDfnActnTmgDtTimeTyp() {
         return this.plnDfnActnTmgDtTimeTyp;
     }
     
     public void setPlnDfnActnTmgDtTimeTyp(String plnDfnActnTmgDtTimeTyp) {
         this.plnDfnActnTmgDtTimeTyp = plnDfnActnTmgDtTimeTyp;
+    }
+    
+    
+    
+    public String getPlnDfnActnTmgDurationCd() {
+        return this.plnDfnActnTmgDurationCd;
+    }
+    
+    public void setPlnDfnActnTmgDurationCd(String plnDfnActnTmgDurationCd) {
+        this.plnDfnActnTmgDurationCd = plnDfnActnTmgDurationCd;
+    }
+    
+    
+    
+    public String getPlnDfnActnTmgDurationCmprtr() {
+        return this.plnDfnActnTmgDurationCmprtr;
+    }
+    
+    public void setPlnDfnActnTmgDurationCmprtr(String plnDfnActnTmgDurationCmprtr) {
+        this.plnDfnActnTmgDurationCmprtr = plnDfnActnTmgDurationCmprtr;
+    }
+    
+    
+    
+    public String getPlnDfnActnTmgDurationSys() {
+        return this.plnDfnActnTmgDurationSys;
+    }
+    
+    public void setPlnDfnActnTmgDurationSys(String plnDfnActnTmgDurationSys) {
+        this.plnDfnActnTmgDurationSys = plnDfnActnTmgDurationSys;
+    }
+    
+    
+    
+    public String getPlnDfnActnTmgDurationUnt() {
+        return this.plnDfnActnTmgDurationUnt;
+    }
+    
+    public void setPlnDfnActnTmgDurationUnt(String plnDfnActnTmgDurationUnt) {
+        this.plnDfnActnTmgDurationUnt = plnDfnActnTmgDurationUnt;
+    }
+    
+    
+    
+    public String getPlnDfnActnTmgDurationVl() {
+        return this.plnDfnActnTmgDurationVl;
+    }
+    
+    public void setPlnDfnActnTmgDurationVl(String plnDfnActnTmgDurationVl) {
+        this.plnDfnActnTmgDurationVl = plnDfnActnTmgDurationVl;
     }
     
     
@@ -1955,6 +2250,56 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTmgTmgEvnt(String plnDfnActnTmgTmgEvnt) {
         this.plnDfnActnTmgTmgEvnt = plnDfnActnTmgTmgEvnt;
+    }
+    
+    
+    
+    public String getPlnDfnActnTmgTmgRptBndsDurationCd() {
+        return this.plnDfnActnTmgTmgRptBndsDurationCd;
+    }
+    
+    public void setPlnDfnActnTmgTmgRptBndsDurationCd(String plnDfnActnTmgTmgRptBndsDurationCd) {
+        this.plnDfnActnTmgTmgRptBndsDurationCd = plnDfnActnTmgTmgRptBndsDurationCd;
+    }
+    
+    
+    
+    public String getPlnDfnActnTmgTmgRptBndsDurationCmprtr() {
+        return this.plnDfnActnTmgTmgRptBndsDurationCmprtr;
+    }
+    
+    public void setPlnDfnActnTmgTmgRptBndsDurationCmprtr(String plnDfnActnTmgTmgRptBndsDurationCmprtr) {
+        this.plnDfnActnTmgTmgRptBndsDurationCmprtr = plnDfnActnTmgTmgRptBndsDurationCmprtr;
+    }
+    
+    
+    
+    public String getPlnDfnActnTmgTmgRptBndsDurationSys() {
+        return this.plnDfnActnTmgTmgRptBndsDurationSys;
+    }
+    
+    public void setPlnDfnActnTmgTmgRptBndsDurationSys(String plnDfnActnTmgTmgRptBndsDurationSys) {
+        this.plnDfnActnTmgTmgRptBndsDurationSys = plnDfnActnTmgTmgRptBndsDurationSys;
+    }
+    
+    
+    
+    public String getPlnDfnActnTmgTmgRptBndsDurationUnt() {
+        return this.plnDfnActnTmgTmgRptBndsDurationUnt;
+    }
+    
+    public void setPlnDfnActnTmgTmgRptBndsDurationUnt(String plnDfnActnTmgTmgRptBndsDurationUnt) {
+        this.plnDfnActnTmgTmgRptBndsDurationUnt = plnDfnActnTmgTmgRptBndsDurationUnt;
+    }
+    
+    
+    
+    public String getPlnDfnActnTmgTmgRptBndsDurationVl() {
+        return this.plnDfnActnTmgTmgRptBndsDurationVl;
+    }
+    
+    public void setPlnDfnActnTmgTmgRptBndsDurationVl(String plnDfnActnTmgTmgRptBndsDurationVl) {
+        this.plnDfnActnTmgTmgRptBndsDurationVl = plnDfnActnTmgTmgRptBndsDurationVl;
     }
     
     
@@ -2399,6 +2744,56 @@ public class PlanDefinition  implements java.io.Serializable {
     
     
     
+    public String getPlnDfnActnTrgrDataDtFltrVlDurationCd() {
+        return this.plnDfnActnTrgrDataDtFltrVlDurationCd;
+    }
+    
+    public void setPlnDfnActnTrgrDataDtFltrVlDurationCd(String plnDfnActnTrgrDataDtFltrVlDurationCd) {
+        this.plnDfnActnTrgrDataDtFltrVlDurationCd = plnDfnActnTrgrDataDtFltrVlDurationCd;
+    }
+    
+    
+    
+    public String getPlnDfnActnTrgrDataDtFltrVlDurationCmprtr() {
+        return this.plnDfnActnTrgrDataDtFltrVlDurationCmprtr;
+    }
+    
+    public void setPlnDfnActnTrgrDataDtFltrVlDurationCmprtr(String plnDfnActnTrgrDataDtFltrVlDurationCmprtr) {
+        this.plnDfnActnTrgrDataDtFltrVlDurationCmprtr = plnDfnActnTrgrDataDtFltrVlDurationCmprtr;
+    }
+    
+    
+    
+    public String getPlnDfnActnTrgrDataDtFltrVlDurationSys() {
+        return this.plnDfnActnTrgrDataDtFltrVlDurationSys;
+    }
+    
+    public void setPlnDfnActnTrgrDataDtFltrVlDurationSys(String plnDfnActnTrgrDataDtFltrVlDurationSys) {
+        this.plnDfnActnTrgrDataDtFltrVlDurationSys = plnDfnActnTrgrDataDtFltrVlDurationSys;
+    }
+    
+    
+    
+    public String getPlnDfnActnTrgrDataDtFltrVlDurationUnt() {
+        return this.plnDfnActnTrgrDataDtFltrVlDurationUnt;
+    }
+    
+    public void setPlnDfnActnTrgrDataDtFltrVlDurationUnt(String plnDfnActnTrgrDataDtFltrVlDurationUnt) {
+        this.plnDfnActnTrgrDataDtFltrVlDurationUnt = plnDfnActnTrgrDataDtFltrVlDurationUnt;
+    }
+    
+    
+    
+    public String getPlnDfnActnTrgrDataDtFltrVlDurationVl() {
+        return this.plnDfnActnTrgrDataDtFltrVlDurationVl;
+    }
+    
+    public void setPlnDfnActnTrgrDataDtFltrVlDurationVl(String plnDfnActnTrgrDataDtFltrVlDurationVl) {
+        this.plnDfnActnTrgrDataDtFltrVlDurationVl = plnDfnActnTrgrDataDtFltrVlDurationVl;
+    }
+    
+    
+    
     public String getPlnDfnActnTrgrDataDtFltrVlPrdEnd() {
         return this.plnDfnActnTrgrDataDtFltrVlPrdEnd;
     }
@@ -2655,6 +3050,56 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTrgrTmgTmgEvnt(String plnDfnActnTrgrTmgTmgEvnt) {
         this.plnDfnActnTrgrTmgTmgEvnt = plnDfnActnTrgrTmgTmgEvnt;
+    }
+    
+    
+    
+    public String getPlnDfnActnTrgrTmgTmgRptBndsDurationCd() {
+        return this.plnDfnActnTrgrTmgTmgRptBndsDurationCd;
+    }
+    
+    public void setPlnDfnActnTrgrTmgTmgRptBndsDurationCd(String plnDfnActnTrgrTmgTmgRptBndsDurationCd) {
+        this.plnDfnActnTrgrTmgTmgRptBndsDurationCd = plnDfnActnTrgrTmgTmgRptBndsDurationCd;
+    }
+    
+    
+    
+    public String getPlnDfnActnTrgrTmgTmgRptBndsDurationCmprtr() {
+        return this.plnDfnActnTrgrTmgTmgRptBndsDurationCmprtr;
+    }
+    
+    public void setPlnDfnActnTrgrTmgTmgRptBndsDurationCmprtr(String plnDfnActnTrgrTmgTmgRptBndsDurationCmprtr) {
+        this.plnDfnActnTrgrTmgTmgRptBndsDurationCmprtr = plnDfnActnTrgrTmgTmgRptBndsDurationCmprtr;
+    }
+    
+    
+    
+    public String getPlnDfnActnTrgrTmgTmgRptBndsDurationSys() {
+        return this.plnDfnActnTrgrTmgTmgRptBndsDurationSys;
+    }
+    
+    public void setPlnDfnActnTrgrTmgTmgRptBndsDurationSys(String plnDfnActnTrgrTmgTmgRptBndsDurationSys) {
+        this.plnDfnActnTrgrTmgTmgRptBndsDurationSys = plnDfnActnTrgrTmgTmgRptBndsDurationSys;
+    }
+    
+    
+    
+    public String getPlnDfnActnTrgrTmgTmgRptBndsDurationUnt() {
+        return this.plnDfnActnTrgrTmgTmgRptBndsDurationUnt;
+    }
+    
+    public void setPlnDfnActnTrgrTmgTmgRptBndsDurationUnt(String plnDfnActnTrgrTmgTmgRptBndsDurationUnt) {
+        this.plnDfnActnTrgrTmgTmgRptBndsDurationUnt = plnDfnActnTrgrTmgTmgRptBndsDurationUnt;
+    }
+    
+    
+    
+    public String getPlnDfnActnTrgrTmgTmgRptBndsDurationVl() {
+        return this.plnDfnActnTrgrTmgTmgRptBndsDurationVl;
+    }
+    
+    public void setPlnDfnActnTrgrTmgTmgRptBndsDurationVl(String plnDfnActnTrgrTmgTmgRptBndsDurationVl) {
+        this.plnDfnActnTrgrTmgTmgRptBndsDurationVl = plnDfnActnTrgrTmgTmgRptBndsDurationVl;
     }
     
     
@@ -3985,6 +4430,56 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnGoalTarDtlRngLwVl(String plnDfnGoalTarDtlRngLwVl) {
         this.plnDfnGoalTarDtlRngLwVl = plnDfnGoalTarDtlRngLwVl;
+    }
+    
+    
+    
+    public String getPlnDfnGoalTarDueCd() {
+        return this.plnDfnGoalTarDueCd;
+    }
+    
+    public void setPlnDfnGoalTarDueCd(String plnDfnGoalTarDueCd) {
+        this.plnDfnGoalTarDueCd = plnDfnGoalTarDueCd;
+    }
+    
+    
+    
+    public String getPlnDfnGoalTarDueCmprtr() {
+        return this.plnDfnGoalTarDueCmprtr;
+    }
+    
+    public void setPlnDfnGoalTarDueCmprtr(String plnDfnGoalTarDueCmprtr) {
+        this.plnDfnGoalTarDueCmprtr = plnDfnGoalTarDueCmprtr;
+    }
+    
+    
+    
+    public String getPlnDfnGoalTarDueSys() {
+        return this.plnDfnGoalTarDueSys;
+    }
+    
+    public void setPlnDfnGoalTarDueSys(String plnDfnGoalTarDueSys) {
+        this.plnDfnGoalTarDueSys = plnDfnGoalTarDueSys;
+    }
+    
+    
+    
+    public String getPlnDfnGoalTarDueUnt() {
+        return this.plnDfnGoalTarDueUnt;
+    }
+    
+    public void setPlnDfnGoalTarDueUnt(String plnDfnGoalTarDueUnt) {
+        this.plnDfnGoalTarDueUnt = plnDfnGoalTarDueUnt;
+    }
+    
+    
+    
+    public String getPlnDfnGoalTarDueVl() {
+        return this.plnDfnGoalTarDueVl;
+    }
+    
+    public void setPlnDfnGoalTarDueVl(String plnDfnGoalTarDueVl) {
+        this.plnDfnGoalTarDueVl = plnDfnGoalTarDueVl;
     }
     
     

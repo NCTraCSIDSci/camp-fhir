@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Jun 6, 2022, 11:02:25 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 27, 2022, 10:39:49 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="SpecimenDefinition" optimistic-lock="none" table="SpecimenDefinition">
         <id name="id" type="string">
@@ -286,6 +286,26 @@
             <meta attribute="resource-type"/>
             <column length="65535" name="SpcmnDfn_TypTsted_Handling_Instrctn"/>
         </property>
+        <property name="spcmnDfnTypTstedHandlingMxDurationCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SpcmnDfn_TypTsted_Handling_MxDuration_Cd"/>
+        </property>
+        <property name="spcmnDfnTypTstedHandlingMxDurationCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SpcmnDfn_TypTsted_Handling_MxDuration_Cmprtr"/>
+        </property>
+        <property name="spcmnDfnTypTstedHandlingMxDurationSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SpcmnDfn_TypTsted_Handling_MxDuration_Sys"/>
+        </property>
+        <property name="spcmnDfnTypTstedHandlingMxDurationUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SpcmnDfn_TypTsted_Handling_MxDuration_Unt"/>
+        </property>
+        <property name="spcmnDfnTypTstedHandlingMxDurationVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SpcmnDfn_TypTsted_Handling_MxDuration_Vl"/>
+        </property>
         <property name="spcmnDfnTypTstedHandlingTemperatureQualifierCdgCd" type="string">
             <meta attribute="resource-type"/>
             <column length="65535" name="SpcmnDfn_TypTsted_Handling_TemperatureQualifier_Cdg_Cd"/>
@@ -385,6 +405,26 @@
         <property name="spcmnDfnTypTstedRqrment" type="string">
             <meta attribute="resource-type"/>
             <column length="65535" name="SpcmnDfn_TypTsted_Rqrment"/>
+        </property>
+        <property name="spcmnDfnTypTstedRetentionTimeCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SpcmnDfn_TypTsted_RetentionTime_Cd"/>
+        </property>
+        <property name="spcmnDfnTypTstedRetentionTimeCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SpcmnDfn_TypTsted_RetentionTime_Cmprtr"/>
+        </property>
+        <property name="spcmnDfnTypTstedRetentionTimeSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SpcmnDfn_TypTsted_RetentionTime_Sys"/>
+        </property>
+        <property name="spcmnDfnTypTstedRetentionTimeUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SpcmnDfn_TypTsted_RetentionTime_Unt"/>
+        </property>
+        <property name="spcmnDfnTypTstedRetentionTimeVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SpcmnDfn_TypTsted_RetentionTime_Vl"/>
         </property>
         <property name="spcmnDfnTypTstedTypCdgCd" type="string">
             <meta attribute="resource-type"/>

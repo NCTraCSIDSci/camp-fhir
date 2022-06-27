@@ -238,7 +238,7 @@ public class SubstancePolymerConversion
 		if(s.getSbstncPlymrMonomerStStrtingMtrlAmntAmntTxt() != null) {
 			substancepolymermonomersetstartingmaterialamount.setAmountText(s.getSbstncPlymrMonomerStStrtingMtrlAmntAmntTxt());
 		}
-		/******************** SbstncPlymr_MonomerSt_StrtingMtrl_Amnt_AmntTxtElmnt ********************************************************************************/
+//		/******************** SbstncPlymr_MonomerSt_StrtingMtrl_Amnt_AmntTxtElmnt ********************************************************************************/
 //		if(s.getSbstncPlymrMonomerStStrtingMtrlAmntAmntTxtElmnt() != null) {
 //			substancepolymermonomersetstartingmaterialamount.setAmountTextElement(s.getSbstncPlymrMonomerStStrtingMtrlAmntAmntTxtElmnt());
 //		}
@@ -678,7 +678,7 @@ public class SubstancePolymerConversion
 		if(s.getSbstncPlymrRptRptUntDgrOfPlymrstnAmntAmntTxt() != null) {
 			substancepolymerrepeatrepeatunitdegreeofpolymerisationamount.setAmountText(s.getSbstncPlymrRptRptUntDgrOfPlymrstnAmntAmntTxt());
 		}
-//		/******************** SbstncPlymr_Rpt_RptUnt_DgrOfPlymrstn_Amnt_AmntTxtElmnt ********************************************************************************/
+		/******************** SbstncPlymr_Rpt_RptUnt_DgrOfPlymrstn_Amnt_AmntTxtElmnt ********************************************************************************/
 //		if(s.getSbstncPlymrRptRptUntDgrOfPlymrstnAmntAmntTxtElmnt() != null) {
 //			substancepolymerrepeatrepeatunitdegreeofpolymerisationamount.getAmountTextElement(s.getSbstncPlymrRptRptUntDgrOfPlymrstnAmntAmntTxtElmnt());
 //		}

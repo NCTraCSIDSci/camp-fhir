@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Jun 6, 2022, 11:02:30 AM by Hibernate Tools 5.6.1.Final
+// Generated Jun 27, 2022, 10:40:10 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -37,6 +37,11 @@ public class ResearchElementDefinition  implements java.io.Serializable {
      private String rsrchElmntDfnCrctrstcDfnDataRqrmentDtFltrPath;
      private String rsrchElmntDfnCrctrstcDfnDataRqrmentDtFltrSrchParam;
      private String rsrchElmntDfnCrctrstcDfnDataRqrmentDtFltrVlDtTimeTyp;
+     private String rsrchElmntDfnCrctrstcDfnDataRqrmentDtFltrVlDurationCd;
+     private String rsrchElmntDfnCrctrstcDfnDataRqrmentDtFltrVlDurationCmprtr;
+     private String rsrchElmntDfnCrctrstcDfnDataRqrmentDtFltrVlDurationSys;
+     private String rsrchElmntDfnCrctrstcDfnDataRqrmentDtFltrVlDurationUnt;
+     private String rsrchElmntDfnCrctrstcDfnDataRqrmentDtFltrVlDurationVl;
      private String rsrchElmntDfnCrctrstcDfnDataRqrmentDtFltrVlPrdEnd;
      private String rsrchElmntDfnCrctrstcDfnDataRqrmentDtFltrVlPrdStrt;
      private String rsrchElmntDfnCrctrstcDfnDataRqrmentLmt;
@@ -61,10 +66,20 @@ public class ResearchElementDefinition  implements java.io.Serializable {
      private String rsrchElmntDfnCrctrstcPrtcpntEfctiveDtTimeTyp;
      private String rsrchElmntDfnCrctrstcPrtcpntEfctiveDscrptn;
      private String rsrchElmntDfnCrctrstcPrtcpntEfctiveDscrptnElmnt;
+     private String rsrchElmntDfnCrctrstcPrtcpntEfctiveDurationCd;
+     private String rsrchElmntDfnCrctrstcPrtcpntEfctiveDurationCmprtr;
+     private String rsrchElmntDfnCrctrstcPrtcpntEfctiveDurationSys;
+     private String rsrchElmntDfnCrctrstcPrtcpntEfctiveDurationUnt;
+     private String rsrchElmntDfnCrctrstcPrtcpntEfctiveDurationVl;
      private String rsrchElmntDfnCrctrstcPrtcpntEfctiveGrpMsr;
      private String rsrchElmntDfnCrctrstcPrtcpntEfctiveGrpMsrElmnt;
      private String rsrchElmntDfnCrctrstcPrtcpntEfctivePrdEnd;
      private String rsrchElmntDfnCrctrstcPrtcpntEfctivePrdStrt;
+     private String rsrchElmntDfnCrctrstcPrtcpntEfctiveTimeFromStrtCd;
+     private String rsrchElmntDfnCrctrstcPrtcpntEfctiveTimeFromStrtCmprtr;
+     private String rsrchElmntDfnCrctrstcPrtcpntEfctiveTimeFromStrtSys;
+     private String rsrchElmntDfnCrctrstcPrtcpntEfctiveTimeFromStrtUnt;
+     private String rsrchElmntDfnCrctrstcPrtcpntEfctiveTimeFromStrtVl;
      private String rsrchElmntDfnCrctrstcPrtcpntEfctiveTmgCdCdgCd;
      private String rsrchElmntDfnCrctrstcPrtcpntEfctiveTmgCdCdgDsply;
      private String rsrchElmntDfnCrctrstcPrtcpntEfctiveTmgCdCdgSys;
@@ -72,6 +87,11 @@ public class ResearchElementDefinition  implements java.io.Serializable {
      private String rsrchElmntDfnCrctrstcPrtcpntEfctiveTmgCdCdgVrsn;
      private String rsrchElmntDfnCrctrstcPrtcpntEfctiveTmgCdTxt;
      private String rsrchElmntDfnCrctrstcPrtcpntEfctiveTmgEvnt;
+     private String rsrchElmntDfnCrctrstcPrtcpntEfctiveTmgRptBndsDurationCd;
+     private String rsrchElmntDfnCrctrstcPrtcpntEfctiveTmgRptBndsDurationCmprtr;
+     private String rsrchElmntDfnCrctrstcPrtcpntEfctiveTmgRptBndsDurationSys;
+     private String rsrchElmntDfnCrctrstcPrtcpntEfctiveTmgRptBndsDurationUnt;
+     private String rsrchElmntDfnCrctrstcPrtcpntEfctiveTmgRptBndsDurationVl;
      private String rsrchElmntDfnCrctrstcPrtcpntEfctiveTmgRptBndsPrdEnd;
      private String rsrchElmntDfnCrctrstcPrtcpntEfctiveTmgRptBndsPrdStrt;
      private String rsrchElmntDfnCrctrstcPrtcpntEfctiveTmgRptBndsRngHiCd;
@@ -101,10 +121,20 @@ public class ResearchElementDefinition  implements java.io.Serializable {
      private String rsrchElmntDfnCrctrstcStdyEfctiveDtTimeTyp;
      private String rsrchElmntDfnCrctrstcStdyEfctiveDscrptn;
      private String rsrchElmntDfnCrctrstcStdyEfctiveDscrptnElmnt;
+     private String rsrchElmntDfnCrctrstcStdyEfctiveDurationCd;
+     private String rsrchElmntDfnCrctrstcStdyEfctiveDurationCmprtr;
+     private String rsrchElmntDfnCrctrstcStdyEfctiveDurationSys;
+     private String rsrchElmntDfnCrctrstcStdyEfctiveDurationUnt;
+     private String rsrchElmntDfnCrctrstcStdyEfctiveDurationVl;
      private String rsrchElmntDfnCrctrstcStdyEfctiveGrpMsr;
      private String rsrchElmntDfnCrctrstcStdyEfctiveGrpMsrElmnt;
      private String rsrchElmntDfnCrctrstcStdyEfctivePrdEnd;
      private String rsrchElmntDfnCrctrstcStdyEfctivePrdStrt;
+     private String rsrchElmntDfnCrctrstcStdyEfctiveTimeFromStrtCd;
+     private String rsrchElmntDfnCrctrstcStdyEfctiveTimeFromStrtCmprtr;
+     private String rsrchElmntDfnCrctrstcStdyEfctiveTimeFromStrtSys;
+     private String rsrchElmntDfnCrctrstcStdyEfctiveTimeFromStrtUnt;
+     private String rsrchElmntDfnCrctrstcStdyEfctiveTimeFromStrtVl;
      private String rsrchElmntDfnCrctrstcStdyEfctiveTmgCdCdgCd;
      private String rsrchElmntDfnCrctrstcStdyEfctiveTmgCdCdgDsply;
      private String rsrchElmntDfnCrctrstcStdyEfctiveTmgCdCdgSys;
@@ -112,6 +142,11 @@ public class ResearchElementDefinition  implements java.io.Serializable {
      private String rsrchElmntDfnCrctrstcStdyEfctiveTmgCdCdgVrsn;
      private String rsrchElmntDfnCrctrstcStdyEfctiveTmgCdTxt;
      private String rsrchElmntDfnCrctrstcStdyEfctiveTmgEvnt;
+     private String rsrchElmntDfnCrctrstcStdyEfctiveTmgRptBndsDurationCd;
+     private String rsrchElmntDfnCrctrstcStdyEfctiveTmgRptBndsDurationCmprtr;
+     private String rsrchElmntDfnCrctrstcStdyEfctiveTmgRptBndsDurationSys;
+     private String rsrchElmntDfnCrctrstcStdyEfctiveTmgRptBndsDurationUnt;
+     private String rsrchElmntDfnCrctrstcStdyEfctiveTmgRptBndsDurationVl;
      private String rsrchElmntDfnCrctrstcStdyEfctiveTmgRptBndsPrdEnd;
      private String rsrchElmntDfnCrctrstcStdyEfctiveTmgRptBndsPrdStrt;
      private String rsrchElmntDfnCrctrstcStdyEfctiveTmgRptBndsRngHiCd;
@@ -567,6 +602,56 @@ public class ResearchElementDefinition  implements java.io.Serializable {
     
     
     
+    public String getRsrchElmntDfnCrctrstcDfnDataRqrmentDtFltrVlDurationCd() {
+        return this.rsrchElmntDfnCrctrstcDfnDataRqrmentDtFltrVlDurationCd;
+    }
+    
+    public void setRsrchElmntDfnCrctrstcDfnDataRqrmentDtFltrVlDurationCd(String rsrchElmntDfnCrctrstcDfnDataRqrmentDtFltrVlDurationCd) {
+        this.rsrchElmntDfnCrctrstcDfnDataRqrmentDtFltrVlDurationCd = rsrchElmntDfnCrctrstcDfnDataRqrmentDtFltrVlDurationCd;
+    }
+    
+    
+    
+    public String getRsrchElmntDfnCrctrstcDfnDataRqrmentDtFltrVlDurationCmprtr() {
+        return this.rsrchElmntDfnCrctrstcDfnDataRqrmentDtFltrVlDurationCmprtr;
+    }
+    
+    public void setRsrchElmntDfnCrctrstcDfnDataRqrmentDtFltrVlDurationCmprtr(String rsrchElmntDfnCrctrstcDfnDataRqrmentDtFltrVlDurationCmprtr) {
+        this.rsrchElmntDfnCrctrstcDfnDataRqrmentDtFltrVlDurationCmprtr = rsrchElmntDfnCrctrstcDfnDataRqrmentDtFltrVlDurationCmprtr;
+    }
+    
+    
+    
+    public String getRsrchElmntDfnCrctrstcDfnDataRqrmentDtFltrVlDurationSys() {
+        return this.rsrchElmntDfnCrctrstcDfnDataRqrmentDtFltrVlDurationSys;
+    }
+    
+    public void setRsrchElmntDfnCrctrstcDfnDataRqrmentDtFltrVlDurationSys(String rsrchElmntDfnCrctrstcDfnDataRqrmentDtFltrVlDurationSys) {
+        this.rsrchElmntDfnCrctrstcDfnDataRqrmentDtFltrVlDurationSys = rsrchElmntDfnCrctrstcDfnDataRqrmentDtFltrVlDurationSys;
+    }
+    
+    
+    
+    public String getRsrchElmntDfnCrctrstcDfnDataRqrmentDtFltrVlDurationUnt() {
+        return this.rsrchElmntDfnCrctrstcDfnDataRqrmentDtFltrVlDurationUnt;
+    }
+    
+    public void setRsrchElmntDfnCrctrstcDfnDataRqrmentDtFltrVlDurationUnt(String rsrchElmntDfnCrctrstcDfnDataRqrmentDtFltrVlDurationUnt) {
+        this.rsrchElmntDfnCrctrstcDfnDataRqrmentDtFltrVlDurationUnt = rsrchElmntDfnCrctrstcDfnDataRqrmentDtFltrVlDurationUnt;
+    }
+    
+    
+    
+    public String getRsrchElmntDfnCrctrstcDfnDataRqrmentDtFltrVlDurationVl() {
+        return this.rsrchElmntDfnCrctrstcDfnDataRqrmentDtFltrVlDurationVl;
+    }
+    
+    public void setRsrchElmntDfnCrctrstcDfnDataRqrmentDtFltrVlDurationVl(String rsrchElmntDfnCrctrstcDfnDataRqrmentDtFltrVlDurationVl) {
+        this.rsrchElmntDfnCrctrstcDfnDataRqrmentDtFltrVlDurationVl = rsrchElmntDfnCrctrstcDfnDataRqrmentDtFltrVlDurationVl;
+    }
+    
+    
+    
     public String getRsrchElmntDfnCrctrstcDfnDataRqrmentDtFltrVlPrdEnd() {
         return this.rsrchElmntDfnCrctrstcDfnDataRqrmentDtFltrVlPrdEnd;
     }
@@ -807,6 +892,56 @@ public class ResearchElementDefinition  implements java.io.Serializable {
     
     
     
+    public String getRsrchElmntDfnCrctrstcPrtcpntEfctiveDurationCd() {
+        return this.rsrchElmntDfnCrctrstcPrtcpntEfctiveDurationCd;
+    }
+    
+    public void setRsrchElmntDfnCrctrstcPrtcpntEfctiveDurationCd(String rsrchElmntDfnCrctrstcPrtcpntEfctiveDurationCd) {
+        this.rsrchElmntDfnCrctrstcPrtcpntEfctiveDurationCd = rsrchElmntDfnCrctrstcPrtcpntEfctiveDurationCd;
+    }
+    
+    
+    
+    public String getRsrchElmntDfnCrctrstcPrtcpntEfctiveDurationCmprtr() {
+        return this.rsrchElmntDfnCrctrstcPrtcpntEfctiveDurationCmprtr;
+    }
+    
+    public void setRsrchElmntDfnCrctrstcPrtcpntEfctiveDurationCmprtr(String rsrchElmntDfnCrctrstcPrtcpntEfctiveDurationCmprtr) {
+        this.rsrchElmntDfnCrctrstcPrtcpntEfctiveDurationCmprtr = rsrchElmntDfnCrctrstcPrtcpntEfctiveDurationCmprtr;
+    }
+    
+    
+    
+    public String getRsrchElmntDfnCrctrstcPrtcpntEfctiveDurationSys() {
+        return this.rsrchElmntDfnCrctrstcPrtcpntEfctiveDurationSys;
+    }
+    
+    public void setRsrchElmntDfnCrctrstcPrtcpntEfctiveDurationSys(String rsrchElmntDfnCrctrstcPrtcpntEfctiveDurationSys) {
+        this.rsrchElmntDfnCrctrstcPrtcpntEfctiveDurationSys = rsrchElmntDfnCrctrstcPrtcpntEfctiveDurationSys;
+    }
+    
+    
+    
+    public String getRsrchElmntDfnCrctrstcPrtcpntEfctiveDurationUnt() {
+        return this.rsrchElmntDfnCrctrstcPrtcpntEfctiveDurationUnt;
+    }
+    
+    public void setRsrchElmntDfnCrctrstcPrtcpntEfctiveDurationUnt(String rsrchElmntDfnCrctrstcPrtcpntEfctiveDurationUnt) {
+        this.rsrchElmntDfnCrctrstcPrtcpntEfctiveDurationUnt = rsrchElmntDfnCrctrstcPrtcpntEfctiveDurationUnt;
+    }
+    
+    
+    
+    public String getRsrchElmntDfnCrctrstcPrtcpntEfctiveDurationVl() {
+        return this.rsrchElmntDfnCrctrstcPrtcpntEfctiveDurationVl;
+    }
+    
+    public void setRsrchElmntDfnCrctrstcPrtcpntEfctiveDurationVl(String rsrchElmntDfnCrctrstcPrtcpntEfctiveDurationVl) {
+        this.rsrchElmntDfnCrctrstcPrtcpntEfctiveDurationVl = rsrchElmntDfnCrctrstcPrtcpntEfctiveDurationVl;
+    }
+    
+    
+    
     public String getRsrchElmntDfnCrctrstcPrtcpntEfctiveGrpMsr() {
         return this.rsrchElmntDfnCrctrstcPrtcpntEfctiveGrpMsr;
     }
@@ -843,6 +978,56 @@ public class ResearchElementDefinition  implements java.io.Serializable {
     
     public void setRsrchElmntDfnCrctrstcPrtcpntEfctivePrdStrt(String rsrchElmntDfnCrctrstcPrtcpntEfctivePrdStrt) {
         this.rsrchElmntDfnCrctrstcPrtcpntEfctivePrdStrt = rsrchElmntDfnCrctrstcPrtcpntEfctivePrdStrt;
+    }
+    
+    
+    
+    public String getRsrchElmntDfnCrctrstcPrtcpntEfctiveTimeFromStrtCd() {
+        return this.rsrchElmntDfnCrctrstcPrtcpntEfctiveTimeFromStrtCd;
+    }
+    
+    public void setRsrchElmntDfnCrctrstcPrtcpntEfctiveTimeFromStrtCd(String rsrchElmntDfnCrctrstcPrtcpntEfctiveTimeFromStrtCd) {
+        this.rsrchElmntDfnCrctrstcPrtcpntEfctiveTimeFromStrtCd = rsrchElmntDfnCrctrstcPrtcpntEfctiveTimeFromStrtCd;
+    }
+    
+    
+    
+    public String getRsrchElmntDfnCrctrstcPrtcpntEfctiveTimeFromStrtCmprtr() {
+        return this.rsrchElmntDfnCrctrstcPrtcpntEfctiveTimeFromStrtCmprtr;
+    }
+    
+    public void setRsrchElmntDfnCrctrstcPrtcpntEfctiveTimeFromStrtCmprtr(String rsrchElmntDfnCrctrstcPrtcpntEfctiveTimeFromStrtCmprtr) {
+        this.rsrchElmntDfnCrctrstcPrtcpntEfctiveTimeFromStrtCmprtr = rsrchElmntDfnCrctrstcPrtcpntEfctiveTimeFromStrtCmprtr;
+    }
+    
+    
+    
+    public String getRsrchElmntDfnCrctrstcPrtcpntEfctiveTimeFromStrtSys() {
+        return this.rsrchElmntDfnCrctrstcPrtcpntEfctiveTimeFromStrtSys;
+    }
+    
+    public void setRsrchElmntDfnCrctrstcPrtcpntEfctiveTimeFromStrtSys(String rsrchElmntDfnCrctrstcPrtcpntEfctiveTimeFromStrtSys) {
+        this.rsrchElmntDfnCrctrstcPrtcpntEfctiveTimeFromStrtSys = rsrchElmntDfnCrctrstcPrtcpntEfctiveTimeFromStrtSys;
+    }
+    
+    
+    
+    public String getRsrchElmntDfnCrctrstcPrtcpntEfctiveTimeFromStrtUnt() {
+        return this.rsrchElmntDfnCrctrstcPrtcpntEfctiveTimeFromStrtUnt;
+    }
+    
+    public void setRsrchElmntDfnCrctrstcPrtcpntEfctiveTimeFromStrtUnt(String rsrchElmntDfnCrctrstcPrtcpntEfctiveTimeFromStrtUnt) {
+        this.rsrchElmntDfnCrctrstcPrtcpntEfctiveTimeFromStrtUnt = rsrchElmntDfnCrctrstcPrtcpntEfctiveTimeFromStrtUnt;
+    }
+    
+    
+    
+    public String getRsrchElmntDfnCrctrstcPrtcpntEfctiveTimeFromStrtVl() {
+        return this.rsrchElmntDfnCrctrstcPrtcpntEfctiveTimeFromStrtVl;
+    }
+    
+    public void setRsrchElmntDfnCrctrstcPrtcpntEfctiveTimeFromStrtVl(String rsrchElmntDfnCrctrstcPrtcpntEfctiveTimeFromStrtVl) {
+        this.rsrchElmntDfnCrctrstcPrtcpntEfctiveTimeFromStrtVl = rsrchElmntDfnCrctrstcPrtcpntEfctiveTimeFromStrtVl;
     }
     
     
@@ -913,6 +1098,56 @@ public class ResearchElementDefinition  implements java.io.Serializable {
     
     public void setRsrchElmntDfnCrctrstcPrtcpntEfctiveTmgEvnt(String rsrchElmntDfnCrctrstcPrtcpntEfctiveTmgEvnt) {
         this.rsrchElmntDfnCrctrstcPrtcpntEfctiveTmgEvnt = rsrchElmntDfnCrctrstcPrtcpntEfctiveTmgEvnt;
+    }
+    
+    
+    
+    public String getRsrchElmntDfnCrctrstcPrtcpntEfctiveTmgRptBndsDurationCd() {
+        return this.rsrchElmntDfnCrctrstcPrtcpntEfctiveTmgRptBndsDurationCd;
+    }
+    
+    public void setRsrchElmntDfnCrctrstcPrtcpntEfctiveTmgRptBndsDurationCd(String rsrchElmntDfnCrctrstcPrtcpntEfctiveTmgRptBndsDurationCd) {
+        this.rsrchElmntDfnCrctrstcPrtcpntEfctiveTmgRptBndsDurationCd = rsrchElmntDfnCrctrstcPrtcpntEfctiveTmgRptBndsDurationCd;
+    }
+    
+    
+    
+    public String getRsrchElmntDfnCrctrstcPrtcpntEfctiveTmgRptBndsDurationCmprtr() {
+        return this.rsrchElmntDfnCrctrstcPrtcpntEfctiveTmgRptBndsDurationCmprtr;
+    }
+    
+    public void setRsrchElmntDfnCrctrstcPrtcpntEfctiveTmgRptBndsDurationCmprtr(String rsrchElmntDfnCrctrstcPrtcpntEfctiveTmgRptBndsDurationCmprtr) {
+        this.rsrchElmntDfnCrctrstcPrtcpntEfctiveTmgRptBndsDurationCmprtr = rsrchElmntDfnCrctrstcPrtcpntEfctiveTmgRptBndsDurationCmprtr;
+    }
+    
+    
+    
+    public String getRsrchElmntDfnCrctrstcPrtcpntEfctiveTmgRptBndsDurationSys() {
+        return this.rsrchElmntDfnCrctrstcPrtcpntEfctiveTmgRptBndsDurationSys;
+    }
+    
+    public void setRsrchElmntDfnCrctrstcPrtcpntEfctiveTmgRptBndsDurationSys(String rsrchElmntDfnCrctrstcPrtcpntEfctiveTmgRptBndsDurationSys) {
+        this.rsrchElmntDfnCrctrstcPrtcpntEfctiveTmgRptBndsDurationSys = rsrchElmntDfnCrctrstcPrtcpntEfctiveTmgRptBndsDurationSys;
+    }
+    
+    
+    
+    public String getRsrchElmntDfnCrctrstcPrtcpntEfctiveTmgRptBndsDurationUnt() {
+        return this.rsrchElmntDfnCrctrstcPrtcpntEfctiveTmgRptBndsDurationUnt;
+    }
+    
+    public void setRsrchElmntDfnCrctrstcPrtcpntEfctiveTmgRptBndsDurationUnt(String rsrchElmntDfnCrctrstcPrtcpntEfctiveTmgRptBndsDurationUnt) {
+        this.rsrchElmntDfnCrctrstcPrtcpntEfctiveTmgRptBndsDurationUnt = rsrchElmntDfnCrctrstcPrtcpntEfctiveTmgRptBndsDurationUnt;
+    }
+    
+    
+    
+    public String getRsrchElmntDfnCrctrstcPrtcpntEfctiveTmgRptBndsDurationVl() {
+        return this.rsrchElmntDfnCrctrstcPrtcpntEfctiveTmgRptBndsDurationVl;
+    }
+    
+    public void setRsrchElmntDfnCrctrstcPrtcpntEfctiveTmgRptBndsDurationVl(String rsrchElmntDfnCrctrstcPrtcpntEfctiveTmgRptBndsDurationVl) {
+        this.rsrchElmntDfnCrctrstcPrtcpntEfctiveTmgRptBndsDurationVl = rsrchElmntDfnCrctrstcPrtcpntEfctiveTmgRptBndsDurationVl;
     }
     
     
@@ -1207,6 +1442,56 @@ public class ResearchElementDefinition  implements java.io.Serializable {
     
     
     
+    public String getRsrchElmntDfnCrctrstcStdyEfctiveDurationCd() {
+        return this.rsrchElmntDfnCrctrstcStdyEfctiveDurationCd;
+    }
+    
+    public void setRsrchElmntDfnCrctrstcStdyEfctiveDurationCd(String rsrchElmntDfnCrctrstcStdyEfctiveDurationCd) {
+        this.rsrchElmntDfnCrctrstcStdyEfctiveDurationCd = rsrchElmntDfnCrctrstcStdyEfctiveDurationCd;
+    }
+    
+    
+    
+    public String getRsrchElmntDfnCrctrstcStdyEfctiveDurationCmprtr() {
+        return this.rsrchElmntDfnCrctrstcStdyEfctiveDurationCmprtr;
+    }
+    
+    public void setRsrchElmntDfnCrctrstcStdyEfctiveDurationCmprtr(String rsrchElmntDfnCrctrstcStdyEfctiveDurationCmprtr) {
+        this.rsrchElmntDfnCrctrstcStdyEfctiveDurationCmprtr = rsrchElmntDfnCrctrstcStdyEfctiveDurationCmprtr;
+    }
+    
+    
+    
+    public String getRsrchElmntDfnCrctrstcStdyEfctiveDurationSys() {
+        return this.rsrchElmntDfnCrctrstcStdyEfctiveDurationSys;
+    }
+    
+    public void setRsrchElmntDfnCrctrstcStdyEfctiveDurationSys(String rsrchElmntDfnCrctrstcStdyEfctiveDurationSys) {
+        this.rsrchElmntDfnCrctrstcStdyEfctiveDurationSys = rsrchElmntDfnCrctrstcStdyEfctiveDurationSys;
+    }
+    
+    
+    
+    public String getRsrchElmntDfnCrctrstcStdyEfctiveDurationUnt() {
+        return this.rsrchElmntDfnCrctrstcStdyEfctiveDurationUnt;
+    }
+    
+    public void setRsrchElmntDfnCrctrstcStdyEfctiveDurationUnt(String rsrchElmntDfnCrctrstcStdyEfctiveDurationUnt) {
+        this.rsrchElmntDfnCrctrstcStdyEfctiveDurationUnt = rsrchElmntDfnCrctrstcStdyEfctiveDurationUnt;
+    }
+    
+    
+    
+    public String getRsrchElmntDfnCrctrstcStdyEfctiveDurationVl() {
+        return this.rsrchElmntDfnCrctrstcStdyEfctiveDurationVl;
+    }
+    
+    public void setRsrchElmntDfnCrctrstcStdyEfctiveDurationVl(String rsrchElmntDfnCrctrstcStdyEfctiveDurationVl) {
+        this.rsrchElmntDfnCrctrstcStdyEfctiveDurationVl = rsrchElmntDfnCrctrstcStdyEfctiveDurationVl;
+    }
+    
+    
+    
     public String getRsrchElmntDfnCrctrstcStdyEfctiveGrpMsr() {
         return this.rsrchElmntDfnCrctrstcStdyEfctiveGrpMsr;
     }
@@ -1243,6 +1528,56 @@ public class ResearchElementDefinition  implements java.io.Serializable {
     
     public void setRsrchElmntDfnCrctrstcStdyEfctivePrdStrt(String rsrchElmntDfnCrctrstcStdyEfctivePrdStrt) {
         this.rsrchElmntDfnCrctrstcStdyEfctivePrdStrt = rsrchElmntDfnCrctrstcStdyEfctivePrdStrt;
+    }
+    
+    
+    
+    public String getRsrchElmntDfnCrctrstcStdyEfctiveTimeFromStrtCd() {
+        return this.rsrchElmntDfnCrctrstcStdyEfctiveTimeFromStrtCd;
+    }
+    
+    public void setRsrchElmntDfnCrctrstcStdyEfctiveTimeFromStrtCd(String rsrchElmntDfnCrctrstcStdyEfctiveTimeFromStrtCd) {
+        this.rsrchElmntDfnCrctrstcStdyEfctiveTimeFromStrtCd = rsrchElmntDfnCrctrstcStdyEfctiveTimeFromStrtCd;
+    }
+    
+    
+    
+    public String getRsrchElmntDfnCrctrstcStdyEfctiveTimeFromStrtCmprtr() {
+        return this.rsrchElmntDfnCrctrstcStdyEfctiveTimeFromStrtCmprtr;
+    }
+    
+    public void setRsrchElmntDfnCrctrstcStdyEfctiveTimeFromStrtCmprtr(String rsrchElmntDfnCrctrstcStdyEfctiveTimeFromStrtCmprtr) {
+        this.rsrchElmntDfnCrctrstcStdyEfctiveTimeFromStrtCmprtr = rsrchElmntDfnCrctrstcStdyEfctiveTimeFromStrtCmprtr;
+    }
+    
+    
+    
+    public String getRsrchElmntDfnCrctrstcStdyEfctiveTimeFromStrtSys() {
+        return this.rsrchElmntDfnCrctrstcStdyEfctiveTimeFromStrtSys;
+    }
+    
+    public void setRsrchElmntDfnCrctrstcStdyEfctiveTimeFromStrtSys(String rsrchElmntDfnCrctrstcStdyEfctiveTimeFromStrtSys) {
+        this.rsrchElmntDfnCrctrstcStdyEfctiveTimeFromStrtSys = rsrchElmntDfnCrctrstcStdyEfctiveTimeFromStrtSys;
+    }
+    
+    
+    
+    public String getRsrchElmntDfnCrctrstcStdyEfctiveTimeFromStrtUnt() {
+        return this.rsrchElmntDfnCrctrstcStdyEfctiveTimeFromStrtUnt;
+    }
+    
+    public void setRsrchElmntDfnCrctrstcStdyEfctiveTimeFromStrtUnt(String rsrchElmntDfnCrctrstcStdyEfctiveTimeFromStrtUnt) {
+        this.rsrchElmntDfnCrctrstcStdyEfctiveTimeFromStrtUnt = rsrchElmntDfnCrctrstcStdyEfctiveTimeFromStrtUnt;
+    }
+    
+    
+    
+    public String getRsrchElmntDfnCrctrstcStdyEfctiveTimeFromStrtVl() {
+        return this.rsrchElmntDfnCrctrstcStdyEfctiveTimeFromStrtVl;
+    }
+    
+    public void setRsrchElmntDfnCrctrstcStdyEfctiveTimeFromStrtVl(String rsrchElmntDfnCrctrstcStdyEfctiveTimeFromStrtVl) {
+        this.rsrchElmntDfnCrctrstcStdyEfctiveTimeFromStrtVl = rsrchElmntDfnCrctrstcStdyEfctiveTimeFromStrtVl;
     }
     
     
@@ -1313,6 +1648,56 @@ public class ResearchElementDefinition  implements java.io.Serializable {
     
     public void setRsrchElmntDfnCrctrstcStdyEfctiveTmgEvnt(String rsrchElmntDfnCrctrstcStdyEfctiveTmgEvnt) {
         this.rsrchElmntDfnCrctrstcStdyEfctiveTmgEvnt = rsrchElmntDfnCrctrstcStdyEfctiveTmgEvnt;
+    }
+    
+    
+    
+    public String getRsrchElmntDfnCrctrstcStdyEfctiveTmgRptBndsDurationCd() {
+        return this.rsrchElmntDfnCrctrstcStdyEfctiveTmgRptBndsDurationCd;
+    }
+    
+    public void setRsrchElmntDfnCrctrstcStdyEfctiveTmgRptBndsDurationCd(String rsrchElmntDfnCrctrstcStdyEfctiveTmgRptBndsDurationCd) {
+        this.rsrchElmntDfnCrctrstcStdyEfctiveTmgRptBndsDurationCd = rsrchElmntDfnCrctrstcStdyEfctiveTmgRptBndsDurationCd;
+    }
+    
+    
+    
+    public String getRsrchElmntDfnCrctrstcStdyEfctiveTmgRptBndsDurationCmprtr() {
+        return this.rsrchElmntDfnCrctrstcStdyEfctiveTmgRptBndsDurationCmprtr;
+    }
+    
+    public void setRsrchElmntDfnCrctrstcStdyEfctiveTmgRptBndsDurationCmprtr(String rsrchElmntDfnCrctrstcStdyEfctiveTmgRptBndsDurationCmprtr) {
+        this.rsrchElmntDfnCrctrstcStdyEfctiveTmgRptBndsDurationCmprtr = rsrchElmntDfnCrctrstcStdyEfctiveTmgRptBndsDurationCmprtr;
+    }
+    
+    
+    
+    public String getRsrchElmntDfnCrctrstcStdyEfctiveTmgRptBndsDurationSys() {
+        return this.rsrchElmntDfnCrctrstcStdyEfctiveTmgRptBndsDurationSys;
+    }
+    
+    public void setRsrchElmntDfnCrctrstcStdyEfctiveTmgRptBndsDurationSys(String rsrchElmntDfnCrctrstcStdyEfctiveTmgRptBndsDurationSys) {
+        this.rsrchElmntDfnCrctrstcStdyEfctiveTmgRptBndsDurationSys = rsrchElmntDfnCrctrstcStdyEfctiveTmgRptBndsDurationSys;
+    }
+    
+    
+    
+    public String getRsrchElmntDfnCrctrstcStdyEfctiveTmgRptBndsDurationUnt() {
+        return this.rsrchElmntDfnCrctrstcStdyEfctiveTmgRptBndsDurationUnt;
+    }
+    
+    public void setRsrchElmntDfnCrctrstcStdyEfctiveTmgRptBndsDurationUnt(String rsrchElmntDfnCrctrstcStdyEfctiveTmgRptBndsDurationUnt) {
+        this.rsrchElmntDfnCrctrstcStdyEfctiveTmgRptBndsDurationUnt = rsrchElmntDfnCrctrstcStdyEfctiveTmgRptBndsDurationUnt;
+    }
+    
+    
+    
+    public String getRsrchElmntDfnCrctrstcStdyEfctiveTmgRptBndsDurationVl() {
+        return this.rsrchElmntDfnCrctrstcStdyEfctiveTmgRptBndsDurationVl;
+    }
+    
+    public void setRsrchElmntDfnCrctrstcStdyEfctiveTmgRptBndsDurationVl(String rsrchElmntDfnCrctrstcStdyEfctiveTmgRptBndsDurationVl) {
+        this.rsrchElmntDfnCrctrstcStdyEfctiveTmgRptBndsDurationVl = rsrchElmntDfnCrctrstcStdyEfctiveTmgRptBndsDurationVl;
     }
     
     

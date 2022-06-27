@@ -812,6 +812,26 @@ public class ContractConversion
 		org.hl7.fhir.r4.model.Duration contracttermactionoccurrencetimingrepeatboundsduration =  new org.hl7.fhir.r4.model.Duration();
 		contracttermactionoccurrencetimingrepeat.setBounds(contracttermactionoccurrencetimingrepeatboundsduration);
 
+		/******************** Cnct_Trm_Actn_OccrnceTmg_Rpt_BndsDuration_Cd ********************************************************************************/
+		if(c.getCnctTrmActnOccrnceTmgRptBndsDurationCd() != null) {
+			contracttermactionoccurrencetimingrepeatboundsduration.setCode(c.getCnctTrmActnOccrnceTmgRptBndsDurationCd());
+		}
+		/******************** contracttermactionoccurrencetimingrepeatboundsdurationcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory contracttermactionoccurrencetimingrepeatboundsdurationcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		contracttermactionoccurrencetimingrepeatboundsduration.setComparator(contracttermactionoccurrencetimingrepeatboundsdurationcomparator.fromCode(c.getCnctTrmActnOccrnceTmgRptBndsDurationCmprtr()));
+
+		/******************** Cnct_Trm_Actn_OccrnceTmg_Rpt_BndsDuration_Sys ********************************************************************************/
+		if(c.getCnctTrmActnOccrnceTmgRptBndsDurationSys() != null) {
+			contracttermactionoccurrencetimingrepeatboundsduration.setSystem(c.getCnctTrmActnOccrnceTmgRptBndsDurationSys());
+		}
+		/******************** Cnct_Trm_Actn_OccrnceTmg_Rpt_BndsDuration_Unt ********************************************************************************/
+		if(c.getCnctTrmActnOccrnceTmgRptBndsDurationUnt() != null) {
+			contracttermactionoccurrencetimingrepeatboundsduration.setUnit(c.getCnctTrmActnOccrnceTmgRptBndsDurationUnt());
+		}
+		/******************** Cnct_Trm_Actn_OccrnceTmg_Rpt_BndsDuration_Vl ********************************************************************************/
+		if(c.getCnctTrmActnOccrnceTmgRptBndsDurationVl() != null) {
+			contracttermactionoccurrencetimingrepeatboundsduration.setValue(Double.parseDouble((c.getCnctTrmActnOccrnceTmgRptBndsDurationVl())));
+		}
 		/******************** contracttermactionoccurrencetimingrepeatboundsperiod ********************************************************************************/
 		org.hl7.fhir.r4.model.Period contracttermactionoccurrencetimingrepeatboundsperiod =  new org.hl7.fhir.r4.model.Period();
 		contracttermactionoccurrencetimingrepeat.setBounds(contracttermactionoccurrencetimingrepeatboundsperiod);
@@ -922,7 +942,7 @@ public class ContractConversion
 		}
 		/******************** Cnct_Trm_Actn_OccrnceTmg_Rpt_PrdMx ********************************************************************************/
 		if(c.getCnctTrmActnOccrnceTmgRptPrdMx() != null) {
-			contracttermactionoccurrencetimingrepeat.setPeriodMax(Double.parseDouble((c.getCnctTrmActnOccrnceTmgRptPrdMx())));
+			contracttermactionoccurrencetimingrepeat.setPeriodMax(new java.math.BigDecimal((c.getCnctTrmActnOccrnceTmgRptPrdMx())));
 		}
 		/******************** contracttermactionoccurrencetimingrepeatperiodunit ********************************************************************************/
 		org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory contracttermactionoccurrencetimingrepeatperiodunit =  new org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory();
@@ -1610,7 +1630,7 @@ public class ContractConversion
 		}
 		/******************** Cnct_Trm_As_VldItm_Factor ********************************************************************************/
 		if(c.getCnctTrmAsVldItmFactor() != null) {
-			contracttermasvalueditem.setFactor(Double.parseDouble((c.getCnctTrmAsVldItmFactor())));
+			contracttermasvalueditem.setFactor(new java.math.BigDecimal((c.getCnctTrmAsVldItmFactor())));
 		}
 		/******************** contracttermasvalueditemidentifier ********************************************************************************/
 		org.hl7.fhir.r4.model.Identifier contracttermasvalueditemidentifier =  new org.hl7.fhir.r4.model.Identifier();

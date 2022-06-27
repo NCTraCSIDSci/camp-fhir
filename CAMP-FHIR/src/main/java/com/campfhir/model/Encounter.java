@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Jun 6, 2022, 11:02:30 AM by Hibernate Tools 5.6.1.Final
+// Generated Jun 27, 2022, 10:40:10 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -97,6 +97,11 @@ public class Encounter  implements java.io.Serializable {
      private String encIdTypTxt;
      private String encIdUse;
      private String encIdVl;
+     private String encLengthCd;
+     private String encLengthCmprtr;
+     private String encLengthSys;
+     private String encLengthUnt;
+     private String encLengthVl;
      private String encLctnLctn;
      private String encLctnPrdEnd;
      private String encLctnPrdStrt;
@@ -1021,6 +1026,56 @@ public class Encounter  implements java.io.Serializable {
     
     public void setEncIdVl(String encIdVl) {
         this.encIdVl = encIdVl;
+    }
+    
+    
+    
+    public String getEncLengthCd() {
+        return this.encLengthCd;
+    }
+    
+    public void setEncLengthCd(String encLengthCd) {
+        this.encLengthCd = encLengthCd;
+    }
+    
+    
+    
+    public String getEncLengthCmprtr() {
+        return this.encLengthCmprtr;
+    }
+    
+    public void setEncLengthCmprtr(String encLengthCmprtr) {
+        this.encLengthCmprtr = encLengthCmprtr;
+    }
+    
+    
+    
+    public String getEncLengthSys() {
+        return this.encLengthSys;
+    }
+    
+    public void setEncLengthSys(String encLengthSys) {
+        this.encLengthSys = encLengthSys;
+    }
+    
+    
+    
+    public String getEncLengthUnt() {
+        return this.encLengthUnt;
+    }
+    
+    public void setEncLengthUnt(String encLengthUnt) {
+        this.encLengthUnt = encLengthUnt;
+    }
+    
+    
+    
+    public String getEncLengthVl() {
+        return this.encLengthVl;
+    }
+    
+    public void setEncLengthVl(String encLengthVl) {
+        this.encLengthVl = encLengthVl;
     }
     
     

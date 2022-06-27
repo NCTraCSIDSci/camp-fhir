@@ -190,6 +190,26 @@ public class AllergyIntoleranceConversion
 		org.hl7.fhir.r4.model.Age allergyintoleranceonage =  new org.hl7.fhir.r4.model.Age();
 		allergyintolerance.setOnset(allergyintoleranceonage);
 
+		/******************** AlrgyIntolerance_OnAge_Cd ********************************************************************************/
+		if(a.getAlrgyIntoleranceOnAgeCd() != null) {
+			allergyintoleranceonage.setCode(a.getAlrgyIntoleranceOnAgeCd());
+		}
+		/******************** allergyintoleranceonagecomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory allergyintoleranceonagecomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		allergyintoleranceonage.setComparator(allergyintoleranceonagecomparator.fromCode(a.getAlrgyIntoleranceOnAgeCmprtr()));
+
+		/******************** AlrgyIntolerance_OnAge_Sys ********************************************************************************/
+		if(a.getAlrgyIntoleranceOnAgeSys() != null) {
+			allergyintoleranceonage.setSystem(a.getAlrgyIntoleranceOnAgeSys());
+		}
+		/******************** AlrgyIntolerance_OnAge_Unt ********************************************************************************/
+		if(a.getAlrgyIntoleranceOnAgeUnt() != null) {
+			allergyintoleranceonage.setUnit(a.getAlrgyIntoleranceOnAgeUnt());
+		}
+		/******************** AlrgyIntolerance_OnAge_Vl ********************************************************************************/
+		if(a.getAlrgyIntoleranceOnAgeVl() != null) {
+			allergyintoleranceonage.setValue(Double.parseDouble((a.getAlrgyIntoleranceOnAgeVl())));
+		}
 		/******************** AlrgyIntolerance_OnDtTimeTyp ********************************************************************************/
 		if(a.getAlrgyIntoleranceOnDtTimeTyp() != null) {
 			allergyintolerance.setOnset( new org.hl7.fhir.r4.model.DateTimeType(a.getAlrgyIntoleranceOnDtTimeTyp()));

@@ -1,8 +1,5 @@
 package main.java.com.campfhir.service.conversion;
 import java.text.ParseException;
-
-import org.hl7.fhir.r4.model.StringType;
-
 import main.java.com.campfhir.model.SubstanceSpecification;
 public class SubstanceSpecificationConversion 
 {
@@ -1087,7 +1084,7 @@ public class SubstanceSpecificationConversion
 		}
 		/******************** SbstncSpcfctn_Rltnship_AmntStrgTyp ********************************************************************************/
 		if(s.getSbstncSpcfctnRltnshipAmntStrgTyp() != null) {
-			substancespecificationrelationship.setAmount(new StringType(s.getSbstncSpcfctnRltnshipAmntStrgTyp()));
+			substancespecificationrelationship.setAmount(new org.hl7.fhir.r4.model.StringType(s.getSbstncSpcfctnRltnshipAmntStrgTyp()));
 		}
 		/******************** substancespecificationrelationshipamounttype ********************************************************************************/
 		org.hl7.fhir.r4.model.CodeableConcept substancespecificationrelationshipamounttype =  new org.hl7.fhir.r4.model.CodeableConcept();

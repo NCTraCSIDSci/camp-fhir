@@ -124,7 +124,7 @@ public class VisionPrescriptionConversion
 		}
 		/******************** VisionPrescription_LensSpcfctn_Diameter ********************************************************************************/
 		if(v.getVisionPrescriptionLensSpcfctnDiameter() != null) {
-			visionprescriptionlensspecification.setDiameter(Double.parseDouble((v.getVisionPrescriptionLensSpcfctnDiameter())));
+			visionprescriptionlensspecification.setDiameter(new java.math.BigDecimal((v.getVisionPrescriptionLensSpcfctnDiameter())));
 		}
 		/******************** visionprescriptionlensspecificationduration ********************************************************************************/
 		org.hl7.fhir.r4.model.Quantity visionprescriptionlensspecificationduration =  new org.hl7.fhir.r4.model.Quantity();
@@ -178,7 +178,7 @@ public class VisionPrescriptionConversion
 		}
 		/******************** VisionPrescription_LensSpcfctn_Power ********************************************************************************/
 		if(v.getVisionPrescriptionLensSpcfctnPower() != null) {
-			visionprescriptionlensspecification.setPower(Double.parseDouble((v.getVisionPrescriptionLensSpcfctnPower())));
+			visionprescriptionlensspecification.setPower(new java.math.BigDecimal((v.getVisionPrescriptionLensSpcfctnPower())));
 		}
 		/******************** visionprescriptionlensspecificationprism ********************************************************************************/
 		org.hl7.fhir.r4.model.VisionPrescription.PrismComponent visionprescriptionlensspecificationprism =  new org.hl7.fhir.r4.model.VisionPrescription.PrismComponent();
@@ -186,7 +186,7 @@ public class VisionPrescriptionConversion
 
 		/******************** VisionPrescription_LensSpcfctn_Prism_Amnt ********************************************************************************/
 		if(v.getVisionPrescriptionLensSpcfctnPrismAmnt() != null) {
-			visionprescriptionlensspecificationprism.setAmount(Double.parseDouble((v.getVisionPrescriptionLensSpcfctnPrismAmnt())));
+			visionprescriptionlensspecificationprism.setAmount(new java.math.BigDecimal((v.getVisionPrescriptionLensSpcfctnPrismAmnt())));
 		}
 		/******************** visionprescriptionlensspecificationprismbase ********************************************************************************/
 		org.hl7.fhir.r4.model.VisionPrescription.VisionBaseEnumFactory visionprescriptionlensspecificationprismbase =  new org.hl7.fhir.r4.model.VisionPrescription.VisionBaseEnumFactory();
@@ -226,7 +226,7 @@ public class VisionPrescriptionConversion
 		}
 		/******************** VisionPrescription_LensSpcfctn_Sphere ********************************************************************************/
 		if(v.getVisionPrescriptionLensSpcfctnSphere() != null) {
-			visionprescriptionlensspecification.setSphere(Double.parseDouble((v.getVisionPrescriptionLensSpcfctnSphere())));
+			visionprescriptionlensspecification.setSphere(new java.math.BigDecimal((v.getVisionPrescriptionLensSpcfctnSphere())));
 		}
 		/******************** VisionPrescription_Pnt ********************************************************************************/
 		if(v.getVisionPrescriptionPnt() != null) {

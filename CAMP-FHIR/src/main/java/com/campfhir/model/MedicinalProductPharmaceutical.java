@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Jun 6, 2022, 11:02:30 AM by Hibernate Tools 5.6.1.Final
+// Generated Jun 27, 2022, 10:40:10 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -74,6 +74,11 @@ public class MedicinalProductPharmaceutical  implements java.io.Serializable {
      private String mdcnlPrdctPhrmctclRtOfAdmnstnMxSingleDoseSys;
      private String mdcnlPrdctPhrmctclRtOfAdmnstnMxSingleDoseUnt;
      private String mdcnlPrdctPhrmctclRtOfAdmnstnMxSingleDoseVl;
+     private String mdcnlPrdctPhrmctclRtOfAdmnstnMxTrtmntPrdCd;
+     private String mdcnlPrdctPhrmctclRtOfAdmnstnMxTrtmntPrdCmprtr;
+     private String mdcnlPrdctPhrmctclRtOfAdmnstnMxTrtmntPrdSys;
+     private String mdcnlPrdctPhrmctclRtOfAdmnstnMxTrtmntPrdUnt;
+     private String mdcnlPrdctPhrmctclRtOfAdmnstnMxTrtmntPrdVl;
      private String mdcnlPrdctPhrmctclRtOfAdmnstnTarSpcsCdCdgCd;
      private String mdcnlPrdctPhrmctclRtOfAdmnstnTarSpcsCdCdgDsply;
      private String mdcnlPrdctPhrmctclRtOfAdmnstnTarSpcsCdCdgSys;
@@ -739,6 +744,56 @@ public class MedicinalProductPharmaceutical  implements java.io.Serializable {
     
     public void setMdcnlPrdctPhrmctclRtOfAdmnstnMxSingleDoseVl(String mdcnlPrdctPhrmctclRtOfAdmnstnMxSingleDoseVl) {
         this.mdcnlPrdctPhrmctclRtOfAdmnstnMxSingleDoseVl = mdcnlPrdctPhrmctclRtOfAdmnstnMxSingleDoseVl;
+    }
+    
+    
+    
+    public String getMdcnlPrdctPhrmctclRtOfAdmnstnMxTrtmntPrdCd() {
+        return this.mdcnlPrdctPhrmctclRtOfAdmnstnMxTrtmntPrdCd;
+    }
+    
+    public void setMdcnlPrdctPhrmctclRtOfAdmnstnMxTrtmntPrdCd(String mdcnlPrdctPhrmctclRtOfAdmnstnMxTrtmntPrdCd) {
+        this.mdcnlPrdctPhrmctclRtOfAdmnstnMxTrtmntPrdCd = mdcnlPrdctPhrmctclRtOfAdmnstnMxTrtmntPrdCd;
+    }
+    
+    
+    
+    public String getMdcnlPrdctPhrmctclRtOfAdmnstnMxTrtmntPrdCmprtr() {
+        return this.mdcnlPrdctPhrmctclRtOfAdmnstnMxTrtmntPrdCmprtr;
+    }
+    
+    public void setMdcnlPrdctPhrmctclRtOfAdmnstnMxTrtmntPrdCmprtr(String mdcnlPrdctPhrmctclRtOfAdmnstnMxTrtmntPrdCmprtr) {
+        this.mdcnlPrdctPhrmctclRtOfAdmnstnMxTrtmntPrdCmprtr = mdcnlPrdctPhrmctclRtOfAdmnstnMxTrtmntPrdCmprtr;
+    }
+    
+    
+    
+    public String getMdcnlPrdctPhrmctclRtOfAdmnstnMxTrtmntPrdSys() {
+        return this.mdcnlPrdctPhrmctclRtOfAdmnstnMxTrtmntPrdSys;
+    }
+    
+    public void setMdcnlPrdctPhrmctclRtOfAdmnstnMxTrtmntPrdSys(String mdcnlPrdctPhrmctclRtOfAdmnstnMxTrtmntPrdSys) {
+        this.mdcnlPrdctPhrmctclRtOfAdmnstnMxTrtmntPrdSys = mdcnlPrdctPhrmctclRtOfAdmnstnMxTrtmntPrdSys;
+    }
+    
+    
+    
+    public String getMdcnlPrdctPhrmctclRtOfAdmnstnMxTrtmntPrdUnt() {
+        return this.mdcnlPrdctPhrmctclRtOfAdmnstnMxTrtmntPrdUnt;
+    }
+    
+    public void setMdcnlPrdctPhrmctclRtOfAdmnstnMxTrtmntPrdUnt(String mdcnlPrdctPhrmctclRtOfAdmnstnMxTrtmntPrdUnt) {
+        this.mdcnlPrdctPhrmctclRtOfAdmnstnMxTrtmntPrdUnt = mdcnlPrdctPhrmctclRtOfAdmnstnMxTrtmntPrdUnt;
+    }
+    
+    
+    
+    public String getMdcnlPrdctPhrmctclRtOfAdmnstnMxTrtmntPrdVl() {
+        return this.mdcnlPrdctPhrmctclRtOfAdmnstnMxTrtmntPrdVl;
+    }
+    
+    public void setMdcnlPrdctPhrmctclRtOfAdmnstnMxTrtmntPrdVl(String mdcnlPrdctPhrmctclRtOfAdmnstnMxTrtmntPrdVl) {
+        this.mdcnlPrdctPhrmctclRtOfAdmnstnMxTrtmntPrdVl = mdcnlPrdctPhrmctclRtOfAdmnstnMxTrtmntPrdVl;
     }
     
     

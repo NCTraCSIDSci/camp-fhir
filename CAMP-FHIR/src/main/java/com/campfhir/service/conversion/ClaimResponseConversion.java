@@ -416,7 +416,7 @@ public class ClaimResponseConversion
 		}
 		/******************** ClmRsps_AddItm_Dtl_SubDtl_Factor ********************************************************************************/
 		if(c.getClmRspsAddItmDtlSubDtlFactor() != null) {
-			claimresponseadditemdetailsubdetail.setFactor(Double.parseDouble((c.getClmRspsAddItmDtlSubDtlFactor())));
+			claimresponseadditemdetailsubdetail.setFactor(new java.math.BigDecimal((c.getClmRspsAddItmDtlSubDtlFactor())));
 		}
 		/******************** claimresponseadditemdetailsubdetailmodifier ********************************************************************************/
 		org.hl7.fhir.r4.model.CodeableConcept claimresponseadditemdetailsubdetailmodifier =  new org.hl7.fhir.r4.model.CodeableConcept();

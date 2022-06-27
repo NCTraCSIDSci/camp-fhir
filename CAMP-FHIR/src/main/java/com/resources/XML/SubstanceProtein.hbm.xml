@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Jun 6, 2022, 11:02:25 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 27, 2022, 10:39:49 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="SubstanceProtein" optimistic-lock="none" table="SubstanceProtein">
         <id name="id" type="string">
@@ -40,55 +40,55 @@
         </property>
         <property name="sbstncProteinSubuntCtrminalModification" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncProtein_Subunt_CTrminalModification"/>
+            <column length="65535" name="SbstncProtein_Subunt_CtrminalModification"/>
         </property>
         <property name="sbstncProteinSubuntCtrminalModificationIdAssigner" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncProtein_Subunt_CTrminalModificationId_Assigner"/>
+            <column length="65535" name="SbstncProtein_Subunt_CtrminalModificationId_Assigner"/>
         </property>
         <property name="sbstncProteinSubuntCtrminalModificationIdPrdEnd" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncProtein_Subunt_CTrminalModificationId_Prd_End"/>
+            <column length="65535" name="SbstncProtein_Subunt_CtrminalModificationId_Prd_End"/>
         </property>
         <property name="sbstncProteinSubuntCtrminalModificationIdPrdStrt" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncProtein_Subunt_CTrminalModificationId_Prd_Strt"/>
+            <column length="65535" name="SbstncProtein_Subunt_CtrminalModificationId_Prd_Strt"/>
         </property>
         <property name="sbstncProteinSubuntCtrminalModificationIdSys" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncProtein_Subunt_CTrminalModificationId_Sys"/>
+            <column length="65535" name="SbstncProtein_Subunt_CtrminalModificationId_Sys"/>
         </property>
         <property name="sbstncProteinSubuntCtrminalModificationIdTypCdgCd" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncProtein_Subunt_CTrminalModificationId_Typ_Cdg_Cd"/>
+            <column length="65535" name="SbstncProtein_Subunt_CtrminalModificationId_Typ_Cdg_Cd"/>
         </property>
         <property name="sbstncProteinSubuntCtrminalModificationIdTypCdgDsply" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncProtein_Subunt_CTrminalModificationId_Typ_Cdg_Dsply"/>
+            <column length="65535" name="SbstncProtein_Subunt_CtrminalModificationId_Typ_Cdg_Dsply"/>
         </property>
         <property name="sbstncProteinSubuntCtrminalModificationIdTypCdgSys" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncProtein_Subunt_CTrminalModificationId_Typ_Cdg_Sys"/>
+            <column length="65535" name="SbstncProtein_Subunt_CtrminalModificationId_Typ_Cdg_Sys"/>
         </property>
         <property name="sbstncProteinSubuntCtrminalModificationIdTypCdgUsrSltd" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncProtein_Subunt_CTrminalModificationId_Typ_Cdg_UsrSltd"/>
+            <column length="65535" name="SbstncProtein_Subunt_CtrminalModificationId_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="sbstncProteinSubuntCtrminalModificationIdTypCdgVrsn" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncProtein_Subunt_CTrminalModificationId_Typ_Cdg_Vrsn"/>
+            <column length="65535" name="SbstncProtein_Subunt_CtrminalModificationId_Typ_Cdg_Vrsn"/>
         </property>
         <property name="sbstncProteinSubuntCtrminalModificationIdTypTxt" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncProtein_Subunt_CTrminalModificationId_Typ_Txt"/>
+            <column length="65535" name="SbstncProtein_Subunt_CtrminalModificationId_Typ_Txt"/>
         </property>
         <property name="sbstncProteinSubuntCtrminalModificationIdUse" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncProtein_Subunt_CTrminalModificationId_Use"/>
+            <column length="65535" name="SbstncProtein_Subunt_CtrminalModificationId_Use"/>
         </property>
         <property name="sbstncProteinSubuntCtrminalModificationIdVl" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncProtein_Subunt_CTrminalModificationId_Vl"/>
+            <column length="65535" name="SbstncProtein_Subunt_CtrminalModificationId_Vl"/>
         </property>
         <property name="sbstncProteinSubuntLength" type="string">
             <meta attribute="resource-type"/>
@@ -96,55 +96,55 @@
         </property>
         <property name="sbstncProteinSubuntNtrminalModification" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncProtein_Subunt_NTrminalModification"/>
+            <column length="65535" name="SbstncProtein_Subunt_NtrminalModification"/>
         </property>
         <property name="sbstncProteinSubuntNtrminalModificationIdAssigner" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncProtein_Subunt_NTrminalModificationId_Assigner"/>
+            <column length="65535" name="SbstncProtein_Subunt_NtrminalModificationId_Assigner"/>
         </property>
         <property name="sbstncProteinSubuntNtrminalModificationIdPrdEnd" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncProtein_Subunt_NTrminalModificationId_Prd_End"/>
+            <column length="65535" name="SbstncProtein_Subunt_NtrminalModificationId_Prd_End"/>
         </property>
         <property name="sbstncProteinSubuntNtrminalModificationIdPrdStrt" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncProtein_Subunt_NTrminalModificationId_Prd_Strt"/>
+            <column length="65535" name="SbstncProtein_Subunt_NtrminalModificationId_Prd_Strt"/>
         </property>
         <property name="sbstncProteinSubuntNtrminalModificationIdSys" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncProtein_Subunt_NTrminalModificationId_Sys"/>
+            <column length="65535" name="SbstncProtein_Subunt_NtrminalModificationId_Sys"/>
         </property>
         <property name="sbstncProteinSubuntNtrminalModificationIdTypCdgCd" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncProtein_Subunt_NTrminalModificationId_Typ_Cdg_Cd"/>
+            <column length="65535" name="SbstncProtein_Subunt_NtrminalModificationId_Typ_Cdg_Cd"/>
         </property>
         <property name="sbstncProteinSubuntNtrminalModificationIdTypCdgDsply" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncProtein_Subunt_NTrminalModificationId_Typ_Cdg_Dsply"/>
+            <column length="65535" name="SbstncProtein_Subunt_NtrminalModificationId_Typ_Cdg_Dsply"/>
         </property>
         <property name="sbstncProteinSubuntNtrminalModificationIdTypCdgSys" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncProtein_Subunt_NTrminalModificationId_Typ_Cdg_Sys"/>
+            <column length="65535" name="SbstncProtein_Subunt_NtrminalModificationId_Typ_Cdg_Sys"/>
         </property>
         <property name="sbstncProteinSubuntNtrminalModificationIdTypCdgUsrSltd" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncProtein_Subunt_NTrminalModificationId_Typ_Cdg_UsrSltd"/>
+            <column length="65535" name="SbstncProtein_Subunt_NtrminalModificationId_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="sbstncProteinSubuntNtrminalModificationIdTypCdgVrsn" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncProtein_Subunt_NTrminalModificationId_Typ_Cdg_Vrsn"/>
+            <column length="65535" name="SbstncProtein_Subunt_NtrminalModificationId_Typ_Cdg_Vrsn"/>
         </property>
         <property name="sbstncProteinSubuntNtrminalModificationIdTypTxt" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncProtein_Subunt_NTrminalModificationId_Typ_Txt"/>
+            <column length="65535" name="SbstncProtein_Subunt_NtrminalModificationId_Typ_Txt"/>
         </property>
         <property name="sbstncProteinSubuntNtrminalModificationIdUse" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncProtein_Subunt_NTrminalModificationId_Use"/>
+            <column length="65535" name="SbstncProtein_Subunt_NtrminalModificationId_Use"/>
         </property>
         <property name="sbstncProteinSubuntNtrminalModificationIdVl" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncProtein_Subunt_NTrminalModificationId_Vl"/>
+            <column length="65535" name="SbstncProtein_Subunt_NtrminalModificationId_Vl"/>
         </property>
         <property name="sbstncProteinSubuntSqnc" type="string">
             <meta attribute="resource-type"/>

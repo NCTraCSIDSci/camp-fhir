@@ -106,7 +106,7 @@ public class ChargeItemConversion
 		}
 		/******************** ChrgItm_FactorOverride ********************************************************************************/
 		if(c.getChrgItmFactorOverride() != null) {
-			chargeitem.setFactorOverride(Double.parseDouble((c.getChrgItmFactorOverride())));
+			chargeitem.setFactorOverride(new java.math.BigDecimal((c.getChrgItmFactorOverride())));
 		}
 		/******************** chargeitemidentifier ********************************************************************************/
 		org.hl7.fhir.r4.model.Identifier chargeitemidentifier =  new org.hl7.fhir.r4.model.Identifier();
@@ -268,6 +268,26 @@ public class ChargeItemConversion
 		org.hl7.fhir.r4.model.Duration chargeitemoccurrencetimingrepeatboundsduration =  new org.hl7.fhir.r4.model.Duration();
 		chargeitemoccurrencetimingrepeat.setBounds(chargeitemoccurrencetimingrepeatboundsduration);
 
+		/******************** ChrgItm_OccrnceTmg_Rpt_BndsDuration_Cd ********************************************************************************/
+		if(c.getChrgItmOccrnceTmgRptBndsDurationCd() != null) {
+			chargeitemoccurrencetimingrepeatboundsduration.setCode(c.getChrgItmOccrnceTmgRptBndsDurationCd());
+		}
+		/******************** chargeitemoccurrencetimingrepeatboundsdurationcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory chargeitemoccurrencetimingrepeatboundsdurationcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		chargeitemoccurrencetimingrepeatboundsduration.setComparator(chargeitemoccurrencetimingrepeatboundsdurationcomparator.fromCode(c.getChrgItmOccrnceTmgRptBndsDurationCmprtr()));
+
+		/******************** ChrgItm_OccrnceTmg_Rpt_BndsDuration_Sys ********************************************************************************/
+		if(c.getChrgItmOccrnceTmgRptBndsDurationSys() != null) {
+			chargeitemoccurrencetimingrepeatboundsduration.setSystem(c.getChrgItmOccrnceTmgRptBndsDurationSys());
+		}
+		/******************** ChrgItm_OccrnceTmg_Rpt_BndsDuration_Unt ********************************************************************************/
+		if(c.getChrgItmOccrnceTmgRptBndsDurationUnt() != null) {
+			chargeitemoccurrencetimingrepeatboundsduration.setUnit(c.getChrgItmOccrnceTmgRptBndsDurationUnt());
+		}
+		/******************** ChrgItm_OccrnceTmg_Rpt_BndsDuration_Vl ********************************************************************************/
+		if(c.getChrgItmOccrnceTmgRptBndsDurationVl() != null) {
+			chargeitemoccurrencetimingrepeatboundsduration.setValue(Double.parseDouble((c.getChrgItmOccrnceTmgRptBndsDurationVl())));
+		}
 		/******************** chargeitemoccurrencetimingrepeatboundsperiod ********************************************************************************/
 		org.hl7.fhir.r4.model.Period chargeitemoccurrencetimingrepeatboundsperiod =  new org.hl7.fhir.r4.model.Period();
 		chargeitemoccurrencetimingrepeat.setBounds(chargeitemoccurrencetimingrepeatboundsperiod);
@@ -378,7 +398,7 @@ public class ChargeItemConversion
 		}
 		/******************** ChrgItm_OccrnceTmg_Rpt_PrdMx ********************************************************************************/
 		if(c.getChrgItmOccrnceTmgRptPrdMx() != null) {
-			chargeitemoccurrencetimingrepeat.setPeriodMax(Double.parseDouble((c.getChrgItmOccrnceTmgRptPrdMx())));
+			chargeitemoccurrencetimingrepeat.setPeriodMax(new java.math.BigDecimal((c.getChrgItmOccrnceTmgRptPrdMx())));
 		}
 		/******************** chargeitemoccurrencetimingrepeatperiodunit ********************************************************************************/
 		org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory chargeitemoccurrencetimingrepeatperiodunit =  new org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory();

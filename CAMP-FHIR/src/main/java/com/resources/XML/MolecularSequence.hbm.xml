@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Jun 6, 2022, 11:02:25 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 27, 2022, 10:39:49 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="MolecularSequence" optimistic-lock="none" table="MolecularSequence">
         <id name="id" type="string">
@@ -84,11 +84,11 @@
         </property>
         <property name="moleclrSqncQualityFscore" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="MoleclrSqnc_Quality_FScore"/>
+            <column length="65535" name="MoleclrSqnc_Quality_Fscore"/>
         </property>
         <property name="moleclrSqncQualityGtFp" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="MoleclrSqnc_Quality_GtFP"/>
+            <column length="65535" name="MoleclrSqnc_Quality_GtFp"/>
         </property>
         <property name="moleclrSqncQualityMthdCdgCd" type="string">
             <meta attribute="resource-type"/>
@@ -120,11 +120,11 @@
         </property>
         <property name="moleclrSqncQualityQueryFp" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="MoleclrSqnc_Quality_QueryFP"/>
+            <column length="65535" name="MoleclrSqnc_Quality_QueryFp"/>
         </property>
         <property name="moleclrSqncQualityQueryTp" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="MoleclrSqnc_Quality_QueryTP"/>
+            <column length="65535" name="MoleclrSqnc_Quality_QueryTp"/>
         </property>
         <property name="moleclrSqncQualityRecall" type="string">
             <meta attribute="resource-type"/>
@@ -132,19 +132,19 @@
         </property>
         <property name="moleclrSqncQualityRocFmsr" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="MoleclrSqnc_Quality_Roc_FMsr"/>
+            <column length="65535" name="MoleclrSqnc_Quality_Roc_Fmsr"/>
         </property>
         <property name="moleclrSqncQualityRocNumFn" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="MoleclrSqnc_Quality_Roc_NumFN"/>
+            <column length="65535" name="MoleclrSqnc_Quality_Roc_NumFn"/>
         </property>
         <property name="moleclrSqncQualityRocNumFp" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="MoleclrSqnc_Quality_Roc_NumFP"/>
+            <column length="65535" name="MoleclrSqnc_Quality_Roc_NumFp"/>
         </property>
         <property name="moleclrSqncQualityRocNumTp" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="MoleclrSqnc_Quality_Roc_NumTP"/>
+            <column length="65535" name="MoleclrSqnc_Quality_Roc_NumTp"/>
         </property>
         <property name="moleclrSqncQualityRocPrecision" type="string">
             <meta attribute="resource-type"/>
@@ -208,11 +208,11 @@
         </property>
         <property name="moleclrSqncQualityTruthFn" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="MoleclrSqnc_Quality_TruthFN"/>
+            <column length="65535" name="MoleclrSqnc_Quality_TruthFn"/>
         </property>
         <property name="moleclrSqncQualityTruthTp" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="MoleclrSqnc_Quality_TruthTP"/>
+            <column length="65535" name="MoleclrSqnc_Quality_TruthTp"/>
         </property>
         <property name="moleclrSqncQualityTyp" type="string">
             <meta attribute="resource-type"/>

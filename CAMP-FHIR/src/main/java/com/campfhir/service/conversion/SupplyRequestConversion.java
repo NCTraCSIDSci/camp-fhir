@@ -230,6 +230,26 @@ public class SupplyRequestConversion
 		org.hl7.fhir.r4.model.Duration supplyrequestoccurrencetimingrepeatboundsduration =  new org.hl7.fhir.r4.model.Duration();
 		supplyrequestoccurrencetimingrepeat.setBounds(supplyrequestoccurrencetimingrepeatboundsduration);
 
+		/******************** SpplyRqst_OccrnceTmg_Rpt_BndsDuration_Cd ********************************************************************************/
+		if(s.getSpplyRqstOccrnceTmgRptBndsDurationCd() != null) {
+			supplyrequestoccurrencetimingrepeatboundsduration.setCode(s.getSpplyRqstOccrnceTmgRptBndsDurationCd());
+		}
+		/******************** supplyrequestoccurrencetimingrepeatboundsdurationcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory supplyrequestoccurrencetimingrepeatboundsdurationcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		supplyrequestoccurrencetimingrepeatboundsduration.setComparator(supplyrequestoccurrencetimingrepeatboundsdurationcomparator.fromCode(s.getSpplyRqstOccrnceTmgRptBndsDurationCmprtr()));
+
+		/******************** SpplyRqst_OccrnceTmg_Rpt_BndsDuration_Sys ********************************************************************************/
+		if(s.getSpplyRqstOccrnceTmgRptBndsDurationSys() != null) {
+			supplyrequestoccurrencetimingrepeatboundsduration.setSystem(s.getSpplyRqstOccrnceTmgRptBndsDurationSys());
+		}
+		/******************** SpplyRqst_OccrnceTmg_Rpt_BndsDuration_Unt ********************************************************************************/
+		if(s.getSpplyRqstOccrnceTmgRptBndsDurationUnt() != null) {
+			supplyrequestoccurrencetimingrepeatboundsduration.setUnit(s.getSpplyRqstOccrnceTmgRptBndsDurationUnt());
+		}
+		/******************** SpplyRqst_OccrnceTmg_Rpt_BndsDuration_Vl ********************************************************************************/
+		if(s.getSpplyRqstOccrnceTmgRptBndsDurationVl() != null) {
+			supplyrequestoccurrencetimingrepeatboundsduration.setValue(Double.parseDouble((s.getSpplyRqstOccrnceTmgRptBndsDurationVl())));
+		}
 		/******************** supplyrequestoccurrencetimingrepeatboundsperiod ********************************************************************************/
 		org.hl7.fhir.r4.model.Period supplyrequestoccurrencetimingrepeatboundsperiod =  new org.hl7.fhir.r4.model.Period();
 		supplyrequestoccurrencetimingrepeat.setBounds(supplyrequestoccurrencetimingrepeatboundsperiod);
@@ -340,7 +360,7 @@ public class SupplyRequestConversion
 		}
 		/******************** SpplyRqst_OccrnceTmg_Rpt_PrdMx ********************************************************************************/
 		if(s.getSpplyRqstOccrnceTmgRptPrdMx() != null) {
-			supplyrequestoccurrencetimingrepeat.setPeriodMax(Double.parseDouble((s.getSpplyRqstOccrnceTmgRptPrdMx())));
+			supplyrequestoccurrencetimingrepeat.setPeriodMax(new java.math.BigDecimal((s.getSpplyRqstOccrnceTmgRptPrdMx())));
 		}
 		/******************** supplyrequestoccurrencetimingrepeatperiodunit ********************************************************************************/
 		org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory supplyrequestoccurrencetimingrepeatperiodunit =  new org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory();

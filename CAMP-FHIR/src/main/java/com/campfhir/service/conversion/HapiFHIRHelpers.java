@@ -13,19 +13,16 @@ import org.hl7.fhir.r4.model.HumanName;
 import org.hl7.fhir.r4.model.Period;
 import org.hl7.fhir.r4.model.PositiveIntType;
 import org.hl7.fhir.r4.model.Reference;
-import org.hl7.fhir.r4.model.Type;
 import org.hl7.fhir.r4.model.Address.AddressTypeEnumFactory;
 import org.hl7.fhir.r4.model.Address.AddressUseEnumFactory;
 import org.hl7.fhir.r4.model.Attachment;
 import org.hl7.fhir.r4.model.ContactPoint.ContactPointSystemEnumFactory;
-import org.hl7.fhir.r4.model.ContactPoint.ContactPointUse;
 import org.hl7.fhir.r4.model.ContactPoint.ContactPointUseEnumFactory;
 import org.hl7.fhir.r4.model.DateTimeType;
 import org.hl7.fhir.r4.model.HumanName.NameUseEnumFactory;
 import org.hl7.fhir.r4.model.Identifier;
 import org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory;
 import org.hl7.fhir.r4.model.IntegerType;
-import org.hl7.fhir.r4.model.Patient.LinkTypeEnumFactory;
 
 import ca.uhn.fhir.parser.DataFormatException;
 

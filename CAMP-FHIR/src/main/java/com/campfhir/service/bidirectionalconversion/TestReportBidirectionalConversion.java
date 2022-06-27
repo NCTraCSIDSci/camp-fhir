@@ -18,10 +18,62 @@ public class TestReportBidirectionalConversion
 		org.hl7.fhir.r4.model.TestReport.TestReportResult testreportresult = testreport.getResult();
 		t.setTstRptRslt(testreportresult.toCode());
 
+		/******************** TstRpt_Issued ********************************************************************************/
+		if(testreport.hasIssued()) {
+			t.setTstRptIssued(String.valueOf(testreport.getIssued()));
+		}
 		/******************** testreportstatus ********************************************************************************/
 		org.hl7.fhir.r4.model.TestReport.TestReportStatus testreportstatus = testreport.getStatus();
 		t.setTstRptSts(testreportstatus.toCode());
 
+		/******************** TstRpt_TstScrpt ********************************************************************************/
+		if(testreport.hasTestScript()) {
+			t.setTstRptTstScrpt(String.valueOf(testreport.getTestScript()));
+		}
+		/******************** testreportsetup ********************************************************************************/
+		org.hl7.fhir.r4.model.TestReport.TestReportSetupComponent testreportsetup = testreport.getSetup();
+
+		/******************** testreportsetupaction ********************************************************************************/
+		org.hl7.fhir.r4.model.TestReport.SetupActionComponent testreportsetupaction = testreportsetup.getActionFirstRep();
+
+		/******************** testreportsetupactionoperation ********************************************************************************/
+		org.hl7.fhir.r4.model.TestReport.SetupActionOperationComponent testreportsetupactionoperation = testreportsetupaction.getOperation();
+
+		/******************** TstRpt_Stup_Actn_Oprtn_Msg ********************************************************************************/
+		if(testreportsetupactionoperation.hasMessage()) {
+			t.setTstRptStupActnOprtnMsg(String.valueOf(testreportsetupactionoperation.getMessage()));
+		}
+		/******************** testreportsetupactionoperationresult ********************************************************************************/
+		org.hl7.fhir.r4.model.TestReport.TestReportActionResult testreportsetupactionoperationresult = testreportsetupactionoperation.getResult();
+		t.setTstRptStupActnOprtnRslt(testreportsetupactionoperationresult.toCode());
+
+		/******************** TstRpt_Stup_Actn_Oprtn_Dtl ********************************************************************************/
+		if(testreportsetupactionoperation.hasDetail()) {
+			t.setTstRptStupActnOprtnDtl(String.valueOf(testreportsetupactionoperation.getDetail()));
+		}
+		/******************** testreportsetupactionassert ********************************************************************************/
+		org.hl7.fhir.r4.model.TestReport.SetupActionAssertComponent testreportsetupactionassert = testreportsetupaction.getAssert();
+
+		/******************** TstRpt_Stup_Actn_Assert_Msg ********************************************************************************/
+		if(testreportsetupactionassert.hasMessage()) {
+			t.setTstRptStupActnAssertMsg(String.valueOf(testreportsetupactionassert.getMessage()));
+		}
+		/******************** testreportsetupactionassertresult ********************************************************************************/
+		org.hl7.fhir.r4.model.TestReport.TestReportActionResult testreportsetupactionassertresult = testreportsetupactionassert.getResult();
+		t.setTstRptStupActnAssertRslt(testreportsetupactionassertresult.toCode());
+
+		/******************** TstRpt_Stup_Actn_Assert_Dtl ********************************************************************************/
+		if(testreportsetupactionassert.hasDetail()) {
+			t.setTstRptStupActnAssertDtl(String.valueOf(testreportsetupactionassert.getDetail()));
+		}
+		/******************** TstRpt_Score ********************************************************************************/
+		if(testreport.hasScore()) {
+			t.setTstRptScore(String.valueOf(testreport.getScore()));
+		}
+		/******************** TstRpt_Tster ********************************************************************************/
+		if(testreport.hasTester()) {
+			t.setTstRptTster(String.valueOf(testreport.getTester()));
+		}
 		/******************** testreportidentifier ********************************************************************************/
 		org.hl7.fhir.r4.model.Identifier testreportidentifier = testreport.getIdentifier();
 
@@ -32,51 +84,51 @@ public class TestReportBidirectionalConversion
 		/******************** testreportidentifiertype ********************************************************************************/
 		org.hl7.fhir.r4.model.CodeableConcept testreportidentifiertype = testreportidentifier.getType();
 
+		/******************** TstRpt_Id_Typ_Txt ********************************************************************************/
+		if(testreportidentifiertype.hasText()) {
+			t.setTstRptIdTypTxt(String.valueOf(testreportidentifiertype.getText()));
+		}
 		/******************** testreportidentifiertypecoding ********************************************************************************/
 		org.hl7.fhir.r4.model.Coding testreportidentifiertypecoding = testreportidentifiertype.getCodingFirstRep();
 
-		/******************** TstRpt_Id_Typ_Cdg_Dsply ********************************************************************************/
-		if(testreportidentifiertypecoding.hasDisplay()) {
-			t.setTstRptIdTypCdgDsply(String.valueOf(testreportidentifiertypecoding.getDisplay()));
-		}
 		/******************** TstRpt_Id_Typ_Cdg_Vrsn ********************************************************************************/
 		if(testreportidentifiertypecoding.hasVersion()) {
 			t.setTstRptIdTypCdgVrsn(String.valueOf(testreportidentifiertypecoding.getVersion()));
+		}
+		/******************** TstRpt_Id_Typ_Cdg_Dsply ********************************************************************************/
+		if(testreportidentifiertypecoding.hasDisplay()) {
+			t.setTstRptIdTypCdgDsply(String.valueOf(testreportidentifiertypecoding.getDisplay()));
 		}
 		/******************** TstRpt_Id_Typ_Cdg_Cd ********************************************************************************/
 		if(testreportidentifiertypecoding.hasCode()) {
 			t.setTstRptIdTypCdgCd(String.valueOf(testreportidentifiertypecoding.getCode()));
 		}
-		/******************** TstRpt_Id_Typ_Cdg_Sys ********************************************************************************/
-		if(testreportidentifiertypecoding.hasSystem()) {
-			t.setTstRptIdTypCdgSys(String.valueOf(testreportidentifiertypecoding.getSystem()));
-		}
 		/******************** TstRpt_Id_Typ_Cdg_UsrSltd ********************************************************************************/
 		if(testreportidentifiertypecoding.hasUserSelected()) {
 			t.setTstRptIdTypCdgUsrSltd(String.valueOf(testreportidentifiertypecoding.getUserSelected()));
 		}
-		/******************** TstRpt_Id_Typ_Txt ********************************************************************************/
-		if(testreportidentifiertype.hasText()) {
-			t.setTstRptIdTypTxt(String.valueOf(testreportidentifiertype.getText()));
+		/******************** TstRpt_Id_Typ_Cdg_Sys ********************************************************************************/
+		if(testreportidentifiertypecoding.hasSystem()) {
+			t.setTstRptIdTypCdgSys(String.valueOf(testreportidentifiertypecoding.getSystem()));
 		}
-		/******************** TstRpt_Id_Sys ********************************************************************************/
-		if(testreportidentifier.hasSystem()) {
-			t.setTstRptIdSys(String.valueOf(testreportidentifier.getSystem()));
+		/******************** testreportidentifierperiod ********************************************************************************/
+		org.hl7.fhir.r4.model.Period testreportidentifierperiod = testreportidentifier.getPeriod();
+
+		/******************** TstRpt_Id_Prd_Strt ********************************************************************************/
+		if(testreportidentifierperiod.hasStart()) {
+			t.setTstRptIdPrdStrt(String.valueOf(testreportidentifierperiod.getStart()));
+		}
+		/******************** TstRpt_Id_Prd_End ********************************************************************************/
+		if(testreportidentifierperiod.hasEnd()) {
+			t.setTstRptIdPrdEnd(String.valueOf(testreportidentifierperiod.getEnd()));
 		}
 		/******************** TstRpt_Id_Assigner ********************************************************************************/
 		if(testreportidentifier.hasAssigner()) {
 			t.setTstRptIdAssigner(String.valueOf(testreportidentifier.getAssigner()));
 		}
-		/******************** testreportidentifierperiod ********************************************************************************/
-		org.hl7.fhir.r4.model.Period testreportidentifierperiod = testreportidentifier.getPeriod();
-
-		/******************** TstRpt_Id_Prd_End ********************************************************************************/
-		if(testreportidentifierperiod.hasEnd()) {
-			t.setTstRptIdPrdEnd(String.valueOf(testreportidentifierperiod.getEnd()));
-		}
-		/******************** TstRpt_Id_Prd_Strt ********************************************************************************/
-		if(testreportidentifierperiod.hasStart()) {
-			t.setTstRptIdPrdStrt(String.valueOf(testreportidentifierperiod.getStart()));
+		/******************** TstRpt_Id_Sys ********************************************************************************/
+		if(testreportidentifier.hasSystem()) {
+			t.setTstRptIdSys(String.valueOf(testreportidentifier.getSystem()));
 		}
 		/******************** testreportidentifieruse ********************************************************************************/
 		org.hl7.fhir.r4.model.Identifier.IdentifierUse testreportidentifieruse = testreportidentifier.getUse();
@@ -93,58 +145,6 @@ public class TestReportBidirectionalConversion
 		if(testreportparticipant.hasUri()) {
 			t.setTstRptPrtcpntUri(String.valueOf(testreportparticipant.getUri()));
 		}
-		/******************** TstRpt_Issued ********************************************************************************/
-		if(testreport.hasIssued()) {
-			t.setTstRptIssued(String.valueOf(testreport.getIssued()));
-		}
-		/******************** TstRpt_Score ********************************************************************************/
-		if(testreport.hasScore()) {
-			t.setTstRptScore(String.valueOf(testreport.getScore()));
-		}
-		/******************** testreportsetup ********************************************************************************/
-		org.hl7.fhir.r4.model.TestReport.TestReportSetupComponent testreportsetup = testreport.getSetup();
-
-		/******************** testreportsetupaction ********************************************************************************/
-		org.hl7.fhir.r4.model.TestReport.SetupActionComponent testreportsetupaction = testreportsetup.getActionFirstRep();
-
-		/******************** testreportsetupactionassert ********************************************************************************/
-		org.hl7.fhir.r4.model.TestReport.SetupActionAssertComponent testreportsetupactionassert = testreportsetupaction.getAssert();
-
-		/******************** TstRpt_Stup_Actn_Assert_Msg ********************************************************************************/
-		if(testreportsetupactionassert.hasMessage()) {
-			t.setTstRptStupActnAssertMsg(String.valueOf(testreportsetupactionassert.getMessage()));
-		}
-		/******************** testreportsetupactionassertresult ********************************************************************************/
-		org.hl7.fhir.r4.model.TestReport.TestReportActionResult testreportsetupactionassertresult = testreportsetupactionassert.getResult();
-		t.setTstRptStupActnAssertRslt(testreportsetupactionassertresult.toCode());
-
-		/******************** TstRpt_Stup_Actn_Assert_Dtl ********************************************************************************/
-		if(testreportsetupactionassert.hasDetail()) {
-			t.setTstRptStupActnAssertDtl(String.valueOf(testreportsetupactionassert.getDetail()));
-		}
-		/******************** testreportsetupactionoperation ********************************************************************************/
-		org.hl7.fhir.r4.model.TestReport.SetupActionOperationComponent testreportsetupactionoperation = testreportsetupaction.getOperation();
-
-		/******************** TstRpt_Stup_Actn_Oprtn_Msg ********************************************************************************/
-		if(testreportsetupactionoperation.hasMessage()) {
-			t.setTstRptStupActnOprtnMsg(String.valueOf(testreportsetupactionoperation.getMessage()));
-		}
-		/******************** testreportsetupactionoperationresult ********************************************************************************/
-		org.hl7.fhir.r4.model.TestReport.TestReportActionResult testreportsetupactionoperationresult = testreportsetupactionoperation.getResult();
-		t.setTstRptStupActnOprtnRslt(testreportsetupactionoperationresult.toCode());
-
-		/******************** TstRpt_Stup_Actn_Oprtn_Dtl ********************************************************************************/
-		if(testreportsetupactionoperation.hasDetail()) {
-			t.setTstRptStupActnOprtnDtl(String.valueOf(testreportsetupactionoperation.getDetail()));
-		}
-		/******************** TstRpt_TstScrpt ********************************************************************************/
-		if(testreport.hasTestScript()) {
-			t.setTstRptTstScrpt(String.valueOf(testreport.getTestScript()));
-		}
-		/******************** TstRpt_Tster ********************************************************************************/
-		if(testreport.hasTester()) {
-			t.setTstRptTster(String.valueOf(testreport.getTester()));
-		}
 		/******************** testreporttest ********************************************************************************/
 		org.hl7.fhir.r4.model.TestReport.TestReportTestComponent testreporttest = testreport.getTestFirstRep();
 
@@ -152,24 +152,13 @@ public class TestReportBidirectionalConversion
 		if(testreporttest.hasName()) {
 			t.setTstRptTstNm(String.valueOf(testreporttest.getName()));
 		}
+		/******************** TstRpt_Tst_Dscrptn ********************************************************************************/
+		if(testreporttest.hasDescription()) {
+			t.setTstRptTstDscrptn(String.valueOf(testreporttest.getDescription()));
+		}
 		/******************** testreporttestaction ********************************************************************************/
 		org.hl7.fhir.r4.model.TestReport.TestActionComponent testreporttestaction = testreporttest.getActionFirstRep();
 
-		/******************** testreporttestactionassert ********************************************************************************/
-		org.hl7.fhir.r4.model.TestReport.SetupActionAssertComponent testreporttestactionassert = testreporttestaction.getAssert();
-
-		/******************** TstRpt_Tst_Actn_Assert_Msg ********************************************************************************/
-		if(testreporttestactionassert.hasMessage()) {
-			t.setTstRptTstActnAssertMsg(String.valueOf(testreporttestactionassert.getMessage()));
-		}
-		/******************** testreporttestactionassertresult ********************************************************************************/
-		org.hl7.fhir.r4.model.TestReport.TestReportActionResult testreporttestactionassertresult = testreporttestactionassert.getResult();
-		t.setTstRptTstActnAssertRslt(testreporttestactionassertresult.toCode());
-
-		/******************** TstRpt_Tst_Actn_Assert_Dtl ********************************************************************************/
-		if(testreporttestactionassert.hasDetail()) {
-			t.setTstRptTstActnAssertDtl(String.valueOf(testreporttestactionassert.getDetail()));
-		}
 		/******************** testreporttestactionoperation ********************************************************************************/
 		org.hl7.fhir.r4.model.TestReport.SetupActionOperationComponent testreporttestactionoperation = testreporttestaction.getOperation();
 
@@ -185,9 +174,20 @@ public class TestReportBidirectionalConversion
 		if(testreporttestactionoperation.hasDetail()) {
 			t.setTstRptTstActnOprtnDtl(String.valueOf(testreporttestactionoperation.getDetail()));
 		}
-		/******************** TstRpt_Tst_Dscrptn ********************************************************************************/
-		if(testreporttest.hasDescription()) {
-			t.setTstRptTstDscrptn(String.valueOf(testreporttest.getDescription()));
+		/******************** testreporttestactionassert ********************************************************************************/
+		org.hl7.fhir.r4.model.TestReport.SetupActionAssertComponent testreporttestactionassert = testreporttestaction.getAssert();
+
+		/******************** TstRpt_Tst_Actn_Assert_Msg ********************************************************************************/
+		if(testreporttestactionassert.hasMessage()) {
+			t.setTstRptTstActnAssertMsg(String.valueOf(testreporttestactionassert.getMessage()));
+		}
+		/******************** testreporttestactionassertresult ********************************************************************************/
+		org.hl7.fhir.r4.model.TestReport.TestReportActionResult testreporttestactionassertresult = testreporttestactionassert.getResult();
+		t.setTstRptTstActnAssertRslt(testreporttestactionassertresult.toCode());
+
+		/******************** TstRpt_Tst_Actn_Assert_Dtl ********************************************************************************/
+		if(testreporttestactionassert.hasDetail()) {
+			t.setTstRptTstActnAssertDtl(String.valueOf(testreporttestactionassert.getDetail()));
 		}
 		/******************** testreportteardown ********************************************************************************/
 		org.hl7.fhir.r4.model.TestReport.TestReportTeardownComponent testreportteardown = testreport.getTeardown();

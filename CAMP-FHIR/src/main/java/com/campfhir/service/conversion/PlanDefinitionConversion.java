@@ -264,6 +264,26 @@ public class PlanDefinitionConversion
 		org.hl7.fhir.r4.model.Duration plandefinitionactioninputdatefiltervalueduration =  new org.hl7.fhir.r4.model.Duration();
 		plandefinitionactioninputdatefilter.setValue(plandefinitionactioninputdatefiltervalueduration);
 
+		/******************** PlnDfn_Actn_Input_DtFltr_VlDuration_Cd ********************************************************************************/
+		if(p.getPlnDfnActnInputDtFltrVlDurationCd() != null) {
+			plandefinitionactioninputdatefiltervalueduration.setCode(p.getPlnDfnActnInputDtFltrVlDurationCd());
+		}
+		/******************** plandefinitionactioninputdatefiltervaluedurationcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory plandefinitionactioninputdatefiltervaluedurationcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		plandefinitionactioninputdatefiltervalueduration.setComparator(plandefinitionactioninputdatefiltervaluedurationcomparator.fromCode(p.getPlnDfnActnInputDtFltrVlDurationCmprtr()));
+
+		/******************** PlnDfn_Actn_Input_DtFltr_VlDuration_Sys ********************************************************************************/
+		if(p.getPlnDfnActnInputDtFltrVlDurationSys() != null) {
+			plandefinitionactioninputdatefiltervalueduration.setSystem(p.getPlnDfnActnInputDtFltrVlDurationSys());
+		}
+		/******************** PlnDfn_Actn_Input_DtFltr_VlDuration_Unt ********************************************************************************/
+		if(p.getPlnDfnActnInputDtFltrVlDurationUnt() != null) {
+			plandefinitionactioninputdatefiltervalueduration.setUnit(p.getPlnDfnActnInputDtFltrVlDurationUnt());
+		}
+		/******************** PlnDfn_Actn_Input_DtFltr_VlDuration_Vl ********************************************************************************/
+		if(p.getPlnDfnActnInputDtFltrVlDurationVl() != null) {
+			plandefinitionactioninputdatefiltervalueduration.setValue(Double.parseDouble((p.getPlnDfnActnInputDtFltrVlDurationVl())));
+		}
 		/******************** plandefinitionactioninputdatefiltervalueperiod ********************************************************************************/
 		org.hl7.fhir.r4.model.Period plandefinitionactioninputdatefiltervalueperiod =  new org.hl7.fhir.r4.model.Period();
 		plandefinitionactioninputdatefilter.setValue(plandefinitionactioninputdatefiltervalueperiod);
@@ -408,6 +428,26 @@ public class PlanDefinitionConversion
 		org.hl7.fhir.r4.model.Duration plandefinitionactionoutputdatefiltervalueduration =  new org.hl7.fhir.r4.model.Duration();
 		plandefinitionactionoutputdatefilter.setValue(plandefinitionactionoutputdatefiltervalueduration);
 
+		/******************** PlnDfn_Actn_Output_DtFltr_VlDuration_Cd ********************************************************************************/
+		if(p.getPlnDfnActnOutputDtFltrVlDurationCd() != null) {
+			plandefinitionactionoutputdatefiltervalueduration.setCode(p.getPlnDfnActnOutputDtFltrVlDurationCd());
+		}
+		/******************** plandefinitionactionoutputdatefiltervaluedurationcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory plandefinitionactionoutputdatefiltervaluedurationcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		plandefinitionactionoutputdatefiltervalueduration.setComparator(plandefinitionactionoutputdatefiltervaluedurationcomparator.fromCode(p.getPlnDfnActnOutputDtFltrVlDurationCmprtr()));
+
+		/******************** PlnDfn_Actn_Output_DtFltr_VlDuration_Sys ********************************************************************************/
+		if(p.getPlnDfnActnOutputDtFltrVlDurationSys() != null) {
+			plandefinitionactionoutputdatefiltervalueduration.setSystem(p.getPlnDfnActnOutputDtFltrVlDurationSys());
+		}
+		/******************** PlnDfn_Actn_Output_DtFltr_VlDuration_Unt ********************************************************************************/
+		if(p.getPlnDfnActnOutputDtFltrVlDurationUnt() != null) {
+			plandefinitionactionoutputdatefiltervalueduration.setUnit(p.getPlnDfnActnOutputDtFltrVlDurationUnt());
+		}
+		/******************** PlnDfn_Actn_Output_DtFltr_VlDuration_Vl ********************************************************************************/
+		if(p.getPlnDfnActnOutputDtFltrVlDurationVl() != null) {
+			plandefinitionactionoutputdatefiltervalueduration.setValue(Double.parseDouble((p.getPlnDfnActnOutputDtFltrVlDurationVl())));
+		}
 		/******************** plandefinitionactionoutputdatefiltervalueperiod ********************************************************************************/
 		org.hl7.fhir.r4.model.Period plandefinitionactionoutputdatefiltervalueperiod =  new org.hl7.fhir.r4.model.Period();
 		plandefinitionactionoutputdatefilter.setValue(plandefinitionactionoutputdatefiltervalueperiod);
@@ -584,6 +624,26 @@ public class PlanDefinitionConversion
 		org.hl7.fhir.r4.model.Duration plandefinitionactionrelatedactionoffduration =  new org.hl7.fhir.r4.model.Duration();
 		plandefinitionactionrelatedaction.setOffset(plandefinitionactionrelatedactionoffduration);
 
+		/******************** PlnDfn_Actn_RltedActn_OffDuration_Cd ********************************************************************************/
+		if(p.getPlnDfnActnRltedActnOffDurationCd() != null) {
+			plandefinitionactionrelatedactionoffduration.setCode(p.getPlnDfnActnRltedActnOffDurationCd());
+		}
+		/******************** plandefinitionactionrelatedactionoffdurationcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory plandefinitionactionrelatedactionoffdurationcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		plandefinitionactionrelatedactionoffduration.setComparator(plandefinitionactionrelatedactionoffdurationcomparator.fromCode(p.getPlnDfnActnRltedActnOffDurationCmprtr()));
+
+		/******************** PlnDfn_Actn_RltedActn_OffDuration_Sys ********************************************************************************/
+		if(p.getPlnDfnActnRltedActnOffDurationSys() != null) {
+			plandefinitionactionrelatedactionoffduration.setSystem(p.getPlnDfnActnRltedActnOffDurationSys());
+		}
+		/******************** PlnDfn_Actn_RltedActn_OffDuration_Unt ********************************************************************************/
+		if(p.getPlnDfnActnRltedActnOffDurationUnt() != null) {
+			plandefinitionactionrelatedactionoffduration.setUnit(p.getPlnDfnActnRltedActnOffDurationUnt());
+		}
+		/******************** PlnDfn_Actn_RltedActn_OffDuration_Vl ********************************************************************************/
+		if(p.getPlnDfnActnRltedActnOffDurationVl() != null) {
+			plandefinitionactionrelatedactionoffduration.setValue(Double.parseDouble((p.getPlnDfnActnRltedActnOffDurationVl())));
+		}
 		/******************** plandefinitionactionrelatedactionoffrange ********************************************************************************/
 		org.hl7.fhir.r4.model.Range plandefinitionactionrelatedactionoffrange =  new org.hl7.fhir.r4.model.Range();
 		plandefinitionactionrelatedaction.setOffset(plandefinitionactionrelatedactionoffrange);
@@ -692,6 +752,26 @@ public class PlanDefinitionConversion
 		org.hl7.fhir.r4.model.Age plandefinitionactiontimingage =  new org.hl7.fhir.r4.model.Age();
 		plandefinitionaction.setTiming(plandefinitionactiontimingage);
 
+		/******************** PlnDfn_Actn_TmgAge_Cd ********************************************************************************/
+		if(p.getPlnDfnActnTmgAgeCd() != null) {
+			plandefinitionactiontimingage.setCode(p.getPlnDfnActnTmgAgeCd());
+		}
+		/******************** plandefinitionactiontimingagecomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory plandefinitionactiontimingagecomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		plandefinitionactiontimingage.setComparator(plandefinitionactiontimingagecomparator.fromCode(p.getPlnDfnActnTmgAgeCmprtr()));
+
+		/******************** PlnDfn_Actn_TmgAge_Sys ********************************************************************************/
+		if(p.getPlnDfnActnTmgAgeSys() != null) {
+			plandefinitionactiontimingage.setSystem(p.getPlnDfnActnTmgAgeSys());
+		}
+		/******************** PlnDfn_Actn_TmgAge_Unt ********************************************************************************/
+		if(p.getPlnDfnActnTmgAgeUnt() != null) {
+			plandefinitionactiontimingage.setUnit(p.getPlnDfnActnTmgAgeUnt());
+		}
+		/******************** PlnDfn_Actn_TmgAge_Vl ********************************************************************************/
+		if(p.getPlnDfnActnTmgAgeVl() != null) {
+			plandefinitionactiontimingage.setValue(Double.parseDouble((p.getPlnDfnActnTmgAgeVl())));
+		}
 		/******************** PlnDfn_Actn_TmgDtTimeTyp ********************************************************************************/
 		if(p.getPlnDfnActnTmgDtTimeTyp() != null) {
 			plandefinitionaction.setTiming( new org.hl7.fhir.r4.model.DateTimeType(p.getPlnDfnActnTmgDtTimeTyp()));
@@ -700,6 +780,26 @@ public class PlanDefinitionConversion
 		org.hl7.fhir.r4.model.Duration plandefinitionactiontimingduration =  new org.hl7.fhir.r4.model.Duration();
 		plandefinitionaction.setTiming(plandefinitionactiontimingduration);
 
+		/******************** PlnDfn_Actn_TmgDuration_Cd ********************************************************************************/
+		if(p.getPlnDfnActnTmgDurationCd() != null) {
+			plandefinitionactiontimingduration.setCode(p.getPlnDfnActnTmgDurationCd());
+		}
+		/******************** plandefinitionactiontimingdurationcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory plandefinitionactiontimingdurationcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		plandefinitionactiontimingduration.setComparator(plandefinitionactiontimingdurationcomparator.fromCode(p.getPlnDfnActnTmgDurationCmprtr()));
+
+		/******************** PlnDfn_Actn_TmgDuration_Sys ********************************************************************************/
+		if(p.getPlnDfnActnTmgDurationSys() != null) {
+			plandefinitionactiontimingduration.setSystem(p.getPlnDfnActnTmgDurationSys());
+		}
+		/******************** PlnDfn_Actn_TmgDuration_Unt ********************************************************************************/
+		if(p.getPlnDfnActnTmgDurationUnt() != null) {
+			plandefinitionactiontimingduration.setUnit(p.getPlnDfnActnTmgDurationUnt());
+		}
+		/******************** PlnDfn_Actn_TmgDuration_Vl ********************************************************************************/
+		if(p.getPlnDfnActnTmgDurationVl() != null) {
+			plandefinitionactiontimingduration.setValue(Double.parseDouble((p.getPlnDfnActnTmgDurationVl())));
+		}
 		/******************** plandefinitionactiontimingperiod ********************************************************************************/
 		org.hl7.fhir.r4.model.Period plandefinitionactiontimingperiod =  new org.hl7.fhir.r4.model.Period();
 		plandefinitionaction.setTiming(plandefinitionactiontimingperiod);
@@ -818,6 +918,26 @@ public class PlanDefinitionConversion
 		org.hl7.fhir.r4.model.Duration plandefinitionactiontimingtimingrepeatboundsduration =  new org.hl7.fhir.r4.model.Duration();
 		plandefinitionactiontimingtimingrepeat.setBounds(plandefinitionactiontimingtimingrepeatboundsduration);
 
+		/******************** PlnDfn_Actn_TmgTmg_Rpt_BndsDuration_Cd ********************************************************************************/
+		if(p.getPlnDfnActnTmgTmgRptBndsDurationCd() != null) {
+			plandefinitionactiontimingtimingrepeatboundsduration.setCode(p.getPlnDfnActnTmgTmgRptBndsDurationCd());
+		}
+		/******************** plandefinitionactiontimingtimingrepeatboundsdurationcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory plandefinitionactiontimingtimingrepeatboundsdurationcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		plandefinitionactiontimingtimingrepeatboundsduration.setComparator(plandefinitionactiontimingtimingrepeatboundsdurationcomparator.fromCode(p.getPlnDfnActnTmgTmgRptBndsDurationCmprtr()));
+
+		/******************** PlnDfn_Actn_TmgTmg_Rpt_BndsDuration_Sys ********************************************************************************/
+		if(p.getPlnDfnActnTmgTmgRptBndsDurationSys() != null) {
+			plandefinitionactiontimingtimingrepeatboundsduration.setSystem(p.getPlnDfnActnTmgTmgRptBndsDurationSys());
+		}
+		/******************** PlnDfn_Actn_TmgTmg_Rpt_BndsDuration_Unt ********************************************************************************/
+		if(p.getPlnDfnActnTmgTmgRptBndsDurationUnt() != null) {
+			plandefinitionactiontimingtimingrepeatboundsduration.setUnit(p.getPlnDfnActnTmgTmgRptBndsDurationUnt());
+		}
+		/******************** PlnDfn_Actn_TmgTmg_Rpt_BndsDuration_Vl ********************************************************************************/
+		if(p.getPlnDfnActnTmgTmgRptBndsDurationVl() != null) {
+			plandefinitionactiontimingtimingrepeatboundsduration.setValue(Double.parseDouble((p.getPlnDfnActnTmgTmgRptBndsDurationVl())));
+		}
 		/******************** plandefinitionactiontimingtimingrepeatboundsperiod ********************************************************************************/
 		org.hl7.fhir.r4.model.Period plandefinitionactiontimingtimingrepeatboundsperiod =  new org.hl7.fhir.r4.model.Period();
 		plandefinitionactiontimingtimingrepeat.setBounds(plandefinitionactiontimingtimingrepeatboundsperiod);
@@ -928,7 +1048,7 @@ public class PlanDefinitionConversion
 		}
 		/******************** PlnDfn_Actn_TmgTmg_Rpt_PrdMx ********************************************************************************/
 		if(p.getPlnDfnActnTmgTmgRptPrdMx() != null) {
-			plandefinitionactiontimingtimingrepeat.setPeriodMax(Double.parseDouble((p.getPlnDfnActnTmgTmgRptPrdMx())));
+			plandefinitionactiontimingtimingrepeat.setPeriodMax(new java.math.BigDecimal((p.getPlnDfnActnTmgTmgRptPrdMx())));
 		}
 		/******************** plandefinitionactiontimingtimingrepeatperiodunit ********************************************************************************/
 		org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory plandefinitionactiontimingtimingrepeatperiodunit =  new org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory();
@@ -1042,6 +1162,26 @@ public class PlanDefinitionConversion
 		org.hl7.fhir.r4.model.Duration plandefinitionactiontriggerdatadatefiltervalueduration =  new org.hl7.fhir.r4.model.Duration();
 		plandefinitionactiontriggerdatadatefilter.setValue(plandefinitionactiontriggerdatadatefiltervalueduration);
 
+		/******************** PlnDfn_Actn_Trgr_Data_DtFltr_VlDuration_Cd ********************************************************************************/
+		if(p.getPlnDfnActnTrgrDataDtFltrVlDurationCd() != null) {
+			plandefinitionactiontriggerdatadatefiltervalueduration.setCode(p.getPlnDfnActnTrgrDataDtFltrVlDurationCd());
+		}
+		/******************** plandefinitionactiontriggerdatadatefiltervaluedurationcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory plandefinitionactiontriggerdatadatefiltervaluedurationcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		plandefinitionactiontriggerdatadatefiltervalueduration.setComparator(plandefinitionactiontriggerdatadatefiltervaluedurationcomparator.fromCode(p.getPlnDfnActnTrgrDataDtFltrVlDurationCmprtr()));
+
+		/******************** PlnDfn_Actn_Trgr_Data_DtFltr_VlDuration_Sys ********************************************************************************/
+		if(p.getPlnDfnActnTrgrDataDtFltrVlDurationSys() != null) {
+			plandefinitionactiontriggerdatadatefiltervalueduration.setSystem(p.getPlnDfnActnTrgrDataDtFltrVlDurationSys());
+		}
+		/******************** PlnDfn_Actn_Trgr_Data_DtFltr_VlDuration_Unt ********************************************************************************/
+		if(p.getPlnDfnActnTrgrDataDtFltrVlDurationUnt() != null) {
+			plandefinitionactiontriggerdatadatefiltervalueduration.setUnit(p.getPlnDfnActnTrgrDataDtFltrVlDurationUnt());
+		}
+		/******************** PlnDfn_Actn_Trgr_Data_DtFltr_VlDuration_Vl ********************************************************************************/
+		if(p.getPlnDfnActnTrgrDataDtFltrVlDurationVl() != null) {
+			plandefinitionactiontriggerdatadatefiltervalueduration.setValue(Double.parseDouble((p.getPlnDfnActnTrgrDataDtFltrVlDurationVl())));
+		}
 		/******************** plandefinitionactiontriggerdatadatefiltervalueperiod ********************************************************************************/
 		org.hl7.fhir.r4.model.Period plandefinitionactiontriggerdatadatefiltervalueperiod =  new org.hl7.fhir.r4.model.Period();
 		plandefinitionactiontriggerdatadatefilter.setValue(plandefinitionactiontriggerdatadatefiltervalueperiod);
@@ -1188,6 +1328,26 @@ public class PlanDefinitionConversion
 		org.hl7.fhir.r4.model.Duration plandefinitionactiontriggertimingtimingrepeatboundsduration =  new org.hl7.fhir.r4.model.Duration();
 		plandefinitionactiontriggertimingtimingrepeat.setBounds(plandefinitionactiontriggertimingtimingrepeatboundsduration);
 
+		/******************** PlnDfn_Actn_Trgr_TmgTmg_Rpt_BndsDuration_Cd ********************************************************************************/
+		if(p.getPlnDfnActnTrgrTmgTmgRptBndsDurationCd() != null) {
+			plandefinitionactiontriggertimingtimingrepeatboundsduration.setCode(p.getPlnDfnActnTrgrTmgTmgRptBndsDurationCd());
+		}
+		/******************** plandefinitionactiontriggertimingtimingrepeatboundsdurationcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory plandefinitionactiontriggertimingtimingrepeatboundsdurationcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		plandefinitionactiontriggertimingtimingrepeatboundsduration.setComparator(plandefinitionactiontriggertimingtimingrepeatboundsdurationcomparator.fromCode(p.getPlnDfnActnTrgrTmgTmgRptBndsDurationCmprtr()));
+
+		/******************** PlnDfn_Actn_Trgr_TmgTmg_Rpt_BndsDuration_Sys ********************************************************************************/
+		if(p.getPlnDfnActnTrgrTmgTmgRptBndsDurationSys() != null) {
+			plandefinitionactiontriggertimingtimingrepeatboundsduration.setSystem(p.getPlnDfnActnTrgrTmgTmgRptBndsDurationSys());
+		}
+		/******************** PlnDfn_Actn_Trgr_TmgTmg_Rpt_BndsDuration_Unt ********************************************************************************/
+		if(p.getPlnDfnActnTrgrTmgTmgRptBndsDurationUnt() != null) {
+			plandefinitionactiontriggertimingtimingrepeatboundsduration.setUnit(p.getPlnDfnActnTrgrTmgTmgRptBndsDurationUnt());
+		}
+		/******************** PlnDfn_Actn_Trgr_TmgTmg_Rpt_BndsDuration_Vl ********************************************************************************/
+		if(p.getPlnDfnActnTrgrTmgTmgRptBndsDurationVl() != null) {
+			plandefinitionactiontriggertimingtimingrepeatboundsduration.setValue(Double.parseDouble((p.getPlnDfnActnTrgrTmgTmgRptBndsDurationVl())));
+		}
 		/******************** plandefinitionactiontriggertimingtimingrepeatboundsperiod ********************************************************************************/
 		org.hl7.fhir.r4.model.Period plandefinitionactiontriggertimingtimingrepeatboundsperiod =  new org.hl7.fhir.r4.model.Period();
 		plandefinitionactiontriggertimingtimingrepeat.setBounds(plandefinitionactiontriggertimingtimingrepeatboundsperiod);
@@ -1298,7 +1458,7 @@ public class PlanDefinitionConversion
 		}
 		/******************** PlnDfn_Actn_Trgr_TmgTmg_Rpt_PrdMx ********************************************************************************/
 		if(p.getPlnDfnActnTrgrTmgTmgRptPrdMx() != null) {
-			plandefinitionactiontriggertimingtimingrepeat.setPeriodMax(Double.parseDouble((p.getPlnDfnActnTrgrTmgTmgRptPrdMx())));
+			plandefinitionactiontriggertimingtimingrepeat.setPeriodMax(new java.math.BigDecimal((p.getPlnDfnActnTrgrTmgTmgRptPrdMx())));
 		}
 		/******************** plandefinitionactiontriggertimingtimingrepeatperiodunit ********************************************************************************/
 		org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory plandefinitionactiontriggertimingtimingrepeatperiodunit =  new org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory();
@@ -1910,6 +2070,26 @@ public class PlanDefinitionConversion
 		org.hl7.fhir.r4.model.Duration plandefinitiongoaltardue =  new org.hl7.fhir.r4.model.Duration();
 		plandefinitiongoaltar.setDue(plandefinitiongoaltardue);
 
+		/******************** PlnDfn_Goal_Tar_Due_Cd ********************************************************************************/
+		if(p.getPlnDfnGoalTarDueCd() != null) {
+			plandefinitiongoaltardue.setCode(p.getPlnDfnGoalTarDueCd());
+		}
+		/******************** plandefinitiongoaltarduecomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory plandefinitiongoaltarduecomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		plandefinitiongoaltardue.setComparator(plandefinitiongoaltarduecomparator.fromCode(p.getPlnDfnGoalTarDueCmprtr()));
+
+		/******************** PlnDfn_Goal_Tar_Due_Sys ********************************************************************************/
+		if(p.getPlnDfnGoalTarDueSys() != null) {
+			plandefinitiongoaltardue.setSystem(p.getPlnDfnGoalTarDueSys());
+		}
+		/******************** PlnDfn_Goal_Tar_Due_Unt ********************************************************************************/
+		if(p.getPlnDfnGoalTarDueUnt() != null) {
+			plandefinitiongoaltardue.setUnit(p.getPlnDfnGoalTarDueUnt());
+		}
+		/******************** PlnDfn_Goal_Tar_Due_Vl ********************************************************************************/
+		if(p.getPlnDfnGoalTarDueVl() != null) {
+			plandefinitiongoaltardue.setValue(Double.parseDouble((p.getPlnDfnGoalTarDueVl())));
+		}
 		/******************** plandefinitiongoaltarmeasure ********************************************************************************/
 		org.hl7.fhir.r4.model.CodeableConcept plandefinitiongoaltarmeasure =  new org.hl7.fhir.r4.model.CodeableConcept();
 		plandefinitiongoaltar.setMeasure(plandefinitiongoaltarmeasure);

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Jun 6, 2022, 11:02:25 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 27, 2022, 10:39:49 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="MedicationDispense" optimistic-lock="none" table="MedicationDispense">
         <id name="id" type="string">
@@ -493,6 +493,26 @@
         <property name="mdctnDispnsDsgInstrctnTmgEvnt" type="string">
             <meta attribute="resource-type"/>
             <column length="65535" name="MdctnDispns_DsgInstrctn_Tmg_Evnt"/>
+        </property>
+        <property name="mdctnDispnsDsgInstrctnTmgRptBndsDurationCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdctnDispns_DsgInstrctn_Tmg_Rpt_BndsDuration_Cd"/>
+        </property>
+        <property name="mdctnDispnsDsgInstrctnTmgRptBndsDurationCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdctnDispns_DsgInstrctn_Tmg_Rpt_BndsDuration_Cmprtr"/>
+        </property>
+        <property name="mdctnDispnsDsgInstrctnTmgRptBndsDurationSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdctnDispns_DsgInstrctn_Tmg_Rpt_BndsDuration_Sys"/>
+        </property>
+        <property name="mdctnDispnsDsgInstrctnTmgRptBndsDurationUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdctnDispns_DsgInstrctn_Tmg_Rpt_BndsDuration_Unt"/>
+        </property>
+        <property name="mdctnDispnsDsgInstrctnTmgRptBndsDurationVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdctnDispns_DsgInstrctn_Tmg_Rpt_BndsDuration_Vl"/>
         </property>
         <property name="mdctnDispnsDsgInstrctnTmgRptBndsPrdEnd" type="string">
             <meta attribute="resource-type"/>

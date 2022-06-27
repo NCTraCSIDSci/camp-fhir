@@ -272,6 +272,26 @@ public class CarePlanConversion
 		org.hl7.fhir.r4.model.Duration careplanactivitydetailscheduledtimingrepeatboundsduration =  new org.hl7.fhir.r4.model.Duration();
 		careplanactivitydetailscheduledtimingrepeat.setBounds(careplanactivitydetailscheduledtimingrepeatboundsduration);
 
+		/******************** CarePln_Actvty_Dtl_SchdldTmg_Rpt_BndsDuration_Cd ********************************************************************************/
+		if(c.getCarePlnActvtyDtlSchdldTmgRptBndsDurationCd() != null) {
+			careplanactivitydetailscheduledtimingrepeatboundsduration.setCode(c.getCarePlnActvtyDtlSchdldTmgRptBndsDurationCd());
+		}
+		/******************** careplanactivitydetailscheduledtimingrepeatboundsdurationcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory careplanactivitydetailscheduledtimingrepeatboundsdurationcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		careplanactivitydetailscheduledtimingrepeatboundsduration.setComparator(careplanactivitydetailscheduledtimingrepeatboundsdurationcomparator.fromCode(c.getCarePlnActvtyDtlSchdldTmgRptBndsDurationCmprtr()));
+
+		/******************** CarePln_Actvty_Dtl_SchdldTmg_Rpt_BndsDuration_Sys ********************************************************************************/
+		if(c.getCarePlnActvtyDtlSchdldTmgRptBndsDurationSys() != null) {
+			careplanactivitydetailscheduledtimingrepeatboundsduration.setSystem(c.getCarePlnActvtyDtlSchdldTmgRptBndsDurationSys());
+		}
+		/******************** CarePln_Actvty_Dtl_SchdldTmg_Rpt_BndsDuration_Unt ********************************************************************************/
+		if(c.getCarePlnActvtyDtlSchdldTmgRptBndsDurationUnt() != null) {
+			careplanactivitydetailscheduledtimingrepeatboundsduration.setUnit(c.getCarePlnActvtyDtlSchdldTmgRptBndsDurationUnt());
+		}
+		/******************** CarePln_Actvty_Dtl_SchdldTmg_Rpt_BndsDuration_Vl ********************************************************************************/
+		if(c.getCarePlnActvtyDtlSchdldTmgRptBndsDurationVl() != null) {
+			careplanactivitydetailscheduledtimingrepeatboundsduration.setValue(Double.parseDouble((c.getCarePlnActvtyDtlSchdldTmgRptBndsDurationVl())));
+		}
 		/******************** careplanactivitydetailscheduledtimingrepeatboundsperiod ********************************************************************************/
 		org.hl7.fhir.r4.model.Period careplanactivitydetailscheduledtimingrepeatboundsperiod =  new org.hl7.fhir.r4.model.Period();
 		careplanactivitydetailscheduledtimingrepeat.setBounds(careplanactivitydetailscheduledtimingrepeatboundsperiod);
@@ -382,7 +402,7 @@ public class CarePlanConversion
 		}
 		/******************** CarePln_Actvty_Dtl_SchdldTmg_Rpt_PrdMx ********************************************************************************/
 		if(c.getCarePlnActvtyDtlSchdldTmgRptPrdMx() != null) {
-			careplanactivitydetailscheduledtimingrepeat.setPeriodMax(Double.parseDouble((c.getCarePlnActvtyDtlSchdldTmgRptPrdMx())));
+			careplanactivitydetailscheduledtimingrepeat.setPeriodMax(new java.math.BigDecimal((c.getCarePlnActvtyDtlSchdldTmgRptPrdMx())));
 		}
 		/******************** careplanactivitydetailscheduledtimingrepeatperiodunit ********************************************************************************/
 		org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory careplanactivitydetailscheduledtimingrepeatperiodunit =  new org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory();

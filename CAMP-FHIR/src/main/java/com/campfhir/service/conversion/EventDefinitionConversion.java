@@ -626,6 +626,26 @@ public class EventDefinitionConversion
 		org.hl7.fhir.r4.model.Duration eventdefinitiontriggerdatadatefiltervalueduration =  new org.hl7.fhir.r4.model.Duration();
 		eventdefinitiontriggerdatadatefilter.setValue(eventdefinitiontriggerdatadatefiltervalueduration);
 
+		/******************** EvntDfn_Trgr_Data_DtFltr_VlDuration_Cd ********************************************************************************/
+		if(e.getEvntDfnTrgrDataDtFltrVlDurationCd() != null) {
+			eventdefinitiontriggerdatadatefiltervalueduration.setCode(e.getEvntDfnTrgrDataDtFltrVlDurationCd());
+		}
+		/******************** eventdefinitiontriggerdatadatefiltervaluedurationcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory eventdefinitiontriggerdatadatefiltervaluedurationcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		eventdefinitiontriggerdatadatefiltervalueduration.setComparator(eventdefinitiontriggerdatadatefiltervaluedurationcomparator.fromCode(e.getEvntDfnTrgrDataDtFltrVlDurationCmprtr()));
+
+		/******************** EvntDfn_Trgr_Data_DtFltr_VlDuration_Sys ********************************************************************************/
+		if(e.getEvntDfnTrgrDataDtFltrVlDurationSys() != null) {
+			eventdefinitiontriggerdatadatefiltervalueduration.setSystem(e.getEvntDfnTrgrDataDtFltrVlDurationSys());
+		}
+		/******************** EvntDfn_Trgr_Data_DtFltr_VlDuration_Unt ********************************************************************************/
+		if(e.getEvntDfnTrgrDataDtFltrVlDurationUnt() != null) {
+			eventdefinitiontriggerdatadatefiltervalueduration.setUnit(e.getEvntDfnTrgrDataDtFltrVlDurationUnt());
+		}
+		/******************** EvntDfn_Trgr_Data_DtFltr_VlDuration_Vl ********************************************************************************/
+		if(e.getEvntDfnTrgrDataDtFltrVlDurationVl() != null) {
+			eventdefinitiontriggerdatadatefiltervalueduration.setValue(Double.parseDouble((e.getEvntDfnTrgrDataDtFltrVlDurationVl())));
+		}
 		/******************** eventdefinitiontriggerdatadatefiltervalueperiod ********************************************************************************/
 		org.hl7.fhir.r4.model.Period eventdefinitiontriggerdatadatefiltervalueperiod =  new org.hl7.fhir.r4.model.Period();
 		eventdefinitiontriggerdatadatefilter.setValue(eventdefinitiontriggerdatadatefiltervalueperiod);
@@ -772,6 +792,26 @@ public class EventDefinitionConversion
 		org.hl7.fhir.r4.model.Duration eventdefinitiontriggertimingtimingrepeatboundsduration =  new org.hl7.fhir.r4.model.Duration();
 		eventdefinitiontriggertimingtimingrepeat.setBounds(eventdefinitiontriggertimingtimingrepeatboundsduration);
 
+		/******************** EvntDfn_Trgr_TmgTmg_Rpt_BndsDuration_Cd ********************************************************************************/
+		if(e.getEvntDfnTrgrTmgTmgRptBndsDurationCd() != null) {
+			eventdefinitiontriggertimingtimingrepeatboundsduration.setCode(e.getEvntDfnTrgrTmgTmgRptBndsDurationCd());
+		}
+		/******************** eventdefinitiontriggertimingtimingrepeatboundsdurationcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory eventdefinitiontriggertimingtimingrepeatboundsdurationcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		eventdefinitiontriggertimingtimingrepeatboundsduration.setComparator(eventdefinitiontriggertimingtimingrepeatboundsdurationcomparator.fromCode(e.getEvntDfnTrgrTmgTmgRptBndsDurationCmprtr()));
+
+		/******************** EvntDfn_Trgr_TmgTmg_Rpt_BndsDuration_Sys ********************************************************************************/
+		if(e.getEvntDfnTrgrTmgTmgRptBndsDurationSys() != null) {
+			eventdefinitiontriggertimingtimingrepeatboundsduration.setSystem(e.getEvntDfnTrgrTmgTmgRptBndsDurationSys());
+		}
+		/******************** EvntDfn_Trgr_TmgTmg_Rpt_BndsDuration_Unt ********************************************************************************/
+		if(e.getEvntDfnTrgrTmgTmgRptBndsDurationUnt() != null) {
+			eventdefinitiontriggertimingtimingrepeatboundsduration.setUnit(e.getEvntDfnTrgrTmgTmgRptBndsDurationUnt());
+		}
+		/******************** EvntDfn_Trgr_TmgTmg_Rpt_BndsDuration_Vl ********************************************************************************/
+		if(e.getEvntDfnTrgrTmgTmgRptBndsDurationVl() != null) {
+			eventdefinitiontriggertimingtimingrepeatboundsduration.setValue(Double.parseDouble((e.getEvntDfnTrgrTmgTmgRptBndsDurationVl())));
+		}
 		/******************** eventdefinitiontriggertimingtimingrepeatboundsperiod ********************************************************************************/
 		org.hl7.fhir.r4.model.Period eventdefinitiontriggertimingtimingrepeatboundsperiod =  new org.hl7.fhir.r4.model.Period();
 		eventdefinitiontriggertimingtimingrepeat.setBounds(eventdefinitiontriggertimingtimingrepeatboundsperiod);
@@ -882,7 +922,7 @@ public class EventDefinitionConversion
 		}
 		/******************** EvntDfn_Trgr_TmgTmg_Rpt_PrdMx ********************************************************************************/
 		if(e.getEvntDfnTrgrTmgTmgRptPrdMx() != null) {
-			eventdefinitiontriggertimingtimingrepeat.setPeriodMax(Double.parseDouble((e.getEvntDfnTrgrTmgTmgRptPrdMx())));
+			eventdefinitiontriggertimingtimingrepeat.setPeriodMax(new java.math.BigDecimal((e.getEvntDfnTrgrTmgTmgRptPrdMx())));
 		}
 		/******************** eventdefinitiontriggertimingtimingrepeatperiodunit ********************************************************************************/
 		org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory eventdefinitiontriggertimingtimingrepeatperiodunit =  new org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory();

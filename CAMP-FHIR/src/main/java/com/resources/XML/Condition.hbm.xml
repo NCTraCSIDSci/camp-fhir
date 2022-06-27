@@ -1,11 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Jun 6, 2022, 11:02:25 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 27, 2022, 10:39:49 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Condition" optimistic-lock="none" table="Condition">
         <id name="id" type="string">
             <column length="64" name="id"/>
             <generator class="identity"/>
         </id>
+        <property name="cndtnAbatementAgeCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_AbatementAge_Cd"/>
+        </property>
+        <property name="cndtnAbatementAgeCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_AbatementAge_Cmprtr"/>
+        </property>
+        <property name="cndtnAbatementAgeSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_AbatementAge_Sys"/>
+        </property>
+        <property name="cndtnAbatementAgeUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_AbatementAge_Unt"/>
+        </property>
+        <property name="cndtnAbatementAgeVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_AbatementAge_Vl"/>
+        </property>
         <property name="cndtnAbatementDtTimeTyp" type="string">
             <meta attribute="resource-type"/>
             <column length="65535" name="Cndtn_AbatementDtTimeTyp"/>
@@ -257,6 +277,26 @@
         <property name="cndtnNtTime" type="string">
             <meta attribute="resource-type"/>
             <column length="65535" name="Cndtn_Nt_Time"/>
+        </property>
+        <property name="cndtnOnAgeCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_OnAge_Cd"/>
+        </property>
+        <property name="cndtnOnAgeCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_OnAge_Cmprtr"/>
+        </property>
+        <property name="cndtnOnAgeSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_OnAge_Sys"/>
+        </property>
+        <property name="cndtnOnAgeUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_OnAge_Unt"/>
+        </property>
+        <property name="cndtnOnAgeVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_OnAge_Vl"/>
         </property>
         <property name="cndtnOnDtTimeTyp" type="string">
             <meta attribute="resource-type"/>

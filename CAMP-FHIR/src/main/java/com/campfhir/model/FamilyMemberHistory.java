@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Jun 6, 2022, 11:02:30 AM by Hibernate Tools 5.6.1.Final
+// Generated Jun 27, 2022, 10:40:10 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -11,6 +11,11 @@ public class FamilyMemberHistory  implements java.io.Serializable {
 
 
      private String id;
+     private String fmlyMmbrHisAgeAgeCd;
+     private String fmlyMmbrHisAgeAgeCmprtr;
+     private String fmlyMmbrHisAgeAgeSys;
+     private String fmlyMmbrHisAgeAgeUnt;
+     private String fmlyMmbrHisAgeAgeVl;
      private String fmlyMmbrHisAgeRngHiCd;
      private String fmlyMmbrHisAgeRngHiCmprtr;
      private String fmlyMmbrHisAgeRngHiSys;
@@ -37,6 +42,11 @@ public class FamilyMemberHistory  implements java.io.Serializable {
      private String fmlyMmbrHisCndtnNtAthrStrgTyp;
      private String fmlyMmbrHisCndtnNtTxt;
      private String fmlyMmbrHisCndtnNtTime;
+     private String fmlyMmbrHisCndtnOnAgeCd;
+     private String fmlyMmbrHisCndtnOnAgeCmprtr;
+     private String fmlyMmbrHisCndtnOnAgeSys;
+     private String fmlyMmbrHisCndtnOnAgeUnt;
+     private String fmlyMmbrHisCndtnOnAgeVl;
      private String fmlyMmbrHisCndtnOnPrdEnd;
      private String fmlyMmbrHisCndtnOnPrdStrt;
      private String fmlyMmbrHisCndtnOnRngHiCd;
@@ -63,6 +73,11 @@ public class FamilyMemberHistory  implements java.io.Serializable {
      private String fmlyMmbrHisDataAbsentRsnCdgVrsn;
      private String fmlyMmbrHisDataAbsentRsnTxt;
      private String fmlyMmbrHisDt;
+     private String fmlyMmbrHisDeceasedAgeCd;
+     private String fmlyMmbrHisDeceasedAgeCmprtr;
+     private String fmlyMmbrHisDeceasedAgeSys;
+     private String fmlyMmbrHisDeceasedAgeUnt;
+     private String fmlyMmbrHisDeceasedAgeVl;
      private String fmlyMmbrHisDeceasedBooleanTyp;
      private String fmlyMmbrHisDeceasedDtTyp;
      private String fmlyMmbrHisDeceasedRngHiCd;
@@ -128,6 +143,56 @@ public class FamilyMemberHistory  implements java.io.Serializable {
     
     public void setId(String id) {
         this.id = id;
+    }
+    
+    
+    
+    public String getFmlyMmbrHisAgeAgeCd() {
+        return this.fmlyMmbrHisAgeAgeCd;
+    }
+    
+    public void setFmlyMmbrHisAgeAgeCd(String fmlyMmbrHisAgeAgeCd) {
+        this.fmlyMmbrHisAgeAgeCd = fmlyMmbrHisAgeAgeCd;
+    }
+    
+    
+    
+    public String getFmlyMmbrHisAgeAgeCmprtr() {
+        return this.fmlyMmbrHisAgeAgeCmprtr;
+    }
+    
+    public void setFmlyMmbrHisAgeAgeCmprtr(String fmlyMmbrHisAgeAgeCmprtr) {
+        this.fmlyMmbrHisAgeAgeCmprtr = fmlyMmbrHisAgeAgeCmprtr;
+    }
+    
+    
+    
+    public String getFmlyMmbrHisAgeAgeSys() {
+        return this.fmlyMmbrHisAgeAgeSys;
+    }
+    
+    public void setFmlyMmbrHisAgeAgeSys(String fmlyMmbrHisAgeAgeSys) {
+        this.fmlyMmbrHisAgeAgeSys = fmlyMmbrHisAgeAgeSys;
+    }
+    
+    
+    
+    public String getFmlyMmbrHisAgeAgeUnt() {
+        return this.fmlyMmbrHisAgeAgeUnt;
+    }
+    
+    public void setFmlyMmbrHisAgeAgeUnt(String fmlyMmbrHisAgeAgeUnt) {
+        this.fmlyMmbrHisAgeAgeUnt = fmlyMmbrHisAgeAgeUnt;
+    }
+    
+    
+    
+    public String getFmlyMmbrHisAgeAgeVl() {
+        return this.fmlyMmbrHisAgeAgeVl;
+    }
+    
+    public void setFmlyMmbrHisAgeAgeVl(String fmlyMmbrHisAgeAgeVl) {
+        this.fmlyMmbrHisAgeAgeVl = fmlyMmbrHisAgeAgeVl;
     }
     
     
@@ -392,6 +457,56 @@ public class FamilyMemberHistory  implements java.io.Serializable {
     
     
     
+    public String getFmlyMmbrHisCndtnOnAgeCd() {
+        return this.fmlyMmbrHisCndtnOnAgeCd;
+    }
+    
+    public void setFmlyMmbrHisCndtnOnAgeCd(String fmlyMmbrHisCndtnOnAgeCd) {
+        this.fmlyMmbrHisCndtnOnAgeCd = fmlyMmbrHisCndtnOnAgeCd;
+    }
+    
+    
+    
+    public String getFmlyMmbrHisCndtnOnAgeCmprtr() {
+        return this.fmlyMmbrHisCndtnOnAgeCmprtr;
+    }
+    
+    public void setFmlyMmbrHisCndtnOnAgeCmprtr(String fmlyMmbrHisCndtnOnAgeCmprtr) {
+        this.fmlyMmbrHisCndtnOnAgeCmprtr = fmlyMmbrHisCndtnOnAgeCmprtr;
+    }
+    
+    
+    
+    public String getFmlyMmbrHisCndtnOnAgeSys() {
+        return this.fmlyMmbrHisCndtnOnAgeSys;
+    }
+    
+    public void setFmlyMmbrHisCndtnOnAgeSys(String fmlyMmbrHisCndtnOnAgeSys) {
+        this.fmlyMmbrHisCndtnOnAgeSys = fmlyMmbrHisCndtnOnAgeSys;
+    }
+    
+    
+    
+    public String getFmlyMmbrHisCndtnOnAgeUnt() {
+        return this.fmlyMmbrHisCndtnOnAgeUnt;
+    }
+    
+    public void setFmlyMmbrHisCndtnOnAgeUnt(String fmlyMmbrHisCndtnOnAgeUnt) {
+        this.fmlyMmbrHisCndtnOnAgeUnt = fmlyMmbrHisCndtnOnAgeUnt;
+    }
+    
+    
+    
+    public String getFmlyMmbrHisCndtnOnAgeVl() {
+        return this.fmlyMmbrHisCndtnOnAgeVl;
+    }
+    
+    public void setFmlyMmbrHisCndtnOnAgeVl(String fmlyMmbrHisCndtnOnAgeVl) {
+        this.fmlyMmbrHisCndtnOnAgeVl = fmlyMmbrHisCndtnOnAgeVl;
+    }
+    
+    
+    
     public String getFmlyMmbrHisCndtnOnPrdEnd() {
         return this.fmlyMmbrHisCndtnOnPrdEnd;
     }
@@ -648,6 +763,56 @@ public class FamilyMemberHistory  implements java.io.Serializable {
     
     public void setFmlyMmbrHisDt(String fmlyMmbrHisDt) {
         this.fmlyMmbrHisDt = fmlyMmbrHisDt;
+    }
+    
+    
+    
+    public String getFmlyMmbrHisDeceasedAgeCd() {
+        return this.fmlyMmbrHisDeceasedAgeCd;
+    }
+    
+    public void setFmlyMmbrHisDeceasedAgeCd(String fmlyMmbrHisDeceasedAgeCd) {
+        this.fmlyMmbrHisDeceasedAgeCd = fmlyMmbrHisDeceasedAgeCd;
+    }
+    
+    
+    
+    public String getFmlyMmbrHisDeceasedAgeCmprtr() {
+        return this.fmlyMmbrHisDeceasedAgeCmprtr;
+    }
+    
+    public void setFmlyMmbrHisDeceasedAgeCmprtr(String fmlyMmbrHisDeceasedAgeCmprtr) {
+        this.fmlyMmbrHisDeceasedAgeCmprtr = fmlyMmbrHisDeceasedAgeCmprtr;
+    }
+    
+    
+    
+    public String getFmlyMmbrHisDeceasedAgeSys() {
+        return this.fmlyMmbrHisDeceasedAgeSys;
+    }
+    
+    public void setFmlyMmbrHisDeceasedAgeSys(String fmlyMmbrHisDeceasedAgeSys) {
+        this.fmlyMmbrHisDeceasedAgeSys = fmlyMmbrHisDeceasedAgeSys;
+    }
+    
+    
+    
+    public String getFmlyMmbrHisDeceasedAgeUnt() {
+        return this.fmlyMmbrHisDeceasedAgeUnt;
+    }
+    
+    public void setFmlyMmbrHisDeceasedAgeUnt(String fmlyMmbrHisDeceasedAgeUnt) {
+        this.fmlyMmbrHisDeceasedAgeUnt = fmlyMmbrHisDeceasedAgeUnt;
+    }
+    
+    
+    
+    public String getFmlyMmbrHisDeceasedAgeVl() {
+        return this.fmlyMmbrHisDeceasedAgeVl;
+    }
+    
+    public void setFmlyMmbrHisDeceasedAgeVl(String fmlyMmbrHisDeceasedAgeVl) {
+        this.fmlyMmbrHisDeceasedAgeVl = fmlyMmbrHisDeceasedAgeVl;
     }
     
     

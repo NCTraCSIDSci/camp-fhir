@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Jun 6, 2022, 11:02:30 AM by Hibernate Tools 5.6.1.Final
+// Generated Jun 27, 2022, 10:40:10 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -35,6 +35,11 @@ public class DeviceMetric  implements java.io.Serializable {
      private String dvcMetricMsrmentPrdCdCdgVrsn;
      private String dvcMetricMsrmentPrdCdTxt;
      private String dvcMetricMsrmentPrdEvnt;
+     private String dvcMetricMsrmentPrdRptBndsDurationCd;
+     private String dvcMetricMsrmentPrdRptBndsDurationCmprtr;
+     private String dvcMetricMsrmentPrdRptBndsDurationSys;
+     private String dvcMetricMsrmentPrdRptBndsDurationUnt;
+     private String dvcMetricMsrmentPrdRptBndsDurationVl;
      private String dvcMetricMsrmentPrdRptBndsPrdEnd;
      private String dvcMetricMsrmentPrdRptBndsPrdStrt;
      private String dvcMetricMsrmentPrdRptBndsRngHiCd;
@@ -327,6 +332,56 @@ public class DeviceMetric  implements java.io.Serializable {
     
     public void setDvcMetricMsrmentPrdEvnt(String dvcMetricMsrmentPrdEvnt) {
         this.dvcMetricMsrmentPrdEvnt = dvcMetricMsrmentPrdEvnt;
+    }
+    
+    
+    
+    public String getDvcMetricMsrmentPrdRptBndsDurationCd() {
+        return this.dvcMetricMsrmentPrdRptBndsDurationCd;
+    }
+    
+    public void setDvcMetricMsrmentPrdRptBndsDurationCd(String dvcMetricMsrmentPrdRptBndsDurationCd) {
+        this.dvcMetricMsrmentPrdRptBndsDurationCd = dvcMetricMsrmentPrdRptBndsDurationCd;
+    }
+    
+    
+    
+    public String getDvcMetricMsrmentPrdRptBndsDurationCmprtr() {
+        return this.dvcMetricMsrmentPrdRptBndsDurationCmprtr;
+    }
+    
+    public void setDvcMetricMsrmentPrdRptBndsDurationCmprtr(String dvcMetricMsrmentPrdRptBndsDurationCmprtr) {
+        this.dvcMetricMsrmentPrdRptBndsDurationCmprtr = dvcMetricMsrmentPrdRptBndsDurationCmprtr;
+    }
+    
+    
+    
+    public String getDvcMetricMsrmentPrdRptBndsDurationSys() {
+        return this.dvcMetricMsrmentPrdRptBndsDurationSys;
+    }
+    
+    public void setDvcMetricMsrmentPrdRptBndsDurationSys(String dvcMetricMsrmentPrdRptBndsDurationSys) {
+        this.dvcMetricMsrmentPrdRptBndsDurationSys = dvcMetricMsrmentPrdRptBndsDurationSys;
+    }
+    
+    
+    
+    public String getDvcMetricMsrmentPrdRptBndsDurationUnt() {
+        return this.dvcMetricMsrmentPrdRptBndsDurationUnt;
+    }
+    
+    public void setDvcMetricMsrmentPrdRptBndsDurationUnt(String dvcMetricMsrmentPrdRptBndsDurationUnt) {
+        this.dvcMetricMsrmentPrdRptBndsDurationUnt = dvcMetricMsrmentPrdRptBndsDurationUnt;
+    }
+    
+    
+    
+    public String getDvcMetricMsrmentPrdRptBndsDurationVl() {
+        return this.dvcMetricMsrmentPrdRptBndsDurationVl;
+    }
+    
+    public void setDvcMetricMsrmentPrdRptBndsDurationVl(String dvcMetricMsrmentPrdRptBndsDurationVl) {
+        this.dvcMetricMsrmentPrdRptBndsDurationVl = dvcMetricMsrmentPrdRptBndsDurationVl;
     }
     
     

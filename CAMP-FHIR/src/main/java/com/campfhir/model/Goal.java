@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Jun 6, 2022, 11:02:30 AM by Hibernate Tools 5.6.1.Final
+// Generated Jun 27, 2022, 10:40:10 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -106,6 +106,11 @@ public class Goal  implements java.io.Serializable {
      private String goalTarDtlRtioNmrtrVl;
      private String goalTarDtlStrgTyp;
      private String goalTarDueDtTyp;
+     private String goalTarDueDurationCd;
+     private String goalTarDueDurationCmprtr;
+     private String goalTarDueDurationSys;
+     private String goalTarDueDurationUnt;
+     private String goalTarDueDurationVl;
      private String goalTarMsrCdgCd;
      private String goalTarMsrCdgDsply;
      private String goalTarMsrCdgSys;
@@ -1073,6 +1078,56 @@ public class Goal  implements java.io.Serializable {
     
     public void setGoalTarDueDtTyp(String goalTarDueDtTyp) {
         this.goalTarDueDtTyp = goalTarDueDtTyp;
+    }
+    
+    
+    
+    public String getGoalTarDueDurationCd() {
+        return this.goalTarDueDurationCd;
+    }
+    
+    public void setGoalTarDueDurationCd(String goalTarDueDurationCd) {
+        this.goalTarDueDurationCd = goalTarDueDurationCd;
+    }
+    
+    
+    
+    public String getGoalTarDueDurationCmprtr() {
+        return this.goalTarDueDurationCmprtr;
+    }
+    
+    public void setGoalTarDueDurationCmprtr(String goalTarDueDurationCmprtr) {
+        this.goalTarDueDurationCmprtr = goalTarDueDurationCmprtr;
+    }
+    
+    
+    
+    public String getGoalTarDueDurationSys() {
+        return this.goalTarDueDurationSys;
+    }
+    
+    public void setGoalTarDueDurationSys(String goalTarDueDurationSys) {
+        this.goalTarDueDurationSys = goalTarDueDurationSys;
+    }
+    
+    
+    
+    public String getGoalTarDueDurationUnt() {
+        return this.goalTarDueDurationUnt;
+    }
+    
+    public void setGoalTarDueDurationUnt(String goalTarDueDurationUnt) {
+        this.goalTarDueDurationUnt = goalTarDueDurationUnt;
+    }
+    
+    
+    
+    public String getGoalTarDueDurationVl() {
+        return this.goalTarDueDurationVl;
+    }
+    
+    public void setGoalTarDueDurationVl(String goalTarDueDurationVl) {
+        this.goalTarDueDurationVl = goalTarDueDurationVl;
     }
     
     

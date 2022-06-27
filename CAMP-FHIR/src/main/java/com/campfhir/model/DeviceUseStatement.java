@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Jun 6, 2022, 11:02:30 AM by Hibernate Tools 5.6.1.Final
+// Generated Jun 27, 2022, 10:40:10 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -57,6 +57,11 @@ public class DeviceUseStatement  implements java.io.Serializable {
      private String dvcUseStmntTmgTmgCdCdgVrsn;
      private String dvcUseStmntTmgTmgCdTxt;
      private String dvcUseStmntTmgTmgEvnt;
+     private String dvcUseStmntTmgTmgRptBndsDurationCd;
+     private String dvcUseStmntTmgTmgRptBndsDurationCmprtr;
+     private String dvcUseStmntTmgTmgRptBndsDurationSys;
+     private String dvcUseStmntTmgTmgRptBndsDurationUnt;
+     private String dvcUseStmntTmgTmgRptBndsDurationVl;
      private String dvcUseStmntTmgTmgRptBndsPrdEnd;
      private String dvcUseStmntTmgTmgRptBndsPrdStrt;
      private String dvcUseStmntTmgTmgRptBndsRngHiCd;
@@ -554,6 +559,56 @@ public class DeviceUseStatement  implements java.io.Serializable {
     
     public void setDvcUseStmntTmgTmgEvnt(String dvcUseStmntTmgTmgEvnt) {
         this.dvcUseStmntTmgTmgEvnt = dvcUseStmntTmgTmgEvnt;
+    }
+    
+    
+    
+    public String getDvcUseStmntTmgTmgRptBndsDurationCd() {
+        return this.dvcUseStmntTmgTmgRptBndsDurationCd;
+    }
+    
+    public void setDvcUseStmntTmgTmgRptBndsDurationCd(String dvcUseStmntTmgTmgRptBndsDurationCd) {
+        this.dvcUseStmntTmgTmgRptBndsDurationCd = dvcUseStmntTmgTmgRptBndsDurationCd;
+    }
+    
+    
+    
+    public String getDvcUseStmntTmgTmgRptBndsDurationCmprtr() {
+        return this.dvcUseStmntTmgTmgRptBndsDurationCmprtr;
+    }
+    
+    public void setDvcUseStmntTmgTmgRptBndsDurationCmprtr(String dvcUseStmntTmgTmgRptBndsDurationCmprtr) {
+        this.dvcUseStmntTmgTmgRptBndsDurationCmprtr = dvcUseStmntTmgTmgRptBndsDurationCmprtr;
+    }
+    
+    
+    
+    public String getDvcUseStmntTmgTmgRptBndsDurationSys() {
+        return this.dvcUseStmntTmgTmgRptBndsDurationSys;
+    }
+    
+    public void setDvcUseStmntTmgTmgRptBndsDurationSys(String dvcUseStmntTmgTmgRptBndsDurationSys) {
+        this.dvcUseStmntTmgTmgRptBndsDurationSys = dvcUseStmntTmgTmgRptBndsDurationSys;
+    }
+    
+    
+    
+    public String getDvcUseStmntTmgTmgRptBndsDurationUnt() {
+        return this.dvcUseStmntTmgTmgRptBndsDurationUnt;
+    }
+    
+    public void setDvcUseStmntTmgTmgRptBndsDurationUnt(String dvcUseStmntTmgTmgRptBndsDurationUnt) {
+        this.dvcUseStmntTmgTmgRptBndsDurationUnt = dvcUseStmntTmgTmgRptBndsDurationUnt;
+    }
+    
+    
+    
+    public String getDvcUseStmntTmgTmgRptBndsDurationVl() {
+        return this.dvcUseStmntTmgTmgRptBndsDurationVl;
+    }
+    
+    public void setDvcUseStmntTmgTmgRptBndsDurationVl(String dvcUseStmntTmgTmgRptBndsDurationVl) {
+        this.dvcUseStmntTmgTmgRptBndsDurationVl = dvcUseStmntTmgTmgRptBndsDurationVl;
     }
     
     

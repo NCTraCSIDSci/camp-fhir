@@ -350,6 +350,26 @@ public class MedicinalProductPharmaceuticalConversion
 		org.hl7.fhir.r4.model.Duration medicinalproductpharmaceuticalrouteofadministrationmaxtreatmentperiod =  new org.hl7.fhir.r4.model.Duration();
 		medicinalproductpharmaceuticalrouteofadministration.setMaxTreatmentPeriod(medicinalproductpharmaceuticalrouteofadministrationmaxtreatmentperiod);
 
+		/******************** MdcnlPrdctPhrmctcl_RtOfAdmnstn_MxTrtmntPrd_Cd ********************************************************************************/
+		if(m.getMdcnlPrdctPhrmctclRtOfAdmnstnMxTrtmntPrdCd() != null) {
+			medicinalproductpharmaceuticalrouteofadministrationmaxtreatmentperiod.setCode(m.getMdcnlPrdctPhrmctclRtOfAdmnstnMxTrtmntPrdCd());
+		}
+		/******************** medicinalproductpharmaceuticalrouteofadministrationmaxtreatmentperiodcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicinalproductpharmaceuticalrouteofadministrationmaxtreatmentperiodcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		medicinalproductpharmaceuticalrouteofadministrationmaxtreatmentperiod.setComparator(medicinalproductpharmaceuticalrouteofadministrationmaxtreatmentperiodcomparator.fromCode(m.getMdcnlPrdctPhrmctclRtOfAdmnstnMxTrtmntPrdCmprtr()));
+
+		/******************** MdcnlPrdctPhrmctcl_RtOfAdmnstn_MxTrtmntPrd_Sys ********************************************************************************/
+		if(m.getMdcnlPrdctPhrmctclRtOfAdmnstnMxTrtmntPrdSys() != null) {
+			medicinalproductpharmaceuticalrouteofadministrationmaxtreatmentperiod.setSystem(m.getMdcnlPrdctPhrmctclRtOfAdmnstnMxTrtmntPrdSys());
+		}
+		/******************** MdcnlPrdctPhrmctcl_RtOfAdmnstn_MxTrtmntPrd_Unt ********************************************************************************/
+		if(m.getMdcnlPrdctPhrmctclRtOfAdmnstnMxTrtmntPrdUnt() != null) {
+			medicinalproductpharmaceuticalrouteofadministrationmaxtreatmentperiod.setUnit(m.getMdcnlPrdctPhrmctclRtOfAdmnstnMxTrtmntPrdUnt());
+		}
+		/******************** MdcnlPrdctPhrmctcl_RtOfAdmnstn_MxTrtmntPrd_Vl ********************************************************************************/
+		if(m.getMdcnlPrdctPhrmctclRtOfAdmnstnMxTrtmntPrdVl() != null) {
+			medicinalproductpharmaceuticalrouteofadministrationmaxtreatmentperiod.setValue(Double.parseDouble((m.getMdcnlPrdctPhrmctclRtOfAdmnstnMxTrtmntPrdVl())));
+		}
 		/******************** medicinalproductpharmaceuticalrouteofadministrationtarspecies ********************************************************************************/
 		org.hl7.fhir.r4.model.MedicinalProductPharmaceutical.MedicinalProductPharmaceuticalRouteOfAdministrationTargetSpeciesComponent medicinalproductpharmaceuticalrouteofadministrationtarspecies =  new org.hl7.fhir.r4.model.MedicinalProductPharmaceutical.MedicinalProductPharmaceuticalRouteOfAdministrationTargetSpeciesComponent();
 		medicinalproductpharmaceuticalrouteofadministration.addTargetSpecies(medicinalproductpharmaceuticalrouteofadministrationtarspecies);

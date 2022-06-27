@@ -1,11 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Jun 6, 2022, 11:02:25 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 27, 2022, 10:39:49 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="FamilyMemberHistory" optimistic-lock="none" table="FamilyMemberHistory">
         <id name="id" type="string">
             <column length="64" name="id"/>
             <generator class="identity"/>
         </id>
+        <property name="fmlyMmbrHisAgeAgeCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_AgeAge_Cd"/>
+        </property>
+        <property name="fmlyMmbrHisAgeAgeCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_AgeAge_Cmprtr"/>
+        </property>
+        <property name="fmlyMmbrHisAgeAgeSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_AgeAge_Sys"/>
+        </property>
+        <property name="fmlyMmbrHisAgeAgeUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_AgeAge_Unt"/>
+        </property>
+        <property name="fmlyMmbrHisAgeAgeVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_AgeAge_Vl"/>
+        </property>
         <property name="fmlyMmbrHisAgeRngHiCd" type="string">
             <meta attribute="resource-type"/>
             <column length="65535" name="FmlyMmbrHis_AgeRng_Hi_Cd"/>
@@ -110,6 +130,26 @@
             <meta attribute="resource-type"/>
             <column length="65535" name="FmlyMmbrHis_Cndtn_Nt_Time"/>
         </property>
+        <property name="fmlyMmbrHisCndtnOnAgeCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Cndtn_OnAge_Cd"/>
+        </property>
+        <property name="fmlyMmbrHisCndtnOnAgeCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Cndtn_OnAge_Cmprtr"/>
+        </property>
+        <property name="fmlyMmbrHisCndtnOnAgeSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Cndtn_OnAge_Sys"/>
+        </property>
+        <property name="fmlyMmbrHisCndtnOnAgeUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Cndtn_OnAge_Unt"/>
+        </property>
+        <property name="fmlyMmbrHisCndtnOnAgeVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_Cndtn_OnAge_Vl"/>
+        </property>
         <property name="fmlyMmbrHisCndtnOnPrdEnd" type="string">
             <meta attribute="resource-type"/>
             <column length="65535" name="FmlyMmbrHis_Cndtn_OnPrd_End"/>
@@ -213,6 +253,26 @@
         <property name="fmlyMmbrHisDt" type="string">
             <meta attribute="resource-type"/>
             <column length="65535" name="FmlyMmbrHis_Dt"/>
+        </property>
+        <property name="fmlyMmbrHisDeceasedAgeCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_DeceasedAge_Cd"/>
+        </property>
+        <property name="fmlyMmbrHisDeceasedAgeCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_DeceasedAge_Cmprtr"/>
+        </property>
+        <property name="fmlyMmbrHisDeceasedAgeSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_DeceasedAge_Sys"/>
+        </property>
+        <property name="fmlyMmbrHisDeceasedAgeUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_DeceasedAge_Unt"/>
+        </property>
+        <property name="fmlyMmbrHisDeceasedAgeVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="FmlyMmbrHis_DeceasedAge_Vl"/>
         </property>
         <property name="fmlyMmbrHisDeceasedBooleanTyp" type="string">
             <meta attribute="resource-type"/>

@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Jun 6, 2022, 11:02:30 AM by Hibernate Tools 5.6.1.Final
+// Generated Jun 27, 2022, 10:40:10 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -81,6 +81,11 @@ public class SpecimenDefinition  implements java.io.Serializable {
      private String spcmnDfnTypTstedCntainerTypCdgVrsn;
      private String spcmnDfnTypTstedCntainerTypTxt;
      private String spcmnDfnTypTstedHandlingInstrctn;
+     private String spcmnDfnTypTstedHandlingMxDurationCd;
+     private String spcmnDfnTypTstedHandlingMxDurationCmprtr;
+     private String spcmnDfnTypTstedHandlingMxDurationSys;
+     private String spcmnDfnTypTstedHandlingMxDurationUnt;
+     private String spcmnDfnTypTstedHandlingMxDurationVl;
      private String spcmnDfnTypTstedHandlingTemperatureQualifierCdgCd;
      private String spcmnDfnTypTstedHandlingTemperatureQualifierCdgDsply;
      private String spcmnDfnTypTstedHandlingTemperatureQualifierCdgSys;
@@ -106,6 +111,11 @@ public class SpecimenDefinition  implements java.io.Serializable {
      private String spcmnDfnTypTstedRejectionCriterionCdgVrsn;
      private String spcmnDfnTypTstedRejectionCriterionTxt;
      private String spcmnDfnTypTstedRqrment;
+     private String spcmnDfnTypTstedRetentionTimeCd;
+     private String spcmnDfnTypTstedRetentionTimeCmprtr;
+     private String spcmnDfnTypTstedRetentionTimeSys;
+     private String spcmnDfnTypTstedRetentionTimeUnt;
+     private String spcmnDfnTypTstedRetentionTimeVl;
      private String spcmnDfnTypTstedTypCdgCd;
      private String spcmnDfnTypTstedTypCdgDsply;
      private String spcmnDfnTypTstedTypCdgSys;
@@ -827,6 +837,56 @@ public class SpecimenDefinition  implements java.io.Serializable {
     
     
     
+    public String getSpcmnDfnTypTstedHandlingMxDurationCd() {
+        return this.spcmnDfnTypTstedHandlingMxDurationCd;
+    }
+    
+    public void setSpcmnDfnTypTstedHandlingMxDurationCd(String spcmnDfnTypTstedHandlingMxDurationCd) {
+        this.spcmnDfnTypTstedHandlingMxDurationCd = spcmnDfnTypTstedHandlingMxDurationCd;
+    }
+    
+    
+    
+    public String getSpcmnDfnTypTstedHandlingMxDurationCmprtr() {
+        return this.spcmnDfnTypTstedHandlingMxDurationCmprtr;
+    }
+    
+    public void setSpcmnDfnTypTstedHandlingMxDurationCmprtr(String spcmnDfnTypTstedHandlingMxDurationCmprtr) {
+        this.spcmnDfnTypTstedHandlingMxDurationCmprtr = spcmnDfnTypTstedHandlingMxDurationCmprtr;
+    }
+    
+    
+    
+    public String getSpcmnDfnTypTstedHandlingMxDurationSys() {
+        return this.spcmnDfnTypTstedHandlingMxDurationSys;
+    }
+    
+    public void setSpcmnDfnTypTstedHandlingMxDurationSys(String spcmnDfnTypTstedHandlingMxDurationSys) {
+        this.spcmnDfnTypTstedHandlingMxDurationSys = spcmnDfnTypTstedHandlingMxDurationSys;
+    }
+    
+    
+    
+    public String getSpcmnDfnTypTstedHandlingMxDurationUnt() {
+        return this.spcmnDfnTypTstedHandlingMxDurationUnt;
+    }
+    
+    public void setSpcmnDfnTypTstedHandlingMxDurationUnt(String spcmnDfnTypTstedHandlingMxDurationUnt) {
+        this.spcmnDfnTypTstedHandlingMxDurationUnt = spcmnDfnTypTstedHandlingMxDurationUnt;
+    }
+    
+    
+    
+    public String getSpcmnDfnTypTstedHandlingMxDurationVl() {
+        return this.spcmnDfnTypTstedHandlingMxDurationVl;
+    }
+    
+    public void setSpcmnDfnTypTstedHandlingMxDurationVl(String spcmnDfnTypTstedHandlingMxDurationVl) {
+        this.spcmnDfnTypTstedHandlingMxDurationVl = spcmnDfnTypTstedHandlingMxDurationVl;
+    }
+    
+    
+    
     public String getSpcmnDfnTypTstedHandlingTemperatureQualifierCdgCd() {
         return this.spcmnDfnTypTstedHandlingTemperatureQualifierCdgCd;
     }
@@ -1073,6 +1133,56 @@ public class SpecimenDefinition  implements java.io.Serializable {
     
     public void setSpcmnDfnTypTstedRqrment(String spcmnDfnTypTstedRqrment) {
         this.spcmnDfnTypTstedRqrment = spcmnDfnTypTstedRqrment;
+    }
+    
+    
+    
+    public String getSpcmnDfnTypTstedRetentionTimeCd() {
+        return this.spcmnDfnTypTstedRetentionTimeCd;
+    }
+    
+    public void setSpcmnDfnTypTstedRetentionTimeCd(String spcmnDfnTypTstedRetentionTimeCd) {
+        this.spcmnDfnTypTstedRetentionTimeCd = spcmnDfnTypTstedRetentionTimeCd;
+    }
+    
+    
+    
+    public String getSpcmnDfnTypTstedRetentionTimeCmprtr() {
+        return this.spcmnDfnTypTstedRetentionTimeCmprtr;
+    }
+    
+    public void setSpcmnDfnTypTstedRetentionTimeCmprtr(String spcmnDfnTypTstedRetentionTimeCmprtr) {
+        this.spcmnDfnTypTstedRetentionTimeCmprtr = spcmnDfnTypTstedRetentionTimeCmprtr;
+    }
+    
+    
+    
+    public String getSpcmnDfnTypTstedRetentionTimeSys() {
+        return this.spcmnDfnTypTstedRetentionTimeSys;
+    }
+    
+    public void setSpcmnDfnTypTstedRetentionTimeSys(String spcmnDfnTypTstedRetentionTimeSys) {
+        this.spcmnDfnTypTstedRetentionTimeSys = spcmnDfnTypTstedRetentionTimeSys;
+    }
+    
+    
+    
+    public String getSpcmnDfnTypTstedRetentionTimeUnt() {
+        return this.spcmnDfnTypTstedRetentionTimeUnt;
+    }
+    
+    public void setSpcmnDfnTypTstedRetentionTimeUnt(String spcmnDfnTypTstedRetentionTimeUnt) {
+        this.spcmnDfnTypTstedRetentionTimeUnt = spcmnDfnTypTstedRetentionTimeUnt;
+    }
+    
+    
+    
+    public String getSpcmnDfnTypTstedRetentionTimeVl() {
+        return this.spcmnDfnTypTstedRetentionTimeVl;
+    }
+    
+    public void setSpcmnDfnTypTstedRetentionTimeVl(String spcmnDfnTypTstedRetentionTimeVl) {
+        this.spcmnDfnTypTstedRetentionTimeVl = spcmnDfnTypTstedRetentionTimeVl;
     }
     
     

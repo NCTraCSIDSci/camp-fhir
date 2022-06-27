@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Jun 6, 2022, 11:02:30 AM by Hibernate Tools 5.6.1.Final
+// Generated Jun 27, 2022, 10:40:10 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -37,6 +37,11 @@ public class EvidenceVariable  implements java.io.Serializable {
      private String evdnceVrbleCrctrstcDfnDataRqrmentDtFltrPath;
      private String evdnceVrbleCrctrstcDfnDataRqrmentDtFltrSrchParam;
      private String evdnceVrbleCrctrstcDfnDataRqrmentDtFltrVlDtTimeTyp;
+     private String evdnceVrbleCrctrstcDfnDataRqrmentDtFltrVlDurationCd;
+     private String evdnceVrbleCrctrstcDfnDataRqrmentDtFltrVlDurationCmprtr;
+     private String evdnceVrbleCrctrstcDfnDataRqrmentDtFltrVlDurationSys;
+     private String evdnceVrbleCrctrstcDfnDataRqrmentDtFltrVlDurationUnt;
+     private String evdnceVrbleCrctrstcDfnDataRqrmentDtFltrVlDurationVl;
      private String evdnceVrbleCrctrstcDfnDataRqrmentDtFltrVlPrdEnd;
      private String evdnceVrbleCrctrstcDfnDataRqrmentDtFltrVlPrdStrt;
      private String evdnceVrbleCrctrstcDfnDataRqrmentLmt;
@@ -74,6 +79,11 @@ public class EvidenceVariable  implements java.io.Serializable {
      private String evdnceVrbleCrctrstcDfnTrgrDfnDataDtFltrPath;
      private String evdnceVrbleCrctrstcDfnTrgrDfnDataDtFltrSrchParam;
      private String evdnceVrbleCrctrstcDfnTrgrDfnDataDtFltrVlDtTimeTyp;
+     private String evdnceVrbleCrctrstcDfnTrgrDfnDataDtFltrVlDurationCd;
+     private String evdnceVrbleCrctrstcDfnTrgrDfnDataDtFltrVlDurationCmprtr;
+     private String evdnceVrbleCrctrstcDfnTrgrDfnDataDtFltrVlDurationSys;
+     private String evdnceVrbleCrctrstcDfnTrgrDfnDataDtFltrVlDurationUnt;
+     private String evdnceVrbleCrctrstcDfnTrgrDfnDataDtFltrVlDurationVl;
      private String evdnceVrbleCrctrstcDfnTrgrDfnDataDtFltrVlPrdEnd;
      private String evdnceVrbleCrctrstcDfnTrgrDfnDataDtFltrVlPrdStrt;
      private String evdnceVrbleCrctrstcDfnTrgrDfnDataLmt;
@@ -100,6 +110,11 @@ public class EvidenceVariable  implements java.io.Serializable {
      private String evdnceVrbleCrctrstcDfnTrgrDfnTmgTmgCdCdgVrsn;
      private String evdnceVrbleCrctrstcDfnTrgrDfnTmgTmgCdTxt;
      private String evdnceVrbleCrctrstcDfnTrgrDfnTmgTmgEvnt;
+     private String evdnceVrbleCrctrstcDfnTrgrDfnTmgTmgRptBndsDurationCd;
+     private String evdnceVrbleCrctrstcDfnTrgrDfnTmgTmgRptBndsDurationCmprtr;
+     private String evdnceVrbleCrctrstcDfnTrgrDfnTmgTmgRptBndsDurationSys;
+     private String evdnceVrbleCrctrstcDfnTrgrDfnTmgTmgRptBndsDurationUnt;
+     private String evdnceVrbleCrctrstcDfnTrgrDfnTmgTmgRptBndsDurationVl;
      private String evdnceVrbleCrctrstcDfnTrgrDfnTmgTmgRptBndsPrdEnd;
      private String evdnceVrbleCrctrstcDfnTrgrDfnTmgTmgRptBndsPrdStrt;
      private String evdnceVrbleCrctrstcDfnTrgrDfnTmgTmgRptBndsRngHiCd;
@@ -131,6 +146,11 @@ public class EvidenceVariable  implements java.io.Serializable {
      private String evdnceVrbleCrctrstcExclude;
      private String evdnceVrbleCrctrstcGrpMsr;
      private String evdnceVrbleCrctrstcPrtcpntEfctiveDtTimeTyp;
+     private String evdnceVrbleCrctrstcPrtcpntEfctiveDurationCd;
+     private String evdnceVrbleCrctrstcPrtcpntEfctiveDurationCmprtr;
+     private String evdnceVrbleCrctrstcPrtcpntEfctiveDurationSys;
+     private String evdnceVrbleCrctrstcPrtcpntEfctiveDurationUnt;
+     private String evdnceVrbleCrctrstcPrtcpntEfctiveDurationVl;
      private String evdnceVrbleCrctrstcPrtcpntEfctivePrdEnd;
      private String evdnceVrbleCrctrstcPrtcpntEfctivePrdStrt;
      private String evdnceVrbleCrctrstcPrtcpntEfctiveTmgCdCdgCd;
@@ -140,6 +160,11 @@ public class EvidenceVariable  implements java.io.Serializable {
      private String evdnceVrbleCrctrstcPrtcpntEfctiveTmgCdCdgVrsn;
      private String evdnceVrbleCrctrstcPrtcpntEfctiveTmgCdTxt;
      private String evdnceVrbleCrctrstcPrtcpntEfctiveTmgEvnt;
+     private String evdnceVrbleCrctrstcPrtcpntEfctiveTmgRptBndsDurationCd;
+     private String evdnceVrbleCrctrstcPrtcpntEfctiveTmgRptBndsDurationCmprtr;
+     private String evdnceVrbleCrctrstcPrtcpntEfctiveTmgRptBndsDurationSys;
+     private String evdnceVrbleCrctrstcPrtcpntEfctiveTmgRptBndsDurationUnt;
+     private String evdnceVrbleCrctrstcPrtcpntEfctiveTmgRptBndsDurationVl;
      private String evdnceVrbleCrctrstcPrtcpntEfctiveTmgRptBndsPrdEnd;
      private String evdnceVrbleCrctrstcPrtcpntEfctiveTmgRptBndsPrdStrt;
      private String evdnceVrbleCrctrstcPrtcpntEfctiveTmgRptBndsRngHiCd;
@@ -166,6 +191,11 @@ public class EvidenceVariable  implements java.io.Serializable {
      private String evdnceVrbleCrctrstcPrtcpntEfctiveTmgRptPrdUnt;
      private String evdnceVrbleCrctrstcPrtcpntEfctiveTmgRptTimeOfDay;
      private String evdnceVrbleCrctrstcPrtcpntEfctiveTmgRptWhen;
+     private String evdnceVrbleCrctrstcTimeFromStrtCd;
+     private String evdnceVrbleCrctrstcTimeFromStrtCmprtr;
+     private String evdnceVrbleCrctrstcTimeFromStrtSys;
+     private String evdnceVrbleCrctrstcTimeFromStrtUnt;
+     private String evdnceVrbleCrctrstcTimeFromStrtVl;
      private String evdnceVrbleCrctrstcUsgCntxtCdCd;
      private String evdnceVrbleCrctrstcUsgCntxtCdDsply;
      private String evdnceVrbleCrctrstcUsgCntxtCdSys;
@@ -580,6 +610,56 @@ public class EvidenceVariable  implements java.io.Serializable {
     
     
     
+    public String getEvdnceVrbleCrctrstcDfnDataRqrmentDtFltrVlDurationCd() {
+        return this.evdnceVrbleCrctrstcDfnDataRqrmentDtFltrVlDurationCd;
+    }
+    
+    public void setEvdnceVrbleCrctrstcDfnDataRqrmentDtFltrVlDurationCd(String evdnceVrbleCrctrstcDfnDataRqrmentDtFltrVlDurationCd) {
+        this.evdnceVrbleCrctrstcDfnDataRqrmentDtFltrVlDurationCd = evdnceVrbleCrctrstcDfnDataRqrmentDtFltrVlDurationCd;
+    }
+    
+    
+    
+    public String getEvdnceVrbleCrctrstcDfnDataRqrmentDtFltrVlDurationCmprtr() {
+        return this.evdnceVrbleCrctrstcDfnDataRqrmentDtFltrVlDurationCmprtr;
+    }
+    
+    public void setEvdnceVrbleCrctrstcDfnDataRqrmentDtFltrVlDurationCmprtr(String evdnceVrbleCrctrstcDfnDataRqrmentDtFltrVlDurationCmprtr) {
+        this.evdnceVrbleCrctrstcDfnDataRqrmentDtFltrVlDurationCmprtr = evdnceVrbleCrctrstcDfnDataRqrmentDtFltrVlDurationCmprtr;
+    }
+    
+    
+    
+    public String getEvdnceVrbleCrctrstcDfnDataRqrmentDtFltrVlDurationSys() {
+        return this.evdnceVrbleCrctrstcDfnDataRqrmentDtFltrVlDurationSys;
+    }
+    
+    public void setEvdnceVrbleCrctrstcDfnDataRqrmentDtFltrVlDurationSys(String evdnceVrbleCrctrstcDfnDataRqrmentDtFltrVlDurationSys) {
+        this.evdnceVrbleCrctrstcDfnDataRqrmentDtFltrVlDurationSys = evdnceVrbleCrctrstcDfnDataRqrmentDtFltrVlDurationSys;
+    }
+    
+    
+    
+    public String getEvdnceVrbleCrctrstcDfnDataRqrmentDtFltrVlDurationUnt() {
+        return this.evdnceVrbleCrctrstcDfnDataRqrmentDtFltrVlDurationUnt;
+    }
+    
+    public void setEvdnceVrbleCrctrstcDfnDataRqrmentDtFltrVlDurationUnt(String evdnceVrbleCrctrstcDfnDataRqrmentDtFltrVlDurationUnt) {
+        this.evdnceVrbleCrctrstcDfnDataRqrmentDtFltrVlDurationUnt = evdnceVrbleCrctrstcDfnDataRqrmentDtFltrVlDurationUnt;
+    }
+    
+    
+    
+    public String getEvdnceVrbleCrctrstcDfnDataRqrmentDtFltrVlDurationVl() {
+        return this.evdnceVrbleCrctrstcDfnDataRqrmentDtFltrVlDurationVl;
+    }
+    
+    public void setEvdnceVrbleCrctrstcDfnDataRqrmentDtFltrVlDurationVl(String evdnceVrbleCrctrstcDfnDataRqrmentDtFltrVlDurationVl) {
+        this.evdnceVrbleCrctrstcDfnDataRqrmentDtFltrVlDurationVl = evdnceVrbleCrctrstcDfnDataRqrmentDtFltrVlDurationVl;
+    }
+    
+    
+    
     public String getEvdnceVrbleCrctrstcDfnDataRqrmentDtFltrVlPrdEnd() {
         return this.evdnceVrbleCrctrstcDfnDataRqrmentDtFltrVlPrdEnd;
     }
@@ -950,6 +1030,56 @@ public class EvidenceVariable  implements java.io.Serializable {
     
     
     
+    public String getEvdnceVrbleCrctrstcDfnTrgrDfnDataDtFltrVlDurationCd() {
+        return this.evdnceVrbleCrctrstcDfnTrgrDfnDataDtFltrVlDurationCd;
+    }
+    
+    public void setEvdnceVrbleCrctrstcDfnTrgrDfnDataDtFltrVlDurationCd(String evdnceVrbleCrctrstcDfnTrgrDfnDataDtFltrVlDurationCd) {
+        this.evdnceVrbleCrctrstcDfnTrgrDfnDataDtFltrVlDurationCd = evdnceVrbleCrctrstcDfnTrgrDfnDataDtFltrVlDurationCd;
+    }
+    
+    
+    
+    public String getEvdnceVrbleCrctrstcDfnTrgrDfnDataDtFltrVlDurationCmprtr() {
+        return this.evdnceVrbleCrctrstcDfnTrgrDfnDataDtFltrVlDurationCmprtr;
+    }
+    
+    public void setEvdnceVrbleCrctrstcDfnTrgrDfnDataDtFltrVlDurationCmprtr(String evdnceVrbleCrctrstcDfnTrgrDfnDataDtFltrVlDurationCmprtr) {
+        this.evdnceVrbleCrctrstcDfnTrgrDfnDataDtFltrVlDurationCmprtr = evdnceVrbleCrctrstcDfnTrgrDfnDataDtFltrVlDurationCmprtr;
+    }
+    
+    
+    
+    public String getEvdnceVrbleCrctrstcDfnTrgrDfnDataDtFltrVlDurationSys() {
+        return this.evdnceVrbleCrctrstcDfnTrgrDfnDataDtFltrVlDurationSys;
+    }
+    
+    public void setEvdnceVrbleCrctrstcDfnTrgrDfnDataDtFltrVlDurationSys(String evdnceVrbleCrctrstcDfnTrgrDfnDataDtFltrVlDurationSys) {
+        this.evdnceVrbleCrctrstcDfnTrgrDfnDataDtFltrVlDurationSys = evdnceVrbleCrctrstcDfnTrgrDfnDataDtFltrVlDurationSys;
+    }
+    
+    
+    
+    public String getEvdnceVrbleCrctrstcDfnTrgrDfnDataDtFltrVlDurationUnt() {
+        return this.evdnceVrbleCrctrstcDfnTrgrDfnDataDtFltrVlDurationUnt;
+    }
+    
+    public void setEvdnceVrbleCrctrstcDfnTrgrDfnDataDtFltrVlDurationUnt(String evdnceVrbleCrctrstcDfnTrgrDfnDataDtFltrVlDurationUnt) {
+        this.evdnceVrbleCrctrstcDfnTrgrDfnDataDtFltrVlDurationUnt = evdnceVrbleCrctrstcDfnTrgrDfnDataDtFltrVlDurationUnt;
+    }
+    
+    
+    
+    public String getEvdnceVrbleCrctrstcDfnTrgrDfnDataDtFltrVlDurationVl() {
+        return this.evdnceVrbleCrctrstcDfnTrgrDfnDataDtFltrVlDurationVl;
+    }
+    
+    public void setEvdnceVrbleCrctrstcDfnTrgrDfnDataDtFltrVlDurationVl(String evdnceVrbleCrctrstcDfnTrgrDfnDataDtFltrVlDurationVl) {
+        this.evdnceVrbleCrctrstcDfnTrgrDfnDataDtFltrVlDurationVl = evdnceVrbleCrctrstcDfnTrgrDfnDataDtFltrVlDurationVl;
+    }
+    
+    
+    
     public String getEvdnceVrbleCrctrstcDfnTrgrDfnDataDtFltrVlPrdEnd() {
         return this.evdnceVrbleCrctrstcDfnTrgrDfnDataDtFltrVlPrdEnd;
     }
@@ -1206,6 +1336,56 @@ public class EvidenceVariable  implements java.io.Serializable {
     
     public void setEvdnceVrbleCrctrstcDfnTrgrDfnTmgTmgEvnt(String evdnceVrbleCrctrstcDfnTrgrDfnTmgTmgEvnt) {
         this.evdnceVrbleCrctrstcDfnTrgrDfnTmgTmgEvnt = evdnceVrbleCrctrstcDfnTrgrDfnTmgTmgEvnt;
+    }
+    
+    
+    
+    public String getEvdnceVrbleCrctrstcDfnTrgrDfnTmgTmgRptBndsDurationCd() {
+        return this.evdnceVrbleCrctrstcDfnTrgrDfnTmgTmgRptBndsDurationCd;
+    }
+    
+    public void setEvdnceVrbleCrctrstcDfnTrgrDfnTmgTmgRptBndsDurationCd(String evdnceVrbleCrctrstcDfnTrgrDfnTmgTmgRptBndsDurationCd) {
+        this.evdnceVrbleCrctrstcDfnTrgrDfnTmgTmgRptBndsDurationCd = evdnceVrbleCrctrstcDfnTrgrDfnTmgTmgRptBndsDurationCd;
+    }
+    
+    
+    
+    public String getEvdnceVrbleCrctrstcDfnTrgrDfnTmgTmgRptBndsDurationCmprtr() {
+        return this.evdnceVrbleCrctrstcDfnTrgrDfnTmgTmgRptBndsDurationCmprtr;
+    }
+    
+    public void setEvdnceVrbleCrctrstcDfnTrgrDfnTmgTmgRptBndsDurationCmprtr(String evdnceVrbleCrctrstcDfnTrgrDfnTmgTmgRptBndsDurationCmprtr) {
+        this.evdnceVrbleCrctrstcDfnTrgrDfnTmgTmgRptBndsDurationCmprtr = evdnceVrbleCrctrstcDfnTrgrDfnTmgTmgRptBndsDurationCmprtr;
+    }
+    
+    
+    
+    public String getEvdnceVrbleCrctrstcDfnTrgrDfnTmgTmgRptBndsDurationSys() {
+        return this.evdnceVrbleCrctrstcDfnTrgrDfnTmgTmgRptBndsDurationSys;
+    }
+    
+    public void setEvdnceVrbleCrctrstcDfnTrgrDfnTmgTmgRptBndsDurationSys(String evdnceVrbleCrctrstcDfnTrgrDfnTmgTmgRptBndsDurationSys) {
+        this.evdnceVrbleCrctrstcDfnTrgrDfnTmgTmgRptBndsDurationSys = evdnceVrbleCrctrstcDfnTrgrDfnTmgTmgRptBndsDurationSys;
+    }
+    
+    
+    
+    public String getEvdnceVrbleCrctrstcDfnTrgrDfnTmgTmgRptBndsDurationUnt() {
+        return this.evdnceVrbleCrctrstcDfnTrgrDfnTmgTmgRptBndsDurationUnt;
+    }
+    
+    public void setEvdnceVrbleCrctrstcDfnTrgrDfnTmgTmgRptBndsDurationUnt(String evdnceVrbleCrctrstcDfnTrgrDfnTmgTmgRptBndsDurationUnt) {
+        this.evdnceVrbleCrctrstcDfnTrgrDfnTmgTmgRptBndsDurationUnt = evdnceVrbleCrctrstcDfnTrgrDfnTmgTmgRptBndsDurationUnt;
+    }
+    
+    
+    
+    public String getEvdnceVrbleCrctrstcDfnTrgrDfnTmgTmgRptBndsDurationVl() {
+        return this.evdnceVrbleCrctrstcDfnTrgrDfnTmgTmgRptBndsDurationVl;
+    }
+    
+    public void setEvdnceVrbleCrctrstcDfnTrgrDfnTmgTmgRptBndsDurationVl(String evdnceVrbleCrctrstcDfnTrgrDfnTmgTmgRptBndsDurationVl) {
+        this.evdnceVrbleCrctrstcDfnTrgrDfnTmgTmgRptBndsDurationVl = evdnceVrbleCrctrstcDfnTrgrDfnTmgTmgRptBndsDurationVl;
     }
     
     
@@ -1520,6 +1700,56 @@ public class EvidenceVariable  implements java.io.Serializable {
     
     
     
+    public String getEvdnceVrbleCrctrstcPrtcpntEfctiveDurationCd() {
+        return this.evdnceVrbleCrctrstcPrtcpntEfctiveDurationCd;
+    }
+    
+    public void setEvdnceVrbleCrctrstcPrtcpntEfctiveDurationCd(String evdnceVrbleCrctrstcPrtcpntEfctiveDurationCd) {
+        this.evdnceVrbleCrctrstcPrtcpntEfctiveDurationCd = evdnceVrbleCrctrstcPrtcpntEfctiveDurationCd;
+    }
+    
+    
+    
+    public String getEvdnceVrbleCrctrstcPrtcpntEfctiveDurationCmprtr() {
+        return this.evdnceVrbleCrctrstcPrtcpntEfctiveDurationCmprtr;
+    }
+    
+    public void setEvdnceVrbleCrctrstcPrtcpntEfctiveDurationCmprtr(String evdnceVrbleCrctrstcPrtcpntEfctiveDurationCmprtr) {
+        this.evdnceVrbleCrctrstcPrtcpntEfctiveDurationCmprtr = evdnceVrbleCrctrstcPrtcpntEfctiveDurationCmprtr;
+    }
+    
+    
+    
+    public String getEvdnceVrbleCrctrstcPrtcpntEfctiveDurationSys() {
+        return this.evdnceVrbleCrctrstcPrtcpntEfctiveDurationSys;
+    }
+    
+    public void setEvdnceVrbleCrctrstcPrtcpntEfctiveDurationSys(String evdnceVrbleCrctrstcPrtcpntEfctiveDurationSys) {
+        this.evdnceVrbleCrctrstcPrtcpntEfctiveDurationSys = evdnceVrbleCrctrstcPrtcpntEfctiveDurationSys;
+    }
+    
+    
+    
+    public String getEvdnceVrbleCrctrstcPrtcpntEfctiveDurationUnt() {
+        return this.evdnceVrbleCrctrstcPrtcpntEfctiveDurationUnt;
+    }
+    
+    public void setEvdnceVrbleCrctrstcPrtcpntEfctiveDurationUnt(String evdnceVrbleCrctrstcPrtcpntEfctiveDurationUnt) {
+        this.evdnceVrbleCrctrstcPrtcpntEfctiveDurationUnt = evdnceVrbleCrctrstcPrtcpntEfctiveDurationUnt;
+    }
+    
+    
+    
+    public String getEvdnceVrbleCrctrstcPrtcpntEfctiveDurationVl() {
+        return this.evdnceVrbleCrctrstcPrtcpntEfctiveDurationVl;
+    }
+    
+    public void setEvdnceVrbleCrctrstcPrtcpntEfctiveDurationVl(String evdnceVrbleCrctrstcPrtcpntEfctiveDurationVl) {
+        this.evdnceVrbleCrctrstcPrtcpntEfctiveDurationVl = evdnceVrbleCrctrstcPrtcpntEfctiveDurationVl;
+    }
+    
+    
+    
     public String getEvdnceVrbleCrctrstcPrtcpntEfctivePrdEnd() {
         return this.evdnceVrbleCrctrstcPrtcpntEfctivePrdEnd;
     }
@@ -1606,6 +1836,56 @@ public class EvidenceVariable  implements java.io.Serializable {
     
     public void setEvdnceVrbleCrctrstcPrtcpntEfctiveTmgEvnt(String evdnceVrbleCrctrstcPrtcpntEfctiveTmgEvnt) {
         this.evdnceVrbleCrctrstcPrtcpntEfctiveTmgEvnt = evdnceVrbleCrctrstcPrtcpntEfctiveTmgEvnt;
+    }
+    
+    
+    
+    public String getEvdnceVrbleCrctrstcPrtcpntEfctiveTmgRptBndsDurationCd() {
+        return this.evdnceVrbleCrctrstcPrtcpntEfctiveTmgRptBndsDurationCd;
+    }
+    
+    public void setEvdnceVrbleCrctrstcPrtcpntEfctiveTmgRptBndsDurationCd(String evdnceVrbleCrctrstcPrtcpntEfctiveTmgRptBndsDurationCd) {
+        this.evdnceVrbleCrctrstcPrtcpntEfctiveTmgRptBndsDurationCd = evdnceVrbleCrctrstcPrtcpntEfctiveTmgRptBndsDurationCd;
+    }
+    
+    
+    
+    public String getEvdnceVrbleCrctrstcPrtcpntEfctiveTmgRptBndsDurationCmprtr() {
+        return this.evdnceVrbleCrctrstcPrtcpntEfctiveTmgRptBndsDurationCmprtr;
+    }
+    
+    public void setEvdnceVrbleCrctrstcPrtcpntEfctiveTmgRptBndsDurationCmprtr(String evdnceVrbleCrctrstcPrtcpntEfctiveTmgRptBndsDurationCmprtr) {
+        this.evdnceVrbleCrctrstcPrtcpntEfctiveTmgRptBndsDurationCmprtr = evdnceVrbleCrctrstcPrtcpntEfctiveTmgRptBndsDurationCmprtr;
+    }
+    
+    
+    
+    public String getEvdnceVrbleCrctrstcPrtcpntEfctiveTmgRptBndsDurationSys() {
+        return this.evdnceVrbleCrctrstcPrtcpntEfctiveTmgRptBndsDurationSys;
+    }
+    
+    public void setEvdnceVrbleCrctrstcPrtcpntEfctiveTmgRptBndsDurationSys(String evdnceVrbleCrctrstcPrtcpntEfctiveTmgRptBndsDurationSys) {
+        this.evdnceVrbleCrctrstcPrtcpntEfctiveTmgRptBndsDurationSys = evdnceVrbleCrctrstcPrtcpntEfctiveTmgRptBndsDurationSys;
+    }
+    
+    
+    
+    public String getEvdnceVrbleCrctrstcPrtcpntEfctiveTmgRptBndsDurationUnt() {
+        return this.evdnceVrbleCrctrstcPrtcpntEfctiveTmgRptBndsDurationUnt;
+    }
+    
+    public void setEvdnceVrbleCrctrstcPrtcpntEfctiveTmgRptBndsDurationUnt(String evdnceVrbleCrctrstcPrtcpntEfctiveTmgRptBndsDurationUnt) {
+        this.evdnceVrbleCrctrstcPrtcpntEfctiveTmgRptBndsDurationUnt = evdnceVrbleCrctrstcPrtcpntEfctiveTmgRptBndsDurationUnt;
+    }
+    
+    
+    
+    public String getEvdnceVrbleCrctrstcPrtcpntEfctiveTmgRptBndsDurationVl() {
+        return this.evdnceVrbleCrctrstcPrtcpntEfctiveTmgRptBndsDurationVl;
+    }
+    
+    public void setEvdnceVrbleCrctrstcPrtcpntEfctiveTmgRptBndsDurationVl(String evdnceVrbleCrctrstcPrtcpntEfctiveTmgRptBndsDurationVl) {
+        this.evdnceVrbleCrctrstcPrtcpntEfctiveTmgRptBndsDurationVl = evdnceVrbleCrctrstcPrtcpntEfctiveTmgRptBndsDurationVl;
     }
     
     
@@ -1866,6 +2146,56 @@ public class EvidenceVariable  implements java.io.Serializable {
     
     public void setEvdnceVrbleCrctrstcPrtcpntEfctiveTmgRptWhen(String evdnceVrbleCrctrstcPrtcpntEfctiveTmgRptWhen) {
         this.evdnceVrbleCrctrstcPrtcpntEfctiveTmgRptWhen = evdnceVrbleCrctrstcPrtcpntEfctiveTmgRptWhen;
+    }
+    
+    
+    
+    public String getEvdnceVrbleCrctrstcTimeFromStrtCd() {
+        return this.evdnceVrbleCrctrstcTimeFromStrtCd;
+    }
+    
+    public void setEvdnceVrbleCrctrstcTimeFromStrtCd(String evdnceVrbleCrctrstcTimeFromStrtCd) {
+        this.evdnceVrbleCrctrstcTimeFromStrtCd = evdnceVrbleCrctrstcTimeFromStrtCd;
+    }
+    
+    
+    
+    public String getEvdnceVrbleCrctrstcTimeFromStrtCmprtr() {
+        return this.evdnceVrbleCrctrstcTimeFromStrtCmprtr;
+    }
+    
+    public void setEvdnceVrbleCrctrstcTimeFromStrtCmprtr(String evdnceVrbleCrctrstcTimeFromStrtCmprtr) {
+        this.evdnceVrbleCrctrstcTimeFromStrtCmprtr = evdnceVrbleCrctrstcTimeFromStrtCmprtr;
+    }
+    
+    
+    
+    public String getEvdnceVrbleCrctrstcTimeFromStrtSys() {
+        return this.evdnceVrbleCrctrstcTimeFromStrtSys;
+    }
+    
+    public void setEvdnceVrbleCrctrstcTimeFromStrtSys(String evdnceVrbleCrctrstcTimeFromStrtSys) {
+        this.evdnceVrbleCrctrstcTimeFromStrtSys = evdnceVrbleCrctrstcTimeFromStrtSys;
+    }
+    
+    
+    
+    public String getEvdnceVrbleCrctrstcTimeFromStrtUnt() {
+        return this.evdnceVrbleCrctrstcTimeFromStrtUnt;
+    }
+    
+    public void setEvdnceVrbleCrctrstcTimeFromStrtUnt(String evdnceVrbleCrctrstcTimeFromStrtUnt) {
+        this.evdnceVrbleCrctrstcTimeFromStrtUnt = evdnceVrbleCrctrstcTimeFromStrtUnt;
+    }
+    
+    
+    
+    public String getEvdnceVrbleCrctrstcTimeFromStrtVl() {
+        return this.evdnceVrbleCrctrstcTimeFromStrtVl;
+    }
+    
+    public void setEvdnceVrbleCrctrstcTimeFromStrtVl(String evdnceVrbleCrctrstcTimeFromStrtVl) {
+        this.evdnceVrbleCrctrstcTimeFromStrtVl = evdnceVrbleCrctrstcTimeFromStrtVl;
     }
     
     

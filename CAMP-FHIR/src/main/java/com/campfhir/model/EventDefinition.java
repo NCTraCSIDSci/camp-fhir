@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Jun 6, 2022, 11:02:30 AM by Hibernate Tools 5.6.1.Final
+// Generated Jun 27, 2022, 10:40:10 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -121,6 +121,11 @@ public class EventDefinition  implements java.io.Serializable {
      private String evntDfnTrgrDataDtFltrPath;
      private String evntDfnTrgrDataDtFltrSrchParam;
      private String evntDfnTrgrDataDtFltrVlDtTimeTyp;
+     private String evntDfnTrgrDataDtFltrVlDurationCd;
+     private String evntDfnTrgrDataDtFltrVlDurationCmprtr;
+     private String evntDfnTrgrDataDtFltrVlDurationSys;
+     private String evntDfnTrgrDataDtFltrVlDurationUnt;
+     private String evntDfnTrgrDataDtFltrVlDurationVl;
      private String evntDfnTrgrDataDtFltrVlPrdEnd;
      private String evntDfnTrgrDataDtFltrVlPrdStrt;
      private String evntDfnTrgrDataLmt;
@@ -147,6 +152,11 @@ public class EventDefinition  implements java.io.Serializable {
      private String evntDfnTrgrTmgTmgCdCdgVrsn;
      private String evntDfnTrgrTmgTmgCdTxt;
      private String evntDfnTrgrTmgTmgEvnt;
+     private String evntDfnTrgrTmgTmgRptBndsDurationCd;
+     private String evntDfnTrgrTmgTmgRptBndsDurationCmprtr;
+     private String evntDfnTrgrTmgTmgRptBndsDurationSys;
+     private String evntDfnTrgrTmgTmgRptBndsDurationUnt;
+     private String evntDfnTrgrTmgTmgRptBndsDurationVl;
      private String evntDfnTrgrTmgTmgRptBndsPrdEnd;
      private String evntDfnTrgrTmgTmgRptBndsPrdStrt;
      private String evntDfnTrgrTmgTmgRptBndsRngHiCd;
@@ -1319,6 +1329,56 @@ public class EventDefinition  implements java.io.Serializable {
     
     
     
+    public String getEvntDfnTrgrDataDtFltrVlDurationCd() {
+        return this.evntDfnTrgrDataDtFltrVlDurationCd;
+    }
+    
+    public void setEvntDfnTrgrDataDtFltrVlDurationCd(String evntDfnTrgrDataDtFltrVlDurationCd) {
+        this.evntDfnTrgrDataDtFltrVlDurationCd = evntDfnTrgrDataDtFltrVlDurationCd;
+    }
+    
+    
+    
+    public String getEvntDfnTrgrDataDtFltrVlDurationCmprtr() {
+        return this.evntDfnTrgrDataDtFltrVlDurationCmprtr;
+    }
+    
+    public void setEvntDfnTrgrDataDtFltrVlDurationCmprtr(String evntDfnTrgrDataDtFltrVlDurationCmprtr) {
+        this.evntDfnTrgrDataDtFltrVlDurationCmprtr = evntDfnTrgrDataDtFltrVlDurationCmprtr;
+    }
+    
+    
+    
+    public String getEvntDfnTrgrDataDtFltrVlDurationSys() {
+        return this.evntDfnTrgrDataDtFltrVlDurationSys;
+    }
+    
+    public void setEvntDfnTrgrDataDtFltrVlDurationSys(String evntDfnTrgrDataDtFltrVlDurationSys) {
+        this.evntDfnTrgrDataDtFltrVlDurationSys = evntDfnTrgrDataDtFltrVlDurationSys;
+    }
+    
+    
+    
+    public String getEvntDfnTrgrDataDtFltrVlDurationUnt() {
+        return this.evntDfnTrgrDataDtFltrVlDurationUnt;
+    }
+    
+    public void setEvntDfnTrgrDataDtFltrVlDurationUnt(String evntDfnTrgrDataDtFltrVlDurationUnt) {
+        this.evntDfnTrgrDataDtFltrVlDurationUnt = evntDfnTrgrDataDtFltrVlDurationUnt;
+    }
+    
+    
+    
+    public String getEvntDfnTrgrDataDtFltrVlDurationVl() {
+        return this.evntDfnTrgrDataDtFltrVlDurationVl;
+    }
+    
+    public void setEvntDfnTrgrDataDtFltrVlDurationVl(String evntDfnTrgrDataDtFltrVlDurationVl) {
+        this.evntDfnTrgrDataDtFltrVlDurationVl = evntDfnTrgrDataDtFltrVlDurationVl;
+    }
+    
+    
+    
     public String getEvntDfnTrgrDataDtFltrVlPrdEnd() {
         return this.evntDfnTrgrDataDtFltrVlPrdEnd;
     }
@@ -1575,6 +1635,56 @@ public class EventDefinition  implements java.io.Serializable {
     
     public void setEvntDfnTrgrTmgTmgEvnt(String evntDfnTrgrTmgTmgEvnt) {
         this.evntDfnTrgrTmgTmgEvnt = evntDfnTrgrTmgTmgEvnt;
+    }
+    
+    
+    
+    public String getEvntDfnTrgrTmgTmgRptBndsDurationCd() {
+        return this.evntDfnTrgrTmgTmgRptBndsDurationCd;
+    }
+    
+    public void setEvntDfnTrgrTmgTmgRptBndsDurationCd(String evntDfnTrgrTmgTmgRptBndsDurationCd) {
+        this.evntDfnTrgrTmgTmgRptBndsDurationCd = evntDfnTrgrTmgTmgRptBndsDurationCd;
+    }
+    
+    
+    
+    public String getEvntDfnTrgrTmgTmgRptBndsDurationCmprtr() {
+        return this.evntDfnTrgrTmgTmgRptBndsDurationCmprtr;
+    }
+    
+    public void setEvntDfnTrgrTmgTmgRptBndsDurationCmprtr(String evntDfnTrgrTmgTmgRptBndsDurationCmprtr) {
+        this.evntDfnTrgrTmgTmgRptBndsDurationCmprtr = evntDfnTrgrTmgTmgRptBndsDurationCmprtr;
+    }
+    
+    
+    
+    public String getEvntDfnTrgrTmgTmgRptBndsDurationSys() {
+        return this.evntDfnTrgrTmgTmgRptBndsDurationSys;
+    }
+    
+    public void setEvntDfnTrgrTmgTmgRptBndsDurationSys(String evntDfnTrgrTmgTmgRptBndsDurationSys) {
+        this.evntDfnTrgrTmgTmgRptBndsDurationSys = evntDfnTrgrTmgTmgRptBndsDurationSys;
+    }
+    
+    
+    
+    public String getEvntDfnTrgrTmgTmgRptBndsDurationUnt() {
+        return this.evntDfnTrgrTmgTmgRptBndsDurationUnt;
+    }
+    
+    public void setEvntDfnTrgrTmgTmgRptBndsDurationUnt(String evntDfnTrgrTmgTmgRptBndsDurationUnt) {
+        this.evntDfnTrgrTmgTmgRptBndsDurationUnt = evntDfnTrgrTmgTmgRptBndsDurationUnt;
+    }
+    
+    
+    
+    public String getEvntDfnTrgrTmgTmgRptBndsDurationVl() {
+        return this.evntDfnTrgrTmgTmgRptBndsDurationVl;
+    }
+    
+    public void setEvntDfnTrgrTmgTmgRptBndsDurationVl(String evntDfnTrgrTmgTmgRptBndsDurationVl) {
+        this.evntDfnTrgrTmgTmgRptBndsDurationVl = evntDfnTrgrTmgTmgRptBndsDurationVl;
     }
     
     

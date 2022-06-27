@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Jun 6, 2022, 11:02:30 AM by Hibernate Tools 5.6.1.Final
+// Generated Jun 27, 2022, 10:40:10 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -149,6 +149,11 @@ public class ActivityDefinition  implements java.io.Serializable {
      private String actvtyDfnDsgTmgCdCdgVrsn;
      private String actvtyDfnDsgTmgCdTxt;
      private String actvtyDfnDsgTmgEvnt;
+     private String actvtyDfnDsgTmgRptBndsDurationCd;
+     private String actvtyDfnDsgTmgRptBndsDurationCmprtr;
+     private String actvtyDfnDsgTmgRptBndsDurationSys;
+     private String actvtyDfnDsgTmgRptBndsDurationUnt;
+     private String actvtyDfnDsgTmgRptBndsDurationVl;
      private String actvtyDfnDsgTmgRptBndsPrdEnd;
      private String actvtyDfnDsgTmgRptBndsPrdStrt;
      private String actvtyDfnDsgTmgRptBndsRngHiCd;
@@ -278,7 +283,17 @@ public class ActivityDefinition  implements java.io.Serializable {
      private String actvtyDfnSbjctCdbleCncptTxt;
      private String actvtyDfnSbjctRfrnc;
      private String actvtyDfnSubtitle;
+     private String actvtyDfnTmgAgeCd;
+     private String actvtyDfnTmgAgeCmprtr;
+     private String actvtyDfnTmgAgeSys;
+     private String actvtyDfnTmgAgeUnt;
+     private String actvtyDfnTmgAgeVl;
      private String actvtyDfnTmgDtTimeTyp;
+     private String actvtyDfnTmgDurationCd;
+     private String actvtyDfnTmgDurationCmprtr;
+     private String actvtyDfnTmgDurationSys;
+     private String actvtyDfnTmgDurationUnt;
+     private String actvtyDfnTmgDurationVl;
      private String actvtyDfnTmgPrdEnd;
      private String actvtyDfnTmgPrdStrt;
      private String actvtyDfnTmgRngHiCd;
@@ -298,6 +313,11 @@ public class ActivityDefinition  implements java.io.Serializable {
      private String actvtyDfnTmgTmgCdCdgVrsn;
      private String actvtyDfnTmgTmgCdTxt;
      private String actvtyDfnTmgTmgEvnt;
+     private String actvtyDfnTmgTmgRptBndsDurationCd;
+     private String actvtyDfnTmgTmgRptBndsDurationCmprtr;
+     private String actvtyDfnTmgTmgRptBndsDurationSys;
+     private String actvtyDfnTmgTmgRptBndsDurationUnt;
+     private String actvtyDfnTmgTmgRptBndsDurationVl;
      private String actvtyDfnTmgTmgRptBndsPrdEnd;
      private String actvtyDfnTmgTmgRptBndsPrdStrt;
      private String actvtyDfnTmgTmgRptBndsRngHiCd;
@@ -1757,6 +1777,56 @@ public class ActivityDefinition  implements java.io.Serializable {
     
     
     
+    public String getActvtyDfnDsgTmgRptBndsDurationCd() {
+        return this.actvtyDfnDsgTmgRptBndsDurationCd;
+    }
+    
+    public void setActvtyDfnDsgTmgRptBndsDurationCd(String actvtyDfnDsgTmgRptBndsDurationCd) {
+        this.actvtyDfnDsgTmgRptBndsDurationCd = actvtyDfnDsgTmgRptBndsDurationCd;
+    }
+    
+    
+    
+    public String getActvtyDfnDsgTmgRptBndsDurationCmprtr() {
+        return this.actvtyDfnDsgTmgRptBndsDurationCmprtr;
+    }
+    
+    public void setActvtyDfnDsgTmgRptBndsDurationCmprtr(String actvtyDfnDsgTmgRptBndsDurationCmprtr) {
+        this.actvtyDfnDsgTmgRptBndsDurationCmprtr = actvtyDfnDsgTmgRptBndsDurationCmprtr;
+    }
+    
+    
+    
+    public String getActvtyDfnDsgTmgRptBndsDurationSys() {
+        return this.actvtyDfnDsgTmgRptBndsDurationSys;
+    }
+    
+    public void setActvtyDfnDsgTmgRptBndsDurationSys(String actvtyDfnDsgTmgRptBndsDurationSys) {
+        this.actvtyDfnDsgTmgRptBndsDurationSys = actvtyDfnDsgTmgRptBndsDurationSys;
+    }
+    
+    
+    
+    public String getActvtyDfnDsgTmgRptBndsDurationUnt() {
+        return this.actvtyDfnDsgTmgRptBndsDurationUnt;
+    }
+    
+    public void setActvtyDfnDsgTmgRptBndsDurationUnt(String actvtyDfnDsgTmgRptBndsDurationUnt) {
+        this.actvtyDfnDsgTmgRptBndsDurationUnt = actvtyDfnDsgTmgRptBndsDurationUnt;
+    }
+    
+    
+    
+    public String getActvtyDfnDsgTmgRptBndsDurationVl() {
+        return this.actvtyDfnDsgTmgRptBndsDurationVl;
+    }
+    
+    public void setActvtyDfnDsgTmgRptBndsDurationVl(String actvtyDfnDsgTmgRptBndsDurationVl) {
+        this.actvtyDfnDsgTmgRptBndsDurationVl = actvtyDfnDsgTmgRptBndsDurationVl;
+    }
+    
+    
+    
     public String getActvtyDfnDsgTmgRptBndsPrdEnd() {
         return this.actvtyDfnDsgTmgRptBndsPrdEnd;
     }
@@ -3047,12 +3117,112 @@ public class ActivityDefinition  implements java.io.Serializable {
     
     
     
+    public String getActvtyDfnTmgAgeCd() {
+        return this.actvtyDfnTmgAgeCd;
+    }
+    
+    public void setActvtyDfnTmgAgeCd(String actvtyDfnTmgAgeCd) {
+        this.actvtyDfnTmgAgeCd = actvtyDfnTmgAgeCd;
+    }
+    
+    
+    
+    public String getActvtyDfnTmgAgeCmprtr() {
+        return this.actvtyDfnTmgAgeCmprtr;
+    }
+    
+    public void setActvtyDfnTmgAgeCmprtr(String actvtyDfnTmgAgeCmprtr) {
+        this.actvtyDfnTmgAgeCmprtr = actvtyDfnTmgAgeCmprtr;
+    }
+    
+    
+    
+    public String getActvtyDfnTmgAgeSys() {
+        return this.actvtyDfnTmgAgeSys;
+    }
+    
+    public void setActvtyDfnTmgAgeSys(String actvtyDfnTmgAgeSys) {
+        this.actvtyDfnTmgAgeSys = actvtyDfnTmgAgeSys;
+    }
+    
+    
+    
+    public String getActvtyDfnTmgAgeUnt() {
+        return this.actvtyDfnTmgAgeUnt;
+    }
+    
+    public void setActvtyDfnTmgAgeUnt(String actvtyDfnTmgAgeUnt) {
+        this.actvtyDfnTmgAgeUnt = actvtyDfnTmgAgeUnt;
+    }
+    
+    
+    
+    public String getActvtyDfnTmgAgeVl() {
+        return this.actvtyDfnTmgAgeVl;
+    }
+    
+    public void setActvtyDfnTmgAgeVl(String actvtyDfnTmgAgeVl) {
+        this.actvtyDfnTmgAgeVl = actvtyDfnTmgAgeVl;
+    }
+    
+    
+    
     public String getActvtyDfnTmgDtTimeTyp() {
         return this.actvtyDfnTmgDtTimeTyp;
     }
     
     public void setActvtyDfnTmgDtTimeTyp(String actvtyDfnTmgDtTimeTyp) {
         this.actvtyDfnTmgDtTimeTyp = actvtyDfnTmgDtTimeTyp;
+    }
+    
+    
+    
+    public String getActvtyDfnTmgDurationCd() {
+        return this.actvtyDfnTmgDurationCd;
+    }
+    
+    public void setActvtyDfnTmgDurationCd(String actvtyDfnTmgDurationCd) {
+        this.actvtyDfnTmgDurationCd = actvtyDfnTmgDurationCd;
+    }
+    
+    
+    
+    public String getActvtyDfnTmgDurationCmprtr() {
+        return this.actvtyDfnTmgDurationCmprtr;
+    }
+    
+    public void setActvtyDfnTmgDurationCmprtr(String actvtyDfnTmgDurationCmprtr) {
+        this.actvtyDfnTmgDurationCmprtr = actvtyDfnTmgDurationCmprtr;
+    }
+    
+    
+    
+    public String getActvtyDfnTmgDurationSys() {
+        return this.actvtyDfnTmgDurationSys;
+    }
+    
+    public void setActvtyDfnTmgDurationSys(String actvtyDfnTmgDurationSys) {
+        this.actvtyDfnTmgDurationSys = actvtyDfnTmgDurationSys;
+    }
+    
+    
+    
+    public String getActvtyDfnTmgDurationUnt() {
+        return this.actvtyDfnTmgDurationUnt;
+    }
+    
+    public void setActvtyDfnTmgDurationUnt(String actvtyDfnTmgDurationUnt) {
+        this.actvtyDfnTmgDurationUnt = actvtyDfnTmgDurationUnt;
+    }
+    
+    
+    
+    public String getActvtyDfnTmgDurationVl() {
+        return this.actvtyDfnTmgDurationVl;
+    }
+    
+    public void setActvtyDfnTmgDurationVl(String actvtyDfnTmgDurationVl) {
+        this.actvtyDfnTmgDurationVl = actvtyDfnTmgDurationVl;
     }
     
     
@@ -3243,6 +3413,56 @@ public class ActivityDefinition  implements java.io.Serializable {
     
     public void setActvtyDfnTmgTmgEvnt(String actvtyDfnTmgTmgEvnt) {
         this.actvtyDfnTmgTmgEvnt = actvtyDfnTmgTmgEvnt;
+    }
+    
+    
+    
+    public String getActvtyDfnTmgTmgRptBndsDurationCd() {
+        return this.actvtyDfnTmgTmgRptBndsDurationCd;
+    }
+    
+    public void setActvtyDfnTmgTmgRptBndsDurationCd(String actvtyDfnTmgTmgRptBndsDurationCd) {
+        this.actvtyDfnTmgTmgRptBndsDurationCd = actvtyDfnTmgTmgRptBndsDurationCd;
+    }
+    
+    
+    
+    public String getActvtyDfnTmgTmgRptBndsDurationCmprtr() {
+        return this.actvtyDfnTmgTmgRptBndsDurationCmprtr;
+    }
+    
+    public void setActvtyDfnTmgTmgRptBndsDurationCmprtr(String actvtyDfnTmgTmgRptBndsDurationCmprtr) {
+        this.actvtyDfnTmgTmgRptBndsDurationCmprtr = actvtyDfnTmgTmgRptBndsDurationCmprtr;
+    }
+    
+    
+    
+    public String getActvtyDfnTmgTmgRptBndsDurationSys() {
+        return this.actvtyDfnTmgTmgRptBndsDurationSys;
+    }
+    
+    public void setActvtyDfnTmgTmgRptBndsDurationSys(String actvtyDfnTmgTmgRptBndsDurationSys) {
+        this.actvtyDfnTmgTmgRptBndsDurationSys = actvtyDfnTmgTmgRptBndsDurationSys;
+    }
+    
+    
+    
+    public String getActvtyDfnTmgTmgRptBndsDurationUnt() {
+        return this.actvtyDfnTmgTmgRptBndsDurationUnt;
+    }
+    
+    public void setActvtyDfnTmgTmgRptBndsDurationUnt(String actvtyDfnTmgTmgRptBndsDurationUnt) {
+        this.actvtyDfnTmgTmgRptBndsDurationUnt = actvtyDfnTmgTmgRptBndsDurationUnt;
+    }
+    
+    
+    
+    public String getActvtyDfnTmgTmgRptBndsDurationVl() {
+        return this.actvtyDfnTmgTmgRptBndsDurationVl;
+    }
+    
+    public void setActvtyDfnTmgTmgRptBndsDurationVl(String actvtyDfnTmgTmgRptBndsDurationVl) {
+        this.actvtyDfnTmgTmgRptBndsDurationVl = actvtyDfnTmgTmgRptBndsDurationVl;
     }
     
     

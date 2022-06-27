@@ -756,6 +756,26 @@ public class ActivityDefinitionConversion
 		org.hl7.fhir.r4.model.Duration activitydefinitiondosagetimingrepeatboundsduration =  new org.hl7.fhir.r4.model.Duration();
 		activitydefinitiondosagetimingrepeat.setBounds(activitydefinitiondosagetimingrepeatboundsduration);
 
+		/******************** ActvtyDfn_Dsg_Tmg_Rpt_BndsDuration_Cd ********************************************************************************/
+		if(a.getActvtyDfnDsgTmgRptBndsDurationCd() != null) {
+			activitydefinitiondosagetimingrepeatboundsduration.setCode(a.getActvtyDfnDsgTmgRptBndsDurationCd());
+		}
+		/******************** activitydefinitiondosagetimingrepeatboundsdurationcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory activitydefinitiondosagetimingrepeatboundsdurationcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		activitydefinitiondosagetimingrepeatboundsduration.setComparator(activitydefinitiondosagetimingrepeatboundsdurationcomparator.fromCode(a.getActvtyDfnDsgTmgRptBndsDurationCmprtr()));
+
+		/******************** ActvtyDfn_Dsg_Tmg_Rpt_BndsDuration_Sys ********************************************************************************/
+		if(a.getActvtyDfnDsgTmgRptBndsDurationSys() != null) {
+			activitydefinitiondosagetimingrepeatboundsduration.setSystem(a.getActvtyDfnDsgTmgRptBndsDurationSys());
+		}
+		/******************** ActvtyDfn_Dsg_Tmg_Rpt_BndsDuration_Unt ********************************************************************************/
+		if(a.getActvtyDfnDsgTmgRptBndsDurationUnt() != null) {
+			activitydefinitiondosagetimingrepeatboundsduration.setUnit(a.getActvtyDfnDsgTmgRptBndsDurationUnt());
+		}
+		/******************** ActvtyDfn_Dsg_Tmg_Rpt_BndsDuration_Vl ********************************************************************************/
+		if(a.getActvtyDfnDsgTmgRptBndsDurationVl() != null) {
+			activitydefinitiondosagetimingrepeatboundsduration.setValue(Double.parseDouble((a.getActvtyDfnDsgTmgRptBndsDurationVl())));
+		}
 		/******************** activitydefinitiondosagetimingrepeatboundsperiod ********************************************************************************/
 		org.hl7.fhir.r4.model.Period activitydefinitiondosagetimingrepeatboundsperiod =  new org.hl7.fhir.r4.model.Period();
 		activitydefinitiondosagetimingrepeat.setBounds(activitydefinitiondosagetimingrepeatboundsperiod);
@@ -866,7 +886,7 @@ public class ActivityDefinitionConversion
 		}
 		/******************** ActvtyDfn_Dsg_Tmg_Rpt_PrdMx ********************************************************************************/
 		if(a.getActvtyDfnDsgTmgRptPrdMx() != null) {
-			activitydefinitiondosagetimingrepeat.setPeriodMax(Double.parseDouble((a.getActvtyDfnDsgTmgRptPrdMx())));
+			activitydefinitiondosagetimingrepeat.setPeriodMax(new java.math.BigDecimal((a.getActvtyDfnDsgTmgRptPrdMx())));
 		}
 		/******************** activitydefinitiondosagetimingrepeatperiodunit ********************************************************************************/
 		org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory activitydefinitiondosagetimingrepeatperiodunit =  new org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory();
@@ -1432,6 +1452,26 @@ public class ActivityDefinitionConversion
 		org.hl7.fhir.r4.model.Age activitydefinitiontimingage =  new org.hl7.fhir.r4.model.Age();
 		activitydefinition.setTiming(activitydefinitiontimingage);
 
+		/******************** ActvtyDfn_TmgAge_Cd ********************************************************************************/
+		if(a.getActvtyDfnTmgAgeCd() != null) {
+			activitydefinitiontimingage.setCode(a.getActvtyDfnTmgAgeCd());
+		}
+		/******************** activitydefinitiontimingagecomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory activitydefinitiontimingagecomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		activitydefinitiontimingage.setComparator(activitydefinitiontimingagecomparator.fromCode(a.getActvtyDfnTmgAgeCmprtr()));
+
+		/******************** ActvtyDfn_TmgAge_Sys ********************************************************************************/
+		if(a.getActvtyDfnTmgAgeSys() != null) {
+			activitydefinitiontimingage.setSystem(a.getActvtyDfnTmgAgeSys());
+		}
+		/******************** ActvtyDfn_TmgAge_Unt ********************************************************************************/
+		if(a.getActvtyDfnTmgAgeUnt() != null) {
+			activitydefinitiontimingage.setUnit(a.getActvtyDfnTmgAgeUnt());
+		}
+		/******************** ActvtyDfn_TmgAge_Vl ********************************************************************************/
+		if(a.getActvtyDfnTmgAgeVl() != null) {
+			activitydefinitiontimingage.setValue(Double.parseDouble((a.getActvtyDfnTmgAgeVl())));
+		}
 		/******************** ActvtyDfn_TmgDtTimeTyp ********************************************************************************/
 		if(a.getActvtyDfnTmgDtTimeTyp() != null) {
 			activitydefinition.setTiming( new org.hl7.fhir.r4.model.DateTimeType(a.getActvtyDfnTmgDtTimeTyp()));
@@ -1440,6 +1480,26 @@ public class ActivityDefinitionConversion
 		org.hl7.fhir.r4.model.Duration activitydefinitiontimingduration =  new org.hl7.fhir.r4.model.Duration();
 		activitydefinition.setTiming(activitydefinitiontimingduration);
 
+		/******************** ActvtyDfn_TmgDuration_Cd ********************************************************************************/
+		if(a.getActvtyDfnTmgDurationCd() != null) {
+			activitydefinitiontimingduration.setCode(a.getActvtyDfnTmgDurationCd());
+		}
+		/******************** activitydefinitiontimingdurationcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory activitydefinitiontimingdurationcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		activitydefinitiontimingduration.setComparator(activitydefinitiontimingdurationcomparator.fromCode(a.getActvtyDfnTmgDurationCmprtr()));
+
+		/******************** ActvtyDfn_TmgDuration_Sys ********************************************************************************/
+		if(a.getActvtyDfnTmgDurationSys() != null) {
+			activitydefinitiontimingduration.setSystem(a.getActvtyDfnTmgDurationSys());
+		}
+		/******************** ActvtyDfn_TmgDuration_Unt ********************************************************************************/
+		if(a.getActvtyDfnTmgDurationUnt() != null) {
+			activitydefinitiontimingduration.setUnit(a.getActvtyDfnTmgDurationUnt());
+		}
+		/******************** ActvtyDfn_TmgDuration_Vl ********************************************************************************/
+		if(a.getActvtyDfnTmgDurationVl() != null) {
+			activitydefinitiontimingduration.setValue(Double.parseDouble((a.getActvtyDfnTmgDurationVl())));
+		}
 		/******************** activitydefinitiontimingperiod ********************************************************************************/
 		org.hl7.fhir.r4.model.Period activitydefinitiontimingperiod =  new org.hl7.fhir.r4.model.Period();
 		activitydefinition.setTiming(activitydefinitiontimingperiod);
@@ -1558,6 +1618,26 @@ public class ActivityDefinitionConversion
 		org.hl7.fhir.r4.model.Duration activitydefinitiontimingtimingrepeatboundsduration =  new org.hl7.fhir.r4.model.Duration();
 		activitydefinitiontimingtimingrepeat.setBounds(activitydefinitiontimingtimingrepeatboundsduration);
 
+		/******************** ActvtyDfn_TmgTmg_Rpt_BndsDuration_Cd ********************************************************************************/
+		if(a.getActvtyDfnTmgTmgRptBndsDurationCd() != null) {
+			activitydefinitiontimingtimingrepeatboundsduration.setCode(a.getActvtyDfnTmgTmgRptBndsDurationCd());
+		}
+		/******************** activitydefinitiontimingtimingrepeatboundsdurationcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory activitydefinitiontimingtimingrepeatboundsdurationcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		activitydefinitiontimingtimingrepeatboundsduration.setComparator(activitydefinitiontimingtimingrepeatboundsdurationcomparator.fromCode(a.getActvtyDfnTmgTmgRptBndsDurationCmprtr()));
+
+		/******************** ActvtyDfn_TmgTmg_Rpt_BndsDuration_Sys ********************************************************************************/
+		if(a.getActvtyDfnTmgTmgRptBndsDurationSys() != null) {
+			activitydefinitiontimingtimingrepeatboundsduration.setSystem(a.getActvtyDfnTmgTmgRptBndsDurationSys());
+		}
+		/******************** ActvtyDfn_TmgTmg_Rpt_BndsDuration_Unt ********************************************************************************/
+		if(a.getActvtyDfnTmgTmgRptBndsDurationUnt() != null) {
+			activitydefinitiontimingtimingrepeatboundsduration.setUnit(a.getActvtyDfnTmgTmgRptBndsDurationUnt());
+		}
+		/******************** ActvtyDfn_TmgTmg_Rpt_BndsDuration_Vl ********************************************************************************/
+		if(a.getActvtyDfnTmgTmgRptBndsDurationVl() != null) {
+			activitydefinitiontimingtimingrepeatboundsduration.setValue(Double.parseDouble((a.getActvtyDfnTmgTmgRptBndsDurationVl())));
+		}
 		/******************** activitydefinitiontimingtimingrepeatboundsperiod ********************************************************************************/
 		org.hl7.fhir.r4.model.Period activitydefinitiontimingtimingrepeatboundsperiod =  new org.hl7.fhir.r4.model.Period();
 		activitydefinitiontimingtimingrepeat.setBounds(activitydefinitiontimingtimingrepeatboundsperiod);
@@ -1668,7 +1748,7 @@ public class ActivityDefinitionConversion
 		}
 		/******************** ActvtyDfn_TmgTmg_Rpt_PrdMx ********************************************************************************/
 		if(a.getActvtyDfnTmgTmgRptPrdMx() != null) {
-			activitydefinitiontimingtimingrepeat.setPeriodMax(Double.parseDouble((a.getActvtyDfnTmgTmgRptPrdMx())));
+			activitydefinitiontimingtimingrepeat.setPeriodMax(new java.math.BigDecimal((a.getActvtyDfnTmgTmgRptPrdMx())));
 		}
 		/******************** activitydefinitiontimingtimingrepeatperiodunit ********************************************************************************/
 		org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory activitydefinitiontimingtimingrepeatperiodunit =  new org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory();

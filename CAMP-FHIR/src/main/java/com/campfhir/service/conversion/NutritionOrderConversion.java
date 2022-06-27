@@ -218,6 +218,26 @@ public class NutritionOrderConversion
 		org.hl7.fhir.r4.model.Duration nutritionorderenteralformulaadministrationschedulerepeatboundsduration =  new org.hl7.fhir.r4.model.Duration();
 		nutritionorderenteralformulaadministrationschedulerepeat.setBounds(nutritionorderenteralformulaadministrationschedulerepeatboundsduration);
 
+		/******************** NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_BndsDuration_Cd ********************************************************************************/
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationCd() != null) {
+			nutritionorderenteralformulaadministrationschedulerepeatboundsduration.setCode(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationCd());
+		}
+		/******************** nutritionorderenteralformulaadministrationschedulerepeatboundsdurationcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory nutritionorderenteralformulaadministrationschedulerepeatboundsdurationcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		nutritionorderenteralformulaadministrationschedulerepeatboundsduration.setComparator(nutritionorderenteralformulaadministrationschedulerepeatboundsdurationcomparator.fromCode(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationCmprtr()));
+
+		/******************** NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_BndsDuration_Sys ********************************************************************************/
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationSys() != null) {
+			nutritionorderenteralformulaadministrationschedulerepeatboundsduration.setSystem(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationSys());
+		}
+		/******************** NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_BndsDuration_Unt ********************************************************************************/
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationUnt() != null) {
+			nutritionorderenteralformulaadministrationschedulerepeatboundsduration.setUnit(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationUnt());
+		}
+		/******************** NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_BndsDuration_Vl ********************************************************************************/
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationVl() != null) {
+			nutritionorderenteralformulaadministrationschedulerepeatboundsduration.setValue(Double.parseDouble((n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationVl())));
+		}
 		/******************** nutritionorderenteralformulaadministrationschedulerepeatboundsperiod ********************************************************************************/
 		org.hl7.fhir.r4.model.Period nutritionorderenteralformulaadministrationschedulerepeatboundsperiod =  new org.hl7.fhir.r4.model.Period();
 		nutritionorderenteralformulaadministrationschedulerepeat.setBounds(nutritionorderenteralformulaadministrationschedulerepeatboundsperiod);
@@ -328,7 +348,7 @@ public class NutritionOrderConversion
 		}
 		/******************** NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_PrdMx ********************************************************************************/
 		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptPrdMx() != null) {
-			nutritionorderenteralformulaadministrationschedulerepeat.setPeriodMax(Double.parseDouble((n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptPrdMx())));
+			nutritionorderenteralformulaadministrationschedulerepeat.setPeriodMax(new java.math.BigDecimal((n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptPrdMx())));
 		}
 		/******************** nutritionorderenteralformulaadministrationschedulerepeatperiodunit ********************************************************************************/
 		org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory nutritionorderenteralformulaadministrationschedulerepeatperiodunit =  new org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory();
@@ -782,6 +802,26 @@ public class NutritionOrderConversion
 		org.hl7.fhir.r4.model.Duration nutritionorderoraldietschedulerepeatboundsduration =  new org.hl7.fhir.r4.model.Duration();
 		nutritionorderoraldietschedulerepeat.setBounds(nutritionorderoraldietschedulerepeatboundsduration);
 
+		/******************** NtritnOrdr_OralDiet_Schdl_Rpt_BndsDuration_Cd ********************************************************************************/
+		if(n.getNtritnOrdrOralDietSchdlRptBndsDurationCd() != null) {
+			nutritionorderoraldietschedulerepeatboundsduration.setCode(n.getNtritnOrdrOralDietSchdlRptBndsDurationCd());
+		}
+		/******************** nutritionorderoraldietschedulerepeatboundsdurationcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory nutritionorderoraldietschedulerepeatboundsdurationcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		nutritionorderoraldietschedulerepeatboundsduration.setComparator(nutritionorderoraldietschedulerepeatboundsdurationcomparator.fromCode(n.getNtritnOrdrOralDietSchdlRptBndsDurationCmprtr()));
+
+		/******************** NtritnOrdr_OralDiet_Schdl_Rpt_BndsDuration_Sys ********************************************************************************/
+		if(n.getNtritnOrdrOralDietSchdlRptBndsDurationSys() != null) {
+			nutritionorderoraldietschedulerepeatboundsduration.setSystem(n.getNtritnOrdrOralDietSchdlRptBndsDurationSys());
+		}
+		/******************** NtritnOrdr_OralDiet_Schdl_Rpt_BndsDuration_Unt ********************************************************************************/
+		if(n.getNtritnOrdrOralDietSchdlRptBndsDurationUnt() != null) {
+			nutritionorderoraldietschedulerepeatboundsduration.setUnit(n.getNtritnOrdrOralDietSchdlRptBndsDurationUnt());
+		}
+		/******************** NtritnOrdr_OralDiet_Schdl_Rpt_BndsDuration_Vl ********************************************************************************/
+		if(n.getNtritnOrdrOralDietSchdlRptBndsDurationVl() != null) {
+			nutritionorderoraldietschedulerepeatboundsduration.setValue(Double.parseDouble((n.getNtritnOrdrOralDietSchdlRptBndsDurationVl())));
+		}
 		/******************** nutritionorderoraldietschedulerepeatboundsperiod ********************************************************************************/
 		org.hl7.fhir.r4.model.Period nutritionorderoraldietschedulerepeatboundsperiod =  new org.hl7.fhir.r4.model.Period();
 		nutritionorderoraldietschedulerepeat.setBounds(nutritionorderoraldietschedulerepeatboundsperiod);
@@ -892,7 +932,7 @@ public class NutritionOrderConversion
 		}
 		/******************** NtritnOrdr_OralDiet_Schdl_Rpt_PrdMx ********************************************************************************/
 		if(n.getNtritnOrdrOralDietSchdlRptPrdMx() != null) {
-			nutritionorderoraldietschedulerepeat.setPeriodMax(Double.parseDouble((n.getNtritnOrdrOralDietSchdlRptPrdMx())));
+			nutritionorderoraldietschedulerepeat.setPeriodMax(new java.math.BigDecimal((n.getNtritnOrdrOralDietSchdlRptPrdMx())));
 		}
 		/******************** nutritionorderoraldietschedulerepeatperiodunit ********************************************************************************/
 		org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory nutritionorderoraldietschedulerepeatperiodunit =  new org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory();
@@ -1104,6 +1144,26 @@ public class NutritionOrderConversion
 		org.hl7.fhir.r4.model.Duration nutritionordersupplementschedulerepeatboundsduration =  new org.hl7.fhir.r4.model.Duration();
 		nutritionordersupplementschedulerepeat.setBounds(nutritionordersupplementschedulerepeatboundsduration);
 
+		/******************** NtritnOrdr_Supplement_Schdl_Rpt_BndsDuration_Cd ********************************************************************************/
+		if(n.getNtritnOrdrSupplementSchdlRptBndsDurationCd() != null) {
+			nutritionordersupplementschedulerepeatboundsduration.setCode(n.getNtritnOrdrSupplementSchdlRptBndsDurationCd());
+		}
+		/******************** nutritionordersupplementschedulerepeatboundsdurationcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory nutritionordersupplementschedulerepeatboundsdurationcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		nutritionordersupplementschedulerepeatboundsduration.setComparator(nutritionordersupplementschedulerepeatboundsdurationcomparator.fromCode(n.getNtritnOrdrSupplementSchdlRptBndsDurationCmprtr()));
+
+		/******************** NtritnOrdr_Supplement_Schdl_Rpt_BndsDuration_Sys ********************************************************************************/
+		if(n.getNtritnOrdrSupplementSchdlRptBndsDurationSys() != null) {
+			nutritionordersupplementschedulerepeatboundsduration.setSystem(n.getNtritnOrdrSupplementSchdlRptBndsDurationSys());
+		}
+		/******************** NtritnOrdr_Supplement_Schdl_Rpt_BndsDuration_Unt ********************************************************************************/
+		if(n.getNtritnOrdrSupplementSchdlRptBndsDurationUnt() != null) {
+			nutritionordersupplementschedulerepeatboundsduration.setUnit(n.getNtritnOrdrSupplementSchdlRptBndsDurationUnt());
+		}
+		/******************** NtritnOrdr_Supplement_Schdl_Rpt_BndsDuration_Vl ********************************************************************************/
+		if(n.getNtritnOrdrSupplementSchdlRptBndsDurationVl() != null) {
+			nutritionordersupplementschedulerepeatboundsduration.setValue(Double.parseDouble((n.getNtritnOrdrSupplementSchdlRptBndsDurationVl())));
+		}
 		/******************** nutritionordersupplementschedulerepeatboundsperiod ********************************************************************************/
 		org.hl7.fhir.r4.model.Period nutritionordersupplementschedulerepeatboundsperiod =  new org.hl7.fhir.r4.model.Period();
 		nutritionordersupplementschedulerepeat.setBounds(nutritionordersupplementschedulerepeatboundsperiod);
@@ -1214,7 +1274,7 @@ public class NutritionOrderConversion
 		}
 		/******************** NtritnOrdr_Supplement_Schdl_Rpt_PrdMx ********************************************************************************/
 		if(n.getNtritnOrdrSupplementSchdlRptPrdMx() != null) {
-			nutritionordersupplementschedulerepeat.setPeriodMax(Double.parseDouble((n.getNtritnOrdrSupplementSchdlRptPrdMx())));
+			nutritionordersupplementschedulerepeat.setPeriodMax(new java.math.BigDecimal((n.getNtritnOrdrSupplementSchdlRptPrdMx())));
 		}
 		/******************** nutritionordersupplementschedulerepeatperiodunit ********************************************************************************/
 		org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory nutritionordersupplementschedulerepeatperiodunit =  new org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory();

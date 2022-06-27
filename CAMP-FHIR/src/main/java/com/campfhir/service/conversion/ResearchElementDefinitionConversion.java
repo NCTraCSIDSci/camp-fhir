@@ -164,6 +164,26 @@ public class ResearchElementDefinitionConversion
 		org.hl7.fhir.r4.model.Duration researchelementdefinitioncharacteristicdefinitiondatarequirementdatefiltervalueduration =  new org.hl7.fhir.r4.model.Duration();
 		researchelementdefinitioncharacteristicdefinitiondatarequirementdatefilter.setValue(researchelementdefinitioncharacteristicdefinitiondatarequirementdatefiltervalueduration);
 
+		/******************** RsrchElmntDfn_Crctrstc_DfnDataRqrment_DtFltr_VlDuration_Cd ********************************************************************************/
+		if(r.getRsrchElmntDfnCrctrstcDfnDataRqrmentDtFltrVlDurationCd() != null) {
+			researchelementdefinitioncharacteristicdefinitiondatarequirementdatefiltervalueduration.setCode(r.getRsrchElmntDfnCrctrstcDfnDataRqrmentDtFltrVlDurationCd());
+		}
+		/******************** researchelementdefinitioncharacteristicdefinitiondatarequirementdatefiltervaluedurationcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory researchelementdefinitioncharacteristicdefinitiondatarequirementdatefiltervaluedurationcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		researchelementdefinitioncharacteristicdefinitiondatarequirementdatefiltervalueduration.setComparator(researchelementdefinitioncharacteristicdefinitiondatarequirementdatefiltervaluedurationcomparator.fromCode(r.getRsrchElmntDfnCrctrstcDfnDataRqrmentDtFltrVlDurationCmprtr()));
+
+		/******************** RsrchElmntDfn_Crctrstc_DfnDataRqrment_DtFltr_VlDuration_Sys ********************************************************************************/
+		if(r.getRsrchElmntDfnCrctrstcDfnDataRqrmentDtFltrVlDurationSys() != null) {
+			researchelementdefinitioncharacteristicdefinitiondatarequirementdatefiltervalueduration.setSystem(r.getRsrchElmntDfnCrctrstcDfnDataRqrmentDtFltrVlDurationSys());
+		}
+		/******************** RsrchElmntDfn_Crctrstc_DfnDataRqrment_DtFltr_VlDuration_Unt ********************************************************************************/
+		if(r.getRsrchElmntDfnCrctrstcDfnDataRqrmentDtFltrVlDurationUnt() != null) {
+			researchelementdefinitioncharacteristicdefinitiondatarequirementdatefiltervalueduration.setUnit(r.getRsrchElmntDfnCrctrstcDfnDataRqrmentDtFltrVlDurationUnt());
+		}
+		/******************** RsrchElmntDfn_Crctrstc_DfnDataRqrment_DtFltr_VlDuration_Vl ********************************************************************************/
+		if(r.getRsrchElmntDfnCrctrstcDfnDataRqrmentDtFltrVlDurationVl() != null) {
+			researchelementdefinitioncharacteristicdefinitiondatarequirementdatefiltervalueduration.setValue(Double.parseDouble((r.getRsrchElmntDfnCrctrstcDfnDataRqrmentDtFltrVlDurationVl())));
+		}
 		/******************** researchelementdefinitioncharacteristicdefinitiondatarequirementdatefiltervalueperiod ********************************************************************************/
 		org.hl7.fhir.r4.model.Period researchelementdefinitioncharacteristicdefinitiondatarequirementdatefiltervalueperiod =  new org.hl7.fhir.r4.model.Period();
 		researchelementdefinitioncharacteristicdefinitiondatarequirementdatefilter.setValue(researchelementdefinitioncharacteristicdefinitiondatarequirementdatefiltervalueperiod);
@@ -280,22 +300,39 @@ public class ResearchElementDefinitionConversion
 		if(r.getRsrchElmntDfnCrctrstcPrtcpntEfctiveDscrptn() != null) {
 			researchelementdefinitioncharacteristic.setParticipantEffectiveDescription(r.getRsrchElmntDfnCrctrstcPrtcpntEfctiveDscrptn());
 		}
-		/******************** RsrchElmntDfn_Crctrstc_PrtcpntEfctiveDscrptnElmnt ********************************************************************************/
-		if(r.getRsrchElmntDfnCrctrstcPrtcpntEfctiveDscrptnElmnt() != null) {
-			researchelementdefinitioncharacteristic.setParticipantEffectiveDescription(r.getRsrchElmntDfnCrctrstcPrtcpntEfctiveDscrptnElmnt());
-		}
+//		/******************** RsrchElmntDfn_Crctrstc_PrtcpntEfctiveDscrptnElmnt ********************************************************************************/
+//		if(r.getRsrchElmntDfnCrctrstcPrtcpntEfctiveDscrptnElmnt() != null) {
+//			researchelementdefinitioncharacteristic.getParticipantEffectiveDescriptionElement(r.getRsrchElmntDfnCrctrstcPrtcpntEfctiveDscrptnElmnt());
+//		}
 		/******************** researchelementdefinitioncharacteristicparticipanteffectiveduration ********************************************************************************/
 		org.hl7.fhir.r4.model.Duration researchelementdefinitioncharacteristicparticipanteffectiveduration =  new org.hl7.fhir.r4.model.Duration();
 		researchelementdefinitioncharacteristic.setParticipantEffective(researchelementdefinitioncharacteristicparticipanteffectiveduration);
 
+		/******************** RsrchElmntDfn_Crctrstc_PrtcpntEfctiveDuration_Cd ********************************************************************************/
+		if(r.getRsrchElmntDfnCrctrstcPrtcpntEfctiveDurationCd() != null) {
+			researchelementdefinitioncharacteristicparticipanteffectiveduration.setCode(r.getRsrchElmntDfnCrctrstcPrtcpntEfctiveDurationCd());
+		}
+		/******************** researchelementdefinitioncharacteristicparticipanteffectivedurationcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory researchelementdefinitioncharacteristicparticipanteffectivedurationcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		researchelementdefinitioncharacteristicparticipanteffectiveduration.setComparator(researchelementdefinitioncharacteristicparticipanteffectivedurationcomparator.fromCode(r.getRsrchElmntDfnCrctrstcPrtcpntEfctiveDurationCmprtr()));
+
+		/******************** RsrchElmntDfn_Crctrstc_PrtcpntEfctiveDuration_Sys ********************************************************************************/
+		if(r.getRsrchElmntDfnCrctrstcPrtcpntEfctiveDurationSys() != null) {
+			researchelementdefinitioncharacteristicparticipanteffectiveduration.setSystem(r.getRsrchElmntDfnCrctrstcPrtcpntEfctiveDurationSys());
+		}
+		/******************** RsrchElmntDfn_Crctrstc_PrtcpntEfctiveDuration_Unt ********************************************************************************/
+		if(r.getRsrchElmntDfnCrctrstcPrtcpntEfctiveDurationUnt() != null) {
+			researchelementdefinitioncharacteristicparticipanteffectiveduration.setUnit(r.getRsrchElmntDfnCrctrstcPrtcpntEfctiveDurationUnt());
+		}
+		/******************** RsrchElmntDfn_Crctrstc_PrtcpntEfctiveDuration_Vl ********************************************************************************/
+		if(r.getRsrchElmntDfnCrctrstcPrtcpntEfctiveDurationVl() != null) {
+			researchelementdefinitioncharacteristicparticipanteffectiveduration.setValue(Double.parseDouble((r.getRsrchElmntDfnCrctrstcPrtcpntEfctiveDurationVl())));
+		}
 		/******************** researchelementdefinitioncharacteristicparticipanteffectivegroupmeasure ********************************************************************************/
 		org.hl7.fhir.r4.model.ResearchElementDefinition.GroupMeasureEnumFactory researchelementdefinitioncharacteristicparticipanteffectivegroupmeasure =  new org.hl7.fhir.r4.model.ResearchElementDefinition.GroupMeasureEnumFactory();
 		researchelementdefinitioncharacteristic.setParticipantEffectiveGroupMeasure(researchelementdefinitioncharacteristicparticipanteffectivegroupmeasure.fromCode(r.getRsrchElmntDfnCrctrstcPrtcpntEfctiveGrpMsr()));
 
-//		/******************** RsrchElmntDfn_Crctrstc_PrtcpntEfctiveGrpMsrElmnt ********************************************************************************/
-//		if(r.getRsrchElmntDfnCrctrstcPrtcpntEfctiveGrpMsrElmnt() != null) {
-//			researchelementdefinitioncharacteristic.setParticipantEffectiveGroupMeasure(r.getRsrchElmntDfnCrctrstcPrtcpntEfctiveGrpMsrElmnt());
-//		}
+
 		/******************** researchelementdefinitioncharacteristicparticipanteffectiveperiod ********************************************************************************/
 		org.hl7.fhir.r4.model.Period researchelementdefinitioncharacteristicparticipanteffectiveperiod =  new org.hl7.fhir.r4.model.Period();
 		researchelementdefinitioncharacteristic.setParticipantEffective(researchelementdefinitioncharacteristicparticipanteffectiveperiod);
@@ -316,6 +353,26 @@ public class ResearchElementDefinitionConversion
 		org.hl7.fhir.r4.model.Duration researchelementdefinitioncharacteristicparticipanteffectivetimefromstart =  new org.hl7.fhir.r4.model.Duration();
 		researchelementdefinitioncharacteristic.setParticipantEffectiveTimeFromStart(researchelementdefinitioncharacteristicparticipanteffectivetimefromstart);
 
+		/******************** RsrchElmntDfn_Crctrstc_PrtcpntEfctiveTimeFromStrt_Cd ********************************************************************************/
+		if(r.getRsrchElmntDfnCrctrstcPrtcpntEfctiveTimeFromStrtCd() != null) {
+			researchelementdefinitioncharacteristicparticipanteffectivetimefromstart.setCode(r.getRsrchElmntDfnCrctrstcPrtcpntEfctiveTimeFromStrtCd());
+		}
+		/******************** researchelementdefinitioncharacteristicparticipanteffectivetimefromstartcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory researchelementdefinitioncharacteristicparticipanteffectivetimefromstartcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		researchelementdefinitioncharacteristicparticipanteffectivetimefromstart.setComparator(researchelementdefinitioncharacteristicparticipanteffectivetimefromstartcomparator.fromCode(r.getRsrchElmntDfnCrctrstcPrtcpntEfctiveTimeFromStrtCmprtr()));
+
+		/******************** RsrchElmntDfn_Crctrstc_PrtcpntEfctiveTimeFromStrt_Sys ********************************************************************************/
+		if(r.getRsrchElmntDfnCrctrstcPrtcpntEfctiveTimeFromStrtSys() != null) {
+			researchelementdefinitioncharacteristicparticipanteffectivetimefromstart.setSystem(r.getRsrchElmntDfnCrctrstcPrtcpntEfctiveTimeFromStrtSys());
+		}
+		/******************** RsrchElmntDfn_Crctrstc_PrtcpntEfctiveTimeFromStrt_Unt ********************************************************************************/
+		if(r.getRsrchElmntDfnCrctrstcPrtcpntEfctiveTimeFromStrtUnt() != null) {
+			researchelementdefinitioncharacteristicparticipanteffectivetimefromstart.setUnit(r.getRsrchElmntDfnCrctrstcPrtcpntEfctiveTimeFromStrtUnt());
+		}
+		/******************** RsrchElmntDfn_Crctrstc_PrtcpntEfctiveTimeFromStrt_Vl ********************************************************************************/
+		if(r.getRsrchElmntDfnCrctrstcPrtcpntEfctiveTimeFromStrtVl() != null) {
+			researchelementdefinitioncharacteristicparticipanteffectivetimefromstart.setValue(Double.parseDouble((r.getRsrchElmntDfnCrctrstcPrtcpntEfctiveTimeFromStrtVl())));
+		}
 		/******************** researchelementdefinitioncharacteristicparticipanteffectivetiming ********************************************************************************/
 		org.hl7.fhir.r4.model.Timing researchelementdefinitioncharacteristicparticipanteffectivetiming =  new org.hl7.fhir.r4.model.Timing();
 		researchelementdefinitioncharacteristic.setParticipantEffective(researchelementdefinitioncharacteristicparticipanteffectivetiming);
@@ -366,6 +423,26 @@ public class ResearchElementDefinitionConversion
 		org.hl7.fhir.r4.model.Duration researchelementdefinitioncharacteristicparticipanteffectivetimingrepeatboundsduration =  new org.hl7.fhir.r4.model.Duration();
 		researchelementdefinitioncharacteristicparticipanteffectivetimingrepeat.setBounds(researchelementdefinitioncharacteristicparticipanteffectivetimingrepeatboundsduration);
 
+		/******************** RsrchElmntDfn_Crctrstc_PrtcpntEfctiveTmg_Rpt_BndsDuration_Cd ********************************************************************************/
+		if(r.getRsrchElmntDfnCrctrstcPrtcpntEfctiveTmgRptBndsDurationCd() != null) {
+			researchelementdefinitioncharacteristicparticipanteffectivetimingrepeatboundsduration.setCode(r.getRsrchElmntDfnCrctrstcPrtcpntEfctiveTmgRptBndsDurationCd());
+		}
+		/******************** researchelementdefinitioncharacteristicparticipanteffectivetimingrepeatboundsdurationcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory researchelementdefinitioncharacteristicparticipanteffectivetimingrepeatboundsdurationcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		researchelementdefinitioncharacteristicparticipanteffectivetimingrepeatboundsduration.setComparator(researchelementdefinitioncharacteristicparticipanteffectivetimingrepeatboundsdurationcomparator.fromCode(r.getRsrchElmntDfnCrctrstcPrtcpntEfctiveTmgRptBndsDurationCmprtr()));
+
+		/******************** RsrchElmntDfn_Crctrstc_PrtcpntEfctiveTmg_Rpt_BndsDuration_Sys ********************************************************************************/
+		if(r.getRsrchElmntDfnCrctrstcPrtcpntEfctiveTmgRptBndsDurationSys() != null) {
+			researchelementdefinitioncharacteristicparticipanteffectivetimingrepeatboundsduration.setSystem(r.getRsrchElmntDfnCrctrstcPrtcpntEfctiveTmgRptBndsDurationSys());
+		}
+		/******************** RsrchElmntDfn_Crctrstc_PrtcpntEfctiveTmg_Rpt_BndsDuration_Unt ********************************************************************************/
+		if(r.getRsrchElmntDfnCrctrstcPrtcpntEfctiveTmgRptBndsDurationUnt() != null) {
+			researchelementdefinitioncharacteristicparticipanteffectivetimingrepeatboundsduration.setUnit(r.getRsrchElmntDfnCrctrstcPrtcpntEfctiveTmgRptBndsDurationUnt());
+		}
+		/******************** RsrchElmntDfn_Crctrstc_PrtcpntEfctiveTmg_Rpt_BndsDuration_Vl ********************************************************************************/
+		if(r.getRsrchElmntDfnCrctrstcPrtcpntEfctiveTmgRptBndsDurationVl() != null) {
+			researchelementdefinitioncharacteristicparticipanteffectivetimingrepeatboundsduration.setValue(Double.parseDouble((r.getRsrchElmntDfnCrctrstcPrtcpntEfctiveTmgRptBndsDurationVl())));
+		}
 		/******************** researchelementdefinitioncharacteristicparticipanteffectivetimingrepeatboundsperiod ********************************************************************************/
 		org.hl7.fhir.r4.model.Period researchelementdefinitioncharacteristicparticipanteffectivetimingrepeatboundsperiod =  new org.hl7.fhir.r4.model.Period();
 		researchelementdefinitioncharacteristicparticipanteffectivetimingrepeat.setBounds(researchelementdefinitioncharacteristicparticipanteffectivetimingrepeatboundsperiod);
@@ -476,7 +553,7 @@ public class ResearchElementDefinitionConversion
 		}
 		/******************** RsrchElmntDfn_Crctrstc_PrtcpntEfctiveTmg_Rpt_PrdMx ********************************************************************************/
 		if(r.getRsrchElmntDfnCrctrstcPrtcpntEfctiveTmgRptPrdMx() != null) {
-			researchelementdefinitioncharacteristicparticipanteffectivetimingrepeat.setPeriodMax(Double.parseDouble((r.getRsrchElmntDfnCrctrstcPrtcpntEfctiveTmgRptPrdMx())));
+			researchelementdefinitioncharacteristicparticipanteffectivetimingrepeat.setPeriodMax(new java.math.BigDecimal((r.getRsrchElmntDfnCrctrstcPrtcpntEfctiveTmgRptPrdMx())));
 		}
 		/******************** researchelementdefinitioncharacteristicparticipanteffectivetimingrepeatperiodunit ********************************************************************************/
 		org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory researchelementdefinitioncharacteristicparticipanteffectivetimingrepeatperiodunit =  new org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory();
@@ -498,14 +575,34 @@ public class ResearchElementDefinitionConversion
 		if(r.getRsrchElmntDfnCrctrstcStdyEfctiveDscrptn() != null) {
 			researchelementdefinitioncharacteristic.setStudyEffectiveDescription(r.getRsrchElmntDfnCrctrstcStdyEfctiveDscrptn());
 		}
-		/******************** RsrchElmntDfn_Crctrstc_StdyEfctiveDscrptnElmnt ********************************************************************************/
-		if(r.getRsrchElmntDfnCrctrstcStdyEfctiveDscrptnElmnt() != null) {
-			researchelementdefinitioncharacteristic.setStudyEffectiveDescription(r.getRsrchElmntDfnCrctrstcStdyEfctiveDscrptnElmnt());
-		}
+//		/******************** RsrchElmntDfn_Crctrstc_StdyEfctiveDscrptnElmnt ********************************************************************************/
+//		if(r.getRsrchElmntDfnCrctrstcStdyEfctiveDscrptnElmnt() != null) {
+//			researchelementdefinitioncharacteristic.setStudyEffectiveDescriptionElement(r.getRsrchElmntDfnCrctrstcStdyEfctiveDscrptnElmnt());
+//		}
 		/******************** researchelementdefinitioncharacteristicstudyeffectiveduration ********************************************************************************/
 		org.hl7.fhir.r4.model.Duration researchelementdefinitioncharacteristicstudyeffectiveduration =  new org.hl7.fhir.r4.model.Duration();
 		researchelementdefinitioncharacteristic.setStudyEffective(researchelementdefinitioncharacteristicstudyeffectiveduration);
 
+		/******************** RsrchElmntDfn_Crctrstc_StdyEfctiveDuration_Cd ********************************************************************************/
+		if(r.getRsrchElmntDfnCrctrstcStdyEfctiveDurationCd() != null) {
+			researchelementdefinitioncharacteristicstudyeffectiveduration.setCode(r.getRsrchElmntDfnCrctrstcStdyEfctiveDurationCd());
+		}
+		/******************** researchelementdefinitioncharacteristicstudyeffectivedurationcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory researchelementdefinitioncharacteristicstudyeffectivedurationcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		researchelementdefinitioncharacteristicstudyeffectiveduration.setComparator(researchelementdefinitioncharacteristicstudyeffectivedurationcomparator.fromCode(r.getRsrchElmntDfnCrctrstcStdyEfctiveDurationCmprtr()));
+
+		/******************** RsrchElmntDfn_Crctrstc_StdyEfctiveDuration_Sys ********************************************************************************/
+		if(r.getRsrchElmntDfnCrctrstcStdyEfctiveDurationSys() != null) {
+			researchelementdefinitioncharacteristicstudyeffectiveduration.setSystem(r.getRsrchElmntDfnCrctrstcStdyEfctiveDurationSys());
+		}
+		/******************** RsrchElmntDfn_Crctrstc_StdyEfctiveDuration_Unt ********************************************************************************/
+		if(r.getRsrchElmntDfnCrctrstcStdyEfctiveDurationUnt() != null) {
+			researchelementdefinitioncharacteristicstudyeffectiveduration.setUnit(r.getRsrchElmntDfnCrctrstcStdyEfctiveDurationUnt());
+		}
+		/******************** RsrchElmntDfn_Crctrstc_StdyEfctiveDuration_Vl ********************************************************************************/
+		if(r.getRsrchElmntDfnCrctrstcStdyEfctiveDurationVl() != null) {
+			researchelementdefinitioncharacteristicstudyeffectiveduration.setValue(Double.parseDouble((r.getRsrchElmntDfnCrctrstcStdyEfctiveDurationVl())));
+		}
 		/******************** researchelementdefinitioncharacteristicstudyeffectivegroupmeasure ********************************************************************************/
 		org.hl7.fhir.r4.model.ResearchElementDefinition.GroupMeasureEnumFactory researchelementdefinitioncharacteristicstudyeffectivegroupmeasure =  new org.hl7.fhir.r4.model.ResearchElementDefinition.GroupMeasureEnumFactory();
 		researchelementdefinitioncharacteristic.setStudyEffectiveGroupMeasure(researchelementdefinitioncharacteristicstudyeffectivegroupmeasure.fromCode(r.getRsrchElmntDfnCrctrstcStdyEfctiveGrpMsr()));
@@ -534,6 +631,26 @@ public class ResearchElementDefinitionConversion
 		org.hl7.fhir.r4.model.Duration researchelementdefinitioncharacteristicstudyeffectivetimefromstart =  new org.hl7.fhir.r4.model.Duration();
 		researchelementdefinitioncharacteristic.setStudyEffectiveTimeFromStart(researchelementdefinitioncharacteristicstudyeffectivetimefromstart);
 
+		/******************** RsrchElmntDfn_Crctrstc_StdyEfctiveTimeFromStrt_Cd ********************************************************************************/
+		if(r.getRsrchElmntDfnCrctrstcStdyEfctiveTimeFromStrtCd() != null) {
+			researchelementdefinitioncharacteristicstudyeffectivetimefromstart.setCode(r.getRsrchElmntDfnCrctrstcStdyEfctiveTimeFromStrtCd());
+		}
+		/******************** researchelementdefinitioncharacteristicstudyeffectivetimefromstartcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory researchelementdefinitioncharacteristicstudyeffectivetimefromstartcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		researchelementdefinitioncharacteristicstudyeffectivetimefromstart.setComparator(researchelementdefinitioncharacteristicstudyeffectivetimefromstartcomparator.fromCode(r.getRsrchElmntDfnCrctrstcStdyEfctiveTimeFromStrtCmprtr()));
+
+		/******************** RsrchElmntDfn_Crctrstc_StdyEfctiveTimeFromStrt_Sys ********************************************************************************/
+		if(r.getRsrchElmntDfnCrctrstcStdyEfctiveTimeFromStrtSys() != null) {
+			researchelementdefinitioncharacteristicstudyeffectivetimefromstart.setSystem(r.getRsrchElmntDfnCrctrstcStdyEfctiveTimeFromStrtSys());
+		}
+		/******************** RsrchElmntDfn_Crctrstc_StdyEfctiveTimeFromStrt_Unt ********************************************************************************/
+		if(r.getRsrchElmntDfnCrctrstcStdyEfctiveTimeFromStrtUnt() != null) {
+			researchelementdefinitioncharacteristicstudyeffectivetimefromstart.setUnit(r.getRsrchElmntDfnCrctrstcStdyEfctiveTimeFromStrtUnt());
+		}
+		/******************** RsrchElmntDfn_Crctrstc_StdyEfctiveTimeFromStrt_Vl ********************************************************************************/
+		if(r.getRsrchElmntDfnCrctrstcStdyEfctiveTimeFromStrtVl() != null) {
+			researchelementdefinitioncharacteristicstudyeffectivetimefromstart.setValue(Double.parseDouble((r.getRsrchElmntDfnCrctrstcStdyEfctiveTimeFromStrtVl())));
+		}
 		/******************** researchelementdefinitioncharacteristicstudyeffectivetiming ********************************************************************************/
 		org.hl7.fhir.r4.model.Timing researchelementdefinitioncharacteristicstudyeffectivetiming =  new org.hl7.fhir.r4.model.Timing();
 		researchelementdefinitioncharacteristic.setStudyEffective(researchelementdefinitioncharacteristicstudyeffectivetiming);
@@ -584,6 +701,26 @@ public class ResearchElementDefinitionConversion
 		org.hl7.fhir.r4.model.Duration researchelementdefinitioncharacteristicstudyeffectivetimingrepeatboundsduration =  new org.hl7.fhir.r4.model.Duration();
 		researchelementdefinitioncharacteristicstudyeffectivetimingrepeat.setBounds(researchelementdefinitioncharacteristicstudyeffectivetimingrepeatboundsduration);
 
+		/******************** RsrchElmntDfn_Crctrstc_StdyEfctiveTmg_Rpt_BndsDuration_Cd ********************************************************************************/
+		if(r.getRsrchElmntDfnCrctrstcStdyEfctiveTmgRptBndsDurationCd() != null) {
+			researchelementdefinitioncharacteristicstudyeffectivetimingrepeatboundsduration.setCode(r.getRsrchElmntDfnCrctrstcStdyEfctiveTmgRptBndsDurationCd());
+		}
+		/******************** researchelementdefinitioncharacteristicstudyeffectivetimingrepeatboundsdurationcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory researchelementdefinitioncharacteristicstudyeffectivetimingrepeatboundsdurationcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		researchelementdefinitioncharacteristicstudyeffectivetimingrepeatboundsduration.setComparator(researchelementdefinitioncharacteristicstudyeffectivetimingrepeatboundsdurationcomparator.fromCode(r.getRsrchElmntDfnCrctrstcStdyEfctiveTmgRptBndsDurationCmprtr()));
+
+		/******************** RsrchElmntDfn_Crctrstc_StdyEfctiveTmg_Rpt_BndsDuration_Sys ********************************************************************************/
+		if(r.getRsrchElmntDfnCrctrstcStdyEfctiveTmgRptBndsDurationSys() != null) {
+			researchelementdefinitioncharacteristicstudyeffectivetimingrepeatboundsduration.setSystem(r.getRsrchElmntDfnCrctrstcStdyEfctiveTmgRptBndsDurationSys());
+		}
+		/******************** RsrchElmntDfn_Crctrstc_StdyEfctiveTmg_Rpt_BndsDuration_Unt ********************************************************************************/
+		if(r.getRsrchElmntDfnCrctrstcStdyEfctiveTmgRptBndsDurationUnt() != null) {
+			researchelementdefinitioncharacteristicstudyeffectivetimingrepeatboundsduration.setUnit(r.getRsrchElmntDfnCrctrstcStdyEfctiveTmgRptBndsDurationUnt());
+		}
+		/******************** RsrchElmntDfn_Crctrstc_StdyEfctiveTmg_Rpt_BndsDuration_Vl ********************************************************************************/
+		if(r.getRsrchElmntDfnCrctrstcStdyEfctiveTmgRptBndsDurationVl() != null) {
+			researchelementdefinitioncharacteristicstudyeffectivetimingrepeatboundsduration.setValue(Double.parseDouble((r.getRsrchElmntDfnCrctrstcStdyEfctiveTmgRptBndsDurationVl())));
+		}
 		/******************** researchelementdefinitioncharacteristicstudyeffectivetimingrepeatboundsperiod ********************************************************************************/
 		org.hl7.fhir.r4.model.Period researchelementdefinitioncharacteristicstudyeffectivetimingrepeatboundsperiod =  new org.hl7.fhir.r4.model.Period();
 		researchelementdefinitioncharacteristicstudyeffectivetimingrepeat.setBounds(researchelementdefinitioncharacteristicstudyeffectivetimingrepeatboundsperiod);
@@ -694,7 +831,7 @@ public class ResearchElementDefinitionConversion
 		}
 		/******************** RsrchElmntDfn_Crctrstc_StdyEfctiveTmg_Rpt_PrdMx ********************************************************************************/
 		if(r.getRsrchElmntDfnCrctrstcStdyEfctiveTmgRptPrdMx() != null) {
-			researchelementdefinitioncharacteristicstudyeffectivetimingrepeat.setPeriodMax(Double.parseDouble((r.getRsrchElmntDfnCrctrstcStdyEfctiveTmgRptPrdMx())));
+			researchelementdefinitioncharacteristicstudyeffectivetimingrepeat.setPeriodMax(new java.math.BigDecimal((r.getRsrchElmntDfnCrctrstcStdyEfctiveTmgRptPrdMx())));
 		}
 		/******************** researchelementdefinitioncharacteristicstudyeffectivetimingrepeatperiodunit ********************************************************************************/
 		org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory researchelementdefinitioncharacteristicstudyeffectivetimingrepeatperiodunit =  new org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory();

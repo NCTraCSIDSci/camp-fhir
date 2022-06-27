@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Jun 6, 2022, 11:02:30 AM by Hibernate Tools 5.6.1.Final
+// Generated Jun 27, 2022, 10:40:10 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -63,6 +63,11 @@ public class DeviceRequest  implements java.io.Serializable {
      private String dvcRqstOccrnceTmgCdCdgVrsn;
      private String dvcRqstOccrnceTmgCdTxt;
      private String dvcRqstOccrnceTmgEvnt;
+     private String dvcRqstOccrnceTmgRptBndsDurationCd;
+     private String dvcRqstOccrnceTmgRptBndsDurationCmprtr;
+     private String dvcRqstOccrnceTmgRptBndsDurationSys;
+     private String dvcRqstOccrnceTmgRptBndsDurationUnt;
+     private String dvcRqstOccrnceTmgRptBndsDurationVl;
      private String dvcRqstOccrnceTmgRptBndsPrdEnd;
      private String dvcRqstOccrnceTmgRptBndsPrdStrt;
      private String dvcRqstOccrnceTmgRptBndsRngHiCd;
@@ -669,6 +674,56 @@ public class DeviceRequest  implements java.io.Serializable {
     
     public void setDvcRqstOccrnceTmgEvnt(String dvcRqstOccrnceTmgEvnt) {
         this.dvcRqstOccrnceTmgEvnt = dvcRqstOccrnceTmgEvnt;
+    }
+    
+    
+    
+    public String getDvcRqstOccrnceTmgRptBndsDurationCd() {
+        return this.dvcRqstOccrnceTmgRptBndsDurationCd;
+    }
+    
+    public void setDvcRqstOccrnceTmgRptBndsDurationCd(String dvcRqstOccrnceTmgRptBndsDurationCd) {
+        this.dvcRqstOccrnceTmgRptBndsDurationCd = dvcRqstOccrnceTmgRptBndsDurationCd;
+    }
+    
+    
+    
+    public String getDvcRqstOccrnceTmgRptBndsDurationCmprtr() {
+        return this.dvcRqstOccrnceTmgRptBndsDurationCmprtr;
+    }
+    
+    public void setDvcRqstOccrnceTmgRptBndsDurationCmprtr(String dvcRqstOccrnceTmgRptBndsDurationCmprtr) {
+        this.dvcRqstOccrnceTmgRptBndsDurationCmprtr = dvcRqstOccrnceTmgRptBndsDurationCmprtr;
+    }
+    
+    
+    
+    public String getDvcRqstOccrnceTmgRptBndsDurationSys() {
+        return this.dvcRqstOccrnceTmgRptBndsDurationSys;
+    }
+    
+    public void setDvcRqstOccrnceTmgRptBndsDurationSys(String dvcRqstOccrnceTmgRptBndsDurationSys) {
+        this.dvcRqstOccrnceTmgRptBndsDurationSys = dvcRqstOccrnceTmgRptBndsDurationSys;
+    }
+    
+    
+    
+    public String getDvcRqstOccrnceTmgRptBndsDurationUnt() {
+        return this.dvcRqstOccrnceTmgRptBndsDurationUnt;
+    }
+    
+    public void setDvcRqstOccrnceTmgRptBndsDurationUnt(String dvcRqstOccrnceTmgRptBndsDurationUnt) {
+        this.dvcRqstOccrnceTmgRptBndsDurationUnt = dvcRqstOccrnceTmgRptBndsDurationUnt;
+    }
+    
+    
+    
+    public String getDvcRqstOccrnceTmgRptBndsDurationVl() {
+        return this.dvcRqstOccrnceTmgRptBndsDurationVl;
+    }
+    
+    public void setDvcRqstOccrnceTmgRptBndsDurationVl(String dvcRqstOccrnceTmgRptBndsDurationVl) {
+        this.dvcRqstOccrnceTmgRptBndsDurationVl = dvcRqstOccrnceTmgRptBndsDurationVl;
     }
     
     

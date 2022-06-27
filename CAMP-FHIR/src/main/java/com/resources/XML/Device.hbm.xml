@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Jun 6, 2022, 11:02:25 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 27, 2022, 10:39:49 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Device" optimistic-lock="none" table="Device">
         <id name="id" type="string">
@@ -328,11 +328,11 @@
         </property>
         <property name="dvcUdiCarrierCarrierAidc" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Dvc_UdiCarrier_CarrierAIDC"/>
+            <column length="65535" name="Dvc_UdiCarrier_CarrierAidc"/>
         </property>
         <property name="dvcUdiCarrierCarrierHrf" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Dvc_UdiCarrier_CarrierHRF"/>
+            <column length="65535" name="Dvc_UdiCarrier_CarrierHrf"/>
         </property>
         <property name="dvcUdiCarrierDvcId" type="string">
             <meta attribute="resource-type"/>

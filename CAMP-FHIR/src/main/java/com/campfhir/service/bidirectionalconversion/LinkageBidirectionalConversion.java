@@ -10,10 +10,6 @@ public class LinkageBidirectionalConversion
 		/******************** id ********************************************************************************/
 		linkage.setId(l.getId());
 
-		/******************** Linkage_Athr ********************************************************************************/
-		if(linkage.hasAuthor()) {
-			l.setLinkageAthr(String.valueOf(linkage.getAuthor()));
-		}
 		/******************** linkageitem ********************************************************************************/
 		org.hl7.fhir.r4.model.Linkage.LinkageItemComponent linkageitem = linkage.getItemFirstRep();
 
@@ -28,6 +24,10 @@ public class LinkageBidirectionalConversion
 		/******************** Linkage_Active ********************************************************************************/
 		if(linkage.hasActive()) {
 			l.setLinkageActive(String.valueOf(linkage.getActive()));
+		}
+		/******************** Linkage_Athr ********************************************************************************/
+		if(linkage.hasAuthor()) {
+			l.setLinkageAthr(String.valueOf(linkage.getAuthor()));
 		}
 		return l;
 	}

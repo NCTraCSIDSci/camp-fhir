@@ -252,11 +252,11 @@ public class LocationConversion
 		}
 		/******************** Lctn_Position_Latitude ********************************************************************************/
 		if(l.getLctnPositionLatitude() != null) {
-			locationposition.setLatitude(Double.parseDouble((l.getLctnPositionLatitude())));
+			locationposition.setLatitude(new java.math.BigDecimal((l.getLctnPositionLatitude())));
 		}
 		/******************** Lctn_Position_Longitude ********************************************************************************/
 		if(l.getLctnPositionLongitude() != null) {
-			locationposition.setLongitude(Double.parseDouble((l.getLctnPositionLongitude())));
+			locationposition.setLongitude(new java.math.BigDecimal((l.getLctnPositionLongitude())));
 		}
 		/******************** locationstatus ********************************************************************************/
 		org.hl7.fhir.r4.model.Location.LocationStatusEnumFactory locationstatus =  new org.hl7.fhir.r4.model.Location.LocationStatusEnumFactory();

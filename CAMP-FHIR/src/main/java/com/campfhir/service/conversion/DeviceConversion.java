@@ -440,11 +440,11 @@ public class DeviceConversion
 		org.hl7.fhir.r4.model.Device.DeviceUdiCarrierComponent deviceudicarrier =  new org.hl7.fhir.r4.model.Device.DeviceUdiCarrierComponent();
 		device.addUdiCarrier(deviceudicarrier);
 
-		/******************** Dvc_UdiCarrier_CarrierAIDC ********************************************************************************/
+		/******************** Dvc_UdiCarrier_CarrierAidc ********************************************************************************/
 		if(d.getDvcUdiCarrierCarrierAidc() != null) {
 			deviceudicarrier.setCarrierAIDCElement(new org.hl7.fhir.r4.model.Base64BinaryType(d.getDvcUdiCarrierCarrierAidc()));
 		}
-		/******************** Dvc_UdiCarrier_CarrierHRF ********************************************************************************/
+		/******************** Dvc_UdiCarrier_CarrierHrf ********************************************************************************/
 		if(d.getDvcUdiCarrierCarrierHrf() != null) {
 			deviceudicarrier.setCarrierHRF(d.getDvcUdiCarrierCarrierHrf());
 		}

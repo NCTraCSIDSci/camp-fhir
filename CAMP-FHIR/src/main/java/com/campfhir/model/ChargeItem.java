@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Jun 6, 2022, 11:02:30 AM by Hibernate Tools 5.6.1.Final
+// Generated Jun 27, 2022, 10:40:10 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -57,6 +57,11 @@ public class ChargeItem  implements java.io.Serializable {
      private String chrgItmOccrnceTmgCdCdgVrsn;
      private String chrgItmOccrnceTmgCdTxt;
      private String chrgItmOccrnceTmgEvnt;
+     private String chrgItmOccrnceTmgRptBndsDurationCd;
+     private String chrgItmOccrnceTmgRptBndsDurationCmprtr;
+     private String chrgItmOccrnceTmgRptBndsDurationSys;
+     private String chrgItmOccrnceTmgRptBndsDurationUnt;
+     private String chrgItmOccrnceTmgRptBndsDurationVl;
      private String chrgItmOccrnceTmgRptBndsPrdEnd;
      private String chrgItmOccrnceTmgRptBndsPrdStrt;
      private String chrgItmOccrnceTmgRptBndsRngHiCd;
@@ -589,6 +594,56 @@ public class ChargeItem  implements java.io.Serializable {
     
     public void setChrgItmOccrnceTmgEvnt(String chrgItmOccrnceTmgEvnt) {
         this.chrgItmOccrnceTmgEvnt = chrgItmOccrnceTmgEvnt;
+    }
+    
+    
+    
+    public String getChrgItmOccrnceTmgRptBndsDurationCd() {
+        return this.chrgItmOccrnceTmgRptBndsDurationCd;
+    }
+    
+    public void setChrgItmOccrnceTmgRptBndsDurationCd(String chrgItmOccrnceTmgRptBndsDurationCd) {
+        this.chrgItmOccrnceTmgRptBndsDurationCd = chrgItmOccrnceTmgRptBndsDurationCd;
+    }
+    
+    
+    
+    public String getChrgItmOccrnceTmgRptBndsDurationCmprtr() {
+        return this.chrgItmOccrnceTmgRptBndsDurationCmprtr;
+    }
+    
+    public void setChrgItmOccrnceTmgRptBndsDurationCmprtr(String chrgItmOccrnceTmgRptBndsDurationCmprtr) {
+        this.chrgItmOccrnceTmgRptBndsDurationCmprtr = chrgItmOccrnceTmgRptBndsDurationCmprtr;
+    }
+    
+    
+    
+    public String getChrgItmOccrnceTmgRptBndsDurationSys() {
+        return this.chrgItmOccrnceTmgRptBndsDurationSys;
+    }
+    
+    public void setChrgItmOccrnceTmgRptBndsDurationSys(String chrgItmOccrnceTmgRptBndsDurationSys) {
+        this.chrgItmOccrnceTmgRptBndsDurationSys = chrgItmOccrnceTmgRptBndsDurationSys;
+    }
+    
+    
+    
+    public String getChrgItmOccrnceTmgRptBndsDurationUnt() {
+        return this.chrgItmOccrnceTmgRptBndsDurationUnt;
+    }
+    
+    public void setChrgItmOccrnceTmgRptBndsDurationUnt(String chrgItmOccrnceTmgRptBndsDurationUnt) {
+        this.chrgItmOccrnceTmgRptBndsDurationUnt = chrgItmOccrnceTmgRptBndsDurationUnt;
+    }
+    
+    
+    
+    public String getChrgItmOccrnceTmgRptBndsDurationVl() {
+        return this.chrgItmOccrnceTmgRptBndsDurationVl;
+    }
+    
+    public void setChrgItmOccrnceTmgRptBndsDurationVl(String chrgItmOccrnceTmgRptBndsDurationVl) {
+        this.chrgItmOccrnceTmgRptBndsDurationVl = chrgItmOccrnceTmgRptBndsDurationVl;
     }
     
     

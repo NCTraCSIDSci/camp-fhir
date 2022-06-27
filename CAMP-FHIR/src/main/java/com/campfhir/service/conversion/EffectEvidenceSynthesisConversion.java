@@ -328,7 +328,7 @@ public class EffectEvidenceSynthesisConversion
 		}
 		/******************** EfctEvdnceSynths_EfctEstmt_PrecisionEstmt_Level ********************************************************************************/
 		if(e.getEfctEvdnceSynthsEfctEstmtPrecisionEstmtLevel() != null) {
-			effectevidencesynthesiseffectestimateprecisionestimate.setLevel(Double.parseDouble((e.getEfctEvdnceSynthsEfctEstmtPrecisionEstmtLevel())));
+			effectevidencesynthesiseffectestimateprecisionestimate.setLevel(new java.math.BigDecimal((e.getEfctEvdnceSynthsEfctEstmtPrecisionEstmtLevel())));
 		}
 		/******************** EfctEvdnceSynths_EfctEstmt_PrecisionEstmt_To ********************************************************************************/
 		if(e.getEfctEvdnceSynthsEfctEstmtPrecisionEstmtTo() != null) {

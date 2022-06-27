@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Jun 6, 2022, 11:02:25 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 27, 2022, 10:39:49 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="EvidenceVariable" optimistic-lock="none" table="EvidenceVariable">
         <id name="id" type="string">
@@ -109,6 +109,26 @@
         <property name="evdnceVrbleCrctrstcDfnDataRqrmentDtFltrVlDtTimeTyp" type="string">
             <meta attribute="resource-type"/>
             <column length="65535" name="EvdnceVrble_Crctrstc_DfnDataRqrment_DtFltr_VlDtTimeTyp"/>
+        </property>
+        <property name="evdnceVrbleCrctrstcDfnDataRqrmentDtFltrVlDurationCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EvdnceVrble_Crctrstc_DfnDataRqrment_DtFltr_VlDuration_Cd"/>
+        </property>
+        <property name="evdnceVrbleCrctrstcDfnDataRqrmentDtFltrVlDurationCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EvdnceVrble_Crctrstc_DfnDataRqrment_DtFltr_VlDuration_Cmprtr"/>
+        </property>
+        <property name="evdnceVrbleCrctrstcDfnDataRqrmentDtFltrVlDurationSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EvdnceVrble_Crctrstc_DfnDataRqrment_DtFltr_VlDuration_Sys"/>
+        </property>
+        <property name="evdnceVrbleCrctrstcDfnDataRqrmentDtFltrVlDurationUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EvdnceVrble_Crctrstc_DfnDataRqrment_DtFltr_VlDuration_Unt"/>
+        </property>
+        <property name="evdnceVrbleCrctrstcDfnDataRqrmentDtFltrVlDurationVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EvdnceVrble_Crctrstc_DfnDataRqrment_DtFltr_VlDuration_Vl"/>
         </property>
         <property name="evdnceVrbleCrctrstcDfnDataRqrmentDtFltrVlPrdEnd" type="string">
             <meta attribute="resource-type"/>
@@ -258,6 +278,26 @@
             <meta attribute="resource-type"/>
             <column length="65535" name="EvdnceVrble_Crctrstc_DfnTrgrDfn_Data_DtFltr_VlDtTimeTyp"/>
         </property>
+        <property name="evdnceVrbleCrctrstcDfnTrgrDfnDataDtFltrVlDurationCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EvdnceVrble_Crctrstc_DfnTrgrDfn_Data_DtFltr_VlDuration_Cd"/>
+        </property>
+        <property name="evdnceVrbleCrctrstcDfnTrgrDfnDataDtFltrVlDurationCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EvdnceVrble_Crctrstc_DfnTrgrDfn_Data_DtFltr_VlDuration_Cmprtr"/>
+        </property>
+        <property name="evdnceVrbleCrctrstcDfnTrgrDfnDataDtFltrVlDurationSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EvdnceVrble_Crctrstc_DfnTrgrDfn_Data_DtFltr_VlDuration_Sys"/>
+        </property>
+        <property name="evdnceVrbleCrctrstcDfnTrgrDfnDataDtFltrVlDurationUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EvdnceVrble_Crctrstc_DfnTrgrDfn_Data_DtFltr_VlDuration_Unt"/>
+        </property>
+        <property name="evdnceVrbleCrctrstcDfnTrgrDfnDataDtFltrVlDurationVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EvdnceVrble_Crctrstc_DfnTrgrDfn_Data_DtFltr_VlDuration_Vl"/>
+        </property>
         <property name="evdnceVrbleCrctrstcDfnTrgrDfnDataDtFltrVlPrdEnd" type="string">
             <meta attribute="resource-type"/>
             <column length="65535" name="EvdnceVrble_Crctrstc_DfnTrgrDfn_Data_DtFltr_VlPrd_End"/>
@@ -361,6 +401,26 @@
         <property name="evdnceVrbleCrctrstcDfnTrgrDfnTmgTmgEvnt" type="string">
             <meta attribute="resource-type"/>
             <column length="65535" name="EvdnceVrble_Crctrstc_DfnTrgrDfn_TmgTmg_Evnt"/>
+        </property>
+        <property name="evdnceVrbleCrctrstcDfnTrgrDfnTmgTmgRptBndsDurationCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EvdnceVrble_Crctrstc_DfnTrgrDfn_TmgTmg_Rpt_BndsDuration_Cd"/>
+        </property>
+        <property name="evdnceVrbleCrctrstcDfnTrgrDfnTmgTmgRptBndsDurationCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EvdnceVrble_Crctrstc_DfnTrgrDfn_TmgTmg_Rpt_BndsDuration_Cmprtr"/>
+        </property>
+        <property name="evdnceVrbleCrctrstcDfnTrgrDfnTmgTmgRptBndsDurationSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EvdnceVrble_Crctrstc_DfnTrgrDfn_TmgTmg_Rpt_BndsDuration_Sys"/>
+        </property>
+        <property name="evdnceVrbleCrctrstcDfnTrgrDfnTmgTmgRptBndsDurationUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EvdnceVrble_Crctrstc_DfnTrgrDfn_TmgTmg_Rpt_BndsDuration_Unt"/>
+        </property>
+        <property name="evdnceVrbleCrctrstcDfnTrgrDfnTmgTmgRptBndsDurationVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EvdnceVrble_Crctrstc_DfnTrgrDfn_TmgTmg_Rpt_BndsDuration_Vl"/>
         </property>
         <property name="evdnceVrbleCrctrstcDfnTrgrDfnTmgTmgRptBndsPrdEnd" type="string">
             <meta attribute="resource-type"/>
@@ -486,6 +546,26 @@
             <meta attribute="resource-type"/>
             <column length="65535" name="EvdnceVrble_Crctrstc_PrtcpntEfctiveDtTimeTyp"/>
         </property>
+        <property name="evdnceVrbleCrctrstcPrtcpntEfctiveDurationCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EvdnceVrble_Crctrstc_PrtcpntEfctiveDuration_Cd"/>
+        </property>
+        <property name="evdnceVrbleCrctrstcPrtcpntEfctiveDurationCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EvdnceVrble_Crctrstc_PrtcpntEfctiveDuration_Cmprtr"/>
+        </property>
+        <property name="evdnceVrbleCrctrstcPrtcpntEfctiveDurationSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EvdnceVrble_Crctrstc_PrtcpntEfctiveDuration_Sys"/>
+        </property>
+        <property name="evdnceVrbleCrctrstcPrtcpntEfctiveDurationUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EvdnceVrble_Crctrstc_PrtcpntEfctiveDuration_Unt"/>
+        </property>
+        <property name="evdnceVrbleCrctrstcPrtcpntEfctiveDurationVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EvdnceVrble_Crctrstc_PrtcpntEfctiveDuration_Vl"/>
+        </property>
         <property name="evdnceVrbleCrctrstcPrtcpntEfctivePrdEnd" type="string">
             <meta attribute="resource-type"/>
             <column length="65535" name="EvdnceVrble_Crctrstc_PrtcpntEfctivePrd_End"/>
@@ -521,6 +601,26 @@
         <property name="evdnceVrbleCrctrstcPrtcpntEfctiveTmgEvnt" type="string">
             <meta attribute="resource-type"/>
             <column length="65535" name="EvdnceVrble_Crctrstc_PrtcpntEfctiveTmg_Evnt"/>
+        </property>
+        <property name="evdnceVrbleCrctrstcPrtcpntEfctiveTmgRptBndsDurationCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EvdnceVrble_Crctrstc_PrtcpntEfctiveTmg_Rpt_BndsDuration_Cd"/>
+        </property>
+        <property name="evdnceVrbleCrctrstcPrtcpntEfctiveTmgRptBndsDurationCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EvdnceVrble_Crctrstc_PrtcpntEfctiveTmg_Rpt_BndsDuration_Cmprtr"/>
+        </property>
+        <property name="evdnceVrbleCrctrstcPrtcpntEfctiveTmgRptBndsDurationSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EvdnceVrble_Crctrstc_PrtcpntEfctiveTmg_Rpt_BndsDuration_Sys"/>
+        </property>
+        <property name="evdnceVrbleCrctrstcPrtcpntEfctiveTmgRptBndsDurationUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EvdnceVrble_Crctrstc_PrtcpntEfctiveTmg_Rpt_BndsDuration_Unt"/>
+        </property>
+        <property name="evdnceVrbleCrctrstcPrtcpntEfctiveTmgRptBndsDurationVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EvdnceVrble_Crctrstc_PrtcpntEfctiveTmg_Rpt_BndsDuration_Vl"/>
         </property>
         <property name="evdnceVrbleCrctrstcPrtcpntEfctiveTmgRptBndsPrdEnd" type="string">
             <meta attribute="resource-type"/>
@@ -625,6 +725,26 @@
         <property name="evdnceVrbleCrctrstcPrtcpntEfctiveTmgRptWhen" type="string">
             <meta attribute="resource-type"/>
             <column length="65535" name="EvdnceVrble_Crctrstc_PrtcpntEfctiveTmg_Rpt_When"/>
+        </property>
+        <property name="evdnceVrbleCrctrstcTimeFromStrtCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EvdnceVrble_Crctrstc_TimeFromStrt_Cd"/>
+        </property>
+        <property name="evdnceVrbleCrctrstcTimeFromStrtCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EvdnceVrble_Crctrstc_TimeFromStrt_Cmprtr"/>
+        </property>
+        <property name="evdnceVrbleCrctrstcTimeFromStrtSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EvdnceVrble_Crctrstc_TimeFromStrt_Sys"/>
+        </property>
+        <property name="evdnceVrbleCrctrstcTimeFromStrtUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EvdnceVrble_Crctrstc_TimeFromStrt_Unt"/>
+        </property>
+        <property name="evdnceVrbleCrctrstcTimeFromStrtVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EvdnceVrble_Crctrstc_TimeFromStrt_Vl"/>
         </property>
         <property name="evdnceVrbleCrctrstcUsgCntxtCdCd" type="string">
             <meta attribute="resource-type"/>

@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Jun 6, 2022, 11:02:30 AM by Hibernate Tools 5.6.1.Final
+// Generated Jun 27, 2022, 10:40:10 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -82,8 +82,7 @@ public class Composition  implements java.io.Serializable {
      private String cmpsitionSectionOrdredByCdgUsrSltd;
      private String cmpsitionSectionOrdredByCdgVrsn;
      private String cmpsitionSectionOrdredByTxt;
-     private String cmpsitionSectionTxtDivDivAsStrg;
-     private String cmpsitionSectionTxtDivStsAsStrg;
+     private String cmpsitionSectionTxtDiv;
      private String cmpsitionSectionTxtSts;
      private String cmpsitionSectionTtl;
      private String cmpsitionSts;
@@ -820,22 +819,12 @@ public class Composition  implements java.io.Serializable {
     
     
     
-    public String getCmpsitionSectionTxtDivDivAsStrg() {
-        return this.cmpsitionSectionTxtDivDivAsStrg;
+    public String getCmpsitionSectionTxtDiv() {
+        return this.cmpsitionSectionTxtDiv;
     }
     
-    public void setCmpsitionSectionTxtDivDivAsStrg(String cmpsitionSectionTxtDivDivAsStrg) {
-        this.cmpsitionSectionTxtDivDivAsStrg = cmpsitionSectionTxtDivDivAsStrg;
-    }
-    
-    
-    
-    public String getCmpsitionSectionTxtDivStsAsStrg() {
-        return this.cmpsitionSectionTxtDivStsAsStrg;
-    }
-    
-    public void setCmpsitionSectionTxtDivStsAsStrg(String cmpsitionSectionTxtDivStsAsStrg) {
-        this.cmpsitionSectionTxtDivStsAsStrg = cmpsitionSectionTxtDivStsAsStrg;
+    public void setCmpsitionSectionTxtDiv(String cmpsitionSectionTxtDiv) {
+        this.cmpsitionSectionTxtDiv = cmpsitionSectionTxtDiv;
     }
     
     

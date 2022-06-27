@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Jun 6, 2022, 11:02:25 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 27, 2022, 10:39:49 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="MedicationRequest" optimistic-lock="none" table="MedicationRequest">
         <id name="id" type="string">
@@ -65,6 +65,66 @@
         <property name="mdctnRqstDetectedIssue" type="string">
             <meta attribute="resource-type"/>
             <column length="65535" name="MdctnRqst_DetectedIssue"/>
+        </property>
+        <property name="mdctnRqstDispnsRqstDispnsIntervalCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdctnRqst_DispnsRqst_DispnsInterval_Cd"/>
+        </property>
+        <property name="mdctnRqstDispnsRqstDispnsIntervalCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdctnRqst_DispnsRqst_DispnsInterval_Cmprtr"/>
+        </property>
+        <property name="mdctnRqstDispnsRqstDispnsIntervalSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdctnRqst_DispnsRqst_DispnsInterval_Sys"/>
+        </property>
+        <property name="mdctnRqstDispnsRqstDispnsIntervalUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdctnRqst_DispnsRqst_DispnsInterval_Unt"/>
+        </property>
+        <property name="mdctnRqstDispnsRqstDispnsIntervalVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdctnRqst_DispnsRqst_DispnsInterval_Vl"/>
+        </property>
+        <property name="mdctnRqstDispnsRqstExpectedSpplyDurationCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdctnRqst_DispnsRqst_ExpectedSpplyDuration_Cd"/>
+        </property>
+        <property name="mdctnRqstDispnsRqstExpectedSpplyDurationCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdctnRqst_DispnsRqst_ExpectedSpplyDuration_Cmprtr"/>
+        </property>
+        <property name="mdctnRqstDispnsRqstExpectedSpplyDurationSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdctnRqst_DispnsRqst_ExpectedSpplyDuration_Sys"/>
+        </property>
+        <property name="mdctnRqstDispnsRqstExpectedSpplyDurationUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdctnRqst_DispnsRqst_ExpectedSpplyDuration_Unt"/>
+        </property>
+        <property name="mdctnRqstDispnsRqstExpectedSpplyDurationVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdctnRqst_DispnsRqst_ExpectedSpplyDuration_Vl"/>
+        </property>
+        <property name="mdctnRqstDispnsRqstInitialFillDurationCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdctnRqst_DispnsRqst_InitialFill_Duration_Cd"/>
+        </property>
+        <property name="mdctnRqstDispnsRqstInitialFillDurationCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdctnRqst_DispnsRqst_InitialFill_Duration_Cmprtr"/>
+        </property>
+        <property name="mdctnRqstDispnsRqstInitialFillDurationSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdctnRqst_DispnsRqst_InitialFill_Duration_Sys"/>
+        </property>
+        <property name="mdctnRqstDispnsRqstInitialFillDurationUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdctnRqst_DispnsRqst_InitialFill_Duration_Unt"/>
+        </property>
+        <property name="mdctnRqstDispnsRqstInitialFillDurationVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdctnRqst_DispnsRqst_InitialFill_Duration_Vl"/>
         </property>
         <property name="mdctnRqstDispnsRqstInitialFillQntyCd" type="string">
             <meta attribute="resource-type"/>
@@ -553,6 +613,26 @@
         <property name="mdctnRqstDsgInstrctnTmgEvnt" type="string">
             <meta attribute="resource-type"/>
             <column length="65535" name="MdctnRqst_DsgInstrctn_Tmg_Evnt"/>
+        </property>
+        <property name="mdctnRqstDsgInstrctnTmgRptBndsDurationCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdctnRqst_DsgInstrctn_Tmg_Rpt_BndsDuration_Cd"/>
+        </property>
+        <property name="mdctnRqstDsgInstrctnTmgRptBndsDurationCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdctnRqst_DsgInstrctn_Tmg_Rpt_BndsDuration_Cmprtr"/>
+        </property>
+        <property name="mdctnRqstDsgInstrctnTmgRptBndsDurationSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdctnRqst_DsgInstrctn_Tmg_Rpt_BndsDuration_Sys"/>
+        </property>
+        <property name="mdctnRqstDsgInstrctnTmgRptBndsDurationUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdctnRqst_DsgInstrctn_Tmg_Rpt_BndsDuration_Unt"/>
+        </property>
+        <property name="mdctnRqstDsgInstrctnTmgRptBndsDurationVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdctnRqst_DsgInstrctn_Tmg_Rpt_BndsDuration_Vl"/>
         </property>
         <property name="mdctnRqstDsgInstrctnTmgRptBndsPrdEnd" type="string">
             <meta attribute="resource-type"/>

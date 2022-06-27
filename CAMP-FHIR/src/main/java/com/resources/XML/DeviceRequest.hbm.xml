@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Jun 6, 2022, 11:02:25 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 27, 2022, 10:39:49 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="DeviceRequest" optimistic-lock="none" table="DeviceRequest">
         <id name="id" type="string">
@@ -213,6 +213,26 @@
         <property name="dvcRqstOccrnceTmgEvnt" type="string">
             <meta attribute="resource-type"/>
             <column length="65535" name="DvcRqst_OccrnceTmg_Evnt"/>
+        </property>
+        <property name="dvcRqstOccrnceTmgRptBndsDurationCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DvcRqst_OccrnceTmg_Rpt_BndsDuration_Cd"/>
+        </property>
+        <property name="dvcRqstOccrnceTmgRptBndsDurationCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DvcRqst_OccrnceTmg_Rpt_BndsDuration_Cmprtr"/>
+        </property>
+        <property name="dvcRqstOccrnceTmgRptBndsDurationSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DvcRqst_OccrnceTmg_Rpt_BndsDuration_Sys"/>
+        </property>
+        <property name="dvcRqstOccrnceTmgRptBndsDurationUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DvcRqst_OccrnceTmg_Rpt_BndsDuration_Unt"/>
+        </property>
+        <property name="dvcRqstOccrnceTmgRptBndsDurationVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DvcRqst_OccrnceTmg_Rpt_BndsDuration_Vl"/>
         </property>
         <property name="dvcRqstOccrnceTmgRptBndsPrdEnd" type="string">
             <meta attribute="resource-type"/>

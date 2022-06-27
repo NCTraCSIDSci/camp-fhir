@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Jun 6, 2022, 11:02:30 AM by Hibernate Tools 5.6.1.Final
+// Generated Jun 27, 2022, 10:40:10 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -26,6 +26,21 @@ public class MedicationRequest  implements java.io.Serializable {
      private String mdctnRqstCourseOfThrpyTypCdgVrsn;
      private String mdctnRqstCourseOfThrpyTypTxt;
      private String mdctnRqstDetectedIssue;
+     private String mdctnRqstDispnsRqstDispnsIntervalCd;
+     private String mdctnRqstDispnsRqstDispnsIntervalCmprtr;
+     private String mdctnRqstDispnsRqstDispnsIntervalSys;
+     private String mdctnRqstDispnsRqstDispnsIntervalUnt;
+     private String mdctnRqstDispnsRqstDispnsIntervalVl;
+     private String mdctnRqstDispnsRqstExpectedSpplyDurationCd;
+     private String mdctnRqstDispnsRqstExpectedSpplyDurationCmprtr;
+     private String mdctnRqstDispnsRqstExpectedSpplyDurationSys;
+     private String mdctnRqstDispnsRqstExpectedSpplyDurationUnt;
+     private String mdctnRqstDispnsRqstExpectedSpplyDurationVl;
+     private String mdctnRqstDispnsRqstInitialFillDurationCd;
+     private String mdctnRqstDispnsRqstInitialFillDurationCmprtr;
+     private String mdctnRqstDispnsRqstInitialFillDurationSys;
+     private String mdctnRqstDispnsRqstInitialFillDurationUnt;
+     private String mdctnRqstDispnsRqstInitialFillDurationVl;
      private String mdctnRqstDispnsRqstInitialFillQntyCd;
      private String mdctnRqstDispnsRqstInitialFillQntyCmprtr;
      private String mdctnRqstDispnsRqstInitialFillQntySys;
@@ -148,6 +163,11 @@ public class MedicationRequest  implements java.io.Serializable {
      private String mdctnRqstDsgInstrctnTmgCdCdgVrsn;
      private String mdctnRqstDsgInstrctnTmgCdTxt;
      private String mdctnRqstDsgInstrctnTmgEvnt;
+     private String mdctnRqstDsgInstrctnTmgRptBndsDurationCd;
+     private String mdctnRqstDsgInstrctnTmgRptBndsDurationCmprtr;
+     private String mdctnRqstDsgInstrctnTmgRptBndsDurationSys;
+     private String mdctnRqstDsgInstrctnTmgRptBndsDurationUnt;
+     private String mdctnRqstDsgInstrctnTmgRptBndsDurationVl;
      private String mdctnRqstDsgInstrctnTmgRptBndsPrdEnd;
      private String mdctnRqstDsgInstrctnTmgRptBndsPrdStrt;
      private String mdctnRqstDsgInstrctnTmgRptBndsRngHiCd;
@@ -418,6 +438,156 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDetectedIssue(String mdctnRqstDetectedIssue) {
         this.mdctnRqstDetectedIssue = mdctnRqstDetectedIssue;
+    }
+    
+    
+    
+    public String getMdctnRqstDispnsRqstDispnsIntervalCd() {
+        return this.mdctnRqstDispnsRqstDispnsIntervalCd;
+    }
+    
+    public void setMdctnRqstDispnsRqstDispnsIntervalCd(String mdctnRqstDispnsRqstDispnsIntervalCd) {
+        this.mdctnRqstDispnsRqstDispnsIntervalCd = mdctnRqstDispnsRqstDispnsIntervalCd;
+    }
+    
+    
+    
+    public String getMdctnRqstDispnsRqstDispnsIntervalCmprtr() {
+        return this.mdctnRqstDispnsRqstDispnsIntervalCmprtr;
+    }
+    
+    public void setMdctnRqstDispnsRqstDispnsIntervalCmprtr(String mdctnRqstDispnsRqstDispnsIntervalCmprtr) {
+        this.mdctnRqstDispnsRqstDispnsIntervalCmprtr = mdctnRqstDispnsRqstDispnsIntervalCmprtr;
+    }
+    
+    
+    
+    public String getMdctnRqstDispnsRqstDispnsIntervalSys() {
+        return this.mdctnRqstDispnsRqstDispnsIntervalSys;
+    }
+    
+    public void setMdctnRqstDispnsRqstDispnsIntervalSys(String mdctnRqstDispnsRqstDispnsIntervalSys) {
+        this.mdctnRqstDispnsRqstDispnsIntervalSys = mdctnRqstDispnsRqstDispnsIntervalSys;
+    }
+    
+    
+    
+    public String getMdctnRqstDispnsRqstDispnsIntervalUnt() {
+        return this.mdctnRqstDispnsRqstDispnsIntervalUnt;
+    }
+    
+    public void setMdctnRqstDispnsRqstDispnsIntervalUnt(String mdctnRqstDispnsRqstDispnsIntervalUnt) {
+        this.mdctnRqstDispnsRqstDispnsIntervalUnt = mdctnRqstDispnsRqstDispnsIntervalUnt;
+    }
+    
+    
+    
+    public String getMdctnRqstDispnsRqstDispnsIntervalVl() {
+        return this.mdctnRqstDispnsRqstDispnsIntervalVl;
+    }
+    
+    public void setMdctnRqstDispnsRqstDispnsIntervalVl(String mdctnRqstDispnsRqstDispnsIntervalVl) {
+        this.mdctnRqstDispnsRqstDispnsIntervalVl = mdctnRqstDispnsRqstDispnsIntervalVl;
+    }
+    
+    
+    
+    public String getMdctnRqstDispnsRqstExpectedSpplyDurationCd() {
+        return this.mdctnRqstDispnsRqstExpectedSpplyDurationCd;
+    }
+    
+    public void setMdctnRqstDispnsRqstExpectedSpplyDurationCd(String mdctnRqstDispnsRqstExpectedSpplyDurationCd) {
+        this.mdctnRqstDispnsRqstExpectedSpplyDurationCd = mdctnRqstDispnsRqstExpectedSpplyDurationCd;
+    }
+    
+    
+    
+    public String getMdctnRqstDispnsRqstExpectedSpplyDurationCmprtr() {
+        return this.mdctnRqstDispnsRqstExpectedSpplyDurationCmprtr;
+    }
+    
+    public void setMdctnRqstDispnsRqstExpectedSpplyDurationCmprtr(String mdctnRqstDispnsRqstExpectedSpplyDurationCmprtr) {
+        this.mdctnRqstDispnsRqstExpectedSpplyDurationCmprtr = mdctnRqstDispnsRqstExpectedSpplyDurationCmprtr;
+    }
+    
+    
+    
+    public String getMdctnRqstDispnsRqstExpectedSpplyDurationSys() {
+        return this.mdctnRqstDispnsRqstExpectedSpplyDurationSys;
+    }
+    
+    public void setMdctnRqstDispnsRqstExpectedSpplyDurationSys(String mdctnRqstDispnsRqstExpectedSpplyDurationSys) {
+        this.mdctnRqstDispnsRqstExpectedSpplyDurationSys = mdctnRqstDispnsRqstExpectedSpplyDurationSys;
+    }
+    
+    
+    
+    public String getMdctnRqstDispnsRqstExpectedSpplyDurationUnt() {
+        return this.mdctnRqstDispnsRqstExpectedSpplyDurationUnt;
+    }
+    
+    public void setMdctnRqstDispnsRqstExpectedSpplyDurationUnt(String mdctnRqstDispnsRqstExpectedSpplyDurationUnt) {
+        this.mdctnRqstDispnsRqstExpectedSpplyDurationUnt = mdctnRqstDispnsRqstExpectedSpplyDurationUnt;
+    }
+    
+    
+    
+    public String getMdctnRqstDispnsRqstExpectedSpplyDurationVl() {
+        return this.mdctnRqstDispnsRqstExpectedSpplyDurationVl;
+    }
+    
+    public void setMdctnRqstDispnsRqstExpectedSpplyDurationVl(String mdctnRqstDispnsRqstExpectedSpplyDurationVl) {
+        this.mdctnRqstDispnsRqstExpectedSpplyDurationVl = mdctnRqstDispnsRqstExpectedSpplyDurationVl;
+    }
+    
+    
+    
+    public String getMdctnRqstDispnsRqstInitialFillDurationCd() {
+        return this.mdctnRqstDispnsRqstInitialFillDurationCd;
+    }
+    
+    public void setMdctnRqstDispnsRqstInitialFillDurationCd(String mdctnRqstDispnsRqstInitialFillDurationCd) {
+        this.mdctnRqstDispnsRqstInitialFillDurationCd = mdctnRqstDispnsRqstInitialFillDurationCd;
+    }
+    
+    
+    
+    public String getMdctnRqstDispnsRqstInitialFillDurationCmprtr() {
+        return this.mdctnRqstDispnsRqstInitialFillDurationCmprtr;
+    }
+    
+    public void setMdctnRqstDispnsRqstInitialFillDurationCmprtr(String mdctnRqstDispnsRqstInitialFillDurationCmprtr) {
+        this.mdctnRqstDispnsRqstInitialFillDurationCmprtr = mdctnRqstDispnsRqstInitialFillDurationCmprtr;
+    }
+    
+    
+    
+    public String getMdctnRqstDispnsRqstInitialFillDurationSys() {
+        return this.mdctnRqstDispnsRqstInitialFillDurationSys;
+    }
+    
+    public void setMdctnRqstDispnsRqstInitialFillDurationSys(String mdctnRqstDispnsRqstInitialFillDurationSys) {
+        this.mdctnRqstDispnsRqstInitialFillDurationSys = mdctnRqstDispnsRqstInitialFillDurationSys;
+    }
+    
+    
+    
+    public String getMdctnRqstDispnsRqstInitialFillDurationUnt() {
+        return this.mdctnRqstDispnsRqstInitialFillDurationUnt;
+    }
+    
+    public void setMdctnRqstDispnsRqstInitialFillDurationUnt(String mdctnRqstDispnsRqstInitialFillDurationUnt) {
+        this.mdctnRqstDispnsRqstInitialFillDurationUnt = mdctnRqstDispnsRqstInitialFillDurationUnt;
+    }
+    
+    
+    
+    public String getMdctnRqstDispnsRqstInitialFillDurationVl() {
+        return this.mdctnRqstDispnsRqstInitialFillDurationVl;
+    }
+    
+    public void setMdctnRqstDispnsRqstInitialFillDurationVl(String mdctnRqstDispnsRqstInitialFillDurationVl) {
+        this.mdctnRqstDispnsRqstInitialFillDurationVl = mdctnRqstDispnsRqstInitialFillDurationVl;
     }
     
     
@@ -1638,6 +1808,56 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnTmgEvnt(String mdctnRqstDsgInstrctnTmgEvnt) {
         this.mdctnRqstDsgInstrctnTmgEvnt = mdctnRqstDsgInstrctnTmgEvnt;
+    }
+    
+    
+    
+    public String getMdctnRqstDsgInstrctnTmgRptBndsDurationCd() {
+        return this.mdctnRqstDsgInstrctnTmgRptBndsDurationCd;
+    }
+    
+    public void setMdctnRqstDsgInstrctnTmgRptBndsDurationCd(String mdctnRqstDsgInstrctnTmgRptBndsDurationCd) {
+        this.mdctnRqstDsgInstrctnTmgRptBndsDurationCd = mdctnRqstDsgInstrctnTmgRptBndsDurationCd;
+    }
+    
+    
+    
+    public String getMdctnRqstDsgInstrctnTmgRptBndsDurationCmprtr() {
+        return this.mdctnRqstDsgInstrctnTmgRptBndsDurationCmprtr;
+    }
+    
+    public void setMdctnRqstDsgInstrctnTmgRptBndsDurationCmprtr(String mdctnRqstDsgInstrctnTmgRptBndsDurationCmprtr) {
+        this.mdctnRqstDsgInstrctnTmgRptBndsDurationCmprtr = mdctnRqstDsgInstrctnTmgRptBndsDurationCmprtr;
+    }
+    
+    
+    
+    public String getMdctnRqstDsgInstrctnTmgRptBndsDurationSys() {
+        return this.mdctnRqstDsgInstrctnTmgRptBndsDurationSys;
+    }
+    
+    public void setMdctnRqstDsgInstrctnTmgRptBndsDurationSys(String mdctnRqstDsgInstrctnTmgRptBndsDurationSys) {
+        this.mdctnRqstDsgInstrctnTmgRptBndsDurationSys = mdctnRqstDsgInstrctnTmgRptBndsDurationSys;
+    }
+    
+    
+    
+    public String getMdctnRqstDsgInstrctnTmgRptBndsDurationUnt() {
+        return this.mdctnRqstDsgInstrctnTmgRptBndsDurationUnt;
+    }
+    
+    public void setMdctnRqstDsgInstrctnTmgRptBndsDurationUnt(String mdctnRqstDsgInstrctnTmgRptBndsDurationUnt) {
+        this.mdctnRqstDsgInstrctnTmgRptBndsDurationUnt = mdctnRqstDsgInstrctnTmgRptBndsDurationUnt;
+    }
+    
+    
+    
+    public String getMdctnRqstDsgInstrctnTmgRptBndsDurationVl() {
+        return this.mdctnRqstDsgInstrctnTmgRptBndsDurationVl;
+    }
+    
+    public void setMdctnRqstDsgInstrctnTmgRptBndsDurationVl(String mdctnRqstDsgInstrctnTmgRptBndsDurationVl) {
+        this.mdctnRqstDsgInstrctnTmgRptBndsDurationVl = mdctnRqstDsgInstrctnTmgRptBndsDurationVl;
     }
     
     

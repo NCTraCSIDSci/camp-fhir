@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Jun 6, 2022, 11:02:30 AM by Hibernate Tools 5.6.1.Final
+// Generated Jun 27, 2022, 10:40:10 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -57,6 +57,11 @@ public class VerificationResult  implements java.io.Serializable {
      private String vrfctnRsltFrqncyCdCdgVrsn;
      private String vrfctnRsltFrqncyCdTxt;
      private String vrfctnRsltFrqncyEvnt;
+     private String vrfctnRsltFrqncyRptBndsDurationCd;
+     private String vrfctnRsltFrqncyRptBndsDurationCmprtr;
+     private String vrfctnRsltFrqncyRptBndsDurationSys;
+     private String vrfctnRsltFrqncyRptBndsDurationUnt;
+     private String vrfctnRsltFrqncyRptBndsDurationVl;
      private String vrfctnRsltFrqncyRptBndsPrdEnd;
      private String vrfctnRsltFrqncyRptBndsPrdStrt;
      private String vrfctnRsltFrqncyRptBndsRngHiCd;
@@ -623,6 +628,56 @@ public class VerificationResult  implements java.io.Serializable {
     
     public void setVrfctnRsltFrqncyEvnt(String vrfctnRsltFrqncyEvnt) {
         this.vrfctnRsltFrqncyEvnt = vrfctnRsltFrqncyEvnt;
+    }
+    
+    
+    
+    public String getVrfctnRsltFrqncyRptBndsDurationCd() {
+        return this.vrfctnRsltFrqncyRptBndsDurationCd;
+    }
+    
+    public void setVrfctnRsltFrqncyRptBndsDurationCd(String vrfctnRsltFrqncyRptBndsDurationCd) {
+        this.vrfctnRsltFrqncyRptBndsDurationCd = vrfctnRsltFrqncyRptBndsDurationCd;
+    }
+    
+    
+    
+    public String getVrfctnRsltFrqncyRptBndsDurationCmprtr() {
+        return this.vrfctnRsltFrqncyRptBndsDurationCmprtr;
+    }
+    
+    public void setVrfctnRsltFrqncyRptBndsDurationCmprtr(String vrfctnRsltFrqncyRptBndsDurationCmprtr) {
+        this.vrfctnRsltFrqncyRptBndsDurationCmprtr = vrfctnRsltFrqncyRptBndsDurationCmprtr;
+    }
+    
+    
+    
+    public String getVrfctnRsltFrqncyRptBndsDurationSys() {
+        return this.vrfctnRsltFrqncyRptBndsDurationSys;
+    }
+    
+    public void setVrfctnRsltFrqncyRptBndsDurationSys(String vrfctnRsltFrqncyRptBndsDurationSys) {
+        this.vrfctnRsltFrqncyRptBndsDurationSys = vrfctnRsltFrqncyRptBndsDurationSys;
+    }
+    
+    
+    
+    public String getVrfctnRsltFrqncyRptBndsDurationUnt() {
+        return this.vrfctnRsltFrqncyRptBndsDurationUnt;
+    }
+    
+    public void setVrfctnRsltFrqncyRptBndsDurationUnt(String vrfctnRsltFrqncyRptBndsDurationUnt) {
+        this.vrfctnRsltFrqncyRptBndsDurationUnt = vrfctnRsltFrqncyRptBndsDurationUnt;
+    }
+    
+    
+    
+    public String getVrfctnRsltFrqncyRptBndsDurationVl() {
+        return this.vrfctnRsltFrqncyRptBndsDurationVl;
+    }
+    
+    public void setVrfctnRsltFrqncyRptBndsDurationVl(String vrfctnRsltFrqncyRptBndsDurationVl) {
+        this.vrfctnRsltFrqncyRptBndsDurationVl = vrfctnRsltFrqncyRptBndsDurationVl;
     }
     
     

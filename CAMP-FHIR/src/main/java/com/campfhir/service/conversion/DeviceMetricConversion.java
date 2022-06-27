@@ -154,6 +154,26 @@ public class DeviceMetricConversion
 		org.hl7.fhir.r4.model.Duration devicemetricmeasurementperiodrepeatboundsduration =  new org.hl7.fhir.r4.model.Duration();
 		devicemetricmeasurementperiodrepeat.setBounds(devicemetricmeasurementperiodrepeatboundsduration);
 
+		/******************** DvcMetric_MsrmentPrd_Rpt_BndsDuration_Cd ********************************************************************************/
+		if(d.getDvcMetricMsrmentPrdRptBndsDurationCd() != null) {
+			devicemetricmeasurementperiodrepeatboundsduration.setCode(d.getDvcMetricMsrmentPrdRptBndsDurationCd());
+		}
+		/******************** devicemetricmeasurementperiodrepeatboundsdurationcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory devicemetricmeasurementperiodrepeatboundsdurationcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		devicemetricmeasurementperiodrepeatboundsduration.setComparator(devicemetricmeasurementperiodrepeatboundsdurationcomparator.fromCode(d.getDvcMetricMsrmentPrdRptBndsDurationCmprtr()));
+
+		/******************** DvcMetric_MsrmentPrd_Rpt_BndsDuration_Sys ********************************************************************************/
+		if(d.getDvcMetricMsrmentPrdRptBndsDurationSys() != null) {
+			devicemetricmeasurementperiodrepeatboundsduration.setSystem(d.getDvcMetricMsrmentPrdRptBndsDurationSys());
+		}
+		/******************** DvcMetric_MsrmentPrd_Rpt_BndsDuration_Unt ********************************************************************************/
+		if(d.getDvcMetricMsrmentPrdRptBndsDurationUnt() != null) {
+			devicemetricmeasurementperiodrepeatboundsduration.setUnit(d.getDvcMetricMsrmentPrdRptBndsDurationUnt());
+		}
+		/******************** DvcMetric_MsrmentPrd_Rpt_BndsDuration_Vl ********************************************************************************/
+		if(d.getDvcMetricMsrmentPrdRptBndsDurationVl() != null) {
+			devicemetricmeasurementperiodrepeatboundsduration.setValue(Double.parseDouble((d.getDvcMetricMsrmentPrdRptBndsDurationVl())));
+		}
 		/******************** devicemetricmeasurementperiodrepeatboundsperiod ********************************************************************************/
 		org.hl7.fhir.r4.model.Period devicemetricmeasurementperiodrepeatboundsperiod =  new org.hl7.fhir.r4.model.Period();
 		devicemetricmeasurementperiodrepeat.setBounds(devicemetricmeasurementperiodrepeatboundsperiod);
@@ -264,7 +284,7 @@ public class DeviceMetricConversion
 		}
 		/******************** DvcMetric_MsrmentPrd_Rpt_PrdMx ********************************************************************************/
 		if(d.getDvcMetricMsrmentPrdRptPrdMx() != null) {
-			devicemetricmeasurementperiodrepeat.setPeriodMax(Double.parseDouble((d.getDvcMetricMsrmentPrdRptPrdMx())));
+			devicemetricmeasurementperiodrepeat.setPeriodMax(new java.math.BigDecimal((d.getDvcMetricMsrmentPrdRptPrdMx())));
 		}
 		/******************** devicemetricmeasurementperiodrepeatperiodunit ********************************************************************************/
 		org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory devicemetricmeasurementperiodrepeatperiodunit =  new org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory();

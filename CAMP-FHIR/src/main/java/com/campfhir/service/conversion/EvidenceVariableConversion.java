@@ -164,6 +164,26 @@ public class EvidenceVariableConversion
 		org.hl7.fhir.r4.model.Duration evidencevariablecharacteristicdefinitiondatarequirementdatefiltervalueduration =  new org.hl7.fhir.r4.model.Duration();
 		evidencevariablecharacteristicdefinitiondatarequirementdatefilter.setValue(evidencevariablecharacteristicdefinitiondatarequirementdatefiltervalueduration);
 
+		/******************** EvdnceVrble_Crctrstc_DfnDataRqrment_DtFltr_VlDuration_Cd ********************************************************************************/
+		if(e.getEvdnceVrbleCrctrstcDfnDataRqrmentDtFltrVlDurationCd() != null) {
+			evidencevariablecharacteristicdefinitiondatarequirementdatefiltervalueduration.setCode(e.getEvdnceVrbleCrctrstcDfnDataRqrmentDtFltrVlDurationCd());
+		}
+		/******************** evidencevariablecharacteristicdefinitiondatarequirementdatefiltervaluedurationcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory evidencevariablecharacteristicdefinitiondatarequirementdatefiltervaluedurationcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		evidencevariablecharacteristicdefinitiondatarequirementdatefiltervalueduration.setComparator(evidencevariablecharacteristicdefinitiondatarequirementdatefiltervaluedurationcomparator.fromCode(e.getEvdnceVrbleCrctrstcDfnDataRqrmentDtFltrVlDurationCmprtr()));
+
+		/******************** EvdnceVrble_Crctrstc_DfnDataRqrment_DtFltr_VlDuration_Sys ********************************************************************************/
+		if(e.getEvdnceVrbleCrctrstcDfnDataRqrmentDtFltrVlDurationSys() != null) {
+			evidencevariablecharacteristicdefinitiondatarequirementdatefiltervalueduration.setSystem(e.getEvdnceVrbleCrctrstcDfnDataRqrmentDtFltrVlDurationSys());
+		}
+		/******************** EvdnceVrble_Crctrstc_DfnDataRqrment_DtFltr_VlDuration_Unt ********************************************************************************/
+		if(e.getEvdnceVrbleCrctrstcDfnDataRqrmentDtFltrVlDurationUnt() != null) {
+			evidencevariablecharacteristicdefinitiondatarequirementdatefiltervalueduration.setUnit(e.getEvdnceVrbleCrctrstcDfnDataRqrmentDtFltrVlDurationUnt());
+		}
+		/******************** EvdnceVrble_Crctrstc_DfnDataRqrment_DtFltr_VlDuration_Vl ********************************************************************************/
+		if(e.getEvdnceVrbleCrctrstcDfnDataRqrmentDtFltrVlDurationVl() != null) {
+			evidencevariablecharacteristicdefinitiondatarequirementdatefiltervalueduration.setValue(Double.parseDouble((e.getEvdnceVrbleCrctrstcDfnDataRqrmentDtFltrVlDurationVl())));
+		}
 		/******************** evidencevariablecharacteristicdefinitiondatarequirementdatefiltervalueperiod ********************************************************************************/
 		org.hl7.fhir.r4.model.Period evidencevariablecharacteristicdefinitiondatarequirementdatefiltervalueperiod =  new org.hl7.fhir.r4.model.Period();
 		evidencevariablecharacteristicdefinitiondatarequirementdatefilter.setValue(evidencevariablecharacteristicdefinitiondatarequirementdatefiltervalueperiod);
@@ -364,6 +384,26 @@ public class EvidenceVariableConversion
 		org.hl7.fhir.r4.model.Duration evidencevariablecharacteristicdefinitiontriggerdefinitiondatadatefiltervalueduration =  new org.hl7.fhir.r4.model.Duration();
 		evidencevariablecharacteristicdefinitiontriggerdefinitiondatadatefilter.setValue(evidencevariablecharacteristicdefinitiontriggerdefinitiondatadatefiltervalueduration);
 
+		/******************** EvdnceVrble_Crctrstc_DfnTrgrDfn_Data_DtFltr_VlDuration_Cd ********************************************************************************/
+		if(e.getEvdnceVrbleCrctrstcDfnTrgrDfnDataDtFltrVlDurationCd() != null) {
+			evidencevariablecharacteristicdefinitiontriggerdefinitiondatadatefiltervalueduration.setCode(e.getEvdnceVrbleCrctrstcDfnTrgrDfnDataDtFltrVlDurationCd());
+		}
+		/******************** evidencevariablecharacteristicdefinitiontriggerdefinitiondatadatefiltervaluedurationcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory evidencevariablecharacteristicdefinitiontriggerdefinitiondatadatefiltervaluedurationcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		evidencevariablecharacteristicdefinitiontriggerdefinitiondatadatefiltervalueduration.setComparator(evidencevariablecharacteristicdefinitiontriggerdefinitiondatadatefiltervaluedurationcomparator.fromCode(e.getEvdnceVrbleCrctrstcDfnTrgrDfnDataDtFltrVlDurationCmprtr()));
+
+		/******************** EvdnceVrble_Crctrstc_DfnTrgrDfn_Data_DtFltr_VlDuration_Sys ********************************************************************************/
+		if(e.getEvdnceVrbleCrctrstcDfnTrgrDfnDataDtFltrVlDurationSys() != null) {
+			evidencevariablecharacteristicdefinitiontriggerdefinitiondatadatefiltervalueduration.setSystem(e.getEvdnceVrbleCrctrstcDfnTrgrDfnDataDtFltrVlDurationSys());
+		}
+		/******************** EvdnceVrble_Crctrstc_DfnTrgrDfn_Data_DtFltr_VlDuration_Unt ********************************************************************************/
+		if(e.getEvdnceVrbleCrctrstcDfnTrgrDfnDataDtFltrVlDurationUnt() != null) {
+			evidencevariablecharacteristicdefinitiontriggerdefinitiondatadatefiltervalueduration.setUnit(e.getEvdnceVrbleCrctrstcDfnTrgrDfnDataDtFltrVlDurationUnt());
+		}
+		/******************** EvdnceVrble_Crctrstc_DfnTrgrDfn_Data_DtFltr_VlDuration_Vl ********************************************************************************/
+		if(e.getEvdnceVrbleCrctrstcDfnTrgrDfnDataDtFltrVlDurationVl() != null) {
+			evidencevariablecharacteristicdefinitiontriggerdefinitiondatadatefiltervalueduration.setValue(Double.parseDouble((e.getEvdnceVrbleCrctrstcDfnTrgrDfnDataDtFltrVlDurationVl())));
+		}
 		/******************** evidencevariablecharacteristicdefinitiontriggerdefinitiondatadatefiltervalueperiod ********************************************************************************/
 		org.hl7.fhir.r4.model.Period evidencevariablecharacteristicdefinitiontriggerdefinitiondatadatefiltervalueperiod =  new org.hl7.fhir.r4.model.Period();
 		evidencevariablecharacteristicdefinitiontriggerdefinitiondatadatefilter.setValue(evidencevariablecharacteristicdefinitiontriggerdefinitiondatadatefiltervalueperiod);
@@ -510,6 +550,26 @@ public class EvidenceVariableConversion
 		org.hl7.fhir.r4.model.Duration evidencevariablecharacteristicdefinitiontriggerdefinitiontimingtimingrepeatboundsduration =  new org.hl7.fhir.r4.model.Duration();
 		evidencevariablecharacteristicdefinitiontriggerdefinitiontimingtimingrepeat.setBounds(evidencevariablecharacteristicdefinitiontriggerdefinitiontimingtimingrepeatboundsduration);
 
+		/******************** EvdnceVrble_Crctrstc_DfnTrgrDfn_TmgTmg_Rpt_BndsDuration_Cd ********************************************************************************/
+		if(e.getEvdnceVrbleCrctrstcDfnTrgrDfnTmgTmgRptBndsDurationCd() != null) {
+			evidencevariablecharacteristicdefinitiontriggerdefinitiontimingtimingrepeatboundsduration.setCode(e.getEvdnceVrbleCrctrstcDfnTrgrDfnTmgTmgRptBndsDurationCd());
+		}
+		/******************** evidencevariablecharacteristicdefinitiontriggerdefinitiontimingtimingrepeatboundsdurationcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory evidencevariablecharacteristicdefinitiontriggerdefinitiontimingtimingrepeatboundsdurationcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		evidencevariablecharacteristicdefinitiontriggerdefinitiontimingtimingrepeatboundsduration.setComparator(evidencevariablecharacteristicdefinitiontriggerdefinitiontimingtimingrepeatboundsdurationcomparator.fromCode(e.getEvdnceVrbleCrctrstcDfnTrgrDfnTmgTmgRptBndsDurationCmprtr()));
+
+		/******************** EvdnceVrble_Crctrstc_DfnTrgrDfn_TmgTmg_Rpt_BndsDuration_Sys ********************************************************************************/
+		if(e.getEvdnceVrbleCrctrstcDfnTrgrDfnTmgTmgRptBndsDurationSys() != null) {
+			evidencevariablecharacteristicdefinitiontriggerdefinitiontimingtimingrepeatboundsduration.setSystem(e.getEvdnceVrbleCrctrstcDfnTrgrDfnTmgTmgRptBndsDurationSys());
+		}
+		/******************** EvdnceVrble_Crctrstc_DfnTrgrDfn_TmgTmg_Rpt_BndsDuration_Unt ********************************************************************************/
+		if(e.getEvdnceVrbleCrctrstcDfnTrgrDfnTmgTmgRptBndsDurationUnt() != null) {
+			evidencevariablecharacteristicdefinitiontriggerdefinitiontimingtimingrepeatboundsduration.setUnit(e.getEvdnceVrbleCrctrstcDfnTrgrDfnTmgTmgRptBndsDurationUnt());
+		}
+		/******************** EvdnceVrble_Crctrstc_DfnTrgrDfn_TmgTmg_Rpt_BndsDuration_Vl ********************************************************************************/
+		if(e.getEvdnceVrbleCrctrstcDfnTrgrDfnTmgTmgRptBndsDurationVl() != null) {
+			evidencevariablecharacteristicdefinitiontriggerdefinitiontimingtimingrepeatboundsduration.setValue(Double.parseDouble((e.getEvdnceVrbleCrctrstcDfnTrgrDfnTmgTmgRptBndsDurationVl())));
+		}
 		/******************** evidencevariablecharacteristicdefinitiontriggerdefinitiontimingtimingrepeatboundsperiod ********************************************************************************/
 		org.hl7.fhir.r4.model.Period evidencevariablecharacteristicdefinitiontriggerdefinitiontimingtimingrepeatboundsperiod =  new org.hl7.fhir.r4.model.Period();
 		evidencevariablecharacteristicdefinitiontriggerdefinitiontimingtimingrepeat.setBounds(evidencevariablecharacteristicdefinitiontriggerdefinitiontimingtimingrepeatboundsperiod);
@@ -620,7 +680,7 @@ public class EvidenceVariableConversion
 		}
 		/******************** EvdnceVrble_Crctrstc_DfnTrgrDfn_TmgTmg_Rpt_PrdMx ********************************************************************************/
 		if(e.getEvdnceVrbleCrctrstcDfnTrgrDfnTmgTmgRptPrdMx() != null) {
-			evidencevariablecharacteristicdefinitiontriggerdefinitiontimingtimingrepeat.setPeriodMax(Double.parseDouble((e.getEvdnceVrbleCrctrstcDfnTrgrDfnTmgTmgRptPrdMx())));
+			evidencevariablecharacteristicdefinitiontriggerdefinitiontimingtimingrepeat.setPeriodMax(new java.math.BigDecimal((e.getEvdnceVrbleCrctrstcDfnTrgrDfnTmgTmgRptPrdMx())));
 		}
 		/******************** evidencevariablecharacteristicdefinitiontriggerdefinitiontimingtimingrepeatperiodunit ********************************************************************************/
 		org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory evidencevariablecharacteristicdefinitiontriggerdefinitiontimingtimingrepeatperiodunit =  new org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory();
@@ -658,6 +718,26 @@ public class EvidenceVariableConversion
 		org.hl7.fhir.r4.model.Duration evidencevariablecharacteristicparticipanteffectiveduration =  new org.hl7.fhir.r4.model.Duration();
 		evidencevariablecharacteristic.setParticipantEffective(evidencevariablecharacteristicparticipanteffectiveduration);
 
+		/******************** EvdnceVrble_Crctrstc_PrtcpntEfctiveDuration_Cd ********************************************************************************/
+		if(e.getEvdnceVrbleCrctrstcPrtcpntEfctiveDurationCd() != null) {
+			evidencevariablecharacteristicparticipanteffectiveduration.setCode(e.getEvdnceVrbleCrctrstcPrtcpntEfctiveDurationCd());
+		}
+		/******************** evidencevariablecharacteristicparticipanteffectivedurationcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory evidencevariablecharacteristicparticipanteffectivedurationcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		evidencevariablecharacteristicparticipanteffectiveduration.setComparator(evidencevariablecharacteristicparticipanteffectivedurationcomparator.fromCode(e.getEvdnceVrbleCrctrstcPrtcpntEfctiveDurationCmprtr()));
+
+		/******************** EvdnceVrble_Crctrstc_PrtcpntEfctiveDuration_Sys ********************************************************************************/
+		if(e.getEvdnceVrbleCrctrstcPrtcpntEfctiveDurationSys() != null) {
+			evidencevariablecharacteristicparticipanteffectiveduration.setSystem(e.getEvdnceVrbleCrctrstcPrtcpntEfctiveDurationSys());
+		}
+		/******************** EvdnceVrble_Crctrstc_PrtcpntEfctiveDuration_Unt ********************************************************************************/
+		if(e.getEvdnceVrbleCrctrstcPrtcpntEfctiveDurationUnt() != null) {
+			evidencevariablecharacteristicparticipanteffectiveduration.setUnit(e.getEvdnceVrbleCrctrstcPrtcpntEfctiveDurationUnt());
+		}
+		/******************** EvdnceVrble_Crctrstc_PrtcpntEfctiveDuration_Vl ********************************************************************************/
+		if(e.getEvdnceVrbleCrctrstcPrtcpntEfctiveDurationVl() != null) {
+			evidencevariablecharacteristicparticipanteffectiveduration.setValue(Double.parseDouble((e.getEvdnceVrbleCrctrstcPrtcpntEfctiveDurationVl())));
+		}
 		/******************** evidencevariablecharacteristicparticipanteffectiveperiod ********************************************************************************/
 		org.hl7.fhir.r4.model.Period evidencevariablecharacteristicparticipanteffectiveperiod =  new org.hl7.fhir.r4.model.Period();
 		evidencevariablecharacteristic.setParticipantEffective(evidencevariablecharacteristicparticipanteffectiveperiod);
@@ -724,6 +804,26 @@ public class EvidenceVariableConversion
 		org.hl7.fhir.r4.model.Duration evidencevariablecharacteristicparticipanteffectivetimingrepeatboundsduration =  new org.hl7.fhir.r4.model.Duration();
 		evidencevariablecharacteristicparticipanteffectivetimingrepeat.setBounds(evidencevariablecharacteristicparticipanteffectivetimingrepeatboundsduration);
 
+		/******************** EvdnceVrble_Crctrstc_PrtcpntEfctiveTmg_Rpt_BndsDuration_Cd ********************************************************************************/
+		if(e.getEvdnceVrbleCrctrstcPrtcpntEfctiveTmgRptBndsDurationCd() != null) {
+			evidencevariablecharacteristicparticipanteffectivetimingrepeatboundsduration.setCode(e.getEvdnceVrbleCrctrstcPrtcpntEfctiveTmgRptBndsDurationCd());
+		}
+		/******************** evidencevariablecharacteristicparticipanteffectivetimingrepeatboundsdurationcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory evidencevariablecharacteristicparticipanteffectivetimingrepeatboundsdurationcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		evidencevariablecharacteristicparticipanteffectivetimingrepeatboundsduration.setComparator(evidencevariablecharacteristicparticipanteffectivetimingrepeatboundsdurationcomparator.fromCode(e.getEvdnceVrbleCrctrstcPrtcpntEfctiveTmgRptBndsDurationCmprtr()));
+
+		/******************** EvdnceVrble_Crctrstc_PrtcpntEfctiveTmg_Rpt_BndsDuration_Sys ********************************************************************************/
+		if(e.getEvdnceVrbleCrctrstcPrtcpntEfctiveTmgRptBndsDurationSys() != null) {
+			evidencevariablecharacteristicparticipanteffectivetimingrepeatboundsduration.setSystem(e.getEvdnceVrbleCrctrstcPrtcpntEfctiveTmgRptBndsDurationSys());
+		}
+		/******************** EvdnceVrble_Crctrstc_PrtcpntEfctiveTmg_Rpt_BndsDuration_Unt ********************************************************************************/
+		if(e.getEvdnceVrbleCrctrstcPrtcpntEfctiveTmgRptBndsDurationUnt() != null) {
+			evidencevariablecharacteristicparticipanteffectivetimingrepeatboundsduration.setUnit(e.getEvdnceVrbleCrctrstcPrtcpntEfctiveTmgRptBndsDurationUnt());
+		}
+		/******************** EvdnceVrble_Crctrstc_PrtcpntEfctiveTmg_Rpt_BndsDuration_Vl ********************************************************************************/
+		if(e.getEvdnceVrbleCrctrstcPrtcpntEfctiveTmgRptBndsDurationVl() != null) {
+			evidencevariablecharacteristicparticipanteffectivetimingrepeatboundsduration.setValue(Double.parseDouble((e.getEvdnceVrbleCrctrstcPrtcpntEfctiveTmgRptBndsDurationVl())));
+		}
 		/******************** evidencevariablecharacteristicparticipanteffectivetimingrepeatboundsperiod ********************************************************************************/
 		org.hl7.fhir.r4.model.Period evidencevariablecharacteristicparticipanteffectivetimingrepeatboundsperiod =  new org.hl7.fhir.r4.model.Period();
 		evidencevariablecharacteristicparticipanteffectivetimingrepeat.setBounds(evidencevariablecharacteristicparticipanteffectivetimingrepeatboundsperiod);
@@ -834,7 +934,7 @@ public class EvidenceVariableConversion
 		}
 		/******************** EvdnceVrble_Crctrstc_PrtcpntEfctiveTmg_Rpt_PrdMx ********************************************************************************/
 		if(e.getEvdnceVrbleCrctrstcPrtcpntEfctiveTmgRptPrdMx() != null) {
-			evidencevariablecharacteristicparticipanteffectivetimingrepeat.setPeriodMax(Double.parseDouble((e.getEvdnceVrbleCrctrstcPrtcpntEfctiveTmgRptPrdMx())));
+			evidencevariablecharacteristicparticipanteffectivetimingrepeat.setPeriodMax(new java.math.BigDecimal((e.getEvdnceVrbleCrctrstcPrtcpntEfctiveTmgRptPrdMx())));
 		}
 		/******************** evidencevariablecharacteristicparticipanteffectivetimingrepeatperiodunit ********************************************************************************/
 		org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory evidencevariablecharacteristicparticipanteffectivetimingrepeatperiodunit =  new org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory();
@@ -852,6 +952,26 @@ public class EvidenceVariableConversion
 		org.hl7.fhir.r4.model.Duration evidencevariablecharacteristictimefromstart =  new org.hl7.fhir.r4.model.Duration();
 		evidencevariablecharacteristic.setTimeFromStart(evidencevariablecharacteristictimefromstart);
 
+		/******************** EvdnceVrble_Crctrstc_TimeFromStrt_Cd ********************************************************************************/
+		if(e.getEvdnceVrbleCrctrstcTimeFromStrtCd() != null) {
+			evidencevariablecharacteristictimefromstart.setCode(e.getEvdnceVrbleCrctrstcTimeFromStrtCd());
+		}
+		/******************** evidencevariablecharacteristictimefromstartcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory evidencevariablecharacteristictimefromstartcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		evidencevariablecharacteristictimefromstart.setComparator(evidencevariablecharacteristictimefromstartcomparator.fromCode(e.getEvdnceVrbleCrctrstcTimeFromStrtCmprtr()));
+
+		/******************** EvdnceVrble_Crctrstc_TimeFromStrt_Sys ********************************************************************************/
+		if(e.getEvdnceVrbleCrctrstcTimeFromStrtSys() != null) {
+			evidencevariablecharacteristictimefromstart.setSystem(e.getEvdnceVrbleCrctrstcTimeFromStrtSys());
+		}
+		/******************** EvdnceVrble_Crctrstc_TimeFromStrt_Unt ********************************************************************************/
+		if(e.getEvdnceVrbleCrctrstcTimeFromStrtUnt() != null) {
+			evidencevariablecharacteristictimefromstart.setUnit(e.getEvdnceVrbleCrctrstcTimeFromStrtUnt());
+		}
+		/******************** EvdnceVrble_Crctrstc_TimeFromStrt_Vl ********************************************************************************/
+		if(e.getEvdnceVrbleCrctrstcTimeFromStrtVl() != null) {
+			evidencevariablecharacteristictimefromstart.setValue(Double.parseDouble((e.getEvdnceVrbleCrctrstcTimeFromStrtVl())));
+		}
 		/******************** evidencevariablecharacteristicusagecontext ********************************************************************************/
 		org.hl7.fhir.r4.model.UsageContext evidencevariablecharacteristicusagecontext =  new org.hl7.fhir.r4.model.UsageContext();
 		evidencevariablecharacteristic.addUsageContext(evidencevariablecharacteristicusagecontext);

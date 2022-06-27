@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Jun 6, 2022, 11:02:30 AM by Hibernate Tools 5.6.1.Final
+// Generated Jun 27, 2022, 10:40:10 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -118,6 +118,11 @@ public class MedicationKnowledge  implements java.io.Serializable {
      private String mdctnKnldgAdmnGdlnsDsgDsgTmgCdCdgVrsn;
      private String mdctnKnldgAdmnGdlnsDsgDsgTmgCdTxt;
      private String mdctnKnldgAdmnGdlnsDsgDsgTmgEvnt;
+     private String mdctnKnldgAdmnGdlnsDsgDsgTmgRptBndsDurationCd;
+     private String mdctnKnldgAdmnGdlnsDsgDsgTmgRptBndsDurationCmprtr;
+     private String mdctnKnldgAdmnGdlnsDsgDsgTmgRptBndsDurationSys;
+     private String mdctnKnldgAdmnGdlnsDsgDsgTmgRptBndsDurationUnt;
+     private String mdctnKnldgAdmnGdlnsDsgDsgTmgRptBndsDurationVl;
      private String mdctnKnldgAdmnGdlnsDsgDsgTmgRptBndsPrdEnd;
      private String mdctnKnldgAdmnGdlnsDsgDsgTmgRptBndsPrdStrt;
      private String mdctnKnldgAdmnGdlnsDsgDsgTmgRptBndsRngHiCd;
@@ -245,6 +250,11 @@ public class MedicationKnowledge  implements java.io.Serializable {
      private String mdctnKnldgKineticsAreaUnderCurveSys;
      private String mdctnKnldgKineticsAreaUnderCurveUnt;
      private String mdctnKnldgKineticsAreaUnderCurveVl;
+     private String mdctnKnldgKineticsHalfLifePrdCd;
+     private String mdctnKnldgKineticsHalfLifePrdCmprtr;
+     private String mdctnKnldgKineticsHalfLifePrdSys;
+     private String mdctnKnldgKineticsHalfLifePrdUnt;
+     private String mdctnKnldgKineticsHalfLifePrdVl;
      private String mdctnKnldgKineticsLethalDose50Cd;
      private String mdctnKnldgKineticsLethalDose50Cmprtr;
      private String mdctnKnldgKineticsLethalDose50Sys;
@@ -295,6 +305,11 @@ public class MedicationKnowledge  implements java.io.Serializable {
      private String mdctnKnldgPrdctTypCdgUsrSltd;
      private String mdctnKnldgPrdctTypCdgVrsn;
      private String mdctnKnldgPrdctTypTxt;
+     private String mdctnKnldgRegulatoryMxDispnsPrdCd;
+     private String mdctnKnldgRegulatoryMxDispnsPrdCmprtr;
+     private String mdctnKnldgRegulatoryMxDispnsPrdSys;
+     private String mdctnKnldgRegulatoryMxDispnsPrdUnt;
+     private String mdctnKnldgRegulatoryMxDispnsPrdVl;
      private String mdctnKnldgRegulatoryMxDispnsQntyCd;
      private String mdctnKnldgRegulatoryMxDispnsQntyCmprtr;
      private String mdctnKnldgRegulatoryMxDispnsQntySys;
@@ -1404,6 +1419,56 @@ public class MedicationKnowledge  implements java.io.Serializable {
     
     public void setMdctnKnldgAdmnGdlnsDsgDsgTmgEvnt(String mdctnKnldgAdmnGdlnsDsgDsgTmgEvnt) {
         this.mdctnKnldgAdmnGdlnsDsgDsgTmgEvnt = mdctnKnldgAdmnGdlnsDsgDsgTmgEvnt;
+    }
+    
+    
+    
+    public String getMdctnKnldgAdmnGdlnsDsgDsgTmgRptBndsDurationCd() {
+        return this.mdctnKnldgAdmnGdlnsDsgDsgTmgRptBndsDurationCd;
+    }
+    
+    public void setMdctnKnldgAdmnGdlnsDsgDsgTmgRptBndsDurationCd(String mdctnKnldgAdmnGdlnsDsgDsgTmgRptBndsDurationCd) {
+        this.mdctnKnldgAdmnGdlnsDsgDsgTmgRptBndsDurationCd = mdctnKnldgAdmnGdlnsDsgDsgTmgRptBndsDurationCd;
+    }
+    
+    
+    
+    public String getMdctnKnldgAdmnGdlnsDsgDsgTmgRptBndsDurationCmprtr() {
+        return this.mdctnKnldgAdmnGdlnsDsgDsgTmgRptBndsDurationCmprtr;
+    }
+    
+    public void setMdctnKnldgAdmnGdlnsDsgDsgTmgRptBndsDurationCmprtr(String mdctnKnldgAdmnGdlnsDsgDsgTmgRptBndsDurationCmprtr) {
+        this.mdctnKnldgAdmnGdlnsDsgDsgTmgRptBndsDurationCmprtr = mdctnKnldgAdmnGdlnsDsgDsgTmgRptBndsDurationCmprtr;
+    }
+    
+    
+    
+    public String getMdctnKnldgAdmnGdlnsDsgDsgTmgRptBndsDurationSys() {
+        return this.mdctnKnldgAdmnGdlnsDsgDsgTmgRptBndsDurationSys;
+    }
+    
+    public void setMdctnKnldgAdmnGdlnsDsgDsgTmgRptBndsDurationSys(String mdctnKnldgAdmnGdlnsDsgDsgTmgRptBndsDurationSys) {
+        this.mdctnKnldgAdmnGdlnsDsgDsgTmgRptBndsDurationSys = mdctnKnldgAdmnGdlnsDsgDsgTmgRptBndsDurationSys;
+    }
+    
+    
+    
+    public String getMdctnKnldgAdmnGdlnsDsgDsgTmgRptBndsDurationUnt() {
+        return this.mdctnKnldgAdmnGdlnsDsgDsgTmgRptBndsDurationUnt;
+    }
+    
+    public void setMdctnKnldgAdmnGdlnsDsgDsgTmgRptBndsDurationUnt(String mdctnKnldgAdmnGdlnsDsgDsgTmgRptBndsDurationUnt) {
+        this.mdctnKnldgAdmnGdlnsDsgDsgTmgRptBndsDurationUnt = mdctnKnldgAdmnGdlnsDsgDsgTmgRptBndsDurationUnt;
+    }
+    
+    
+    
+    public String getMdctnKnldgAdmnGdlnsDsgDsgTmgRptBndsDurationVl() {
+        return this.mdctnKnldgAdmnGdlnsDsgDsgTmgRptBndsDurationVl;
+    }
+    
+    public void setMdctnKnldgAdmnGdlnsDsgDsgTmgRptBndsDurationVl(String mdctnKnldgAdmnGdlnsDsgDsgTmgRptBndsDurationVl) {
+        this.mdctnKnldgAdmnGdlnsDsgDsgTmgRptBndsDurationVl = mdctnKnldgAdmnGdlnsDsgDsgTmgRptBndsDurationVl;
     }
     
     
@@ -2678,6 +2743,56 @@ public class MedicationKnowledge  implements java.io.Serializable {
     
     
     
+    public String getMdctnKnldgKineticsHalfLifePrdCd() {
+        return this.mdctnKnldgKineticsHalfLifePrdCd;
+    }
+    
+    public void setMdctnKnldgKineticsHalfLifePrdCd(String mdctnKnldgKineticsHalfLifePrdCd) {
+        this.mdctnKnldgKineticsHalfLifePrdCd = mdctnKnldgKineticsHalfLifePrdCd;
+    }
+    
+    
+    
+    public String getMdctnKnldgKineticsHalfLifePrdCmprtr() {
+        return this.mdctnKnldgKineticsHalfLifePrdCmprtr;
+    }
+    
+    public void setMdctnKnldgKineticsHalfLifePrdCmprtr(String mdctnKnldgKineticsHalfLifePrdCmprtr) {
+        this.mdctnKnldgKineticsHalfLifePrdCmprtr = mdctnKnldgKineticsHalfLifePrdCmprtr;
+    }
+    
+    
+    
+    public String getMdctnKnldgKineticsHalfLifePrdSys() {
+        return this.mdctnKnldgKineticsHalfLifePrdSys;
+    }
+    
+    public void setMdctnKnldgKineticsHalfLifePrdSys(String mdctnKnldgKineticsHalfLifePrdSys) {
+        this.mdctnKnldgKineticsHalfLifePrdSys = mdctnKnldgKineticsHalfLifePrdSys;
+    }
+    
+    
+    
+    public String getMdctnKnldgKineticsHalfLifePrdUnt() {
+        return this.mdctnKnldgKineticsHalfLifePrdUnt;
+    }
+    
+    public void setMdctnKnldgKineticsHalfLifePrdUnt(String mdctnKnldgKineticsHalfLifePrdUnt) {
+        this.mdctnKnldgKineticsHalfLifePrdUnt = mdctnKnldgKineticsHalfLifePrdUnt;
+    }
+    
+    
+    
+    public String getMdctnKnldgKineticsHalfLifePrdVl() {
+        return this.mdctnKnldgKineticsHalfLifePrdVl;
+    }
+    
+    public void setMdctnKnldgKineticsHalfLifePrdVl(String mdctnKnldgKineticsHalfLifePrdVl) {
+        this.mdctnKnldgKineticsHalfLifePrdVl = mdctnKnldgKineticsHalfLifePrdVl;
+    }
+    
+    
+    
     public String getMdctnKnldgKineticsLethalDose50Cd() {
         return this.mdctnKnldgKineticsLethalDose50Cd;
     }
@@ -3174,6 +3289,56 @@ public class MedicationKnowledge  implements java.io.Serializable {
     
     public void setMdctnKnldgPrdctTypTxt(String mdctnKnldgPrdctTypTxt) {
         this.mdctnKnldgPrdctTypTxt = mdctnKnldgPrdctTypTxt;
+    }
+    
+    
+    
+    public String getMdctnKnldgRegulatoryMxDispnsPrdCd() {
+        return this.mdctnKnldgRegulatoryMxDispnsPrdCd;
+    }
+    
+    public void setMdctnKnldgRegulatoryMxDispnsPrdCd(String mdctnKnldgRegulatoryMxDispnsPrdCd) {
+        this.mdctnKnldgRegulatoryMxDispnsPrdCd = mdctnKnldgRegulatoryMxDispnsPrdCd;
+    }
+    
+    
+    
+    public String getMdctnKnldgRegulatoryMxDispnsPrdCmprtr() {
+        return this.mdctnKnldgRegulatoryMxDispnsPrdCmprtr;
+    }
+    
+    public void setMdctnKnldgRegulatoryMxDispnsPrdCmprtr(String mdctnKnldgRegulatoryMxDispnsPrdCmprtr) {
+        this.mdctnKnldgRegulatoryMxDispnsPrdCmprtr = mdctnKnldgRegulatoryMxDispnsPrdCmprtr;
+    }
+    
+    
+    
+    public String getMdctnKnldgRegulatoryMxDispnsPrdSys() {
+        return this.mdctnKnldgRegulatoryMxDispnsPrdSys;
+    }
+    
+    public void setMdctnKnldgRegulatoryMxDispnsPrdSys(String mdctnKnldgRegulatoryMxDispnsPrdSys) {
+        this.mdctnKnldgRegulatoryMxDispnsPrdSys = mdctnKnldgRegulatoryMxDispnsPrdSys;
+    }
+    
+    
+    
+    public String getMdctnKnldgRegulatoryMxDispnsPrdUnt() {
+        return this.mdctnKnldgRegulatoryMxDispnsPrdUnt;
+    }
+    
+    public void setMdctnKnldgRegulatoryMxDispnsPrdUnt(String mdctnKnldgRegulatoryMxDispnsPrdUnt) {
+        this.mdctnKnldgRegulatoryMxDispnsPrdUnt = mdctnKnldgRegulatoryMxDispnsPrdUnt;
+    }
+    
+    
+    
+    public String getMdctnKnldgRegulatoryMxDispnsPrdVl() {
+        return this.mdctnKnldgRegulatoryMxDispnsPrdVl;
+    }
+    
+    public void setMdctnKnldgRegulatoryMxDispnsPrdVl(String mdctnKnldgRegulatoryMxDispnsPrdVl) {
+        this.mdctnKnldgRegulatoryMxDispnsPrdVl = mdctnKnldgRegulatoryMxDispnsPrdVl;
     }
     
     

@@ -1,6 +1,5 @@
 package main.java.com.campfhir.service.conversion;
 import java.text.ParseException;
-import org.hl7.fhir.utilities.xhtml.XhtmlNode;
 import main.java.com.campfhir.model.Composition;
 public class CompositionConversion 
 {
@@ -407,18 +406,10 @@ public class CompositionConversion
 		org.hl7.fhir.r4.model.Narrative compositionsectiontext =  new org.hl7.fhir.r4.model.Narrative();
 		compositionsection.setText(compositionsectiontext);
 
-		/******************** compositionsectiontextdiv ********************************************************************************/
-		org.hl7.fhir.utilities.xhtml.XhtmlNode compositionsectiontextdiv =  new org.hl7.fhir.utilities.xhtml.XhtmlNode();
-		compositionsectiontext.setDiv(compositionsectiontextdiv);
-
-		/******************** Cmpsition_Section_Txt_Div_DivAsStrg ********************************************************************************/
-		if(c.getCmpsitionSectionTxtDivDivAsStrg() != null) {
-			compositionsectiontextdiv.setValueAsString(c.getCmpsitionSectionTxtDivDivAsStrg());
+		/******************** Cmpsition_Section_Txt_Div ********************************************************************************/
+		if(c.getCmpsitionSectionTxtDiv() != null) {
+			compositionsectiontext.setDivAsString(c.getCmpsitionSectionTxtDiv());
 		}
-		/******************** Cmpsition_Section_Txt_Div_StsAsStrg ********************************************************************************/
-//		if(c.getCmpsitionSectionTxtDivStsAsStrg() != null) {
-//			compositionsectiontextdiv.setStatusAsString(c.getCmpsitionSectionTxtDivStsAsStrg());
-//		}
 		/******************** compositionsectiontextstatus ********************************************************************************/
 		org.hl7.fhir.r4.model.Narrative.NarrativeStatusEnumFactory compositionsectiontextstatus =  new org.hl7.fhir.r4.model.Narrative.NarrativeStatusEnumFactory();
 		compositionsectiontext.setStatus(compositionsectiontextstatus.fromCode(c.getCmpsitionSectionTxtSts()));

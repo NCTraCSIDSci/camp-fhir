@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Jun 6, 2022, 11:02:30 AM by Hibernate Tools 5.6.1.Final
+// Generated Jun 27, 2022, 10:40:10 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -149,6 +149,11 @@ public class Observation  implements java.io.Serializable {
      private String obsrvtnEfctiveTmgCdCdgVrsn;
      private String obsrvtnEfctiveTmgCdTxt;
      private String obsrvtnEfctiveTmgEvnt;
+     private String obsrvtnEfctiveTmgRptBndsDurationCd;
+     private String obsrvtnEfctiveTmgRptBndsDurationCmprtr;
+     private String obsrvtnEfctiveTmgRptBndsDurationSys;
+     private String obsrvtnEfctiveTmgRptBndsDurationUnt;
+     private String obsrvtnEfctiveTmgRptBndsDurationVl;
      private String obsrvtnEfctiveTmgRptBndsPrdEnd;
      private String obsrvtnEfctiveTmgRptBndsPrdStrt;
      private String obsrvtnEfctiveTmgRptBndsRngHiCd;
@@ -1685,6 +1690,56 @@ public class Observation  implements java.io.Serializable {
     
     public void setObsrvtnEfctiveTmgEvnt(String obsrvtnEfctiveTmgEvnt) {
         this.obsrvtnEfctiveTmgEvnt = obsrvtnEfctiveTmgEvnt;
+    }
+    
+    
+    
+    public String getObsrvtnEfctiveTmgRptBndsDurationCd() {
+        return this.obsrvtnEfctiveTmgRptBndsDurationCd;
+    }
+    
+    public void setObsrvtnEfctiveTmgRptBndsDurationCd(String obsrvtnEfctiveTmgRptBndsDurationCd) {
+        this.obsrvtnEfctiveTmgRptBndsDurationCd = obsrvtnEfctiveTmgRptBndsDurationCd;
+    }
+    
+    
+    
+    public String getObsrvtnEfctiveTmgRptBndsDurationCmprtr() {
+        return this.obsrvtnEfctiveTmgRptBndsDurationCmprtr;
+    }
+    
+    public void setObsrvtnEfctiveTmgRptBndsDurationCmprtr(String obsrvtnEfctiveTmgRptBndsDurationCmprtr) {
+        this.obsrvtnEfctiveTmgRptBndsDurationCmprtr = obsrvtnEfctiveTmgRptBndsDurationCmprtr;
+    }
+    
+    
+    
+    public String getObsrvtnEfctiveTmgRptBndsDurationSys() {
+        return this.obsrvtnEfctiveTmgRptBndsDurationSys;
+    }
+    
+    public void setObsrvtnEfctiveTmgRptBndsDurationSys(String obsrvtnEfctiveTmgRptBndsDurationSys) {
+        this.obsrvtnEfctiveTmgRptBndsDurationSys = obsrvtnEfctiveTmgRptBndsDurationSys;
+    }
+    
+    
+    
+    public String getObsrvtnEfctiveTmgRptBndsDurationUnt() {
+        return this.obsrvtnEfctiveTmgRptBndsDurationUnt;
+    }
+    
+    public void setObsrvtnEfctiveTmgRptBndsDurationUnt(String obsrvtnEfctiveTmgRptBndsDurationUnt) {
+        this.obsrvtnEfctiveTmgRptBndsDurationUnt = obsrvtnEfctiveTmgRptBndsDurationUnt;
+    }
+    
+    
+    
+    public String getObsrvtnEfctiveTmgRptBndsDurationVl() {
+        return this.obsrvtnEfctiveTmgRptBndsDurationVl;
+    }
+    
+    public void setObsrvtnEfctiveTmgRptBndsDurationVl(String obsrvtnEfctiveTmgRptBndsDurationVl) {
+        this.obsrvtnEfctiveTmgRptBndsDurationVl = obsrvtnEfctiveTmgRptBndsDurationVl;
     }
     
     

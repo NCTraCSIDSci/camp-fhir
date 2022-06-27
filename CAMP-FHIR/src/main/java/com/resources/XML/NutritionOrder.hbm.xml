@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Jun 6, 2022, 11:02:25 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 27, 2022, 10:39:49 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="NutritionOrder" optimistic-lock="none" table="NutritionOrder">
         <id name="id" type="string">
@@ -153,6 +153,26 @@
         <property name="ntritnOrdrEnteralFrmulaAdmnstnSchdlEvnt" type="string">
             <meta attribute="resource-type"/>
             <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Evnt"/>
+        </property>
+        <property name="ntritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_BndsDuration_Cd"/>
+        </property>
+        <property name="ntritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_BndsDuration_Cmprtr"/>
+        </property>
+        <property name="ntritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_BndsDuration_Sys"/>
+        </property>
+        <property name="ntritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_BndsDuration_Unt"/>
+        </property>
+        <property name="ntritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_BndsDuration_Vl"/>
         </property>
         <property name="ntritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsPrdEnd" type="string">
             <meta attribute="resource-type"/>
@@ -582,6 +602,26 @@
             <meta attribute="resource-type"/>
             <column length="65535" name="NtritnOrdr_OralDiet_Schdl_Evnt"/>
         </property>
+        <property name="ntritnOrdrOralDietSchdlRptBndsDurationCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="NtritnOrdr_OralDiet_Schdl_Rpt_BndsDuration_Cd"/>
+        </property>
+        <property name="ntritnOrdrOralDietSchdlRptBndsDurationCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="NtritnOrdr_OralDiet_Schdl_Rpt_BndsDuration_Cmprtr"/>
+        </property>
+        <property name="ntritnOrdrOralDietSchdlRptBndsDurationSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="NtritnOrdr_OralDiet_Schdl_Rpt_BndsDuration_Sys"/>
+        </property>
+        <property name="ntritnOrdrOralDietSchdlRptBndsDurationUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="NtritnOrdr_OralDiet_Schdl_Rpt_BndsDuration_Unt"/>
+        </property>
+        <property name="ntritnOrdrOralDietSchdlRptBndsDurationVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="NtritnOrdr_OralDiet_Schdl_Rpt_BndsDuration_Vl"/>
+        </property>
         <property name="ntritnOrdrOralDietSchdlRptBndsPrdEnd" type="string">
             <meta attribute="resource-type"/>
             <column length="65535" name="NtritnOrdr_OralDiet_Schdl_Rpt_BndsPrd_End"/>
@@ -825,6 +865,26 @@
         <property name="ntritnOrdrSupplementSchdlEvnt" type="string">
             <meta attribute="resource-type"/>
             <column length="65535" name="NtritnOrdr_Supplement_Schdl_Evnt"/>
+        </property>
+        <property name="ntritnOrdrSupplementSchdlRptBndsDurationCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="NtritnOrdr_Supplement_Schdl_Rpt_BndsDuration_Cd"/>
+        </property>
+        <property name="ntritnOrdrSupplementSchdlRptBndsDurationCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="NtritnOrdr_Supplement_Schdl_Rpt_BndsDuration_Cmprtr"/>
+        </property>
+        <property name="ntritnOrdrSupplementSchdlRptBndsDurationSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="NtritnOrdr_Supplement_Schdl_Rpt_BndsDuration_Sys"/>
+        </property>
+        <property name="ntritnOrdrSupplementSchdlRptBndsDurationUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="NtritnOrdr_Supplement_Schdl_Rpt_BndsDuration_Unt"/>
+        </property>
+        <property name="ntritnOrdrSupplementSchdlRptBndsDurationVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="NtritnOrdr_Supplement_Schdl_Rpt_BndsDuration_Vl"/>
         </property>
         <property name="ntritnOrdrSupplementSchdlRptBndsPrdEnd" type="string">
             <meta attribute="resource-type"/>

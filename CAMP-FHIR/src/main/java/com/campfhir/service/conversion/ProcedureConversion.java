@@ -368,6 +368,26 @@ public class ProcedureConversion
 		org.hl7.fhir.r4.model.Age procedureperformedage =  new org.hl7.fhir.r4.model.Age();
 		procedure.setPerformed(procedureperformedage);
 
+		/******************** Prcdr_PerformedAge_Cd ********************************************************************************/
+		if(p.getPrcdrPerformedAgeCd() != null) {
+			procedureperformedage.setCode(p.getPrcdrPerformedAgeCd());
+		}
+		/******************** procedureperformedagecomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory procedureperformedagecomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		procedureperformedage.setComparator(procedureperformedagecomparator.fromCode(p.getPrcdrPerformedAgeCmprtr()));
+
+		/******************** Prcdr_PerformedAge_Sys ********************************************************************************/
+		if(p.getPrcdrPerformedAgeSys() != null) {
+			procedureperformedage.setSystem(p.getPrcdrPerformedAgeSys());
+		}
+		/******************** Prcdr_PerformedAge_Unt ********************************************************************************/
+		if(p.getPrcdrPerformedAgeUnt() != null) {
+			procedureperformedage.setUnit(p.getPrcdrPerformedAgeUnt());
+		}
+		/******************** Prcdr_PerformedAge_Vl ********************************************************************************/
+		if(p.getPrcdrPerformedAgeVl() != null) {
+			procedureperformedage.setValue(Double.parseDouble((p.getPrcdrPerformedAgeVl())));
+		}
 		/******************** Prcdr_PerformedDtTimeTyp ********************************************************************************/
 		if(p.getPrcdrPerformedDtTimeTyp() != null) {
 			procedure.setPerformed( new org.hl7.fhir.r4.model.DateTimeType(p.getPrcdrPerformedDtTimeTyp()));

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Jun 6, 2022, 11:02:25 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 27, 2022, 10:39:49 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="MedicationKnowledge" optimistic-lock="none" table="MedicationKnowledge">
         <id name="id" type="string">
@@ -433,6 +433,26 @@
         <property name="mdctnKnldgAdmnGdlnsDsgDsgTmgEvnt" type="string">
             <meta attribute="resource-type"/>
             <column length="65535" name="MdctnKnldg_AdmnGdlns_Dsg_Dsg_Tmg_Evnt"/>
+        </property>
+        <property name="mdctnKnldgAdmnGdlnsDsgDsgTmgRptBndsDurationCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdctnKnldg_AdmnGdlns_Dsg_Dsg_Tmg_Rpt_BndsDuration_Cd"/>
+        </property>
+        <property name="mdctnKnldgAdmnGdlnsDsgDsgTmgRptBndsDurationCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdctnKnldg_AdmnGdlns_Dsg_Dsg_Tmg_Rpt_BndsDuration_Cmprtr"/>
+        </property>
+        <property name="mdctnKnldgAdmnGdlnsDsgDsgTmgRptBndsDurationSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdctnKnldg_AdmnGdlns_Dsg_Dsg_Tmg_Rpt_BndsDuration_Sys"/>
+        </property>
+        <property name="mdctnKnldgAdmnGdlnsDsgDsgTmgRptBndsDurationUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdctnKnldg_AdmnGdlns_Dsg_Dsg_Tmg_Rpt_BndsDuration_Unt"/>
+        </property>
+        <property name="mdctnKnldgAdmnGdlnsDsgDsgTmgRptBndsDurationVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdctnKnldg_AdmnGdlns_Dsg_Dsg_Tmg_Rpt_BndsDuration_Vl"/>
         </property>
         <property name="mdctnKnldgAdmnGdlnsDsgDsgTmgRptBndsPrdEnd" type="string">
             <meta attribute="resource-type"/>
@@ -942,6 +962,26 @@
             <meta attribute="resource-type"/>
             <column length="65535" name="MdctnKnldg_Kinetics_AreaUnderCurve_Vl"/>
         </property>
+        <property name="mdctnKnldgKineticsHalfLifePrdCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdctnKnldg_Kinetics_HalfLifePrd_Cd"/>
+        </property>
+        <property name="mdctnKnldgKineticsHalfLifePrdCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdctnKnldg_Kinetics_HalfLifePrd_Cmprtr"/>
+        </property>
+        <property name="mdctnKnldgKineticsHalfLifePrdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdctnKnldg_Kinetics_HalfLifePrd_Sys"/>
+        </property>
+        <property name="mdctnKnldgKineticsHalfLifePrdUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdctnKnldg_Kinetics_HalfLifePrd_Unt"/>
+        </property>
+        <property name="mdctnKnldgKineticsHalfLifePrdVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdctnKnldg_Kinetics_HalfLifePrd_Vl"/>
+        </property>
         <property name="mdctnKnldgKineticsLethalDose50Cd" type="string">
             <meta attribute="resource-type"/>
             <column length="65535" name="MdctnKnldg_Kinetics_LethalDose50_Cd"/>
@@ -1141,6 +1181,26 @@
         <property name="mdctnKnldgPrdctTypTxt" type="string">
             <meta attribute="resource-type"/>
             <column length="65535" name="MdctnKnldg_PrdctTyp_Txt"/>
+        </property>
+        <property name="mdctnKnldgRegulatoryMxDispnsPrdCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdctnKnldg_Regulatory_MxDispns_Prd_Cd"/>
+        </property>
+        <property name="mdctnKnldgRegulatoryMxDispnsPrdCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdctnKnldg_Regulatory_MxDispns_Prd_Cmprtr"/>
+        </property>
+        <property name="mdctnKnldgRegulatoryMxDispnsPrdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdctnKnldg_Regulatory_MxDispns_Prd_Sys"/>
+        </property>
+        <property name="mdctnKnldgRegulatoryMxDispnsPrdUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdctnKnldg_Regulatory_MxDispns_Prd_Unt"/>
+        </property>
+        <property name="mdctnKnldgRegulatoryMxDispnsPrdVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdctnKnldg_Regulatory_MxDispns_Prd_Vl"/>
         </property>
         <property name="mdctnKnldgRegulatoryMxDispnsQntyCd" type="string">
             <meta attribute="resource-type"/>

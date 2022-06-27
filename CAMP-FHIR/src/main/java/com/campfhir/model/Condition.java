@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Jun 6, 2022, 11:02:30 AM by Hibernate Tools 5.6.1.Final
+// Generated Jun 27, 2022, 10:40:10 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -11,6 +11,11 @@ public class Condition  implements java.io.Serializable {
 
 
      private String id;
+     private String cndtnAbatementAgeCd;
+     private String cndtnAbatementAgeCmprtr;
+     private String cndtnAbatementAgeSys;
+     private String cndtnAbatementAgeUnt;
+     private String cndtnAbatementAgeVl;
      private String cndtnAbatementDtTimeTyp;
      private String cndtnAbatementPrdEnd;
      private String cndtnAbatementPrdStrt;
@@ -74,6 +79,11 @@ public class Condition  implements java.io.Serializable {
      private String cndtnNtAthrStrgTyp;
      private String cndtnNtTxt;
      private String cndtnNtTime;
+     private String cndtnOnAgeCd;
+     private String cndtnOnAgeCmprtr;
+     private String cndtnOnAgeSys;
+     private String cndtnOnAgeUnt;
+     private String cndtnOnAgeVl;
      private String cndtnOnDtTimeTyp;
      private String cndtnOnPrdEnd;
      private String cndtnOnPrdStrt;
@@ -127,6 +137,56 @@ public class Condition  implements java.io.Serializable {
     
     public void setId(String id) {
         this.id = id;
+    }
+    
+    
+    
+    public String getCndtnAbatementAgeCd() {
+        return this.cndtnAbatementAgeCd;
+    }
+    
+    public void setCndtnAbatementAgeCd(String cndtnAbatementAgeCd) {
+        this.cndtnAbatementAgeCd = cndtnAbatementAgeCd;
+    }
+    
+    
+    
+    public String getCndtnAbatementAgeCmprtr() {
+        return this.cndtnAbatementAgeCmprtr;
+    }
+    
+    public void setCndtnAbatementAgeCmprtr(String cndtnAbatementAgeCmprtr) {
+        this.cndtnAbatementAgeCmprtr = cndtnAbatementAgeCmprtr;
+    }
+    
+    
+    
+    public String getCndtnAbatementAgeSys() {
+        return this.cndtnAbatementAgeSys;
+    }
+    
+    public void setCndtnAbatementAgeSys(String cndtnAbatementAgeSys) {
+        this.cndtnAbatementAgeSys = cndtnAbatementAgeSys;
+    }
+    
+    
+    
+    public String getCndtnAbatementAgeUnt() {
+        return this.cndtnAbatementAgeUnt;
+    }
+    
+    public void setCndtnAbatementAgeUnt(String cndtnAbatementAgeUnt) {
+        this.cndtnAbatementAgeUnt = cndtnAbatementAgeUnt;
+    }
+    
+    
+    
+    public String getCndtnAbatementAgeVl() {
+        return this.cndtnAbatementAgeVl;
+    }
+    
+    public void setCndtnAbatementAgeVl(String cndtnAbatementAgeVl) {
+        this.cndtnAbatementAgeVl = cndtnAbatementAgeVl;
     }
     
     
@@ -757,6 +817,56 @@ public class Condition  implements java.io.Serializable {
     
     public void setCndtnNtTime(String cndtnNtTime) {
         this.cndtnNtTime = cndtnNtTime;
+    }
+    
+    
+    
+    public String getCndtnOnAgeCd() {
+        return this.cndtnOnAgeCd;
+    }
+    
+    public void setCndtnOnAgeCd(String cndtnOnAgeCd) {
+        this.cndtnOnAgeCd = cndtnOnAgeCd;
+    }
+    
+    
+    
+    public String getCndtnOnAgeCmprtr() {
+        return this.cndtnOnAgeCmprtr;
+    }
+    
+    public void setCndtnOnAgeCmprtr(String cndtnOnAgeCmprtr) {
+        this.cndtnOnAgeCmprtr = cndtnOnAgeCmprtr;
+    }
+    
+    
+    
+    public String getCndtnOnAgeSys() {
+        return this.cndtnOnAgeSys;
+    }
+    
+    public void setCndtnOnAgeSys(String cndtnOnAgeSys) {
+        this.cndtnOnAgeSys = cndtnOnAgeSys;
+    }
+    
+    
+    
+    public String getCndtnOnAgeUnt() {
+        return this.cndtnOnAgeUnt;
+    }
+    
+    public void setCndtnOnAgeUnt(String cndtnOnAgeUnt) {
+        this.cndtnOnAgeUnt = cndtnOnAgeUnt;
+    }
+    
+    
+    
+    public String getCndtnOnAgeVl() {
+        return this.cndtnOnAgeVl;
+    }
+    
+    public void setCndtnOnAgeVl(String cndtnOnAgeVl) {
+        this.cndtnOnAgeVl = cndtnOnAgeVl;
     }
     
     

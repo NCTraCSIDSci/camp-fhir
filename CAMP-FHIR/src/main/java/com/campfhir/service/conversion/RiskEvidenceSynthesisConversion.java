@@ -654,7 +654,7 @@ public class RiskEvidenceSynthesisConversion
 		}
 		/******************** RskEvdnceSynths_RskEstmt_PrecisionEstmt_Level ********************************************************************************/
 		if(r.getRskEvdnceSynthsRskEstmtPrecisionEstmtLevel() != null) {
-			riskevidencesynthesisriskestimateprecisionestimate.setLevel(Double.parseDouble((r.getRskEvdnceSynthsRskEstmtPrecisionEstmtLevel())));
+			riskevidencesynthesisriskestimateprecisionestimate.setLevel(new java.math.BigDecimal((r.getRskEvdnceSynthsRskEstmtPrecisionEstmtLevel())));
 		}
 		/******************** RskEvdnceSynths_RskEstmt_PrecisionEstmt_To ********************************************************************************/
 		if(r.getRskEvdnceSynthsRskEstmtPrecisionEstmtTo() != null) {

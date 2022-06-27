@@ -588,6 +588,26 @@ public class MedicationKnowledgeConversion
 		org.hl7.fhir.r4.model.Duration medicationknowledgeadministrationguidelinesdosagedosagetimingrepeatboundsduration =  new org.hl7.fhir.r4.model.Duration();
 		medicationknowledgeadministrationguidelinesdosagedosagetimingrepeat.setBounds(medicationknowledgeadministrationguidelinesdosagedosagetimingrepeatboundsduration);
 
+		/******************** MdctnKnldg_AdmnGdlns_Dsg_Dsg_Tmg_Rpt_BndsDuration_Cd ********************************************************************************/
+		if(m.getMdctnKnldgAdmnGdlnsDsgDsgTmgRptBndsDurationCd() != null) {
+			medicationknowledgeadministrationguidelinesdosagedosagetimingrepeatboundsduration.setCode(m.getMdctnKnldgAdmnGdlnsDsgDsgTmgRptBndsDurationCd());
+		}
+		/******************** medicationknowledgeadministrationguidelinesdosagedosagetimingrepeatboundsdurationcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicationknowledgeadministrationguidelinesdosagedosagetimingrepeatboundsdurationcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		medicationknowledgeadministrationguidelinesdosagedosagetimingrepeatboundsduration.setComparator(medicationknowledgeadministrationguidelinesdosagedosagetimingrepeatboundsdurationcomparator.fromCode(m.getMdctnKnldgAdmnGdlnsDsgDsgTmgRptBndsDurationCmprtr()));
+
+		/******************** MdctnKnldg_AdmnGdlns_Dsg_Dsg_Tmg_Rpt_BndsDuration_Sys ********************************************************************************/
+		if(m.getMdctnKnldgAdmnGdlnsDsgDsgTmgRptBndsDurationSys() != null) {
+			medicationknowledgeadministrationguidelinesdosagedosagetimingrepeatboundsduration.setSystem(m.getMdctnKnldgAdmnGdlnsDsgDsgTmgRptBndsDurationSys());
+		}
+		/******************** MdctnKnldg_AdmnGdlns_Dsg_Dsg_Tmg_Rpt_BndsDuration_Unt ********************************************************************************/
+		if(m.getMdctnKnldgAdmnGdlnsDsgDsgTmgRptBndsDurationUnt() != null) {
+			medicationknowledgeadministrationguidelinesdosagedosagetimingrepeatboundsduration.setUnit(m.getMdctnKnldgAdmnGdlnsDsgDsgTmgRptBndsDurationUnt());
+		}
+		/******************** MdctnKnldg_AdmnGdlns_Dsg_Dsg_Tmg_Rpt_BndsDuration_Vl ********************************************************************************/
+		if(m.getMdctnKnldgAdmnGdlnsDsgDsgTmgRptBndsDurationVl() != null) {
+			medicationknowledgeadministrationguidelinesdosagedosagetimingrepeatboundsduration.setValue(Double.parseDouble((m.getMdctnKnldgAdmnGdlnsDsgDsgTmgRptBndsDurationVl())));
+		}
 		/******************** medicationknowledgeadministrationguidelinesdosagedosagetimingrepeatboundsperiod ********************************************************************************/
 		org.hl7.fhir.r4.model.Period medicationknowledgeadministrationguidelinesdosagedosagetimingrepeatboundsperiod =  new org.hl7.fhir.r4.model.Period();
 		medicationknowledgeadministrationguidelinesdosagedosagetimingrepeat.setBounds(medicationknowledgeadministrationguidelinesdosagedosagetimingrepeatboundsperiod);
@@ -698,7 +718,7 @@ public class MedicationKnowledgeConversion
 		}
 		/******************** MdctnKnldg_AdmnGdlns_Dsg_Dsg_Tmg_Rpt_PrdMx ********************************************************************************/
 		if(m.getMdctnKnldgAdmnGdlnsDsgDsgTmgRptPrdMx() != null) {
-			medicationknowledgeadministrationguidelinesdosagedosagetimingrepeat.setPeriodMax(Double.parseDouble((m.getMdctnKnldgAdmnGdlnsDsgDsgTmgRptPrdMx())));
+			medicationknowledgeadministrationguidelinesdosagedosagetimingrepeat.setPeriodMax(new java.math.BigDecimal((m.getMdctnKnldgAdmnGdlnsDsgDsgTmgRptPrdMx())));
 		}
 		/******************** medicationknowledgeadministrationguidelinesdosagedosagetimingrepeatperiodunit ********************************************************************************/
 		org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory medicationknowledgeadministrationguidelinesdosagedosagetimingrepeatperiodunit =  new org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory();
@@ -1252,6 +1272,26 @@ public class MedicationKnowledgeConversion
 		org.hl7.fhir.r4.model.Duration medicationknowledgekineticshalflifeperiod =  new org.hl7.fhir.r4.model.Duration();
 		medicationknowledgekinetics.setHalfLifePeriod(medicationknowledgekineticshalflifeperiod);
 
+		/******************** MdctnKnldg_Kinetics_HalfLifePrd_Cd ********************************************************************************/
+		if(m.getMdctnKnldgKineticsHalfLifePrdCd() != null) {
+			medicationknowledgekineticshalflifeperiod.setCode(m.getMdctnKnldgKineticsHalfLifePrdCd());
+		}
+		/******************** medicationknowledgekineticshalflifeperiodcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicationknowledgekineticshalflifeperiodcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		medicationknowledgekineticshalflifeperiod.setComparator(medicationknowledgekineticshalflifeperiodcomparator.fromCode(m.getMdctnKnldgKineticsHalfLifePrdCmprtr()));
+
+		/******************** MdctnKnldg_Kinetics_HalfLifePrd_Sys ********************************************************************************/
+		if(m.getMdctnKnldgKineticsHalfLifePrdSys() != null) {
+			medicationknowledgekineticshalflifeperiod.setSystem(m.getMdctnKnldgKineticsHalfLifePrdSys());
+		}
+		/******************** MdctnKnldg_Kinetics_HalfLifePrd_Unt ********************************************************************************/
+		if(m.getMdctnKnldgKineticsHalfLifePrdUnt() != null) {
+			medicationknowledgekineticshalflifeperiod.setUnit(m.getMdctnKnldgKineticsHalfLifePrdUnt());
+		}
+		/******************** MdctnKnldg_Kinetics_HalfLifePrd_Vl ********************************************************************************/
+		if(m.getMdctnKnldgKineticsHalfLifePrdVl() != null) {
+			medicationknowledgekineticshalflifeperiod.setValue(Double.parseDouble((m.getMdctnKnldgKineticsHalfLifePrdVl())));
+		}
 		/******************** medicationknowledgekineticslethaldose50 ********************************************************************************/
 		org.hl7.fhir.r4.model.Quantity medicationknowledgekineticslethaldose50 =  new org.hl7.fhir.r4.model.Quantity();
 		medicationknowledgekinetics.addLethalDose50(medicationknowledgekineticslethaldose50);
@@ -1536,6 +1576,26 @@ public class MedicationKnowledgeConversion
 		org.hl7.fhir.r4.model.Duration medicationknowledgeregulatorymaxdispenseperiod =  new org.hl7.fhir.r4.model.Duration();
 		medicationknowledgeregulatorymaxdispense.setPeriod(medicationknowledgeregulatorymaxdispenseperiod);
 
+		/******************** MdctnKnldg_Regulatory_MxDispns_Prd_Cd ********************************************************************************/
+		if(m.getMdctnKnldgRegulatoryMxDispnsPrdCd() != null) {
+			medicationknowledgeregulatorymaxdispenseperiod.setCode(m.getMdctnKnldgRegulatoryMxDispnsPrdCd());
+		}
+		/******************** medicationknowledgeregulatorymaxdispenseperiodcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicationknowledgeregulatorymaxdispenseperiodcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+		medicationknowledgeregulatorymaxdispenseperiod.setComparator(medicationknowledgeregulatorymaxdispenseperiodcomparator.fromCode(m.getMdctnKnldgRegulatoryMxDispnsPrdCmprtr()));
+
+		/******************** MdctnKnldg_Regulatory_MxDispns_Prd_Sys ********************************************************************************/
+		if(m.getMdctnKnldgRegulatoryMxDispnsPrdSys() != null) {
+			medicationknowledgeregulatorymaxdispenseperiod.setSystem(m.getMdctnKnldgRegulatoryMxDispnsPrdSys());
+		}
+		/******************** MdctnKnldg_Regulatory_MxDispns_Prd_Unt ********************************************************************************/
+		if(m.getMdctnKnldgRegulatoryMxDispnsPrdUnt() != null) {
+			medicationknowledgeregulatorymaxdispenseperiod.setUnit(m.getMdctnKnldgRegulatoryMxDispnsPrdUnt());
+		}
+		/******************** MdctnKnldg_Regulatory_MxDispns_Prd_Vl ********************************************************************************/
+		if(m.getMdctnKnldgRegulatoryMxDispnsPrdVl() != null) {
+			medicationknowledgeregulatorymaxdispenseperiod.setValue(Double.parseDouble((m.getMdctnKnldgRegulatoryMxDispnsPrdVl())));
+		}
 		/******************** medicationknowledgeregulatorymaxdispensequantity ********************************************************************************/
 		org.hl7.fhir.r4.model.Quantity medicationknowledgeregulatorymaxdispensequantity =  new org.hl7.fhir.r4.model.Quantity();
 		medicationknowledgeregulatorymaxdispense.setQuantity(medicationknowledgeregulatorymaxdispensequantity);

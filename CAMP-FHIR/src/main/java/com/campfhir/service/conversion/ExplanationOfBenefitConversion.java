@@ -518,7 +518,7 @@ public class ExplanationOfBenefitConversion
 		}
 		/******************** ExplntnOfBnft_AddItm_Dtl_SubDtl_Factor ********************************************************************************/
 		if(e.getExplntnOfBnftAddItmDtlSubDtlFactor() != null) {
-			explanationofbenefitadditemdetailsubdetail.setFactor(Double.parseDouble((e.getExplntnOfBnftAddItmDtlSubDtlFactor())));
+			explanationofbenefitadditemdetailsubdetail.setFactor(new java.math.BigDecimal((e.getExplntnOfBnftAddItmDtlSubDtlFactor())));
 		}
 		/******************** explanationofbenefitadditemdetailsubdetailmodifier ********************************************************************************/
 		org.hl7.fhir.r4.model.CodeableConcept explanationofbenefitadditemdetailsubdetailmodifier =  new org.hl7.fhir.r4.model.CodeableConcept();
@@ -2038,7 +2038,7 @@ public class ExplanationOfBenefitConversion
 		}
 		/******************** ExplntnOfBnft_Itm_Dtl_Factor ********************************************************************************/
 		if(e.getExplntnOfBnftItmDtlFactor() != null) {
-			explanationofbenefititemdetail.setFactor(Double.parseDouble((e.getExplntnOfBnftItmDtlFactor())));
+			explanationofbenefititemdetail.setFactor(new java.math.BigDecimal((e.getExplntnOfBnftItmDtlFactor())));
 		}
 		/******************** explanationofbenefititemdetailmodifier ********************************************************************************/
 		org.hl7.fhir.r4.model.CodeableConcept explanationofbenefititemdetailmodifier =  new org.hl7.fhir.r4.model.CodeableConcept();

@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Jun 6, 2022, 11:02:30 AM by Hibernate Tools 5.6.1.Final
+// Generated Jun 27, 2022, 10:40:10 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -78,6 +78,11 @@ public class Procedure  implements java.io.Serializable {
      private String prcdrOutcomeCdgVrsn;
      private String prcdrOutcomeTxt;
      private String prcdrPartOf;
+     private String prcdrPerformedAgeCd;
+     private String prcdrPerformedAgeCmprtr;
+     private String prcdrPerformedAgeSys;
+     private String prcdrPerformedAgeUnt;
+     private String prcdrPerformedAgeVl;
      private String prcdrPerformedDtTimeTyp;
      private String prcdrPerformedPrdEnd;
      private String prcdrPerformedPrdStrt;
@@ -805,6 +810,56 @@ public class Procedure  implements java.io.Serializable {
     
     public void setPrcdrPartOf(String prcdrPartOf) {
         this.prcdrPartOf = prcdrPartOf;
+    }
+    
+    
+    
+    public String getPrcdrPerformedAgeCd() {
+        return this.prcdrPerformedAgeCd;
+    }
+    
+    public void setPrcdrPerformedAgeCd(String prcdrPerformedAgeCd) {
+        this.prcdrPerformedAgeCd = prcdrPerformedAgeCd;
+    }
+    
+    
+    
+    public String getPrcdrPerformedAgeCmprtr() {
+        return this.prcdrPerformedAgeCmprtr;
+    }
+    
+    public void setPrcdrPerformedAgeCmprtr(String prcdrPerformedAgeCmprtr) {
+        this.prcdrPerformedAgeCmprtr = prcdrPerformedAgeCmprtr;
+    }
+    
+    
+    
+    public String getPrcdrPerformedAgeSys() {
+        return this.prcdrPerformedAgeSys;
+    }
+    
+    public void setPrcdrPerformedAgeSys(String prcdrPerformedAgeSys) {
+        this.prcdrPerformedAgeSys = prcdrPerformedAgeSys;
+    }
+    
+    
+    
+    public String getPrcdrPerformedAgeUnt() {
+        return this.prcdrPerformedAgeUnt;
+    }
+    
+    public void setPrcdrPerformedAgeUnt(String prcdrPerformedAgeUnt) {
+        this.prcdrPerformedAgeUnt = prcdrPerformedAgeUnt;
+    }
+    
+    
+    
+    public String getPrcdrPerformedAgeVl() {
+        return this.prcdrPerformedAgeVl;
+    }
+    
+    public void setPrcdrPerformedAgeVl(String prcdrPerformedAgeVl) {
+        this.prcdrPerformedAgeVl = prcdrPerformedAgeVl;
     }
     
     

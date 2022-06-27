@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Jun 6, 2022, 11:02:25 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 27, 2022, 10:39:49 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="ActivityDefinition" optimistic-lock="none" table="ActivityDefinition">
         <id name="id" type="string">
@@ -558,6 +558,26 @@
             <meta attribute="resource-type"/>
             <column length="65535" name="ActvtyDfn_Dsg_Tmg_Evnt"/>
         </property>
+        <property name="actvtyDfnDsgTmgRptBndsDurationCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ActvtyDfn_Dsg_Tmg_Rpt_BndsDuration_Cd"/>
+        </property>
+        <property name="actvtyDfnDsgTmgRptBndsDurationCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ActvtyDfn_Dsg_Tmg_Rpt_BndsDuration_Cmprtr"/>
+        </property>
+        <property name="actvtyDfnDsgTmgRptBndsDurationSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ActvtyDfn_Dsg_Tmg_Rpt_BndsDuration_Sys"/>
+        </property>
+        <property name="actvtyDfnDsgTmgRptBndsDurationUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ActvtyDfn_Dsg_Tmg_Rpt_BndsDuration_Unt"/>
+        </property>
+        <property name="actvtyDfnDsgTmgRptBndsDurationVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ActvtyDfn_Dsg_Tmg_Rpt_BndsDuration_Vl"/>
+        </property>
         <property name="actvtyDfnDsgTmgRptBndsPrdEnd" type="string">
             <meta attribute="resource-type"/>
             <column length="65535" name="ActvtyDfn_Dsg_Tmg_Rpt_BndsPrd_End"/>
@@ -1074,9 +1094,49 @@
             <meta attribute="resource-type"/>
             <column length="65535" name="ActvtyDfn_Subtitle"/>
         </property>
+        <property name="actvtyDfnTmgAgeCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ActvtyDfn_TmgAge_Cd"/>
+        </property>
+        <property name="actvtyDfnTmgAgeCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ActvtyDfn_TmgAge_Cmprtr"/>
+        </property>
+        <property name="actvtyDfnTmgAgeSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ActvtyDfn_TmgAge_Sys"/>
+        </property>
+        <property name="actvtyDfnTmgAgeUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ActvtyDfn_TmgAge_Unt"/>
+        </property>
+        <property name="actvtyDfnTmgAgeVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ActvtyDfn_TmgAge_Vl"/>
+        </property>
         <property name="actvtyDfnTmgDtTimeTyp" type="string">
             <meta attribute="resource-type"/>
             <column length="65535" name="ActvtyDfn_TmgDtTimeTyp"/>
+        </property>
+        <property name="actvtyDfnTmgDurationCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ActvtyDfn_TmgDuration_Cd"/>
+        </property>
+        <property name="actvtyDfnTmgDurationCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ActvtyDfn_TmgDuration_Cmprtr"/>
+        </property>
+        <property name="actvtyDfnTmgDurationSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ActvtyDfn_TmgDuration_Sys"/>
+        </property>
+        <property name="actvtyDfnTmgDurationUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ActvtyDfn_TmgDuration_Unt"/>
+        </property>
+        <property name="actvtyDfnTmgDurationVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ActvtyDfn_TmgDuration_Vl"/>
         </property>
         <property name="actvtyDfnTmgPrdEnd" type="string">
             <meta attribute="resource-type"/>
@@ -1153,6 +1213,26 @@
         <property name="actvtyDfnTmgTmgEvnt" type="string">
             <meta attribute="resource-type"/>
             <column length="65535" name="ActvtyDfn_TmgTmg_Evnt"/>
+        </property>
+        <property name="actvtyDfnTmgTmgRptBndsDurationCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ActvtyDfn_TmgTmg_Rpt_BndsDuration_Cd"/>
+        </property>
+        <property name="actvtyDfnTmgTmgRptBndsDurationCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ActvtyDfn_TmgTmg_Rpt_BndsDuration_Cmprtr"/>
+        </property>
+        <property name="actvtyDfnTmgTmgRptBndsDurationSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ActvtyDfn_TmgTmg_Rpt_BndsDuration_Sys"/>
+        </property>
+        <property name="actvtyDfnTmgTmgRptBndsDurationUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ActvtyDfn_TmgTmg_Rpt_BndsDuration_Unt"/>
+        </property>
+        <property name="actvtyDfnTmgTmgRptBndsDurationVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="ActvtyDfn_TmgTmg_Rpt_BndsDuration_Vl"/>
         </property>
         <property name="actvtyDfnTmgTmgRptBndsPrdEnd" type="string">
             <meta attribute="resource-type"/>
