@@ -66,29 +66,6 @@ public class Service
 		patientDao.closeCurrentSessionwithTransaction();
 	}
 
-	public void update(Patient entity) throws ParserConfigurationException, SAXException, IOException 
-	{
-		patientDao.openCurrentSessionwithTransaction();
-		patientDao.update(entity);
-		patientDao.closeCurrentSessionwithTransaction();
-	}
-
-	public Patient findById(String id) throws ParserConfigurationException, SAXException, IOException 
-	{
-		patientDao.openCurrentSession();
-		Patient patient = patientDao.findById(id);
-		patientDao.closeCurrentSession();
-		return patient;
-	}
-
-	public void delete(String id) throws ParserConfigurationException, SAXException, IOException 
-	{
-		patientDao.openCurrentSessionwithTransaction();
-		Patient patient = patientDao.findById(id);
-		patientDao.delete(patient);
-		patientDao.closeCurrentSessionwithTransaction();
-	}
-
 	public void findAll(int partition, String path) throws ParserConfigurationException, SAXException, IOException, HibernateException, ParseException, FHIRException 
 	{	
 		Session session = patientDao.openCurrentSession();
