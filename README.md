@@ -2,6 +2,7 @@
 
 ## What is CAMP FHIR?
 
+
 CAMP FHIR is a lightweight application inteded to transform clinical data stored in a relational database (RDBMS) to [HL7's Fast Healthcare Interoperability Resources](http://hl7.org/fhir/index.html). Once your clinical data are in FHIR, they can be used for a variety of downstream applications. 
 
 CAMP FHIR reads input data from custom views that we've built to align relational clinical data to the FHIR R4 specification. So long as you can put your data in these views, you can use CAMP FHIR to transform those data to FHIR. If your source data is in the PCORnet 4.1 Common Data Model, you're in luck: you should be able to use the view creation scripts in this repo with few or no changes. 
