@@ -1,3 +1,3 @@
 #! /bin/bash
 
-exec java -jar CAMPFHIR.jar
+exec java -jar CAMPFHIR.jar 
