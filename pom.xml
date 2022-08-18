@@ -5,6 +5,7 @@
   <version>0.0.1-SNAPSHOT</version>
   <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-jar-plugin -->
   <build>
+    
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
