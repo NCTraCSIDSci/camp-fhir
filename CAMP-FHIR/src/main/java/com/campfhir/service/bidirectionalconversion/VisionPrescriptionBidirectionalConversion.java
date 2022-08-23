@@ -8,217 +8,542 @@ public class VisionPrescriptionBidirectionalConversion
 		 main.java.com.campfhir.model.VisionPrescription v = new  main.java.com.campfhir.model.VisionPrescription();
 
 		/******************** id ********************************************************************************/
-		visionprescription.setId(v.getId());
+		v.setId(visionprescription.getIdElement().getIdPart());
 
-		/******************** VisionPrescription_Pnt ********************************************************************************/
-		if(visionprescription.hasPatient()) {
-			v.setVisionPrescriptionPnt(String.valueOf(visionprescription.getPatient()));
-		}
-		/******************** VisionPrescription_Enc ********************************************************************************/
-		if(visionprescription.hasEncounter()) {
-			v.setVisionPrescriptionEnc(String.valueOf(visionprescription.getEncounter()));
-		}
 		/******************** visionprescriptionstatus ********************************************************************************/
 		org.hl7.fhir.r4.model.VisionPrescription.VisionStatus visionprescriptionstatus = visionprescription.getStatus();
-		v.setVisionPrescriptionSts(visionprescriptionstatus.toCode());
+		if(visionprescriptionstatus!=null) {
+			v.addVisionPrescriptionSts(visionprescriptionstatus.toCode());
+		} else {
+			v.addVisionPrescriptionSts("NULL");
+		}
+
+		/******************** VisionPrescription_Enc ********************************************************************************/
+		if(visionprescription.hasEncounter()) {
+
+			if(visionprescription.getEncounter().getReference() != null) {
+			v.addVisionPrescriptionEnc(visionprescription.getEncounter().getReference());
+			}
+		} else {
+			v.addVisionPrescriptionEnc("NULL");
+		}
+
 
 		/******************** VisionPrescription_Created ********************************************************************************/
 		if(visionprescription.hasCreated()) {
-			v.setVisionPrescriptionCreated(String.valueOf(visionprescription.getCreated()));
+
+			v.addVisionPrescriptionCreated("\""+ca.uhn.fhir.util.DateUtils.formatDate(visionprescription.getCreated())+"\"");
+		} else {
+			v.addVisionPrescriptionCreated("NULL");
 		}
+
+
+		/******************** visionprescriptionidentifier ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.Identifier> visionprescriptionidentifierlist = visionprescription.getIdentifier();
+		for(int visionprescriptionidentifieri = 0; visionprescriptionidentifieri<visionprescriptionidentifierlist.size();visionprescriptionidentifieri++ ) {
+		org.hl7.fhir.r4.model.Identifier  visionprescriptionidentifier = visionprescriptionidentifierlist.get(visionprescriptionidentifieri);
+
+		/******************** VisionPrescription_Id_Vl ********************************************************************************/
+		if(visionprescriptionidentifieri == 0) {v.addVisionPrescriptionIdVl("[");}
+		if(visionprescriptionidentifier.hasValue()) {
+
+			v.addVisionPrescriptionIdVl(String.valueOf(visionprescriptionidentifier.getValue()));
+		} else {
+			v.addVisionPrescriptionIdVl("NULL");
+		}
+
+		if(visionprescriptionidentifieri == visionprescriptionidentifierlist.size()-1) {v.addVisionPrescriptionIdVl("]");}
+
+
+		/******************** visionprescriptionidentifiertype ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept visionprescriptionidentifiertype = visionprescriptionidentifier.getType();
+
+		/******************** VisionPrescription_Id_Typ_Txt ********************************************************************************/
+		if(visionprescriptionidentifieri == 0) {v.addVisionPrescriptionIdTypTxt("[");}
+		if(visionprescriptionidentifiertype.hasText()) {
+
+			v.addVisionPrescriptionIdTypTxt(String.valueOf(visionprescriptionidentifiertype.getText()));
+		} else {
+			v.addVisionPrescriptionIdTypTxt("NULL");
+		}
+
+		if(visionprescriptionidentifieri == visionprescriptionidentifierlist.size()-1) {v.addVisionPrescriptionIdTypTxt("]");}
+
+
+		/******************** visionprescriptionidentifiertypecoding ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.Coding> visionprescriptionidentifiertypecodinglist = visionprescriptionidentifiertype.getCoding();
+		for(int visionprescriptionidentifiertypecodingi = 0; visionprescriptionidentifiertypecodingi<visionprescriptionidentifiertypecodinglist.size();visionprescriptionidentifiertypecodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  visionprescriptionidentifiertypecoding = visionprescriptionidentifiertypecodinglist.get(visionprescriptionidentifiertypecodingi);
+
+		/******************** VisionPrescription_Id_Typ_Cdg_Dsply ********************************************************************************/
+		if(visionprescriptionidentifiertypecodingi == 0) {v.addVisionPrescriptionIdTypCdgDsply("[[");}
+		if(visionprescriptionidentifiertypecoding.hasDisplay()) {
+
+			v.addVisionPrescriptionIdTypCdgDsply(String.valueOf(visionprescriptionidentifiertypecoding.getDisplay()));
+		} else {
+			v.addVisionPrescriptionIdTypCdgDsply("NULL");
+		}
+
+		if(visionprescriptionidentifiertypecodingi == visionprescriptionidentifiertypecodinglist.size()-1) {v.addVisionPrescriptionIdTypCdgDsply("]]");}
+
+
+		/******************** VisionPrescription_Id_Typ_Cdg_Vrsn ********************************************************************************/
+		if(visionprescriptionidentifiertypecodingi == 0) {v.addVisionPrescriptionIdTypCdgVrsn("[[");}
+		if(visionprescriptionidentifiertypecoding.hasVersion()) {
+
+			v.addVisionPrescriptionIdTypCdgVrsn(String.valueOf(visionprescriptionidentifiertypecoding.getVersion()));
+		} else {
+			v.addVisionPrescriptionIdTypCdgVrsn("NULL");
+		}
+
+		if(visionprescriptionidentifiertypecodingi == visionprescriptionidentifiertypecodinglist.size()-1) {v.addVisionPrescriptionIdTypCdgVrsn("]]");}
+
+
+		/******************** VisionPrescription_Id_Typ_Cdg_Cd ********************************************************************************/
+		if(visionprescriptionidentifiertypecodingi == 0) {v.addVisionPrescriptionIdTypCdgCd("[[");}
+		if(visionprescriptionidentifiertypecoding.hasCode()) {
+
+			v.addVisionPrescriptionIdTypCdgCd(String.valueOf(visionprescriptionidentifiertypecoding.getCode()));
+		} else {
+			v.addVisionPrescriptionIdTypCdgCd("NULL");
+		}
+
+		if(visionprescriptionidentifiertypecodingi == visionprescriptionidentifiertypecodinglist.size()-1) {v.addVisionPrescriptionIdTypCdgCd("]]");}
+
+
+		/******************** VisionPrescription_Id_Typ_Cdg_UsrSltd ********************************************************************************/
+		if(visionprescriptionidentifiertypecodingi == 0) {v.addVisionPrescriptionIdTypCdgUsrSltd("[[");}
+		if(visionprescriptionidentifiertypecoding.hasUserSelected()) {
+
+			v.addVisionPrescriptionIdTypCdgUsrSltd(String.valueOf(visionprescriptionidentifiertypecoding.getUserSelected()));
+		} else {
+			v.addVisionPrescriptionIdTypCdgUsrSltd("NULL");
+		}
+
+		if(visionprescriptionidentifiertypecodingi == visionprescriptionidentifiertypecodinglist.size()-1) {v.addVisionPrescriptionIdTypCdgUsrSltd("]]");}
+
+
+		/******************** VisionPrescription_Id_Typ_Cdg_Sys ********************************************************************************/
+		if(visionprescriptionidentifiertypecodingi == 0) {v.addVisionPrescriptionIdTypCdgSys("[[");}
+		if(visionprescriptionidentifiertypecoding.hasSystem()) {
+
+			v.addVisionPrescriptionIdTypCdgSys(String.valueOf(visionprescriptionidentifiertypecoding.getSystem()));
+		} else {
+			v.addVisionPrescriptionIdTypCdgSys("NULL");
+		}
+
+		if(visionprescriptionidentifiertypecodingi == visionprescriptionidentifiertypecodinglist.size()-1) {v.addVisionPrescriptionIdTypCdgSys("]]");}
+
+
+		 };
+		/******************** visionprescriptionidentifierperiod ********************************************************************************/
+		org.hl7.fhir.r4.model.Period visionprescriptionidentifierperiod = visionprescriptionidentifier.getPeriod();
+
+		/******************** VisionPrescription_Id_Prd_Strt ********************************************************************************/
+		if(visionprescriptionidentifieri == 0) {v.addVisionPrescriptionIdPrdStrt("[");}
+		if(visionprescriptionidentifierperiod.hasStart()) {
+
+			v.addVisionPrescriptionIdPrdStrt("\""+ca.uhn.fhir.util.DateUtils.formatDate(visionprescriptionidentifierperiod.getStart())+"\"");
+		} else {
+			v.addVisionPrescriptionIdPrdStrt("NULL");
+		}
+
+		if(visionprescriptionidentifieri == visionprescriptionidentifierlist.size()-1) {v.addVisionPrescriptionIdPrdStrt("]");}
+
+
+		/******************** VisionPrescription_Id_Prd_End ********************************************************************************/
+		if(visionprescriptionidentifieri == 0) {v.addVisionPrescriptionIdPrdEnd("[");}
+		if(visionprescriptionidentifierperiod.hasEnd()) {
+
+			v.addVisionPrescriptionIdPrdEnd("\""+ca.uhn.fhir.util.DateUtils.formatDate(visionprescriptionidentifierperiod.getEnd())+"\"");
+		} else {
+			v.addVisionPrescriptionIdPrdEnd("NULL");
+		}
+
+		if(visionprescriptionidentifieri == visionprescriptionidentifierlist.size()-1) {v.addVisionPrescriptionIdPrdEnd("]");}
+
+
+		/******************** visionprescriptionidentifieruse ********************************************************************************/
+		org.hl7.fhir.r4.model.Identifier.IdentifierUse visionprescriptionidentifieruse = visionprescriptionidentifier.getUse();
+		if(visionprescriptionidentifieruse!=null) {
+		if(visionprescriptionidentifieri == 0) {
+
+		v.addVisionPrescriptionIdUse("[");		}
+			v.addVisionPrescriptionIdUse(visionprescriptionidentifieruse.toCode());
+		if(visionprescriptionidentifieri == visionprescriptionidentifierlist.size()-1) {
+
+		v.addVisionPrescriptionIdUse("]");		}
+
+		} else {
+			v.addVisionPrescriptionIdUse("NULL");
+		}
+
+		/******************** VisionPrescription_Id_Assigner ********************************************************************************/
+		if(visionprescriptionidentifieri == 0) {v.addVisionPrescriptionIdAssigner("[");}
+		if(visionprescriptionidentifier.hasAssigner()) {
+
+			if(visionprescriptionidentifier.getAssigner().getReference() != null) {
+			v.addVisionPrescriptionIdAssigner(visionprescriptionidentifier.getAssigner().getReference());
+			}
+		} else {
+			v.addVisionPrescriptionIdAssigner("NULL");
+		}
+
+		if(visionprescriptionidentifieri == visionprescriptionidentifierlist.size()-1) {v.addVisionPrescriptionIdAssigner("]");}
+
+
+		/******************** VisionPrescription_Id_Sys ********************************************************************************/
+		if(visionprescriptionidentifieri == 0) {v.addVisionPrescriptionIdSys("[");}
+		if(visionprescriptionidentifier.hasSystem()) {
+
+			v.addVisionPrescriptionIdSys(String.valueOf(visionprescriptionidentifier.getSystem()));
+		} else {
+			v.addVisionPrescriptionIdSys("NULL");
+		}
+
+		if(visionprescriptionidentifieri == visionprescriptionidentifierlist.size()-1) {v.addVisionPrescriptionIdSys("]");}
+
+
+		 };
+		/******************** VisionPrescription_Prescriber ********************************************************************************/
+		if(visionprescription.hasPrescriber()) {
+
+			if(visionprescription.getPrescriber().getReference() != null) {
+			v.addVisionPrescriptionPrescriber(visionprescription.getPrescriber().getReference());
+			}
+		} else {
+			v.addVisionPrescriptionPrescriber("NULL");
+		}
+
+
+		/******************** VisionPrescription_DtWritten ********************************************************************************/
+		if(visionprescription.hasDateWritten()) {
+
+			v.addVisionPrescriptionDtWritten("\""+ca.uhn.fhir.util.DateUtils.formatDate(visionprescription.getDateWritten())+"\"");
+		} else {
+			v.addVisionPrescriptionDtWritten("NULL");
+		}
+
+
 		/******************** visionprescriptionlensspecification ********************************************************************************/
-		org.hl7.fhir.r4.model.VisionPrescription.VisionPrescriptionLensSpecificationComponent visionprescriptionlensspecification = visionprescription.getLensSpecificationFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.VisionPrescription.VisionPrescriptionLensSpecificationComponent> visionprescriptionlensspecificationlist = visionprescription.getLensSpecification();
+		for(int visionprescriptionlensspecificationi = 0; visionprescriptionlensspecificationi<visionprescriptionlensspecificationlist.size();visionprescriptionlensspecificationi++ ) {
+		org.hl7.fhir.r4.model.VisionPrescription.VisionPrescriptionLensSpecificationComponent  visionprescriptionlensspecification = visionprescriptionlensspecificationlist.get(visionprescriptionlensspecificationi);
 
-		/******************** visionprescriptionlensspecificationeye ********************************************************************************/
-		org.hl7.fhir.r4.model.VisionPrescription.VisionEyes visionprescriptionlensspecificationeye = visionprescriptionlensspecification.getEye();
-		v.setVisionPrescriptionLensSpcfctnEye(visionprescriptionlensspecificationeye.toCode());
-
-		/******************** VisionPrescription_LensSpcfctn_Axis ********************************************************************************/
-		if(visionprescriptionlensspecification.hasAxis()) {
-			v.setVisionPrescriptionLensSpcfctnAxis(String.valueOf(visionprescriptionlensspecification.getAxis()));
-		}
-		/******************** VisionPrescription_LensSpcfctn_Sphere ********************************************************************************/
-		if(visionprescriptionlensspecification.hasSphere()) {
-			v.setVisionPrescriptionLensSpcfctnSphere(String.valueOf(visionprescriptionlensspecification.getSphere()));
-		}
-		/******************** visionprescriptionlensspecificationprism ********************************************************************************/
-		org.hl7.fhir.r4.model.VisionPrescription.PrismComponent visionprescriptionlensspecificationprism = visionprescriptionlensspecification.getPrismFirstRep();
-
-		/******************** visionprescriptionlensspecificationprismbase ********************************************************************************/
-		org.hl7.fhir.r4.model.VisionPrescription.VisionBase visionprescriptionlensspecificationprismbase = visionprescriptionlensspecificationprism.getBase();
-		v.setVisionPrescriptionLensSpcfctnPrismBase(visionprescriptionlensspecificationprismbase.toCode());
-
-		/******************** VisionPrescription_LensSpcfctn_Prism_Amnt ********************************************************************************/
-		if(visionprescriptionlensspecificationprism.hasAmount()) {
-			v.setVisionPrescriptionLensSpcfctnPrismAmnt(String.valueOf(visionprescriptionlensspecificationprism.getAmount()));
-		}
-		/******************** VisionPrescription_LensSpcfctn_Cylinder ********************************************************************************/
-		if(visionprescriptionlensspecification.hasCylinder()) {
-			v.setVisionPrescriptionLensSpcfctnCylinder(String.valueOf(visionprescriptionlensspecification.getCylinder()));
-		}
-		/******************** VisionPrescription_LensSpcfctn_Power ********************************************************************************/
-		if(visionprescriptionlensspecification.hasPower()) {
-			v.setVisionPrescriptionLensSpcfctnPower(String.valueOf(visionprescriptionlensspecification.getPower()));
-		}
-		/******************** VisionPrescription_LensSpcfctn_Diameter ********************************************************************************/
-		if(visionprescriptionlensspecification.hasDiameter()) {
-			v.setVisionPrescriptionLensSpcfctnDiameter(String.valueOf(visionprescriptionlensspecification.getDiameter()));
-		}
-		/******************** VisionPrescription_LensSpcfctn_Add ********************************************************************************/
-		if(visionprescriptionlensspecification.hasAdd()) {
-			v.setVisionPrescriptionLensSpcfctnAdd(String.valueOf(visionprescriptionlensspecification.getAdd()));
-		}
-		/******************** VisionPrescription_LensSpcfctn_Brand ********************************************************************************/
-		if(visionprescriptionlensspecification.hasBrand()) {
-			v.setVisionPrescriptionLensSpcfctnBrand(String.valueOf(visionprescriptionlensspecification.getBrand()));
-		}
-		/******************** VisionPrescription_LensSpcfctn_BackCurve ********************************************************************************/
-		if(visionprescriptionlensspecification.hasBackCurve()) {
-			v.setVisionPrescriptionLensSpcfctnBackCurve(String.valueOf(visionprescriptionlensspecification.getBackCurve()));
-		}
-		/******************** VisionPrescription_LensSpcfctn_Color ********************************************************************************/
-		if(visionprescriptionlensspecification.hasColor()) {
-			v.setVisionPrescriptionLensSpcfctnColor(String.valueOf(visionprescriptionlensspecification.getColor()));
-		}
 		/******************** visionprescriptionlensspecificationnote ********************************************************************************/
-		org.hl7.fhir.r4.model.Annotation visionprescriptionlensspecificationnote = visionprescriptionlensspecification.getNoteFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.Annotation> visionprescriptionlensspecificationnotelist = visionprescriptionlensspecification.getNote();
+		for(int visionprescriptionlensspecificationnotei = 0; visionprescriptionlensspecificationnotei<visionprescriptionlensspecificationnotelist.size();visionprescriptionlensspecificationnotei++ ) {
+		org.hl7.fhir.r4.model.Annotation  visionprescriptionlensspecificationnote = visionprescriptionlensspecificationnotelist.get(visionprescriptionlensspecificationnotei);
 
 		/******************** VisionPrescription_LensSpcfctn_Nt_Time ********************************************************************************/
+		if(visionprescriptionlensspecificationnotei == 0) {v.addVisionPrescriptionLensSpcfctnNtTime("[[");}
 		if(visionprescriptionlensspecificationnote.hasTime()) {
-			v.setVisionPrescriptionLensSpcfctnNtTime(String.valueOf(visionprescriptionlensspecificationnote.getTime()));
+
+			v.addVisionPrescriptionLensSpcfctnNtTime("\""+ca.uhn.fhir.util.DateUtils.formatDate(visionprescriptionlensspecificationnote.getTime())+"\"");
+		} else {
+			v.addVisionPrescriptionLensSpcfctnNtTime("NULL");
 		}
-		/******************** VisionPrescription_LensSpcfctn_Nt_Txt ********************************************************************************/
-		if(visionprescriptionlensspecificationnote.hasText()) {
-			v.setVisionPrescriptionLensSpcfctnNtTxt(String.valueOf(visionprescriptionlensspecificationnote.getText()));
-		}
+
+		if(visionprescriptionlensspecificationnotei == visionprescriptionlensspecificationnotelist.size()-1) {v.addVisionPrescriptionLensSpcfctnNtTime("]]");}
+
+
 		/******************** VisionPrescription_LensSpcfctn_Nt_AthrRfrnc ********************************************************************************/
+		if(visionprescriptionlensspecificationnotei == 0) {v.addVisionPrescriptionLensSpcfctnNtAthrRfrnc("[[");}
 		if(visionprescriptionlensspecificationnote.hasAuthorReference()) {
-			v.setVisionPrescriptionLensSpcfctnNtAthrRfrnc(String.valueOf(visionprescriptionlensspecificationnote.getAuthorReference()));
+
+			if(visionprescriptionlensspecificationnote.getAuthorReference().getReference() != null) {
+			v.addVisionPrescriptionLensSpcfctnNtAthrRfrnc(visionprescriptionlensspecificationnote.getAuthorReference().getReference());
+			}
+		} else {
+			v.addVisionPrescriptionLensSpcfctnNtAthrRfrnc("NULL");
 		}
+
+		if(visionprescriptionlensspecificationnotei == visionprescriptionlensspecificationnotelist.size()-1) {v.addVisionPrescriptionLensSpcfctnNtAthrRfrnc("]]");}
+
+
+		/******************** VisionPrescription_LensSpcfctn_Nt_Txt ********************************************************************************/
+		if(visionprescriptionlensspecificationnotei == 0) {v.addVisionPrescriptionLensSpcfctnNtTxt("[[");}
+		if(visionprescriptionlensspecificationnote.hasText()) {
+
+			v.addVisionPrescriptionLensSpcfctnNtTxt(String.valueOf(visionprescriptionlensspecificationnote.getText()));
+		} else {
+			v.addVisionPrescriptionLensSpcfctnNtTxt("NULL");
+		}
+
+		if(visionprescriptionlensspecificationnotei == visionprescriptionlensspecificationnotelist.size()-1) {v.addVisionPrescriptionLensSpcfctnNtTxt("]]");}
+
+
 		/******************** VisionPrescription_LensSpcfctn_Nt_AthrStrgTyp ********************************************************************************/
+		if(visionprescriptionlensspecificationnotei == 0) {v.addVisionPrescriptionLensSpcfctnNtAthrStrgTyp("[[");}
 		if(visionprescriptionlensspecificationnote.hasAuthorStringType()) {
-			v.setVisionPrescriptionLensSpcfctnNtAthrStrgTyp(String.valueOf(visionprescriptionlensspecificationnote.getAuthorStringType()));
+
+			v.addVisionPrescriptionLensSpcfctnNtAthrStrgTyp("\""+visionprescriptionlensspecificationnote.getAuthorStringType().getValueAsString()+"\"");
+		} else {
+			v.addVisionPrescriptionLensSpcfctnNtAthrStrgTyp("NULL");
 		}
+
+		if(visionprescriptionlensspecificationnotei == visionprescriptionlensspecificationnotelist.size()-1) {v.addVisionPrescriptionLensSpcfctnNtAthrStrgTyp("]]");}
+
+
+		 };
 		/******************** visionprescriptionlensspecificationproduct ********************************************************************************/
 		org.hl7.fhir.r4.model.CodeableConcept visionprescriptionlensspecificationproduct = visionprescriptionlensspecification.getProduct();
 
 		/******************** VisionPrescription_LensSpcfctn_Prdct_Txt ********************************************************************************/
 		if(visionprescriptionlensspecificationproduct.hasText()) {
-			v.setVisionPrescriptionLensSpcfctnPrdctTxt(String.valueOf(visionprescriptionlensspecificationproduct.getText()));
+
+			v.addVisionPrescriptionLensSpcfctnPrdctTxt(String.valueOf(visionprescriptionlensspecificationproduct.getText()));
+		} else {
+			v.addVisionPrescriptionLensSpcfctnPrdctTxt("NULL");
 		}
+
+
 		/******************** visionprescriptionlensspecificationproductcoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding visionprescriptionlensspecificationproductcoding = visionprescriptionlensspecificationproduct.getCodingFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.Coding> visionprescriptionlensspecificationproductcodinglist = visionprescriptionlensspecificationproduct.getCoding();
+		for(int visionprescriptionlensspecificationproductcodingi = 0; visionprescriptionlensspecificationproductcodingi<visionprescriptionlensspecificationproductcodinglist.size();visionprescriptionlensspecificationproductcodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  visionprescriptionlensspecificationproductcoding = visionprescriptionlensspecificationproductcodinglist.get(visionprescriptionlensspecificationproductcodingi);
+
+		/******************** VisionPrescription_LensSpcfctn_Prdct_Cdg_Dsply ********************************************************************************/
+		if(visionprescriptionlensspecificationproductcodingi == 0) {v.addVisionPrescriptionLensSpcfctnPrdctCdgDsply("[[");}
+		if(visionprescriptionlensspecificationproductcoding.hasDisplay()) {
+
+			v.addVisionPrescriptionLensSpcfctnPrdctCdgDsply(String.valueOf(visionprescriptionlensspecificationproductcoding.getDisplay()));
+		} else {
+			v.addVisionPrescriptionLensSpcfctnPrdctCdgDsply("NULL");
+		}
+
+		if(visionprescriptionlensspecificationproductcodingi == visionprescriptionlensspecificationproductcodinglist.size()-1) {v.addVisionPrescriptionLensSpcfctnPrdctCdgDsply("]]");}
+
 
 		/******************** VisionPrescription_LensSpcfctn_Prdct_Cdg_Vrsn ********************************************************************************/
+		if(visionprescriptionlensspecificationproductcodingi == 0) {v.addVisionPrescriptionLensSpcfctnPrdctCdgVrsn("[[");}
 		if(visionprescriptionlensspecificationproductcoding.hasVersion()) {
-			v.setVisionPrescriptionLensSpcfctnPrdctCdgVrsn(String.valueOf(visionprescriptionlensspecificationproductcoding.getVersion()));
+
+			v.addVisionPrescriptionLensSpcfctnPrdctCdgVrsn(String.valueOf(visionprescriptionlensspecificationproductcoding.getVersion()));
+		} else {
+			v.addVisionPrescriptionLensSpcfctnPrdctCdgVrsn("NULL");
 		}
-		/******************** VisionPrescription_LensSpcfctn_Prdct_Cdg_Dsply ********************************************************************************/
-		if(visionprescriptionlensspecificationproductcoding.hasDisplay()) {
-			v.setVisionPrescriptionLensSpcfctnPrdctCdgDsply(String.valueOf(visionprescriptionlensspecificationproductcoding.getDisplay()));
-		}
+
+		if(visionprescriptionlensspecificationproductcodingi == visionprescriptionlensspecificationproductcodinglist.size()-1) {v.addVisionPrescriptionLensSpcfctnPrdctCdgVrsn("]]");}
+
+
 		/******************** VisionPrescription_LensSpcfctn_Prdct_Cdg_Cd ********************************************************************************/
+		if(visionprescriptionlensspecificationproductcodingi == 0) {v.addVisionPrescriptionLensSpcfctnPrdctCdgCd("[[");}
 		if(visionprescriptionlensspecificationproductcoding.hasCode()) {
-			v.setVisionPrescriptionLensSpcfctnPrdctCdgCd(String.valueOf(visionprescriptionlensspecificationproductcoding.getCode()));
+
+			v.addVisionPrescriptionLensSpcfctnPrdctCdgCd(String.valueOf(visionprescriptionlensspecificationproductcoding.getCode()));
+		} else {
+			v.addVisionPrescriptionLensSpcfctnPrdctCdgCd("NULL");
 		}
+
+		if(visionprescriptionlensspecificationproductcodingi == visionprescriptionlensspecificationproductcodinglist.size()-1) {v.addVisionPrescriptionLensSpcfctnPrdctCdgCd("]]");}
+
+
 		/******************** VisionPrescription_LensSpcfctn_Prdct_Cdg_UsrSltd ********************************************************************************/
+		if(visionprescriptionlensspecificationproductcodingi == 0) {v.addVisionPrescriptionLensSpcfctnPrdctCdgUsrSltd("[[");}
 		if(visionprescriptionlensspecificationproductcoding.hasUserSelected()) {
-			v.setVisionPrescriptionLensSpcfctnPrdctCdgUsrSltd(String.valueOf(visionprescriptionlensspecificationproductcoding.getUserSelected()));
+
+			v.addVisionPrescriptionLensSpcfctnPrdctCdgUsrSltd(String.valueOf(visionprescriptionlensspecificationproductcoding.getUserSelected()));
+		} else {
+			v.addVisionPrescriptionLensSpcfctnPrdctCdgUsrSltd("NULL");
 		}
+
+		if(visionprescriptionlensspecificationproductcodingi == visionprescriptionlensspecificationproductcodinglist.size()-1) {v.addVisionPrescriptionLensSpcfctnPrdctCdgUsrSltd("]]");}
+
+
 		/******************** VisionPrescription_LensSpcfctn_Prdct_Cdg_Sys ********************************************************************************/
+		if(visionprescriptionlensspecificationproductcodingi == 0) {v.addVisionPrescriptionLensSpcfctnPrdctCdgSys("[[");}
 		if(visionprescriptionlensspecificationproductcoding.hasSystem()) {
-			v.setVisionPrescriptionLensSpcfctnPrdctCdgSys(String.valueOf(visionprescriptionlensspecificationproductcoding.getSystem()));
+
+			v.addVisionPrescriptionLensSpcfctnPrdctCdgSys(String.valueOf(visionprescriptionlensspecificationproductcoding.getSystem()));
+		} else {
+			v.addVisionPrescriptionLensSpcfctnPrdctCdgSys("NULL");
 		}
+
+		if(visionprescriptionlensspecificationproductcodingi == visionprescriptionlensspecificationproductcodinglist.size()-1) {v.addVisionPrescriptionLensSpcfctnPrdctCdgSys("]]");}
+
+
+		 };
+		/******************** VisionPrescription_LensSpcfctn_Color ********************************************************************************/
+		if(visionprescriptionlensspecification.hasColor()) {
+
+			v.addVisionPrescriptionLensSpcfctnColor(String.valueOf(visionprescriptionlensspecification.getColor()));
+		} else {
+			v.addVisionPrescriptionLensSpcfctnColor("NULL");
+		}
+
+
+		/******************** visionprescriptionlensspecificationeye ********************************************************************************/
+		org.hl7.fhir.r4.model.VisionPrescription.VisionEyes visionprescriptionlensspecificationeye = visionprescriptionlensspecification.getEye();
+		if(visionprescriptionlensspecificationeye!=null) {
+			v.addVisionPrescriptionLensSpcfctnEye(visionprescriptionlensspecificationeye.toCode());
+		} else {
+			v.addVisionPrescriptionLensSpcfctnEye("NULL");
+		}
+
+		/******************** VisionPrescription_LensSpcfctn_Axis ********************************************************************************/
+		if(visionprescriptionlensspecification.hasAxis()) {
+
+			v.addVisionPrescriptionLensSpcfctnAxis(String.valueOf(visionprescriptionlensspecification.getAxis()));
+		} else {
+			v.addVisionPrescriptionLensSpcfctnAxis("NULL");
+		}
+
+
+		/******************** visionprescriptionlensspecificationprism ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.VisionPrescription.PrismComponent> visionprescriptionlensspecificationprismlist = visionprescriptionlensspecification.getPrism();
+		for(int visionprescriptionlensspecificationprismi = 0; visionprescriptionlensspecificationprismi<visionprescriptionlensspecificationprismlist.size();visionprescriptionlensspecificationprismi++ ) {
+		org.hl7.fhir.r4.model.VisionPrescription.PrismComponent  visionprescriptionlensspecificationprism = visionprescriptionlensspecificationprismlist.get(visionprescriptionlensspecificationprismi);
+
+		/******************** visionprescriptionlensspecificationprismbase ********************************************************************************/
+		org.hl7.fhir.r4.model.VisionPrescription.VisionBase visionprescriptionlensspecificationprismbase = visionprescriptionlensspecificationprism.getBase();
+		if(visionprescriptionlensspecificationprismbase!=null) {
+		if(visionprescriptionlensspecificationprismi == 0) {
+
+		v.addVisionPrescriptionLensSpcfctnPrismBase("[[");		}
+			v.addVisionPrescriptionLensSpcfctnPrismBase(visionprescriptionlensspecificationprismbase.toCode());
+		if(visionprescriptionlensspecificationprismi == visionprescriptionlensspecificationprismlist.size()-1) {
+
+		v.addVisionPrescriptionLensSpcfctnPrismBase("]]");		}
+
+		} else {
+			v.addVisionPrescriptionLensSpcfctnPrismBase("NULL");
+		}
+
+		/******************** VisionPrescription_LensSpcfctn_Prism_Amnt ********************************************************************************/
+		if(visionprescriptionlensspecificationprismi == 0) {v.addVisionPrescriptionLensSpcfctnPrismAmnt("[[");}
+		if(visionprescriptionlensspecificationprism.hasAmount()) {
+
+			v.addVisionPrescriptionLensSpcfctnPrismAmnt(String.valueOf(visionprescriptionlensspecificationprism.getAmount()));
+		} else {
+			v.addVisionPrescriptionLensSpcfctnPrismAmnt("NULL");
+		}
+
+		if(visionprescriptionlensspecificationprismi == visionprescriptionlensspecificationprismlist.size()-1) {v.addVisionPrescriptionLensSpcfctnPrismAmnt("]]");}
+
+
+		 };
+		/******************** VisionPrescription_LensSpcfctn_Cylinder ********************************************************************************/
+		if(visionprescriptionlensspecification.hasCylinder()) {
+
+			v.addVisionPrescriptionLensSpcfctnCylinder(String.valueOf(visionprescriptionlensspecification.getCylinder()));
+		} else {
+			v.addVisionPrescriptionLensSpcfctnCylinder("NULL");
+		}
+
+
+		/******************** VisionPrescription_LensSpcfctn_Sphere ********************************************************************************/
+		if(visionprescriptionlensspecification.hasSphere()) {
+
+			v.addVisionPrescriptionLensSpcfctnSphere(String.valueOf(visionprescriptionlensspecification.getSphere()));
+		} else {
+			v.addVisionPrescriptionLensSpcfctnSphere("NULL");
+		}
+
+
+		/******************** VisionPrescription_LensSpcfctn_Brand ********************************************************************************/
+		if(visionprescriptionlensspecification.hasBrand()) {
+
+			v.addVisionPrescriptionLensSpcfctnBrand(String.valueOf(visionprescriptionlensspecification.getBrand()));
+		} else {
+			v.addVisionPrescriptionLensSpcfctnBrand("NULL");
+		}
+
+
+		/******************** VisionPrescription_LensSpcfctn_Power ********************************************************************************/
+		if(visionprescriptionlensspecification.hasPower()) {
+
+			v.addVisionPrescriptionLensSpcfctnPower(String.valueOf(visionprescriptionlensspecification.getPower()));
+		} else {
+			v.addVisionPrescriptionLensSpcfctnPower("NULL");
+		}
+
+
+		/******************** VisionPrescription_LensSpcfctn_Add ********************************************************************************/
+		if(visionprescriptionlensspecification.hasAdd()) {
+
+			v.addVisionPrescriptionLensSpcfctnAdd(String.valueOf(visionprescriptionlensspecification.getAdd()));
+		} else {
+			v.addVisionPrescriptionLensSpcfctnAdd("NULL");
+		}
+
+
+		/******************** VisionPrescription_LensSpcfctn_Diameter ********************************************************************************/
+		if(visionprescriptionlensspecification.hasDiameter()) {
+
+			v.addVisionPrescriptionLensSpcfctnDiameter(String.valueOf(visionprescriptionlensspecification.getDiameter()));
+		} else {
+			v.addVisionPrescriptionLensSpcfctnDiameter("NULL");
+		}
+
+
+		/******************** VisionPrescription_LensSpcfctn_BackCurve ********************************************************************************/
+		if(visionprescriptionlensspecification.hasBackCurve()) {
+
+			v.addVisionPrescriptionLensSpcfctnBackCurve(String.valueOf(visionprescriptionlensspecification.getBackCurve()));
+		} else {
+			v.addVisionPrescriptionLensSpcfctnBackCurve("NULL");
+		}
+
+
 		/******************** visionprescriptionlensspecificationduration ********************************************************************************/
 		org.hl7.fhir.r4.model.Quantity visionprescriptionlensspecificationduration = visionprescriptionlensspecification.getDuration();
 
 		/******************** VisionPrescription_LensSpcfctn_Duration_Vl ********************************************************************************/
 		if(visionprescriptionlensspecificationduration.hasValue()) {
-			v.setVisionPrescriptionLensSpcfctnDurationVl(String.valueOf(visionprescriptionlensspecificationduration.getValue()));
+
+			v.addVisionPrescriptionLensSpcfctnDurationVl(String.valueOf(visionprescriptionlensspecificationduration.getValue()));
+		} else {
+			v.addVisionPrescriptionLensSpcfctnDurationVl("NULL");
 		}
+
+
 		/******************** visionprescriptionlensspecificationdurationcomparator ********************************************************************************/
 		org.hl7.fhir.r4.model.Quantity.QuantityComparator visionprescriptionlensspecificationdurationcomparator = visionprescriptionlensspecificationduration.getComparator();
-		v.setVisionPrescriptionLensSpcfctnDurationCmprtr(visionprescriptionlensspecificationdurationcomparator.toCode());
+		if(visionprescriptionlensspecificationdurationcomparator!=null) {
+			v.addVisionPrescriptionLensSpcfctnDurationCmprtr(visionprescriptionlensspecificationdurationcomparator.toCode());
+		} else {
+			v.addVisionPrescriptionLensSpcfctnDurationCmprtr("NULL");
+		}
 
 		/******************** VisionPrescription_LensSpcfctn_Duration_Cd ********************************************************************************/
 		if(visionprescriptionlensspecificationduration.hasCode()) {
-			v.setVisionPrescriptionLensSpcfctnDurationCd(String.valueOf(visionprescriptionlensspecificationduration.getCode()));
+
+			v.addVisionPrescriptionLensSpcfctnDurationCd(String.valueOf(visionprescriptionlensspecificationduration.getCode()));
+		} else {
+			v.addVisionPrescriptionLensSpcfctnDurationCd("NULL");
 		}
+
+
 		/******************** VisionPrescription_LensSpcfctn_Duration_Unt ********************************************************************************/
 		if(visionprescriptionlensspecificationduration.hasUnit()) {
-			v.setVisionPrescriptionLensSpcfctnDurationUnt(String.valueOf(visionprescriptionlensspecificationduration.getUnit()));
+
+			v.addVisionPrescriptionLensSpcfctnDurationUnt(String.valueOf(visionprescriptionlensspecificationduration.getUnit()));
+		} else {
+			v.addVisionPrescriptionLensSpcfctnDurationUnt("NULL");
 		}
+
+
 		/******************** VisionPrescription_LensSpcfctn_Duration_Sys ********************************************************************************/
 		if(visionprescriptionlensspecificationduration.hasSystem()) {
-			v.setVisionPrescriptionLensSpcfctnDurationSys(String.valueOf(visionprescriptionlensspecificationduration.getSystem()));
-		}
-		/******************** VisionPrescription_DtWritten ********************************************************************************/
-		if(visionprescription.hasDateWritten()) {
-			v.setVisionPrescriptionDtWritten(String.valueOf(visionprescription.getDateWritten()));
-		}
-		/******************** VisionPrescription_Prescriber ********************************************************************************/
-		if(visionprescription.hasPrescriber()) {
-			v.setVisionPrescriptionPrescriber(String.valueOf(visionprescription.getPrescriber()));
-		}
-		/******************** visionprescriptionidentifier ********************************************************************************/
-		org.hl7.fhir.r4.model.Identifier visionprescriptionidentifier = visionprescription.getIdentifierFirstRep();
 
-		/******************** VisionPrescription_Id_Vl ********************************************************************************/
-		if(visionprescriptionidentifier.hasValue()) {
-			v.setVisionPrescriptionIdVl(String.valueOf(visionprescriptionidentifier.getValue()));
+			v.addVisionPrescriptionLensSpcfctnDurationSys(String.valueOf(visionprescriptionlensspecificationduration.getSystem()));
+		} else {
+			v.addVisionPrescriptionLensSpcfctnDurationSys("NULL");
 		}
-		/******************** visionprescriptionidentifiertype ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept visionprescriptionidentifiertype = visionprescriptionidentifier.getType();
 
-		/******************** VisionPrescription_Id_Typ_Txt ********************************************************************************/
-		if(visionprescriptionidentifiertype.hasText()) {
-			v.setVisionPrescriptionIdTypTxt(String.valueOf(visionprescriptionidentifiertype.getText()));
-		}
-		/******************** visionprescriptionidentifiertypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding visionprescriptionidentifiertypecoding = visionprescriptionidentifiertype.getCodingFirstRep();
 
-		/******************** VisionPrescription_Id_Typ_Cdg_Vrsn ********************************************************************************/
-		if(visionprescriptionidentifiertypecoding.hasVersion()) {
-			v.setVisionPrescriptionIdTypCdgVrsn(String.valueOf(visionprescriptionidentifiertypecoding.getVersion()));
-		}
-		/******************** VisionPrescription_Id_Typ_Cdg_Dsply ********************************************************************************/
-		if(visionprescriptionidentifiertypecoding.hasDisplay()) {
-			v.setVisionPrescriptionIdTypCdgDsply(String.valueOf(visionprescriptionidentifiertypecoding.getDisplay()));
-		}
-		/******************** VisionPrescription_Id_Typ_Cdg_Cd ********************************************************************************/
-		if(visionprescriptionidentifiertypecoding.hasCode()) {
-			v.setVisionPrescriptionIdTypCdgCd(String.valueOf(visionprescriptionidentifiertypecoding.getCode()));
-		}
-		/******************** VisionPrescription_Id_Typ_Cdg_UsrSltd ********************************************************************************/
-		if(visionprescriptionidentifiertypecoding.hasUserSelected()) {
-			v.setVisionPrescriptionIdTypCdgUsrSltd(String.valueOf(visionprescriptionidentifiertypecoding.getUserSelected()));
-		}
-		/******************** VisionPrescription_Id_Typ_Cdg_Sys ********************************************************************************/
-		if(visionprescriptionidentifiertypecoding.hasSystem()) {
-			v.setVisionPrescriptionIdTypCdgSys(String.valueOf(visionprescriptionidentifiertypecoding.getSystem()));
-		}
-		/******************** visionprescriptionidentifierperiod ********************************************************************************/
-		org.hl7.fhir.r4.model.Period visionprescriptionidentifierperiod = visionprescriptionidentifier.getPeriod();
+		 };
+		/******************** VisionPrescription_Pnt ********************************************************************************/
+		if(visionprescription.hasPatient()) {
 
-		/******************** VisionPrescription_Id_Prd_Strt ********************************************************************************/
-		if(visionprescriptionidentifierperiod.hasStart()) {
-			v.setVisionPrescriptionIdPrdStrt(String.valueOf(visionprescriptionidentifierperiod.getStart()));
+			if(visionprescription.getPatient().getReference() != null) {
+			v.addVisionPrescriptionPnt(visionprescription.getPatient().getReference());
+			}
+		} else {
+			v.addVisionPrescriptionPnt("NULL");
 		}
-		/******************** VisionPrescription_Id_Prd_End ********************************************************************************/
-		if(visionprescriptionidentifierperiod.hasEnd()) {
-			v.setVisionPrescriptionIdPrdEnd(String.valueOf(visionprescriptionidentifierperiod.getEnd()));
-		}
-		/******************** VisionPrescription_Id_Assigner ********************************************************************************/
-		if(visionprescriptionidentifier.hasAssigner()) {
-			v.setVisionPrescriptionIdAssigner(String.valueOf(visionprescriptionidentifier.getAssigner()));
-		}
-		/******************** VisionPrescription_Id_Sys ********************************************************************************/
-		if(visionprescriptionidentifier.hasSystem()) {
-			v.setVisionPrescriptionIdSys(String.valueOf(visionprescriptionidentifier.getSystem()));
-		}
-		/******************** visionprescriptionidentifieruse ********************************************************************************/
-		org.hl7.fhir.r4.model.Identifier.IdentifierUse visionprescriptionidentifieruse = visionprescriptionidentifier.getUse();
-		v.setVisionPrescriptionIdUse(visionprescriptionidentifieruse.toCode());
+
 
 		return v;
 	}

@@ -11,1314 +11,2787 @@ public class NutritionOrderConversion
 		nutritionorder.setId(n.getId());
 
 		/******************** NtritnOrdr_AlrgyIntolerance ********************************************************************************/
-		if(n.getNtritnOrdrAlrgyIntolerance() != null) {
-			nutritionorder.addAllergyIntolerance( new org.hl7.fhir.r4.model.Reference(n.getNtritnOrdrAlrgyIntolerance()));
+		if(n.getNtritnOrdrAlrgyIntolerance() != null ) {
+
+				for( String currListStrSplit : n.getNtritnOrdrAlrgyIntolerance().replace("[","").replace("]","").replace("\"","").split(",")){
+			if(currListStrSplit.replace("[","").replace("]","").equals("NULL") | currListStrSplit==null) {} else {
+			nutritionorder.addAllergyIntolerance(new org.hl7.fhir.r4.model.Reference(currListStrSplit.replace("[","").replace("]","").replace("\"","")));
+			}				}
+
 		}
 		/******************** NtritnOrdr_DtTime ********************************************************************************/
-		if(n.getNtritnOrdrDtTime() != null) {
-			java.text.SimpleDateFormat NtritnOrdr_DtTimesdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date NtritnOrdr_DtTimedate = NtritnOrdr_DtTimesdf.parse(n.getNtritnOrdrDtTime());
-			nutritionorder.setDateTime(NtritnOrdr_DtTimedate);
+		if(n.getNtritnOrdrDtTime() != null ) {
+
+			if(n.getNtritnOrdrDtTime().replace("[","").replace("]","").equals("NULL") | n.getNtritnOrdrDtTime()==null) {} else {
+			nutritionorder.setDateTime(n.getNtritnOrdrDtTime().replace("[","").replace("]","").equals("NULL") | n.getNtritnOrdrDtTime()==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(n.getNtritnOrdrDtTime().replace("[","").replace("]","").replace("\"","")));
+			}
 		}
 		/******************** NtritnOrdr_Enc ********************************************************************************/
-		if(n.getNtritnOrdrEnc() != null) {
-			nutritionorder.setEncounter( new org.hl7.fhir.r4.model.Reference(n.getNtritnOrdrEnc()));
-		}
-		/******************** nutritionorderenteralformula ********************************************************************************/
-		org.hl7.fhir.r4.model.NutritionOrder.NutritionOrderEnteralFormulaComponent nutritionorderenteralformula =  new org.hl7.fhir.r4.model.NutritionOrder.NutritionOrderEnteralFormulaComponent();
-		nutritionorder.setEnteralFormula(nutritionorderenteralformula);
+		if(n.getNtritnOrdrEnc() != null ) {
 
+			if(n.getNtritnOrdrEnc().replace("[","").replace("]","").equals("NULL") | n.getNtritnOrdrEnc()==null) {} else {
+			nutritionorder.setEncounter(new org.hl7.fhir.r4.model.Reference(n.getNtritnOrdrEnc().replace("[","").replace("]","").replace("\"","")));
+			}
+		}
 		/******************** NtritnOrdr_EnteralFrmula_AddtvPrdctNm ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaAddtvPrdctNm() != null) {
-			nutritionorderenteralformula.setAdditiveProductName(n.getNtritnOrdrEnteralFrmulaAddtvPrdctNm());
+		if(n.getNtritnOrdrEnteralFrmulaAddtvPrdctNm() != null ) {
+
+			if(n.getNtritnOrdrEnteralFrmulaAddtvPrdctNm().replace("[","").replace("]","").equals("NULL") | n.getNtritnOrdrEnteralFrmulaAddtvPrdctNm()==null) {} else {
+			nutritionorder.getEnteralFormula().setAdditiveProductName(n.getNtritnOrdrEnteralFrmulaAddtvPrdctNm().replace("[","").replace("]","").replace("\"",""));
+			}
 		}
-		/******************** nutritionorderenteralformulaadditivetype ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept nutritionorderenteralformulaadditivetype =  new org.hl7.fhir.r4.model.CodeableConcept();
-		nutritionorderenteralformula.setAdditiveType(nutritionorderenteralformulaadditivetype);
-
-		/******************** nutritionorderenteralformulaadditivetypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding nutritionorderenteralformulaadditivetypecoding =  new org.hl7.fhir.r4.model.Coding();
-		nutritionorderenteralformulaadditivetype.addCoding(nutritionorderenteralformulaadditivetypecoding);
-
 		/******************** NtritnOrdr_EnteralFrmula_AddtvTyp_Cdg_Cd ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaAddtvTypCdgCd() != null) {
-			nutritionorderenteralformulaadditivetypecoding.setCode(n.getNtritnOrdrEnteralFrmulaAddtvTypCdgCd());
+		if(n.getNtritnOrdrEnteralFrmulaAddtvTypCdgCd() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAddtvTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdditiveType().getCoding().size() < i0+1) { nutritionorder.getEnteralFormula().getAdditiveType().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getAdditiveType().getCoding().get(i0).setCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** NtritnOrdr_EnteralFrmula_AddtvTyp_Cdg_Dsply ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaAddtvTypCdgDsply() != null) {
-			nutritionorderenteralformulaadditivetypecoding.setDisplay(n.getNtritnOrdrEnteralFrmulaAddtvTypCdgDsply());
+		if(n.getNtritnOrdrEnteralFrmulaAddtvTypCdgDsply() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAddtvTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdditiveType().getCoding().size() < i0+1) { nutritionorder.getEnteralFormula().getAdditiveType().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getAdditiveType().getCoding().get(i0).setDisplay(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** NtritnOrdr_EnteralFrmula_AddtvTyp_Cdg_Sys ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaAddtvTypCdgSys() != null) {
-			nutritionorderenteralformulaadditivetypecoding.setSystem(n.getNtritnOrdrEnteralFrmulaAddtvTypCdgSys());
+		if(n.getNtritnOrdrEnteralFrmulaAddtvTypCdgSys() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAddtvTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdditiveType().getCoding().size() < i0+1) { nutritionorder.getEnteralFormula().getAdditiveType().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getAdditiveType().getCoding().get(i0).setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** NtritnOrdr_EnteralFrmula_AddtvTyp_Cdg_UsrSltd ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaAddtvTypCdgUsrSltd() != null) {
-			nutritionorderenteralformulaadditivetypecoding.setUserSelected(Boolean.parseBoolean(n.getNtritnOrdrEnteralFrmulaAddtvTypCdgUsrSltd()));
+		if(n.getNtritnOrdrEnteralFrmulaAddtvTypCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAddtvTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdditiveType().getCoding().size() < i0+1) { nutritionorder.getEnteralFormula().getAdditiveType().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getAdditiveType().getCoding().get(i0).setUserSelected(Boolean.parseBoolean(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** NtritnOrdr_EnteralFrmula_AddtvTyp_Cdg_Vrsn ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaAddtvTypCdgVrsn() != null) {
-			nutritionorderenteralformulaadditivetypecoding.setVersion(n.getNtritnOrdrEnteralFrmulaAddtvTypCdgVrsn());
+		if(n.getNtritnOrdrEnteralFrmulaAddtvTypCdgVrsn() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAddtvTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdditiveType().getCoding().size() < i0+1) { nutritionorder.getEnteralFormula().getAdditiveType().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getAdditiveType().getCoding().get(i0).setVersion(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** NtritnOrdr_EnteralFrmula_AddtvTyp_Txt ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaAddtvTypTxt() != null) {
-			nutritionorderenteralformulaadditivetype.setText(n.getNtritnOrdrEnteralFrmulaAddtvTypTxt());
+		if(n.getNtritnOrdrEnteralFrmulaAddtvTypTxt() != null ) {
+
+			if(n.getNtritnOrdrEnteralFrmulaAddtvTypTxt().replace("[","").replace("]","").equals("NULL") | n.getNtritnOrdrEnteralFrmulaAddtvTypTxt()==null) {} else {
+			nutritionorder.getEnteralFormula().getAdditiveType().setText(n.getNtritnOrdrEnteralFrmulaAddtvTypTxt().replace("[","").replace("]","").replace("\"",""));
+			}
 		}
-		/******************** nutritionorderenteralformulaadministration ********************************************************************************/
-		org.hl7.fhir.r4.model.NutritionOrder.NutritionOrderEnteralFormulaAdministrationComponent nutritionorderenteralformulaadministration =  new org.hl7.fhir.r4.model.NutritionOrder.NutritionOrderEnteralFormulaAdministrationComponent();
-		nutritionorderenteralformula.addAdministration(nutritionorderenteralformulaadministration);
-
-		/******************** nutritionorderenteralformulaadministrationquantity ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity nutritionorderenteralformulaadministrationquantity =  new org.hl7.fhir.r4.model.Quantity();
-		nutritionorderenteralformulaadministration.setQuantity(nutritionorderenteralformulaadministrationquantity);
-
 		/******************** NtritnOrdr_EnteralFrmula_Admnstn_Qnty_Cd ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaAdmnstnQntyCd() != null) {
-			nutritionorderenteralformulaadministrationquantity.setCode(n.getNtritnOrdrEnteralFrmulaAdmnstnQntyCd());
-		}
-		/******************** nutritionorderenteralformulaadministrationquantitycomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory nutritionorderenteralformulaadministrationquantitycomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-		nutritionorderenteralformulaadministrationquantity.setComparator(nutritionorderenteralformulaadministrationquantitycomparator.fromCode(n.getNtritnOrdrEnteralFrmulaAdmnstnQntyCmprtr()));
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnQntyCd() != null ) {
 
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAdmnstnQntyCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdministration().size() < i0+1) { nutritionorder.getEnteralFormula().addAdministration(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getAdministration().get(i0).getQuantity().setCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
+		}
+		/******************** NtritnOrdr_EnteralFrmula_Admnstn_Qnty_Cmprtr ********************************************************************************/
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnQntyCmprtr() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAdmnstnQntyCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdministration().size() < i0+1) { nutritionorder.getEnteralFormula().addAdministration(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getAdministration().get(i0).getQuantity().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** NtritnOrdr_EnteralFrmula_Admnstn_Qnty_Sys ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaAdmnstnQntySys() != null) {
-			nutritionorderenteralformulaadministrationquantity.setSystem(n.getNtritnOrdrEnteralFrmulaAdmnstnQntySys());
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnQntySys() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAdmnstnQntySys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdministration().size() < i0+1) { nutritionorder.getEnteralFormula().addAdministration(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getAdministration().get(i0).getQuantity().setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** NtritnOrdr_EnteralFrmula_Admnstn_Qnty_Unt ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaAdmnstnQntyUnt() != null) {
-			nutritionorderenteralformulaadministrationquantity.setUnit(n.getNtritnOrdrEnteralFrmulaAdmnstnQntyUnt());
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnQntyUnt() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAdmnstnQntyUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdministration().size() < i0+1) { nutritionorder.getEnteralFormula().addAdministration(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getAdministration().get(i0).getQuantity().setUnit(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** NtritnOrdr_EnteralFrmula_Admnstn_Qnty_Vl ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaAdmnstnQntyVl() != null) {
-			nutritionorderenteralformulaadministrationquantity.setValue(Double.parseDouble((n.getNtritnOrdrEnteralFrmulaAdmnstnQntyVl())));
-		}
-		/******************** nutritionorderenteralformulaadministrationratequantity ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity nutritionorderenteralformulaadministrationratequantity =  new org.hl7.fhir.r4.model.Quantity();
-		nutritionorderenteralformulaadministration.setRate(nutritionorderenteralformulaadministrationratequantity);
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnQntyVl() != null ) {
 
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAdmnstnQntyVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdministration().size() < i0+1) { nutritionorder.getEnteralFormula().addAdministration(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getAdministration().get(i0).getQuantity().setValue((new java.math.BigDecimal((arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+			}
+
+		}
 		/******************** NtritnOrdr_EnteralFrmula_Admnstn_RtQnty_Cd ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaAdmnstnRtQntyCd() != null) {
-			nutritionorderenteralformulaadministrationratequantity.setCode(n.getNtritnOrdrEnteralFrmulaAdmnstnRtQntyCd());
-		}
-		/******************** nutritionorderenteralformulaadministrationratequantitycomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory nutritionorderenteralformulaadministrationratequantitycomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-		nutritionorderenteralformulaadministrationratequantity.setComparator(nutritionorderenteralformulaadministrationratequantitycomparator.fromCode(n.getNtritnOrdrEnteralFrmulaAdmnstnRtQntyCmprtr()));
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnRtQntyCd() != null ) {
 
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAdmnstnRtQntyCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdministration().size() < i0+1) { nutritionorder.getEnteralFormula().addAdministration(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getAdministration().get(i0).getRateQuantity().setCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
+		}
+		/******************** NtritnOrdr_EnteralFrmula_Admnstn_RtQnty_Cmprtr ********************************************************************************/
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnRtQntyCmprtr() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAdmnstnRtQntyCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdministration().size() < i0+1) { nutritionorder.getEnteralFormula().addAdministration(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getAdministration().get(i0).getRateQuantity().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** NtritnOrdr_EnteralFrmula_Admnstn_RtQnty_Sys ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaAdmnstnRtQntySys() != null) {
-			nutritionorderenteralformulaadministrationratequantity.setSystem(n.getNtritnOrdrEnteralFrmulaAdmnstnRtQntySys());
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnRtQntySys() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAdmnstnRtQntySys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdministration().size() < i0+1) { nutritionorder.getEnteralFormula().addAdministration(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getAdministration().get(i0).getRateQuantity().setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** NtritnOrdr_EnteralFrmula_Admnstn_RtQnty_Unt ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaAdmnstnRtQntyUnt() != null) {
-			nutritionorderenteralformulaadministrationratequantity.setUnit(n.getNtritnOrdrEnteralFrmulaAdmnstnRtQntyUnt());
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnRtQntyUnt() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAdmnstnRtQntyUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdministration().size() < i0+1) { nutritionorder.getEnteralFormula().addAdministration(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getAdministration().get(i0).getRateQuantity().setUnit(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** NtritnOrdr_EnteralFrmula_Admnstn_RtQnty_Vl ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaAdmnstnRtQntyVl() != null) {
-			nutritionorderenteralformulaadministrationratequantity.setValue(Double.parseDouble((n.getNtritnOrdrEnteralFrmulaAdmnstnRtQntyVl())));
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnRtQntyVl() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAdmnstnRtQntyVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdministration().size() < i0+1) { nutritionorder.getEnteralFormula().addAdministration(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getAdministration().get(i0).getRateQuantity().setValue((new java.math.BigDecimal((arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+			}
+
 		}
-		/******************** nutritionorderenteralformulaadministrationrateratio ********************************************************************************/
-		org.hl7.fhir.r4.model.Ratio nutritionorderenteralformulaadministrationrateratio =  new org.hl7.fhir.r4.model.Ratio();
-		nutritionorderenteralformulaadministration.setRate(nutritionorderenteralformulaadministrationrateratio);
-
-		/******************** nutritionorderenteralformulaadministrationrateratiodenominator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity nutritionorderenteralformulaadministrationrateratiodenominator =  new org.hl7.fhir.r4.model.Quantity();
-		nutritionorderenteralformulaadministrationrateratio.setDenominator(nutritionorderenteralformulaadministrationrateratiodenominator);
-
 		/******************** NtritnOrdr_EnteralFrmula_Admnstn_RtRtio_Dnmntr_Cd ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaAdmnstnRtRtioDnmntrCd() != null) {
-			nutritionorderenteralformulaadministrationrateratiodenominator.setCode(n.getNtritnOrdrEnteralFrmulaAdmnstnRtRtioDnmntrCd());
-		}
-		/******************** nutritionorderenteralformulaadministrationrateratiodenominatorcomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory nutritionorderenteralformulaadministrationrateratiodenominatorcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-		nutritionorderenteralformulaadministrationrateratiodenominator.setComparator(nutritionorderenteralformulaadministrationrateratiodenominatorcomparator.fromCode(n.getNtritnOrdrEnteralFrmulaAdmnstnRtRtioDnmntrCmprtr()));
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnRtRtioDnmntrCd() != null ) {
 
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAdmnstnRtRtioDnmntrCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdministration().size() < i0+1) { nutritionorder.getEnteralFormula().addAdministration(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getAdministration().get(i0).getRateRatio().getDenominator().setCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
+		}
+		/******************** NtritnOrdr_EnteralFrmula_Admnstn_RtRtio_Dnmntr_Cmprtr ********************************************************************************/
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnRtRtioDnmntrCmprtr() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAdmnstnRtRtioDnmntrCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdministration().size() < i0+1) { nutritionorder.getEnteralFormula().addAdministration(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getAdministration().get(i0).getRateRatio().getDenominator().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** NtritnOrdr_EnteralFrmula_Admnstn_RtRtio_Dnmntr_Sys ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaAdmnstnRtRtioDnmntrSys() != null) {
-			nutritionorderenteralformulaadministrationrateratiodenominator.setSystem(n.getNtritnOrdrEnteralFrmulaAdmnstnRtRtioDnmntrSys());
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnRtRtioDnmntrSys() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAdmnstnRtRtioDnmntrSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdministration().size() < i0+1) { nutritionorder.getEnteralFormula().addAdministration(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getAdministration().get(i0).getRateRatio().getDenominator().setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** NtritnOrdr_EnteralFrmula_Admnstn_RtRtio_Dnmntr_Unt ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaAdmnstnRtRtioDnmntrUnt() != null) {
-			nutritionorderenteralformulaadministrationrateratiodenominator.setUnit(n.getNtritnOrdrEnteralFrmulaAdmnstnRtRtioDnmntrUnt());
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnRtRtioDnmntrUnt() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAdmnstnRtRtioDnmntrUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdministration().size() < i0+1) { nutritionorder.getEnteralFormula().addAdministration(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getAdministration().get(i0).getRateRatio().getDenominator().setUnit(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** NtritnOrdr_EnteralFrmula_Admnstn_RtRtio_Dnmntr_Vl ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaAdmnstnRtRtioDnmntrVl() != null) {
-			nutritionorderenteralformulaadministrationrateratiodenominator.setValue(Double.parseDouble((n.getNtritnOrdrEnteralFrmulaAdmnstnRtRtioDnmntrVl())));
-		}
-		/******************** nutritionorderenteralformulaadministrationraterationumerator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity nutritionorderenteralformulaadministrationraterationumerator =  new org.hl7.fhir.r4.model.Quantity();
-		nutritionorderenteralformulaadministrationrateratio.setNumerator(nutritionorderenteralformulaadministrationraterationumerator);
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnRtRtioDnmntrVl() != null ) {
 
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAdmnstnRtRtioDnmntrVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdministration().size() < i0+1) { nutritionorder.getEnteralFormula().addAdministration(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getAdministration().get(i0).getRateRatio().getDenominator().setValue((new java.math.BigDecimal((arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+			}
+
+		}
 		/******************** NtritnOrdr_EnteralFrmula_Admnstn_RtRtio_Nmrtr_Cd ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaAdmnstnRtRtioNmrtrCd() != null) {
-			nutritionorderenteralformulaadministrationraterationumerator.setCode(n.getNtritnOrdrEnteralFrmulaAdmnstnRtRtioNmrtrCd());
-		}
-		/******************** nutritionorderenteralformulaadministrationraterationumeratorcomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory nutritionorderenteralformulaadministrationraterationumeratorcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-		nutritionorderenteralformulaadministrationraterationumerator.setComparator(nutritionorderenteralformulaadministrationraterationumeratorcomparator.fromCode(n.getNtritnOrdrEnteralFrmulaAdmnstnRtRtioNmrtrCmprtr()));
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnRtRtioNmrtrCd() != null ) {
 
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAdmnstnRtRtioNmrtrCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdministration().size() < i0+1) { nutritionorder.getEnteralFormula().addAdministration(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getAdministration().get(i0).getRateRatio().getNumerator().setCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
+		}
+		/******************** NtritnOrdr_EnteralFrmula_Admnstn_RtRtio_Nmrtr_Cmprtr ********************************************************************************/
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnRtRtioNmrtrCmprtr() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAdmnstnRtRtioNmrtrCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdministration().size() < i0+1) { nutritionorder.getEnteralFormula().addAdministration(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getAdministration().get(i0).getRateRatio().getNumerator().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** NtritnOrdr_EnteralFrmula_Admnstn_RtRtio_Nmrtr_Sys ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaAdmnstnRtRtioNmrtrSys() != null) {
-			nutritionorderenteralformulaadministrationraterationumerator.setSystem(n.getNtritnOrdrEnteralFrmulaAdmnstnRtRtioNmrtrSys());
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnRtRtioNmrtrSys() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAdmnstnRtRtioNmrtrSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdministration().size() < i0+1) { nutritionorder.getEnteralFormula().addAdministration(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getAdministration().get(i0).getRateRatio().getNumerator().setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** NtritnOrdr_EnteralFrmula_Admnstn_RtRtio_Nmrtr_Unt ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaAdmnstnRtRtioNmrtrUnt() != null) {
-			nutritionorderenteralformulaadministrationraterationumerator.setUnit(n.getNtritnOrdrEnteralFrmulaAdmnstnRtRtioNmrtrUnt());
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnRtRtioNmrtrUnt() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAdmnstnRtRtioNmrtrUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdministration().size() < i0+1) { nutritionorder.getEnteralFormula().addAdministration(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getAdministration().get(i0).getRateRatio().getNumerator().setUnit(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** NtritnOrdr_EnteralFrmula_Admnstn_RtRtio_Nmrtr_Vl ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaAdmnstnRtRtioNmrtrVl() != null) {
-			nutritionorderenteralformulaadministrationraterationumerator.setValue(Double.parseDouble((n.getNtritnOrdrEnteralFrmulaAdmnstnRtRtioNmrtrVl())));
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnRtRtioNmrtrVl() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAdmnstnRtRtioNmrtrVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdministration().size() < i0+1) { nutritionorder.getEnteralFormula().addAdministration(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getAdministration().get(i0).getRateRatio().getNumerator().setValue((new java.math.BigDecimal((arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+			}
+
 		}
-		/******************** nutritionorderenteralformulaadministrationschedule ********************************************************************************/
-		org.hl7.fhir.r4.model.Timing nutritionorderenteralformulaadministrationschedule =  new org.hl7.fhir.r4.model.Timing();
-		nutritionorderenteralformulaadministration.setSchedule(nutritionorderenteralformulaadministrationschedule);
-
-		/******************** nutritionorderenteralformulaadministrationschedulecode ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept nutritionorderenteralformulaadministrationschedulecode =  new org.hl7.fhir.r4.model.CodeableConcept();
-		nutritionorderenteralformulaadministrationschedule.setCode(nutritionorderenteralformulaadministrationschedulecode);
-
-		/******************** nutritionorderenteralformulaadministrationschedulecodecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding nutritionorderenteralformulaadministrationschedulecodecoding =  new org.hl7.fhir.r4.model.Coding();
-		nutritionorderenteralformulaadministrationschedulecode.addCoding(nutritionorderenteralformulaadministrationschedulecodecoding);
-
 		/******************** NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Cd_Cdg_Cd ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlCdCdgCd() != null) {
-			nutritionorderenteralformulaadministrationschedulecodecoding.setCode(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlCdCdgCd());
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlCdCdgCd() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlCdCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdministration().size() < i0+1) { nutritionorder.getEnteralFormula().addAdministration(); }
+				String[] arrayi1 = n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlCdCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getEnteralFormula().getAdministration().get(i0).getSchedule().getCode().getCoding().size() < i1+1) { nutritionorder.getEnteralFormula().getAdministration().get(i0).getSchedule().getCode().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getEnteralFormula().getAdministration().get(i0).getSchedule().getCode().getCoding().get(i1).setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Cd_Cdg_Dsply ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlCdCdgDsply() != null) {
-			nutritionorderenteralformulaadministrationschedulecodecoding.setDisplay(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlCdCdgDsply());
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlCdCdgDsply() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlCdCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdministration().size() < i0+1) { nutritionorder.getEnteralFormula().addAdministration(); }
+				String[] arrayi1 = n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlCdCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getEnteralFormula().getAdministration().get(i0).getSchedule().getCode().getCoding().size() < i1+1) { nutritionorder.getEnteralFormula().getAdministration().get(i0).getSchedule().getCode().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getEnteralFormula().getAdministration().get(i0).getSchedule().getCode().getCoding().get(i1).setDisplay(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Cd_Cdg_Sys ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlCdCdgSys() != null) {
-			nutritionorderenteralformulaadministrationschedulecodecoding.setSystem(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlCdCdgSys());
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlCdCdgSys() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlCdCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdministration().size() < i0+1) { nutritionorder.getEnteralFormula().addAdministration(); }
+				String[] arrayi1 = n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlCdCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getEnteralFormula().getAdministration().get(i0).getSchedule().getCode().getCoding().size() < i1+1) { nutritionorder.getEnteralFormula().getAdministration().get(i0).getSchedule().getCode().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getEnteralFormula().getAdministration().get(i0).getSchedule().getCode().getCoding().get(i1).setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Cd_Cdg_UsrSltd ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlCdCdgUsrSltd() != null) {
-			nutritionorderenteralformulaadministrationschedulecodecoding.setUserSelected(Boolean.parseBoolean(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlCdCdgUsrSltd()));
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlCdCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlCdCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdministration().size() < i0+1) { nutritionorder.getEnteralFormula().addAdministration(); }
+				String[] arrayi1 = n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlCdCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getEnteralFormula().getAdministration().get(i0).getSchedule().getCode().getCoding().size() < i1+1) { nutritionorder.getEnteralFormula().getAdministration().get(i0).getSchedule().getCode().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getEnteralFormula().getAdministration().get(i0).getSchedule().getCode().getCoding().get(i1).setUserSelected(Boolean.parseBoolean(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Cd_Cdg_Vrsn ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlCdCdgVrsn() != null) {
-			nutritionorderenteralformulaadministrationschedulecodecoding.setVersion(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlCdCdgVrsn());
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlCdCdgVrsn() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlCdCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdministration().size() < i0+1) { nutritionorder.getEnteralFormula().addAdministration(); }
+				String[] arrayi1 = n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlCdCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getEnteralFormula().getAdministration().get(i0).getSchedule().getCode().getCoding().size() < i1+1) { nutritionorder.getEnteralFormula().getAdministration().get(i0).getSchedule().getCode().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getEnteralFormula().getAdministration().get(i0).getSchedule().getCode().getCoding().get(i1).setVersion(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Cd_Txt ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlCdTxt() != null) {
-			nutritionorderenteralformulaadministrationschedulecode.setText(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlCdTxt());
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlCdTxt() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlCdTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdministration().size() < i0+1) { nutritionorder.getEnteralFormula().addAdministration(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getAdministration().get(i0).getSchedule().getCode().setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Evnt ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlEvnt() != null) {
-			java.text.SimpleDateFormat NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Evntsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Evntdate = NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Evntsdf.parse(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlEvnt());
-			nutritionorderenteralformulaadministrationschedule.addEvent(NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Evntdate);
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlEvnt() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlEvnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdministration().size() < i0+1) { nutritionorder.getEnteralFormula().addAdministration(); }
+				for( String currListStrSplit : arrayi0[i0].replace("[","").replace("]","").replace("\"","").split(",")){
+				if(currListStrSplit.replace("[","").replace("]","").replace("\"","").equals("NULL") | currListStrSplit==null) {} else {nutritionorder.getEnteralFormula().getAdministration().get(i0).getSchedule().addEvent(currListStrSplit.replace("[","").replace("]","").equals("NULL") | currListStrSplit==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(currListStrSplit.replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
 		}
-		/******************** nutritionorderenteralformulaadministrationschedulerepeat ********************************************************************************/
-		org.hl7.fhir.r4.model.Timing.TimingRepeatComponent nutritionorderenteralformulaadministrationschedulerepeat =  new org.hl7.fhir.r4.model.Timing.TimingRepeatComponent();
-		nutritionorderenteralformulaadministrationschedule.setRepeat(nutritionorderenteralformulaadministrationschedulerepeat);
-
-		/******************** nutritionorderenteralformulaadministrationschedulerepeatboundsduration ********************************************************************************/
-		org.hl7.fhir.r4.model.Duration nutritionorderenteralformulaadministrationschedulerepeatboundsduration =  new org.hl7.fhir.r4.model.Duration();
-		nutritionorderenteralformulaadministrationschedulerepeat.setBounds(nutritionorderenteralformulaadministrationschedulerepeatboundsduration);
-
 		/******************** NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_BndsDuration_Cd ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationCd() != null) {
-			nutritionorderenteralformulaadministrationschedulerepeatboundsduration.setCode(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationCd());
-		}
-		/******************** nutritionorderenteralformulaadministrationschedulerepeatboundsdurationcomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory nutritionorderenteralformulaadministrationschedulerepeatboundsdurationcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-		nutritionorderenteralformulaadministrationschedulerepeatboundsduration.setComparator(nutritionorderenteralformulaadministrationschedulerepeatboundsdurationcomparator.fromCode(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationCmprtr()));
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationCd() != null ) {
 
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdministration().size() < i0+1) { nutritionorder.getEnteralFormula().addAdministration(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getAdministration().get(i0).getSchedule().getRepeat().getBoundsDuration().setCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
+		}
+		/******************** NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_BndsDuration_Cmprtr ********************************************************************************/
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationCmprtr() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdministration().size() < i0+1) { nutritionorder.getEnteralFormula().addAdministration(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getAdministration().get(i0).getSchedule().getRepeat().getBoundsDuration().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_BndsDuration_Sys ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationSys() != null) {
-			nutritionorderenteralformulaadministrationschedulerepeatboundsduration.setSystem(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationSys());
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationSys() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdministration().size() < i0+1) { nutritionorder.getEnteralFormula().addAdministration(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getAdministration().get(i0).getSchedule().getRepeat().getBoundsDuration().setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_BndsDuration_Unt ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationUnt() != null) {
-			nutritionorderenteralformulaadministrationschedulerepeatboundsduration.setUnit(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationUnt());
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationUnt() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdministration().size() < i0+1) { nutritionorder.getEnteralFormula().addAdministration(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getAdministration().get(i0).getSchedule().getRepeat().getBoundsDuration().setUnit(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_BndsDuration_Vl ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationVl() != null) {
-			nutritionorderenteralformulaadministrationschedulerepeatboundsduration.setValue(Double.parseDouble((n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationVl())));
-		}
-		/******************** nutritionorderenteralformulaadministrationschedulerepeatboundsperiod ********************************************************************************/
-		org.hl7.fhir.r4.model.Period nutritionorderenteralformulaadministrationschedulerepeatboundsperiod =  new org.hl7.fhir.r4.model.Period();
-		nutritionorderenteralformulaadministrationschedulerepeat.setBounds(nutritionorderenteralformulaadministrationschedulerepeatboundsperiod);
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationVl() != null ) {
 
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsDurationVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdministration().size() < i0+1) { nutritionorder.getEnteralFormula().addAdministration(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getAdministration().get(i0).getSchedule().getRepeat().getBoundsDuration().setValue((new java.math.BigDecimal((arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+			}
+
+		}
 		/******************** NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_BndsPrd_End ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsPrdEnd() != null) {
-			java.text.SimpleDateFormat NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_BndsPrd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_BndsPrd_Enddate = NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_BndsPrd_Endsdf.parse(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsPrdEnd());
-			nutritionorderenteralformulaadministrationschedulerepeatboundsperiod.setEnd(NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_BndsPrd_Enddate);
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsPrdEnd() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsPrdEnd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdministration().size() < i0+1) { nutritionorder.getEnteralFormula().addAdministration(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getAdministration().get(i0).getSchedule().getRepeat().getBoundsPeriod().setEnd(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_BndsPrd_Strt ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsPrdStrt() != null) {
-			java.text.SimpleDateFormat NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_BndsPrd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_BndsPrd_Strtdate = NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_BndsPrd_Strtsdf.parse(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsPrdStrt());
-			nutritionorderenteralformulaadministrationschedulerepeatboundsperiod.setStart(NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_BndsPrd_Strtdate);
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsPrdStrt() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsPrdStrt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdministration().size() < i0+1) { nutritionorder.getEnteralFormula().addAdministration(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getAdministration().get(i0).getSchedule().getRepeat().getBoundsPeriod().setStart(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
-		/******************** nutritionorderenteralformulaadministrationschedulerepeatboundsrange ********************************************************************************/
-		org.hl7.fhir.r4.model.Range nutritionorderenteralformulaadministrationschedulerepeatboundsrange =  new org.hl7.fhir.r4.model.Range();
-		nutritionorderenteralformulaadministrationschedulerepeat.setBounds(nutritionorderenteralformulaadministrationschedulerepeatboundsrange);
-
-		/******************** nutritionorderenteralformulaadministrationschedulerepeatboundsrangehigh ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity nutritionorderenteralformulaadministrationschedulerepeatboundsrangehigh =  new org.hl7.fhir.r4.model.Quantity();
-		nutritionorderenteralformulaadministrationschedulerepeatboundsrange.setHigh(nutritionorderenteralformulaadministrationschedulerepeatboundsrangehigh);
-
 		/******************** NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_BndsRng_Hi_Cd ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsRngHiCd() != null) {
-			nutritionorderenteralformulaadministrationschedulerepeatboundsrangehigh.setCode(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsRngHiCd());
-		}
-		/******************** nutritionorderenteralformulaadministrationschedulerepeatboundsrangehighcomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory nutritionorderenteralformulaadministrationschedulerepeatboundsrangehighcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-		nutritionorderenteralformulaadministrationschedulerepeatboundsrangehigh.setComparator(nutritionorderenteralformulaadministrationschedulerepeatboundsrangehighcomparator.fromCode(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsRngHiCmprtr()));
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsRngHiCd() != null ) {
 
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsRngHiCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdministration().size() < i0+1) { nutritionorder.getEnteralFormula().addAdministration(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getAdministration().get(i0).getSchedule().getRepeat().getBoundsRange().getHigh().setCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
+		}
+		/******************** NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_BndsRng_Hi_Cmprtr ********************************************************************************/
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsRngHiCmprtr() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsRngHiCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdministration().size() < i0+1) { nutritionorder.getEnteralFormula().addAdministration(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getAdministration().get(i0).getSchedule().getRepeat().getBoundsRange().getHigh().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_BndsRng_Hi_Sys ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsRngHiSys() != null) {
-			nutritionorderenteralformulaadministrationschedulerepeatboundsrangehigh.setSystem(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsRngHiSys());
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsRngHiSys() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsRngHiSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdministration().size() < i0+1) { nutritionorder.getEnteralFormula().addAdministration(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getAdministration().get(i0).getSchedule().getRepeat().getBoundsRange().getHigh().setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_BndsRng_Hi_Unt ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsRngHiUnt() != null) {
-			nutritionorderenteralformulaadministrationschedulerepeatboundsrangehigh.setUnit(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsRngHiUnt());
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsRngHiUnt() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsRngHiUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdministration().size() < i0+1) { nutritionorder.getEnteralFormula().addAdministration(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getAdministration().get(i0).getSchedule().getRepeat().getBoundsRange().getHigh().setUnit(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_BndsRng_Hi_Vl ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsRngHiVl() != null) {
-			nutritionorderenteralformulaadministrationschedulerepeatboundsrangehigh.setValue(Double.parseDouble((n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsRngHiVl())));
-		}
-		/******************** nutritionorderenteralformulaadministrationschedulerepeatboundsrangelow ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity nutritionorderenteralformulaadministrationschedulerepeatboundsrangelow =  new org.hl7.fhir.r4.model.Quantity();
-		nutritionorderenteralformulaadministrationschedulerepeatboundsrange.setLow(nutritionorderenteralformulaadministrationschedulerepeatboundsrangelow);
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsRngHiVl() != null ) {
 
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsRngHiVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdministration().size() < i0+1) { nutritionorder.getEnteralFormula().addAdministration(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getAdministration().get(i0).getSchedule().getRepeat().getBoundsRange().getHigh().setValue((new java.math.BigDecimal((arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+			}
+
+		}
 		/******************** NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_BndsRng_Lw_Cd ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsRngLwCd() != null) {
-			nutritionorderenteralformulaadministrationschedulerepeatboundsrangelow.setCode(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsRngLwCd());
-		}
-		/******************** nutritionorderenteralformulaadministrationschedulerepeatboundsrangelowcomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory nutritionorderenteralformulaadministrationschedulerepeatboundsrangelowcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-		nutritionorderenteralformulaadministrationschedulerepeatboundsrangelow.setComparator(nutritionorderenteralformulaadministrationschedulerepeatboundsrangelowcomparator.fromCode(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsRngLwCmprtr()));
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsRngLwCd() != null ) {
 
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsRngLwCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdministration().size() < i0+1) { nutritionorder.getEnteralFormula().addAdministration(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getAdministration().get(i0).getSchedule().getRepeat().getBoundsRange().getLow().setCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
+		}
+		/******************** NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_BndsRng_Lw_Cmprtr ********************************************************************************/
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsRngLwCmprtr() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsRngLwCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdministration().size() < i0+1) { nutritionorder.getEnteralFormula().addAdministration(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getAdministration().get(i0).getSchedule().getRepeat().getBoundsRange().getLow().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_BndsRng_Lw_Sys ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsRngLwSys() != null) {
-			nutritionorderenteralformulaadministrationschedulerepeatboundsrangelow.setSystem(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsRngLwSys());
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsRngLwSys() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsRngLwSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdministration().size() < i0+1) { nutritionorder.getEnteralFormula().addAdministration(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getAdministration().get(i0).getSchedule().getRepeat().getBoundsRange().getLow().setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_BndsRng_Lw_Unt ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsRngLwUnt() != null) {
-			nutritionorderenteralformulaadministrationschedulerepeatboundsrangelow.setUnit(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsRngLwUnt());
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsRngLwUnt() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsRngLwUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdministration().size() < i0+1) { nutritionorder.getEnteralFormula().addAdministration(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getAdministration().get(i0).getSchedule().getRepeat().getBoundsRange().getLow().setUnit(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_BndsRng_Lw_Vl ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsRngLwVl() != null) {
-			nutritionorderenteralformulaadministrationschedulerepeatboundsrangelow.setValue(Double.parseDouble((n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsRngLwVl())));
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsRngLwVl() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptBndsRngLwVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdministration().size() < i0+1) { nutritionorder.getEnteralFormula().addAdministration(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getAdministration().get(i0).getSchedule().getRepeat().getBoundsRange().getLow().setValue((new java.math.BigDecimal((arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+			}
+
 		}
 		/******************** NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_Cnt ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptCnt() != null) {
-			nutritionorderenteralformulaadministrationschedulerepeat.setCount(Integer.parseInt(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptCnt()));
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptCnt() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptCnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdministration().size() < i0+1) { nutritionorder.getEnteralFormula().addAdministration(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getAdministration().get(i0).getSchedule().getRepeat().setCount(Integer.parseInt(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_CntMx ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptCntMx() != null) {
-			nutritionorderenteralformulaadministrationschedulerepeat.setCountMax(Integer.parseInt(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptCntMx()));
-		}
-		/******************** nutritionorderenteralformulaadministrationschedulerepeatdayofweek ********************************************************************************/
-		org.hl7.fhir.r4.model.Timing.DayOfWeekEnumFactory nutritionorderenteralformulaadministrationschedulerepeatdayofweek =  new org.hl7.fhir.r4.model.Timing.DayOfWeekEnumFactory();
-		nutritionorderenteralformulaadministrationschedulerepeat.addDayOfWeek(nutritionorderenteralformulaadministrationschedulerepeatdayofweek.fromCode(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptDayOfWeek()));
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptCntMx() != null ) {
 
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptCntMx().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdministration().size() < i0+1) { nutritionorder.getEnteralFormula().addAdministration(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getAdministration().get(i0).getSchedule().getRepeat().setCountMax(Integer.parseInt(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_Duration ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptDuration() != null) {
-			nutritionorderenteralformulaadministrationschedulerepeat.setDuration(Double.parseDouble((n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptDuration())));
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptDuration() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptDuration().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdministration().size() < i0+1) { nutritionorder.getEnteralFormula().addAdministration(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getAdministration().get(i0).getSchedule().getRepeat().setDuration((Double.parseDouble((arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+			}
+
 		}
 		/******************** NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_DurationMx ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptDurationMx() != null) {
-			nutritionorderenteralformulaadministrationschedulerepeat.setDurationMax(Double.parseDouble((n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptDurationMx())));
-		}
-		/******************** nutritionorderenteralformulaadministrationschedulerepeatdurationunit ********************************************************************************/
-		org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory nutritionorderenteralformulaadministrationschedulerepeatdurationunit =  new org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory();
-		nutritionorderenteralformulaadministrationschedulerepeat.setDurationUnit(nutritionorderenteralformulaadministrationschedulerepeatdurationunit.fromCode(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptDurationUnt()));
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptDurationMx() != null ) {
 
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptDurationMx().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdministration().size() < i0+1) { nutritionorder.getEnteralFormula().addAdministration(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getAdministration().get(i0).getSchedule().getRepeat().setDurationMax((Double.parseDouble((arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+			}
+
+		}
+		/******************** NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_DurationUnt ********************************************************************************/
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptDurationUnt() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptDurationUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdministration().size() < i0+1) { nutritionorder.getEnteralFormula().addAdministration(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getAdministration().get(i0).getSchedule().getRepeat().setDurationUnit(new org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory().fromCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_Frqncy ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptFrqncy() != null) {
-			nutritionorderenteralformulaadministrationschedulerepeat.setFrequency(Integer.parseInt(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptFrqncy()));
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptFrqncy() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptFrqncy().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdministration().size() < i0+1) { nutritionorder.getEnteralFormula().addAdministration(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getAdministration().get(i0).getSchedule().getRepeat().setFrequency(Integer.parseInt(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_FrqncyMx ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptFrqncyMx() != null) {
-			nutritionorderenteralformulaadministrationschedulerepeat.setFrequencyMax(Integer.parseInt(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptFrqncyMx()));
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptFrqncyMx() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptFrqncyMx().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdministration().size() < i0+1) { nutritionorder.getEnteralFormula().addAdministration(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getAdministration().get(i0).getSchedule().getRepeat().setFrequencyMax(Integer.parseInt(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_Off ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptOff() != null) {
-			nutritionorderenteralformulaadministrationschedulerepeat.setOffset(Integer.parseInt(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptOff()));
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptOff() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptOff().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdministration().size() < i0+1) { nutritionorder.getEnteralFormula().addAdministration(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getAdministration().get(i0).getSchedule().getRepeat().setOffset(Integer.parseInt(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_Prd ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptPrd() != null) {
-			nutritionorderenteralformulaadministrationschedulerepeat.setPeriod(Double.parseDouble((n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptPrd())));
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptPrd() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptPrd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdministration().size() < i0+1) { nutritionorder.getEnteralFormula().addAdministration(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getAdministration().get(i0).getSchedule().getRepeat().setPeriod((new java.math.BigDecimal((arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+			}
+
 		}
 		/******************** NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_PrdMx ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptPrdMx() != null) {
-			nutritionorderenteralformulaadministrationschedulerepeat.setPeriodMax(new java.math.BigDecimal((n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptPrdMx())));
-		}
-		/******************** nutritionorderenteralformulaadministrationschedulerepeatperiodunit ********************************************************************************/
-		org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory nutritionorderenteralformulaadministrationschedulerepeatperiodunit =  new org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory();
-		nutritionorderenteralformulaadministrationschedulerepeat.setPeriodUnit(nutritionorderenteralformulaadministrationschedulerepeatperiodunit.fromCode(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptPrdUnt()));
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptPrdMx() != null ) {
 
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptPrdMx().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdministration().size() < i0+1) { nutritionorder.getEnteralFormula().addAdministration(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getAdministration().get(i0).getSchedule().getRepeat().setPeriodMax((new java.math.BigDecimal((arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+			}
+
+		}
+		/******************** NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_PrdUnt ********************************************************************************/
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptPrdUnt() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptPrdUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdministration().size() < i0+1) { nutritionorder.getEnteralFormula().addAdministration(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getAdministration().get(i0).getSchedule().getRepeat().setPeriodUnit(new org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory().fromCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** NtritnOrdr_EnteralFrmula_Admnstn_Schdl_Rpt_TimeOfDay ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptTimeOfDay() != null) {
-			nutritionorderenteralformulaadministrationschedulerepeat.addTimeOfDay(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptTimeOfDay());
-		}
-		/******************** nutritionorderenteralformulaadministrationschedulerepeatwhen ********************************************************************************/
-		org.hl7.fhir.r4.model.Timing.EventTimingEnumFactory nutritionorderenteralformulaadministrationschedulerepeatwhen =  new org.hl7.fhir.r4.model.Timing.EventTimingEnumFactory();
-		nutritionorderenteralformulaadministrationschedulerepeat.addWhen(nutritionorderenteralformulaadministrationschedulerepeatwhen.fromCode(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptWhen()));
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptTimeOfDay() != null ) {
 
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaAdmnstnSchdlRptTimeOfDay().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getAdministration().size() < i0+1) { nutritionorder.getEnteralFormula().addAdministration(); }
+				for( String currListStrSplit : arrayi0[i0].replace("[","").replace("]","").replace("\"","").split(",")){
+				if(currListStrSplit.replace("[","").replace("]","").replace("\"","").equals("NULL") | currListStrSplit==null) {} else {nutritionorder.getEnteralFormula().getAdministration().get(i0).getSchedule().getRepeat().addTimeOfDay(currListStrSplit.replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
+		}
 		/******************** NtritnOrdr_EnteralFrmula_AdmnstnInstrctn ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaAdmnstnInstrctn() != null) {
-			nutritionorderenteralformula.setAdministrationInstruction(n.getNtritnOrdrEnteralFrmulaAdmnstnInstrctn());
+		if(n.getNtritnOrdrEnteralFrmulaAdmnstnInstrctn() != null ) {
+
+			if(n.getNtritnOrdrEnteralFrmulaAdmnstnInstrctn().replace("[","").replace("]","").equals("NULL") | n.getNtritnOrdrEnteralFrmulaAdmnstnInstrctn()==null) {} else {
+			nutritionorder.getEnteralFormula().setAdministrationInstruction(n.getNtritnOrdrEnteralFrmulaAdmnstnInstrctn().replace("[","").replace("]","").replace("\"",""));
+			}
 		}
 		/******************** NtritnOrdr_EnteralFrmula_BaseFrmulaPrdctNm ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaBaseFrmulaPrdctNm() != null) {
-			nutritionorderenteralformula.setBaseFormulaProductName(n.getNtritnOrdrEnteralFrmulaBaseFrmulaPrdctNm());
+		if(n.getNtritnOrdrEnteralFrmulaBaseFrmulaPrdctNm() != null ) {
+
+			if(n.getNtritnOrdrEnteralFrmulaBaseFrmulaPrdctNm().replace("[","").replace("]","").equals("NULL") | n.getNtritnOrdrEnteralFrmulaBaseFrmulaPrdctNm()==null) {} else {
+			nutritionorder.getEnteralFormula().setBaseFormulaProductName(n.getNtritnOrdrEnteralFrmulaBaseFrmulaPrdctNm().replace("[","").replace("]","").replace("\"",""));
+			}
 		}
-		/******************** nutritionorderenteralformulabaseformulatype ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept nutritionorderenteralformulabaseformulatype =  new org.hl7.fhir.r4.model.CodeableConcept();
-		nutritionorderenteralformula.setBaseFormulaType(nutritionorderenteralformulabaseformulatype);
-
-		/******************** nutritionorderenteralformulabaseformulatypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding nutritionorderenteralformulabaseformulatypecoding =  new org.hl7.fhir.r4.model.Coding();
-		nutritionorderenteralformulabaseformulatype.addCoding(nutritionorderenteralformulabaseformulatypecoding);
-
 		/******************** NtritnOrdr_EnteralFrmula_BaseFrmulaTyp_Cdg_Cd ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaBaseFrmulaTypCdgCd() != null) {
-			nutritionorderenteralformulabaseformulatypecoding.setCode(n.getNtritnOrdrEnteralFrmulaBaseFrmulaTypCdgCd());
+		if(n.getNtritnOrdrEnteralFrmulaBaseFrmulaTypCdgCd() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaBaseFrmulaTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getBaseFormulaType().getCoding().size() < i0+1) { nutritionorder.getEnteralFormula().getBaseFormulaType().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getBaseFormulaType().getCoding().get(i0).setCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** NtritnOrdr_EnteralFrmula_BaseFrmulaTyp_Cdg_Dsply ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaBaseFrmulaTypCdgDsply() != null) {
-			nutritionorderenteralformulabaseformulatypecoding.setDisplay(n.getNtritnOrdrEnteralFrmulaBaseFrmulaTypCdgDsply());
+		if(n.getNtritnOrdrEnteralFrmulaBaseFrmulaTypCdgDsply() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaBaseFrmulaTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getBaseFormulaType().getCoding().size() < i0+1) { nutritionorder.getEnteralFormula().getBaseFormulaType().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getBaseFormulaType().getCoding().get(i0).setDisplay(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** NtritnOrdr_EnteralFrmula_BaseFrmulaTyp_Cdg_Sys ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaBaseFrmulaTypCdgSys() != null) {
-			nutritionorderenteralformulabaseformulatypecoding.setSystem(n.getNtritnOrdrEnteralFrmulaBaseFrmulaTypCdgSys());
+		if(n.getNtritnOrdrEnteralFrmulaBaseFrmulaTypCdgSys() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaBaseFrmulaTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getBaseFormulaType().getCoding().size() < i0+1) { nutritionorder.getEnteralFormula().getBaseFormulaType().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getBaseFormulaType().getCoding().get(i0).setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** NtritnOrdr_EnteralFrmula_BaseFrmulaTyp_Cdg_UsrSltd ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaBaseFrmulaTypCdgUsrSltd() != null) {
-			nutritionorderenteralformulabaseformulatypecoding.setUserSelected(Boolean.parseBoolean(n.getNtritnOrdrEnteralFrmulaBaseFrmulaTypCdgUsrSltd()));
+		if(n.getNtritnOrdrEnteralFrmulaBaseFrmulaTypCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaBaseFrmulaTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getBaseFormulaType().getCoding().size() < i0+1) { nutritionorder.getEnteralFormula().getBaseFormulaType().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getBaseFormulaType().getCoding().get(i0).setUserSelected(Boolean.parseBoolean(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** NtritnOrdr_EnteralFrmula_BaseFrmulaTyp_Cdg_Vrsn ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaBaseFrmulaTypCdgVrsn() != null) {
-			nutritionorderenteralformulabaseformulatypecoding.setVersion(n.getNtritnOrdrEnteralFrmulaBaseFrmulaTypCdgVrsn());
+		if(n.getNtritnOrdrEnteralFrmulaBaseFrmulaTypCdgVrsn() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaBaseFrmulaTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getBaseFormulaType().getCoding().size() < i0+1) { nutritionorder.getEnteralFormula().getBaseFormulaType().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getBaseFormulaType().getCoding().get(i0).setVersion(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** NtritnOrdr_EnteralFrmula_BaseFrmulaTyp_Txt ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaBaseFrmulaTypTxt() != null) {
-			nutritionorderenteralformulabaseformulatype.setText(n.getNtritnOrdrEnteralFrmulaBaseFrmulaTypTxt());
-		}
-		/******************** nutritionorderenteralformulacaloricdensity ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity nutritionorderenteralformulacaloricdensity =  new org.hl7.fhir.r4.model.Quantity();
-		nutritionorderenteralformula.setCaloricDensity(nutritionorderenteralformulacaloricdensity);
+		if(n.getNtritnOrdrEnteralFrmulaBaseFrmulaTypTxt() != null ) {
 
+			if(n.getNtritnOrdrEnteralFrmulaBaseFrmulaTypTxt().replace("[","").replace("]","").equals("NULL") | n.getNtritnOrdrEnteralFrmulaBaseFrmulaTypTxt()==null) {} else {
+			nutritionorder.getEnteralFormula().getBaseFormulaType().setText(n.getNtritnOrdrEnteralFrmulaBaseFrmulaTypTxt().replace("[","").replace("]","").replace("\"",""));
+			}
+		}
 		/******************** NtritnOrdr_EnteralFrmula_CaloricDensity_Cd ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaCaloricDensityCd() != null) {
-			nutritionorderenteralformulacaloricdensity.setCode(n.getNtritnOrdrEnteralFrmulaCaloricDensityCd());
-		}
-		/******************** nutritionorderenteralformulacaloricdensitycomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory nutritionorderenteralformulacaloricdensitycomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-		nutritionorderenteralformulacaloricdensity.setComparator(nutritionorderenteralformulacaloricdensitycomparator.fromCode(n.getNtritnOrdrEnteralFrmulaCaloricDensityCmprtr()));
+		if(n.getNtritnOrdrEnteralFrmulaCaloricDensityCd() != null ) {
 
+			if(n.getNtritnOrdrEnteralFrmulaCaloricDensityCd().replace("[","").replace("]","").equals("NULL") | n.getNtritnOrdrEnteralFrmulaCaloricDensityCd()==null) {} else {
+			nutritionorder.getEnteralFormula().getCaloricDensity().setCode(n.getNtritnOrdrEnteralFrmulaCaloricDensityCd().replace("[","").replace("]","").replace("\"",""));
+			}
+		}
+		/******************** NtritnOrdr_EnteralFrmula_CaloricDensity_Cmprtr ********************************************************************************/
+		if(n.getNtritnOrdrEnteralFrmulaCaloricDensityCmprtr() != null ) {
+
+			if(n.getNtritnOrdrEnteralFrmulaCaloricDensityCmprtr().replace("[","").replace("]","").equals("NULL") | n.getNtritnOrdrEnteralFrmulaCaloricDensityCmprtr()==null) {} else {
+			nutritionorder.getEnteralFormula().getCaloricDensity().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(n.getNtritnOrdrEnteralFrmulaCaloricDensityCmprtr().replace("[","").replace("]","").replace("\"","")));
+			}
+		}
 		/******************** NtritnOrdr_EnteralFrmula_CaloricDensity_Sys ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaCaloricDensitySys() != null) {
-			nutritionorderenteralformulacaloricdensity.setSystem(n.getNtritnOrdrEnteralFrmulaCaloricDensitySys());
+		if(n.getNtritnOrdrEnteralFrmulaCaloricDensitySys() != null ) {
+
+			if(n.getNtritnOrdrEnteralFrmulaCaloricDensitySys().replace("[","").replace("]","").equals("NULL") | n.getNtritnOrdrEnteralFrmulaCaloricDensitySys()==null) {} else {
+			nutritionorder.getEnteralFormula().getCaloricDensity().setSystem(n.getNtritnOrdrEnteralFrmulaCaloricDensitySys().replace("[","").replace("]","").replace("\"",""));
+			}
 		}
 		/******************** NtritnOrdr_EnteralFrmula_CaloricDensity_Unt ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaCaloricDensityUnt() != null) {
-			nutritionorderenteralformulacaloricdensity.setUnit(n.getNtritnOrdrEnteralFrmulaCaloricDensityUnt());
+		if(n.getNtritnOrdrEnteralFrmulaCaloricDensityUnt() != null ) {
+
+			if(n.getNtritnOrdrEnteralFrmulaCaloricDensityUnt().replace("[","").replace("]","").equals("NULL") | n.getNtritnOrdrEnteralFrmulaCaloricDensityUnt()==null) {} else {
+			nutritionorder.getEnteralFormula().getCaloricDensity().setUnit(n.getNtritnOrdrEnteralFrmulaCaloricDensityUnt().replace("[","").replace("]","").replace("\"",""));
+			}
 		}
 		/******************** NtritnOrdr_EnteralFrmula_CaloricDensity_Vl ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaCaloricDensityVl() != null) {
-			nutritionorderenteralformulacaloricdensity.setValue(Double.parseDouble((n.getNtritnOrdrEnteralFrmulaCaloricDensityVl())));
-		}
-		/******************** nutritionorderenteralformulamaxvolumetodeliver ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity nutritionorderenteralformulamaxvolumetodeliver =  new org.hl7.fhir.r4.model.Quantity();
-		nutritionorderenteralformula.setMaxVolumeToDeliver(nutritionorderenteralformulamaxvolumetodeliver);
+		if(n.getNtritnOrdrEnteralFrmulaCaloricDensityVl() != null ) {
 
+			if(n.getNtritnOrdrEnteralFrmulaCaloricDensityVl().replace("[","").replace("]","").equals("NULL") | n.getNtritnOrdrEnteralFrmulaCaloricDensityVl()==null) {} else {
+			nutritionorder.getEnteralFormula().getCaloricDensity().setValue((new java.math.BigDecimal((n.getNtritnOrdrEnteralFrmulaCaloricDensityVl().replace("[","").replace("]","").replace("\"","")))));
+			}
+		}
 		/******************** NtritnOrdr_EnteralFrmula_MxVolumeToDeliver_Cd ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaMxVolumeToDeliverCd() != null) {
-			nutritionorderenteralformulamaxvolumetodeliver.setCode(n.getNtritnOrdrEnteralFrmulaMxVolumeToDeliverCd());
-		}
-		/******************** nutritionorderenteralformulamaxvolumetodelivercomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory nutritionorderenteralformulamaxvolumetodelivercomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-		nutritionorderenteralformulamaxvolumetodeliver.setComparator(nutritionorderenteralformulamaxvolumetodelivercomparator.fromCode(n.getNtritnOrdrEnteralFrmulaMxVolumeToDeliverCmprtr()));
+		if(n.getNtritnOrdrEnteralFrmulaMxVolumeToDeliverCd() != null ) {
 
+			if(n.getNtritnOrdrEnteralFrmulaMxVolumeToDeliverCd().replace("[","").replace("]","").equals("NULL") | n.getNtritnOrdrEnteralFrmulaMxVolumeToDeliverCd()==null) {} else {
+			nutritionorder.getEnteralFormula().getMaxVolumeToDeliver().setCode(n.getNtritnOrdrEnteralFrmulaMxVolumeToDeliverCd().replace("[","").replace("]","").replace("\"",""));
+			}
+		}
+		/******************** NtritnOrdr_EnteralFrmula_MxVolumeToDeliver_Cmprtr ********************************************************************************/
+		if(n.getNtritnOrdrEnteralFrmulaMxVolumeToDeliverCmprtr() != null ) {
+
+			if(n.getNtritnOrdrEnteralFrmulaMxVolumeToDeliverCmprtr().replace("[","").replace("]","").equals("NULL") | n.getNtritnOrdrEnteralFrmulaMxVolumeToDeliverCmprtr()==null) {} else {
+			nutritionorder.getEnteralFormula().getMaxVolumeToDeliver().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(n.getNtritnOrdrEnteralFrmulaMxVolumeToDeliverCmprtr().replace("[","").replace("]","").replace("\"","")));
+			}
+		}
 		/******************** NtritnOrdr_EnteralFrmula_MxVolumeToDeliver_Sys ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaMxVolumeToDeliverSys() != null) {
-			nutritionorderenteralformulamaxvolumetodeliver.setSystem(n.getNtritnOrdrEnteralFrmulaMxVolumeToDeliverSys());
+		if(n.getNtritnOrdrEnteralFrmulaMxVolumeToDeliverSys() != null ) {
+
+			if(n.getNtritnOrdrEnteralFrmulaMxVolumeToDeliverSys().replace("[","").replace("]","").equals("NULL") | n.getNtritnOrdrEnteralFrmulaMxVolumeToDeliverSys()==null) {} else {
+			nutritionorder.getEnteralFormula().getMaxVolumeToDeliver().setSystem(n.getNtritnOrdrEnteralFrmulaMxVolumeToDeliverSys().replace("[","").replace("]","").replace("\"",""));
+			}
 		}
 		/******************** NtritnOrdr_EnteralFrmula_MxVolumeToDeliver_Unt ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaMxVolumeToDeliverUnt() != null) {
-			nutritionorderenteralformulamaxvolumetodeliver.setUnit(n.getNtritnOrdrEnteralFrmulaMxVolumeToDeliverUnt());
+		if(n.getNtritnOrdrEnteralFrmulaMxVolumeToDeliverUnt() != null ) {
+
+			if(n.getNtritnOrdrEnteralFrmulaMxVolumeToDeliverUnt().replace("[","").replace("]","").equals("NULL") | n.getNtritnOrdrEnteralFrmulaMxVolumeToDeliverUnt()==null) {} else {
+			nutritionorder.getEnteralFormula().getMaxVolumeToDeliver().setUnit(n.getNtritnOrdrEnteralFrmulaMxVolumeToDeliverUnt().replace("[","").replace("]","").replace("\"",""));
+			}
 		}
 		/******************** NtritnOrdr_EnteralFrmula_MxVolumeToDeliver_Vl ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaMxVolumeToDeliverVl() != null) {
-			nutritionorderenteralformulamaxvolumetodeliver.setValue(Double.parseDouble((n.getNtritnOrdrEnteralFrmulaMxVolumeToDeliverVl())));
+		if(n.getNtritnOrdrEnteralFrmulaMxVolumeToDeliverVl() != null ) {
+
+			if(n.getNtritnOrdrEnteralFrmulaMxVolumeToDeliverVl().replace("[","").replace("]","").equals("NULL") | n.getNtritnOrdrEnteralFrmulaMxVolumeToDeliverVl()==null) {} else {
+			nutritionorder.getEnteralFormula().getMaxVolumeToDeliver().setValue((new java.math.BigDecimal((n.getNtritnOrdrEnteralFrmulaMxVolumeToDeliverVl().replace("[","").replace("]","").replace("\"","")))));
+			}
 		}
-		/******************** nutritionorderenteralformularouteofadministration ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept nutritionorderenteralformularouteofadministration =  new org.hl7.fhir.r4.model.CodeableConcept();
-		nutritionorderenteralformula.setRouteofAdministration(nutritionorderenteralformularouteofadministration);
-
-		/******************** nutritionorderenteralformularouteofadministrationcoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding nutritionorderenteralformularouteofadministrationcoding =  new org.hl7.fhir.r4.model.Coding();
-		nutritionorderenteralformularouteofadministration.addCoding(nutritionorderenteralformularouteofadministrationcoding);
-
 		/******************** NtritnOrdr_EnteralFrmula_RouteofAdmnstn_Cdg_Cd ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaRouteofAdmnstnCdgCd() != null) {
-			nutritionorderenteralformularouteofadministrationcoding.setCode(n.getNtritnOrdrEnteralFrmulaRouteofAdmnstnCdgCd());
+		if(n.getNtritnOrdrEnteralFrmulaRouteofAdmnstnCdgCd() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaRouteofAdmnstnCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getRouteofAdministration().getCoding().size() < i0+1) { nutritionorder.getEnteralFormula().getRouteofAdministration().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getRouteofAdministration().getCoding().get(i0).setCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** NtritnOrdr_EnteralFrmula_RouteofAdmnstn_Cdg_Dsply ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaRouteofAdmnstnCdgDsply() != null) {
-			nutritionorderenteralformularouteofadministrationcoding.setDisplay(n.getNtritnOrdrEnteralFrmulaRouteofAdmnstnCdgDsply());
+		if(n.getNtritnOrdrEnteralFrmulaRouteofAdmnstnCdgDsply() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaRouteofAdmnstnCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getRouteofAdministration().getCoding().size() < i0+1) { nutritionorder.getEnteralFormula().getRouteofAdministration().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getRouteofAdministration().getCoding().get(i0).setDisplay(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** NtritnOrdr_EnteralFrmula_RouteofAdmnstn_Cdg_Sys ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaRouteofAdmnstnCdgSys() != null) {
-			nutritionorderenteralformularouteofadministrationcoding.setSystem(n.getNtritnOrdrEnteralFrmulaRouteofAdmnstnCdgSys());
+		if(n.getNtritnOrdrEnteralFrmulaRouteofAdmnstnCdgSys() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaRouteofAdmnstnCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getRouteofAdministration().getCoding().size() < i0+1) { nutritionorder.getEnteralFormula().getRouteofAdministration().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getRouteofAdministration().getCoding().get(i0).setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** NtritnOrdr_EnteralFrmula_RouteofAdmnstn_Cdg_UsrSltd ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaRouteofAdmnstnCdgUsrSltd() != null) {
-			nutritionorderenteralformularouteofadministrationcoding.setUserSelected(Boolean.parseBoolean(n.getNtritnOrdrEnteralFrmulaRouteofAdmnstnCdgUsrSltd()));
+		if(n.getNtritnOrdrEnteralFrmulaRouteofAdmnstnCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaRouteofAdmnstnCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getRouteofAdministration().getCoding().size() < i0+1) { nutritionorder.getEnteralFormula().getRouteofAdministration().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getRouteofAdministration().getCoding().get(i0).setUserSelected(Boolean.parseBoolean(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** NtritnOrdr_EnteralFrmula_RouteofAdmnstn_Cdg_Vrsn ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaRouteofAdmnstnCdgVrsn() != null) {
-			nutritionorderenteralformularouteofadministrationcoding.setVersion(n.getNtritnOrdrEnteralFrmulaRouteofAdmnstnCdgVrsn());
+		if(n.getNtritnOrdrEnteralFrmulaRouteofAdmnstnCdgVrsn() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrEnteralFrmulaRouteofAdmnstnCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getEnteralFormula().getRouteofAdministration().getCoding().size() < i0+1) { nutritionorder.getEnteralFormula().getRouteofAdministration().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getEnteralFormula().getRouteofAdministration().getCoding().get(i0).setVersion(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** NtritnOrdr_EnteralFrmula_RouteofAdmnstn_Txt ********************************************************************************/
-		if(n.getNtritnOrdrEnteralFrmulaRouteofAdmnstnTxt() != null) {
-			nutritionorderenteralformularouteofadministration.setText(n.getNtritnOrdrEnteralFrmulaRouteofAdmnstnTxt());
+		if(n.getNtritnOrdrEnteralFrmulaRouteofAdmnstnTxt() != null ) {
+
+			if(n.getNtritnOrdrEnteralFrmulaRouteofAdmnstnTxt().replace("[","").replace("]","").equals("NULL") | n.getNtritnOrdrEnteralFrmulaRouteofAdmnstnTxt()==null) {} else {
+			nutritionorder.getEnteralFormula().getRouteofAdministration().setText(n.getNtritnOrdrEnteralFrmulaRouteofAdmnstnTxt().replace("[","").replace("]","").replace("\"",""));
+			}
 		}
-		/******************** nutritionorderexcludefoodmodifier ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept nutritionorderexcludefoodmodifier =  new org.hl7.fhir.r4.model.CodeableConcept();
-		nutritionorder.addExcludeFoodModifier(nutritionorderexcludefoodmodifier);
-
-		/******************** nutritionorderexcludefoodmodifiercoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding nutritionorderexcludefoodmodifiercoding =  new org.hl7.fhir.r4.model.Coding();
-		nutritionorderexcludefoodmodifier.addCoding(nutritionorderexcludefoodmodifiercoding);
-
 		/******************** NtritnOrdr_ExcludeFoodMdfr_Cdg_Cd ********************************************************************************/
-		if(n.getNtritnOrdrExcludeFoodMdfrCdgCd() != null) {
-			nutritionorderexcludefoodmodifiercoding.setCode(n.getNtritnOrdrExcludeFoodMdfrCdgCd());
+		if(n.getNtritnOrdrExcludeFoodMdfrCdgCd() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrExcludeFoodMdfrCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getExcludeFoodModifier().size() < i0+1) { nutritionorder.addExcludeFoodModifier(); }
+				String[] arrayi1 = n.getNtritnOrdrExcludeFoodMdfrCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getExcludeFoodModifier().get(i0).getCoding().size() < i1+1) { nutritionorder.getExcludeFoodModifier().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getExcludeFoodModifier().get(i0).getCoding().get(i1).setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_ExcludeFoodMdfr_Cdg_Dsply ********************************************************************************/
-		if(n.getNtritnOrdrExcludeFoodMdfrCdgDsply() != null) {
-			nutritionorderexcludefoodmodifiercoding.setDisplay(n.getNtritnOrdrExcludeFoodMdfrCdgDsply());
+		if(n.getNtritnOrdrExcludeFoodMdfrCdgDsply() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrExcludeFoodMdfrCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getExcludeFoodModifier().size() < i0+1) { nutritionorder.addExcludeFoodModifier(); }
+				String[] arrayi1 = n.getNtritnOrdrExcludeFoodMdfrCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getExcludeFoodModifier().get(i0).getCoding().size() < i1+1) { nutritionorder.getExcludeFoodModifier().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getExcludeFoodModifier().get(i0).getCoding().get(i1).setDisplay(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_ExcludeFoodMdfr_Cdg_Sys ********************************************************************************/
-		if(n.getNtritnOrdrExcludeFoodMdfrCdgSys() != null) {
-			nutritionorderexcludefoodmodifiercoding.setSystem(n.getNtritnOrdrExcludeFoodMdfrCdgSys());
+		if(n.getNtritnOrdrExcludeFoodMdfrCdgSys() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrExcludeFoodMdfrCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getExcludeFoodModifier().size() < i0+1) { nutritionorder.addExcludeFoodModifier(); }
+				String[] arrayi1 = n.getNtritnOrdrExcludeFoodMdfrCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getExcludeFoodModifier().get(i0).getCoding().size() < i1+1) { nutritionorder.getExcludeFoodModifier().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getExcludeFoodModifier().get(i0).getCoding().get(i1).setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_ExcludeFoodMdfr_Cdg_UsrSltd ********************************************************************************/
-		if(n.getNtritnOrdrExcludeFoodMdfrCdgUsrSltd() != null) {
-			nutritionorderexcludefoodmodifiercoding.setUserSelected(Boolean.parseBoolean(n.getNtritnOrdrExcludeFoodMdfrCdgUsrSltd()));
+		if(n.getNtritnOrdrExcludeFoodMdfrCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrExcludeFoodMdfrCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getExcludeFoodModifier().size() < i0+1) { nutritionorder.addExcludeFoodModifier(); }
+				String[] arrayi1 = n.getNtritnOrdrExcludeFoodMdfrCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getExcludeFoodModifier().get(i0).getCoding().size() < i1+1) { nutritionorder.getExcludeFoodModifier().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getExcludeFoodModifier().get(i0).getCoding().get(i1).setUserSelected(Boolean.parseBoolean(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_ExcludeFoodMdfr_Cdg_Vrsn ********************************************************************************/
-		if(n.getNtritnOrdrExcludeFoodMdfrCdgVrsn() != null) {
-			nutritionorderexcludefoodmodifiercoding.setVersion(n.getNtritnOrdrExcludeFoodMdfrCdgVrsn());
+		if(n.getNtritnOrdrExcludeFoodMdfrCdgVrsn() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrExcludeFoodMdfrCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getExcludeFoodModifier().size() < i0+1) { nutritionorder.addExcludeFoodModifier(); }
+				String[] arrayi1 = n.getNtritnOrdrExcludeFoodMdfrCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getExcludeFoodModifier().get(i0).getCoding().size() < i1+1) { nutritionorder.getExcludeFoodModifier().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getExcludeFoodModifier().get(i0).getCoding().get(i1).setVersion(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_ExcludeFoodMdfr_Txt ********************************************************************************/
-		if(n.getNtritnOrdrExcludeFoodMdfrTxt() != null) {
-			nutritionorderexcludefoodmodifier.setText(n.getNtritnOrdrExcludeFoodMdfrTxt());
+		if(n.getNtritnOrdrExcludeFoodMdfrTxt() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrExcludeFoodMdfrTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getExcludeFoodModifier().size() < i0+1) { nutritionorder.addExcludeFoodModifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getExcludeFoodModifier().get(i0).setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
-		/******************** nutritionorderfoodpreferencemodifier ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept nutritionorderfoodpreferencemodifier =  new org.hl7.fhir.r4.model.CodeableConcept();
-		nutritionorder.addFoodPreferenceModifier(nutritionorderfoodpreferencemodifier);
-
-		/******************** nutritionorderfoodpreferencemodifiercoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding nutritionorderfoodpreferencemodifiercoding =  new org.hl7.fhir.r4.model.Coding();
-		nutritionorderfoodpreferencemodifier.addCoding(nutritionorderfoodpreferencemodifiercoding);
-
 		/******************** NtritnOrdr_FoodPreferenceMdfr_Cdg_Cd ********************************************************************************/
-		if(n.getNtritnOrdrFoodPreferenceMdfrCdgCd() != null) {
-			nutritionorderfoodpreferencemodifiercoding.setCode(n.getNtritnOrdrFoodPreferenceMdfrCdgCd());
+		if(n.getNtritnOrdrFoodPreferenceMdfrCdgCd() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrFoodPreferenceMdfrCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getFoodPreferenceModifier().size() < i0+1) { nutritionorder.addFoodPreferenceModifier(); }
+				String[] arrayi1 = n.getNtritnOrdrFoodPreferenceMdfrCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getFoodPreferenceModifier().get(i0).getCoding().size() < i1+1) { nutritionorder.getFoodPreferenceModifier().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getFoodPreferenceModifier().get(i0).getCoding().get(i1).setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_FoodPreferenceMdfr_Cdg_Dsply ********************************************************************************/
-		if(n.getNtritnOrdrFoodPreferenceMdfrCdgDsply() != null) {
-			nutritionorderfoodpreferencemodifiercoding.setDisplay(n.getNtritnOrdrFoodPreferenceMdfrCdgDsply());
+		if(n.getNtritnOrdrFoodPreferenceMdfrCdgDsply() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrFoodPreferenceMdfrCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getFoodPreferenceModifier().size() < i0+1) { nutritionorder.addFoodPreferenceModifier(); }
+				String[] arrayi1 = n.getNtritnOrdrFoodPreferenceMdfrCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getFoodPreferenceModifier().get(i0).getCoding().size() < i1+1) { nutritionorder.getFoodPreferenceModifier().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getFoodPreferenceModifier().get(i0).getCoding().get(i1).setDisplay(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_FoodPreferenceMdfr_Cdg_Sys ********************************************************************************/
-		if(n.getNtritnOrdrFoodPreferenceMdfrCdgSys() != null) {
-			nutritionorderfoodpreferencemodifiercoding.setSystem(n.getNtritnOrdrFoodPreferenceMdfrCdgSys());
+		if(n.getNtritnOrdrFoodPreferenceMdfrCdgSys() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrFoodPreferenceMdfrCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getFoodPreferenceModifier().size() < i0+1) { nutritionorder.addFoodPreferenceModifier(); }
+				String[] arrayi1 = n.getNtritnOrdrFoodPreferenceMdfrCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getFoodPreferenceModifier().get(i0).getCoding().size() < i1+1) { nutritionorder.getFoodPreferenceModifier().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getFoodPreferenceModifier().get(i0).getCoding().get(i1).setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_FoodPreferenceMdfr_Cdg_UsrSltd ********************************************************************************/
-		if(n.getNtritnOrdrFoodPreferenceMdfrCdgUsrSltd() != null) {
-			nutritionorderfoodpreferencemodifiercoding.setUserSelected(Boolean.parseBoolean(n.getNtritnOrdrFoodPreferenceMdfrCdgUsrSltd()));
+		if(n.getNtritnOrdrFoodPreferenceMdfrCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrFoodPreferenceMdfrCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getFoodPreferenceModifier().size() < i0+1) { nutritionorder.addFoodPreferenceModifier(); }
+				String[] arrayi1 = n.getNtritnOrdrFoodPreferenceMdfrCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getFoodPreferenceModifier().get(i0).getCoding().size() < i1+1) { nutritionorder.getFoodPreferenceModifier().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getFoodPreferenceModifier().get(i0).getCoding().get(i1).setUserSelected(Boolean.parseBoolean(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_FoodPreferenceMdfr_Cdg_Vrsn ********************************************************************************/
-		if(n.getNtritnOrdrFoodPreferenceMdfrCdgVrsn() != null) {
-			nutritionorderfoodpreferencemodifiercoding.setVersion(n.getNtritnOrdrFoodPreferenceMdfrCdgVrsn());
+		if(n.getNtritnOrdrFoodPreferenceMdfrCdgVrsn() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrFoodPreferenceMdfrCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getFoodPreferenceModifier().size() < i0+1) { nutritionorder.addFoodPreferenceModifier(); }
+				String[] arrayi1 = n.getNtritnOrdrFoodPreferenceMdfrCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getFoodPreferenceModifier().get(i0).getCoding().size() < i1+1) { nutritionorder.getFoodPreferenceModifier().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getFoodPreferenceModifier().get(i0).getCoding().get(i1).setVersion(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_FoodPreferenceMdfr_Txt ********************************************************************************/
-		if(n.getNtritnOrdrFoodPreferenceMdfrTxt() != null) {
-			nutritionorderfoodpreferencemodifier.setText(n.getNtritnOrdrFoodPreferenceMdfrTxt());
-		}
-		/******************** nutritionorderidentifier ********************************************************************************/
-		org.hl7.fhir.r4.model.Identifier nutritionorderidentifier =  new org.hl7.fhir.r4.model.Identifier();
-		nutritionorder.addIdentifier(nutritionorderidentifier);
+		if(n.getNtritnOrdrFoodPreferenceMdfrTxt() != null ) {
 
+			String[] arrayi0 = n.getNtritnOrdrFoodPreferenceMdfrTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getFoodPreferenceModifier().size() < i0+1) { nutritionorder.addFoodPreferenceModifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getFoodPreferenceModifier().get(i0).setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
+		}
 		/******************** NtritnOrdr_Id_Assigner ********************************************************************************/
-		if(n.getNtritnOrdrIdAssigner() != null) {
-			nutritionorderidentifier.setAssigner( new org.hl7.fhir.r4.model.Reference(n.getNtritnOrdrIdAssigner()));
-		}
-		/******************** nutritionorderidentifierperiod ********************************************************************************/
-		org.hl7.fhir.r4.model.Period nutritionorderidentifierperiod =  new org.hl7.fhir.r4.model.Period();
-		nutritionorderidentifier.setPeriod(nutritionorderidentifierperiod);
+		if(n.getNtritnOrdrIdAssigner() != null ) {
 
+			String[] arrayi0 = n.getNtritnOrdrIdAssigner().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getIdentifier().size() < i0+1) { nutritionorder.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getIdentifier().get(i0).setAssigner(new org.hl7.fhir.r4.model.Reference(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** NtritnOrdr_Id_Prd_End ********************************************************************************/
-		if(n.getNtritnOrdrIdPrdEnd() != null) {
-			java.text.SimpleDateFormat NtritnOrdr_Id_Prd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date NtritnOrdr_Id_Prd_Enddate = NtritnOrdr_Id_Prd_Endsdf.parse(n.getNtritnOrdrIdPrdEnd());
-			nutritionorderidentifierperiod.setEnd(NtritnOrdr_Id_Prd_Enddate);
+		if(n.getNtritnOrdrIdPrdEnd() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrIdPrdEnd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getIdentifier().size() < i0+1) { nutritionorder.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getIdentifier().get(i0).getPeriod().setEnd(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** NtritnOrdr_Id_Prd_Strt ********************************************************************************/
-		if(n.getNtritnOrdrIdPrdStrt() != null) {
-			java.text.SimpleDateFormat NtritnOrdr_Id_Prd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date NtritnOrdr_Id_Prd_Strtdate = NtritnOrdr_Id_Prd_Strtsdf.parse(n.getNtritnOrdrIdPrdStrt());
-			nutritionorderidentifierperiod.setStart(NtritnOrdr_Id_Prd_Strtdate);
+		if(n.getNtritnOrdrIdPrdStrt() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrIdPrdStrt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getIdentifier().size() < i0+1) { nutritionorder.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getIdentifier().get(i0).getPeriod().setStart(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** NtritnOrdr_Id_Sys ********************************************************************************/
-		if(n.getNtritnOrdrIdSys() != null) {
-			nutritionorderidentifier.setSystem(n.getNtritnOrdrIdSys());
+		if(n.getNtritnOrdrIdSys() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrIdSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getIdentifier().size() < i0+1) { nutritionorder.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getIdentifier().get(i0).setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
-		/******************** nutritionorderidentifiertype ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept nutritionorderidentifiertype =  new org.hl7.fhir.r4.model.CodeableConcept();
-		nutritionorderidentifier.setType(nutritionorderidentifiertype);
-
-		/******************** nutritionorderidentifiertypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding nutritionorderidentifiertypecoding =  new org.hl7.fhir.r4.model.Coding();
-		nutritionorderidentifiertype.addCoding(nutritionorderidentifiertypecoding);
-
 		/******************** NtritnOrdr_Id_Typ_Cdg_Cd ********************************************************************************/
-		if(n.getNtritnOrdrIdTypCdgCd() != null) {
-			nutritionorderidentifiertypecoding.setCode(n.getNtritnOrdrIdTypCdgCd());
+		if(n.getNtritnOrdrIdTypCdgCd() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrIdTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getIdentifier().size() < i0+1) { nutritionorder.addIdentifier(); }
+				String[] arrayi1 = n.getNtritnOrdrIdTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getIdentifier().get(i0).getType().getCoding().size() < i1+1) { nutritionorder.getIdentifier().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getIdentifier().get(i0).getType().getCoding().get(i1).setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_Id_Typ_Cdg_Dsply ********************************************************************************/
-		if(n.getNtritnOrdrIdTypCdgDsply() != null) {
-			nutritionorderidentifiertypecoding.setDisplay(n.getNtritnOrdrIdTypCdgDsply());
+		if(n.getNtritnOrdrIdTypCdgDsply() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrIdTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getIdentifier().size() < i0+1) { nutritionorder.addIdentifier(); }
+				String[] arrayi1 = n.getNtritnOrdrIdTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getIdentifier().get(i0).getType().getCoding().size() < i1+1) { nutritionorder.getIdentifier().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getIdentifier().get(i0).getType().getCoding().get(i1).setDisplay(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_Id_Typ_Cdg_Sys ********************************************************************************/
-		if(n.getNtritnOrdrIdTypCdgSys() != null) {
-			nutritionorderidentifiertypecoding.setSystem(n.getNtritnOrdrIdTypCdgSys());
+		if(n.getNtritnOrdrIdTypCdgSys() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrIdTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getIdentifier().size() < i0+1) { nutritionorder.addIdentifier(); }
+				String[] arrayi1 = n.getNtritnOrdrIdTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getIdentifier().get(i0).getType().getCoding().size() < i1+1) { nutritionorder.getIdentifier().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getIdentifier().get(i0).getType().getCoding().get(i1).setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_Id_Typ_Cdg_UsrSltd ********************************************************************************/
-		if(n.getNtritnOrdrIdTypCdgUsrSltd() != null) {
-			nutritionorderidentifiertypecoding.setUserSelected(Boolean.parseBoolean(n.getNtritnOrdrIdTypCdgUsrSltd()));
+		if(n.getNtritnOrdrIdTypCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrIdTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getIdentifier().size() < i0+1) { nutritionorder.addIdentifier(); }
+				String[] arrayi1 = n.getNtritnOrdrIdTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getIdentifier().get(i0).getType().getCoding().size() < i1+1) { nutritionorder.getIdentifier().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getIdentifier().get(i0).getType().getCoding().get(i1).setUserSelected(Boolean.parseBoolean(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_Id_Typ_Cdg_Vrsn ********************************************************************************/
-		if(n.getNtritnOrdrIdTypCdgVrsn() != null) {
-			nutritionorderidentifiertypecoding.setVersion(n.getNtritnOrdrIdTypCdgVrsn());
+		if(n.getNtritnOrdrIdTypCdgVrsn() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrIdTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getIdentifier().size() < i0+1) { nutritionorder.addIdentifier(); }
+				String[] arrayi1 = n.getNtritnOrdrIdTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getIdentifier().get(i0).getType().getCoding().size() < i1+1) { nutritionorder.getIdentifier().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getIdentifier().get(i0).getType().getCoding().get(i1).setVersion(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_Id_Typ_Txt ********************************************************************************/
-		if(n.getNtritnOrdrIdTypTxt() != null) {
-			nutritionorderidentifiertype.setText(n.getNtritnOrdrIdTypTxt());
-		}
-		/******************** nutritionorderidentifieruse ********************************************************************************/
-		org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory nutritionorderidentifieruse =  new org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory();
-		nutritionorderidentifier.setUse(nutritionorderidentifieruse.fromCode(n.getNtritnOrdrIdUse()));
+		if(n.getNtritnOrdrIdTypTxt() != null ) {
 
+			String[] arrayi0 = n.getNtritnOrdrIdTypTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getIdentifier().size() < i0+1) { nutritionorder.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getIdentifier().get(i0).getType().setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
+		}
+		/******************** NtritnOrdr_Id_Use ********************************************************************************/
+		if(n.getNtritnOrdrIdUse() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrIdUse().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getIdentifier().size() < i0+1) { nutritionorder.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getIdentifier().get(i0).setUse(new org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory().fromCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** NtritnOrdr_Id_Vl ********************************************************************************/
-		if(n.getNtritnOrdrIdVl() != null) {
-			nutritionorderidentifier.setValue(n.getNtritnOrdrIdVl());
-		}
-		/******************** NtritnOrdr_Instantiates ********************************************************************************/
-		if(n.getNtritnOrdrInstantiates() != null) {
-			nutritionorder.addInstantiates(n.getNtritnOrdrInstantiates());
-		}
-		/******************** NtritnOrdr_InstantiatesCanonical ********************************************************************************/
-		if(n.getNtritnOrdrInstantiatesCanonical() != null) {
-			nutritionorder.addInstantiatesCanonical(n.getNtritnOrdrInstantiatesCanonical());
+		if(n.getNtritnOrdrIdVl() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrIdVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getIdentifier().size() < i0+1) { nutritionorder.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getIdentifier().get(i0).setValue(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** NtritnOrdr_InstantiatesUri ********************************************************************************/
-		if(n.getNtritnOrdrInstantiatesUri() != null) {
-			nutritionorder.addInstantiatesUri(n.getNtritnOrdrInstantiatesUri());
+		if(n.getNtritnOrdrInstantiatesUri() != null ) {
+
+				for( String currListStrSplit : n.getNtritnOrdrInstantiatesUri().replace("[","").replace("]","").replace("\"","").split(",")){
+			if(currListStrSplit.replace("[","").replace("]","").equals("NULL") | currListStrSplit==null) {} else {
+			nutritionorder.addInstantiates(currListStrSplit.replace("[","").replace("]","").replace("\"",""));
+			}				}
+
 		}
-		/******************** nutritionorderintent ********************************************************************************/
-		org.hl7.fhir.r4.model.NutritionOrder.NutritiionOrderIntentEnumFactory nutritionorderintent =  new org.hl7.fhir.r4.model.NutritionOrder.NutritiionOrderIntentEnumFactory();
-		nutritionorder.setIntent(nutritionorderintent.fromCode(n.getNtritnOrdrIntent()));
+		/******************** NtritnOrdr_InstantiatesCanonical ********************************************************************************/
+		if(n.getNtritnOrdrInstantiatesCanonical() != null ) {
 
-		/******************** nutritionordernote ********************************************************************************/
-		org.hl7.fhir.r4.model.Annotation nutritionordernote =  new org.hl7.fhir.r4.model.Annotation();
-		nutritionorder.addNote(nutritionordernote);
+				for( String currListStrSplit : n.getNtritnOrdrInstantiatesCanonical().replace("[","").replace("]","").replace("\"","").split(",")){
+			if(currListStrSplit.replace("[","").replace("]","").equals("NULL") | currListStrSplit==null) {} else {
+			nutritionorder.addInstantiatesCanonical(currListStrSplit.replace("[","").replace("]","").replace("\"",""));
+			}				}
 
+		}
+		/******************** NtritnOrdr_InstantiatesUri ********************************************************************************/
+		if(n.getNtritnOrdrInstantiatesUri() != null ) {
+
+				for( String currListStrSplit : n.getNtritnOrdrInstantiatesUri().replace("[","").replace("]","").replace("\"","").split(",")){
+			if(currListStrSplit.replace("[","").replace("]","").equals("NULL") | currListStrSplit==null) {} else {
+			nutritionorder.addInstantiatesUri(currListStrSplit.replace("[","").replace("]","").replace("\"",""));
+			}				}
+
+		}
+		/******************** NtritnOrdr_Intent ********************************************************************************/
+		if(n.getNtritnOrdrIntent() != null ) {
+
+			if(n.getNtritnOrdrIntent().replace("[","").replace("]","").equals("NULL") | n.getNtritnOrdrIntent()==null) {} else {
+			nutritionorder.setIntent(new org.hl7.fhir.r4.model.NutritionOrder.NutritiionOrderIntentEnumFactory().fromCode(n.getNtritnOrdrIntent().replace("[","").replace("]","").replace("\"","")));
+			}
+		}
 		/******************** NtritnOrdr_Nt_AthrRfrnc ********************************************************************************/
-		if(n.getNtritnOrdrNtAthrRfrnc() != null) {
-			nutritionordernote.setAuthor( new org.hl7.fhir.r4.model.Reference(n.getNtritnOrdrNtAthrRfrnc()));
+		if(n.getNtritnOrdrNtAthrRfrnc() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrNtAthrRfrnc().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getNote().size() < i0+1) { nutritionorder.addNote(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getNote().get(i0).setAuthor(new org.hl7.fhir.r4.model.Reference(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** NtritnOrdr_Nt_AthrStrgTyp ********************************************************************************/
-		if(n.getNtritnOrdrNtAthrStrgTyp() != null) {
-			nutritionordernote.setAuthor( new org.hl7.fhir.r4.model.StringType(n.getNtritnOrdrNtAthrStrgTyp()));
+		if(n.getNtritnOrdrNtAthrStrgTyp() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrNtAthrStrgTyp().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getNote().size() < i0+1) { nutritionorder.addNote(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getNote().get(i0).setAuthor(new org.hl7.fhir.r4.model.StringType(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** NtritnOrdr_Nt_Txt ********************************************************************************/
-		if(n.getNtritnOrdrNtTxt() != null) {
-			nutritionordernote.setText(n.getNtritnOrdrNtTxt());
+		if(n.getNtritnOrdrNtTxt() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrNtTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getNote().size() < i0+1) { nutritionorder.addNote(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getNote().get(i0).setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** NtritnOrdr_Nt_Time ********************************************************************************/
-		if(n.getNtritnOrdrNtTime() != null) {
-			java.text.SimpleDateFormat NtritnOrdr_Nt_Timesdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date NtritnOrdr_Nt_Timedate = NtritnOrdr_Nt_Timesdf.parse(n.getNtritnOrdrNtTime());
-			nutritionordernote.setTime(NtritnOrdr_Nt_Timedate);
+		if(n.getNtritnOrdrNtTime() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrNtTime().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getNote().size() < i0+1) { nutritionorder.addNote(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getNote().get(i0).setTime(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
-		/******************** nutritionorderoraldiet ********************************************************************************/
-		org.hl7.fhir.r4.model.NutritionOrder.NutritionOrderOralDietComponent nutritionorderoraldiet =  new org.hl7.fhir.r4.model.NutritionOrder.NutritionOrderOralDietComponent();
-		nutritionorder.setOralDiet(nutritionorderoraldiet);
-
-		/******************** nutritionorderoraldietfluidconsistencytype ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept nutritionorderoraldietfluidconsistencytype =  new org.hl7.fhir.r4.model.CodeableConcept();
-		nutritionorderoraldiet.addFluidConsistencyType(nutritionorderoraldietfluidconsistencytype);
-
-		/******************** nutritionorderoraldietfluidconsistencytypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding nutritionorderoraldietfluidconsistencytypecoding =  new org.hl7.fhir.r4.model.Coding();
-		nutritionorderoraldietfluidconsistencytype.addCoding(nutritionorderoraldietfluidconsistencytypecoding);
-
 		/******************** NtritnOrdr_OralDiet_FluidConsistencyTyp_Cdg_Cd ********************************************************************************/
-		if(n.getNtritnOrdrOralDietFluidConsistencyTypCdgCd() != null) {
-			nutritionorderoraldietfluidconsistencytypecoding.setCode(n.getNtritnOrdrOralDietFluidConsistencyTypCdgCd());
+		if(n.getNtritnOrdrOralDietFluidConsistencyTypCdgCd() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietFluidConsistencyTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getFluidConsistencyType().size() < i0+1) { nutritionorder.getOralDiet().addFluidConsistencyType(); }
+				String[] arrayi1 = n.getNtritnOrdrOralDietFluidConsistencyTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getOralDiet().getFluidConsistencyType().get(i0).getCoding().size() < i1+1) { nutritionorder.getOralDiet().getFluidConsistencyType().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getOralDiet().getFluidConsistencyType().get(i0).getCoding().get(i1).setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_OralDiet_FluidConsistencyTyp_Cdg_Dsply ********************************************************************************/
-		if(n.getNtritnOrdrOralDietFluidConsistencyTypCdgDsply() != null) {
-			nutritionorderoraldietfluidconsistencytypecoding.setDisplay(n.getNtritnOrdrOralDietFluidConsistencyTypCdgDsply());
+		if(n.getNtritnOrdrOralDietFluidConsistencyTypCdgDsply() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietFluidConsistencyTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getFluidConsistencyType().size() < i0+1) { nutritionorder.getOralDiet().addFluidConsistencyType(); }
+				String[] arrayi1 = n.getNtritnOrdrOralDietFluidConsistencyTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getOralDiet().getFluidConsistencyType().get(i0).getCoding().size() < i1+1) { nutritionorder.getOralDiet().getFluidConsistencyType().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getOralDiet().getFluidConsistencyType().get(i0).getCoding().get(i1).setDisplay(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_OralDiet_FluidConsistencyTyp_Cdg_Sys ********************************************************************************/
-		if(n.getNtritnOrdrOralDietFluidConsistencyTypCdgSys() != null) {
-			nutritionorderoraldietfluidconsistencytypecoding.setSystem(n.getNtritnOrdrOralDietFluidConsistencyTypCdgSys());
+		if(n.getNtritnOrdrOralDietFluidConsistencyTypCdgSys() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietFluidConsistencyTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getFluidConsistencyType().size() < i0+1) { nutritionorder.getOralDiet().addFluidConsistencyType(); }
+				String[] arrayi1 = n.getNtritnOrdrOralDietFluidConsistencyTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getOralDiet().getFluidConsistencyType().get(i0).getCoding().size() < i1+1) { nutritionorder.getOralDiet().getFluidConsistencyType().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getOralDiet().getFluidConsistencyType().get(i0).getCoding().get(i1).setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_OralDiet_FluidConsistencyTyp_Cdg_UsrSltd ********************************************************************************/
-		if(n.getNtritnOrdrOralDietFluidConsistencyTypCdgUsrSltd() != null) {
-			nutritionorderoraldietfluidconsistencytypecoding.setUserSelected(Boolean.parseBoolean(n.getNtritnOrdrOralDietFluidConsistencyTypCdgUsrSltd()));
+		if(n.getNtritnOrdrOralDietFluidConsistencyTypCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietFluidConsistencyTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getFluidConsistencyType().size() < i0+1) { nutritionorder.getOralDiet().addFluidConsistencyType(); }
+				String[] arrayi1 = n.getNtritnOrdrOralDietFluidConsistencyTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getOralDiet().getFluidConsistencyType().get(i0).getCoding().size() < i1+1) { nutritionorder.getOralDiet().getFluidConsistencyType().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getOralDiet().getFluidConsistencyType().get(i0).getCoding().get(i1).setUserSelected(Boolean.parseBoolean(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_OralDiet_FluidConsistencyTyp_Cdg_Vrsn ********************************************************************************/
-		if(n.getNtritnOrdrOralDietFluidConsistencyTypCdgVrsn() != null) {
-			nutritionorderoraldietfluidconsistencytypecoding.setVersion(n.getNtritnOrdrOralDietFluidConsistencyTypCdgVrsn());
+		if(n.getNtritnOrdrOralDietFluidConsistencyTypCdgVrsn() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietFluidConsistencyTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getFluidConsistencyType().size() < i0+1) { nutritionorder.getOralDiet().addFluidConsistencyType(); }
+				String[] arrayi1 = n.getNtritnOrdrOralDietFluidConsistencyTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getOralDiet().getFluidConsistencyType().get(i0).getCoding().size() < i1+1) { nutritionorder.getOralDiet().getFluidConsistencyType().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getOralDiet().getFluidConsistencyType().get(i0).getCoding().get(i1).setVersion(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_OralDiet_FluidConsistencyTyp_Txt ********************************************************************************/
-		if(n.getNtritnOrdrOralDietFluidConsistencyTypTxt() != null) {
-			nutritionorderoraldietfluidconsistencytype.setText(n.getNtritnOrdrOralDietFluidConsistencyTypTxt());
+		if(n.getNtritnOrdrOralDietFluidConsistencyTypTxt() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietFluidConsistencyTypTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getFluidConsistencyType().size() < i0+1) { nutritionorder.getOralDiet().addFluidConsistencyType(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getOralDiet().getFluidConsistencyType().get(i0).setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** NtritnOrdr_OralDiet_Instrctn ********************************************************************************/
-		if(n.getNtritnOrdrOralDietInstrctn() != null) {
-			nutritionorderoraldiet.setInstruction(n.getNtritnOrdrOralDietInstrctn());
+		if(n.getNtritnOrdrOralDietInstrctn() != null ) {
+
+			if(n.getNtritnOrdrOralDietInstrctn().replace("[","").replace("]","").equals("NULL") | n.getNtritnOrdrOralDietInstrctn()==null) {} else {
+			nutritionorder.getOralDiet().setInstruction(n.getNtritnOrdrOralDietInstrctn().replace("[","").replace("]","").replace("\"",""));
+			}
 		}
-		/******************** nutritionorderoraldietnutrient ********************************************************************************/
-		org.hl7.fhir.r4.model.NutritionOrder.NutritionOrderOralDietNutrientComponent nutritionorderoraldietnutrient =  new org.hl7.fhir.r4.model.NutritionOrder.NutritionOrderOralDietNutrientComponent();
-		nutritionorderoraldiet.addNutrient(nutritionorderoraldietnutrient);
-
-		/******************** nutritionorderoraldietnutrientamount ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity nutritionorderoraldietnutrientamount =  new org.hl7.fhir.r4.model.Quantity();
-		nutritionorderoraldietnutrient.setAmount(nutritionorderoraldietnutrientamount);
-
 		/******************** NtritnOrdr_OralDiet_Nutrient_Amnt_Cd ********************************************************************************/
-		if(n.getNtritnOrdrOralDietNutrientAmntCd() != null) {
-			nutritionorderoraldietnutrientamount.setCode(n.getNtritnOrdrOralDietNutrientAmntCd());
-		}
-		/******************** nutritionorderoraldietnutrientamountcomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory nutritionorderoraldietnutrientamountcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-		nutritionorderoraldietnutrientamount.setComparator(nutritionorderoraldietnutrientamountcomparator.fromCode(n.getNtritnOrdrOralDietNutrientAmntCmprtr()));
+		if(n.getNtritnOrdrOralDietNutrientAmntCd() != null ) {
 
+			String[] arrayi0 = n.getNtritnOrdrOralDietNutrientAmntCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getNutrient().size() < i0+1) { nutritionorder.getOralDiet().addNutrient(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getOralDiet().getNutrient().get(i0).getAmount().setCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
+		}
+		/******************** NtritnOrdr_OralDiet_Nutrient_Amnt_Cmprtr ********************************************************************************/
+		if(n.getNtritnOrdrOralDietNutrientAmntCmprtr() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietNutrientAmntCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getNutrient().size() < i0+1) { nutritionorder.getOralDiet().addNutrient(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getOralDiet().getNutrient().get(i0).getAmount().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** NtritnOrdr_OralDiet_Nutrient_Amnt_Sys ********************************************************************************/
-		if(n.getNtritnOrdrOralDietNutrientAmntSys() != null) {
-			nutritionorderoraldietnutrientamount.setSystem(n.getNtritnOrdrOralDietNutrientAmntSys());
+		if(n.getNtritnOrdrOralDietNutrientAmntSys() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietNutrientAmntSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getNutrient().size() < i0+1) { nutritionorder.getOralDiet().addNutrient(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getOralDiet().getNutrient().get(i0).getAmount().setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** NtritnOrdr_OralDiet_Nutrient_Amnt_Unt ********************************************************************************/
-		if(n.getNtritnOrdrOralDietNutrientAmntUnt() != null) {
-			nutritionorderoraldietnutrientamount.setUnit(n.getNtritnOrdrOralDietNutrientAmntUnt());
+		if(n.getNtritnOrdrOralDietNutrientAmntUnt() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietNutrientAmntUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getNutrient().size() < i0+1) { nutritionorder.getOralDiet().addNutrient(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getOralDiet().getNutrient().get(i0).getAmount().setUnit(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** NtritnOrdr_OralDiet_Nutrient_Amnt_Vl ********************************************************************************/
-		if(n.getNtritnOrdrOralDietNutrientAmntVl() != null) {
-			nutritionorderoraldietnutrientamount.setValue(Double.parseDouble((n.getNtritnOrdrOralDietNutrientAmntVl())));
+		if(n.getNtritnOrdrOralDietNutrientAmntVl() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietNutrientAmntVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getNutrient().size() < i0+1) { nutritionorder.getOralDiet().addNutrient(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getOralDiet().getNutrient().get(i0).getAmount().setValue((new java.math.BigDecimal((arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+			}
+
 		}
-		/******************** nutritionorderoraldietnutrientmodifier ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept nutritionorderoraldietnutrientmodifier =  new org.hl7.fhir.r4.model.CodeableConcept();
-		nutritionorderoraldietnutrient.setModifier(nutritionorderoraldietnutrientmodifier);
-
-		/******************** nutritionorderoraldietnutrientmodifiercoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding nutritionorderoraldietnutrientmodifiercoding =  new org.hl7.fhir.r4.model.Coding();
-		nutritionorderoraldietnutrientmodifier.addCoding(nutritionorderoraldietnutrientmodifiercoding);
-
 		/******************** NtritnOrdr_OralDiet_Nutrient_Mdfr_Cdg_Cd ********************************************************************************/
-		if(n.getNtritnOrdrOralDietNutrientMdfrCdgCd() != null) {
-			nutritionorderoraldietnutrientmodifiercoding.setCode(n.getNtritnOrdrOralDietNutrientMdfrCdgCd());
+		if(n.getNtritnOrdrOralDietNutrientMdfrCdgCd() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietNutrientMdfrCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getNutrient().size() < i0+1) { nutritionorder.getOralDiet().addNutrient(); }
+				String[] arrayi1 = n.getNtritnOrdrOralDietNutrientMdfrCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getOralDiet().getNutrient().get(i0).getModifier().getCoding().size() < i1+1) { nutritionorder.getOralDiet().getNutrient().get(i0).getModifier().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getOralDiet().getNutrient().get(i0).getModifier().getCoding().get(i1).setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_OralDiet_Nutrient_Mdfr_Cdg_Dsply ********************************************************************************/
-		if(n.getNtritnOrdrOralDietNutrientMdfrCdgDsply() != null) {
-			nutritionorderoraldietnutrientmodifiercoding.setDisplay(n.getNtritnOrdrOralDietNutrientMdfrCdgDsply());
+		if(n.getNtritnOrdrOralDietNutrientMdfrCdgDsply() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietNutrientMdfrCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getNutrient().size() < i0+1) { nutritionorder.getOralDiet().addNutrient(); }
+				String[] arrayi1 = n.getNtritnOrdrOralDietNutrientMdfrCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getOralDiet().getNutrient().get(i0).getModifier().getCoding().size() < i1+1) { nutritionorder.getOralDiet().getNutrient().get(i0).getModifier().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getOralDiet().getNutrient().get(i0).getModifier().getCoding().get(i1).setDisplay(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_OralDiet_Nutrient_Mdfr_Cdg_Sys ********************************************************************************/
-		if(n.getNtritnOrdrOralDietNutrientMdfrCdgSys() != null) {
-			nutritionorderoraldietnutrientmodifiercoding.setSystem(n.getNtritnOrdrOralDietNutrientMdfrCdgSys());
+		if(n.getNtritnOrdrOralDietNutrientMdfrCdgSys() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietNutrientMdfrCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getNutrient().size() < i0+1) { nutritionorder.getOralDiet().addNutrient(); }
+				String[] arrayi1 = n.getNtritnOrdrOralDietNutrientMdfrCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getOralDiet().getNutrient().get(i0).getModifier().getCoding().size() < i1+1) { nutritionorder.getOralDiet().getNutrient().get(i0).getModifier().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getOralDiet().getNutrient().get(i0).getModifier().getCoding().get(i1).setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_OralDiet_Nutrient_Mdfr_Cdg_UsrSltd ********************************************************************************/
-		if(n.getNtritnOrdrOralDietNutrientMdfrCdgUsrSltd() != null) {
-			nutritionorderoraldietnutrientmodifiercoding.setUserSelected(Boolean.parseBoolean(n.getNtritnOrdrOralDietNutrientMdfrCdgUsrSltd()));
+		if(n.getNtritnOrdrOralDietNutrientMdfrCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietNutrientMdfrCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getNutrient().size() < i0+1) { nutritionorder.getOralDiet().addNutrient(); }
+				String[] arrayi1 = n.getNtritnOrdrOralDietNutrientMdfrCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getOralDiet().getNutrient().get(i0).getModifier().getCoding().size() < i1+1) { nutritionorder.getOralDiet().getNutrient().get(i0).getModifier().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getOralDiet().getNutrient().get(i0).getModifier().getCoding().get(i1).setUserSelected(Boolean.parseBoolean(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_OralDiet_Nutrient_Mdfr_Cdg_Vrsn ********************************************************************************/
-		if(n.getNtritnOrdrOralDietNutrientMdfrCdgVrsn() != null) {
-			nutritionorderoraldietnutrientmodifiercoding.setVersion(n.getNtritnOrdrOralDietNutrientMdfrCdgVrsn());
+		if(n.getNtritnOrdrOralDietNutrientMdfrCdgVrsn() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietNutrientMdfrCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getNutrient().size() < i0+1) { nutritionorder.getOralDiet().addNutrient(); }
+				String[] arrayi1 = n.getNtritnOrdrOralDietNutrientMdfrCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getOralDiet().getNutrient().get(i0).getModifier().getCoding().size() < i1+1) { nutritionorder.getOralDiet().getNutrient().get(i0).getModifier().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getOralDiet().getNutrient().get(i0).getModifier().getCoding().get(i1).setVersion(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_OralDiet_Nutrient_Mdfr_Txt ********************************************************************************/
-		if(n.getNtritnOrdrOralDietNutrientMdfrTxt() != null) {
-			nutritionorderoraldietnutrientmodifier.setText(n.getNtritnOrdrOralDietNutrientMdfrTxt());
+		if(n.getNtritnOrdrOralDietNutrientMdfrTxt() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietNutrientMdfrTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getNutrient().size() < i0+1) { nutritionorder.getOralDiet().addNutrient(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getOralDiet().getNutrient().get(i0).getModifier().setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
-		/******************** nutritionorderoraldietschedule ********************************************************************************/
-		org.hl7.fhir.r4.model.Timing nutritionorderoraldietschedule =  new org.hl7.fhir.r4.model.Timing();
-		nutritionorderoraldiet.addSchedule(nutritionorderoraldietschedule);
-
-		/******************** nutritionorderoraldietschedulecode ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept nutritionorderoraldietschedulecode =  new org.hl7.fhir.r4.model.CodeableConcept();
-		nutritionorderoraldietschedule.setCode(nutritionorderoraldietschedulecode);
-
-		/******************** nutritionorderoraldietschedulecodecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding nutritionorderoraldietschedulecodecoding =  new org.hl7.fhir.r4.model.Coding();
-		nutritionorderoraldietschedulecode.addCoding(nutritionorderoraldietschedulecodecoding);
-
 		/******************** NtritnOrdr_OralDiet_Schdl_Cd_Cdg_Cd ********************************************************************************/
-		if(n.getNtritnOrdrOralDietSchdlCdCdgCd() != null) {
-			nutritionorderoraldietschedulecodecoding.setCode(n.getNtritnOrdrOralDietSchdlCdCdgCd());
+		if(n.getNtritnOrdrOralDietSchdlCdCdgCd() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietSchdlCdCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getSchedule().size() < i0+1) { nutritionorder.getOralDiet().addSchedule(); }
+				String[] arrayi1 = n.getNtritnOrdrOralDietSchdlCdCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getOralDiet().getSchedule().get(i0).getCode().getCoding().size() < i1+1) { nutritionorder.getOralDiet().getSchedule().get(i0).getCode().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getOralDiet().getSchedule().get(i0).getCode().getCoding().get(i1).setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_OralDiet_Schdl_Cd_Cdg_Dsply ********************************************************************************/
-		if(n.getNtritnOrdrOralDietSchdlCdCdgDsply() != null) {
-			nutritionorderoraldietschedulecodecoding.setDisplay(n.getNtritnOrdrOralDietSchdlCdCdgDsply());
+		if(n.getNtritnOrdrOralDietSchdlCdCdgDsply() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietSchdlCdCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getSchedule().size() < i0+1) { nutritionorder.getOralDiet().addSchedule(); }
+				String[] arrayi1 = n.getNtritnOrdrOralDietSchdlCdCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getOralDiet().getSchedule().get(i0).getCode().getCoding().size() < i1+1) { nutritionorder.getOralDiet().getSchedule().get(i0).getCode().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getOralDiet().getSchedule().get(i0).getCode().getCoding().get(i1).setDisplay(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_OralDiet_Schdl_Cd_Cdg_Sys ********************************************************************************/
-		if(n.getNtritnOrdrOralDietSchdlCdCdgSys() != null) {
-			nutritionorderoraldietschedulecodecoding.setSystem(n.getNtritnOrdrOralDietSchdlCdCdgSys());
+		if(n.getNtritnOrdrOralDietSchdlCdCdgSys() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietSchdlCdCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getSchedule().size() < i0+1) { nutritionorder.getOralDiet().addSchedule(); }
+				String[] arrayi1 = n.getNtritnOrdrOralDietSchdlCdCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getOralDiet().getSchedule().get(i0).getCode().getCoding().size() < i1+1) { nutritionorder.getOralDiet().getSchedule().get(i0).getCode().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getOralDiet().getSchedule().get(i0).getCode().getCoding().get(i1).setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_OralDiet_Schdl_Cd_Cdg_UsrSltd ********************************************************************************/
-		if(n.getNtritnOrdrOralDietSchdlCdCdgUsrSltd() != null) {
-			nutritionorderoraldietschedulecodecoding.setUserSelected(Boolean.parseBoolean(n.getNtritnOrdrOralDietSchdlCdCdgUsrSltd()));
+		if(n.getNtritnOrdrOralDietSchdlCdCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietSchdlCdCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getSchedule().size() < i0+1) { nutritionorder.getOralDiet().addSchedule(); }
+				String[] arrayi1 = n.getNtritnOrdrOralDietSchdlCdCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getOralDiet().getSchedule().get(i0).getCode().getCoding().size() < i1+1) { nutritionorder.getOralDiet().getSchedule().get(i0).getCode().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getOralDiet().getSchedule().get(i0).getCode().getCoding().get(i1).setUserSelected(Boolean.parseBoolean(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_OralDiet_Schdl_Cd_Cdg_Vrsn ********************************************************************************/
-		if(n.getNtritnOrdrOralDietSchdlCdCdgVrsn() != null) {
-			nutritionorderoraldietschedulecodecoding.setVersion(n.getNtritnOrdrOralDietSchdlCdCdgVrsn());
+		if(n.getNtritnOrdrOralDietSchdlCdCdgVrsn() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietSchdlCdCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getSchedule().size() < i0+1) { nutritionorder.getOralDiet().addSchedule(); }
+				String[] arrayi1 = n.getNtritnOrdrOralDietSchdlCdCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getOralDiet().getSchedule().get(i0).getCode().getCoding().size() < i1+1) { nutritionorder.getOralDiet().getSchedule().get(i0).getCode().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getOralDiet().getSchedule().get(i0).getCode().getCoding().get(i1).setVersion(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_OralDiet_Schdl_Cd_Txt ********************************************************************************/
-		if(n.getNtritnOrdrOralDietSchdlCdTxt() != null) {
-			nutritionorderoraldietschedulecode.setText(n.getNtritnOrdrOralDietSchdlCdTxt());
+		if(n.getNtritnOrdrOralDietSchdlCdTxt() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietSchdlCdTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getSchedule().size() < i0+1) { nutritionorder.getOralDiet().addSchedule(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getOralDiet().getSchedule().get(i0).getCode().setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** NtritnOrdr_OralDiet_Schdl_Evnt ********************************************************************************/
-		if(n.getNtritnOrdrOralDietSchdlEvnt() != null) {
-			java.text.SimpleDateFormat NtritnOrdr_OralDiet_Schdl_Evntsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date NtritnOrdr_OralDiet_Schdl_Evntdate = NtritnOrdr_OralDiet_Schdl_Evntsdf.parse(n.getNtritnOrdrOralDietSchdlEvnt());
-			nutritionorderoraldietschedule.addEvent(NtritnOrdr_OralDiet_Schdl_Evntdate);
+		if(n.getNtritnOrdrOralDietSchdlEvnt() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietSchdlEvnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getSchedule().size() < i0+1) { nutritionorder.getOralDiet().addSchedule(); }
+				for( String currListStrSplit : arrayi0[i0].replace("[","").replace("]","").replace("\"","").split(",")){
+				if(currListStrSplit.replace("[","").replace("]","").replace("\"","").equals("NULL") | currListStrSplit==null) {} else {nutritionorder.getOralDiet().getSchedule().get(i0).addEvent(currListStrSplit.replace("[","").replace("]","").equals("NULL") | currListStrSplit==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(currListStrSplit.replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
 		}
-		/******************** nutritionorderoraldietschedulerepeat ********************************************************************************/
-		org.hl7.fhir.r4.model.Timing.TimingRepeatComponent nutritionorderoraldietschedulerepeat =  new org.hl7.fhir.r4.model.Timing.TimingRepeatComponent();
-		nutritionorderoraldietschedule.setRepeat(nutritionorderoraldietschedulerepeat);
-
-		/******************** nutritionorderoraldietschedulerepeatboundsduration ********************************************************************************/
-		org.hl7.fhir.r4.model.Duration nutritionorderoraldietschedulerepeatboundsduration =  new org.hl7.fhir.r4.model.Duration();
-		nutritionorderoraldietschedulerepeat.setBounds(nutritionorderoraldietschedulerepeatboundsduration);
-
 		/******************** NtritnOrdr_OralDiet_Schdl_Rpt_BndsDuration_Cd ********************************************************************************/
-		if(n.getNtritnOrdrOralDietSchdlRptBndsDurationCd() != null) {
-			nutritionorderoraldietschedulerepeatboundsduration.setCode(n.getNtritnOrdrOralDietSchdlRptBndsDurationCd());
-		}
-		/******************** nutritionorderoraldietschedulerepeatboundsdurationcomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory nutritionorderoraldietschedulerepeatboundsdurationcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-		nutritionorderoraldietschedulerepeatboundsduration.setComparator(nutritionorderoraldietschedulerepeatboundsdurationcomparator.fromCode(n.getNtritnOrdrOralDietSchdlRptBndsDurationCmprtr()));
+		if(n.getNtritnOrdrOralDietSchdlRptBndsDurationCd() != null ) {
 
+			String[] arrayi0 = n.getNtritnOrdrOralDietSchdlRptBndsDurationCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getSchedule().size() < i0+1) { nutritionorder.getOralDiet().addSchedule(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getOralDiet().getSchedule().get(i0).getRepeat().getBoundsDuration().setCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
+		}
+		/******************** NtritnOrdr_OralDiet_Schdl_Rpt_BndsDuration_Cmprtr ********************************************************************************/
+		if(n.getNtritnOrdrOralDietSchdlRptBndsDurationCmprtr() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietSchdlRptBndsDurationCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getSchedule().size() < i0+1) { nutritionorder.getOralDiet().addSchedule(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getOralDiet().getSchedule().get(i0).getRepeat().getBoundsDuration().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** NtritnOrdr_OralDiet_Schdl_Rpt_BndsDuration_Sys ********************************************************************************/
-		if(n.getNtritnOrdrOralDietSchdlRptBndsDurationSys() != null) {
-			nutritionorderoraldietschedulerepeatboundsduration.setSystem(n.getNtritnOrdrOralDietSchdlRptBndsDurationSys());
+		if(n.getNtritnOrdrOralDietSchdlRptBndsDurationSys() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietSchdlRptBndsDurationSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getSchedule().size() < i0+1) { nutritionorder.getOralDiet().addSchedule(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getOralDiet().getSchedule().get(i0).getRepeat().getBoundsDuration().setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** NtritnOrdr_OralDiet_Schdl_Rpt_BndsDuration_Unt ********************************************************************************/
-		if(n.getNtritnOrdrOralDietSchdlRptBndsDurationUnt() != null) {
-			nutritionorderoraldietschedulerepeatboundsduration.setUnit(n.getNtritnOrdrOralDietSchdlRptBndsDurationUnt());
+		if(n.getNtritnOrdrOralDietSchdlRptBndsDurationUnt() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietSchdlRptBndsDurationUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getSchedule().size() < i0+1) { nutritionorder.getOralDiet().addSchedule(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getOralDiet().getSchedule().get(i0).getRepeat().getBoundsDuration().setUnit(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** NtritnOrdr_OralDiet_Schdl_Rpt_BndsDuration_Vl ********************************************************************************/
-		if(n.getNtritnOrdrOralDietSchdlRptBndsDurationVl() != null) {
-			nutritionorderoraldietschedulerepeatboundsduration.setValue(Double.parseDouble((n.getNtritnOrdrOralDietSchdlRptBndsDurationVl())));
-		}
-		/******************** nutritionorderoraldietschedulerepeatboundsperiod ********************************************************************************/
-		org.hl7.fhir.r4.model.Period nutritionorderoraldietschedulerepeatboundsperiod =  new org.hl7.fhir.r4.model.Period();
-		nutritionorderoraldietschedulerepeat.setBounds(nutritionorderoraldietschedulerepeatboundsperiod);
+		if(n.getNtritnOrdrOralDietSchdlRptBndsDurationVl() != null ) {
 
+			String[] arrayi0 = n.getNtritnOrdrOralDietSchdlRptBndsDurationVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getSchedule().size() < i0+1) { nutritionorder.getOralDiet().addSchedule(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getOralDiet().getSchedule().get(i0).getRepeat().getBoundsDuration().setValue((new java.math.BigDecimal((arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+			}
+
+		}
 		/******************** NtritnOrdr_OralDiet_Schdl_Rpt_BndsPrd_End ********************************************************************************/
-		if(n.getNtritnOrdrOralDietSchdlRptBndsPrdEnd() != null) {
-			java.text.SimpleDateFormat NtritnOrdr_OralDiet_Schdl_Rpt_BndsPrd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date NtritnOrdr_OralDiet_Schdl_Rpt_BndsPrd_Enddate = NtritnOrdr_OralDiet_Schdl_Rpt_BndsPrd_Endsdf.parse(n.getNtritnOrdrOralDietSchdlRptBndsPrdEnd());
-			nutritionorderoraldietschedulerepeatboundsperiod.setEnd(NtritnOrdr_OralDiet_Schdl_Rpt_BndsPrd_Enddate);
+		if(n.getNtritnOrdrOralDietSchdlRptBndsPrdEnd() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietSchdlRptBndsPrdEnd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getSchedule().size() < i0+1) { nutritionorder.getOralDiet().addSchedule(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getOralDiet().getSchedule().get(i0).getRepeat().getBoundsPeriod().setEnd(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** NtritnOrdr_OralDiet_Schdl_Rpt_BndsPrd_Strt ********************************************************************************/
-		if(n.getNtritnOrdrOralDietSchdlRptBndsPrdStrt() != null) {
-			java.text.SimpleDateFormat NtritnOrdr_OralDiet_Schdl_Rpt_BndsPrd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date NtritnOrdr_OralDiet_Schdl_Rpt_BndsPrd_Strtdate = NtritnOrdr_OralDiet_Schdl_Rpt_BndsPrd_Strtsdf.parse(n.getNtritnOrdrOralDietSchdlRptBndsPrdStrt());
-			nutritionorderoraldietschedulerepeatboundsperiod.setStart(NtritnOrdr_OralDiet_Schdl_Rpt_BndsPrd_Strtdate);
+		if(n.getNtritnOrdrOralDietSchdlRptBndsPrdStrt() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietSchdlRptBndsPrdStrt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getSchedule().size() < i0+1) { nutritionorder.getOralDiet().addSchedule(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getOralDiet().getSchedule().get(i0).getRepeat().getBoundsPeriod().setStart(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
-		/******************** nutritionorderoraldietschedulerepeatboundsrange ********************************************************************************/
-		org.hl7.fhir.r4.model.Range nutritionorderoraldietschedulerepeatboundsrange =  new org.hl7.fhir.r4.model.Range();
-		nutritionorderoraldietschedulerepeat.setBounds(nutritionorderoraldietschedulerepeatboundsrange);
-
-		/******************** nutritionorderoraldietschedulerepeatboundsrangehigh ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity nutritionorderoraldietschedulerepeatboundsrangehigh =  new org.hl7.fhir.r4.model.Quantity();
-		nutritionorderoraldietschedulerepeatboundsrange.setHigh(nutritionorderoraldietschedulerepeatboundsrangehigh);
-
 		/******************** NtritnOrdr_OralDiet_Schdl_Rpt_BndsRng_Hi_Cd ********************************************************************************/
-		if(n.getNtritnOrdrOralDietSchdlRptBndsRngHiCd() != null) {
-			nutritionorderoraldietschedulerepeatboundsrangehigh.setCode(n.getNtritnOrdrOralDietSchdlRptBndsRngHiCd());
-		}
-		/******************** nutritionorderoraldietschedulerepeatboundsrangehighcomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory nutritionorderoraldietschedulerepeatboundsrangehighcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-		nutritionorderoraldietschedulerepeatboundsrangehigh.setComparator(nutritionorderoraldietschedulerepeatboundsrangehighcomparator.fromCode(n.getNtritnOrdrOralDietSchdlRptBndsRngHiCmprtr()));
+		if(n.getNtritnOrdrOralDietSchdlRptBndsRngHiCd() != null ) {
 
+			String[] arrayi0 = n.getNtritnOrdrOralDietSchdlRptBndsRngHiCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getSchedule().size() < i0+1) { nutritionorder.getOralDiet().addSchedule(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getOralDiet().getSchedule().get(i0).getRepeat().getBoundsRange().getHigh().setCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
+		}
+		/******************** NtritnOrdr_OralDiet_Schdl_Rpt_BndsRng_Hi_Cmprtr ********************************************************************************/
+		if(n.getNtritnOrdrOralDietSchdlRptBndsRngHiCmprtr() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietSchdlRptBndsRngHiCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getSchedule().size() < i0+1) { nutritionorder.getOralDiet().addSchedule(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getOralDiet().getSchedule().get(i0).getRepeat().getBoundsRange().getHigh().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** NtritnOrdr_OralDiet_Schdl_Rpt_BndsRng_Hi_Sys ********************************************************************************/
-		if(n.getNtritnOrdrOralDietSchdlRptBndsRngHiSys() != null) {
-			nutritionorderoraldietschedulerepeatboundsrangehigh.setSystem(n.getNtritnOrdrOralDietSchdlRptBndsRngHiSys());
+		if(n.getNtritnOrdrOralDietSchdlRptBndsRngHiSys() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietSchdlRptBndsRngHiSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getSchedule().size() < i0+1) { nutritionorder.getOralDiet().addSchedule(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getOralDiet().getSchedule().get(i0).getRepeat().getBoundsRange().getHigh().setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** NtritnOrdr_OralDiet_Schdl_Rpt_BndsRng_Hi_Unt ********************************************************************************/
-		if(n.getNtritnOrdrOralDietSchdlRptBndsRngHiUnt() != null) {
-			nutritionorderoraldietschedulerepeatboundsrangehigh.setUnit(n.getNtritnOrdrOralDietSchdlRptBndsRngHiUnt());
+		if(n.getNtritnOrdrOralDietSchdlRptBndsRngHiUnt() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietSchdlRptBndsRngHiUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getSchedule().size() < i0+1) { nutritionorder.getOralDiet().addSchedule(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getOralDiet().getSchedule().get(i0).getRepeat().getBoundsRange().getHigh().setUnit(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** NtritnOrdr_OralDiet_Schdl_Rpt_BndsRng_Hi_Vl ********************************************************************************/
-		if(n.getNtritnOrdrOralDietSchdlRptBndsRngHiVl() != null) {
-			nutritionorderoraldietschedulerepeatboundsrangehigh.setValue(Double.parseDouble((n.getNtritnOrdrOralDietSchdlRptBndsRngHiVl())));
-		}
-		/******************** nutritionorderoraldietschedulerepeatboundsrangelow ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity nutritionorderoraldietschedulerepeatboundsrangelow =  new org.hl7.fhir.r4.model.Quantity();
-		nutritionorderoraldietschedulerepeatboundsrange.setLow(nutritionorderoraldietschedulerepeatboundsrangelow);
+		if(n.getNtritnOrdrOralDietSchdlRptBndsRngHiVl() != null ) {
 
+			String[] arrayi0 = n.getNtritnOrdrOralDietSchdlRptBndsRngHiVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getSchedule().size() < i0+1) { nutritionorder.getOralDiet().addSchedule(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getOralDiet().getSchedule().get(i0).getRepeat().getBoundsRange().getHigh().setValue((new java.math.BigDecimal((arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+			}
+
+		}
 		/******************** NtritnOrdr_OralDiet_Schdl_Rpt_BndsRng_Lw_Cd ********************************************************************************/
-		if(n.getNtritnOrdrOralDietSchdlRptBndsRngLwCd() != null) {
-			nutritionorderoraldietschedulerepeatboundsrangelow.setCode(n.getNtritnOrdrOralDietSchdlRptBndsRngLwCd());
-		}
-		/******************** nutritionorderoraldietschedulerepeatboundsrangelowcomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory nutritionorderoraldietschedulerepeatboundsrangelowcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-		nutritionorderoraldietschedulerepeatboundsrangelow.setComparator(nutritionorderoraldietschedulerepeatboundsrangelowcomparator.fromCode(n.getNtritnOrdrOralDietSchdlRptBndsRngLwCmprtr()));
+		if(n.getNtritnOrdrOralDietSchdlRptBndsRngLwCd() != null ) {
 
+			String[] arrayi0 = n.getNtritnOrdrOralDietSchdlRptBndsRngLwCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getSchedule().size() < i0+1) { nutritionorder.getOralDiet().addSchedule(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getOralDiet().getSchedule().get(i0).getRepeat().getBoundsRange().getLow().setCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
+		}
+		/******************** NtritnOrdr_OralDiet_Schdl_Rpt_BndsRng_Lw_Cmprtr ********************************************************************************/
+		if(n.getNtritnOrdrOralDietSchdlRptBndsRngLwCmprtr() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietSchdlRptBndsRngLwCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getSchedule().size() < i0+1) { nutritionorder.getOralDiet().addSchedule(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getOralDiet().getSchedule().get(i0).getRepeat().getBoundsRange().getLow().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** NtritnOrdr_OralDiet_Schdl_Rpt_BndsRng_Lw_Sys ********************************************************************************/
-		if(n.getNtritnOrdrOralDietSchdlRptBndsRngLwSys() != null) {
-			nutritionorderoraldietschedulerepeatboundsrangelow.setSystem(n.getNtritnOrdrOralDietSchdlRptBndsRngLwSys());
+		if(n.getNtritnOrdrOralDietSchdlRptBndsRngLwSys() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietSchdlRptBndsRngLwSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getSchedule().size() < i0+1) { nutritionorder.getOralDiet().addSchedule(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getOralDiet().getSchedule().get(i0).getRepeat().getBoundsRange().getLow().setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** NtritnOrdr_OralDiet_Schdl_Rpt_BndsRng_Lw_Unt ********************************************************************************/
-		if(n.getNtritnOrdrOralDietSchdlRptBndsRngLwUnt() != null) {
-			nutritionorderoraldietschedulerepeatboundsrangelow.setUnit(n.getNtritnOrdrOralDietSchdlRptBndsRngLwUnt());
+		if(n.getNtritnOrdrOralDietSchdlRptBndsRngLwUnt() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietSchdlRptBndsRngLwUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getSchedule().size() < i0+1) { nutritionorder.getOralDiet().addSchedule(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getOralDiet().getSchedule().get(i0).getRepeat().getBoundsRange().getLow().setUnit(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** NtritnOrdr_OralDiet_Schdl_Rpt_BndsRng_Lw_Vl ********************************************************************************/
-		if(n.getNtritnOrdrOralDietSchdlRptBndsRngLwVl() != null) {
-			nutritionorderoraldietschedulerepeatboundsrangelow.setValue(Double.parseDouble((n.getNtritnOrdrOralDietSchdlRptBndsRngLwVl())));
+		if(n.getNtritnOrdrOralDietSchdlRptBndsRngLwVl() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietSchdlRptBndsRngLwVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getSchedule().size() < i0+1) { nutritionorder.getOralDiet().addSchedule(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getOralDiet().getSchedule().get(i0).getRepeat().getBoundsRange().getLow().setValue((new java.math.BigDecimal((arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+			}
+
 		}
 		/******************** NtritnOrdr_OralDiet_Schdl_Rpt_Cnt ********************************************************************************/
-		if(n.getNtritnOrdrOralDietSchdlRptCnt() != null) {
-			nutritionorderoraldietschedulerepeat.setCount(Integer.parseInt(n.getNtritnOrdrOralDietSchdlRptCnt()));
+		if(n.getNtritnOrdrOralDietSchdlRptCnt() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietSchdlRptCnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getSchedule().size() < i0+1) { nutritionorder.getOralDiet().addSchedule(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getOralDiet().getSchedule().get(i0).getRepeat().setCount(Integer.parseInt(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** NtritnOrdr_OralDiet_Schdl_Rpt_CntMx ********************************************************************************/
-		if(n.getNtritnOrdrOralDietSchdlRptCntMx() != null) {
-			nutritionorderoraldietschedulerepeat.setCountMax(Integer.parseInt(n.getNtritnOrdrOralDietSchdlRptCntMx()));
-		}
-		/******************** nutritionorderoraldietschedulerepeatdayofweek ********************************************************************************/
-		org.hl7.fhir.r4.model.Timing.DayOfWeekEnumFactory nutritionorderoraldietschedulerepeatdayofweek =  new org.hl7.fhir.r4.model.Timing.DayOfWeekEnumFactory();
-		nutritionorderoraldietschedulerepeat.addDayOfWeek(nutritionorderoraldietschedulerepeatdayofweek.fromCode(n.getNtritnOrdrOralDietSchdlRptDayOfWeek()));
+		if(n.getNtritnOrdrOralDietSchdlRptCntMx() != null ) {
 
+			String[] arrayi0 = n.getNtritnOrdrOralDietSchdlRptCntMx().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getSchedule().size() < i0+1) { nutritionorder.getOralDiet().addSchedule(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getOralDiet().getSchedule().get(i0).getRepeat().setCountMax(Integer.parseInt(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** NtritnOrdr_OralDiet_Schdl_Rpt_Duration ********************************************************************************/
-		if(n.getNtritnOrdrOralDietSchdlRptDuration() != null) {
-			nutritionorderoraldietschedulerepeat.setDuration(Double.parseDouble((n.getNtritnOrdrOralDietSchdlRptDuration())));
+		if(n.getNtritnOrdrOralDietSchdlRptDuration() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietSchdlRptDuration().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getSchedule().size() < i0+1) { nutritionorder.getOralDiet().addSchedule(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getOralDiet().getSchedule().get(i0).getRepeat().setDuration((Double.parseDouble((arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+			}
+
 		}
 		/******************** NtritnOrdr_OralDiet_Schdl_Rpt_DurationMx ********************************************************************************/
-		if(n.getNtritnOrdrOralDietSchdlRptDurationMx() != null) {
-			nutritionorderoraldietschedulerepeat.setDurationMax(Double.parseDouble((n.getNtritnOrdrOralDietSchdlRptDurationMx())));
-		}
-		/******************** nutritionorderoraldietschedulerepeatdurationunit ********************************************************************************/
-		org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory nutritionorderoraldietschedulerepeatdurationunit =  new org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory();
-		nutritionorderoraldietschedulerepeat.setDurationUnit(nutritionorderoraldietschedulerepeatdurationunit.fromCode(n.getNtritnOrdrOralDietSchdlRptDurationUnt()));
+		if(n.getNtritnOrdrOralDietSchdlRptDurationMx() != null ) {
 
+			String[] arrayi0 = n.getNtritnOrdrOralDietSchdlRptDurationMx().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getSchedule().size() < i0+1) { nutritionorder.getOralDiet().addSchedule(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getOralDiet().getSchedule().get(i0).getRepeat().setDurationMax((Double.parseDouble((arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+			}
+
+		}
+		/******************** NtritnOrdr_OralDiet_Schdl_Rpt_DurationUnt ********************************************************************************/
+		if(n.getNtritnOrdrOralDietSchdlRptDurationUnt() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietSchdlRptDurationUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getSchedule().size() < i0+1) { nutritionorder.getOralDiet().addSchedule(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getOralDiet().getSchedule().get(i0).getRepeat().setDurationUnit(new org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory().fromCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** NtritnOrdr_OralDiet_Schdl_Rpt_Frqncy ********************************************************************************/
-		if(n.getNtritnOrdrOralDietSchdlRptFrqncy() != null) {
-			nutritionorderoraldietschedulerepeat.setFrequency(Integer.parseInt(n.getNtritnOrdrOralDietSchdlRptFrqncy()));
+		if(n.getNtritnOrdrOralDietSchdlRptFrqncy() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietSchdlRptFrqncy().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getSchedule().size() < i0+1) { nutritionorder.getOralDiet().addSchedule(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getOralDiet().getSchedule().get(i0).getRepeat().setFrequency(Integer.parseInt(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** NtritnOrdr_OralDiet_Schdl_Rpt_FrqncyMx ********************************************************************************/
-		if(n.getNtritnOrdrOralDietSchdlRptFrqncyMx() != null) {
-			nutritionorderoraldietschedulerepeat.setFrequencyMax(Integer.parseInt(n.getNtritnOrdrOralDietSchdlRptFrqncyMx()));
+		if(n.getNtritnOrdrOralDietSchdlRptFrqncyMx() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietSchdlRptFrqncyMx().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getSchedule().size() < i0+1) { nutritionorder.getOralDiet().addSchedule(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getOralDiet().getSchedule().get(i0).getRepeat().setFrequencyMax(Integer.parseInt(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** NtritnOrdr_OralDiet_Schdl_Rpt_Off ********************************************************************************/
-		if(n.getNtritnOrdrOralDietSchdlRptOff() != null) {
-			nutritionorderoraldietschedulerepeat.setOffset(Integer.parseInt(n.getNtritnOrdrOralDietSchdlRptOff()));
+		if(n.getNtritnOrdrOralDietSchdlRptOff() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietSchdlRptOff().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getSchedule().size() < i0+1) { nutritionorder.getOralDiet().addSchedule(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getOralDiet().getSchedule().get(i0).getRepeat().setOffset(Integer.parseInt(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** NtritnOrdr_OralDiet_Schdl_Rpt_Prd ********************************************************************************/
-		if(n.getNtritnOrdrOralDietSchdlRptPrd() != null) {
-			nutritionorderoraldietschedulerepeat.setPeriod(Double.parseDouble((n.getNtritnOrdrOralDietSchdlRptPrd())));
+		if(n.getNtritnOrdrOralDietSchdlRptPrd() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietSchdlRptPrd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getSchedule().size() < i0+1) { nutritionorder.getOralDiet().addSchedule(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getOralDiet().getSchedule().get(i0).getRepeat().setPeriod((new java.math.BigDecimal((arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+			}
+
 		}
 		/******************** NtritnOrdr_OralDiet_Schdl_Rpt_PrdMx ********************************************************************************/
-		if(n.getNtritnOrdrOralDietSchdlRptPrdMx() != null) {
-			nutritionorderoraldietschedulerepeat.setPeriodMax(new java.math.BigDecimal((n.getNtritnOrdrOralDietSchdlRptPrdMx())));
-		}
-		/******************** nutritionorderoraldietschedulerepeatperiodunit ********************************************************************************/
-		org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory nutritionorderoraldietschedulerepeatperiodunit =  new org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory();
-		nutritionorderoraldietschedulerepeat.setPeriodUnit(nutritionorderoraldietschedulerepeatperiodunit.fromCode(n.getNtritnOrdrOralDietSchdlRptPrdUnt()));
+		if(n.getNtritnOrdrOralDietSchdlRptPrdMx() != null ) {
 
+			String[] arrayi0 = n.getNtritnOrdrOralDietSchdlRptPrdMx().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getSchedule().size() < i0+1) { nutritionorder.getOralDiet().addSchedule(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getOralDiet().getSchedule().get(i0).getRepeat().setPeriodMax((new java.math.BigDecimal((arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+			}
+
+		}
+		/******************** NtritnOrdr_OralDiet_Schdl_Rpt_PrdUnt ********************************************************************************/
+		if(n.getNtritnOrdrOralDietSchdlRptPrdUnt() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietSchdlRptPrdUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getSchedule().size() < i0+1) { nutritionorder.getOralDiet().addSchedule(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getOralDiet().getSchedule().get(i0).getRepeat().setPeriodUnit(new org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory().fromCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** NtritnOrdr_OralDiet_Schdl_Rpt_TimeOfDay ********************************************************************************/
-		if(n.getNtritnOrdrOralDietSchdlRptTimeOfDay() != null) {
-			nutritionorderoraldietschedulerepeat.addTimeOfDay(n.getNtritnOrdrOralDietSchdlRptTimeOfDay());
+		if(n.getNtritnOrdrOralDietSchdlRptTimeOfDay() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietSchdlRptTimeOfDay().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getSchedule().size() < i0+1) { nutritionorder.getOralDiet().addSchedule(); }
+				for( String currListStrSplit : arrayi0[i0].replace("[","").replace("]","").replace("\"","").split(",")){
+				if(currListStrSplit.replace("[","").replace("]","").replace("\"","").equals("NULL") | currListStrSplit==null) {} else {nutritionorder.getOralDiet().getSchedule().get(i0).getRepeat().addTimeOfDay(currListStrSplit.replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
-		/******************** nutritionorderoraldietschedulerepeatwhen ********************************************************************************/
-		org.hl7.fhir.r4.model.Timing.EventTimingEnumFactory nutritionorderoraldietschedulerepeatwhen =  new org.hl7.fhir.r4.model.Timing.EventTimingEnumFactory();
-		nutritionorderoraldietschedulerepeat.addWhen(nutritionorderoraldietschedulerepeatwhen.fromCode(n.getNtritnOrdrOralDietSchdlRptWhen()));
-
-		/******************** nutritionorderoraldiettexture ********************************************************************************/
-		org.hl7.fhir.r4.model.NutritionOrder.NutritionOrderOralDietTextureComponent nutritionorderoraldiettexture =  new org.hl7.fhir.r4.model.NutritionOrder.NutritionOrderOralDietTextureComponent();
-		nutritionorderoraldiet.addTexture(nutritionorderoraldiettexture);
-
-		/******************** nutritionorderoraldiettexturefoodtype ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept nutritionorderoraldiettexturefoodtype =  new org.hl7.fhir.r4.model.CodeableConcept();
-		nutritionorderoraldiettexture.setFoodType(nutritionorderoraldiettexturefoodtype);
-
-		/******************** nutritionorderoraldiettexturefoodtypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding nutritionorderoraldiettexturefoodtypecoding =  new org.hl7.fhir.r4.model.Coding();
-		nutritionorderoraldiettexturefoodtype.addCoding(nutritionorderoraldiettexturefoodtypecoding);
-
 		/******************** NtritnOrdr_OralDiet_Txture_FoodTyp_Cdg_Cd ********************************************************************************/
-		if(n.getNtritnOrdrOralDietTxtureFoodTypCdgCd() != null) {
-			nutritionorderoraldiettexturefoodtypecoding.setCode(n.getNtritnOrdrOralDietTxtureFoodTypCdgCd());
+		if(n.getNtritnOrdrOralDietTxtureFoodTypCdgCd() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietTxtureFoodTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getTexture().size() < i0+1) { nutritionorder.getOralDiet().addTexture(); }
+				String[] arrayi1 = n.getNtritnOrdrOralDietTxtureFoodTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getOralDiet().getTexture().get(i0).getFoodType().getCoding().size() < i1+1) { nutritionorder.getOralDiet().getTexture().get(i0).getFoodType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getOralDiet().getTexture().get(i0).getFoodType().getCoding().get(i1).setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_OralDiet_Txture_FoodTyp_Cdg_Dsply ********************************************************************************/
-		if(n.getNtritnOrdrOralDietTxtureFoodTypCdgDsply() != null) {
-			nutritionorderoraldiettexturefoodtypecoding.setDisplay(n.getNtritnOrdrOralDietTxtureFoodTypCdgDsply());
+		if(n.getNtritnOrdrOralDietTxtureFoodTypCdgDsply() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietTxtureFoodTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getTexture().size() < i0+1) { nutritionorder.getOralDiet().addTexture(); }
+				String[] arrayi1 = n.getNtritnOrdrOralDietTxtureFoodTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getOralDiet().getTexture().get(i0).getFoodType().getCoding().size() < i1+1) { nutritionorder.getOralDiet().getTexture().get(i0).getFoodType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getOralDiet().getTexture().get(i0).getFoodType().getCoding().get(i1).setDisplay(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_OralDiet_Txture_FoodTyp_Cdg_Sys ********************************************************************************/
-		if(n.getNtritnOrdrOralDietTxtureFoodTypCdgSys() != null) {
-			nutritionorderoraldiettexturefoodtypecoding.setSystem(n.getNtritnOrdrOralDietTxtureFoodTypCdgSys());
+		if(n.getNtritnOrdrOralDietTxtureFoodTypCdgSys() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietTxtureFoodTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getTexture().size() < i0+1) { nutritionorder.getOralDiet().addTexture(); }
+				String[] arrayi1 = n.getNtritnOrdrOralDietTxtureFoodTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getOralDiet().getTexture().get(i0).getFoodType().getCoding().size() < i1+1) { nutritionorder.getOralDiet().getTexture().get(i0).getFoodType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getOralDiet().getTexture().get(i0).getFoodType().getCoding().get(i1).setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_OralDiet_Txture_FoodTyp_Cdg_UsrSltd ********************************************************************************/
-		if(n.getNtritnOrdrOralDietTxtureFoodTypCdgUsrSltd() != null) {
-			nutritionorderoraldiettexturefoodtypecoding.setUserSelected(Boolean.parseBoolean(n.getNtritnOrdrOralDietTxtureFoodTypCdgUsrSltd()));
+		if(n.getNtritnOrdrOralDietTxtureFoodTypCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietTxtureFoodTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getTexture().size() < i0+1) { nutritionorder.getOralDiet().addTexture(); }
+				String[] arrayi1 = n.getNtritnOrdrOralDietTxtureFoodTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getOralDiet().getTexture().get(i0).getFoodType().getCoding().size() < i1+1) { nutritionorder.getOralDiet().getTexture().get(i0).getFoodType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getOralDiet().getTexture().get(i0).getFoodType().getCoding().get(i1).setUserSelected(Boolean.parseBoolean(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_OralDiet_Txture_FoodTyp_Cdg_Vrsn ********************************************************************************/
-		if(n.getNtritnOrdrOralDietTxtureFoodTypCdgVrsn() != null) {
-			nutritionorderoraldiettexturefoodtypecoding.setVersion(n.getNtritnOrdrOralDietTxtureFoodTypCdgVrsn());
+		if(n.getNtritnOrdrOralDietTxtureFoodTypCdgVrsn() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietTxtureFoodTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getTexture().size() < i0+1) { nutritionorder.getOralDiet().addTexture(); }
+				String[] arrayi1 = n.getNtritnOrdrOralDietTxtureFoodTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getOralDiet().getTexture().get(i0).getFoodType().getCoding().size() < i1+1) { nutritionorder.getOralDiet().getTexture().get(i0).getFoodType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getOralDiet().getTexture().get(i0).getFoodType().getCoding().get(i1).setVersion(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_OralDiet_Txture_FoodTyp_Txt ********************************************************************************/
-		if(n.getNtritnOrdrOralDietTxtureFoodTypTxt() != null) {
-			nutritionorderoraldiettexturefoodtype.setText(n.getNtritnOrdrOralDietTxtureFoodTypTxt());
+		if(n.getNtritnOrdrOralDietTxtureFoodTypTxt() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietTxtureFoodTypTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getTexture().size() < i0+1) { nutritionorder.getOralDiet().addTexture(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getOralDiet().getTexture().get(i0).getFoodType().setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
-		/******************** nutritionorderoraldiettexturemodifier ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept nutritionorderoraldiettexturemodifier =  new org.hl7.fhir.r4.model.CodeableConcept();
-		nutritionorderoraldiettexture.setModifier(nutritionorderoraldiettexturemodifier);
-
-		/******************** nutritionorderoraldiettexturemodifiercoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding nutritionorderoraldiettexturemodifiercoding =  new org.hl7.fhir.r4.model.Coding();
-		nutritionorderoraldiettexturemodifier.addCoding(nutritionorderoraldiettexturemodifiercoding);
-
 		/******************** NtritnOrdr_OralDiet_Txture_Mdfr_Cdg_Cd ********************************************************************************/
-		if(n.getNtritnOrdrOralDietTxtureMdfrCdgCd() != null) {
-			nutritionorderoraldiettexturemodifiercoding.setCode(n.getNtritnOrdrOralDietTxtureMdfrCdgCd());
+		if(n.getNtritnOrdrOralDietTxtureMdfrCdgCd() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietTxtureMdfrCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getTexture().size() < i0+1) { nutritionorder.getOralDiet().addTexture(); }
+				String[] arrayi1 = n.getNtritnOrdrOralDietTxtureMdfrCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getOralDiet().getTexture().get(i0).getModifier().getCoding().size() < i1+1) { nutritionorder.getOralDiet().getTexture().get(i0).getModifier().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getOralDiet().getTexture().get(i0).getModifier().getCoding().get(i1).setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_OralDiet_Txture_Mdfr_Cdg_Dsply ********************************************************************************/
-		if(n.getNtritnOrdrOralDietTxtureMdfrCdgDsply() != null) {
-			nutritionorderoraldiettexturemodifiercoding.setDisplay(n.getNtritnOrdrOralDietTxtureMdfrCdgDsply());
+		if(n.getNtritnOrdrOralDietTxtureMdfrCdgDsply() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietTxtureMdfrCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getTexture().size() < i0+1) { nutritionorder.getOralDiet().addTexture(); }
+				String[] arrayi1 = n.getNtritnOrdrOralDietTxtureMdfrCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getOralDiet().getTexture().get(i0).getModifier().getCoding().size() < i1+1) { nutritionorder.getOralDiet().getTexture().get(i0).getModifier().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getOralDiet().getTexture().get(i0).getModifier().getCoding().get(i1).setDisplay(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_OralDiet_Txture_Mdfr_Cdg_Sys ********************************************************************************/
-		if(n.getNtritnOrdrOralDietTxtureMdfrCdgSys() != null) {
-			nutritionorderoraldiettexturemodifiercoding.setSystem(n.getNtritnOrdrOralDietTxtureMdfrCdgSys());
+		if(n.getNtritnOrdrOralDietTxtureMdfrCdgSys() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietTxtureMdfrCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getTexture().size() < i0+1) { nutritionorder.getOralDiet().addTexture(); }
+				String[] arrayi1 = n.getNtritnOrdrOralDietTxtureMdfrCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getOralDiet().getTexture().get(i0).getModifier().getCoding().size() < i1+1) { nutritionorder.getOralDiet().getTexture().get(i0).getModifier().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getOralDiet().getTexture().get(i0).getModifier().getCoding().get(i1).setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_OralDiet_Txture_Mdfr_Cdg_UsrSltd ********************************************************************************/
-		if(n.getNtritnOrdrOralDietTxtureMdfrCdgUsrSltd() != null) {
-			nutritionorderoraldiettexturemodifiercoding.setUserSelected(Boolean.parseBoolean(n.getNtritnOrdrOralDietTxtureMdfrCdgUsrSltd()));
+		if(n.getNtritnOrdrOralDietTxtureMdfrCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietTxtureMdfrCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getTexture().size() < i0+1) { nutritionorder.getOralDiet().addTexture(); }
+				String[] arrayi1 = n.getNtritnOrdrOralDietTxtureMdfrCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getOralDiet().getTexture().get(i0).getModifier().getCoding().size() < i1+1) { nutritionorder.getOralDiet().getTexture().get(i0).getModifier().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getOralDiet().getTexture().get(i0).getModifier().getCoding().get(i1).setUserSelected(Boolean.parseBoolean(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_OralDiet_Txture_Mdfr_Cdg_Vrsn ********************************************************************************/
-		if(n.getNtritnOrdrOralDietTxtureMdfrCdgVrsn() != null) {
-			nutritionorderoraldiettexturemodifiercoding.setVersion(n.getNtritnOrdrOralDietTxtureMdfrCdgVrsn());
+		if(n.getNtritnOrdrOralDietTxtureMdfrCdgVrsn() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietTxtureMdfrCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getTexture().size() < i0+1) { nutritionorder.getOralDiet().addTexture(); }
+				String[] arrayi1 = n.getNtritnOrdrOralDietTxtureMdfrCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getOralDiet().getTexture().get(i0).getModifier().getCoding().size() < i1+1) { nutritionorder.getOralDiet().getTexture().get(i0).getModifier().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getOralDiet().getTexture().get(i0).getModifier().getCoding().get(i1).setVersion(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_OralDiet_Txture_Mdfr_Txt ********************************************************************************/
-		if(n.getNtritnOrdrOralDietTxtureMdfrTxt() != null) {
-			nutritionorderoraldiettexturemodifier.setText(n.getNtritnOrdrOralDietTxtureMdfrTxt());
+		if(n.getNtritnOrdrOralDietTxtureMdfrTxt() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietTxtureMdfrTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getTexture().size() < i0+1) { nutritionorder.getOralDiet().addTexture(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getOralDiet().getTexture().get(i0).getModifier().setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
-		/******************** nutritionorderoraldiettype ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept nutritionorderoraldiettype =  new org.hl7.fhir.r4.model.CodeableConcept();
-		nutritionorderoraldiet.addType(nutritionorderoraldiettype);
-
-		/******************** nutritionorderoraldiettypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding nutritionorderoraldiettypecoding =  new org.hl7.fhir.r4.model.Coding();
-		nutritionorderoraldiettype.addCoding(nutritionorderoraldiettypecoding);
-
 		/******************** NtritnOrdr_OralDiet_Typ_Cdg_Cd ********************************************************************************/
-		if(n.getNtritnOrdrOralDietTypCdgCd() != null) {
-			nutritionorderoraldiettypecoding.setCode(n.getNtritnOrdrOralDietTypCdgCd());
+		if(n.getNtritnOrdrOralDietTypCdgCd() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getType().size() < i0+1) { nutritionorder.getOralDiet().addType(); }
+				String[] arrayi1 = n.getNtritnOrdrOralDietTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getOralDiet().getType().get(i0).getCoding().size() < i1+1) { nutritionorder.getOralDiet().getType().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getOralDiet().getType().get(i0).getCoding().get(i1).setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_OralDiet_Typ_Cdg_Dsply ********************************************************************************/
-		if(n.getNtritnOrdrOralDietTypCdgDsply() != null) {
-			nutritionorderoraldiettypecoding.setDisplay(n.getNtritnOrdrOralDietTypCdgDsply());
+		if(n.getNtritnOrdrOralDietTypCdgDsply() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getType().size() < i0+1) { nutritionorder.getOralDiet().addType(); }
+				String[] arrayi1 = n.getNtritnOrdrOralDietTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getOralDiet().getType().get(i0).getCoding().size() < i1+1) { nutritionorder.getOralDiet().getType().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getOralDiet().getType().get(i0).getCoding().get(i1).setDisplay(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_OralDiet_Typ_Cdg_Sys ********************************************************************************/
-		if(n.getNtritnOrdrOralDietTypCdgSys() != null) {
-			nutritionorderoraldiettypecoding.setSystem(n.getNtritnOrdrOralDietTypCdgSys());
+		if(n.getNtritnOrdrOralDietTypCdgSys() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getType().size() < i0+1) { nutritionorder.getOralDiet().addType(); }
+				String[] arrayi1 = n.getNtritnOrdrOralDietTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getOralDiet().getType().get(i0).getCoding().size() < i1+1) { nutritionorder.getOralDiet().getType().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getOralDiet().getType().get(i0).getCoding().get(i1).setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_OralDiet_Typ_Cdg_UsrSltd ********************************************************************************/
-		if(n.getNtritnOrdrOralDietTypCdgUsrSltd() != null) {
-			nutritionorderoraldiettypecoding.setUserSelected(Boolean.parseBoolean(n.getNtritnOrdrOralDietTypCdgUsrSltd()));
+		if(n.getNtritnOrdrOralDietTypCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getType().size() < i0+1) { nutritionorder.getOralDiet().addType(); }
+				String[] arrayi1 = n.getNtritnOrdrOralDietTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getOralDiet().getType().get(i0).getCoding().size() < i1+1) { nutritionorder.getOralDiet().getType().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getOralDiet().getType().get(i0).getCoding().get(i1).setUserSelected(Boolean.parseBoolean(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_OralDiet_Typ_Cdg_Vrsn ********************************************************************************/
-		if(n.getNtritnOrdrOralDietTypCdgVrsn() != null) {
-			nutritionorderoraldiettypecoding.setVersion(n.getNtritnOrdrOralDietTypCdgVrsn());
+		if(n.getNtritnOrdrOralDietTypCdgVrsn() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getType().size() < i0+1) { nutritionorder.getOralDiet().addType(); }
+				String[] arrayi1 = n.getNtritnOrdrOralDietTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getOralDiet().getType().get(i0).getCoding().size() < i1+1) { nutritionorder.getOralDiet().getType().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getOralDiet().getType().get(i0).getCoding().get(i1).setVersion(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_OralDiet_Typ_Txt ********************************************************************************/
-		if(n.getNtritnOrdrOralDietTypTxt() != null) {
-			nutritionorderoraldiettype.setText(n.getNtritnOrdrOralDietTypTxt());
+		if(n.getNtritnOrdrOralDietTypTxt() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrOralDietTypTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getOralDiet().getType().size() < i0+1) { nutritionorder.getOralDiet().addType(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getOralDiet().getType().get(i0).setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** NtritnOrdr_Ordrer ********************************************************************************/
-		if(n.getNtritnOrdrOrdrer() != null) {
-			nutritionorder.setOrderer( new org.hl7.fhir.r4.model.Reference(n.getNtritnOrdrOrdrer()));
+		if(n.getNtritnOrdrOrdrer() != null ) {
+
+			if(n.getNtritnOrdrOrdrer().replace("[","").replace("]","").equals("NULL") | n.getNtritnOrdrOrdrer()==null) {} else {
+			nutritionorder.setOrderer(new org.hl7.fhir.r4.model.Reference(n.getNtritnOrdrOrdrer().replace("[","").replace("]","").replace("\"","")));
+			}
 		}
 		/******************** NtritnOrdr_Pnt ********************************************************************************/
-		if(n.getNtritnOrdrPnt() != null) {
-			nutritionorder.setPatient( new org.hl7.fhir.r4.model.Reference(n.getNtritnOrdrPnt()));
+		if(n.getNtritnOrdrPnt() != null ) {
+
+			if(n.getNtritnOrdrPnt().replace("[","").replace("]","").equals("NULL") | n.getNtritnOrdrPnt()==null) {} else {
+			nutritionorder.setPatient(new org.hl7.fhir.r4.model.Reference(n.getNtritnOrdrPnt().replace("[","").replace("]","").replace("\"","")));
+			}
 		}
-		/******************** nutritionorderstatus ********************************************************************************/
-		org.hl7.fhir.r4.model.NutritionOrder.NutritionOrderStatusEnumFactory nutritionorderstatus =  new org.hl7.fhir.r4.model.NutritionOrder.NutritionOrderStatusEnumFactory();
-		nutritionorder.setStatus(nutritionorderstatus.fromCode(n.getNtritnOrdrSts()));
+		/******************** NtritnOrdr_Sts ********************************************************************************/
+		if(n.getNtritnOrdrSts() != null ) {
 
-		/******************** nutritionordersupplement ********************************************************************************/
-		org.hl7.fhir.r4.model.NutritionOrder.NutritionOrderSupplementComponent nutritionordersupplement =  new org.hl7.fhir.r4.model.NutritionOrder.NutritionOrderSupplementComponent();
-		nutritionorder.addSupplement(nutritionordersupplement);
-
+			if(n.getNtritnOrdrSts().replace("[","").replace("]","").equals("NULL") | n.getNtritnOrdrSts()==null) {} else {
+			nutritionorder.setStatus(new org.hl7.fhir.r4.model.NutritionOrder.NutritionOrderStatusEnumFactory().fromCode(n.getNtritnOrdrSts().replace("[","").replace("]","").replace("\"","")));
+			}
+		}
 		/******************** NtritnOrdr_Supplement_Instrctn ********************************************************************************/
-		if(n.getNtritnOrdrSupplementInstrctn() != null) {
-			nutritionordersupplement.setInstruction(n.getNtritnOrdrSupplementInstrctn());
+		if(n.getNtritnOrdrSupplementInstrctn() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrSupplementInstrctn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getSupplement().size() < i0+1) { nutritionorder.addSupplement(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getSupplement().get(i0).setInstruction(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** NtritnOrdr_Supplement_PrdctNm ********************************************************************************/
-		if(n.getNtritnOrdrSupplementPrdctNm() != null) {
-			nutritionordersupplement.setProductName(n.getNtritnOrdrSupplementPrdctNm());
-		}
-		/******************** nutritionordersupplementquantity ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity nutritionordersupplementquantity =  new org.hl7.fhir.r4.model.Quantity();
-		nutritionordersupplement.setQuantity(nutritionordersupplementquantity);
+		if(n.getNtritnOrdrSupplementPrdctNm() != null ) {
 
+			String[] arrayi0 = n.getNtritnOrdrSupplementPrdctNm().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getSupplement().size() < i0+1) { nutritionorder.addSupplement(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getSupplement().get(i0).setProductName(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
+		}
 		/******************** NtritnOrdr_Supplement_Qnty_Cd ********************************************************************************/
-		if(n.getNtritnOrdrSupplementQntyCd() != null) {
-			nutritionordersupplementquantity.setCode(n.getNtritnOrdrSupplementQntyCd());
-		}
-		/******************** nutritionordersupplementquantitycomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory nutritionordersupplementquantitycomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-		nutritionordersupplementquantity.setComparator(nutritionordersupplementquantitycomparator.fromCode(n.getNtritnOrdrSupplementQntyCmprtr()));
+		if(n.getNtritnOrdrSupplementQntyCd() != null ) {
 
+			String[] arrayi0 = n.getNtritnOrdrSupplementQntyCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getSupplement().size() < i0+1) { nutritionorder.addSupplement(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getSupplement().get(i0).getQuantity().setCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
+		}
+		/******************** NtritnOrdr_Supplement_Qnty_Cmprtr ********************************************************************************/
+		if(n.getNtritnOrdrSupplementQntyCmprtr() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrSupplementQntyCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getSupplement().size() < i0+1) { nutritionorder.addSupplement(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getSupplement().get(i0).getQuantity().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** NtritnOrdr_Supplement_Qnty_Sys ********************************************************************************/
-		if(n.getNtritnOrdrSupplementQntySys() != null) {
-			nutritionordersupplementquantity.setSystem(n.getNtritnOrdrSupplementQntySys());
+		if(n.getNtritnOrdrSupplementQntySys() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrSupplementQntySys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getSupplement().size() < i0+1) { nutritionorder.addSupplement(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getSupplement().get(i0).getQuantity().setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** NtritnOrdr_Supplement_Qnty_Unt ********************************************************************************/
-		if(n.getNtritnOrdrSupplementQntyUnt() != null) {
-			nutritionordersupplementquantity.setUnit(n.getNtritnOrdrSupplementQntyUnt());
+		if(n.getNtritnOrdrSupplementQntyUnt() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrSupplementQntyUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getSupplement().size() < i0+1) { nutritionorder.addSupplement(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getSupplement().get(i0).getQuantity().setUnit(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** NtritnOrdr_Supplement_Qnty_Vl ********************************************************************************/
-		if(n.getNtritnOrdrSupplementQntyVl() != null) {
-			nutritionordersupplementquantity.setValue(Double.parseDouble((n.getNtritnOrdrSupplementQntyVl())));
+		if(n.getNtritnOrdrSupplementQntyVl() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrSupplementQntyVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getSupplement().size() < i0+1) { nutritionorder.addSupplement(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getSupplement().get(i0).getQuantity().setValue((new java.math.BigDecimal((arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+			}
+
 		}
-		/******************** nutritionordersupplementschedule ********************************************************************************/
-		org.hl7.fhir.r4.model.Timing nutritionordersupplementschedule =  new org.hl7.fhir.r4.model.Timing();
-		nutritionordersupplement.addSchedule(nutritionordersupplementschedule);
-
-		/******************** nutritionordersupplementschedulecode ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept nutritionordersupplementschedulecode =  new org.hl7.fhir.r4.model.CodeableConcept();
-		nutritionordersupplementschedule.setCode(nutritionordersupplementschedulecode);
-
-		/******************** nutritionordersupplementschedulecodecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding nutritionordersupplementschedulecodecoding =  new org.hl7.fhir.r4.model.Coding();
-		nutritionordersupplementschedulecode.addCoding(nutritionordersupplementschedulecodecoding);
-
 		/******************** NtritnOrdr_Supplement_Schdl_Cd_Cdg_Cd ********************************************************************************/
-		if(n.getNtritnOrdrSupplementSchdlCdCdgCd() != null) {
-			nutritionordersupplementschedulecodecoding.setCode(n.getNtritnOrdrSupplementSchdlCdCdgCd());
+		if(n.getNtritnOrdrSupplementSchdlCdCdgCd() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrSupplementSchdlCdCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getSupplement().size() < i0+1) { nutritionorder.addSupplement(); }
+				String[] arrayi1 = n.getNtritnOrdrSupplementSchdlCdCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getSupplement().get(i0).getSchedule().size() < i1+1) { nutritionorder.getSupplement().get(i0).addSchedule(); }
+					String[] arrayi2 = n.getNtritnOrdrSupplementSchdlCdCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+						if(nutritionorder.getSupplement().get(i0).getSchedule().get(i1).getCode().getCoding().size() < i2+1) { nutritionorder.getSupplement().get(i0).getSchedule().get(i1).getCode().addCoding(); }
+						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {nutritionorder.getSupplement().get(i0).getSchedule().get(i1).getCode().getCoding().get(i2).setCode(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+					}
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_Supplement_Schdl_Cd_Cdg_Dsply ********************************************************************************/
-		if(n.getNtritnOrdrSupplementSchdlCdCdgDsply() != null) {
-			nutritionordersupplementschedulecodecoding.setDisplay(n.getNtritnOrdrSupplementSchdlCdCdgDsply());
+		if(n.getNtritnOrdrSupplementSchdlCdCdgDsply() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrSupplementSchdlCdCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getSupplement().size() < i0+1) { nutritionorder.addSupplement(); }
+				String[] arrayi1 = n.getNtritnOrdrSupplementSchdlCdCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getSupplement().get(i0).getSchedule().size() < i1+1) { nutritionorder.getSupplement().get(i0).addSchedule(); }
+					String[] arrayi2 = n.getNtritnOrdrSupplementSchdlCdCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+						if(nutritionorder.getSupplement().get(i0).getSchedule().get(i1).getCode().getCoding().size() < i2+1) { nutritionorder.getSupplement().get(i0).getSchedule().get(i1).getCode().addCoding(); }
+						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {nutritionorder.getSupplement().get(i0).getSchedule().get(i1).getCode().getCoding().get(i2).setDisplay(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+					}
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_Supplement_Schdl_Cd_Cdg_Sys ********************************************************************************/
-		if(n.getNtritnOrdrSupplementSchdlCdCdgSys() != null) {
-			nutritionordersupplementschedulecodecoding.setSystem(n.getNtritnOrdrSupplementSchdlCdCdgSys());
+		if(n.getNtritnOrdrSupplementSchdlCdCdgSys() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrSupplementSchdlCdCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getSupplement().size() < i0+1) { nutritionorder.addSupplement(); }
+				String[] arrayi1 = n.getNtritnOrdrSupplementSchdlCdCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getSupplement().get(i0).getSchedule().size() < i1+1) { nutritionorder.getSupplement().get(i0).addSchedule(); }
+					String[] arrayi2 = n.getNtritnOrdrSupplementSchdlCdCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+						if(nutritionorder.getSupplement().get(i0).getSchedule().get(i1).getCode().getCoding().size() < i2+1) { nutritionorder.getSupplement().get(i0).getSchedule().get(i1).getCode().addCoding(); }
+						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {nutritionorder.getSupplement().get(i0).getSchedule().get(i1).getCode().getCoding().get(i2).setSystem(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+					}
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_Supplement_Schdl_Cd_Cdg_UsrSltd ********************************************************************************/
-		if(n.getNtritnOrdrSupplementSchdlCdCdgUsrSltd() != null) {
-			nutritionordersupplementschedulecodecoding.setUserSelected(Boolean.parseBoolean(n.getNtritnOrdrSupplementSchdlCdCdgUsrSltd()));
+		if(n.getNtritnOrdrSupplementSchdlCdCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrSupplementSchdlCdCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getSupplement().size() < i0+1) { nutritionorder.addSupplement(); }
+				String[] arrayi1 = n.getNtritnOrdrSupplementSchdlCdCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getSupplement().get(i0).getSchedule().size() < i1+1) { nutritionorder.getSupplement().get(i0).addSchedule(); }
+					String[] arrayi2 = n.getNtritnOrdrSupplementSchdlCdCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+						if(nutritionorder.getSupplement().get(i0).getSchedule().get(i1).getCode().getCoding().size() < i2+1) { nutritionorder.getSupplement().get(i0).getSchedule().get(i1).getCode().addCoding(); }
+						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {nutritionorder.getSupplement().get(i0).getSchedule().get(i1).getCode().getCoding().get(i2).setUserSelected(Boolean.parseBoolean(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+					}
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_Supplement_Schdl_Cd_Cdg_Vrsn ********************************************************************************/
-		if(n.getNtritnOrdrSupplementSchdlCdCdgVrsn() != null) {
-			nutritionordersupplementschedulecodecoding.setVersion(n.getNtritnOrdrSupplementSchdlCdCdgVrsn());
+		if(n.getNtritnOrdrSupplementSchdlCdCdgVrsn() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrSupplementSchdlCdCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getSupplement().size() < i0+1) { nutritionorder.addSupplement(); }
+				String[] arrayi1 = n.getNtritnOrdrSupplementSchdlCdCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getSupplement().get(i0).getSchedule().size() < i1+1) { nutritionorder.getSupplement().get(i0).addSchedule(); }
+					String[] arrayi2 = n.getNtritnOrdrSupplementSchdlCdCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+						if(nutritionorder.getSupplement().get(i0).getSchedule().get(i1).getCode().getCoding().size() < i2+1) { nutritionorder.getSupplement().get(i0).getSchedule().get(i1).getCode().addCoding(); }
+						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {nutritionorder.getSupplement().get(i0).getSchedule().get(i1).getCode().getCoding().get(i2).setVersion(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+					}
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_Supplement_Schdl_Cd_Txt ********************************************************************************/
-		if(n.getNtritnOrdrSupplementSchdlCdTxt() != null) {
-			nutritionordersupplementschedulecode.setText(n.getNtritnOrdrSupplementSchdlCdTxt());
+		if(n.getNtritnOrdrSupplementSchdlCdTxt() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrSupplementSchdlCdTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getSupplement().size() < i0+1) { nutritionorder.addSupplement(); }
+				String[] arrayi1 = n.getNtritnOrdrSupplementSchdlCdTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getSupplement().get(i0).getSchedule().size() < i1+1) { nutritionorder.getSupplement().get(i0).addSchedule(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getSupplement().get(i0).getSchedule().get(i1).getCode().setText(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_Supplement_Schdl_Evnt ********************************************************************************/
-		if(n.getNtritnOrdrSupplementSchdlEvnt() != null) {
-			java.text.SimpleDateFormat NtritnOrdr_Supplement_Schdl_Evntsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date NtritnOrdr_Supplement_Schdl_Evntdate = NtritnOrdr_Supplement_Schdl_Evntsdf.parse(n.getNtritnOrdrSupplementSchdlEvnt());
-			nutritionordersupplementschedule.addEvent(NtritnOrdr_Supplement_Schdl_Evntdate);
+		if(n.getNtritnOrdrSupplementSchdlEvnt() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrSupplementSchdlEvnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getSupplement().size() < i0+1) { nutritionorder.addSupplement(); }
+				String[] arrayi1 = n.getNtritnOrdrSupplementSchdlEvnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getSupplement().get(i0).getSchedule().size() < i1+1) { nutritionorder.getSupplement().get(i0).addSchedule(); }
+					for( String currListStrSplit : arrayi1[i1].replace("[","").replace("]","").replace("\"","").split(",")){
+					if(currListStrSplit.replace("[","").replace("]","").replace("\"","").equals("NULL") | currListStrSplit==null) {} else {nutritionorder.getSupplement().get(i0).getSchedule().get(i1).addEvent(currListStrSplit.replace("[","").replace("]","").equals("NULL") | currListStrSplit==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(currListStrSplit.replace("[","").replace("]","").replace("\"",""))); }
+					}
+				}
+			}
+
 		}
-		/******************** nutritionordersupplementschedulerepeat ********************************************************************************/
-		org.hl7.fhir.r4.model.Timing.TimingRepeatComponent nutritionordersupplementschedulerepeat =  new org.hl7.fhir.r4.model.Timing.TimingRepeatComponent();
-		nutritionordersupplementschedule.setRepeat(nutritionordersupplementschedulerepeat);
-
-		/******************** nutritionordersupplementschedulerepeatboundsduration ********************************************************************************/
-		org.hl7.fhir.r4.model.Duration nutritionordersupplementschedulerepeatboundsduration =  new org.hl7.fhir.r4.model.Duration();
-		nutritionordersupplementschedulerepeat.setBounds(nutritionordersupplementschedulerepeatboundsduration);
-
 		/******************** NtritnOrdr_Supplement_Schdl_Rpt_BndsDuration_Cd ********************************************************************************/
-		if(n.getNtritnOrdrSupplementSchdlRptBndsDurationCd() != null) {
-			nutritionordersupplementschedulerepeatboundsduration.setCode(n.getNtritnOrdrSupplementSchdlRptBndsDurationCd());
-		}
-		/******************** nutritionordersupplementschedulerepeatboundsdurationcomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory nutritionordersupplementschedulerepeatboundsdurationcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-		nutritionordersupplementschedulerepeatboundsduration.setComparator(nutritionordersupplementschedulerepeatboundsdurationcomparator.fromCode(n.getNtritnOrdrSupplementSchdlRptBndsDurationCmprtr()));
+		if(n.getNtritnOrdrSupplementSchdlRptBndsDurationCd() != null ) {
 
+			String[] arrayi0 = n.getNtritnOrdrSupplementSchdlRptBndsDurationCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getSupplement().size() < i0+1) { nutritionorder.addSupplement(); }
+				String[] arrayi1 = n.getNtritnOrdrSupplementSchdlRptBndsDurationCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getSupplement().get(i0).getSchedule().size() < i1+1) { nutritionorder.getSupplement().get(i0).addSchedule(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getSupplement().get(i0).getSchedule().get(i1).getRepeat().getBoundsDuration().setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
+		}
+		/******************** NtritnOrdr_Supplement_Schdl_Rpt_BndsDuration_Cmprtr ********************************************************************************/
+		if(n.getNtritnOrdrSupplementSchdlRptBndsDurationCmprtr() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrSupplementSchdlRptBndsDurationCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getSupplement().size() < i0+1) { nutritionorder.addSupplement(); }
+				String[] arrayi1 = n.getNtritnOrdrSupplementSchdlRptBndsDurationCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getSupplement().get(i0).getSchedule().size() < i1+1) { nutritionorder.getSupplement().get(i0).addSchedule(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getSupplement().get(i0).getSchedule().get(i1).getRepeat().getBoundsDuration().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
+		}
 		/******************** NtritnOrdr_Supplement_Schdl_Rpt_BndsDuration_Sys ********************************************************************************/
-		if(n.getNtritnOrdrSupplementSchdlRptBndsDurationSys() != null) {
-			nutritionordersupplementschedulerepeatboundsduration.setSystem(n.getNtritnOrdrSupplementSchdlRptBndsDurationSys());
+		if(n.getNtritnOrdrSupplementSchdlRptBndsDurationSys() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrSupplementSchdlRptBndsDurationSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getSupplement().size() < i0+1) { nutritionorder.addSupplement(); }
+				String[] arrayi1 = n.getNtritnOrdrSupplementSchdlRptBndsDurationSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getSupplement().get(i0).getSchedule().size() < i1+1) { nutritionorder.getSupplement().get(i0).addSchedule(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getSupplement().get(i0).getSchedule().get(i1).getRepeat().getBoundsDuration().setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_Supplement_Schdl_Rpt_BndsDuration_Unt ********************************************************************************/
-		if(n.getNtritnOrdrSupplementSchdlRptBndsDurationUnt() != null) {
-			nutritionordersupplementschedulerepeatboundsduration.setUnit(n.getNtritnOrdrSupplementSchdlRptBndsDurationUnt());
+		if(n.getNtritnOrdrSupplementSchdlRptBndsDurationUnt() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrSupplementSchdlRptBndsDurationUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getSupplement().size() < i0+1) { nutritionorder.addSupplement(); }
+				String[] arrayi1 = n.getNtritnOrdrSupplementSchdlRptBndsDurationUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getSupplement().get(i0).getSchedule().size() < i1+1) { nutritionorder.getSupplement().get(i0).addSchedule(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getSupplement().get(i0).getSchedule().get(i1).getRepeat().getBoundsDuration().setUnit(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_Supplement_Schdl_Rpt_BndsDuration_Vl ********************************************************************************/
-		if(n.getNtritnOrdrSupplementSchdlRptBndsDurationVl() != null) {
-			nutritionordersupplementschedulerepeatboundsduration.setValue(Double.parseDouble((n.getNtritnOrdrSupplementSchdlRptBndsDurationVl())));
-		}
-		/******************** nutritionordersupplementschedulerepeatboundsperiod ********************************************************************************/
-		org.hl7.fhir.r4.model.Period nutritionordersupplementschedulerepeatboundsperiod =  new org.hl7.fhir.r4.model.Period();
-		nutritionordersupplementschedulerepeat.setBounds(nutritionordersupplementschedulerepeatboundsperiod);
+		if(n.getNtritnOrdrSupplementSchdlRptBndsDurationVl() != null ) {
 
+			String[] arrayi0 = n.getNtritnOrdrSupplementSchdlRptBndsDurationVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getSupplement().size() < i0+1) { nutritionorder.addSupplement(); }
+				String[] arrayi1 = n.getNtritnOrdrSupplementSchdlRptBndsDurationVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getSupplement().get(i0).getSchedule().size() < i1+1) { nutritionorder.getSupplement().get(i0).addSchedule(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getSupplement().get(i0).getSchedule().get(i1).getRepeat().getBoundsDuration().setValue((new java.math.BigDecimal((arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+				}
+			}
+
+		}
 		/******************** NtritnOrdr_Supplement_Schdl_Rpt_BndsPrd_End ********************************************************************************/
-		if(n.getNtritnOrdrSupplementSchdlRptBndsPrdEnd() != null) {
-			java.text.SimpleDateFormat NtritnOrdr_Supplement_Schdl_Rpt_BndsPrd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date NtritnOrdr_Supplement_Schdl_Rpt_BndsPrd_Enddate = NtritnOrdr_Supplement_Schdl_Rpt_BndsPrd_Endsdf.parse(n.getNtritnOrdrSupplementSchdlRptBndsPrdEnd());
-			nutritionordersupplementschedulerepeatboundsperiod.setEnd(NtritnOrdr_Supplement_Schdl_Rpt_BndsPrd_Enddate);
+		if(n.getNtritnOrdrSupplementSchdlRptBndsPrdEnd() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrSupplementSchdlRptBndsPrdEnd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getSupplement().size() < i0+1) { nutritionorder.addSupplement(); }
+				String[] arrayi1 = n.getNtritnOrdrSupplementSchdlRptBndsPrdEnd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getSupplement().get(i0).getSchedule().size() < i1+1) { nutritionorder.getSupplement().get(i0).addSchedule(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getSupplement().get(i0).getSchedule().get(i1).getRepeat().getBoundsPeriod().setEnd(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi1[i1].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_Supplement_Schdl_Rpt_BndsPrd_Strt ********************************************************************************/
-		if(n.getNtritnOrdrSupplementSchdlRptBndsPrdStrt() != null) {
-			java.text.SimpleDateFormat NtritnOrdr_Supplement_Schdl_Rpt_BndsPrd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date NtritnOrdr_Supplement_Schdl_Rpt_BndsPrd_Strtdate = NtritnOrdr_Supplement_Schdl_Rpt_BndsPrd_Strtsdf.parse(n.getNtritnOrdrSupplementSchdlRptBndsPrdStrt());
-			nutritionordersupplementschedulerepeatboundsperiod.setStart(NtritnOrdr_Supplement_Schdl_Rpt_BndsPrd_Strtdate);
+		if(n.getNtritnOrdrSupplementSchdlRptBndsPrdStrt() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrSupplementSchdlRptBndsPrdStrt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getSupplement().size() < i0+1) { nutritionorder.addSupplement(); }
+				String[] arrayi1 = n.getNtritnOrdrSupplementSchdlRptBndsPrdStrt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getSupplement().get(i0).getSchedule().size() < i1+1) { nutritionorder.getSupplement().get(i0).addSchedule(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getSupplement().get(i0).getSchedule().get(i1).getRepeat().getBoundsPeriod().setStart(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi1[i1].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
 		}
-		/******************** nutritionordersupplementschedulerepeatboundsrange ********************************************************************************/
-		org.hl7.fhir.r4.model.Range nutritionordersupplementschedulerepeatboundsrange =  new org.hl7.fhir.r4.model.Range();
-		nutritionordersupplementschedulerepeat.setBounds(nutritionordersupplementschedulerepeatboundsrange);
-
-		/******************** nutritionordersupplementschedulerepeatboundsrangehigh ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity nutritionordersupplementschedulerepeatboundsrangehigh =  new org.hl7.fhir.r4.model.Quantity();
-		nutritionordersupplementschedulerepeatboundsrange.setHigh(nutritionordersupplementschedulerepeatboundsrangehigh);
-
 		/******************** NtritnOrdr_Supplement_Schdl_Rpt_BndsRng_Hi_Cd ********************************************************************************/
-		if(n.getNtritnOrdrSupplementSchdlRptBndsRngHiCd() != null) {
-			nutritionordersupplementschedulerepeatboundsrangehigh.setCode(n.getNtritnOrdrSupplementSchdlRptBndsRngHiCd());
-		}
-		/******************** nutritionordersupplementschedulerepeatboundsrangehighcomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory nutritionordersupplementschedulerepeatboundsrangehighcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-		nutritionordersupplementschedulerepeatboundsrangehigh.setComparator(nutritionordersupplementschedulerepeatboundsrangehighcomparator.fromCode(n.getNtritnOrdrSupplementSchdlRptBndsRngHiCmprtr()));
+		if(n.getNtritnOrdrSupplementSchdlRptBndsRngHiCd() != null ) {
 
+			String[] arrayi0 = n.getNtritnOrdrSupplementSchdlRptBndsRngHiCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getSupplement().size() < i0+1) { nutritionorder.addSupplement(); }
+				String[] arrayi1 = n.getNtritnOrdrSupplementSchdlRptBndsRngHiCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getSupplement().get(i0).getSchedule().size() < i1+1) { nutritionorder.getSupplement().get(i0).addSchedule(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getSupplement().get(i0).getSchedule().get(i1).getRepeat().getBoundsRange().getHigh().setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
+		}
+		/******************** NtritnOrdr_Supplement_Schdl_Rpt_BndsRng_Hi_Cmprtr ********************************************************************************/
+		if(n.getNtritnOrdrSupplementSchdlRptBndsRngHiCmprtr() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrSupplementSchdlRptBndsRngHiCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getSupplement().size() < i0+1) { nutritionorder.addSupplement(); }
+				String[] arrayi1 = n.getNtritnOrdrSupplementSchdlRptBndsRngHiCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getSupplement().get(i0).getSchedule().size() < i1+1) { nutritionorder.getSupplement().get(i0).addSchedule(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getSupplement().get(i0).getSchedule().get(i1).getRepeat().getBoundsRange().getHigh().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
+		}
 		/******************** NtritnOrdr_Supplement_Schdl_Rpt_BndsRng_Hi_Sys ********************************************************************************/
-		if(n.getNtritnOrdrSupplementSchdlRptBndsRngHiSys() != null) {
-			nutritionordersupplementschedulerepeatboundsrangehigh.setSystem(n.getNtritnOrdrSupplementSchdlRptBndsRngHiSys());
+		if(n.getNtritnOrdrSupplementSchdlRptBndsRngHiSys() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrSupplementSchdlRptBndsRngHiSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getSupplement().size() < i0+1) { nutritionorder.addSupplement(); }
+				String[] arrayi1 = n.getNtritnOrdrSupplementSchdlRptBndsRngHiSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getSupplement().get(i0).getSchedule().size() < i1+1) { nutritionorder.getSupplement().get(i0).addSchedule(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getSupplement().get(i0).getSchedule().get(i1).getRepeat().getBoundsRange().getHigh().setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_Supplement_Schdl_Rpt_BndsRng_Hi_Unt ********************************************************************************/
-		if(n.getNtritnOrdrSupplementSchdlRptBndsRngHiUnt() != null) {
-			nutritionordersupplementschedulerepeatboundsrangehigh.setUnit(n.getNtritnOrdrSupplementSchdlRptBndsRngHiUnt());
+		if(n.getNtritnOrdrSupplementSchdlRptBndsRngHiUnt() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrSupplementSchdlRptBndsRngHiUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getSupplement().size() < i0+1) { nutritionorder.addSupplement(); }
+				String[] arrayi1 = n.getNtritnOrdrSupplementSchdlRptBndsRngHiUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getSupplement().get(i0).getSchedule().size() < i1+1) { nutritionorder.getSupplement().get(i0).addSchedule(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getSupplement().get(i0).getSchedule().get(i1).getRepeat().getBoundsRange().getHigh().setUnit(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_Supplement_Schdl_Rpt_BndsRng_Hi_Vl ********************************************************************************/
-		if(n.getNtritnOrdrSupplementSchdlRptBndsRngHiVl() != null) {
-			nutritionordersupplementschedulerepeatboundsrangehigh.setValue(Double.parseDouble((n.getNtritnOrdrSupplementSchdlRptBndsRngHiVl())));
-		}
-		/******************** nutritionordersupplementschedulerepeatboundsrangelow ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity nutritionordersupplementschedulerepeatboundsrangelow =  new org.hl7.fhir.r4.model.Quantity();
-		nutritionordersupplementschedulerepeatboundsrange.setLow(nutritionordersupplementschedulerepeatboundsrangelow);
+		if(n.getNtritnOrdrSupplementSchdlRptBndsRngHiVl() != null ) {
 
+			String[] arrayi0 = n.getNtritnOrdrSupplementSchdlRptBndsRngHiVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getSupplement().size() < i0+1) { nutritionorder.addSupplement(); }
+				String[] arrayi1 = n.getNtritnOrdrSupplementSchdlRptBndsRngHiVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getSupplement().get(i0).getSchedule().size() < i1+1) { nutritionorder.getSupplement().get(i0).addSchedule(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getSupplement().get(i0).getSchedule().get(i1).getRepeat().getBoundsRange().getHigh().setValue((new java.math.BigDecimal((arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+				}
+			}
+
+		}
 		/******************** NtritnOrdr_Supplement_Schdl_Rpt_BndsRng_Lw_Cd ********************************************************************************/
-		if(n.getNtritnOrdrSupplementSchdlRptBndsRngLwCd() != null) {
-			nutritionordersupplementschedulerepeatboundsrangelow.setCode(n.getNtritnOrdrSupplementSchdlRptBndsRngLwCd());
-		}
-		/******************** nutritionordersupplementschedulerepeatboundsrangelowcomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory nutritionordersupplementschedulerepeatboundsrangelowcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-		nutritionordersupplementschedulerepeatboundsrangelow.setComparator(nutritionordersupplementschedulerepeatboundsrangelowcomparator.fromCode(n.getNtritnOrdrSupplementSchdlRptBndsRngLwCmprtr()));
+		if(n.getNtritnOrdrSupplementSchdlRptBndsRngLwCd() != null ) {
 
+			String[] arrayi0 = n.getNtritnOrdrSupplementSchdlRptBndsRngLwCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getSupplement().size() < i0+1) { nutritionorder.addSupplement(); }
+				String[] arrayi1 = n.getNtritnOrdrSupplementSchdlRptBndsRngLwCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getSupplement().get(i0).getSchedule().size() < i1+1) { nutritionorder.getSupplement().get(i0).addSchedule(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getSupplement().get(i0).getSchedule().get(i1).getRepeat().getBoundsRange().getLow().setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
+		}
+		/******************** NtritnOrdr_Supplement_Schdl_Rpt_BndsRng_Lw_Cmprtr ********************************************************************************/
+		if(n.getNtritnOrdrSupplementSchdlRptBndsRngLwCmprtr() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrSupplementSchdlRptBndsRngLwCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getSupplement().size() < i0+1) { nutritionorder.addSupplement(); }
+				String[] arrayi1 = n.getNtritnOrdrSupplementSchdlRptBndsRngLwCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getSupplement().get(i0).getSchedule().size() < i1+1) { nutritionorder.getSupplement().get(i0).addSchedule(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getSupplement().get(i0).getSchedule().get(i1).getRepeat().getBoundsRange().getLow().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
+		}
 		/******************** NtritnOrdr_Supplement_Schdl_Rpt_BndsRng_Lw_Sys ********************************************************************************/
-		if(n.getNtritnOrdrSupplementSchdlRptBndsRngLwSys() != null) {
-			nutritionordersupplementschedulerepeatboundsrangelow.setSystem(n.getNtritnOrdrSupplementSchdlRptBndsRngLwSys());
+		if(n.getNtritnOrdrSupplementSchdlRptBndsRngLwSys() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrSupplementSchdlRptBndsRngLwSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getSupplement().size() < i0+1) { nutritionorder.addSupplement(); }
+				String[] arrayi1 = n.getNtritnOrdrSupplementSchdlRptBndsRngLwSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getSupplement().get(i0).getSchedule().size() < i1+1) { nutritionorder.getSupplement().get(i0).addSchedule(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getSupplement().get(i0).getSchedule().get(i1).getRepeat().getBoundsRange().getLow().setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_Supplement_Schdl_Rpt_BndsRng_Lw_Unt ********************************************************************************/
-		if(n.getNtritnOrdrSupplementSchdlRptBndsRngLwUnt() != null) {
-			nutritionordersupplementschedulerepeatboundsrangelow.setUnit(n.getNtritnOrdrSupplementSchdlRptBndsRngLwUnt());
+		if(n.getNtritnOrdrSupplementSchdlRptBndsRngLwUnt() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrSupplementSchdlRptBndsRngLwUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getSupplement().size() < i0+1) { nutritionorder.addSupplement(); }
+				String[] arrayi1 = n.getNtritnOrdrSupplementSchdlRptBndsRngLwUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getSupplement().get(i0).getSchedule().size() < i1+1) { nutritionorder.getSupplement().get(i0).addSchedule(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getSupplement().get(i0).getSchedule().get(i1).getRepeat().getBoundsRange().getLow().setUnit(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_Supplement_Schdl_Rpt_BndsRng_Lw_Vl ********************************************************************************/
-		if(n.getNtritnOrdrSupplementSchdlRptBndsRngLwVl() != null) {
-			nutritionordersupplementschedulerepeatboundsrangelow.setValue(Double.parseDouble((n.getNtritnOrdrSupplementSchdlRptBndsRngLwVl())));
+		if(n.getNtritnOrdrSupplementSchdlRptBndsRngLwVl() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrSupplementSchdlRptBndsRngLwVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getSupplement().size() < i0+1) { nutritionorder.addSupplement(); }
+				String[] arrayi1 = n.getNtritnOrdrSupplementSchdlRptBndsRngLwVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getSupplement().get(i0).getSchedule().size() < i1+1) { nutritionorder.getSupplement().get(i0).addSchedule(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getSupplement().get(i0).getSchedule().get(i1).getRepeat().getBoundsRange().getLow().setValue((new java.math.BigDecimal((arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_Supplement_Schdl_Rpt_Cnt ********************************************************************************/
-		if(n.getNtritnOrdrSupplementSchdlRptCnt() != null) {
-			nutritionordersupplementschedulerepeat.setCount(Integer.parseInt(n.getNtritnOrdrSupplementSchdlRptCnt()));
+		if(n.getNtritnOrdrSupplementSchdlRptCnt() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrSupplementSchdlRptCnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getSupplement().size() < i0+1) { nutritionorder.addSupplement(); }
+				String[] arrayi1 = n.getNtritnOrdrSupplementSchdlRptCnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getSupplement().get(i0).getSchedule().size() < i1+1) { nutritionorder.getSupplement().get(i0).addSchedule(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getSupplement().get(i0).getSchedule().get(i1).getRepeat().setCount(Integer.parseInt(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_Supplement_Schdl_Rpt_CntMx ********************************************************************************/
-		if(n.getNtritnOrdrSupplementSchdlRptCntMx() != null) {
-			nutritionordersupplementschedulerepeat.setCountMax(Integer.parseInt(n.getNtritnOrdrSupplementSchdlRptCntMx()));
-		}
-		/******************** nutritionordersupplementschedulerepeatdayofweek ********************************************************************************/
-		org.hl7.fhir.r4.model.Timing.DayOfWeekEnumFactory nutritionordersupplementschedulerepeatdayofweek =  new org.hl7.fhir.r4.model.Timing.DayOfWeekEnumFactory();
-		nutritionordersupplementschedulerepeat.addDayOfWeek(nutritionordersupplementschedulerepeatdayofweek.fromCode(n.getNtritnOrdrSupplementSchdlRptDayOfWeek()));
+		if(n.getNtritnOrdrSupplementSchdlRptCntMx() != null ) {
 
+			String[] arrayi0 = n.getNtritnOrdrSupplementSchdlRptCntMx().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getSupplement().size() < i0+1) { nutritionorder.addSupplement(); }
+				String[] arrayi1 = n.getNtritnOrdrSupplementSchdlRptCntMx().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getSupplement().get(i0).getSchedule().size() < i1+1) { nutritionorder.getSupplement().get(i0).addSchedule(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getSupplement().get(i0).getSchedule().get(i1).getRepeat().setCountMax(Integer.parseInt(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
+		}
 		/******************** NtritnOrdr_Supplement_Schdl_Rpt_Duration ********************************************************************************/
-		if(n.getNtritnOrdrSupplementSchdlRptDuration() != null) {
-			nutritionordersupplementschedulerepeat.setDuration(Double.parseDouble((n.getNtritnOrdrSupplementSchdlRptDuration())));
+		if(n.getNtritnOrdrSupplementSchdlRptDuration() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrSupplementSchdlRptDuration().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getSupplement().size() < i0+1) { nutritionorder.addSupplement(); }
+				String[] arrayi1 = n.getNtritnOrdrSupplementSchdlRptDuration().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getSupplement().get(i0).getSchedule().size() < i1+1) { nutritionorder.getSupplement().get(i0).addSchedule(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getSupplement().get(i0).getSchedule().get(i1).getRepeat().setDuration((Double.parseDouble((arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_Supplement_Schdl_Rpt_DurationMx ********************************************************************************/
-		if(n.getNtritnOrdrSupplementSchdlRptDurationMx() != null) {
-			nutritionordersupplementschedulerepeat.setDurationMax(Double.parseDouble((n.getNtritnOrdrSupplementSchdlRptDurationMx())));
-		}
-		/******************** nutritionordersupplementschedulerepeatdurationunit ********************************************************************************/
-		org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory nutritionordersupplementschedulerepeatdurationunit =  new org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory();
-		nutritionordersupplementschedulerepeat.setDurationUnit(nutritionordersupplementschedulerepeatdurationunit.fromCode(n.getNtritnOrdrSupplementSchdlRptDurationUnt()));
+		if(n.getNtritnOrdrSupplementSchdlRptDurationMx() != null ) {
 
+			String[] arrayi0 = n.getNtritnOrdrSupplementSchdlRptDurationMx().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getSupplement().size() < i0+1) { nutritionorder.addSupplement(); }
+				String[] arrayi1 = n.getNtritnOrdrSupplementSchdlRptDurationMx().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getSupplement().get(i0).getSchedule().size() < i1+1) { nutritionorder.getSupplement().get(i0).addSchedule(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getSupplement().get(i0).getSchedule().get(i1).getRepeat().setDurationMax((Double.parseDouble((arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+				}
+			}
+
+		}
+		/******************** NtritnOrdr_Supplement_Schdl_Rpt_DurationUnt ********************************************************************************/
+		if(n.getNtritnOrdrSupplementSchdlRptDurationUnt() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrSupplementSchdlRptDurationUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getSupplement().size() < i0+1) { nutritionorder.addSupplement(); }
+				String[] arrayi1 = n.getNtritnOrdrSupplementSchdlRptDurationUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getSupplement().get(i0).getSchedule().size() < i1+1) { nutritionorder.getSupplement().get(i0).addSchedule(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getSupplement().get(i0).getSchedule().get(i1).getRepeat().setDurationUnit(new org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory().fromCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
+		}
 		/******************** NtritnOrdr_Supplement_Schdl_Rpt_Frqncy ********************************************************************************/
-		if(n.getNtritnOrdrSupplementSchdlRptFrqncy() != null) {
-			nutritionordersupplementschedulerepeat.setFrequency(Integer.parseInt(n.getNtritnOrdrSupplementSchdlRptFrqncy()));
+		if(n.getNtritnOrdrSupplementSchdlRptFrqncy() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrSupplementSchdlRptFrqncy().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getSupplement().size() < i0+1) { nutritionorder.addSupplement(); }
+				String[] arrayi1 = n.getNtritnOrdrSupplementSchdlRptFrqncy().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getSupplement().get(i0).getSchedule().size() < i1+1) { nutritionorder.getSupplement().get(i0).addSchedule(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getSupplement().get(i0).getSchedule().get(i1).getRepeat().setFrequency(Integer.parseInt(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_Supplement_Schdl_Rpt_FrqncyMx ********************************************************************************/
-		if(n.getNtritnOrdrSupplementSchdlRptFrqncyMx() != null) {
-			nutritionordersupplementschedulerepeat.setFrequencyMax(Integer.parseInt(n.getNtritnOrdrSupplementSchdlRptFrqncyMx()));
+		if(n.getNtritnOrdrSupplementSchdlRptFrqncyMx() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrSupplementSchdlRptFrqncyMx().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getSupplement().size() < i0+1) { nutritionorder.addSupplement(); }
+				String[] arrayi1 = n.getNtritnOrdrSupplementSchdlRptFrqncyMx().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getSupplement().get(i0).getSchedule().size() < i1+1) { nutritionorder.getSupplement().get(i0).addSchedule(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getSupplement().get(i0).getSchedule().get(i1).getRepeat().setFrequencyMax(Integer.parseInt(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_Supplement_Schdl_Rpt_Off ********************************************************************************/
-		if(n.getNtritnOrdrSupplementSchdlRptOff() != null) {
-			nutritionordersupplementschedulerepeat.setOffset(Integer.parseInt(n.getNtritnOrdrSupplementSchdlRptOff()));
+		if(n.getNtritnOrdrSupplementSchdlRptOff() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrSupplementSchdlRptOff().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getSupplement().size() < i0+1) { nutritionorder.addSupplement(); }
+				String[] arrayi1 = n.getNtritnOrdrSupplementSchdlRptOff().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getSupplement().get(i0).getSchedule().size() < i1+1) { nutritionorder.getSupplement().get(i0).addSchedule(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getSupplement().get(i0).getSchedule().get(i1).getRepeat().setOffset(Integer.parseInt(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_Supplement_Schdl_Rpt_Prd ********************************************************************************/
-		if(n.getNtritnOrdrSupplementSchdlRptPrd() != null) {
-			nutritionordersupplementschedulerepeat.setPeriod(Double.parseDouble((n.getNtritnOrdrSupplementSchdlRptPrd())));
+		if(n.getNtritnOrdrSupplementSchdlRptPrd() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrSupplementSchdlRptPrd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getSupplement().size() < i0+1) { nutritionorder.addSupplement(); }
+				String[] arrayi1 = n.getNtritnOrdrSupplementSchdlRptPrd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getSupplement().get(i0).getSchedule().size() < i1+1) { nutritionorder.getSupplement().get(i0).addSchedule(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getSupplement().get(i0).getSchedule().get(i1).getRepeat().setPeriod((new java.math.BigDecimal((arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_Supplement_Schdl_Rpt_PrdMx ********************************************************************************/
-		if(n.getNtritnOrdrSupplementSchdlRptPrdMx() != null) {
-			nutritionordersupplementschedulerepeat.setPeriodMax(new java.math.BigDecimal((n.getNtritnOrdrSupplementSchdlRptPrdMx())));
-		}
-		/******************** nutritionordersupplementschedulerepeatperiodunit ********************************************************************************/
-		org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory nutritionordersupplementschedulerepeatperiodunit =  new org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory();
-		nutritionordersupplementschedulerepeat.setPeriodUnit(nutritionordersupplementschedulerepeatperiodunit.fromCode(n.getNtritnOrdrSupplementSchdlRptPrdUnt()));
+		if(n.getNtritnOrdrSupplementSchdlRptPrdMx() != null ) {
 
+			String[] arrayi0 = n.getNtritnOrdrSupplementSchdlRptPrdMx().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getSupplement().size() < i0+1) { nutritionorder.addSupplement(); }
+				String[] arrayi1 = n.getNtritnOrdrSupplementSchdlRptPrdMx().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getSupplement().get(i0).getSchedule().size() < i1+1) { nutritionorder.getSupplement().get(i0).addSchedule(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getSupplement().get(i0).getSchedule().get(i1).getRepeat().setPeriodMax((new java.math.BigDecimal((arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+				}
+			}
+
+		}
+		/******************** NtritnOrdr_Supplement_Schdl_Rpt_PrdUnt ********************************************************************************/
+		if(n.getNtritnOrdrSupplementSchdlRptPrdUnt() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrSupplementSchdlRptPrdUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getSupplement().size() < i0+1) { nutritionorder.addSupplement(); }
+				String[] arrayi1 = n.getNtritnOrdrSupplementSchdlRptPrdUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getSupplement().get(i0).getSchedule().size() < i1+1) { nutritionorder.getSupplement().get(i0).addSchedule(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getSupplement().get(i0).getSchedule().get(i1).getRepeat().setPeriodUnit(new org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory().fromCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
+		}
 		/******************** NtritnOrdr_Supplement_Schdl_Rpt_TimeOfDay ********************************************************************************/
-		if(n.getNtritnOrdrSupplementSchdlRptTimeOfDay() != null) {
-			nutritionordersupplementschedulerepeat.addTimeOfDay(n.getNtritnOrdrSupplementSchdlRptTimeOfDay());
+		if(n.getNtritnOrdrSupplementSchdlRptTimeOfDay() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrSupplementSchdlRptTimeOfDay().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getSupplement().size() < i0+1) { nutritionorder.addSupplement(); }
+				String[] arrayi1 = n.getNtritnOrdrSupplementSchdlRptTimeOfDay().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getSupplement().get(i0).getSchedule().size() < i1+1) { nutritionorder.getSupplement().get(i0).addSchedule(); }
+					for( String currListStrSplit : arrayi1[i1].replace("[","").replace("]","").replace("\"","").split(",")){
+					if(currListStrSplit.replace("[","").replace("]","").replace("\"","").equals("NULL") | currListStrSplit==null) {} else {nutritionorder.getSupplement().get(i0).getSchedule().get(i1).getRepeat().addTimeOfDay(currListStrSplit.replace("[","").replace("]","").replace("\"","")); }
+					}
+				}
+			}
+
 		}
-		/******************** nutritionordersupplementschedulerepeatwhen ********************************************************************************/
-		org.hl7.fhir.r4.model.Timing.EventTimingEnumFactory nutritionordersupplementschedulerepeatwhen =  new org.hl7.fhir.r4.model.Timing.EventTimingEnumFactory();
-		nutritionordersupplementschedulerepeat.addWhen(nutritionordersupplementschedulerepeatwhen.fromCode(n.getNtritnOrdrSupplementSchdlRptWhen()));
-
-		/******************** nutritionordersupplementtype ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept nutritionordersupplementtype =  new org.hl7.fhir.r4.model.CodeableConcept();
-		nutritionordersupplement.setType(nutritionordersupplementtype);
-
-		/******************** nutritionordersupplementtypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding nutritionordersupplementtypecoding =  new org.hl7.fhir.r4.model.Coding();
-		nutritionordersupplementtype.addCoding(nutritionordersupplementtypecoding);
-
 		/******************** NtritnOrdr_Supplement_Typ_Cdg_Cd ********************************************************************************/
-		if(n.getNtritnOrdrSupplementTypCdgCd() != null) {
-			nutritionordersupplementtypecoding.setCode(n.getNtritnOrdrSupplementTypCdgCd());
+		if(n.getNtritnOrdrSupplementTypCdgCd() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrSupplementTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getSupplement().size() < i0+1) { nutritionorder.addSupplement(); }
+				String[] arrayi1 = n.getNtritnOrdrSupplementTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getSupplement().get(i0).getType().getCoding().size() < i1+1) { nutritionorder.getSupplement().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getSupplement().get(i0).getType().getCoding().get(i1).setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_Supplement_Typ_Cdg_Dsply ********************************************************************************/
-		if(n.getNtritnOrdrSupplementTypCdgDsply() != null) {
-			nutritionordersupplementtypecoding.setDisplay(n.getNtritnOrdrSupplementTypCdgDsply());
+		if(n.getNtritnOrdrSupplementTypCdgDsply() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrSupplementTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getSupplement().size() < i0+1) { nutritionorder.addSupplement(); }
+				String[] arrayi1 = n.getNtritnOrdrSupplementTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getSupplement().get(i0).getType().getCoding().size() < i1+1) { nutritionorder.getSupplement().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getSupplement().get(i0).getType().getCoding().get(i1).setDisplay(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_Supplement_Typ_Cdg_Sys ********************************************************************************/
-		if(n.getNtritnOrdrSupplementTypCdgSys() != null) {
-			nutritionordersupplementtypecoding.setSystem(n.getNtritnOrdrSupplementTypCdgSys());
+		if(n.getNtritnOrdrSupplementTypCdgSys() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrSupplementTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getSupplement().size() < i0+1) { nutritionorder.addSupplement(); }
+				String[] arrayi1 = n.getNtritnOrdrSupplementTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getSupplement().get(i0).getType().getCoding().size() < i1+1) { nutritionorder.getSupplement().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getSupplement().get(i0).getType().getCoding().get(i1).setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_Supplement_Typ_Cdg_UsrSltd ********************************************************************************/
-		if(n.getNtritnOrdrSupplementTypCdgUsrSltd() != null) {
-			nutritionordersupplementtypecoding.setUserSelected(Boolean.parseBoolean(n.getNtritnOrdrSupplementTypCdgUsrSltd()));
+		if(n.getNtritnOrdrSupplementTypCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrSupplementTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getSupplement().size() < i0+1) { nutritionorder.addSupplement(); }
+				String[] arrayi1 = n.getNtritnOrdrSupplementTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getSupplement().get(i0).getType().getCoding().size() < i1+1) { nutritionorder.getSupplement().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getSupplement().get(i0).getType().getCoding().get(i1).setUserSelected(Boolean.parseBoolean(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_Supplement_Typ_Cdg_Vrsn ********************************************************************************/
-		if(n.getNtritnOrdrSupplementTypCdgVrsn() != null) {
-			nutritionordersupplementtypecoding.setVersion(n.getNtritnOrdrSupplementTypCdgVrsn());
+		if(n.getNtritnOrdrSupplementTypCdgVrsn() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrSupplementTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getSupplement().size() < i0+1) { nutritionorder.addSupplement(); }
+				String[] arrayi1 = n.getNtritnOrdrSupplementTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(nutritionorder.getSupplement().get(i0).getType().getCoding().size() < i1+1) { nutritionorder.getSupplement().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {nutritionorder.getSupplement().get(i0).getType().getCoding().get(i1).setVersion(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NtritnOrdr_Supplement_Typ_Txt ********************************************************************************/
-		if(n.getNtritnOrdrSupplementTypTxt() != null) {
-			nutritionordersupplementtype.setText(n.getNtritnOrdrSupplementTypTxt());
+		if(n.getNtritnOrdrSupplementTypTxt() != null ) {
+
+			String[] arrayi0 = n.getNtritnOrdrSupplementTypTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(nutritionorder.getSupplement().size() < i0+1) { nutritionorder.addSupplement(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {nutritionorder.getSupplement().get(i0).getType().setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		return nutritionorder;
 	}

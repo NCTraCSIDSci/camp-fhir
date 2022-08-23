@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Jun 27, 2022, 10:40:10 AM by Hibernate Tools 5.6.1.Final
+// Generated Aug 17, 2022, 11:08:48 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -93,6 +93,20 @@ public class Invoice  implements java.io.Serializable {
         this.id = id;
     }
     
+    public void addId(String id) {
+    	if( id != null ) {
+	    	if( this.id == null ) {
+	        	this.id = id;
+	        } else if(this.id.substring(this.id.length() - 1).equals("]") & id.equals("[")) {
+	        	this.id = this.id+ "," + id;
+	        } else if(id.equals("[") | id.equals("]") | this.id.substring(this.id.length() - 1).equals("[")) {
+	        	this.id = this.id+id;
+	        } else  {
+	            this.id = this.id+ "," +id;
+	        }
+        }
+    }
+    
     
     
     public String getInvceAccount() {
@@ -101,6 +115,20 @@ public class Invoice  implements java.io.Serializable {
     
     public void setInvceAccount(String invceAccount) {
         this.invceAccount = invceAccount;
+    }
+    
+    public void addInvceAccount(String invceAccount) {
+    	if( invceAccount != null ) {
+	    	if( this.invceAccount == null ) {
+	        	this.invceAccount = invceAccount;
+	        } else if(this.invceAccount.substring(this.invceAccount.length() - 1).equals("]") & invceAccount.equals("[")) {
+	        	this.invceAccount = this.invceAccount+ "," + invceAccount;
+	        } else if(invceAccount.equals("[") | invceAccount.equals("]") | this.invceAccount.substring(this.invceAccount.length() - 1).equals("[")) {
+	        	this.invceAccount = this.invceAccount+invceAccount;
+	        } else  {
+	            this.invceAccount = this.invceAccount+ "," +invceAccount;
+	        }
+        }
     }
     
     
@@ -113,6 +141,20 @@ public class Invoice  implements java.io.Serializable {
         this.invceCancelledRsn = invceCancelledRsn;
     }
     
+    public void addInvceCancelledRsn(String invceCancelledRsn) {
+    	if( invceCancelledRsn != null ) {
+	    	if( this.invceCancelledRsn == null ) {
+	        	this.invceCancelledRsn = invceCancelledRsn;
+	        } else if(this.invceCancelledRsn.substring(this.invceCancelledRsn.length() - 1).equals("]") & invceCancelledRsn.equals("[")) {
+	        	this.invceCancelledRsn = this.invceCancelledRsn+ "," + invceCancelledRsn;
+	        } else if(invceCancelledRsn.equals("[") | invceCancelledRsn.equals("]") | this.invceCancelledRsn.substring(this.invceCancelledRsn.length() - 1).equals("[")) {
+	        	this.invceCancelledRsn = this.invceCancelledRsn+invceCancelledRsn;
+	        } else  {
+	            this.invceCancelledRsn = this.invceCancelledRsn+ "," +invceCancelledRsn;
+	        }
+        }
+    }
+    
     
     
     public String getInvceDt() {
@@ -121,6 +163,20 @@ public class Invoice  implements java.io.Serializable {
     
     public void setInvceDt(String invceDt) {
         this.invceDt = invceDt;
+    }
+    
+    public void addInvceDt(String invceDt) {
+    	if( invceDt != null ) {
+	    	if( this.invceDt == null ) {
+	        	this.invceDt = invceDt;
+	        } else if(this.invceDt.substring(this.invceDt.length() - 1).equals("]") & invceDt.equals("[")) {
+	        	this.invceDt = this.invceDt+ "," + invceDt;
+	        } else if(invceDt.equals("[") | invceDt.equals("]") | this.invceDt.substring(this.invceDt.length() - 1).equals("[")) {
+	        	this.invceDt = this.invceDt+invceDt;
+	        } else  {
+	            this.invceDt = this.invceDt+ "," +invceDt;
+	        }
+        }
     }
     
     
@@ -133,6 +189,20 @@ public class Invoice  implements java.io.Serializable {
         this.invceIdAssigner = invceIdAssigner;
     }
     
+    public void addInvceIdAssigner(String invceIdAssigner) {
+    	if( invceIdAssigner != null ) {
+	    	if( this.invceIdAssigner == null ) {
+	        	this.invceIdAssigner = invceIdAssigner;
+	        } else if(this.invceIdAssigner.substring(this.invceIdAssigner.length() - 1).equals("]") & invceIdAssigner.equals("[")) {
+	        	this.invceIdAssigner = this.invceIdAssigner+ "," + invceIdAssigner;
+	        } else if(invceIdAssigner.equals("[") | invceIdAssigner.equals("]") | this.invceIdAssigner.substring(this.invceIdAssigner.length() - 1).equals("[")) {
+	        	this.invceIdAssigner = this.invceIdAssigner+invceIdAssigner;
+	        } else  {
+	            this.invceIdAssigner = this.invceIdAssigner+ "," +invceIdAssigner;
+	        }
+        }
+    }
+    
     
     
     public String getInvceIdPrdEnd() {
@@ -141,6 +211,20 @@ public class Invoice  implements java.io.Serializable {
     
     public void setInvceIdPrdEnd(String invceIdPrdEnd) {
         this.invceIdPrdEnd = invceIdPrdEnd;
+    }
+    
+    public void addInvceIdPrdEnd(String invceIdPrdEnd) {
+    	if( invceIdPrdEnd != null ) {
+	    	if( this.invceIdPrdEnd == null ) {
+	        	this.invceIdPrdEnd = invceIdPrdEnd;
+	        } else if(this.invceIdPrdEnd.substring(this.invceIdPrdEnd.length() - 1).equals("]") & invceIdPrdEnd.equals("[")) {
+	        	this.invceIdPrdEnd = this.invceIdPrdEnd+ "," + invceIdPrdEnd;
+	        } else if(invceIdPrdEnd.equals("[") | invceIdPrdEnd.equals("]") | this.invceIdPrdEnd.substring(this.invceIdPrdEnd.length() - 1).equals("[")) {
+	        	this.invceIdPrdEnd = this.invceIdPrdEnd+invceIdPrdEnd;
+	        } else  {
+	            this.invceIdPrdEnd = this.invceIdPrdEnd+ "," +invceIdPrdEnd;
+	        }
+        }
     }
     
     
@@ -153,6 +237,20 @@ public class Invoice  implements java.io.Serializable {
         this.invceIdPrdStrt = invceIdPrdStrt;
     }
     
+    public void addInvceIdPrdStrt(String invceIdPrdStrt) {
+    	if( invceIdPrdStrt != null ) {
+	    	if( this.invceIdPrdStrt == null ) {
+	        	this.invceIdPrdStrt = invceIdPrdStrt;
+	        } else if(this.invceIdPrdStrt.substring(this.invceIdPrdStrt.length() - 1).equals("]") & invceIdPrdStrt.equals("[")) {
+	        	this.invceIdPrdStrt = this.invceIdPrdStrt+ "," + invceIdPrdStrt;
+	        } else if(invceIdPrdStrt.equals("[") | invceIdPrdStrt.equals("]") | this.invceIdPrdStrt.substring(this.invceIdPrdStrt.length() - 1).equals("[")) {
+	        	this.invceIdPrdStrt = this.invceIdPrdStrt+invceIdPrdStrt;
+	        } else  {
+	            this.invceIdPrdStrt = this.invceIdPrdStrt+ "," +invceIdPrdStrt;
+	        }
+        }
+    }
+    
     
     
     public String getInvceIdSys() {
@@ -161,6 +259,20 @@ public class Invoice  implements java.io.Serializable {
     
     public void setInvceIdSys(String invceIdSys) {
         this.invceIdSys = invceIdSys;
+    }
+    
+    public void addInvceIdSys(String invceIdSys) {
+    	if( invceIdSys != null ) {
+	    	if( this.invceIdSys == null ) {
+	        	this.invceIdSys = invceIdSys;
+	        } else if(this.invceIdSys.substring(this.invceIdSys.length() - 1).equals("]") & invceIdSys.equals("[")) {
+	        	this.invceIdSys = this.invceIdSys+ "," + invceIdSys;
+	        } else if(invceIdSys.equals("[") | invceIdSys.equals("]") | this.invceIdSys.substring(this.invceIdSys.length() - 1).equals("[")) {
+	        	this.invceIdSys = this.invceIdSys+invceIdSys;
+	        } else  {
+	            this.invceIdSys = this.invceIdSys+ "," +invceIdSys;
+	        }
+        }
     }
     
     
@@ -173,6 +285,20 @@ public class Invoice  implements java.io.Serializable {
         this.invceIdTypCdgCd = invceIdTypCdgCd;
     }
     
+    public void addInvceIdTypCdgCd(String invceIdTypCdgCd) {
+    	if( invceIdTypCdgCd != null ) {
+	    	if( this.invceIdTypCdgCd == null ) {
+	        	this.invceIdTypCdgCd = invceIdTypCdgCd;
+	        } else if(this.invceIdTypCdgCd.substring(this.invceIdTypCdgCd.length() - 1).equals("]") & invceIdTypCdgCd.equals("[")) {
+	        	this.invceIdTypCdgCd = this.invceIdTypCdgCd+ "," + invceIdTypCdgCd;
+	        } else if(invceIdTypCdgCd.equals("[") | invceIdTypCdgCd.equals("]") | this.invceIdTypCdgCd.substring(this.invceIdTypCdgCd.length() - 1).equals("[")) {
+	        	this.invceIdTypCdgCd = this.invceIdTypCdgCd+invceIdTypCdgCd;
+	        } else  {
+	            this.invceIdTypCdgCd = this.invceIdTypCdgCd+ "," +invceIdTypCdgCd;
+	        }
+        }
+    }
+    
     
     
     public String getInvceIdTypCdgDsply() {
@@ -181,6 +307,20 @@ public class Invoice  implements java.io.Serializable {
     
     public void setInvceIdTypCdgDsply(String invceIdTypCdgDsply) {
         this.invceIdTypCdgDsply = invceIdTypCdgDsply;
+    }
+    
+    public void addInvceIdTypCdgDsply(String invceIdTypCdgDsply) {
+    	if( invceIdTypCdgDsply != null ) {
+	    	if( this.invceIdTypCdgDsply == null ) {
+	        	this.invceIdTypCdgDsply = invceIdTypCdgDsply;
+	        } else if(this.invceIdTypCdgDsply.substring(this.invceIdTypCdgDsply.length() - 1).equals("]") & invceIdTypCdgDsply.equals("[")) {
+	        	this.invceIdTypCdgDsply = this.invceIdTypCdgDsply+ "," + invceIdTypCdgDsply;
+	        } else if(invceIdTypCdgDsply.equals("[") | invceIdTypCdgDsply.equals("]") | this.invceIdTypCdgDsply.substring(this.invceIdTypCdgDsply.length() - 1).equals("[")) {
+	        	this.invceIdTypCdgDsply = this.invceIdTypCdgDsply+invceIdTypCdgDsply;
+	        } else  {
+	            this.invceIdTypCdgDsply = this.invceIdTypCdgDsply+ "," +invceIdTypCdgDsply;
+	        }
+        }
     }
     
     
@@ -193,6 +333,20 @@ public class Invoice  implements java.io.Serializable {
         this.invceIdTypCdgSys = invceIdTypCdgSys;
     }
     
+    public void addInvceIdTypCdgSys(String invceIdTypCdgSys) {
+    	if( invceIdTypCdgSys != null ) {
+	    	if( this.invceIdTypCdgSys == null ) {
+	        	this.invceIdTypCdgSys = invceIdTypCdgSys;
+	        } else if(this.invceIdTypCdgSys.substring(this.invceIdTypCdgSys.length() - 1).equals("]") & invceIdTypCdgSys.equals("[")) {
+	        	this.invceIdTypCdgSys = this.invceIdTypCdgSys+ "," + invceIdTypCdgSys;
+	        } else if(invceIdTypCdgSys.equals("[") | invceIdTypCdgSys.equals("]") | this.invceIdTypCdgSys.substring(this.invceIdTypCdgSys.length() - 1).equals("[")) {
+	        	this.invceIdTypCdgSys = this.invceIdTypCdgSys+invceIdTypCdgSys;
+	        } else  {
+	            this.invceIdTypCdgSys = this.invceIdTypCdgSys+ "," +invceIdTypCdgSys;
+	        }
+        }
+    }
+    
     
     
     public String getInvceIdTypCdgUsrSltd() {
@@ -201,6 +355,20 @@ public class Invoice  implements java.io.Serializable {
     
     public void setInvceIdTypCdgUsrSltd(String invceIdTypCdgUsrSltd) {
         this.invceIdTypCdgUsrSltd = invceIdTypCdgUsrSltd;
+    }
+    
+    public void addInvceIdTypCdgUsrSltd(String invceIdTypCdgUsrSltd) {
+    	if( invceIdTypCdgUsrSltd != null ) {
+	    	if( this.invceIdTypCdgUsrSltd == null ) {
+	        	this.invceIdTypCdgUsrSltd = invceIdTypCdgUsrSltd;
+	        } else if(this.invceIdTypCdgUsrSltd.substring(this.invceIdTypCdgUsrSltd.length() - 1).equals("]") & invceIdTypCdgUsrSltd.equals("[")) {
+	        	this.invceIdTypCdgUsrSltd = this.invceIdTypCdgUsrSltd+ "," + invceIdTypCdgUsrSltd;
+	        } else if(invceIdTypCdgUsrSltd.equals("[") | invceIdTypCdgUsrSltd.equals("]") | this.invceIdTypCdgUsrSltd.substring(this.invceIdTypCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.invceIdTypCdgUsrSltd = this.invceIdTypCdgUsrSltd+invceIdTypCdgUsrSltd;
+	        } else  {
+	            this.invceIdTypCdgUsrSltd = this.invceIdTypCdgUsrSltd+ "," +invceIdTypCdgUsrSltd;
+	        }
+        }
     }
     
     
@@ -213,6 +381,20 @@ public class Invoice  implements java.io.Serializable {
         this.invceIdTypCdgVrsn = invceIdTypCdgVrsn;
     }
     
+    public void addInvceIdTypCdgVrsn(String invceIdTypCdgVrsn) {
+    	if( invceIdTypCdgVrsn != null ) {
+	    	if( this.invceIdTypCdgVrsn == null ) {
+	        	this.invceIdTypCdgVrsn = invceIdTypCdgVrsn;
+	        } else if(this.invceIdTypCdgVrsn.substring(this.invceIdTypCdgVrsn.length() - 1).equals("]") & invceIdTypCdgVrsn.equals("[")) {
+	        	this.invceIdTypCdgVrsn = this.invceIdTypCdgVrsn+ "," + invceIdTypCdgVrsn;
+	        } else if(invceIdTypCdgVrsn.equals("[") | invceIdTypCdgVrsn.equals("]") | this.invceIdTypCdgVrsn.substring(this.invceIdTypCdgVrsn.length() - 1).equals("[")) {
+	        	this.invceIdTypCdgVrsn = this.invceIdTypCdgVrsn+invceIdTypCdgVrsn;
+	        } else  {
+	            this.invceIdTypCdgVrsn = this.invceIdTypCdgVrsn+ "," +invceIdTypCdgVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getInvceIdTypTxt() {
@@ -221,6 +403,20 @@ public class Invoice  implements java.io.Serializable {
     
     public void setInvceIdTypTxt(String invceIdTypTxt) {
         this.invceIdTypTxt = invceIdTypTxt;
+    }
+    
+    public void addInvceIdTypTxt(String invceIdTypTxt) {
+    	if( invceIdTypTxt != null ) {
+	    	if( this.invceIdTypTxt == null ) {
+	        	this.invceIdTypTxt = invceIdTypTxt;
+	        } else if(this.invceIdTypTxt.substring(this.invceIdTypTxt.length() - 1).equals("]") & invceIdTypTxt.equals("[")) {
+	        	this.invceIdTypTxt = this.invceIdTypTxt+ "," + invceIdTypTxt;
+	        } else if(invceIdTypTxt.equals("[") | invceIdTypTxt.equals("]") | this.invceIdTypTxt.substring(this.invceIdTypTxt.length() - 1).equals("[")) {
+	        	this.invceIdTypTxt = this.invceIdTypTxt+invceIdTypTxt;
+	        } else  {
+	            this.invceIdTypTxt = this.invceIdTypTxt+ "," +invceIdTypTxt;
+	        }
+        }
     }
     
     
@@ -233,6 +429,20 @@ public class Invoice  implements java.io.Serializable {
         this.invceIdUse = invceIdUse;
     }
     
+    public void addInvceIdUse(String invceIdUse) {
+    	if( invceIdUse != null ) {
+	    	if( this.invceIdUse == null ) {
+	        	this.invceIdUse = invceIdUse;
+	        } else if(this.invceIdUse.substring(this.invceIdUse.length() - 1).equals("]") & invceIdUse.equals("[")) {
+	        	this.invceIdUse = this.invceIdUse+ "," + invceIdUse;
+	        } else if(invceIdUse.equals("[") | invceIdUse.equals("]") | this.invceIdUse.substring(this.invceIdUse.length() - 1).equals("[")) {
+	        	this.invceIdUse = this.invceIdUse+invceIdUse;
+	        } else  {
+	            this.invceIdUse = this.invceIdUse+ "," +invceIdUse;
+	        }
+        }
+    }
+    
     
     
     public String getInvceIdVl() {
@@ -241,6 +451,20 @@ public class Invoice  implements java.io.Serializable {
     
     public void setInvceIdVl(String invceIdVl) {
         this.invceIdVl = invceIdVl;
+    }
+    
+    public void addInvceIdVl(String invceIdVl) {
+    	if( invceIdVl != null ) {
+	    	if( this.invceIdVl == null ) {
+	        	this.invceIdVl = invceIdVl;
+	        } else if(this.invceIdVl.substring(this.invceIdVl.length() - 1).equals("]") & invceIdVl.equals("[")) {
+	        	this.invceIdVl = this.invceIdVl+ "," + invceIdVl;
+	        } else if(invceIdVl.equals("[") | invceIdVl.equals("]") | this.invceIdVl.substring(this.invceIdVl.length() - 1).equals("[")) {
+	        	this.invceIdVl = this.invceIdVl+invceIdVl;
+	        } else  {
+	            this.invceIdVl = this.invceIdVl+ "," +invceIdVl;
+	        }
+        }
     }
     
     
@@ -253,6 +477,20 @@ public class Invoice  implements java.io.Serializable {
         this.invceIssuer = invceIssuer;
     }
     
+    public void addInvceIssuer(String invceIssuer) {
+    	if( invceIssuer != null ) {
+	    	if( this.invceIssuer == null ) {
+	        	this.invceIssuer = invceIssuer;
+	        } else if(this.invceIssuer.substring(this.invceIssuer.length() - 1).equals("]") & invceIssuer.equals("[")) {
+	        	this.invceIssuer = this.invceIssuer+ "," + invceIssuer;
+	        } else if(invceIssuer.equals("[") | invceIssuer.equals("]") | this.invceIssuer.substring(this.invceIssuer.length() - 1).equals("[")) {
+	        	this.invceIssuer = this.invceIssuer+invceIssuer;
+	        } else  {
+	            this.invceIssuer = this.invceIssuer+ "," +invceIssuer;
+	        }
+        }
+    }
+    
     
     
     public String getInvceLineItmChrgItmCdbleCncptCdgCd() {
@@ -261,6 +499,20 @@ public class Invoice  implements java.io.Serializable {
     
     public void setInvceLineItmChrgItmCdbleCncptCdgCd(String invceLineItmChrgItmCdbleCncptCdgCd) {
         this.invceLineItmChrgItmCdbleCncptCdgCd = invceLineItmChrgItmCdbleCncptCdgCd;
+    }
+    
+    public void addInvceLineItmChrgItmCdbleCncptCdgCd(String invceLineItmChrgItmCdbleCncptCdgCd) {
+    	if( invceLineItmChrgItmCdbleCncptCdgCd != null ) {
+	    	if( this.invceLineItmChrgItmCdbleCncptCdgCd == null ) {
+	        	this.invceLineItmChrgItmCdbleCncptCdgCd = invceLineItmChrgItmCdbleCncptCdgCd;
+	        } else if(this.invceLineItmChrgItmCdbleCncptCdgCd.substring(this.invceLineItmChrgItmCdbleCncptCdgCd.length() - 1).equals("]") & invceLineItmChrgItmCdbleCncptCdgCd.equals("[")) {
+	        	this.invceLineItmChrgItmCdbleCncptCdgCd = this.invceLineItmChrgItmCdbleCncptCdgCd+ "," + invceLineItmChrgItmCdbleCncptCdgCd;
+	        } else if(invceLineItmChrgItmCdbleCncptCdgCd.equals("[") | invceLineItmChrgItmCdbleCncptCdgCd.equals("]") | this.invceLineItmChrgItmCdbleCncptCdgCd.substring(this.invceLineItmChrgItmCdbleCncptCdgCd.length() - 1).equals("[")) {
+	        	this.invceLineItmChrgItmCdbleCncptCdgCd = this.invceLineItmChrgItmCdbleCncptCdgCd+invceLineItmChrgItmCdbleCncptCdgCd;
+	        } else  {
+	            this.invceLineItmChrgItmCdbleCncptCdgCd = this.invceLineItmChrgItmCdbleCncptCdgCd+ "," +invceLineItmChrgItmCdbleCncptCdgCd;
+	        }
+        }
     }
     
     
@@ -273,6 +525,20 @@ public class Invoice  implements java.io.Serializable {
         this.invceLineItmChrgItmCdbleCncptCdgDsply = invceLineItmChrgItmCdbleCncptCdgDsply;
     }
     
+    public void addInvceLineItmChrgItmCdbleCncptCdgDsply(String invceLineItmChrgItmCdbleCncptCdgDsply) {
+    	if( invceLineItmChrgItmCdbleCncptCdgDsply != null ) {
+	    	if( this.invceLineItmChrgItmCdbleCncptCdgDsply == null ) {
+	        	this.invceLineItmChrgItmCdbleCncptCdgDsply = invceLineItmChrgItmCdbleCncptCdgDsply;
+	        } else if(this.invceLineItmChrgItmCdbleCncptCdgDsply.substring(this.invceLineItmChrgItmCdbleCncptCdgDsply.length() - 1).equals("]") & invceLineItmChrgItmCdbleCncptCdgDsply.equals("[")) {
+	        	this.invceLineItmChrgItmCdbleCncptCdgDsply = this.invceLineItmChrgItmCdbleCncptCdgDsply+ "," + invceLineItmChrgItmCdbleCncptCdgDsply;
+	        } else if(invceLineItmChrgItmCdbleCncptCdgDsply.equals("[") | invceLineItmChrgItmCdbleCncptCdgDsply.equals("]") | this.invceLineItmChrgItmCdbleCncptCdgDsply.substring(this.invceLineItmChrgItmCdbleCncptCdgDsply.length() - 1).equals("[")) {
+	        	this.invceLineItmChrgItmCdbleCncptCdgDsply = this.invceLineItmChrgItmCdbleCncptCdgDsply+invceLineItmChrgItmCdbleCncptCdgDsply;
+	        } else  {
+	            this.invceLineItmChrgItmCdbleCncptCdgDsply = this.invceLineItmChrgItmCdbleCncptCdgDsply+ "," +invceLineItmChrgItmCdbleCncptCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getInvceLineItmChrgItmCdbleCncptCdgSys() {
@@ -281,6 +547,20 @@ public class Invoice  implements java.io.Serializable {
     
     public void setInvceLineItmChrgItmCdbleCncptCdgSys(String invceLineItmChrgItmCdbleCncptCdgSys) {
         this.invceLineItmChrgItmCdbleCncptCdgSys = invceLineItmChrgItmCdbleCncptCdgSys;
+    }
+    
+    public void addInvceLineItmChrgItmCdbleCncptCdgSys(String invceLineItmChrgItmCdbleCncptCdgSys) {
+    	if( invceLineItmChrgItmCdbleCncptCdgSys != null ) {
+	    	if( this.invceLineItmChrgItmCdbleCncptCdgSys == null ) {
+	        	this.invceLineItmChrgItmCdbleCncptCdgSys = invceLineItmChrgItmCdbleCncptCdgSys;
+	        } else if(this.invceLineItmChrgItmCdbleCncptCdgSys.substring(this.invceLineItmChrgItmCdbleCncptCdgSys.length() - 1).equals("]") & invceLineItmChrgItmCdbleCncptCdgSys.equals("[")) {
+	        	this.invceLineItmChrgItmCdbleCncptCdgSys = this.invceLineItmChrgItmCdbleCncptCdgSys+ "," + invceLineItmChrgItmCdbleCncptCdgSys;
+	        } else if(invceLineItmChrgItmCdbleCncptCdgSys.equals("[") | invceLineItmChrgItmCdbleCncptCdgSys.equals("]") | this.invceLineItmChrgItmCdbleCncptCdgSys.substring(this.invceLineItmChrgItmCdbleCncptCdgSys.length() - 1).equals("[")) {
+	        	this.invceLineItmChrgItmCdbleCncptCdgSys = this.invceLineItmChrgItmCdbleCncptCdgSys+invceLineItmChrgItmCdbleCncptCdgSys;
+	        } else  {
+	            this.invceLineItmChrgItmCdbleCncptCdgSys = this.invceLineItmChrgItmCdbleCncptCdgSys+ "," +invceLineItmChrgItmCdbleCncptCdgSys;
+	        }
+        }
     }
     
     
@@ -293,6 +573,20 @@ public class Invoice  implements java.io.Serializable {
         this.invceLineItmChrgItmCdbleCncptCdgUsrSltd = invceLineItmChrgItmCdbleCncptCdgUsrSltd;
     }
     
+    public void addInvceLineItmChrgItmCdbleCncptCdgUsrSltd(String invceLineItmChrgItmCdbleCncptCdgUsrSltd) {
+    	if( invceLineItmChrgItmCdbleCncptCdgUsrSltd != null ) {
+	    	if( this.invceLineItmChrgItmCdbleCncptCdgUsrSltd == null ) {
+	        	this.invceLineItmChrgItmCdbleCncptCdgUsrSltd = invceLineItmChrgItmCdbleCncptCdgUsrSltd;
+	        } else if(this.invceLineItmChrgItmCdbleCncptCdgUsrSltd.substring(this.invceLineItmChrgItmCdbleCncptCdgUsrSltd.length() - 1).equals("]") & invceLineItmChrgItmCdbleCncptCdgUsrSltd.equals("[")) {
+	        	this.invceLineItmChrgItmCdbleCncptCdgUsrSltd = this.invceLineItmChrgItmCdbleCncptCdgUsrSltd+ "," + invceLineItmChrgItmCdbleCncptCdgUsrSltd;
+	        } else if(invceLineItmChrgItmCdbleCncptCdgUsrSltd.equals("[") | invceLineItmChrgItmCdbleCncptCdgUsrSltd.equals("]") | this.invceLineItmChrgItmCdbleCncptCdgUsrSltd.substring(this.invceLineItmChrgItmCdbleCncptCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.invceLineItmChrgItmCdbleCncptCdgUsrSltd = this.invceLineItmChrgItmCdbleCncptCdgUsrSltd+invceLineItmChrgItmCdbleCncptCdgUsrSltd;
+	        } else  {
+	            this.invceLineItmChrgItmCdbleCncptCdgUsrSltd = this.invceLineItmChrgItmCdbleCncptCdgUsrSltd+ "," +invceLineItmChrgItmCdbleCncptCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getInvceLineItmChrgItmCdbleCncptCdgVrsn() {
@@ -301,6 +595,20 @@ public class Invoice  implements java.io.Serializable {
     
     public void setInvceLineItmChrgItmCdbleCncptCdgVrsn(String invceLineItmChrgItmCdbleCncptCdgVrsn) {
         this.invceLineItmChrgItmCdbleCncptCdgVrsn = invceLineItmChrgItmCdbleCncptCdgVrsn;
+    }
+    
+    public void addInvceLineItmChrgItmCdbleCncptCdgVrsn(String invceLineItmChrgItmCdbleCncptCdgVrsn) {
+    	if( invceLineItmChrgItmCdbleCncptCdgVrsn != null ) {
+	    	if( this.invceLineItmChrgItmCdbleCncptCdgVrsn == null ) {
+	        	this.invceLineItmChrgItmCdbleCncptCdgVrsn = invceLineItmChrgItmCdbleCncptCdgVrsn;
+	        } else if(this.invceLineItmChrgItmCdbleCncptCdgVrsn.substring(this.invceLineItmChrgItmCdbleCncptCdgVrsn.length() - 1).equals("]") & invceLineItmChrgItmCdbleCncptCdgVrsn.equals("[")) {
+	        	this.invceLineItmChrgItmCdbleCncptCdgVrsn = this.invceLineItmChrgItmCdbleCncptCdgVrsn+ "," + invceLineItmChrgItmCdbleCncptCdgVrsn;
+	        } else if(invceLineItmChrgItmCdbleCncptCdgVrsn.equals("[") | invceLineItmChrgItmCdbleCncptCdgVrsn.equals("]") | this.invceLineItmChrgItmCdbleCncptCdgVrsn.substring(this.invceLineItmChrgItmCdbleCncptCdgVrsn.length() - 1).equals("[")) {
+	        	this.invceLineItmChrgItmCdbleCncptCdgVrsn = this.invceLineItmChrgItmCdbleCncptCdgVrsn+invceLineItmChrgItmCdbleCncptCdgVrsn;
+	        } else  {
+	            this.invceLineItmChrgItmCdbleCncptCdgVrsn = this.invceLineItmChrgItmCdbleCncptCdgVrsn+ "," +invceLineItmChrgItmCdbleCncptCdgVrsn;
+	        }
+        }
     }
     
     
@@ -313,6 +621,20 @@ public class Invoice  implements java.io.Serializable {
         this.invceLineItmChrgItmCdbleCncptTxt = invceLineItmChrgItmCdbleCncptTxt;
     }
     
+    public void addInvceLineItmChrgItmCdbleCncptTxt(String invceLineItmChrgItmCdbleCncptTxt) {
+    	if( invceLineItmChrgItmCdbleCncptTxt != null ) {
+	    	if( this.invceLineItmChrgItmCdbleCncptTxt == null ) {
+	        	this.invceLineItmChrgItmCdbleCncptTxt = invceLineItmChrgItmCdbleCncptTxt;
+	        } else if(this.invceLineItmChrgItmCdbleCncptTxt.substring(this.invceLineItmChrgItmCdbleCncptTxt.length() - 1).equals("]") & invceLineItmChrgItmCdbleCncptTxt.equals("[")) {
+	        	this.invceLineItmChrgItmCdbleCncptTxt = this.invceLineItmChrgItmCdbleCncptTxt+ "," + invceLineItmChrgItmCdbleCncptTxt;
+	        } else if(invceLineItmChrgItmCdbleCncptTxt.equals("[") | invceLineItmChrgItmCdbleCncptTxt.equals("]") | this.invceLineItmChrgItmCdbleCncptTxt.substring(this.invceLineItmChrgItmCdbleCncptTxt.length() - 1).equals("[")) {
+	        	this.invceLineItmChrgItmCdbleCncptTxt = this.invceLineItmChrgItmCdbleCncptTxt+invceLineItmChrgItmCdbleCncptTxt;
+	        } else  {
+	            this.invceLineItmChrgItmCdbleCncptTxt = this.invceLineItmChrgItmCdbleCncptTxt+ "," +invceLineItmChrgItmCdbleCncptTxt;
+	        }
+        }
+    }
+    
     
     
     public String getInvceLineItmChrgItmRfrnc() {
@@ -321,6 +643,20 @@ public class Invoice  implements java.io.Serializable {
     
     public void setInvceLineItmChrgItmRfrnc(String invceLineItmChrgItmRfrnc) {
         this.invceLineItmChrgItmRfrnc = invceLineItmChrgItmRfrnc;
+    }
+    
+    public void addInvceLineItmChrgItmRfrnc(String invceLineItmChrgItmRfrnc) {
+    	if( invceLineItmChrgItmRfrnc != null ) {
+	    	if( this.invceLineItmChrgItmRfrnc == null ) {
+	        	this.invceLineItmChrgItmRfrnc = invceLineItmChrgItmRfrnc;
+	        } else if(this.invceLineItmChrgItmRfrnc.substring(this.invceLineItmChrgItmRfrnc.length() - 1).equals("]") & invceLineItmChrgItmRfrnc.equals("[")) {
+	        	this.invceLineItmChrgItmRfrnc = this.invceLineItmChrgItmRfrnc+ "," + invceLineItmChrgItmRfrnc;
+	        } else if(invceLineItmChrgItmRfrnc.equals("[") | invceLineItmChrgItmRfrnc.equals("]") | this.invceLineItmChrgItmRfrnc.substring(this.invceLineItmChrgItmRfrnc.length() - 1).equals("[")) {
+	        	this.invceLineItmChrgItmRfrnc = this.invceLineItmChrgItmRfrnc+invceLineItmChrgItmRfrnc;
+	        } else  {
+	            this.invceLineItmChrgItmRfrnc = this.invceLineItmChrgItmRfrnc+ "," +invceLineItmChrgItmRfrnc;
+	        }
+        }
     }
     
     
@@ -333,6 +669,20 @@ public class Invoice  implements java.io.Serializable {
         this.invceLineItmPriceCmpntAmntCrncy = invceLineItmPriceCmpntAmntCrncy;
     }
     
+    public void addInvceLineItmPriceCmpntAmntCrncy(String invceLineItmPriceCmpntAmntCrncy) {
+    	if( invceLineItmPriceCmpntAmntCrncy != null ) {
+	    	if( this.invceLineItmPriceCmpntAmntCrncy == null ) {
+	        	this.invceLineItmPriceCmpntAmntCrncy = invceLineItmPriceCmpntAmntCrncy;
+	        } else if(this.invceLineItmPriceCmpntAmntCrncy.substring(this.invceLineItmPriceCmpntAmntCrncy.length() - 1).equals("]") & invceLineItmPriceCmpntAmntCrncy.equals("[")) {
+	        	this.invceLineItmPriceCmpntAmntCrncy = this.invceLineItmPriceCmpntAmntCrncy+ "," + invceLineItmPriceCmpntAmntCrncy;
+	        } else if(invceLineItmPriceCmpntAmntCrncy.equals("[") | invceLineItmPriceCmpntAmntCrncy.equals("]") | this.invceLineItmPriceCmpntAmntCrncy.substring(this.invceLineItmPriceCmpntAmntCrncy.length() - 1).equals("[")) {
+	        	this.invceLineItmPriceCmpntAmntCrncy = this.invceLineItmPriceCmpntAmntCrncy+invceLineItmPriceCmpntAmntCrncy;
+	        } else  {
+	            this.invceLineItmPriceCmpntAmntCrncy = this.invceLineItmPriceCmpntAmntCrncy+ "," +invceLineItmPriceCmpntAmntCrncy;
+	        }
+        }
+    }
+    
     
     
     public String getInvceLineItmPriceCmpntAmntVl() {
@@ -341,6 +691,20 @@ public class Invoice  implements java.io.Serializable {
     
     public void setInvceLineItmPriceCmpntAmntVl(String invceLineItmPriceCmpntAmntVl) {
         this.invceLineItmPriceCmpntAmntVl = invceLineItmPriceCmpntAmntVl;
+    }
+    
+    public void addInvceLineItmPriceCmpntAmntVl(String invceLineItmPriceCmpntAmntVl) {
+    	if( invceLineItmPriceCmpntAmntVl != null ) {
+	    	if( this.invceLineItmPriceCmpntAmntVl == null ) {
+	        	this.invceLineItmPriceCmpntAmntVl = invceLineItmPriceCmpntAmntVl;
+	        } else if(this.invceLineItmPriceCmpntAmntVl.substring(this.invceLineItmPriceCmpntAmntVl.length() - 1).equals("]") & invceLineItmPriceCmpntAmntVl.equals("[")) {
+	        	this.invceLineItmPriceCmpntAmntVl = this.invceLineItmPriceCmpntAmntVl+ "," + invceLineItmPriceCmpntAmntVl;
+	        } else if(invceLineItmPriceCmpntAmntVl.equals("[") | invceLineItmPriceCmpntAmntVl.equals("]") | this.invceLineItmPriceCmpntAmntVl.substring(this.invceLineItmPriceCmpntAmntVl.length() - 1).equals("[")) {
+	        	this.invceLineItmPriceCmpntAmntVl = this.invceLineItmPriceCmpntAmntVl+invceLineItmPriceCmpntAmntVl;
+	        } else  {
+	            this.invceLineItmPriceCmpntAmntVl = this.invceLineItmPriceCmpntAmntVl+ "," +invceLineItmPriceCmpntAmntVl;
+	        }
+        }
     }
     
     
@@ -353,6 +717,20 @@ public class Invoice  implements java.io.Serializable {
         this.invceLineItmPriceCmpntCdCdgCd = invceLineItmPriceCmpntCdCdgCd;
     }
     
+    public void addInvceLineItmPriceCmpntCdCdgCd(String invceLineItmPriceCmpntCdCdgCd) {
+    	if( invceLineItmPriceCmpntCdCdgCd != null ) {
+	    	if( this.invceLineItmPriceCmpntCdCdgCd == null ) {
+	        	this.invceLineItmPriceCmpntCdCdgCd = invceLineItmPriceCmpntCdCdgCd;
+	        } else if(this.invceLineItmPriceCmpntCdCdgCd.substring(this.invceLineItmPriceCmpntCdCdgCd.length() - 1).equals("]") & invceLineItmPriceCmpntCdCdgCd.equals("[")) {
+	        	this.invceLineItmPriceCmpntCdCdgCd = this.invceLineItmPriceCmpntCdCdgCd+ "," + invceLineItmPriceCmpntCdCdgCd;
+	        } else if(invceLineItmPriceCmpntCdCdgCd.equals("[") | invceLineItmPriceCmpntCdCdgCd.equals("]") | this.invceLineItmPriceCmpntCdCdgCd.substring(this.invceLineItmPriceCmpntCdCdgCd.length() - 1).equals("[")) {
+	        	this.invceLineItmPriceCmpntCdCdgCd = this.invceLineItmPriceCmpntCdCdgCd+invceLineItmPriceCmpntCdCdgCd;
+	        } else  {
+	            this.invceLineItmPriceCmpntCdCdgCd = this.invceLineItmPriceCmpntCdCdgCd+ "," +invceLineItmPriceCmpntCdCdgCd;
+	        }
+        }
+    }
+    
     
     
     public String getInvceLineItmPriceCmpntCdCdgDsply() {
@@ -361,6 +739,20 @@ public class Invoice  implements java.io.Serializable {
     
     public void setInvceLineItmPriceCmpntCdCdgDsply(String invceLineItmPriceCmpntCdCdgDsply) {
         this.invceLineItmPriceCmpntCdCdgDsply = invceLineItmPriceCmpntCdCdgDsply;
+    }
+    
+    public void addInvceLineItmPriceCmpntCdCdgDsply(String invceLineItmPriceCmpntCdCdgDsply) {
+    	if( invceLineItmPriceCmpntCdCdgDsply != null ) {
+	    	if( this.invceLineItmPriceCmpntCdCdgDsply == null ) {
+	        	this.invceLineItmPriceCmpntCdCdgDsply = invceLineItmPriceCmpntCdCdgDsply;
+	        } else if(this.invceLineItmPriceCmpntCdCdgDsply.substring(this.invceLineItmPriceCmpntCdCdgDsply.length() - 1).equals("]") & invceLineItmPriceCmpntCdCdgDsply.equals("[")) {
+	        	this.invceLineItmPriceCmpntCdCdgDsply = this.invceLineItmPriceCmpntCdCdgDsply+ "," + invceLineItmPriceCmpntCdCdgDsply;
+	        } else if(invceLineItmPriceCmpntCdCdgDsply.equals("[") | invceLineItmPriceCmpntCdCdgDsply.equals("]") | this.invceLineItmPriceCmpntCdCdgDsply.substring(this.invceLineItmPriceCmpntCdCdgDsply.length() - 1).equals("[")) {
+	        	this.invceLineItmPriceCmpntCdCdgDsply = this.invceLineItmPriceCmpntCdCdgDsply+invceLineItmPriceCmpntCdCdgDsply;
+	        } else  {
+	            this.invceLineItmPriceCmpntCdCdgDsply = this.invceLineItmPriceCmpntCdCdgDsply+ "," +invceLineItmPriceCmpntCdCdgDsply;
+	        }
+        }
     }
     
     
@@ -373,6 +765,20 @@ public class Invoice  implements java.io.Serializable {
         this.invceLineItmPriceCmpntCdCdgSys = invceLineItmPriceCmpntCdCdgSys;
     }
     
+    public void addInvceLineItmPriceCmpntCdCdgSys(String invceLineItmPriceCmpntCdCdgSys) {
+    	if( invceLineItmPriceCmpntCdCdgSys != null ) {
+	    	if( this.invceLineItmPriceCmpntCdCdgSys == null ) {
+	        	this.invceLineItmPriceCmpntCdCdgSys = invceLineItmPriceCmpntCdCdgSys;
+	        } else if(this.invceLineItmPriceCmpntCdCdgSys.substring(this.invceLineItmPriceCmpntCdCdgSys.length() - 1).equals("]") & invceLineItmPriceCmpntCdCdgSys.equals("[")) {
+	        	this.invceLineItmPriceCmpntCdCdgSys = this.invceLineItmPriceCmpntCdCdgSys+ "," + invceLineItmPriceCmpntCdCdgSys;
+	        } else if(invceLineItmPriceCmpntCdCdgSys.equals("[") | invceLineItmPriceCmpntCdCdgSys.equals("]") | this.invceLineItmPriceCmpntCdCdgSys.substring(this.invceLineItmPriceCmpntCdCdgSys.length() - 1).equals("[")) {
+	        	this.invceLineItmPriceCmpntCdCdgSys = this.invceLineItmPriceCmpntCdCdgSys+invceLineItmPriceCmpntCdCdgSys;
+	        } else  {
+	            this.invceLineItmPriceCmpntCdCdgSys = this.invceLineItmPriceCmpntCdCdgSys+ "," +invceLineItmPriceCmpntCdCdgSys;
+	        }
+        }
+    }
+    
     
     
     public String getInvceLineItmPriceCmpntCdCdgUsrSltd() {
@@ -381,6 +787,20 @@ public class Invoice  implements java.io.Serializable {
     
     public void setInvceLineItmPriceCmpntCdCdgUsrSltd(String invceLineItmPriceCmpntCdCdgUsrSltd) {
         this.invceLineItmPriceCmpntCdCdgUsrSltd = invceLineItmPriceCmpntCdCdgUsrSltd;
+    }
+    
+    public void addInvceLineItmPriceCmpntCdCdgUsrSltd(String invceLineItmPriceCmpntCdCdgUsrSltd) {
+    	if( invceLineItmPriceCmpntCdCdgUsrSltd != null ) {
+	    	if( this.invceLineItmPriceCmpntCdCdgUsrSltd == null ) {
+	        	this.invceLineItmPriceCmpntCdCdgUsrSltd = invceLineItmPriceCmpntCdCdgUsrSltd;
+	        } else if(this.invceLineItmPriceCmpntCdCdgUsrSltd.substring(this.invceLineItmPriceCmpntCdCdgUsrSltd.length() - 1).equals("]") & invceLineItmPriceCmpntCdCdgUsrSltd.equals("[")) {
+	        	this.invceLineItmPriceCmpntCdCdgUsrSltd = this.invceLineItmPriceCmpntCdCdgUsrSltd+ "," + invceLineItmPriceCmpntCdCdgUsrSltd;
+	        } else if(invceLineItmPriceCmpntCdCdgUsrSltd.equals("[") | invceLineItmPriceCmpntCdCdgUsrSltd.equals("]") | this.invceLineItmPriceCmpntCdCdgUsrSltd.substring(this.invceLineItmPriceCmpntCdCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.invceLineItmPriceCmpntCdCdgUsrSltd = this.invceLineItmPriceCmpntCdCdgUsrSltd+invceLineItmPriceCmpntCdCdgUsrSltd;
+	        } else  {
+	            this.invceLineItmPriceCmpntCdCdgUsrSltd = this.invceLineItmPriceCmpntCdCdgUsrSltd+ "," +invceLineItmPriceCmpntCdCdgUsrSltd;
+	        }
+        }
     }
     
     
@@ -393,6 +813,20 @@ public class Invoice  implements java.io.Serializable {
         this.invceLineItmPriceCmpntCdCdgVrsn = invceLineItmPriceCmpntCdCdgVrsn;
     }
     
+    public void addInvceLineItmPriceCmpntCdCdgVrsn(String invceLineItmPriceCmpntCdCdgVrsn) {
+    	if( invceLineItmPriceCmpntCdCdgVrsn != null ) {
+	    	if( this.invceLineItmPriceCmpntCdCdgVrsn == null ) {
+	        	this.invceLineItmPriceCmpntCdCdgVrsn = invceLineItmPriceCmpntCdCdgVrsn;
+	        } else if(this.invceLineItmPriceCmpntCdCdgVrsn.substring(this.invceLineItmPriceCmpntCdCdgVrsn.length() - 1).equals("]") & invceLineItmPriceCmpntCdCdgVrsn.equals("[")) {
+	        	this.invceLineItmPriceCmpntCdCdgVrsn = this.invceLineItmPriceCmpntCdCdgVrsn+ "," + invceLineItmPriceCmpntCdCdgVrsn;
+	        } else if(invceLineItmPriceCmpntCdCdgVrsn.equals("[") | invceLineItmPriceCmpntCdCdgVrsn.equals("]") | this.invceLineItmPriceCmpntCdCdgVrsn.substring(this.invceLineItmPriceCmpntCdCdgVrsn.length() - 1).equals("[")) {
+	        	this.invceLineItmPriceCmpntCdCdgVrsn = this.invceLineItmPriceCmpntCdCdgVrsn+invceLineItmPriceCmpntCdCdgVrsn;
+	        } else  {
+	            this.invceLineItmPriceCmpntCdCdgVrsn = this.invceLineItmPriceCmpntCdCdgVrsn+ "," +invceLineItmPriceCmpntCdCdgVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getInvceLineItmPriceCmpntCdTxt() {
@@ -401,6 +835,20 @@ public class Invoice  implements java.io.Serializable {
     
     public void setInvceLineItmPriceCmpntCdTxt(String invceLineItmPriceCmpntCdTxt) {
         this.invceLineItmPriceCmpntCdTxt = invceLineItmPriceCmpntCdTxt;
+    }
+    
+    public void addInvceLineItmPriceCmpntCdTxt(String invceLineItmPriceCmpntCdTxt) {
+    	if( invceLineItmPriceCmpntCdTxt != null ) {
+	    	if( this.invceLineItmPriceCmpntCdTxt == null ) {
+	        	this.invceLineItmPriceCmpntCdTxt = invceLineItmPriceCmpntCdTxt;
+	        } else if(this.invceLineItmPriceCmpntCdTxt.substring(this.invceLineItmPriceCmpntCdTxt.length() - 1).equals("]") & invceLineItmPriceCmpntCdTxt.equals("[")) {
+	        	this.invceLineItmPriceCmpntCdTxt = this.invceLineItmPriceCmpntCdTxt+ "," + invceLineItmPriceCmpntCdTxt;
+	        } else if(invceLineItmPriceCmpntCdTxt.equals("[") | invceLineItmPriceCmpntCdTxt.equals("]") | this.invceLineItmPriceCmpntCdTxt.substring(this.invceLineItmPriceCmpntCdTxt.length() - 1).equals("[")) {
+	        	this.invceLineItmPriceCmpntCdTxt = this.invceLineItmPriceCmpntCdTxt+invceLineItmPriceCmpntCdTxt;
+	        } else  {
+	            this.invceLineItmPriceCmpntCdTxt = this.invceLineItmPriceCmpntCdTxt+ "," +invceLineItmPriceCmpntCdTxt;
+	        }
+        }
     }
     
     
@@ -413,6 +861,20 @@ public class Invoice  implements java.io.Serializable {
         this.invceLineItmPriceCmpntFactor = invceLineItmPriceCmpntFactor;
     }
     
+    public void addInvceLineItmPriceCmpntFactor(String invceLineItmPriceCmpntFactor) {
+    	if( invceLineItmPriceCmpntFactor != null ) {
+	    	if( this.invceLineItmPriceCmpntFactor == null ) {
+	        	this.invceLineItmPriceCmpntFactor = invceLineItmPriceCmpntFactor;
+	        } else if(this.invceLineItmPriceCmpntFactor.substring(this.invceLineItmPriceCmpntFactor.length() - 1).equals("]") & invceLineItmPriceCmpntFactor.equals("[")) {
+	        	this.invceLineItmPriceCmpntFactor = this.invceLineItmPriceCmpntFactor+ "," + invceLineItmPriceCmpntFactor;
+	        } else if(invceLineItmPriceCmpntFactor.equals("[") | invceLineItmPriceCmpntFactor.equals("]") | this.invceLineItmPriceCmpntFactor.substring(this.invceLineItmPriceCmpntFactor.length() - 1).equals("[")) {
+	        	this.invceLineItmPriceCmpntFactor = this.invceLineItmPriceCmpntFactor+invceLineItmPriceCmpntFactor;
+	        } else  {
+	            this.invceLineItmPriceCmpntFactor = this.invceLineItmPriceCmpntFactor+ "," +invceLineItmPriceCmpntFactor;
+	        }
+        }
+    }
+    
     
     
     public String getInvceLineItmPriceCmpntTyp() {
@@ -421,6 +883,20 @@ public class Invoice  implements java.io.Serializable {
     
     public void setInvceLineItmPriceCmpntTyp(String invceLineItmPriceCmpntTyp) {
         this.invceLineItmPriceCmpntTyp = invceLineItmPriceCmpntTyp;
+    }
+    
+    public void addInvceLineItmPriceCmpntTyp(String invceLineItmPriceCmpntTyp) {
+    	if( invceLineItmPriceCmpntTyp != null ) {
+	    	if( this.invceLineItmPriceCmpntTyp == null ) {
+	        	this.invceLineItmPriceCmpntTyp = invceLineItmPriceCmpntTyp;
+	        } else if(this.invceLineItmPriceCmpntTyp.substring(this.invceLineItmPriceCmpntTyp.length() - 1).equals("]") & invceLineItmPriceCmpntTyp.equals("[")) {
+	        	this.invceLineItmPriceCmpntTyp = this.invceLineItmPriceCmpntTyp+ "," + invceLineItmPriceCmpntTyp;
+	        } else if(invceLineItmPriceCmpntTyp.equals("[") | invceLineItmPriceCmpntTyp.equals("]") | this.invceLineItmPriceCmpntTyp.substring(this.invceLineItmPriceCmpntTyp.length() - 1).equals("[")) {
+	        	this.invceLineItmPriceCmpntTyp = this.invceLineItmPriceCmpntTyp+invceLineItmPriceCmpntTyp;
+	        } else  {
+	            this.invceLineItmPriceCmpntTyp = this.invceLineItmPriceCmpntTyp+ "," +invceLineItmPriceCmpntTyp;
+	        }
+        }
     }
     
     
@@ -433,6 +909,20 @@ public class Invoice  implements java.io.Serializable {
         this.invceLineItmSqnc = invceLineItmSqnc;
     }
     
+    public void addInvceLineItmSqnc(String invceLineItmSqnc) {
+    	if( invceLineItmSqnc != null ) {
+	    	if( this.invceLineItmSqnc == null ) {
+	        	this.invceLineItmSqnc = invceLineItmSqnc;
+	        } else if(this.invceLineItmSqnc.substring(this.invceLineItmSqnc.length() - 1).equals("]") & invceLineItmSqnc.equals("[")) {
+	        	this.invceLineItmSqnc = this.invceLineItmSqnc+ "," + invceLineItmSqnc;
+	        } else if(invceLineItmSqnc.equals("[") | invceLineItmSqnc.equals("]") | this.invceLineItmSqnc.substring(this.invceLineItmSqnc.length() - 1).equals("[")) {
+	        	this.invceLineItmSqnc = this.invceLineItmSqnc+invceLineItmSqnc;
+	        } else  {
+	            this.invceLineItmSqnc = this.invceLineItmSqnc+ "," +invceLineItmSqnc;
+	        }
+        }
+    }
+    
     
     
     public String getInvceNtAthrRfrnc() {
@@ -441,6 +931,20 @@ public class Invoice  implements java.io.Serializable {
     
     public void setInvceNtAthrRfrnc(String invceNtAthrRfrnc) {
         this.invceNtAthrRfrnc = invceNtAthrRfrnc;
+    }
+    
+    public void addInvceNtAthrRfrnc(String invceNtAthrRfrnc) {
+    	if( invceNtAthrRfrnc != null ) {
+	    	if( this.invceNtAthrRfrnc == null ) {
+	        	this.invceNtAthrRfrnc = invceNtAthrRfrnc;
+	        } else if(this.invceNtAthrRfrnc.substring(this.invceNtAthrRfrnc.length() - 1).equals("]") & invceNtAthrRfrnc.equals("[")) {
+	        	this.invceNtAthrRfrnc = this.invceNtAthrRfrnc+ "," + invceNtAthrRfrnc;
+	        } else if(invceNtAthrRfrnc.equals("[") | invceNtAthrRfrnc.equals("]") | this.invceNtAthrRfrnc.substring(this.invceNtAthrRfrnc.length() - 1).equals("[")) {
+	        	this.invceNtAthrRfrnc = this.invceNtAthrRfrnc+invceNtAthrRfrnc;
+	        } else  {
+	            this.invceNtAthrRfrnc = this.invceNtAthrRfrnc+ "," +invceNtAthrRfrnc;
+	        }
+        }
     }
     
     
@@ -453,6 +957,20 @@ public class Invoice  implements java.io.Serializable {
         this.invceNtAthrStrgTyp = invceNtAthrStrgTyp;
     }
     
+    public void addInvceNtAthrStrgTyp(String invceNtAthrStrgTyp) {
+    	if( invceNtAthrStrgTyp != null ) {
+	    	if( this.invceNtAthrStrgTyp == null ) {
+	        	this.invceNtAthrStrgTyp = invceNtAthrStrgTyp;
+	        } else if(this.invceNtAthrStrgTyp.substring(this.invceNtAthrStrgTyp.length() - 1).equals("]") & invceNtAthrStrgTyp.equals("[")) {
+	        	this.invceNtAthrStrgTyp = this.invceNtAthrStrgTyp+ "," + invceNtAthrStrgTyp;
+	        } else if(invceNtAthrStrgTyp.equals("[") | invceNtAthrStrgTyp.equals("]") | this.invceNtAthrStrgTyp.substring(this.invceNtAthrStrgTyp.length() - 1).equals("[")) {
+	        	this.invceNtAthrStrgTyp = this.invceNtAthrStrgTyp+invceNtAthrStrgTyp;
+	        } else  {
+	            this.invceNtAthrStrgTyp = this.invceNtAthrStrgTyp+ "," +invceNtAthrStrgTyp;
+	        }
+        }
+    }
+    
     
     
     public String getInvceNtTxt() {
@@ -461,6 +979,20 @@ public class Invoice  implements java.io.Serializable {
     
     public void setInvceNtTxt(String invceNtTxt) {
         this.invceNtTxt = invceNtTxt;
+    }
+    
+    public void addInvceNtTxt(String invceNtTxt) {
+    	if( invceNtTxt != null ) {
+	    	if( this.invceNtTxt == null ) {
+	        	this.invceNtTxt = invceNtTxt;
+	        } else if(this.invceNtTxt.substring(this.invceNtTxt.length() - 1).equals("]") & invceNtTxt.equals("[")) {
+	        	this.invceNtTxt = this.invceNtTxt+ "," + invceNtTxt;
+	        } else if(invceNtTxt.equals("[") | invceNtTxt.equals("]") | this.invceNtTxt.substring(this.invceNtTxt.length() - 1).equals("[")) {
+	        	this.invceNtTxt = this.invceNtTxt+invceNtTxt;
+	        } else  {
+	            this.invceNtTxt = this.invceNtTxt+ "," +invceNtTxt;
+	        }
+        }
     }
     
     
@@ -473,6 +1005,20 @@ public class Invoice  implements java.io.Serializable {
         this.invceNtTime = invceNtTime;
     }
     
+    public void addInvceNtTime(String invceNtTime) {
+    	if( invceNtTime != null ) {
+	    	if( this.invceNtTime == null ) {
+	        	this.invceNtTime = invceNtTime;
+	        } else if(this.invceNtTime.substring(this.invceNtTime.length() - 1).equals("]") & invceNtTime.equals("[")) {
+	        	this.invceNtTime = this.invceNtTime+ "," + invceNtTime;
+	        } else if(invceNtTime.equals("[") | invceNtTime.equals("]") | this.invceNtTime.substring(this.invceNtTime.length() - 1).equals("[")) {
+	        	this.invceNtTime = this.invceNtTime+invceNtTime;
+	        } else  {
+	            this.invceNtTime = this.invceNtTime+ "," +invceNtTime;
+	        }
+        }
+    }
+    
     
     
     public String getInvcePrtcpntActor() {
@@ -481,6 +1027,20 @@ public class Invoice  implements java.io.Serializable {
     
     public void setInvcePrtcpntActor(String invcePrtcpntActor) {
         this.invcePrtcpntActor = invcePrtcpntActor;
+    }
+    
+    public void addInvcePrtcpntActor(String invcePrtcpntActor) {
+    	if( invcePrtcpntActor != null ) {
+	    	if( this.invcePrtcpntActor == null ) {
+	        	this.invcePrtcpntActor = invcePrtcpntActor;
+	        } else if(this.invcePrtcpntActor.substring(this.invcePrtcpntActor.length() - 1).equals("]") & invcePrtcpntActor.equals("[")) {
+	        	this.invcePrtcpntActor = this.invcePrtcpntActor+ "," + invcePrtcpntActor;
+	        } else if(invcePrtcpntActor.equals("[") | invcePrtcpntActor.equals("]") | this.invcePrtcpntActor.substring(this.invcePrtcpntActor.length() - 1).equals("[")) {
+	        	this.invcePrtcpntActor = this.invcePrtcpntActor+invcePrtcpntActor;
+	        } else  {
+	            this.invcePrtcpntActor = this.invcePrtcpntActor+ "," +invcePrtcpntActor;
+	        }
+        }
     }
     
     
@@ -493,6 +1053,20 @@ public class Invoice  implements java.io.Serializable {
         this.invcePrtcpntRoleCdgCd = invcePrtcpntRoleCdgCd;
     }
     
+    public void addInvcePrtcpntRoleCdgCd(String invcePrtcpntRoleCdgCd) {
+    	if( invcePrtcpntRoleCdgCd != null ) {
+	    	if( this.invcePrtcpntRoleCdgCd == null ) {
+	        	this.invcePrtcpntRoleCdgCd = invcePrtcpntRoleCdgCd;
+	        } else if(this.invcePrtcpntRoleCdgCd.substring(this.invcePrtcpntRoleCdgCd.length() - 1).equals("]") & invcePrtcpntRoleCdgCd.equals("[")) {
+	        	this.invcePrtcpntRoleCdgCd = this.invcePrtcpntRoleCdgCd+ "," + invcePrtcpntRoleCdgCd;
+	        } else if(invcePrtcpntRoleCdgCd.equals("[") | invcePrtcpntRoleCdgCd.equals("]") | this.invcePrtcpntRoleCdgCd.substring(this.invcePrtcpntRoleCdgCd.length() - 1).equals("[")) {
+	        	this.invcePrtcpntRoleCdgCd = this.invcePrtcpntRoleCdgCd+invcePrtcpntRoleCdgCd;
+	        } else  {
+	            this.invcePrtcpntRoleCdgCd = this.invcePrtcpntRoleCdgCd+ "," +invcePrtcpntRoleCdgCd;
+	        }
+        }
+    }
+    
     
     
     public String getInvcePrtcpntRoleCdgDsply() {
@@ -501,6 +1075,20 @@ public class Invoice  implements java.io.Serializable {
     
     public void setInvcePrtcpntRoleCdgDsply(String invcePrtcpntRoleCdgDsply) {
         this.invcePrtcpntRoleCdgDsply = invcePrtcpntRoleCdgDsply;
+    }
+    
+    public void addInvcePrtcpntRoleCdgDsply(String invcePrtcpntRoleCdgDsply) {
+    	if( invcePrtcpntRoleCdgDsply != null ) {
+	    	if( this.invcePrtcpntRoleCdgDsply == null ) {
+	        	this.invcePrtcpntRoleCdgDsply = invcePrtcpntRoleCdgDsply;
+	        } else if(this.invcePrtcpntRoleCdgDsply.substring(this.invcePrtcpntRoleCdgDsply.length() - 1).equals("]") & invcePrtcpntRoleCdgDsply.equals("[")) {
+	        	this.invcePrtcpntRoleCdgDsply = this.invcePrtcpntRoleCdgDsply+ "," + invcePrtcpntRoleCdgDsply;
+	        } else if(invcePrtcpntRoleCdgDsply.equals("[") | invcePrtcpntRoleCdgDsply.equals("]") | this.invcePrtcpntRoleCdgDsply.substring(this.invcePrtcpntRoleCdgDsply.length() - 1).equals("[")) {
+	        	this.invcePrtcpntRoleCdgDsply = this.invcePrtcpntRoleCdgDsply+invcePrtcpntRoleCdgDsply;
+	        } else  {
+	            this.invcePrtcpntRoleCdgDsply = this.invcePrtcpntRoleCdgDsply+ "," +invcePrtcpntRoleCdgDsply;
+	        }
+        }
     }
     
     
@@ -513,6 +1101,20 @@ public class Invoice  implements java.io.Serializable {
         this.invcePrtcpntRoleCdgSys = invcePrtcpntRoleCdgSys;
     }
     
+    public void addInvcePrtcpntRoleCdgSys(String invcePrtcpntRoleCdgSys) {
+    	if( invcePrtcpntRoleCdgSys != null ) {
+	    	if( this.invcePrtcpntRoleCdgSys == null ) {
+	        	this.invcePrtcpntRoleCdgSys = invcePrtcpntRoleCdgSys;
+	        } else if(this.invcePrtcpntRoleCdgSys.substring(this.invcePrtcpntRoleCdgSys.length() - 1).equals("]") & invcePrtcpntRoleCdgSys.equals("[")) {
+	        	this.invcePrtcpntRoleCdgSys = this.invcePrtcpntRoleCdgSys+ "," + invcePrtcpntRoleCdgSys;
+	        } else if(invcePrtcpntRoleCdgSys.equals("[") | invcePrtcpntRoleCdgSys.equals("]") | this.invcePrtcpntRoleCdgSys.substring(this.invcePrtcpntRoleCdgSys.length() - 1).equals("[")) {
+	        	this.invcePrtcpntRoleCdgSys = this.invcePrtcpntRoleCdgSys+invcePrtcpntRoleCdgSys;
+	        } else  {
+	            this.invcePrtcpntRoleCdgSys = this.invcePrtcpntRoleCdgSys+ "," +invcePrtcpntRoleCdgSys;
+	        }
+        }
+    }
+    
     
     
     public String getInvcePrtcpntRoleCdgUsrSltd() {
@@ -521,6 +1123,20 @@ public class Invoice  implements java.io.Serializable {
     
     public void setInvcePrtcpntRoleCdgUsrSltd(String invcePrtcpntRoleCdgUsrSltd) {
         this.invcePrtcpntRoleCdgUsrSltd = invcePrtcpntRoleCdgUsrSltd;
+    }
+    
+    public void addInvcePrtcpntRoleCdgUsrSltd(String invcePrtcpntRoleCdgUsrSltd) {
+    	if( invcePrtcpntRoleCdgUsrSltd != null ) {
+	    	if( this.invcePrtcpntRoleCdgUsrSltd == null ) {
+	        	this.invcePrtcpntRoleCdgUsrSltd = invcePrtcpntRoleCdgUsrSltd;
+	        } else if(this.invcePrtcpntRoleCdgUsrSltd.substring(this.invcePrtcpntRoleCdgUsrSltd.length() - 1).equals("]") & invcePrtcpntRoleCdgUsrSltd.equals("[")) {
+	        	this.invcePrtcpntRoleCdgUsrSltd = this.invcePrtcpntRoleCdgUsrSltd+ "," + invcePrtcpntRoleCdgUsrSltd;
+	        } else if(invcePrtcpntRoleCdgUsrSltd.equals("[") | invcePrtcpntRoleCdgUsrSltd.equals("]") | this.invcePrtcpntRoleCdgUsrSltd.substring(this.invcePrtcpntRoleCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.invcePrtcpntRoleCdgUsrSltd = this.invcePrtcpntRoleCdgUsrSltd+invcePrtcpntRoleCdgUsrSltd;
+	        } else  {
+	            this.invcePrtcpntRoleCdgUsrSltd = this.invcePrtcpntRoleCdgUsrSltd+ "," +invcePrtcpntRoleCdgUsrSltd;
+	        }
+        }
     }
     
     
@@ -533,6 +1149,20 @@ public class Invoice  implements java.io.Serializable {
         this.invcePrtcpntRoleCdgVrsn = invcePrtcpntRoleCdgVrsn;
     }
     
+    public void addInvcePrtcpntRoleCdgVrsn(String invcePrtcpntRoleCdgVrsn) {
+    	if( invcePrtcpntRoleCdgVrsn != null ) {
+	    	if( this.invcePrtcpntRoleCdgVrsn == null ) {
+	        	this.invcePrtcpntRoleCdgVrsn = invcePrtcpntRoleCdgVrsn;
+	        } else if(this.invcePrtcpntRoleCdgVrsn.substring(this.invcePrtcpntRoleCdgVrsn.length() - 1).equals("]") & invcePrtcpntRoleCdgVrsn.equals("[")) {
+	        	this.invcePrtcpntRoleCdgVrsn = this.invcePrtcpntRoleCdgVrsn+ "," + invcePrtcpntRoleCdgVrsn;
+	        } else if(invcePrtcpntRoleCdgVrsn.equals("[") | invcePrtcpntRoleCdgVrsn.equals("]") | this.invcePrtcpntRoleCdgVrsn.substring(this.invcePrtcpntRoleCdgVrsn.length() - 1).equals("[")) {
+	        	this.invcePrtcpntRoleCdgVrsn = this.invcePrtcpntRoleCdgVrsn+invcePrtcpntRoleCdgVrsn;
+	        } else  {
+	            this.invcePrtcpntRoleCdgVrsn = this.invcePrtcpntRoleCdgVrsn+ "," +invcePrtcpntRoleCdgVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getInvcePrtcpntRoleTxt() {
@@ -541,6 +1171,20 @@ public class Invoice  implements java.io.Serializable {
     
     public void setInvcePrtcpntRoleTxt(String invcePrtcpntRoleTxt) {
         this.invcePrtcpntRoleTxt = invcePrtcpntRoleTxt;
+    }
+    
+    public void addInvcePrtcpntRoleTxt(String invcePrtcpntRoleTxt) {
+    	if( invcePrtcpntRoleTxt != null ) {
+	    	if( this.invcePrtcpntRoleTxt == null ) {
+	        	this.invcePrtcpntRoleTxt = invcePrtcpntRoleTxt;
+	        } else if(this.invcePrtcpntRoleTxt.substring(this.invcePrtcpntRoleTxt.length() - 1).equals("]") & invcePrtcpntRoleTxt.equals("[")) {
+	        	this.invcePrtcpntRoleTxt = this.invcePrtcpntRoleTxt+ "," + invcePrtcpntRoleTxt;
+	        } else if(invcePrtcpntRoleTxt.equals("[") | invcePrtcpntRoleTxt.equals("]") | this.invcePrtcpntRoleTxt.substring(this.invcePrtcpntRoleTxt.length() - 1).equals("[")) {
+	        	this.invcePrtcpntRoleTxt = this.invcePrtcpntRoleTxt+invcePrtcpntRoleTxt;
+	        } else  {
+	            this.invcePrtcpntRoleTxt = this.invcePrtcpntRoleTxt+ "," +invcePrtcpntRoleTxt;
+	        }
+        }
     }
     
     
@@ -553,6 +1197,20 @@ public class Invoice  implements java.io.Serializable {
         this.invcePymntTrms = invcePymntTrms;
     }
     
+    public void addInvcePymntTrms(String invcePymntTrms) {
+    	if( invcePymntTrms != null ) {
+	    	if( this.invcePymntTrms == null ) {
+	        	this.invcePymntTrms = invcePymntTrms;
+	        } else if(this.invcePymntTrms.substring(this.invcePymntTrms.length() - 1).equals("]") & invcePymntTrms.equals("[")) {
+	        	this.invcePymntTrms = this.invcePymntTrms+ "," + invcePymntTrms;
+	        } else if(invcePymntTrms.equals("[") | invcePymntTrms.equals("]") | this.invcePymntTrms.substring(this.invcePymntTrms.length() - 1).equals("[")) {
+	        	this.invcePymntTrms = this.invcePymntTrms+invcePymntTrms;
+	        } else  {
+	            this.invcePymntTrms = this.invcePymntTrms+ "," +invcePymntTrms;
+	        }
+        }
+    }
+    
     
     
     public String getInvceRecipient() {
@@ -561,6 +1219,20 @@ public class Invoice  implements java.io.Serializable {
     
     public void setInvceRecipient(String invceRecipient) {
         this.invceRecipient = invceRecipient;
+    }
+    
+    public void addInvceRecipient(String invceRecipient) {
+    	if( invceRecipient != null ) {
+	    	if( this.invceRecipient == null ) {
+	        	this.invceRecipient = invceRecipient;
+	        } else if(this.invceRecipient.substring(this.invceRecipient.length() - 1).equals("]") & invceRecipient.equals("[")) {
+	        	this.invceRecipient = this.invceRecipient+ "," + invceRecipient;
+	        } else if(invceRecipient.equals("[") | invceRecipient.equals("]") | this.invceRecipient.substring(this.invceRecipient.length() - 1).equals("[")) {
+	        	this.invceRecipient = this.invceRecipient+invceRecipient;
+	        } else  {
+	            this.invceRecipient = this.invceRecipient+ "," +invceRecipient;
+	        }
+        }
     }
     
     
@@ -573,6 +1245,20 @@ public class Invoice  implements java.io.Serializable {
         this.invceSts = invceSts;
     }
     
+    public void addInvceSts(String invceSts) {
+    	if( invceSts != null ) {
+	    	if( this.invceSts == null ) {
+	        	this.invceSts = invceSts;
+	        } else if(this.invceSts.substring(this.invceSts.length() - 1).equals("]") & invceSts.equals("[")) {
+	        	this.invceSts = this.invceSts+ "," + invceSts;
+	        } else if(invceSts.equals("[") | invceSts.equals("]") | this.invceSts.substring(this.invceSts.length() - 1).equals("[")) {
+	        	this.invceSts = this.invceSts+invceSts;
+	        } else  {
+	            this.invceSts = this.invceSts+ "," +invceSts;
+	        }
+        }
+    }
+    
     
     
     public String getInvceSbjct() {
@@ -581,6 +1267,20 @@ public class Invoice  implements java.io.Serializable {
     
     public void setInvceSbjct(String invceSbjct) {
         this.invceSbjct = invceSbjct;
+    }
+    
+    public void addInvceSbjct(String invceSbjct) {
+    	if( invceSbjct != null ) {
+	    	if( this.invceSbjct == null ) {
+	        	this.invceSbjct = invceSbjct;
+	        } else if(this.invceSbjct.substring(this.invceSbjct.length() - 1).equals("]") & invceSbjct.equals("[")) {
+	        	this.invceSbjct = this.invceSbjct+ "," + invceSbjct;
+	        } else if(invceSbjct.equals("[") | invceSbjct.equals("]") | this.invceSbjct.substring(this.invceSbjct.length() - 1).equals("[")) {
+	        	this.invceSbjct = this.invceSbjct+invceSbjct;
+	        } else  {
+	            this.invceSbjct = this.invceSbjct+ "," +invceSbjct;
+	        }
+        }
     }
     
     
@@ -593,6 +1293,20 @@ public class Invoice  implements java.io.Serializable {
         this.invceTotalGrossCrncy = invceTotalGrossCrncy;
     }
     
+    public void addInvceTotalGrossCrncy(String invceTotalGrossCrncy) {
+    	if( invceTotalGrossCrncy != null ) {
+	    	if( this.invceTotalGrossCrncy == null ) {
+	        	this.invceTotalGrossCrncy = invceTotalGrossCrncy;
+	        } else if(this.invceTotalGrossCrncy.substring(this.invceTotalGrossCrncy.length() - 1).equals("]") & invceTotalGrossCrncy.equals("[")) {
+	        	this.invceTotalGrossCrncy = this.invceTotalGrossCrncy+ "," + invceTotalGrossCrncy;
+	        } else if(invceTotalGrossCrncy.equals("[") | invceTotalGrossCrncy.equals("]") | this.invceTotalGrossCrncy.substring(this.invceTotalGrossCrncy.length() - 1).equals("[")) {
+	        	this.invceTotalGrossCrncy = this.invceTotalGrossCrncy+invceTotalGrossCrncy;
+	        } else  {
+	            this.invceTotalGrossCrncy = this.invceTotalGrossCrncy+ "," +invceTotalGrossCrncy;
+	        }
+        }
+    }
+    
     
     
     public String getInvceTotalGrossVl() {
@@ -601,6 +1315,20 @@ public class Invoice  implements java.io.Serializable {
     
     public void setInvceTotalGrossVl(String invceTotalGrossVl) {
         this.invceTotalGrossVl = invceTotalGrossVl;
+    }
+    
+    public void addInvceTotalGrossVl(String invceTotalGrossVl) {
+    	if( invceTotalGrossVl != null ) {
+	    	if( this.invceTotalGrossVl == null ) {
+	        	this.invceTotalGrossVl = invceTotalGrossVl;
+	        } else if(this.invceTotalGrossVl.substring(this.invceTotalGrossVl.length() - 1).equals("]") & invceTotalGrossVl.equals("[")) {
+	        	this.invceTotalGrossVl = this.invceTotalGrossVl+ "," + invceTotalGrossVl;
+	        } else if(invceTotalGrossVl.equals("[") | invceTotalGrossVl.equals("]") | this.invceTotalGrossVl.substring(this.invceTotalGrossVl.length() - 1).equals("[")) {
+	        	this.invceTotalGrossVl = this.invceTotalGrossVl+invceTotalGrossVl;
+	        } else  {
+	            this.invceTotalGrossVl = this.invceTotalGrossVl+ "," +invceTotalGrossVl;
+	        }
+        }
     }
     
     
@@ -613,6 +1341,20 @@ public class Invoice  implements java.io.Serializable {
         this.invceTotalNetCrncy = invceTotalNetCrncy;
     }
     
+    public void addInvceTotalNetCrncy(String invceTotalNetCrncy) {
+    	if( invceTotalNetCrncy != null ) {
+	    	if( this.invceTotalNetCrncy == null ) {
+	        	this.invceTotalNetCrncy = invceTotalNetCrncy;
+	        } else if(this.invceTotalNetCrncy.substring(this.invceTotalNetCrncy.length() - 1).equals("]") & invceTotalNetCrncy.equals("[")) {
+	        	this.invceTotalNetCrncy = this.invceTotalNetCrncy+ "," + invceTotalNetCrncy;
+	        } else if(invceTotalNetCrncy.equals("[") | invceTotalNetCrncy.equals("]") | this.invceTotalNetCrncy.substring(this.invceTotalNetCrncy.length() - 1).equals("[")) {
+	        	this.invceTotalNetCrncy = this.invceTotalNetCrncy+invceTotalNetCrncy;
+	        } else  {
+	            this.invceTotalNetCrncy = this.invceTotalNetCrncy+ "," +invceTotalNetCrncy;
+	        }
+        }
+    }
+    
     
     
     public String getInvceTotalNetVl() {
@@ -621,6 +1363,20 @@ public class Invoice  implements java.io.Serializable {
     
     public void setInvceTotalNetVl(String invceTotalNetVl) {
         this.invceTotalNetVl = invceTotalNetVl;
+    }
+    
+    public void addInvceTotalNetVl(String invceTotalNetVl) {
+    	if( invceTotalNetVl != null ) {
+	    	if( this.invceTotalNetVl == null ) {
+	        	this.invceTotalNetVl = invceTotalNetVl;
+	        } else if(this.invceTotalNetVl.substring(this.invceTotalNetVl.length() - 1).equals("]") & invceTotalNetVl.equals("[")) {
+	        	this.invceTotalNetVl = this.invceTotalNetVl+ "," + invceTotalNetVl;
+	        } else if(invceTotalNetVl.equals("[") | invceTotalNetVl.equals("]") | this.invceTotalNetVl.substring(this.invceTotalNetVl.length() - 1).equals("[")) {
+	        	this.invceTotalNetVl = this.invceTotalNetVl+invceTotalNetVl;
+	        } else  {
+	            this.invceTotalNetVl = this.invceTotalNetVl+ "," +invceTotalNetVl;
+	        }
+        }
     }
     
     
@@ -633,6 +1389,20 @@ public class Invoice  implements java.io.Serializable {
         this.invceTotalPriceCmpntAmntCrncy = invceTotalPriceCmpntAmntCrncy;
     }
     
+    public void addInvceTotalPriceCmpntAmntCrncy(String invceTotalPriceCmpntAmntCrncy) {
+    	if( invceTotalPriceCmpntAmntCrncy != null ) {
+	    	if( this.invceTotalPriceCmpntAmntCrncy == null ) {
+	        	this.invceTotalPriceCmpntAmntCrncy = invceTotalPriceCmpntAmntCrncy;
+	        } else if(this.invceTotalPriceCmpntAmntCrncy.substring(this.invceTotalPriceCmpntAmntCrncy.length() - 1).equals("]") & invceTotalPriceCmpntAmntCrncy.equals("[")) {
+	        	this.invceTotalPriceCmpntAmntCrncy = this.invceTotalPriceCmpntAmntCrncy+ "," + invceTotalPriceCmpntAmntCrncy;
+	        } else if(invceTotalPriceCmpntAmntCrncy.equals("[") | invceTotalPriceCmpntAmntCrncy.equals("]") | this.invceTotalPriceCmpntAmntCrncy.substring(this.invceTotalPriceCmpntAmntCrncy.length() - 1).equals("[")) {
+	        	this.invceTotalPriceCmpntAmntCrncy = this.invceTotalPriceCmpntAmntCrncy+invceTotalPriceCmpntAmntCrncy;
+	        } else  {
+	            this.invceTotalPriceCmpntAmntCrncy = this.invceTotalPriceCmpntAmntCrncy+ "," +invceTotalPriceCmpntAmntCrncy;
+	        }
+        }
+    }
+    
     
     
     public String getInvceTotalPriceCmpntAmntVl() {
@@ -641,6 +1411,20 @@ public class Invoice  implements java.io.Serializable {
     
     public void setInvceTotalPriceCmpntAmntVl(String invceTotalPriceCmpntAmntVl) {
         this.invceTotalPriceCmpntAmntVl = invceTotalPriceCmpntAmntVl;
+    }
+    
+    public void addInvceTotalPriceCmpntAmntVl(String invceTotalPriceCmpntAmntVl) {
+    	if( invceTotalPriceCmpntAmntVl != null ) {
+	    	if( this.invceTotalPriceCmpntAmntVl == null ) {
+	        	this.invceTotalPriceCmpntAmntVl = invceTotalPriceCmpntAmntVl;
+	        } else if(this.invceTotalPriceCmpntAmntVl.substring(this.invceTotalPriceCmpntAmntVl.length() - 1).equals("]") & invceTotalPriceCmpntAmntVl.equals("[")) {
+	        	this.invceTotalPriceCmpntAmntVl = this.invceTotalPriceCmpntAmntVl+ "," + invceTotalPriceCmpntAmntVl;
+	        } else if(invceTotalPriceCmpntAmntVl.equals("[") | invceTotalPriceCmpntAmntVl.equals("]") | this.invceTotalPriceCmpntAmntVl.substring(this.invceTotalPriceCmpntAmntVl.length() - 1).equals("[")) {
+	        	this.invceTotalPriceCmpntAmntVl = this.invceTotalPriceCmpntAmntVl+invceTotalPriceCmpntAmntVl;
+	        } else  {
+	            this.invceTotalPriceCmpntAmntVl = this.invceTotalPriceCmpntAmntVl+ "," +invceTotalPriceCmpntAmntVl;
+	        }
+        }
     }
     
     
@@ -653,6 +1437,20 @@ public class Invoice  implements java.io.Serializable {
         this.invceTotalPriceCmpntCdCdgCd = invceTotalPriceCmpntCdCdgCd;
     }
     
+    public void addInvceTotalPriceCmpntCdCdgCd(String invceTotalPriceCmpntCdCdgCd) {
+    	if( invceTotalPriceCmpntCdCdgCd != null ) {
+	    	if( this.invceTotalPriceCmpntCdCdgCd == null ) {
+	        	this.invceTotalPriceCmpntCdCdgCd = invceTotalPriceCmpntCdCdgCd;
+	        } else if(this.invceTotalPriceCmpntCdCdgCd.substring(this.invceTotalPriceCmpntCdCdgCd.length() - 1).equals("]") & invceTotalPriceCmpntCdCdgCd.equals("[")) {
+	        	this.invceTotalPriceCmpntCdCdgCd = this.invceTotalPriceCmpntCdCdgCd+ "," + invceTotalPriceCmpntCdCdgCd;
+	        } else if(invceTotalPriceCmpntCdCdgCd.equals("[") | invceTotalPriceCmpntCdCdgCd.equals("]") | this.invceTotalPriceCmpntCdCdgCd.substring(this.invceTotalPriceCmpntCdCdgCd.length() - 1).equals("[")) {
+	        	this.invceTotalPriceCmpntCdCdgCd = this.invceTotalPriceCmpntCdCdgCd+invceTotalPriceCmpntCdCdgCd;
+	        } else  {
+	            this.invceTotalPriceCmpntCdCdgCd = this.invceTotalPriceCmpntCdCdgCd+ "," +invceTotalPriceCmpntCdCdgCd;
+	        }
+        }
+    }
+    
     
     
     public String getInvceTotalPriceCmpntCdCdgDsply() {
@@ -661,6 +1459,20 @@ public class Invoice  implements java.io.Serializable {
     
     public void setInvceTotalPriceCmpntCdCdgDsply(String invceTotalPriceCmpntCdCdgDsply) {
         this.invceTotalPriceCmpntCdCdgDsply = invceTotalPriceCmpntCdCdgDsply;
+    }
+    
+    public void addInvceTotalPriceCmpntCdCdgDsply(String invceTotalPriceCmpntCdCdgDsply) {
+    	if( invceTotalPriceCmpntCdCdgDsply != null ) {
+	    	if( this.invceTotalPriceCmpntCdCdgDsply == null ) {
+	        	this.invceTotalPriceCmpntCdCdgDsply = invceTotalPriceCmpntCdCdgDsply;
+	        } else if(this.invceTotalPriceCmpntCdCdgDsply.substring(this.invceTotalPriceCmpntCdCdgDsply.length() - 1).equals("]") & invceTotalPriceCmpntCdCdgDsply.equals("[")) {
+	        	this.invceTotalPriceCmpntCdCdgDsply = this.invceTotalPriceCmpntCdCdgDsply+ "," + invceTotalPriceCmpntCdCdgDsply;
+	        } else if(invceTotalPriceCmpntCdCdgDsply.equals("[") | invceTotalPriceCmpntCdCdgDsply.equals("]") | this.invceTotalPriceCmpntCdCdgDsply.substring(this.invceTotalPriceCmpntCdCdgDsply.length() - 1).equals("[")) {
+	        	this.invceTotalPriceCmpntCdCdgDsply = this.invceTotalPriceCmpntCdCdgDsply+invceTotalPriceCmpntCdCdgDsply;
+	        } else  {
+	            this.invceTotalPriceCmpntCdCdgDsply = this.invceTotalPriceCmpntCdCdgDsply+ "," +invceTotalPriceCmpntCdCdgDsply;
+	        }
+        }
     }
     
     
@@ -673,6 +1485,20 @@ public class Invoice  implements java.io.Serializable {
         this.invceTotalPriceCmpntCdCdgSys = invceTotalPriceCmpntCdCdgSys;
     }
     
+    public void addInvceTotalPriceCmpntCdCdgSys(String invceTotalPriceCmpntCdCdgSys) {
+    	if( invceTotalPriceCmpntCdCdgSys != null ) {
+	    	if( this.invceTotalPriceCmpntCdCdgSys == null ) {
+	        	this.invceTotalPriceCmpntCdCdgSys = invceTotalPriceCmpntCdCdgSys;
+	        } else if(this.invceTotalPriceCmpntCdCdgSys.substring(this.invceTotalPriceCmpntCdCdgSys.length() - 1).equals("]") & invceTotalPriceCmpntCdCdgSys.equals("[")) {
+	        	this.invceTotalPriceCmpntCdCdgSys = this.invceTotalPriceCmpntCdCdgSys+ "," + invceTotalPriceCmpntCdCdgSys;
+	        } else if(invceTotalPriceCmpntCdCdgSys.equals("[") | invceTotalPriceCmpntCdCdgSys.equals("]") | this.invceTotalPriceCmpntCdCdgSys.substring(this.invceTotalPriceCmpntCdCdgSys.length() - 1).equals("[")) {
+	        	this.invceTotalPriceCmpntCdCdgSys = this.invceTotalPriceCmpntCdCdgSys+invceTotalPriceCmpntCdCdgSys;
+	        } else  {
+	            this.invceTotalPriceCmpntCdCdgSys = this.invceTotalPriceCmpntCdCdgSys+ "," +invceTotalPriceCmpntCdCdgSys;
+	        }
+        }
+    }
+    
     
     
     public String getInvceTotalPriceCmpntCdCdgUsrSltd() {
@@ -681,6 +1507,20 @@ public class Invoice  implements java.io.Serializable {
     
     public void setInvceTotalPriceCmpntCdCdgUsrSltd(String invceTotalPriceCmpntCdCdgUsrSltd) {
         this.invceTotalPriceCmpntCdCdgUsrSltd = invceTotalPriceCmpntCdCdgUsrSltd;
+    }
+    
+    public void addInvceTotalPriceCmpntCdCdgUsrSltd(String invceTotalPriceCmpntCdCdgUsrSltd) {
+    	if( invceTotalPriceCmpntCdCdgUsrSltd != null ) {
+	    	if( this.invceTotalPriceCmpntCdCdgUsrSltd == null ) {
+	        	this.invceTotalPriceCmpntCdCdgUsrSltd = invceTotalPriceCmpntCdCdgUsrSltd;
+	        } else if(this.invceTotalPriceCmpntCdCdgUsrSltd.substring(this.invceTotalPriceCmpntCdCdgUsrSltd.length() - 1).equals("]") & invceTotalPriceCmpntCdCdgUsrSltd.equals("[")) {
+	        	this.invceTotalPriceCmpntCdCdgUsrSltd = this.invceTotalPriceCmpntCdCdgUsrSltd+ "," + invceTotalPriceCmpntCdCdgUsrSltd;
+	        } else if(invceTotalPriceCmpntCdCdgUsrSltd.equals("[") | invceTotalPriceCmpntCdCdgUsrSltd.equals("]") | this.invceTotalPriceCmpntCdCdgUsrSltd.substring(this.invceTotalPriceCmpntCdCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.invceTotalPriceCmpntCdCdgUsrSltd = this.invceTotalPriceCmpntCdCdgUsrSltd+invceTotalPriceCmpntCdCdgUsrSltd;
+	        } else  {
+	            this.invceTotalPriceCmpntCdCdgUsrSltd = this.invceTotalPriceCmpntCdCdgUsrSltd+ "," +invceTotalPriceCmpntCdCdgUsrSltd;
+	        }
+        }
     }
     
     
@@ -693,6 +1533,20 @@ public class Invoice  implements java.io.Serializable {
         this.invceTotalPriceCmpntCdCdgVrsn = invceTotalPriceCmpntCdCdgVrsn;
     }
     
+    public void addInvceTotalPriceCmpntCdCdgVrsn(String invceTotalPriceCmpntCdCdgVrsn) {
+    	if( invceTotalPriceCmpntCdCdgVrsn != null ) {
+	    	if( this.invceTotalPriceCmpntCdCdgVrsn == null ) {
+	        	this.invceTotalPriceCmpntCdCdgVrsn = invceTotalPriceCmpntCdCdgVrsn;
+	        } else if(this.invceTotalPriceCmpntCdCdgVrsn.substring(this.invceTotalPriceCmpntCdCdgVrsn.length() - 1).equals("]") & invceTotalPriceCmpntCdCdgVrsn.equals("[")) {
+	        	this.invceTotalPriceCmpntCdCdgVrsn = this.invceTotalPriceCmpntCdCdgVrsn+ "," + invceTotalPriceCmpntCdCdgVrsn;
+	        } else if(invceTotalPriceCmpntCdCdgVrsn.equals("[") | invceTotalPriceCmpntCdCdgVrsn.equals("]") | this.invceTotalPriceCmpntCdCdgVrsn.substring(this.invceTotalPriceCmpntCdCdgVrsn.length() - 1).equals("[")) {
+	        	this.invceTotalPriceCmpntCdCdgVrsn = this.invceTotalPriceCmpntCdCdgVrsn+invceTotalPriceCmpntCdCdgVrsn;
+	        } else  {
+	            this.invceTotalPriceCmpntCdCdgVrsn = this.invceTotalPriceCmpntCdCdgVrsn+ "," +invceTotalPriceCmpntCdCdgVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getInvceTotalPriceCmpntCdTxt() {
@@ -701,6 +1555,20 @@ public class Invoice  implements java.io.Serializable {
     
     public void setInvceTotalPriceCmpntCdTxt(String invceTotalPriceCmpntCdTxt) {
         this.invceTotalPriceCmpntCdTxt = invceTotalPriceCmpntCdTxt;
+    }
+    
+    public void addInvceTotalPriceCmpntCdTxt(String invceTotalPriceCmpntCdTxt) {
+    	if( invceTotalPriceCmpntCdTxt != null ) {
+	    	if( this.invceTotalPriceCmpntCdTxt == null ) {
+	        	this.invceTotalPriceCmpntCdTxt = invceTotalPriceCmpntCdTxt;
+	        } else if(this.invceTotalPriceCmpntCdTxt.substring(this.invceTotalPriceCmpntCdTxt.length() - 1).equals("]") & invceTotalPriceCmpntCdTxt.equals("[")) {
+	        	this.invceTotalPriceCmpntCdTxt = this.invceTotalPriceCmpntCdTxt+ "," + invceTotalPriceCmpntCdTxt;
+	        } else if(invceTotalPriceCmpntCdTxt.equals("[") | invceTotalPriceCmpntCdTxt.equals("]") | this.invceTotalPriceCmpntCdTxt.substring(this.invceTotalPriceCmpntCdTxt.length() - 1).equals("[")) {
+	        	this.invceTotalPriceCmpntCdTxt = this.invceTotalPriceCmpntCdTxt+invceTotalPriceCmpntCdTxt;
+	        } else  {
+	            this.invceTotalPriceCmpntCdTxt = this.invceTotalPriceCmpntCdTxt+ "," +invceTotalPriceCmpntCdTxt;
+	        }
+        }
     }
     
     
@@ -713,6 +1581,20 @@ public class Invoice  implements java.io.Serializable {
         this.invceTotalPriceCmpntFactor = invceTotalPriceCmpntFactor;
     }
     
+    public void addInvceTotalPriceCmpntFactor(String invceTotalPriceCmpntFactor) {
+    	if( invceTotalPriceCmpntFactor != null ) {
+	    	if( this.invceTotalPriceCmpntFactor == null ) {
+	        	this.invceTotalPriceCmpntFactor = invceTotalPriceCmpntFactor;
+	        } else if(this.invceTotalPriceCmpntFactor.substring(this.invceTotalPriceCmpntFactor.length() - 1).equals("]") & invceTotalPriceCmpntFactor.equals("[")) {
+	        	this.invceTotalPriceCmpntFactor = this.invceTotalPriceCmpntFactor+ "," + invceTotalPriceCmpntFactor;
+	        } else if(invceTotalPriceCmpntFactor.equals("[") | invceTotalPriceCmpntFactor.equals("]") | this.invceTotalPriceCmpntFactor.substring(this.invceTotalPriceCmpntFactor.length() - 1).equals("[")) {
+	        	this.invceTotalPriceCmpntFactor = this.invceTotalPriceCmpntFactor+invceTotalPriceCmpntFactor;
+	        } else  {
+	            this.invceTotalPriceCmpntFactor = this.invceTotalPriceCmpntFactor+ "," +invceTotalPriceCmpntFactor;
+	        }
+        }
+    }
+    
     
     
     public String getInvceTotalPriceCmpntTyp() {
@@ -721,6 +1603,20 @@ public class Invoice  implements java.io.Serializable {
     
     public void setInvceTotalPriceCmpntTyp(String invceTotalPriceCmpntTyp) {
         this.invceTotalPriceCmpntTyp = invceTotalPriceCmpntTyp;
+    }
+    
+    public void addInvceTotalPriceCmpntTyp(String invceTotalPriceCmpntTyp) {
+    	if( invceTotalPriceCmpntTyp != null ) {
+	    	if( this.invceTotalPriceCmpntTyp == null ) {
+	        	this.invceTotalPriceCmpntTyp = invceTotalPriceCmpntTyp;
+	        } else if(this.invceTotalPriceCmpntTyp.substring(this.invceTotalPriceCmpntTyp.length() - 1).equals("]") & invceTotalPriceCmpntTyp.equals("[")) {
+	        	this.invceTotalPriceCmpntTyp = this.invceTotalPriceCmpntTyp+ "," + invceTotalPriceCmpntTyp;
+	        } else if(invceTotalPriceCmpntTyp.equals("[") | invceTotalPriceCmpntTyp.equals("]") | this.invceTotalPriceCmpntTyp.substring(this.invceTotalPriceCmpntTyp.length() - 1).equals("[")) {
+	        	this.invceTotalPriceCmpntTyp = this.invceTotalPriceCmpntTyp+invceTotalPriceCmpntTyp;
+	        } else  {
+	            this.invceTotalPriceCmpntTyp = this.invceTotalPriceCmpntTyp+ "," +invceTotalPriceCmpntTyp;
+	        }
+        }
     }
     
     
@@ -733,6 +1629,20 @@ public class Invoice  implements java.io.Serializable {
         this.invceTypCdgCd = invceTypCdgCd;
     }
     
+    public void addInvceTypCdgCd(String invceTypCdgCd) {
+    	if( invceTypCdgCd != null ) {
+	    	if( this.invceTypCdgCd == null ) {
+	        	this.invceTypCdgCd = invceTypCdgCd;
+	        } else if(this.invceTypCdgCd.substring(this.invceTypCdgCd.length() - 1).equals("]") & invceTypCdgCd.equals("[")) {
+	        	this.invceTypCdgCd = this.invceTypCdgCd+ "," + invceTypCdgCd;
+	        } else if(invceTypCdgCd.equals("[") | invceTypCdgCd.equals("]") | this.invceTypCdgCd.substring(this.invceTypCdgCd.length() - 1).equals("[")) {
+	        	this.invceTypCdgCd = this.invceTypCdgCd+invceTypCdgCd;
+	        } else  {
+	            this.invceTypCdgCd = this.invceTypCdgCd+ "," +invceTypCdgCd;
+	        }
+        }
+    }
+    
     
     
     public String getInvceTypCdgDsply() {
@@ -741,6 +1651,20 @@ public class Invoice  implements java.io.Serializable {
     
     public void setInvceTypCdgDsply(String invceTypCdgDsply) {
         this.invceTypCdgDsply = invceTypCdgDsply;
+    }
+    
+    public void addInvceTypCdgDsply(String invceTypCdgDsply) {
+    	if( invceTypCdgDsply != null ) {
+	    	if( this.invceTypCdgDsply == null ) {
+	        	this.invceTypCdgDsply = invceTypCdgDsply;
+	        } else if(this.invceTypCdgDsply.substring(this.invceTypCdgDsply.length() - 1).equals("]") & invceTypCdgDsply.equals("[")) {
+	        	this.invceTypCdgDsply = this.invceTypCdgDsply+ "," + invceTypCdgDsply;
+	        } else if(invceTypCdgDsply.equals("[") | invceTypCdgDsply.equals("]") | this.invceTypCdgDsply.substring(this.invceTypCdgDsply.length() - 1).equals("[")) {
+	        	this.invceTypCdgDsply = this.invceTypCdgDsply+invceTypCdgDsply;
+	        } else  {
+	            this.invceTypCdgDsply = this.invceTypCdgDsply+ "," +invceTypCdgDsply;
+	        }
+        }
     }
     
     
@@ -753,6 +1677,20 @@ public class Invoice  implements java.io.Serializable {
         this.invceTypCdgSys = invceTypCdgSys;
     }
     
+    public void addInvceTypCdgSys(String invceTypCdgSys) {
+    	if( invceTypCdgSys != null ) {
+	    	if( this.invceTypCdgSys == null ) {
+	        	this.invceTypCdgSys = invceTypCdgSys;
+	        } else if(this.invceTypCdgSys.substring(this.invceTypCdgSys.length() - 1).equals("]") & invceTypCdgSys.equals("[")) {
+	        	this.invceTypCdgSys = this.invceTypCdgSys+ "," + invceTypCdgSys;
+	        } else if(invceTypCdgSys.equals("[") | invceTypCdgSys.equals("]") | this.invceTypCdgSys.substring(this.invceTypCdgSys.length() - 1).equals("[")) {
+	        	this.invceTypCdgSys = this.invceTypCdgSys+invceTypCdgSys;
+	        } else  {
+	            this.invceTypCdgSys = this.invceTypCdgSys+ "," +invceTypCdgSys;
+	        }
+        }
+    }
+    
     
     
     public String getInvceTypCdgUsrSltd() {
@@ -761,6 +1699,20 @@ public class Invoice  implements java.io.Serializable {
     
     public void setInvceTypCdgUsrSltd(String invceTypCdgUsrSltd) {
         this.invceTypCdgUsrSltd = invceTypCdgUsrSltd;
+    }
+    
+    public void addInvceTypCdgUsrSltd(String invceTypCdgUsrSltd) {
+    	if( invceTypCdgUsrSltd != null ) {
+	    	if( this.invceTypCdgUsrSltd == null ) {
+	        	this.invceTypCdgUsrSltd = invceTypCdgUsrSltd;
+	        } else if(this.invceTypCdgUsrSltd.substring(this.invceTypCdgUsrSltd.length() - 1).equals("]") & invceTypCdgUsrSltd.equals("[")) {
+	        	this.invceTypCdgUsrSltd = this.invceTypCdgUsrSltd+ "," + invceTypCdgUsrSltd;
+	        } else if(invceTypCdgUsrSltd.equals("[") | invceTypCdgUsrSltd.equals("]") | this.invceTypCdgUsrSltd.substring(this.invceTypCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.invceTypCdgUsrSltd = this.invceTypCdgUsrSltd+invceTypCdgUsrSltd;
+	        } else  {
+	            this.invceTypCdgUsrSltd = this.invceTypCdgUsrSltd+ "," +invceTypCdgUsrSltd;
+	        }
+        }
     }
     
     
@@ -773,6 +1725,20 @@ public class Invoice  implements java.io.Serializable {
         this.invceTypCdgVrsn = invceTypCdgVrsn;
     }
     
+    public void addInvceTypCdgVrsn(String invceTypCdgVrsn) {
+    	if( invceTypCdgVrsn != null ) {
+	    	if( this.invceTypCdgVrsn == null ) {
+	        	this.invceTypCdgVrsn = invceTypCdgVrsn;
+	        } else if(this.invceTypCdgVrsn.substring(this.invceTypCdgVrsn.length() - 1).equals("]") & invceTypCdgVrsn.equals("[")) {
+	        	this.invceTypCdgVrsn = this.invceTypCdgVrsn+ "," + invceTypCdgVrsn;
+	        } else if(invceTypCdgVrsn.equals("[") | invceTypCdgVrsn.equals("]") | this.invceTypCdgVrsn.substring(this.invceTypCdgVrsn.length() - 1).equals("[")) {
+	        	this.invceTypCdgVrsn = this.invceTypCdgVrsn+invceTypCdgVrsn;
+	        } else  {
+	            this.invceTypCdgVrsn = this.invceTypCdgVrsn+ "," +invceTypCdgVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getInvceTypTxt() {
@@ -781,6 +1747,20 @@ public class Invoice  implements java.io.Serializable {
     
     public void setInvceTypTxt(String invceTypTxt) {
         this.invceTypTxt = invceTypTxt;
+    }
+    
+    public void addInvceTypTxt(String invceTypTxt) {
+    	if( invceTypTxt != null ) {
+	    	if( this.invceTypTxt == null ) {
+	        	this.invceTypTxt = invceTypTxt;
+	        } else if(this.invceTypTxt.substring(this.invceTypTxt.length() - 1).equals("]") & invceTypTxt.equals("[")) {
+	        	this.invceTypTxt = this.invceTypTxt+ "," + invceTypTxt;
+	        } else if(invceTypTxt.equals("[") | invceTypTxt.equals("]") | this.invceTypTxt.substring(this.invceTypTxt.length() - 1).equals("[")) {
+	        	this.invceTypTxt = this.invceTypTxt+invceTypTxt;
+	        } else  {
+	            this.invceTypTxt = this.invceTypTxt+ "," +invceTypTxt;
+	        }
+        }
     }
     
     

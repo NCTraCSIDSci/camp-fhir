@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Jun 27, 2022, 10:40:10 AM by Hibernate Tools 5.6.1.Final
+// Generated Aug 17, 2022, 11:08:48 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -108,6 +108,20 @@ public class RiskAssessment  implements java.io.Serializable {
         this.id = id;
     }
     
+    public void addId(String id) {
+    	if( id != null ) {
+	    	if( this.id == null ) {
+	        	this.id = id;
+	        } else if(this.id.substring(this.id.length() - 1).equals("]") & id.equals("[")) {
+	        	this.id = this.id+ "," + id;
+	        } else if(id.equals("[") | id.equals("]") | this.id.substring(this.id.length() - 1).equals("[")) {
+	        	this.id = this.id+id;
+	        } else  {
+	            this.id = this.id+ "," +id;
+	        }
+        }
+    }
+    
     
     
     public String getRskAssmntBasedOn() {
@@ -116,6 +130,20 @@ public class RiskAssessment  implements java.io.Serializable {
     
     public void setRskAssmntBasedOn(String rskAssmntBasedOn) {
         this.rskAssmntBasedOn = rskAssmntBasedOn;
+    }
+    
+    public void addRskAssmntBasedOn(String rskAssmntBasedOn) {
+    	if( rskAssmntBasedOn != null ) {
+	    	if( this.rskAssmntBasedOn == null ) {
+	        	this.rskAssmntBasedOn = rskAssmntBasedOn;
+	        } else if(this.rskAssmntBasedOn.substring(this.rskAssmntBasedOn.length() - 1).equals("]") & rskAssmntBasedOn.equals("[")) {
+	        	this.rskAssmntBasedOn = this.rskAssmntBasedOn+ "," + rskAssmntBasedOn;
+	        } else if(rskAssmntBasedOn.equals("[") | rskAssmntBasedOn.equals("]") | this.rskAssmntBasedOn.substring(this.rskAssmntBasedOn.length() - 1).equals("[")) {
+	        	this.rskAssmntBasedOn = this.rskAssmntBasedOn+rskAssmntBasedOn;
+	        } else  {
+	            this.rskAssmntBasedOn = this.rskAssmntBasedOn+ "," +rskAssmntBasedOn;
+	        }
+        }
     }
     
     
@@ -128,6 +156,20 @@ public class RiskAssessment  implements java.io.Serializable {
         this.rskAssmntBasis = rskAssmntBasis;
     }
     
+    public void addRskAssmntBasis(String rskAssmntBasis) {
+    	if( rskAssmntBasis != null ) {
+	    	if( this.rskAssmntBasis == null ) {
+	        	this.rskAssmntBasis = rskAssmntBasis;
+	        } else if(this.rskAssmntBasis.substring(this.rskAssmntBasis.length() - 1).equals("]") & rskAssmntBasis.equals("[")) {
+	        	this.rskAssmntBasis = this.rskAssmntBasis+ "," + rskAssmntBasis;
+	        } else if(rskAssmntBasis.equals("[") | rskAssmntBasis.equals("]") | this.rskAssmntBasis.substring(this.rskAssmntBasis.length() - 1).equals("[")) {
+	        	this.rskAssmntBasis = this.rskAssmntBasis+rskAssmntBasis;
+	        } else  {
+	            this.rskAssmntBasis = this.rskAssmntBasis+ "," +rskAssmntBasis;
+	        }
+        }
+    }
+    
     
     
     public String getRskAssmntCdCdgCd() {
@@ -136,6 +178,20 @@ public class RiskAssessment  implements java.io.Serializable {
     
     public void setRskAssmntCdCdgCd(String rskAssmntCdCdgCd) {
         this.rskAssmntCdCdgCd = rskAssmntCdCdgCd;
+    }
+    
+    public void addRskAssmntCdCdgCd(String rskAssmntCdCdgCd) {
+    	if( rskAssmntCdCdgCd != null ) {
+	    	if( this.rskAssmntCdCdgCd == null ) {
+	        	this.rskAssmntCdCdgCd = rskAssmntCdCdgCd;
+	        } else if(this.rskAssmntCdCdgCd.substring(this.rskAssmntCdCdgCd.length() - 1).equals("]") & rskAssmntCdCdgCd.equals("[")) {
+	        	this.rskAssmntCdCdgCd = this.rskAssmntCdCdgCd+ "," + rskAssmntCdCdgCd;
+	        } else if(rskAssmntCdCdgCd.equals("[") | rskAssmntCdCdgCd.equals("]") | this.rskAssmntCdCdgCd.substring(this.rskAssmntCdCdgCd.length() - 1).equals("[")) {
+	        	this.rskAssmntCdCdgCd = this.rskAssmntCdCdgCd+rskAssmntCdCdgCd;
+	        } else  {
+	            this.rskAssmntCdCdgCd = this.rskAssmntCdCdgCd+ "," +rskAssmntCdCdgCd;
+	        }
+        }
     }
     
     
@@ -148,6 +204,20 @@ public class RiskAssessment  implements java.io.Serializable {
         this.rskAssmntCdCdgDsply = rskAssmntCdCdgDsply;
     }
     
+    public void addRskAssmntCdCdgDsply(String rskAssmntCdCdgDsply) {
+    	if( rskAssmntCdCdgDsply != null ) {
+	    	if( this.rskAssmntCdCdgDsply == null ) {
+	        	this.rskAssmntCdCdgDsply = rskAssmntCdCdgDsply;
+	        } else if(this.rskAssmntCdCdgDsply.substring(this.rskAssmntCdCdgDsply.length() - 1).equals("]") & rskAssmntCdCdgDsply.equals("[")) {
+	        	this.rskAssmntCdCdgDsply = this.rskAssmntCdCdgDsply+ "," + rskAssmntCdCdgDsply;
+	        } else if(rskAssmntCdCdgDsply.equals("[") | rskAssmntCdCdgDsply.equals("]") | this.rskAssmntCdCdgDsply.substring(this.rskAssmntCdCdgDsply.length() - 1).equals("[")) {
+	        	this.rskAssmntCdCdgDsply = this.rskAssmntCdCdgDsply+rskAssmntCdCdgDsply;
+	        } else  {
+	            this.rskAssmntCdCdgDsply = this.rskAssmntCdCdgDsply+ "," +rskAssmntCdCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getRskAssmntCdCdgSys() {
@@ -156,6 +226,20 @@ public class RiskAssessment  implements java.io.Serializable {
     
     public void setRskAssmntCdCdgSys(String rskAssmntCdCdgSys) {
         this.rskAssmntCdCdgSys = rskAssmntCdCdgSys;
+    }
+    
+    public void addRskAssmntCdCdgSys(String rskAssmntCdCdgSys) {
+    	if( rskAssmntCdCdgSys != null ) {
+	    	if( this.rskAssmntCdCdgSys == null ) {
+	        	this.rskAssmntCdCdgSys = rskAssmntCdCdgSys;
+	        } else if(this.rskAssmntCdCdgSys.substring(this.rskAssmntCdCdgSys.length() - 1).equals("]") & rskAssmntCdCdgSys.equals("[")) {
+	        	this.rskAssmntCdCdgSys = this.rskAssmntCdCdgSys+ "," + rskAssmntCdCdgSys;
+	        } else if(rskAssmntCdCdgSys.equals("[") | rskAssmntCdCdgSys.equals("]") | this.rskAssmntCdCdgSys.substring(this.rskAssmntCdCdgSys.length() - 1).equals("[")) {
+	        	this.rskAssmntCdCdgSys = this.rskAssmntCdCdgSys+rskAssmntCdCdgSys;
+	        } else  {
+	            this.rskAssmntCdCdgSys = this.rskAssmntCdCdgSys+ "," +rskAssmntCdCdgSys;
+	        }
+        }
     }
     
     
@@ -168,6 +252,20 @@ public class RiskAssessment  implements java.io.Serializable {
         this.rskAssmntCdCdgUsrSltd = rskAssmntCdCdgUsrSltd;
     }
     
+    public void addRskAssmntCdCdgUsrSltd(String rskAssmntCdCdgUsrSltd) {
+    	if( rskAssmntCdCdgUsrSltd != null ) {
+	    	if( this.rskAssmntCdCdgUsrSltd == null ) {
+	        	this.rskAssmntCdCdgUsrSltd = rskAssmntCdCdgUsrSltd;
+	        } else if(this.rskAssmntCdCdgUsrSltd.substring(this.rskAssmntCdCdgUsrSltd.length() - 1).equals("]") & rskAssmntCdCdgUsrSltd.equals("[")) {
+	        	this.rskAssmntCdCdgUsrSltd = this.rskAssmntCdCdgUsrSltd+ "," + rskAssmntCdCdgUsrSltd;
+	        } else if(rskAssmntCdCdgUsrSltd.equals("[") | rskAssmntCdCdgUsrSltd.equals("]") | this.rskAssmntCdCdgUsrSltd.substring(this.rskAssmntCdCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.rskAssmntCdCdgUsrSltd = this.rskAssmntCdCdgUsrSltd+rskAssmntCdCdgUsrSltd;
+	        } else  {
+	            this.rskAssmntCdCdgUsrSltd = this.rskAssmntCdCdgUsrSltd+ "," +rskAssmntCdCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getRskAssmntCdCdgVrsn() {
@@ -176,6 +274,20 @@ public class RiskAssessment  implements java.io.Serializable {
     
     public void setRskAssmntCdCdgVrsn(String rskAssmntCdCdgVrsn) {
         this.rskAssmntCdCdgVrsn = rskAssmntCdCdgVrsn;
+    }
+    
+    public void addRskAssmntCdCdgVrsn(String rskAssmntCdCdgVrsn) {
+    	if( rskAssmntCdCdgVrsn != null ) {
+	    	if( this.rskAssmntCdCdgVrsn == null ) {
+	        	this.rskAssmntCdCdgVrsn = rskAssmntCdCdgVrsn;
+	        } else if(this.rskAssmntCdCdgVrsn.substring(this.rskAssmntCdCdgVrsn.length() - 1).equals("]") & rskAssmntCdCdgVrsn.equals("[")) {
+	        	this.rskAssmntCdCdgVrsn = this.rskAssmntCdCdgVrsn+ "," + rskAssmntCdCdgVrsn;
+	        } else if(rskAssmntCdCdgVrsn.equals("[") | rskAssmntCdCdgVrsn.equals("]") | this.rskAssmntCdCdgVrsn.substring(this.rskAssmntCdCdgVrsn.length() - 1).equals("[")) {
+	        	this.rskAssmntCdCdgVrsn = this.rskAssmntCdCdgVrsn+rskAssmntCdCdgVrsn;
+	        } else  {
+	            this.rskAssmntCdCdgVrsn = this.rskAssmntCdCdgVrsn+ "," +rskAssmntCdCdgVrsn;
+	        }
+        }
     }
     
     
@@ -188,6 +300,20 @@ public class RiskAssessment  implements java.io.Serializable {
         this.rskAssmntCdTxt = rskAssmntCdTxt;
     }
     
+    public void addRskAssmntCdTxt(String rskAssmntCdTxt) {
+    	if( rskAssmntCdTxt != null ) {
+	    	if( this.rskAssmntCdTxt == null ) {
+	        	this.rskAssmntCdTxt = rskAssmntCdTxt;
+	        } else if(this.rskAssmntCdTxt.substring(this.rskAssmntCdTxt.length() - 1).equals("]") & rskAssmntCdTxt.equals("[")) {
+	        	this.rskAssmntCdTxt = this.rskAssmntCdTxt+ "," + rskAssmntCdTxt;
+	        } else if(rskAssmntCdTxt.equals("[") | rskAssmntCdTxt.equals("]") | this.rskAssmntCdTxt.substring(this.rskAssmntCdTxt.length() - 1).equals("[")) {
+	        	this.rskAssmntCdTxt = this.rskAssmntCdTxt+rskAssmntCdTxt;
+	        } else  {
+	            this.rskAssmntCdTxt = this.rskAssmntCdTxt+ "," +rskAssmntCdTxt;
+	        }
+        }
+    }
+    
     
     
     public String getRskAssmntCndtn() {
@@ -196,6 +322,20 @@ public class RiskAssessment  implements java.io.Serializable {
     
     public void setRskAssmntCndtn(String rskAssmntCndtn) {
         this.rskAssmntCndtn = rskAssmntCndtn;
+    }
+    
+    public void addRskAssmntCndtn(String rskAssmntCndtn) {
+    	if( rskAssmntCndtn != null ) {
+	    	if( this.rskAssmntCndtn == null ) {
+	        	this.rskAssmntCndtn = rskAssmntCndtn;
+	        } else if(this.rskAssmntCndtn.substring(this.rskAssmntCndtn.length() - 1).equals("]") & rskAssmntCndtn.equals("[")) {
+	        	this.rskAssmntCndtn = this.rskAssmntCndtn+ "," + rskAssmntCndtn;
+	        } else if(rskAssmntCndtn.equals("[") | rskAssmntCndtn.equals("]") | this.rskAssmntCndtn.substring(this.rskAssmntCndtn.length() - 1).equals("[")) {
+	        	this.rskAssmntCndtn = this.rskAssmntCndtn+rskAssmntCndtn;
+	        } else  {
+	            this.rskAssmntCndtn = this.rskAssmntCndtn+ "," +rskAssmntCndtn;
+	        }
+        }
     }
     
     
@@ -208,6 +348,20 @@ public class RiskAssessment  implements java.io.Serializable {
         this.rskAssmntEnc = rskAssmntEnc;
     }
     
+    public void addRskAssmntEnc(String rskAssmntEnc) {
+    	if( rskAssmntEnc != null ) {
+	    	if( this.rskAssmntEnc == null ) {
+	        	this.rskAssmntEnc = rskAssmntEnc;
+	        } else if(this.rskAssmntEnc.substring(this.rskAssmntEnc.length() - 1).equals("]") & rskAssmntEnc.equals("[")) {
+	        	this.rskAssmntEnc = this.rskAssmntEnc+ "," + rskAssmntEnc;
+	        } else if(rskAssmntEnc.equals("[") | rskAssmntEnc.equals("]") | this.rskAssmntEnc.substring(this.rskAssmntEnc.length() - 1).equals("[")) {
+	        	this.rskAssmntEnc = this.rskAssmntEnc+rskAssmntEnc;
+	        } else  {
+	            this.rskAssmntEnc = this.rskAssmntEnc+ "," +rskAssmntEnc;
+	        }
+        }
+    }
+    
     
     
     public String getRskAssmntIdAssigner() {
@@ -216,6 +370,20 @@ public class RiskAssessment  implements java.io.Serializable {
     
     public void setRskAssmntIdAssigner(String rskAssmntIdAssigner) {
         this.rskAssmntIdAssigner = rskAssmntIdAssigner;
+    }
+    
+    public void addRskAssmntIdAssigner(String rskAssmntIdAssigner) {
+    	if( rskAssmntIdAssigner != null ) {
+	    	if( this.rskAssmntIdAssigner == null ) {
+	        	this.rskAssmntIdAssigner = rskAssmntIdAssigner;
+	        } else if(this.rskAssmntIdAssigner.substring(this.rskAssmntIdAssigner.length() - 1).equals("]") & rskAssmntIdAssigner.equals("[")) {
+	        	this.rskAssmntIdAssigner = this.rskAssmntIdAssigner+ "," + rskAssmntIdAssigner;
+	        } else if(rskAssmntIdAssigner.equals("[") | rskAssmntIdAssigner.equals("]") | this.rskAssmntIdAssigner.substring(this.rskAssmntIdAssigner.length() - 1).equals("[")) {
+	        	this.rskAssmntIdAssigner = this.rskAssmntIdAssigner+rskAssmntIdAssigner;
+	        } else  {
+	            this.rskAssmntIdAssigner = this.rskAssmntIdAssigner+ "," +rskAssmntIdAssigner;
+	        }
+        }
     }
     
     
@@ -228,6 +396,20 @@ public class RiskAssessment  implements java.io.Serializable {
         this.rskAssmntIdPrdEnd = rskAssmntIdPrdEnd;
     }
     
+    public void addRskAssmntIdPrdEnd(String rskAssmntIdPrdEnd) {
+    	if( rskAssmntIdPrdEnd != null ) {
+	    	if( this.rskAssmntIdPrdEnd == null ) {
+	        	this.rskAssmntIdPrdEnd = rskAssmntIdPrdEnd;
+	        } else if(this.rskAssmntIdPrdEnd.substring(this.rskAssmntIdPrdEnd.length() - 1).equals("]") & rskAssmntIdPrdEnd.equals("[")) {
+	        	this.rskAssmntIdPrdEnd = this.rskAssmntIdPrdEnd+ "," + rskAssmntIdPrdEnd;
+	        } else if(rskAssmntIdPrdEnd.equals("[") | rskAssmntIdPrdEnd.equals("]") | this.rskAssmntIdPrdEnd.substring(this.rskAssmntIdPrdEnd.length() - 1).equals("[")) {
+	        	this.rskAssmntIdPrdEnd = this.rskAssmntIdPrdEnd+rskAssmntIdPrdEnd;
+	        } else  {
+	            this.rskAssmntIdPrdEnd = this.rskAssmntIdPrdEnd+ "," +rskAssmntIdPrdEnd;
+	        }
+        }
+    }
+    
     
     
     public String getRskAssmntIdPrdStrt() {
@@ -236,6 +418,20 @@ public class RiskAssessment  implements java.io.Serializable {
     
     public void setRskAssmntIdPrdStrt(String rskAssmntIdPrdStrt) {
         this.rskAssmntIdPrdStrt = rskAssmntIdPrdStrt;
+    }
+    
+    public void addRskAssmntIdPrdStrt(String rskAssmntIdPrdStrt) {
+    	if( rskAssmntIdPrdStrt != null ) {
+	    	if( this.rskAssmntIdPrdStrt == null ) {
+	        	this.rskAssmntIdPrdStrt = rskAssmntIdPrdStrt;
+	        } else if(this.rskAssmntIdPrdStrt.substring(this.rskAssmntIdPrdStrt.length() - 1).equals("]") & rskAssmntIdPrdStrt.equals("[")) {
+	        	this.rskAssmntIdPrdStrt = this.rskAssmntIdPrdStrt+ "," + rskAssmntIdPrdStrt;
+	        } else if(rskAssmntIdPrdStrt.equals("[") | rskAssmntIdPrdStrt.equals("]") | this.rskAssmntIdPrdStrt.substring(this.rskAssmntIdPrdStrt.length() - 1).equals("[")) {
+	        	this.rskAssmntIdPrdStrt = this.rskAssmntIdPrdStrt+rskAssmntIdPrdStrt;
+	        } else  {
+	            this.rskAssmntIdPrdStrt = this.rskAssmntIdPrdStrt+ "," +rskAssmntIdPrdStrt;
+	        }
+        }
     }
     
     
@@ -248,6 +444,20 @@ public class RiskAssessment  implements java.io.Serializable {
         this.rskAssmntIdSys = rskAssmntIdSys;
     }
     
+    public void addRskAssmntIdSys(String rskAssmntIdSys) {
+    	if( rskAssmntIdSys != null ) {
+	    	if( this.rskAssmntIdSys == null ) {
+	        	this.rskAssmntIdSys = rskAssmntIdSys;
+	        } else if(this.rskAssmntIdSys.substring(this.rskAssmntIdSys.length() - 1).equals("]") & rskAssmntIdSys.equals("[")) {
+	        	this.rskAssmntIdSys = this.rskAssmntIdSys+ "," + rskAssmntIdSys;
+	        } else if(rskAssmntIdSys.equals("[") | rskAssmntIdSys.equals("]") | this.rskAssmntIdSys.substring(this.rskAssmntIdSys.length() - 1).equals("[")) {
+	        	this.rskAssmntIdSys = this.rskAssmntIdSys+rskAssmntIdSys;
+	        } else  {
+	            this.rskAssmntIdSys = this.rskAssmntIdSys+ "," +rskAssmntIdSys;
+	        }
+        }
+    }
+    
     
     
     public String getRskAssmntIdTypCdgCd() {
@@ -256,6 +466,20 @@ public class RiskAssessment  implements java.io.Serializable {
     
     public void setRskAssmntIdTypCdgCd(String rskAssmntIdTypCdgCd) {
         this.rskAssmntIdTypCdgCd = rskAssmntIdTypCdgCd;
+    }
+    
+    public void addRskAssmntIdTypCdgCd(String rskAssmntIdTypCdgCd) {
+    	if( rskAssmntIdTypCdgCd != null ) {
+	    	if( this.rskAssmntIdTypCdgCd == null ) {
+	        	this.rskAssmntIdTypCdgCd = rskAssmntIdTypCdgCd;
+	        } else if(this.rskAssmntIdTypCdgCd.substring(this.rskAssmntIdTypCdgCd.length() - 1).equals("]") & rskAssmntIdTypCdgCd.equals("[")) {
+	        	this.rskAssmntIdTypCdgCd = this.rskAssmntIdTypCdgCd+ "," + rskAssmntIdTypCdgCd;
+	        } else if(rskAssmntIdTypCdgCd.equals("[") | rskAssmntIdTypCdgCd.equals("]") | this.rskAssmntIdTypCdgCd.substring(this.rskAssmntIdTypCdgCd.length() - 1).equals("[")) {
+	        	this.rskAssmntIdTypCdgCd = this.rskAssmntIdTypCdgCd+rskAssmntIdTypCdgCd;
+	        } else  {
+	            this.rskAssmntIdTypCdgCd = this.rskAssmntIdTypCdgCd+ "," +rskAssmntIdTypCdgCd;
+	        }
+        }
     }
     
     
@@ -268,6 +492,20 @@ public class RiskAssessment  implements java.io.Serializable {
         this.rskAssmntIdTypCdgDsply = rskAssmntIdTypCdgDsply;
     }
     
+    public void addRskAssmntIdTypCdgDsply(String rskAssmntIdTypCdgDsply) {
+    	if( rskAssmntIdTypCdgDsply != null ) {
+	    	if( this.rskAssmntIdTypCdgDsply == null ) {
+	        	this.rskAssmntIdTypCdgDsply = rskAssmntIdTypCdgDsply;
+	        } else if(this.rskAssmntIdTypCdgDsply.substring(this.rskAssmntIdTypCdgDsply.length() - 1).equals("]") & rskAssmntIdTypCdgDsply.equals("[")) {
+	        	this.rskAssmntIdTypCdgDsply = this.rskAssmntIdTypCdgDsply+ "," + rskAssmntIdTypCdgDsply;
+	        } else if(rskAssmntIdTypCdgDsply.equals("[") | rskAssmntIdTypCdgDsply.equals("]") | this.rskAssmntIdTypCdgDsply.substring(this.rskAssmntIdTypCdgDsply.length() - 1).equals("[")) {
+	        	this.rskAssmntIdTypCdgDsply = this.rskAssmntIdTypCdgDsply+rskAssmntIdTypCdgDsply;
+	        } else  {
+	            this.rskAssmntIdTypCdgDsply = this.rskAssmntIdTypCdgDsply+ "," +rskAssmntIdTypCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getRskAssmntIdTypCdgSys() {
@@ -276,6 +514,20 @@ public class RiskAssessment  implements java.io.Serializable {
     
     public void setRskAssmntIdTypCdgSys(String rskAssmntIdTypCdgSys) {
         this.rskAssmntIdTypCdgSys = rskAssmntIdTypCdgSys;
+    }
+    
+    public void addRskAssmntIdTypCdgSys(String rskAssmntIdTypCdgSys) {
+    	if( rskAssmntIdTypCdgSys != null ) {
+	    	if( this.rskAssmntIdTypCdgSys == null ) {
+	        	this.rskAssmntIdTypCdgSys = rskAssmntIdTypCdgSys;
+	        } else if(this.rskAssmntIdTypCdgSys.substring(this.rskAssmntIdTypCdgSys.length() - 1).equals("]") & rskAssmntIdTypCdgSys.equals("[")) {
+	        	this.rskAssmntIdTypCdgSys = this.rskAssmntIdTypCdgSys+ "," + rskAssmntIdTypCdgSys;
+	        } else if(rskAssmntIdTypCdgSys.equals("[") | rskAssmntIdTypCdgSys.equals("]") | this.rskAssmntIdTypCdgSys.substring(this.rskAssmntIdTypCdgSys.length() - 1).equals("[")) {
+	        	this.rskAssmntIdTypCdgSys = this.rskAssmntIdTypCdgSys+rskAssmntIdTypCdgSys;
+	        } else  {
+	            this.rskAssmntIdTypCdgSys = this.rskAssmntIdTypCdgSys+ "," +rskAssmntIdTypCdgSys;
+	        }
+        }
     }
     
     
@@ -288,6 +540,20 @@ public class RiskAssessment  implements java.io.Serializable {
         this.rskAssmntIdTypCdgUsrSltd = rskAssmntIdTypCdgUsrSltd;
     }
     
+    public void addRskAssmntIdTypCdgUsrSltd(String rskAssmntIdTypCdgUsrSltd) {
+    	if( rskAssmntIdTypCdgUsrSltd != null ) {
+	    	if( this.rskAssmntIdTypCdgUsrSltd == null ) {
+	        	this.rskAssmntIdTypCdgUsrSltd = rskAssmntIdTypCdgUsrSltd;
+	        } else if(this.rskAssmntIdTypCdgUsrSltd.substring(this.rskAssmntIdTypCdgUsrSltd.length() - 1).equals("]") & rskAssmntIdTypCdgUsrSltd.equals("[")) {
+	        	this.rskAssmntIdTypCdgUsrSltd = this.rskAssmntIdTypCdgUsrSltd+ "," + rskAssmntIdTypCdgUsrSltd;
+	        } else if(rskAssmntIdTypCdgUsrSltd.equals("[") | rskAssmntIdTypCdgUsrSltd.equals("]") | this.rskAssmntIdTypCdgUsrSltd.substring(this.rskAssmntIdTypCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.rskAssmntIdTypCdgUsrSltd = this.rskAssmntIdTypCdgUsrSltd+rskAssmntIdTypCdgUsrSltd;
+	        } else  {
+	            this.rskAssmntIdTypCdgUsrSltd = this.rskAssmntIdTypCdgUsrSltd+ "," +rskAssmntIdTypCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getRskAssmntIdTypCdgVrsn() {
@@ -296,6 +562,20 @@ public class RiskAssessment  implements java.io.Serializable {
     
     public void setRskAssmntIdTypCdgVrsn(String rskAssmntIdTypCdgVrsn) {
         this.rskAssmntIdTypCdgVrsn = rskAssmntIdTypCdgVrsn;
+    }
+    
+    public void addRskAssmntIdTypCdgVrsn(String rskAssmntIdTypCdgVrsn) {
+    	if( rskAssmntIdTypCdgVrsn != null ) {
+	    	if( this.rskAssmntIdTypCdgVrsn == null ) {
+	        	this.rskAssmntIdTypCdgVrsn = rskAssmntIdTypCdgVrsn;
+	        } else if(this.rskAssmntIdTypCdgVrsn.substring(this.rskAssmntIdTypCdgVrsn.length() - 1).equals("]") & rskAssmntIdTypCdgVrsn.equals("[")) {
+	        	this.rskAssmntIdTypCdgVrsn = this.rskAssmntIdTypCdgVrsn+ "," + rskAssmntIdTypCdgVrsn;
+	        } else if(rskAssmntIdTypCdgVrsn.equals("[") | rskAssmntIdTypCdgVrsn.equals("]") | this.rskAssmntIdTypCdgVrsn.substring(this.rskAssmntIdTypCdgVrsn.length() - 1).equals("[")) {
+	        	this.rskAssmntIdTypCdgVrsn = this.rskAssmntIdTypCdgVrsn+rskAssmntIdTypCdgVrsn;
+	        } else  {
+	            this.rskAssmntIdTypCdgVrsn = this.rskAssmntIdTypCdgVrsn+ "," +rskAssmntIdTypCdgVrsn;
+	        }
+        }
     }
     
     
@@ -308,6 +588,20 @@ public class RiskAssessment  implements java.io.Serializable {
         this.rskAssmntIdTypTxt = rskAssmntIdTypTxt;
     }
     
+    public void addRskAssmntIdTypTxt(String rskAssmntIdTypTxt) {
+    	if( rskAssmntIdTypTxt != null ) {
+	    	if( this.rskAssmntIdTypTxt == null ) {
+	        	this.rskAssmntIdTypTxt = rskAssmntIdTypTxt;
+	        } else if(this.rskAssmntIdTypTxt.substring(this.rskAssmntIdTypTxt.length() - 1).equals("]") & rskAssmntIdTypTxt.equals("[")) {
+	        	this.rskAssmntIdTypTxt = this.rskAssmntIdTypTxt+ "," + rskAssmntIdTypTxt;
+	        } else if(rskAssmntIdTypTxt.equals("[") | rskAssmntIdTypTxt.equals("]") | this.rskAssmntIdTypTxt.substring(this.rskAssmntIdTypTxt.length() - 1).equals("[")) {
+	        	this.rskAssmntIdTypTxt = this.rskAssmntIdTypTxt+rskAssmntIdTypTxt;
+	        } else  {
+	            this.rskAssmntIdTypTxt = this.rskAssmntIdTypTxt+ "," +rskAssmntIdTypTxt;
+	        }
+        }
+    }
+    
     
     
     public String getRskAssmntIdUse() {
@@ -316,6 +610,20 @@ public class RiskAssessment  implements java.io.Serializable {
     
     public void setRskAssmntIdUse(String rskAssmntIdUse) {
         this.rskAssmntIdUse = rskAssmntIdUse;
+    }
+    
+    public void addRskAssmntIdUse(String rskAssmntIdUse) {
+    	if( rskAssmntIdUse != null ) {
+	    	if( this.rskAssmntIdUse == null ) {
+	        	this.rskAssmntIdUse = rskAssmntIdUse;
+	        } else if(this.rskAssmntIdUse.substring(this.rskAssmntIdUse.length() - 1).equals("]") & rskAssmntIdUse.equals("[")) {
+	        	this.rskAssmntIdUse = this.rskAssmntIdUse+ "," + rskAssmntIdUse;
+	        } else if(rskAssmntIdUse.equals("[") | rskAssmntIdUse.equals("]") | this.rskAssmntIdUse.substring(this.rskAssmntIdUse.length() - 1).equals("[")) {
+	        	this.rskAssmntIdUse = this.rskAssmntIdUse+rskAssmntIdUse;
+	        } else  {
+	            this.rskAssmntIdUse = this.rskAssmntIdUse+ "," +rskAssmntIdUse;
+	        }
+        }
     }
     
     
@@ -328,6 +636,20 @@ public class RiskAssessment  implements java.io.Serializable {
         this.rskAssmntIdVl = rskAssmntIdVl;
     }
     
+    public void addRskAssmntIdVl(String rskAssmntIdVl) {
+    	if( rskAssmntIdVl != null ) {
+	    	if( this.rskAssmntIdVl == null ) {
+	        	this.rskAssmntIdVl = rskAssmntIdVl;
+	        } else if(this.rskAssmntIdVl.substring(this.rskAssmntIdVl.length() - 1).equals("]") & rskAssmntIdVl.equals("[")) {
+	        	this.rskAssmntIdVl = this.rskAssmntIdVl+ "," + rskAssmntIdVl;
+	        } else if(rskAssmntIdVl.equals("[") | rskAssmntIdVl.equals("]") | this.rskAssmntIdVl.substring(this.rskAssmntIdVl.length() - 1).equals("[")) {
+	        	this.rskAssmntIdVl = this.rskAssmntIdVl+rskAssmntIdVl;
+	        } else  {
+	            this.rskAssmntIdVl = this.rskAssmntIdVl+ "," +rskAssmntIdVl;
+	        }
+        }
+    }
+    
     
     
     public String getRskAssmntMthdCdgCd() {
@@ -336,6 +658,20 @@ public class RiskAssessment  implements java.io.Serializable {
     
     public void setRskAssmntMthdCdgCd(String rskAssmntMthdCdgCd) {
         this.rskAssmntMthdCdgCd = rskAssmntMthdCdgCd;
+    }
+    
+    public void addRskAssmntMthdCdgCd(String rskAssmntMthdCdgCd) {
+    	if( rskAssmntMthdCdgCd != null ) {
+	    	if( this.rskAssmntMthdCdgCd == null ) {
+	        	this.rskAssmntMthdCdgCd = rskAssmntMthdCdgCd;
+	        } else if(this.rskAssmntMthdCdgCd.substring(this.rskAssmntMthdCdgCd.length() - 1).equals("]") & rskAssmntMthdCdgCd.equals("[")) {
+	        	this.rskAssmntMthdCdgCd = this.rskAssmntMthdCdgCd+ "," + rskAssmntMthdCdgCd;
+	        } else if(rskAssmntMthdCdgCd.equals("[") | rskAssmntMthdCdgCd.equals("]") | this.rskAssmntMthdCdgCd.substring(this.rskAssmntMthdCdgCd.length() - 1).equals("[")) {
+	        	this.rskAssmntMthdCdgCd = this.rskAssmntMthdCdgCd+rskAssmntMthdCdgCd;
+	        } else  {
+	            this.rskAssmntMthdCdgCd = this.rskAssmntMthdCdgCd+ "," +rskAssmntMthdCdgCd;
+	        }
+        }
     }
     
     
@@ -348,6 +684,20 @@ public class RiskAssessment  implements java.io.Serializable {
         this.rskAssmntMthdCdgDsply = rskAssmntMthdCdgDsply;
     }
     
+    public void addRskAssmntMthdCdgDsply(String rskAssmntMthdCdgDsply) {
+    	if( rskAssmntMthdCdgDsply != null ) {
+	    	if( this.rskAssmntMthdCdgDsply == null ) {
+	        	this.rskAssmntMthdCdgDsply = rskAssmntMthdCdgDsply;
+	        } else if(this.rskAssmntMthdCdgDsply.substring(this.rskAssmntMthdCdgDsply.length() - 1).equals("]") & rskAssmntMthdCdgDsply.equals("[")) {
+	        	this.rskAssmntMthdCdgDsply = this.rskAssmntMthdCdgDsply+ "," + rskAssmntMthdCdgDsply;
+	        } else if(rskAssmntMthdCdgDsply.equals("[") | rskAssmntMthdCdgDsply.equals("]") | this.rskAssmntMthdCdgDsply.substring(this.rskAssmntMthdCdgDsply.length() - 1).equals("[")) {
+	        	this.rskAssmntMthdCdgDsply = this.rskAssmntMthdCdgDsply+rskAssmntMthdCdgDsply;
+	        } else  {
+	            this.rskAssmntMthdCdgDsply = this.rskAssmntMthdCdgDsply+ "," +rskAssmntMthdCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getRskAssmntMthdCdgSys() {
@@ -356,6 +706,20 @@ public class RiskAssessment  implements java.io.Serializable {
     
     public void setRskAssmntMthdCdgSys(String rskAssmntMthdCdgSys) {
         this.rskAssmntMthdCdgSys = rskAssmntMthdCdgSys;
+    }
+    
+    public void addRskAssmntMthdCdgSys(String rskAssmntMthdCdgSys) {
+    	if( rskAssmntMthdCdgSys != null ) {
+	    	if( this.rskAssmntMthdCdgSys == null ) {
+	        	this.rskAssmntMthdCdgSys = rskAssmntMthdCdgSys;
+	        } else if(this.rskAssmntMthdCdgSys.substring(this.rskAssmntMthdCdgSys.length() - 1).equals("]") & rskAssmntMthdCdgSys.equals("[")) {
+	        	this.rskAssmntMthdCdgSys = this.rskAssmntMthdCdgSys+ "," + rskAssmntMthdCdgSys;
+	        } else if(rskAssmntMthdCdgSys.equals("[") | rskAssmntMthdCdgSys.equals("]") | this.rskAssmntMthdCdgSys.substring(this.rskAssmntMthdCdgSys.length() - 1).equals("[")) {
+	        	this.rskAssmntMthdCdgSys = this.rskAssmntMthdCdgSys+rskAssmntMthdCdgSys;
+	        } else  {
+	            this.rskAssmntMthdCdgSys = this.rskAssmntMthdCdgSys+ "," +rskAssmntMthdCdgSys;
+	        }
+        }
     }
     
     
@@ -368,6 +732,20 @@ public class RiskAssessment  implements java.io.Serializable {
         this.rskAssmntMthdCdgUsrSltd = rskAssmntMthdCdgUsrSltd;
     }
     
+    public void addRskAssmntMthdCdgUsrSltd(String rskAssmntMthdCdgUsrSltd) {
+    	if( rskAssmntMthdCdgUsrSltd != null ) {
+	    	if( this.rskAssmntMthdCdgUsrSltd == null ) {
+	        	this.rskAssmntMthdCdgUsrSltd = rskAssmntMthdCdgUsrSltd;
+	        } else if(this.rskAssmntMthdCdgUsrSltd.substring(this.rskAssmntMthdCdgUsrSltd.length() - 1).equals("]") & rskAssmntMthdCdgUsrSltd.equals("[")) {
+	        	this.rskAssmntMthdCdgUsrSltd = this.rskAssmntMthdCdgUsrSltd+ "," + rskAssmntMthdCdgUsrSltd;
+	        } else if(rskAssmntMthdCdgUsrSltd.equals("[") | rskAssmntMthdCdgUsrSltd.equals("]") | this.rskAssmntMthdCdgUsrSltd.substring(this.rskAssmntMthdCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.rskAssmntMthdCdgUsrSltd = this.rskAssmntMthdCdgUsrSltd+rskAssmntMthdCdgUsrSltd;
+	        } else  {
+	            this.rskAssmntMthdCdgUsrSltd = this.rskAssmntMthdCdgUsrSltd+ "," +rskAssmntMthdCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getRskAssmntMthdCdgVrsn() {
@@ -376,6 +754,20 @@ public class RiskAssessment  implements java.io.Serializable {
     
     public void setRskAssmntMthdCdgVrsn(String rskAssmntMthdCdgVrsn) {
         this.rskAssmntMthdCdgVrsn = rskAssmntMthdCdgVrsn;
+    }
+    
+    public void addRskAssmntMthdCdgVrsn(String rskAssmntMthdCdgVrsn) {
+    	if( rskAssmntMthdCdgVrsn != null ) {
+	    	if( this.rskAssmntMthdCdgVrsn == null ) {
+	        	this.rskAssmntMthdCdgVrsn = rskAssmntMthdCdgVrsn;
+	        } else if(this.rskAssmntMthdCdgVrsn.substring(this.rskAssmntMthdCdgVrsn.length() - 1).equals("]") & rskAssmntMthdCdgVrsn.equals("[")) {
+	        	this.rskAssmntMthdCdgVrsn = this.rskAssmntMthdCdgVrsn+ "," + rskAssmntMthdCdgVrsn;
+	        } else if(rskAssmntMthdCdgVrsn.equals("[") | rskAssmntMthdCdgVrsn.equals("]") | this.rskAssmntMthdCdgVrsn.substring(this.rskAssmntMthdCdgVrsn.length() - 1).equals("[")) {
+	        	this.rskAssmntMthdCdgVrsn = this.rskAssmntMthdCdgVrsn+rskAssmntMthdCdgVrsn;
+	        } else  {
+	            this.rskAssmntMthdCdgVrsn = this.rskAssmntMthdCdgVrsn+ "," +rskAssmntMthdCdgVrsn;
+	        }
+        }
     }
     
     
@@ -388,6 +780,20 @@ public class RiskAssessment  implements java.io.Serializable {
         this.rskAssmntMthdTxt = rskAssmntMthdTxt;
     }
     
+    public void addRskAssmntMthdTxt(String rskAssmntMthdTxt) {
+    	if( rskAssmntMthdTxt != null ) {
+	    	if( this.rskAssmntMthdTxt == null ) {
+	        	this.rskAssmntMthdTxt = rskAssmntMthdTxt;
+	        } else if(this.rskAssmntMthdTxt.substring(this.rskAssmntMthdTxt.length() - 1).equals("]") & rskAssmntMthdTxt.equals("[")) {
+	        	this.rskAssmntMthdTxt = this.rskAssmntMthdTxt+ "," + rskAssmntMthdTxt;
+	        } else if(rskAssmntMthdTxt.equals("[") | rskAssmntMthdTxt.equals("]") | this.rskAssmntMthdTxt.substring(this.rskAssmntMthdTxt.length() - 1).equals("[")) {
+	        	this.rskAssmntMthdTxt = this.rskAssmntMthdTxt+rskAssmntMthdTxt;
+	        } else  {
+	            this.rskAssmntMthdTxt = this.rskAssmntMthdTxt+ "," +rskAssmntMthdTxt;
+	        }
+        }
+    }
+    
     
     
     public String getRskAssmntMitigation() {
@@ -396,6 +802,20 @@ public class RiskAssessment  implements java.io.Serializable {
     
     public void setRskAssmntMitigation(String rskAssmntMitigation) {
         this.rskAssmntMitigation = rskAssmntMitigation;
+    }
+    
+    public void addRskAssmntMitigation(String rskAssmntMitigation) {
+    	if( rskAssmntMitigation != null ) {
+	    	if( this.rskAssmntMitigation == null ) {
+	        	this.rskAssmntMitigation = rskAssmntMitigation;
+	        } else if(this.rskAssmntMitigation.substring(this.rskAssmntMitigation.length() - 1).equals("]") & rskAssmntMitigation.equals("[")) {
+	        	this.rskAssmntMitigation = this.rskAssmntMitigation+ "," + rskAssmntMitigation;
+	        } else if(rskAssmntMitigation.equals("[") | rskAssmntMitigation.equals("]") | this.rskAssmntMitigation.substring(this.rskAssmntMitigation.length() - 1).equals("[")) {
+	        	this.rskAssmntMitigation = this.rskAssmntMitigation+rskAssmntMitigation;
+	        } else  {
+	            this.rskAssmntMitigation = this.rskAssmntMitigation+ "," +rskAssmntMitigation;
+	        }
+        }
     }
     
     
@@ -408,6 +828,20 @@ public class RiskAssessment  implements java.io.Serializable {
         this.rskAssmntNtAthrRfrnc = rskAssmntNtAthrRfrnc;
     }
     
+    public void addRskAssmntNtAthrRfrnc(String rskAssmntNtAthrRfrnc) {
+    	if( rskAssmntNtAthrRfrnc != null ) {
+	    	if( this.rskAssmntNtAthrRfrnc == null ) {
+	        	this.rskAssmntNtAthrRfrnc = rskAssmntNtAthrRfrnc;
+	        } else if(this.rskAssmntNtAthrRfrnc.substring(this.rskAssmntNtAthrRfrnc.length() - 1).equals("]") & rskAssmntNtAthrRfrnc.equals("[")) {
+	        	this.rskAssmntNtAthrRfrnc = this.rskAssmntNtAthrRfrnc+ "," + rskAssmntNtAthrRfrnc;
+	        } else if(rskAssmntNtAthrRfrnc.equals("[") | rskAssmntNtAthrRfrnc.equals("]") | this.rskAssmntNtAthrRfrnc.substring(this.rskAssmntNtAthrRfrnc.length() - 1).equals("[")) {
+	        	this.rskAssmntNtAthrRfrnc = this.rskAssmntNtAthrRfrnc+rskAssmntNtAthrRfrnc;
+	        } else  {
+	            this.rskAssmntNtAthrRfrnc = this.rskAssmntNtAthrRfrnc+ "," +rskAssmntNtAthrRfrnc;
+	        }
+        }
+    }
+    
     
     
     public String getRskAssmntNtAthrStrgTyp() {
@@ -416,6 +850,20 @@ public class RiskAssessment  implements java.io.Serializable {
     
     public void setRskAssmntNtAthrStrgTyp(String rskAssmntNtAthrStrgTyp) {
         this.rskAssmntNtAthrStrgTyp = rskAssmntNtAthrStrgTyp;
+    }
+    
+    public void addRskAssmntNtAthrStrgTyp(String rskAssmntNtAthrStrgTyp) {
+    	if( rskAssmntNtAthrStrgTyp != null ) {
+	    	if( this.rskAssmntNtAthrStrgTyp == null ) {
+	        	this.rskAssmntNtAthrStrgTyp = rskAssmntNtAthrStrgTyp;
+	        } else if(this.rskAssmntNtAthrStrgTyp.substring(this.rskAssmntNtAthrStrgTyp.length() - 1).equals("]") & rskAssmntNtAthrStrgTyp.equals("[")) {
+	        	this.rskAssmntNtAthrStrgTyp = this.rskAssmntNtAthrStrgTyp+ "," + rskAssmntNtAthrStrgTyp;
+	        } else if(rskAssmntNtAthrStrgTyp.equals("[") | rskAssmntNtAthrStrgTyp.equals("]") | this.rskAssmntNtAthrStrgTyp.substring(this.rskAssmntNtAthrStrgTyp.length() - 1).equals("[")) {
+	        	this.rskAssmntNtAthrStrgTyp = this.rskAssmntNtAthrStrgTyp+rskAssmntNtAthrStrgTyp;
+	        } else  {
+	            this.rskAssmntNtAthrStrgTyp = this.rskAssmntNtAthrStrgTyp+ "," +rskAssmntNtAthrStrgTyp;
+	        }
+        }
     }
     
     
@@ -428,6 +876,20 @@ public class RiskAssessment  implements java.io.Serializable {
         this.rskAssmntNtTxt = rskAssmntNtTxt;
     }
     
+    public void addRskAssmntNtTxt(String rskAssmntNtTxt) {
+    	if( rskAssmntNtTxt != null ) {
+	    	if( this.rskAssmntNtTxt == null ) {
+	        	this.rskAssmntNtTxt = rskAssmntNtTxt;
+	        } else if(this.rskAssmntNtTxt.substring(this.rskAssmntNtTxt.length() - 1).equals("]") & rskAssmntNtTxt.equals("[")) {
+	        	this.rskAssmntNtTxt = this.rskAssmntNtTxt+ "," + rskAssmntNtTxt;
+	        } else if(rskAssmntNtTxt.equals("[") | rskAssmntNtTxt.equals("]") | this.rskAssmntNtTxt.substring(this.rskAssmntNtTxt.length() - 1).equals("[")) {
+	        	this.rskAssmntNtTxt = this.rskAssmntNtTxt+rskAssmntNtTxt;
+	        } else  {
+	            this.rskAssmntNtTxt = this.rskAssmntNtTxt+ "," +rskAssmntNtTxt;
+	        }
+        }
+    }
+    
     
     
     public String getRskAssmntNtTime() {
@@ -436,6 +898,20 @@ public class RiskAssessment  implements java.io.Serializable {
     
     public void setRskAssmntNtTime(String rskAssmntNtTime) {
         this.rskAssmntNtTime = rskAssmntNtTime;
+    }
+    
+    public void addRskAssmntNtTime(String rskAssmntNtTime) {
+    	if( rskAssmntNtTime != null ) {
+	    	if( this.rskAssmntNtTime == null ) {
+	        	this.rskAssmntNtTime = rskAssmntNtTime;
+	        } else if(this.rskAssmntNtTime.substring(this.rskAssmntNtTime.length() - 1).equals("]") & rskAssmntNtTime.equals("[")) {
+	        	this.rskAssmntNtTime = this.rskAssmntNtTime+ "," + rskAssmntNtTime;
+	        } else if(rskAssmntNtTime.equals("[") | rskAssmntNtTime.equals("]") | this.rskAssmntNtTime.substring(this.rskAssmntNtTime.length() - 1).equals("[")) {
+	        	this.rskAssmntNtTime = this.rskAssmntNtTime+rskAssmntNtTime;
+	        } else  {
+	            this.rskAssmntNtTime = this.rskAssmntNtTime+ "," +rskAssmntNtTime;
+	        }
+        }
     }
     
     
@@ -448,6 +924,20 @@ public class RiskAssessment  implements java.io.Serializable {
         this.rskAssmntOccrnceDtTimeTyp = rskAssmntOccrnceDtTimeTyp;
     }
     
+    public void addRskAssmntOccrnceDtTimeTyp(String rskAssmntOccrnceDtTimeTyp) {
+    	if( rskAssmntOccrnceDtTimeTyp != null ) {
+	    	if( this.rskAssmntOccrnceDtTimeTyp == null ) {
+	        	this.rskAssmntOccrnceDtTimeTyp = rskAssmntOccrnceDtTimeTyp;
+	        } else if(this.rskAssmntOccrnceDtTimeTyp.substring(this.rskAssmntOccrnceDtTimeTyp.length() - 1).equals("]") & rskAssmntOccrnceDtTimeTyp.equals("[")) {
+	        	this.rskAssmntOccrnceDtTimeTyp = this.rskAssmntOccrnceDtTimeTyp+ "," + rskAssmntOccrnceDtTimeTyp;
+	        } else if(rskAssmntOccrnceDtTimeTyp.equals("[") | rskAssmntOccrnceDtTimeTyp.equals("]") | this.rskAssmntOccrnceDtTimeTyp.substring(this.rskAssmntOccrnceDtTimeTyp.length() - 1).equals("[")) {
+	        	this.rskAssmntOccrnceDtTimeTyp = this.rskAssmntOccrnceDtTimeTyp+rskAssmntOccrnceDtTimeTyp;
+	        } else  {
+	            this.rskAssmntOccrnceDtTimeTyp = this.rskAssmntOccrnceDtTimeTyp+ "," +rskAssmntOccrnceDtTimeTyp;
+	        }
+        }
+    }
+    
     
     
     public String getRskAssmntOccrncePrdEnd() {
@@ -456,6 +946,20 @@ public class RiskAssessment  implements java.io.Serializable {
     
     public void setRskAssmntOccrncePrdEnd(String rskAssmntOccrncePrdEnd) {
         this.rskAssmntOccrncePrdEnd = rskAssmntOccrncePrdEnd;
+    }
+    
+    public void addRskAssmntOccrncePrdEnd(String rskAssmntOccrncePrdEnd) {
+    	if( rskAssmntOccrncePrdEnd != null ) {
+	    	if( this.rskAssmntOccrncePrdEnd == null ) {
+	        	this.rskAssmntOccrncePrdEnd = rskAssmntOccrncePrdEnd;
+	        } else if(this.rskAssmntOccrncePrdEnd.substring(this.rskAssmntOccrncePrdEnd.length() - 1).equals("]") & rskAssmntOccrncePrdEnd.equals("[")) {
+	        	this.rskAssmntOccrncePrdEnd = this.rskAssmntOccrncePrdEnd+ "," + rskAssmntOccrncePrdEnd;
+	        } else if(rskAssmntOccrncePrdEnd.equals("[") | rskAssmntOccrncePrdEnd.equals("]") | this.rskAssmntOccrncePrdEnd.substring(this.rskAssmntOccrncePrdEnd.length() - 1).equals("[")) {
+	        	this.rskAssmntOccrncePrdEnd = this.rskAssmntOccrncePrdEnd+rskAssmntOccrncePrdEnd;
+	        } else  {
+	            this.rskAssmntOccrncePrdEnd = this.rskAssmntOccrncePrdEnd+ "," +rskAssmntOccrncePrdEnd;
+	        }
+        }
     }
     
     
@@ -468,6 +972,20 @@ public class RiskAssessment  implements java.io.Serializable {
         this.rskAssmntOccrncePrdStrt = rskAssmntOccrncePrdStrt;
     }
     
+    public void addRskAssmntOccrncePrdStrt(String rskAssmntOccrncePrdStrt) {
+    	if( rskAssmntOccrncePrdStrt != null ) {
+	    	if( this.rskAssmntOccrncePrdStrt == null ) {
+	        	this.rskAssmntOccrncePrdStrt = rskAssmntOccrncePrdStrt;
+	        } else if(this.rskAssmntOccrncePrdStrt.substring(this.rskAssmntOccrncePrdStrt.length() - 1).equals("]") & rskAssmntOccrncePrdStrt.equals("[")) {
+	        	this.rskAssmntOccrncePrdStrt = this.rskAssmntOccrncePrdStrt+ "," + rskAssmntOccrncePrdStrt;
+	        } else if(rskAssmntOccrncePrdStrt.equals("[") | rskAssmntOccrncePrdStrt.equals("]") | this.rskAssmntOccrncePrdStrt.substring(this.rskAssmntOccrncePrdStrt.length() - 1).equals("[")) {
+	        	this.rskAssmntOccrncePrdStrt = this.rskAssmntOccrncePrdStrt+rskAssmntOccrncePrdStrt;
+	        } else  {
+	            this.rskAssmntOccrncePrdStrt = this.rskAssmntOccrncePrdStrt+ "," +rskAssmntOccrncePrdStrt;
+	        }
+        }
+    }
+    
     
     
     public String getRskAssmntParent() {
@@ -476,6 +994,20 @@ public class RiskAssessment  implements java.io.Serializable {
     
     public void setRskAssmntParent(String rskAssmntParent) {
         this.rskAssmntParent = rskAssmntParent;
+    }
+    
+    public void addRskAssmntParent(String rskAssmntParent) {
+    	if( rskAssmntParent != null ) {
+	    	if( this.rskAssmntParent == null ) {
+	        	this.rskAssmntParent = rskAssmntParent;
+	        } else if(this.rskAssmntParent.substring(this.rskAssmntParent.length() - 1).equals("]") & rskAssmntParent.equals("[")) {
+	        	this.rskAssmntParent = this.rskAssmntParent+ "," + rskAssmntParent;
+	        } else if(rskAssmntParent.equals("[") | rskAssmntParent.equals("]") | this.rskAssmntParent.substring(this.rskAssmntParent.length() - 1).equals("[")) {
+	        	this.rskAssmntParent = this.rskAssmntParent+rskAssmntParent;
+	        } else  {
+	            this.rskAssmntParent = this.rskAssmntParent+ "," +rskAssmntParent;
+	        }
+        }
     }
     
     
@@ -488,6 +1020,20 @@ public class RiskAssessment  implements java.io.Serializable {
         this.rskAssmntPrfrmr = rskAssmntPrfrmr;
     }
     
+    public void addRskAssmntPrfrmr(String rskAssmntPrfrmr) {
+    	if( rskAssmntPrfrmr != null ) {
+	    	if( this.rskAssmntPrfrmr == null ) {
+	        	this.rskAssmntPrfrmr = rskAssmntPrfrmr;
+	        } else if(this.rskAssmntPrfrmr.substring(this.rskAssmntPrfrmr.length() - 1).equals("]") & rskAssmntPrfrmr.equals("[")) {
+	        	this.rskAssmntPrfrmr = this.rskAssmntPrfrmr+ "," + rskAssmntPrfrmr;
+	        } else if(rskAssmntPrfrmr.equals("[") | rskAssmntPrfrmr.equals("]") | this.rskAssmntPrfrmr.substring(this.rskAssmntPrfrmr.length() - 1).equals("[")) {
+	        	this.rskAssmntPrfrmr = this.rskAssmntPrfrmr+rskAssmntPrfrmr;
+	        } else  {
+	            this.rskAssmntPrfrmr = this.rskAssmntPrfrmr+ "," +rskAssmntPrfrmr;
+	        }
+        }
+    }
+    
     
     
     public String getRskAssmntPredictionOutcomeCdgCd() {
@@ -496,6 +1042,20 @@ public class RiskAssessment  implements java.io.Serializable {
     
     public void setRskAssmntPredictionOutcomeCdgCd(String rskAssmntPredictionOutcomeCdgCd) {
         this.rskAssmntPredictionOutcomeCdgCd = rskAssmntPredictionOutcomeCdgCd;
+    }
+    
+    public void addRskAssmntPredictionOutcomeCdgCd(String rskAssmntPredictionOutcomeCdgCd) {
+    	if( rskAssmntPredictionOutcomeCdgCd != null ) {
+	    	if( this.rskAssmntPredictionOutcomeCdgCd == null ) {
+	        	this.rskAssmntPredictionOutcomeCdgCd = rskAssmntPredictionOutcomeCdgCd;
+	        } else if(this.rskAssmntPredictionOutcomeCdgCd.substring(this.rskAssmntPredictionOutcomeCdgCd.length() - 1).equals("]") & rskAssmntPredictionOutcomeCdgCd.equals("[")) {
+	        	this.rskAssmntPredictionOutcomeCdgCd = this.rskAssmntPredictionOutcomeCdgCd+ "," + rskAssmntPredictionOutcomeCdgCd;
+	        } else if(rskAssmntPredictionOutcomeCdgCd.equals("[") | rskAssmntPredictionOutcomeCdgCd.equals("]") | this.rskAssmntPredictionOutcomeCdgCd.substring(this.rskAssmntPredictionOutcomeCdgCd.length() - 1).equals("[")) {
+	        	this.rskAssmntPredictionOutcomeCdgCd = this.rskAssmntPredictionOutcomeCdgCd+rskAssmntPredictionOutcomeCdgCd;
+	        } else  {
+	            this.rskAssmntPredictionOutcomeCdgCd = this.rskAssmntPredictionOutcomeCdgCd+ "," +rskAssmntPredictionOutcomeCdgCd;
+	        }
+        }
     }
     
     
@@ -508,6 +1068,20 @@ public class RiskAssessment  implements java.io.Serializable {
         this.rskAssmntPredictionOutcomeCdgDsply = rskAssmntPredictionOutcomeCdgDsply;
     }
     
+    public void addRskAssmntPredictionOutcomeCdgDsply(String rskAssmntPredictionOutcomeCdgDsply) {
+    	if( rskAssmntPredictionOutcomeCdgDsply != null ) {
+	    	if( this.rskAssmntPredictionOutcomeCdgDsply == null ) {
+	        	this.rskAssmntPredictionOutcomeCdgDsply = rskAssmntPredictionOutcomeCdgDsply;
+	        } else if(this.rskAssmntPredictionOutcomeCdgDsply.substring(this.rskAssmntPredictionOutcomeCdgDsply.length() - 1).equals("]") & rskAssmntPredictionOutcomeCdgDsply.equals("[")) {
+	        	this.rskAssmntPredictionOutcomeCdgDsply = this.rskAssmntPredictionOutcomeCdgDsply+ "," + rskAssmntPredictionOutcomeCdgDsply;
+	        } else if(rskAssmntPredictionOutcomeCdgDsply.equals("[") | rskAssmntPredictionOutcomeCdgDsply.equals("]") | this.rskAssmntPredictionOutcomeCdgDsply.substring(this.rskAssmntPredictionOutcomeCdgDsply.length() - 1).equals("[")) {
+	        	this.rskAssmntPredictionOutcomeCdgDsply = this.rskAssmntPredictionOutcomeCdgDsply+rskAssmntPredictionOutcomeCdgDsply;
+	        } else  {
+	            this.rskAssmntPredictionOutcomeCdgDsply = this.rskAssmntPredictionOutcomeCdgDsply+ "," +rskAssmntPredictionOutcomeCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getRskAssmntPredictionOutcomeCdgSys() {
@@ -516,6 +1090,20 @@ public class RiskAssessment  implements java.io.Serializable {
     
     public void setRskAssmntPredictionOutcomeCdgSys(String rskAssmntPredictionOutcomeCdgSys) {
         this.rskAssmntPredictionOutcomeCdgSys = rskAssmntPredictionOutcomeCdgSys;
+    }
+    
+    public void addRskAssmntPredictionOutcomeCdgSys(String rskAssmntPredictionOutcomeCdgSys) {
+    	if( rskAssmntPredictionOutcomeCdgSys != null ) {
+	    	if( this.rskAssmntPredictionOutcomeCdgSys == null ) {
+	        	this.rskAssmntPredictionOutcomeCdgSys = rskAssmntPredictionOutcomeCdgSys;
+	        } else if(this.rskAssmntPredictionOutcomeCdgSys.substring(this.rskAssmntPredictionOutcomeCdgSys.length() - 1).equals("]") & rskAssmntPredictionOutcomeCdgSys.equals("[")) {
+	        	this.rskAssmntPredictionOutcomeCdgSys = this.rskAssmntPredictionOutcomeCdgSys+ "," + rskAssmntPredictionOutcomeCdgSys;
+	        } else if(rskAssmntPredictionOutcomeCdgSys.equals("[") | rskAssmntPredictionOutcomeCdgSys.equals("]") | this.rskAssmntPredictionOutcomeCdgSys.substring(this.rskAssmntPredictionOutcomeCdgSys.length() - 1).equals("[")) {
+	        	this.rskAssmntPredictionOutcomeCdgSys = this.rskAssmntPredictionOutcomeCdgSys+rskAssmntPredictionOutcomeCdgSys;
+	        } else  {
+	            this.rskAssmntPredictionOutcomeCdgSys = this.rskAssmntPredictionOutcomeCdgSys+ "," +rskAssmntPredictionOutcomeCdgSys;
+	        }
+        }
     }
     
     
@@ -528,6 +1116,20 @@ public class RiskAssessment  implements java.io.Serializable {
         this.rskAssmntPredictionOutcomeCdgUsrSltd = rskAssmntPredictionOutcomeCdgUsrSltd;
     }
     
+    public void addRskAssmntPredictionOutcomeCdgUsrSltd(String rskAssmntPredictionOutcomeCdgUsrSltd) {
+    	if( rskAssmntPredictionOutcomeCdgUsrSltd != null ) {
+	    	if( this.rskAssmntPredictionOutcomeCdgUsrSltd == null ) {
+	        	this.rskAssmntPredictionOutcomeCdgUsrSltd = rskAssmntPredictionOutcomeCdgUsrSltd;
+	        } else if(this.rskAssmntPredictionOutcomeCdgUsrSltd.substring(this.rskAssmntPredictionOutcomeCdgUsrSltd.length() - 1).equals("]") & rskAssmntPredictionOutcomeCdgUsrSltd.equals("[")) {
+	        	this.rskAssmntPredictionOutcomeCdgUsrSltd = this.rskAssmntPredictionOutcomeCdgUsrSltd+ "," + rskAssmntPredictionOutcomeCdgUsrSltd;
+	        } else if(rskAssmntPredictionOutcomeCdgUsrSltd.equals("[") | rskAssmntPredictionOutcomeCdgUsrSltd.equals("]") | this.rskAssmntPredictionOutcomeCdgUsrSltd.substring(this.rskAssmntPredictionOutcomeCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.rskAssmntPredictionOutcomeCdgUsrSltd = this.rskAssmntPredictionOutcomeCdgUsrSltd+rskAssmntPredictionOutcomeCdgUsrSltd;
+	        } else  {
+	            this.rskAssmntPredictionOutcomeCdgUsrSltd = this.rskAssmntPredictionOutcomeCdgUsrSltd+ "," +rskAssmntPredictionOutcomeCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getRskAssmntPredictionOutcomeCdgVrsn() {
@@ -536,6 +1138,20 @@ public class RiskAssessment  implements java.io.Serializable {
     
     public void setRskAssmntPredictionOutcomeCdgVrsn(String rskAssmntPredictionOutcomeCdgVrsn) {
         this.rskAssmntPredictionOutcomeCdgVrsn = rskAssmntPredictionOutcomeCdgVrsn;
+    }
+    
+    public void addRskAssmntPredictionOutcomeCdgVrsn(String rskAssmntPredictionOutcomeCdgVrsn) {
+    	if( rskAssmntPredictionOutcomeCdgVrsn != null ) {
+	    	if( this.rskAssmntPredictionOutcomeCdgVrsn == null ) {
+	        	this.rskAssmntPredictionOutcomeCdgVrsn = rskAssmntPredictionOutcomeCdgVrsn;
+	        } else if(this.rskAssmntPredictionOutcomeCdgVrsn.substring(this.rskAssmntPredictionOutcomeCdgVrsn.length() - 1).equals("]") & rskAssmntPredictionOutcomeCdgVrsn.equals("[")) {
+	        	this.rskAssmntPredictionOutcomeCdgVrsn = this.rskAssmntPredictionOutcomeCdgVrsn+ "," + rskAssmntPredictionOutcomeCdgVrsn;
+	        } else if(rskAssmntPredictionOutcomeCdgVrsn.equals("[") | rskAssmntPredictionOutcomeCdgVrsn.equals("]") | this.rskAssmntPredictionOutcomeCdgVrsn.substring(this.rskAssmntPredictionOutcomeCdgVrsn.length() - 1).equals("[")) {
+	        	this.rskAssmntPredictionOutcomeCdgVrsn = this.rskAssmntPredictionOutcomeCdgVrsn+rskAssmntPredictionOutcomeCdgVrsn;
+	        } else  {
+	            this.rskAssmntPredictionOutcomeCdgVrsn = this.rskAssmntPredictionOutcomeCdgVrsn+ "," +rskAssmntPredictionOutcomeCdgVrsn;
+	        }
+        }
     }
     
     
@@ -548,6 +1164,20 @@ public class RiskAssessment  implements java.io.Serializable {
         this.rskAssmntPredictionOutcomeTxt = rskAssmntPredictionOutcomeTxt;
     }
     
+    public void addRskAssmntPredictionOutcomeTxt(String rskAssmntPredictionOutcomeTxt) {
+    	if( rskAssmntPredictionOutcomeTxt != null ) {
+	    	if( this.rskAssmntPredictionOutcomeTxt == null ) {
+	        	this.rskAssmntPredictionOutcomeTxt = rskAssmntPredictionOutcomeTxt;
+	        } else if(this.rskAssmntPredictionOutcomeTxt.substring(this.rskAssmntPredictionOutcomeTxt.length() - 1).equals("]") & rskAssmntPredictionOutcomeTxt.equals("[")) {
+	        	this.rskAssmntPredictionOutcomeTxt = this.rskAssmntPredictionOutcomeTxt+ "," + rskAssmntPredictionOutcomeTxt;
+	        } else if(rskAssmntPredictionOutcomeTxt.equals("[") | rskAssmntPredictionOutcomeTxt.equals("]") | this.rskAssmntPredictionOutcomeTxt.substring(this.rskAssmntPredictionOutcomeTxt.length() - 1).equals("[")) {
+	        	this.rskAssmntPredictionOutcomeTxt = this.rskAssmntPredictionOutcomeTxt+rskAssmntPredictionOutcomeTxt;
+	        } else  {
+	            this.rskAssmntPredictionOutcomeTxt = this.rskAssmntPredictionOutcomeTxt+ "," +rskAssmntPredictionOutcomeTxt;
+	        }
+        }
+    }
+    
     
     
     public String getRskAssmntPredictionProbabilityDecimalTyp() {
@@ -556,6 +1186,20 @@ public class RiskAssessment  implements java.io.Serializable {
     
     public void setRskAssmntPredictionProbabilityDecimalTyp(String rskAssmntPredictionProbabilityDecimalTyp) {
         this.rskAssmntPredictionProbabilityDecimalTyp = rskAssmntPredictionProbabilityDecimalTyp;
+    }
+    
+    public void addRskAssmntPredictionProbabilityDecimalTyp(String rskAssmntPredictionProbabilityDecimalTyp) {
+    	if( rskAssmntPredictionProbabilityDecimalTyp != null ) {
+	    	if( this.rskAssmntPredictionProbabilityDecimalTyp == null ) {
+	        	this.rskAssmntPredictionProbabilityDecimalTyp = rskAssmntPredictionProbabilityDecimalTyp;
+	        } else if(this.rskAssmntPredictionProbabilityDecimalTyp.substring(this.rskAssmntPredictionProbabilityDecimalTyp.length() - 1).equals("]") & rskAssmntPredictionProbabilityDecimalTyp.equals("[")) {
+	        	this.rskAssmntPredictionProbabilityDecimalTyp = this.rskAssmntPredictionProbabilityDecimalTyp+ "," + rskAssmntPredictionProbabilityDecimalTyp;
+	        } else if(rskAssmntPredictionProbabilityDecimalTyp.equals("[") | rskAssmntPredictionProbabilityDecimalTyp.equals("]") | this.rskAssmntPredictionProbabilityDecimalTyp.substring(this.rskAssmntPredictionProbabilityDecimalTyp.length() - 1).equals("[")) {
+	        	this.rskAssmntPredictionProbabilityDecimalTyp = this.rskAssmntPredictionProbabilityDecimalTyp+rskAssmntPredictionProbabilityDecimalTyp;
+	        } else  {
+	            this.rskAssmntPredictionProbabilityDecimalTyp = this.rskAssmntPredictionProbabilityDecimalTyp+ "," +rskAssmntPredictionProbabilityDecimalTyp;
+	        }
+        }
     }
     
     
@@ -568,6 +1212,20 @@ public class RiskAssessment  implements java.io.Serializable {
         this.rskAssmntPredictionProbabilityRngHiCd = rskAssmntPredictionProbabilityRngHiCd;
     }
     
+    public void addRskAssmntPredictionProbabilityRngHiCd(String rskAssmntPredictionProbabilityRngHiCd) {
+    	if( rskAssmntPredictionProbabilityRngHiCd != null ) {
+	    	if( this.rskAssmntPredictionProbabilityRngHiCd == null ) {
+	        	this.rskAssmntPredictionProbabilityRngHiCd = rskAssmntPredictionProbabilityRngHiCd;
+	        } else if(this.rskAssmntPredictionProbabilityRngHiCd.substring(this.rskAssmntPredictionProbabilityRngHiCd.length() - 1).equals("]") & rskAssmntPredictionProbabilityRngHiCd.equals("[")) {
+	        	this.rskAssmntPredictionProbabilityRngHiCd = this.rskAssmntPredictionProbabilityRngHiCd+ "," + rskAssmntPredictionProbabilityRngHiCd;
+	        } else if(rskAssmntPredictionProbabilityRngHiCd.equals("[") | rskAssmntPredictionProbabilityRngHiCd.equals("]") | this.rskAssmntPredictionProbabilityRngHiCd.substring(this.rskAssmntPredictionProbabilityRngHiCd.length() - 1).equals("[")) {
+	        	this.rskAssmntPredictionProbabilityRngHiCd = this.rskAssmntPredictionProbabilityRngHiCd+rskAssmntPredictionProbabilityRngHiCd;
+	        } else  {
+	            this.rskAssmntPredictionProbabilityRngHiCd = this.rskAssmntPredictionProbabilityRngHiCd+ "," +rskAssmntPredictionProbabilityRngHiCd;
+	        }
+        }
+    }
+    
     
     
     public String getRskAssmntPredictionProbabilityRngHiCmprtr() {
@@ -576,6 +1234,20 @@ public class RiskAssessment  implements java.io.Serializable {
     
     public void setRskAssmntPredictionProbabilityRngHiCmprtr(String rskAssmntPredictionProbabilityRngHiCmprtr) {
         this.rskAssmntPredictionProbabilityRngHiCmprtr = rskAssmntPredictionProbabilityRngHiCmprtr;
+    }
+    
+    public void addRskAssmntPredictionProbabilityRngHiCmprtr(String rskAssmntPredictionProbabilityRngHiCmprtr) {
+    	if( rskAssmntPredictionProbabilityRngHiCmprtr != null ) {
+	    	if( this.rskAssmntPredictionProbabilityRngHiCmprtr == null ) {
+	        	this.rskAssmntPredictionProbabilityRngHiCmprtr = rskAssmntPredictionProbabilityRngHiCmprtr;
+	        } else if(this.rskAssmntPredictionProbabilityRngHiCmprtr.substring(this.rskAssmntPredictionProbabilityRngHiCmprtr.length() - 1).equals("]") & rskAssmntPredictionProbabilityRngHiCmprtr.equals("[")) {
+	        	this.rskAssmntPredictionProbabilityRngHiCmprtr = this.rskAssmntPredictionProbabilityRngHiCmprtr+ "," + rskAssmntPredictionProbabilityRngHiCmprtr;
+	        } else if(rskAssmntPredictionProbabilityRngHiCmprtr.equals("[") | rskAssmntPredictionProbabilityRngHiCmprtr.equals("]") | this.rskAssmntPredictionProbabilityRngHiCmprtr.substring(this.rskAssmntPredictionProbabilityRngHiCmprtr.length() - 1).equals("[")) {
+	        	this.rskAssmntPredictionProbabilityRngHiCmprtr = this.rskAssmntPredictionProbabilityRngHiCmprtr+rskAssmntPredictionProbabilityRngHiCmprtr;
+	        } else  {
+	            this.rskAssmntPredictionProbabilityRngHiCmprtr = this.rskAssmntPredictionProbabilityRngHiCmprtr+ "," +rskAssmntPredictionProbabilityRngHiCmprtr;
+	        }
+        }
     }
     
     
@@ -588,6 +1260,20 @@ public class RiskAssessment  implements java.io.Serializable {
         this.rskAssmntPredictionProbabilityRngHiSys = rskAssmntPredictionProbabilityRngHiSys;
     }
     
+    public void addRskAssmntPredictionProbabilityRngHiSys(String rskAssmntPredictionProbabilityRngHiSys) {
+    	if( rskAssmntPredictionProbabilityRngHiSys != null ) {
+	    	if( this.rskAssmntPredictionProbabilityRngHiSys == null ) {
+	        	this.rskAssmntPredictionProbabilityRngHiSys = rskAssmntPredictionProbabilityRngHiSys;
+	        } else if(this.rskAssmntPredictionProbabilityRngHiSys.substring(this.rskAssmntPredictionProbabilityRngHiSys.length() - 1).equals("]") & rskAssmntPredictionProbabilityRngHiSys.equals("[")) {
+	        	this.rskAssmntPredictionProbabilityRngHiSys = this.rskAssmntPredictionProbabilityRngHiSys+ "," + rskAssmntPredictionProbabilityRngHiSys;
+	        } else if(rskAssmntPredictionProbabilityRngHiSys.equals("[") | rskAssmntPredictionProbabilityRngHiSys.equals("]") | this.rskAssmntPredictionProbabilityRngHiSys.substring(this.rskAssmntPredictionProbabilityRngHiSys.length() - 1).equals("[")) {
+	        	this.rskAssmntPredictionProbabilityRngHiSys = this.rskAssmntPredictionProbabilityRngHiSys+rskAssmntPredictionProbabilityRngHiSys;
+	        } else  {
+	            this.rskAssmntPredictionProbabilityRngHiSys = this.rskAssmntPredictionProbabilityRngHiSys+ "," +rskAssmntPredictionProbabilityRngHiSys;
+	        }
+        }
+    }
+    
     
     
     public String getRskAssmntPredictionProbabilityRngHiUnt() {
@@ -596,6 +1282,20 @@ public class RiskAssessment  implements java.io.Serializable {
     
     public void setRskAssmntPredictionProbabilityRngHiUnt(String rskAssmntPredictionProbabilityRngHiUnt) {
         this.rskAssmntPredictionProbabilityRngHiUnt = rskAssmntPredictionProbabilityRngHiUnt;
+    }
+    
+    public void addRskAssmntPredictionProbabilityRngHiUnt(String rskAssmntPredictionProbabilityRngHiUnt) {
+    	if( rskAssmntPredictionProbabilityRngHiUnt != null ) {
+	    	if( this.rskAssmntPredictionProbabilityRngHiUnt == null ) {
+	        	this.rskAssmntPredictionProbabilityRngHiUnt = rskAssmntPredictionProbabilityRngHiUnt;
+	        } else if(this.rskAssmntPredictionProbabilityRngHiUnt.substring(this.rskAssmntPredictionProbabilityRngHiUnt.length() - 1).equals("]") & rskAssmntPredictionProbabilityRngHiUnt.equals("[")) {
+	        	this.rskAssmntPredictionProbabilityRngHiUnt = this.rskAssmntPredictionProbabilityRngHiUnt+ "," + rskAssmntPredictionProbabilityRngHiUnt;
+	        } else if(rskAssmntPredictionProbabilityRngHiUnt.equals("[") | rskAssmntPredictionProbabilityRngHiUnt.equals("]") | this.rskAssmntPredictionProbabilityRngHiUnt.substring(this.rskAssmntPredictionProbabilityRngHiUnt.length() - 1).equals("[")) {
+	        	this.rskAssmntPredictionProbabilityRngHiUnt = this.rskAssmntPredictionProbabilityRngHiUnt+rskAssmntPredictionProbabilityRngHiUnt;
+	        } else  {
+	            this.rskAssmntPredictionProbabilityRngHiUnt = this.rskAssmntPredictionProbabilityRngHiUnt+ "," +rskAssmntPredictionProbabilityRngHiUnt;
+	        }
+        }
     }
     
     
@@ -608,6 +1308,20 @@ public class RiskAssessment  implements java.io.Serializable {
         this.rskAssmntPredictionProbabilityRngHiVl = rskAssmntPredictionProbabilityRngHiVl;
     }
     
+    public void addRskAssmntPredictionProbabilityRngHiVl(String rskAssmntPredictionProbabilityRngHiVl) {
+    	if( rskAssmntPredictionProbabilityRngHiVl != null ) {
+	    	if( this.rskAssmntPredictionProbabilityRngHiVl == null ) {
+	        	this.rskAssmntPredictionProbabilityRngHiVl = rskAssmntPredictionProbabilityRngHiVl;
+	        } else if(this.rskAssmntPredictionProbabilityRngHiVl.substring(this.rskAssmntPredictionProbabilityRngHiVl.length() - 1).equals("]") & rskAssmntPredictionProbabilityRngHiVl.equals("[")) {
+	        	this.rskAssmntPredictionProbabilityRngHiVl = this.rskAssmntPredictionProbabilityRngHiVl+ "," + rskAssmntPredictionProbabilityRngHiVl;
+	        } else if(rskAssmntPredictionProbabilityRngHiVl.equals("[") | rskAssmntPredictionProbabilityRngHiVl.equals("]") | this.rskAssmntPredictionProbabilityRngHiVl.substring(this.rskAssmntPredictionProbabilityRngHiVl.length() - 1).equals("[")) {
+	        	this.rskAssmntPredictionProbabilityRngHiVl = this.rskAssmntPredictionProbabilityRngHiVl+rskAssmntPredictionProbabilityRngHiVl;
+	        } else  {
+	            this.rskAssmntPredictionProbabilityRngHiVl = this.rskAssmntPredictionProbabilityRngHiVl+ "," +rskAssmntPredictionProbabilityRngHiVl;
+	        }
+        }
+    }
+    
     
     
     public String getRskAssmntPredictionProbabilityRngLwCd() {
@@ -616,6 +1330,20 @@ public class RiskAssessment  implements java.io.Serializable {
     
     public void setRskAssmntPredictionProbabilityRngLwCd(String rskAssmntPredictionProbabilityRngLwCd) {
         this.rskAssmntPredictionProbabilityRngLwCd = rskAssmntPredictionProbabilityRngLwCd;
+    }
+    
+    public void addRskAssmntPredictionProbabilityRngLwCd(String rskAssmntPredictionProbabilityRngLwCd) {
+    	if( rskAssmntPredictionProbabilityRngLwCd != null ) {
+	    	if( this.rskAssmntPredictionProbabilityRngLwCd == null ) {
+	        	this.rskAssmntPredictionProbabilityRngLwCd = rskAssmntPredictionProbabilityRngLwCd;
+	        } else if(this.rskAssmntPredictionProbabilityRngLwCd.substring(this.rskAssmntPredictionProbabilityRngLwCd.length() - 1).equals("]") & rskAssmntPredictionProbabilityRngLwCd.equals("[")) {
+	        	this.rskAssmntPredictionProbabilityRngLwCd = this.rskAssmntPredictionProbabilityRngLwCd+ "," + rskAssmntPredictionProbabilityRngLwCd;
+	        } else if(rskAssmntPredictionProbabilityRngLwCd.equals("[") | rskAssmntPredictionProbabilityRngLwCd.equals("]") | this.rskAssmntPredictionProbabilityRngLwCd.substring(this.rskAssmntPredictionProbabilityRngLwCd.length() - 1).equals("[")) {
+	        	this.rskAssmntPredictionProbabilityRngLwCd = this.rskAssmntPredictionProbabilityRngLwCd+rskAssmntPredictionProbabilityRngLwCd;
+	        } else  {
+	            this.rskAssmntPredictionProbabilityRngLwCd = this.rskAssmntPredictionProbabilityRngLwCd+ "," +rskAssmntPredictionProbabilityRngLwCd;
+	        }
+        }
     }
     
     
@@ -628,6 +1356,20 @@ public class RiskAssessment  implements java.io.Serializable {
         this.rskAssmntPredictionProbabilityRngLwCmprtr = rskAssmntPredictionProbabilityRngLwCmprtr;
     }
     
+    public void addRskAssmntPredictionProbabilityRngLwCmprtr(String rskAssmntPredictionProbabilityRngLwCmprtr) {
+    	if( rskAssmntPredictionProbabilityRngLwCmprtr != null ) {
+	    	if( this.rskAssmntPredictionProbabilityRngLwCmprtr == null ) {
+	        	this.rskAssmntPredictionProbabilityRngLwCmprtr = rskAssmntPredictionProbabilityRngLwCmprtr;
+	        } else if(this.rskAssmntPredictionProbabilityRngLwCmprtr.substring(this.rskAssmntPredictionProbabilityRngLwCmprtr.length() - 1).equals("]") & rskAssmntPredictionProbabilityRngLwCmprtr.equals("[")) {
+	        	this.rskAssmntPredictionProbabilityRngLwCmprtr = this.rskAssmntPredictionProbabilityRngLwCmprtr+ "," + rskAssmntPredictionProbabilityRngLwCmprtr;
+	        } else if(rskAssmntPredictionProbabilityRngLwCmprtr.equals("[") | rskAssmntPredictionProbabilityRngLwCmprtr.equals("]") | this.rskAssmntPredictionProbabilityRngLwCmprtr.substring(this.rskAssmntPredictionProbabilityRngLwCmprtr.length() - 1).equals("[")) {
+	        	this.rskAssmntPredictionProbabilityRngLwCmprtr = this.rskAssmntPredictionProbabilityRngLwCmprtr+rskAssmntPredictionProbabilityRngLwCmprtr;
+	        } else  {
+	            this.rskAssmntPredictionProbabilityRngLwCmprtr = this.rskAssmntPredictionProbabilityRngLwCmprtr+ "," +rskAssmntPredictionProbabilityRngLwCmprtr;
+	        }
+        }
+    }
+    
     
     
     public String getRskAssmntPredictionProbabilityRngLwSys() {
@@ -636,6 +1378,20 @@ public class RiskAssessment  implements java.io.Serializable {
     
     public void setRskAssmntPredictionProbabilityRngLwSys(String rskAssmntPredictionProbabilityRngLwSys) {
         this.rskAssmntPredictionProbabilityRngLwSys = rskAssmntPredictionProbabilityRngLwSys;
+    }
+    
+    public void addRskAssmntPredictionProbabilityRngLwSys(String rskAssmntPredictionProbabilityRngLwSys) {
+    	if( rskAssmntPredictionProbabilityRngLwSys != null ) {
+	    	if( this.rskAssmntPredictionProbabilityRngLwSys == null ) {
+	        	this.rskAssmntPredictionProbabilityRngLwSys = rskAssmntPredictionProbabilityRngLwSys;
+	        } else if(this.rskAssmntPredictionProbabilityRngLwSys.substring(this.rskAssmntPredictionProbabilityRngLwSys.length() - 1).equals("]") & rskAssmntPredictionProbabilityRngLwSys.equals("[")) {
+	        	this.rskAssmntPredictionProbabilityRngLwSys = this.rskAssmntPredictionProbabilityRngLwSys+ "," + rskAssmntPredictionProbabilityRngLwSys;
+	        } else if(rskAssmntPredictionProbabilityRngLwSys.equals("[") | rskAssmntPredictionProbabilityRngLwSys.equals("]") | this.rskAssmntPredictionProbabilityRngLwSys.substring(this.rskAssmntPredictionProbabilityRngLwSys.length() - 1).equals("[")) {
+	        	this.rskAssmntPredictionProbabilityRngLwSys = this.rskAssmntPredictionProbabilityRngLwSys+rskAssmntPredictionProbabilityRngLwSys;
+	        } else  {
+	            this.rskAssmntPredictionProbabilityRngLwSys = this.rskAssmntPredictionProbabilityRngLwSys+ "," +rskAssmntPredictionProbabilityRngLwSys;
+	        }
+        }
     }
     
     
@@ -648,6 +1404,20 @@ public class RiskAssessment  implements java.io.Serializable {
         this.rskAssmntPredictionProbabilityRngLwUnt = rskAssmntPredictionProbabilityRngLwUnt;
     }
     
+    public void addRskAssmntPredictionProbabilityRngLwUnt(String rskAssmntPredictionProbabilityRngLwUnt) {
+    	if( rskAssmntPredictionProbabilityRngLwUnt != null ) {
+	    	if( this.rskAssmntPredictionProbabilityRngLwUnt == null ) {
+	        	this.rskAssmntPredictionProbabilityRngLwUnt = rskAssmntPredictionProbabilityRngLwUnt;
+	        } else if(this.rskAssmntPredictionProbabilityRngLwUnt.substring(this.rskAssmntPredictionProbabilityRngLwUnt.length() - 1).equals("]") & rskAssmntPredictionProbabilityRngLwUnt.equals("[")) {
+	        	this.rskAssmntPredictionProbabilityRngLwUnt = this.rskAssmntPredictionProbabilityRngLwUnt+ "," + rskAssmntPredictionProbabilityRngLwUnt;
+	        } else if(rskAssmntPredictionProbabilityRngLwUnt.equals("[") | rskAssmntPredictionProbabilityRngLwUnt.equals("]") | this.rskAssmntPredictionProbabilityRngLwUnt.substring(this.rskAssmntPredictionProbabilityRngLwUnt.length() - 1).equals("[")) {
+	        	this.rskAssmntPredictionProbabilityRngLwUnt = this.rskAssmntPredictionProbabilityRngLwUnt+rskAssmntPredictionProbabilityRngLwUnt;
+	        } else  {
+	            this.rskAssmntPredictionProbabilityRngLwUnt = this.rskAssmntPredictionProbabilityRngLwUnt+ "," +rskAssmntPredictionProbabilityRngLwUnt;
+	        }
+        }
+    }
+    
     
     
     public String getRskAssmntPredictionProbabilityRngLwVl() {
@@ -656,6 +1426,20 @@ public class RiskAssessment  implements java.io.Serializable {
     
     public void setRskAssmntPredictionProbabilityRngLwVl(String rskAssmntPredictionProbabilityRngLwVl) {
         this.rskAssmntPredictionProbabilityRngLwVl = rskAssmntPredictionProbabilityRngLwVl;
+    }
+    
+    public void addRskAssmntPredictionProbabilityRngLwVl(String rskAssmntPredictionProbabilityRngLwVl) {
+    	if( rskAssmntPredictionProbabilityRngLwVl != null ) {
+	    	if( this.rskAssmntPredictionProbabilityRngLwVl == null ) {
+	        	this.rskAssmntPredictionProbabilityRngLwVl = rskAssmntPredictionProbabilityRngLwVl;
+	        } else if(this.rskAssmntPredictionProbabilityRngLwVl.substring(this.rskAssmntPredictionProbabilityRngLwVl.length() - 1).equals("]") & rskAssmntPredictionProbabilityRngLwVl.equals("[")) {
+	        	this.rskAssmntPredictionProbabilityRngLwVl = this.rskAssmntPredictionProbabilityRngLwVl+ "," + rskAssmntPredictionProbabilityRngLwVl;
+	        } else if(rskAssmntPredictionProbabilityRngLwVl.equals("[") | rskAssmntPredictionProbabilityRngLwVl.equals("]") | this.rskAssmntPredictionProbabilityRngLwVl.substring(this.rskAssmntPredictionProbabilityRngLwVl.length() - 1).equals("[")) {
+	        	this.rskAssmntPredictionProbabilityRngLwVl = this.rskAssmntPredictionProbabilityRngLwVl+rskAssmntPredictionProbabilityRngLwVl;
+	        } else  {
+	            this.rskAssmntPredictionProbabilityRngLwVl = this.rskAssmntPredictionProbabilityRngLwVl+ "," +rskAssmntPredictionProbabilityRngLwVl;
+	        }
+        }
     }
     
     
@@ -668,6 +1452,20 @@ public class RiskAssessment  implements java.io.Serializable {
         this.rskAssmntPredictionQualitativeRskCdgCd = rskAssmntPredictionQualitativeRskCdgCd;
     }
     
+    public void addRskAssmntPredictionQualitativeRskCdgCd(String rskAssmntPredictionQualitativeRskCdgCd) {
+    	if( rskAssmntPredictionQualitativeRskCdgCd != null ) {
+	    	if( this.rskAssmntPredictionQualitativeRskCdgCd == null ) {
+	        	this.rskAssmntPredictionQualitativeRskCdgCd = rskAssmntPredictionQualitativeRskCdgCd;
+	        } else if(this.rskAssmntPredictionQualitativeRskCdgCd.substring(this.rskAssmntPredictionQualitativeRskCdgCd.length() - 1).equals("]") & rskAssmntPredictionQualitativeRskCdgCd.equals("[")) {
+	        	this.rskAssmntPredictionQualitativeRskCdgCd = this.rskAssmntPredictionQualitativeRskCdgCd+ "," + rskAssmntPredictionQualitativeRskCdgCd;
+	        } else if(rskAssmntPredictionQualitativeRskCdgCd.equals("[") | rskAssmntPredictionQualitativeRskCdgCd.equals("]") | this.rskAssmntPredictionQualitativeRskCdgCd.substring(this.rskAssmntPredictionQualitativeRskCdgCd.length() - 1).equals("[")) {
+	        	this.rskAssmntPredictionQualitativeRskCdgCd = this.rskAssmntPredictionQualitativeRskCdgCd+rskAssmntPredictionQualitativeRskCdgCd;
+	        } else  {
+	            this.rskAssmntPredictionQualitativeRskCdgCd = this.rskAssmntPredictionQualitativeRskCdgCd+ "," +rskAssmntPredictionQualitativeRskCdgCd;
+	        }
+        }
+    }
+    
     
     
     public String getRskAssmntPredictionQualitativeRskCdgDsply() {
@@ -676,6 +1474,20 @@ public class RiskAssessment  implements java.io.Serializable {
     
     public void setRskAssmntPredictionQualitativeRskCdgDsply(String rskAssmntPredictionQualitativeRskCdgDsply) {
         this.rskAssmntPredictionQualitativeRskCdgDsply = rskAssmntPredictionQualitativeRskCdgDsply;
+    }
+    
+    public void addRskAssmntPredictionQualitativeRskCdgDsply(String rskAssmntPredictionQualitativeRskCdgDsply) {
+    	if( rskAssmntPredictionQualitativeRskCdgDsply != null ) {
+	    	if( this.rskAssmntPredictionQualitativeRskCdgDsply == null ) {
+	        	this.rskAssmntPredictionQualitativeRskCdgDsply = rskAssmntPredictionQualitativeRskCdgDsply;
+	        } else if(this.rskAssmntPredictionQualitativeRskCdgDsply.substring(this.rskAssmntPredictionQualitativeRskCdgDsply.length() - 1).equals("]") & rskAssmntPredictionQualitativeRskCdgDsply.equals("[")) {
+	        	this.rskAssmntPredictionQualitativeRskCdgDsply = this.rskAssmntPredictionQualitativeRskCdgDsply+ "," + rskAssmntPredictionQualitativeRskCdgDsply;
+	        } else if(rskAssmntPredictionQualitativeRskCdgDsply.equals("[") | rskAssmntPredictionQualitativeRskCdgDsply.equals("]") | this.rskAssmntPredictionQualitativeRskCdgDsply.substring(this.rskAssmntPredictionQualitativeRskCdgDsply.length() - 1).equals("[")) {
+	        	this.rskAssmntPredictionQualitativeRskCdgDsply = this.rskAssmntPredictionQualitativeRskCdgDsply+rskAssmntPredictionQualitativeRskCdgDsply;
+	        } else  {
+	            this.rskAssmntPredictionQualitativeRskCdgDsply = this.rskAssmntPredictionQualitativeRskCdgDsply+ "," +rskAssmntPredictionQualitativeRskCdgDsply;
+	        }
+        }
     }
     
     
@@ -688,6 +1500,20 @@ public class RiskAssessment  implements java.io.Serializable {
         this.rskAssmntPredictionQualitativeRskCdgSys = rskAssmntPredictionQualitativeRskCdgSys;
     }
     
+    public void addRskAssmntPredictionQualitativeRskCdgSys(String rskAssmntPredictionQualitativeRskCdgSys) {
+    	if( rskAssmntPredictionQualitativeRskCdgSys != null ) {
+	    	if( this.rskAssmntPredictionQualitativeRskCdgSys == null ) {
+	        	this.rskAssmntPredictionQualitativeRskCdgSys = rskAssmntPredictionQualitativeRskCdgSys;
+	        } else if(this.rskAssmntPredictionQualitativeRskCdgSys.substring(this.rskAssmntPredictionQualitativeRskCdgSys.length() - 1).equals("]") & rskAssmntPredictionQualitativeRskCdgSys.equals("[")) {
+	        	this.rskAssmntPredictionQualitativeRskCdgSys = this.rskAssmntPredictionQualitativeRskCdgSys+ "," + rskAssmntPredictionQualitativeRskCdgSys;
+	        } else if(rskAssmntPredictionQualitativeRskCdgSys.equals("[") | rskAssmntPredictionQualitativeRskCdgSys.equals("]") | this.rskAssmntPredictionQualitativeRskCdgSys.substring(this.rskAssmntPredictionQualitativeRskCdgSys.length() - 1).equals("[")) {
+	        	this.rskAssmntPredictionQualitativeRskCdgSys = this.rskAssmntPredictionQualitativeRskCdgSys+rskAssmntPredictionQualitativeRskCdgSys;
+	        } else  {
+	            this.rskAssmntPredictionQualitativeRskCdgSys = this.rskAssmntPredictionQualitativeRskCdgSys+ "," +rskAssmntPredictionQualitativeRskCdgSys;
+	        }
+        }
+    }
+    
     
     
     public String getRskAssmntPredictionQualitativeRskCdgUsrSltd() {
@@ -696,6 +1522,20 @@ public class RiskAssessment  implements java.io.Serializable {
     
     public void setRskAssmntPredictionQualitativeRskCdgUsrSltd(String rskAssmntPredictionQualitativeRskCdgUsrSltd) {
         this.rskAssmntPredictionQualitativeRskCdgUsrSltd = rskAssmntPredictionQualitativeRskCdgUsrSltd;
+    }
+    
+    public void addRskAssmntPredictionQualitativeRskCdgUsrSltd(String rskAssmntPredictionQualitativeRskCdgUsrSltd) {
+    	if( rskAssmntPredictionQualitativeRskCdgUsrSltd != null ) {
+	    	if( this.rskAssmntPredictionQualitativeRskCdgUsrSltd == null ) {
+	        	this.rskAssmntPredictionQualitativeRskCdgUsrSltd = rskAssmntPredictionQualitativeRskCdgUsrSltd;
+	        } else if(this.rskAssmntPredictionQualitativeRskCdgUsrSltd.substring(this.rskAssmntPredictionQualitativeRskCdgUsrSltd.length() - 1).equals("]") & rskAssmntPredictionQualitativeRskCdgUsrSltd.equals("[")) {
+	        	this.rskAssmntPredictionQualitativeRskCdgUsrSltd = this.rskAssmntPredictionQualitativeRskCdgUsrSltd+ "," + rskAssmntPredictionQualitativeRskCdgUsrSltd;
+	        } else if(rskAssmntPredictionQualitativeRskCdgUsrSltd.equals("[") | rskAssmntPredictionQualitativeRskCdgUsrSltd.equals("]") | this.rskAssmntPredictionQualitativeRskCdgUsrSltd.substring(this.rskAssmntPredictionQualitativeRskCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.rskAssmntPredictionQualitativeRskCdgUsrSltd = this.rskAssmntPredictionQualitativeRskCdgUsrSltd+rskAssmntPredictionQualitativeRskCdgUsrSltd;
+	        } else  {
+	            this.rskAssmntPredictionQualitativeRskCdgUsrSltd = this.rskAssmntPredictionQualitativeRskCdgUsrSltd+ "," +rskAssmntPredictionQualitativeRskCdgUsrSltd;
+	        }
+        }
     }
     
     
@@ -708,6 +1548,20 @@ public class RiskAssessment  implements java.io.Serializable {
         this.rskAssmntPredictionQualitativeRskCdgVrsn = rskAssmntPredictionQualitativeRskCdgVrsn;
     }
     
+    public void addRskAssmntPredictionQualitativeRskCdgVrsn(String rskAssmntPredictionQualitativeRskCdgVrsn) {
+    	if( rskAssmntPredictionQualitativeRskCdgVrsn != null ) {
+	    	if( this.rskAssmntPredictionQualitativeRskCdgVrsn == null ) {
+	        	this.rskAssmntPredictionQualitativeRskCdgVrsn = rskAssmntPredictionQualitativeRskCdgVrsn;
+	        } else if(this.rskAssmntPredictionQualitativeRskCdgVrsn.substring(this.rskAssmntPredictionQualitativeRskCdgVrsn.length() - 1).equals("]") & rskAssmntPredictionQualitativeRskCdgVrsn.equals("[")) {
+	        	this.rskAssmntPredictionQualitativeRskCdgVrsn = this.rskAssmntPredictionQualitativeRskCdgVrsn+ "," + rskAssmntPredictionQualitativeRskCdgVrsn;
+	        } else if(rskAssmntPredictionQualitativeRskCdgVrsn.equals("[") | rskAssmntPredictionQualitativeRskCdgVrsn.equals("]") | this.rskAssmntPredictionQualitativeRskCdgVrsn.substring(this.rskAssmntPredictionQualitativeRskCdgVrsn.length() - 1).equals("[")) {
+	        	this.rskAssmntPredictionQualitativeRskCdgVrsn = this.rskAssmntPredictionQualitativeRskCdgVrsn+rskAssmntPredictionQualitativeRskCdgVrsn;
+	        } else  {
+	            this.rskAssmntPredictionQualitativeRskCdgVrsn = this.rskAssmntPredictionQualitativeRskCdgVrsn+ "," +rskAssmntPredictionQualitativeRskCdgVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getRskAssmntPredictionQualitativeRskTxt() {
@@ -716,6 +1570,20 @@ public class RiskAssessment  implements java.io.Serializable {
     
     public void setRskAssmntPredictionQualitativeRskTxt(String rskAssmntPredictionQualitativeRskTxt) {
         this.rskAssmntPredictionQualitativeRskTxt = rskAssmntPredictionQualitativeRskTxt;
+    }
+    
+    public void addRskAssmntPredictionQualitativeRskTxt(String rskAssmntPredictionQualitativeRskTxt) {
+    	if( rskAssmntPredictionQualitativeRskTxt != null ) {
+	    	if( this.rskAssmntPredictionQualitativeRskTxt == null ) {
+	        	this.rskAssmntPredictionQualitativeRskTxt = rskAssmntPredictionQualitativeRskTxt;
+	        } else if(this.rskAssmntPredictionQualitativeRskTxt.substring(this.rskAssmntPredictionQualitativeRskTxt.length() - 1).equals("]") & rskAssmntPredictionQualitativeRskTxt.equals("[")) {
+	        	this.rskAssmntPredictionQualitativeRskTxt = this.rskAssmntPredictionQualitativeRskTxt+ "," + rskAssmntPredictionQualitativeRskTxt;
+	        } else if(rskAssmntPredictionQualitativeRskTxt.equals("[") | rskAssmntPredictionQualitativeRskTxt.equals("]") | this.rskAssmntPredictionQualitativeRskTxt.substring(this.rskAssmntPredictionQualitativeRskTxt.length() - 1).equals("[")) {
+	        	this.rskAssmntPredictionQualitativeRskTxt = this.rskAssmntPredictionQualitativeRskTxt+rskAssmntPredictionQualitativeRskTxt;
+	        } else  {
+	            this.rskAssmntPredictionQualitativeRskTxt = this.rskAssmntPredictionQualitativeRskTxt+ "," +rskAssmntPredictionQualitativeRskTxt;
+	        }
+        }
     }
     
     
@@ -728,6 +1596,20 @@ public class RiskAssessment  implements java.io.Serializable {
         this.rskAssmntPredictionRtionale = rskAssmntPredictionRtionale;
     }
     
+    public void addRskAssmntPredictionRtionale(String rskAssmntPredictionRtionale) {
+    	if( rskAssmntPredictionRtionale != null ) {
+	    	if( this.rskAssmntPredictionRtionale == null ) {
+	        	this.rskAssmntPredictionRtionale = rskAssmntPredictionRtionale;
+	        } else if(this.rskAssmntPredictionRtionale.substring(this.rskAssmntPredictionRtionale.length() - 1).equals("]") & rskAssmntPredictionRtionale.equals("[")) {
+	        	this.rskAssmntPredictionRtionale = this.rskAssmntPredictionRtionale+ "," + rskAssmntPredictionRtionale;
+	        } else if(rskAssmntPredictionRtionale.equals("[") | rskAssmntPredictionRtionale.equals("]") | this.rskAssmntPredictionRtionale.substring(this.rskAssmntPredictionRtionale.length() - 1).equals("[")) {
+	        	this.rskAssmntPredictionRtionale = this.rskAssmntPredictionRtionale+rskAssmntPredictionRtionale;
+	        } else  {
+	            this.rskAssmntPredictionRtionale = this.rskAssmntPredictionRtionale+ "," +rskAssmntPredictionRtionale;
+	        }
+        }
+    }
+    
     
     
     public String getRskAssmntPredictionRelativeRsk() {
@@ -736,6 +1618,20 @@ public class RiskAssessment  implements java.io.Serializable {
     
     public void setRskAssmntPredictionRelativeRsk(String rskAssmntPredictionRelativeRsk) {
         this.rskAssmntPredictionRelativeRsk = rskAssmntPredictionRelativeRsk;
+    }
+    
+    public void addRskAssmntPredictionRelativeRsk(String rskAssmntPredictionRelativeRsk) {
+    	if( rskAssmntPredictionRelativeRsk != null ) {
+	    	if( this.rskAssmntPredictionRelativeRsk == null ) {
+	        	this.rskAssmntPredictionRelativeRsk = rskAssmntPredictionRelativeRsk;
+	        } else if(this.rskAssmntPredictionRelativeRsk.substring(this.rskAssmntPredictionRelativeRsk.length() - 1).equals("]") & rskAssmntPredictionRelativeRsk.equals("[")) {
+	        	this.rskAssmntPredictionRelativeRsk = this.rskAssmntPredictionRelativeRsk+ "," + rskAssmntPredictionRelativeRsk;
+	        } else if(rskAssmntPredictionRelativeRsk.equals("[") | rskAssmntPredictionRelativeRsk.equals("]") | this.rskAssmntPredictionRelativeRsk.substring(this.rskAssmntPredictionRelativeRsk.length() - 1).equals("[")) {
+	        	this.rskAssmntPredictionRelativeRsk = this.rskAssmntPredictionRelativeRsk+rskAssmntPredictionRelativeRsk;
+	        } else  {
+	            this.rskAssmntPredictionRelativeRsk = this.rskAssmntPredictionRelativeRsk+ "," +rskAssmntPredictionRelativeRsk;
+	        }
+        }
     }
     
     
@@ -748,6 +1644,20 @@ public class RiskAssessment  implements java.io.Serializable {
         this.rskAssmntPredictionWhenPrdEnd = rskAssmntPredictionWhenPrdEnd;
     }
     
+    public void addRskAssmntPredictionWhenPrdEnd(String rskAssmntPredictionWhenPrdEnd) {
+    	if( rskAssmntPredictionWhenPrdEnd != null ) {
+	    	if( this.rskAssmntPredictionWhenPrdEnd == null ) {
+	        	this.rskAssmntPredictionWhenPrdEnd = rskAssmntPredictionWhenPrdEnd;
+	        } else if(this.rskAssmntPredictionWhenPrdEnd.substring(this.rskAssmntPredictionWhenPrdEnd.length() - 1).equals("]") & rskAssmntPredictionWhenPrdEnd.equals("[")) {
+	        	this.rskAssmntPredictionWhenPrdEnd = this.rskAssmntPredictionWhenPrdEnd+ "," + rskAssmntPredictionWhenPrdEnd;
+	        } else if(rskAssmntPredictionWhenPrdEnd.equals("[") | rskAssmntPredictionWhenPrdEnd.equals("]") | this.rskAssmntPredictionWhenPrdEnd.substring(this.rskAssmntPredictionWhenPrdEnd.length() - 1).equals("[")) {
+	        	this.rskAssmntPredictionWhenPrdEnd = this.rskAssmntPredictionWhenPrdEnd+rskAssmntPredictionWhenPrdEnd;
+	        } else  {
+	            this.rskAssmntPredictionWhenPrdEnd = this.rskAssmntPredictionWhenPrdEnd+ "," +rskAssmntPredictionWhenPrdEnd;
+	        }
+        }
+    }
+    
     
     
     public String getRskAssmntPredictionWhenPrdStrt() {
@@ -756,6 +1666,20 @@ public class RiskAssessment  implements java.io.Serializable {
     
     public void setRskAssmntPredictionWhenPrdStrt(String rskAssmntPredictionWhenPrdStrt) {
         this.rskAssmntPredictionWhenPrdStrt = rskAssmntPredictionWhenPrdStrt;
+    }
+    
+    public void addRskAssmntPredictionWhenPrdStrt(String rskAssmntPredictionWhenPrdStrt) {
+    	if( rskAssmntPredictionWhenPrdStrt != null ) {
+	    	if( this.rskAssmntPredictionWhenPrdStrt == null ) {
+	        	this.rskAssmntPredictionWhenPrdStrt = rskAssmntPredictionWhenPrdStrt;
+	        } else if(this.rskAssmntPredictionWhenPrdStrt.substring(this.rskAssmntPredictionWhenPrdStrt.length() - 1).equals("]") & rskAssmntPredictionWhenPrdStrt.equals("[")) {
+	        	this.rskAssmntPredictionWhenPrdStrt = this.rskAssmntPredictionWhenPrdStrt+ "," + rskAssmntPredictionWhenPrdStrt;
+	        } else if(rskAssmntPredictionWhenPrdStrt.equals("[") | rskAssmntPredictionWhenPrdStrt.equals("]") | this.rskAssmntPredictionWhenPrdStrt.substring(this.rskAssmntPredictionWhenPrdStrt.length() - 1).equals("[")) {
+	        	this.rskAssmntPredictionWhenPrdStrt = this.rskAssmntPredictionWhenPrdStrt+rskAssmntPredictionWhenPrdStrt;
+	        } else  {
+	            this.rskAssmntPredictionWhenPrdStrt = this.rskAssmntPredictionWhenPrdStrt+ "," +rskAssmntPredictionWhenPrdStrt;
+	        }
+        }
     }
     
     
@@ -768,6 +1692,20 @@ public class RiskAssessment  implements java.io.Serializable {
         this.rskAssmntPredictionWhenRngHiCd = rskAssmntPredictionWhenRngHiCd;
     }
     
+    public void addRskAssmntPredictionWhenRngHiCd(String rskAssmntPredictionWhenRngHiCd) {
+    	if( rskAssmntPredictionWhenRngHiCd != null ) {
+	    	if( this.rskAssmntPredictionWhenRngHiCd == null ) {
+	        	this.rskAssmntPredictionWhenRngHiCd = rskAssmntPredictionWhenRngHiCd;
+	        } else if(this.rskAssmntPredictionWhenRngHiCd.substring(this.rskAssmntPredictionWhenRngHiCd.length() - 1).equals("]") & rskAssmntPredictionWhenRngHiCd.equals("[")) {
+	        	this.rskAssmntPredictionWhenRngHiCd = this.rskAssmntPredictionWhenRngHiCd+ "," + rskAssmntPredictionWhenRngHiCd;
+	        } else if(rskAssmntPredictionWhenRngHiCd.equals("[") | rskAssmntPredictionWhenRngHiCd.equals("]") | this.rskAssmntPredictionWhenRngHiCd.substring(this.rskAssmntPredictionWhenRngHiCd.length() - 1).equals("[")) {
+	        	this.rskAssmntPredictionWhenRngHiCd = this.rskAssmntPredictionWhenRngHiCd+rskAssmntPredictionWhenRngHiCd;
+	        } else  {
+	            this.rskAssmntPredictionWhenRngHiCd = this.rskAssmntPredictionWhenRngHiCd+ "," +rskAssmntPredictionWhenRngHiCd;
+	        }
+        }
+    }
+    
     
     
     public String getRskAssmntPredictionWhenRngHiCmprtr() {
@@ -776,6 +1714,20 @@ public class RiskAssessment  implements java.io.Serializable {
     
     public void setRskAssmntPredictionWhenRngHiCmprtr(String rskAssmntPredictionWhenRngHiCmprtr) {
         this.rskAssmntPredictionWhenRngHiCmprtr = rskAssmntPredictionWhenRngHiCmprtr;
+    }
+    
+    public void addRskAssmntPredictionWhenRngHiCmprtr(String rskAssmntPredictionWhenRngHiCmprtr) {
+    	if( rskAssmntPredictionWhenRngHiCmprtr != null ) {
+	    	if( this.rskAssmntPredictionWhenRngHiCmprtr == null ) {
+	        	this.rskAssmntPredictionWhenRngHiCmprtr = rskAssmntPredictionWhenRngHiCmprtr;
+	        } else if(this.rskAssmntPredictionWhenRngHiCmprtr.substring(this.rskAssmntPredictionWhenRngHiCmprtr.length() - 1).equals("]") & rskAssmntPredictionWhenRngHiCmprtr.equals("[")) {
+	        	this.rskAssmntPredictionWhenRngHiCmprtr = this.rskAssmntPredictionWhenRngHiCmprtr+ "," + rskAssmntPredictionWhenRngHiCmprtr;
+	        } else if(rskAssmntPredictionWhenRngHiCmprtr.equals("[") | rskAssmntPredictionWhenRngHiCmprtr.equals("]") | this.rskAssmntPredictionWhenRngHiCmprtr.substring(this.rskAssmntPredictionWhenRngHiCmprtr.length() - 1).equals("[")) {
+	        	this.rskAssmntPredictionWhenRngHiCmprtr = this.rskAssmntPredictionWhenRngHiCmprtr+rskAssmntPredictionWhenRngHiCmprtr;
+	        } else  {
+	            this.rskAssmntPredictionWhenRngHiCmprtr = this.rskAssmntPredictionWhenRngHiCmprtr+ "," +rskAssmntPredictionWhenRngHiCmprtr;
+	        }
+        }
     }
     
     
@@ -788,6 +1740,20 @@ public class RiskAssessment  implements java.io.Serializable {
         this.rskAssmntPredictionWhenRngHiSys = rskAssmntPredictionWhenRngHiSys;
     }
     
+    public void addRskAssmntPredictionWhenRngHiSys(String rskAssmntPredictionWhenRngHiSys) {
+    	if( rskAssmntPredictionWhenRngHiSys != null ) {
+	    	if( this.rskAssmntPredictionWhenRngHiSys == null ) {
+	        	this.rskAssmntPredictionWhenRngHiSys = rskAssmntPredictionWhenRngHiSys;
+	        } else if(this.rskAssmntPredictionWhenRngHiSys.substring(this.rskAssmntPredictionWhenRngHiSys.length() - 1).equals("]") & rskAssmntPredictionWhenRngHiSys.equals("[")) {
+	        	this.rskAssmntPredictionWhenRngHiSys = this.rskAssmntPredictionWhenRngHiSys+ "," + rskAssmntPredictionWhenRngHiSys;
+	        } else if(rskAssmntPredictionWhenRngHiSys.equals("[") | rskAssmntPredictionWhenRngHiSys.equals("]") | this.rskAssmntPredictionWhenRngHiSys.substring(this.rskAssmntPredictionWhenRngHiSys.length() - 1).equals("[")) {
+	        	this.rskAssmntPredictionWhenRngHiSys = this.rskAssmntPredictionWhenRngHiSys+rskAssmntPredictionWhenRngHiSys;
+	        } else  {
+	            this.rskAssmntPredictionWhenRngHiSys = this.rskAssmntPredictionWhenRngHiSys+ "," +rskAssmntPredictionWhenRngHiSys;
+	        }
+        }
+    }
+    
     
     
     public String getRskAssmntPredictionWhenRngHiUnt() {
@@ -796,6 +1762,20 @@ public class RiskAssessment  implements java.io.Serializable {
     
     public void setRskAssmntPredictionWhenRngHiUnt(String rskAssmntPredictionWhenRngHiUnt) {
         this.rskAssmntPredictionWhenRngHiUnt = rskAssmntPredictionWhenRngHiUnt;
+    }
+    
+    public void addRskAssmntPredictionWhenRngHiUnt(String rskAssmntPredictionWhenRngHiUnt) {
+    	if( rskAssmntPredictionWhenRngHiUnt != null ) {
+	    	if( this.rskAssmntPredictionWhenRngHiUnt == null ) {
+	        	this.rskAssmntPredictionWhenRngHiUnt = rskAssmntPredictionWhenRngHiUnt;
+	        } else if(this.rskAssmntPredictionWhenRngHiUnt.substring(this.rskAssmntPredictionWhenRngHiUnt.length() - 1).equals("]") & rskAssmntPredictionWhenRngHiUnt.equals("[")) {
+	        	this.rskAssmntPredictionWhenRngHiUnt = this.rskAssmntPredictionWhenRngHiUnt+ "," + rskAssmntPredictionWhenRngHiUnt;
+	        } else if(rskAssmntPredictionWhenRngHiUnt.equals("[") | rskAssmntPredictionWhenRngHiUnt.equals("]") | this.rskAssmntPredictionWhenRngHiUnt.substring(this.rskAssmntPredictionWhenRngHiUnt.length() - 1).equals("[")) {
+	        	this.rskAssmntPredictionWhenRngHiUnt = this.rskAssmntPredictionWhenRngHiUnt+rskAssmntPredictionWhenRngHiUnt;
+	        } else  {
+	            this.rskAssmntPredictionWhenRngHiUnt = this.rskAssmntPredictionWhenRngHiUnt+ "," +rskAssmntPredictionWhenRngHiUnt;
+	        }
+        }
     }
     
     
@@ -808,6 +1788,20 @@ public class RiskAssessment  implements java.io.Serializable {
         this.rskAssmntPredictionWhenRngHiVl = rskAssmntPredictionWhenRngHiVl;
     }
     
+    public void addRskAssmntPredictionWhenRngHiVl(String rskAssmntPredictionWhenRngHiVl) {
+    	if( rskAssmntPredictionWhenRngHiVl != null ) {
+	    	if( this.rskAssmntPredictionWhenRngHiVl == null ) {
+	        	this.rskAssmntPredictionWhenRngHiVl = rskAssmntPredictionWhenRngHiVl;
+	        } else if(this.rskAssmntPredictionWhenRngHiVl.substring(this.rskAssmntPredictionWhenRngHiVl.length() - 1).equals("]") & rskAssmntPredictionWhenRngHiVl.equals("[")) {
+	        	this.rskAssmntPredictionWhenRngHiVl = this.rskAssmntPredictionWhenRngHiVl+ "," + rskAssmntPredictionWhenRngHiVl;
+	        } else if(rskAssmntPredictionWhenRngHiVl.equals("[") | rskAssmntPredictionWhenRngHiVl.equals("]") | this.rskAssmntPredictionWhenRngHiVl.substring(this.rskAssmntPredictionWhenRngHiVl.length() - 1).equals("[")) {
+	        	this.rskAssmntPredictionWhenRngHiVl = this.rskAssmntPredictionWhenRngHiVl+rskAssmntPredictionWhenRngHiVl;
+	        } else  {
+	            this.rskAssmntPredictionWhenRngHiVl = this.rskAssmntPredictionWhenRngHiVl+ "," +rskAssmntPredictionWhenRngHiVl;
+	        }
+        }
+    }
+    
     
     
     public String getRskAssmntPredictionWhenRngLwCd() {
@@ -816,6 +1810,20 @@ public class RiskAssessment  implements java.io.Serializable {
     
     public void setRskAssmntPredictionWhenRngLwCd(String rskAssmntPredictionWhenRngLwCd) {
         this.rskAssmntPredictionWhenRngLwCd = rskAssmntPredictionWhenRngLwCd;
+    }
+    
+    public void addRskAssmntPredictionWhenRngLwCd(String rskAssmntPredictionWhenRngLwCd) {
+    	if( rskAssmntPredictionWhenRngLwCd != null ) {
+	    	if( this.rskAssmntPredictionWhenRngLwCd == null ) {
+	        	this.rskAssmntPredictionWhenRngLwCd = rskAssmntPredictionWhenRngLwCd;
+	        } else if(this.rskAssmntPredictionWhenRngLwCd.substring(this.rskAssmntPredictionWhenRngLwCd.length() - 1).equals("]") & rskAssmntPredictionWhenRngLwCd.equals("[")) {
+	        	this.rskAssmntPredictionWhenRngLwCd = this.rskAssmntPredictionWhenRngLwCd+ "," + rskAssmntPredictionWhenRngLwCd;
+	        } else if(rskAssmntPredictionWhenRngLwCd.equals("[") | rskAssmntPredictionWhenRngLwCd.equals("]") | this.rskAssmntPredictionWhenRngLwCd.substring(this.rskAssmntPredictionWhenRngLwCd.length() - 1).equals("[")) {
+	        	this.rskAssmntPredictionWhenRngLwCd = this.rskAssmntPredictionWhenRngLwCd+rskAssmntPredictionWhenRngLwCd;
+	        } else  {
+	            this.rskAssmntPredictionWhenRngLwCd = this.rskAssmntPredictionWhenRngLwCd+ "," +rskAssmntPredictionWhenRngLwCd;
+	        }
+        }
     }
     
     
@@ -828,6 +1836,20 @@ public class RiskAssessment  implements java.io.Serializable {
         this.rskAssmntPredictionWhenRngLwCmprtr = rskAssmntPredictionWhenRngLwCmprtr;
     }
     
+    public void addRskAssmntPredictionWhenRngLwCmprtr(String rskAssmntPredictionWhenRngLwCmprtr) {
+    	if( rskAssmntPredictionWhenRngLwCmprtr != null ) {
+	    	if( this.rskAssmntPredictionWhenRngLwCmprtr == null ) {
+	        	this.rskAssmntPredictionWhenRngLwCmprtr = rskAssmntPredictionWhenRngLwCmprtr;
+	        } else if(this.rskAssmntPredictionWhenRngLwCmprtr.substring(this.rskAssmntPredictionWhenRngLwCmprtr.length() - 1).equals("]") & rskAssmntPredictionWhenRngLwCmprtr.equals("[")) {
+	        	this.rskAssmntPredictionWhenRngLwCmprtr = this.rskAssmntPredictionWhenRngLwCmprtr+ "," + rskAssmntPredictionWhenRngLwCmprtr;
+	        } else if(rskAssmntPredictionWhenRngLwCmprtr.equals("[") | rskAssmntPredictionWhenRngLwCmprtr.equals("]") | this.rskAssmntPredictionWhenRngLwCmprtr.substring(this.rskAssmntPredictionWhenRngLwCmprtr.length() - 1).equals("[")) {
+	        	this.rskAssmntPredictionWhenRngLwCmprtr = this.rskAssmntPredictionWhenRngLwCmprtr+rskAssmntPredictionWhenRngLwCmprtr;
+	        } else  {
+	            this.rskAssmntPredictionWhenRngLwCmprtr = this.rskAssmntPredictionWhenRngLwCmprtr+ "," +rskAssmntPredictionWhenRngLwCmprtr;
+	        }
+        }
+    }
+    
     
     
     public String getRskAssmntPredictionWhenRngLwSys() {
@@ -836,6 +1858,20 @@ public class RiskAssessment  implements java.io.Serializable {
     
     public void setRskAssmntPredictionWhenRngLwSys(String rskAssmntPredictionWhenRngLwSys) {
         this.rskAssmntPredictionWhenRngLwSys = rskAssmntPredictionWhenRngLwSys;
+    }
+    
+    public void addRskAssmntPredictionWhenRngLwSys(String rskAssmntPredictionWhenRngLwSys) {
+    	if( rskAssmntPredictionWhenRngLwSys != null ) {
+	    	if( this.rskAssmntPredictionWhenRngLwSys == null ) {
+	        	this.rskAssmntPredictionWhenRngLwSys = rskAssmntPredictionWhenRngLwSys;
+	        } else if(this.rskAssmntPredictionWhenRngLwSys.substring(this.rskAssmntPredictionWhenRngLwSys.length() - 1).equals("]") & rskAssmntPredictionWhenRngLwSys.equals("[")) {
+	        	this.rskAssmntPredictionWhenRngLwSys = this.rskAssmntPredictionWhenRngLwSys+ "," + rskAssmntPredictionWhenRngLwSys;
+	        } else if(rskAssmntPredictionWhenRngLwSys.equals("[") | rskAssmntPredictionWhenRngLwSys.equals("]") | this.rskAssmntPredictionWhenRngLwSys.substring(this.rskAssmntPredictionWhenRngLwSys.length() - 1).equals("[")) {
+	        	this.rskAssmntPredictionWhenRngLwSys = this.rskAssmntPredictionWhenRngLwSys+rskAssmntPredictionWhenRngLwSys;
+	        } else  {
+	            this.rskAssmntPredictionWhenRngLwSys = this.rskAssmntPredictionWhenRngLwSys+ "," +rskAssmntPredictionWhenRngLwSys;
+	        }
+        }
     }
     
     
@@ -848,6 +1884,20 @@ public class RiskAssessment  implements java.io.Serializable {
         this.rskAssmntPredictionWhenRngLwUnt = rskAssmntPredictionWhenRngLwUnt;
     }
     
+    public void addRskAssmntPredictionWhenRngLwUnt(String rskAssmntPredictionWhenRngLwUnt) {
+    	if( rskAssmntPredictionWhenRngLwUnt != null ) {
+	    	if( this.rskAssmntPredictionWhenRngLwUnt == null ) {
+	        	this.rskAssmntPredictionWhenRngLwUnt = rskAssmntPredictionWhenRngLwUnt;
+	        } else if(this.rskAssmntPredictionWhenRngLwUnt.substring(this.rskAssmntPredictionWhenRngLwUnt.length() - 1).equals("]") & rskAssmntPredictionWhenRngLwUnt.equals("[")) {
+	        	this.rskAssmntPredictionWhenRngLwUnt = this.rskAssmntPredictionWhenRngLwUnt+ "," + rskAssmntPredictionWhenRngLwUnt;
+	        } else if(rskAssmntPredictionWhenRngLwUnt.equals("[") | rskAssmntPredictionWhenRngLwUnt.equals("]") | this.rskAssmntPredictionWhenRngLwUnt.substring(this.rskAssmntPredictionWhenRngLwUnt.length() - 1).equals("[")) {
+	        	this.rskAssmntPredictionWhenRngLwUnt = this.rskAssmntPredictionWhenRngLwUnt+rskAssmntPredictionWhenRngLwUnt;
+	        } else  {
+	            this.rskAssmntPredictionWhenRngLwUnt = this.rskAssmntPredictionWhenRngLwUnt+ "," +rskAssmntPredictionWhenRngLwUnt;
+	        }
+        }
+    }
+    
     
     
     public String getRskAssmntPredictionWhenRngLwVl() {
@@ -856,6 +1906,20 @@ public class RiskAssessment  implements java.io.Serializable {
     
     public void setRskAssmntPredictionWhenRngLwVl(String rskAssmntPredictionWhenRngLwVl) {
         this.rskAssmntPredictionWhenRngLwVl = rskAssmntPredictionWhenRngLwVl;
+    }
+    
+    public void addRskAssmntPredictionWhenRngLwVl(String rskAssmntPredictionWhenRngLwVl) {
+    	if( rskAssmntPredictionWhenRngLwVl != null ) {
+	    	if( this.rskAssmntPredictionWhenRngLwVl == null ) {
+	        	this.rskAssmntPredictionWhenRngLwVl = rskAssmntPredictionWhenRngLwVl;
+	        } else if(this.rskAssmntPredictionWhenRngLwVl.substring(this.rskAssmntPredictionWhenRngLwVl.length() - 1).equals("]") & rskAssmntPredictionWhenRngLwVl.equals("[")) {
+	        	this.rskAssmntPredictionWhenRngLwVl = this.rskAssmntPredictionWhenRngLwVl+ "," + rskAssmntPredictionWhenRngLwVl;
+	        } else if(rskAssmntPredictionWhenRngLwVl.equals("[") | rskAssmntPredictionWhenRngLwVl.equals("]") | this.rskAssmntPredictionWhenRngLwVl.substring(this.rskAssmntPredictionWhenRngLwVl.length() - 1).equals("[")) {
+	        	this.rskAssmntPredictionWhenRngLwVl = this.rskAssmntPredictionWhenRngLwVl+rskAssmntPredictionWhenRngLwVl;
+	        } else  {
+	            this.rskAssmntPredictionWhenRngLwVl = this.rskAssmntPredictionWhenRngLwVl+ "," +rskAssmntPredictionWhenRngLwVl;
+	        }
+        }
     }
     
     
@@ -868,6 +1932,20 @@ public class RiskAssessment  implements java.io.Serializable {
         this.rskAssmntRsnCdCdgCd = rskAssmntRsnCdCdgCd;
     }
     
+    public void addRskAssmntRsnCdCdgCd(String rskAssmntRsnCdCdgCd) {
+    	if( rskAssmntRsnCdCdgCd != null ) {
+	    	if( this.rskAssmntRsnCdCdgCd == null ) {
+	        	this.rskAssmntRsnCdCdgCd = rskAssmntRsnCdCdgCd;
+	        } else if(this.rskAssmntRsnCdCdgCd.substring(this.rskAssmntRsnCdCdgCd.length() - 1).equals("]") & rskAssmntRsnCdCdgCd.equals("[")) {
+	        	this.rskAssmntRsnCdCdgCd = this.rskAssmntRsnCdCdgCd+ "," + rskAssmntRsnCdCdgCd;
+	        } else if(rskAssmntRsnCdCdgCd.equals("[") | rskAssmntRsnCdCdgCd.equals("]") | this.rskAssmntRsnCdCdgCd.substring(this.rskAssmntRsnCdCdgCd.length() - 1).equals("[")) {
+	        	this.rskAssmntRsnCdCdgCd = this.rskAssmntRsnCdCdgCd+rskAssmntRsnCdCdgCd;
+	        } else  {
+	            this.rskAssmntRsnCdCdgCd = this.rskAssmntRsnCdCdgCd+ "," +rskAssmntRsnCdCdgCd;
+	        }
+        }
+    }
+    
     
     
     public String getRskAssmntRsnCdCdgDsply() {
@@ -876,6 +1954,20 @@ public class RiskAssessment  implements java.io.Serializable {
     
     public void setRskAssmntRsnCdCdgDsply(String rskAssmntRsnCdCdgDsply) {
         this.rskAssmntRsnCdCdgDsply = rskAssmntRsnCdCdgDsply;
+    }
+    
+    public void addRskAssmntRsnCdCdgDsply(String rskAssmntRsnCdCdgDsply) {
+    	if( rskAssmntRsnCdCdgDsply != null ) {
+	    	if( this.rskAssmntRsnCdCdgDsply == null ) {
+	        	this.rskAssmntRsnCdCdgDsply = rskAssmntRsnCdCdgDsply;
+	        } else if(this.rskAssmntRsnCdCdgDsply.substring(this.rskAssmntRsnCdCdgDsply.length() - 1).equals("]") & rskAssmntRsnCdCdgDsply.equals("[")) {
+	        	this.rskAssmntRsnCdCdgDsply = this.rskAssmntRsnCdCdgDsply+ "," + rskAssmntRsnCdCdgDsply;
+	        } else if(rskAssmntRsnCdCdgDsply.equals("[") | rskAssmntRsnCdCdgDsply.equals("]") | this.rskAssmntRsnCdCdgDsply.substring(this.rskAssmntRsnCdCdgDsply.length() - 1).equals("[")) {
+	        	this.rskAssmntRsnCdCdgDsply = this.rskAssmntRsnCdCdgDsply+rskAssmntRsnCdCdgDsply;
+	        } else  {
+	            this.rskAssmntRsnCdCdgDsply = this.rskAssmntRsnCdCdgDsply+ "," +rskAssmntRsnCdCdgDsply;
+	        }
+        }
     }
     
     
@@ -888,6 +1980,20 @@ public class RiskAssessment  implements java.io.Serializable {
         this.rskAssmntRsnCdCdgSys = rskAssmntRsnCdCdgSys;
     }
     
+    public void addRskAssmntRsnCdCdgSys(String rskAssmntRsnCdCdgSys) {
+    	if( rskAssmntRsnCdCdgSys != null ) {
+	    	if( this.rskAssmntRsnCdCdgSys == null ) {
+	        	this.rskAssmntRsnCdCdgSys = rskAssmntRsnCdCdgSys;
+	        } else if(this.rskAssmntRsnCdCdgSys.substring(this.rskAssmntRsnCdCdgSys.length() - 1).equals("]") & rskAssmntRsnCdCdgSys.equals("[")) {
+	        	this.rskAssmntRsnCdCdgSys = this.rskAssmntRsnCdCdgSys+ "," + rskAssmntRsnCdCdgSys;
+	        } else if(rskAssmntRsnCdCdgSys.equals("[") | rskAssmntRsnCdCdgSys.equals("]") | this.rskAssmntRsnCdCdgSys.substring(this.rskAssmntRsnCdCdgSys.length() - 1).equals("[")) {
+	        	this.rskAssmntRsnCdCdgSys = this.rskAssmntRsnCdCdgSys+rskAssmntRsnCdCdgSys;
+	        } else  {
+	            this.rskAssmntRsnCdCdgSys = this.rskAssmntRsnCdCdgSys+ "," +rskAssmntRsnCdCdgSys;
+	        }
+        }
+    }
+    
     
     
     public String getRskAssmntRsnCdCdgUsrSltd() {
@@ -896,6 +2002,20 @@ public class RiskAssessment  implements java.io.Serializable {
     
     public void setRskAssmntRsnCdCdgUsrSltd(String rskAssmntRsnCdCdgUsrSltd) {
         this.rskAssmntRsnCdCdgUsrSltd = rskAssmntRsnCdCdgUsrSltd;
+    }
+    
+    public void addRskAssmntRsnCdCdgUsrSltd(String rskAssmntRsnCdCdgUsrSltd) {
+    	if( rskAssmntRsnCdCdgUsrSltd != null ) {
+	    	if( this.rskAssmntRsnCdCdgUsrSltd == null ) {
+	        	this.rskAssmntRsnCdCdgUsrSltd = rskAssmntRsnCdCdgUsrSltd;
+	        } else if(this.rskAssmntRsnCdCdgUsrSltd.substring(this.rskAssmntRsnCdCdgUsrSltd.length() - 1).equals("]") & rskAssmntRsnCdCdgUsrSltd.equals("[")) {
+	        	this.rskAssmntRsnCdCdgUsrSltd = this.rskAssmntRsnCdCdgUsrSltd+ "," + rskAssmntRsnCdCdgUsrSltd;
+	        } else if(rskAssmntRsnCdCdgUsrSltd.equals("[") | rskAssmntRsnCdCdgUsrSltd.equals("]") | this.rskAssmntRsnCdCdgUsrSltd.substring(this.rskAssmntRsnCdCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.rskAssmntRsnCdCdgUsrSltd = this.rskAssmntRsnCdCdgUsrSltd+rskAssmntRsnCdCdgUsrSltd;
+	        } else  {
+	            this.rskAssmntRsnCdCdgUsrSltd = this.rskAssmntRsnCdCdgUsrSltd+ "," +rskAssmntRsnCdCdgUsrSltd;
+	        }
+        }
     }
     
     
@@ -908,6 +2028,20 @@ public class RiskAssessment  implements java.io.Serializable {
         this.rskAssmntRsnCdCdgVrsn = rskAssmntRsnCdCdgVrsn;
     }
     
+    public void addRskAssmntRsnCdCdgVrsn(String rskAssmntRsnCdCdgVrsn) {
+    	if( rskAssmntRsnCdCdgVrsn != null ) {
+	    	if( this.rskAssmntRsnCdCdgVrsn == null ) {
+	        	this.rskAssmntRsnCdCdgVrsn = rskAssmntRsnCdCdgVrsn;
+	        } else if(this.rskAssmntRsnCdCdgVrsn.substring(this.rskAssmntRsnCdCdgVrsn.length() - 1).equals("]") & rskAssmntRsnCdCdgVrsn.equals("[")) {
+	        	this.rskAssmntRsnCdCdgVrsn = this.rskAssmntRsnCdCdgVrsn+ "," + rskAssmntRsnCdCdgVrsn;
+	        } else if(rskAssmntRsnCdCdgVrsn.equals("[") | rskAssmntRsnCdCdgVrsn.equals("]") | this.rskAssmntRsnCdCdgVrsn.substring(this.rskAssmntRsnCdCdgVrsn.length() - 1).equals("[")) {
+	        	this.rskAssmntRsnCdCdgVrsn = this.rskAssmntRsnCdCdgVrsn+rskAssmntRsnCdCdgVrsn;
+	        } else  {
+	            this.rskAssmntRsnCdCdgVrsn = this.rskAssmntRsnCdCdgVrsn+ "," +rskAssmntRsnCdCdgVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getRskAssmntRsnCdTxt() {
@@ -916,6 +2050,20 @@ public class RiskAssessment  implements java.io.Serializable {
     
     public void setRskAssmntRsnCdTxt(String rskAssmntRsnCdTxt) {
         this.rskAssmntRsnCdTxt = rskAssmntRsnCdTxt;
+    }
+    
+    public void addRskAssmntRsnCdTxt(String rskAssmntRsnCdTxt) {
+    	if( rskAssmntRsnCdTxt != null ) {
+	    	if( this.rskAssmntRsnCdTxt == null ) {
+	        	this.rskAssmntRsnCdTxt = rskAssmntRsnCdTxt;
+	        } else if(this.rskAssmntRsnCdTxt.substring(this.rskAssmntRsnCdTxt.length() - 1).equals("]") & rskAssmntRsnCdTxt.equals("[")) {
+	        	this.rskAssmntRsnCdTxt = this.rskAssmntRsnCdTxt+ "," + rskAssmntRsnCdTxt;
+	        } else if(rskAssmntRsnCdTxt.equals("[") | rskAssmntRsnCdTxt.equals("]") | this.rskAssmntRsnCdTxt.substring(this.rskAssmntRsnCdTxt.length() - 1).equals("[")) {
+	        	this.rskAssmntRsnCdTxt = this.rskAssmntRsnCdTxt+rskAssmntRsnCdTxt;
+	        } else  {
+	            this.rskAssmntRsnCdTxt = this.rskAssmntRsnCdTxt+ "," +rskAssmntRsnCdTxt;
+	        }
+        }
     }
     
     
@@ -928,6 +2076,20 @@ public class RiskAssessment  implements java.io.Serializable {
         this.rskAssmntRsnRfrnc = rskAssmntRsnRfrnc;
     }
     
+    public void addRskAssmntRsnRfrnc(String rskAssmntRsnRfrnc) {
+    	if( rskAssmntRsnRfrnc != null ) {
+	    	if( this.rskAssmntRsnRfrnc == null ) {
+	        	this.rskAssmntRsnRfrnc = rskAssmntRsnRfrnc;
+	        } else if(this.rskAssmntRsnRfrnc.substring(this.rskAssmntRsnRfrnc.length() - 1).equals("]") & rskAssmntRsnRfrnc.equals("[")) {
+	        	this.rskAssmntRsnRfrnc = this.rskAssmntRsnRfrnc+ "," + rskAssmntRsnRfrnc;
+	        } else if(rskAssmntRsnRfrnc.equals("[") | rskAssmntRsnRfrnc.equals("]") | this.rskAssmntRsnRfrnc.substring(this.rskAssmntRsnRfrnc.length() - 1).equals("[")) {
+	        	this.rskAssmntRsnRfrnc = this.rskAssmntRsnRfrnc+rskAssmntRsnRfrnc;
+	        } else  {
+	            this.rskAssmntRsnRfrnc = this.rskAssmntRsnRfrnc+ "," +rskAssmntRsnRfrnc;
+	        }
+        }
+    }
+    
     
     
     public String getRskAssmntSts() {
@@ -938,6 +2100,20 @@ public class RiskAssessment  implements java.io.Serializable {
         this.rskAssmntSts = rskAssmntSts;
     }
     
+    public void addRskAssmntSts(String rskAssmntSts) {
+    	if( rskAssmntSts != null ) {
+	    	if( this.rskAssmntSts == null ) {
+	        	this.rskAssmntSts = rskAssmntSts;
+	        } else if(this.rskAssmntSts.substring(this.rskAssmntSts.length() - 1).equals("]") & rskAssmntSts.equals("[")) {
+	        	this.rskAssmntSts = this.rskAssmntSts+ "," + rskAssmntSts;
+	        } else if(rskAssmntSts.equals("[") | rskAssmntSts.equals("]") | this.rskAssmntSts.substring(this.rskAssmntSts.length() - 1).equals("[")) {
+	        	this.rskAssmntSts = this.rskAssmntSts+rskAssmntSts;
+	        } else  {
+	            this.rskAssmntSts = this.rskAssmntSts+ "," +rskAssmntSts;
+	        }
+        }
+    }
+    
     
     
     public String getRskAssmntSbjct() {
@@ -946,6 +2122,20 @@ public class RiskAssessment  implements java.io.Serializable {
     
     public void setRskAssmntSbjct(String rskAssmntSbjct) {
         this.rskAssmntSbjct = rskAssmntSbjct;
+    }
+    
+    public void addRskAssmntSbjct(String rskAssmntSbjct) {
+    	if( rskAssmntSbjct != null ) {
+	    	if( this.rskAssmntSbjct == null ) {
+	        	this.rskAssmntSbjct = rskAssmntSbjct;
+	        } else if(this.rskAssmntSbjct.substring(this.rskAssmntSbjct.length() - 1).equals("]") & rskAssmntSbjct.equals("[")) {
+	        	this.rskAssmntSbjct = this.rskAssmntSbjct+ "," + rskAssmntSbjct;
+	        } else if(rskAssmntSbjct.equals("[") | rskAssmntSbjct.equals("]") | this.rskAssmntSbjct.substring(this.rskAssmntSbjct.length() - 1).equals("[")) {
+	        	this.rskAssmntSbjct = this.rskAssmntSbjct+rskAssmntSbjct;
+	        } else  {
+	            this.rskAssmntSbjct = this.rskAssmntSbjct+ "," +rskAssmntSbjct;
+	        }
+        }
     }
     
     

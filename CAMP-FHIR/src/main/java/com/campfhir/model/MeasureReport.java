@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Jun 27, 2022, 10:40:10 AM by Hibernate Tools 5.6.1.Final
+// Generated Aug 17, 2022, 11:08:48 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -107,6 +107,20 @@ public class MeasureReport  implements java.io.Serializable {
         this.id = id;
     }
     
+    public void addId(String id) {
+    	if( id != null ) {
+	    	if( this.id == null ) {
+	        	this.id = id;
+	        } else if(this.id.substring(this.id.length() - 1).equals("]") & id.equals("[")) {
+	        	this.id = this.id+ "," + id;
+	        } else if(id.equals("[") | id.equals("]") | this.id.substring(this.id.length() - 1).equals("[")) {
+	        	this.id = this.id+id;
+	        } else  {
+	            this.id = this.id+ "," +id;
+	        }
+        }
+    }
+    
     
     
     public String getMsrRptDt() {
@@ -115,6 +129,20 @@ public class MeasureReport  implements java.io.Serializable {
     
     public void setMsrRptDt(String msrRptDt) {
         this.msrRptDt = msrRptDt;
+    }
+    
+    public void addMsrRptDt(String msrRptDt) {
+    	if( msrRptDt != null ) {
+	    	if( this.msrRptDt == null ) {
+	        	this.msrRptDt = msrRptDt;
+	        } else if(this.msrRptDt.substring(this.msrRptDt.length() - 1).equals("]") & msrRptDt.equals("[")) {
+	        	this.msrRptDt = this.msrRptDt+ "," + msrRptDt;
+	        } else if(msrRptDt.equals("[") | msrRptDt.equals("]") | this.msrRptDt.substring(this.msrRptDt.length() - 1).equals("[")) {
+	        	this.msrRptDt = this.msrRptDt+msrRptDt;
+	        } else  {
+	            this.msrRptDt = this.msrRptDt+ "," +msrRptDt;
+	        }
+        }
     }
     
     
@@ -127,6 +155,20 @@ public class MeasureReport  implements java.io.Serializable {
         this.msrRptEvaluatedRsrc = msrRptEvaluatedRsrc;
     }
     
+    public void addMsrRptEvaluatedRsrc(String msrRptEvaluatedRsrc) {
+    	if( msrRptEvaluatedRsrc != null ) {
+	    	if( this.msrRptEvaluatedRsrc == null ) {
+	        	this.msrRptEvaluatedRsrc = msrRptEvaluatedRsrc;
+	        } else if(this.msrRptEvaluatedRsrc.substring(this.msrRptEvaluatedRsrc.length() - 1).equals("]") & msrRptEvaluatedRsrc.equals("[")) {
+	        	this.msrRptEvaluatedRsrc = this.msrRptEvaluatedRsrc+ "," + msrRptEvaluatedRsrc;
+	        } else if(msrRptEvaluatedRsrc.equals("[") | msrRptEvaluatedRsrc.equals("]") | this.msrRptEvaluatedRsrc.substring(this.msrRptEvaluatedRsrc.length() - 1).equals("[")) {
+	        	this.msrRptEvaluatedRsrc = this.msrRptEvaluatedRsrc+msrRptEvaluatedRsrc;
+	        } else  {
+	            this.msrRptEvaluatedRsrc = this.msrRptEvaluatedRsrc+ "," +msrRptEvaluatedRsrc;
+	        }
+        }
+    }
+    
     
     
     public String getMsrRptGrpCdCdgCd() {
@@ -135,6 +177,20 @@ public class MeasureReport  implements java.io.Serializable {
     
     public void setMsrRptGrpCdCdgCd(String msrRptGrpCdCdgCd) {
         this.msrRptGrpCdCdgCd = msrRptGrpCdCdgCd;
+    }
+    
+    public void addMsrRptGrpCdCdgCd(String msrRptGrpCdCdgCd) {
+    	if( msrRptGrpCdCdgCd != null ) {
+	    	if( this.msrRptGrpCdCdgCd == null ) {
+	        	this.msrRptGrpCdCdgCd = msrRptGrpCdCdgCd;
+	        } else if(this.msrRptGrpCdCdgCd.substring(this.msrRptGrpCdCdgCd.length() - 1).equals("]") & msrRptGrpCdCdgCd.equals("[")) {
+	        	this.msrRptGrpCdCdgCd = this.msrRptGrpCdCdgCd+ "," + msrRptGrpCdCdgCd;
+	        } else if(msrRptGrpCdCdgCd.equals("[") | msrRptGrpCdCdgCd.equals("]") | this.msrRptGrpCdCdgCd.substring(this.msrRptGrpCdCdgCd.length() - 1).equals("[")) {
+	        	this.msrRptGrpCdCdgCd = this.msrRptGrpCdCdgCd+msrRptGrpCdCdgCd;
+	        } else  {
+	            this.msrRptGrpCdCdgCd = this.msrRptGrpCdCdgCd+ "," +msrRptGrpCdCdgCd;
+	        }
+        }
     }
     
     
@@ -147,6 +203,20 @@ public class MeasureReport  implements java.io.Serializable {
         this.msrRptGrpCdCdgDsply = msrRptGrpCdCdgDsply;
     }
     
+    public void addMsrRptGrpCdCdgDsply(String msrRptGrpCdCdgDsply) {
+    	if( msrRptGrpCdCdgDsply != null ) {
+	    	if( this.msrRptGrpCdCdgDsply == null ) {
+	        	this.msrRptGrpCdCdgDsply = msrRptGrpCdCdgDsply;
+	        } else if(this.msrRptGrpCdCdgDsply.substring(this.msrRptGrpCdCdgDsply.length() - 1).equals("]") & msrRptGrpCdCdgDsply.equals("[")) {
+	        	this.msrRptGrpCdCdgDsply = this.msrRptGrpCdCdgDsply+ "," + msrRptGrpCdCdgDsply;
+	        } else if(msrRptGrpCdCdgDsply.equals("[") | msrRptGrpCdCdgDsply.equals("]") | this.msrRptGrpCdCdgDsply.substring(this.msrRptGrpCdCdgDsply.length() - 1).equals("[")) {
+	        	this.msrRptGrpCdCdgDsply = this.msrRptGrpCdCdgDsply+msrRptGrpCdCdgDsply;
+	        } else  {
+	            this.msrRptGrpCdCdgDsply = this.msrRptGrpCdCdgDsply+ "," +msrRptGrpCdCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getMsrRptGrpCdCdgSys() {
@@ -155,6 +225,20 @@ public class MeasureReport  implements java.io.Serializable {
     
     public void setMsrRptGrpCdCdgSys(String msrRptGrpCdCdgSys) {
         this.msrRptGrpCdCdgSys = msrRptGrpCdCdgSys;
+    }
+    
+    public void addMsrRptGrpCdCdgSys(String msrRptGrpCdCdgSys) {
+    	if( msrRptGrpCdCdgSys != null ) {
+	    	if( this.msrRptGrpCdCdgSys == null ) {
+	        	this.msrRptGrpCdCdgSys = msrRptGrpCdCdgSys;
+	        } else if(this.msrRptGrpCdCdgSys.substring(this.msrRptGrpCdCdgSys.length() - 1).equals("]") & msrRptGrpCdCdgSys.equals("[")) {
+	        	this.msrRptGrpCdCdgSys = this.msrRptGrpCdCdgSys+ "," + msrRptGrpCdCdgSys;
+	        } else if(msrRptGrpCdCdgSys.equals("[") | msrRptGrpCdCdgSys.equals("]") | this.msrRptGrpCdCdgSys.substring(this.msrRptGrpCdCdgSys.length() - 1).equals("[")) {
+	        	this.msrRptGrpCdCdgSys = this.msrRptGrpCdCdgSys+msrRptGrpCdCdgSys;
+	        } else  {
+	            this.msrRptGrpCdCdgSys = this.msrRptGrpCdCdgSys+ "," +msrRptGrpCdCdgSys;
+	        }
+        }
     }
     
     
@@ -167,6 +251,20 @@ public class MeasureReport  implements java.io.Serializable {
         this.msrRptGrpCdCdgUsrSltd = msrRptGrpCdCdgUsrSltd;
     }
     
+    public void addMsrRptGrpCdCdgUsrSltd(String msrRptGrpCdCdgUsrSltd) {
+    	if( msrRptGrpCdCdgUsrSltd != null ) {
+	    	if( this.msrRptGrpCdCdgUsrSltd == null ) {
+	        	this.msrRptGrpCdCdgUsrSltd = msrRptGrpCdCdgUsrSltd;
+	        } else if(this.msrRptGrpCdCdgUsrSltd.substring(this.msrRptGrpCdCdgUsrSltd.length() - 1).equals("]") & msrRptGrpCdCdgUsrSltd.equals("[")) {
+	        	this.msrRptGrpCdCdgUsrSltd = this.msrRptGrpCdCdgUsrSltd+ "," + msrRptGrpCdCdgUsrSltd;
+	        } else if(msrRptGrpCdCdgUsrSltd.equals("[") | msrRptGrpCdCdgUsrSltd.equals("]") | this.msrRptGrpCdCdgUsrSltd.substring(this.msrRptGrpCdCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.msrRptGrpCdCdgUsrSltd = this.msrRptGrpCdCdgUsrSltd+msrRptGrpCdCdgUsrSltd;
+	        } else  {
+	            this.msrRptGrpCdCdgUsrSltd = this.msrRptGrpCdCdgUsrSltd+ "," +msrRptGrpCdCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getMsrRptGrpCdCdgVrsn() {
@@ -175,6 +273,20 @@ public class MeasureReport  implements java.io.Serializable {
     
     public void setMsrRptGrpCdCdgVrsn(String msrRptGrpCdCdgVrsn) {
         this.msrRptGrpCdCdgVrsn = msrRptGrpCdCdgVrsn;
+    }
+    
+    public void addMsrRptGrpCdCdgVrsn(String msrRptGrpCdCdgVrsn) {
+    	if( msrRptGrpCdCdgVrsn != null ) {
+	    	if( this.msrRptGrpCdCdgVrsn == null ) {
+	        	this.msrRptGrpCdCdgVrsn = msrRptGrpCdCdgVrsn;
+	        } else if(this.msrRptGrpCdCdgVrsn.substring(this.msrRptGrpCdCdgVrsn.length() - 1).equals("]") & msrRptGrpCdCdgVrsn.equals("[")) {
+	        	this.msrRptGrpCdCdgVrsn = this.msrRptGrpCdCdgVrsn+ "," + msrRptGrpCdCdgVrsn;
+	        } else if(msrRptGrpCdCdgVrsn.equals("[") | msrRptGrpCdCdgVrsn.equals("]") | this.msrRptGrpCdCdgVrsn.substring(this.msrRptGrpCdCdgVrsn.length() - 1).equals("[")) {
+	        	this.msrRptGrpCdCdgVrsn = this.msrRptGrpCdCdgVrsn+msrRptGrpCdCdgVrsn;
+	        } else  {
+	            this.msrRptGrpCdCdgVrsn = this.msrRptGrpCdCdgVrsn+ "," +msrRptGrpCdCdgVrsn;
+	        }
+        }
     }
     
     
@@ -187,6 +299,20 @@ public class MeasureReport  implements java.io.Serializable {
         this.msrRptGrpCdTxt = msrRptGrpCdTxt;
     }
     
+    public void addMsrRptGrpCdTxt(String msrRptGrpCdTxt) {
+    	if( msrRptGrpCdTxt != null ) {
+	    	if( this.msrRptGrpCdTxt == null ) {
+	        	this.msrRptGrpCdTxt = msrRptGrpCdTxt;
+	        } else if(this.msrRptGrpCdTxt.substring(this.msrRptGrpCdTxt.length() - 1).equals("]") & msrRptGrpCdTxt.equals("[")) {
+	        	this.msrRptGrpCdTxt = this.msrRptGrpCdTxt+ "," + msrRptGrpCdTxt;
+	        } else if(msrRptGrpCdTxt.equals("[") | msrRptGrpCdTxt.equals("]") | this.msrRptGrpCdTxt.substring(this.msrRptGrpCdTxt.length() - 1).equals("[")) {
+	        	this.msrRptGrpCdTxt = this.msrRptGrpCdTxt+msrRptGrpCdTxt;
+	        } else  {
+	            this.msrRptGrpCdTxt = this.msrRptGrpCdTxt+ "," +msrRptGrpCdTxt;
+	        }
+        }
+    }
+    
     
     
     public String getMsrRptGrpMsrScoreCd() {
@@ -195,6 +321,20 @@ public class MeasureReport  implements java.io.Serializable {
     
     public void setMsrRptGrpMsrScoreCd(String msrRptGrpMsrScoreCd) {
         this.msrRptGrpMsrScoreCd = msrRptGrpMsrScoreCd;
+    }
+    
+    public void addMsrRptGrpMsrScoreCd(String msrRptGrpMsrScoreCd) {
+    	if( msrRptGrpMsrScoreCd != null ) {
+	    	if( this.msrRptGrpMsrScoreCd == null ) {
+	        	this.msrRptGrpMsrScoreCd = msrRptGrpMsrScoreCd;
+	        } else if(this.msrRptGrpMsrScoreCd.substring(this.msrRptGrpMsrScoreCd.length() - 1).equals("]") & msrRptGrpMsrScoreCd.equals("[")) {
+	        	this.msrRptGrpMsrScoreCd = this.msrRptGrpMsrScoreCd+ "," + msrRptGrpMsrScoreCd;
+	        } else if(msrRptGrpMsrScoreCd.equals("[") | msrRptGrpMsrScoreCd.equals("]") | this.msrRptGrpMsrScoreCd.substring(this.msrRptGrpMsrScoreCd.length() - 1).equals("[")) {
+	        	this.msrRptGrpMsrScoreCd = this.msrRptGrpMsrScoreCd+msrRptGrpMsrScoreCd;
+	        } else  {
+	            this.msrRptGrpMsrScoreCd = this.msrRptGrpMsrScoreCd+ "," +msrRptGrpMsrScoreCd;
+	        }
+        }
     }
     
     
@@ -207,6 +347,20 @@ public class MeasureReport  implements java.io.Serializable {
         this.msrRptGrpMsrScoreCmprtr = msrRptGrpMsrScoreCmprtr;
     }
     
+    public void addMsrRptGrpMsrScoreCmprtr(String msrRptGrpMsrScoreCmprtr) {
+    	if( msrRptGrpMsrScoreCmprtr != null ) {
+	    	if( this.msrRptGrpMsrScoreCmprtr == null ) {
+	        	this.msrRptGrpMsrScoreCmprtr = msrRptGrpMsrScoreCmprtr;
+	        } else if(this.msrRptGrpMsrScoreCmprtr.substring(this.msrRptGrpMsrScoreCmprtr.length() - 1).equals("]") & msrRptGrpMsrScoreCmprtr.equals("[")) {
+	        	this.msrRptGrpMsrScoreCmprtr = this.msrRptGrpMsrScoreCmprtr+ "," + msrRptGrpMsrScoreCmprtr;
+	        } else if(msrRptGrpMsrScoreCmprtr.equals("[") | msrRptGrpMsrScoreCmprtr.equals("]") | this.msrRptGrpMsrScoreCmprtr.substring(this.msrRptGrpMsrScoreCmprtr.length() - 1).equals("[")) {
+	        	this.msrRptGrpMsrScoreCmprtr = this.msrRptGrpMsrScoreCmprtr+msrRptGrpMsrScoreCmprtr;
+	        } else  {
+	            this.msrRptGrpMsrScoreCmprtr = this.msrRptGrpMsrScoreCmprtr+ "," +msrRptGrpMsrScoreCmprtr;
+	        }
+        }
+    }
+    
     
     
     public String getMsrRptGrpMsrScoreSys() {
@@ -215,6 +369,20 @@ public class MeasureReport  implements java.io.Serializable {
     
     public void setMsrRptGrpMsrScoreSys(String msrRptGrpMsrScoreSys) {
         this.msrRptGrpMsrScoreSys = msrRptGrpMsrScoreSys;
+    }
+    
+    public void addMsrRptGrpMsrScoreSys(String msrRptGrpMsrScoreSys) {
+    	if( msrRptGrpMsrScoreSys != null ) {
+	    	if( this.msrRptGrpMsrScoreSys == null ) {
+	        	this.msrRptGrpMsrScoreSys = msrRptGrpMsrScoreSys;
+	        } else if(this.msrRptGrpMsrScoreSys.substring(this.msrRptGrpMsrScoreSys.length() - 1).equals("]") & msrRptGrpMsrScoreSys.equals("[")) {
+	        	this.msrRptGrpMsrScoreSys = this.msrRptGrpMsrScoreSys+ "," + msrRptGrpMsrScoreSys;
+	        } else if(msrRptGrpMsrScoreSys.equals("[") | msrRptGrpMsrScoreSys.equals("]") | this.msrRptGrpMsrScoreSys.substring(this.msrRptGrpMsrScoreSys.length() - 1).equals("[")) {
+	        	this.msrRptGrpMsrScoreSys = this.msrRptGrpMsrScoreSys+msrRptGrpMsrScoreSys;
+	        } else  {
+	            this.msrRptGrpMsrScoreSys = this.msrRptGrpMsrScoreSys+ "," +msrRptGrpMsrScoreSys;
+	        }
+        }
     }
     
     
@@ -227,6 +395,20 @@ public class MeasureReport  implements java.io.Serializable {
         this.msrRptGrpMsrScoreUnt = msrRptGrpMsrScoreUnt;
     }
     
+    public void addMsrRptGrpMsrScoreUnt(String msrRptGrpMsrScoreUnt) {
+    	if( msrRptGrpMsrScoreUnt != null ) {
+	    	if( this.msrRptGrpMsrScoreUnt == null ) {
+	        	this.msrRptGrpMsrScoreUnt = msrRptGrpMsrScoreUnt;
+	        } else if(this.msrRptGrpMsrScoreUnt.substring(this.msrRptGrpMsrScoreUnt.length() - 1).equals("]") & msrRptGrpMsrScoreUnt.equals("[")) {
+	        	this.msrRptGrpMsrScoreUnt = this.msrRptGrpMsrScoreUnt+ "," + msrRptGrpMsrScoreUnt;
+	        } else if(msrRptGrpMsrScoreUnt.equals("[") | msrRptGrpMsrScoreUnt.equals("]") | this.msrRptGrpMsrScoreUnt.substring(this.msrRptGrpMsrScoreUnt.length() - 1).equals("[")) {
+	        	this.msrRptGrpMsrScoreUnt = this.msrRptGrpMsrScoreUnt+msrRptGrpMsrScoreUnt;
+	        } else  {
+	            this.msrRptGrpMsrScoreUnt = this.msrRptGrpMsrScoreUnt+ "," +msrRptGrpMsrScoreUnt;
+	        }
+        }
+    }
+    
     
     
     public String getMsrRptGrpMsrScoreVl() {
@@ -235,6 +417,20 @@ public class MeasureReport  implements java.io.Serializable {
     
     public void setMsrRptGrpMsrScoreVl(String msrRptGrpMsrScoreVl) {
         this.msrRptGrpMsrScoreVl = msrRptGrpMsrScoreVl;
+    }
+    
+    public void addMsrRptGrpMsrScoreVl(String msrRptGrpMsrScoreVl) {
+    	if( msrRptGrpMsrScoreVl != null ) {
+	    	if( this.msrRptGrpMsrScoreVl == null ) {
+	        	this.msrRptGrpMsrScoreVl = msrRptGrpMsrScoreVl;
+	        } else if(this.msrRptGrpMsrScoreVl.substring(this.msrRptGrpMsrScoreVl.length() - 1).equals("]") & msrRptGrpMsrScoreVl.equals("[")) {
+	        	this.msrRptGrpMsrScoreVl = this.msrRptGrpMsrScoreVl+ "," + msrRptGrpMsrScoreVl;
+	        } else if(msrRptGrpMsrScoreVl.equals("[") | msrRptGrpMsrScoreVl.equals("]") | this.msrRptGrpMsrScoreVl.substring(this.msrRptGrpMsrScoreVl.length() - 1).equals("[")) {
+	        	this.msrRptGrpMsrScoreVl = this.msrRptGrpMsrScoreVl+msrRptGrpMsrScoreVl;
+	        } else  {
+	            this.msrRptGrpMsrScoreVl = this.msrRptGrpMsrScoreVl+ "," +msrRptGrpMsrScoreVl;
+	        }
+        }
     }
     
     
@@ -247,6 +443,20 @@ public class MeasureReport  implements java.io.Serializable {
         this.msrRptGrpPoplnCdCdgCd = msrRptGrpPoplnCdCdgCd;
     }
     
+    public void addMsrRptGrpPoplnCdCdgCd(String msrRptGrpPoplnCdCdgCd) {
+    	if( msrRptGrpPoplnCdCdgCd != null ) {
+	    	if( this.msrRptGrpPoplnCdCdgCd == null ) {
+	        	this.msrRptGrpPoplnCdCdgCd = msrRptGrpPoplnCdCdgCd;
+	        } else if(this.msrRptGrpPoplnCdCdgCd.substring(this.msrRptGrpPoplnCdCdgCd.length() - 1).equals("]") & msrRptGrpPoplnCdCdgCd.equals("[")) {
+	        	this.msrRptGrpPoplnCdCdgCd = this.msrRptGrpPoplnCdCdgCd+ "," + msrRptGrpPoplnCdCdgCd;
+	        } else if(msrRptGrpPoplnCdCdgCd.equals("[") | msrRptGrpPoplnCdCdgCd.equals("]") | this.msrRptGrpPoplnCdCdgCd.substring(this.msrRptGrpPoplnCdCdgCd.length() - 1).equals("[")) {
+	        	this.msrRptGrpPoplnCdCdgCd = this.msrRptGrpPoplnCdCdgCd+msrRptGrpPoplnCdCdgCd;
+	        } else  {
+	            this.msrRptGrpPoplnCdCdgCd = this.msrRptGrpPoplnCdCdgCd+ "," +msrRptGrpPoplnCdCdgCd;
+	        }
+        }
+    }
+    
     
     
     public String getMsrRptGrpPoplnCdCdgDsply() {
@@ -255,6 +465,20 @@ public class MeasureReport  implements java.io.Serializable {
     
     public void setMsrRptGrpPoplnCdCdgDsply(String msrRptGrpPoplnCdCdgDsply) {
         this.msrRptGrpPoplnCdCdgDsply = msrRptGrpPoplnCdCdgDsply;
+    }
+    
+    public void addMsrRptGrpPoplnCdCdgDsply(String msrRptGrpPoplnCdCdgDsply) {
+    	if( msrRptGrpPoplnCdCdgDsply != null ) {
+	    	if( this.msrRptGrpPoplnCdCdgDsply == null ) {
+	        	this.msrRptGrpPoplnCdCdgDsply = msrRptGrpPoplnCdCdgDsply;
+	        } else if(this.msrRptGrpPoplnCdCdgDsply.substring(this.msrRptGrpPoplnCdCdgDsply.length() - 1).equals("]") & msrRptGrpPoplnCdCdgDsply.equals("[")) {
+	        	this.msrRptGrpPoplnCdCdgDsply = this.msrRptGrpPoplnCdCdgDsply+ "," + msrRptGrpPoplnCdCdgDsply;
+	        } else if(msrRptGrpPoplnCdCdgDsply.equals("[") | msrRptGrpPoplnCdCdgDsply.equals("]") | this.msrRptGrpPoplnCdCdgDsply.substring(this.msrRptGrpPoplnCdCdgDsply.length() - 1).equals("[")) {
+	        	this.msrRptGrpPoplnCdCdgDsply = this.msrRptGrpPoplnCdCdgDsply+msrRptGrpPoplnCdCdgDsply;
+	        } else  {
+	            this.msrRptGrpPoplnCdCdgDsply = this.msrRptGrpPoplnCdCdgDsply+ "," +msrRptGrpPoplnCdCdgDsply;
+	        }
+        }
     }
     
     
@@ -267,6 +491,20 @@ public class MeasureReport  implements java.io.Serializable {
         this.msrRptGrpPoplnCdCdgSys = msrRptGrpPoplnCdCdgSys;
     }
     
+    public void addMsrRptGrpPoplnCdCdgSys(String msrRptGrpPoplnCdCdgSys) {
+    	if( msrRptGrpPoplnCdCdgSys != null ) {
+	    	if( this.msrRptGrpPoplnCdCdgSys == null ) {
+	        	this.msrRptGrpPoplnCdCdgSys = msrRptGrpPoplnCdCdgSys;
+	        } else if(this.msrRptGrpPoplnCdCdgSys.substring(this.msrRptGrpPoplnCdCdgSys.length() - 1).equals("]") & msrRptGrpPoplnCdCdgSys.equals("[")) {
+	        	this.msrRptGrpPoplnCdCdgSys = this.msrRptGrpPoplnCdCdgSys+ "," + msrRptGrpPoplnCdCdgSys;
+	        } else if(msrRptGrpPoplnCdCdgSys.equals("[") | msrRptGrpPoplnCdCdgSys.equals("]") | this.msrRptGrpPoplnCdCdgSys.substring(this.msrRptGrpPoplnCdCdgSys.length() - 1).equals("[")) {
+	        	this.msrRptGrpPoplnCdCdgSys = this.msrRptGrpPoplnCdCdgSys+msrRptGrpPoplnCdCdgSys;
+	        } else  {
+	            this.msrRptGrpPoplnCdCdgSys = this.msrRptGrpPoplnCdCdgSys+ "," +msrRptGrpPoplnCdCdgSys;
+	        }
+        }
+    }
+    
     
     
     public String getMsrRptGrpPoplnCdCdgUsrSltd() {
@@ -275,6 +513,20 @@ public class MeasureReport  implements java.io.Serializable {
     
     public void setMsrRptGrpPoplnCdCdgUsrSltd(String msrRptGrpPoplnCdCdgUsrSltd) {
         this.msrRptGrpPoplnCdCdgUsrSltd = msrRptGrpPoplnCdCdgUsrSltd;
+    }
+    
+    public void addMsrRptGrpPoplnCdCdgUsrSltd(String msrRptGrpPoplnCdCdgUsrSltd) {
+    	if( msrRptGrpPoplnCdCdgUsrSltd != null ) {
+	    	if( this.msrRptGrpPoplnCdCdgUsrSltd == null ) {
+	        	this.msrRptGrpPoplnCdCdgUsrSltd = msrRptGrpPoplnCdCdgUsrSltd;
+	        } else if(this.msrRptGrpPoplnCdCdgUsrSltd.substring(this.msrRptGrpPoplnCdCdgUsrSltd.length() - 1).equals("]") & msrRptGrpPoplnCdCdgUsrSltd.equals("[")) {
+	        	this.msrRptGrpPoplnCdCdgUsrSltd = this.msrRptGrpPoplnCdCdgUsrSltd+ "," + msrRptGrpPoplnCdCdgUsrSltd;
+	        } else if(msrRptGrpPoplnCdCdgUsrSltd.equals("[") | msrRptGrpPoplnCdCdgUsrSltd.equals("]") | this.msrRptGrpPoplnCdCdgUsrSltd.substring(this.msrRptGrpPoplnCdCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.msrRptGrpPoplnCdCdgUsrSltd = this.msrRptGrpPoplnCdCdgUsrSltd+msrRptGrpPoplnCdCdgUsrSltd;
+	        } else  {
+	            this.msrRptGrpPoplnCdCdgUsrSltd = this.msrRptGrpPoplnCdCdgUsrSltd+ "," +msrRptGrpPoplnCdCdgUsrSltd;
+	        }
+        }
     }
     
     
@@ -287,6 +539,20 @@ public class MeasureReport  implements java.io.Serializable {
         this.msrRptGrpPoplnCdCdgVrsn = msrRptGrpPoplnCdCdgVrsn;
     }
     
+    public void addMsrRptGrpPoplnCdCdgVrsn(String msrRptGrpPoplnCdCdgVrsn) {
+    	if( msrRptGrpPoplnCdCdgVrsn != null ) {
+	    	if( this.msrRptGrpPoplnCdCdgVrsn == null ) {
+	        	this.msrRptGrpPoplnCdCdgVrsn = msrRptGrpPoplnCdCdgVrsn;
+	        } else if(this.msrRptGrpPoplnCdCdgVrsn.substring(this.msrRptGrpPoplnCdCdgVrsn.length() - 1).equals("]") & msrRptGrpPoplnCdCdgVrsn.equals("[")) {
+	        	this.msrRptGrpPoplnCdCdgVrsn = this.msrRptGrpPoplnCdCdgVrsn+ "," + msrRptGrpPoplnCdCdgVrsn;
+	        } else if(msrRptGrpPoplnCdCdgVrsn.equals("[") | msrRptGrpPoplnCdCdgVrsn.equals("]") | this.msrRptGrpPoplnCdCdgVrsn.substring(this.msrRptGrpPoplnCdCdgVrsn.length() - 1).equals("[")) {
+	        	this.msrRptGrpPoplnCdCdgVrsn = this.msrRptGrpPoplnCdCdgVrsn+msrRptGrpPoplnCdCdgVrsn;
+	        } else  {
+	            this.msrRptGrpPoplnCdCdgVrsn = this.msrRptGrpPoplnCdCdgVrsn+ "," +msrRptGrpPoplnCdCdgVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getMsrRptGrpPoplnCdTxt() {
@@ -295,6 +561,20 @@ public class MeasureReport  implements java.io.Serializable {
     
     public void setMsrRptGrpPoplnCdTxt(String msrRptGrpPoplnCdTxt) {
         this.msrRptGrpPoplnCdTxt = msrRptGrpPoplnCdTxt;
+    }
+    
+    public void addMsrRptGrpPoplnCdTxt(String msrRptGrpPoplnCdTxt) {
+    	if( msrRptGrpPoplnCdTxt != null ) {
+	    	if( this.msrRptGrpPoplnCdTxt == null ) {
+	        	this.msrRptGrpPoplnCdTxt = msrRptGrpPoplnCdTxt;
+	        } else if(this.msrRptGrpPoplnCdTxt.substring(this.msrRptGrpPoplnCdTxt.length() - 1).equals("]") & msrRptGrpPoplnCdTxt.equals("[")) {
+	        	this.msrRptGrpPoplnCdTxt = this.msrRptGrpPoplnCdTxt+ "," + msrRptGrpPoplnCdTxt;
+	        } else if(msrRptGrpPoplnCdTxt.equals("[") | msrRptGrpPoplnCdTxt.equals("]") | this.msrRptGrpPoplnCdTxt.substring(this.msrRptGrpPoplnCdTxt.length() - 1).equals("[")) {
+	        	this.msrRptGrpPoplnCdTxt = this.msrRptGrpPoplnCdTxt+msrRptGrpPoplnCdTxt;
+	        } else  {
+	            this.msrRptGrpPoplnCdTxt = this.msrRptGrpPoplnCdTxt+ "," +msrRptGrpPoplnCdTxt;
+	        }
+        }
     }
     
     
@@ -307,6 +587,20 @@ public class MeasureReport  implements java.io.Serializable {
         this.msrRptGrpPoplnCnt = msrRptGrpPoplnCnt;
     }
     
+    public void addMsrRptGrpPoplnCnt(String msrRptGrpPoplnCnt) {
+    	if( msrRptGrpPoplnCnt != null ) {
+	    	if( this.msrRptGrpPoplnCnt == null ) {
+	        	this.msrRptGrpPoplnCnt = msrRptGrpPoplnCnt;
+	        } else if(this.msrRptGrpPoplnCnt.substring(this.msrRptGrpPoplnCnt.length() - 1).equals("]") & msrRptGrpPoplnCnt.equals("[")) {
+	        	this.msrRptGrpPoplnCnt = this.msrRptGrpPoplnCnt+ "," + msrRptGrpPoplnCnt;
+	        } else if(msrRptGrpPoplnCnt.equals("[") | msrRptGrpPoplnCnt.equals("]") | this.msrRptGrpPoplnCnt.substring(this.msrRptGrpPoplnCnt.length() - 1).equals("[")) {
+	        	this.msrRptGrpPoplnCnt = this.msrRptGrpPoplnCnt+msrRptGrpPoplnCnt;
+	        } else  {
+	            this.msrRptGrpPoplnCnt = this.msrRptGrpPoplnCnt+ "," +msrRptGrpPoplnCnt;
+	        }
+        }
+    }
+    
     
     
     public String getMsrRptGrpPoplnSbjctRslts() {
@@ -315,6 +609,20 @@ public class MeasureReport  implements java.io.Serializable {
     
     public void setMsrRptGrpPoplnSbjctRslts(String msrRptGrpPoplnSbjctRslts) {
         this.msrRptGrpPoplnSbjctRslts = msrRptGrpPoplnSbjctRslts;
+    }
+    
+    public void addMsrRptGrpPoplnSbjctRslts(String msrRptGrpPoplnSbjctRslts) {
+    	if( msrRptGrpPoplnSbjctRslts != null ) {
+	    	if( this.msrRptGrpPoplnSbjctRslts == null ) {
+	        	this.msrRptGrpPoplnSbjctRslts = msrRptGrpPoplnSbjctRslts;
+	        } else if(this.msrRptGrpPoplnSbjctRslts.substring(this.msrRptGrpPoplnSbjctRslts.length() - 1).equals("]") & msrRptGrpPoplnSbjctRslts.equals("[")) {
+	        	this.msrRptGrpPoplnSbjctRslts = this.msrRptGrpPoplnSbjctRslts+ "," + msrRptGrpPoplnSbjctRslts;
+	        } else if(msrRptGrpPoplnSbjctRslts.equals("[") | msrRptGrpPoplnSbjctRslts.equals("]") | this.msrRptGrpPoplnSbjctRslts.substring(this.msrRptGrpPoplnSbjctRslts.length() - 1).equals("[")) {
+	        	this.msrRptGrpPoplnSbjctRslts = this.msrRptGrpPoplnSbjctRslts+msrRptGrpPoplnSbjctRslts;
+	        } else  {
+	            this.msrRptGrpPoplnSbjctRslts = this.msrRptGrpPoplnSbjctRslts+ "," +msrRptGrpPoplnSbjctRslts;
+	        }
+        }
     }
     
     
@@ -327,6 +635,20 @@ public class MeasureReport  implements java.io.Serializable {
         this.msrRptGrpStrtfierCdCdgCd = msrRptGrpStrtfierCdCdgCd;
     }
     
+    public void addMsrRptGrpStrtfierCdCdgCd(String msrRptGrpStrtfierCdCdgCd) {
+    	if( msrRptGrpStrtfierCdCdgCd != null ) {
+	    	if( this.msrRptGrpStrtfierCdCdgCd == null ) {
+	        	this.msrRptGrpStrtfierCdCdgCd = msrRptGrpStrtfierCdCdgCd;
+	        } else if(this.msrRptGrpStrtfierCdCdgCd.substring(this.msrRptGrpStrtfierCdCdgCd.length() - 1).equals("]") & msrRptGrpStrtfierCdCdgCd.equals("[")) {
+	        	this.msrRptGrpStrtfierCdCdgCd = this.msrRptGrpStrtfierCdCdgCd+ "," + msrRptGrpStrtfierCdCdgCd;
+	        } else if(msrRptGrpStrtfierCdCdgCd.equals("[") | msrRptGrpStrtfierCdCdgCd.equals("]") | this.msrRptGrpStrtfierCdCdgCd.substring(this.msrRptGrpStrtfierCdCdgCd.length() - 1).equals("[")) {
+	        	this.msrRptGrpStrtfierCdCdgCd = this.msrRptGrpStrtfierCdCdgCd+msrRptGrpStrtfierCdCdgCd;
+	        } else  {
+	            this.msrRptGrpStrtfierCdCdgCd = this.msrRptGrpStrtfierCdCdgCd+ "," +msrRptGrpStrtfierCdCdgCd;
+	        }
+        }
+    }
+    
     
     
     public String getMsrRptGrpStrtfierCdCdgDsply() {
@@ -335,6 +657,20 @@ public class MeasureReport  implements java.io.Serializable {
     
     public void setMsrRptGrpStrtfierCdCdgDsply(String msrRptGrpStrtfierCdCdgDsply) {
         this.msrRptGrpStrtfierCdCdgDsply = msrRptGrpStrtfierCdCdgDsply;
+    }
+    
+    public void addMsrRptGrpStrtfierCdCdgDsply(String msrRptGrpStrtfierCdCdgDsply) {
+    	if( msrRptGrpStrtfierCdCdgDsply != null ) {
+	    	if( this.msrRptGrpStrtfierCdCdgDsply == null ) {
+	        	this.msrRptGrpStrtfierCdCdgDsply = msrRptGrpStrtfierCdCdgDsply;
+	        } else if(this.msrRptGrpStrtfierCdCdgDsply.substring(this.msrRptGrpStrtfierCdCdgDsply.length() - 1).equals("]") & msrRptGrpStrtfierCdCdgDsply.equals("[")) {
+	        	this.msrRptGrpStrtfierCdCdgDsply = this.msrRptGrpStrtfierCdCdgDsply+ "," + msrRptGrpStrtfierCdCdgDsply;
+	        } else if(msrRptGrpStrtfierCdCdgDsply.equals("[") | msrRptGrpStrtfierCdCdgDsply.equals("]") | this.msrRptGrpStrtfierCdCdgDsply.substring(this.msrRptGrpStrtfierCdCdgDsply.length() - 1).equals("[")) {
+	        	this.msrRptGrpStrtfierCdCdgDsply = this.msrRptGrpStrtfierCdCdgDsply+msrRptGrpStrtfierCdCdgDsply;
+	        } else  {
+	            this.msrRptGrpStrtfierCdCdgDsply = this.msrRptGrpStrtfierCdCdgDsply+ "," +msrRptGrpStrtfierCdCdgDsply;
+	        }
+        }
     }
     
     
@@ -347,6 +683,20 @@ public class MeasureReport  implements java.io.Serializable {
         this.msrRptGrpStrtfierCdCdgSys = msrRptGrpStrtfierCdCdgSys;
     }
     
+    public void addMsrRptGrpStrtfierCdCdgSys(String msrRptGrpStrtfierCdCdgSys) {
+    	if( msrRptGrpStrtfierCdCdgSys != null ) {
+	    	if( this.msrRptGrpStrtfierCdCdgSys == null ) {
+	        	this.msrRptGrpStrtfierCdCdgSys = msrRptGrpStrtfierCdCdgSys;
+	        } else if(this.msrRptGrpStrtfierCdCdgSys.substring(this.msrRptGrpStrtfierCdCdgSys.length() - 1).equals("]") & msrRptGrpStrtfierCdCdgSys.equals("[")) {
+	        	this.msrRptGrpStrtfierCdCdgSys = this.msrRptGrpStrtfierCdCdgSys+ "," + msrRptGrpStrtfierCdCdgSys;
+	        } else if(msrRptGrpStrtfierCdCdgSys.equals("[") | msrRptGrpStrtfierCdCdgSys.equals("]") | this.msrRptGrpStrtfierCdCdgSys.substring(this.msrRptGrpStrtfierCdCdgSys.length() - 1).equals("[")) {
+	        	this.msrRptGrpStrtfierCdCdgSys = this.msrRptGrpStrtfierCdCdgSys+msrRptGrpStrtfierCdCdgSys;
+	        } else  {
+	            this.msrRptGrpStrtfierCdCdgSys = this.msrRptGrpStrtfierCdCdgSys+ "," +msrRptGrpStrtfierCdCdgSys;
+	        }
+        }
+    }
+    
     
     
     public String getMsrRptGrpStrtfierCdCdgUsrSltd() {
@@ -355,6 +705,20 @@ public class MeasureReport  implements java.io.Serializable {
     
     public void setMsrRptGrpStrtfierCdCdgUsrSltd(String msrRptGrpStrtfierCdCdgUsrSltd) {
         this.msrRptGrpStrtfierCdCdgUsrSltd = msrRptGrpStrtfierCdCdgUsrSltd;
+    }
+    
+    public void addMsrRptGrpStrtfierCdCdgUsrSltd(String msrRptGrpStrtfierCdCdgUsrSltd) {
+    	if( msrRptGrpStrtfierCdCdgUsrSltd != null ) {
+	    	if( this.msrRptGrpStrtfierCdCdgUsrSltd == null ) {
+	        	this.msrRptGrpStrtfierCdCdgUsrSltd = msrRptGrpStrtfierCdCdgUsrSltd;
+	        } else if(this.msrRptGrpStrtfierCdCdgUsrSltd.substring(this.msrRptGrpStrtfierCdCdgUsrSltd.length() - 1).equals("]") & msrRptGrpStrtfierCdCdgUsrSltd.equals("[")) {
+	        	this.msrRptGrpStrtfierCdCdgUsrSltd = this.msrRptGrpStrtfierCdCdgUsrSltd+ "," + msrRptGrpStrtfierCdCdgUsrSltd;
+	        } else if(msrRptGrpStrtfierCdCdgUsrSltd.equals("[") | msrRptGrpStrtfierCdCdgUsrSltd.equals("]") | this.msrRptGrpStrtfierCdCdgUsrSltd.substring(this.msrRptGrpStrtfierCdCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.msrRptGrpStrtfierCdCdgUsrSltd = this.msrRptGrpStrtfierCdCdgUsrSltd+msrRptGrpStrtfierCdCdgUsrSltd;
+	        } else  {
+	            this.msrRptGrpStrtfierCdCdgUsrSltd = this.msrRptGrpStrtfierCdCdgUsrSltd+ "," +msrRptGrpStrtfierCdCdgUsrSltd;
+	        }
+        }
     }
     
     
@@ -367,6 +731,20 @@ public class MeasureReport  implements java.io.Serializable {
         this.msrRptGrpStrtfierCdCdgVrsn = msrRptGrpStrtfierCdCdgVrsn;
     }
     
+    public void addMsrRptGrpStrtfierCdCdgVrsn(String msrRptGrpStrtfierCdCdgVrsn) {
+    	if( msrRptGrpStrtfierCdCdgVrsn != null ) {
+	    	if( this.msrRptGrpStrtfierCdCdgVrsn == null ) {
+	        	this.msrRptGrpStrtfierCdCdgVrsn = msrRptGrpStrtfierCdCdgVrsn;
+	        } else if(this.msrRptGrpStrtfierCdCdgVrsn.substring(this.msrRptGrpStrtfierCdCdgVrsn.length() - 1).equals("]") & msrRptGrpStrtfierCdCdgVrsn.equals("[")) {
+	        	this.msrRptGrpStrtfierCdCdgVrsn = this.msrRptGrpStrtfierCdCdgVrsn+ "," + msrRptGrpStrtfierCdCdgVrsn;
+	        } else if(msrRptGrpStrtfierCdCdgVrsn.equals("[") | msrRptGrpStrtfierCdCdgVrsn.equals("]") | this.msrRptGrpStrtfierCdCdgVrsn.substring(this.msrRptGrpStrtfierCdCdgVrsn.length() - 1).equals("[")) {
+	        	this.msrRptGrpStrtfierCdCdgVrsn = this.msrRptGrpStrtfierCdCdgVrsn+msrRptGrpStrtfierCdCdgVrsn;
+	        } else  {
+	            this.msrRptGrpStrtfierCdCdgVrsn = this.msrRptGrpStrtfierCdCdgVrsn+ "," +msrRptGrpStrtfierCdCdgVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getMsrRptGrpStrtfierCdTxt() {
@@ -375,6 +753,20 @@ public class MeasureReport  implements java.io.Serializable {
     
     public void setMsrRptGrpStrtfierCdTxt(String msrRptGrpStrtfierCdTxt) {
         this.msrRptGrpStrtfierCdTxt = msrRptGrpStrtfierCdTxt;
+    }
+    
+    public void addMsrRptGrpStrtfierCdTxt(String msrRptGrpStrtfierCdTxt) {
+    	if( msrRptGrpStrtfierCdTxt != null ) {
+	    	if( this.msrRptGrpStrtfierCdTxt == null ) {
+	        	this.msrRptGrpStrtfierCdTxt = msrRptGrpStrtfierCdTxt;
+	        } else if(this.msrRptGrpStrtfierCdTxt.substring(this.msrRptGrpStrtfierCdTxt.length() - 1).equals("]") & msrRptGrpStrtfierCdTxt.equals("[")) {
+	        	this.msrRptGrpStrtfierCdTxt = this.msrRptGrpStrtfierCdTxt+ "," + msrRptGrpStrtfierCdTxt;
+	        } else if(msrRptGrpStrtfierCdTxt.equals("[") | msrRptGrpStrtfierCdTxt.equals("]") | this.msrRptGrpStrtfierCdTxt.substring(this.msrRptGrpStrtfierCdTxt.length() - 1).equals("[")) {
+	        	this.msrRptGrpStrtfierCdTxt = this.msrRptGrpStrtfierCdTxt+msrRptGrpStrtfierCdTxt;
+	        } else  {
+	            this.msrRptGrpStrtfierCdTxt = this.msrRptGrpStrtfierCdTxt+ "," +msrRptGrpStrtfierCdTxt;
+	        }
+        }
     }
     
     
@@ -387,6 +779,20 @@ public class MeasureReport  implements java.io.Serializable {
         this.msrRptGrpStrtfierStratumCmpntCdCdgCd = msrRptGrpStrtfierStratumCmpntCdCdgCd;
     }
     
+    public void addMsrRptGrpStrtfierStratumCmpntCdCdgCd(String msrRptGrpStrtfierStratumCmpntCdCdgCd) {
+    	if( msrRptGrpStrtfierStratumCmpntCdCdgCd != null ) {
+	    	if( this.msrRptGrpStrtfierStratumCmpntCdCdgCd == null ) {
+	        	this.msrRptGrpStrtfierStratumCmpntCdCdgCd = msrRptGrpStrtfierStratumCmpntCdCdgCd;
+	        } else if(this.msrRptGrpStrtfierStratumCmpntCdCdgCd.substring(this.msrRptGrpStrtfierStratumCmpntCdCdgCd.length() - 1).equals("]") & msrRptGrpStrtfierStratumCmpntCdCdgCd.equals("[")) {
+	        	this.msrRptGrpStrtfierStratumCmpntCdCdgCd = this.msrRptGrpStrtfierStratumCmpntCdCdgCd+ "," + msrRptGrpStrtfierStratumCmpntCdCdgCd;
+	        } else if(msrRptGrpStrtfierStratumCmpntCdCdgCd.equals("[") | msrRptGrpStrtfierStratumCmpntCdCdgCd.equals("]") | this.msrRptGrpStrtfierStratumCmpntCdCdgCd.substring(this.msrRptGrpStrtfierStratumCmpntCdCdgCd.length() - 1).equals("[")) {
+	        	this.msrRptGrpStrtfierStratumCmpntCdCdgCd = this.msrRptGrpStrtfierStratumCmpntCdCdgCd+msrRptGrpStrtfierStratumCmpntCdCdgCd;
+	        } else  {
+	            this.msrRptGrpStrtfierStratumCmpntCdCdgCd = this.msrRptGrpStrtfierStratumCmpntCdCdgCd+ "," +msrRptGrpStrtfierStratumCmpntCdCdgCd;
+	        }
+        }
+    }
+    
     
     
     public String getMsrRptGrpStrtfierStratumCmpntCdCdgDsply() {
@@ -395,6 +801,20 @@ public class MeasureReport  implements java.io.Serializable {
     
     public void setMsrRptGrpStrtfierStratumCmpntCdCdgDsply(String msrRptGrpStrtfierStratumCmpntCdCdgDsply) {
         this.msrRptGrpStrtfierStratumCmpntCdCdgDsply = msrRptGrpStrtfierStratumCmpntCdCdgDsply;
+    }
+    
+    public void addMsrRptGrpStrtfierStratumCmpntCdCdgDsply(String msrRptGrpStrtfierStratumCmpntCdCdgDsply) {
+    	if( msrRptGrpStrtfierStratumCmpntCdCdgDsply != null ) {
+	    	if( this.msrRptGrpStrtfierStratumCmpntCdCdgDsply == null ) {
+	        	this.msrRptGrpStrtfierStratumCmpntCdCdgDsply = msrRptGrpStrtfierStratumCmpntCdCdgDsply;
+	        } else if(this.msrRptGrpStrtfierStratumCmpntCdCdgDsply.substring(this.msrRptGrpStrtfierStratumCmpntCdCdgDsply.length() - 1).equals("]") & msrRptGrpStrtfierStratumCmpntCdCdgDsply.equals("[")) {
+	        	this.msrRptGrpStrtfierStratumCmpntCdCdgDsply = this.msrRptGrpStrtfierStratumCmpntCdCdgDsply+ "," + msrRptGrpStrtfierStratumCmpntCdCdgDsply;
+	        } else if(msrRptGrpStrtfierStratumCmpntCdCdgDsply.equals("[") | msrRptGrpStrtfierStratumCmpntCdCdgDsply.equals("]") | this.msrRptGrpStrtfierStratumCmpntCdCdgDsply.substring(this.msrRptGrpStrtfierStratumCmpntCdCdgDsply.length() - 1).equals("[")) {
+	        	this.msrRptGrpStrtfierStratumCmpntCdCdgDsply = this.msrRptGrpStrtfierStratumCmpntCdCdgDsply+msrRptGrpStrtfierStratumCmpntCdCdgDsply;
+	        } else  {
+	            this.msrRptGrpStrtfierStratumCmpntCdCdgDsply = this.msrRptGrpStrtfierStratumCmpntCdCdgDsply+ "," +msrRptGrpStrtfierStratumCmpntCdCdgDsply;
+	        }
+        }
     }
     
     
@@ -407,6 +827,20 @@ public class MeasureReport  implements java.io.Serializable {
         this.msrRptGrpStrtfierStratumCmpntCdCdgSys = msrRptGrpStrtfierStratumCmpntCdCdgSys;
     }
     
+    public void addMsrRptGrpStrtfierStratumCmpntCdCdgSys(String msrRptGrpStrtfierStratumCmpntCdCdgSys) {
+    	if( msrRptGrpStrtfierStratumCmpntCdCdgSys != null ) {
+	    	if( this.msrRptGrpStrtfierStratumCmpntCdCdgSys == null ) {
+	        	this.msrRptGrpStrtfierStratumCmpntCdCdgSys = msrRptGrpStrtfierStratumCmpntCdCdgSys;
+	        } else if(this.msrRptGrpStrtfierStratumCmpntCdCdgSys.substring(this.msrRptGrpStrtfierStratumCmpntCdCdgSys.length() - 1).equals("]") & msrRptGrpStrtfierStratumCmpntCdCdgSys.equals("[")) {
+	        	this.msrRptGrpStrtfierStratumCmpntCdCdgSys = this.msrRptGrpStrtfierStratumCmpntCdCdgSys+ "," + msrRptGrpStrtfierStratumCmpntCdCdgSys;
+	        } else if(msrRptGrpStrtfierStratumCmpntCdCdgSys.equals("[") | msrRptGrpStrtfierStratumCmpntCdCdgSys.equals("]") | this.msrRptGrpStrtfierStratumCmpntCdCdgSys.substring(this.msrRptGrpStrtfierStratumCmpntCdCdgSys.length() - 1).equals("[")) {
+	        	this.msrRptGrpStrtfierStratumCmpntCdCdgSys = this.msrRptGrpStrtfierStratumCmpntCdCdgSys+msrRptGrpStrtfierStratumCmpntCdCdgSys;
+	        } else  {
+	            this.msrRptGrpStrtfierStratumCmpntCdCdgSys = this.msrRptGrpStrtfierStratumCmpntCdCdgSys+ "," +msrRptGrpStrtfierStratumCmpntCdCdgSys;
+	        }
+        }
+    }
+    
     
     
     public String getMsrRptGrpStrtfierStratumCmpntCdCdgUsrSltd() {
@@ -415,6 +849,20 @@ public class MeasureReport  implements java.io.Serializable {
     
     public void setMsrRptGrpStrtfierStratumCmpntCdCdgUsrSltd(String msrRptGrpStrtfierStratumCmpntCdCdgUsrSltd) {
         this.msrRptGrpStrtfierStratumCmpntCdCdgUsrSltd = msrRptGrpStrtfierStratumCmpntCdCdgUsrSltd;
+    }
+    
+    public void addMsrRptGrpStrtfierStratumCmpntCdCdgUsrSltd(String msrRptGrpStrtfierStratumCmpntCdCdgUsrSltd) {
+    	if( msrRptGrpStrtfierStratumCmpntCdCdgUsrSltd != null ) {
+	    	if( this.msrRptGrpStrtfierStratumCmpntCdCdgUsrSltd == null ) {
+	        	this.msrRptGrpStrtfierStratumCmpntCdCdgUsrSltd = msrRptGrpStrtfierStratumCmpntCdCdgUsrSltd;
+	        } else if(this.msrRptGrpStrtfierStratumCmpntCdCdgUsrSltd.substring(this.msrRptGrpStrtfierStratumCmpntCdCdgUsrSltd.length() - 1).equals("]") & msrRptGrpStrtfierStratumCmpntCdCdgUsrSltd.equals("[")) {
+	        	this.msrRptGrpStrtfierStratumCmpntCdCdgUsrSltd = this.msrRptGrpStrtfierStratumCmpntCdCdgUsrSltd+ "," + msrRptGrpStrtfierStratumCmpntCdCdgUsrSltd;
+	        } else if(msrRptGrpStrtfierStratumCmpntCdCdgUsrSltd.equals("[") | msrRptGrpStrtfierStratumCmpntCdCdgUsrSltd.equals("]") | this.msrRptGrpStrtfierStratumCmpntCdCdgUsrSltd.substring(this.msrRptGrpStrtfierStratumCmpntCdCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.msrRptGrpStrtfierStratumCmpntCdCdgUsrSltd = this.msrRptGrpStrtfierStratumCmpntCdCdgUsrSltd+msrRptGrpStrtfierStratumCmpntCdCdgUsrSltd;
+	        } else  {
+	            this.msrRptGrpStrtfierStratumCmpntCdCdgUsrSltd = this.msrRptGrpStrtfierStratumCmpntCdCdgUsrSltd+ "," +msrRptGrpStrtfierStratumCmpntCdCdgUsrSltd;
+	        }
+        }
     }
     
     
@@ -427,6 +875,20 @@ public class MeasureReport  implements java.io.Serializable {
         this.msrRptGrpStrtfierStratumCmpntCdCdgVrsn = msrRptGrpStrtfierStratumCmpntCdCdgVrsn;
     }
     
+    public void addMsrRptGrpStrtfierStratumCmpntCdCdgVrsn(String msrRptGrpStrtfierStratumCmpntCdCdgVrsn) {
+    	if( msrRptGrpStrtfierStratumCmpntCdCdgVrsn != null ) {
+	    	if( this.msrRptGrpStrtfierStratumCmpntCdCdgVrsn == null ) {
+	        	this.msrRptGrpStrtfierStratumCmpntCdCdgVrsn = msrRptGrpStrtfierStratumCmpntCdCdgVrsn;
+	        } else if(this.msrRptGrpStrtfierStratumCmpntCdCdgVrsn.substring(this.msrRptGrpStrtfierStratumCmpntCdCdgVrsn.length() - 1).equals("]") & msrRptGrpStrtfierStratumCmpntCdCdgVrsn.equals("[")) {
+	        	this.msrRptGrpStrtfierStratumCmpntCdCdgVrsn = this.msrRptGrpStrtfierStratumCmpntCdCdgVrsn+ "," + msrRptGrpStrtfierStratumCmpntCdCdgVrsn;
+	        } else if(msrRptGrpStrtfierStratumCmpntCdCdgVrsn.equals("[") | msrRptGrpStrtfierStratumCmpntCdCdgVrsn.equals("]") | this.msrRptGrpStrtfierStratumCmpntCdCdgVrsn.substring(this.msrRptGrpStrtfierStratumCmpntCdCdgVrsn.length() - 1).equals("[")) {
+	        	this.msrRptGrpStrtfierStratumCmpntCdCdgVrsn = this.msrRptGrpStrtfierStratumCmpntCdCdgVrsn+msrRptGrpStrtfierStratumCmpntCdCdgVrsn;
+	        } else  {
+	            this.msrRptGrpStrtfierStratumCmpntCdCdgVrsn = this.msrRptGrpStrtfierStratumCmpntCdCdgVrsn+ "," +msrRptGrpStrtfierStratumCmpntCdCdgVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getMsrRptGrpStrtfierStratumCmpntCdTxt() {
@@ -435,6 +897,20 @@ public class MeasureReport  implements java.io.Serializable {
     
     public void setMsrRptGrpStrtfierStratumCmpntCdTxt(String msrRptGrpStrtfierStratumCmpntCdTxt) {
         this.msrRptGrpStrtfierStratumCmpntCdTxt = msrRptGrpStrtfierStratumCmpntCdTxt;
+    }
+    
+    public void addMsrRptGrpStrtfierStratumCmpntCdTxt(String msrRptGrpStrtfierStratumCmpntCdTxt) {
+    	if( msrRptGrpStrtfierStratumCmpntCdTxt != null ) {
+	    	if( this.msrRptGrpStrtfierStratumCmpntCdTxt == null ) {
+	        	this.msrRptGrpStrtfierStratumCmpntCdTxt = msrRptGrpStrtfierStratumCmpntCdTxt;
+	        } else if(this.msrRptGrpStrtfierStratumCmpntCdTxt.substring(this.msrRptGrpStrtfierStratumCmpntCdTxt.length() - 1).equals("]") & msrRptGrpStrtfierStratumCmpntCdTxt.equals("[")) {
+	        	this.msrRptGrpStrtfierStratumCmpntCdTxt = this.msrRptGrpStrtfierStratumCmpntCdTxt+ "," + msrRptGrpStrtfierStratumCmpntCdTxt;
+	        } else if(msrRptGrpStrtfierStratumCmpntCdTxt.equals("[") | msrRptGrpStrtfierStratumCmpntCdTxt.equals("]") | this.msrRptGrpStrtfierStratumCmpntCdTxt.substring(this.msrRptGrpStrtfierStratumCmpntCdTxt.length() - 1).equals("[")) {
+	        	this.msrRptGrpStrtfierStratumCmpntCdTxt = this.msrRptGrpStrtfierStratumCmpntCdTxt+msrRptGrpStrtfierStratumCmpntCdTxt;
+	        } else  {
+	            this.msrRptGrpStrtfierStratumCmpntCdTxt = this.msrRptGrpStrtfierStratumCmpntCdTxt+ "," +msrRptGrpStrtfierStratumCmpntCdTxt;
+	        }
+        }
     }
     
     
@@ -447,6 +923,20 @@ public class MeasureReport  implements java.io.Serializable {
         this.msrRptGrpStrtfierStratumCmpntVlCdgCd = msrRptGrpStrtfierStratumCmpntVlCdgCd;
     }
     
+    public void addMsrRptGrpStrtfierStratumCmpntVlCdgCd(String msrRptGrpStrtfierStratumCmpntVlCdgCd) {
+    	if( msrRptGrpStrtfierStratumCmpntVlCdgCd != null ) {
+	    	if( this.msrRptGrpStrtfierStratumCmpntVlCdgCd == null ) {
+	        	this.msrRptGrpStrtfierStratumCmpntVlCdgCd = msrRptGrpStrtfierStratumCmpntVlCdgCd;
+	        } else if(this.msrRptGrpStrtfierStratumCmpntVlCdgCd.substring(this.msrRptGrpStrtfierStratumCmpntVlCdgCd.length() - 1).equals("]") & msrRptGrpStrtfierStratumCmpntVlCdgCd.equals("[")) {
+	        	this.msrRptGrpStrtfierStratumCmpntVlCdgCd = this.msrRptGrpStrtfierStratumCmpntVlCdgCd+ "," + msrRptGrpStrtfierStratumCmpntVlCdgCd;
+	        } else if(msrRptGrpStrtfierStratumCmpntVlCdgCd.equals("[") | msrRptGrpStrtfierStratumCmpntVlCdgCd.equals("]") | this.msrRptGrpStrtfierStratumCmpntVlCdgCd.substring(this.msrRptGrpStrtfierStratumCmpntVlCdgCd.length() - 1).equals("[")) {
+	        	this.msrRptGrpStrtfierStratumCmpntVlCdgCd = this.msrRptGrpStrtfierStratumCmpntVlCdgCd+msrRptGrpStrtfierStratumCmpntVlCdgCd;
+	        } else  {
+	            this.msrRptGrpStrtfierStratumCmpntVlCdgCd = this.msrRptGrpStrtfierStratumCmpntVlCdgCd+ "," +msrRptGrpStrtfierStratumCmpntVlCdgCd;
+	        }
+        }
+    }
+    
     
     
     public String getMsrRptGrpStrtfierStratumCmpntVlCdgDsply() {
@@ -455,6 +945,20 @@ public class MeasureReport  implements java.io.Serializable {
     
     public void setMsrRptGrpStrtfierStratumCmpntVlCdgDsply(String msrRptGrpStrtfierStratumCmpntVlCdgDsply) {
         this.msrRptGrpStrtfierStratumCmpntVlCdgDsply = msrRptGrpStrtfierStratumCmpntVlCdgDsply;
+    }
+    
+    public void addMsrRptGrpStrtfierStratumCmpntVlCdgDsply(String msrRptGrpStrtfierStratumCmpntVlCdgDsply) {
+    	if( msrRptGrpStrtfierStratumCmpntVlCdgDsply != null ) {
+	    	if( this.msrRptGrpStrtfierStratumCmpntVlCdgDsply == null ) {
+	        	this.msrRptGrpStrtfierStratumCmpntVlCdgDsply = msrRptGrpStrtfierStratumCmpntVlCdgDsply;
+	        } else if(this.msrRptGrpStrtfierStratumCmpntVlCdgDsply.substring(this.msrRptGrpStrtfierStratumCmpntVlCdgDsply.length() - 1).equals("]") & msrRptGrpStrtfierStratumCmpntVlCdgDsply.equals("[")) {
+	        	this.msrRptGrpStrtfierStratumCmpntVlCdgDsply = this.msrRptGrpStrtfierStratumCmpntVlCdgDsply+ "," + msrRptGrpStrtfierStratumCmpntVlCdgDsply;
+	        } else if(msrRptGrpStrtfierStratumCmpntVlCdgDsply.equals("[") | msrRptGrpStrtfierStratumCmpntVlCdgDsply.equals("]") | this.msrRptGrpStrtfierStratumCmpntVlCdgDsply.substring(this.msrRptGrpStrtfierStratumCmpntVlCdgDsply.length() - 1).equals("[")) {
+	        	this.msrRptGrpStrtfierStratumCmpntVlCdgDsply = this.msrRptGrpStrtfierStratumCmpntVlCdgDsply+msrRptGrpStrtfierStratumCmpntVlCdgDsply;
+	        } else  {
+	            this.msrRptGrpStrtfierStratumCmpntVlCdgDsply = this.msrRptGrpStrtfierStratumCmpntVlCdgDsply+ "," +msrRptGrpStrtfierStratumCmpntVlCdgDsply;
+	        }
+        }
     }
     
     
@@ -467,6 +971,20 @@ public class MeasureReport  implements java.io.Serializable {
         this.msrRptGrpStrtfierStratumCmpntVlCdgSys = msrRptGrpStrtfierStratumCmpntVlCdgSys;
     }
     
+    public void addMsrRptGrpStrtfierStratumCmpntVlCdgSys(String msrRptGrpStrtfierStratumCmpntVlCdgSys) {
+    	if( msrRptGrpStrtfierStratumCmpntVlCdgSys != null ) {
+	    	if( this.msrRptGrpStrtfierStratumCmpntVlCdgSys == null ) {
+	        	this.msrRptGrpStrtfierStratumCmpntVlCdgSys = msrRptGrpStrtfierStratumCmpntVlCdgSys;
+	        } else if(this.msrRptGrpStrtfierStratumCmpntVlCdgSys.substring(this.msrRptGrpStrtfierStratumCmpntVlCdgSys.length() - 1).equals("]") & msrRptGrpStrtfierStratumCmpntVlCdgSys.equals("[")) {
+	        	this.msrRptGrpStrtfierStratumCmpntVlCdgSys = this.msrRptGrpStrtfierStratumCmpntVlCdgSys+ "," + msrRptGrpStrtfierStratumCmpntVlCdgSys;
+	        } else if(msrRptGrpStrtfierStratumCmpntVlCdgSys.equals("[") | msrRptGrpStrtfierStratumCmpntVlCdgSys.equals("]") | this.msrRptGrpStrtfierStratumCmpntVlCdgSys.substring(this.msrRptGrpStrtfierStratumCmpntVlCdgSys.length() - 1).equals("[")) {
+	        	this.msrRptGrpStrtfierStratumCmpntVlCdgSys = this.msrRptGrpStrtfierStratumCmpntVlCdgSys+msrRptGrpStrtfierStratumCmpntVlCdgSys;
+	        } else  {
+	            this.msrRptGrpStrtfierStratumCmpntVlCdgSys = this.msrRptGrpStrtfierStratumCmpntVlCdgSys+ "," +msrRptGrpStrtfierStratumCmpntVlCdgSys;
+	        }
+        }
+    }
+    
     
     
     public String getMsrRptGrpStrtfierStratumCmpntVlCdgUsrSltd() {
@@ -475,6 +993,20 @@ public class MeasureReport  implements java.io.Serializable {
     
     public void setMsrRptGrpStrtfierStratumCmpntVlCdgUsrSltd(String msrRptGrpStrtfierStratumCmpntVlCdgUsrSltd) {
         this.msrRptGrpStrtfierStratumCmpntVlCdgUsrSltd = msrRptGrpStrtfierStratumCmpntVlCdgUsrSltd;
+    }
+    
+    public void addMsrRptGrpStrtfierStratumCmpntVlCdgUsrSltd(String msrRptGrpStrtfierStratumCmpntVlCdgUsrSltd) {
+    	if( msrRptGrpStrtfierStratumCmpntVlCdgUsrSltd != null ) {
+	    	if( this.msrRptGrpStrtfierStratumCmpntVlCdgUsrSltd == null ) {
+	        	this.msrRptGrpStrtfierStratumCmpntVlCdgUsrSltd = msrRptGrpStrtfierStratumCmpntVlCdgUsrSltd;
+	        } else if(this.msrRptGrpStrtfierStratumCmpntVlCdgUsrSltd.substring(this.msrRptGrpStrtfierStratumCmpntVlCdgUsrSltd.length() - 1).equals("]") & msrRptGrpStrtfierStratumCmpntVlCdgUsrSltd.equals("[")) {
+	        	this.msrRptGrpStrtfierStratumCmpntVlCdgUsrSltd = this.msrRptGrpStrtfierStratumCmpntVlCdgUsrSltd+ "," + msrRptGrpStrtfierStratumCmpntVlCdgUsrSltd;
+	        } else if(msrRptGrpStrtfierStratumCmpntVlCdgUsrSltd.equals("[") | msrRptGrpStrtfierStratumCmpntVlCdgUsrSltd.equals("]") | this.msrRptGrpStrtfierStratumCmpntVlCdgUsrSltd.substring(this.msrRptGrpStrtfierStratumCmpntVlCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.msrRptGrpStrtfierStratumCmpntVlCdgUsrSltd = this.msrRptGrpStrtfierStratumCmpntVlCdgUsrSltd+msrRptGrpStrtfierStratumCmpntVlCdgUsrSltd;
+	        } else  {
+	            this.msrRptGrpStrtfierStratumCmpntVlCdgUsrSltd = this.msrRptGrpStrtfierStratumCmpntVlCdgUsrSltd+ "," +msrRptGrpStrtfierStratumCmpntVlCdgUsrSltd;
+	        }
+        }
     }
     
     
@@ -487,6 +1019,20 @@ public class MeasureReport  implements java.io.Serializable {
         this.msrRptGrpStrtfierStratumCmpntVlCdgVrsn = msrRptGrpStrtfierStratumCmpntVlCdgVrsn;
     }
     
+    public void addMsrRptGrpStrtfierStratumCmpntVlCdgVrsn(String msrRptGrpStrtfierStratumCmpntVlCdgVrsn) {
+    	if( msrRptGrpStrtfierStratumCmpntVlCdgVrsn != null ) {
+	    	if( this.msrRptGrpStrtfierStratumCmpntVlCdgVrsn == null ) {
+	        	this.msrRptGrpStrtfierStratumCmpntVlCdgVrsn = msrRptGrpStrtfierStratumCmpntVlCdgVrsn;
+	        } else if(this.msrRptGrpStrtfierStratumCmpntVlCdgVrsn.substring(this.msrRptGrpStrtfierStratumCmpntVlCdgVrsn.length() - 1).equals("]") & msrRptGrpStrtfierStratumCmpntVlCdgVrsn.equals("[")) {
+	        	this.msrRptGrpStrtfierStratumCmpntVlCdgVrsn = this.msrRptGrpStrtfierStratumCmpntVlCdgVrsn+ "," + msrRptGrpStrtfierStratumCmpntVlCdgVrsn;
+	        } else if(msrRptGrpStrtfierStratumCmpntVlCdgVrsn.equals("[") | msrRptGrpStrtfierStratumCmpntVlCdgVrsn.equals("]") | this.msrRptGrpStrtfierStratumCmpntVlCdgVrsn.substring(this.msrRptGrpStrtfierStratumCmpntVlCdgVrsn.length() - 1).equals("[")) {
+	        	this.msrRptGrpStrtfierStratumCmpntVlCdgVrsn = this.msrRptGrpStrtfierStratumCmpntVlCdgVrsn+msrRptGrpStrtfierStratumCmpntVlCdgVrsn;
+	        } else  {
+	            this.msrRptGrpStrtfierStratumCmpntVlCdgVrsn = this.msrRptGrpStrtfierStratumCmpntVlCdgVrsn+ "," +msrRptGrpStrtfierStratumCmpntVlCdgVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getMsrRptGrpStrtfierStratumCmpntVlTxt() {
@@ -495,6 +1041,20 @@ public class MeasureReport  implements java.io.Serializable {
     
     public void setMsrRptGrpStrtfierStratumCmpntVlTxt(String msrRptGrpStrtfierStratumCmpntVlTxt) {
         this.msrRptGrpStrtfierStratumCmpntVlTxt = msrRptGrpStrtfierStratumCmpntVlTxt;
+    }
+    
+    public void addMsrRptGrpStrtfierStratumCmpntVlTxt(String msrRptGrpStrtfierStratumCmpntVlTxt) {
+    	if( msrRptGrpStrtfierStratumCmpntVlTxt != null ) {
+	    	if( this.msrRptGrpStrtfierStratumCmpntVlTxt == null ) {
+	        	this.msrRptGrpStrtfierStratumCmpntVlTxt = msrRptGrpStrtfierStratumCmpntVlTxt;
+	        } else if(this.msrRptGrpStrtfierStratumCmpntVlTxt.substring(this.msrRptGrpStrtfierStratumCmpntVlTxt.length() - 1).equals("]") & msrRptGrpStrtfierStratumCmpntVlTxt.equals("[")) {
+	        	this.msrRptGrpStrtfierStratumCmpntVlTxt = this.msrRptGrpStrtfierStratumCmpntVlTxt+ "," + msrRptGrpStrtfierStratumCmpntVlTxt;
+	        } else if(msrRptGrpStrtfierStratumCmpntVlTxt.equals("[") | msrRptGrpStrtfierStratumCmpntVlTxt.equals("]") | this.msrRptGrpStrtfierStratumCmpntVlTxt.substring(this.msrRptGrpStrtfierStratumCmpntVlTxt.length() - 1).equals("[")) {
+	        	this.msrRptGrpStrtfierStratumCmpntVlTxt = this.msrRptGrpStrtfierStratumCmpntVlTxt+msrRptGrpStrtfierStratumCmpntVlTxt;
+	        } else  {
+	            this.msrRptGrpStrtfierStratumCmpntVlTxt = this.msrRptGrpStrtfierStratumCmpntVlTxt+ "," +msrRptGrpStrtfierStratumCmpntVlTxt;
+	        }
+        }
     }
     
     
@@ -507,6 +1067,20 @@ public class MeasureReport  implements java.io.Serializable {
         this.msrRptGrpStrtfierStratumMsrScoreCd = msrRptGrpStrtfierStratumMsrScoreCd;
     }
     
+    public void addMsrRptGrpStrtfierStratumMsrScoreCd(String msrRptGrpStrtfierStratumMsrScoreCd) {
+    	if( msrRptGrpStrtfierStratumMsrScoreCd != null ) {
+	    	if( this.msrRptGrpStrtfierStratumMsrScoreCd == null ) {
+	        	this.msrRptGrpStrtfierStratumMsrScoreCd = msrRptGrpStrtfierStratumMsrScoreCd;
+	        } else if(this.msrRptGrpStrtfierStratumMsrScoreCd.substring(this.msrRptGrpStrtfierStratumMsrScoreCd.length() - 1).equals("]") & msrRptGrpStrtfierStratumMsrScoreCd.equals("[")) {
+	        	this.msrRptGrpStrtfierStratumMsrScoreCd = this.msrRptGrpStrtfierStratumMsrScoreCd+ "," + msrRptGrpStrtfierStratumMsrScoreCd;
+	        } else if(msrRptGrpStrtfierStratumMsrScoreCd.equals("[") | msrRptGrpStrtfierStratumMsrScoreCd.equals("]") | this.msrRptGrpStrtfierStratumMsrScoreCd.substring(this.msrRptGrpStrtfierStratumMsrScoreCd.length() - 1).equals("[")) {
+	        	this.msrRptGrpStrtfierStratumMsrScoreCd = this.msrRptGrpStrtfierStratumMsrScoreCd+msrRptGrpStrtfierStratumMsrScoreCd;
+	        } else  {
+	            this.msrRptGrpStrtfierStratumMsrScoreCd = this.msrRptGrpStrtfierStratumMsrScoreCd+ "," +msrRptGrpStrtfierStratumMsrScoreCd;
+	        }
+        }
+    }
+    
     
     
     public String getMsrRptGrpStrtfierStratumMsrScoreCmprtr() {
@@ -515,6 +1089,20 @@ public class MeasureReport  implements java.io.Serializable {
     
     public void setMsrRptGrpStrtfierStratumMsrScoreCmprtr(String msrRptGrpStrtfierStratumMsrScoreCmprtr) {
         this.msrRptGrpStrtfierStratumMsrScoreCmprtr = msrRptGrpStrtfierStratumMsrScoreCmprtr;
+    }
+    
+    public void addMsrRptGrpStrtfierStratumMsrScoreCmprtr(String msrRptGrpStrtfierStratumMsrScoreCmprtr) {
+    	if( msrRptGrpStrtfierStratumMsrScoreCmprtr != null ) {
+	    	if( this.msrRptGrpStrtfierStratumMsrScoreCmprtr == null ) {
+	        	this.msrRptGrpStrtfierStratumMsrScoreCmprtr = msrRptGrpStrtfierStratumMsrScoreCmprtr;
+	        } else if(this.msrRptGrpStrtfierStratumMsrScoreCmprtr.substring(this.msrRptGrpStrtfierStratumMsrScoreCmprtr.length() - 1).equals("]") & msrRptGrpStrtfierStratumMsrScoreCmprtr.equals("[")) {
+	        	this.msrRptGrpStrtfierStratumMsrScoreCmprtr = this.msrRptGrpStrtfierStratumMsrScoreCmprtr+ "," + msrRptGrpStrtfierStratumMsrScoreCmprtr;
+	        } else if(msrRptGrpStrtfierStratumMsrScoreCmprtr.equals("[") | msrRptGrpStrtfierStratumMsrScoreCmprtr.equals("]") | this.msrRptGrpStrtfierStratumMsrScoreCmprtr.substring(this.msrRptGrpStrtfierStratumMsrScoreCmprtr.length() - 1).equals("[")) {
+	        	this.msrRptGrpStrtfierStratumMsrScoreCmprtr = this.msrRptGrpStrtfierStratumMsrScoreCmprtr+msrRptGrpStrtfierStratumMsrScoreCmprtr;
+	        } else  {
+	            this.msrRptGrpStrtfierStratumMsrScoreCmprtr = this.msrRptGrpStrtfierStratumMsrScoreCmprtr+ "," +msrRptGrpStrtfierStratumMsrScoreCmprtr;
+	        }
+        }
     }
     
     
@@ -527,6 +1115,20 @@ public class MeasureReport  implements java.io.Serializable {
         this.msrRptGrpStrtfierStratumMsrScoreSys = msrRptGrpStrtfierStratumMsrScoreSys;
     }
     
+    public void addMsrRptGrpStrtfierStratumMsrScoreSys(String msrRptGrpStrtfierStratumMsrScoreSys) {
+    	if( msrRptGrpStrtfierStratumMsrScoreSys != null ) {
+	    	if( this.msrRptGrpStrtfierStratumMsrScoreSys == null ) {
+	        	this.msrRptGrpStrtfierStratumMsrScoreSys = msrRptGrpStrtfierStratumMsrScoreSys;
+	        } else if(this.msrRptGrpStrtfierStratumMsrScoreSys.substring(this.msrRptGrpStrtfierStratumMsrScoreSys.length() - 1).equals("]") & msrRptGrpStrtfierStratumMsrScoreSys.equals("[")) {
+	        	this.msrRptGrpStrtfierStratumMsrScoreSys = this.msrRptGrpStrtfierStratumMsrScoreSys+ "," + msrRptGrpStrtfierStratumMsrScoreSys;
+	        } else if(msrRptGrpStrtfierStratumMsrScoreSys.equals("[") | msrRptGrpStrtfierStratumMsrScoreSys.equals("]") | this.msrRptGrpStrtfierStratumMsrScoreSys.substring(this.msrRptGrpStrtfierStratumMsrScoreSys.length() - 1).equals("[")) {
+	        	this.msrRptGrpStrtfierStratumMsrScoreSys = this.msrRptGrpStrtfierStratumMsrScoreSys+msrRptGrpStrtfierStratumMsrScoreSys;
+	        } else  {
+	            this.msrRptGrpStrtfierStratumMsrScoreSys = this.msrRptGrpStrtfierStratumMsrScoreSys+ "," +msrRptGrpStrtfierStratumMsrScoreSys;
+	        }
+        }
+    }
+    
     
     
     public String getMsrRptGrpStrtfierStratumMsrScoreUnt() {
@@ -535,6 +1137,20 @@ public class MeasureReport  implements java.io.Serializable {
     
     public void setMsrRptGrpStrtfierStratumMsrScoreUnt(String msrRptGrpStrtfierStratumMsrScoreUnt) {
         this.msrRptGrpStrtfierStratumMsrScoreUnt = msrRptGrpStrtfierStratumMsrScoreUnt;
+    }
+    
+    public void addMsrRptGrpStrtfierStratumMsrScoreUnt(String msrRptGrpStrtfierStratumMsrScoreUnt) {
+    	if( msrRptGrpStrtfierStratumMsrScoreUnt != null ) {
+	    	if( this.msrRptGrpStrtfierStratumMsrScoreUnt == null ) {
+	        	this.msrRptGrpStrtfierStratumMsrScoreUnt = msrRptGrpStrtfierStratumMsrScoreUnt;
+	        } else if(this.msrRptGrpStrtfierStratumMsrScoreUnt.substring(this.msrRptGrpStrtfierStratumMsrScoreUnt.length() - 1).equals("]") & msrRptGrpStrtfierStratumMsrScoreUnt.equals("[")) {
+	        	this.msrRptGrpStrtfierStratumMsrScoreUnt = this.msrRptGrpStrtfierStratumMsrScoreUnt+ "," + msrRptGrpStrtfierStratumMsrScoreUnt;
+	        } else if(msrRptGrpStrtfierStratumMsrScoreUnt.equals("[") | msrRptGrpStrtfierStratumMsrScoreUnt.equals("]") | this.msrRptGrpStrtfierStratumMsrScoreUnt.substring(this.msrRptGrpStrtfierStratumMsrScoreUnt.length() - 1).equals("[")) {
+	        	this.msrRptGrpStrtfierStratumMsrScoreUnt = this.msrRptGrpStrtfierStratumMsrScoreUnt+msrRptGrpStrtfierStratumMsrScoreUnt;
+	        } else  {
+	            this.msrRptGrpStrtfierStratumMsrScoreUnt = this.msrRptGrpStrtfierStratumMsrScoreUnt+ "," +msrRptGrpStrtfierStratumMsrScoreUnt;
+	        }
+        }
     }
     
     
@@ -547,6 +1163,20 @@ public class MeasureReport  implements java.io.Serializable {
         this.msrRptGrpStrtfierStratumMsrScoreVl = msrRptGrpStrtfierStratumMsrScoreVl;
     }
     
+    public void addMsrRptGrpStrtfierStratumMsrScoreVl(String msrRptGrpStrtfierStratumMsrScoreVl) {
+    	if( msrRptGrpStrtfierStratumMsrScoreVl != null ) {
+	    	if( this.msrRptGrpStrtfierStratumMsrScoreVl == null ) {
+	        	this.msrRptGrpStrtfierStratumMsrScoreVl = msrRptGrpStrtfierStratumMsrScoreVl;
+	        } else if(this.msrRptGrpStrtfierStratumMsrScoreVl.substring(this.msrRptGrpStrtfierStratumMsrScoreVl.length() - 1).equals("]") & msrRptGrpStrtfierStratumMsrScoreVl.equals("[")) {
+	        	this.msrRptGrpStrtfierStratumMsrScoreVl = this.msrRptGrpStrtfierStratumMsrScoreVl+ "," + msrRptGrpStrtfierStratumMsrScoreVl;
+	        } else if(msrRptGrpStrtfierStratumMsrScoreVl.equals("[") | msrRptGrpStrtfierStratumMsrScoreVl.equals("]") | this.msrRptGrpStrtfierStratumMsrScoreVl.substring(this.msrRptGrpStrtfierStratumMsrScoreVl.length() - 1).equals("[")) {
+	        	this.msrRptGrpStrtfierStratumMsrScoreVl = this.msrRptGrpStrtfierStratumMsrScoreVl+msrRptGrpStrtfierStratumMsrScoreVl;
+	        } else  {
+	            this.msrRptGrpStrtfierStratumMsrScoreVl = this.msrRptGrpStrtfierStratumMsrScoreVl+ "," +msrRptGrpStrtfierStratumMsrScoreVl;
+	        }
+        }
+    }
+    
     
     
     public String getMsrRptGrpStrtfierStratumPoplnCdCdgCd() {
@@ -555,6 +1185,20 @@ public class MeasureReport  implements java.io.Serializable {
     
     public void setMsrRptGrpStrtfierStratumPoplnCdCdgCd(String msrRptGrpStrtfierStratumPoplnCdCdgCd) {
         this.msrRptGrpStrtfierStratumPoplnCdCdgCd = msrRptGrpStrtfierStratumPoplnCdCdgCd;
+    }
+    
+    public void addMsrRptGrpStrtfierStratumPoplnCdCdgCd(String msrRptGrpStrtfierStratumPoplnCdCdgCd) {
+    	if( msrRptGrpStrtfierStratumPoplnCdCdgCd != null ) {
+	    	if( this.msrRptGrpStrtfierStratumPoplnCdCdgCd == null ) {
+	        	this.msrRptGrpStrtfierStratumPoplnCdCdgCd = msrRptGrpStrtfierStratumPoplnCdCdgCd;
+	        } else if(this.msrRptGrpStrtfierStratumPoplnCdCdgCd.substring(this.msrRptGrpStrtfierStratumPoplnCdCdgCd.length() - 1).equals("]") & msrRptGrpStrtfierStratumPoplnCdCdgCd.equals("[")) {
+	        	this.msrRptGrpStrtfierStratumPoplnCdCdgCd = this.msrRptGrpStrtfierStratumPoplnCdCdgCd+ "," + msrRptGrpStrtfierStratumPoplnCdCdgCd;
+	        } else if(msrRptGrpStrtfierStratumPoplnCdCdgCd.equals("[") | msrRptGrpStrtfierStratumPoplnCdCdgCd.equals("]") | this.msrRptGrpStrtfierStratumPoplnCdCdgCd.substring(this.msrRptGrpStrtfierStratumPoplnCdCdgCd.length() - 1).equals("[")) {
+	        	this.msrRptGrpStrtfierStratumPoplnCdCdgCd = this.msrRptGrpStrtfierStratumPoplnCdCdgCd+msrRptGrpStrtfierStratumPoplnCdCdgCd;
+	        } else  {
+	            this.msrRptGrpStrtfierStratumPoplnCdCdgCd = this.msrRptGrpStrtfierStratumPoplnCdCdgCd+ "," +msrRptGrpStrtfierStratumPoplnCdCdgCd;
+	        }
+        }
     }
     
     
@@ -567,6 +1211,20 @@ public class MeasureReport  implements java.io.Serializable {
         this.msrRptGrpStrtfierStratumPoplnCdCdgDsply = msrRptGrpStrtfierStratumPoplnCdCdgDsply;
     }
     
+    public void addMsrRptGrpStrtfierStratumPoplnCdCdgDsply(String msrRptGrpStrtfierStratumPoplnCdCdgDsply) {
+    	if( msrRptGrpStrtfierStratumPoplnCdCdgDsply != null ) {
+	    	if( this.msrRptGrpStrtfierStratumPoplnCdCdgDsply == null ) {
+	        	this.msrRptGrpStrtfierStratumPoplnCdCdgDsply = msrRptGrpStrtfierStratumPoplnCdCdgDsply;
+	        } else if(this.msrRptGrpStrtfierStratumPoplnCdCdgDsply.substring(this.msrRptGrpStrtfierStratumPoplnCdCdgDsply.length() - 1).equals("]") & msrRptGrpStrtfierStratumPoplnCdCdgDsply.equals("[")) {
+	        	this.msrRptGrpStrtfierStratumPoplnCdCdgDsply = this.msrRptGrpStrtfierStratumPoplnCdCdgDsply+ "," + msrRptGrpStrtfierStratumPoplnCdCdgDsply;
+	        } else if(msrRptGrpStrtfierStratumPoplnCdCdgDsply.equals("[") | msrRptGrpStrtfierStratumPoplnCdCdgDsply.equals("]") | this.msrRptGrpStrtfierStratumPoplnCdCdgDsply.substring(this.msrRptGrpStrtfierStratumPoplnCdCdgDsply.length() - 1).equals("[")) {
+	        	this.msrRptGrpStrtfierStratumPoplnCdCdgDsply = this.msrRptGrpStrtfierStratumPoplnCdCdgDsply+msrRptGrpStrtfierStratumPoplnCdCdgDsply;
+	        } else  {
+	            this.msrRptGrpStrtfierStratumPoplnCdCdgDsply = this.msrRptGrpStrtfierStratumPoplnCdCdgDsply+ "," +msrRptGrpStrtfierStratumPoplnCdCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getMsrRptGrpStrtfierStratumPoplnCdCdgSys() {
@@ -575,6 +1233,20 @@ public class MeasureReport  implements java.io.Serializable {
     
     public void setMsrRptGrpStrtfierStratumPoplnCdCdgSys(String msrRptGrpStrtfierStratumPoplnCdCdgSys) {
         this.msrRptGrpStrtfierStratumPoplnCdCdgSys = msrRptGrpStrtfierStratumPoplnCdCdgSys;
+    }
+    
+    public void addMsrRptGrpStrtfierStratumPoplnCdCdgSys(String msrRptGrpStrtfierStratumPoplnCdCdgSys) {
+    	if( msrRptGrpStrtfierStratumPoplnCdCdgSys != null ) {
+	    	if( this.msrRptGrpStrtfierStratumPoplnCdCdgSys == null ) {
+	        	this.msrRptGrpStrtfierStratumPoplnCdCdgSys = msrRptGrpStrtfierStratumPoplnCdCdgSys;
+	        } else if(this.msrRptGrpStrtfierStratumPoplnCdCdgSys.substring(this.msrRptGrpStrtfierStratumPoplnCdCdgSys.length() - 1).equals("]") & msrRptGrpStrtfierStratumPoplnCdCdgSys.equals("[")) {
+	        	this.msrRptGrpStrtfierStratumPoplnCdCdgSys = this.msrRptGrpStrtfierStratumPoplnCdCdgSys+ "," + msrRptGrpStrtfierStratumPoplnCdCdgSys;
+	        } else if(msrRptGrpStrtfierStratumPoplnCdCdgSys.equals("[") | msrRptGrpStrtfierStratumPoplnCdCdgSys.equals("]") | this.msrRptGrpStrtfierStratumPoplnCdCdgSys.substring(this.msrRptGrpStrtfierStratumPoplnCdCdgSys.length() - 1).equals("[")) {
+	        	this.msrRptGrpStrtfierStratumPoplnCdCdgSys = this.msrRptGrpStrtfierStratumPoplnCdCdgSys+msrRptGrpStrtfierStratumPoplnCdCdgSys;
+	        } else  {
+	            this.msrRptGrpStrtfierStratumPoplnCdCdgSys = this.msrRptGrpStrtfierStratumPoplnCdCdgSys+ "," +msrRptGrpStrtfierStratumPoplnCdCdgSys;
+	        }
+        }
     }
     
     
@@ -587,6 +1259,20 @@ public class MeasureReport  implements java.io.Serializable {
         this.msrRptGrpStrtfierStratumPoplnCdCdgUsrSltd = msrRptGrpStrtfierStratumPoplnCdCdgUsrSltd;
     }
     
+    public void addMsrRptGrpStrtfierStratumPoplnCdCdgUsrSltd(String msrRptGrpStrtfierStratumPoplnCdCdgUsrSltd) {
+    	if( msrRptGrpStrtfierStratumPoplnCdCdgUsrSltd != null ) {
+	    	if( this.msrRptGrpStrtfierStratumPoplnCdCdgUsrSltd == null ) {
+	        	this.msrRptGrpStrtfierStratumPoplnCdCdgUsrSltd = msrRptGrpStrtfierStratumPoplnCdCdgUsrSltd;
+	        } else if(this.msrRptGrpStrtfierStratumPoplnCdCdgUsrSltd.substring(this.msrRptGrpStrtfierStratumPoplnCdCdgUsrSltd.length() - 1).equals("]") & msrRptGrpStrtfierStratumPoplnCdCdgUsrSltd.equals("[")) {
+	        	this.msrRptGrpStrtfierStratumPoplnCdCdgUsrSltd = this.msrRptGrpStrtfierStratumPoplnCdCdgUsrSltd+ "," + msrRptGrpStrtfierStratumPoplnCdCdgUsrSltd;
+	        } else if(msrRptGrpStrtfierStratumPoplnCdCdgUsrSltd.equals("[") | msrRptGrpStrtfierStratumPoplnCdCdgUsrSltd.equals("]") | this.msrRptGrpStrtfierStratumPoplnCdCdgUsrSltd.substring(this.msrRptGrpStrtfierStratumPoplnCdCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.msrRptGrpStrtfierStratumPoplnCdCdgUsrSltd = this.msrRptGrpStrtfierStratumPoplnCdCdgUsrSltd+msrRptGrpStrtfierStratumPoplnCdCdgUsrSltd;
+	        } else  {
+	            this.msrRptGrpStrtfierStratumPoplnCdCdgUsrSltd = this.msrRptGrpStrtfierStratumPoplnCdCdgUsrSltd+ "," +msrRptGrpStrtfierStratumPoplnCdCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getMsrRptGrpStrtfierStratumPoplnCdCdgVrsn() {
@@ -595,6 +1281,20 @@ public class MeasureReport  implements java.io.Serializable {
     
     public void setMsrRptGrpStrtfierStratumPoplnCdCdgVrsn(String msrRptGrpStrtfierStratumPoplnCdCdgVrsn) {
         this.msrRptGrpStrtfierStratumPoplnCdCdgVrsn = msrRptGrpStrtfierStratumPoplnCdCdgVrsn;
+    }
+    
+    public void addMsrRptGrpStrtfierStratumPoplnCdCdgVrsn(String msrRptGrpStrtfierStratumPoplnCdCdgVrsn) {
+    	if( msrRptGrpStrtfierStratumPoplnCdCdgVrsn != null ) {
+	    	if( this.msrRptGrpStrtfierStratumPoplnCdCdgVrsn == null ) {
+	        	this.msrRptGrpStrtfierStratumPoplnCdCdgVrsn = msrRptGrpStrtfierStratumPoplnCdCdgVrsn;
+	        } else if(this.msrRptGrpStrtfierStratumPoplnCdCdgVrsn.substring(this.msrRptGrpStrtfierStratumPoplnCdCdgVrsn.length() - 1).equals("]") & msrRptGrpStrtfierStratumPoplnCdCdgVrsn.equals("[")) {
+	        	this.msrRptGrpStrtfierStratumPoplnCdCdgVrsn = this.msrRptGrpStrtfierStratumPoplnCdCdgVrsn+ "," + msrRptGrpStrtfierStratumPoplnCdCdgVrsn;
+	        } else if(msrRptGrpStrtfierStratumPoplnCdCdgVrsn.equals("[") | msrRptGrpStrtfierStratumPoplnCdCdgVrsn.equals("]") | this.msrRptGrpStrtfierStratumPoplnCdCdgVrsn.substring(this.msrRptGrpStrtfierStratumPoplnCdCdgVrsn.length() - 1).equals("[")) {
+	        	this.msrRptGrpStrtfierStratumPoplnCdCdgVrsn = this.msrRptGrpStrtfierStratumPoplnCdCdgVrsn+msrRptGrpStrtfierStratumPoplnCdCdgVrsn;
+	        } else  {
+	            this.msrRptGrpStrtfierStratumPoplnCdCdgVrsn = this.msrRptGrpStrtfierStratumPoplnCdCdgVrsn+ "," +msrRptGrpStrtfierStratumPoplnCdCdgVrsn;
+	        }
+        }
     }
     
     
@@ -607,6 +1307,20 @@ public class MeasureReport  implements java.io.Serializable {
         this.msrRptGrpStrtfierStratumPoplnCdTxt = msrRptGrpStrtfierStratumPoplnCdTxt;
     }
     
+    public void addMsrRptGrpStrtfierStratumPoplnCdTxt(String msrRptGrpStrtfierStratumPoplnCdTxt) {
+    	if( msrRptGrpStrtfierStratumPoplnCdTxt != null ) {
+	    	if( this.msrRptGrpStrtfierStratumPoplnCdTxt == null ) {
+	        	this.msrRptGrpStrtfierStratumPoplnCdTxt = msrRptGrpStrtfierStratumPoplnCdTxt;
+	        } else if(this.msrRptGrpStrtfierStratumPoplnCdTxt.substring(this.msrRptGrpStrtfierStratumPoplnCdTxt.length() - 1).equals("]") & msrRptGrpStrtfierStratumPoplnCdTxt.equals("[")) {
+	        	this.msrRptGrpStrtfierStratumPoplnCdTxt = this.msrRptGrpStrtfierStratumPoplnCdTxt+ "," + msrRptGrpStrtfierStratumPoplnCdTxt;
+	        } else if(msrRptGrpStrtfierStratumPoplnCdTxt.equals("[") | msrRptGrpStrtfierStratumPoplnCdTxt.equals("]") | this.msrRptGrpStrtfierStratumPoplnCdTxt.substring(this.msrRptGrpStrtfierStratumPoplnCdTxt.length() - 1).equals("[")) {
+	        	this.msrRptGrpStrtfierStratumPoplnCdTxt = this.msrRptGrpStrtfierStratumPoplnCdTxt+msrRptGrpStrtfierStratumPoplnCdTxt;
+	        } else  {
+	            this.msrRptGrpStrtfierStratumPoplnCdTxt = this.msrRptGrpStrtfierStratumPoplnCdTxt+ "," +msrRptGrpStrtfierStratumPoplnCdTxt;
+	        }
+        }
+    }
+    
     
     
     public String getMsrRptGrpStrtfierStratumPoplnCnt() {
@@ -615,6 +1329,20 @@ public class MeasureReport  implements java.io.Serializable {
     
     public void setMsrRptGrpStrtfierStratumPoplnCnt(String msrRptGrpStrtfierStratumPoplnCnt) {
         this.msrRptGrpStrtfierStratumPoplnCnt = msrRptGrpStrtfierStratumPoplnCnt;
+    }
+    
+    public void addMsrRptGrpStrtfierStratumPoplnCnt(String msrRptGrpStrtfierStratumPoplnCnt) {
+    	if( msrRptGrpStrtfierStratumPoplnCnt != null ) {
+	    	if( this.msrRptGrpStrtfierStratumPoplnCnt == null ) {
+	        	this.msrRptGrpStrtfierStratumPoplnCnt = msrRptGrpStrtfierStratumPoplnCnt;
+	        } else if(this.msrRptGrpStrtfierStratumPoplnCnt.substring(this.msrRptGrpStrtfierStratumPoplnCnt.length() - 1).equals("]") & msrRptGrpStrtfierStratumPoplnCnt.equals("[")) {
+	        	this.msrRptGrpStrtfierStratumPoplnCnt = this.msrRptGrpStrtfierStratumPoplnCnt+ "," + msrRptGrpStrtfierStratumPoplnCnt;
+	        } else if(msrRptGrpStrtfierStratumPoplnCnt.equals("[") | msrRptGrpStrtfierStratumPoplnCnt.equals("]") | this.msrRptGrpStrtfierStratumPoplnCnt.substring(this.msrRptGrpStrtfierStratumPoplnCnt.length() - 1).equals("[")) {
+	        	this.msrRptGrpStrtfierStratumPoplnCnt = this.msrRptGrpStrtfierStratumPoplnCnt+msrRptGrpStrtfierStratumPoplnCnt;
+	        } else  {
+	            this.msrRptGrpStrtfierStratumPoplnCnt = this.msrRptGrpStrtfierStratumPoplnCnt+ "," +msrRptGrpStrtfierStratumPoplnCnt;
+	        }
+        }
     }
     
     
@@ -627,6 +1355,20 @@ public class MeasureReport  implements java.io.Serializable {
         this.msrRptGrpStrtfierStratumPoplnSbjctRslts = msrRptGrpStrtfierStratumPoplnSbjctRslts;
     }
     
+    public void addMsrRptGrpStrtfierStratumPoplnSbjctRslts(String msrRptGrpStrtfierStratumPoplnSbjctRslts) {
+    	if( msrRptGrpStrtfierStratumPoplnSbjctRslts != null ) {
+	    	if( this.msrRptGrpStrtfierStratumPoplnSbjctRslts == null ) {
+	        	this.msrRptGrpStrtfierStratumPoplnSbjctRslts = msrRptGrpStrtfierStratumPoplnSbjctRslts;
+	        } else if(this.msrRptGrpStrtfierStratumPoplnSbjctRslts.substring(this.msrRptGrpStrtfierStratumPoplnSbjctRslts.length() - 1).equals("]") & msrRptGrpStrtfierStratumPoplnSbjctRslts.equals("[")) {
+	        	this.msrRptGrpStrtfierStratumPoplnSbjctRslts = this.msrRptGrpStrtfierStratumPoplnSbjctRslts+ "," + msrRptGrpStrtfierStratumPoplnSbjctRslts;
+	        } else if(msrRptGrpStrtfierStratumPoplnSbjctRslts.equals("[") | msrRptGrpStrtfierStratumPoplnSbjctRslts.equals("]") | this.msrRptGrpStrtfierStratumPoplnSbjctRslts.substring(this.msrRptGrpStrtfierStratumPoplnSbjctRslts.length() - 1).equals("[")) {
+	        	this.msrRptGrpStrtfierStratumPoplnSbjctRslts = this.msrRptGrpStrtfierStratumPoplnSbjctRslts+msrRptGrpStrtfierStratumPoplnSbjctRslts;
+	        } else  {
+	            this.msrRptGrpStrtfierStratumPoplnSbjctRslts = this.msrRptGrpStrtfierStratumPoplnSbjctRslts+ "," +msrRptGrpStrtfierStratumPoplnSbjctRslts;
+	        }
+        }
+    }
+    
     
     
     public String getMsrRptGrpStrtfierStratumVlCdgCd() {
@@ -635,6 +1377,20 @@ public class MeasureReport  implements java.io.Serializable {
     
     public void setMsrRptGrpStrtfierStratumVlCdgCd(String msrRptGrpStrtfierStratumVlCdgCd) {
         this.msrRptGrpStrtfierStratumVlCdgCd = msrRptGrpStrtfierStratumVlCdgCd;
+    }
+    
+    public void addMsrRptGrpStrtfierStratumVlCdgCd(String msrRptGrpStrtfierStratumVlCdgCd) {
+    	if( msrRptGrpStrtfierStratumVlCdgCd != null ) {
+	    	if( this.msrRptGrpStrtfierStratumVlCdgCd == null ) {
+	        	this.msrRptGrpStrtfierStratumVlCdgCd = msrRptGrpStrtfierStratumVlCdgCd;
+	        } else if(this.msrRptGrpStrtfierStratumVlCdgCd.substring(this.msrRptGrpStrtfierStratumVlCdgCd.length() - 1).equals("]") & msrRptGrpStrtfierStratumVlCdgCd.equals("[")) {
+	        	this.msrRptGrpStrtfierStratumVlCdgCd = this.msrRptGrpStrtfierStratumVlCdgCd+ "," + msrRptGrpStrtfierStratumVlCdgCd;
+	        } else if(msrRptGrpStrtfierStratumVlCdgCd.equals("[") | msrRptGrpStrtfierStratumVlCdgCd.equals("]") | this.msrRptGrpStrtfierStratumVlCdgCd.substring(this.msrRptGrpStrtfierStratumVlCdgCd.length() - 1).equals("[")) {
+	        	this.msrRptGrpStrtfierStratumVlCdgCd = this.msrRptGrpStrtfierStratumVlCdgCd+msrRptGrpStrtfierStratumVlCdgCd;
+	        } else  {
+	            this.msrRptGrpStrtfierStratumVlCdgCd = this.msrRptGrpStrtfierStratumVlCdgCd+ "," +msrRptGrpStrtfierStratumVlCdgCd;
+	        }
+        }
     }
     
     
@@ -647,6 +1403,20 @@ public class MeasureReport  implements java.io.Serializable {
         this.msrRptGrpStrtfierStratumVlCdgDsply = msrRptGrpStrtfierStratumVlCdgDsply;
     }
     
+    public void addMsrRptGrpStrtfierStratumVlCdgDsply(String msrRptGrpStrtfierStratumVlCdgDsply) {
+    	if( msrRptGrpStrtfierStratumVlCdgDsply != null ) {
+	    	if( this.msrRptGrpStrtfierStratumVlCdgDsply == null ) {
+	        	this.msrRptGrpStrtfierStratumVlCdgDsply = msrRptGrpStrtfierStratumVlCdgDsply;
+	        } else if(this.msrRptGrpStrtfierStratumVlCdgDsply.substring(this.msrRptGrpStrtfierStratumVlCdgDsply.length() - 1).equals("]") & msrRptGrpStrtfierStratumVlCdgDsply.equals("[")) {
+	        	this.msrRptGrpStrtfierStratumVlCdgDsply = this.msrRptGrpStrtfierStratumVlCdgDsply+ "," + msrRptGrpStrtfierStratumVlCdgDsply;
+	        } else if(msrRptGrpStrtfierStratumVlCdgDsply.equals("[") | msrRptGrpStrtfierStratumVlCdgDsply.equals("]") | this.msrRptGrpStrtfierStratumVlCdgDsply.substring(this.msrRptGrpStrtfierStratumVlCdgDsply.length() - 1).equals("[")) {
+	        	this.msrRptGrpStrtfierStratumVlCdgDsply = this.msrRptGrpStrtfierStratumVlCdgDsply+msrRptGrpStrtfierStratumVlCdgDsply;
+	        } else  {
+	            this.msrRptGrpStrtfierStratumVlCdgDsply = this.msrRptGrpStrtfierStratumVlCdgDsply+ "," +msrRptGrpStrtfierStratumVlCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getMsrRptGrpStrtfierStratumVlCdgSys() {
@@ -655,6 +1425,20 @@ public class MeasureReport  implements java.io.Serializable {
     
     public void setMsrRptGrpStrtfierStratumVlCdgSys(String msrRptGrpStrtfierStratumVlCdgSys) {
         this.msrRptGrpStrtfierStratumVlCdgSys = msrRptGrpStrtfierStratumVlCdgSys;
+    }
+    
+    public void addMsrRptGrpStrtfierStratumVlCdgSys(String msrRptGrpStrtfierStratumVlCdgSys) {
+    	if( msrRptGrpStrtfierStratumVlCdgSys != null ) {
+	    	if( this.msrRptGrpStrtfierStratumVlCdgSys == null ) {
+	        	this.msrRptGrpStrtfierStratumVlCdgSys = msrRptGrpStrtfierStratumVlCdgSys;
+	        } else if(this.msrRptGrpStrtfierStratumVlCdgSys.substring(this.msrRptGrpStrtfierStratumVlCdgSys.length() - 1).equals("]") & msrRptGrpStrtfierStratumVlCdgSys.equals("[")) {
+	        	this.msrRptGrpStrtfierStratumVlCdgSys = this.msrRptGrpStrtfierStratumVlCdgSys+ "," + msrRptGrpStrtfierStratumVlCdgSys;
+	        } else if(msrRptGrpStrtfierStratumVlCdgSys.equals("[") | msrRptGrpStrtfierStratumVlCdgSys.equals("]") | this.msrRptGrpStrtfierStratumVlCdgSys.substring(this.msrRptGrpStrtfierStratumVlCdgSys.length() - 1).equals("[")) {
+	        	this.msrRptGrpStrtfierStratumVlCdgSys = this.msrRptGrpStrtfierStratumVlCdgSys+msrRptGrpStrtfierStratumVlCdgSys;
+	        } else  {
+	            this.msrRptGrpStrtfierStratumVlCdgSys = this.msrRptGrpStrtfierStratumVlCdgSys+ "," +msrRptGrpStrtfierStratumVlCdgSys;
+	        }
+        }
     }
     
     
@@ -667,6 +1451,20 @@ public class MeasureReport  implements java.io.Serializable {
         this.msrRptGrpStrtfierStratumVlCdgUsrSltd = msrRptGrpStrtfierStratumVlCdgUsrSltd;
     }
     
+    public void addMsrRptGrpStrtfierStratumVlCdgUsrSltd(String msrRptGrpStrtfierStratumVlCdgUsrSltd) {
+    	if( msrRptGrpStrtfierStratumVlCdgUsrSltd != null ) {
+	    	if( this.msrRptGrpStrtfierStratumVlCdgUsrSltd == null ) {
+	        	this.msrRptGrpStrtfierStratumVlCdgUsrSltd = msrRptGrpStrtfierStratumVlCdgUsrSltd;
+	        } else if(this.msrRptGrpStrtfierStratumVlCdgUsrSltd.substring(this.msrRptGrpStrtfierStratumVlCdgUsrSltd.length() - 1).equals("]") & msrRptGrpStrtfierStratumVlCdgUsrSltd.equals("[")) {
+	        	this.msrRptGrpStrtfierStratumVlCdgUsrSltd = this.msrRptGrpStrtfierStratumVlCdgUsrSltd+ "," + msrRptGrpStrtfierStratumVlCdgUsrSltd;
+	        } else if(msrRptGrpStrtfierStratumVlCdgUsrSltd.equals("[") | msrRptGrpStrtfierStratumVlCdgUsrSltd.equals("]") | this.msrRptGrpStrtfierStratumVlCdgUsrSltd.substring(this.msrRptGrpStrtfierStratumVlCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.msrRptGrpStrtfierStratumVlCdgUsrSltd = this.msrRptGrpStrtfierStratumVlCdgUsrSltd+msrRptGrpStrtfierStratumVlCdgUsrSltd;
+	        } else  {
+	            this.msrRptGrpStrtfierStratumVlCdgUsrSltd = this.msrRptGrpStrtfierStratumVlCdgUsrSltd+ "," +msrRptGrpStrtfierStratumVlCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getMsrRptGrpStrtfierStratumVlCdgVrsn() {
@@ -675,6 +1473,20 @@ public class MeasureReport  implements java.io.Serializable {
     
     public void setMsrRptGrpStrtfierStratumVlCdgVrsn(String msrRptGrpStrtfierStratumVlCdgVrsn) {
         this.msrRptGrpStrtfierStratumVlCdgVrsn = msrRptGrpStrtfierStratumVlCdgVrsn;
+    }
+    
+    public void addMsrRptGrpStrtfierStratumVlCdgVrsn(String msrRptGrpStrtfierStratumVlCdgVrsn) {
+    	if( msrRptGrpStrtfierStratumVlCdgVrsn != null ) {
+	    	if( this.msrRptGrpStrtfierStratumVlCdgVrsn == null ) {
+	        	this.msrRptGrpStrtfierStratumVlCdgVrsn = msrRptGrpStrtfierStratumVlCdgVrsn;
+	        } else if(this.msrRptGrpStrtfierStratumVlCdgVrsn.substring(this.msrRptGrpStrtfierStratumVlCdgVrsn.length() - 1).equals("]") & msrRptGrpStrtfierStratumVlCdgVrsn.equals("[")) {
+	        	this.msrRptGrpStrtfierStratumVlCdgVrsn = this.msrRptGrpStrtfierStratumVlCdgVrsn+ "," + msrRptGrpStrtfierStratumVlCdgVrsn;
+	        } else if(msrRptGrpStrtfierStratumVlCdgVrsn.equals("[") | msrRptGrpStrtfierStratumVlCdgVrsn.equals("]") | this.msrRptGrpStrtfierStratumVlCdgVrsn.substring(this.msrRptGrpStrtfierStratumVlCdgVrsn.length() - 1).equals("[")) {
+	        	this.msrRptGrpStrtfierStratumVlCdgVrsn = this.msrRptGrpStrtfierStratumVlCdgVrsn+msrRptGrpStrtfierStratumVlCdgVrsn;
+	        } else  {
+	            this.msrRptGrpStrtfierStratumVlCdgVrsn = this.msrRptGrpStrtfierStratumVlCdgVrsn+ "," +msrRptGrpStrtfierStratumVlCdgVrsn;
+	        }
+        }
     }
     
     
@@ -687,6 +1499,20 @@ public class MeasureReport  implements java.io.Serializable {
         this.msrRptGrpStrtfierStratumVlTxt = msrRptGrpStrtfierStratumVlTxt;
     }
     
+    public void addMsrRptGrpStrtfierStratumVlTxt(String msrRptGrpStrtfierStratumVlTxt) {
+    	if( msrRptGrpStrtfierStratumVlTxt != null ) {
+	    	if( this.msrRptGrpStrtfierStratumVlTxt == null ) {
+	        	this.msrRptGrpStrtfierStratumVlTxt = msrRptGrpStrtfierStratumVlTxt;
+	        } else if(this.msrRptGrpStrtfierStratumVlTxt.substring(this.msrRptGrpStrtfierStratumVlTxt.length() - 1).equals("]") & msrRptGrpStrtfierStratumVlTxt.equals("[")) {
+	        	this.msrRptGrpStrtfierStratumVlTxt = this.msrRptGrpStrtfierStratumVlTxt+ "," + msrRptGrpStrtfierStratumVlTxt;
+	        } else if(msrRptGrpStrtfierStratumVlTxt.equals("[") | msrRptGrpStrtfierStratumVlTxt.equals("]") | this.msrRptGrpStrtfierStratumVlTxt.substring(this.msrRptGrpStrtfierStratumVlTxt.length() - 1).equals("[")) {
+	        	this.msrRptGrpStrtfierStratumVlTxt = this.msrRptGrpStrtfierStratumVlTxt+msrRptGrpStrtfierStratumVlTxt;
+	        } else  {
+	            this.msrRptGrpStrtfierStratumVlTxt = this.msrRptGrpStrtfierStratumVlTxt+ "," +msrRptGrpStrtfierStratumVlTxt;
+	        }
+        }
+    }
+    
     
     
     public String getMsrRptIdAssigner() {
@@ -695,6 +1521,20 @@ public class MeasureReport  implements java.io.Serializable {
     
     public void setMsrRptIdAssigner(String msrRptIdAssigner) {
         this.msrRptIdAssigner = msrRptIdAssigner;
+    }
+    
+    public void addMsrRptIdAssigner(String msrRptIdAssigner) {
+    	if( msrRptIdAssigner != null ) {
+	    	if( this.msrRptIdAssigner == null ) {
+	        	this.msrRptIdAssigner = msrRptIdAssigner;
+	        } else if(this.msrRptIdAssigner.substring(this.msrRptIdAssigner.length() - 1).equals("]") & msrRptIdAssigner.equals("[")) {
+	        	this.msrRptIdAssigner = this.msrRptIdAssigner+ "," + msrRptIdAssigner;
+	        } else if(msrRptIdAssigner.equals("[") | msrRptIdAssigner.equals("]") | this.msrRptIdAssigner.substring(this.msrRptIdAssigner.length() - 1).equals("[")) {
+	        	this.msrRptIdAssigner = this.msrRptIdAssigner+msrRptIdAssigner;
+	        } else  {
+	            this.msrRptIdAssigner = this.msrRptIdAssigner+ "," +msrRptIdAssigner;
+	        }
+        }
     }
     
     
@@ -707,6 +1547,20 @@ public class MeasureReport  implements java.io.Serializable {
         this.msrRptIdPrdEnd = msrRptIdPrdEnd;
     }
     
+    public void addMsrRptIdPrdEnd(String msrRptIdPrdEnd) {
+    	if( msrRptIdPrdEnd != null ) {
+	    	if( this.msrRptIdPrdEnd == null ) {
+	        	this.msrRptIdPrdEnd = msrRptIdPrdEnd;
+	        } else if(this.msrRptIdPrdEnd.substring(this.msrRptIdPrdEnd.length() - 1).equals("]") & msrRptIdPrdEnd.equals("[")) {
+	        	this.msrRptIdPrdEnd = this.msrRptIdPrdEnd+ "," + msrRptIdPrdEnd;
+	        } else if(msrRptIdPrdEnd.equals("[") | msrRptIdPrdEnd.equals("]") | this.msrRptIdPrdEnd.substring(this.msrRptIdPrdEnd.length() - 1).equals("[")) {
+	        	this.msrRptIdPrdEnd = this.msrRptIdPrdEnd+msrRptIdPrdEnd;
+	        } else  {
+	            this.msrRptIdPrdEnd = this.msrRptIdPrdEnd+ "," +msrRptIdPrdEnd;
+	        }
+        }
+    }
+    
     
     
     public String getMsrRptIdPrdStrt() {
@@ -715,6 +1569,20 @@ public class MeasureReport  implements java.io.Serializable {
     
     public void setMsrRptIdPrdStrt(String msrRptIdPrdStrt) {
         this.msrRptIdPrdStrt = msrRptIdPrdStrt;
+    }
+    
+    public void addMsrRptIdPrdStrt(String msrRptIdPrdStrt) {
+    	if( msrRptIdPrdStrt != null ) {
+	    	if( this.msrRptIdPrdStrt == null ) {
+	        	this.msrRptIdPrdStrt = msrRptIdPrdStrt;
+	        } else if(this.msrRptIdPrdStrt.substring(this.msrRptIdPrdStrt.length() - 1).equals("]") & msrRptIdPrdStrt.equals("[")) {
+	        	this.msrRptIdPrdStrt = this.msrRptIdPrdStrt+ "," + msrRptIdPrdStrt;
+	        } else if(msrRptIdPrdStrt.equals("[") | msrRptIdPrdStrt.equals("]") | this.msrRptIdPrdStrt.substring(this.msrRptIdPrdStrt.length() - 1).equals("[")) {
+	        	this.msrRptIdPrdStrt = this.msrRptIdPrdStrt+msrRptIdPrdStrt;
+	        } else  {
+	            this.msrRptIdPrdStrt = this.msrRptIdPrdStrt+ "," +msrRptIdPrdStrt;
+	        }
+        }
     }
     
     
@@ -727,6 +1595,20 @@ public class MeasureReport  implements java.io.Serializable {
         this.msrRptIdSys = msrRptIdSys;
     }
     
+    public void addMsrRptIdSys(String msrRptIdSys) {
+    	if( msrRptIdSys != null ) {
+	    	if( this.msrRptIdSys == null ) {
+	        	this.msrRptIdSys = msrRptIdSys;
+	        } else if(this.msrRptIdSys.substring(this.msrRptIdSys.length() - 1).equals("]") & msrRptIdSys.equals("[")) {
+	        	this.msrRptIdSys = this.msrRptIdSys+ "," + msrRptIdSys;
+	        } else if(msrRptIdSys.equals("[") | msrRptIdSys.equals("]") | this.msrRptIdSys.substring(this.msrRptIdSys.length() - 1).equals("[")) {
+	        	this.msrRptIdSys = this.msrRptIdSys+msrRptIdSys;
+	        } else  {
+	            this.msrRptIdSys = this.msrRptIdSys+ "," +msrRptIdSys;
+	        }
+        }
+    }
+    
     
     
     public String getMsrRptIdTypCdgCd() {
@@ -735,6 +1617,20 @@ public class MeasureReport  implements java.io.Serializable {
     
     public void setMsrRptIdTypCdgCd(String msrRptIdTypCdgCd) {
         this.msrRptIdTypCdgCd = msrRptIdTypCdgCd;
+    }
+    
+    public void addMsrRptIdTypCdgCd(String msrRptIdTypCdgCd) {
+    	if( msrRptIdTypCdgCd != null ) {
+	    	if( this.msrRptIdTypCdgCd == null ) {
+	        	this.msrRptIdTypCdgCd = msrRptIdTypCdgCd;
+	        } else if(this.msrRptIdTypCdgCd.substring(this.msrRptIdTypCdgCd.length() - 1).equals("]") & msrRptIdTypCdgCd.equals("[")) {
+	        	this.msrRptIdTypCdgCd = this.msrRptIdTypCdgCd+ "," + msrRptIdTypCdgCd;
+	        } else if(msrRptIdTypCdgCd.equals("[") | msrRptIdTypCdgCd.equals("]") | this.msrRptIdTypCdgCd.substring(this.msrRptIdTypCdgCd.length() - 1).equals("[")) {
+	        	this.msrRptIdTypCdgCd = this.msrRptIdTypCdgCd+msrRptIdTypCdgCd;
+	        } else  {
+	            this.msrRptIdTypCdgCd = this.msrRptIdTypCdgCd+ "," +msrRptIdTypCdgCd;
+	        }
+        }
     }
     
     
@@ -747,6 +1643,20 @@ public class MeasureReport  implements java.io.Serializable {
         this.msrRptIdTypCdgDsply = msrRptIdTypCdgDsply;
     }
     
+    public void addMsrRptIdTypCdgDsply(String msrRptIdTypCdgDsply) {
+    	if( msrRptIdTypCdgDsply != null ) {
+	    	if( this.msrRptIdTypCdgDsply == null ) {
+	        	this.msrRptIdTypCdgDsply = msrRptIdTypCdgDsply;
+	        } else if(this.msrRptIdTypCdgDsply.substring(this.msrRptIdTypCdgDsply.length() - 1).equals("]") & msrRptIdTypCdgDsply.equals("[")) {
+	        	this.msrRptIdTypCdgDsply = this.msrRptIdTypCdgDsply+ "," + msrRptIdTypCdgDsply;
+	        } else if(msrRptIdTypCdgDsply.equals("[") | msrRptIdTypCdgDsply.equals("]") | this.msrRptIdTypCdgDsply.substring(this.msrRptIdTypCdgDsply.length() - 1).equals("[")) {
+	        	this.msrRptIdTypCdgDsply = this.msrRptIdTypCdgDsply+msrRptIdTypCdgDsply;
+	        } else  {
+	            this.msrRptIdTypCdgDsply = this.msrRptIdTypCdgDsply+ "," +msrRptIdTypCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getMsrRptIdTypCdgSys() {
@@ -755,6 +1665,20 @@ public class MeasureReport  implements java.io.Serializable {
     
     public void setMsrRptIdTypCdgSys(String msrRptIdTypCdgSys) {
         this.msrRptIdTypCdgSys = msrRptIdTypCdgSys;
+    }
+    
+    public void addMsrRptIdTypCdgSys(String msrRptIdTypCdgSys) {
+    	if( msrRptIdTypCdgSys != null ) {
+	    	if( this.msrRptIdTypCdgSys == null ) {
+	        	this.msrRptIdTypCdgSys = msrRptIdTypCdgSys;
+	        } else if(this.msrRptIdTypCdgSys.substring(this.msrRptIdTypCdgSys.length() - 1).equals("]") & msrRptIdTypCdgSys.equals("[")) {
+	        	this.msrRptIdTypCdgSys = this.msrRptIdTypCdgSys+ "," + msrRptIdTypCdgSys;
+	        } else if(msrRptIdTypCdgSys.equals("[") | msrRptIdTypCdgSys.equals("]") | this.msrRptIdTypCdgSys.substring(this.msrRptIdTypCdgSys.length() - 1).equals("[")) {
+	        	this.msrRptIdTypCdgSys = this.msrRptIdTypCdgSys+msrRptIdTypCdgSys;
+	        } else  {
+	            this.msrRptIdTypCdgSys = this.msrRptIdTypCdgSys+ "," +msrRptIdTypCdgSys;
+	        }
+        }
     }
     
     
@@ -767,6 +1691,20 @@ public class MeasureReport  implements java.io.Serializable {
         this.msrRptIdTypCdgUsrSltd = msrRptIdTypCdgUsrSltd;
     }
     
+    public void addMsrRptIdTypCdgUsrSltd(String msrRptIdTypCdgUsrSltd) {
+    	if( msrRptIdTypCdgUsrSltd != null ) {
+	    	if( this.msrRptIdTypCdgUsrSltd == null ) {
+	        	this.msrRptIdTypCdgUsrSltd = msrRptIdTypCdgUsrSltd;
+	        } else if(this.msrRptIdTypCdgUsrSltd.substring(this.msrRptIdTypCdgUsrSltd.length() - 1).equals("]") & msrRptIdTypCdgUsrSltd.equals("[")) {
+	        	this.msrRptIdTypCdgUsrSltd = this.msrRptIdTypCdgUsrSltd+ "," + msrRptIdTypCdgUsrSltd;
+	        } else if(msrRptIdTypCdgUsrSltd.equals("[") | msrRptIdTypCdgUsrSltd.equals("]") | this.msrRptIdTypCdgUsrSltd.substring(this.msrRptIdTypCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.msrRptIdTypCdgUsrSltd = this.msrRptIdTypCdgUsrSltd+msrRptIdTypCdgUsrSltd;
+	        } else  {
+	            this.msrRptIdTypCdgUsrSltd = this.msrRptIdTypCdgUsrSltd+ "," +msrRptIdTypCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getMsrRptIdTypCdgVrsn() {
@@ -775,6 +1713,20 @@ public class MeasureReport  implements java.io.Serializable {
     
     public void setMsrRptIdTypCdgVrsn(String msrRptIdTypCdgVrsn) {
         this.msrRptIdTypCdgVrsn = msrRptIdTypCdgVrsn;
+    }
+    
+    public void addMsrRptIdTypCdgVrsn(String msrRptIdTypCdgVrsn) {
+    	if( msrRptIdTypCdgVrsn != null ) {
+	    	if( this.msrRptIdTypCdgVrsn == null ) {
+	        	this.msrRptIdTypCdgVrsn = msrRptIdTypCdgVrsn;
+	        } else if(this.msrRptIdTypCdgVrsn.substring(this.msrRptIdTypCdgVrsn.length() - 1).equals("]") & msrRptIdTypCdgVrsn.equals("[")) {
+	        	this.msrRptIdTypCdgVrsn = this.msrRptIdTypCdgVrsn+ "," + msrRptIdTypCdgVrsn;
+	        } else if(msrRptIdTypCdgVrsn.equals("[") | msrRptIdTypCdgVrsn.equals("]") | this.msrRptIdTypCdgVrsn.substring(this.msrRptIdTypCdgVrsn.length() - 1).equals("[")) {
+	        	this.msrRptIdTypCdgVrsn = this.msrRptIdTypCdgVrsn+msrRptIdTypCdgVrsn;
+	        } else  {
+	            this.msrRptIdTypCdgVrsn = this.msrRptIdTypCdgVrsn+ "," +msrRptIdTypCdgVrsn;
+	        }
+        }
     }
     
     
@@ -787,6 +1739,20 @@ public class MeasureReport  implements java.io.Serializable {
         this.msrRptIdTypTxt = msrRptIdTypTxt;
     }
     
+    public void addMsrRptIdTypTxt(String msrRptIdTypTxt) {
+    	if( msrRptIdTypTxt != null ) {
+	    	if( this.msrRptIdTypTxt == null ) {
+	        	this.msrRptIdTypTxt = msrRptIdTypTxt;
+	        } else if(this.msrRptIdTypTxt.substring(this.msrRptIdTypTxt.length() - 1).equals("]") & msrRptIdTypTxt.equals("[")) {
+	        	this.msrRptIdTypTxt = this.msrRptIdTypTxt+ "," + msrRptIdTypTxt;
+	        } else if(msrRptIdTypTxt.equals("[") | msrRptIdTypTxt.equals("]") | this.msrRptIdTypTxt.substring(this.msrRptIdTypTxt.length() - 1).equals("[")) {
+	        	this.msrRptIdTypTxt = this.msrRptIdTypTxt+msrRptIdTypTxt;
+	        } else  {
+	            this.msrRptIdTypTxt = this.msrRptIdTypTxt+ "," +msrRptIdTypTxt;
+	        }
+        }
+    }
+    
     
     
     public String getMsrRptIdUse() {
@@ -795,6 +1761,20 @@ public class MeasureReport  implements java.io.Serializable {
     
     public void setMsrRptIdUse(String msrRptIdUse) {
         this.msrRptIdUse = msrRptIdUse;
+    }
+    
+    public void addMsrRptIdUse(String msrRptIdUse) {
+    	if( msrRptIdUse != null ) {
+	    	if( this.msrRptIdUse == null ) {
+	        	this.msrRptIdUse = msrRptIdUse;
+	        } else if(this.msrRptIdUse.substring(this.msrRptIdUse.length() - 1).equals("]") & msrRptIdUse.equals("[")) {
+	        	this.msrRptIdUse = this.msrRptIdUse+ "," + msrRptIdUse;
+	        } else if(msrRptIdUse.equals("[") | msrRptIdUse.equals("]") | this.msrRptIdUse.substring(this.msrRptIdUse.length() - 1).equals("[")) {
+	        	this.msrRptIdUse = this.msrRptIdUse+msrRptIdUse;
+	        } else  {
+	            this.msrRptIdUse = this.msrRptIdUse+ "," +msrRptIdUse;
+	        }
+        }
     }
     
     
@@ -807,6 +1787,20 @@ public class MeasureReport  implements java.io.Serializable {
         this.msrRptIdVl = msrRptIdVl;
     }
     
+    public void addMsrRptIdVl(String msrRptIdVl) {
+    	if( msrRptIdVl != null ) {
+	    	if( this.msrRptIdVl == null ) {
+	        	this.msrRptIdVl = msrRptIdVl;
+	        } else if(this.msrRptIdVl.substring(this.msrRptIdVl.length() - 1).equals("]") & msrRptIdVl.equals("[")) {
+	        	this.msrRptIdVl = this.msrRptIdVl+ "," + msrRptIdVl;
+	        } else if(msrRptIdVl.equals("[") | msrRptIdVl.equals("]") | this.msrRptIdVl.substring(this.msrRptIdVl.length() - 1).equals("[")) {
+	        	this.msrRptIdVl = this.msrRptIdVl+msrRptIdVl;
+	        } else  {
+	            this.msrRptIdVl = this.msrRptIdVl+ "," +msrRptIdVl;
+	        }
+        }
+    }
+    
     
     
     public String getMsrRptImprovementNotationCdgCd() {
@@ -815,6 +1809,20 @@ public class MeasureReport  implements java.io.Serializable {
     
     public void setMsrRptImprovementNotationCdgCd(String msrRptImprovementNotationCdgCd) {
         this.msrRptImprovementNotationCdgCd = msrRptImprovementNotationCdgCd;
+    }
+    
+    public void addMsrRptImprovementNotationCdgCd(String msrRptImprovementNotationCdgCd) {
+    	if( msrRptImprovementNotationCdgCd != null ) {
+	    	if( this.msrRptImprovementNotationCdgCd == null ) {
+	        	this.msrRptImprovementNotationCdgCd = msrRptImprovementNotationCdgCd;
+	        } else if(this.msrRptImprovementNotationCdgCd.substring(this.msrRptImprovementNotationCdgCd.length() - 1).equals("]") & msrRptImprovementNotationCdgCd.equals("[")) {
+	        	this.msrRptImprovementNotationCdgCd = this.msrRptImprovementNotationCdgCd+ "," + msrRptImprovementNotationCdgCd;
+	        } else if(msrRptImprovementNotationCdgCd.equals("[") | msrRptImprovementNotationCdgCd.equals("]") | this.msrRptImprovementNotationCdgCd.substring(this.msrRptImprovementNotationCdgCd.length() - 1).equals("[")) {
+	        	this.msrRptImprovementNotationCdgCd = this.msrRptImprovementNotationCdgCd+msrRptImprovementNotationCdgCd;
+	        } else  {
+	            this.msrRptImprovementNotationCdgCd = this.msrRptImprovementNotationCdgCd+ "," +msrRptImprovementNotationCdgCd;
+	        }
+        }
     }
     
     
@@ -827,6 +1835,20 @@ public class MeasureReport  implements java.io.Serializable {
         this.msrRptImprovementNotationCdgDsply = msrRptImprovementNotationCdgDsply;
     }
     
+    public void addMsrRptImprovementNotationCdgDsply(String msrRptImprovementNotationCdgDsply) {
+    	if( msrRptImprovementNotationCdgDsply != null ) {
+	    	if( this.msrRptImprovementNotationCdgDsply == null ) {
+	        	this.msrRptImprovementNotationCdgDsply = msrRptImprovementNotationCdgDsply;
+	        } else if(this.msrRptImprovementNotationCdgDsply.substring(this.msrRptImprovementNotationCdgDsply.length() - 1).equals("]") & msrRptImprovementNotationCdgDsply.equals("[")) {
+	        	this.msrRptImprovementNotationCdgDsply = this.msrRptImprovementNotationCdgDsply+ "," + msrRptImprovementNotationCdgDsply;
+	        } else if(msrRptImprovementNotationCdgDsply.equals("[") | msrRptImprovementNotationCdgDsply.equals("]") | this.msrRptImprovementNotationCdgDsply.substring(this.msrRptImprovementNotationCdgDsply.length() - 1).equals("[")) {
+	        	this.msrRptImprovementNotationCdgDsply = this.msrRptImprovementNotationCdgDsply+msrRptImprovementNotationCdgDsply;
+	        } else  {
+	            this.msrRptImprovementNotationCdgDsply = this.msrRptImprovementNotationCdgDsply+ "," +msrRptImprovementNotationCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getMsrRptImprovementNotationCdgSys() {
@@ -835,6 +1857,20 @@ public class MeasureReport  implements java.io.Serializable {
     
     public void setMsrRptImprovementNotationCdgSys(String msrRptImprovementNotationCdgSys) {
         this.msrRptImprovementNotationCdgSys = msrRptImprovementNotationCdgSys;
+    }
+    
+    public void addMsrRptImprovementNotationCdgSys(String msrRptImprovementNotationCdgSys) {
+    	if( msrRptImprovementNotationCdgSys != null ) {
+	    	if( this.msrRptImprovementNotationCdgSys == null ) {
+	        	this.msrRptImprovementNotationCdgSys = msrRptImprovementNotationCdgSys;
+	        } else if(this.msrRptImprovementNotationCdgSys.substring(this.msrRptImprovementNotationCdgSys.length() - 1).equals("]") & msrRptImprovementNotationCdgSys.equals("[")) {
+	        	this.msrRptImprovementNotationCdgSys = this.msrRptImprovementNotationCdgSys+ "," + msrRptImprovementNotationCdgSys;
+	        } else if(msrRptImprovementNotationCdgSys.equals("[") | msrRptImprovementNotationCdgSys.equals("]") | this.msrRptImprovementNotationCdgSys.substring(this.msrRptImprovementNotationCdgSys.length() - 1).equals("[")) {
+	        	this.msrRptImprovementNotationCdgSys = this.msrRptImprovementNotationCdgSys+msrRptImprovementNotationCdgSys;
+	        } else  {
+	            this.msrRptImprovementNotationCdgSys = this.msrRptImprovementNotationCdgSys+ "," +msrRptImprovementNotationCdgSys;
+	        }
+        }
     }
     
     
@@ -847,6 +1883,20 @@ public class MeasureReport  implements java.io.Serializable {
         this.msrRptImprovementNotationCdgUsrSltd = msrRptImprovementNotationCdgUsrSltd;
     }
     
+    public void addMsrRptImprovementNotationCdgUsrSltd(String msrRptImprovementNotationCdgUsrSltd) {
+    	if( msrRptImprovementNotationCdgUsrSltd != null ) {
+	    	if( this.msrRptImprovementNotationCdgUsrSltd == null ) {
+	        	this.msrRptImprovementNotationCdgUsrSltd = msrRptImprovementNotationCdgUsrSltd;
+	        } else if(this.msrRptImprovementNotationCdgUsrSltd.substring(this.msrRptImprovementNotationCdgUsrSltd.length() - 1).equals("]") & msrRptImprovementNotationCdgUsrSltd.equals("[")) {
+	        	this.msrRptImprovementNotationCdgUsrSltd = this.msrRptImprovementNotationCdgUsrSltd+ "," + msrRptImprovementNotationCdgUsrSltd;
+	        } else if(msrRptImprovementNotationCdgUsrSltd.equals("[") | msrRptImprovementNotationCdgUsrSltd.equals("]") | this.msrRptImprovementNotationCdgUsrSltd.substring(this.msrRptImprovementNotationCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.msrRptImprovementNotationCdgUsrSltd = this.msrRptImprovementNotationCdgUsrSltd+msrRptImprovementNotationCdgUsrSltd;
+	        } else  {
+	            this.msrRptImprovementNotationCdgUsrSltd = this.msrRptImprovementNotationCdgUsrSltd+ "," +msrRptImprovementNotationCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getMsrRptImprovementNotationCdgVrsn() {
@@ -855,6 +1905,20 @@ public class MeasureReport  implements java.io.Serializable {
     
     public void setMsrRptImprovementNotationCdgVrsn(String msrRptImprovementNotationCdgVrsn) {
         this.msrRptImprovementNotationCdgVrsn = msrRptImprovementNotationCdgVrsn;
+    }
+    
+    public void addMsrRptImprovementNotationCdgVrsn(String msrRptImprovementNotationCdgVrsn) {
+    	if( msrRptImprovementNotationCdgVrsn != null ) {
+	    	if( this.msrRptImprovementNotationCdgVrsn == null ) {
+	        	this.msrRptImprovementNotationCdgVrsn = msrRptImprovementNotationCdgVrsn;
+	        } else if(this.msrRptImprovementNotationCdgVrsn.substring(this.msrRptImprovementNotationCdgVrsn.length() - 1).equals("]") & msrRptImprovementNotationCdgVrsn.equals("[")) {
+	        	this.msrRptImprovementNotationCdgVrsn = this.msrRptImprovementNotationCdgVrsn+ "," + msrRptImprovementNotationCdgVrsn;
+	        } else if(msrRptImprovementNotationCdgVrsn.equals("[") | msrRptImprovementNotationCdgVrsn.equals("]") | this.msrRptImprovementNotationCdgVrsn.substring(this.msrRptImprovementNotationCdgVrsn.length() - 1).equals("[")) {
+	        	this.msrRptImprovementNotationCdgVrsn = this.msrRptImprovementNotationCdgVrsn+msrRptImprovementNotationCdgVrsn;
+	        } else  {
+	            this.msrRptImprovementNotationCdgVrsn = this.msrRptImprovementNotationCdgVrsn+ "," +msrRptImprovementNotationCdgVrsn;
+	        }
+        }
     }
     
     
@@ -867,6 +1931,20 @@ public class MeasureReport  implements java.io.Serializable {
         this.msrRptImprovementNotationTxt = msrRptImprovementNotationTxt;
     }
     
+    public void addMsrRptImprovementNotationTxt(String msrRptImprovementNotationTxt) {
+    	if( msrRptImprovementNotationTxt != null ) {
+	    	if( this.msrRptImprovementNotationTxt == null ) {
+	        	this.msrRptImprovementNotationTxt = msrRptImprovementNotationTxt;
+	        } else if(this.msrRptImprovementNotationTxt.substring(this.msrRptImprovementNotationTxt.length() - 1).equals("]") & msrRptImprovementNotationTxt.equals("[")) {
+	        	this.msrRptImprovementNotationTxt = this.msrRptImprovementNotationTxt+ "," + msrRptImprovementNotationTxt;
+	        } else if(msrRptImprovementNotationTxt.equals("[") | msrRptImprovementNotationTxt.equals("]") | this.msrRptImprovementNotationTxt.substring(this.msrRptImprovementNotationTxt.length() - 1).equals("[")) {
+	        	this.msrRptImprovementNotationTxt = this.msrRptImprovementNotationTxt+msrRptImprovementNotationTxt;
+	        } else  {
+	            this.msrRptImprovementNotationTxt = this.msrRptImprovementNotationTxt+ "," +msrRptImprovementNotationTxt;
+	        }
+        }
+    }
+    
     
     
     public String getMsrRptMsr() {
@@ -875,6 +1953,20 @@ public class MeasureReport  implements java.io.Serializable {
     
     public void setMsrRptMsr(String msrRptMsr) {
         this.msrRptMsr = msrRptMsr;
+    }
+    
+    public void addMsrRptMsr(String msrRptMsr) {
+    	if( msrRptMsr != null ) {
+	    	if( this.msrRptMsr == null ) {
+	        	this.msrRptMsr = msrRptMsr;
+	        } else if(this.msrRptMsr.substring(this.msrRptMsr.length() - 1).equals("]") & msrRptMsr.equals("[")) {
+	        	this.msrRptMsr = this.msrRptMsr+ "," + msrRptMsr;
+	        } else if(msrRptMsr.equals("[") | msrRptMsr.equals("]") | this.msrRptMsr.substring(this.msrRptMsr.length() - 1).equals("[")) {
+	        	this.msrRptMsr = this.msrRptMsr+msrRptMsr;
+	        } else  {
+	            this.msrRptMsr = this.msrRptMsr+ "," +msrRptMsr;
+	        }
+        }
     }
     
     
@@ -887,6 +1979,20 @@ public class MeasureReport  implements java.io.Serializable {
         this.msrRptPrdEnd = msrRptPrdEnd;
     }
     
+    public void addMsrRptPrdEnd(String msrRptPrdEnd) {
+    	if( msrRptPrdEnd != null ) {
+	    	if( this.msrRptPrdEnd == null ) {
+	        	this.msrRptPrdEnd = msrRptPrdEnd;
+	        } else if(this.msrRptPrdEnd.substring(this.msrRptPrdEnd.length() - 1).equals("]") & msrRptPrdEnd.equals("[")) {
+	        	this.msrRptPrdEnd = this.msrRptPrdEnd+ "," + msrRptPrdEnd;
+	        } else if(msrRptPrdEnd.equals("[") | msrRptPrdEnd.equals("]") | this.msrRptPrdEnd.substring(this.msrRptPrdEnd.length() - 1).equals("[")) {
+	        	this.msrRptPrdEnd = this.msrRptPrdEnd+msrRptPrdEnd;
+	        } else  {
+	            this.msrRptPrdEnd = this.msrRptPrdEnd+ "," +msrRptPrdEnd;
+	        }
+        }
+    }
+    
     
     
     public String getMsrRptPrdStrt() {
@@ -895,6 +2001,20 @@ public class MeasureReport  implements java.io.Serializable {
     
     public void setMsrRptPrdStrt(String msrRptPrdStrt) {
         this.msrRptPrdStrt = msrRptPrdStrt;
+    }
+    
+    public void addMsrRptPrdStrt(String msrRptPrdStrt) {
+    	if( msrRptPrdStrt != null ) {
+	    	if( this.msrRptPrdStrt == null ) {
+	        	this.msrRptPrdStrt = msrRptPrdStrt;
+	        } else if(this.msrRptPrdStrt.substring(this.msrRptPrdStrt.length() - 1).equals("]") & msrRptPrdStrt.equals("[")) {
+	        	this.msrRptPrdStrt = this.msrRptPrdStrt+ "," + msrRptPrdStrt;
+	        } else if(msrRptPrdStrt.equals("[") | msrRptPrdStrt.equals("]") | this.msrRptPrdStrt.substring(this.msrRptPrdStrt.length() - 1).equals("[")) {
+	        	this.msrRptPrdStrt = this.msrRptPrdStrt+msrRptPrdStrt;
+	        } else  {
+	            this.msrRptPrdStrt = this.msrRptPrdStrt+ "," +msrRptPrdStrt;
+	        }
+        }
     }
     
     
@@ -907,6 +2027,20 @@ public class MeasureReport  implements java.io.Serializable {
         this.msrRptRpter = msrRptRpter;
     }
     
+    public void addMsrRptRpter(String msrRptRpter) {
+    	if( msrRptRpter != null ) {
+	    	if( this.msrRptRpter == null ) {
+	        	this.msrRptRpter = msrRptRpter;
+	        } else if(this.msrRptRpter.substring(this.msrRptRpter.length() - 1).equals("]") & msrRptRpter.equals("[")) {
+	        	this.msrRptRpter = this.msrRptRpter+ "," + msrRptRpter;
+	        } else if(msrRptRpter.equals("[") | msrRptRpter.equals("]") | this.msrRptRpter.substring(this.msrRptRpter.length() - 1).equals("[")) {
+	        	this.msrRptRpter = this.msrRptRpter+msrRptRpter;
+	        } else  {
+	            this.msrRptRpter = this.msrRptRpter+ "," +msrRptRpter;
+	        }
+        }
+    }
+    
     
     
     public String getMsrRptSts() {
@@ -915,6 +2049,20 @@ public class MeasureReport  implements java.io.Serializable {
     
     public void setMsrRptSts(String msrRptSts) {
         this.msrRptSts = msrRptSts;
+    }
+    
+    public void addMsrRptSts(String msrRptSts) {
+    	if( msrRptSts != null ) {
+	    	if( this.msrRptSts == null ) {
+	        	this.msrRptSts = msrRptSts;
+	        } else if(this.msrRptSts.substring(this.msrRptSts.length() - 1).equals("]") & msrRptSts.equals("[")) {
+	        	this.msrRptSts = this.msrRptSts+ "," + msrRptSts;
+	        } else if(msrRptSts.equals("[") | msrRptSts.equals("]") | this.msrRptSts.substring(this.msrRptSts.length() - 1).equals("[")) {
+	        	this.msrRptSts = this.msrRptSts+msrRptSts;
+	        } else  {
+	            this.msrRptSts = this.msrRptSts+ "," +msrRptSts;
+	        }
+        }
     }
     
     
@@ -927,6 +2075,20 @@ public class MeasureReport  implements java.io.Serializable {
         this.msrRptSbjct = msrRptSbjct;
     }
     
+    public void addMsrRptSbjct(String msrRptSbjct) {
+    	if( msrRptSbjct != null ) {
+	    	if( this.msrRptSbjct == null ) {
+	        	this.msrRptSbjct = msrRptSbjct;
+	        } else if(this.msrRptSbjct.substring(this.msrRptSbjct.length() - 1).equals("]") & msrRptSbjct.equals("[")) {
+	        	this.msrRptSbjct = this.msrRptSbjct+ "," + msrRptSbjct;
+	        } else if(msrRptSbjct.equals("[") | msrRptSbjct.equals("]") | this.msrRptSbjct.substring(this.msrRptSbjct.length() - 1).equals("[")) {
+	        	this.msrRptSbjct = this.msrRptSbjct+msrRptSbjct;
+	        } else  {
+	            this.msrRptSbjct = this.msrRptSbjct+ "," +msrRptSbjct;
+	        }
+        }
+    }
+    
     
     
     public String getMsrRptTyp() {
@@ -935,6 +2097,20 @@ public class MeasureReport  implements java.io.Serializable {
     
     public void setMsrRptTyp(String msrRptTyp) {
         this.msrRptTyp = msrRptTyp;
+    }
+    
+    public void addMsrRptTyp(String msrRptTyp) {
+    	if( msrRptTyp != null ) {
+	    	if( this.msrRptTyp == null ) {
+	        	this.msrRptTyp = msrRptTyp;
+	        } else if(this.msrRptTyp.substring(this.msrRptTyp.length() - 1).equals("]") & msrRptTyp.equals("[")) {
+	        	this.msrRptTyp = this.msrRptTyp+ "," + msrRptTyp;
+	        } else if(msrRptTyp.equals("[") | msrRptTyp.equals("]") | this.msrRptTyp.substring(this.msrRptTyp.length() - 1).equals("[")) {
+	        	this.msrRptTyp = this.msrRptTyp+msrRptTyp;
+	        } else  {
+	            this.msrRptTyp = this.msrRptTyp+ "," +msrRptTyp;
+	        }
+        }
     }
     
     

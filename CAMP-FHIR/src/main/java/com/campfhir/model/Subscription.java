@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Jun 27, 2022, 10:40:10 AM by Hibernate Tools 5.6.1.Final
+// Generated Aug 17, 2022, 11:08:48 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -39,6 +39,20 @@ public class Subscription  implements java.io.Serializable {
         this.id = id;
     }
     
+    public void addId(String id) {
+    	if( id != null ) {
+	    	if( this.id == null ) {
+	        	this.id = id;
+	        } else if(this.id.substring(this.id.length() - 1).equals("]") & id.equals("[")) {
+	        	this.id = this.id+ "," + id;
+	        } else if(id.equals("[") | id.equals("]") | this.id.substring(this.id.length() - 1).equals("[")) {
+	        	this.id = this.id+id;
+	        } else  {
+	            this.id = this.id+ "," +id;
+	        }
+        }
+    }
+    
     
     
     public String getSubscriptionChannelEndpoint() {
@@ -47,6 +61,20 @@ public class Subscription  implements java.io.Serializable {
     
     public void setSubscriptionChannelEndpoint(String subscriptionChannelEndpoint) {
         this.subscriptionChannelEndpoint = subscriptionChannelEndpoint;
+    }
+    
+    public void addSubscriptionChannelEndpoint(String subscriptionChannelEndpoint) {
+    	if( subscriptionChannelEndpoint != null ) {
+	    	if( this.subscriptionChannelEndpoint == null ) {
+	        	this.subscriptionChannelEndpoint = subscriptionChannelEndpoint;
+	        } else if(this.subscriptionChannelEndpoint.substring(this.subscriptionChannelEndpoint.length() - 1).equals("]") & subscriptionChannelEndpoint.equals("[")) {
+	        	this.subscriptionChannelEndpoint = this.subscriptionChannelEndpoint+ "," + subscriptionChannelEndpoint;
+	        } else if(subscriptionChannelEndpoint.equals("[") | subscriptionChannelEndpoint.equals("]") | this.subscriptionChannelEndpoint.substring(this.subscriptionChannelEndpoint.length() - 1).equals("[")) {
+	        	this.subscriptionChannelEndpoint = this.subscriptionChannelEndpoint+subscriptionChannelEndpoint;
+	        } else  {
+	            this.subscriptionChannelEndpoint = this.subscriptionChannelEndpoint+ "," +subscriptionChannelEndpoint;
+	        }
+        }
     }
     
     
@@ -59,6 +87,20 @@ public class Subscription  implements java.io.Serializable {
         this.subscriptionChannelHeader = subscriptionChannelHeader;
     }
     
+    public void addSubscriptionChannelHeader(String subscriptionChannelHeader) {
+    	if( subscriptionChannelHeader != null ) {
+	    	if( this.subscriptionChannelHeader == null ) {
+	        	this.subscriptionChannelHeader = subscriptionChannelHeader;
+	        } else if(this.subscriptionChannelHeader.substring(this.subscriptionChannelHeader.length() - 1).equals("]") & subscriptionChannelHeader.equals("[")) {
+	        	this.subscriptionChannelHeader = this.subscriptionChannelHeader+ "," + subscriptionChannelHeader;
+	        } else if(subscriptionChannelHeader.equals("[") | subscriptionChannelHeader.equals("]") | this.subscriptionChannelHeader.substring(this.subscriptionChannelHeader.length() - 1).equals("[")) {
+	        	this.subscriptionChannelHeader = this.subscriptionChannelHeader+subscriptionChannelHeader;
+	        } else  {
+	            this.subscriptionChannelHeader = this.subscriptionChannelHeader+ "," +subscriptionChannelHeader;
+	        }
+        }
+    }
+    
     
     
     public String getSubscriptionChannelPayload() {
@@ -67,6 +109,20 @@ public class Subscription  implements java.io.Serializable {
     
     public void setSubscriptionChannelPayload(String subscriptionChannelPayload) {
         this.subscriptionChannelPayload = subscriptionChannelPayload;
+    }
+    
+    public void addSubscriptionChannelPayload(String subscriptionChannelPayload) {
+    	if( subscriptionChannelPayload != null ) {
+	    	if( this.subscriptionChannelPayload == null ) {
+	        	this.subscriptionChannelPayload = subscriptionChannelPayload;
+	        } else if(this.subscriptionChannelPayload.substring(this.subscriptionChannelPayload.length() - 1).equals("]") & subscriptionChannelPayload.equals("[")) {
+	        	this.subscriptionChannelPayload = this.subscriptionChannelPayload+ "," + subscriptionChannelPayload;
+	        } else if(subscriptionChannelPayload.equals("[") | subscriptionChannelPayload.equals("]") | this.subscriptionChannelPayload.substring(this.subscriptionChannelPayload.length() - 1).equals("[")) {
+	        	this.subscriptionChannelPayload = this.subscriptionChannelPayload+subscriptionChannelPayload;
+	        } else  {
+	            this.subscriptionChannelPayload = this.subscriptionChannelPayload+ "," +subscriptionChannelPayload;
+	        }
+        }
     }
     
     
@@ -79,6 +135,20 @@ public class Subscription  implements java.io.Serializable {
         this.subscriptionChannelTyp = subscriptionChannelTyp;
     }
     
+    public void addSubscriptionChannelTyp(String subscriptionChannelTyp) {
+    	if( subscriptionChannelTyp != null ) {
+	    	if( this.subscriptionChannelTyp == null ) {
+	        	this.subscriptionChannelTyp = subscriptionChannelTyp;
+	        } else if(this.subscriptionChannelTyp.substring(this.subscriptionChannelTyp.length() - 1).equals("]") & subscriptionChannelTyp.equals("[")) {
+	        	this.subscriptionChannelTyp = this.subscriptionChannelTyp+ "," + subscriptionChannelTyp;
+	        } else if(subscriptionChannelTyp.equals("[") | subscriptionChannelTyp.equals("]") | this.subscriptionChannelTyp.substring(this.subscriptionChannelTyp.length() - 1).equals("[")) {
+	        	this.subscriptionChannelTyp = this.subscriptionChannelTyp+subscriptionChannelTyp;
+	        } else  {
+	            this.subscriptionChannelTyp = this.subscriptionChannelTyp+ "," +subscriptionChannelTyp;
+	        }
+        }
+    }
+    
     
     
     public String getSubscriptionCntctPrdEnd() {
@@ -87,6 +157,20 @@ public class Subscription  implements java.io.Serializable {
     
     public void setSubscriptionCntctPrdEnd(String subscriptionCntctPrdEnd) {
         this.subscriptionCntctPrdEnd = subscriptionCntctPrdEnd;
+    }
+    
+    public void addSubscriptionCntctPrdEnd(String subscriptionCntctPrdEnd) {
+    	if( subscriptionCntctPrdEnd != null ) {
+	    	if( this.subscriptionCntctPrdEnd == null ) {
+	        	this.subscriptionCntctPrdEnd = subscriptionCntctPrdEnd;
+	        } else if(this.subscriptionCntctPrdEnd.substring(this.subscriptionCntctPrdEnd.length() - 1).equals("]") & subscriptionCntctPrdEnd.equals("[")) {
+	        	this.subscriptionCntctPrdEnd = this.subscriptionCntctPrdEnd+ "," + subscriptionCntctPrdEnd;
+	        } else if(subscriptionCntctPrdEnd.equals("[") | subscriptionCntctPrdEnd.equals("]") | this.subscriptionCntctPrdEnd.substring(this.subscriptionCntctPrdEnd.length() - 1).equals("[")) {
+	        	this.subscriptionCntctPrdEnd = this.subscriptionCntctPrdEnd+subscriptionCntctPrdEnd;
+	        } else  {
+	            this.subscriptionCntctPrdEnd = this.subscriptionCntctPrdEnd+ "," +subscriptionCntctPrdEnd;
+	        }
+        }
     }
     
     
@@ -99,6 +183,20 @@ public class Subscription  implements java.io.Serializable {
         this.subscriptionCntctPrdStrt = subscriptionCntctPrdStrt;
     }
     
+    public void addSubscriptionCntctPrdStrt(String subscriptionCntctPrdStrt) {
+    	if( subscriptionCntctPrdStrt != null ) {
+	    	if( this.subscriptionCntctPrdStrt == null ) {
+	        	this.subscriptionCntctPrdStrt = subscriptionCntctPrdStrt;
+	        } else if(this.subscriptionCntctPrdStrt.substring(this.subscriptionCntctPrdStrt.length() - 1).equals("]") & subscriptionCntctPrdStrt.equals("[")) {
+	        	this.subscriptionCntctPrdStrt = this.subscriptionCntctPrdStrt+ "," + subscriptionCntctPrdStrt;
+	        } else if(subscriptionCntctPrdStrt.equals("[") | subscriptionCntctPrdStrt.equals("]") | this.subscriptionCntctPrdStrt.substring(this.subscriptionCntctPrdStrt.length() - 1).equals("[")) {
+	        	this.subscriptionCntctPrdStrt = this.subscriptionCntctPrdStrt+subscriptionCntctPrdStrt;
+	        } else  {
+	            this.subscriptionCntctPrdStrt = this.subscriptionCntctPrdStrt+ "," +subscriptionCntctPrdStrt;
+	        }
+        }
+    }
+    
     
     
     public String getSubscriptionCntctRnk() {
@@ -107,6 +205,20 @@ public class Subscription  implements java.io.Serializable {
     
     public void setSubscriptionCntctRnk(String subscriptionCntctRnk) {
         this.subscriptionCntctRnk = subscriptionCntctRnk;
+    }
+    
+    public void addSubscriptionCntctRnk(String subscriptionCntctRnk) {
+    	if( subscriptionCntctRnk != null ) {
+	    	if( this.subscriptionCntctRnk == null ) {
+	        	this.subscriptionCntctRnk = subscriptionCntctRnk;
+	        } else if(this.subscriptionCntctRnk.substring(this.subscriptionCntctRnk.length() - 1).equals("]") & subscriptionCntctRnk.equals("[")) {
+	        	this.subscriptionCntctRnk = this.subscriptionCntctRnk+ "," + subscriptionCntctRnk;
+	        } else if(subscriptionCntctRnk.equals("[") | subscriptionCntctRnk.equals("]") | this.subscriptionCntctRnk.substring(this.subscriptionCntctRnk.length() - 1).equals("[")) {
+	        	this.subscriptionCntctRnk = this.subscriptionCntctRnk+subscriptionCntctRnk;
+	        } else  {
+	            this.subscriptionCntctRnk = this.subscriptionCntctRnk+ "," +subscriptionCntctRnk;
+	        }
+        }
     }
     
     
@@ -119,6 +231,20 @@ public class Subscription  implements java.io.Serializable {
         this.subscriptionCntctSys = subscriptionCntctSys;
     }
     
+    public void addSubscriptionCntctSys(String subscriptionCntctSys) {
+    	if( subscriptionCntctSys != null ) {
+	    	if( this.subscriptionCntctSys == null ) {
+	        	this.subscriptionCntctSys = subscriptionCntctSys;
+	        } else if(this.subscriptionCntctSys.substring(this.subscriptionCntctSys.length() - 1).equals("]") & subscriptionCntctSys.equals("[")) {
+	        	this.subscriptionCntctSys = this.subscriptionCntctSys+ "," + subscriptionCntctSys;
+	        } else if(subscriptionCntctSys.equals("[") | subscriptionCntctSys.equals("]") | this.subscriptionCntctSys.substring(this.subscriptionCntctSys.length() - 1).equals("[")) {
+	        	this.subscriptionCntctSys = this.subscriptionCntctSys+subscriptionCntctSys;
+	        } else  {
+	            this.subscriptionCntctSys = this.subscriptionCntctSys+ "," +subscriptionCntctSys;
+	        }
+        }
+    }
+    
     
     
     public String getSubscriptionCntctUse() {
@@ -127,6 +253,20 @@ public class Subscription  implements java.io.Serializable {
     
     public void setSubscriptionCntctUse(String subscriptionCntctUse) {
         this.subscriptionCntctUse = subscriptionCntctUse;
+    }
+    
+    public void addSubscriptionCntctUse(String subscriptionCntctUse) {
+    	if( subscriptionCntctUse != null ) {
+	    	if( this.subscriptionCntctUse == null ) {
+	        	this.subscriptionCntctUse = subscriptionCntctUse;
+	        } else if(this.subscriptionCntctUse.substring(this.subscriptionCntctUse.length() - 1).equals("]") & subscriptionCntctUse.equals("[")) {
+	        	this.subscriptionCntctUse = this.subscriptionCntctUse+ "," + subscriptionCntctUse;
+	        } else if(subscriptionCntctUse.equals("[") | subscriptionCntctUse.equals("]") | this.subscriptionCntctUse.substring(this.subscriptionCntctUse.length() - 1).equals("[")) {
+	        	this.subscriptionCntctUse = this.subscriptionCntctUse+subscriptionCntctUse;
+	        } else  {
+	            this.subscriptionCntctUse = this.subscriptionCntctUse+ "," +subscriptionCntctUse;
+	        }
+        }
     }
     
     
@@ -139,6 +279,20 @@ public class Subscription  implements java.io.Serializable {
         this.subscriptionCntctVl = subscriptionCntctVl;
     }
     
+    public void addSubscriptionCntctVl(String subscriptionCntctVl) {
+    	if( subscriptionCntctVl != null ) {
+	    	if( this.subscriptionCntctVl == null ) {
+	        	this.subscriptionCntctVl = subscriptionCntctVl;
+	        } else if(this.subscriptionCntctVl.substring(this.subscriptionCntctVl.length() - 1).equals("]") & subscriptionCntctVl.equals("[")) {
+	        	this.subscriptionCntctVl = this.subscriptionCntctVl+ "," + subscriptionCntctVl;
+	        } else if(subscriptionCntctVl.equals("[") | subscriptionCntctVl.equals("]") | this.subscriptionCntctVl.substring(this.subscriptionCntctVl.length() - 1).equals("[")) {
+	        	this.subscriptionCntctVl = this.subscriptionCntctVl+subscriptionCntctVl;
+	        } else  {
+	            this.subscriptionCntctVl = this.subscriptionCntctVl+ "," +subscriptionCntctVl;
+	        }
+        }
+    }
+    
     
     
     public String getSubscriptionCriteria() {
@@ -147,6 +301,20 @@ public class Subscription  implements java.io.Serializable {
     
     public void setSubscriptionCriteria(String subscriptionCriteria) {
         this.subscriptionCriteria = subscriptionCriteria;
+    }
+    
+    public void addSubscriptionCriteria(String subscriptionCriteria) {
+    	if( subscriptionCriteria != null ) {
+	    	if( this.subscriptionCriteria == null ) {
+	        	this.subscriptionCriteria = subscriptionCriteria;
+	        } else if(this.subscriptionCriteria.substring(this.subscriptionCriteria.length() - 1).equals("]") & subscriptionCriteria.equals("[")) {
+	        	this.subscriptionCriteria = this.subscriptionCriteria+ "," + subscriptionCriteria;
+	        } else if(subscriptionCriteria.equals("[") | subscriptionCriteria.equals("]") | this.subscriptionCriteria.substring(this.subscriptionCriteria.length() - 1).equals("[")) {
+	        	this.subscriptionCriteria = this.subscriptionCriteria+subscriptionCriteria;
+	        } else  {
+	            this.subscriptionCriteria = this.subscriptionCriteria+ "," +subscriptionCriteria;
+	        }
+        }
     }
     
     
@@ -159,6 +327,20 @@ public class Subscription  implements java.io.Serializable {
         this.subscriptionEnd = subscriptionEnd;
     }
     
+    public void addSubscriptionEnd(String subscriptionEnd) {
+    	if( subscriptionEnd != null ) {
+	    	if( this.subscriptionEnd == null ) {
+	        	this.subscriptionEnd = subscriptionEnd;
+	        } else if(this.subscriptionEnd.substring(this.subscriptionEnd.length() - 1).equals("]") & subscriptionEnd.equals("[")) {
+	        	this.subscriptionEnd = this.subscriptionEnd+ "," + subscriptionEnd;
+	        } else if(subscriptionEnd.equals("[") | subscriptionEnd.equals("]") | this.subscriptionEnd.substring(this.subscriptionEnd.length() - 1).equals("[")) {
+	        	this.subscriptionEnd = this.subscriptionEnd+subscriptionEnd;
+	        } else  {
+	            this.subscriptionEnd = this.subscriptionEnd+ "," +subscriptionEnd;
+	        }
+        }
+    }
+    
     
     
     public String getSubscriptionError() {
@@ -167,6 +349,20 @@ public class Subscription  implements java.io.Serializable {
     
     public void setSubscriptionError(String subscriptionError) {
         this.subscriptionError = subscriptionError;
+    }
+    
+    public void addSubscriptionError(String subscriptionError) {
+    	if( subscriptionError != null ) {
+	    	if( this.subscriptionError == null ) {
+	        	this.subscriptionError = subscriptionError;
+	        } else if(this.subscriptionError.substring(this.subscriptionError.length() - 1).equals("]") & subscriptionError.equals("[")) {
+	        	this.subscriptionError = this.subscriptionError+ "," + subscriptionError;
+	        } else if(subscriptionError.equals("[") | subscriptionError.equals("]") | this.subscriptionError.substring(this.subscriptionError.length() - 1).equals("[")) {
+	        	this.subscriptionError = this.subscriptionError+subscriptionError;
+	        } else  {
+	            this.subscriptionError = this.subscriptionError+ "," +subscriptionError;
+	        }
+        }
     }
     
     
@@ -179,6 +375,20 @@ public class Subscription  implements java.io.Serializable {
         this.subscriptionRsn = subscriptionRsn;
     }
     
+    public void addSubscriptionRsn(String subscriptionRsn) {
+    	if( subscriptionRsn != null ) {
+	    	if( this.subscriptionRsn == null ) {
+	        	this.subscriptionRsn = subscriptionRsn;
+	        } else if(this.subscriptionRsn.substring(this.subscriptionRsn.length() - 1).equals("]") & subscriptionRsn.equals("[")) {
+	        	this.subscriptionRsn = this.subscriptionRsn+ "," + subscriptionRsn;
+	        } else if(subscriptionRsn.equals("[") | subscriptionRsn.equals("]") | this.subscriptionRsn.substring(this.subscriptionRsn.length() - 1).equals("[")) {
+	        	this.subscriptionRsn = this.subscriptionRsn+subscriptionRsn;
+	        } else  {
+	            this.subscriptionRsn = this.subscriptionRsn+ "," +subscriptionRsn;
+	        }
+        }
+    }
+    
     
     
     public String getSubscriptionSts() {
@@ -187,6 +397,20 @@ public class Subscription  implements java.io.Serializable {
     
     public void setSubscriptionSts(String subscriptionSts) {
         this.subscriptionSts = subscriptionSts;
+    }
+    
+    public void addSubscriptionSts(String subscriptionSts) {
+    	if( subscriptionSts != null ) {
+	    	if( this.subscriptionSts == null ) {
+	        	this.subscriptionSts = subscriptionSts;
+	        } else if(this.subscriptionSts.substring(this.subscriptionSts.length() - 1).equals("]") & subscriptionSts.equals("[")) {
+	        	this.subscriptionSts = this.subscriptionSts+ "," + subscriptionSts;
+	        } else if(subscriptionSts.equals("[") | subscriptionSts.equals("]") | this.subscriptionSts.substring(this.subscriptionSts.length() - 1).equals("[")) {
+	        	this.subscriptionSts = this.subscriptionSts+subscriptionSts;
+	        } else  {
+	            this.subscriptionSts = this.subscriptionSts+ "," +subscriptionSts;
+	        }
+        }
     }
     
     

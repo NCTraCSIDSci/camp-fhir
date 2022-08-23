@@ -8,269 +8,426 @@ public class AllergyIntoleranceBidirectionalConversion
 		 main.java.com.campfhir.model.AllergyIntolerance a = new  main.java.com.campfhir.model.AllergyIntolerance();
 
 		/******************** id ********************************************************************************/
-		allergyintolerance.setId(a.getId());
+		a.setId(allergyintolerance.getIdElement().getIdPart());
 
 		/******************** allergyintolerancetype ********************************************************************************/
 		org.hl7.fhir.r4.model.AllergyIntolerance.AllergyIntoleranceType allergyintolerancetype = allergyintolerance.getType();
-		a.setAlrgyIntoleranceTyp(allergyintolerancetype.toCode());
+		if(allergyintolerancetype!=null) {
+			a.addAlrgyIntoleranceTyp(allergyintolerancetype.toCode());
+		} else {
+			a.addAlrgyIntoleranceTyp("NULL");
+		}
 
 		/******************** allergyintolerancecode ********************************************************************************/
 		org.hl7.fhir.r4.model.CodeableConcept allergyintolerancecode = allergyintolerance.getCode();
 
 		/******************** AlrgyIntolerance_Cd_Txt ********************************************************************************/
 		if(allergyintolerancecode.hasText()) {
-			a.setAlrgyIntoleranceCdTxt(String.valueOf(allergyintolerancecode.getText()));
+
+			a.addAlrgyIntoleranceCdTxt(String.valueOf(allergyintolerancecode.getText()));
+		} else {
+			a.addAlrgyIntoleranceCdTxt("NULL");
 		}
+
+
 		/******************** allergyintolerancecodecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding allergyintolerancecodecoding = allergyintolerancecode.getCodingFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.Coding> allergyintolerancecodecodinglist = allergyintolerancecode.getCoding();
+		for(int allergyintolerancecodecodingi = 0; allergyintolerancecodecodingi<allergyintolerancecodecodinglist.size();allergyintolerancecodecodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  allergyintolerancecodecoding = allergyintolerancecodecodinglist.get(allergyintolerancecodecodingi);
+
+		/******************** AlrgyIntolerance_Cd_Cdg_Dsply ********************************************************************************/
+		if(allergyintolerancecodecodingi == 0) {a.addAlrgyIntoleranceCdCdgDsply("[");}
+		if(allergyintolerancecodecoding.hasDisplay()) {
+
+			a.addAlrgyIntoleranceCdCdgDsply(String.valueOf(allergyintolerancecodecoding.getDisplay()));
+		} else {
+			a.addAlrgyIntoleranceCdCdgDsply("NULL");
+		}
+
+		if(allergyintolerancecodecodingi == allergyintolerancecodecodinglist.size()-1) {a.addAlrgyIntoleranceCdCdgDsply("]");}
+
 
 		/******************** AlrgyIntolerance_Cd_Cdg_Vrsn ********************************************************************************/
+		if(allergyintolerancecodecodingi == 0) {a.addAlrgyIntoleranceCdCdgVrsn("[");}
 		if(allergyintolerancecodecoding.hasVersion()) {
-			a.setAlrgyIntoleranceCdCdgVrsn(String.valueOf(allergyintolerancecodecoding.getVersion()));
+
+			a.addAlrgyIntoleranceCdCdgVrsn(String.valueOf(allergyintolerancecodecoding.getVersion()));
+		} else {
+			a.addAlrgyIntoleranceCdCdgVrsn("NULL");
 		}
-		/******************** AlrgyIntolerance_Cd_Cdg_Dsply ********************************************************************************/
-		if(allergyintolerancecodecoding.hasDisplay()) {
-			a.setAlrgyIntoleranceCdCdgDsply(String.valueOf(allergyintolerancecodecoding.getDisplay()));
-		}
+
+		if(allergyintolerancecodecodingi == allergyintolerancecodecodinglist.size()-1) {a.addAlrgyIntoleranceCdCdgVrsn("]");}
+
+
 		/******************** AlrgyIntolerance_Cd_Cdg_Cd ********************************************************************************/
+		if(allergyintolerancecodecodingi == 0) {a.addAlrgyIntoleranceCdCdgCd("[");}
 		if(allergyintolerancecodecoding.hasCode()) {
-			a.setAlrgyIntoleranceCdCdgCd(String.valueOf(allergyintolerancecodecoding.getCode()));
+
+			a.addAlrgyIntoleranceCdCdgCd(String.valueOf(allergyintolerancecodecoding.getCode()));
+		} else {
+			a.addAlrgyIntoleranceCdCdgCd("NULL");
 		}
+
+		if(allergyintolerancecodecodingi == allergyintolerancecodecodinglist.size()-1) {a.addAlrgyIntoleranceCdCdgCd("]");}
+
+
 		/******************** AlrgyIntolerance_Cd_Cdg_UsrSltd ********************************************************************************/
+		if(allergyintolerancecodecodingi == 0) {a.addAlrgyIntoleranceCdCdgUsrSltd("[");}
 		if(allergyintolerancecodecoding.hasUserSelected()) {
-			a.setAlrgyIntoleranceCdCdgUsrSltd(String.valueOf(allergyintolerancecodecoding.getUserSelected()));
+
+			a.addAlrgyIntoleranceCdCdgUsrSltd(String.valueOf(allergyintolerancecodecoding.getUserSelected()));
+		} else {
+			a.addAlrgyIntoleranceCdCdgUsrSltd("NULL");
 		}
+
+		if(allergyintolerancecodecodingi == allergyintolerancecodecodinglist.size()-1) {a.addAlrgyIntoleranceCdCdgUsrSltd("]");}
+
+
 		/******************** AlrgyIntolerance_Cd_Cdg_Sys ********************************************************************************/
+		if(allergyintolerancecodecodingi == 0) {a.addAlrgyIntoleranceCdCdgSys("[");}
 		if(allergyintolerancecodecoding.hasSystem()) {
-			a.setAlrgyIntoleranceCdCdgSys(String.valueOf(allergyintolerancecodecoding.getSystem()));
+
+			a.addAlrgyIntoleranceCdCdgSys(String.valueOf(allergyintolerancecodecoding.getSystem()));
+		} else {
+			a.addAlrgyIntoleranceCdCdgSys("NULL");
 		}
-		/******************** AlrgyIntolerance_Pnt ********************************************************************************/
-		if(allergyintolerance.hasPatient()) {
-			a.setAlrgyIntolerancePnt(String.valueOf(allergyintolerance.getPatient()));
+
+		if(allergyintolerancecodecodingi == allergyintolerancecodecodinglist.size()-1) {a.addAlrgyIntoleranceCdCdgSys("]");}
+
+
+		 };
+		/******************** AlrgyIntolerance_Enc ********************************************************************************/
+		if(allergyintolerance.hasEncounter()) {
+
+			if(allergyintolerance.getEncounter().getReference() != null) {
+			a.addAlrgyIntoleranceEnc(allergyintolerance.getEncounter().getReference());
+			}
+		} else {
+			a.addAlrgyIntoleranceEnc("NULL");
 		}
+
+
+		/******************** allergyintolerancenote ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.Annotation> allergyintolerancenotelist = allergyintolerance.getNote();
+		for(int allergyintolerancenotei = 0; allergyintolerancenotei<allergyintolerancenotelist.size();allergyintolerancenotei++ ) {
+		org.hl7.fhir.r4.model.Annotation  allergyintolerancenote = allergyintolerancenotelist.get(allergyintolerancenotei);
+
+		/******************** AlrgyIntolerance_Nt_Time ********************************************************************************/
+		if(allergyintolerancenotei == 0) {a.addAlrgyIntoleranceNtTime("[");}
+		if(allergyintolerancenote.hasTime()) {
+
+			a.addAlrgyIntoleranceNtTime("\""+ca.uhn.fhir.util.DateUtils.formatDate(allergyintolerancenote.getTime())+"\"");
+		} else {
+			a.addAlrgyIntoleranceNtTime("NULL");
+		}
+
+		if(allergyintolerancenotei == allergyintolerancenotelist.size()-1) {a.addAlrgyIntoleranceNtTime("]");}
+
+
+		/******************** AlrgyIntolerance_Nt_AthrRfrnc ********************************************************************************/
+		if(allergyintolerancenotei == 0) {a.addAlrgyIntoleranceNtAthrRfrnc("[");}
+		if(allergyintolerancenote.hasAuthorReference()) {
+
+			if(allergyintolerancenote.getAuthorReference().getReference() != null) {
+			a.addAlrgyIntoleranceNtAthrRfrnc(allergyintolerancenote.getAuthorReference().getReference());
+			}
+		} else {
+			a.addAlrgyIntoleranceNtAthrRfrnc("NULL");
+		}
+
+		if(allergyintolerancenotei == allergyintolerancenotelist.size()-1) {a.addAlrgyIntoleranceNtAthrRfrnc("]");}
+
+
+		/******************** AlrgyIntolerance_Nt_Txt ********************************************************************************/
+		if(allergyintolerancenotei == 0) {a.addAlrgyIntoleranceNtTxt("[");}
+		if(allergyintolerancenote.hasText()) {
+
+			a.addAlrgyIntoleranceNtTxt(String.valueOf(allergyintolerancenote.getText()));
+		} else {
+			a.addAlrgyIntoleranceNtTxt("NULL");
+		}
+
+		if(allergyintolerancenotei == allergyintolerancenotelist.size()-1) {a.addAlrgyIntoleranceNtTxt("]");}
+
+
+		/******************** AlrgyIntolerance_Nt_AthrStrgTyp ********************************************************************************/
+		if(allergyintolerancenotei == 0) {a.addAlrgyIntoleranceNtAthrStrgTyp("[");}
+		if(allergyintolerancenote.hasAuthorStringType()) {
+
+			a.addAlrgyIntoleranceNtAthrStrgTyp("\""+allergyintolerancenote.getAuthorStringType().getValueAsString()+"\"");
+		} else {
+			a.addAlrgyIntoleranceNtAthrStrgTyp("NULL");
+		}
+
+		if(allergyintolerancenotei == allergyintolerancenotelist.size()-1) {a.addAlrgyIntoleranceNtAthrStrgTyp("]");}
+
+
+		 };
+		/******************** allergyintoleranceidentifier ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.Identifier> allergyintoleranceidentifierlist = allergyintolerance.getIdentifier();
+		for(int allergyintoleranceidentifieri = 0; allergyintoleranceidentifieri<allergyintoleranceidentifierlist.size();allergyintoleranceidentifieri++ ) {
+		org.hl7.fhir.r4.model.Identifier  allergyintoleranceidentifier = allergyintoleranceidentifierlist.get(allergyintoleranceidentifieri);
+
+		/******************** AlrgyIntolerance_Id_Vl ********************************************************************************/
+		if(allergyintoleranceidentifieri == 0) {a.addAlrgyIntoleranceIdVl("[");}
+		if(allergyintoleranceidentifier.hasValue()) {
+
+			a.addAlrgyIntoleranceIdVl(String.valueOf(allergyintoleranceidentifier.getValue()));
+		} else {
+			a.addAlrgyIntoleranceIdVl("NULL");
+		}
+
+		if(allergyintoleranceidentifieri == allergyintoleranceidentifierlist.size()-1) {a.addAlrgyIntoleranceIdVl("]");}
+
+
+		/******************** allergyintoleranceidentifiertype ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept allergyintoleranceidentifiertype = allergyintoleranceidentifier.getType();
+
+		/******************** AlrgyIntolerance_Id_Typ_Txt ********************************************************************************/
+		if(allergyintoleranceidentifieri == 0) {a.addAlrgyIntoleranceIdTypTxt("[");}
+		if(allergyintoleranceidentifiertype.hasText()) {
+
+			a.addAlrgyIntoleranceIdTypTxt(String.valueOf(allergyintoleranceidentifiertype.getText()));
+		} else {
+			a.addAlrgyIntoleranceIdTypTxt("NULL");
+		}
+
+		if(allergyintoleranceidentifieri == allergyintoleranceidentifierlist.size()-1) {a.addAlrgyIntoleranceIdTypTxt("]");}
+
+
+		/******************** allergyintoleranceidentifiertypecoding ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.Coding> allergyintoleranceidentifiertypecodinglist = allergyintoleranceidentifiertype.getCoding();
+		for(int allergyintoleranceidentifiertypecodingi = 0; allergyintoleranceidentifiertypecodingi<allergyintoleranceidentifiertypecodinglist.size();allergyintoleranceidentifiertypecodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  allergyintoleranceidentifiertypecoding = allergyintoleranceidentifiertypecodinglist.get(allergyintoleranceidentifiertypecodingi);
+
+		/******************** AlrgyIntolerance_Id_Typ_Cdg_Dsply ********************************************************************************/
+		if(allergyintoleranceidentifiertypecodingi == 0) {a.addAlrgyIntoleranceIdTypCdgDsply("[[");}
+		if(allergyintoleranceidentifiertypecoding.hasDisplay()) {
+
+			a.addAlrgyIntoleranceIdTypCdgDsply(String.valueOf(allergyintoleranceidentifiertypecoding.getDisplay()));
+		} else {
+			a.addAlrgyIntoleranceIdTypCdgDsply("NULL");
+		}
+
+		if(allergyintoleranceidentifiertypecodingi == allergyintoleranceidentifiertypecodinglist.size()-1) {a.addAlrgyIntoleranceIdTypCdgDsply("]]");}
+
+
+		/******************** AlrgyIntolerance_Id_Typ_Cdg_Vrsn ********************************************************************************/
+		if(allergyintoleranceidentifiertypecodingi == 0) {a.addAlrgyIntoleranceIdTypCdgVrsn("[[");}
+		if(allergyintoleranceidentifiertypecoding.hasVersion()) {
+
+			a.addAlrgyIntoleranceIdTypCdgVrsn(String.valueOf(allergyintoleranceidentifiertypecoding.getVersion()));
+		} else {
+			a.addAlrgyIntoleranceIdTypCdgVrsn("NULL");
+		}
+
+		if(allergyintoleranceidentifiertypecodingi == allergyintoleranceidentifiertypecodinglist.size()-1) {a.addAlrgyIntoleranceIdTypCdgVrsn("]]");}
+
+
+		/******************** AlrgyIntolerance_Id_Typ_Cdg_Cd ********************************************************************************/
+		if(allergyintoleranceidentifiertypecodingi == 0) {a.addAlrgyIntoleranceIdTypCdgCd("[[");}
+		if(allergyintoleranceidentifiertypecoding.hasCode()) {
+
+			a.addAlrgyIntoleranceIdTypCdgCd(String.valueOf(allergyintoleranceidentifiertypecoding.getCode()));
+		} else {
+			a.addAlrgyIntoleranceIdTypCdgCd("NULL");
+		}
+
+		if(allergyintoleranceidentifiertypecodingi == allergyintoleranceidentifiertypecodinglist.size()-1) {a.addAlrgyIntoleranceIdTypCdgCd("]]");}
+
+
+		/******************** AlrgyIntolerance_Id_Typ_Cdg_UsrSltd ********************************************************************************/
+		if(allergyintoleranceidentifiertypecodingi == 0) {a.addAlrgyIntoleranceIdTypCdgUsrSltd("[[");}
+		if(allergyintoleranceidentifiertypecoding.hasUserSelected()) {
+
+			a.addAlrgyIntoleranceIdTypCdgUsrSltd(String.valueOf(allergyintoleranceidentifiertypecoding.getUserSelected()));
+		} else {
+			a.addAlrgyIntoleranceIdTypCdgUsrSltd("NULL");
+		}
+
+		if(allergyintoleranceidentifiertypecodingi == allergyintoleranceidentifiertypecodinglist.size()-1) {a.addAlrgyIntoleranceIdTypCdgUsrSltd("]]");}
+
+
+		/******************** AlrgyIntolerance_Id_Typ_Cdg_Sys ********************************************************************************/
+		if(allergyintoleranceidentifiertypecodingi == 0) {a.addAlrgyIntoleranceIdTypCdgSys("[[");}
+		if(allergyintoleranceidentifiertypecoding.hasSystem()) {
+
+			a.addAlrgyIntoleranceIdTypCdgSys(String.valueOf(allergyintoleranceidentifiertypecoding.getSystem()));
+		} else {
+			a.addAlrgyIntoleranceIdTypCdgSys("NULL");
+		}
+
+		if(allergyintoleranceidentifiertypecodingi == allergyintoleranceidentifiertypecodinglist.size()-1) {a.addAlrgyIntoleranceIdTypCdgSys("]]");}
+
+
+		 };
+		/******************** allergyintoleranceidentifierperiod ********************************************************************************/
+		org.hl7.fhir.r4.model.Period allergyintoleranceidentifierperiod = allergyintoleranceidentifier.getPeriod();
+
+		/******************** AlrgyIntolerance_Id_Prd_Strt ********************************************************************************/
+		if(allergyintoleranceidentifieri == 0) {a.addAlrgyIntoleranceIdPrdStrt("[");}
+		if(allergyintoleranceidentifierperiod.hasStart()) {
+
+			a.addAlrgyIntoleranceIdPrdStrt("\""+ca.uhn.fhir.util.DateUtils.formatDate(allergyintoleranceidentifierperiod.getStart())+"\"");
+		} else {
+			a.addAlrgyIntoleranceIdPrdStrt("NULL");
+		}
+
+		if(allergyintoleranceidentifieri == allergyintoleranceidentifierlist.size()-1) {a.addAlrgyIntoleranceIdPrdStrt("]");}
+
+
+		/******************** AlrgyIntolerance_Id_Prd_End ********************************************************************************/
+		if(allergyintoleranceidentifieri == 0) {a.addAlrgyIntoleranceIdPrdEnd("[");}
+		if(allergyintoleranceidentifierperiod.hasEnd()) {
+
+			a.addAlrgyIntoleranceIdPrdEnd("\""+ca.uhn.fhir.util.DateUtils.formatDate(allergyintoleranceidentifierperiod.getEnd())+"\"");
+		} else {
+			a.addAlrgyIntoleranceIdPrdEnd("NULL");
+		}
+
+		if(allergyintoleranceidentifieri == allergyintoleranceidentifierlist.size()-1) {a.addAlrgyIntoleranceIdPrdEnd("]");}
+
+
+		/******************** allergyintoleranceidentifieruse ********************************************************************************/
+		org.hl7.fhir.r4.model.Identifier.IdentifierUse allergyintoleranceidentifieruse = allergyintoleranceidentifier.getUse();
+		if(allergyintoleranceidentifieruse!=null) {
+		if(allergyintoleranceidentifieri == 0) {
+
+		a.addAlrgyIntoleranceIdUse("[");		}
+			a.addAlrgyIntoleranceIdUse(allergyintoleranceidentifieruse.toCode());
+		if(allergyintoleranceidentifieri == allergyintoleranceidentifierlist.size()-1) {
+
+		a.addAlrgyIntoleranceIdUse("]");		}
+
+		} else {
+			a.addAlrgyIntoleranceIdUse("NULL");
+		}
+
+		/******************** AlrgyIntolerance_Id_Assigner ********************************************************************************/
+		if(allergyintoleranceidentifieri == 0) {a.addAlrgyIntoleranceIdAssigner("[");}
+		if(allergyintoleranceidentifier.hasAssigner()) {
+
+			if(allergyintoleranceidentifier.getAssigner().getReference() != null) {
+			a.addAlrgyIntoleranceIdAssigner(allergyintoleranceidentifier.getAssigner().getReference());
+			}
+		} else {
+			a.addAlrgyIntoleranceIdAssigner("NULL");
+		}
+
+		if(allergyintoleranceidentifieri == allergyintoleranceidentifierlist.size()-1) {a.addAlrgyIntoleranceIdAssigner("]");}
+
+
+		/******************** AlrgyIntolerance_Id_Sys ********************************************************************************/
+		if(allergyintoleranceidentifieri == 0) {a.addAlrgyIntoleranceIdSys("[");}
+		if(allergyintoleranceidentifier.hasSystem()) {
+
+			a.addAlrgyIntoleranceIdSys(String.valueOf(allergyintoleranceidentifier.getSystem()));
+		} else {
+			a.addAlrgyIntoleranceIdSys("NULL");
+		}
+
+		if(allergyintoleranceidentifieri == allergyintoleranceidentifierlist.size()-1) {a.addAlrgyIntoleranceIdSys("]");}
+
+
+		 };
 		/******************** allergyintoleranceclinicalstatus ********************************************************************************/
 		org.hl7.fhir.r4.model.CodeableConcept allergyintoleranceclinicalstatus = allergyintolerance.getClinicalStatus();
 
 		/******************** AlrgyIntolerance_ClnclSts_Txt ********************************************************************************/
 		if(allergyintoleranceclinicalstatus.hasText()) {
-			a.setAlrgyIntoleranceClnclStsTxt(String.valueOf(allergyintoleranceclinicalstatus.getText()));
+
+			a.addAlrgyIntoleranceClnclStsTxt(String.valueOf(allergyintoleranceclinicalstatus.getText()));
+		} else {
+			a.addAlrgyIntoleranceClnclStsTxt("NULL");
 		}
+
+
 		/******************** allergyintoleranceclinicalstatuscoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding allergyintoleranceclinicalstatuscoding = allergyintoleranceclinicalstatus.getCodingFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.Coding> allergyintoleranceclinicalstatuscodinglist = allergyintoleranceclinicalstatus.getCoding();
+		for(int allergyintoleranceclinicalstatuscodingi = 0; allergyintoleranceclinicalstatuscodingi<allergyintoleranceclinicalstatuscodinglist.size();allergyintoleranceclinicalstatuscodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  allergyintoleranceclinicalstatuscoding = allergyintoleranceclinicalstatuscodinglist.get(allergyintoleranceclinicalstatuscodingi);
+
+		/******************** AlrgyIntolerance_ClnclSts_Cdg_Dsply ********************************************************************************/
+		if(allergyintoleranceclinicalstatuscodingi == 0) {a.addAlrgyIntoleranceClnclStsCdgDsply("[");}
+		if(allergyintoleranceclinicalstatuscoding.hasDisplay()) {
+
+			a.addAlrgyIntoleranceClnclStsCdgDsply(String.valueOf(allergyintoleranceclinicalstatuscoding.getDisplay()));
+		} else {
+			a.addAlrgyIntoleranceClnclStsCdgDsply("NULL");
+		}
+
+		if(allergyintoleranceclinicalstatuscodingi == allergyintoleranceclinicalstatuscodinglist.size()-1) {a.addAlrgyIntoleranceClnclStsCdgDsply("]");}
+
 
 		/******************** AlrgyIntolerance_ClnclSts_Cdg_Vrsn ********************************************************************************/
+		if(allergyintoleranceclinicalstatuscodingi == 0) {a.addAlrgyIntoleranceClnclStsCdgVrsn("[");}
 		if(allergyintoleranceclinicalstatuscoding.hasVersion()) {
-			a.setAlrgyIntoleranceClnclStsCdgVrsn(String.valueOf(allergyintoleranceclinicalstatuscoding.getVersion()));
+
+			a.addAlrgyIntoleranceClnclStsCdgVrsn(String.valueOf(allergyintoleranceclinicalstatuscoding.getVersion()));
+		} else {
+			a.addAlrgyIntoleranceClnclStsCdgVrsn("NULL");
 		}
-		/******************** AlrgyIntolerance_ClnclSts_Cdg_Dsply ********************************************************************************/
-		if(allergyintoleranceclinicalstatuscoding.hasDisplay()) {
-			a.setAlrgyIntoleranceClnclStsCdgDsply(String.valueOf(allergyintoleranceclinicalstatuscoding.getDisplay()));
-		}
+
+		if(allergyintoleranceclinicalstatuscodingi == allergyintoleranceclinicalstatuscodinglist.size()-1) {a.addAlrgyIntoleranceClnclStsCdgVrsn("]");}
+
+
 		/******************** AlrgyIntolerance_ClnclSts_Cdg_Cd ********************************************************************************/
+		if(allergyintoleranceclinicalstatuscodingi == 0) {a.addAlrgyIntoleranceClnclStsCdgCd("[");}
 		if(allergyintoleranceclinicalstatuscoding.hasCode()) {
-			a.setAlrgyIntoleranceClnclStsCdgCd(String.valueOf(allergyintoleranceclinicalstatuscoding.getCode()));
+
+			a.addAlrgyIntoleranceClnclStsCdgCd(String.valueOf(allergyintoleranceclinicalstatuscoding.getCode()));
+		} else {
+			a.addAlrgyIntoleranceClnclStsCdgCd("NULL");
 		}
+
+		if(allergyintoleranceclinicalstatuscodingi == allergyintoleranceclinicalstatuscodinglist.size()-1) {a.addAlrgyIntoleranceClnclStsCdgCd("]");}
+
+
 		/******************** AlrgyIntolerance_ClnclSts_Cdg_UsrSltd ********************************************************************************/
+		if(allergyintoleranceclinicalstatuscodingi == 0) {a.addAlrgyIntoleranceClnclStsCdgUsrSltd("[");}
 		if(allergyintoleranceclinicalstatuscoding.hasUserSelected()) {
-			a.setAlrgyIntoleranceClnclStsCdgUsrSltd(String.valueOf(allergyintoleranceclinicalstatuscoding.getUserSelected()));
+
+			a.addAlrgyIntoleranceClnclStsCdgUsrSltd(String.valueOf(allergyintoleranceclinicalstatuscoding.getUserSelected()));
+		} else {
+			a.addAlrgyIntoleranceClnclStsCdgUsrSltd("NULL");
 		}
+
+		if(allergyintoleranceclinicalstatuscodingi == allergyintoleranceclinicalstatuscodinglist.size()-1) {a.addAlrgyIntoleranceClnclStsCdgUsrSltd("]");}
+
+
 		/******************** AlrgyIntolerance_ClnclSts_Cdg_Sys ********************************************************************************/
+		if(allergyintoleranceclinicalstatuscodingi == 0) {a.addAlrgyIntoleranceClnclStsCdgSys("[");}
 		if(allergyintoleranceclinicalstatuscoding.hasSystem()) {
-			a.setAlrgyIntoleranceClnclStsCdgSys(String.valueOf(allergyintoleranceclinicalstatuscoding.getSystem()));
-		}
-		/******************** AlrgyIntolerance_Enc ********************************************************************************/
-		if(allergyintolerance.hasEncounter()) {
-			a.setAlrgyIntoleranceEnc(String.valueOf(allergyintolerance.getEncounter()));
-		}
-		/******************** allergyintolerancenote ********************************************************************************/
-		org.hl7.fhir.r4.model.Annotation allergyintolerancenote = allergyintolerance.getNoteFirstRep();
 
-		/******************** AlrgyIntolerance_Nt_Time ********************************************************************************/
-		if(allergyintolerancenote.hasTime()) {
-			a.setAlrgyIntoleranceNtTime(String.valueOf(allergyintolerancenote.getTime()));
+			a.addAlrgyIntoleranceClnclStsCdgSys(String.valueOf(allergyintoleranceclinicalstatuscoding.getSystem()));
+		} else {
+			a.addAlrgyIntoleranceClnclStsCdgSys("NULL");
 		}
-		/******************** AlrgyIntolerance_Nt_Txt ********************************************************************************/
-		if(allergyintolerancenote.hasText()) {
-			a.setAlrgyIntoleranceNtTxt(String.valueOf(allergyintolerancenote.getText()));
-		}
-		/******************** AlrgyIntolerance_Nt_AthrRfrnc ********************************************************************************/
-		if(allergyintolerancenote.hasAuthorReference()) {
-			a.setAlrgyIntoleranceNtAthrRfrnc(String.valueOf(allergyintolerancenote.getAuthorReference()));
-		}
-		/******************** AlrgyIntolerance_Nt_AthrStrgTyp ********************************************************************************/
-		if(allergyintolerancenote.hasAuthorStringType()) {
-			a.setAlrgyIntoleranceNtAthrStrgTyp(String.valueOf(allergyintolerancenote.getAuthorStringType()));
-		}
-		/******************** allergyintolerancereaction ********************************************************************************/
-		org.hl7.fhir.r4.model.AllergyIntolerance.AllergyIntoleranceReactionComponent allergyintolerancereaction = allergyintolerance.getReactionFirstRep();
 
-		/******************** allergyintolerancereactionexposureroute ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept allergyintolerancereactionexposureroute = allergyintolerancereaction.getExposureRoute();
+		if(allergyintoleranceclinicalstatuscodingi == allergyintoleranceclinicalstatuscodinglist.size()-1) {a.addAlrgyIntoleranceClnclStsCdgSys("]");}
 
-		/******************** AlrgyIntolerance_Reaction_ExposureRoute_Txt ********************************************************************************/
-		if(allergyintolerancereactionexposureroute.hasText()) {
-			a.setAlrgyIntoleranceReactionExposureRouteTxt(String.valueOf(allergyintolerancereactionexposureroute.getText()));
-		}
-		/******************** allergyintolerancereactionexposureroutecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding allergyintolerancereactionexposureroutecoding = allergyintolerancereactionexposureroute.getCodingFirstRep();
 
-		/******************** AlrgyIntolerance_Reaction_ExposureRoute_Cdg_Vrsn ********************************************************************************/
-		if(allergyintolerancereactionexposureroutecoding.hasVersion()) {
-			a.setAlrgyIntoleranceReactionExposureRouteCdgVrsn(String.valueOf(allergyintolerancereactionexposureroutecoding.getVersion()));
+		 };
+		/******************** allergyintolerancecategory ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.Enumeration<org.hl7.fhir.r4.model.AllergyIntolerance.AllergyIntoleranceCategory>> allergyintolerancecategorylist = allergyintolerance.getCategory();
+		for(int allergyintolerancecategoryi = 0; allergyintolerancecategoryi<allergyintolerancecategorylist.size();allergyintolerancecategoryi++ ) {
+		org.hl7.fhir.r4.model.Enumeration<org.hl7.fhir.r4.model.AllergyIntolerance.AllergyIntoleranceCategory>  allergyintolerancecategory = allergyintolerancecategorylist.get(allergyintolerancecategoryi);
+		if(allergyintolerancecategory!=null) {
+			a.addAlrgyIntoleranceCtgry(allergyintolerancecategory.getCode());
+		} else {
+			a.addAlrgyIntoleranceCtgry("NULL");
 		}
-		/******************** AlrgyIntolerance_Reaction_ExposureRoute_Cdg_Dsply ********************************************************************************/
-		if(allergyintolerancereactionexposureroutecoding.hasDisplay()) {
-			a.setAlrgyIntoleranceReactionExposureRouteCdgDsply(String.valueOf(allergyintolerancereactionexposureroutecoding.getDisplay()));
-		}
-		/******************** AlrgyIntolerance_Reaction_ExposureRoute_Cdg_Cd ********************************************************************************/
-		if(allergyintolerancereactionexposureroutecoding.hasCode()) {
-			a.setAlrgyIntoleranceReactionExposureRouteCdgCd(String.valueOf(allergyintolerancereactionexposureroutecoding.getCode()));
-		}
-		/******************** AlrgyIntolerance_Reaction_ExposureRoute_Cdg_UsrSltd ********************************************************************************/
-		if(allergyintolerancereactionexposureroutecoding.hasUserSelected()) {
-			a.setAlrgyIntoleranceReactionExposureRouteCdgUsrSltd(String.valueOf(allergyintolerancereactionexposureroutecoding.getUserSelected()));
-		}
-		/******************** AlrgyIntolerance_Reaction_ExposureRoute_Cdg_Sys ********************************************************************************/
-		if(allergyintolerancereactionexposureroutecoding.hasSystem()) {
-			a.setAlrgyIntoleranceReactionExposureRouteCdgSys(String.valueOf(allergyintolerancereactionexposureroutecoding.getSystem()));
-		}
-		/******************** allergyintolerancereactionnote ********************************************************************************/
-		org.hl7.fhir.r4.model.Annotation allergyintolerancereactionnote = allergyintolerancereaction.getNoteFirstRep();
+		 };
 
-		/******************** AlrgyIntolerance_Reaction_Nt_Time ********************************************************************************/
-		if(allergyintolerancereactionnote.hasTime()) {
-			a.setAlrgyIntoleranceReactionNtTime(String.valueOf(allergyintolerancereactionnote.getTime()));
-		}
-		/******************** AlrgyIntolerance_Reaction_Nt_Txt ********************************************************************************/
-		if(allergyintolerancereactionnote.hasText()) {
-			a.setAlrgyIntoleranceReactionNtTxt(String.valueOf(allergyintolerancereactionnote.getText()));
-		}
-		/******************** AlrgyIntolerance_Reaction_Nt_AthrRfrnc ********************************************************************************/
-		if(allergyintolerancereactionnote.hasAuthorReference()) {
-			a.setAlrgyIntoleranceReactionNtAthrRfrnc(String.valueOf(allergyintolerancereactionnote.getAuthorReference()));
-		}
-		/******************** AlrgyIntolerance_Reaction_Nt_AthrStrgTyp ********************************************************************************/
-		if(allergyintolerancereactionnote.hasAuthorStringType()) {
-			a.setAlrgyIntoleranceReactionNtAthrStrgTyp(String.valueOf(allergyintolerancereactionnote.getAuthorStringType()));
-		}
-		/******************** AlrgyIntolerance_Reaction_Dscrptn ********************************************************************************/
-		if(allergyintolerancereaction.hasDescription()) {
-			a.setAlrgyIntoleranceReactionDscrptn(String.valueOf(allergyintolerancereaction.getDescription()));
-		}
-		/******************** allergyintolerancereactionmanifestation ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept allergyintolerancereactionmanifestation = allergyintolerancereaction.getManifestationFirstRep();
-
-		/******************** AlrgyIntolerance_Reaction_Manifestation_Txt ********************************************************************************/
-		if(allergyintolerancereactionmanifestation.hasText()) {
-			a.setAlrgyIntoleranceReactionManifestationTxt(String.valueOf(allergyintolerancereactionmanifestation.getText()));
-		}
-		/******************** allergyintolerancereactionmanifestationcoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding allergyintolerancereactionmanifestationcoding = allergyintolerancereactionmanifestation.getCodingFirstRep();
-
-		/******************** AlrgyIntolerance_Reaction_Manifestation_Cdg_Vrsn ********************************************************************************/
-		if(allergyintolerancereactionmanifestationcoding.hasVersion()) {
-			a.setAlrgyIntoleranceReactionManifestationCdgVrsn(String.valueOf(allergyintolerancereactionmanifestationcoding.getVersion()));
-		}
-		/******************** AlrgyIntolerance_Reaction_Manifestation_Cdg_Dsply ********************************************************************************/
-		if(allergyintolerancereactionmanifestationcoding.hasDisplay()) {
-			a.setAlrgyIntoleranceReactionManifestationCdgDsply(String.valueOf(allergyintolerancereactionmanifestationcoding.getDisplay()));
-		}
-		/******************** AlrgyIntolerance_Reaction_Manifestation_Cdg_Cd ********************************************************************************/
-		if(allergyintolerancereactionmanifestationcoding.hasCode()) {
-			a.setAlrgyIntoleranceReactionManifestationCdgCd(String.valueOf(allergyintolerancereactionmanifestationcoding.getCode()));
-		}
-		/******************** AlrgyIntolerance_Reaction_Manifestation_Cdg_UsrSltd ********************************************************************************/
-		if(allergyintolerancereactionmanifestationcoding.hasUserSelected()) {
-			a.setAlrgyIntoleranceReactionManifestationCdgUsrSltd(String.valueOf(allergyintolerancereactionmanifestationcoding.getUserSelected()));
-		}
-		/******************** AlrgyIntolerance_Reaction_Manifestation_Cdg_Sys ********************************************************************************/
-		if(allergyintolerancereactionmanifestationcoding.hasSystem()) {
-			a.setAlrgyIntoleranceReactionManifestationCdgSys(String.valueOf(allergyintolerancereactionmanifestationcoding.getSystem()));
-		}
-		/******************** allergyintolerancereactionsubstance ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept allergyintolerancereactionsubstance = allergyintolerancereaction.getSubstance();
-
-		/******************** AlrgyIntolerance_Reaction_Sbstnc_Txt ********************************************************************************/
-		if(allergyintolerancereactionsubstance.hasText()) {
-			a.setAlrgyIntoleranceReactionSbstncTxt(String.valueOf(allergyintolerancereactionsubstance.getText()));
-		}
-		/******************** allergyintolerancereactionsubstancecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding allergyintolerancereactionsubstancecoding = allergyintolerancereactionsubstance.getCodingFirstRep();
-
-		/******************** AlrgyIntolerance_Reaction_Sbstnc_Cdg_Vrsn ********************************************************************************/
-		if(allergyintolerancereactionsubstancecoding.hasVersion()) {
-			a.setAlrgyIntoleranceReactionSbstncCdgVrsn(String.valueOf(allergyintolerancereactionsubstancecoding.getVersion()));
-		}
-		/******************** AlrgyIntolerance_Reaction_Sbstnc_Cdg_Dsply ********************************************************************************/
-		if(allergyintolerancereactionsubstancecoding.hasDisplay()) {
-			a.setAlrgyIntoleranceReactionSbstncCdgDsply(String.valueOf(allergyintolerancereactionsubstancecoding.getDisplay()));
-		}
-		/******************** AlrgyIntolerance_Reaction_Sbstnc_Cdg_Cd ********************************************************************************/
-		if(allergyintolerancereactionsubstancecoding.hasCode()) {
-			a.setAlrgyIntoleranceReactionSbstncCdgCd(String.valueOf(allergyintolerancereactionsubstancecoding.getCode()));
-		}
-		/******************** AlrgyIntolerance_Reaction_Sbstnc_Cdg_UsrSltd ********************************************************************************/
-		if(allergyintolerancereactionsubstancecoding.hasUserSelected()) {
-			a.setAlrgyIntoleranceReactionSbstncCdgUsrSltd(String.valueOf(allergyintolerancereactionsubstancecoding.getUserSelected()));
-		}
-		/******************** AlrgyIntolerance_Reaction_Sbstnc_Cdg_Sys ********************************************************************************/
-		if(allergyintolerancereactionsubstancecoding.hasSystem()) {
-			a.setAlrgyIntoleranceReactionSbstncCdgSys(String.valueOf(allergyintolerancereactionsubstancecoding.getSystem()));
-		}
-		/******************** allergyintolerancereactionseverity ********************************************************************************/
-		org.hl7.fhir.r4.model.AllergyIntolerance.AllergyIntoleranceSeverity allergyintolerancereactionseverity = allergyintolerancereaction.getSeverity();
-		a.setAlrgyIntoleranceReactionSeverity(allergyintolerancereactionseverity.toCode());
-
-		/******************** AlrgyIntolerance_Reaction_On ********************************************************************************/
-		if(allergyintolerancereaction.hasOnset()) {
-			a.setAlrgyIntoleranceReactionOn(String.valueOf(allergyintolerancereaction.getOnset()));
-		}
-		/******************** allergyintolerancecriticality ********************************************************************************/
-		org.hl7.fhir.r4.model.AllergyIntolerance.AllergyIntoleranceCriticality allergyintolerancecriticality = allergyintolerance.getCriticality();
-		a.setAlrgyIntoleranceCriticality(allergyintolerancecriticality.toCode());
-
-		/******************** AlrgyIntolerance_LastOccrnce ********************************************************************************/
-		if(allergyintolerance.hasLastOccurrence()) {
-			a.setAlrgyIntoleranceLastOccrnce(String.valueOf(allergyintolerance.getLastOccurrence()));
-		}
 		/******************** AlrgyIntolerance_OnStrgTyp ********************************************************************************/
 		if(allergyintolerance.hasOnsetStringType()) {
-			a.setAlrgyIntoleranceOnStrgTyp(String.valueOf(allergyintolerance.getOnsetStringType()));
-		}
-		/******************** allergyintoleranceonage ********************************************************************************/
-		org.hl7.fhir.r4.model.Age allergyintoleranceonage = allergyintolerance.getOnsetAge();
 
-		/******************** AlrgyIntolerance_OnAge_Vl ********************************************************************************/
-		if(allergyintoleranceonage.hasValue()) {
-			a.setAlrgyIntoleranceOnAgeVl(String.valueOf(allergyintoleranceonage.getValue()));
+			a.addAlrgyIntoleranceOnStrgTyp("\""+allergyintolerance.getOnsetStringType().getValueAsString()+"\"");
+		} else {
+			a.addAlrgyIntoleranceOnStrgTyp("NULL");
 		}
-		/******************** allergyintoleranceonagecomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparator allergyintoleranceonagecomparator = allergyintoleranceonage.getComparator();
-		a.setAlrgyIntoleranceOnAgeCmprtr(allergyintoleranceonagecomparator.toCode());
 
-		/******************** AlrgyIntolerance_OnAge_Cd ********************************************************************************/
-		if(allergyintoleranceonage.hasCode()) {
-			a.setAlrgyIntoleranceOnAgeCd(String.valueOf(allergyintoleranceonage.getCode()));
-		}
-		/******************** AlrgyIntolerance_OnAge_Unt ********************************************************************************/
-		if(allergyintoleranceonage.hasUnit()) {
-			a.setAlrgyIntoleranceOnAgeUnt(String.valueOf(allergyintoleranceonage.getUnit()));
-		}
-		/******************** AlrgyIntolerance_OnAge_Sys ********************************************************************************/
-		if(allergyintoleranceonage.hasSystem()) {
-			a.setAlrgyIntoleranceOnAgeSys(String.valueOf(allergyintoleranceonage.getSystem()));
-		}
-		/******************** allergyintoleranceonperiod ********************************************************************************/
-		org.hl7.fhir.r4.model.Period allergyintoleranceonperiod = allergyintolerance.getOnsetPeriod();
 
-		/******************** AlrgyIntolerance_OnPrd_Strt ********************************************************************************/
-		if(allergyintoleranceonperiod.hasStart()) {
-			a.setAlrgyIntoleranceOnPrdStrt(String.valueOf(allergyintoleranceonperiod.getStart()));
-		}
-		/******************** AlrgyIntolerance_OnPrd_End ********************************************************************************/
-		if(allergyintoleranceonperiod.hasEnd()) {
-			a.setAlrgyIntoleranceOnPrdEnd(String.valueOf(allergyintoleranceonperiod.getEnd()));
-		}
 		/******************** allergyintoleranceonrange ********************************************************************************/
 		org.hl7.fhir.r4.model.Range allergyintoleranceonrange = allergyintolerance.getOnsetRange();
 
@@ -279,153 +436,640 @@ public class AllergyIntoleranceBidirectionalConversion
 
 		/******************** AlrgyIntolerance_OnRng_Lw_Vl ********************************************************************************/
 		if(allergyintoleranceonrangelow.hasValue()) {
-			a.setAlrgyIntoleranceOnRngLwVl(String.valueOf(allergyintoleranceonrangelow.getValue()));
+
+			a.addAlrgyIntoleranceOnRngLwVl(String.valueOf(allergyintoleranceonrangelow.getValue()));
+		} else {
+			a.addAlrgyIntoleranceOnRngLwVl("NULL");
 		}
+
+
 		/******************** allergyintoleranceonrangelowcomparator ********************************************************************************/
 		org.hl7.fhir.r4.model.Quantity.QuantityComparator allergyintoleranceonrangelowcomparator = allergyintoleranceonrangelow.getComparator();
-		a.setAlrgyIntoleranceOnRngLwCmprtr(allergyintoleranceonrangelowcomparator.toCode());
+		if(allergyintoleranceonrangelowcomparator!=null) {
+			a.addAlrgyIntoleranceOnRngLwCmprtr(allergyintoleranceonrangelowcomparator.toCode());
+		} else {
+			a.addAlrgyIntoleranceOnRngLwCmprtr("NULL");
+		}
 
 		/******************** AlrgyIntolerance_OnRng_Lw_Cd ********************************************************************************/
 		if(allergyintoleranceonrangelow.hasCode()) {
-			a.setAlrgyIntoleranceOnRngLwCd(String.valueOf(allergyintoleranceonrangelow.getCode()));
+
+			a.addAlrgyIntoleranceOnRngLwCd(String.valueOf(allergyintoleranceonrangelow.getCode()));
+		} else {
+			a.addAlrgyIntoleranceOnRngLwCd("NULL");
 		}
+
+
 		/******************** AlrgyIntolerance_OnRng_Lw_Unt ********************************************************************************/
 		if(allergyintoleranceonrangelow.hasUnit()) {
-			a.setAlrgyIntoleranceOnRngLwUnt(String.valueOf(allergyintoleranceonrangelow.getUnit()));
+
+			a.addAlrgyIntoleranceOnRngLwUnt(String.valueOf(allergyintoleranceonrangelow.getUnit()));
+		} else {
+			a.addAlrgyIntoleranceOnRngLwUnt("NULL");
 		}
+
+
 		/******************** AlrgyIntolerance_OnRng_Lw_Sys ********************************************************************************/
 		if(allergyintoleranceonrangelow.hasSystem()) {
-			a.setAlrgyIntoleranceOnRngLwSys(String.valueOf(allergyintoleranceonrangelow.getSystem()));
+
+			a.addAlrgyIntoleranceOnRngLwSys(String.valueOf(allergyintoleranceonrangelow.getSystem()));
+		} else {
+			a.addAlrgyIntoleranceOnRngLwSys("NULL");
 		}
+
+
 		/******************** allergyintoleranceonrangehigh ********************************************************************************/
 		org.hl7.fhir.r4.model.Quantity allergyintoleranceonrangehigh = allergyintoleranceonrange.getHigh();
 
 		/******************** AlrgyIntolerance_OnRng_Hi_Vl ********************************************************************************/
 		if(allergyintoleranceonrangehigh.hasValue()) {
-			a.setAlrgyIntoleranceOnRngHiVl(String.valueOf(allergyintoleranceonrangehigh.getValue()));
+
+			a.addAlrgyIntoleranceOnRngHiVl(String.valueOf(allergyintoleranceonrangehigh.getValue()));
+		} else {
+			a.addAlrgyIntoleranceOnRngHiVl("NULL");
 		}
+
+
 		/******************** allergyintoleranceonrangehighcomparator ********************************************************************************/
 		org.hl7.fhir.r4.model.Quantity.QuantityComparator allergyintoleranceonrangehighcomparator = allergyintoleranceonrangehigh.getComparator();
-		a.setAlrgyIntoleranceOnRngHiCmprtr(allergyintoleranceonrangehighcomparator.toCode());
+		if(allergyintoleranceonrangehighcomparator!=null) {
+			a.addAlrgyIntoleranceOnRngHiCmprtr(allergyintoleranceonrangehighcomparator.toCode());
+		} else {
+			a.addAlrgyIntoleranceOnRngHiCmprtr("NULL");
+		}
 
 		/******************** AlrgyIntolerance_OnRng_Hi_Cd ********************************************************************************/
 		if(allergyintoleranceonrangehigh.hasCode()) {
-			a.setAlrgyIntoleranceOnRngHiCd(String.valueOf(allergyintoleranceonrangehigh.getCode()));
+
+			a.addAlrgyIntoleranceOnRngHiCd(String.valueOf(allergyintoleranceonrangehigh.getCode()));
+		} else {
+			a.addAlrgyIntoleranceOnRngHiCd("NULL");
 		}
+
+
 		/******************** AlrgyIntolerance_OnRng_Hi_Unt ********************************************************************************/
 		if(allergyintoleranceonrangehigh.hasUnit()) {
-			a.setAlrgyIntoleranceOnRngHiUnt(String.valueOf(allergyintoleranceonrangehigh.getUnit()));
+
+			a.addAlrgyIntoleranceOnRngHiUnt(String.valueOf(allergyintoleranceonrangehigh.getUnit()));
+		} else {
+			a.addAlrgyIntoleranceOnRngHiUnt("NULL");
 		}
+
+
 		/******************** AlrgyIntolerance_OnRng_Hi_Sys ********************************************************************************/
 		if(allergyintoleranceonrangehigh.hasSystem()) {
-			a.setAlrgyIntoleranceOnRngHiSys(String.valueOf(allergyintoleranceonrangehigh.getSystem()));
+
+			a.addAlrgyIntoleranceOnRngHiSys(String.valueOf(allergyintoleranceonrangehigh.getSystem()));
+		} else {
+			a.addAlrgyIntoleranceOnRngHiSys("NULL");
 		}
-		/******************** AlrgyIntolerance_Asserter ********************************************************************************/
-		if(allergyintolerance.hasAsserter()) {
-			a.setAlrgyIntoleranceAsserter(String.valueOf(allergyintolerance.getAsserter()));
+
+
+		/******************** allergyintoleranceonage ********************************************************************************/
+		org.hl7.fhir.r4.model.Age allergyintoleranceonage = allergyintolerance.getOnsetAge();
+
+		/******************** AlrgyIntolerance_OnAge_Vl ********************************************************************************/
+		if(allergyintoleranceonage.hasValue()) {
+
+			a.addAlrgyIntoleranceOnAgeVl(String.valueOf(allergyintoleranceonage.getValue()));
+		} else {
+			a.addAlrgyIntoleranceOnAgeVl("NULL");
 		}
-		/******************** AlrgyIntolerance_RecordedDt ********************************************************************************/
-		if(allergyintolerance.hasRecordedDate()) {
-			a.setAlrgyIntoleranceRecordedDt(String.valueOf(allergyintolerance.getRecordedDate()));
+
+
+		/******************** allergyintoleranceonagecomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparator allergyintoleranceonagecomparator = allergyintoleranceonage.getComparator();
+		if(allergyintoleranceonagecomparator!=null) {
+			a.addAlrgyIntoleranceOnAgeCmprtr(allergyintoleranceonagecomparator.toCode());
+		} else {
+			a.addAlrgyIntoleranceOnAgeCmprtr("NULL");
 		}
+
+		/******************** AlrgyIntolerance_OnAge_Cd ********************************************************************************/
+		if(allergyintoleranceonage.hasCode()) {
+
+			a.addAlrgyIntoleranceOnAgeCd(String.valueOf(allergyintoleranceonage.getCode()));
+		} else {
+			a.addAlrgyIntoleranceOnAgeCd("NULL");
+		}
+
+
+		/******************** AlrgyIntolerance_OnAge_Unt ********************************************************************************/
+		if(allergyintoleranceonage.hasUnit()) {
+
+			a.addAlrgyIntoleranceOnAgeUnt(String.valueOf(allergyintoleranceonage.getUnit()));
+		} else {
+			a.addAlrgyIntoleranceOnAgeUnt("NULL");
+		}
+
+
+		/******************** AlrgyIntolerance_OnAge_Sys ********************************************************************************/
+		if(allergyintoleranceonage.hasSystem()) {
+
+			a.addAlrgyIntoleranceOnAgeSys(String.valueOf(allergyintoleranceonage.getSystem()));
+		} else {
+			a.addAlrgyIntoleranceOnAgeSys("NULL");
+		}
+
+
+		/******************** allergyintoleranceonperiod ********************************************************************************/
+		org.hl7.fhir.r4.model.Period allergyintoleranceonperiod = allergyintolerance.getOnsetPeriod();
+
+		/******************** AlrgyIntolerance_OnPrd_Strt ********************************************************************************/
+		if(allergyintoleranceonperiod.hasStart()) {
+
+			a.addAlrgyIntoleranceOnPrdStrt("\""+ca.uhn.fhir.util.DateUtils.formatDate(allergyintoleranceonperiod.getStart())+"\"");
+		} else {
+			a.addAlrgyIntoleranceOnPrdStrt("NULL");
+		}
+
+
+		/******************** AlrgyIntolerance_OnPrd_End ********************************************************************************/
+		if(allergyintoleranceonperiod.hasEnd()) {
+
+			a.addAlrgyIntoleranceOnPrdEnd("\""+ca.uhn.fhir.util.DateUtils.formatDate(allergyintoleranceonperiod.getEnd())+"\"");
+		} else {
+			a.addAlrgyIntoleranceOnPrdEnd("NULL");
+		}
+
+
 		/******************** AlrgyIntolerance_Recorder ********************************************************************************/
 		if(allergyintolerance.hasRecorder()) {
-			a.setAlrgyIntoleranceRecorder(String.valueOf(allergyintolerance.getRecorder()));
-		}
-		/******************** allergyintoleranceidentifier ********************************************************************************/
-		org.hl7.fhir.r4.model.Identifier allergyintoleranceidentifier = allergyintolerance.getIdentifierFirstRep();
 
-		/******************** AlrgyIntolerance_Id_Vl ********************************************************************************/
-		if(allergyintoleranceidentifier.hasValue()) {
-			a.setAlrgyIntoleranceIdVl(String.valueOf(allergyintoleranceidentifier.getValue()));
+			if(allergyintolerance.getRecorder().getReference() != null) {
+			a.addAlrgyIntoleranceRecorder(allergyintolerance.getRecorder().getReference());
+			}
+		} else {
+			a.addAlrgyIntoleranceRecorder("NULL");
 		}
-		/******************** allergyintoleranceidentifiertype ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept allergyintoleranceidentifiertype = allergyintoleranceidentifier.getType();
 
-		/******************** AlrgyIntolerance_Id_Typ_Txt ********************************************************************************/
-		if(allergyintoleranceidentifiertype.hasText()) {
-			a.setAlrgyIntoleranceIdTypTxt(String.valueOf(allergyintoleranceidentifiertype.getText()));
-		}
-		/******************** allergyintoleranceidentifiertypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding allergyintoleranceidentifiertypecoding = allergyintoleranceidentifiertype.getCodingFirstRep();
 
-		/******************** AlrgyIntolerance_Id_Typ_Cdg_Vrsn ********************************************************************************/
-		if(allergyintoleranceidentifiertypecoding.hasVersion()) {
-			a.setAlrgyIntoleranceIdTypCdgVrsn(String.valueOf(allergyintoleranceidentifiertypecoding.getVersion()));
-		}
-		/******************** AlrgyIntolerance_Id_Typ_Cdg_Dsply ********************************************************************************/
-		if(allergyintoleranceidentifiertypecoding.hasDisplay()) {
-			a.setAlrgyIntoleranceIdTypCdgDsply(String.valueOf(allergyintoleranceidentifiertypecoding.getDisplay()));
-		}
-		/******************** AlrgyIntolerance_Id_Typ_Cdg_Cd ********************************************************************************/
-		if(allergyintoleranceidentifiertypecoding.hasCode()) {
-			a.setAlrgyIntoleranceIdTypCdgCd(String.valueOf(allergyintoleranceidentifiertypecoding.getCode()));
-		}
-		/******************** AlrgyIntolerance_Id_Typ_Cdg_UsrSltd ********************************************************************************/
-		if(allergyintoleranceidentifiertypecoding.hasUserSelected()) {
-			a.setAlrgyIntoleranceIdTypCdgUsrSltd(String.valueOf(allergyintoleranceidentifiertypecoding.getUserSelected()));
-		}
-		/******************** AlrgyIntolerance_Id_Typ_Cdg_Sys ********************************************************************************/
-		if(allergyintoleranceidentifiertypecoding.hasSystem()) {
-			a.setAlrgyIntoleranceIdTypCdgSys(String.valueOf(allergyintoleranceidentifiertypecoding.getSystem()));
-		}
-		/******************** allergyintoleranceidentifierperiod ********************************************************************************/
-		org.hl7.fhir.r4.model.Period allergyintoleranceidentifierperiod = allergyintoleranceidentifier.getPeriod();
+		/******************** AlrgyIntolerance_Asserter ********************************************************************************/
+		if(allergyintolerance.hasAsserter()) {
 
-		/******************** AlrgyIntolerance_Id_Prd_Strt ********************************************************************************/
-		if(allergyintoleranceidentifierperiod.hasStart()) {
-			a.setAlrgyIntoleranceIdPrdStrt(String.valueOf(allergyintoleranceidentifierperiod.getStart()));
+			if(allergyintolerance.getAsserter().getReference() != null) {
+			a.addAlrgyIntoleranceAsserter(allergyintolerance.getAsserter().getReference());
+			}
+		} else {
+			a.addAlrgyIntoleranceAsserter("NULL");
 		}
-		/******************** AlrgyIntolerance_Id_Prd_End ********************************************************************************/
-		if(allergyintoleranceidentifierperiod.hasEnd()) {
-			a.setAlrgyIntoleranceIdPrdEnd(String.valueOf(allergyintoleranceidentifierperiod.getEnd()));
+
+
+		/******************** AlrgyIntolerance_RecordedDt ********************************************************************************/
+		if(allergyintolerance.hasRecordedDate()) {
+
+			a.addAlrgyIntoleranceRecordedDt("\""+ca.uhn.fhir.util.DateUtils.formatDate(allergyintolerance.getRecordedDate())+"\"");
+		} else {
+			a.addAlrgyIntoleranceRecordedDt("NULL");
 		}
-		/******************** AlrgyIntolerance_Id_Assigner ********************************************************************************/
-		if(allergyintoleranceidentifier.hasAssigner()) {
-			a.setAlrgyIntoleranceIdAssigner(String.valueOf(allergyintoleranceidentifier.getAssigner()));
+
+
+		/******************** allergyintolerancecriticality ********************************************************************************/
+		org.hl7.fhir.r4.model.AllergyIntolerance.AllergyIntoleranceCriticality allergyintolerancecriticality = allergyintolerance.getCriticality();
+		if(allergyintolerancecriticality!=null) {
+			a.addAlrgyIntoleranceCriticality(allergyintolerancecriticality.toCode());
+		} else {
+			a.addAlrgyIntoleranceCriticality("NULL");
 		}
-		/******************** AlrgyIntolerance_Id_Sys ********************************************************************************/
-		if(allergyintoleranceidentifier.hasSystem()) {
-			a.setAlrgyIntoleranceIdSys(String.valueOf(allergyintoleranceidentifier.getSystem()));
+
+		/******************** AlrgyIntolerance_LastOccrnce ********************************************************************************/
+		if(allergyintolerance.hasLastOccurrence()) {
+
+			a.addAlrgyIntoleranceLastOccrnce("\""+ca.uhn.fhir.util.DateUtils.formatDate(allergyintolerance.getLastOccurrence())+"\"");
+		} else {
+			a.addAlrgyIntoleranceLastOccrnce("NULL");
 		}
-		/******************** allergyintoleranceidentifieruse ********************************************************************************/
-		org.hl7.fhir.r4.model.Identifier.IdentifierUse allergyintoleranceidentifieruse = allergyintoleranceidentifier.getUse();
-		a.setAlrgyIntoleranceIdUse(allergyintoleranceidentifieruse.toCode());
+
+
+		/******************** allergyintolerancereaction ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.AllergyIntolerance.AllergyIntoleranceReactionComponent> allergyintolerancereactionlist = allergyintolerance.getReaction();
+		for(int allergyintolerancereactioni = 0; allergyintolerancereactioni<allergyintolerancereactionlist.size();allergyintolerancereactioni++ ) {
+		org.hl7.fhir.r4.model.AllergyIntolerance.AllergyIntoleranceReactionComponent  allergyintolerancereaction = allergyintolerancereactionlist.get(allergyintolerancereactioni);
+
+		/******************** AlrgyIntolerance_Reaction_Dscrptn ********************************************************************************/
+		if(allergyintolerancereactioni == 0) {a.addAlrgyIntoleranceReactionDscrptn("[");}
+		if(allergyintolerancereaction.hasDescription()) {
+
+			a.addAlrgyIntoleranceReactionDscrptn(String.valueOf(allergyintolerancereaction.getDescription()));
+		} else {
+			a.addAlrgyIntoleranceReactionDscrptn("NULL");
+		}
+
+		if(allergyintolerancereactioni == allergyintolerancereactionlist.size()-1) {a.addAlrgyIntoleranceReactionDscrptn("]");}
+
+
+		/******************** allergyintolerancereactionnote ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.Annotation> allergyintolerancereactionnotelist = allergyintolerancereaction.getNote();
+		for(int allergyintolerancereactionnotei = 0; allergyintolerancereactionnotei<allergyintolerancereactionnotelist.size();allergyintolerancereactionnotei++ ) {
+		org.hl7.fhir.r4.model.Annotation  allergyintolerancereactionnote = allergyintolerancereactionnotelist.get(allergyintolerancereactionnotei);
+
+		/******************** AlrgyIntolerance_Reaction_Nt_Time ********************************************************************************/
+		if(allergyintolerancereactionnotei == 0) {a.addAlrgyIntoleranceReactionNtTime("[[");}
+		if(allergyintolerancereactionnote.hasTime()) {
+
+			a.addAlrgyIntoleranceReactionNtTime("\""+ca.uhn.fhir.util.DateUtils.formatDate(allergyintolerancereactionnote.getTime())+"\"");
+		} else {
+			a.addAlrgyIntoleranceReactionNtTime("NULL");
+		}
+
+		if(allergyintolerancereactionnotei == allergyintolerancereactionnotelist.size()-1) {a.addAlrgyIntoleranceReactionNtTime("]]");}
+
+
+		/******************** AlrgyIntolerance_Reaction_Nt_AthrRfrnc ********************************************************************************/
+		if(allergyintolerancereactionnotei == 0) {a.addAlrgyIntoleranceReactionNtAthrRfrnc("[[");}
+		if(allergyintolerancereactionnote.hasAuthorReference()) {
+
+			if(allergyintolerancereactionnote.getAuthorReference().getReference() != null) {
+			a.addAlrgyIntoleranceReactionNtAthrRfrnc(allergyintolerancereactionnote.getAuthorReference().getReference());
+			}
+		} else {
+			a.addAlrgyIntoleranceReactionNtAthrRfrnc("NULL");
+		}
+
+		if(allergyintolerancereactionnotei == allergyintolerancereactionnotelist.size()-1) {a.addAlrgyIntoleranceReactionNtAthrRfrnc("]]");}
+
+
+		/******************** AlrgyIntolerance_Reaction_Nt_Txt ********************************************************************************/
+		if(allergyintolerancereactionnotei == 0) {a.addAlrgyIntoleranceReactionNtTxt("[[");}
+		if(allergyintolerancereactionnote.hasText()) {
+
+			a.addAlrgyIntoleranceReactionNtTxt(String.valueOf(allergyintolerancereactionnote.getText()));
+		} else {
+			a.addAlrgyIntoleranceReactionNtTxt("NULL");
+		}
+
+		if(allergyintolerancereactionnotei == allergyintolerancereactionnotelist.size()-1) {a.addAlrgyIntoleranceReactionNtTxt("]]");}
+
+
+		/******************** AlrgyIntolerance_Reaction_Nt_AthrStrgTyp ********************************************************************************/
+		if(allergyintolerancereactionnotei == 0) {a.addAlrgyIntoleranceReactionNtAthrStrgTyp("[[");}
+		if(allergyintolerancereactionnote.hasAuthorStringType()) {
+
+			a.addAlrgyIntoleranceReactionNtAthrStrgTyp("\""+allergyintolerancereactionnote.getAuthorStringType().getValueAsString()+"\"");
+		} else {
+			a.addAlrgyIntoleranceReactionNtAthrStrgTyp("NULL");
+		}
+
+		if(allergyintolerancereactionnotei == allergyintolerancereactionnotelist.size()-1) {a.addAlrgyIntoleranceReactionNtAthrStrgTyp("]]");}
+
+
+		 };
+		/******************** allergyintolerancereactionseverity ********************************************************************************/
+		org.hl7.fhir.r4.model.AllergyIntolerance.AllergyIntoleranceSeverity allergyintolerancereactionseverity = allergyintolerancereaction.getSeverity();
+		if(allergyintolerancereactionseverity!=null) {
+			a.addAlrgyIntoleranceReactionSeverity(allergyintolerancereactionseverity.toCode());
+		} else {
+			a.addAlrgyIntoleranceReactionSeverity("NULL");
+		}
+
+		/******************** AlrgyIntolerance_Reaction_On ********************************************************************************/
+		if(allergyintolerancereaction.hasOnset()) {
+
+			a.addAlrgyIntoleranceReactionOn("\""+ca.uhn.fhir.util.DateUtils.formatDate(allergyintolerancereaction.getOnset())+"\"");
+		} else {
+			a.addAlrgyIntoleranceReactionOn("NULL");
+		}
+
+
+		/******************** allergyintolerancereactionsubstance ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept allergyintolerancereactionsubstance = allergyintolerancereaction.getSubstance();
+
+		/******************** AlrgyIntolerance_Reaction_Sbstnc_Txt ********************************************************************************/
+		if(allergyintolerancereactionsubstance.hasText()) {
+
+			a.addAlrgyIntoleranceReactionSbstncTxt(String.valueOf(allergyintolerancereactionsubstance.getText()));
+		} else {
+			a.addAlrgyIntoleranceReactionSbstncTxt("NULL");
+		}
+
+
+		/******************** allergyintolerancereactionsubstancecoding ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.Coding> allergyintolerancereactionsubstancecodinglist = allergyintolerancereactionsubstance.getCoding();
+		for(int allergyintolerancereactionsubstancecodingi = 0; allergyintolerancereactionsubstancecodingi<allergyintolerancereactionsubstancecodinglist.size();allergyintolerancereactionsubstancecodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  allergyintolerancereactionsubstancecoding = allergyintolerancereactionsubstancecodinglist.get(allergyintolerancereactionsubstancecodingi);
+
+		/******************** AlrgyIntolerance_Reaction_Sbstnc_Cdg_Dsply ********************************************************************************/
+		if(allergyintolerancereactionsubstancecodingi == 0) {a.addAlrgyIntoleranceReactionSbstncCdgDsply("[[");}
+		if(allergyintolerancereactionsubstancecoding.hasDisplay()) {
+
+			a.addAlrgyIntoleranceReactionSbstncCdgDsply(String.valueOf(allergyintolerancereactionsubstancecoding.getDisplay()));
+		} else {
+			a.addAlrgyIntoleranceReactionSbstncCdgDsply("NULL");
+		}
+
+		if(allergyintolerancereactionsubstancecodingi == allergyintolerancereactionsubstancecodinglist.size()-1) {a.addAlrgyIntoleranceReactionSbstncCdgDsply("]]");}
+
+
+		/******************** AlrgyIntolerance_Reaction_Sbstnc_Cdg_Vrsn ********************************************************************************/
+		if(allergyintolerancereactionsubstancecodingi == 0) {a.addAlrgyIntoleranceReactionSbstncCdgVrsn("[[");}
+		if(allergyintolerancereactionsubstancecoding.hasVersion()) {
+
+			a.addAlrgyIntoleranceReactionSbstncCdgVrsn(String.valueOf(allergyintolerancereactionsubstancecoding.getVersion()));
+		} else {
+			a.addAlrgyIntoleranceReactionSbstncCdgVrsn("NULL");
+		}
+
+		if(allergyintolerancereactionsubstancecodingi == allergyintolerancereactionsubstancecodinglist.size()-1) {a.addAlrgyIntoleranceReactionSbstncCdgVrsn("]]");}
+
+
+		/******************** AlrgyIntolerance_Reaction_Sbstnc_Cdg_Cd ********************************************************************************/
+		if(allergyintolerancereactionsubstancecodingi == 0) {a.addAlrgyIntoleranceReactionSbstncCdgCd("[[");}
+		if(allergyintolerancereactionsubstancecoding.hasCode()) {
+
+			a.addAlrgyIntoleranceReactionSbstncCdgCd(String.valueOf(allergyintolerancereactionsubstancecoding.getCode()));
+		} else {
+			a.addAlrgyIntoleranceReactionSbstncCdgCd("NULL");
+		}
+
+		if(allergyintolerancereactionsubstancecodingi == allergyintolerancereactionsubstancecodinglist.size()-1) {a.addAlrgyIntoleranceReactionSbstncCdgCd("]]");}
+
+
+		/******************** AlrgyIntolerance_Reaction_Sbstnc_Cdg_UsrSltd ********************************************************************************/
+		if(allergyintolerancereactionsubstancecodingi == 0) {a.addAlrgyIntoleranceReactionSbstncCdgUsrSltd("[[");}
+		if(allergyintolerancereactionsubstancecoding.hasUserSelected()) {
+
+			a.addAlrgyIntoleranceReactionSbstncCdgUsrSltd(String.valueOf(allergyintolerancereactionsubstancecoding.getUserSelected()));
+		} else {
+			a.addAlrgyIntoleranceReactionSbstncCdgUsrSltd("NULL");
+		}
+
+		if(allergyintolerancereactionsubstancecodingi == allergyintolerancereactionsubstancecodinglist.size()-1) {a.addAlrgyIntoleranceReactionSbstncCdgUsrSltd("]]");}
+
+
+		/******************** AlrgyIntolerance_Reaction_Sbstnc_Cdg_Sys ********************************************************************************/
+		if(allergyintolerancereactionsubstancecodingi == 0) {a.addAlrgyIntoleranceReactionSbstncCdgSys("[[");}
+		if(allergyintolerancereactionsubstancecoding.hasSystem()) {
+
+			a.addAlrgyIntoleranceReactionSbstncCdgSys(String.valueOf(allergyintolerancereactionsubstancecoding.getSystem()));
+		} else {
+			a.addAlrgyIntoleranceReactionSbstncCdgSys("NULL");
+		}
+
+		if(allergyintolerancereactionsubstancecodingi == allergyintolerancereactionsubstancecodinglist.size()-1) {a.addAlrgyIntoleranceReactionSbstncCdgSys("]]");}
+
+
+		 };
+		/******************** allergyintolerancereactionmanifestation ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.CodeableConcept> allergyintolerancereactionmanifestationlist = allergyintolerancereaction.getManifestation();
+		for(int allergyintolerancereactionmanifestationi = 0; allergyintolerancereactionmanifestationi<allergyintolerancereactionmanifestationlist.size();allergyintolerancereactionmanifestationi++ ) {
+		org.hl7.fhir.r4.model.CodeableConcept  allergyintolerancereactionmanifestation = allergyintolerancereactionmanifestationlist.get(allergyintolerancereactionmanifestationi);
+
+		/******************** AlrgyIntolerance_Reaction_Manifestation_Txt ********************************************************************************/
+		if(allergyintolerancereactionmanifestationi == 0) {a.addAlrgyIntoleranceReactionManifestationTxt("[[");}
+		if(allergyintolerancereactionmanifestation.hasText()) {
+
+			a.addAlrgyIntoleranceReactionManifestationTxt(String.valueOf(allergyintolerancereactionmanifestation.getText()));
+		} else {
+			a.addAlrgyIntoleranceReactionManifestationTxt("NULL");
+		}
+
+		if(allergyintolerancereactionmanifestationi == allergyintolerancereactionmanifestationlist.size()-1) {a.addAlrgyIntoleranceReactionManifestationTxt("]]");}
+
+
+		/******************** allergyintolerancereactionmanifestationcoding ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.Coding> allergyintolerancereactionmanifestationcodinglist = allergyintolerancereactionmanifestation.getCoding();
+		for(int allergyintolerancereactionmanifestationcodingi = 0; allergyintolerancereactionmanifestationcodingi<allergyintolerancereactionmanifestationcodinglist.size();allergyintolerancereactionmanifestationcodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  allergyintolerancereactionmanifestationcoding = allergyintolerancereactionmanifestationcodinglist.get(allergyintolerancereactionmanifestationcodingi);
+
+		/******************** AlrgyIntolerance_Reaction_Manifestation_Cdg_Dsply ********************************************************************************/
+		if(allergyintolerancereactionmanifestationcodingi == 0) {a.addAlrgyIntoleranceReactionManifestationCdgDsply("[[[");}
+		if(allergyintolerancereactionmanifestationcoding.hasDisplay()) {
+
+			a.addAlrgyIntoleranceReactionManifestationCdgDsply(String.valueOf(allergyintolerancereactionmanifestationcoding.getDisplay()));
+		} else {
+			a.addAlrgyIntoleranceReactionManifestationCdgDsply("NULL");
+		}
+
+		if(allergyintolerancereactionmanifestationcodingi == allergyintolerancereactionmanifestationcodinglist.size()-1) {a.addAlrgyIntoleranceReactionManifestationCdgDsply("]]]");}
+
+
+		/******************** AlrgyIntolerance_Reaction_Manifestation_Cdg_Vrsn ********************************************************************************/
+		if(allergyintolerancereactionmanifestationcodingi == 0) {a.addAlrgyIntoleranceReactionManifestationCdgVrsn("[[[");}
+		if(allergyintolerancereactionmanifestationcoding.hasVersion()) {
+
+			a.addAlrgyIntoleranceReactionManifestationCdgVrsn(String.valueOf(allergyintolerancereactionmanifestationcoding.getVersion()));
+		} else {
+			a.addAlrgyIntoleranceReactionManifestationCdgVrsn("NULL");
+		}
+
+		if(allergyintolerancereactionmanifestationcodingi == allergyintolerancereactionmanifestationcodinglist.size()-1) {a.addAlrgyIntoleranceReactionManifestationCdgVrsn("]]]");}
+
+
+		/******************** AlrgyIntolerance_Reaction_Manifestation_Cdg_Cd ********************************************************************************/
+		if(allergyintolerancereactionmanifestationcodingi == 0) {a.addAlrgyIntoleranceReactionManifestationCdgCd("[[[");}
+		if(allergyintolerancereactionmanifestationcoding.hasCode()) {
+
+			a.addAlrgyIntoleranceReactionManifestationCdgCd(String.valueOf(allergyintolerancereactionmanifestationcoding.getCode()));
+		} else {
+			a.addAlrgyIntoleranceReactionManifestationCdgCd("NULL");
+		}
+
+		if(allergyintolerancereactionmanifestationcodingi == allergyintolerancereactionmanifestationcodinglist.size()-1) {a.addAlrgyIntoleranceReactionManifestationCdgCd("]]]");}
+
+
+		/******************** AlrgyIntolerance_Reaction_Manifestation_Cdg_UsrSltd ********************************************************************************/
+		if(allergyintolerancereactionmanifestationcodingi == 0) {a.addAlrgyIntoleranceReactionManifestationCdgUsrSltd("[[[");}
+		if(allergyintolerancereactionmanifestationcoding.hasUserSelected()) {
+
+			a.addAlrgyIntoleranceReactionManifestationCdgUsrSltd(String.valueOf(allergyintolerancereactionmanifestationcoding.getUserSelected()));
+		} else {
+			a.addAlrgyIntoleranceReactionManifestationCdgUsrSltd("NULL");
+		}
+
+		if(allergyintolerancereactionmanifestationcodingi == allergyintolerancereactionmanifestationcodinglist.size()-1) {a.addAlrgyIntoleranceReactionManifestationCdgUsrSltd("]]]");}
+
+
+		/******************** AlrgyIntolerance_Reaction_Manifestation_Cdg_Sys ********************************************************************************/
+		if(allergyintolerancereactionmanifestationcodingi == 0) {a.addAlrgyIntoleranceReactionManifestationCdgSys("[[[");}
+		if(allergyintolerancereactionmanifestationcoding.hasSystem()) {
+
+			a.addAlrgyIntoleranceReactionManifestationCdgSys(String.valueOf(allergyintolerancereactionmanifestationcoding.getSystem()));
+		} else {
+			a.addAlrgyIntoleranceReactionManifestationCdgSys("NULL");
+		}
+
+		if(allergyintolerancereactionmanifestationcodingi == allergyintolerancereactionmanifestationcodinglist.size()-1) {a.addAlrgyIntoleranceReactionManifestationCdgSys("]]]");}
+
+
+		 };
+		 };
+		/******************** allergyintolerancereactionexposureroute ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept allergyintolerancereactionexposureroute = allergyintolerancereaction.getExposureRoute();
+
+		/******************** AlrgyIntolerance_Reaction_ExposureRoute_Txt ********************************************************************************/
+		if(allergyintolerancereactionexposureroute.hasText()) {
+
+			a.addAlrgyIntoleranceReactionExposureRouteTxt(String.valueOf(allergyintolerancereactionexposureroute.getText()));
+		} else {
+			a.addAlrgyIntoleranceReactionExposureRouteTxt("NULL");
+		}
+
+
+		/******************** allergyintolerancereactionexposureroutecoding ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.Coding> allergyintolerancereactionexposureroutecodinglist = allergyintolerancereactionexposureroute.getCoding();
+		for(int allergyintolerancereactionexposureroutecodingi = 0; allergyintolerancereactionexposureroutecodingi<allergyintolerancereactionexposureroutecodinglist.size();allergyintolerancereactionexposureroutecodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  allergyintolerancereactionexposureroutecoding = allergyintolerancereactionexposureroutecodinglist.get(allergyintolerancereactionexposureroutecodingi);
+
+		/******************** AlrgyIntolerance_Reaction_ExposureRoute_Cdg_Dsply ********************************************************************************/
+		if(allergyintolerancereactionexposureroutecodingi == 0) {a.addAlrgyIntoleranceReactionExposureRouteCdgDsply("[[");}
+		if(allergyintolerancereactionexposureroutecoding.hasDisplay()) {
+
+			a.addAlrgyIntoleranceReactionExposureRouteCdgDsply(String.valueOf(allergyintolerancereactionexposureroutecoding.getDisplay()));
+		} else {
+			a.addAlrgyIntoleranceReactionExposureRouteCdgDsply("NULL");
+		}
+
+		if(allergyintolerancereactionexposureroutecodingi == allergyintolerancereactionexposureroutecodinglist.size()-1) {a.addAlrgyIntoleranceReactionExposureRouteCdgDsply("]]");}
+
+
+		/******************** AlrgyIntolerance_Reaction_ExposureRoute_Cdg_Vrsn ********************************************************************************/
+		if(allergyintolerancereactionexposureroutecodingi == 0) {a.addAlrgyIntoleranceReactionExposureRouteCdgVrsn("[[");}
+		if(allergyintolerancereactionexposureroutecoding.hasVersion()) {
+
+			a.addAlrgyIntoleranceReactionExposureRouteCdgVrsn(String.valueOf(allergyintolerancereactionexposureroutecoding.getVersion()));
+		} else {
+			a.addAlrgyIntoleranceReactionExposureRouteCdgVrsn("NULL");
+		}
+
+		if(allergyintolerancereactionexposureroutecodingi == allergyintolerancereactionexposureroutecodinglist.size()-1) {a.addAlrgyIntoleranceReactionExposureRouteCdgVrsn("]]");}
+
+
+		/******************** AlrgyIntolerance_Reaction_ExposureRoute_Cdg_Cd ********************************************************************************/
+		if(allergyintolerancereactionexposureroutecodingi == 0) {a.addAlrgyIntoleranceReactionExposureRouteCdgCd("[[");}
+		if(allergyintolerancereactionexposureroutecoding.hasCode()) {
+
+			a.addAlrgyIntoleranceReactionExposureRouteCdgCd(String.valueOf(allergyintolerancereactionexposureroutecoding.getCode()));
+		} else {
+			a.addAlrgyIntoleranceReactionExposureRouteCdgCd("NULL");
+		}
+
+		if(allergyintolerancereactionexposureroutecodingi == allergyintolerancereactionexposureroutecodinglist.size()-1) {a.addAlrgyIntoleranceReactionExposureRouteCdgCd("]]");}
+
+
+		/******************** AlrgyIntolerance_Reaction_ExposureRoute_Cdg_UsrSltd ********************************************************************************/
+		if(allergyintolerancereactionexposureroutecodingi == 0) {a.addAlrgyIntoleranceReactionExposureRouteCdgUsrSltd("[[");}
+		if(allergyintolerancereactionexposureroutecoding.hasUserSelected()) {
+
+			a.addAlrgyIntoleranceReactionExposureRouteCdgUsrSltd(String.valueOf(allergyintolerancereactionexposureroutecoding.getUserSelected()));
+		} else {
+			a.addAlrgyIntoleranceReactionExposureRouteCdgUsrSltd("NULL");
+		}
+
+		if(allergyintolerancereactionexposureroutecodingi == allergyintolerancereactionexposureroutecodinglist.size()-1) {a.addAlrgyIntoleranceReactionExposureRouteCdgUsrSltd("]]");}
+
+
+		/******************** AlrgyIntolerance_Reaction_ExposureRoute_Cdg_Sys ********************************************************************************/
+		if(allergyintolerancereactionexposureroutecodingi == 0) {a.addAlrgyIntoleranceReactionExposureRouteCdgSys("[[");}
+		if(allergyintolerancereactionexposureroutecoding.hasSystem()) {
+
+			a.addAlrgyIntoleranceReactionExposureRouteCdgSys(String.valueOf(allergyintolerancereactionexposureroutecoding.getSystem()));
+		} else {
+			a.addAlrgyIntoleranceReactionExposureRouteCdgSys("NULL");
+		}
+
+		if(allergyintolerancereactionexposureroutecodingi == allergyintolerancereactionexposureroutecodinglist.size()-1) {a.addAlrgyIntoleranceReactionExposureRouteCdgSys("]]");}
+
+
+		 };
+		 };
+		/******************** AlrgyIntolerance_Pnt ********************************************************************************/
+		if(allergyintolerance.hasPatient()) {
+
+			if(allergyintolerance.getPatient().getReference() != null) {
+			a.addAlrgyIntolerancePnt(allergyintolerance.getPatient().getReference());
+			}
+		} else {
+			a.addAlrgyIntolerancePnt("NULL");
+		}
+
 
 		/******************** allergyintoleranceverificationstatus ********************************************************************************/
 		org.hl7.fhir.r4.model.CodeableConcept allergyintoleranceverificationstatus = allergyintolerance.getVerificationStatus();
 
 		/******************** AlrgyIntolerance_VrfctnSts_Txt ********************************************************************************/
 		if(allergyintoleranceverificationstatus.hasText()) {
-			a.setAlrgyIntoleranceVrfctnStsTxt(String.valueOf(allergyintoleranceverificationstatus.getText()));
+
+			a.addAlrgyIntoleranceVrfctnStsTxt(String.valueOf(allergyintoleranceverificationstatus.getText()));
+		} else {
+			a.addAlrgyIntoleranceVrfctnStsTxt("NULL");
 		}
+
+
 		/******************** allergyintoleranceverificationstatuscoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding allergyintoleranceverificationstatuscoding = allergyintoleranceverificationstatus.getCodingFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.Coding> allergyintoleranceverificationstatuscodinglist = allergyintoleranceverificationstatus.getCoding();
+		for(int allergyintoleranceverificationstatuscodingi = 0; allergyintoleranceverificationstatuscodingi<allergyintoleranceverificationstatuscodinglist.size();allergyintoleranceverificationstatuscodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  allergyintoleranceverificationstatuscoding = allergyintoleranceverificationstatuscodinglist.get(allergyintoleranceverificationstatuscodingi);
+
+		/******************** AlrgyIntolerance_VrfctnSts_Cdg_Dsply ********************************************************************************/
+		if(allergyintoleranceverificationstatuscodingi == 0) {a.addAlrgyIntoleranceVrfctnStsCdgDsply("[");}
+		if(allergyintoleranceverificationstatuscoding.hasDisplay()) {
+
+			a.addAlrgyIntoleranceVrfctnStsCdgDsply(String.valueOf(allergyintoleranceverificationstatuscoding.getDisplay()));
+		} else {
+			a.addAlrgyIntoleranceVrfctnStsCdgDsply("NULL");
+		}
+
+		if(allergyintoleranceverificationstatuscodingi == allergyintoleranceverificationstatuscodinglist.size()-1) {a.addAlrgyIntoleranceVrfctnStsCdgDsply("]");}
+
 
 		/******************** AlrgyIntolerance_VrfctnSts_Cdg_Vrsn ********************************************************************************/
+		if(allergyintoleranceverificationstatuscodingi == 0) {a.addAlrgyIntoleranceVrfctnStsCdgVrsn("[");}
 		if(allergyintoleranceverificationstatuscoding.hasVersion()) {
-			a.setAlrgyIntoleranceVrfctnStsCdgVrsn(String.valueOf(allergyintoleranceverificationstatuscoding.getVersion()));
+
+			a.addAlrgyIntoleranceVrfctnStsCdgVrsn(String.valueOf(allergyintoleranceverificationstatuscoding.getVersion()));
+		} else {
+			a.addAlrgyIntoleranceVrfctnStsCdgVrsn("NULL");
 		}
-		/******************** AlrgyIntolerance_VrfctnSts_Cdg_Dsply ********************************************************************************/
-		if(allergyintoleranceverificationstatuscoding.hasDisplay()) {
-			a.setAlrgyIntoleranceVrfctnStsCdgDsply(String.valueOf(allergyintoleranceverificationstatuscoding.getDisplay()));
-		}
+
+		if(allergyintoleranceverificationstatuscodingi == allergyintoleranceverificationstatuscodinglist.size()-1) {a.addAlrgyIntoleranceVrfctnStsCdgVrsn("]");}
+
+
 		/******************** AlrgyIntolerance_VrfctnSts_Cdg_Cd ********************************************************************************/
+		if(allergyintoleranceverificationstatuscodingi == 0) {a.addAlrgyIntoleranceVrfctnStsCdgCd("[");}
 		if(allergyintoleranceverificationstatuscoding.hasCode()) {
-			a.setAlrgyIntoleranceVrfctnStsCdgCd(String.valueOf(allergyintoleranceverificationstatuscoding.getCode()));
+
+			a.addAlrgyIntoleranceVrfctnStsCdgCd(String.valueOf(allergyintoleranceverificationstatuscoding.getCode()));
+		} else {
+			a.addAlrgyIntoleranceVrfctnStsCdgCd("NULL");
 		}
+
+		if(allergyintoleranceverificationstatuscodingi == allergyintoleranceverificationstatuscodinglist.size()-1) {a.addAlrgyIntoleranceVrfctnStsCdgCd("]");}
+
+
 		/******************** AlrgyIntolerance_VrfctnSts_Cdg_UsrSltd ********************************************************************************/
+		if(allergyintoleranceverificationstatuscodingi == 0) {a.addAlrgyIntoleranceVrfctnStsCdgUsrSltd("[");}
 		if(allergyintoleranceverificationstatuscoding.hasUserSelected()) {
-			a.setAlrgyIntoleranceVrfctnStsCdgUsrSltd(String.valueOf(allergyintoleranceverificationstatuscoding.getUserSelected()));
+
+			a.addAlrgyIntoleranceVrfctnStsCdgUsrSltd(String.valueOf(allergyintoleranceverificationstatuscoding.getUserSelected()));
+		} else {
+			a.addAlrgyIntoleranceVrfctnStsCdgUsrSltd("NULL");
 		}
+
+		if(allergyintoleranceverificationstatuscodingi == allergyintoleranceverificationstatuscodinglist.size()-1) {a.addAlrgyIntoleranceVrfctnStsCdgUsrSltd("]");}
+
+
 		/******************** AlrgyIntolerance_VrfctnSts_Cdg_Sys ********************************************************************************/
+		if(allergyintoleranceverificationstatuscodingi == 0) {a.addAlrgyIntoleranceVrfctnStsCdgSys("[");}
 		if(allergyintoleranceverificationstatuscoding.hasSystem()) {
-			a.setAlrgyIntoleranceVrfctnStsCdgSys(String.valueOf(allergyintoleranceverificationstatuscoding.getSystem()));
+
+			a.addAlrgyIntoleranceVrfctnStsCdgSys(String.valueOf(allergyintoleranceverificationstatuscoding.getSystem()));
+		} else {
+			a.addAlrgyIntoleranceVrfctnStsCdgSys("NULL");
 		}
+
+		if(allergyintoleranceverificationstatuscodingi == allergyintoleranceverificationstatuscodinglist.size()-1) {a.addAlrgyIntoleranceVrfctnStsCdgSys("]");}
+
+
+		 };
 		/******************** AlrgyIntolerance_OnDtTimeTyp ********************************************************************************/
 		if(allergyintolerance.hasOnsetDateTimeType()) {
-			a.setAlrgyIntoleranceOnDtTimeTyp(String.valueOf(allergyintolerance.getOnsetDateTimeType()));
+
+			a.addAlrgyIntoleranceOnDtTimeTyp("\""+allergyintolerance.getOnsetDateTimeType().getValueAsString()+"\"");
+		} else {
+			a.addAlrgyIntoleranceOnDtTimeTyp("NULL");
 		}
+
+
 		return a;
 	}
 }

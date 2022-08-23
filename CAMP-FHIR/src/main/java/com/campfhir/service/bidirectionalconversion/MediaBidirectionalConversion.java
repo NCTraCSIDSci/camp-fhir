@@ -8,337 +8,861 @@ public class MediaBidirectionalConversion
 		 main.java.com.campfhir.model.Media m = new  main.java.com.campfhir.model.Media();
 
 		/******************** id ********************************************************************************/
-		media.setId(m.getId());
+		m.setId(media.getIdElement().getIdPart());
 
 		/******************** mediatype ********************************************************************************/
 		org.hl7.fhir.r4.model.CodeableConcept mediatype = media.getType();
 
 		/******************** Media_Typ_Txt ********************************************************************************/
 		if(mediatype.hasText()) {
-			m.setMediaTypTxt(String.valueOf(mediatype.getText()));
+
+			m.addMediaTypTxt(String.valueOf(mediatype.getText()));
+		} else {
+			m.addMediaTypTxt("NULL");
 		}
+
+
 		/******************** mediatypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding mediatypecoding = mediatype.getCodingFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.Coding> mediatypecodinglist = mediatype.getCoding();
+		for(int mediatypecodingi = 0; mediatypecodingi<mediatypecodinglist.size();mediatypecodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  mediatypecoding = mediatypecodinglist.get(mediatypecodingi);
+
+		/******************** Media_Typ_Cdg_Dsply ********************************************************************************/
+		if(mediatypecodingi == 0) {m.addMediaTypCdgDsply("[");}
+		if(mediatypecoding.hasDisplay()) {
+
+			m.addMediaTypCdgDsply(String.valueOf(mediatypecoding.getDisplay()));
+		} else {
+			m.addMediaTypCdgDsply("NULL");
+		}
+
+		if(mediatypecodingi == mediatypecodinglist.size()-1) {m.addMediaTypCdgDsply("]");}
+
 
 		/******************** Media_Typ_Cdg_Vrsn ********************************************************************************/
+		if(mediatypecodingi == 0) {m.addMediaTypCdgVrsn("[");}
 		if(mediatypecoding.hasVersion()) {
-			m.setMediaTypCdgVrsn(String.valueOf(mediatypecoding.getVersion()));
+
+			m.addMediaTypCdgVrsn(String.valueOf(mediatypecoding.getVersion()));
+		} else {
+			m.addMediaTypCdgVrsn("NULL");
 		}
-		/******************** Media_Typ_Cdg_Dsply ********************************************************************************/
-		if(mediatypecoding.hasDisplay()) {
-			m.setMediaTypCdgDsply(String.valueOf(mediatypecoding.getDisplay()));
-		}
+
+		if(mediatypecodingi == mediatypecodinglist.size()-1) {m.addMediaTypCdgVrsn("]");}
+
+
 		/******************** Media_Typ_Cdg_Cd ********************************************************************************/
+		if(mediatypecodingi == 0) {m.addMediaTypCdgCd("[");}
 		if(mediatypecoding.hasCode()) {
-			m.setMediaTypCdgCd(String.valueOf(mediatypecoding.getCode()));
+
+			m.addMediaTypCdgCd(String.valueOf(mediatypecoding.getCode()));
+		} else {
+			m.addMediaTypCdgCd("NULL");
 		}
+
+		if(mediatypecodingi == mediatypecodinglist.size()-1) {m.addMediaTypCdgCd("]");}
+
+
 		/******************** Media_Typ_Cdg_UsrSltd ********************************************************************************/
+		if(mediatypecodingi == 0) {m.addMediaTypCdgUsrSltd("[");}
 		if(mediatypecoding.hasUserSelected()) {
-			m.setMediaTypCdgUsrSltd(String.valueOf(mediatypecoding.getUserSelected()));
+
+			m.addMediaTypCdgUsrSltd(String.valueOf(mediatypecoding.getUserSelected()));
+		} else {
+			m.addMediaTypCdgUsrSltd("NULL");
 		}
+
+		if(mediatypecodingi == mediatypecodinglist.size()-1) {m.addMediaTypCdgUsrSltd("]");}
+
+
 		/******************** Media_Typ_Cdg_Sys ********************************************************************************/
+		if(mediatypecodingi == 0) {m.addMediaTypCdgSys("[");}
 		if(mediatypecoding.hasSystem()) {
-			m.setMediaTypCdgSys(String.valueOf(mediatypecoding.getSystem()));
+
+			m.addMediaTypCdgSys(String.valueOf(mediatypecoding.getSystem()));
+		} else {
+			m.addMediaTypCdgSys("NULL");
 		}
+
+		if(mediatypecodingi == mediatypecodinglist.size()-1) {m.addMediaTypCdgSys("]");}
+
+
+		 };
 		/******************** mediacontent ********************************************************************************/
 		org.hl7.fhir.r4.model.Attachment mediacontent = media.getContent();
 
 		/******************** Media_Cntnt_Sz ********************************************************************************/
 		if(mediacontent.hasSize()) {
-			m.setMediaCntntSz(String.valueOf(mediacontent.getSize()));
+
+			m.addMediaCntntSz(String.valueOf(mediacontent.getSize()));
+		} else {
+			m.addMediaCntntSz("NULL");
 		}
+
+
 		/******************** Media_Cntnt_Lnguage ********************************************************************************/
 		if(mediacontent.hasLanguage()) {
-			m.setMediaCntntLnguage(String.valueOf(mediacontent.getLanguage()));
+
+			m.addMediaCntntLnguage(String.valueOf(mediacontent.getLanguage()));
+		} else {
+			m.addMediaCntntLnguage("NULL");
 		}
-		/******************** Media_Cntnt_Ttl ********************************************************************************/
-		if(mediacontent.hasTitle()) {
-			m.setMediaCntntTtl(String.valueOf(mediacontent.getTitle()));
-		}
-		/******************** Media_Cntnt_Url ********************************************************************************/
-		if(mediacontent.hasUrl()) {
-			m.setMediaCntntUrl(String.valueOf(mediacontent.getUrl()));
-		}
-		/******************** Media_Cntnt_Data ********************************************************************************/
-		if(mediacontent.hasData()) {
-			m.setMediaCntntData(String.valueOf(mediacontent.getData()));
-		}
+
 
 		/******************** Media_Cntnt_Hash ********************************************************************************/
 		if(mediacontent.hasHash()) {
-			m.setMediaCntntHash(String.valueOf(mediacontent.getHash()));
+
+			m.addMediaCntntHash(new String(mediacontent.getHash()));
+		} else {
+			m.addMediaCntntHash("NULL");
 		}
+
+
+		/******************** Media_Cntnt_Data ********************************************************************************/
+		if(mediacontent.hasData()) {
+
+			m.addMediaCntntData(new String(mediacontent.getData()));
+		} else {
+			m.addMediaCntntData("NULL");
+		}
+
 
 		/******************** Media_Cntnt_Creation ********************************************************************************/
 		if(mediacontent.hasCreation()) {
-			m.setMediaCntntCreation(String.valueOf(mediacontent.getCreation()));
+
+			m.addMediaCntntCreation("\""+ca.uhn.fhir.util.DateUtils.formatDate(mediacontent.getCreation())+"\"");
+		} else {
+			m.addMediaCntntCreation("NULL");
 		}
-		/******************** Media_PartOf ********************************************************************************/
-		if(media.hasPartOf()) {
-			m.setMediaPartOf(String.valueOf(media.getPartOfFirstRep()));
+
+
+		/******************** Media_Cntnt_Ttl ********************************************************************************/
+		if(mediacontent.hasTitle()) {
+
+			m.addMediaCntntTtl(String.valueOf(mediacontent.getTitle()));
+		} else {
+			m.addMediaCntntTtl("NULL");
 		}
-		/******************** Media_Issued ********************************************************************************/
-		if(media.hasIssued()) {
-			m.setMediaIssued(String.valueOf(media.getIssued()));
+
+
+		/******************** Media_Cntnt_Url ********************************************************************************/
+		if(mediacontent.hasUrl()) {
+
+			m.addMediaCntntUrl(String.valueOf(mediacontent.getUrl()));
+		} else {
+			m.addMediaCntntUrl("NULL");
 		}
-		/******************** Media_DvcNm ********************************************************************************/
-		if(media.hasDeviceName()) {
-			m.setMediaDvcNm(String.valueOf(media.getDeviceName()));
-		}
+
+
 		/******************** mediamodality ********************************************************************************/
 		org.hl7.fhir.r4.model.CodeableConcept mediamodality = media.getModality();
 
 		/******************** Media_Modality_Txt ********************************************************************************/
 		if(mediamodality.hasText()) {
-			m.setMediaModalityTxt(String.valueOf(mediamodality.getText()));
+
+			m.addMediaModalityTxt(String.valueOf(mediamodality.getText()));
+		} else {
+			m.addMediaModalityTxt("NULL");
 		}
+
+
 		/******************** mediamodalitycoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding mediamodalitycoding = mediamodality.getCodingFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.Coding> mediamodalitycodinglist = mediamodality.getCoding();
+		for(int mediamodalitycodingi = 0; mediamodalitycodingi<mediamodalitycodinglist.size();mediamodalitycodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  mediamodalitycoding = mediamodalitycodinglist.get(mediamodalitycodingi);
+
+		/******************** Media_Modality_Cdg_Dsply ********************************************************************************/
+		if(mediamodalitycodingi == 0) {m.addMediaModalityCdgDsply("[");}
+		if(mediamodalitycoding.hasDisplay()) {
+
+			m.addMediaModalityCdgDsply(String.valueOf(mediamodalitycoding.getDisplay()));
+		} else {
+			m.addMediaModalityCdgDsply("NULL");
+		}
+
+		if(mediamodalitycodingi == mediamodalitycodinglist.size()-1) {m.addMediaModalityCdgDsply("]");}
+
 
 		/******************** Media_Modality_Cdg_Vrsn ********************************************************************************/
+		if(mediamodalitycodingi == 0) {m.addMediaModalityCdgVrsn("[");}
 		if(mediamodalitycoding.hasVersion()) {
-			m.setMediaModalityCdgVrsn(String.valueOf(mediamodalitycoding.getVersion()));
+
+			m.addMediaModalityCdgVrsn(String.valueOf(mediamodalitycoding.getVersion()));
+		} else {
+			m.addMediaModalityCdgVrsn("NULL");
 		}
-		/******************** Media_Modality_Cdg_Dsply ********************************************************************************/
-		if(mediamodalitycoding.hasDisplay()) {
-			m.setMediaModalityCdgDsply(String.valueOf(mediamodalitycoding.getDisplay()));
-		}
+
+		if(mediamodalitycodingi == mediamodalitycodinglist.size()-1) {m.addMediaModalityCdgVrsn("]");}
+
+
 		/******************** Media_Modality_Cdg_Cd ********************************************************************************/
+		if(mediamodalitycodingi == 0) {m.addMediaModalityCdgCd("[");}
 		if(mediamodalitycoding.hasCode()) {
-			m.setMediaModalityCdgCd(String.valueOf(mediamodalitycoding.getCode()));
+
+			m.addMediaModalityCdgCd(String.valueOf(mediamodalitycoding.getCode()));
+		} else {
+			m.addMediaModalityCdgCd("NULL");
 		}
+
+		if(mediamodalitycodingi == mediamodalitycodinglist.size()-1) {m.addMediaModalityCdgCd("]");}
+
+
 		/******************** Media_Modality_Cdg_UsrSltd ********************************************************************************/
+		if(mediamodalitycodingi == 0) {m.addMediaModalityCdgUsrSltd("[");}
 		if(mediamodalitycoding.hasUserSelected()) {
-			m.setMediaModalityCdgUsrSltd(String.valueOf(mediamodalitycoding.getUserSelected()));
+
+			m.addMediaModalityCdgUsrSltd(String.valueOf(mediamodalitycoding.getUserSelected()));
+		} else {
+			m.addMediaModalityCdgUsrSltd("NULL");
 		}
+
+		if(mediamodalitycodingi == mediamodalitycodinglist.size()-1) {m.addMediaModalityCdgUsrSltd("]");}
+
+
 		/******************** Media_Modality_Cdg_Sys ********************************************************************************/
+		if(mediamodalitycodingi == 0) {m.addMediaModalityCdgSys("[");}
 		if(mediamodalitycoding.hasSystem()) {
-			m.setMediaModalityCdgSys(String.valueOf(mediamodalitycoding.getSystem()));
+
+			m.addMediaModalityCdgSys(String.valueOf(mediamodalitycoding.getSystem()));
+		} else {
+			m.addMediaModalityCdgSys("NULL");
 		}
-		/******************** Media_Enc ********************************************************************************/
-		if(media.hasEncounter()) {
-			m.setMediaEnc(String.valueOf(media.getEncounter()));
-		}
+
+		if(mediamodalitycodingi == mediamodalitycodinglist.size()-1) {m.addMediaModalityCdgSys("]");}
+
+
+		 };
 		/******************** Media_Sbjct ********************************************************************************/
 		if(media.hasSubject()) {
-			m.setMediaSbjct(String.valueOf(media.getSubject()));
+
+			if(media.getSubject().getReference() != null) {
+			m.addMediaSbjct(media.getSubject().getReference());
+			}
+		} else {
+			m.addMediaSbjct("NULL");
 		}
+
+
 		/******************** mediastatus ********************************************************************************/
 		org.hl7.fhir.r4.model.Media.MediaStatus mediastatus = media.getStatus();
-		m.setMediaSts(mediastatus.toCode());
+		if(mediastatus!=null) {
+			m.addMediaSts(mediastatus.toCode());
+		} else {
+			m.addMediaSts("NULL");
+		}
+
+		/******************** Media_Enc ********************************************************************************/
+		if(media.hasEncounter()) {
+
+			if(media.getEncounter().getReference() != null) {
+			m.addMediaEnc(media.getEncounter().getReference());
+			}
+		} else {
+			m.addMediaEnc("NULL");
+		}
+
 
 		/******************** Media_BasedOn ********************************************************************************/
 		if(media.hasBasedOn()) {
-			m.setMediaBasedOn(String.valueOf(media.getBasedOnFirstRep()));
+
+			String  array = "[";
+			for(int incr=0; incr<media.getBasedOn().size(); incr++) {
+				array = array + media.getBasedOn().get(incr).getReference() + ",";
+			}
+			array = array.substring(0, array.length() -1);
+			array = array + "]";
+			m.addMediaBasedOn(array);
+
+		} else {
+			m.addMediaBasedOn("NULL");
 		}
+
+
+		/******************** mediareasoncode ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.CodeableConcept> mediareasoncodelist = media.getReasonCode();
+		for(int mediareasoncodei = 0; mediareasoncodei<mediareasoncodelist.size();mediareasoncodei++ ) {
+		org.hl7.fhir.r4.model.CodeableConcept  mediareasoncode = mediareasoncodelist.get(mediareasoncodei);
+
+		/******************** Media_RsnCd_Txt ********************************************************************************/
+		if(mediareasoncodei == 0) {m.addMediaRsnCdTxt("[");}
+		if(mediareasoncode.hasText()) {
+
+			m.addMediaRsnCdTxt(String.valueOf(mediareasoncode.getText()));
+		} else {
+			m.addMediaRsnCdTxt("NULL");
+		}
+
+		if(mediareasoncodei == mediareasoncodelist.size()-1) {m.addMediaRsnCdTxt("]");}
+
+
+		/******************** mediareasoncodecoding ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.Coding> mediareasoncodecodinglist = mediareasoncode.getCoding();
+		for(int mediareasoncodecodingi = 0; mediareasoncodecodingi<mediareasoncodecodinglist.size();mediareasoncodecodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  mediareasoncodecoding = mediareasoncodecodinglist.get(mediareasoncodecodingi);
+
+		/******************** Media_RsnCd_Cdg_Dsply ********************************************************************************/
+		if(mediareasoncodecodingi == 0) {m.addMediaRsnCdCdgDsply("[[");}
+		if(mediareasoncodecoding.hasDisplay()) {
+
+			m.addMediaRsnCdCdgDsply(String.valueOf(mediareasoncodecoding.getDisplay()));
+		} else {
+			m.addMediaRsnCdCdgDsply("NULL");
+		}
+
+		if(mediareasoncodecodingi == mediareasoncodecodinglist.size()-1) {m.addMediaRsnCdCdgDsply("]]");}
+
+
+		/******************** Media_RsnCd_Cdg_Vrsn ********************************************************************************/
+		if(mediareasoncodecodingi == 0) {m.addMediaRsnCdCdgVrsn("[[");}
+		if(mediareasoncodecoding.hasVersion()) {
+
+			m.addMediaRsnCdCdgVrsn(String.valueOf(mediareasoncodecoding.getVersion()));
+		} else {
+			m.addMediaRsnCdCdgVrsn("NULL");
+		}
+
+		if(mediareasoncodecodingi == mediareasoncodecodinglist.size()-1) {m.addMediaRsnCdCdgVrsn("]]");}
+
+
+		/******************** Media_RsnCd_Cdg_Cd ********************************************************************************/
+		if(mediareasoncodecodingi == 0) {m.addMediaRsnCdCdgCd("[[");}
+		if(mediareasoncodecoding.hasCode()) {
+
+			m.addMediaRsnCdCdgCd(String.valueOf(mediareasoncodecoding.getCode()));
+		} else {
+			m.addMediaRsnCdCdgCd("NULL");
+		}
+
+		if(mediareasoncodecodingi == mediareasoncodecodinglist.size()-1) {m.addMediaRsnCdCdgCd("]]");}
+
+
+		/******************** Media_RsnCd_Cdg_UsrSltd ********************************************************************************/
+		if(mediareasoncodecodingi == 0) {m.addMediaRsnCdCdgUsrSltd("[[");}
+		if(mediareasoncodecoding.hasUserSelected()) {
+
+			m.addMediaRsnCdCdgUsrSltd(String.valueOf(mediareasoncodecoding.getUserSelected()));
+		} else {
+			m.addMediaRsnCdCdgUsrSltd("NULL");
+		}
+
+		if(mediareasoncodecodingi == mediareasoncodecodinglist.size()-1) {m.addMediaRsnCdCdgUsrSltd("]]");}
+
+
+		/******************** Media_RsnCd_Cdg_Sys ********************************************************************************/
+		if(mediareasoncodecodingi == 0) {m.addMediaRsnCdCdgSys("[[");}
+		if(mediareasoncodecoding.hasSystem()) {
+
+			m.addMediaRsnCdCdgSys(String.valueOf(mediareasoncodecoding.getSystem()));
+		} else {
+			m.addMediaRsnCdCdgSys("NULL");
+		}
+
+		if(mediareasoncodecodingi == mediareasoncodecodinglist.size()-1) {m.addMediaRsnCdCdgSys("]]");}
+
+
+		 };
+		 };
 		/******************** medianote ********************************************************************************/
-		org.hl7.fhir.r4.model.Annotation medianote = media.getNoteFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.Annotation> medianotelist = media.getNote();
+		for(int medianotei = 0; medianotei<medianotelist.size();medianotei++ ) {
+		org.hl7.fhir.r4.model.Annotation  medianote = medianotelist.get(medianotei);
 
 		/******************** Media_Nt_Time ********************************************************************************/
+		if(medianotei == 0) {m.addMediaNtTime("[");}
 		if(medianote.hasTime()) {
-			m.setMediaNtTime(String.valueOf(medianote.getTime()));
+
+			m.addMediaNtTime("\""+ca.uhn.fhir.util.DateUtils.formatDate(medianote.getTime())+"\"");
+		} else {
+			m.addMediaNtTime("NULL");
 		}
-		/******************** Media_Nt_Txt ********************************************************************************/
-		if(medianote.hasText()) {
-			m.setMediaNtTxt(String.valueOf(medianote.getText()));
-		}
+
+		if(medianotei == medianotelist.size()-1) {m.addMediaNtTime("]");}
+
+
 		/******************** Media_Nt_AthrRfrnc ********************************************************************************/
+		if(medianotei == 0) {m.addMediaNtAthrRfrnc("[");}
 		if(medianote.hasAuthorReference()) {
-			m.setMediaNtAthrRfrnc(String.valueOf(medianote.getAuthorReference()));
+
+			if(medianote.getAuthorReference().getReference() != null) {
+			m.addMediaNtAthrRfrnc(medianote.getAuthorReference().getReference());
+			}
+		} else {
+			m.addMediaNtAthrRfrnc("NULL");
 		}
+
+		if(medianotei == medianotelist.size()-1) {m.addMediaNtAthrRfrnc("]");}
+
+
+		/******************** Media_Nt_Txt ********************************************************************************/
+		if(medianotei == 0) {m.addMediaNtTxt("[");}
+		if(medianote.hasText()) {
+
+			m.addMediaNtTxt(String.valueOf(medianote.getText()));
+		} else {
+			m.addMediaNtTxt("NULL");
+		}
+
+		if(medianotei == medianotelist.size()-1) {m.addMediaNtTxt("]");}
+
+
 		/******************** Media_Nt_AthrStrgTyp ********************************************************************************/
+		if(medianotei == 0) {m.addMediaNtAthrStrgTyp("[");}
 		if(medianote.hasAuthorStringType()) {
-			m.setMediaNtAthrStrgTyp(String.valueOf(medianote.getAuthorStringType()));
-		}
-		/******************** Media_Duration ********************************************************************************/
-		if(media.hasDuration()) {
-			m.setMediaDuration(String.valueOf(media.getDuration()));
-		}
-		/******************** Media_CreatedDtTimeTyp ********************************************************************************/
-		if(media.hasCreatedDateTimeType()) {
-			m.setMediaCreatedDtTimeTyp(String.valueOf(media.getCreatedDateTimeType()));
-		}
-		/******************** Media_Operator ********************************************************************************/
-		if(media.hasOperator()) {
-			m.setMediaOperator(String.valueOf(media.getOperator()));
-		}
-		/******************** mediacreatedperiod ********************************************************************************/
-		org.hl7.fhir.r4.model.Period mediacreatedperiod = media.getCreatedPeriod();
 
-		/******************** Media_CreatedPrd_Strt ********************************************************************************/
-		if(mediacreatedperiod.hasStart()) {
-			m.setMediaCreatedPrdStrt(String.valueOf(mediacreatedperiod.getStart()));
+			m.addMediaNtAthrStrgTyp("\""+medianote.getAuthorStringType().getValueAsString()+"\"");
+		} else {
+			m.addMediaNtAthrStrgTyp("NULL");
 		}
-		/******************** Media_CreatedPrd_End ********************************************************************************/
-		if(mediacreatedperiod.hasEnd()) {
-			m.setMediaCreatedPrdEnd(String.valueOf(mediacreatedperiod.getEnd()));
-		}
-		/******************** Media_Height ********************************************************************************/
-		if(media.hasHeight()) {
-			m.setMediaHeight(String.valueOf(media.getHeight()));
-		}
-		/******************** mediaview ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept mediaview = media.getView();
 
-		/******************** Media_View_Txt ********************************************************************************/
-		if(mediaview.hasText()) {
-			m.setMediaViewTxt(String.valueOf(mediaview.getText()));
-		}
-		/******************** mediaviewcoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding mediaviewcoding = mediaview.getCodingFirstRep();
+		if(medianotei == medianotelist.size()-1) {m.addMediaNtAthrStrgTyp("]");}
 
-		/******************** Media_View_Cdg_Vrsn ********************************************************************************/
-		if(mediaviewcoding.hasVersion()) {
-			m.setMediaViewCdgVrsn(String.valueOf(mediaviewcoding.getVersion()));
+
+		 };
+		/******************** mediaidentifier ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.Identifier> mediaidentifierlist = media.getIdentifier();
+		for(int mediaidentifieri = 0; mediaidentifieri<mediaidentifierlist.size();mediaidentifieri++ ) {
+		org.hl7.fhir.r4.model.Identifier  mediaidentifier = mediaidentifierlist.get(mediaidentifieri);
+
+		/******************** Media_Id_Vl ********************************************************************************/
+		if(mediaidentifieri == 0) {m.addMediaIdVl("[");}
+		if(mediaidentifier.hasValue()) {
+
+			m.addMediaIdVl(String.valueOf(mediaidentifier.getValue()));
+		} else {
+			m.addMediaIdVl("NULL");
 		}
-		/******************** Media_View_Cdg_Dsply ********************************************************************************/
-		if(mediaviewcoding.hasDisplay()) {
-			m.setMediaViewCdgDsply(String.valueOf(mediaviewcoding.getDisplay()));
+
+		if(mediaidentifieri == mediaidentifierlist.size()-1) {m.addMediaIdVl("]");}
+
+
+		/******************** mediaidentifiertype ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept mediaidentifiertype = mediaidentifier.getType();
+
+		/******************** Media_Id_Typ_Txt ********************************************************************************/
+		if(mediaidentifieri == 0) {m.addMediaIdTypTxt("[");}
+		if(mediaidentifiertype.hasText()) {
+
+			m.addMediaIdTypTxt(String.valueOf(mediaidentifiertype.getText()));
+		} else {
+			m.addMediaIdTypTxt("NULL");
 		}
-		/******************** Media_View_Cdg_Cd ********************************************************************************/
-		if(mediaviewcoding.hasCode()) {
-			m.setMediaViewCdgCd(String.valueOf(mediaviewcoding.getCode()));
+
+		if(mediaidentifieri == mediaidentifierlist.size()-1) {m.addMediaIdTypTxt("]");}
+
+
+		/******************** mediaidentifiertypecoding ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.Coding> mediaidentifiertypecodinglist = mediaidentifiertype.getCoding();
+		for(int mediaidentifiertypecodingi = 0; mediaidentifiertypecodingi<mediaidentifiertypecodinglist.size();mediaidentifiertypecodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  mediaidentifiertypecoding = mediaidentifiertypecodinglist.get(mediaidentifiertypecodingi);
+
+		/******************** Media_Id_Typ_Cdg_Dsply ********************************************************************************/
+		if(mediaidentifiertypecodingi == 0) {m.addMediaIdTypCdgDsply("[[");}
+		if(mediaidentifiertypecoding.hasDisplay()) {
+
+			m.addMediaIdTypCdgDsply(String.valueOf(mediaidentifiertypecoding.getDisplay()));
+		} else {
+			m.addMediaIdTypCdgDsply("NULL");
 		}
-		/******************** Media_View_Cdg_UsrSltd ********************************************************************************/
-		if(mediaviewcoding.hasUserSelected()) {
-			m.setMediaViewCdgUsrSltd(String.valueOf(mediaviewcoding.getUserSelected()));
+
+		if(mediaidentifiertypecodingi == mediaidentifiertypecodinglist.size()-1) {m.addMediaIdTypCdgDsply("]]");}
+
+
+		/******************** Media_Id_Typ_Cdg_Vrsn ********************************************************************************/
+		if(mediaidentifiertypecodingi == 0) {m.addMediaIdTypCdgVrsn("[[");}
+		if(mediaidentifiertypecoding.hasVersion()) {
+
+			m.addMediaIdTypCdgVrsn(String.valueOf(mediaidentifiertypecoding.getVersion()));
+		} else {
+			m.addMediaIdTypCdgVrsn("NULL");
 		}
-		/******************** Media_View_Cdg_Sys ********************************************************************************/
-		if(mediaviewcoding.hasSystem()) {
-			m.setMediaViewCdgSys(String.valueOf(mediaviewcoding.getSystem()));
+
+		if(mediaidentifiertypecodingi == mediaidentifiertypecodinglist.size()-1) {m.addMediaIdTypCdgVrsn("]]");}
+
+
+		/******************** Media_Id_Typ_Cdg_Cd ********************************************************************************/
+		if(mediaidentifiertypecodingi == 0) {m.addMediaIdTypCdgCd("[[");}
+		if(mediaidentifiertypecoding.hasCode()) {
+
+			m.addMediaIdTypCdgCd(String.valueOf(mediaidentifiertypecoding.getCode()));
+		} else {
+			m.addMediaIdTypCdgCd("NULL");
 		}
-		/******************** Media_Width ********************************************************************************/
-		if(media.hasWidth()) {
-			m.setMediaWidth(String.valueOf(media.getWidth()));
+
+		if(mediaidentifiertypecodingi == mediaidentifiertypecodinglist.size()-1) {m.addMediaIdTypCdgCd("]]");}
+
+
+		/******************** Media_Id_Typ_Cdg_UsrSltd ********************************************************************************/
+		if(mediaidentifiertypecodingi == 0) {m.addMediaIdTypCdgUsrSltd("[[");}
+		if(mediaidentifiertypecoding.hasUserSelected()) {
+
+			m.addMediaIdTypCdgUsrSltd(String.valueOf(mediaidentifiertypecoding.getUserSelected()));
+		} else {
+			m.addMediaIdTypCdgUsrSltd("NULL");
 		}
-		/******************** Media_Frames ********************************************************************************/
-		if(media.hasFrames()) {
-			m.setMediaFrames(String.valueOf(media.getFrames()));
+
+		if(mediaidentifiertypecodingi == mediaidentifiertypecodinglist.size()-1) {m.addMediaIdTypCdgUsrSltd("]]");}
+
+
+		/******************** Media_Id_Typ_Cdg_Sys ********************************************************************************/
+		if(mediaidentifiertypecodingi == 0) {m.addMediaIdTypCdgSys("[[");}
+		if(mediaidentifiertypecoding.hasSystem()) {
+
+			m.addMediaIdTypCdgSys(String.valueOf(mediaidentifiertypecoding.getSystem()));
+		} else {
+			m.addMediaIdTypCdgSys("NULL");
 		}
+
+		if(mediaidentifiertypecodingi == mediaidentifiertypecodinglist.size()-1) {m.addMediaIdTypCdgSys("]]");}
+
+
+		 };
+		/******************** mediaidentifierperiod ********************************************************************************/
+		org.hl7.fhir.r4.model.Period mediaidentifierperiod = mediaidentifier.getPeriod();
+
+		/******************** Media_Id_Prd_Strt ********************************************************************************/
+		if(mediaidentifieri == 0) {m.addMediaIdPrdStrt("[");}
+		if(mediaidentifierperiod.hasStart()) {
+
+			m.addMediaIdPrdStrt("\""+ca.uhn.fhir.util.DateUtils.formatDate(mediaidentifierperiod.getStart())+"\"");
+		} else {
+			m.addMediaIdPrdStrt("NULL");
+		}
+
+		if(mediaidentifieri == mediaidentifierlist.size()-1) {m.addMediaIdPrdStrt("]");}
+
+
+		/******************** Media_Id_Prd_End ********************************************************************************/
+		if(mediaidentifieri == 0) {m.addMediaIdPrdEnd("[");}
+		if(mediaidentifierperiod.hasEnd()) {
+
+			m.addMediaIdPrdEnd("\""+ca.uhn.fhir.util.DateUtils.formatDate(mediaidentifierperiod.getEnd())+"\"");
+		} else {
+			m.addMediaIdPrdEnd("NULL");
+		}
+
+		if(mediaidentifieri == mediaidentifierlist.size()-1) {m.addMediaIdPrdEnd("]");}
+
+
+		/******************** mediaidentifieruse ********************************************************************************/
+		org.hl7.fhir.r4.model.Identifier.IdentifierUse mediaidentifieruse = mediaidentifier.getUse();
+		if(mediaidentifieruse!=null) {
+		if(mediaidentifieri == 0) {
+
+		m.addMediaIdUse("[");		}
+			m.addMediaIdUse(mediaidentifieruse.toCode());
+		if(mediaidentifieri == mediaidentifierlist.size()-1) {
+
+		m.addMediaIdUse("]");		}
+
+		} else {
+			m.addMediaIdUse("NULL");
+		}
+
+		/******************** Media_Id_Assigner ********************************************************************************/
+		if(mediaidentifieri == 0) {m.addMediaIdAssigner("[");}
+		if(mediaidentifier.hasAssigner()) {
+
+			if(mediaidentifier.getAssigner().getReference() != null) {
+			m.addMediaIdAssigner(mediaidentifier.getAssigner().getReference());
+			}
+		} else {
+			m.addMediaIdAssigner("NULL");
+		}
+
+		if(mediaidentifieri == mediaidentifierlist.size()-1) {m.addMediaIdAssigner("]");}
+
+
+		/******************** Media_Id_Sys ********************************************************************************/
+		if(mediaidentifieri == 0) {m.addMediaIdSys("[");}
+		if(mediaidentifier.hasSystem()) {
+
+			m.addMediaIdSys(String.valueOf(mediaidentifier.getSystem()));
+		} else {
+			m.addMediaIdSys("NULL");
+		}
+
+		if(mediaidentifieri == mediaidentifierlist.size()-1) {m.addMediaIdSys("]");}
+
+
+		 };
 		/******************** mediabodysite ********************************************************************************/
 		org.hl7.fhir.r4.model.CodeableConcept mediabodysite = media.getBodySite();
 
 		/******************** Media_BodySite_Txt ********************************************************************************/
 		if(mediabodysite.hasText()) {
-			m.setMediaBodySiteTxt(String.valueOf(mediabodysite.getText()));
+
+			m.addMediaBodySiteTxt(String.valueOf(mediabodysite.getText()));
+		} else {
+			m.addMediaBodySiteTxt("NULL");
 		}
+
+
 		/******************** mediabodysitecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding mediabodysitecoding = mediabodysite.getCodingFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.Coding> mediabodysitecodinglist = mediabodysite.getCoding();
+		for(int mediabodysitecodingi = 0; mediabodysitecodingi<mediabodysitecodinglist.size();mediabodysitecodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  mediabodysitecoding = mediabodysitecodinglist.get(mediabodysitecodingi);
+
+		/******************** Media_BodySite_Cdg_Dsply ********************************************************************************/
+		if(mediabodysitecodingi == 0) {m.addMediaBodySiteCdgDsply("[");}
+		if(mediabodysitecoding.hasDisplay()) {
+
+			m.addMediaBodySiteCdgDsply(String.valueOf(mediabodysitecoding.getDisplay()));
+		} else {
+			m.addMediaBodySiteCdgDsply("NULL");
+		}
+
+		if(mediabodysitecodingi == mediabodysitecodinglist.size()-1) {m.addMediaBodySiteCdgDsply("]");}
+
 
 		/******************** Media_BodySite_Cdg_Vrsn ********************************************************************************/
+		if(mediabodysitecodingi == 0) {m.addMediaBodySiteCdgVrsn("[");}
 		if(mediabodysitecoding.hasVersion()) {
-			m.setMediaBodySiteCdgVrsn(String.valueOf(mediabodysitecoding.getVersion()));
+
+			m.addMediaBodySiteCdgVrsn(String.valueOf(mediabodysitecoding.getVersion()));
+		} else {
+			m.addMediaBodySiteCdgVrsn("NULL");
 		}
-		/******************** Media_BodySite_Cdg_Dsply ********************************************************************************/
-		if(mediabodysitecoding.hasDisplay()) {
-			m.setMediaBodySiteCdgDsply(String.valueOf(mediabodysitecoding.getDisplay()));
-		}
+
+		if(mediabodysitecodingi == mediabodysitecodinglist.size()-1) {m.addMediaBodySiteCdgVrsn("]");}
+
+
 		/******************** Media_BodySite_Cdg_Cd ********************************************************************************/
+		if(mediabodysitecodingi == 0) {m.addMediaBodySiteCdgCd("[");}
 		if(mediabodysitecoding.hasCode()) {
-			m.setMediaBodySiteCdgCd(String.valueOf(mediabodysitecoding.getCode()));
+
+			m.addMediaBodySiteCdgCd(String.valueOf(mediabodysitecoding.getCode()));
+		} else {
+			m.addMediaBodySiteCdgCd("NULL");
 		}
+
+		if(mediabodysitecodingi == mediabodysitecodinglist.size()-1) {m.addMediaBodySiteCdgCd("]");}
+
+
 		/******************** Media_BodySite_Cdg_UsrSltd ********************************************************************************/
+		if(mediabodysitecodingi == 0) {m.addMediaBodySiteCdgUsrSltd("[");}
 		if(mediabodysitecoding.hasUserSelected()) {
-			m.setMediaBodySiteCdgUsrSltd(String.valueOf(mediabodysitecoding.getUserSelected()));
+
+			m.addMediaBodySiteCdgUsrSltd(String.valueOf(mediabodysitecoding.getUserSelected()));
+		} else {
+			m.addMediaBodySiteCdgUsrSltd("NULL");
 		}
+
+		if(mediabodysitecodingi == mediabodysitecodinglist.size()-1) {m.addMediaBodySiteCdgUsrSltd("]");}
+
+
 		/******************** Media_BodySite_Cdg_Sys ********************************************************************************/
+		if(mediabodysitecodingi == 0) {m.addMediaBodySiteCdgSys("[");}
 		if(mediabodysitecoding.hasSystem()) {
-			m.setMediaBodySiteCdgSys(String.valueOf(mediabodysitecoding.getSystem()));
-		}
-		/******************** mediaidentifier ********************************************************************************/
-		org.hl7.fhir.r4.model.Identifier mediaidentifier = media.getIdentifierFirstRep();
 
-		/******************** Media_Id_Vl ********************************************************************************/
-		if(mediaidentifier.hasValue()) {
-			m.setMediaIdVl(String.valueOf(mediaidentifier.getValue()));
+			m.addMediaBodySiteCdgSys(String.valueOf(mediabodysitecoding.getSystem()));
+		} else {
+			m.addMediaBodySiteCdgSys("NULL");
 		}
-		/******************** mediaidentifiertype ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept mediaidentifiertype = mediaidentifier.getType();
 
-		/******************** Media_Id_Typ_Txt ********************************************************************************/
-		if(mediaidentifiertype.hasText()) {
-			m.setMediaIdTypTxt(String.valueOf(mediaidentifiertype.getText()));
-		}
-		/******************** mediaidentifiertypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding mediaidentifiertypecoding = mediaidentifiertype.getCodingFirstRep();
+		if(mediabodysitecodingi == mediabodysitecodinglist.size()-1) {m.addMediaBodySiteCdgSys("]");}
 
-		/******************** Media_Id_Typ_Cdg_Vrsn ********************************************************************************/
-		if(mediaidentifiertypecoding.hasVersion()) {
-			m.setMediaIdTypCdgVrsn(String.valueOf(mediaidentifiertypecoding.getVersion()));
-		}
-		/******************** Media_Id_Typ_Cdg_Dsply ********************************************************************************/
-		if(mediaidentifiertypecoding.hasDisplay()) {
-			m.setMediaIdTypCdgDsply(String.valueOf(mediaidentifiertypecoding.getDisplay()));
-		}
-		/******************** Media_Id_Typ_Cdg_Cd ********************************************************************************/
-		if(mediaidentifiertypecoding.hasCode()) {
-			m.setMediaIdTypCdgCd(String.valueOf(mediaidentifiertypecoding.getCode()));
-		}
-		/******************** Media_Id_Typ_Cdg_UsrSltd ********************************************************************************/
-		if(mediaidentifiertypecoding.hasUserSelected()) {
-			m.setMediaIdTypCdgUsrSltd(String.valueOf(mediaidentifiertypecoding.getUserSelected()));
-		}
-		/******************** Media_Id_Typ_Cdg_Sys ********************************************************************************/
-		if(mediaidentifiertypecoding.hasSystem()) {
-			m.setMediaIdTypCdgSys(String.valueOf(mediaidentifiertypecoding.getSystem()));
-		}
-		/******************** mediaidentifierperiod ********************************************************************************/
-		org.hl7.fhir.r4.model.Period mediaidentifierperiod = mediaidentifier.getPeriod();
 
-		/******************** Media_Id_Prd_Strt ********************************************************************************/
-		if(mediaidentifierperiod.hasStart()) {
-			m.setMediaIdPrdStrt(String.valueOf(mediaidentifierperiod.getStart()));
-		}
-		/******************** Media_Id_Prd_End ********************************************************************************/
-		if(mediaidentifierperiod.hasEnd()) {
-			m.setMediaIdPrdEnd(String.valueOf(mediaidentifierperiod.getEnd()));
-		}
-		/******************** Media_Id_Assigner ********************************************************************************/
-		if(mediaidentifier.hasAssigner()) {
-			m.setMediaIdAssigner(String.valueOf(mediaidentifier.getAssigner()));
-		}
-		/******************** Media_Id_Sys ********************************************************************************/
-		if(mediaidentifier.hasSystem()) {
-			m.setMediaIdSys(String.valueOf(mediaidentifier.getSystem()));
-		}
-		/******************** mediaidentifieruse ********************************************************************************/
-		org.hl7.fhir.r4.model.Identifier.IdentifierUse mediaidentifieruse = mediaidentifier.getUse();
-		m.setMediaIdUse(mediaidentifieruse.toCode());
+		 };
+		/******************** mediacreatedperiod ********************************************************************************/
+		org.hl7.fhir.r4.model.Period mediacreatedperiod = media.getCreatedPeriod();
 
-		/******************** mediareasoncode ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept mediareasoncode = media.getReasonCodeFirstRep();
+		/******************** Media_CreatedPrd_Strt ********************************************************************************/
+		if(mediacreatedperiod.hasStart()) {
 
-		/******************** Media_RsnCd_Txt ********************************************************************************/
-		if(mediareasoncode.hasText()) {
-			m.setMediaRsnCdTxt(String.valueOf(mediareasoncode.getText()));
+			m.addMediaCreatedPrdStrt("\""+ca.uhn.fhir.util.DateUtils.formatDate(mediacreatedperiod.getStart())+"\"");
+		} else {
+			m.addMediaCreatedPrdStrt("NULL");
 		}
-		/******************** mediareasoncodecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding mediareasoncodecoding = mediareasoncode.getCodingFirstRep();
 
-		/******************** Media_RsnCd_Cdg_Vrsn ********************************************************************************/
-		if(mediareasoncodecoding.hasVersion()) {
-			m.setMediaRsnCdCdgVrsn(String.valueOf(mediareasoncodecoding.getVersion()));
+
+		/******************** Media_CreatedPrd_End ********************************************************************************/
+		if(mediacreatedperiod.hasEnd()) {
+
+			m.addMediaCreatedPrdEnd("\""+ca.uhn.fhir.util.DateUtils.formatDate(mediacreatedperiod.getEnd())+"\"");
+		} else {
+			m.addMediaCreatedPrdEnd("NULL");
 		}
-		/******************** Media_RsnCd_Cdg_Dsply ********************************************************************************/
-		if(mediareasoncodecoding.hasDisplay()) {
-			m.setMediaRsnCdCdgDsply(String.valueOf(mediareasoncodecoding.getDisplay()));
+
+
+		/******************** Media_Operator ********************************************************************************/
+		if(media.hasOperator()) {
+
+			if(media.getOperator().getReference() != null) {
+			m.addMediaOperator(media.getOperator().getReference());
+			}
+		} else {
+			m.addMediaOperator("NULL");
 		}
-		/******************** Media_RsnCd_Cdg_Cd ********************************************************************************/
-		if(mediareasoncodecoding.hasCode()) {
-			m.setMediaRsnCdCdgCd(String.valueOf(mediareasoncodecoding.getCode()));
+
+
+		/******************** mediaview ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept mediaview = media.getView();
+
+		/******************** Media_View_Txt ********************************************************************************/
+		if(mediaview.hasText()) {
+
+			m.addMediaViewTxt(String.valueOf(mediaview.getText()));
+		} else {
+			m.addMediaViewTxt("NULL");
 		}
-		/******************** Media_RsnCd_Cdg_UsrSltd ********************************************************************************/
-		if(mediareasoncodecoding.hasUserSelected()) {
-			m.setMediaRsnCdCdgUsrSltd(String.valueOf(mediareasoncodecoding.getUserSelected()));
+
+
+		/******************** mediaviewcoding ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.Coding> mediaviewcodinglist = mediaview.getCoding();
+		for(int mediaviewcodingi = 0; mediaviewcodingi<mediaviewcodinglist.size();mediaviewcodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  mediaviewcoding = mediaviewcodinglist.get(mediaviewcodingi);
+
+		/******************** Media_View_Cdg_Dsply ********************************************************************************/
+		if(mediaviewcodingi == 0) {m.addMediaViewCdgDsply("[");}
+		if(mediaviewcoding.hasDisplay()) {
+
+			m.addMediaViewCdgDsply(String.valueOf(mediaviewcoding.getDisplay()));
+		} else {
+			m.addMediaViewCdgDsply("NULL");
 		}
-		/******************** Media_RsnCd_Cdg_Sys ********************************************************************************/
-		if(mediareasoncodecoding.hasSystem()) {
-			m.setMediaRsnCdCdgSys(String.valueOf(mediareasoncodecoding.getSystem()));
+
+		if(mediaviewcodingi == mediaviewcodinglist.size()-1) {m.addMediaViewCdgDsply("]");}
+
+
+		/******************** Media_View_Cdg_Vrsn ********************************************************************************/
+		if(mediaviewcodingi == 0) {m.addMediaViewCdgVrsn("[");}
+		if(mediaviewcoding.hasVersion()) {
+
+			m.addMediaViewCdgVrsn(String.valueOf(mediaviewcoding.getVersion()));
+		} else {
+			m.addMediaViewCdgVrsn("NULL");
 		}
+
+		if(mediaviewcodingi == mediaviewcodinglist.size()-1) {m.addMediaViewCdgVrsn("]");}
+
+
+		/******************** Media_View_Cdg_Cd ********************************************************************************/
+		if(mediaviewcodingi == 0) {m.addMediaViewCdgCd("[");}
+		if(mediaviewcoding.hasCode()) {
+
+			m.addMediaViewCdgCd(String.valueOf(mediaviewcoding.getCode()));
+		} else {
+			m.addMediaViewCdgCd("NULL");
+		}
+
+		if(mediaviewcodingi == mediaviewcodinglist.size()-1) {m.addMediaViewCdgCd("]");}
+
+
+		/******************** Media_View_Cdg_UsrSltd ********************************************************************************/
+		if(mediaviewcodingi == 0) {m.addMediaViewCdgUsrSltd("[");}
+		if(mediaviewcoding.hasUserSelected()) {
+
+			m.addMediaViewCdgUsrSltd(String.valueOf(mediaviewcoding.getUserSelected()));
+		} else {
+			m.addMediaViewCdgUsrSltd("NULL");
+		}
+
+		if(mediaviewcodingi == mediaviewcodinglist.size()-1) {m.addMediaViewCdgUsrSltd("]");}
+
+
+		/******************** Media_View_Cdg_Sys ********************************************************************************/
+		if(mediaviewcodingi == 0) {m.addMediaViewCdgSys("[");}
+		if(mediaviewcoding.hasSystem()) {
+
+			m.addMediaViewCdgSys(String.valueOf(mediaviewcoding.getSystem()));
+		} else {
+			m.addMediaViewCdgSys("NULL");
+		}
+
+		if(mediaviewcodingi == mediaviewcodinglist.size()-1) {m.addMediaViewCdgSys("]");}
+
+
+		 };
+		/******************** Media_Height ********************************************************************************/
+		if(media.hasHeight()) {
+
+			m.addMediaHeight(String.valueOf(media.getHeight()));
+		} else {
+			m.addMediaHeight("NULL");
+		}
+
+
+		/******************** Media_Frames ********************************************************************************/
+		if(media.hasFrames()) {
+
+			m.addMediaFrames(String.valueOf(media.getFrames()));
+		} else {
+			m.addMediaFrames("NULL");
+		}
+
+
+		/******************** Media_Width ********************************************************************************/
+		if(media.hasWidth()) {
+
+			m.addMediaWidth(String.valueOf(media.getWidth()));
+		} else {
+			m.addMediaWidth("NULL");
+		}
+
+
+		/******************** Media_CreatedDtTimeTyp ********************************************************************************/
+		if(media.hasCreatedDateTimeType()) {
+
+			m.addMediaCreatedDtTimeTyp("\""+media.getCreatedDateTimeType().getValueAsString()+"\"");
+		} else {
+			m.addMediaCreatedDtTimeTyp("NULL");
+		}
+
+
 		/******************** Media_Dvc ********************************************************************************/
 		if(media.hasDevice()) {
-			m.setMediaDvc(String.valueOf(media.getDevice()));
+
+			if(media.getDevice().getReference() != null) {
+			m.addMediaDvc(media.getDevice().getReference());
+			}
+		} else {
+			m.addMediaDvc("NULL");
 		}
+
+
+		/******************** Media_Issued ********************************************************************************/
+		if(media.hasIssued()) {
+
+			m.addMediaIssued("\""+ca.uhn.fhir.util.DateUtils.formatDate(media.getIssued())+"\"");
+		} else {
+			m.addMediaIssued("NULL");
+		}
+
+
+		/******************** Media_Duration ********************************************************************************/
+		if(media.hasDuration()) {
+
+			m.addMediaDuration(String.valueOf(media.getDuration()));
+		} else {
+			m.addMediaDuration("NULL");
+		}
+
+
+		/******************** Media_DvcNm ********************************************************************************/
+		if(media.hasDeviceName()) {
+
+			m.addMediaDvcNm(String.valueOf(media.getDeviceName()));
+		} else {
+			m.addMediaDvcNm("NULL");
+		}
+
+
+		/******************** Media_PartOf ********************************************************************************/
+		if(media.hasPartOf()) {
+
+			String  array = "[";
+			for(int incr=0; incr<media.getPartOf().size(); incr++) {
+				array = array + media.getPartOf().get(incr).getReference() + ",";
+			}
+			array = array.substring(0, array.length() -1);
+			array = array + "]";
+			m.addMediaPartOf(array);
+
+		} else {
+			m.addMediaPartOf("NULL");
+		}
+
+
 		return m;
 	}
 }

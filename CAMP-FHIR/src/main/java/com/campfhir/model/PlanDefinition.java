@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Jun 27, 2022, 10:40:10 AM by Hibernate Tools 5.6.1.Final
+// Generated Aug 17, 2022, 11:08:48 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -522,6 +522,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.id = id;
     }
     
+    public void addId(String id) {
+    	if( id != null ) {
+	    	if( this.id == null ) {
+	        	this.id = id;
+	        } else if(this.id.substring(this.id.length() - 1).equals("]") & id.equals("[")) {
+	        	this.id = this.id+ "," + id;
+	        } else if(id.equals("[") | id.equals("]") | this.id.substring(this.id.length() - 1).equals("[")) {
+	        	this.id = this.id+id;
+	        } else  {
+	            this.id = this.id+ "," +id;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnCardinalityBehavior() {
@@ -530,6 +544,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnCardinalityBehavior(String plnDfnActnCardinalityBehavior) {
         this.plnDfnActnCardinalityBehavior = plnDfnActnCardinalityBehavior;
+    }
+    
+    public void addPlnDfnActnCardinalityBehavior(String plnDfnActnCardinalityBehavior) {
+    	if( plnDfnActnCardinalityBehavior != null ) {
+	    	if( this.plnDfnActnCardinalityBehavior == null ) {
+	        	this.plnDfnActnCardinalityBehavior = plnDfnActnCardinalityBehavior;
+	        } else if(this.plnDfnActnCardinalityBehavior.substring(this.plnDfnActnCardinalityBehavior.length() - 1).equals("]") & plnDfnActnCardinalityBehavior.equals("[")) {
+	        	this.plnDfnActnCardinalityBehavior = this.plnDfnActnCardinalityBehavior+ "," + plnDfnActnCardinalityBehavior;
+	        } else if(plnDfnActnCardinalityBehavior.equals("[") | plnDfnActnCardinalityBehavior.equals("]") | this.plnDfnActnCardinalityBehavior.substring(this.plnDfnActnCardinalityBehavior.length() - 1).equals("[")) {
+	        	this.plnDfnActnCardinalityBehavior = this.plnDfnActnCardinalityBehavior+plnDfnActnCardinalityBehavior;
+	        } else  {
+	            this.plnDfnActnCardinalityBehavior = this.plnDfnActnCardinalityBehavior+ "," +plnDfnActnCardinalityBehavior;
+	        }
+        }
     }
     
     
@@ -542,6 +570,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnCdCdgCd = plnDfnActnCdCdgCd;
     }
     
+    public void addPlnDfnActnCdCdgCd(String plnDfnActnCdCdgCd) {
+    	if( plnDfnActnCdCdgCd != null ) {
+	    	if( this.plnDfnActnCdCdgCd == null ) {
+	        	this.plnDfnActnCdCdgCd = plnDfnActnCdCdgCd;
+	        } else if(this.plnDfnActnCdCdgCd.substring(this.plnDfnActnCdCdgCd.length() - 1).equals("]") & plnDfnActnCdCdgCd.equals("[")) {
+	        	this.plnDfnActnCdCdgCd = this.plnDfnActnCdCdgCd+ "," + plnDfnActnCdCdgCd;
+	        } else if(plnDfnActnCdCdgCd.equals("[") | plnDfnActnCdCdgCd.equals("]") | this.plnDfnActnCdCdgCd.substring(this.plnDfnActnCdCdgCd.length() - 1).equals("[")) {
+	        	this.plnDfnActnCdCdgCd = this.plnDfnActnCdCdgCd+plnDfnActnCdCdgCd;
+	        } else  {
+	            this.plnDfnActnCdCdgCd = this.plnDfnActnCdCdgCd+ "," +plnDfnActnCdCdgCd;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnCdCdgDsply() {
@@ -550,6 +592,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnCdCdgDsply(String plnDfnActnCdCdgDsply) {
         this.plnDfnActnCdCdgDsply = plnDfnActnCdCdgDsply;
+    }
+    
+    public void addPlnDfnActnCdCdgDsply(String plnDfnActnCdCdgDsply) {
+    	if( plnDfnActnCdCdgDsply != null ) {
+	    	if( this.plnDfnActnCdCdgDsply == null ) {
+	        	this.plnDfnActnCdCdgDsply = plnDfnActnCdCdgDsply;
+	        } else if(this.plnDfnActnCdCdgDsply.substring(this.plnDfnActnCdCdgDsply.length() - 1).equals("]") & plnDfnActnCdCdgDsply.equals("[")) {
+	        	this.plnDfnActnCdCdgDsply = this.plnDfnActnCdCdgDsply+ "," + plnDfnActnCdCdgDsply;
+	        } else if(plnDfnActnCdCdgDsply.equals("[") | plnDfnActnCdCdgDsply.equals("]") | this.plnDfnActnCdCdgDsply.substring(this.plnDfnActnCdCdgDsply.length() - 1).equals("[")) {
+	        	this.plnDfnActnCdCdgDsply = this.plnDfnActnCdCdgDsply+plnDfnActnCdCdgDsply;
+	        } else  {
+	            this.plnDfnActnCdCdgDsply = this.plnDfnActnCdCdgDsply+ "," +plnDfnActnCdCdgDsply;
+	        }
+        }
     }
     
     
@@ -562,6 +618,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnCdCdgSys = plnDfnActnCdCdgSys;
     }
     
+    public void addPlnDfnActnCdCdgSys(String plnDfnActnCdCdgSys) {
+    	if( plnDfnActnCdCdgSys != null ) {
+	    	if( this.plnDfnActnCdCdgSys == null ) {
+	        	this.plnDfnActnCdCdgSys = plnDfnActnCdCdgSys;
+	        } else if(this.plnDfnActnCdCdgSys.substring(this.plnDfnActnCdCdgSys.length() - 1).equals("]") & plnDfnActnCdCdgSys.equals("[")) {
+	        	this.plnDfnActnCdCdgSys = this.plnDfnActnCdCdgSys+ "," + plnDfnActnCdCdgSys;
+	        } else if(plnDfnActnCdCdgSys.equals("[") | plnDfnActnCdCdgSys.equals("]") | this.plnDfnActnCdCdgSys.substring(this.plnDfnActnCdCdgSys.length() - 1).equals("[")) {
+	        	this.plnDfnActnCdCdgSys = this.plnDfnActnCdCdgSys+plnDfnActnCdCdgSys;
+	        } else  {
+	            this.plnDfnActnCdCdgSys = this.plnDfnActnCdCdgSys+ "," +plnDfnActnCdCdgSys;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnCdCdgUsrSltd() {
@@ -570,6 +640,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnCdCdgUsrSltd(String plnDfnActnCdCdgUsrSltd) {
         this.plnDfnActnCdCdgUsrSltd = plnDfnActnCdCdgUsrSltd;
+    }
+    
+    public void addPlnDfnActnCdCdgUsrSltd(String plnDfnActnCdCdgUsrSltd) {
+    	if( plnDfnActnCdCdgUsrSltd != null ) {
+	    	if( this.plnDfnActnCdCdgUsrSltd == null ) {
+	        	this.plnDfnActnCdCdgUsrSltd = plnDfnActnCdCdgUsrSltd;
+	        } else if(this.plnDfnActnCdCdgUsrSltd.substring(this.plnDfnActnCdCdgUsrSltd.length() - 1).equals("]") & plnDfnActnCdCdgUsrSltd.equals("[")) {
+	        	this.plnDfnActnCdCdgUsrSltd = this.plnDfnActnCdCdgUsrSltd+ "," + plnDfnActnCdCdgUsrSltd;
+	        } else if(plnDfnActnCdCdgUsrSltd.equals("[") | plnDfnActnCdCdgUsrSltd.equals("]") | this.plnDfnActnCdCdgUsrSltd.substring(this.plnDfnActnCdCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.plnDfnActnCdCdgUsrSltd = this.plnDfnActnCdCdgUsrSltd+plnDfnActnCdCdgUsrSltd;
+	        } else  {
+	            this.plnDfnActnCdCdgUsrSltd = this.plnDfnActnCdCdgUsrSltd+ "," +plnDfnActnCdCdgUsrSltd;
+	        }
+        }
     }
     
     
@@ -582,6 +666,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnCdCdgVrsn = plnDfnActnCdCdgVrsn;
     }
     
+    public void addPlnDfnActnCdCdgVrsn(String plnDfnActnCdCdgVrsn) {
+    	if( plnDfnActnCdCdgVrsn != null ) {
+	    	if( this.plnDfnActnCdCdgVrsn == null ) {
+	        	this.plnDfnActnCdCdgVrsn = plnDfnActnCdCdgVrsn;
+	        } else if(this.plnDfnActnCdCdgVrsn.substring(this.plnDfnActnCdCdgVrsn.length() - 1).equals("]") & plnDfnActnCdCdgVrsn.equals("[")) {
+	        	this.plnDfnActnCdCdgVrsn = this.plnDfnActnCdCdgVrsn+ "," + plnDfnActnCdCdgVrsn;
+	        } else if(plnDfnActnCdCdgVrsn.equals("[") | plnDfnActnCdCdgVrsn.equals("]") | this.plnDfnActnCdCdgVrsn.substring(this.plnDfnActnCdCdgVrsn.length() - 1).equals("[")) {
+	        	this.plnDfnActnCdCdgVrsn = this.plnDfnActnCdCdgVrsn+plnDfnActnCdCdgVrsn;
+	        } else  {
+	            this.plnDfnActnCdCdgVrsn = this.plnDfnActnCdCdgVrsn+ "," +plnDfnActnCdCdgVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnCdTxt() {
@@ -590,6 +688,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnCdTxt(String plnDfnActnCdTxt) {
         this.plnDfnActnCdTxt = plnDfnActnCdTxt;
+    }
+    
+    public void addPlnDfnActnCdTxt(String plnDfnActnCdTxt) {
+    	if( plnDfnActnCdTxt != null ) {
+	    	if( this.plnDfnActnCdTxt == null ) {
+	        	this.plnDfnActnCdTxt = plnDfnActnCdTxt;
+	        } else if(this.plnDfnActnCdTxt.substring(this.plnDfnActnCdTxt.length() - 1).equals("]") & plnDfnActnCdTxt.equals("[")) {
+	        	this.plnDfnActnCdTxt = this.plnDfnActnCdTxt+ "," + plnDfnActnCdTxt;
+	        } else if(plnDfnActnCdTxt.equals("[") | plnDfnActnCdTxt.equals("]") | this.plnDfnActnCdTxt.substring(this.plnDfnActnCdTxt.length() - 1).equals("[")) {
+	        	this.plnDfnActnCdTxt = this.plnDfnActnCdTxt+plnDfnActnCdTxt;
+	        } else  {
+	            this.plnDfnActnCdTxt = this.plnDfnActnCdTxt+ "," +plnDfnActnCdTxt;
+	        }
+        }
     }
     
     
@@ -602,6 +714,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnCndtnExprsnDscrptn = plnDfnActnCndtnExprsnDscrptn;
     }
     
+    public void addPlnDfnActnCndtnExprsnDscrptn(String plnDfnActnCndtnExprsnDscrptn) {
+    	if( plnDfnActnCndtnExprsnDscrptn != null ) {
+	    	if( this.plnDfnActnCndtnExprsnDscrptn == null ) {
+	        	this.plnDfnActnCndtnExprsnDscrptn = plnDfnActnCndtnExprsnDscrptn;
+	        } else if(this.plnDfnActnCndtnExprsnDscrptn.substring(this.plnDfnActnCndtnExprsnDscrptn.length() - 1).equals("]") & plnDfnActnCndtnExprsnDscrptn.equals("[")) {
+	        	this.plnDfnActnCndtnExprsnDscrptn = this.plnDfnActnCndtnExprsnDscrptn+ "," + plnDfnActnCndtnExprsnDscrptn;
+	        } else if(plnDfnActnCndtnExprsnDscrptn.equals("[") | plnDfnActnCndtnExprsnDscrptn.equals("]") | this.plnDfnActnCndtnExprsnDscrptn.substring(this.plnDfnActnCndtnExprsnDscrptn.length() - 1).equals("[")) {
+	        	this.plnDfnActnCndtnExprsnDscrptn = this.plnDfnActnCndtnExprsnDscrptn+plnDfnActnCndtnExprsnDscrptn;
+	        } else  {
+	            this.plnDfnActnCndtnExprsnDscrptn = this.plnDfnActnCndtnExprsnDscrptn+ "," +plnDfnActnCndtnExprsnDscrptn;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnCndtnExprsnExprsn() {
@@ -610,6 +736,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnCndtnExprsnExprsn(String plnDfnActnCndtnExprsnExprsn) {
         this.plnDfnActnCndtnExprsnExprsn = plnDfnActnCndtnExprsnExprsn;
+    }
+    
+    public void addPlnDfnActnCndtnExprsnExprsn(String plnDfnActnCndtnExprsnExprsn) {
+    	if( plnDfnActnCndtnExprsnExprsn != null ) {
+	    	if( this.plnDfnActnCndtnExprsnExprsn == null ) {
+	        	this.plnDfnActnCndtnExprsnExprsn = plnDfnActnCndtnExprsnExprsn;
+	        } else if(this.plnDfnActnCndtnExprsnExprsn.substring(this.plnDfnActnCndtnExprsnExprsn.length() - 1).equals("]") & plnDfnActnCndtnExprsnExprsn.equals("[")) {
+	        	this.plnDfnActnCndtnExprsnExprsn = this.plnDfnActnCndtnExprsnExprsn+ "," + plnDfnActnCndtnExprsnExprsn;
+	        } else if(plnDfnActnCndtnExprsnExprsn.equals("[") | plnDfnActnCndtnExprsnExprsn.equals("]") | this.plnDfnActnCndtnExprsnExprsn.substring(this.plnDfnActnCndtnExprsnExprsn.length() - 1).equals("[")) {
+	        	this.plnDfnActnCndtnExprsnExprsn = this.plnDfnActnCndtnExprsnExprsn+plnDfnActnCndtnExprsnExprsn;
+	        } else  {
+	            this.plnDfnActnCndtnExprsnExprsn = this.plnDfnActnCndtnExprsnExprsn+ "," +plnDfnActnCndtnExprsnExprsn;
+	        }
+        }
     }
     
     
@@ -622,6 +762,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnCndtnExprsnLnguage = plnDfnActnCndtnExprsnLnguage;
     }
     
+    public void addPlnDfnActnCndtnExprsnLnguage(String plnDfnActnCndtnExprsnLnguage) {
+    	if( plnDfnActnCndtnExprsnLnguage != null ) {
+	    	if( this.plnDfnActnCndtnExprsnLnguage == null ) {
+	        	this.plnDfnActnCndtnExprsnLnguage = plnDfnActnCndtnExprsnLnguage;
+	        } else if(this.plnDfnActnCndtnExprsnLnguage.substring(this.plnDfnActnCndtnExprsnLnguage.length() - 1).equals("]") & plnDfnActnCndtnExprsnLnguage.equals("[")) {
+	        	this.plnDfnActnCndtnExprsnLnguage = this.plnDfnActnCndtnExprsnLnguage+ "," + plnDfnActnCndtnExprsnLnguage;
+	        } else if(plnDfnActnCndtnExprsnLnguage.equals("[") | plnDfnActnCndtnExprsnLnguage.equals("]") | this.plnDfnActnCndtnExprsnLnguage.substring(this.plnDfnActnCndtnExprsnLnguage.length() - 1).equals("[")) {
+	        	this.plnDfnActnCndtnExprsnLnguage = this.plnDfnActnCndtnExprsnLnguage+plnDfnActnCndtnExprsnLnguage;
+	        } else  {
+	            this.plnDfnActnCndtnExprsnLnguage = this.plnDfnActnCndtnExprsnLnguage+ "," +plnDfnActnCndtnExprsnLnguage;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnCndtnExprsnNm() {
@@ -630,6 +784,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnCndtnExprsnNm(String plnDfnActnCndtnExprsnNm) {
         this.plnDfnActnCndtnExprsnNm = plnDfnActnCndtnExprsnNm;
+    }
+    
+    public void addPlnDfnActnCndtnExprsnNm(String plnDfnActnCndtnExprsnNm) {
+    	if( plnDfnActnCndtnExprsnNm != null ) {
+	    	if( this.plnDfnActnCndtnExprsnNm == null ) {
+	        	this.plnDfnActnCndtnExprsnNm = plnDfnActnCndtnExprsnNm;
+	        } else if(this.plnDfnActnCndtnExprsnNm.substring(this.plnDfnActnCndtnExprsnNm.length() - 1).equals("]") & plnDfnActnCndtnExprsnNm.equals("[")) {
+	        	this.plnDfnActnCndtnExprsnNm = this.plnDfnActnCndtnExprsnNm+ "," + plnDfnActnCndtnExprsnNm;
+	        } else if(plnDfnActnCndtnExprsnNm.equals("[") | plnDfnActnCndtnExprsnNm.equals("]") | this.plnDfnActnCndtnExprsnNm.substring(this.plnDfnActnCndtnExprsnNm.length() - 1).equals("[")) {
+	        	this.plnDfnActnCndtnExprsnNm = this.plnDfnActnCndtnExprsnNm+plnDfnActnCndtnExprsnNm;
+	        } else  {
+	            this.plnDfnActnCndtnExprsnNm = this.plnDfnActnCndtnExprsnNm+ "," +plnDfnActnCndtnExprsnNm;
+	        }
+        }
     }
     
     
@@ -642,6 +810,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnCndtnExprsnRfrnc = plnDfnActnCndtnExprsnRfrnc;
     }
     
+    public void addPlnDfnActnCndtnExprsnRfrnc(String plnDfnActnCndtnExprsnRfrnc) {
+    	if( plnDfnActnCndtnExprsnRfrnc != null ) {
+	    	if( this.plnDfnActnCndtnExprsnRfrnc == null ) {
+	        	this.plnDfnActnCndtnExprsnRfrnc = plnDfnActnCndtnExprsnRfrnc;
+	        } else if(this.plnDfnActnCndtnExprsnRfrnc.substring(this.plnDfnActnCndtnExprsnRfrnc.length() - 1).equals("]") & plnDfnActnCndtnExprsnRfrnc.equals("[")) {
+	        	this.plnDfnActnCndtnExprsnRfrnc = this.plnDfnActnCndtnExprsnRfrnc+ "," + plnDfnActnCndtnExprsnRfrnc;
+	        } else if(plnDfnActnCndtnExprsnRfrnc.equals("[") | plnDfnActnCndtnExprsnRfrnc.equals("]") | this.plnDfnActnCndtnExprsnRfrnc.substring(this.plnDfnActnCndtnExprsnRfrnc.length() - 1).equals("[")) {
+	        	this.plnDfnActnCndtnExprsnRfrnc = this.plnDfnActnCndtnExprsnRfrnc+plnDfnActnCndtnExprsnRfrnc;
+	        } else  {
+	            this.plnDfnActnCndtnExprsnRfrnc = this.plnDfnActnCndtnExprsnRfrnc+ "," +plnDfnActnCndtnExprsnRfrnc;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnCndtnKind() {
@@ -650,6 +832,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnCndtnKind(String plnDfnActnCndtnKind) {
         this.plnDfnActnCndtnKind = plnDfnActnCndtnKind;
+    }
+    
+    public void addPlnDfnActnCndtnKind(String plnDfnActnCndtnKind) {
+    	if( plnDfnActnCndtnKind != null ) {
+	    	if( this.plnDfnActnCndtnKind == null ) {
+	        	this.plnDfnActnCndtnKind = plnDfnActnCndtnKind;
+	        } else if(this.plnDfnActnCndtnKind.substring(this.plnDfnActnCndtnKind.length() - 1).equals("]") & plnDfnActnCndtnKind.equals("[")) {
+	        	this.plnDfnActnCndtnKind = this.plnDfnActnCndtnKind+ "," + plnDfnActnCndtnKind;
+	        } else if(plnDfnActnCndtnKind.equals("[") | plnDfnActnCndtnKind.equals("]") | this.plnDfnActnCndtnKind.substring(this.plnDfnActnCndtnKind.length() - 1).equals("[")) {
+	        	this.plnDfnActnCndtnKind = this.plnDfnActnCndtnKind+plnDfnActnCndtnKind;
+	        } else  {
+	            this.plnDfnActnCndtnKind = this.plnDfnActnCndtnKind+ "," +plnDfnActnCndtnKind;
+	        }
+        }
     }
     
     
@@ -662,6 +858,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnDfnCanonicalTyp = plnDfnActnDfnCanonicalTyp;
     }
     
+    public void addPlnDfnActnDfnCanonicalTyp(String plnDfnActnDfnCanonicalTyp) {
+    	if( plnDfnActnDfnCanonicalTyp != null ) {
+	    	if( this.plnDfnActnDfnCanonicalTyp == null ) {
+	        	this.plnDfnActnDfnCanonicalTyp = plnDfnActnDfnCanonicalTyp;
+	        } else if(this.plnDfnActnDfnCanonicalTyp.substring(this.plnDfnActnDfnCanonicalTyp.length() - 1).equals("]") & plnDfnActnDfnCanonicalTyp.equals("[")) {
+	        	this.plnDfnActnDfnCanonicalTyp = this.plnDfnActnDfnCanonicalTyp+ "," + plnDfnActnDfnCanonicalTyp;
+	        } else if(plnDfnActnDfnCanonicalTyp.equals("[") | plnDfnActnDfnCanonicalTyp.equals("]") | this.plnDfnActnDfnCanonicalTyp.substring(this.plnDfnActnDfnCanonicalTyp.length() - 1).equals("[")) {
+	        	this.plnDfnActnDfnCanonicalTyp = this.plnDfnActnDfnCanonicalTyp+plnDfnActnDfnCanonicalTyp;
+	        } else  {
+	            this.plnDfnActnDfnCanonicalTyp = this.plnDfnActnDfnCanonicalTyp+ "," +plnDfnActnDfnCanonicalTyp;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnDfnUriTyp() {
@@ -670,6 +880,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnDfnUriTyp(String plnDfnActnDfnUriTyp) {
         this.plnDfnActnDfnUriTyp = plnDfnActnDfnUriTyp;
+    }
+    
+    public void addPlnDfnActnDfnUriTyp(String plnDfnActnDfnUriTyp) {
+    	if( plnDfnActnDfnUriTyp != null ) {
+	    	if( this.plnDfnActnDfnUriTyp == null ) {
+	        	this.plnDfnActnDfnUriTyp = plnDfnActnDfnUriTyp;
+	        } else if(this.plnDfnActnDfnUriTyp.substring(this.plnDfnActnDfnUriTyp.length() - 1).equals("]") & plnDfnActnDfnUriTyp.equals("[")) {
+	        	this.plnDfnActnDfnUriTyp = this.plnDfnActnDfnUriTyp+ "," + plnDfnActnDfnUriTyp;
+	        } else if(plnDfnActnDfnUriTyp.equals("[") | plnDfnActnDfnUriTyp.equals("]") | this.plnDfnActnDfnUriTyp.substring(this.plnDfnActnDfnUriTyp.length() - 1).equals("[")) {
+	        	this.plnDfnActnDfnUriTyp = this.plnDfnActnDfnUriTyp+plnDfnActnDfnUriTyp;
+	        } else  {
+	            this.plnDfnActnDfnUriTyp = this.plnDfnActnDfnUriTyp+ "," +plnDfnActnDfnUriTyp;
+	        }
+        }
     }
     
     
@@ -682,6 +906,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnDscrptn = plnDfnActnDscrptn;
     }
     
+    public void addPlnDfnActnDscrptn(String plnDfnActnDscrptn) {
+    	if( plnDfnActnDscrptn != null ) {
+	    	if( this.plnDfnActnDscrptn == null ) {
+	        	this.plnDfnActnDscrptn = plnDfnActnDscrptn;
+	        } else if(this.plnDfnActnDscrptn.substring(this.plnDfnActnDscrptn.length() - 1).equals("]") & plnDfnActnDscrptn.equals("[")) {
+	        	this.plnDfnActnDscrptn = this.plnDfnActnDscrptn+ "," + plnDfnActnDscrptn;
+	        } else if(plnDfnActnDscrptn.equals("[") | plnDfnActnDscrptn.equals("]") | this.plnDfnActnDscrptn.substring(this.plnDfnActnDscrptn.length() - 1).equals("[")) {
+	        	this.plnDfnActnDscrptn = this.plnDfnActnDscrptn+plnDfnActnDscrptn;
+	        } else  {
+	            this.plnDfnActnDscrptn = this.plnDfnActnDscrptn+ "," +plnDfnActnDscrptn;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnDocationCitation() {
@@ -690,6 +928,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnDocationCitation(String plnDfnActnDocationCitation) {
         this.plnDfnActnDocationCitation = plnDfnActnDocationCitation;
+    }
+    
+    public void addPlnDfnActnDocationCitation(String plnDfnActnDocationCitation) {
+    	if( plnDfnActnDocationCitation != null ) {
+	    	if( this.plnDfnActnDocationCitation == null ) {
+	        	this.plnDfnActnDocationCitation = plnDfnActnDocationCitation;
+	        } else if(this.plnDfnActnDocationCitation.substring(this.plnDfnActnDocationCitation.length() - 1).equals("]") & plnDfnActnDocationCitation.equals("[")) {
+	        	this.plnDfnActnDocationCitation = this.plnDfnActnDocationCitation+ "," + plnDfnActnDocationCitation;
+	        } else if(plnDfnActnDocationCitation.equals("[") | plnDfnActnDocationCitation.equals("]") | this.plnDfnActnDocationCitation.substring(this.plnDfnActnDocationCitation.length() - 1).equals("[")) {
+	        	this.plnDfnActnDocationCitation = this.plnDfnActnDocationCitation+plnDfnActnDocationCitation;
+	        } else  {
+	            this.plnDfnActnDocationCitation = this.plnDfnActnDocationCitation+ "," +plnDfnActnDocationCitation;
+	        }
+        }
     }
     
     
@@ -702,6 +954,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnDocationDsply = plnDfnActnDocationDsply;
     }
     
+    public void addPlnDfnActnDocationDsply(String plnDfnActnDocationDsply) {
+    	if( plnDfnActnDocationDsply != null ) {
+	    	if( this.plnDfnActnDocationDsply == null ) {
+	        	this.plnDfnActnDocationDsply = plnDfnActnDocationDsply;
+	        } else if(this.plnDfnActnDocationDsply.substring(this.plnDfnActnDocationDsply.length() - 1).equals("]") & plnDfnActnDocationDsply.equals("[")) {
+	        	this.plnDfnActnDocationDsply = this.plnDfnActnDocationDsply+ "," + plnDfnActnDocationDsply;
+	        } else if(plnDfnActnDocationDsply.equals("[") | plnDfnActnDocationDsply.equals("]") | this.plnDfnActnDocationDsply.substring(this.plnDfnActnDocationDsply.length() - 1).equals("[")) {
+	        	this.plnDfnActnDocationDsply = this.plnDfnActnDocationDsply+plnDfnActnDocationDsply;
+	        } else  {
+	            this.plnDfnActnDocationDsply = this.plnDfnActnDocationDsply+ "," +plnDfnActnDocationDsply;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnDocationDocCntntTyp() {
@@ -710,6 +976,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnDocationDocCntntTyp(String plnDfnActnDocationDocCntntTyp) {
         this.plnDfnActnDocationDocCntntTyp = plnDfnActnDocationDocCntntTyp;
+    }
+    
+    public void addPlnDfnActnDocationDocCntntTyp(String plnDfnActnDocationDocCntntTyp) {
+    	if( plnDfnActnDocationDocCntntTyp != null ) {
+	    	if( this.plnDfnActnDocationDocCntntTyp == null ) {
+	        	this.plnDfnActnDocationDocCntntTyp = plnDfnActnDocationDocCntntTyp;
+	        } else if(this.plnDfnActnDocationDocCntntTyp.substring(this.plnDfnActnDocationDocCntntTyp.length() - 1).equals("]") & plnDfnActnDocationDocCntntTyp.equals("[")) {
+	        	this.plnDfnActnDocationDocCntntTyp = this.plnDfnActnDocationDocCntntTyp+ "," + plnDfnActnDocationDocCntntTyp;
+	        } else if(plnDfnActnDocationDocCntntTyp.equals("[") | plnDfnActnDocationDocCntntTyp.equals("]") | this.plnDfnActnDocationDocCntntTyp.substring(this.plnDfnActnDocationDocCntntTyp.length() - 1).equals("[")) {
+	        	this.plnDfnActnDocationDocCntntTyp = this.plnDfnActnDocationDocCntntTyp+plnDfnActnDocationDocCntntTyp;
+	        } else  {
+	            this.plnDfnActnDocationDocCntntTyp = this.plnDfnActnDocationDocCntntTyp+ "," +plnDfnActnDocationDocCntntTyp;
+	        }
+        }
     }
     
     
@@ -722,6 +1002,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnDocationDocCreation = plnDfnActnDocationDocCreation;
     }
     
+    public void addPlnDfnActnDocationDocCreation(String plnDfnActnDocationDocCreation) {
+    	if( plnDfnActnDocationDocCreation != null ) {
+	    	if( this.plnDfnActnDocationDocCreation == null ) {
+	        	this.plnDfnActnDocationDocCreation = plnDfnActnDocationDocCreation;
+	        } else if(this.plnDfnActnDocationDocCreation.substring(this.plnDfnActnDocationDocCreation.length() - 1).equals("]") & plnDfnActnDocationDocCreation.equals("[")) {
+	        	this.plnDfnActnDocationDocCreation = this.plnDfnActnDocationDocCreation+ "," + plnDfnActnDocationDocCreation;
+	        } else if(plnDfnActnDocationDocCreation.equals("[") | plnDfnActnDocationDocCreation.equals("]") | this.plnDfnActnDocationDocCreation.substring(this.plnDfnActnDocationDocCreation.length() - 1).equals("[")) {
+	        	this.plnDfnActnDocationDocCreation = this.plnDfnActnDocationDocCreation+plnDfnActnDocationDocCreation;
+	        } else  {
+	            this.plnDfnActnDocationDocCreation = this.plnDfnActnDocationDocCreation+ "," +plnDfnActnDocationDocCreation;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnDocationDocData() {
@@ -730,6 +1024,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnDocationDocData(String plnDfnActnDocationDocData) {
         this.plnDfnActnDocationDocData = plnDfnActnDocationDocData;
+    }
+    
+    public void addPlnDfnActnDocationDocData(String plnDfnActnDocationDocData) {
+    	if( plnDfnActnDocationDocData != null ) {
+	    	if( this.plnDfnActnDocationDocData == null ) {
+	        	this.plnDfnActnDocationDocData = plnDfnActnDocationDocData;
+	        } else if(this.plnDfnActnDocationDocData.substring(this.plnDfnActnDocationDocData.length() - 1).equals("]") & plnDfnActnDocationDocData.equals("[")) {
+	        	this.plnDfnActnDocationDocData = this.plnDfnActnDocationDocData+ "," + plnDfnActnDocationDocData;
+	        } else if(plnDfnActnDocationDocData.equals("[") | plnDfnActnDocationDocData.equals("]") | this.plnDfnActnDocationDocData.substring(this.plnDfnActnDocationDocData.length() - 1).equals("[")) {
+	        	this.plnDfnActnDocationDocData = this.plnDfnActnDocationDocData+plnDfnActnDocationDocData;
+	        } else  {
+	            this.plnDfnActnDocationDocData = this.plnDfnActnDocationDocData+ "," +plnDfnActnDocationDocData;
+	        }
+        }
     }
     
     
@@ -742,6 +1050,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnDocationDocHash = plnDfnActnDocationDocHash;
     }
     
+    public void addPlnDfnActnDocationDocHash(String plnDfnActnDocationDocHash) {
+    	if( plnDfnActnDocationDocHash != null ) {
+	    	if( this.plnDfnActnDocationDocHash == null ) {
+	        	this.plnDfnActnDocationDocHash = plnDfnActnDocationDocHash;
+	        } else if(this.plnDfnActnDocationDocHash.substring(this.plnDfnActnDocationDocHash.length() - 1).equals("]") & plnDfnActnDocationDocHash.equals("[")) {
+	        	this.plnDfnActnDocationDocHash = this.plnDfnActnDocationDocHash+ "," + plnDfnActnDocationDocHash;
+	        } else if(plnDfnActnDocationDocHash.equals("[") | plnDfnActnDocationDocHash.equals("]") | this.plnDfnActnDocationDocHash.substring(this.plnDfnActnDocationDocHash.length() - 1).equals("[")) {
+	        	this.plnDfnActnDocationDocHash = this.plnDfnActnDocationDocHash+plnDfnActnDocationDocHash;
+	        } else  {
+	            this.plnDfnActnDocationDocHash = this.plnDfnActnDocationDocHash+ "," +plnDfnActnDocationDocHash;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnDocationDocLnguage() {
@@ -750,6 +1072,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnDocationDocLnguage(String plnDfnActnDocationDocLnguage) {
         this.plnDfnActnDocationDocLnguage = plnDfnActnDocationDocLnguage;
+    }
+    
+    public void addPlnDfnActnDocationDocLnguage(String plnDfnActnDocationDocLnguage) {
+    	if( plnDfnActnDocationDocLnguage != null ) {
+	    	if( this.plnDfnActnDocationDocLnguage == null ) {
+	        	this.plnDfnActnDocationDocLnguage = plnDfnActnDocationDocLnguage;
+	        } else if(this.plnDfnActnDocationDocLnguage.substring(this.plnDfnActnDocationDocLnguage.length() - 1).equals("]") & plnDfnActnDocationDocLnguage.equals("[")) {
+	        	this.plnDfnActnDocationDocLnguage = this.plnDfnActnDocationDocLnguage+ "," + plnDfnActnDocationDocLnguage;
+	        } else if(plnDfnActnDocationDocLnguage.equals("[") | plnDfnActnDocationDocLnguage.equals("]") | this.plnDfnActnDocationDocLnguage.substring(this.plnDfnActnDocationDocLnguage.length() - 1).equals("[")) {
+	        	this.plnDfnActnDocationDocLnguage = this.plnDfnActnDocationDocLnguage+plnDfnActnDocationDocLnguage;
+	        } else  {
+	            this.plnDfnActnDocationDocLnguage = this.plnDfnActnDocationDocLnguage+ "," +plnDfnActnDocationDocLnguage;
+	        }
+        }
     }
     
     
@@ -762,6 +1098,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnDocationDocSz = plnDfnActnDocationDocSz;
     }
     
+    public void addPlnDfnActnDocationDocSz(String plnDfnActnDocationDocSz) {
+    	if( plnDfnActnDocationDocSz != null ) {
+	    	if( this.plnDfnActnDocationDocSz == null ) {
+	        	this.plnDfnActnDocationDocSz = plnDfnActnDocationDocSz;
+	        } else if(this.plnDfnActnDocationDocSz.substring(this.plnDfnActnDocationDocSz.length() - 1).equals("]") & plnDfnActnDocationDocSz.equals("[")) {
+	        	this.plnDfnActnDocationDocSz = this.plnDfnActnDocationDocSz+ "," + plnDfnActnDocationDocSz;
+	        } else if(plnDfnActnDocationDocSz.equals("[") | plnDfnActnDocationDocSz.equals("]") | this.plnDfnActnDocationDocSz.substring(this.plnDfnActnDocationDocSz.length() - 1).equals("[")) {
+	        	this.plnDfnActnDocationDocSz = this.plnDfnActnDocationDocSz+plnDfnActnDocationDocSz;
+	        } else  {
+	            this.plnDfnActnDocationDocSz = this.plnDfnActnDocationDocSz+ "," +plnDfnActnDocationDocSz;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnDocationDocTtl() {
@@ -770,6 +1120,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnDocationDocTtl(String plnDfnActnDocationDocTtl) {
         this.plnDfnActnDocationDocTtl = plnDfnActnDocationDocTtl;
+    }
+    
+    public void addPlnDfnActnDocationDocTtl(String plnDfnActnDocationDocTtl) {
+    	if( plnDfnActnDocationDocTtl != null ) {
+	    	if( this.plnDfnActnDocationDocTtl == null ) {
+	        	this.plnDfnActnDocationDocTtl = plnDfnActnDocationDocTtl;
+	        } else if(this.plnDfnActnDocationDocTtl.substring(this.plnDfnActnDocationDocTtl.length() - 1).equals("]") & plnDfnActnDocationDocTtl.equals("[")) {
+	        	this.plnDfnActnDocationDocTtl = this.plnDfnActnDocationDocTtl+ "," + plnDfnActnDocationDocTtl;
+	        } else if(plnDfnActnDocationDocTtl.equals("[") | plnDfnActnDocationDocTtl.equals("]") | this.plnDfnActnDocationDocTtl.substring(this.plnDfnActnDocationDocTtl.length() - 1).equals("[")) {
+	        	this.plnDfnActnDocationDocTtl = this.plnDfnActnDocationDocTtl+plnDfnActnDocationDocTtl;
+	        } else  {
+	            this.plnDfnActnDocationDocTtl = this.plnDfnActnDocationDocTtl+ "," +plnDfnActnDocationDocTtl;
+	        }
+        }
     }
     
     
@@ -782,6 +1146,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnDocationDocUrl = plnDfnActnDocationDocUrl;
     }
     
+    public void addPlnDfnActnDocationDocUrl(String plnDfnActnDocationDocUrl) {
+    	if( plnDfnActnDocationDocUrl != null ) {
+	    	if( this.plnDfnActnDocationDocUrl == null ) {
+	        	this.plnDfnActnDocationDocUrl = plnDfnActnDocationDocUrl;
+	        } else if(this.plnDfnActnDocationDocUrl.substring(this.plnDfnActnDocationDocUrl.length() - 1).equals("]") & plnDfnActnDocationDocUrl.equals("[")) {
+	        	this.plnDfnActnDocationDocUrl = this.plnDfnActnDocationDocUrl+ "," + plnDfnActnDocationDocUrl;
+	        } else if(plnDfnActnDocationDocUrl.equals("[") | plnDfnActnDocationDocUrl.equals("]") | this.plnDfnActnDocationDocUrl.substring(this.plnDfnActnDocationDocUrl.length() - 1).equals("[")) {
+	        	this.plnDfnActnDocationDocUrl = this.plnDfnActnDocationDocUrl+plnDfnActnDocationDocUrl;
+	        } else  {
+	            this.plnDfnActnDocationDocUrl = this.plnDfnActnDocationDocUrl+ "," +plnDfnActnDocationDocUrl;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnDocationLbl() {
@@ -790,6 +1168,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnDocationLbl(String plnDfnActnDocationLbl) {
         this.plnDfnActnDocationLbl = plnDfnActnDocationLbl;
+    }
+    
+    public void addPlnDfnActnDocationLbl(String plnDfnActnDocationLbl) {
+    	if( plnDfnActnDocationLbl != null ) {
+	    	if( this.plnDfnActnDocationLbl == null ) {
+	        	this.plnDfnActnDocationLbl = plnDfnActnDocationLbl;
+	        } else if(this.plnDfnActnDocationLbl.substring(this.plnDfnActnDocationLbl.length() - 1).equals("]") & plnDfnActnDocationLbl.equals("[")) {
+	        	this.plnDfnActnDocationLbl = this.plnDfnActnDocationLbl+ "," + plnDfnActnDocationLbl;
+	        } else if(plnDfnActnDocationLbl.equals("[") | plnDfnActnDocationLbl.equals("]") | this.plnDfnActnDocationLbl.substring(this.plnDfnActnDocationLbl.length() - 1).equals("[")) {
+	        	this.plnDfnActnDocationLbl = this.plnDfnActnDocationLbl+plnDfnActnDocationLbl;
+	        } else  {
+	            this.plnDfnActnDocationLbl = this.plnDfnActnDocationLbl+ "," +plnDfnActnDocationLbl;
+	        }
+        }
     }
     
     
@@ -802,6 +1194,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnDocationRsrc = plnDfnActnDocationRsrc;
     }
     
+    public void addPlnDfnActnDocationRsrc(String plnDfnActnDocationRsrc) {
+    	if( plnDfnActnDocationRsrc != null ) {
+	    	if( this.plnDfnActnDocationRsrc == null ) {
+	        	this.plnDfnActnDocationRsrc = plnDfnActnDocationRsrc;
+	        } else if(this.plnDfnActnDocationRsrc.substring(this.plnDfnActnDocationRsrc.length() - 1).equals("]") & plnDfnActnDocationRsrc.equals("[")) {
+	        	this.plnDfnActnDocationRsrc = this.plnDfnActnDocationRsrc+ "," + plnDfnActnDocationRsrc;
+	        } else if(plnDfnActnDocationRsrc.equals("[") | plnDfnActnDocationRsrc.equals("]") | this.plnDfnActnDocationRsrc.substring(this.plnDfnActnDocationRsrc.length() - 1).equals("[")) {
+	        	this.plnDfnActnDocationRsrc = this.plnDfnActnDocationRsrc+plnDfnActnDocationRsrc;
+	        } else  {
+	            this.plnDfnActnDocationRsrc = this.plnDfnActnDocationRsrc+ "," +plnDfnActnDocationRsrc;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnDocationTyp() {
@@ -810,6 +1216,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnDocationTyp(String plnDfnActnDocationTyp) {
         this.plnDfnActnDocationTyp = plnDfnActnDocationTyp;
+    }
+    
+    public void addPlnDfnActnDocationTyp(String plnDfnActnDocationTyp) {
+    	if( plnDfnActnDocationTyp != null ) {
+	    	if( this.plnDfnActnDocationTyp == null ) {
+	        	this.plnDfnActnDocationTyp = plnDfnActnDocationTyp;
+	        } else if(this.plnDfnActnDocationTyp.substring(this.plnDfnActnDocationTyp.length() - 1).equals("]") & plnDfnActnDocationTyp.equals("[")) {
+	        	this.plnDfnActnDocationTyp = this.plnDfnActnDocationTyp+ "," + plnDfnActnDocationTyp;
+	        } else if(plnDfnActnDocationTyp.equals("[") | plnDfnActnDocationTyp.equals("]") | this.plnDfnActnDocationTyp.substring(this.plnDfnActnDocationTyp.length() - 1).equals("[")) {
+	        	this.plnDfnActnDocationTyp = this.plnDfnActnDocationTyp+plnDfnActnDocationTyp;
+	        } else  {
+	            this.plnDfnActnDocationTyp = this.plnDfnActnDocationTyp+ "," +plnDfnActnDocationTyp;
+	        }
+        }
     }
     
     
@@ -822,6 +1242,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnDocationUrl = plnDfnActnDocationUrl;
     }
     
+    public void addPlnDfnActnDocationUrl(String plnDfnActnDocationUrl) {
+    	if( plnDfnActnDocationUrl != null ) {
+	    	if( this.plnDfnActnDocationUrl == null ) {
+	        	this.plnDfnActnDocationUrl = plnDfnActnDocationUrl;
+	        } else if(this.plnDfnActnDocationUrl.substring(this.plnDfnActnDocationUrl.length() - 1).equals("]") & plnDfnActnDocationUrl.equals("[")) {
+	        	this.plnDfnActnDocationUrl = this.plnDfnActnDocationUrl+ "," + plnDfnActnDocationUrl;
+	        } else if(plnDfnActnDocationUrl.equals("[") | plnDfnActnDocationUrl.equals("]") | this.plnDfnActnDocationUrl.substring(this.plnDfnActnDocationUrl.length() - 1).equals("[")) {
+	        	this.plnDfnActnDocationUrl = this.plnDfnActnDocationUrl+plnDfnActnDocationUrl;
+	        } else  {
+	            this.plnDfnActnDocationUrl = this.plnDfnActnDocationUrl+ "," +plnDfnActnDocationUrl;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnDynamicVlExprsnDscrptn() {
@@ -830,6 +1264,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnDynamicVlExprsnDscrptn(String plnDfnActnDynamicVlExprsnDscrptn) {
         this.plnDfnActnDynamicVlExprsnDscrptn = plnDfnActnDynamicVlExprsnDscrptn;
+    }
+    
+    public void addPlnDfnActnDynamicVlExprsnDscrptn(String plnDfnActnDynamicVlExprsnDscrptn) {
+    	if( plnDfnActnDynamicVlExprsnDscrptn != null ) {
+	    	if( this.plnDfnActnDynamicVlExprsnDscrptn == null ) {
+	        	this.plnDfnActnDynamicVlExprsnDscrptn = plnDfnActnDynamicVlExprsnDscrptn;
+	        } else if(this.plnDfnActnDynamicVlExprsnDscrptn.substring(this.plnDfnActnDynamicVlExprsnDscrptn.length() - 1).equals("]") & plnDfnActnDynamicVlExprsnDscrptn.equals("[")) {
+	        	this.plnDfnActnDynamicVlExprsnDscrptn = this.plnDfnActnDynamicVlExprsnDscrptn+ "," + plnDfnActnDynamicVlExprsnDscrptn;
+	        } else if(plnDfnActnDynamicVlExprsnDscrptn.equals("[") | plnDfnActnDynamicVlExprsnDscrptn.equals("]") | this.plnDfnActnDynamicVlExprsnDscrptn.substring(this.plnDfnActnDynamicVlExprsnDscrptn.length() - 1).equals("[")) {
+	        	this.plnDfnActnDynamicVlExprsnDscrptn = this.plnDfnActnDynamicVlExprsnDscrptn+plnDfnActnDynamicVlExprsnDscrptn;
+	        } else  {
+	            this.plnDfnActnDynamicVlExprsnDscrptn = this.plnDfnActnDynamicVlExprsnDscrptn+ "," +plnDfnActnDynamicVlExprsnDscrptn;
+	        }
+        }
     }
     
     
@@ -842,6 +1290,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnDynamicVlExprsnExprsn = plnDfnActnDynamicVlExprsnExprsn;
     }
     
+    public void addPlnDfnActnDynamicVlExprsnExprsn(String plnDfnActnDynamicVlExprsnExprsn) {
+    	if( plnDfnActnDynamicVlExprsnExprsn != null ) {
+	    	if( this.plnDfnActnDynamicVlExprsnExprsn == null ) {
+	        	this.plnDfnActnDynamicVlExprsnExprsn = plnDfnActnDynamicVlExprsnExprsn;
+	        } else if(this.plnDfnActnDynamicVlExprsnExprsn.substring(this.plnDfnActnDynamicVlExprsnExprsn.length() - 1).equals("]") & plnDfnActnDynamicVlExprsnExprsn.equals("[")) {
+	        	this.plnDfnActnDynamicVlExprsnExprsn = this.plnDfnActnDynamicVlExprsnExprsn+ "," + plnDfnActnDynamicVlExprsnExprsn;
+	        } else if(plnDfnActnDynamicVlExprsnExprsn.equals("[") | plnDfnActnDynamicVlExprsnExprsn.equals("]") | this.plnDfnActnDynamicVlExprsnExprsn.substring(this.plnDfnActnDynamicVlExprsnExprsn.length() - 1).equals("[")) {
+	        	this.plnDfnActnDynamicVlExprsnExprsn = this.plnDfnActnDynamicVlExprsnExprsn+plnDfnActnDynamicVlExprsnExprsn;
+	        } else  {
+	            this.plnDfnActnDynamicVlExprsnExprsn = this.plnDfnActnDynamicVlExprsnExprsn+ "," +plnDfnActnDynamicVlExprsnExprsn;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnDynamicVlExprsnLnguage() {
@@ -850,6 +1312,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnDynamicVlExprsnLnguage(String plnDfnActnDynamicVlExprsnLnguage) {
         this.plnDfnActnDynamicVlExprsnLnguage = plnDfnActnDynamicVlExprsnLnguage;
+    }
+    
+    public void addPlnDfnActnDynamicVlExprsnLnguage(String plnDfnActnDynamicVlExprsnLnguage) {
+    	if( plnDfnActnDynamicVlExprsnLnguage != null ) {
+	    	if( this.plnDfnActnDynamicVlExprsnLnguage == null ) {
+	        	this.plnDfnActnDynamicVlExprsnLnguage = plnDfnActnDynamicVlExprsnLnguage;
+	        } else if(this.plnDfnActnDynamicVlExprsnLnguage.substring(this.plnDfnActnDynamicVlExprsnLnguage.length() - 1).equals("]") & plnDfnActnDynamicVlExprsnLnguage.equals("[")) {
+	        	this.plnDfnActnDynamicVlExprsnLnguage = this.plnDfnActnDynamicVlExprsnLnguage+ "," + plnDfnActnDynamicVlExprsnLnguage;
+	        } else if(plnDfnActnDynamicVlExprsnLnguage.equals("[") | plnDfnActnDynamicVlExprsnLnguage.equals("]") | this.plnDfnActnDynamicVlExprsnLnguage.substring(this.plnDfnActnDynamicVlExprsnLnguage.length() - 1).equals("[")) {
+	        	this.plnDfnActnDynamicVlExprsnLnguage = this.plnDfnActnDynamicVlExprsnLnguage+plnDfnActnDynamicVlExprsnLnguage;
+	        } else  {
+	            this.plnDfnActnDynamicVlExprsnLnguage = this.plnDfnActnDynamicVlExprsnLnguage+ "," +plnDfnActnDynamicVlExprsnLnguage;
+	        }
+        }
     }
     
     
@@ -862,6 +1338,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnDynamicVlExprsnNm = plnDfnActnDynamicVlExprsnNm;
     }
     
+    public void addPlnDfnActnDynamicVlExprsnNm(String plnDfnActnDynamicVlExprsnNm) {
+    	if( plnDfnActnDynamicVlExprsnNm != null ) {
+	    	if( this.plnDfnActnDynamicVlExprsnNm == null ) {
+	        	this.plnDfnActnDynamicVlExprsnNm = plnDfnActnDynamicVlExprsnNm;
+	        } else if(this.plnDfnActnDynamicVlExprsnNm.substring(this.plnDfnActnDynamicVlExprsnNm.length() - 1).equals("]") & plnDfnActnDynamicVlExprsnNm.equals("[")) {
+	        	this.plnDfnActnDynamicVlExprsnNm = this.plnDfnActnDynamicVlExprsnNm+ "," + plnDfnActnDynamicVlExprsnNm;
+	        } else if(plnDfnActnDynamicVlExprsnNm.equals("[") | plnDfnActnDynamicVlExprsnNm.equals("]") | this.plnDfnActnDynamicVlExprsnNm.substring(this.plnDfnActnDynamicVlExprsnNm.length() - 1).equals("[")) {
+	        	this.plnDfnActnDynamicVlExprsnNm = this.plnDfnActnDynamicVlExprsnNm+plnDfnActnDynamicVlExprsnNm;
+	        } else  {
+	            this.plnDfnActnDynamicVlExprsnNm = this.plnDfnActnDynamicVlExprsnNm+ "," +plnDfnActnDynamicVlExprsnNm;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnDynamicVlExprsnRfrnc() {
@@ -870,6 +1360,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnDynamicVlExprsnRfrnc(String plnDfnActnDynamicVlExprsnRfrnc) {
         this.plnDfnActnDynamicVlExprsnRfrnc = plnDfnActnDynamicVlExprsnRfrnc;
+    }
+    
+    public void addPlnDfnActnDynamicVlExprsnRfrnc(String plnDfnActnDynamicVlExprsnRfrnc) {
+    	if( plnDfnActnDynamicVlExprsnRfrnc != null ) {
+	    	if( this.plnDfnActnDynamicVlExprsnRfrnc == null ) {
+	        	this.plnDfnActnDynamicVlExprsnRfrnc = plnDfnActnDynamicVlExprsnRfrnc;
+	        } else if(this.plnDfnActnDynamicVlExprsnRfrnc.substring(this.plnDfnActnDynamicVlExprsnRfrnc.length() - 1).equals("]") & plnDfnActnDynamicVlExprsnRfrnc.equals("[")) {
+	        	this.plnDfnActnDynamicVlExprsnRfrnc = this.plnDfnActnDynamicVlExprsnRfrnc+ "," + plnDfnActnDynamicVlExprsnRfrnc;
+	        } else if(plnDfnActnDynamicVlExprsnRfrnc.equals("[") | plnDfnActnDynamicVlExprsnRfrnc.equals("]") | this.plnDfnActnDynamicVlExprsnRfrnc.substring(this.plnDfnActnDynamicVlExprsnRfrnc.length() - 1).equals("[")) {
+	        	this.plnDfnActnDynamicVlExprsnRfrnc = this.plnDfnActnDynamicVlExprsnRfrnc+plnDfnActnDynamicVlExprsnRfrnc;
+	        } else  {
+	            this.plnDfnActnDynamicVlExprsnRfrnc = this.plnDfnActnDynamicVlExprsnRfrnc+ "," +plnDfnActnDynamicVlExprsnRfrnc;
+	        }
+        }
     }
     
     
@@ -882,6 +1386,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnDynamicVlPath = plnDfnActnDynamicVlPath;
     }
     
+    public void addPlnDfnActnDynamicVlPath(String plnDfnActnDynamicVlPath) {
+    	if( plnDfnActnDynamicVlPath != null ) {
+	    	if( this.plnDfnActnDynamicVlPath == null ) {
+	        	this.plnDfnActnDynamicVlPath = plnDfnActnDynamicVlPath;
+	        } else if(this.plnDfnActnDynamicVlPath.substring(this.plnDfnActnDynamicVlPath.length() - 1).equals("]") & plnDfnActnDynamicVlPath.equals("[")) {
+	        	this.plnDfnActnDynamicVlPath = this.plnDfnActnDynamicVlPath+ "," + plnDfnActnDynamicVlPath;
+	        } else if(plnDfnActnDynamicVlPath.equals("[") | plnDfnActnDynamicVlPath.equals("]") | this.plnDfnActnDynamicVlPath.substring(this.plnDfnActnDynamicVlPath.length() - 1).equals("[")) {
+	        	this.plnDfnActnDynamicVlPath = this.plnDfnActnDynamicVlPath+plnDfnActnDynamicVlPath;
+	        } else  {
+	            this.plnDfnActnDynamicVlPath = this.plnDfnActnDynamicVlPath+ "," +plnDfnActnDynamicVlPath;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnGoalId() {
@@ -890,6 +1408,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnGoalId(String plnDfnActnGoalId) {
         this.plnDfnActnGoalId = plnDfnActnGoalId;
+    }
+    
+    public void addPlnDfnActnGoalId(String plnDfnActnGoalId) {
+    	if( plnDfnActnGoalId != null ) {
+	    	if( this.plnDfnActnGoalId == null ) {
+	        	this.plnDfnActnGoalId = plnDfnActnGoalId;
+	        } else if(this.plnDfnActnGoalId.substring(this.plnDfnActnGoalId.length() - 1).equals("]") & plnDfnActnGoalId.equals("[")) {
+	        	this.plnDfnActnGoalId = this.plnDfnActnGoalId+ "," + plnDfnActnGoalId;
+	        } else if(plnDfnActnGoalId.equals("[") | plnDfnActnGoalId.equals("]") | this.plnDfnActnGoalId.substring(this.plnDfnActnGoalId.length() - 1).equals("[")) {
+	        	this.plnDfnActnGoalId = this.plnDfnActnGoalId+plnDfnActnGoalId;
+	        } else  {
+	            this.plnDfnActnGoalId = this.plnDfnActnGoalId+ "," +plnDfnActnGoalId;
+	        }
+        }
     }
     
     
@@ -902,6 +1434,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnGrpingBehavior = plnDfnActnGrpingBehavior;
     }
     
+    public void addPlnDfnActnGrpingBehavior(String plnDfnActnGrpingBehavior) {
+    	if( plnDfnActnGrpingBehavior != null ) {
+	    	if( this.plnDfnActnGrpingBehavior == null ) {
+	        	this.plnDfnActnGrpingBehavior = plnDfnActnGrpingBehavior;
+	        } else if(this.plnDfnActnGrpingBehavior.substring(this.plnDfnActnGrpingBehavior.length() - 1).equals("]") & plnDfnActnGrpingBehavior.equals("[")) {
+	        	this.plnDfnActnGrpingBehavior = this.plnDfnActnGrpingBehavior+ "," + plnDfnActnGrpingBehavior;
+	        } else if(plnDfnActnGrpingBehavior.equals("[") | plnDfnActnGrpingBehavior.equals("]") | this.plnDfnActnGrpingBehavior.substring(this.plnDfnActnGrpingBehavior.length() - 1).equals("[")) {
+	        	this.plnDfnActnGrpingBehavior = this.plnDfnActnGrpingBehavior+plnDfnActnGrpingBehavior;
+	        } else  {
+	            this.plnDfnActnGrpingBehavior = this.plnDfnActnGrpingBehavior+ "," +plnDfnActnGrpingBehavior;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnInputCdFltrCdCd() {
@@ -910,6 +1456,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnInputCdFltrCdCd(String plnDfnActnInputCdFltrCdCd) {
         this.plnDfnActnInputCdFltrCdCd = plnDfnActnInputCdFltrCdCd;
+    }
+    
+    public void addPlnDfnActnInputCdFltrCdCd(String plnDfnActnInputCdFltrCdCd) {
+    	if( plnDfnActnInputCdFltrCdCd != null ) {
+	    	if( this.plnDfnActnInputCdFltrCdCd == null ) {
+	        	this.plnDfnActnInputCdFltrCdCd = plnDfnActnInputCdFltrCdCd;
+	        } else if(this.plnDfnActnInputCdFltrCdCd.substring(this.plnDfnActnInputCdFltrCdCd.length() - 1).equals("]") & plnDfnActnInputCdFltrCdCd.equals("[")) {
+	        	this.plnDfnActnInputCdFltrCdCd = this.plnDfnActnInputCdFltrCdCd+ "," + plnDfnActnInputCdFltrCdCd;
+	        } else if(plnDfnActnInputCdFltrCdCd.equals("[") | plnDfnActnInputCdFltrCdCd.equals("]") | this.plnDfnActnInputCdFltrCdCd.substring(this.plnDfnActnInputCdFltrCdCd.length() - 1).equals("[")) {
+	        	this.plnDfnActnInputCdFltrCdCd = this.plnDfnActnInputCdFltrCdCd+plnDfnActnInputCdFltrCdCd;
+	        } else  {
+	            this.plnDfnActnInputCdFltrCdCd = this.plnDfnActnInputCdFltrCdCd+ "," +plnDfnActnInputCdFltrCdCd;
+	        }
+        }
     }
     
     
@@ -922,6 +1482,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnInputCdFltrCdDsply = plnDfnActnInputCdFltrCdDsply;
     }
     
+    public void addPlnDfnActnInputCdFltrCdDsply(String plnDfnActnInputCdFltrCdDsply) {
+    	if( plnDfnActnInputCdFltrCdDsply != null ) {
+	    	if( this.plnDfnActnInputCdFltrCdDsply == null ) {
+	        	this.plnDfnActnInputCdFltrCdDsply = plnDfnActnInputCdFltrCdDsply;
+	        } else if(this.plnDfnActnInputCdFltrCdDsply.substring(this.plnDfnActnInputCdFltrCdDsply.length() - 1).equals("]") & plnDfnActnInputCdFltrCdDsply.equals("[")) {
+	        	this.plnDfnActnInputCdFltrCdDsply = this.plnDfnActnInputCdFltrCdDsply+ "," + plnDfnActnInputCdFltrCdDsply;
+	        } else if(plnDfnActnInputCdFltrCdDsply.equals("[") | plnDfnActnInputCdFltrCdDsply.equals("]") | this.plnDfnActnInputCdFltrCdDsply.substring(this.plnDfnActnInputCdFltrCdDsply.length() - 1).equals("[")) {
+	        	this.plnDfnActnInputCdFltrCdDsply = this.plnDfnActnInputCdFltrCdDsply+plnDfnActnInputCdFltrCdDsply;
+	        } else  {
+	            this.plnDfnActnInputCdFltrCdDsply = this.plnDfnActnInputCdFltrCdDsply+ "," +plnDfnActnInputCdFltrCdDsply;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnInputCdFltrCdSys() {
@@ -930,6 +1504,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnInputCdFltrCdSys(String plnDfnActnInputCdFltrCdSys) {
         this.plnDfnActnInputCdFltrCdSys = plnDfnActnInputCdFltrCdSys;
+    }
+    
+    public void addPlnDfnActnInputCdFltrCdSys(String plnDfnActnInputCdFltrCdSys) {
+    	if( plnDfnActnInputCdFltrCdSys != null ) {
+	    	if( this.plnDfnActnInputCdFltrCdSys == null ) {
+	        	this.plnDfnActnInputCdFltrCdSys = plnDfnActnInputCdFltrCdSys;
+	        } else if(this.plnDfnActnInputCdFltrCdSys.substring(this.plnDfnActnInputCdFltrCdSys.length() - 1).equals("]") & plnDfnActnInputCdFltrCdSys.equals("[")) {
+	        	this.plnDfnActnInputCdFltrCdSys = this.plnDfnActnInputCdFltrCdSys+ "," + plnDfnActnInputCdFltrCdSys;
+	        } else if(plnDfnActnInputCdFltrCdSys.equals("[") | plnDfnActnInputCdFltrCdSys.equals("]") | this.plnDfnActnInputCdFltrCdSys.substring(this.plnDfnActnInputCdFltrCdSys.length() - 1).equals("[")) {
+	        	this.plnDfnActnInputCdFltrCdSys = this.plnDfnActnInputCdFltrCdSys+plnDfnActnInputCdFltrCdSys;
+	        } else  {
+	            this.plnDfnActnInputCdFltrCdSys = this.plnDfnActnInputCdFltrCdSys+ "," +plnDfnActnInputCdFltrCdSys;
+	        }
+        }
     }
     
     
@@ -942,6 +1530,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnInputCdFltrCdUsrSltd = plnDfnActnInputCdFltrCdUsrSltd;
     }
     
+    public void addPlnDfnActnInputCdFltrCdUsrSltd(String plnDfnActnInputCdFltrCdUsrSltd) {
+    	if( plnDfnActnInputCdFltrCdUsrSltd != null ) {
+	    	if( this.plnDfnActnInputCdFltrCdUsrSltd == null ) {
+	        	this.plnDfnActnInputCdFltrCdUsrSltd = plnDfnActnInputCdFltrCdUsrSltd;
+	        } else if(this.plnDfnActnInputCdFltrCdUsrSltd.substring(this.plnDfnActnInputCdFltrCdUsrSltd.length() - 1).equals("]") & plnDfnActnInputCdFltrCdUsrSltd.equals("[")) {
+	        	this.plnDfnActnInputCdFltrCdUsrSltd = this.plnDfnActnInputCdFltrCdUsrSltd+ "," + plnDfnActnInputCdFltrCdUsrSltd;
+	        } else if(plnDfnActnInputCdFltrCdUsrSltd.equals("[") | plnDfnActnInputCdFltrCdUsrSltd.equals("]") | this.plnDfnActnInputCdFltrCdUsrSltd.substring(this.plnDfnActnInputCdFltrCdUsrSltd.length() - 1).equals("[")) {
+	        	this.plnDfnActnInputCdFltrCdUsrSltd = this.plnDfnActnInputCdFltrCdUsrSltd+plnDfnActnInputCdFltrCdUsrSltd;
+	        } else  {
+	            this.plnDfnActnInputCdFltrCdUsrSltd = this.plnDfnActnInputCdFltrCdUsrSltd+ "," +plnDfnActnInputCdFltrCdUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnInputCdFltrCdVrsn() {
@@ -950,6 +1552,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnInputCdFltrCdVrsn(String plnDfnActnInputCdFltrCdVrsn) {
         this.plnDfnActnInputCdFltrCdVrsn = plnDfnActnInputCdFltrCdVrsn;
+    }
+    
+    public void addPlnDfnActnInputCdFltrCdVrsn(String plnDfnActnInputCdFltrCdVrsn) {
+    	if( plnDfnActnInputCdFltrCdVrsn != null ) {
+	    	if( this.plnDfnActnInputCdFltrCdVrsn == null ) {
+	        	this.plnDfnActnInputCdFltrCdVrsn = plnDfnActnInputCdFltrCdVrsn;
+	        } else if(this.plnDfnActnInputCdFltrCdVrsn.substring(this.plnDfnActnInputCdFltrCdVrsn.length() - 1).equals("]") & plnDfnActnInputCdFltrCdVrsn.equals("[")) {
+	        	this.plnDfnActnInputCdFltrCdVrsn = this.plnDfnActnInputCdFltrCdVrsn+ "," + plnDfnActnInputCdFltrCdVrsn;
+	        } else if(plnDfnActnInputCdFltrCdVrsn.equals("[") | plnDfnActnInputCdFltrCdVrsn.equals("]") | this.plnDfnActnInputCdFltrCdVrsn.substring(this.plnDfnActnInputCdFltrCdVrsn.length() - 1).equals("[")) {
+	        	this.plnDfnActnInputCdFltrCdVrsn = this.plnDfnActnInputCdFltrCdVrsn+plnDfnActnInputCdFltrCdVrsn;
+	        } else  {
+	            this.plnDfnActnInputCdFltrCdVrsn = this.plnDfnActnInputCdFltrCdVrsn+ "," +plnDfnActnInputCdFltrCdVrsn;
+	        }
+        }
     }
     
     
@@ -962,6 +1578,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnInputCdFltrPath = plnDfnActnInputCdFltrPath;
     }
     
+    public void addPlnDfnActnInputCdFltrPath(String plnDfnActnInputCdFltrPath) {
+    	if( plnDfnActnInputCdFltrPath != null ) {
+	    	if( this.plnDfnActnInputCdFltrPath == null ) {
+	        	this.plnDfnActnInputCdFltrPath = plnDfnActnInputCdFltrPath;
+	        } else if(this.plnDfnActnInputCdFltrPath.substring(this.plnDfnActnInputCdFltrPath.length() - 1).equals("]") & plnDfnActnInputCdFltrPath.equals("[")) {
+	        	this.plnDfnActnInputCdFltrPath = this.plnDfnActnInputCdFltrPath+ "," + plnDfnActnInputCdFltrPath;
+	        } else if(plnDfnActnInputCdFltrPath.equals("[") | plnDfnActnInputCdFltrPath.equals("]") | this.plnDfnActnInputCdFltrPath.substring(this.plnDfnActnInputCdFltrPath.length() - 1).equals("[")) {
+	        	this.plnDfnActnInputCdFltrPath = this.plnDfnActnInputCdFltrPath+plnDfnActnInputCdFltrPath;
+	        } else  {
+	            this.plnDfnActnInputCdFltrPath = this.plnDfnActnInputCdFltrPath+ "," +plnDfnActnInputCdFltrPath;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnInputCdFltrSrchParam() {
@@ -970,6 +1600,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnInputCdFltrSrchParam(String plnDfnActnInputCdFltrSrchParam) {
         this.plnDfnActnInputCdFltrSrchParam = plnDfnActnInputCdFltrSrchParam;
+    }
+    
+    public void addPlnDfnActnInputCdFltrSrchParam(String plnDfnActnInputCdFltrSrchParam) {
+    	if( plnDfnActnInputCdFltrSrchParam != null ) {
+	    	if( this.plnDfnActnInputCdFltrSrchParam == null ) {
+	        	this.plnDfnActnInputCdFltrSrchParam = plnDfnActnInputCdFltrSrchParam;
+	        } else if(this.plnDfnActnInputCdFltrSrchParam.substring(this.plnDfnActnInputCdFltrSrchParam.length() - 1).equals("]") & plnDfnActnInputCdFltrSrchParam.equals("[")) {
+	        	this.plnDfnActnInputCdFltrSrchParam = this.plnDfnActnInputCdFltrSrchParam+ "," + plnDfnActnInputCdFltrSrchParam;
+	        } else if(plnDfnActnInputCdFltrSrchParam.equals("[") | plnDfnActnInputCdFltrSrchParam.equals("]") | this.plnDfnActnInputCdFltrSrchParam.substring(this.plnDfnActnInputCdFltrSrchParam.length() - 1).equals("[")) {
+	        	this.plnDfnActnInputCdFltrSrchParam = this.plnDfnActnInputCdFltrSrchParam+plnDfnActnInputCdFltrSrchParam;
+	        } else  {
+	            this.plnDfnActnInputCdFltrSrchParam = this.plnDfnActnInputCdFltrSrchParam+ "," +plnDfnActnInputCdFltrSrchParam;
+	        }
+        }
     }
     
     
@@ -982,6 +1626,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnInputCdFltrVlSt = plnDfnActnInputCdFltrVlSt;
     }
     
+    public void addPlnDfnActnInputCdFltrVlSt(String plnDfnActnInputCdFltrVlSt) {
+    	if( plnDfnActnInputCdFltrVlSt != null ) {
+	    	if( this.plnDfnActnInputCdFltrVlSt == null ) {
+	        	this.plnDfnActnInputCdFltrVlSt = plnDfnActnInputCdFltrVlSt;
+	        } else if(this.plnDfnActnInputCdFltrVlSt.substring(this.plnDfnActnInputCdFltrVlSt.length() - 1).equals("]") & plnDfnActnInputCdFltrVlSt.equals("[")) {
+	        	this.plnDfnActnInputCdFltrVlSt = this.plnDfnActnInputCdFltrVlSt+ "," + plnDfnActnInputCdFltrVlSt;
+	        } else if(plnDfnActnInputCdFltrVlSt.equals("[") | plnDfnActnInputCdFltrVlSt.equals("]") | this.plnDfnActnInputCdFltrVlSt.substring(this.plnDfnActnInputCdFltrVlSt.length() - 1).equals("[")) {
+	        	this.plnDfnActnInputCdFltrVlSt = this.plnDfnActnInputCdFltrVlSt+plnDfnActnInputCdFltrVlSt;
+	        } else  {
+	            this.plnDfnActnInputCdFltrVlSt = this.plnDfnActnInputCdFltrVlSt+ "," +plnDfnActnInputCdFltrVlSt;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnInputDtFltrPath() {
@@ -990,6 +1648,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnInputDtFltrPath(String plnDfnActnInputDtFltrPath) {
         this.plnDfnActnInputDtFltrPath = plnDfnActnInputDtFltrPath;
+    }
+    
+    public void addPlnDfnActnInputDtFltrPath(String plnDfnActnInputDtFltrPath) {
+    	if( plnDfnActnInputDtFltrPath != null ) {
+	    	if( this.plnDfnActnInputDtFltrPath == null ) {
+	        	this.plnDfnActnInputDtFltrPath = plnDfnActnInputDtFltrPath;
+	        } else if(this.plnDfnActnInputDtFltrPath.substring(this.plnDfnActnInputDtFltrPath.length() - 1).equals("]") & plnDfnActnInputDtFltrPath.equals("[")) {
+	        	this.plnDfnActnInputDtFltrPath = this.plnDfnActnInputDtFltrPath+ "," + plnDfnActnInputDtFltrPath;
+	        } else if(plnDfnActnInputDtFltrPath.equals("[") | plnDfnActnInputDtFltrPath.equals("]") | this.plnDfnActnInputDtFltrPath.substring(this.plnDfnActnInputDtFltrPath.length() - 1).equals("[")) {
+	        	this.plnDfnActnInputDtFltrPath = this.plnDfnActnInputDtFltrPath+plnDfnActnInputDtFltrPath;
+	        } else  {
+	            this.plnDfnActnInputDtFltrPath = this.plnDfnActnInputDtFltrPath+ "," +plnDfnActnInputDtFltrPath;
+	        }
+        }
     }
     
     
@@ -1002,6 +1674,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnInputDtFltrSrchParam = plnDfnActnInputDtFltrSrchParam;
     }
     
+    public void addPlnDfnActnInputDtFltrSrchParam(String plnDfnActnInputDtFltrSrchParam) {
+    	if( plnDfnActnInputDtFltrSrchParam != null ) {
+	    	if( this.plnDfnActnInputDtFltrSrchParam == null ) {
+	        	this.plnDfnActnInputDtFltrSrchParam = plnDfnActnInputDtFltrSrchParam;
+	        } else if(this.plnDfnActnInputDtFltrSrchParam.substring(this.plnDfnActnInputDtFltrSrchParam.length() - 1).equals("]") & plnDfnActnInputDtFltrSrchParam.equals("[")) {
+	        	this.plnDfnActnInputDtFltrSrchParam = this.plnDfnActnInputDtFltrSrchParam+ "," + plnDfnActnInputDtFltrSrchParam;
+	        } else if(plnDfnActnInputDtFltrSrchParam.equals("[") | plnDfnActnInputDtFltrSrchParam.equals("]") | this.plnDfnActnInputDtFltrSrchParam.substring(this.plnDfnActnInputDtFltrSrchParam.length() - 1).equals("[")) {
+	        	this.plnDfnActnInputDtFltrSrchParam = this.plnDfnActnInputDtFltrSrchParam+plnDfnActnInputDtFltrSrchParam;
+	        } else  {
+	            this.plnDfnActnInputDtFltrSrchParam = this.plnDfnActnInputDtFltrSrchParam+ "," +plnDfnActnInputDtFltrSrchParam;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnInputDtFltrVlDtTimeTyp() {
@@ -1010,6 +1696,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnInputDtFltrVlDtTimeTyp(String plnDfnActnInputDtFltrVlDtTimeTyp) {
         this.plnDfnActnInputDtFltrVlDtTimeTyp = plnDfnActnInputDtFltrVlDtTimeTyp;
+    }
+    
+    public void addPlnDfnActnInputDtFltrVlDtTimeTyp(String plnDfnActnInputDtFltrVlDtTimeTyp) {
+    	if( plnDfnActnInputDtFltrVlDtTimeTyp != null ) {
+	    	if( this.plnDfnActnInputDtFltrVlDtTimeTyp == null ) {
+	        	this.plnDfnActnInputDtFltrVlDtTimeTyp = plnDfnActnInputDtFltrVlDtTimeTyp;
+	        } else if(this.plnDfnActnInputDtFltrVlDtTimeTyp.substring(this.plnDfnActnInputDtFltrVlDtTimeTyp.length() - 1).equals("]") & plnDfnActnInputDtFltrVlDtTimeTyp.equals("[")) {
+	        	this.plnDfnActnInputDtFltrVlDtTimeTyp = this.plnDfnActnInputDtFltrVlDtTimeTyp+ "," + plnDfnActnInputDtFltrVlDtTimeTyp;
+	        } else if(plnDfnActnInputDtFltrVlDtTimeTyp.equals("[") | plnDfnActnInputDtFltrVlDtTimeTyp.equals("]") | this.plnDfnActnInputDtFltrVlDtTimeTyp.substring(this.plnDfnActnInputDtFltrVlDtTimeTyp.length() - 1).equals("[")) {
+	        	this.plnDfnActnInputDtFltrVlDtTimeTyp = this.plnDfnActnInputDtFltrVlDtTimeTyp+plnDfnActnInputDtFltrVlDtTimeTyp;
+	        } else  {
+	            this.plnDfnActnInputDtFltrVlDtTimeTyp = this.plnDfnActnInputDtFltrVlDtTimeTyp+ "," +plnDfnActnInputDtFltrVlDtTimeTyp;
+	        }
+        }
     }
     
     
@@ -1022,6 +1722,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnInputDtFltrVlDurationCd = plnDfnActnInputDtFltrVlDurationCd;
     }
     
+    public void addPlnDfnActnInputDtFltrVlDurationCd(String plnDfnActnInputDtFltrVlDurationCd) {
+    	if( plnDfnActnInputDtFltrVlDurationCd != null ) {
+	    	if( this.plnDfnActnInputDtFltrVlDurationCd == null ) {
+	        	this.plnDfnActnInputDtFltrVlDurationCd = plnDfnActnInputDtFltrVlDurationCd;
+	        } else if(this.plnDfnActnInputDtFltrVlDurationCd.substring(this.plnDfnActnInputDtFltrVlDurationCd.length() - 1).equals("]") & plnDfnActnInputDtFltrVlDurationCd.equals("[")) {
+	        	this.plnDfnActnInputDtFltrVlDurationCd = this.plnDfnActnInputDtFltrVlDurationCd+ "," + plnDfnActnInputDtFltrVlDurationCd;
+	        } else if(plnDfnActnInputDtFltrVlDurationCd.equals("[") | plnDfnActnInputDtFltrVlDurationCd.equals("]") | this.plnDfnActnInputDtFltrVlDurationCd.substring(this.plnDfnActnInputDtFltrVlDurationCd.length() - 1).equals("[")) {
+	        	this.plnDfnActnInputDtFltrVlDurationCd = this.plnDfnActnInputDtFltrVlDurationCd+plnDfnActnInputDtFltrVlDurationCd;
+	        } else  {
+	            this.plnDfnActnInputDtFltrVlDurationCd = this.plnDfnActnInputDtFltrVlDurationCd+ "," +plnDfnActnInputDtFltrVlDurationCd;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnInputDtFltrVlDurationCmprtr() {
@@ -1030,6 +1744,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnInputDtFltrVlDurationCmprtr(String plnDfnActnInputDtFltrVlDurationCmprtr) {
         this.plnDfnActnInputDtFltrVlDurationCmprtr = plnDfnActnInputDtFltrVlDurationCmprtr;
+    }
+    
+    public void addPlnDfnActnInputDtFltrVlDurationCmprtr(String plnDfnActnInputDtFltrVlDurationCmprtr) {
+    	if( plnDfnActnInputDtFltrVlDurationCmprtr != null ) {
+	    	if( this.plnDfnActnInputDtFltrVlDurationCmprtr == null ) {
+	        	this.plnDfnActnInputDtFltrVlDurationCmprtr = plnDfnActnInputDtFltrVlDurationCmprtr;
+	        } else if(this.plnDfnActnInputDtFltrVlDurationCmprtr.substring(this.plnDfnActnInputDtFltrVlDurationCmprtr.length() - 1).equals("]") & plnDfnActnInputDtFltrVlDurationCmprtr.equals("[")) {
+	        	this.plnDfnActnInputDtFltrVlDurationCmprtr = this.plnDfnActnInputDtFltrVlDurationCmprtr+ "," + plnDfnActnInputDtFltrVlDurationCmprtr;
+	        } else if(plnDfnActnInputDtFltrVlDurationCmprtr.equals("[") | plnDfnActnInputDtFltrVlDurationCmprtr.equals("]") | this.plnDfnActnInputDtFltrVlDurationCmprtr.substring(this.plnDfnActnInputDtFltrVlDurationCmprtr.length() - 1).equals("[")) {
+	        	this.plnDfnActnInputDtFltrVlDurationCmprtr = this.plnDfnActnInputDtFltrVlDurationCmprtr+plnDfnActnInputDtFltrVlDurationCmprtr;
+	        } else  {
+	            this.plnDfnActnInputDtFltrVlDurationCmprtr = this.plnDfnActnInputDtFltrVlDurationCmprtr+ "," +plnDfnActnInputDtFltrVlDurationCmprtr;
+	        }
+        }
     }
     
     
@@ -1042,6 +1770,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnInputDtFltrVlDurationSys = plnDfnActnInputDtFltrVlDurationSys;
     }
     
+    public void addPlnDfnActnInputDtFltrVlDurationSys(String plnDfnActnInputDtFltrVlDurationSys) {
+    	if( plnDfnActnInputDtFltrVlDurationSys != null ) {
+	    	if( this.plnDfnActnInputDtFltrVlDurationSys == null ) {
+	        	this.plnDfnActnInputDtFltrVlDurationSys = plnDfnActnInputDtFltrVlDurationSys;
+	        } else if(this.plnDfnActnInputDtFltrVlDurationSys.substring(this.plnDfnActnInputDtFltrVlDurationSys.length() - 1).equals("]") & plnDfnActnInputDtFltrVlDurationSys.equals("[")) {
+	        	this.plnDfnActnInputDtFltrVlDurationSys = this.plnDfnActnInputDtFltrVlDurationSys+ "," + plnDfnActnInputDtFltrVlDurationSys;
+	        } else if(plnDfnActnInputDtFltrVlDurationSys.equals("[") | plnDfnActnInputDtFltrVlDurationSys.equals("]") | this.plnDfnActnInputDtFltrVlDurationSys.substring(this.plnDfnActnInputDtFltrVlDurationSys.length() - 1).equals("[")) {
+	        	this.plnDfnActnInputDtFltrVlDurationSys = this.plnDfnActnInputDtFltrVlDurationSys+plnDfnActnInputDtFltrVlDurationSys;
+	        } else  {
+	            this.plnDfnActnInputDtFltrVlDurationSys = this.plnDfnActnInputDtFltrVlDurationSys+ "," +plnDfnActnInputDtFltrVlDurationSys;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnInputDtFltrVlDurationUnt() {
@@ -1050,6 +1792,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnInputDtFltrVlDurationUnt(String plnDfnActnInputDtFltrVlDurationUnt) {
         this.plnDfnActnInputDtFltrVlDurationUnt = plnDfnActnInputDtFltrVlDurationUnt;
+    }
+    
+    public void addPlnDfnActnInputDtFltrVlDurationUnt(String plnDfnActnInputDtFltrVlDurationUnt) {
+    	if( plnDfnActnInputDtFltrVlDurationUnt != null ) {
+	    	if( this.plnDfnActnInputDtFltrVlDurationUnt == null ) {
+	        	this.plnDfnActnInputDtFltrVlDurationUnt = plnDfnActnInputDtFltrVlDurationUnt;
+	        } else if(this.plnDfnActnInputDtFltrVlDurationUnt.substring(this.plnDfnActnInputDtFltrVlDurationUnt.length() - 1).equals("]") & plnDfnActnInputDtFltrVlDurationUnt.equals("[")) {
+	        	this.plnDfnActnInputDtFltrVlDurationUnt = this.plnDfnActnInputDtFltrVlDurationUnt+ "," + plnDfnActnInputDtFltrVlDurationUnt;
+	        } else if(plnDfnActnInputDtFltrVlDurationUnt.equals("[") | plnDfnActnInputDtFltrVlDurationUnt.equals("]") | this.plnDfnActnInputDtFltrVlDurationUnt.substring(this.plnDfnActnInputDtFltrVlDurationUnt.length() - 1).equals("[")) {
+	        	this.plnDfnActnInputDtFltrVlDurationUnt = this.plnDfnActnInputDtFltrVlDurationUnt+plnDfnActnInputDtFltrVlDurationUnt;
+	        } else  {
+	            this.plnDfnActnInputDtFltrVlDurationUnt = this.plnDfnActnInputDtFltrVlDurationUnt+ "," +plnDfnActnInputDtFltrVlDurationUnt;
+	        }
+        }
     }
     
     
@@ -1062,6 +1818,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnInputDtFltrVlDurationVl = plnDfnActnInputDtFltrVlDurationVl;
     }
     
+    public void addPlnDfnActnInputDtFltrVlDurationVl(String plnDfnActnInputDtFltrVlDurationVl) {
+    	if( plnDfnActnInputDtFltrVlDurationVl != null ) {
+	    	if( this.plnDfnActnInputDtFltrVlDurationVl == null ) {
+	        	this.plnDfnActnInputDtFltrVlDurationVl = plnDfnActnInputDtFltrVlDurationVl;
+	        } else if(this.plnDfnActnInputDtFltrVlDurationVl.substring(this.plnDfnActnInputDtFltrVlDurationVl.length() - 1).equals("]") & plnDfnActnInputDtFltrVlDurationVl.equals("[")) {
+	        	this.plnDfnActnInputDtFltrVlDurationVl = this.plnDfnActnInputDtFltrVlDurationVl+ "," + plnDfnActnInputDtFltrVlDurationVl;
+	        } else if(plnDfnActnInputDtFltrVlDurationVl.equals("[") | plnDfnActnInputDtFltrVlDurationVl.equals("]") | this.plnDfnActnInputDtFltrVlDurationVl.substring(this.plnDfnActnInputDtFltrVlDurationVl.length() - 1).equals("[")) {
+	        	this.plnDfnActnInputDtFltrVlDurationVl = this.plnDfnActnInputDtFltrVlDurationVl+plnDfnActnInputDtFltrVlDurationVl;
+	        } else  {
+	            this.plnDfnActnInputDtFltrVlDurationVl = this.plnDfnActnInputDtFltrVlDurationVl+ "," +plnDfnActnInputDtFltrVlDurationVl;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnInputDtFltrVlPrdEnd() {
@@ -1070,6 +1840,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnInputDtFltrVlPrdEnd(String plnDfnActnInputDtFltrVlPrdEnd) {
         this.plnDfnActnInputDtFltrVlPrdEnd = plnDfnActnInputDtFltrVlPrdEnd;
+    }
+    
+    public void addPlnDfnActnInputDtFltrVlPrdEnd(String plnDfnActnInputDtFltrVlPrdEnd) {
+    	if( plnDfnActnInputDtFltrVlPrdEnd != null ) {
+	    	if( this.plnDfnActnInputDtFltrVlPrdEnd == null ) {
+	        	this.plnDfnActnInputDtFltrVlPrdEnd = plnDfnActnInputDtFltrVlPrdEnd;
+	        } else if(this.plnDfnActnInputDtFltrVlPrdEnd.substring(this.plnDfnActnInputDtFltrVlPrdEnd.length() - 1).equals("]") & plnDfnActnInputDtFltrVlPrdEnd.equals("[")) {
+	        	this.plnDfnActnInputDtFltrVlPrdEnd = this.plnDfnActnInputDtFltrVlPrdEnd+ "," + plnDfnActnInputDtFltrVlPrdEnd;
+	        } else if(plnDfnActnInputDtFltrVlPrdEnd.equals("[") | plnDfnActnInputDtFltrVlPrdEnd.equals("]") | this.plnDfnActnInputDtFltrVlPrdEnd.substring(this.plnDfnActnInputDtFltrVlPrdEnd.length() - 1).equals("[")) {
+	        	this.plnDfnActnInputDtFltrVlPrdEnd = this.plnDfnActnInputDtFltrVlPrdEnd+plnDfnActnInputDtFltrVlPrdEnd;
+	        } else  {
+	            this.plnDfnActnInputDtFltrVlPrdEnd = this.plnDfnActnInputDtFltrVlPrdEnd+ "," +plnDfnActnInputDtFltrVlPrdEnd;
+	        }
+        }
     }
     
     
@@ -1082,6 +1866,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnInputDtFltrVlPrdStrt = plnDfnActnInputDtFltrVlPrdStrt;
     }
     
+    public void addPlnDfnActnInputDtFltrVlPrdStrt(String plnDfnActnInputDtFltrVlPrdStrt) {
+    	if( plnDfnActnInputDtFltrVlPrdStrt != null ) {
+	    	if( this.plnDfnActnInputDtFltrVlPrdStrt == null ) {
+	        	this.plnDfnActnInputDtFltrVlPrdStrt = plnDfnActnInputDtFltrVlPrdStrt;
+	        } else if(this.plnDfnActnInputDtFltrVlPrdStrt.substring(this.plnDfnActnInputDtFltrVlPrdStrt.length() - 1).equals("]") & plnDfnActnInputDtFltrVlPrdStrt.equals("[")) {
+	        	this.plnDfnActnInputDtFltrVlPrdStrt = this.plnDfnActnInputDtFltrVlPrdStrt+ "," + plnDfnActnInputDtFltrVlPrdStrt;
+	        } else if(plnDfnActnInputDtFltrVlPrdStrt.equals("[") | plnDfnActnInputDtFltrVlPrdStrt.equals("]") | this.plnDfnActnInputDtFltrVlPrdStrt.substring(this.plnDfnActnInputDtFltrVlPrdStrt.length() - 1).equals("[")) {
+	        	this.plnDfnActnInputDtFltrVlPrdStrt = this.plnDfnActnInputDtFltrVlPrdStrt+plnDfnActnInputDtFltrVlPrdStrt;
+	        } else  {
+	            this.plnDfnActnInputDtFltrVlPrdStrt = this.plnDfnActnInputDtFltrVlPrdStrt+ "," +plnDfnActnInputDtFltrVlPrdStrt;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnInputLmt() {
@@ -1090,6 +1888,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnInputLmt(String plnDfnActnInputLmt) {
         this.plnDfnActnInputLmt = plnDfnActnInputLmt;
+    }
+    
+    public void addPlnDfnActnInputLmt(String plnDfnActnInputLmt) {
+    	if( plnDfnActnInputLmt != null ) {
+	    	if( this.plnDfnActnInputLmt == null ) {
+	        	this.plnDfnActnInputLmt = plnDfnActnInputLmt;
+	        } else if(this.plnDfnActnInputLmt.substring(this.plnDfnActnInputLmt.length() - 1).equals("]") & plnDfnActnInputLmt.equals("[")) {
+	        	this.plnDfnActnInputLmt = this.plnDfnActnInputLmt+ "," + plnDfnActnInputLmt;
+	        } else if(plnDfnActnInputLmt.equals("[") | plnDfnActnInputLmt.equals("]") | this.plnDfnActnInputLmt.substring(this.plnDfnActnInputLmt.length() - 1).equals("[")) {
+	        	this.plnDfnActnInputLmt = this.plnDfnActnInputLmt+plnDfnActnInputLmt;
+	        } else  {
+	            this.plnDfnActnInputLmt = this.plnDfnActnInputLmt+ "," +plnDfnActnInputLmt;
+	        }
+        }
     }
     
     
@@ -1102,6 +1914,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnInputMustSupport = plnDfnActnInputMustSupport;
     }
     
+    public void addPlnDfnActnInputMustSupport(String plnDfnActnInputMustSupport) {
+    	if( plnDfnActnInputMustSupport != null ) {
+	    	if( this.plnDfnActnInputMustSupport == null ) {
+	        	this.plnDfnActnInputMustSupport = plnDfnActnInputMustSupport;
+	        } else if(this.plnDfnActnInputMustSupport.substring(this.plnDfnActnInputMustSupport.length() - 1).equals("]") & plnDfnActnInputMustSupport.equals("[")) {
+	        	this.plnDfnActnInputMustSupport = this.plnDfnActnInputMustSupport+ "," + plnDfnActnInputMustSupport;
+	        } else if(plnDfnActnInputMustSupport.equals("[") | plnDfnActnInputMustSupport.equals("]") | this.plnDfnActnInputMustSupport.substring(this.plnDfnActnInputMustSupport.length() - 1).equals("[")) {
+	        	this.plnDfnActnInputMustSupport = this.plnDfnActnInputMustSupport+plnDfnActnInputMustSupport;
+	        } else  {
+	            this.plnDfnActnInputMustSupport = this.plnDfnActnInputMustSupport+ "," +plnDfnActnInputMustSupport;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnInputProfile() {
@@ -1110,6 +1936,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnInputProfile(String plnDfnActnInputProfile) {
         this.plnDfnActnInputProfile = plnDfnActnInputProfile;
+    }
+    
+    public void addPlnDfnActnInputProfile(String plnDfnActnInputProfile) {
+    	if( plnDfnActnInputProfile != null ) {
+	    	if( this.plnDfnActnInputProfile == null ) {
+	        	this.plnDfnActnInputProfile = plnDfnActnInputProfile;
+	        } else if(this.plnDfnActnInputProfile.substring(this.plnDfnActnInputProfile.length() - 1).equals("]") & plnDfnActnInputProfile.equals("[")) {
+	        	this.plnDfnActnInputProfile = this.plnDfnActnInputProfile+ "," + plnDfnActnInputProfile;
+	        } else if(plnDfnActnInputProfile.equals("[") | plnDfnActnInputProfile.equals("]") | this.plnDfnActnInputProfile.substring(this.plnDfnActnInputProfile.length() - 1).equals("[")) {
+	        	this.plnDfnActnInputProfile = this.plnDfnActnInputProfile+plnDfnActnInputProfile;
+	        } else  {
+	            this.plnDfnActnInputProfile = this.plnDfnActnInputProfile+ "," +plnDfnActnInputProfile;
+	        }
+        }
     }
     
     
@@ -1122,6 +1962,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnInputSortDirection = plnDfnActnInputSortDirection;
     }
     
+    public void addPlnDfnActnInputSortDirection(String plnDfnActnInputSortDirection) {
+    	if( plnDfnActnInputSortDirection != null ) {
+	    	if( this.plnDfnActnInputSortDirection == null ) {
+	        	this.plnDfnActnInputSortDirection = plnDfnActnInputSortDirection;
+	        } else if(this.plnDfnActnInputSortDirection.substring(this.plnDfnActnInputSortDirection.length() - 1).equals("]") & plnDfnActnInputSortDirection.equals("[")) {
+	        	this.plnDfnActnInputSortDirection = this.plnDfnActnInputSortDirection+ "," + plnDfnActnInputSortDirection;
+	        } else if(plnDfnActnInputSortDirection.equals("[") | plnDfnActnInputSortDirection.equals("]") | this.plnDfnActnInputSortDirection.substring(this.plnDfnActnInputSortDirection.length() - 1).equals("[")) {
+	        	this.plnDfnActnInputSortDirection = this.plnDfnActnInputSortDirection+plnDfnActnInputSortDirection;
+	        } else  {
+	            this.plnDfnActnInputSortDirection = this.plnDfnActnInputSortDirection+ "," +plnDfnActnInputSortDirection;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnInputSortPath() {
@@ -1130,6 +1984,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnInputSortPath(String plnDfnActnInputSortPath) {
         this.plnDfnActnInputSortPath = plnDfnActnInputSortPath;
+    }
+    
+    public void addPlnDfnActnInputSortPath(String plnDfnActnInputSortPath) {
+    	if( plnDfnActnInputSortPath != null ) {
+	    	if( this.plnDfnActnInputSortPath == null ) {
+	        	this.plnDfnActnInputSortPath = plnDfnActnInputSortPath;
+	        } else if(this.plnDfnActnInputSortPath.substring(this.plnDfnActnInputSortPath.length() - 1).equals("]") & plnDfnActnInputSortPath.equals("[")) {
+	        	this.plnDfnActnInputSortPath = this.plnDfnActnInputSortPath+ "," + plnDfnActnInputSortPath;
+	        } else if(plnDfnActnInputSortPath.equals("[") | plnDfnActnInputSortPath.equals("]") | this.plnDfnActnInputSortPath.substring(this.plnDfnActnInputSortPath.length() - 1).equals("[")) {
+	        	this.plnDfnActnInputSortPath = this.plnDfnActnInputSortPath+plnDfnActnInputSortPath;
+	        } else  {
+	            this.plnDfnActnInputSortPath = this.plnDfnActnInputSortPath+ "," +plnDfnActnInputSortPath;
+	        }
+        }
     }
     
     
@@ -1142,6 +2010,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnInputSbjctCdbleCncptCdgCd = plnDfnActnInputSbjctCdbleCncptCdgCd;
     }
     
+    public void addPlnDfnActnInputSbjctCdbleCncptCdgCd(String plnDfnActnInputSbjctCdbleCncptCdgCd) {
+    	if( plnDfnActnInputSbjctCdbleCncptCdgCd != null ) {
+	    	if( this.plnDfnActnInputSbjctCdbleCncptCdgCd == null ) {
+	        	this.plnDfnActnInputSbjctCdbleCncptCdgCd = plnDfnActnInputSbjctCdbleCncptCdgCd;
+	        } else if(this.plnDfnActnInputSbjctCdbleCncptCdgCd.substring(this.plnDfnActnInputSbjctCdbleCncptCdgCd.length() - 1).equals("]") & plnDfnActnInputSbjctCdbleCncptCdgCd.equals("[")) {
+	        	this.plnDfnActnInputSbjctCdbleCncptCdgCd = this.plnDfnActnInputSbjctCdbleCncptCdgCd+ "," + plnDfnActnInputSbjctCdbleCncptCdgCd;
+	        } else if(plnDfnActnInputSbjctCdbleCncptCdgCd.equals("[") | plnDfnActnInputSbjctCdbleCncptCdgCd.equals("]") | this.plnDfnActnInputSbjctCdbleCncptCdgCd.substring(this.plnDfnActnInputSbjctCdbleCncptCdgCd.length() - 1).equals("[")) {
+	        	this.plnDfnActnInputSbjctCdbleCncptCdgCd = this.plnDfnActnInputSbjctCdbleCncptCdgCd+plnDfnActnInputSbjctCdbleCncptCdgCd;
+	        } else  {
+	            this.plnDfnActnInputSbjctCdbleCncptCdgCd = this.plnDfnActnInputSbjctCdbleCncptCdgCd+ "," +plnDfnActnInputSbjctCdbleCncptCdgCd;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnInputSbjctCdbleCncptCdgDsply() {
@@ -1150,6 +2032,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnInputSbjctCdbleCncptCdgDsply(String plnDfnActnInputSbjctCdbleCncptCdgDsply) {
         this.plnDfnActnInputSbjctCdbleCncptCdgDsply = plnDfnActnInputSbjctCdbleCncptCdgDsply;
+    }
+    
+    public void addPlnDfnActnInputSbjctCdbleCncptCdgDsply(String plnDfnActnInputSbjctCdbleCncptCdgDsply) {
+    	if( plnDfnActnInputSbjctCdbleCncptCdgDsply != null ) {
+	    	if( this.plnDfnActnInputSbjctCdbleCncptCdgDsply == null ) {
+	        	this.plnDfnActnInputSbjctCdbleCncptCdgDsply = plnDfnActnInputSbjctCdbleCncptCdgDsply;
+	        } else if(this.plnDfnActnInputSbjctCdbleCncptCdgDsply.substring(this.plnDfnActnInputSbjctCdbleCncptCdgDsply.length() - 1).equals("]") & plnDfnActnInputSbjctCdbleCncptCdgDsply.equals("[")) {
+	        	this.plnDfnActnInputSbjctCdbleCncptCdgDsply = this.plnDfnActnInputSbjctCdbleCncptCdgDsply+ "," + plnDfnActnInputSbjctCdbleCncptCdgDsply;
+	        } else if(plnDfnActnInputSbjctCdbleCncptCdgDsply.equals("[") | plnDfnActnInputSbjctCdbleCncptCdgDsply.equals("]") | this.plnDfnActnInputSbjctCdbleCncptCdgDsply.substring(this.plnDfnActnInputSbjctCdbleCncptCdgDsply.length() - 1).equals("[")) {
+	        	this.plnDfnActnInputSbjctCdbleCncptCdgDsply = this.plnDfnActnInputSbjctCdbleCncptCdgDsply+plnDfnActnInputSbjctCdbleCncptCdgDsply;
+	        } else  {
+	            this.plnDfnActnInputSbjctCdbleCncptCdgDsply = this.plnDfnActnInputSbjctCdbleCncptCdgDsply+ "," +plnDfnActnInputSbjctCdbleCncptCdgDsply;
+	        }
+        }
     }
     
     
@@ -1162,6 +2058,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnInputSbjctCdbleCncptCdgSys = plnDfnActnInputSbjctCdbleCncptCdgSys;
     }
     
+    public void addPlnDfnActnInputSbjctCdbleCncptCdgSys(String plnDfnActnInputSbjctCdbleCncptCdgSys) {
+    	if( plnDfnActnInputSbjctCdbleCncptCdgSys != null ) {
+	    	if( this.plnDfnActnInputSbjctCdbleCncptCdgSys == null ) {
+	        	this.plnDfnActnInputSbjctCdbleCncptCdgSys = plnDfnActnInputSbjctCdbleCncptCdgSys;
+	        } else if(this.plnDfnActnInputSbjctCdbleCncptCdgSys.substring(this.plnDfnActnInputSbjctCdbleCncptCdgSys.length() - 1).equals("]") & plnDfnActnInputSbjctCdbleCncptCdgSys.equals("[")) {
+	        	this.plnDfnActnInputSbjctCdbleCncptCdgSys = this.plnDfnActnInputSbjctCdbleCncptCdgSys+ "," + plnDfnActnInputSbjctCdbleCncptCdgSys;
+	        } else if(plnDfnActnInputSbjctCdbleCncptCdgSys.equals("[") | plnDfnActnInputSbjctCdbleCncptCdgSys.equals("]") | this.plnDfnActnInputSbjctCdbleCncptCdgSys.substring(this.plnDfnActnInputSbjctCdbleCncptCdgSys.length() - 1).equals("[")) {
+	        	this.plnDfnActnInputSbjctCdbleCncptCdgSys = this.plnDfnActnInputSbjctCdbleCncptCdgSys+plnDfnActnInputSbjctCdbleCncptCdgSys;
+	        } else  {
+	            this.plnDfnActnInputSbjctCdbleCncptCdgSys = this.plnDfnActnInputSbjctCdbleCncptCdgSys+ "," +plnDfnActnInputSbjctCdbleCncptCdgSys;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnInputSbjctCdbleCncptCdgUsrSltd() {
@@ -1170,6 +2080,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnInputSbjctCdbleCncptCdgUsrSltd(String plnDfnActnInputSbjctCdbleCncptCdgUsrSltd) {
         this.plnDfnActnInputSbjctCdbleCncptCdgUsrSltd = plnDfnActnInputSbjctCdbleCncptCdgUsrSltd;
+    }
+    
+    public void addPlnDfnActnInputSbjctCdbleCncptCdgUsrSltd(String plnDfnActnInputSbjctCdbleCncptCdgUsrSltd) {
+    	if( plnDfnActnInputSbjctCdbleCncptCdgUsrSltd != null ) {
+	    	if( this.plnDfnActnInputSbjctCdbleCncptCdgUsrSltd == null ) {
+	        	this.plnDfnActnInputSbjctCdbleCncptCdgUsrSltd = plnDfnActnInputSbjctCdbleCncptCdgUsrSltd;
+	        } else if(this.plnDfnActnInputSbjctCdbleCncptCdgUsrSltd.substring(this.plnDfnActnInputSbjctCdbleCncptCdgUsrSltd.length() - 1).equals("]") & plnDfnActnInputSbjctCdbleCncptCdgUsrSltd.equals("[")) {
+	        	this.plnDfnActnInputSbjctCdbleCncptCdgUsrSltd = this.plnDfnActnInputSbjctCdbleCncptCdgUsrSltd+ "," + plnDfnActnInputSbjctCdbleCncptCdgUsrSltd;
+	        } else if(plnDfnActnInputSbjctCdbleCncptCdgUsrSltd.equals("[") | plnDfnActnInputSbjctCdbleCncptCdgUsrSltd.equals("]") | this.plnDfnActnInputSbjctCdbleCncptCdgUsrSltd.substring(this.plnDfnActnInputSbjctCdbleCncptCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.plnDfnActnInputSbjctCdbleCncptCdgUsrSltd = this.plnDfnActnInputSbjctCdbleCncptCdgUsrSltd+plnDfnActnInputSbjctCdbleCncptCdgUsrSltd;
+	        } else  {
+	            this.plnDfnActnInputSbjctCdbleCncptCdgUsrSltd = this.plnDfnActnInputSbjctCdbleCncptCdgUsrSltd+ "," +plnDfnActnInputSbjctCdbleCncptCdgUsrSltd;
+	        }
+        }
     }
     
     
@@ -1182,6 +2106,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnInputSbjctCdbleCncptCdgVrsn = plnDfnActnInputSbjctCdbleCncptCdgVrsn;
     }
     
+    public void addPlnDfnActnInputSbjctCdbleCncptCdgVrsn(String plnDfnActnInputSbjctCdbleCncptCdgVrsn) {
+    	if( plnDfnActnInputSbjctCdbleCncptCdgVrsn != null ) {
+	    	if( this.plnDfnActnInputSbjctCdbleCncptCdgVrsn == null ) {
+	        	this.plnDfnActnInputSbjctCdbleCncptCdgVrsn = plnDfnActnInputSbjctCdbleCncptCdgVrsn;
+	        } else if(this.plnDfnActnInputSbjctCdbleCncptCdgVrsn.substring(this.plnDfnActnInputSbjctCdbleCncptCdgVrsn.length() - 1).equals("]") & plnDfnActnInputSbjctCdbleCncptCdgVrsn.equals("[")) {
+	        	this.plnDfnActnInputSbjctCdbleCncptCdgVrsn = this.plnDfnActnInputSbjctCdbleCncptCdgVrsn+ "," + plnDfnActnInputSbjctCdbleCncptCdgVrsn;
+	        } else if(plnDfnActnInputSbjctCdbleCncptCdgVrsn.equals("[") | plnDfnActnInputSbjctCdbleCncptCdgVrsn.equals("]") | this.plnDfnActnInputSbjctCdbleCncptCdgVrsn.substring(this.plnDfnActnInputSbjctCdbleCncptCdgVrsn.length() - 1).equals("[")) {
+	        	this.plnDfnActnInputSbjctCdbleCncptCdgVrsn = this.plnDfnActnInputSbjctCdbleCncptCdgVrsn+plnDfnActnInputSbjctCdbleCncptCdgVrsn;
+	        } else  {
+	            this.plnDfnActnInputSbjctCdbleCncptCdgVrsn = this.plnDfnActnInputSbjctCdbleCncptCdgVrsn+ "," +plnDfnActnInputSbjctCdbleCncptCdgVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnInputSbjctCdbleCncptTxt() {
@@ -1190,6 +2128,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnInputSbjctCdbleCncptTxt(String plnDfnActnInputSbjctCdbleCncptTxt) {
         this.plnDfnActnInputSbjctCdbleCncptTxt = plnDfnActnInputSbjctCdbleCncptTxt;
+    }
+    
+    public void addPlnDfnActnInputSbjctCdbleCncptTxt(String plnDfnActnInputSbjctCdbleCncptTxt) {
+    	if( plnDfnActnInputSbjctCdbleCncptTxt != null ) {
+	    	if( this.plnDfnActnInputSbjctCdbleCncptTxt == null ) {
+	        	this.plnDfnActnInputSbjctCdbleCncptTxt = plnDfnActnInputSbjctCdbleCncptTxt;
+	        } else if(this.plnDfnActnInputSbjctCdbleCncptTxt.substring(this.plnDfnActnInputSbjctCdbleCncptTxt.length() - 1).equals("]") & plnDfnActnInputSbjctCdbleCncptTxt.equals("[")) {
+	        	this.plnDfnActnInputSbjctCdbleCncptTxt = this.plnDfnActnInputSbjctCdbleCncptTxt+ "," + plnDfnActnInputSbjctCdbleCncptTxt;
+	        } else if(plnDfnActnInputSbjctCdbleCncptTxt.equals("[") | plnDfnActnInputSbjctCdbleCncptTxt.equals("]") | this.plnDfnActnInputSbjctCdbleCncptTxt.substring(this.plnDfnActnInputSbjctCdbleCncptTxt.length() - 1).equals("[")) {
+	        	this.plnDfnActnInputSbjctCdbleCncptTxt = this.plnDfnActnInputSbjctCdbleCncptTxt+plnDfnActnInputSbjctCdbleCncptTxt;
+	        } else  {
+	            this.plnDfnActnInputSbjctCdbleCncptTxt = this.plnDfnActnInputSbjctCdbleCncptTxt+ "," +plnDfnActnInputSbjctCdbleCncptTxt;
+	        }
+        }
     }
     
     
@@ -1202,6 +2154,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnInputSbjctRfrnc = plnDfnActnInputSbjctRfrnc;
     }
     
+    public void addPlnDfnActnInputSbjctRfrnc(String plnDfnActnInputSbjctRfrnc) {
+    	if( plnDfnActnInputSbjctRfrnc != null ) {
+	    	if( this.plnDfnActnInputSbjctRfrnc == null ) {
+	        	this.plnDfnActnInputSbjctRfrnc = plnDfnActnInputSbjctRfrnc;
+	        } else if(this.plnDfnActnInputSbjctRfrnc.substring(this.plnDfnActnInputSbjctRfrnc.length() - 1).equals("]") & plnDfnActnInputSbjctRfrnc.equals("[")) {
+	        	this.plnDfnActnInputSbjctRfrnc = this.plnDfnActnInputSbjctRfrnc+ "," + plnDfnActnInputSbjctRfrnc;
+	        } else if(plnDfnActnInputSbjctRfrnc.equals("[") | plnDfnActnInputSbjctRfrnc.equals("]") | this.plnDfnActnInputSbjctRfrnc.substring(this.plnDfnActnInputSbjctRfrnc.length() - 1).equals("[")) {
+	        	this.plnDfnActnInputSbjctRfrnc = this.plnDfnActnInputSbjctRfrnc+plnDfnActnInputSbjctRfrnc;
+	        } else  {
+	            this.plnDfnActnInputSbjctRfrnc = this.plnDfnActnInputSbjctRfrnc+ "," +plnDfnActnInputSbjctRfrnc;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnInputTyp() {
@@ -1210,6 +2176,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnInputTyp(String plnDfnActnInputTyp) {
         this.plnDfnActnInputTyp = plnDfnActnInputTyp;
+    }
+    
+    public void addPlnDfnActnInputTyp(String plnDfnActnInputTyp) {
+    	if( plnDfnActnInputTyp != null ) {
+	    	if( this.plnDfnActnInputTyp == null ) {
+	        	this.plnDfnActnInputTyp = plnDfnActnInputTyp;
+	        } else if(this.plnDfnActnInputTyp.substring(this.plnDfnActnInputTyp.length() - 1).equals("]") & plnDfnActnInputTyp.equals("[")) {
+	        	this.plnDfnActnInputTyp = this.plnDfnActnInputTyp+ "," + plnDfnActnInputTyp;
+	        } else if(plnDfnActnInputTyp.equals("[") | plnDfnActnInputTyp.equals("]") | this.plnDfnActnInputTyp.substring(this.plnDfnActnInputTyp.length() - 1).equals("[")) {
+	        	this.plnDfnActnInputTyp = this.plnDfnActnInputTyp+plnDfnActnInputTyp;
+	        } else  {
+	            this.plnDfnActnInputTyp = this.plnDfnActnInputTyp+ "," +plnDfnActnInputTyp;
+	        }
+        }
     }
     
     
@@ -1222,6 +2202,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnOutputCdFltrCdCd = plnDfnActnOutputCdFltrCdCd;
     }
     
+    public void addPlnDfnActnOutputCdFltrCdCd(String plnDfnActnOutputCdFltrCdCd) {
+    	if( plnDfnActnOutputCdFltrCdCd != null ) {
+	    	if( this.plnDfnActnOutputCdFltrCdCd == null ) {
+	        	this.plnDfnActnOutputCdFltrCdCd = plnDfnActnOutputCdFltrCdCd;
+	        } else if(this.plnDfnActnOutputCdFltrCdCd.substring(this.plnDfnActnOutputCdFltrCdCd.length() - 1).equals("]") & plnDfnActnOutputCdFltrCdCd.equals("[")) {
+	        	this.plnDfnActnOutputCdFltrCdCd = this.plnDfnActnOutputCdFltrCdCd+ "," + plnDfnActnOutputCdFltrCdCd;
+	        } else if(plnDfnActnOutputCdFltrCdCd.equals("[") | plnDfnActnOutputCdFltrCdCd.equals("]") | this.plnDfnActnOutputCdFltrCdCd.substring(this.plnDfnActnOutputCdFltrCdCd.length() - 1).equals("[")) {
+	        	this.plnDfnActnOutputCdFltrCdCd = this.plnDfnActnOutputCdFltrCdCd+plnDfnActnOutputCdFltrCdCd;
+	        } else  {
+	            this.plnDfnActnOutputCdFltrCdCd = this.plnDfnActnOutputCdFltrCdCd+ "," +plnDfnActnOutputCdFltrCdCd;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnOutputCdFltrCdDsply() {
@@ -1230,6 +2224,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnOutputCdFltrCdDsply(String plnDfnActnOutputCdFltrCdDsply) {
         this.plnDfnActnOutputCdFltrCdDsply = plnDfnActnOutputCdFltrCdDsply;
+    }
+    
+    public void addPlnDfnActnOutputCdFltrCdDsply(String plnDfnActnOutputCdFltrCdDsply) {
+    	if( plnDfnActnOutputCdFltrCdDsply != null ) {
+	    	if( this.plnDfnActnOutputCdFltrCdDsply == null ) {
+	        	this.plnDfnActnOutputCdFltrCdDsply = plnDfnActnOutputCdFltrCdDsply;
+	        } else if(this.plnDfnActnOutputCdFltrCdDsply.substring(this.plnDfnActnOutputCdFltrCdDsply.length() - 1).equals("]") & plnDfnActnOutputCdFltrCdDsply.equals("[")) {
+	        	this.plnDfnActnOutputCdFltrCdDsply = this.plnDfnActnOutputCdFltrCdDsply+ "," + plnDfnActnOutputCdFltrCdDsply;
+	        } else if(plnDfnActnOutputCdFltrCdDsply.equals("[") | plnDfnActnOutputCdFltrCdDsply.equals("]") | this.plnDfnActnOutputCdFltrCdDsply.substring(this.plnDfnActnOutputCdFltrCdDsply.length() - 1).equals("[")) {
+	        	this.plnDfnActnOutputCdFltrCdDsply = this.plnDfnActnOutputCdFltrCdDsply+plnDfnActnOutputCdFltrCdDsply;
+	        } else  {
+	            this.plnDfnActnOutputCdFltrCdDsply = this.plnDfnActnOutputCdFltrCdDsply+ "," +plnDfnActnOutputCdFltrCdDsply;
+	        }
+        }
     }
     
     
@@ -1242,6 +2250,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnOutputCdFltrCdSys = plnDfnActnOutputCdFltrCdSys;
     }
     
+    public void addPlnDfnActnOutputCdFltrCdSys(String plnDfnActnOutputCdFltrCdSys) {
+    	if( plnDfnActnOutputCdFltrCdSys != null ) {
+	    	if( this.plnDfnActnOutputCdFltrCdSys == null ) {
+	        	this.plnDfnActnOutputCdFltrCdSys = plnDfnActnOutputCdFltrCdSys;
+	        } else if(this.plnDfnActnOutputCdFltrCdSys.substring(this.plnDfnActnOutputCdFltrCdSys.length() - 1).equals("]") & plnDfnActnOutputCdFltrCdSys.equals("[")) {
+	        	this.plnDfnActnOutputCdFltrCdSys = this.plnDfnActnOutputCdFltrCdSys+ "," + plnDfnActnOutputCdFltrCdSys;
+	        } else if(plnDfnActnOutputCdFltrCdSys.equals("[") | plnDfnActnOutputCdFltrCdSys.equals("]") | this.plnDfnActnOutputCdFltrCdSys.substring(this.plnDfnActnOutputCdFltrCdSys.length() - 1).equals("[")) {
+	        	this.plnDfnActnOutputCdFltrCdSys = this.plnDfnActnOutputCdFltrCdSys+plnDfnActnOutputCdFltrCdSys;
+	        } else  {
+	            this.plnDfnActnOutputCdFltrCdSys = this.plnDfnActnOutputCdFltrCdSys+ "," +plnDfnActnOutputCdFltrCdSys;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnOutputCdFltrCdUsrSltd() {
@@ -1250,6 +2272,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnOutputCdFltrCdUsrSltd(String plnDfnActnOutputCdFltrCdUsrSltd) {
         this.plnDfnActnOutputCdFltrCdUsrSltd = plnDfnActnOutputCdFltrCdUsrSltd;
+    }
+    
+    public void addPlnDfnActnOutputCdFltrCdUsrSltd(String plnDfnActnOutputCdFltrCdUsrSltd) {
+    	if( plnDfnActnOutputCdFltrCdUsrSltd != null ) {
+	    	if( this.plnDfnActnOutputCdFltrCdUsrSltd == null ) {
+	        	this.plnDfnActnOutputCdFltrCdUsrSltd = plnDfnActnOutputCdFltrCdUsrSltd;
+	        } else if(this.plnDfnActnOutputCdFltrCdUsrSltd.substring(this.plnDfnActnOutputCdFltrCdUsrSltd.length() - 1).equals("]") & plnDfnActnOutputCdFltrCdUsrSltd.equals("[")) {
+	        	this.plnDfnActnOutputCdFltrCdUsrSltd = this.plnDfnActnOutputCdFltrCdUsrSltd+ "," + plnDfnActnOutputCdFltrCdUsrSltd;
+	        } else if(plnDfnActnOutputCdFltrCdUsrSltd.equals("[") | plnDfnActnOutputCdFltrCdUsrSltd.equals("]") | this.plnDfnActnOutputCdFltrCdUsrSltd.substring(this.plnDfnActnOutputCdFltrCdUsrSltd.length() - 1).equals("[")) {
+	        	this.plnDfnActnOutputCdFltrCdUsrSltd = this.plnDfnActnOutputCdFltrCdUsrSltd+plnDfnActnOutputCdFltrCdUsrSltd;
+	        } else  {
+	            this.plnDfnActnOutputCdFltrCdUsrSltd = this.plnDfnActnOutputCdFltrCdUsrSltd+ "," +plnDfnActnOutputCdFltrCdUsrSltd;
+	        }
+        }
     }
     
     
@@ -1262,6 +2298,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnOutputCdFltrCdVrsn = plnDfnActnOutputCdFltrCdVrsn;
     }
     
+    public void addPlnDfnActnOutputCdFltrCdVrsn(String plnDfnActnOutputCdFltrCdVrsn) {
+    	if( plnDfnActnOutputCdFltrCdVrsn != null ) {
+	    	if( this.plnDfnActnOutputCdFltrCdVrsn == null ) {
+	        	this.plnDfnActnOutputCdFltrCdVrsn = plnDfnActnOutputCdFltrCdVrsn;
+	        } else if(this.plnDfnActnOutputCdFltrCdVrsn.substring(this.plnDfnActnOutputCdFltrCdVrsn.length() - 1).equals("]") & plnDfnActnOutputCdFltrCdVrsn.equals("[")) {
+	        	this.plnDfnActnOutputCdFltrCdVrsn = this.plnDfnActnOutputCdFltrCdVrsn+ "," + plnDfnActnOutputCdFltrCdVrsn;
+	        } else if(plnDfnActnOutputCdFltrCdVrsn.equals("[") | plnDfnActnOutputCdFltrCdVrsn.equals("]") | this.plnDfnActnOutputCdFltrCdVrsn.substring(this.plnDfnActnOutputCdFltrCdVrsn.length() - 1).equals("[")) {
+	        	this.plnDfnActnOutputCdFltrCdVrsn = this.plnDfnActnOutputCdFltrCdVrsn+plnDfnActnOutputCdFltrCdVrsn;
+	        } else  {
+	            this.plnDfnActnOutputCdFltrCdVrsn = this.plnDfnActnOutputCdFltrCdVrsn+ "," +plnDfnActnOutputCdFltrCdVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnOutputCdFltrPath() {
@@ -1270,6 +2320,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnOutputCdFltrPath(String plnDfnActnOutputCdFltrPath) {
         this.plnDfnActnOutputCdFltrPath = plnDfnActnOutputCdFltrPath;
+    }
+    
+    public void addPlnDfnActnOutputCdFltrPath(String plnDfnActnOutputCdFltrPath) {
+    	if( plnDfnActnOutputCdFltrPath != null ) {
+	    	if( this.plnDfnActnOutputCdFltrPath == null ) {
+	        	this.plnDfnActnOutputCdFltrPath = plnDfnActnOutputCdFltrPath;
+	        } else if(this.plnDfnActnOutputCdFltrPath.substring(this.plnDfnActnOutputCdFltrPath.length() - 1).equals("]") & plnDfnActnOutputCdFltrPath.equals("[")) {
+	        	this.plnDfnActnOutputCdFltrPath = this.plnDfnActnOutputCdFltrPath+ "," + plnDfnActnOutputCdFltrPath;
+	        } else if(plnDfnActnOutputCdFltrPath.equals("[") | plnDfnActnOutputCdFltrPath.equals("]") | this.plnDfnActnOutputCdFltrPath.substring(this.plnDfnActnOutputCdFltrPath.length() - 1).equals("[")) {
+	        	this.plnDfnActnOutputCdFltrPath = this.plnDfnActnOutputCdFltrPath+plnDfnActnOutputCdFltrPath;
+	        } else  {
+	            this.plnDfnActnOutputCdFltrPath = this.plnDfnActnOutputCdFltrPath+ "," +plnDfnActnOutputCdFltrPath;
+	        }
+        }
     }
     
     
@@ -1282,6 +2346,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnOutputCdFltrSrchParam = plnDfnActnOutputCdFltrSrchParam;
     }
     
+    public void addPlnDfnActnOutputCdFltrSrchParam(String plnDfnActnOutputCdFltrSrchParam) {
+    	if( plnDfnActnOutputCdFltrSrchParam != null ) {
+	    	if( this.plnDfnActnOutputCdFltrSrchParam == null ) {
+	        	this.plnDfnActnOutputCdFltrSrchParam = plnDfnActnOutputCdFltrSrchParam;
+	        } else if(this.plnDfnActnOutputCdFltrSrchParam.substring(this.plnDfnActnOutputCdFltrSrchParam.length() - 1).equals("]") & plnDfnActnOutputCdFltrSrchParam.equals("[")) {
+	        	this.plnDfnActnOutputCdFltrSrchParam = this.plnDfnActnOutputCdFltrSrchParam+ "," + plnDfnActnOutputCdFltrSrchParam;
+	        } else if(plnDfnActnOutputCdFltrSrchParam.equals("[") | plnDfnActnOutputCdFltrSrchParam.equals("]") | this.plnDfnActnOutputCdFltrSrchParam.substring(this.plnDfnActnOutputCdFltrSrchParam.length() - 1).equals("[")) {
+	        	this.plnDfnActnOutputCdFltrSrchParam = this.plnDfnActnOutputCdFltrSrchParam+plnDfnActnOutputCdFltrSrchParam;
+	        } else  {
+	            this.plnDfnActnOutputCdFltrSrchParam = this.plnDfnActnOutputCdFltrSrchParam+ "," +plnDfnActnOutputCdFltrSrchParam;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnOutputCdFltrVlSt() {
@@ -1290,6 +2368,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnOutputCdFltrVlSt(String plnDfnActnOutputCdFltrVlSt) {
         this.plnDfnActnOutputCdFltrVlSt = plnDfnActnOutputCdFltrVlSt;
+    }
+    
+    public void addPlnDfnActnOutputCdFltrVlSt(String plnDfnActnOutputCdFltrVlSt) {
+    	if( plnDfnActnOutputCdFltrVlSt != null ) {
+	    	if( this.plnDfnActnOutputCdFltrVlSt == null ) {
+	        	this.plnDfnActnOutputCdFltrVlSt = plnDfnActnOutputCdFltrVlSt;
+	        } else if(this.plnDfnActnOutputCdFltrVlSt.substring(this.plnDfnActnOutputCdFltrVlSt.length() - 1).equals("]") & plnDfnActnOutputCdFltrVlSt.equals("[")) {
+	        	this.plnDfnActnOutputCdFltrVlSt = this.plnDfnActnOutputCdFltrVlSt+ "," + plnDfnActnOutputCdFltrVlSt;
+	        } else if(plnDfnActnOutputCdFltrVlSt.equals("[") | plnDfnActnOutputCdFltrVlSt.equals("]") | this.plnDfnActnOutputCdFltrVlSt.substring(this.plnDfnActnOutputCdFltrVlSt.length() - 1).equals("[")) {
+	        	this.plnDfnActnOutputCdFltrVlSt = this.plnDfnActnOutputCdFltrVlSt+plnDfnActnOutputCdFltrVlSt;
+	        } else  {
+	            this.plnDfnActnOutputCdFltrVlSt = this.plnDfnActnOutputCdFltrVlSt+ "," +plnDfnActnOutputCdFltrVlSt;
+	        }
+        }
     }
     
     
@@ -1302,6 +2394,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnOutputDtFltrPath = plnDfnActnOutputDtFltrPath;
     }
     
+    public void addPlnDfnActnOutputDtFltrPath(String plnDfnActnOutputDtFltrPath) {
+    	if( plnDfnActnOutputDtFltrPath != null ) {
+	    	if( this.plnDfnActnOutputDtFltrPath == null ) {
+	        	this.plnDfnActnOutputDtFltrPath = plnDfnActnOutputDtFltrPath;
+	        } else if(this.plnDfnActnOutputDtFltrPath.substring(this.plnDfnActnOutputDtFltrPath.length() - 1).equals("]") & plnDfnActnOutputDtFltrPath.equals("[")) {
+	        	this.plnDfnActnOutputDtFltrPath = this.plnDfnActnOutputDtFltrPath+ "," + plnDfnActnOutputDtFltrPath;
+	        } else if(plnDfnActnOutputDtFltrPath.equals("[") | plnDfnActnOutputDtFltrPath.equals("]") | this.plnDfnActnOutputDtFltrPath.substring(this.plnDfnActnOutputDtFltrPath.length() - 1).equals("[")) {
+	        	this.plnDfnActnOutputDtFltrPath = this.plnDfnActnOutputDtFltrPath+plnDfnActnOutputDtFltrPath;
+	        } else  {
+	            this.plnDfnActnOutputDtFltrPath = this.plnDfnActnOutputDtFltrPath+ "," +plnDfnActnOutputDtFltrPath;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnOutputDtFltrSrchParam() {
@@ -1310,6 +2416,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnOutputDtFltrSrchParam(String plnDfnActnOutputDtFltrSrchParam) {
         this.plnDfnActnOutputDtFltrSrchParam = plnDfnActnOutputDtFltrSrchParam;
+    }
+    
+    public void addPlnDfnActnOutputDtFltrSrchParam(String plnDfnActnOutputDtFltrSrchParam) {
+    	if( plnDfnActnOutputDtFltrSrchParam != null ) {
+	    	if( this.plnDfnActnOutputDtFltrSrchParam == null ) {
+	        	this.plnDfnActnOutputDtFltrSrchParam = plnDfnActnOutputDtFltrSrchParam;
+	        } else if(this.plnDfnActnOutputDtFltrSrchParam.substring(this.plnDfnActnOutputDtFltrSrchParam.length() - 1).equals("]") & plnDfnActnOutputDtFltrSrchParam.equals("[")) {
+	        	this.plnDfnActnOutputDtFltrSrchParam = this.plnDfnActnOutputDtFltrSrchParam+ "," + plnDfnActnOutputDtFltrSrchParam;
+	        } else if(plnDfnActnOutputDtFltrSrchParam.equals("[") | plnDfnActnOutputDtFltrSrchParam.equals("]") | this.plnDfnActnOutputDtFltrSrchParam.substring(this.plnDfnActnOutputDtFltrSrchParam.length() - 1).equals("[")) {
+	        	this.plnDfnActnOutputDtFltrSrchParam = this.plnDfnActnOutputDtFltrSrchParam+plnDfnActnOutputDtFltrSrchParam;
+	        } else  {
+	            this.plnDfnActnOutputDtFltrSrchParam = this.plnDfnActnOutputDtFltrSrchParam+ "," +plnDfnActnOutputDtFltrSrchParam;
+	        }
+        }
     }
     
     
@@ -1322,6 +2442,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnOutputDtFltrVlDtTimeTyp = plnDfnActnOutputDtFltrVlDtTimeTyp;
     }
     
+    public void addPlnDfnActnOutputDtFltrVlDtTimeTyp(String plnDfnActnOutputDtFltrVlDtTimeTyp) {
+    	if( plnDfnActnOutputDtFltrVlDtTimeTyp != null ) {
+	    	if( this.plnDfnActnOutputDtFltrVlDtTimeTyp == null ) {
+	        	this.plnDfnActnOutputDtFltrVlDtTimeTyp = plnDfnActnOutputDtFltrVlDtTimeTyp;
+	        } else if(this.plnDfnActnOutputDtFltrVlDtTimeTyp.substring(this.plnDfnActnOutputDtFltrVlDtTimeTyp.length() - 1).equals("]") & plnDfnActnOutputDtFltrVlDtTimeTyp.equals("[")) {
+	        	this.plnDfnActnOutputDtFltrVlDtTimeTyp = this.plnDfnActnOutputDtFltrVlDtTimeTyp+ "," + plnDfnActnOutputDtFltrVlDtTimeTyp;
+	        } else if(plnDfnActnOutputDtFltrVlDtTimeTyp.equals("[") | plnDfnActnOutputDtFltrVlDtTimeTyp.equals("]") | this.plnDfnActnOutputDtFltrVlDtTimeTyp.substring(this.plnDfnActnOutputDtFltrVlDtTimeTyp.length() - 1).equals("[")) {
+	        	this.plnDfnActnOutputDtFltrVlDtTimeTyp = this.plnDfnActnOutputDtFltrVlDtTimeTyp+plnDfnActnOutputDtFltrVlDtTimeTyp;
+	        } else  {
+	            this.plnDfnActnOutputDtFltrVlDtTimeTyp = this.plnDfnActnOutputDtFltrVlDtTimeTyp+ "," +plnDfnActnOutputDtFltrVlDtTimeTyp;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnOutputDtFltrVlDurationCd() {
@@ -1330,6 +2464,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnOutputDtFltrVlDurationCd(String plnDfnActnOutputDtFltrVlDurationCd) {
         this.plnDfnActnOutputDtFltrVlDurationCd = plnDfnActnOutputDtFltrVlDurationCd;
+    }
+    
+    public void addPlnDfnActnOutputDtFltrVlDurationCd(String plnDfnActnOutputDtFltrVlDurationCd) {
+    	if( plnDfnActnOutputDtFltrVlDurationCd != null ) {
+	    	if( this.plnDfnActnOutputDtFltrVlDurationCd == null ) {
+	        	this.plnDfnActnOutputDtFltrVlDurationCd = plnDfnActnOutputDtFltrVlDurationCd;
+	        } else if(this.plnDfnActnOutputDtFltrVlDurationCd.substring(this.plnDfnActnOutputDtFltrVlDurationCd.length() - 1).equals("]") & plnDfnActnOutputDtFltrVlDurationCd.equals("[")) {
+	        	this.plnDfnActnOutputDtFltrVlDurationCd = this.plnDfnActnOutputDtFltrVlDurationCd+ "," + plnDfnActnOutputDtFltrVlDurationCd;
+	        } else if(plnDfnActnOutputDtFltrVlDurationCd.equals("[") | plnDfnActnOutputDtFltrVlDurationCd.equals("]") | this.plnDfnActnOutputDtFltrVlDurationCd.substring(this.plnDfnActnOutputDtFltrVlDurationCd.length() - 1).equals("[")) {
+	        	this.plnDfnActnOutputDtFltrVlDurationCd = this.plnDfnActnOutputDtFltrVlDurationCd+plnDfnActnOutputDtFltrVlDurationCd;
+	        } else  {
+	            this.plnDfnActnOutputDtFltrVlDurationCd = this.plnDfnActnOutputDtFltrVlDurationCd+ "," +plnDfnActnOutputDtFltrVlDurationCd;
+	        }
+        }
     }
     
     
@@ -1342,6 +2490,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnOutputDtFltrVlDurationCmprtr = plnDfnActnOutputDtFltrVlDurationCmprtr;
     }
     
+    public void addPlnDfnActnOutputDtFltrVlDurationCmprtr(String plnDfnActnOutputDtFltrVlDurationCmprtr) {
+    	if( plnDfnActnOutputDtFltrVlDurationCmprtr != null ) {
+	    	if( this.plnDfnActnOutputDtFltrVlDurationCmprtr == null ) {
+	        	this.plnDfnActnOutputDtFltrVlDurationCmprtr = plnDfnActnOutputDtFltrVlDurationCmprtr;
+	        } else if(this.plnDfnActnOutputDtFltrVlDurationCmprtr.substring(this.plnDfnActnOutputDtFltrVlDurationCmprtr.length() - 1).equals("]") & plnDfnActnOutputDtFltrVlDurationCmprtr.equals("[")) {
+	        	this.plnDfnActnOutputDtFltrVlDurationCmprtr = this.plnDfnActnOutputDtFltrVlDurationCmprtr+ "," + plnDfnActnOutputDtFltrVlDurationCmprtr;
+	        } else if(plnDfnActnOutputDtFltrVlDurationCmprtr.equals("[") | plnDfnActnOutputDtFltrVlDurationCmprtr.equals("]") | this.plnDfnActnOutputDtFltrVlDurationCmprtr.substring(this.plnDfnActnOutputDtFltrVlDurationCmprtr.length() - 1).equals("[")) {
+	        	this.plnDfnActnOutputDtFltrVlDurationCmprtr = this.plnDfnActnOutputDtFltrVlDurationCmprtr+plnDfnActnOutputDtFltrVlDurationCmprtr;
+	        } else  {
+	            this.plnDfnActnOutputDtFltrVlDurationCmprtr = this.plnDfnActnOutputDtFltrVlDurationCmprtr+ "," +plnDfnActnOutputDtFltrVlDurationCmprtr;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnOutputDtFltrVlDurationSys() {
@@ -1350,6 +2512,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnOutputDtFltrVlDurationSys(String plnDfnActnOutputDtFltrVlDurationSys) {
         this.plnDfnActnOutputDtFltrVlDurationSys = plnDfnActnOutputDtFltrVlDurationSys;
+    }
+    
+    public void addPlnDfnActnOutputDtFltrVlDurationSys(String plnDfnActnOutputDtFltrVlDurationSys) {
+    	if( plnDfnActnOutputDtFltrVlDurationSys != null ) {
+	    	if( this.plnDfnActnOutputDtFltrVlDurationSys == null ) {
+	        	this.plnDfnActnOutputDtFltrVlDurationSys = plnDfnActnOutputDtFltrVlDurationSys;
+	        } else if(this.plnDfnActnOutputDtFltrVlDurationSys.substring(this.plnDfnActnOutputDtFltrVlDurationSys.length() - 1).equals("]") & plnDfnActnOutputDtFltrVlDurationSys.equals("[")) {
+	        	this.plnDfnActnOutputDtFltrVlDurationSys = this.plnDfnActnOutputDtFltrVlDurationSys+ "," + plnDfnActnOutputDtFltrVlDurationSys;
+	        } else if(plnDfnActnOutputDtFltrVlDurationSys.equals("[") | plnDfnActnOutputDtFltrVlDurationSys.equals("]") | this.plnDfnActnOutputDtFltrVlDurationSys.substring(this.plnDfnActnOutputDtFltrVlDurationSys.length() - 1).equals("[")) {
+	        	this.plnDfnActnOutputDtFltrVlDurationSys = this.plnDfnActnOutputDtFltrVlDurationSys+plnDfnActnOutputDtFltrVlDurationSys;
+	        } else  {
+	            this.plnDfnActnOutputDtFltrVlDurationSys = this.plnDfnActnOutputDtFltrVlDurationSys+ "," +plnDfnActnOutputDtFltrVlDurationSys;
+	        }
+        }
     }
     
     
@@ -1362,6 +2538,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnOutputDtFltrVlDurationUnt = plnDfnActnOutputDtFltrVlDurationUnt;
     }
     
+    public void addPlnDfnActnOutputDtFltrVlDurationUnt(String plnDfnActnOutputDtFltrVlDurationUnt) {
+    	if( plnDfnActnOutputDtFltrVlDurationUnt != null ) {
+	    	if( this.plnDfnActnOutputDtFltrVlDurationUnt == null ) {
+	        	this.plnDfnActnOutputDtFltrVlDurationUnt = plnDfnActnOutputDtFltrVlDurationUnt;
+	        } else if(this.plnDfnActnOutputDtFltrVlDurationUnt.substring(this.plnDfnActnOutputDtFltrVlDurationUnt.length() - 1).equals("]") & plnDfnActnOutputDtFltrVlDurationUnt.equals("[")) {
+	        	this.plnDfnActnOutputDtFltrVlDurationUnt = this.plnDfnActnOutputDtFltrVlDurationUnt+ "," + plnDfnActnOutputDtFltrVlDurationUnt;
+	        } else if(plnDfnActnOutputDtFltrVlDurationUnt.equals("[") | plnDfnActnOutputDtFltrVlDurationUnt.equals("]") | this.plnDfnActnOutputDtFltrVlDurationUnt.substring(this.plnDfnActnOutputDtFltrVlDurationUnt.length() - 1).equals("[")) {
+	        	this.plnDfnActnOutputDtFltrVlDurationUnt = this.plnDfnActnOutputDtFltrVlDurationUnt+plnDfnActnOutputDtFltrVlDurationUnt;
+	        } else  {
+	            this.plnDfnActnOutputDtFltrVlDurationUnt = this.plnDfnActnOutputDtFltrVlDurationUnt+ "," +plnDfnActnOutputDtFltrVlDurationUnt;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnOutputDtFltrVlDurationVl() {
@@ -1370,6 +2560,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnOutputDtFltrVlDurationVl(String plnDfnActnOutputDtFltrVlDurationVl) {
         this.plnDfnActnOutputDtFltrVlDurationVl = plnDfnActnOutputDtFltrVlDurationVl;
+    }
+    
+    public void addPlnDfnActnOutputDtFltrVlDurationVl(String plnDfnActnOutputDtFltrVlDurationVl) {
+    	if( plnDfnActnOutputDtFltrVlDurationVl != null ) {
+	    	if( this.plnDfnActnOutputDtFltrVlDurationVl == null ) {
+	        	this.plnDfnActnOutputDtFltrVlDurationVl = plnDfnActnOutputDtFltrVlDurationVl;
+	        } else if(this.plnDfnActnOutputDtFltrVlDurationVl.substring(this.plnDfnActnOutputDtFltrVlDurationVl.length() - 1).equals("]") & plnDfnActnOutputDtFltrVlDurationVl.equals("[")) {
+	        	this.plnDfnActnOutputDtFltrVlDurationVl = this.plnDfnActnOutputDtFltrVlDurationVl+ "," + plnDfnActnOutputDtFltrVlDurationVl;
+	        } else if(plnDfnActnOutputDtFltrVlDurationVl.equals("[") | plnDfnActnOutputDtFltrVlDurationVl.equals("]") | this.plnDfnActnOutputDtFltrVlDurationVl.substring(this.plnDfnActnOutputDtFltrVlDurationVl.length() - 1).equals("[")) {
+	        	this.plnDfnActnOutputDtFltrVlDurationVl = this.plnDfnActnOutputDtFltrVlDurationVl+plnDfnActnOutputDtFltrVlDurationVl;
+	        } else  {
+	            this.plnDfnActnOutputDtFltrVlDurationVl = this.plnDfnActnOutputDtFltrVlDurationVl+ "," +plnDfnActnOutputDtFltrVlDurationVl;
+	        }
+        }
     }
     
     
@@ -1382,6 +2586,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnOutputDtFltrVlPrdEnd = plnDfnActnOutputDtFltrVlPrdEnd;
     }
     
+    public void addPlnDfnActnOutputDtFltrVlPrdEnd(String plnDfnActnOutputDtFltrVlPrdEnd) {
+    	if( plnDfnActnOutputDtFltrVlPrdEnd != null ) {
+	    	if( this.plnDfnActnOutputDtFltrVlPrdEnd == null ) {
+	        	this.plnDfnActnOutputDtFltrVlPrdEnd = plnDfnActnOutputDtFltrVlPrdEnd;
+	        } else if(this.plnDfnActnOutputDtFltrVlPrdEnd.substring(this.plnDfnActnOutputDtFltrVlPrdEnd.length() - 1).equals("]") & plnDfnActnOutputDtFltrVlPrdEnd.equals("[")) {
+	        	this.plnDfnActnOutputDtFltrVlPrdEnd = this.plnDfnActnOutputDtFltrVlPrdEnd+ "," + plnDfnActnOutputDtFltrVlPrdEnd;
+	        } else if(plnDfnActnOutputDtFltrVlPrdEnd.equals("[") | plnDfnActnOutputDtFltrVlPrdEnd.equals("]") | this.plnDfnActnOutputDtFltrVlPrdEnd.substring(this.plnDfnActnOutputDtFltrVlPrdEnd.length() - 1).equals("[")) {
+	        	this.plnDfnActnOutputDtFltrVlPrdEnd = this.plnDfnActnOutputDtFltrVlPrdEnd+plnDfnActnOutputDtFltrVlPrdEnd;
+	        } else  {
+	            this.plnDfnActnOutputDtFltrVlPrdEnd = this.plnDfnActnOutputDtFltrVlPrdEnd+ "," +plnDfnActnOutputDtFltrVlPrdEnd;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnOutputDtFltrVlPrdStrt() {
@@ -1390,6 +2608,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnOutputDtFltrVlPrdStrt(String plnDfnActnOutputDtFltrVlPrdStrt) {
         this.plnDfnActnOutputDtFltrVlPrdStrt = plnDfnActnOutputDtFltrVlPrdStrt;
+    }
+    
+    public void addPlnDfnActnOutputDtFltrVlPrdStrt(String plnDfnActnOutputDtFltrVlPrdStrt) {
+    	if( plnDfnActnOutputDtFltrVlPrdStrt != null ) {
+	    	if( this.plnDfnActnOutputDtFltrVlPrdStrt == null ) {
+	        	this.plnDfnActnOutputDtFltrVlPrdStrt = plnDfnActnOutputDtFltrVlPrdStrt;
+	        } else if(this.plnDfnActnOutputDtFltrVlPrdStrt.substring(this.plnDfnActnOutputDtFltrVlPrdStrt.length() - 1).equals("]") & plnDfnActnOutputDtFltrVlPrdStrt.equals("[")) {
+	        	this.plnDfnActnOutputDtFltrVlPrdStrt = this.plnDfnActnOutputDtFltrVlPrdStrt+ "," + plnDfnActnOutputDtFltrVlPrdStrt;
+	        } else if(plnDfnActnOutputDtFltrVlPrdStrt.equals("[") | plnDfnActnOutputDtFltrVlPrdStrt.equals("]") | this.plnDfnActnOutputDtFltrVlPrdStrt.substring(this.plnDfnActnOutputDtFltrVlPrdStrt.length() - 1).equals("[")) {
+	        	this.plnDfnActnOutputDtFltrVlPrdStrt = this.plnDfnActnOutputDtFltrVlPrdStrt+plnDfnActnOutputDtFltrVlPrdStrt;
+	        } else  {
+	            this.plnDfnActnOutputDtFltrVlPrdStrt = this.plnDfnActnOutputDtFltrVlPrdStrt+ "," +plnDfnActnOutputDtFltrVlPrdStrt;
+	        }
+        }
     }
     
     
@@ -1402,6 +2634,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnOutputLmt = plnDfnActnOutputLmt;
     }
     
+    public void addPlnDfnActnOutputLmt(String plnDfnActnOutputLmt) {
+    	if( plnDfnActnOutputLmt != null ) {
+	    	if( this.plnDfnActnOutputLmt == null ) {
+	        	this.plnDfnActnOutputLmt = plnDfnActnOutputLmt;
+	        } else if(this.plnDfnActnOutputLmt.substring(this.plnDfnActnOutputLmt.length() - 1).equals("]") & plnDfnActnOutputLmt.equals("[")) {
+	        	this.plnDfnActnOutputLmt = this.plnDfnActnOutputLmt+ "," + plnDfnActnOutputLmt;
+	        } else if(plnDfnActnOutputLmt.equals("[") | plnDfnActnOutputLmt.equals("]") | this.plnDfnActnOutputLmt.substring(this.plnDfnActnOutputLmt.length() - 1).equals("[")) {
+	        	this.plnDfnActnOutputLmt = this.plnDfnActnOutputLmt+plnDfnActnOutputLmt;
+	        } else  {
+	            this.plnDfnActnOutputLmt = this.plnDfnActnOutputLmt+ "," +plnDfnActnOutputLmt;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnOutputMustSupport() {
@@ -1410,6 +2656,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnOutputMustSupport(String plnDfnActnOutputMustSupport) {
         this.plnDfnActnOutputMustSupport = plnDfnActnOutputMustSupport;
+    }
+    
+    public void addPlnDfnActnOutputMustSupport(String plnDfnActnOutputMustSupport) {
+    	if( plnDfnActnOutputMustSupport != null ) {
+	    	if( this.plnDfnActnOutputMustSupport == null ) {
+	        	this.plnDfnActnOutputMustSupport = plnDfnActnOutputMustSupport;
+	        } else if(this.plnDfnActnOutputMustSupport.substring(this.plnDfnActnOutputMustSupport.length() - 1).equals("]") & plnDfnActnOutputMustSupport.equals("[")) {
+	        	this.plnDfnActnOutputMustSupport = this.plnDfnActnOutputMustSupport+ "," + plnDfnActnOutputMustSupport;
+	        } else if(plnDfnActnOutputMustSupport.equals("[") | plnDfnActnOutputMustSupport.equals("]") | this.plnDfnActnOutputMustSupport.substring(this.plnDfnActnOutputMustSupport.length() - 1).equals("[")) {
+	        	this.plnDfnActnOutputMustSupport = this.plnDfnActnOutputMustSupport+plnDfnActnOutputMustSupport;
+	        } else  {
+	            this.plnDfnActnOutputMustSupport = this.plnDfnActnOutputMustSupport+ "," +plnDfnActnOutputMustSupport;
+	        }
+        }
     }
     
     
@@ -1422,6 +2682,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnOutputProfile = plnDfnActnOutputProfile;
     }
     
+    public void addPlnDfnActnOutputProfile(String plnDfnActnOutputProfile) {
+    	if( plnDfnActnOutputProfile != null ) {
+	    	if( this.plnDfnActnOutputProfile == null ) {
+	        	this.plnDfnActnOutputProfile = plnDfnActnOutputProfile;
+	        } else if(this.plnDfnActnOutputProfile.substring(this.plnDfnActnOutputProfile.length() - 1).equals("]") & plnDfnActnOutputProfile.equals("[")) {
+	        	this.plnDfnActnOutputProfile = this.plnDfnActnOutputProfile+ "," + plnDfnActnOutputProfile;
+	        } else if(plnDfnActnOutputProfile.equals("[") | plnDfnActnOutputProfile.equals("]") | this.plnDfnActnOutputProfile.substring(this.plnDfnActnOutputProfile.length() - 1).equals("[")) {
+	        	this.plnDfnActnOutputProfile = this.plnDfnActnOutputProfile+plnDfnActnOutputProfile;
+	        } else  {
+	            this.plnDfnActnOutputProfile = this.plnDfnActnOutputProfile+ "," +plnDfnActnOutputProfile;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnOutputSortDirection() {
@@ -1430,6 +2704,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnOutputSortDirection(String plnDfnActnOutputSortDirection) {
         this.plnDfnActnOutputSortDirection = plnDfnActnOutputSortDirection;
+    }
+    
+    public void addPlnDfnActnOutputSortDirection(String plnDfnActnOutputSortDirection) {
+    	if( plnDfnActnOutputSortDirection != null ) {
+	    	if( this.plnDfnActnOutputSortDirection == null ) {
+	        	this.plnDfnActnOutputSortDirection = plnDfnActnOutputSortDirection;
+	        } else if(this.plnDfnActnOutputSortDirection.substring(this.plnDfnActnOutputSortDirection.length() - 1).equals("]") & plnDfnActnOutputSortDirection.equals("[")) {
+	        	this.plnDfnActnOutputSortDirection = this.plnDfnActnOutputSortDirection+ "," + plnDfnActnOutputSortDirection;
+	        } else if(plnDfnActnOutputSortDirection.equals("[") | plnDfnActnOutputSortDirection.equals("]") | this.plnDfnActnOutputSortDirection.substring(this.plnDfnActnOutputSortDirection.length() - 1).equals("[")) {
+	        	this.plnDfnActnOutputSortDirection = this.plnDfnActnOutputSortDirection+plnDfnActnOutputSortDirection;
+	        } else  {
+	            this.plnDfnActnOutputSortDirection = this.plnDfnActnOutputSortDirection+ "," +plnDfnActnOutputSortDirection;
+	        }
+        }
     }
     
     
@@ -1442,6 +2730,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnOutputSortPath = plnDfnActnOutputSortPath;
     }
     
+    public void addPlnDfnActnOutputSortPath(String plnDfnActnOutputSortPath) {
+    	if( plnDfnActnOutputSortPath != null ) {
+	    	if( this.plnDfnActnOutputSortPath == null ) {
+	        	this.plnDfnActnOutputSortPath = plnDfnActnOutputSortPath;
+	        } else if(this.plnDfnActnOutputSortPath.substring(this.plnDfnActnOutputSortPath.length() - 1).equals("]") & plnDfnActnOutputSortPath.equals("[")) {
+	        	this.plnDfnActnOutputSortPath = this.plnDfnActnOutputSortPath+ "," + plnDfnActnOutputSortPath;
+	        } else if(plnDfnActnOutputSortPath.equals("[") | plnDfnActnOutputSortPath.equals("]") | this.plnDfnActnOutputSortPath.substring(this.plnDfnActnOutputSortPath.length() - 1).equals("[")) {
+	        	this.plnDfnActnOutputSortPath = this.plnDfnActnOutputSortPath+plnDfnActnOutputSortPath;
+	        } else  {
+	            this.plnDfnActnOutputSortPath = this.plnDfnActnOutputSortPath+ "," +plnDfnActnOutputSortPath;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnOutputSbjctCdbleCncptCdgCd() {
@@ -1450,6 +2752,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnOutputSbjctCdbleCncptCdgCd(String plnDfnActnOutputSbjctCdbleCncptCdgCd) {
         this.plnDfnActnOutputSbjctCdbleCncptCdgCd = plnDfnActnOutputSbjctCdbleCncptCdgCd;
+    }
+    
+    public void addPlnDfnActnOutputSbjctCdbleCncptCdgCd(String plnDfnActnOutputSbjctCdbleCncptCdgCd) {
+    	if( plnDfnActnOutputSbjctCdbleCncptCdgCd != null ) {
+	    	if( this.plnDfnActnOutputSbjctCdbleCncptCdgCd == null ) {
+	        	this.plnDfnActnOutputSbjctCdbleCncptCdgCd = plnDfnActnOutputSbjctCdbleCncptCdgCd;
+	        } else if(this.plnDfnActnOutputSbjctCdbleCncptCdgCd.substring(this.plnDfnActnOutputSbjctCdbleCncptCdgCd.length() - 1).equals("]") & plnDfnActnOutputSbjctCdbleCncptCdgCd.equals("[")) {
+	        	this.plnDfnActnOutputSbjctCdbleCncptCdgCd = this.plnDfnActnOutputSbjctCdbleCncptCdgCd+ "," + plnDfnActnOutputSbjctCdbleCncptCdgCd;
+	        } else if(plnDfnActnOutputSbjctCdbleCncptCdgCd.equals("[") | plnDfnActnOutputSbjctCdbleCncptCdgCd.equals("]") | this.plnDfnActnOutputSbjctCdbleCncptCdgCd.substring(this.plnDfnActnOutputSbjctCdbleCncptCdgCd.length() - 1).equals("[")) {
+	        	this.plnDfnActnOutputSbjctCdbleCncptCdgCd = this.plnDfnActnOutputSbjctCdbleCncptCdgCd+plnDfnActnOutputSbjctCdbleCncptCdgCd;
+	        } else  {
+	            this.plnDfnActnOutputSbjctCdbleCncptCdgCd = this.plnDfnActnOutputSbjctCdbleCncptCdgCd+ "," +plnDfnActnOutputSbjctCdbleCncptCdgCd;
+	        }
+        }
     }
     
     
@@ -1462,6 +2778,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnOutputSbjctCdbleCncptCdgDsply = plnDfnActnOutputSbjctCdbleCncptCdgDsply;
     }
     
+    public void addPlnDfnActnOutputSbjctCdbleCncptCdgDsply(String plnDfnActnOutputSbjctCdbleCncptCdgDsply) {
+    	if( plnDfnActnOutputSbjctCdbleCncptCdgDsply != null ) {
+	    	if( this.plnDfnActnOutputSbjctCdbleCncptCdgDsply == null ) {
+	        	this.plnDfnActnOutputSbjctCdbleCncptCdgDsply = plnDfnActnOutputSbjctCdbleCncptCdgDsply;
+	        } else if(this.plnDfnActnOutputSbjctCdbleCncptCdgDsply.substring(this.plnDfnActnOutputSbjctCdbleCncptCdgDsply.length() - 1).equals("]") & plnDfnActnOutputSbjctCdbleCncptCdgDsply.equals("[")) {
+	        	this.plnDfnActnOutputSbjctCdbleCncptCdgDsply = this.plnDfnActnOutputSbjctCdbleCncptCdgDsply+ "," + plnDfnActnOutputSbjctCdbleCncptCdgDsply;
+	        } else if(plnDfnActnOutputSbjctCdbleCncptCdgDsply.equals("[") | plnDfnActnOutputSbjctCdbleCncptCdgDsply.equals("]") | this.plnDfnActnOutputSbjctCdbleCncptCdgDsply.substring(this.plnDfnActnOutputSbjctCdbleCncptCdgDsply.length() - 1).equals("[")) {
+	        	this.plnDfnActnOutputSbjctCdbleCncptCdgDsply = this.plnDfnActnOutputSbjctCdbleCncptCdgDsply+plnDfnActnOutputSbjctCdbleCncptCdgDsply;
+	        } else  {
+	            this.plnDfnActnOutputSbjctCdbleCncptCdgDsply = this.plnDfnActnOutputSbjctCdbleCncptCdgDsply+ "," +plnDfnActnOutputSbjctCdbleCncptCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnOutputSbjctCdbleCncptCdgSys() {
@@ -1470,6 +2800,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnOutputSbjctCdbleCncptCdgSys(String plnDfnActnOutputSbjctCdbleCncptCdgSys) {
         this.plnDfnActnOutputSbjctCdbleCncptCdgSys = plnDfnActnOutputSbjctCdbleCncptCdgSys;
+    }
+    
+    public void addPlnDfnActnOutputSbjctCdbleCncptCdgSys(String plnDfnActnOutputSbjctCdbleCncptCdgSys) {
+    	if( plnDfnActnOutputSbjctCdbleCncptCdgSys != null ) {
+	    	if( this.plnDfnActnOutputSbjctCdbleCncptCdgSys == null ) {
+	        	this.plnDfnActnOutputSbjctCdbleCncptCdgSys = plnDfnActnOutputSbjctCdbleCncptCdgSys;
+	        } else if(this.plnDfnActnOutputSbjctCdbleCncptCdgSys.substring(this.plnDfnActnOutputSbjctCdbleCncptCdgSys.length() - 1).equals("]") & plnDfnActnOutputSbjctCdbleCncptCdgSys.equals("[")) {
+	        	this.plnDfnActnOutputSbjctCdbleCncptCdgSys = this.plnDfnActnOutputSbjctCdbleCncptCdgSys+ "," + plnDfnActnOutputSbjctCdbleCncptCdgSys;
+	        } else if(plnDfnActnOutputSbjctCdbleCncptCdgSys.equals("[") | plnDfnActnOutputSbjctCdbleCncptCdgSys.equals("]") | this.plnDfnActnOutputSbjctCdbleCncptCdgSys.substring(this.plnDfnActnOutputSbjctCdbleCncptCdgSys.length() - 1).equals("[")) {
+	        	this.plnDfnActnOutputSbjctCdbleCncptCdgSys = this.plnDfnActnOutputSbjctCdbleCncptCdgSys+plnDfnActnOutputSbjctCdbleCncptCdgSys;
+	        } else  {
+	            this.plnDfnActnOutputSbjctCdbleCncptCdgSys = this.plnDfnActnOutputSbjctCdbleCncptCdgSys+ "," +plnDfnActnOutputSbjctCdbleCncptCdgSys;
+	        }
+        }
     }
     
     
@@ -1482,6 +2826,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnOutputSbjctCdbleCncptCdgUsrSltd = plnDfnActnOutputSbjctCdbleCncptCdgUsrSltd;
     }
     
+    public void addPlnDfnActnOutputSbjctCdbleCncptCdgUsrSltd(String plnDfnActnOutputSbjctCdbleCncptCdgUsrSltd) {
+    	if( plnDfnActnOutputSbjctCdbleCncptCdgUsrSltd != null ) {
+	    	if( this.plnDfnActnOutputSbjctCdbleCncptCdgUsrSltd == null ) {
+	        	this.plnDfnActnOutputSbjctCdbleCncptCdgUsrSltd = plnDfnActnOutputSbjctCdbleCncptCdgUsrSltd;
+	        } else if(this.plnDfnActnOutputSbjctCdbleCncptCdgUsrSltd.substring(this.plnDfnActnOutputSbjctCdbleCncptCdgUsrSltd.length() - 1).equals("]") & plnDfnActnOutputSbjctCdbleCncptCdgUsrSltd.equals("[")) {
+	        	this.plnDfnActnOutputSbjctCdbleCncptCdgUsrSltd = this.plnDfnActnOutputSbjctCdbleCncptCdgUsrSltd+ "," + plnDfnActnOutputSbjctCdbleCncptCdgUsrSltd;
+	        } else if(plnDfnActnOutputSbjctCdbleCncptCdgUsrSltd.equals("[") | plnDfnActnOutputSbjctCdbleCncptCdgUsrSltd.equals("]") | this.plnDfnActnOutputSbjctCdbleCncptCdgUsrSltd.substring(this.plnDfnActnOutputSbjctCdbleCncptCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.plnDfnActnOutputSbjctCdbleCncptCdgUsrSltd = this.plnDfnActnOutputSbjctCdbleCncptCdgUsrSltd+plnDfnActnOutputSbjctCdbleCncptCdgUsrSltd;
+	        } else  {
+	            this.plnDfnActnOutputSbjctCdbleCncptCdgUsrSltd = this.plnDfnActnOutputSbjctCdbleCncptCdgUsrSltd+ "," +plnDfnActnOutputSbjctCdbleCncptCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnOutputSbjctCdbleCncptCdgVrsn() {
@@ -1490,6 +2848,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnOutputSbjctCdbleCncptCdgVrsn(String plnDfnActnOutputSbjctCdbleCncptCdgVrsn) {
         this.plnDfnActnOutputSbjctCdbleCncptCdgVrsn = plnDfnActnOutputSbjctCdbleCncptCdgVrsn;
+    }
+    
+    public void addPlnDfnActnOutputSbjctCdbleCncptCdgVrsn(String plnDfnActnOutputSbjctCdbleCncptCdgVrsn) {
+    	if( plnDfnActnOutputSbjctCdbleCncptCdgVrsn != null ) {
+	    	if( this.plnDfnActnOutputSbjctCdbleCncptCdgVrsn == null ) {
+	        	this.plnDfnActnOutputSbjctCdbleCncptCdgVrsn = plnDfnActnOutputSbjctCdbleCncptCdgVrsn;
+	        } else if(this.plnDfnActnOutputSbjctCdbleCncptCdgVrsn.substring(this.plnDfnActnOutputSbjctCdbleCncptCdgVrsn.length() - 1).equals("]") & plnDfnActnOutputSbjctCdbleCncptCdgVrsn.equals("[")) {
+	        	this.plnDfnActnOutputSbjctCdbleCncptCdgVrsn = this.plnDfnActnOutputSbjctCdbleCncptCdgVrsn+ "," + plnDfnActnOutputSbjctCdbleCncptCdgVrsn;
+	        } else if(plnDfnActnOutputSbjctCdbleCncptCdgVrsn.equals("[") | plnDfnActnOutputSbjctCdbleCncptCdgVrsn.equals("]") | this.plnDfnActnOutputSbjctCdbleCncptCdgVrsn.substring(this.plnDfnActnOutputSbjctCdbleCncptCdgVrsn.length() - 1).equals("[")) {
+	        	this.plnDfnActnOutputSbjctCdbleCncptCdgVrsn = this.plnDfnActnOutputSbjctCdbleCncptCdgVrsn+plnDfnActnOutputSbjctCdbleCncptCdgVrsn;
+	        } else  {
+	            this.plnDfnActnOutputSbjctCdbleCncptCdgVrsn = this.plnDfnActnOutputSbjctCdbleCncptCdgVrsn+ "," +plnDfnActnOutputSbjctCdbleCncptCdgVrsn;
+	        }
+        }
     }
     
     
@@ -1502,6 +2874,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnOutputSbjctCdbleCncptTxt = plnDfnActnOutputSbjctCdbleCncptTxt;
     }
     
+    public void addPlnDfnActnOutputSbjctCdbleCncptTxt(String plnDfnActnOutputSbjctCdbleCncptTxt) {
+    	if( plnDfnActnOutputSbjctCdbleCncptTxt != null ) {
+	    	if( this.plnDfnActnOutputSbjctCdbleCncptTxt == null ) {
+	        	this.plnDfnActnOutputSbjctCdbleCncptTxt = plnDfnActnOutputSbjctCdbleCncptTxt;
+	        } else if(this.plnDfnActnOutputSbjctCdbleCncptTxt.substring(this.plnDfnActnOutputSbjctCdbleCncptTxt.length() - 1).equals("]") & plnDfnActnOutputSbjctCdbleCncptTxt.equals("[")) {
+	        	this.plnDfnActnOutputSbjctCdbleCncptTxt = this.plnDfnActnOutputSbjctCdbleCncptTxt+ "," + plnDfnActnOutputSbjctCdbleCncptTxt;
+	        } else if(plnDfnActnOutputSbjctCdbleCncptTxt.equals("[") | plnDfnActnOutputSbjctCdbleCncptTxt.equals("]") | this.plnDfnActnOutputSbjctCdbleCncptTxt.substring(this.plnDfnActnOutputSbjctCdbleCncptTxt.length() - 1).equals("[")) {
+	        	this.plnDfnActnOutputSbjctCdbleCncptTxt = this.plnDfnActnOutputSbjctCdbleCncptTxt+plnDfnActnOutputSbjctCdbleCncptTxt;
+	        } else  {
+	            this.plnDfnActnOutputSbjctCdbleCncptTxt = this.plnDfnActnOutputSbjctCdbleCncptTxt+ "," +plnDfnActnOutputSbjctCdbleCncptTxt;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnOutputSbjctRfrnc() {
@@ -1510,6 +2896,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnOutputSbjctRfrnc(String plnDfnActnOutputSbjctRfrnc) {
         this.plnDfnActnOutputSbjctRfrnc = plnDfnActnOutputSbjctRfrnc;
+    }
+    
+    public void addPlnDfnActnOutputSbjctRfrnc(String plnDfnActnOutputSbjctRfrnc) {
+    	if( plnDfnActnOutputSbjctRfrnc != null ) {
+	    	if( this.plnDfnActnOutputSbjctRfrnc == null ) {
+	        	this.plnDfnActnOutputSbjctRfrnc = plnDfnActnOutputSbjctRfrnc;
+	        } else if(this.plnDfnActnOutputSbjctRfrnc.substring(this.plnDfnActnOutputSbjctRfrnc.length() - 1).equals("]") & plnDfnActnOutputSbjctRfrnc.equals("[")) {
+	        	this.plnDfnActnOutputSbjctRfrnc = this.plnDfnActnOutputSbjctRfrnc+ "," + plnDfnActnOutputSbjctRfrnc;
+	        } else if(plnDfnActnOutputSbjctRfrnc.equals("[") | plnDfnActnOutputSbjctRfrnc.equals("]") | this.plnDfnActnOutputSbjctRfrnc.substring(this.plnDfnActnOutputSbjctRfrnc.length() - 1).equals("[")) {
+	        	this.plnDfnActnOutputSbjctRfrnc = this.plnDfnActnOutputSbjctRfrnc+plnDfnActnOutputSbjctRfrnc;
+	        } else  {
+	            this.plnDfnActnOutputSbjctRfrnc = this.plnDfnActnOutputSbjctRfrnc+ "," +plnDfnActnOutputSbjctRfrnc;
+	        }
+        }
     }
     
     
@@ -1522,6 +2922,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnOutputTyp = plnDfnActnOutputTyp;
     }
     
+    public void addPlnDfnActnOutputTyp(String plnDfnActnOutputTyp) {
+    	if( plnDfnActnOutputTyp != null ) {
+	    	if( this.plnDfnActnOutputTyp == null ) {
+	        	this.plnDfnActnOutputTyp = plnDfnActnOutputTyp;
+	        } else if(this.plnDfnActnOutputTyp.substring(this.plnDfnActnOutputTyp.length() - 1).equals("]") & plnDfnActnOutputTyp.equals("[")) {
+	        	this.plnDfnActnOutputTyp = this.plnDfnActnOutputTyp+ "," + plnDfnActnOutputTyp;
+	        } else if(plnDfnActnOutputTyp.equals("[") | plnDfnActnOutputTyp.equals("]") | this.plnDfnActnOutputTyp.substring(this.plnDfnActnOutputTyp.length() - 1).equals("[")) {
+	        	this.plnDfnActnOutputTyp = this.plnDfnActnOutputTyp+plnDfnActnOutputTyp;
+	        } else  {
+	            this.plnDfnActnOutputTyp = this.plnDfnActnOutputTyp+ "," +plnDfnActnOutputTyp;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnPrtcpntRoleCdgCd() {
@@ -1530,6 +2944,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnPrtcpntRoleCdgCd(String plnDfnActnPrtcpntRoleCdgCd) {
         this.plnDfnActnPrtcpntRoleCdgCd = plnDfnActnPrtcpntRoleCdgCd;
+    }
+    
+    public void addPlnDfnActnPrtcpntRoleCdgCd(String plnDfnActnPrtcpntRoleCdgCd) {
+    	if( plnDfnActnPrtcpntRoleCdgCd != null ) {
+	    	if( this.plnDfnActnPrtcpntRoleCdgCd == null ) {
+	        	this.plnDfnActnPrtcpntRoleCdgCd = plnDfnActnPrtcpntRoleCdgCd;
+	        } else if(this.plnDfnActnPrtcpntRoleCdgCd.substring(this.plnDfnActnPrtcpntRoleCdgCd.length() - 1).equals("]") & plnDfnActnPrtcpntRoleCdgCd.equals("[")) {
+	        	this.plnDfnActnPrtcpntRoleCdgCd = this.plnDfnActnPrtcpntRoleCdgCd+ "," + plnDfnActnPrtcpntRoleCdgCd;
+	        } else if(plnDfnActnPrtcpntRoleCdgCd.equals("[") | plnDfnActnPrtcpntRoleCdgCd.equals("]") | this.plnDfnActnPrtcpntRoleCdgCd.substring(this.plnDfnActnPrtcpntRoleCdgCd.length() - 1).equals("[")) {
+	        	this.plnDfnActnPrtcpntRoleCdgCd = this.plnDfnActnPrtcpntRoleCdgCd+plnDfnActnPrtcpntRoleCdgCd;
+	        } else  {
+	            this.plnDfnActnPrtcpntRoleCdgCd = this.plnDfnActnPrtcpntRoleCdgCd+ "," +plnDfnActnPrtcpntRoleCdgCd;
+	        }
+        }
     }
     
     
@@ -1542,6 +2970,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnPrtcpntRoleCdgDsply = plnDfnActnPrtcpntRoleCdgDsply;
     }
     
+    public void addPlnDfnActnPrtcpntRoleCdgDsply(String plnDfnActnPrtcpntRoleCdgDsply) {
+    	if( plnDfnActnPrtcpntRoleCdgDsply != null ) {
+	    	if( this.plnDfnActnPrtcpntRoleCdgDsply == null ) {
+	        	this.plnDfnActnPrtcpntRoleCdgDsply = plnDfnActnPrtcpntRoleCdgDsply;
+	        } else if(this.plnDfnActnPrtcpntRoleCdgDsply.substring(this.plnDfnActnPrtcpntRoleCdgDsply.length() - 1).equals("]") & plnDfnActnPrtcpntRoleCdgDsply.equals("[")) {
+	        	this.plnDfnActnPrtcpntRoleCdgDsply = this.plnDfnActnPrtcpntRoleCdgDsply+ "," + plnDfnActnPrtcpntRoleCdgDsply;
+	        } else if(plnDfnActnPrtcpntRoleCdgDsply.equals("[") | plnDfnActnPrtcpntRoleCdgDsply.equals("]") | this.plnDfnActnPrtcpntRoleCdgDsply.substring(this.plnDfnActnPrtcpntRoleCdgDsply.length() - 1).equals("[")) {
+	        	this.plnDfnActnPrtcpntRoleCdgDsply = this.plnDfnActnPrtcpntRoleCdgDsply+plnDfnActnPrtcpntRoleCdgDsply;
+	        } else  {
+	            this.plnDfnActnPrtcpntRoleCdgDsply = this.plnDfnActnPrtcpntRoleCdgDsply+ "," +plnDfnActnPrtcpntRoleCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnPrtcpntRoleCdgSys() {
@@ -1550,6 +2992,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnPrtcpntRoleCdgSys(String plnDfnActnPrtcpntRoleCdgSys) {
         this.plnDfnActnPrtcpntRoleCdgSys = plnDfnActnPrtcpntRoleCdgSys;
+    }
+    
+    public void addPlnDfnActnPrtcpntRoleCdgSys(String plnDfnActnPrtcpntRoleCdgSys) {
+    	if( plnDfnActnPrtcpntRoleCdgSys != null ) {
+	    	if( this.plnDfnActnPrtcpntRoleCdgSys == null ) {
+	        	this.plnDfnActnPrtcpntRoleCdgSys = plnDfnActnPrtcpntRoleCdgSys;
+	        } else if(this.plnDfnActnPrtcpntRoleCdgSys.substring(this.plnDfnActnPrtcpntRoleCdgSys.length() - 1).equals("]") & plnDfnActnPrtcpntRoleCdgSys.equals("[")) {
+	        	this.plnDfnActnPrtcpntRoleCdgSys = this.plnDfnActnPrtcpntRoleCdgSys+ "," + plnDfnActnPrtcpntRoleCdgSys;
+	        } else if(plnDfnActnPrtcpntRoleCdgSys.equals("[") | plnDfnActnPrtcpntRoleCdgSys.equals("]") | this.plnDfnActnPrtcpntRoleCdgSys.substring(this.plnDfnActnPrtcpntRoleCdgSys.length() - 1).equals("[")) {
+	        	this.plnDfnActnPrtcpntRoleCdgSys = this.plnDfnActnPrtcpntRoleCdgSys+plnDfnActnPrtcpntRoleCdgSys;
+	        } else  {
+	            this.plnDfnActnPrtcpntRoleCdgSys = this.plnDfnActnPrtcpntRoleCdgSys+ "," +plnDfnActnPrtcpntRoleCdgSys;
+	        }
+        }
     }
     
     
@@ -1562,6 +3018,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnPrtcpntRoleCdgUsrSltd = plnDfnActnPrtcpntRoleCdgUsrSltd;
     }
     
+    public void addPlnDfnActnPrtcpntRoleCdgUsrSltd(String plnDfnActnPrtcpntRoleCdgUsrSltd) {
+    	if( plnDfnActnPrtcpntRoleCdgUsrSltd != null ) {
+	    	if( this.plnDfnActnPrtcpntRoleCdgUsrSltd == null ) {
+	        	this.plnDfnActnPrtcpntRoleCdgUsrSltd = plnDfnActnPrtcpntRoleCdgUsrSltd;
+	        } else if(this.plnDfnActnPrtcpntRoleCdgUsrSltd.substring(this.plnDfnActnPrtcpntRoleCdgUsrSltd.length() - 1).equals("]") & plnDfnActnPrtcpntRoleCdgUsrSltd.equals("[")) {
+	        	this.plnDfnActnPrtcpntRoleCdgUsrSltd = this.plnDfnActnPrtcpntRoleCdgUsrSltd+ "," + plnDfnActnPrtcpntRoleCdgUsrSltd;
+	        } else if(plnDfnActnPrtcpntRoleCdgUsrSltd.equals("[") | plnDfnActnPrtcpntRoleCdgUsrSltd.equals("]") | this.plnDfnActnPrtcpntRoleCdgUsrSltd.substring(this.plnDfnActnPrtcpntRoleCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.plnDfnActnPrtcpntRoleCdgUsrSltd = this.plnDfnActnPrtcpntRoleCdgUsrSltd+plnDfnActnPrtcpntRoleCdgUsrSltd;
+	        } else  {
+	            this.plnDfnActnPrtcpntRoleCdgUsrSltd = this.plnDfnActnPrtcpntRoleCdgUsrSltd+ "," +plnDfnActnPrtcpntRoleCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnPrtcpntRoleCdgVrsn() {
@@ -1570,6 +3040,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnPrtcpntRoleCdgVrsn(String plnDfnActnPrtcpntRoleCdgVrsn) {
         this.plnDfnActnPrtcpntRoleCdgVrsn = plnDfnActnPrtcpntRoleCdgVrsn;
+    }
+    
+    public void addPlnDfnActnPrtcpntRoleCdgVrsn(String plnDfnActnPrtcpntRoleCdgVrsn) {
+    	if( plnDfnActnPrtcpntRoleCdgVrsn != null ) {
+	    	if( this.plnDfnActnPrtcpntRoleCdgVrsn == null ) {
+	        	this.plnDfnActnPrtcpntRoleCdgVrsn = plnDfnActnPrtcpntRoleCdgVrsn;
+	        } else if(this.plnDfnActnPrtcpntRoleCdgVrsn.substring(this.plnDfnActnPrtcpntRoleCdgVrsn.length() - 1).equals("]") & plnDfnActnPrtcpntRoleCdgVrsn.equals("[")) {
+	        	this.plnDfnActnPrtcpntRoleCdgVrsn = this.plnDfnActnPrtcpntRoleCdgVrsn+ "," + plnDfnActnPrtcpntRoleCdgVrsn;
+	        } else if(plnDfnActnPrtcpntRoleCdgVrsn.equals("[") | plnDfnActnPrtcpntRoleCdgVrsn.equals("]") | this.plnDfnActnPrtcpntRoleCdgVrsn.substring(this.plnDfnActnPrtcpntRoleCdgVrsn.length() - 1).equals("[")) {
+	        	this.plnDfnActnPrtcpntRoleCdgVrsn = this.plnDfnActnPrtcpntRoleCdgVrsn+plnDfnActnPrtcpntRoleCdgVrsn;
+	        } else  {
+	            this.plnDfnActnPrtcpntRoleCdgVrsn = this.plnDfnActnPrtcpntRoleCdgVrsn+ "," +plnDfnActnPrtcpntRoleCdgVrsn;
+	        }
+        }
     }
     
     
@@ -1582,6 +3066,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnPrtcpntRoleTxt = plnDfnActnPrtcpntRoleTxt;
     }
     
+    public void addPlnDfnActnPrtcpntRoleTxt(String plnDfnActnPrtcpntRoleTxt) {
+    	if( plnDfnActnPrtcpntRoleTxt != null ) {
+	    	if( this.plnDfnActnPrtcpntRoleTxt == null ) {
+	        	this.plnDfnActnPrtcpntRoleTxt = plnDfnActnPrtcpntRoleTxt;
+	        } else if(this.plnDfnActnPrtcpntRoleTxt.substring(this.plnDfnActnPrtcpntRoleTxt.length() - 1).equals("]") & plnDfnActnPrtcpntRoleTxt.equals("[")) {
+	        	this.plnDfnActnPrtcpntRoleTxt = this.plnDfnActnPrtcpntRoleTxt+ "," + plnDfnActnPrtcpntRoleTxt;
+	        } else if(plnDfnActnPrtcpntRoleTxt.equals("[") | plnDfnActnPrtcpntRoleTxt.equals("]") | this.plnDfnActnPrtcpntRoleTxt.substring(this.plnDfnActnPrtcpntRoleTxt.length() - 1).equals("[")) {
+	        	this.plnDfnActnPrtcpntRoleTxt = this.plnDfnActnPrtcpntRoleTxt+plnDfnActnPrtcpntRoleTxt;
+	        } else  {
+	            this.plnDfnActnPrtcpntRoleTxt = this.plnDfnActnPrtcpntRoleTxt+ "," +plnDfnActnPrtcpntRoleTxt;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnPrtcpntTyp() {
@@ -1590,6 +3088,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnPrtcpntTyp(String plnDfnActnPrtcpntTyp) {
         this.plnDfnActnPrtcpntTyp = plnDfnActnPrtcpntTyp;
+    }
+    
+    public void addPlnDfnActnPrtcpntTyp(String plnDfnActnPrtcpntTyp) {
+    	if( plnDfnActnPrtcpntTyp != null ) {
+	    	if( this.plnDfnActnPrtcpntTyp == null ) {
+	        	this.plnDfnActnPrtcpntTyp = plnDfnActnPrtcpntTyp;
+	        } else if(this.plnDfnActnPrtcpntTyp.substring(this.plnDfnActnPrtcpntTyp.length() - 1).equals("]") & plnDfnActnPrtcpntTyp.equals("[")) {
+	        	this.plnDfnActnPrtcpntTyp = this.plnDfnActnPrtcpntTyp+ "," + plnDfnActnPrtcpntTyp;
+	        } else if(plnDfnActnPrtcpntTyp.equals("[") | plnDfnActnPrtcpntTyp.equals("]") | this.plnDfnActnPrtcpntTyp.substring(this.plnDfnActnPrtcpntTyp.length() - 1).equals("[")) {
+	        	this.plnDfnActnPrtcpntTyp = this.plnDfnActnPrtcpntTyp+plnDfnActnPrtcpntTyp;
+	        } else  {
+	            this.plnDfnActnPrtcpntTyp = this.plnDfnActnPrtcpntTyp+ "," +plnDfnActnPrtcpntTyp;
+	        }
+        }
     }
     
     
@@ -1602,6 +3114,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnPrecheckBehavior = plnDfnActnPrecheckBehavior;
     }
     
+    public void addPlnDfnActnPrecheckBehavior(String plnDfnActnPrecheckBehavior) {
+    	if( plnDfnActnPrecheckBehavior != null ) {
+	    	if( this.plnDfnActnPrecheckBehavior == null ) {
+	        	this.plnDfnActnPrecheckBehavior = plnDfnActnPrecheckBehavior;
+	        } else if(this.plnDfnActnPrecheckBehavior.substring(this.plnDfnActnPrecheckBehavior.length() - 1).equals("]") & plnDfnActnPrecheckBehavior.equals("[")) {
+	        	this.plnDfnActnPrecheckBehavior = this.plnDfnActnPrecheckBehavior+ "," + plnDfnActnPrecheckBehavior;
+	        } else if(plnDfnActnPrecheckBehavior.equals("[") | plnDfnActnPrecheckBehavior.equals("]") | this.plnDfnActnPrecheckBehavior.substring(this.plnDfnActnPrecheckBehavior.length() - 1).equals("[")) {
+	        	this.plnDfnActnPrecheckBehavior = this.plnDfnActnPrecheckBehavior+plnDfnActnPrecheckBehavior;
+	        } else  {
+	            this.plnDfnActnPrecheckBehavior = this.plnDfnActnPrecheckBehavior+ "," +plnDfnActnPrecheckBehavior;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnPrefix() {
@@ -1610,6 +3136,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnPrefix(String plnDfnActnPrefix) {
         this.plnDfnActnPrefix = plnDfnActnPrefix;
+    }
+    
+    public void addPlnDfnActnPrefix(String plnDfnActnPrefix) {
+    	if( plnDfnActnPrefix != null ) {
+	    	if( this.plnDfnActnPrefix == null ) {
+	        	this.plnDfnActnPrefix = plnDfnActnPrefix;
+	        } else if(this.plnDfnActnPrefix.substring(this.plnDfnActnPrefix.length() - 1).equals("]") & plnDfnActnPrefix.equals("[")) {
+	        	this.plnDfnActnPrefix = this.plnDfnActnPrefix+ "," + plnDfnActnPrefix;
+	        } else if(plnDfnActnPrefix.equals("[") | plnDfnActnPrefix.equals("]") | this.plnDfnActnPrefix.substring(this.plnDfnActnPrefix.length() - 1).equals("[")) {
+	        	this.plnDfnActnPrefix = this.plnDfnActnPrefix+plnDfnActnPrefix;
+	        } else  {
+	            this.plnDfnActnPrefix = this.plnDfnActnPrefix+ "," +plnDfnActnPrefix;
+	        }
+        }
     }
     
     
@@ -1622,6 +3162,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnPriority = plnDfnActnPriority;
     }
     
+    public void addPlnDfnActnPriority(String plnDfnActnPriority) {
+    	if( plnDfnActnPriority != null ) {
+	    	if( this.plnDfnActnPriority == null ) {
+	        	this.plnDfnActnPriority = plnDfnActnPriority;
+	        } else if(this.plnDfnActnPriority.substring(this.plnDfnActnPriority.length() - 1).equals("]") & plnDfnActnPriority.equals("[")) {
+	        	this.plnDfnActnPriority = this.plnDfnActnPriority+ "," + plnDfnActnPriority;
+	        } else if(plnDfnActnPriority.equals("[") | plnDfnActnPriority.equals("]") | this.plnDfnActnPriority.substring(this.plnDfnActnPriority.length() - 1).equals("[")) {
+	        	this.plnDfnActnPriority = this.plnDfnActnPriority+plnDfnActnPriority;
+	        } else  {
+	            this.plnDfnActnPriority = this.plnDfnActnPriority+ "," +plnDfnActnPriority;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnRsnCdgCd() {
@@ -1630,6 +3184,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnRsnCdgCd(String plnDfnActnRsnCdgCd) {
         this.plnDfnActnRsnCdgCd = plnDfnActnRsnCdgCd;
+    }
+    
+    public void addPlnDfnActnRsnCdgCd(String plnDfnActnRsnCdgCd) {
+    	if( plnDfnActnRsnCdgCd != null ) {
+	    	if( this.plnDfnActnRsnCdgCd == null ) {
+	        	this.plnDfnActnRsnCdgCd = plnDfnActnRsnCdgCd;
+	        } else if(this.plnDfnActnRsnCdgCd.substring(this.plnDfnActnRsnCdgCd.length() - 1).equals("]") & plnDfnActnRsnCdgCd.equals("[")) {
+	        	this.plnDfnActnRsnCdgCd = this.plnDfnActnRsnCdgCd+ "," + plnDfnActnRsnCdgCd;
+	        } else if(plnDfnActnRsnCdgCd.equals("[") | plnDfnActnRsnCdgCd.equals("]") | this.plnDfnActnRsnCdgCd.substring(this.plnDfnActnRsnCdgCd.length() - 1).equals("[")) {
+	        	this.plnDfnActnRsnCdgCd = this.plnDfnActnRsnCdgCd+plnDfnActnRsnCdgCd;
+	        } else  {
+	            this.plnDfnActnRsnCdgCd = this.plnDfnActnRsnCdgCd+ "," +plnDfnActnRsnCdgCd;
+	        }
+        }
     }
     
     
@@ -1642,6 +3210,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnRsnCdgDsply = plnDfnActnRsnCdgDsply;
     }
     
+    public void addPlnDfnActnRsnCdgDsply(String plnDfnActnRsnCdgDsply) {
+    	if( plnDfnActnRsnCdgDsply != null ) {
+	    	if( this.plnDfnActnRsnCdgDsply == null ) {
+	        	this.plnDfnActnRsnCdgDsply = plnDfnActnRsnCdgDsply;
+	        } else if(this.plnDfnActnRsnCdgDsply.substring(this.plnDfnActnRsnCdgDsply.length() - 1).equals("]") & plnDfnActnRsnCdgDsply.equals("[")) {
+	        	this.plnDfnActnRsnCdgDsply = this.plnDfnActnRsnCdgDsply+ "," + plnDfnActnRsnCdgDsply;
+	        } else if(plnDfnActnRsnCdgDsply.equals("[") | plnDfnActnRsnCdgDsply.equals("]") | this.plnDfnActnRsnCdgDsply.substring(this.plnDfnActnRsnCdgDsply.length() - 1).equals("[")) {
+	        	this.plnDfnActnRsnCdgDsply = this.plnDfnActnRsnCdgDsply+plnDfnActnRsnCdgDsply;
+	        } else  {
+	            this.plnDfnActnRsnCdgDsply = this.plnDfnActnRsnCdgDsply+ "," +plnDfnActnRsnCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnRsnCdgSys() {
@@ -1650,6 +3232,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnRsnCdgSys(String plnDfnActnRsnCdgSys) {
         this.plnDfnActnRsnCdgSys = plnDfnActnRsnCdgSys;
+    }
+    
+    public void addPlnDfnActnRsnCdgSys(String plnDfnActnRsnCdgSys) {
+    	if( plnDfnActnRsnCdgSys != null ) {
+	    	if( this.plnDfnActnRsnCdgSys == null ) {
+	        	this.plnDfnActnRsnCdgSys = plnDfnActnRsnCdgSys;
+	        } else if(this.plnDfnActnRsnCdgSys.substring(this.plnDfnActnRsnCdgSys.length() - 1).equals("]") & plnDfnActnRsnCdgSys.equals("[")) {
+	        	this.plnDfnActnRsnCdgSys = this.plnDfnActnRsnCdgSys+ "," + plnDfnActnRsnCdgSys;
+	        } else if(plnDfnActnRsnCdgSys.equals("[") | plnDfnActnRsnCdgSys.equals("]") | this.plnDfnActnRsnCdgSys.substring(this.plnDfnActnRsnCdgSys.length() - 1).equals("[")) {
+	        	this.plnDfnActnRsnCdgSys = this.plnDfnActnRsnCdgSys+plnDfnActnRsnCdgSys;
+	        } else  {
+	            this.plnDfnActnRsnCdgSys = this.plnDfnActnRsnCdgSys+ "," +plnDfnActnRsnCdgSys;
+	        }
+        }
     }
     
     
@@ -1662,6 +3258,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnRsnCdgUsrSltd = plnDfnActnRsnCdgUsrSltd;
     }
     
+    public void addPlnDfnActnRsnCdgUsrSltd(String plnDfnActnRsnCdgUsrSltd) {
+    	if( plnDfnActnRsnCdgUsrSltd != null ) {
+	    	if( this.plnDfnActnRsnCdgUsrSltd == null ) {
+	        	this.plnDfnActnRsnCdgUsrSltd = plnDfnActnRsnCdgUsrSltd;
+	        } else if(this.plnDfnActnRsnCdgUsrSltd.substring(this.plnDfnActnRsnCdgUsrSltd.length() - 1).equals("]") & plnDfnActnRsnCdgUsrSltd.equals("[")) {
+	        	this.plnDfnActnRsnCdgUsrSltd = this.plnDfnActnRsnCdgUsrSltd+ "," + plnDfnActnRsnCdgUsrSltd;
+	        } else if(plnDfnActnRsnCdgUsrSltd.equals("[") | plnDfnActnRsnCdgUsrSltd.equals("]") | this.plnDfnActnRsnCdgUsrSltd.substring(this.plnDfnActnRsnCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.plnDfnActnRsnCdgUsrSltd = this.plnDfnActnRsnCdgUsrSltd+plnDfnActnRsnCdgUsrSltd;
+	        } else  {
+	            this.plnDfnActnRsnCdgUsrSltd = this.plnDfnActnRsnCdgUsrSltd+ "," +plnDfnActnRsnCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnRsnCdgVrsn() {
@@ -1670,6 +3280,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnRsnCdgVrsn(String plnDfnActnRsnCdgVrsn) {
         this.plnDfnActnRsnCdgVrsn = plnDfnActnRsnCdgVrsn;
+    }
+    
+    public void addPlnDfnActnRsnCdgVrsn(String plnDfnActnRsnCdgVrsn) {
+    	if( plnDfnActnRsnCdgVrsn != null ) {
+	    	if( this.plnDfnActnRsnCdgVrsn == null ) {
+	        	this.plnDfnActnRsnCdgVrsn = plnDfnActnRsnCdgVrsn;
+	        } else if(this.plnDfnActnRsnCdgVrsn.substring(this.plnDfnActnRsnCdgVrsn.length() - 1).equals("]") & plnDfnActnRsnCdgVrsn.equals("[")) {
+	        	this.plnDfnActnRsnCdgVrsn = this.plnDfnActnRsnCdgVrsn+ "," + plnDfnActnRsnCdgVrsn;
+	        } else if(plnDfnActnRsnCdgVrsn.equals("[") | plnDfnActnRsnCdgVrsn.equals("]") | this.plnDfnActnRsnCdgVrsn.substring(this.plnDfnActnRsnCdgVrsn.length() - 1).equals("[")) {
+	        	this.plnDfnActnRsnCdgVrsn = this.plnDfnActnRsnCdgVrsn+plnDfnActnRsnCdgVrsn;
+	        } else  {
+	            this.plnDfnActnRsnCdgVrsn = this.plnDfnActnRsnCdgVrsn+ "," +plnDfnActnRsnCdgVrsn;
+	        }
+        }
     }
     
     
@@ -1682,6 +3306,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnRsnTxt = plnDfnActnRsnTxt;
     }
     
+    public void addPlnDfnActnRsnTxt(String plnDfnActnRsnTxt) {
+    	if( plnDfnActnRsnTxt != null ) {
+	    	if( this.plnDfnActnRsnTxt == null ) {
+	        	this.plnDfnActnRsnTxt = plnDfnActnRsnTxt;
+	        } else if(this.plnDfnActnRsnTxt.substring(this.plnDfnActnRsnTxt.length() - 1).equals("]") & plnDfnActnRsnTxt.equals("[")) {
+	        	this.plnDfnActnRsnTxt = this.plnDfnActnRsnTxt+ "," + plnDfnActnRsnTxt;
+	        } else if(plnDfnActnRsnTxt.equals("[") | plnDfnActnRsnTxt.equals("]") | this.plnDfnActnRsnTxt.substring(this.plnDfnActnRsnTxt.length() - 1).equals("[")) {
+	        	this.plnDfnActnRsnTxt = this.plnDfnActnRsnTxt+plnDfnActnRsnTxt;
+	        } else  {
+	            this.plnDfnActnRsnTxt = this.plnDfnActnRsnTxt+ "," +plnDfnActnRsnTxt;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnRltedActnActnId() {
@@ -1690,6 +3328,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnRltedActnActnId(String plnDfnActnRltedActnActnId) {
         this.plnDfnActnRltedActnActnId = plnDfnActnRltedActnActnId;
+    }
+    
+    public void addPlnDfnActnRltedActnActnId(String plnDfnActnRltedActnActnId) {
+    	if( plnDfnActnRltedActnActnId != null ) {
+	    	if( this.plnDfnActnRltedActnActnId == null ) {
+	        	this.plnDfnActnRltedActnActnId = plnDfnActnRltedActnActnId;
+	        } else if(this.plnDfnActnRltedActnActnId.substring(this.plnDfnActnRltedActnActnId.length() - 1).equals("]") & plnDfnActnRltedActnActnId.equals("[")) {
+	        	this.plnDfnActnRltedActnActnId = this.plnDfnActnRltedActnActnId+ "," + plnDfnActnRltedActnActnId;
+	        } else if(plnDfnActnRltedActnActnId.equals("[") | plnDfnActnRltedActnActnId.equals("]") | this.plnDfnActnRltedActnActnId.substring(this.plnDfnActnRltedActnActnId.length() - 1).equals("[")) {
+	        	this.plnDfnActnRltedActnActnId = this.plnDfnActnRltedActnActnId+plnDfnActnRltedActnActnId;
+	        } else  {
+	            this.plnDfnActnRltedActnActnId = this.plnDfnActnRltedActnActnId+ "," +plnDfnActnRltedActnActnId;
+	        }
+        }
     }
     
     
@@ -1702,6 +3354,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnRltedActnOffDurationCd = plnDfnActnRltedActnOffDurationCd;
     }
     
+    public void addPlnDfnActnRltedActnOffDurationCd(String plnDfnActnRltedActnOffDurationCd) {
+    	if( plnDfnActnRltedActnOffDurationCd != null ) {
+	    	if( this.plnDfnActnRltedActnOffDurationCd == null ) {
+	        	this.plnDfnActnRltedActnOffDurationCd = plnDfnActnRltedActnOffDurationCd;
+	        } else if(this.plnDfnActnRltedActnOffDurationCd.substring(this.plnDfnActnRltedActnOffDurationCd.length() - 1).equals("]") & plnDfnActnRltedActnOffDurationCd.equals("[")) {
+	        	this.plnDfnActnRltedActnOffDurationCd = this.plnDfnActnRltedActnOffDurationCd+ "," + plnDfnActnRltedActnOffDurationCd;
+	        } else if(plnDfnActnRltedActnOffDurationCd.equals("[") | plnDfnActnRltedActnOffDurationCd.equals("]") | this.plnDfnActnRltedActnOffDurationCd.substring(this.plnDfnActnRltedActnOffDurationCd.length() - 1).equals("[")) {
+	        	this.plnDfnActnRltedActnOffDurationCd = this.plnDfnActnRltedActnOffDurationCd+plnDfnActnRltedActnOffDurationCd;
+	        } else  {
+	            this.plnDfnActnRltedActnOffDurationCd = this.plnDfnActnRltedActnOffDurationCd+ "," +plnDfnActnRltedActnOffDurationCd;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnRltedActnOffDurationCmprtr() {
@@ -1710,6 +3376,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnRltedActnOffDurationCmprtr(String plnDfnActnRltedActnOffDurationCmprtr) {
         this.plnDfnActnRltedActnOffDurationCmprtr = plnDfnActnRltedActnOffDurationCmprtr;
+    }
+    
+    public void addPlnDfnActnRltedActnOffDurationCmprtr(String plnDfnActnRltedActnOffDurationCmprtr) {
+    	if( plnDfnActnRltedActnOffDurationCmprtr != null ) {
+	    	if( this.plnDfnActnRltedActnOffDurationCmprtr == null ) {
+	        	this.plnDfnActnRltedActnOffDurationCmprtr = plnDfnActnRltedActnOffDurationCmprtr;
+	        } else if(this.plnDfnActnRltedActnOffDurationCmprtr.substring(this.plnDfnActnRltedActnOffDurationCmprtr.length() - 1).equals("]") & plnDfnActnRltedActnOffDurationCmprtr.equals("[")) {
+	        	this.plnDfnActnRltedActnOffDurationCmprtr = this.plnDfnActnRltedActnOffDurationCmprtr+ "," + plnDfnActnRltedActnOffDurationCmprtr;
+	        } else if(plnDfnActnRltedActnOffDurationCmprtr.equals("[") | plnDfnActnRltedActnOffDurationCmprtr.equals("]") | this.plnDfnActnRltedActnOffDurationCmprtr.substring(this.plnDfnActnRltedActnOffDurationCmprtr.length() - 1).equals("[")) {
+	        	this.plnDfnActnRltedActnOffDurationCmprtr = this.plnDfnActnRltedActnOffDurationCmprtr+plnDfnActnRltedActnOffDurationCmprtr;
+	        } else  {
+	            this.plnDfnActnRltedActnOffDurationCmprtr = this.plnDfnActnRltedActnOffDurationCmprtr+ "," +plnDfnActnRltedActnOffDurationCmprtr;
+	        }
+        }
     }
     
     
@@ -1722,6 +3402,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnRltedActnOffDurationSys = plnDfnActnRltedActnOffDurationSys;
     }
     
+    public void addPlnDfnActnRltedActnOffDurationSys(String plnDfnActnRltedActnOffDurationSys) {
+    	if( plnDfnActnRltedActnOffDurationSys != null ) {
+	    	if( this.plnDfnActnRltedActnOffDurationSys == null ) {
+	        	this.plnDfnActnRltedActnOffDurationSys = plnDfnActnRltedActnOffDurationSys;
+	        } else if(this.plnDfnActnRltedActnOffDurationSys.substring(this.plnDfnActnRltedActnOffDurationSys.length() - 1).equals("]") & plnDfnActnRltedActnOffDurationSys.equals("[")) {
+	        	this.plnDfnActnRltedActnOffDurationSys = this.plnDfnActnRltedActnOffDurationSys+ "," + plnDfnActnRltedActnOffDurationSys;
+	        } else if(plnDfnActnRltedActnOffDurationSys.equals("[") | plnDfnActnRltedActnOffDurationSys.equals("]") | this.plnDfnActnRltedActnOffDurationSys.substring(this.plnDfnActnRltedActnOffDurationSys.length() - 1).equals("[")) {
+	        	this.plnDfnActnRltedActnOffDurationSys = this.plnDfnActnRltedActnOffDurationSys+plnDfnActnRltedActnOffDurationSys;
+	        } else  {
+	            this.plnDfnActnRltedActnOffDurationSys = this.plnDfnActnRltedActnOffDurationSys+ "," +plnDfnActnRltedActnOffDurationSys;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnRltedActnOffDurationUnt() {
@@ -1730,6 +3424,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnRltedActnOffDurationUnt(String plnDfnActnRltedActnOffDurationUnt) {
         this.plnDfnActnRltedActnOffDurationUnt = plnDfnActnRltedActnOffDurationUnt;
+    }
+    
+    public void addPlnDfnActnRltedActnOffDurationUnt(String plnDfnActnRltedActnOffDurationUnt) {
+    	if( plnDfnActnRltedActnOffDurationUnt != null ) {
+	    	if( this.plnDfnActnRltedActnOffDurationUnt == null ) {
+	        	this.plnDfnActnRltedActnOffDurationUnt = plnDfnActnRltedActnOffDurationUnt;
+	        } else if(this.plnDfnActnRltedActnOffDurationUnt.substring(this.plnDfnActnRltedActnOffDurationUnt.length() - 1).equals("]") & plnDfnActnRltedActnOffDurationUnt.equals("[")) {
+	        	this.plnDfnActnRltedActnOffDurationUnt = this.plnDfnActnRltedActnOffDurationUnt+ "," + plnDfnActnRltedActnOffDurationUnt;
+	        } else if(plnDfnActnRltedActnOffDurationUnt.equals("[") | plnDfnActnRltedActnOffDurationUnt.equals("]") | this.plnDfnActnRltedActnOffDurationUnt.substring(this.plnDfnActnRltedActnOffDurationUnt.length() - 1).equals("[")) {
+	        	this.plnDfnActnRltedActnOffDurationUnt = this.plnDfnActnRltedActnOffDurationUnt+plnDfnActnRltedActnOffDurationUnt;
+	        } else  {
+	            this.plnDfnActnRltedActnOffDurationUnt = this.plnDfnActnRltedActnOffDurationUnt+ "," +plnDfnActnRltedActnOffDurationUnt;
+	        }
+        }
     }
     
     
@@ -1742,6 +3450,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnRltedActnOffDurationVl = plnDfnActnRltedActnOffDurationVl;
     }
     
+    public void addPlnDfnActnRltedActnOffDurationVl(String plnDfnActnRltedActnOffDurationVl) {
+    	if( plnDfnActnRltedActnOffDurationVl != null ) {
+	    	if( this.plnDfnActnRltedActnOffDurationVl == null ) {
+	        	this.plnDfnActnRltedActnOffDurationVl = plnDfnActnRltedActnOffDurationVl;
+	        } else if(this.plnDfnActnRltedActnOffDurationVl.substring(this.plnDfnActnRltedActnOffDurationVl.length() - 1).equals("]") & plnDfnActnRltedActnOffDurationVl.equals("[")) {
+	        	this.plnDfnActnRltedActnOffDurationVl = this.plnDfnActnRltedActnOffDurationVl+ "," + plnDfnActnRltedActnOffDurationVl;
+	        } else if(plnDfnActnRltedActnOffDurationVl.equals("[") | plnDfnActnRltedActnOffDurationVl.equals("]") | this.plnDfnActnRltedActnOffDurationVl.substring(this.plnDfnActnRltedActnOffDurationVl.length() - 1).equals("[")) {
+	        	this.plnDfnActnRltedActnOffDurationVl = this.plnDfnActnRltedActnOffDurationVl+plnDfnActnRltedActnOffDurationVl;
+	        } else  {
+	            this.plnDfnActnRltedActnOffDurationVl = this.plnDfnActnRltedActnOffDurationVl+ "," +plnDfnActnRltedActnOffDurationVl;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnRltedActnOffRngHiCd() {
@@ -1750,6 +3472,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnRltedActnOffRngHiCd(String plnDfnActnRltedActnOffRngHiCd) {
         this.plnDfnActnRltedActnOffRngHiCd = plnDfnActnRltedActnOffRngHiCd;
+    }
+    
+    public void addPlnDfnActnRltedActnOffRngHiCd(String plnDfnActnRltedActnOffRngHiCd) {
+    	if( plnDfnActnRltedActnOffRngHiCd != null ) {
+	    	if( this.plnDfnActnRltedActnOffRngHiCd == null ) {
+	        	this.plnDfnActnRltedActnOffRngHiCd = plnDfnActnRltedActnOffRngHiCd;
+	        } else if(this.plnDfnActnRltedActnOffRngHiCd.substring(this.plnDfnActnRltedActnOffRngHiCd.length() - 1).equals("]") & plnDfnActnRltedActnOffRngHiCd.equals("[")) {
+	        	this.plnDfnActnRltedActnOffRngHiCd = this.plnDfnActnRltedActnOffRngHiCd+ "," + plnDfnActnRltedActnOffRngHiCd;
+	        } else if(plnDfnActnRltedActnOffRngHiCd.equals("[") | plnDfnActnRltedActnOffRngHiCd.equals("]") | this.plnDfnActnRltedActnOffRngHiCd.substring(this.plnDfnActnRltedActnOffRngHiCd.length() - 1).equals("[")) {
+	        	this.plnDfnActnRltedActnOffRngHiCd = this.plnDfnActnRltedActnOffRngHiCd+plnDfnActnRltedActnOffRngHiCd;
+	        } else  {
+	            this.plnDfnActnRltedActnOffRngHiCd = this.plnDfnActnRltedActnOffRngHiCd+ "," +plnDfnActnRltedActnOffRngHiCd;
+	        }
+        }
     }
     
     
@@ -1762,6 +3498,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnRltedActnOffRngHiCmprtr = plnDfnActnRltedActnOffRngHiCmprtr;
     }
     
+    public void addPlnDfnActnRltedActnOffRngHiCmprtr(String plnDfnActnRltedActnOffRngHiCmprtr) {
+    	if( plnDfnActnRltedActnOffRngHiCmprtr != null ) {
+	    	if( this.plnDfnActnRltedActnOffRngHiCmprtr == null ) {
+	        	this.plnDfnActnRltedActnOffRngHiCmprtr = plnDfnActnRltedActnOffRngHiCmprtr;
+	        } else if(this.plnDfnActnRltedActnOffRngHiCmprtr.substring(this.plnDfnActnRltedActnOffRngHiCmprtr.length() - 1).equals("]") & plnDfnActnRltedActnOffRngHiCmprtr.equals("[")) {
+	        	this.plnDfnActnRltedActnOffRngHiCmprtr = this.plnDfnActnRltedActnOffRngHiCmprtr+ "," + plnDfnActnRltedActnOffRngHiCmprtr;
+	        } else if(plnDfnActnRltedActnOffRngHiCmprtr.equals("[") | plnDfnActnRltedActnOffRngHiCmprtr.equals("]") | this.plnDfnActnRltedActnOffRngHiCmprtr.substring(this.plnDfnActnRltedActnOffRngHiCmprtr.length() - 1).equals("[")) {
+	        	this.plnDfnActnRltedActnOffRngHiCmprtr = this.plnDfnActnRltedActnOffRngHiCmprtr+plnDfnActnRltedActnOffRngHiCmprtr;
+	        } else  {
+	            this.plnDfnActnRltedActnOffRngHiCmprtr = this.plnDfnActnRltedActnOffRngHiCmprtr+ "," +plnDfnActnRltedActnOffRngHiCmprtr;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnRltedActnOffRngHiSys() {
@@ -1770,6 +3520,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnRltedActnOffRngHiSys(String plnDfnActnRltedActnOffRngHiSys) {
         this.plnDfnActnRltedActnOffRngHiSys = plnDfnActnRltedActnOffRngHiSys;
+    }
+    
+    public void addPlnDfnActnRltedActnOffRngHiSys(String plnDfnActnRltedActnOffRngHiSys) {
+    	if( plnDfnActnRltedActnOffRngHiSys != null ) {
+	    	if( this.plnDfnActnRltedActnOffRngHiSys == null ) {
+	        	this.plnDfnActnRltedActnOffRngHiSys = plnDfnActnRltedActnOffRngHiSys;
+	        } else if(this.plnDfnActnRltedActnOffRngHiSys.substring(this.plnDfnActnRltedActnOffRngHiSys.length() - 1).equals("]") & plnDfnActnRltedActnOffRngHiSys.equals("[")) {
+	        	this.plnDfnActnRltedActnOffRngHiSys = this.plnDfnActnRltedActnOffRngHiSys+ "," + plnDfnActnRltedActnOffRngHiSys;
+	        } else if(plnDfnActnRltedActnOffRngHiSys.equals("[") | plnDfnActnRltedActnOffRngHiSys.equals("]") | this.plnDfnActnRltedActnOffRngHiSys.substring(this.plnDfnActnRltedActnOffRngHiSys.length() - 1).equals("[")) {
+	        	this.plnDfnActnRltedActnOffRngHiSys = this.plnDfnActnRltedActnOffRngHiSys+plnDfnActnRltedActnOffRngHiSys;
+	        } else  {
+	            this.plnDfnActnRltedActnOffRngHiSys = this.plnDfnActnRltedActnOffRngHiSys+ "," +plnDfnActnRltedActnOffRngHiSys;
+	        }
+        }
     }
     
     
@@ -1782,6 +3546,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnRltedActnOffRngHiUnt = plnDfnActnRltedActnOffRngHiUnt;
     }
     
+    public void addPlnDfnActnRltedActnOffRngHiUnt(String plnDfnActnRltedActnOffRngHiUnt) {
+    	if( plnDfnActnRltedActnOffRngHiUnt != null ) {
+	    	if( this.plnDfnActnRltedActnOffRngHiUnt == null ) {
+	        	this.plnDfnActnRltedActnOffRngHiUnt = plnDfnActnRltedActnOffRngHiUnt;
+	        } else if(this.plnDfnActnRltedActnOffRngHiUnt.substring(this.plnDfnActnRltedActnOffRngHiUnt.length() - 1).equals("]") & plnDfnActnRltedActnOffRngHiUnt.equals("[")) {
+	        	this.plnDfnActnRltedActnOffRngHiUnt = this.plnDfnActnRltedActnOffRngHiUnt+ "," + plnDfnActnRltedActnOffRngHiUnt;
+	        } else if(plnDfnActnRltedActnOffRngHiUnt.equals("[") | plnDfnActnRltedActnOffRngHiUnt.equals("]") | this.plnDfnActnRltedActnOffRngHiUnt.substring(this.plnDfnActnRltedActnOffRngHiUnt.length() - 1).equals("[")) {
+	        	this.plnDfnActnRltedActnOffRngHiUnt = this.plnDfnActnRltedActnOffRngHiUnt+plnDfnActnRltedActnOffRngHiUnt;
+	        } else  {
+	            this.plnDfnActnRltedActnOffRngHiUnt = this.plnDfnActnRltedActnOffRngHiUnt+ "," +plnDfnActnRltedActnOffRngHiUnt;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnRltedActnOffRngHiVl() {
@@ -1790,6 +3568,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnRltedActnOffRngHiVl(String plnDfnActnRltedActnOffRngHiVl) {
         this.plnDfnActnRltedActnOffRngHiVl = plnDfnActnRltedActnOffRngHiVl;
+    }
+    
+    public void addPlnDfnActnRltedActnOffRngHiVl(String plnDfnActnRltedActnOffRngHiVl) {
+    	if( plnDfnActnRltedActnOffRngHiVl != null ) {
+	    	if( this.plnDfnActnRltedActnOffRngHiVl == null ) {
+	        	this.plnDfnActnRltedActnOffRngHiVl = plnDfnActnRltedActnOffRngHiVl;
+	        } else if(this.plnDfnActnRltedActnOffRngHiVl.substring(this.plnDfnActnRltedActnOffRngHiVl.length() - 1).equals("]") & plnDfnActnRltedActnOffRngHiVl.equals("[")) {
+	        	this.plnDfnActnRltedActnOffRngHiVl = this.plnDfnActnRltedActnOffRngHiVl+ "," + plnDfnActnRltedActnOffRngHiVl;
+	        } else if(plnDfnActnRltedActnOffRngHiVl.equals("[") | plnDfnActnRltedActnOffRngHiVl.equals("]") | this.plnDfnActnRltedActnOffRngHiVl.substring(this.plnDfnActnRltedActnOffRngHiVl.length() - 1).equals("[")) {
+	        	this.plnDfnActnRltedActnOffRngHiVl = this.plnDfnActnRltedActnOffRngHiVl+plnDfnActnRltedActnOffRngHiVl;
+	        } else  {
+	            this.plnDfnActnRltedActnOffRngHiVl = this.plnDfnActnRltedActnOffRngHiVl+ "," +plnDfnActnRltedActnOffRngHiVl;
+	        }
+        }
     }
     
     
@@ -1802,6 +3594,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnRltedActnOffRngLwCd = plnDfnActnRltedActnOffRngLwCd;
     }
     
+    public void addPlnDfnActnRltedActnOffRngLwCd(String plnDfnActnRltedActnOffRngLwCd) {
+    	if( plnDfnActnRltedActnOffRngLwCd != null ) {
+	    	if( this.plnDfnActnRltedActnOffRngLwCd == null ) {
+	        	this.plnDfnActnRltedActnOffRngLwCd = plnDfnActnRltedActnOffRngLwCd;
+	        } else if(this.plnDfnActnRltedActnOffRngLwCd.substring(this.plnDfnActnRltedActnOffRngLwCd.length() - 1).equals("]") & plnDfnActnRltedActnOffRngLwCd.equals("[")) {
+	        	this.plnDfnActnRltedActnOffRngLwCd = this.plnDfnActnRltedActnOffRngLwCd+ "," + plnDfnActnRltedActnOffRngLwCd;
+	        } else if(plnDfnActnRltedActnOffRngLwCd.equals("[") | plnDfnActnRltedActnOffRngLwCd.equals("]") | this.plnDfnActnRltedActnOffRngLwCd.substring(this.plnDfnActnRltedActnOffRngLwCd.length() - 1).equals("[")) {
+	        	this.plnDfnActnRltedActnOffRngLwCd = this.plnDfnActnRltedActnOffRngLwCd+plnDfnActnRltedActnOffRngLwCd;
+	        } else  {
+	            this.plnDfnActnRltedActnOffRngLwCd = this.plnDfnActnRltedActnOffRngLwCd+ "," +plnDfnActnRltedActnOffRngLwCd;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnRltedActnOffRngLwCmprtr() {
@@ -1810,6 +3616,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnRltedActnOffRngLwCmprtr(String plnDfnActnRltedActnOffRngLwCmprtr) {
         this.plnDfnActnRltedActnOffRngLwCmprtr = plnDfnActnRltedActnOffRngLwCmprtr;
+    }
+    
+    public void addPlnDfnActnRltedActnOffRngLwCmprtr(String plnDfnActnRltedActnOffRngLwCmprtr) {
+    	if( plnDfnActnRltedActnOffRngLwCmprtr != null ) {
+	    	if( this.plnDfnActnRltedActnOffRngLwCmprtr == null ) {
+	        	this.plnDfnActnRltedActnOffRngLwCmprtr = plnDfnActnRltedActnOffRngLwCmprtr;
+	        } else if(this.plnDfnActnRltedActnOffRngLwCmprtr.substring(this.plnDfnActnRltedActnOffRngLwCmprtr.length() - 1).equals("]") & plnDfnActnRltedActnOffRngLwCmprtr.equals("[")) {
+	        	this.plnDfnActnRltedActnOffRngLwCmprtr = this.plnDfnActnRltedActnOffRngLwCmprtr+ "," + plnDfnActnRltedActnOffRngLwCmprtr;
+	        } else if(plnDfnActnRltedActnOffRngLwCmprtr.equals("[") | plnDfnActnRltedActnOffRngLwCmprtr.equals("]") | this.plnDfnActnRltedActnOffRngLwCmprtr.substring(this.plnDfnActnRltedActnOffRngLwCmprtr.length() - 1).equals("[")) {
+	        	this.plnDfnActnRltedActnOffRngLwCmprtr = this.plnDfnActnRltedActnOffRngLwCmprtr+plnDfnActnRltedActnOffRngLwCmprtr;
+	        } else  {
+	            this.plnDfnActnRltedActnOffRngLwCmprtr = this.plnDfnActnRltedActnOffRngLwCmprtr+ "," +plnDfnActnRltedActnOffRngLwCmprtr;
+	        }
+        }
     }
     
     
@@ -1822,6 +3642,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnRltedActnOffRngLwSys = plnDfnActnRltedActnOffRngLwSys;
     }
     
+    public void addPlnDfnActnRltedActnOffRngLwSys(String plnDfnActnRltedActnOffRngLwSys) {
+    	if( plnDfnActnRltedActnOffRngLwSys != null ) {
+	    	if( this.plnDfnActnRltedActnOffRngLwSys == null ) {
+	        	this.plnDfnActnRltedActnOffRngLwSys = plnDfnActnRltedActnOffRngLwSys;
+	        } else if(this.plnDfnActnRltedActnOffRngLwSys.substring(this.plnDfnActnRltedActnOffRngLwSys.length() - 1).equals("]") & plnDfnActnRltedActnOffRngLwSys.equals("[")) {
+	        	this.plnDfnActnRltedActnOffRngLwSys = this.plnDfnActnRltedActnOffRngLwSys+ "," + plnDfnActnRltedActnOffRngLwSys;
+	        } else if(plnDfnActnRltedActnOffRngLwSys.equals("[") | plnDfnActnRltedActnOffRngLwSys.equals("]") | this.plnDfnActnRltedActnOffRngLwSys.substring(this.plnDfnActnRltedActnOffRngLwSys.length() - 1).equals("[")) {
+	        	this.plnDfnActnRltedActnOffRngLwSys = this.plnDfnActnRltedActnOffRngLwSys+plnDfnActnRltedActnOffRngLwSys;
+	        } else  {
+	            this.plnDfnActnRltedActnOffRngLwSys = this.plnDfnActnRltedActnOffRngLwSys+ "," +plnDfnActnRltedActnOffRngLwSys;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnRltedActnOffRngLwUnt() {
@@ -1830,6 +3664,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnRltedActnOffRngLwUnt(String plnDfnActnRltedActnOffRngLwUnt) {
         this.plnDfnActnRltedActnOffRngLwUnt = plnDfnActnRltedActnOffRngLwUnt;
+    }
+    
+    public void addPlnDfnActnRltedActnOffRngLwUnt(String plnDfnActnRltedActnOffRngLwUnt) {
+    	if( plnDfnActnRltedActnOffRngLwUnt != null ) {
+	    	if( this.plnDfnActnRltedActnOffRngLwUnt == null ) {
+	        	this.plnDfnActnRltedActnOffRngLwUnt = plnDfnActnRltedActnOffRngLwUnt;
+	        } else if(this.plnDfnActnRltedActnOffRngLwUnt.substring(this.plnDfnActnRltedActnOffRngLwUnt.length() - 1).equals("]") & plnDfnActnRltedActnOffRngLwUnt.equals("[")) {
+	        	this.plnDfnActnRltedActnOffRngLwUnt = this.plnDfnActnRltedActnOffRngLwUnt+ "," + plnDfnActnRltedActnOffRngLwUnt;
+	        } else if(plnDfnActnRltedActnOffRngLwUnt.equals("[") | plnDfnActnRltedActnOffRngLwUnt.equals("]") | this.plnDfnActnRltedActnOffRngLwUnt.substring(this.plnDfnActnRltedActnOffRngLwUnt.length() - 1).equals("[")) {
+	        	this.plnDfnActnRltedActnOffRngLwUnt = this.plnDfnActnRltedActnOffRngLwUnt+plnDfnActnRltedActnOffRngLwUnt;
+	        } else  {
+	            this.plnDfnActnRltedActnOffRngLwUnt = this.plnDfnActnRltedActnOffRngLwUnt+ "," +plnDfnActnRltedActnOffRngLwUnt;
+	        }
+        }
     }
     
     
@@ -1842,6 +3690,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnRltedActnOffRngLwVl = plnDfnActnRltedActnOffRngLwVl;
     }
     
+    public void addPlnDfnActnRltedActnOffRngLwVl(String plnDfnActnRltedActnOffRngLwVl) {
+    	if( plnDfnActnRltedActnOffRngLwVl != null ) {
+	    	if( this.plnDfnActnRltedActnOffRngLwVl == null ) {
+	        	this.plnDfnActnRltedActnOffRngLwVl = plnDfnActnRltedActnOffRngLwVl;
+	        } else if(this.plnDfnActnRltedActnOffRngLwVl.substring(this.plnDfnActnRltedActnOffRngLwVl.length() - 1).equals("]") & plnDfnActnRltedActnOffRngLwVl.equals("[")) {
+	        	this.plnDfnActnRltedActnOffRngLwVl = this.plnDfnActnRltedActnOffRngLwVl+ "," + plnDfnActnRltedActnOffRngLwVl;
+	        } else if(plnDfnActnRltedActnOffRngLwVl.equals("[") | plnDfnActnRltedActnOffRngLwVl.equals("]") | this.plnDfnActnRltedActnOffRngLwVl.substring(this.plnDfnActnRltedActnOffRngLwVl.length() - 1).equals("[")) {
+	        	this.plnDfnActnRltedActnOffRngLwVl = this.plnDfnActnRltedActnOffRngLwVl+plnDfnActnRltedActnOffRngLwVl;
+	        } else  {
+	            this.plnDfnActnRltedActnOffRngLwVl = this.plnDfnActnRltedActnOffRngLwVl+ "," +plnDfnActnRltedActnOffRngLwVl;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnRltedActnRltnship() {
@@ -1850,6 +3712,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnRltedActnRltnship(String plnDfnActnRltedActnRltnship) {
         this.plnDfnActnRltedActnRltnship = plnDfnActnRltedActnRltnship;
+    }
+    
+    public void addPlnDfnActnRltedActnRltnship(String plnDfnActnRltedActnRltnship) {
+    	if( plnDfnActnRltedActnRltnship != null ) {
+	    	if( this.plnDfnActnRltedActnRltnship == null ) {
+	        	this.plnDfnActnRltedActnRltnship = plnDfnActnRltedActnRltnship;
+	        } else if(this.plnDfnActnRltedActnRltnship.substring(this.plnDfnActnRltedActnRltnship.length() - 1).equals("]") & plnDfnActnRltedActnRltnship.equals("[")) {
+	        	this.plnDfnActnRltedActnRltnship = this.plnDfnActnRltedActnRltnship+ "," + plnDfnActnRltedActnRltnship;
+	        } else if(plnDfnActnRltedActnRltnship.equals("[") | plnDfnActnRltedActnRltnship.equals("]") | this.plnDfnActnRltedActnRltnship.substring(this.plnDfnActnRltedActnRltnship.length() - 1).equals("[")) {
+	        	this.plnDfnActnRltedActnRltnship = this.plnDfnActnRltedActnRltnship+plnDfnActnRltedActnRltnship;
+	        } else  {
+	            this.plnDfnActnRltedActnRltnship = this.plnDfnActnRltedActnRltnship+ "," +plnDfnActnRltedActnRltnship;
+	        }
+        }
     }
     
     
@@ -1862,6 +3738,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnRequiredBehavior = plnDfnActnRequiredBehavior;
     }
     
+    public void addPlnDfnActnRequiredBehavior(String plnDfnActnRequiredBehavior) {
+    	if( plnDfnActnRequiredBehavior != null ) {
+	    	if( this.plnDfnActnRequiredBehavior == null ) {
+	        	this.plnDfnActnRequiredBehavior = plnDfnActnRequiredBehavior;
+	        } else if(this.plnDfnActnRequiredBehavior.substring(this.plnDfnActnRequiredBehavior.length() - 1).equals("]") & plnDfnActnRequiredBehavior.equals("[")) {
+	        	this.plnDfnActnRequiredBehavior = this.plnDfnActnRequiredBehavior+ "," + plnDfnActnRequiredBehavior;
+	        } else if(plnDfnActnRequiredBehavior.equals("[") | plnDfnActnRequiredBehavior.equals("]") | this.plnDfnActnRequiredBehavior.substring(this.plnDfnActnRequiredBehavior.length() - 1).equals("[")) {
+	        	this.plnDfnActnRequiredBehavior = this.plnDfnActnRequiredBehavior+plnDfnActnRequiredBehavior;
+	        } else  {
+	            this.plnDfnActnRequiredBehavior = this.plnDfnActnRequiredBehavior+ "," +plnDfnActnRequiredBehavior;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnSelectionBehavior() {
@@ -1870,6 +3760,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnSelectionBehavior(String plnDfnActnSelectionBehavior) {
         this.plnDfnActnSelectionBehavior = plnDfnActnSelectionBehavior;
+    }
+    
+    public void addPlnDfnActnSelectionBehavior(String plnDfnActnSelectionBehavior) {
+    	if( plnDfnActnSelectionBehavior != null ) {
+	    	if( this.plnDfnActnSelectionBehavior == null ) {
+	        	this.plnDfnActnSelectionBehavior = plnDfnActnSelectionBehavior;
+	        } else if(this.plnDfnActnSelectionBehavior.substring(this.plnDfnActnSelectionBehavior.length() - 1).equals("]") & plnDfnActnSelectionBehavior.equals("[")) {
+	        	this.plnDfnActnSelectionBehavior = this.plnDfnActnSelectionBehavior+ "," + plnDfnActnSelectionBehavior;
+	        } else if(plnDfnActnSelectionBehavior.equals("[") | plnDfnActnSelectionBehavior.equals("]") | this.plnDfnActnSelectionBehavior.substring(this.plnDfnActnSelectionBehavior.length() - 1).equals("[")) {
+	        	this.plnDfnActnSelectionBehavior = this.plnDfnActnSelectionBehavior+plnDfnActnSelectionBehavior;
+	        } else  {
+	            this.plnDfnActnSelectionBehavior = this.plnDfnActnSelectionBehavior+ "," +plnDfnActnSelectionBehavior;
+	        }
+        }
     }
     
     
@@ -1882,6 +3786,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnSbjctCdbleCncptCdgCd = plnDfnActnSbjctCdbleCncptCdgCd;
     }
     
+    public void addPlnDfnActnSbjctCdbleCncptCdgCd(String plnDfnActnSbjctCdbleCncptCdgCd) {
+    	if( plnDfnActnSbjctCdbleCncptCdgCd != null ) {
+	    	if( this.plnDfnActnSbjctCdbleCncptCdgCd == null ) {
+	        	this.plnDfnActnSbjctCdbleCncptCdgCd = plnDfnActnSbjctCdbleCncptCdgCd;
+	        } else if(this.plnDfnActnSbjctCdbleCncptCdgCd.substring(this.plnDfnActnSbjctCdbleCncptCdgCd.length() - 1).equals("]") & plnDfnActnSbjctCdbleCncptCdgCd.equals("[")) {
+	        	this.plnDfnActnSbjctCdbleCncptCdgCd = this.plnDfnActnSbjctCdbleCncptCdgCd+ "," + plnDfnActnSbjctCdbleCncptCdgCd;
+	        } else if(plnDfnActnSbjctCdbleCncptCdgCd.equals("[") | plnDfnActnSbjctCdbleCncptCdgCd.equals("]") | this.plnDfnActnSbjctCdbleCncptCdgCd.substring(this.plnDfnActnSbjctCdbleCncptCdgCd.length() - 1).equals("[")) {
+	        	this.plnDfnActnSbjctCdbleCncptCdgCd = this.plnDfnActnSbjctCdbleCncptCdgCd+plnDfnActnSbjctCdbleCncptCdgCd;
+	        } else  {
+	            this.plnDfnActnSbjctCdbleCncptCdgCd = this.plnDfnActnSbjctCdbleCncptCdgCd+ "," +plnDfnActnSbjctCdbleCncptCdgCd;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnSbjctCdbleCncptCdgDsply() {
@@ -1890,6 +3808,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnSbjctCdbleCncptCdgDsply(String plnDfnActnSbjctCdbleCncptCdgDsply) {
         this.plnDfnActnSbjctCdbleCncptCdgDsply = plnDfnActnSbjctCdbleCncptCdgDsply;
+    }
+    
+    public void addPlnDfnActnSbjctCdbleCncptCdgDsply(String plnDfnActnSbjctCdbleCncptCdgDsply) {
+    	if( plnDfnActnSbjctCdbleCncptCdgDsply != null ) {
+	    	if( this.plnDfnActnSbjctCdbleCncptCdgDsply == null ) {
+	        	this.plnDfnActnSbjctCdbleCncptCdgDsply = plnDfnActnSbjctCdbleCncptCdgDsply;
+	        } else if(this.plnDfnActnSbjctCdbleCncptCdgDsply.substring(this.plnDfnActnSbjctCdbleCncptCdgDsply.length() - 1).equals("]") & plnDfnActnSbjctCdbleCncptCdgDsply.equals("[")) {
+	        	this.plnDfnActnSbjctCdbleCncptCdgDsply = this.plnDfnActnSbjctCdbleCncptCdgDsply+ "," + plnDfnActnSbjctCdbleCncptCdgDsply;
+	        } else if(plnDfnActnSbjctCdbleCncptCdgDsply.equals("[") | plnDfnActnSbjctCdbleCncptCdgDsply.equals("]") | this.plnDfnActnSbjctCdbleCncptCdgDsply.substring(this.plnDfnActnSbjctCdbleCncptCdgDsply.length() - 1).equals("[")) {
+	        	this.plnDfnActnSbjctCdbleCncptCdgDsply = this.plnDfnActnSbjctCdbleCncptCdgDsply+plnDfnActnSbjctCdbleCncptCdgDsply;
+	        } else  {
+	            this.plnDfnActnSbjctCdbleCncptCdgDsply = this.plnDfnActnSbjctCdbleCncptCdgDsply+ "," +plnDfnActnSbjctCdbleCncptCdgDsply;
+	        }
+        }
     }
     
     
@@ -1902,6 +3834,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnSbjctCdbleCncptCdgSys = plnDfnActnSbjctCdbleCncptCdgSys;
     }
     
+    public void addPlnDfnActnSbjctCdbleCncptCdgSys(String plnDfnActnSbjctCdbleCncptCdgSys) {
+    	if( plnDfnActnSbjctCdbleCncptCdgSys != null ) {
+	    	if( this.plnDfnActnSbjctCdbleCncptCdgSys == null ) {
+	        	this.plnDfnActnSbjctCdbleCncptCdgSys = plnDfnActnSbjctCdbleCncptCdgSys;
+	        } else if(this.plnDfnActnSbjctCdbleCncptCdgSys.substring(this.plnDfnActnSbjctCdbleCncptCdgSys.length() - 1).equals("]") & plnDfnActnSbjctCdbleCncptCdgSys.equals("[")) {
+	        	this.plnDfnActnSbjctCdbleCncptCdgSys = this.plnDfnActnSbjctCdbleCncptCdgSys+ "," + plnDfnActnSbjctCdbleCncptCdgSys;
+	        } else if(plnDfnActnSbjctCdbleCncptCdgSys.equals("[") | plnDfnActnSbjctCdbleCncptCdgSys.equals("]") | this.plnDfnActnSbjctCdbleCncptCdgSys.substring(this.plnDfnActnSbjctCdbleCncptCdgSys.length() - 1).equals("[")) {
+	        	this.plnDfnActnSbjctCdbleCncptCdgSys = this.plnDfnActnSbjctCdbleCncptCdgSys+plnDfnActnSbjctCdbleCncptCdgSys;
+	        } else  {
+	            this.plnDfnActnSbjctCdbleCncptCdgSys = this.plnDfnActnSbjctCdbleCncptCdgSys+ "," +plnDfnActnSbjctCdbleCncptCdgSys;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnSbjctCdbleCncptCdgUsrSltd() {
@@ -1910,6 +3856,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnSbjctCdbleCncptCdgUsrSltd(String plnDfnActnSbjctCdbleCncptCdgUsrSltd) {
         this.plnDfnActnSbjctCdbleCncptCdgUsrSltd = plnDfnActnSbjctCdbleCncptCdgUsrSltd;
+    }
+    
+    public void addPlnDfnActnSbjctCdbleCncptCdgUsrSltd(String plnDfnActnSbjctCdbleCncptCdgUsrSltd) {
+    	if( plnDfnActnSbjctCdbleCncptCdgUsrSltd != null ) {
+	    	if( this.plnDfnActnSbjctCdbleCncptCdgUsrSltd == null ) {
+	        	this.plnDfnActnSbjctCdbleCncptCdgUsrSltd = plnDfnActnSbjctCdbleCncptCdgUsrSltd;
+	        } else if(this.plnDfnActnSbjctCdbleCncptCdgUsrSltd.substring(this.plnDfnActnSbjctCdbleCncptCdgUsrSltd.length() - 1).equals("]") & plnDfnActnSbjctCdbleCncptCdgUsrSltd.equals("[")) {
+	        	this.plnDfnActnSbjctCdbleCncptCdgUsrSltd = this.plnDfnActnSbjctCdbleCncptCdgUsrSltd+ "," + plnDfnActnSbjctCdbleCncptCdgUsrSltd;
+	        } else if(plnDfnActnSbjctCdbleCncptCdgUsrSltd.equals("[") | plnDfnActnSbjctCdbleCncptCdgUsrSltd.equals("]") | this.plnDfnActnSbjctCdbleCncptCdgUsrSltd.substring(this.plnDfnActnSbjctCdbleCncptCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.plnDfnActnSbjctCdbleCncptCdgUsrSltd = this.plnDfnActnSbjctCdbleCncptCdgUsrSltd+plnDfnActnSbjctCdbleCncptCdgUsrSltd;
+	        } else  {
+	            this.plnDfnActnSbjctCdbleCncptCdgUsrSltd = this.plnDfnActnSbjctCdbleCncptCdgUsrSltd+ "," +plnDfnActnSbjctCdbleCncptCdgUsrSltd;
+	        }
+        }
     }
     
     
@@ -1922,6 +3882,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnSbjctCdbleCncptCdgVrsn = plnDfnActnSbjctCdbleCncptCdgVrsn;
     }
     
+    public void addPlnDfnActnSbjctCdbleCncptCdgVrsn(String plnDfnActnSbjctCdbleCncptCdgVrsn) {
+    	if( plnDfnActnSbjctCdbleCncptCdgVrsn != null ) {
+	    	if( this.plnDfnActnSbjctCdbleCncptCdgVrsn == null ) {
+	        	this.plnDfnActnSbjctCdbleCncptCdgVrsn = plnDfnActnSbjctCdbleCncptCdgVrsn;
+	        } else if(this.plnDfnActnSbjctCdbleCncptCdgVrsn.substring(this.plnDfnActnSbjctCdbleCncptCdgVrsn.length() - 1).equals("]") & plnDfnActnSbjctCdbleCncptCdgVrsn.equals("[")) {
+	        	this.plnDfnActnSbjctCdbleCncptCdgVrsn = this.plnDfnActnSbjctCdbleCncptCdgVrsn+ "," + plnDfnActnSbjctCdbleCncptCdgVrsn;
+	        } else if(plnDfnActnSbjctCdbleCncptCdgVrsn.equals("[") | plnDfnActnSbjctCdbleCncptCdgVrsn.equals("]") | this.plnDfnActnSbjctCdbleCncptCdgVrsn.substring(this.plnDfnActnSbjctCdbleCncptCdgVrsn.length() - 1).equals("[")) {
+	        	this.plnDfnActnSbjctCdbleCncptCdgVrsn = this.plnDfnActnSbjctCdbleCncptCdgVrsn+plnDfnActnSbjctCdbleCncptCdgVrsn;
+	        } else  {
+	            this.plnDfnActnSbjctCdbleCncptCdgVrsn = this.plnDfnActnSbjctCdbleCncptCdgVrsn+ "," +plnDfnActnSbjctCdbleCncptCdgVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnSbjctCdbleCncptTxt() {
@@ -1930,6 +3904,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnSbjctCdbleCncptTxt(String plnDfnActnSbjctCdbleCncptTxt) {
         this.plnDfnActnSbjctCdbleCncptTxt = plnDfnActnSbjctCdbleCncptTxt;
+    }
+    
+    public void addPlnDfnActnSbjctCdbleCncptTxt(String plnDfnActnSbjctCdbleCncptTxt) {
+    	if( plnDfnActnSbjctCdbleCncptTxt != null ) {
+	    	if( this.plnDfnActnSbjctCdbleCncptTxt == null ) {
+	        	this.plnDfnActnSbjctCdbleCncptTxt = plnDfnActnSbjctCdbleCncptTxt;
+	        } else if(this.plnDfnActnSbjctCdbleCncptTxt.substring(this.plnDfnActnSbjctCdbleCncptTxt.length() - 1).equals("]") & plnDfnActnSbjctCdbleCncptTxt.equals("[")) {
+	        	this.plnDfnActnSbjctCdbleCncptTxt = this.plnDfnActnSbjctCdbleCncptTxt+ "," + plnDfnActnSbjctCdbleCncptTxt;
+	        } else if(plnDfnActnSbjctCdbleCncptTxt.equals("[") | plnDfnActnSbjctCdbleCncptTxt.equals("]") | this.plnDfnActnSbjctCdbleCncptTxt.substring(this.plnDfnActnSbjctCdbleCncptTxt.length() - 1).equals("[")) {
+	        	this.plnDfnActnSbjctCdbleCncptTxt = this.plnDfnActnSbjctCdbleCncptTxt+plnDfnActnSbjctCdbleCncptTxt;
+	        } else  {
+	            this.plnDfnActnSbjctCdbleCncptTxt = this.plnDfnActnSbjctCdbleCncptTxt+ "," +plnDfnActnSbjctCdbleCncptTxt;
+	        }
+        }
     }
     
     
@@ -1942,6 +3930,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnSbjctRfrnc = plnDfnActnSbjctRfrnc;
     }
     
+    public void addPlnDfnActnSbjctRfrnc(String plnDfnActnSbjctRfrnc) {
+    	if( plnDfnActnSbjctRfrnc != null ) {
+	    	if( this.plnDfnActnSbjctRfrnc == null ) {
+	        	this.plnDfnActnSbjctRfrnc = plnDfnActnSbjctRfrnc;
+	        } else if(this.plnDfnActnSbjctRfrnc.substring(this.plnDfnActnSbjctRfrnc.length() - 1).equals("]") & plnDfnActnSbjctRfrnc.equals("[")) {
+	        	this.plnDfnActnSbjctRfrnc = this.plnDfnActnSbjctRfrnc+ "," + plnDfnActnSbjctRfrnc;
+	        } else if(plnDfnActnSbjctRfrnc.equals("[") | plnDfnActnSbjctRfrnc.equals("]") | this.plnDfnActnSbjctRfrnc.substring(this.plnDfnActnSbjctRfrnc.length() - 1).equals("[")) {
+	        	this.plnDfnActnSbjctRfrnc = this.plnDfnActnSbjctRfrnc+plnDfnActnSbjctRfrnc;
+	        } else  {
+	            this.plnDfnActnSbjctRfrnc = this.plnDfnActnSbjctRfrnc+ "," +plnDfnActnSbjctRfrnc;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTxtEquivalent() {
@@ -1950,6 +3952,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTxtEquivalent(String plnDfnActnTxtEquivalent) {
         this.plnDfnActnTxtEquivalent = plnDfnActnTxtEquivalent;
+    }
+    
+    public void addPlnDfnActnTxtEquivalent(String plnDfnActnTxtEquivalent) {
+    	if( plnDfnActnTxtEquivalent != null ) {
+	    	if( this.plnDfnActnTxtEquivalent == null ) {
+	        	this.plnDfnActnTxtEquivalent = plnDfnActnTxtEquivalent;
+	        } else if(this.plnDfnActnTxtEquivalent.substring(this.plnDfnActnTxtEquivalent.length() - 1).equals("]") & plnDfnActnTxtEquivalent.equals("[")) {
+	        	this.plnDfnActnTxtEquivalent = this.plnDfnActnTxtEquivalent+ "," + plnDfnActnTxtEquivalent;
+	        } else if(plnDfnActnTxtEquivalent.equals("[") | plnDfnActnTxtEquivalent.equals("]") | this.plnDfnActnTxtEquivalent.substring(this.plnDfnActnTxtEquivalent.length() - 1).equals("[")) {
+	        	this.plnDfnActnTxtEquivalent = this.plnDfnActnTxtEquivalent+plnDfnActnTxtEquivalent;
+	        } else  {
+	            this.plnDfnActnTxtEquivalent = this.plnDfnActnTxtEquivalent+ "," +plnDfnActnTxtEquivalent;
+	        }
+        }
     }
     
     
@@ -1962,6 +3978,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTmgAgeCd = plnDfnActnTmgAgeCd;
     }
     
+    public void addPlnDfnActnTmgAgeCd(String plnDfnActnTmgAgeCd) {
+    	if( plnDfnActnTmgAgeCd != null ) {
+	    	if( this.plnDfnActnTmgAgeCd == null ) {
+	        	this.plnDfnActnTmgAgeCd = plnDfnActnTmgAgeCd;
+	        } else if(this.plnDfnActnTmgAgeCd.substring(this.plnDfnActnTmgAgeCd.length() - 1).equals("]") & plnDfnActnTmgAgeCd.equals("[")) {
+	        	this.plnDfnActnTmgAgeCd = this.plnDfnActnTmgAgeCd+ "," + plnDfnActnTmgAgeCd;
+	        } else if(plnDfnActnTmgAgeCd.equals("[") | plnDfnActnTmgAgeCd.equals("]") | this.plnDfnActnTmgAgeCd.substring(this.plnDfnActnTmgAgeCd.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgAgeCd = this.plnDfnActnTmgAgeCd+plnDfnActnTmgAgeCd;
+	        } else  {
+	            this.plnDfnActnTmgAgeCd = this.plnDfnActnTmgAgeCd+ "," +plnDfnActnTmgAgeCd;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTmgAgeCmprtr() {
@@ -1970,6 +4000,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTmgAgeCmprtr(String plnDfnActnTmgAgeCmprtr) {
         this.plnDfnActnTmgAgeCmprtr = plnDfnActnTmgAgeCmprtr;
+    }
+    
+    public void addPlnDfnActnTmgAgeCmprtr(String plnDfnActnTmgAgeCmprtr) {
+    	if( plnDfnActnTmgAgeCmprtr != null ) {
+	    	if( this.plnDfnActnTmgAgeCmprtr == null ) {
+	        	this.plnDfnActnTmgAgeCmprtr = plnDfnActnTmgAgeCmprtr;
+	        } else if(this.plnDfnActnTmgAgeCmprtr.substring(this.plnDfnActnTmgAgeCmprtr.length() - 1).equals("]") & plnDfnActnTmgAgeCmprtr.equals("[")) {
+	        	this.plnDfnActnTmgAgeCmprtr = this.plnDfnActnTmgAgeCmprtr+ "," + plnDfnActnTmgAgeCmprtr;
+	        } else if(plnDfnActnTmgAgeCmprtr.equals("[") | plnDfnActnTmgAgeCmprtr.equals("]") | this.plnDfnActnTmgAgeCmprtr.substring(this.plnDfnActnTmgAgeCmprtr.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgAgeCmprtr = this.plnDfnActnTmgAgeCmprtr+plnDfnActnTmgAgeCmprtr;
+	        } else  {
+	            this.plnDfnActnTmgAgeCmprtr = this.plnDfnActnTmgAgeCmprtr+ "," +plnDfnActnTmgAgeCmprtr;
+	        }
+        }
     }
     
     
@@ -1982,6 +4026,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTmgAgeSys = plnDfnActnTmgAgeSys;
     }
     
+    public void addPlnDfnActnTmgAgeSys(String plnDfnActnTmgAgeSys) {
+    	if( plnDfnActnTmgAgeSys != null ) {
+	    	if( this.plnDfnActnTmgAgeSys == null ) {
+	        	this.plnDfnActnTmgAgeSys = plnDfnActnTmgAgeSys;
+	        } else if(this.plnDfnActnTmgAgeSys.substring(this.plnDfnActnTmgAgeSys.length() - 1).equals("]") & plnDfnActnTmgAgeSys.equals("[")) {
+	        	this.plnDfnActnTmgAgeSys = this.plnDfnActnTmgAgeSys+ "," + plnDfnActnTmgAgeSys;
+	        } else if(plnDfnActnTmgAgeSys.equals("[") | plnDfnActnTmgAgeSys.equals("]") | this.plnDfnActnTmgAgeSys.substring(this.plnDfnActnTmgAgeSys.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgAgeSys = this.plnDfnActnTmgAgeSys+plnDfnActnTmgAgeSys;
+	        } else  {
+	            this.plnDfnActnTmgAgeSys = this.plnDfnActnTmgAgeSys+ "," +plnDfnActnTmgAgeSys;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTmgAgeUnt() {
@@ -1990,6 +4048,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTmgAgeUnt(String plnDfnActnTmgAgeUnt) {
         this.plnDfnActnTmgAgeUnt = plnDfnActnTmgAgeUnt;
+    }
+    
+    public void addPlnDfnActnTmgAgeUnt(String plnDfnActnTmgAgeUnt) {
+    	if( plnDfnActnTmgAgeUnt != null ) {
+	    	if( this.plnDfnActnTmgAgeUnt == null ) {
+	        	this.plnDfnActnTmgAgeUnt = plnDfnActnTmgAgeUnt;
+	        } else if(this.plnDfnActnTmgAgeUnt.substring(this.plnDfnActnTmgAgeUnt.length() - 1).equals("]") & plnDfnActnTmgAgeUnt.equals("[")) {
+	        	this.plnDfnActnTmgAgeUnt = this.plnDfnActnTmgAgeUnt+ "," + plnDfnActnTmgAgeUnt;
+	        } else if(plnDfnActnTmgAgeUnt.equals("[") | plnDfnActnTmgAgeUnt.equals("]") | this.plnDfnActnTmgAgeUnt.substring(this.plnDfnActnTmgAgeUnt.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgAgeUnt = this.plnDfnActnTmgAgeUnt+plnDfnActnTmgAgeUnt;
+	        } else  {
+	            this.plnDfnActnTmgAgeUnt = this.plnDfnActnTmgAgeUnt+ "," +plnDfnActnTmgAgeUnt;
+	        }
+        }
     }
     
     
@@ -2002,6 +4074,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTmgAgeVl = plnDfnActnTmgAgeVl;
     }
     
+    public void addPlnDfnActnTmgAgeVl(String plnDfnActnTmgAgeVl) {
+    	if( plnDfnActnTmgAgeVl != null ) {
+	    	if( this.plnDfnActnTmgAgeVl == null ) {
+	        	this.plnDfnActnTmgAgeVl = plnDfnActnTmgAgeVl;
+	        } else if(this.plnDfnActnTmgAgeVl.substring(this.plnDfnActnTmgAgeVl.length() - 1).equals("]") & plnDfnActnTmgAgeVl.equals("[")) {
+	        	this.plnDfnActnTmgAgeVl = this.plnDfnActnTmgAgeVl+ "," + plnDfnActnTmgAgeVl;
+	        } else if(plnDfnActnTmgAgeVl.equals("[") | plnDfnActnTmgAgeVl.equals("]") | this.plnDfnActnTmgAgeVl.substring(this.plnDfnActnTmgAgeVl.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgAgeVl = this.plnDfnActnTmgAgeVl+plnDfnActnTmgAgeVl;
+	        } else  {
+	            this.plnDfnActnTmgAgeVl = this.plnDfnActnTmgAgeVl+ "," +plnDfnActnTmgAgeVl;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTmgDtTimeTyp() {
@@ -2010,6 +4096,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTmgDtTimeTyp(String plnDfnActnTmgDtTimeTyp) {
         this.plnDfnActnTmgDtTimeTyp = plnDfnActnTmgDtTimeTyp;
+    }
+    
+    public void addPlnDfnActnTmgDtTimeTyp(String plnDfnActnTmgDtTimeTyp) {
+    	if( plnDfnActnTmgDtTimeTyp != null ) {
+	    	if( this.plnDfnActnTmgDtTimeTyp == null ) {
+	        	this.plnDfnActnTmgDtTimeTyp = plnDfnActnTmgDtTimeTyp;
+	        } else if(this.plnDfnActnTmgDtTimeTyp.substring(this.plnDfnActnTmgDtTimeTyp.length() - 1).equals("]") & plnDfnActnTmgDtTimeTyp.equals("[")) {
+	        	this.plnDfnActnTmgDtTimeTyp = this.plnDfnActnTmgDtTimeTyp+ "," + plnDfnActnTmgDtTimeTyp;
+	        } else if(plnDfnActnTmgDtTimeTyp.equals("[") | plnDfnActnTmgDtTimeTyp.equals("]") | this.plnDfnActnTmgDtTimeTyp.substring(this.plnDfnActnTmgDtTimeTyp.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgDtTimeTyp = this.plnDfnActnTmgDtTimeTyp+plnDfnActnTmgDtTimeTyp;
+	        } else  {
+	            this.plnDfnActnTmgDtTimeTyp = this.plnDfnActnTmgDtTimeTyp+ "," +plnDfnActnTmgDtTimeTyp;
+	        }
+        }
     }
     
     
@@ -2022,6 +4122,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTmgDurationCd = plnDfnActnTmgDurationCd;
     }
     
+    public void addPlnDfnActnTmgDurationCd(String plnDfnActnTmgDurationCd) {
+    	if( plnDfnActnTmgDurationCd != null ) {
+	    	if( this.plnDfnActnTmgDurationCd == null ) {
+	        	this.plnDfnActnTmgDurationCd = plnDfnActnTmgDurationCd;
+	        } else if(this.plnDfnActnTmgDurationCd.substring(this.plnDfnActnTmgDurationCd.length() - 1).equals("]") & plnDfnActnTmgDurationCd.equals("[")) {
+	        	this.plnDfnActnTmgDurationCd = this.plnDfnActnTmgDurationCd+ "," + plnDfnActnTmgDurationCd;
+	        } else if(plnDfnActnTmgDurationCd.equals("[") | plnDfnActnTmgDurationCd.equals("]") | this.plnDfnActnTmgDurationCd.substring(this.plnDfnActnTmgDurationCd.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgDurationCd = this.plnDfnActnTmgDurationCd+plnDfnActnTmgDurationCd;
+	        } else  {
+	            this.plnDfnActnTmgDurationCd = this.plnDfnActnTmgDurationCd+ "," +plnDfnActnTmgDurationCd;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTmgDurationCmprtr() {
@@ -2030,6 +4144,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTmgDurationCmprtr(String plnDfnActnTmgDurationCmprtr) {
         this.plnDfnActnTmgDurationCmprtr = plnDfnActnTmgDurationCmprtr;
+    }
+    
+    public void addPlnDfnActnTmgDurationCmprtr(String plnDfnActnTmgDurationCmprtr) {
+    	if( plnDfnActnTmgDurationCmprtr != null ) {
+	    	if( this.plnDfnActnTmgDurationCmprtr == null ) {
+	        	this.plnDfnActnTmgDurationCmprtr = plnDfnActnTmgDurationCmprtr;
+	        } else if(this.plnDfnActnTmgDurationCmprtr.substring(this.plnDfnActnTmgDurationCmprtr.length() - 1).equals("]") & plnDfnActnTmgDurationCmprtr.equals("[")) {
+	        	this.plnDfnActnTmgDurationCmprtr = this.plnDfnActnTmgDurationCmprtr+ "," + plnDfnActnTmgDurationCmprtr;
+	        } else if(plnDfnActnTmgDurationCmprtr.equals("[") | plnDfnActnTmgDurationCmprtr.equals("]") | this.plnDfnActnTmgDurationCmprtr.substring(this.plnDfnActnTmgDurationCmprtr.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgDurationCmprtr = this.plnDfnActnTmgDurationCmprtr+plnDfnActnTmgDurationCmprtr;
+	        } else  {
+	            this.plnDfnActnTmgDurationCmprtr = this.plnDfnActnTmgDurationCmprtr+ "," +plnDfnActnTmgDurationCmprtr;
+	        }
+        }
     }
     
     
@@ -2042,6 +4170,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTmgDurationSys = plnDfnActnTmgDurationSys;
     }
     
+    public void addPlnDfnActnTmgDurationSys(String plnDfnActnTmgDurationSys) {
+    	if( plnDfnActnTmgDurationSys != null ) {
+	    	if( this.plnDfnActnTmgDurationSys == null ) {
+	        	this.plnDfnActnTmgDurationSys = plnDfnActnTmgDurationSys;
+	        } else if(this.plnDfnActnTmgDurationSys.substring(this.plnDfnActnTmgDurationSys.length() - 1).equals("]") & plnDfnActnTmgDurationSys.equals("[")) {
+	        	this.plnDfnActnTmgDurationSys = this.plnDfnActnTmgDurationSys+ "," + plnDfnActnTmgDurationSys;
+	        } else if(plnDfnActnTmgDurationSys.equals("[") | plnDfnActnTmgDurationSys.equals("]") | this.plnDfnActnTmgDurationSys.substring(this.plnDfnActnTmgDurationSys.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgDurationSys = this.plnDfnActnTmgDurationSys+plnDfnActnTmgDurationSys;
+	        } else  {
+	            this.plnDfnActnTmgDurationSys = this.plnDfnActnTmgDurationSys+ "," +plnDfnActnTmgDurationSys;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTmgDurationUnt() {
@@ -2050,6 +4192,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTmgDurationUnt(String plnDfnActnTmgDurationUnt) {
         this.plnDfnActnTmgDurationUnt = plnDfnActnTmgDurationUnt;
+    }
+    
+    public void addPlnDfnActnTmgDurationUnt(String plnDfnActnTmgDurationUnt) {
+    	if( plnDfnActnTmgDurationUnt != null ) {
+	    	if( this.plnDfnActnTmgDurationUnt == null ) {
+	        	this.plnDfnActnTmgDurationUnt = plnDfnActnTmgDurationUnt;
+	        } else if(this.plnDfnActnTmgDurationUnt.substring(this.plnDfnActnTmgDurationUnt.length() - 1).equals("]") & plnDfnActnTmgDurationUnt.equals("[")) {
+	        	this.plnDfnActnTmgDurationUnt = this.plnDfnActnTmgDurationUnt+ "," + plnDfnActnTmgDurationUnt;
+	        } else if(plnDfnActnTmgDurationUnt.equals("[") | plnDfnActnTmgDurationUnt.equals("]") | this.plnDfnActnTmgDurationUnt.substring(this.plnDfnActnTmgDurationUnt.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgDurationUnt = this.plnDfnActnTmgDurationUnt+plnDfnActnTmgDurationUnt;
+	        } else  {
+	            this.plnDfnActnTmgDurationUnt = this.plnDfnActnTmgDurationUnt+ "," +plnDfnActnTmgDurationUnt;
+	        }
+        }
     }
     
     
@@ -2062,6 +4218,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTmgDurationVl = plnDfnActnTmgDurationVl;
     }
     
+    public void addPlnDfnActnTmgDurationVl(String plnDfnActnTmgDurationVl) {
+    	if( plnDfnActnTmgDurationVl != null ) {
+	    	if( this.plnDfnActnTmgDurationVl == null ) {
+	        	this.plnDfnActnTmgDurationVl = plnDfnActnTmgDurationVl;
+	        } else if(this.plnDfnActnTmgDurationVl.substring(this.plnDfnActnTmgDurationVl.length() - 1).equals("]") & plnDfnActnTmgDurationVl.equals("[")) {
+	        	this.plnDfnActnTmgDurationVl = this.plnDfnActnTmgDurationVl+ "," + plnDfnActnTmgDurationVl;
+	        } else if(plnDfnActnTmgDurationVl.equals("[") | plnDfnActnTmgDurationVl.equals("]") | this.plnDfnActnTmgDurationVl.substring(this.plnDfnActnTmgDurationVl.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgDurationVl = this.plnDfnActnTmgDurationVl+plnDfnActnTmgDurationVl;
+	        } else  {
+	            this.plnDfnActnTmgDurationVl = this.plnDfnActnTmgDurationVl+ "," +plnDfnActnTmgDurationVl;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTmgPrdEnd() {
@@ -2070,6 +4240,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTmgPrdEnd(String plnDfnActnTmgPrdEnd) {
         this.plnDfnActnTmgPrdEnd = plnDfnActnTmgPrdEnd;
+    }
+    
+    public void addPlnDfnActnTmgPrdEnd(String plnDfnActnTmgPrdEnd) {
+    	if( plnDfnActnTmgPrdEnd != null ) {
+	    	if( this.plnDfnActnTmgPrdEnd == null ) {
+	        	this.plnDfnActnTmgPrdEnd = plnDfnActnTmgPrdEnd;
+	        } else if(this.plnDfnActnTmgPrdEnd.substring(this.plnDfnActnTmgPrdEnd.length() - 1).equals("]") & plnDfnActnTmgPrdEnd.equals("[")) {
+	        	this.plnDfnActnTmgPrdEnd = this.plnDfnActnTmgPrdEnd+ "," + plnDfnActnTmgPrdEnd;
+	        } else if(plnDfnActnTmgPrdEnd.equals("[") | plnDfnActnTmgPrdEnd.equals("]") | this.plnDfnActnTmgPrdEnd.substring(this.plnDfnActnTmgPrdEnd.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgPrdEnd = this.plnDfnActnTmgPrdEnd+plnDfnActnTmgPrdEnd;
+	        } else  {
+	            this.plnDfnActnTmgPrdEnd = this.plnDfnActnTmgPrdEnd+ "," +plnDfnActnTmgPrdEnd;
+	        }
+        }
     }
     
     
@@ -2082,6 +4266,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTmgPrdStrt = plnDfnActnTmgPrdStrt;
     }
     
+    public void addPlnDfnActnTmgPrdStrt(String plnDfnActnTmgPrdStrt) {
+    	if( plnDfnActnTmgPrdStrt != null ) {
+	    	if( this.plnDfnActnTmgPrdStrt == null ) {
+	        	this.plnDfnActnTmgPrdStrt = plnDfnActnTmgPrdStrt;
+	        } else if(this.plnDfnActnTmgPrdStrt.substring(this.plnDfnActnTmgPrdStrt.length() - 1).equals("]") & plnDfnActnTmgPrdStrt.equals("[")) {
+	        	this.plnDfnActnTmgPrdStrt = this.plnDfnActnTmgPrdStrt+ "," + plnDfnActnTmgPrdStrt;
+	        } else if(plnDfnActnTmgPrdStrt.equals("[") | plnDfnActnTmgPrdStrt.equals("]") | this.plnDfnActnTmgPrdStrt.substring(this.plnDfnActnTmgPrdStrt.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgPrdStrt = this.plnDfnActnTmgPrdStrt+plnDfnActnTmgPrdStrt;
+	        } else  {
+	            this.plnDfnActnTmgPrdStrt = this.plnDfnActnTmgPrdStrt+ "," +plnDfnActnTmgPrdStrt;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTmgRngHiCd() {
@@ -2090,6 +4288,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTmgRngHiCd(String plnDfnActnTmgRngHiCd) {
         this.plnDfnActnTmgRngHiCd = plnDfnActnTmgRngHiCd;
+    }
+    
+    public void addPlnDfnActnTmgRngHiCd(String plnDfnActnTmgRngHiCd) {
+    	if( plnDfnActnTmgRngHiCd != null ) {
+	    	if( this.plnDfnActnTmgRngHiCd == null ) {
+	        	this.plnDfnActnTmgRngHiCd = plnDfnActnTmgRngHiCd;
+	        } else if(this.plnDfnActnTmgRngHiCd.substring(this.plnDfnActnTmgRngHiCd.length() - 1).equals("]") & plnDfnActnTmgRngHiCd.equals("[")) {
+	        	this.plnDfnActnTmgRngHiCd = this.plnDfnActnTmgRngHiCd+ "," + plnDfnActnTmgRngHiCd;
+	        } else if(plnDfnActnTmgRngHiCd.equals("[") | plnDfnActnTmgRngHiCd.equals("]") | this.plnDfnActnTmgRngHiCd.substring(this.plnDfnActnTmgRngHiCd.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgRngHiCd = this.plnDfnActnTmgRngHiCd+plnDfnActnTmgRngHiCd;
+	        } else  {
+	            this.plnDfnActnTmgRngHiCd = this.plnDfnActnTmgRngHiCd+ "," +plnDfnActnTmgRngHiCd;
+	        }
+        }
     }
     
     
@@ -2102,6 +4314,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTmgRngHiCmprtr = plnDfnActnTmgRngHiCmprtr;
     }
     
+    public void addPlnDfnActnTmgRngHiCmprtr(String plnDfnActnTmgRngHiCmprtr) {
+    	if( plnDfnActnTmgRngHiCmprtr != null ) {
+	    	if( this.plnDfnActnTmgRngHiCmprtr == null ) {
+	        	this.plnDfnActnTmgRngHiCmprtr = plnDfnActnTmgRngHiCmprtr;
+	        } else if(this.plnDfnActnTmgRngHiCmprtr.substring(this.plnDfnActnTmgRngHiCmprtr.length() - 1).equals("]") & plnDfnActnTmgRngHiCmprtr.equals("[")) {
+	        	this.plnDfnActnTmgRngHiCmprtr = this.plnDfnActnTmgRngHiCmprtr+ "," + plnDfnActnTmgRngHiCmprtr;
+	        } else if(plnDfnActnTmgRngHiCmprtr.equals("[") | plnDfnActnTmgRngHiCmprtr.equals("]") | this.plnDfnActnTmgRngHiCmprtr.substring(this.plnDfnActnTmgRngHiCmprtr.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgRngHiCmprtr = this.plnDfnActnTmgRngHiCmprtr+plnDfnActnTmgRngHiCmprtr;
+	        } else  {
+	            this.plnDfnActnTmgRngHiCmprtr = this.plnDfnActnTmgRngHiCmprtr+ "," +plnDfnActnTmgRngHiCmprtr;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTmgRngHiSys() {
@@ -2110,6 +4336,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTmgRngHiSys(String plnDfnActnTmgRngHiSys) {
         this.plnDfnActnTmgRngHiSys = plnDfnActnTmgRngHiSys;
+    }
+    
+    public void addPlnDfnActnTmgRngHiSys(String plnDfnActnTmgRngHiSys) {
+    	if( plnDfnActnTmgRngHiSys != null ) {
+	    	if( this.plnDfnActnTmgRngHiSys == null ) {
+	        	this.plnDfnActnTmgRngHiSys = plnDfnActnTmgRngHiSys;
+	        } else if(this.plnDfnActnTmgRngHiSys.substring(this.plnDfnActnTmgRngHiSys.length() - 1).equals("]") & plnDfnActnTmgRngHiSys.equals("[")) {
+	        	this.plnDfnActnTmgRngHiSys = this.plnDfnActnTmgRngHiSys+ "," + plnDfnActnTmgRngHiSys;
+	        } else if(plnDfnActnTmgRngHiSys.equals("[") | plnDfnActnTmgRngHiSys.equals("]") | this.plnDfnActnTmgRngHiSys.substring(this.plnDfnActnTmgRngHiSys.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgRngHiSys = this.plnDfnActnTmgRngHiSys+plnDfnActnTmgRngHiSys;
+	        } else  {
+	            this.plnDfnActnTmgRngHiSys = this.plnDfnActnTmgRngHiSys+ "," +plnDfnActnTmgRngHiSys;
+	        }
+        }
     }
     
     
@@ -2122,6 +4362,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTmgRngHiUnt = plnDfnActnTmgRngHiUnt;
     }
     
+    public void addPlnDfnActnTmgRngHiUnt(String plnDfnActnTmgRngHiUnt) {
+    	if( plnDfnActnTmgRngHiUnt != null ) {
+	    	if( this.plnDfnActnTmgRngHiUnt == null ) {
+	        	this.plnDfnActnTmgRngHiUnt = plnDfnActnTmgRngHiUnt;
+	        } else if(this.plnDfnActnTmgRngHiUnt.substring(this.plnDfnActnTmgRngHiUnt.length() - 1).equals("]") & plnDfnActnTmgRngHiUnt.equals("[")) {
+	        	this.plnDfnActnTmgRngHiUnt = this.plnDfnActnTmgRngHiUnt+ "," + plnDfnActnTmgRngHiUnt;
+	        } else if(plnDfnActnTmgRngHiUnt.equals("[") | plnDfnActnTmgRngHiUnt.equals("]") | this.plnDfnActnTmgRngHiUnt.substring(this.plnDfnActnTmgRngHiUnt.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgRngHiUnt = this.plnDfnActnTmgRngHiUnt+plnDfnActnTmgRngHiUnt;
+	        } else  {
+	            this.plnDfnActnTmgRngHiUnt = this.plnDfnActnTmgRngHiUnt+ "," +plnDfnActnTmgRngHiUnt;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTmgRngHiVl() {
@@ -2130,6 +4384,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTmgRngHiVl(String plnDfnActnTmgRngHiVl) {
         this.plnDfnActnTmgRngHiVl = plnDfnActnTmgRngHiVl;
+    }
+    
+    public void addPlnDfnActnTmgRngHiVl(String plnDfnActnTmgRngHiVl) {
+    	if( plnDfnActnTmgRngHiVl != null ) {
+	    	if( this.plnDfnActnTmgRngHiVl == null ) {
+	        	this.plnDfnActnTmgRngHiVl = plnDfnActnTmgRngHiVl;
+	        } else if(this.plnDfnActnTmgRngHiVl.substring(this.plnDfnActnTmgRngHiVl.length() - 1).equals("]") & plnDfnActnTmgRngHiVl.equals("[")) {
+	        	this.plnDfnActnTmgRngHiVl = this.plnDfnActnTmgRngHiVl+ "," + plnDfnActnTmgRngHiVl;
+	        } else if(plnDfnActnTmgRngHiVl.equals("[") | plnDfnActnTmgRngHiVl.equals("]") | this.plnDfnActnTmgRngHiVl.substring(this.plnDfnActnTmgRngHiVl.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgRngHiVl = this.plnDfnActnTmgRngHiVl+plnDfnActnTmgRngHiVl;
+	        } else  {
+	            this.plnDfnActnTmgRngHiVl = this.plnDfnActnTmgRngHiVl+ "," +plnDfnActnTmgRngHiVl;
+	        }
+        }
     }
     
     
@@ -2142,6 +4410,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTmgRngLwCd = plnDfnActnTmgRngLwCd;
     }
     
+    public void addPlnDfnActnTmgRngLwCd(String plnDfnActnTmgRngLwCd) {
+    	if( plnDfnActnTmgRngLwCd != null ) {
+	    	if( this.plnDfnActnTmgRngLwCd == null ) {
+	        	this.plnDfnActnTmgRngLwCd = plnDfnActnTmgRngLwCd;
+	        } else if(this.plnDfnActnTmgRngLwCd.substring(this.plnDfnActnTmgRngLwCd.length() - 1).equals("]") & plnDfnActnTmgRngLwCd.equals("[")) {
+	        	this.plnDfnActnTmgRngLwCd = this.plnDfnActnTmgRngLwCd+ "," + plnDfnActnTmgRngLwCd;
+	        } else if(plnDfnActnTmgRngLwCd.equals("[") | plnDfnActnTmgRngLwCd.equals("]") | this.plnDfnActnTmgRngLwCd.substring(this.plnDfnActnTmgRngLwCd.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgRngLwCd = this.plnDfnActnTmgRngLwCd+plnDfnActnTmgRngLwCd;
+	        } else  {
+	            this.plnDfnActnTmgRngLwCd = this.plnDfnActnTmgRngLwCd+ "," +plnDfnActnTmgRngLwCd;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTmgRngLwCmprtr() {
@@ -2150,6 +4432,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTmgRngLwCmprtr(String plnDfnActnTmgRngLwCmprtr) {
         this.plnDfnActnTmgRngLwCmprtr = plnDfnActnTmgRngLwCmprtr;
+    }
+    
+    public void addPlnDfnActnTmgRngLwCmprtr(String plnDfnActnTmgRngLwCmprtr) {
+    	if( plnDfnActnTmgRngLwCmprtr != null ) {
+	    	if( this.plnDfnActnTmgRngLwCmprtr == null ) {
+	        	this.plnDfnActnTmgRngLwCmprtr = plnDfnActnTmgRngLwCmprtr;
+	        } else if(this.plnDfnActnTmgRngLwCmprtr.substring(this.plnDfnActnTmgRngLwCmprtr.length() - 1).equals("]") & plnDfnActnTmgRngLwCmprtr.equals("[")) {
+	        	this.plnDfnActnTmgRngLwCmprtr = this.plnDfnActnTmgRngLwCmprtr+ "," + plnDfnActnTmgRngLwCmprtr;
+	        } else if(plnDfnActnTmgRngLwCmprtr.equals("[") | plnDfnActnTmgRngLwCmprtr.equals("]") | this.plnDfnActnTmgRngLwCmprtr.substring(this.plnDfnActnTmgRngLwCmprtr.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgRngLwCmprtr = this.plnDfnActnTmgRngLwCmprtr+plnDfnActnTmgRngLwCmprtr;
+	        } else  {
+	            this.plnDfnActnTmgRngLwCmprtr = this.plnDfnActnTmgRngLwCmprtr+ "," +plnDfnActnTmgRngLwCmprtr;
+	        }
+        }
     }
     
     
@@ -2162,6 +4458,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTmgRngLwSys = plnDfnActnTmgRngLwSys;
     }
     
+    public void addPlnDfnActnTmgRngLwSys(String plnDfnActnTmgRngLwSys) {
+    	if( plnDfnActnTmgRngLwSys != null ) {
+	    	if( this.plnDfnActnTmgRngLwSys == null ) {
+	        	this.plnDfnActnTmgRngLwSys = plnDfnActnTmgRngLwSys;
+	        } else if(this.plnDfnActnTmgRngLwSys.substring(this.plnDfnActnTmgRngLwSys.length() - 1).equals("]") & plnDfnActnTmgRngLwSys.equals("[")) {
+	        	this.plnDfnActnTmgRngLwSys = this.plnDfnActnTmgRngLwSys+ "," + plnDfnActnTmgRngLwSys;
+	        } else if(plnDfnActnTmgRngLwSys.equals("[") | plnDfnActnTmgRngLwSys.equals("]") | this.plnDfnActnTmgRngLwSys.substring(this.plnDfnActnTmgRngLwSys.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgRngLwSys = this.plnDfnActnTmgRngLwSys+plnDfnActnTmgRngLwSys;
+	        } else  {
+	            this.plnDfnActnTmgRngLwSys = this.plnDfnActnTmgRngLwSys+ "," +plnDfnActnTmgRngLwSys;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTmgRngLwUnt() {
@@ -2170,6 +4480,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTmgRngLwUnt(String plnDfnActnTmgRngLwUnt) {
         this.plnDfnActnTmgRngLwUnt = plnDfnActnTmgRngLwUnt;
+    }
+    
+    public void addPlnDfnActnTmgRngLwUnt(String plnDfnActnTmgRngLwUnt) {
+    	if( plnDfnActnTmgRngLwUnt != null ) {
+	    	if( this.plnDfnActnTmgRngLwUnt == null ) {
+	        	this.plnDfnActnTmgRngLwUnt = plnDfnActnTmgRngLwUnt;
+	        } else if(this.plnDfnActnTmgRngLwUnt.substring(this.plnDfnActnTmgRngLwUnt.length() - 1).equals("]") & plnDfnActnTmgRngLwUnt.equals("[")) {
+	        	this.plnDfnActnTmgRngLwUnt = this.plnDfnActnTmgRngLwUnt+ "," + plnDfnActnTmgRngLwUnt;
+	        } else if(plnDfnActnTmgRngLwUnt.equals("[") | plnDfnActnTmgRngLwUnt.equals("]") | this.plnDfnActnTmgRngLwUnt.substring(this.plnDfnActnTmgRngLwUnt.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgRngLwUnt = this.plnDfnActnTmgRngLwUnt+plnDfnActnTmgRngLwUnt;
+	        } else  {
+	            this.plnDfnActnTmgRngLwUnt = this.plnDfnActnTmgRngLwUnt+ "," +plnDfnActnTmgRngLwUnt;
+	        }
+        }
     }
     
     
@@ -2182,6 +4506,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTmgRngLwVl = plnDfnActnTmgRngLwVl;
     }
     
+    public void addPlnDfnActnTmgRngLwVl(String plnDfnActnTmgRngLwVl) {
+    	if( plnDfnActnTmgRngLwVl != null ) {
+	    	if( this.plnDfnActnTmgRngLwVl == null ) {
+	        	this.plnDfnActnTmgRngLwVl = plnDfnActnTmgRngLwVl;
+	        } else if(this.plnDfnActnTmgRngLwVl.substring(this.plnDfnActnTmgRngLwVl.length() - 1).equals("]") & plnDfnActnTmgRngLwVl.equals("[")) {
+	        	this.plnDfnActnTmgRngLwVl = this.plnDfnActnTmgRngLwVl+ "," + plnDfnActnTmgRngLwVl;
+	        } else if(plnDfnActnTmgRngLwVl.equals("[") | plnDfnActnTmgRngLwVl.equals("]") | this.plnDfnActnTmgRngLwVl.substring(this.plnDfnActnTmgRngLwVl.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgRngLwVl = this.plnDfnActnTmgRngLwVl+plnDfnActnTmgRngLwVl;
+	        } else  {
+	            this.plnDfnActnTmgRngLwVl = this.plnDfnActnTmgRngLwVl+ "," +plnDfnActnTmgRngLwVl;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTmgTmgCdCdgCd() {
@@ -2190,6 +4528,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTmgTmgCdCdgCd(String plnDfnActnTmgTmgCdCdgCd) {
         this.plnDfnActnTmgTmgCdCdgCd = plnDfnActnTmgTmgCdCdgCd;
+    }
+    
+    public void addPlnDfnActnTmgTmgCdCdgCd(String plnDfnActnTmgTmgCdCdgCd) {
+    	if( plnDfnActnTmgTmgCdCdgCd != null ) {
+	    	if( this.plnDfnActnTmgTmgCdCdgCd == null ) {
+	        	this.plnDfnActnTmgTmgCdCdgCd = plnDfnActnTmgTmgCdCdgCd;
+	        } else if(this.plnDfnActnTmgTmgCdCdgCd.substring(this.plnDfnActnTmgTmgCdCdgCd.length() - 1).equals("]") & plnDfnActnTmgTmgCdCdgCd.equals("[")) {
+	        	this.plnDfnActnTmgTmgCdCdgCd = this.plnDfnActnTmgTmgCdCdgCd+ "," + plnDfnActnTmgTmgCdCdgCd;
+	        } else if(plnDfnActnTmgTmgCdCdgCd.equals("[") | plnDfnActnTmgTmgCdCdgCd.equals("]") | this.plnDfnActnTmgTmgCdCdgCd.substring(this.plnDfnActnTmgTmgCdCdgCd.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgTmgCdCdgCd = this.plnDfnActnTmgTmgCdCdgCd+plnDfnActnTmgTmgCdCdgCd;
+	        } else  {
+	            this.plnDfnActnTmgTmgCdCdgCd = this.plnDfnActnTmgTmgCdCdgCd+ "," +plnDfnActnTmgTmgCdCdgCd;
+	        }
+        }
     }
     
     
@@ -2202,6 +4554,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTmgTmgCdCdgDsply = plnDfnActnTmgTmgCdCdgDsply;
     }
     
+    public void addPlnDfnActnTmgTmgCdCdgDsply(String plnDfnActnTmgTmgCdCdgDsply) {
+    	if( plnDfnActnTmgTmgCdCdgDsply != null ) {
+	    	if( this.plnDfnActnTmgTmgCdCdgDsply == null ) {
+	        	this.plnDfnActnTmgTmgCdCdgDsply = plnDfnActnTmgTmgCdCdgDsply;
+	        } else if(this.plnDfnActnTmgTmgCdCdgDsply.substring(this.plnDfnActnTmgTmgCdCdgDsply.length() - 1).equals("]") & plnDfnActnTmgTmgCdCdgDsply.equals("[")) {
+	        	this.plnDfnActnTmgTmgCdCdgDsply = this.plnDfnActnTmgTmgCdCdgDsply+ "," + plnDfnActnTmgTmgCdCdgDsply;
+	        } else if(plnDfnActnTmgTmgCdCdgDsply.equals("[") | plnDfnActnTmgTmgCdCdgDsply.equals("]") | this.plnDfnActnTmgTmgCdCdgDsply.substring(this.plnDfnActnTmgTmgCdCdgDsply.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgTmgCdCdgDsply = this.plnDfnActnTmgTmgCdCdgDsply+plnDfnActnTmgTmgCdCdgDsply;
+	        } else  {
+	            this.plnDfnActnTmgTmgCdCdgDsply = this.plnDfnActnTmgTmgCdCdgDsply+ "," +plnDfnActnTmgTmgCdCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTmgTmgCdCdgSys() {
@@ -2210,6 +4576,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTmgTmgCdCdgSys(String plnDfnActnTmgTmgCdCdgSys) {
         this.plnDfnActnTmgTmgCdCdgSys = plnDfnActnTmgTmgCdCdgSys;
+    }
+    
+    public void addPlnDfnActnTmgTmgCdCdgSys(String plnDfnActnTmgTmgCdCdgSys) {
+    	if( plnDfnActnTmgTmgCdCdgSys != null ) {
+	    	if( this.plnDfnActnTmgTmgCdCdgSys == null ) {
+	        	this.plnDfnActnTmgTmgCdCdgSys = plnDfnActnTmgTmgCdCdgSys;
+	        } else if(this.plnDfnActnTmgTmgCdCdgSys.substring(this.plnDfnActnTmgTmgCdCdgSys.length() - 1).equals("]") & plnDfnActnTmgTmgCdCdgSys.equals("[")) {
+	        	this.plnDfnActnTmgTmgCdCdgSys = this.plnDfnActnTmgTmgCdCdgSys+ "," + plnDfnActnTmgTmgCdCdgSys;
+	        } else if(plnDfnActnTmgTmgCdCdgSys.equals("[") | plnDfnActnTmgTmgCdCdgSys.equals("]") | this.plnDfnActnTmgTmgCdCdgSys.substring(this.plnDfnActnTmgTmgCdCdgSys.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgTmgCdCdgSys = this.plnDfnActnTmgTmgCdCdgSys+plnDfnActnTmgTmgCdCdgSys;
+	        } else  {
+	            this.plnDfnActnTmgTmgCdCdgSys = this.plnDfnActnTmgTmgCdCdgSys+ "," +plnDfnActnTmgTmgCdCdgSys;
+	        }
+        }
     }
     
     
@@ -2222,6 +4602,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTmgTmgCdCdgUsrSltd = plnDfnActnTmgTmgCdCdgUsrSltd;
     }
     
+    public void addPlnDfnActnTmgTmgCdCdgUsrSltd(String plnDfnActnTmgTmgCdCdgUsrSltd) {
+    	if( plnDfnActnTmgTmgCdCdgUsrSltd != null ) {
+	    	if( this.plnDfnActnTmgTmgCdCdgUsrSltd == null ) {
+	        	this.plnDfnActnTmgTmgCdCdgUsrSltd = plnDfnActnTmgTmgCdCdgUsrSltd;
+	        } else if(this.plnDfnActnTmgTmgCdCdgUsrSltd.substring(this.plnDfnActnTmgTmgCdCdgUsrSltd.length() - 1).equals("]") & plnDfnActnTmgTmgCdCdgUsrSltd.equals("[")) {
+	        	this.plnDfnActnTmgTmgCdCdgUsrSltd = this.plnDfnActnTmgTmgCdCdgUsrSltd+ "," + plnDfnActnTmgTmgCdCdgUsrSltd;
+	        } else if(plnDfnActnTmgTmgCdCdgUsrSltd.equals("[") | plnDfnActnTmgTmgCdCdgUsrSltd.equals("]") | this.plnDfnActnTmgTmgCdCdgUsrSltd.substring(this.plnDfnActnTmgTmgCdCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgTmgCdCdgUsrSltd = this.plnDfnActnTmgTmgCdCdgUsrSltd+plnDfnActnTmgTmgCdCdgUsrSltd;
+	        } else  {
+	            this.plnDfnActnTmgTmgCdCdgUsrSltd = this.plnDfnActnTmgTmgCdCdgUsrSltd+ "," +plnDfnActnTmgTmgCdCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTmgTmgCdCdgVrsn() {
@@ -2230,6 +4624,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTmgTmgCdCdgVrsn(String plnDfnActnTmgTmgCdCdgVrsn) {
         this.plnDfnActnTmgTmgCdCdgVrsn = plnDfnActnTmgTmgCdCdgVrsn;
+    }
+    
+    public void addPlnDfnActnTmgTmgCdCdgVrsn(String plnDfnActnTmgTmgCdCdgVrsn) {
+    	if( plnDfnActnTmgTmgCdCdgVrsn != null ) {
+	    	if( this.plnDfnActnTmgTmgCdCdgVrsn == null ) {
+	        	this.plnDfnActnTmgTmgCdCdgVrsn = plnDfnActnTmgTmgCdCdgVrsn;
+	        } else if(this.plnDfnActnTmgTmgCdCdgVrsn.substring(this.plnDfnActnTmgTmgCdCdgVrsn.length() - 1).equals("]") & plnDfnActnTmgTmgCdCdgVrsn.equals("[")) {
+	        	this.plnDfnActnTmgTmgCdCdgVrsn = this.plnDfnActnTmgTmgCdCdgVrsn+ "," + plnDfnActnTmgTmgCdCdgVrsn;
+	        } else if(plnDfnActnTmgTmgCdCdgVrsn.equals("[") | plnDfnActnTmgTmgCdCdgVrsn.equals("]") | this.plnDfnActnTmgTmgCdCdgVrsn.substring(this.plnDfnActnTmgTmgCdCdgVrsn.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgTmgCdCdgVrsn = this.plnDfnActnTmgTmgCdCdgVrsn+plnDfnActnTmgTmgCdCdgVrsn;
+	        } else  {
+	            this.plnDfnActnTmgTmgCdCdgVrsn = this.plnDfnActnTmgTmgCdCdgVrsn+ "," +plnDfnActnTmgTmgCdCdgVrsn;
+	        }
+        }
     }
     
     
@@ -2242,6 +4650,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTmgTmgCdTxt = plnDfnActnTmgTmgCdTxt;
     }
     
+    public void addPlnDfnActnTmgTmgCdTxt(String plnDfnActnTmgTmgCdTxt) {
+    	if( plnDfnActnTmgTmgCdTxt != null ) {
+	    	if( this.plnDfnActnTmgTmgCdTxt == null ) {
+	        	this.plnDfnActnTmgTmgCdTxt = plnDfnActnTmgTmgCdTxt;
+	        } else if(this.plnDfnActnTmgTmgCdTxt.substring(this.plnDfnActnTmgTmgCdTxt.length() - 1).equals("]") & plnDfnActnTmgTmgCdTxt.equals("[")) {
+	        	this.plnDfnActnTmgTmgCdTxt = this.plnDfnActnTmgTmgCdTxt+ "," + plnDfnActnTmgTmgCdTxt;
+	        } else if(plnDfnActnTmgTmgCdTxt.equals("[") | plnDfnActnTmgTmgCdTxt.equals("]") | this.plnDfnActnTmgTmgCdTxt.substring(this.plnDfnActnTmgTmgCdTxt.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgTmgCdTxt = this.plnDfnActnTmgTmgCdTxt+plnDfnActnTmgTmgCdTxt;
+	        } else  {
+	            this.plnDfnActnTmgTmgCdTxt = this.plnDfnActnTmgTmgCdTxt+ "," +plnDfnActnTmgTmgCdTxt;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTmgTmgEvnt() {
@@ -2250,6 +4672,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTmgTmgEvnt(String plnDfnActnTmgTmgEvnt) {
         this.plnDfnActnTmgTmgEvnt = plnDfnActnTmgTmgEvnt;
+    }
+    
+    public void addPlnDfnActnTmgTmgEvnt(String plnDfnActnTmgTmgEvnt) {
+    	if( plnDfnActnTmgTmgEvnt != null ) {
+	    	if( this.plnDfnActnTmgTmgEvnt == null ) {
+	        	this.plnDfnActnTmgTmgEvnt = plnDfnActnTmgTmgEvnt;
+	        } else if(this.plnDfnActnTmgTmgEvnt.substring(this.plnDfnActnTmgTmgEvnt.length() - 1).equals("]") & plnDfnActnTmgTmgEvnt.equals("[")) {
+	        	this.plnDfnActnTmgTmgEvnt = this.plnDfnActnTmgTmgEvnt+ "," + plnDfnActnTmgTmgEvnt;
+	        } else if(plnDfnActnTmgTmgEvnt.equals("[") | plnDfnActnTmgTmgEvnt.equals("]") | this.plnDfnActnTmgTmgEvnt.substring(this.plnDfnActnTmgTmgEvnt.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgTmgEvnt = this.plnDfnActnTmgTmgEvnt+plnDfnActnTmgTmgEvnt;
+	        } else  {
+	            this.plnDfnActnTmgTmgEvnt = this.plnDfnActnTmgTmgEvnt+ "," +plnDfnActnTmgTmgEvnt;
+	        }
+        }
     }
     
     
@@ -2262,6 +4698,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTmgTmgRptBndsDurationCd = plnDfnActnTmgTmgRptBndsDurationCd;
     }
     
+    public void addPlnDfnActnTmgTmgRptBndsDurationCd(String plnDfnActnTmgTmgRptBndsDurationCd) {
+    	if( plnDfnActnTmgTmgRptBndsDurationCd != null ) {
+	    	if( this.plnDfnActnTmgTmgRptBndsDurationCd == null ) {
+	        	this.plnDfnActnTmgTmgRptBndsDurationCd = plnDfnActnTmgTmgRptBndsDurationCd;
+	        } else if(this.plnDfnActnTmgTmgRptBndsDurationCd.substring(this.plnDfnActnTmgTmgRptBndsDurationCd.length() - 1).equals("]") & plnDfnActnTmgTmgRptBndsDurationCd.equals("[")) {
+	        	this.plnDfnActnTmgTmgRptBndsDurationCd = this.plnDfnActnTmgTmgRptBndsDurationCd+ "," + plnDfnActnTmgTmgRptBndsDurationCd;
+	        } else if(plnDfnActnTmgTmgRptBndsDurationCd.equals("[") | plnDfnActnTmgTmgRptBndsDurationCd.equals("]") | this.plnDfnActnTmgTmgRptBndsDurationCd.substring(this.plnDfnActnTmgTmgRptBndsDurationCd.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgTmgRptBndsDurationCd = this.plnDfnActnTmgTmgRptBndsDurationCd+plnDfnActnTmgTmgRptBndsDurationCd;
+	        } else  {
+	            this.plnDfnActnTmgTmgRptBndsDurationCd = this.plnDfnActnTmgTmgRptBndsDurationCd+ "," +plnDfnActnTmgTmgRptBndsDurationCd;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTmgTmgRptBndsDurationCmprtr() {
@@ -2270,6 +4720,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTmgTmgRptBndsDurationCmprtr(String plnDfnActnTmgTmgRptBndsDurationCmprtr) {
         this.plnDfnActnTmgTmgRptBndsDurationCmprtr = plnDfnActnTmgTmgRptBndsDurationCmprtr;
+    }
+    
+    public void addPlnDfnActnTmgTmgRptBndsDurationCmprtr(String plnDfnActnTmgTmgRptBndsDurationCmprtr) {
+    	if( plnDfnActnTmgTmgRptBndsDurationCmprtr != null ) {
+	    	if( this.plnDfnActnTmgTmgRptBndsDurationCmprtr == null ) {
+	        	this.plnDfnActnTmgTmgRptBndsDurationCmprtr = plnDfnActnTmgTmgRptBndsDurationCmprtr;
+	        } else if(this.plnDfnActnTmgTmgRptBndsDurationCmprtr.substring(this.plnDfnActnTmgTmgRptBndsDurationCmprtr.length() - 1).equals("]") & plnDfnActnTmgTmgRptBndsDurationCmprtr.equals("[")) {
+	        	this.plnDfnActnTmgTmgRptBndsDurationCmprtr = this.plnDfnActnTmgTmgRptBndsDurationCmprtr+ "," + plnDfnActnTmgTmgRptBndsDurationCmprtr;
+	        } else if(plnDfnActnTmgTmgRptBndsDurationCmprtr.equals("[") | plnDfnActnTmgTmgRptBndsDurationCmprtr.equals("]") | this.plnDfnActnTmgTmgRptBndsDurationCmprtr.substring(this.plnDfnActnTmgTmgRptBndsDurationCmprtr.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgTmgRptBndsDurationCmprtr = this.plnDfnActnTmgTmgRptBndsDurationCmprtr+plnDfnActnTmgTmgRptBndsDurationCmprtr;
+	        } else  {
+	            this.plnDfnActnTmgTmgRptBndsDurationCmprtr = this.plnDfnActnTmgTmgRptBndsDurationCmprtr+ "," +plnDfnActnTmgTmgRptBndsDurationCmprtr;
+	        }
+        }
     }
     
     
@@ -2282,6 +4746,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTmgTmgRptBndsDurationSys = plnDfnActnTmgTmgRptBndsDurationSys;
     }
     
+    public void addPlnDfnActnTmgTmgRptBndsDurationSys(String plnDfnActnTmgTmgRptBndsDurationSys) {
+    	if( plnDfnActnTmgTmgRptBndsDurationSys != null ) {
+	    	if( this.plnDfnActnTmgTmgRptBndsDurationSys == null ) {
+	        	this.plnDfnActnTmgTmgRptBndsDurationSys = plnDfnActnTmgTmgRptBndsDurationSys;
+	        } else if(this.plnDfnActnTmgTmgRptBndsDurationSys.substring(this.plnDfnActnTmgTmgRptBndsDurationSys.length() - 1).equals("]") & plnDfnActnTmgTmgRptBndsDurationSys.equals("[")) {
+	        	this.plnDfnActnTmgTmgRptBndsDurationSys = this.plnDfnActnTmgTmgRptBndsDurationSys+ "," + plnDfnActnTmgTmgRptBndsDurationSys;
+	        } else if(plnDfnActnTmgTmgRptBndsDurationSys.equals("[") | plnDfnActnTmgTmgRptBndsDurationSys.equals("]") | this.plnDfnActnTmgTmgRptBndsDurationSys.substring(this.plnDfnActnTmgTmgRptBndsDurationSys.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgTmgRptBndsDurationSys = this.plnDfnActnTmgTmgRptBndsDurationSys+plnDfnActnTmgTmgRptBndsDurationSys;
+	        } else  {
+	            this.plnDfnActnTmgTmgRptBndsDurationSys = this.plnDfnActnTmgTmgRptBndsDurationSys+ "," +plnDfnActnTmgTmgRptBndsDurationSys;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTmgTmgRptBndsDurationUnt() {
@@ -2290,6 +4768,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTmgTmgRptBndsDurationUnt(String plnDfnActnTmgTmgRptBndsDurationUnt) {
         this.plnDfnActnTmgTmgRptBndsDurationUnt = plnDfnActnTmgTmgRptBndsDurationUnt;
+    }
+    
+    public void addPlnDfnActnTmgTmgRptBndsDurationUnt(String plnDfnActnTmgTmgRptBndsDurationUnt) {
+    	if( plnDfnActnTmgTmgRptBndsDurationUnt != null ) {
+	    	if( this.plnDfnActnTmgTmgRptBndsDurationUnt == null ) {
+	        	this.plnDfnActnTmgTmgRptBndsDurationUnt = plnDfnActnTmgTmgRptBndsDurationUnt;
+	        } else if(this.plnDfnActnTmgTmgRptBndsDurationUnt.substring(this.plnDfnActnTmgTmgRptBndsDurationUnt.length() - 1).equals("]") & plnDfnActnTmgTmgRptBndsDurationUnt.equals("[")) {
+	        	this.plnDfnActnTmgTmgRptBndsDurationUnt = this.plnDfnActnTmgTmgRptBndsDurationUnt+ "," + plnDfnActnTmgTmgRptBndsDurationUnt;
+	        } else if(plnDfnActnTmgTmgRptBndsDurationUnt.equals("[") | plnDfnActnTmgTmgRptBndsDurationUnt.equals("]") | this.plnDfnActnTmgTmgRptBndsDurationUnt.substring(this.plnDfnActnTmgTmgRptBndsDurationUnt.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgTmgRptBndsDurationUnt = this.plnDfnActnTmgTmgRptBndsDurationUnt+plnDfnActnTmgTmgRptBndsDurationUnt;
+	        } else  {
+	            this.plnDfnActnTmgTmgRptBndsDurationUnt = this.plnDfnActnTmgTmgRptBndsDurationUnt+ "," +plnDfnActnTmgTmgRptBndsDurationUnt;
+	        }
+        }
     }
     
     
@@ -2302,6 +4794,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTmgTmgRptBndsDurationVl = plnDfnActnTmgTmgRptBndsDurationVl;
     }
     
+    public void addPlnDfnActnTmgTmgRptBndsDurationVl(String plnDfnActnTmgTmgRptBndsDurationVl) {
+    	if( plnDfnActnTmgTmgRptBndsDurationVl != null ) {
+	    	if( this.plnDfnActnTmgTmgRptBndsDurationVl == null ) {
+	        	this.plnDfnActnTmgTmgRptBndsDurationVl = plnDfnActnTmgTmgRptBndsDurationVl;
+	        } else if(this.plnDfnActnTmgTmgRptBndsDurationVl.substring(this.plnDfnActnTmgTmgRptBndsDurationVl.length() - 1).equals("]") & plnDfnActnTmgTmgRptBndsDurationVl.equals("[")) {
+	        	this.plnDfnActnTmgTmgRptBndsDurationVl = this.plnDfnActnTmgTmgRptBndsDurationVl+ "," + plnDfnActnTmgTmgRptBndsDurationVl;
+	        } else if(plnDfnActnTmgTmgRptBndsDurationVl.equals("[") | plnDfnActnTmgTmgRptBndsDurationVl.equals("]") | this.plnDfnActnTmgTmgRptBndsDurationVl.substring(this.plnDfnActnTmgTmgRptBndsDurationVl.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgTmgRptBndsDurationVl = this.plnDfnActnTmgTmgRptBndsDurationVl+plnDfnActnTmgTmgRptBndsDurationVl;
+	        } else  {
+	            this.plnDfnActnTmgTmgRptBndsDurationVl = this.plnDfnActnTmgTmgRptBndsDurationVl+ "," +plnDfnActnTmgTmgRptBndsDurationVl;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTmgTmgRptBndsPrdEnd() {
@@ -2310,6 +4816,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTmgTmgRptBndsPrdEnd(String plnDfnActnTmgTmgRptBndsPrdEnd) {
         this.plnDfnActnTmgTmgRptBndsPrdEnd = plnDfnActnTmgTmgRptBndsPrdEnd;
+    }
+    
+    public void addPlnDfnActnTmgTmgRptBndsPrdEnd(String plnDfnActnTmgTmgRptBndsPrdEnd) {
+    	if( plnDfnActnTmgTmgRptBndsPrdEnd != null ) {
+	    	if( this.plnDfnActnTmgTmgRptBndsPrdEnd == null ) {
+	        	this.plnDfnActnTmgTmgRptBndsPrdEnd = plnDfnActnTmgTmgRptBndsPrdEnd;
+	        } else if(this.plnDfnActnTmgTmgRptBndsPrdEnd.substring(this.plnDfnActnTmgTmgRptBndsPrdEnd.length() - 1).equals("]") & plnDfnActnTmgTmgRptBndsPrdEnd.equals("[")) {
+	        	this.plnDfnActnTmgTmgRptBndsPrdEnd = this.plnDfnActnTmgTmgRptBndsPrdEnd+ "," + plnDfnActnTmgTmgRptBndsPrdEnd;
+	        } else if(plnDfnActnTmgTmgRptBndsPrdEnd.equals("[") | plnDfnActnTmgTmgRptBndsPrdEnd.equals("]") | this.plnDfnActnTmgTmgRptBndsPrdEnd.substring(this.plnDfnActnTmgTmgRptBndsPrdEnd.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgTmgRptBndsPrdEnd = this.plnDfnActnTmgTmgRptBndsPrdEnd+plnDfnActnTmgTmgRptBndsPrdEnd;
+	        } else  {
+	            this.plnDfnActnTmgTmgRptBndsPrdEnd = this.plnDfnActnTmgTmgRptBndsPrdEnd+ "," +plnDfnActnTmgTmgRptBndsPrdEnd;
+	        }
+        }
     }
     
     
@@ -2322,6 +4842,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTmgTmgRptBndsPrdStrt = plnDfnActnTmgTmgRptBndsPrdStrt;
     }
     
+    public void addPlnDfnActnTmgTmgRptBndsPrdStrt(String plnDfnActnTmgTmgRptBndsPrdStrt) {
+    	if( plnDfnActnTmgTmgRptBndsPrdStrt != null ) {
+	    	if( this.plnDfnActnTmgTmgRptBndsPrdStrt == null ) {
+	        	this.plnDfnActnTmgTmgRptBndsPrdStrt = plnDfnActnTmgTmgRptBndsPrdStrt;
+	        } else if(this.plnDfnActnTmgTmgRptBndsPrdStrt.substring(this.plnDfnActnTmgTmgRptBndsPrdStrt.length() - 1).equals("]") & plnDfnActnTmgTmgRptBndsPrdStrt.equals("[")) {
+	        	this.plnDfnActnTmgTmgRptBndsPrdStrt = this.plnDfnActnTmgTmgRptBndsPrdStrt+ "," + plnDfnActnTmgTmgRptBndsPrdStrt;
+	        } else if(plnDfnActnTmgTmgRptBndsPrdStrt.equals("[") | plnDfnActnTmgTmgRptBndsPrdStrt.equals("]") | this.plnDfnActnTmgTmgRptBndsPrdStrt.substring(this.plnDfnActnTmgTmgRptBndsPrdStrt.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgTmgRptBndsPrdStrt = this.plnDfnActnTmgTmgRptBndsPrdStrt+plnDfnActnTmgTmgRptBndsPrdStrt;
+	        } else  {
+	            this.plnDfnActnTmgTmgRptBndsPrdStrt = this.plnDfnActnTmgTmgRptBndsPrdStrt+ "," +plnDfnActnTmgTmgRptBndsPrdStrt;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTmgTmgRptBndsRngHiCd() {
@@ -2330,6 +4864,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTmgTmgRptBndsRngHiCd(String plnDfnActnTmgTmgRptBndsRngHiCd) {
         this.plnDfnActnTmgTmgRptBndsRngHiCd = plnDfnActnTmgTmgRptBndsRngHiCd;
+    }
+    
+    public void addPlnDfnActnTmgTmgRptBndsRngHiCd(String plnDfnActnTmgTmgRptBndsRngHiCd) {
+    	if( plnDfnActnTmgTmgRptBndsRngHiCd != null ) {
+	    	if( this.plnDfnActnTmgTmgRptBndsRngHiCd == null ) {
+	        	this.plnDfnActnTmgTmgRptBndsRngHiCd = plnDfnActnTmgTmgRptBndsRngHiCd;
+	        } else if(this.plnDfnActnTmgTmgRptBndsRngHiCd.substring(this.plnDfnActnTmgTmgRptBndsRngHiCd.length() - 1).equals("]") & plnDfnActnTmgTmgRptBndsRngHiCd.equals("[")) {
+	        	this.plnDfnActnTmgTmgRptBndsRngHiCd = this.plnDfnActnTmgTmgRptBndsRngHiCd+ "," + plnDfnActnTmgTmgRptBndsRngHiCd;
+	        } else if(plnDfnActnTmgTmgRptBndsRngHiCd.equals("[") | plnDfnActnTmgTmgRptBndsRngHiCd.equals("]") | this.plnDfnActnTmgTmgRptBndsRngHiCd.substring(this.plnDfnActnTmgTmgRptBndsRngHiCd.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgTmgRptBndsRngHiCd = this.plnDfnActnTmgTmgRptBndsRngHiCd+plnDfnActnTmgTmgRptBndsRngHiCd;
+	        } else  {
+	            this.plnDfnActnTmgTmgRptBndsRngHiCd = this.plnDfnActnTmgTmgRptBndsRngHiCd+ "," +plnDfnActnTmgTmgRptBndsRngHiCd;
+	        }
+        }
     }
     
     
@@ -2342,6 +4890,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTmgTmgRptBndsRngHiCmprtr = plnDfnActnTmgTmgRptBndsRngHiCmprtr;
     }
     
+    public void addPlnDfnActnTmgTmgRptBndsRngHiCmprtr(String plnDfnActnTmgTmgRptBndsRngHiCmprtr) {
+    	if( plnDfnActnTmgTmgRptBndsRngHiCmprtr != null ) {
+	    	if( this.plnDfnActnTmgTmgRptBndsRngHiCmprtr == null ) {
+	        	this.plnDfnActnTmgTmgRptBndsRngHiCmprtr = plnDfnActnTmgTmgRptBndsRngHiCmprtr;
+	        } else if(this.plnDfnActnTmgTmgRptBndsRngHiCmprtr.substring(this.plnDfnActnTmgTmgRptBndsRngHiCmprtr.length() - 1).equals("]") & plnDfnActnTmgTmgRptBndsRngHiCmprtr.equals("[")) {
+	        	this.plnDfnActnTmgTmgRptBndsRngHiCmprtr = this.plnDfnActnTmgTmgRptBndsRngHiCmprtr+ "," + plnDfnActnTmgTmgRptBndsRngHiCmprtr;
+	        } else if(plnDfnActnTmgTmgRptBndsRngHiCmprtr.equals("[") | plnDfnActnTmgTmgRptBndsRngHiCmprtr.equals("]") | this.plnDfnActnTmgTmgRptBndsRngHiCmprtr.substring(this.plnDfnActnTmgTmgRptBndsRngHiCmprtr.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgTmgRptBndsRngHiCmprtr = this.plnDfnActnTmgTmgRptBndsRngHiCmprtr+plnDfnActnTmgTmgRptBndsRngHiCmprtr;
+	        } else  {
+	            this.plnDfnActnTmgTmgRptBndsRngHiCmprtr = this.plnDfnActnTmgTmgRptBndsRngHiCmprtr+ "," +plnDfnActnTmgTmgRptBndsRngHiCmprtr;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTmgTmgRptBndsRngHiSys() {
@@ -2350,6 +4912,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTmgTmgRptBndsRngHiSys(String plnDfnActnTmgTmgRptBndsRngHiSys) {
         this.plnDfnActnTmgTmgRptBndsRngHiSys = plnDfnActnTmgTmgRptBndsRngHiSys;
+    }
+    
+    public void addPlnDfnActnTmgTmgRptBndsRngHiSys(String plnDfnActnTmgTmgRptBndsRngHiSys) {
+    	if( plnDfnActnTmgTmgRptBndsRngHiSys != null ) {
+	    	if( this.plnDfnActnTmgTmgRptBndsRngHiSys == null ) {
+	        	this.plnDfnActnTmgTmgRptBndsRngHiSys = plnDfnActnTmgTmgRptBndsRngHiSys;
+	        } else if(this.plnDfnActnTmgTmgRptBndsRngHiSys.substring(this.plnDfnActnTmgTmgRptBndsRngHiSys.length() - 1).equals("]") & plnDfnActnTmgTmgRptBndsRngHiSys.equals("[")) {
+	        	this.plnDfnActnTmgTmgRptBndsRngHiSys = this.plnDfnActnTmgTmgRptBndsRngHiSys+ "," + plnDfnActnTmgTmgRptBndsRngHiSys;
+	        } else if(plnDfnActnTmgTmgRptBndsRngHiSys.equals("[") | plnDfnActnTmgTmgRptBndsRngHiSys.equals("]") | this.plnDfnActnTmgTmgRptBndsRngHiSys.substring(this.plnDfnActnTmgTmgRptBndsRngHiSys.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgTmgRptBndsRngHiSys = this.plnDfnActnTmgTmgRptBndsRngHiSys+plnDfnActnTmgTmgRptBndsRngHiSys;
+	        } else  {
+	            this.plnDfnActnTmgTmgRptBndsRngHiSys = this.plnDfnActnTmgTmgRptBndsRngHiSys+ "," +plnDfnActnTmgTmgRptBndsRngHiSys;
+	        }
+        }
     }
     
     
@@ -2362,6 +4938,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTmgTmgRptBndsRngHiUnt = plnDfnActnTmgTmgRptBndsRngHiUnt;
     }
     
+    public void addPlnDfnActnTmgTmgRptBndsRngHiUnt(String plnDfnActnTmgTmgRptBndsRngHiUnt) {
+    	if( plnDfnActnTmgTmgRptBndsRngHiUnt != null ) {
+	    	if( this.plnDfnActnTmgTmgRptBndsRngHiUnt == null ) {
+	        	this.plnDfnActnTmgTmgRptBndsRngHiUnt = plnDfnActnTmgTmgRptBndsRngHiUnt;
+	        } else if(this.plnDfnActnTmgTmgRptBndsRngHiUnt.substring(this.plnDfnActnTmgTmgRptBndsRngHiUnt.length() - 1).equals("]") & plnDfnActnTmgTmgRptBndsRngHiUnt.equals("[")) {
+	        	this.plnDfnActnTmgTmgRptBndsRngHiUnt = this.plnDfnActnTmgTmgRptBndsRngHiUnt+ "," + plnDfnActnTmgTmgRptBndsRngHiUnt;
+	        } else if(plnDfnActnTmgTmgRptBndsRngHiUnt.equals("[") | plnDfnActnTmgTmgRptBndsRngHiUnt.equals("]") | this.plnDfnActnTmgTmgRptBndsRngHiUnt.substring(this.plnDfnActnTmgTmgRptBndsRngHiUnt.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgTmgRptBndsRngHiUnt = this.plnDfnActnTmgTmgRptBndsRngHiUnt+plnDfnActnTmgTmgRptBndsRngHiUnt;
+	        } else  {
+	            this.plnDfnActnTmgTmgRptBndsRngHiUnt = this.plnDfnActnTmgTmgRptBndsRngHiUnt+ "," +plnDfnActnTmgTmgRptBndsRngHiUnt;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTmgTmgRptBndsRngHiVl() {
@@ -2370,6 +4960,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTmgTmgRptBndsRngHiVl(String plnDfnActnTmgTmgRptBndsRngHiVl) {
         this.plnDfnActnTmgTmgRptBndsRngHiVl = plnDfnActnTmgTmgRptBndsRngHiVl;
+    }
+    
+    public void addPlnDfnActnTmgTmgRptBndsRngHiVl(String plnDfnActnTmgTmgRptBndsRngHiVl) {
+    	if( plnDfnActnTmgTmgRptBndsRngHiVl != null ) {
+	    	if( this.plnDfnActnTmgTmgRptBndsRngHiVl == null ) {
+	        	this.plnDfnActnTmgTmgRptBndsRngHiVl = plnDfnActnTmgTmgRptBndsRngHiVl;
+	        } else if(this.plnDfnActnTmgTmgRptBndsRngHiVl.substring(this.plnDfnActnTmgTmgRptBndsRngHiVl.length() - 1).equals("]") & plnDfnActnTmgTmgRptBndsRngHiVl.equals("[")) {
+	        	this.plnDfnActnTmgTmgRptBndsRngHiVl = this.plnDfnActnTmgTmgRptBndsRngHiVl+ "," + plnDfnActnTmgTmgRptBndsRngHiVl;
+	        } else if(plnDfnActnTmgTmgRptBndsRngHiVl.equals("[") | plnDfnActnTmgTmgRptBndsRngHiVl.equals("]") | this.plnDfnActnTmgTmgRptBndsRngHiVl.substring(this.plnDfnActnTmgTmgRptBndsRngHiVl.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgTmgRptBndsRngHiVl = this.plnDfnActnTmgTmgRptBndsRngHiVl+plnDfnActnTmgTmgRptBndsRngHiVl;
+	        } else  {
+	            this.plnDfnActnTmgTmgRptBndsRngHiVl = this.plnDfnActnTmgTmgRptBndsRngHiVl+ "," +plnDfnActnTmgTmgRptBndsRngHiVl;
+	        }
+        }
     }
     
     
@@ -2382,6 +4986,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTmgTmgRptBndsRngLwCd = plnDfnActnTmgTmgRptBndsRngLwCd;
     }
     
+    public void addPlnDfnActnTmgTmgRptBndsRngLwCd(String plnDfnActnTmgTmgRptBndsRngLwCd) {
+    	if( plnDfnActnTmgTmgRptBndsRngLwCd != null ) {
+	    	if( this.plnDfnActnTmgTmgRptBndsRngLwCd == null ) {
+	        	this.plnDfnActnTmgTmgRptBndsRngLwCd = plnDfnActnTmgTmgRptBndsRngLwCd;
+	        } else if(this.plnDfnActnTmgTmgRptBndsRngLwCd.substring(this.plnDfnActnTmgTmgRptBndsRngLwCd.length() - 1).equals("]") & plnDfnActnTmgTmgRptBndsRngLwCd.equals("[")) {
+	        	this.plnDfnActnTmgTmgRptBndsRngLwCd = this.plnDfnActnTmgTmgRptBndsRngLwCd+ "," + plnDfnActnTmgTmgRptBndsRngLwCd;
+	        } else if(plnDfnActnTmgTmgRptBndsRngLwCd.equals("[") | plnDfnActnTmgTmgRptBndsRngLwCd.equals("]") | this.plnDfnActnTmgTmgRptBndsRngLwCd.substring(this.plnDfnActnTmgTmgRptBndsRngLwCd.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgTmgRptBndsRngLwCd = this.plnDfnActnTmgTmgRptBndsRngLwCd+plnDfnActnTmgTmgRptBndsRngLwCd;
+	        } else  {
+	            this.plnDfnActnTmgTmgRptBndsRngLwCd = this.plnDfnActnTmgTmgRptBndsRngLwCd+ "," +plnDfnActnTmgTmgRptBndsRngLwCd;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTmgTmgRptBndsRngLwCmprtr() {
@@ -2390,6 +5008,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTmgTmgRptBndsRngLwCmprtr(String plnDfnActnTmgTmgRptBndsRngLwCmprtr) {
         this.plnDfnActnTmgTmgRptBndsRngLwCmprtr = plnDfnActnTmgTmgRptBndsRngLwCmprtr;
+    }
+    
+    public void addPlnDfnActnTmgTmgRptBndsRngLwCmprtr(String plnDfnActnTmgTmgRptBndsRngLwCmprtr) {
+    	if( plnDfnActnTmgTmgRptBndsRngLwCmprtr != null ) {
+	    	if( this.plnDfnActnTmgTmgRptBndsRngLwCmprtr == null ) {
+	        	this.plnDfnActnTmgTmgRptBndsRngLwCmprtr = plnDfnActnTmgTmgRptBndsRngLwCmprtr;
+	        } else if(this.plnDfnActnTmgTmgRptBndsRngLwCmprtr.substring(this.plnDfnActnTmgTmgRptBndsRngLwCmprtr.length() - 1).equals("]") & plnDfnActnTmgTmgRptBndsRngLwCmprtr.equals("[")) {
+	        	this.plnDfnActnTmgTmgRptBndsRngLwCmprtr = this.plnDfnActnTmgTmgRptBndsRngLwCmprtr+ "," + plnDfnActnTmgTmgRptBndsRngLwCmprtr;
+	        } else if(plnDfnActnTmgTmgRptBndsRngLwCmprtr.equals("[") | plnDfnActnTmgTmgRptBndsRngLwCmprtr.equals("]") | this.plnDfnActnTmgTmgRptBndsRngLwCmprtr.substring(this.plnDfnActnTmgTmgRptBndsRngLwCmprtr.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgTmgRptBndsRngLwCmprtr = this.plnDfnActnTmgTmgRptBndsRngLwCmprtr+plnDfnActnTmgTmgRptBndsRngLwCmprtr;
+	        } else  {
+	            this.plnDfnActnTmgTmgRptBndsRngLwCmprtr = this.plnDfnActnTmgTmgRptBndsRngLwCmprtr+ "," +plnDfnActnTmgTmgRptBndsRngLwCmprtr;
+	        }
+        }
     }
     
     
@@ -2402,6 +5034,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTmgTmgRptBndsRngLwSys = plnDfnActnTmgTmgRptBndsRngLwSys;
     }
     
+    public void addPlnDfnActnTmgTmgRptBndsRngLwSys(String plnDfnActnTmgTmgRptBndsRngLwSys) {
+    	if( plnDfnActnTmgTmgRptBndsRngLwSys != null ) {
+	    	if( this.plnDfnActnTmgTmgRptBndsRngLwSys == null ) {
+	        	this.plnDfnActnTmgTmgRptBndsRngLwSys = plnDfnActnTmgTmgRptBndsRngLwSys;
+	        } else if(this.plnDfnActnTmgTmgRptBndsRngLwSys.substring(this.plnDfnActnTmgTmgRptBndsRngLwSys.length() - 1).equals("]") & plnDfnActnTmgTmgRptBndsRngLwSys.equals("[")) {
+	        	this.plnDfnActnTmgTmgRptBndsRngLwSys = this.plnDfnActnTmgTmgRptBndsRngLwSys+ "," + plnDfnActnTmgTmgRptBndsRngLwSys;
+	        } else if(plnDfnActnTmgTmgRptBndsRngLwSys.equals("[") | plnDfnActnTmgTmgRptBndsRngLwSys.equals("]") | this.plnDfnActnTmgTmgRptBndsRngLwSys.substring(this.plnDfnActnTmgTmgRptBndsRngLwSys.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgTmgRptBndsRngLwSys = this.plnDfnActnTmgTmgRptBndsRngLwSys+plnDfnActnTmgTmgRptBndsRngLwSys;
+	        } else  {
+	            this.plnDfnActnTmgTmgRptBndsRngLwSys = this.plnDfnActnTmgTmgRptBndsRngLwSys+ "," +plnDfnActnTmgTmgRptBndsRngLwSys;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTmgTmgRptBndsRngLwUnt() {
@@ -2410,6 +5056,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTmgTmgRptBndsRngLwUnt(String plnDfnActnTmgTmgRptBndsRngLwUnt) {
         this.plnDfnActnTmgTmgRptBndsRngLwUnt = plnDfnActnTmgTmgRptBndsRngLwUnt;
+    }
+    
+    public void addPlnDfnActnTmgTmgRptBndsRngLwUnt(String plnDfnActnTmgTmgRptBndsRngLwUnt) {
+    	if( plnDfnActnTmgTmgRptBndsRngLwUnt != null ) {
+	    	if( this.plnDfnActnTmgTmgRptBndsRngLwUnt == null ) {
+	        	this.plnDfnActnTmgTmgRptBndsRngLwUnt = plnDfnActnTmgTmgRptBndsRngLwUnt;
+	        } else if(this.plnDfnActnTmgTmgRptBndsRngLwUnt.substring(this.plnDfnActnTmgTmgRptBndsRngLwUnt.length() - 1).equals("]") & plnDfnActnTmgTmgRptBndsRngLwUnt.equals("[")) {
+	        	this.plnDfnActnTmgTmgRptBndsRngLwUnt = this.plnDfnActnTmgTmgRptBndsRngLwUnt+ "," + plnDfnActnTmgTmgRptBndsRngLwUnt;
+	        } else if(plnDfnActnTmgTmgRptBndsRngLwUnt.equals("[") | plnDfnActnTmgTmgRptBndsRngLwUnt.equals("]") | this.plnDfnActnTmgTmgRptBndsRngLwUnt.substring(this.plnDfnActnTmgTmgRptBndsRngLwUnt.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgTmgRptBndsRngLwUnt = this.plnDfnActnTmgTmgRptBndsRngLwUnt+plnDfnActnTmgTmgRptBndsRngLwUnt;
+	        } else  {
+	            this.plnDfnActnTmgTmgRptBndsRngLwUnt = this.plnDfnActnTmgTmgRptBndsRngLwUnt+ "," +plnDfnActnTmgTmgRptBndsRngLwUnt;
+	        }
+        }
     }
     
     
@@ -2422,6 +5082,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTmgTmgRptBndsRngLwVl = plnDfnActnTmgTmgRptBndsRngLwVl;
     }
     
+    public void addPlnDfnActnTmgTmgRptBndsRngLwVl(String plnDfnActnTmgTmgRptBndsRngLwVl) {
+    	if( plnDfnActnTmgTmgRptBndsRngLwVl != null ) {
+	    	if( this.plnDfnActnTmgTmgRptBndsRngLwVl == null ) {
+	        	this.plnDfnActnTmgTmgRptBndsRngLwVl = plnDfnActnTmgTmgRptBndsRngLwVl;
+	        } else if(this.plnDfnActnTmgTmgRptBndsRngLwVl.substring(this.plnDfnActnTmgTmgRptBndsRngLwVl.length() - 1).equals("]") & plnDfnActnTmgTmgRptBndsRngLwVl.equals("[")) {
+	        	this.plnDfnActnTmgTmgRptBndsRngLwVl = this.plnDfnActnTmgTmgRptBndsRngLwVl+ "," + plnDfnActnTmgTmgRptBndsRngLwVl;
+	        } else if(plnDfnActnTmgTmgRptBndsRngLwVl.equals("[") | plnDfnActnTmgTmgRptBndsRngLwVl.equals("]") | this.plnDfnActnTmgTmgRptBndsRngLwVl.substring(this.plnDfnActnTmgTmgRptBndsRngLwVl.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgTmgRptBndsRngLwVl = this.plnDfnActnTmgTmgRptBndsRngLwVl+plnDfnActnTmgTmgRptBndsRngLwVl;
+	        } else  {
+	            this.plnDfnActnTmgTmgRptBndsRngLwVl = this.plnDfnActnTmgTmgRptBndsRngLwVl+ "," +plnDfnActnTmgTmgRptBndsRngLwVl;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTmgTmgRptCnt() {
@@ -2430,6 +5104,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTmgTmgRptCnt(String plnDfnActnTmgTmgRptCnt) {
         this.plnDfnActnTmgTmgRptCnt = plnDfnActnTmgTmgRptCnt;
+    }
+    
+    public void addPlnDfnActnTmgTmgRptCnt(String plnDfnActnTmgTmgRptCnt) {
+    	if( plnDfnActnTmgTmgRptCnt != null ) {
+	    	if( this.plnDfnActnTmgTmgRptCnt == null ) {
+	        	this.plnDfnActnTmgTmgRptCnt = plnDfnActnTmgTmgRptCnt;
+	        } else if(this.plnDfnActnTmgTmgRptCnt.substring(this.plnDfnActnTmgTmgRptCnt.length() - 1).equals("]") & plnDfnActnTmgTmgRptCnt.equals("[")) {
+	        	this.plnDfnActnTmgTmgRptCnt = this.plnDfnActnTmgTmgRptCnt+ "," + plnDfnActnTmgTmgRptCnt;
+	        } else if(plnDfnActnTmgTmgRptCnt.equals("[") | plnDfnActnTmgTmgRptCnt.equals("]") | this.plnDfnActnTmgTmgRptCnt.substring(this.plnDfnActnTmgTmgRptCnt.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgTmgRptCnt = this.plnDfnActnTmgTmgRptCnt+plnDfnActnTmgTmgRptCnt;
+	        } else  {
+	            this.plnDfnActnTmgTmgRptCnt = this.plnDfnActnTmgTmgRptCnt+ "," +plnDfnActnTmgTmgRptCnt;
+	        }
+        }
     }
     
     
@@ -2442,6 +5130,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTmgTmgRptCntMx = plnDfnActnTmgTmgRptCntMx;
     }
     
+    public void addPlnDfnActnTmgTmgRptCntMx(String plnDfnActnTmgTmgRptCntMx) {
+    	if( plnDfnActnTmgTmgRptCntMx != null ) {
+	    	if( this.plnDfnActnTmgTmgRptCntMx == null ) {
+	        	this.plnDfnActnTmgTmgRptCntMx = plnDfnActnTmgTmgRptCntMx;
+	        } else if(this.plnDfnActnTmgTmgRptCntMx.substring(this.plnDfnActnTmgTmgRptCntMx.length() - 1).equals("]") & plnDfnActnTmgTmgRptCntMx.equals("[")) {
+	        	this.plnDfnActnTmgTmgRptCntMx = this.plnDfnActnTmgTmgRptCntMx+ "," + plnDfnActnTmgTmgRptCntMx;
+	        } else if(plnDfnActnTmgTmgRptCntMx.equals("[") | plnDfnActnTmgTmgRptCntMx.equals("]") | this.plnDfnActnTmgTmgRptCntMx.substring(this.plnDfnActnTmgTmgRptCntMx.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgTmgRptCntMx = this.plnDfnActnTmgTmgRptCntMx+plnDfnActnTmgTmgRptCntMx;
+	        } else  {
+	            this.plnDfnActnTmgTmgRptCntMx = this.plnDfnActnTmgTmgRptCntMx+ "," +plnDfnActnTmgTmgRptCntMx;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTmgTmgRptDayOfWeek() {
@@ -2450,6 +5152,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTmgTmgRptDayOfWeek(String plnDfnActnTmgTmgRptDayOfWeek) {
         this.plnDfnActnTmgTmgRptDayOfWeek = plnDfnActnTmgTmgRptDayOfWeek;
+    }
+    
+    public void addPlnDfnActnTmgTmgRptDayOfWeek(String plnDfnActnTmgTmgRptDayOfWeek) {
+    	if( plnDfnActnTmgTmgRptDayOfWeek != null ) {
+	    	if( this.plnDfnActnTmgTmgRptDayOfWeek == null ) {
+	        	this.plnDfnActnTmgTmgRptDayOfWeek = plnDfnActnTmgTmgRptDayOfWeek;
+	        } else if(this.plnDfnActnTmgTmgRptDayOfWeek.substring(this.plnDfnActnTmgTmgRptDayOfWeek.length() - 1).equals("]") & plnDfnActnTmgTmgRptDayOfWeek.equals("[")) {
+	        	this.plnDfnActnTmgTmgRptDayOfWeek = this.plnDfnActnTmgTmgRptDayOfWeek+ "," + plnDfnActnTmgTmgRptDayOfWeek;
+	        } else if(plnDfnActnTmgTmgRptDayOfWeek.equals("[") | plnDfnActnTmgTmgRptDayOfWeek.equals("]") | this.plnDfnActnTmgTmgRptDayOfWeek.substring(this.plnDfnActnTmgTmgRptDayOfWeek.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgTmgRptDayOfWeek = this.plnDfnActnTmgTmgRptDayOfWeek+plnDfnActnTmgTmgRptDayOfWeek;
+	        } else  {
+	            this.plnDfnActnTmgTmgRptDayOfWeek = this.plnDfnActnTmgTmgRptDayOfWeek+ "," +plnDfnActnTmgTmgRptDayOfWeek;
+	        }
+        }
     }
     
     
@@ -2462,6 +5178,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTmgTmgRptDuration = plnDfnActnTmgTmgRptDuration;
     }
     
+    public void addPlnDfnActnTmgTmgRptDuration(String plnDfnActnTmgTmgRptDuration) {
+    	if( plnDfnActnTmgTmgRptDuration != null ) {
+	    	if( this.plnDfnActnTmgTmgRptDuration == null ) {
+	        	this.plnDfnActnTmgTmgRptDuration = plnDfnActnTmgTmgRptDuration;
+	        } else if(this.plnDfnActnTmgTmgRptDuration.substring(this.plnDfnActnTmgTmgRptDuration.length() - 1).equals("]") & plnDfnActnTmgTmgRptDuration.equals("[")) {
+	        	this.plnDfnActnTmgTmgRptDuration = this.plnDfnActnTmgTmgRptDuration+ "," + plnDfnActnTmgTmgRptDuration;
+	        } else if(plnDfnActnTmgTmgRptDuration.equals("[") | plnDfnActnTmgTmgRptDuration.equals("]") | this.plnDfnActnTmgTmgRptDuration.substring(this.plnDfnActnTmgTmgRptDuration.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgTmgRptDuration = this.plnDfnActnTmgTmgRptDuration+plnDfnActnTmgTmgRptDuration;
+	        } else  {
+	            this.plnDfnActnTmgTmgRptDuration = this.plnDfnActnTmgTmgRptDuration+ "," +plnDfnActnTmgTmgRptDuration;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTmgTmgRptDurationMx() {
@@ -2470,6 +5200,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTmgTmgRptDurationMx(String plnDfnActnTmgTmgRptDurationMx) {
         this.plnDfnActnTmgTmgRptDurationMx = plnDfnActnTmgTmgRptDurationMx;
+    }
+    
+    public void addPlnDfnActnTmgTmgRptDurationMx(String plnDfnActnTmgTmgRptDurationMx) {
+    	if( plnDfnActnTmgTmgRptDurationMx != null ) {
+	    	if( this.plnDfnActnTmgTmgRptDurationMx == null ) {
+	        	this.plnDfnActnTmgTmgRptDurationMx = plnDfnActnTmgTmgRptDurationMx;
+	        } else if(this.plnDfnActnTmgTmgRptDurationMx.substring(this.plnDfnActnTmgTmgRptDurationMx.length() - 1).equals("]") & plnDfnActnTmgTmgRptDurationMx.equals("[")) {
+	        	this.plnDfnActnTmgTmgRptDurationMx = this.plnDfnActnTmgTmgRptDurationMx+ "," + plnDfnActnTmgTmgRptDurationMx;
+	        } else if(plnDfnActnTmgTmgRptDurationMx.equals("[") | plnDfnActnTmgTmgRptDurationMx.equals("]") | this.plnDfnActnTmgTmgRptDurationMx.substring(this.plnDfnActnTmgTmgRptDurationMx.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgTmgRptDurationMx = this.plnDfnActnTmgTmgRptDurationMx+plnDfnActnTmgTmgRptDurationMx;
+	        } else  {
+	            this.plnDfnActnTmgTmgRptDurationMx = this.plnDfnActnTmgTmgRptDurationMx+ "," +plnDfnActnTmgTmgRptDurationMx;
+	        }
+        }
     }
     
     
@@ -2482,6 +5226,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTmgTmgRptDurationUnt = plnDfnActnTmgTmgRptDurationUnt;
     }
     
+    public void addPlnDfnActnTmgTmgRptDurationUnt(String plnDfnActnTmgTmgRptDurationUnt) {
+    	if( plnDfnActnTmgTmgRptDurationUnt != null ) {
+	    	if( this.plnDfnActnTmgTmgRptDurationUnt == null ) {
+	        	this.plnDfnActnTmgTmgRptDurationUnt = plnDfnActnTmgTmgRptDurationUnt;
+	        } else if(this.plnDfnActnTmgTmgRptDurationUnt.substring(this.plnDfnActnTmgTmgRptDurationUnt.length() - 1).equals("]") & plnDfnActnTmgTmgRptDurationUnt.equals("[")) {
+	        	this.plnDfnActnTmgTmgRptDurationUnt = this.plnDfnActnTmgTmgRptDurationUnt+ "," + plnDfnActnTmgTmgRptDurationUnt;
+	        } else if(plnDfnActnTmgTmgRptDurationUnt.equals("[") | plnDfnActnTmgTmgRptDurationUnt.equals("]") | this.plnDfnActnTmgTmgRptDurationUnt.substring(this.plnDfnActnTmgTmgRptDurationUnt.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgTmgRptDurationUnt = this.plnDfnActnTmgTmgRptDurationUnt+plnDfnActnTmgTmgRptDurationUnt;
+	        } else  {
+	            this.plnDfnActnTmgTmgRptDurationUnt = this.plnDfnActnTmgTmgRptDurationUnt+ "," +plnDfnActnTmgTmgRptDurationUnt;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTmgTmgRptFrqncy() {
@@ -2490,6 +5248,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTmgTmgRptFrqncy(String plnDfnActnTmgTmgRptFrqncy) {
         this.plnDfnActnTmgTmgRptFrqncy = plnDfnActnTmgTmgRptFrqncy;
+    }
+    
+    public void addPlnDfnActnTmgTmgRptFrqncy(String plnDfnActnTmgTmgRptFrqncy) {
+    	if( plnDfnActnTmgTmgRptFrqncy != null ) {
+	    	if( this.plnDfnActnTmgTmgRptFrqncy == null ) {
+	        	this.plnDfnActnTmgTmgRptFrqncy = plnDfnActnTmgTmgRptFrqncy;
+	        } else if(this.plnDfnActnTmgTmgRptFrqncy.substring(this.plnDfnActnTmgTmgRptFrqncy.length() - 1).equals("]") & plnDfnActnTmgTmgRptFrqncy.equals("[")) {
+	        	this.plnDfnActnTmgTmgRptFrqncy = this.plnDfnActnTmgTmgRptFrqncy+ "," + plnDfnActnTmgTmgRptFrqncy;
+	        } else if(plnDfnActnTmgTmgRptFrqncy.equals("[") | plnDfnActnTmgTmgRptFrqncy.equals("]") | this.plnDfnActnTmgTmgRptFrqncy.substring(this.plnDfnActnTmgTmgRptFrqncy.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgTmgRptFrqncy = this.plnDfnActnTmgTmgRptFrqncy+plnDfnActnTmgTmgRptFrqncy;
+	        } else  {
+	            this.plnDfnActnTmgTmgRptFrqncy = this.plnDfnActnTmgTmgRptFrqncy+ "," +plnDfnActnTmgTmgRptFrqncy;
+	        }
+        }
     }
     
     
@@ -2502,6 +5274,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTmgTmgRptFrqncyMx = plnDfnActnTmgTmgRptFrqncyMx;
     }
     
+    public void addPlnDfnActnTmgTmgRptFrqncyMx(String plnDfnActnTmgTmgRptFrqncyMx) {
+    	if( plnDfnActnTmgTmgRptFrqncyMx != null ) {
+	    	if( this.plnDfnActnTmgTmgRptFrqncyMx == null ) {
+	        	this.plnDfnActnTmgTmgRptFrqncyMx = plnDfnActnTmgTmgRptFrqncyMx;
+	        } else if(this.plnDfnActnTmgTmgRptFrqncyMx.substring(this.plnDfnActnTmgTmgRptFrqncyMx.length() - 1).equals("]") & plnDfnActnTmgTmgRptFrqncyMx.equals("[")) {
+	        	this.plnDfnActnTmgTmgRptFrqncyMx = this.plnDfnActnTmgTmgRptFrqncyMx+ "," + plnDfnActnTmgTmgRptFrqncyMx;
+	        } else if(plnDfnActnTmgTmgRptFrqncyMx.equals("[") | plnDfnActnTmgTmgRptFrqncyMx.equals("]") | this.plnDfnActnTmgTmgRptFrqncyMx.substring(this.plnDfnActnTmgTmgRptFrqncyMx.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgTmgRptFrqncyMx = this.plnDfnActnTmgTmgRptFrqncyMx+plnDfnActnTmgTmgRptFrqncyMx;
+	        } else  {
+	            this.plnDfnActnTmgTmgRptFrqncyMx = this.plnDfnActnTmgTmgRptFrqncyMx+ "," +plnDfnActnTmgTmgRptFrqncyMx;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTmgTmgRptOff() {
@@ -2510,6 +5296,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTmgTmgRptOff(String plnDfnActnTmgTmgRptOff) {
         this.plnDfnActnTmgTmgRptOff = plnDfnActnTmgTmgRptOff;
+    }
+    
+    public void addPlnDfnActnTmgTmgRptOff(String plnDfnActnTmgTmgRptOff) {
+    	if( plnDfnActnTmgTmgRptOff != null ) {
+	    	if( this.plnDfnActnTmgTmgRptOff == null ) {
+	        	this.plnDfnActnTmgTmgRptOff = plnDfnActnTmgTmgRptOff;
+	        } else if(this.plnDfnActnTmgTmgRptOff.substring(this.plnDfnActnTmgTmgRptOff.length() - 1).equals("]") & plnDfnActnTmgTmgRptOff.equals("[")) {
+	        	this.plnDfnActnTmgTmgRptOff = this.plnDfnActnTmgTmgRptOff+ "," + plnDfnActnTmgTmgRptOff;
+	        } else if(plnDfnActnTmgTmgRptOff.equals("[") | plnDfnActnTmgTmgRptOff.equals("]") | this.plnDfnActnTmgTmgRptOff.substring(this.plnDfnActnTmgTmgRptOff.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgTmgRptOff = this.plnDfnActnTmgTmgRptOff+plnDfnActnTmgTmgRptOff;
+	        } else  {
+	            this.plnDfnActnTmgTmgRptOff = this.plnDfnActnTmgTmgRptOff+ "," +plnDfnActnTmgTmgRptOff;
+	        }
+        }
     }
     
     
@@ -2522,6 +5322,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTmgTmgRptPrd = plnDfnActnTmgTmgRptPrd;
     }
     
+    public void addPlnDfnActnTmgTmgRptPrd(String plnDfnActnTmgTmgRptPrd) {
+    	if( plnDfnActnTmgTmgRptPrd != null ) {
+	    	if( this.plnDfnActnTmgTmgRptPrd == null ) {
+	        	this.plnDfnActnTmgTmgRptPrd = plnDfnActnTmgTmgRptPrd;
+	        } else if(this.plnDfnActnTmgTmgRptPrd.substring(this.plnDfnActnTmgTmgRptPrd.length() - 1).equals("]") & plnDfnActnTmgTmgRptPrd.equals("[")) {
+	        	this.plnDfnActnTmgTmgRptPrd = this.plnDfnActnTmgTmgRptPrd+ "," + plnDfnActnTmgTmgRptPrd;
+	        } else if(plnDfnActnTmgTmgRptPrd.equals("[") | plnDfnActnTmgTmgRptPrd.equals("]") | this.plnDfnActnTmgTmgRptPrd.substring(this.plnDfnActnTmgTmgRptPrd.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgTmgRptPrd = this.plnDfnActnTmgTmgRptPrd+plnDfnActnTmgTmgRptPrd;
+	        } else  {
+	            this.plnDfnActnTmgTmgRptPrd = this.plnDfnActnTmgTmgRptPrd+ "," +plnDfnActnTmgTmgRptPrd;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTmgTmgRptPrdMx() {
@@ -2530,6 +5344,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTmgTmgRptPrdMx(String plnDfnActnTmgTmgRptPrdMx) {
         this.plnDfnActnTmgTmgRptPrdMx = plnDfnActnTmgTmgRptPrdMx;
+    }
+    
+    public void addPlnDfnActnTmgTmgRptPrdMx(String plnDfnActnTmgTmgRptPrdMx) {
+    	if( plnDfnActnTmgTmgRptPrdMx != null ) {
+	    	if( this.plnDfnActnTmgTmgRptPrdMx == null ) {
+	        	this.plnDfnActnTmgTmgRptPrdMx = plnDfnActnTmgTmgRptPrdMx;
+	        } else if(this.plnDfnActnTmgTmgRptPrdMx.substring(this.plnDfnActnTmgTmgRptPrdMx.length() - 1).equals("]") & plnDfnActnTmgTmgRptPrdMx.equals("[")) {
+	        	this.plnDfnActnTmgTmgRptPrdMx = this.plnDfnActnTmgTmgRptPrdMx+ "," + plnDfnActnTmgTmgRptPrdMx;
+	        } else if(plnDfnActnTmgTmgRptPrdMx.equals("[") | plnDfnActnTmgTmgRptPrdMx.equals("]") | this.plnDfnActnTmgTmgRptPrdMx.substring(this.plnDfnActnTmgTmgRptPrdMx.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgTmgRptPrdMx = this.plnDfnActnTmgTmgRptPrdMx+plnDfnActnTmgTmgRptPrdMx;
+	        } else  {
+	            this.plnDfnActnTmgTmgRptPrdMx = this.plnDfnActnTmgTmgRptPrdMx+ "," +plnDfnActnTmgTmgRptPrdMx;
+	        }
+        }
     }
     
     
@@ -2542,6 +5370,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTmgTmgRptPrdUnt = plnDfnActnTmgTmgRptPrdUnt;
     }
     
+    public void addPlnDfnActnTmgTmgRptPrdUnt(String plnDfnActnTmgTmgRptPrdUnt) {
+    	if( plnDfnActnTmgTmgRptPrdUnt != null ) {
+	    	if( this.plnDfnActnTmgTmgRptPrdUnt == null ) {
+	        	this.plnDfnActnTmgTmgRptPrdUnt = plnDfnActnTmgTmgRptPrdUnt;
+	        } else if(this.plnDfnActnTmgTmgRptPrdUnt.substring(this.plnDfnActnTmgTmgRptPrdUnt.length() - 1).equals("]") & plnDfnActnTmgTmgRptPrdUnt.equals("[")) {
+	        	this.plnDfnActnTmgTmgRptPrdUnt = this.plnDfnActnTmgTmgRptPrdUnt+ "," + plnDfnActnTmgTmgRptPrdUnt;
+	        } else if(plnDfnActnTmgTmgRptPrdUnt.equals("[") | plnDfnActnTmgTmgRptPrdUnt.equals("]") | this.plnDfnActnTmgTmgRptPrdUnt.substring(this.plnDfnActnTmgTmgRptPrdUnt.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgTmgRptPrdUnt = this.plnDfnActnTmgTmgRptPrdUnt+plnDfnActnTmgTmgRptPrdUnt;
+	        } else  {
+	            this.plnDfnActnTmgTmgRptPrdUnt = this.plnDfnActnTmgTmgRptPrdUnt+ "," +plnDfnActnTmgTmgRptPrdUnt;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTmgTmgRptTimeOfDay() {
@@ -2550,6 +5392,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTmgTmgRptTimeOfDay(String plnDfnActnTmgTmgRptTimeOfDay) {
         this.plnDfnActnTmgTmgRptTimeOfDay = plnDfnActnTmgTmgRptTimeOfDay;
+    }
+    
+    public void addPlnDfnActnTmgTmgRptTimeOfDay(String plnDfnActnTmgTmgRptTimeOfDay) {
+    	if( plnDfnActnTmgTmgRptTimeOfDay != null ) {
+	    	if( this.plnDfnActnTmgTmgRptTimeOfDay == null ) {
+	        	this.plnDfnActnTmgTmgRptTimeOfDay = plnDfnActnTmgTmgRptTimeOfDay;
+	        } else if(this.plnDfnActnTmgTmgRptTimeOfDay.substring(this.plnDfnActnTmgTmgRptTimeOfDay.length() - 1).equals("]") & plnDfnActnTmgTmgRptTimeOfDay.equals("[")) {
+	        	this.plnDfnActnTmgTmgRptTimeOfDay = this.plnDfnActnTmgTmgRptTimeOfDay+ "," + plnDfnActnTmgTmgRptTimeOfDay;
+	        } else if(plnDfnActnTmgTmgRptTimeOfDay.equals("[") | plnDfnActnTmgTmgRptTimeOfDay.equals("]") | this.plnDfnActnTmgTmgRptTimeOfDay.substring(this.plnDfnActnTmgTmgRptTimeOfDay.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgTmgRptTimeOfDay = this.plnDfnActnTmgTmgRptTimeOfDay+plnDfnActnTmgTmgRptTimeOfDay;
+	        } else  {
+	            this.plnDfnActnTmgTmgRptTimeOfDay = this.plnDfnActnTmgTmgRptTimeOfDay+ "," +plnDfnActnTmgTmgRptTimeOfDay;
+	        }
+        }
     }
     
     
@@ -2562,6 +5418,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTmgTmgRptWhen = plnDfnActnTmgTmgRptWhen;
     }
     
+    public void addPlnDfnActnTmgTmgRptWhen(String plnDfnActnTmgTmgRptWhen) {
+    	if( plnDfnActnTmgTmgRptWhen != null ) {
+	    	if( this.plnDfnActnTmgTmgRptWhen == null ) {
+	        	this.plnDfnActnTmgTmgRptWhen = plnDfnActnTmgTmgRptWhen;
+	        } else if(this.plnDfnActnTmgTmgRptWhen.substring(this.plnDfnActnTmgTmgRptWhen.length() - 1).equals("]") & plnDfnActnTmgTmgRptWhen.equals("[")) {
+	        	this.plnDfnActnTmgTmgRptWhen = this.plnDfnActnTmgTmgRptWhen+ "," + plnDfnActnTmgTmgRptWhen;
+	        } else if(plnDfnActnTmgTmgRptWhen.equals("[") | plnDfnActnTmgTmgRptWhen.equals("]") | this.plnDfnActnTmgTmgRptWhen.substring(this.plnDfnActnTmgTmgRptWhen.length() - 1).equals("[")) {
+	        	this.plnDfnActnTmgTmgRptWhen = this.plnDfnActnTmgTmgRptWhen+plnDfnActnTmgTmgRptWhen;
+	        } else  {
+	            this.plnDfnActnTmgTmgRptWhen = this.plnDfnActnTmgTmgRptWhen+ "," +plnDfnActnTmgTmgRptWhen;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTtl() {
@@ -2570,6 +5440,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTtl(String plnDfnActnTtl) {
         this.plnDfnActnTtl = plnDfnActnTtl;
+    }
+    
+    public void addPlnDfnActnTtl(String plnDfnActnTtl) {
+    	if( plnDfnActnTtl != null ) {
+	    	if( this.plnDfnActnTtl == null ) {
+	        	this.plnDfnActnTtl = plnDfnActnTtl;
+	        } else if(this.plnDfnActnTtl.substring(this.plnDfnActnTtl.length() - 1).equals("]") & plnDfnActnTtl.equals("[")) {
+	        	this.plnDfnActnTtl = this.plnDfnActnTtl+ "," + plnDfnActnTtl;
+	        } else if(plnDfnActnTtl.equals("[") | plnDfnActnTtl.equals("]") | this.plnDfnActnTtl.substring(this.plnDfnActnTtl.length() - 1).equals("[")) {
+	        	this.plnDfnActnTtl = this.plnDfnActnTtl+plnDfnActnTtl;
+	        } else  {
+	            this.plnDfnActnTtl = this.plnDfnActnTtl+ "," +plnDfnActnTtl;
+	        }
+        }
     }
     
     
@@ -2582,6 +5466,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTransform = plnDfnActnTransform;
     }
     
+    public void addPlnDfnActnTransform(String plnDfnActnTransform) {
+    	if( plnDfnActnTransform != null ) {
+	    	if( this.plnDfnActnTransform == null ) {
+	        	this.plnDfnActnTransform = plnDfnActnTransform;
+	        } else if(this.plnDfnActnTransform.substring(this.plnDfnActnTransform.length() - 1).equals("]") & plnDfnActnTransform.equals("[")) {
+	        	this.plnDfnActnTransform = this.plnDfnActnTransform+ "," + plnDfnActnTransform;
+	        } else if(plnDfnActnTransform.equals("[") | plnDfnActnTransform.equals("]") | this.plnDfnActnTransform.substring(this.plnDfnActnTransform.length() - 1).equals("[")) {
+	        	this.plnDfnActnTransform = this.plnDfnActnTransform+plnDfnActnTransform;
+	        } else  {
+	            this.plnDfnActnTransform = this.plnDfnActnTransform+ "," +plnDfnActnTransform;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTrgrCndtnDscrptn() {
@@ -2590,6 +5488,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTrgrCndtnDscrptn(String plnDfnActnTrgrCndtnDscrptn) {
         this.plnDfnActnTrgrCndtnDscrptn = plnDfnActnTrgrCndtnDscrptn;
+    }
+    
+    public void addPlnDfnActnTrgrCndtnDscrptn(String plnDfnActnTrgrCndtnDscrptn) {
+    	if( plnDfnActnTrgrCndtnDscrptn != null ) {
+	    	if( this.plnDfnActnTrgrCndtnDscrptn == null ) {
+	        	this.plnDfnActnTrgrCndtnDscrptn = plnDfnActnTrgrCndtnDscrptn;
+	        } else if(this.plnDfnActnTrgrCndtnDscrptn.substring(this.plnDfnActnTrgrCndtnDscrptn.length() - 1).equals("]") & plnDfnActnTrgrCndtnDscrptn.equals("[")) {
+	        	this.plnDfnActnTrgrCndtnDscrptn = this.plnDfnActnTrgrCndtnDscrptn+ "," + plnDfnActnTrgrCndtnDscrptn;
+	        } else if(plnDfnActnTrgrCndtnDscrptn.equals("[") | plnDfnActnTrgrCndtnDscrptn.equals("]") | this.plnDfnActnTrgrCndtnDscrptn.substring(this.plnDfnActnTrgrCndtnDscrptn.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrCndtnDscrptn = this.plnDfnActnTrgrCndtnDscrptn+plnDfnActnTrgrCndtnDscrptn;
+	        } else  {
+	            this.plnDfnActnTrgrCndtnDscrptn = this.plnDfnActnTrgrCndtnDscrptn+ "," +plnDfnActnTrgrCndtnDscrptn;
+	        }
+        }
     }
     
     
@@ -2602,6 +5514,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTrgrCndtnExprsn = plnDfnActnTrgrCndtnExprsn;
     }
     
+    public void addPlnDfnActnTrgrCndtnExprsn(String plnDfnActnTrgrCndtnExprsn) {
+    	if( plnDfnActnTrgrCndtnExprsn != null ) {
+	    	if( this.plnDfnActnTrgrCndtnExprsn == null ) {
+	        	this.plnDfnActnTrgrCndtnExprsn = plnDfnActnTrgrCndtnExprsn;
+	        } else if(this.plnDfnActnTrgrCndtnExprsn.substring(this.plnDfnActnTrgrCndtnExprsn.length() - 1).equals("]") & plnDfnActnTrgrCndtnExprsn.equals("[")) {
+	        	this.plnDfnActnTrgrCndtnExprsn = this.plnDfnActnTrgrCndtnExprsn+ "," + plnDfnActnTrgrCndtnExprsn;
+	        } else if(plnDfnActnTrgrCndtnExprsn.equals("[") | plnDfnActnTrgrCndtnExprsn.equals("]") | this.plnDfnActnTrgrCndtnExprsn.substring(this.plnDfnActnTrgrCndtnExprsn.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrCndtnExprsn = this.plnDfnActnTrgrCndtnExprsn+plnDfnActnTrgrCndtnExprsn;
+	        } else  {
+	            this.plnDfnActnTrgrCndtnExprsn = this.plnDfnActnTrgrCndtnExprsn+ "," +plnDfnActnTrgrCndtnExprsn;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTrgrCndtnLnguage() {
@@ -2610,6 +5536,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTrgrCndtnLnguage(String plnDfnActnTrgrCndtnLnguage) {
         this.plnDfnActnTrgrCndtnLnguage = plnDfnActnTrgrCndtnLnguage;
+    }
+    
+    public void addPlnDfnActnTrgrCndtnLnguage(String plnDfnActnTrgrCndtnLnguage) {
+    	if( plnDfnActnTrgrCndtnLnguage != null ) {
+	    	if( this.plnDfnActnTrgrCndtnLnguage == null ) {
+	        	this.plnDfnActnTrgrCndtnLnguage = plnDfnActnTrgrCndtnLnguage;
+	        } else if(this.plnDfnActnTrgrCndtnLnguage.substring(this.plnDfnActnTrgrCndtnLnguage.length() - 1).equals("]") & plnDfnActnTrgrCndtnLnguage.equals("[")) {
+	        	this.plnDfnActnTrgrCndtnLnguage = this.plnDfnActnTrgrCndtnLnguage+ "," + plnDfnActnTrgrCndtnLnguage;
+	        } else if(plnDfnActnTrgrCndtnLnguage.equals("[") | plnDfnActnTrgrCndtnLnguage.equals("]") | this.plnDfnActnTrgrCndtnLnguage.substring(this.plnDfnActnTrgrCndtnLnguage.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrCndtnLnguage = this.plnDfnActnTrgrCndtnLnguage+plnDfnActnTrgrCndtnLnguage;
+	        } else  {
+	            this.plnDfnActnTrgrCndtnLnguage = this.plnDfnActnTrgrCndtnLnguage+ "," +plnDfnActnTrgrCndtnLnguage;
+	        }
+        }
     }
     
     
@@ -2622,6 +5562,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTrgrCndtnNm = plnDfnActnTrgrCndtnNm;
     }
     
+    public void addPlnDfnActnTrgrCndtnNm(String plnDfnActnTrgrCndtnNm) {
+    	if( plnDfnActnTrgrCndtnNm != null ) {
+	    	if( this.plnDfnActnTrgrCndtnNm == null ) {
+	        	this.plnDfnActnTrgrCndtnNm = plnDfnActnTrgrCndtnNm;
+	        } else if(this.plnDfnActnTrgrCndtnNm.substring(this.plnDfnActnTrgrCndtnNm.length() - 1).equals("]") & plnDfnActnTrgrCndtnNm.equals("[")) {
+	        	this.plnDfnActnTrgrCndtnNm = this.plnDfnActnTrgrCndtnNm+ "," + plnDfnActnTrgrCndtnNm;
+	        } else if(plnDfnActnTrgrCndtnNm.equals("[") | plnDfnActnTrgrCndtnNm.equals("]") | this.plnDfnActnTrgrCndtnNm.substring(this.plnDfnActnTrgrCndtnNm.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrCndtnNm = this.plnDfnActnTrgrCndtnNm+plnDfnActnTrgrCndtnNm;
+	        } else  {
+	            this.plnDfnActnTrgrCndtnNm = this.plnDfnActnTrgrCndtnNm+ "," +plnDfnActnTrgrCndtnNm;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTrgrCndtnRfrnc() {
@@ -2630,6 +5584,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTrgrCndtnRfrnc(String plnDfnActnTrgrCndtnRfrnc) {
         this.plnDfnActnTrgrCndtnRfrnc = plnDfnActnTrgrCndtnRfrnc;
+    }
+    
+    public void addPlnDfnActnTrgrCndtnRfrnc(String plnDfnActnTrgrCndtnRfrnc) {
+    	if( plnDfnActnTrgrCndtnRfrnc != null ) {
+	    	if( this.plnDfnActnTrgrCndtnRfrnc == null ) {
+	        	this.plnDfnActnTrgrCndtnRfrnc = plnDfnActnTrgrCndtnRfrnc;
+	        } else if(this.plnDfnActnTrgrCndtnRfrnc.substring(this.plnDfnActnTrgrCndtnRfrnc.length() - 1).equals("]") & plnDfnActnTrgrCndtnRfrnc.equals("[")) {
+	        	this.plnDfnActnTrgrCndtnRfrnc = this.plnDfnActnTrgrCndtnRfrnc+ "," + plnDfnActnTrgrCndtnRfrnc;
+	        } else if(plnDfnActnTrgrCndtnRfrnc.equals("[") | plnDfnActnTrgrCndtnRfrnc.equals("]") | this.plnDfnActnTrgrCndtnRfrnc.substring(this.plnDfnActnTrgrCndtnRfrnc.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrCndtnRfrnc = this.plnDfnActnTrgrCndtnRfrnc+plnDfnActnTrgrCndtnRfrnc;
+	        } else  {
+	            this.plnDfnActnTrgrCndtnRfrnc = this.plnDfnActnTrgrCndtnRfrnc+ "," +plnDfnActnTrgrCndtnRfrnc;
+	        }
+        }
     }
     
     
@@ -2642,6 +5610,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTrgrDataCdFltrCdCd = plnDfnActnTrgrDataCdFltrCdCd;
     }
     
+    public void addPlnDfnActnTrgrDataCdFltrCdCd(String plnDfnActnTrgrDataCdFltrCdCd) {
+    	if( plnDfnActnTrgrDataCdFltrCdCd != null ) {
+	    	if( this.plnDfnActnTrgrDataCdFltrCdCd == null ) {
+	        	this.plnDfnActnTrgrDataCdFltrCdCd = plnDfnActnTrgrDataCdFltrCdCd;
+	        } else if(this.plnDfnActnTrgrDataCdFltrCdCd.substring(this.plnDfnActnTrgrDataCdFltrCdCd.length() - 1).equals("]") & plnDfnActnTrgrDataCdFltrCdCd.equals("[")) {
+	        	this.plnDfnActnTrgrDataCdFltrCdCd = this.plnDfnActnTrgrDataCdFltrCdCd+ "," + plnDfnActnTrgrDataCdFltrCdCd;
+	        } else if(plnDfnActnTrgrDataCdFltrCdCd.equals("[") | plnDfnActnTrgrDataCdFltrCdCd.equals("]") | this.plnDfnActnTrgrDataCdFltrCdCd.substring(this.plnDfnActnTrgrDataCdFltrCdCd.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrDataCdFltrCdCd = this.plnDfnActnTrgrDataCdFltrCdCd+plnDfnActnTrgrDataCdFltrCdCd;
+	        } else  {
+	            this.plnDfnActnTrgrDataCdFltrCdCd = this.plnDfnActnTrgrDataCdFltrCdCd+ "," +plnDfnActnTrgrDataCdFltrCdCd;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTrgrDataCdFltrCdDsply() {
@@ -2650,6 +5632,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTrgrDataCdFltrCdDsply(String plnDfnActnTrgrDataCdFltrCdDsply) {
         this.plnDfnActnTrgrDataCdFltrCdDsply = plnDfnActnTrgrDataCdFltrCdDsply;
+    }
+    
+    public void addPlnDfnActnTrgrDataCdFltrCdDsply(String plnDfnActnTrgrDataCdFltrCdDsply) {
+    	if( plnDfnActnTrgrDataCdFltrCdDsply != null ) {
+	    	if( this.plnDfnActnTrgrDataCdFltrCdDsply == null ) {
+	        	this.plnDfnActnTrgrDataCdFltrCdDsply = plnDfnActnTrgrDataCdFltrCdDsply;
+	        } else if(this.plnDfnActnTrgrDataCdFltrCdDsply.substring(this.plnDfnActnTrgrDataCdFltrCdDsply.length() - 1).equals("]") & plnDfnActnTrgrDataCdFltrCdDsply.equals("[")) {
+	        	this.plnDfnActnTrgrDataCdFltrCdDsply = this.plnDfnActnTrgrDataCdFltrCdDsply+ "," + plnDfnActnTrgrDataCdFltrCdDsply;
+	        } else if(plnDfnActnTrgrDataCdFltrCdDsply.equals("[") | plnDfnActnTrgrDataCdFltrCdDsply.equals("]") | this.plnDfnActnTrgrDataCdFltrCdDsply.substring(this.plnDfnActnTrgrDataCdFltrCdDsply.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrDataCdFltrCdDsply = this.plnDfnActnTrgrDataCdFltrCdDsply+plnDfnActnTrgrDataCdFltrCdDsply;
+	        } else  {
+	            this.plnDfnActnTrgrDataCdFltrCdDsply = this.plnDfnActnTrgrDataCdFltrCdDsply+ "," +plnDfnActnTrgrDataCdFltrCdDsply;
+	        }
+        }
     }
     
     
@@ -2662,6 +5658,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTrgrDataCdFltrCdSys = plnDfnActnTrgrDataCdFltrCdSys;
     }
     
+    public void addPlnDfnActnTrgrDataCdFltrCdSys(String plnDfnActnTrgrDataCdFltrCdSys) {
+    	if( plnDfnActnTrgrDataCdFltrCdSys != null ) {
+	    	if( this.plnDfnActnTrgrDataCdFltrCdSys == null ) {
+	        	this.plnDfnActnTrgrDataCdFltrCdSys = plnDfnActnTrgrDataCdFltrCdSys;
+	        } else if(this.plnDfnActnTrgrDataCdFltrCdSys.substring(this.plnDfnActnTrgrDataCdFltrCdSys.length() - 1).equals("]") & plnDfnActnTrgrDataCdFltrCdSys.equals("[")) {
+	        	this.plnDfnActnTrgrDataCdFltrCdSys = this.plnDfnActnTrgrDataCdFltrCdSys+ "," + plnDfnActnTrgrDataCdFltrCdSys;
+	        } else if(plnDfnActnTrgrDataCdFltrCdSys.equals("[") | plnDfnActnTrgrDataCdFltrCdSys.equals("]") | this.plnDfnActnTrgrDataCdFltrCdSys.substring(this.plnDfnActnTrgrDataCdFltrCdSys.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrDataCdFltrCdSys = this.plnDfnActnTrgrDataCdFltrCdSys+plnDfnActnTrgrDataCdFltrCdSys;
+	        } else  {
+	            this.plnDfnActnTrgrDataCdFltrCdSys = this.plnDfnActnTrgrDataCdFltrCdSys+ "," +plnDfnActnTrgrDataCdFltrCdSys;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTrgrDataCdFltrCdUsrSltd() {
@@ -2670,6 +5680,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTrgrDataCdFltrCdUsrSltd(String plnDfnActnTrgrDataCdFltrCdUsrSltd) {
         this.plnDfnActnTrgrDataCdFltrCdUsrSltd = plnDfnActnTrgrDataCdFltrCdUsrSltd;
+    }
+    
+    public void addPlnDfnActnTrgrDataCdFltrCdUsrSltd(String plnDfnActnTrgrDataCdFltrCdUsrSltd) {
+    	if( plnDfnActnTrgrDataCdFltrCdUsrSltd != null ) {
+	    	if( this.plnDfnActnTrgrDataCdFltrCdUsrSltd == null ) {
+	        	this.plnDfnActnTrgrDataCdFltrCdUsrSltd = plnDfnActnTrgrDataCdFltrCdUsrSltd;
+	        } else if(this.plnDfnActnTrgrDataCdFltrCdUsrSltd.substring(this.plnDfnActnTrgrDataCdFltrCdUsrSltd.length() - 1).equals("]") & plnDfnActnTrgrDataCdFltrCdUsrSltd.equals("[")) {
+	        	this.plnDfnActnTrgrDataCdFltrCdUsrSltd = this.plnDfnActnTrgrDataCdFltrCdUsrSltd+ "," + plnDfnActnTrgrDataCdFltrCdUsrSltd;
+	        } else if(plnDfnActnTrgrDataCdFltrCdUsrSltd.equals("[") | plnDfnActnTrgrDataCdFltrCdUsrSltd.equals("]") | this.plnDfnActnTrgrDataCdFltrCdUsrSltd.substring(this.plnDfnActnTrgrDataCdFltrCdUsrSltd.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrDataCdFltrCdUsrSltd = this.plnDfnActnTrgrDataCdFltrCdUsrSltd+plnDfnActnTrgrDataCdFltrCdUsrSltd;
+	        } else  {
+	            this.plnDfnActnTrgrDataCdFltrCdUsrSltd = this.plnDfnActnTrgrDataCdFltrCdUsrSltd+ "," +plnDfnActnTrgrDataCdFltrCdUsrSltd;
+	        }
+        }
     }
     
     
@@ -2682,6 +5706,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTrgrDataCdFltrCdVrsn = plnDfnActnTrgrDataCdFltrCdVrsn;
     }
     
+    public void addPlnDfnActnTrgrDataCdFltrCdVrsn(String plnDfnActnTrgrDataCdFltrCdVrsn) {
+    	if( plnDfnActnTrgrDataCdFltrCdVrsn != null ) {
+	    	if( this.plnDfnActnTrgrDataCdFltrCdVrsn == null ) {
+	        	this.plnDfnActnTrgrDataCdFltrCdVrsn = plnDfnActnTrgrDataCdFltrCdVrsn;
+	        } else if(this.plnDfnActnTrgrDataCdFltrCdVrsn.substring(this.plnDfnActnTrgrDataCdFltrCdVrsn.length() - 1).equals("]") & plnDfnActnTrgrDataCdFltrCdVrsn.equals("[")) {
+	        	this.plnDfnActnTrgrDataCdFltrCdVrsn = this.plnDfnActnTrgrDataCdFltrCdVrsn+ "," + plnDfnActnTrgrDataCdFltrCdVrsn;
+	        } else if(plnDfnActnTrgrDataCdFltrCdVrsn.equals("[") | plnDfnActnTrgrDataCdFltrCdVrsn.equals("]") | this.plnDfnActnTrgrDataCdFltrCdVrsn.substring(this.plnDfnActnTrgrDataCdFltrCdVrsn.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrDataCdFltrCdVrsn = this.plnDfnActnTrgrDataCdFltrCdVrsn+plnDfnActnTrgrDataCdFltrCdVrsn;
+	        } else  {
+	            this.plnDfnActnTrgrDataCdFltrCdVrsn = this.plnDfnActnTrgrDataCdFltrCdVrsn+ "," +plnDfnActnTrgrDataCdFltrCdVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTrgrDataCdFltrPath() {
@@ -2690,6 +5728,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTrgrDataCdFltrPath(String plnDfnActnTrgrDataCdFltrPath) {
         this.plnDfnActnTrgrDataCdFltrPath = plnDfnActnTrgrDataCdFltrPath;
+    }
+    
+    public void addPlnDfnActnTrgrDataCdFltrPath(String plnDfnActnTrgrDataCdFltrPath) {
+    	if( plnDfnActnTrgrDataCdFltrPath != null ) {
+	    	if( this.plnDfnActnTrgrDataCdFltrPath == null ) {
+	        	this.plnDfnActnTrgrDataCdFltrPath = plnDfnActnTrgrDataCdFltrPath;
+	        } else if(this.plnDfnActnTrgrDataCdFltrPath.substring(this.plnDfnActnTrgrDataCdFltrPath.length() - 1).equals("]") & plnDfnActnTrgrDataCdFltrPath.equals("[")) {
+	        	this.plnDfnActnTrgrDataCdFltrPath = this.plnDfnActnTrgrDataCdFltrPath+ "," + plnDfnActnTrgrDataCdFltrPath;
+	        } else if(plnDfnActnTrgrDataCdFltrPath.equals("[") | plnDfnActnTrgrDataCdFltrPath.equals("]") | this.plnDfnActnTrgrDataCdFltrPath.substring(this.plnDfnActnTrgrDataCdFltrPath.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrDataCdFltrPath = this.plnDfnActnTrgrDataCdFltrPath+plnDfnActnTrgrDataCdFltrPath;
+	        } else  {
+	            this.plnDfnActnTrgrDataCdFltrPath = this.plnDfnActnTrgrDataCdFltrPath+ "," +plnDfnActnTrgrDataCdFltrPath;
+	        }
+        }
     }
     
     
@@ -2702,6 +5754,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTrgrDataCdFltrSrchParam = plnDfnActnTrgrDataCdFltrSrchParam;
     }
     
+    public void addPlnDfnActnTrgrDataCdFltrSrchParam(String plnDfnActnTrgrDataCdFltrSrchParam) {
+    	if( plnDfnActnTrgrDataCdFltrSrchParam != null ) {
+	    	if( this.plnDfnActnTrgrDataCdFltrSrchParam == null ) {
+	        	this.plnDfnActnTrgrDataCdFltrSrchParam = plnDfnActnTrgrDataCdFltrSrchParam;
+	        } else if(this.plnDfnActnTrgrDataCdFltrSrchParam.substring(this.plnDfnActnTrgrDataCdFltrSrchParam.length() - 1).equals("]") & plnDfnActnTrgrDataCdFltrSrchParam.equals("[")) {
+	        	this.plnDfnActnTrgrDataCdFltrSrchParam = this.plnDfnActnTrgrDataCdFltrSrchParam+ "," + plnDfnActnTrgrDataCdFltrSrchParam;
+	        } else if(plnDfnActnTrgrDataCdFltrSrchParam.equals("[") | plnDfnActnTrgrDataCdFltrSrchParam.equals("]") | this.plnDfnActnTrgrDataCdFltrSrchParam.substring(this.plnDfnActnTrgrDataCdFltrSrchParam.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrDataCdFltrSrchParam = this.plnDfnActnTrgrDataCdFltrSrchParam+plnDfnActnTrgrDataCdFltrSrchParam;
+	        } else  {
+	            this.plnDfnActnTrgrDataCdFltrSrchParam = this.plnDfnActnTrgrDataCdFltrSrchParam+ "," +plnDfnActnTrgrDataCdFltrSrchParam;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTrgrDataCdFltrVlSt() {
@@ -2710,6 +5776,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTrgrDataCdFltrVlSt(String plnDfnActnTrgrDataCdFltrVlSt) {
         this.plnDfnActnTrgrDataCdFltrVlSt = plnDfnActnTrgrDataCdFltrVlSt;
+    }
+    
+    public void addPlnDfnActnTrgrDataCdFltrVlSt(String plnDfnActnTrgrDataCdFltrVlSt) {
+    	if( plnDfnActnTrgrDataCdFltrVlSt != null ) {
+	    	if( this.plnDfnActnTrgrDataCdFltrVlSt == null ) {
+	        	this.plnDfnActnTrgrDataCdFltrVlSt = plnDfnActnTrgrDataCdFltrVlSt;
+	        } else if(this.plnDfnActnTrgrDataCdFltrVlSt.substring(this.plnDfnActnTrgrDataCdFltrVlSt.length() - 1).equals("]") & plnDfnActnTrgrDataCdFltrVlSt.equals("[")) {
+	        	this.plnDfnActnTrgrDataCdFltrVlSt = this.plnDfnActnTrgrDataCdFltrVlSt+ "," + plnDfnActnTrgrDataCdFltrVlSt;
+	        } else if(plnDfnActnTrgrDataCdFltrVlSt.equals("[") | plnDfnActnTrgrDataCdFltrVlSt.equals("]") | this.plnDfnActnTrgrDataCdFltrVlSt.substring(this.plnDfnActnTrgrDataCdFltrVlSt.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrDataCdFltrVlSt = this.plnDfnActnTrgrDataCdFltrVlSt+plnDfnActnTrgrDataCdFltrVlSt;
+	        } else  {
+	            this.plnDfnActnTrgrDataCdFltrVlSt = this.plnDfnActnTrgrDataCdFltrVlSt+ "," +plnDfnActnTrgrDataCdFltrVlSt;
+	        }
+        }
     }
     
     
@@ -2722,6 +5802,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTrgrDataDtFltrPath = plnDfnActnTrgrDataDtFltrPath;
     }
     
+    public void addPlnDfnActnTrgrDataDtFltrPath(String plnDfnActnTrgrDataDtFltrPath) {
+    	if( plnDfnActnTrgrDataDtFltrPath != null ) {
+	    	if( this.plnDfnActnTrgrDataDtFltrPath == null ) {
+	        	this.plnDfnActnTrgrDataDtFltrPath = plnDfnActnTrgrDataDtFltrPath;
+	        } else if(this.plnDfnActnTrgrDataDtFltrPath.substring(this.plnDfnActnTrgrDataDtFltrPath.length() - 1).equals("]") & plnDfnActnTrgrDataDtFltrPath.equals("[")) {
+	        	this.plnDfnActnTrgrDataDtFltrPath = this.plnDfnActnTrgrDataDtFltrPath+ "," + plnDfnActnTrgrDataDtFltrPath;
+	        } else if(plnDfnActnTrgrDataDtFltrPath.equals("[") | plnDfnActnTrgrDataDtFltrPath.equals("]") | this.plnDfnActnTrgrDataDtFltrPath.substring(this.plnDfnActnTrgrDataDtFltrPath.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrDataDtFltrPath = this.plnDfnActnTrgrDataDtFltrPath+plnDfnActnTrgrDataDtFltrPath;
+	        } else  {
+	            this.plnDfnActnTrgrDataDtFltrPath = this.plnDfnActnTrgrDataDtFltrPath+ "," +plnDfnActnTrgrDataDtFltrPath;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTrgrDataDtFltrSrchParam() {
@@ -2730,6 +5824,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTrgrDataDtFltrSrchParam(String plnDfnActnTrgrDataDtFltrSrchParam) {
         this.plnDfnActnTrgrDataDtFltrSrchParam = plnDfnActnTrgrDataDtFltrSrchParam;
+    }
+    
+    public void addPlnDfnActnTrgrDataDtFltrSrchParam(String plnDfnActnTrgrDataDtFltrSrchParam) {
+    	if( plnDfnActnTrgrDataDtFltrSrchParam != null ) {
+	    	if( this.plnDfnActnTrgrDataDtFltrSrchParam == null ) {
+	        	this.plnDfnActnTrgrDataDtFltrSrchParam = plnDfnActnTrgrDataDtFltrSrchParam;
+	        } else if(this.plnDfnActnTrgrDataDtFltrSrchParam.substring(this.plnDfnActnTrgrDataDtFltrSrchParam.length() - 1).equals("]") & plnDfnActnTrgrDataDtFltrSrchParam.equals("[")) {
+	        	this.plnDfnActnTrgrDataDtFltrSrchParam = this.plnDfnActnTrgrDataDtFltrSrchParam+ "," + plnDfnActnTrgrDataDtFltrSrchParam;
+	        } else if(plnDfnActnTrgrDataDtFltrSrchParam.equals("[") | plnDfnActnTrgrDataDtFltrSrchParam.equals("]") | this.plnDfnActnTrgrDataDtFltrSrchParam.substring(this.plnDfnActnTrgrDataDtFltrSrchParam.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrDataDtFltrSrchParam = this.plnDfnActnTrgrDataDtFltrSrchParam+plnDfnActnTrgrDataDtFltrSrchParam;
+	        } else  {
+	            this.plnDfnActnTrgrDataDtFltrSrchParam = this.plnDfnActnTrgrDataDtFltrSrchParam+ "," +plnDfnActnTrgrDataDtFltrSrchParam;
+	        }
+        }
     }
     
     
@@ -2742,6 +5850,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTrgrDataDtFltrVlDtTimeTyp = plnDfnActnTrgrDataDtFltrVlDtTimeTyp;
     }
     
+    public void addPlnDfnActnTrgrDataDtFltrVlDtTimeTyp(String plnDfnActnTrgrDataDtFltrVlDtTimeTyp) {
+    	if( plnDfnActnTrgrDataDtFltrVlDtTimeTyp != null ) {
+	    	if( this.plnDfnActnTrgrDataDtFltrVlDtTimeTyp == null ) {
+	        	this.plnDfnActnTrgrDataDtFltrVlDtTimeTyp = plnDfnActnTrgrDataDtFltrVlDtTimeTyp;
+	        } else if(this.plnDfnActnTrgrDataDtFltrVlDtTimeTyp.substring(this.plnDfnActnTrgrDataDtFltrVlDtTimeTyp.length() - 1).equals("]") & plnDfnActnTrgrDataDtFltrVlDtTimeTyp.equals("[")) {
+	        	this.plnDfnActnTrgrDataDtFltrVlDtTimeTyp = this.plnDfnActnTrgrDataDtFltrVlDtTimeTyp+ "," + plnDfnActnTrgrDataDtFltrVlDtTimeTyp;
+	        } else if(plnDfnActnTrgrDataDtFltrVlDtTimeTyp.equals("[") | plnDfnActnTrgrDataDtFltrVlDtTimeTyp.equals("]") | this.plnDfnActnTrgrDataDtFltrVlDtTimeTyp.substring(this.plnDfnActnTrgrDataDtFltrVlDtTimeTyp.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrDataDtFltrVlDtTimeTyp = this.plnDfnActnTrgrDataDtFltrVlDtTimeTyp+plnDfnActnTrgrDataDtFltrVlDtTimeTyp;
+	        } else  {
+	            this.plnDfnActnTrgrDataDtFltrVlDtTimeTyp = this.plnDfnActnTrgrDataDtFltrVlDtTimeTyp+ "," +plnDfnActnTrgrDataDtFltrVlDtTimeTyp;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTrgrDataDtFltrVlDurationCd() {
@@ -2750,6 +5872,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTrgrDataDtFltrVlDurationCd(String plnDfnActnTrgrDataDtFltrVlDurationCd) {
         this.plnDfnActnTrgrDataDtFltrVlDurationCd = plnDfnActnTrgrDataDtFltrVlDurationCd;
+    }
+    
+    public void addPlnDfnActnTrgrDataDtFltrVlDurationCd(String plnDfnActnTrgrDataDtFltrVlDurationCd) {
+    	if( plnDfnActnTrgrDataDtFltrVlDurationCd != null ) {
+	    	if( this.plnDfnActnTrgrDataDtFltrVlDurationCd == null ) {
+	        	this.plnDfnActnTrgrDataDtFltrVlDurationCd = plnDfnActnTrgrDataDtFltrVlDurationCd;
+	        } else if(this.plnDfnActnTrgrDataDtFltrVlDurationCd.substring(this.plnDfnActnTrgrDataDtFltrVlDurationCd.length() - 1).equals("]") & plnDfnActnTrgrDataDtFltrVlDurationCd.equals("[")) {
+	        	this.plnDfnActnTrgrDataDtFltrVlDurationCd = this.plnDfnActnTrgrDataDtFltrVlDurationCd+ "," + plnDfnActnTrgrDataDtFltrVlDurationCd;
+	        } else if(plnDfnActnTrgrDataDtFltrVlDurationCd.equals("[") | plnDfnActnTrgrDataDtFltrVlDurationCd.equals("]") | this.plnDfnActnTrgrDataDtFltrVlDurationCd.substring(this.plnDfnActnTrgrDataDtFltrVlDurationCd.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrDataDtFltrVlDurationCd = this.plnDfnActnTrgrDataDtFltrVlDurationCd+plnDfnActnTrgrDataDtFltrVlDurationCd;
+	        } else  {
+	            this.plnDfnActnTrgrDataDtFltrVlDurationCd = this.plnDfnActnTrgrDataDtFltrVlDurationCd+ "," +plnDfnActnTrgrDataDtFltrVlDurationCd;
+	        }
+        }
     }
     
     
@@ -2762,6 +5898,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTrgrDataDtFltrVlDurationCmprtr = plnDfnActnTrgrDataDtFltrVlDurationCmprtr;
     }
     
+    public void addPlnDfnActnTrgrDataDtFltrVlDurationCmprtr(String plnDfnActnTrgrDataDtFltrVlDurationCmprtr) {
+    	if( plnDfnActnTrgrDataDtFltrVlDurationCmprtr != null ) {
+	    	if( this.plnDfnActnTrgrDataDtFltrVlDurationCmprtr == null ) {
+	        	this.plnDfnActnTrgrDataDtFltrVlDurationCmprtr = plnDfnActnTrgrDataDtFltrVlDurationCmprtr;
+	        } else if(this.plnDfnActnTrgrDataDtFltrVlDurationCmprtr.substring(this.plnDfnActnTrgrDataDtFltrVlDurationCmprtr.length() - 1).equals("]") & plnDfnActnTrgrDataDtFltrVlDurationCmprtr.equals("[")) {
+	        	this.plnDfnActnTrgrDataDtFltrVlDurationCmprtr = this.plnDfnActnTrgrDataDtFltrVlDurationCmprtr+ "," + plnDfnActnTrgrDataDtFltrVlDurationCmprtr;
+	        } else if(plnDfnActnTrgrDataDtFltrVlDurationCmprtr.equals("[") | plnDfnActnTrgrDataDtFltrVlDurationCmprtr.equals("]") | this.plnDfnActnTrgrDataDtFltrVlDurationCmprtr.substring(this.plnDfnActnTrgrDataDtFltrVlDurationCmprtr.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrDataDtFltrVlDurationCmprtr = this.plnDfnActnTrgrDataDtFltrVlDurationCmprtr+plnDfnActnTrgrDataDtFltrVlDurationCmprtr;
+	        } else  {
+	            this.plnDfnActnTrgrDataDtFltrVlDurationCmprtr = this.plnDfnActnTrgrDataDtFltrVlDurationCmprtr+ "," +plnDfnActnTrgrDataDtFltrVlDurationCmprtr;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTrgrDataDtFltrVlDurationSys() {
@@ -2770,6 +5920,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTrgrDataDtFltrVlDurationSys(String plnDfnActnTrgrDataDtFltrVlDurationSys) {
         this.plnDfnActnTrgrDataDtFltrVlDurationSys = plnDfnActnTrgrDataDtFltrVlDurationSys;
+    }
+    
+    public void addPlnDfnActnTrgrDataDtFltrVlDurationSys(String plnDfnActnTrgrDataDtFltrVlDurationSys) {
+    	if( plnDfnActnTrgrDataDtFltrVlDurationSys != null ) {
+	    	if( this.plnDfnActnTrgrDataDtFltrVlDurationSys == null ) {
+	        	this.plnDfnActnTrgrDataDtFltrVlDurationSys = plnDfnActnTrgrDataDtFltrVlDurationSys;
+	        } else if(this.plnDfnActnTrgrDataDtFltrVlDurationSys.substring(this.plnDfnActnTrgrDataDtFltrVlDurationSys.length() - 1).equals("]") & plnDfnActnTrgrDataDtFltrVlDurationSys.equals("[")) {
+	        	this.plnDfnActnTrgrDataDtFltrVlDurationSys = this.plnDfnActnTrgrDataDtFltrVlDurationSys+ "," + plnDfnActnTrgrDataDtFltrVlDurationSys;
+	        } else if(plnDfnActnTrgrDataDtFltrVlDurationSys.equals("[") | plnDfnActnTrgrDataDtFltrVlDurationSys.equals("]") | this.plnDfnActnTrgrDataDtFltrVlDurationSys.substring(this.plnDfnActnTrgrDataDtFltrVlDurationSys.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrDataDtFltrVlDurationSys = this.plnDfnActnTrgrDataDtFltrVlDurationSys+plnDfnActnTrgrDataDtFltrVlDurationSys;
+	        } else  {
+	            this.plnDfnActnTrgrDataDtFltrVlDurationSys = this.plnDfnActnTrgrDataDtFltrVlDurationSys+ "," +plnDfnActnTrgrDataDtFltrVlDurationSys;
+	        }
+        }
     }
     
     
@@ -2782,6 +5946,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTrgrDataDtFltrVlDurationUnt = plnDfnActnTrgrDataDtFltrVlDurationUnt;
     }
     
+    public void addPlnDfnActnTrgrDataDtFltrVlDurationUnt(String plnDfnActnTrgrDataDtFltrVlDurationUnt) {
+    	if( plnDfnActnTrgrDataDtFltrVlDurationUnt != null ) {
+	    	if( this.plnDfnActnTrgrDataDtFltrVlDurationUnt == null ) {
+	        	this.plnDfnActnTrgrDataDtFltrVlDurationUnt = plnDfnActnTrgrDataDtFltrVlDurationUnt;
+	        } else if(this.plnDfnActnTrgrDataDtFltrVlDurationUnt.substring(this.plnDfnActnTrgrDataDtFltrVlDurationUnt.length() - 1).equals("]") & plnDfnActnTrgrDataDtFltrVlDurationUnt.equals("[")) {
+	        	this.plnDfnActnTrgrDataDtFltrVlDurationUnt = this.plnDfnActnTrgrDataDtFltrVlDurationUnt+ "," + plnDfnActnTrgrDataDtFltrVlDurationUnt;
+	        } else if(plnDfnActnTrgrDataDtFltrVlDurationUnt.equals("[") | plnDfnActnTrgrDataDtFltrVlDurationUnt.equals("]") | this.plnDfnActnTrgrDataDtFltrVlDurationUnt.substring(this.plnDfnActnTrgrDataDtFltrVlDurationUnt.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrDataDtFltrVlDurationUnt = this.plnDfnActnTrgrDataDtFltrVlDurationUnt+plnDfnActnTrgrDataDtFltrVlDurationUnt;
+	        } else  {
+	            this.plnDfnActnTrgrDataDtFltrVlDurationUnt = this.plnDfnActnTrgrDataDtFltrVlDurationUnt+ "," +plnDfnActnTrgrDataDtFltrVlDurationUnt;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTrgrDataDtFltrVlDurationVl() {
@@ -2790,6 +5968,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTrgrDataDtFltrVlDurationVl(String plnDfnActnTrgrDataDtFltrVlDurationVl) {
         this.plnDfnActnTrgrDataDtFltrVlDurationVl = plnDfnActnTrgrDataDtFltrVlDurationVl;
+    }
+    
+    public void addPlnDfnActnTrgrDataDtFltrVlDurationVl(String plnDfnActnTrgrDataDtFltrVlDurationVl) {
+    	if( plnDfnActnTrgrDataDtFltrVlDurationVl != null ) {
+	    	if( this.plnDfnActnTrgrDataDtFltrVlDurationVl == null ) {
+	        	this.plnDfnActnTrgrDataDtFltrVlDurationVl = plnDfnActnTrgrDataDtFltrVlDurationVl;
+	        } else if(this.plnDfnActnTrgrDataDtFltrVlDurationVl.substring(this.plnDfnActnTrgrDataDtFltrVlDurationVl.length() - 1).equals("]") & plnDfnActnTrgrDataDtFltrVlDurationVl.equals("[")) {
+	        	this.plnDfnActnTrgrDataDtFltrVlDurationVl = this.plnDfnActnTrgrDataDtFltrVlDurationVl+ "," + plnDfnActnTrgrDataDtFltrVlDurationVl;
+	        } else if(plnDfnActnTrgrDataDtFltrVlDurationVl.equals("[") | plnDfnActnTrgrDataDtFltrVlDurationVl.equals("]") | this.plnDfnActnTrgrDataDtFltrVlDurationVl.substring(this.plnDfnActnTrgrDataDtFltrVlDurationVl.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrDataDtFltrVlDurationVl = this.plnDfnActnTrgrDataDtFltrVlDurationVl+plnDfnActnTrgrDataDtFltrVlDurationVl;
+	        } else  {
+	            this.plnDfnActnTrgrDataDtFltrVlDurationVl = this.plnDfnActnTrgrDataDtFltrVlDurationVl+ "," +plnDfnActnTrgrDataDtFltrVlDurationVl;
+	        }
+        }
     }
     
     
@@ -2802,6 +5994,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTrgrDataDtFltrVlPrdEnd = plnDfnActnTrgrDataDtFltrVlPrdEnd;
     }
     
+    public void addPlnDfnActnTrgrDataDtFltrVlPrdEnd(String plnDfnActnTrgrDataDtFltrVlPrdEnd) {
+    	if( plnDfnActnTrgrDataDtFltrVlPrdEnd != null ) {
+	    	if( this.plnDfnActnTrgrDataDtFltrVlPrdEnd == null ) {
+	        	this.plnDfnActnTrgrDataDtFltrVlPrdEnd = plnDfnActnTrgrDataDtFltrVlPrdEnd;
+	        } else if(this.plnDfnActnTrgrDataDtFltrVlPrdEnd.substring(this.plnDfnActnTrgrDataDtFltrVlPrdEnd.length() - 1).equals("]") & plnDfnActnTrgrDataDtFltrVlPrdEnd.equals("[")) {
+	        	this.plnDfnActnTrgrDataDtFltrVlPrdEnd = this.plnDfnActnTrgrDataDtFltrVlPrdEnd+ "," + plnDfnActnTrgrDataDtFltrVlPrdEnd;
+	        } else if(plnDfnActnTrgrDataDtFltrVlPrdEnd.equals("[") | plnDfnActnTrgrDataDtFltrVlPrdEnd.equals("]") | this.plnDfnActnTrgrDataDtFltrVlPrdEnd.substring(this.plnDfnActnTrgrDataDtFltrVlPrdEnd.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrDataDtFltrVlPrdEnd = this.plnDfnActnTrgrDataDtFltrVlPrdEnd+plnDfnActnTrgrDataDtFltrVlPrdEnd;
+	        } else  {
+	            this.plnDfnActnTrgrDataDtFltrVlPrdEnd = this.plnDfnActnTrgrDataDtFltrVlPrdEnd+ "," +plnDfnActnTrgrDataDtFltrVlPrdEnd;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTrgrDataDtFltrVlPrdStrt() {
@@ -2810,6 +6016,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTrgrDataDtFltrVlPrdStrt(String plnDfnActnTrgrDataDtFltrVlPrdStrt) {
         this.plnDfnActnTrgrDataDtFltrVlPrdStrt = plnDfnActnTrgrDataDtFltrVlPrdStrt;
+    }
+    
+    public void addPlnDfnActnTrgrDataDtFltrVlPrdStrt(String plnDfnActnTrgrDataDtFltrVlPrdStrt) {
+    	if( plnDfnActnTrgrDataDtFltrVlPrdStrt != null ) {
+	    	if( this.plnDfnActnTrgrDataDtFltrVlPrdStrt == null ) {
+	        	this.plnDfnActnTrgrDataDtFltrVlPrdStrt = plnDfnActnTrgrDataDtFltrVlPrdStrt;
+	        } else if(this.plnDfnActnTrgrDataDtFltrVlPrdStrt.substring(this.plnDfnActnTrgrDataDtFltrVlPrdStrt.length() - 1).equals("]") & plnDfnActnTrgrDataDtFltrVlPrdStrt.equals("[")) {
+	        	this.plnDfnActnTrgrDataDtFltrVlPrdStrt = this.plnDfnActnTrgrDataDtFltrVlPrdStrt+ "," + plnDfnActnTrgrDataDtFltrVlPrdStrt;
+	        } else if(plnDfnActnTrgrDataDtFltrVlPrdStrt.equals("[") | plnDfnActnTrgrDataDtFltrVlPrdStrt.equals("]") | this.plnDfnActnTrgrDataDtFltrVlPrdStrt.substring(this.plnDfnActnTrgrDataDtFltrVlPrdStrt.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrDataDtFltrVlPrdStrt = this.plnDfnActnTrgrDataDtFltrVlPrdStrt+plnDfnActnTrgrDataDtFltrVlPrdStrt;
+	        } else  {
+	            this.plnDfnActnTrgrDataDtFltrVlPrdStrt = this.plnDfnActnTrgrDataDtFltrVlPrdStrt+ "," +plnDfnActnTrgrDataDtFltrVlPrdStrt;
+	        }
+        }
     }
     
     
@@ -2822,6 +6042,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTrgrDataLmt = plnDfnActnTrgrDataLmt;
     }
     
+    public void addPlnDfnActnTrgrDataLmt(String plnDfnActnTrgrDataLmt) {
+    	if( plnDfnActnTrgrDataLmt != null ) {
+	    	if( this.plnDfnActnTrgrDataLmt == null ) {
+	        	this.plnDfnActnTrgrDataLmt = plnDfnActnTrgrDataLmt;
+	        } else if(this.plnDfnActnTrgrDataLmt.substring(this.plnDfnActnTrgrDataLmt.length() - 1).equals("]") & plnDfnActnTrgrDataLmt.equals("[")) {
+	        	this.plnDfnActnTrgrDataLmt = this.plnDfnActnTrgrDataLmt+ "," + plnDfnActnTrgrDataLmt;
+	        } else if(plnDfnActnTrgrDataLmt.equals("[") | plnDfnActnTrgrDataLmt.equals("]") | this.plnDfnActnTrgrDataLmt.substring(this.plnDfnActnTrgrDataLmt.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrDataLmt = this.plnDfnActnTrgrDataLmt+plnDfnActnTrgrDataLmt;
+	        } else  {
+	            this.plnDfnActnTrgrDataLmt = this.plnDfnActnTrgrDataLmt+ "," +plnDfnActnTrgrDataLmt;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTrgrDataMustSupport() {
@@ -2830,6 +6064,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTrgrDataMustSupport(String plnDfnActnTrgrDataMustSupport) {
         this.plnDfnActnTrgrDataMustSupport = plnDfnActnTrgrDataMustSupport;
+    }
+    
+    public void addPlnDfnActnTrgrDataMustSupport(String plnDfnActnTrgrDataMustSupport) {
+    	if( plnDfnActnTrgrDataMustSupport != null ) {
+	    	if( this.plnDfnActnTrgrDataMustSupport == null ) {
+	        	this.plnDfnActnTrgrDataMustSupport = plnDfnActnTrgrDataMustSupport;
+	        } else if(this.plnDfnActnTrgrDataMustSupport.substring(this.plnDfnActnTrgrDataMustSupport.length() - 1).equals("]") & plnDfnActnTrgrDataMustSupport.equals("[")) {
+	        	this.plnDfnActnTrgrDataMustSupport = this.plnDfnActnTrgrDataMustSupport+ "," + plnDfnActnTrgrDataMustSupport;
+	        } else if(plnDfnActnTrgrDataMustSupport.equals("[") | plnDfnActnTrgrDataMustSupport.equals("]") | this.plnDfnActnTrgrDataMustSupport.substring(this.plnDfnActnTrgrDataMustSupport.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrDataMustSupport = this.plnDfnActnTrgrDataMustSupport+plnDfnActnTrgrDataMustSupport;
+	        } else  {
+	            this.plnDfnActnTrgrDataMustSupport = this.plnDfnActnTrgrDataMustSupport+ "," +plnDfnActnTrgrDataMustSupport;
+	        }
+        }
     }
     
     
@@ -2842,6 +6090,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTrgrDataProfile = plnDfnActnTrgrDataProfile;
     }
     
+    public void addPlnDfnActnTrgrDataProfile(String plnDfnActnTrgrDataProfile) {
+    	if( plnDfnActnTrgrDataProfile != null ) {
+	    	if( this.plnDfnActnTrgrDataProfile == null ) {
+	        	this.plnDfnActnTrgrDataProfile = plnDfnActnTrgrDataProfile;
+	        } else if(this.plnDfnActnTrgrDataProfile.substring(this.plnDfnActnTrgrDataProfile.length() - 1).equals("]") & plnDfnActnTrgrDataProfile.equals("[")) {
+	        	this.plnDfnActnTrgrDataProfile = this.plnDfnActnTrgrDataProfile+ "," + plnDfnActnTrgrDataProfile;
+	        } else if(plnDfnActnTrgrDataProfile.equals("[") | plnDfnActnTrgrDataProfile.equals("]") | this.plnDfnActnTrgrDataProfile.substring(this.plnDfnActnTrgrDataProfile.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrDataProfile = this.plnDfnActnTrgrDataProfile+plnDfnActnTrgrDataProfile;
+	        } else  {
+	            this.plnDfnActnTrgrDataProfile = this.plnDfnActnTrgrDataProfile+ "," +plnDfnActnTrgrDataProfile;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTrgrDataSortDirection() {
@@ -2850,6 +6112,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTrgrDataSortDirection(String plnDfnActnTrgrDataSortDirection) {
         this.plnDfnActnTrgrDataSortDirection = plnDfnActnTrgrDataSortDirection;
+    }
+    
+    public void addPlnDfnActnTrgrDataSortDirection(String plnDfnActnTrgrDataSortDirection) {
+    	if( plnDfnActnTrgrDataSortDirection != null ) {
+	    	if( this.plnDfnActnTrgrDataSortDirection == null ) {
+	        	this.plnDfnActnTrgrDataSortDirection = plnDfnActnTrgrDataSortDirection;
+	        } else if(this.plnDfnActnTrgrDataSortDirection.substring(this.plnDfnActnTrgrDataSortDirection.length() - 1).equals("]") & plnDfnActnTrgrDataSortDirection.equals("[")) {
+	        	this.plnDfnActnTrgrDataSortDirection = this.plnDfnActnTrgrDataSortDirection+ "," + plnDfnActnTrgrDataSortDirection;
+	        } else if(plnDfnActnTrgrDataSortDirection.equals("[") | plnDfnActnTrgrDataSortDirection.equals("]") | this.plnDfnActnTrgrDataSortDirection.substring(this.plnDfnActnTrgrDataSortDirection.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrDataSortDirection = this.plnDfnActnTrgrDataSortDirection+plnDfnActnTrgrDataSortDirection;
+	        } else  {
+	            this.plnDfnActnTrgrDataSortDirection = this.plnDfnActnTrgrDataSortDirection+ "," +plnDfnActnTrgrDataSortDirection;
+	        }
+        }
     }
     
     
@@ -2862,6 +6138,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTrgrDataSortPath = plnDfnActnTrgrDataSortPath;
     }
     
+    public void addPlnDfnActnTrgrDataSortPath(String plnDfnActnTrgrDataSortPath) {
+    	if( plnDfnActnTrgrDataSortPath != null ) {
+	    	if( this.plnDfnActnTrgrDataSortPath == null ) {
+	        	this.plnDfnActnTrgrDataSortPath = plnDfnActnTrgrDataSortPath;
+	        } else if(this.plnDfnActnTrgrDataSortPath.substring(this.plnDfnActnTrgrDataSortPath.length() - 1).equals("]") & plnDfnActnTrgrDataSortPath.equals("[")) {
+	        	this.plnDfnActnTrgrDataSortPath = this.plnDfnActnTrgrDataSortPath+ "," + plnDfnActnTrgrDataSortPath;
+	        } else if(plnDfnActnTrgrDataSortPath.equals("[") | plnDfnActnTrgrDataSortPath.equals("]") | this.plnDfnActnTrgrDataSortPath.substring(this.plnDfnActnTrgrDataSortPath.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrDataSortPath = this.plnDfnActnTrgrDataSortPath+plnDfnActnTrgrDataSortPath;
+	        } else  {
+	            this.plnDfnActnTrgrDataSortPath = this.plnDfnActnTrgrDataSortPath+ "," +plnDfnActnTrgrDataSortPath;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTrgrDataSbjctCdbleCncptCdgCd() {
@@ -2870,6 +6160,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTrgrDataSbjctCdbleCncptCdgCd(String plnDfnActnTrgrDataSbjctCdbleCncptCdgCd) {
         this.plnDfnActnTrgrDataSbjctCdbleCncptCdgCd = plnDfnActnTrgrDataSbjctCdbleCncptCdgCd;
+    }
+    
+    public void addPlnDfnActnTrgrDataSbjctCdbleCncptCdgCd(String plnDfnActnTrgrDataSbjctCdbleCncptCdgCd) {
+    	if( plnDfnActnTrgrDataSbjctCdbleCncptCdgCd != null ) {
+	    	if( this.plnDfnActnTrgrDataSbjctCdbleCncptCdgCd == null ) {
+	        	this.plnDfnActnTrgrDataSbjctCdbleCncptCdgCd = plnDfnActnTrgrDataSbjctCdbleCncptCdgCd;
+	        } else if(this.plnDfnActnTrgrDataSbjctCdbleCncptCdgCd.substring(this.plnDfnActnTrgrDataSbjctCdbleCncptCdgCd.length() - 1).equals("]") & plnDfnActnTrgrDataSbjctCdbleCncptCdgCd.equals("[")) {
+	        	this.plnDfnActnTrgrDataSbjctCdbleCncptCdgCd = this.plnDfnActnTrgrDataSbjctCdbleCncptCdgCd+ "," + plnDfnActnTrgrDataSbjctCdbleCncptCdgCd;
+	        } else if(plnDfnActnTrgrDataSbjctCdbleCncptCdgCd.equals("[") | plnDfnActnTrgrDataSbjctCdbleCncptCdgCd.equals("]") | this.plnDfnActnTrgrDataSbjctCdbleCncptCdgCd.substring(this.plnDfnActnTrgrDataSbjctCdbleCncptCdgCd.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrDataSbjctCdbleCncptCdgCd = this.plnDfnActnTrgrDataSbjctCdbleCncptCdgCd+plnDfnActnTrgrDataSbjctCdbleCncptCdgCd;
+	        } else  {
+	            this.plnDfnActnTrgrDataSbjctCdbleCncptCdgCd = this.plnDfnActnTrgrDataSbjctCdbleCncptCdgCd+ "," +plnDfnActnTrgrDataSbjctCdbleCncptCdgCd;
+	        }
+        }
     }
     
     
@@ -2882,6 +6186,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTrgrDataSbjctCdbleCncptCdgDsply = plnDfnActnTrgrDataSbjctCdbleCncptCdgDsply;
     }
     
+    public void addPlnDfnActnTrgrDataSbjctCdbleCncptCdgDsply(String plnDfnActnTrgrDataSbjctCdbleCncptCdgDsply) {
+    	if( plnDfnActnTrgrDataSbjctCdbleCncptCdgDsply != null ) {
+	    	if( this.plnDfnActnTrgrDataSbjctCdbleCncptCdgDsply == null ) {
+	        	this.plnDfnActnTrgrDataSbjctCdbleCncptCdgDsply = plnDfnActnTrgrDataSbjctCdbleCncptCdgDsply;
+	        } else if(this.plnDfnActnTrgrDataSbjctCdbleCncptCdgDsply.substring(this.plnDfnActnTrgrDataSbjctCdbleCncptCdgDsply.length() - 1).equals("]") & plnDfnActnTrgrDataSbjctCdbleCncptCdgDsply.equals("[")) {
+	        	this.plnDfnActnTrgrDataSbjctCdbleCncptCdgDsply = this.plnDfnActnTrgrDataSbjctCdbleCncptCdgDsply+ "," + plnDfnActnTrgrDataSbjctCdbleCncptCdgDsply;
+	        } else if(plnDfnActnTrgrDataSbjctCdbleCncptCdgDsply.equals("[") | plnDfnActnTrgrDataSbjctCdbleCncptCdgDsply.equals("]") | this.plnDfnActnTrgrDataSbjctCdbleCncptCdgDsply.substring(this.plnDfnActnTrgrDataSbjctCdbleCncptCdgDsply.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrDataSbjctCdbleCncptCdgDsply = this.plnDfnActnTrgrDataSbjctCdbleCncptCdgDsply+plnDfnActnTrgrDataSbjctCdbleCncptCdgDsply;
+	        } else  {
+	            this.plnDfnActnTrgrDataSbjctCdbleCncptCdgDsply = this.plnDfnActnTrgrDataSbjctCdbleCncptCdgDsply+ "," +plnDfnActnTrgrDataSbjctCdbleCncptCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTrgrDataSbjctCdbleCncptCdgSys() {
@@ -2890,6 +6208,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTrgrDataSbjctCdbleCncptCdgSys(String plnDfnActnTrgrDataSbjctCdbleCncptCdgSys) {
         this.plnDfnActnTrgrDataSbjctCdbleCncptCdgSys = plnDfnActnTrgrDataSbjctCdbleCncptCdgSys;
+    }
+    
+    public void addPlnDfnActnTrgrDataSbjctCdbleCncptCdgSys(String plnDfnActnTrgrDataSbjctCdbleCncptCdgSys) {
+    	if( plnDfnActnTrgrDataSbjctCdbleCncptCdgSys != null ) {
+	    	if( this.plnDfnActnTrgrDataSbjctCdbleCncptCdgSys == null ) {
+	        	this.plnDfnActnTrgrDataSbjctCdbleCncptCdgSys = plnDfnActnTrgrDataSbjctCdbleCncptCdgSys;
+	        } else if(this.plnDfnActnTrgrDataSbjctCdbleCncptCdgSys.substring(this.plnDfnActnTrgrDataSbjctCdbleCncptCdgSys.length() - 1).equals("]") & plnDfnActnTrgrDataSbjctCdbleCncptCdgSys.equals("[")) {
+	        	this.plnDfnActnTrgrDataSbjctCdbleCncptCdgSys = this.plnDfnActnTrgrDataSbjctCdbleCncptCdgSys+ "," + plnDfnActnTrgrDataSbjctCdbleCncptCdgSys;
+	        } else if(plnDfnActnTrgrDataSbjctCdbleCncptCdgSys.equals("[") | plnDfnActnTrgrDataSbjctCdbleCncptCdgSys.equals("]") | this.plnDfnActnTrgrDataSbjctCdbleCncptCdgSys.substring(this.plnDfnActnTrgrDataSbjctCdbleCncptCdgSys.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrDataSbjctCdbleCncptCdgSys = this.plnDfnActnTrgrDataSbjctCdbleCncptCdgSys+plnDfnActnTrgrDataSbjctCdbleCncptCdgSys;
+	        } else  {
+	            this.plnDfnActnTrgrDataSbjctCdbleCncptCdgSys = this.plnDfnActnTrgrDataSbjctCdbleCncptCdgSys+ "," +plnDfnActnTrgrDataSbjctCdbleCncptCdgSys;
+	        }
+        }
     }
     
     
@@ -2902,6 +6234,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTrgrDataSbjctCdbleCncptCdgUsrSltd = plnDfnActnTrgrDataSbjctCdbleCncptCdgUsrSltd;
     }
     
+    public void addPlnDfnActnTrgrDataSbjctCdbleCncptCdgUsrSltd(String plnDfnActnTrgrDataSbjctCdbleCncptCdgUsrSltd) {
+    	if( plnDfnActnTrgrDataSbjctCdbleCncptCdgUsrSltd != null ) {
+	    	if( this.plnDfnActnTrgrDataSbjctCdbleCncptCdgUsrSltd == null ) {
+	        	this.plnDfnActnTrgrDataSbjctCdbleCncptCdgUsrSltd = plnDfnActnTrgrDataSbjctCdbleCncptCdgUsrSltd;
+	        } else if(this.plnDfnActnTrgrDataSbjctCdbleCncptCdgUsrSltd.substring(this.plnDfnActnTrgrDataSbjctCdbleCncptCdgUsrSltd.length() - 1).equals("]") & plnDfnActnTrgrDataSbjctCdbleCncptCdgUsrSltd.equals("[")) {
+	        	this.plnDfnActnTrgrDataSbjctCdbleCncptCdgUsrSltd = this.plnDfnActnTrgrDataSbjctCdbleCncptCdgUsrSltd+ "," + plnDfnActnTrgrDataSbjctCdbleCncptCdgUsrSltd;
+	        } else if(plnDfnActnTrgrDataSbjctCdbleCncptCdgUsrSltd.equals("[") | plnDfnActnTrgrDataSbjctCdbleCncptCdgUsrSltd.equals("]") | this.plnDfnActnTrgrDataSbjctCdbleCncptCdgUsrSltd.substring(this.plnDfnActnTrgrDataSbjctCdbleCncptCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrDataSbjctCdbleCncptCdgUsrSltd = this.plnDfnActnTrgrDataSbjctCdbleCncptCdgUsrSltd+plnDfnActnTrgrDataSbjctCdbleCncptCdgUsrSltd;
+	        } else  {
+	            this.plnDfnActnTrgrDataSbjctCdbleCncptCdgUsrSltd = this.plnDfnActnTrgrDataSbjctCdbleCncptCdgUsrSltd+ "," +plnDfnActnTrgrDataSbjctCdbleCncptCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTrgrDataSbjctCdbleCncptCdgVrsn() {
@@ -2910,6 +6256,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTrgrDataSbjctCdbleCncptCdgVrsn(String plnDfnActnTrgrDataSbjctCdbleCncptCdgVrsn) {
         this.plnDfnActnTrgrDataSbjctCdbleCncptCdgVrsn = plnDfnActnTrgrDataSbjctCdbleCncptCdgVrsn;
+    }
+    
+    public void addPlnDfnActnTrgrDataSbjctCdbleCncptCdgVrsn(String plnDfnActnTrgrDataSbjctCdbleCncptCdgVrsn) {
+    	if( plnDfnActnTrgrDataSbjctCdbleCncptCdgVrsn != null ) {
+	    	if( this.plnDfnActnTrgrDataSbjctCdbleCncptCdgVrsn == null ) {
+	        	this.plnDfnActnTrgrDataSbjctCdbleCncptCdgVrsn = plnDfnActnTrgrDataSbjctCdbleCncptCdgVrsn;
+	        } else if(this.plnDfnActnTrgrDataSbjctCdbleCncptCdgVrsn.substring(this.plnDfnActnTrgrDataSbjctCdbleCncptCdgVrsn.length() - 1).equals("]") & plnDfnActnTrgrDataSbjctCdbleCncptCdgVrsn.equals("[")) {
+	        	this.plnDfnActnTrgrDataSbjctCdbleCncptCdgVrsn = this.plnDfnActnTrgrDataSbjctCdbleCncptCdgVrsn+ "," + plnDfnActnTrgrDataSbjctCdbleCncptCdgVrsn;
+	        } else if(plnDfnActnTrgrDataSbjctCdbleCncptCdgVrsn.equals("[") | plnDfnActnTrgrDataSbjctCdbleCncptCdgVrsn.equals("]") | this.plnDfnActnTrgrDataSbjctCdbleCncptCdgVrsn.substring(this.plnDfnActnTrgrDataSbjctCdbleCncptCdgVrsn.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrDataSbjctCdbleCncptCdgVrsn = this.plnDfnActnTrgrDataSbjctCdbleCncptCdgVrsn+plnDfnActnTrgrDataSbjctCdbleCncptCdgVrsn;
+	        } else  {
+	            this.plnDfnActnTrgrDataSbjctCdbleCncptCdgVrsn = this.plnDfnActnTrgrDataSbjctCdbleCncptCdgVrsn+ "," +plnDfnActnTrgrDataSbjctCdbleCncptCdgVrsn;
+	        }
+        }
     }
     
     
@@ -2922,6 +6282,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTrgrDataSbjctCdbleCncptTxt = plnDfnActnTrgrDataSbjctCdbleCncptTxt;
     }
     
+    public void addPlnDfnActnTrgrDataSbjctCdbleCncptTxt(String plnDfnActnTrgrDataSbjctCdbleCncptTxt) {
+    	if( plnDfnActnTrgrDataSbjctCdbleCncptTxt != null ) {
+	    	if( this.plnDfnActnTrgrDataSbjctCdbleCncptTxt == null ) {
+	        	this.plnDfnActnTrgrDataSbjctCdbleCncptTxt = plnDfnActnTrgrDataSbjctCdbleCncptTxt;
+	        } else if(this.plnDfnActnTrgrDataSbjctCdbleCncptTxt.substring(this.plnDfnActnTrgrDataSbjctCdbleCncptTxt.length() - 1).equals("]") & plnDfnActnTrgrDataSbjctCdbleCncptTxt.equals("[")) {
+	        	this.plnDfnActnTrgrDataSbjctCdbleCncptTxt = this.plnDfnActnTrgrDataSbjctCdbleCncptTxt+ "," + plnDfnActnTrgrDataSbjctCdbleCncptTxt;
+	        } else if(plnDfnActnTrgrDataSbjctCdbleCncptTxt.equals("[") | plnDfnActnTrgrDataSbjctCdbleCncptTxt.equals("]") | this.plnDfnActnTrgrDataSbjctCdbleCncptTxt.substring(this.plnDfnActnTrgrDataSbjctCdbleCncptTxt.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrDataSbjctCdbleCncptTxt = this.plnDfnActnTrgrDataSbjctCdbleCncptTxt+plnDfnActnTrgrDataSbjctCdbleCncptTxt;
+	        } else  {
+	            this.plnDfnActnTrgrDataSbjctCdbleCncptTxt = this.plnDfnActnTrgrDataSbjctCdbleCncptTxt+ "," +plnDfnActnTrgrDataSbjctCdbleCncptTxt;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTrgrDataSbjctRfrnc() {
@@ -2930,6 +6304,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTrgrDataSbjctRfrnc(String plnDfnActnTrgrDataSbjctRfrnc) {
         this.plnDfnActnTrgrDataSbjctRfrnc = plnDfnActnTrgrDataSbjctRfrnc;
+    }
+    
+    public void addPlnDfnActnTrgrDataSbjctRfrnc(String plnDfnActnTrgrDataSbjctRfrnc) {
+    	if( plnDfnActnTrgrDataSbjctRfrnc != null ) {
+	    	if( this.plnDfnActnTrgrDataSbjctRfrnc == null ) {
+	        	this.plnDfnActnTrgrDataSbjctRfrnc = plnDfnActnTrgrDataSbjctRfrnc;
+	        } else if(this.plnDfnActnTrgrDataSbjctRfrnc.substring(this.plnDfnActnTrgrDataSbjctRfrnc.length() - 1).equals("]") & plnDfnActnTrgrDataSbjctRfrnc.equals("[")) {
+	        	this.plnDfnActnTrgrDataSbjctRfrnc = this.plnDfnActnTrgrDataSbjctRfrnc+ "," + plnDfnActnTrgrDataSbjctRfrnc;
+	        } else if(plnDfnActnTrgrDataSbjctRfrnc.equals("[") | plnDfnActnTrgrDataSbjctRfrnc.equals("]") | this.plnDfnActnTrgrDataSbjctRfrnc.substring(this.plnDfnActnTrgrDataSbjctRfrnc.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrDataSbjctRfrnc = this.plnDfnActnTrgrDataSbjctRfrnc+plnDfnActnTrgrDataSbjctRfrnc;
+	        } else  {
+	            this.plnDfnActnTrgrDataSbjctRfrnc = this.plnDfnActnTrgrDataSbjctRfrnc+ "," +plnDfnActnTrgrDataSbjctRfrnc;
+	        }
+        }
     }
     
     
@@ -2942,6 +6330,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTrgrDataTyp = plnDfnActnTrgrDataTyp;
     }
     
+    public void addPlnDfnActnTrgrDataTyp(String plnDfnActnTrgrDataTyp) {
+    	if( plnDfnActnTrgrDataTyp != null ) {
+	    	if( this.plnDfnActnTrgrDataTyp == null ) {
+	        	this.plnDfnActnTrgrDataTyp = plnDfnActnTrgrDataTyp;
+	        } else if(this.plnDfnActnTrgrDataTyp.substring(this.plnDfnActnTrgrDataTyp.length() - 1).equals("]") & plnDfnActnTrgrDataTyp.equals("[")) {
+	        	this.plnDfnActnTrgrDataTyp = this.plnDfnActnTrgrDataTyp+ "," + plnDfnActnTrgrDataTyp;
+	        } else if(plnDfnActnTrgrDataTyp.equals("[") | plnDfnActnTrgrDataTyp.equals("]") | this.plnDfnActnTrgrDataTyp.substring(this.plnDfnActnTrgrDataTyp.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrDataTyp = this.plnDfnActnTrgrDataTyp+plnDfnActnTrgrDataTyp;
+	        } else  {
+	            this.plnDfnActnTrgrDataTyp = this.plnDfnActnTrgrDataTyp+ "," +plnDfnActnTrgrDataTyp;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTrgrNm() {
@@ -2950,6 +6352,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTrgrNm(String plnDfnActnTrgrNm) {
         this.plnDfnActnTrgrNm = plnDfnActnTrgrNm;
+    }
+    
+    public void addPlnDfnActnTrgrNm(String plnDfnActnTrgrNm) {
+    	if( plnDfnActnTrgrNm != null ) {
+	    	if( this.plnDfnActnTrgrNm == null ) {
+	        	this.plnDfnActnTrgrNm = plnDfnActnTrgrNm;
+	        } else if(this.plnDfnActnTrgrNm.substring(this.plnDfnActnTrgrNm.length() - 1).equals("]") & plnDfnActnTrgrNm.equals("[")) {
+	        	this.plnDfnActnTrgrNm = this.plnDfnActnTrgrNm+ "," + plnDfnActnTrgrNm;
+	        } else if(plnDfnActnTrgrNm.equals("[") | plnDfnActnTrgrNm.equals("]") | this.plnDfnActnTrgrNm.substring(this.plnDfnActnTrgrNm.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrNm = this.plnDfnActnTrgrNm+plnDfnActnTrgrNm;
+	        } else  {
+	            this.plnDfnActnTrgrNm = this.plnDfnActnTrgrNm+ "," +plnDfnActnTrgrNm;
+	        }
+        }
     }
     
     
@@ -2962,6 +6378,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTrgrTmgDtTimeTyp = plnDfnActnTrgrTmgDtTimeTyp;
     }
     
+    public void addPlnDfnActnTrgrTmgDtTimeTyp(String plnDfnActnTrgrTmgDtTimeTyp) {
+    	if( plnDfnActnTrgrTmgDtTimeTyp != null ) {
+	    	if( this.plnDfnActnTrgrTmgDtTimeTyp == null ) {
+	        	this.plnDfnActnTrgrTmgDtTimeTyp = plnDfnActnTrgrTmgDtTimeTyp;
+	        } else if(this.plnDfnActnTrgrTmgDtTimeTyp.substring(this.plnDfnActnTrgrTmgDtTimeTyp.length() - 1).equals("]") & plnDfnActnTrgrTmgDtTimeTyp.equals("[")) {
+	        	this.plnDfnActnTrgrTmgDtTimeTyp = this.plnDfnActnTrgrTmgDtTimeTyp+ "," + plnDfnActnTrgrTmgDtTimeTyp;
+	        } else if(plnDfnActnTrgrTmgDtTimeTyp.equals("[") | plnDfnActnTrgrTmgDtTimeTyp.equals("]") | this.plnDfnActnTrgrTmgDtTimeTyp.substring(this.plnDfnActnTrgrTmgDtTimeTyp.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrTmgDtTimeTyp = this.plnDfnActnTrgrTmgDtTimeTyp+plnDfnActnTrgrTmgDtTimeTyp;
+	        } else  {
+	            this.plnDfnActnTrgrTmgDtTimeTyp = this.plnDfnActnTrgrTmgDtTimeTyp+ "," +plnDfnActnTrgrTmgDtTimeTyp;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTrgrTmgDtTyp() {
@@ -2970,6 +6400,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTrgrTmgDtTyp(String plnDfnActnTrgrTmgDtTyp) {
         this.plnDfnActnTrgrTmgDtTyp = plnDfnActnTrgrTmgDtTyp;
+    }
+    
+    public void addPlnDfnActnTrgrTmgDtTyp(String plnDfnActnTrgrTmgDtTyp) {
+    	if( plnDfnActnTrgrTmgDtTyp != null ) {
+	    	if( this.plnDfnActnTrgrTmgDtTyp == null ) {
+	        	this.plnDfnActnTrgrTmgDtTyp = plnDfnActnTrgrTmgDtTyp;
+	        } else if(this.plnDfnActnTrgrTmgDtTyp.substring(this.plnDfnActnTrgrTmgDtTyp.length() - 1).equals("]") & plnDfnActnTrgrTmgDtTyp.equals("[")) {
+	        	this.plnDfnActnTrgrTmgDtTyp = this.plnDfnActnTrgrTmgDtTyp+ "," + plnDfnActnTrgrTmgDtTyp;
+	        } else if(plnDfnActnTrgrTmgDtTyp.equals("[") | plnDfnActnTrgrTmgDtTyp.equals("]") | this.plnDfnActnTrgrTmgDtTyp.substring(this.plnDfnActnTrgrTmgDtTyp.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrTmgDtTyp = this.plnDfnActnTrgrTmgDtTyp+plnDfnActnTrgrTmgDtTyp;
+	        } else  {
+	            this.plnDfnActnTrgrTmgDtTyp = this.plnDfnActnTrgrTmgDtTyp+ "," +plnDfnActnTrgrTmgDtTyp;
+	        }
+        }
     }
     
     
@@ -2982,6 +6426,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTrgrTmgRfrnc = plnDfnActnTrgrTmgRfrnc;
     }
     
+    public void addPlnDfnActnTrgrTmgRfrnc(String plnDfnActnTrgrTmgRfrnc) {
+    	if( plnDfnActnTrgrTmgRfrnc != null ) {
+	    	if( this.plnDfnActnTrgrTmgRfrnc == null ) {
+	        	this.plnDfnActnTrgrTmgRfrnc = plnDfnActnTrgrTmgRfrnc;
+	        } else if(this.plnDfnActnTrgrTmgRfrnc.substring(this.plnDfnActnTrgrTmgRfrnc.length() - 1).equals("]") & plnDfnActnTrgrTmgRfrnc.equals("[")) {
+	        	this.plnDfnActnTrgrTmgRfrnc = this.plnDfnActnTrgrTmgRfrnc+ "," + plnDfnActnTrgrTmgRfrnc;
+	        } else if(plnDfnActnTrgrTmgRfrnc.equals("[") | plnDfnActnTrgrTmgRfrnc.equals("]") | this.plnDfnActnTrgrTmgRfrnc.substring(this.plnDfnActnTrgrTmgRfrnc.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrTmgRfrnc = this.plnDfnActnTrgrTmgRfrnc+plnDfnActnTrgrTmgRfrnc;
+	        } else  {
+	            this.plnDfnActnTrgrTmgRfrnc = this.plnDfnActnTrgrTmgRfrnc+ "," +plnDfnActnTrgrTmgRfrnc;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTrgrTmgTmgCdCdgCd() {
@@ -2990,6 +6448,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTrgrTmgTmgCdCdgCd(String plnDfnActnTrgrTmgTmgCdCdgCd) {
         this.plnDfnActnTrgrTmgTmgCdCdgCd = plnDfnActnTrgrTmgTmgCdCdgCd;
+    }
+    
+    public void addPlnDfnActnTrgrTmgTmgCdCdgCd(String plnDfnActnTrgrTmgTmgCdCdgCd) {
+    	if( plnDfnActnTrgrTmgTmgCdCdgCd != null ) {
+	    	if( this.plnDfnActnTrgrTmgTmgCdCdgCd == null ) {
+	        	this.plnDfnActnTrgrTmgTmgCdCdgCd = plnDfnActnTrgrTmgTmgCdCdgCd;
+	        } else if(this.plnDfnActnTrgrTmgTmgCdCdgCd.substring(this.plnDfnActnTrgrTmgTmgCdCdgCd.length() - 1).equals("]") & plnDfnActnTrgrTmgTmgCdCdgCd.equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgCdCdgCd = this.plnDfnActnTrgrTmgTmgCdCdgCd+ "," + plnDfnActnTrgrTmgTmgCdCdgCd;
+	        } else if(plnDfnActnTrgrTmgTmgCdCdgCd.equals("[") | plnDfnActnTrgrTmgTmgCdCdgCd.equals("]") | this.plnDfnActnTrgrTmgTmgCdCdgCd.substring(this.plnDfnActnTrgrTmgTmgCdCdgCd.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgCdCdgCd = this.plnDfnActnTrgrTmgTmgCdCdgCd+plnDfnActnTrgrTmgTmgCdCdgCd;
+	        } else  {
+	            this.plnDfnActnTrgrTmgTmgCdCdgCd = this.plnDfnActnTrgrTmgTmgCdCdgCd+ "," +plnDfnActnTrgrTmgTmgCdCdgCd;
+	        }
+        }
     }
     
     
@@ -3002,6 +6474,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTrgrTmgTmgCdCdgDsply = plnDfnActnTrgrTmgTmgCdCdgDsply;
     }
     
+    public void addPlnDfnActnTrgrTmgTmgCdCdgDsply(String plnDfnActnTrgrTmgTmgCdCdgDsply) {
+    	if( plnDfnActnTrgrTmgTmgCdCdgDsply != null ) {
+	    	if( this.plnDfnActnTrgrTmgTmgCdCdgDsply == null ) {
+	        	this.plnDfnActnTrgrTmgTmgCdCdgDsply = plnDfnActnTrgrTmgTmgCdCdgDsply;
+	        } else if(this.plnDfnActnTrgrTmgTmgCdCdgDsply.substring(this.plnDfnActnTrgrTmgTmgCdCdgDsply.length() - 1).equals("]") & plnDfnActnTrgrTmgTmgCdCdgDsply.equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgCdCdgDsply = this.plnDfnActnTrgrTmgTmgCdCdgDsply+ "," + plnDfnActnTrgrTmgTmgCdCdgDsply;
+	        } else if(plnDfnActnTrgrTmgTmgCdCdgDsply.equals("[") | plnDfnActnTrgrTmgTmgCdCdgDsply.equals("]") | this.plnDfnActnTrgrTmgTmgCdCdgDsply.substring(this.plnDfnActnTrgrTmgTmgCdCdgDsply.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgCdCdgDsply = this.plnDfnActnTrgrTmgTmgCdCdgDsply+plnDfnActnTrgrTmgTmgCdCdgDsply;
+	        } else  {
+	            this.plnDfnActnTrgrTmgTmgCdCdgDsply = this.plnDfnActnTrgrTmgTmgCdCdgDsply+ "," +plnDfnActnTrgrTmgTmgCdCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTrgrTmgTmgCdCdgSys() {
@@ -3010,6 +6496,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTrgrTmgTmgCdCdgSys(String plnDfnActnTrgrTmgTmgCdCdgSys) {
         this.plnDfnActnTrgrTmgTmgCdCdgSys = plnDfnActnTrgrTmgTmgCdCdgSys;
+    }
+    
+    public void addPlnDfnActnTrgrTmgTmgCdCdgSys(String plnDfnActnTrgrTmgTmgCdCdgSys) {
+    	if( plnDfnActnTrgrTmgTmgCdCdgSys != null ) {
+	    	if( this.plnDfnActnTrgrTmgTmgCdCdgSys == null ) {
+	        	this.plnDfnActnTrgrTmgTmgCdCdgSys = plnDfnActnTrgrTmgTmgCdCdgSys;
+	        } else if(this.plnDfnActnTrgrTmgTmgCdCdgSys.substring(this.plnDfnActnTrgrTmgTmgCdCdgSys.length() - 1).equals("]") & plnDfnActnTrgrTmgTmgCdCdgSys.equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgCdCdgSys = this.plnDfnActnTrgrTmgTmgCdCdgSys+ "," + plnDfnActnTrgrTmgTmgCdCdgSys;
+	        } else if(plnDfnActnTrgrTmgTmgCdCdgSys.equals("[") | plnDfnActnTrgrTmgTmgCdCdgSys.equals("]") | this.plnDfnActnTrgrTmgTmgCdCdgSys.substring(this.plnDfnActnTrgrTmgTmgCdCdgSys.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgCdCdgSys = this.plnDfnActnTrgrTmgTmgCdCdgSys+plnDfnActnTrgrTmgTmgCdCdgSys;
+	        } else  {
+	            this.plnDfnActnTrgrTmgTmgCdCdgSys = this.plnDfnActnTrgrTmgTmgCdCdgSys+ "," +plnDfnActnTrgrTmgTmgCdCdgSys;
+	        }
+        }
     }
     
     
@@ -3022,6 +6522,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTrgrTmgTmgCdCdgUsrSltd = plnDfnActnTrgrTmgTmgCdCdgUsrSltd;
     }
     
+    public void addPlnDfnActnTrgrTmgTmgCdCdgUsrSltd(String plnDfnActnTrgrTmgTmgCdCdgUsrSltd) {
+    	if( plnDfnActnTrgrTmgTmgCdCdgUsrSltd != null ) {
+	    	if( this.plnDfnActnTrgrTmgTmgCdCdgUsrSltd == null ) {
+	        	this.plnDfnActnTrgrTmgTmgCdCdgUsrSltd = plnDfnActnTrgrTmgTmgCdCdgUsrSltd;
+	        } else if(this.plnDfnActnTrgrTmgTmgCdCdgUsrSltd.substring(this.plnDfnActnTrgrTmgTmgCdCdgUsrSltd.length() - 1).equals("]") & plnDfnActnTrgrTmgTmgCdCdgUsrSltd.equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgCdCdgUsrSltd = this.plnDfnActnTrgrTmgTmgCdCdgUsrSltd+ "," + plnDfnActnTrgrTmgTmgCdCdgUsrSltd;
+	        } else if(plnDfnActnTrgrTmgTmgCdCdgUsrSltd.equals("[") | plnDfnActnTrgrTmgTmgCdCdgUsrSltd.equals("]") | this.plnDfnActnTrgrTmgTmgCdCdgUsrSltd.substring(this.plnDfnActnTrgrTmgTmgCdCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgCdCdgUsrSltd = this.plnDfnActnTrgrTmgTmgCdCdgUsrSltd+plnDfnActnTrgrTmgTmgCdCdgUsrSltd;
+	        } else  {
+	            this.plnDfnActnTrgrTmgTmgCdCdgUsrSltd = this.plnDfnActnTrgrTmgTmgCdCdgUsrSltd+ "," +plnDfnActnTrgrTmgTmgCdCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTrgrTmgTmgCdCdgVrsn() {
@@ -3030,6 +6544,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTrgrTmgTmgCdCdgVrsn(String plnDfnActnTrgrTmgTmgCdCdgVrsn) {
         this.plnDfnActnTrgrTmgTmgCdCdgVrsn = plnDfnActnTrgrTmgTmgCdCdgVrsn;
+    }
+    
+    public void addPlnDfnActnTrgrTmgTmgCdCdgVrsn(String plnDfnActnTrgrTmgTmgCdCdgVrsn) {
+    	if( plnDfnActnTrgrTmgTmgCdCdgVrsn != null ) {
+	    	if( this.plnDfnActnTrgrTmgTmgCdCdgVrsn == null ) {
+	        	this.plnDfnActnTrgrTmgTmgCdCdgVrsn = plnDfnActnTrgrTmgTmgCdCdgVrsn;
+	        } else if(this.plnDfnActnTrgrTmgTmgCdCdgVrsn.substring(this.plnDfnActnTrgrTmgTmgCdCdgVrsn.length() - 1).equals("]") & plnDfnActnTrgrTmgTmgCdCdgVrsn.equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgCdCdgVrsn = this.plnDfnActnTrgrTmgTmgCdCdgVrsn+ "," + plnDfnActnTrgrTmgTmgCdCdgVrsn;
+	        } else if(plnDfnActnTrgrTmgTmgCdCdgVrsn.equals("[") | plnDfnActnTrgrTmgTmgCdCdgVrsn.equals("]") | this.plnDfnActnTrgrTmgTmgCdCdgVrsn.substring(this.plnDfnActnTrgrTmgTmgCdCdgVrsn.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgCdCdgVrsn = this.plnDfnActnTrgrTmgTmgCdCdgVrsn+plnDfnActnTrgrTmgTmgCdCdgVrsn;
+	        } else  {
+	            this.plnDfnActnTrgrTmgTmgCdCdgVrsn = this.plnDfnActnTrgrTmgTmgCdCdgVrsn+ "," +plnDfnActnTrgrTmgTmgCdCdgVrsn;
+	        }
+        }
     }
     
     
@@ -3042,6 +6570,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTrgrTmgTmgCdTxt = plnDfnActnTrgrTmgTmgCdTxt;
     }
     
+    public void addPlnDfnActnTrgrTmgTmgCdTxt(String plnDfnActnTrgrTmgTmgCdTxt) {
+    	if( plnDfnActnTrgrTmgTmgCdTxt != null ) {
+	    	if( this.plnDfnActnTrgrTmgTmgCdTxt == null ) {
+	        	this.plnDfnActnTrgrTmgTmgCdTxt = plnDfnActnTrgrTmgTmgCdTxt;
+	        } else if(this.plnDfnActnTrgrTmgTmgCdTxt.substring(this.plnDfnActnTrgrTmgTmgCdTxt.length() - 1).equals("]") & plnDfnActnTrgrTmgTmgCdTxt.equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgCdTxt = this.plnDfnActnTrgrTmgTmgCdTxt+ "," + plnDfnActnTrgrTmgTmgCdTxt;
+	        } else if(plnDfnActnTrgrTmgTmgCdTxt.equals("[") | plnDfnActnTrgrTmgTmgCdTxt.equals("]") | this.plnDfnActnTrgrTmgTmgCdTxt.substring(this.plnDfnActnTrgrTmgTmgCdTxt.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgCdTxt = this.plnDfnActnTrgrTmgTmgCdTxt+plnDfnActnTrgrTmgTmgCdTxt;
+	        } else  {
+	            this.plnDfnActnTrgrTmgTmgCdTxt = this.plnDfnActnTrgrTmgTmgCdTxt+ "," +plnDfnActnTrgrTmgTmgCdTxt;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTrgrTmgTmgEvnt() {
@@ -3050,6 +6592,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTrgrTmgTmgEvnt(String plnDfnActnTrgrTmgTmgEvnt) {
         this.plnDfnActnTrgrTmgTmgEvnt = plnDfnActnTrgrTmgTmgEvnt;
+    }
+    
+    public void addPlnDfnActnTrgrTmgTmgEvnt(String plnDfnActnTrgrTmgTmgEvnt) {
+    	if( plnDfnActnTrgrTmgTmgEvnt != null ) {
+	    	if( this.plnDfnActnTrgrTmgTmgEvnt == null ) {
+	        	this.plnDfnActnTrgrTmgTmgEvnt = plnDfnActnTrgrTmgTmgEvnt;
+	        } else if(this.plnDfnActnTrgrTmgTmgEvnt.substring(this.plnDfnActnTrgrTmgTmgEvnt.length() - 1).equals("]") & plnDfnActnTrgrTmgTmgEvnt.equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgEvnt = this.plnDfnActnTrgrTmgTmgEvnt+ "," + plnDfnActnTrgrTmgTmgEvnt;
+	        } else if(plnDfnActnTrgrTmgTmgEvnt.equals("[") | plnDfnActnTrgrTmgTmgEvnt.equals("]") | this.plnDfnActnTrgrTmgTmgEvnt.substring(this.plnDfnActnTrgrTmgTmgEvnt.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgEvnt = this.plnDfnActnTrgrTmgTmgEvnt+plnDfnActnTrgrTmgTmgEvnt;
+	        } else  {
+	            this.plnDfnActnTrgrTmgTmgEvnt = this.plnDfnActnTrgrTmgTmgEvnt+ "," +plnDfnActnTrgrTmgTmgEvnt;
+	        }
+        }
     }
     
     
@@ -3062,6 +6618,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTrgrTmgTmgRptBndsDurationCd = plnDfnActnTrgrTmgTmgRptBndsDurationCd;
     }
     
+    public void addPlnDfnActnTrgrTmgTmgRptBndsDurationCd(String plnDfnActnTrgrTmgTmgRptBndsDurationCd) {
+    	if( plnDfnActnTrgrTmgTmgRptBndsDurationCd != null ) {
+	    	if( this.plnDfnActnTrgrTmgTmgRptBndsDurationCd == null ) {
+	        	this.plnDfnActnTrgrTmgTmgRptBndsDurationCd = plnDfnActnTrgrTmgTmgRptBndsDurationCd;
+	        } else if(this.plnDfnActnTrgrTmgTmgRptBndsDurationCd.substring(this.plnDfnActnTrgrTmgTmgRptBndsDurationCd.length() - 1).equals("]") & plnDfnActnTrgrTmgTmgRptBndsDurationCd.equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptBndsDurationCd = this.plnDfnActnTrgrTmgTmgRptBndsDurationCd+ "," + plnDfnActnTrgrTmgTmgRptBndsDurationCd;
+	        } else if(plnDfnActnTrgrTmgTmgRptBndsDurationCd.equals("[") | plnDfnActnTrgrTmgTmgRptBndsDurationCd.equals("]") | this.plnDfnActnTrgrTmgTmgRptBndsDurationCd.substring(this.plnDfnActnTrgrTmgTmgRptBndsDurationCd.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptBndsDurationCd = this.plnDfnActnTrgrTmgTmgRptBndsDurationCd+plnDfnActnTrgrTmgTmgRptBndsDurationCd;
+	        } else  {
+	            this.plnDfnActnTrgrTmgTmgRptBndsDurationCd = this.plnDfnActnTrgrTmgTmgRptBndsDurationCd+ "," +plnDfnActnTrgrTmgTmgRptBndsDurationCd;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTrgrTmgTmgRptBndsDurationCmprtr() {
@@ -3070,6 +6640,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTrgrTmgTmgRptBndsDurationCmprtr(String plnDfnActnTrgrTmgTmgRptBndsDurationCmprtr) {
         this.plnDfnActnTrgrTmgTmgRptBndsDurationCmprtr = plnDfnActnTrgrTmgTmgRptBndsDurationCmprtr;
+    }
+    
+    public void addPlnDfnActnTrgrTmgTmgRptBndsDurationCmprtr(String plnDfnActnTrgrTmgTmgRptBndsDurationCmprtr) {
+    	if( plnDfnActnTrgrTmgTmgRptBndsDurationCmprtr != null ) {
+	    	if( this.plnDfnActnTrgrTmgTmgRptBndsDurationCmprtr == null ) {
+	        	this.plnDfnActnTrgrTmgTmgRptBndsDurationCmprtr = plnDfnActnTrgrTmgTmgRptBndsDurationCmprtr;
+	        } else if(this.plnDfnActnTrgrTmgTmgRptBndsDurationCmprtr.substring(this.plnDfnActnTrgrTmgTmgRptBndsDurationCmprtr.length() - 1).equals("]") & plnDfnActnTrgrTmgTmgRptBndsDurationCmprtr.equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptBndsDurationCmprtr = this.plnDfnActnTrgrTmgTmgRptBndsDurationCmprtr+ "," + plnDfnActnTrgrTmgTmgRptBndsDurationCmprtr;
+	        } else if(plnDfnActnTrgrTmgTmgRptBndsDurationCmprtr.equals("[") | plnDfnActnTrgrTmgTmgRptBndsDurationCmprtr.equals("]") | this.plnDfnActnTrgrTmgTmgRptBndsDurationCmprtr.substring(this.plnDfnActnTrgrTmgTmgRptBndsDurationCmprtr.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptBndsDurationCmprtr = this.plnDfnActnTrgrTmgTmgRptBndsDurationCmprtr+plnDfnActnTrgrTmgTmgRptBndsDurationCmprtr;
+	        } else  {
+	            this.plnDfnActnTrgrTmgTmgRptBndsDurationCmprtr = this.plnDfnActnTrgrTmgTmgRptBndsDurationCmprtr+ "," +plnDfnActnTrgrTmgTmgRptBndsDurationCmprtr;
+	        }
+        }
     }
     
     
@@ -3082,6 +6666,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTrgrTmgTmgRptBndsDurationSys = plnDfnActnTrgrTmgTmgRptBndsDurationSys;
     }
     
+    public void addPlnDfnActnTrgrTmgTmgRptBndsDurationSys(String plnDfnActnTrgrTmgTmgRptBndsDurationSys) {
+    	if( plnDfnActnTrgrTmgTmgRptBndsDurationSys != null ) {
+	    	if( this.plnDfnActnTrgrTmgTmgRptBndsDurationSys == null ) {
+	        	this.plnDfnActnTrgrTmgTmgRptBndsDurationSys = plnDfnActnTrgrTmgTmgRptBndsDurationSys;
+	        } else if(this.plnDfnActnTrgrTmgTmgRptBndsDurationSys.substring(this.plnDfnActnTrgrTmgTmgRptBndsDurationSys.length() - 1).equals("]") & plnDfnActnTrgrTmgTmgRptBndsDurationSys.equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptBndsDurationSys = this.plnDfnActnTrgrTmgTmgRptBndsDurationSys+ "," + plnDfnActnTrgrTmgTmgRptBndsDurationSys;
+	        } else if(plnDfnActnTrgrTmgTmgRptBndsDurationSys.equals("[") | plnDfnActnTrgrTmgTmgRptBndsDurationSys.equals("]") | this.plnDfnActnTrgrTmgTmgRptBndsDurationSys.substring(this.plnDfnActnTrgrTmgTmgRptBndsDurationSys.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptBndsDurationSys = this.plnDfnActnTrgrTmgTmgRptBndsDurationSys+plnDfnActnTrgrTmgTmgRptBndsDurationSys;
+	        } else  {
+	            this.plnDfnActnTrgrTmgTmgRptBndsDurationSys = this.plnDfnActnTrgrTmgTmgRptBndsDurationSys+ "," +plnDfnActnTrgrTmgTmgRptBndsDurationSys;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTrgrTmgTmgRptBndsDurationUnt() {
@@ -3090,6 +6688,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTrgrTmgTmgRptBndsDurationUnt(String plnDfnActnTrgrTmgTmgRptBndsDurationUnt) {
         this.plnDfnActnTrgrTmgTmgRptBndsDurationUnt = plnDfnActnTrgrTmgTmgRptBndsDurationUnt;
+    }
+    
+    public void addPlnDfnActnTrgrTmgTmgRptBndsDurationUnt(String plnDfnActnTrgrTmgTmgRptBndsDurationUnt) {
+    	if( plnDfnActnTrgrTmgTmgRptBndsDurationUnt != null ) {
+	    	if( this.plnDfnActnTrgrTmgTmgRptBndsDurationUnt == null ) {
+	        	this.plnDfnActnTrgrTmgTmgRptBndsDurationUnt = plnDfnActnTrgrTmgTmgRptBndsDurationUnt;
+	        } else if(this.plnDfnActnTrgrTmgTmgRptBndsDurationUnt.substring(this.plnDfnActnTrgrTmgTmgRptBndsDurationUnt.length() - 1).equals("]") & plnDfnActnTrgrTmgTmgRptBndsDurationUnt.equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptBndsDurationUnt = this.plnDfnActnTrgrTmgTmgRptBndsDurationUnt+ "," + plnDfnActnTrgrTmgTmgRptBndsDurationUnt;
+	        } else if(plnDfnActnTrgrTmgTmgRptBndsDurationUnt.equals("[") | plnDfnActnTrgrTmgTmgRptBndsDurationUnt.equals("]") | this.plnDfnActnTrgrTmgTmgRptBndsDurationUnt.substring(this.plnDfnActnTrgrTmgTmgRptBndsDurationUnt.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptBndsDurationUnt = this.plnDfnActnTrgrTmgTmgRptBndsDurationUnt+plnDfnActnTrgrTmgTmgRptBndsDurationUnt;
+	        } else  {
+	            this.plnDfnActnTrgrTmgTmgRptBndsDurationUnt = this.plnDfnActnTrgrTmgTmgRptBndsDurationUnt+ "," +plnDfnActnTrgrTmgTmgRptBndsDurationUnt;
+	        }
+        }
     }
     
     
@@ -3102,6 +6714,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTrgrTmgTmgRptBndsDurationVl = plnDfnActnTrgrTmgTmgRptBndsDurationVl;
     }
     
+    public void addPlnDfnActnTrgrTmgTmgRptBndsDurationVl(String plnDfnActnTrgrTmgTmgRptBndsDurationVl) {
+    	if( plnDfnActnTrgrTmgTmgRptBndsDurationVl != null ) {
+	    	if( this.plnDfnActnTrgrTmgTmgRptBndsDurationVl == null ) {
+	        	this.plnDfnActnTrgrTmgTmgRptBndsDurationVl = plnDfnActnTrgrTmgTmgRptBndsDurationVl;
+	        } else if(this.plnDfnActnTrgrTmgTmgRptBndsDurationVl.substring(this.plnDfnActnTrgrTmgTmgRptBndsDurationVl.length() - 1).equals("]") & plnDfnActnTrgrTmgTmgRptBndsDurationVl.equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptBndsDurationVl = this.plnDfnActnTrgrTmgTmgRptBndsDurationVl+ "," + plnDfnActnTrgrTmgTmgRptBndsDurationVl;
+	        } else if(plnDfnActnTrgrTmgTmgRptBndsDurationVl.equals("[") | plnDfnActnTrgrTmgTmgRptBndsDurationVl.equals("]") | this.plnDfnActnTrgrTmgTmgRptBndsDurationVl.substring(this.plnDfnActnTrgrTmgTmgRptBndsDurationVl.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptBndsDurationVl = this.plnDfnActnTrgrTmgTmgRptBndsDurationVl+plnDfnActnTrgrTmgTmgRptBndsDurationVl;
+	        } else  {
+	            this.plnDfnActnTrgrTmgTmgRptBndsDurationVl = this.plnDfnActnTrgrTmgTmgRptBndsDurationVl+ "," +plnDfnActnTrgrTmgTmgRptBndsDurationVl;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTrgrTmgTmgRptBndsPrdEnd() {
@@ -3110,6 +6736,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTrgrTmgTmgRptBndsPrdEnd(String plnDfnActnTrgrTmgTmgRptBndsPrdEnd) {
         this.plnDfnActnTrgrTmgTmgRptBndsPrdEnd = plnDfnActnTrgrTmgTmgRptBndsPrdEnd;
+    }
+    
+    public void addPlnDfnActnTrgrTmgTmgRptBndsPrdEnd(String plnDfnActnTrgrTmgTmgRptBndsPrdEnd) {
+    	if( plnDfnActnTrgrTmgTmgRptBndsPrdEnd != null ) {
+	    	if( this.plnDfnActnTrgrTmgTmgRptBndsPrdEnd == null ) {
+	        	this.plnDfnActnTrgrTmgTmgRptBndsPrdEnd = plnDfnActnTrgrTmgTmgRptBndsPrdEnd;
+	        } else if(this.plnDfnActnTrgrTmgTmgRptBndsPrdEnd.substring(this.plnDfnActnTrgrTmgTmgRptBndsPrdEnd.length() - 1).equals("]") & plnDfnActnTrgrTmgTmgRptBndsPrdEnd.equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptBndsPrdEnd = this.plnDfnActnTrgrTmgTmgRptBndsPrdEnd+ "," + plnDfnActnTrgrTmgTmgRptBndsPrdEnd;
+	        } else if(plnDfnActnTrgrTmgTmgRptBndsPrdEnd.equals("[") | plnDfnActnTrgrTmgTmgRptBndsPrdEnd.equals("]") | this.plnDfnActnTrgrTmgTmgRptBndsPrdEnd.substring(this.plnDfnActnTrgrTmgTmgRptBndsPrdEnd.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptBndsPrdEnd = this.plnDfnActnTrgrTmgTmgRptBndsPrdEnd+plnDfnActnTrgrTmgTmgRptBndsPrdEnd;
+	        } else  {
+	            this.plnDfnActnTrgrTmgTmgRptBndsPrdEnd = this.plnDfnActnTrgrTmgTmgRptBndsPrdEnd+ "," +plnDfnActnTrgrTmgTmgRptBndsPrdEnd;
+	        }
+        }
     }
     
     
@@ -3122,6 +6762,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTrgrTmgTmgRptBndsPrdStrt = plnDfnActnTrgrTmgTmgRptBndsPrdStrt;
     }
     
+    public void addPlnDfnActnTrgrTmgTmgRptBndsPrdStrt(String plnDfnActnTrgrTmgTmgRptBndsPrdStrt) {
+    	if( plnDfnActnTrgrTmgTmgRptBndsPrdStrt != null ) {
+	    	if( this.plnDfnActnTrgrTmgTmgRptBndsPrdStrt == null ) {
+	        	this.plnDfnActnTrgrTmgTmgRptBndsPrdStrt = plnDfnActnTrgrTmgTmgRptBndsPrdStrt;
+	        } else if(this.plnDfnActnTrgrTmgTmgRptBndsPrdStrt.substring(this.plnDfnActnTrgrTmgTmgRptBndsPrdStrt.length() - 1).equals("]") & plnDfnActnTrgrTmgTmgRptBndsPrdStrt.equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptBndsPrdStrt = this.plnDfnActnTrgrTmgTmgRptBndsPrdStrt+ "," + plnDfnActnTrgrTmgTmgRptBndsPrdStrt;
+	        } else if(plnDfnActnTrgrTmgTmgRptBndsPrdStrt.equals("[") | plnDfnActnTrgrTmgTmgRptBndsPrdStrt.equals("]") | this.plnDfnActnTrgrTmgTmgRptBndsPrdStrt.substring(this.plnDfnActnTrgrTmgTmgRptBndsPrdStrt.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptBndsPrdStrt = this.plnDfnActnTrgrTmgTmgRptBndsPrdStrt+plnDfnActnTrgrTmgTmgRptBndsPrdStrt;
+	        } else  {
+	            this.plnDfnActnTrgrTmgTmgRptBndsPrdStrt = this.plnDfnActnTrgrTmgTmgRptBndsPrdStrt+ "," +plnDfnActnTrgrTmgTmgRptBndsPrdStrt;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTrgrTmgTmgRptBndsRngHiCd() {
@@ -3130,6 +6784,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTrgrTmgTmgRptBndsRngHiCd(String plnDfnActnTrgrTmgTmgRptBndsRngHiCd) {
         this.plnDfnActnTrgrTmgTmgRptBndsRngHiCd = plnDfnActnTrgrTmgTmgRptBndsRngHiCd;
+    }
+    
+    public void addPlnDfnActnTrgrTmgTmgRptBndsRngHiCd(String plnDfnActnTrgrTmgTmgRptBndsRngHiCd) {
+    	if( plnDfnActnTrgrTmgTmgRptBndsRngHiCd != null ) {
+	    	if( this.plnDfnActnTrgrTmgTmgRptBndsRngHiCd == null ) {
+	        	this.plnDfnActnTrgrTmgTmgRptBndsRngHiCd = plnDfnActnTrgrTmgTmgRptBndsRngHiCd;
+	        } else if(this.plnDfnActnTrgrTmgTmgRptBndsRngHiCd.substring(this.plnDfnActnTrgrTmgTmgRptBndsRngHiCd.length() - 1).equals("]") & plnDfnActnTrgrTmgTmgRptBndsRngHiCd.equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptBndsRngHiCd = this.plnDfnActnTrgrTmgTmgRptBndsRngHiCd+ "," + plnDfnActnTrgrTmgTmgRptBndsRngHiCd;
+	        } else if(plnDfnActnTrgrTmgTmgRptBndsRngHiCd.equals("[") | plnDfnActnTrgrTmgTmgRptBndsRngHiCd.equals("]") | this.plnDfnActnTrgrTmgTmgRptBndsRngHiCd.substring(this.plnDfnActnTrgrTmgTmgRptBndsRngHiCd.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptBndsRngHiCd = this.plnDfnActnTrgrTmgTmgRptBndsRngHiCd+plnDfnActnTrgrTmgTmgRptBndsRngHiCd;
+	        } else  {
+	            this.plnDfnActnTrgrTmgTmgRptBndsRngHiCd = this.plnDfnActnTrgrTmgTmgRptBndsRngHiCd+ "," +plnDfnActnTrgrTmgTmgRptBndsRngHiCd;
+	        }
+        }
     }
     
     
@@ -3142,6 +6810,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTrgrTmgTmgRptBndsRngHiCmprtr = plnDfnActnTrgrTmgTmgRptBndsRngHiCmprtr;
     }
     
+    public void addPlnDfnActnTrgrTmgTmgRptBndsRngHiCmprtr(String plnDfnActnTrgrTmgTmgRptBndsRngHiCmprtr) {
+    	if( plnDfnActnTrgrTmgTmgRptBndsRngHiCmprtr != null ) {
+	    	if( this.plnDfnActnTrgrTmgTmgRptBndsRngHiCmprtr == null ) {
+	        	this.plnDfnActnTrgrTmgTmgRptBndsRngHiCmprtr = plnDfnActnTrgrTmgTmgRptBndsRngHiCmprtr;
+	        } else if(this.plnDfnActnTrgrTmgTmgRptBndsRngHiCmprtr.substring(this.plnDfnActnTrgrTmgTmgRptBndsRngHiCmprtr.length() - 1).equals("]") & plnDfnActnTrgrTmgTmgRptBndsRngHiCmprtr.equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptBndsRngHiCmprtr = this.plnDfnActnTrgrTmgTmgRptBndsRngHiCmprtr+ "," + plnDfnActnTrgrTmgTmgRptBndsRngHiCmprtr;
+	        } else if(plnDfnActnTrgrTmgTmgRptBndsRngHiCmprtr.equals("[") | plnDfnActnTrgrTmgTmgRptBndsRngHiCmprtr.equals("]") | this.plnDfnActnTrgrTmgTmgRptBndsRngHiCmprtr.substring(this.plnDfnActnTrgrTmgTmgRptBndsRngHiCmprtr.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptBndsRngHiCmprtr = this.plnDfnActnTrgrTmgTmgRptBndsRngHiCmprtr+plnDfnActnTrgrTmgTmgRptBndsRngHiCmprtr;
+	        } else  {
+	            this.plnDfnActnTrgrTmgTmgRptBndsRngHiCmprtr = this.plnDfnActnTrgrTmgTmgRptBndsRngHiCmprtr+ "," +plnDfnActnTrgrTmgTmgRptBndsRngHiCmprtr;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTrgrTmgTmgRptBndsRngHiSys() {
@@ -3150,6 +6832,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTrgrTmgTmgRptBndsRngHiSys(String plnDfnActnTrgrTmgTmgRptBndsRngHiSys) {
         this.plnDfnActnTrgrTmgTmgRptBndsRngHiSys = plnDfnActnTrgrTmgTmgRptBndsRngHiSys;
+    }
+    
+    public void addPlnDfnActnTrgrTmgTmgRptBndsRngHiSys(String plnDfnActnTrgrTmgTmgRptBndsRngHiSys) {
+    	if( plnDfnActnTrgrTmgTmgRptBndsRngHiSys != null ) {
+	    	if( this.plnDfnActnTrgrTmgTmgRptBndsRngHiSys == null ) {
+	        	this.plnDfnActnTrgrTmgTmgRptBndsRngHiSys = plnDfnActnTrgrTmgTmgRptBndsRngHiSys;
+	        } else if(this.plnDfnActnTrgrTmgTmgRptBndsRngHiSys.substring(this.plnDfnActnTrgrTmgTmgRptBndsRngHiSys.length() - 1).equals("]") & plnDfnActnTrgrTmgTmgRptBndsRngHiSys.equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptBndsRngHiSys = this.plnDfnActnTrgrTmgTmgRptBndsRngHiSys+ "," + plnDfnActnTrgrTmgTmgRptBndsRngHiSys;
+	        } else if(plnDfnActnTrgrTmgTmgRptBndsRngHiSys.equals("[") | plnDfnActnTrgrTmgTmgRptBndsRngHiSys.equals("]") | this.plnDfnActnTrgrTmgTmgRptBndsRngHiSys.substring(this.plnDfnActnTrgrTmgTmgRptBndsRngHiSys.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptBndsRngHiSys = this.plnDfnActnTrgrTmgTmgRptBndsRngHiSys+plnDfnActnTrgrTmgTmgRptBndsRngHiSys;
+	        } else  {
+	            this.plnDfnActnTrgrTmgTmgRptBndsRngHiSys = this.plnDfnActnTrgrTmgTmgRptBndsRngHiSys+ "," +plnDfnActnTrgrTmgTmgRptBndsRngHiSys;
+	        }
+        }
     }
     
     
@@ -3162,6 +6858,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTrgrTmgTmgRptBndsRngHiUnt = plnDfnActnTrgrTmgTmgRptBndsRngHiUnt;
     }
     
+    public void addPlnDfnActnTrgrTmgTmgRptBndsRngHiUnt(String plnDfnActnTrgrTmgTmgRptBndsRngHiUnt) {
+    	if( plnDfnActnTrgrTmgTmgRptBndsRngHiUnt != null ) {
+	    	if( this.plnDfnActnTrgrTmgTmgRptBndsRngHiUnt == null ) {
+	        	this.plnDfnActnTrgrTmgTmgRptBndsRngHiUnt = plnDfnActnTrgrTmgTmgRptBndsRngHiUnt;
+	        } else if(this.plnDfnActnTrgrTmgTmgRptBndsRngHiUnt.substring(this.plnDfnActnTrgrTmgTmgRptBndsRngHiUnt.length() - 1).equals("]") & plnDfnActnTrgrTmgTmgRptBndsRngHiUnt.equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptBndsRngHiUnt = this.plnDfnActnTrgrTmgTmgRptBndsRngHiUnt+ "," + plnDfnActnTrgrTmgTmgRptBndsRngHiUnt;
+	        } else if(plnDfnActnTrgrTmgTmgRptBndsRngHiUnt.equals("[") | plnDfnActnTrgrTmgTmgRptBndsRngHiUnt.equals("]") | this.plnDfnActnTrgrTmgTmgRptBndsRngHiUnt.substring(this.plnDfnActnTrgrTmgTmgRptBndsRngHiUnt.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptBndsRngHiUnt = this.plnDfnActnTrgrTmgTmgRptBndsRngHiUnt+plnDfnActnTrgrTmgTmgRptBndsRngHiUnt;
+	        } else  {
+	            this.plnDfnActnTrgrTmgTmgRptBndsRngHiUnt = this.plnDfnActnTrgrTmgTmgRptBndsRngHiUnt+ "," +plnDfnActnTrgrTmgTmgRptBndsRngHiUnt;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTrgrTmgTmgRptBndsRngHiVl() {
@@ -3170,6 +6880,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTrgrTmgTmgRptBndsRngHiVl(String plnDfnActnTrgrTmgTmgRptBndsRngHiVl) {
         this.plnDfnActnTrgrTmgTmgRptBndsRngHiVl = plnDfnActnTrgrTmgTmgRptBndsRngHiVl;
+    }
+    
+    public void addPlnDfnActnTrgrTmgTmgRptBndsRngHiVl(String plnDfnActnTrgrTmgTmgRptBndsRngHiVl) {
+    	if( plnDfnActnTrgrTmgTmgRptBndsRngHiVl != null ) {
+	    	if( this.plnDfnActnTrgrTmgTmgRptBndsRngHiVl == null ) {
+	        	this.plnDfnActnTrgrTmgTmgRptBndsRngHiVl = plnDfnActnTrgrTmgTmgRptBndsRngHiVl;
+	        } else if(this.plnDfnActnTrgrTmgTmgRptBndsRngHiVl.substring(this.plnDfnActnTrgrTmgTmgRptBndsRngHiVl.length() - 1).equals("]") & plnDfnActnTrgrTmgTmgRptBndsRngHiVl.equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptBndsRngHiVl = this.plnDfnActnTrgrTmgTmgRptBndsRngHiVl+ "," + plnDfnActnTrgrTmgTmgRptBndsRngHiVl;
+	        } else if(plnDfnActnTrgrTmgTmgRptBndsRngHiVl.equals("[") | plnDfnActnTrgrTmgTmgRptBndsRngHiVl.equals("]") | this.plnDfnActnTrgrTmgTmgRptBndsRngHiVl.substring(this.plnDfnActnTrgrTmgTmgRptBndsRngHiVl.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptBndsRngHiVl = this.plnDfnActnTrgrTmgTmgRptBndsRngHiVl+plnDfnActnTrgrTmgTmgRptBndsRngHiVl;
+	        } else  {
+	            this.plnDfnActnTrgrTmgTmgRptBndsRngHiVl = this.plnDfnActnTrgrTmgTmgRptBndsRngHiVl+ "," +plnDfnActnTrgrTmgTmgRptBndsRngHiVl;
+	        }
+        }
     }
     
     
@@ -3182,6 +6906,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTrgrTmgTmgRptBndsRngLwCd = plnDfnActnTrgrTmgTmgRptBndsRngLwCd;
     }
     
+    public void addPlnDfnActnTrgrTmgTmgRptBndsRngLwCd(String plnDfnActnTrgrTmgTmgRptBndsRngLwCd) {
+    	if( plnDfnActnTrgrTmgTmgRptBndsRngLwCd != null ) {
+	    	if( this.plnDfnActnTrgrTmgTmgRptBndsRngLwCd == null ) {
+	        	this.plnDfnActnTrgrTmgTmgRptBndsRngLwCd = plnDfnActnTrgrTmgTmgRptBndsRngLwCd;
+	        } else if(this.plnDfnActnTrgrTmgTmgRptBndsRngLwCd.substring(this.plnDfnActnTrgrTmgTmgRptBndsRngLwCd.length() - 1).equals("]") & plnDfnActnTrgrTmgTmgRptBndsRngLwCd.equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptBndsRngLwCd = this.plnDfnActnTrgrTmgTmgRptBndsRngLwCd+ "," + plnDfnActnTrgrTmgTmgRptBndsRngLwCd;
+	        } else if(plnDfnActnTrgrTmgTmgRptBndsRngLwCd.equals("[") | plnDfnActnTrgrTmgTmgRptBndsRngLwCd.equals("]") | this.plnDfnActnTrgrTmgTmgRptBndsRngLwCd.substring(this.plnDfnActnTrgrTmgTmgRptBndsRngLwCd.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptBndsRngLwCd = this.plnDfnActnTrgrTmgTmgRptBndsRngLwCd+plnDfnActnTrgrTmgTmgRptBndsRngLwCd;
+	        } else  {
+	            this.plnDfnActnTrgrTmgTmgRptBndsRngLwCd = this.plnDfnActnTrgrTmgTmgRptBndsRngLwCd+ "," +plnDfnActnTrgrTmgTmgRptBndsRngLwCd;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTrgrTmgTmgRptBndsRngLwCmprtr() {
@@ -3190,6 +6928,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTrgrTmgTmgRptBndsRngLwCmprtr(String plnDfnActnTrgrTmgTmgRptBndsRngLwCmprtr) {
         this.plnDfnActnTrgrTmgTmgRptBndsRngLwCmprtr = plnDfnActnTrgrTmgTmgRptBndsRngLwCmprtr;
+    }
+    
+    public void addPlnDfnActnTrgrTmgTmgRptBndsRngLwCmprtr(String plnDfnActnTrgrTmgTmgRptBndsRngLwCmprtr) {
+    	if( plnDfnActnTrgrTmgTmgRptBndsRngLwCmprtr != null ) {
+	    	if( this.plnDfnActnTrgrTmgTmgRptBndsRngLwCmprtr == null ) {
+	        	this.plnDfnActnTrgrTmgTmgRptBndsRngLwCmprtr = plnDfnActnTrgrTmgTmgRptBndsRngLwCmprtr;
+	        } else if(this.plnDfnActnTrgrTmgTmgRptBndsRngLwCmprtr.substring(this.plnDfnActnTrgrTmgTmgRptBndsRngLwCmprtr.length() - 1).equals("]") & plnDfnActnTrgrTmgTmgRptBndsRngLwCmprtr.equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptBndsRngLwCmprtr = this.plnDfnActnTrgrTmgTmgRptBndsRngLwCmprtr+ "," + plnDfnActnTrgrTmgTmgRptBndsRngLwCmprtr;
+	        } else if(plnDfnActnTrgrTmgTmgRptBndsRngLwCmprtr.equals("[") | plnDfnActnTrgrTmgTmgRptBndsRngLwCmprtr.equals("]") | this.plnDfnActnTrgrTmgTmgRptBndsRngLwCmprtr.substring(this.plnDfnActnTrgrTmgTmgRptBndsRngLwCmprtr.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptBndsRngLwCmprtr = this.plnDfnActnTrgrTmgTmgRptBndsRngLwCmprtr+plnDfnActnTrgrTmgTmgRptBndsRngLwCmprtr;
+	        } else  {
+	            this.plnDfnActnTrgrTmgTmgRptBndsRngLwCmprtr = this.plnDfnActnTrgrTmgTmgRptBndsRngLwCmprtr+ "," +plnDfnActnTrgrTmgTmgRptBndsRngLwCmprtr;
+	        }
+        }
     }
     
     
@@ -3202,6 +6954,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTrgrTmgTmgRptBndsRngLwSys = plnDfnActnTrgrTmgTmgRptBndsRngLwSys;
     }
     
+    public void addPlnDfnActnTrgrTmgTmgRptBndsRngLwSys(String plnDfnActnTrgrTmgTmgRptBndsRngLwSys) {
+    	if( plnDfnActnTrgrTmgTmgRptBndsRngLwSys != null ) {
+	    	if( this.plnDfnActnTrgrTmgTmgRptBndsRngLwSys == null ) {
+	        	this.plnDfnActnTrgrTmgTmgRptBndsRngLwSys = plnDfnActnTrgrTmgTmgRptBndsRngLwSys;
+	        } else if(this.plnDfnActnTrgrTmgTmgRptBndsRngLwSys.substring(this.plnDfnActnTrgrTmgTmgRptBndsRngLwSys.length() - 1).equals("]") & plnDfnActnTrgrTmgTmgRptBndsRngLwSys.equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptBndsRngLwSys = this.plnDfnActnTrgrTmgTmgRptBndsRngLwSys+ "," + plnDfnActnTrgrTmgTmgRptBndsRngLwSys;
+	        } else if(plnDfnActnTrgrTmgTmgRptBndsRngLwSys.equals("[") | plnDfnActnTrgrTmgTmgRptBndsRngLwSys.equals("]") | this.plnDfnActnTrgrTmgTmgRptBndsRngLwSys.substring(this.plnDfnActnTrgrTmgTmgRptBndsRngLwSys.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptBndsRngLwSys = this.plnDfnActnTrgrTmgTmgRptBndsRngLwSys+plnDfnActnTrgrTmgTmgRptBndsRngLwSys;
+	        } else  {
+	            this.plnDfnActnTrgrTmgTmgRptBndsRngLwSys = this.plnDfnActnTrgrTmgTmgRptBndsRngLwSys+ "," +plnDfnActnTrgrTmgTmgRptBndsRngLwSys;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTrgrTmgTmgRptBndsRngLwUnt() {
@@ -3210,6 +6976,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTrgrTmgTmgRptBndsRngLwUnt(String plnDfnActnTrgrTmgTmgRptBndsRngLwUnt) {
         this.plnDfnActnTrgrTmgTmgRptBndsRngLwUnt = plnDfnActnTrgrTmgTmgRptBndsRngLwUnt;
+    }
+    
+    public void addPlnDfnActnTrgrTmgTmgRptBndsRngLwUnt(String plnDfnActnTrgrTmgTmgRptBndsRngLwUnt) {
+    	if( plnDfnActnTrgrTmgTmgRptBndsRngLwUnt != null ) {
+	    	if( this.plnDfnActnTrgrTmgTmgRptBndsRngLwUnt == null ) {
+	        	this.plnDfnActnTrgrTmgTmgRptBndsRngLwUnt = plnDfnActnTrgrTmgTmgRptBndsRngLwUnt;
+	        } else if(this.plnDfnActnTrgrTmgTmgRptBndsRngLwUnt.substring(this.plnDfnActnTrgrTmgTmgRptBndsRngLwUnt.length() - 1).equals("]") & plnDfnActnTrgrTmgTmgRptBndsRngLwUnt.equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptBndsRngLwUnt = this.plnDfnActnTrgrTmgTmgRptBndsRngLwUnt+ "," + plnDfnActnTrgrTmgTmgRptBndsRngLwUnt;
+	        } else if(plnDfnActnTrgrTmgTmgRptBndsRngLwUnt.equals("[") | plnDfnActnTrgrTmgTmgRptBndsRngLwUnt.equals("]") | this.plnDfnActnTrgrTmgTmgRptBndsRngLwUnt.substring(this.plnDfnActnTrgrTmgTmgRptBndsRngLwUnt.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptBndsRngLwUnt = this.plnDfnActnTrgrTmgTmgRptBndsRngLwUnt+plnDfnActnTrgrTmgTmgRptBndsRngLwUnt;
+	        } else  {
+	            this.plnDfnActnTrgrTmgTmgRptBndsRngLwUnt = this.plnDfnActnTrgrTmgTmgRptBndsRngLwUnt+ "," +plnDfnActnTrgrTmgTmgRptBndsRngLwUnt;
+	        }
+        }
     }
     
     
@@ -3222,6 +7002,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTrgrTmgTmgRptBndsRngLwVl = plnDfnActnTrgrTmgTmgRptBndsRngLwVl;
     }
     
+    public void addPlnDfnActnTrgrTmgTmgRptBndsRngLwVl(String plnDfnActnTrgrTmgTmgRptBndsRngLwVl) {
+    	if( plnDfnActnTrgrTmgTmgRptBndsRngLwVl != null ) {
+	    	if( this.plnDfnActnTrgrTmgTmgRptBndsRngLwVl == null ) {
+	        	this.plnDfnActnTrgrTmgTmgRptBndsRngLwVl = plnDfnActnTrgrTmgTmgRptBndsRngLwVl;
+	        } else if(this.plnDfnActnTrgrTmgTmgRptBndsRngLwVl.substring(this.plnDfnActnTrgrTmgTmgRptBndsRngLwVl.length() - 1).equals("]") & plnDfnActnTrgrTmgTmgRptBndsRngLwVl.equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptBndsRngLwVl = this.plnDfnActnTrgrTmgTmgRptBndsRngLwVl+ "," + plnDfnActnTrgrTmgTmgRptBndsRngLwVl;
+	        } else if(plnDfnActnTrgrTmgTmgRptBndsRngLwVl.equals("[") | plnDfnActnTrgrTmgTmgRptBndsRngLwVl.equals("]") | this.plnDfnActnTrgrTmgTmgRptBndsRngLwVl.substring(this.plnDfnActnTrgrTmgTmgRptBndsRngLwVl.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptBndsRngLwVl = this.plnDfnActnTrgrTmgTmgRptBndsRngLwVl+plnDfnActnTrgrTmgTmgRptBndsRngLwVl;
+	        } else  {
+	            this.plnDfnActnTrgrTmgTmgRptBndsRngLwVl = this.plnDfnActnTrgrTmgTmgRptBndsRngLwVl+ "," +plnDfnActnTrgrTmgTmgRptBndsRngLwVl;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTrgrTmgTmgRptCnt() {
@@ -3230,6 +7024,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTrgrTmgTmgRptCnt(String plnDfnActnTrgrTmgTmgRptCnt) {
         this.plnDfnActnTrgrTmgTmgRptCnt = plnDfnActnTrgrTmgTmgRptCnt;
+    }
+    
+    public void addPlnDfnActnTrgrTmgTmgRptCnt(String plnDfnActnTrgrTmgTmgRptCnt) {
+    	if( plnDfnActnTrgrTmgTmgRptCnt != null ) {
+	    	if( this.plnDfnActnTrgrTmgTmgRptCnt == null ) {
+	        	this.plnDfnActnTrgrTmgTmgRptCnt = plnDfnActnTrgrTmgTmgRptCnt;
+	        } else if(this.plnDfnActnTrgrTmgTmgRptCnt.substring(this.plnDfnActnTrgrTmgTmgRptCnt.length() - 1).equals("]") & plnDfnActnTrgrTmgTmgRptCnt.equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptCnt = this.plnDfnActnTrgrTmgTmgRptCnt+ "," + plnDfnActnTrgrTmgTmgRptCnt;
+	        } else if(plnDfnActnTrgrTmgTmgRptCnt.equals("[") | plnDfnActnTrgrTmgTmgRptCnt.equals("]") | this.plnDfnActnTrgrTmgTmgRptCnt.substring(this.plnDfnActnTrgrTmgTmgRptCnt.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptCnt = this.plnDfnActnTrgrTmgTmgRptCnt+plnDfnActnTrgrTmgTmgRptCnt;
+	        } else  {
+	            this.plnDfnActnTrgrTmgTmgRptCnt = this.plnDfnActnTrgrTmgTmgRptCnt+ "," +plnDfnActnTrgrTmgTmgRptCnt;
+	        }
+        }
     }
     
     
@@ -3242,6 +7050,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTrgrTmgTmgRptCntMx = plnDfnActnTrgrTmgTmgRptCntMx;
     }
     
+    public void addPlnDfnActnTrgrTmgTmgRptCntMx(String plnDfnActnTrgrTmgTmgRptCntMx) {
+    	if( plnDfnActnTrgrTmgTmgRptCntMx != null ) {
+	    	if( this.plnDfnActnTrgrTmgTmgRptCntMx == null ) {
+	        	this.plnDfnActnTrgrTmgTmgRptCntMx = plnDfnActnTrgrTmgTmgRptCntMx;
+	        } else if(this.plnDfnActnTrgrTmgTmgRptCntMx.substring(this.plnDfnActnTrgrTmgTmgRptCntMx.length() - 1).equals("]") & plnDfnActnTrgrTmgTmgRptCntMx.equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptCntMx = this.plnDfnActnTrgrTmgTmgRptCntMx+ "," + plnDfnActnTrgrTmgTmgRptCntMx;
+	        } else if(plnDfnActnTrgrTmgTmgRptCntMx.equals("[") | plnDfnActnTrgrTmgTmgRptCntMx.equals("]") | this.plnDfnActnTrgrTmgTmgRptCntMx.substring(this.plnDfnActnTrgrTmgTmgRptCntMx.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptCntMx = this.plnDfnActnTrgrTmgTmgRptCntMx+plnDfnActnTrgrTmgTmgRptCntMx;
+	        } else  {
+	            this.plnDfnActnTrgrTmgTmgRptCntMx = this.plnDfnActnTrgrTmgTmgRptCntMx+ "," +plnDfnActnTrgrTmgTmgRptCntMx;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTrgrTmgTmgRptDayOfWeek() {
@@ -3250,6 +7072,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTrgrTmgTmgRptDayOfWeek(String plnDfnActnTrgrTmgTmgRptDayOfWeek) {
         this.plnDfnActnTrgrTmgTmgRptDayOfWeek = plnDfnActnTrgrTmgTmgRptDayOfWeek;
+    }
+    
+    public void addPlnDfnActnTrgrTmgTmgRptDayOfWeek(String plnDfnActnTrgrTmgTmgRptDayOfWeek) {
+    	if( plnDfnActnTrgrTmgTmgRptDayOfWeek != null ) {
+	    	if( this.plnDfnActnTrgrTmgTmgRptDayOfWeek == null ) {
+	        	this.plnDfnActnTrgrTmgTmgRptDayOfWeek = plnDfnActnTrgrTmgTmgRptDayOfWeek;
+	        } else if(this.plnDfnActnTrgrTmgTmgRptDayOfWeek.substring(this.plnDfnActnTrgrTmgTmgRptDayOfWeek.length() - 1).equals("]") & plnDfnActnTrgrTmgTmgRptDayOfWeek.equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptDayOfWeek = this.plnDfnActnTrgrTmgTmgRptDayOfWeek+ "," + plnDfnActnTrgrTmgTmgRptDayOfWeek;
+	        } else if(plnDfnActnTrgrTmgTmgRptDayOfWeek.equals("[") | plnDfnActnTrgrTmgTmgRptDayOfWeek.equals("]") | this.plnDfnActnTrgrTmgTmgRptDayOfWeek.substring(this.plnDfnActnTrgrTmgTmgRptDayOfWeek.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptDayOfWeek = this.plnDfnActnTrgrTmgTmgRptDayOfWeek+plnDfnActnTrgrTmgTmgRptDayOfWeek;
+	        } else  {
+	            this.plnDfnActnTrgrTmgTmgRptDayOfWeek = this.plnDfnActnTrgrTmgTmgRptDayOfWeek+ "," +plnDfnActnTrgrTmgTmgRptDayOfWeek;
+	        }
+        }
     }
     
     
@@ -3262,6 +7098,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTrgrTmgTmgRptDuration = plnDfnActnTrgrTmgTmgRptDuration;
     }
     
+    public void addPlnDfnActnTrgrTmgTmgRptDuration(String plnDfnActnTrgrTmgTmgRptDuration) {
+    	if( plnDfnActnTrgrTmgTmgRptDuration != null ) {
+	    	if( this.plnDfnActnTrgrTmgTmgRptDuration == null ) {
+	        	this.plnDfnActnTrgrTmgTmgRptDuration = plnDfnActnTrgrTmgTmgRptDuration;
+	        } else if(this.plnDfnActnTrgrTmgTmgRptDuration.substring(this.plnDfnActnTrgrTmgTmgRptDuration.length() - 1).equals("]") & plnDfnActnTrgrTmgTmgRptDuration.equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptDuration = this.plnDfnActnTrgrTmgTmgRptDuration+ "," + plnDfnActnTrgrTmgTmgRptDuration;
+	        } else if(plnDfnActnTrgrTmgTmgRptDuration.equals("[") | plnDfnActnTrgrTmgTmgRptDuration.equals("]") | this.plnDfnActnTrgrTmgTmgRptDuration.substring(this.plnDfnActnTrgrTmgTmgRptDuration.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptDuration = this.plnDfnActnTrgrTmgTmgRptDuration+plnDfnActnTrgrTmgTmgRptDuration;
+	        } else  {
+	            this.plnDfnActnTrgrTmgTmgRptDuration = this.plnDfnActnTrgrTmgTmgRptDuration+ "," +plnDfnActnTrgrTmgTmgRptDuration;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTrgrTmgTmgRptDurationMx() {
@@ -3270,6 +7120,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTrgrTmgTmgRptDurationMx(String plnDfnActnTrgrTmgTmgRptDurationMx) {
         this.plnDfnActnTrgrTmgTmgRptDurationMx = plnDfnActnTrgrTmgTmgRptDurationMx;
+    }
+    
+    public void addPlnDfnActnTrgrTmgTmgRptDurationMx(String plnDfnActnTrgrTmgTmgRptDurationMx) {
+    	if( plnDfnActnTrgrTmgTmgRptDurationMx != null ) {
+	    	if( this.plnDfnActnTrgrTmgTmgRptDurationMx == null ) {
+	        	this.plnDfnActnTrgrTmgTmgRptDurationMx = plnDfnActnTrgrTmgTmgRptDurationMx;
+	        } else if(this.plnDfnActnTrgrTmgTmgRptDurationMx.substring(this.plnDfnActnTrgrTmgTmgRptDurationMx.length() - 1).equals("]") & plnDfnActnTrgrTmgTmgRptDurationMx.equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptDurationMx = this.plnDfnActnTrgrTmgTmgRptDurationMx+ "," + plnDfnActnTrgrTmgTmgRptDurationMx;
+	        } else if(plnDfnActnTrgrTmgTmgRptDurationMx.equals("[") | plnDfnActnTrgrTmgTmgRptDurationMx.equals("]") | this.plnDfnActnTrgrTmgTmgRptDurationMx.substring(this.plnDfnActnTrgrTmgTmgRptDurationMx.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptDurationMx = this.plnDfnActnTrgrTmgTmgRptDurationMx+plnDfnActnTrgrTmgTmgRptDurationMx;
+	        } else  {
+	            this.plnDfnActnTrgrTmgTmgRptDurationMx = this.plnDfnActnTrgrTmgTmgRptDurationMx+ "," +plnDfnActnTrgrTmgTmgRptDurationMx;
+	        }
+        }
     }
     
     
@@ -3282,6 +7146,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTrgrTmgTmgRptDurationUnt = plnDfnActnTrgrTmgTmgRptDurationUnt;
     }
     
+    public void addPlnDfnActnTrgrTmgTmgRptDurationUnt(String plnDfnActnTrgrTmgTmgRptDurationUnt) {
+    	if( plnDfnActnTrgrTmgTmgRptDurationUnt != null ) {
+	    	if( this.plnDfnActnTrgrTmgTmgRptDurationUnt == null ) {
+	        	this.plnDfnActnTrgrTmgTmgRptDurationUnt = plnDfnActnTrgrTmgTmgRptDurationUnt;
+	        } else if(this.plnDfnActnTrgrTmgTmgRptDurationUnt.substring(this.plnDfnActnTrgrTmgTmgRptDurationUnt.length() - 1).equals("]") & plnDfnActnTrgrTmgTmgRptDurationUnt.equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptDurationUnt = this.plnDfnActnTrgrTmgTmgRptDurationUnt+ "," + plnDfnActnTrgrTmgTmgRptDurationUnt;
+	        } else if(plnDfnActnTrgrTmgTmgRptDurationUnt.equals("[") | plnDfnActnTrgrTmgTmgRptDurationUnt.equals("]") | this.plnDfnActnTrgrTmgTmgRptDurationUnt.substring(this.plnDfnActnTrgrTmgTmgRptDurationUnt.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptDurationUnt = this.plnDfnActnTrgrTmgTmgRptDurationUnt+plnDfnActnTrgrTmgTmgRptDurationUnt;
+	        } else  {
+	            this.plnDfnActnTrgrTmgTmgRptDurationUnt = this.plnDfnActnTrgrTmgTmgRptDurationUnt+ "," +plnDfnActnTrgrTmgTmgRptDurationUnt;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTrgrTmgTmgRptFrqncy() {
@@ -3290,6 +7168,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTrgrTmgTmgRptFrqncy(String plnDfnActnTrgrTmgTmgRptFrqncy) {
         this.plnDfnActnTrgrTmgTmgRptFrqncy = plnDfnActnTrgrTmgTmgRptFrqncy;
+    }
+    
+    public void addPlnDfnActnTrgrTmgTmgRptFrqncy(String plnDfnActnTrgrTmgTmgRptFrqncy) {
+    	if( plnDfnActnTrgrTmgTmgRptFrqncy != null ) {
+	    	if( this.plnDfnActnTrgrTmgTmgRptFrqncy == null ) {
+	        	this.plnDfnActnTrgrTmgTmgRptFrqncy = plnDfnActnTrgrTmgTmgRptFrqncy;
+	        } else if(this.plnDfnActnTrgrTmgTmgRptFrqncy.substring(this.plnDfnActnTrgrTmgTmgRptFrqncy.length() - 1).equals("]") & plnDfnActnTrgrTmgTmgRptFrqncy.equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptFrqncy = this.plnDfnActnTrgrTmgTmgRptFrqncy+ "," + plnDfnActnTrgrTmgTmgRptFrqncy;
+	        } else if(plnDfnActnTrgrTmgTmgRptFrqncy.equals("[") | plnDfnActnTrgrTmgTmgRptFrqncy.equals("]") | this.plnDfnActnTrgrTmgTmgRptFrqncy.substring(this.plnDfnActnTrgrTmgTmgRptFrqncy.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptFrqncy = this.plnDfnActnTrgrTmgTmgRptFrqncy+plnDfnActnTrgrTmgTmgRptFrqncy;
+	        } else  {
+	            this.plnDfnActnTrgrTmgTmgRptFrqncy = this.plnDfnActnTrgrTmgTmgRptFrqncy+ "," +plnDfnActnTrgrTmgTmgRptFrqncy;
+	        }
+        }
     }
     
     
@@ -3302,6 +7194,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTrgrTmgTmgRptFrqncyMx = plnDfnActnTrgrTmgTmgRptFrqncyMx;
     }
     
+    public void addPlnDfnActnTrgrTmgTmgRptFrqncyMx(String plnDfnActnTrgrTmgTmgRptFrqncyMx) {
+    	if( plnDfnActnTrgrTmgTmgRptFrqncyMx != null ) {
+	    	if( this.plnDfnActnTrgrTmgTmgRptFrqncyMx == null ) {
+	        	this.plnDfnActnTrgrTmgTmgRptFrqncyMx = plnDfnActnTrgrTmgTmgRptFrqncyMx;
+	        } else if(this.plnDfnActnTrgrTmgTmgRptFrqncyMx.substring(this.plnDfnActnTrgrTmgTmgRptFrqncyMx.length() - 1).equals("]") & plnDfnActnTrgrTmgTmgRptFrqncyMx.equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptFrqncyMx = this.plnDfnActnTrgrTmgTmgRptFrqncyMx+ "," + plnDfnActnTrgrTmgTmgRptFrqncyMx;
+	        } else if(plnDfnActnTrgrTmgTmgRptFrqncyMx.equals("[") | plnDfnActnTrgrTmgTmgRptFrqncyMx.equals("]") | this.plnDfnActnTrgrTmgTmgRptFrqncyMx.substring(this.plnDfnActnTrgrTmgTmgRptFrqncyMx.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptFrqncyMx = this.plnDfnActnTrgrTmgTmgRptFrqncyMx+plnDfnActnTrgrTmgTmgRptFrqncyMx;
+	        } else  {
+	            this.plnDfnActnTrgrTmgTmgRptFrqncyMx = this.plnDfnActnTrgrTmgTmgRptFrqncyMx+ "," +plnDfnActnTrgrTmgTmgRptFrqncyMx;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTrgrTmgTmgRptOff() {
@@ -3310,6 +7216,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTrgrTmgTmgRptOff(String plnDfnActnTrgrTmgTmgRptOff) {
         this.plnDfnActnTrgrTmgTmgRptOff = plnDfnActnTrgrTmgTmgRptOff;
+    }
+    
+    public void addPlnDfnActnTrgrTmgTmgRptOff(String plnDfnActnTrgrTmgTmgRptOff) {
+    	if( plnDfnActnTrgrTmgTmgRptOff != null ) {
+	    	if( this.plnDfnActnTrgrTmgTmgRptOff == null ) {
+	        	this.plnDfnActnTrgrTmgTmgRptOff = plnDfnActnTrgrTmgTmgRptOff;
+	        } else if(this.plnDfnActnTrgrTmgTmgRptOff.substring(this.plnDfnActnTrgrTmgTmgRptOff.length() - 1).equals("]") & plnDfnActnTrgrTmgTmgRptOff.equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptOff = this.plnDfnActnTrgrTmgTmgRptOff+ "," + plnDfnActnTrgrTmgTmgRptOff;
+	        } else if(plnDfnActnTrgrTmgTmgRptOff.equals("[") | plnDfnActnTrgrTmgTmgRptOff.equals("]") | this.plnDfnActnTrgrTmgTmgRptOff.substring(this.plnDfnActnTrgrTmgTmgRptOff.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptOff = this.plnDfnActnTrgrTmgTmgRptOff+plnDfnActnTrgrTmgTmgRptOff;
+	        } else  {
+	            this.plnDfnActnTrgrTmgTmgRptOff = this.plnDfnActnTrgrTmgTmgRptOff+ "," +plnDfnActnTrgrTmgTmgRptOff;
+	        }
+        }
     }
     
     
@@ -3322,6 +7242,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTrgrTmgTmgRptPrd = plnDfnActnTrgrTmgTmgRptPrd;
     }
     
+    public void addPlnDfnActnTrgrTmgTmgRptPrd(String plnDfnActnTrgrTmgTmgRptPrd) {
+    	if( plnDfnActnTrgrTmgTmgRptPrd != null ) {
+	    	if( this.plnDfnActnTrgrTmgTmgRptPrd == null ) {
+	        	this.plnDfnActnTrgrTmgTmgRptPrd = plnDfnActnTrgrTmgTmgRptPrd;
+	        } else if(this.plnDfnActnTrgrTmgTmgRptPrd.substring(this.plnDfnActnTrgrTmgTmgRptPrd.length() - 1).equals("]") & plnDfnActnTrgrTmgTmgRptPrd.equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptPrd = this.plnDfnActnTrgrTmgTmgRptPrd+ "," + plnDfnActnTrgrTmgTmgRptPrd;
+	        } else if(plnDfnActnTrgrTmgTmgRptPrd.equals("[") | plnDfnActnTrgrTmgTmgRptPrd.equals("]") | this.plnDfnActnTrgrTmgTmgRptPrd.substring(this.plnDfnActnTrgrTmgTmgRptPrd.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptPrd = this.plnDfnActnTrgrTmgTmgRptPrd+plnDfnActnTrgrTmgTmgRptPrd;
+	        } else  {
+	            this.plnDfnActnTrgrTmgTmgRptPrd = this.plnDfnActnTrgrTmgTmgRptPrd+ "," +plnDfnActnTrgrTmgTmgRptPrd;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTrgrTmgTmgRptPrdMx() {
@@ -3330,6 +7264,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTrgrTmgTmgRptPrdMx(String plnDfnActnTrgrTmgTmgRptPrdMx) {
         this.plnDfnActnTrgrTmgTmgRptPrdMx = plnDfnActnTrgrTmgTmgRptPrdMx;
+    }
+    
+    public void addPlnDfnActnTrgrTmgTmgRptPrdMx(String plnDfnActnTrgrTmgTmgRptPrdMx) {
+    	if( plnDfnActnTrgrTmgTmgRptPrdMx != null ) {
+	    	if( this.plnDfnActnTrgrTmgTmgRptPrdMx == null ) {
+	        	this.plnDfnActnTrgrTmgTmgRptPrdMx = plnDfnActnTrgrTmgTmgRptPrdMx;
+	        } else if(this.plnDfnActnTrgrTmgTmgRptPrdMx.substring(this.plnDfnActnTrgrTmgTmgRptPrdMx.length() - 1).equals("]") & plnDfnActnTrgrTmgTmgRptPrdMx.equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptPrdMx = this.plnDfnActnTrgrTmgTmgRptPrdMx+ "," + plnDfnActnTrgrTmgTmgRptPrdMx;
+	        } else if(plnDfnActnTrgrTmgTmgRptPrdMx.equals("[") | plnDfnActnTrgrTmgTmgRptPrdMx.equals("]") | this.plnDfnActnTrgrTmgTmgRptPrdMx.substring(this.plnDfnActnTrgrTmgTmgRptPrdMx.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptPrdMx = this.plnDfnActnTrgrTmgTmgRptPrdMx+plnDfnActnTrgrTmgTmgRptPrdMx;
+	        } else  {
+	            this.plnDfnActnTrgrTmgTmgRptPrdMx = this.plnDfnActnTrgrTmgTmgRptPrdMx+ "," +plnDfnActnTrgrTmgTmgRptPrdMx;
+	        }
+        }
     }
     
     
@@ -3342,6 +7290,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTrgrTmgTmgRptPrdUnt = plnDfnActnTrgrTmgTmgRptPrdUnt;
     }
     
+    public void addPlnDfnActnTrgrTmgTmgRptPrdUnt(String plnDfnActnTrgrTmgTmgRptPrdUnt) {
+    	if( plnDfnActnTrgrTmgTmgRptPrdUnt != null ) {
+	    	if( this.plnDfnActnTrgrTmgTmgRptPrdUnt == null ) {
+	        	this.plnDfnActnTrgrTmgTmgRptPrdUnt = plnDfnActnTrgrTmgTmgRptPrdUnt;
+	        } else if(this.plnDfnActnTrgrTmgTmgRptPrdUnt.substring(this.plnDfnActnTrgrTmgTmgRptPrdUnt.length() - 1).equals("]") & plnDfnActnTrgrTmgTmgRptPrdUnt.equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptPrdUnt = this.plnDfnActnTrgrTmgTmgRptPrdUnt+ "," + plnDfnActnTrgrTmgTmgRptPrdUnt;
+	        } else if(plnDfnActnTrgrTmgTmgRptPrdUnt.equals("[") | plnDfnActnTrgrTmgTmgRptPrdUnt.equals("]") | this.plnDfnActnTrgrTmgTmgRptPrdUnt.substring(this.plnDfnActnTrgrTmgTmgRptPrdUnt.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptPrdUnt = this.plnDfnActnTrgrTmgTmgRptPrdUnt+plnDfnActnTrgrTmgTmgRptPrdUnt;
+	        } else  {
+	            this.plnDfnActnTrgrTmgTmgRptPrdUnt = this.plnDfnActnTrgrTmgTmgRptPrdUnt+ "," +plnDfnActnTrgrTmgTmgRptPrdUnt;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTrgrTmgTmgRptTimeOfDay() {
@@ -3350,6 +7312,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTrgrTmgTmgRptTimeOfDay(String plnDfnActnTrgrTmgTmgRptTimeOfDay) {
         this.plnDfnActnTrgrTmgTmgRptTimeOfDay = plnDfnActnTrgrTmgTmgRptTimeOfDay;
+    }
+    
+    public void addPlnDfnActnTrgrTmgTmgRptTimeOfDay(String plnDfnActnTrgrTmgTmgRptTimeOfDay) {
+    	if( plnDfnActnTrgrTmgTmgRptTimeOfDay != null ) {
+	    	if( this.plnDfnActnTrgrTmgTmgRptTimeOfDay == null ) {
+	        	this.plnDfnActnTrgrTmgTmgRptTimeOfDay = plnDfnActnTrgrTmgTmgRptTimeOfDay;
+	        } else if(this.plnDfnActnTrgrTmgTmgRptTimeOfDay.substring(this.plnDfnActnTrgrTmgTmgRptTimeOfDay.length() - 1).equals("]") & plnDfnActnTrgrTmgTmgRptTimeOfDay.equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptTimeOfDay = this.plnDfnActnTrgrTmgTmgRptTimeOfDay+ "," + plnDfnActnTrgrTmgTmgRptTimeOfDay;
+	        } else if(plnDfnActnTrgrTmgTmgRptTimeOfDay.equals("[") | plnDfnActnTrgrTmgTmgRptTimeOfDay.equals("]") | this.plnDfnActnTrgrTmgTmgRptTimeOfDay.substring(this.plnDfnActnTrgrTmgTmgRptTimeOfDay.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptTimeOfDay = this.plnDfnActnTrgrTmgTmgRptTimeOfDay+plnDfnActnTrgrTmgTmgRptTimeOfDay;
+	        } else  {
+	            this.plnDfnActnTrgrTmgTmgRptTimeOfDay = this.plnDfnActnTrgrTmgTmgRptTimeOfDay+ "," +plnDfnActnTrgrTmgTmgRptTimeOfDay;
+	        }
+        }
     }
     
     
@@ -3362,6 +7338,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTrgrTmgTmgRptWhen = plnDfnActnTrgrTmgTmgRptWhen;
     }
     
+    public void addPlnDfnActnTrgrTmgTmgRptWhen(String plnDfnActnTrgrTmgTmgRptWhen) {
+    	if( plnDfnActnTrgrTmgTmgRptWhen != null ) {
+	    	if( this.plnDfnActnTrgrTmgTmgRptWhen == null ) {
+	        	this.plnDfnActnTrgrTmgTmgRptWhen = plnDfnActnTrgrTmgTmgRptWhen;
+	        } else if(this.plnDfnActnTrgrTmgTmgRptWhen.substring(this.plnDfnActnTrgrTmgTmgRptWhen.length() - 1).equals("]") & plnDfnActnTrgrTmgTmgRptWhen.equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptWhen = this.plnDfnActnTrgrTmgTmgRptWhen+ "," + plnDfnActnTrgrTmgTmgRptWhen;
+	        } else if(plnDfnActnTrgrTmgTmgRptWhen.equals("[") | plnDfnActnTrgrTmgTmgRptWhen.equals("]") | this.plnDfnActnTrgrTmgTmgRptWhen.substring(this.plnDfnActnTrgrTmgTmgRptWhen.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrTmgTmgRptWhen = this.plnDfnActnTrgrTmgTmgRptWhen+plnDfnActnTrgrTmgTmgRptWhen;
+	        } else  {
+	            this.plnDfnActnTrgrTmgTmgRptWhen = this.plnDfnActnTrgrTmgTmgRptWhen+ "," +plnDfnActnTrgrTmgTmgRptWhen;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTrgrTyp() {
@@ -3370,6 +7360,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTrgrTyp(String plnDfnActnTrgrTyp) {
         this.plnDfnActnTrgrTyp = plnDfnActnTrgrTyp;
+    }
+    
+    public void addPlnDfnActnTrgrTyp(String plnDfnActnTrgrTyp) {
+    	if( plnDfnActnTrgrTyp != null ) {
+	    	if( this.plnDfnActnTrgrTyp == null ) {
+	        	this.plnDfnActnTrgrTyp = plnDfnActnTrgrTyp;
+	        } else if(this.plnDfnActnTrgrTyp.substring(this.plnDfnActnTrgrTyp.length() - 1).equals("]") & plnDfnActnTrgrTyp.equals("[")) {
+	        	this.plnDfnActnTrgrTyp = this.plnDfnActnTrgrTyp+ "," + plnDfnActnTrgrTyp;
+	        } else if(plnDfnActnTrgrTyp.equals("[") | plnDfnActnTrgrTyp.equals("]") | this.plnDfnActnTrgrTyp.substring(this.plnDfnActnTrgrTyp.length() - 1).equals("[")) {
+	        	this.plnDfnActnTrgrTyp = this.plnDfnActnTrgrTyp+plnDfnActnTrgrTyp;
+	        } else  {
+	            this.plnDfnActnTrgrTyp = this.plnDfnActnTrgrTyp+ "," +plnDfnActnTrgrTyp;
+	        }
+        }
     }
     
     
@@ -3382,6 +7386,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTypCdgCd = plnDfnActnTypCdgCd;
     }
     
+    public void addPlnDfnActnTypCdgCd(String plnDfnActnTypCdgCd) {
+    	if( plnDfnActnTypCdgCd != null ) {
+	    	if( this.plnDfnActnTypCdgCd == null ) {
+	        	this.plnDfnActnTypCdgCd = plnDfnActnTypCdgCd;
+	        } else if(this.plnDfnActnTypCdgCd.substring(this.plnDfnActnTypCdgCd.length() - 1).equals("]") & plnDfnActnTypCdgCd.equals("[")) {
+	        	this.plnDfnActnTypCdgCd = this.plnDfnActnTypCdgCd+ "," + plnDfnActnTypCdgCd;
+	        } else if(plnDfnActnTypCdgCd.equals("[") | plnDfnActnTypCdgCd.equals("]") | this.plnDfnActnTypCdgCd.substring(this.plnDfnActnTypCdgCd.length() - 1).equals("[")) {
+	        	this.plnDfnActnTypCdgCd = this.plnDfnActnTypCdgCd+plnDfnActnTypCdgCd;
+	        } else  {
+	            this.plnDfnActnTypCdgCd = this.plnDfnActnTypCdgCd+ "," +plnDfnActnTypCdgCd;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTypCdgDsply() {
@@ -3390,6 +7408,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTypCdgDsply(String plnDfnActnTypCdgDsply) {
         this.plnDfnActnTypCdgDsply = plnDfnActnTypCdgDsply;
+    }
+    
+    public void addPlnDfnActnTypCdgDsply(String plnDfnActnTypCdgDsply) {
+    	if( plnDfnActnTypCdgDsply != null ) {
+	    	if( this.plnDfnActnTypCdgDsply == null ) {
+	        	this.plnDfnActnTypCdgDsply = plnDfnActnTypCdgDsply;
+	        } else if(this.plnDfnActnTypCdgDsply.substring(this.plnDfnActnTypCdgDsply.length() - 1).equals("]") & plnDfnActnTypCdgDsply.equals("[")) {
+	        	this.plnDfnActnTypCdgDsply = this.plnDfnActnTypCdgDsply+ "," + plnDfnActnTypCdgDsply;
+	        } else if(plnDfnActnTypCdgDsply.equals("[") | plnDfnActnTypCdgDsply.equals("]") | this.plnDfnActnTypCdgDsply.substring(this.plnDfnActnTypCdgDsply.length() - 1).equals("[")) {
+	        	this.plnDfnActnTypCdgDsply = this.plnDfnActnTypCdgDsply+plnDfnActnTypCdgDsply;
+	        } else  {
+	            this.plnDfnActnTypCdgDsply = this.plnDfnActnTypCdgDsply+ "," +plnDfnActnTypCdgDsply;
+	        }
+        }
     }
     
     
@@ -3402,6 +7434,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTypCdgSys = plnDfnActnTypCdgSys;
     }
     
+    public void addPlnDfnActnTypCdgSys(String plnDfnActnTypCdgSys) {
+    	if( plnDfnActnTypCdgSys != null ) {
+	    	if( this.plnDfnActnTypCdgSys == null ) {
+	        	this.plnDfnActnTypCdgSys = plnDfnActnTypCdgSys;
+	        } else if(this.plnDfnActnTypCdgSys.substring(this.plnDfnActnTypCdgSys.length() - 1).equals("]") & plnDfnActnTypCdgSys.equals("[")) {
+	        	this.plnDfnActnTypCdgSys = this.plnDfnActnTypCdgSys+ "," + plnDfnActnTypCdgSys;
+	        } else if(plnDfnActnTypCdgSys.equals("[") | plnDfnActnTypCdgSys.equals("]") | this.plnDfnActnTypCdgSys.substring(this.plnDfnActnTypCdgSys.length() - 1).equals("[")) {
+	        	this.plnDfnActnTypCdgSys = this.plnDfnActnTypCdgSys+plnDfnActnTypCdgSys;
+	        } else  {
+	            this.plnDfnActnTypCdgSys = this.plnDfnActnTypCdgSys+ "," +plnDfnActnTypCdgSys;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTypCdgUsrSltd() {
@@ -3410,6 +7456,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTypCdgUsrSltd(String plnDfnActnTypCdgUsrSltd) {
         this.plnDfnActnTypCdgUsrSltd = plnDfnActnTypCdgUsrSltd;
+    }
+    
+    public void addPlnDfnActnTypCdgUsrSltd(String plnDfnActnTypCdgUsrSltd) {
+    	if( plnDfnActnTypCdgUsrSltd != null ) {
+	    	if( this.plnDfnActnTypCdgUsrSltd == null ) {
+	        	this.plnDfnActnTypCdgUsrSltd = plnDfnActnTypCdgUsrSltd;
+	        } else if(this.plnDfnActnTypCdgUsrSltd.substring(this.plnDfnActnTypCdgUsrSltd.length() - 1).equals("]") & plnDfnActnTypCdgUsrSltd.equals("[")) {
+	        	this.plnDfnActnTypCdgUsrSltd = this.plnDfnActnTypCdgUsrSltd+ "," + plnDfnActnTypCdgUsrSltd;
+	        } else if(plnDfnActnTypCdgUsrSltd.equals("[") | plnDfnActnTypCdgUsrSltd.equals("]") | this.plnDfnActnTypCdgUsrSltd.substring(this.plnDfnActnTypCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.plnDfnActnTypCdgUsrSltd = this.plnDfnActnTypCdgUsrSltd+plnDfnActnTypCdgUsrSltd;
+	        } else  {
+	            this.plnDfnActnTypCdgUsrSltd = this.plnDfnActnTypCdgUsrSltd+ "," +plnDfnActnTypCdgUsrSltd;
+	        }
+        }
     }
     
     
@@ -3422,6 +7482,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnActnTypCdgVrsn = plnDfnActnTypCdgVrsn;
     }
     
+    public void addPlnDfnActnTypCdgVrsn(String plnDfnActnTypCdgVrsn) {
+    	if( plnDfnActnTypCdgVrsn != null ) {
+	    	if( this.plnDfnActnTypCdgVrsn == null ) {
+	        	this.plnDfnActnTypCdgVrsn = plnDfnActnTypCdgVrsn;
+	        } else if(this.plnDfnActnTypCdgVrsn.substring(this.plnDfnActnTypCdgVrsn.length() - 1).equals("]") & plnDfnActnTypCdgVrsn.equals("[")) {
+	        	this.plnDfnActnTypCdgVrsn = this.plnDfnActnTypCdgVrsn+ "," + plnDfnActnTypCdgVrsn;
+	        } else if(plnDfnActnTypCdgVrsn.equals("[") | plnDfnActnTypCdgVrsn.equals("]") | this.plnDfnActnTypCdgVrsn.substring(this.plnDfnActnTypCdgVrsn.length() - 1).equals("[")) {
+	        	this.plnDfnActnTypCdgVrsn = this.plnDfnActnTypCdgVrsn+plnDfnActnTypCdgVrsn;
+	        } else  {
+	            this.plnDfnActnTypCdgVrsn = this.plnDfnActnTypCdgVrsn+ "," +plnDfnActnTypCdgVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnActnTypTxt() {
@@ -3430,6 +7504,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnActnTypTxt(String plnDfnActnTypTxt) {
         this.plnDfnActnTypTxt = plnDfnActnTypTxt;
+    }
+    
+    public void addPlnDfnActnTypTxt(String plnDfnActnTypTxt) {
+    	if( plnDfnActnTypTxt != null ) {
+	    	if( this.plnDfnActnTypTxt == null ) {
+	        	this.plnDfnActnTypTxt = plnDfnActnTypTxt;
+	        } else if(this.plnDfnActnTypTxt.substring(this.plnDfnActnTypTxt.length() - 1).equals("]") & plnDfnActnTypTxt.equals("[")) {
+	        	this.plnDfnActnTypTxt = this.plnDfnActnTypTxt+ "," + plnDfnActnTypTxt;
+	        } else if(plnDfnActnTypTxt.equals("[") | plnDfnActnTypTxt.equals("]") | this.plnDfnActnTypTxt.substring(this.plnDfnActnTypTxt.length() - 1).equals("[")) {
+	        	this.plnDfnActnTypTxt = this.plnDfnActnTypTxt+plnDfnActnTypTxt;
+	        } else  {
+	            this.plnDfnActnTypTxt = this.plnDfnActnTypTxt+ "," +plnDfnActnTypTxt;
+	        }
+        }
     }
     
     
@@ -3442,6 +7530,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnApprovalDt = plnDfnApprovalDt;
     }
     
+    public void addPlnDfnApprovalDt(String plnDfnApprovalDt) {
+    	if( plnDfnApprovalDt != null ) {
+	    	if( this.plnDfnApprovalDt == null ) {
+	        	this.plnDfnApprovalDt = plnDfnApprovalDt;
+	        } else if(this.plnDfnApprovalDt.substring(this.plnDfnApprovalDt.length() - 1).equals("]") & plnDfnApprovalDt.equals("[")) {
+	        	this.plnDfnApprovalDt = this.plnDfnApprovalDt+ "," + plnDfnApprovalDt;
+	        } else if(plnDfnApprovalDt.equals("[") | plnDfnApprovalDt.equals("]") | this.plnDfnApprovalDt.substring(this.plnDfnApprovalDt.length() - 1).equals("[")) {
+	        	this.plnDfnApprovalDt = this.plnDfnApprovalDt+plnDfnApprovalDt;
+	        } else  {
+	            this.plnDfnApprovalDt = this.plnDfnApprovalDt+ "," +plnDfnApprovalDt;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnAthrNm() {
@@ -3450,6 +7552,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnAthrNm(String plnDfnAthrNm) {
         this.plnDfnAthrNm = plnDfnAthrNm;
+    }
+    
+    public void addPlnDfnAthrNm(String plnDfnAthrNm) {
+    	if( plnDfnAthrNm != null ) {
+	    	if( this.plnDfnAthrNm == null ) {
+	        	this.plnDfnAthrNm = plnDfnAthrNm;
+	        } else if(this.plnDfnAthrNm.substring(this.plnDfnAthrNm.length() - 1).equals("]") & plnDfnAthrNm.equals("[")) {
+	        	this.plnDfnAthrNm = this.plnDfnAthrNm+ "," + plnDfnAthrNm;
+	        } else if(plnDfnAthrNm.equals("[") | plnDfnAthrNm.equals("]") | this.plnDfnAthrNm.substring(this.plnDfnAthrNm.length() - 1).equals("[")) {
+	        	this.plnDfnAthrNm = this.plnDfnAthrNm+plnDfnAthrNm;
+	        } else  {
+	            this.plnDfnAthrNm = this.plnDfnAthrNm+ "," +plnDfnAthrNm;
+	        }
+        }
     }
     
     
@@ -3462,6 +7578,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnAthrTlcmPrdEnd = plnDfnAthrTlcmPrdEnd;
     }
     
+    public void addPlnDfnAthrTlcmPrdEnd(String plnDfnAthrTlcmPrdEnd) {
+    	if( plnDfnAthrTlcmPrdEnd != null ) {
+	    	if( this.plnDfnAthrTlcmPrdEnd == null ) {
+	        	this.plnDfnAthrTlcmPrdEnd = plnDfnAthrTlcmPrdEnd;
+	        } else if(this.plnDfnAthrTlcmPrdEnd.substring(this.plnDfnAthrTlcmPrdEnd.length() - 1).equals("]") & plnDfnAthrTlcmPrdEnd.equals("[")) {
+	        	this.plnDfnAthrTlcmPrdEnd = this.plnDfnAthrTlcmPrdEnd+ "," + plnDfnAthrTlcmPrdEnd;
+	        } else if(plnDfnAthrTlcmPrdEnd.equals("[") | plnDfnAthrTlcmPrdEnd.equals("]") | this.plnDfnAthrTlcmPrdEnd.substring(this.plnDfnAthrTlcmPrdEnd.length() - 1).equals("[")) {
+	        	this.plnDfnAthrTlcmPrdEnd = this.plnDfnAthrTlcmPrdEnd+plnDfnAthrTlcmPrdEnd;
+	        } else  {
+	            this.plnDfnAthrTlcmPrdEnd = this.plnDfnAthrTlcmPrdEnd+ "," +plnDfnAthrTlcmPrdEnd;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnAthrTlcmPrdStrt() {
@@ -3470,6 +7600,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnAthrTlcmPrdStrt(String plnDfnAthrTlcmPrdStrt) {
         this.plnDfnAthrTlcmPrdStrt = plnDfnAthrTlcmPrdStrt;
+    }
+    
+    public void addPlnDfnAthrTlcmPrdStrt(String plnDfnAthrTlcmPrdStrt) {
+    	if( plnDfnAthrTlcmPrdStrt != null ) {
+	    	if( this.plnDfnAthrTlcmPrdStrt == null ) {
+	        	this.plnDfnAthrTlcmPrdStrt = plnDfnAthrTlcmPrdStrt;
+	        } else if(this.plnDfnAthrTlcmPrdStrt.substring(this.plnDfnAthrTlcmPrdStrt.length() - 1).equals("]") & plnDfnAthrTlcmPrdStrt.equals("[")) {
+	        	this.plnDfnAthrTlcmPrdStrt = this.plnDfnAthrTlcmPrdStrt+ "," + plnDfnAthrTlcmPrdStrt;
+	        } else if(plnDfnAthrTlcmPrdStrt.equals("[") | plnDfnAthrTlcmPrdStrt.equals("]") | this.plnDfnAthrTlcmPrdStrt.substring(this.plnDfnAthrTlcmPrdStrt.length() - 1).equals("[")) {
+	        	this.plnDfnAthrTlcmPrdStrt = this.plnDfnAthrTlcmPrdStrt+plnDfnAthrTlcmPrdStrt;
+	        } else  {
+	            this.plnDfnAthrTlcmPrdStrt = this.plnDfnAthrTlcmPrdStrt+ "," +plnDfnAthrTlcmPrdStrt;
+	        }
+        }
     }
     
     
@@ -3482,6 +7626,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnAthrTlcmRnk = plnDfnAthrTlcmRnk;
     }
     
+    public void addPlnDfnAthrTlcmRnk(String plnDfnAthrTlcmRnk) {
+    	if( plnDfnAthrTlcmRnk != null ) {
+	    	if( this.plnDfnAthrTlcmRnk == null ) {
+	        	this.plnDfnAthrTlcmRnk = plnDfnAthrTlcmRnk;
+	        } else if(this.plnDfnAthrTlcmRnk.substring(this.plnDfnAthrTlcmRnk.length() - 1).equals("]") & plnDfnAthrTlcmRnk.equals("[")) {
+	        	this.plnDfnAthrTlcmRnk = this.plnDfnAthrTlcmRnk+ "," + plnDfnAthrTlcmRnk;
+	        } else if(plnDfnAthrTlcmRnk.equals("[") | plnDfnAthrTlcmRnk.equals("]") | this.plnDfnAthrTlcmRnk.substring(this.plnDfnAthrTlcmRnk.length() - 1).equals("[")) {
+	        	this.plnDfnAthrTlcmRnk = this.plnDfnAthrTlcmRnk+plnDfnAthrTlcmRnk;
+	        } else  {
+	            this.plnDfnAthrTlcmRnk = this.plnDfnAthrTlcmRnk+ "," +plnDfnAthrTlcmRnk;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnAthrTlcmSys() {
@@ -3490,6 +7648,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnAthrTlcmSys(String plnDfnAthrTlcmSys) {
         this.plnDfnAthrTlcmSys = plnDfnAthrTlcmSys;
+    }
+    
+    public void addPlnDfnAthrTlcmSys(String plnDfnAthrTlcmSys) {
+    	if( plnDfnAthrTlcmSys != null ) {
+	    	if( this.plnDfnAthrTlcmSys == null ) {
+	        	this.plnDfnAthrTlcmSys = plnDfnAthrTlcmSys;
+	        } else if(this.plnDfnAthrTlcmSys.substring(this.plnDfnAthrTlcmSys.length() - 1).equals("]") & plnDfnAthrTlcmSys.equals("[")) {
+	        	this.plnDfnAthrTlcmSys = this.plnDfnAthrTlcmSys+ "," + plnDfnAthrTlcmSys;
+	        } else if(plnDfnAthrTlcmSys.equals("[") | plnDfnAthrTlcmSys.equals("]") | this.plnDfnAthrTlcmSys.substring(this.plnDfnAthrTlcmSys.length() - 1).equals("[")) {
+	        	this.plnDfnAthrTlcmSys = this.plnDfnAthrTlcmSys+plnDfnAthrTlcmSys;
+	        } else  {
+	            this.plnDfnAthrTlcmSys = this.plnDfnAthrTlcmSys+ "," +plnDfnAthrTlcmSys;
+	        }
+        }
     }
     
     
@@ -3502,6 +7674,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnAthrTlcmUse = plnDfnAthrTlcmUse;
     }
     
+    public void addPlnDfnAthrTlcmUse(String plnDfnAthrTlcmUse) {
+    	if( plnDfnAthrTlcmUse != null ) {
+	    	if( this.plnDfnAthrTlcmUse == null ) {
+	        	this.plnDfnAthrTlcmUse = plnDfnAthrTlcmUse;
+	        } else if(this.plnDfnAthrTlcmUse.substring(this.plnDfnAthrTlcmUse.length() - 1).equals("]") & plnDfnAthrTlcmUse.equals("[")) {
+	        	this.plnDfnAthrTlcmUse = this.plnDfnAthrTlcmUse+ "," + plnDfnAthrTlcmUse;
+	        } else if(plnDfnAthrTlcmUse.equals("[") | plnDfnAthrTlcmUse.equals("]") | this.plnDfnAthrTlcmUse.substring(this.plnDfnAthrTlcmUse.length() - 1).equals("[")) {
+	        	this.plnDfnAthrTlcmUse = this.plnDfnAthrTlcmUse+plnDfnAthrTlcmUse;
+	        } else  {
+	            this.plnDfnAthrTlcmUse = this.plnDfnAthrTlcmUse+ "," +plnDfnAthrTlcmUse;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnAthrTlcmVl() {
@@ -3510,6 +7696,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnAthrTlcmVl(String plnDfnAthrTlcmVl) {
         this.plnDfnAthrTlcmVl = plnDfnAthrTlcmVl;
+    }
+    
+    public void addPlnDfnAthrTlcmVl(String plnDfnAthrTlcmVl) {
+    	if( plnDfnAthrTlcmVl != null ) {
+	    	if( this.plnDfnAthrTlcmVl == null ) {
+	        	this.plnDfnAthrTlcmVl = plnDfnAthrTlcmVl;
+	        } else if(this.plnDfnAthrTlcmVl.substring(this.plnDfnAthrTlcmVl.length() - 1).equals("]") & plnDfnAthrTlcmVl.equals("[")) {
+	        	this.plnDfnAthrTlcmVl = this.plnDfnAthrTlcmVl+ "," + plnDfnAthrTlcmVl;
+	        } else if(plnDfnAthrTlcmVl.equals("[") | plnDfnAthrTlcmVl.equals("]") | this.plnDfnAthrTlcmVl.substring(this.plnDfnAthrTlcmVl.length() - 1).equals("[")) {
+	        	this.plnDfnAthrTlcmVl = this.plnDfnAthrTlcmVl+plnDfnAthrTlcmVl;
+	        } else  {
+	            this.plnDfnAthrTlcmVl = this.plnDfnAthrTlcmVl+ "," +plnDfnAthrTlcmVl;
+	        }
+        }
     }
     
     
@@ -3522,6 +7722,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnCntctNm = plnDfnCntctNm;
     }
     
+    public void addPlnDfnCntctNm(String plnDfnCntctNm) {
+    	if( plnDfnCntctNm != null ) {
+	    	if( this.plnDfnCntctNm == null ) {
+	        	this.plnDfnCntctNm = plnDfnCntctNm;
+	        } else if(this.plnDfnCntctNm.substring(this.plnDfnCntctNm.length() - 1).equals("]") & plnDfnCntctNm.equals("[")) {
+	        	this.plnDfnCntctNm = this.plnDfnCntctNm+ "," + plnDfnCntctNm;
+	        } else if(plnDfnCntctNm.equals("[") | plnDfnCntctNm.equals("]") | this.plnDfnCntctNm.substring(this.plnDfnCntctNm.length() - 1).equals("[")) {
+	        	this.plnDfnCntctNm = this.plnDfnCntctNm+plnDfnCntctNm;
+	        } else  {
+	            this.plnDfnCntctNm = this.plnDfnCntctNm+ "," +plnDfnCntctNm;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnCntctTlcmPrdEnd() {
@@ -3530,6 +7744,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnCntctTlcmPrdEnd(String plnDfnCntctTlcmPrdEnd) {
         this.plnDfnCntctTlcmPrdEnd = plnDfnCntctTlcmPrdEnd;
+    }
+    
+    public void addPlnDfnCntctTlcmPrdEnd(String plnDfnCntctTlcmPrdEnd) {
+    	if( plnDfnCntctTlcmPrdEnd != null ) {
+	    	if( this.plnDfnCntctTlcmPrdEnd == null ) {
+	        	this.plnDfnCntctTlcmPrdEnd = plnDfnCntctTlcmPrdEnd;
+	        } else if(this.plnDfnCntctTlcmPrdEnd.substring(this.plnDfnCntctTlcmPrdEnd.length() - 1).equals("]") & plnDfnCntctTlcmPrdEnd.equals("[")) {
+	        	this.plnDfnCntctTlcmPrdEnd = this.plnDfnCntctTlcmPrdEnd+ "," + plnDfnCntctTlcmPrdEnd;
+	        } else if(plnDfnCntctTlcmPrdEnd.equals("[") | plnDfnCntctTlcmPrdEnd.equals("]") | this.plnDfnCntctTlcmPrdEnd.substring(this.plnDfnCntctTlcmPrdEnd.length() - 1).equals("[")) {
+	        	this.plnDfnCntctTlcmPrdEnd = this.plnDfnCntctTlcmPrdEnd+plnDfnCntctTlcmPrdEnd;
+	        } else  {
+	            this.plnDfnCntctTlcmPrdEnd = this.plnDfnCntctTlcmPrdEnd+ "," +plnDfnCntctTlcmPrdEnd;
+	        }
+        }
     }
     
     
@@ -3542,6 +7770,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnCntctTlcmPrdStrt = plnDfnCntctTlcmPrdStrt;
     }
     
+    public void addPlnDfnCntctTlcmPrdStrt(String plnDfnCntctTlcmPrdStrt) {
+    	if( plnDfnCntctTlcmPrdStrt != null ) {
+	    	if( this.plnDfnCntctTlcmPrdStrt == null ) {
+	        	this.plnDfnCntctTlcmPrdStrt = plnDfnCntctTlcmPrdStrt;
+	        } else if(this.plnDfnCntctTlcmPrdStrt.substring(this.plnDfnCntctTlcmPrdStrt.length() - 1).equals("]") & plnDfnCntctTlcmPrdStrt.equals("[")) {
+	        	this.plnDfnCntctTlcmPrdStrt = this.plnDfnCntctTlcmPrdStrt+ "," + plnDfnCntctTlcmPrdStrt;
+	        } else if(plnDfnCntctTlcmPrdStrt.equals("[") | plnDfnCntctTlcmPrdStrt.equals("]") | this.plnDfnCntctTlcmPrdStrt.substring(this.plnDfnCntctTlcmPrdStrt.length() - 1).equals("[")) {
+	        	this.plnDfnCntctTlcmPrdStrt = this.plnDfnCntctTlcmPrdStrt+plnDfnCntctTlcmPrdStrt;
+	        } else  {
+	            this.plnDfnCntctTlcmPrdStrt = this.plnDfnCntctTlcmPrdStrt+ "," +plnDfnCntctTlcmPrdStrt;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnCntctTlcmRnk() {
@@ -3550,6 +7792,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnCntctTlcmRnk(String plnDfnCntctTlcmRnk) {
         this.plnDfnCntctTlcmRnk = plnDfnCntctTlcmRnk;
+    }
+    
+    public void addPlnDfnCntctTlcmRnk(String plnDfnCntctTlcmRnk) {
+    	if( plnDfnCntctTlcmRnk != null ) {
+	    	if( this.plnDfnCntctTlcmRnk == null ) {
+	        	this.plnDfnCntctTlcmRnk = plnDfnCntctTlcmRnk;
+	        } else if(this.plnDfnCntctTlcmRnk.substring(this.plnDfnCntctTlcmRnk.length() - 1).equals("]") & plnDfnCntctTlcmRnk.equals("[")) {
+	        	this.plnDfnCntctTlcmRnk = this.plnDfnCntctTlcmRnk+ "," + plnDfnCntctTlcmRnk;
+	        } else if(plnDfnCntctTlcmRnk.equals("[") | plnDfnCntctTlcmRnk.equals("]") | this.plnDfnCntctTlcmRnk.substring(this.plnDfnCntctTlcmRnk.length() - 1).equals("[")) {
+	        	this.plnDfnCntctTlcmRnk = this.plnDfnCntctTlcmRnk+plnDfnCntctTlcmRnk;
+	        } else  {
+	            this.plnDfnCntctTlcmRnk = this.plnDfnCntctTlcmRnk+ "," +plnDfnCntctTlcmRnk;
+	        }
+        }
     }
     
     
@@ -3562,6 +7818,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnCntctTlcmSys = plnDfnCntctTlcmSys;
     }
     
+    public void addPlnDfnCntctTlcmSys(String plnDfnCntctTlcmSys) {
+    	if( plnDfnCntctTlcmSys != null ) {
+	    	if( this.plnDfnCntctTlcmSys == null ) {
+	        	this.plnDfnCntctTlcmSys = plnDfnCntctTlcmSys;
+	        } else if(this.plnDfnCntctTlcmSys.substring(this.plnDfnCntctTlcmSys.length() - 1).equals("]") & plnDfnCntctTlcmSys.equals("[")) {
+	        	this.plnDfnCntctTlcmSys = this.plnDfnCntctTlcmSys+ "," + plnDfnCntctTlcmSys;
+	        } else if(plnDfnCntctTlcmSys.equals("[") | plnDfnCntctTlcmSys.equals("]") | this.plnDfnCntctTlcmSys.substring(this.plnDfnCntctTlcmSys.length() - 1).equals("[")) {
+	        	this.plnDfnCntctTlcmSys = this.plnDfnCntctTlcmSys+plnDfnCntctTlcmSys;
+	        } else  {
+	            this.plnDfnCntctTlcmSys = this.plnDfnCntctTlcmSys+ "," +plnDfnCntctTlcmSys;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnCntctTlcmUse() {
@@ -3570,6 +7840,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnCntctTlcmUse(String plnDfnCntctTlcmUse) {
         this.plnDfnCntctTlcmUse = plnDfnCntctTlcmUse;
+    }
+    
+    public void addPlnDfnCntctTlcmUse(String plnDfnCntctTlcmUse) {
+    	if( plnDfnCntctTlcmUse != null ) {
+	    	if( this.plnDfnCntctTlcmUse == null ) {
+	        	this.plnDfnCntctTlcmUse = plnDfnCntctTlcmUse;
+	        } else if(this.plnDfnCntctTlcmUse.substring(this.plnDfnCntctTlcmUse.length() - 1).equals("]") & plnDfnCntctTlcmUse.equals("[")) {
+	        	this.plnDfnCntctTlcmUse = this.plnDfnCntctTlcmUse+ "," + plnDfnCntctTlcmUse;
+	        } else if(plnDfnCntctTlcmUse.equals("[") | plnDfnCntctTlcmUse.equals("]") | this.plnDfnCntctTlcmUse.substring(this.plnDfnCntctTlcmUse.length() - 1).equals("[")) {
+	        	this.plnDfnCntctTlcmUse = this.plnDfnCntctTlcmUse+plnDfnCntctTlcmUse;
+	        } else  {
+	            this.plnDfnCntctTlcmUse = this.plnDfnCntctTlcmUse+ "," +plnDfnCntctTlcmUse;
+	        }
+        }
     }
     
     
@@ -3582,6 +7866,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnCntctTlcmVl = plnDfnCntctTlcmVl;
     }
     
+    public void addPlnDfnCntctTlcmVl(String plnDfnCntctTlcmVl) {
+    	if( plnDfnCntctTlcmVl != null ) {
+	    	if( this.plnDfnCntctTlcmVl == null ) {
+	        	this.plnDfnCntctTlcmVl = plnDfnCntctTlcmVl;
+	        } else if(this.plnDfnCntctTlcmVl.substring(this.plnDfnCntctTlcmVl.length() - 1).equals("]") & plnDfnCntctTlcmVl.equals("[")) {
+	        	this.plnDfnCntctTlcmVl = this.plnDfnCntctTlcmVl+ "," + plnDfnCntctTlcmVl;
+	        } else if(plnDfnCntctTlcmVl.equals("[") | plnDfnCntctTlcmVl.equals("]") | this.plnDfnCntctTlcmVl.substring(this.plnDfnCntctTlcmVl.length() - 1).equals("[")) {
+	        	this.plnDfnCntctTlcmVl = this.plnDfnCntctTlcmVl+plnDfnCntctTlcmVl;
+	        } else  {
+	            this.plnDfnCntctTlcmVl = this.plnDfnCntctTlcmVl+ "," +plnDfnCntctTlcmVl;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnCopyright() {
@@ -3590,6 +7888,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnCopyright(String plnDfnCopyright) {
         this.plnDfnCopyright = plnDfnCopyright;
+    }
+    
+    public void addPlnDfnCopyright(String plnDfnCopyright) {
+    	if( plnDfnCopyright != null ) {
+	    	if( this.plnDfnCopyright == null ) {
+	        	this.plnDfnCopyright = plnDfnCopyright;
+	        } else if(this.plnDfnCopyright.substring(this.plnDfnCopyright.length() - 1).equals("]") & plnDfnCopyright.equals("[")) {
+	        	this.plnDfnCopyright = this.plnDfnCopyright+ "," + plnDfnCopyright;
+	        } else if(plnDfnCopyright.equals("[") | plnDfnCopyright.equals("]") | this.plnDfnCopyright.substring(this.plnDfnCopyright.length() - 1).equals("[")) {
+	        	this.plnDfnCopyright = this.plnDfnCopyright+plnDfnCopyright;
+	        } else  {
+	            this.plnDfnCopyright = this.plnDfnCopyright+ "," +plnDfnCopyright;
+	        }
+        }
     }
     
     
@@ -3602,6 +7914,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnDt = plnDfnDt;
     }
     
+    public void addPlnDfnDt(String plnDfnDt) {
+    	if( plnDfnDt != null ) {
+	    	if( this.plnDfnDt == null ) {
+	        	this.plnDfnDt = plnDfnDt;
+	        } else if(this.plnDfnDt.substring(this.plnDfnDt.length() - 1).equals("]") & plnDfnDt.equals("[")) {
+	        	this.plnDfnDt = this.plnDfnDt+ "," + plnDfnDt;
+	        } else if(plnDfnDt.equals("[") | plnDfnDt.equals("]") | this.plnDfnDt.substring(this.plnDfnDt.length() - 1).equals("[")) {
+	        	this.plnDfnDt = this.plnDfnDt+plnDfnDt;
+	        } else  {
+	            this.plnDfnDt = this.plnDfnDt+ "," +plnDfnDt;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnDscrptn() {
@@ -3610,6 +7936,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnDscrptn(String plnDfnDscrptn) {
         this.plnDfnDscrptn = plnDfnDscrptn;
+    }
+    
+    public void addPlnDfnDscrptn(String plnDfnDscrptn) {
+    	if( plnDfnDscrptn != null ) {
+	    	if( this.plnDfnDscrptn == null ) {
+	        	this.plnDfnDscrptn = plnDfnDscrptn;
+	        } else if(this.plnDfnDscrptn.substring(this.plnDfnDscrptn.length() - 1).equals("]") & plnDfnDscrptn.equals("[")) {
+	        	this.plnDfnDscrptn = this.plnDfnDscrptn+ "," + plnDfnDscrptn;
+	        } else if(plnDfnDscrptn.equals("[") | plnDfnDscrptn.equals("]") | this.plnDfnDscrptn.substring(this.plnDfnDscrptn.length() - 1).equals("[")) {
+	        	this.plnDfnDscrptn = this.plnDfnDscrptn+plnDfnDscrptn;
+	        } else  {
+	            this.plnDfnDscrptn = this.plnDfnDscrptn+ "," +plnDfnDscrptn;
+	        }
+        }
     }
     
     
@@ -3622,6 +7962,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnEditorNm = plnDfnEditorNm;
     }
     
+    public void addPlnDfnEditorNm(String plnDfnEditorNm) {
+    	if( plnDfnEditorNm != null ) {
+	    	if( this.plnDfnEditorNm == null ) {
+	        	this.plnDfnEditorNm = plnDfnEditorNm;
+	        } else if(this.plnDfnEditorNm.substring(this.plnDfnEditorNm.length() - 1).equals("]") & plnDfnEditorNm.equals("[")) {
+	        	this.plnDfnEditorNm = this.plnDfnEditorNm+ "," + plnDfnEditorNm;
+	        } else if(plnDfnEditorNm.equals("[") | plnDfnEditorNm.equals("]") | this.plnDfnEditorNm.substring(this.plnDfnEditorNm.length() - 1).equals("[")) {
+	        	this.plnDfnEditorNm = this.plnDfnEditorNm+plnDfnEditorNm;
+	        } else  {
+	            this.plnDfnEditorNm = this.plnDfnEditorNm+ "," +plnDfnEditorNm;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnEditorTlcmPrdEnd() {
@@ -3630,6 +7984,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnEditorTlcmPrdEnd(String plnDfnEditorTlcmPrdEnd) {
         this.plnDfnEditorTlcmPrdEnd = plnDfnEditorTlcmPrdEnd;
+    }
+    
+    public void addPlnDfnEditorTlcmPrdEnd(String plnDfnEditorTlcmPrdEnd) {
+    	if( plnDfnEditorTlcmPrdEnd != null ) {
+	    	if( this.plnDfnEditorTlcmPrdEnd == null ) {
+	        	this.plnDfnEditorTlcmPrdEnd = plnDfnEditorTlcmPrdEnd;
+	        } else if(this.plnDfnEditorTlcmPrdEnd.substring(this.plnDfnEditorTlcmPrdEnd.length() - 1).equals("]") & plnDfnEditorTlcmPrdEnd.equals("[")) {
+	        	this.plnDfnEditorTlcmPrdEnd = this.plnDfnEditorTlcmPrdEnd+ "," + plnDfnEditorTlcmPrdEnd;
+	        } else if(plnDfnEditorTlcmPrdEnd.equals("[") | plnDfnEditorTlcmPrdEnd.equals("]") | this.plnDfnEditorTlcmPrdEnd.substring(this.plnDfnEditorTlcmPrdEnd.length() - 1).equals("[")) {
+	        	this.plnDfnEditorTlcmPrdEnd = this.plnDfnEditorTlcmPrdEnd+plnDfnEditorTlcmPrdEnd;
+	        } else  {
+	            this.plnDfnEditorTlcmPrdEnd = this.plnDfnEditorTlcmPrdEnd+ "," +plnDfnEditorTlcmPrdEnd;
+	        }
+        }
     }
     
     
@@ -3642,6 +8010,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnEditorTlcmPrdStrt = plnDfnEditorTlcmPrdStrt;
     }
     
+    public void addPlnDfnEditorTlcmPrdStrt(String plnDfnEditorTlcmPrdStrt) {
+    	if( plnDfnEditorTlcmPrdStrt != null ) {
+	    	if( this.plnDfnEditorTlcmPrdStrt == null ) {
+	        	this.plnDfnEditorTlcmPrdStrt = plnDfnEditorTlcmPrdStrt;
+	        } else if(this.plnDfnEditorTlcmPrdStrt.substring(this.plnDfnEditorTlcmPrdStrt.length() - 1).equals("]") & plnDfnEditorTlcmPrdStrt.equals("[")) {
+	        	this.plnDfnEditorTlcmPrdStrt = this.plnDfnEditorTlcmPrdStrt+ "," + plnDfnEditorTlcmPrdStrt;
+	        } else if(plnDfnEditorTlcmPrdStrt.equals("[") | plnDfnEditorTlcmPrdStrt.equals("]") | this.plnDfnEditorTlcmPrdStrt.substring(this.plnDfnEditorTlcmPrdStrt.length() - 1).equals("[")) {
+	        	this.plnDfnEditorTlcmPrdStrt = this.plnDfnEditorTlcmPrdStrt+plnDfnEditorTlcmPrdStrt;
+	        } else  {
+	            this.plnDfnEditorTlcmPrdStrt = this.plnDfnEditorTlcmPrdStrt+ "," +plnDfnEditorTlcmPrdStrt;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnEditorTlcmRnk() {
@@ -3650,6 +8032,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnEditorTlcmRnk(String plnDfnEditorTlcmRnk) {
         this.plnDfnEditorTlcmRnk = plnDfnEditorTlcmRnk;
+    }
+    
+    public void addPlnDfnEditorTlcmRnk(String plnDfnEditorTlcmRnk) {
+    	if( plnDfnEditorTlcmRnk != null ) {
+	    	if( this.plnDfnEditorTlcmRnk == null ) {
+	        	this.plnDfnEditorTlcmRnk = plnDfnEditorTlcmRnk;
+	        } else if(this.plnDfnEditorTlcmRnk.substring(this.plnDfnEditorTlcmRnk.length() - 1).equals("]") & plnDfnEditorTlcmRnk.equals("[")) {
+	        	this.plnDfnEditorTlcmRnk = this.plnDfnEditorTlcmRnk+ "," + plnDfnEditorTlcmRnk;
+	        } else if(plnDfnEditorTlcmRnk.equals("[") | plnDfnEditorTlcmRnk.equals("]") | this.plnDfnEditorTlcmRnk.substring(this.plnDfnEditorTlcmRnk.length() - 1).equals("[")) {
+	        	this.plnDfnEditorTlcmRnk = this.plnDfnEditorTlcmRnk+plnDfnEditorTlcmRnk;
+	        } else  {
+	            this.plnDfnEditorTlcmRnk = this.plnDfnEditorTlcmRnk+ "," +plnDfnEditorTlcmRnk;
+	        }
+        }
     }
     
     
@@ -3662,6 +8058,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnEditorTlcmSys = plnDfnEditorTlcmSys;
     }
     
+    public void addPlnDfnEditorTlcmSys(String plnDfnEditorTlcmSys) {
+    	if( plnDfnEditorTlcmSys != null ) {
+	    	if( this.plnDfnEditorTlcmSys == null ) {
+	        	this.plnDfnEditorTlcmSys = plnDfnEditorTlcmSys;
+	        } else if(this.plnDfnEditorTlcmSys.substring(this.plnDfnEditorTlcmSys.length() - 1).equals("]") & plnDfnEditorTlcmSys.equals("[")) {
+	        	this.plnDfnEditorTlcmSys = this.plnDfnEditorTlcmSys+ "," + plnDfnEditorTlcmSys;
+	        } else if(plnDfnEditorTlcmSys.equals("[") | plnDfnEditorTlcmSys.equals("]") | this.plnDfnEditorTlcmSys.substring(this.plnDfnEditorTlcmSys.length() - 1).equals("[")) {
+	        	this.plnDfnEditorTlcmSys = this.plnDfnEditorTlcmSys+plnDfnEditorTlcmSys;
+	        } else  {
+	            this.plnDfnEditorTlcmSys = this.plnDfnEditorTlcmSys+ "," +plnDfnEditorTlcmSys;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnEditorTlcmUse() {
@@ -3670,6 +8080,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnEditorTlcmUse(String plnDfnEditorTlcmUse) {
         this.plnDfnEditorTlcmUse = plnDfnEditorTlcmUse;
+    }
+    
+    public void addPlnDfnEditorTlcmUse(String plnDfnEditorTlcmUse) {
+    	if( plnDfnEditorTlcmUse != null ) {
+	    	if( this.plnDfnEditorTlcmUse == null ) {
+	        	this.plnDfnEditorTlcmUse = plnDfnEditorTlcmUse;
+	        } else if(this.plnDfnEditorTlcmUse.substring(this.plnDfnEditorTlcmUse.length() - 1).equals("]") & plnDfnEditorTlcmUse.equals("[")) {
+	        	this.plnDfnEditorTlcmUse = this.plnDfnEditorTlcmUse+ "," + plnDfnEditorTlcmUse;
+	        } else if(plnDfnEditorTlcmUse.equals("[") | plnDfnEditorTlcmUse.equals("]") | this.plnDfnEditorTlcmUse.substring(this.plnDfnEditorTlcmUse.length() - 1).equals("[")) {
+	        	this.plnDfnEditorTlcmUse = this.plnDfnEditorTlcmUse+plnDfnEditorTlcmUse;
+	        } else  {
+	            this.plnDfnEditorTlcmUse = this.plnDfnEditorTlcmUse+ "," +plnDfnEditorTlcmUse;
+	        }
+        }
     }
     
     
@@ -3682,6 +8106,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnEditorTlcmVl = plnDfnEditorTlcmVl;
     }
     
+    public void addPlnDfnEditorTlcmVl(String plnDfnEditorTlcmVl) {
+    	if( plnDfnEditorTlcmVl != null ) {
+	    	if( this.plnDfnEditorTlcmVl == null ) {
+	        	this.plnDfnEditorTlcmVl = plnDfnEditorTlcmVl;
+	        } else if(this.plnDfnEditorTlcmVl.substring(this.plnDfnEditorTlcmVl.length() - 1).equals("]") & plnDfnEditorTlcmVl.equals("[")) {
+	        	this.plnDfnEditorTlcmVl = this.plnDfnEditorTlcmVl+ "," + plnDfnEditorTlcmVl;
+	        } else if(plnDfnEditorTlcmVl.equals("[") | plnDfnEditorTlcmVl.equals("]") | this.plnDfnEditorTlcmVl.substring(this.plnDfnEditorTlcmVl.length() - 1).equals("[")) {
+	        	this.plnDfnEditorTlcmVl = this.plnDfnEditorTlcmVl+plnDfnEditorTlcmVl;
+	        } else  {
+	            this.plnDfnEditorTlcmVl = this.plnDfnEditorTlcmVl+ "," +plnDfnEditorTlcmVl;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnEfctivePrdEnd() {
@@ -3690,6 +8128,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnEfctivePrdEnd(String plnDfnEfctivePrdEnd) {
         this.plnDfnEfctivePrdEnd = plnDfnEfctivePrdEnd;
+    }
+    
+    public void addPlnDfnEfctivePrdEnd(String plnDfnEfctivePrdEnd) {
+    	if( plnDfnEfctivePrdEnd != null ) {
+	    	if( this.plnDfnEfctivePrdEnd == null ) {
+	        	this.plnDfnEfctivePrdEnd = plnDfnEfctivePrdEnd;
+	        } else if(this.plnDfnEfctivePrdEnd.substring(this.plnDfnEfctivePrdEnd.length() - 1).equals("]") & plnDfnEfctivePrdEnd.equals("[")) {
+	        	this.plnDfnEfctivePrdEnd = this.plnDfnEfctivePrdEnd+ "," + plnDfnEfctivePrdEnd;
+	        } else if(plnDfnEfctivePrdEnd.equals("[") | plnDfnEfctivePrdEnd.equals("]") | this.plnDfnEfctivePrdEnd.substring(this.plnDfnEfctivePrdEnd.length() - 1).equals("[")) {
+	        	this.plnDfnEfctivePrdEnd = this.plnDfnEfctivePrdEnd+plnDfnEfctivePrdEnd;
+	        } else  {
+	            this.plnDfnEfctivePrdEnd = this.plnDfnEfctivePrdEnd+ "," +plnDfnEfctivePrdEnd;
+	        }
+        }
     }
     
     
@@ -3702,6 +8154,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnEfctivePrdStrt = plnDfnEfctivePrdStrt;
     }
     
+    public void addPlnDfnEfctivePrdStrt(String plnDfnEfctivePrdStrt) {
+    	if( plnDfnEfctivePrdStrt != null ) {
+	    	if( this.plnDfnEfctivePrdStrt == null ) {
+	        	this.plnDfnEfctivePrdStrt = plnDfnEfctivePrdStrt;
+	        } else if(this.plnDfnEfctivePrdStrt.substring(this.plnDfnEfctivePrdStrt.length() - 1).equals("]") & plnDfnEfctivePrdStrt.equals("[")) {
+	        	this.plnDfnEfctivePrdStrt = this.plnDfnEfctivePrdStrt+ "," + plnDfnEfctivePrdStrt;
+	        } else if(plnDfnEfctivePrdStrt.equals("[") | plnDfnEfctivePrdStrt.equals("]") | this.plnDfnEfctivePrdStrt.substring(this.plnDfnEfctivePrdStrt.length() - 1).equals("[")) {
+	        	this.plnDfnEfctivePrdStrt = this.plnDfnEfctivePrdStrt+plnDfnEfctivePrdStrt;
+	        } else  {
+	            this.plnDfnEfctivePrdStrt = this.plnDfnEfctivePrdStrt+ "," +plnDfnEfctivePrdStrt;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnEndsrNm() {
@@ -3710,6 +8176,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnEndsrNm(String plnDfnEndsrNm) {
         this.plnDfnEndsrNm = plnDfnEndsrNm;
+    }
+    
+    public void addPlnDfnEndsrNm(String plnDfnEndsrNm) {
+    	if( plnDfnEndsrNm != null ) {
+	    	if( this.plnDfnEndsrNm == null ) {
+	        	this.plnDfnEndsrNm = plnDfnEndsrNm;
+	        } else if(this.plnDfnEndsrNm.substring(this.plnDfnEndsrNm.length() - 1).equals("]") & plnDfnEndsrNm.equals("[")) {
+	        	this.plnDfnEndsrNm = this.plnDfnEndsrNm+ "," + plnDfnEndsrNm;
+	        } else if(plnDfnEndsrNm.equals("[") | plnDfnEndsrNm.equals("]") | this.plnDfnEndsrNm.substring(this.plnDfnEndsrNm.length() - 1).equals("[")) {
+	        	this.plnDfnEndsrNm = this.plnDfnEndsrNm+plnDfnEndsrNm;
+	        } else  {
+	            this.plnDfnEndsrNm = this.plnDfnEndsrNm+ "," +plnDfnEndsrNm;
+	        }
+        }
     }
     
     
@@ -3722,6 +8202,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnEndsrTlcmPrdEnd = plnDfnEndsrTlcmPrdEnd;
     }
     
+    public void addPlnDfnEndsrTlcmPrdEnd(String plnDfnEndsrTlcmPrdEnd) {
+    	if( plnDfnEndsrTlcmPrdEnd != null ) {
+	    	if( this.plnDfnEndsrTlcmPrdEnd == null ) {
+	        	this.plnDfnEndsrTlcmPrdEnd = plnDfnEndsrTlcmPrdEnd;
+	        } else if(this.plnDfnEndsrTlcmPrdEnd.substring(this.plnDfnEndsrTlcmPrdEnd.length() - 1).equals("]") & plnDfnEndsrTlcmPrdEnd.equals("[")) {
+	        	this.plnDfnEndsrTlcmPrdEnd = this.plnDfnEndsrTlcmPrdEnd+ "," + plnDfnEndsrTlcmPrdEnd;
+	        } else if(plnDfnEndsrTlcmPrdEnd.equals("[") | plnDfnEndsrTlcmPrdEnd.equals("]") | this.plnDfnEndsrTlcmPrdEnd.substring(this.plnDfnEndsrTlcmPrdEnd.length() - 1).equals("[")) {
+	        	this.plnDfnEndsrTlcmPrdEnd = this.plnDfnEndsrTlcmPrdEnd+plnDfnEndsrTlcmPrdEnd;
+	        } else  {
+	            this.plnDfnEndsrTlcmPrdEnd = this.plnDfnEndsrTlcmPrdEnd+ "," +plnDfnEndsrTlcmPrdEnd;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnEndsrTlcmPrdStrt() {
@@ -3730,6 +8224,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnEndsrTlcmPrdStrt(String plnDfnEndsrTlcmPrdStrt) {
         this.plnDfnEndsrTlcmPrdStrt = plnDfnEndsrTlcmPrdStrt;
+    }
+    
+    public void addPlnDfnEndsrTlcmPrdStrt(String plnDfnEndsrTlcmPrdStrt) {
+    	if( plnDfnEndsrTlcmPrdStrt != null ) {
+	    	if( this.plnDfnEndsrTlcmPrdStrt == null ) {
+	        	this.plnDfnEndsrTlcmPrdStrt = plnDfnEndsrTlcmPrdStrt;
+	        } else if(this.plnDfnEndsrTlcmPrdStrt.substring(this.plnDfnEndsrTlcmPrdStrt.length() - 1).equals("]") & plnDfnEndsrTlcmPrdStrt.equals("[")) {
+	        	this.plnDfnEndsrTlcmPrdStrt = this.plnDfnEndsrTlcmPrdStrt+ "," + plnDfnEndsrTlcmPrdStrt;
+	        } else if(plnDfnEndsrTlcmPrdStrt.equals("[") | plnDfnEndsrTlcmPrdStrt.equals("]") | this.plnDfnEndsrTlcmPrdStrt.substring(this.plnDfnEndsrTlcmPrdStrt.length() - 1).equals("[")) {
+	        	this.plnDfnEndsrTlcmPrdStrt = this.plnDfnEndsrTlcmPrdStrt+plnDfnEndsrTlcmPrdStrt;
+	        } else  {
+	            this.plnDfnEndsrTlcmPrdStrt = this.plnDfnEndsrTlcmPrdStrt+ "," +plnDfnEndsrTlcmPrdStrt;
+	        }
+        }
     }
     
     
@@ -3742,6 +8250,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnEndsrTlcmRnk = plnDfnEndsrTlcmRnk;
     }
     
+    public void addPlnDfnEndsrTlcmRnk(String plnDfnEndsrTlcmRnk) {
+    	if( plnDfnEndsrTlcmRnk != null ) {
+	    	if( this.plnDfnEndsrTlcmRnk == null ) {
+	        	this.plnDfnEndsrTlcmRnk = plnDfnEndsrTlcmRnk;
+	        } else if(this.plnDfnEndsrTlcmRnk.substring(this.plnDfnEndsrTlcmRnk.length() - 1).equals("]") & plnDfnEndsrTlcmRnk.equals("[")) {
+	        	this.plnDfnEndsrTlcmRnk = this.plnDfnEndsrTlcmRnk+ "," + plnDfnEndsrTlcmRnk;
+	        } else if(plnDfnEndsrTlcmRnk.equals("[") | plnDfnEndsrTlcmRnk.equals("]") | this.plnDfnEndsrTlcmRnk.substring(this.plnDfnEndsrTlcmRnk.length() - 1).equals("[")) {
+	        	this.plnDfnEndsrTlcmRnk = this.plnDfnEndsrTlcmRnk+plnDfnEndsrTlcmRnk;
+	        } else  {
+	            this.plnDfnEndsrTlcmRnk = this.plnDfnEndsrTlcmRnk+ "," +plnDfnEndsrTlcmRnk;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnEndsrTlcmSys() {
@@ -3750,6 +8272,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnEndsrTlcmSys(String plnDfnEndsrTlcmSys) {
         this.plnDfnEndsrTlcmSys = plnDfnEndsrTlcmSys;
+    }
+    
+    public void addPlnDfnEndsrTlcmSys(String plnDfnEndsrTlcmSys) {
+    	if( plnDfnEndsrTlcmSys != null ) {
+	    	if( this.plnDfnEndsrTlcmSys == null ) {
+	        	this.plnDfnEndsrTlcmSys = plnDfnEndsrTlcmSys;
+	        } else if(this.plnDfnEndsrTlcmSys.substring(this.plnDfnEndsrTlcmSys.length() - 1).equals("]") & plnDfnEndsrTlcmSys.equals("[")) {
+	        	this.plnDfnEndsrTlcmSys = this.plnDfnEndsrTlcmSys+ "," + plnDfnEndsrTlcmSys;
+	        } else if(plnDfnEndsrTlcmSys.equals("[") | plnDfnEndsrTlcmSys.equals("]") | this.plnDfnEndsrTlcmSys.substring(this.plnDfnEndsrTlcmSys.length() - 1).equals("[")) {
+	        	this.plnDfnEndsrTlcmSys = this.plnDfnEndsrTlcmSys+plnDfnEndsrTlcmSys;
+	        } else  {
+	            this.plnDfnEndsrTlcmSys = this.plnDfnEndsrTlcmSys+ "," +plnDfnEndsrTlcmSys;
+	        }
+        }
     }
     
     
@@ -3762,6 +8298,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnEndsrTlcmUse = plnDfnEndsrTlcmUse;
     }
     
+    public void addPlnDfnEndsrTlcmUse(String plnDfnEndsrTlcmUse) {
+    	if( plnDfnEndsrTlcmUse != null ) {
+	    	if( this.plnDfnEndsrTlcmUse == null ) {
+	        	this.plnDfnEndsrTlcmUse = plnDfnEndsrTlcmUse;
+	        } else if(this.plnDfnEndsrTlcmUse.substring(this.plnDfnEndsrTlcmUse.length() - 1).equals("]") & plnDfnEndsrTlcmUse.equals("[")) {
+	        	this.plnDfnEndsrTlcmUse = this.plnDfnEndsrTlcmUse+ "," + plnDfnEndsrTlcmUse;
+	        } else if(plnDfnEndsrTlcmUse.equals("[") | plnDfnEndsrTlcmUse.equals("]") | this.plnDfnEndsrTlcmUse.substring(this.plnDfnEndsrTlcmUse.length() - 1).equals("[")) {
+	        	this.plnDfnEndsrTlcmUse = this.plnDfnEndsrTlcmUse+plnDfnEndsrTlcmUse;
+	        } else  {
+	            this.plnDfnEndsrTlcmUse = this.plnDfnEndsrTlcmUse+ "," +plnDfnEndsrTlcmUse;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnEndsrTlcmVl() {
@@ -3770,6 +8320,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnEndsrTlcmVl(String plnDfnEndsrTlcmVl) {
         this.plnDfnEndsrTlcmVl = plnDfnEndsrTlcmVl;
+    }
+    
+    public void addPlnDfnEndsrTlcmVl(String plnDfnEndsrTlcmVl) {
+    	if( plnDfnEndsrTlcmVl != null ) {
+	    	if( this.plnDfnEndsrTlcmVl == null ) {
+	        	this.plnDfnEndsrTlcmVl = plnDfnEndsrTlcmVl;
+	        } else if(this.plnDfnEndsrTlcmVl.substring(this.plnDfnEndsrTlcmVl.length() - 1).equals("]") & plnDfnEndsrTlcmVl.equals("[")) {
+	        	this.plnDfnEndsrTlcmVl = this.plnDfnEndsrTlcmVl+ "," + plnDfnEndsrTlcmVl;
+	        } else if(plnDfnEndsrTlcmVl.equals("[") | plnDfnEndsrTlcmVl.equals("]") | this.plnDfnEndsrTlcmVl.substring(this.plnDfnEndsrTlcmVl.length() - 1).equals("[")) {
+	        	this.plnDfnEndsrTlcmVl = this.plnDfnEndsrTlcmVl+plnDfnEndsrTlcmVl;
+	        } else  {
+	            this.plnDfnEndsrTlcmVl = this.plnDfnEndsrTlcmVl+ "," +plnDfnEndsrTlcmVl;
+	        }
+        }
     }
     
     
@@ -3782,6 +8346,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnExprmtl = plnDfnExprmtl;
     }
     
+    public void addPlnDfnExprmtl(String plnDfnExprmtl) {
+    	if( plnDfnExprmtl != null ) {
+	    	if( this.plnDfnExprmtl == null ) {
+	        	this.plnDfnExprmtl = plnDfnExprmtl;
+	        } else if(this.plnDfnExprmtl.substring(this.plnDfnExprmtl.length() - 1).equals("]") & plnDfnExprmtl.equals("[")) {
+	        	this.plnDfnExprmtl = this.plnDfnExprmtl+ "," + plnDfnExprmtl;
+	        } else if(plnDfnExprmtl.equals("[") | plnDfnExprmtl.equals("]") | this.plnDfnExprmtl.substring(this.plnDfnExprmtl.length() - 1).equals("[")) {
+	        	this.plnDfnExprmtl = this.plnDfnExprmtl+plnDfnExprmtl;
+	        } else  {
+	            this.plnDfnExprmtl = this.plnDfnExprmtl+ "," +plnDfnExprmtl;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnGoalAddresCdgCd() {
@@ -3790,6 +8368,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnGoalAddresCdgCd(String plnDfnGoalAddresCdgCd) {
         this.plnDfnGoalAddresCdgCd = plnDfnGoalAddresCdgCd;
+    }
+    
+    public void addPlnDfnGoalAddresCdgCd(String plnDfnGoalAddresCdgCd) {
+    	if( plnDfnGoalAddresCdgCd != null ) {
+	    	if( this.plnDfnGoalAddresCdgCd == null ) {
+	        	this.plnDfnGoalAddresCdgCd = plnDfnGoalAddresCdgCd;
+	        } else if(this.plnDfnGoalAddresCdgCd.substring(this.plnDfnGoalAddresCdgCd.length() - 1).equals("]") & plnDfnGoalAddresCdgCd.equals("[")) {
+	        	this.plnDfnGoalAddresCdgCd = this.plnDfnGoalAddresCdgCd+ "," + plnDfnGoalAddresCdgCd;
+	        } else if(plnDfnGoalAddresCdgCd.equals("[") | plnDfnGoalAddresCdgCd.equals("]") | this.plnDfnGoalAddresCdgCd.substring(this.plnDfnGoalAddresCdgCd.length() - 1).equals("[")) {
+	        	this.plnDfnGoalAddresCdgCd = this.plnDfnGoalAddresCdgCd+plnDfnGoalAddresCdgCd;
+	        } else  {
+	            this.plnDfnGoalAddresCdgCd = this.plnDfnGoalAddresCdgCd+ "," +plnDfnGoalAddresCdgCd;
+	        }
+        }
     }
     
     
@@ -3802,6 +8394,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnGoalAddresCdgDsply = plnDfnGoalAddresCdgDsply;
     }
     
+    public void addPlnDfnGoalAddresCdgDsply(String plnDfnGoalAddresCdgDsply) {
+    	if( plnDfnGoalAddresCdgDsply != null ) {
+	    	if( this.plnDfnGoalAddresCdgDsply == null ) {
+	        	this.plnDfnGoalAddresCdgDsply = plnDfnGoalAddresCdgDsply;
+	        } else if(this.plnDfnGoalAddresCdgDsply.substring(this.plnDfnGoalAddresCdgDsply.length() - 1).equals("]") & plnDfnGoalAddresCdgDsply.equals("[")) {
+	        	this.plnDfnGoalAddresCdgDsply = this.plnDfnGoalAddresCdgDsply+ "," + plnDfnGoalAddresCdgDsply;
+	        } else if(plnDfnGoalAddresCdgDsply.equals("[") | plnDfnGoalAddresCdgDsply.equals("]") | this.plnDfnGoalAddresCdgDsply.substring(this.plnDfnGoalAddresCdgDsply.length() - 1).equals("[")) {
+	        	this.plnDfnGoalAddresCdgDsply = this.plnDfnGoalAddresCdgDsply+plnDfnGoalAddresCdgDsply;
+	        } else  {
+	            this.plnDfnGoalAddresCdgDsply = this.plnDfnGoalAddresCdgDsply+ "," +plnDfnGoalAddresCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnGoalAddresCdgSys() {
@@ -3810,6 +8416,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnGoalAddresCdgSys(String plnDfnGoalAddresCdgSys) {
         this.plnDfnGoalAddresCdgSys = plnDfnGoalAddresCdgSys;
+    }
+    
+    public void addPlnDfnGoalAddresCdgSys(String plnDfnGoalAddresCdgSys) {
+    	if( plnDfnGoalAddresCdgSys != null ) {
+	    	if( this.plnDfnGoalAddresCdgSys == null ) {
+	        	this.plnDfnGoalAddresCdgSys = plnDfnGoalAddresCdgSys;
+	        } else if(this.plnDfnGoalAddresCdgSys.substring(this.plnDfnGoalAddresCdgSys.length() - 1).equals("]") & plnDfnGoalAddresCdgSys.equals("[")) {
+	        	this.plnDfnGoalAddresCdgSys = this.plnDfnGoalAddresCdgSys+ "," + plnDfnGoalAddresCdgSys;
+	        } else if(plnDfnGoalAddresCdgSys.equals("[") | plnDfnGoalAddresCdgSys.equals("]") | this.plnDfnGoalAddresCdgSys.substring(this.plnDfnGoalAddresCdgSys.length() - 1).equals("[")) {
+	        	this.plnDfnGoalAddresCdgSys = this.plnDfnGoalAddresCdgSys+plnDfnGoalAddresCdgSys;
+	        } else  {
+	            this.plnDfnGoalAddresCdgSys = this.plnDfnGoalAddresCdgSys+ "," +plnDfnGoalAddresCdgSys;
+	        }
+        }
     }
     
     
@@ -3822,6 +8442,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnGoalAddresCdgUsrSltd = plnDfnGoalAddresCdgUsrSltd;
     }
     
+    public void addPlnDfnGoalAddresCdgUsrSltd(String plnDfnGoalAddresCdgUsrSltd) {
+    	if( plnDfnGoalAddresCdgUsrSltd != null ) {
+	    	if( this.plnDfnGoalAddresCdgUsrSltd == null ) {
+	        	this.plnDfnGoalAddresCdgUsrSltd = plnDfnGoalAddresCdgUsrSltd;
+	        } else if(this.plnDfnGoalAddresCdgUsrSltd.substring(this.plnDfnGoalAddresCdgUsrSltd.length() - 1).equals("]") & plnDfnGoalAddresCdgUsrSltd.equals("[")) {
+	        	this.plnDfnGoalAddresCdgUsrSltd = this.plnDfnGoalAddresCdgUsrSltd+ "," + plnDfnGoalAddresCdgUsrSltd;
+	        } else if(plnDfnGoalAddresCdgUsrSltd.equals("[") | plnDfnGoalAddresCdgUsrSltd.equals("]") | this.plnDfnGoalAddresCdgUsrSltd.substring(this.plnDfnGoalAddresCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.plnDfnGoalAddresCdgUsrSltd = this.plnDfnGoalAddresCdgUsrSltd+plnDfnGoalAddresCdgUsrSltd;
+	        } else  {
+	            this.plnDfnGoalAddresCdgUsrSltd = this.plnDfnGoalAddresCdgUsrSltd+ "," +plnDfnGoalAddresCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnGoalAddresCdgVrsn() {
@@ -3830,6 +8464,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnGoalAddresCdgVrsn(String plnDfnGoalAddresCdgVrsn) {
         this.plnDfnGoalAddresCdgVrsn = plnDfnGoalAddresCdgVrsn;
+    }
+    
+    public void addPlnDfnGoalAddresCdgVrsn(String plnDfnGoalAddresCdgVrsn) {
+    	if( plnDfnGoalAddresCdgVrsn != null ) {
+	    	if( this.plnDfnGoalAddresCdgVrsn == null ) {
+	        	this.plnDfnGoalAddresCdgVrsn = plnDfnGoalAddresCdgVrsn;
+	        } else if(this.plnDfnGoalAddresCdgVrsn.substring(this.plnDfnGoalAddresCdgVrsn.length() - 1).equals("]") & plnDfnGoalAddresCdgVrsn.equals("[")) {
+	        	this.plnDfnGoalAddresCdgVrsn = this.plnDfnGoalAddresCdgVrsn+ "," + plnDfnGoalAddresCdgVrsn;
+	        } else if(plnDfnGoalAddresCdgVrsn.equals("[") | plnDfnGoalAddresCdgVrsn.equals("]") | this.plnDfnGoalAddresCdgVrsn.substring(this.plnDfnGoalAddresCdgVrsn.length() - 1).equals("[")) {
+	        	this.plnDfnGoalAddresCdgVrsn = this.plnDfnGoalAddresCdgVrsn+plnDfnGoalAddresCdgVrsn;
+	        } else  {
+	            this.plnDfnGoalAddresCdgVrsn = this.plnDfnGoalAddresCdgVrsn+ "," +plnDfnGoalAddresCdgVrsn;
+	        }
+        }
     }
     
     
@@ -3842,6 +8490,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnGoalAddresTxt = plnDfnGoalAddresTxt;
     }
     
+    public void addPlnDfnGoalAddresTxt(String plnDfnGoalAddresTxt) {
+    	if( plnDfnGoalAddresTxt != null ) {
+	    	if( this.plnDfnGoalAddresTxt == null ) {
+	        	this.plnDfnGoalAddresTxt = plnDfnGoalAddresTxt;
+	        } else if(this.plnDfnGoalAddresTxt.substring(this.plnDfnGoalAddresTxt.length() - 1).equals("]") & plnDfnGoalAddresTxt.equals("[")) {
+	        	this.plnDfnGoalAddresTxt = this.plnDfnGoalAddresTxt+ "," + plnDfnGoalAddresTxt;
+	        } else if(plnDfnGoalAddresTxt.equals("[") | plnDfnGoalAddresTxt.equals("]") | this.plnDfnGoalAddresTxt.substring(this.plnDfnGoalAddresTxt.length() - 1).equals("[")) {
+	        	this.plnDfnGoalAddresTxt = this.plnDfnGoalAddresTxt+plnDfnGoalAddresTxt;
+	        } else  {
+	            this.plnDfnGoalAddresTxt = this.plnDfnGoalAddresTxt+ "," +plnDfnGoalAddresTxt;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnGoalCtgryCdgCd() {
@@ -3850,6 +8512,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnGoalCtgryCdgCd(String plnDfnGoalCtgryCdgCd) {
         this.plnDfnGoalCtgryCdgCd = plnDfnGoalCtgryCdgCd;
+    }
+    
+    public void addPlnDfnGoalCtgryCdgCd(String plnDfnGoalCtgryCdgCd) {
+    	if( plnDfnGoalCtgryCdgCd != null ) {
+	    	if( this.plnDfnGoalCtgryCdgCd == null ) {
+	        	this.plnDfnGoalCtgryCdgCd = plnDfnGoalCtgryCdgCd;
+	        } else if(this.plnDfnGoalCtgryCdgCd.substring(this.plnDfnGoalCtgryCdgCd.length() - 1).equals("]") & plnDfnGoalCtgryCdgCd.equals("[")) {
+	        	this.plnDfnGoalCtgryCdgCd = this.plnDfnGoalCtgryCdgCd+ "," + plnDfnGoalCtgryCdgCd;
+	        } else if(plnDfnGoalCtgryCdgCd.equals("[") | plnDfnGoalCtgryCdgCd.equals("]") | this.plnDfnGoalCtgryCdgCd.substring(this.plnDfnGoalCtgryCdgCd.length() - 1).equals("[")) {
+	        	this.plnDfnGoalCtgryCdgCd = this.plnDfnGoalCtgryCdgCd+plnDfnGoalCtgryCdgCd;
+	        } else  {
+	            this.plnDfnGoalCtgryCdgCd = this.plnDfnGoalCtgryCdgCd+ "," +plnDfnGoalCtgryCdgCd;
+	        }
+        }
     }
     
     
@@ -3862,6 +8538,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnGoalCtgryCdgDsply = plnDfnGoalCtgryCdgDsply;
     }
     
+    public void addPlnDfnGoalCtgryCdgDsply(String plnDfnGoalCtgryCdgDsply) {
+    	if( plnDfnGoalCtgryCdgDsply != null ) {
+	    	if( this.plnDfnGoalCtgryCdgDsply == null ) {
+	        	this.plnDfnGoalCtgryCdgDsply = plnDfnGoalCtgryCdgDsply;
+	        } else if(this.plnDfnGoalCtgryCdgDsply.substring(this.plnDfnGoalCtgryCdgDsply.length() - 1).equals("]") & plnDfnGoalCtgryCdgDsply.equals("[")) {
+	        	this.plnDfnGoalCtgryCdgDsply = this.plnDfnGoalCtgryCdgDsply+ "," + plnDfnGoalCtgryCdgDsply;
+	        } else if(plnDfnGoalCtgryCdgDsply.equals("[") | plnDfnGoalCtgryCdgDsply.equals("]") | this.plnDfnGoalCtgryCdgDsply.substring(this.plnDfnGoalCtgryCdgDsply.length() - 1).equals("[")) {
+	        	this.plnDfnGoalCtgryCdgDsply = this.plnDfnGoalCtgryCdgDsply+plnDfnGoalCtgryCdgDsply;
+	        } else  {
+	            this.plnDfnGoalCtgryCdgDsply = this.plnDfnGoalCtgryCdgDsply+ "," +plnDfnGoalCtgryCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnGoalCtgryCdgSys() {
@@ -3870,6 +8560,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnGoalCtgryCdgSys(String plnDfnGoalCtgryCdgSys) {
         this.plnDfnGoalCtgryCdgSys = plnDfnGoalCtgryCdgSys;
+    }
+    
+    public void addPlnDfnGoalCtgryCdgSys(String plnDfnGoalCtgryCdgSys) {
+    	if( plnDfnGoalCtgryCdgSys != null ) {
+	    	if( this.plnDfnGoalCtgryCdgSys == null ) {
+	        	this.plnDfnGoalCtgryCdgSys = plnDfnGoalCtgryCdgSys;
+	        } else if(this.plnDfnGoalCtgryCdgSys.substring(this.plnDfnGoalCtgryCdgSys.length() - 1).equals("]") & plnDfnGoalCtgryCdgSys.equals("[")) {
+	        	this.plnDfnGoalCtgryCdgSys = this.plnDfnGoalCtgryCdgSys+ "," + plnDfnGoalCtgryCdgSys;
+	        } else if(plnDfnGoalCtgryCdgSys.equals("[") | plnDfnGoalCtgryCdgSys.equals("]") | this.plnDfnGoalCtgryCdgSys.substring(this.plnDfnGoalCtgryCdgSys.length() - 1).equals("[")) {
+	        	this.plnDfnGoalCtgryCdgSys = this.plnDfnGoalCtgryCdgSys+plnDfnGoalCtgryCdgSys;
+	        } else  {
+	            this.plnDfnGoalCtgryCdgSys = this.plnDfnGoalCtgryCdgSys+ "," +plnDfnGoalCtgryCdgSys;
+	        }
+        }
     }
     
     
@@ -3882,6 +8586,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnGoalCtgryCdgUsrSltd = plnDfnGoalCtgryCdgUsrSltd;
     }
     
+    public void addPlnDfnGoalCtgryCdgUsrSltd(String plnDfnGoalCtgryCdgUsrSltd) {
+    	if( plnDfnGoalCtgryCdgUsrSltd != null ) {
+	    	if( this.plnDfnGoalCtgryCdgUsrSltd == null ) {
+	        	this.plnDfnGoalCtgryCdgUsrSltd = plnDfnGoalCtgryCdgUsrSltd;
+	        } else if(this.plnDfnGoalCtgryCdgUsrSltd.substring(this.plnDfnGoalCtgryCdgUsrSltd.length() - 1).equals("]") & plnDfnGoalCtgryCdgUsrSltd.equals("[")) {
+	        	this.plnDfnGoalCtgryCdgUsrSltd = this.plnDfnGoalCtgryCdgUsrSltd+ "," + plnDfnGoalCtgryCdgUsrSltd;
+	        } else if(plnDfnGoalCtgryCdgUsrSltd.equals("[") | plnDfnGoalCtgryCdgUsrSltd.equals("]") | this.plnDfnGoalCtgryCdgUsrSltd.substring(this.plnDfnGoalCtgryCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.plnDfnGoalCtgryCdgUsrSltd = this.plnDfnGoalCtgryCdgUsrSltd+plnDfnGoalCtgryCdgUsrSltd;
+	        } else  {
+	            this.plnDfnGoalCtgryCdgUsrSltd = this.plnDfnGoalCtgryCdgUsrSltd+ "," +plnDfnGoalCtgryCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnGoalCtgryCdgVrsn() {
@@ -3890,6 +8608,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnGoalCtgryCdgVrsn(String plnDfnGoalCtgryCdgVrsn) {
         this.plnDfnGoalCtgryCdgVrsn = plnDfnGoalCtgryCdgVrsn;
+    }
+    
+    public void addPlnDfnGoalCtgryCdgVrsn(String plnDfnGoalCtgryCdgVrsn) {
+    	if( plnDfnGoalCtgryCdgVrsn != null ) {
+	    	if( this.plnDfnGoalCtgryCdgVrsn == null ) {
+	        	this.plnDfnGoalCtgryCdgVrsn = plnDfnGoalCtgryCdgVrsn;
+	        } else if(this.plnDfnGoalCtgryCdgVrsn.substring(this.plnDfnGoalCtgryCdgVrsn.length() - 1).equals("]") & plnDfnGoalCtgryCdgVrsn.equals("[")) {
+	        	this.plnDfnGoalCtgryCdgVrsn = this.plnDfnGoalCtgryCdgVrsn+ "," + plnDfnGoalCtgryCdgVrsn;
+	        } else if(plnDfnGoalCtgryCdgVrsn.equals("[") | plnDfnGoalCtgryCdgVrsn.equals("]") | this.plnDfnGoalCtgryCdgVrsn.substring(this.plnDfnGoalCtgryCdgVrsn.length() - 1).equals("[")) {
+	        	this.plnDfnGoalCtgryCdgVrsn = this.plnDfnGoalCtgryCdgVrsn+plnDfnGoalCtgryCdgVrsn;
+	        } else  {
+	            this.plnDfnGoalCtgryCdgVrsn = this.plnDfnGoalCtgryCdgVrsn+ "," +plnDfnGoalCtgryCdgVrsn;
+	        }
+        }
     }
     
     
@@ -3902,6 +8634,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnGoalCtgryTxt = plnDfnGoalCtgryTxt;
     }
     
+    public void addPlnDfnGoalCtgryTxt(String plnDfnGoalCtgryTxt) {
+    	if( plnDfnGoalCtgryTxt != null ) {
+	    	if( this.plnDfnGoalCtgryTxt == null ) {
+	        	this.plnDfnGoalCtgryTxt = plnDfnGoalCtgryTxt;
+	        } else if(this.plnDfnGoalCtgryTxt.substring(this.plnDfnGoalCtgryTxt.length() - 1).equals("]") & plnDfnGoalCtgryTxt.equals("[")) {
+	        	this.plnDfnGoalCtgryTxt = this.plnDfnGoalCtgryTxt+ "," + plnDfnGoalCtgryTxt;
+	        } else if(plnDfnGoalCtgryTxt.equals("[") | plnDfnGoalCtgryTxt.equals("]") | this.plnDfnGoalCtgryTxt.substring(this.plnDfnGoalCtgryTxt.length() - 1).equals("[")) {
+	        	this.plnDfnGoalCtgryTxt = this.plnDfnGoalCtgryTxt+plnDfnGoalCtgryTxt;
+	        } else  {
+	            this.plnDfnGoalCtgryTxt = this.plnDfnGoalCtgryTxt+ "," +plnDfnGoalCtgryTxt;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnGoalDscrptnCdgCd() {
@@ -3910,6 +8656,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnGoalDscrptnCdgCd(String plnDfnGoalDscrptnCdgCd) {
         this.plnDfnGoalDscrptnCdgCd = plnDfnGoalDscrptnCdgCd;
+    }
+    
+    public void addPlnDfnGoalDscrptnCdgCd(String plnDfnGoalDscrptnCdgCd) {
+    	if( plnDfnGoalDscrptnCdgCd != null ) {
+	    	if( this.plnDfnGoalDscrptnCdgCd == null ) {
+	        	this.plnDfnGoalDscrptnCdgCd = plnDfnGoalDscrptnCdgCd;
+	        } else if(this.plnDfnGoalDscrptnCdgCd.substring(this.plnDfnGoalDscrptnCdgCd.length() - 1).equals("]") & plnDfnGoalDscrptnCdgCd.equals("[")) {
+	        	this.plnDfnGoalDscrptnCdgCd = this.plnDfnGoalDscrptnCdgCd+ "," + plnDfnGoalDscrptnCdgCd;
+	        } else if(plnDfnGoalDscrptnCdgCd.equals("[") | plnDfnGoalDscrptnCdgCd.equals("]") | this.plnDfnGoalDscrptnCdgCd.substring(this.plnDfnGoalDscrptnCdgCd.length() - 1).equals("[")) {
+	        	this.plnDfnGoalDscrptnCdgCd = this.plnDfnGoalDscrptnCdgCd+plnDfnGoalDscrptnCdgCd;
+	        } else  {
+	            this.plnDfnGoalDscrptnCdgCd = this.plnDfnGoalDscrptnCdgCd+ "," +plnDfnGoalDscrptnCdgCd;
+	        }
+        }
     }
     
     
@@ -3922,6 +8682,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnGoalDscrptnCdgDsply = plnDfnGoalDscrptnCdgDsply;
     }
     
+    public void addPlnDfnGoalDscrptnCdgDsply(String plnDfnGoalDscrptnCdgDsply) {
+    	if( plnDfnGoalDscrptnCdgDsply != null ) {
+	    	if( this.plnDfnGoalDscrptnCdgDsply == null ) {
+	        	this.plnDfnGoalDscrptnCdgDsply = plnDfnGoalDscrptnCdgDsply;
+	        } else if(this.plnDfnGoalDscrptnCdgDsply.substring(this.plnDfnGoalDscrptnCdgDsply.length() - 1).equals("]") & plnDfnGoalDscrptnCdgDsply.equals("[")) {
+	        	this.plnDfnGoalDscrptnCdgDsply = this.plnDfnGoalDscrptnCdgDsply+ "," + plnDfnGoalDscrptnCdgDsply;
+	        } else if(plnDfnGoalDscrptnCdgDsply.equals("[") | plnDfnGoalDscrptnCdgDsply.equals("]") | this.plnDfnGoalDscrptnCdgDsply.substring(this.plnDfnGoalDscrptnCdgDsply.length() - 1).equals("[")) {
+	        	this.plnDfnGoalDscrptnCdgDsply = this.plnDfnGoalDscrptnCdgDsply+plnDfnGoalDscrptnCdgDsply;
+	        } else  {
+	            this.plnDfnGoalDscrptnCdgDsply = this.plnDfnGoalDscrptnCdgDsply+ "," +plnDfnGoalDscrptnCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnGoalDscrptnCdgSys() {
@@ -3930,6 +8704,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnGoalDscrptnCdgSys(String plnDfnGoalDscrptnCdgSys) {
         this.plnDfnGoalDscrptnCdgSys = plnDfnGoalDscrptnCdgSys;
+    }
+    
+    public void addPlnDfnGoalDscrptnCdgSys(String plnDfnGoalDscrptnCdgSys) {
+    	if( plnDfnGoalDscrptnCdgSys != null ) {
+	    	if( this.plnDfnGoalDscrptnCdgSys == null ) {
+	        	this.plnDfnGoalDscrptnCdgSys = plnDfnGoalDscrptnCdgSys;
+	        } else if(this.plnDfnGoalDscrptnCdgSys.substring(this.plnDfnGoalDscrptnCdgSys.length() - 1).equals("]") & plnDfnGoalDscrptnCdgSys.equals("[")) {
+	        	this.plnDfnGoalDscrptnCdgSys = this.plnDfnGoalDscrptnCdgSys+ "," + plnDfnGoalDscrptnCdgSys;
+	        } else if(plnDfnGoalDscrptnCdgSys.equals("[") | plnDfnGoalDscrptnCdgSys.equals("]") | this.plnDfnGoalDscrptnCdgSys.substring(this.plnDfnGoalDscrptnCdgSys.length() - 1).equals("[")) {
+	        	this.plnDfnGoalDscrptnCdgSys = this.plnDfnGoalDscrptnCdgSys+plnDfnGoalDscrptnCdgSys;
+	        } else  {
+	            this.plnDfnGoalDscrptnCdgSys = this.plnDfnGoalDscrptnCdgSys+ "," +plnDfnGoalDscrptnCdgSys;
+	        }
+        }
     }
     
     
@@ -3942,6 +8730,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnGoalDscrptnCdgUsrSltd = plnDfnGoalDscrptnCdgUsrSltd;
     }
     
+    public void addPlnDfnGoalDscrptnCdgUsrSltd(String plnDfnGoalDscrptnCdgUsrSltd) {
+    	if( plnDfnGoalDscrptnCdgUsrSltd != null ) {
+	    	if( this.plnDfnGoalDscrptnCdgUsrSltd == null ) {
+	        	this.plnDfnGoalDscrptnCdgUsrSltd = plnDfnGoalDscrptnCdgUsrSltd;
+	        } else if(this.plnDfnGoalDscrptnCdgUsrSltd.substring(this.plnDfnGoalDscrptnCdgUsrSltd.length() - 1).equals("]") & plnDfnGoalDscrptnCdgUsrSltd.equals("[")) {
+	        	this.plnDfnGoalDscrptnCdgUsrSltd = this.plnDfnGoalDscrptnCdgUsrSltd+ "," + plnDfnGoalDscrptnCdgUsrSltd;
+	        } else if(plnDfnGoalDscrptnCdgUsrSltd.equals("[") | plnDfnGoalDscrptnCdgUsrSltd.equals("]") | this.plnDfnGoalDscrptnCdgUsrSltd.substring(this.plnDfnGoalDscrptnCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.plnDfnGoalDscrptnCdgUsrSltd = this.plnDfnGoalDscrptnCdgUsrSltd+plnDfnGoalDscrptnCdgUsrSltd;
+	        } else  {
+	            this.plnDfnGoalDscrptnCdgUsrSltd = this.plnDfnGoalDscrptnCdgUsrSltd+ "," +plnDfnGoalDscrptnCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnGoalDscrptnCdgVrsn() {
@@ -3950,6 +8752,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnGoalDscrptnCdgVrsn(String plnDfnGoalDscrptnCdgVrsn) {
         this.plnDfnGoalDscrptnCdgVrsn = plnDfnGoalDscrptnCdgVrsn;
+    }
+    
+    public void addPlnDfnGoalDscrptnCdgVrsn(String plnDfnGoalDscrptnCdgVrsn) {
+    	if( plnDfnGoalDscrptnCdgVrsn != null ) {
+	    	if( this.plnDfnGoalDscrptnCdgVrsn == null ) {
+	        	this.plnDfnGoalDscrptnCdgVrsn = plnDfnGoalDscrptnCdgVrsn;
+	        } else if(this.plnDfnGoalDscrptnCdgVrsn.substring(this.plnDfnGoalDscrptnCdgVrsn.length() - 1).equals("]") & plnDfnGoalDscrptnCdgVrsn.equals("[")) {
+	        	this.plnDfnGoalDscrptnCdgVrsn = this.plnDfnGoalDscrptnCdgVrsn+ "," + plnDfnGoalDscrptnCdgVrsn;
+	        } else if(plnDfnGoalDscrptnCdgVrsn.equals("[") | plnDfnGoalDscrptnCdgVrsn.equals("]") | this.plnDfnGoalDscrptnCdgVrsn.substring(this.plnDfnGoalDscrptnCdgVrsn.length() - 1).equals("[")) {
+	        	this.plnDfnGoalDscrptnCdgVrsn = this.plnDfnGoalDscrptnCdgVrsn+plnDfnGoalDscrptnCdgVrsn;
+	        } else  {
+	            this.plnDfnGoalDscrptnCdgVrsn = this.plnDfnGoalDscrptnCdgVrsn+ "," +plnDfnGoalDscrptnCdgVrsn;
+	        }
+        }
     }
     
     
@@ -3962,6 +8778,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnGoalDscrptnTxt = plnDfnGoalDscrptnTxt;
     }
     
+    public void addPlnDfnGoalDscrptnTxt(String plnDfnGoalDscrptnTxt) {
+    	if( plnDfnGoalDscrptnTxt != null ) {
+	    	if( this.plnDfnGoalDscrptnTxt == null ) {
+	        	this.plnDfnGoalDscrptnTxt = plnDfnGoalDscrptnTxt;
+	        } else if(this.plnDfnGoalDscrptnTxt.substring(this.plnDfnGoalDscrptnTxt.length() - 1).equals("]") & plnDfnGoalDscrptnTxt.equals("[")) {
+	        	this.plnDfnGoalDscrptnTxt = this.plnDfnGoalDscrptnTxt+ "," + plnDfnGoalDscrptnTxt;
+	        } else if(plnDfnGoalDscrptnTxt.equals("[") | plnDfnGoalDscrptnTxt.equals("]") | this.plnDfnGoalDscrptnTxt.substring(this.plnDfnGoalDscrptnTxt.length() - 1).equals("[")) {
+	        	this.plnDfnGoalDscrptnTxt = this.plnDfnGoalDscrptnTxt+plnDfnGoalDscrptnTxt;
+	        } else  {
+	            this.plnDfnGoalDscrptnTxt = this.plnDfnGoalDscrptnTxt+ "," +plnDfnGoalDscrptnTxt;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnGoalDocationCitation() {
@@ -3970,6 +8800,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnGoalDocationCitation(String plnDfnGoalDocationCitation) {
         this.plnDfnGoalDocationCitation = plnDfnGoalDocationCitation;
+    }
+    
+    public void addPlnDfnGoalDocationCitation(String plnDfnGoalDocationCitation) {
+    	if( plnDfnGoalDocationCitation != null ) {
+	    	if( this.plnDfnGoalDocationCitation == null ) {
+	        	this.plnDfnGoalDocationCitation = plnDfnGoalDocationCitation;
+	        } else if(this.plnDfnGoalDocationCitation.substring(this.plnDfnGoalDocationCitation.length() - 1).equals("]") & plnDfnGoalDocationCitation.equals("[")) {
+	        	this.plnDfnGoalDocationCitation = this.plnDfnGoalDocationCitation+ "," + plnDfnGoalDocationCitation;
+	        } else if(plnDfnGoalDocationCitation.equals("[") | plnDfnGoalDocationCitation.equals("]") | this.plnDfnGoalDocationCitation.substring(this.plnDfnGoalDocationCitation.length() - 1).equals("[")) {
+	        	this.plnDfnGoalDocationCitation = this.plnDfnGoalDocationCitation+plnDfnGoalDocationCitation;
+	        } else  {
+	            this.plnDfnGoalDocationCitation = this.plnDfnGoalDocationCitation+ "," +plnDfnGoalDocationCitation;
+	        }
+        }
     }
     
     
@@ -3982,6 +8826,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnGoalDocationDsply = plnDfnGoalDocationDsply;
     }
     
+    public void addPlnDfnGoalDocationDsply(String plnDfnGoalDocationDsply) {
+    	if( plnDfnGoalDocationDsply != null ) {
+	    	if( this.plnDfnGoalDocationDsply == null ) {
+	        	this.plnDfnGoalDocationDsply = plnDfnGoalDocationDsply;
+	        } else if(this.plnDfnGoalDocationDsply.substring(this.plnDfnGoalDocationDsply.length() - 1).equals("]") & plnDfnGoalDocationDsply.equals("[")) {
+	        	this.plnDfnGoalDocationDsply = this.plnDfnGoalDocationDsply+ "," + plnDfnGoalDocationDsply;
+	        } else if(plnDfnGoalDocationDsply.equals("[") | plnDfnGoalDocationDsply.equals("]") | this.plnDfnGoalDocationDsply.substring(this.plnDfnGoalDocationDsply.length() - 1).equals("[")) {
+	        	this.plnDfnGoalDocationDsply = this.plnDfnGoalDocationDsply+plnDfnGoalDocationDsply;
+	        } else  {
+	            this.plnDfnGoalDocationDsply = this.plnDfnGoalDocationDsply+ "," +plnDfnGoalDocationDsply;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnGoalDocationDocCntntTyp() {
@@ -3990,6 +8848,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnGoalDocationDocCntntTyp(String plnDfnGoalDocationDocCntntTyp) {
         this.plnDfnGoalDocationDocCntntTyp = plnDfnGoalDocationDocCntntTyp;
+    }
+    
+    public void addPlnDfnGoalDocationDocCntntTyp(String plnDfnGoalDocationDocCntntTyp) {
+    	if( plnDfnGoalDocationDocCntntTyp != null ) {
+	    	if( this.plnDfnGoalDocationDocCntntTyp == null ) {
+	        	this.plnDfnGoalDocationDocCntntTyp = plnDfnGoalDocationDocCntntTyp;
+	        } else if(this.plnDfnGoalDocationDocCntntTyp.substring(this.plnDfnGoalDocationDocCntntTyp.length() - 1).equals("]") & plnDfnGoalDocationDocCntntTyp.equals("[")) {
+	        	this.plnDfnGoalDocationDocCntntTyp = this.plnDfnGoalDocationDocCntntTyp+ "," + plnDfnGoalDocationDocCntntTyp;
+	        } else if(plnDfnGoalDocationDocCntntTyp.equals("[") | plnDfnGoalDocationDocCntntTyp.equals("]") | this.plnDfnGoalDocationDocCntntTyp.substring(this.plnDfnGoalDocationDocCntntTyp.length() - 1).equals("[")) {
+	        	this.plnDfnGoalDocationDocCntntTyp = this.plnDfnGoalDocationDocCntntTyp+plnDfnGoalDocationDocCntntTyp;
+	        } else  {
+	            this.plnDfnGoalDocationDocCntntTyp = this.plnDfnGoalDocationDocCntntTyp+ "," +plnDfnGoalDocationDocCntntTyp;
+	        }
+        }
     }
     
     
@@ -4002,6 +8874,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnGoalDocationDocCreation = plnDfnGoalDocationDocCreation;
     }
     
+    public void addPlnDfnGoalDocationDocCreation(String plnDfnGoalDocationDocCreation) {
+    	if( plnDfnGoalDocationDocCreation != null ) {
+	    	if( this.plnDfnGoalDocationDocCreation == null ) {
+	        	this.plnDfnGoalDocationDocCreation = plnDfnGoalDocationDocCreation;
+	        } else if(this.plnDfnGoalDocationDocCreation.substring(this.plnDfnGoalDocationDocCreation.length() - 1).equals("]") & plnDfnGoalDocationDocCreation.equals("[")) {
+	        	this.plnDfnGoalDocationDocCreation = this.plnDfnGoalDocationDocCreation+ "," + plnDfnGoalDocationDocCreation;
+	        } else if(plnDfnGoalDocationDocCreation.equals("[") | plnDfnGoalDocationDocCreation.equals("]") | this.plnDfnGoalDocationDocCreation.substring(this.plnDfnGoalDocationDocCreation.length() - 1).equals("[")) {
+	        	this.plnDfnGoalDocationDocCreation = this.plnDfnGoalDocationDocCreation+plnDfnGoalDocationDocCreation;
+	        } else  {
+	            this.plnDfnGoalDocationDocCreation = this.plnDfnGoalDocationDocCreation+ "," +plnDfnGoalDocationDocCreation;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnGoalDocationDocData() {
@@ -4010,6 +8896,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnGoalDocationDocData(String plnDfnGoalDocationDocData) {
         this.plnDfnGoalDocationDocData = plnDfnGoalDocationDocData;
+    }
+    
+    public void addPlnDfnGoalDocationDocData(String plnDfnGoalDocationDocData) {
+    	if( plnDfnGoalDocationDocData != null ) {
+	    	if( this.plnDfnGoalDocationDocData == null ) {
+	        	this.plnDfnGoalDocationDocData = plnDfnGoalDocationDocData;
+	        } else if(this.plnDfnGoalDocationDocData.substring(this.plnDfnGoalDocationDocData.length() - 1).equals("]") & plnDfnGoalDocationDocData.equals("[")) {
+	        	this.plnDfnGoalDocationDocData = this.plnDfnGoalDocationDocData+ "," + plnDfnGoalDocationDocData;
+	        } else if(plnDfnGoalDocationDocData.equals("[") | plnDfnGoalDocationDocData.equals("]") | this.plnDfnGoalDocationDocData.substring(this.plnDfnGoalDocationDocData.length() - 1).equals("[")) {
+	        	this.plnDfnGoalDocationDocData = this.plnDfnGoalDocationDocData+plnDfnGoalDocationDocData;
+	        } else  {
+	            this.plnDfnGoalDocationDocData = this.plnDfnGoalDocationDocData+ "," +plnDfnGoalDocationDocData;
+	        }
+        }
     }
     
     
@@ -4022,6 +8922,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnGoalDocationDocHash = plnDfnGoalDocationDocHash;
     }
     
+    public void addPlnDfnGoalDocationDocHash(String plnDfnGoalDocationDocHash) {
+    	if( plnDfnGoalDocationDocHash != null ) {
+	    	if( this.plnDfnGoalDocationDocHash == null ) {
+	        	this.plnDfnGoalDocationDocHash = plnDfnGoalDocationDocHash;
+	        } else if(this.plnDfnGoalDocationDocHash.substring(this.plnDfnGoalDocationDocHash.length() - 1).equals("]") & plnDfnGoalDocationDocHash.equals("[")) {
+	        	this.plnDfnGoalDocationDocHash = this.plnDfnGoalDocationDocHash+ "," + plnDfnGoalDocationDocHash;
+	        } else if(plnDfnGoalDocationDocHash.equals("[") | plnDfnGoalDocationDocHash.equals("]") | this.plnDfnGoalDocationDocHash.substring(this.plnDfnGoalDocationDocHash.length() - 1).equals("[")) {
+	        	this.plnDfnGoalDocationDocHash = this.plnDfnGoalDocationDocHash+plnDfnGoalDocationDocHash;
+	        } else  {
+	            this.plnDfnGoalDocationDocHash = this.plnDfnGoalDocationDocHash+ "," +plnDfnGoalDocationDocHash;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnGoalDocationDocLnguage() {
@@ -4030,6 +8944,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnGoalDocationDocLnguage(String plnDfnGoalDocationDocLnguage) {
         this.plnDfnGoalDocationDocLnguage = plnDfnGoalDocationDocLnguage;
+    }
+    
+    public void addPlnDfnGoalDocationDocLnguage(String plnDfnGoalDocationDocLnguage) {
+    	if( plnDfnGoalDocationDocLnguage != null ) {
+	    	if( this.plnDfnGoalDocationDocLnguage == null ) {
+	        	this.plnDfnGoalDocationDocLnguage = plnDfnGoalDocationDocLnguage;
+	        } else if(this.plnDfnGoalDocationDocLnguage.substring(this.plnDfnGoalDocationDocLnguage.length() - 1).equals("]") & plnDfnGoalDocationDocLnguage.equals("[")) {
+	        	this.plnDfnGoalDocationDocLnguage = this.plnDfnGoalDocationDocLnguage+ "," + plnDfnGoalDocationDocLnguage;
+	        } else if(plnDfnGoalDocationDocLnguage.equals("[") | plnDfnGoalDocationDocLnguage.equals("]") | this.plnDfnGoalDocationDocLnguage.substring(this.plnDfnGoalDocationDocLnguage.length() - 1).equals("[")) {
+	        	this.plnDfnGoalDocationDocLnguage = this.plnDfnGoalDocationDocLnguage+plnDfnGoalDocationDocLnguage;
+	        } else  {
+	            this.plnDfnGoalDocationDocLnguage = this.plnDfnGoalDocationDocLnguage+ "," +plnDfnGoalDocationDocLnguage;
+	        }
+        }
     }
     
     
@@ -4042,6 +8970,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnGoalDocationDocSz = plnDfnGoalDocationDocSz;
     }
     
+    public void addPlnDfnGoalDocationDocSz(String plnDfnGoalDocationDocSz) {
+    	if( plnDfnGoalDocationDocSz != null ) {
+	    	if( this.plnDfnGoalDocationDocSz == null ) {
+	        	this.plnDfnGoalDocationDocSz = plnDfnGoalDocationDocSz;
+	        } else if(this.plnDfnGoalDocationDocSz.substring(this.plnDfnGoalDocationDocSz.length() - 1).equals("]") & plnDfnGoalDocationDocSz.equals("[")) {
+	        	this.plnDfnGoalDocationDocSz = this.plnDfnGoalDocationDocSz+ "," + plnDfnGoalDocationDocSz;
+	        } else if(plnDfnGoalDocationDocSz.equals("[") | plnDfnGoalDocationDocSz.equals("]") | this.plnDfnGoalDocationDocSz.substring(this.plnDfnGoalDocationDocSz.length() - 1).equals("[")) {
+	        	this.plnDfnGoalDocationDocSz = this.plnDfnGoalDocationDocSz+plnDfnGoalDocationDocSz;
+	        } else  {
+	            this.plnDfnGoalDocationDocSz = this.plnDfnGoalDocationDocSz+ "," +plnDfnGoalDocationDocSz;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnGoalDocationDocTtl() {
@@ -4050,6 +8992,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnGoalDocationDocTtl(String plnDfnGoalDocationDocTtl) {
         this.plnDfnGoalDocationDocTtl = plnDfnGoalDocationDocTtl;
+    }
+    
+    public void addPlnDfnGoalDocationDocTtl(String plnDfnGoalDocationDocTtl) {
+    	if( plnDfnGoalDocationDocTtl != null ) {
+	    	if( this.plnDfnGoalDocationDocTtl == null ) {
+	        	this.plnDfnGoalDocationDocTtl = plnDfnGoalDocationDocTtl;
+	        } else if(this.plnDfnGoalDocationDocTtl.substring(this.plnDfnGoalDocationDocTtl.length() - 1).equals("]") & plnDfnGoalDocationDocTtl.equals("[")) {
+	        	this.plnDfnGoalDocationDocTtl = this.plnDfnGoalDocationDocTtl+ "," + plnDfnGoalDocationDocTtl;
+	        } else if(plnDfnGoalDocationDocTtl.equals("[") | plnDfnGoalDocationDocTtl.equals("]") | this.plnDfnGoalDocationDocTtl.substring(this.plnDfnGoalDocationDocTtl.length() - 1).equals("[")) {
+	        	this.plnDfnGoalDocationDocTtl = this.plnDfnGoalDocationDocTtl+plnDfnGoalDocationDocTtl;
+	        } else  {
+	            this.plnDfnGoalDocationDocTtl = this.plnDfnGoalDocationDocTtl+ "," +plnDfnGoalDocationDocTtl;
+	        }
+        }
     }
     
     
@@ -4062,6 +9018,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnGoalDocationDocUrl = plnDfnGoalDocationDocUrl;
     }
     
+    public void addPlnDfnGoalDocationDocUrl(String plnDfnGoalDocationDocUrl) {
+    	if( plnDfnGoalDocationDocUrl != null ) {
+	    	if( this.plnDfnGoalDocationDocUrl == null ) {
+	        	this.plnDfnGoalDocationDocUrl = plnDfnGoalDocationDocUrl;
+	        } else if(this.plnDfnGoalDocationDocUrl.substring(this.plnDfnGoalDocationDocUrl.length() - 1).equals("]") & plnDfnGoalDocationDocUrl.equals("[")) {
+	        	this.plnDfnGoalDocationDocUrl = this.plnDfnGoalDocationDocUrl+ "," + plnDfnGoalDocationDocUrl;
+	        } else if(plnDfnGoalDocationDocUrl.equals("[") | plnDfnGoalDocationDocUrl.equals("]") | this.plnDfnGoalDocationDocUrl.substring(this.plnDfnGoalDocationDocUrl.length() - 1).equals("[")) {
+	        	this.plnDfnGoalDocationDocUrl = this.plnDfnGoalDocationDocUrl+plnDfnGoalDocationDocUrl;
+	        } else  {
+	            this.plnDfnGoalDocationDocUrl = this.plnDfnGoalDocationDocUrl+ "," +plnDfnGoalDocationDocUrl;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnGoalDocationLbl() {
@@ -4070,6 +9040,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnGoalDocationLbl(String plnDfnGoalDocationLbl) {
         this.plnDfnGoalDocationLbl = plnDfnGoalDocationLbl;
+    }
+    
+    public void addPlnDfnGoalDocationLbl(String plnDfnGoalDocationLbl) {
+    	if( plnDfnGoalDocationLbl != null ) {
+	    	if( this.plnDfnGoalDocationLbl == null ) {
+	        	this.plnDfnGoalDocationLbl = plnDfnGoalDocationLbl;
+	        } else if(this.plnDfnGoalDocationLbl.substring(this.plnDfnGoalDocationLbl.length() - 1).equals("]") & plnDfnGoalDocationLbl.equals("[")) {
+	        	this.plnDfnGoalDocationLbl = this.plnDfnGoalDocationLbl+ "," + plnDfnGoalDocationLbl;
+	        } else if(plnDfnGoalDocationLbl.equals("[") | plnDfnGoalDocationLbl.equals("]") | this.plnDfnGoalDocationLbl.substring(this.plnDfnGoalDocationLbl.length() - 1).equals("[")) {
+	        	this.plnDfnGoalDocationLbl = this.plnDfnGoalDocationLbl+plnDfnGoalDocationLbl;
+	        } else  {
+	            this.plnDfnGoalDocationLbl = this.plnDfnGoalDocationLbl+ "," +plnDfnGoalDocationLbl;
+	        }
+        }
     }
     
     
@@ -4082,6 +9066,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnGoalDocationRsrc = plnDfnGoalDocationRsrc;
     }
     
+    public void addPlnDfnGoalDocationRsrc(String plnDfnGoalDocationRsrc) {
+    	if( plnDfnGoalDocationRsrc != null ) {
+	    	if( this.plnDfnGoalDocationRsrc == null ) {
+	        	this.plnDfnGoalDocationRsrc = plnDfnGoalDocationRsrc;
+	        } else if(this.plnDfnGoalDocationRsrc.substring(this.plnDfnGoalDocationRsrc.length() - 1).equals("]") & plnDfnGoalDocationRsrc.equals("[")) {
+	        	this.plnDfnGoalDocationRsrc = this.plnDfnGoalDocationRsrc+ "," + plnDfnGoalDocationRsrc;
+	        } else if(plnDfnGoalDocationRsrc.equals("[") | plnDfnGoalDocationRsrc.equals("]") | this.plnDfnGoalDocationRsrc.substring(this.plnDfnGoalDocationRsrc.length() - 1).equals("[")) {
+	        	this.plnDfnGoalDocationRsrc = this.plnDfnGoalDocationRsrc+plnDfnGoalDocationRsrc;
+	        } else  {
+	            this.plnDfnGoalDocationRsrc = this.plnDfnGoalDocationRsrc+ "," +plnDfnGoalDocationRsrc;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnGoalDocationTyp() {
@@ -4090,6 +9088,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnGoalDocationTyp(String plnDfnGoalDocationTyp) {
         this.plnDfnGoalDocationTyp = plnDfnGoalDocationTyp;
+    }
+    
+    public void addPlnDfnGoalDocationTyp(String plnDfnGoalDocationTyp) {
+    	if( plnDfnGoalDocationTyp != null ) {
+	    	if( this.plnDfnGoalDocationTyp == null ) {
+	        	this.plnDfnGoalDocationTyp = plnDfnGoalDocationTyp;
+	        } else if(this.plnDfnGoalDocationTyp.substring(this.plnDfnGoalDocationTyp.length() - 1).equals("]") & plnDfnGoalDocationTyp.equals("[")) {
+	        	this.plnDfnGoalDocationTyp = this.plnDfnGoalDocationTyp+ "," + plnDfnGoalDocationTyp;
+	        } else if(plnDfnGoalDocationTyp.equals("[") | plnDfnGoalDocationTyp.equals("]") | this.plnDfnGoalDocationTyp.substring(this.plnDfnGoalDocationTyp.length() - 1).equals("[")) {
+	        	this.plnDfnGoalDocationTyp = this.plnDfnGoalDocationTyp+plnDfnGoalDocationTyp;
+	        } else  {
+	            this.plnDfnGoalDocationTyp = this.plnDfnGoalDocationTyp+ "," +plnDfnGoalDocationTyp;
+	        }
+        }
     }
     
     
@@ -4102,6 +9114,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnGoalDocationUrl = plnDfnGoalDocationUrl;
     }
     
+    public void addPlnDfnGoalDocationUrl(String plnDfnGoalDocationUrl) {
+    	if( plnDfnGoalDocationUrl != null ) {
+	    	if( this.plnDfnGoalDocationUrl == null ) {
+	        	this.plnDfnGoalDocationUrl = plnDfnGoalDocationUrl;
+	        } else if(this.plnDfnGoalDocationUrl.substring(this.plnDfnGoalDocationUrl.length() - 1).equals("]") & plnDfnGoalDocationUrl.equals("[")) {
+	        	this.plnDfnGoalDocationUrl = this.plnDfnGoalDocationUrl+ "," + plnDfnGoalDocationUrl;
+	        } else if(plnDfnGoalDocationUrl.equals("[") | plnDfnGoalDocationUrl.equals("]") | this.plnDfnGoalDocationUrl.substring(this.plnDfnGoalDocationUrl.length() - 1).equals("[")) {
+	        	this.plnDfnGoalDocationUrl = this.plnDfnGoalDocationUrl+plnDfnGoalDocationUrl;
+	        } else  {
+	            this.plnDfnGoalDocationUrl = this.plnDfnGoalDocationUrl+ "," +plnDfnGoalDocationUrl;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnGoalPriorityCdgCd() {
@@ -4110,6 +9136,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnGoalPriorityCdgCd(String plnDfnGoalPriorityCdgCd) {
         this.plnDfnGoalPriorityCdgCd = plnDfnGoalPriorityCdgCd;
+    }
+    
+    public void addPlnDfnGoalPriorityCdgCd(String plnDfnGoalPriorityCdgCd) {
+    	if( plnDfnGoalPriorityCdgCd != null ) {
+	    	if( this.plnDfnGoalPriorityCdgCd == null ) {
+	        	this.plnDfnGoalPriorityCdgCd = plnDfnGoalPriorityCdgCd;
+	        } else if(this.plnDfnGoalPriorityCdgCd.substring(this.plnDfnGoalPriorityCdgCd.length() - 1).equals("]") & plnDfnGoalPriorityCdgCd.equals("[")) {
+	        	this.plnDfnGoalPriorityCdgCd = this.plnDfnGoalPriorityCdgCd+ "," + plnDfnGoalPriorityCdgCd;
+	        } else if(plnDfnGoalPriorityCdgCd.equals("[") | plnDfnGoalPriorityCdgCd.equals("]") | this.plnDfnGoalPriorityCdgCd.substring(this.plnDfnGoalPriorityCdgCd.length() - 1).equals("[")) {
+	        	this.plnDfnGoalPriorityCdgCd = this.plnDfnGoalPriorityCdgCd+plnDfnGoalPriorityCdgCd;
+	        } else  {
+	            this.plnDfnGoalPriorityCdgCd = this.plnDfnGoalPriorityCdgCd+ "," +plnDfnGoalPriorityCdgCd;
+	        }
+        }
     }
     
     
@@ -4122,6 +9162,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnGoalPriorityCdgDsply = plnDfnGoalPriorityCdgDsply;
     }
     
+    public void addPlnDfnGoalPriorityCdgDsply(String plnDfnGoalPriorityCdgDsply) {
+    	if( plnDfnGoalPriorityCdgDsply != null ) {
+	    	if( this.plnDfnGoalPriorityCdgDsply == null ) {
+	        	this.plnDfnGoalPriorityCdgDsply = plnDfnGoalPriorityCdgDsply;
+	        } else if(this.plnDfnGoalPriorityCdgDsply.substring(this.plnDfnGoalPriorityCdgDsply.length() - 1).equals("]") & plnDfnGoalPriorityCdgDsply.equals("[")) {
+	        	this.plnDfnGoalPriorityCdgDsply = this.plnDfnGoalPriorityCdgDsply+ "," + plnDfnGoalPriorityCdgDsply;
+	        } else if(plnDfnGoalPriorityCdgDsply.equals("[") | plnDfnGoalPriorityCdgDsply.equals("]") | this.plnDfnGoalPriorityCdgDsply.substring(this.plnDfnGoalPriorityCdgDsply.length() - 1).equals("[")) {
+	        	this.plnDfnGoalPriorityCdgDsply = this.plnDfnGoalPriorityCdgDsply+plnDfnGoalPriorityCdgDsply;
+	        } else  {
+	            this.plnDfnGoalPriorityCdgDsply = this.plnDfnGoalPriorityCdgDsply+ "," +plnDfnGoalPriorityCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnGoalPriorityCdgSys() {
@@ -4130,6 +9184,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnGoalPriorityCdgSys(String plnDfnGoalPriorityCdgSys) {
         this.plnDfnGoalPriorityCdgSys = plnDfnGoalPriorityCdgSys;
+    }
+    
+    public void addPlnDfnGoalPriorityCdgSys(String plnDfnGoalPriorityCdgSys) {
+    	if( plnDfnGoalPriorityCdgSys != null ) {
+	    	if( this.plnDfnGoalPriorityCdgSys == null ) {
+	        	this.plnDfnGoalPriorityCdgSys = plnDfnGoalPriorityCdgSys;
+	        } else if(this.plnDfnGoalPriorityCdgSys.substring(this.plnDfnGoalPriorityCdgSys.length() - 1).equals("]") & plnDfnGoalPriorityCdgSys.equals("[")) {
+	        	this.plnDfnGoalPriorityCdgSys = this.plnDfnGoalPriorityCdgSys+ "," + plnDfnGoalPriorityCdgSys;
+	        } else if(plnDfnGoalPriorityCdgSys.equals("[") | plnDfnGoalPriorityCdgSys.equals("]") | this.plnDfnGoalPriorityCdgSys.substring(this.plnDfnGoalPriorityCdgSys.length() - 1).equals("[")) {
+	        	this.plnDfnGoalPriorityCdgSys = this.plnDfnGoalPriorityCdgSys+plnDfnGoalPriorityCdgSys;
+	        } else  {
+	            this.plnDfnGoalPriorityCdgSys = this.plnDfnGoalPriorityCdgSys+ "," +plnDfnGoalPriorityCdgSys;
+	        }
+        }
     }
     
     
@@ -4142,6 +9210,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnGoalPriorityCdgUsrSltd = plnDfnGoalPriorityCdgUsrSltd;
     }
     
+    public void addPlnDfnGoalPriorityCdgUsrSltd(String plnDfnGoalPriorityCdgUsrSltd) {
+    	if( plnDfnGoalPriorityCdgUsrSltd != null ) {
+	    	if( this.plnDfnGoalPriorityCdgUsrSltd == null ) {
+	        	this.plnDfnGoalPriorityCdgUsrSltd = plnDfnGoalPriorityCdgUsrSltd;
+	        } else if(this.plnDfnGoalPriorityCdgUsrSltd.substring(this.plnDfnGoalPriorityCdgUsrSltd.length() - 1).equals("]") & plnDfnGoalPriorityCdgUsrSltd.equals("[")) {
+	        	this.plnDfnGoalPriorityCdgUsrSltd = this.plnDfnGoalPriorityCdgUsrSltd+ "," + plnDfnGoalPriorityCdgUsrSltd;
+	        } else if(plnDfnGoalPriorityCdgUsrSltd.equals("[") | plnDfnGoalPriorityCdgUsrSltd.equals("]") | this.plnDfnGoalPriorityCdgUsrSltd.substring(this.plnDfnGoalPriorityCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.plnDfnGoalPriorityCdgUsrSltd = this.plnDfnGoalPriorityCdgUsrSltd+plnDfnGoalPriorityCdgUsrSltd;
+	        } else  {
+	            this.plnDfnGoalPriorityCdgUsrSltd = this.plnDfnGoalPriorityCdgUsrSltd+ "," +plnDfnGoalPriorityCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnGoalPriorityCdgVrsn() {
@@ -4150,6 +9232,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnGoalPriorityCdgVrsn(String plnDfnGoalPriorityCdgVrsn) {
         this.plnDfnGoalPriorityCdgVrsn = plnDfnGoalPriorityCdgVrsn;
+    }
+    
+    public void addPlnDfnGoalPriorityCdgVrsn(String plnDfnGoalPriorityCdgVrsn) {
+    	if( plnDfnGoalPriorityCdgVrsn != null ) {
+	    	if( this.plnDfnGoalPriorityCdgVrsn == null ) {
+	        	this.plnDfnGoalPriorityCdgVrsn = plnDfnGoalPriorityCdgVrsn;
+	        } else if(this.plnDfnGoalPriorityCdgVrsn.substring(this.plnDfnGoalPriorityCdgVrsn.length() - 1).equals("]") & plnDfnGoalPriorityCdgVrsn.equals("[")) {
+	        	this.plnDfnGoalPriorityCdgVrsn = this.plnDfnGoalPriorityCdgVrsn+ "," + plnDfnGoalPriorityCdgVrsn;
+	        } else if(plnDfnGoalPriorityCdgVrsn.equals("[") | plnDfnGoalPriorityCdgVrsn.equals("]") | this.plnDfnGoalPriorityCdgVrsn.substring(this.plnDfnGoalPriorityCdgVrsn.length() - 1).equals("[")) {
+	        	this.plnDfnGoalPriorityCdgVrsn = this.plnDfnGoalPriorityCdgVrsn+plnDfnGoalPriorityCdgVrsn;
+	        } else  {
+	            this.plnDfnGoalPriorityCdgVrsn = this.plnDfnGoalPriorityCdgVrsn+ "," +plnDfnGoalPriorityCdgVrsn;
+	        }
+        }
     }
     
     
@@ -4162,6 +9258,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnGoalPriorityTxt = plnDfnGoalPriorityTxt;
     }
     
+    public void addPlnDfnGoalPriorityTxt(String plnDfnGoalPriorityTxt) {
+    	if( plnDfnGoalPriorityTxt != null ) {
+	    	if( this.plnDfnGoalPriorityTxt == null ) {
+	        	this.plnDfnGoalPriorityTxt = plnDfnGoalPriorityTxt;
+	        } else if(this.plnDfnGoalPriorityTxt.substring(this.plnDfnGoalPriorityTxt.length() - 1).equals("]") & plnDfnGoalPriorityTxt.equals("[")) {
+	        	this.plnDfnGoalPriorityTxt = this.plnDfnGoalPriorityTxt+ "," + plnDfnGoalPriorityTxt;
+	        } else if(plnDfnGoalPriorityTxt.equals("[") | plnDfnGoalPriorityTxt.equals("]") | this.plnDfnGoalPriorityTxt.substring(this.plnDfnGoalPriorityTxt.length() - 1).equals("[")) {
+	        	this.plnDfnGoalPriorityTxt = this.plnDfnGoalPriorityTxt+plnDfnGoalPriorityTxt;
+	        } else  {
+	            this.plnDfnGoalPriorityTxt = this.plnDfnGoalPriorityTxt+ "," +plnDfnGoalPriorityTxt;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnGoalStrtCdgCd() {
@@ -4170,6 +9280,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnGoalStrtCdgCd(String plnDfnGoalStrtCdgCd) {
         this.plnDfnGoalStrtCdgCd = plnDfnGoalStrtCdgCd;
+    }
+    
+    public void addPlnDfnGoalStrtCdgCd(String plnDfnGoalStrtCdgCd) {
+    	if( plnDfnGoalStrtCdgCd != null ) {
+	    	if( this.plnDfnGoalStrtCdgCd == null ) {
+	        	this.plnDfnGoalStrtCdgCd = plnDfnGoalStrtCdgCd;
+	        } else if(this.plnDfnGoalStrtCdgCd.substring(this.plnDfnGoalStrtCdgCd.length() - 1).equals("]") & plnDfnGoalStrtCdgCd.equals("[")) {
+	        	this.plnDfnGoalStrtCdgCd = this.plnDfnGoalStrtCdgCd+ "," + plnDfnGoalStrtCdgCd;
+	        } else if(plnDfnGoalStrtCdgCd.equals("[") | plnDfnGoalStrtCdgCd.equals("]") | this.plnDfnGoalStrtCdgCd.substring(this.plnDfnGoalStrtCdgCd.length() - 1).equals("[")) {
+	        	this.plnDfnGoalStrtCdgCd = this.plnDfnGoalStrtCdgCd+plnDfnGoalStrtCdgCd;
+	        } else  {
+	            this.plnDfnGoalStrtCdgCd = this.plnDfnGoalStrtCdgCd+ "," +plnDfnGoalStrtCdgCd;
+	        }
+        }
     }
     
     
@@ -4182,6 +9306,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnGoalStrtCdgDsply = plnDfnGoalStrtCdgDsply;
     }
     
+    public void addPlnDfnGoalStrtCdgDsply(String plnDfnGoalStrtCdgDsply) {
+    	if( plnDfnGoalStrtCdgDsply != null ) {
+	    	if( this.plnDfnGoalStrtCdgDsply == null ) {
+	        	this.plnDfnGoalStrtCdgDsply = plnDfnGoalStrtCdgDsply;
+	        } else if(this.plnDfnGoalStrtCdgDsply.substring(this.plnDfnGoalStrtCdgDsply.length() - 1).equals("]") & plnDfnGoalStrtCdgDsply.equals("[")) {
+	        	this.plnDfnGoalStrtCdgDsply = this.plnDfnGoalStrtCdgDsply+ "," + plnDfnGoalStrtCdgDsply;
+	        } else if(plnDfnGoalStrtCdgDsply.equals("[") | plnDfnGoalStrtCdgDsply.equals("]") | this.plnDfnGoalStrtCdgDsply.substring(this.plnDfnGoalStrtCdgDsply.length() - 1).equals("[")) {
+	        	this.plnDfnGoalStrtCdgDsply = this.plnDfnGoalStrtCdgDsply+plnDfnGoalStrtCdgDsply;
+	        } else  {
+	            this.plnDfnGoalStrtCdgDsply = this.plnDfnGoalStrtCdgDsply+ "," +plnDfnGoalStrtCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnGoalStrtCdgSys() {
@@ -4190,6 +9328,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnGoalStrtCdgSys(String plnDfnGoalStrtCdgSys) {
         this.plnDfnGoalStrtCdgSys = plnDfnGoalStrtCdgSys;
+    }
+    
+    public void addPlnDfnGoalStrtCdgSys(String plnDfnGoalStrtCdgSys) {
+    	if( plnDfnGoalStrtCdgSys != null ) {
+	    	if( this.plnDfnGoalStrtCdgSys == null ) {
+	        	this.plnDfnGoalStrtCdgSys = plnDfnGoalStrtCdgSys;
+	        } else if(this.plnDfnGoalStrtCdgSys.substring(this.plnDfnGoalStrtCdgSys.length() - 1).equals("]") & plnDfnGoalStrtCdgSys.equals("[")) {
+	        	this.plnDfnGoalStrtCdgSys = this.plnDfnGoalStrtCdgSys+ "," + plnDfnGoalStrtCdgSys;
+	        } else if(plnDfnGoalStrtCdgSys.equals("[") | plnDfnGoalStrtCdgSys.equals("]") | this.plnDfnGoalStrtCdgSys.substring(this.plnDfnGoalStrtCdgSys.length() - 1).equals("[")) {
+	        	this.plnDfnGoalStrtCdgSys = this.plnDfnGoalStrtCdgSys+plnDfnGoalStrtCdgSys;
+	        } else  {
+	            this.plnDfnGoalStrtCdgSys = this.plnDfnGoalStrtCdgSys+ "," +plnDfnGoalStrtCdgSys;
+	        }
+        }
     }
     
     
@@ -4202,6 +9354,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnGoalStrtCdgUsrSltd = plnDfnGoalStrtCdgUsrSltd;
     }
     
+    public void addPlnDfnGoalStrtCdgUsrSltd(String plnDfnGoalStrtCdgUsrSltd) {
+    	if( plnDfnGoalStrtCdgUsrSltd != null ) {
+	    	if( this.plnDfnGoalStrtCdgUsrSltd == null ) {
+	        	this.plnDfnGoalStrtCdgUsrSltd = plnDfnGoalStrtCdgUsrSltd;
+	        } else if(this.plnDfnGoalStrtCdgUsrSltd.substring(this.plnDfnGoalStrtCdgUsrSltd.length() - 1).equals("]") & plnDfnGoalStrtCdgUsrSltd.equals("[")) {
+	        	this.plnDfnGoalStrtCdgUsrSltd = this.plnDfnGoalStrtCdgUsrSltd+ "," + plnDfnGoalStrtCdgUsrSltd;
+	        } else if(plnDfnGoalStrtCdgUsrSltd.equals("[") | plnDfnGoalStrtCdgUsrSltd.equals("]") | this.plnDfnGoalStrtCdgUsrSltd.substring(this.plnDfnGoalStrtCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.plnDfnGoalStrtCdgUsrSltd = this.plnDfnGoalStrtCdgUsrSltd+plnDfnGoalStrtCdgUsrSltd;
+	        } else  {
+	            this.plnDfnGoalStrtCdgUsrSltd = this.plnDfnGoalStrtCdgUsrSltd+ "," +plnDfnGoalStrtCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnGoalStrtCdgVrsn() {
@@ -4210,6 +9376,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnGoalStrtCdgVrsn(String plnDfnGoalStrtCdgVrsn) {
         this.plnDfnGoalStrtCdgVrsn = plnDfnGoalStrtCdgVrsn;
+    }
+    
+    public void addPlnDfnGoalStrtCdgVrsn(String plnDfnGoalStrtCdgVrsn) {
+    	if( plnDfnGoalStrtCdgVrsn != null ) {
+	    	if( this.plnDfnGoalStrtCdgVrsn == null ) {
+	        	this.plnDfnGoalStrtCdgVrsn = plnDfnGoalStrtCdgVrsn;
+	        } else if(this.plnDfnGoalStrtCdgVrsn.substring(this.plnDfnGoalStrtCdgVrsn.length() - 1).equals("]") & plnDfnGoalStrtCdgVrsn.equals("[")) {
+	        	this.plnDfnGoalStrtCdgVrsn = this.plnDfnGoalStrtCdgVrsn+ "," + plnDfnGoalStrtCdgVrsn;
+	        } else if(plnDfnGoalStrtCdgVrsn.equals("[") | plnDfnGoalStrtCdgVrsn.equals("]") | this.plnDfnGoalStrtCdgVrsn.substring(this.plnDfnGoalStrtCdgVrsn.length() - 1).equals("[")) {
+	        	this.plnDfnGoalStrtCdgVrsn = this.plnDfnGoalStrtCdgVrsn+plnDfnGoalStrtCdgVrsn;
+	        } else  {
+	            this.plnDfnGoalStrtCdgVrsn = this.plnDfnGoalStrtCdgVrsn+ "," +plnDfnGoalStrtCdgVrsn;
+	        }
+        }
     }
     
     
@@ -4222,6 +9402,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnGoalStrtTxt = plnDfnGoalStrtTxt;
     }
     
+    public void addPlnDfnGoalStrtTxt(String plnDfnGoalStrtTxt) {
+    	if( plnDfnGoalStrtTxt != null ) {
+	    	if( this.plnDfnGoalStrtTxt == null ) {
+	        	this.plnDfnGoalStrtTxt = plnDfnGoalStrtTxt;
+	        } else if(this.plnDfnGoalStrtTxt.substring(this.plnDfnGoalStrtTxt.length() - 1).equals("]") & plnDfnGoalStrtTxt.equals("[")) {
+	        	this.plnDfnGoalStrtTxt = this.plnDfnGoalStrtTxt+ "," + plnDfnGoalStrtTxt;
+	        } else if(plnDfnGoalStrtTxt.equals("[") | plnDfnGoalStrtTxt.equals("]") | this.plnDfnGoalStrtTxt.substring(this.plnDfnGoalStrtTxt.length() - 1).equals("[")) {
+	        	this.plnDfnGoalStrtTxt = this.plnDfnGoalStrtTxt+plnDfnGoalStrtTxt;
+	        } else  {
+	            this.plnDfnGoalStrtTxt = this.plnDfnGoalStrtTxt+ "," +plnDfnGoalStrtTxt;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnGoalTarDtlCdbleCncptCdgCd() {
@@ -4230,6 +9424,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnGoalTarDtlCdbleCncptCdgCd(String plnDfnGoalTarDtlCdbleCncptCdgCd) {
         this.plnDfnGoalTarDtlCdbleCncptCdgCd = plnDfnGoalTarDtlCdbleCncptCdgCd;
+    }
+    
+    public void addPlnDfnGoalTarDtlCdbleCncptCdgCd(String plnDfnGoalTarDtlCdbleCncptCdgCd) {
+    	if( plnDfnGoalTarDtlCdbleCncptCdgCd != null ) {
+	    	if( this.plnDfnGoalTarDtlCdbleCncptCdgCd == null ) {
+	        	this.plnDfnGoalTarDtlCdbleCncptCdgCd = plnDfnGoalTarDtlCdbleCncptCdgCd;
+	        } else if(this.plnDfnGoalTarDtlCdbleCncptCdgCd.substring(this.plnDfnGoalTarDtlCdbleCncptCdgCd.length() - 1).equals("]") & plnDfnGoalTarDtlCdbleCncptCdgCd.equals("[")) {
+	        	this.plnDfnGoalTarDtlCdbleCncptCdgCd = this.plnDfnGoalTarDtlCdbleCncptCdgCd+ "," + plnDfnGoalTarDtlCdbleCncptCdgCd;
+	        } else if(plnDfnGoalTarDtlCdbleCncptCdgCd.equals("[") | plnDfnGoalTarDtlCdbleCncptCdgCd.equals("]") | this.plnDfnGoalTarDtlCdbleCncptCdgCd.substring(this.plnDfnGoalTarDtlCdbleCncptCdgCd.length() - 1).equals("[")) {
+	        	this.plnDfnGoalTarDtlCdbleCncptCdgCd = this.plnDfnGoalTarDtlCdbleCncptCdgCd+plnDfnGoalTarDtlCdbleCncptCdgCd;
+	        } else  {
+	            this.plnDfnGoalTarDtlCdbleCncptCdgCd = this.plnDfnGoalTarDtlCdbleCncptCdgCd+ "," +plnDfnGoalTarDtlCdbleCncptCdgCd;
+	        }
+        }
     }
     
     
@@ -4242,6 +9450,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnGoalTarDtlCdbleCncptCdgDsply = plnDfnGoalTarDtlCdbleCncptCdgDsply;
     }
     
+    public void addPlnDfnGoalTarDtlCdbleCncptCdgDsply(String plnDfnGoalTarDtlCdbleCncptCdgDsply) {
+    	if( plnDfnGoalTarDtlCdbleCncptCdgDsply != null ) {
+	    	if( this.plnDfnGoalTarDtlCdbleCncptCdgDsply == null ) {
+	        	this.plnDfnGoalTarDtlCdbleCncptCdgDsply = plnDfnGoalTarDtlCdbleCncptCdgDsply;
+	        } else if(this.plnDfnGoalTarDtlCdbleCncptCdgDsply.substring(this.plnDfnGoalTarDtlCdbleCncptCdgDsply.length() - 1).equals("]") & plnDfnGoalTarDtlCdbleCncptCdgDsply.equals("[")) {
+	        	this.plnDfnGoalTarDtlCdbleCncptCdgDsply = this.plnDfnGoalTarDtlCdbleCncptCdgDsply+ "," + plnDfnGoalTarDtlCdbleCncptCdgDsply;
+	        } else if(plnDfnGoalTarDtlCdbleCncptCdgDsply.equals("[") | plnDfnGoalTarDtlCdbleCncptCdgDsply.equals("]") | this.plnDfnGoalTarDtlCdbleCncptCdgDsply.substring(this.plnDfnGoalTarDtlCdbleCncptCdgDsply.length() - 1).equals("[")) {
+	        	this.plnDfnGoalTarDtlCdbleCncptCdgDsply = this.plnDfnGoalTarDtlCdbleCncptCdgDsply+plnDfnGoalTarDtlCdbleCncptCdgDsply;
+	        } else  {
+	            this.plnDfnGoalTarDtlCdbleCncptCdgDsply = this.plnDfnGoalTarDtlCdbleCncptCdgDsply+ "," +plnDfnGoalTarDtlCdbleCncptCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnGoalTarDtlCdbleCncptCdgSys() {
@@ -4250,6 +9472,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnGoalTarDtlCdbleCncptCdgSys(String plnDfnGoalTarDtlCdbleCncptCdgSys) {
         this.plnDfnGoalTarDtlCdbleCncptCdgSys = plnDfnGoalTarDtlCdbleCncptCdgSys;
+    }
+    
+    public void addPlnDfnGoalTarDtlCdbleCncptCdgSys(String plnDfnGoalTarDtlCdbleCncptCdgSys) {
+    	if( plnDfnGoalTarDtlCdbleCncptCdgSys != null ) {
+	    	if( this.plnDfnGoalTarDtlCdbleCncptCdgSys == null ) {
+	        	this.plnDfnGoalTarDtlCdbleCncptCdgSys = plnDfnGoalTarDtlCdbleCncptCdgSys;
+	        } else if(this.plnDfnGoalTarDtlCdbleCncptCdgSys.substring(this.plnDfnGoalTarDtlCdbleCncptCdgSys.length() - 1).equals("]") & plnDfnGoalTarDtlCdbleCncptCdgSys.equals("[")) {
+	        	this.plnDfnGoalTarDtlCdbleCncptCdgSys = this.plnDfnGoalTarDtlCdbleCncptCdgSys+ "," + plnDfnGoalTarDtlCdbleCncptCdgSys;
+	        } else if(plnDfnGoalTarDtlCdbleCncptCdgSys.equals("[") | plnDfnGoalTarDtlCdbleCncptCdgSys.equals("]") | this.plnDfnGoalTarDtlCdbleCncptCdgSys.substring(this.plnDfnGoalTarDtlCdbleCncptCdgSys.length() - 1).equals("[")) {
+	        	this.plnDfnGoalTarDtlCdbleCncptCdgSys = this.plnDfnGoalTarDtlCdbleCncptCdgSys+plnDfnGoalTarDtlCdbleCncptCdgSys;
+	        } else  {
+	            this.plnDfnGoalTarDtlCdbleCncptCdgSys = this.plnDfnGoalTarDtlCdbleCncptCdgSys+ "," +plnDfnGoalTarDtlCdbleCncptCdgSys;
+	        }
+        }
     }
     
     
@@ -4262,6 +9498,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnGoalTarDtlCdbleCncptCdgUsrSltd = plnDfnGoalTarDtlCdbleCncptCdgUsrSltd;
     }
     
+    public void addPlnDfnGoalTarDtlCdbleCncptCdgUsrSltd(String plnDfnGoalTarDtlCdbleCncptCdgUsrSltd) {
+    	if( plnDfnGoalTarDtlCdbleCncptCdgUsrSltd != null ) {
+	    	if( this.plnDfnGoalTarDtlCdbleCncptCdgUsrSltd == null ) {
+	        	this.plnDfnGoalTarDtlCdbleCncptCdgUsrSltd = plnDfnGoalTarDtlCdbleCncptCdgUsrSltd;
+	        } else if(this.plnDfnGoalTarDtlCdbleCncptCdgUsrSltd.substring(this.plnDfnGoalTarDtlCdbleCncptCdgUsrSltd.length() - 1).equals("]") & plnDfnGoalTarDtlCdbleCncptCdgUsrSltd.equals("[")) {
+	        	this.plnDfnGoalTarDtlCdbleCncptCdgUsrSltd = this.plnDfnGoalTarDtlCdbleCncptCdgUsrSltd+ "," + plnDfnGoalTarDtlCdbleCncptCdgUsrSltd;
+	        } else if(plnDfnGoalTarDtlCdbleCncptCdgUsrSltd.equals("[") | plnDfnGoalTarDtlCdbleCncptCdgUsrSltd.equals("]") | this.plnDfnGoalTarDtlCdbleCncptCdgUsrSltd.substring(this.plnDfnGoalTarDtlCdbleCncptCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.plnDfnGoalTarDtlCdbleCncptCdgUsrSltd = this.plnDfnGoalTarDtlCdbleCncptCdgUsrSltd+plnDfnGoalTarDtlCdbleCncptCdgUsrSltd;
+	        } else  {
+	            this.plnDfnGoalTarDtlCdbleCncptCdgUsrSltd = this.plnDfnGoalTarDtlCdbleCncptCdgUsrSltd+ "," +plnDfnGoalTarDtlCdbleCncptCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnGoalTarDtlCdbleCncptCdgVrsn() {
@@ -4270,6 +9520,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnGoalTarDtlCdbleCncptCdgVrsn(String plnDfnGoalTarDtlCdbleCncptCdgVrsn) {
         this.plnDfnGoalTarDtlCdbleCncptCdgVrsn = plnDfnGoalTarDtlCdbleCncptCdgVrsn;
+    }
+    
+    public void addPlnDfnGoalTarDtlCdbleCncptCdgVrsn(String plnDfnGoalTarDtlCdbleCncptCdgVrsn) {
+    	if( plnDfnGoalTarDtlCdbleCncptCdgVrsn != null ) {
+	    	if( this.plnDfnGoalTarDtlCdbleCncptCdgVrsn == null ) {
+	        	this.plnDfnGoalTarDtlCdbleCncptCdgVrsn = plnDfnGoalTarDtlCdbleCncptCdgVrsn;
+	        } else if(this.plnDfnGoalTarDtlCdbleCncptCdgVrsn.substring(this.plnDfnGoalTarDtlCdbleCncptCdgVrsn.length() - 1).equals("]") & plnDfnGoalTarDtlCdbleCncptCdgVrsn.equals("[")) {
+	        	this.plnDfnGoalTarDtlCdbleCncptCdgVrsn = this.plnDfnGoalTarDtlCdbleCncptCdgVrsn+ "," + plnDfnGoalTarDtlCdbleCncptCdgVrsn;
+	        } else if(plnDfnGoalTarDtlCdbleCncptCdgVrsn.equals("[") | plnDfnGoalTarDtlCdbleCncptCdgVrsn.equals("]") | this.plnDfnGoalTarDtlCdbleCncptCdgVrsn.substring(this.plnDfnGoalTarDtlCdbleCncptCdgVrsn.length() - 1).equals("[")) {
+	        	this.plnDfnGoalTarDtlCdbleCncptCdgVrsn = this.plnDfnGoalTarDtlCdbleCncptCdgVrsn+plnDfnGoalTarDtlCdbleCncptCdgVrsn;
+	        } else  {
+	            this.plnDfnGoalTarDtlCdbleCncptCdgVrsn = this.plnDfnGoalTarDtlCdbleCncptCdgVrsn+ "," +plnDfnGoalTarDtlCdbleCncptCdgVrsn;
+	        }
+        }
     }
     
     
@@ -4282,6 +9546,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnGoalTarDtlCdbleCncptTxt = plnDfnGoalTarDtlCdbleCncptTxt;
     }
     
+    public void addPlnDfnGoalTarDtlCdbleCncptTxt(String plnDfnGoalTarDtlCdbleCncptTxt) {
+    	if( plnDfnGoalTarDtlCdbleCncptTxt != null ) {
+	    	if( this.plnDfnGoalTarDtlCdbleCncptTxt == null ) {
+	        	this.plnDfnGoalTarDtlCdbleCncptTxt = plnDfnGoalTarDtlCdbleCncptTxt;
+	        } else if(this.plnDfnGoalTarDtlCdbleCncptTxt.substring(this.plnDfnGoalTarDtlCdbleCncptTxt.length() - 1).equals("]") & plnDfnGoalTarDtlCdbleCncptTxt.equals("[")) {
+	        	this.plnDfnGoalTarDtlCdbleCncptTxt = this.plnDfnGoalTarDtlCdbleCncptTxt+ "," + plnDfnGoalTarDtlCdbleCncptTxt;
+	        } else if(plnDfnGoalTarDtlCdbleCncptTxt.equals("[") | plnDfnGoalTarDtlCdbleCncptTxt.equals("]") | this.plnDfnGoalTarDtlCdbleCncptTxt.substring(this.plnDfnGoalTarDtlCdbleCncptTxt.length() - 1).equals("[")) {
+	        	this.plnDfnGoalTarDtlCdbleCncptTxt = this.plnDfnGoalTarDtlCdbleCncptTxt+plnDfnGoalTarDtlCdbleCncptTxt;
+	        } else  {
+	            this.plnDfnGoalTarDtlCdbleCncptTxt = this.plnDfnGoalTarDtlCdbleCncptTxt+ "," +plnDfnGoalTarDtlCdbleCncptTxt;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnGoalTarDtlQntyCd() {
@@ -4290,6 +9568,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnGoalTarDtlQntyCd(String plnDfnGoalTarDtlQntyCd) {
         this.plnDfnGoalTarDtlQntyCd = plnDfnGoalTarDtlQntyCd;
+    }
+    
+    public void addPlnDfnGoalTarDtlQntyCd(String plnDfnGoalTarDtlQntyCd) {
+    	if( plnDfnGoalTarDtlQntyCd != null ) {
+	    	if( this.plnDfnGoalTarDtlQntyCd == null ) {
+	        	this.plnDfnGoalTarDtlQntyCd = plnDfnGoalTarDtlQntyCd;
+	        } else if(this.plnDfnGoalTarDtlQntyCd.substring(this.plnDfnGoalTarDtlQntyCd.length() - 1).equals("]") & plnDfnGoalTarDtlQntyCd.equals("[")) {
+	        	this.plnDfnGoalTarDtlQntyCd = this.plnDfnGoalTarDtlQntyCd+ "," + plnDfnGoalTarDtlQntyCd;
+	        } else if(plnDfnGoalTarDtlQntyCd.equals("[") | plnDfnGoalTarDtlQntyCd.equals("]") | this.plnDfnGoalTarDtlQntyCd.substring(this.plnDfnGoalTarDtlQntyCd.length() - 1).equals("[")) {
+	        	this.plnDfnGoalTarDtlQntyCd = this.plnDfnGoalTarDtlQntyCd+plnDfnGoalTarDtlQntyCd;
+	        } else  {
+	            this.plnDfnGoalTarDtlQntyCd = this.plnDfnGoalTarDtlQntyCd+ "," +plnDfnGoalTarDtlQntyCd;
+	        }
+        }
     }
     
     
@@ -4302,6 +9594,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnGoalTarDtlQntyCmprtr = plnDfnGoalTarDtlQntyCmprtr;
     }
     
+    public void addPlnDfnGoalTarDtlQntyCmprtr(String plnDfnGoalTarDtlQntyCmprtr) {
+    	if( plnDfnGoalTarDtlQntyCmprtr != null ) {
+	    	if( this.plnDfnGoalTarDtlQntyCmprtr == null ) {
+	        	this.plnDfnGoalTarDtlQntyCmprtr = plnDfnGoalTarDtlQntyCmprtr;
+	        } else if(this.plnDfnGoalTarDtlQntyCmprtr.substring(this.plnDfnGoalTarDtlQntyCmprtr.length() - 1).equals("]") & plnDfnGoalTarDtlQntyCmprtr.equals("[")) {
+	        	this.plnDfnGoalTarDtlQntyCmprtr = this.plnDfnGoalTarDtlQntyCmprtr+ "," + plnDfnGoalTarDtlQntyCmprtr;
+	        } else if(plnDfnGoalTarDtlQntyCmprtr.equals("[") | plnDfnGoalTarDtlQntyCmprtr.equals("]") | this.plnDfnGoalTarDtlQntyCmprtr.substring(this.plnDfnGoalTarDtlQntyCmprtr.length() - 1).equals("[")) {
+	        	this.plnDfnGoalTarDtlQntyCmprtr = this.plnDfnGoalTarDtlQntyCmprtr+plnDfnGoalTarDtlQntyCmprtr;
+	        } else  {
+	            this.plnDfnGoalTarDtlQntyCmprtr = this.plnDfnGoalTarDtlQntyCmprtr+ "," +plnDfnGoalTarDtlQntyCmprtr;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnGoalTarDtlQntySys() {
@@ -4310,6 +9616,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnGoalTarDtlQntySys(String plnDfnGoalTarDtlQntySys) {
         this.plnDfnGoalTarDtlQntySys = plnDfnGoalTarDtlQntySys;
+    }
+    
+    public void addPlnDfnGoalTarDtlQntySys(String plnDfnGoalTarDtlQntySys) {
+    	if( plnDfnGoalTarDtlQntySys != null ) {
+	    	if( this.plnDfnGoalTarDtlQntySys == null ) {
+	        	this.plnDfnGoalTarDtlQntySys = plnDfnGoalTarDtlQntySys;
+	        } else if(this.plnDfnGoalTarDtlQntySys.substring(this.plnDfnGoalTarDtlQntySys.length() - 1).equals("]") & plnDfnGoalTarDtlQntySys.equals("[")) {
+	        	this.plnDfnGoalTarDtlQntySys = this.plnDfnGoalTarDtlQntySys+ "," + plnDfnGoalTarDtlQntySys;
+	        } else if(plnDfnGoalTarDtlQntySys.equals("[") | plnDfnGoalTarDtlQntySys.equals("]") | this.plnDfnGoalTarDtlQntySys.substring(this.plnDfnGoalTarDtlQntySys.length() - 1).equals("[")) {
+	        	this.plnDfnGoalTarDtlQntySys = this.plnDfnGoalTarDtlQntySys+plnDfnGoalTarDtlQntySys;
+	        } else  {
+	            this.plnDfnGoalTarDtlQntySys = this.plnDfnGoalTarDtlQntySys+ "," +plnDfnGoalTarDtlQntySys;
+	        }
+        }
     }
     
     
@@ -4322,6 +9642,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnGoalTarDtlQntyUnt = plnDfnGoalTarDtlQntyUnt;
     }
     
+    public void addPlnDfnGoalTarDtlQntyUnt(String plnDfnGoalTarDtlQntyUnt) {
+    	if( plnDfnGoalTarDtlQntyUnt != null ) {
+	    	if( this.plnDfnGoalTarDtlQntyUnt == null ) {
+	        	this.plnDfnGoalTarDtlQntyUnt = plnDfnGoalTarDtlQntyUnt;
+	        } else if(this.plnDfnGoalTarDtlQntyUnt.substring(this.plnDfnGoalTarDtlQntyUnt.length() - 1).equals("]") & plnDfnGoalTarDtlQntyUnt.equals("[")) {
+	        	this.plnDfnGoalTarDtlQntyUnt = this.plnDfnGoalTarDtlQntyUnt+ "," + plnDfnGoalTarDtlQntyUnt;
+	        } else if(plnDfnGoalTarDtlQntyUnt.equals("[") | plnDfnGoalTarDtlQntyUnt.equals("]") | this.plnDfnGoalTarDtlQntyUnt.substring(this.plnDfnGoalTarDtlQntyUnt.length() - 1).equals("[")) {
+	        	this.plnDfnGoalTarDtlQntyUnt = this.plnDfnGoalTarDtlQntyUnt+plnDfnGoalTarDtlQntyUnt;
+	        } else  {
+	            this.plnDfnGoalTarDtlQntyUnt = this.plnDfnGoalTarDtlQntyUnt+ "," +plnDfnGoalTarDtlQntyUnt;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnGoalTarDtlQntyVl() {
@@ -4330,6 +9664,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnGoalTarDtlQntyVl(String plnDfnGoalTarDtlQntyVl) {
         this.plnDfnGoalTarDtlQntyVl = plnDfnGoalTarDtlQntyVl;
+    }
+    
+    public void addPlnDfnGoalTarDtlQntyVl(String plnDfnGoalTarDtlQntyVl) {
+    	if( plnDfnGoalTarDtlQntyVl != null ) {
+	    	if( this.plnDfnGoalTarDtlQntyVl == null ) {
+	        	this.plnDfnGoalTarDtlQntyVl = plnDfnGoalTarDtlQntyVl;
+	        } else if(this.plnDfnGoalTarDtlQntyVl.substring(this.plnDfnGoalTarDtlQntyVl.length() - 1).equals("]") & plnDfnGoalTarDtlQntyVl.equals("[")) {
+	        	this.plnDfnGoalTarDtlQntyVl = this.plnDfnGoalTarDtlQntyVl+ "," + plnDfnGoalTarDtlQntyVl;
+	        } else if(plnDfnGoalTarDtlQntyVl.equals("[") | plnDfnGoalTarDtlQntyVl.equals("]") | this.plnDfnGoalTarDtlQntyVl.substring(this.plnDfnGoalTarDtlQntyVl.length() - 1).equals("[")) {
+	        	this.plnDfnGoalTarDtlQntyVl = this.plnDfnGoalTarDtlQntyVl+plnDfnGoalTarDtlQntyVl;
+	        } else  {
+	            this.plnDfnGoalTarDtlQntyVl = this.plnDfnGoalTarDtlQntyVl+ "," +plnDfnGoalTarDtlQntyVl;
+	        }
+        }
     }
     
     
@@ -4342,6 +9690,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnGoalTarDtlRngHiCd = plnDfnGoalTarDtlRngHiCd;
     }
     
+    public void addPlnDfnGoalTarDtlRngHiCd(String plnDfnGoalTarDtlRngHiCd) {
+    	if( plnDfnGoalTarDtlRngHiCd != null ) {
+	    	if( this.plnDfnGoalTarDtlRngHiCd == null ) {
+	        	this.plnDfnGoalTarDtlRngHiCd = plnDfnGoalTarDtlRngHiCd;
+	        } else if(this.plnDfnGoalTarDtlRngHiCd.substring(this.plnDfnGoalTarDtlRngHiCd.length() - 1).equals("]") & plnDfnGoalTarDtlRngHiCd.equals("[")) {
+	        	this.plnDfnGoalTarDtlRngHiCd = this.plnDfnGoalTarDtlRngHiCd+ "," + plnDfnGoalTarDtlRngHiCd;
+	        } else if(plnDfnGoalTarDtlRngHiCd.equals("[") | plnDfnGoalTarDtlRngHiCd.equals("]") | this.plnDfnGoalTarDtlRngHiCd.substring(this.plnDfnGoalTarDtlRngHiCd.length() - 1).equals("[")) {
+	        	this.plnDfnGoalTarDtlRngHiCd = this.plnDfnGoalTarDtlRngHiCd+plnDfnGoalTarDtlRngHiCd;
+	        } else  {
+	            this.plnDfnGoalTarDtlRngHiCd = this.plnDfnGoalTarDtlRngHiCd+ "," +plnDfnGoalTarDtlRngHiCd;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnGoalTarDtlRngHiCmprtr() {
@@ -4350,6 +9712,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnGoalTarDtlRngHiCmprtr(String plnDfnGoalTarDtlRngHiCmprtr) {
         this.plnDfnGoalTarDtlRngHiCmprtr = plnDfnGoalTarDtlRngHiCmprtr;
+    }
+    
+    public void addPlnDfnGoalTarDtlRngHiCmprtr(String plnDfnGoalTarDtlRngHiCmprtr) {
+    	if( plnDfnGoalTarDtlRngHiCmprtr != null ) {
+	    	if( this.plnDfnGoalTarDtlRngHiCmprtr == null ) {
+	        	this.plnDfnGoalTarDtlRngHiCmprtr = plnDfnGoalTarDtlRngHiCmprtr;
+	        } else if(this.plnDfnGoalTarDtlRngHiCmprtr.substring(this.plnDfnGoalTarDtlRngHiCmprtr.length() - 1).equals("]") & plnDfnGoalTarDtlRngHiCmprtr.equals("[")) {
+	        	this.plnDfnGoalTarDtlRngHiCmprtr = this.plnDfnGoalTarDtlRngHiCmprtr+ "," + plnDfnGoalTarDtlRngHiCmprtr;
+	        } else if(plnDfnGoalTarDtlRngHiCmprtr.equals("[") | plnDfnGoalTarDtlRngHiCmprtr.equals("]") | this.plnDfnGoalTarDtlRngHiCmprtr.substring(this.plnDfnGoalTarDtlRngHiCmprtr.length() - 1).equals("[")) {
+	        	this.plnDfnGoalTarDtlRngHiCmprtr = this.plnDfnGoalTarDtlRngHiCmprtr+plnDfnGoalTarDtlRngHiCmprtr;
+	        } else  {
+	            this.plnDfnGoalTarDtlRngHiCmprtr = this.plnDfnGoalTarDtlRngHiCmprtr+ "," +plnDfnGoalTarDtlRngHiCmprtr;
+	        }
+        }
     }
     
     
@@ -4362,6 +9738,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnGoalTarDtlRngHiSys = plnDfnGoalTarDtlRngHiSys;
     }
     
+    public void addPlnDfnGoalTarDtlRngHiSys(String plnDfnGoalTarDtlRngHiSys) {
+    	if( plnDfnGoalTarDtlRngHiSys != null ) {
+	    	if( this.plnDfnGoalTarDtlRngHiSys == null ) {
+	        	this.plnDfnGoalTarDtlRngHiSys = plnDfnGoalTarDtlRngHiSys;
+	        } else if(this.plnDfnGoalTarDtlRngHiSys.substring(this.plnDfnGoalTarDtlRngHiSys.length() - 1).equals("]") & plnDfnGoalTarDtlRngHiSys.equals("[")) {
+	        	this.plnDfnGoalTarDtlRngHiSys = this.plnDfnGoalTarDtlRngHiSys+ "," + plnDfnGoalTarDtlRngHiSys;
+	        } else if(plnDfnGoalTarDtlRngHiSys.equals("[") | plnDfnGoalTarDtlRngHiSys.equals("]") | this.plnDfnGoalTarDtlRngHiSys.substring(this.plnDfnGoalTarDtlRngHiSys.length() - 1).equals("[")) {
+	        	this.plnDfnGoalTarDtlRngHiSys = this.plnDfnGoalTarDtlRngHiSys+plnDfnGoalTarDtlRngHiSys;
+	        } else  {
+	            this.plnDfnGoalTarDtlRngHiSys = this.plnDfnGoalTarDtlRngHiSys+ "," +plnDfnGoalTarDtlRngHiSys;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnGoalTarDtlRngHiUnt() {
@@ -4370,6 +9760,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnGoalTarDtlRngHiUnt(String plnDfnGoalTarDtlRngHiUnt) {
         this.plnDfnGoalTarDtlRngHiUnt = plnDfnGoalTarDtlRngHiUnt;
+    }
+    
+    public void addPlnDfnGoalTarDtlRngHiUnt(String plnDfnGoalTarDtlRngHiUnt) {
+    	if( plnDfnGoalTarDtlRngHiUnt != null ) {
+	    	if( this.plnDfnGoalTarDtlRngHiUnt == null ) {
+	        	this.plnDfnGoalTarDtlRngHiUnt = plnDfnGoalTarDtlRngHiUnt;
+	        } else if(this.plnDfnGoalTarDtlRngHiUnt.substring(this.plnDfnGoalTarDtlRngHiUnt.length() - 1).equals("]") & plnDfnGoalTarDtlRngHiUnt.equals("[")) {
+	        	this.plnDfnGoalTarDtlRngHiUnt = this.plnDfnGoalTarDtlRngHiUnt+ "," + plnDfnGoalTarDtlRngHiUnt;
+	        } else if(plnDfnGoalTarDtlRngHiUnt.equals("[") | plnDfnGoalTarDtlRngHiUnt.equals("]") | this.plnDfnGoalTarDtlRngHiUnt.substring(this.plnDfnGoalTarDtlRngHiUnt.length() - 1).equals("[")) {
+	        	this.plnDfnGoalTarDtlRngHiUnt = this.plnDfnGoalTarDtlRngHiUnt+plnDfnGoalTarDtlRngHiUnt;
+	        } else  {
+	            this.plnDfnGoalTarDtlRngHiUnt = this.plnDfnGoalTarDtlRngHiUnt+ "," +plnDfnGoalTarDtlRngHiUnt;
+	        }
+        }
     }
     
     
@@ -4382,6 +9786,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnGoalTarDtlRngHiVl = plnDfnGoalTarDtlRngHiVl;
     }
     
+    public void addPlnDfnGoalTarDtlRngHiVl(String plnDfnGoalTarDtlRngHiVl) {
+    	if( plnDfnGoalTarDtlRngHiVl != null ) {
+	    	if( this.plnDfnGoalTarDtlRngHiVl == null ) {
+	        	this.plnDfnGoalTarDtlRngHiVl = plnDfnGoalTarDtlRngHiVl;
+	        } else if(this.plnDfnGoalTarDtlRngHiVl.substring(this.plnDfnGoalTarDtlRngHiVl.length() - 1).equals("]") & plnDfnGoalTarDtlRngHiVl.equals("[")) {
+	        	this.plnDfnGoalTarDtlRngHiVl = this.plnDfnGoalTarDtlRngHiVl+ "," + plnDfnGoalTarDtlRngHiVl;
+	        } else if(plnDfnGoalTarDtlRngHiVl.equals("[") | plnDfnGoalTarDtlRngHiVl.equals("]") | this.plnDfnGoalTarDtlRngHiVl.substring(this.plnDfnGoalTarDtlRngHiVl.length() - 1).equals("[")) {
+	        	this.plnDfnGoalTarDtlRngHiVl = this.plnDfnGoalTarDtlRngHiVl+plnDfnGoalTarDtlRngHiVl;
+	        } else  {
+	            this.plnDfnGoalTarDtlRngHiVl = this.plnDfnGoalTarDtlRngHiVl+ "," +plnDfnGoalTarDtlRngHiVl;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnGoalTarDtlRngLwCd() {
@@ -4390,6 +9808,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnGoalTarDtlRngLwCd(String plnDfnGoalTarDtlRngLwCd) {
         this.plnDfnGoalTarDtlRngLwCd = plnDfnGoalTarDtlRngLwCd;
+    }
+    
+    public void addPlnDfnGoalTarDtlRngLwCd(String plnDfnGoalTarDtlRngLwCd) {
+    	if( plnDfnGoalTarDtlRngLwCd != null ) {
+	    	if( this.plnDfnGoalTarDtlRngLwCd == null ) {
+	        	this.plnDfnGoalTarDtlRngLwCd = plnDfnGoalTarDtlRngLwCd;
+	        } else if(this.plnDfnGoalTarDtlRngLwCd.substring(this.plnDfnGoalTarDtlRngLwCd.length() - 1).equals("]") & plnDfnGoalTarDtlRngLwCd.equals("[")) {
+	        	this.plnDfnGoalTarDtlRngLwCd = this.plnDfnGoalTarDtlRngLwCd+ "," + plnDfnGoalTarDtlRngLwCd;
+	        } else if(plnDfnGoalTarDtlRngLwCd.equals("[") | plnDfnGoalTarDtlRngLwCd.equals("]") | this.plnDfnGoalTarDtlRngLwCd.substring(this.plnDfnGoalTarDtlRngLwCd.length() - 1).equals("[")) {
+	        	this.plnDfnGoalTarDtlRngLwCd = this.plnDfnGoalTarDtlRngLwCd+plnDfnGoalTarDtlRngLwCd;
+	        } else  {
+	            this.plnDfnGoalTarDtlRngLwCd = this.plnDfnGoalTarDtlRngLwCd+ "," +plnDfnGoalTarDtlRngLwCd;
+	        }
+        }
     }
     
     
@@ -4402,6 +9834,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnGoalTarDtlRngLwCmprtr = plnDfnGoalTarDtlRngLwCmprtr;
     }
     
+    public void addPlnDfnGoalTarDtlRngLwCmprtr(String plnDfnGoalTarDtlRngLwCmprtr) {
+    	if( plnDfnGoalTarDtlRngLwCmprtr != null ) {
+	    	if( this.plnDfnGoalTarDtlRngLwCmprtr == null ) {
+	        	this.plnDfnGoalTarDtlRngLwCmprtr = plnDfnGoalTarDtlRngLwCmprtr;
+	        } else if(this.plnDfnGoalTarDtlRngLwCmprtr.substring(this.plnDfnGoalTarDtlRngLwCmprtr.length() - 1).equals("]") & plnDfnGoalTarDtlRngLwCmprtr.equals("[")) {
+	        	this.plnDfnGoalTarDtlRngLwCmprtr = this.plnDfnGoalTarDtlRngLwCmprtr+ "," + plnDfnGoalTarDtlRngLwCmprtr;
+	        } else if(plnDfnGoalTarDtlRngLwCmprtr.equals("[") | plnDfnGoalTarDtlRngLwCmprtr.equals("]") | this.plnDfnGoalTarDtlRngLwCmprtr.substring(this.plnDfnGoalTarDtlRngLwCmprtr.length() - 1).equals("[")) {
+	        	this.plnDfnGoalTarDtlRngLwCmprtr = this.plnDfnGoalTarDtlRngLwCmprtr+plnDfnGoalTarDtlRngLwCmprtr;
+	        } else  {
+	            this.plnDfnGoalTarDtlRngLwCmprtr = this.plnDfnGoalTarDtlRngLwCmprtr+ "," +plnDfnGoalTarDtlRngLwCmprtr;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnGoalTarDtlRngLwSys() {
@@ -4410,6 +9856,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnGoalTarDtlRngLwSys(String plnDfnGoalTarDtlRngLwSys) {
         this.plnDfnGoalTarDtlRngLwSys = plnDfnGoalTarDtlRngLwSys;
+    }
+    
+    public void addPlnDfnGoalTarDtlRngLwSys(String plnDfnGoalTarDtlRngLwSys) {
+    	if( plnDfnGoalTarDtlRngLwSys != null ) {
+	    	if( this.plnDfnGoalTarDtlRngLwSys == null ) {
+	        	this.plnDfnGoalTarDtlRngLwSys = plnDfnGoalTarDtlRngLwSys;
+	        } else if(this.plnDfnGoalTarDtlRngLwSys.substring(this.plnDfnGoalTarDtlRngLwSys.length() - 1).equals("]") & plnDfnGoalTarDtlRngLwSys.equals("[")) {
+	        	this.plnDfnGoalTarDtlRngLwSys = this.plnDfnGoalTarDtlRngLwSys+ "," + plnDfnGoalTarDtlRngLwSys;
+	        } else if(plnDfnGoalTarDtlRngLwSys.equals("[") | plnDfnGoalTarDtlRngLwSys.equals("]") | this.plnDfnGoalTarDtlRngLwSys.substring(this.plnDfnGoalTarDtlRngLwSys.length() - 1).equals("[")) {
+	        	this.plnDfnGoalTarDtlRngLwSys = this.plnDfnGoalTarDtlRngLwSys+plnDfnGoalTarDtlRngLwSys;
+	        } else  {
+	            this.plnDfnGoalTarDtlRngLwSys = this.plnDfnGoalTarDtlRngLwSys+ "," +plnDfnGoalTarDtlRngLwSys;
+	        }
+        }
     }
     
     
@@ -4422,6 +9882,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnGoalTarDtlRngLwUnt = plnDfnGoalTarDtlRngLwUnt;
     }
     
+    public void addPlnDfnGoalTarDtlRngLwUnt(String plnDfnGoalTarDtlRngLwUnt) {
+    	if( plnDfnGoalTarDtlRngLwUnt != null ) {
+	    	if( this.plnDfnGoalTarDtlRngLwUnt == null ) {
+	        	this.plnDfnGoalTarDtlRngLwUnt = plnDfnGoalTarDtlRngLwUnt;
+	        } else if(this.plnDfnGoalTarDtlRngLwUnt.substring(this.plnDfnGoalTarDtlRngLwUnt.length() - 1).equals("]") & plnDfnGoalTarDtlRngLwUnt.equals("[")) {
+	        	this.plnDfnGoalTarDtlRngLwUnt = this.plnDfnGoalTarDtlRngLwUnt+ "," + plnDfnGoalTarDtlRngLwUnt;
+	        } else if(plnDfnGoalTarDtlRngLwUnt.equals("[") | plnDfnGoalTarDtlRngLwUnt.equals("]") | this.plnDfnGoalTarDtlRngLwUnt.substring(this.plnDfnGoalTarDtlRngLwUnt.length() - 1).equals("[")) {
+	        	this.plnDfnGoalTarDtlRngLwUnt = this.plnDfnGoalTarDtlRngLwUnt+plnDfnGoalTarDtlRngLwUnt;
+	        } else  {
+	            this.plnDfnGoalTarDtlRngLwUnt = this.plnDfnGoalTarDtlRngLwUnt+ "," +plnDfnGoalTarDtlRngLwUnt;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnGoalTarDtlRngLwVl() {
@@ -4430,6 +9904,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnGoalTarDtlRngLwVl(String plnDfnGoalTarDtlRngLwVl) {
         this.plnDfnGoalTarDtlRngLwVl = plnDfnGoalTarDtlRngLwVl;
+    }
+    
+    public void addPlnDfnGoalTarDtlRngLwVl(String plnDfnGoalTarDtlRngLwVl) {
+    	if( plnDfnGoalTarDtlRngLwVl != null ) {
+	    	if( this.plnDfnGoalTarDtlRngLwVl == null ) {
+	        	this.plnDfnGoalTarDtlRngLwVl = plnDfnGoalTarDtlRngLwVl;
+	        } else if(this.plnDfnGoalTarDtlRngLwVl.substring(this.plnDfnGoalTarDtlRngLwVl.length() - 1).equals("]") & plnDfnGoalTarDtlRngLwVl.equals("[")) {
+	        	this.plnDfnGoalTarDtlRngLwVl = this.plnDfnGoalTarDtlRngLwVl+ "," + plnDfnGoalTarDtlRngLwVl;
+	        } else if(plnDfnGoalTarDtlRngLwVl.equals("[") | plnDfnGoalTarDtlRngLwVl.equals("]") | this.plnDfnGoalTarDtlRngLwVl.substring(this.plnDfnGoalTarDtlRngLwVl.length() - 1).equals("[")) {
+	        	this.plnDfnGoalTarDtlRngLwVl = this.plnDfnGoalTarDtlRngLwVl+plnDfnGoalTarDtlRngLwVl;
+	        } else  {
+	            this.plnDfnGoalTarDtlRngLwVl = this.plnDfnGoalTarDtlRngLwVl+ "," +plnDfnGoalTarDtlRngLwVl;
+	        }
+        }
     }
     
     
@@ -4442,6 +9930,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnGoalTarDueCd = plnDfnGoalTarDueCd;
     }
     
+    public void addPlnDfnGoalTarDueCd(String plnDfnGoalTarDueCd) {
+    	if( plnDfnGoalTarDueCd != null ) {
+	    	if( this.plnDfnGoalTarDueCd == null ) {
+	        	this.plnDfnGoalTarDueCd = plnDfnGoalTarDueCd;
+	        } else if(this.plnDfnGoalTarDueCd.substring(this.plnDfnGoalTarDueCd.length() - 1).equals("]") & plnDfnGoalTarDueCd.equals("[")) {
+	        	this.plnDfnGoalTarDueCd = this.plnDfnGoalTarDueCd+ "," + plnDfnGoalTarDueCd;
+	        } else if(plnDfnGoalTarDueCd.equals("[") | plnDfnGoalTarDueCd.equals("]") | this.plnDfnGoalTarDueCd.substring(this.plnDfnGoalTarDueCd.length() - 1).equals("[")) {
+	        	this.plnDfnGoalTarDueCd = this.plnDfnGoalTarDueCd+plnDfnGoalTarDueCd;
+	        } else  {
+	            this.plnDfnGoalTarDueCd = this.plnDfnGoalTarDueCd+ "," +plnDfnGoalTarDueCd;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnGoalTarDueCmprtr() {
@@ -4450,6 +9952,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnGoalTarDueCmprtr(String plnDfnGoalTarDueCmprtr) {
         this.plnDfnGoalTarDueCmprtr = plnDfnGoalTarDueCmprtr;
+    }
+    
+    public void addPlnDfnGoalTarDueCmprtr(String plnDfnGoalTarDueCmprtr) {
+    	if( plnDfnGoalTarDueCmprtr != null ) {
+	    	if( this.plnDfnGoalTarDueCmprtr == null ) {
+	        	this.plnDfnGoalTarDueCmprtr = plnDfnGoalTarDueCmprtr;
+	        } else if(this.plnDfnGoalTarDueCmprtr.substring(this.plnDfnGoalTarDueCmprtr.length() - 1).equals("]") & plnDfnGoalTarDueCmprtr.equals("[")) {
+	        	this.plnDfnGoalTarDueCmprtr = this.plnDfnGoalTarDueCmprtr+ "," + plnDfnGoalTarDueCmprtr;
+	        } else if(plnDfnGoalTarDueCmprtr.equals("[") | plnDfnGoalTarDueCmprtr.equals("]") | this.plnDfnGoalTarDueCmprtr.substring(this.plnDfnGoalTarDueCmprtr.length() - 1).equals("[")) {
+	        	this.plnDfnGoalTarDueCmprtr = this.plnDfnGoalTarDueCmprtr+plnDfnGoalTarDueCmprtr;
+	        } else  {
+	            this.plnDfnGoalTarDueCmprtr = this.plnDfnGoalTarDueCmprtr+ "," +plnDfnGoalTarDueCmprtr;
+	        }
+        }
     }
     
     
@@ -4462,6 +9978,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnGoalTarDueSys = plnDfnGoalTarDueSys;
     }
     
+    public void addPlnDfnGoalTarDueSys(String plnDfnGoalTarDueSys) {
+    	if( plnDfnGoalTarDueSys != null ) {
+	    	if( this.plnDfnGoalTarDueSys == null ) {
+	        	this.plnDfnGoalTarDueSys = plnDfnGoalTarDueSys;
+	        } else if(this.plnDfnGoalTarDueSys.substring(this.plnDfnGoalTarDueSys.length() - 1).equals("]") & plnDfnGoalTarDueSys.equals("[")) {
+	        	this.plnDfnGoalTarDueSys = this.plnDfnGoalTarDueSys+ "," + plnDfnGoalTarDueSys;
+	        } else if(plnDfnGoalTarDueSys.equals("[") | plnDfnGoalTarDueSys.equals("]") | this.plnDfnGoalTarDueSys.substring(this.plnDfnGoalTarDueSys.length() - 1).equals("[")) {
+	        	this.plnDfnGoalTarDueSys = this.plnDfnGoalTarDueSys+plnDfnGoalTarDueSys;
+	        } else  {
+	            this.plnDfnGoalTarDueSys = this.plnDfnGoalTarDueSys+ "," +plnDfnGoalTarDueSys;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnGoalTarDueUnt() {
@@ -4470,6 +10000,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnGoalTarDueUnt(String plnDfnGoalTarDueUnt) {
         this.plnDfnGoalTarDueUnt = plnDfnGoalTarDueUnt;
+    }
+    
+    public void addPlnDfnGoalTarDueUnt(String plnDfnGoalTarDueUnt) {
+    	if( plnDfnGoalTarDueUnt != null ) {
+	    	if( this.plnDfnGoalTarDueUnt == null ) {
+	        	this.plnDfnGoalTarDueUnt = plnDfnGoalTarDueUnt;
+	        } else if(this.plnDfnGoalTarDueUnt.substring(this.plnDfnGoalTarDueUnt.length() - 1).equals("]") & plnDfnGoalTarDueUnt.equals("[")) {
+	        	this.plnDfnGoalTarDueUnt = this.plnDfnGoalTarDueUnt+ "," + plnDfnGoalTarDueUnt;
+	        } else if(plnDfnGoalTarDueUnt.equals("[") | plnDfnGoalTarDueUnt.equals("]") | this.plnDfnGoalTarDueUnt.substring(this.plnDfnGoalTarDueUnt.length() - 1).equals("[")) {
+	        	this.plnDfnGoalTarDueUnt = this.plnDfnGoalTarDueUnt+plnDfnGoalTarDueUnt;
+	        } else  {
+	            this.plnDfnGoalTarDueUnt = this.plnDfnGoalTarDueUnt+ "," +plnDfnGoalTarDueUnt;
+	        }
+        }
     }
     
     
@@ -4482,6 +10026,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnGoalTarDueVl = plnDfnGoalTarDueVl;
     }
     
+    public void addPlnDfnGoalTarDueVl(String plnDfnGoalTarDueVl) {
+    	if( plnDfnGoalTarDueVl != null ) {
+	    	if( this.plnDfnGoalTarDueVl == null ) {
+	        	this.plnDfnGoalTarDueVl = plnDfnGoalTarDueVl;
+	        } else if(this.plnDfnGoalTarDueVl.substring(this.plnDfnGoalTarDueVl.length() - 1).equals("]") & plnDfnGoalTarDueVl.equals("[")) {
+	        	this.plnDfnGoalTarDueVl = this.plnDfnGoalTarDueVl+ "," + plnDfnGoalTarDueVl;
+	        } else if(plnDfnGoalTarDueVl.equals("[") | plnDfnGoalTarDueVl.equals("]") | this.plnDfnGoalTarDueVl.substring(this.plnDfnGoalTarDueVl.length() - 1).equals("[")) {
+	        	this.plnDfnGoalTarDueVl = this.plnDfnGoalTarDueVl+plnDfnGoalTarDueVl;
+	        } else  {
+	            this.plnDfnGoalTarDueVl = this.plnDfnGoalTarDueVl+ "," +plnDfnGoalTarDueVl;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnGoalTarMsrCdgCd() {
@@ -4490,6 +10048,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnGoalTarMsrCdgCd(String plnDfnGoalTarMsrCdgCd) {
         this.plnDfnGoalTarMsrCdgCd = plnDfnGoalTarMsrCdgCd;
+    }
+    
+    public void addPlnDfnGoalTarMsrCdgCd(String plnDfnGoalTarMsrCdgCd) {
+    	if( plnDfnGoalTarMsrCdgCd != null ) {
+	    	if( this.plnDfnGoalTarMsrCdgCd == null ) {
+	        	this.plnDfnGoalTarMsrCdgCd = plnDfnGoalTarMsrCdgCd;
+	        } else if(this.plnDfnGoalTarMsrCdgCd.substring(this.plnDfnGoalTarMsrCdgCd.length() - 1).equals("]") & plnDfnGoalTarMsrCdgCd.equals("[")) {
+	        	this.plnDfnGoalTarMsrCdgCd = this.plnDfnGoalTarMsrCdgCd+ "," + plnDfnGoalTarMsrCdgCd;
+	        } else if(plnDfnGoalTarMsrCdgCd.equals("[") | plnDfnGoalTarMsrCdgCd.equals("]") | this.plnDfnGoalTarMsrCdgCd.substring(this.plnDfnGoalTarMsrCdgCd.length() - 1).equals("[")) {
+	        	this.plnDfnGoalTarMsrCdgCd = this.plnDfnGoalTarMsrCdgCd+plnDfnGoalTarMsrCdgCd;
+	        } else  {
+	            this.plnDfnGoalTarMsrCdgCd = this.plnDfnGoalTarMsrCdgCd+ "," +plnDfnGoalTarMsrCdgCd;
+	        }
+        }
     }
     
     
@@ -4502,6 +10074,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnGoalTarMsrCdgDsply = plnDfnGoalTarMsrCdgDsply;
     }
     
+    public void addPlnDfnGoalTarMsrCdgDsply(String plnDfnGoalTarMsrCdgDsply) {
+    	if( plnDfnGoalTarMsrCdgDsply != null ) {
+	    	if( this.plnDfnGoalTarMsrCdgDsply == null ) {
+	        	this.plnDfnGoalTarMsrCdgDsply = plnDfnGoalTarMsrCdgDsply;
+	        } else if(this.plnDfnGoalTarMsrCdgDsply.substring(this.plnDfnGoalTarMsrCdgDsply.length() - 1).equals("]") & plnDfnGoalTarMsrCdgDsply.equals("[")) {
+	        	this.plnDfnGoalTarMsrCdgDsply = this.plnDfnGoalTarMsrCdgDsply+ "," + plnDfnGoalTarMsrCdgDsply;
+	        } else if(plnDfnGoalTarMsrCdgDsply.equals("[") | plnDfnGoalTarMsrCdgDsply.equals("]") | this.plnDfnGoalTarMsrCdgDsply.substring(this.plnDfnGoalTarMsrCdgDsply.length() - 1).equals("[")) {
+	        	this.plnDfnGoalTarMsrCdgDsply = this.plnDfnGoalTarMsrCdgDsply+plnDfnGoalTarMsrCdgDsply;
+	        } else  {
+	            this.plnDfnGoalTarMsrCdgDsply = this.plnDfnGoalTarMsrCdgDsply+ "," +plnDfnGoalTarMsrCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnGoalTarMsrCdgSys() {
@@ -4510,6 +10096,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnGoalTarMsrCdgSys(String plnDfnGoalTarMsrCdgSys) {
         this.plnDfnGoalTarMsrCdgSys = plnDfnGoalTarMsrCdgSys;
+    }
+    
+    public void addPlnDfnGoalTarMsrCdgSys(String plnDfnGoalTarMsrCdgSys) {
+    	if( plnDfnGoalTarMsrCdgSys != null ) {
+	    	if( this.plnDfnGoalTarMsrCdgSys == null ) {
+	        	this.plnDfnGoalTarMsrCdgSys = plnDfnGoalTarMsrCdgSys;
+	        } else if(this.plnDfnGoalTarMsrCdgSys.substring(this.plnDfnGoalTarMsrCdgSys.length() - 1).equals("]") & plnDfnGoalTarMsrCdgSys.equals("[")) {
+	        	this.plnDfnGoalTarMsrCdgSys = this.plnDfnGoalTarMsrCdgSys+ "," + plnDfnGoalTarMsrCdgSys;
+	        } else if(plnDfnGoalTarMsrCdgSys.equals("[") | plnDfnGoalTarMsrCdgSys.equals("]") | this.plnDfnGoalTarMsrCdgSys.substring(this.plnDfnGoalTarMsrCdgSys.length() - 1).equals("[")) {
+	        	this.plnDfnGoalTarMsrCdgSys = this.plnDfnGoalTarMsrCdgSys+plnDfnGoalTarMsrCdgSys;
+	        } else  {
+	            this.plnDfnGoalTarMsrCdgSys = this.plnDfnGoalTarMsrCdgSys+ "," +plnDfnGoalTarMsrCdgSys;
+	        }
+        }
     }
     
     
@@ -4522,6 +10122,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnGoalTarMsrCdgUsrSltd = plnDfnGoalTarMsrCdgUsrSltd;
     }
     
+    public void addPlnDfnGoalTarMsrCdgUsrSltd(String plnDfnGoalTarMsrCdgUsrSltd) {
+    	if( plnDfnGoalTarMsrCdgUsrSltd != null ) {
+	    	if( this.plnDfnGoalTarMsrCdgUsrSltd == null ) {
+	        	this.plnDfnGoalTarMsrCdgUsrSltd = plnDfnGoalTarMsrCdgUsrSltd;
+	        } else if(this.plnDfnGoalTarMsrCdgUsrSltd.substring(this.plnDfnGoalTarMsrCdgUsrSltd.length() - 1).equals("]") & plnDfnGoalTarMsrCdgUsrSltd.equals("[")) {
+	        	this.plnDfnGoalTarMsrCdgUsrSltd = this.plnDfnGoalTarMsrCdgUsrSltd+ "," + plnDfnGoalTarMsrCdgUsrSltd;
+	        } else if(plnDfnGoalTarMsrCdgUsrSltd.equals("[") | plnDfnGoalTarMsrCdgUsrSltd.equals("]") | this.plnDfnGoalTarMsrCdgUsrSltd.substring(this.plnDfnGoalTarMsrCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.plnDfnGoalTarMsrCdgUsrSltd = this.plnDfnGoalTarMsrCdgUsrSltd+plnDfnGoalTarMsrCdgUsrSltd;
+	        } else  {
+	            this.plnDfnGoalTarMsrCdgUsrSltd = this.plnDfnGoalTarMsrCdgUsrSltd+ "," +plnDfnGoalTarMsrCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnGoalTarMsrCdgVrsn() {
@@ -4530,6 +10144,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnGoalTarMsrCdgVrsn(String plnDfnGoalTarMsrCdgVrsn) {
         this.plnDfnGoalTarMsrCdgVrsn = plnDfnGoalTarMsrCdgVrsn;
+    }
+    
+    public void addPlnDfnGoalTarMsrCdgVrsn(String plnDfnGoalTarMsrCdgVrsn) {
+    	if( plnDfnGoalTarMsrCdgVrsn != null ) {
+	    	if( this.plnDfnGoalTarMsrCdgVrsn == null ) {
+	        	this.plnDfnGoalTarMsrCdgVrsn = plnDfnGoalTarMsrCdgVrsn;
+	        } else if(this.plnDfnGoalTarMsrCdgVrsn.substring(this.plnDfnGoalTarMsrCdgVrsn.length() - 1).equals("]") & plnDfnGoalTarMsrCdgVrsn.equals("[")) {
+	        	this.plnDfnGoalTarMsrCdgVrsn = this.plnDfnGoalTarMsrCdgVrsn+ "," + plnDfnGoalTarMsrCdgVrsn;
+	        } else if(plnDfnGoalTarMsrCdgVrsn.equals("[") | plnDfnGoalTarMsrCdgVrsn.equals("]") | this.plnDfnGoalTarMsrCdgVrsn.substring(this.plnDfnGoalTarMsrCdgVrsn.length() - 1).equals("[")) {
+	        	this.plnDfnGoalTarMsrCdgVrsn = this.plnDfnGoalTarMsrCdgVrsn+plnDfnGoalTarMsrCdgVrsn;
+	        } else  {
+	            this.plnDfnGoalTarMsrCdgVrsn = this.plnDfnGoalTarMsrCdgVrsn+ "," +plnDfnGoalTarMsrCdgVrsn;
+	        }
+        }
     }
     
     
@@ -4542,6 +10170,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnGoalTarMsrTxt = plnDfnGoalTarMsrTxt;
     }
     
+    public void addPlnDfnGoalTarMsrTxt(String plnDfnGoalTarMsrTxt) {
+    	if( plnDfnGoalTarMsrTxt != null ) {
+	    	if( this.plnDfnGoalTarMsrTxt == null ) {
+	        	this.plnDfnGoalTarMsrTxt = plnDfnGoalTarMsrTxt;
+	        } else if(this.plnDfnGoalTarMsrTxt.substring(this.plnDfnGoalTarMsrTxt.length() - 1).equals("]") & plnDfnGoalTarMsrTxt.equals("[")) {
+	        	this.plnDfnGoalTarMsrTxt = this.plnDfnGoalTarMsrTxt+ "," + plnDfnGoalTarMsrTxt;
+	        } else if(plnDfnGoalTarMsrTxt.equals("[") | plnDfnGoalTarMsrTxt.equals("]") | this.plnDfnGoalTarMsrTxt.substring(this.plnDfnGoalTarMsrTxt.length() - 1).equals("[")) {
+	        	this.plnDfnGoalTarMsrTxt = this.plnDfnGoalTarMsrTxt+plnDfnGoalTarMsrTxt;
+	        } else  {
+	            this.plnDfnGoalTarMsrTxt = this.plnDfnGoalTarMsrTxt+ "," +plnDfnGoalTarMsrTxt;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnIdAssigner() {
@@ -4550,6 +10192,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnIdAssigner(String plnDfnIdAssigner) {
         this.plnDfnIdAssigner = plnDfnIdAssigner;
+    }
+    
+    public void addPlnDfnIdAssigner(String plnDfnIdAssigner) {
+    	if( plnDfnIdAssigner != null ) {
+	    	if( this.plnDfnIdAssigner == null ) {
+	        	this.plnDfnIdAssigner = plnDfnIdAssigner;
+	        } else if(this.plnDfnIdAssigner.substring(this.plnDfnIdAssigner.length() - 1).equals("]") & plnDfnIdAssigner.equals("[")) {
+	        	this.plnDfnIdAssigner = this.plnDfnIdAssigner+ "," + plnDfnIdAssigner;
+	        } else if(plnDfnIdAssigner.equals("[") | plnDfnIdAssigner.equals("]") | this.plnDfnIdAssigner.substring(this.plnDfnIdAssigner.length() - 1).equals("[")) {
+	        	this.plnDfnIdAssigner = this.plnDfnIdAssigner+plnDfnIdAssigner;
+	        } else  {
+	            this.plnDfnIdAssigner = this.plnDfnIdAssigner+ "," +plnDfnIdAssigner;
+	        }
+        }
     }
     
     
@@ -4562,6 +10218,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnIdPrdEnd = plnDfnIdPrdEnd;
     }
     
+    public void addPlnDfnIdPrdEnd(String plnDfnIdPrdEnd) {
+    	if( plnDfnIdPrdEnd != null ) {
+	    	if( this.plnDfnIdPrdEnd == null ) {
+	        	this.plnDfnIdPrdEnd = plnDfnIdPrdEnd;
+	        } else if(this.plnDfnIdPrdEnd.substring(this.plnDfnIdPrdEnd.length() - 1).equals("]") & plnDfnIdPrdEnd.equals("[")) {
+	        	this.plnDfnIdPrdEnd = this.plnDfnIdPrdEnd+ "," + plnDfnIdPrdEnd;
+	        } else if(plnDfnIdPrdEnd.equals("[") | plnDfnIdPrdEnd.equals("]") | this.plnDfnIdPrdEnd.substring(this.plnDfnIdPrdEnd.length() - 1).equals("[")) {
+	        	this.plnDfnIdPrdEnd = this.plnDfnIdPrdEnd+plnDfnIdPrdEnd;
+	        } else  {
+	            this.plnDfnIdPrdEnd = this.plnDfnIdPrdEnd+ "," +plnDfnIdPrdEnd;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnIdPrdStrt() {
@@ -4570,6 +10240,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnIdPrdStrt(String plnDfnIdPrdStrt) {
         this.plnDfnIdPrdStrt = plnDfnIdPrdStrt;
+    }
+    
+    public void addPlnDfnIdPrdStrt(String plnDfnIdPrdStrt) {
+    	if( plnDfnIdPrdStrt != null ) {
+	    	if( this.plnDfnIdPrdStrt == null ) {
+	        	this.plnDfnIdPrdStrt = plnDfnIdPrdStrt;
+	        } else if(this.plnDfnIdPrdStrt.substring(this.plnDfnIdPrdStrt.length() - 1).equals("]") & plnDfnIdPrdStrt.equals("[")) {
+	        	this.plnDfnIdPrdStrt = this.plnDfnIdPrdStrt+ "," + plnDfnIdPrdStrt;
+	        } else if(plnDfnIdPrdStrt.equals("[") | plnDfnIdPrdStrt.equals("]") | this.plnDfnIdPrdStrt.substring(this.plnDfnIdPrdStrt.length() - 1).equals("[")) {
+	        	this.plnDfnIdPrdStrt = this.plnDfnIdPrdStrt+plnDfnIdPrdStrt;
+	        } else  {
+	            this.plnDfnIdPrdStrt = this.plnDfnIdPrdStrt+ "," +plnDfnIdPrdStrt;
+	        }
+        }
     }
     
     
@@ -4582,6 +10266,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnIdSys = plnDfnIdSys;
     }
     
+    public void addPlnDfnIdSys(String plnDfnIdSys) {
+    	if( plnDfnIdSys != null ) {
+	    	if( this.plnDfnIdSys == null ) {
+	        	this.plnDfnIdSys = plnDfnIdSys;
+	        } else if(this.plnDfnIdSys.substring(this.plnDfnIdSys.length() - 1).equals("]") & plnDfnIdSys.equals("[")) {
+	        	this.plnDfnIdSys = this.plnDfnIdSys+ "," + plnDfnIdSys;
+	        } else if(plnDfnIdSys.equals("[") | plnDfnIdSys.equals("]") | this.plnDfnIdSys.substring(this.plnDfnIdSys.length() - 1).equals("[")) {
+	        	this.plnDfnIdSys = this.plnDfnIdSys+plnDfnIdSys;
+	        } else  {
+	            this.plnDfnIdSys = this.plnDfnIdSys+ "," +plnDfnIdSys;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnIdTypCdgCd() {
@@ -4590,6 +10288,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnIdTypCdgCd(String plnDfnIdTypCdgCd) {
         this.plnDfnIdTypCdgCd = plnDfnIdTypCdgCd;
+    }
+    
+    public void addPlnDfnIdTypCdgCd(String plnDfnIdTypCdgCd) {
+    	if( plnDfnIdTypCdgCd != null ) {
+	    	if( this.plnDfnIdTypCdgCd == null ) {
+	        	this.plnDfnIdTypCdgCd = plnDfnIdTypCdgCd;
+	        } else if(this.plnDfnIdTypCdgCd.substring(this.plnDfnIdTypCdgCd.length() - 1).equals("]") & plnDfnIdTypCdgCd.equals("[")) {
+	        	this.plnDfnIdTypCdgCd = this.plnDfnIdTypCdgCd+ "," + plnDfnIdTypCdgCd;
+	        } else if(plnDfnIdTypCdgCd.equals("[") | plnDfnIdTypCdgCd.equals("]") | this.plnDfnIdTypCdgCd.substring(this.plnDfnIdTypCdgCd.length() - 1).equals("[")) {
+	        	this.plnDfnIdTypCdgCd = this.plnDfnIdTypCdgCd+plnDfnIdTypCdgCd;
+	        } else  {
+	            this.plnDfnIdTypCdgCd = this.plnDfnIdTypCdgCd+ "," +plnDfnIdTypCdgCd;
+	        }
+        }
     }
     
     
@@ -4602,6 +10314,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnIdTypCdgDsply = plnDfnIdTypCdgDsply;
     }
     
+    public void addPlnDfnIdTypCdgDsply(String plnDfnIdTypCdgDsply) {
+    	if( plnDfnIdTypCdgDsply != null ) {
+	    	if( this.plnDfnIdTypCdgDsply == null ) {
+	        	this.plnDfnIdTypCdgDsply = plnDfnIdTypCdgDsply;
+	        } else if(this.plnDfnIdTypCdgDsply.substring(this.plnDfnIdTypCdgDsply.length() - 1).equals("]") & plnDfnIdTypCdgDsply.equals("[")) {
+	        	this.plnDfnIdTypCdgDsply = this.plnDfnIdTypCdgDsply+ "," + plnDfnIdTypCdgDsply;
+	        } else if(plnDfnIdTypCdgDsply.equals("[") | plnDfnIdTypCdgDsply.equals("]") | this.plnDfnIdTypCdgDsply.substring(this.plnDfnIdTypCdgDsply.length() - 1).equals("[")) {
+	        	this.plnDfnIdTypCdgDsply = this.plnDfnIdTypCdgDsply+plnDfnIdTypCdgDsply;
+	        } else  {
+	            this.plnDfnIdTypCdgDsply = this.plnDfnIdTypCdgDsply+ "," +plnDfnIdTypCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnIdTypCdgSys() {
@@ -4610,6 +10336,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnIdTypCdgSys(String plnDfnIdTypCdgSys) {
         this.plnDfnIdTypCdgSys = plnDfnIdTypCdgSys;
+    }
+    
+    public void addPlnDfnIdTypCdgSys(String plnDfnIdTypCdgSys) {
+    	if( plnDfnIdTypCdgSys != null ) {
+	    	if( this.plnDfnIdTypCdgSys == null ) {
+	        	this.plnDfnIdTypCdgSys = plnDfnIdTypCdgSys;
+	        } else if(this.plnDfnIdTypCdgSys.substring(this.plnDfnIdTypCdgSys.length() - 1).equals("]") & plnDfnIdTypCdgSys.equals("[")) {
+	        	this.plnDfnIdTypCdgSys = this.plnDfnIdTypCdgSys+ "," + plnDfnIdTypCdgSys;
+	        } else if(plnDfnIdTypCdgSys.equals("[") | plnDfnIdTypCdgSys.equals("]") | this.plnDfnIdTypCdgSys.substring(this.plnDfnIdTypCdgSys.length() - 1).equals("[")) {
+	        	this.plnDfnIdTypCdgSys = this.plnDfnIdTypCdgSys+plnDfnIdTypCdgSys;
+	        } else  {
+	            this.plnDfnIdTypCdgSys = this.plnDfnIdTypCdgSys+ "," +plnDfnIdTypCdgSys;
+	        }
+        }
     }
     
     
@@ -4622,6 +10362,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnIdTypCdgUsrSltd = plnDfnIdTypCdgUsrSltd;
     }
     
+    public void addPlnDfnIdTypCdgUsrSltd(String plnDfnIdTypCdgUsrSltd) {
+    	if( plnDfnIdTypCdgUsrSltd != null ) {
+	    	if( this.plnDfnIdTypCdgUsrSltd == null ) {
+	        	this.plnDfnIdTypCdgUsrSltd = plnDfnIdTypCdgUsrSltd;
+	        } else if(this.plnDfnIdTypCdgUsrSltd.substring(this.plnDfnIdTypCdgUsrSltd.length() - 1).equals("]") & plnDfnIdTypCdgUsrSltd.equals("[")) {
+	        	this.plnDfnIdTypCdgUsrSltd = this.plnDfnIdTypCdgUsrSltd+ "," + plnDfnIdTypCdgUsrSltd;
+	        } else if(plnDfnIdTypCdgUsrSltd.equals("[") | plnDfnIdTypCdgUsrSltd.equals("]") | this.plnDfnIdTypCdgUsrSltd.substring(this.plnDfnIdTypCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.plnDfnIdTypCdgUsrSltd = this.plnDfnIdTypCdgUsrSltd+plnDfnIdTypCdgUsrSltd;
+	        } else  {
+	            this.plnDfnIdTypCdgUsrSltd = this.plnDfnIdTypCdgUsrSltd+ "," +plnDfnIdTypCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnIdTypCdgVrsn() {
@@ -4630,6 +10384,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnIdTypCdgVrsn(String plnDfnIdTypCdgVrsn) {
         this.plnDfnIdTypCdgVrsn = plnDfnIdTypCdgVrsn;
+    }
+    
+    public void addPlnDfnIdTypCdgVrsn(String plnDfnIdTypCdgVrsn) {
+    	if( plnDfnIdTypCdgVrsn != null ) {
+	    	if( this.plnDfnIdTypCdgVrsn == null ) {
+	        	this.plnDfnIdTypCdgVrsn = plnDfnIdTypCdgVrsn;
+	        } else if(this.plnDfnIdTypCdgVrsn.substring(this.plnDfnIdTypCdgVrsn.length() - 1).equals("]") & plnDfnIdTypCdgVrsn.equals("[")) {
+	        	this.plnDfnIdTypCdgVrsn = this.plnDfnIdTypCdgVrsn+ "," + plnDfnIdTypCdgVrsn;
+	        } else if(plnDfnIdTypCdgVrsn.equals("[") | plnDfnIdTypCdgVrsn.equals("]") | this.plnDfnIdTypCdgVrsn.substring(this.plnDfnIdTypCdgVrsn.length() - 1).equals("[")) {
+	        	this.plnDfnIdTypCdgVrsn = this.plnDfnIdTypCdgVrsn+plnDfnIdTypCdgVrsn;
+	        } else  {
+	            this.plnDfnIdTypCdgVrsn = this.plnDfnIdTypCdgVrsn+ "," +plnDfnIdTypCdgVrsn;
+	        }
+        }
     }
     
     
@@ -4642,6 +10410,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnIdTypTxt = plnDfnIdTypTxt;
     }
     
+    public void addPlnDfnIdTypTxt(String plnDfnIdTypTxt) {
+    	if( plnDfnIdTypTxt != null ) {
+	    	if( this.plnDfnIdTypTxt == null ) {
+	        	this.plnDfnIdTypTxt = plnDfnIdTypTxt;
+	        } else if(this.plnDfnIdTypTxt.substring(this.plnDfnIdTypTxt.length() - 1).equals("]") & plnDfnIdTypTxt.equals("[")) {
+	        	this.plnDfnIdTypTxt = this.plnDfnIdTypTxt+ "," + plnDfnIdTypTxt;
+	        } else if(plnDfnIdTypTxt.equals("[") | plnDfnIdTypTxt.equals("]") | this.plnDfnIdTypTxt.substring(this.plnDfnIdTypTxt.length() - 1).equals("[")) {
+	        	this.plnDfnIdTypTxt = this.plnDfnIdTypTxt+plnDfnIdTypTxt;
+	        } else  {
+	            this.plnDfnIdTypTxt = this.plnDfnIdTypTxt+ "," +plnDfnIdTypTxt;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnIdUse() {
@@ -4650,6 +10432,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnIdUse(String plnDfnIdUse) {
         this.plnDfnIdUse = plnDfnIdUse;
+    }
+    
+    public void addPlnDfnIdUse(String plnDfnIdUse) {
+    	if( plnDfnIdUse != null ) {
+	    	if( this.plnDfnIdUse == null ) {
+	        	this.plnDfnIdUse = plnDfnIdUse;
+	        } else if(this.plnDfnIdUse.substring(this.plnDfnIdUse.length() - 1).equals("]") & plnDfnIdUse.equals("[")) {
+	        	this.plnDfnIdUse = this.plnDfnIdUse+ "," + plnDfnIdUse;
+	        } else if(plnDfnIdUse.equals("[") | plnDfnIdUse.equals("]") | this.plnDfnIdUse.substring(this.plnDfnIdUse.length() - 1).equals("[")) {
+	        	this.plnDfnIdUse = this.plnDfnIdUse+plnDfnIdUse;
+	        } else  {
+	            this.plnDfnIdUse = this.plnDfnIdUse+ "," +plnDfnIdUse;
+	        }
+        }
     }
     
     
@@ -4662,6 +10458,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnIdVl = plnDfnIdVl;
     }
     
+    public void addPlnDfnIdVl(String plnDfnIdVl) {
+    	if( plnDfnIdVl != null ) {
+	    	if( this.plnDfnIdVl == null ) {
+	        	this.plnDfnIdVl = plnDfnIdVl;
+	        } else if(this.plnDfnIdVl.substring(this.plnDfnIdVl.length() - 1).equals("]") & plnDfnIdVl.equals("[")) {
+	        	this.plnDfnIdVl = this.plnDfnIdVl+ "," + plnDfnIdVl;
+	        } else if(plnDfnIdVl.equals("[") | plnDfnIdVl.equals("]") | this.plnDfnIdVl.substring(this.plnDfnIdVl.length() - 1).equals("[")) {
+	        	this.plnDfnIdVl = this.plnDfnIdVl+plnDfnIdVl;
+	        } else  {
+	            this.plnDfnIdVl = this.plnDfnIdVl+ "," +plnDfnIdVl;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnJrsdctnCdgCd() {
@@ -4670,6 +10480,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnJrsdctnCdgCd(String plnDfnJrsdctnCdgCd) {
         this.plnDfnJrsdctnCdgCd = plnDfnJrsdctnCdgCd;
+    }
+    
+    public void addPlnDfnJrsdctnCdgCd(String plnDfnJrsdctnCdgCd) {
+    	if( plnDfnJrsdctnCdgCd != null ) {
+	    	if( this.plnDfnJrsdctnCdgCd == null ) {
+	        	this.plnDfnJrsdctnCdgCd = plnDfnJrsdctnCdgCd;
+	        } else if(this.plnDfnJrsdctnCdgCd.substring(this.plnDfnJrsdctnCdgCd.length() - 1).equals("]") & plnDfnJrsdctnCdgCd.equals("[")) {
+	        	this.plnDfnJrsdctnCdgCd = this.plnDfnJrsdctnCdgCd+ "," + plnDfnJrsdctnCdgCd;
+	        } else if(plnDfnJrsdctnCdgCd.equals("[") | plnDfnJrsdctnCdgCd.equals("]") | this.plnDfnJrsdctnCdgCd.substring(this.plnDfnJrsdctnCdgCd.length() - 1).equals("[")) {
+	        	this.plnDfnJrsdctnCdgCd = this.plnDfnJrsdctnCdgCd+plnDfnJrsdctnCdgCd;
+	        } else  {
+	            this.plnDfnJrsdctnCdgCd = this.plnDfnJrsdctnCdgCd+ "," +plnDfnJrsdctnCdgCd;
+	        }
+        }
     }
     
     
@@ -4682,6 +10506,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnJrsdctnCdgDsply = plnDfnJrsdctnCdgDsply;
     }
     
+    public void addPlnDfnJrsdctnCdgDsply(String plnDfnJrsdctnCdgDsply) {
+    	if( plnDfnJrsdctnCdgDsply != null ) {
+	    	if( this.plnDfnJrsdctnCdgDsply == null ) {
+	        	this.plnDfnJrsdctnCdgDsply = plnDfnJrsdctnCdgDsply;
+	        } else if(this.plnDfnJrsdctnCdgDsply.substring(this.plnDfnJrsdctnCdgDsply.length() - 1).equals("]") & plnDfnJrsdctnCdgDsply.equals("[")) {
+	        	this.plnDfnJrsdctnCdgDsply = this.plnDfnJrsdctnCdgDsply+ "," + plnDfnJrsdctnCdgDsply;
+	        } else if(plnDfnJrsdctnCdgDsply.equals("[") | plnDfnJrsdctnCdgDsply.equals("]") | this.plnDfnJrsdctnCdgDsply.substring(this.plnDfnJrsdctnCdgDsply.length() - 1).equals("[")) {
+	        	this.plnDfnJrsdctnCdgDsply = this.plnDfnJrsdctnCdgDsply+plnDfnJrsdctnCdgDsply;
+	        } else  {
+	            this.plnDfnJrsdctnCdgDsply = this.plnDfnJrsdctnCdgDsply+ "," +plnDfnJrsdctnCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnJrsdctnCdgSys() {
@@ -4690,6 +10528,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnJrsdctnCdgSys(String plnDfnJrsdctnCdgSys) {
         this.plnDfnJrsdctnCdgSys = plnDfnJrsdctnCdgSys;
+    }
+    
+    public void addPlnDfnJrsdctnCdgSys(String plnDfnJrsdctnCdgSys) {
+    	if( plnDfnJrsdctnCdgSys != null ) {
+	    	if( this.plnDfnJrsdctnCdgSys == null ) {
+	        	this.plnDfnJrsdctnCdgSys = plnDfnJrsdctnCdgSys;
+	        } else if(this.plnDfnJrsdctnCdgSys.substring(this.plnDfnJrsdctnCdgSys.length() - 1).equals("]") & plnDfnJrsdctnCdgSys.equals("[")) {
+	        	this.plnDfnJrsdctnCdgSys = this.plnDfnJrsdctnCdgSys+ "," + plnDfnJrsdctnCdgSys;
+	        } else if(plnDfnJrsdctnCdgSys.equals("[") | plnDfnJrsdctnCdgSys.equals("]") | this.plnDfnJrsdctnCdgSys.substring(this.plnDfnJrsdctnCdgSys.length() - 1).equals("[")) {
+	        	this.plnDfnJrsdctnCdgSys = this.plnDfnJrsdctnCdgSys+plnDfnJrsdctnCdgSys;
+	        } else  {
+	            this.plnDfnJrsdctnCdgSys = this.plnDfnJrsdctnCdgSys+ "," +plnDfnJrsdctnCdgSys;
+	        }
+        }
     }
     
     
@@ -4702,6 +10554,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnJrsdctnCdgUsrSltd = plnDfnJrsdctnCdgUsrSltd;
     }
     
+    public void addPlnDfnJrsdctnCdgUsrSltd(String plnDfnJrsdctnCdgUsrSltd) {
+    	if( plnDfnJrsdctnCdgUsrSltd != null ) {
+	    	if( this.plnDfnJrsdctnCdgUsrSltd == null ) {
+	        	this.plnDfnJrsdctnCdgUsrSltd = plnDfnJrsdctnCdgUsrSltd;
+	        } else if(this.plnDfnJrsdctnCdgUsrSltd.substring(this.plnDfnJrsdctnCdgUsrSltd.length() - 1).equals("]") & plnDfnJrsdctnCdgUsrSltd.equals("[")) {
+	        	this.plnDfnJrsdctnCdgUsrSltd = this.plnDfnJrsdctnCdgUsrSltd+ "," + plnDfnJrsdctnCdgUsrSltd;
+	        } else if(plnDfnJrsdctnCdgUsrSltd.equals("[") | plnDfnJrsdctnCdgUsrSltd.equals("]") | this.plnDfnJrsdctnCdgUsrSltd.substring(this.plnDfnJrsdctnCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.plnDfnJrsdctnCdgUsrSltd = this.plnDfnJrsdctnCdgUsrSltd+plnDfnJrsdctnCdgUsrSltd;
+	        } else  {
+	            this.plnDfnJrsdctnCdgUsrSltd = this.plnDfnJrsdctnCdgUsrSltd+ "," +plnDfnJrsdctnCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnJrsdctnCdgVrsn() {
@@ -4710,6 +10576,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnJrsdctnCdgVrsn(String plnDfnJrsdctnCdgVrsn) {
         this.plnDfnJrsdctnCdgVrsn = plnDfnJrsdctnCdgVrsn;
+    }
+    
+    public void addPlnDfnJrsdctnCdgVrsn(String plnDfnJrsdctnCdgVrsn) {
+    	if( plnDfnJrsdctnCdgVrsn != null ) {
+	    	if( this.plnDfnJrsdctnCdgVrsn == null ) {
+	        	this.plnDfnJrsdctnCdgVrsn = plnDfnJrsdctnCdgVrsn;
+	        } else if(this.plnDfnJrsdctnCdgVrsn.substring(this.plnDfnJrsdctnCdgVrsn.length() - 1).equals("]") & plnDfnJrsdctnCdgVrsn.equals("[")) {
+	        	this.plnDfnJrsdctnCdgVrsn = this.plnDfnJrsdctnCdgVrsn+ "," + plnDfnJrsdctnCdgVrsn;
+	        } else if(plnDfnJrsdctnCdgVrsn.equals("[") | plnDfnJrsdctnCdgVrsn.equals("]") | this.plnDfnJrsdctnCdgVrsn.substring(this.plnDfnJrsdctnCdgVrsn.length() - 1).equals("[")) {
+	        	this.plnDfnJrsdctnCdgVrsn = this.plnDfnJrsdctnCdgVrsn+plnDfnJrsdctnCdgVrsn;
+	        } else  {
+	            this.plnDfnJrsdctnCdgVrsn = this.plnDfnJrsdctnCdgVrsn+ "," +plnDfnJrsdctnCdgVrsn;
+	        }
+        }
     }
     
     
@@ -4722,6 +10602,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnJrsdctnTxt = plnDfnJrsdctnTxt;
     }
     
+    public void addPlnDfnJrsdctnTxt(String plnDfnJrsdctnTxt) {
+    	if( plnDfnJrsdctnTxt != null ) {
+	    	if( this.plnDfnJrsdctnTxt == null ) {
+	        	this.plnDfnJrsdctnTxt = plnDfnJrsdctnTxt;
+	        } else if(this.plnDfnJrsdctnTxt.substring(this.plnDfnJrsdctnTxt.length() - 1).equals("]") & plnDfnJrsdctnTxt.equals("[")) {
+	        	this.plnDfnJrsdctnTxt = this.plnDfnJrsdctnTxt+ "," + plnDfnJrsdctnTxt;
+	        } else if(plnDfnJrsdctnTxt.equals("[") | plnDfnJrsdctnTxt.equals("]") | this.plnDfnJrsdctnTxt.substring(this.plnDfnJrsdctnTxt.length() - 1).equals("[")) {
+	        	this.plnDfnJrsdctnTxt = this.plnDfnJrsdctnTxt+plnDfnJrsdctnTxt;
+	        } else  {
+	            this.plnDfnJrsdctnTxt = this.plnDfnJrsdctnTxt+ "," +plnDfnJrsdctnTxt;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnLastReviewDt() {
@@ -4730,6 +10624,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnLastReviewDt(String plnDfnLastReviewDt) {
         this.plnDfnLastReviewDt = plnDfnLastReviewDt;
+    }
+    
+    public void addPlnDfnLastReviewDt(String plnDfnLastReviewDt) {
+    	if( plnDfnLastReviewDt != null ) {
+	    	if( this.plnDfnLastReviewDt == null ) {
+	        	this.plnDfnLastReviewDt = plnDfnLastReviewDt;
+	        } else if(this.plnDfnLastReviewDt.substring(this.plnDfnLastReviewDt.length() - 1).equals("]") & plnDfnLastReviewDt.equals("[")) {
+	        	this.plnDfnLastReviewDt = this.plnDfnLastReviewDt+ "," + plnDfnLastReviewDt;
+	        } else if(plnDfnLastReviewDt.equals("[") | plnDfnLastReviewDt.equals("]") | this.plnDfnLastReviewDt.substring(this.plnDfnLastReviewDt.length() - 1).equals("[")) {
+	        	this.plnDfnLastReviewDt = this.plnDfnLastReviewDt+plnDfnLastReviewDt;
+	        } else  {
+	            this.plnDfnLastReviewDt = this.plnDfnLastReviewDt+ "," +plnDfnLastReviewDt;
+	        }
+        }
     }
     
     
@@ -4742,6 +10650,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnLibrary = plnDfnLibrary;
     }
     
+    public void addPlnDfnLibrary(String plnDfnLibrary) {
+    	if( plnDfnLibrary != null ) {
+	    	if( this.plnDfnLibrary == null ) {
+	        	this.plnDfnLibrary = plnDfnLibrary;
+	        } else if(this.plnDfnLibrary.substring(this.plnDfnLibrary.length() - 1).equals("]") & plnDfnLibrary.equals("[")) {
+	        	this.plnDfnLibrary = this.plnDfnLibrary+ "," + plnDfnLibrary;
+	        } else if(plnDfnLibrary.equals("[") | plnDfnLibrary.equals("]") | this.plnDfnLibrary.substring(this.plnDfnLibrary.length() - 1).equals("[")) {
+	        	this.plnDfnLibrary = this.plnDfnLibrary+plnDfnLibrary;
+	        } else  {
+	            this.plnDfnLibrary = this.plnDfnLibrary+ "," +plnDfnLibrary;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnNm() {
@@ -4750,6 +10672,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnNm(String plnDfnNm) {
         this.plnDfnNm = plnDfnNm;
+    }
+    
+    public void addPlnDfnNm(String plnDfnNm) {
+    	if( plnDfnNm != null ) {
+	    	if( this.plnDfnNm == null ) {
+	        	this.plnDfnNm = plnDfnNm;
+	        } else if(this.plnDfnNm.substring(this.plnDfnNm.length() - 1).equals("]") & plnDfnNm.equals("[")) {
+	        	this.plnDfnNm = this.plnDfnNm+ "," + plnDfnNm;
+	        } else if(plnDfnNm.equals("[") | plnDfnNm.equals("]") | this.plnDfnNm.substring(this.plnDfnNm.length() - 1).equals("[")) {
+	        	this.plnDfnNm = this.plnDfnNm+plnDfnNm;
+	        } else  {
+	            this.plnDfnNm = this.plnDfnNm+ "," +plnDfnNm;
+	        }
+        }
     }
     
     
@@ -4762,6 +10698,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnPblshr = plnDfnPblshr;
     }
     
+    public void addPlnDfnPblshr(String plnDfnPblshr) {
+    	if( plnDfnPblshr != null ) {
+	    	if( this.plnDfnPblshr == null ) {
+	        	this.plnDfnPblshr = plnDfnPblshr;
+	        } else if(this.plnDfnPblshr.substring(this.plnDfnPblshr.length() - 1).equals("]") & plnDfnPblshr.equals("[")) {
+	        	this.plnDfnPblshr = this.plnDfnPblshr+ "," + plnDfnPblshr;
+	        } else if(plnDfnPblshr.equals("[") | plnDfnPblshr.equals("]") | this.plnDfnPblshr.substring(this.plnDfnPblshr.length() - 1).equals("[")) {
+	        	this.plnDfnPblshr = this.plnDfnPblshr+plnDfnPblshr;
+	        } else  {
+	            this.plnDfnPblshr = this.plnDfnPblshr+ "," +plnDfnPblshr;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnPrpse() {
@@ -4770,6 +10720,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnPrpse(String plnDfnPrpse) {
         this.plnDfnPrpse = plnDfnPrpse;
+    }
+    
+    public void addPlnDfnPrpse(String plnDfnPrpse) {
+    	if( plnDfnPrpse != null ) {
+	    	if( this.plnDfnPrpse == null ) {
+	        	this.plnDfnPrpse = plnDfnPrpse;
+	        } else if(this.plnDfnPrpse.substring(this.plnDfnPrpse.length() - 1).equals("]") & plnDfnPrpse.equals("[")) {
+	        	this.plnDfnPrpse = this.plnDfnPrpse+ "," + plnDfnPrpse;
+	        } else if(plnDfnPrpse.equals("[") | plnDfnPrpse.equals("]") | this.plnDfnPrpse.substring(this.plnDfnPrpse.length() - 1).equals("[")) {
+	        	this.plnDfnPrpse = this.plnDfnPrpse+plnDfnPrpse;
+	        } else  {
+	            this.plnDfnPrpse = this.plnDfnPrpse+ "," +plnDfnPrpse;
+	        }
+        }
     }
     
     
@@ -4782,6 +10746,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnRltedArtfctCitation = plnDfnRltedArtfctCitation;
     }
     
+    public void addPlnDfnRltedArtfctCitation(String plnDfnRltedArtfctCitation) {
+    	if( plnDfnRltedArtfctCitation != null ) {
+	    	if( this.plnDfnRltedArtfctCitation == null ) {
+	        	this.plnDfnRltedArtfctCitation = plnDfnRltedArtfctCitation;
+	        } else if(this.plnDfnRltedArtfctCitation.substring(this.plnDfnRltedArtfctCitation.length() - 1).equals("]") & plnDfnRltedArtfctCitation.equals("[")) {
+	        	this.plnDfnRltedArtfctCitation = this.plnDfnRltedArtfctCitation+ "," + plnDfnRltedArtfctCitation;
+	        } else if(plnDfnRltedArtfctCitation.equals("[") | plnDfnRltedArtfctCitation.equals("]") | this.plnDfnRltedArtfctCitation.substring(this.plnDfnRltedArtfctCitation.length() - 1).equals("[")) {
+	        	this.plnDfnRltedArtfctCitation = this.plnDfnRltedArtfctCitation+plnDfnRltedArtfctCitation;
+	        } else  {
+	            this.plnDfnRltedArtfctCitation = this.plnDfnRltedArtfctCitation+ "," +plnDfnRltedArtfctCitation;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnRltedArtfctDsply() {
@@ -4790,6 +10768,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnRltedArtfctDsply(String plnDfnRltedArtfctDsply) {
         this.plnDfnRltedArtfctDsply = plnDfnRltedArtfctDsply;
+    }
+    
+    public void addPlnDfnRltedArtfctDsply(String plnDfnRltedArtfctDsply) {
+    	if( plnDfnRltedArtfctDsply != null ) {
+	    	if( this.plnDfnRltedArtfctDsply == null ) {
+	        	this.plnDfnRltedArtfctDsply = plnDfnRltedArtfctDsply;
+	        } else if(this.plnDfnRltedArtfctDsply.substring(this.plnDfnRltedArtfctDsply.length() - 1).equals("]") & plnDfnRltedArtfctDsply.equals("[")) {
+	        	this.plnDfnRltedArtfctDsply = this.plnDfnRltedArtfctDsply+ "," + plnDfnRltedArtfctDsply;
+	        } else if(plnDfnRltedArtfctDsply.equals("[") | plnDfnRltedArtfctDsply.equals("]") | this.plnDfnRltedArtfctDsply.substring(this.plnDfnRltedArtfctDsply.length() - 1).equals("[")) {
+	        	this.plnDfnRltedArtfctDsply = this.plnDfnRltedArtfctDsply+plnDfnRltedArtfctDsply;
+	        } else  {
+	            this.plnDfnRltedArtfctDsply = this.plnDfnRltedArtfctDsply+ "," +plnDfnRltedArtfctDsply;
+	        }
+        }
     }
     
     
@@ -4802,6 +10794,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnRltedArtfctDocCntntTyp = plnDfnRltedArtfctDocCntntTyp;
     }
     
+    public void addPlnDfnRltedArtfctDocCntntTyp(String plnDfnRltedArtfctDocCntntTyp) {
+    	if( plnDfnRltedArtfctDocCntntTyp != null ) {
+	    	if( this.plnDfnRltedArtfctDocCntntTyp == null ) {
+	        	this.plnDfnRltedArtfctDocCntntTyp = plnDfnRltedArtfctDocCntntTyp;
+	        } else if(this.plnDfnRltedArtfctDocCntntTyp.substring(this.plnDfnRltedArtfctDocCntntTyp.length() - 1).equals("]") & plnDfnRltedArtfctDocCntntTyp.equals("[")) {
+	        	this.plnDfnRltedArtfctDocCntntTyp = this.plnDfnRltedArtfctDocCntntTyp+ "," + plnDfnRltedArtfctDocCntntTyp;
+	        } else if(plnDfnRltedArtfctDocCntntTyp.equals("[") | plnDfnRltedArtfctDocCntntTyp.equals("]") | this.plnDfnRltedArtfctDocCntntTyp.substring(this.plnDfnRltedArtfctDocCntntTyp.length() - 1).equals("[")) {
+	        	this.plnDfnRltedArtfctDocCntntTyp = this.plnDfnRltedArtfctDocCntntTyp+plnDfnRltedArtfctDocCntntTyp;
+	        } else  {
+	            this.plnDfnRltedArtfctDocCntntTyp = this.plnDfnRltedArtfctDocCntntTyp+ "," +plnDfnRltedArtfctDocCntntTyp;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnRltedArtfctDocCreation() {
@@ -4810,6 +10816,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnRltedArtfctDocCreation(String plnDfnRltedArtfctDocCreation) {
         this.plnDfnRltedArtfctDocCreation = plnDfnRltedArtfctDocCreation;
+    }
+    
+    public void addPlnDfnRltedArtfctDocCreation(String plnDfnRltedArtfctDocCreation) {
+    	if( plnDfnRltedArtfctDocCreation != null ) {
+	    	if( this.plnDfnRltedArtfctDocCreation == null ) {
+	        	this.plnDfnRltedArtfctDocCreation = plnDfnRltedArtfctDocCreation;
+	        } else if(this.plnDfnRltedArtfctDocCreation.substring(this.plnDfnRltedArtfctDocCreation.length() - 1).equals("]") & plnDfnRltedArtfctDocCreation.equals("[")) {
+	        	this.plnDfnRltedArtfctDocCreation = this.plnDfnRltedArtfctDocCreation+ "," + plnDfnRltedArtfctDocCreation;
+	        } else if(plnDfnRltedArtfctDocCreation.equals("[") | plnDfnRltedArtfctDocCreation.equals("]") | this.plnDfnRltedArtfctDocCreation.substring(this.plnDfnRltedArtfctDocCreation.length() - 1).equals("[")) {
+	        	this.plnDfnRltedArtfctDocCreation = this.plnDfnRltedArtfctDocCreation+plnDfnRltedArtfctDocCreation;
+	        } else  {
+	            this.plnDfnRltedArtfctDocCreation = this.plnDfnRltedArtfctDocCreation+ "," +plnDfnRltedArtfctDocCreation;
+	        }
+        }
     }
     
     
@@ -4822,6 +10842,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnRltedArtfctDocData = plnDfnRltedArtfctDocData;
     }
     
+    public void addPlnDfnRltedArtfctDocData(String plnDfnRltedArtfctDocData) {
+    	if( plnDfnRltedArtfctDocData != null ) {
+	    	if( this.plnDfnRltedArtfctDocData == null ) {
+	        	this.plnDfnRltedArtfctDocData = plnDfnRltedArtfctDocData;
+	        } else if(this.plnDfnRltedArtfctDocData.substring(this.plnDfnRltedArtfctDocData.length() - 1).equals("]") & plnDfnRltedArtfctDocData.equals("[")) {
+	        	this.plnDfnRltedArtfctDocData = this.plnDfnRltedArtfctDocData+ "," + plnDfnRltedArtfctDocData;
+	        } else if(plnDfnRltedArtfctDocData.equals("[") | plnDfnRltedArtfctDocData.equals("]") | this.plnDfnRltedArtfctDocData.substring(this.plnDfnRltedArtfctDocData.length() - 1).equals("[")) {
+	        	this.plnDfnRltedArtfctDocData = this.plnDfnRltedArtfctDocData+plnDfnRltedArtfctDocData;
+	        } else  {
+	            this.plnDfnRltedArtfctDocData = this.plnDfnRltedArtfctDocData+ "," +plnDfnRltedArtfctDocData;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnRltedArtfctDocHash() {
@@ -4830,6 +10864,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnRltedArtfctDocHash(String plnDfnRltedArtfctDocHash) {
         this.plnDfnRltedArtfctDocHash = plnDfnRltedArtfctDocHash;
+    }
+    
+    public void addPlnDfnRltedArtfctDocHash(String plnDfnRltedArtfctDocHash) {
+    	if( plnDfnRltedArtfctDocHash != null ) {
+	    	if( this.plnDfnRltedArtfctDocHash == null ) {
+	        	this.plnDfnRltedArtfctDocHash = plnDfnRltedArtfctDocHash;
+	        } else if(this.plnDfnRltedArtfctDocHash.substring(this.plnDfnRltedArtfctDocHash.length() - 1).equals("]") & plnDfnRltedArtfctDocHash.equals("[")) {
+	        	this.plnDfnRltedArtfctDocHash = this.plnDfnRltedArtfctDocHash+ "," + plnDfnRltedArtfctDocHash;
+	        } else if(plnDfnRltedArtfctDocHash.equals("[") | plnDfnRltedArtfctDocHash.equals("]") | this.plnDfnRltedArtfctDocHash.substring(this.plnDfnRltedArtfctDocHash.length() - 1).equals("[")) {
+	        	this.plnDfnRltedArtfctDocHash = this.plnDfnRltedArtfctDocHash+plnDfnRltedArtfctDocHash;
+	        } else  {
+	            this.plnDfnRltedArtfctDocHash = this.plnDfnRltedArtfctDocHash+ "," +plnDfnRltedArtfctDocHash;
+	        }
+        }
     }
     
     
@@ -4842,6 +10890,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnRltedArtfctDocLnguage = plnDfnRltedArtfctDocLnguage;
     }
     
+    public void addPlnDfnRltedArtfctDocLnguage(String plnDfnRltedArtfctDocLnguage) {
+    	if( plnDfnRltedArtfctDocLnguage != null ) {
+	    	if( this.plnDfnRltedArtfctDocLnguage == null ) {
+	        	this.plnDfnRltedArtfctDocLnguage = plnDfnRltedArtfctDocLnguage;
+	        } else if(this.plnDfnRltedArtfctDocLnguage.substring(this.plnDfnRltedArtfctDocLnguage.length() - 1).equals("]") & plnDfnRltedArtfctDocLnguage.equals("[")) {
+	        	this.plnDfnRltedArtfctDocLnguage = this.plnDfnRltedArtfctDocLnguage+ "," + plnDfnRltedArtfctDocLnguage;
+	        } else if(plnDfnRltedArtfctDocLnguage.equals("[") | plnDfnRltedArtfctDocLnguage.equals("]") | this.plnDfnRltedArtfctDocLnguage.substring(this.plnDfnRltedArtfctDocLnguage.length() - 1).equals("[")) {
+	        	this.plnDfnRltedArtfctDocLnguage = this.plnDfnRltedArtfctDocLnguage+plnDfnRltedArtfctDocLnguage;
+	        } else  {
+	            this.plnDfnRltedArtfctDocLnguage = this.plnDfnRltedArtfctDocLnguage+ "," +plnDfnRltedArtfctDocLnguage;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnRltedArtfctDocSz() {
@@ -4850,6 +10912,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnRltedArtfctDocSz(String plnDfnRltedArtfctDocSz) {
         this.plnDfnRltedArtfctDocSz = plnDfnRltedArtfctDocSz;
+    }
+    
+    public void addPlnDfnRltedArtfctDocSz(String plnDfnRltedArtfctDocSz) {
+    	if( plnDfnRltedArtfctDocSz != null ) {
+	    	if( this.plnDfnRltedArtfctDocSz == null ) {
+	        	this.plnDfnRltedArtfctDocSz = plnDfnRltedArtfctDocSz;
+	        } else if(this.plnDfnRltedArtfctDocSz.substring(this.plnDfnRltedArtfctDocSz.length() - 1).equals("]") & plnDfnRltedArtfctDocSz.equals("[")) {
+	        	this.plnDfnRltedArtfctDocSz = this.plnDfnRltedArtfctDocSz+ "," + plnDfnRltedArtfctDocSz;
+	        } else if(plnDfnRltedArtfctDocSz.equals("[") | plnDfnRltedArtfctDocSz.equals("]") | this.plnDfnRltedArtfctDocSz.substring(this.plnDfnRltedArtfctDocSz.length() - 1).equals("[")) {
+	        	this.plnDfnRltedArtfctDocSz = this.plnDfnRltedArtfctDocSz+plnDfnRltedArtfctDocSz;
+	        } else  {
+	            this.plnDfnRltedArtfctDocSz = this.plnDfnRltedArtfctDocSz+ "," +plnDfnRltedArtfctDocSz;
+	        }
+        }
     }
     
     
@@ -4862,6 +10938,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnRltedArtfctDocTtl = plnDfnRltedArtfctDocTtl;
     }
     
+    public void addPlnDfnRltedArtfctDocTtl(String plnDfnRltedArtfctDocTtl) {
+    	if( plnDfnRltedArtfctDocTtl != null ) {
+	    	if( this.plnDfnRltedArtfctDocTtl == null ) {
+	        	this.plnDfnRltedArtfctDocTtl = plnDfnRltedArtfctDocTtl;
+	        } else if(this.plnDfnRltedArtfctDocTtl.substring(this.plnDfnRltedArtfctDocTtl.length() - 1).equals("]") & plnDfnRltedArtfctDocTtl.equals("[")) {
+	        	this.plnDfnRltedArtfctDocTtl = this.plnDfnRltedArtfctDocTtl+ "," + plnDfnRltedArtfctDocTtl;
+	        } else if(plnDfnRltedArtfctDocTtl.equals("[") | plnDfnRltedArtfctDocTtl.equals("]") | this.plnDfnRltedArtfctDocTtl.substring(this.plnDfnRltedArtfctDocTtl.length() - 1).equals("[")) {
+	        	this.plnDfnRltedArtfctDocTtl = this.plnDfnRltedArtfctDocTtl+plnDfnRltedArtfctDocTtl;
+	        } else  {
+	            this.plnDfnRltedArtfctDocTtl = this.plnDfnRltedArtfctDocTtl+ "," +plnDfnRltedArtfctDocTtl;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnRltedArtfctDocUrl() {
@@ -4870,6 +10960,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnRltedArtfctDocUrl(String plnDfnRltedArtfctDocUrl) {
         this.plnDfnRltedArtfctDocUrl = plnDfnRltedArtfctDocUrl;
+    }
+    
+    public void addPlnDfnRltedArtfctDocUrl(String plnDfnRltedArtfctDocUrl) {
+    	if( plnDfnRltedArtfctDocUrl != null ) {
+	    	if( this.plnDfnRltedArtfctDocUrl == null ) {
+	        	this.plnDfnRltedArtfctDocUrl = plnDfnRltedArtfctDocUrl;
+	        } else if(this.plnDfnRltedArtfctDocUrl.substring(this.plnDfnRltedArtfctDocUrl.length() - 1).equals("]") & plnDfnRltedArtfctDocUrl.equals("[")) {
+	        	this.plnDfnRltedArtfctDocUrl = this.plnDfnRltedArtfctDocUrl+ "," + plnDfnRltedArtfctDocUrl;
+	        } else if(plnDfnRltedArtfctDocUrl.equals("[") | plnDfnRltedArtfctDocUrl.equals("]") | this.plnDfnRltedArtfctDocUrl.substring(this.plnDfnRltedArtfctDocUrl.length() - 1).equals("[")) {
+	        	this.plnDfnRltedArtfctDocUrl = this.plnDfnRltedArtfctDocUrl+plnDfnRltedArtfctDocUrl;
+	        } else  {
+	            this.plnDfnRltedArtfctDocUrl = this.plnDfnRltedArtfctDocUrl+ "," +plnDfnRltedArtfctDocUrl;
+	        }
+        }
     }
     
     
@@ -4882,6 +10986,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnRltedArtfctLbl = plnDfnRltedArtfctLbl;
     }
     
+    public void addPlnDfnRltedArtfctLbl(String plnDfnRltedArtfctLbl) {
+    	if( plnDfnRltedArtfctLbl != null ) {
+	    	if( this.plnDfnRltedArtfctLbl == null ) {
+	        	this.plnDfnRltedArtfctLbl = plnDfnRltedArtfctLbl;
+	        } else if(this.plnDfnRltedArtfctLbl.substring(this.plnDfnRltedArtfctLbl.length() - 1).equals("]") & plnDfnRltedArtfctLbl.equals("[")) {
+	        	this.plnDfnRltedArtfctLbl = this.plnDfnRltedArtfctLbl+ "," + plnDfnRltedArtfctLbl;
+	        } else if(plnDfnRltedArtfctLbl.equals("[") | plnDfnRltedArtfctLbl.equals("]") | this.plnDfnRltedArtfctLbl.substring(this.plnDfnRltedArtfctLbl.length() - 1).equals("[")) {
+	        	this.plnDfnRltedArtfctLbl = this.plnDfnRltedArtfctLbl+plnDfnRltedArtfctLbl;
+	        } else  {
+	            this.plnDfnRltedArtfctLbl = this.plnDfnRltedArtfctLbl+ "," +plnDfnRltedArtfctLbl;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnRltedArtfctRsrc() {
@@ -4890,6 +11008,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnRltedArtfctRsrc(String plnDfnRltedArtfctRsrc) {
         this.plnDfnRltedArtfctRsrc = plnDfnRltedArtfctRsrc;
+    }
+    
+    public void addPlnDfnRltedArtfctRsrc(String plnDfnRltedArtfctRsrc) {
+    	if( plnDfnRltedArtfctRsrc != null ) {
+	    	if( this.plnDfnRltedArtfctRsrc == null ) {
+	        	this.plnDfnRltedArtfctRsrc = plnDfnRltedArtfctRsrc;
+	        } else if(this.plnDfnRltedArtfctRsrc.substring(this.plnDfnRltedArtfctRsrc.length() - 1).equals("]") & plnDfnRltedArtfctRsrc.equals("[")) {
+	        	this.plnDfnRltedArtfctRsrc = this.plnDfnRltedArtfctRsrc+ "," + plnDfnRltedArtfctRsrc;
+	        } else if(plnDfnRltedArtfctRsrc.equals("[") | plnDfnRltedArtfctRsrc.equals("]") | this.plnDfnRltedArtfctRsrc.substring(this.plnDfnRltedArtfctRsrc.length() - 1).equals("[")) {
+	        	this.plnDfnRltedArtfctRsrc = this.plnDfnRltedArtfctRsrc+plnDfnRltedArtfctRsrc;
+	        } else  {
+	            this.plnDfnRltedArtfctRsrc = this.plnDfnRltedArtfctRsrc+ "," +plnDfnRltedArtfctRsrc;
+	        }
+        }
     }
     
     
@@ -4902,6 +11034,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnRltedArtfctTyp = plnDfnRltedArtfctTyp;
     }
     
+    public void addPlnDfnRltedArtfctTyp(String plnDfnRltedArtfctTyp) {
+    	if( plnDfnRltedArtfctTyp != null ) {
+	    	if( this.plnDfnRltedArtfctTyp == null ) {
+	        	this.plnDfnRltedArtfctTyp = plnDfnRltedArtfctTyp;
+	        } else if(this.plnDfnRltedArtfctTyp.substring(this.plnDfnRltedArtfctTyp.length() - 1).equals("]") & plnDfnRltedArtfctTyp.equals("[")) {
+	        	this.plnDfnRltedArtfctTyp = this.plnDfnRltedArtfctTyp+ "," + plnDfnRltedArtfctTyp;
+	        } else if(plnDfnRltedArtfctTyp.equals("[") | plnDfnRltedArtfctTyp.equals("]") | this.plnDfnRltedArtfctTyp.substring(this.plnDfnRltedArtfctTyp.length() - 1).equals("[")) {
+	        	this.plnDfnRltedArtfctTyp = this.plnDfnRltedArtfctTyp+plnDfnRltedArtfctTyp;
+	        } else  {
+	            this.plnDfnRltedArtfctTyp = this.plnDfnRltedArtfctTyp+ "," +plnDfnRltedArtfctTyp;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnRltedArtfctUrl() {
@@ -4910,6 +11056,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnRltedArtfctUrl(String plnDfnRltedArtfctUrl) {
         this.plnDfnRltedArtfctUrl = plnDfnRltedArtfctUrl;
+    }
+    
+    public void addPlnDfnRltedArtfctUrl(String plnDfnRltedArtfctUrl) {
+    	if( plnDfnRltedArtfctUrl != null ) {
+	    	if( this.plnDfnRltedArtfctUrl == null ) {
+	        	this.plnDfnRltedArtfctUrl = plnDfnRltedArtfctUrl;
+	        } else if(this.plnDfnRltedArtfctUrl.substring(this.plnDfnRltedArtfctUrl.length() - 1).equals("]") & plnDfnRltedArtfctUrl.equals("[")) {
+	        	this.plnDfnRltedArtfctUrl = this.plnDfnRltedArtfctUrl+ "," + plnDfnRltedArtfctUrl;
+	        } else if(plnDfnRltedArtfctUrl.equals("[") | plnDfnRltedArtfctUrl.equals("]") | this.plnDfnRltedArtfctUrl.substring(this.plnDfnRltedArtfctUrl.length() - 1).equals("[")) {
+	        	this.plnDfnRltedArtfctUrl = this.plnDfnRltedArtfctUrl+plnDfnRltedArtfctUrl;
+	        } else  {
+	            this.plnDfnRltedArtfctUrl = this.plnDfnRltedArtfctUrl+ "," +plnDfnRltedArtfctUrl;
+	        }
+        }
     }
     
     
@@ -4922,6 +11082,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnRviewrNm = plnDfnRviewrNm;
     }
     
+    public void addPlnDfnRviewrNm(String plnDfnRviewrNm) {
+    	if( plnDfnRviewrNm != null ) {
+	    	if( this.plnDfnRviewrNm == null ) {
+	        	this.plnDfnRviewrNm = plnDfnRviewrNm;
+	        } else if(this.plnDfnRviewrNm.substring(this.plnDfnRviewrNm.length() - 1).equals("]") & plnDfnRviewrNm.equals("[")) {
+	        	this.plnDfnRviewrNm = this.plnDfnRviewrNm+ "," + plnDfnRviewrNm;
+	        } else if(plnDfnRviewrNm.equals("[") | plnDfnRviewrNm.equals("]") | this.plnDfnRviewrNm.substring(this.plnDfnRviewrNm.length() - 1).equals("[")) {
+	        	this.plnDfnRviewrNm = this.plnDfnRviewrNm+plnDfnRviewrNm;
+	        } else  {
+	            this.plnDfnRviewrNm = this.plnDfnRviewrNm+ "," +plnDfnRviewrNm;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnRviewrTlcmPrdEnd() {
@@ -4930,6 +11104,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnRviewrTlcmPrdEnd(String plnDfnRviewrTlcmPrdEnd) {
         this.plnDfnRviewrTlcmPrdEnd = plnDfnRviewrTlcmPrdEnd;
+    }
+    
+    public void addPlnDfnRviewrTlcmPrdEnd(String plnDfnRviewrTlcmPrdEnd) {
+    	if( plnDfnRviewrTlcmPrdEnd != null ) {
+	    	if( this.plnDfnRviewrTlcmPrdEnd == null ) {
+	        	this.plnDfnRviewrTlcmPrdEnd = plnDfnRviewrTlcmPrdEnd;
+	        } else if(this.plnDfnRviewrTlcmPrdEnd.substring(this.plnDfnRviewrTlcmPrdEnd.length() - 1).equals("]") & plnDfnRviewrTlcmPrdEnd.equals("[")) {
+	        	this.plnDfnRviewrTlcmPrdEnd = this.plnDfnRviewrTlcmPrdEnd+ "," + plnDfnRviewrTlcmPrdEnd;
+	        } else if(plnDfnRviewrTlcmPrdEnd.equals("[") | plnDfnRviewrTlcmPrdEnd.equals("]") | this.plnDfnRviewrTlcmPrdEnd.substring(this.plnDfnRviewrTlcmPrdEnd.length() - 1).equals("[")) {
+	        	this.plnDfnRviewrTlcmPrdEnd = this.plnDfnRviewrTlcmPrdEnd+plnDfnRviewrTlcmPrdEnd;
+	        } else  {
+	            this.plnDfnRviewrTlcmPrdEnd = this.plnDfnRviewrTlcmPrdEnd+ "," +plnDfnRviewrTlcmPrdEnd;
+	        }
+        }
     }
     
     
@@ -4942,6 +11130,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnRviewrTlcmPrdStrt = plnDfnRviewrTlcmPrdStrt;
     }
     
+    public void addPlnDfnRviewrTlcmPrdStrt(String plnDfnRviewrTlcmPrdStrt) {
+    	if( plnDfnRviewrTlcmPrdStrt != null ) {
+	    	if( this.plnDfnRviewrTlcmPrdStrt == null ) {
+	        	this.plnDfnRviewrTlcmPrdStrt = plnDfnRviewrTlcmPrdStrt;
+	        } else if(this.plnDfnRviewrTlcmPrdStrt.substring(this.plnDfnRviewrTlcmPrdStrt.length() - 1).equals("]") & plnDfnRviewrTlcmPrdStrt.equals("[")) {
+	        	this.plnDfnRviewrTlcmPrdStrt = this.plnDfnRviewrTlcmPrdStrt+ "," + plnDfnRviewrTlcmPrdStrt;
+	        } else if(plnDfnRviewrTlcmPrdStrt.equals("[") | plnDfnRviewrTlcmPrdStrt.equals("]") | this.plnDfnRviewrTlcmPrdStrt.substring(this.plnDfnRviewrTlcmPrdStrt.length() - 1).equals("[")) {
+	        	this.plnDfnRviewrTlcmPrdStrt = this.plnDfnRviewrTlcmPrdStrt+plnDfnRviewrTlcmPrdStrt;
+	        } else  {
+	            this.plnDfnRviewrTlcmPrdStrt = this.plnDfnRviewrTlcmPrdStrt+ "," +plnDfnRviewrTlcmPrdStrt;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnRviewrTlcmRnk() {
@@ -4950,6 +11152,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnRviewrTlcmRnk(String plnDfnRviewrTlcmRnk) {
         this.plnDfnRviewrTlcmRnk = plnDfnRviewrTlcmRnk;
+    }
+    
+    public void addPlnDfnRviewrTlcmRnk(String plnDfnRviewrTlcmRnk) {
+    	if( plnDfnRviewrTlcmRnk != null ) {
+	    	if( this.plnDfnRviewrTlcmRnk == null ) {
+	        	this.plnDfnRviewrTlcmRnk = plnDfnRviewrTlcmRnk;
+	        } else if(this.plnDfnRviewrTlcmRnk.substring(this.plnDfnRviewrTlcmRnk.length() - 1).equals("]") & plnDfnRviewrTlcmRnk.equals("[")) {
+	        	this.plnDfnRviewrTlcmRnk = this.plnDfnRviewrTlcmRnk+ "," + plnDfnRviewrTlcmRnk;
+	        } else if(plnDfnRviewrTlcmRnk.equals("[") | plnDfnRviewrTlcmRnk.equals("]") | this.plnDfnRviewrTlcmRnk.substring(this.plnDfnRviewrTlcmRnk.length() - 1).equals("[")) {
+	        	this.plnDfnRviewrTlcmRnk = this.plnDfnRviewrTlcmRnk+plnDfnRviewrTlcmRnk;
+	        } else  {
+	            this.plnDfnRviewrTlcmRnk = this.plnDfnRviewrTlcmRnk+ "," +plnDfnRviewrTlcmRnk;
+	        }
+        }
     }
     
     
@@ -4962,6 +11178,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnRviewrTlcmSys = plnDfnRviewrTlcmSys;
     }
     
+    public void addPlnDfnRviewrTlcmSys(String plnDfnRviewrTlcmSys) {
+    	if( plnDfnRviewrTlcmSys != null ) {
+	    	if( this.plnDfnRviewrTlcmSys == null ) {
+	        	this.plnDfnRviewrTlcmSys = plnDfnRviewrTlcmSys;
+	        } else if(this.plnDfnRviewrTlcmSys.substring(this.plnDfnRviewrTlcmSys.length() - 1).equals("]") & plnDfnRviewrTlcmSys.equals("[")) {
+	        	this.plnDfnRviewrTlcmSys = this.plnDfnRviewrTlcmSys+ "," + plnDfnRviewrTlcmSys;
+	        } else if(plnDfnRviewrTlcmSys.equals("[") | plnDfnRviewrTlcmSys.equals("]") | this.plnDfnRviewrTlcmSys.substring(this.plnDfnRviewrTlcmSys.length() - 1).equals("[")) {
+	        	this.plnDfnRviewrTlcmSys = this.plnDfnRviewrTlcmSys+plnDfnRviewrTlcmSys;
+	        } else  {
+	            this.plnDfnRviewrTlcmSys = this.plnDfnRviewrTlcmSys+ "," +plnDfnRviewrTlcmSys;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnRviewrTlcmUse() {
@@ -4970,6 +11200,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnRviewrTlcmUse(String plnDfnRviewrTlcmUse) {
         this.plnDfnRviewrTlcmUse = plnDfnRviewrTlcmUse;
+    }
+    
+    public void addPlnDfnRviewrTlcmUse(String plnDfnRviewrTlcmUse) {
+    	if( plnDfnRviewrTlcmUse != null ) {
+	    	if( this.plnDfnRviewrTlcmUse == null ) {
+	        	this.plnDfnRviewrTlcmUse = plnDfnRviewrTlcmUse;
+	        } else if(this.plnDfnRviewrTlcmUse.substring(this.plnDfnRviewrTlcmUse.length() - 1).equals("]") & plnDfnRviewrTlcmUse.equals("[")) {
+	        	this.plnDfnRviewrTlcmUse = this.plnDfnRviewrTlcmUse+ "," + plnDfnRviewrTlcmUse;
+	        } else if(plnDfnRviewrTlcmUse.equals("[") | plnDfnRviewrTlcmUse.equals("]") | this.plnDfnRviewrTlcmUse.substring(this.plnDfnRviewrTlcmUse.length() - 1).equals("[")) {
+	        	this.plnDfnRviewrTlcmUse = this.plnDfnRviewrTlcmUse+plnDfnRviewrTlcmUse;
+	        } else  {
+	            this.plnDfnRviewrTlcmUse = this.plnDfnRviewrTlcmUse+ "," +plnDfnRviewrTlcmUse;
+	        }
+        }
     }
     
     
@@ -4982,6 +11226,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnRviewrTlcmVl = plnDfnRviewrTlcmVl;
     }
     
+    public void addPlnDfnRviewrTlcmVl(String plnDfnRviewrTlcmVl) {
+    	if( plnDfnRviewrTlcmVl != null ) {
+	    	if( this.plnDfnRviewrTlcmVl == null ) {
+	        	this.plnDfnRviewrTlcmVl = plnDfnRviewrTlcmVl;
+	        } else if(this.plnDfnRviewrTlcmVl.substring(this.plnDfnRviewrTlcmVl.length() - 1).equals("]") & plnDfnRviewrTlcmVl.equals("[")) {
+	        	this.plnDfnRviewrTlcmVl = this.plnDfnRviewrTlcmVl+ "," + plnDfnRviewrTlcmVl;
+	        } else if(plnDfnRviewrTlcmVl.equals("[") | plnDfnRviewrTlcmVl.equals("]") | this.plnDfnRviewrTlcmVl.substring(this.plnDfnRviewrTlcmVl.length() - 1).equals("[")) {
+	        	this.plnDfnRviewrTlcmVl = this.plnDfnRviewrTlcmVl+plnDfnRviewrTlcmVl;
+	        } else  {
+	            this.plnDfnRviewrTlcmVl = this.plnDfnRviewrTlcmVl+ "," +plnDfnRviewrTlcmVl;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnSts() {
@@ -4990,6 +11248,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnSts(String plnDfnSts) {
         this.plnDfnSts = plnDfnSts;
+    }
+    
+    public void addPlnDfnSts(String plnDfnSts) {
+    	if( plnDfnSts != null ) {
+	    	if( this.plnDfnSts == null ) {
+	        	this.plnDfnSts = plnDfnSts;
+	        } else if(this.plnDfnSts.substring(this.plnDfnSts.length() - 1).equals("]") & plnDfnSts.equals("[")) {
+	        	this.plnDfnSts = this.plnDfnSts+ "," + plnDfnSts;
+	        } else if(plnDfnSts.equals("[") | plnDfnSts.equals("]") | this.plnDfnSts.substring(this.plnDfnSts.length() - 1).equals("[")) {
+	        	this.plnDfnSts = this.plnDfnSts+plnDfnSts;
+	        } else  {
+	            this.plnDfnSts = this.plnDfnSts+ "," +plnDfnSts;
+	        }
+        }
     }
     
     
@@ -5002,6 +11274,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnSbjctCdbleCncptCdgCd = plnDfnSbjctCdbleCncptCdgCd;
     }
     
+    public void addPlnDfnSbjctCdbleCncptCdgCd(String plnDfnSbjctCdbleCncptCdgCd) {
+    	if( plnDfnSbjctCdbleCncptCdgCd != null ) {
+	    	if( this.plnDfnSbjctCdbleCncptCdgCd == null ) {
+	        	this.plnDfnSbjctCdbleCncptCdgCd = plnDfnSbjctCdbleCncptCdgCd;
+	        } else if(this.plnDfnSbjctCdbleCncptCdgCd.substring(this.plnDfnSbjctCdbleCncptCdgCd.length() - 1).equals("]") & plnDfnSbjctCdbleCncptCdgCd.equals("[")) {
+	        	this.plnDfnSbjctCdbleCncptCdgCd = this.plnDfnSbjctCdbleCncptCdgCd+ "," + plnDfnSbjctCdbleCncptCdgCd;
+	        } else if(plnDfnSbjctCdbleCncptCdgCd.equals("[") | plnDfnSbjctCdbleCncptCdgCd.equals("]") | this.plnDfnSbjctCdbleCncptCdgCd.substring(this.plnDfnSbjctCdbleCncptCdgCd.length() - 1).equals("[")) {
+	        	this.plnDfnSbjctCdbleCncptCdgCd = this.plnDfnSbjctCdbleCncptCdgCd+plnDfnSbjctCdbleCncptCdgCd;
+	        } else  {
+	            this.plnDfnSbjctCdbleCncptCdgCd = this.plnDfnSbjctCdbleCncptCdgCd+ "," +plnDfnSbjctCdbleCncptCdgCd;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnSbjctCdbleCncptCdgDsply() {
@@ -5010,6 +11296,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnSbjctCdbleCncptCdgDsply(String plnDfnSbjctCdbleCncptCdgDsply) {
         this.plnDfnSbjctCdbleCncptCdgDsply = plnDfnSbjctCdbleCncptCdgDsply;
+    }
+    
+    public void addPlnDfnSbjctCdbleCncptCdgDsply(String plnDfnSbjctCdbleCncptCdgDsply) {
+    	if( plnDfnSbjctCdbleCncptCdgDsply != null ) {
+	    	if( this.plnDfnSbjctCdbleCncptCdgDsply == null ) {
+	        	this.plnDfnSbjctCdbleCncptCdgDsply = plnDfnSbjctCdbleCncptCdgDsply;
+	        } else if(this.plnDfnSbjctCdbleCncptCdgDsply.substring(this.plnDfnSbjctCdbleCncptCdgDsply.length() - 1).equals("]") & plnDfnSbjctCdbleCncptCdgDsply.equals("[")) {
+	        	this.plnDfnSbjctCdbleCncptCdgDsply = this.plnDfnSbjctCdbleCncptCdgDsply+ "," + plnDfnSbjctCdbleCncptCdgDsply;
+	        } else if(plnDfnSbjctCdbleCncptCdgDsply.equals("[") | plnDfnSbjctCdbleCncptCdgDsply.equals("]") | this.plnDfnSbjctCdbleCncptCdgDsply.substring(this.plnDfnSbjctCdbleCncptCdgDsply.length() - 1).equals("[")) {
+	        	this.plnDfnSbjctCdbleCncptCdgDsply = this.plnDfnSbjctCdbleCncptCdgDsply+plnDfnSbjctCdbleCncptCdgDsply;
+	        } else  {
+	            this.plnDfnSbjctCdbleCncptCdgDsply = this.plnDfnSbjctCdbleCncptCdgDsply+ "," +plnDfnSbjctCdbleCncptCdgDsply;
+	        }
+        }
     }
     
     
@@ -5022,6 +11322,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnSbjctCdbleCncptCdgSys = plnDfnSbjctCdbleCncptCdgSys;
     }
     
+    public void addPlnDfnSbjctCdbleCncptCdgSys(String plnDfnSbjctCdbleCncptCdgSys) {
+    	if( plnDfnSbjctCdbleCncptCdgSys != null ) {
+	    	if( this.plnDfnSbjctCdbleCncptCdgSys == null ) {
+	        	this.plnDfnSbjctCdbleCncptCdgSys = plnDfnSbjctCdbleCncptCdgSys;
+	        } else if(this.plnDfnSbjctCdbleCncptCdgSys.substring(this.plnDfnSbjctCdbleCncptCdgSys.length() - 1).equals("]") & plnDfnSbjctCdbleCncptCdgSys.equals("[")) {
+	        	this.plnDfnSbjctCdbleCncptCdgSys = this.plnDfnSbjctCdbleCncptCdgSys+ "," + plnDfnSbjctCdbleCncptCdgSys;
+	        } else if(plnDfnSbjctCdbleCncptCdgSys.equals("[") | plnDfnSbjctCdbleCncptCdgSys.equals("]") | this.plnDfnSbjctCdbleCncptCdgSys.substring(this.plnDfnSbjctCdbleCncptCdgSys.length() - 1).equals("[")) {
+	        	this.plnDfnSbjctCdbleCncptCdgSys = this.plnDfnSbjctCdbleCncptCdgSys+plnDfnSbjctCdbleCncptCdgSys;
+	        } else  {
+	            this.plnDfnSbjctCdbleCncptCdgSys = this.plnDfnSbjctCdbleCncptCdgSys+ "," +plnDfnSbjctCdbleCncptCdgSys;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnSbjctCdbleCncptCdgUsrSltd() {
@@ -5030,6 +11344,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnSbjctCdbleCncptCdgUsrSltd(String plnDfnSbjctCdbleCncptCdgUsrSltd) {
         this.plnDfnSbjctCdbleCncptCdgUsrSltd = plnDfnSbjctCdbleCncptCdgUsrSltd;
+    }
+    
+    public void addPlnDfnSbjctCdbleCncptCdgUsrSltd(String plnDfnSbjctCdbleCncptCdgUsrSltd) {
+    	if( plnDfnSbjctCdbleCncptCdgUsrSltd != null ) {
+	    	if( this.plnDfnSbjctCdbleCncptCdgUsrSltd == null ) {
+	        	this.plnDfnSbjctCdbleCncptCdgUsrSltd = plnDfnSbjctCdbleCncptCdgUsrSltd;
+	        } else if(this.plnDfnSbjctCdbleCncptCdgUsrSltd.substring(this.plnDfnSbjctCdbleCncptCdgUsrSltd.length() - 1).equals("]") & plnDfnSbjctCdbleCncptCdgUsrSltd.equals("[")) {
+	        	this.plnDfnSbjctCdbleCncptCdgUsrSltd = this.plnDfnSbjctCdbleCncptCdgUsrSltd+ "," + plnDfnSbjctCdbleCncptCdgUsrSltd;
+	        } else if(plnDfnSbjctCdbleCncptCdgUsrSltd.equals("[") | plnDfnSbjctCdbleCncptCdgUsrSltd.equals("]") | this.plnDfnSbjctCdbleCncptCdgUsrSltd.substring(this.plnDfnSbjctCdbleCncptCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.plnDfnSbjctCdbleCncptCdgUsrSltd = this.plnDfnSbjctCdbleCncptCdgUsrSltd+plnDfnSbjctCdbleCncptCdgUsrSltd;
+	        } else  {
+	            this.plnDfnSbjctCdbleCncptCdgUsrSltd = this.plnDfnSbjctCdbleCncptCdgUsrSltd+ "," +plnDfnSbjctCdbleCncptCdgUsrSltd;
+	        }
+        }
     }
     
     
@@ -5042,6 +11370,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnSbjctCdbleCncptCdgVrsn = plnDfnSbjctCdbleCncptCdgVrsn;
     }
     
+    public void addPlnDfnSbjctCdbleCncptCdgVrsn(String plnDfnSbjctCdbleCncptCdgVrsn) {
+    	if( plnDfnSbjctCdbleCncptCdgVrsn != null ) {
+	    	if( this.plnDfnSbjctCdbleCncptCdgVrsn == null ) {
+	        	this.plnDfnSbjctCdbleCncptCdgVrsn = plnDfnSbjctCdbleCncptCdgVrsn;
+	        } else if(this.plnDfnSbjctCdbleCncptCdgVrsn.substring(this.plnDfnSbjctCdbleCncptCdgVrsn.length() - 1).equals("]") & plnDfnSbjctCdbleCncptCdgVrsn.equals("[")) {
+	        	this.plnDfnSbjctCdbleCncptCdgVrsn = this.plnDfnSbjctCdbleCncptCdgVrsn+ "," + plnDfnSbjctCdbleCncptCdgVrsn;
+	        } else if(plnDfnSbjctCdbleCncptCdgVrsn.equals("[") | plnDfnSbjctCdbleCncptCdgVrsn.equals("]") | this.plnDfnSbjctCdbleCncptCdgVrsn.substring(this.plnDfnSbjctCdbleCncptCdgVrsn.length() - 1).equals("[")) {
+	        	this.plnDfnSbjctCdbleCncptCdgVrsn = this.plnDfnSbjctCdbleCncptCdgVrsn+plnDfnSbjctCdbleCncptCdgVrsn;
+	        } else  {
+	            this.plnDfnSbjctCdbleCncptCdgVrsn = this.plnDfnSbjctCdbleCncptCdgVrsn+ "," +plnDfnSbjctCdbleCncptCdgVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnSbjctCdbleCncptTxt() {
@@ -5050,6 +11392,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnSbjctCdbleCncptTxt(String plnDfnSbjctCdbleCncptTxt) {
         this.plnDfnSbjctCdbleCncptTxt = plnDfnSbjctCdbleCncptTxt;
+    }
+    
+    public void addPlnDfnSbjctCdbleCncptTxt(String plnDfnSbjctCdbleCncptTxt) {
+    	if( plnDfnSbjctCdbleCncptTxt != null ) {
+	    	if( this.plnDfnSbjctCdbleCncptTxt == null ) {
+	        	this.plnDfnSbjctCdbleCncptTxt = plnDfnSbjctCdbleCncptTxt;
+	        } else if(this.plnDfnSbjctCdbleCncptTxt.substring(this.plnDfnSbjctCdbleCncptTxt.length() - 1).equals("]") & plnDfnSbjctCdbleCncptTxt.equals("[")) {
+	        	this.plnDfnSbjctCdbleCncptTxt = this.plnDfnSbjctCdbleCncptTxt+ "," + plnDfnSbjctCdbleCncptTxt;
+	        } else if(plnDfnSbjctCdbleCncptTxt.equals("[") | plnDfnSbjctCdbleCncptTxt.equals("]") | this.plnDfnSbjctCdbleCncptTxt.substring(this.plnDfnSbjctCdbleCncptTxt.length() - 1).equals("[")) {
+	        	this.plnDfnSbjctCdbleCncptTxt = this.plnDfnSbjctCdbleCncptTxt+plnDfnSbjctCdbleCncptTxt;
+	        } else  {
+	            this.plnDfnSbjctCdbleCncptTxt = this.plnDfnSbjctCdbleCncptTxt+ "," +plnDfnSbjctCdbleCncptTxt;
+	        }
+        }
     }
     
     
@@ -5062,6 +11418,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnSbjctRfrnc = plnDfnSbjctRfrnc;
     }
     
+    public void addPlnDfnSbjctRfrnc(String plnDfnSbjctRfrnc) {
+    	if( plnDfnSbjctRfrnc != null ) {
+	    	if( this.plnDfnSbjctRfrnc == null ) {
+	        	this.plnDfnSbjctRfrnc = plnDfnSbjctRfrnc;
+	        } else if(this.plnDfnSbjctRfrnc.substring(this.plnDfnSbjctRfrnc.length() - 1).equals("]") & plnDfnSbjctRfrnc.equals("[")) {
+	        	this.plnDfnSbjctRfrnc = this.plnDfnSbjctRfrnc+ "," + plnDfnSbjctRfrnc;
+	        } else if(plnDfnSbjctRfrnc.equals("[") | plnDfnSbjctRfrnc.equals("]") | this.plnDfnSbjctRfrnc.substring(this.plnDfnSbjctRfrnc.length() - 1).equals("[")) {
+	        	this.plnDfnSbjctRfrnc = this.plnDfnSbjctRfrnc+plnDfnSbjctRfrnc;
+	        } else  {
+	            this.plnDfnSbjctRfrnc = this.plnDfnSbjctRfrnc+ "," +plnDfnSbjctRfrnc;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnSubtitle() {
@@ -5070,6 +11440,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnSubtitle(String plnDfnSubtitle) {
         this.plnDfnSubtitle = plnDfnSubtitle;
+    }
+    
+    public void addPlnDfnSubtitle(String plnDfnSubtitle) {
+    	if( plnDfnSubtitle != null ) {
+	    	if( this.plnDfnSubtitle == null ) {
+	        	this.plnDfnSubtitle = plnDfnSubtitle;
+	        } else if(this.plnDfnSubtitle.substring(this.plnDfnSubtitle.length() - 1).equals("]") & plnDfnSubtitle.equals("[")) {
+	        	this.plnDfnSubtitle = this.plnDfnSubtitle+ "," + plnDfnSubtitle;
+	        } else if(plnDfnSubtitle.equals("[") | plnDfnSubtitle.equals("]") | this.plnDfnSubtitle.substring(this.plnDfnSubtitle.length() - 1).equals("[")) {
+	        	this.plnDfnSubtitle = this.plnDfnSubtitle+plnDfnSubtitle;
+	        } else  {
+	            this.plnDfnSubtitle = this.plnDfnSubtitle+ "," +plnDfnSubtitle;
+	        }
+        }
     }
     
     
@@ -5082,6 +11466,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnTtl = plnDfnTtl;
     }
     
+    public void addPlnDfnTtl(String plnDfnTtl) {
+    	if( plnDfnTtl != null ) {
+	    	if( this.plnDfnTtl == null ) {
+	        	this.plnDfnTtl = plnDfnTtl;
+	        } else if(this.plnDfnTtl.substring(this.plnDfnTtl.length() - 1).equals("]") & plnDfnTtl.equals("[")) {
+	        	this.plnDfnTtl = this.plnDfnTtl+ "," + plnDfnTtl;
+	        } else if(plnDfnTtl.equals("[") | plnDfnTtl.equals("]") | this.plnDfnTtl.substring(this.plnDfnTtl.length() - 1).equals("[")) {
+	        	this.plnDfnTtl = this.plnDfnTtl+plnDfnTtl;
+	        } else  {
+	            this.plnDfnTtl = this.plnDfnTtl+ "," +plnDfnTtl;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnTopicCdgCd() {
@@ -5090,6 +11488,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnTopicCdgCd(String plnDfnTopicCdgCd) {
         this.plnDfnTopicCdgCd = plnDfnTopicCdgCd;
+    }
+    
+    public void addPlnDfnTopicCdgCd(String plnDfnTopicCdgCd) {
+    	if( plnDfnTopicCdgCd != null ) {
+	    	if( this.plnDfnTopicCdgCd == null ) {
+	        	this.plnDfnTopicCdgCd = plnDfnTopicCdgCd;
+	        } else if(this.plnDfnTopicCdgCd.substring(this.plnDfnTopicCdgCd.length() - 1).equals("]") & plnDfnTopicCdgCd.equals("[")) {
+	        	this.plnDfnTopicCdgCd = this.plnDfnTopicCdgCd+ "," + plnDfnTopicCdgCd;
+	        } else if(plnDfnTopicCdgCd.equals("[") | plnDfnTopicCdgCd.equals("]") | this.plnDfnTopicCdgCd.substring(this.plnDfnTopicCdgCd.length() - 1).equals("[")) {
+	        	this.plnDfnTopicCdgCd = this.plnDfnTopicCdgCd+plnDfnTopicCdgCd;
+	        } else  {
+	            this.plnDfnTopicCdgCd = this.plnDfnTopicCdgCd+ "," +plnDfnTopicCdgCd;
+	        }
+        }
     }
     
     
@@ -5102,6 +11514,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnTopicCdgDsply = plnDfnTopicCdgDsply;
     }
     
+    public void addPlnDfnTopicCdgDsply(String plnDfnTopicCdgDsply) {
+    	if( plnDfnTopicCdgDsply != null ) {
+	    	if( this.plnDfnTopicCdgDsply == null ) {
+	        	this.plnDfnTopicCdgDsply = plnDfnTopicCdgDsply;
+	        } else if(this.plnDfnTopicCdgDsply.substring(this.plnDfnTopicCdgDsply.length() - 1).equals("]") & plnDfnTopicCdgDsply.equals("[")) {
+	        	this.plnDfnTopicCdgDsply = this.plnDfnTopicCdgDsply+ "," + plnDfnTopicCdgDsply;
+	        } else if(plnDfnTopicCdgDsply.equals("[") | plnDfnTopicCdgDsply.equals("]") | this.plnDfnTopicCdgDsply.substring(this.plnDfnTopicCdgDsply.length() - 1).equals("[")) {
+	        	this.plnDfnTopicCdgDsply = this.plnDfnTopicCdgDsply+plnDfnTopicCdgDsply;
+	        } else  {
+	            this.plnDfnTopicCdgDsply = this.plnDfnTopicCdgDsply+ "," +plnDfnTopicCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnTopicCdgSys() {
@@ -5110,6 +11536,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnTopicCdgSys(String plnDfnTopicCdgSys) {
         this.plnDfnTopicCdgSys = plnDfnTopicCdgSys;
+    }
+    
+    public void addPlnDfnTopicCdgSys(String plnDfnTopicCdgSys) {
+    	if( plnDfnTopicCdgSys != null ) {
+	    	if( this.plnDfnTopicCdgSys == null ) {
+	        	this.plnDfnTopicCdgSys = plnDfnTopicCdgSys;
+	        } else if(this.plnDfnTopicCdgSys.substring(this.plnDfnTopicCdgSys.length() - 1).equals("]") & plnDfnTopicCdgSys.equals("[")) {
+	        	this.plnDfnTopicCdgSys = this.plnDfnTopicCdgSys+ "," + plnDfnTopicCdgSys;
+	        } else if(plnDfnTopicCdgSys.equals("[") | plnDfnTopicCdgSys.equals("]") | this.plnDfnTopicCdgSys.substring(this.plnDfnTopicCdgSys.length() - 1).equals("[")) {
+	        	this.plnDfnTopicCdgSys = this.plnDfnTopicCdgSys+plnDfnTopicCdgSys;
+	        } else  {
+	            this.plnDfnTopicCdgSys = this.plnDfnTopicCdgSys+ "," +plnDfnTopicCdgSys;
+	        }
+        }
     }
     
     
@@ -5122,6 +11562,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnTopicCdgUsrSltd = plnDfnTopicCdgUsrSltd;
     }
     
+    public void addPlnDfnTopicCdgUsrSltd(String plnDfnTopicCdgUsrSltd) {
+    	if( plnDfnTopicCdgUsrSltd != null ) {
+	    	if( this.plnDfnTopicCdgUsrSltd == null ) {
+	        	this.plnDfnTopicCdgUsrSltd = plnDfnTopicCdgUsrSltd;
+	        } else if(this.plnDfnTopicCdgUsrSltd.substring(this.plnDfnTopicCdgUsrSltd.length() - 1).equals("]") & plnDfnTopicCdgUsrSltd.equals("[")) {
+	        	this.plnDfnTopicCdgUsrSltd = this.plnDfnTopicCdgUsrSltd+ "," + plnDfnTopicCdgUsrSltd;
+	        } else if(plnDfnTopicCdgUsrSltd.equals("[") | plnDfnTopicCdgUsrSltd.equals("]") | this.plnDfnTopicCdgUsrSltd.substring(this.plnDfnTopicCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.plnDfnTopicCdgUsrSltd = this.plnDfnTopicCdgUsrSltd+plnDfnTopicCdgUsrSltd;
+	        } else  {
+	            this.plnDfnTopicCdgUsrSltd = this.plnDfnTopicCdgUsrSltd+ "," +plnDfnTopicCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnTopicCdgVrsn() {
@@ -5130,6 +11584,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnTopicCdgVrsn(String plnDfnTopicCdgVrsn) {
         this.plnDfnTopicCdgVrsn = plnDfnTopicCdgVrsn;
+    }
+    
+    public void addPlnDfnTopicCdgVrsn(String plnDfnTopicCdgVrsn) {
+    	if( plnDfnTopicCdgVrsn != null ) {
+	    	if( this.plnDfnTopicCdgVrsn == null ) {
+	        	this.plnDfnTopicCdgVrsn = plnDfnTopicCdgVrsn;
+	        } else if(this.plnDfnTopicCdgVrsn.substring(this.plnDfnTopicCdgVrsn.length() - 1).equals("]") & plnDfnTopicCdgVrsn.equals("[")) {
+	        	this.plnDfnTopicCdgVrsn = this.plnDfnTopicCdgVrsn+ "," + plnDfnTopicCdgVrsn;
+	        } else if(plnDfnTopicCdgVrsn.equals("[") | plnDfnTopicCdgVrsn.equals("]") | this.plnDfnTopicCdgVrsn.substring(this.plnDfnTopicCdgVrsn.length() - 1).equals("[")) {
+	        	this.plnDfnTopicCdgVrsn = this.plnDfnTopicCdgVrsn+plnDfnTopicCdgVrsn;
+	        } else  {
+	            this.plnDfnTopicCdgVrsn = this.plnDfnTopicCdgVrsn+ "," +plnDfnTopicCdgVrsn;
+	        }
+        }
     }
     
     
@@ -5142,6 +11610,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnTopicTxt = plnDfnTopicTxt;
     }
     
+    public void addPlnDfnTopicTxt(String plnDfnTopicTxt) {
+    	if( plnDfnTopicTxt != null ) {
+	    	if( this.plnDfnTopicTxt == null ) {
+	        	this.plnDfnTopicTxt = plnDfnTopicTxt;
+	        } else if(this.plnDfnTopicTxt.substring(this.plnDfnTopicTxt.length() - 1).equals("]") & plnDfnTopicTxt.equals("[")) {
+	        	this.plnDfnTopicTxt = this.plnDfnTopicTxt+ "," + plnDfnTopicTxt;
+	        } else if(plnDfnTopicTxt.equals("[") | plnDfnTopicTxt.equals("]") | this.plnDfnTopicTxt.substring(this.plnDfnTopicTxt.length() - 1).equals("[")) {
+	        	this.plnDfnTopicTxt = this.plnDfnTopicTxt+plnDfnTopicTxt;
+	        } else  {
+	            this.plnDfnTopicTxt = this.plnDfnTopicTxt+ "," +plnDfnTopicTxt;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnTypCdgCd() {
@@ -5150,6 +11632,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnTypCdgCd(String plnDfnTypCdgCd) {
         this.plnDfnTypCdgCd = plnDfnTypCdgCd;
+    }
+    
+    public void addPlnDfnTypCdgCd(String plnDfnTypCdgCd) {
+    	if( plnDfnTypCdgCd != null ) {
+	    	if( this.plnDfnTypCdgCd == null ) {
+	        	this.plnDfnTypCdgCd = plnDfnTypCdgCd;
+	        } else if(this.plnDfnTypCdgCd.substring(this.plnDfnTypCdgCd.length() - 1).equals("]") & plnDfnTypCdgCd.equals("[")) {
+	        	this.plnDfnTypCdgCd = this.plnDfnTypCdgCd+ "," + plnDfnTypCdgCd;
+	        } else if(plnDfnTypCdgCd.equals("[") | plnDfnTypCdgCd.equals("]") | this.plnDfnTypCdgCd.substring(this.plnDfnTypCdgCd.length() - 1).equals("[")) {
+	        	this.plnDfnTypCdgCd = this.plnDfnTypCdgCd+plnDfnTypCdgCd;
+	        } else  {
+	            this.plnDfnTypCdgCd = this.plnDfnTypCdgCd+ "," +plnDfnTypCdgCd;
+	        }
+        }
     }
     
     
@@ -5162,6 +11658,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnTypCdgDsply = plnDfnTypCdgDsply;
     }
     
+    public void addPlnDfnTypCdgDsply(String plnDfnTypCdgDsply) {
+    	if( plnDfnTypCdgDsply != null ) {
+	    	if( this.plnDfnTypCdgDsply == null ) {
+	        	this.plnDfnTypCdgDsply = plnDfnTypCdgDsply;
+	        } else if(this.plnDfnTypCdgDsply.substring(this.plnDfnTypCdgDsply.length() - 1).equals("]") & plnDfnTypCdgDsply.equals("[")) {
+	        	this.plnDfnTypCdgDsply = this.plnDfnTypCdgDsply+ "," + plnDfnTypCdgDsply;
+	        } else if(plnDfnTypCdgDsply.equals("[") | plnDfnTypCdgDsply.equals("]") | this.plnDfnTypCdgDsply.substring(this.plnDfnTypCdgDsply.length() - 1).equals("[")) {
+	        	this.plnDfnTypCdgDsply = this.plnDfnTypCdgDsply+plnDfnTypCdgDsply;
+	        } else  {
+	            this.plnDfnTypCdgDsply = this.plnDfnTypCdgDsply+ "," +plnDfnTypCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnTypCdgSys() {
@@ -5170,6 +11680,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnTypCdgSys(String plnDfnTypCdgSys) {
         this.plnDfnTypCdgSys = plnDfnTypCdgSys;
+    }
+    
+    public void addPlnDfnTypCdgSys(String plnDfnTypCdgSys) {
+    	if( plnDfnTypCdgSys != null ) {
+	    	if( this.plnDfnTypCdgSys == null ) {
+	        	this.plnDfnTypCdgSys = plnDfnTypCdgSys;
+	        } else if(this.plnDfnTypCdgSys.substring(this.plnDfnTypCdgSys.length() - 1).equals("]") & plnDfnTypCdgSys.equals("[")) {
+	        	this.plnDfnTypCdgSys = this.plnDfnTypCdgSys+ "," + plnDfnTypCdgSys;
+	        } else if(plnDfnTypCdgSys.equals("[") | plnDfnTypCdgSys.equals("]") | this.plnDfnTypCdgSys.substring(this.plnDfnTypCdgSys.length() - 1).equals("[")) {
+	        	this.plnDfnTypCdgSys = this.plnDfnTypCdgSys+plnDfnTypCdgSys;
+	        } else  {
+	            this.plnDfnTypCdgSys = this.plnDfnTypCdgSys+ "," +plnDfnTypCdgSys;
+	        }
+        }
     }
     
     
@@ -5182,6 +11706,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnTypCdgUsrSltd = plnDfnTypCdgUsrSltd;
     }
     
+    public void addPlnDfnTypCdgUsrSltd(String plnDfnTypCdgUsrSltd) {
+    	if( plnDfnTypCdgUsrSltd != null ) {
+	    	if( this.plnDfnTypCdgUsrSltd == null ) {
+	        	this.plnDfnTypCdgUsrSltd = plnDfnTypCdgUsrSltd;
+	        } else if(this.plnDfnTypCdgUsrSltd.substring(this.plnDfnTypCdgUsrSltd.length() - 1).equals("]") & plnDfnTypCdgUsrSltd.equals("[")) {
+	        	this.plnDfnTypCdgUsrSltd = this.plnDfnTypCdgUsrSltd+ "," + plnDfnTypCdgUsrSltd;
+	        } else if(plnDfnTypCdgUsrSltd.equals("[") | plnDfnTypCdgUsrSltd.equals("]") | this.plnDfnTypCdgUsrSltd.substring(this.plnDfnTypCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.plnDfnTypCdgUsrSltd = this.plnDfnTypCdgUsrSltd+plnDfnTypCdgUsrSltd;
+	        } else  {
+	            this.plnDfnTypCdgUsrSltd = this.plnDfnTypCdgUsrSltd+ "," +plnDfnTypCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnTypCdgVrsn() {
@@ -5190,6 +11728,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnTypCdgVrsn(String plnDfnTypCdgVrsn) {
         this.plnDfnTypCdgVrsn = plnDfnTypCdgVrsn;
+    }
+    
+    public void addPlnDfnTypCdgVrsn(String plnDfnTypCdgVrsn) {
+    	if( plnDfnTypCdgVrsn != null ) {
+	    	if( this.plnDfnTypCdgVrsn == null ) {
+	        	this.plnDfnTypCdgVrsn = plnDfnTypCdgVrsn;
+	        } else if(this.plnDfnTypCdgVrsn.substring(this.plnDfnTypCdgVrsn.length() - 1).equals("]") & plnDfnTypCdgVrsn.equals("[")) {
+	        	this.plnDfnTypCdgVrsn = this.plnDfnTypCdgVrsn+ "," + plnDfnTypCdgVrsn;
+	        } else if(plnDfnTypCdgVrsn.equals("[") | plnDfnTypCdgVrsn.equals("]") | this.plnDfnTypCdgVrsn.substring(this.plnDfnTypCdgVrsn.length() - 1).equals("[")) {
+	        	this.plnDfnTypCdgVrsn = this.plnDfnTypCdgVrsn+plnDfnTypCdgVrsn;
+	        } else  {
+	            this.plnDfnTypCdgVrsn = this.plnDfnTypCdgVrsn+ "," +plnDfnTypCdgVrsn;
+	        }
+        }
     }
     
     
@@ -5202,6 +11754,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnTypTxt = plnDfnTypTxt;
     }
     
+    public void addPlnDfnTypTxt(String plnDfnTypTxt) {
+    	if( plnDfnTypTxt != null ) {
+	    	if( this.plnDfnTypTxt == null ) {
+	        	this.plnDfnTypTxt = plnDfnTypTxt;
+	        } else if(this.plnDfnTypTxt.substring(this.plnDfnTypTxt.length() - 1).equals("]") & plnDfnTypTxt.equals("[")) {
+	        	this.plnDfnTypTxt = this.plnDfnTypTxt+ "," + plnDfnTypTxt;
+	        } else if(plnDfnTypTxt.equals("[") | plnDfnTypTxt.equals("]") | this.plnDfnTypTxt.substring(this.plnDfnTypTxt.length() - 1).equals("[")) {
+	        	this.plnDfnTypTxt = this.plnDfnTypTxt+plnDfnTypTxt;
+	        } else  {
+	            this.plnDfnTypTxt = this.plnDfnTypTxt+ "," +plnDfnTypTxt;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnUrl() {
@@ -5210,6 +11776,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnUrl(String plnDfnUrl) {
         this.plnDfnUrl = plnDfnUrl;
+    }
+    
+    public void addPlnDfnUrl(String plnDfnUrl) {
+    	if( plnDfnUrl != null ) {
+	    	if( this.plnDfnUrl == null ) {
+	        	this.plnDfnUrl = plnDfnUrl;
+	        } else if(this.plnDfnUrl.substring(this.plnDfnUrl.length() - 1).equals("]") & plnDfnUrl.equals("[")) {
+	        	this.plnDfnUrl = this.plnDfnUrl+ "," + plnDfnUrl;
+	        } else if(plnDfnUrl.equals("[") | plnDfnUrl.equals("]") | this.plnDfnUrl.substring(this.plnDfnUrl.length() - 1).equals("[")) {
+	        	this.plnDfnUrl = this.plnDfnUrl+plnDfnUrl;
+	        } else  {
+	            this.plnDfnUrl = this.plnDfnUrl+ "," +plnDfnUrl;
+	        }
+        }
     }
     
     
@@ -5222,6 +11802,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnUsg = plnDfnUsg;
     }
     
+    public void addPlnDfnUsg(String plnDfnUsg) {
+    	if( plnDfnUsg != null ) {
+	    	if( this.plnDfnUsg == null ) {
+	        	this.plnDfnUsg = plnDfnUsg;
+	        } else if(this.plnDfnUsg.substring(this.plnDfnUsg.length() - 1).equals("]") & plnDfnUsg.equals("[")) {
+	        	this.plnDfnUsg = this.plnDfnUsg+ "," + plnDfnUsg;
+	        } else if(plnDfnUsg.equals("[") | plnDfnUsg.equals("]") | this.plnDfnUsg.substring(this.plnDfnUsg.length() - 1).equals("[")) {
+	        	this.plnDfnUsg = this.plnDfnUsg+plnDfnUsg;
+	        } else  {
+	            this.plnDfnUsg = this.plnDfnUsg+ "," +plnDfnUsg;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnUseCntxtCdCd() {
@@ -5230,6 +11824,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnUseCntxtCdCd(String plnDfnUseCntxtCdCd) {
         this.plnDfnUseCntxtCdCd = plnDfnUseCntxtCdCd;
+    }
+    
+    public void addPlnDfnUseCntxtCdCd(String plnDfnUseCntxtCdCd) {
+    	if( plnDfnUseCntxtCdCd != null ) {
+	    	if( this.plnDfnUseCntxtCdCd == null ) {
+	        	this.plnDfnUseCntxtCdCd = plnDfnUseCntxtCdCd;
+	        } else if(this.plnDfnUseCntxtCdCd.substring(this.plnDfnUseCntxtCdCd.length() - 1).equals("]") & plnDfnUseCntxtCdCd.equals("[")) {
+	        	this.plnDfnUseCntxtCdCd = this.plnDfnUseCntxtCdCd+ "," + plnDfnUseCntxtCdCd;
+	        } else if(plnDfnUseCntxtCdCd.equals("[") | plnDfnUseCntxtCdCd.equals("]") | this.plnDfnUseCntxtCdCd.substring(this.plnDfnUseCntxtCdCd.length() - 1).equals("[")) {
+	        	this.plnDfnUseCntxtCdCd = this.plnDfnUseCntxtCdCd+plnDfnUseCntxtCdCd;
+	        } else  {
+	            this.plnDfnUseCntxtCdCd = this.plnDfnUseCntxtCdCd+ "," +plnDfnUseCntxtCdCd;
+	        }
+        }
     }
     
     
@@ -5242,6 +11850,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnUseCntxtCdDsply = plnDfnUseCntxtCdDsply;
     }
     
+    public void addPlnDfnUseCntxtCdDsply(String plnDfnUseCntxtCdDsply) {
+    	if( plnDfnUseCntxtCdDsply != null ) {
+	    	if( this.plnDfnUseCntxtCdDsply == null ) {
+	        	this.plnDfnUseCntxtCdDsply = plnDfnUseCntxtCdDsply;
+	        } else if(this.plnDfnUseCntxtCdDsply.substring(this.plnDfnUseCntxtCdDsply.length() - 1).equals("]") & plnDfnUseCntxtCdDsply.equals("[")) {
+	        	this.plnDfnUseCntxtCdDsply = this.plnDfnUseCntxtCdDsply+ "," + plnDfnUseCntxtCdDsply;
+	        } else if(plnDfnUseCntxtCdDsply.equals("[") | plnDfnUseCntxtCdDsply.equals("]") | this.plnDfnUseCntxtCdDsply.substring(this.plnDfnUseCntxtCdDsply.length() - 1).equals("[")) {
+	        	this.plnDfnUseCntxtCdDsply = this.plnDfnUseCntxtCdDsply+plnDfnUseCntxtCdDsply;
+	        } else  {
+	            this.plnDfnUseCntxtCdDsply = this.plnDfnUseCntxtCdDsply+ "," +plnDfnUseCntxtCdDsply;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnUseCntxtCdSys() {
@@ -5250,6 +11872,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnUseCntxtCdSys(String plnDfnUseCntxtCdSys) {
         this.plnDfnUseCntxtCdSys = plnDfnUseCntxtCdSys;
+    }
+    
+    public void addPlnDfnUseCntxtCdSys(String plnDfnUseCntxtCdSys) {
+    	if( plnDfnUseCntxtCdSys != null ) {
+	    	if( this.plnDfnUseCntxtCdSys == null ) {
+	        	this.plnDfnUseCntxtCdSys = plnDfnUseCntxtCdSys;
+	        } else if(this.plnDfnUseCntxtCdSys.substring(this.plnDfnUseCntxtCdSys.length() - 1).equals("]") & plnDfnUseCntxtCdSys.equals("[")) {
+	        	this.plnDfnUseCntxtCdSys = this.plnDfnUseCntxtCdSys+ "," + plnDfnUseCntxtCdSys;
+	        } else if(plnDfnUseCntxtCdSys.equals("[") | plnDfnUseCntxtCdSys.equals("]") | this.plnDfnUseCntxtCdSys.substring(this.plnDfnUseCntxtCdSys.length() - 1).equals("[")) {
+	        	this.plnDfnUseCntxtCdSys = this.plnDfnUseCntxtCdSys+plnDfnUseCntxtCdSys;
+	        } else  {
+	            this.plnDfnUseCntxtCdSys = this.plnDfnUseCntxtCdSys+ "," +plnDfnUseCntxtCdSys;
+	        }
+        }
     }
     
     
@@ -5262,6 +11898,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnUseCntxtCdUsrSltd = plnDfnUseCntxtCdUsrSltd;
     }
     
+    public void addPlnDfnUseCntxtCdUsrSltd(String plnDfnUseCntxtCdUsrSltd) {
+    	if( plnDfnUseCntxtCdUsrSltd != null ) {
+	    	if( this.plnDfnUseCntxtCdUsrSltd == null ) {
+	        	this.plnDfnUseCntxtCdUsrSltd = plnDfnUseCntxtCdUsrSltd;
+	        } else if(this.plnDfnUseCntxtCdUsrSltd.substring(this.plnDfnUseCntxtCdUsrSltd.length() - 1).equals("]") & plnDfnUseCntxtCdUsrSltd.equals("[")) {
+	        	this.plnDfnUseCntxtCdUsrSltd = this.plnDfnUseCntxtCdUsrSltd+ "," + plnDfnUseCntxtCdUsrSltd;
+	        } else if(plnDfnUseCntxtCdUsrSltd.equals("[") | plnDfnUseCntxtCdUsrSltd.equals("]") | this.plnDfnUseCntxtCdUsrSltd.substring(this.plnDfnUseCntxtCdUsrSltd.length() - 1).equals("[")) {
+	        	this.plnDfnUseCntxtCdUsrSltd = this.plnDfnUseCntxtCdUsrSltd+plnDfnUseCntxtCdUsrSltd;
+	        } else  {
+	            this.plnDfnUseCntxtCdUsrSltd = this.plnDfnUseCntxtCdUsrSltd+ "," +plnDfnUseCntxtCdUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnUseCntxtCdVrsn() {
@@ -5270,6 +11920,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnUseCntxtCdVrsn(String plnDfnUseCntxtCdVrsn) {
         this.plnDfnUseCntxtCdVrsn = plnDfnUseCntxtCdVrsn;
+    }
+    
+    public void addPlnDfnUseCntxtCdVrsn(String plnDfnUseCntxtCdVrsn) {
+    	if( plnDfnUseCntxtCdVrsn != null ) {
+	    	if( this.plnDfnUseCntxtCdVrsn == null ) {
+	        	this.plnDfnUseCntxtCdVrsn = plnDfnUseCntxtCdVrsn;
+	        } else if(this.plnDfnUseCntxtCdVrsn.substring(this.plnDfnUseCntxtCdVrsn.length() - 1).equals("]") & plnDfnUseCntxtCdVrsn.equals("[")) {
+	        	this.plnDfnUseCntxtCdVrsn = this.plnDfnUseCntxtCdVrsn+ "," + plnDfnUseCntxtCdVrsn;
+	        } else if(plnDfnUseCntxtCdVrsn.equals("[") | plnDfnUseCntxtCdVrsn.equals("]") | this.plnDfnUseCntxtCdVrsn.substring(this.plnDfnUseCntxtCdVrsn.length() - 1).equals("[")) {
+	        	this.plnDfnUseCntxtCdVrsn = this.plnDfnUseCntxtCdVrsn+plnDfnUseCntxtCdVrsn;
+	        } else  {
+	            this.plnDfnUseCntxtCdVrsn = this.plnDfnUseCntxtCdVrsn+ "," +plnDfnUseCntxtCdVrsn;
+	        }
+        }
     }
     
     
@@ -5282,6 +11946,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnUseCntxtVlCdbleCncptCdgCd = plnDfnUseCntxtVlCdbleCncptCdgCd;
     }
     
+    public void addPlnDfnUseCntxtVlCdbleCncptCdgCd(String plnDfnUseCntxtVlCdbleCncptCdgCd) {
+    	if( plnDfnUseCntxtVlCdbleCncptCdgCd != null ) {
+	    	if( this.plnDfnUseCntxtVlCdbleCncptCdgCd == null ) {
+	        	this.plnDfnUseCntxtVlCdbleCncptCdgCd = plnDfnUseCntxtVlCdbleCncptCdgCd;
+	        } else if(this.plnDfnUseCntxtVlCdbleCncptCdgCd.substring(this.plnDfnUseCntxtVlCdbleCncptCdgCd.length() - 1).equals("]") & plnDfnUseCntxtVlCdbleCncptCdgCd.equals("[")) {
+	        	this.plnDfnUseCntxtVlCdbleCncptCdgCd = this.plnDfnUseCntxtVlCdbleCncptCdgCd+ "," + plnDfnUseCntxtVlCdbleCncptCdgCd;
+	        } else if(plnDfnUseCntxtVlCdbleCncptCdgCd.equals("[") | plnDfnUseCntxtVlCdbleCncptCdgCd.equals("]") | this.plnDfnUseCntxtVlCdbleCncptCdgCd.substring(this.plnDfnUseCntxtVlCdbleCncptCdgCd.length() - 1).equals("[")) {
+	        	this.plnDfnUseCntxtVlCdbleCncptCdgCd = this.plnDfnUseCntxtVlCdbleCncptCdgCd+plnDfnUseCntxtVlCdbleCncptCdgCd;
+	        } else  {
+	            this.plnDfnUseCntxtVlCdbleCncptCdgCd = this.plnDfnUseCntxtVlCdbleCncptCdgCd+ "," +plnDfnUseCntxtVlCdbleCncptCdgCd;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnUseCntxtVlCdbleCncptCdgDsply() {
@@ -5290,6 +11968,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnUseCntxtVlCdbleCncptCdgDsply(String plnDfnUseCntxtVlCdbleCncptCdgDsply) {
         this.plnDfnUseCntxtVlCdbleCncptCdgDsply = plnDfnUseCntxtVlCdbleCncptCdgDsply;
+    }
+    
+    public void addPlnDfnUseCntxtVlCdbleCncptCdgDsply(String plnDfnUseCntxtVlCdbleCncptCdgDsply) {
+    	if( plnDfnUseCntxtVlCdbleCncptCdgDsply != null ) {
+	    	if( this.plnDfnUseCntxtVlCdbleCncptCdgDsply == null ) {
+	        	this.plnDfnUseCntxtVlCdbleCncptCdgDsply = plnDfnUseCntxtVlCdbleCncptCdgDsply;
+	        } else if(this.plnDfnUseCntxtVlCdbleCncptCdgDsply.substring(this.plnDfnUseCntxtVlCdbleCncptCdgDsply.length() - 1).equals("]") & plnDfnUseCntxtVlCdbleCncptCdgDsply.equals("[")) {
+	        	this.plnDfnUseCntxtVlCdbleCncptCdgDsply = this.plnDfnUseCntxtVlCdbleCncptCdgDsply+ "," + plnDfnUseCntxtVlCdbleCncptCdgDsply;
+	        } else if(plnDfnUseCntxtVlCdbleCncptCdgDsply.equals("[") | plnDfnUseCntxtVlCdbleCncptCdgDsply.equals("]") | this.plnDfnUseCntxtVlCdbleCncptCdgDsply.substring(this.plnDfnUseCntxtVlCdbleCncptCdgDsply.length() - 1).equals("[")) {
+	        	this.plnDfnUseCntxtVlCdbleCncptCdgDsply = this.plnDfnUseCntxtVlCdbleCncptCdgDsply+plnDfnUseCntxtVlCdbleCncptCdgDsply;
+	        } else  {
+	            this.plnDfnUseCntxtVlCdbleCncptCdgDsply = this.plnDfnUseCntxtVlCdbleCncptCdgDsply+ "," +plnDfnUseCntxtVlCdbleCncptCdgDsply;
+	        }
+        }
     }
     
     
@@ -5302,6 +11994,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnUseCntxtVlCdbleCncptCdgSys = plnDfnUseCntxtVlCdbleCncptCdgSys;
     }
     
+    public void addPlnDfnUseCntxtVlCdbleCncptCdgSys(String plnDfnUseCntxtVlCdbleCncptCdgSys) {
+    	if( plnDfnUseCntxtVlCdbleCncptCdgSys != null ) {
+	    	if( this.plnDfnUseCntxtVlCdbleCncptCdgSys == null ) {
+	        	this.plnDfnUseCntxtVlCdbleCncptCdgSys = plnDfnUseCntxtVlCdbleCncptCdgSys;
+	        } else if(this.plnDfnUseCntxtVlCdbleCncptCdgSys.substring(this.plnDfnUseCntxtVlCdbleCncptCdgSys.length() - 1).equals("]") & plnDfnUseCntxtVlCdbleCncptCdgSys.equals("[")) {
+	        	this.plnDfnUseCntxtVlCdbleCncptCdgSys = this.plnDfnUseCntxtVlCdbleCncptCdgSys+ "," + plnDfnUseCntxtVlCdbleCncptCdgSys;
+	        } else if(plnDfnUseCntxtVlCdbleCncptCdgSys.equals("[") | plnDfnUseCntxtVlCdbleCncptCdgSys.equals("]") | this.plnDfnUseCntxtVlCdbleCncptCdgSys.substring(this.plnDfnUseCntxtVlCdbleCncptCdgSys.length() - 1).equals("[")) {
+	        	this.plnDfnUseCntxtVlCdbleCncptCdgSys = this.plnDfnUseCntxtVlCdbleCncptCdgSys+plnDfnUseCntxtVlCdbleCncptCdgSys;
+	        } else  {
+	            this.plnDfnUseCntxtVlCdbleCncptCdgSys = this.plnDfnUseCntxtVlCdbleCncptCdgSys+ "," +plnDfnUseCntxtVlCdbleCncptCdgSys;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnUseCntxtVlCdbleCncptCdgUsrSltd() {
@@ -5310,6 +12016,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnUseCntxtVlCdbleCncptCdgUsrSltd(String plnDfnUseCntxtVlCdbleCncptCdgUsrSltd) {
         this.plnDfnUseCntxtVlCdbleCncptCdgUsrSltd = plnDfnUseCntxtVlCdbleCncptCdgUsrSltd;
+    }
+    
+    public void addPlnDfnUseCntxtVlCdbleCncptCdgUsrSltd(String plnDfnUseCntxtVlCdbleCncptCdgUsrSltd) {
+    	if( plnDfnUseCntxtVlCdbleCncptCdgUsrSltd != null ) {
+	    	if( this.plnDfnUseCntxtVlCdbleCncptCdgUsrSltd == null ) {
+	        	this.plnDfnUseCntxtVlCdbleCncptCdgUsrSltd = plnDfnUseCntxtVlCdbleCncptCdgUsrSltd;
+	        } else if(this.plnDfnUseCntxtVlCdbleCncptCdgUsrSltd.substring(this.plnDfnUseCntxtVlCdbleCncptCdgUsrSltd.length() - 1).equals("]") & plnDfnUseCntxtVlCdbleCncptCdgUsrSltd.equals("[")) {
+	        	this.plnDfnUseCntxtVlCdbleCncptCdgUsrSltd = this.plnDfnUseCntxtVlCdbleCncptCdgUsrSltd+ "," + plnDfnUseCntxtVlCdbleCncptCdgUsrSltd;
+	        } else if(plnDfnUseCntxtVlCdbleCncptCdgUsrSltd.equals("[") | plnDfnUseCntxtVlCdbleCncptCdgUsrSltd.equals("]") | this.plnDfnUseCntxtVlCdbleCncptCdgUsrSltd.substring(this.plnDfnUseCntxtVlCdbleCncptCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.plnDfnUseCntxtVlCdbleCncptCdgUsrSltd = this.plnDfnUseCntxtVlCdbleCncptCdgUsrSltd+plnDfnUseCntxtVlCdbleCncptCdgUsrSltd;
+	        } else  {
+	            this.plnDfnUseCntxtVlCdbleCncptCdgUsrSltd = this.plnDfnUseCntxtVlCdbleCncptCdgUsrSltd+ "," +plnDfnUseCntxtVlCdbleCncptCdgUsrSltd;
+	        }
+        }
     }
     
     
@@ -5322,6 +12042,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnUseCntxtVlCdbleCncptCdgVrsn = plnDfnUseCntxtVlCdbleCncptCdgVrsn;
     }
     
+    public void addPlnDfnUseCntxtVlCdbleCncptCdgVrsn(String plnDfnUseCntxtVlCdbleCncptCdgVrsn) {
+    	if( plnDfnUseCntxtVlCdbleCncptCdgVrsn != null ) {
+	    	if( this.plnDfnUseCntxtVlCdbleCncptCdgVrsn == null ) {
+	        	this.plnDfnUseCntxtVlCdbleCncptCdgVrsn = plnDfnUseCntxtVlCdbleCncptCdgVrsn;
+	        } else if(this.plnDfnUseCntxtVlCdbleCncptCdgVrsn.substring(this.plnDfnUseCntxtVlCdbleCncptCdgVrsn.length() - 1).equals("]") & plnDfnUseCntxtVlCdbleCncptCdgVrsn.equals("[")) {
+	        	this.plnDfnUseCntxtVlCdbleCncptCdgVrsn = this.plnDfnUseCntxtVlCdbleCncptCdgVrsn+ "," + plnDfnUseCntxtVlCdbleCncptCdgVrsn;
+	        } else if(plnDfnUseCntxtVlCdbleCncptCdgVrsn.equals("[") | plnDfnUseCntxtVlCdbleCncptCdgVrsn.equals("]") | this.plnDfnUseCntxtVlCdbleCncptCdgVrsn.substring(this.plnDfnUseCntxtVlCdbleCncptCdgVrsn.length() - 1).equals("[")) {
+	        	this.plnDfnUseCntxtVlCdbleCncptCdgVrsn = this.plnDfnUseCntxtVlCdbleCncptCdgVrsn+plnDfnUseCntxtVlCdbleCncptCdgVrsn;
+	        } else  {
+	            this.plnDfnUseCntxtVlCdbleCncptCdgVrsn = this.plnDfnUseCntxtVlCdbleCncptCdgVrsn+ "," +plnDfnUseCntxtVlCdbleCncptCdgVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnUseCntxtVlCdbleCncptTxt() {
@@ -5330,6 +12064,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnUseCntxtVlCdbleCncptTxt(String plnDfnUseCntxtVlCdbleCncptTxt) {
         this.plnDfnUseCntxtVlCdbleCncptTxt = plnDfnUseCntxtVlCdbleCncptTxt;
+    }
+    
+    public void addPlnDfnUseCntxtVlCdbleCncptTxt(String plnDfnUseCntxtVlCdbleCncptTxt) {
+    	if( plnDfnUseCntxtVlCdbleCncptTxt != null ) {
+	    	if( this.plnDfnUseCntxtVlCdbleCncptTxt == null ) {
+	        	this.plnDfnUseCntxtVlCdbleCncptTxt = plnDfnUseCntxtVlCdbleCncptTxt;
+	        } else if(this.plnDfnUseCntxtVlCdbleCncptTxt.substring(this.plnDfnUseCntxtVlCdbleCncptTxt.length() - 1).equals("]") & plnDfnUseCntxtVlCdbleCncptTxt.equals("[")) {
+	        	this.plnDfnUseCntxtVlCdbleCncptTxt = this.plnDfnUseCntxtVlCdbleCncptTxt+ "," + plnDfnUseCntxtVlCdbleCncptTxt;
+	        } else if(plnDfnUseCntxtVlCdbleCncptTxt.equals("[") | plnDfnUseCntxtVlCdbleCncptTxt.equals("]") | this.plnDfnUseCntxtVlCdbleCncptTxt.substring(this.plnDfnUseCntxtVlCdbleCncptTxt.length() - 1).equals("[")) {
+	        	this.plnDfnUseCntxtVlCdbleCncptTxt = this.plnDfnUseCntxtVlCdbleCncptTxt+plnDfnUseCntxtVlCdbleCncptTxt;
+	        } else  {
+	            this.plnDfnUseCntxtVlCdbleCncptTxt = this.plnDfnUseCntxtVlCdbleCncptTxt+ "," +plnDfnUseCntxtVlCdbleCncptTxt;
+	        }
+        }
     }
     
     
@@ -5342,6 +12090,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnUseCntxtVlQntyCd = plnDfnUseCntxtVlQntyCd;
     }
     
+    public void addPlnDfnUseCntxtVlQntyCd(String plnDfnUseCntxtVlQntyCd) {
+    	if( plnDfnUseCntxtVlQntyCd != null ) {
+	    	if( this.plnDfnUseCntxtVlQntyCd == null ) {
+	        	this.plnDfnUseCntxtVlQntyCd = plnDfnUseCntxtVlQntyCd;
+	        } else if(this.plnDfnUseCntxtVlQntyCd.substring(this.plnDfnUseCntxtVlQntyCd.length() - 1).equals("]") & plnDfnUseCntxtVlQntyCd.equals("[")) {
+	        	this.plnDfnUseCntxtVlQntyCd = this.plnDfnUseCntxtVlQntyCd+ "," + plnDfnUseCntxtVlQntyCd;
+	        } else if(plnDfnUseCntxtVlQntyCd.equals("[") | plnDfnUseCntxtVlQntyCd.equals("]") | this.plnDfnUseCntxtVlQntyCd.substring(this.plnDfnUseCntxtVlQntyCd.length() - 1).equals("[")) {
+	        	this.plnDfnUseCntxtVlQntyCd = this.plnDfnUseCntxtVlQntyCd+plnDfnUseCntxtVlQntyCd;
+	        } else  {
+	            this.plnDfnUseCntxtVlQntyCd = this.plnDfnUseCntxtVlQntyCd+ "," +plnDfnUseCntxtVlQntyCd;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnUseCntxtVlQntyCmprtr() {
@@ -5350,6 +12112,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnUseCntxtVlQntyCmprtr(String plnDfnUseCntxtVlQntyCmprtr) {
         this.plnDfnUseCntxtVlQntyCmprtr = plnDfnUseCntxtVlQntyCmprtr;
+    }
+    
+    public void addPlnDfnUseCntxtVlQntyCmprtr(String plnDfnUseCntxtVlQntyCmprtr) {
+    	if( plnDfnUseCntxtVlQntyCmprtr != null ) {
+	    	if( this.plnDfnUseCntxtVlQntyCmprtr == null ) {
+	        	this.plnDfnUseCntxtVlQntyCmprtr = plnDfnUseCntxtVlQntyCmprtr;
+	        } else if(this.plnDfnUseCntxtVlQntyCmprtr.substring(this.plnDfnUseCntxtVlQntyCmprtr.length() - 1).equals("]") & plnDfnUseCntxtVlQntyCmprtr.equals("[")) {
+	        	this.plnDfnUseCntxtVlQntyCmprtr = this.plnDfnUseCntxtVlQntyCmprtr+ "," + plnDfnUseCntxtVlQntyCmprtr;
+	        } else if(plnDfnUseCntxtVlQntyCmprtr.equals("[") | plnDfnUseCntxtVlQntyCmprtr.equals("]") | this.plnDfnUseCntxtVlQntyCmprtr.substring(this.plnDfnUseCntxtVlQntyCmprtr.length() - 1).equals("[")) {
+	        	this.plnDfnUseCntxtVlQntyCmprtr = this.plnDfnUseCntxtVlQntyCmprtr+plnDfnUseCntxtVlQntyCmprtr;
+	        } else  {
+	            this.plnDfnUseCntxtVlQntyCmprtr = this.plnDfnUseCntxtVlQntyCmprtr+ "," +plnDfnUseCntxtVlQntyCmprtr;
+	        }
+        }
     }
     
     
@@ -5362,6 +12138,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnUseCntxtVlQntySys = plnDfnUseCntxtVlQntySys;
     }
     
+    public void addPlnDfnUseCntxtVlQntySys(String plnDfnUseCntxtVlQntySys) {
+    	if( plnDfnUseCntxtVlQntySys != null ) {
+	    	if( this.plnDfnUseCntxtVlQntySys == null ) {
+	        	this.plnDfnUseCntxtVlQntySys = plnDfnUseCntxtVlQntySys;
+	        } else if(this.plnDfnUseCntxtVlQntySys.substring(this.plnDfnUseCntxtVlQntySys.length() - 1).equals("]") & plnDfnUseCntxtVlQntySys.equals("[")) {
+	        	this.plnDfnUseCntxtVlQntySys = this.plnDfnUseCntxtVlQntySys+ "," + plnDfnUseCntxtVlQntySys;
+	        } else if(plnDfnUseCntxtVlQntySys.equals("[") | plnDfnUseCntxtVlQntySys.equals("]") | this.plnDfnUseCntxtVlQntySys.substring(this.plnDfnUseCntxtVlQntySys.length() - 1).equals("[")) {
+	        	this.plnDfnUseCntxtVlQntySys = this.plnDfnUseCntxtVlQntySys+plnDfnUseCntxtVlQntySys;
+	        } else  {
+	            this.plnDfnUseCntxtVlQntySys = this.plnDfnUseCntxtVlQntySys+ "," +plnDfnUseCntxtVlQntySys;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnUseCntxtVlQntyUnt() {
@@ -5370,6 +12160,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnUseCntxtVlQntyUnt(String plnDfnUseCntxtVlQntyUnt) {
         this.plnDfnUseCntxtVlQntyUnt = plnDfnUseCntxtVlQntyUnt;
+    }
+    
+    public void addPlnDfnUseCntxtVlQntyUnt(String plnDfnUseCntxtVlQntyUnt) {
+    	if( plnDfnUseCntxtVlQntyUnt != null ) {
+	    	if( this.plnDfnUseCntxtVlQntyUnt == null ) {
+	        	this.plnDfnUseCntxtVlQntyUnt = plnDfnUseCntxtVlQntyUnt;
+	        } else if(this.plnDfnUseCntxtVlQntyUnt.substring(this.plnDfnUseCntxtVlQntyUnt.length() - 1).equals("]") & plnDfnUseCntxtVlQntyUnt.equals("[")) {
+	        	this.plnDfnUseCntxtVlQntyUnt = this.plnDfnUseCntxtVlQntyUnt+ "," + plnDfnUseCntxtVlQntyUnt;
+	        } else if(plnDfnUseCntxtVlQntyUnt.equals("[") | plnDfnUseCntxtVlQntyUnt.equals("]") | this.plnDfnUseCntxtVlQntyUnt.substring(this.plnDfnUseCntxtVlQntyUnt.length() - 1).equals("[")) {
+	        	this.plnDfnUseCntxtVlQntyUnt = this.plnDfnUseCntxtVlQntyUnt+plnDfnUseCntxtVlQntyUnt;
+	        } else  {
+	            this.plnDfnUseCntxtVlQntyUnt = this.plnDfnUseCntxtVlQntyUnt+ "," +plnDfnUseCntxtVlQntyUnt;
+	        }
+        }
     }
     
     
@@ -5382,6 +12186,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnUseCntxtVlQntyVl = plnDfnUseCntxtVlQntyVl;
     }
     
+    public void addPlnDfnUseCntxtVlQntyVl(String plnDfnUseCntxtVlQntyVl) {
+    	if( plnDfnUseCntxtVlQntyVl != null ) {
+	    	if( this.plnDfnUseCntxtVlQntyVl == null ) {
+	        	this.plnDfnUseCntxtVlQntyVl = plnDfnUseCntxtVlQntyVl;
+	        } else if(this.plnDfnUseCntxtVlQntyVl.substring(this.plnDfnUseCntxtVlQntyVl.length() - 1).equals("]") & plnDfnUseCntxtVlQntyVl.equals("[")) {
+	        	this.plnDfnUseCntxtVlQntyVl = this.plnDfnUseCntxtVlQntyVl+ "," + plnDfnUseCntxtVlQntyVl;
+	        } else if(plnDfnUseCntxtVlQntyVl.equals("[") | plnDfnUseCntxtVlQntyVl.equals("]") | this.plnDfnUseCntxtVlQntyVl.substring(this.plnDfnUseCntxtVlQntyVl.length() - 1).equals("[")) {
+	        	this.plnDfnUseCntxtVlQntyVl = this.plnDfnUseCntxtVlQntyVl+plnDfnUseCntxtVlQntyVl;
+	        } else  {
+	            this.plnDfnUseCntxtVlQntyVl = this.plnDfnUseCntxtVlQntyVl+ "," +plnDfnUseCntxtVlQntyVl;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnUseCntxtVlRngHiCd() {
@@ -5390,6 +12208,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnUseCntxtVlRngHiCd(String plnDfnUseCntxtVlRngHiCd) {
         this.plnDfnUseCntxtVlRngHiCd = plnDfnUseCntxtVlRngHiCd;
+    }
+    
+    public void addPlnDfnUseCntxtVlRngHiCd(String plnDfnUseCntxtVlRngHiCd) {
+    	if( plnDfnUseCntxtVlRngHiCd != null ) {
+	    	if( this.plnDfnUseCntxtVlRngHiCd == null ) {
+	        	this.plnDfnUseCntxtVlRngHiCd = plnDfnUseCntxtVlRngHiCd;
+	        } else if(this.plnDfnUseCntxtVlRngHiCd.substring(this.plnDfnUseCntxtVlRngHiCd.length() - 1).equals("]") & plnDfnUseCntxtVlRngHiCd.equals("[")) {
+	        	this.plnDfnUseCntxtVlRngHiCd = this.plnDfnUseCntxtVlRngHiCd+ "," + plnDfnUseCntxtVlRngHiCd;
+	        } else if(plnDfnUseCntxtVlRngHiCd.equals("[") | plnDfnUseCntxtVlRngHiCd.equals("]") | this.plnDfnUseCntxtVlRngHiCd.substring(this.plnDfnUseCntxtVlRngHiCd.length() - 1).equals("[")) {
+	        	this.plnDfnUseCntxtVlRngHiCd = this.plnDfnUseCntxtVlRngHiCd+plnDfnUseCntxtVlRngHiCd;
+	        } else  {
+	            this.plnDfnUseCntxtVlRngHiCd = this.plnDfnUseCntxtVlRngHiCd+ "," +plnDfnUseCntxtVlRngHiCd;
+	        }
+        }
     }
     
     
@@ -5402,6 +12234,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnUseCntxtVlRngHiCmprtr = plnDfnUseCntxtVlRngHiCmprtr;
     }
     
+    public void addPlnDfnUseCntxtVlRngHiCmprtr(String plnDfnUseCntxtVlRngHiCmprtr) {
+    	if( plnDfnUseCntxtVlRngHiCmprtr != null ) {
+	    	if( this.plnDfnUseCntxtVlRngHiCmprtr == null ) {
+	        	this.plnDfnUseCntxtVlRngHiCmprtr = plnDfnUseCntxtVlRngHiCmprtr;
+	        } else if(this.plnDfnUseCntxtVlRngHiCmprtr.substring(this.plnDfnUseCntxtVlRngHiCmprtr.length() - 1).equals("]") & plnDfnUseCntxtVlRngHiCmprtr.equals("[")) {
+	        	this.plnDfnUseCntxtVlRngHiCmprtr = this.plnDfnUseCntxtVlRngHiCmprtr+ "," + plnDfnUseCntxtVlRngHiCmprtr;
+	        } else if(plnDfnUseCntxtVlRngHiCmprtr.equals("[") | plnDfnUseCntxtVlRngHiCmprtr.equals("]") | this.plnDfnUseCntxtVlRngHiCmprtr.substring(this.plnDfnUseCntxtVlRngHiCmprtr.length() - 1).equals("[")) {
+	        	this.plnDfnUseCntxtVlRngHiCmprtr = this.plnDfnUseCntxtVlRngHiCmprtr+plnDfnUseCntxtVlRngHiCmprtr;
+	        } else  {
+	            this.plnDfnUseCntxtVlRngHiCmprtr = this.plnDfnUseCntxtVlRngHiCmprtr+ "," +plnDfnUseCntxtVlRngHiCmprtr;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnUseCntxtVlRngHiSys() {
@@ -5410,6 +12256,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnUseCntxtVlRngHiSys(String plnDfnUseCntxtVlRngHiSys) {
         this.plnDfnUseCntxtVlRngHiSys = plnDfnUseCntxtVlRngHiSys;
+    }
+    
+    public void addPlnDfnUseCntxtVlRngHiSys(String plnDfnUseCntxtVlRngHiSys) {
+    	if( plnDfnUseCntxtVlRngHiSys != null ) {
+	    	if( this.plnDfnUseCntxtVlRngHiSys == null ) {
+	        	this.plnDfnUseCntxtVlRngHiSys = plnDfnUseCntxtVlRngHiSys;
+	        } else if(this.plnDfnUseCntxtVlRngHiSys.substring(this.plnDfnUseCntxtVlRngHiSys.length() - 1).equals("]") & plnDfnUseCntxtVlRngHiSys.equals("[")) {
+	        	this.plnDfnUseCntxtVlRngHiSys = this.plnDfnUseCntxtVlRngHiSys+ "," + plnDfnUseCntxtVlRngHiSys;
+	        } else if(plnDfnUseCntxtVlRngHiSys.equals("[") | plnDfnUseCntxtVlRngHiSys.equals("]") | this.plnDfnUseCntxtVlRngHiSys.substring(this.plnDfnUseCntxtVlRngHiSys.length() - 1).equals("[")) {
+	        	this.plnDfnUseCntxtVlRngHiSys = this.plnDfnUseCntxtVlRngHiSys+plnDfnUseCntxtVlRngHiSys;
+	        } else  {
+	            this.plnDfnUseCntxtVlRngHiSys = this.plnDfnUseCntxtVlRngHiSys+ "," +plnDfnUseCntxtVlRngHiSys;
+	        }
+        }
     }
     
     
@@ -5422,6 +12282,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnUseCntxtVlRngHiUnt = plnDfnUseCntxtVlRngHiUnt;
     }
     
+    public void addPlnDfnUseCntxtVlRngHiUnt(String plnDfnUseCntxtVlRngHiUnt) {
+    	if( plnDfnUseCntxtVlRngHiUnt != null ) {
+	    	if( this.plnDfnUseCntxtVlRngHiUnt == null ) {
+	        	this.plnDfnUseCntxtVlRngHiUnt = plnDfnUseCntxtVlRngHiUnt;
+	        } else if(this.plnDfnUseCntxtVlRngHiUnt.substring(this.plnDfnUseCntxtVlRngHiUnt.length() - 1).equals("]") & plnDfnUseCntxtVlRngHiUnt.equals("[")) {
+	        	this.plnDfnUseCntxtVlRngHiUnt = this.plnDfnUseCntxtVlRngHiUnt+ "," + plnDfnUseCntxtVlRngHiUnt;
+	        } else if(plnDfnUseCntxtVlRngHiUnt.equals("[") | plnDfnUseCntxtVlRngHiUnt.equals("]") | this.plnDfnUseCntxtVlRngHiUnt.substring(this.plnDfnUseCntxtVlRngHiUnt.length() - 1).equals("[")) {
+	        	this.plnDfnUseCntxtVlRngHiUnt = this.plnDfnUseCntxtVlRngHiUnt+plnDfnUseCntxtVlRngHiUnt;
+	        } else  {
+	            this.plnDfnUseCntxtVlRngHiUnt = this.plnDfnUseCntxtVlRngHiUnt+ "," +plnDfnUseCntxtVlRngHiUnt;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnUseCntxtVlRngHiVl() {
@@ -5430,6 +12304,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnUseCntxtVlRngHiVl(String plnDfnUseCntxtVlRngHiVl) {
         this.plnDfnUseCntxtVlRngHiVl = plnDfnUseCntxtVlRngHiVl;
+    }
+    
+    public void addPlnDfnUseCntxtVlRngHiVl(String plnDfnUseCntxtVlRngHiVl) {
+    	if( plnDfnUseCntxtVlRngHiVl != null ) {
+	    	if( this.plnDfnUseCntxtVlRngHiVl == null ) {
+	        	this.plnDfnUseCntxtVlRngHiVl = plnDfnUseCntxtVlRngHiVl;
+	        } else if(this.plnDfnUseCntxtVlRngHiVl.substring(this.plnDfnUseCntxtVlRngHiVl.length() - 1).equals("]") & plnDfnUseCntxtVlRngHiVl.equals("[")) {
+	        	this.plnDfnUseCntxtVlRngHiVl = this.plnDfnUseCntxtVlRngHiVl+ "," + plnDfnUseCntxtVlRngHiVl;
+	        } else if(plnDfnUseCntxtVlRngHiVl.equals("[") | plnDfnUseCntxtVlRngHiVl.equals("]") | this.plnDfnUseCntxtVlRngHiVl.substring(this.plnDfnUseCntxtVlRngHiVl.length() - 1).equals("[")) {
+	        	this.plnDfnUseCntxtVlRngHiVl = this.plnDfnUseCntxtVlRngHiVl+plnDfnUseCntxtVlRngHiVl;
+	        } else  {
+	            this.plnDfnUseCntxtVlRngHiVl = this.plnDfnUseCntxtVlRngHiVl+ "," +plnDfnUseCntxtVlRngHiVl;
+	        }
+        }
     }
     
     
@@ -5442,6 +12330,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnUseCntxtVlRngLwCd = plnDfnUseCntxtVlRngLwCd;
     }
     
+    public void addPlnDfnUseCntxtVlRngLwCd(String plnDfnUseCntxtVlRngLwCd) {
+    	if( plnDfnUseCntxtVlRngLwCd != null ) {
+	    	if( this.plnDfnUseCntxtVlRngLwCd == null ) {
+	        	this.plnDfnUseCntxtVlRngLwCd = plnDfnUseCntxtVlRngLwCd;
+	        } else if(this.plnDfnUseCntxtVlRngLwCd.substring(this.plnDfnUseCntxtVlRngLwCd.length() - 1).equals("]") & plnDfnUseCntxtVlRngLwCd.equals("[")) {
+	        	this.plnDfnUseCntxtVlRngLwCd = this.plnDfnUseCntxtVlRngLwCd+ "," + plnDfnUseCntxtVlRngLwCd;
+	        } else if(plnDfnUseCntxtVlRngLwCd.equals("[") | plnDfnUseCntxtVlRngLwCd.equals("]") | this.plnDfnUseCntxtVlRngLwCd.substring(this.plnDfnUseCntxtVlRngLwCd.length() - 1).equals("[")) {
+	        	this.plnDfnUseCntxtVlRngLwCd = this.plnDfnUseCntxtVlRngLwCd+plnDfnUseCntxtVlRngLwCd;
+	        } else  {
+	            this.plnDfnUseCntxtVlRngLwCd = this.plnDfnUseCntxtVlRngLwCd+ "," +plnDfnUseCntxtVlRngLwCd;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnUseCntxtVlRngLwCmprtr() {
@@ -5450,6 +12352,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnUseCntxtVlRngLwCmprtr(String plnDfnUseCntxtVlRngLwCmprtr) {
         this.plnDfnUseCntxtVlRngLwCmprtr = plnDfnUseCntxtVlRngLwCmprtr;
+    }
+    
+    public void addPlnDfnUseCntxtVlRngLwCmprtr(String plnDfnUseCntxtVlRngLwCmprtr) {
+    	if( plnDfnUseCntxtVlRngLwCmprtr != null ) {
+	    	if( this.plnDfnUseCntxtVlRngLwCmprtr == null ) {
+	        	this.plnDfnUseCntxtVlRngLwCmprtr = plnDfnUseCntxtVlRngLwCmprtr;
+	        } else if(this.plnDfnUseCntxtVlRngLwCmprtr.substring(this.plnDfnUseCntxtVlRngLwCmprtr.length() - 1).equals("]") & plnDfnUseCntxtVlRngLwCmprtr.equals("[")) {
+	        	this.plnDfnUseCntxtVlRngLwCmprtr = this.plnDfnUseCntxtVlRngLwCmprtr+ "," + plnDfnUseCntxtVlRngLwCmprtr;
+	        } else if(plnDfnUseCntxtVlRngLwCmprtr.equals("[") | plnDfnUseCntxtVlRngLwCmprtr.equals("]") | this.plnDfnUseCntxtVlRngLwCmprtr.substring(this.plnDfnUseCntxtVlRngLwCmprtr.length() - 1).equals("[")) {
+	        	this.plnDfnUseCntxtVlRngLwCmprtr = this.plnDfnUseCntxtVlRngLwCmprtr+plnDfnUseCntxtVlRngLwCmprtr;
+	        } else  {
+	            this.plnDfnUseCntxtVlRngLwCmprtr = this.plnDfnUseCntxtVlRngLwCmprtr+ "," +plnDfnUseCntxtVlRngLwCmprtr;
+	        }
+        }
     }
     
     
@@ -5462,6 +12378,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnUseCntxtVlRngLwSys = plnDfnUseCntxtVlRngLwSys;
     }
     
+    public void addPlnDfnUseCntxtVlRngLwSys(String plnDfnUseCntxtVlRngLwSys) {
+    	if( plnDfnUseCntxtVlRngLwSys != null ) {
+	    	if( this.plnDfnUseCntxtVlRngLwSys == null ) {
+	        	this.plnDfnUseCntxtVlRngLwSys = plnDfnUseCntxtVlRngLwSys;
+	        } else if(this.plnDfnUseCntxtVlRngLwSys.substring(this.plnDfnUseCntxtVlRngLwSys.length() - 1).equals("]") & plnDfnUseCntxtVlRngLwSys.equals("[")) {
+	        	this.plnDfnUseCntxtVlRngLwSys = this.plnDfnUseCntxtVlRngLwSys+ "," + plnDfnUseCntxtVlRngLwSys;
+	        } else if(plnDfnUseCntxtVlRngLwSys.equals("[") | plnDfnUseCntxtVlRngLwSys.equals("]") | this.plnDfnUseCntxtVlRngLwSys.substring(this.plnDfnUseCntxtVlRngLwSys.length() - 1).equals("[")) {
+	        	this.plnDfnUseCntxtVlRngLwSys = this.plnDfnUseCntxtVlRngLwSys+plnDfnUseCntxtVlRngLwSys;
+	        } else  {
+	            this.plnDfnUseCntxtVlRngLwSys = this.plnDfnUseCntxtVlRngLwSys+ "," +plnDfnUseCntxtVlRngLwSys;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnUseCntxtVlRngLwUnt() {
@@ -5470,6 +12400,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnUseCntxtVlRngLwUnt(String plnDfnUseCntxtVlRngLwUnt) {
         this.plnDfnUseCntxtVlRngLwUnt = plnDfnUseCntxtVlRngLwUnt;
+    }
+    
+    public void addPlnDfnUseCntxtVlRngLwUnt(String plnDfnUseCntxtVlRngLwUnt) {
+    	if( plnDfnUseCntxtVlRngLwUnt != null ) {
+	    	if( this.plnDfnUseCntxtVlRngLwUnt == null ) {
+	        	this.plnDfnUseCntxtVlRngLwUnt = plnDfnUseCntxtVlRngLwUnt;
+	        } else if(this.plnDfnUseCntxtVlRngLwUnt.substring(this.plnDfnUseCntxtVlRngLwUnt.length() - 1).equals("]") & plnDfnUseCntxtVlRngLwUnt.equals("[")) {
+	        	this.plnDfnUseCntxtVlRngLwUnt = this.plnDfnUseCntxtVlRngLwUnt+ "," + plnDfnUseCntxtVlRngLwUnt;
+	        } else if(plnDfnUseCntxtVlRngLwUnt.equals("[") | plnDfnUseCntxtVlRngLwUnt.equals("]") | this.plnDfnUseCntxtVlRngLwUnt.substring(this.plnDfnUseCntxtVlRngLwUnt.length() - 1).equals("[")) {
+	        	this.plnDfnUseCntxtVlRngLwUnt = this.plnDfnUseCntxtVlRngLwUnt+plnDfnUseCntxtVlRngLwUnt;
+	        } else  {
+	            this.plnDfnUseCntxtVlRngLwUnt = this.plnDfnUseCntxtVlRngLwUnt+ "," +plnDfnUseCntxtVlRngLwUnt;
+	        }
+        }
     }
     
     
@@ -5482,6 +12426,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnUseCntxtVlRngLwVl = plnDfnUseCntxtVlRngLwVl;
     }
     
+    public void addPlnDfnUseCntxtVlRngLwVl(String plnDfnUseCntxtVlRngLwVl) {
+    	if( plnDfnUseCntxtVlRngLwVl != null ) {
+	    	if( this.plnDfnUseCntxtVlRngLwVl == null ) {
+	        	this.plnDfnUseCntxtVlRngLwVl = plnDfnUseCntxtVlRngLwVl;
+	        } else if(this.plnDfnUseCntxtVlRngLwVl.substring(this.plnDfnUseCntxtVlRngLwVl.length() - 1).equals("]") & plnDfnUseCntxtVlRngLwVl.equals("[")) {
+	        	this.plnDfnUseCntxtVlRngLwVl = this.plnDfnUseCntxtVlRngLwVl+ "," + plnDfnUseCntxtVlRngLwVl;
+	        } else if(plnDfnUseCntxtVlRngLwVl.equals("[") | plnDfnUseCntxtVlRngLwVl.equals("]") | this.plnDfnUseCntxtVlRngLwVl.substring(this.plnDfnUseCntxtVlRngLwVl.length() - 1).equals("[")) {
+	        	this.plnDfnUseCntxtVlRngLwVl = this.plnDfnUseCntxtVlRngLwVl+plnDfnUseCntxtVlRngLwVl;
+	        } else  {
+	            this.plnDfnUseCntxtVlRngLwVl = this.plnDfnUseCntxtVlRngLwVl+ "," +plnDfnUseCntxtVlRngLwVl;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnUseCntxtVlRfrnc() {
@@ -5492,6 +12450,20 @@ public class PlanDefinition  implements java.io.Serializable {
         this.plnDfnUseCntxtVlRfrnc = plnDfnUseCntxtVlRfrnc;
     }
     
+    public void addPlnDfnUseCntxtVlRfrnc(String plnDfnUseCntxtVlRfrnc) {
+    	if( plnDfnUseCntxtVlRfrnc != null ) {
+	    	if( this.plnDfnUseCntxtVlRfrnc == null ) {
+	        	this.plnDfnUseCntxtVlRfrnc = plnDfnUseCntxtVlRfrnc;
+	        } else if(this.plnDfnUseCntxtVlRfrnc.substring(this.plnDfnUseCntxtVlRfrnc.length() - 1).equals("]") & plnDfnUseCntxtVlRfrnc.equals("[")) {
+	        	this.plnDfnUseCntxtVlRfrnc = this.plnDfnUseCntxtVlRfrnc+ "," + plnDfnUseCntxtVlRfrnc;
+	        } else if(plnDfnUseCntxtVlRfrnc.equals("[") | plnDfnUseCntxtVlRfrnc.equals("]") | this.plnDfnUseCntxtVlRfrnc.substring(this.plnDfnUseCntxtVlRfrnc.length() - 1).equals("[")) {
+	        	this.plnDfnUseCntxtVlRfrnc = this.plnDfnUseCntxtVlRfrnc+plnDfnUseCntxtVlRfrnc;
+	        } else  {
+	            this.plnDfnUseCntxtVlRfrnc = this.plnDfnUseCntxtVlRfrnc+ "," +plnDfnUseCntxtVlRfrnc;
+	        }
+        }
+    }
+    
     
     
     public String getPlnDfnVrsn() {
@@ -5500,6 +12472,20 @@ public class PlanDefinition  implements java.io.Serializable {
     
     public void setPlnDfnVrsn(String plnDfnVrsn) {
         this.plnDfnVrsn = plnDfnVrsn;
+    }
+    
+    public void addPlnDfnVrsn(String plnDfnVrsn) {
+    	if( plnDfnVrsn != null ) {
+	    	if( this.plnDfnVrsn == null ) {
+	        	this.plnDfnVrsn = plnDfnVrsn;
+	        } else if(this.plnDfnVrsn.substring(this.plnDfnVrsn.length() - 1).equals("]") & plnDfnVrsn.equals("[")) {
+	        	this.plnDfnVrsn = this.plnDfnVrsn+ "," + plnDfnVrsn;
+	        } else if(plnDfnVrsn.equals("[") | plnDfnVrsn.equals("]") | this.plnDfnVrsn.substring(this.plnDfnVrsn.length() - 1).equals("[")) {
+	        	this.plnDfnVrsn = this.plnDfnVrsn+plnDfnVrsn;
+	        } else  {
+	            this.plnDfnVrsn = this.plnDfnVrsn+ "," +plnDfnVrsn;
+	        }
+        }
     }
     
     

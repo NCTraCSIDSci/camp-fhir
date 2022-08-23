@@ -8,335 +8,847 @@ public class CoverageBidirectionalConversion
 		 main.java.com.campfhir.model.Coverage c = new  main.java.com.campfhir.model.Coverage();
 
 		/******************** id ********************************************************************************/
-		coverage.setId(c.getId());
+		c.setId(coverage.getIdElement().getIdPart());
 
 		/******************** coveragetype ********************************************************************************/
 		org.hl7.fhir.r4.model.CodeableConcept coveragetype = coverage.getType();
 
 		/******************** Cvg_Typ_Txt ********************************************************************************/
 		if(coveragetype.hasText()) {
-			c.setCvgTypTxt(String.valueOf(coveragetype.getText()));
+
+			c.addCvgTypTxt(String.valueOf(coveragetype.getText()));
+		} else {
+			c.addCvgTypTxt("NULL");
 		}
+
+
 		/******************** coveragetypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding coveragetypecoding = coveragetype.getCodingFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.Coding> coveragetypecodinglist = coveragetype.getCoding();
+		for(int coveragetypecodingi = 0; coveragetypecodingi<coveragetypecodinglist.size();coveragetypecodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  coveragetypecoding = coveragetypecodinglist.get(coveragetypecodingi);
+
+		/******************** Cvg_Typ_Cdg_Dsply ********************************************************************************/
+		if(coveragetypecodingi == 0) {c.addCvgTypCdgDsply("[");}
+		if(coveragetypecoding.hasDisplay()) {
+
+			c.addCvgTypCdgDsply(String.valueOf(coveragetypecoding.getDisplay()));
+		} else {
+			c.addCvgTypCdgDsply("NULL");
+		}
+
+		if(coveragetypecodingi == coveragetypecodinglist.size()-1) {c.addCvgTypCdgDsply("]");}
+
 
 		/******************** Cvg_Typ_Cdg_Vrsn ********************************************************************************/
+		if(coveragetypecodingi == 0) {c.addCvgTypCdgVrsn("[");}
 		if(coveragetypecoding.hasVersion()) {
-			c.setCvgTypCdgVrsn(String.valueOf(coveragetypecoding.getVersion()));
+
+			c.addCvgTypCdgVrsn(String.valueOf(coveragetypecoding.getVersion()));
+		} else {
+			c.addCvgTypCdgVrsn("NULL");
 		}
-		/******************** Cvg_Typ_Cdg_Dsply ********************************************************************************/
-		if(coveragetypecoding.hasDisplay()) {
-			c.setCvgTypCdgDsply(String.valueOf(coveragetypecoding.getDisplay()));
-		}
+
+		if(coveragetypecodingi == coveragetypecodinglist.size()-1) {c.addCvgTypCdgVrsn("]");}
+
+
 		/******************** Cvg_Typ_Cdg_Cd ********************************************************************************/
+		if(coveragetypecodingi == 0) {c.addCvgTypCdgCd("[");}
 		if(coveragetypecoding.hasCode()) {
-			c.setCvgTypCdgCd(String.valueOf(coveragetypecoding.getCode()));
+
+			c.addCvgTypCdgCd(String.valueOf(coveragetypecoding.getCode()));
+		} else {
+			c.addCvgTypCdgCd("NULL");
 		}
+
+		if(coveragetypecodingi == coveragetypecodinglist.size()-1) {c.addCvgTypCdgCd("]");}
+
+
 		/******************** Cvg_Typ_Cdg_UsrSltd ********************************************************************************/
+		if(coveragetypecodingi == 0) {c.addCvgTypCdgUsrSltd("[");}
 		if(coveragetypecoding.hasUserSelected()) {
-			c.setCvgTypCdgUsrSltd(String.valueOf(coveragetypecoding.getUserSelected()));
+
+			c.addCvgTypCdgUsrSltd(String.valueOf(coveragetypecoding.getUserSelected()));
+		} else {
+			c.addCvgTypCdgUsrSltd("NULL");
 		}
+
+		if(coveragetypecodingi == coveragetypecodinglist.size()-1) {c.addCvgTypCdgUsrSltd("]");}
+
+
 		/******************** Cvg_Typ_Cdg_Sys ********************************************************************************/
+		if(coveragetypecodingi == 0) {c.addCvgTypCdgSys("[");}
 		if(coveragetypecoding.hasSystem()) {
-			c.setCvgTypCdgSys(String.valueOf(coveragetypecoding.getSystem()));
+
+			c.addCvgTypCdgSys(String.valueOf(coveragetypecoding.getSystem()));
+		} else {
+			c.addCvgTypCdgSys("NULL");
 		}
+
+		if(coveragetypecodingi == coveragetypecodinglist.size()-1) {c.addCvgTypCdgSys("]");}
+
+
+		 };
 		/******************** coveragestatus ********************************************************************************/
 		org.hl7.fhir.r4.model.Coverage.CoverageStatus coveragestatus = coverage.getStatus();
-		c.setCvgSts(coveragestatus.toCode());
+		if(coveragestatus!=null) {
+			c.addCvgSts(coveragestatus.toCode());
+		} else {
+			c.addCvgSts("NULL");
+		}
 
 		/******************** coverageperiod ********************************************************************************/
 		org.hl7.fhir.r4.model.Period coverageperiod = coverage.getPeriod();
 
 		/******************** Cvg_Prd_Strt ********************************************************************************/
 		if(coverageperiod.hasStart()) {
-			c.setCvgPrdStrt(String.valueOf(coverageperiod.getStart()));
+
+			c.addCvgPrdStrt("\""+ca.uhn.fhir.util.DateUtils.formatDate(coverageperiod.getStart())+"\"");
+		} else {
+			c.addCvgPrdStrt("NULL");
 		}
+
+
 		/******************** Cvg_Prd_End ********************************************************************************/
 		if(coverageperiod.hasEnd()) {
-			c.setCvgPrdEnd(String.valueOf(coverageperiod.getEnd()));
-		}
-		/******************** Cvg_Beneficiary ********************************************************************************/
-		if(coverage.hasBeneficiary()) {
-			c.setCvgBeneficiary(String.valueOf(coverage.getBeneficiary()));
-		}
-		/******************** Cvg_Dependent ********************************************************************************/
-		if(coverage.hasDependent()) {
-			c.setCvgDependent(String.valueOf(coverage.getDependent()));
-		}
-		/******************** Cvg_SubscriberId ********************************************************************************/
-		if(coverage.hasSubscriberId()) {
-			c.setCvgSubscriberId(String.valueOf(coverage.getSubscriberId()));
-		}
-		/******************** Cvg_PolicyHolder ********************************************************************************/
-		if(coverage.hasPolicyHolder()) {
-			c.setCvgPolicyHolder(String.valueOf(coverage.getPolicyHolder()));
-		}
-		/******************** Cvg_Subscriber ********************************************************************************/
-		if(coverage.hasSubscriber()) {
-			c.setCvgSubscriber(String.valueOf(coverage.getSubscriber()));
-		}
-		/******************** coverageclass_ ********************************************************************************/
-		org.hl7.fhir.r4.model.Coverage.ClassComponent coverageclass = coverage.getClass_FirstRep();
 
-		/******************** Cvg_Cls__Nm ********************************************************************************/
-		if(coverageclass.hasName()) {
-			c.setCvgClsNm(String.valueOf(coverageclass.getName()));
+			c.addCvgPrdEnd("\""+ca.uhn.fhir.util.DateUtils.formatDate(coverageperiod.getEnd())+"\"");
+		} else {
+			c.addCvgPrdEnd("NULL");
 		}
-		/******************** Cvg_Cls__Vl ********************************************************************************/
-		if(coverageclass.hasValue()) {
-			c.setCvgClsVl(String.valueOf(coverageclass.getValue()));
-		}
-		/******************** coverageclasstype ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept coverageclasstype = coverageclass.getType();
 
-		/******************** Cvg_Cls__Typ_Txt ********************************************************************************/
-		if(coverageclasstype.hasText()) {
-			c.setCvgClsTypTxt(String.valueOf(coverageclasstype.getText()));
-		}
-		/******************** coverageclasstypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding coverageclasstypecoding = coverageclasstype.getCodingFirstRep();
 
-		/******************** Cvg_Cls__Typ_Cdg_Vrsn ********************************************************************************/
-		if(coverageclasstypecoding.hasVersion()) {
-			c.setCvgClsTypCdgVrsn(String.valueOf(coverageclasstypecoding.getVersion()));
-		}
-		/******************** Cvg_Cls__Typ_Cdg_Dsply ********************************************************************************/
-		if(coverageclasstypecoding.hasDisplay()) {
-			c.setCvgClsTypCdgDsply(String.valueOf(coverageclasstypecoding.getDisplay()));
-		}
-		/******************** Cvg_Cls__Typ_Cdg_Cd ********************************************************************************/
-		if(coverageclasstypecoding.hasCode()) {
-			c.setCvgClsTypCdgCd(String.valueOf(coverageclasstypecoding.getCode()));
-		}
-		/******************** Cvg_Cls__Typ_Cdg_UsrSltd ********************************************************************************/
-		if(coverageclasstypecoding.hasUserSelected()) {
-			c.setCvgClsTypCdgUsrSltd(String.valueOf(coverageclasstypecoding.getUserSelected()));
-		}
-		/******************** Cvg_Cls__Typ_Cdg_Sys ********************************************************************************/
-		if(coverageclasstypecoding.hasSystem()) {
-			c.setCvgClsTypCdgSys(String.valueOf(coverageclasstypecoding.getSystem()));
-		}
-		/******************** Cvg_Network ********************************************************************************/
-		if(coverage.hasNetwork()) {
-			c.setCvgNetwork(String.valueOf(coverage.getNetwork()));
-		}
-		/******************** Cvg_Ordr ********************************************************************************/
-		if(coverage.hasOrder()) {
-			c.setCvgOrdr(String.valueOf(coverage.getOrder()));
-		}
-		/******************** coveragerelationship ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept coveragerelationship = coverage.getRelationship();
+		/******************** coverageidentifier ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.Identifier> coverageidentifierlist = coverage.getIdentifier();
+		for(int coverageidentifieri = 0; coverageidentifieri<coverageidentifierlist.size();coverageidentifieri++ ) {
+		org.hl7.fhir.r4.model.Identifier  coverageidentifier = coverageidentifierlist.get(coverageidentifieri);
 
-		/******************** Cvg_Rltnship_Txt ********************************************************************************/
-		if(coveragerelationship.hasText()) {
-			c.setCvgRltnshipTxt(String.valueOf(coveragerelationship.getText()));
-		}
-		/******************** coveragerelationshipcoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding coveragerelationshipcoding = coveragerelationship.getCodingFirstRep();
+		/******************** Cvg_Id_Vl ********************************************************************************/
+		if(coverageidentifieri == 0) {c.addCvgIdVl("[");}
+		if(coverageidentifier.hasValue()) {
 
-		/******************** Cvg_Rltnship_Cdg_Vrsn ********************************************************************************/
-		if(coveragerelationshipcoding.hasVersion()) {
-			c.setCvgRltnshipCdgVrsn(String.valueOf(coveragerelationshipcoding.getVersion()));
+			c.addCvgIdVl(String.valueOf(coverageidentifier.getValue()));
+		} else {
+			c.addCvgIdVl("NULL");
 		}
-		/******************** Cvg_Rltnship_Cdg_Dsply ********************************************************************************/
-		if(coveragerelationshipcoding.hasDisplay()) {
-			c.setCvgRltnshipCdgDsply(String.valueOf(coveragerelationshipcoding.getDisplay()));
+
+		if(coverageidentifieri == coverageidentifierlist.size()-1) {c.addCvgIdVl("]");}
+
+
+		/******************** coverageidentifiertype ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept coverageidentifiertype = coverageidentifier.getType();
+
+		/******************** Cvg_Id_Typ_Txt ********************************************************************************/
+		if(coverageidentifieri == 0) {c.addCvgIdTypTxt("[");}
+		if(coverageidentifiertype.hasText()) {
+
+			c.addCvgIdTypTxt(String.valueOf(coverageidentifiertype.getText()));
+		} else {
+			c.addCvgIdTypTxt("NULL");
 		}
-		/******************** Cvg_Rltnship_Cdg_Cd ********************************************************************************/
-		if(coveragerelationshipcoding.hasCode()) {
-			c.setCvgRltnshipCdgCd(String.valueOf(coveragerelationshipcoding.getCode()));
+
+		if(coverageidentifieri == coverageidentifierlist.size()-1) {c.addCvgIdTypTxt("]");}
+
+
+		/******************** coverageidentifiertypecoding ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.Coding> coverageidentifiertypecodinglist = coverageidentifiertype.getCoding();
+		for(int coverageidentifiertypecodingi = 0; coverageidentifiertypecodingi<coverageidentifiertypecodinglist.size();coverageidentifiertypecodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  coverageidentifiertypecoding = coverageidentifiertypecodinglist.get(coverageidentifiertypecodingi);
+
+		/******************** Cvg_Id_Typ_Cdg_Dsply ********************************************************************************/
+		if(coverageidentifiertypecodingi == 0) {c.addCvgIdTypCdgDsply("[[");}
+		if(coverageidentifiertypecoding.hasDisplay()) {
+
+			c.addCvgIdTypCdgDsply(String.valueOf(coverageidentifiertypecoding.getDisplay()));
+		} else {
+			c.addCvgIdTypCdgDsply("NULL");
 		}
-		/******************** Cvg_Rltnship_Cdg_UsrSltd ********************************************************************************/
-		if(coveragerelationshipcoding.hasUserSelected()) {
-			c.setCvgRltnshipCdgUsrSltd(String.valueOf(coveragerelationshipcoding.getUserSelected()));
+
+		if(coverageidentifiertypecodingi == coverageidentifiertypecodinglist.size()-1) {c.addCvgIdTypCdgDsply("]]");}
+
+
+		/******************** Cvg_Id_Typ_Cdg_Vrsn ********************************************************************************/
+		if(coverageidentifiertypecodingi == 0) {c.addCvgIdTypCdgVrsn("[[");}
+		if(coverageidentifiertypecoding.hasVersion()) {
+
+			c.addCvgIdTypCdgVrsn(String.valueOf(coverageidentifiertypecoding.getVersion()));
+		} else {
+			c.addCvgIdTypCdgVrsn("NULL");
 		}
-		/******************** Cvg_Rltnship_Cdg_Sys ********************************************************************************/
-		if(coveragerelationshipcoding.hasSystem()) {
-			c.setCvgRltnshipCdgSys(String.valueOf(coveragerelationshipcoding.getSystem()));
+
+		if(coverageidentifiertypecodingi == coverageidentifiertypecodinglist.size()-1) {c.addCvgIdTypCdgVrsn("]]");}
+
+
+		/******************** Cvg_Id_Typ_Cdg_Cd ********************************************************************************/
+		if(coverageidentifiertypecodingi == 0) {c.addCvgIdTypCdgCd("[[");}
+		if(coverageidentifiertypecoding.hasCode()) {
+
+			c.addCvgIdTypCdgCd(String.valueOf(coverageidentifiertypecoding.getCode()));
+		} else {
+			c.addCvgIdTypCdgCd("NULL");
 		}
-		/******************** Cvg_Payor ********************************************************************************/
-		if(coverage.hasPayor()) {
-			c.setCvgPayor(String.valueOf(coverage.getPayorFirstRep()));
+
+		if(coverageidentifiertypecodingi == coverageidentifiertypecodinglist.size()-1) {c.addCvgIdTypCdgCd("]]");}
+
+
+		/******************** Cvg_Id_Typ_Cdg_UsrSltd ********************************************************************************/
+		if(coverageidentifiertypecodingi == 0) {c.addCvgIdTypCdgUsrSltd("[[");}
+		if(coverageidentifiertypecoding.hasUserSelected()) {
+
+			c.addCvgIdTypCdgUsrSltd(String.valueOf(coverageidentifiertypecoding.getUserSelected()));
+		} else {
+			c.addCvgIdTypCdgUsrSltd("NULL");
 		}
-		/******************** Cvg_Subrogation ********************************************************************************/
-		if(coverage.hasSubrogation()) {
-			c.setCvgSubrogation(String.valueOf(coverage.getSubrogation()));
+
+		if(coverageidentifiertypecodingi == coverageidentifiertypecodinglist.size()-1) {c.addCvgIdTypCdgUsrSltd("]]");}
+
+
+		/******************** Cvg_Id_Typ_Cdg_Sys ********************************************************************************/
+		if(coverageidentifiertypecodingi == 0) {c.addCvgIdTypCdgSys("[[");}
+		if(coverageidentifiertypecoding.hasSystem()) {
+
+			c.addCvgIdTypCdgSys(String.valueOf(coverageidentifiertypecoding.getSystem()));
+		} else {
+			c.addCvgIdTypCdgSys("NULL");
 		}
+
+		if(coverageidentifiertypecodingi == coverageidentifiertypecodinglist.size()-1) {c.addCvgIdTypCdgSys("]]");}
+
+
+		 };
+		/******************** coverageidentifierperiod ********************************************************************************/
+		org.hl7.fhir.r4.model.Period coverageidentifierperiod = coverageidentifier.getPeriod();
+
+		/******************** Cvg_Id_Prd_Strt ********************************************************************************/
+		if(coverageidentifieri == 0) {c.addCvgIdPrdStrt("[");}
+		if(coverageidentifierperiod.hasStart()) {
+
+			c.addCvgIdPrdStrt("\""+ca.uhn.fhir.util.DateUtils.formatDate(coverageidentifierperiod.getStart())+"\"");
+		} else {
+			c.addCvgIdPrdStrt("NULL");
+		}
+
+		if(coverageidentifieri == coverageidentifierlist.size()-1) {c.addCvgIdPrdStrt("]");}
+
+
+		/******************** Cvg_Id_Prd_End ********************************************************************************/
+		if(coverageidentifieri == 0) {c.addCvgIdPrdEnd("[");}
+		if(coverageidentifierperiod.hasEnd()) {
+
+			c.addCvgIdPrdEnd("\""+ca.uhn.fhir.util.DateUtils.formatDate(coverageidentifierperiod.getEnd())+"\"");
+		} else {
+			c.addCvgIdPrdEnd("NULL");
+		}
+
+		if(coverageidentifieri == coverageidentifierlist.size()-1) {c.addCvgIdPrdEnd("]");}
+
+
+		/******************** coverageidentifieruse ********************************************************************************/
+		org.hl7.fhir.r4.model.Identifier.IdentifierUse coverageidentifieruse = coverageidentifier.getUse();
+		if(coverageidentifieruse!=null) {
+		if(coverageidentifieri == 0) {
+
+		c.addCvgIdUse("[");		}
+			c.addCvgIdUse(coverageidentifieruse.toCode());
+		if(coverageidentifieri == coverageidentifierlist.size()-1) {
+
+		c.addCvgIdUse("]");		}
+
+		} else {
+			c.addCvgIdUse("NULL");
+		}
+
+		/******************** Cvg_Id_Assigner ********************************************************************************/
+		if(coverageidentifieri == 0) {c.addCvgIdAssigner("[");}
+		if(coverageidentifier.hasAssigner()) {
+
+			if(coverageidentifier.getAssigner().getReference() != null) {
+			c.addCvgIdAssigner(coverageidentifier.getAssigner().getReference());
+			}
+		} else {
+			c.addCvgIdAssigner("NULL");
+		}
+
+		if(coverageidentifieri == coverageidentifierlist.size()-1) {c.addCvgIdAssigner("]");}
+
+
+		/******************** Cvg_Id_Sys ********************************************************************************/
+		if(coverageidentifieri == 0) {c.addCvgIdSys("[");}
+		if(coverageidentifier.hasSystem()) {
+
+			c.addCvgIdSys(String.valueOf(coverageidentifier.getSystem()));
+		} else {
+			c.addCvgIdSys("NULL");
+		}
+
+		if(coverageidentifieri == coverageidentifierlist.size()-1) {c.addCvgIdSys("]");}
+
+
+		 };
 		/******************** coveragecosttobeneficiary ********************************************************************************/
-		org.hl7.fhir.r4.model.Coverage.CostToBeneficiaryComponent coveragecosttobeneficiary = coverage.getCostToBeneficiaryFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.Coverage.CostToBeneficiaryComponent> coveragecosttobeneficiarylist = coverage.getCostToBeneficiary();
+		for(int coveragecosttobeneficiaryi = 0; coveragecosttobeneficiaryi<coveragecosttobeneficiarylist.size();coveragecosttobeneficiaryi++ ) {
+		org.hl7.fhir.r4.model.Coverage.CostToBeneficiaryComponent  coveragecosttobeneficiary = coveragecosttobeneficiarylist.get(coveragecosttobeneficiaryi);
 
-		/******************** coveragecosttobeneficiarytype ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept coveragecosttobeneficiarytype = coveragecosttobeneficiary.getType();
-
-		/******************** Cvg_CstToBeneficiary_Typ_Txt ********************************************************************************/
-		if(coveragecosttobeneficiarytype.hasText()) {
-			c.setCvgCstToBeneficiaryTypTxt(String.valueOf(coveragecosttobeneficiarytype.getText()));
-		}
-		/******************** coveragecosttobeneficiarytypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding coveragecosttobeneficiarytypecoding = coveragecosttobeneficiarytype.getCodingFirstRep();
-
-		/******************** Cvg_CstToBeneficiary_Typ_Cdg_Vrsn ********************************************************************************/
-		if(coveragecosttobeneficiarytypecoding.hasVersion()) {
-			c.setCvgCstToBeneficiaryTypCdgVrsn(String.valueOf(coveragecosttobeneficiarytypecoding.getVersion()));
-		}
-		/******************** Cvg_CstToBeneficiary_Typ_Cdg_Dsply ********************************************************************************/
-		if(coveragecosttobeneficiarytypecoding.hasDisplay()) {
-			c.setCvgCstToBeneficiaryTypCdgDsply(String.valueOf(coveragecosttobeneficiarytypecoding.getDisplay()));
-		}
-		/******************** Cvg_CstToBeneficiary_Typ_Cdg_Cd ********************************************************************************/
-		if(coveragecosttobeneficiarytypecoding.hasCode()) {
-			c.setCvgCstToBeneficiaryTypCdgCd(String.valueOf(coveragecosttobeneficiarytypecoding.getCode()));
-		}
-		/******************** Cvg_CstToBeneficiary_Typ_Cdg_UsrSltd ********************************************************************************/
-		if(coveragecosttobeneficiarytypecoding.hasUserSelected()) {
-			c.setCvgCstToBeneficiaryTypCdgUsrSltd(String.valueOf(coveragecosttobeneficiarytypecoding.getUserSelected()));
-		}
-		/******************** Cvg_CstToBeneficiary_Typ_Cdg_Sys ********************************************************************************/
-		if(coveragecosttobeneficiarytypecoding.hasSystem()) {
-			c.setCvgCstToBeneficiaryTypCdgSys(String.valueOf(coveragecosttobeneficiarytypecoding.getSystem()));
-		}
 		/******************** coveragecosttobeneficiaryexception ********************************************************************************/
-		org.hl7.fhir.r4.model.Coverage.ExemptionComponent coveragecosttobeneficiaryexception = coveragecosttobeneficiary.getExceptionFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.Coverage.ExemptionComponent> coveragecosttobeneficiaryexceptionlist = coveragecosttobeneficiary.getException();
+		for(int coveragecosttobeneficiaryexceptioni = 0; coveragecosttobeneficiaryexceptioni<coveragecosttobeneficiaryexceptionlist.size();coveragecosttobeneficiaryexceptioni++ ) {
+		org.hl7.fhir.r4.model.Coverage.ExemptionComponent  coveragecosttobeneficiaryexception = coveragecosttobeneficiaryexceptionlist.get(coveragecosttobeneficiaryexceptioni);
 
 		/******************** coveragecosttobeneficiaryexceptiontype ********************************************************************************/
 		org.hl7.fhir.r4.model.CodeableConcept coveragecosttobeneficiaryexceptiontype = coveragecosttobeneficiaryexception.getType();
 
 		/******************** Cvg_CstToBeneficiary_Exception_Typ_Txt ********************************************************************************/
+		if(coveragecosttobeneficiaryexceptioni == 0) {c.addCvgCstToBeneficiaryExceptionTypTxt("[[");}
 		if(coveragecosttobeneficiaryexceptiontype.hasText()) {
-			c.setCvgCstToBeneficiaryExceptionTypTxt(String.valueOf(coveragecosttobeneficiaryexceptiontype.getText()));
+
+			c.addCvgCstToBeneficiaryExceptionTypTxt(String.valueOf(coveragecosttobeneficiaryexceptiontype.getText()));
+		} else {
+			c.addCvgCstToBeneficiaryExceptionTypTxt("NULL");
 		}
+
+		if(coveragecosttobeneficiaryexceptioni == coveragecosttobeneficiaryexceptionlist.size()-1) {c.addCvgCstToBeneficiaryExceptionTypTxt("]]");}
+
+
 		/******************** coveragecosttobeneficiaryexceptiontypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding coveragecosttobeneficiaryexceptiontypecoding = coveragecosttobeneficiaryexceptiontype.getCodingFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.Coding> coveragecosttobeneficiaryexceptiontypecodinglist = coveragecosttobeneficiaryexceptiontype.getCoding();
+		for(int coveragecosttobeneficiaryexceptiontypecodingi = 0; coveragecosttobeneficiaryexceptiontypecodingi<coveragecosttobeneficiaryexceptiontypecodinglist.size();coveragecosttobeneficiaryexceptiontypecodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  coveragecosttobeneficiaryexceptiontypecoding = coveragecosttobeneficiaryexceptiontypecodinglist.get(coveragecosttobeneficiaryexceptiontypecodingi);
+
+		/******************** Cvg_CstToBeneficiary_Exception_Typ_Cdg_Dsply ********************************************************************************/
+		if(coveragecosttobeneficiaryexceptiontypecodingi == 0) {c.addCvgCstToBeneficiaryExceptionTypCdgDsply("[[[");}
+		if(coveragecosttobeneficiaryexceptiontypecoding.hasDisplay()) {
+
+			c.addCvgCstToBeneficiaryExceptionTypCdgDsply(String.valueOf(coveragecosttobeneficiaryexceptiontypecoding.getDisplay()));
+		} else {
+			c.addCvgCstToBeneficiaryExceptionTypCdgDsply("NULL");
+		}
+
+		if(coveragecosttobeneficiaryexceptiontypecodingi == coveragecosttobeneficiaryexceptiontypecodinglist.size()-1) {c.addCvgCstToBeneficiaryExceptionTypCdgDsply("]]]");}
+
 
 		/******************** Cvg_CstToBeneficiary_Exception_Typ_Cdg_Vrsn ********************************************************************************/
+		if(coveragecosttobeneficiaryexceptiontypecodingi == 0) {c.addCvgCstToBeneficiaryExceptionTypCdgVrsn("[[[");}
 		if(coveragecosttobeneficiaryexceptiontypecoding.hasVersion()) {
-			c.setCvgCstToBeneficiaryExceptionTypCdgVrsn(String.valueOf(coveragecosttobeneficiaryexceptiontypecoding.getVersion()));
+
+			c.addCvgCstToBeneficiaryExceptionTypCdgVrsn(String.valueOf(coveragecosttobeneficiaryexceptiontypecoding.getVersion()));
+		} else {
+			c.addCvgCstToBeneficiaryExceptionTypCdgVrsn("NULL");
 		}
-		/******************** Cvg_CstToBeneficiary_Exception_Typ_Cdg_Dsply ********************************************************************************/
-		if(coveragecosttobeneficiaryexceptiontypecoding.hasDisplay()) {
-			c.setCvgCstToBeneficiaryExceptionTypCdgDsply(String.valueOf(coveragecosttobeneficiaryexceptiontypecoding.getDisplay()));
-		}
+
+		if(coveragecosttobeneficiaryexceptiontypecodingi == coveragecosttobeneficiaryexceptiontypecodinglist.size()-1) {c.addCvgCstToBeneficiaryExceptionTypCdgVrsn("]]]");}
+
+
 		/******************** Cvg_CstToBeneficiary_Exception_Typ_Cdg_Cd ********************************************************************************/
+		if(coveragecosttobeneficiaryexceptiontypecodingi == 0) {c.addCvgCstToBeneficiaryExceptionTypCdgCd("[[[");}
 		if(coveragecosttobeneficiaryexceptiontypecoding.hasCode()) {
-			c.setCvgCstToBeneficiaryExceptionTypCdgCd(String.valueOf(coveragecosttobeneficiaryexceptiontypecoding.getCode()));
+
+			c.addCvgCstToBeneficiaryExceptionTypCdgCd(String.valueOf(coveragecosttobeneficiaryexceptiontypecoding.getCode()));
+		} else {
+			c.addCvgCstToBeneficiaryExceptionTypCdgCd("NULL");
 		}
+
+		if(coveragecosttobeneficiaryexceptiontypecodingi == coveragecosttobeneficiaryexceptiontypecodinglist.size()-1) {c.addCvgCstToBeneficiaryExceptionTypCdgCd("]]]");}
+
+
 		/******************** Cvg_CstToBeneficiary_Exception_Typ_Cdg_UsrSltd ********************************************************************************/
+		if(coveragecosttobeneficiaryexceptiontypecodingi == 0) {c.addCvgCstToBeneficiaryExceptionTypCdgUsrSltd("[[[");}
 		if(coveragecosttobeneficiaryexceptiontypecoding.hasUserSelected()) {
-			c.setCvgCstToBeneficiaryExceptionTypCdgUsrSltd(String.valueOf(coveragecosttobeneficiaryexceptiontypecoding.getUserSelected()));
+
+			c.addCvgCstToBeneficiaryExceptionTypCdgUsrSltd(String.valueOf(coveragecosttobeneficiaryexceptiontypecoding.getUserSelected()));
+		} else {
+			c.addCvgCstToBeneficiaryExceptionTypCdgUsrSltd("NULL");
 		}
+
+		if(coveragecosttobeneficiaryexceptiontypecodingi == coveragecosttobeneficiaryexceptiontypecodinglist.size()-1) {c.addCvgCstToBeneficiaryExceptionTypCdgUsrSltd("]]]");}
+
+
 		/******************** Cvg_CstToBeneficiary_Exception_Typ_Cdg_Sys ********************************************************************************/
+		if(coveragecosttobeneficiaryexceptiontypecodingi == 0) {c.addCvgCstToBeneficiaryExceptionTypCdgSys("[[[");}
 		if(coveragecosttobeneficiaryexceptiontypecoding.hasSystem()) {
-			c.setCvgCstToBeneficiaryExceptionTypCdgSys(String.valueOf(coveragecosttobeneficiaryexceptiontypecoding.getSystem()));
+
+			c.addCvgCstToBeneficiaryExceptionTypCdgSys(String.valueOf(coveragecosttobeneficiaryexceptiontypecoding.getSystem()));
+		} else {
+			c.addCvgCstToBeneficiaryExceptionTypCdgSys("NULL");
 		}
+
+		if(coveragecosttobeneficiaryexceptiontypecodingi == coveragecosttobeneficiaryexceptiontypecodinglist.size()-1) {c.addCvgCstToBeneficiaryExceptionTypCdgSys("]]]");}
+
+
+		 };
 		/******************** coveragecosttobeneficiaryexceptionperiod ********************************************************************************/
 		org.hl7.fhir.r4.model.Period coveragecosttobeneficiaryexceptionperiod = coveragecosttobeneficiaryexception.getPeriod();
 
 		/******************** Cvg_CstToBeneficiary_Exception_Prd_Strt ********************************************************************************/
+		if(coveragecosttobeneficiaryexceptioni == 0) {c.addCvgCstToBeneficiaryExceptionPrdStrt("[[");}
 		if(coveragecosttobeneficiaryexceptionperiod.hasStart()) {
-			c.setCvgCstToBeneficiaryExceptionPrdStrt(String.valueOf(coveragecosttobeneficiaryexceptionperiod.getStart()));
+
+			c.addCvgCstToBeneficiaryExceptionPrdStrt("\""+ca.uhn.fhir.util.DateUtils.formatDate(coveragecosttobeneficiaryexceptionperiod.getStart())+"\"");
+		} else {
+			c.addCvgCstToBeneficiaryExceptionPrdStrt("NULL");
 		}
+
+		if(coveragecosttobeneficiaryexceptioni == coveragecosttobeneficiaryexceptionlist.size()-1) {c.addCvgCstToBeneficiaryExceptionPrdStrt("]]");}
+
+
 		/******************** Cvg_CstToBeneficiary_Exception_Prd_End ********************************************************************************/
+		if(coveragecosttobeneficiaryexceptioni == 0) {c.addCvgCstToBeneficiaryExceptionPrdEnd("[[");}
 		if(coveragecosttobeneficiaryexceptionperiod.hasEnd()) {
-			c.setCvgCstToBeneficiaryExceptionPrdEnd(String.valueOf(coveragecosttobeneficiaryexceptionperiod.getEnd()));
-		}
-		/******************** coveragecosttobeneficiaryvaluequantity ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity coveragecosttobeneficiaryvaluequantity = coveragecosttobeneficiary.getValueQuantity();
 
-		/******************** Cvg_CstToBeneficiary_VlQnty_Vl ********************************************************************************/
-		if(coveragecosttobeneficiaryvaluequantity.hasValue()) {
-			c.setCvgCstToBeneficiaryVlQntyVl(String.valueOf(coveragecosttobeneficiaryvaluequantity.getValue()));
+			c.addCvgCstToBeneficiaryExceptionPrdEnd("\""+ca.uhn.fhir.util.DateUtils.formatDate(coveragecosttobeneficiaryexceptionperiod.getEnd())+"\"");
+		} else {
+			c.addCvgCstToBeneficiaryExceptionPrdEnd("NULL");
 		}
-		/******************** coveragecosttobeneficiaryvaluequantitycomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparator coveragecosttobeneficiaryvaluequantitycomparator = coveragecosttobeneficiaryvaluequantity.getComparator();
-		c.setCvgCstToBeneficiaryVlQntyCmprtr(coveragecosttobeneficiaryvaluequantitycomparator.toCode());
 
-		/******************** Cvg_CstToBeneficiary_VlQnty_Cd ********************************************************************************/
-		if(coveragecosttobeneficiaryvaluequantity.hasCode()) {
-			c.setCvgCstToBeneficiaryVlQntyCd(String.valueOf(coveragecosttobeneficiaryvaluequantity.getCode()));
+		if(coveragecosttobeneficiaryexceptioni == coveragecosttobeneficiaryexceptionlist.size()-1) {c.addCvgCstToBeneficiaryExceptionPrdEnd("]]");}
+
+
+		 };
+		/******************** coveragecosttobeneficiarytype ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept coveragecosttobeneficiarytype = coveragecosttobeneficiary.getType();
+
+		/******************** Cvg_CstToBeneficiary_Typ_Txt ********************************************************************************/
+		if(coveragecosttobeneficiarytype.hasText()) {
+
+			c.addCvgCstToBeneficiaryTypTxt(String.valueOf(coveragecosttobeneficiarytype.getText()));
+		} else {
+			c.addCvgCstToBeneficiaryTypTxt("NULL");
 		}
-		/******************** Cvg_CstToBeneficiary_VlQnty_Unt ********************************************************************************/
-		if(coveragecosttobeneficiaryvaluequantity.hasUnit()) {
-			c.setCvgCstToBeneficiaryVlQntyUnt(String.valueOf(coveragecosttobeneficiaryvaluequantity.getUnit()));
+
+
+		/******************** coveragecosttobeneficiarytypecoding ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.Coding> coveragecosttobeneficiarytypecodinglist = coveragecosttobeneficiarytype.getCoding();
+		for(int coveragecosttobeneficiarytypecodingi = 0; coveragecosttobeneficiarytypecodingi<coveragecosttobeneficiarytypecodinglist.size();coveragecosttobeneficiarytypecodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  coveragecosttobeneficiarytypecoding = coveragecosttobeneficiarytypecodinglist.get(coveragecosttobeneficiarytypecodingi);
+
+		/******************** Cvg_CstToBeneficiary_Typ_Cdg_Dsply ********************************************************************************/
+		if(coveragecosttobeneficiarytypecodingi == 0) {c.addCvgCstToBeneficiaryTypCdgDsply("[[");}
+		if(coveragecosttobeneficiarytypecoding.hasDisplay()) {
+
+			c.addCvgCstToBeneficiaryTypCdgDsply(String.valueOf(coveragecosttobeneficiarytypecoding.getDisplay()));
+		} else {
+			c.addCvgCstToBeneficiaryTypCdgDsply("NULL");
 		}
-		/******************** Cvg_CstToBeneficiary_VlQnty_Sys ********************************************************************************/
-		if(coveragecosttobeneficiaryvaluequantity.hasSystem()) {
-			c.setCvgCstToBeneficiaryVlQntySys(String.valueOf(coveragecosttobeneficiaryvaluequantity.getSystem()));
+
+		if(coveragecosttobeneficiarytypecodingi == coveragecosttobeneficiarytypecodinglist.size()-1) {c.addCvgCstToBeneficiaryTypCdgDsply("]]");}
+
+
+		/******************** Cvg_CstToBeneficiary_Typ_Cdg_Vrsn ********************************************************************************/
+		if(coveragecosttobeneficiarytypecodingi == 0) {c.addCvgCstToBeneficiaryTypCdgVrsn("[[");}
+		if(coveragecosttobeneficiarytypecoding.hasVersion()) {
+
+			c.addCvgCstToBeneficiaryTypCdgVrsn(String.valueOf(coveragecosttobeneficiarytypecoding.getVersion()));
+		} else {
+			c.addCvgCstToBeneficiaryTypCdgVrsn("NULL");
 		}
+
+		if(coveragecosttobeneficiarytypecodingi == coveragecosttobeneficiarytypecodinglist.size()-1) {c.addCvgCstToBeneficiaryTypCdgVrsn("]]");}
+
+
+		/******************** Cvg_CstToBeneficiary_Typ_Cdg_Cd ********************************************************************************/
+		if(coveragecosttobeneficiarytypecodingi == 0) {c.addCvgCstToBeneficiaryTypCdgCd("[[");}
+		if(coveragecosttobeneficiarytypecoding.hasCode()) {
+
+			c.addCvgCstToBeneficiaryTypCdgCd(String.valueOf(coveragecosttobeneficiarytypecoding.getCode()));
+		} else {
+			c.addCvgCstToBeneficiaryTypCdgCd("NULL");
+		}
+
+		if(coveragecosttobeneficiarytypecodingi == coveragecosttobeneficiarytypecodinglist.size()-1) {c.addCvgCstToBeneficiaryTypCdgCd("]]");}
+
+
+		/******************** Cvg_CstToBeneficiary_Typ_Cdg_UsrSltd ********************************************************************************/
+		if(coveragecosttobeneficiarytypecodingi == 0) {c.addCvgCstToBeneficiaryTypCdgUsrSltd("[[");}
+		if(coveragecosttobeneficiarytypecoding.hasUserSelected()) {
+
+			c.addCvgCstToBeneficiaryTypCdgUsrSltd(String.valueOf(coveragecosttobeneficiarytypecoding.getUserSelected()));
+		} else {
+			c.addCvgCstToBeneficiaryTypCdgUsrSltd("NULL");
+		}
+
+		if(coveragecosttobeneficiarytypecodingi == coveragecosttobeneficiarytypecodinglist.size()-1) {c.addCvgCstToBeneficiaryTypCdgUsrSltd("]]");}
+
+
+		/******************** Cvg_CstToBeneficiary_Typ_Cdg_Sys ********************************************************************************/
+		if(coveragecosttobeneficiarytypecodingi == 0) {c.addCvgCstToBeneficiaryTypCdgSys("[[");}
+		if(coveragecosttobeneficiarytypecoding.hasSystem()) {
+
+			c.addCvgCstToBeneficiaryTypCdgSys(String.valueOf(coveragecosttobeneficiarytypecoding.getSystem()));
+		} else {
+			c.addCvgCstToBeneficiaryTypCdgSys("NULL");
+		}
+
+		if(coveragecosttobeneficiarytypecodingi == coveragecosttobeneficiarytypecodinglist.size()-1) {c.addCvgCstToBeneficiaryTypCdgSys("]]");}
+
+
+		 };
 		/******************** coveragecosttobeneficiaryvaluemoney ********************************************************************************/
 		org.hl7.fhir.r4.model.Money coveragecosttobeneficiaryvaluemoney = coveragecosttobeneficiary.getValueMoney();
 
 		/******************** Cvg_CstToBeneficiary_VlMoney_Vl ********************************************************************************/
 		if(coveragecosttobeneficiaryvaluemoney.hasValue()) {
-			c.setCvgCstToBeneficiaryVlMoneyVl(String.valueOf(coveragecosttobeneficiaryvaluemoney.getValue()));
+
+			c.addCvgCstToBeneficiaryVlMoneyVl(String.valueOf(coveragecosttobeneficiaryvaluemoney.getValue()));
+		} else {
+			c.addCvgCstToBeneficiaryVlMoneyVl("NULL");
 		}
+
+
 		/******************** Cvg_CstToBeneficiary_VlMoney_Crncy ********************************************************************************/
 		if(coveragecosttobeneficiaryvaluemoney.hasCurrency()) {
-			c.setCvgCstToBeneficiaryVlMoneyCrncy(String.valueOf(coveragecosttobeneficiaryvaluemoney.getCurrency()));
+
+			c.addCvgCstToBeneficiaryVlMoneyCrncy(String.valueOf(coveragecosttobeneficiaryvaluemoney.getCurrency()));
+		} else {
+			c.addCvgCstToBeneficiaryVlMoneyCrncy("NULL");
 		}
+
+
+		/******************** coveragecosttobeneficiaryvaluequantity ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity coveragecosttobeneficiaryvaluequantity = coveragecosttobeneficiary.getValueQuantity();
+
+		/******************** Cvg_CstToBeneficiary_VlQnty_Vl ********************************************************************************/
+		if(coveragecosttobeneficiaryvaluequantity.hasValue()) {
+
+			c.addCvgCstToBeneficiaryVlQntyVl(String.valueOf(coveragecosttobeneficiaryvaluequantity.getValue()));
+		} else {
+			c.addCvgCstToBeneficiaryVlQntyVl("NULL");
+		}
+
+
+		/******************** coveragecosttobeneficiaryvaluequantitycomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparator coveragecosttobeneficiaryvaluequantitycomparator = coveragecosttobeneficiaryvaluequantity.getComparator();
+		if(coveragecosttobeneficiaryvaluequantitycomparator!=null) {
+			c.addCvgCstToBeneficiaryVlQntyCmprtr(coveragecosttobeneficiaryvaluequantitycomparator.toCode());
+		} else {
+			c.addCvgCstToBeneficiaryVlQntyCmprtr("NULL");
+		}
+
+		/******************** Cvg_CstToBeneficiary_VlQnty_Cd ********************************************************************************/
+		if(coveragecosttobeneficiaryvaluequantity.hasCode()) {
+
+			c.addCvgCstToBeneficiaryVlQntyCd(String.valueOf(coveragecosttobeneficiaryvaluequantity.getCode()));
+		} else {
+			c.addCvgCstToBeneficiaryVlQntyCd("NULL");
+		}
+
+
+		/******************** Cvg_CstToBeneficiary_VlQnty_Unt ********************************************************************************/
+		if(coveragecosttobeneficiaryvaluequantity.hasUnit()) {
+
+			c.addCvgCstToBeneficiaryVlQntyUnt(String.valueOf(coveragecosttobeneficiaryvaluequantity.getUnit()));
+		} else {
+			c.addCvgCstToBeneficiaryVlQntyUnt("NULL");
+		}
+
+
+		/******************** Cvg_CstToBeneficiary_VlQnty_Sys ********************************************************************************/
+		if(coveragecosttobeneficiaryvaluequantity.hasSystem()) {
+
+			c.addCvgCstToBeneficiaryVlQntySys(String.valueOf(coveragecosttobeneficiaryvaluequantity.getSystem()));
+		} else {
+			c.addCvgCstToBeneficiaryVlQntySys("NULL");
+		}
+
+
+		 };
+		/******************** Cvg_PolicyHolder ********************************************************************************/
+		if(coverage.hasPolicyHolder()) {
+
+			if(coverage.getPolicyHolder().getReference() != null) {
+			c.addCvgPolicyHolder(coverage.getPolicyHolder().getReference());
+			}
+		} else {
+			c.addCvgPolicyHolder("NULL");
+		}
+
+
+		/******************** Cvg_SubscriberId ********************************************************************************/
+		if(coverage.hasSubscriberId()) {
+
+			c.addCvgSubscriberId(String.valueOf(coverage.getSubscriberId()));
+		} else {
+			c.addCvgSubscriberId("NULL");
+		}
+
+
+		/******************** Cvg_Payor ********************************************************************************/
+		if(coverage.hasPayor()) {
+
+			String  array = "[";
+			for(int incr=0; incr<coverage.getPayor().size(); incr++) {
+				array = array + coverage.getPayor().get(incr).getReference() + ",";
+			}
+			array = array.substring(0, array.length() -1);
+			array = array + "]";
+			c.addCvgPayor(array);
+
+		} else {
+			c.addCvgPayor("NULL");
+		}
+
+
+		/******************** Cvg_Beneficiary ********************************************************************************/
+		if(coverage.hasBeneficiary()) {
+
+			if(coverage.getBeneficiary().getReference() != null) {
+			c.addCvgBeneficiary(coverage.getBeneficiary().getReference());
+			}
+		} else {
+			c.addCvgBeneficiary("NULL");
+		}
+
+
+		/******************** coveragerelationship ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept coveragerelationship = coverage.getRelationship();
+
+		/******************** Cvg_Rltnship_Txt ********************************************************************************/
+		if(coveragerelationship.hasText()) {
+
+			c.addCvgRltnshipTxt(String.valueOf(coveragerelationship.getText()));
+		} else {
+			c.addCvgRltnshipTxt("NULL");
+		}
+
+
+		/******************** coveragerelationshipcoding ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.Coding> coveragerelationshipcodinglist = coveragerelationship.getCoding();
+		for(int coveragerelationshipcodingi = 0; coveragerelationshipcodingi<coveragerelationshipcodinglist.size();coveragerelationshipcodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  coveragerelationshipcoding = coveragerelationshipcodinglist.get(coveragerelationshipcodingi);
+
+		/******************** Cvg_Rltnship_Cdg_Dsply ********************************************************************************/
+		if(coveragerelationshipcodingi == 0) {c.addCvgRltnshipCdgDsply("[");}
+		if(coveragerelationshipcoding.hasDisplay()) {
+
+			c.addCvgRltnshipCdgDsply(String.valueOf(coveragerelationshipcoding.getDisplay()));
+		} else {
+			c.addCvgRltnshipCdgDsply("NULL");
+		}
+
+		if(coveragerelationshipcodingi == coveragerelationshipcodinglist.size()-1) {c.addCvgRltnshipCdgDsply("]");}
+
+
+		/******************** Cvg_Rltnship_Cdg_Vrsn ********************************************************************************/
+		if(coveragerelationshipcodingi == 0) {c.addCvgRltnshipCdgVrsn("[");}
+		if(coveragerelationshipcoding.hasVersion()) {
+
+			c.addCvgRltnshipCdgVrsn(String.valueOf(coveragerelationshipcoding.getVersion()));
+		} else {
+			c.addCvgRltnshipCdgVrsn("NULL");
+		}
+
+		if(coveragerelationshipcodingi == coveragerelationshipcodinglist.size()-1) {c.addCvgRltnshipCdgVrsn("]");}
+
+
+		/******************** Cvg_Rltnship_Cdg_Cd ********************************************************************************/
+		if(coveragerelationshipcodingi == 0) {c.addCvgRltnshipCdgCd("[");}
+		if(coveragerelationshipcoding.hasCode()) {
+
+			c.addCvgRltnshipCdgCd(String.valueOf(coveragerelationshipcoding.getCode()));
+		} else {
+			c.addCvgRltnshipCdgCd("NULL");
+		}
+
+		if(coveragerelationshipcodingi == coveragerelationshipcodinglist.size()-1) {c.addCvgRltnshipCdgCd("]");}
+
+
+		/******************** Cvg_Rltnship_Cdg_UsrSltd ********************************************************************************/
+		if(coveragerelationshipcodingi == 0) {c.addCvgRltnshipCdgUsrSltd("[");}
+		if(coveragerelationshipcoding.hasUserSelected()) {
+
+			c.addCvgRltnshipCdgUsrSltd(String.valueOf(coveragerelationshipcoding.getUserSelected()));
+		} else {
+			c.addCvgRltnshipCdgUsrSltd("NULL");
+		}
+
+		if(coveragerelationshipcodingi == coveragerelationshipcodinglist.size()-1) {c.addCvgRltnshipCdgUsrSltd("]");}
+
+
+		/******************** Cvg_Rltnship_Cdg_Sys ********************************************************************************/
+		if(coveragerelationshipcodingi == 0) {c.addCvgRltnshipCdgSys("[");}
+		if(coveragerelationshipcoding.hasSystem()) {
+
+			c.addCvgRltnshipCdgSys(String.valueOf(coveragerelationshipcoding.getSystem()));
+		} else {
+			c.addCvgRltnshipCdgSys("NULL");
+		}
+
+		if(coveragerelationshipcodingi == coveragerelationshipcodinglist.size()-1) {c.addCvgRltnshipCdgSys("]");}
+
+
+		 };
+		/******************** Cvg_Subscriber ********************************************************************************/
+		if(coverage.hasSubscriber()) {
+
+			if(coverage.getSubscriber().getReference() != null) {
+			c.addCvgSubscriber(coverage.getSubscriber().getReference());
+			}
+		} else {
+			c.addCvgSubscriber("NULL");
+		}
+
+
+		/******************** Cvg_Dependent ********************************************************************************/
+		if(coverage.hasDependent()) {
+
+			c.addCvgDependent(String.valueOf(coverage.getDependent()));
+		} else {
+			c.addCvgDependent("NULL");
+		}
+
+
+		/******************** Cvg_Ordr ********************************************************************************/
+		if(coverage.hasOrder()) {
+
+			c.addCvgOrdr(String.valueOf(coverage.getOrder()));
+		} else {
+			c.addCvgOrdr("NULL");
+		}
+
+
+		/******************** Cvg_Network ********************************************************************************/
+		if(coverage.hasNetwork()) {
+
+			c.addCvgNetwork(String.valueOf(coverage.getNetwork()));
+		} else {
+			c.addCvgNetwork("NULL");
+		}
+
+
+		/******************** Cvg_Subrogation ********************************************************************************/
+		if(coverage.hasSubrogation()) {
+
+			c.addCvgSubrogation(String.valueOf(coverage.getSubrogation()));
+		} else {
+			c.addCvgSubrogation("NULL");
+		}
+
+
 		/******************** Cvg_Cnct ********************************************************************************/
 		if(coverage.hasContract()) {
-			c.setCvgCnct(String.valueOf(coverage.getContractFirstRep()));
-		}
-		/******************** coverageidentifier ********************************************************************************/
-		org.hl7.fhir.r4.model.Identifier coverageidentifier = coverage.getIdentifierFirstRep();
 
-		/******************** Cvg_Id_Vl ********************************************************************************/
-		if(coverageidentifier.hasValue()) {
-			c.setCvgIdVl(String.valueOf(coverageidentifier.getValue()));
-		}
-		/******************** coverageidentifiertype ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept coverageidentifiertype = coverageidentifier.getType();
+			String  array = "[";
+			for(int incr=0; incr<coverage.getContract().size(); incr++) {
+				array = array + coverage.getContract().get(incr).getReference() + ",";
+			}
+			array = array.substring(0, array.length() -1);
+			array = array + "]";
+			c.addCvgCnct(array);
 
-		/******************** Cvg_Id_Typ_Txt ********************************************************************************/
-		if(coverageidentifiertype.hasText()) {
-			c.setCvgIdTypTxt(String.valueOf(coverageidentifiertype.getText()));
+		} else {
+			c.addCvgCnct("NULL");
 		}
-		/******************** coverageidentifiertypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding coverageidentifiertypecoding = coverageidentifiertype.getCodingFirstRep();
 
-		/******************** Cvg_Id_Typ_Cdg_Vrsn ********************************************************************************/
-		if(coverageidentifiertypecoding.hasVersion()) {
-			c.setCvgIdTypCdgVrsn(String.valueOf(coverageidentifiertypecoding.getVersion()));
-		}
-		/******************** Cvg_Id_Typ_Cdg_Dsply ********************************************************************************/
-		if(coverageidentifiertypecoding.hasDisplay()) {
-			c.setCvgIdTypCdgDsply(String.valueOf(coverageidentifiertypecoding.getDisplay()));
-		}
-		/******************** Cvg_Id_Typ_Cdg_Cd ********************************************************************************/
-		if(coverageidentifiertypecoding.hasCode()) {
-			c.setCvgIdTypCdgCd(String.valueOf(coverageidentifiertypecoding.getCode()));
-		}
-		/******************** Cvg_Id_Typ_Cdg_UsrSltd ********************************************************************************/
-		if(coverageidentifiertypecoding.hasUserSelected()) {
-			c.setCvgIdTypCdgUsrSltd(String.valueOf(coverageidentifiertypecoding.getUserSelected()));
-		}
-		/******************** Cvg_Id_Typ_Cdg_Sys ********************************************************************************/
-		if(coverageidentifiertypecoding.hasSystem()) {
-			c.setCvgIdTypCdgSys(String.valueOf(coverageidentifiertypecoding.getSystem()));
-		}
-		/******************** coverageidentifierperiod ********************************************************************************/
-		org.hl7.fhir.r4.model.Period coverageidentifierperiod = coverageidentifier.getPeriod();
 
-		/******************** Cvg_Id_Prd_Strt ********************************************************************************/
-		if(coverageidentifierperiod.hasStart()) {
-			c.setCvgIdPrdStrt(String.valueOf(coverageidentifierperiod.getStart()));
-		}
-		/******************** Cvg_Id_Prd_End ********************************************************************************/
-		if(coverageidentifierperiod.hasEnd()) {
-			c.setCvgIdPrdEnd(String.valueOf(coverageidentifierperiod.getEnd()));
-		}
-		/******************** Cvg_Id_Assigner ********************************************************************************/
-		if(coverageidentifier.hasAssigner()) {
-			c.setCvgIdAssigner(String.valueOf(coverageidentifier.getAssigner()));
-		}
-		/******************** Cvg_Id_Sys ********************************************************************************/
-		if(coverageidentifier.hasSystem()) {
-			c.setCvgIdSys(String.valueOf(coverageidentifier.getSystem()));
-		}
-		/******************** coverageidentifieruse ********************************************************************************/
-		org.hl7.fhir.r4.model.Identifier.IdentifierUse coverageidentifieruse = coverageidentifier.getUse();
-		c.setCvgIdUse(coverageidentifieruse.toCode());
+		/******************** coverageclass_ ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.Coverage.ClassComponent> coverageclasslist = coverage.getClass_();
+		for(int coverageclassi = 0; coverageclassi<coverageclasslist.size();coverageclassi++ ) {
+		org.hl7.fhir.r4.model.Coverage.ClassComponent  coverageclass = coverageclasslist.get(coverageclassi);
 
+		/******************** Cvg_Cls__Nm ********************************************************************************/
+		if(coverageclassi == 0) {c.addCvgClsNm("[");}
+		if(coverageclass.hasName()) {
+
+			c.addCvgClsNm(String.valueOf(coverageclass.getName()));
+		} else {
+			c.addCvgClsNm("NULL");
+		}
+
+		if(coverageclassi == coverageclasslist.size()-1) {c.addCvgClsNm("]");}
+
+
+		/******************** Cvg_Cls__Vl ********************************************************************************/
+		if(coverageclassi == 0) {c.addCvgClsVl("[");}
+		if(coverageclass.hasValue()) {
+
+			c.addCvgClsVl(String.valueOf(coverageclass.getValue()));
+		} else {
+			c.addCvgClsVl("NULL");
+		}
+
+		if(coverageclassi == coverageclasslist.size()-1) {c.addCvgClsVl("]");}
+
+
+		/******************** coverageclasstype ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept coverageclasstype = coverageclass.getType();
+
+		/******************** Cvg_Cls__Typ_Txt ********************************************************************************/
+		if(coverageclassi == 0) {c.addCvgClsTypTxt("[");}
+		if(coverageclasstype.hasText()) {
+
+			c.addCvgClsTypTxt(String.valueOf(coverageclasstype.getText()));
+		} else {
+			c.addCvgClsTypTxt("NULL");
+		}
+
+		if(coverageclassi == coverageclasslist.size()-1) {c.addCvgClsTypTxt("]");}
+
+
+		/******************** coverageclasstypecoding ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.Coding> coverageclasstypecodinglist = coverageclasstype.getCoding();
+		for(int coverageclasstypecodingi = 0; coverageclasstypecodingi<coverageclasstypecodinglist.size();coverageclasstypecodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  coverageclasstypecoding = coverageclasstypecodinglist.get(coverageclasstypecodingi);
+
+		/******************** Cvg_Cls__Typ_Cdg_Dsply ********************************************************************************/
+		if(coverageclasstypecodingi == 0) {c.addCvgClsTypCdgDsply("[[");}
+		if(coverageclasstypecoding.hasDisplay()) {
+
+			c.addCvgClsTypCdgDsply(String.valueOf(coverageclasstypecoding.getDisplay()));
+		} else {
+			c.addCvgClsTypCdgDsply("NULL");
+		}
+
+		if(coverageclasstypecodingi == coverageclasstypecodinglist.size()-1) {c.addCvgClsTypCdgDsply("]]");}
+
+
+		/******************** Cvg_Cls__Typ_Cdg_Vrsn ********************************************************************************/
+		if(coverageclasstypecodingi == 0) {c.addCvgClsTypCdgVrsn("[[");}
+		if(coverageclasstypecoding.hasVersion()) {
+
+			c.addCvgClsTypCdgVrsn(String.valueOf(coverageclasstypecoding.getVersion()));
+		} else {
+			c.addCvgClsTypCdgVrsn("NULL");
+		}
+
+		if(coverageclasstypecodingi == coverageclasstypecodinglist.size()-1) {c.addCvgClsTypCdgVrsn("]]");}
+
+
+		/******************** Cvg_Cls__Typ_Cdg_Cd ********************************************************************************/
+		if(coverageclasstypecodingi == 0) {c.addCvgClsTypCdgCd("[[");}
+		if(coverageclasstypecoding.hasCode()) {
+
+			c.addCvgClsTypCdgCd(String.valueOf(coverageclasstypecoding.getCode()));
+		} else {
+			c.addCvgClsTypCdgCd("NULL");
+		}
+
+		if(coverageclasstypecodingi == coverageclasstypecodinglist.size()-1) {c.addCvgClsTypCdgCd("]]");}
+
+
+		/******************** Cvg_Cls__Typ_Cdg_UsrSltd ********************************************************************************/
+		if(coverageclasstypecodingi == 0) {c.addCvgClsTypCdgUsrSltd("[[");}
+		if(coverageclasstypecoding.hasUserSelected()) {
+
+			c.addCvgClsTypCdgUsrSltd(String.valueOf(coverageclasstypecoding.getUserSelected()));
+		} else {
+			c.addCvgClsTypCdgUsrSltd("NULL");
+		}
+
+		if(coverageclasstypecodingi == coverageclasstypecodinglist.size()-1) {c.addCvgClsTypCdgUsrSltd("]]");}
+
+
+		/******************** Cvg_Cls__Typ_Cdg_Sys ********************************************************************************/
+		if(coverageclasstypecodingi == 0) {c.addCvgClsTypCdgSys("[[");}
+		if(coverageclasstypecoding.hasSystem()) {
+
+			c.addCvgClsTypCdgSys(String.valueOf(coverageclasstypecoding.getSystem()));
+		} else {
+			c.addCvgClsTypCdgSys("NULL");
+		}
+
+		if(coverageclasstypecodingi == coverageclasstypecodinglist.size()-1) {c.addCvgClsTypCdgSys("]]");}
+
+
+		 };
+		 };
 		return c;
 	}
 }

@@ -8,971 +8,805 @@ public class StructureDefinitionBidirectionalConversion
 		 main.java.com.campfhir.model.StructureDefinition s = new  main.java.com.campfhir.model.StructureDefinition();
 
 		/******************** id ********************************************************************************/
-		structuredefinition.setId(s.getId());
+		s.setId(structuredefinition.getIdElement().getIdPart());
 
 		/******************** StrctrDfn_Nm ********************************************************************************/
 		if(structuredefinition.hasName()) {
-			s.setStrctrDfnNm(String.valueOf(structuredefinition.getName()));
+
+			s.addStrctrDfnNm(String.valueOf(structuredefinition.getName()));
+		} else {
+			s.addStrctrDfnNm("NULL");
 		}
-		/******************** StrctrDfn_Typ ********************************************************************************/
-		if(structuredefinition.hasType()) {
-			s.setStrctrDfnTyp(String.valueOf(structuredefinition.getType()));
-		}
-		/******************** StrctrDfn_Dt ********************************************************************************/
-		if(structuredefinition.hasDate()) {
-			s.setStrctrDfnDt(String.valueOf(structuredefinition.getDate()));
-		}
-		/******************** StrctrDfn_Vrsn ********************************************************************************/
-		if(structuredefinition.hasVersion()) {
-			s.setStrctrDfnVrsn(String.valueOf(structuredefinition.getVersion()));
-		}
-		/******************** structuredefinitionfhirversion ********************************************************************************/
-		org.hl7.fhir.r4.model.Enumerations.FHIRVersion structuredefinitionfhirversion = structuredefinition.getFhirVersion();
-		s.setStrctrDfnFhirVrsn(structuredefinitionfhirversion.toCode());
+
 
 		/******************** structuredefinitioncontext ********************************************************************************/
-		org.hl7.fhir.r4.model.StructureDefinition.StructureDefinitionContextComponent structuredefinitioncontext = structuredefinition.getContextFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.StructureDefinition.StructureDefinitionContextComponent> structuredefinitioncontextlist = structuredefinition.getContext();
+		for(int structuredefinitioncontexti = 0; structuredefinitioncontexti<structuredefinitioncontextlist.size();structuredefinitioncontexti++ ) {
+		org.hl7.fhir.r4.model.StructureDefinition.StructureDefinitionContextComponent  structuredefinitioncontext = structuredefinitioncontextlist.get(structuredefinitioncontexti);
 
 		/******************** structuredefinitioncontexttype ********************************************************************************/
 		org.hl7.fhir.r4.model.StructureDefinition.ExtensionContextType structuredefinitioncontexttype = structuredefinitioncontext.getType();
-		s.setStrctrDfnCntxtTyp(structuredefinitioncontexttype.toCode());
+		if(structuredefinitioncontexttype!=null) {
+		if(structuredefinitioncontexti == 0) {
+
+		s.addStrctrDfnCntxtTyp("[");		}
+			s.addStrctrDfnCntxtTyp(structuredefinitioncontexttype.toCode());
+		if(structuredefinitioncontexti == structuredefinitioncontextlist.size()-1) {
+
+		s.addStrctrDfnCntxtTyp("]");		}
+
+		} else {
+			s.addStrctrDfnCntxtTyp("NULL");
+		}
 
 		/******************** StrctrDfn_Cntxt_Exprsn ********************************************************************************/
+		if(structuredefinitioncontexti == 0) {s.addStrctrDfnCntxtExprsn("[");}
 		if(structuredefinitioncontext.hasExpression()) {
-			s.setStrctrDfnCntxtExprsn(String.valueOf(structuredefinitioncontext.getExpression()));
-		}
-		/******************** structuredefinitionmapping ********************************************************************************/
-		org.hl7.fhir.r4.model.StructureDefinition.StructureDefinitionMappingComponent structuredefinitionmapping = structuredefinition.getMappingFirstRep();
 
-		/******************** StrctrDfn_Mapping_Nm ********************************************************************************/
-		if(structuredefinitionmapping.hasName()) {
-			s.setStrctrDfnMappingNm(String.valueOf(structuredefinitionmapping.getName()));
+			s.addStrctrDfnCntxtExprsn(String.valueOf(structuredefinitioncontext.getExpression()));
+		} else {
+			s.addStrctrDfnCntxtExprsn("NULL");
 		}
-		/******************** StrctrDfn_Mapping_Comment ********************************************************************************/
-		if(structuredefinitionmapping.hasComment()) {
-			s.setStrctrDfnMappingComment(String.valueOf(structuredefinitionmapping.getComment()));
-		}
-		/******************** StrctrDfn_Mapping_Identity ********************************************************************************/
-		if(structuredefinitionmapping.hasIdentity()) {
-			s.setStrctrDfnMappingIdentity(String.valueOf(structuredefinitionmapping.getIdentity()));
-		}
-		/******************** StrctrDfn_Mapping_Uri ********************************************************************************/
-		if(structuredefinitionmapping.hasUri()) {
-			s.setStrctrDfnMappingUri(String.valueOf(structuredefinitionmapping.getUri()));
-		}
-		/******************** StrctrDfn_Abstract ********************************************************************************/
-		if(structuredefinition.hasAbstract()) {
-			s.setStrctrDfnAbstract(String.valueOf(structuredefinition.getAbstract()));
-		}
-		/******************** StrctrDfn_BaseDfn ********************************************************************************/
-		if(structuredefinition.hasBaseDefinition()) {
-			s.setStrctrDfnBaseDfn(String.valueOf(structuredefinition.getBaseDefinition()));
-		}
-		/******************** structuredefinitionderivation ********************************************************************************/
-		org.hl7.fhir.r4.model.StructureDefinition.TypeDerivationRule structuredefinitionderivation = structuredefinition.getDerivation();
-		s.setStrctrDfnDerivation(structuredefinitionderivation.toCode());
 
-		/******************** structuredefinitiondifferential ********************************************************************************/
-		org.hl7.fhir.r4.model.StructureDefinition.StructureDefinitionDifferentialComponent structuredefinitiondifferential = structuredefinition.getDifferential();
+		if(structuredefinitioncontexti == structuredefinitioncontextlist.size()-1) {s.addStrctrDfnCntxtExprsn("]");}
 
-		/******************** structuredefinitiondifferentialelement ********************************************************************************/
-		org.hl7.fhir.r4.model.ElementDefinition structuredefinitiondifferentialelement = structuredefinitiondifferential.getElementFirstRep();
 
-		/******************** StrctrDfn_Dffntial_Elmnt_Short ********************************************************************************/
-		if(structuredefinitiondifferentialelement.hasShort()) {
-			s.setStrctrDfnDffntialElmntShort(String.valueOf(structuredefinitiondifferentialelement.getShort()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_Dfn ********************************************************************************/
-		if(structuredefinitiondifferentialelement.hasDefinition()) {
-			s.setStrctrDfnDffntialElmntDfn(String.valueOf(structuredefinitiondifferentialelement.getDefinition()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_Path ********************************************************************************/
-		if(structuredefinitiondifferentialelement.hasPath()) {
-			s.setStrctrDfnDffntialElmntPath(String.valueOf(structuredefinitiondifferentialelement.getPath()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_Comment ********************************************************************************/
-		if(structuredefinitiondifferentialelement.hasComment()) {
-			s.setStrctrDfnDffntialElmntComment(String.valueOf(structuredefinitiondifferentialelement.getComment()));
-		}
-		/******************** structuredefinitiondifferentialelementbase ********************************************************************************/
-		org.hl7.fhir.r4.model.ElementDefinition.ElementDefinitionBaseComponent structuredefinitiondifferentialelementbase = structuredefinitiondifferentialelement.getBase();
+		 };
+		/******************** StrctrDfn_Typ ********************************************************************************/
+		if(structuredefinition.hasType()) {
 
-		/******************** StrctrDfn_Dffntial_Elmnt_Base_Path ********************************************************************************/
-		if(structuredefinitiondifferentialelementbase.hasPath()) {
-			s.setStrctrDfnDffntialElmntBasePath(String.valueOf(structuredefinitiondifferentialelementbase.getPath()));
+			s.addStrctrDfnTyp(String.valueOf(structuredefinition.getType()));
+		} else {
+			s.addStrctrDfnTyp("NULL");
 		}
-		/******************** StrctrDfn_Dffntial_Elmnt_Base_Min ********************************************************************************/
-		if(structuredefinitiondifferentialelementbase.hasMin()) {
-			s.setStrctrDfnDffntialElmntBaseMin(String.valueOf(structuredefinitiondifferentialelementbase.getMin()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_Base_Mx ********************************************************************************/
-		if(structuredefinitiondifferentialelementbase.hasMax()) {
-			s.setStrctrDfnDffntialElmntBaseMx(String.valueOf(structuredefinitiondifferentialelementbase.getMax()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_MinVlDtTyp ********************************************************************************/
-		if(structuredefinitiondifferentialelement.hasMinValueDateType()) {
-			s.setStrctrDfnDffntialElmntMinVlDtTyp(String.valueOf(structuredefinitiondifferentialelement.getMinValueDateType()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_MinVlDtTimeTyp ********************************************************************************/
-		if(structuredefinitiondifferentialelement.hasMinValueDateTimeType()) {
-			s.setStrctrDfnDffntialElmntMinVlDtTimeTyp(String.valueOf(structuredefinitiondifferentialelement.getMinValueDateTimeType()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_MinVlTimeTyp ********************************************************************************/
-		if(structuredefinitiondifferentialelement.hasMinValueTimeType()) {
-			s.setStrctrDfnDffntialElmntMinVlTimeTyp(String.valueOf(structuredefinitiondifferentialelement.getMinValueTimeType()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_MinVlDecimalTyp ********************************************************************************/
-		if(structuredefinitiondifferentialelement.hasMinValueDecimalType()) {
-			s.setStrctrDfnDffntialElmntMinVlDecimalTyp(String.valueOf(structuredefinitiondifferentialelement.getMinValueDecimalType()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_MeaningWhenMissing ********************************************************************************/
-		if(structuredefinitiondifferentialelement.hasMeaningWhenMissing()) {
-			s.setStrctrDfnDffntialElmntMeaningWhenMissing(String.valueOf(structuredefinitiondifferentialelement.getMeaningWhenMissing()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_MinVlIntegerTyp ********************************************************************************/
-		if(structuredefinitiondifferentialelement.hasMinValueIntegerType()) {
-			s.setStrctrDfnDffntialElmntMinVlIntegerTyp(String.valueOf(structuredefinitiondifferentialelement.getMinValueIntegerType()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_MinVlInstantTyp ********************************************************************************/
-		if(structuredefinitiondifferentialelement.hasMinValueInstantType()) {
-			s.setStrctrDfnDffntialElmntMinVlInstantTyp(String.valueOf(structuredefinitiondifferentialelement.getMinValueInstantType()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_SliceIsConstraining ********************************************************************************/
-		if(structuredefinitiondifferentialelement.hasSliceIsConstraining()) {
-			s.setStrctrDfnDffntialElmntSliceIsConstraining(String.valueOf(structuredefinitiondifferentialelement.getSliceIsConstraining()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_MinVlPositiveIntTyp ********************************************************************************/
-		if(structuredefinitiondifferentialelement.hasMinValuePositiveIntType()) {
-			s.setStrctrDfnDffntialElmntMinVlPositiveIntTyp(String.valueOf(structuredefinitiondifferentialelement.getMinValuePositiveIntType()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_MxVlPositiveIntTyp ********************************************************************************/
-		if(structuredefinitiondifferentialelement.hasMaxValuePositiveIntType()) {
-			s.setStrctrDfnDffntialElmntMxVlPositiveIntTyp(String.valueOf(structuredefinitiondifferentialelement.getMaxValuePositiveIntType()));
-		}
-		/******************** structuredefinitiondifferentialelementminvaluequantity ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity structuredefinitiondifferentialelementminvaluequantity = structuredefinitiondifferentialelement.getMinValueQuantity();
 
-		/******************** StrctrDfn_Dffntial_Elmnt_MinVlQnty_Vl ********************************************************************************/
-		if(structuredefinitiondifferentialelementminvaluequantity.hasValue()) {
-			s.setStrctrDfnDffntialElmntMinVlQntyVl(String.valueOf(structuredefinitiondifferentialelementminvaluequantity.getValue()));
-		}
-		/******************** structuredefinitiondifferentialelementminvaluequantitycomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparator structuredefinitiondifferentialelementminvaluequantitycomparator = structuredefinitiondifferentialelementminvaluequantity.getComparator();
-		s.setStrctrDfnDffntialElmntMinVlQntyCmprtr(structuredefinitiondifferentialelementminvaluequantitycomparator.toCode());
 
-		/******************** StrctrDfn_Dffntial_Elmnt_MinVlQnty_Cd ********************************************************************************/
-		if(structuredefinitiondifferentialelementminvaluequantity.hasCode()) {
-			s.setStrctrDfnDffntialElmntMinVlQntyCd(String.valueOf(structuredefinitiondifferentialelementminvaluequantity.getCode()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_MinVlQnty_Unt ********************************************************************************/
-		if(structuredefinitiondifferentialelementminvaluequantity.hasUnit()) {
-			s.setStrctrDfnDffntialElmntMinVlQntyUnt(String.valueOf(structuredefinitiondifferentialelementminvaluequantity.getUnit()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_MinVlQnty_Sys ********************************************************************************/
-		if(structuredefinitiondifferentialelementminvaluequantity.hasSystem()) {
-			s.setStrctrDfnDffntialElmntMinVlQntySys(String.valueOf(structuredefinitiondifferentialelementminvaluequantity.getSystem()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_MxVlUnsignedIntTyp ********************************************************************************/
-		if(structuredefinitiondifferentialelement.hasMaxValueUnsignedIntType()) {
-			s.setStrctrDfnDffntialElmntMxVlUnsignedIntTyp(String.valueOf(structuredefinitiondifferentialelement.getMaxValueUnsignedIntType()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_MinVlUnsignedIntTyp ********************************************************************************/
-		if(structuredefinitiondifferentialelement.hasMinValueUnsignedIntType()) {
-			s.setStrctrDfnDffntialElmntMinVlUnsignedIntTyp(String.valueOf(structuredefinitiondifferentialelement.getMinValueUnsignedIntType()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_MxVlTimeTyp ********************************************************************************/
-		if(structuredefinitiondifferentialelement.hasMaxValueTimeType()) {
-			s.setStrctrDfnDffntialElmntMxVlTimeTyp(String.valueOf(structuredefinitiondifferentialelement.getMaxValueTimeType()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_MxVlDecimalTyp ********************************************************************************/
-		if(structuredefinitiondifferentialelement.hasMaxValueDecimalType()) {
-			s.setStrctrDfnDffntialElmntMxVlDecimalTyp(String.valueOf(structuredefinitiondifferentialelement.getMaxValueDecimalType()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_MxVlIntegerTyp ********************************************************************************/
-		if(structuredefinitiondifferentialelement.hasMaxValueIntegerType()) {
-			s.setStrctrDfnDffntialElmntMxVlIntegerTyp(String.valueOf(structuredefinitiondifferentialelement.getMaxValueIntegerType()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_MxVlDtTimeTyp ********************************************************************************/
-		if(structuredefinitiondifferentialelement.hasMaxValueDateTimeType()) {
-			s.setStrctrDfnDffntialElmntMxVlDtTimeTyp(String.valueOf(structuredefinitiondifferentialelement.getMaxValueDateTimeType()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_MxVlDtTyp ********************************************************************************/
-		if(structuredefinitiondifferentialelement.hasMaxValueDateType()) {
-			s.setStrctrDfnDffntialElmntMxVlDtTyp(String.valueOf(structuredefinitiondifferentialelement.getMaxValueDateType()));
-		}
-		/******************** structuredefinitiondifferentialelementconstraint ********************************************************************************/
-		org.hl7.fhir.r4.model.ElementDefinition.ElementDefinitionConstraintComponent structuredefinitiondifferentialelementconstraint = structuredefinitiondifferentialelement.getConstraintFirstRep();
+		/******************** StrctrDfn_Vrsn ********************************************************************************/
+		if(structuredefinition.hasVersion()) {
 
-		/******************** StrctrDfn_Dffntial_Elmnt_Constraint_Key ********************************************************************************/
-		if(structuredefinitiondifferentialelementconstraint.hasKey()) {
-			s.setStrctrDfnDffntialElmntConstraintKey(String.valueOf(structuredefinitiondifferentialelementconstraint.getKey()));
+			s.addStrctrDfnVrsn(String.valueOf(structuredefinition.getVersion()));
+		} else {
+			s.addStrctrDfnVrsn("NULL");
 		}
-		/******************** StrctrDfn_Dffntial_Elmnt_Constraint_Src ********************************************************************************/
-		if(structuredefinitiondifferentialelementconstraint.hasSource()) {
-			s.setStrctrDfnDffntialElmntConstraintSrc(String.valueOf(structuredefinitiondifferentialelementconstraint.getSource()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_Constraint_Rqrments ********************************************************************************/
-		if(structuredefinitiondifferentialelementconstraint.hasRequirements()) {
-			s.setStrctrDfnDffntialElmntConstraintRqrments(String.valueOf(structuredefinitiondifferentialelementconstraint.getRequirements()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_Constraint_Human ********************************************************************************/
-		if(structuredefinitiondifferentialelementconstraint.hasHuman()) {
-			s.setStrctrDfnDffntialElmntConstraintHuman(String.valueOf(structuredefinitiondifferentialelementconstraint.getHuman()));
-		}
-		/******************** structuredefinitiondifferentialelementconstraintseverity ********************************************************************************/
-		org.hl7.fhir.r4.model.ElementDefinition.ConstraintSeverity structuredefinitiondifferentialelementconstraintseverity = structuredefinitiondifferentialelementconstraint.getSeverity();
-		s.setStrctrDfnDffntialElmntConstraintSeverity(structuredefinitiondifferentialelementconstraintseverity.toCode());
 
-		/******************** StrctrDfn_Dffntial_Elmnt_Constraint_Exprsn ********************************************************************************/
-		if(structuredefinitiondifferentialelementconstraint.hasExpression()) {
-			s.setStrctrDfnDffntialElmntConstraintExprsn(String.valueOf(structuredefinitiondifferentialelementconstraint.getExpression()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_Constraint_Xpath ********************************************************************************/
-		if(structuredefinitiondifferentialelementconstraint.hasXpath()) {
-			s.setStrctrDfnDffntialElmntConstraintXpath(String.valueOf(structuredefinitiondifferentialelementconstraint.getXpath()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_MxVlInstantTyp ********************************************************************************/
-		if(structuredefinitiondifferentialelement.hasMaxValueInstantType()) {
-			s.setStrctrDfnDffntialElmntMxVlInstantTyp(String.valueOf(structuredefinitiondifferentialelement.getMaxValueInstantType()));
-		}
-		/******************** structuredefinitiondifferentialelementmaxvaluequantity ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity structuredefinitiondifferentialelementmaxvaluequantity = structuredefinitiondifferentialelement.getMaxValueQuantity();
 
-		/******************** StrctrDfn_Dffntial_Elmnt_MxVlQnty_Vl ********************************************************************************/
-		if(structuredefinitiondifferentialelementmaxvaluequantity.hasValue()) {
-			s.setStrctrDfnDffntialElmntMxVlQntyVl(String.valueOf(structuredefinitiondifferentialelementmaxvaluequantity.getValue()));
-		}
-		/******************** structuredefinitiondifferentialelementmaxvaluequantitycomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparator structuredefinitiondifferentialelementmaxvaluequantitycomparator = structuredefinitiondifferentialelementmaxvaluequantity.getComparator();
-		s.setStrctrDfnDffntialElmntMxVlQntyCmprtr(structuredefinitiondifferentialelementmaxvaluequantitycomparator.toCode());
+		/******************** StrctrDfn_Dt ********************************************************************************/
+		if(structuredefinition.hasDate()) {
 
-		/******************** StrctrDfn_Dffntial_Elmnt_MxVlQnty_Cd ********************************************************************************/
-		if(structuredefinitiondifferentialelementmaxvaluequantity.hasCode()) {
-			s.setStrctrDfnDffntialElmntMxVlQntyCd(String.valueOf(structuredefinitiondifferentialelementmaxvaluequantity.getCode()));
+			s.addStrctrDfnDt("\""+ca.uhn.fhir.util.DateUtils.formatDate(structuredefinition.getDate())+"\"");
+		} else {
+			s.addStrctrDfnDt("NULL");
 		}
-		/******************** StrctrDfn_Dffntial_Elmnt_MxVlQnty_Unt ********************************************************************************/
-		if(structuredefinitiondifferentialelementmaxvaluequantity.hasUnit()) {
-			s.setStrctrDfnDffntialElmntMxVlQntyUnt(String.valueOf(structuredefinitiondifferentialelementmaxvaluequantity.getUnit()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_MxVlQnty_Sys ********************************************************************************/
-		if(structuredefinitiondifferentialelementmaxvaluequantity.hasSystem()) {
-			s.setStrctrDfnDffntialElmntMxVlQntySys(String.valueOf(structuredefinitiondifferentialelementmaxvaluequantity.getSystem()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_IsMdfrRsn ********************************************************************************/
-		if(structuredefinitiondifferentialelement.hasIsModifierReason()) {
-			s.setStrctrDfnDffntialElmntIsMdfrRsn(String.valueOf(structuredefinitiondifferentialelement.getIsModifierReason()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_IsMdfr ********************************************************************************/
-		if(structuredefinitiondifferentialelement.hasIsModifier()) {
-			s.setStrctrDfnDffntialElmntIsMdfr(String.valueOf(structuredefinitiondifferentialelement.getIsModifier()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_SliceNm ********************************************************************************/
-		if(structuredefinitiondifferentialelement.hasSliceName()) {
-			s.setStrctrDfnDffntialElmntSliceNm(String.valueOf(structuredefinitiondifferentialelement.getSliceName()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_Rqrments ********************************************************************************/
-		if(structuredefinitiondifferentialelement.hasRequirements()) {
-			s.setStrctrDfnDffntialElmntRqrments(String.valueOf(structuredefinitiondifferentialelement.getRequirements()));
-		}
-		/******************** structuredefinitiondifferentialelementslicing ********************************************************************************/
-		org.hl7.fhir.r4.model.ElementDefinition.ElementDefinitionSlicingComponent structuredefinitiondifferentialelementslicing = structuredefinitiondifferentialelement.getSlicing();
 
-		/******************** structuredefinitiondifferentialelementslicingrules ********************************************************************************/
-		org.hl7.fhir.r4.model.ElementDefinition.SlicingRules structuredefinitiondifferentialelementslicingrules = structuredefinitiondifferentialelementslicing.getRules();
-		s.setStrctrDfnDffntialElmntSlicingRules(structuredefinitiondifferentialelementslicingrules.toCode());
 
-		/******************** structuredefinitiondifferentialelementslicingdiscriminator ********************************************************************************/
-		org.hl7.fhir.r4.model.ElementDefinition.ElementDefinitionSlicingDiscriminatorComponent structuredefinitiondifferentialelementslicingdiscriminator = structuredefinitiondifferentialelementslicing.getDiscriminatorFirstRep();
-
-		/******************** structuredefinitiondifferentialelementslicingdiscriminatortype ********************************************************************************/
-		org.hl7.fhir.r4.model.ElementDefinition.DiscriminatorType structuredefinitiondifferentialelementslicingdiscriminatortype = structuredefinitiondifferentialelementslicingdiscriminator.getType();
-		s.setStrctrDfnDffntialElmntSlicingDiscriminatorTyp(structuredefinitiondifferentialelementslicingdiscriminatortype.toCode());
-
-		/******************** StrctrDfn_Dffntial_Elmnt_Slicing_Discriminator_Path ********************************************************************************/
-		if(structuredefinitiondifferentialelementslicingdiscriminator.hasPath()) {
-			s.setStrctrDfnDffntialElmntSlicingDiscriminatorPath(String.valueOf(structuredefinitiondifferentialelementslicingdiscriminator.getPath()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_Slicing_Ordred ********************************************************************************/
-		if(structuredefinitiondifferentialelementslicing.hasOrdered()) {
-			s.setStrctrDfnDffntialElmntSlicingOrdred(String.valueOf(structuredefinitiondifferentialelementslicing.getOrdered()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_Slicing_Dscrptn ********************************************************************************/
-		if(structuredefinitiondifferentialelementslicing.hasDescription()) {
-			s.setStrctrDfnDffntialElmntSlicingDscrptn(String.valueOf(structuredefinitiondifferentialelementslicing.getDescription()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_OrdrMeaning ********************************************************************************/
-		if(structuredefinitiondifferentialelement.hasOrderMeaning()) {
-			s.setStrctrDfnDffntialElmntOrdrMeaning(String.valueOf(structuredefinitiondifferentialelement.getOrderMeaning()));
-		}
-		/******************** structuredefinitiondifferentialelementexample ********************************************************************************/
-		org.hl7.fhir.r4.model.ElementDefinition.ElementDefinitionExampleComponent structuredefinitiondifferentialelementexample = structuredefinitiondifferentialelement.getExampleFirstRep();
-
-		/******************** StrctrDfn_Dffntial_Elmnt_Example_Lbl ********************************************************************************/
-		if(structuredefinitiondifferentialelementexample.hasLabel()) {
-			s.setStrctrDfnDffntialElmntExampleLbl(String.valueOf(structuredefinitiondifferentialelementexample.getLabel()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_MxLength ********************************************************************************/
-		if(structuredefinitiondifferentialelement.hasMaxLength()) {
-			s.setStrctrDfnDffntialElmntMxLength(String.valueOf(structuredefinitiondifferentialelement.getMaxLength()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_IsSummary ********************************************************************************/
-		if(structuredefinitiondifferentialelement.hasIsSummary()) {
-			s.setStrctrDfnDffntialElmntIsSummary(String.valueOf(structuredefinitiondifferentialelement.getIsSummary()));
-		}
-		/******************** structuredefinitiondifferentialelementmapping ********************************************************************************/
-		org.hl7.fhir.r4.model.ElementDefinition.ElementDefinitionMappingComponent structuredefinitiondifferentialelementmapping = structuredefinitiondifferentialelement.getMappingFirstRep();
-
-		/******************** StrctrDfn_Dffntial_Elmnt_Mapping_Lnguage ********************************************************************************/
-		if(structuredefinitiondifferentialelementmapping.hasLanguage()) {
-			s.setStrctrDfnDffntialElmntMappingLnguage(String.valueOf(structuredefinitiondifferentialelementmapping.getLanguage()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_Mapping_Map ********************************************************************************/
-		if(structuredefinitiondifferentialelementmapping.hasMap()) {
-			s.setStrctrDfnDffntialElmntMappingMap(String.valueOf(structuredefinitiondifferentialelementmapping.getMap()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_Mapping_Comment ********************************************************************************/
-		if(structuredefinitiondifferentialelementmapping.hasComment()) {
-			s.setStrctrDfnDffntialElmntMappingComment(String.valueOf(structuredefinitiondifferentialelementmapping.getComment()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_Mapping_Identity ********************************************************************************/
-		if(structuredefinitiondifferentialelementmapping.hasIdentity()) {
-			s.setStrctrDfnDffntialElmntMappingIdentity(String.valueOf(structuredefinitiondifferentialelementmapping.getIdentity()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_MustSupport ********************************************************************************/
-		if(structuredefinitiondifferentialelement.hasMustSupport()) {
-			s.setStrctrDfnDffntialElmntMustSupport(String.valueOf(structuredefinitiondifferentialelement.getMustSupport()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_Min ********************************************************************************/
-		if(structuredefinitiondifferentialelement.hasMin()) {
-			s.setStrctrDfnDffntialElmntMin(String.valueOf(structuredefinitiondifferentialelement.getMin()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_Mx ********************************************************************************/
-		if(structuredefinitiondifferentialelement.hasMax()) {
-			s.setStrctrDfnDffntialElmntMx(String.valueOf(structuredefinitiondifferentialelement.getMax()));
-		}
-		/******************** structuredefinitiondifferentialelementtype ********************************************************************************/
-		org.hl7.fhir.r4.model.ElementDefinition.TypeRefComponent structuredefinitiondifferentialelementtype = structuredefinitiondifferentialelement.getTypeFirstRep();
-
-		/******************** StrctrDfn_Dffntial_Elmnt_Typ_Cd ********************************************************************************/
-		if(structuredefinitiondifferentialelementtype.hasCode()) {
-			s.setStrctrDfnDffntialElmntTypCd(String.valueOf(structuredefinitiondifferentialelementtype.getCode()));
-		}
-		/******************** structuredefinitiondifferentialelementtypeversioning ********************************************************************************/
-		org.hl7.fhir.r4.model.ElementDefinition.ReferenceVersionRules structuredefinitiondifferentialelementtypeversioning = structuredefinitiondifferentialelementtype.getVersioning();
-		s.setStrctrDfnDffntialElmntTypVrsning(structuredefinitiondifferentialelementtypeversioning.toCode());
-
-//		/******************** StrctrDfn_Dffntial_Elmnt_Typ_WorkingCd ********************************************************************************/
-//		if(structuredefinitiondifferentialelementtype.hasWorkingCode()) {
-//			s.setStrctrDfnDffntialElmntTypWorkingCd(String.valueOf(structuredefinitiondifferentialelementtype.getWorkingCode()));
-//		}
-		/******************** structuredefinitiondifferentialelementbinding ********************************************************************************/
-		org.hl7.fhir.r4.model.ElementDefinition.ElementDefinitionBindingComponent structuredefinitiondifferentialelementbinding = structuredefinitiondifferentialelement.getBinding();
-
-		/******************** structuredefinitiondifferentialelementbindingstrength ********************************************************************************/
-		org.hl7.fhir.r4.model.Enumerations.BindingStrength structuredefinitiondifferentialelementbindingstrength = structuredefinitiondifferentialelementbinding.getStrength();
-		s.setStrctrDfnDffntialElmntBindingStr(structuredefinitiondifferentialelementbindingstrength.toCode());
-
-		/******************** StrctrDfn_Dffntial_Elmnt_Binding_Dscrptn ********************************************************************************/
-		if(structuredefinitiondifferentialelementbinding.hasDescription()) {
-			s.setStrctrDfnDffntialElmntBindingDscrptn(String.valueOf(structuredefinitiondifferentialelementbinding.getDescription()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_Binding_VlSt ********************************************************************************/
-		if(structuredefinitiondifferentialelementbinding.hasValueSet()) {
-			s.setStrctrDfnDffntialElmntBindingVlSt(String.valueOf(structuredefinitiondifferentialelementbinding.getValueSet()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_CntntRfrnc ********************************************************************************/
-		if(structuredefinitiondifferentialelement.hasContentReference()) {
-			s.setStrctrDfnDffntialElmntCntntRfrnc(String.valueOf(structuredefinitiondifferentialelement.getContentReference()));
-		}
-		/******************** structuredefinitiondifferentialelementcode ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding structuredefinitiondifferentialelementcode = structuredefinitiondifferentialelement.getCodeFirstRep();
-
-		/******************** StrctrDfn_Dffntial_Elmnt_Cd_Vrsn ********************************************************************************/
-		if(structuredefinitiondifferentialelementcode.hasVersion()) {
-			s.setStrctrDfnDffntialElmntCdVrsn(String.valueOf(structuredefinitiondifferentialelementcode.getVersion()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_Cd_Dsply ********************************************************************************/
-		if(structuredefinitiondifferentialelementcode.hasDisplay()) {
-			s.setStrctrDfnDffntialElmntCdDsply(String.valueOf(structuredefinitiondifferentialelementcode.getDisplay()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_Cd_UsrSltd ********************************************************************************/
-		if(structuredefinitiondifferentialelementcode.hasUserSelected()) {
-			s.setStrctrDfnDffntialElmntCdUsrSltd(String.valueOf(structuredefinitiondifferentialelementcode.getUserSelected()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_Cd_Sys ********************************************************************************/
-		if(structuredefinitiondifferentialelementcode.hasSystem()) {
-			s.setStrctrDfnDffntialElmntCdSys(String.valueOf(structuredefinitiondifferentialelementcode.getSystem()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_Lbl ********************************************************************************/
-		if(structuredefinitiondifferentialelement.hasLabel()) {
-			s.setStrctrDfnDffntialElmntLbl(String.valueOf(structuredefinitiondifferentialelement.getLabel()));
-		}
-		/******************** structuredefinitionsnapshot ********************************************************************************/
-		org.hl7.fhir.r4.model.StructureDefinition.StructureDefinitionSnapshotComponent structuredefinitionsnapshot = structuredefinition.getSnapshot();
-
-		/******************** structuredefinitionsnapshotelement ********************************************************************************/
-		org.hl7.fhir.r4.model.ElementDefinition structuredefinitionsnapshotelement = structuredefinitionsnapshot.getElementFirstRep();
-
-		/******************** StrctrDfn_Snpsht_Elmnt_Short ********************************************************************************/
-		if(structuredefinitionsnapshotelement.hasShort()) {
-			s.setStrctrDfnSnpshtElmntShort(String.valueOf(structuredefinitionsnapshotelement.getShort()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_Dfn ********************************************************************************/
-		if(structuredefinitionsnapshotelement.hasDefinition()) {
-			s.setStrctrDfnSnpshtElmntDfn(String.valueOf(structuredefinitionsnapshotelement.getDefinition()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_Path ********************************************************************************/
-		if(structuredefinitionsnapshotelement.hasPath()) {
-			s.setStrctrDfnSnpshtElmntPath(String.valueOf(structuredefinitionsnapshotelement.getPath()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_Comment ********************************************************************************/
-		if(structuredefinitionsnapshotelement.hasComment()) {
-			s.setStrctrDfnSnpshtElmntComment(String.valueOf(structuredefinitionsnapshotelement.getComment()));
-		}
-		/******************** structuredefinitionsnapshotelementbase ********************************************************************************/
-		org.hl7.fhir.r4.model.ElementDefinition.ElementDefinitionBaseComponent structuredefinitionsnapshotelementbase = structuredefinitionsnapshotelement.getBase();
-
-		/******************** StrctrDfn_Snpsht_Elmnt_Base_Path ********************************************************************************/
-		if(structuredefinitionsnapshotelementbase.hasPath()) {
-			s.setStrctrDfnSnpshtElmntBasePath(String.valueOf(structuredefinitionsnapshotelementbase.getPath()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_Base_Min ********************************************************************************/
-		if(structuredefinitionsnapshotelementbase.hasMin()) {
-			s.setStrctrDfnSnpshtElmntBaseMin(String.valueOf(structuredefinitionsnapshotelementbase.getMin()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_Base_Mx ********************************************************************************/
-		if(structuredefinitionsnapshotelementbase.hasMax()) {
-			s.setStrctrDfnSnpshtElmntBaseMx(String.valueOf(structuredefinitionsnapshotelementbase.getMax()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_MinVlDtTyp ********************************************************************************/
-		if(structuredefinitionsnapshotelement.hasMinValueDateType()) {
-			s.setStrctrDfnSnpshtElmntMinVlDtTyp(String.valueOf(structuredefinitionsnapshotelement.getMinValueDateType()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_MinVlDtTimeTyp ********************************************************************************/
-		if(structuredefinitionsnapshotelement.hasMinValueDateTimeType()) {
-			s.setStrctrDfnSnpshtElmntMinVlDtTimeTyp(String.valueOf(structuredefinitionsnapshotelement.getMinValueDateTimeType()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_MinVlTimeTyp ********************************************************************************/
-		if(structuredefinitionsnapshotelement.hasMinValueTimeType()) {
-			s.setStrctrDfnSnpshtElmntMinVlTimeTyp(String.valueOf(structuredefinitionsnapshotelement.getMinValueTimeType()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_MinVlDecimalTyp ********************************************************************************/
-		if(structuredefinitionsnapshotelement.hasMinValueDecimalType()) {
-			s.setStrctrDfnSnpshtElmntMinVlDecimalTyp(String.valueOf(structuredefinitionsnapshotelement.getMinValueDecimalType()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_MeaningWhenMissing ********************************************************************************/
-		if(structuredefinitionsnapshotelement.hasMeaningWhenMissing()) {
-			s.setStrctrDfnSnpshtElmntMeaningWhenMissing(String.valueOf(structuredefinitionsnapshotelement.getMeaningWhenMissing()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_MinVlIntegerTyp ********************************************************************************/
-		if(structuredefinitionsnapshotelement.hasMinValueIntegerType()) {
-			s.setStrctrDfnSnpshtElmntMinVlIntegerTyp(String.valueOf(structuredefinitionsnapshotelement.getMinValueIntegerType()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_MinVlInstantTyp ********************************************************************************/
-		if(structuredefinitionsnapshotelement.hasMinValueInstantType()) {
-			s.setStrctrDfnSnpshtElmntMinVlInstantTyp(String.valueOf(structuredefinitionsnapshotelement.getMinValueInstantType()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_SliceIsConstraining ********************************************************************************/
-		if(structuredefinitionsnapshotelement.hasSliceIsConstraining()) {
-			s.setStrctrDfnSnpshtElmntSliceIsConstraining(String.valueOf(structuredefinitionsnapshotelement.getSliceIsConstraining()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_MinVlPositiveIntTyp ********************************************************************************/
-		if(structuredefinitionsnapshotelement.hasMinValuePositiveIntType()) {
-			s.setStrctrDfnSnpshtElmntMinVlPositiveIntTyp(String.valueOf(structuredefinitionsnapshotelement.getMinValuePositiveIntType()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_MxVlPositiveIntTyp ********************************************************************************/
-		if(structuredefinitionsnapshotelement.hasMaxValuePositiveIntType()) {
-			s.setStrctrDfnSnpshtElmntMxVlPositiveIntTyp(String.valueOf(structuredefinitionsnapshotelement.getMaxValuePositiveIntType()));
-		}
-		/******************** structuredefinitionsnapshotelementminvaluequantity ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity structuredefinitionsnapshotelementminvaluequantity = structuredefinitionsnapshotelement.getMinValueQuantity();
-
-		/******************** StrctrDfn_Snpsht_Elmnt_MinVlQnty_Vl ********************************************************************************/
-		if(structuredefinitionsnapshotelementminvaluequantity.hasValue()) {
-			s.setStrctrDfnSnpshtElmntMinVlQntyVl(String.valueOf(structuredefinitionsnapshotelementminvaluequantity.getValue()));
-		}
-		/******************** structuredefinitionsnapshotelementminvaluequantitycomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparator structuredefinitionsnapshotelementminvaluequantitycomparator = structuredefinitionsnapshotelementminvaluequantity.getComparator();
-		s.setStrctrDfnSnpshtElmntMinVlQntyCmprtr(structuredefinitionsnapshotelementminvaluequantitycomparator.toCode());
-
-		/******************** StrctrDfn_Snpsht_Elmnt_MinVlQnty_Cd ********************************************************************************/
-		if(structuredefinitionsnapshotelementminvaluequantity.hasCode()) {
-			s.setStrctrDfnSnpshtElmntMinVlQntyCd(String.valueOf(structuredefinitionsnapshotelementminvaluequantity.getCode()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_MinVlQnty_Unt ********************************************************************************/
-		if(structuredefinitionsnapshotelementminvaluequantity.hasUnit()) {
-			s.setStrctrDfnSnpshtElmntMinVlQntyUnt(String.valueOf(structuredefinitionsnapshotelementminvaluequantity.getUnit()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_MinVlQnty_Sys ********************************************************************************/
-		if(structuredefinitionsnapshotelementminvaluequantity.hasSystem()) {
-			s.setStrctrDfnSnpshtElmntMinVlQntySys(String.valueOf(structuredefinitionsnapshotelementminvaluequantity.getSystem()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_MxVlUnsignedIntTyp ********************************************************************************/
-		if(structuredefinitionsnapshotelement.hasMaxValueUnsignedIntType()) {
-			s.setStrctrDfnSnpshtElmntMxVlUnsignedIntTyp(String.valueOf(structuredefinitionsnapshotelement.getMaxValueUnsignedIntType()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_MinVlUnsignedIntTyp ********************************************************************************/
-		if(structuredefinitionsnapshotelement.hasMinValueUnsignedIntType()) {
-			s.setStrctrDfnSnpshtElmntMinVlUnsignedIntTyp(String.valueOf(structuredefinitionsnapshotelement.getMinValueUnsignedIntType()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_MxVlTimeTyp ********************************************************************************/
-		if(structuredefinitionsnapshotelement.hasMaxValueTimeType()) {
-			s.setStrctrDfnSnpshtElmntMxVlTimeTyp(String.valueOf(structuredefinitionsnapshotelement.getMaxValueTimeType()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_MxVlDecimalTyp ********************************************************************************/
-		if(structuredefinitionsnapshotelement.hasMaxValueDecimalType()) {
-			s.setStrctrDfnSnpshtElmntMxVlDecimalTyp(String.valueOf(structuredefinitionsnapshotelement.getMaxValueDecimalType()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_MxVlIntegerTyp ********************************************************************************/
-		if(structuredefinitionsnapshotelement.hasMaxValueIntegerType()) {
-			s.setStrctrDfnSnpshtElmntMxVlIntegerTyp(String.valueOf(structuredefinitionsnapshotelement.getMaxValueIntegerType()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_MxVlDtTimeTyp ********************************************************************************/
-		if(structuredefinitionsnapshotelement.hasMaxValueDateTimeType()) {
-			s.setStrctrDfnSnpshtElmntMxVlDtTimeTyp(String.valueOf(structuredefinitionsnapshotelement.getMaxValueDateTimeType()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_MxVlDtTyp ********************************************************************************/
-		if(structuredefinitionsnapshotelement.hasMaxValueDateType()) {
-			s.setStrctrDfnSnpshtElmntMxVlDtTyp(String.valueOf(structuredefinitionsnapshotelement.getMaxValueDateType()));
-		}
-		/******************** structuredefinitionsnapshotelementconstraint ********************************************************************************/
-		org.hl7.fhir.r4.model.ElementDefinition.ElementDefinitionConstraintComponent structuredefinitionsnapshotelementconstraint = structuredefinitionsnapshotelement.getConstraintFirstRep();
-
-		/******************** StrctrDfn_Snpsht_Elmnt_Constraint_Key ********************************************************************************/
-		if(structuredefinitionsnapshotelementconstraint.hasKey()) {
-			s.setStrctrDfnSnpshtElmntConstraintKey(String.valueOf(structuredefinitionsnapshotelementconstraint.getKey()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_Constraint_Src ********************************************************************************/
-		if(structuredefinitionsnapshotelementconstraint.hasSource()) {
-			s.setStrctrDfnSnpshtElmntConstraintSrc(String.valueOf(structuredefinitionsnapshotelementconstraint.getSource()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_Constraint_Rqrments ********************************************************************************/
-		if(structuredefinitionsnapshotelementconstraint.hasRequirements()) {
-			s.setStrctrDfnSnpshtElmntConstraintRqrments(String.valueOf(structuredefinitionsnapshotelementconstraint.getRequirements()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_Constraint_Human ********************************************************************************/
-		if(structuredefinitionsnapshotelementconstraint.hasHuman()) {
-			s.setStrctrDfnSnpshtElmntConstraintHuman(String.valueOf(structuredefinitionsnapshotelementconstraint.getHuman()));
-		}
-		/******************** structuredefinitionsnapshotelementconstraintseverity ********************************************************************************/
-		org.hl7.fhir.r4.model.ElementDefinition.ConstraintSeverity structuredefinitionsnapshotelementconstraintseverity = structuredefinitionsnapshotelementconstraint.getSeverity();
-		s.setStrctrDfnSnpshtElmntConstraintSeverity(structuredefinitionsnapshotelementconstraintseverity.toCode());
-
-		/******************** StrctrDfn_Snpsht_Elmnt_Constraint_Exprsn ********************************************************************************/
-		if(structuredefinitionsnapshotelementconstraint.hasExpression()) {
-			s.setStrctrDfnSnpshtElmntConstraintExprsn(String.valueOf(structuredefinitionsnapshotelementconstraint.getExpression()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_Constraint_Xpath ********************************************************************************/
-		if(structuredefinitionsnapshotelementconstraint.hasXpath()) {
-			s.setStrctrDfnSnpshtElmntConstraintXpath(String.valueOf(structuredefinitionsnapshotelementconstraint.getXpath()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_MxVlInstantTyp ********************************************************************************/
-		if(structuredefinitionsnapshotelement.hasMaxValueInstantType()) {
-			s.setStrctrDfnSnpshtElmntMxVlInstantTyp(String.valueOf(structuredefinitionsnapshotelement.getMaxValueInstantType()));
-		}
-		/******************** structuredefinitionsnapshotelementmaxvaluequantity ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity structuredefinitionsnapshotelementmaxvaluequantity = structuredefinitionsnapshotelement.getMaxValueQuantity();
-
-		/******************** StrctrDfn_Snpsht_Elmnt_MxVlQnty_Vl ********************************************************************************/
-		if(structuredefinitionsnapshotelementmaxvaluequantity.hasValue()) {
-			s.setStrctrDfnSnpshtElmntMxVlQntyVl(String.valueOf(structuredefinitionsnapshotelementmaxvaluequantity.getValue()));
-		}
-		/******************** structuredefinitionsnapshotelementmaxvaluequantitycomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparator structuredefinitionsnapshotelementmaxvaluequantitycomparator = structuredefinitionsnapshotelementmaxvaluequantity.getComparator();
-		s.setStrctrDfnSnpshtElmntMxVlQntyCmprtr(structuredefinitionsnapshotelementmaxvaluequantitycomparator.toCode());
-
-		/******************** StrctrDfn_Snpsht_Elmnt_MxVlQnty_Cd ********************************************************************************/
-		if(structuredefinitionsnapshotelementmaxvaluequantity.hasCode()) {
-			s.setStrctrDfnSnpshtElmntMxVlQntyCd(String.valueOf(structuredefinitionsnapshotelementmaxvaluequantity.getCode()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_MxVlQnty_Unt ********************************************************************************/
-		if(structuredefinitionsnapshotelementmaxvaluequantity.hasUnit()) {
-			s.setStrctrDfnSnpshtElmntMxVlQntyUnt(String.valueOf(structuredefinitionsnapshotelementmaxvaluequantity.getUnit()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_MxVlQnty_Sys ********************************************************************************/
-		if(structuredefinitionsnapshotelementmaxvaluequantity.hasSystem()) {
-			s.setStrctrDfnSnpshtElmntMxVlQntySys(String.valueOf(structuredefinitionsnapshotelementmaxvaluequantity.getSystem()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_IsMdfrRsn ********************************************************************************/
-		if(structuredefinitionsnapshotelement.hasIsModifierReason()) {
-			s.setStrctrDfnSnpshtElmntIsMdfrRsn(String.valueOf(structuredefinitionsnapshotelement.getIsModifierReason()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_IsMdfr ********************************************************************************/
-		if(structuredefinitionsnapshotelement.hasIsModifier()) {
-			s.setStrctrDfnSnpshtElmntIsMdfr(String.valueOf(structuredefinitionsnapshotelement.getIsModifier()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_SliceNm ********************************************************************************/
-		if(structuredefinitionsnapshotelement.hasSliceName()) {
-			s.setStrctrDfnSnpshtElmntSliceNm(String.valueOf(structuredefinitionsnapshotelement.getSliceName()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_Rqrments ********************************************************************************/
-		if(structuredefinitionsnapshotelement.hasRequirements()) {
-			s.setStrctrDfnSnpshtElmntRqrments(String.valueOf(structuredefinitionsnapshotelement.getRequirements()));
-		}
-		/******************** structuredefinitionsnapshotelementslicing ********************************************************************************/
-		org.hl7.fhir.r4.model.ElementDefinition.ElementDefinitionSlicingComponent structuredefinitionsnapshotelementslicing = structuredefinitionsnapshotelement.getSlicing();
-
-		/******************** structuredefinitionsnapshotelementslicingrules ********************************************************************************/
-		org.hl7.fhir.r4.model.ElementDefinition.SlicingRules structuredefinitionsnapshotelementslicingrules = structuredefinitionsnapshotelementslicing.getRules();
-		s.setStrctrDfnSnpshtElmntSlicingRules(structuredefinitionsnapshotelementslicingrules.toCode());
-
-		/******************** structuredefinitionsnapshotelementslicingdiscriminator ********************************************************************************/
-		org.hl7.fhir.r4.model.ElementDefinition.ElementDefinitionSlicingDiscriminatorComponent structuredefinitionsnapshotelementslicingdiscriminator = structuredefinitionsnapshotelementslicing.getDiscriminatorFirstRep();
-
-		/******************** structuredefinitionsnapshotelementslicingdiscriminatortype ********************************************************************************/
-		org.hl7.fhir.r4.model.ElementDefinition.DiscriminatorType structuredefinitionsnapshotelementslicingdiscriminatortype = structuredefinitionsnapshotelementslicingdiscriminator.getType();
-		s.setStrctrDfnSnpshtElmntSlicingDiscriminatorTyp(structuredefinitionsnapshotelementslicingdiscriminatortype.toCode());
-
-		/******************** StrctrDfn_Snpsht_Elmnt_Slicing_Discriminator_Path ********************************************************************************/
-		if(structuredefinitionsnapshotelementslicingdiscriminator.hasPath()) {
-			s.setStrctrDfnSnpshtElmntSlicingDiscriminatorPath(String.valueOf(structuredefinitionsnapshotelementslicingdiscriminator.getPath()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_Slicing_Ordred ********************************************************************************/
-		if(structuredefinitionsnapshotelementslicing.hasOrdered()) {
-			s.setStrctrDfnSnpshtElmntSlicingOrdred(String.valueOf(structuredefinitionsnapshotelementslicing.getOrdered()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_Slicing_Dscrptn ********************************************************************************/
-		if(structuredefinitionsnapshotelementslicing.hasDescription()) {
-			s.setStrctrDfnSnpshtElmntSlicingDscrptn(String.valueOf(structuredefinitionsnapshotelementslicing.getDescription()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_OrdrMeaning ********************************************************************************/
-		if(structuredefinitionsnapshotelement.hasOrderMeaning()) {
-			s.setStrctrDfnSnpshtElmntOrdrMeaning(String.valueOf(structuredefinitionsnapshotelement.getOrderMeaning()));
-		}
-		/******************** structuredefinitionsnapshotelementexample ********************************************************************************/
-		org.hl7.fhir.r4.model.ElementDefinition.ElementDefinitionExampleComponent structuredefinitionsnapshotelementexample = structuredefinitionsnapshotelement.getExampleFirstRep();
-
-		/******************** StrctrDfn_Snpsht_Elmnt_Example_Lbl ********************************************************************************/
-		if(structuredefinitionsnapshotelementexample.hasLabel()) {
-			s.setStrctrDfnSnpshtElmntExampleLbl(String.valueOf(structuredefinitionsnapshotelementexample.getLabel()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_MxLength ********************************************************************************/
-		if(structuredefinitionsnapshotelement.hasMaxLength()) {
-			s.setStrctrDfnSnpshtElmntMxLength(String.valueOf(structuredefinitionsnapshotelement.getMaxLength()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_IsSummary ********************************************************************************/
-		if(structuredefinitionsnapshotelement.hasIsSummary()) {
-			s.setStrctrDfnSnpshtElmntIsSummary(String.valueOf(structuredefinitionsnapshotelement.getIsSummary()));
-		}
-		/******************** structuredefinitionsnapshotelementmapping ********************************************************************************/
-		org.hl7.fhir.r4.model.ElementDefinition.ElementDefinitionMappingComponent structuredefinitionsnapshotelementmapping = structuredefinitionsnapshotelement.getMappingFirstRep();
-
-		/******************** StrctrDfn_Snpsht_Elmnt_Mapping_Lnguage ********************************************************************************/
-		if(structuredefinitionsnapshotelementmapping.hasLanguage()) {
-			s.setStrctrDfnSnpshtElmntMappingLnguage(String.valueOf(structuredefinitionsnapshotelementmapping.getLanguage()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_Mapping_Map ********************************************************************************/
-		if(structuredefinitionsnapshotelementmapping.hasMap()) {
-			s.setStrctrDfnSnpshtElmntMappingMap(String.valueOf(structuredefinitionsnapshotelementmapping.getMap()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_Mapping_Comment ********************************************************************************/
-		if(structuredefinitionsnapshotelementmapping.hasComment()) {
-			s.setStrctrDfnSnpshtElmntMappingComment(String.valueOf(structuredefinitionsnapshotelementmapping.getComment()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_Mapping_Identity ********************************************************************************/
-		if(structuredefinitionsnapshotelementmapping.hasIdentity()) {
-			s.setStrctrDfnSnpshtElmntMappingIdentity(String.valueOf(structuredefinitionsnapshotelementmapping.getIdentity()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_MustSupport ********************************************************************************/
-		if(structuredefinitionsnapshotelement.hasMustSupport()) {
-			s.setStrctrDfnSnpshtElmntMustSupport(String.valueOf(structuredefinitionsnapshotelement.getMustSupport()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_Min ********************************************************************************/
-		if(structuredefinitionsnapshotelement.hasMin()) {
-			s.setStrctrDfnSnpshtElmntMin(String.valueOf(structuredefinitionsnapshotelement.getMin()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_Mx ********************************************************************************/
-		if(structuredefinitionsnapshotelement.hasMax()) {
-			s.setStrctrDfnSnpshtElmntMx(String.valueOf(structuredefinitionsnapshotelement.getMax()));
-		}
-		/******************** structuredefinitionsnapshotelementtype ********************************************************************************/
-		org.hl7.fhir.r4.model.ElementDefinition.TypeRefComponent structuredefinitionsnapshotelementtype = structuredefinitionsnapshotelement.getTypeFirstRep();
-
-		/******************** StrctrDfn_Snpsht_Elmnt_Typ_Cd ********************************************************************************/
-		if(structuredefinitionsnapshotelementtype.hasCode()) {
-			s.setStrctrDfnSnpshtElmntTypCd(String.valueOf(structuredefinitionsnapshotelementtype.getCode()));
-		}
-		/******************** structuredefinitionsnapshotelementtypeversioning ********************************************************************************/
-		org.hl7.fhir.r4.model.ElementDefinition.ReferenceVersionRules structuredefinitionsnapshotelementtypeversioning = structuredefinitionsnapshotelementtype.getVersioning();
-		s.setStrctrDfnSnpshtElmntTypVrsning(structuredefinitionsnapshotelementtypeversioning.toCode());
-
-//		/******************** StrctrDfn_Snpsht_Elmnt_Typ_WorkingCd ********************************************************************************/
-//		if(structuredefinitionsnapshotelementtype.hasWorkingCode()) {
-//			s.setStrctrDfnSnpshtElmntTypWorkingCd(String.valueOf(structuredefinitionsnapshotelementtype.getWorkingCode()));
-//		}
-		/******************** structuredefinitionsnapshotelementbinding ********************************************************************************/
-		org.hl7.fhir.r4.model.ElementDefinition.ElementDefinitionBindingComponent structuredefinitionsnapshotelementbinding = structuredefinitionsnapshotelement.getBinding();
-
-		/******************** structuredefinitionsnapshotelementbindingstrength ********************************************************************************/
-		org.hl7.fhir.r4.model.Enumerations.BindingStrength structuredefinitionsnapshotelementbindingstrength = structuredefinitionsnapshotelementbinding.getStrength();
-		s.setStrctrDfnSnpshtElmntBindingStr(structuredefinitionsnapshotelementbindingstrength.toCode());
-
-		/******************** StrctrDfn_Snpsht_Elmnt_Binding_Dscrptn ********************************************************************************/
-		if(structuredefinitionsnapshotelementbinding.hasDescription()) {
-			s.setStrctrDfnSnpshtElmntBindingDscrptn(String.valueOf(structuredefinitionsnapshotelementbinding.getDescription()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_Binding_VlSt ********************************************************************************/
-		if(structuredefinitionsnapshotelementbinding.hasValueSet()) {
-			s.setStrctrDfnSnpshtElmntBindingVlSt(String.valueOf(structuredefinitionsnapshotelementbinding.getValueSet()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_CntntRfrnc ********************************************************************************/
-		if(structuredefinitionsnapshotelement.hasContentReference()) {
-			s.setStrctrDfnSnpshtElmntCntntRfrnc(String.valueOf(structuredefinitionsnapshotelement.getContentReference()));
-		}
-		/******************** structuredefinitionsnapshotelementcode ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding structuredefinitionsnapshotelementcode = structuredefinitionsnapshotelement.getCodeFirstRep();
-
-		/******************** StrctrDfn_Snpsht_Elmnt_Cd_Vrsn ********************************************************************************/
-		if(structuredefinitionsnapshotelementcode.hasVersion()) {
-			s.setStrctrDfnSnpshtElmntCdVrsn(String.valueOf(structuredefinitionsnapshotelementcode.getVersion()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_Cd_Dsply ********************************************************************************/
-		if(structuredefinitionsnapshotelementcode.hasDisplay()) {
-			s.setStrctrDfnSnpshtElmntCdDsply(String.valueOf(structuredefinitionsnapshotelementcode.getDisplay()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_Cd_UsrSltd ********************************************************************************/
-		if(structuredefinitionsnapshotelementcode.hasUserSelected()) {
-			s.setStrctrDfnSnpshtElmntCdUsrSltd(String.valueOf(structuredefinitionsnapshotelementcode.getUserSelected()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_Cd_Sys ********************************************************************************/
-		if(structuredefinitionsnapshotelementcode.hasSystem()) {
-			s.setStrctrDfnSnpshtElmntCdSys(String.valueOf(structuredefinitionsnapshotelementcode.getSystem()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_Lbl ********************************************************************************/
-		if(structuredefinitionsnapshotelement.hasLabel()) {
-			s.setStrctrDfnSnpshtElmntLbl(String.valueOf(structuredefinitionsnapshotelement.getLabel()));
-		}
-		/******************** StrctrDfn_Ttl ********************************************************************************/
-		if(structuredefinition.hasTitle()) {
-			s.setStrctrDfnTtl(String.valueOf(structuredefinition.getTitle()));
-		}
-		/******************** structuredefinitionkeyword ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding structuredefinitionkeyword = structuredefinition.getKeywordFirstRep();
-
-		/******************** StrctrDfn_Keyword_Vrsn ********************************************************************************/
-		if(structuredefinitionkeyword.hasVersion()) {
-			s.setStrctrDfnKeywordVrsn(String.valueOf(structuredefinitionkeyword.getVersion()));
-		}
-		/******************** StrctrDfn_Keyword_Dsply ********************************************************************************/
-		if(structuredefinitionkeyword.hasDisplay()) {
-			s.setStrctrDfnKeywordDsply(String.valueOf(structuredefinitionkeyword.getDisplay()));
-		}
-		/******************** StrctrDfn_Keyword_Cd ********************************************************************************/
-		if(structuredefinitionkeyword.hasCode()) {
-			s.setStrctrDfnKeywordCd(String.valueOf(structuredefinitionkeyword.getCode()));
-		}
-		/******************** StrctrDfn_Keyword_UsrSltd ********************************************************************************/
-		if(structuredefinitionkeyword.hasUserSelected()) {
-			s.setStrctrDfnKeywordUsrSltd(String.valueOf(structuredefinitionkeyword.getUserSelected()));
-		}
-		/******************** StrctrDfn_Keyword_Sys ********************************************************************************/
-		if(structuredefinitionkeyword.hasSystem()) {
-			s.setStrctrDfnKeywordSys(String.valueOf(structuredefinitionkeyword.getSystem()));
-		}
 		/******************** structuredefinitionstatus ********************************************************************************/
 		org.hl7.fhir.r4.model.Enumerations.PublicationStatus structuredefinitionstatus = structuredefinition.getStatus();
-		s.setStrctrDfnSts(structuredefinitionstatus.toCode());
+		if(structuredefinitionstatus!=null) {
+			s.addStrctrDfnSts(structuredefinitionstatus.toCode());
+		} else {
+			s.addStrctrDfnSts("NULL");
+		}
 
 		/******************** StrctrDfn_Dscrptn ********************************************************************************/
 		if(structuredefinition.hasDescription()) {
-			s.setStrctrDfnDscrptn(String.valueOf(structuredefinition.getDescription()));
-		}
-		/******************** StrctrDfn_Url ********************************************************************************/
-		if(structuredefinition.hasUrl()) {
-			s.setStrctrDfnUrl(String.valueOf(structuredefinition.getUrl()));
-		}
-		/******************** StrctrDfn_Pblshr ********************************************************************************/
-		if(structuredefinition.hasPublisher()) {
-			s.setStrctrDfnPblshr(String.valueOf(structuredefinition.getPublisher()));
-		}
-		/******************** StrctrDfn_Exprmtl ********************************************************************************/
-		if(structuredefinition.hasExperimental()) {
-			s.setStrctrDfnExprmtl(String.valueOf(structuredefinition.getExperimental()));
-		}
-		/******************** StrctrDfn_Prpse ********************************************************************************/
-		if(structuredefinition.hasPurpose()) {
-			s.setStrctrDfnPrpse(String.valueOf(structuredefinition.getPurpose()));
-		}
-		/******************** structuredefinitioncontact ********************************************************************************/
-		org.hl7.fhir.r4.model.ContactDetail structuredefinitioncontact = structuredefinition.getContactFirstRep();
 
-		/******************** StrctrDfn_Cntct_Nm ********************************************************************************/
-		if(structuredefinitioncontact.hasName()) {
-			s.setStrctrDfnCntctNm(String.valueOf(structuredefinitioncontact.getName()));
+			s.addStrctrDfnDscrptn(String.valueOf(structuredefinition.getDescription()));
+		} else {
+			s.addStrctrDfnDscrptn("NULL");
 		}
-		/******************** structuredefinitioncontacttelecom ********************************************************************************/
-		org.hl7.fhir.r4.model.ContactPoint structuredefinitioncontacttelecom = structuredefinitioncontact.getTelecomFirstRep();
 
-		/******************** StrctrDfn_Cntct_Tlcm_Vl ********************************************************************************/
-		if(structuredefinitioncontacttelecom.hasValue()) {
-			s.setStrctrDfnCntctTlcmVl(String.valueOf(structuredefinitioncontacttelecom.getValue()));
-		}
-		/******************** structuredefinitioncontacttelecomperiod ********************************************************************************/
-		org.hl7.fhir.r4.model.Period structuredefinitioncontacttelecomperiod = structuredefinitioncontacttelecom.getPeriod();
 
-		/******************** StrctrDfn_Cntct_Tlcm_Prd_Strt ********************************************************************************/
-		if(structuredefinitioncontacttelecomperiod.hasStart()) {
-			s.setStrctrDfnCntctTlcmPrdStrt(String.valueOf(structuredefinitioncontacttelecomperiod.getStart()));
-		}
-		/******************** StrctrDfn_Cntct_Tlcm_Prd_End ********************************************************************************/
-		if(structuredefinitioncontacttelecomperiod.hasEnd()) {
-			s.setStrctrDfnCntctTlcmPrdEnd(String.valueOf(structuredefinitioncontacttelecomperiod.getEnd()));
-		}
-		/******************** structuredefinitioncontacttelecomsystem ********************************************************************************/
-		org.hl7.fhir.r4.model.ContactPoint.ContactPointSystem structuredefinitioncontacttelecomsystem = structuredefinitioncontacttelecom.getSystem();
-		s.setStrctrDfnCntctTlcmSys(structuredefinitioncontacttelecomsystem.toCode());
-
-		/******************** structuredefinitioncontacttelecomuse ********************************************************************************/
-		org.hl7.fhir.r4.model.ContactPoint.ContactPointUse structuredefinitioncontacttelecomuse = structuredefinitioncontacttelecom.getUse();
-		s.setStrctrDfnCntctTlcmUse(structuredefinitioncontacttelecomuse.toCode());
-
-		/******************** StrctrDfn_Cntct_Tlcm_Rnk ********************************************************************************/
-		if(structuredefinitioncontacttelecom.hasRank()) {
-			s.setStrctrDfnCntctTlcmRnk(String.valueOf(structuredefinitioncontacttelecom.getRank()));
-		}
 		/******************** structuredefinitionidentifier ********************************************************************************/
-		org.hl7.fhir.r4.model.Identifier structuredefinitionidentifier = structuredefinition.getIdentifierFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.Identifier> structuredefinitionidentifierlist = structuredefinition.getIdentifier();
+		for(int structuredefinitionidentifieri = 0; structuredefinitionidentifieri<structuredefinitionidentifierlist.size();structuredefinitionidentifieri++ ) {
+		org.hl7.fhir.r4.model.Identifier  structuredefinitionidentifier = structuredefinitionidentifierlist.get(structuredefinitionidentifieri);
 
 		/******************** StrctrDfn_Id_Vl ********************************************************************************/
+		if(structuredefinitionidentifieri == 0) {s.addStrctrDfnIdVl("[");}
 		if(structuredefinitionidentifier.hasValue()) {
-			s.setStrctrDfnIdVl(String.valueOf(structuredefinitionidentifier.getValue()));
+
+			s.addStrctrDfnIdVl(String.valueOf(structuredefinitionidentifier.getValue()));
+		} else {
+			s.addStrctrDfnIdVl("NULL");
 		}
+
+		if(structuredefinitionidentifieri == structuredefinitionidentifierlist.size()-1) {s.addStrctrDfnIdVl("]");}
+
+
 		/******************** structuredefinitionidentifiertype ********************************************************************************/
 		org.hl7.fhir.r4.model.CodeableConcept structuredefinitionidentifiertype = structuredefinitionidentifier.getType();
 
 		/******************** StrctrDfn_Id_Typ_Txt ********************************************************************************/
+		if(structuredefinitionidentifieri == 0) {s.addStrctrDfnIdTypTxt("[");}
 		if(structuredefinitionidentifiertype.hasText()) {
-			s.setStrctrDfnIdTypTxt(String.valueOf(structuredefinitionidentifiertype.getText()));
+
+			s.addStrctrDfnIdTypTxt(String.valueOf(structuredefinitionidentifiertype.getText()));
+		} else {
+			s.addStrctrDfnIdTypTxt("NULL");
 		}
+
+		if(structuredefinitionidentifieri == structuredefinitionidentifierlist.size()-1) {s.addStrctrDfnIdTypTxt("]");}
+
+
 		/******************** structuredefinitionidentifiertypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding structuredefinitionidentifiertypecoding = structuredefinitionidentifiertype.getCodingFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.Coding> structuredefinitionidentifiertypecodinglist = structuredefinitionidentifiertype.getCoding();
+		for(int structuredefinitionidentifiertypecodingi = 0; structuredefinitionidentifiertypecodingi<structuredefinitionidentifiertypecodinglist.size();structuredefinitionidentifiertypecodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  structuredefinitionidentifiertypecoding = structuredefinitionidentifiertypecodinglist.get(structuredefinitionidentifiertypecodingi);
+
+		/******************** StrctrDfn_Id_Typ_Cdg_Dsply ********************************************************************************/
+		if(structuredefinitionidentifiertypecodingi == 0) {s.addStrctrDfnIdTypCdgDsply("[[");}
+		if(structuredefinitionidentifiertypecoding.hasDisplay()) {
+
+			s.addStrctrDfnIdTypCdgDsply(String.valueOf(structuredefinitionidentifiertypecoding.getDisplay()));
+		} else {
+			s.addStrctrDfnIdTypCdgDsply("NULL");
+		}
+
+		if(structuredefinitionidentifiertypecodingi == structuredefinitionidentifiertypecodinglist.size()-1) {s.addStrctrDfnIdTypCdgDsply("]]");}
+
 
 		/******************** StrctrDfn_Id_Typ_Cdg_Vrsn ********************************************************************************/
+		if(structuredefinitionidentifiertypecodingi == 0) {s.addStrctrDfnIdTypCdgVrsn("[[");}
 		if(structuredefinitionidentifiertypecoding.hasVersion()) {
-			s.setStrctrDfnIdTypCdgVrsn(String.valueOf(structuredefinitionidentifiertypecoding.getVersion()));
+
+			s.addStrctrDfnIdTypCdgVrsn(String.valueOf(structuredefinitionidentifiertypecoding.getVersion()));
+		} else {
+			s.addStrctrDfnIdTypCdgVrsn("NULL");
 		}
-		/******************** StrctrDfn_Id_Typ_Cdg_Dsply ********************************************************************************/
-		if(structuredefinitionidentifiertypecoding.hasDisplay()) {
-			s.setStrctrDfnIdTypCdgDsply(String.valueOf(structuredefinitionidentifiertypecoding.getDisplay()));
-		}
+
+		if(structuredefinitionidentifiertypecodingi == structuredefinitionidentifiertypecodinglist.size()-1) {s.addStrctrDfnIdTypCdgVrsn("]]");}
+
+
 		/******************** StrctrDfn_Id_Typ_Cdg_Cd ********************************************************************************/
+		if(structuredefinitionidentifiertypecodingi == 0) {s.addStrctrDfnIdTypCdgCd("[[");}
 		if(structuredefinitionidentifiertypecoding.hasCode()) {
-			s.setStrctrDfnIdTypCdgCd(String.valueOf(structuredefinitionidentifiertypecoding.getCode()));
+
+			s.addStrctrDfnIdTypCdgCd(String.valueOf(structuredefinitionidentifiertypecoding.getCode()));
+		} else {
+			s.addStrctrDfnIdTypCdgCd("NULL");
 		}
+
+		if(structuredefinitionidentifiertypecodingi == structuredefinitionidentifiertypecodinglist.size()-1) {s.addStrctrDfnIdTypCdgCd("]]");}
+
+
 		/******************** StrctrDfn_Id_Typ_Cdg_UsrSltd ********************************************************************************/
+		if(structuredefinitionidentifiertypecodingi == 0) {s.addStrctrDfnIdTypCdgUsrSltd("[[");}
 		if(structuredefinitionidentifiertypecoding.hasUserSelected()) {
-			s.setStrctrDfnIdTypCdgUsrSltd(String.valueOf(structuredefinitionidentifiertypecoding.getUserSelected()));
+
+			s.addStrctrDfnIdTypCdgUsrSltd(String.valueOf(structuredefinitionidentifiertypecoding.getUserSelected()));
+		} else {
+			s.addStrctrDfnIdTypCdgUsrSltd("NULL");
 		}
+
+		if(structuredefinitionidentifiertypecodingi == structuredefinitionidentifiertypecodinglist.size()-1) {s.addStrctrDfnIdTypCdgUsrSltd("]]");}
+
+
 		/******************** StrctrDfn_Id_Typ_Cdg_Sys ********************************************************************************/
+		if(structuredefinitionidentifiertypecodingi == 0) {s.addStrctrDfnIdTypCdgSys("[[");}
 		if(structuredefinitionidentifiertypecoding.hasSystem()) {
-			s.setStrctrDfnIdTypCdgSys(String.valueOf(structuredefinitionidentifiertypecoding.getSystem()));
+
+			s.addStrctrDfnIdTypCdgSys(String.valueOf(structuredefinitionidentifiertypecoding.getSystem()));
+		} else {
+			s.addStrctrDfnIdTypCdgSys("NULL");
 		}
+
+		if(structuredefinitionidentifiertypecodingi == structuredefinitionidentifiertypecodinglist.size()-1) {s.addStrctrDfnIdTypCdgSys("]]");}
+
+
+		 };
 		/******************** structuredefinitionidentifierperiod ********************************************************************************/
 		org.hl7.fhir.r4.model.Period structuredefinitionidentifierperiod = structuredefinitionidentifier.getPeriod();
 
 		/******************** StrctrDfn_Id_Prd_Strt ********************************************************************************/
+		if(structuredefinitionidentifieri == 0) {s.addStrctrDfnIdPrdStrt("[");}
 		if(structuredefinitionidentifierperiod.hasStart()) {
-			s.setStrctrDfnIdPrdStrt(String.valueOf(structuredefinitionidentifierperiod.getStart()));
+
+			s.addStrctrDfnIdPrdStrt("\""+ca.uhn.fhir.util.DateUtils.formatDate(structuredefinitionidentifierperiod.getStart())+"\"");
+		} else {
+			s.addStrctrDfnIdPrdStrt("NULL");
 		}
+
+		if(structuredefinitionidentifieri == structuredefinitionidentifierlist.size()-1) {s.addStrctrDfnIdPrdStrt("]");}
+
+
 		/******************** StrctrDfn_Id_Prd_End ********************************************************************************/
+		if(structuredefinitionidentifieri == 0) {s.addStrctrDfnIdPrdEnd("[");}
 		if(structuredefinitionidentifierperiod.hasEnd()) {
-			s.setStrctrDfnIdPrdEnd(String.valueOf(structuredefinitionidentifierperiod.getEnd()));
+
+			s.addStrctrDfnIdPrdEnd("\""+ca.uhn.fhir.util.DateUtils.formatDate(structuredefinitionidentifierperiod.getEnd())+"\"");
+		} else {
+			s.addStrctrDfnIdPrdEnd("NULL");
 		}
-		/******************** StrctrDfn_Id_Assigner ********************************************************************************/
-		if(structuredefinitionidentifier.hasAssigner()) {
-			s.setStrctrDfnIdAssigner(String.valueOf(structuredefinitionidentifier.getAssigner()));
-		}
-		/******************** StrctrDfn_Id_Sys ********************************************************************************/
-		if(structuredefinitionidentifier.hasSystem()) {
-			s.setStrctrDfnIdSys(String.valueOf(structuredefinitionidentifier.getSystem()));
-		}
+
+		if(structuredefinitionidentifieri == structuredefinitionidentifierlist.size()-1) {s.addStrctrDfnIdPrdEnd("]");}
+
+
 		/******************** structuredefinitionidentifieruse ********************************************************************************/
 		org.hl7.fhir.r4.model.Identifier.IdentifierUse structuredefinitionidentifieruse = structuredefinitionidentifier.getUse();
-		s.setStrctrDfnIdUse(structuredefinitionidentifieruse.toCode());
+		if(structuredefinitionidentifieruse!=null) {
+		if(structuredefinitionidentifieri == 0) {
 
+		s.addStrctrDfnIdUse("[");		}
+			s.addStrctrDfnIdUse(structuredefinitionidentifieruse.toCode());
+		if(structuredefinitionidentifieri == structuredefinitionidentifierlist.size()-1) {
+
+		s.addStrctrDfnIdUse("]");		}
+
+		} else {
+			s.addStrctrDfnIdUse("NULL");
+		}
+
+		/******************** StrctrDfn_Id_Assigner ********************************************************************************/
+		if(structuredefinitionidentifieri == 0) {s.addStrctrDfnIdAssigner("[");}
+		if(structuredefinitionidentifier.hasAssigner()) {
+
+			if(structuredefinitionidentifier.getAssigner().getReference() != null) {
+			s.addStrctrDfnIdAssigner(structuredefinitionidentifier.getAssigner().getReference());
+			}
+		} else {
+			s.addStrctrDfnIdAssigner("NULL");
+		}
+
+		if(structuredefinitionidentifieri == structuredefinitionidentifierlist.size()-1) {s.addStrctrDfnIdAssigner("]");}
+
+
+		/******************** StrctrDfn_Id_Sys ********************************************************************************/
+		if(structuredefinitionidentifieri == 0) {s.addStrctrDfnIdSys("[");}
+		if(structuredefinitionidentifier.hasSystem()) {
+
+			s.addStrctrDfnIdSys(String.valueOf(structuredefinitionidentifier.getSystem()));
+		} else {
+			s.addStrctrDfnIdSys("NULL");
+		}
+
+		if(structuredefinitionidentifieri == structuredefinitionidentifierlist.size()-1) {s.addStrctrDfnIdSys("]");}
+
+
+		 };
+		/******************** structuredefinitioncontact ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.ContactDetail> structuredefinitioncontactlist = structuredefinition.getContact();
+		for(int structuredefinitioncontacti = 0; structuredefinitioncontacti<structuredefinitioncontactlist.size();structuredefinitioncontacti++ ) {
+		org.hl7.fhir.r4.model.ContactDetail  structuredefinitioncontact = structuredefinitioncontactlist.get(structuredefinitioncontacti);
+
+		/******************** StrctrDfn_Cntct_Nm ********************************************************************************/
+		if(structuredefinitioncontacti == 0) {s.addStrctrDfnCntctNm("[");}
+		if(structuredefinitioncontact.hasName()) {
+
+			s.addStrctrDfnCntctNm(String.valueOf(structuredefinitioncontact.getName()));
+		} else {
+			s.addStrctrDfnCntctNm("NULL");
+		}
+
+		if(structuredefinitioncontacti == structuredefinitioncontactlist.size()-1) {s.addStrctrDfnCntctNm("]");}
+
+
+		/******************** structuredefinitioncontacttelecom ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.ContactPoint> structuredefinitioncontacttelecomlist = structuredefinitioncontact.getTelecom();
+		for(int structuredefinitioncontacttelecomi = 0; structuredefinitioncontacttelecomi<structuredefinitioncontacttelecomlist.size();structuredefinitioncontacttelecomi++ ) {
+		org.hl7.fhir.r4.model.ContactPoint  structuredefinitioncontacttelecom = structuredefinitioncontacttelecomlist.get(structuredefinitioncontacttelecomi);
+
+		/******************** StrctrDfn_Cntct_Tlcm_Vl ********************************************************************************/
+		if(structuredefinitioncontacttelecomi == 0) {s.addStrctrDfnCntctTlcmVl("[[");}
+		if(structuredefinitioncontacttelecom.hasValue()) {
+
+			s.addStrctrDfnCntctTlcmVl(String.valueOf(structuredefinitioncontacttelecom.getValue()));
+		} else {
+			s.addStrctrDfnCntctTlcmVl("NULL");
+		}
+
+		if(structuredefinitioncontacttelecomi == structuredefinitioncontacttelecomlist.size()-1) {s.addStrctrDfnCntctTlcmVl("]]");}
+
+
+		/******************** structuredefinitioncontacttelecomperiod ********************************************************************************/
+		org.hl7.fhir.r4.model.Period structuredefinitioncontacttelecomperiod = structuredefinitioncontacttelecom.getPeriod();
+
+		/******************** StrctrDfn_Cntct_Tlcm_Prd_Strt ********************************************************************************/
+		if(structuredefinitioncontacttelecomi == 0) {s.addStrctrDfnCntctTlcmPrdStrt("[[");}
+		if(structuredefinitioncontacttelecomperiod.hasStart()) {
+
+			s.addStrctrDfnCntctTlcmPrdStrt("\""+ca.uhn.fhir.util.DateUtils.formatDate(structuredefinitioncontacttelecomperiod.getStart())+"\"");
+		} else {
+			s.addStrctrDfnCntctTlcmPrdStrt("NULL");
+		}
+
+		if(structuredefinitioncontacttelecomi == structuredefinitioncontacttelecomlist.size()-1) {s.addStrctrDfnCntctTlcmPrdStrt("]]");}
+
+
+		/******************** StrctrDfn_Cntct_Tlcm_Prd_End ********************************************************************************/
+		if(structuredefinitioncontacttelecomi == 0) {s.addStrctrDfnCntctTlcmPrdEnd("[[");}
+		if(structuredefinitioncontacttelecomperiod.hasEnd()) {
+
+			s.addStrctrDfnCntctTlcmPrdEnd("\""+ca.uhn.fhir.util.DateUtils.formatDate(structuredefinitioncontacttelecomperiod.getEnd())+"\"");
+		} else {
+			s.addStrctrDfnCntctTlcmPrdEnd("NULL");
+		}
+
+		if(structuredefinitioncontacttelecomi == structuredefinitioncontacttelecomlist.size()-1) {s.addStrctrDfnCntctTlcmPrdEnd("]]");}
+
+
+		/******************** structuredefinitioncontacttelecomuse ********************************************************************************/
+		org.hl7.fhir.r4.model.ContactPoint.ContactPointUse structuredefinitioncontacttelecomuse = structuredefinitioncontacttelecom.getUse();
+		if(structuredefinitioncontacttelecomuse!=null) {
+		if(structuredefinitioncontacttelecomi == 0) {
+
+		s.addStrctrDfnCntctTlcmUse("[[");		}
+			s.addStrctrDfnCntctTlcmUse(structuredefinitioncontacttelecomuse.toCode());
+		if(structuredefinitioncontacttelecomi == structuredefinitioncontacttelecomlist.size()-1) {
+
+		s.addStrctrDfnCntctTlcmUse("]]");		}
+
+		} else {
+			s.addStrctrDfnCntctTlcmUse("NULL");
+		}
+
+		/******************** structuredefinitioncontacttelecomsystem ********************************************************************************/
+		org.hl7.fhir.r4.model.ContactPoint.ContactPointSystem structuredefinitioncontacttelecomsystem = structuredefinitioncontacttelecom.getSystem();
+		if(structuredefinitioncontacttelecomsystem!=null) {
+		if(structuredefinitioncontacttelecomi == 0) {
+
+		s.addStrctrDfnCntctTlcmSys("[[");		}
+			s.addStrctrDfnCntctTlcmSys(structuredefinitioncontacttelecomsystem.toCode());
+		if(structuredefinitioncontacttelecomi == structuredefinitioncontacttelecomlist.size()-1) {
+
+		s.addStrctrDfnCntctTlcmSys("]]");		}
+
+		} else {
+			s.addStrctrDfnCntctTlcmSys("NULL");
+		}
+
+		/******************** StrctrDfn_Cntct_Tlcm_Rnk ********************************************************************************/
+		if(structuredefinitioncontacttelecomi == 0) {s.addStrctrDfnCntctTlcmRnk("[[");}
+		if(structuredefinitioncontacttelecom.hasRank()) {
+
+			s.addStrctrDfnCntctTlcmRnk(String.valueOf(structuredefinitioncontacttelecom.getRank()));
+		} else {
+			s.addStrctrDfnCntctTlcmRnk("NULL");
+		}
+
+		if(structuredefinitioncontacttelecomi == structuredefinitioncontacttelecomlist.size()-1) {s.addStrctrDfnCntctTlcmRnk("]]");}
+
+
+		 };
+		 };
 		/******************** StrctrDfn_Copyright ********************************************************************************/
 		if(structuredefinition.hasCopyright()) {
-			s.setStrctrDfnCopyright(String.valueOf(structuredefinition.getCopyright()));
+
+			s.addStrctrDfnCopyright(String.valueOf(structuredefinition.getCopyright()));
+		} else {
+			s.addStrctrDfnCopyright("NULL");
 		}
+
+
 		/******************** structuredefinitionkind ********************************************************************************/
 		org.hl7.fhir.r4.model.StructureDefinition.StructureDefinitionKind structuredefinitionkind = structuredefinition.getKind();
-		s.setStrctrDfnKind(structuredefinitionkind.toCode());
+		if(structuredefinitionkind!=null) {
+			s.addStrctrDfnKind(structuredefinitionkind.toCode());
+		} else {
+			s.addStrctrDfnKind("NULL");
+		}
 
+		/******************** StrctrDfn_Ttl ********************************************************************************/
+		if(structuredefinition.hasTitle()) {
+
+			s.addStrctrDfnTtl(String.valueOf(structuredefinition.getTitle()));
+		} else {
+			s.addStrctrDfnTtl("NULL");
+		}
+
+
+		/******************** structuredefinitionkeyword ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.Coding> structuredefinitionkeywordlist = structuredefinition.getKeyword();
+		for(int structuredefinitionkeywordi = 0; structuredefinitionkeywordi<structuredefinitionkeywordlist.size();structuredefinitionkeywordi++ ) {
+		org.hl7.fhir.r4.model.Coding  structuredefinitionkeyword = structuredefinitionkeywordlist.get(structuredefinitionkeywordi);
+
+		/******************** StrctrDfn_Keyword_Dsply ********************************************************************************/
+		if(structuredefinitionkeywordi == 0) {s.addStrctrDfnKeywordDsply("[");}
+		if(structuredefinitionkeyword.hasDisplay()) {
+
+			s.addStrctrDfnKeywordDsply(String.valueOf(structuredefinitionkeyword.getDisplay()));
+		} else {
+			s.addStrctrDfnKeywordDsply("NULL");
+		}
+
+		if(structuredefinitionkeywordi == structuredefinitionkeywordlist.size()-1) {s.addStrctrDfnKeywordDsply("]");}
+
+
+		/******************** StrctrDfn_Keyword_Vrsn ********************************************************************************/
+		if(structuredefinitionkeywordi == 0) {s.addStrctrDfnKeywordVrsn("[");}
+		if(structuredefinitionkeyword.hasVersion()) {
+
+			s.addStrctrDfnKeywordVrsn(String.valueOf(structuredefinitionkeyword.getVersion()));
+		} else {
+			s.addStrctrDfnKeywordVrsn("NULL");
+		}
+
+		if(structuredefinitionkeywordi == structuredefinitionkeywordlist.size()-1) {s.addStrctrDfnKeywordVrsn("]");}
+
+
+		/******************** StrctrDfn_Keyword_Cd ********************************************************************************/
+		if(structuredefinitionkeywordi == 0) {s.addStrctrDfnKeywordCd("[");}
+		if(structuredefinitionkeyword.hasCode()) {
+
+			s.addStrctrDfnKeywordCd(String.valueOf(structuredefinitionkeyword.getCode()));
+		} else {
+			s.addStrctrDfnKeywordCd("NULL");
+		}
+
+		if(structuredefinitionkeywordi == structuredefinitionkeywordlist.size()-1) {s.addStrctrDfnKeywordCd("]");}
+
+
+		/******************** StrctrDfn_Keyword_UsrSltd ********************************************************************************/
+		if(structuredefinitionkeywordi == 0) {s.addStrctrDfnKeywordUsrSltd("[");}
+		if(structuredefinitionkeyword.hasUserSelected()) {
+
+			s.addStrctrDfnKeywordUsrSltd(String.valueOf(structuredefinitionkeyword.getUserSelected()));
+		} else {
+			s.addStrctrDfnKeywordUsrSltd("NULL");
+		}
+
+		if(structuredefinitionkeywordi == structuredefinitionkeywordlist.size()-1) {s.addStrctrDfnKeywordUsrSltd("]");}
+
+
+		/******************** StrctrDfn_Keyword_Sys ********************************************************************************/
+		if(structuredefinitionkeywordi == 0) {s.addStrctrDfnKeywordSys("[");}
+		if(structuredefinitionkeyword.hasSystem()) {
+
+			s.addStrctrDfnKeywordSys(String.valueOf(structuredefinitionkeyword.getSystem()));
+		} else {
+			s.addStrctrDfnKeywordSys("NULL");
+		}
+
+		if(structuredefinitionkeywordi == structuredefinitionkeywordlist.size()-1) {s.addStrctrDfnKeywordSys("]");}
+
+
+		 };
+		/******************** StrctrDfn_Prpse ********************************************************************************/
+		if(structuredefinition.hasPurpose()) {
+
+			s.addStrctrDfnPrpse(String.valueOf(structuredefinition.getPurpose()));
+		} else {
+			s.addStrctrDfnPrpse("NULL");
+		}
+
+
+		/******************** StrctrDfn_Url ********************************************************************************/
+		if(structuredefinition.hasUrl()) {
+
+			s.addStrctrDfnUrl(String.valueOf(structuredefinition.getUrl()));
+		} else {
+			s.addStrctrDfnUrl("NULL");
+		}
+
+
+		/******************** structuredefinitionfhirversion ********************************************************************************/
+		org.hl7.fhir.r4.model.Enumerations.FHIRVersion structuredefinitionfhirversion = structuredefinition.getFhirVersion();
+		if(structuredefinitionfhirversion!=null) {
+			s.addStrctrDfnFhirVrsn(structuredefinitionfhirversion.toCode());
+		} else {
+			s.addStrctrDfnFhirVrsn("NULL");
+		}
+
+		/******************** structuredefinitionmapping ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.StructureDefinition.StructureDefinitionMappingComponent> structuredefinitionmappinglist = structuredefinition.getMapping();
+		for(int structuredefinitionmappingi = 0; structuredefinitionmappingi<structuredefinitionmappinglist.size();structuredefinitionmappingi++ ) {
+		org.hl7.fhir.r4.model.StructureDefinition.StructureDefinitionMappingComponent  structuredefinitionmapping = structuredefinitionmappinglist.get(structuredefinitionmappingi);
+
+		/******************** StrctrDfn_Mapping_Nm ********************************************************************************/
+		if(structuredefinitionmappingi == 0) {s.addStrctrDfnMappingNm("[");}
+		if(structuredefinitionmapping.hasName()) {
+
+			s.addStrctrDfnMappingNm(String.valueOf(structuredefinitionmapping.getName()));
+		} else {
+			s.addStrctrDfnMappingNm("NULL");
+		}
+
+		if(structuredefinitionmappingi == structuredefinitionmappinglist.size()-1) {s.addStrctrDfnMappingNm("]");}
+
+
+		/******************** StrctrDfn_Mapping_Comment ********************************************************************************/
+		if(structuredefinitionmappingi == 0) {s.addStrctrDfnMappingComment("[");}
+		if(structuredefinitionmapping.hasComment()) {
+
+			s.addStrctrDfnMappingComment(String.valueOf(structuredefinitionmapping.getComment()));
+		} else {
+			s.addStrctrDfnMappingComment("NULL");
+		}
+
+		if(structuredefinitionmappingi == structuredefinitionmappinglist.size()-1) {s.addStrctrDfnMappingComment("]");}
+
+
+		/******************** StrctrDfn_Mapping_Uri ********************************************************************************/
+		if(structuredefinitionmappingi == 0) {s.addStrctrDfnMappingUri("[");}
+		if(structuredefinitionmapping.hasUri()) {
+
+			s.addStrctrDfnMappingUri(String.valueOf(structuredefinitionmapping.getUri()));
+		} else {
+			s.addStrctrDfnMappingUri("NULL");
+		}
+
+		if(structuredefinitionmappingi == structuredefinitionmappinglist.size()-1) {s.addStrctrDfnMappingUri("]");}
+
+
+		/******************** StrctrDfn_Mapping_Identity ********************************************************************************/
+		if(structuredefinitionmappingi == 0) {s.addStrctrDfnMappingIdentity("[");}
+		if(structuredefinitionmapping.hasIdentity()) {
+
+			s.addStrctrDfnMappingIdentity(String.valueOf(structuredefinitionmapping.getIdentity()));
+		} else {
+			s.addStrctrDfnMappingIdentity("NULL");
+		}
+
+		if(structuredefinitionmappingi == structuredefinitionmappinglist.size()-1) {s.addStrctrDfnMappingIdentity("]");}
+
+
+		 };
+		/******************** StrctrDfn_Abstract ********************************************************************************/
+		if(structuredefinition.hasAbstract()) {
+
+			s.addStrctrDfnAbstract(String.valueOf(structuredefinition.getAbstract()));
+		} else {
+			s.addStrctrDfnAbstract("NULL");
+		}
+
+
+		/******************** structuredefinitionderivation ********************************************************************************/
+		org.hl7.fhir.r4.model.StructureDefinition.TypeDerivationRule structuredefinitionderivation = structuredefinition.getDerivation();
+		if(structuredefinitionderivation!=null) {
+			s.addStrctrDfnDerivation(structuredefinitionderivation.toCode());
+		} else {
+			s.addStrctrDfnDerivation("NULL");
+		}
+
+		/******************** structuredefinitionsnapshot ********************************************************************************/
+		org.hl7.fhir.r4.model.StructureDefinition.StructureDefinitionSnapshotComponent structuredefinitionsnapshot = structuredefinition.getSnapshot();
+
+		/******************** structuredefinitiondifferential ********************************************************************************/
+		org.hl7.fhir.r4.model.StructureDefinition.StructureDefinitionDifferentialComponent structuredefinitiondifferential = structuredefinition.getDifferential();
+
+		/******************** StrctrDfn_BaseDfn ********************************************************************************/
+		if(structuredefinition.hasBaseDefinition()) {
+
+			s.addStrctrDfnBaseDfn(String.valueOf(structuredefinition.getBaseDefinition()));
+		} else {
+			s.addStrctrDfnBaseDfn("NULL");
+		}
+
+
+		/******************** structuredefinitionjurisdiction ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.CodeableConcept> structuredefinitionjurisdictionlist = structuredefinition.getJurisdiction();
+		for(int structuredefinitionjurisdictioni = 0; structuredefinitionjurisdictioni<structuredefinitionjurisdictionlist.size();structuredefinitionjurisdictioni++ ) {
+		org.hl7.fhir.r4.model.CodeableConcept  structuredefinitionjurisdiction = structuredefinitionjurisdictionlist.get(structuredefinitionjurisdictioni);
+
+		/******************** StrctrDfn_Jrsdctn_Txt ********************************************************************************/
+		if(structuredefinitionjurisdictioni == 0) {s.addStrctrDfnJrsdctnTxt("[");}
+		if(structuredefinitionjurisdiction.hasText()) {
+
+			s.addStrctrDfnJrsdctnTxt(String.valueOf(structuredefinitionjurisdiction.getText()));
+		} else {
+			s.addStrctrDfnJrsdctnTxt("NULL");
+		}
+
+		if(structuredefinitionjurisdictioni == structuredefinitionjurisdictionlist.size()-1) {s.addStrctrDfnJrsdctnTxt("]");}
+
+
+		/******************** structuredefinitionjurisdictioncoding ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.Coding> structuredefinitionjurisdictioncodinglist = structuredefinitionjurisdiction.getCoding();
+		for(int structuredefinitionjurisdictioncodingi = 0; structuredefinitionjurisdictioncodingi<structuredefinitionjurisdictioncodinglist.size();structuredefinitionjurisdictioncodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  structuredefinitionjurisdictioncoding = structuredefinitionjurisdictioncodinglist.get(structuredefinitionjurisdictioncodingi);
+
+		/******************** StrctrDfn_Jrsdctn_Cdg_Dsply ********************************************************************************/
+		if(structuredefinitionjurisdictioncodingi == 0) {s.addStrctrDfnJrsdctnCdgDsply("[[");}
+		if(structuredefinitionjurisdictioncoding.hasDisplay()) {
+
+			s.addStrctrDfnJrsdctnCdgDsply(String.valueOf(structuredefinitionjurisdictioncoding.getDisplay()));
+		} else {
+			s.addStrctrDfnJrsdctnCdgDsply("NULL");
+		}
+
+		if(structuredefinitionjurisdictioncodingi == structuredefinitionjurisdictioncodinglist.size()-1) {s.addStrctrDfnJrsdctnCdgDsply("]]");}
+
+
+		/******************** StrctrDfn_Jrsdctn_Cdg_Vrsn ********************************************************************************/
+		if(structuredefinitionjurisdictioncodingi == 0) {s.addStrctrDfnJrsdctnCdgVrsn("[[");}
+		if(structuredefinitionjurisdictioncoding.hasVersion()) {
+
+			s.addStrctrDfnJrsdctnCdgVrsn(String.valueOf(structuredefinitionjurisdictioncoding.getVersion()));
+		} else {
+			s.addStrctrDfnJrsdctnCdgVrsn("NULL");
+		}
+
+		if(structuredefinitionjurisdictioncodingi == structuredefinitionjurisdictioncodinglist.size()-1) {s.addStrctrDfnJrsdctnCdgVrsn("]]");}
+
+
+		/******************** StrctrDfn_Jrsdctn_Cdg_Cd ********************************************************************************/
+		if(structuredefinitionjurisdictioncodingi == 0) {s.addStrctrDfnJrsdctnCdgCd("[[");}
+		if(structuredefinitionjurisdictioncoding.hasCode()) {
+
+			s.addStrctrDfnJrsdctnCdgCd(String.valueOf(structuredefinitionjurisdictioncoding.getCode()));
+		} else {
+			s.addStrctrDfnJrsdctnCdgCd("NULL");
+		}
+
+		if(structuredefinitionjurisdictioncodingi == structuredefinitionjurisdictioncodinglist.size()-1) {s.addStrctrDfnJrsdctnCdgCd("]]");}
+
+
+		/******************** StrctrDfn_Jrsdctn_Cdg_UsrSltd ********************************************************************************/
+		if(structuredefinitionjurisdictioncodingi == 0) {s.addStrctrDfnJrsdctnCdgUsrSltd("[[");}
+		if(structuredefinitionjurisdictioncoding.hasUserSelected()) {
+
+			s.addStrctrDfnJrsdctnCdgUsrSltd(String.valueOf(structuredefinitionjurisdictioncoding.getUserSelected()));
+		} else {
+			s.addStrctrDfnJrsdctnCdgUsrSltd("NULL");
+		}
+
+		if(structuredefinitionjurisdictioncodingi == structuredefinitionjurisdictioncodinglist.size()-1) {s.addStrctrDfnJrsdctnCdgUsrSltd("]]");}
+
+
+		/******************** StrctrDfn_Jrsdctn_Cdg_Sys ********************************************************************************/
+		if(structuredefinitionjurisdictioncodingi == 0) {s.addStrctrDfnJrsdctnCdgSys("[[");}
+		if(structuredefinitionjurisdictioncoding.hasSystem()) {
+
+			s.addStrctrDfnJrsdctnCdgSys(String.valueOf(structuredefinitionjurisdictioncoding.getSystem()));
+		} else {
+			s.addStrctrDfnJrsdctnCdgSys("NULL");
+		}
+
+		if(structuredefinitionjurisdictioncodingi == structuredefinitionjurisdictioncodinglist.size()-1) {s.addStrctrDfnJrsdctnCdgSys("]]");}
+
+
+		 };
+		 };
 		/******************** structuredefinitionusecontext ********************************************************************************/
-		org.hl7.fhir.r4.model.UsageContext structuredefinitionusecontext = structuredefinition.getUseContextFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.UsageContext> structuredefinitionusecontextlist = structuredefinition.getUseContext();
+		for(int structuredefinitionusecontexti = 0; structuredefinitionusecontexti<structuredefinitionusecontextlist.size();structuredefinitionusecontexti++ ) {
+		org.hl7.fhir.r4.model.UsageContext  structuredefinitionusecontext = structuredefinitionusecontextlist.get(structuredefinitionusecontexti);
 
 		/******************** structuredefinitionusecontextcode ********************************************************************************/
 		org.hl7.fhir.r4.model.Coding structuredefinitionusecontextcode = structuredefinitionusecontext.getCode();
 
-		/******************** StrctrDfn_UseCntxt_Cd_Vrsn ********************************************************************************/
-		if(structuredefinitionusecontextcode.hasVersion()) {
-			s.setStrctrDfnUseCntxtCdVrsn(String.valueOf(structuredefinitionusecontextcode.getVersion()));
-		}
 		/******************** StrctrDfn_UseCntxt_Cd_Dsply ********************************************************************************/
+		if(structuredefinitionusecontexti == 0) {s.addStrctrDfnUseCntxtCdDsply("[");}
 		if(structuredefinitionusecontextcode.hasDisplay()) {
-			s.setStrctrDfnUseCntxtCdDsply(String.valueOf(structuredefinitionusecontextcode.getDisplay()));
+
+			s.addStrctrDfnUseCntxtCdDsply(String.valueOf(structuredefinitionusecontextcode.getDisplay()));
+		} else {
+			s.addStrctrDfnUseCntxtCdDsply("NULL");
 		}
+
+		if(structuredefinitionusecontexti == structuredefinitionusecontextlist.size()-1) {s.addStrctrDfnUseCntxtCdDsply("]");}
+
+
+		/******************** StrctrDfn_UseCntxt_Cd_Vrsn ********************************************************************************/
+		if(structuredefinitionusecontexti == 0) {s.addStrctrDfnUseCntxtCdVrsn("[");}
+		if(structuredefinitionusecontextcode.hasVersion()) {
+
+			s.addStrctrDfnUseCntxtCdVrsn(String.valueOf(structuredefinitionusecontextcode.getVersion()));
+		} else {
+			s.addStrctrDfnUseCntxtCdVrsn("NULL");
+		}
+
+		if(structuredefinitionusecontexti == structuredefinitionusecontextlist.size()-1) {s.addStrctrDfnUseCntxtCdVrsn("]");}
+
+
 		/******************** StrctrDfn_UseCntxt_Cd_UsrSltd ********************************************************************************/
+		if(structuredefinitionusecontexti == 0) {s.addStrctrDfnUseCntxtCdUsrSltd("[");}
 		if(structuredefinitionusecontextcode.hasUserSelected()) {
-			s.setStrctrDfnUseCntxtCdUsrSltd(String.valueOf(structuredefinitionusecontextcode.getUserSelected()));
+
+			s.addStrctrDfnUseCntxtCdUsrSltd(String.valueOf(structuredefinitionusecontextcode.getUserSelected()));
+		} else {
+			s.addStrctrDfnUseCntxtCdUsrSltd("NULL");
 		}
+
+		if(structuredefinitionusecontexti == structuredefinitionusecontextlist.size()-1) {s.addStrctrDfnUseCntxtCdUsrSltd("]");}
+
+
 		/******************** StrctrDfn_UseCntxt_Cd_Sys ********************************************************************************/
+		if(structuredefinitionusecontexti == 0) {s.addStrctrDfnUseCntxtCdSys("[");}
 		if(structuredefinitionusecontextcode.hasSystem()) {
-			s.setStrctrDfnUseCntxtCdSys(String.valueOf(structuredefinitionusecontextcode.getSystem()));
+
+			s.addStrctrDfnUseCntxtCdSys(String.valueOf(structuredefinitionusecontextcode.getSystem()));
+		} else {
+			s.addStrctrDfnUseCntxtCdSys("NULL");
 		}
+
+		if(structuredefinitionusecontexti == structuredefinitionusecontextlist.size()-1) {s.addStrctrDfnUseCntxtCdSys("]");}
+
+
+		/******************** StrctrDfn_UseCntxt_VlRfrnc ********************************************************************************/
+		if(structuredefinitionusecontexti == 0) {s.addStrctrDfnUseCntxtVlRfrnc("[");}
+		if(structuredefinitionusecontext.hasValueReference()) {
+
+			if(structuredefinitionusecontext.getValueReference().getReference() != null) {
+			s.addStrctrDfnUseCntxtVlRfrnc(structuredefinitionusecontext.getValueReference().getReference());
+			}
+		} else {
+			s.addStrctrDfnUseCntxtVlRfrnc("NULL");
+		}
+
+		if(structuredefinitionusecontexti == structuredefinitionusecontextlist.size()-1) {s.addStrctrDfnUseCntxtVlRfrnc("]");}
+
+
 		/******************** structuredefinitionusecontextvaluecodeableconcept ********************************************************************************/
 		org.hl7.fhir.r4.model.CodeableConcept structuredefinitionusecontextvaluecodeableconcept = structuredefinitionusecontext.getValueCodeableConcept();
 
 		/******************** StrctrDfn_UseCntxt_VlCdbleCncpt_Txt ********************************************************************************/
+		if(structuredefinitionusecontexti == 0) {s.addStrctrDfnUseCntxtVlCdbleCncptTxt("[");}
 		if(structuredefinitionusecontextvaluecodeableconcept.hasText()) {
-			s.setStrctrDfnUseCntxtVlCdbleCncptTxt(String.valueOf(structuredefinitionusecontextvaluecodeableconcept.getText()));
+
+			s.addStrctrDfnUseCntxtVlCdbleCncptTxt(String.valueOf(structuredefinitionusecontextvaluecodeableconcept.getText()));
+		} else {
+			s.addStrctrDfnUseCntxtVlCdbleCncptTxt("NULL");
 		}
+
+		if(structuredefinitionusecontexti == structuredefinitionusecontextlist.size()-1) {s.addStrctrDfnUseCntxtVlCdbleCncptTxt("]");}
+
+
 		/******************** structuredefinitionusecontextvaluecodeableconceptcoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding structuredefinitionusecontextvaluecodeableconceptcoding = structuredefinitionusecontextvaluecodeableconcept.getCodingFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.Coding> structuredefinitionusecontextvaluecodeableconceptcodinglist = structuredefinitionusecontextvaluecodeableconcept.getCoding();
+		for(int structuredefinitionusecontextvaluecodeableconceptcodingi = 0; structuredefinitionusecontextvaluecodeableconceptcodingi<structuredefinitionusecontextvaluecodeableconceptcodinglist.size();structuredefinitionusecontextvaluecodeableconceptcodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  structuredefinitionusecontextvaluecodeableconceptcoding = structuredefinitionusecontextvaluecodeableconceptcodinglist.get(structuredefinitionusecontextvaluecodeableconceptcodingi);
+
+		/******************** StrctrDfn_UseCntxt_VlCdbleCncpt_Cdg_Dsply ********************************************************************************/
+		if(structuredefinitionusecontextvaluecodeableconceptcodingi == 0) {s.addStrctrDfnUseCntxtVlCdbleCncptCdgDsply("[[");}
+		if(structuredefinitionusecontextvaluecodeableconceptcoding.hasDisplay()) {
+
+			s.addStrctrDfnUseCntxtVlCdbleCncptCdgDsply(String.valueOf(structuredefinitionusecontextvaluecodeableconceptcoding.getDisplay()));
+		} else {
+			s.addStrctrDfnUseCntxtVlCdbleCncptCdgDsply("NULL");
+		}
+
+		if(structuredefinitionusecontextvaluecodeableconceptcodingi == structuredefinitionusecontextvaluecodeableconceptcodinglist.size()-1) {s.addStrctrDfnUseCntxtVlCdbleCncptCdgDsply("]]");}
+
 
 		/******************** StrctrDfn_UseCntxt_VlCdbleCncpt_Cdg_Vrsn ********************************************************************************/
+		if(structuredefinitionusecontextvaluecodeableconceptcodingi == 0) {s.addStrctrDfnUseCntxtVlCdbleCncptCdgVrsn("[[");}
 		if(structuredefinitionusecontextvaluecodeableconceptcoding.hasVersion()) {
-			s.setStrctrDfnUseCntxtVlCdbleCncptCdgVrsn(String.valueOf(structuredefinitionusecontextvaluecodeableconceptcoding.getVersion()));
+
+			s.addStrctrDfnUseCntxtVlCdbleCncptCdgVrsn(String.valueOf(structuredefinitionusecontextvaluecodeableconceptcoding.getVersion()));
+		} else {
+			s.addStrctrDfnUseCntxtVlCdbleCncptCdgVrsn("NULL");
 		}
-		/******************** StrctrDfn_UseCntxt_VlCdbleCncpt_Cdg_Dsply ********************************************************************************/
-		if(structuredefinitionusecontextvaluecodeableconceptcoding.hasDisplay()) {
-			s.setStrctrDfnUseCntxtVlCdbleCncptCdgDsply(String.valueOf(structuredefinitionusecontextvaluecodeableconceptcoding.getDisplay()));
-		}
+
+		if(structuredefinitionusecontextvaluecodeableconceptcodingi == structuredefinitionusecontextvaluecodeableconceptcodinglist.size()-1) {s.addStrctrDfnUseCntxtVlCdbleCncptCdgVrsn("]]");}
+
+
 		/******************** StrctrDfn_UseCntxt_VlCdbleCncpt_Cdg_Cd ********************************************************************************/
+		if(structuredefinitionusecontextvaluecodeableconceptcodingi == 0) {s.addStrctrDfnUseCntxtVlCdbleCncptCdgCd("[[");}
 		if(structuredefinitionusecontextvaluecodeableconceptcoding.hasCode()) {
-			s.setStrctrDfnUseCntxtVlCdbleCncptCdgCd(String.valueOf(structuredefinitionusecontextvaluecodeableconceptcoding.getCode()));
+
+			s.addStrctrDfnUseCntxtVlCdbleCncptCdgCd(String.valueOf(structuredefinitionusecontextvaluecodeableconceptcoding.getCode()));
+		} else {
+			s.addStrctrDfnUseCntxtVlCdbleCncptCdgCd("NULL");
 		}
+
+		if(structuredefinitionusecontextvaluecodeableconceptcodingi == structuredefinitionusecontextvaluecodeableconceptcodinglist.size()-1) {s.addStrctrDfnUseCntxtVlCdbleCncptCdgCd("]]");}
+
+
 		/******************** StrctrDfn_UseCntxt_VlCdbleCncpt_Cdg_UsrSltd ********************************************************************************/
+		if(structuredefinitionusecontextvaluecodeableconceptcodingi == 0) {s.addStrctrDfnUseCntxtVlCdbleCncptCdgUsrSltd("[[");}
 		if(structuredefinitionusecontextvaluecodeableconceptcoding.hasUserSelected()) {
-			s.setStrctrDfnUseCntxtVlCdbleCncptCdgUsrSltd(String.valueOf(structuredefinitionusecontextvaluecodeableconceptcoding.getUserSelected()));
+
+			s.addStrctrDfnUseCntxtVlCdbleCncptCdgUsrSltd(String.valueOf(structuredefinitionusecontextvaluecodeableconceptcoding.getUserSelected()));
+		} else {
+			s.addStrctrDfnUseCntxtVlCdbleCncptCdgUsrSltd("NULL");
 		}
+
+		if(structuredefinitionusecontextvaluecodeableconceptcodingi == structuredefinitionusecontextvaluecodeableconceptcodinglist.size()-1) {s.addStrctrDfnUseCntxtVlCdbleCncptCdgUsrSltd("]]");}
+
+
 		/******************** StrctrDfn_UseCntxt_VlCdbleCncpt_Cdg_Sys ********************************************************************************/
+		if(structuredefinitionusecontextvaluecodeableconceptcodingi == 0) {s.addStrctrDfnUseCntxtVlCdbleCncptCdgSys("[[");}
 		if(structuredefinitionusecontextvaluecodeableconceptcoding.hasSystem()) {
-			s.setStrctrDfnUseCntxtVlCdbleCncptCdgSys(String.valueOf(structuredefinitionusecontextvaluecodeableconceptcoding.getSystem()));
-		}
-		/******************** structuredefinitionusecontextvaluequantity ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity structuredefinitionusecontextvaluequantity = structuredefinitionusecontext.getValueQuantity();
 
-		/******************** StrctrDfn_UseCntxt_VlQnty_Vl ********************************************************************************/
-		if(structuredefinitionusecontextvaluequantity.hasValue()) {
-			s.setStrctrDfnUseCntxtVlQntyVl(String.valueOf(structuredefinitionusecontextvaluequantity.getValue()));
+			s.addStrctrDfnUseCntxtVlCdbleCncptCdgSys(String.valueOf(structuredefinitionusecontextvaluecodeableconceptcoding.getSystem()));
+		} else {
+			s.addStrctrDfnUseCntxtVlCdbleCncptCdgSys("NULL");
 		}
-		/******************** structuredefinitionusecontextvaluequantitycomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparator structuredefinitionusecontextvaluequantitycomparator = structuredefinitionusecontextvaluequantity.getComparator();
-		s.setStrctrDfnUseCntxtVlQntyCmprtr(structuredefinitionusecontextvaluequantitycomparator.toCode());
 
-		/******************** StrctrDfn_UseCntxt_VlQnty_Cd ********************************************************************************/
-		if(structuredefinitionusecontextvaluequantity.hasCode()) {
-			s.setStrctrDfnUseCntxtVlQntyCd(String.valueOf(structuredefinitionusecontextvaluequantity.getCode()));
-		}
-		/******************** StrctrDfn_UseCntxt_VlQnty_Unt ********************************************************************************/
-		if(structuredefinitionusecontextvaluequantity.hasUnit()) {
-			s.setStrctrDfnUseCntxtVlQntyUnt(String.valueOf(structuredefinitionusecontextvaluequantity.getUnit()));
-		}
-		/******************** StrctrDfn_UseCntxt_VlQnty_Sys ********************************************************************************/
-		if(structuredefinitionusecontextvaluequantity.hasSystem()) {
-			s.setStrctrDfnUseCntxtVlQntySys(String.valueOf(structuredefinitionusecontextvaluequantity.getSystem()));
-		}
+		if(structuredefinitionusecontextvaluecodeableconceptcodingi == structuredefinitionusecontextvaluecodeableconceptcodinglist.size()-1) {s.addStrctrDfnUseCntxtVlCdbleCncptCdgSys("]]");}
+
+
+		 };
 		/******************** structuredefinitionusecontextvaluerange ********************************************************************************/
 		org.hl7.fhir.r4.model.Range structuredefinitionusecontextvaluerange = structuredefinitionusecontext.getValueRange();
 
@@ -980,82 +814,235 @@ public class StructureDefinitionBidirectionalConversion
 		org.hl7.fhir.r4.model.Quantity structuredefinitionusecontextvaluerangelow = structuredefinitionusecontextvaluerange.getLow();
 
 		/******************** StrctrDfn_UseCntxt_VlRng_Lw_Vl ********************************************************************************/
+		if(structuredefinitionusecontexti == 0) {s.addStrctrDfnUseCntxtVlRngLwVl("[");}
 		if(structuredefinitionusecontextvaluerangelow.hasValue()) {
-			s.setStrctrDfnUseCntxtVlRngLwVl(String.valueOf(structuredefinitionusecontextvaluerangelow.getValue()));
+
+			s.addStrctrDfnUseCntxtVlRngLwVl(String.valueOf(structuredefinitionusecontextvaluerangelow.getValue()));
+		} else {
+			s.addStrctrDfnUseCntxtVlRngLwVl("NULL");
 		}
+
+		if(structuredefinitionusecontexti == structuredefinitionusecontextlist.size()-1) {s.addStrctrDfnUseCntxtVlRngLwVl("]");}
+
+
 		/******************** structuredefinitionusecontextvaluerangelowcomparator ********************************************************************************/
 		org.hl7.fhir.r4.model.Quantity.QuantityComparator structuredefinitionusecontextvaluerangelowcomparator = structuredefinitionusecontextvaluerangelow.getComparator();
-		s.setStrctrDfnUseCntxtVlRngLwCmprtr(structuredefinitionusecontextvaluerangelowcomparator.toCode());
+		if(structuredefinitionusecontextvaluerangelowcomparator!=null) {
+		if(structuredefinitionusecontexti == 0) {
+
+		s.addStrctrDfnUseCntxtVlRngLwCmprtr("[");		}
+			s.addStrctrDfnUseCntxtVlRngLwCmprtr(structuredefinitionusecontextvaluerangelowcomparator.toCode());
+		if(structuredefinitionusecontexti == structuredefinitionusecontextlist.size()-1) {
+
+		s.addStrctrDfnUseCntxtVlRngLwCmprtr("]");		}
+
+		} else {
+			s.addStrctrDfnUseCntxtVlRngLwCmprtr("NULL");
+		}
 
 		/******************** StrctrDfn_UseCntxt_VlRng_Lw_Cd ********************************************************************************/
+		if(structuredefinitionusecontexti == 0) {s.addStrctrDfnUseCntxtVlRngLwCd("[");}
 		if(structuredefinitionusecontextvaluerangelow.hasCode()) {
-			s.setStrctrDfnUseCntxtVlRngLwCd(String.valueOf(structuredefinitionusecontextvaluerangelow.getCode()));
+
+			s.addStrctrDfnUseCntxtVlRngLwCd(String.valueOf(structuredefinitionusecontextvaluerangelow.getCode()));
+		} else {
+			s.addStrctrDfnUseCntxtVlRngLwCd("NULL");
 		}
+
+		if(structuredefinitionusecontexti == structuredefinitionusecontextlist.size()-1) {s.addStrctrDfnUseCntxtVlRngLwCd("]");}
+
+
 		/******************** StrctrDfn_UseCntxt_VlRng_Lw_Unt ********************************************************************************/
+		if(structuredefinitionusecontexti == 0) {s.addStrctrDfnUseCntxtVlRngLwUnt("[");}
 		if(structuredefinitionusecontextvaluerangelow.hasUnit()) {
-			s.setStrctrDfnUseCntxtVlRngLwUnt(String.valueOf(structuredefinitionusecontextvaluerangelow.getUnit()));
+
+			s.addStrctrDfnUseCntxtVlRngLwUnt(String.valueOf(structuredefinitionusecontextvaluerangelow.getUnit()));
+		} else {
+			s.addStrctrDfnUseCntxtVlRngLwUnt("NULL");
 		}
+
+		if(structuredefinitionusecontexti == structuredefinitionusecontextlist.size()-1) {s.addStrctrDfnUseCntxtVlRngLwUnt("]");}
+
+
 		/******************** StrctrDfn_UseCntxt_VlRng_Lw_Sys ********************************************************************************/
+		if(structuredefinitionusecontexti == 0) {s.addStrctrDfnUseCntxtVlRngLwSys("[");}
 		if(structuredefinitionusecontextvaluerangelow.hasSystem()) {
-			s.setStrctrDfnUseCntxtVlRngLwSys(String.valueOf(structuredefinitionusecontextvaluerangelow.getSystem()));
+
+			s.addStrctrDfnUseCntxtVlRngLwSys(String.valueOf(structuredefinitionusecontextvaluerangelow.getSystem()));
+		} else {
+			s.addStrctrDfnUseCntxtVlRngLwSys("NULL");
 		}
+
+		if(structuredefinitionusecontexti == structuredefinitionusecontextlist.size()-1) {s.addStrctrDfnUseCntxtVlRngLwSys("]");}
+
+
 		/******************** structuredefinitionusecontextvaluerangehigh ********************************************************************************/
 		org.hl7.fhir.r4.model.Quantity structuredefinitionusecontextvaluerangehigh = structuredefinitionusecontextvaluerange.getHigh();
 
 		/******************** StrctrDfn_UseCntxt_VlRng_Hi_Vl ********************************************************************************/
+		if(structuredefinitionusecontexti == 0) {s.addStrctrDfnUseCntxtVlRngHiVl("[");}
 		if(structuredefinitionusecontextvaluerangehigh.hasValue()) {
-			s.setStrctrDfnUseCntxtVlRngHiVl(String.valueOf(structuredefinitionusecontextvaluerangehigh.getValue()));
+
+			s.addStrctrDfnUseCntxtVlRngHiVl(String.valueOf(structuredefinitionusecontextvaluerangehigh.getValue()));
+		} else {
+			s.addStrctrDfnUseCntxtVlRngHiVl("NULL");
 		}
+
+		if(structuredefinitionusecontexti == structuredefinitionusecontextlist.size()-1) {s.addStrctrDfnUseCntxtVlRngHiVl("]");}
+
+
 		/******************** structuredefinitionusecontextvaluerangehighcomparator ********************************************************************************/
 		org.hl7.fhir.r4.model.Quantity.QuantityComparator structuredefinitionusecontextvaluerangehighcomparator = structuredefinitionusecontextvaluerangehigh.getComparator();
-		s.setStrctrDfnUseCntxtVlRngHiCmprtr(structuredefinitionusecontextvaluerangehighcomparator.toCode());
+		if(structuredefinitionusecontextvaluerangehighcomparator!=null) {
+		if(structuredefinitionusecontexti == 0) {
+
+		s.addStrctrDfnUseCntxtVlRngHiCmprtr("[");		}
+			s.addStrctrDfnUseCntxtVlRngHiCmprtr(structuredefinitionusecontextvaluerangehighcomparator.toCode());
+		if(structuredefinitionusecontexti == structuredefinitionusecontextlist.size()-1) {
+
+		s.addStrctrDfnUseCntxtVlRngHiCmprtr("]");		}
+
+		} else {
+			s.addStrctrDfnUseCntxtVlRngHiCmprtr("NULL");
+		}
 
 		/******************** StrctrDfn_UseCntxt_VlRng_Hi_Cd ********************************************************************************/
+		if(structuredefinitionusecontexti == 0) {s.addStrctrDfnUseCntxtVlRngHiCd("[");}
 		if(structuredefinitionusecontextvaluerangehigh.hasCode()) {
-			s.setStrctrDfnUseCntxtVlRngHiCd(String.valueOf(structuredefinitionusecontextvaluerangehigh.getCode()));
+
+			s.addStrctrDfnUseCntxtVlRngHiCd(String.valueOf(structuredefinitionusecontextvaluerangehigh.getCode()));
+		} else {
+			s.addStrctrDfnUseCntxtVlRngHiCd("NULL");
 		}
+
+		if(structuredefinitionusecontexti == structuredefinitionusecontextlist.size()-1) {s.addStrctrDfnUseCntxtVlRngHiCd("]");}
+
+
 		/******************** StrctrDfn_UseCntxt_VlRng_Hi_Unt ********************************************************************************/
+		if(structuredefinitionusecontexti == 0) {s.addStrctrDfnUseCntxtVlRngHiUnt("[");}
 		if(structuredefinitionusecontextvaluerangehigh.hasUnit()) {
-			s.setStrctrDfnUseCntxtVlRngHiUnt(String.valueOf(structuredefinitionusecontextvaluerangehigh.getUnit()));
+
+			s.addStrctrDfnUseCntxtVlRngHiUnt(String.valueOf(structuredefinitionusecontextvaluerangehigh.getUnit()));
+		} else {
+			s.addStrctrDfnUseCntxtVlRngHiUnt("NULL");
 		}
+
+		if(structuredefinitionusecontexti == structuredefinitionusecontextlist.size()-1) {s.addStrctrDfnUseCntxtVlRngHiUnt("]");}
+
+
 		/******************** StrctrDfn_UseCntxt_VlRng_Hi_Sys ********************************************************************************/
+		if(structuredefinitionusecontexti == 0) {s.addStrctrDfnUseCntxtVlRngHiSys("[");}
 		if(structuredefinitionusecontextvaluerangehigh.hasSystem()) {
-			s.setStrctrDfnUseCntxtVlRngHiSys(String.valueOf(structuredefinitionusecontextvaluerangehigh.getSystem()));
-		}
-		/******************** StrctrDfn_UseCntxt_VlRfrnc ********************************************************************************/
-		if(structuredefinitionusecontext.hasValueReference()) {
-			s.setStrctrDfnUseCntxtVlRfrnc(String.valueOf(structuredefinitionusecontext.getValueReference()));
-		}
-		/******************** structuredefinitionjurisdiction ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept structuredefinitionjurisdiction = structuredefinition.getJurisdictionFirstRep();
 
-		/******************** StrctrDfn_Jrsdctn_Txt ********************************************************************************/
-		if(structuredefinitionjurisdiction.hasText()) {
-			s.setStrctrDfnJrsdctnTxt(String.valueOf(structuredefinitionjurisdiction.getText()));
+			s.addStrctrDfnUseCntxtVlRngHiSys(String.valueOf(structuredefinitionusecontextvaluerangehigh.getSystem()));
+		} else {
+			s.addStrctrDfnUseCntxtVlRngHiSys("NULL");
 		}
-		/******************** structuredefinitionjurisdictioncoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding structuredefinitionjurisdictioncoding = structuredefinitionjurisdiction.getCodingFirstRep();
 
-		/******************** StrctrDfn_Jrsdctn_Cdg_Vrsn ********************************************************************************/
-		if(structuredefinitionjurisdictioncoding.hasVersion()) {
-			s.setStrctrDfnJrsdctnCdgVrsn(String.valueOf(structuredefinitionjurisdictioncoding.getVersion()));
+		if(structuredefinitionusecontexti == structuredefinitionusecontextlist.size()-1) {s.addStrctrDfnUseCntxtVlRngHiSys("]");}
+
+
+		/******************** structuredefinitionusecontextvaluequantity ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity structuredefinitionusecontextvaluequantity = structuredefinitionusecontext.getValueQuantity();
+
+		/******************** StrctrDfn_UseCntxt_VlQnty_Vl ********************************************************************************/
+		if(structuredefinitionusecontexti == 0) {s.addStrctrDfnUseCntxtVlQntyVl("[");}
+		if(structuredefinitionusecontextvaluequantity.hasValue()) {
+
+			s.addStrctrDfnUseCntxtVlQntyVl(String.valueOf(structuredefinitionusecontextvaluequantity.getValue()));
+		} else {
+			s.addStrctrDfnUseCntxtVlQntyVl("NULL");
 		}
-		/******************** StrctrDfn_Jrsdctn_Cdg_Dsply ********************************************************************************/
-		if(structuredefinitionjurisdictioncoding.hasDisplay()) {
-			s.setStrctrDfnJrsdctnCdgDsply(String.valueOf(structuredefinitionjurisdictioncoding.getDisplay()));
+
+		if(structuredefinitionusecontexti == structuredefinitionusecontextlist.size()-1) {s.addStrctrDfnUseCntxtVlQntyVl("]");}
+
+
+		/******************** structuredefinitionusecontextvaluequantitycomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparator structuredefinitionusecontextvaluequantitycomparator = structuredefinitionusecontextvaluequantity.getComparator();
+		if(structuredefinitionusecontextvaluequantitycomparator!=null) {
+		if(structuredefinitionusecontexti == 0) {
+
+		s.addStrctrDfnUseCntxtVlQntyCmprtr("[");		}
+			s.addStrctrDfnUseCntxtVlQntyCmprtr(structuredefinitionusecontextvaluequantitycomparator.toCode());
+		if(structuredefinitionusecontexti == structuredefinitionusecontextlist.size()-1) {
+
+		s.addStrctrDfnUseCntxtVlQntyCmprtr("]");		}
+
+		} else {
+			s.addStrctrDfnUseCntxtVlQntyCmprtr("NULL");
 		}
-		/******************** StrctrDfn_Jrsdctn_Cdg_Cd ********************************************************************************/
-		if(structuredefinitionjurisdictioncoding.hasCode()) {
-			s.setStrctrDfnJrsdctnCdgCd(String.valueOf(structuredefinitionjurisdictioncoding.getCode()));
+
+		/******************** StrctrDfn_UseCntxt_VlQnty_Cd ********************************************************************************/
+		if(structuredefinitionusecontexti == 0) {s.addStrctrDfnUseCntxtVlQntyCd("[");}
+		if(structuredefinitionusecontextvaluequantity.hasCode()) {
+
+			s.addStrctrDfnUseCntxtVlQntyCd(String.valueOf(structuredefinitionusecontextvaluequantity.getCode()));
+		} else {
+			s.addStrctrDfnUseCntxtVlQntyCd("NULL");
 		}
-		/******************** StrctrDfn_Jrsdctn_Cdg_UsrSltd ********************************************************************************/
-		if(structuredefinitionjurisdictioncoding.hasUserSelected()) {
-			s.setStrctrDfnJrsdctnCdgUsrSltd(String.valueOf(structuredefinitionjurisdictioncoding.getUserSelected()));
+
+		if(structuredefinitionusecontexti == structuredefinitionusecontextlist.size()-1) {s.addStrctrDfnUseCntxtVlQntyCd("]");}
+
+
+		/******************** StrctrDfn_UseCntxt_VlQnty_Unt ********************************************************************************/
+		if(structuredefinitionusecontexti == 0) {s.addStrctrDfnUseCntxtVlQntyUnt("[");}
+		if(structuredefinitionusecontextvaluequantity.hasUnit()) {
+
+			s.addStrctrDfnUseCntxtVlQntyUnt(String.valueOf(structuredefinitionusecontextvaluequantity.getUnit()));
+		} else {
+			s.addStrctrDfnUseCntxtVlQntyUnt("NULL");
 		}
-		/******************** StrctrDfn_Jrsdctn_Cdg_Sys ********************************************************************************/
-		if(structuredefinitionjurisdictioncoding.hasSystem()) {
-			s.setStrctrDfnJrsdctnCdgSys(String.valueOf(structuredefinitionjurisdictioncoding.getSystem()));
+
+		if(structuredefinitionusecontexti == structuredefinitionusecontextlist.size()-1) {s.addStrctrDfnUseCntxtVlQntyUnt("]");}
+
+
+		/******************** StrctrDfn_UseCntxt_VlQnty_Sys ********************************************************************************/
+		if(structuredefinitionusecontexti == 0) {s.addStrctrDfnUseCntxtVlQntySys("[");}
+		if(structuredefinitionusecontextvaluequantity.hasSystem()) {
+
+			s.addStrctrDfnUseCntxtVlQntySys(String.valueOf(structuredefinitionusecontextvaluequantity.getSystem()));
+		} else {
+			s.addStrctrDfnUseCntxtVlQntySys("NULL");
 		}
+
+		if(structuredefinitionusecontexti == structuredefinitionusecontextlist.size()-1) {s.addStrctrDfnUseCntxtVlQntySys("]");}
+
+
+		 };
+		/******************** StrctrDfn_Exprmtl ********************************************************************************/
+		if(structuredefinition.hasExperimental()) {
+
+			s.addStrctrDfnExprmtl(String.valueOf(structuredefinition.getExperimental()));
+		} else {
+			s.addStrctrDfnExprmtl("NULL");
+		}
+
+
+		/******************** StrctrDfn_Pblshr ********************************************************************************/
+		if(structuredefinition.hasPublisher()) {
+
+			s.addStrctrDfnPblshr(String.valueOf(structuredefinition.getPublisher()));
+		} else {
+			s.addStrctrDfnPblshr("NULL");
+		}
+
+
+		/******************** StrctrDfn_CntxtInvariant ********************************************************************************/
+		if(structuredefinition.hasContextInvariant()) {
+
+			String  array = "[";
+			for(int incr=0; incr<structuredefinition.getContextInvariant().size(); incr++) {
+				array = array + structuredefinition.getContextInvariant().get(incr).getValueAsString() + ",";
+			}
+			array = array.substring(0, array.length() -1);
+			array = array + "]";
+			s.addStrctrDfnCntxtInvariant(array);
+
+		} else {
+			s.addStrctrDfnCntxtInvariant("NULL");
+		}
+
+
 		return s;
 	}
 }

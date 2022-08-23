@@ -11,410 +11,647 @@ public class SupplyDeliveryConversion
 		supplydelivery.setId(s.getId());
 
 		/******************** SpplyDlvry_BasedOn ********************************************************************************/
-		if(s.getSpplyDlvryBasedOn() != null) {
-			supplydelivery.addBasedOn( new org.hl7.fhir.r4.model.Reference(s.getSpplyDlvryBasedOn()));
+		if(s.getSpplyDlvryBasedOn() != null ) {
+
+				for( String currListStrSplit : s.getSpplyDlvryBasedOn().replace("[","").replace("]","").replace("\"","").split(",")){
+			if(currListStrSplit.replace("[","").replace("]","").equals("NULL") | currListStrSplit==null) {} else {
+			supplydelivery.addBasedOn(new org.hl7.fhir.r4.model.Reference(currListStrSplit.replace("[","").replace("]","").replace("\"","")));
+			}				}
+
 		}
 		/******************** SpplyDlvry_Destination ********************************************************************************/
-		if(s.getSpplyDlvryDestination() != null) {
-			supplydelivery.setDestination( new org.hl7.fhir.r4.model.Reference(s.getSpplyDlvryDestination()));
-		}
-		/******************** supplydeliveryidentifier ********************************************************************************/
-		org.hl7.fhir.r4.model.Identifier supplydeliveryidentifier =  new org.hl7.fhir.r4.model.Identifier();
-		supplydelivery.addIdentifier(supplydeliveryidentifier);
+		if(s.getSpplyDlvryDestination() != null ) {
 
+			if(s.getSpplyDlvryDestination().replace("[","").replace("]","").equals("NULL") | s.getSpplyDlvryDestination()==null) {} else {
+			supplydelivery.setDestination(new org.hl7.fhir.r4.model.Reference(s.getSpplyDlvryDestination().replace("[","").replace("]","").replace("\"","")));
+			}
+		}
 		/******************** SpplyDlvry_Id_Assigner ********************************************************************************/
-		if(s.getSpplyDlvryIdAssigner() != null) {
-			supplydeliveryidentifier.setAssigner( new org.hl7.fhir.r4.model.Reference(s.getSpplyDlvryIdAssigner()));
-		}
-		/******************** supplydeliveryidentifierperiod ********************************************************************************/
-		org.hl7.fhir.r4.model.Period supplydeliveryidentifierperiod =  new org.hl7.fhir.r4.model.Period();
-		supplydeliveryidentifier.setPeriod(supplydeliveryidentifierperiod);
+		if(s.getSpplyDlvryIdAssigner() != null ) {
 
+			String[] arrayi0 = s.getSpplyDlvryIdAssigner().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(supplydelivery.getIdentifier().size() < i0+1) { supplydelivery.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {supplydelivery.getIdentifier().get(i0).setAssigner(new org.hl7.fhir.r4.model.Reference(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** SpplyDlvry_Id_Prd_End ********************************************************************************/
-		if(s.getSpplyDlvryIdPrdEnd() != null) {
-			java.text.SimpleDateFormat SpplyDlvry_Id_Prd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date SpplyDlvry_Id_Prd_Enddate = SpplyDlvry_Id_Prd_Endsdf.parse(s.getSpplyDlvryIdPrdEnd());
-			supplydeliveryidentifierperiod.setEnd(SpplyDlvry_Id_Prd_Enddate);
+		if(s.getSpplyDlvryIdPrdEnd() != null ) {
+
+			String[] arrayi0 = s.getSpplyDlvryIdPrdEnd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(supplydelivery.getIdentifier().size() < i0+1) { supplydelivery.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {supplydelivery.getIdentifier().get(i0).getPeriod().setEnd(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** SpplyDlvry_Id_Prd_Strt ********************************************************************************/
-		if(s.getSpplyDlvryIdPrdStrt() != null) {
-			java.text.SimpleDateFormat SpplyDlvry_Id_Prd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date SpplyDlvry_Id_Prd_Strtdate = SpplyDlvry_Id_Prd_Strtsdf.parse(s.getSpplyDlvryIdPrdStrt());
-			supplydeliveryidentifierperiod.setStart(SpplyDlvry_Id_Prd_Strtdate);
+		if(s.getSpplyDlvryIdPrdStrt() != null ) {
+
+			String[] arrayi0 = s.getSpplyDlvryIdPrdStrt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(supplydelivery.getIdentifier().size() < i0+1) { supplydelivery.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {supplydelivery.getIdentifier().get(i0).getPeriod().setStart(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** SpplyDlvry_Id_Sys ********************************************************************************/
-		if(s.getSpplyDlvryIdSys() != null) {
-			supplydeliveryidentifier.setSystem(s.getSpplyDlvryIdSys());
+		if(s.getSpplyDlvryIdSys() != null ) {
+
+			String[] arrayi0 = s.getSpplyDlvryIdSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(supplydelivery.getIdentifier().size() < i0+1) { supplydelivery.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {supplydelivery.getIdentifier().get(i0).setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
-		/******************** supplydeliveryidentifiertype ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept supplydeliveryidentifiertype =  new org.hl7.fhir.r4.model.CodeableConcept();
-		supplydeliveryidentifier.setType(supplydeliveryidentifiertype);
-
-		/******************** supplydeliveryidentifiertypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding supplydeliveryidentifiertypecoding =  new org.hl7.fhir.r4.model.Coding();
-		supplydeliveryidentifiertype.addCoding(supplydeliveryidentifiertypecoding);
-
 		/******************** SpplyDlvry_Id_Typ_Cdg_Cd ********************************************************************************/
-		if(s.getSpplyDlvryIdTypCdgCd() != null) {
-			supplydeliveryidentifiertypecoding.setCode(s.getSpplyDlvryIdTypCdgCd());
+		if(s.getSpplyDlvryIdTypCdgCd() != null ) {
+
+			String[] arrayi0 = s.getSpplyDlvryIdTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(supplydelivery.getIdentifier().size() < i0+1) { supplydelivery.addIdentifier(); }
+				String[] arrayi1 = s.getSpplyDlvryIdTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(supplydelivery.getIdentifier().get(i0).getType().getCoding().size() < i1+1) { supplydelivery.getIdentifier().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {supplydelivery.getIdentifier().get(i0).getType().getCoding().get(i1).setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** SpplyDlvry_Id_Typ_Cdg_Dsply ********************************************************************************/
-		if(s.getSpplyDlvryIdTypCdgDsply() != null) {
-			supplydeliveryidentifiertypecoding.setDisplay(s.getSpplyDlvryIdTypCdgDsply());
+		if(s.getSpplyDlvryIdTypCdgDsply() != null ) {
+
+			String[] arrayi0 = s.getSpplyDlvryIdTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(supplydelivery.getIdentifier().size() < i0+1) { supplydelivery.addIdentifier(); }
+				String[] arrayi1 = s.getSpplyDlvryIdTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(supplydelivery.getIdentifier().get(i0).getType().getCoding().size() < i1+1) { supplydelivery.getIdentifier().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {supplydelivery.getIdentifier().get(i0).getType().getCoding().get(i1).setDisplay(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** SpplyDlvry_Id_Typ_Cdg_Sys ********************************************************************************/
-		if(s.getSpplyDlvryIdTypCdgSys() != null) {
-			supplydeliveryidentifiertypecoding.setSystem(s.getSpplyDlvryIdTypCdgSys());
+		if(s.getSpplyDlvryIdTypCdgSys() != null ) {
+
+			String[] arrayi0 = s.getSpplyDlvryIdTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(supplydelivery.getIdentifier().size() < i0+1) { supplydelivery.addIdentifier(); }
+				String[] arrayi1 = s.getSpplyDlvryIdTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(supplydelivery.getIdentifier().get(i0).getType().getCoding().size() < i1+1) { supplydelivery.getIdentifier().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {supplydelivery.getIdentifier().get(i0).getType().getCoding().get(i1).setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** SpplyDlvry_Id_Typ_Cdg_UsrSltd ********************************************************************************/
-		if(s.getSpplyDlvryIdTypCdgUsrSltd() != null) {
-			supplydeliveryidentifiertypecoding.setUserSelected(Boolean.parseBoolean(s.getSpplyDlvryIdTypCdgUsrSltd()));
+		if(s.getSpplyDlvryIdTypCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = s.getSpplyDlvryIdTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(supplydelivery.getIdentifier().size() < i0+1) { supplydelivery.addIdentifier(); }
+				String[] arrayi1 = s.getSpplyDlvryIdTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(supplydelivery.getIdentifier().get(i0).getType().getCoding().size() < i1+1) { supplydelivery.getIdentifier().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {supplydelivery.getIdentifier().get(i0).getType().getCoding().get(i1).setUserSelected(Boolean.parseBoolean(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
 		}
 		/******************** SpplyDlvry_Id_Typ_Cdg_Vrsn ********************************************************************************/
-		if(s.getSpplyDlvryIdTypCdgVrsn() != null) {
-			supplydeliveryidentifiertypecoding.setVersion(s.getSpplyDlvryIdTypCdgVrsn());
+		if(s.getSpplyDlvryIdTypCdgVrsn() != null ) {
+
+			String[] arrayi0 = s.getSpplyDlvryIdTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(supplydelivery.getIdentifier().size() < i0+1) { supplydelivery.addIdentifier(); }
+				String[] arrayi1 = s.getSpplyDlvryIdTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(supplydelivery.getIdentifier().get(i0).getType().getCoding().size() < i1+1) { supplydelivery.getIdentifier().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {supplydelivery.getIdentifier().get(i0).getType().getCoding().get(i1).setVersion(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** SpplyDlvry_Id_Typ_Txt ********************************************************************************/
-		if(s.getSpplyDlvryIdTypTxt() != null) {
-			supplydeliveryidentifiertype.setText(s.getSpplyDlvryIdTypTxt());
-		}
-		/******************** supplydeliveryidentifieruse ********************************************************************************/
-		org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory supplydeliveryidentifieruse =  new org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory();
-		supplydeliveryidentifier.setUse(supplydeliveryidentifieruse.fromCode(s.getSpplyDlvryIdUse()));
+		if(s.getSpplyDlvryIdTypTxt() != null ) {
 
+			String[] arrayi0 = s.getSpplyDlvryIdTypTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(supplydelivery.getIdentifier().size() < i0+1) { supplydelivery.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {supplydelivery.getIdentifier().get(i0).getType().setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
+		}
+		/******************** SpplyDlvry_Id_Use ********************************************************************************/
+		if(s.getSpplyDlvryIdUse() != null ) {
+
+			String[] arrayi0 = s.getSpplyDlvryIdUse().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(supplydelivery.getIdentifier().size() < i0+1) { supplydelivery.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {supplydelivery.getIdentifier().get(i0).setUse(new org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory().fromCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** SpplyDlvry_Id_Vl ********************************************************************************/
-		if(s.getSpplyDlvryIdVl() != null) {
-			supplydeliveryidentifier.setValue(s.getSpplyDlvryIdVl());
+		if(s.getSpplyDlvryIdVl() != null ) {
+
+			String[] arrayi0 = s.getSpplyDlvryIdVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(supplydelivery.getIdentifier().size() < i0+1) { supplydelivery.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {supplydelivery.getIdentifier().get(i0).setValue(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** SpplyDlvry_OccrnceDtTimeTyp ********************************************************************************/
-		if(s.getSpplyDlvryOccrnceDtTimeTyp() != null) {
-			supplydelivery.setOccurrence( new org.hl7.fhir.r4.model.DateTimeType(s.getSpplyDlvryOccrnceDtTimeTyp()));
-		}
-		/******************** supplydeliveryoccurrenceperiod ********************************************************************************/
-		org.hl7.fhir.r4.model.Period supplydeliveryoccurrenceperiod =  new org.hl7.fhir.r4.model.Period();
-		supplydelivery.setOccurrence(supplydeliveryoccurrenceperiod);
+		if(s.getSpplyDlvryOccrnceDtTimeTyp() != null ) {
 
+			if(s.getSpplyDlvryOccrnceDtTimeTyp().replace("[","").replace("]","").equals("NULL") | s.getSpplyDlvryOccrnceDtTimeTyp()==null) {} else {
+			supplydelivery.setOccurrence(new org.hl7.fhir.r4.model.DateTimeType(s.getSpplyDlvryOccrnceDtTimeTyp().replace("[","").replace("]","").replace("\"","")));
+			}
+		}
 		/******************** SpplyDlvry_OccrncePrd_End ********************************************************************************/
-		if(s.getSpplyDlvryOccrncePrdEnd() != null) {
-			java.text.SimpleDateFormat SpplyDlvry_OccrncePrd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date SpplyDlvry_OccrncePrd_Enddate = SpplyDlvry_OccrncePrd_Endsdf.parse(s.getSpplyDlvryOccrncePrdEnd());
-			supplydeliveryoccurrenceperiod.setEnd(SpplyDlvry_OccrncePrd_Enddate);
+		if(s.getSpplyDlvryOccrncePrdEnd() != null ) {
+
+			if(s.getSpplyDlvryOccrncePrdEnd().replace("[","").replace("]","").equals("NULL") | s.getSpplyDlvryOccrncePrdEnd()==null) {} else {
+			supplydelivery.getOccurrencePeriod().setEnd(s.getSpplyDlvryOccrncePrdEnd().replace("[","").replace("]","").equals("NULL") | s.getSpplyDlvryOccrncePrdEnd()==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(s.getSpplyDlvryOccrncePrdEnd().replace("[","").replace("]","").replace("\"","")));
+			}
 		}
 		/******************** SpplyDlvry_OccrncePrd_Strt ********************************************************************************/
-		if(s.getSpplyDlvryOccrncePrdStrt() != null) {
-			java.text.SimpleDateFormat SpplyDlvry_OccrncePrd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date SpplyDlvry_OccrncePrd_Strtdate = SpplyDlvry_OccrncePrd_Strtsdf.parse(s.getSpplyDlvryOccrncePrdStrt());
-			supplydeliveryoccurrenceperiod.setStart(SpplyDlvry_OccrncePrd_Strtdate);
+		if(s.getSpplyDlvryOccrncePrdStrt() != null ) {
+
+			if(s.getSpplyDlvryOccrncePrdStrt().replace("[","").replace("]","").equals("NULL") | s.getSpplyDlvryOccrncePrdStrt()==null) {} else {
+			supplydelivery.getOccurrencePeriod().setStart(s.getSpplyDlvryOccrncePrdStrt().replace("[","").replace("]","").equals("NULL") | s.getSpplyDlvryOccrncePrdStrt()==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(s.getSpplyDlvryOccrncePrdStrt().replace("[","").replace("]","").replace("\"","")));
+			}
 		}
-		/******************** supplydeliveryoccurrencetiming ********************************************************************************/
-		org.hl7.fhir.r4.model.Timing supplydeliveryoccurrencetiming =  new org.hl7.fhir.r4.model.Timing();
-		supplydelivery.setOccurrence(supplydeliveryoccurrencetiming);
-
-		/******************** supplydeliveryoccurrencetimingcode ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept supplydeliveryoccurrencetimingcode =  new org.hl7.fhir.r4.model.CodeableConcept();
-		supplydeliveryoccurrencetiming.setCode(supplydeliveryoccurrencetimingcode);
-
-		/******************** supplydeliveryoccurrencetimingcodecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding supplydeliveryoccurrencetimingcodecoding =  new org.hl7.fhir.r4.model.Coding();
-		supplydeliveryoccurrencetimingcode.addCoding(supplydeliveryoccurrencetimingcodecoding);
-
 		/******************** SpplyDlvry_OccrnceTmg_Cd_Cdg_Cd ********************************************************************************/
-		if(s.getSpplyDlvryOccrnceTmgCdCdgCd() != null) {
-			supplydeliveryoccurrencetimingcodecoding.setCode(s.getSpplyDlvryOccrnceTmgCdCdgCd());
+		if(s.getSpplyDlvryOccrnceTmgCdCdgCd() != null ) {
+
+			String[] arrayi0 = s.getSpplyDlvryOccrnceTmgCdCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(supplydelivery.getOccurrenceTiming().getCode().getCoding().size() < i0+1) { supplydelivery.getOccurrenceTiming().getCode().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {supplydelivery.getOccurrenceTiming().getCode().getCoding().get(i0).setCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** SpplyDlvry_OccrnceTmg_Cd_Cdg_Dsply ********************************************************************************/
-		if(s.getSpplyDlvryOccrnceTmgCdCdgDsply() != null) {
-			supplydeliveryoccurrencetimingcodecoding.setDisplay(s.getSpplyDlvryOccrnceTmgCdCdgDsply());
+		if(s.getSpplyDlvryOccrnceTmgCdCdgDsply() != null ) {
+
+			String[] arrayi0 = s.getSpplyDlvryOccrnceTmgCdCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(supplydelivery.getOccurrenceTiming().getCode().getCoding().size() < i0+1) { supplydelivery.getOccurrenceTiming().getCode().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {supplydelivery.getOccurrenceTiming().getCode().getCoding().get(i0).setDisplay(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** SpplyDlvry_OccrnceTmg_Cd_Cdg_Sys ********************************************************************************/
-		if(s.getSpplyDlvryOccrnceTmgCdCdgSys() != null) {
-			supplydeliveryoccurrencetimingcodecoding.setSystem(s.getSpplyDlvryOccrnceTmgCdCdgSys());
+		if(s.getSpplyDlvryOccrnceTmgCdCdgSys() != null ) {
+
+			String[] arrayi0 = s.getSpplyDlvryOccrnceTmgCdCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(supplydelivery.getOccurrenceTiming().getCode().getCoding().size() < i0+1) { supplydelivery.getOccurrenceTiming().getCode().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {supplydelivery.getOccurrenceTiming().getCode().getCoding().get(i0).setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** SpplyDlvry_OccrnceTmg_Cd_Cdg_UsrSltd ********************************************************************************/
-		if(s.getSpplyDlvryOccrnceTmgCdCdgUsrSltd() != null) {
-			supplydeliveryoccurrencetimingcodecoding.setUserSelected(Boolean.parseBoolean(s.getSpplyDlvryOccrnceTmgCdCdgUsrSltd()));
+		if(s.getSpplyDlvryOccrnceTmgCdCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = s.getSpplyDlvryOccrnceTmgCdCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(supplydelivery.getOccurrenceTiming().getCode().getCoding().size() < i0+1) { supplydelivery.getOccurrenceTiming().getCode().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {supplydelivery.getOccurrenceTiming().getCode().getCoding().get(i0).setUserSelected(Boolean.parseBoolean(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** SpplyDlvry_OccrnceTmg_Cd_Cdg_Vrsn ********************************************************************************/
-		if(s.getSpplyDlvryOccrnceTmgCdCdgVrsn() != null) {
-			supplydeliveryoccurrencetimingcodecoding.setVersion(s.getSpplyDlvryOccrnceTmgCdCdgVrsn());
+		if(s.getSpplyDlvryOccrnceTmgCdCdgVrsn() != null ) {
+
+			String[] arrayi0 = s.getSpplyDlvryOccrnceTmgCdCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(supplydelivery.getOccurrenceTiming().getCode().getCoding().size() < i0+1) { supplydelivery.getOccurrenceTiming().getCode().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {supplydelivery.getOccurrenceTiming().getCode().getCoding().get(i0).setVersion(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** SpplyDlvry_OccrnceTmg_Cd_Txt ********************************************************************************/
-		if(s.getSpplyDlvryOccrnceTmgCdTxt() != null) {
-			supplydeliveryoccurrencetimingcode.setText(s.getSpplyDlvryOccrnceTmgCdTxt());
+		if(s.getSpplyDlvryOccrnceTmgCdTxt() != null ) {
+
+			if(s.getSpplyDlvryOccrnceTmgCdTxt().replace("[","").replace("]","").equals("NULL") | s.getSpplyDlvryOccrnceTmgCdTxt()==null) {} else {
+			supplydelivery.getOccurrenceTiming().getCode().setText(s.getSpplyDlvryOccrnceTmgCdTxt().replace("[","").replace("]","").replace("\"",""));
+			}
 		}
 		/******************** SpplyDlvry_OccrnceTmg_Evnt ********************************************************************************/
-		if(s.getSpplyDlvryOccrnceTmgEvnt() != null) {
-			java.text.SimpleDateFormat SpplyDlvry_OccrnceTmg_Evntsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date SpplyDlvry_OccrnceTmg_Evntdate = SpplyDlvry_OccrnceTmg_Evntsdf.parse(s.getSpplyDlvryOccrnceTmgEvnt());
-			supplydeliveryoccurrencetiming.addEvent(SpplyDlvry_OccrnceTmg_Evntdate);
+		if(s.getSpplyDlvryOccrnceTmgEvnt() != null ) {
+
+				for( String currListStrSplit : s.getSpplyDlvryOccrnceTmgEvnt().replace("[","").replace("]","").replace("\"","").split(",")){
+			if(currListStrSplit.replace("[","").replace("]","").equals("NULL") | currListStrSplit==null) {} else {
+			supplydelivery.getOccurrenceTiming().addEvent(currListStrSplit.replace("[","").replace("]","").equals("NULL") | currListStrSplit==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(currListStrSplit.replace("[","").replace("]","").replace("\"","")));
+			}				}
+
 		}
-		/******************** supplydeliveryoccurrencetimingrepeat ********************************************************************************/
-		org.hl7.fhir.r4.model.Timing.TimingRepeatComponent supplydeliveryoccurrencetimingrepeat =  new org.hl7.fhir.r4.model.Timing.TimingRepeatComponent();
-		supplydeliveryoccurrencetiming.setRepeat(supplydeliveryoccurrencetimingrepeat);
-
-		/******************** supplydeliveryoccurrencetimingrepeatboundsduration ********************************************************************************/
-		org.hl7.fhir.r4.model.Duration supplydeliveryoccurrencetimingrepeatboundsduration =  new org.hl7.fhir.r4.model.Duration();
-		supplydeliveryoccurrencetimingrepeat.setBounds(supplydeliveryoccurrencetimingrepeatboundsduration);
-
 		/******************** SpplyDlvry_OccrnceTmg_Rpt_BndsDuration_Cd ********************************************************************************/
-		if(s.getSpplyDlvryOccrnceTmgRptBndsDurationCd() != null) {
-			supplydeliveryoccurrencetimingrepeatboundsduration.setCode(s.getSpplyDlvryOccrnceTmgRptBndsDurationCd());
-		}
-		/******************** supplydeliveryoccurrencetimingrepeatboundsdurationcomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory supplydeliveryoccurrencetimingrepeatboundsdurationcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-		supplydeliveryoccurrencetimingrepeatboundsduration.setComparator(supplydeliveryoccurrencetimingrepeatboundsdurationcomparator.fromCode(s.getSpplyDlvryOccrnceTmgRptBndsDurationCmprtr()));
+		if(s.getSpplyDlvryOccrnceTmgRptBndsDurationCd() != null ) {
 
+			if(s.getSpplyDlvryOccrnceTmgRptBndsDurationCd().replace("[","").replace("]","").equals("NULL") | s.getSpplyDlvryOccrnceTmgRptBndsDurationCd()==null) {} else {
+			supplydelivery.getOccurrenceTiming().getRepeat().getBoundsDuration().setCode(s.getSpplyDlvryOccrnceTmgRptBndsDurationCd().replace("[","").replace("]","").replace("\"",""));
+			}
+		}
+		/******************** SpplyDlvry_OccrnceTmg_Rpt_BndsDuration_Cmprtr ********************************************************************************/
+		if(s.getSpplyDlvryOccrnceTmgRptBndsDurationCmprtr() != null ) {
+
+			if(s.getSpplyDlvryOccrnceTmgRptBndsDurationCmprtr().replace("[","").replace("]","").equals("NULL") | s.getSpplyDlvryOccrnceTmgRptBndsDurationCmprtr()==null) {} else {
+			supplydelivery.getOccurrenceTiming().getRepeat().getBoundsDuration().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(s.getSpplyDlvryOccrnceTmgRptBndsDurationCmprtr().replace("[","").replace("]","").replace("\"","")));
+			}
+		}
 		/******************** SpplyDlvry_OccrnceTmg_Rpt_BndsDuration_Sys ********************************************************************************/
-		if(s.getSpplyDlvryOccrnceTmgRptBndsDurationSys() != null) {
-			supplydeliveryoccurrencetimingrepeatboundsduration.setSystem(s.getSpplyDlvryOccrnceTmgRptBndsDurationSys());
+		if(s.getSpplyDlvryOccrnceTmgRptBndsDurationSys() != null ) {
+
+			if(s.getSpplyDlvryOccrnceTmgRptBndsDurationSys().replace("[","").replace("]","").equals("NULL") | s.getSpplyDlvryOccrnceTmgRptBndsDurationSys()==null) {} else {
+			supplydelivery.getOccurrenceTiming().getRepeat().getBoundsDuration().setSystem(s.getSpplyDlvryOccrnceTmgRptBndsDurationSys().replace("[","").replace("]","").replace("\"",""));
+			}
 		}
 		/******************** SpplyDlvry_OccrnceTmg_Rpt_BndsDuration_Unt ********************************************************************************/
-		if(s.getSpplyDlvryOccrnceTmgRptBndsDurationUnt() != null) {
-			supplydeliveryoccurrencetimingrepeatboundsduration.setUnit(s.getSpplyDlvryOccrnceTmgRptBndsDurationUnt());
+		if(s.getSpplyDlvryOccrnceTmgRptBndsDurationUnt() != null ) {
+
+			if(s.getSpplyDlvryOccrnceTmgRptBndsDurationUnt().replace("[","").replace("]","").equals("NULL") | s.getSpplyDlvryOccrnceTmgRptBndsDurationUnt()==null) {} else {
+			supplydelivery.getOccurrenceTiming().getRepeat().getBoundsDuration().setUnit(s.getSpplyDlvryOccrnceTmgRptBndsDurationUnt().replace("[","").replace("]","").replace("\"",""));
+			}
 		}
 		/******************** SpplyDlvry_OccrnceTmg_Rpt_BndsDuration_Vl ********************************************************************************/
-		if(s.getSpplyDlvryOccrnceTmgRptBndsDurationVl() != null) {
-			supplydeliveryoccurrencetimingrepeatboundsduration.setValue(Double.parseDouble((s.getSpplyDlvryOccrnceTmgRptBndsDurationVl())));
-		}
-		/******************** supplydeliveryoccurrencetimingrepeatboundsperiod ********************************************************************************/
-		org.hl7.fhir.r4.model.Period supplydeliveryoccurrencetimingrepeatboundsperiod =  new org.hl7.fhir.r4.model.Period();
-		supplydeliveryoccurrencetimingrepeat.setBounds(supplydeliveryoccurrencetimingrepeatboundsperiod);
+		if(s.getSpplyDlvryOccrnceTmgRptBndsDurationVl() != null ) {
 
+			if(s.getSpplyDlvryOccrnceTmgRptBndsDurationVl().replace("[","").replace("]","").equals("NULL") | s.getSpplyDlvryOccrnceTmgRptBndsDurationVl()==null) {} else {
+			supplydelivery.getOccurrenceTiming().getRepeat().getBoundsDuration().setValue((new java.math.BigDecimal((s.getSpplyDlvryOccrnceTmgRptBndsDurationVl().replace("[","").replace("]","").replace("\"","")))));
+			}
+		}
 		/******************** SpplyDlvry_OccrnceTmg_Rpt_BndsPrd_End ********************************************************************************/
-		if(s.getSpplyDlvryOccrnceTmgRptBndsPrdEnd() != null) {
-			java.text.SimpleDateFormat SpplyDlvry_OccrnceTmg_Rpt_BndsPrd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date SpplyDlvry_OccrnceTmg_Rpt_BndsPrd_Enddate = SpplyDlvry_OccrnceTmg_Rpt_BndsPrd_Endsdf.parse(s.getSpplyDlvryOccrnceTmgRptBndsPrdEnd());
-			supplydeliveryoccurrencetimingrepeatboundsperiod.setEnd(SpplyDlvry_OccrnceTmg_Rpt_BndsPrd_Enddate);
+		if(s.getSpplyDlvryOccrnceTmgRptBndsPrdEnd() != null ) {
+
+			if(s.getSpplyDlvryOccrnceTmgRptBndsPrdEnd().replace("[","").replace("]","").equals("NULL") | s.getSpplyDlvryOccrnceTmgRptBndsPrdEnd()==null) {} else {
+			supplydelivery.getOccurrenceTiming().getRepeat().getBoundsPeriod().setEnd(s.getSpplyDlvryOccrnceTmgRptBndsPrdEnd().replace("[","").replace("]","").equals("NULL") | s.getSpplyDlvryOccrnceTmgRptBndsPrdEnd()==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(s.getSpplyDlvryOccrnceTmgRptBndsPrdEnd().replace("[","").replace("]","").replace("\"","")));
+			}
 		}
 		/******************** SpplyDlvry_OccrnceTmg_Rpt_BndsPrd_Strt ********************************************************************************/
-		if(s.getSpplyDlvryOccrnceTmgRptBndsPrdStrt() != null) {
-			java.text.SimpleDateFormat SpplyDlvry_OccrnceTmg_Rpt_BndsPrd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date SpplyDlvry_OccrnceTmg_Rpt_BndsPrd_Strtdate = SpplyDlvry_OccrnceTmg_Rpt_BndsPrd_Strtsdf.parse(s.getSpplyDlvryOccrnceTmgRptBndsPrdStrt());
-			supplydeliveryoccurrencetimingrepeatboundsperiod.setStart(SpplyDlvry_OccrnceTmg_Rpt_BndsPrd_Strtdate);
+		if(s.getSpplyDlvryOccrnceTmgRptBndsPrdStrt() != null ) {
+
+			if(s.getSpplyDlvryOccrnceTmgRptBndsPrdStrt().replace("[","").replace("]","").equals("NULL") | s.getSpplyDlvryOccrnceTmgRptBndsPrdStrt()==null) {} else {
+			supplydelivery.getOccurrenceTiming().getRepeat().getBoundsPeriod().setStart(s.getSpplyDlvryOccrnceTmgRptBndsPrdStrt().replace("[","").replace("]","").equals("NULL") | s.getSpplyDlvryOccrnceTmgRptBndsPrdStrt()==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(s.getSpplyDlvryOccrnceTmgRptBndsPrdStrt().replace("[","").replace("]","").replace("\"","")));
+			}
 		}
-		/******************** supplydeliveryoccurrencetimingrepeatboundsrange ********************************************************************************/
-		org.hl7.fhir.r4.model.Range supplydeliveryoccurrencetimingrepeatboundsrange =  new org.hl7.fhir.r4.model.Range();
-		supplydeliveryoccurrencetimingrepeat.setBounds(supplydeliveryoccurrencetimingrepeatboundsrange);
-
-		/******************** supplydeliveryoccurrencetimingrepeatboundsrangehigh ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity supplydeliveryoccurrencetimingrepeatboundsrangehigh =  new org.hl7.fhir.r4.model.Quantity();
-		supplydeliveryoccurrencetimingrepeatboundsrange.setHigh(supplydeliveryoccurrencetimingrepeatboundsrangehigh);
-
 		/******************** SpplyDlvry_OccrnceTmg_Rpt_BndsRng_Hi_Cd ********************************************************************************/
-		if(s.getSpplyDlvryOccrnceTmgRptBndsRngHiCd() != null) {
-			supplydeliveryoccurrencetimingrepeatboundsrangehigh.setCode(s.getSpplyDlvryOccrnceTmgRptBndsRngHiCd());
-		}
-		/******************** supplydeliveryoccurrencetimingrepeatboundsrangehighcomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory supplydeliveryoccurrencetimingrepeatboundsrangehighcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-		supplydeliveryoccurrencetimingrepeatboundsrangehigh.setComparator(supplydeliveryoccurrencetimingrepeatboundsrangehighcomparator.fromCode(s.getSpplyDlvryOccrnceTmgRptBndsRngHiCmprtr()));
+		if(s.getSpplyDlvryOccrnceTmgRptBndsRngHiCd() != null ) {
 
+			if(s.getSpplyDlvryOccrnceTmgRptBndsRngHiCd().replace("[","").replace("]","").equals("NULL") | s.getSpplyDlvryOccrnceTmgRptBndsRngHiCd()==null) {} else {
+			supplydelivery.getOccurrenceTiming().getRepeat().getBoundsRange().getHigh().setCode(s.getSpplyDlvryOccrnceTmgRptBndsRngHiCd().replace("[","").replace("]","").replace("\"",""));
+			}
+		}
+		/******************** SpplyDlvry_OccrnceTmg_Rpt_BndsRng_Hi_Cmprtr ********************************************************************************/
+		if(s.getSpplyDlvryOccrnceTmgRptBndsRngHiCmprtr() != null ) {
+
+			if(s.getSpplyDlvryOccrnceTmgRptBndsRngHiCmprtr().replace("[","").replace("]","").equals("NULL") | s.getSpplyDlvryOccrnceTmgRptBndsRngHiCmprtr()==null) {} else {
+			supplydelivery.getOccurrenceTiming().getRepeat().getBoundsRange().getHigh().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(s.getSpplyDlvryOccrnceTmgRptBndsRngHiCmprtr().replace("[","").replace("]","").replace("\"","")));
+			}
+		}
 		/******************** SpplyDlvry_OccrnceTmg_Rpt_BndsRng_Hi_Sys ********************************************************************************/
-		if(s.getSpplyDlvryOccrnceTmgRptBndsRngHiSys() != null) {
-			supplydeliveryoccurrencetimingrepeatboundsrangehigh.setSystem(s.getSpplyDlvryOccrnceTmgRptBndsRngHiSys());
+		if(s.getSpplyDlvryOccrnceTmgRptBndsRngHiSys() != null ) {
+
+			if(s.getSpplyDlvryOccrnceTmgRptBndsRngHiSys().replace("[","").replace("]","").equals("NULL") | s.getSpplyDlvryOccrnceTmgRptBndsRngHiSys()==null) {} else {
+			supplydelivery.getOccurrenceTiming().getRepeat().getBoundsRange().getHigh().setSystem(s.getSpplyDlvryOccrnceTmgRptBndsRngHiSys().replace("[","").replace("]","").replace("\"",""));
+			}
 		}
 		/******************** SpplyDlvry_OccrnceTmg_Rpt_BndsRng_Hi_Unt ********************************************************************************/
-		if(s.getSpplyDlvryOccrnceTmgRptBndsRngHiUnt() != null) {
-			supplydeliveryoccurrencetimingrepeatboundsrangehigh.setUnit(s.getSpplyDlvryOccrnceTmgRptBndsRngHiUnt());
+		if(s.getSpplyDlvryOccrnceTmgRptBndsRngHiUnt() != null ) {
+
+			if(s.getSpplyDlvryOccrnceTmgRptBndsRngHiUnt().replace("[","").replace("]","").equals("NULL") | s.getSpplyDlvryOccrnceTmgRptBndsRngHiUnt()==null) {} else {
+			supplydelivery.getOccurrenceTiming().getRepeat().getBoundsRange().getHigh().setUnit(s.getSpplyDlvryOccrnceTmgRptBndsRngHiUnt().replace("[","").replace("]","").replace("\"",""));
+			}
 		}
 		/******************** SpplyDlvry_OccrnceTmg_Rpt_BndsRng_Hi_Vl ********************************************************************************/
-		if(s.getSpplyDlvryOccrnceTmgRptBndsRngHiVl() != null) {
-			supplydeliveryoccurrencetimingrepeatboundsrangehigh.setValue(Double.parseDouble((s.getSpplyDlvryOccrnceTmgRptBndsRngHiVl())));
-		}
-		/******************** supplydeliveryoccurrencetimingrepeatboundsrangelow ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity supplydeliveryoccurrencetimingrepeatboundsrangelow =  new org.hl7.fhir.r4.model.Quantity();
-		supplydeliveryoccurrencetimingrepeatboundsrange.setLow(supplydeliveryoccurrencetimingrepeatboundsrangelow);
+		if(s.getSpplyDlvryOccrnceTmgRptBndsRngHiVl() != null ) {
 
+			if(s.getSpplyDlvryOccrnceTmgRptBndsRngHiVl().replace("[","").replace("]","").equals("NULL") | s.getSpplyDlvryOccrnceTmgRptBndsRngHiVl()==null) {} else {
+			supplydelivery.getOccurrenceTiming().getRepeat().getBoundsRange().getHigh().setValue((new java.math.BigDecimal((s.getSpplyDlvryOccrnceTmgRptBndsRngHiVl().replace("[","").replace("]","").replace("\"","")))));
+			}
+		}
 		/******************** SpplyDlvry_OccrnceTmg_Rpt_BndsRng_Lw_Cd ********************************************************************************/
-		if(s.getSpplyDlvryOccrnceTmgRptBndsRngLwCd() != null) {
-			supplydeliveryoccurrencetimingrepeatboundsrangelow.setCode(s.getSpplyDlvryOccrnceTmgRptBndsRngLwCd());
-		}
-		/******************** supplydeliveryoccurrencetimingrepeatboundsrangelowcomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory supplydeliveryoccurrencetimingrepeatboundsrangelowcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-		supplydeliveryoccurrencetimingrepeatboundsrangelow.setComparator(supplydeliveryoccurrencetimingrepeatboundsrangelowcomparator.fromCode(s.getSpplyDlvryOccrnceTmgRptBndsRngLwCmprtr()));
+		if(s.getSpplyDlvryOccrnceTmgRptBndsRngLwCd() != null ) {
 
+			if(s.getSpplyDlvryOccrnceTmgRptBndsRngLwCd().replace("[","").replace("]","").equals("NULL") | s.getSpplyDlvryOccrnceTmgRptBndsRngLwCd()==null) {} else {
+			supplydelivery.getOccurrenceTiming().getRepeat().getBoundsRange().getLow().setCode(s.getSpplyDlvryOccrnceTmgRptBndsRngLwCd().replace("[","").replace("]","").replace("\"",""));
+			}
+		}
+		/******************** SpplyDlvry_OccrnceTmg_Rpt_BndsRng_Lw_Cmprtr ********************************************************************************/
+		if(s.getSpplyDlvryOccrnceTmgRptBndsRngLwCmprtr() != null ) {
+
+			if(s.getSpplyDlvryOccrnceTmgRptBndsRngLwCmprtr().replace("[","").replace("]","").equals("NULL") | s.getSpplyDlvryOccrnceTmgRptBndsRngLwCmprtr()==null) {} else {
+			supplydelivery.getOccurrenceTiming().getRepeat().getBoundsRange().getLow().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(s.getSpplyDlvryOccrnceTmgRptBndsRngLwCmprtr().replace("[","").replace("]","").replace("\"","")));
+			}
+		}
 		/******************** SpplyDlvry_OccrnceTmg_Rpt_BndsRng_Lw_Sys ********************************************************************************/
-		if(s.getSpplyDlvryOccrnceTmgRptBndsRngLwSys() != null) {
-			supplydeliveryoccurrencetimingrepeatboundsrangelow.setSystem(s.getSpplyDlvryOccrnceTmgRptBndsRngLwSys());
+		if(s.getSpplyDlvryOccrnceTmgRptBndsRngLwSys() != null ) {
+
+			if(s.getSpplyDlvryOccrnceTmgRptBndsRngLwSys().replace("[","").replace("]","").equals("NULL") | s.getSpplyDlvryOccrnceTmgRptBndsRngLwSys()==null) {} else {
+			supplydelivery.getOccurrenceTiming().getRepeat().getBoundsRange().getLow().setSystem(s.getSpplyDlvryOccrnceTmgRptBndsRngLwSys().replace("[","").replace("]","").replace("\"",""));
+			}
 		}
 		/******************** SpplyDlvry_OccrnceTmg_Rpt_BndsRng_Lw_Unt ********************************************************************************/
-		if(s.getSpplyDlvryOccrnceTmgRptBndsRngLwUnt() != null) {
-			supplydeliveryoccurrencetimingrepeatboundsrangelow.setUnit(s.getSpplyDlvryOccrnceTmgRptBndsRngLwUnt());
+		if(s.getSpplyDlvryOccrnceTmgRptBndsRngLwUnt() != null ) {
+
+			if(s.getSpplyDlvryOccrnceTmgRptBndsRngLwUnt().replace("[","").replace("]","").equals("NULL") | s.getSpplyDlvryOccrnceTmgRptBndsRngLwUnt()==null) {} else {
+			supplydelivery.getOccurrenceTiming().getRepeat().getBoundsRange().getLow().setUnit(s.getSpplyDlvryOccrnceTmgRptBndsRngLwUnt().replace("[","").replace("]","").replace("\"",""));
+			}
 		}
 		/******************** SpplyDlvry_OccrnceTmg_Rpt_BndsRng_Lw_Vl ********************************************************************************/
-		if(s.getSpplyDlvryOccrnceTmgRptBndsRngLwVl() != null) {
-			supplydeliveryoccurrencetimingrepeatboundsrangelow.setValue(Double.parseDouble((s.getSpplyDlvryOccrnceTmgRptBndsRngLwVl())));
+		if(s.getSpplyDlvryOccrnceTmgRptBndsRngLwVl() != null ) {
+
+			if(s.getSpplyDlvryOccrnceTmgRptBndsRngLwVl().replace("[","").replace("]","").equals("NULL") | s.getSpplyDlvryOccrnceTmgRptBndsRngLwVl()==null) {} else {
+			supplydelivery.getOccurrenceTiming().getRepeat().getBoundsRange().getLow().setValue((new java.math.BigDecimal((s.getSpplyDlvryOccrnceTmgRptBndsRngLwVl().replace("[","").replace("]","").replace("\"","")))));
+			}
 		}
 		/******************** SpplyDlvry_OccrnceTmg_Rpt_Cnt ********************************************************************************/
-		if(s.getSpplyDlvryOccrnceTmgRptCnt() != null) {
-			supplydeliveryoccurrencetimingrepeat.setCount(Integer.parseInt(s.getSpplyDlvryOccrnceTmgRptCnt()));
+		if(s.getSpplyDlvryOccrnceTmgRptCnt() != null ) {
+
+			if(s.getSpplyDlvryOccrnceTmgRptCnt().replace("[","").replace("]","").equals("NULL") | s.getSpplyDlvryOccrnceTmgRptCnt()==null) {} else {
+			supplydelivery.getOccurrenceTiming().getRepeat().setCount(Integer.parseInt(s.getSpplyDlvryOccrnceTmgRptCnt().replace("[","").replace("]","").replace("\"","")));
+			}
 		}
 		/******************** SpplyDlvry_OccrnceTmg_Rpt_CntMx ********************************************************************************/
-		if(s.getSpplyDlvryOccrnceTmgRptCntMx() != null) {
-			supplydeliveryoccurrencetimingrepeat.setCountMax(Integer.parseInt(s.getSpplyDlvryOccrnceTmgRptCntMx()));
-		}
-		/******************** supplydeliveryoccurrencetimingrepeatdayofweek ********************************************************************************/
-		org.hl7.fhir.r4.model.Timing.DayOfWeekEnumFactory supplydeliveryoccurrencetimingrepeatdayofweek =  new org.hl7.fhir.r4.model.Timing.DayOfWeekEnumFactory();
-		supplydeliveryoccurrencetimingrepeat.addDayOfWeek(supplydeliveryoccurrencetimingrepeatdayofweek.fromCode(s.getSpplyDlvryOccrnceTmgRptDayOfWeek()));
+		if(s.getSpplyDlvryOccrnceTmgRptCntMx() != null ) {
 
+			if(s.getSpplyDlvryOccrnceTmgRptCntMx().replace("[","").replace("]","").equals("NULL") | s.getSpplyDlvryOccrnceTmgRptCntMx()==null) {} else {
+			supplydelivery.getOccurrenceTiming().getRepeat().setCountMax(Integer.parseInt(s.getSpplyDlvryOccrnceTmgRptCntMx().replace("[","").replace("]","").replace("\"","")));
+			}
+		}
 		/******************** SpplyDlvry_OccrnceTmg_Rpt_Duration ********************************************************************************/
-		if(s.getSpplyDlvryOccrnceTmgRptDuration() != null) {
-			supplydeliveryoccurrencetimingrepeat.setDuration(Double.parseDouble((s.getSpplyDlvryOccrnceTmgRptDuration())));
+		if(s.getSpplyDlvryOccrnceTmgRptDuration() != null ) {
+
+			if(s.getSpplyDlvryOccrnceTmgRptDuration().replace("[","").replace("]","").equals("NULL") | s.getSpplyDlvryOccrnceTmgRptDuration()==null) {} else {
+			supplydelivery.getOccurrenceTiming().getRepeat().setDuration((Double.parseDouble((s.getSpplyDlvryOccrnceTmgRptDuration().replace("[","").replace("]","").replace("\"","")))));
+			}
 		}
 		/******************** SpplyDlvry_OccrnceTmg_Rpt_DurationMx ********************************************************************************/
-		if(s.getSpplyDlvryOccrnceTmgRptDurationMx() != null) {
-			supplydeliveryoccurrencetimingrepeat.setDurationMax(Double.parseDouble((s.getSpplyDlvryOccrnceTmgRptDurationMx())));
-		}
-		/******************** supplydeliveryoccurrencetimingrepeatdurationunit ********************************************************************************/
-		org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory supplydeliveryoccurrencetimingrepeatdurationunit =  new org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory();
-		supplydeliveryoccurrencetimingrepeat.setDurationUnit(supplydeliveryoccurrencetimingrepeatdurationunit.fromCode(s.getSpplyDlvryOccrnceTmgRptDurationUnt()));
+		if(s.getSpplyDlvryOccrnceTmgRptDurationMx() != null ) {
 
+			if(s.getSpplyDlvryOccrnceTmgRptDurationMx().replace("[","").replace("]","").equals("NULL") | s.getSpplyDlvryOccrnceTmgRptDurationMx()==null) {} else {
+			supplydelivery.getOccurrenceTiming().getRepeat().setDurationMax((Double.parseDouble((s.getSpplyDlvryOccrnceTmgRptDurationMx().replace("[","").replace("]","").replace("\"","")))));
+			}
+		}
+		/******************** SpplyDlvry_OccrnceTmg_Rpt_DurationUnt ********************************************************************************/
+		if(s.getSpplyDlvryOccrnceTmgRptDurationUnt() != null ) {
+
+			if(s.getSpplyDlvryOccrnceTmgRptDurationUnt().replace("[","").replace("]","").equals("NULL") | s.getSpplyDlvryOccrnceTmgRptDurationUnt()==null) {} else {
+			supplydelivery.getOccurrenceTiming().getRepeat().setDurationUnit(new org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory().fromCode(s.getSpplyDlvryOccrnceTmgRptDurationUnt().replace("[","").replace("]","").replace("\"","")));
+			}
+		}
 		/******************** SpplyDlvry_OccrnceTmg_Rpt_Frqncy ********************************************************************************/
-		if(s.getSpplyDlvryOccrnceTmgRptFrqncy() != null) {
-			supplydeliveryoccurrencetimingrepeat.setFrequency(Integer.parseInt(s.getSpplyDlvryOccrnceTmgRptFrqncy()));
+		if(s.getSpplyDlvryOccrnceTmgRptFrqncy() != null ) {
+
+			if(s.getSpplyDlvryOccrnceTmgRptFrqncy().replace("[","").replace("]","").equals("NULL") | s.getSpplyDlvryOccrnceTmgRptFrqncy()==null) {} else {
+			supplydelivery.getOccurrenceTiming().getRepeat().setFrequency(Integer.parseInt(s.getSpplyDlvryOccrnceTmgRptFrqncy().replace("[","").replace("]","").replace("\"","")));
+			}
 		}
 		/******************** SpplyDlvry_OccrnceTmg_Rpt_FrqncyMx ********************************************************************************/
-		if(s.getSpplyDlvryOccrnceTmgRptFrqncyMx() != null) {
-			supplydeliveryoccurrencetimingrepeat.setFrequencyMax(Integer.parseInt(s.getSpplyDlvryOccrnceTmgRptFrqncyMx()));
+		if(s.getSpplyDlvryOccrnceTmgRptFrqncyMx() != null ) {
+
+			if(s.getSpplyDlvryOccrnceTmgRptFrqncyMx().replace("[","").replace("]","").equals("NULL") | s.getSpplyDlvryOccrnceTmgRptFrqncyMx()==null) {} else {
+			supplydelivery.getOccurrenceTiming().getRepeat().setFrequencyMax(Integer.parseInt(s.getSpplyDlvryOccrnceTmgRptFrqncyMx().replace("[","").replace("]","").replace("\"","")));
+			}
 		}
 		/******************** SpplyDlvry_OccrnceTmg_Rpt_Off ********************************************************************************/
-		if(s.getSpplyDlvryOccrnceTmgRptOff() != null) {
-			supplydeliveryoccurrencetimingrepeat.setOffset(Integer.parseInt(s.getSpplyDlvryOccrnceTmgRptOff()));
+		if(s.getSpplyDlvryOccrnceTmgRptOff() != null ) {
+
+			if(s.getSpplyDlvryOccrnceTmgRptOff().replace("[","").replace("]","").equals("NULL") | s.getSpplyDlvryOccrnceTmgRptOff()==null) {} else {
+			supplydelivery.getOccurrenceTiming().getRepeat().setOffset(Integer.parseInt(s.getSpplyDlvryOccrnceTmgRptOff().replace("[","").replace("]","").replace("\"","")));
+			}
 		}
 		/******************** SpplyDlvry_OccrnceTmg_Rpt_Prd ********************************************************************************/
-		if(s.getSpplyDlvryOccrnceTmgRptPrd() != null) {
-			supplydeliveryoccurrencetimingrepeat.setPeriod(Double.parseDouble((s.getSpplyDlvryOccrnceTmgRptPrd())));
+		if(s.getSpplyDlvryOccrnceTmgRptPrd() != null ) {
+
+			if(s.getSpplyDlvryOccrnceTmgRptPrd().replace("[","").replace("]","").equals("NULL") | s.getSpplyDlvryOccrnceTmgRptPrd()==null) {} else {
+			supplydelivery.getOccurrenceTiming().getRepeat().setPeriod((new java.math.BigDecimal((s.getSpplyDlvryOccrnceTmgRptPrd().replace("[","").replace("]","").replace("\"","")))));
+			}
 		}
 		/******************** SpplyDlvry_OccrnceTmg_Rpt_PrdMx ********************************************************************************/
-		if(s.getSpplyDlvryOccrnceTmgRptPrdMx() != null) {
-			supplydeliveryoccurrencetimingrepeat.setPeriodMax(new java.math.BigDecimal((s.getSpplyDlvryOccrnceTmgRptPrdMx())));
-		}
-		/******************** supplydeliveryoccurrencetimingrepeatperiodunit ********************************************************************************/
-		org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory supplydeliveryoccurrencetimingrepeatperiodunit =  new org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory();
-		supplydeliveryoccurrencetimingrepeat.setPeriodUnit(supplydeliveryoccurrencetimingrepeatperiodunit.fromCode(s.getSpplyDlvryOccrnceTmgRptPrdUnt()));
+		if(s.getSpplyDlvryOccrnceTmgRptPrdMx() != null ) {
 
+			if(s.getSpplyDlvryOccrnceTmgRptPrdMx().replace("[","").replace("]","").equals("NULL") | s.getSpplyDlvryOccrnceTmgRptPrdMx()==null) {} else {
+			supplydelivery.getOccurrenceTiming().getRepeat().setPeriodMax((new java.math.BigDecimal((s.getSpplyDlvryOccrnceTmgRptPrdMx().replace("[","").replace("]","").replace("\"","")))));
+			}
+		}
+		/******************** SpplyDlvry_OccrnceTmg_Rpt_PrdUnt ********************************************************************************/
+		if(s.getSpplyDlvryOccrnceTmgRptPrdUnt() != null ) {
+
+			if(s.getSpplyDlvryOccrnceTmgRptPrdUnt().replace("[","").replace("]","").equals("NULL") | s.getSpplyDlvryOccrnceTmgRptPrdUnt()==null) {} else {
+			supplydelivery.getOccurrenceTiming().getRepeat().setPeriodUnit(new org.hl7.fhir.r4.model.Timing.UnitsOfTimeEnumFactory().fromCode(s.getSpplyDlvryOccrnceTmgRptPrdUnt().replace("[","").replace("]","").replace("\"","")));
+			}
+		}
 		/******************** SpplyDlvry_OccrnceTmg_Rpt_TimeOfDay ********************************************************************************/
-		if(s.getSpplyDlvryOccrnceTmgRptTimeOfDay() != null) {
-			supplydeliveryoccurrencetimingrepeat.addTimeOfDay(s.getSpplyDlvryOccrnceTmgRptTimeOfDay());
-		}
-		/******************** supplydeliveryoccurrencetimingrepeatwhen ********************************************************************************/
-		org.hl7.fhir.r4.model.Timing.EventTimingEnumFactory supplydeliveryoccurrencetimingrepeatwhen =  new org.hl7.fhir.r4.model.Timing.EventTimingEnumFactory();
-		supplydeliveryoccurrencetimingrepeat.addWhen(supplydeliveryoccurrencetimingrepeatwhen.fromCode(s.getSpplyDlvryOccrnceTmgRptWhen()));
+		if(s.getSpplyDlvryOccrnceTmgRptTimeOfDay() != null ) {
 
+				for( String currListStrSplit : s.getSpplyDlvryOccrnceTmgRptTimeOfDay().replace("[","").replace("]","").replace("\"","").split(",")){
+			if(currListStrSplit.replace("[","").replace("]","").equals("NULL") | currListStrSplit==null) {} else {
+			supplydelivery.getOccurrenceTiming().getRepeat().addTimeOfDay(currListStrSplit.replace("[","").replace("]","").replace("\"",""));
+			}				}
+
+		}
 		/******************** SpplyDlvry_PartOf ********************************************************************************/
-		if(s.getSpplyDlvryPartOf() != null) {
-			supplydelivery.addPartOf( new org.hl7.fhir.r4.model.Reference(s.getSpplyDlvryPartOf()));
+		if(s.getSpplyDlvryPartOf() != null ) {
+
+				for( String currListStrSplit : s.getSpplyDlvryPartOf().replace("[","").replace("]","").replace("\"","").split(",")){
+			if(currListStrSplit.replace("[","").replace("]","").equals("NULL") | currListStrSplit==null) {} else {
+			supplydelivery.addPartOf(new org.hl7.fhir.r4.model.Reference(currListStrSplit.replace("[","").replace("]","").replace("\"","")));
+			}				}
+
 		}
 		/******************** SpplyDlvry_Pnt ********************************************************************************/
-		if(s.getSpplyDlvryPnt() != null) {
-			supplydelivery.setPatient( new org.hl7.fhir.r4.model.Reference(s.getSpplyDlvryPnt()));
+		if(s.getSpplyDlvryPnt() != null ) {
+
+			if(s.getSpplyDlvryPnt().replace("[","").replace("]","").equals("NULL") | s.getSpplyDlvryPnt()==null) {} else {
+			supplydelivery.setPatient(new org.hl7.fhir.r4.model.Reference(s.getSpplyDlvryPnt().replace("[","").replace("]","").replace("\"","")));
+			}
 		}
 		/******************** SpplyDlvry_Receiver ********************************************************************************/
-		if(s.getSpplyDlvryReceiver() != null) {
-			supplydelivery.addReceiver( new org.hl7.fhir.r4.model.Reference(s.getSpplyDlvryReceiver()));
+		if(s.getSpplyDlvryReceiver() != null ) {
+
+				for( String currListStrSplit : s.getSpplyDlvryReceiver().replace("[","").replace("]","").replace("\"","").split(",")){
+			if(currListStrSplit.replace("[","").replace("]","").equals("NULL") | currListStrSplit==null) {} else {
+			supplydelivery.addReceiver(new org.hl7.fhir.r4.model.Reference(currListStrSplit.replace("[","").replace("]","").replace("\"","")));
+			}				}
+
 		}
-		/******************** supplydeliverystatus ********************************************************************************/
-		org.hl7.fhir.r4.model.SupplyDelivery.SupplyDeliveryStatusEnumFactory supplydeliverystatus =  new org.hl7.fhir.r4.model.SupplyDelivery.SupplyDeliveryStatusEnumFactory();
-		supplydelivery.setStatus(supplydeliverystatus.fromCode(s.getSpplyDlvrySts()));
+		/******************** SpplyDlvry_Sts ********************************************************************************/
+		if(s.getSpplyDlvrySts() != null ) {
 
-		/******************** supplydeliverysupplieditem ********************************************************************************/
-		org.hl7.fhir.r4.model.SupplyDelivery.SupplyDeliverySuppliedItemComponent supplydeliverysupplieditem =  new org.hl7.fhir.r4.model.SupplyDelivery.SupplyDeliverySuppliedItemComponent();
-		supplydelivery.setSuppliedItem(supplydeliverysupplieditem);
-
-		/******************** supplydeliverysupplieditemitemcodeableconcept ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept supplydeliverysupplieditemitemcodeableconcept =  new org.hl7.fhir.r4.model.CodeableConcept();
-		supplydeliverysupplieditem.setItem(supplydeliverysupplieditemitemcodeableconcept);
-
-		/******************** supplydeliverysupplieditemitemcodeableconceptcoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding supplydeliverysupplieditemitemcodeableconceptcoding =  new org.hl7.fhir.r4.model.Coding();
-		supplydeliverysupplieditemitemcodeableconcept.addCoding(supplydeliverysupplieditemitemcodeableconceptcoding);
-
+			if(s.getSpplyDlvrySts().replace("[","").replace("]","").equals("NULL") | s.getSpplyDlvrySts()==null) {} else {
+			supplydelivery.setStatus(new org.hl7.fhir.r4.model.SupplyDelivery.SupplyDeliveryStatusEnumFactory().fromCode(s.getSpplyDlvrySts().replace("[","").replace("]","").replace("\"","")));
+			}
+		}
 		/******************** SpplyDlvry_SuppliedItm_ItmCdbleCncpt_Cdg_Cd ********************************************************************************/
-		if(s.getSpplyDlvrySuppliedItmItmCdbleCncptCdgCd() != null) {
-			supplydeliverysupplieditemitemcodeableconceptcoding.setCode(s.getSpplyDlvrySuppliedItmItmCdbleCncptCdgCd());
+		if(s.getSpplyDlvrySuppliedItmItmCdbleCncptCdgCd() != null ) {
+
+			String[] arrayi0 = s.getSpplyDlvrySuppliedItmItmCdbleCncptCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(supplydelivery.getSuppliedItem().getItemCodeableConcept().getCoding().size() < i0+1) { supplydelivery.getSuppliedItem().getItemCodeableConcept().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {supplydelivery.getSuppliedItem().getItemCodeableConcept().getCoding().get(i0).setCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** SpplyDlvry_SuppliedItm_ItmCdbleCncpt_Cdg_Dsply ********************************************************************************/
-		if(s.getSpplyDlvrySuppliedItmItmCdbleCncptCdgDsply() != null) {
-			supplydeliverysupplieditemitemcodeableconceptcoding.setDisplay(s.getSpplyDlvrySuppliedItmItmCdbleCncptCdgDsply());
+		if(s.getSpplyDlvrySuppliedItmItmCdbleCncptCdgDsply() != null ) {
+
+			String[] arrayi0 = s.getSpplyDlvrySuppliedItmItmCdbleCncptCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(supplydelivery.getSuppliedItem().getItemCodeableConcept().getCoding().size() < i0+1) { supplydelivery.getSuppliedItem().getItemCodeableConcept().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {supplydelivery.getSuppliedItem().getItemCodeableConcept().getCoding().get(i0).setDisplay(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** SpplyDlvry_SuppliedItm_ItmCdbleCncpt_Cdg_Sys ********************************************************************************/
-		if(s.getSpplyDlvrySuppliedItmItmCdbleCncptCdgSys() != null) {
-			supplydeliverysupplieditemitemcodeableconceptcoding.setSystem(s.getSpplyDlvrySuppliedItmItmCdbleCncptCdgSys());
+		if(s.getSpplyDlvrySuppliedItmItmCdbleCncptCdgSys() != null ) {
+
+			String[] arrayi0 = s.getSpplyDlvrySuppliedItmItmCdbleCncptCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(supplydelivery.getSuppliedItem().getItemCodeableConcept().getCoding().size() < i0+1) { supplydelivery.getSuppliedItem().getItemCodeableConcept().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {supplydelivery.getSuppliedItem().getItemCodeableConcept().getCoding().get(i0).setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** SpplyDlvry_SuppliedItm_ItmCdbleCncpt_Cdg_UsrSltd ********************************************************************************/
-		if(s.getSpplyDlvrySuppliedItmItmCdbleCncptCdgUsrSltd() != null) {
-			supplydeliverysupplieditemitemcodeableconceptcoding.setUserSelected(Boolean.parseBoolean(s.getSpplyDlvrySuppliedItmItmCdbleCncptCdgUsrSltd()));
+		if(s.getSpplyDlvrySuppliedItmItmCdbleCncptCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = s.getSpplyDlvrySuppliedItmItmCdbleCncptCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(supplydelivery.getSuppliedItem().getItemCodeableConcept().getCoding().size() < i0+1) { supplydelivery.getSuppliedItem().getItemCodeableConcept().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {supplydelivery.getSuppliedItem().getItemCodeableConcept().getCoding().get(i0).setUserSelected(Boolean.parseBoolean(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** SpplyDlvry_SuppliedItm_ItmCdbleCncpt_Cdg_Vrsn ********************************************************************************/
-		if(s.getSpplyDlvrySuppliedItmItmCdbleCncptCdgVrsn() != null) {
-			supplydeliverysupplieditemitemcodeableconceptcoding.setVersion(s.getSpplyDlvrySuppliedItmItmCdbleCncptCdgVrsn());
+		if(s.getSpplyDlvrySuppliedItmItmCdbleCncptCdgVrsn() != null ) {
+
+			String[] arrayi0 = s.getSpplyDlvrySuppliedItmItmCdbleCncptCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(supplydelivery.getSuppliedItem().getItemCodeableConcept().getCoding().size() < i0+1) { supplydelivery.getSuppliedItem().getItemCodeableConcept().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {supplydelivery.getSuppliedItem().getItemCodeableConcept().getCoding().get(i0).setVersion(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** SpplyDlvry_SuppliedItm_ItmCdbleCncpt_Txt ********************************************************************************/
-		if(s.getSpplyDlvrySuppliedItmItmCdbleCncptTxt() != null) {
-			supplydeliverysupplieditemitemcodeableconcept.setText(s.getSpplyDlvrySuppliedItmItmCdbleCncptTxt());
+		if(s.getSpplyDlvrySuppliedItmItmCdbleCncptTxt() != null ) {
+
+			if(s.getSpplyDlvrySuppliedItmItmCdbleCncptTxt().replace("[","").replace("]","").equals("NULL") | s.getSpplyDlvrySuppliedItmItmCdbleCncptTxt()==null) {} else {
+			supplydelivery.getSuppliedItem().getItemCodeableConcept().setText(s.getSpplyDlvrySuppliedItmItmCdbleCncptTxt().replace("[","").replace("]","").replace("\"",""));
+			}
 		}
 		/******************** SpplyDlvry_SuppliedItm_ItmRfrnc ********************************************************************************/
-		if(s.getSpplyDlvrySuppliedItmItmRfrnc() != null) {
-			supplydeliverysupplieditem.setItem( new org.hl7.fhir.r4.model.Reference(s.getSpplyDlvrySuppliedItmItmRfrnc()));
-		}
-		/******************** supplydeliverysupplieditemquantity ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity supplydeliverysupplieditemquantity =  new org.hl7.fhir.r4.model.Quantity();
-		supplydeliverysupplieditem.setQuantity(supplydeliverysupplieditemquantity);
+		if(s.getSpplyDlvrySuppliedItmItmRfrnc() != null ) {
 
+			if(s.getSpplyDlvrySuppliedItmItmRfrnc().replace("[","").replace("]","").equals("NULL") | s.getSpplyDlvrySuppliedItmItmRfrnc()==null) {} else {
+			supplydelivery.getSuppliedItem().setItem(new org.hl7.fhir.r4.model.Reference(s.getSpplyDlvrySuppliedItmItmRfrnc().replace("[","").replace("]","").replace("\"","")));
+			}
+		}
 		/******************** SpplyDlvry_SuppliedItm_Qnty_Cd ********************************************************************************/
-		if(s.getSpplyDlvrySuppliedItmQntyCd() != null) {
-			supplydeliverysupplieditemquantity.setCode(s.getSpplyDlvrySuppliedItmQntyCd());
-		}
-		/******************** supplydeliverysupplieditemquantitycomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory supplydeliverysupplieditemquantitycomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-		supplydeliverysupplieditemquantity.setComparator(supplydeliverysupplieditemquantitycomparator.fromCode(s.getSpplyDlvrySuppliedItmQntyCmprtr()));
+		if(s.getSpplyDlvrySuppliedItmQntyCd() != null ) {
 
+			if(s.getSpplyDlvrySuppliedItmQntyCd().replace("[","").replace("]","").equals("NULL") | s.getSpplyDlvrySuppliedItmQntyCd()==null) {} else {
+			supplydelivery.getSuppliedItem().getQuantity().setCode(s.getSpplyDlvrySuppliedItmQntyCd().replace("[","").replace("]","").replace("\"",""));
+			}
+		}
+		/******************** SpplyDlvry_SuppliedItm_Qnty_Cmprtr ********************************************************************************/
+		if(s.getSpplyDlvrySuppliedItmQntyCmprtr() != null ) {
+
+			if(s.getSpplyDlvrySuppliedItmQntyCmprtr().replace("[","").replace("]","").equals("NULL") | s.getSpplyDlvrySuppliedItmQntyCmprtr()==null) {} else {
+			supplydelivery.getSuppliedItem().getQuantity().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(s.getSpplyDlvrySuppliedItmQntyCmprtr().replace("[","").replace("]","").replace("\"","")));
+			}
+		}
 		/******************** SpplyDlvry_SuppliedItm_Qnty_Sys ********************************************************************************/
-		if(s.getSpplyDlvrySuppliedItmQntySys() != null) {
-			supplydeliverysupplieditemquantity.setSystem(s.getSpplyDlvrySuppliedItmQntySys());
+		if(s.getSpplyDlvrySuppliedItmQntySys() != null ) {
+
+			if(s.getSpplyDlvrySuppliedItmQntySys().replace("[","").replace("]","").equals("NULL") | s.getSpplyDlvrySuppliedItmQntySys()==null) {} else {
+			supplydelivery.getSuppliedItem().getQuantity().setSystem(s.getSpplyDlvrySuppliedItmQntySys().replace("[","").replace("]","").replace("\"",""));
+			}
 		}
 		/******************** SpplyDlvry_SuppliedItm_Qnty_Unt ********************************************************************************/
-		if(s.getSpplyDlvrySuppliedItmQntyUnt() != null) {
-			supplydeliverysupplieditemquantity.setUnit(s.getSpplyDlvrySuppliedItmQntyUnt());
+		if(s.getSpplyDlvrySuppliedItmQntyUnt() != null ) {
+
+			if(s.getSpplyDlvrySuppliedItmQntyUnt().replace("[","").replace("]","").equals("NULL") | s.getSpplyDlvrySuppliedItmQntyUnt()==null) {} else {
+			supplydelivery.getSuppliedItem().getQuantity().setUnit(s.getSpplyDlvrySuppliedItmQntyUnt().replace("[","").replace("]","").replace("\"",""));
+			}
 		}
 		/******************** SpplyDlvry_SuppliedItm_Qnty_Vl ********************************************************************************/
-		if(s.getSpplyDlvrySuppliedItmQntyVl() != null) {
-			supplydeliverysupplieditemquantity.setValue(Double.parseDouble((s.getSpplyDlvrySuppliedItmQntyVl())));
+		if(s.getSpplyDlvrySuppliedItmQntyVl() != null ) {
+
+			if(s.getSpplyDlvrySuppliedItmQntyVl().replace("[","").replace("]","").equals("NULL") | s.getSpplyDlvrySuppliedItmQntyVl()==null) {} else {
+			supplydelivery.getSuppliedItem().getQuantity().setValue((new java.math.BigDecimal((s.getSpplyDlvrySuppliedItmQntyVl().replace("[","").replace("]","").replace("\"","")))));
+			}
 		}
 		/******************** SpplyDlvry_Supplier ********************************************************************************/
-		if(s.getSpplyDlvrySupplier() != null) {
-			supplydelivery.setSupplier( new org.hl7.fhir.r4.model.Reference(s.getSpplyDlvrySupplier()));
+		if(s.getSpplyDlvrySupplier() != null ) {
+
+			if(s.getSpplyDlvrySupplier().replace("[","").replace("]","").equals("NULL") | s.getSpplyDlvrySupplier()==null) {} else {
+			supplydelivery.setSupplier(new org.hl7.fhir.r4.model.Reference(s.getSpplyDlvrySupplier().replace("[","").replace("]","").replace("\"","")));
+			}
 		}
-		/******************** supplydeliverytype ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept supplydeliverytype =  new org.hl7.fhir.r4.model.CodeableConcept();
-		supplydelivery.setType(supplydeliverytype);
-
-		/******************** supplydeliverytypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding supplydeliverytypecoding =  new org.hl7.fhir.r4.model.Coding();
-		supplydeliverytype.addCoding(supplydeliverytypecoding);
-
 		/******************** SpplyDlvry_Typ_Cdg_Cd ********************************************************************************/
-		if(s.getSpplyDlvryTypCdgCd() != null) {
-			supplydeliverytypecoding.setCode(s.getSpplyDlvryTypCdgCd());
+		if(s.getSpplyDlvryTypCdgCd() != null ) {
+
+			String[] arrayi0 = s.getSpplyDlvryTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(supplydelivery.getType().getCoding().size() < i0+1) { supplydelivery.getType().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {supplydelivery.getType().getCoding().get(i0).setCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** SpplyDlvry_Typ_Cdg_Dsply ********************************************************************************/
-		if(s.getSpplyDlvryTypCdgDsply() != null) {
-			supplydeliverytypecoding.setDisplay(s.getSpplyDlvryTypCdgDsply());
+		if(s.getSpplyDlvryTypCdgDsply() != null ) {
+
+			String[] arrayi0 = s.getSpplyDlvryTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(supplydelivery.getType().getCoding().size() < i0+1) { supplydelivery.getType().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {supplydelivery.getType().getCoding().get(i0).setDisplay(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** SpplyDlvry_Typ_Cdg_Sys ********************************************************************************/
-		if(s.getSpplyDlvryTypCdgSys() != null) {
-			supplydeliverytypecoding.setSystem(s.getSpplyDlvryTypCdgSys());
+		if(s.getSpplyDlvryTypCdgSys() != null ) {
+
+			String[] arrayi0 = s.getSpplyDlvryTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(supplydelivery.getType().getCoding().size() < i0+1) { supplydelivery.getType().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {supplydelivery.getType().getCoding().get(i0).setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** SpplyDlvry_Typ_Cdg_UsrSltd ********************************************************************************/
-		if(s.getSpplyDlvryTypCdgUsrSltd() != null) {
-			supplydeliverytypecoding.setUserSelected(Boolean.parseBoolean(s.getSpplyDlvryTypCdgUsrSltd()));
+		if(s.getSpplyDlvryTypCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = s.getSpplyDlvryTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(supplydelivery.getType().getCoding().size() < i0+1) { supplydelivery.getType().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {supplydelivery.getType().getCoding().get(i0).setUserSelected(Boolean.parseBoolean(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** SpplyDlvry_Typ_Cdg_Vrsn ********************************************************************************/
-		if(s.getSpplyDlvryTypCdgVrsn() != null) {
-			supplydeliverytypecoding.setVersion(s.getSpplyDlvryTypCdgVrsn());
+		if(s.getSpplyDlvryTypCdgVrsn() != null ) {
+
+			String[] arrayi0 = s.getSpplyDlvryTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(supplydelivery.getType().getCoding().size() < i0+1) { supplydelivery.getType().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {supplydelivery.getType().getCoding().get(i0).setVersion(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** SpplyDlvry_Typ_Txt ********************************************************************************/
-		if(s.getSpplyDlvryTypTxt() != null) {
-			supplydeliverytype.setText(s.getSpplyDlvryTypTxt());
+		if(s.getSpplyDlvryTypTxt() != null ) {
+
+			if(s.getSpplyDlvryTypTxt().replace("[","").replace("]","").equals("NULL") | s.getSpplyDlvryTypTxt()==null) {} else {
+			supplydelivery.getType().setText(s.getSpplyDlvryTypTxt().replace("[","").replace("]","").replace("\"",""));
+			}
 		}
 		return supplydelivery;
 	}

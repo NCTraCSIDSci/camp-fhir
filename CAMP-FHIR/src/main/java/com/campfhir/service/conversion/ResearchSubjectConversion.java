@@ -11,112 +11,200 @@ public class ResearchSubjectConversion
 		researchsubject.setId(r.getId());
 
 		/******************** RsrchSbjct_ActualArm ********************************************************************************/
-		if(r.getRsrchSbjctActualArm() != null) {
-			researchsubject.setActualArm(r.getRsrchSbjctActualArm());
+		if(r.getRsrchSbjctActualArm() != null ) {
+
+			if(r.getRsrchSbjctActualArm().replace("[","").replace("]","").equals("NULL") | r.getRsrchSbjctActualArm()==null) {} else {
+			researchsubject.setActualArm(r.getRsrchSbjctActualArm().replace("[","").replace("]","").replace("\"",""));
+			}
 		}
 		/******************** RsrchSbjct_AssignedArm ********************************************************************************/
-		if(r.getRsrchSbjctAssignedArm() != null) {
-			researchsubject.setAssignedArm(r.getRsrchSbjctAssignedArm());
+		if(r.getRsrchSbjctAssignedArm() != null ) {
+
+			if(r.getRsrchSbjctAssignedArm().replace("[","").replace("]","").equals("NULL") | r.getRsrchSbjctAssignedArm()==null) {} else {
+			researchsubject.setAssignedArm(r.getRsrchSbjctAssignedArm().replace("[","").replace("]","").replace("\"",""));
+			}
 		}
 		/******************** RsrchSbjct_Cnsnt ********************************************************************************/
-		if(r.getRsrchSbjctCnsnt() != null) {
-			researchsubject.setConsent( new org.hl7.fhir.r4.model.Reference(r.getRsrchSbjctCnsnt()));
-		}
-		/******************** researchsubjectidentifier ********************************************************************************/
-		org.hl7.fhir.r4.model.Identifier researchsubjectidentifier =  new org.hl7.fhir.r4.model.Identifier();
-		researchsubject.addIdentifier(researchsubjectidentifier);
+		if(r.getRsrchSbjctCnsnt() != null ) {
 
+			if(r.getRsrchSbjctCnsnt().replace("[","").replace("]","").equals("NULL") | r.getRsrchSbjctCnsnt()==null) {} else {
+			researchsubject.setConsent(new org.hl7.fhir.r4.model.Reference(r.getRsrchSbjctCnsnt().replace("[","").replace("]","").replace("\"","")));
+			}
+		}
 		/******************** RsrchSbjct_Id_Assigner ********************************************************************************/
-		if(r.getRsrchSbjctIdAssigner() != null) {
-			researchsubjectidentifier.setAssigner( new org.hl7.fhir.r4.model.Reference(r.getRsrchSbjctIdAssigner()));
-		}
-		/******************** researchsubjectidentifierperiod ********************************************************************************/
-		org.hl7.fhir.r4.model.Period researchsubjectidentifierperiod =  new org.hl7.fhir.r4.model.Period();
-		researchsubjectidentifier.setPeriod(researchsubjectidentifierperiod);
+		if(r.getRsrchSbjctIdAssigner() != null ) {
 
+			String[] arrayi0 = r.getRsrchSbjctIdAssigner().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(researchsubject.getIdentifier().size() < i0+1) { researchsubject.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {researchsubject.getIdentifier().get(i0).setAssigner(new org.hl7.fhir.r4.model.Reference(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** RsrchSbjct_Id_Prd_End ********************************************************************************/
-		if(r.getRsrchSbjctIdPrdEnd() != null) {
-			java.text.SimpleDateFormat RsrchSbjct_Id_Prd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date RsrchSbjct_Id_Prd_Enddate = RsrchSbjct_Id_Prd_Endsdf.parse(r.getRsrchSbjctIdPrdEnd());
-			researchsubjectidentifierperiod.setEnd(RsrchSbjct_Id_Prd_Enddate);
+		if(r.getRsrchSbjctIdPrdEnd() != null ) {
+
+			String[] arrayi0 = r.getRsrchSbjctIdPrdEnd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(researchsubject.getIdentifier().size() < i0+1) { researchsubject.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {researchsubject.getIdentifier().get(i0).getPeriod().setEnd(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** RsrchSbjct_Id_Prd_Strt ********************************************************************************/
-		if(r.getRsrchSbjctIdPrdStrt() != null) {
-			java.text.SimpleDateFormat RsrchSbjct_Id_Prd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date RsrchSbjct_Id_Prd_Strtdate = RsrchSbjct_Id_Prd_Strtsdf.parse(r.getRsrchSbjctIdPrdStrt());
-			researchsubjectidentifierperiod.setStart(RsrchSbjct_Id_Prd_Strtdate);
+		if(r.getRsrchSbjctIdPrdStrt() != null ) {
+
+			String[] arrayi0 = r.getRsrchSbjctIdPrdStrt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(researchsubject.getIdentifier().size() < i0+1) { researchsubject.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {researchsubject.getIdentifier().get(i0).getPeriod().setStart(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** RsrchSbjct_Id_Sys ********************************************************************************/
-		if(r.getRsrchSbjctIdSys() != null) {
-			researchsubjectidentifier.setSystem(r.getRsrchSbjctIdSys());
+		if(r.getRsrchSbjctIdSys() != null ) {
+
+			String[] arrayi0 = r.getRsrchSbjctIdSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(researchsubject.getIdentifier().size() < i0+1) { researchsubject.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {researchsubject.getIdentifier().get(i0).setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
-		/******************** researchsubjectidentifiertype ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept researchsubjectidentifiertype =  new org.hl7.fhir.r4.model.CodeableConcept();
-		researchsubjectidentifier.setType(researchsubjectidentifiertype);
-
-		/******************** researchsubjectidentifiertypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding researchsubjectidentifiertypecoding =  new org.hl7.fhir.r4.model.Coding();
-		researchsubjectidentifiertype.addCoding(researchsubjectidentifiertypecoding);
-
 		/******************** RsrchSbjct_Id_Typ_Cdg_Cd ********************************************************************************/
-		if(r.getRsrchSbjctIdTypCdgCd() != null) {
-			researchsubjectidentifiertypecoding.setCode(r.getRsrchSbjctIdTypCdgCd());
+		if(r.getRsrchSbjctIdTypCdgCd() != null ) {
+
+			String[] arrayi0 = r.getRsrchSbjctIdTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(researchsubject.getIdentifier().size() < i0+1) { researchsubject.addIdentifier(); }
+				String[] arrayi1 = r.getRsrchSbjctIdTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(researchsubject.getIdentifier().get(i0).getType().getCoding().size() < i1+1) { researchsubject.getIdentifier().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {researchsubject.getIdentifier().get(i0).getType().getCoding().get(i1).setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** RsrchSbjct_Id_Typ_Cdg_Dsply ********************************************************************************/
-		if(r.getRsrchSbjctIdTypCdgDsply() != null) {
-			researchsubjectidentifiertypecoding.setDisplay(r.getRsrchSbjctIdTypCdgDsply());
+		if(r.getRsrchSbjctIdTypCdgDsply() != null ) {
+
+			String[] arrayi0 = r.getRsrchSbjctIdTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(researchsubject.getIdentifier().size() < i0+1) { researchsubject.addIdentifier(); }
+				String[] arrayi1 = r.getRsrchSbjctIdTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(researchsubject.getIdentifier().get(i0).getType().getCoding().size() < i1+1) { researchsubject.getIdentifier().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {researchsubject.getIdentifier().get(i0).getType().getCoding().get(i1).setDisplay(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** RsrchSbjct_Id_Typ_Cdg_Sys ********************************************************************************/
-		if(r.getRsrchSbjctIdTypCdgSys() != null) {
-			researchsubjectidentifiertypecoding.setSystem(r.getRsrchSbjctIdTypCdgSys());
+		if(r.getRsrchSbjctIdTypCdgSys() != null ) {
+
+			String[] arrayi0 = r.getRsrchSbjctIdTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(researchsubject.getIdentifier().size() < i0+1) { researchsubject.addIdentifier(); }
+				String[] arrayi1 = r.getRsrchSbjctIdTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(researchsubject.getIdentifier().get(i0).getType().getCoding().size() < i1+1) { researchsubject.getIdentifier().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {researchsubject.getIdentifier().get(i0).getType().getCoding().get(i1).setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** RsrchSbjct_Id_Typ_Cdg_UsrSltd ********************************************************************************/
-		if(r.getRsrchSbjctIdTypCdgUsrSltd() != null) {
-			researchsubjectidentifiertypecoding.setUserSelected(Boolean.parseBoolean(r.getRsrchSbjctIdTypCdgUsrSltd()));
+		if(r.getRsrchSbjctIdTypCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = r.getRsrchSbjctIdTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(researchsubject.getIdentifier().size() < i0+1) { researchsubject.addIdentifier(); }
+				String[] arrayi1 = r.getRsrchSbjctIdTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(researchsubject.getIdentifier().get(i0).getType().getCoding().size() < i1+1) { researchsubject.getIdentifier().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {researchsubject.getIdentifier().get(i0).getType().getCoding().get(i1).setUserSelected(Boolean.parseBoolean(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
 		}
 		/******************** RsrchSbjct_Id_Typ_Cdg_Vrsn ********************************************************************************/
-		if(r.getRsrchSbjctIdTypCdgVrsn() != null) {
-			researchsubjectidentifiertypecoding.setVersion(r.getRsrchSbjctIdTypCdgVrsn());
+		if(r.getRsrchSbjctIdTypCdgVrsn() != null ) {
+
+			String[] arrayi0 = r.getRsrchSbjctIdTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(researchsubject.getIdentifier().size() < i0+1) { researchsubject.addIdentifier(); }
+				String[] arrayi1 = r.getRsrchSbjctIdTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(researchsubject.getIdentifier().get(i0).getType().getCoding().size() < i1+1) { researchsubject.getIdentifier().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {researchsubject.getIdentifier().get(i0).getType().getCoding().get(i1).setVersion(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** RsrchSbjct_Id_Typ_Txt ********************************************************************************/
-		if(r.getRsrchSbjctIdTypTxt() != null) {
-			researchsubjectidentifiertype.setText(r.getRsrchSbjctIdTypTxt());
-		}
-		/******************** researchsubjectidentifieruse ********************************************************************************/
-		org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory researchsubjectidentifieruse =  new org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory();
-		researchsubjectidentifier.setUse(researchsubjectidentifieruse.fromCode(r.getRsrchSbjctIdUse()));
+		if(r.getRsrchSbjctIdTypTxt() != null ) {
 
+			String[] arrayi0 = r.getRsrchSbjctIdTypTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(researchsubject.getIdentifier().size() < i0+1) { researchsubject.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {researchsubject.getIdentifier().get(i0).getType().setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
+		}
+		/******************** RsrchSbjct_Id_Use ********************************************************************************/
+		if(r.getRsrchSbjctIdUse() != null ) {
+
+			String[] arrayi0 = r.getRsrchSbjctIdUse().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(researchsubject.getIdentifier().size() < i0+1) { researchsubject.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {researchsubject.getIdentifier().get(i0).setUse(new org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory().fromCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** RsrchSbjct_Id_Vl ********************************************************************************/
-		if(r.getRsrchSbjctIdVl() != null) {
-			researchsubjectidentifier.setValue(r.getRsrchSbjctIdVl());
+		if(r.getRsrchSbjctIdVl() != null ) {
+
+			String[] arrayi0 = r.getRsrchSbjctIdVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(researchsubject.getIdentifier().size() < i0+1) { researchsubject.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {researchsubject.getIdentifier().get(i0).setValue(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** RsrchSbjct_Individual ********************************************************************************/
-		if(r.getRsrchSbjctIndividual() != null) {
-			researchsubject.setIndividual( new org.hl7.fhir.r4.model.Reference(r.getRsrchSbjctIndividual()));
-		}
-		/******************** researchsubjectperiod ********************************************************************************/
-		org.hl7.fhir.r4.model.Period researchsubjectperiod =  new org.hl7.fhir.r4.model.Period();
-		researchsubject.setPeriod(researchsubjectperiod);
+		if(r.getRsrchSbjctIndividual() != null ) {
 
+			if(r.getRsrchSbjctIndividual().replace("[","").replace("]","").equals("NULL") | r.getRsrchSbjctIndividual()==null) {} else {
+			researchsubject.setIndividual(new org.hl7.fhir.r4.model.Reference(r.getRsrchSbjctIndividual().replace("[","").replace("]","").replace("\"","")));
+			}
+		}
 		/******************** RsrchSbjct_Prd_End ********************************************************************************/
-		if(r.getRsrchSbjctPrdEnd() != null) {
-			java.text.SimpleDateFormat RsrchSbjct_Prd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date RsrchSbjct_Prd_Enddate = RsrchSbjct_Prd_Endsdf.parse(r.getRsrchSbjctPrdEnd());
-			researchsubjectperiod.setEnd(RsrchSbjct_Prd_Enddate);
+		if(r.getRsrchSbjctPrdEnd() != null ) {
+
+			if(r.getRsrchSbjctPrdEnd().replace("[","").replace("]","").equals("NULL") | r.getRsrchSbjctPrdEnd()==null) {} else {
+			researchsubject.getPeriod().setEnd(r.getRsrchSbjctPrdEnd().replace("[","").replace("]","").equals("NULL") | r.getRsrchSbjctPrdEnd()==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(r.getRsrchSbjctPrdEnd().replace("[","").replace("]","").replace("\"","")));
+			}
 		}
 		/******************** RsrchSbjct_Prd_Strt ********************************************************************************/
-		if(r.getRsrchSbjctPrdStrt() != null) {
-			java.text.SimpleDateFormat RsrchSbjct_Prd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date RsrchSbjct_Prd_Strtdate = RsrchSbjct_Prd_Strtsdf.parse(r.getRsrchSbjctPrdStrt());
-			researchsubjectperiod.setStart(RsrchSbjct_Prd_Strtdate);
-		}
-		/******************** researchsubjectstatus ********************************************************************************/
-		org.hl7.fhir.r4.model.ResearchSubject.ResearchSubjectStatusEnumFactory researchsubjectstatus =  new org.hl7.fhir.r4.model.ResearchSubject.ResearchSubjectStatusEnumFactory();
-		researchsubject.setStatus(researchsubjectstatus.fromCode(r.getRsrchSbjctSts()));
+		if(r.getRsrchSbjctPrdStrt() != null ) {
 
+			if(r.getRsrchSbjctPrdStrt().replace("[","").replace("]","").equals("NULL") | r.getRsrchSbjctPrdStrt()==null) {} else {
+			researchsubject.getPeriod().setStart(r.getRsrchSbjctPrdStrt().replace("[","").replace("]","").equals("NULL") | r.getRsrchSbjctPrdStrt()==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(r.getRsrchSbjctPrdStrt().replace("[","").replace("]","").replace("\"","")));
+			}
+		}
+		/******************** RsrchSbjct_Sts ********************************************************************************/
+		if(r.getRsrchSbjctSts() != null ) {
+
+			if(r.getRsrchSbjctSts().replace("[","").replace("]","").equals("NULL") | r.getRsrchSbjctSts()==null) {} else {
+			researchsubject.setStatus(new org.hl7.fhir.r4.model.ResearchSubject.ResearchSubjectStatusEnumFactory().fromCode(r.getRsrchSbjctSts().replace("[","").replace("]","").replace("\"","")));
+			}
+		}
 		/******************** RsrchSbjct_Stdy ********************************************************************************/
-		if(r.getRsrchSbjctStdy() != null) {
-			researchsubject.setStudy( new org.hl7.fhir.r4.model.Reference(r.getRsrchSbjctStdy()));
+		if(r.getRsrchSbjctStdy() != null ) {
+
+			if(r.getRsrchSbjctStdy().replace("[","").replace("]","").equals("NULL") | r.getRsrchSbjctStdy()==null) {} else {
+			researchsubject.setStudy(new org.hl7.fhir.r4.model.Reference(r.getRsrchSbjctStdy().replace("[","").replace("]","").replace("\"","")));
+			}
 		}
 		return researchsubject;
 	}

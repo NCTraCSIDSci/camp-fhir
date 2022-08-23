@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Jun 27, 2022, 10:40:10 AM by Hibernate Tools 5.6.1.Final
+// Generated Aug 17, 2022, 11:08:48 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -107,6 +107,20 @@ public class Composition  implements java.io.Serializable {
         this.id = id;
     }
     
+    public void addId(String id) {
+    	if( id != null ) {
+	    	if( this.id == null ) {
+	        	this.id = id;
+	        } else if(this.id.substring(this.id.length() - 1).equals("]") & id.equals("[")) {
+	        	this.id = this.id+ "," + id;
+	        } else if(id.equals("[") | id.equals("]") | this.id.substring(this.id.length() - 1).equals("[")) {
+	        	this.id = this.id+id;
+	        } else  {
+	            this.id = this.id+ "," +id;
+	        }
+        }
+    }
+    
     
     
     public String getCmpsitionAttesterMode() {
@@ -115,6 +129,20 @@ public class Composition  implements java.io.Serializable {
     
     public void setCmpsitionAttesterMode(String cmpsitionAttesterMode) {
         this.cmpsitionAttesterMode = cmpsitionAttesterMode;
+    }
+    
+    public void addCmpsitionAttesterMode(String cmpsitionAttesterMode) {
+    	if( cmpsitionAttesterMode != null ) {
+	    	if( this.cmpsitionAttesterMode == null ) {
+	        	this.cmpsitionAttesterMode = cmpsitionAttesterMode;
+	        } else if(this.cmpsitionAttesterMode.substring(this.cmpsitionAttesterMode.length() - 1).equals("]") & cmpsitionAttesterMode.equals("[")) {
+	        	this.cmpsitionAttesterMode = this.cmpsitionAttesterMode+ "," + cmpsitionAttesterMode;
+	        } else if(cmpsitionAttesterMode.equals("[") | cmpsitionAttesterMode.equals("]") | this.cmpsitionAttesterMode.substring(this.cmpsitionAttesterMode.length() - 1).equals("[")) {
+	        	this.cmpsitionAttesterMode = this.cmpsitionAttesterMode+cmpsitionAttesterMode;
+	        } else  {
+	            this.cmpsitionAttesterMode = this.cmpsitionAttesterMode+ "," +cmpsitionAttesterMode;
+	        }
+        }
     }
     
     
@@ -127,6 +155,20 @@ public class Composition  implements java.io.Serializable {
         this.cmpsitionAttesterParty = cmpsitionAttesterParty;
     }
     
+    public void addCmpsitionAttesterParty(String cmpsitionAttesterParty) {
+    	if( cmpsitionAttesterParty != null ) {
+	    	if( this.cmpsitionAttesterParty == null ) {
+	        	this.cmpsitionAttesterParty = cmpsitionAttesterParty;
+	        } else if(this.cmpsitionAttesterParty.substring(this.cmpsitionAttesterParty.length() - 1).equals("]") & cmpsitionAttesterParty.equals("[")) {
+	        	this.cmpsitionAttesterParty = this.cmpsitionAttesterParty+ "," + cmpsitionAttesterParty;
+	        } else if(cmpsitionAttesterParty.equals("[") | cmpsitionAttesterParty.equals("]") | this.cmpsitionAttesterParty.substring(this.cmpsitionAttesterParty.length() - 1).equals("[")) {
+	        	this.cmpsitionAttesterParty = this.cmpsitionAttesterParty+cmpsitionAttesterParty;
+	        } else  {
+	            this.cmpsitionAttesterParty = this.cmpsitionAttesterParty+ "," +cmpsitionAttesterParty;
+	        }
+        }
+    }
+    
     
     
     public String getCmpsitionAttesterTime() {
@@ -135,6 +177,20 @@ public class Composition  implements java.io.Serializable {
     
     public void setCmpsitionAttesterTime(String cmpsitionAttesterTime) {
         this.cmpsitionAttesterTime = cmpsitionAttesterTime;
+    }
+    
+    public void addCmpsitionAttesterTime(String cmpsitionAttesterTime) {
+    	if( cmpsitionAttesterTime != null ) {
+	    	if( this.cmpsitionAttesterTime == null ) {
+	        	this.cmpsitionAttesterTime = cmpsitionAttesterTime;
+	        } else if(this.cmpsitionAttesterTime.substring(this.cmpsitionAttesterTime.length() - 1).equals("]") & cmpsitionAttesterTime.equals("[")) {
+	        	this.cmpsitionAttesterTime = this.cmpsitionAttesterTime+ "," + cmpsitionAttesterTime;
+	        } else if(cmpsitionAttesterTime.equals("[") | cmpsitionAttesterTime.equals("]") | this.cmpsitionAttesterTime.substring(this.cmpsitionAttesterTime.length() - 1).equals("[")) {
+	        	this.cmpsitionAttesterTime = this.cmpsitionAttesterTime+cmpsitionAttesterTime;
+	        } else  {
+	            this.cmpsitionAttesterTime = this.cmpsitionAttesterTime+ "," +cmpsitionAttesterTime;
+	        }
+        }
     }
     
     
@@ -147,6 +203,20 @@ public class Composition  implements java.io.Serializable {
         this.cmpsitionAthr = cmpsitionAthr;
     }
     
+    public void addCmpsitionAthr(String cmpsitionAthr) {
+    	if( cmpsitionAthr != null ) {
+	    	if( this.cmpsitionAthr == null ) {
+	        	this.cmpsitionAthr = cmpsitionAthr;
+	        } else if(this.cmpsitionAthr.substring(this.cmpsitionAthr.length() - 1).equals("]") & cmpsitionAthr.equals("[")) {
+	        	this.cmpsitionAthr = this.cmpsitionAthr+ "," + cmpsitionAthr;
+	        } else if(cmpsitionAthr.equals("[") | cmpsitionAthr.equals("]") | this.cmpsitionAthr.substring(this.cmpsitionAthr.length() - 1).equals("[")) {
+	        	this.cmpsitionAthr = this.cmpsitionAthr+cmpsitionAthr;
+	        } else  {
+	            this.cmpsitionAthr = this.cmpsitionAthr+ "," +cmpsitionAthr;
+	        }
+        }
+    }
+    
     
     
     public String getCmpsitionCtgryCdgCd() {
@@ -155,6 +225,20 @@ public class Composition  implements java.io.Serializable {
     
     public void setCmpsitionCtgryCdgCd(String cmpsitionCtgryCdgCd) {
         this.cmpsitionCtgryCdgCd = cmpsitionCtgryCdgCd;
+    }
+    
+    public void addCmpsitionCtgryCdgCd(String cmpsitionCtgryCdgCd) {
+    	if( cmpsitionCtgryCdgCd != null ) {
+	    	if( this.cmpsitionCtgryCdgCd == null ) {
+	        	this.cmpsitionCtgryCdgCd = cmpsitionCtgryCdgCd;
+	        } else if(this.cmpsitionCtgryCdgCd.substring(this.cmpsitionCtgryCdgCd.length() - 1).equals("]") & cmpsitionCtgryCdgCd.equals("[")) {
+	        	this.cmpsitionCtgryCdgCd = this.cmpsitionCtgryCdgCd+ "," + cmpsitionCtgryCdgCd;
+	        } else if(cmpsitionCtgryCdgCd.equals("[") | cmpsitionCtgryCdgCd.equals("]") | this.cmpsitionCtgryCdgCd.substring(this.cmpsitionCtgryCdgCd.length() - 1).equals("[")) {
+	        	this.cmpsitionCtgryCdgCd = this.cmpsitionCtgryCdgCd+cmpsitionCtgryCdgCd;
+	        } else  {
+	            this.cmpsitionCtgryCdgCd = this.cmpsitionCtgryCdgCd+ "," +cmpsitionCtgryCdgCd;
+	        }
+        }
     }
     
     
@@ -167,6 +251,20 @@ public class Composition  implements java.io.Serializable {
         this.cmpsitionCtgryCdgDsply = cmpsitionCtgryCdgDsply;
     }
     
+    public void addCmpsitionCtgryCdgDsply(String cmpsitionCtgryCdgDsply) {
+    	if( cmpsitionCtgryCdgDsply != null ) {
+	    	if( this.cmpsitionCtgryCdgDsply == null ) {
+	        	this.cmpsitionCtgryCdgDsply = cmpsitionCtgryCdgDsply;
+	        } else if(this.cmpsitionCtgryCdgDsply.substring(this.cmpsitionCtgryCdgDsply.length() - 1).equals("]") & cmpsitionCtgryCdgDsply.equals("[")) {
+	        	this.cmpsitionCtgryCdgDsply = this.cmpsitionCtgryCdgDsply+ "," + cmpsitionCtgryCdgDsply;
+	        } else if(cmpsitionCtgryCdgDsply.equals("[") | cmpsitionCtgryCdgDsply.equals("]") | this.cmpsitionCtgryCdgDsply.substring(this.cmpsitionCtgryCdgDsply.length() - 1).equals("[")) {
+	        	this.cmpsitionCtgryCdgDsply = this.cmpsitionCtgryCdgDsply+cmpsitionCtgryCdgDsply;
+	        } else  {
+	            this.cmpsitionCtgryCdgDsply = this.cmpsitionCtgryCdgDsply+ "," +cmpsitionCtgryCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getCmpsitionCtgryCdgSys() {
@@ -175,6 +273,20 @@ public class Composition  implements java.io.Serializable {
     
     public void setCmpsitionCtgryCdgSys(String cmpsitionCtgryCdgSys) {
         this.cmpsitionCtgryCdgSys = cmpsitionCtgryCdgSys;
+    }
+    
+    public void addCmpsitionCtgryCdgSys(String cmpsitionCtgryCdgSys) {
+    	if( cmpsitionCtgryCdgSys != null ) {
+	    	if( this.cmpsitionCtgryCdgSys == null ) {
+	        	this.cmpsitionCtgryCdgSys = cmpsitionCtgryCdgSys;
+	        } else if(this.cmpsitionCtgryCdgSys.substring(this.cmpsitionCtgryCdgSys.length() - 1).equals("]") & cmpsitionCtgryCdgSys.equals("[")) {
+	        	this.cmpsitionCtgryCdgSys = this.cmpsitionCtgryCdgSys+ "," + cmpsitionCtgryCdgSys;
+	        } else if(cmpsitionCtgryCdgSys.equals("[") | cmpsitionCtgryCdgSys.equals("]") | this.cmpsitionCtgryCdgSys.substring(this.cmpsitionCtgryCdgSys.length() - 1).equals("[")) {
+	        	this.cmpsitionCtgryCdgSys = this.cmpsitionCtgryCdgSys+cmpsitionCtgryCdgSys;
+	        } else  {
+	            this.cmpsitionCtgryCdgSys = this.cmpsitionCtgryCdgSys+ "," +cmpsitionCtgryCdgSys;
+	        }
+        }
     }
     
     
@@ -187,6 +299,20 @@ public class Composition  implements java.io.Serializable {
         this.cmpsitionCtgryCdgUsrSltd = cmpsitionCtgryCdgUsrSltd;
     }
     
+    public void addCmpsitionCtgryCdgUsrSltd(String cmpsitionCtgryCdgUsrSltd) {
+    	if( cmpsitionCtgryCdgUsrSltd != null ) {
+	    	if( this.cmpsitionCtgryCdgUsrSltd == null ) {
+	        	this.cmpsitionCtgryCdgUsrSltd = cmpsitionCtgryCdgUsrSltd;
+	        } else if(this.cmpsitionCtgryCdgUsrSltd.substring(this.cmpsitionCtgryCdgUsrSltd.length() - 1).equals("]") & cmpsitionCtgryCdgUsrSltd.equals("[")) {
+	        	this.cmpsitionCtgryCdgUsrSltd = this.cmpsitionCtgryCdgUsrSltd+ "," + cmpsitionCtgryCdgUsrSltd;
+	        } else if(cmpsitionCtgryCdgUsrSltd.equals("[") | cmpsitionCtgryCdgUsrSltd.equals("]") | this.cmpsitionCtgryCdgUsrSltd.substring(this.cmpsitionCtgryCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.cmpsitionCtgryCdgUsrSltd = this.cmpsitionCtgryCdgUsrSltd+cmpsitionCtgryCdgUsrSltd;
+	        } else  {
+	            this.cmpsitionCtgryCdgUsrSltd = this.cmpsitionCtgryCdgUsrSltd+ "," +cmpsitionCtgryCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getCmpsitionCtgryCdgVrsn() {
@@ -195,6 +321,20 @@ public class Composition  implements java.io.Serializable {
     
     public void setCmpsitionCtgryCdgVrsn(String cmpsitionCtgryCdgVrsn) {
         this.cmpsitionCtgryCdgVrsn = cmpsitionCtgryCdgVrsn;
+    }
+    
+    public void addCmpsitionCtgryCdgVrsn(String cmpsitionCtgryCdgVrsn) {
+    	if( cmpsitionCtgryCdgVrsn != null ) {
+	    	if( this.cmpsitionCtgryCdgVrsn == null ) {
+	        	this.cmpsitionCtgryCdgVrsn = cmpsitionCtgryCdgVrsn;
+	        } else if(this.cmpsitionCtgryCdgVrsn.substring(this.cmpsitionCtgryCdgVrsn.length() - 1).equals("]") & cmpsitionCtgryCdgVrsn.equals("[")) {
+	        	this.cmpsitionCtgryCdgVrsn = this.cmpsitionCtgryCdgVrsn+ "," + cmpsitionCtgryCdgVrsn;
+	        } else if(cmpsitionCtgryCdgVrsn.equals("[") | cmpsitionCtgryCdgVrsn.equals("]") | this.cmpsitionCtgryCdgVrsn.substring(this.cmpsitionCtgryCdgVrsn.length() - 1).equals("[")) {
+	        	this.cmpsitionCtgryCdgVrsn = this.cmpsitionCtgryCdgVrsn+cmpsitionCtgryCdgVrsn;
+	        } else  {
+	            this.cmpsitionCtgryCdgVrsn = this.cmpsitionCtgryCdgVrsn+ "," +cmpsitionCtgryCdgVrsn;
+	        }
+        }
     }
     
     
@@ -207,6 +347,20 @@ public class Composition  implements java.io.Serializable {
         this.cmpsitionCtgryTxt = cmpsitionCtgryTxt;
     }
     
+    public void addCmpsitionCtgryTxt(String cmpsitionCtgryTxt) {
+    	if( cmpsitionCtgryTxt != null ) {
+	    	if( this.cmpsitionCtgryTxt == null ) {
+	        	this.cmpsitionCtgryTxt = cmpsitionCtgryTxt;
+	        } else if(this.cmpsitionCtgryTxt.substring(this.cmpsitionCtgryTxt.length() - 1).equals("]") & cmpsitionCtgryTxt.equals("[")) {
+	        	this.cmpsitionCtgryTxt = this.cmpsitionCtgryTxt+ "," + cmpsitionCtgryTxt;
+	        } else if(cmpsitionCtgryTxt.equals("[") | cmpsitionCtgryTxt.equals("]") | this.cmpsitionCtgryTxt.substring(this.cmpsitionCtgryTxt.length() - 1).equals("[")) {
+	        	this.cmpsitionCtgryTxt = this.cmpsitionCtgryTxt+cmpsitionCtgryTxt;
+	        } else  {
+	            this.cmpsitionCtgryTxt = this.cmpsitionCtgryTxt+ "," +cmpsitionCtgryTxt;
+	        }
+        }
+    }
+    
     
     
     public String getCmpsitionConfidentiality() {
@@ -215,6 +369,20 @@ public class Composition  implements java.io.Serializable {
     
     public void setCmpsitionConfidentiality(String cmpsitionConfidentiality) {
         this.cmpsitionConfidentiality = cmpsitionConfidentiality;
+    }
+    
+    public void addCmpsitionConfidentiality(String cmpsitionConfidentiality) {
+    	if( cmpsitionConfidentiality != null ) {
+	    	if( this.cmpsitionConfidentiality == null ) {
+	        	this.cmpsitionConfidentiality = cmpsitionConfidentiality;
+	        } else if(this.cmpsitionConfidentiality.substring(this.cmpsitionConfidentiality.length() - 1).equals("]") & cmpsitionConfidentiality.equals("[")) {
+	        	this.cmpsitionConfidentiality = this.cmpsitionConfidentiality+ "," + cmpsitionConfidentiality;
+	        } else if(cmpsitionConfidentiality.equals("[") | cmpsitionConfidentiality.equals("]") | this.cmpsitionConfidentiality.substring(this.cmpsitionConfidentiality.length() - 1).equals("[")) {
+	        	this.cmpsitionConfidentiality = this.cmpsitionConfidentiality+cmpsitionConfidentiality;
+	        } else  {
+	            this.cmpsitionConfidentiality = this.cmpsitionConfidentiality+ "," +cmpsitionConfidentiality;
+	        }
+        }
     }
     
     
@@ -227,6 +395,20 @@ public class Composition  implements java.io.Serializable {
         this.cmpsitionCustodian = cmpsitionCustodian;
     }
     
+    public void addCmpsitionCustodian(String cmpsitionCustodian) {
+    	if( cmpsitionCustodian != null ) {
+	    	if( this.cmpsitionCustodian == null ) {
+	        	this.cmpsitionCustodian = cmpsitionCustodian;
+	        } else if(this.cmpsitionCustodian.substring(this.cmpsitionCustodian.length() - 1).equals("]") & cmpsitionCustodian.equals("[")) {
+	        	this.cmpsitionCustodian = this.cmpsitionCustodian+ "," + cmpsitionCustodian;
+	        } else if(cmpsitionCustodian.equals("[") | cmpsitionCustodian.equals("]") | this.cmpsitionCustodian.substring(this.cmpsitionCustodian.length() - 1).equals("[")) {
+	        	this.cmpsitionCustodian = this.cmpsitionCustodian+cmpsitionCustodian;
+	        } else  {
+	            this.cmpsitionCustodian = this.cmpsitionCustodian+ "," +cmpsitionCustodian;
+	        }
+        }
+    }
+    
     
     
     public String getCmpsitionDt() {
@@ -235,6 +417,20 @@ public class Composition  implements java.io.Serializable {
     
     public void setCmpsitionDt(String cmpsitionDt) {
         this.cmpsitionDt = cmpsitionDt;
+    }
+    
+    public void addCmpsitionDt(String cmpsitionDt) {
+    	if( cmpsitionDt != null ) {
+	    	if( this.cmpsitionDt == null ) {
+	        	this.cmpsitionDt = cmpsitionDt;
+	        } else if(this.cmpsitionDt.substring(this.cmpsitionDt.length() - 1).equals("]") & cmpsitionDt.equals("[")) {
+	        	this.cmpsitionDt = this.cmpsitionDt+ "," + cmpsitionDt;
+	        } else if(cmpsitionDt.equals("[") | cmpsitionDt.equals("]") | this.cmpsitionDt.substring(this.cmpsitionDt.length() - 1).equals("[")) {
+	        	this.cmpsitionDt = this.cmpsitionDt+cmpsitionDt;
+	        } else  {
+	            this.cmpsitionDt = this.cmpsitionDt+ "," +cmpsitionDt;
+	        }
+        }
     }
     
     
@@ -247,6 +443,20 @@ public class Composition  implements java.io.Serializable {
         this.cmpsitionEnc = cmpsitionEnc;
     }
     
+    public void addCmpsitionEnc(String cmpsitionEnc) {
+    	if( cmpsitionEnc != null ) {
+	    	if( this.cmpsitionEnc == null ) {
+	        	this.cmpsitionEnc = cmpsitionEnc;
+	        } else if(this.cmpsitionEnc.substring(this.cmpsitionEnc.length() - 1).equals("]") & cmpsitionEnc.equals("[")) {
+	        	this.cmpsitionEnc = this.cmpsitionEnc+ "," + cmpsitionEnc;
+	        } else if(cmpsitionEnc.equals("[") | cmpsitionEnc.equals("]") | this.cmpsitionEnc.substring(this.cmpsitionEnc.length() - 1).equals("[")) {
+	        	this.cmpsitionEnc = this.cmpsitionEnc+cmpsitionEnc;
+	        } else  {
+	            this.cmpsitionEnc = this.cmpsitionEnc+ "," +cmpsitionEnc;
+	        }
+        }
+    }
+    
     
     
     public String getCmpsitionEvntCdCdgCd() {
@@ -255,6 +465,20 @@ public class Composition  implements java.io.Serializable {
     
     public void setCmpsitionEvntCdCdgCd(String cmpsitionEvntCdCdgCd) {
         this.cmpsitionEvntCdCdgCd = cmpsitionEvntCdCdgCd;
+    }
+    
+    public void addCmpsitionEvntCdCdgCd(String cmpsitionEvntCdCdgCd) {
+    	if( cmpsitionEvntCdCdgCd != null ) {
+	    	if( this.cmpsitionEvntCdCdgCd == null ) {
+	        	this.cmpsitionEvntCdCdgCd = cmpsitionEvntCdCdgCd;
+	        } else if(this.cmpsitionEvntCdCdgCd.substring(this.cmpsitionEvntCdCdgCd.length() - 1).equals("]") & cmpsitionEvntCdCdgCd.equals("[")) {
+	        	this.cmpsitionEvntCdCdgCd = this.cmpsitionEvntCdCdgCd+ "," + cmpsitionEvntCdCdgCd;
+	        } else if(cmpsitionEvntCdCdgCd.equals("[") | cmpsitionEvntCdCdgCd.equals("]") | this.cmpsitionEvntCdCdgCd.substring(this.cmpsitionEvntCdCdgCd.length() - 1).equals("[")) {
+	        	this.cmpsitionEvntCdCdgCd = this.cmpsitionEvntCdCdgCd+cmpsitionEvntCdCdgCd;
+	        } else  {
+	            this.cmpsitionEvntCdCdgCd = this.cmpsitionEvntCdCdgCd+ "," +cmpsitionEvntCdCdgCd;
+	        }
+        }
     }
     
     
@@ -267,6 +491,20 @@ public class Composition  implements java.io.Serializable {
         this.cmpsitionEvntCdCdgDsply = cmpsitionEvntCdCdgDsply;
     }
     
+    public void addCmpsitionEvntCdCdgDsply(String cmpsitionEvntCdCdgDsply) {
+    	if( cmpsitionEvntCdCdgDsply != null ) {
+	    	if( this.cmpsitionEvntCdCdgDsply == null ) {
+	        	this.cmpsitionEvntCdCdgDsply = cmpsitionEvntCdCdgDsply;
+	        } else if(this.cmpsitionEvntCdCdgDsply.substring(this.cmpsitionEvntCdCdgDsply.length() - 1).equals("]") & cmpsitionEvntCdCdgDsply.equals("[")) {
+	        	this.cmpsitionEvntCdCdgDsply = this.cmpsitionEvntCdCdgDsply+ "," + cmpsitionEvntCdCdgDsply;
+	        } else if(cmpsitionEvntCdCdgDsply.equals("[") | cmpsitionEvntCdCdgDsply.equals("]") | this.cmpsitionEvntCdCdgDsply.substring(this.cmpsitionEvntCdCdgDsply.length() - 1).equals("[")) {
+	        	this.cmpsitionEvntCdCdgDsply = this.cmpsitionEvntCdCdgDsply+cmpsitionEvntCdCdgDsply;
+	        } else  {
+	            this.cmpsitionEvntCdCdgDsply = this.cmpsitionEvntCdCdgDsply+ "," +cmpsitionEvntCdCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getCmpsitionEvntCdCdgSys() {
@@ -275,6 +513,20 @@ public class Composition  implements java.io.Serializable {
     
     public void setCmpsitionEvntCdCdgSys(String cmpsitionEvntCdCdgSys) {
         this.cmpsitionEvntCdCdgSys = cmpsitionEvntCdCdgSys;
+    }
+    
+    public void addCmpsitionEvntCdCdgSys(String cmpsitionEvntCdCdgSys) {
+    	if( cmpsitionEvntCdCdgSys != null ) {
+	    	if( this.cmpsitionEvntCdCdgSys == null ) {
+	        	this.cmpsitionEvntCdCdgSys = cmpsitionEvntCdCdgSys;
+	        } else if(this.cmpsitionEvntCdCdgSys.substring(this.cmpsitionEvntCdCdgSys.length() - 1).equals("]") & cmpsitionEvntCdCdgSys.equals("[")) {
+	        	this.cmpsitionEvntCdCdgSys = this.cmpsitionEvntCdCdgSys+ "," + cmpsitionEvntCdCdgSys;
+	        } else if(cmpsitionEvntCdCdgSys.equals("[") | cmpsitionEvntCdCdgSys.equals("]") | this.cmpsitionEvntCdCdgSys.substring(this.cmpsitionEvntCdCdgSys.length() - 1).equals("[")) {
+	        	this.cmpsitionEvntCdCdgSys = this.cmpsitionEvntCdCdgSys+cmpsitionEvntCdCdgSys;
+	        } else  {
+	            this.cmpsitionEvntCdCdgSys = this.cmpsitionEvntCdCdgSys+ "," +cmpsitionEvntCdCdgSys;
+	        }
+        }
     }
     
     
@@ -287,6 +539,20 @@ public class Composition  implements java.io.Serializable {
         this.cmpsitionEvntCdCdgUsrSltd = cmpsitionEvntCdCdgUsrSltd;
     }
     
+    public void addCmpsitionEvntCdCdgUsrSltd(String cmpsitionEvntCdCdgUsrSltd) {
+    	if( cmpsitionEvntCdCdgUsrSltd != null ) {
+	    	if( this.cmpsitionEvntCdCdgUsrSltd == null ) {
+	        	this.cmpsitionEvntCdCdgUsrSltd = cmpsitionEvntCdCdgUsrSltd;
+	        } else if(this.cmpsitionEvntCdCdgUsrSltd.substring(this.cmpsitionEvntCdCdgUsrSltd.length() - 1).equals("]") & cmpsitionEvntCdCdgUsrSltd.equals("[")) {
+	        	this.cmpsitionEvntCdCdgUsrSltd = this.cmpsitionEvntCdCdgUsrSltd+ "," + cmpsitionEvntCdCdgUsrSltd;
+	        } else if(cmpsitionEvntCdCdgUsrSltd.equals("[") | cmpsitionEvntCdCdgUsrSltd.equals("]") | this.cmpsitionEvntCdCdgUsrSltd.substring(this.cmpsitionEvntCdCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.cmpsitionEvntCdCdgUsrSltd = this.cmpsitionEvntCdCdgUsrSltd+cmpsitionEvntCdCdgUsrSltd;
+	        } else  {
+	            this.cmpsitionEvntCdCdgUsrSltd = this.cmpsitionEvntCdCdgUsrSltd+ "," +cmpsitionEvntCdCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getCmpsitionEvntCdCdgVrsn() {
@@ -295,6 +561,20 @@ public class Composition  implements java.io.Serializable {
     
     public void setCmpsitionEvntCdCdgVrsn(String cmpsitionEvntCdCdgVrsn) {
         this.cmpsitionEvntCdCdgVrsn = cmpsitionEvntCdCdgVrsn;
+    }
+    
+    public void addCmpsitionEvntCdCdgVrsn(String cmpsitionEvntCdCdgVrsn) {
+    	if( cmpsitionEvntCdCdgVrsn != null ) {
+	    	if( this.cmpsitionEvntCdCdgVrsn == null ) {
+	        	this.cmpsitionEvntCdCdgVrsn = cmpsitionEvntCdCdgVrsn;
+	        } else if(this.cmpsitionEvntCdCdgVrsn.substring(this.cmpsitionEvntCdCdgVrsn.length() - 1).equals("]") & cmpsitionEvntCdCdgVrsn.equals("[")) {
+	        	this.cmpsitionEvntCdCdgVrsn = this.cmpsitionEvntCdCdgVrsn+ "," + cmpsitionEvntCdCdgVrsn;
+	        } else if(cmpsitionEvntCdCdgVrsn.equals("[") | cmpsitionEvntCdCdgVrsn.equals("]") | this.cmpsitionEvntCdCdgVrsn.substring(this.cmpsitionEvntCdCdgVrsn.length() - 1).equals("[")) {
+	        	this.cmpsitionEvntCdCdgVrsn = this.cmpsitionEvntCdCdgVrsn+cmpsitionEvntCdCdgVrsn;
+	        } else  {
+	            this.cmpsitionEvntCdCdgVrsn = this.cmpsitionEvntCdCdgVrsn+ "," +cmpsitionEvntCdCdgVrsn;
+	        }
+        }
     }
     
     
@@ -307,6 +587,20 @@ public class Composition  implements java.io.Serializable {
         this.cmpsitionEvntCdTxt = cmpsitionEvntCdTxt;
     }
     
+    public void addCmpsitionEvntCdTxt(String cmpsitionEvntCdTxt) {
+    	if( cmpsitionEvntCdTxt != null ) {
+	    	if( this.cmpsitionEvntCdTxt == null ) {
+	        	this.cmpsitionEvntCdTxt = cmpsitionEvntCdTxt;
+	        } else if(this.cmpsitionEvntCdTxt.substring(this.cmpsitionEvntCdTxt.length() - 1).equals("]") & cmpsitionEvntCdTxt.equals("[")) {
+	        	this.cmpsitionEvntCdTxt = this.cmpsitionEvntCdTxt+ "," + cmpsitionEvntCdTxt;
+	        } else if(cmpsitionEvntCdTxt.equals("[") | cmpsitionEvntCdTxt.equals("]") | this.cmpsitionEvntCdTxt.substring(this.cmpsitionEvntCdTxt.length() - 1).equals("[")) {
+	        	this.cmpsitionEvntCdTxt = this.cmpsitionEvntCdTxt+cmpsitionEvntCdTxt;
+	        } else  {
+	            this.cmpsitionEvntCdTxt = this.cmpsitionEvntCdTxt+ "," +cmpsitionEvntCdTxt;
+	        }
+        }
+    }
+    
     
     
     public String getCmpsitionEvntDtl() {
@@ -315,6 +609,20 @@ public class Composition  implements java.io.Serializable {
     
     public void setCmpsitionEvntDtl(String cmpsitionEvntDtl) {
         this.cmpsitionEvntDtl = cmpsitionEvntDtl;
+    }
+    
+    public void addCmpsitionEvntDtl(String cmpsitionEvntDtl) {
+    	if( cmpsitionEvntDtl != null ) {
+	    	if( this.cmpsitionEvntDtl == null ) {
+	        	this.cmpsitionEvntDtl = cmpsitionEvntDtl;
+	        } else if(this.cmpsitionEvntDtl.substring(this.cmpsitionEvntDtl.length() - 1).equals("]") & cmpsitionEvntDtl.equals("[")) {
+	        	this.cmpsitionEvntDtl = this.cmpsitionEvntDtl+ "," + cmpsitionEvntDtl;
+	        } else if(cmpsitionEvntDtl.equals("[") | cmpsitionEvntDtl.equals("]") | this.cmpsitionEvntDtl.substring(this.cmpsitionEvntDtl.length() - 1).equals("[")) {
+	        	this.cmpsitionEvntDtl = this.cmpsitionEvntDtl+cmpsitionEvntDtl;
+	        } else  {
+	            this.cmpsitionEvntDtl = this.cmpsitionEvntDtl+ "," +cmpsitionEvntDtl;
+	        }
+        }
     }
     
     
@@ -327,6 +635,20 @@ public class Composition  implements java.io.Serializable {
         this.cmpsitionEvntPrdEnd = cmpsitionEvntPrdEnd;
     }
     
+    public void addCmpsitionEvntPrdEnd(String cmpsitionEvntPrdEnd) {
+    	if( cmpsitionEvntPrdEnd != null ) {
+	    	if( this.cmpsitionEvntPrdEnd == null ) {
+	        	this.cmpsitionEvntPrdEnd = cmpsitionEvntPrdEnd;
+	        } else if(this.cmpsitionEvntPrdEnd.substring(this.cmpsitionEvntPrdEnd.length() - 1).equals("]") & cmpsitionEvntPrdEnd.equals("[")) {
+	        	this.cmpsitionEvntPrdEnd = this.cmpsitionEvntPrdEnd+ "," + cmpsitionEvntPrdEnd;
+	        } else if(cmpsitionEvntPrdEnd.equals("[") | cmpsitionEvntPrdEnd.equals("]") | this.cmpsitionEvntPrdEnd.substring(this.cmpsitionEvntPrdEnd.length() - 1).equals("[")) {
+	        	this.cmpsitionEvntPrdEnd = this.cmpsitionEvntPrdEnd+cmpsitionEvntPrdEnd;
+	        } else  {
+	            this.cmpsitionEvntPrdEnd = this.cmpsitionEvntPrdEnd+ "," +cmpsitionEvntPrdEnd;
+	        }
+        }
+    }
+    
     
     
     public String getCmpsitionEvntPrdStrt() {
@@ -335,6 +657,20 @@ public class Composition  implements java.io.Serializable {
     
     public void setCmpsitionEvntPrdStrt(String cmpsitionEvntPrdStrt) {
         this.cmpsitionEvntPrdStrt = cmpsitionEvntPrdStrt;
+    }
+    
+    public void addCmpsitionEvntPrdStrt(String cmpsitionEvntPrdStrt) {
+    	if( cmpsitionEvntPrdStrt != null ) {
+	    	if( this.cmpsitionEvntPrdStrt == null ) {
+	        	this.cmpsitionEvntPrdStrt = cmpsitionEvntPrdStrt;
+	        } else if(this.cmpsitionEvntPrdStrt.substring(this.cmpsitionEvntPrdStrt.length() - 1).equals("]") & cmpsitionEvntPrdStrt.equals("[")) {
+	        	this.cmpsitionEvntPrdStrt = this.cmpsitionEvntPrdStrt+ "," + cmpsitionEvntPrdStrt;
+	        } else if(cmpsitionEvntPrdStrt.equals("[") | cmpsitionEvntPrdStrt.equals("]") | this.cmpsitionEvntPrdStrt.substring(this.cmpsitionEvntPrdStrt.length() - 1).equals("[")) {
+	        	this.cmpsitionEvntPrdStrt = this.cmpsitionEvntPrdStrt+cmpsitionEvntPrdStrt;
+	        } else  {
+	            this.cmpsitionEvntPrdStrt = this.cmpsitionEvntPrdStrt+ "," +cmpsitionEvntPrdStrt;
+	        }
+        }
     }
     
     
@@ -347,6 +683,20 @@ public class Composition  implements java.io.Serializable {
         this.cmpsitionIdAssigner = cmpsitionIdAssigner;
     }
     
+    public void addCmpsitionIdAssigner(String cmpsitionIdAssigner) {
+    	if( cmpsitionIdAssigner != null ) {
+	    	if( this.cmpsitionIdAssigner == null ) {
+	        	this.cmpsitionIdAssigner = cmpsitionIdAssigner;
+	        } else if(this.cmpsitionIdAssigner.substring(this.cmpsitionIdAssigner.length() - 1).equals("]") & cmpsitionIdAssigner.equals("[")) {
+	        	this.cmpsitionIdAssigner = this.cmpsitionIdAssigner+ "," + cmpsitionIdAssigner;
+	        } else if(cmpsitionIdAssigner.equals("[") | cmpsitionIdAssigner.equals("]") | this.cmpsitionIdAssigner.substring(this.cmpsitionIdAssigner.length() - 1).equals("[")) {
+	        	this.cmpsitionIdAssigner = this.cmpsitionIdAssigner+cmpsitionIdAssigner;
+	        } else  {
+	            this.cmpsitionIdAssigner = this.cmpsitionIdAssigner+ "," +cmpsitionIdAssigner;
+	        }
+        }
+    }
+    
     
     
     public String getCmpsitionIdPrdEnd() {
@@ -355,6 +705,20 @@ public class Composition  implements java.io.Serializable {
     
     public void setCmpsitionIdPrdEnd(String cmpsitionIdPrdEnd) {
         this.cmpsitionIdPrdEnd = cmpsitionIdPrdEnd;
+    }
+    
+    public void addCmpsitionIdPrdEnd(String cmpsitionIdPrdEnd) {
+    	if( cmpsitionIdPrdEnd != null ) {
+	    	if( this.cmpsitionIdPrdEnd == null ) {
+	        	this.cmpsitionIdPrdEnd = cmpsitionIdPrdEnd;
+	        } else if(this.cmpsitionIdPrdEnd.substring(this.cmpsitionIdPrdEnd.length() - 1).equals("]") & cmpsitionIdPrdEnd.equals("[")) {
+	        	this.cmpsitionIdPrdEnd = this.cmpsitionIdPrdEnd+ "," + cmpsitionIdPrdEnd;
+	        } else if(cmpsitionIdPrdEnd.equals("[") | cmpsitionIdPrdEnd.equals("]") | this.cmpsitionIdPrdEnd.substring(this.cmpsitionIdPrdEnd.length() - 1).equals("[")) {
+	        	this.cmpsitionIdPrdEnd = this.cmpsitionIdPrdEnd+cmpsitionIdPrdEnd;
+	        } else  {
+	            this.cmpsitionIdPrdEnd = this.cmpsitionIdPrdEnd+ "," +cmpsitionIdPrdEnd;
+	        }
+        }
     }
     
     
@@ -367,6 +731,20 @@ public class Composition  implements java.io.Serializable {
         this.cmpsitionIdPrdStrt = cmpsitionIdPrdStrt;
     }
     
+    public void addCmpsitionIdPrdStrt(String cmpsitionIdPrdStrt) {
+    	if( cmpsitionIdPrdStrt != null ) {
+	    	if( this.cmpsitionIdPrdStrt == null ) {
+	        	this.cmpsitionIdPrdStrt = cmpsitionIdPrdStrt;
+	        } else if(this.cmpsitionIdPrdStrt.substring(this.cmpsitionIdPrdStrt.length() - 1).equals("]") & cmpsitionIdPrdStrt.equals("[")) {
+	        	this.cmpsitionIdPrdStrt = this.cmpsitionIdPrdStrt+ "," + cmpsitionIdPrdStrt;
+	        } else if(cmpsitionIdPrdStrt.equals("[") | cmpsitionIdPrdStrt.equals("]") | this.cmpsitionIdPrdStrt.substring(this.cmpsitionIdPrdStrt.length() - 1).equals("[")) {
+	        	this.cmpsitionIdPrdStrt = this.cmpsitionIdPrdStrt+cmpsitionIdPrdStrt;
+	        } else  {
+	            this.cmpsitionIdPrdStrt = this.cmpsitionIdPrdStrt+ "," +cmpsitionIdPrdStrt;
+	        }
+        }
+    }
+    
     
     
     public String getCmpsitionIdSys() {
@@ -375,6 +753,20 @@ public class Composition  implements java.io.Serializable {
     
     public void setCmpsitionIdSys(String cmpsitionIdSys) {
         this.cmpsitionIdSys = cmpsitionIdSys;
+    }
+    
+    public void addCmpsitionIdSys(String cmpsitionIdSys) {
+    	if( cmpsitionIdSys != null ) {
+	    	if( this.cmpsitionIdSys == null ) {
+	        	this.cmpsitionIdSys = cmpsitionIdSys;
+	        } else if(this.cmpsitionIdSys.substring(this.cmpsitionIdSys.length() - 1).equals("]") & cmpsitionIdSys.equals("[")) {
+	        	this.cmpsitionIdSys = this.cmpsitionIdSys+ "," + cmpsitionIdSys;
+	        } else if(cmpsitionIdSys.equals("[") | cmpsitionIdSys.equals("]") | this.cmpsitionIdSys.substring(this.cmpsitionIdSys.length() - 1).equals("[")) {
+	        	this.cmpsitionIdSys = this.cmpsitionIdSys+cmpsitionIdSys;
+	        } else  {
+	            this.cmpsitionIdSys = this.cmpsitionIdSys+ "," +cmpsitionIdSys;
+	        }
+        }
     }
     
     
@@ -387,6 +779,20 @@ public class Composition  implements java.io.Serializable {
         this.cmpsitionIdTypCdgCd = cmpsitionIdTypCdgCd;
     }
     
+    public void addCmpsitionIdTypCdgCd(String cmpsitionIdTypCdgCd) {
+    	if( cmpsitionIdTypCdgCd != null ) {
+	    	if( this.cmpsitionIdTypCdgCd == null ) {
+	        	this.cmpsitionIdTypCdgCd = cmpsitionIdTypCdgCd;
+	        } else if(this.cmpsitionIdTypCdgCd.substring(this.cmpsitionIdTypCdgCd.length() - 1).equals("]") & cmpsitionIdTypCdgCd.equals("[")) {
+	        	this.cmpsitionIdTypCdgCd = this.cmpsitionIdTypCdgCd+ "," + cmpsitionIdTypCdgCd;
+	        } else if(cmpsitionIdTypCdgCd.equals("[") | cmpsitionIdTypCdgCd.equals("]") | this.cmpsitionIdTypCdgCd.substring(this.cmpsitionIdTypCdgCd.length() - 1).equals("[")) {
+	        	this.cmpsitionIdTypCdgCd = this.cmpsitionIdTypCdgCd+cmpsitionIdTypCdgCd;
+	        } else  {
+	            this.cmpsitionIdTypCdgCd = this.cmpsitionIdTypCdgCd+ "," +cmpsitionIdTypCdgCd;
+	        }
+        }
+    }
+    
     
     
     public String getCmpsitionIdTypCdgDsply() {
@@ -395,6 +801,20 @@ public class Composition  implements java.io.Serializable {
     
     public void setCmpsitionIdTypCdgDsply(String cmpsitionIdTypCdgDsply) {
         this.cmpsitionIdTypCdgDsply = cmpsitionIdTypCdgDsply;
+    }
+    
+    public void addCmpsitionIdTypCdgDsply(String cmpsitionIdTypCdgDsply) {
+    	if( cmpsitionIdTypCdgDsply != null ) {
+	    	if( this.cmpsitionIdTypCdgDsply == null ) {
+	        	this.cmpsitionIdTypCdgDsply = cmpsitionIdTypCdgDsply;
+	        } else if(this.cmpsitionIdTypCdgDsply.substring(this.cmpsitionIdTypCdgDsply.length() - 1).equals("]") & cmpsitionIdTypCdgDsply.equals("[")) {
+	        	this.cmpsitionIdTypCdgDsply = this.cmpsitionIdTypCdgDsply+ "," + cmpsitionIdTypCdgDsply;
+	        } else if(cmpsitionIdTypCdgDsply.equals("[") | cmpsitionIdTypCdgDsply.equals("]") | this.cmpsitionIdTypCdgDsply.substring(this.cmpsitionIdTypCdgDsply.length() - 1).equals("[")) {
+	        	this.cmpsitionIdTypCdgDsply = this.cmpsitionIdTypCdgDsply+cmpsitionIdTypCdgDsply;
+	        } else  {
+	            this.cmpsitionIdTypCdgDsply = this.cmpsitionIdTypCdgDsply+ "," +cmpsitionIdTypCdgDsply;
+	        }
+        }
     }
     
     
@@ -407,6 +827,20 @@ public class Composition  implements java.io.Serializable {
         this.cmpsitionIdTypCdgSys = cmpsitionIdTypCdgSys;
     }
     
+    public void addCmpsitionIdTypCdgSys(String cmpsitionIdTypCdgSys) {
+    	if( cmpsitionIdTypCdgSys != null ) {
+	    	if( this.cmpsitionIdTypCdgSys == null ) {
+	        	this.cmpsitionIdTypCdgSys = cmpsitionIdTypCdgSys;
+	        } else if(this.cmpsitionIdTypCdgSys.substring(this.cmpsitionIdTypCdgSys.length() - 1).equals("]") & cmpsitionIdTypCdgSys.equals("[")) {
+	        	this.cmpsitionIdTypCdgSys = this.cmpsitionIdTypCdgSys+ "," + cmpsitionIdTypCdgSys;
+	        } else if(cmpsitionIdTypCdgSys.equals("[") | cmpsitionIdTypCdgSys.equals("]") | this.cmpsitionIdTypCdgSys.substring(this.cmpsitionIdTypCdgSys.length() - 1).equals("[")) {
+	        	this.cmpsitionIdTypCdgSys = this.cmpsitionIdTypCdgSys+cmpsitionIdTypCdgSys;
+	        } else  {
+	            this.cmpsitionIdTypCdgSys = this.cmpsitionIdTypCdgSys+ "," +cmpsitionIdTypCdgSys;
+	        }
+        }
+    }
+    
     
     
     public String getCmpsitionIdTypCdgUsrSltd() {
@@ -415,6 +849,20 @@ public class Composition  implements java.io.Serializable {
     
     public void setCmpsitionIdTypCdgUsrSltd(String cmpsitionIdTypCdgUsrSltd) {
         this.cmpsitionIdTypCdgUsrSltd = cmpsitionIdTypCdgUsrSltd;
+    }
+    
+    public void addCmpsitionIdTypCdgUsrSltd(String cmpsitionIdTypCdgUsrSltd) {
+    	if( cmpsitionIdTypCdgUsrSltd != null ) {
+	    	if( this.cmpsitionIdTypCdgUsrSltd == null ) {
+	        	this.cmpsitionIdTypCdgUsrSltd = cmpsitionIdTypCdgUsrSltd;
+	        } else if(this.cmpsitionIdTypCdgUsrSltd.substring(this.cmpsitionIdTypCdgUsrSltd.length() - 1).equals("]") & cmpsitionIdTypCdgUsrSltd.equals("[")) {
+	        	this.cmpsitionIdTypCdgUsrSltd = this.cmpsitionIdTypCdgUsrSltd+ "," + cmpsitionIdTypCdgUsrSltd;
+	        } else if(cmpsitionIdTypCdgUsrSltd.equals("[") | cmpsitionIdTypCdgUsrSltd.equals("]") | this.cmpsitionIdTypCdgUsrSltd.substring(this.cmpsitionIdTypCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.cmpsitionIdTypCdgUsrSltd = this.cmpsitionIdTypCdgUsrSltd+cmpsitionIdTypCdgUsrSltd;
+	        } else  {
+	            this.cmpsitionIdTypCdgUsrSltd = this.cmpsitionIdTypCdgUsrSltd+ "," +cmpsitionIdTypCdgUsrSltd;
+	        }
+        }
     }
     
     
@@ -427,6 +875,20 @@ public class Composition  implements java.io.Serializable {
         this.cmpsitionIdTypCdgVrsn = cmpsitionIdTypCdgVrsn;
     }
     
+    public void addCmpsitionIdTypCdgVrsn(String cmpsitionIdTypCdgVrsn) {
+    	if( cmpsitionIdTypCdgVrsn != null ) {
+	    	if( this.cmpsitionIdTypCdgVrsn == null ) {
+	        	this.cmpsitionIdTypCdgVrsn = cmpsitionIdTypCdgVrsn;
+	        } else if(this.cmpsitionIdTypCdgVrsn.substring(this.cmpsitionIdTypCdgVrsn.length() - 1).equals("]") & cmpsitionIdTypCdgVrsn.equals("[")) {
+	        	this.cmpsitionIdTypCdgVrsn = this.cmpsitionIdTypCdgVrsn+ "," + cmpsitionIdTypCdgVrsn;
+	        } else if(cmpsitionIdTypCdgVrsn.equals("[") | cmpsitionIdTypCdgVrsn.equals("]") | this.cmpsitionIdTypCdgVrsn.substring(this.cmpsitionIdTypCdgVrsn.length() - 1).equals("[")) {
+	        	this.cmpsitionIdTypCdgVrsn = this.cmpsitionIdTypCdgVrsn+cmpsitionIdTypCdgVrsn;
+	        } else  {
+	            this.cmpsitionIdTypCdgVrsn = this.cmpsitionIdTypCdgVrsn+ "," +cmpsitionIdTypCdgVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getCmpsitionIdTypTxt() {
@@ -435,6 +897,20 @@ public class Composition  implements java.io.Serializable {
     
     public void setCmpsitionIdTypTxt(String cmpsitionIdTypTxt) {
         this.cmpsitionIdTypTxt = cmpsitionIdTypTxt;
+    }
+    
+    public void addCmpsitionIdTypTxt(String cmpsitionIdTypTxt) {
+    	if( cmpsitionIdTypTxt != null ) {
+	    	if( this.cmpsitionIdTypTxt == null ) {
+	        	this.cmpsitionIdTypTxt = cmpsitionIdTypTxt;
+	        } else if(this.cmpsitionIdTypTxt.substring(this.cmpsitionIdTypTxt.length() - 1).equals("]") & cmpsitionIdTypTxt.equals("[")) {
+	        	this.cmpsitionIdTypTxt = this.cmpsitionIdTypTxt+ "," + cmpsitionIdTypTxt;
+	        } else if(cmpsitionIdTypTxt.equals("[") | cmpsitionIdTypTxt.equals("]") | this.cmpsitionIdTypTxt.substring(this.cmpsitionIdTypTxt.length() - 1).equals("[")) {
+	        	this.cmpsitionIdTypTxt = this.cmpsitionIdTypTxt+cmpsitionIdTypTxt;
+	        } else  {
+	            this.cmpsitionIdTypTxt = this.cmpsitionIdTypTxt+ "," +cmpsitionIdTypTxt;
+	        }
+        }
     }
     
     
@@ -447,6 +923,20 @@ public class Composition  implements java.io.Serializable {
         this.cmpsitionIdUse = cmpsitionIdUse;
     }
     
+    public void addCmpsitionIdUse(String cmpsitionIdUse) {
+    	if( cmpsitionIdUse != null ) {
+	    	if( this.cmpsitionIdUse == null ) {
+	        	this.cmpsitionIdUse = cmpsitionIdUse;
+	        } else if(this.cmpsitionIdUse.substring(this.cmpsitionIdUse.length() - 1).equals("]") & cmpsitionIdUse.equals("[")) {
+	        	this.cmpsitionIdUse = this.cmpsitionIdUse+ "," + cmpsitionIdUse;
+	        } else if(cmpsitionIdUse.equals("[") | cmpsitionIdUse.equals("]") | this.cmpsitionIdUse.substring(this.cmpsitionIdUse.length() - 1).equals("[")) {
+	        	this.cmpsitionIdUse = this.cmpsitionIdUse+cmpsitionIdUse;
+	        } else  {
+	            this.cmpsitionIdUse = this.cmpsitionIdUse+ "," +cmpsitionIdUse;
+	        }
+        }
+    }
+    
     
     
     public String getCmpsitionIdVl() {
@@ -455,6 +945,20 @@ public class Composition  implements java.io.Serializable {
     
     public void setCmpsitionIdVl(String cmpsitionIdVl) {
         this.cmpsitionIdVl = cmpsitionIdVl;
+    }
+    
+    public void addCmpsitionIdVl(String cmpsitionIdVl) {
+    	if( cmpsitionIdVl != null ) {
+	    	if( this.cmpsitionIdVl == null ) {
+	        	this.cmpsitionIdVl = cmpsitionIdVl;
+	        } else if(this.cmpsitionIdVl.substring(this.cmpsitionIdVl.length() - 1).equals("]") & cmpsitionIdVl.equals("[")) {
+	        	this.cmpsitionIdVl = this.cmpsitionIdVl+ "," + cmpsitionIdVl;
+	        } else if(cmpsitionIdVl.equals("[") | cmpsitionIdVl.equals("]") | this.cmpsitionIdVl.substring(this.cmpsitionIdVl.length() - 1).equals("[")) {
+	        	this.cmpsitionIdVl = this.cmpsitionIdVl+cmpsitionIdVl;
+	        } else  {
+	            this.cmpsitionIdVl = this.cmpsitionIdVl+ "," +cmpsitionIdVl;
+	        }
+        }
     }
     
     
@@ -467,6 +971,20 @@ public class Composition  implements java.io.Serializable {
         this.cmpsitionRelatesToCd = cmpsitionRelatesToCd;
     }
     
+    public void addCmpsitionRelatesToCd(String cmpsitionRelatesToCd) {
+    	if( cmpsitionRelatesToCd != null ) {
+	    	if( this.cmpsitionRelatesToCd == null ) {
+	        	this.cmpsitionRelatesToCd = cmpsitionRelatesToCd;
+	        } else if(this.cmpsitionRelatesToCd.substring(this.cmpsitionRelatesToCd.length() - 1).equals("]") & cmpsitionRelatesToCd.equals("[")) {
+	        	this.cmpsitionRelatesToCd = this.cmpsitionRelatesToCd+ "," + cmpsitionRelatesToCd;
+	        } else if(cmpsitionRelatesToCd.equals("[") | cmpsitionRelatesToCd.equals("]") | this.cmpsitionRelatesToCd.substring(this.cmpsitionRelatesToCd.length() - 1).equals("[")) {
+	        	this.cmpsitionRelatesToCd = this.cmpsitionRelatesToCd+cmpsitionRelatesToCd;
+	        } else  {
+	            this.cmpsitionRelatesToCd = this.cmpsitionRelatesToCd+ "," +cmpsitionRelatesToCd;
+	        }
+        }
+    }
+    
     
     
     public String getCmpsitionRelatesToTargetIdAssigner() {
@@ -475,6 +993,20 @@ public class Composition  implements java.io.Serializable {
     
     public void setCmpsitionRelatesToTargetIdAssigner(String cmpsitionRelatesToTargetIdAssigner) {
         this.cmpsitionRelatesToTargetIdAssigner = cmpsitionRelatesToTargetIdAssigner;
+    }
+    
+    public void addCmpsitionRelatesToTargetIdAssigner(String cmpsitionRelatesToTargetIdAssigner) {
+    	if( cmpsitionRelatesToTargetIdAssigner != null ) {
+	    	if( this.cmpsitionRelatesToTargetIdAssigner == null ) {
+	        	this.cmpsitionRelatesToTargetIdAssigner = cmpsitionRelatesToTargetIdAssigner;
+	        } else if(this.cmpsitionRelatesToTargetIdAssigner.substring(this.cmpsitionRelatesToTargetIdAssigner.length() - 1).equals("]") & cmpsitionRelatesToTargetIdAssigner.equals("[")) {
+	        	this.cmpsitionRelatesToTargetIdAssigner = this.cmpsitionRelatesToTargetIdAssigner+ "," + cmpsitionRelatesToTargetIdAssigner;
+	        } else if(cmpsitionRelatesToTargetIdAssigner.equals("[") | cmpsitionRelatesToTargetIdAssigner.equals("]") | this.cmpsitionRelatesToTargetIdAssigner.substring(this.cmpsitionRelatesToTargetIdAssigner.length() - 1).equals("[")) {
+	        	this.cmpsitionRelatesToTargetIdAssigner = this.cmpsitionRelatesToTargetIdAssigner+cmpsitionRelatesToTargetIdAssigner;
+	        } else  {
+	            this.cmpsitionRelatesToTargetIdAssigner = this.cmpsitionRelatesToTargetIdAssigner+ "," +cmpsitionRelatesToTargetIdAssigner;
+	        }
+        }
     }
     
     
@@ -487,6 +1019,20 @@ public class Composition  implements java.io.Serializable {
         this.cmpsitionRelatesToTargetIdPrdEnd = cmpsitionRelatesToTargetIdPrdEnd;
     }
     
+    public void addCmpsitionRelatesToTargetIdPrdEnd(String cmpsitionRelatesToTargetIdPrdEnd) {
+    	if( cmpsitionRelatesToTargetIdPrdEnd != null ) {
+	    	if( this.cmpsitionRelatesToTargetIdPrdEnd == null ) {
+	        	this.cmpsitionRelatesToTargetIdPrdEnd = cmpsitionRelatesToTargetIdPrdEnd;
+	        } else if(this.cmpsitionRelatesToTargetIdPrdEnd.substring(this.cmpsitionRelatesToTargetIdPrdEnd.length() - 1).equals("]") & cmpsitionRelatesToTargetIdPrdEnd.equals("[")) {
+	        	this.cmpsitionRelatesToTargetIdPrdEnd = this.cmpsitionRelatesToTargetIdPrdEnd+ "," + cmpsitionRelatesToTargetIdPrdEnd;
+	        } else if(cmpsitionRelatesToTargetIdPrdEnd.equals("[") | cmpsitionRelatesToTargetIdPrdEnd.equals("]") | this.cmpsitionRelatesToTargetIdPrdEnd.substring(this.cmpsitionRelatesToTargetIdPrdEnd.length() - 1).equals("[")) {
+	        	this.cmpsitionRelatesToTargetIdPrdEnd = this.cmpsitionRelatesToTargetIdPrdEnd+cmpsitionRelatesToTargetIdPrdEnd;
+	        } else  {
+	            this.cmpsitionRelatesToTargetIdPrdEnd = this.cmpsitionRelatesToTargetIdPrdEnd+ "," +cmpsitionRelatesToTargetIdPrdEnd;
+	        }
+        }
+    }
+    
     
     
     public String getCmpsitionRelatesToTargetIdPrdStrt() {
@@ -495,6 +1041,20 @@ public class Composition  implements java.io.Serializable {
     
     public void setCmpsitionRelatesToTargetIdPrdStrt(String cmpsitionRelatesToTargetIdPrdStrt) {
         this.cmpsitionRelatesToTargetIdPrdStrt = cmpsitionRelatesToTargetIdPrdStrt;
+    }
+    
+    public void addCmpsitionRelatesToTargetIdPrdStrt(String cmpsitionRelatesToTargetIdPrdStrt) {
+    	if( cmpsitionRelatesToTargetIdPrdStrt != null ) {
+	    	if( this.cmpsitionRelatesToTargetIdPrdStrt == null ) {
+	        	this.cmpsitionRelatesToTargetIdPrdStrt = cmpsitionRelatesToTargetIdPrdStrt;
+	        } else if(this.cmpsitionRelatesToTargetIdPrdStrt.substring(this.cmpsitionRelatesToTargetIdPrdStrt.length() - 1).equals("]") & cmpsitionRelatesToTargetIdPrdStrt.equals("[")) {
+	        	this.cmpsitionRelatesToTargetIdPrdStrt = this.cmpsitionRelatesToTargetIdPrdStrt+ "," + cmpsitionRelatesToTargetIdPrdStrt;
+	        } else if(cmpsitionRelatesToTargetIdPrdStrt.equals("[") | cmpsitionRelatesToTargetIdPrdStrt.equals("]") | this.cmpsitionRelatesToTargetIdPrdStrt.substring(this.cmpsitionRelatesToTargetIdPrdStrt.length() - 1).equals("[")) {
+	        	this.cmpsitionRelatesToTargetIdPrdStrt = this.cmpsitionRelatesToTargetIdPrdStrt+cmpsitionRelatesToTargetIdPrdStrt;
+	        } else  {
+	            this.cmpsitionRelatesToTargetIdPrdStrt = this.cmpsitionRelatesToTargetIdPrdStrt+ "," +cmpsitionRelatesToTargetIdPrdStrt;
+	        }
+        }
     }
     
     
@@ -507,6 +1067,20 @@ public class Composition  implements java.io.Serializable {
         this.cmpsitionRelatesToTargetIdSys = cmpsitionRelatesToTargetIdSys;
     }
     
+    public void addCmpsitionRelatesToTargetIdSys(String cmpsitionRelatesToTargetIdSys) {
+    	if( cmpsitionRelatesToTargetIdSys != null ) {
+	    	if( this.cmpsitionRelatesToTargetIdSys == null ) {
+	        	this.cmpsitionRelatesToTargetIdSys = cmpsitionRelatesToTargetIdSys;
+	        } else if(this.cmpsitionRelatesToTargetIdSys.substring(this.cmpsitionRelatesToTargetIdSys.length() - 1).equals("]") & cmpsitionRelatesToTargetIdSys.equals("[")) {
+	        	this.cmpsitionRelatesToTargetIdSys = this.cmpsitionRelatesToTargetIdSys+ "," + cmpsitionRelatesToTargetIdSys;
+	        } else if(cmpsitionRelatesToTargetIdSys.equals("[") | cmpsitionRelatesToTargetIdSys.equals("]") | this.cmpsitionRelatesToTargetIdSys.substring(this.cmpsitionRelatesToTargetIdSys.length() - 1).equals("[")) {
+	        	this.cmpsitionRelatesToTargetIdSys = this.cmpsitionRelatesToTargetIdSys+cmpsitionRelatesToTargetIdSys;
+	        } else  {
+	            this.cmpsitionRelatesToTargetIdSys = this.cmpsitionRelatesToTargetIdSys+ "," +cmpsitionRelatesToTargetIdSys;
+	        }
+        }
+    }
+    
     
     
     public String getCmpsitionRelatesToTargetIdTypCdgCd() {
@@ -515,6 +1089,20 @@ public class Composition  implements java.io.Serializable {
     
     public void setCmpsitionRelatesToTargetIdTypCdgCd(String cmpsitionRelatesToTargetIdTypCdgCd) {
         this.cmpsitionRelatesToTargetIdTypCdgCd = cmpsitionRelatesToTargetIdTypCdgCd;
+    }
+    
+    public void addCmpsitionRelatesToTargetIdTypCdgCd(String cmpsitionRelatesToTargetIdTypCdgCd) {
+    	if( cmpsitionRelatesToTargetIdTypCdgCd != null ) {
+	    	if( this.cmpsitionRelatesToTargetIdTypCdgCd == null ) {
+	        	this.cmpsitionRelatesToTargetIdTypCdgCd = cmpsitionRelatesToTargetIdTypCdgCd;
+	        } else if(this.cmpsitionRelatesToTargetIdTypCdgCd.substring(this.cmpsitionRelatesToTargetIdTypCdgCd.length() - 1).equals("]") & cmpsitionRelatesToTargetIdTypCdgCd.equals("[")) {
+	        	this.cmpsitionRelatesToTargetIdTypCdgCd = this.cmpsitionRelatesToTargetIdTypCdgCd+ "," + cmpsitionRelatesToTargetIdTypCdgCd;
+	        } else if(cmpsitionRelatesToTargetIdTypCdgCd.equals("[") | cmpsitionRelatesToTargetIdTypCdgCd.equals("]") | this.cmpsitionRelatesToTargetIdTypCdgCd.substring(this.cmpsitionRelatesToTargetIdTypCdgCd.length() - 1).equals("[")) {
+	        	this.cmpsitionRelatesToTargetIdTypCdgCd = this.cmpsitionRelatesToTargetIdTypCdgCd+cmpsitionRelatesToTargetIdTypCdgCd;
+	        } else  {
+	            this.cmpsitionRelatesToTargetIdTypCdgCd = this.cmpsitionRelatesToTargetIdTypCdgCd+ "," +cmpsitionRelatesToTargetIdTypCdgCd;
+	        }
+        }
     }
     
     
@@ -527,6 +1115,20 @@ public class Composition  implements java.io.Serializable {
         this.cmpsitionRelatesToTargetIdTypCdgDsply = cmpsitionRelatesToTargetIdTypCdgDsply;
     }
     
+    public void addCmpsitionRelatesToTargetIdTypCdgDsply(String cmpsitionRelatesToTargetIdTypCdgDsply) {
+    	if( cmpsitionRelatesToTargetIdTypCdgDsply != null ) {
+	    	if( this.cmpsitionRelatesToTargetIdTypCdgDsply == null ) {
+	        	this.cmpsitionRelatesToTargetIdTypCdgDsply = cmpsitionRelatesToTargetIdTypCdgDsply;
+	        } else if(this.cmpsitionRelatesToTargetIdTypCdgDsply.substring(this.cmpsitionRelatesToTargetIdTypCdgDsply.length() - 1).equals("]") & cmpsitionRelatesToTargetIdTypCdgDsply.equals("[")) {
+	        	this.cmpsitionRelatesToTargetIdTypCdgDsply = this.cmpsitionRelatesToTargetIdTypCdgDsply+ "," + cmpsitionRelatesToTargetIdTypCdgDsply;
+	        } else if(cmpsitionRelatesToTargetIdTypCdgDsply.equals("[") | cmpsitionRelatesToTargetIdTypCdgDsply.equals("]") | this.cmpsitionRelatesToTargetIdTypCdgDsply.substring(this.cmpsitionRelatesToTargetIdTypCdgDsply.length() - 1).equals("[")) {
+	        	this.cmpsitionRelatesToTargetIdTypCdgDsply = this.cmpsitionRelatesToTargetIdTypCdgDsply+cmpsitionRelatesToTargetIdTypCdgDsply;
+	        } else  {
+	            this.cmpsitionRelatesToTargetIdTypCdgDsply = this.cmpsitionRelatesToTargetIdTypCdgDsply+ "," +cmpsitionRelatesToTargetIdTypCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getCmpsitionRelatesToTargetIdTypCdgSys() {
@@ -535,6 +1137,20 @@ public class Composition  implements java.io.Serializable {
     
     public void setCmpsitionRelatesToTargetIdTypCdgSys(String cmpsitionRelatesToTargetIdTypCdgSys) {
         this.cmpsitionRelatesToTargetIdTypCdgSys = cmpsitionRelatesToTargetIdTypCdgSys;
+    }
+    
+    public void addCmpsitionRelatesToTargetIdTypCdgSys(String cmpsitionRelatesToTargetIdTypCdgSys) {
+    	if( cmpsitionRelatesToTargetIdTypCdgSys != null ) {
+	    	if( this.cmpsitionRelatesToTargetIdTypCdgSys == null ) {
+	        	this.cmpsitionRelatesToTargetIdTypCdgSys = cmpsitionRelatesToTargetIdTypCdgSys;
+	        } else if(this.cmpsitionRelatesToTargetIdTypCdgSys.substring(this.cmpsitionRelatesToTargetIdTypCdgSys.length() - 1).equals("]") & cmpsitionRelatesToTargetIdTypCdgSys.equals("[")) {
+	        	this.cmpsitionRelatesToTargetIdTypCdgSys = this.cmpsitionRelatesToTargetIdTypCdgSys+ "," + cmpsitionRelatesToTargetIdTypCdgSys;
+	        } else if(cmpsitionRelatesToTargetIdTypCdgSys.equals("[") | cmpsitionRelatesToTargetIdTypCdgSys.equals("]") | this.cmpsitionRelatesToTargetIdTypCdgSys.substring(this.cmpsitionRelatesToTargetIdTypCdgSys.length() - 1).equals("[")) {
+	        	this.cmpsitionRelatesToTargetIdTypCdgSys = this.cmpsitionRelatesToTargetIdTypCdgSys+cmpsitionRelatesToTargetIdTypCdgSys;
+	        } else  {
+	            this.cmpsitionRelatesToTargetIdTypCdgSys = this.cmpsitionRelatesToTargetIdTypCdgSys+ "," +cmpsitionRelatesToTargetIdTypCdgSys;
+	        }
+        }
     }
     
     
@@ -547,6 +1163,20 @@ public class Composition  implements java.io.Serializable {
         this.cmpsitionRelatesToTargetIdTypCdgUsrSltd = cmpsitionRelatesToTargetIdTypCdgUsrSltd;
     }
     
+    public void addCmpsitionRelatesToTargetIdTypCdgUsrSltd(String cmpsitionRelatesToTargetIdTypCdgUsrSltd) {
+    	if( cmpsitionRelatesToTargetIdTypCdgUsrSltd != null ) {
+	    	if( this.cmpsitionRelatesToTargetIdTypCdgUsrSltd == null ) {
+	        	this.cmpsitionRelatesToTargetIdTypCdgUsrSltd = cmpsitionRelatesToTargetIdTypCdgUsrSltd;
+	        } else if(this.cmpsitionRelatesToTargetIdTypCdgUsrSltd.substring(this.cmpsitionRelatesToTargetIdTypCdgUsrSltd.length() - 1).equals("]") & cmpsitionRelatesToTargetIdTypCdgUsrSltd.equals("[")) {
+	        	this.cmpsitionRelatesToTargetIdTypCdgUsrSltd = this.cmpsitionRelatesToTargetIdTypCdgUsrSltd+ "," + cmpsitionRelatesToTargetIdTypCdgUsrSltd;
+	        } else if(cmpsitionRelatesToTargetIdTypCdgUsrSltd.equals("[") | cmpsitionRelatesToTargetIdTypCdgUsrSltd.equals("]") | this.cmpsitionRelatesToTargetIdTypCdgUsrSltd.substring(this.cmpsitionRelatesToTargetIdTypCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.cmpsitionRelatesToTargetIdTypCdgUsrSltd = this.cmpsitionRelatesToTargetIdTypCdgUsrSltd+cmpsitionRelatesToTargetIdTypCdgUsrSltd;
+	        } else  {
+	            this.cmpsitionRelatesToTargetIdTypCdgUsrSltd = this.cmpsitionRelatesToTargetIdTypCdgUsrSltd+ "," +cmpsitionRelatesToTargetIdTypCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getCmpsitionRelatesToTargetIdTypCdgVrsn() {
@@ -555,6 +1185,20 @@ public class Composition  implements java.io.Serializable {
     
     public void setCmpsitionRelatesToTargetIdTypCdgVrsn(String cmpsitionRelatesToTargetIdTypCdgVrsn) {
         this.cmpsitionRelatesToTargetIdTypCdgVrsn = cmpsitionRelatesToTargetIdTypCdgVrsn;
+    }
+    
+    public void addCmpsitionRelatesToTargetIdTypCdgVrsn(String cmpsitionRelatesToTargetIdTypCdgVrsn) {
+    	if( cmpsitionRelatesToTargetIdTypCdgVrsn != null ) {
+	    	if( this.cmpsitionRelatesToTargetIdTypCdgVrsn == null ) {
+	        	this.cmpsitionRelatesToTargetIdTypCdgVrsn = cmpsitionRelatesToTargetIdTypCdgVrsn;
+	        } else if(this.cmpsitionRelatesToTargetIdTypCdgVrsn.substring(this.cmpsitionRelatesToTargetIdTypCdgVrsn.length() - 1).equals("]") & cmpsitionRelatesToTargetIdTypCdgVrsn.equals("[")) {
+	        	this.cmpsitionRelatesToTargetIdTypCdgVrsn = this.cmpsitionRelatesToTargetIdTypCdgVrsn+ "," + cmpsitionRelatesToTargetIdTypCdgVrsn;
+	        } else if(cmpsitionRelatesToTargetIdTypCdgVrsn.equals("[") | cmpsitionRelatesToTargetIdTypCdgVrsn.equals("]") | this.cmpsitionRelatesToTargetIdTypCdgVrsn.substring(this.cmpsitionRelatesToTargetIdTypCdgVrsn.length() - 1).equals("[")) {
+	        	this.cmpsitionRelatesToTargetIdTypCdgVrsn = this.cmpsitionRelatesToTargetIdTypCdgVrsn+cmpsitionRelatesToTargetIdTypCdgVrsn;
+	        } else  {
+	            this.cmpsitionRelatesToTargetIdTypCdgVrsn = this.cmpsitionRelatesToTargetIdTypCdgVrsn+ "," +cmpsitionRelatesToTargetIdTypCdgVrsn;
+	        }
+        }
     }
     
     
@@ -567,6 +1211,20 @@ public class Composition  implements java.io.Serializable {
         this.cmpsitionRelatesToTargetIdTypTxt = cmpsitionRelatesToTargetIdTypTxt;
     }
     
+    public void addCmpsitionRelatesToTargetIdTypTxt(String cmpsitionRelatesToTargetIdTypTxt) {
+    	if( cmpsitionRelatesToTargetIdTypTxt != null ) {
+	    	if( this.cmpsitionRelatesToTargetIdTypTxt == null ) {
+	        	this.cmpsitionRelatesToTargetIdTypTxt = cmpsitionRelatesToTargetIdTypTxt;
+	        } else if(this.cmpsitionRelatesToTargetIdTypTxt.substring(this.cmpsitionRelatesToTargetIdTypTxt.length() - 1).equals("]") & cmpsitionRelatesToTargetIdTypTxt.equals("[")) {
+	        	this.cmpsitionRelatesToTargetIdTypTxt = this.cmpsitionRelatesToTargetIdTypTxt+ "," + cmpsitionRelatesToTargetIdTypTxt;
+	        } else if(cmpsitionRelatesToTargetIdTypTxt.equals("[") | cmpsitionRelatesToTargetIdTypTxt.equals("]") | this.cmpsitionRelatesToTargetIdTypTxt.substring(this.cmpsitionRelatesToTargetIdTypTxt.length() - 1).equals("[")) {
+	        	this.cmpsitionRelatesToTargetIdTypTxt = this.cmpsitionRelatesToTargetIdTypTxt+cmpsitionRelatesToTargetIdTypTxt;
+	        } else  {
+	            this.cmpsitionRelatesToTargetIdTypTxt = this.cmpsitionRelatesToTargetIdTypTxt+ "," +cmpsitionRelatesToTargetIdTypTxt;
+	        }
+        }
+    }
+    
     
     
     public String getCmpsitionRelatesToTargetIdUse() {
@@ -575,6 +1233,20 @@ public class Composition  implements java.io.Serializable {
     
     public void setCmpsitionRelatesToTargetIdUse(String cmpsitionRelatesToTargetIdUse) {
         this.cmpsitionRelatesToTargetIdUse = cmpsitionRelatesToTargetIdUse;
+    }
+    
+    public void addCmpsitionRelatesToTargetIdUse(String cmpsitionRelatesToTargetIdUse) {
+    	if( cmpsitionRelatesToTargetIdUse != null ) {
+	    	if( this.cmpsitionRelatesToTargetIdUse == null ) {
+	        	this.cmpsitionRelatesToTargetIdUse = cmpsitionRelatesToTargetIdUse;
+	        } else if(this.cmpsitionRelatesToTargetIdUse.substring(this.cmpsitionRelatesToTargetIdUse.length() - 1).equals("]") & cmpsitionRelatesToTargetIdUse.equals("[")) {
+	        	this.cmpsitionRelatesToTargetIdUse = this.cmpsitionRelatesToTargetIdUse+ "," + cmpsitionRelatesToTargetIdUse;
+	        } else if(cmpsitionRelatesToTargetIdUse.equals("[") | cmpsitionRelatesToTargetIdUse.equals("]") | this.cmpsitionRelatesToTargetIdUse.substring(this.cmpsitionRelatesToTargetIdUse.length() - 1).equals("[")) {
+	        	this.cmpsitionRelatesToTargetIdUse = this.cmpsitionRelatesToTargetIdUse+cmpsitionRelatesToTargetIdUse;
+	        } else  {
+	            this.cmpsitionRelatesToTargetIdUse = this.cmpsitionRelatesToTargetIdUse+ "," +cmpsitionRelatesToTargetIdUse;
+	        }
+        }
     }
     
     
@@ -587,6 +1259,20 @@ public class Composition  implements java.io.Serializable {
         this.cmpsitionRelatesToTargetIdVl = cmpsitionRelatesToTargetIdVl;
     }
     
+    public void addCmpsitionRelatesToTargetIdVl(String cmpsitionRelatesToTargetIdVl) {
+    	if( cmpsitionRelatesToTargetIdVl != null ) {
+	    	if( this.cmpsitionRelatesToTargetIdVl == null ) {
+	        	this.cmpsitionRelatesToTargetIdVl = cmpsitionRelatesToTargetIdVl;
+	        } else if(this.cmpsitionRelatesToTargetIdVl.substring(this.cmpsitionRelatesToTargetIdVl.length() - 1).equals("]") & cmpsitionRelatesToTargetIdVl.equals("[")) {
+	        	this.cmpsitionRelatesToTargetIdVl = this.cmpsitionRelatesToTargetIdVl+ "," + cmpsitionRelatesToTargetIdVl;
+	        } else if(cmpsitionRelatesToTargetIdVl.equals("[") | cmpsitionRelatesToTargetIdVl.equals("]") | this.cmpsitionRelatesToTargetIdVl.substring(this.cmpsitionRelatesToTargetIdVl.length() - 1).equals("[")) {
+	        	this.cmpsitionRelatesToTargetIdVl = this.cmpsitionRelatesToTargetIdVl+cmpsitionRelatesToTargetIdVl;
+	        } else  {
+	            this.cmpsitionRelatesToTargetIdVl = this.cmpsitionRelatesToTargetIdVl+ "," +cmpsitionRelatesToTargetIdVl;
+	        }
+        }
+    }
+    
     
     
     public String getCmpsitionRelatesToTarRfrnc() {
@@ -595,6 +1281,20 @@ public class Composition  implements java.io.Serializable {
     
     public void setCmpsitionRelatesToTarRfrnc(String cmpsitionRelatesToTarRfrnc) {
         this.cmpsitionRelatesToTarRfrnc = cmpsitionRelatesToTarRfrnc;
+    }
+    
+    public void addCmpsitionRelatesToTarRfrnc(String cmpsitionRelatesToTarRfrnc) {
+    	if( cmpsitionRelatesToTarRfrnc != null ) {
+	    	if( this.cmpsitionRelatesToTarRfrnc == null ) {
+	        	this.cmpsitionRelatesToTarRfrnc = cmpsitionRelatesToTarRfrnc;
+	        } else if(this.cmpsitionRelatesToTarRfrnc.substring(this.cmpsitionRelatesToTarRfrnc.length() - 1).equals("]") & cmpsitionRelatesToTarRfrnc.equals("[")) {
+	        	this.cmpsitionRelatesToTarRfrnc = this.cmpsitionRelatesToTarRfrnc+ "," + cmpsitionRelatesToTarRfrnc;
+	        } else if(cmpsitionRelatesToTarRfrnc.equals("[") | cmpsitionRelatesToTarRfrnc.equals("]") | this.cmpsitionRelatesToTarRfrnc.substring(this.cmpsitionRelatesToTarRfrnc.length() - 1).equals("[")) {
+	        	this.cmpsitionRelatesToTarRfrnc = this.cmpsitionRelatesToTarRfrnc+cmpsitionRelatesToTarRfrnc;
+	        } else  {
+	            this.cmpsitionRelatesToTarRfrnc = this.cmpsitionRelatesToTarRfrnc+ "," +cmpsitionRelatesToTarRfrnc;
+	        }
+        }
     }
     
     
@@ -607,6 +1307,20 @@ public class Composition  implements java.io.Serializable {
         this.cmpsitionSectionAthr = cmpsitionSectionAthr;
     }
     
+    public void addCmpsitionSectionAthr(String cmpsitionSectionAthr) {
+    	if( cmpsitionSectionAthr != null ) {
+	    	if( this.cmpsitionSectionAthr == null ) {
+	        	this.cmpsitionSectionAthr = cmpsitionSectionAthr;
+	        } else if(this.cmpsitionSectionAthr.substring(this.cmpsitionSectionAthr.length() - 1).equals("]") & cmpsitionSectionAthr.equals("[")) {
+	        	this.cmpsitionSectionAthr = this.cmpsitionSectionAthr+ "," + cmpsitionSectionAthr;
+	        } else if(cmpsitionSectionAthr.equals("[") | cmpsitionSectionAthr.equals("]") | this.cmpsitionSectionAthr.substring(this.cmpsitionSectionAthr.length() - 1).equals("[")) {
+	        	this.cmpsitionSectionAthr = this.cmpsitionSectionAthr+cmpsitionSectionAthr;
+	        } else  {
+	            this.cmpsitionSectionAthr = this.cmpsitionSectionAthr+ "," +cmpsitionSectionAthr;
+	        }
+        }
+    }
+    
     
     
     public String getCmpsitionSectionCdCdgCd() {
@@ -615,6 +1329,20 @@ public class Composition  implements java.io.Serializable {
     
     public void setCmpsitionSectionCdCdgCd(String cmpsitionSectionCdCdgCd) {
         this.cmpsitionSectionCdCdgCd = cmpsitionSectionCdCdgCd;
+    }
+    
+    public void addCmpsitionSectionCdCdgCd(String cmpsitionSectionCdCdgCd) {
+    	if( cmpsitionSectionCdCdgCd != null ) {
+	    	if( this.cmpsitionSectionCdCdgCd == null ) {
+	        	this.cmpsitionSectionCdCdgCd = cmpsitionSectionCdCdgCd;
+	        } else if(this.cmpsitionSectionCdCdgCd.substring(this.cmpsitionSectionCdCdgCd.length() - 1).equals("]") & cmpsitionSectionCdCdgCd.equals("[")) {
+	        	this.cmpsitionSectionCdCdgCd = this.cmpsitionSectionCdCdgCd+ "," + cmpsitionSectionCdCdgCd;
+	        } else if(cmpsitionSectionCdCdgCd.equals("[") | cmpsitionSectionCdCdgCd.equals("]") | this.cmpsitionSectionCdCdgCd.substring(this.cmpsitionSectionCdCdgCd.length() - 1).equals("[")) {
+	        	this.cmpsitionSectionCdCdgCd = this.cmpsitionSectionCdCdgCd+cmpsitionSectionCdCdgCd;
+	        } else  {
+	            this.cmpsitionSectionCdCdgCd = this.cmpsitionSectionCdCdgCd+ "," +cmpsitionSectionCdCdgCd;
+	        }
+        }
     }
     
     
@@ -627,6 +1355,20 @@ public class Composition  implements java.io.Serializable {
         this.cmpsitionSectionCdCdgDsply = cmpsitionSectionCdCdgDsply;
     }
     
+    public void addCmpsitionSectionCdCdgDsply(String cmpsitionSectionCdCdgDsply) {
+    	if( cmpsitionSectionCdCdgDsply != null ) {
+	    	if( this.cmpsitionSectionCdCdgDsply == null ) {
+	        	this.cmpsitionSectionCdCdgDsply = cmpsitionSectionCdCdgDsply;
+	        } else if(this.cmpsitionSectionCdCdgDsply.substring(this.cmpsitionSectionCdCdgDsply.length() - 1).equals("]") & cmpsitionSectionCdCdgDsply.equals("[")) {
+	        	this.cmpsitionSectionCdCdgDsply = this.cmpsitionSectionCdCdgDsply+ "," + cmpsitionSectionCdCdgDsply;
+	        } else if(cmpsitionSectionCdCdgDsply.equals("[") | cmpsitionSectionCdCdgDsply.equals("]") | this.cmpsitionSectionCdCdgDsply.substring(this.cmpsitionSectionCdCdgDsply.length() - 1).equals("[")) {
+	        	this.cmpsitionSectionCdCdgDsply = this.cmpsitionSectionCdCdgDsply+cmpsitionSectionCdCdgDsply;
+	        } else  {
+	            this.cmpsitionSectionCdCdgDsply = this.cmpsitionSectionCdCdgDsply+ "," +cmpsitionSectionCdCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getCmpsitionSectionCdCdgSys() {
@@ -635,6 +1377,20 @@ public class Composition  implements java.io.Serializable {
     
     public void setCmpsitionSectionCdCdgSys(String cmpsitionSectionCdCdgSys) {
         this.cmpsitionSectionCdCdgSys = cmpsitionSectionCdCdgSys;
+    }
+    
+    public void addCmpsitionSectionCdCdgSys(String cmpsitionSectionCdCdgSys) {
+    	if( cmpsitionSectionCdCdgSys != null ) {
+	    	if( this.cmpsitionSectionCdCdgSys == null ) {
+	        	this.cmpsitionSectionCdCdgSys = cmpsitionSectionCdCdgSys;
+	        } else if(this.cmpsitionSectionCdCdgSys.substring(this.cmpsitionSectionCdCdgSys.length() - 1).equals("]") & cmpsitionSectionCdCdgSys.equals("[")) {
+	        	this.cmpsitionSectionCdCdgSys = this.cmpsitionSectionCdCdgSys+ "," + cmpsitionSectionCdCdgSys;
+	        } else if(cmpsitionSectionCdCdgSys.equals("[") | cmpsitionSectionCdCdgSys.equals("]") | this.cmpsitionSectionCdCdgSys.substring(this.cmpsitionSectionCdCdgSys.length() - 1).equals("[")) {
+	        	this.cmpsitionSectionCdCdgSys = this.cmpsitionSectionCdCdgSys+cmpsitionSectionCdCdgSys;
+	        } else  {
+	            this.cmpsitionSectionCdCdgSys = this.cmpsitionSectionCdCdgSys+ "," +cmpsitionSectionCdCdgSys;
+	        }
+        }
     }
     
     
@@ -647,6 +1403,20 @@ public class Composition  implements java.io.Serializable {
         this.cmpsitionSectionCdCdgUsrSltd = cmpsitionSectionCdCdgUsrSltd;
     }
     
+    public void addCmpsitionSectionCdCdgUsrSltd(String cmpsitionSectionCdCdgUsrSltd) {
+    	if( cmpsitionSectionCdCdgUsrSltd != null ) {
+	    	if( this.cmpsitionSectionCdCdgUsrSltd == null ) {
+	        	this.cmpsitionSectionCdCdgUsrSltd = cmpsitionSectionCdCdgUsrSltd;
+	        } else if(this.cmpsitionSectionCdCdgUsrSltd.substring(this.cmpsitionSectionCdCdgUsrSltd.length() - 1).equals("]") & cmpsitionSectionCdCdgUsrSltd.equals("[")) {
+	        	this.cmpsitionSectionCdCdgUsrSltd = this.cmpsitionSectionCdCdgUsrSltd+ "," + cmpsitionSectionCdCdgUsrSltd;
+	        } else if(cmpsitionSectionCdCdgUsrSltd.equals("[") | cmpsitionSectionCdCdgUsrSltd.equals("]") | this.cmpsitionSectionCdCdgUsrSltd.substring(this.cmpsitionSectionCdCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.cmpsitionSectionCdCdgUsrSltd = this.cmpsitionSectionCdCdgUsrSltd+cmpsitionSectionCdCdgUsrSltd;
+	        } else  {
+	            this.cmpsitionSectionCdCdgUsrSltd = this.cmpsitionSectionCdCdgUsrSltd+ "," +cmpsitionSectionCdCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getCmpsitionSectionCdCdgVrsn() {
@@ -655,6 +1425,20 @@ public class Composition  implements java.io.Serializable {
     
     public void setCmpsitionSectionCdCdgVrsn(String cmpsitionSectionCdCdgVrsn) {
         this.cmpsitionSectionCdCdgVrsn = cmpsitionSectionCdCdgVrsn;
+    }
+    
+    public void addCmpsitionSectionCdCdgVrsn(String cmpsitionSectionCdCdgVrsn) {
+    	if( cmpsitionSectionCdCdgVrsn != null ) {
+	    	if( this.cmpsitionSectionCdCdgVrsn == null ) {
+	        	this.cmpsitionSectionCdCdgVrsn = cmpsitionSectionCdCdgVrsn;
+	        } else if(this.cmpsitionSectionCdCdgVrsn.substring(this.cmpsitionSectionCdCdgVrsn.length() - 1).equals("]") & cmpsitionSectionCdCdgVrsn.equals("[")) {
+	        	this.cmpsitionSectionCdCdgVrsn = this.cmpsitionSectionCdCdgVrsn+ "," + cmpsitionSectionCdCdgVrsn;
+	        } else if(cmpsitionSectionCdCdgVrsn.equals("[") | cmpsitionSectionCdCdgVrsn.equals("]") | this.cmpsitionSectionCdCdgVrsn.substring(this.cmpsitionSectionCdCdgVrsn.length() - 1).equals("[")) {
+	        	this.cmpsitionSectionCdCdgVrsn = this.cmpsitionSectionCdCdgVrsn+cmpsitionSectionCdCdgVrsn;
+	        } else  {
+	            this.cmpsitionSectionCdCdgVrsn = this.cmpsitionSectionCdCdgVrsn+ "," +cmpsitionSectionCdCdgVrsn;
+	        }
+        }
     }
     
     
@@ -667,6 +1451,20 @@ public class Composition  implements java.io.Serializable {
         this.cmpsitionSectionCdTxt = cmpsitionSectionCdTxt;
     }
     
+    public void addCmpsitionSectionCdTxt(String cmpsitionSectionCdTxt) {
+    	if( cmpsitionSectionCdTxt != null ) {
+	    	if( this.cmpsitionSectionCdTxt == null ) {
+	        	this.cmpsitionSectionCdTxt = cmpsitionSectionCdTxt;
+	        } else if(this.cmpsitionSectionCdTxt.substring(this.cmpsitionSectionCdTxt.length() - 1).equals("]") & cmpsitionSectionCdTxt.equals("[")) {
+	        	this.cmpsitionSectionCdTxt = this.cmpsitionSectionCdTxt+ "," + cmpsitionSectionCdTxt;
+	        } else if(cmpsitionSectionCdTxt.equals("[") | cmpsitionSectionCdTxt.equals("]") | this.cmpsitionSectionCdTxt.substring(this.cmpsitionSectionCdTxt.length() - 1).equals("[")) {
+	        	this.cmpsitionSectionCdTxt = this.cmpsitionSectionCdTxt+cmpsitionSectionCdTxt;
+	        } else  {
+	            this.cmpsitionSectionCdTxt = this.cmpsitionSectionCdTxt+ "," +cmpsitionSectionCdTxt;
+	        }
+        }
+    }
+    
     
     
     public String getCmpsitionSectionEmptyRsnCdgCd() {
@@ -675,6 +1473,20 @@ public class Composition  implements java.io.Serializable {
     
     public void setCmpsitionSectionEmptyRsnCdgCd(String cmpsitionSectionEmptyRsnCdgCd) {
         this.cmpsitionSectionEmptyRsnCdgCd = cmpsitionSectionEmptyRsnCdgCd;
+    }
+    
+    public void addCmpsitionSectionEmptyRsnCdgCd(String cmpsitionSectionEmptyRsnCdgCd) {
+    	if( cmpsitionSectionEmptyRsnCdgCd != null ) {
+	    	if( this.cmpsitionSectionEmptyRsnCdgCd == null ) {
+	        	this.cmpsitionSectionEmptyRsnCdgCd = cmpsitionSectionEmptyRsnCdgCd;
+	        } else if(this.cmpsitionSectionEmptyRsnCdgCd.substring(this.cmpsitionSectionEmptyRsnCdgCd.length() - 1).equals("]") & cmpsitionSectionEmptyRsnCdgCd.equals("[")) {
+	        	this.cmpsitionSectionEmptyRsnCdgCd = this.cmpsitionSectionEmptyRsnCdgCd+ "," + cmpsitionSectionEmptyRsnCdgCd;
+	        } else if(cmpsitionSectionEmptyRsnCdgCd.equals("[") | cmpsitionSectionEmptyRsnCdgCd.equals("]") | this.cmpsitionSectionEmptyRsnCdgCd.substring(this.cmpsitionSectionEmptyRsnCdgCd.length() - 1).equals("[")) {
+	        	this.cmpsitionSectionEmptyRsnCdgCd = this.cmpsitionSectionEmptyRsnCdgCd+cmpsitionSectionEmptyRsnCdgCd;
+	        } else  {
+	            this.cmpsitionSectionEmptyRsnCdgCd = this.cmpsitionSectionEmptyRsnCdgCd+ "," +cmpsitionSectionEmptyRsnCdgCd;
+	        }
+        }
     }
     
     
@@ -687,6 +1499,20 @@ public class Composition  implements java.io.Serializable {
         this.cmpsitionSectionEmptyRsnCdgDsply = cmpsitionSectionEmptyRsnCdgDsply;
     }
     
+    public void addCmpsitionSectionEmptyRsnCdgDsply(String cmpsitionSectionEmptyRsnCdgDsply) {
+    	if( cmpsitionSectionEmptyRsnCdgDsply != null ) {
+	    	if( this.cmpsitionSectionEmptyRsnCdgDsply == null ) {
+	        	this.cmpsitionSectionEmptyRsnCdgDsply = cmpsitionSectionEmptyRsnCdgDsply;
+	        } else if(this.cmpsitionSectionEmptyRsnCdgDsply.substring(this.cmpsitionSectionEmptyRsnCdgDsply.length() - 1).equals("]") & cmpsitionSectionEmptyRsnCdgDsply.equals("[")) {
+	        	this.cmpsitionSectionEmptyRsnCdgDsply = this.cmpsitionSectionEmptyRsnCdgDsply+ "," + cmpsitionSectionEmptyRsnCdgDsply;
+	        } else if(cmpsitionSectionEmptyRsnCdgDsply.equals("[") | cmpsitionSectionEmptyRsnCdgDsply.equals("]") | this.cmpsitionSectionEmptyRsnCdgDsply.substring(this.cmpsitionSectionEmptyRsnCdgDsply.length() - 1).equals("[")) {
+	        	this.cmpsitionSectionEmptyRsnCdgDsply = this.cmpsitionSectionEmptyRsnCdgDsply+cmpsitionSectionEmptyRsnCdgDsply;
+	        } else  {
+	            this.cmpsitionSectionEmptyRsnCdgDsply = this.cmpsitionSectionEmptyRsnCdgDsply+ "," +cmpsitionSectionEmptyRsnCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getCmpsitionSectionEmptyRsnCdgSys() {
@@ -695,6 +1521,20 @@ public class Composition  implements java.io.Serializable {
     
     public void setCmpsitionSectionEmptyRsnCdgSys(String cmpsitionSectionEmptyRsnCdgSys) {
         this.cmpsitionSectionEmptyRsnCdgSys = cmpsitionSectionEmptyRsnCdgSys;
+    }
+    
+    public void addCmpsitionSectionEmptyRsnCdgSys(String cmpsitionSectionEmptyRsnCdgSys) {
+    	if( cmpsitionSectionEmptyRsnCdgSys != null ) {
+	    	if( this.cmpsitionSectionEmptyRsnCdgSys == null ) {
+	        	this.cmpsitionSectionEmptyRsnCdgSys = cmpsitionSectionEmptyRsnCdgSys;
+	        } else if(this.cmpsitionSectionEmptyRsnCdgSys.substring(this.cmpsitionSectionEmptyRsnCdgSys.length() - 1).equals("]") & cmpsitionSectionEmptyRsnCdgSys.equals("[")) {
+	        	this.cmpsitionSectionEmptyRsnCdgSys = this.cmpsitionSectionEmptyRsnCdgSys+ "," + cmpsitionSectionEmptyRsnCdgSys;
+	        } else if(cmpsitionSectionEmptyRsnCdgSys.equals("[") | cmpsitionSectionEmptyRsnCdgSys.equals("]") | this.cmpsitionSectionEmptyRsnCdgSys.substring(this.cmpsitionSectionEmptyRsnCdgSys.length() - 1).equals("[")) {
+	        	this.cmpsitionSectionEmptyRsnCdgSys = this.cmpsitionSectionEmptyRsnCdgSys+cmpsitionSectionEmptyRsnCdgSys;
+	        } else  {
+	            this.cmpsitionSectionEmptyRsnCdgSys = this.cmpsitionSectionEmptyRsnCdgSys+ "," +cmpsitionSectionEmptyRsnCdgSys;
+	        }
+        }
     }
     
     
@@ -707,6 +1547,20 @@ public class Composition  implements java.io.Serializable {
         this.cmpsitionSectionEmptyRsnCdgUsrSltd = cmpsitionSectionEmptyRsnCdgUsrSltd;
     }
     
+    public void addCmpsitionSectionEmptyRsnCdgUsrSltd(String cmpsitionSectionEmptyRsnCdgUsrSltd) {
+    	if( cmpsitionSectionEmptyRsnCdgUsrSltd != null ) {
+	    	if( this.cmpsitionSectionEmptyRsnCdgUsrSltd == null ) {
+	        	this.cmpsitionSectionEmptyRsnCdgUsrSltd = cmpsitionSectionEmptyRsnCdgUsrSltd;
+	        } else if(this.cmpsitionSectionEmptyRsnCdgUsrSltd.substring(this.cmpsitionSectionEmptyRsnCdgUsrSltd.length() - 1).equals("]") & cmpsitionSectionEmptyRsnCdgUsrSltd.equals("[")) {
+	        	this.cmpsitionSectionEmptyRsnCdgUsrSltd = this.cmpsitionSectionEmptyRsnCdgUsrSltd+ "," + cmpsitionSectionEmptyRsnCdgUsrSltd;
+	        } else if(cmpsitionSectionEmptyRsnCdgUsrSltd.equals("[") | cmpsitionSectionEmptyRsnCdgUsrSltd.equals("]") | this.cmpsitionSectionEmptyRsnCdgUsrSltd.substring(this.cmpsitionSectionEmptyRsnCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.cmpsitionSectionEmptyRsnCdgUsrSltd = this.cmpsitionSectionEmptyRsnCdgUsrSltd+cmpsitionSectionEmptyRsnCdgUsrSltd;
+	        } else  {
+	            this.cmpsitionSectionEmptyRsnCdgUsrSltd = this.cmpsitionSectionEmptyRsnCdgUsrSltd+ "," +cmpsitionSectionEmptyRsnCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getCmpsitionSectionEmptyRsnCdgVrsn() {
@@ -715,6 +1569,20 @@ public class Composition  implements java.io.Serializable {
     
     public void setCmpsitionSectionEmptyRsnCdgVrsn(String cmpsitionSectionEmptyRsnCdgVrsn) {
         this.cmpsitionSectionEmptyRsnCdgVrsn = cmpsitionSectionEmptyRsnCdgVrsn;
+    }
+    
+    public void addCmpsitionSectionEmptyRsnCdgVrsn(String cmpsitionSectionEmptyRsnCdgVrsn) {
+    	if( cmpsitionSectionEmptyRsnCdgVrsn != null ) {
+	    	if( this.cmpsitionSectionEmptyRsnCdgVrsn == null ) {
+	        	this.cmpsitionSectionEmptyRsnCdgVrsn = cmpsitionSectionEmptyRsnCdgVrsn;
+	        } else if(this.cmpsitionSectionEmptyRsnCdgVrsn.substring(this.cmpsitionSectionEmptyRsnCdgVrsn.length() - 1).equals("]") & cmpsitionSectionEmptyRsnCdgVrsn.equals("[")) {
+	        	this.cmpsitionSectionEmptyRsnCdgVrsn = this.cmpsitionSectionEmptyRsnCdgVrsn+ "," + cmpsitionSectionEmptyRsnCdgVrsn;
+	        } else if(cmpsitionSectionEmptyRsnCdgVrsn.equals("[") | cmpsitionSectionEmptyRsnCdgVrsn.equals("]") | this.cmpsitionSectionEmptyRsnCdgVrsn.substring(this.cmpsitionSectionEmptyRsnCdgVrsn.length() - 1).equals("[")) {
+	        	this.cmpsitionSectionEmptyRsnCdgVrsn = this.cmpsitionSectionEmptyRsnCdgVrsn+cmpsitionSectionEmptyRsnCdgVrsn;
+	        } else  {
+	            this.cmpsitionSectionEmptyRsnCdgVrsn = this.cmpsitionSectionEmptyRsnCdgVrsn+ "," +cmpsitionSectionEmptyRsnCdgVrsn;
+	        }
+        }
     }
     
     
@@ -727,6 +1595,20 @@ public class Composition  implements java.io.Serializable {
         this.cmpsitionSectionEmptyRsnTxt = cmpsitionSectionEmptyRsnTxt;
     }
     
+    public void addCmpsitionSectionEmptyRsnTxt(String cmpsitionSectionEmptyRsnTxt) {
+    	if( cmpsitionSectionEmptyRsnTxt != null ) {
+	    	if( this.cmpsitionSectionEmptyRsnTxt == null ) {
+	        	this.cmpsitionSectionEmptyRsnTxt = cmpsitionSectionEmptyRsnTxt;
+	        } else if(this.cmpsitionSectionEmptyRsnTxt.substring(this.cmpsitionSectionEmptyRsnTxt.length() - 1).equals("]") & cmpsitionSectionEmptyRsnTxt.equals("[")) {
+	        	this.cmpsitionSectionEmptyRsnTxt = this.cmpsitionSectionEmptyRsnTxt+ "," + cmpsitionSectionEmptyRsnTxt;
+	        } else if(cmpsitionSectionEmptyRsnTxt.equals("[") | cmpsitionSectionEmptyRsnTxt.equals("]") | this.cmpsitionSectionEmptyRsnTxt.substring(this.cmpsitionSectionEmptyRsnTxt.length() - 1).equals("[")) {
+	        	this.cmpsitionSectionEmptyRsnTxt = this.cmpsitionSectionEmptyRsnTxt+cmpsitionSectionEmptyRsnTxt;
+	        } else  {
+	            this.cmpsitionSectionEmptyRsnTxt = this.cmpsitionSectionEmptyRsnTxt+ "," +cmpsitionSectionEmptyRsnTxt;
+	        }
+        }
+    }
+    
     
     
     public String getCmpsitionSectionEntry() {
@@ -735,6 +1617,20 @@ public class Composition  implements java.io.Serializable {
     
     public void setCmpsitionSectionEntry(String cmpsitionSectionEntry) {
         this.cmpsitionSectionEntry = cmpsitionSectionEntry;
+    }
+    
+    public void addCmpsitionSectionEntry(String cmpsitionSectionEntry) {
+    	if( cmpsitionSectionEntry != null ) {
+	    	if( this.cmpsitionSectionEntry == null ) {
+	        	this.cmpsitionSectionEntry = cmpsitionSectionEntry;
+	        } else if(this.cmpsitionSectionEntry.substring(this.cmpsitionSectionEntry.length() - 1).equals("]") & cmpsitionSectionEntry.equals("[")) {
+	        	this.cmpsitionSectionEntry = this.cmpsitionSectionEntry+ "," + cmpsitionSectionEntry;
+	        } else if(cmpsitionSectionEntry.equals("[") | cmpsitionSectionEntry.equals("]") | this.cmpsitionSectionEntry.substring(this.cmpsitionSectionEntry.length() - 1).equals("[")) {
+	        	this.cmpsitionSectionEntry = this.cmpsitionSectionEntry+cmpsitionSectionEntry;
+	        } else  {
+	            this.cmpsitionSectionEntry = this.cmpsitionSectionEntry+ "," +cmpsitionSectionEntry;
+	        }
+        }
     }
     
     
@@ -747,6 +1643,20 @@ public class Composition  implements java.io.Serializable {
         this.cmpsitionSectionFocus = cmpsitionSectionFocus;
     }
     
+    public void addCmpsitionSectionFocus(String cmpsitionSectionFocus) {
+    	if( cmpsitionSectionFocus != null ) {
+	    	if( this.cmpsitionSectionFocus == null ) {
+	        	this.cmpsitionSectionFocus = cmpsitionSectionFocus;
+	        } else if(this.cmpsitionSectionFocus.substring(this.cmpsitionSectionFocus.length() - 1).equals("]") & cmpsitionSectionFocus.equals("[")) {
+	        	this.cmpsitionSectionFocus = this.cmpsitionSectionFocus+ "," + cmpsitionSectionFocus;
+	        } else if(cmpsitionSectionFocus.equals("[") | cmpsitionSectionFocus.equals("]") | this.cmpsitionSectionFocus.substring(this.cmpsitionSectionFocus.length() - 1).equals("[")) {
+	        	this.cmpsitionSectionFocus = this.cmpsitionSectionFocus+cmpsitionSectionFocus;
+	        } else  {
+	            this.cmpsitionSectionFocus = this.cmpsitionSectionFocus+ "," +cmpsitionSectionFocus;
+	        }
+        }
+    }
+    
     
     
     public String getCmpsitionSectionMode() {
@@ -755,6 +1665,20 @@ public class Composition  implements java.io.Serializable {
     
     public void setCmpsitionSectionMode(String cmpsitionSectionMode) {
         this.cmpsitionSectionMode = cmpsitionSectionMode;
+    }
+    
+    public void addCmpsitionSectionMode(String cmpsitionSectionMode) {
+    	if( cmpsitionSectionMode != null ) {
+	    	if( this.cmpsitionSectionMode == null ) {
+	        	this.cmpsitionSectionMode = cmpsitionSectionMode;
+	        } else if(this.cmpsitionSectionMode.substring(this.cmpsitionSectionMode.length() - 1).equals("]") & cmpsitionSectionMode.equals("[")) {
+	        	this.cmpsitionSectionMode = this.cmpsitionSectionMode+ "," + cmpsitionSectionMode;
+	        } else if(cmpsitionSectionMode.equals("[") | cmpsitionSectionMode.equals("]") | this.cmpsitionSectionMode.substring(this.cmpsitionSectionMode.length() - 1).equals("[")) {
+	        	this.cmpsitionSectionMode = this.cmpsitionSectionMode+cmpsitionSectionMode;
+	        } else  {
+	            this.cmpsitionSectionMode = this.cmpsitionSectionMode+ "," +cmpsitionSectionMode;
+	        }
+        }
     }
     
     
@@ -767,6 +1691,20 @@ public class Composition  implements java.io.Serializable {
         this.cmpsitionSectionOrdredByCdgCd = cmpsitionSectionOrdredByCdgCd;
     }
     
+    public void addCmpsitionSectionOrdredByCdgCd(String cmpsitionSectionOrdredByCdgCd) {
+    	if( cmpsitionSectionOrdredByCdgCd != null ) {
+	    	if( this.cmpsitionSectionOrdredByCdgCd == null ) {
+	        	this.cmpsitionSectionOrdredByCdgCd = cmpsitionSectionOrdredByCdgCd;
+	        } else if(this.cmpsitionSectionOrdredByCdgCd.substring(this.cmpsitionSectionOrdredByCdgCd.length() - 1).equals("]") & cmpsitionSectionOrdredByCdgCd.equals("[")) {
+	        	this.cmpsitionSectionOrdredByCdgCd = this.cmpsitionSectionOrdredByCdgCd+ "," + cmpsitionSectionOrdredByCdgCd;
+	        } else if(cmpsitionSectionOrdredByCdgCd.equals("[") | cmpsitionSectionOrdredByCdgCd.equals("]") | this.cmpsitionSectionOrdredByCdgCd.substring(this.cmpsitionSectionOrdredByCdgCd.length() - 1).equals("[")) {
+	        	this.cmpsitionSectionOrdredByCdgCd = this.cmpsitionSectionOrdredByCdgCd+cmpsitionSectionOrdredByCdgCd;
+	        } else  {
+	            this.cmpsitionSectionOrdredByCdgCd = this.cmpsitionSectionOrdredByCdgCd+ "," +cmpsitionSectionOrdredByCdgCd;
+	        }
+        }
+    }
+    
     
     
     public String getCmpsitionSectionOrdredByCdgDsply() {
@@ -775,6 +1713,20 @@ public class Composition  implements java.io.Serializable {
     
     public void setCmpsitionSectionOrdredByCdgDsply(String cmpsitionSectionOrdredByCdgDsply) {
         this.cmpsitionSectionOrdredByCdgDsply = cmpsitionSectionOrdredByCdgDsply;
+    }
+    
+    public void addCmpsitionSectionOrdredByCdgDsply(String cmpsitionSectionOrdredByCdgDsply) {
+    	if( cmpsitionSectionOrdredByCdgDsply != null ) {
+	    	if( this.cmpsitionSectionOrdredByCdgDsply == null ) {
+	        	this.cmpsitionSectionOrdredByCdgDsply = cmpsitionSectionOrdredByCdgDsply;
+	        } else if(this.cmpsitionSectionOrdredByCdgDsply.substring(this.cmpsitionSectionOrdredByCdgDsply.length() - 1).equals("]") & cmpsitionSectionOrdredByCdgDsply.equals("[")) {
+	        	this.cmpsitionSectionOrdredByCdgDsply = this.cmpsitionSectionOrdredByCdgDsply+ "," + cmpsitionSectionOrdredByCdgDsply;
+	        } else if(cmpsitionSectionOrdredByCdgDsply.equals("[") | cmpsitionSectionOrdredByCdgDsply.equals("]") | this.cmpsitionSectionOrdredByCdgDsply.substring(this.cmpsitionSectionOrdredByCdgDsply.length() - 1).equals("[")) {
+	        	this.cmpsitionSectionOrdredByCdgDsply = this.cmpsitionSectionOrdredByCdgDsply+cmpsitionSectionOrdredByCdgDsply;
+	        } else  {
+	            this.cmpsitionSectionOrdredByCdgDsply = this.cmpsitionSectionOrdredByCdgDsply+ "," +cmpsitionSectionOrdredByCdgDsply;
+	        }
+        }
     }
     
     
@@ -787,6 +1739,20 @@ public class Composition  implements java.io.Serializable {
         this.cmpsitionSectionOrdredByCdgSys = cmpsitionSectionOrdredByCdgSys;
     }
     
+    public void addCmpsitionSectionOrdredByCdgSys(String cmpsitionSectionOrdredByCdgSys) {
+    	if( cmpsitionSectionOrdredByCdgSys != null ) {
+	    	if( this.cmpsitionSectionOrdredByCdgSys == null ) {
+	        	this.cmpsitionSectionOrdredByCdgSys = cmpsitionSectionOrdredByCdgSys;
+	        } else if(this.cmpsitionSectionOrdredByCdgSys.substring(this.cmpsitionSectionOrdredByCdgSys.length() - 1).equals("]") & cmpsitionSectionOrdredByCdgSys.equals("[")) {
+	        	this.cmpsitionSectionOrdredByCdgSys = this.cmpsitionSectionOrdredByCdgSys+ "," + cmpsitionSectionOrdredByCdgSys;
+	        } else if(cmpsitionSectionOrdredByCdgSys.equals("[") | cmpsitionSectionOrdredByCdgSys.equals("]") | this.cmpsitionSectionOrdredByCdgSys.substring(this.cmpsitionSectionOrdredByCdgSys.length() - 1).equals("[")) {
+	        	this.cmpsitionSectionOrdredByCdgSys = this.cmpsitionSectionOrdredByCdgSys+cmpsitionSectionOrdredByCdgSys;
+	        } else  {
+	            this.cmpsitionSectionOrdredByCdgSys = this.cmpsitionSectionOrdredByCdgSys+ "," +cmpsitionSectionOrdredByCdgSys;
+	        }
+        }
+    }
+    
     
     
     public String getCmpsitionSectionOrdredByCdgUsrSltd() {
@@ -795,6 +1761,20 @@ public class Composition  implements java.io.Serializable {
     
     public void setCmpsitionSectionOrdredByCdgUsrSltd(String cmpsitionSectionOrdredByCdgUsrSltd) {
         this.cmpsitionSectionOrdredByCdgUsrSltd = cmpsitionSectionOrdredByCdgUsrSltd;
+    }
+    
+    public void addCmpsitionSectionOrdredByCdgUsrSltd(String cmpsitionSectionOrdredByCdgUsrSltd) {
+    	if( cmpsitionSectionOrdredByCdgUsrSltd != null ) {
+	    	if( this.cmpsitionSectionOrdredByCdgUsrSltd == null ) {
+	        	this.cmpsitionSectionOrdredByCdgUsrSltd = cmpsitionSectionOrdredByCdgUsrSltd;
+	        } else if(this.cmpsitionSectionOrdredByCdgUsrSltd.substring(this.cmpsitionSectionOrdredByCdgUsrSltd.length() - 1).equals("]") & cmpsitionSectionOrdredByCdgUsrSltd.equals("[")) {
+	        	this.cmpsitionSectionOrdredByCdgUsrSltd = this.cmpsitionSectionOrdredByCdgUsrSltd+ "," + cmpsitionSectionOrdredByCdgUsrSltd;
+	        } else if(cmpsitionSectionOrdredByCdgUsrSltd.equals("[") | cmpsitionSectionOrdredByCdgUsrSltd.equals("]") | this.cmpsitionSectionOrdredByCdgUsrSltd.substring(this.cmpsitionSectionOrdredByCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.cmpsitionSectionOrdredByCdgUsrSltd = this.cmpsitionSectionOrdredByCdgUsrSltd+cmpsitionSectionOrdredByCdgUsrSltd;
+	        } else  {
+	            this.cmpsitionSectionOrdredByCdgUsrSltd = this.cmpsitionSectionOrdredByCdgUsrSltd+ "," +cmpsitionSectionOrdredByCdgUsrSltd;
+	        }
+        }
     }
     
     
@@ -807,6 +1787,20 @@ public class Composition  implements java.io.Serializable {
         this.cmpsitionSectionOrdredByCdgVrsn = cmpsitionSectionOrdredByCdgVrsn;
     }
     
+    public void addCmpsitionSectionOrdredByCdgVrsn(String cmpsitionSectionOrdredByCdgVrsn) {
+    	if( cmpsitionSectionOrdredByCdgVrsn != null ) {
+	    	if( this.cmpsitionSectionOrdredByCdgVrsn == null ) {
+	        	this.cmpsitionSectionOrdredByCdgVrsn = cmpsitionSectionOrdredByCdgVrsn;
+	        } else if(this.cmpsitionSectionOrdredByCdgVrsn.substring(this.cmpsitionSectionOrdredByCdgVrsn.length() - 1).equals("]") & cmpsitionSectionOrdredByCdgVrsn.equals("[")) {
+	        	this.cmpsitionSectionOrdredByCdgVrsn = this.cmpsitionSectionOrdredByCdgVrsn+ "," + cmpsitionSectionOrdredByCdgVrsn;
+	        } else if(cmpsitionSectionOrdredByCdgVrsn.equals("[") | cmpsitionSectionOrdredByCdgVrsn.equals("]") | this.cmpsitionSectionOrdredByCdgVrsn.substring(this.cmpsitionSectionOrdredByCdgVrsn.length() - 1).equals("[")) {
+	        	this.cmpsitionSectionOrdredByCdgVrsn = this.cmpsitionSectionOrdredByCdgVrsn+cmpsitionSectionOrdredByCdgVrsn;
+	        } else  {
+	            this.cmpsitionSectionOrdredByCdgVrsn = this.cmpsitionSectionOrdredByCdgVrsn+ "," +cmpsitionSectionOrdredByCdgVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getCmpsitionSectionOrdredByTxt() {
@@ -815,6 +1809,20 @@ public class Composition  implements java.io.Serializable {
     
     public void setCmpsitionSectionOrdredByTxt(String cmpsitionSectionOrdredByTxt) {
         this.cmpsitionSectionOrdredByTxt = cmpsitionSectionOrdredByTxt;
+    }
+    
+    public void addCmpsitionSectionOrdredByTxt(String cmpsitionSectionOrdredByTxt) {
+    	if( cmpsitionSectionOrdredByTxt != null ) {
+	    	if( this.cmpsitionSectionOrdredByTxt == null ) {
+	        	this.cmpsitionSectionOrdredByTxt = cmpsitionSectionOrdredByTxt;
+	        } else if(this.cmpsitionSectionOrdredByTxt.substring(this.cmpsitionSectionOrdredByTxt.length() - 1).equals("]") & cmpsitionSectionOrdredByTxt.equals("[")) {
+	        	this.cmpsitionSectionOrdredByTxt = this.cmpsitionSectionOrdredByTxt+ "," + cmpsitionSectionOrdredByTxt;
+	        } else if(cmpsitionSectionOrdredByTxt.equals("[") | cmpsitionSectionOrdredByTxt.equals("]") | this.cmpsitionSectionOrdredByTxt.substring(this.cmpsitionSectionOrdredByTxt.length() - 1).equals("[")) {
+	        	this.cmpsitionSectionOrdredByTxt = this.cmpsitionSectionOrdredByTxt+cmpsitionSectionOrdredByTxt;
+	        } else  {
+	            this.cmpsitionSectionOrdredByTxt = this.cmpsitionSectionOrdredByTxt+ "," +cmpsitionSectionOrdredByTxt;
+	        }
+        }
     }
     
     
@@ -827,6 +1835,20 @@ public class Composition  implements java.io.Serializable {
         this.cmpsitionSectionTxtDiv = cmpsitionSectionTxtDiv;
     }
     
+    public void addCmpsitionSectionTxtDiv(String cmpsitionSectionTxtDiv) {
+    	if( cmpsitionSectionTxtDiv != null ) {
+	    	if( this.cmpsitionSectionTxtDiv == null ) {
+	        	this.cmpsitionSectionTxtDiv = cmpsitionSectionTxtDiv;
+	        } else if(this.cmpsitionSectionTxtDiv.substring(this.cmpsitionSectionTxtDiv.length() - 1).equals("]") & cmpsitionSectionTxtDiv.equals("[")) {
+	        	this.cmpsitionSectionTxtDiv = this.cmpsitionSectionTxtDiv+ "," + cmpsitionSectionTxtDiv;
+	        } else if(cmpsitionSectionTxtDiv.equals("[") | cmpsitionSectionTxtDiv.equals("]") | this.cmpsitionSectionTxtDiv.substring(this.cmpsitionSectionTxtDiv.length() - 1).equals("[")) {
+	        	this.cmpsitionSectionTxtDiv = this.cmpsitionSectionTxtDiv+cmpsitionSectionTxtDiv;
+	        } else  {
+	            this.cmpsitionSectionTxtDiv = this.cmpsitionSectionTxtDiv+ "," +cmpsitionSectionTxtDiv;
+	        }
+        }
+    }
+    
     
     
     public String getCmpsitionSectionTxtSts() {
@@ -835,6 +1857,20 @@ public class Composition  implements java.io.Serializable {
     
     public void setCmpsitionSectionTxtSts(String cmpsitionSectionTxtSts) {
         this.cmpsitionSectionTxtSts = cmpsitionSectionTxtSts;
+    }
+    
+    public void addCmpsitionSectionTxtSts(String cmpsitionSectionTxtSts) {
+    	if( cmpsitionSectionTxtSts != null ) {
+	    	if( this.cmpsitionSectionTxtSts == null ) {
+	        	this.cmpsitionSectionTxtSts = cmpsitionSectionTxtSts;
+	        } else if(this.cmpsitionSectionTxtSts.substring(this.cmpsitionSectionTxtSts.length() - 1).equals("]") & cmpsitionSectionTxtSts.equals("[")) {
+	        	this.cmpsitionSectionTxtSts = this.cmpsitionSectionTxtSts+ "," + cmpsitionSectionTxtSts;
+	        } else if(cmpsitionSectionTxtSts.equals("[") | cmpsitionSectionTxtSts.equals("]") | this.cmpsitionSectionTxtSts.substring(this.cmpsitionSectionTxtSts.length() - 1).equals("[")) {
+	        	this.cmpsitionSectionTxtSts = this.cmpsitionSectionTxtSts+cmpsitionSectionTxtSts;
+	        } else  {
+	            this.cmpsitionSectionTxtSts = this.cmpsitionSectionTxtSts+ "," +cmpsitionSectionTxtSts;
+	        }
+        }
     }
     
     
@@ -847,6 +1883,20 @@ public class Composition  implements java.io.Serializable {
         this.cmpsitionSectionTtl = cmpsitionSectionTtl;
     }
     
+    public void addCmpsitionSectionTtl(String cmpsitionSectionTtl) {
+    	if( cmpsitionSectionTtl != null ) {
+	    	if( this.cmpsitionSectionTtl == null ) {
+	        	this.cmpsitionSectionTtl = cmpsitionSectionTtl;
+	        } else if(this.cmpsitionSectionTtl.substring(this.cmpsitionSectionTtl.length() - 1).equals("]") & cmpsitionSectionTtl.equals("[")) {
+	        	this.cmpsitionSectionTtl = this.cmpsitionSectionTtl+ "," + cmpsitionSectionTtl;
+	        } else if(cmpsitionSectionTtl.equals("[") | cmpsitionSectionTtl.equals("]") | this.cmpsitionSectionTtl.substring(this.cmpsitionSectionTtl.length() - 1).equals("[")) {
+	        	this.cmpsitionSectionTtl = this.cmpsitionSectionTtl+cmpsitionSectionTtl;
+	        } else  {
+	            this.cmpsitionSectionTtl = this.cmpsitionSectionTtl+ "," +cmpsitionSectionTtl;
+	        }
+        }
+    }
+    
     
     
     public String getCmpsitionSts() {
@@ -855,6 +1905,20 @@ public class Composition  implements java.io.Serializable {
     
     public void setCmpsitionSts(String cmpsitionSts) {
         this.cmpsitionSts = cmpsitionSts;
+    }
+    
+    public void addCmpsitionSts(String cmpsitionSts) {
+    	if( cmpsitionSts != null ) {
+	    	if( this.cmpsitionSts == null ) {
+	        	this.cmpsitionSts = cmpsitionSts;
+	        } else if(this.cmpsitionSts.substring(this.cmpsitionSts.length() - 1).equals("]") & cmpsitionSts.equals("[")) {
+	        	this.cmpsitionSts = this.cmpsitionSts+ "," + cmpsitionSts;
+	        } else if(cmpsitionSts.equals("[") | cmpsitionSts.equals("]") | this.cmpsitionSts.substring(this.cmpsitionSts.length() - 1).equals("[")) {
+	        	this.cmpsitionSts = this.cmpsitionSts+cmpsitionSts;
+	        } else  {
+	            this.cmpsitionSts = this.cmpsitionSts+ "," +cmpsitionSts;
+	        }
+        }
     }
     
     
@@ -867,6 +1931,20 @@ public class Composition  implements java.io.Serializable {
         this.cmpsitionSbjct = cmpsitionSbjct;
     }
     
+    public void addCmpsitionSbjct(String cmpsitionSbjct) {
+    	if( cmpsitionSbjct != null ) {
+	    	if( this.cmpsitionSbjct == null ) {
+	        	this.cmpsitionSbjct = cmpsitionSbjct;
+	        } else if(this.cmpsitionSbjct.substring(this.cmpsitionSbjct.length() - 1).equals("]") & cmpsitionSbjct.equals("[")) {
+	        	this.cmpsitionSbjct = this.cmpsitionSbjct+ "," + cmpsitionSbjct;
+	        } else if(cmpsitionSbjct.equals("[") | cmpsitionSbjct.equals("]") | this.cmpsitionSbjct.substring(this.cmpsitionSbjct.length() - 1).equals("[")) {
+	        	this.cmpsitionSbjct = this.cmpsitionSbjct+cmpsitionSbjct;
+	        } else  {
+	            this.cmpsitionSbjct = this.cmpsitionSbjct+ "," +cmpsitionSbjct;
+	        }
+        }
+    }
+    
     
     
     public String getCmpsitionTtl() {
@@ -875,6 +1953,20 @@ public class Composition  implements java.io.Serializable {
     
     public void setCmpsitionTtl(String cmpsitionTtl) {
         this.cmpsitionTtl = cmpsitionTtl;
+    }
+    
+    public void addCmpsitionTtl(String cmpsitionTtl) {
+    	if( cmpsitionTtl != null ) {
+	    	if( this.cmpsitionTtl == null ) {
+	        	this.cmpsitionTtl = cmpsitionTtl;
+	        } else if(this.cmpsitionTtl.substring(this.cmpsitionTtl.length() - 1).equals("]") & cmpsitionTtl.equals("[")) {
+	        	this.cmpsitionTtl = this.cmpsitionTtl+ "," + cmpsitionTtl;
+	        } else if(cmpsitionTtl.equals("[") | cmpsitionTtl.equals("]") | this.cmpsitionTtl.substring(this.cmpsitionTtl.length() - 1).equals("[")) {
+	        	this.cmpsitionTtl = this.cmpsitionTtl+cmpsitionTtl;
+	        } else  {
+	            this.cmpsitionTtl = this.cmpsitionTtl+ "," +cmpsitionTtl;
+	        }
+        }
     }
     
     
@@ -887,6 +1979,20 @@ public class Composition  implements java.io.Serializable {
         this.cmpsitionTypCdgCd = cmpsitionTypCdgCd;
     }
     
+    public void addCmpsitionTypCdgCd(String cmpsitionTypCdgCd) {
+    	if( cmpsitionTypCdgCd != null ) {
+	    	if( this.cmpsitionTypCdgCd == null ) {
+	        	this.cmpsitionTypCdgCd = cmpsitionTypCdgCd;
+	        } else if(this.cmpsitionTypCdgCd.substring(this.cmpsitionTypCdgCd.length() - 1).equals("]") & cmpsitionTypCdgCd.equals("[")) {
+	        	this.cmpsitionTypCdgCd = this.cmpsitionTypCdgCd+ "," + cmpsitionTypCdgCd;
+	        } else if(cmpsitionTypCdgCd.equals("[") | cmpsitionTypCdgCd.equals("]") | this.cmpsitionTypCdgCd.substring(this.cmpsitionTypCdgCd.length() - 1).equals("[")) {
+	        	this.cmpsitionTypCdgCd = this.cmpsitionTypCdgCd+cmpsitionTypCdgCd;
+	        } else  {
+	            this.cmpsitionTypCdgCd = this.cmpsitionTypCdgCd+ "," +cmpsitionTypCdgCd;
+	        }
+        }
+    }
+    
     
     
     public String getCmpsitionTypCdgDsply() {
@@ -895,6 +2001,20 @@ public class Composition  implements java.io.Serializable {
     
     public void setCmpsitionTypCdgDsply(String cmpsitionTypCdgDsply) {
         this.cmpsitionTypCdgDsply = cmpsitionTypCdgDsply;
+    }
+    
+    public void addCmpsitionTypCdgDsply(String cmpsitionTypCdgDsply) {
+    	if( cmpsitionTypCdgDsply != null ) {
+	    	if( this.cmpsitionTypCdgDsply == null ) {
+	        	this.cmpsitionTypCdgDsply = cmpsitionTypCdgDsply;
+	        } else if(this.cmpsitionTypCdgDsply.substring(this.cmpsitionTypCdgDsply.length() - 1).equals("]") & cmpsitionTypCdgDsply.equals("[")) {
+	        	this.cmpsitionTypCdgDsply = this.cmpsitionTypCdgDsply+ "," + cmpsitionTypCdgDsply;
+	        } else if(cmpsitionTypCdgDsply.equals("[") | cmpsitionTypCdgDsply.equals("]") | this.cmpsitionTypCdgDsply.substring(this.cmpsitionTypCdgDsply.length() - 1).equals("[")) {
+	        	this.cmpsitionTypCdgDsply = this.cmpsitionTypCdgDsply+cmpsitionTypCdgDsply;
+	        } else  {
+	            this.cmpsitionTypCdgDsply = this.cmpsitionTypCdgDsply+ "," +cmpsitionTypCdgDsply;
+	        }
+        }
     }
     
     
@@ -907,6 +2027,20 @@ public class Composition  implements java.io.Serializable {
         this.cmpsitionTypCdgSys = cmpsitionTypCdgSys;
     }
     
+    public void addCmpsitionTypCdgSys(String cmpsitionTypCdgSys) {
+    	if( cmpsitionTypCdgSys != null ) {
+	    	if( this.cmpsitionTypCdgSys == null ) {
+	        	this.cmpsitionTypCdgSys = cmpsitionTypCdgSys;
+	        } else if(this.cmpsitionTypCdgSys.substring(this.cmpsitionTypCdgSys.length() - 1).equals("]") & cmpsitionTypCdgSys.equals("[")) {
+	        	this.cmpsitionTypCdgSys = this.cmpsitionTypCdgSys+ "," + cmpsitionTypCdgSys;
+	        } else if(cmpsitionTypCdgSys.equals("[") | cmpsitionTypCdgSys.equals("]") | this.cmpsitionTypCdgSys.substring(this.cmpsitionTypCdgSys.length() - 1).equals("[")) {
+	        	this.cmpsitionTypCdgSys = this.cmpsitionTypCdgSys+cmpsitionTypCdgSys;
+	        } else  {
+	            this.cmpsitionTypCdgSys = this.cmpsitionTypCdgSys+ "," +cmpsitionTypCdgSys;
+	        }
+        }
+    }
+    
     
     
     public String getCmpsitionTypCdgUsrSltd() {
@@ -915,6 +2049,20 @@ public class Composition  implements java.io.Serializable {
     
     public void setCmpsitionTypCdgUsrSltd(String cmpsitionTypCdgUsrSltd) {
         this.cmpsitionTypCdgUsrSltd = cmpsitionTypCdgUsrSltd;
+    }
+    
+    public void addCmpsitionTypCdgUsrSltd(String cmpsitionTypCdgUsrSltd) {
+    	if( cmpsitionTypCdgUsrSltd != null ) {
+	    	if( this.cmpsitionTypCdgUsrSltd == null ) {
+	        	this.cmpsitionTypCdgUsrSltd = cmpsitionTypCdgUsrSltd;
+	        } else if(this.cmpsitionTypCdgUsrSltd.substring(this.cmpsitionTypCdgUsrSltd.length() - 1).equals("]") & cmpsitionTypCdgUsrSltd.equals("[")) {
+	        	this.cmpsitionTypCdgUsrSltd = this.cmpsitionTypCdgUsrSltd+ "," + cmpsitionTypCdgUsrSltd;
+	        } else if(cmpsitionTypCdgUsrSltd.equals("[") | cmpsitionTypCdgUsrSltd.equals("]") | this.cmpsitionTypCdgUsrSltd.substring(this.cmpsitionTypCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.cmpsitionTypCdgUsrSltd = this.cmpsitionTypCdgUsrSltd+cmpsitionTypCdgUsrSltd;
+	        } else  {
+	            this.cmpsitionTypCdgUsrSltd = this.cmpsitionTypCdgUsrSltd+ "," +cmpsitionTypCdgUsrSltd;
+	        }
+        }
     }
     
     
@@ -927,6 +2075,20 @@ public class Composition  implements java.io.Serializable {
         this.cmpsitionTypCdgVrsn = cmpsitionTypCdgVrsn;
     }
     
+    public void addCmpsitionTypCdgVrsn(String cmpsitionTypCdgVrsn) {
+    	if( cmpsitionTypCdgVrsn != null ) {
+	    	if( this.cmpsitionTypCdgVrsn == null ) {
+	        	this.cmpsitionTypCdgVrsn = cmpsitionTypCdgVrsn;
+	        } else if(this.cmpsitionTypCdgVrsn.substring(this.cmpsitionTypCdgVrsn.length() - 1).equals("]") & cmpsitionTypCdgVrsn.equals("[")) {
+	        	this.cmpsitionTypCdgVrsn = this.cmpsitionTypCdgVrsn+ "," + cmpsitionTypCdgVrsn;
+	        } else if(cmpsitionTypCdgVrsn.equals("[") | cmpsitionTypCdgVrsn.equals("]") | this.cmpsitionTypCdgVrsn.substring(this.cmpsitionTypCdgVrsn.length() - 1).equals("[")) {
+	        	this.cmpsitionTypCdgVrsn = this.cmpsitionTypCdgVrsn+cmpsitionTypCdgVrsn;
+	        } else  {
+	            this.cmpsitionTypCdgVrsn = this.cmpsitionTypCdgVrsn+ "," +cmpsitionTypCdgVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getCmpsitionTypTxt() {
@@ -935,6 +2097,20 @@ public class Composition  implements java.io.Serializable {
     
     public void setCmpsitionTypTxt(String cmpsitionTypTxt) {
         this.cmpsitionTypTxt = cmpsitionTypTxt;
+    }
+    
+    public void addCmpsitionTypTxt(String cmpsitionTypTxt) {
+    	if( cmpsitionTypTxt != null ) {
+	    	if( this.cmpsitionTypTxt == null ) {
+	        	this.cmpsitionTypTxt = cmpsitionTypTxt;
+	        } else if(this.cmpsitionTypTxt.substring(this.cmpsitionTypTxt.length() - 1).equals("]") & cmpsitionTypTxt.equals("[")) {
+	        	this.cmpsitionTypTxt = this.cmpsitionTypTxt+ "," + cmpsitionTypTxt;
+	        } else if(cmpsitionTypTxt.equals("[") | cmpsitionTypTxt.equals("]") | this.cmpsitionTypTxt.substring(this.cmpsitionTypTxt.length() - 1).equals("[")) {
+	        	this.cmpsitionTypTxt = this.cmpsitionTypTxt+cmpsitionTypTxt;
+	        } else  {
+	            this.cmpsitionTypTxt = this.cmpsitionTypTxt+ "," +cmpsitionTypTxt;
+	        }
+        }
     }
     
     

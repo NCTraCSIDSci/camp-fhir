@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Jun 27, 2022, 10:40:10 AM by Hibernate Tools 5.6.1.Final
+// Generated Aug 17, 2022, 11:08:48 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -128,6 +128,20 @@ public class MolecularSequence  implements java.io.Serializable {
         this.id = id;
     }
     
+    public void addId(String id) {
+    	if( id != null ) {
+	    	if( this.id == null ) {
+	        	this.id = id;
+	        } else if(this.id.substring(this.id.length() - 1).equals("]") & id.equals("[")) {
+	        	this.id = this.id+ "," + id;
+	        } else if(id.equals("[") | id.equals("]") | this.id.substring(this.id.length() - 1).equals("[")) {
+	        	this.id = this.id+id;
+	        } else  {
+	            this.id = this.id+ "," +id;
+	        }
+        }
+    }
+    
     
     
     public String getMoleclrSqncCoordinateSys() {
@@ -136,6 +150,20 @@ public class MolecularSequence  implements java.io.Serializable {
     
     public void setMoleclrSqncCoordinateSys(String moleclrSqncCoordinateSys) {
         this.moleclrSqncCoordinateSys = moleclrSqncCoordinateSys;
+    }
+    
+    public void addMoleclrSqncCoordinateSys(String moleclrSqncCoordinateSys) {
+    	if( moleclrSqncCoordinateSys != null ) {
+	    	if( this.moleclrSqncCoordinateSys == null ) {
+	        	this.moleclrSqncCoordinateSys = moleclrSqncCoordinateSys;
+	        } else if(this.moleclrSqncCoordinateSys.substring(this.moleclrSqncCoordinateSys.length() - 1).equals("]") & moleclrSqncCoordinateSys.equals("[")) {
+	        	this.moleclrSqncCoordinateSys = this.moleclrSqncCoordinateSys+ "," + moleclrSqncCoordinateSys;
+	        } else if(moleclrSqncCoordinateSys.equals("[") | moleclrSqncCoordinateSys.equals("]") | this.moleclrSqncCoordinateSys.substring(this.moleclrSqncCoordinateSys.length() - 1).equals("[")) {
+	        	this.moleclrSqncCoordinateSys = this.moleclrSqncCoordinateSys+moleclrSqncCoordinateSys;
+	        } else  {
+	            this.moleclrSqncCoordinateSys = this.moleclrSqncCoordinateSys+ "," +moleclrSqncCoordinateSys;
+	        }
+        }
     }
     
     
@@ -148,6 +176,20 @@ public class MolecularSequence  implements java.io.Serializable {
         this.moleclrSqncDvc = moleclrSqncDvc;
     }
     
+    public void addMoleclrSqncDvc(String moleclrSqncDvc) {
+    	if( moleclrSqncDvc != null ) {
+	    	if( this.moleclrSqncDvc == null ) {
+	        	this.moleclrSqncDvc = moleclrSqncDvc;
+	        } else if(this.moleclrSqncDvc.substring(this.moleclrSqncDvc.length() - 1).equals("]") & moleclrSqncDvc.equals("[")) {
+	        	this.moleclrSqncDvc = this.moleclrSqncDvc+ "," + moleclrSqncDvc;
+	        } else if(moleclrSqncDvc.equals("[") | moleclrSqncDvc.equals("]") | this.moleclrSqncDvc.substring(this.moleclrSqncDvc.length() - 1).equals("[")) {
+	        	this.moleclrSqncDvc = this.moleclrSqncDvc+moleclrSqncDvc;
+	        } else  {
+	            this.moleclrSqncDvc = this.moleclrSqncDvc+ "," +moleclrSqncDvc;
+	        }
+        }
+    }
+    
     
     
     public String getMoleclrSqncIdAssigner() {
@@ -156,6 +198,20 @@ public class MolecularSequence  implements java.io.Serializable {
     
     public void setMoleclrSqncIdAssigner(String moleclrSqncIdAssigner) {
         this.moleclrSqncIdAssigner = moleclrSqncIdAssigner;
+    }
+    
+    public void addMoleclrSqncIdAssigner(String moleclrSqncIdAssigner) {
+    	if( moleclrSqncIdAssigner != null ) {
+	    	if( this.moleclrSqncIdAssigner == null ) {
+	        	this.moleclrSqncIdAssigner = moleclrSqncIdAssigner;
+	        } else if(this.moleclrSqncIdAssigner.substring(this.moleclrSqncIdAssigner.length() - 1).equals("]") & moleclrSqncIdAssigner.equals("[")) {
+	        	this.moleclrSqncIdAssigner = this.moleclrSqncIdAssigner+ "," + moleclrSqncIdAssigner;
+	        } else if(moleclrSqncIdAssigner.equals("[") | moleclrSqncIdAssigner.equals("]") | this.moleclrSqncIdAssigner.substring(this.moleclrSqncIdAssigner.length() - 1).equals("[")) {
+	        	this.moleclrSqncIdAssigner = this.moleclrSqncIdAssigner+moleclrSqncIdAssigner;
+	        } else  {
+	            this.moleclrSqncIdAssigner = this.moleclrSqncIdAssigner+ "," +moleclrSqncIdAssigner;
+	        }
+        }
     }
     
     
@@ -168,6 +224,20 @@ public class MolecularSequence  implements java.io.Serializable {
         this.moleclrSqncIdPrdEnd = moleclrSqncIdPrdEnd;
     }
     
+    public void addMoleclrSqncIdPrdEnd(String moleclrSqncIdPrdEnd) {
+    	if( moleclrSqncIdPrdEnd != null ) {
+	    	if( this.moleclrSqncIdPrdEnd == null ) {
+	        	this.moleclrSqncIdPrdEnd = moleclrSqncIdPrdEnd;
+	        } else if(this.moleclrSqncIdPrdEnd.substring(this.moleclrSqncIdPrdEnd.length() - 1).equals("]") & moleclrSqncIdPrdEnd.equals("[")) {
+	        	this.moleclrSqncIdPrdEnd = this.moleclrSqncIdPrdEnd+ "," + moleclrSqncIdPrdEnd;
+	        } else if(moleclrSqncIdPrdEnd.equals("[") | moleclrSqncIdPrdEnd.equals("]") | this.moleclrSqncIdPrdEnd.substring(this.moleclrSqncIdPrdEnd.length() - 1).equals("[")) {
+	        	this.moleclrSqncIdPrdEnd = this.moleclrSqncIdPrdEnd+moleclrSqncIdPrdEnd;
+	        } else  {
+	            this.moleclrSqncIdPrdEnd = this.moleclrSqncIdPrdEnd+ "," +moleclrSqncIdPrdEnd;
+	        }
+        }
+    }
+    
     
     
     public String getMoleclrSqncIdPrdStrt() {
@@ -176,6 +246,20 @@ public class MolecularSequence  implements java.io.Serializable {
     
     public void setMoleclrSqncIdPrdStrt(String moleclrSqncIdPrdStrt) {
         this.moleclrSqncIdPrdStrt = moleclrSqncIdPrdStrt;
+    }
+    
+    public void addMoleclrSqncIdPrdStrt(String moleclrSqncIdPrdStrt) {
+    	if( moleclrSqncIdPrdStrt != null ) {
+	    	if( this.moleclrSqncIdPrdStrt == null ) {
+	        	this.moleclrSqncIdPrdStrt = moleclrSqncIdPrdStrt;
+	        } else if(this.moleclrSqncIdPrdStrt.substring(this.moleclrSqncIdPrdStrt.length() - 1).equals("]") & moleclrSqncIdPrdStrt.equals("[")) {
+	        	this.moleclrSqncIdPrdStrt = this.moleclrSqncIdPrdStrt+ "," + moleclrSqncIdPrdStrt;
+	        } else if(moleclrSqncIdPrdStrt.equals("[") | moleclrSqncIdPrdStrt.equals("]") | this.moleclrSqncIdPrdStrt.substring(this.moleclrSqncIdPrdStrt.length() - 1).equals("[")) {
+	        	this.moleclrSqncIdPrdStrt = this.moleclrSqncIdPrdStrt+moleclrSqncIdPrdStrt;
+	        } else  {
+	            this.moleclrSqncIdPrdStrt = this.moleclrSqncIdPrdStrt+ "," +moleclrSqncIdPrdStrt;
+	        }
+        }
     }
     
     
@@ -188,6 +272,20 @@ public class MolecularSequence  implements java.io.Serializable {
         this.moleclrSqncIdSys = moleclrSqncIdSys;
     }
     
+    public void addMoleclrSqncIdSys(String moleclrSqncIdSys) {
+    	if( moleclrSqncIdSys != null ) {
+	    	if( this.moleclrSqncIdSys == null ) {
+	        	this.moleclrSqncIdSys = moleclrSqncIdSys;
+	        } else if(this.moleclrSqncIdSys.substring(this.moleclrSqncIdSys.length() - 1).equals("]") & moleclrSqncIdSys.equals("[")) {
+	        	this.moleclrSqncIdSys = this.moleclrSqncIdSys+ "," + moleclrSqncIdSys;
+	        } else if(moleclrSqncIdSys.equals("[") | moleclrSqncIdSys.equals("]") | this.moleclrSqncIdSys.substring(this.moleclrSqncIdSys.length() - 1).equals("[")) {
+	        	this.moleclrSqncIdSys = this.moleclrSqncIdSys+moleclrSqncIdSys;
+	        } else  {
+	            this.moleclrSqncIdSys = this.moleclrSqncIdSys+ "," +moleclrSqncIdSys;
+	        }
+        }
+    }
+    
     
     
     public String getMoleclrSqncIdTypCdgCd() {
@@ -196,6 +294,20 @@ public class MolecularSequence  implements java.io.Serializable {
     
     public void setMoleclrSqncIdTypCdgCd(String moleclrSqncIdTypCdgCd) {
         this.moleclrSqncIdTypCdgCd = moleclrSqncIdTypCdgCd;
+    }
+    
+    public void addMoleclrSqncIdTypCdgCd(String moleclrSqncIdTypCdgCd) {
+    	if( moleclrSqncIdTypCdgCd != null ) {
+	    	if( this.moleclrSqncIdTypCdgCd == null ) {
+	        	this.moleclrSqncIdTypCdgCd = moleclrSqncIdTypCdgCd;
+	        } else if(this.moleclrSqncIdTypCdgCd.substring(this.moleclrSqncIdTypCdgCd.length() - 1).equals("]") & moleclrSqncIdTypCdgCd.equals("[")) {
+	        	this.moleclrSqncIdTypCdgCd = this.moleclrSqncIdTypCdgCd+ "," + moleclrSqncIdTypCdgCd;
+	        } else if(moleclrSqncIdTypCdgCd.equals("[") | moleclrSqncIdTypCdgCd.equals("]") | this.moleclrSqncIdTypCdgCd.substring(this.moleclrSqncIdTypCdgCd.length() - 1).equals("[")) {
+	        	this.moleclrSqncIdTypCdgCd = this.moleclrSqncIdTypCdgCd+moleclrSqncIdTypCdgCd;
+	        } else  {
+	            this.moleclrSqncIdTypCdgCd = this.moleclrSqncIdTypCdgCd+ "," +moleclrSqncIdTypCdgCd;
+	        }
+        }
     }
     
     
@@ -208,6 +320,20 @@ public class MolecularSequence  implements java.io.Serializable {
         this.moleclrSqncIdTypCdgDsply = moleclrSqncIdTypCdgDsply;
     }
     
+    public void addMoleclrSqncIdTypCdgDsply(String moleclrSqncIdTypCdgDsply) {
+    	if( moleclrSqncIdTypCdgDsply != null ) {
+	    	if( this.moleclrSqncIdTypCdgDsply == null ) {
+	        	this.moleclrSqncIdTypCdgDsply = moleclrSqncIdTypCdgDsply;
+	        } else if(this.moleclrSqncIdTypCdgDsply.substring(this.moleclrSqncIdTypCdgDsply.length() - 1).equals("]") & moleclrSqncIdTypCdgDsply.equals("[")) {
+	        	this.moleclrSqncIdTypCdgDsply = this.moleclrSqncIdTypCdgDsply+ "," + moleclrSqncIdTypCdgDsply;
+	        } else if(moleclrSqncIdTypCdgDsply.equals("[") | moleclrSqncIdTypCdgDsply.equals("]") | this.moleclrSqncIdTypCdgDsply.substring(this.moleclrSqncIdTypCdgDsply.length() - 1).equals("[")) {
+	        	this.moleclrSqncIdTypCdgDsply = this.moleclrSqncIdTypCdgDsply+moleclrSqncIdTypCdgDsply;
+	        } else  {
+	            this.moleclrSqncIdTypCdgDsply = this.moleclrSqncIdTypCdgDsply+ "," +moleclrSqncIdTypCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getMoleclrSqncIdTypCdgSys() {
@@ -216,6 +342,20 @@ public class MolecularSequence  implements java.io.Serializable {
     
     public void setMoleclrSqncIdTypCdgSys(String moleclrSqncIdTypCdgSys) {
         this.moleclrSqncIdTypCdgSys = moleclrSqncIdTypCdgSys;
+    }
+    
+    public void addMoleclrSqncIdTypCdgSys(String moleclrSqncIdTypCdgSys) {
+    	if( moleclrSqncIdTypCdgSys != null ) {
+	    	if( this.moleclrSqncIdTypCdgSys == null ) {
+	        	this.moleclrSqncIdTypCdgSys = moleclrSqncIdTypCdgSys;
+	        } else if(this.moleclrSqncIdTypCdgSys.substring(this.moleclrSqncIdTypCdgSys.length() - 1).equals("]") & moleclrSqncIdTypCdgSys.equals("[")) {
+	        	this.moleclrSqncIdTypCdgSys = this.moleclrSqncIdTypCdgSys+ "," + moleclrSqncIdTypCdgSys;
+	        } else if(moleclrSqncIdTypCdgSys.equals("[") | moleclrSqncIdTypCdgSys.equals("]") | this.moleclrSqncIdTypCdgSys.substring(this.moleclrSqncIdTypCdgSys.length() - 1).equals("[")) {
+	        	this.moleclrSqncIdTypCdgSys = this.moleclrSqncIdTypCdgSys+moleclrSqncIdTypCdgSys;
+	        } else  {
+	            this.moleclrSqncIdTypCdgSys = this.moleclrSqncIdTypCdgSys+ "," +moleclrSqncIdTypCdgSys;
+	        }
+        }
     }
     
     
@@ -228,6 +368,20 @@ public class MolecularSequence  implements java.io.Serializable {
         this.moleclrSqncIdTypCdgUsrSltd = moleclrSqncIdTypCdgUsrSltd;
     }
     
+    public void addMoleclrSqncIdTypCdgUsrSltd(String moleclrSqncIdTypCdgUsrSltd) {
+    	if( moleclrSqncIdTypCdgUsrSltd != null ) {
+	    	if( this.moleclrSqncIdTypCdgUsrSltd == null ) {
+	        	this.moleclrSqncIdTypCdgUsrSltd = moleclrSqncIdTypCdgUsrSltd;
+	        } else if(this.moleclrSqncIdTypCdgUsrSltd.substring(this.moleclrSqncIdTypCdgUsrSltd.length() - 1).equals("]") & moleclrSqncIdTypCdgUsrSltd.equals("[")) {
+	        	this.moleclrSqncIdTypCdgUsrSltd = this.moleclrSqncIdTypCdgUsrSltd+ "," + moleclrSqncIdTypCdgUsrSltd;
+	        } else if(moleclrSqncIdTypCdgUsrSltd.equals("[") | moleclrSqncIdTypCdgUsrSltd.equals("]") | this.moleclrSqncIdTypCdgUsrSltd.substring(this.moleclrSqncIdTypCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.moleclrSqncIdTypCdgUsrSltd = this.moleclrSqncIdTypCdgUsrSltd+moleclrSqncIdTypCdgUsrSltd;
+	        } else  {
+	            this.moleclrSqncIdTypCdgUsrSltd = this.moleclrSqncIdTypCdgUsrSltd+ "," +moleclrSqncIdTypCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getMoleclrSqncIdTypCdgVrsn() {
@@ -236,6 +390,20 @@ public class MolecularSequence  implements java.io.Serializable {
     
     public void setMoleclrSqncIdTypCdgVrsn(String moleclrSqncIdTypCdgVrsn) {
         this.moleclrSqncIdTypCdgVrsn = moleclrSqncIdTypCdgVrsn;
+    }
+    
+    public void addMoleclrSqncIdTypCdgVrsn(String moleclrSqncIdTypCdgVrsn) {
+    	if( moleclrSqncIdTypCdgVrsn != null ) {
+	    	if( this.moleclrSqncIdTypCdgVrsn == null ) {
+	        	this.moleclrSqncIdTypCdgVrsn = moleclrSqncIdTypCdgVrsn;
+	        } else if(this.moleclrSqncIdTypCdgVrsn.substring(this.moleclrSqncIdTypCdgVrsn.length() - 1).equals("]") & moleclrSqncIdTypCdgVrsn.equals("[")) {
+	        	this.moleclrSqncIdTypCdgVrsn = this.moleclrSqncIdTypCdgVrsn+ "," + moleclrSqncIdTypCdgVrsn;
+	        } else if(moleclrSqncIdTypCdgVrsn.equals("[") | moleclrSqncIdTypCdgVrsn.equals("]") | this.moleclrSqncIdTypCdgVrsn.substring(this.moleclrSqncIdTypCdgVrsn.length() - 1).equals("[")) {
+	        	this.moleclrSqncIdTypCdgVrsn = this.moleclrSqncIdTypCdgVrsn+moleclrSqncIdTypCdgVrsn;
+	        } else  {
+	            this.moleclrSqncIdTypCdgVrsn = this.moleclrSqncIdTypCdgVrsn+ "," +moleclrSqncIdTypCdgVrsn;
+	        }
+        }
     }
     
     
@@ -248,6 +416,20 @@ public class MolecularSequence  implements java.io.Serializable {
         this.moleclrSqncIdTypTxt = moleclrSqncIdTypTxt;
     }
     
+    public void addMoleclrSqncIdTypTxt(String moleclrSqncIdTypTxt) {
+    	if( moleclrSqncIdTypTxt != null ) {
+	    	if( this.moleclrSqncIdTypTxt == null ) {
+	        	this.moleclrSqncIdTypTxt = moleclrSqncIdTypTxt;
+	        } else if(this.moleclrSqncIdTypTxt.substring(this.moleclrSqncIdTypTxt.length() - 1).equals("]") & moleclrSqncIdTypTxt.equals("[")) {
+	        	this.moleclrSqncIdTypTxt = this.moleclrSqncIdTypTxt+ "," + moleclrSqncIdTypTxt;
+	        } else if(moleclrSqncIdTypTxt.equals("[") | moleclrSqncIdTypTxt.equals("]") | this.moleclrSqncIdTypTxt.substring(this.moleclrSqncIdTypTxt.length() - 1).equals("[")) {
+	        	this.moleclrSqncIdTypTxt = this.moleclrSqncIdTypTxt+moleclrSqncIdTypTxt;
+	        } else  {
+	            this.moleclrSqncIdTypTxt = this.moleclrSqncIdTypTxt+ "," +moleclrSqncIdTypTxt;
+	        }
+        }
+    }
+    
     
     
     public String getMoleclrSqncIdUse() {
@@ -256,6 +438,20 @@ public class MolecularSequence  implements java.io.Serializable {
     
     public void setMoleclrSqncIdUse(String moleclrSqncIdUse) {
         this.moleclrSqncIdUse = moleclrSqncIdUse;
+    }
+    
+    public void addMoleclrSqncIdUse(String moleclrSqncIdUse) {
+    	if( moleclrSqncIdUse != null ) {
+	    	if( this.moleclrSqncIdUse == null ) {
+	        	this.moleclrSqncIdUse = moleclrSqncIdUse;
+	        } else if(this.moleclrSqncIdUse.substring(this.moleclrSqncIdUse.length() - 1).equals("]") & moleclrSqncIdUse.equals("[")) {
+	        	this.moleclrSqncIdUse = this.moleclrSqncIdUse+ "," + moleclrSqncIdUse;
+	        } else if(moleclrSqncIdUse.equals("[") | moleclrSqncIdUse.equals("]") | this.moleclrSqncIdUse.substring(this.moleclrSqncIdUse.length() - 1).equals("[")) {
+	        	this.moleclrSqncIdUse = this.moleclrSqncIdUse+moleclrSqncIdUse;
+	        } else  {
+	            this.moleclrSqncIdUse = this.moleclrSqncIdUse+ "," +moleclrSqncIdUse;
+	        }
+        }
     }
     
     
@@ -268,6 +464,20 @@ public class MolecularSequence  implements java.io.Serializable {
         this.moleclrSqncIdVl = moleclrSqncIdVl;
     }
     
+    public void addMoleclrSqncIdVl(String moleclrSqncIdVl) {
+    	if( moleclrSqncIdVl != null ) {
+	    	if( this.moleclrSqncIdVl == null ) {
+	        	this.moleclrSqncIdVl = moleclrSqncIdVl;
+	        } else if(this.moleclrSqncIdVl.substring(this.moleclrSqncIdVl.length() - 1).equals("]") & moleclrSqncIdVl.equals("[")) {
+	        	this.moleclrSqncIdVl = this.moleclrSqncIdVl+ "," + moleclrSqncIdVl;
+	        } else if(moleclrSqncIdVl.equals("[") | moleclrSqncIdVl.equals("]") | this.moleclrSqncIdVl.substring(this.moleclrSqncIdVl.length() - 1).equals("[")) {
+	        	this.moleclrSqncIdVl = this.moleclrSqncIdVl+moleclrSqncIdVl;
+	        } else  {
+	            this.moleclrSqncIdVl = this.moleclrSqncIdVl+ "," +moleclrSqncIdVl;
+	        }
+        }
+    }
+    
     
     
     public String getMoleclrSqncObservedSeq() {
@@ -276,6 +486,20 @@ public class MolecularSequence  implements java.io.Serializable {
     
     public void setMoleclrSqncObservedSeq(String moleclrSqncObservedSeq) {
         this.moleclrSqncObservedSeq = moleclrSqncObservedSeq;
+    }
+    
+    public void addMoleclrSqncObservedSeq(String moleclrSqncObservedSeq) {
+    	if( moleclrSqncObservedSeq != null ) {
+	    	if( this.moleclrSqncObservedSeq == null ) {
+	        	this.moleclrSqncObservedSeq = moleclrSqncObservedSeq;
+	        } else if(this.moleclrSqncObservedSeq.substring(this.moleclrSqncObservedSeq.length() - 1).equals("]") & moleclrSqncObservedSeq.equals("[")) {
+	        	this.moleclrSqncObservedSeq = this.moleclrSqncObservedSeq+ "," + moleclrSqncObservedSeq;
+	        } else if(moleclrSqncObservedSeq.equals("[") | moleclrSqncObservedSeq.equals("]") | this.moleclrSqncObservedSeq.substring(this.moleclrSqncObservedSeq.length() - 1).equals("[")) {
+	        	this.moleclrSqncObservedSeq = this.moleclrSqncObservedSeq+moleclrSqncObservedSeq;
+	        } else  {
+	            this.moleclrSqncObservedSeq = this.moleclrSqncObservedSeq+ "," +moleclrSqncObservedSeq;
+	        }
+        }
     }
     
     
@@ -288,6 +512,20 @@ public class MolecularSequence  implements java.io.Serializable {
         this.moleclrSqncPnt = moleclrSqncPnt;
     }
     
+    public void addMoleclrSqncPnt(String moleclrSqncPnt) {
+    	if( moleclrSqncPnt != null ) {
+	    	if( this.moleclrSqncPnt == null ) {
+	        	this.moleclrSqncPnt = moleclrSqncPnt;
+	        } else if(this.moleclrSqncPnt.substring(this.moleclrSqncPnt.length() - 1).equals("]") & moleclrSqncPnt.equals("[")) {
+	        	this.moleclrSqncPnt = this.moleclrSqncPnt+ "," + moleclrSqncPnt;
+	        } else if(moleclrSqncPnt.equals("[") | moleclrSqncPnt.equals("]") | this.moleclrSqncPnt.substring(this.moleclrSqncPnt.length() - 1).equals("[")) {
+	        	this.moleclrSqncPnt = this.moleclrSqncPnt+moleclrSqncPnt;
+	        } else  {
+	            this.moleclrSqncPnt = this.moleclrSqncPnt+ "," +moleclrSqncPnt;
+	        }
+        }
+    }
+    
     
     
     public String getMoleclrSqncPrfrmr() {
@@ -296,6 +534,20 @@ public class MolecularSequence  implements java.io.Serializable {
     
     public void setMoleclrSqncPrfrmr(String moleclrSqncPrfrmr) {
         this.moleclrSqncPrfrmr = moleclrSqncPrfrmr;
+    }
+    
+    public void addMoleclrSqncPrfrmr(String moleclrSqncPrfrmr) {
+    	if( moleclrSqncPrfrmr != null ) {
+	    	if( this.moleclrSqncPrfrmr == null ) {
+	        	this.moleclrSqncPrfrmr = moleclrSqncPrfrmr;
+	        } else if(this.moleclrSqncPrfrmr.substring(this.moleclrSqncPrfrmr.length() - 1).equals("]") & moleclrSqncPrfrmr.equals("[")) {
+	        	this.moleclrSqncPrfrmr = this.moleclrSqncPrfrmr+ "," + moleclrSqncPrfrmr;
+	        } else if(moleclrSqncPrfrmr.equals("[") | moleclrSqncPrfrmr.equals("]") | this.moleclrSqncPrfrmr.substring(this.moleclrSqncPrfrmr.length() - 1).equals("[")) {
+	        	this.moleclrSqncPrfrmr = this.moleclrSqncPrfrmr+moleclrSqncPrfrmr;
+	        } else  {
+	            this.moleclrSqncPrfrmr = this.moleclrSqncPrfrmr+ "," +moleclrSqncPrfrmr;
+	        }
+        }
     }
     
     
@@ -308,6 +560,20 @@ public class MolecularSequence  implements java.io.Serializable {
         this.moleclrSqncPointer = moleclrSqncPointer;
     }
     
+    public void addMoleclrSqncPointer(String moleclrSqncPointer) {
+    	if( moleclrSqncPointer != null ) {
+	    	if( this.moleclrSqncPointer == null ) {
+	        	this.moleclrSqncPointer = moleclrSqncPointer;
+	        } else if(this.moleclrSqncPointer.substring(this.moleclrSqncPointer.length() - 1).equals("]") & moleclrSqncPointer.equals("[")) {
+	        	this.moleclrSqncPointer = this.moleclrSqncPointer+ "," + moleclrSqncPointer;
+	        } else if(moleclrSqncPointer.equals("[") | moleclrSqncPointer.equals("]") | this.moleclrSqncPointer.substring(this.moleclrSqncPointer.length() - 1).equals("[")) {
+	        	this.moleclrSqncPointer = this.moleclrSqncPointer+moleclrSqncPointer;
+	        } else  {
+	            this.moleclrSqncPointer = this.moleclrSqncPointer+ "," +moleclrSqncPointer;
+	        }
+        }
+    }
+    
     
     
     public String getMoleclrSqncQualityEnd() {
@@ -316,6 +582,20 @@ public class MolecularSequence  implements java.io.Serializable {
     
     public void setMoleclrSqncQualityEnd(String moleclrSqncQualityEnd) {
         this.moleclrSqncQualityEnd = moleclrSqncQualityEnd;
+    }
+    
+    public void addMoleclrSqncQualityEnd(String moleclrSqncQualityEnd) {
+    	if( moleclrSqncQualityEnd != null ) {
+	    	if( this.moleclrSqncQualityEnd == null ) {
+	        	this.moleclrSqncQualityEnd = moleclrSqncQualityEnd;
+	        } else if(this.moleclrSqncQualityEnd.substring(this.moleclrSqncQualityEnd.length() - 1).equals("]") & moleclrSqncQualityEnd.equals("[")) {
+	        	this.moleclrSqncQualityEnd = this.moleclrSqncQualityEnd+ "," + moleclrSqncQualityEnd;
+	        } else if(moleclrSqncQualityEnd.equals("[") | moleclrSqncQualityEnd.equals("]") | this.moleclrSqncQualityEnd.substring(this.moleclrSqncQualityEnd.length() - 1).equals("[")) {
+	        	this.moleclrSqncQualityEnd = this.moleclrSqncQualityEnd+moleclrSqncQualityEnd;
+	        } else  {
+	            this.moleclrSqncQualityEnd = this.moleclrSqncQualityEnd+ "," +moleclrSqncQualityEnd;
+	        }
+        }
     }
     
     
@@ -328,6 +608,20 @@ public class MolecularSequence  implements java.io.Serializable {
         this.moleclrSqncQualityFscore = moleclrSqncQualityFscore;
     }
     
+    public void addMoleclrSqncQualityFscore(String moleclrSqncQualityFscore) {
+    	if( moleclrSqncQualityFscore != null ) {
+	    	if( this.moleclrSqncQualityFscore == null ) {
+	        	this.moleclrSqncQualityFscore = moleclrSqncQualityFscore;
+	        } else if(this.moleclrSqncQualityFscore.substring(this.moleclrSqncQualityFscore.length() - 1).equals("]") & moleclrSqncQualityFscore.equals("[")) {
+	        	this.moleclrSqncQualityFscore = this.moleclrSqncQualityFscore+ "," + moleclrSqncQualityFscore;
+	        } else if(moleclrSqncQualityFscore.equals("[") | moleclrSqncQualityFscore.equals("]") | this.moleclrSqncQualityFscore.substring(this.moleclrSqncQualityFscore.length() - 1).equals("[")) {
+	        	this.moleclrSqncQualityFscore = this.moleclrSqncQualityFscore+moleclrSqncQualityFscore;
+	        } else  {
+	            this.moleclrSqncQualityFscore = this.moleclrSqncQualityFscore+ "," +moleclrSqncQualityFscore;
+	        }
+        }
+    }
+    
     
     
     public String getMoleclrSqncQualityGtFp() {
@@ -336,6 +630,20 @@ public class MolecularSequence  implements java.io.Serializable {
     
     public void setMoleclrSqncQualityGtFp(String moleclrSqncQualityGtFp) {
         this.moleclrSqncQualityGtFp = moleclrSqncQualityGtFp;
+    }
+    
+    public void addMoleclrSqncQualityGtFp(String moleclrSqncQualityGtFp) {
+    	if( moleclrSqncQualityGtFp != null ) {
+	    	if( this.moleclrSqncQualityGtFp == null ) {
+	        	this.moleclrSqncQualityGtFp = moleclrSqncQualityGtFp;
+	        } else if(this.moleclrSqncQualityGtFp.substring(this.moleclrSqncQualityGtFp.length() - 1).equals("]") & moleclrSqncQualityGtFp.equals("[")) {
+	        	this.moleclrSqncQualityGtFp = this.moleclrSqncQualityGtFp+ "," + moleclrSqncQualityGtFp;
+	        } else if(moleclrSqncQualityGtFp.equals("[") | moleclrSqncQualityGtFp.equals("]") | this.moleclrSqncQualityGtFp.substring(this.moleclrSqncQualityGtFp.length() - 1).equals("[")) {
+	        	this.moleclrSqncQualityGtFp = this.moleclrSqncQualityGtFp+moleclrSqncQualityGtFp;
+	        } else  {
+	            this.moleclrSqncQualityGtFp = this.moleclrSqncQualityGtFp+ "," +moleclrSqncQualityGtFp;
+	        }
+        }
     }
     
     
@@ -348,6 +656,20 @@ public class MolecularSequence  implements java.io.Serializable {
         this.moleclrSqncQualityMthdCdgCd = moleclrSqncQualityMthdCdgCd;
     }
     
+    public void addMoleclrSqncQualityMthdCdgCd(String moleclrSqncQualityMthdCdgCd) {
+    	if( moleclrSqncQualityMthdCdgCd != null ) {
+	    	if( this.moleclrSqncQualityMthdCdgCd == null ) {
+	        	this.moleclrSqncQualityMthdCdgCd = moleclrSqncQualityMthdCdgCd;
+	        } else if(this.moleclrSqncQualityMthdCdgCd.substring(this.moleclrSqncQualityMthdCdgCd.length() - 1).equals("]") & moleclrSqncQualityMthdCdgCd.equals("[")) {
+	        	this.moleclrSqncQualityMthdCdgCd = this.moleclrSqncQualityMthdCdgCd+ "," + moleclrSqncQualityMthdCdgCd;
+	        } else if(moleclrSqncQualityMthdCdgCd.equals("[") | moleclrSqncQualityMthdCdgCd.equals("]") | this.moleclrSqncQualityMthdCdgCd.substring(this.moleclrSqncQualityMthdCdgCd.length() - 1).equals("[")) {
+	        	this.moleclrSqncQualityMthdCdgCd = this.moleclrSqncQualityMthdCdgCd+moleclrSqncQualityMthdCdgCd;
+	        } else  {
+	            this.moleclrSqncQualityMthdCdgCd = this.moleclrSqncQualityMthdCdgCd+ "," +moleclrSqncQualityMthdCdgCd;
+	        }
+        }
+    }
+    
     
     
     public String getMoleclrSqncQualityMthdCdgDsply() {
@@ -356,6 +678,20 @@ public class MolecularSequence  implements java.io.Serializable {
     
     public void setMoleclrSqncQualityMthdCdgDsply(String moleclrSqncQualityMthdCdgDsply) {
         this.moleclrSqncQualityMthdCdgDsply = moleclrSqncQualityMthdCdgDsply;
+    }
+    
+    public void addMoleclrSqncQualityMthdCdgDsply(String moleclrSqncQualityMthdCdgDsply) {
+    	if( moleclrSqncQualityMthdCdgDsply != null ) {
+	    	if( this.moleclrSqncQualityMthdCdgDsply == null ) {
+	        	this.moleclrSqncQualityMthdCdgDsply = moleclrSqncQualityMthdCdgDsply;
+	        } else if(this.moleclrSqncQualityMthdCdgDsply.substring(this.moleclrSqncQualityMthdCdgDsply.length() - 1).equals("]") & moleclrSqncQualityMthdCdgDsply.equals("[")) {
+	        	this.moleclrSqncQualityMthdCdgDsply = this.moleclrSqncQualityMthdCdgDsply+ "," + moleclrSqncQualityMthdCdgDsply;
+	        } else if(moleclrSqncQualityMthdCdgDsply.equals("[") | moleclrSqncQualityMthdCdgDsply.equals("]") | this.moleclrSqncQualityMthdCdgDsply.substring(this.moleclrSqncQualityMthdCdgDsply.length() - 1).equals("[")) {
+	        	this.moleclrSqncQualityMthdCdgDsply = this.moleclrSqncQualityMthdCdgDsply+moleclrSqncQualityMthdCdgDsply;
+	        } else  {
+	            this.moleclrSqncQualityMthdCdgDsply = this.moleclrSqncQualityMthdCdgDsply+ "," +moleclrSqncQualityMthdCdgDsply;
+	        }
+        }
     }
     
     
@@ -368,6 +704,20 @@ public class MolecularSequence  implements java.io.Serializable {
         this.moleclrSqncQualityMthdCdgSys = moleclrSqncQualityMthdCdgSys;
     }
     
+    public void addMoleclrSqncQualityMthdCdgSys(String moleclrSqncQualityMthdCdgSys) {
+    	if( moleclrSqncQualityMthdCdgSys != null ) {
+	    	if( this.moleclrSqncQualityMthdCdgSys == null ) {
+	        	this.moleclrSqncQualityMthdCdgSys = moleclrSqncQualityMthdCdgSys;
+	        } else if(this.moleclrSqncQualityMthdCdgSys.substring(this.moleclrSqncQualityMthdCdgSys.length() - 1).equals("]") & moleclrSqncQualityMthdCdgSys.equals("[")) {
+	        	this.moleclrSqncQualityMthdCdgSys = this.moleclrSqncQualityMthdCdgSys+ "," + moleclrSqncQualityMthdCdgSys;
+	        } else if(moleclrSqncQualityMthdCdgSys.equals("[") | moleclrSqncQualityMthdCdgSys.equals("]") | this.moleclrSqncQualityMthdCdgSys.substring(this.moleclrSqncQualityMthdCdgSys.length() - 1).equals("[")) {
+	        	this.moleclrSqncQualityMthdCdgSys = this.moleclrSqncQualityMthdCdgSys+moleclrSqncQualityMthdCdgSys;
+	        } else  {
+	            this.moleclrSqncQualityMthdCdgSys = this.moleclrSqncQualityMthdCdgSys+ "," +moleclrSqncQualityMthdCdgSys;
+	        }
+        }
+    }
+    
     
     
     public String getMoleclrSqncQualityMthdCdgUsrSltd() {
@@ -376,6 +726,20 @@ public class MolecularSequence  implements java.io.Serializable {
     
     public void setMoleclrSqncQualityMthdCdgUsrSltd(String moleclrSqncQualityMthdCdgUsrSltd) {
         this.moleclrSqncQualityMthdCdgUsrSltd = moleclrSqncQualityMthdCdgUsrSltd;
+    }
+    
+    public void addMoleclrSqncQualityMthdCdgUsrSltd(String moleclrSqncQualityMthdCdgUsrSltd) {
+    	if( moleclrSqncQualityMthdCdgUsrSltd != null ) {
+	    	if( this.moleclrSqncQualityMthdCdgUsrSltd == null ) {
+	        	this.moleclrSqncQualityMthdCdgUsrSltd = moleclrSqncQualityMthdCdgUsrSltd;
+	        } else if(this.moleclrSqncQualityMthdCdgUsrSltd.substring(this.moleclrSqncQualityMthdCdgUsrSltd.length() - 1).equals("]") & moleclrSqncQualityMthdCdgUsrSltd.equals("[")) {
+	        	this.moleclrSqncQualityMthdCdgUsrSltd = this.moleclrSqncQualityMthdCdgUsrSltd+ "," + moleclrSqncQualityMthdCdgUsrSltd;
+	        } else if(moleclrSqncQualityMthdCdgUsrSltd.equals("[") | moleclrSqncQualityMthdCdgUsrSltd.equals("]") | this.moleclrSqncQualityMthdCdgUsrSltd.substring(this.moleclrSqncQualityMthdCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.moleclrSqncQualityMthdCdgUsrSltd = this.moleclrSqncQualityMthdCdgUsrSltd+moleclrSqncQualityMthdCdgUsrSltd;
+	        } else  {
+	            this.moleclrSqncQualityMthdCdgUsrSltd = this.moleclrSqncQualityMthdCdgUsrSltd+ "," +moleclrSqncQualityMthdCdgUsrSltd;
+	        }
+        }
     }
     
     
@@ -388,6 +752,20 @@ public class MolecularSequence  implements java.io.Serializable {
         this.moleclrSqncQualityMthdCdgVrsn = moleclrSqncQualityMthdCdgVrsn;
     }
     
+    public void addMoleclrSqncQualityMthdCdgVrsn(String moleclrSqncQualityMthdCdgVrsn) {
+    	if( moleclrSqncQualityMthdCdgVrsn != null ) {
+	    	if( this.moleclrSqncQualityMthdCdgVrsn == null ) {
+	        	this.moleclrSqncQualityMthdCdgVrsn = moleclrSqncQualityMthdCdgVrsn;
+	        } else if(this.moleclrSqncQualityMthdCdgVrsn.substring(this.moleclrSqncQualityMthdCdgVrsn.length() - 1).equals("]") & moleclrSqncQualityMthdCdgVrsn.equals("[")) {
+	        	this.moleclrSqncQualityMthdCdgVrsn = this.moleclrSqncQualityMthdCdgVrsn+ "," + moleclrSqncQualityMthdCdgVrsn;
+	        } else if(moleclrSqncQualityMthdCdgVrsn.equals("[") | moleclrSqncQualityMthdCdgVrsn.equals("]") | this.moleclrSqncQualityMthdCdgVrsn.substring(this.moleclrSqncQualityMthdCdgVrsn.length() - 1).equals("[")) {
+	        	this.moleclrSqncQualityMthdCdgVrsn = this.moleclrSqncQualityMthdCdgVrsn+moleclrSqncQualityMthdCdgVrsn;
+	        } else  {
+	            this.moleclrSqncQualityMthdCdgVrsn = this.moleclrSqncQualityMthdCdgVrsn+ "," +moleclrSqncQualityMthdCdgVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getMoleclrSqncQualityMthdTxt() {
@@ -396,6 +774,20 @@ public class MolecularSequence  implements java.io.Serializable {
     
     public void setMoleclrSqncQualityMthdTxt(String moleclrSqncQualityMthdTxt) {
         this.moleclrSqncQualityMthdTxt = moleclrSqncQualityMthdTxt;
+    }
+    
+    public void addMoleclrSqncQualityMthdTxt(String moleclrSqncQualityMthdTxt) {
+    	if( moleclrSqncQualityMthdTxt != null ) {
+	    	if( this.moleclrSqncQualityMthdTxt == null ) {
+	        	this.moleclrSqncQualityMthdTxt = moleclrSqncQualityMthdTxt;
+	        } else if(this.moleclrSqncQualityMthdTxt.substring(this.moleclrSqncQualityMthdTxt.length() - 1).equals("]") & moleclrSqncQualityMthdTxt.equals("[")) {
+	        	this.moleclrSqncQualityMthdTxt = this.moleclrSqncQualityMthdTxt+ "," + moleclrSqncQualityMthdTxt;
+	        } else if(moleclrSqncQualityMthdTxt.equals("[") | moleclrSqncQualityMthdTxt.equals("]") | this.moleclrSqncQualityMthdTxt.substring(this.moleclrSqncQualityMthdTxt.length() - 1).equals("[")) {
+	        	this.moleclrSqncQualityMthdTxt = this.moleclrSqncQualityMthdTxt+moleclrSqncQualityMthdTxt;
+	        } else  {
+	            this.moleclrSqncQualityMthdTxt = this.moleclrSqncQualityMthdTxt+ "," +moleclrSqncQualityMthdTxt;
+	        }
+        }
     }
     
     
@@ -408,6 +800,20 @@ public class MolecularSequence  implements java.io.Serializable {
         this.moleclrSqncQualityPrecision = moleclrSqncQualityPrecision;
     }
     
+    public void addMoleclrSqncQualityPrecision(String moleclrSqncQualityPrecision) {
+    	if( moleclrSqncQualityPrecision != null ) {
+	    	if( this.moleclrSqncQualityPrecision == null ) {
+	        	this.moleclrSqncQualityPrecision = moleclrSqncQualityPrecision;
+	        } else if(this.moleclrSqncQualityPrecision.substring(this.moleclrSqncQualityPrecision.length() - 1).equals("]") & moleclrSqncQualityPrecision.equals("[")) {
+	        	this.moleclrSqncQualityPrecision = this.moleclrSqncQualityPrecision+ "," + moleclrSqncQualityPrecision;
+	        } else if(moleclrSqncQualityPrecision.equals("[") | moleclrSqncQualityPrecision.equals("]") | this.moleclrSqncQualityPrecision.substring(this.moleclrSqncQualityPrecision.length() - 1).equals("[")) {
+	        	this.moleclrSqncQualityPrecision = this.moleclrSqncQualityPrecision+moleclrSqncQualityPrecision;
+	        } else  {
+	            this.moleclrSqncQualityPrecision = this.moleclrSqncQualityPrecision+ "," +moleclrSqncQualityPrecision;
+	        }
+        }
+    }
+    
     
     
     public String getMoleclrSqncQualityQueryFp() {
@@ -416,6 +822,20 @@ public class MolecularSequence  implements java.io.Serializable {
     
     public void setMoleclrSqncQualityQueryFp(String moleclrSqncQualityQueryFp) {
         this.moleclrSqncQualityQueryFp = moleclrSqncQualityQueryFp;
+    }
+    
+    public void addMoleclrSqncQualityQueryFp(String moleclrSqncQualityQueryFp) {
+    	if( moleclrSqncQualityQueryFp != null ) {
+	    	if( this.moleclrSqncQualityQueryFp == null ) {
+	        	this.moleclrSqncQualityQueryFp = moleclrSqncQualityQueryFp;
+	        } else if(this.moleclrSqncQualityQueryFp.substring(this.moleclrSqncQualityQueryFp.length() - 1).equals("]") & moleclrSqncQualityQueryFp.equals("[")) {
+	        	this.moleclrSqncQualityQueryFp = this.moleclrSqncQualityQueryFp+ "," + moleclrSqncQualityQueryFp;
+	        } else if(moleclrSqncQualityQueryFp.equals("[") | moleclrSqncQualityQueryFp.equals("]") | this.moleclrSqncQualityQueryFp.substring(this.moleclrSqncQualityQueryFp.length() - 1).equals("[")) {
+	        	this.moleclrSqncQualityQueryFp = this.moleclrSqncQualityQueryFp+moleclrSqncQualityQueryFp;
+	        } else  {
+	            this.moleclrSqncQualityQueryFp = this.moleclrSqncQualityQueryFp+ "," +moleclrSqncQualityQueryFp;
+	        }
+        }
     }
     
     
@@ -428,6 +848,20 @@ public class MolecularSequence  implements java.io.Serializable {
         this.moleclrSqncQualityQueryTp = moleclrSqncQualityQueryTp;
     }
     
+    public void addMoleclrSqncQualityQueryTp(String moleclrSqncQualityQueryTp) {
+    	if( moleclrSqncQualityQueryTp != null ) {
+	    	if( this.moleclrSqncQualityQueryTp == null ) {
+	        	this.moleclrSqncQualityQueryTp = moleclrSqncQualityQueryTp;
+	        } else if(this.moleclrSqncQualityQueryTp.substring(this.moleclrSqncQualityQueryTp.length() - 1).equals("]") & moleclrSqncQualityQueryTp.equals("[")) {
+	        	this.moleclrSqncQualityQueryTp = this.moleclrSqncQualityQueryTp+ "," + moleclrSqncQualityQueryTp;
+	        } else if(moleclrSqncQualityQueryTp.equals("[") | moleclrSqncQualityQueryTp.equals("]") | this.moleclrSqncQualityQueryTp.substring(this.moleclrSqncQualityQueryTp.length() - 1).equals("[")) {
+	        	this.moleclrSqncQualityQueryTp = this.moleclrSqncQualityQueryTp+moleclrSqncQualityQueryTp;
+	        } else  {
+	            this.moleclrSqncQualityQueryTp = this.moleclrSqncQualityQueryTp+ "," +moleclrSqncQualityQueryTp;
+	        }
+        }
+    }
+    
     
     
     public String getMoleclrSqncQualityRecall() {
@@ -436,6 +870,20 @@ public class MolecularSequence  implements java.io.Serializable {
     
     public void setMoleclrSqncQualityRecall(String moleclrSqncQualityRecall) {
         this.moleclrSqncQualityRecall = moleclrSqncQualityRecall;
+    }
+    
+    public void addMoleclrSqncQualityRecall(String moleclrSqncQualityRecall) {
+    	if( moleclrSqncQualityRecall != null ) {
+	    	if( this.moleclrSqncQualityRecall == null ) {
+	        	this.moleclrSqncQualityRecall = moleclrSqncQualityRecall;
+	        } else if(this.moleclrSqncQualityRecall.substring(this.moleclrSqncQualityRecall.length() - 1).equals("]") & moleclrSqncQualityRecall.equals("[")) {
+	        	this.moleclrSqncQualityRecall = this.moleclrSqncQualityRecall+ "," + moleclrSqncQualityRecall;
+	        } else if(moleclrSqncQualityRecall.equals("[") | moleclrSqncQualityRecall.equals("]") | this.moleclrSqncQualityRecall.substring(this.moleclrSqncQualityRecall.length() - 1).equals("[")) {
+	        	this.moleclrSqncQualityRecall = this.moleclrSqncQualityRecall+moleclrSqncQualityRecall;
+	        } else  {
+	            this.moleclrSqncQualityRecall = this.moleclrSqncQualityRecall+ "," +moleclrSqncQualityRecall;
+	        }
+        }
     }
     
     
@@ -448,6 +896,20 @@ public class MolecularSequence  implements java.io.Serializable {
         this.moleclrSqncQualityRocFmsr = moleclrSqncQualityRocFmsr;
     }
     
+    public void addMoleclrSqncQualityRocFmsr(String moleclrSqncQualityRocFmsr) {
+    	if( moleclrSqncQualityRocFmsr != null ) {
+	    	if( this.moleclrSqncQualityRocFmsr == null ) {
+	        	this.moleclrSqncQualityRocFmsr = moleclrSqncQualityRocFmsr;
+	        } else if(this.moleclrSqncQualityRocFmsr.substring(this.moleclrSqncQualityRocFmsr.length() - 1).equals("]") & moleclrSqncQualityRocFmsr.equals("[")) {
+	        	this.moleclrSqncQualityRocFmsr = this.moleclrSqncQualityRocFmsr+ "," + moleclrSqncQualityRocFmsr;
+	        } else if(moleclrSqncQualityRocFmsr.equals("[") | moleclrSqncQualityRocFmsr.equals("]") | this.moleclrSqncQualityRocFmsr.substring(this.moleclrSqncQualityRocFmsr.length() - 1).equals("[")) {
+	        	this.moleclrSqncQualityRocFmsr = this.moleclrSqncQualityRocFmsr+moleclrSqncQualityRocFmsr;
+	        } else  {
+	            this.moleclrSqncQualityRocFmsr = this.moleclrSqncQualityRocFmsr+ "," +moleclrSqncQualityRocFmsr;
+	        }
+        }
+    }
+    
     
     
     public String getMoleclrSqncQualityRocNumFn() {
@@ -456,6 +918,20 @@ public class MolecularSequence  implements java.io.Serializable {
     
     public void setMoleclrSqncQualityRocNumFn(String moleclrSqncQualityRocNumFn) {
         this.moleclrSqncQualityRocNumFn = moleclrSqncQualityRocNumFn;
+    }
+    
+    public void addMoleclrSqncQualityRocNumFn(String moleclrSqncQualityRocNumFn) {
+    	if( moleclrSqncQualityRocNumFn != null ) {
+	    	if( this.moleclrSqncQualityRocNumFn == null ) {
+	        	this.moleclrSqncQualityRocNumFn = moleclrSqncQualityRocNumFn;
+	        } else if(this.moleclrSqncQualityRocNumFn.substring(this.moleclrSqncQualityRocNumFn.length() - 1).equals("]") & moleclrSqncQualityRocNumFn.equals("[")) {
+	        	this.moleclrSqncQualityRocNumFn = this.moleclrSqncQualityRocNumFn+ "," + moleclrSqncQualityRocNumFn;
+	        } else if(moleclrSqncQualityRocNumFn.equals("[") | moleclrSqncQualityRocNumFn.equals("]") | this.moleclrSqncQualityRocNumFn.substring(this.moleclrSqncQualityRocNumFn.length() - 1).equals("[")) {
+	        	this.moleclrSqncQualityRocNumFn = this.moleclrSqncQualityRocNumFn+moleclrSqncQualityRocNumFn;
+	        } else  {
+	            this.moleclrSqncQualityRocNumFn = this.moleclrSqncQualityRocNumFn+ "," +moleclrSqncQualityRocNumFn;
+	        }
+        }
     }
     
     
@@ -468,6 +944,20 @@ public class MolecularSequence  implements java.io.Serializable {
         this.moleclrSqncQualityRocNumFp = moleclrSqncQualityRocNumFp;
     }
     
+    public void addMoleclrSqncQualityRocNumFp(String moleclrSqncQualityRocNumFp) {
+    	if( moleclrSqncQualityRocNumFp != null ) {
+	    	if( this.moleclrSqncQualityRocNumFp == null ) {
+	        	this.moleclrSqncQualityRocNumFp = moleclrSqncQualityRocNumFp;
+	        } else if(this.moleclrSqncQualityRocNumFp.substring(this.moleclrSqncQualityRocNumFp.length() - 1).equals("]") & moleclrSqncQualityRocNumFp.equals("[")) {
+	        	this.moleclrSqncQualityRocNumFp = this.moleclrSqncQualityRocNumFp+ "," + moleclrSqncQualityRocNumFp;
+	        } else if(moleclrSqncQualityRocNumFp.equals("[") | moleclrSqncQualityRocNumFp.equals("]") | this.moleclrSqncQualityRocNumFp.substring(this.moleclrSqncQualityRocNumFp.length() - 1).equals("[")) {
+	        	this.moleclrSqncQualityRocNumFp = this.moleclrSqncQualityRocNumFp+moleclrSqncQualityRocNumFp;
+	        } else  {
+	            this.moleclrSqncQualityRocNumFp = this.moleclrSqncQualityRocNumFp+ "," +moleclrSqncQualityRocNumFp;
+	        }
+        }
+    }
+    
     
     
     public String getMoleclrSqncQualityRocNumTp() {
@@ -476,6 +966,20 @@ public class MolecularSequence  implements java.io.Serializable {
     
     public void setMoleclrSqncQualityRocNumTp(String moleclrSqncQualityRocNumTp) {
         this.moleclrSqncQualityRocNumTp = moleclrSqncQualityRocNumTp;
+    }
+    
+    public void addMoleclrSqncQualityRocNumTp(String moleclrSqncQualityRocNumTp) {
+    	if( moleclrSqncQualityRocNumTp != null ) {
+	    	if( this.moleclrSqncQualityRocNumTp == null ) {
+	        	this.moleclrSqncQualityRocNumTp = moleclrSqncQualityRocNumTp;
+	        } else if(this.moleclrSqncQualityRocNumTp.substring(this.moleclrSqncQualityRocNumTp.length() - 1).equals("]") & moleclrSqncQualityRocNumTp.equals("[")) {
+	        	this.moleclrSqncQualityRocNumTp = this.moleclrSqncQualityRocNumTp+ "," + moleclrSqncQualityRocNumTp;
+	        } else if(moleclrSqncQualityRocNumTp.equals("[") | moleclrSqncQualityRocNumTp.equals("]") | this.moleclrSqncQualityRocNumTp.substring(this.moleclrSqncQualityRocNumTp.length() - 1).equals("[")) {
+	        	this.moleclrSqncQualityRocNumTp = this.moleclrSqncQualityRocNumTp+moleclrSqncQualityRocNumTp;
+	        } else  {
+	            this.moleclrSqncQualityRocNumTp = this.moleclrSqncQualityRocNumTp+ "," +moleclrSqncQualityRocNumTp;
+	        }
+        }
     }
     
     
@@ -488,6 +992,20 @@ public class MolecularSequence  implements java.io.Serializable {
         this.moleclrSqncQualityRocPrecision = moleclrSqncQualityRocPrecision;
     }
     
+    public void addMoleclrSqncQualityRocPrecision(String moleclrSqncQualityRocPrecision) {
+    	if( moleclrSqncQualityRocPrecision != null ) {
+	    	if( this.moleclrSqncQualityRocPrecision == null ) {
+	        	this.moleclrSqncQualityRocPrecision = moleclrSqncQualityRocPrecision;
+	        } else if(this.moleclrSqncQualityRocPrecision.substring(this.moleclrSqncQualityRocPrecision.length() - 1).equals("]") & moleclrSqncQualityRocPrecision.equals("[")) {
+	        	this.moleclrSqncQualityRocPrecision = this.moleclrSqncQualityRocPrecision+ "," + moleclrSqncQualityRocPrecision;
+	        } else if(moleclrSqncQualityRocPrecision.equals("[") | moleclrSqncQualityRocPrecision.equals("]") | this.moleclrSqncQualityRocPrecision.substring(this.moleclrSqncQualityRocPrecision.length() - 1).equals("[")) {
+	        	this.moleclrSqncQualityRocPrecision = this.moleclrSqncQualityRocPrecision+moleclrSqncQualityRocPrecision;
+	        } else  {
+	            this.moleclrSqncQualityRocPrecision = this.moleclrSqncQualityRocPrecision+ "," +moleclrSqncQualityRocPrecision;
+	        }
+        }
+    }
+    
     
     
     public String getMoleclrSqncQualityRocScore() {
@@ -496,6 +1014,20 @@ public class MolecularSequence  implements java.io.Serializable {
     
     public void setMoleclrSqncQualityRocScore(String moleclrSqncQualityRocScore) {
         this.moleclrSqncQualityRocScore = moleclrSqncQualityRocScore;
+    }
+    
+    public void addMoleclrSqncQualityRocScore(String moleclrSqncQualityRocScore) {
+    	if( moleclrSqncQualityRocScore != null ) {
+	    	if( this.moleclrSqncQualityRocScore == null ) {
+	        	this.moleclrSqncQualityRocScore = moleclrSqncQualityRocScore;
+	        } else if(this.moleclrSqncQualityRocScore.substring(this.moleclrSqncQualityRocScore.length() - 1).equals("]") & moleclrSqncQualityRocScore.equals("[")) {
+	        	this.moleclrSqncQualityRocScore = this.moleclrSqncQualityRocScore+ "," + moleclrSqncQualityRocScore;
+	        } else if(moleclrSqncQualityRocScore.equals("[") | moleclrSqncQualityRocScore.equals("]") | this.moleclrSqncQualityRocScore.substring(this.moleclrSqncQualityRocScore.length() - 1).equals("[")) {
+	        	this.moleclrSqncQualityRocScore = this.moleclrSqncQualityRocScore+moleclrSqncQualityRocScore;
+	        } else  {
+	            this.moleclrSqncQualityRocScore = this.moleclrSqncQualityRocScore+ "," +moleclrSqncQualityRocScore;
+	        }
+        }
     }
     
     
@@ -508,6 +1040,20 @@ public class MolecularSequence  implements java.io.Serializable {
         this.moleclrSqncQualityRocSensitivity = moleclrSqncQualityRocSensitivity;
     }
     
+    public void addMoleclrSqncQualityRocSensitivity(String moleclrSqncQualityRocSensitivity) {
+    	if( moleclrSqncQualityRocSensitivity != null ) {
+	    	if( this.moleclrSqncQualityRocSensitivity == null ) {
+	        	this.moleclrSqncQualityRocSensitivity = moleclrSqncQualityRocSensitivity;
+	        } else if(this.moleclrSqncQualityRocSensitivity.substring(this.moleclrSqncQualityRocSensitivity.length() - 1).equals("]") & moleclrSqncQualityRocSensitivity.equals("[")) {
+	        	this.moleclrSqncQualityRocSensitivity = this.moleclrSqncQualityRocSensitivity+ "," + moleclrSqncQualityRocSensitivity;
+	        } else if(moleclrSqncQualityRocSensitivity.equals("[") | moleclrSqncQualityRocSensitivity.equals("]") | this.moleclrSqncQualityRocSensitivity.substring(this.moleclrSqncQualityRocSensitivity.length() - 1).equals("[")) {
+	        	this.moleclrSqncQualityRocSensitivity = this.moleclrSqncQualityRocSensitivity+moleclrSqncQualityRocSensitivity;
+	        } else  {
+	            this.moleclrSqncQualityRocSensitivity = this.moleclrSqncQualityRocSensitivity+ "," +moleclrSqncQualityRocSensitivity;
+	        }
+        }
+    }
+    
     
     
     public String getMoleclrSqncQualityScoreCd() {
@@ -516,6 +1062,20 @@ public class MolecularSequence  implements java.io.Serializable {
     
     public void setMoleclrSqncQualityScoreCd(String moleclrSqncQualityScoreCd) {
         this.moleclrSqncQualityScoreCd = moleclrSqncQualityScoreCd;
+    }
+    
+    public void addMoleclrSqncQualityScoreCd(String moleclrSqncQualityScoreCd) {
+    	if( moleclrSqncQualityScoreCd != null ) {
+	    	if( this.moleclrSqncQualityScoreCd == null ) {
+	        	this.moleclrSqncQualityScoreCd = moleclrSqncQualityScoreCd;
+	        } else if(this.moleclrSqncQualityScoreCd.substring(this.moleclrSqncQualityScoreCd.length() - 1).equals("]") & moleclrSqncQualityScoreCd.equals("[")) {
+	        	this.moleclrSqncQualityScoreCd = this.moleclrSqncQualityScoreCd+ "," + moleclrSqncQualityScoreCd;
+	        } else if(moleclrSqncQualityScoreCd.equals("[") | moleclrSqncQualityScoreCd.equals("]") | this.moleclrSqncQualityScoreCd.substring(this.moleclrSqncQualityScoreCd.length() - 1).equals("[")) {
+	        	this.moleclrSqncQualityScoreCd = this.moleclrSqncQualityScoreCd+moleclrSqncQualityScoreCd;
+	        } else  {
+	            this.moleclrSqncQualityScoreCd = this.moleclrSqncQualityScoreCd+ "," +moleclrSqncQualityScoreCd;
+	        }
+        }
     }
     
     
@@ -528,6 +1088,20 @@ public class MolecularSequence  implements java.io.Serializable {
         this.moleclrSqncQualityScoreCmprtr = moleclrSqncQualityScoreCmprtr;
     }
     
+    public void addMoleclrSqncQualityScoreCmprtr(String moleclrSqncQualityScoreCmprtr) {
+    	if( moleclrSqncQualityScoreCmprtr != null ) {
+	    	if( this.moleclrSqncQualityScoreCmprtr == null ) {
+	        	this.moleclrSqncQualityScoreCmprtr = moleclrSqncQualityScoreCmprtr;
+	        } else if(this.moleclrSqncQualityScoreCmprtr.substring(this.moleclrSqncQualityScoreCmprtr.length() - 1).equals("]") & moleclrSqncQualityScoreCmprtr.equals("[")) {
+	        	this.moleclrSqncQualityScoreCmprtr = this.moleclrSqncQualityScoreCmprtr+ "," + moleclrSqncQualityScoreCmprtr;
+	        } else if(moleclrSqncQualityScoreCmprtr.equals("[") | moleclrSqncQualityScoreCmprtr.equals("]") | this.moleclrSqncQualityScoreCmprtr.substring(this.moleclrSqncQualityScoreCmprtr.length() - 1).equals("[")) {
+	        	this.moleclrSqncQualityScoreCmprtr = this.moleclrSqncQualityScoreCmprtr+moleclrSqncQualityScoreCmprtr;
+	        } else  {
+	            this.moleclrSqncQualityScoreCmprtr = this.moleclrSqncQualityScoreCmprtr+ "," +moleclrSqncQualityScoreCmprtr;
+	        }
+        }
+    }
+    
     
     
     public String getMoleclrSqncQualityScoreSys() {
@@ -536,6 +1110,20 @@ public class MolecularSequence  implements java.io.Serializable {
     
     public void setMoleclrSqncQualityScoreSys(String moleclrSqncQualityScoreSys) {
         this.moleclrSqncQualityScoreSys = moleclrSqncQualityScoreSys;
+    }
+    
+    public void addMoleclrSqncQualityScoreSys(String moleclrSqncQualityScoreSys) {
+    	if( moleclrSqncQualityScoreSys != null ) {
+	    	if( this.moleclrSqncQualityScoreSys == null ) {
+	        	this.moleclrSqncQualityScoreSys = moleclrSqncQualityScoreSys;
+	        } else if(this.moleclrSqncQualityScoreSys.substring(this.moleclrSqncQualityScoreSys.length() - 1).equals("]") & moleclrSqncQualityScoreSys.equals("[")) {
+	        	this.moleclrSqncQualityScoreSys = this.moleclrSqncQualityScoreSys+ "," + moleclrSqncQualityScoreSys;
+	        } else if(moleclrSqncQualityScoreSys.equals("[") | moleclrSqncQualityScoreSys.equals("]") | this.moleclrSqncQualityScoreSys.substring(this.moleclrSqncQualityScoreSys.length() - 1).equals("[")) {
+	        	this.moleclrSqncQualityScoreSys = this.moleclrSqncQualityScoreSys+moleclrSqncQualityScoreSys;
+	        } else  {
+	            this.moleclrSqncQualityScoreSys = this.moleclrSqncQualityScoreSys+ "," +moleclrSqncQualityScoreSys;
+	        }
+        }
     }
     
     
@@ -548,6 +1136,20 @@ public class MolecularSequence  implements java.io.Serializable {
         this.moleclrSqncQualityScoreUnt = moleclrSqncQualityScoreUnt;
     }
     
+    public void addMoleclrSqncQualityScoreUnt(String moleclrSqncQualityScoreUnt) {
+    	if( moleclrSqncQualityScoreUnt != null ) {
+	    	if( this.moleclrSqncQualityScoreUnt == null ) {
+	        	this.moleclrSqncQualityScoreUnt = moleclrSqncQualityScoreUnt;
+	        } else if(this.moleclrSqncQualityScoreUnt.substring(this.moleclrSqncQualityScoreUnt.length() - 1).equals("]") & moleclrSqncQualityScoreUnt.equals("[")) {
+	        	this.moleclrSqncQualityScoreUnt = this.moleclrSqncQualityScoreUnt+ "," + moleclrSqncQualityScoreUnt;
+	        } else if(moleclrSqncQualityScoreUnt.equals("[") | moleclrSqncQualityScoreUnt.equals("]") | this.moleclrSqncQualityScoreUnt.substring(this.moleclrSqncQualityScoreUnt.length() - 1).equals("[")) {
+	        	this.moleclrSqncQualityScoreUnt = this.moleclrSqncQualityScoreUnt+moleclrSqncQualityScoreUnt;
+	        } else  {
+	            this.moleclrSqncQualityScoreUnt = this.moleclrSqncQualityScoreUnt+ "," +moleclrSqncQualityScoreUnt;
+	        }
+        }
+    }
+    
     
     
     public String getMoleclrSqncQualityScoreVl() {
@@ -556,6 +1158,20 @@ public class MolecularSequence  implements java.io.Serializable {
     
     public void setMoleclrSqncQualityScoreVl(String moleclrSqncQualityScoreVl) {
         this.moleclrSqncQualityScoreVl = moleclrSqncQualityScoreVl;
+    }
+    
+    public void addMoleclrSqncQualityScoreVl(String moleclrSqncQualityScoreVl) {
+    	if( moleclrSqncQualityScoreVl != null ) {
+	    	if( this.moleclrSqncQualityScoreVl == null ) {
+	        	this.moleclrSqncQualityScoreVl = moleclrSqncQualityScoreVl;
+	        } else if(this.moleclrSqncQualityScoreVl.substring(this.moleclrSqncQualityScoreVl.length() - 1).equals("]") & moleclrSqncQualityScoreVl.equals("[")) {
+	        	this.moleclrSqncQualityScoreVl = this.moleclrSqncQualityScoreVl+ "," + moleclrSqncQualityScoreVl;
+	        } else if(moleclrSqncQualityScoreVl.equals("[") | moleclrSqncQualityScoreVl.equals("]") | this.moleclrSqncQualityScoreVl.substring(this.moleclrSqncQualityScoreVl.length() - 1).equals("[")) {
+	        	this.moleclrSqncQualityScoreVl = this.moleclrSqncQualityScoreVl+moleclrSqncQualityScoreVl;
+	        } else  {
+	            this.moleclrSqncQualityScoreVl = this.moleclrSqncQualityScoreVl+ "," +moleclrSqncQualityScoreVl;
+	        }
+        }
     }
     
     
@@ -568,6 +1184,20 @@ public class MolecularSequence  implements java.io.Serializable {
         this.moleclrSqncQualityStandardSqncCdgCd = moleclrSqncQualityStandardSqncCdgCd;
     }
     
+    public void addMoleclrSqncQualityStandardSqncCdgCd(String moleclrSqncQualityStandardSqncCdgCd) {
+    	if( moleclrSqncQualityStandardSqncCdgCd != null ) {
+	    	if( this.moleclrSqncQualityStandardSqncCdgCd == null ) {
+	        	this.moleclrSqncQualityStandardSqncCdgCd = moleclrSqncQualityStandardSqncCdgCd;
+	        } else if(this.moleclrSqncQualityStandardSqncCdgCd.substring(this.moleclrSqncQualityStandardSqncCdgCd.length() - 1).equals("]") & moleclrSqncQualityStandardSqncCdgCd.equals("[")) {
+	        	this.moleclrSqncQualityStandardSqncCdgCd = this.moleclrSqncQualityStandardSqncCdgCd+ "," + moleclrSqncQualityStandardSqncCdgCd;
+	        } else if(moleclrSqncQualityStandardSqncCdgCd.equals("[") | moleclrSqncQualityStandardSqncCdgCd.equals("]") | this.moleclrSqncQualityStandardSqncCdgCd.substring(this.moleclrSqncQualityStandardSqncCdgCd.length() - 1).equals("[")) {
+	        	this.moleclrSqncQualityStandardSqncCdgCd = this.moleclrSqncQualityStandardSqncCdgCd+moleclrSqncQualityStandardSqncCdgCd;
+	        } else  {
+	            this.moleclrSqncQualityStandardSqncCdgCd = this.moleclrSqncQualityStandardSqncCdgCd+ "," +moleclrSqncQualityStandardSqncCdgCd;
+	        }
+        }
+    }
+    
     
     
     public String getMoleclrSqncQualityStandardSqncCdgDsply() {
@@ -576,6 +1206,20 @@ public class MolecularSequence  implements java.io.Serializable {
     
     public void setMoleclrSqncQualityStandardSqncCdgDsply(String moleclrSqncQualityStandardSqncCdgDsply) {
         this.moleclrSqncQualityStandardSqncCdgDsply = moleclrSqncQualityStandardSqncCdgDsply;
+    }
+    
+    public void addMoleclrSqncQualityStandardSqncCdgDsply(String moleclrSqncQualityStandardSqncCdgDsply) {
+    	if( moleclrSqncQualityStandardSqncCdgDsply != null ) {
+	    	if( this.moleclrSqncQualityStandardSqncCdgDsply == null ) {
+	        	this.moleclrSqncQualityStandardSqncCdgDsply = moleclrSqncQualityStandardSqncCdgDsply;
+	        } else if(this.moleclrSqncQualityStandardSqncCdgDsply.substring(this.moleclrSqncQualityStandardSqncCdgDsply.length() - 1).equals("]") & moleclrSqncQualityStandardSqncCdgDsply.equals("[")) {
+	        	this.moleclrSqncQualityStandardSqncCdgDsply = this.moleclrSqncQualityStandardSqncCdgDsply+ "," + moleclrSqncQualityStandardSqncCdgDsply;
+	        } else if(moleclrSqncQualityStandardSqncCdgDsply.equals("[") | moleclrSqncQualityStandardSqncCdgDsply.equals("]") | this.moleclrSqncQualityStandardSqncCdgDsply.substring(this.moleclrSqncQualityStandardSqncCdgDsply.length() - 1).equals("[")) {
+	        	this.moleclrSqncQualityStandardSqncCdgDsply = this.moleclrSqncQualityStandardSqncCdgDsply+moleclrSqncQualityStandardSqncCdgDsply;
+	        } else  {
+	            this.moleclrSqncQualityStandardSqncCdgDsply = this.moleclrSqncQualityStandardSqncCdgDsply+ "," +moleclrSqncQualityStandardSqncCdgDsply;
+	        }
+        }
     }
     
     
@@ -588,6 +1232,20 @@ public class MolecularSequence  implements java.io.Serializable {
         this.moleclrSqncQualityStandardSqncCdgSys = moleclrSqncQualityStandardSqncCdgSys;
     }
     
+    public void addMoleclrSqncQualityStandardSqncCdgSys(String moleclrSqncQualityStandardSqncCdgSys) {
+    	if( moleclrSqncQualityStandardSqncCdgSys != null ) {
+	    	if( this.moleclrSqncQualityStandardSqncCdgSys == null ) {
+	        	this.moleclrSqncQualityStandardSqncCdgSys = moleclrSqncQualityStandardSqncCdgSys;
+	        } else if(this.moleclrSqncQualityStandardSqncCdgSys.substring(this.moleclrSqncQualityStandardSqncCdgSys.length() - 1).equals("]") & moleclrSqncQualityStandardSqncCdgSys.equals("[")) {
+	        	this.moleclrSqncQualityStandardSqncCdgSys = this.moleclrSqncQualityStandardSqncCdgSys+ "," + moleclrSqncQualityStandardSqncCdgSys;
+	        } else if(moleclrSqncQualityStandardSqncCdgSys.equals("[") | moleclrSqncQualityStandardSqncCdgSys.equals("]") | this.moleclrSqncQualityStandardSqncCdgSys.substring(this.moleclrSqncQualityStandardSqncCdgSys.length() - 1).equals("[")) {
+	        	this.moleclrSqncQualityStandardSqncCdgSys = this.moleclrSqncQualityStandardSqncCdgSys+moleclrSqncQualityStandardSqncCdgSys;
+	        } else  {
+	            this.moleclrSqncQualityStandardSqncCdgSys = this.moleclrSqncQualityStandardSqncCdgSys+ "," +moleclrSqncQualityStandardSqncCdgSys;
+	        }
+        }
+    }
+    
     
     
     public String getMoleclrSqncQualityStandardSqncCdgUsrSltd() {
@@ -596,6 +1254,20 @@ public class MolecularSequence  implements java.io.Serializable {
     
     public void setMoleclrSqncQualityStandardSqncCdgUsrSltd(String moleclrSqncQualityStandardSqncCdgUsrSltd) {
         this.moleclrSqncQualityStandardSqncCdgUsrSltd = moleclrSqncQualityStandardSqncCdgUsrSltd;
+    }
+    
+    public void addMoleclrSqncQualityStandardSqncCdgUsrSltd(String moleclrSqncQualityStandardSqncCdgUsrSltd) {
+    	if( moleclrSqncQualityStandardSqncCdgUsrSltd != null ) {
+	    	if( this.moleclrSqncQualityStandardSqncCdgUsrSltd == null ) {
+	        	this.moleclrSqncQualityStandardSqncCdgUsrSltd = moleclrSqncQualityStandardSqncCdgUsrSltd;
+	        } else if(this.moleclrSqncQualityStandardSqncCdgUsrSltd.substring(this.moleclrSqncQualityStandardSqncCdgUsrSltd.length() - 1).equals("]") & moleclrSqncQualityStandardSqncCdgUsrSltd.equals("[")) {
+	        	this.moleclrSqncQualityStandardSqncCdgUsrSltd = this.moleclrSqncQualityStandardSqncCdgUsrSltd+ "," + moleclrSqncQualityStandardSqncCdgUsrSltd;
+	        } else if(moleclrSqncQualityStandardSqncCdgUsrSltd.equals("[") | moleclrSqncQualityStandardSqncCdgUsrSltd.equals("]") | this.moleclrSqncQualityStandardSqncCdgUsrSltd.substring(this.moleclrSqncQualityStandardSqncCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.moleclrSqncQualityStandardSqncCdgUsrSltd = this.moleclrSqncQualityStandardSqncCdgUsrSltd+moleclrSqncQualityStandardSqncCdgUsrSltd;
+	        } else  {
+	            this.moleclrSqncQualityStandardSqncCdgUsrSltd = this.moleclrSqncQualityStandardSqncCdgUsrSltd+ "," +moleclrSqncQualityStandardSqncCdgUsrSltd;
+	        }
+        }
     }
     
     
@@ -608,6 +1280,20 @@ public class MolecularSequence  implements java.io.Serializable {
         this.moleclrSqncQualityStandardSqncCdgVrsn = moleclrSqncQualityStandardSqncCdgVrsn;
     }
     
+    public void addMoleclrSqncQualityStandardSqncCdgVrsn(String moleclrSqncQualityStandardSqncCdgVrsn) {
+    	if( moleclrSqncQualityStandardSqncCdgVrsn != null ) {
+	    	if( this.moleclrSqncQualityStandardSqncCdgVrsn == null ) {
+	        	this.moleclrSqncQualityStandardSqncCdgVrsn = moleclrSqncQualityStandardSqncCdgVrsn;
+	        } else if(this.moleclrSqncQualityStandardSqncCdgVrsn.substring(this.moleclrSqncQualityStandardSqncCdgVrsn.length() - 1).equals("]") & moleclrSqncQualityStandardSqncCdgVrsn.equals("[")) {
+	        	this.moleclrSqncQualityStandardSqncCdgVrsn = this.moleclrSqncQualityStandardSqncCdgVrsn+ "," + moleclrSqncQualityStandardSqncCdgVrsn;
+	        } else if(moleclrSqncQualityStandardSqncCdgVrsn.equals("[") | moleclrSqncQualityStandardSqncCdgVrsn.equals("]") | this.moleclrSqncQualityStandardSqncCdgVrsn.substring(this.moleclrSqncQualityStandardSqncCdgVrsn.length() - 1).equals("[")) {
+	        	this.moleclrSqncQualityStandardSqncCdgVrsn = this.moleclrSqncQualityStandardSqncCdgVrsn+moleclrSqncQualityStandardSqncCdgVrsn;
+	        } else  {
+	            this.moleclrSqncQualityStandardSqncCdgVrsn = this.moleclrSqncQualityStandardSqncCdgVrsn+ "," +moleclrSqncQualityStandardSqncCdgVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getMoleclrSqncQualityStandardSqncTxt() {
@@ -616,6 +1302,20 @@ public class MolecularSequence  implements java.io.Serializable {
     
     public void setMoleclrSqncQualityStandardSqncTxt(String moleclrSqncQualityStandardSqncTxt) {
         this.moleclrSqncQualityStandardSqncTxt = moleclrSqncQualityStandardSqncTxt;
+    }
+    
+    public void addMoleclrSqncQualityStandardSqncTxt(String moleclrSqncQualityStandardSqncTxt) {
+    	if( moleclrSqncQualityStandardSqncTxt != null ) {
+	    	if( this.moleclrSqncQualityStandardSqncTxt == null ) {
+	        	this.moleclrSqncQualityStandardSqncTxt = moleclrSqncQualityStandardSqncTxt;
+	        } else if(this.moleclrSqncQualityStandardSqncTxt.substring(this.moleclrSqncQualityStandardSqncTxt.length() - 1).equals("]") & moleclrSqncQualityStandardSqncTxt.equals("[")) {
+	        	this.moleclrSqncQualityStandardSqncTxt = this.moleclrSqncQualityStandardSqncTxt+ "," + moleclrSqncQualityStandardSqncTxt;
+	        } else if(moleclrSqncQualityStandardSqncTxt.equals("[") | moleclrSqncQualityStandardSqncTxt.equals("]") | this.moleclrSqncQualityStandardSqncTxt.substring(this.moleclrSqncQualityStandardSqncTxt.length() - 1).equals("[")) {
+	        	this.moleclrSqncQualityStandardSqncTxt = this.moleclrSqncQualityStandardSqncTxt+moleclrSqncQualityStandardSqncTxt;
+	        } else  {
+	            this.moleclrSqncQualityStandardSqncTxt = this.moleclrSqncQualityStandardSqncTxt+ "," +moleclrSqncQualityStandardSqncTxt;
+	        }
+        }
     }
     
     
@@ -628,6 +1328,20 @@ public class MolecularSequence  implements java.io.Serializable {
         this.moleclrSqncQualityStrt = moleclrSqncQualityStrt;
     }
     
+    public void addMoleclrSqncQualityStrt(String moleclrSqncQualityStrt) {
+    	if( moleclrSqncQualityStrt != null ) {
+	    	if( this.moleclrSqncQualityStrt == null ) {
+	        	this.moleclrSqncQualityStrt = moleclrSqncQualityStrt;
+	        } else if(this.moleclrSqncQualityStrt.substring(this.moleclrSqncQualityStrt.length() - 1).equals("]") & moleclrSqncQualityStrt.equals("[")) {
+	        	this.moleclrSqncQualityStrt = this.moleclrSqncQualityStrt+ "," + moleclrSqncQualityStrt;
+	        } else if(moleclrSqncQualityStrt.equals("[") | moleclrSqncQualityStrt.equals("]") | this.moleclrSqncQualityStrt.substring(this.moleclrSqncQualityStrt.length() - 1).equals("[")) {
+	        	this.moleclrSqncQualityStrt = this.moleclrSqncQualityStrt+moleclrSqncQualityStrt;
+	        } else  {
+	            this.moleclrSqncQualityStrt = this.moleclrSqncQualityStrt+ "," +moleclrSqncQualityStrt;
+	        }
+        }
+    }
+    
     
     
     public String getMoleclrSqncQualityTruthFn() {
@@ -636,6 +1350,20 @@ public class MolecularSequence  implements java.io.Serializable {
     
     public void setMoleclrSqncQualityTruthFn(String moleclrSqncQualityTruthFn) {
         this.moleclrSqncQualityTruthFn = moleclrSqncQualityTruthFn;
+    }
+    
+    public void addMoleclrSqncQualityTruthFn(String moleclrSqncQualityTruthFn) {
+    	if( moleclrSqncQualityTruthFn != null ) {
+	    	if( this.moleclrSqncQualityTruthFn == null ) {
+	        	this.moleclrSqncQualityTruthFn = moleclrSqncQualityTruthFn;
+	        } else if(this.moleclrSqncQualityTruthFn.substring(this.moleclrSqncQualityTruthFn.length() - 1).equals("]") & moleclrSqncQualityTruthFn.equals("[")) {
+	        	this.moleclrSqncQualityTruthFn = this.moleclrSqncQualityTruthFn+ "," + moleclrSqncQualityTruthFn;
+	        } else if(moleclrSqncQualityTruthFn.equals("[") | moleclrSqncQualityTruthFn.equals("]") | this.moleclrSqncQualityTruthFn.substring(this.moleclrSqncQualityTruthFn.length() - 1).equals("[")) {
+	        	this.moleclrSqncQualityTruthFn = this.moleclrSqncQualityTruthFn+moleclrSqncQualityTruthFn;
+	        } else  {
+	            this.moleclrSqncQualityTruthFn = this.moleclrSqncQualityTruthFn+ "," +moleclrSqncQualityTruthFn;
+	        }
+        }
     }
     
     
@@ -648,6 +1376,20 @@ public class MolecularSequence  implements java.io.Serializable {
         this.moleclrSqncQualityTruthTp = moleclrSqncQualityTruthTp;
     }
     
+    public void addMoleclrSqncQualityTruthTp(String moleclrSqncQualityTruthTp) {
+    	if( moleclrSqncQualityTruthTp != null ) {
+	    	if( this.moleclrSqncQualityTruthTp == null ) {
+	        	this.moleclrSqncQualityTruthTp = moleclrSqncQualityTruthTp;
+	        } else if(this.moleclrSqncQualityTruthTp.substring(this.moleclrSqncQualityTruthTp.length() - 1).equals("]") & moleclrSqncQualityTruthTp.equals("[")) {
+	        	this.moleclrSqncQualityTruthTp = this.moleclrSqncQualityTruthTp+ "," + moleclrSqncQualityTruthTp;
+	        } else if(moleclrSqncQualityTruthTp.equals("[") | moleclrSqncQualityTruthTp.equals("]") | this.moleclrSqncQualityTruthTp.substring(this.moleclrSqncQualityTruthTp.length() - 1).equals("[")) {
+	        	this.moleclrSqncQualityTruthTp = this.moleclrSqncQualityTruthTp+moleclrSqncQualityTruthTp;
+	        } else  {
+	            this.moleclrSqncQualityTruthTp = this.moleclrSqncQualityTruthTp+ "," +moleclrSqncQualityTruthTp;
+	        }
+        }
+    }
+    
     
     
     public String getMoleclrSqncQualityTyp() {
@@ -656,6 +1398,20 @@ public class MolecularSequence  implements java.io.Serializable {
     
     public void setMoleclrSqncQualityTyp(String moleclrSqncQualityTyp) {
         this.moleclrSqncQualityTyp = moleclrSqncQualityTyp;
+    }
+    
+    public void addMoleclrSqncQualityTyp(String moleclrSqncQualityTyp) {
+    	if( moleclrSqncQualityTyp != null ) {
+	    	if( this.moleclrSqncQualityTyp == null ) {
+	        	this.moleclrSqncQualityTyp = moleclrSqncQualityTyp;
+	        } else if(this.moleclrSqncQualityTyp.substring(this.moleclrSqncQualityTyp.length() - 1).equals("]") & moleclrSqncQualityTyp.equals("[")) {
+	        	this.moleclrSqncQualityTyp = this.moleclrSqncQualityTyp+ "," + moleclrSqncQualityTyp;
+	        } else if(moleclrSqncQualityTyp.equals("[") | moleclrSqncQualityTyp.equals("]") | this.moleclrSqncQualityTyp.substring(this.moleclrSqncQualityTyp.length() - 1).equals("[")) {
+	        	this.moleclrSqncQualityTyp = this.moleclrSqncQualityTyp+moleclrSqncQualityTyp;
+	        } else  {
+	            this.moleclrSqncQualityTyp = this.moleclrSqncQualityTyp+ "," +moleclrSqncQualityTyp;
+	        }
+        }
     }
     
     
@@ -668,6 +1424,20 @@ public class MolecularSequence  implements java.io.Serializable {
         this.moleclrSqncQntyCd = moleclrSqncQntyCd;
     }
     
+    public void addMoleclrSqncQntyCd(String moleclrSqncQntyCd) {
+    	if( moleclrSqncQntyCd != null ) {
+	    	if( this.moleclrSqncQntyCd == null ) {
+	        	this.moleclrSqncQntyCd = moleclrSqncQntyCd;
+	        } else if(this.moleclrSqncQntyCd.substring(this.moleclrSqncQntyCd.length() - 1).equals("]") & moleclrSqncQntyCd.equals("[")) {
+	        	this.moleclrSqncQntyCd = this.moleclrSqncQntyCd+ "," + moleclrSqncQntyCd;
+	        } else if(moleclrSqncQntyCd.equals("[") | moleclrSqncQntyCd.equals("]") | this.moleclrSqncQntyCd.substring(this.moleclrSqncQntyCd.length() - 1).equals("[")) {
+	        	this.moleclrSqncQntyCd = this.moleclrSqncQntyCd+moleclrSqncQntyCd;
+	        } else  {
+	            this.moleclrSqncQntyCd = this.moleclrSqncQntyCd+ "," +moleclrSqncQntyCd;
+	        }
+        }
+    }
+    
     
     
     public String getMoleclrSqncQntyCmprtr() {
@@ -676,6 +1446,20 @@ public class MolecularSequence  implements java.io.Serializable {
     
     public void setMoleclrSqncQntyCmprtr(String moleclrSqncQntyCmprtr) {
         this.moleclrSqncQntyCmprtr = moleclrSqncQntyCmprtr;
+    }
+    
+    public void addMoleclrSqncQntyCmprtr(String moleclrSqncQntyCmprtr) {
+    	if( moleclrSqncQntyCmprtr != null ) {
+	    	if( this.moleclrSqncQntyCmprtr == null ) {
+	        	this.moleclrSqncQntyCmprtr = moleclrSqncQntyCmprtr;
+	        } else if(this.moleclrSqncQntyCmprtr.substring(this.moleclrSqncQntyCmprtr.length() - 1).equals("]") & moleclrSqncQntyCmprtr.equals("[")) {
+	        	this.moleclrSqncQntyCmprtr = this.moleclrSqncQntyCmprtr+ "," + moleclrSqncQntyCmprtr;
+	        } else if(moleclrSqncQntyCmprtr.equals("[") | moleclrSqncQntyCmprtr.equals("]") | this.moleclrSqncQntyCmprtr.substring(this.moleclrSqncQntyCmprtr.length() - 1).equals("[")) {
+	        	this.moleclrSqncQntyCmprtr = this.moleclrSqncQntyCmprtr+moleclrSqncQntyCmprtr;
+	        } else  {
+	            this.moleclrSqncQntyCmprtr = this.moleclrSqncQntyCmprtr+ "," +moleclrSqncQntyCmprtr;
+	        }
+        }
     }
     
     
@@ -688,6 +1472,20 @@ public class MolecularSequence  implements java.io.Serializable {
         this.moleclrSqncQntySys = moleclrSqncQntySys;
     }
     
+    public void addMoleclrSqncQntySys(String moleclrSqncQntySys) {
+    	if( moleclrSqncQntySys != null ) {
+	    	if( this.moleclrSqncQntySys == null ) {
+	        	this.moleclrSqncQntySys = moleclrSqncQntySys;
+	        } else if(this.moleclrSqncQntySys.substring(this.moleclrSqncQntySys.length() - 1).equals("]") & moleclrSqncQntySys.equals("[")) {
+	        	this.moleclrSqncQntySys = this.moleclrSqncQntySys+ "," + moleclrSqncQntySys;
+	        } else if(moleclrSqncQntySys.equals("[") | moleclrSqncQntySys.equals("]") | this.moleclrSqncQntySys.substring(this.moleclrSqncQntySys.length() - 1).equals("[")) {
+	        	this.moleclrSqncQntySys = this.moleclrSqncQntySys+moleclrSqncQntySys;
+	        } else  {
+	            this.moleclrSqncQntySys = this.moleclrSqncQntySys+ "," +moleclrSqncQntySys;
+	        }
+        }
+    }
+    
     
     
     public String getMoleclrSqncQntyUnt() {
@@ -696,6 +1494,20 @@ public class MolecularSequence  implements java.io.Serializable {
     
     public void setMoleclrSqncQntyUnt(String moleclrSqncQntyUnt) {
         this.moleclrSqncQntyUnt = moleclrSqncQntyUnt;
+    }
+    
+    public void addMoleclrSqncQntyUnt(String moleclrSqncQntyUnt) {
+    	if( moleclrSqncQntyUnt != null ) {
+	    	if( this.moleclrSqncQntyUnt == null ) {
+	        	this.moleclrSqncQntyUnt = moleclrSqncQntyUnt;
+	        } else if(this.moleclrSqncQntyUnt.substring(this.moleclrSqncQntyUnt.length() - 1).equals("]") & moleclrSqncQntyUnt.equals("[")) {
+	        	this.moleclrSqncQntyUnt = this.moleclrSqncQntyUnt+ "," + moleclrSqncQntyUnt;
+	        } else if(moleclrSqncQntyUnt.equals("[") | moleclrSqncQntyUnt.equals("]") | this.moleclrSqncQntyUnt.substring(this.moleclrSqncQntyUnt.length() - 1).equals("[")) {
+	        	this.moleclrSqncQntyUnt = this.moleclrSqncQntyUnt+moleclrSqncQntyUnt;
+	        } else  {
+	            this.moleclrSqncQntyUnt = this.moleclrSqncQntyUnt+ "," +moleclrSqncQntyUnt;
+	        }
+        }
     }
     
     
@@ -708,6 +1520,20 @@ public class MolecularSequence  implements java.io.Serializable {
         this.moleclrSqncQntyVl = moleclrSqncQntyVl;
     }
     
+    public void addMoleclrSqncQntyVl(String moleclrSqncQntyVl) {
+    	if( moleclrSqncQntyVl != null ) {
+	    	if( this.moleclrSqncQntyVl == null ) {
+	        	this.moleclrSqncQntyVl = moleclrSqncQntyVl;
+	        } else if(this.moleclrSqncQntyVl.substring(this.moleclrSqncQntyVl.length() - 1).equals("]") & moleclrSqncQntyVl.equals("[")) {
+	        	this.moleclrSqncQntyVl = this.moleclrSqncQntyVl+ "," + moleclrSqncQntyVl;
+	        } else if(moleclrSqncQntyVl.equals("[") | moleclrSqncQntyVl.equals("]") | this.moleclrSqncQntyVl.substring(this.moleclrSqncQntyVl.length() - 1).equals("[")) {
+	        	this.moleclrSqncQntyVl = this.moleclrSqncQntyVl+moleclrSqncQntyVl;
+	        } else  {
+	            this.moleclrSqncQntyVl = this.moleclrSqncQntyVl+ "," +moleclrSqncQntyVl;
+	        }
+        }
+    }
+    
     
     
     public String getMoleclrSqncReadCvg() {
@@ -716,6 +1542,20 @@ public class MolecularSequence  implements java.io.Serializable {
     
     public void setMoleclrSqncReadCvg(String moleclrSqncReadCvg) {
         this.moleclrSqncReadCvg = moleclrSqncReadCvg;
+    }
+    
+    public void addMoleclrSqncReadCvg(String moleclrSqncReadCvg) {
+    	if( moleclrSqncReadCvg != null ) {
+	    	if( this.moleclrSqncReadCvg == null ) {
+	        	this.moleclrSqncReadCvg = moleclrSqncReadCvg;
+	        } else if(this.moleclrSqncReadCvg.substring(this.moleclrSqncReadCvg.length() - 1).equals("]") & moleclrSqncReadCvg.equals("[")) {
+	        	this.moleclrSqncReadCvg = this.moleclrSqncReadCvg+ "," + moleclrSqncReadCvg;
+	        } else if(moleclrSqncReadCvg.equals("[") | moleclrSqncReadCvg.equals("]") | this.moleclrSqncReadCvg.substring(this.moleclrSqncReadCvg.length() - 1).equals("[")) {
+	        	this.moleclrSqncReadCvg = this.moleclrSqncReadCvg+moleclrSqncReadCvg;
+	        } else  {
+	            this.moleclrSqncReadCvg = this.moleclrSqncReadCvg+ "," +moleclrSqncReadCvg;
+	        }
+        }
     }
     
     
@@ -728,6 +1568,20 @@ public class MolecularSequence  implements java.io.Serializable {
         this.moleclrSqncRfrncSeqChromosomeCdgCd = moleclrSqncRfrncSeqChromosomeCdgCd;
     }
     
+    public void addMoleclrSqncRfrncSeqChromosomeCdgCd(String moleclrSqncRfrncSeqChromosomeCdgCd) {
+    	if( moleclrSqncRfrncSeqChromosomeCdgCd != null ) {
+	    	if( this.moleclrSqncRfrncSeqChromosomeCdgCd == null ) {
+	        	this.moleclrSqncRfrncSeqChromosomeCdgCd = moleclrSqncRfrncSeqChromosomeCdgCd;
+	        } else if(this.moleclrSqncRfrncSeqChromosomeCdgCd.substring(this.moleclrSqncRfrncSeqChromosomeCdgCd.length() - 1).equals("]") & moleclrSqncRfrncSeqChromosomeCdgCd.equals("[")) {
+	        	this.moleclrSqncRfrncSeqChromosomeCdgCd = this.moleclrSqncRfrncSeqChromosomeCdgCd+ "," + moleclrSqncRfrncSeqChromosomeCdgCd;
+	        } else if(moleclrSqncRfrncSeqChromosomeCdgCd.equals("[") | moleclrSqncRfrncSeqChromosomeCdgCd.equals("]") | this.moleclrSqncRfrncSeqChromosomeCdgCd.substring(this.moleclrSqncRfrncSeqChromosomeCdgCd.length() - 1).equals("[")) {
+	        	this.moleclrSqncRfrncSeqChromosomeCdgCd = this.moleclrSqncRfrncSeqChromosomeCdgCd+moleclrSqncRfrncSeqChromosomeCdgCd;
+	        } else  {
+	            this.moleclrSqncRfrncSeqChromosomeCdgCd = this.moleclrSqncRfrncSeqChromosomeCdgCd+ "," +moleclrSqncRfrncSeqChromosomeCdgCd;
+	        }
+        }
+    }
+    
     
     
     public String getMoleclrSqncRfrncSeqChromosomeCdgDsply() {
@@ -736,6 +1590,20 @@ public class MolecularSequence  implements java.io.Serializable {
     
     public void setMoleclrSqncRfrncSeqChromosomeCdgDsply(String moleclrSqncRfrncSeqChromosomeCdgDsply) {
         this.moleclrSqncRfrncSeqChromosomeCdgDsply = moleclrSqncRfrncSeqChromosomeCdgDsply;
+    }
+    
+    public void addMoleclrSqncRfrncSeqChromosomeCdgDsply(String moleclrSqncRfrncSeqChromosomeCdgDsply) {
+    	if( moleclrSqncRfrncSeqChromosomeCdgDsply != null ) {
+	    	if( this.moleclrSqncRfrncSeqChromosomeCdgDsply == null ) {
+	        	this.moleclrSqncRfrncSeqChromosomeCdgDsply = moleclrSqncRfrncSeqChromosomeCdgDsply;
+	        } else if(this.moleclrSqncRfrncSeqChromosomeCdgDsply.substring(this.moleclrSqncRfrncSeqChromosomeCdgDsply.length() - 1).equals("]") & moleclrSqncRfrncSeqChromosomeCdgDsply.equals("[")) {
+	        	this.moleclrSqncRfrncSeqChromosomeCdgDsply = this.moleclrSqncRfrncSeqChromosomeCdgDsply+ "," + moleclrSqncRfrncSeqChromosomeCdgDsply;
+	        } else if(moleclrSqncRfrncSeqChromosomeCdgDsply.equals("[") | moleclrSqncRfrncSeqChromosomeCdgDsply.equals("]") | this.moleclrSqncRfrncSeqChromosomeCdgDsply.substring(this.moleclrSqncRfrncSeqChromosomeCdgDsply.length() - 1).equals("[")) {
+	        	this.moleclrSqncRfrncSeqChromosomeCdgDsply = this.moleclrSqncRfrncSeqChromosomeCdgDsply+moleclrSqncRfrncSeqChromosomeCdgDsply;
+	        } else  {
+	            this.moleclrSqncRfrncSeqChromosomeCdgDsply = this.moleclrSqncRfrncSeqChromosomeCdgDsply+ "," +moleclrSqncRfrncSeqChromosomeCdgDsply;
+	        }
+        }
     }
     
     
@@ -748,6 +1616,20 @@ public class MolecularSequence  implements java.io.Serializable {
         this.moleclrSqncRfrncSeqChromosomeCdgSys = moleclrSqncRfrncSeqChromosomeCdgSys;
     }
     
+    public void addMoleclrSqncRfrncSeqChromosomeCdgSys(String moleclrSqncRfrncSeqChromosomeCdgSys) {
+    	if( moleclrSqncRfrncSeqChromosomeCdgSys != null ) {
+	    	if( this.moleclrSqncRfrncSeqChromosomeCdgSys == null ) {
+	        	this.moleclrSqncRfrncSeqChromosomeCdgSys = moleclrSqncRfrncSeqChromosomeCdgSys;
+	        } else if(this.moleclrSqncRfrncSeqChromosomeCdgSys.substring(this.moleclrSqncRfrncSeqChromosomeCdgSys.length() - 1).equals("]") & moleclrSqncRfrncSeqChromosomeCdgSys.equals("[")) {
+	        	this.moleclrSqncRfrncSeqChromosomeCdgSys = this.moleclrSqncRfrncSeqChromosomeCdgSys+ "," + moleclrSqncRfrncSeqChromosomeCdgSys;
+	        } else if(moleclrSqncRfrncSeqChromosomeCdgSys.equals("[") | moleclrSqncRfrncSeqChromosomeCdgSys.equals("]") | this.moleclrSqncRfrncSeqChromosomeCdgSys.substring(this.moleclrSqncRfrncSeqChromosomeCdgSys.length() - 1).equals("[")) {
+	        	this.moleclrSqncRfrncSeqChromosomeCdgSys = this.moleclrSqncRfrncSeqChromosomeCdgSys+moleclrSqncRfrncSeqChromosomeCdgSys;
+	        } else  {
+	            this.moleclrSqncRfrncSeqChromosomeCdgSys = this.moleclrSqncRfrncSeqChromosomeCdgSys+ "," +moleclrSqncRfrncSeqChromosomeCdgSys;
+	        }
+        }
+    }
+    
     
     
     public String getMoleclrSqncRfrncSeqChromosomeCdgUsrSltd() {
@@ -756,6 +1638,20 @@ public class MolecularSequence  implements java.io.Serializable {
     
     public void setMoleclrSqncRfrncSeqChromosomeCdgUsrSltd(String moleclrSqncRfrncSeqChromosomeCdgUsrSltd) {
         this.moleclrSqncRfrncSeqChromosomeCdgUsrSltd = moleclrSqncRfrncSeqChromosomeCdgUsrSltd;
+    }
+    
+    public void addMoleclrSqncRfrncSeqChromosomeCdgUsrSltd(String moleclrSqncRfrncSeqChromosomeCdgUsrSltd) {
+    	if( moleclrSqncRfrncSeqChromosomeCdgUsrSltd != null ) {
+	    	if( this.moleclrSqncRfrncSeqChromosomeCdgUsrSltd == null ) {
+	        	this.moleclrSqncRfrncSeqChromosomeCdgUsrSltd = moleclrSqncRfrncSeqChromosomeCdgUsrSltd;
+	        } else if(this.moleclrSqncRfrncSeqChromosomeCdgUsrSltd.substring(this.moleclrSqncRfrncSeqChromosomeCdgUsrSltd.length() - 1).equals("]") & moleclrSqncRfrncSeqChromosomeCdgUsrSltd.equals("[")) {
+	        	this.moleclrSqncRfrncSeqChromosomeCdgUsrSltd = this.moleclrSqncRfrncSeqChromosomeCdgUsrSltd+ "," + moleclrSqncRfrncSeqChromosomeCdgUsrSltd;
+	        } else if(moleclrSqncRfrncSeqChromosomeCdgUsrSltd.equals("[") | moleclrSqncRfrncSeqChromosomeCdgUsrSltd.equals("]") | this.moleclrSqncRfrncSeqChromosomeCdgUsrSltd.substring(this.moleclrSqncRfrncSeqChromosomeCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.moleclrSqncRfrncSeqChromosomeCdgUsrSltd = this.moleclrSqncRfrncSeqChromosomeCdgUsrSltd+moleclrSqncRfrncSeqChromosomeCdgUsrSltd;
+	        } else  {
+	            this.moleclrSqncRfrncSeqChromosomeCdgUsrSltd = this.moleclrSqncRfrncSeqChromosomeCdgUsrSltd+ "," +moleclrSqncRfrncSeqChromosomeCdgUsrSltd;
+	        }
+        }
     }
     
     
@@ -768,6 +1664,20 @@ public class MolecularSequence  implements java.io.Serializable {
         this.moleclrSqncRfrncSeqChromosomeCdgVrsn = moleclrSqncRfrncSeqChromosomeCdgVrsn;
     }
     
+    public void addMoleclrSqncRfrncSeqChromosomeCdgVrsn(String moleclrSqncRfrncSeqChromosomeCdgVrsn) {
+    	if( moleclrSqncRfrncSeqChromosomeCdgVrsn != null ) {
+	    	if( this.moleclrSqncRfrncSeqChromosomeCdgVrsn == null ) {
+	        	this.moleclrSqncRfrncSeqChromosomeCdgVrsn = moleclrSqncRfrncSeqChromosomeCdgVrsn;
+	        } else if(this.moleclrSqncRfrncSeqChromosomeCdgVrsn.substring(this.moleclrSqncRfrncSeqChromosomeCdgVrsn.length() - 1).equals("]") & moleclrSqncRfrncSeqChromosomeCdgVrsn.equals("[")) {
+	        	this.moleclrSqncRfrncSeqChromosomeCdgVrsn = this.moleclrSqncRfrncSeqChromosomeCdgVrsn+ "," + moleclrSqncRfrncSeqChromosomeCdgVrsn;
+	        } else if(moleclrSqncRfrncSeqChromosomeCdgVrsn.equals("[") | moleclrSqncRfrncSeqChromosomeCdgVrsn.equals("]") | this.moleclrSqncRfrncSeqChromosomeCdgVrsn.substring(this.moleclrSqncRfrncSeqChromosomeCdgVrsn.length() - 1).equals("[")) {
+	        	this.moleclrSqncRfrncSeqChromosomeCdgVrsn = this.moleclrSqncRfrncSeqChromosomeCdgVrsn+moleclrSqncRfrncSeqChromosomeCdgVrsn;
+	        } else  {
+	            this.moleclrSqncRfrncSeqChromosomeCdgVrsn = this.moleclrSqncRfrncSeqChromosomeCdgVrsn+ "," +moleclrSqncRfrncSeqChromosomeCdgVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getMoleclrSqncRfrncSeqChromosomeTxt() {
@@ -776,6 +1686,20 @@ public class MolecularSequence  implements java.io.Serializable {
     
     public void setMoleclrSqncRfrncSeqChromosomeTxt(String moleclrSqncRfrncSeqChromosomeTxt) {
         this.moleclrSqncRfrncSeqChromosomeTxt = moleclrSqncRfrncSeqChromosomeTxt;
+    }
+    
+    public void addMoleclrSqncRfrncSeqChromosomeTxt(String moleclrSqncRfrncSeqChromosomeTxt) {
+    	if( moleclrSqncRfrncSeqChromosomeTxt != null ) {
+	    	if( this.moleclrSqncRfrncSeqChromosomeTxt == null ) {
+	        	this.moleclrSqncRfrncSeqChromosomeTxt = moleclrSqncRfrncSeqChromosomeTxt;
+	        } else if(this.moleclrSqncRfrncSeqChromosomeTxt.substring(this.moleclrSqncRfrncSeqChromosomeTxt.length() - 1).equals("]") & moleclrSqncRfrncSeqChromosomeTxt.equals("[")) {
+	        	this.moleclrSqncRfrncSeqChromosomeTxt = this.moleclrSqncRfrncSeqChromosomeTxt+ "," + moleclrSqncRfrncSeqChromosomeTxt;
+	        } else if(moleclrSqncRfrncSeqChromosomeTxt.equals("[") | moleclrSqncRfrncSeqChromosomeTxt.equals("]") | this.moleclrSqncRfrncSeqChromosomeTxt.substring(this.moleclrSqncRfrncSeqChromosomeTxt.length() - 1).equals("[")) {
+	        	this.moleclrSqncRfrncSeqChromosomeTxt = this.moleclrSqncRfrncSeqChromosomeTxt+moleclrSqncRfrncSeqChromosomeTxt;
+	        } else  {
+	            this.moleclrSqncRfrncSeqChromosomeTxt = this.moleclrSqncRfrncSeqChromosomeTxt+ "," +moleclrSqncRfrncSeqChromosomeTxt;
+	        }
+        }
     }
     
     
@@ -788,6 +1712,20 @@ public class MolecularSequence  implements java.io.Serializable {
         this.moleclrSqncRfrncSeqGenomeBuild = moleclrSqncRfrncSeqGenomeBuild;
     }
     
+    public void addMoleclrSqncRfrncSeqGenomeBuild(String moleclrSqncRfrncSeqGenomeBuild) {
+    	if( moleclrSqncRfrncSeqGenomeBuild != null ) {
+	    	if( this.moleclrSqncRfrncSeqGenomeBuild == null ) {
+	        	this.moleclrSqncRfrncSeqGenomeBuild = moleclrSqncRfrncSeqGenomeBuild;
+	        } else if(this.moleclrSqncRfrncSeqGenomeBuild.substring(this.moleclrSqncRfrncSeqGenomeBuild.length() - 1).equals("]") & moleclrSqncRfrncSeqGenomeBuild.equals("[")) {
+	        	this.moleclrSqncRfrncSeqGenomeBuild = this.moleclrSqncRfrncSeqGenomeBuild+ "," + moleclrSqncRfrncSeqGenomeBuild;
+	        } else if(moleclrSqncRfrncSeqGenomeBuild.equals("[") | moleclrSqncRfrncSeqGenomeBuild.equals("]") | this.moleclrSqncRfrncSeqGenomeBuild.substring(this.moleclrSqncRfrncSeqGenomeBuild.length() - 1).equals("[")) {
+	        	this.moleclrSqncRfrncSeqGenomeBuild = this.moleclrSqncRfrncSeqGenomeBuild+moleclrSqncRfrncSeqGenomeBuild;
+	        } else  {
+	            this.moleclrSqncRfrncSeqGenomeBuild = this.moleclrSqncRfrncSeqGenomeBuild+ "," +moleclrSqncRfrncSeqGenomeBuild;
+	        }
+        }
+    }
+    
     
     
     public String getMoleclrSqncRfrncSeqOrientation() {
@@ -796,6 +1734,20 @@ public class MolecularSequence  implements java.io.Serializable {
     
     public void setMoleclrSqncRfrncSeqOrientation(String moleclrSqncRfrncSeqOrientation) {
         this.moleclrSqncRfrncSeqOrientation = moleclrSqncRfrncSeqOrientation;
+    }
+    
+    public void addMoleclrSqncRfrncSeqOrientation(String moleclrSqncRfrncSeqOrientation) {
+    	if( moleclrSqncRfrncSeqOrientation != null ) {
+	    	if( this.moleclrSqncRfrncSeqOrientation == null ) {
+	        	this.moleclrSqncRfrncSeqOrientation = moleclrSqncRfrncSeqOrientation;
+	        } else if(this.moleclrSqncRfrncSeqOrientation.substring(this.moleclrSqncRfrncSeqOrientation.length() - 1).equals("]") & moleclrSqncRfrncSeqOrientation.equals("[")) {
+	        	this.moleclrSqncRfrncSeqOrientation = this.moleclrSqncRfrncSeqOrientation+ "," + moleclrSqncRfrncSeqOrientation;
+	        } else if(moleclrSqncRfrncSeqOrientation.equals("[") | moleclrSqncRfrncSeqOrientation.equals("]") | this.moleclrSqncRfrncSeqOrientation.substring(this.moleclrSqncRfrncSeqOrientation.length() - 1).equals("[")) {
+	        	this.moleclrSqncRfrncSeqOrientation = this.moleclrSqncRfrncSeqOrientation+moleclrSqncRfrncSeqOrientation;
+	        } else  {
+	            this.moleclrSqncRfrncSeqOrientation = this.moleclrSqncRfrncSeqOrientation+ "," +moleclrSqncRfrncSeqOrientation;
+	        }
+        }
     }
     
     
@@ -808,6 +1760,20 @@ public class MolecularSequence  implements java.io.Serializable {
         this.moleclrSqncRfrncSeqRfrncSeqIdCdgCd = moleclrSqncRfrncSeqRfrncSeqIdCdgCd;
     }
     
+    public void addMoleclrSqncRfrncSeqRfrncSeqIdCdgCd(String moleclrSqncRfrncSeqRfrncSeqIdCdgCd) {
+    	if( moleclrSqncRfrncSeqRfrncSeqIdCdgCd != null ) {
+	    	if( this.moleclrSqncRfrncSeqRfrncSeqIdCdgCd == null ) {
+	        	this.moleclrSqncRfrncSeqRfrncSeqIdCdgCd = moleclrSqncRfrncSeqRfrncSeqIdCdgCd;
+	        } else if(this.moleclrSqncRfrncSeqRfrncSeqIdCdgCd.substring(this.moleclrSqncRfrncSeqRfrncSeqIdCdgCd.length() - 1).equals("]") & moleclrSqncRfrncSeqRfrncSeqIdCdgCd.equals("[")) {
+	        	this.moleclrSqncRfrncSeqRfrncSeqIdCdgCd = this.moleclrSqncRfrncSeqRfrncSeqIdCdgCd+ "," + moleclrSqncRfrncSeqRfrncSeqIdCdgCd;
+	        } else if(moleclrSqncRfrncSeqRfrncSeqIdCdgCd.equals("[") | moleclrSqncRfrncSeqRfrncSeqIdCdgCd.equals("]") | this.moleclrSqncRfrncSeqRfrncSeqIdCdgCd.substring(this.moleclrSqncRfrncSeqRfrncSeqIdCdgCd.length() - 1).equals("[")) {
+	        	this.moleclrSqncRfrncSeqRfrncSeqIdCdgCd = this.moleclrSqncRfrncSeqRfrncSeqIdCdgCd+moleclrSqncRfrncSeqRfrncSeqIdCdgCd;
+	        } else  {
+	            this.moleclrSqncRfrncSeqRfrncSeqIdCdgCd = this.moleclrSqncRfrncSeqRfrncSeqIdCdgCd+ "," +moleclrSqncRfrncSeqRfrncSeqIdCdgCd;
+	        }
+        }
+    }
+    
     
     
     public String getMoleclrSqncRfrncSeqRfrncSeqIdCdgDsply() {
@@ -816,6 +1782,20 @@ public class MolecularSequence  implements java.io.Serializable {
     
     public void setMoleclrSqncRfrncSeqRfrncSeqIdCdgDsply(String moleclrSqncRfrncSeqRfrncSeqIdCdgDsply) {
         this.moleclrSqncRfrncSeqRfrncSeqIdCdgDsply = moleclrSqncRfrncSeqRfrncSeqIdCdgDsply;
+    }
+    
+    public void addMoleclrSqncRfrncSeqRfrncSeqIdCdgDsply(String moleclrSqncRfrncSeqRfrncSeqIdCdgDsply) {
+    	if( moleclrSqncRfrncSeqRfrncSeqIdCdgDsply != null ) {
+	    	if( this.moleclrSqncRfrncSeqRfrncSeqIdCdgDsply == null ) {
+	        	this.moleclrSqncRfrncSeqRfrncSeqIdCdgDsply = moleclrSqncRfrncSeqRfrncSeqIdCdgDsply;
+	        } else if(this.moleclrSqncRfrncSeqRfrncSeqIdCdgDsply.substring(this.moleclrSqncRfrncSeqRfrncSeqIdCdgDsply.length() - 1).equals("]") & moleclrSqncRfrncSeqRfrncSeqIdCdgDsply.equals("[")) {
+	        	this.moleclrSqncRfrncSeqRfrncSeqIdCdgDsply = this.moleclrSqncRfrncSeqRfrncSeqIdCdgDsply+ "," + moleclrSqncRfrncSeqRfrncSeqIdCdgDsply;
+	        } else if(moleclrSqncRfrncSeqRfrncSeqIdCdgDsply.equals("[") | moleclrSqncRfrncSeqRfrncSeqIdCdgDsply.equals("]") | this.moleclrSqncRfrncSeqRfrncSeqIdCdgDsply.substring(this.moleclrSqncRfrncSeqRfrncSeqIdCdgDsply.length() - 1).equals("[")) {
+	        	this.moleclrSqncRfrncSeqRfrncSeqIdCdgDsply = this.moleclrSqncRfrncSeqRfrncSeqIdCdgDsply+moleclrSqncRfrncSeqRfrncSeqIdCdgDsply;
+	        } else  {
+	            this.moleclrSqncRfrncSeqRfrncSeqIdCdgDsply = this.moleclrSqncRfrncSeqRfrncSeqIdCdgDsply+ "," +moleclrSqncRfrncSeqRfrncSeqIdCdgDsply;
+	        }
+        }
     }
     
     
@@ -828,6 +1808,20 @@ public class MolecularSequence  implements java.io.Serializable {
         this.moleclrSqncRfrncSeqRfrncSeqIdCdgSys = moleclrSqncRfrncSeqRfrncSeqIdCdgSys;
     }
     
+    public void addMoleclrSqncRfrncSeqRfrncSeqIdCdgSys(String moleclrSqncRfrncSeqRfrncSeqIdCdgSys) {
+    	if( moleclrSqncRfrncSeqRfrncSeqIdCdgSys != null ) {
+	    	if( this.moleclrSqncRfrncSeqRfrncSeqIdCdgSys == null ) {
+	        	this.moleclrSqncRfrncSeqRfrncSeqIdCdgSys = moleclrSqncRfrncSeqRfrncSeqIdCdgSys;
+	        } else if(this.moleclrSqncRfrncSeqRfrncSeqIdCdgSys.substring(this.moleclrSqncRfrncSeqRfrncSeqIdCdgSys.length() - 1).equals("]") & moleclrSqncRfrncSeqRfrncSeqIdCdgSys.equals("[")) {
+	        	this.moleclrSqncRfrncSeqRfrncSeqIdCdgSys = this.moleclrSqncRfrncSeqRfrncSeqIdCdgSys+ "," + moleclrSqncRfrncSeqRfrncSeqIdCdgSys;
+	        } else if(moleclrSqncRfrncSeqRfrncSeqIdCdgSys.equals("[") | moleclrSqncRfrncSeqRfrncSeqIdCdgSys.equals("]") | this.moleclrSqncRfrncSeqRfrncSeqIdCdgSys.substring(this.moleclrSqncRfrncSeqRfrncSeqIdCdgSys.length() - 1).equals("[")) {
+	        	this.moleclrSqncRfrncSeqRfrncSeqIdCdgSys = this.moleclrSqncRfrncSeqRfrncSeqIdCdgSys+moleclrSqncRfrncSeqRfrncSeqIdCdgSys;
+	        } else  {
+	            this.moleclrSqncRfrncSeqRfrncSeqIdCdgSys = this.moleclrSqncRfrncSeqRfrncSeqIdCdgSys+ "," +moleclrSqncRfrncSeqRfrncSeqIdCdgSys;
+	        }
+        }
+    }
+    
     
     
     public String getMoleclrSqncRfrncSeqRfrncSeqIdCdgUsrSltd() {
@@ -836,6 +1830,20 @@ public class MolecularSequence  implements java.io.Serializable {
     
     public void setMoleclrSqncRfrncSeqRfrncSeqIdCdgUsrSltd(String moleclrSqncRfrncSeqRfrncSeqIdCdgUsrSltd) {
         this.moleclrSqncRfrncSeqRfrncSeqIdCdgUsrSltd = moleclrSqncRfrncSeqRfrncSeqIdCdgUsrSltd;
+    }
+    
+    public void addMoleclrSqncRfrncSeqRfrncSeqIdCdgUsrSltd(String moleclrSqncRfrncSeqRfrncSeqIdCdgUsrSltd) {
+    	if( moleclrSqncRfrncSeqRfrncSeqIdCdgUsrSltd != null ) {
+	    	if( this.moleclrSqncRfrncSeqRfrncSeqIdCdgUsrSltd == null ) {
+	        	this.moleclrSqncRfrncSeqRfrncSeqIdCdgUsrSltd = moleclrSqncRfrncSeqRfrncSeqIdCdgUsrSltd;
+	        } else if(this.moleclrSqncRfrncSeqRfrncSeqIdCdgUsrSltd.substring(this.moleclrSqncRfrncSeqRfrncSeqIdCdgUsrSltd.length() - 1).equals("]") & moleclrSqncRfrncSeqRfrncSeqIdCdgUsrSltd.equals("[")) {
+	        	this.moleclrSqncRfrncSeqRfrncSeqIdCdgUsrSltd = this.moleclrSqncRfrncSeqRfrncSeqIdCdgUsrSltd+ "," + moleclrSqncRfrncSeqRfrncSeqIdCdgUsrSltd;
+	        } else if(moleclrSqncRfrncSeqRfrncSeqIdCdgUsrSltd.equals("[") | moleclrSqncRfrncSeqRfrncSeqIdCdgUsrSltd.equals("]") | this.moleclrSqncRfrncSeqRfrncSeqIdCdgUsrSltd.substring(this.moleclrSqncRfrncSeqRfrncSeqIdCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.moleclrSqncRfrncSeqRfrncSeqIdCdgUsrSltd = this.moleclrSqncRfrncSeqRfrncSeqIdCdgUsrSltd+moleclrSqncRfrncSeqRfrncSeqIdCdgUsrSltd;
+	        } else  {
+	            this.moleclrSqncRfrncSeqRfrncSeqIdCdgUsrSltd = this.moleclrSqncRfrncSeqRfrncSeqIdCdgUsrSltd+ "," +moleclrSqncRfrncSeqRfrncSeqIdCdgUsrSltd;
+	        }
+        }
     }
     
     
@@ -848,6 +1856,20 @@ public class MolecularSequence  implements java.io.Serializable {
         this.moleclrSqncRfrncSeqRfrncSeqIdCdgVrsn = moleclrSqncRfrncSeqRfrncSeqIdCdgVrsn;
     }
     
+    public void addMoleclrSqncRfrncSeqRfrncSeqIdCdgVrsn(String moleclrSqncRfrncSeqRfrncSeqIdCdgVrsn) {
+    	if( moleclrSqncRfrncSeqRfrncSeqIdCdgVrsn != null ) {
+	    	if( this.moleclrSqncRfrncSeqRfrncSeqIdCdgVrsn == null ) {
+	        	this.moleclrSqncRfrncSeqRfrncSeqIdCdgVrsn = moleclrSqncRfrncSeqRfrncSeqIdCdgVrsn;
+	        } else if(this.moleclrSqncRfrncSeqRfrncSeqIdCdgVrsn.substring(this.moleclrSqncRfrncSeqRfrncSeqIdCdgVrsn.length() - 1).equals("]") & moleclrSqncRfrncSeqRfrncSeqIdCdgVrsn.equals("[")) {
+	        	this.moleclrSqncRfrncSeqRfrncSeqIdCdgVrsn = this.moleclrSqncRfrncSeqRfrncSeqIdCdgVrsn+ "," + moleclrSqncRfrncSeqRfrncSeqIdCdgVrsn;
+	        } else if(moleclrSqncRfrncSeqRfrncSeqIdCdgVrsn.equals("[") | moleclrSqncRfrncSeqRfrncSeqIdCdgVrsn.equals("]") | this.moleclrSqncRfrncSeqRfrncSeqIdCdgVrsn.substring(this.moleclrSqncRfrncSeqRfrncSeqIdCdgVrsn.length() - 1).equals("[")) {
+	        	this.moleclrSqncRfrncSeqRfrncSeqIdCdgVrsn = this.moleclrSqncRfrncSeqRfrncSeqIdCdgVrsn+moleclrSqncRfrncSeqRfrncSeqIdCdgVrsn;
+	        } else  {
+	            this.moleclrSqncRfrncSeqRfrncSeqIdCdgVrsn = this.moleclrSqncRfrncSeqRfrncSeqIdCdgVrsn+ "," +moleclrSqncRfrncSeqRfrncSeqIdCdgVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getMoleclrSqncRfrncSeqRfrncSeqIdTxt() {
@@ -856,6 +1878,20 @@ public class MolecularSequence  implements java.io.Serializable {
     
     public void setMoleclrSqncRfrncSeqRfrncSeqIdTxt(String moleclrSqncRfrncSeqRfrncSeqIdTxt) {
         this.moleclrSqncRfrncSeqRfrncSeqIdTxt = moleclrSqncRfrncSeqRfrncSeqIdTxt;
+    }
+    
+    public void addMoleclrSqncRfrncSeqRfrncSeqIdTxt(String moleclrSqncRfrncSeqRfrncSeqIdTxt) {
+    	if( moleclrSqncRfrncSeqRfrncSeqIdTxt != null ) {
+	    	if( this.moleclrSqncRfrncSeqRfrncSeqIdTxt == null ) {
+	        	this.moleclrSqncRfrncSeqRfrncSeqIdTxt = moleclrSqncRfrncSeqRfrncSeqIdTxt;
+	        } else if(this.moleclrSqncRfrncSeqRfrncSeqIdTxt.substring(this.moleclrSqncRfrncSeqRfrncSeqIdTxt.length() - 1).equals("]") & moleclrSqncRfrncSeqRfrncSeqIdTxt.equals("[")) {
+	        	this.moleclrSqncRfrncSeqRfrncSeqIdTxt = this.moleclrSqncRfrncSeqRfrncSeqIdTxt+ "," + moleclrSqncRfrncSeqRfrncSeqIdTxt;
+	        } else if(moleclrSqncRfrncSeqRfrncSeqIdTxt.equals("[") | moleclrSqncRfrncSeqRfrncSeqIdTxt.equals("]") | this.moleclrSqncRfrncSeqRfrncSeqIdTxt.substring(this.moleclrSqncRfrncSeqRfrncSeqIdTxt.length() - 1).equals("[")) {
+	        	this.moleclrSqncRfrncSeqRfrncSeqIdTxt = this.moleclrSqncRfrncSeqRfrncSeqIdTxt+moleclrSqncRfrncSeqRfrncSeqIdTxt;
+	        } else  {
+	            this.moleclrSqncRfrncSeqRfrncSeqIdTxt = this.moleclrSqncRfrncSeqRfrncSeqIdTxt+ "," +moleclrSqncRfrncSeqRfrncSeqIdTxt;
+	        }
+        }
     }
     
     
@@ -868,6 +1904,20 @@ public class MolecularSequence  implements java.io.Serializable {
         this.moleclrSqncRfrncSeqRfrncSeqPointer = moleclrSqncRfrncSeqRfrncSeqPointer;
     }
     
+    public void addMoleclrSqncRfrncSeqRfrncSeqPointer(String moleclrSqncRfrncSeqRfrncSeqPointer) {
+    	if( moleclrSqncRfrncSeqRfrncSeqPointer != null ) {
+	    	if( this.moleclrSqncRfrncSeqRfrncSeqPointer == null ) {
+	        	this.moleclrSqncRfrncSeqRfrncSeqPointer = moleclrSqncRfrncSeqRfrncSeqPointer;
+	        } else if(this.moleclrSqncRfrncSeqRfrncSeqPointer.substring(this.moleclrSqncRfrncSeqRfrncSeqPointer.length() - 1).equals("]") & moleclrSqncRfrncSeqRfrncSeqPointer.equals("[")) {
+	        	this.moleclrSqncRfrncSeqRfrncSeqPointer = this.moleclrSqncRfrncSeqRfrncSeqPointer+ "," + moleclrSqncRfrncSeqRfrncSeqPointer;
+	        } else if(moleclrSqncRfrncSeqRfrncSeqPointer.equals("[") | moleclrSqncRfrncSeqRfrncSeqPointer.equals("]") | this.moleclrSqncRfrncSeqRfrncSeqPointer.substring(this.moleclrSqncRfrncSeqRfrncSeqPointer.length() - 1).equals("[")) {
+	        	this.moleclrSqncRfrncSeqRfrncSeqPointer = this.moleclrSqncRfrncSeqRfrncSeqPointer+moleclrSqncRfrncSeqRfrncSeqPointer;
+	        } else  {
+	            this.moleclrSqncRfrncSeqRfrncSeqPointer = this.moleclrSqncRfrncSeqRfrncSeqPointer+ "," +moleclrSqncRfrncSeqRfrncSeqPointer;
+	        }
+        }
+    }
+    
     
     
     public String getMoleclrSqncRfrncSeqRfrncSeqStrg() {
@@ -876,6 +1926,20 @@ public class MolecularSequence  implements java.io.Serializable {
     
     public void setMoleclrSqncRfrncSeqRfrncSeqStrg(String moleclrSqncRfrncSeqRfrncSeqStrg) {
         this.moleclrSqncRfrncSeqRfrncSeqStrg = moleclrSqncRfrncSeqRfrncSeqStrg;
+    }
+    
+    public void addMoleclrSqncRfrncSeqRfrncSeqStrg(String moleclrSqncRfrncSeqRfrncSeqStrg) {
+    	if( moleclrSqncRfrncSeqRfrncSeqStrg != null ) {
+	    	if( this.moleclrSqncRfrncSeqRfrncSeqStrg == null ) {
+	        	this.moleclrSqncRfrncSeqRfrncSeqStrg = moleclrSqncRfrncSeqRfrncSeqStrg;
+	        } else if(this.moleclrSqncRfrncSeqRfrncSeqStrg.substring(this.moleclrSqncRfrncSeqRfrncSeqStrg.length() - 1).equals("]") & moleclrSqncRfrncSeqRfrncSeqStrg.equals("[")) {
+	        	this.moleclrSqncRfrncSeqRfrncSeqStrg = this.moleclrSqncRfrncSeqRfrncSeqStrg+ "," + moleclrSqncRfrncSeqRfrncSeqStrg;
+	        } else if(moleclrSqncRfrncSeqRfrncSeqStrg.equals("[") | moleclrSqncRfrncSeqRfrncSeqStrg.equals("]") | this.moleclrSqncRfrncSeqRfrncSeqStrg.substring(this.moleclrSqncRfrncSeqRfrncSeqStrg.length() - 1).equals("[")) {
+	        	this.moleclrSqncRfrncSeqRfrncSeqStrg = this.moleclrSqncRfrncSeqRfrncSeqStrg+moleclrSqncRfrncSeqRfrncSeqStrg;
+	        } else  {
+	            this.moleclrSqncRfrncSeqRfrncSeqStrg = this.moleclrSqncRfrncSeqRfrncSeqStrg+ "," +moleclrSqncRfrncSeqRfrncSeqStrg;
+	        }
+        }
     }
     
     
@@ -888,6 +1952,20 @@ public class MolecularSequence  implements java.io.Serializable {
         this.moleclrSqncRfrncSeqStrand = moleclrSqncRfrncSeqStrand;
     }
     
+    public void addMoleclrSqncRfrncSeqStrand(String moleclrSqncRfrncSeqStrand) {
+    	if( moleclrSqncRfrncSeqStrand != null ) {
+	    	if( this.moleclrSqncRfrncSeqStrand == null ) {
+	        	this.moleclrSqncRfrncSeqStrand = moleclrSqncRfrncSeqStrand;
+	        } else if(this.moleclrSqncRfrncSeqStrand.substring(this.moleclrSqncRfrncSeqStrand.length() - 1).equals("]") & moleclrSqncRfrncSeqStrand.equals("[")) {
+	        	this.moleclrSqncRfrncSeqStrand = this.moleclrSqncRfrncSeqStrand+ "," + moleclrSqncRfrncSeqStrand;
+	        } else if(moleclrSqncRfrncSeqStrand.equals("[") | moleclrSqncRfrncSeqStrand.equals("]") | this.moleclrSqncRfrncSeqStrand.substring(this.moleclrSqncRfrncSeqStrand.length() - 1).equals("[")) {
+	        	this.moleclrSqncRfrncSeqStrand = this.moleclrSqncRfrncSeqStrand+moleclrSqncRfrncSeqStrand;
+	        } else  {
+	            this.moleclrSqncRfrncSeqStrand = this.moleclrSqncRfrncSeqStrand+ "," +moleclrSqncRfrncSeqStrand;
+	        }
+        }
+    }
+    
     
     
     public String getMoleclrSqncRfrncSeqWindowEnd() {
@@ -896,6 +1974,20 @@ public class MolecularSequence  implements java.io.Serializable {
     
     public void setMoleclrSqncRfrncSeqWindowEnd(String moleclrSqncRfrncSeqWindowEnd) {
         this.moleclrSqncRfrncSeqWindowEnd = moleclrSqncRfrncSeqWindowEnd;
+    }
+    
+    public void addMoleclrSqncRfrncSeqWindowEnd(String moleclrSqncRfrncSeqWindowEnd) {
+    	if( moleclrSqncRfrncSeqWindowEnd != null ) {
+	    	if( this.moleclrSqncRfrncSeqWindowEnd == null ) {
+	        	this.moleclrSqncRfrncSeqWindowEnd = moleclrSqncRfrncSeqWindowEnd;
+	        } else if(this.moleclrSqncRfrncSeqWindowEnd.substring(this.moleclrSqncRfrncSeqWindowEnd.length() - 1).equals("]") & moleclrSqncRfrncSeqWindowEnd.equals("[")) {
+	        	this.moleclrSqncRfrncSeqWindowEnd = this.moleclrSqncRfrncSeqWindowEnd+ "," + moleclrSqncRfrncSeqWindowEnd;
+	        } else if(moleclrSqncRfrncSeqWindowEnd.equals("[") | moleclrSqncRfrncSeqWindowEnd.equals("]") | this.moleclrSqncRfrncSeqWindowEnd.substring(this.moleclrSqncRfrncSeqWindowEnd.length() - 1).equals("[")) {
+	        	this.moleclrSqncRfrncSeqWindowEnd = this.moleclrSqncRfrncSeqWindowEnd+moleclrSqncRfrncSeqWindowEnd;
+	        } else  {
+	            this.moleclrSqncRfrncSeqWindowEnd = this.moleclrSqncRfrncSeqWindowEnd+ "," +moleclrSqncRfrncSeqWindowEnd;
+	        }
+        }
     }
     
     
@@ -908,6 +2000,20 @@ public class MolecularSequence  implements java.io.Serializable {
         this.moleclrSqncRfrncSeqWindowStrt = moleclrSqncRfrncSeqWindowStrt;
     }
     
+    public void addMoleclrSqncRfrncSeqWindowStrt(String moleclrSqncRfrncSeqWindowStrt) {
+    	if( moleclrSqncRfrncSeqWindowStrt != null ) {
+	    	if( this.moleclrSqncRfrncSeqWindowStrt == null ) {
+	        	this.moleclrSqncRfrncSeqWindowStrt = moleclrSqncRfrncSeqWindowStrt;
+	        } else if(this.moleclrSqncRfrncSeqWindowStrt.substring(this.moleclrSqncRfrncSeqWindowStrt.length() - 1).equals("]") & moleclrSqncRfrncSeqWindowStrt.equals("[")) {
+	        	this.moleclrSqncRfrncSeqWindowStrt = this.moleclrSqncRfrncSeqWindowStrt+ "," + moleclrSqncRfrncSeqWindowStrt;
+	        } else if(moleclrSqncRfrncSeqWindowStrt.equals("[") | moleclrSqncRfrncSeqWindowStrt.equals("]") | this.moleclrSqncRfrncSeqWindowStrt.substring(this.moleclrSqncRfrncSeqWindowStrt.length() - 1).equals("[")) {
+	        	this.moleclrSqncRfrncSeqWindowStrt = this.moleclrSqncRfrncSeqWindowStrt+moleclrSqncRfrncSeqWindowStrt;
+	        } else  {
+	            this.moleclrSqncRfrncSeqWindowStrt = this.moleclrSqncRfrncSeqWindowStrt+ "," +moleclrSqncRfrncSeqWindowStrt;
+	        }
+        }
+    }
+    
     
     
     public String getMoleclrSqncRepositoryDataId() {
@@ -916,6 +2022,20 @@ public class MolecularSequence  implements java.io.Serializable {
     
     public void setMoleclrSqncRepositoryDataId(String moleclrSqncRepositoryDataId) {
         this.moleclrSqncRepositoryDataId = moleclrSqncRepositoryDataId;
+    }
+    
+    public void addMoleclrSqncRepositoryDataId(String moleclrSqncRepositoryDataId) {
+    	if( moleclrSqncRepositoryDataId != null ) {
+	    	if( this.moleclrSqncRepositoryDataId == null ) {
+	        	this.moleclrSqncRepositoryDataId = moleclrSqncRepositoryDataId;
+	        } else if(this.moleclrSqncRepositoryDataId.substring(this.moleclrSqncRepositoryDataId.length() - 1).equals("]") & moleclrSqncRepositoryDataId.equals("[")) {
+	        	this.moleclrSqncRepositoryDataId = this.moleclrSqncRepositoryDataId+ "," + moleclrSqncRepositoryDataId;
+	        } else if(moleclrSqncRepositoryDataId.equals("[") | moleclrSqncRepositoryDataId.equals("]") | this.moleclrSqncRepositoryDataId.substring(this.moleclrSqncRepositoryDataId.length() - 1).equals("[")) {
+	        	this.moleclrSqncRepositoryDataId = this.moleclrSqncRepositoryDataId+moleclrSqncRepositoryDataId;
+	        } else  {
+	            this.moleclrSqncRepositoryDataId = this.moleclrSqncRepositoryDataId+ "," +moleclrSqncRepositoryDataId;
+	        }
+        }
     }
     
     
@@ -928,6 +2048,20 @@ public class MolecularSequence  implements java.io.Serializable {
         this.moleclrSqncRepositoryNm = moleclrSqncRepositoryNm;
     }
     
+    public void addMoleclrSqncRepositoryNm(String moleclrSqncRepositoryNm) {
+    	if( moleclrSqncRepositoryNm != null ) {
+	    	if( this.moleclrSqncRepositoryNm == null ) {
+	        	this.moleclrSqncRepositoryNm = moleclrSqncRepositoryNm;
+	        } else if(this.moleclrSqncRepositoryNm.substring(this.moleclrSqncRepositoryNm.length() - 1).equals("]") & moleclrSqncRepositoryNm.equals("[")) {
+	        	this.moleclrSqncRepositoryNm = this.moleclrSqncRepositoryNm+ "," + moleclrSqncRepositoryNm;
+	        } else if(moleclrSqncRepositoryNm.equals("[") | moleclrSqncRepositoryNm.equals("]") | this.moleclrSqncRepositoryNm.substring(this.moleclrSqncRepositoryNm.length() - 1).equals("[")) {
+	        	this.moleclrSqncRepositoryNm = this.moleclrSqncRepositoryNm+moleclrSqncRepositoryNm;
+	        } else  {
+	            this.moleclrSqncRepositoryNm = this.moleclrSqncRepositoryNm+ "," +moleclrSqncRepositoryNm;
+	        }
+        }
+    }
+    
     
     
     public String getMoleclrSqncRepositoryReadId() {
@@ -936,6 +2070,20 @@ public class MolecularSequence  implements java.io.Serializable {
     
     public void setMoleclrSqncRepositoryReadId(String moleclrSqncRepositoryReadId) {
         this.moleclrSqncRepositoryReadId = moleclrSqncRepositoryReadId;
+    }
+    
+    public void addMoleclrSqncRepositoryReadId(String moleclrSqncRepositoryReadId) {
+    	if( moleclrSqncRepositoryReadId != null ) {
+	    	if( this.moleclrSqncRepositoryReadId == null ) {
+	        	this.moleclrSqncRepositoryReadId = moleclrSqncRepositoryReadId;
+	        } else if(this.moleclrSqncRepositoryReadId.substring(this.moleclrSqncRepositoryReadId.length() - 1).equals("]") & moleclrSqncRepositoryReadId.equals("[")) {
+	        	this.moleclrSqncRepositoryReadId = this.moleclrSqncRepositoryReadId+ "," + moleclrSqncRepositoryReadId;
+	        } else if(moleclrSqncRepositoryReadId.equals("[") | moleclrSqncRepositoryReadId.equals("]") | this.moleclrSqncRepositoryReadId.substring(this.moleclrSqncRepositoryReadId.length() - 1).equals("[")) {
+	        	this.moleclrSqncRepositoryReadId = this.moleclrSqncRepositoryReadId+moleclrSqncRepositoryReadId;
+	        } else  {
+	            this.moleclrSqncRepositoryReadId = this.moleclrSqncRepositoryReadId+ "," +moleclrSqncRepositoryReadId;
+	        }
+        }
     }
     
     
@@ -948,6 +2096,20 @@ public class MolecularSequence  implements java.io.Serializable {
         this.moleclrSqncRepositoryTyp = moleclrSqncRepositoryTyp;
     }
     
+    public void addMoleclrSqncRepositoryTyp(String moleclrSqncRepositoryTyp) {
+    	if( moleclrSqncRepositoryTyp != null ) {
+	    	if( this.moleclrSqncRepositoryTyp == null ) {
+	        	this.moleclrSqncRepositoryTyp = moleclrSqncRepositoryTyp;
+	        } else if(this.moleclrSqncRepositoryTyp.substring(this.moleclrSqncRepositoryTyp.length() - 1).equals("]") & moleclrSqncRepositoryTyp.equals("[")) {
+	        	this.moleclrSqncRepositoryTyp = this.moleclrSqncRepositoryTyp+ "," + moleclrSqncRepositoryTyp;
+	        } else if(moleclrSqncRepositoryTyp.equals("[") | moleclrSqncRepositoryTyp.equals("]") | this.moleclrSqncRepositoryTyp.substring(this.moleclrSqncRepositoryTyp.length() - 1).equals("[")) {
+	        	this.moleclrSqncRepositoryTyp = this.moleclrSqncRepositoryTyp+moleclrSqncRepositoryTyp;
+	        } else  {
+	            this.moleclrSqncRepositoryTyp = this.moleclrSqncRepositoryTyp+ "," +moleclrSqncRepositoryTyp;
+	        }
+        }
+    }
+    
     
     
     public String getMoleclrSqncRepositoryUrl() {
@@ -956,6 +2118,20 @@ public class MolecularSequence  implements java.io.Serializable {
     
     public void setMoleclrSqncRepositoryUrl(String moleclrSqncRepositoryUrl) {
         this.moleclrSqncRepositoryUrl = moleclrSqncRepositoryUrl;
+    }
+    
+    public void addMoleclrSqncRepositoryUrl(String moleclrSqncRepositoryUrl) {
+    	if( moleclrSqncRepositoryUrl != null ) {
+	    	if( this.moleclrSqncRepositoryUrl == null ) {
+	        	this.moleclrSqncRepositoryUrl = moleclrSqncRepositoryUrl;
+	        } else if(this.moleclrSqncRepositoryUrl.substring(this.moleclrSqncRepositoryUrl.length() - 1).equals("]") & moleclrSqncRepositoryUrl.equals("[")) {
+	        	this.moleclrSqncRepositoryUrl = this.moleclrSqncRepositoryUrl+ "," + moleclrSqncRepositoryUrl;
+	        } else if(moleclrSqncRepositoryUrl.equals("[") | moleclrSqncRepositoryUrl.equals("]") | this.moleclrSqncRepositoryUrl.substring(this.moleclrSqncRepositoryUrl.length() - 1).equals("[")) {
+	        	this.moleclrSqncRepositoryUrl = this.moleclrSqncRepositoryUrl+moleclrSqncRepositoryUrl;
+	        } else  {
+	            this.moleclrSqncRepositoryUrl = this.moleclrSqncRepositoryUrl+ "," +moleclrSqncRepositoryUrl;
+	        }
+        }
     }
     
     
@@ -968,6 +2144,20 @@ public class MolecularSequence  implements java.io.Serializable {
         this.moleclrSqncRepositoryVariantId = moleclrSqncRepositoryVariantId;
     }
     
+    public void addMoleclrSqncRepositoryVariantId(String moleclrSqncRepositoryVariantId) {
+    	if( moleclrSqncRepositoryVariantId != null ) {
+	    	if( this.moleclrSqncRepositoryVariantId == null ) {
+	        	this.moleclrSqncRepositoryVariantId = moleclrSqncRepositoryVariantId;
+	        } else if(this.moleclrSqncRepositoryVariantId.substring(this.moleclrSqncRepositoryVariantId.length() - 1).equals("]") & moleclrSqncRepositoryVariantId.equals("[")) {
+	        	this.moleclrSqncRepositoryVariantId = this.moleclrSqncRepositoryVariantId+ "," + moleclrSqncRepositoryVariantId;
+	        } else if(moleclrSqncRepositoryVariantId.equals("[") | moleclrSqncRepositoryVariantId.equals("]") | this.moleclrSqncRepositoryVariantId.substring(this.moleclrSqncRepositoryVariantId.length() - 1).equals("[")) {
+	        	this.moleclrSqncRepositoryVariantId = this.moleclrSqncRepositoryVariantId+moleclrSqncRepositoryVariantId;
+	        } else  {
+	            this.moleclrSqncRepositoryVariantId = this.moleclrSqncRepositoryVariantId+ "," +moleclrSqncRepositoryVariantId;
+	        }
+        }
+    }
+    
     
     
     public String getMoleclrSqncSpcmn() {
@@ -976,6 +2166,20 @@ public class MolecularSequence  implements java.io.Serializable {
     
     public void setMoleclrSqncSpcmn(String moleclrSqncSpcmn) {
         this.moleclrSqncSpcmn = moleclrSqncSpcmn;
+    }
+    
+    public void addMoleclrSqncSpcmn(String moleclrSqncSpcmn) {
+    	if( moleclrSqncSpcmn != null ) {
+	    	if( this.moleclrSqncSpcmn == null ) {
+	        	this.moleclrSqncSpcmn = moleclrSqncSpcmn;
+	        } else if(this.moleclrSqncSpcmn.substring(this.moleclrSqncSpcmn.length() - 1).equals("]") & moleclrSqncSpcmn.equals("[")) {
+	        	this.moleclrSqncSpcmn = this.moleclrSqncSpcmn+ "," + moleclrSqncSpcmn;
+	        } else if(moleclrSqncSpcmn.equals("[") | moleclrSqncSpcmn.equals("]") | this.moleclrSqncSpcmn.substring(this.moleclrSqncSpcmn.length() - 1).equals("[")) {
+	        	this.moleclrSqncSpcmn = this.moleclrSqncSpcmn+moleclrSqncSpcmn;
+	        } else  {
+	            this.moleclrSqncSpcmn = this.moleclrSqncSpcmn+ "," +moleclrSqncSpcmn;
+	        }
+        }
     }
     
     
@@ -988,6 +2192,20 @@ public class MolecularSequence  implements java.io.Serializable {
         this.moleclrSqncStrctrVariantExact = moleclrSqncStrctrVariantExact;
     }
     
+    public void addMoleclrSqncStrctrVariantExact(String moleclrSqncStrctrVariantExact) {
+    	if( moleclrSqncStrctrVariantExact != null ) {
+	    	if( this.moleclrSqncStrctrVariantExact == null ) {
+	        	this.moleclrSqncStrctrVariantExact = moleclrSqncStrctrVariantExact;
+	        } else if(this.moleclrSqncStrctrVariantExact.substring(this.moleclrSqncStrctrVariantExact.length() - 1).equals("]") & moleclrSqncStrctrVariantExact.equals("[")) {
+	        	this.moleclrSqncStrctrVariantExact = this.moleclrSqncStrctrVariantExact+ "," + moleclrSqncStrctrVariantExact;
+	        } else if(moleclrSqncStrctrVariantExact.equals("[") | moleclrSqncStrctrVariantExact.equals("]") | this.moleclrSqncStrctrVariantExact.substring(this.moleclrSqncStrctrVariantExact.length() - 1).equals("[")) {
+	        	this.moleclrSqncStrctrVariantExact = this.moleclrSqncStrctrVariantExact+moleclrSqncStrctrVariantExact;
+	        } else  {
+	            this.moleclrSqncStrctrVariantExact = this.moleclrSqncStrctrVariantExact+ "," +moleclrSqncStrctrVariantExact;
+	        }
+        }
+    }
+    
     
     
     public String getMoleclrSqncStrctrVariantInnerEnd() {
@@ -996,6 +2214,20 @@ public class MolecularSequence  implements java.io.Serializable {
     
     public void setMoleclrSqncStrctrVariantInnerEnd(String moleclrSqncStrctrVariantInnerEnd) {
         this.moleclrSqncStrctrVariantInnerEnd = moleclrSqncStrctrVariantInnerEnd;
+    }
+    
+    public void addMoleclrSqncStrctrVariantInnerEnd(String moleclrSqncStrctrVariantInnerEnd) {
+    	if( moleclrSqncStrctrVariantInnerEnd != null ) {
+	    	if( this.moleclrSqncStrctrVariantInnerEnd == null ) {
+	        	this.moleclrSqncStrctrVariantInnerEnd = moleclrSqncStrctrVariantInnerEnd;
+	        } else if(this.moleclrSqncStrctrVariantInnerEnd.substring(this.moleclrSqncStrctrVariantInnerEnd.length() - 1).equals("]") & moleclrSqncStrctrVariantInnerEnd.equals("[")) {
+	        	this.moleclrSqncStrctrVariantInnerEnd = this.moleclrSqncStrctrVariantInnerEnd+ "," + moleclrSqncStrctrVariantInnerEnd;
+	        } else if(moleclrSqncStrctrVariantInnerEnd.equals("[") | moleclrSqncStrctrVariantInnerEnd.equals("]") | this.moleclrSqncStrctrVariantInnerEnd.substring(this.moleclrSqncStrctrVariantInnerEnd.length() - 1).equals("[")) {
+	        	this.moleclrSqncStrctrVariantInnerEnd = this.moleclrSqncStrctrVariantInnerEnd+moleclrSqncStrctrVariantInnerEnd;
+	        } else  {
+	            this.moleclrSqncStrctrVariantInnerEnd = this.moleclrSqncStrctrVariantInnerEnd+ "," +moleclrSqncStrctrVariantInnerEnd;
+	        }
+        }
     }
     
     
@@ -1008,6 +2240,20 @@ public class MolecularSequence  implements java.io.Serializable {
         this.moleclrSqncStrctrVariantInnerStrt = moleclrSqncStrctrVariantInnerStrt;
     }
     
+    public void addMoleclrSqncStrctrVariantInnerStrt(String moleclrSqncStrctrVariantInnerStrt) {
+    	if( moleclrSqncStrctrVariantInnerStrt != null ) {
+	    	if( this.moleclrSqncStrctrVariantInnerStrt == null ) {
+	        	this.moleclrSqncStrctrVariantInnerStrt = moleclrSqncStrctrVariantInnerStrt;
+	        } else if(this.moleclrSqncStrctrVariantInnerStrt.substring(this.moleclrSqncStrctrVariantInnerStrt.length() - 1).equals("]") & moleclrSqncStrctrVariantInnerStrt.equals("[")) {
+	        	this.moleclrSqncStrctrVariantInnerStrt = this.moleclrSqncStrctrVariantInnerStrt+ "," + moleclrSqncStrctrVariantInnerStrt;
+	        } else if(moleclrSqncStrctrVariantInnerStrt.equals("[") | moleclrSqncStrctrVariantInnerStrt.equals("]") | this.moleclrSqncStrctrVariantInnerStrt.substring(this.moleclrSqncStrctrVariantInnerStrt.length() - 1).equals("[")) {
+	        	this.moleclrSqncStrctrVariantInnerStrt = this.moleclrSqncStrctrVariantInnerStrt+moleclrSqncStrctrVariantInnerStrt;
+	        } else  {
+	            this.moleclrSqncStrctrVariantInnerStrt = this.moleclrSqncStrctrVariantInnerStrt+ "," +moleclrSqncStrctrVariantInnerStrt;
+	        }
+        }
+    }
+    
     
     
     public String getMoleclrSqncStrctrVariantLength() {
@@ -1016,6 +2262,20 @@ public class MolecularSequence  implements java.io.Serializable {
     
     public void setMoleclrSqncStrctrVariantLength(String moleclrSqncStrctrVariantLength) {
         this.moleclrSqncStrctrVariantLength = moleclrSqncStrctrVariantLength;
+    }
+    
+    public void addMoleclrSqncStrctrVariantLength(String moleclrSqncStrctrVariantLength) {
+    	if( moleclrSqncStrctrVariantLength != null ) {
+	    	if( this.moleclrSqncStrctrVariantLength == null ) {
+	        	this.moleclrSqncStrctrVariantLength = moleclrSqncStrctrVariantLength;
+	        } else if(this.moleclrSqncStrctrVariantLength.substring(this.moleclrSqncStrctrVariantLength.length() - 1).equals("]") & moleclrSqncStrctrVariantLength.equals("[")) {
+	        	this.moleclrSqncStrctrVariantLength = this.moleclrSqncStrctrVariantLength+ "," + moleclrSqncStrctrVariantLength;
+	        } else if(moleclrSqncStrctrVariantLength.equals("[") | moleclrSqncStrctrVariantLength.equals("]") | this.moleclrSqncStrctrVariantLength.substring(this.moleclrSqncStrctrVariantLength.length() - 1).equals("[")) {
+	        	this.moleclrSqncStrctrVariantLength = this.moleclrSqncStrctrVariantLength+moleclrSqncStrctrVariantLength;
+	        } else  {
+	            this.moleclrSqncStrctrVariantLength = this.moleclrSqncStrctrVariantLength+ "," +moleclrSqncStrctrVariantLength;
+	        }
+        }
     }
     
     
@@ -1028,6 +2288,20 @@ public class MolecularSequence  implements java.io.Serializable {
         this.moleclrSqncStrctrVariantOuterEnd = moleclrSqncStrctrVariantOuterEnd;
     }
     
+    public void addMoleclrSqncStrctrVariantOuterEnd(String moleclrSqncStrctrVariantOuterEnd) {
+    	if( moleclrSqncStrctrVariantOuterEnd != null ) {
+	    	if( this.moleclrSqncStrctrVariantOuterEnd == null ) {
+	        	this.moleclrSqncStrctrVariantOuterEnd = moleclrSqncStrctrVariantOuterEnd;
+	        } else if(this.moleclrSqncStrctrVariantOuterEnd.substring(this.moleclrSqncStrctrVariantOuterEnd.length() - 1).equals("]") & moleclrSqncStrctrVariantOuterEnd.equals("[")) {
+	        	this.moleclrSqncStrctrVariantOuterEnd = this.moleclrSqncStrctrVariantOuterEnd+ "," + moleclrSqncStrctrVariantOuterEnd;
+	        } else if(moleclrSqncStrctrVariantOuterEnd.equals("[") | moleclrSqncStrctrVariantOuterEnd.equals("]") | this.moleclrSqncStrctrVariantOuterEnd.substring(this.moleclrSqncStrctrVariantOuterEnd.length() - 1).equals("[")) {
+	        	this.moleclrSqncStrctrVariantOuterEnd = this.moleclrSqncStrctrVariantOuterEnd+moleclrSqncStrctrVariantOuterEnd;
+	        } else  {
+	            this.moleclrSqncStrctrVariantOuterEnd = this.moleclrSqncStrctrVariantOuterEnd+ "," +moleclrSqncStrctrVariantOuterEnd;
+	        }
+        }
+    }
+    
     
     
     public String getMoleclrSqncStrctrVariantOuterStrt() {
@@ -1036,6 +2310,20 @@ public class MolecularSequence  implements java.io.Serializable {
     
     public void setMoleclrSqncStrctrVariantOuterStrt(String moleclrSqncStrctrVariantOuterStrt) {
         this.moleclrSqncStrctrVariantOuterStrt = moleclrSqncStrctrVariantOuterStrt;
+    }
+    
+    public void addMoleclrSqncStrctrVariantOuterStrt(String moleclrSqncStrctrVariantOuterStrt) {
+    	if( moleclrSqncStrctrVariantOuterStrt != null ) {
+	    	if( this.moleclrSqncStrctrVariantOuterStrt == null ) {
+	        	this.moleclrSqncStrctrVariantOuterStrt = moleclrSqncStrctrVariantOuterStrt;
+	        } else if(this.moleclrSqncStrctrVariantOuterStrt.substring(this.moleclrSqncStrctrVariantOuterStrt.length() - 1).equals("]") & moleclrSqncStrctrVariantOuterStrt.equals("[")) {
+	        	this.moleclrSqncStrctrVariantOuterStrt = this.moleclrSqncStrctrVariantOuterStrt+ "," + moleclrSqncStrctrVariantOuterStrt;
+	        } else if(moleclrSqncStrctrVariantOuterStrt.equals("[") | moleclrSqncStrctrVariantOuterStrt.equals("]") | this.moleclrSqncStrctrVariantOuterStrt.substring(this.moleclrSqncStrctrVariantOuterStrt.length() - 1).equals("[")) {
+	        	this.moleclrSqncStrctrVariantOuterStrt = this.moleclrSqncStrctrVariantOuterStrt+moleclrSqncStrctrVariantOuterStrt;
+	        } else  {
+	            this.moleclrSqncStrctrVariantOuterStrt = this.moleclrSqncStrctrVariantOuterStrt+ "," +moleclrSqncStrctrVariantOuterStrt;
+	        }
+        }
     }
     
     
@@ -1048,6 +2336,20 @@ public class MolecularSequence  implements java.io.Serializable {
         this.moleclrSqncStrctrVariantVariantTypCdgCd = moleclrSqncStrctrVariantVariantTypCdgCd;
     }
     
+    public void addMoleclrSqncStrctrVariantVariantTypCdgCd(String moleclrSqncStrctrVariantVariantTypCdgCd) {
+    	if( moleclrSqncStrctrVariantVariantTypCdgCd != null ) {
+	    	if( this.moleclrSqncStrctrVariantVariantTypCdgCd == null ) {
+	        	this.moleclrSqncStrctrVariantVariantTypCdgCd = moleclrSqncStrctrVariantVariantTypCdgCd;
+	        } else if(this.moleclrSqncStrctrVariantVariantTypCdgCd.substring(this.moleclrSqncStrctrVariantVariantTypCdgCd.length() - 1).equals("]") & moleclrSqncStrctrVariantVariantTypCdgCd.equals("[")) {
+	        	this.moleclrSqncStrctrVariantVariantTypCdgCd = this.moleclrSqncStrctrVariantVariantTypCdgCd+ "," + moleclrSqncStrctrVariantVariantTypCdgCd;
+	        } else if(moleclrSqncStrctrVariantVariantTypCdgCd.equals("[") | moleclrSqncStrctrVariantVariantTypCdgCd.equals("]") | this.moleclrSqncStrctrVariantVariantTypCdgCd.substring(this.moleclrSqncStrctrVariantVariantTypCdgCd.length() - 1).equals("[")) {
+	        	this.moleclrSqncStrctrVariantVariantTypCdgCd = this.moleclrSqncStrctrVariantVariantTypCdgCd+moleclrSqncStrctrVariantVariantTypCdgCd;
+	        } else  {
+	            this.moleclrSqncStrctrVariantVariantTypCdgCd = this.moleclrSqncStrctrVariantVariantTypCdgCd+ "," +moleclrSqncStrctrVariantVariantTypCdgCd;
+	        }
+        }
+    }
+    
     
     
     public String getMoleclrSqncStrctrVariantVariantTypCdgDsply() {
@@ -1056,6 +2358,20 @@ public class MolecularSequence  implements java.io.Serializable {
     
     public void setMoleclrSqncStrctrVariantVariantTypCdgDsply(String moleclrSqncStrctrVariantVariantTypCdgDsply) {
         this.moleclrSqncStrctrVariantVariantTypCdgDsply = moleclrSqncStrctrVariantVariantTypCdgDsply;
+    }
+    
+    public void addMoleclrSqncStrctrVariantVariantTypCdgDsply(String moleclrSqncStrctrVariantVariantTypCdgDsply) {
+    	if( moleclrSqncStrctrVariantVariantTypCdgDsply != null ) {
+	    	if( this.moleclrSqncStrctrVariantVariantTypCdgDsply == null ) {
+	        	this.moleclrSqncStrctrVariantVariantTypCdgDsply = moleclrSqncStrctrVariantVariantTypCdgDsply;
+	        } else if(this.moleclrSqncStrctrVariantVariantTypCdgDsply.substring(this.moleclrSqncStrctrVariantVariantTypCdgDsply.length() - 1).equals("]") & moleclrSqncStrctrVariantVariantTypCdgDsply.equals("[")) {
+	        	this.moleclrSqncStrctrVariantVariantTypCdgDsply = this.moleclrSqncStrctrVariantVariantTypCdgDsply+ "," + moleclrSqncStrctrVariantVariantTypCdgDsply;
+	        } else if(moleclrSqncStrctrVariantVariantTypCdgDsply.equals("[") | moleclrSqncStrctrVariantVariantTypCdgDsply.equals("]") | this.moleclrSqncStrctrVariantVariantTypCdgDsply.substring(this.moleclrSqncStrctrVariantVariantTypCdgDsply.length() - 1).equals("[")) {
+	        	this.moleclrSqncStrctrVariantVariantTypCdgDsply = this.moleclrSqncStrctrVariantVariantTypCdgDsply+moleclrSqncStrctrVariantVariantTypCdgDsply;
+	        } else  {
+	            this.moleclrSqncStrctrVariantVariantTypCdgDsply = this.moleclrSqncStrctrVariantVariantTypCdgDsply+ "," +moleclrSqncStrctrVariantVariantTypCdgDsply;
+	        }
+        }
     }
     
     
@@ -1068,6 +2384,20 @@ public class MolecularSequence  implements java.io.Serializable {
         this.moleclrSqncStrctrVariantVariantTypCdgSys = moleclrSqncStrctrVariantVariantTypCdgSys;
     }
     
+    public void addMoleclrSqncStrctrVariantVariantTypCdgSys(String moleclrSqncStrctrVariantVariantTypCdgSys) {
+    	if( moleclrSqncStrctrVariantVariantTypCdgSys != null ) {
+	    	if( this.moleclrSqncStrctrVariantVariantTypCdgSys == null ) {
+	        	this.moleclrSqncStrctrVariantVariantTypCdgSys = moleclrSqncStrctrVariantVariantTypCdgSys;
+	        } else if(this.moleclrSqncStrctrVariantVariantTypCdgSys.substring(this.moleclrSqncStrctrVariantVariantTypCdgSys.length() - 1).equals("]") & moleclrSqncStrctrVariantVariantTypCdgSys.equals("[")) {
+	        	this.moleclrSqncStrctrVariantVariantTypCdgSys = this.moleclrSqncStrctrVariantVariantTypCdgSys+ "," + moleclrSqncStrctrVariantVariantTypCdgSys;
+	        } else if(moleclrSqncStrctrVariantVariantTypCdgSys.equals("[") | moleclrSqncStrctrVariantVariantTypCdgSys.equals("]") | this.moleclrSqncStrctrVariantVariantTypCdgSys.substring(this.moleclrSqncStrctrVariantVariantTypCdgSys.length() - 1).equals("[")) {
+	        	this.moleclrSqncStrctrVariantVariantTypCdgSys = this.moleclrSqncStrctrVariantVariantTypCdgSys+moleclrSqncStrctrVariantVariantTypCdgSys;
+	        } else  {
+	            this.moleclrSqncStrctrVariantVariantTypCdgSys = this.moleclrSqncStrctrVariantVariantTypCdgSys+ "," +moleclrSqncStrctrVariantVariantTypCdgSys;
+	        }
+        }
+    }
+    
     
     
     public String getMoleclrSqncStrctrVariantVariantTypCdgUsrSltd() {
@@ -1076,6 +2406,20 @@ public class MolecularSequence  implements java.io.Serializable {
     
     public void setMoleclrSqncStrctrVariantVariantTypCdgUsrSltd(String moleclrSqncStrctrVariantVariantTypCdgUsrSltd) {
         this.moleclrSqncStrctrVariantVariantTypCdgUsrSltd = moleclrSqncStrctrVariantVariantTypCdgUsrSltd;
+    }
+    
+    public void addMoleclrSqncStrctrVariantVariantTypCdgUsrSltd(String moleclrSqncStrctrVariantVariantTypCdgUsrSltd) {
+    	if( moleclrSqncStrctrVariantVariantTypCdgUsrSltd != null ) {
+	    	if( this.moleclrSqncStrctrVariantVariantTypCdgUsrSltd == null ) {
+	        	this.moleclrSqncStrctrVariantVariantTypCdgUsrSltd = moleclrSqncStrctrVariantVariantTypCdgUsrSltd;
+	        } else if(this.moleclrSqncStrctrVariantVariantTypCdgUsrSltd.substring(this.moleclrSqncStrctrVariantVariantTypCdgUsrSltd.length() - 1).equals("]") & moleclrSqncStrctrVariantVariantTypCdgUsrSltd.equals("[")) {
+	        	this.moleclrSqncStrctrVariantVariantTypCdgUsrSltd = this.moleclrSqncStrctrVariantVariantTypCdgUsrSltd+ "," + moleclrSqncStrctrVariantVariantTypCdgUsrSltd;
+	        } else if(moleclrSqncStrctrVariantVariantTypCdgUsrSltd.equals("[") | moleclrSqncStrctrVariantVariantTypCdgUsrSltd.equals("]") | this.moleclrSqncStrctrVariantVariantTypCdgUsrSltd.substring(this.moleclrSqncStrctrVariantVariantTypCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.moleclrSqncStrctrVariantVariantTypCdgUsrSltd = this.moleclrSqncStrctrVariantVariantTypCdgUsrSltd+moleclrSqncStrctrVariantVariantTypCdgUsrSltd;
+	        } else  {
+	            this.moleclrSqncStrctrVariantVariantTypCdgUsrSltd = this.moleclrSqncStrctrVariantVariantTypCdgUsrSltd+ "," +moleclrSqncStrctrVariantVariantTypCdgUsrSltd;
+	        }
+        }
     }
     
     
@@ -1088,6 +2432,20 @@ public class MolecularSequence  implements java.io.Serializable {
         this.moleclrSqncStrctrVariantVariantTypCdgVrsn = moleclrSqncStrctrVariantVariantTypCdgVrsn;
     }
     
+    public void addMoleclrSqncStrctrVariantVariantTypCdgVrsn(String moleclrSqncStrctrVariantVariantTypCdgVrsn) {
+    	if( moleclrSqncStrctrVariantVariantTypCdgVrsn != null ) {
+	    	if( this.moleclrSqncStrctrVariantVariantTypCdgVrsn == null ) {
+	        	this.moleclrSqncStrctrVariantVariantTypCdgVrsn = moleclrSqncStrctrVariantVariantTypCdgVrsn;
+	        } else if(this.moleclrSqncStrctrVariantVariantTypCdgVrsn.substring(this.moleclrSqncStrctrVariantVariantTypCdgVrsn.length() - 1).equals("]") & moleclrSqncStrctrVariantVariantTypCdgVrsn.equals("[")) {
+	        	this.moleclrSqncStrctrVariantVariantTypCdgVrsn = this.moleclrSqncStrctrVariantVariantTypCdgVrsn+ "," + moleclrSqncStrctrVariantVariantTypCdgVrsn;
+	        } else if(moleclrSqncStrctrVariantVariantTypCdgVrsn.equals("[") | moleclrSqncStrctrVariantVariantTypCdgVrsn.equals("]") | this.moleclrSqncStrctrVariantVariantTypCdgVrsn.substring(this.moleclrSqncStrctrVariantVariantTypCdgVrsn.length() - 1).equals("[")) {
+	        	this.moleclrSqncStrctrVariantVariantTypCdgVrsn = this.moleclrSqncStrctrVariantVariantTypCdgVrsn+moleclrSqncStrctrVariantVariantTypCdgVrsn;
+	        } else  {
+	            this.moleclrSqncStrctrVariantVariantTypCdgVrsn = this.moleclrSqncStrctrVariantVariantTypCdgVrsn+ "," +moleclrSqncStrctrVariantVariantTypCdgVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getMoleclrSqncStrctrVariantVariantTypTxt() {
@@ -1096,6 +2454,20 @@ public class MolecularSequence  implements java.io.Serializable {
     
     public void setMoleclrSqncStrctrVariantVariantTypTxt(String moleclrSqncStrctrVariantVariantTypTxt) {
         this.moleclrSqncStrctrVariantVariantTypTxt = moleclrSqncStrctrVariantVariantTypTxt;
+    }
+    
+    public void addMoleclrSqncStrctrVariantVariantTypTxt(String moleclrSqncStrctrVariantVariantTypTxt) {
+    	if( moleclrSqncStrctrVariantVariantTypTxt != null ) {
+	    	if( this.moleclrSqncStrctrVariantVariantTypTxt == null ) {
+	        	this.moleclrSqncStrctrVariantVariantTypTxt = moleclrSqncStrctrVariantVariantTypTxt;
+	        } else if(this.moleclrSqncStrctrVariantVariantTypTxt.substring(this.moleclrSqncStrctrVariantVariantTypTxt.length() - 1).equals("]") & moleclrSqncStrctrVariantVariantTypTxt.equals("[")) {
+	        	this.moleclrSqncStrctrVariantVariantTypTxt = this.moleclrSqncStrctrVariantVariantTypTxt+ "," + moleclrSqncStrctrVariantVariantTypTxt;
+	        } else if(moleclrSqncStrctrVariantVariantTypTxt.equals("[") | moleclrSqncStrctrVariantVariantTypTxt.equals("]") | this.moleclrSqncStrctrVariantVariantTypTxt.substring(this.moleclrSqncStrctrVariantVariantTypTxt.length() - 1).equals("[")) {
+	        	this.moleclrSqncStrctrVariantVariantTypTxt = this.moleclrSqncStrctrVariantVariantTypTxt+moleclrSqncStrctrVariantVariantTypTxt;
+	        } else  {
+	            this.moleclrSqncStrctrVariantVariantTypTxt = this.moleclrSqncStrctrVariantVariantTypTxt+ "," +moleclrSqncStrctrVariantVariantTypTxt;
+	        }
+        }
     }
     
     
@@ -1108,6 +2480,20 @@ public class MolecularSequence  implements java.io.Serializable {
         this.moleclrSqncTyp = moleclrSqncTyp;
     }
     
+    public void addMoleclrSqncTyp(String moleclrSqncTyp) {
+    	if( moleclrSqncTyp != null ) {
+	    	if( this.moleclrSqncTyp == null ) {
+	        	this.moleclrSqncTyp = moleclrSqncTyp;
+	        } else if(this.moleclrSqncTyp.substring(this.moleclrSqncTyp.length() - 1).equals("]") & moleclrSqncTyp.equals("[")) {
+	        	this.moleclrSqncTyp = this.moleclrSqncTyp+ "," + moleclrSqncTyp;
+	        } else if(moleclrSqncTyp.equals("[") | moleclrSqncTyp.equals("]") | this.moleclrSqncTyp.substring(this.moleclrSqncTyp.length() - 1).equals("[")) {
+	        	this.moleclrSqncTyp = this.moleclrSqncTyp+moleclrSqncTyp;
+	        } else  {
+	            this.moleclrSqncTyp = this.moleclrSqncTyp+ "," +moleclrSqncTyp;
+	        }
+        }
+    }
+    
     
     
     public String getMoleclrSqncVariantCigar() {
@@ -1116,6 +2502,20 @@ public class MolecularSequence  implements java.io.Serializable {
     
     public void setMoleclrSqncVariantCigar(String moleclrSqncVariantCigar) {
         this.moleclrSqncVariantCigar = moleclrSqncVariantCigar;
+    }
+    
+    public void addMoleclrSqncVariantCigar(String moleclrSqncVariantCigar) {
+    	if( moleclrSqncVariantCigar != null ) {
+	    	if( this.moleclrSqncVariantCigar == null ) {
+	        	this.moleclrSqncVariantCigar = moleclrSqncVariantCigar;
+	        } else if(this.moleclrSqncVariantCigar.substring(this.moleclrSqncVariantCigar.length() - 1).equals("]") & moleclrSqncVariantCigar.equals("[")) {
+	        	this.moleclrSqncVariantCigar = this.moleclrSqncVariantCigar+ "," + moleclrSqncVariantCigar;
+	        } else if(moleclrSqncVariantCigar.equals("[") | moleclrSqncVariantCigar.equals("]") | this.moleclrSqncVariantCigar.substring(this.moleclrSqncVariantCigar.length() - 1).equals("[")) {
+	        	this.moleclrSqncVariantCigar = this.moleclrSqncVariantCigar+moleclrSqncVariantCigar;
+	        } else  {
+	            this.moleclrSqncVariantCigar = this.moleclrSqncVariantCigar+ "," +moleclrSqncVariantCigar;
+	        }
+        }
     }
     
     
@@ -1128,6 +2528,20 @@ public class MolecularSequence  implements java.io.Serializable {
         this.moleclrSqncVariantEnd = moleclrSqncVariantEnd;
     }
     
+    public void addMoleclrSqncVariantEnd(String moleclrSqncVariantEnd) {
+    	if( moleclrSqncVariantEnd != null ) {
+	    	if( this.moleclrSqncVariantEnd == null ) {
+	        	this.moleclrSqncVariantEnd = moleclrSqncVariantEnd;
+	        } else if(this.moleclrSqncVariantEnd.substring(this.moleclrSqncVariantEnd.length() - 1).equals("]") & moleclrSqncVariantEnd.equals("[")) {
+	        	this.moleclrSqncVariantEnd = this.moleclrSqncVariantEnd+ "," + moleclrSqncVariantEnd;
+	        } else if(moleclrSqncVariantEnd.equals("[") | moleclrSqncVariantEnd.equals("]") | this.moleclrSqncVariantEnd.substring(this.moleclrSqncVariantEnd.length() - 1).equals("[")) {
+	        	this.moleclrSqncVariantEnd = this.moleclrSqncVariantEnd+moleclrSqncVariantEnd;
+	        } else  {
+	            this.moleclrSqncVariantEnd = this.moleclrSqncVariantEnd+ "," +moleclrSqncVariantEnd;
+	        }
+        }
+    }
+    
     
     
     public String getMoleclrSqncVariantObservedAllele() {
@@ -1136,6 +2550,20 @@ public class MolecularSequence  implements java.io.Serializable {
     
     public void setMoleclrSqncVariantObservedAllele(String moleclrSqncVariantObservedAllele) {
         this.moleclrSqncVariantObservedAllele = moleclrSqncVariantObservedAllele;
+    }
+    
+    public void addMoleclrSqncVariantObservedAllele(String moleclrSqncVariantObservedAllele) {
+    	if( moleclrSqncVariantObservedAllele != null ) {
+	    	if( this.moleclrSqncVariantObservedAllele == null ) {
+	        	this.moleclrSqncVariantObservedAllele = moleclrSqncVariantObservedAllele;
+	        } else if(this.moleclrSqncVariantObservedAllele.substring(this.moleclrSqncVariantObservedAllele.length() - 1).equals("]") & moleclrSqncVariantObservedAllele.equals("[")) {
+	        	this.moleclrSqncVariantObservedAllele = this.moleclrSqncVariantObservedAllele+ "," + moleclrSqncVariantObservedAllele;
+	        } else if(moleclrSqncVariantObservedAllele.equals("[") | moleclrSqncVariantObservedAllele.equals("]") | this.moleclrSqncVariantObservedAllele.substring(this.moleclrSqncVariantObservedAllele.length() - 1).equals("[")) {
+	        	this.moleclrSqncVariantObservedAllele = this.moleclrSqncVariantObservedAllele+moleclrSqncVariantObservedAllele;
+	        } else  {
+	            this.moleclrSqncVariantObservedAllele = this.moleclrSqncVariantObservedAllele+ "," +moleclrSqncVariantObservedAllele;
+	        }
+        }
     }
     
     
@@ -1148,6 +2576,20 @@ public class MolecularSequence  implements java.io.Serializable {
         this.moleclrSqncVariantRfrncAllele = moleclrSqncVariantRfrncAllele;
     }
     
+    public void addMoleclrSqncVariantRfrncAllele(String moleclrSqncVariantRfrncAllele) {
+    	if( moleclrSqncVariantRfrncAllele != null ) {
+	    	if( this.moleclrSqncVariantRfrncAllele == null ) {
+	        	this.moleclrSqncVariantRfrncAllele = moleclrSqncVariantRfrncAllele;
+	        } else if(this.moleclrSqncVariantRfrncAllele.substring(this.moleclrSqncVariantRfrncAllele.length() - 1).equals("]") & moleclrSqncVariantRfrncAllele.equals("[")) {
+	        	this.moleclrSqncVariantRfrncAllele = this.moleclrSqncVariantRfrncAllele+ "," + moleclrSqncVariantRfrncAllele;
+	        } else if(moleclrSqncVariantRfrncAllele.equals("[") | moleclrSqncVariantRfrncAllele.equals("]") | this.moleclrSqncVariantRfrncAllele.substring(this.moleclrSqncVariantRfrncAllele.length() - 1).equals("[")) {
+	        	this.moleclrSqncVariantRfrncAllele = this.moleclrSqncVariantRfrncAllele+moleclrSqncVariantRfrncAllele;
+	        } else  {
+	            this.moleclrSqncVariantRfrncAllele = this.moleclrSqncVariantRfrncAllele+ "," +moleclrSqncVariantRfrncAllele;
+	        }
+        }
+    }
+    
     
     
     public String getMoleclrSqncVariantStrt() {
@@ -1158,6 +2600,20 @@ public class MolecularSequence  implements java.io.Serializable {
         this.moleclrSqncVariantStrt = moleclrSqncVariantStrt;
     }
     
+    public void addMoleclrSqncVariantStrt(String moleclrSqncVariantStrt) {
+    	if( moleclrSqncVariantStrt != null ) {
+	    	if( this.moleclrSqncVariantStrt == null ) {
+	        	this.moleclrSqncVariantStrt = moleclrSqncVariantStrt;
+	        } else if(this.moleclrSqncVariantStrt.substring(this.moleclrSqncVariantStrt.length() - 1).equals("]") & moleclrSqncVariantStrt.equals("[")) {
+	        	this.moleclrSqncVariantStrt = this.moleclrSqncVariantStrt+ "," + moleclrSqncVariantStrt;
+	        } else if(moleclrSqncVariantStrt.equals("[") | moleclrSqncVariantStrt.equals("]") | this.moleclrSqncVariantStrt.substring(this.moleclrSqncVariantStrt.length() - 1).equals("[")) {
+	        	this.moleclrSqncVariantStrt = this.moleclrSqncVariantStrt+moleclrSqncVariantStrt;
+	        } else  {
+	            this.moleclrSqncVariantStrt = this.moleclrSqncVariantStrt+ "," +moleclrSqncVariantStrt;
+	        }
+        }
+    }
+    
     
     
     public String getMoleclrSqncVariantVariantPointer() {
@@ -1166,6 +2622,20 @@ public class MolecularSequence  implements java.io.Serializable {
     
     public void setMoleclrSqncVariantVariantPointer(String moleclrSqncVariantVariantPointer) {
         this.moleclrSqncVariantVariantPointer = moleclrSqncVariantVariantPointer;
+    }
+    
+    public void addMoleclrSqncVariantVariantPointer(String moleclrSqncVariantVariantPointer) {
+    	if( moleclrSqncVariantVariantPointer != null ) {
+	    	if( this.moleclrSqncVariantVariantPointer == null ) {
+	        	this.moleclrSqncVariantVariantPointer = moleclrSqncVariantVariantPointer;
+	        } else if(this.moleclrSqncVariantVariantPointer.substring(this.moleclrSqncVariantVariantPointer.length() - 1).equals("]") & moleclrSqncVariantVariantPointer.equals("[")) {
+	        	this.moleclrSqncVariantVariantPointer = this.moleclrSqncVariantVariantPointer+ "," + moleclrSqncVariantVariantPointer;
+	        } else if(moleclrSqncVariantVariantPointer.equals("[") | moleclrSqncVariantVariantPointer.equals("]") | this.moleclrSqncVariantVariantPointer.substring(this.moleclrSqncVariantVariantPointer.length() - 1).equals("[")) {
+	        	this.moleclrSqncVariantVariantPointer = this.moleclrSqncVariantVariantPointer+moleclrSqncVariantVariantPointer;
+	        } else  {
+	            this.moleclrSqncVariantVariantPointer = this.moleclrSqncVariantVariantPointer+ "," +moleclrSqncVariantVariantPointer;
+	        }
+        }
     }
     
     

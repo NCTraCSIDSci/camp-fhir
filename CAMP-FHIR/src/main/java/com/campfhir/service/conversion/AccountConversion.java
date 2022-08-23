@@ -10,185 +10,320 @@ public class AccountConversion
 		/******************** id ********************************************************************************/
 		account.setId(a.getId());
 
-		/******************** accountcoverage ********************************************************************************/
-		org.hl7.fhir.r4.model.Account.CoverageComponent accountcoverage =  new org.hl7.fhir.r4.model.Account.CoverageComponent();
-		account.addCoverage(accountcoverage);
-
 		/******************** Account_Cvg_Cvg ********************************************************************************/
-		if(a.getAccountCvgCvg() != null) {
-			accountcoverage.setCoverage( new org.hl7.fhir.r4.model.Reference(a.getAccountCvgCvg()));
+		if(a.getAccountCvgCvg() != null ) {
+
+			String[] arrayi0 = a.getAccountCvgCvg().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(account.getCoverage().size() < i0+1) { account.addCoverage(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {account.getCoverage().get(i0).setCoverage(new org.hl7.fhir.r4.model.Reference(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** Account_Cvg_Priority ********************************************************************************/
-		if(a.getAccountCvgPriority() != null) {
-			accountcoverage.setPriority(Integer.parseInt(a.getAccountCvgPriority()));
+		if(a.getAccountCvgPriority() != null ) {
+
+			String[] arrayi0 = a.getAccountCvgPriority().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(account.getCoverage().size() < i0+1) { account.addCoverage(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {account.getCoverage().get(i0).setPriority(Integer.parseInt(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** Account_Dscrptn ********************************************************************************/
-		if(a.getAccountDscrptn() != null) {
-			account.setDescription(a.getAccountDscrptn());
-		}
-		/******************** accountguarantor ********************************************************************************/
-		org.hl7.fhir.r4.model.Account.GuarantorComponent accountguarantor =  new org.hl7.fhir.r4.model.Account.GuarantorComponent();
-		account.addGuarantor(accountguarantor);
+		if(a.getAccountDscrptn() != null ) {
 
+			if(a.getAccountDscrptn().replace("[","").replace("]","").equals("NULL") | a.getAccountDscrptn()==null) {} else {
+			account.setDescription(a.getAccountDscrptn().replace("[","").replace("]","").replace("\"",""));
+			}
+		}
 		/******************** Account_Guarantor_OnHold ********************************************************************************/
-		if(a.getAccountGuarantorOnHold() != null) {
-			accountguarantor.setOnHold(Boolean.parseBoolean(a.getAccountGuarantorOnHold()));
+		if(a.getAccountGuarantorOnHold() != null ) {
+
+			String[] arrayi0 = a.getAccountGuarantorOnHold().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(account.getGuarantor().size() < i0+1) { account.addGuarantor(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {account.getGuarantor().get(i0).setOnHold(Boolean.parseBoolean(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** Account_Guarantor_Party ********************************************************************************/
-		if(a.getAccountGuarantorParty() != null) {
-			accountguarantor.setParty( new org.hl7.fhir.r4.model.Reference(a.getAccountGuarantorParty()));
-		}
-		/******************** accountguarantorperiod ********************************************************************************/
-		org.hl7.fhir.r4.model.Period accountguarantorperiod =  new org.hl7.fhir.r4.model.Period();
-		accountguarantor.setPeriod(accountguarantorperiod);
+		if(a.getAccountGuarantorParty() != null ) {
 
+			String[] arrayi0 = a.getAccountGuarantorParty().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(account.getGuarantor().size() < i0+1) { account.addGuarantor(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {account.getGuarantor().get(i0).setParty(new org.hl7.fhir.r4.model.Reference(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** Account_Guarantor_Prd_End ********************************************************************************/
-		if(a.getAccountGuarantorPrdEnd() != null) {
-			java.text.SimpleDateFormat Account_Guarantor_Prd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date Account_Guarantor_Prd_Enddate = Account_Guarantor_Prd_Endsdf.parse(a.getAccountGuarantorPrdEnd());
-			accountguarantorperiod.setEnd(Account_Guarantor_Prd_Enddate);
+		if(a.getAccountGuarantorPrdEnd() != null ) {
+
+			String[] arrayi0 = a.getAccountGuarantorPrdEnd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(account.getGuarantor().size() < i0+1) { account.addGuarantor(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {account.getGuarantor().get(i0).getPeriod().setEnd(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** Account_Guarantor_Prd_Strt ********************************************************************************/
-		if(a.getAccountGuarantorPrdStrt() != null) {
-			java.text.SimpleDateFormat Account_Guarantor_Prd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date Account_Guarantor_Prd_Strtdate = Account_Guarantor_Prd_Strtsdf.parse(a.getAccountGuarantorPrdStrt());
-			accountguarantorperiod.setStart(Account_Guarantor_Prd_Strtdate);
-		}
-		/******************** accountidentifier ********************************************************************************/
-		org.hl7.fhir.r4.model.Identifier accountidentifier =  new org.hl7.fhir.r4.model.Identifier();
-		account.addIdentifier(accountidentifier);
+		if(a.getAccountGuarantorPrdStrt() != null ) {
 
+			String[] arrayi0 = a.getAccountGuarantorPrdStrt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(account.getGuarantor().size() < i0+1) { account.addGuarantor(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {account.getGuarantor().get(i0).getPeriod().setStart(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** Account_Id_Assigner ********************************************************************************/
-		if(a.getAccountIdAssigner() != null) {
-			accountidentifier.setAssigner( new org.hl7.fhir.r4.model.Reference(a.getAccountIdAssigner()));
-		}
-		/******************** accountidentifierperiod ********************************************************************************/
-		org.hl7.fhir.r4.model.Period accountidentifierperiod =  new org.hl7.fhir.r4.model.Period();
-		accountidentifier.setPeriod(accountidentifierperiod);
+		if(a.getAccountIdAssigner() != null ) {
 
+			String[] arrayi0 = a.getAccountIdAssigner().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(account.getIdentifier().size() < i0+1) { account.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {account.getIdentifier().get(i0).setAssigner(new org.hl7.fhir.r4.model.Reference(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** Account_Id_Prd_End ********************************************************************************/
-		if(a.getAccountIdPrdEnd() != null) {
-			java.text.SimpleDateFormat Account_Id_Prd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date Account_Id_Prd_Enddate = Account_Id_Prd_Endsdf.parse(a.getAccountIdPrdEnd());
-			accountidentifierperiod.setEnd(Account_Id_Prd_Enddate);
+		if(a.getAccountIdPrdEnd() != null ) {
+
+			String[] arrayi0 = a.getAccountIdPrdEnd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(account.getIdentifier().size() < i0+1) { account.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {account.getIdentifier().get(i0).getPeriod().setEnd(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** Account_Id_Prd_Strt ********************************************************************************/
-		if(a.getAccountIdPrdStrt() != null) {
-			java.text.SimpleDateFormat Account_Id_Prd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date Account_Id_Prd_Strtdate = Account_Id_Prd_Strtsdf.parse(a.getAccountIdPrdStrt());
-			accountidentifierperiod.setStart(Account_Id_Prd_Strtdate);
+		if(a.getAccountIdPrdStrt() != null ) {
+
+			String[] arrayi0 = a.getAccountIdPrdStrt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(account.getIdentifier().size() < i0+1) { account.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {account.getIdentifier().get(i0).getPeriod().setStart(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** Account_Id_Sys ********************************************************************************/
-		if(a.getAccountIdSys() != null) {
-			accountidentifier.setSystem(a.getAccountIdSys());
+		if(a.getAccountIdSys() != null ) {
+
+			String[] arrayi0 = a.getAccountIdSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(account.getIdentifier().size() < i0+1) { account.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {account.getIdentifier().get(i0).setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
-		/******************** accountidentifiertype ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept accountidentifiertype =  new org.hl7.fhir.r4.model.CodeableConcept();
-		accountidentifier.setType(accountidentifiertype);
-
-		/******************** accountidentifiertypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding accountidentifiertypecoding =  new org.hl7.fhir.r4.model.Coding();
-		accountidentifiertype.addCoding(accountidentifiertypecoding);
-
 		/******************** Account_Id_Typ_Cdg_Cd ********************************************************************************/
-		if(a.getAccountIdTypCdgCd() != null) {
-			accountidentifiertypecoding.setCode(a.getAccountIdTypCdgCd());
+		if(a.getAccountIdTypCdgCd() != null ) {
+
+			String[] arrayi0 = a.getAccountIdTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(account.getIdentifier().size() < i0+1) { account.addIdentifier(); }
+				String[] arrayi1 = a.getAccountIdTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(account.getIdentifier().get(i0).getType().getCoding().size() < i1+1) { account.getIdentifier().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {account.getIdentifier().get(i0).getType().getCoding().get(i1).setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** Account_Id_Typ_Cdg_Dsply ********************************************************************************/
-		if(a.getAccountIdTypCdgDsply() != null) {
-			accountidentifiertypecoding.setDisplay(a.getAccountIdTypCdgDsply());
+		if(a.getAccountIdTypCdgDsply() != null ) {
+
+			String[] arrayi0 = a.getAccountIdTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(account.getIdentifier().size() < i0+1) { account.addIdentifier(); }
+				String[] arrayi1 = a.getAccountIdTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(account.getIdentifier().get(i0).getType().getCoding().size() < i1+1) { account.getIdentifier().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {account.getIdentifier().get(i0).getType().getCoding().get(i1).setDisplay(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** Account_Id_Typ_Cdg_Sys ********************************************************************************/
-		if(a.getAccountIdTypCdgSys() != null) {
-			accountidentifiertypecoding.setSystem(a.getAccountIdTypCdgSys());
+		if(a.getAccountIdTypCdgSys() != null ) {
+
+			String[] arrayi0 = a.getAccountIdTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(account.getIdentifier().size() < i0+1) { account.addIdentifier(); }
+				String[] arrayi1 = a.getAccountIdTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(account.getIdentifier().get(i0).getType().getCoding().size() < i1+1) { account.getIdentifier().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {account.getIdentifier().get(i0).getType().getCoding().get(i1).setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** Account_Id_Typ_Cdg_UsrSltd ********************************************************************************/
-		if(a.getAccountIdTypCdgUsrSltd() != null) {
-			accountidentifiertypecoding.setUserSelected(Boolean.parseBoolean(a.getAccountIdTypCdgUsrSltd()));
+		if(a.getAccountIdTypCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = a.getAccountIdTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(account.getIdentifier().size() < i0+1) { account.addIdentifier(); }
+				String[] arrayi1 = a.getAccountIdTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(account.getIdentifier().get(i0).getType().getCoding().size() < i1+1) { account.getIdentifier().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {account.getIdentifier().get(i0).getType().getCoding().get(i1).setUserSelected(Boolean.parseBoolean(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
 		}
 		/******************** Account_Id_Typ_Cdg_Vrsn ********************************************************************************/
-		if(a.getAccountIdTypCdgVrsn() != null) {
-			accountidentifiertypecoding.setVersion(a.getAccountIdTypCdgVrsn());
+		if(a.getAccountIdTypCdgVrsn() != null ) {
+
+			String[] arrayi0 = a.getAccountIdTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(account.getIdentifier().size() < i0+1) { account.addIdentifier(); }
+				String[] arrayi1 = a.getAccountIdTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(account.getIdentifier().get(i0).getType().getCoding().size() < i1+1) { account.getIdentifier().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {account.getIdentifier().get(i0).getType().getCoding().get(i1).setVersion(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** Account_Id_Typ_Txt ********************************************************************************/
-		if(a.getAccountIdTypTxt() != null) {
-			accountidentifiertype.setText(a.getAccountIdTypTxt());
-		}
-		/******************** accountidentifieruse ********************************************************************************/
-		org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory accountidentifieruse =  new org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory();
-		accountidentifier.setUse(accountidentifieruse.fromCode(a.getAccountIdUse()));
+		if(a.getAccountIdTypTxt() != null ) {
 
+			String[] arrayi0 = a.getAccountIdTypTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(account.getIdentifier().size() < i0+1) { account.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {account.getIdentifier().get(i0).getType().setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
+		}
+		/******************** Account_Id_Use ********************************************************************************/
+		if(a.getAccountIdUse() != null ) {
+
+			String[] arrayi0 = a.getAccountIdUse().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(account.getIdentifier().size() < i0+1) { account.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {account.getIdentifier().get(i0).setUse(new org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory().fromCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** Account_Id_Vl ********************************************************************************/
-		if(a.getAccountIdVl() != null) {
-			accountidentifier.setValue(a.getAccountIdVl());
+		if(a.getAccountIdVl() != null ) {
+
+			String[] arrayi0 = a.getAccountIdVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(account.getIdentifier().size() < i0+1) { account.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {account.getIdentifier().get(i0).setValue(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** Account_Nm ********************************************************************************/
-		if(a.getAccountNm() != null) {
-			account.setName(a.getAccountNm());
+		if(a.getAccountNm() != null ) {
+
+			if(a.getAccountNm().replace("[","").replace("]","").equals("NULL") | a.getAccountNm()==null) {} else {
+			account.setName(a.getAccountNm().replace("[","").replace("]","").replace("\"",""));
+			}
 		}
 		/******************** Account_Owner ********************************************************************************/
-		if(a.getAccountOwner() != null) {
-			account.setOwner( new org.hl7.fhir.r4.model.Reference(a.getAccountOwner()));
+		if(a.getAccountOwner() != null ) {
+
+			if(a.getAccountOwner().replace("[","").replace("]","").equals("NULL") | a.getAccountOwner()==null) {} else {
+			account.setOwner(new org.hl7.fhir.r4.model.Reference(a.getAccountOwner().replace("[","").replace("]","").replace("\"","")));
+			}
 		}
 		/******************** Account_PartOf ********************************************************************************/
-		if(a.getAccountPartOf() != null) {
-			account.setPartOf( new org.hl7.fhir.r4.model.Reference(a.getAccountPartOf()));
-		}
-		/******************** accountserviceperiod ********************************************************************************/
-		org.hl7.fhir.r4.model.Period accountserviceperiod =  new org.hl7.fhir.r4.model.Period();
-		account.setServicePeriod(accountserviceperiod);
+		if(a.getAccountPartOf() != null ) {
 
+			if(a.getAccountPartOf().replace("[","").replace("]","").equals("NULL") | a.getAccountPartOf()==null) {} else {
+			account.setPartOf(new org.hl7.fhir.r4.model.Reference(a.getAccountPartOf().replace("[","").replace("]","").replace("\"","")));
+			}
+		}
 		/******************** Account_SrvPrd_End ********************************************************************************/
-		if(a.getAccountSrvPrdEnd() != null) {
-			java.text.SimpleDateFormat Account_SrvPrd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date Account_SrvPrd_Enddate = Account_SrvPrd_Endsdf.parse(a.getAccountSrvPrdEnd());
-			accountserviceperiod.setEnd(Account_SrvPrd_Enddate);
+		if(a.getAccountSrvPrdEnd() != null ) {
+
+			if(a.getAccountSrvPrdEnd().replace("[","").replace("]","").equals("NULL") | a.getAccountSrvPrdEnd()==null) {} else {
+			account.getServicePeriod().setEnd(a.getAccountSrvPrdEnd().replace("[","").replace("]","").equals("NULL") | a.getAccountSrvPrdEnd()==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(a.getAccountSrvPrdEnd().replace("[","").replace("]","").replace("\"","")));
+			}
 		}
 		/******************** Account_SrvPrd_Strt ********************************************************************************/
-		if(a.getAccountSrvPrdStrt() != null) {
-			java.text.SimpleDateFormat Account_SrvPrd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date Account_SrvPrd_Strtdate = Account_SrvPrd_Strtsdf.parse(a.getAccountSrvPrdStrt());
-			accountserviceperiod.setStart(Account_SrvPrd_Strtdate);
-		}
-		/******************** accountstatus ********************************************************************************/
-		org.hl7.fhir.r4.model.Account.AccountStatusEnumFactory accountstatus =  new org.hl7.fhir.r4.model.Account.AccountStatusEnumFactory();
-		account.setStatus(accountstatus.fromCode(a.getAccountSts()));
+		if(a.getAccountSrvPrdStrt() != null ) {
 
+			if(a.getAccountSrvPrdStrt().replace("[","").replace("]","").equals("NULL") | a.getAccountSrvPrdStrt()==null) {} else {
+			account.getServicePeriod().setStart(a.getAccountSrvPrdStrt().replace("[","").replace("]","").equals("NULL") | a.getAccountSrvPrdStrt()==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(a.getAccountSrvPrdStrt().replace("[","").replace("]","").replace("\"","")));
+			}
+		}
+		/******************** Account_Sts ********************************************************************************/
+		if(a.getAccountSts() != null ) {
+
+			if(a.getAccountSts().replace("[","").replace("]","").equals("NULL") | a.getAccountSts()==null) {} else {
+			account.setStatus(new org.hl7.fhir.r4.model.Account.AccountStatusEnumFactory().fromCode(a.getAccountSts().replace("[","").replace("]","").replace("\"","")));
+			}
+		}
 		/******************** Account_Sbjct ********************************************************************************/
-		if(a.getAccountSbjct() != null) {
-			account.addSubject( new org.hl7.fhir.r4.model.Reference(a.getAccountSbjct()));
+		if(a.getAccountSbjct() != null ) {
+
+				for( String currListStrSplit : a.getAccountSbjct().replace("[","").replace("]","").replace("\"","").split(",")){
+			if(currListStrSplit.replace("[","").replace("]","").equals("NULL") | currListStrSplit==null) {} else {
+			account.addSubject(new org.hl7.fhir.r4.model.Reference(currListStrSplit.replace("[","").replace("]","").replace("\"","")));
+			}				}
+
 		}
-		/******************** accounttype ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept accounttype =  new org.hl7.fhir.r4.model.CodeableConcept();
-		account.setType(accounttype);
-
-		/******************** accounttypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding accounttypecoding =  new org.hl7.fhir.r4.model.Coding();
-		accounttype.addCoding(accounttypecoding);
-
 		/******************** Account_Typ_Cdg_Cd ********************************************************************************/
-		if(a.getAccountTypCdgCd() != null) {
-			accounttypecoding.setCode(a.getAccountTypCdgCd());
+		if(a.getAccountTypCdgCd() != null ) {
+
+			String[] arrayi0 = a.getAccountTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(account.getType().getCoding().size() < i0+1) { account.getType().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {account.getType().getCoding().get(i0).setCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** Account_Typ_Cdg_Dsply ********************************************************************************/
-		if(a.getAccountTypCdgDsply() != null) {
-			accounttypecoding.setDisplay(a.getAccountTypCdgDsply());
+		if(a.getAccountTypCdgDsply() != null ) {
+
+			String[] arrayi0 = a.getAccountTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(account.getType().getCoding().size() < i0+1) { account.getType().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {account.getType().getCoding().get(i0).setDisplay(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** Account_Typ_Cdg_Sys ********************************************************************************/
-		if(a.getAccountTypCdgSys() != null) {
-			accounttypecoding.setSystem(a.getAccountTypCdgSys());
+		if(a.getAccountTypCdgSys() != null ) {
+
+			String[] arrayi0 = a.getAccountTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(account.getType().getCoding().size() < i0+1) { account.getType().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {account.getType().getCoding().get(i0).setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** Account_Typ_Cdg_UsrSltd ********************************************************************************/
-		if(a.getAccountTypCdgUsrSltd() != null) {
-			accounttypecoding.setUserSelected(Boolean.parseBoolean(a.getAccountTypCdgUsrSltd()));
+		if(a.getAccountTypCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = a.getAccountTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(account.getType().getCoding().size() < i0+1) { account.getType().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {account.getType().getCoding().get(i0).setUserSelected(Boolean.parseBoolean(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** Account_Typ_Cdg_Vrsn ********************************************************************************/
-		if(a.getAccountTypCdgVrsn() != null) {
-			accounttypecoding.setVersion(a.getAccountTypCdgVrsn());
+		if(a.getAccountTypCdgVrsn() != null ) {
+
+			String[] arrayi0 = a.getAccountTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(account.getType().getCoding().size() < i0+1) { account.getType().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {account.getType().getCoding().get(i0).setVersion(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** Account_Typ_Txt ********************************************************************************/
-		if(a.getAccountTypTxt() != null) {
-			accounttype.setText(a.getAccountTypTxt());
+		if(a.getAccountTypTxt() != null ) {
+
+			if(a.getAccountTypTxt().replace("[","").replace("]","").equals("NULL") | a.getAccountTypTxt()==null) {} else {
+			account.getType().setText(a.getAccountTypTxt().replace("[","").replace("]","").replace("\"",""));
+			}
 		}
 		return account;
 	}

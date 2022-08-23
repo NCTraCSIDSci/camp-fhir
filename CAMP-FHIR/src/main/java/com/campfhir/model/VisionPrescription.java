@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Jun 27, 2022, 10:40:10 AM by Hibernate Tools 5.6.1.Final
+// Generated Aug 17, 2022, 11:08:48 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -69,6 +69,20 @@ public class VisionPrescription  implements java.io.Serializable {
         this.id = id;
     }
     
+    public void addId(String id) {
+    	if( id != null ) {
+	    	if( this.id == null ) {
+	        	this.id = id;
+	        } else if(this.id.substring(this.id.length() - 1).equals("]") & id.equals("[")) {
+	        	this.id = this.id+ "," + id;
+	        } else if(id.equals("[") | id.equals("]") | this.id.substring(this.id.length() - 1).equals("[")) {
+	        	this.id = this.id+id;
+	        } else  {
+	            this.id = this.id+ "," +id;
+	        }
+        }
+    }
+    
     
     
     public String getVisionPrescriptionCreated() {
@@ -77,6 +91,20 @@ public class VisionPrescription  implements java.io.Serializable {
     
     public void setVisionPrescriptionCreated(String visionPrescriptionCreated) {
         this.visionPrescriptionCreated = visionPrescriptionCreated;
+    }
+    
+    public void addVisionPrescriptionCreated(String visionPrescriptionCreated) {
+    	if( visionPrescriptionCreated != null ) {
+	    	if( this.visionPrescriptionCreated == null ) {
+	        	this.visionPrescriptionCreated = visionPrescriptionCreated;
+	        } else if(this.visionPrescriptionCreated.substring(this.visionPrescriptionCreated.length() - 1).equals("]") & visionPrescriptionCreated.equals("[")) {
+	        	this.visionPrescriptionCreated = this.visionPrescriptionCreated+ "," + visionPrescriptionCreated;
+	        } else if(visionPrescriptionCreated.equals("[") | visionPrescriptionCreated.equals("]") | this.visionPrescriptionCreated.substring(this.visionPrescriptionCreated.length() - 1).equals("[")) {
+	        	this.visionPrescriptionCreated = this.visionPrescriptionCreated+visionPrescriptionCreated;
+	        } else  {
+	            this.visionPrescriptionCreated = this.visionPrescriptionCreated+ "," +visionPrescriptionCreated;
+	        }
+        }
     }
     
     
@@ -89,6 +117,20 @@ public class VisionPrescription  implements java.io.Serializable {
         this.visionPrescriptionDtWritten = visionPrescriptionDtWritten;
     }
     
+    public void addVisionPrescriptionDtWritten(String visionPrescriptionDtWritten) {
+    	if( visionPrescriptionDtWritten != null ) {
+	    	if( this.visionPrescriptionDtWritten == null ) {
+	        	this.visionPrescriptionDtWritten = visionPrescriptionDtWritten;
+	        } else if(this.visionPrescriptionDtWritten.substring(this.visionPrescriptionDtWritten.length() - 1).equals("]") & visionPrescriptionDtWritten.equals("[")) {
+	        	this.visionPrescriptionDtWritten = this.visionPrescriptionDtWritten+ "," + visionPrescriptionDtWritten;
+	        } else if(visionPrescriptionDtWritten.equals("[") | visionPrescriptionDtWritten.equals("]") | this.visionPrescriptionDtWritten.substring(this.visionPrescriptionDtWritten.length() - 1).equals("[")) {
+	        	this.visionPrescriptionDtWritten = this.visionPrescriptionDtWritten+visionPrescriptionDtWritten;
+	        } else  {
+	            this.visionPrescriptionDtWritten = this.visionPrescriptionDtWritten+ "," +visionPrescriptionDtWritten;
+	        }
+        }
+    }
+    
     
     
     public String getVisionPrescriptionEnc() {
@@ -97,6 +139,20 @@ public class VisionPrescription  implements java.io.Serializable {
     
     public void setVisionPrescriptionEnc(String visionPrescriptionEnc) {
         this.visionPrescriptionEnc = visionPrescriptionEnc;
+    }
+    
+    public void addVisionPrescriptionEnc(String visionPrescriptionEnc) {
+    	if( visionPrescriptionEnc != null ) {
+	    	if( this.visionPrescriptionEnc == null ) {
+	        	this.visionPrescriptionEnc = visionPrescriptionEnc;
+	        } else if(this.visionPrescriptionEnc.substring(this.visionPrescriptionEnc.length() - 1).equals("]") & visionPrescriptionEnc.equals("[")) {
+	        	this.visionPrescriptionEnc = this.visionPrescriptionEnc+ "," + visionPrescriptionEnc;
+	        } else if(visionPrescriptionEnc.equals("[") | visionPrescriptionEnc.equals("]") | this.visionPrescriptionEnc.substring(this.visionPrescriptionEnc.length() - 1).equals("[")) {
+	        	this.visionPrescriptionEnc = this.visionPrescriptionEnc+visionPrescriptionEnc;
+	        } else  {
+	            this.visionPrescriptionEnc = this.visionPrescriptionEnc+ "," +visionPrescriptionEnc;
+	        }
+        }
     }
     
     
@@ -109,6 +165,20 @@ public class VisionPrescription  implements java.io.Serializable {
         this.visionPrescriptionIdAssigner = visionPrescriptionIdAssigner;
     }
     
+    public void addVisionPrescriptionIdAssigner(String visionPrescriptionIdAssigner) {
+    	if( visionPrescriptionIdAssigner != null ) {
+	    	if( this.visionPrescriptionIdAssigner == null ) {
+	        	this.visionPrescriptionIdAssigner = visionPrescriptionIdAssigner;
+	        } else if(this.visionPrescriptionIdAssigner.substring(this.visionPrescriptionIdAssigner.length() - 1).equals("]") & visionPrescriptionIdAssigner.equals("[")) {
+	        	this.visionPrescriptionIdAssigner = this.visionPrescriptionIdAssigner+ "," + visionPrescriptionIdAssigner;
+	        } else if(visionPrescriptionIdAssigner.equals("[") | visionPrescriptionIdAssigner.equals("]") | this.visionPrescriptionIdAssigner.substring(this.visionPrescriptionIdAssigner.length() - 1).equals("[")) {
+	        	this.visionPrescriptionIdAssigner = this.visionPrescriptionIdAssigner+visionPrescriptionIdAssigner;
+	        } else  {
+	            this.visionPrescriptionIdAssigner = this.visionPrescriptionIdAssigner+ "," +visionPrescriptionIdAssigner;
+	        }
+        }
+    }
+    
     
     
     public String getVisionPrescriptionIdPrdEnd() {
@@ -117,6 +187,20 @@ public class VisionPrescription  implements java.io.Serializable {
     
     public void setVisionPrescriptionIdPrdEnd(String visionPrescriptionIdPrdEnd) {
         this.visionPrescriptionIdPrdEnd = visionPrescriptionIdPrdEnd;
+    }
+    
+    public void addVisionPrescriptionIdPrdEnd(String visionPrescriptionIdPrdEnd) {
+    	if( visionPrescriptionIdPrdEnd != null ) {
+	    	if( this.visionPrescriptionIdPrdEnd == null ) {
+	        	this.visionPrescriptionIdPrdEnd = visionPrescriptionIdPrdEnd;
+	        } else if(this.visionPrescriptionIdPrdEnd.substring(this.visionPrescriptionIdPrdEnd.length() - 1).equals("]") & visionPrescriptionIdPrdEnd.equals("[")) {
+	        	this.visionPrescriptionIdPrdEnd = this.visionPrescriptionIdPrdEnd+ "," + visionPrescriptionIdPrdEnd;
+	        } else if(visionPrescriptionIdPrdEnd.equals("[") | visionPrescriptionIdPrdEnd.equals("]") | this.visionPrescriptionIdPrdEnd.substring(this.visionPrescriptionIdPrdEnd.length() - 1).equals("[")) {
+	        	this.visionPrescriptionIdPrdEnd = this.visionPrescriptionIdPrdEnd+visionPrescriptionIdPrdEnd;
+	        } else  {
+	            this.visionPrescriptionIdPrdEnd = this.visionPrescriptionIdPrdEnd+ "," +visionPrescriptionIdPrdEnd;
+	        }
+        }
     }
     
     
@@ -129,6 +213,20 @@ public class VisionPrescription  implements java.io.Serializable {
         this.visionPrescriptionIdPrdStrt = visionPrescriptionIdPrdStrt;
     }
     
+    public void addVisionPrescriptionIdPrdStrt(String visionPrescriptionIdPrdStrt) {
+    	if( visionPrescriptionIdPrdStrt != null ) {
+	    	if( this.visionPrescriptionIdPrdStrt == null ) {
+	        	this.visionPrescriptionIdPrdStrt = visionPrescriptionIdPrdStrt;
+	        } else if(this.visionPrescriptionIdPrdStrt.substring(this.visionPrescriptionIdPrdStrt.length() - 1).equals("]") & visionPrescriptionIdPrdStrt.equals("[")) {
+	        	this.visionPrescriptionIdPrdStrt = this.visionPrescriptionIdPrdStrt+ "," + visionPrescriptionIdPrdStrt;
+	        } else if(visionPrescriptionIdPrdStrt.equals("[") | visionPrescriptionIdPrdStrt.equals("]") | this.visionPrescriptionIdPrdStrt.substring(this.visionPrescriptionIdPrdStrt.length() - 1).equals("[")) {
+	        	this.visionPrescriptionIdPrdStrt = this.visionPrescriptionIdPrdStrt+visionPrescriptionIdPrdStrt;
+	        } else  {
+	            this.visionPrescriptionIdPrdStrt = this.visionPrescriptionIdPrdStrt+ "," +visionPrescriptionIdPrdStrt;
+	        }
+        }
+    }
+    
     
     
     public String getVisionPrescriptionIdSys() {
@@ -137,6 +235,20 @@ public class VisionPrescription  implements java.io.Serializable {
     
     public void setVisionPrescriptionIdSys(String visionPrescriptionIdSys) {
         this.visionPrescriptionIdSys = visionPrescriptionIdSys;
+    }
+    
+    public void addVisionPrescriptionIdSys(String visionPrescriptionIdSys) {
+    	if( visionPrescriptionIdSys != null ) {
+	    	if( this.visionPrescriptionIdSys == null ) {
+	        	this.visionPrescriptionIdSys = visionPrescriptionIdSys;
+	        } else if(this.visionPrescriptionIdSys.substring(this.visionPrescriptionIdSys.length() - 1).equals("]") & visionPrescriptionIdSys.equals("[")) {
+	        	this.visionPrescriptionIdSys = this.visionPrescriptionIdSys+ "," + visionPrescriptionIdSys;
+	        } else if(visionPrescriptionIdSys.equals("[") | visionPrescriptionIdSys.equals("]") | this.visionPrescriptionIdSys.substring(this.visionPrescriptionIdSys.length() - 1).equals("[")) {
+	        	this.visionPrescriptionIdSys = this.visionPrescriptionIdSys+visionPrescriptionIdSys;
+	        } else  {
+	            this.visionPrescriptionIdSys = this.visionPrescriptionIdSys+ "," +visionPrescriptionIdSys;
+	        }
+        }
     }
     
     
@@ -149,6 +261,20 @@ public class VisionPrescription  implements java.io.Serializable {
         this.visionPrescriptionIdTypCdgCd = visionPrescriptionIdTypCdgCd;
     }
     
+    public void addVisionPrescriptionIdTypCdgCd(String visionPrescriptionIdTypCdgCd) {
+    	if( visionPrescriptionIdTypCdgCd != null ) {
+	    	if( this.visionPrescriptionIdTypCdgCd == null ) {
+	        	this.visionPrescriptionIdTypCdgCd = visionPrescriptionIdTypCdgCd;
+	        } else if(this.visionPrescriptionIdTypCdgCd.substring(this.visionPrescriptionIdTypCdgCd.length() - 1).equals("]") & visionPrescriptionIdTypCdgCd.equals("[")) {
+	        	this.visionPrescriptionIdTypCdgCd = this.visionPrescriptionIdTypCdgCd+ "," + visionPrescriptionIdTypCdgCd;
+	        } else if(visionPrescriptionIdTypCdgCd.equals("[") | visionPrescriptionIdTypCdgCd.equals("]") | this.visionPrescriptionIdTypCdgCd.substring(this.visionPrescriptionIdTypCdgCd.length() - 1).equals("[")) {
+	        	this.visionPrescriptionIdTypCdgCd = this.visionPrescriptionIdTypCdgCd+visionPrescriptionIdTypCdgCd;
+	        } else  {
+	            this.visionPrescriptionIdTypCdgCd = this.visionPrescriptionIdTypCdgCd+ "," +visionPrescriptionIdTypCdgCd;
+	        }
+        }
+    }
+    
     
     
     public String getVisionPrescriptionIdTypCdgDsply() {
@@ -157,6 +283,20 @@ public class VisionPrescription  implements java.io.Serializable {
     
     public void setVisionPrescriptionIdTypCdgDsply(String visionPrescriptionIdTypCdgDsply) {
         this.visionPrescriptionIdTypCdgDsply = visionPrescriptionIdTypCdgDsply;
+    }
+    
+    public void addVisionPrescriptionIdTypCdgDsply(String visionPrescriptionIdTypCdgDsply) {
+    	if( visionPrescriptionIdTypCdgDsply != null ) {
+	    	if( this.visionPrescriptionIdTypCdgDsply == null ) {
+	        	this.visionPrescriptionIdTypCdgDsply = visionPrescriptionIdTypCdgDsply;
+	        } else if(this.visionPrescriptionIdTypCdgDsply.substring(this.visionPrescriptionIdTypCdgDsply.length() - 1).equals("]") & visionPrescriptionIdTypCdgDsply.equals("[")) {
+	        	this.visionPrescriptionIdTypCdgDsply = this.visionPrescriptionIdTypCdgDsply+ "," + visionPrescriptionIdTypCdgDsply;
+	        } else if(visionPrescriptionIdTypCdgDsply.equals("[") | visionPrescriptionIdTypCdgDsply.equals("]") | this.visionPrescriptionIdTypCdgDsply.substring(this.visionPrescriptionIdTypCdgDsply.length() - 1).equals("[")) {
+	        	this.visionPrescriptionIdTypCdgDsply = this.visionPrescriptionIdTypCdgDsply+visionPrescriptionIdTypCdgDsply;
+	        } else  {
+	            this.visionPrescriptionIdTypCdgDsply = this.visionPrescriptionIdTypCdgDsply+ "," +visionPrescriptionIdTypCdgDsply;
+	        }
+        }
     }
     
     
@@ -169,6 +309,20 @@ public class VisionPrescription  implements java.io.Serializable {
         this.visionPrescriptionIdTypCdgSys = visionPrescriptionIdTypCdgSys;
     }
     
+    public void addVisionPrescriptionIdTypCdgSys(String visionPrescriptionIdTypCdgSys) {
+    	if( visionPrescriptionIdTypCdgSys != null ) {
+	    	if( this.visionPrescriptionIdTypCdgSys == null ) {
+	        	this.visionPrescriptionIdTypCdgSys = visionPrescriptionIdTypCdgSys;
+	        } else if(this.visionPrescriptionIdTypCdgSys.substring(this.visionPrescriptionIdTypCdgSys.length() - 1).equals("]") & visionPrescriptionIdTypCdgSys.equals("[")) {
+	        	this.visionPrescriptionIdTypCdgSys = this.visionPrescriptionIdTypCdgSys+ "," + visionPrescriptionIdTypCdgSys;
+	        } else if(visionPrescriptionIdTypCdgSys.equals("[") | visionPrescriptionIdTypCdgSys.equals("]") | this.visionPrescriptionIdTypCdgSys.substring(this.visionPrescriptionIdTypCdgSys.length() - 1).equals("[")) {
+	        	this.visionPrescriptionIdTypCdgSys = this.visionPrescriptionIdTypCdgSys+visionPrescriptionIdTypCdgSys;
+	        } else  {
+	            this.visionPrescriptionIdTypCdgSys = this.visionPrescriptionIdTypCdgSys+ "," +visionPrescriptionIdTypCdgSys;
+	        }
+        }
+    }
+    
     
     
     public String getVisionPrescriptionIdTypCdgUsrSltd() {
@@ -177,6 +331,20 @@ public class VisionPrescription  implements java.io.Serializable {
     
     public void setVisionPrescriptionIdTypCdgUsrSltd(String visionPrescriptionIdTypCdgUsrSltd) {
         this.visionPrescriptionIdTypCdgUsrSltd = visionPrescriptionIdTypCdgUsrSltd;
+    }
+    
+    public void addVisionPrescriptionIdTypCdgUsrSltd(String visionPrescriptionIdTypCdgUsrSltd) {
+    	if( visionPrescriptionIdTypCdgUsrSltd != null ) {
+	    	if( this.visionPrescriptionIdTypCdgUsrSltd == null ) {
+	        	this.visionPrescriptionIdTypCdgUsrSltd = visionPrescriptionIdTypCdgUsrSltd;
+	        } else if(this.visionPrescriptionIdTypCdgUsrSltd.substring(this.visionPrescriptionIdTypCdgUsrSltd.length() - 1).equals("]") & visionPrescriptionIdTypCdgUsrSltd.equals("[")) {
+	        	this.visionPrescriptionIdTypCdgUsrSltd = this.visionPrescriptionIdTypCdgUsrSltd+ "," + visionPrescriptionIdTypCdgUsrSltd;
+	        } else if(visionPrescriptionIdTypCdgUsrSltd.equals("[") | visionPrescriptionIdTypCdgUsrSltd.equals("]") | this.visionPrescriptionIdTypCdgUsrSltd.substring(this.visionPrescriptionIdTypCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.visionPrescriptionIdTypCdgUsrSltd = this.visionPrescriptionIdTypCdgUsrSltd+visionPrescriptionIdTypCdgUsrSltd;
+	        } else  {
+	            this.visionPrescriptionIdTypCdgUsrSltd = this.visionPrescriptionIdTypCdgUsrSltd+ "," +visionPrescriptionIdTypCdgUsrSltd;
+	        }
+        }
     }
     
     
@@ -189,6 +357,20 @@ public class VisionPrescription  implements java.io.Serializable {
         this.visionPrescriptionIdTypCdgVrsn = visionPrescriptionIdTypCdgVrsn;
     }
     
+    public void addVisionPrescriptionIdTypCdgVrsn(String visionPrescriptionIdTypCdgVrsn) {
+    	if( visionPrescriptionIdTypCdgVrsn != null ) {
+	    	if( this.visionPrescriptionIdTypCdgVrsn == null ) {
+	        	this.visionPrescriptionIdTypCdgVrsn = visionPrescriptionIdTypCdgVrsn;
+	        } else if(this.visionPrescriptionIdTypCdgVrsn.substring(this.visionPrescriptionIdTypCdgVrsn.length() - 1).equals("]") & visionPrescriptionIdTypCdgVrsn.equals("[")) {
+	        	this.visionPrescriptionIdTypCdgVrsn = this.visionPrescriptionIdTypCdgVrsn+ "," + visionPrescriptionIdTypCdgVrsn;
+	        } else if(visionPrescriptionIdTypCdgVrsn.equals("[") | visionPrescriptionIdTypCdgVrsn.equals("]") | this.visionPrescriptionIdTypCdgVrsn.substring(this.visionPrescriptionIdTypCdgVrsn.length() - 1).equals("[")) {
+	        	this.visionPrescriptionIdTypCdgVrsn = this.visionPrescriptionIdTypCdgVrsn+visionPrescriptionIdTypCdgVrsn;
+	        } else  {
+	            this.visionPrescriptionIdTypCdgVrsn = this.visionPrescriptionIdTypCdgVrsn+ "," +visionPrescriptionIdTypCdgVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getVisionPrescriptionIdTypTxt() {
@@ -197,6 +379,20 @@ public class VisionPrescription  implements java.io.Serializable {
     
     public void setVisionPrescriptionIdTypTxt(String visionPrescriptionIdTypTxt) {
         this.visionPrescriptionIdTypTxt = visionPrescriptionIdTypTxt;
+    }
+    
+    public void addVisionPrescriptionIdTypTxt(String visionPrescriptionIdTypTxt) {
+    	if( visionPrescriptionIdTypTxt != null ) {
+	    	if( this.visionPrescriptionIdTypTxt == null ) {
+	        	this.visionPrescriptionIdTypTxt = visionPrescriptionIdTypTxt;
+	        } else if(this.visionPrescriptionIdTypTxt.substring(this.visionPrescriptionIdTypTxt.length() - 1).equals("]") & visionPrescriptionIdTypTxt.equals("[")) {
+	        	this.visionPrescriptionIdTypTxt = this.visionPrescriptionIdTypTxt+ "," + visionPrescriptionIdTypTxt;
+	        } else if(visionPrescriptionIdTypTxt.equals("[") | visionPrescriptionIdTypTxt.equals("]") | this.visionPrescriptionIdTypTxt.substring(this.visionPrescriptionIdTypTxt.length() - 1).equals("[")) {
+	        	this.visionPrescriptionIdTypTxt = this.visionPrescriptionIdTypTxt+visionPrescriptionIdTypTxt;
+	        } else  {
+	            this.visionPrescriptionIdTypTxt = this.visionPrescriptionIdTypTxt+ "," +visionPrescriptionIdTypTxt;
+	        }
+        }
     }
     
     
@@ -209,6 +405,20 @@ public class VisionPrescription  implements java.io.Serializable {
         this.visionPrescriptionIdUse = visionPrescriptionIdUse;
     }
     
+    public void addVisionPrescriptionIdUse(String visionPrescriptionIdUse) {
+    	if( visionPrescriptionIdUse != null ) {
+	    	if( this.visionPrescriptionIdUse == null ) {
+	        	this.visionPrescriptionIdUse = visionPrescriptionIdUse;
+	        } else if(this.visionPrescriptionIdUse.substring(this.visionPrescriptionIdUse.length() - 1).equals("]") & visionPrescriptionIdUse.equals("[")) {
+	        	this.visionPrescriptionIdUse = this.visionPrescriptionIdUse+ "," + visionPrescriptionIdUse;
+	        } else if(visionPrescriptionIdUse.equals("[") | visionPrescriptionIdUse.equals("]") | this.visionPrescriptionIdUse.substring(this.visionPrescriptionIdUse.length() - 1).equals("[")) {
+	        	this.visionPrescriptionIdUse = this.visionPrescriptionIdUse+visionPrescriptionIdUse;
+	        } else  {
+	            this.visionPrescriptionIdUse = this.visionPrescriptionIdUse+ "," +visionPrescriptionIdUse;
+	        }
+        }
+    }
+    
     
     
     public String getVisionPrescriptionIdVl() {
@@ -217,6 +427,20 @@ public class VisionPrescription  implements java.io.Serializable {
     
     public void setVisionPrescriptionIdVl(String visionPrescriptionIdVl) {
         this.visionPrescriptionIdVl = visionPrescriptionIdVl;
+    }
+    
+    public void addVisionPrescriptionIdVl(String visionPrescriptionIdVl) {
+    	if( visionPrescriptionIdVl != null ) {
+	    	if( this.visionPrescriptionIdVl == null ) {
+	        	this.visionPrescriptionIdVl = visionPrescriptionIdVl;
+	        } else if(this.visionPrescriptionIdVl.substring(this.visionPrescriptionIdVl.length() - 1).equals("]") & visionPrescriptionIdVl.equals("[")) {
+	        	this.visionPrescriptionIdVl = this.visionPrescriptionIdVl+ "," + visionPrescriptionIdVl;
+	        } else if(visionPrescriptionIdVl.equals("[") | visionPrescriptionIdVl.equals("]") | this.visionPrescriptionIdVl.substring(this.visionPrescriptionIdVl.length() - 1).equals("[")) {
+	        	this.visionPrescriptionIdVl = this.visionPrescriptionIdVl+visionPrescriptionIdVl;
+	        } else  {
+	            this.visionPrescriptionIdVl = this.visionPrescriptionIdVl+ "," +visionPrescriptionIdVl;
+	        }
+        }
     }
     
     
@@ -229,6 +453,20 @@ public class VisionPrescription  implements java.io.Serializable {
         this.visionPrescriptionLensSpcfctnAdd = visionPrescriptionLensSpcfctnAdd;
     }
     
+    public void addVisionPrescriptionLensSpcfctnAdd(String visionPrescriptionLensSpcfctnAdd) {
+    	if( visionPrescriptionLensSpcfctnAdd != null ) {
+	    	if( this.visionPrescriptionLensSpcfctnAdd == null ) {
+	        	this.visionPrescriptionLensSpcfctnAdd = visionPrescriptionLensSpcfctnAdd;
+	        } else if(this.visionPrescriptionLensSpcfctnAdd.substring(this.visionPrescriptionLensSpcfctnAdd.length() - 1).equals("]") & visionPrescriptionLensSpcfctnAdd.equals("[")) {
+	        	this.visionPrescriptionLensSpcfctnAdd = this.visionPrescriptionLensSpcfctnAdd+ "," + visionPrescriptionLensSpcfctnAdd;
+	        } else if(visionPrescriptionLensSpcfctnAdd.equals("[") | visionPrescriptionLensSpcfctnAdd.equals("]") | this.visionPrescriptionLensSpcfctnAdd.substring(this.visionPrescriptionLensSpcfctnAdd.length() - 1).equals("[")) {
+	        	this.visionPrescriptionLensSpcfctnAdd = this.visionPrescriptionLensSpcfctnAdd+visionPrescriptionLensSpcfctnAdd;
+	        } else  {
+	            this.visionPrescriptionLensSpcfctnAdd = this.visionPrescriptionLensSpcfctnAdd+ "," +visionPrescriptionLensSpcfctnAdd;
+	        }
+        }
+    }
+    
     
     
     public String getVisionPrescriptionLensSpcfctnAxis() {
@@ -237,6 +475,20 @@ public class VisionPrescription  implements java.io.Serializable {
     
     public void setVisionPrescriptionLensSpcfctnAxis(String visionPrescriptionLensSpcfctnAxis) {
         this.visionPrescriptionLensSpcfctnAxis = visionPrescriptionLensSpcfctnAxis;
+    }
+    
+    public void addVisionPrescriptionLensSpcfctnAxis(String visionPrescriptionLensSpcfctnAxis) {
+    	if( visionPrescriptionLensSpcfctnAxis != null ) {
+	    	if( this.visionPrescriptionLensSpcfctnAxis == null ) {
+	        	this.visionPrescriptionLensSpcfctnAxis = visionPrescriptionLensSpcfctnAxis;
+	        } else if(this.visionPrescriptionLensSpcfctnAxis.substring(this.visionPrescriptionLensSpcfctnAxis.length() - 1).equals("]") & visionPrescriptionLensSpcfctnAxis.equals("[")) {
+	        	this.visionPrescriptionLensSpcfctnAxis = this.visionPrescriptionLensSpcfctnAxis+ "," + visionPrescriptionLensSpcfctnAxis;
+	        } else if(visionPrescriptionLensSpcfctnAxis.equals("[") | visionPrescriptionLensSpcfctnAxis.equals("]") | this.visionPrescriptionLensSpcfctnAxis.substring(this.visionPrescriptionLensSpcfctnAxis.length() - 1).equals("[")) {
+	        	this.visionPrescriptionLensSpcfctnAxis = this.visionPrescriptionLensSpcfctnAxis+visionPrescriptionLensSpcfctnAxis;
+	        } else  {
+	            this.visionPrescriptionLensSpcfctnAxis = this.visionPrescriptionLensSpcfctnAxis+ "," +visionPrescriptionLensSpcfctnAxis;
+	        }
+        }
     }
     
     
@@ -249,6 +501,20 @@ public class VisionPrescription  implements java.io.Serializable {
         this.visionPrescriptionLensSpcfctnBackCurve = visionPrescriptionLensSpcfctnBackCurve;
     }
     
+    public void addVisionPrescriptionLensSpcfctnBackCurve(String visionPrescriptionLensSpcfctnBackCurve) {
+    	if( visionPrescriptionLensSpcfctnBackCurve != null ) {
+	    	if( this.visionPrescriptionLensSpcfctnBackCurve == null ) {
+	        	this.visionPrescriptionLensSpcfctnBackCurve = visionPrescriptionLensSpcfctnBackCurve;
+	        } else if(this.visionPrescriptionLensSpcfctnBackCurve.substring(this.visionPrescriptionLensSpcfctnBackCurve.length() - 1).equals("]") & visionPrescriptionLensSpcfctnBackCurve.equals("[")) {
+	        	this.visionPrescriptionLensSpcfctnBackCurve = this.visionPrescriptionLensSpcfctnBackCurve+ "," + visionPrescriptionLensSpcfctnBackCurve;
+	        } else if(visionPrescriptionLensSpcfctnBackCurve.equals("[") | visionPrescriptionLensSpcfctnBackCurve.equals("]") | this.visionPrescriptionLensSpcfctnBackCurve.substring(this.visionPrescriptionLensSpcfctnBackCurve.length() - 1).equals("[")) {
+	        	this.visionPrescriptionLensSpcfctnBackCurve = this.visionPrescriptionLensSpcfctnBackCurve+visionPrescriptionLensSpcfctnBackCurve;
+	        } else  {
+	            this.visionPrescriptionLensSpcfctnBackCurve = this.visionPrescriptionLensSpcfctnBackCurve+ "," +visionPrescriptionLensSpcfctnBackCurve;
+	        }
+        }
+    }
+    
     
     
     public String getVisionPrescriptionLensSpcfctnBrand() {
@@ -257,6 +523,20 @@ public class VisionPrescription  implements java.io.Serializable {
     
     public void setVisionPrescriptionLensSpcfctnBrand(String visionPrescriptionLensSpcfctnBrand) {
         this.visionPrescriptionLensSpcfctnBrand = visionPrescriptionLensSpcfctnBrand;
+    }
+    
+    public void addVisionPrescriptionLensSpcfctnBrand(String visionPrescriptionLensSpcfctnBrand) {
+    	if( visionPrescriptionLensSpcfctnBrand != null ) {
+	    	if( this.visionPrescriptionLensSpcfctnBrand == null ) {
+	        	this.visionPrescriptionLensSpcfctnBrand = visionPrescriptionLensSpcfctnBrand;
+	        } else if(this.visionPrescriptionLensSpcfctnBrand.substring(this.visionPrescriptionLensSpcfctnBrand.length() - 1).equals("]") & visionPrescriptionLensSpcfctnBrand.equals("[")) {
+	        	this.visionPrescriptionLensSpcfctnBrand = this.visionPrescriptionLensSpcfctnBrand+ "," + visionPrescriptionLensSpcfctnBrand;
+	        } else if(visionPrescriptionLensSpcfctnBrand.equals("[") | visionPrescriptionLensSpcfctnBrand.equals("]") | this.visionPrescriptionLensSpcfctnBrand.substring(this.visionPrescriptionLensSpcfctnBrand.length() - 1).equals("[")) {
+	        	this.visionPrescriptionLensSpcfctnBrand = this.visionPrescriptionLensSpcfctnBrand+visionPrescriptionLensSpcfctnBrand;
+	        } else  {
+	            this.visionPrescriptionLensSpcfctnBrand = this.visionPrescriptionLensSpcfctnBrand+ "," +visionPrescriptionLensSpcfctnBrand;
+	        }
+        }
     }
     
     
@@ -269,6 +549,20 @@ public class VisionPrescription  implements java.io.Serializable {
         this.visionPrescriptionLensSpcfctnColor = visionPrescriptionLensSpcfctnColor;
     }
     
+    public void addVisionPrescriptionLensSpcfctnColor(String visionPrescriptionLensSpcfctnColor) {
+    	if( visionPrescriptionLensSpcfctnColor != null ) {
+	    	if( this.visionPrescriptionLensSpcfctnColor == null ) {
+	        	this.visionPrescriptionLensSpcfctnColor = visionPrescriptionLensSpcfctnColor;
+	        } else if(this.visionPrescriptionLensSpcfctnColor.substring(this.visionPrescriptionLensSpcfctnColor.length() - 1).equals("]") & visionPrescriptionLensSpcfctnColor.equals("[")) {
+	        	this.visionPrescriptionLensSpcfctnColor = this.visionPrescriptionLensSpcfctnColor+ "," + visionPrescriptionLensSpcfctnColor;
+	        } else if(visionPrescriptionLensSpcfctnColor.equals("[") | visionPrescriptionLensSpcfctnColor.equals("]") | this.visionPrescriptionLensSpcfctnColor.substring(this.visionPrescriptionLensSpcfctnColor.length() - 1).equals("[")) {
+	        	this.visionPrescriptionLensSpcfctnColor = this.visionPrescriptionLensSpcfctnColor+visionPrescriptionLensSpcfctnColor;
+	        } else  {
+	            this.visionPrescriptionLensSpcfctnColor = this.visionPrescriptionLensSpcfctnColor+ "," +visionPrescriptionLensSpcfctnColor;
+	        }
+        }
+    }
+    
     
     
     public String getVisionPrescriptionLensSpcfctnCylinder() {
@@ -277,6 +571,20 @@ public class VisionPrescription  implements java.io.Serializable {
     
     public void setVisionPrescriptionLensSpcfctnCylinder(String visionPrescriptionLensSpcfctnCylinder) {
         this.visionPrescriptionLensSpcfctnCylinder = visionPrescriptionLensSpcfctnCylinder;
+    }
+    
+    public void addVisionPrescriptionLensSpcfctnCylinder(String visionPrescriptionLensSpcfctnCylinder) {
+    	if( visionPrescriptionLensSpcfctnCylinder != null ) {
+	    	if( this.visionPrescriptionLensSpcfctnCylinder == null ) {
+	        	this.visionPrescriptionLensSpcfctnCylinder = visionPrescriptionLensSpcfctnCylinder;
+	        } else if(this.visionPrescriptionLensSpcfctnCylinder.substring(this.visionPrescriptionLensSpcfctnCylinder.length() - 1).equals("]") & visionPrescriptionLensSpcfctnCylinder.equals("[")) {
+	        	this.visionPrescriptionLensSpcfctnCylinder = this.visionPrescriptionLensSpcfctnCylinder+ "," + visionPrescriptionLensSpcfctnCylinder;
+	        } else if(visionPrescriptionLensSpcfctnCylinder.equals("[") | visionPrescriptionLensSpcfctnCylinder.equals("]") | this.visionPrescriptionLensSpcfctnCylinder.substring(this.visionPrescriptionLensSpcfctnCylinder.length() - 1).equals("[")) {
+	        	this.visionPrescriptionLensSpcfctnCylinder = this.visionPrescriptionLensSpcfctnCylinder+visionPrescriptionLensSpcfctnCylinder;
+	        } else  {
+	            this.visionPrescriptionLensSpcfctnCylinder = this.visionPrescriptionLensSpcfctnCylinder+ "," +visionPrescriptionLensSpcfctnCylinder;
+	        }
+        }
     }
     
     
@@ -289,6 +597,20 @@ public class VisionPrescription  implements java.io.Serializable {
         this.visionPrescriptionLensSpcfctnDiameter = visionPrescriptionLensSpcfctnDiameter;
     }
     
+    public void addVisionPrescriptionLensSpcfctnDiameter(String visionPrescriptionLensSpcfctnDiameter) {
+    	if( visionPrescriptionLensSpcfctnDiameter != null ) {
+	    	if( this.visionPrescriptionLensSpcfctnDiameter == null ) {
+	        	this.visionPrescriptionLensSpcfctnDiameter = visionPrescriptionLensSpcfctnDiameter;
+	        } else if(this.visionPrescriptionLensSpcfctnDiameter.substring(this.visionPrescriptionLensSpcfctnDiameter.length() - 1).equals("]") & visionPrescriptionLensSpcfctnDiameter.equals("[")) {
+	        	this.visionPrescriptionLensSpcfctnDiameter = this.visionPrescriptionLensSpcfctnDiameter+ "," + visionPrescriptionLensSpcfctnDiameter;
+	        } else if(visionPrescriptionLensSpcfctnDiameter.equals("[") | visionPrescriptionLensSpcfctnDiameter.equals("]") | this.visionPrescriptionLensSpcfctnDiameter.substring(this.visionPrescriptionLensSpcfctnDiameter.length() - 1).equals("[")) {
+	        	this.visionPrescriptionLensSpcfctnDiameter = this.visionPrescriptionLensSpcfctnDiameter+visionPrescriptionLensSpcfctnDiameter;
+	        } else  {
+	            this.visionPrescriptionLensSpcfctnDiameter = this.visionPrescriptionLensSpcfctnDiameter+ "," +visionPrescriptionLensSpcfctnDiameter;
+	        }
+        }
+    }
+    
     
     
     public String getVisionPrescriptionLensSpcfctnDurationCd() {
@@ -297,6 +619,20 @@ public class VisionPrescription  implements java.io.Serializable {
     
     public void setVisionPrescriptionLensSpcfctnDurationCd(String visionPrescriptionLensSpcfctnDurationCd) {
         this.visionPrescriptionLensSpcfctnDurationCd = visionPrescriptionLensSpcfctnDurationCd;
+    }
+    
+    public void addVisionPrescriptionLensSpcfctnDurationCd(String visionPrescriptionLensSpcfctnDurationCd) {
+    	if( visionPrescriptionLensSpcfctnDurationCd != null ) {
+	    	if( this.visionPrescriptionLensSpcfctnDurationCd == null ) {
+	        	this.visionPrescriptionLensSpcfctnDurationCd = visionPrescriptionLensSpcfctnDurationCd;
+	        } else if(this.visionPrescriptionLensSpcfctnDurationCd.substring(this.visionPrescriptionLensSpcfctnDurationCd.length() - 1).equals("]") & visionPrescriptionLensSpcfctnDurationCd.equals("[")) {
+	        	this.visionPrescriptionLensSpcfctnDurationCd = this.visionPrescriptionLensSpcfctnDurationCd+ "," + visionPrescriptionLensSpcfctnDurationCd;
+	        } else if(visionPrescriptionLensSpcfctnDurationCd.equals("[") | visionPrescriptionLensSpcfctnDurationCd.equals("]") | this.visionPrescriptionLensSpcfctnDurationCd.substring(this.visionPrescriptionLensSpcfctnDurationCd.length() - 1).equals("[")) {
+	        	this.visionPrescriptionLensSpcfctnDurationCd = this.visionPrescriptionLensSpcfctnDurationCd+visionPrescriptionLensSpcfctnDurationCd;
+	        } else  {
+	            this.visionPrescriptionLensSpcfctnDurationCd = this.visionPrescriptionLensSpcfctnDurationCd+ "," +visionPrescriptionLensSpcfctnDurationCd;
+	        }
+        }
     }
     
     
@@ -309,6 +645,20 @@ public class VisionPrescription  implements java.io.Serializable {
         this.visionPrescriptionLensSpcfctnDurationCmprtr = visionPrescriptionLensSpcfctnDurationCmprtr;
     }
     
+    public void addVisionPrescriptionLensSpcfctnDurationCmprtr(String visionPrescriptionLensSpcfctnDurationCmprtr) {
+    	if( visionPrescriptionLensSpcfctnDurationCmprtr != null ) {
+	    	if( this.visionPrescriptionLensSpcfctnDurationCmprtr == null ) {
+	        	this.visionPrescriptionLensSpcfctnDurationCmprtr = visionPrescriptionLensSpcfctnDurationCmprtr;
+	        } else if(this.visionPrescriptionLensSpcfctnDurationCmprtr.substring(this.visionPrescriptionLensSpcfctnDurationCmprtr.length() - 1).equals("]") & visionPrescriptionLensSpcfctnDurationCmprtr.equals("[")) {
+	        	this.visionPrescriptionLensSpcfctnDurationCmprtr = this.visionPrescriptionLensSpcfctnDurationCmprtr+ "," + visionPrescriptionLensSpcfctnDurationCmprtr;
+	        } else if(visionPrescriptionLensSpcfctnDurationCmprtr.equals("[") | visionPrescriptionLensSpcfctnDurationCmprtr.equals("]") | this.visionPrescriptionLensSpcfctnDurationCmprtr.substring(this.visionPrescriptionLensSpcfctnDurationCmprtr.length() - 1).equals("[")) {
+	        	this.visionPrescriptionLensSpcfctnDurationCmprtr = this.visionPrescriptionLensSpcfctnDurationCmprtr+visionPrescriptionLensSpcfctnDurationCmprtr;
+	        } else  {
+	            this.visionPrescriptionLensSpcfctnDurationCmprtr = this.visionPrescriptionLensSpcfctnDurationCmprtr+ "," +visionPrescriptionLensSpcfctnDurationCmprtr;
+	        }
+        }
+    }
+    
     
     
     public String getVisionPrescriptionLensSpcfctnDurationSys() {
@@ -317,6 +667,20 @@ public class VisionPrescription  implements java.io.Serializable {
     
     public void setVisionPrescriptionLensSpcfctnDurationSys(String visionPrescriptionLensSpcfctnDurationSys) {
         this.visionPrescriptionLensSpcfctnDurationSys = visionPrescriptionLensSpcfctnDurationSys;
+    }
+    
+    public void addVisionPrescriptionLensSpcfctnDurationSys(String visionPrescriptionLensSpcfctnDurationSys) {
+    	if( visionPrescriptionLensSpcfctnDurationSys != null ) {
+	    	if( this.visionPrescriptionLensSpcfctnDurationSys == null ) {
+	        	this.visionPrescriptionLensSpcfctnDurationSys = visionPrescriptionLensSpcfctnDurationSys;
+	        } else if(this.visionPrescriptionLensSpcfctnDurationSys.substring(this.visionPrescriptionLensSpcfctnDurationSys.length() - 1).equals("]") & visionPrescriptionLensSpcfctnDurationSys.equals("[")) {
+	        	this.visionPrescriptionLensSpcfctnDurationSys = this.visionPrescriptionLensSpcfctnDurationSys+ "," + visionPrescriptionLensSpcfctnDurationSys;
+	        } else if(visionPrescriptionLensSpcfctnDurationSys.equals("[") | visionPrescriptionLensSpcfctnDurationSys.equals("]") | this.visionPrescriptionLensSpcfctnDurationSys.substring(this.visionPrescriptionLensSpcfctnDurationSys.length() - 1).equals("[")) {
+	        	this.visionPrescriptionLensSpcfctnDurationSys = this.visionPrescriptionLensSpcfctnDurationSys+visionPrescriptionLensSpcfctnDurationSys;
+	        } else  {
+	            this.visionPrescriptionLensSpcfctnDurationSys = this.visionPrescriptionLensSpcfctnDurationSys+ "," +visionPrescriptionLensSpcfctnDurationSys;
+	        }
+        }
     }
     
     
@@ -329,6 +693,20 @@ public class VisionPrescription  implements java.io.Serializable {
         this.visionPrescriptionLensSpcfctnDurationUnt = visionPrescriptionLensSpcfctnDurationUnt;
     }
     
+    public void addVisionPrescriptionLensSpcfctnDurationUnt(String visionPrescriptionLensSpcfctnDurationUnt) {
+    	if( visionPrescriptionLensSpcfctnDurationUnt != null ) {
+	    	if( this.visionPrescriptionLensSpcfctnDurationUnt == null ) {
+	        	this.visionPrescriptionLensSpcfctnDurationUnt = visionPrescriptionLensSpcfctnDurationUnt;
+	        } else if(this.visionPrescriptionLensSpcfctnDurationUnt.substring(this.visionPrescriptionLensSpcfctnDurationUnt.length() - 1).equals("]") & visionPrescriptionLensSpcfctnDurationUnt.equals("[")) {
+	        	this.visionPrescriptionLensSpcfctnDurationUnt = this.visionPrescriptionLensSpcfctnDurationUnt+ "," + visionPrescriptionLensSpcfctnDurationUnt;
+	        } else if(visionPrescriptionLensSpcfctnDurationUnt.equals("[") | visionPrescriptionLensSpcfctnDurationUnt.equals("]") | this.visionPrescriptionLensSpcfctnDurationUnt.substring(this.visionPrescriptionLensSpcfctnDurationUnt.length() - 1).equals("[")) {
+	        	this.visionPrescriptionLensSpcfctnDurationUnt = this.visionPrescriptionLensSpcfctnDurationUnt+visionPrescriptionLensSpcfctnDurationUnt;
+	        } else  {
+	            this.visionPrescriptionLensSpcfctnDurationUnt = this.visionPrescriptionLensSpcfctnDurationUnt+ "," +visionPrescriptionLensSpcfctnDurationUnt;
+	        }
+        }
+    }
+    
     
     
     public String getVisionPrescriptionLensSpcfctnDurationVl() {
@@ -337,6 +715,20 @@ public class VisionPrescription  implements java.io.Serializable {
     
     public void setVisionPrescriptionLensSpcfctnDurationVl(String visionPrescriptionLensSpcfctnDurationVl) {
         this.visionPrescriptionLensSpcfctnDurationVl = visionPrescriptionLensSpcfctnDurationVl;
+    }
+    
+    public void addVisionPrescriptionLensSpcfctnDurationVl(String visionPrescriptionLensSpcfctnDurationVl) {
+    	if( visionPrescriptionLensSpcfctnDurationVl != null ) {
+	    	if( this.visionPrescriptionLensSpcfctnDurationVl == null ) {
+	        	this.visionPrescriptionLensSpcfctnDurationVl = visionPrescriptionLensSpcfctnDurationVl;
+	        } else if(this.visionPrescriptionLensSpcfctnDurationVl.substring(this.visionPrescriptionLensSpcfctnDurationVl.length() - 1).equals("]") & visionPrescriptionLensSpcfctnDurationVl.equals("[")) {
+	        	this.visionPrescriptionLensSpcfctnDurationVl = this.visionPrescriptionLensSpcfctnDurationVl+ "," + visionPrescriptionLensSpcfctnDurationVl;
+	        } else if(visionPrescriptionLensSpcfctnDurationVl.equals("[") | visionPrescriptionLensSpcfctnDurationVl.equals("]") | this.visionPrescriptionLensSpcfctnDurationVl.substring(this.visionPrescriptionLensSpcfctnDurationVl.length() - 1).equals("[")) {
+	        	this.visionPrescriptionLensSpcfctnDurationVl = this.visionPrescriptionLensSpcfctnDurationVl+visionPrescriptionLensSpcfctnDurationVl;
+	        } else  {
+	            this.visionPrescriptionLensSpcfctnDurationVl = this.visionPrescriptionLensSpcfctnDurationVl+ "," +visionPrescriptionLensSpcfctnDurationVl;
+	        }
+        }
     }
     
     
@@ -349,6 +741,20 @@ public class VisionPrescription  implements java.io.Serializable {
         this.visionPrescriptionLensSpcfctnEye = visionPrescriptionLensSpcfctnEye;
     }
     
+    public void addVisionPrescriptionLensSpcfctnEye(String visionPrescriptionLensSpcfctnEye) {
+    	if( visionPrescriptionLensSpcfctnEye != null ) {
+	    	if( this.visionPrescriptionLensSpcfctnEye == null ) {
+	        	this.visionPrescriptionLensSpcfctnEye = visionPrescriptionLensSpcfctnEye;
+	        } else if(this.visionPrescriptionLensSpcfctnEye.substring(this.visionPrescriptionLensSpcfctnEye.length() - 1).equals("]") & visionPrescriptionLensSpcfctnEye.equals("[")) {
+	        	this.visionPrescriptionLensSpcfctnEye = this.visionPrescriptionLensSpcfctnEye+ "," + visionPrescriptionLensSpcfctnEye;
+	        } else if(visionPrescriptionLensSpcfctnEye.equals("[") | visionPrescriptionLensSpcfctnEye.equals("]") | this.visionPrescriptionLensSpcfctnEye.substring(this.visionPrescriptionLensSpcfctnEye.length() - 1).equals("[")) {
+	        	this.visionPrescriptionLensSpcfctnEye = this.visionPrescriptionLensSpcfctnEye+visionPrescriptionLensSpcfctnEye;
+	        } else  {
+	            this.visionPrescriptionLensSpcfctnEye = this.visionPrescriptionLensSpcfctnEye+ "," +visionPrescriptionLensSpcfctnEye;
+	        }
+        }
+    }
+    
     
     
     public String getVisionPrescriptionLensSpcfctnNtAthrRfrnc() {
@@ -357,6 +763,20 @@ public class VisionPrescription  implements java.io.Serializable {
     
     public void setVisionPrescriptionLensSpcfctnNtAthrRfrnc(String visionPrescriptionLensSpcfctnNtAthrRfrnc) {
         this.visionPrescriptionLensSpcfctnNtAthrRfrnc = visionPrescriptionLensSpcfctnNtAthrRfrnc;
+    }
+    
+    public void addVisionPrescriptionLensSpcfctnNtAthrRfrnc(String visionPrescriptionLensSpcfctnNtAthrRfrnc) {
+    	if( visionPrescriptionLensSpcfctnNtAthrRfrnc != null ) {
+	    	if( this.visionPrescriptionLensSpcfctnNtAthrRfrnc == null ) {
+	        	this.visionPrescriptionLensSpcfctnNtAthrRfrnc = visionPrescriptionLensSpcfctnNtAthrRfrnc;
+	        } else if(this.visionPrescriptionLensSpcfctnNtAthrRfrnc.substring(this.visionPrescriptionLensSpcfctnNtAthrRfrnc.length() - 1).equals("]") & visionPrescriptionLensSpcfctnNtAthrRfrnc.equals("[")) {
+	        	this.visionPrescriptionLensSpcfctnNtAthrRfrnc = this.visionPrescriptionLensSpcfctnNtAthrRfrnc+ "," + visionPrescriptionLensSpcfctnNtAthrRfrnc;
+	        } else if(visionPrescriptionLensSpcfctnNtAthrRfrnc.equals("[") | visionPrescriptionLensSpcfctnNtAthrRfrnc.equals("]") | this.visionPrescriptionLensSpcfctnNtAthrRfrnc.substring(this.visionPrescriptionLensSpcfctnNtAthrRfrnc.length() - 1).equals("[")) {
+	        	this.visionPrescriptionLensSpcfctnNtAthrRfrnc = this.visionPrescriptionLensSpcfctnNtAthrRfrnc+visionPrescriptionLensSpcfctnNtAthrRfrnc;
+	        } else  {
+	            this.visionPrescriptionLensSpcfctnNtAthrRfrnc = this.visionPrescriptionLensSpcfctnNtAthrRfrnc+ "," +visionPrescriptionLensSpcfctnNtAthrRfrnc;
+	        }
+        }
     }
     
     
@@ -369,6 +789,20 @@ public class VisionPrescription  implements java.io.Serializable {
         this.visionPrescriptionLensSpcfctnNtAthrStrgTyp = visionPrescriptionLensSpcfctnNtAthrStrgTyp;
     }
     
+    public void addVisionPrescriptionLensSpcfctnNtAthrStrgTyp(String visionPrescriptionLensSpcfctnNtAthrStrgTyp) {
+    	if( visionPrescriptionLensSpcfctnNtAthrStrgTyp != null ) {
+	    	if( this.visionPrescriptionLensSpcfctnNtAthrStrgTyp == null ) {
+	        	this.visionPrescriptionLensSpcfctnNtAthrStrgTyp = visionPrescriptionLensSpcfctnNtAthrStrgTyp;
+	        } else if(this.visionPrescriptionLensSpcfctnNtAthrStrgTyp.substring(this.visionPrescriptionLensSpcfctnNtAthrStrgTyp.length() - 1).equals("]") & visionPrescriptionLensSpcfctnNtAthrStrgTyp.equals("[")) {
+	        	this.visionPrescriptionLensSpcfctnNtAthrStrgTyp = this.visionPrescriptionLensSpcfctnNtAthrStrgTyp+ "," + visionPrescriptionLensSpcfctnNtAthrStrgTyp;
+	        } else if(visionPrescriptionLensSpcfctnNtAthrStrgTyp.equals("[") | visionPrescriptionLensSpcfctnNtAthrStrgTyp.equals("]") | this.visionPrescriptionLensSpcfctnNtAthrStrgTyp.substring(this.visionPrescriptionLensSpcfctnNtAthrStrgTyp.length() - 1).equals("[")) {
+	        	this.visionPrescriptionLensSpcfctnNtAthrStrgTyp = this.visionPrescriptionLensSpcfctnNtAthrStrgTyp+visionPrescriptionLensSpcfctnNtAthrStrgTyp;
+	        } else  {
+	            this.visionPrescriptionLensSpcfctnNtAthrStrgTyp = this.visionPrescriptionLensSpcfctnNtAthrStrgTyp+ "," +visionPrescriptionLensSpcfctnNtAthrStrgTyp;
+	        }
+        }
+    }
+    
     
     
     public String getVisionPrescriptionLensSpcfctnNtTxt() {
@@ -377,6 +811,20 @@ public class VisionPrescription  implements java.io.Serializable {
     
     public void setVisionPrescriptionLensSpcfctnNtTxt(String visionPrescriptionLensSpcfctnNtTxt) {
         this.visionPrescriptionLensSpcfctnNtTxt = visionPrescriptionLensSpcfctnNtTxt;
+    }
+    
+    public void addVisionPrescriptionLensSpcfctnNtTxt(String visionPrescriptionLensSpcfctnNtTxt) {
+    	if( visionPrescriptionLensSpcfctnNtTxt != null ) {
+	    	if( this.visionPrescriptionLensSpcfctnNtTxt == null ) {
+	        	this.visionPrescriptionLensSpcfctnNtTxt = visionPrescriptionLensSpcfctnNtTxt;
+	        } else if(this.visionPrescriptionLensSpcfctnNtTxt.substring(this.visionPrescriptionLensSpcfctnNtTxt.length() - 1).equals("]") & visionPrescriptionLensSpcfctnNtTxt.equals("[")) {
+	        	this.visionPrescriptionLensSpcfctnNtTxt = this.visionPrescriptionLensSpcfctnNtTxt+ "," + visionPrescriptionLensSpcfctnNtTxt;
+	        } else if(visionPrescriptionLensSpcfctnNtTxt.equals("[") | visionPrescriptionLensSpcfctnNtTxt.equals("]") | this.visionPrescriptionLensSpcfctnNtTxt.substring(this.visionPrescriptionLensSpcfctnNtTxt.length() - 1).equals("[")) {
+	        	this.visionPrescriptionLensSpcfctnNtTxt = this.visionPrescriptionLensSpcfctnNtTxt+visionPrescriptionLensSpcfctnNtTxt;
+	        } else  {
+	            this.visionPrescriptionLensSpcfctnNtTxt = this.visionPrescriptionLensSpcfctnNtTxt+ "," +visionPrescriptionLensSpcfctnNtTxt;
+	        }
+        }
     }
     
     
@@ -389,6 +837,20 @@ public class VisionPrescription  implements java.io.Serializable {
         this.visionPrescriptionLensSpcfctnNtTime = visionPrescriptionLensSpcfctnNtTime;
     }
     
+    public void addVisionPrescriptionLensSpcfctnNtTime(String visionPrescriptionLensSpcfctnNtTime) {
+    	if( visionPrescriptionLensSpcfctnNtTime != null ) {
+	    	if( this.visionPrescriptionLensSpcfctnNtTime == null ) {
+	        	this.visionPrescriptionLensSpcfctnNtTime = visionPrescriptionLensSpcfctnNtTime;
+	        } else if(this.visionPrescriptionLensSpcfctnNtTime.substring(this.visionPrescriptionLensSpcfctnNtTime.length() - 1).equals("]") & visionPrescriptionLensSpcfctnNtTime.equals("[")) {
+	        	this.visionPrescriptionLensSpcfctnNtTime = this.visionPrescriptionLensSpcfctnNtTime+ "," + visionPrescriptionLensSpcfctnNtTime;
+	        } else if(visionPrescriptionLensSpcfctnNtTime.equals("[") | visionPrescriptionLensSpcfctnNtTime.equals("]") | this.visionPrescriptionLensSpcfctnNtTime.substring(this.visionPrescriptionLensSpcfctnNtTime.length() - 1).equals("[")) {
+	        	this.visionPrescriptionLensSpcfctnNtTime = this.visionPrescriptionLensSpcfctnNtTime+visionPrescriptionLensSpcfctnNtTime;
+	        } else  {
+	            this.visionPrescriptionLensSpcfctnNtTime = this.visionPrescriptionLensSpcfctnNtTime+ "," +visionPrescriptionLensSpcfctnNtTime;
+	        }
+        }
+    }
+    
     
     
     public String getVisionPrescriptionLensSpcfctnPower() {
@@ -397,6 +859,20 @@ public class VisionPrescription  implements java.io.Serializable {
     
     public void setVisionPrescriptionLensSpcfctnPower(String visionPrescriptionLensSpcfctnPower) {
         this.visionPrescriptionLensSpcfctnPower = visionPrescriptionLensSpcfctnPower;
+    }
+    
+    public void addVisionPrescriptionLensSpcfctnPower(String visionPrescriptionLensSpcfctnPower) {
+    	if( visionPrescriptionLensSpcfctnPower != null ) {
+	    	if( this.visionPrescriptionLensSpcfctnPower == null ) {
+	        	this.visionPrescriptionLensSpcfctnPower = visionPrescriptionLensSpcfctnPower;
+	        } else if(this.visionPrescriptionLensSpcfctnPower.substring(this.visionPrescriptionLensSpcfctnPower.length() - 1).equals("]") & visionPrescriptionLensSpcfctnPower.equals("[")) {
+	        	this.visionPrescriptionLensSpcfctnPower = this.visionPrescriptionLensSpcfctnPower+ "," + visionPrescriptionLensSpcfctnPower;
+	        } else if(visionPrescriptionLensSpcfctnPower.equals("[") | visionPrescriptionLensSpcfctnPower.equals("]") | this.visionPrescriptionLensSpcfctnPower.substring(this.visionPrescriptionLensSpcfctnPower.length() - 1).equals("[")) {
+	        	this.visionPrescriptionLensSpcfctnPower = this.visionPrescriptionLensSpcfctnPower+visionPrescriptionLensSpcfctnPower;
+	        } else  {
+	            this.visionPrescriptionLensSpcfctnPower = this.visionPrescriptionLensSpcfctnPower+ "," +visionPrescriptionLensSpcfctnPower;
+	        }
+        }
     }
     
     
@@ -409,6 +885,20 @@ public class VisionPrescription  implements java.io.Serializable {
         this.visionPrescriptionLensSpcfctnPrismAmnt = visionPrescriptionLensSpcfctnPrismAmnt;
     }
     
+    public void addVisionPrescriptionLensSpcfctnPrismAmnt(String visionPrescriptionLensSpcfctnPrismAmnt) {
+    	if( visionPrescriptionLensSpcfctnPrismAmnt != null ) {
+	    	if( this.visionPrescriptionLensSpcfctnPrismAmnt == null ) {
+	        	this.visionPrescriptionLensSpcfctnPrismAmnt = visionPrescriptionLensSpcfctnPrismAmnt;
+	        } else if(this.visionPrescriptionLensSpcfctnPrismAmnt.substring(this.visionPrescriptionLensSpcfctnPrismAmnt.length() - 1).equals("]") & visionPrescriptionLensSpcfctnPrismAmnt.equals("[")) {
+	        	this.visionPrescriptionLensSpcfctnPrismAmnt = this.visionPrescriptionLensSpcfctnPrismAmnt+ "," + visionPrescriptionLensSpcfctnPrismAmnt;
+	        } else if(visionPrescriptionLensSpcfctnPrismAmnt.equals("[") | visionPrescriptionLensSpcfctnPrismAmnt.equals("]") | this.visionPrescriptionLensSpcfctnPrismAmnt.substring(this.visionPrescriptionLensSpcfctnPrismAmnt.length() - 1).equals("[")) {
+	        	this.visionPrescriptionLensSpcfctnPrismAmnt = this.visionPrescriptionLensSpcfctnPrismAmnt+visionPrescriptionLensSpcfctnPrismAmnt;
+	        } else  {
+	            this.visionPrescriptionLensSpcfctnPrismAmnt = this.visionPrescriptionLensSpcfctnPrismAmnt+ "," +visionPrescriptionLensSpcfctnPrismAmnt;
+	        }
+        }
+    }
+    
     
     
     public String getVisionPrescriptionLensSpcfctnPrismBase() {
@@ -417,6 +907,20 @@ public class VisionPrescription  implements java.io.Serializable {
     
     public void setVisionPrescriptionLensSpcfctnPrismBase(String visionPrescriptionLensSpcfctnPrismBase) {
         this.visionPrescriptionLensSpcfctnPrismBase = visionPrescriptionLensSpcfctnPrismBase;
+    }
+    
+    public void addVisionPrescriptionLensSpcfctnPrismBase(String visionPrescriptionLensSpcfctnPrismBase) {
+    	if( visionPrescriptionLensSpcfctnPrismBase != null ) {
+	    	if( this.visionPrescriptionLensSpcfctnPrismBase == null ) {
+	        	this.visionPrescriptionLensSpcfctnPrismBase = visionPrescriptionLensSpcfctnPrismBase;
+	        } else if(this.visionPrescriptionLensSpcfctnPrismBase.substring(this.visionPrescriptionLensSpcfctnPrismBase.length() - 1).equals("]") & visionPrescriptionLensSpcfctnPrismBase.equals("[")) {
+	        	this.visionPrescriptionLensSpcfctnPrismBase = this.visionPrescriptionLensSpcfctnPrismBase+ "," + visionPrescriptionLensSpcfctnPrismBase;
+	        } else if(visionPrescriptionLensSpcfctnPrismBase.equals("[") | visionPrescriptionLensSpcfctnPrismBase.equals("]") | this.visionPrescriptionLensSpcfctnPrismBase.substring(this.visionPrescriptionLensSpcfctnPrismBase.length() - 1).equals("[")) {
+	        	this.visionPrescriptionLensSpcfctnPrismBase = this.visionPrescriptionLensSpcfctnPrismBase+visionPrescriptionLensSpcfctnPrismBase;
+	        } else  {
+	            this.visionPrescriptionLensSpcfctnPrismBase = this.visionPrescriptionLensSpcfctnPrismBase+ "," +visionPrescriptionLensSpcfctnPrismBase;
+	        }
+        }
     }
     
     
@@ -429,6 +933,20 @@ public class VisionPrescription  implements java.io.Serializable {
         this.visionPrescriptionLensSpcfctnPrdctCdgCd = visionPrescriptionLensSpcfctnPrdctCdgCd;
     }
     
+    public void addVisionPrescriptionLensSpcfctnPrdctCdgCd(String visionPrescriptionLensSpcfctnPrdctCdgCd) {
+    	if( visionPrescriptionLensSpcfctnPrdctCdgCd != null ) {
+	    	if( this.visionPrescriptionLensSpcfctnPrdctCdgCd == null ) {
+	        	this.visionPrescriptionLensSpcfctnPrdctCdgCd = visionPrescriptionLensSpcfctnPrdctCdgCd;
+	        } else if(this.visionPrescriptionLensSpcfctnPrdctCdgCd.substring(this.visionPrescriptionLensSpcfctnPrdctCdgCd.length() - 1).equals("]") & visionPrescriptionLensSpcfctnPrdctCdgCd.equals("[")) {
+	        	this.visionPrescriptionLensSpcfctnPrdctCdgCd = this.visionPrescriptionLensSpcfctnPrdctCdgCd+ "," + visionPrescriptionLensSpcfctnPrdctCdgCd;
+	        } else if(visionPrescriptionLensSpcfctnPrdctCdgCd.equals("[") | visionPrescriptionLensSpcfctnPrdctCdgCd.equals("]") | this.visionPrescriptionLensSpcfctnPrdctCdgCd.substring(this.visionPrescriptionLensSpcfctnPrdctCdgCd.length() - 1).equals("[")) {
+	        	this.visionPrescriptionLensSpcfctnPrdctCdgCd = this.visionPrescriptionLensSpcfctnPrdctCdgCd+visionPrescriptionLensSpcfctnPrdctCdgCd;
+	        } else  {
+	            this.visionPrescriptionLensSpcfctnPrdctCdgCd = this.visionPrescriptionLensSpcfctnPrdctCdgCd+ "," +visionPrescriptionLensSpcfctnPrdctCdgCd;
+	        }
+        }
+    }
+    
     
     
     public String getVisionPrescriptionLensSpcfctnPrdctCdgDsply() {
@@ -437,6 +955,20 @@ public class VisionPrescription  implements java.io.Serializable {
     
     public void setVisionPrescriptionLensSpcfctnPrdctCdgDsply(String visionPrescriptionLensSpcfctnPrdctCdgDsply) {
         this.visionPrescriptionLensSpcfctnPrdctCdgDsply = visionPrescriptionLensSpcfctnPrdctCdgDsply;
+    }
+    
+    public void addVisionPrescriptionLensSpcfctnPrdctCdgDsply(String visionPrescriptionLensSpcfctnPrdctCdgDsply) {
+    	if( visionPrescriptionLensSpcfctnPrdctCdgDsply != null ) {
+	    	if( this.visionPrescriptionLensSpcfctnPrdctCdgDsply == null ) {
+	        	this.visionPrescriptionLensSpcfctnPrdctCdgDsply = visionPrescriptionLensSpcfctnPrdctCdgDsply;
+	        } else if(this.visionPrescriptionLensSpcfctnPrdctCdgDsply.substring(this.visionPrescriptionLensSpcfctnPrdctCdgDsply.length() - 1).equals("]") & visionPrescriptionLensSpcfctnPrdctCdgDsply.equals("[")) {
+	        	this.visionPrescriptionLensSpcfctnPrdctCdgDsply = this.visionPrescriptionLensSpcfctnPrdctCdgDsply+ "," + visionPrescriptionLensSpcfctnPrdctCdgDsply;
+	        } else if(visionPrescriptionLensSpcfctnPrdctCdgDsply.equals("[") | visionPrescriptionLensSpcfctnPrdctCdgDsply.equals("]") | this.visionPrescriptionLensSpcfctnPrdctCdgDsply.substring(this.visionPrescriptionLensSpcfctnPrdctCdgDsply.length() - 1).equals("[")) {
+	        	this.visionPrescriptionLensSpcfctnPrdctCdgDsply = this.visionPrescriptionLensSpcfctnPrdctCdgDsply+visionPrescriptionLensSpcfctnPrdctCdgDsply;
+	        } else  {
+	            this.visionPrescriptionLensSpcfctnPrdctCdgDsply = this.visionPrescriptionLensSpcfctnPrdctCdgDsply+ "," +visionPrescriptionLensSpcfctnPrdctCdgDsply;
+	        }
+        }
     }
     
     
@@ -449,6 +981,20 @@ public class VisionPrescription  implements java.io.Serializable {
         this.visionPrescriptionLensSpcfctnPrdctCdgSys = visionPrescriptionLensSpcfctnPrdctCdgSys;
     }
     
+    public void addVisionPrescriptionLensSpcfctnPrdctCdgSys(String visionPrescriptionLensSpcfctnPrdctCdgSys) {
+    	if( visionPrescriptionLensSpcfctnPrdctCdgSys != null ) {
+	    	if( this.visionPrescriptionLensSpcfctnPrdctCdgSys == null ) {
+	        	this.visionPrescriptionLensSpcfctnPrdctCdgSys = visionPrescriptionLensSpcfctnPrdctCdgSys;
+	        } else if(this.visionPrescriptionLensSpcfctnPrdctCdgSys.substring(this.visionPrescriptionLensSpcfctnPrdctCdgSys.length() - 1).equals("]") & visionPrescriptionLensSpcfctnPrdctCdgSys.equals("[")) {
+	        	this.visionPrescriptionLensSpcfctnPrdctCdgSys = this.visionPrescriptionLensSpcfctnPrdctCdgSys+ "," + visionPrescriptionLensSpcfctnPrdctCdgSys;
+	        } else if(visionPrescriptionLensSpcfctnPrdctCdgSys.equals("[") | visionPrescriptionLensSpcfctnPrdctCdgSys.equals("]") | this.visionPrescriptionLensSpcfctnPrdctCdgSys.substring(this.visionPrescriptionLensSpcfctnPrdctCdgSys.length() - 1).equals("[")) {
+	        	this.visionPrescriptionLensSpcfctnPrdctCdgSys = this.visionPrescriptionLensSpcfctnPrdctCdgSys+visionPrescriptionLensSpcfctnPrdctCdgSys;
+	        } else  {
+	            this.visionPrescriptionLensSpcfctnPrdctCdgSys = this.visionPrescriptionLensSpcfctnPrdctCdgSys+ "," +visionPrescriptionLensSpcfctnPrdctCdgSys;
+	        }
+        }
+    }
+    
     
     
     public String getVisionPrescriptionLensSpcfctnPrdctCdgUsrSltd() {
@@ -457,6 +1003,20 @@ public class VisionPrescription  implements java.io.Serializable {
     
     public void setVisionPrescriptionLensSpcfctnPrdctCdgUsrSltd(String visionPrescriptionLensSpcfctnPrdctCdgUsrSltd) {
         this.visionPrescriptionLensSpcfctnPrdctCdgUsrSltd = visionPrescriptionLensSpcfctnPrdctCdgUsrSltd;
+    }
+    
+    public void addVisionPrescriptionLensSpcfctnPrdctCdgUsrSltd(String visionPrescriptionLensSpcfctnPrdctCdgUsrSltd) {
+    	if( visionPrescriptionLensSpcfctnPrdctCdgUsrSltd != null ) {
+	    	if( this.visionPrescriptionLensSpcfctnPrdctCdgUsrSltd == null ) {
+	        	this.visionPrescriptionLensSpcfctnPrdctCdgUsrSltd = visionPrescriptionLensSpcfctnPrdctCdgUsrSltd;
+	        } else if(this.visionPrescriptionLensSpcfctnPrdctCdgUsrSltd.substring(this.visionPrescriptionLensSpcfctnPrdctCdgUsrSltd.length() - 1).equals("]") & visionPrescriptionLensSpcfctnPrdctCdgUsrSltd.equals("[")) {
+	        	this.visionPrescriptionLensSpcfctnPrdctCdgUsrSltd = this.visionPrescriptionLensSpcfctnPrdctCdgUsrSltd+ "," + visionPrescriptionLensSpcfctnPrdctCdgUsrSltd;
+	        } else if(visionPrescriptionLensSpcfctnPrdctCdgUsrSltd.equals("[") | visionPrescriptionLensSpcfctnPrdctCdgUsrSltd.equals("]") | this.visionPrescriptionLensSpcfctnPrdctCdgUsrSltd.substring(this.visionPrescriptionLensSpcfctnPrdctCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.visionPrescriptionLensSpcfctnPrdctCdgUsrSltd = this.visionPrescriptionLensSpcfctnPrdctCdgUsrSltd+visionPrescriptionLensSpcfctnPrdctCdgUsrSltd;
+	        } else  {
+	            this.visionPrescriptionLensSpcfctnPrdctCdgUsrSltd = this.visionPrescriptionLensSpcfctnPrdctCdgUsrSltd+ "," +visionPrescriptionLensSpcfctnPrdctCdgUsrSltd;
+	        }
+        }
     }
     
     
@@ -469,6 +1029,20 @@ public class VisionPrescription  implements java.io.Serializable {
         this.visionPrescriptionLensSpcfctnPrdctCdgVrsn = visionPrescriptionLensSpcfctnPrdctCdgVrsn;
     }
     
+    public void addVisionPrescriptionLensSpcfctnPrdctCdgVrsn(String visionPrescriptionLensSpcfctnPrdctCdgVrsn) {
+    	if( visionPrescriptionLensSpcfctnPrdctCdgVrsn != null ) {
+	    	if( this.visionPrescriptionLensSpcfctnPrdctCdgVrsn == null ) {
+	        	this.visionPrescriptionLensSpcfctnPrdctCdgVrsn = visionPrescriptionLensSpcfctnPrdctCdgVrsn;
+	        } else if(this.visionPrescriptionLensSpcfctnPrdctCdgVrsn.substring(this.visionPrescriptionLensSpcfctnPrdctCdgVrsn.length() - 1).equals("]") & visionPrescriptionLensSpcfctnPrdctCdgVrsn.equals("[")) {
+	        	this.visionPrescriptionLensSpcfctnPrdctCdgVrsn = this.visionPrescriptionLensSpcfctnPrdctCdgVrsn+ "," + visionPrescriptionLensSpcfctnPrdctCdgVrsn;
+	        } else if(visionPrescriptionLensSpcfctnPrdctCdgVrsn.equals("[") | visionPrescriptionLensSpcfctnPrdctCdgVrsn.equals("]") | this.visionPrescriptionLensSpcfctnPrdctCdgVrsn.substring(this.visionPrescriptionLensSpcfctnPrdctCdgVrsn.length() - 1).equals("[")) {
+	        	this.visionPrescriptionLensSpcfctnPrdctCdgVrsn = this.visionPrescriptionLensSpcfctnPrdctCdgVrsn+visionPrescriptionLensSpcfctnPrdctCdgVrsn;
+	        } else  {
+	            this.visionPrescriptionLensSpcfctnPrdctCdgVrsn = this.visionPrescriptionLensSpcfctnPrdctCdgVrsn+ "," +visionPrescriptionLensSpcfctnPrdctCdgVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getVisionPrescriptionLensSpcfctnPrdctTxt() {
@@ -477,6 +1051,20 @@ public class VisionPrescription  implements java.io.Serializable {
     
     public void setVisionPrescriptionLensSpcfctnPrdctTxt(String visionPrescriptionLensSpcfctnPrdctTxt) {
         this.visionPrescriptionLensSpcfctnPrdctTxt = visionPrescriptionLensSpcfctnPrdctTxt;
+    }
+    
+    public void addVisionPrescriptionLensSpcfctnPrdctTxt(String visionPrescriptionLensSpcfctnPrdctTxt) {
+    	if( visionPrescriptionLensSpcfctnPrdctTxt != null ) {
+	    	if( this.visionPrescriptionLensSpcfctnPrdctTxt == null ) {
+	        	this.visionPrescriptionLensSpcfctnPrdctTxt = visionPrescriptionLensSpcfctnPrdctTxt;
+	        } else if(this.visionPrescriptionLensSpcfctnPrdctTxt.substring(this.visionPrescriptionLensSpcfctnPrdctTxt.length() - 1).equals("]") & visionPrescriptionLensSpcfctnPrdctTxt.equals("[")) {
+	        	this.visionPrescriptionLensSpcfctnPrdctTxt = this.visionPrescriptionLensSpcfctnPrdctTxt+ "," + visionPrescriptionLensSpcfctnPrdctTxt;
+	        } else if(visionPrescriptionLensSpcfctnPrdctTxt.equals("[") | visionPrescriptionLensSpcfctnPrdctTxt.equals("]") | this.visionPrescriptionLensSpcfctnPrdctTxt.substring(this.visionPrescriptionLensSpcfctnPrdctTxt.length() - 1).equals("[")) {
+	        	this.visionPrescriptionLensSpcfctnPrdctTxt = this.visionPrescriptionLensSpcfctnPrdctTxt+visionPrescriptionLensSpcfctnPrdctTxt;
+	        } else  {
+	            this.visionPrescriptionLensSpcfctnPrdctTxt = this.visionPrescriptionLensSpcfctnPrdctTxt+ "," +visionPrescriptionLensSpcfctnPrdctTxt;
+	        }
+        }
     }
     
     
@@ -489,6 +1077,20 @@ public class VisionPrescription  implements java.io.Serializable {
         this.visionPrescriptionLensSpcfctnSphere = visionPrescriptionLensSpcfctnSphere;
     }
     
+    public void addVisionPrescriptionLensSpcfctnSphere(String visionPrescriptionLensSpcfctnSphere) {
+    	if( visionPrescriptionLensSpcfctnSphere != null ) {
+	    	if( this.visionPrescriptionLensSpcfctnSphere == null ) {
+	        	this.visionPrescriptionLensSpcfctnSphere = visionPrescriptionLensSpcfctnSphere;
+	        } else if(this.visionPrescriptionLensSpcfctnSphere.substring(this.visionPrescriptionLensSpcfctnSphere.length() - 1).equals("]") & visionPrescriptionLensSpcfctnSphere.equals("[")) {
+	        	this.visionPrescriptionLensSpcfctnSphere = this.visionPrescriptionLensSpcfctnSphere+ "," + visionPrescriptionLensSpcfctnSphere;
+	        } else if(visionPrescriptionLensSpcfctnSphere.equals("[") | visionPrescriptionLensSpcfctnSphere.equals("]") | this.visionPrescriptionLensSpcfctnSphere.substring(this.visionPrescriptionLensSpcfctnSphere.length() - 1).equals("[")) {
+	        	this.visionPrescriptionLensSpcfctnSphere = this.visionPrescriptionLensSpcfctnSphere+visionPrescriptionLensSpcfctnSphere;
+	        } else  {
+	            this.visionPrescriptionLensSpcfctnSphere = this.visionPrescriptionLensSpcfctnSphere+ "," +visionPrescriptionLensSpcfctnSphere;
+	        }
+        }
+    }
+    
     
     
     public String getVisionPrescriptionPnt() {
@@ -497,6 +1099,20 @@ public class VisionPrescription  implements java.io.Serializable {
     
     public void setVisionPrescriptionPnt(String visionPrescriptionPnt) {
         this.visionPrescriptionPnt = visionPrescriptionPnt;
+    }
+    
+    public void addVisionPrescriptionPnt(String visionPrescriptionPnt) {
+    	if( visionPrescriptionPnt != null ) {
+	    	if( this.visionPrescriptionPnt == null ) {
+	        	this.visionPrescriptionPnt = visionPrescriptionPnt;
+	        } else if(this.visionPrescriptionPnt.substring(this.visionPrescriptionPnt.length() - 1).equals("]") & visionPrescriptionPnt.equals("[")) {
+	        	this.visionPrescriptionPnt = this.visionPrescriptionPnt+ "," + visionPrescriptionPnt;
+	        } else if(visionPrescriptionPnt.equals("[") | visionPrescriptionPnt.equals("]") | this.visionPrescriptionPnt.substring(this.visionPrescriptionPnt.length() - 1).equals("[")) {
+	        	this.visionPrescriptionPnt = this.visionPrescriptionPnt+visionPrescriptionPnt;
+	        } else  {
+	            this.visionPrescriptionPnt = this.visionPrescriptionPnt+ "," +visionPrescriptionPnt;
+	        }
+        }
     }
     
     
@@ -509,6 +1125,20 @@ public class VisionPrescription  implements java.io.Serializable {
         this.visionPrescriptionPrescriber = visionPrescriptionPrescriber;
     }
     
+    public void addVisionPrescriptionPrescriber(String visionPrescriptionPrescriber) {
+    	if( visionPrescriptionPrescriber != null ) {
+	    	if( this.visionPrescriptionPrescriber == null ) {
+	        	this.visionPrescriptionPrescriber = visionPrescriptionPrescriber;
+	        } else if(this.visionPrescriptionPrescriber.substring(this.visionPrescriptionPrescriber.length() - 1).equals("]") & visionPrescriptionPrescriber.equals("[")) {
+	        	this.visionPrescriptionPrescriber = this.visionPrescriptionPrescriber+ "," + visionPrescriptionPrescriber;
+	        } else if(visionPrescriptionPrescriber.equals("[") | visionPrescriptionPrescriber.equals("]") | this.visionPrescriptionPrescriber.substring(this.visionPrescriptionPrescriber.length() - 1).equals("[")) {
+	        	this.visionPrescriptionPrescriber = this.visionPrescriptionPrescriber+visionPrescriptionPrescriber;
+	        } else  {
+	            this.visionPrescriptionPrescriber = this.visionPrescriptionPrescriber+ "," +visionPrescriptionPrescriber;
+	        }
+        }
+    }
+    
     
     
     public String getVisionPrescriptionSts() {
@@ -517,6 +1147,20 @@ public class VisionPrescription  implements java.io.Serializable {
     
     public void setVisionPrescriptionSts(String visionPrescriptionSts) {
         this.visionPrescriptionSts = visionPrescriptionSts;
+    }
+    
+    public void addVisionPrescriptionSts(String visionPrescriptionSts) {
+    	if( visionPrescriptionSts != null ) {
+	    	if( this.visionPrescriptionSts == null ) {
+	        	this.visionPrescriptionSts = visionPrescriptionSts;
+	        } else if(this.visionPrescriptionSts.substring(this.visionPrescriptionSts.length() - 1).equals("]") & visionPrescriptionSts.equals("[")) {
+	        	this.visionPrescriptionSts = this.visionPrescriptionSts+ "," + visionPrescriptionSts;
+	        } else if(visionPrescriptionSts.equals("[") | visionPrescriptionSts.equals("]") | this.visionPrescriptionSts.substring(this.visionPrescriptionSts.length() - 1).equals("[")) {
+	        	this.visionPrescriptionSts = this.visionPrescriptionSts+visionPrescriptionSts;
+	        } else  {
+	            this.visionPrescriptionSts = this.visionPrescriptionSts+ "," +visionPrescriptionSts;
+	        }
+        }
     }
     
     

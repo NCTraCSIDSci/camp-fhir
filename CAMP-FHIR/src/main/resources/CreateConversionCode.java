@@ -6,6 +6,8 @@ import org.hl7.fhir.r4.model.DomainResource;
 import org.reflections.ReflectionUtils;
 import org.reflections.ReflectionUtils.*;
 
+import ca.uhn.fhir.util.DateUtils;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -63,110 +65,146 @@ class CreateConversionCode
 
          	//            Set<Method> getters = ReflectionUtils.getAllMethods(cls,ReflectionUtils.withModifier(Modifier.PUBLIC), ReflectionUtils.withPrefix("get"));
          	//get all add methods with one parameters, with a return type of the fhir model class that we are in
-         	if(!className.equals("examplescenario") & !className.equals("structuremap") & !className.equals("graphdefinition") & !className.equals("implementationguide") & !className.equals("metadataresource")) {
-         		//writing head of conversion file
-         		 conversionWriter.write("package main.java.com.campfhir.service.conversion;");
-                 conversionWriter.write(System.lineSeparator());
-                 conversionWriter.write("import java.text.ParseException;");
-                 conversionWriter.write(System.lineSeparator());
-                 conversionWriter.write("import main.java.com.campfhir.model." +cls.getName().split("\\.")[cls.getName().split("\\.").length -1]+";");
-                 conversionWriter.write(System.lineSeparator());
-                 conversionWriter.write("public class "+cls.getName().split("\\.")[cls.getName().split("\\.").length -1]+"Conversion ");
-                 conversionWriter.write(System.lineSeparator());
-                 conversionWriter.write("{");
-                 conversionWriter.write(System.lineSeparator());
-                 conversionWriter.write("\tpublic org.hl7.fhir.r4.model."+cls.getName().split("\\.")[cls.getName().split("\\.").length -1]+" " +cls.getName().split("\\.")[cls.getName().split("\\.").length -1]+"s("+cls.getName().split("\\.")[cls.getName().split("\\.").length -1]+" "+className.charAt(0)+ ") throws ParseException");
-                 conversionWriter.write(System.lineSeparator());
-                 conversionWriter.write("\t{");
-                 conversionWriter.write(System.lineSeparator());
-                 conversionWriter.write("\t\t"+cls.getName() + " " + className + " = new " + cls.getName()+ "();");
-     			 conversionWriter.write(System.lineSeparator());
-     			 conversionWriter.write(System.lineSeparator());
-     			 conversionWriter.write("\t\t/******************** "+ "id" +" ********************************************************************************/");
-     			 conversionWriter.write(System.lineSeparator());
- 		         conversionWriter.write("\t\t" + className + ".setId("+className.charAt(0) + ".getId()" +");");
-     			 conversionWriter.write(System.lineSeparator());
- 		         conversionWriter.write(System.lineSeparator());
-                 
-                 //writing head of sql file
-                 sqlWriter.write("drop table if exists `" + cls.getName().split("\\.")[cls.getName().split("\\.").length -1]+ "`;\r\nCREATE TABLE `" + cls.getName().split("\\.")[cls.getName().split("\\.").length -1] + "` (\r\n id varchar(64),\r\n" );
-
-                 recurseThroughClasses(cls, "", null ,conversionWriter, sqlWriter);
-                 
-                 //writing end of sql file and conversion files
-                 sqlWriter.write("PRIMARY KEY(id)) ENGINE=MyISAM\r\n"
-                 		+ "    ROW_FORMAT=COMPRESSED \r\n"
-                 		+ "    KEY_BLOCK_SIZE=8;");
-                 sqlWriter.close();
-                 conversionWriter.write("\t\treturn " +className+";");
-         		 conversionWriter.write(System.lineSeparator());
-         		 conversionWriter.write("	}");
-         		 conversionWriter.write(System.lineSeparator());
-         		 conversionWriter.write("}");
-         		 conversionWriter.write(System.lineSeparator());
-         		 conversionWriter.close();               
-         	}
-       	}    
+        	if(className.equals("patient")) {
+	         	if(!className.equals("examplescenario") & !className.equals("structuremap") & !className.equals("graphdefinition") & !className.equals("implementationguide") & !className.equals("metadataresource")) {
+	         		//writing head of conversion file
+	         		 conversionWriter.write("package main.java.com.campfhir.service.conversion;");
+	                 conversionWriter.write(System.lineSeparator());
+	                 conversionWriter.write("import java.text.ParseException;");
+	                 conversionWriter.write(System.lineSeparator());
+	                 conversionWriter.write("import main.java.com.campfhir.model." +cls.getName().split("\\.")[cls.getName().split("\\.").length -1]+";");
+	                 conversionWriter.write(System.lineSeparator());
+	                 conversionWriter.write("public class "+cls.getName().split("\\.")[cls.getName().split("\\.").length -1]+"Conversion ");
+	                 conversionWriter.write(System.lineSeparator());
+	                 conversionWriter.write("{");
+	                 conversionWriter.write(System.lineSeparator());
+	                 conversionWriter.write("\tpublic org.hl7.fhir.r4.model."+cls.getName().split("\\.")[cls.getName().split("\\.").length -1]+" " +cls.getName().split("\\.")[cls.getName().split("\\.").length -1]+"s("+cls.getName().split("\\.")[cls.getName().split("\\.").length -1]+" "+className.charAt(0)+ ") throws ParseException");
+	                 conversionWriter.write(System.lineSeparator());
+	                 conversionWriter.write("\t{");
+	                 conversionWriter.write(System.lineSeparator());
+	                 conversionWriter.write("\t\t"+cls.getName() + " " + className + " = new " + cls.getName()+ "();");
+	     			 conversionWriter.write(System.lineSeparator());
+	     			 conversionWriter.write(System.lineSeparator());
+	     			 conversionWriter.write("\t\t/******************** "+ "id" +" ********************************************************************************/");
+	     			 conversionWriter.write(System.lineSeparator());
+	 		         conversionWriter.write("\t\t" + className + ".setId("+className.charAt(0) + ".getId()" +");");
+	     			 conversionWriter.write(System.lineSeparator());
+	 		         conversionWriter.write(System.lineSeparator());
+	                 
+	                 //writing head of sql file
+	                 sqlWriter.write("drop table if exists `" + cls.getName().split("\\.")[cls.getName().split("\\.").length -1]+ "`;\r\nCREATE TABLE `" + cls.getName().split("\\.")[cls.getName().split("\\.").length -1] + "` (\r\n id varchar(64),\r\n" );
+	
+	                 recurseThroughClasses(cls, "", null ,conversionWriter, sqlWriter);
+	                 
+	                 //writing end of sql file and conversion files
+	                 sqlWriter.write("PRIMARY KEY(id)) ENGINE=MyISAM\r\n"
+	                 		+ "    ROW_FORMAT=COMPRESSED \r\n"
+	                 		+ "    KEY_BLOCK_SIZE=8;");
+	                 sqlWriter.close();
+	                 conversionWriter.write("\t\treturn " +className+";");
+	         		 conversionWriter.write(System.lineSeparator());
+	         		 conversionWriter.write("	}");
+	         		 conversionWriter.write(System.lineSeparator());
+	         		 conversionWriter.write("}");
+	         		 conversionWriter.write(System.lineSeparator());
+	         		 conversionWriter.close();               
+	         	}
+        	}    
+       	}
     }
     
 
 
 
 	public static void recurseThroughClasses(Class<?> cls, String hibernateFieldName, Method parentMethod, FileWriter conversionWriter, FileWriter sqlWriter) throws IOException {
-        String className = cls.getName().split("\\.")[cls.getName().split("\\.").length -1].replaceAll(".*\\$", "").replace(hibernateFieldName, "");
-  
-       // hibernateFieldName = hibernateFieldName == "" ? className : className.endsWith("Component") ? hibernateFieldName+"_"+ className.replace("Component", "") : hibernateFieldName+"_"+ className;
-        hibernateFieldName = hibernateFieldName == "" ? className : hibernateFieldName+ "_" +  parentMethod.getName().replaceFirst("set", "").replaceFirst("add", "").replaceFirst("get", "") ;
-    	Set<Method> allSetters =  generateSetters(cls);
-    	//System.out.println(allSetters);
-    	Iterator<Method> methodIterator = allSetters.iterator();
-    	String XmethodName = "DO NOT MATCH";
- 		while (methodIterator.hasNext()) {
- 			Method currentMethod = (Method) methodIterator.next();
+	      String className = cls.getName().split("\\.")[cls.getName().split("\\.").length -1].replaceAll(".*\\$", "").replace(hibernateFieldName, "");
+	      
+	       // hibernateFieldName = hibernateFieldName == "" ? className : className.endsWith("Component") ? hibernateFieldName+"_"+ className.replace("Component", "") : hibernateFieldName+"_"+ className;
+	        hibernateFieldName = hibernateFieldName == "" ? className : hibernateFieldName+ "_" +  parentMethod.getName().replaceFirst("set", "").replaceFirst("add", "").replaceFirst("get", "") ;
+	    	Set<Method> allSetters =  generateSetters(cls);
+	    	//System.out.println(allSetters);
+	    	Iterator<Method> methodIterator = allSetters.iterator();
+	    	String XmethodName = "DO NOT MATCH";
+	 		while (methodIterator.hasNext()) {
+	 			Method currentMethod = (Method) methodIterator.next();
+	 			System.out.println(currentMethod.getName());
+	 			System.out.println("returnType: " + currentMethod.getReturnType());
+	 			System.out.println("parentClass = " + cls.toString());
+	 			
+	 			Class<?> returncls = currentMethod.getReturnType();
+	 			
+	 			
+	 			Class<?>[] parametersArray = currentMethod.getParameterTypes();
+	 			Class<?> parameterClass = parametersArray.length != 0 ? parametersArray[0] : null;
+	 			String parameterClassName = parametersArray.length != 0 ? parameterClass.getName() : "";
+	 			System.out.println("parameterClass.getName(): " + parameterClassName);
+	 			Type parameterType = parametersArray.length != 0 ? currentMethod.getGenericParameterTypes()[0] : null;
+	 			boolean isParentAList= false;
+	 			if(parameterClassName.equals("java.util.List")) {
+	 				ParameterizedType pt = (ParameterizedType) parameterType;
+	                for (Type arg : pt.getActualTypeArguments())
+	                {
+	                	System.out.println(arg.toString());
+	                   if(arg.toString().contains("Enumeration")) {
+	                	   ParameterizedType ptarg = (ParameterizedType) arg;
+	                	   for (Type EnumerationArg : ptarg.getActualTypeArguments())
+	                       {
+	                		   
+	                		   parameterClass = (Class<?>) EnumerationArg;
+	                		   isParentAList = true;	                		   
+	                       }
+	                   } else  {
+	                	   System.out.println("arg: " + arg);
+	                	   parameterClass = (Class<?>) arg;
+	                	   isParentAList = true;
+	                   }
+	                   
+	                }
+	 			}
+	 			if(parentMethod != null) {
+		 			Class<?>[] parentParametersArray = parentMethod.getParameterTypes();
+		 			Class<?> parentParameterClass = parentParametersArray.length != 0 ? parentParametersArray[0] : null;
+		 			String parentParameterClassName = parentParametersArray.length != 0 ? parentParameterClass.getName() : "";
+		 			System.out.println("parentParameterClassName.getName(): " + parentParameterClassName);
+		 			if(parentParameterClassName.equals("java.util.List")) {
+		 				isParentAList = true;
+		 				
+		 			} else  {
+		 				isParentAList = false;
+		 			}
+	 			}
+	 			//check if the return type is the same as parent class or if the return type is a primitive type, or if the return type is IBaseCoding if either is true then set this boolean to true to kill recursion
+	 			//if there is a parameter in the fhir model package then set this to false as to not kill the recursion yet. If there are no parameters set to true to kill the recursion as long as the above is also true
+	 			boolean parameterIsNotAModelThatNeedsToBeRecursed = parameterClass != null ? !parameterClass.getPackageName().equals("org.hl7.fhir.r4.model") : true;
+				String returnType = currentMethod.getParameters().length != 0 ? currentMethod.getParameters()[0].getType().getName() : currentMethod.getReturnType().getName();
+				returnType = returnType.contains("$") ? returnType.endsWith("Component") ? returnType.replace("$", ".") : returnType.replace("$", ".").concat("EnumFactory") : returnType;
+//				System.out.println("returnType.toString(): " + returnType.toString());
+				//System.out.println(parameterClass.getName());
+				//this if statement sets the XmethodNAme if the field is a X typed field. it gets reset to DO NOT MATCH if it is no longer an X type method
+	 			boolean returnClassIsParentClassORreturnTypeIsPrimitiveType = returncls == cls  | org.hl7.fhir.r4.model.PrimitiveType.class.isAssignableFrom(returncls) | returncls == org.hl7.fhir.instance.model.api.IBaseCoding.class | returnType.contains("java.") | Arrays.asList("byte", "short", "int", "long", "float", "double", "boolean", "char").contains(returnType);
 
- 			Class<?> returncls = currentMethod.getReturnType();
- 			Class<?>[] parametersArray = currentMethod.getParameterTypes();
- 			Class<?> parameterClass = parametersArray.length != 0 ? parametersArray[0] : null;
- 			//check if the return type is the same as parent class or if the return type is a primitive type, or if the return type is IBaseCoding if either is true then set this boolean to true to kill recursion
- 			//if there is a parameter in the fhir model package then set this to false as to not kill the recursion yet. If there are no parameters set to true to kill the recursion as long as the above is also true
- 			boolean parameterIsNotAModelThatNeedsToBeRecursed = parameterClass != null ? !parameterClass.getPackageName().equals("org.hl7.fhir.r4.model") : true;
-			String returnType = currentMethod.getParameters().length != 0 ? currentMethod.getParameters()[0].getType().getName() : currentMethod.getReturnType().getName();
-			returnType = returnType.contains("$") ? returnType.endsWith("Component") ? returnType.replace("$", ".") : returnType.replace("$", ".").concat("EnumFactory") : returnType;
-			//System.out.println(returnType);
-			//this if statement sets the XmethodNAme if the field is a X typed field. it gets reset to DO NOT MATCH if it is no longer an X type method
- 			boolean returnClassIsParentClassORreturnTypeIsPrimitiveType = returncls == cls  | org.hl7.fhir.r4.model.PrimitiveType.class.isAssignableFrom(returncls) | returncls == org.hl7.fhir.instance.model.api.IBaseCoding.class | returnType.contains("java.") | Arrays.asList("byte", "short", "int", "long", "float", "double", "boolean", "char").contains(returnType);
+				if(returnType.equals("org.hl7.fhir.r4.model.Type") | currentMethod.getName().startsWith(XmethodName)) {
+	 				// & !currentMethod.getName().startsWith(XmethodName)
+	 				//set current method name to set instead of get and move forward to see if 
+//	 				System.out.println("NOT PRINTING :" + currentMethod.getName() );
+	 				if(returnType.equals("org.hl7.fhir.r4.model.Type")) {
+						XmethodName = currentMethod.getName().replace("set", "get");
 
-			if(returnType.equals("org.hl7.fhir.r4.model.Type") | currentMethod.getName().startsWith(XmethodName)) {
- 				// & !currentMethod.getName().startsWith(XmethodName)
- 				//set current method name to set instead of get and move forward to see if 
- 				//System.out.println("NOT PRINTING :" + currentMethod.getName() );
- 				if(returnType.equals("org.hl7.fhir.r4.model.Type")) {
-					XmethodName = currentMethod.getName();
+	 				}
+				
+	 			} else {
+	 				XmethodName = "DO NOT MATCH";
+	 			}
+ 			if((returnClassIsParentClassORreturnTypeIsPrimitiveType & parameterIsNotAModelThatNeedsToBeRecursed) | returnType.equals("org.hl7.fhir.r4.model.Reference")) {	//end of recursion, print to file
+ 				writeMethodToFiles( currentMethod, cls,hibernateFieldName, XmethodName, parentMethod, conversionWriter, sqlWriter, isParentAList);
+				
 
- 				}
-			
- 			} else {
- 				XmethodName = "DO NOT MATCH";
- 			}
- 			if((returnClassIsParentClassORreturnTypeIsPrimitiveType & parameterIsNotAModelThatNeedsToBeRecursed) | returnType.equals("org.hl7.fhir.r4.model.Reference")) {
- 				//System.out.println(returnType);
- 				//end of recursion, print to file
- 				writeMethodToFiles( currentMethod, cls,hibernateFieldName, XmethodName, parentMethod, conversionWriter, sqlWriter);
- 				
  			} else {
  				//print method before entering into recursion (this is the top level adder/setter, that the inner methods will chain off of)
  				//this is used to declare new classes to chain off of so it should either be the first parameter type or the return type of the method
  				//this if statement is used if there is an X type Method within the class that needs to be expanded
  				if(returnType.contains("boolean") | returnType.contains("java.util.Date")) {
- 					System.out.println(returnType +   ", " + returnClassIsParentClassORreturnTypeIsPrimitiveType +  ", " + parameterIsNotAModelThatNeedsToBeRecursed);
- 					System.out.println("returncls == cls   " + (returncls == cls)  );
- 					System.out.println("org.hl7.fhir.r4.model.PrimitiveType.class.isAssignableFrom(returncls) "+ org.hl7.fhir.r4.model.PrimitiveType.class.isAssignableFrom(returncls));
- 					System.out.println("returncls == org.hl7.fhir.instance.model.api.IBaseCoding.class " + (returncls == org.hl7.fhir.instance.model.api.IBaseCoding.class));
- 					System.out.println("returnType.contains(\"java.lang\"); " + returnType.contains("java.lang"));
- 					System.out.println("Arrays.asList(\"byte\", \"short\", \"int\", \"long\", \"float\", \"double\", \"boolean\", \"char\").contains(returnType)" + Arrays.asList("byte", "short", "int", "long", "float", "double", "boolean", "char").contains(returnType));
- 					System.out.println("parameterClass != null " + parameterClass != null);
- 					System.out.println("!parameterClass.getPackageName().equals(org.hl7.fhir.r4.model) " + !parameterClass.getPackageName().equals("org.hl7.fhir.r4.model") );
-
+ 					
  				}
 	 				//if enum typpe then replace the binary representation of class with one that we can declare and change to the enum factory instead of direct class call
 	 				//String newMethodNameToChainOffOf = hibernateFieldName.toLowerCase().replace("_", "")+currentMethod.getName().replace("set","").replace("add","").toLowerCase();
@@ -177,7 +215,12 @@ class CreateConversionCode
 	 					conversionWriter.write("\t\t/******************** "+ newMethodNameToChainOffOf+" ********************************************************************************/");
 
 		 				conversionWriter.write(System.lineSeparator());
-		 				conversionWriter.write("\t\t"+returnType  + " "+newMethodNameToChainOffOf.replace("_", "")+" =  new " + returnType+ "();"); // currentMethod, cls, hibernateFieldName, parentMethod, conversionWriter, sqlWriter);
+		 				if(isParentAList) {
+		 					//conversionWriter.write("\t\t\tisParentAList: " + isParentAList + "\n");
+		 					conversionWriter.write("\t\t"+returnType + "<" +parameterClass.getName().replace("$", ".")+">"  + " "+newMethodNameToChainOffOf.replace("_", "")+" =  new java.util.ArrayList<" +parameterClass.getName().replace("$", ".")+">();"); // currentMethod, cls, hibernateFieldName, parentMethod, conversionWriter, sqlWriter);
+		 				} else {
+		 					conversionWriter.write("\t\t"+returnType  + " "+newMethodNameToChainOffOf.replace("_", "")+" =  new " + returnType+ "();"); // currentMethod, cls, hibernateFieldName, parentMethod, conversionWriter, sqlWriter);
+		 				}
 		 	 			conversionWriter.write(System.lineSeparator());
 		 	 			//if enum factory then add fromCode to the code otherwise use the default 
 		 	 			if(returnType.contains("EnumFactory")) { //java.lang.Character.toLowerCase(hibernateFieldName.charAt(0)) + ".get" + newhibernateFieldName.replace("_", "") + "()"
@@ -196,9 +239,11 @@ class CreateConversionCode
 		 					if((parameterClass.getName().contains(".Age") |parameterClass.getName().contains(".Count")|parameterClass.getName().contains(".Duration"))) {
 		 						org.hl7.fhir.r4.model.Quantity quant = new org.hl7.fhir.r4.model.Quantity();
 			 					recurseThroughClasses(quant.getClass(), hibernateFieldName, currentMethod,  conversionWriter,  sqlWriter); 
-			 				} else {
+			 					
+		 					} else {
 			 					recurseThroughClasses(parameterClass, hibernateFieldName , currentMethod, conversionWriter,  sqlWriter); 
-			 				}
+			 					
+		 					}
 		 				}
 	 				}
 	 				//otherwise send the return type into the 
@@ -207,17 +252,20 @@ class CreateConversionCode
 		 					if((returncls.getName().contains(".Age") |returncls.getName().contains(".Count")|returncls.getName().contains(".Duration"))) {
 		 						org.hl7.fhir.r4.model.Quantity quant = new org.hl7.fhir.r4.model.Quantity();
 			 					recurseThroughClasses(quant.getClass(), hibernateFieldName, currentMethod,  conversionWriter,  sqlWriter); 
-			 				} else {
+			 					
+		 					} else {
 			 					recurseThroughClasses(returncls, hibernateFieldName, currentMethod,  conversionWriter,  sqlWriter); 
 			 				}
 			 			}
 		 			}
+	 				
  			}
+ 			
  		 }
  		
     }
     
-    public static void writeMethodToFiles(Method currentMethod, Class parentClass , String hibernateFieldName, String XmethodName, Method  parentMethod, FileWriter conversionWriter, FileWriter sqlWriter) throws IOException {
+    public static void writeMethodToFiles(Method currentMethod, Class parentClass , String hibernateFieldName, String XmethodName, Method  parentMethod, FileWriter conversionWriter, FileWriter sqlWriter, boolean isParentAList) throws IOException {
     		//carries over the methodName if the current method deals with an X typed field
     		String methodName =  !XmethodName.equals("DO NOT MATCH") ? XmethodName.replaceFirst("get", "set") : currentMethod.getName();
     		
@@ -234,15 +282,42 @@ class CreateConversionCode
 			
 			conversionWriter.write("\t\t/******************** "+ newhibernateFieldName+" ********************************************************************************/");
     		conversionWriter.write(System.lineSeparator());
-    		conversionWriter.write("\t\tif("+hibernateGetterName+" != null) {");
+    		conversionWriter.write("\t\tif("+hibernateGetterName+" != null | !"+ hibernateGetterName+".equals(\"NULL\")) {");
     		conversionWriter.write(System.lineSeparator());
-
+//    		conversionWriter.write("\t\t\tisParentAList: " + isParentAList + "\n");
+//    		conversionWriter.write("\t\t\tjava.util.ArrayList<String> stringList = new java.util.ArrayList<>(java.util.Arrays.asList(" + hibernateGetterName + ".split(\",(?!(?:[^,\\\\[\\\\]]+,)*[^,\\\\[\\\\]]+])\")));\n");
+//			conversionWriter.write("\t\t\twhile("+ newMethodNameToChainOffOf+ ".size() < stringList.size()) {\n");
+//			conversionWriter.write("\t\t\t\t" + newMethodNameToChainOffOf+ ".add(new " + "org.hl7.fhir.r4.model.Address"+"());\n");
+//			conversionWriter.write("\t\t\t}\n");
+//			conversionWriter.write("\t\t\tint i = 0;\n");
+//			conversionWriter.write("\t\t\tfor (String s : stringList) {\n");
+//			conversionWriter.write("\t\t\t\t"+ newMethodNameToChainOffOf+".get(i)." + methodName+"(s);\n");
+//			conversionWriter.write("\t\t\t\ti++;\n");
+//			conversionWriter.write("\t\t\t}\n");
+//			conversionWriter.write("\t\t}");
+// 			conversionWriter.write(System.lineSeparator());
+    		if(isParentAList) {
+    		//	conversionWriter.write("\t\t\tisParentAList: " + isParentAList + "\n");
+    			conversionWriter.write("\t\t\tjava.util.ArrayList<String> stringList = new java.util.ArrayList<>(java.util.Arrays.asList(" + hibernateGetterName + ".split(\",(?!(?:[^,\\\\[\\\\]]+,)*[^,\\\\[\\\\]]+])\")));\n");
+    			conversionWriter.write("\t\t\twhile("+ newMethodNameToChainOffOf+ ".size() < stringList.size()) {\n");
+				conversionWriter.write("\t\t\t\t" + newMethodNameToChainOffOf+ ".add(new " +"org.hl7.fhir.r4.model.Address"+"());\n");
+				conversionWriter.write("\t\t\t}\n");
+				conversionWriter.write("\t\t\tint i = 0;\n");
+				conversionWriter.write("\t\t\tfor (String s : stringList) {\n");
+				conversionWriter.write("\t\t\t\t"+ newMethodNameToChainOffOf+".get(i)." + methodName+"(s);\n");
+				conversionWriter.write("\t\t\t\ti++;\n");
+				conversionWriter.write("\t\t\t}");
+				
+    		} else {
     		if(parameterType.equals("java.util.Date"))  {
-    			conversionWriter.write("\t\t\tjava.text.SimpleDateFormat "+ newhibernateFieldName+ "sdf = new java.text.SimpleDateFormat(\"yyyy-M-dd\");");
-    			conversionWriter.write(System.lineSeparator());
-    			conversionWriter.write("\t\t\tjava.util.Date "+ newhibernateFieldName+"date = "+ newhibernateFieldName+"sdf.parse(" + hibernateGetterName + ");");
-    			conversionWriter.write(System.lineSeparator());
-    			conversionWriter.write("\t\t\t"+newMethodNameToChainOffOf + "." +  methodName + "("+ newhibernateFieldName+"date);" );
+//    			conversionWriter.write("\t\t\tjava.text.SimpleDateFormat "+ newhibernateFieldName+ "sdf = new java.text.SimpleDateFormat(\"yyyy-M-dd\");");
+//    			conversionWriter.write(System.lineSeparator());
+//    			conversionWriter.write("\t\t\tjava.util.Date "+ newhibernateFieldName+"date = "+ newhibernateFieldName+"sdf.parse(" + hibernateGetterName + ");");
+//    			conversionWriter.write(System.lineSeparator());
+//    			conversionWriter.write("\t\t\t"+newMethodNameToChainOffOf + "." +  methodName + "("+ newhibernateFieldName+"date);" );
+    			conversionWriter.write("\t\t\t"+newMethodNameToChainOffOf + "." +  methodName + "(ca.uhn.fhir.util.DateUtils.parseDate("+ hibernateGetterName+"));" );
+    		
+
     		} else if(parameterType.equals("boolean")) {	
     			conversionWriter.write("\t\t\t"+newMethodNameToChainOffOf + "." + methodName+ "(Boolean.parseBoolean("+hibernateGetterName+"));" );	
     		} else if(parameterType.equals("int")) {
@@ -269,6 +344,7 @@ class CreateConversionCode
     			}
 
     		}
+    		}
  			conversionWriter.write(System.lineSeparator());
 			conversionWriter.write("\t\t}");
  			conversionWriter.write(System.lineSeparator());
@@ -278,96 +354,31 @@ class CreateConversionCode
     		sqlWriter.write(newhibernateFieldName + " TEXT,\r\n");
     }
     
+    
     public static Set<Method> generateSetters(Class<?> cls) {
- 
-    	// add all the add methods with no parameters
-    	// Set<Method> adders = ReflectionUtils.getMethods(cls,ReflectionUtils.withModifier(Modifier.PUBLIC), ReflectionUtils.withPrefix("add"), ReflectionUtils.withParametersCount(0));
-    	//add all the add methods with one parameters and remove list, element and target setters
-    	Set<Method> adders = ReflectionUtils.getMethods(cls,ReflectionUtils.withModifier(Modifier.PUBLIC), ReflectionUtils.withPrefix("add"), ReflectionUtils.withParametersCount(1));
-    	Set<Method> removeAddListSetters = ReflectionUtils.getMethods(cls,ReflectionUtils.withModifier(Modifier.PUBLIC), ReflectionUtils.withPrefix("add"), ReflectionUtils.withParametersCount(1), ReflectionUtils.withParameters(java.util.List.class));
-     	Set<Method> removeAddElementSetters = ReflectionUtils.getMethods(cls,ReflectionUtils.withModifier(Modifier.PUBLIC), ReflectionUtils.withPrefix("add"), ReflectionUtils.withParametersCount(1), ReflectionUtils.withPattern(".*[.]{1}set.*Element\\(.*"));
-     	Set<Method> removeAddTargetSetters = ReflectionUtils.getMethods(cls,ReflectionUtils.withModifier(Modifier.PUBLIC), ReflectionUtils.withPrefix("add"), ReflectionUtils.withParametersCount(1), ReflectionUtils.withPattern(".*[.]{1}set.*Target\\(.*"));
-     	Set<Method> removeAddBaseReturnTypeSetters = ReflectionUtils.getMethods(cls,ReflectionUtils.withModifier(Modifier.PUBLIC), ReflectionUtils.withPrefix("add"), ReflectionUtils.withParametersCount(1), ReflectionUtils.withReturnType(org.hl7.fhir.r4.model.Base.class));
 
-     	//remove edgeCases that otherwise endlessly recurse
-     	if(cls.getName().equals("org.hl7.fhir.r4.model.RequestGroup$RequestGroupActionComponent")) {
-        	Set<Method> removeAddAction = ReflectionUtils.getMethods(cls,ReflectionUtils.withModifier(Modifier.PUBLIC), ReflectionUtils.withPrefix("addAction"));
-         	adders.removeAll(removeAddAction);
-	    } else if (cls.getName().equals("org.hl7.fhir.r4.model.SubstanceSpecification$SubstanceSpecificationNameComponent")) {
-        	Set<Method> removeAddSynonym = ReflectionUtils.getMethods(cls,ReflectionUtils.withModifier(Modifier.PUBLIC), ReflectionUtils.withPrefix("addSynonym"));
-        	Set<Method> removeAddTranslation = ReflectionUtils.getMethods(cls,ReflectionUtils.withModifier(Modifier.PUBLIC), ReflectionUtils.withPrefix("addTranslation"));
-         	adders.removeAll(removeAddSynonym);
-         	adders.removeAll(removeAddTranslation);
-		} else if (cls.getName().equals("org.hl7.fhir.r4.model.MedicinalProductPackaged$MedicinalProductPackagedPackageItemComponent")) {
-     		Set<Method> removeAddPackageItem = ReflectionUtils.getMethods(cls,ReflectionUtils.withModifier(Modifier.PUBLIC), ReflectionUtils.withPrefix("addPackageItem"));
-     		adders.removeAll(removeAddPackageItem);
-		} else if (cls.getName().equals("org.hl7.fhir.r4.model.Contract$TermComponent")) {
-			Set<Method> removeAddGroup = ReflectionUtils.getMethods(cls,ReflectionUtils.withModifier(Modifier.PUBLIC), ReflectionUtils.withPrefix("addGroup"));
-     		adders.removeAll(removeAddGroup);
-		}  else if (cls.getName().equals("org.hl7.fhir.r4.model.Composition$SectionComponent")) {
-			Set<Method> removeAddSection = ReflectionUtils.getMethods(cls,ReflectionUtils.withModifier(Modifier.PUBLIC), ReflectionUtils.withPrefix("addSection"));
-			adders.removeAll(removeAddSection);
-		}  else if (cls.getName().equals("org.hl7.fhir.r4.model.MedicinalProductAuthorization$MedicinalProductAuthorizationProcedureComponent")) {
-			Set<Method> removeAddApplication = ReflectionUtils.getMethods(cls,ReflectionUtils.withModifier(Modifier.PUBLIC), ReflectionUtils.withPrefix("addApplication"));
-			adders.removeAll(removeAddApplication);
-		}  else if (cls.getName().equals("org.hl7.fhir.r4.model.Consent$provisionComponent")) {
-			Set<Method> removeAddProvision = ReflectionUtils.getMethods(cls,ReflectionUtils.withModifier(Modifier.PUBLIC), ReflectionUtils.withPrefix("addProvision"));
-			adders.removeAll(removeAddProvision);
-		}  else if (cls.getName().equals("org.hl7.fhir.r4.model.QuestionnaireResponse$QuestionnaireResponseItemComponent")) {
-			Set<Method> removeAddItem = ReflectionUtils.getMethods(cls,ReflectionUtils.withModifier(Modifier.PUBLIC), ReflectionUtils.withPrefix("addItem"));
-			adders.removeAll(removeAddItem);
-		}  else if (cls.getName().equals("org.hl7.fhir.r4.model.QuestionnaireResponse$QuestionnaireResponseItemAnswerComponent")) {
-			Set<Method> removeAddItem = ReflectionUtils.getMethods(cls,ReflectionUtils.withModifier(Modifier.PUBLIC), ReflectionUtils.withPrefix("addItem"));
-			adders.removeAll(removeAddItem);
-		}  else if (cls.getName().equals("org.hl7.fhir.r4.model.CodeSystem$ConceptDefinitionComponent")) {
-			Set<Method> removeAddConcept = ReflectionUtils.getMethods(cls,ReflectionUtils.withModifier(Modifier.PUBLIC), ReflectionUtils.withPrefix("addConcept"));
-			adders.removeAll(removeAddConcept);
-		}  else if (cls.getName().equals("org.hl7.fhir.r4.model.ValueSet$ValueSetExpansionContainsComponent")) {
-			Set<Method> removeAddContains = ReflectionUtils.getMethods(cls,ReflectionUtils.withModifier(Modifier.PUBLIC), ReflectionUtils.withPrefix("addContains"));
-			adders.removeAll(removeAddContains);
-		}  else if (cls.getName().equals("org.hl7.fhir.r4.model.PlanDefinition$PlanDefinitionActionComponent")) {
-			Set<Method> removeAddAction = ReflectionUtils.getMethods(cls,ReflectionUtils.withModifier(Modifier.PUBLIC), ReflectionUtils.withPrefix("addAction"));
-			adders.removeAll(removeAddAction);
-	    }  else if (cls.getName().equals("org.hl7.fhir.r4.model.OperationDefinition$OperationDefinitionParameterComponent")) {
-			Set<Method> removeAddPart = ReflectionUtils.getMethods(cls,ReflectionUtils.withModifier(Modifier.PUBLIC), ReflectionUtils.withPrefix("addPart"));
-			adders.removeAll(removeAddPart);
-	    }  else if (cls.getName().equals("org.hl7.fhir.r4.model.Questionnaire$QuestionnaireItemComponent")) {
-			Set<Method> removeAddItem = ReflectionUtils.getMethods(cls,ReflectionUtils.withModifier(Modifier.PUBLIC), ReflectionUtils.withPrefix("addItem"));
-			adders.removeAll(removeAddItem);
-	    }
-     
-     	adders.removeAll(removeAddListSetters);
-     	adders.removeAll(removeAddElementSetters);
-     	adders.removeAll(removeAddTargetSetters);
-     	adders.removeAll(removeAddBaseReturnTypeSetters);
-
-    	//added this into conversion code instead
-		//    	//add fromCode Methods so that it gets incorporated from the enumerationclasses
-		//    	Set<Method> fromCodeAdd = ReflectionUtils.getMethods(cls,ReflectionUtils.withModifier(Modifier.PUBLIC), ReflectionUtils.withPrefix("fromCode"), ReflectionUtils.withParametersCount(1));
-		//    	adders.addAll(fromCodeAdd);
-    	
+     	
+     	Set<Method> allSetters = ReflectionUtils.getMethods(cls,ReflectionUtils.withModifier(Modifier.PUBLIC), ReflectionUtils.withPrefix("set"), ReflectionUtils.withParametersCount(1));
      	//get all setters and remove those that have lists as parameters and those that have element and target in the name 
-     	Set<Method> removeListSetters = ReflectionUtils.getMethods(cls,ReflectionUtils.withModifier(Modifier.PUBLIC), ReflectionUtils.withPrefix("set"), ReflectionUtils.withParametersCount(1), ReflectionUtils.withParameters(java.util.List.class));
      	Set<Method> removeElementSetters = ReflectionUtils.getMethods(cls,ReflectionUtils.withModifier(Modifier.PUBLIC), ReflectionUtils.withPrefix("set"), ReflectionUtils.withParametersCount(1), ReflectionUtils.withPattern(".*[.]{1}set.*Element\\(.*"));
      	Set<Method> removeTargetSetters = ReflectionUtils.getMethods(cls,ReflectionUtils.withModifier(Modifier.PUBLIC), ReflectionUtils.withPrefix("set"), ReflectionUtils.withParametersCount(1), ReflectionUtils.withPattern(".*[.]{1}set.*Target\\(.*"));
      	
-     	//get methods that are getters and end in Type so that we know what to set X typed methods
-     	//Set<Method> getMultiTypeMethods = ReflectionUtils.getMethods(cls,ReflectionUtils.withModifier(Modifier.PUBLIC), ReflectionUtils.withPrefix("get"), ReflectionUtils.withParametersCount(0), ReflectionUtils.withPattern(".*[.]{1}get.*Type\\(.*"));
-
-  
      	
-     	Set<Method> allSetters = ReflectionUtils.getMethods(cls,ReflectionUtils.withModifier(Modifier.PUBLIC), ReflectionUtils.withPrefix("set"), ReflectionUtils.withParametersCount(1));
-       	//get multitypemethods ([x] methods)
+     	//get multitypemethods ([x] methods)
      	Set<Method> getMultiTypeMethods = ReflectionUtils.getMethods(cls,ReflectionUtils.withModifier(Modifier.PUBLIC), ReflectionUtils.withPrefix("set"), ReflectionUtils.withParameters(org.hl7.fhir.r4.model.Type.class));
      	//     	Set<Method> getResourceTypeMethod = ReflectionUtils.getMethods(cls,ReflectionUtils.withModifier(Modifier.PUBLIC), ReflectionUtils.withPrefix("getResourceType"));
      	
      	for (Method method : getMultiTypeMethods) {
      	    String nameOfMethod = "get" + method.getName().replaceFirst("set", "").replaceFirst("add", "");
          	Set<Method> getTypesForMethods = ReflectionUtils.getMethods(cls,ReflectionUtils.withModifier(Modifier.PUBLIC), ReflectionUtils.withPrefix(nameOfMethod), ReflectionUtils.withParametersCount(0));
-         	Set<Method> removegetElementSetters = ReflectionUtils.getMethods(cls,ReflectionUtils.withModifier(Modifier.PUBLIC), ReflectionUtils.withPrefix(nameOfMethod), ReflectionUtils.withParametersCount(0), ReflectionUtils.withPattern(".*[.]{1}set.*Element\\(.*"));
-         	Set<Method> removegetTargetSetters = ReflectionUtils.getMethods(cls,ReflectionUtils.withModifier(Modifier.PUBLIC), ReflectionUtils.withPrefix(nameOfMethod), ReflectionUtils.withParametersCount(0), ReflectionUtils.withPattern(".*[.]{1}set.*Target\\(.*"));
-         	allSetters.removeAll(removegetElementSetters);
-         	allSetters.removeAll(removegetTargetSetters);
+         	Set<Method> removegetTypeSetters = ReflectionUtils.getMethods(cls,ReflectionUtils.withModifier(Modifier.PUBLIC), ReflectionUtils.withPrefix(nameOfMethod), ReflectionUtils.withParametersCount(0), ReflectionUtils.withReturnType(org.hl7.fhir.r4.model.Type.class));
+//         	Set<Method> removegetTargetSetters = ReflectionUtils.getMethods(cls,ReflectionUtils.withModifier(Modifier.PUBLIC), ReflectionUtils.withPrefix(nameOfMethod), ReflectionUtils.withParametersCount(0), ReflectionUtils.withPattern(".*[.]{1}set.*Target\\(.*"));
+//         	Set<Method> removegetElementSetters = ReflectionUtils.getMethods(cls,ReflectionUtils.withModifier(Modifier.PUBLIC), ReflectionUtils.withPrefix(nameOfMethod), ReflectionUtils.withParametersCount(0), ReflectionUtils.withPattern(".*[.]{1}set.*Element\\(.*"));
+
+         	getTypesForMethods.removeAll(removegetTypeSetters);
+//         	allSetters.removeAll(removegetTargetSetters);
+//         	allSetters.removeAll(removegetTargetSetters);
+
          	allSetters.addAll(getTypesForMethods);
      	}
      	
@@ -375,20 +386,65 @@ class CreateConversionCode
 
      	
      	allSetters.removeAll(getMultiTypeMethods);
-     	allSetters.removeAll(removeListSetters);
+     //	allSetters.removeAll(removeListSetters);
      	allSetters.removeAll(removeElementSetters);
      	allSetters.removeAll(removeTargetSetters);
      	
      	allSetters.addAll(getMultiTypeMethods);
-     	allSetters.addAll(adders);
+//     	allSetters.addAll(adders);
      	
      	//sort the methods by name
      	Set<Method> allSettersSorted = new TreeSet<>((o1, o2) -> o1.getName().replaceFirst("add", "").replaceFirst("set", "").replaceFirst("get", "").compareTo(o2.getName().replaceFirst("add", "").replaceFirst("set", "").replaceFirst("get", "")));
         allSettersSorted.addAll(allSetters);
      	
-        
+        if(cls.getName().equals("org.hl7.fhir.r4.model.RequestGroup$RequestGroupActionComponent")) {
+        	Set<Method> removeAddAction = ReflectionUtils.getMethods(cls,ReflectionUtils.withModifier(Modifier.PUBLIC), ReflectionUtils.withPrefix("setAction"));
+         	allSetters.removeAll(removeAddAction);
+        } else if (cls.getName().equals("org.hl7.fhir.r4.model.SubstanceSpecification$SubstanceSpecificationNameComponent")) {
+        	Set<Method> removeAddSynonym = ReflectionUtils.getMethods(cls,ReflectionUtils.withModifier(Modifier.PUBLIC), ReflectionUtils.withPrefix("setSynonym"));
+        	Set<Method> removeAddTranslation = ReflectionUtils.getMethods(cls,ReflectionUtils.withModifier(Modifier.PUBLIC), ReflectionUtils.withPrefix("setTranslation"));
+         	allSetters.removeAll(removeAddSynonym);
+         	allSetters.removeAll(removeAddTranslation);
+    	} else if (cls.getName().equals("org.hl7.fhir.r4.model.MedicinalProductPackaged$MedicinalProductPackagedPackageItemComponent")) {
+     		Set<Method> removeAddPackageItem = ReflectionUtils.getMethods(cls,ReflectionUtils.withModifier(Modifier.PUBLIC), ReflectionUtils.withPrefix("setPackageItem"));
+     		allSetters.removeAll(removeAddPackageItem);
+    	} else if (cls.getName().equals("org.hl7.fhir.r4.model.Contract$TermComponent")) {
+    		Set<Method> removeAddGroup = ReflectionUtils.getMethods(cls,ReflectionUtils.withModifier(Modifier.PUBLIC), ReflectionUtils.withPrefix("setGroup"));
+     		allSetters.removeAll(removeAddGroup);
+    	}  else if (cls.getName().equals("org.hl7.fhir.r4.model.Composition$SectionComponent")) {
+    		Set<Method> removeAddSection = ReflectionUtils.getMethods(cls,ReflectionUtils.withModifier(Modifier.PUBLIC), ReflectionUtils.withPrefix("setSection"));
+    		allSetters.removeAll(removeAddSection);
+    	}  else if (cls.getName().equals("org.hl7.fhir.r4.model.MedicinalProductAuthorization$MedicinalProductAuthorizationProcedureComponent")) {
+    		Set<Method> removeAddApplication = ReflectionUtils.getMethods(cls,ReflectionUtils.withModifier(Modifier.PUBLIC), ReflectionUtils.withPrefix("setApplication"));
+    		allSetters.removeAll(removeAddApplication);
+    	}  else if (cls.getName().equals("org.hl7.fhir.r4.model.Consent$provisionComponent")) {
+    		Set<Method> removeAddProvision = ReflectionUtils.getMethods(cls,ReflectionUtils.withModifier(Modifier.PUBLIC), ReflectionUtils.withPrefix("setProvision"));
+    		allSetters.removeAll(removeAddProvision);
+    	}  else if (cls.getName().equals("org.hl7.fhir.r4.model.QuestionnaireResponse$QuestionnaireResponseItemComponent")) {
+    		Set<Method> removeAddItem = ReflectionUtils.getMethods(cls,ReflectionUtils.withModifier(Modifier.PUBLIC), ReflectionUtils.withPrefix("setItem"));
+    		allSetters.removeAll(removeAddItem);
+    	}  else if (cls.getName().equals("org.hl7.fhir.r4.model.QuestionnaireResponse$QuestionnaireResponseItemAnswerComponent")) {
+    		Set<Method> removeAddItem = ReflectionUtils.getMethods(cls,ReflectionUtils.withModifier(Modifier.PUBLIC), ReflectionUtils.withPrefix("setItem"));
+    		allSetters.removeAll(removeAddItem);
+    	}  else if (cls.getName().equals("org.hl7.fhir.r4.model.CodeSystem$ConceptDefinitionComponent")) {
+    		Set<Method> removeAddConcept = ReflectionUtils.getMethods(cls,ReflectionUtils.withModifier(Modifier.PUBLIC), ReflectionUtils.withPrefix("setConcept"));
+    		allSetters.removeAll(removeAddConcept);
+    	}  else if (cls.getName().equals("org.hl7.fhir.r4.model.ValueSet$ValueSetExpansionContainsComponent")) {
+    		Set<Method> removeAddContains = ReflectionUtils.getMethods(cls,ReflectionUtils.withModifier(Modifier.PUBLIC), ReflectionUtils.withPrefix("setContains"));
+    		allSetters.removeAll(removeAddContains);
+    	}  else if (cls.getName().equals("org.hl7.fhir.r4.model.PlanDefinition$PlanDefinitionActionComponent")) {
+    		Set<Method> removeAddAction = ReflectionUtils.getMethods(cls,ReflectionUtils.withModifier(Modifier.PUBLIC), ReflectionUtils.withPrefix("setAction"));
+    		allSetters.removeAll(removeAddAction);
+        }  else if (cls.getName().equals("org.hl7.fhir.r4.model.OperationDefinition$OperationDefinitionParameterComponent")) {
+    		Set<Method> removeAddPart = ReflectionUtils.getMethods(cls,ReflectionUtils.withModifier(Modifier.PUBLIC), ReflectionUtils.withPrefix("setPart"));
+    		allSetters.removeAll(removeAddPart);
+        }  else if (cls.getName().equals("org.hl7.fhir.r4.model.Questionnaire$QuestionnaireItemComponent")) {
+    		Set<Method> removeAddItem = ReflectionUtils.getMethods(cls,ReflectionUtils.withModifier(Modifier.PUBLIC), ReflectionUtils.withPrefix("setItem"));
+    		allSetters.removeAll(removeAddItem);
+        }
      	return allSettersSorted;
     }
+  
     
     // does the abbreviation replacement
 	private static String replaceTermsWithAbbreviations(String originalstring) {

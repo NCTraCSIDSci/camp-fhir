@@ -8,411 +8,1067 @@ public class PaymentReconciliationBidirectionalConversion
 		 main.java.com.campfhir.model.PaymentReconciliation p = new  main.java.com.campfhir.model.PaymentReconciliation();
 
 		/******************** id ********************************************************************************/
-		paymentreconciliation.setId(p.getId());
+		p.setId(paymentreconciliation.getIdElement().getIdPart());
 
 		/******************** paymentreconciliationstatus ********************************************************************************/
 		org.hl7.fhir.r4.model.PaymentReconciliation.PaymentReconciliationStatus paymentreconciliationstatus = paymentreconciliation.getStatus();
-		p.setPymntRecncliatnSts(paymentreconciliationstatus.toCode());
+		if(paymentreconciliationstatus!=null) {
+			p.addPymntRecncliatnSts(paymentreconciliationstatus.toCode());
+		} else {
+			p.addPymntRecncliatnSts("NULL");
+		}
+
+		/******************** PymntRecncliatn_PymntIssuer ********************************************************************************/
+		if(paymentreconciliation.hasPaymentIssuer()) {
+
+			if(paymentreconciliation.getPaymentIssuer().getReference() != null) {
+			p.addPymntRecncliatnPymntIssuer(paymentreconciliation.getPaymentIssuer().getReference());
+			}
+		} else {
+			p.addPymntRecncliatnPymntIssuer("NULL");
+		}
+
+
+		/******************** PymntRecncliatn_Created ********************************************************************************/
+		if(paymentreconciliation.hasCreated()) {
+
+			p.addPymntRecncliatnCreated("\""+ca.uhn.fhir.util.DateUtils.formatDate(paymentreconciliation.getCreated())+"\"");
+		} else {
+			p.addPymntRecncliatnCreated("NULL");
+		}
+
 
 		/******************** PymntRecncliatn_Rqst ********************************************************************************/
 		if(paymentreconciliation.hasRequest()) {
-			p.setPymntRecncliatnRqst(String.valueOf(paymentreconciliation.getRequest()));
+
+			if(paymentreconciliation.getRequest().getReference() != null) {
+			p.addPymntRecncliatnRqst(paymentreconciliation.getRequest().getReference());
+			}
+		} else {
+			p.addPymntRecncliatnRqst("NULL");
 		}
-		/******************** PymntRecncliatn_Created ********************************************************************************/
-		if(paymentreconciliation.hasCreated()) {
-			p.setPymntRecncliatnCreated(String.valueOf(paymentreconciliation.getCreated()));
-		}
-		/******************** PymntRecncliatn_PymntIssuer ********************************************************************************/
-		if(paymentreconciliation.hasPaymentIssuer()) {
-			p.setPymntRecncliatnPymntIssuer(String.valueOf(paymentreconciliation.getPaymentIssuer()));
-		}
+
+
 		/******************** paymentreconciliationperiod ********************************************************************************/
 		org.hl7.fhir.r4.model.Period paymentreconciliationperiod = paymentreconciliation.getPeriod();
 
 		/******************** PymntRecncliatn_Prd_Strt ********************************************************************************/
 		if(paymentreconciliationperiod.hasStart()) {
-			p.setPymntRecncliatnPrdStrt(String.valueOf(paymentreconciliationperiod.getStart()));
+
+			p.addPymntRecncliatnPrdStrt("\""+ca.uhn.fhir.util.DateUtils.formatDate(paymentreconciliationperiod.getStart())+"\"");
+		} else {
+			p.addPymntRecncliatnPrdStrt("NULL");
 		}
+
+
 		/******************** PymntRecncliatn_Prd_End ********************************************************************************/
 		if(paymentreconciliationperiod.hasEnd()) {
-			p.setPymntRecncliatnPrdEnd(String.valueOf(paymentreconciliationperiod.getEnd()));
-		}
-		/******************** PymntRecncliatn_Rqstor ********************************************************************************/
-		if(paymentreconciliation.hasRequestor()) {
-			p.setPymntRecncliatnRqstor(String.valueOf(paymentreconciliation.getRequestor()));
-		}
-		/******************** PymntRecncliatn_PymntDt ********************************************************************************/
-		if(paymentreconciliation.hasPaymentDate()) {
-			p.setPymntRecncliatnPymntDt(String.valueOf(paymentreconciliation.getPaymentDate()));
-		}
-		/******************** paymentreconciliationoutcome ********************************************************************************/
-		org.hl7.fhir.r4.model.Enumerations.RemittanceOutcome paymentreconciliationoutcome = paymentreconciliation.getOutcome();
-		p.setPymntRecncliatnOutcome(paymentreconciliationoutcome.toCode());
 
+			p.addPymntRecncliatnPrdEnd("\""+ca.uhn.fhir.util.DateUtils.formatDate(paymentreconciliationperiod.getEnd())+"\"");
+		} else {
+			p.addPymntRecncliatnPrdEnd("NULL");
+		}
+
+
+		/******************** paymentreconciliationidentifier ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.Identifier> paymentreconciliationidentifierlist = paymentreconciliation.getIdentifier();
+		for(int paymentreconciliationidentifieri = 0; paymentreconciliationidentifieri<paymentreconciliationidentifierlist.size();paymentreconciliationidentifieri++ ) {
+		org.hl7.fhir.r4.model.Identifier  paymentreconciliationidentifier = paymentreconciliationidentifierlist.get(paymentreconciliationidentifieri);
+
+		/******************** PymntRecncliatn_Id_Vl ********************************************************************************/
+		if(paymentreconciliationidentifieri == 0) {p.addPymntRecncliatnIdVl("[");}
+		if(paymentreconciliationidentifier.hasValue()) {
+
+			p.addPymntRecncliatnIdVl(String.valueOf(paymentreconciliationidentifier.getValue()));
+		} else {
+			p.addPymntRecncliatnIdVl("NULL");
+		}
+
+		if(paymentreconciliationidentifieri == paymentreconciliationidentifierlist.size()-1) {p.addPymntRecncliatnIdVl("]");}
+
+
+		/******************** paymentreconciliationidentifiertype ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept paymentreconciliationidentifiertype = paymentreconciliationidentifier.getType();
+
+		/******************** PymntRecncliatn_Id_Typ_Txt ********************************************************************************/
+		if(paymentreconciliationidentifieri == 0) {p.addPymntRecncliatnIdTypTxt("[");}
+		if(paymentreconciliationidentifiertype.hasText()) {
+
+			p.addPymntRecncliatnIdTypTxt(String.valueOf(paymentreconciliationidentifiertype.getText()));
+		} else {
+			p.addPymntRecncliatnIdTypTxt("NULL");
+		}
+
+		if(paymentreconciliationidentifieri == paymentreconciliationidentifierlist.size()-1) {p.addPymntRecncliatnIdTypTxt("]");}
+
+
+		/******************** paymentreconciliationidentifiertypecoding ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.Coding> paymentreconciliationidentifiertypecodinglist = paymentreconciliationidentifiertype.getCoding();
+		for(int paymentreconciliationidentifiertypecodingi = 0; paymentreconciliationidentifiertypecodingi<paymentreconciliationidentifiertypecodinglist.size();paymentreconciliationidentifiertypecodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  paymentreconciliationidentifiertypecoding = paymentreconciliationidentifiertypecodinglist.get(paymentreconciliationidentifiertypecodingi);
+
+		/******************** PymntRecncliatn_Id_Typ_Cdg_Dsply ********************************************************************************/
+		if(paymentreconciliationidentifiertypecodingi == 0) {p.addPymntRecncliatnIdTypCdgDsply("[[");}
+		if(paymentreconciliationidentifiertypecoding.hasDisplay()) {
+
+			p.addPymntRecncliatnIdTypCdgDsply(String.valueOf(paymentreconciliationidentifiertypecoding.getDisplay()));
+		} else {
+			p.addPymntRecncliatnIdTypCdgDsply("NULL");
+		}
+
+		if(paymentreconciliationidentifiertypecodingi == paymentreconciliationidentifiertypecodinglist.size()-1) {p.addPymntRecncliatnIdTypCdgDsply("]]");}
+
+
+		/******************** PymntRecncliatn_Id_Typ_Cdg_Vrsn ********************************************************************************/
+		if(paymentreconciliationidentifiertypecodingi == 0) {p.addPymntRecncliatnIdTypCdgVrsn("[[");}
+		if(paymentreconciliationidentifiertypecoding.hasVersion()) {
+
+			p.addPymntRecncliatnIdTypCdgVrsn(String.valueOf(paymentreconciliationidentifiertypecoding.getVersion()));
+		} else {
+			p.addPymntRecncliatnIdTypCdgVrsn("NULL");
+		}
+
+		if(paymentreconciliationidentifiertypecodingi == paymentreconciliationidentifiertypecodinglist.size()-1) {p.addPymntRecncliatnIdTypCdgVrsn("]]");}
+
+
+		/******************** PymntRecncliatn_Id_Typ_Cdg_Cd ********************************************************************************/
+		if(paymentreconciliationidentifiertypecodingi == 0) {p.addPymntRecncliatnIdTypCdgCd("[[");}
+		if(paymentreconciliationidentifiertypecoding.hasCode()) {
+
+			p.addPymntRecncliatnIdTypCdgCd(String.valueOf(paymentreconciliationidentifiertypecoding.getCode()));
+		} else {
+			p.addPymntRecncliatnIdTypCdgCd("NULL");
+		}
+
+		if(paymentreconciliationidentifiertypecodingi == paymentreconciliationidentifiertypecodinglist.size()-1) {p.addPymntRecncliatnIdTypCdgCd("]]");}
+
+
+		/******************** PymntRecncliatn_Id_Typ_Cdg_UsrSltd ********************************************************************************/
+		if(paymentreconciliationidentifiertypecodingi == 0) {p.addPymntRecncliatnIdTypCdgUsrSltd("[[");}
+		if(paymentreconciliationidentifiertypecoding.hasUserSelected()) {
+
+			p.addPymntRecncliatnIdTypCdgUsrSltd(String.valueOf(paymentreconciliationidentifiertypecoding.getUserSelected()));
+		} else {
+			p.addPymntRecncliatnIdTypCdgUsrSltd("NULL");
+		}
+
+		if(paymentreconciliationidentifiertypecodingi == paymentreconciliationidentifiertypecodinglist.size()-1) {p.addPymntRecncliatnIdTypCdgUsrSltd("]]");}
+
+
+		/******************** PymntRecncliatn_Id_Typ_Cdg_Sys ********************************************************************************/
+		if(paymentreconciliationidentifiertypecodingi == 0) {p.addPymntRecncliatnIdTypCdgSys("[[");}
+		if(paymentreconciliationidentifiertypecoding.hasSystem()) {
+
+			p.addPymntRecncliatnIdTypCdgSys(String.valueOf(paymentreconciliationidentifiertypecoding.getSystem()));
+		} else {
+			p.addPymntRecncliatnIdTypCdgSys("NULL");
+		}
+
+		if(paymentreconciliationidentifiertypecodingi == paymentreconciliationidentifiertypecodinglist.size()-1) {p.addPymntRecncliatnIdTypCdgSys("]]");}
+
+
+		 };
+		/******************** paymentreconciliationidentifierperiod ********************************************************************************/
+		org.hl7.fhir.r4.model.Period paymentreconciliationidentifierperiod = paymentreconciliationidentifier.getPeriod();
+
+		/******************** PymntRecncliatn_Id_Prd_Strt ********************************************************************************/
+		if(paymentreconciliationidentifieri == 0) {p.addPymntRecncliatnIdPrdStrt("[");}
+		if(paymentreconciliationidentifierperiod.hasStart()) {
+
+			p.addPymntRecncliatnIdPrdStrt("\""+ca.uhn.fhir.util.DateUtils.formatDate(paymentreconciliationidentifierperiod.getStart())+"\"");
+		} else {
+			p.addPymntRecncliatnIdPrdStrt("NULL");
+		}
+
+		if(paymentreconciliationidentifieri == paymentreconciliationidentifierlist.size()-1) {p.addPymntRecncliatnIdPrdStrt("]");}
+
+
+		/******************** PymntRecncliatn_Id_Prd_End ********************************************************************************/
+		if(paymentreconciliationidentifieri == 0) {p.addPymntRecncliatnIdPrdEnd("[");}
+		if(paymentreconciliationidentifierperiod.hasEnd()) {
+
+			p.addPymntRecncliatnIdPrdEnd("\""+ca.uhn.fhir.util.DateUtils.formatDate(paymentreconciliationidentifierperiod.getEnd())+"\"");
+		} else {
+			p.addPymntRecncliatnIdPrdEnd("NULL");
+		}
+
+		if(paymentreconciliationidentifieri == paymentreconciliationidentifierlist.size()-1) {p.addPymntRecncliatnIdPrdEnd("]");}
+
+
+		/******************** paymentreconciliationidentifieruse ********************************************************************************/
+		org.hl7.fhir.r4.model.Identifier.IdentifierUse paymentreconciliationidentifieruse = paymentreconciliationidentifier.getUse();
+		if(paymentreconciliationidentifieruse!=null) {
+		if(paymentreconciliationidentifieri == 0) {
+
+		p.addPymntRecncliatnIdUse("[");		}
+			p.addPymntRecncliatnIdUse(paymentreconciliationidentifieruse.toCode());
+		if(paymentreconciliationidentifieri == paymentreconciliationidentifierlist.size()-1) {
+
+		p.addPymntRecncliatnIdUse("]");		}
+
+		} else {
+			p.addPymntRecncliatnIdUse("NULL");
+		}
+
+		/******************** PymntRecncliatn_Id_Assigner ********************************************************************************/
+		if(paymentreconciliationidentifieri == 0) {p.addPymntRecncliatnIdAssigner("[");}
+		if(paymentreconciliationidentifier.hasAssigner()) {
+
+			if(paymentreconciliationidentifier.getAssigner().getReference() != null) {
+			p.addPymntRecncliatnIdAssigner(paymentreconciliationidentifier.getAssigner().getReference());
+			}
+		} else {
+			p.addPymntRecncliatnIdAssigner("NULL");
+		}
+
+		if(paymentreconciliationidentifieri == paymentreconciliationidentifierlist.size()-1) {p.addPymntRecncliatnIdAssigner("]");}
+
+
+		/******************** PymntRecncliatn_Id_Sys ********************************************************************************/
+		if(paymentreconciliationidentifieri == 0) {p.addPymntRecncliatnIdSys("[");}
+		if(paymentreconciliationidentifier.hasSystem()) {
+
+			p.addPymntRecncliatnIdSys(String.valueOf(paymentreconciliationidentifier.getSystem()));
+		} else {
+			p.addPymntRecncliatnIdSys("NULL");
+		}
+
+		if(paymentreconciliationidentifieri == paymentreconciliationidentifierlist.size()-1) {p.addPymntRecncliatnIdSys("]");}
+
+
+		 };
 		/******************** PymntRecncliatn_Disposition ********************************************************************************/
 		if(paymentreconciliation.hasDisposition()) {
-			p.setPymntRecncliatnDisposition(String.valueOf(paymentreconciliation.getDisposition()));
-		}
-		/******************** paymentreconciliationpaymentamount ********************************************************************************/
-		org.hl7.fhir.r4.model.Money paymentreconciliationpaymentamount = paymentreconciliation.getPaymentAmount();
 
-		/******************** PymntRecncliatn_PymntAmnt_Vl ********************************************************************************/
-		if(paymentreconciliationpaymentamount.hasValue()) {
-			p.setPymntRecncliatnPymntAmntVl(String.valueOf(paymentreconciliationpaymentamount.getValue()));
+			p.addPymntRecncliatnDisposition(String.valueOf(paymentreconciliation.getDisposition()));
+		} else {
+			p.addPymntRecncliatnDisposition("NULL");
 		}
-		/******************** PymntRecncliatn_PymntAmnt_Crncy ********************************************************************************/
-		if(paymentreconciliationpaymentamount.hasCurrency()) {
-			p.setPymntRecncliatnPymntAmntCrncy(String.valueOf(paymentreconciliationpaymentamount.getCurrency()));
-		}
+
+
 		/******************** paymentreconciliationdetail ********************************************************************************/
-		org.hl7.fhir.r4.model.PaymentReconciliation.DetailsComponent paymentreconciliationdetail = paymentreconciliation.getDetailFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.PaymentReconciliation.DetailsComponent> paymentreconciliationdetaillist = paymentreconciliation.getDetail();
+		for(int paymentreconciliationdetaili = 0; paymentreconciliationdetaili<paymentreconciliationdetaillist.size();paymentreconciliationdetaili++ ) {
+		org.hl7.fhir.r4.model.PaymentReconciliation.DetailsComponent  paymentreconciliationdetail = paymentreconciliationdetaillist.get(paymentreconciliationdetaili);
 
 		/******************** paymentreconciliationdetailtype ********************************************************************************/
 		org.hl7.fhir.r4.model.CodeableConcept paymentreconciliationdetailtype = paymentreconciliationdetail.getType();
 
 		/******************** PymntRecncliatn_Dtl_Typ_Txt ********************************************************************************/
+		if(paymentreconciliationdetaili == 0) {p.addPymntRecncliatnDtlTypTxt("[");}
 		if(paymentreconciliationdetailtype.hasText()) {
-			p.setPymntRecncliatnDtlTypTxt(String.valueOf(paymentreconciliationdetailtype.getText()));
+
+			p.addPymntRecncliatnDtlTypTxt(String.valueOf(paymentreconciliationdetailtype.getText()));
+		} else {
+			p.addPymntRecncliatnDtlTypTxt("NULL");
 		}
+
+		if(paymentreconciliationdetaili == paymentreconciliationdetaillist.size()-1) {p.addPymntRecncliatnDtlTypTxt("]");}
+
+
 		/******************** paymentreconciliationdetailtypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding paymentreconciliationdetailtypecoding = paymentreconciliationdetailtype.getCodingFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.Coding> paymentreconciliationdetailtypecodinglist = paymentreconciliationdetailtype.getCoding();
+		for(int paymentreconciliationdetailtypecodingi = 0; paymentreconciliationdetailtypecodingi<paymentreconciliationdetailtypecodinglist.size();paymentreconciliationdetailtypecodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  paymentreconciliationdetailtypecoding = paymentreconciliationdetailtypecodinglist.get(paymentreconciliationdetailtypecodingi);
+
+		/******************** PymntRecncliatn_Dtl_Typ_Cdg_Dsply ********************************************************************************/
+		if(paymentreconciliationdetailtypecodingi == 0) {p.addPymntRecncliatnDtlTypCdgDsply("[[");}
+		if(paymentreconciliationdetailtypecoding.hasDisplay()) {
+
+			p.addPymntRecncliatnDtlTypCdgDsply(String.valueOf(paymentreconciliationdetailtypecoding.getDisplay()));
+		} else {
+			p.addPymntRecncliatnDtlTypCdgDsply("NULL");
+		}
+
+		if(paymentreconciliationdetailtypecodingi == paymentreconciliationdetailtypecodinglist.size()-1) {p.addPymntRecncliatnDtlTypCdgDsply("]]");}
+
 
 		/******************** PymntRecncliatn_Dtl_Typ_Cdg_Vrsn ********************************************************************************/
+		if(paymentreconciliationdetailtypecodingi == 0) {p.addPymntRecncliatnDtlTypCdgVrsn("[[");}
 		if(paymentreconciliationdetailtypecoding.hasVersion()) {
-			p.setPymntRecncliatnDtlTypCdgVrsn(String.valueOf(paymentreconciliationdetailtypecoding.getVersion()));
+
+			p.addPymntRecncliatnDtlTypCdgVrsn(String.valueOf(paymentreconciliationdetailtypecoding.getVersion()));
+		} else {
+			p.addPymntRecncliatnDtlTypCdgVrsn("NULL");
 		}
-		/******************** PymntRecncliatn_Dtl_Typ_Cdg_Dsply ********************************************************************************/
-		if(paymentreconciliationdetailtypecoding.hasDisplay()) {
-			p.setPymntRecncliatnDtlTypCdgDsply(String.valueOf(paymentreconciliationdetailtypecoding.getDisplay()));
-		}
+
+		if(paymentreconciliationdetailtypecodingi == paymentreconciliationdetailtypecodinglist.size()-1) {p.addPymntRecncliatnDtlTypCdgVrsn("]]");}
+
+
 		/******************** PymntRecncliatn_Dtl_Typ_Cdg_Cd ********************************************************************************/
+		if(paymentreconciliationdetailtypecodingi == 0) {p.addPymntRecncliatnDtlTypCdgCd("[[");}
 		if(paymentreconciliationdetailtypecoding.hasCode()) {
-			p.setPymntRecncliatnDtlTypCdgCd(String.valueOf(paymentreconciliationdetailtypecoding.getCode()));
+
+			p.addPymntRecncliatnDtlTypCdgCd(String.valueOf(paymentreconciliationdetailtypecoding.getCode()));
+		} else {
+			p.addPymntRecncliatnDtlTypCdgCd("NULL");
 		}
+
+		if(paymentreconciliationdetailtypecodingi == paymentreconciliationdetailtypecodinglist.size()-1) {p.addPymntRecncliatnDtlTypCdgCd("]]");}
+
+
 		/******************** PymntRecncliatn_Dtl_Typ_Cdg_UsrSltd ********************************************************************************/
+		if(paymentreconciliationdetailtypecodingi == 0) {p.addPymntRecncliatnDtlTypCdgUsrSltd("[[");}
 		if(paymentreconciliationdetailtypecoding.hasUserSelected()) {
-			p.setPymntRecncliatnDtlTypCdgUsrSltd(String.valueOf(paymentreconciliationdetailtypecoding.getUserSelected()));
+
+			p.addPymntRecncliatnDtlTypCdgUsrSltd(String.valueOf(paymentreconciliationdetailtypecoding.getUserSelected()));
+		} else {
+			p.addPymntRecncliatnDtlTypCdgUsrSltd("NULL");
 		}
+
+		if(paymentreconciliationdetailtypecodingi == paymentreconciliationdetailtypecodinglist.size()-1) {p.addPymntRecncliatnDtlTypCdgUsrSltd("]]");}
+
+
 		/******************** PymntRecncliatn_Dtl_Typ_Cdg_Sys ********************************************************************************/
+		if(paymentreconciliationdetailtypecodingi == 0) {p.addPymntRecncliatnDtlTypCdgSys("[[");}
 		if(paymentreconciliationdetailtypecoding.hasSystem()) {
-			p.setPymntRecncliatnDtlTypCdgSys(String.valueOf(paymentreconciliationdetailtypecoding.getSystem()));
+
+			p.addPymntRecncliatnDtlTypCdgSys(String.valueOf(paymentreconciliationdetailtypecoding.getSystem()));
+		} else {
+			p.addPymntRecncliatnDtlTypCdgSys("NULL");
 		}
+
+		if(paymentreconciliationdetailtypecodingi == paymentreconciliationdetailtypecodinglist.size()-1) {p.addPymntRecncliatnDtlTypCdgSys("]]");}
+
+
+		 };
 		/******************** PymntRecncliatn_Dtl_Dt ********************************************************************************/
+		if(paymentreconciliationdetaili == 0) {p.addPymntRecncliatnDtlDt("[");}
 		if(paymentreconciliationdetail.hasDate()) {
-			p.setPymntRecncliatnDtlDt(String.valueOf(paymentreconciliationdetail.getDate()));
+
+			p.addPymntRecncliatnDtlDt("\""+ca.uhn.fhir.util.DateUtils.formatDate(paymentreconciliationdetail.getDate())+"\"");
+		} else {
+			p.addPymntRecncliatnDtlDt("NULL");
 		}
+
+		if(paymentreconciliationdetaili == paymentreconciliationdetaillist.size()-1) {p.addPymntRecncliatnDtlDt("]");}
+
+
 		/******************** PymntRecncliatn_Dtl_Rqst ********************************************************************************/
+		if(paymentreconciliationdetaili == 0) {p.addPymntRecncliatnDtlRqst("[");}
 		if(paymentreconciliationdetail.hasRequest()) {
-			p.setPymntRecncliatnDtlRqst(String.valueOf(paymentreconciliationdetail.getRequest()));
-		}
-		/******************** paymentreconciliationdetailpredecessor ********************************************************************************/
-		org.hl7.fhir.r4.model.Identifier paymentreconciliationdetailpredecessor = paymentreconciliationdetail.getPredecessor();
 
-		/******************** PymntRecncliatn_Dtl_Predecessor_Vl ********************************************************************************/
-		if(paymentreconciliationdetailpredecessor.hasValue()) {
-			p.setPymntRecncliatnDtlPredecessorVl(String.valueOf(paymentreconciliationdetailpredecessor.getValue()));
+			if(paymentreconciliationdetail.getRequest().getReference() != null) {
+			p.addPymntRecncliatnDtlRqst(paymentreconciliationdetail.getRequest().getReference());
+			}
+		} else {
+			p.addPymntRecncliatnDtlRqst("NULL");
 		}
-		/******************** paymentreconciliationdetailpredecessortype ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept paymentreconciliationdetailpredecessortype = paymentreconciliationdetailpredecessor.getType();
 
-		/******************** PymntRecncliatn_Dtl_Predecessor_Typ_Txt ********************************************************************************/
-		if(paymentreconciliationdetailpredecessortype.hasText()) {
-			p.setPymntRecncliatnDtlPredecessorTypTxt(String.valueOf(paymentreconciliationdetailpredecessortype.getText()));
-		}
-		/******************** paymentreconciliationdetailpredecessortypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding paymentreconciliationdetailpredecessortypecoding = paymentreconciliationdetailpredecessortype.getCodingFirstRep();
+		if(paymentreconciliationdetaili == paymentreconciliationdetaillist.size()-1) {p.addPymntRecncliatnDtlRqst("]");}
 
-		/******************** PymntRecncliatn_Dtl_Predecessor_Typ_Cdg_Vrsn ********************************************************************************/
-		if(paymentreconciliationdetailpredecessortypecoding.hasVersion()) {
-			p.setPymntRecncliatnDtlPredecessorTypCdgVrsn(String.valueOf(paymentreconciliationdetailpredecessortypecoding.getVersion()));
-		}
-		/******************** PymntRecncliatn_Dtl_Predecessor_Typ_Cdg_Dsply ********************************************************************************/
-		if(paymentreconciliationdetailpredecessortypecoding.hasDisplay()) {
-			p.setPymntRecncliatnDtlPredecessorTypCdgDsply(String.valueOf(paymentreconciliationdetailpredecessortypecoding.getDisplay()));
-		}
-		/******************** PymntRecncliatn_Dtl_Predecessor_Typ_Cdg_Cd ********************************************************************************/
-		if(paymentreconciliationdetailpredecessortypecoding.hasCode()) {
-			p.setPymntRecncliatnDtlPredecessorTypCdgCd(String.valueOf(paymentreconciliationdetailpredecessortypecoding.getCode()));
-		}
-		/******************** PymntRecncliatn_Dtl_Predecessor_Typ_Cdg_UsrSltd ********************************************************************************/
-		if(paymentreconciliationdetailpredecessortypecoding.hasUserSelected()) {
-			p.setPymntRecncliatnDtlPredecessorTypCdgUsrSltd(String.valueOf(paymentreconciliationdetailpredecessortypecoding.getUserSelected()));
-		}
-		/******************** PymntRecncliatn_Dtl_Predecessor_Typ_Cdg_Sys ********************************************************************************/
-		if(paymentreconciliationdetailpredecessortypecoding.hasSystem()) {
-			p.setPymntRecncliatnDtlPredecessorTypCdgSys(String.valueOf(paymentreconciliationdetailpredecessortypecoding.getSystem()));
-		}
-		/******************** paymentreconciliationdetailpredecessorperiod ********************************************************************************/
-		org.hl7.fhir.r4.model.Period paymentreconciliationdetailpredecessorperiod = paymentreconciliationdetailpredecessor.getPeriod();
 
-		/******************** PymntRecncliatn_Dtl_Predecessor_Prd_Strt ********************************************************************************/
-		if(paymentreconciliationdetailpredecessorperiod.hasStart()) {
-			p.setPymntRecncliatnDtlPredecessorPrdStrt(String.valueOf(paymentreconciliationdetailpredecessorperiod.getStart()));
-		}
-		/******************** PymntRecncliatn_Dtl_Predecessor_Prd_End ********************************************************************************/
-		if(paymentreconciliationdetailpredecessorperiod.hasEnd()) {
-			p.setPymntRecncliatnDtlPredecessorPrdEnd(String.valueOf(paymentreconciliationdetailpredecessorperiod.getEnd()));
-		}
-		/******************** PymntRecncliatn_Dtl_Predecessor_Assigner ********************************************************************************/
-		if(paymentreconciliationdetailpredecessor.hasAssigner()) {
-			p.setPymntRecncliatnDtlPredecessorAssigner(String.valueOf(paymentreconciliationdetailpredecessor.getAssigner()));
-		}
-		/******************** PymntRecncliatn_Dtl_Predecessor_Sys ********************************************************************************/
-		if(paymentreconciliationdetailpredecessor.hasSystem()) {
-			p.setPymntRecncliatnDtlPredecessorSys(String.valueOf(paymentreconciliationdetailpredecessor.getSystem()));
-		}
-		/******************** paymentreconciliationdetailpredecessoruse ********************************************************************************/
-		org.hl7.fhir.r4.model.Identifier.IdentifierUse paymentreconciliationdetailpredecessoruse = paymentreconciliationdetailpredecessor.getUse();
-		p.setPymntRecncliatnDtlPredecessorUse(paymentreconciliationdetailpredecessoruse.toCode());
-
-		/******************** PymntRecncliatn_Dtl_Submitter ********************************************************************************/
-		if(paymentreconciliationdetail.hasSubmitter()) {
-			p.setPymntRecncliatnDtlSubmitter(String.valueOf(paymentreconciliationdetail.getSubmitter()));
-		}
 		/******************** paymentreconciliationdetailidentifier ********************************************************************************/
 		org.hl7.fhir.r4.model.Identifier paymentreconciliationdetailidentifier = paymentreconciliationdetail.getIdentifier();
 
 		/******************** PymntRecncliatn_Dtl_Id_Vl ********************************************************************************/
+		if(paymentreconciliationdetaili == 0) {p.addPymntRecncliatnDtlIdVl("[");}
 		if(paymentreconciliationdetailidentifier.hasValue()) {
-			p.setPymntRecncliatnDtlIdVl(String.valueOf(paymentreconciliationdetailidentifier.getValue()));
+
+			p.addPymntRecncliatnDtlIdVl(String.valueOf(paymentreconciliationdetailidentifier.getValue()));
+		} else {
+			p.addPymntRecncliatnDtlIdVl("NULL");
 		}
+
+		if(paymentreconciliationdetaili == paymentreconciliationdetaillist.size()-1) {p.addPymntRecncliatnDtlIdVl("]");}
+
+
 		/******************** paymentreconciliationdetailidentifiertype ********************************************************************************/
 		org.hl7.fhir.r4.model.CodeableConcept paymentreconciliationdetailidentifiertype = paymentreconciliationdetailidentifier.getType();
 
 		/******************** PymntRecncliatn_Dtl_Id_Typ_Txt ********************************************************************************/
+		if(paymentreconciliationdetaili == 0) {p.addPymntRecncliatnDtlIdTypTxt("[");}
 		if(paymentreconciliationdetailidentifiertype.hasText()) {
-			p.setPymntRecncliatnDtlIdTypTxt(String.valueOf(paymentreconciliationdetailidentifiertype.getText()));
+
+			p.addPymntRecncliatnDtlIdTypTxt(String.valueOf(paymentreconciliationdetailidentifiertype.getText()));
+		} else {
+			p.addPymntRecncliatnDtlIdTypTxt("NULL");
 		}
+
+		if(paymentreconciliationdetaili == paymentreconciliationdetaillist.size()-1) {p.addPymntRecncliatnDtlIdTypTxt("]");}
+
+
 		/******************** paymentreconciliationdetailidentifiertypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding paymentreconciliationdetailidentifiertypecoding = paymentreconciliationdetailidentifiertype.getCodingFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.Coding> paymentreconciliationdetailidentifiertypecodinglist = paymentreconciliationdetailidentifiertype.getCoding();
+		for(int paymentreconciliationdetailidentifiertypecodingi = 0; paymentreconciliationdetailidentifiertypecodingi<paymentreconciliationdetailidentifiertypecodinglist.size();paymentreconciliationdetailidentifiertypecodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  paymentreconciliationdetailidentifiertypecoding = paymentreconciliationdetailidentifiertypecodinglist.get(paymentreconciliationdetailidentifiertypecodingi);
+
+		/******************** PymntRecncliatn_Dtl_Id_Typ_Cdg_Dsply ********************************************************************************/
+		if(paymentreconciliationdetailidentifiertypecodingi == 0) {p.addPymntRecncliatnDtlIdTypCdgDsply("[[");}
+		if(paymentreconciliationdetailidentifiertypecoding.hasDisplay()) {
+
+			p.addPymntRecncliatnDtlIdTypCdgDsply(String.valueOf(paymentreconciliationdetailidentifiertypecoding.getDisplay()));
+		} else {
+			p.addPymntRecncliatnDtlIdTypCdgDsply("NULL");
+		}
+
+		if(paymentreconciliationdetailidentifiertypecodingi == paymentreconciliationdetailidentifiertypecodinglist.size()-1) {p.addPymntRecncliatnDtlIdTypCdgDsply("]]");}
+
 
 		/******************** PymntRecncliatn_Dtl_Id_Typ_Cdg_Vrsn ********************************************************************************/
+		if(paymentreconciliationdetailidentifiertypecodingi == 0) {p.addPymntRecncliatnDtlIdTypCdgVrsn("[[");}
 		if(paymentreconciliationdetailidentifiertypecoding.hasVersion()) {
-			p.setPymntRecncliatnDtlIdTypCdgVrsn(String.valueOf(paymentreconciliationdetailidentifiertypecoding.getVersion()));
+
+			p.addPymntRecncliatnDtlIdTypCdgVrsn(String.valueOf(paymentreconciliationdetailidentifiertypecoding.getVersion()));
+		} else {
+			p.addPymntRecncliatnDtlIdTypCdgVrsn("NULL");
 		}
-		/******************** PymntRecncliatn_Dtl_Id_Typ_Cdg_Dsply ********************************************************************************/
-		if(paymentreconciliationdetailidentifiertypecoding.hasDisplay()) {
-			p.setPymntRecncliatnDtlIdTypCdgDsply(String.valueOf(paymentreconciliationdetailidentifiertypecoding.getDisplay()));
-		}
+
+		if(paymentreconciliationdetailidentifiertypecodingi == paymentreconciliationdetailidentifiertypecodinglist.size()-1) {p.addPymntRecncliatnDtlIdTypCdgVrsn("]]");}
+
+
 		/******************** PymntRecncliatn_Dtl_Id_Typ_Cdg_Cd ********************************************************************************/
+		if(paymentreconciliationdetailidentifiertypecodingi == 0) {p.addPymntRecncliatnDtlIdTypCdgCd("[[");}
 		if(paymentreconciliationdetailidentifiertypecoding.hasCode()) {
-			p.setPymntRecncliatnDtlIdTypCdgCd(String.valueOf(paymentreconciliationdetailidentifiertypecoding.getCode()));
+
+			p.addPymntRecncliatnDtlIdTypCdgCd(String.valueOf(paymentreconciliationdetailidentifiertypecoding.getCode()));
+		} else {
+			p.addPymntRecncliatnDtlIdTypCdgCd("NULL");
 		}
+
+		if(paymentreconciliationdetailidentifiertypecodingi == paymentreconciliationdetailidentifiertypecodinglist.size()-1) {p.addPymntRecncliatnDtlIdTypCdgCd("]]");}
+
+
 		/******************** PymntRecncliatn_Dtl_Id_Typ_Cdg_UsrSltd ********************************************************************************/
+		if(paymentreconciliationdetailidentifiertypecodingi == 0) {p.addPymntRecncliatnDtlIdTypCdgUsrSltd("[[");}
 		if(paymentreconciliationdetailidentifiertypecoding.hasUserSelected()) {
-			p.setPymntRecncliatnDtlIdTypCdgUsrSltd(String.valueOf(paymentreconciliationdetailidentifiertypecoding.getUserSelected()));
+
+			p.addPymntRecncliatnDtlIdTypCdgUsrSltd(String.valueOf(paymentreconciliationdetailidentifiertypecoding.getUserSelected()));
+		} else {
+			p.addPymntRecncliatnDtlIdTypCdgUsrSltd("NULL");
 		}
+
+		if(paymentreconciliationdetailidentifiertypecodingi == paymentreconciliationdetailidentifiertypecodinglist.size()-1) {p.addPymntRecncliatnDtlIdTypCdgUsrSltd("]]");}
+
+
 		/******************** PymntRecncliatn_Dtl_Id_Typ_Cdg_Sys ********************************************************************************/
+		if(paymentreconciliationdetailidentifiertypecodingi == 0) {p.addPymntRecncliatnDtlIdTypCdgSys("[[");}
 		if(paymentreconciliationdetailidentifiertypecoding.hasSystem()) {
-			p.setPymntRecncliatnDtlIdTypCdgSys(String.valueOf(paymentreconciliationdetailidentifiertypecoding.getSystem()));
+
+			p.addPymntRecncliatnDtlIdTypCdgSys(String.valueOf(paymentreconciliationdetailidentifiertypecoding.getSystem()));
+		} else {
+			p.addPymntRecncliatnDtlIdTypCdgSys("NULL");
 		}
+
+		if(paymentreconciliationdetailidentifiertypecodingi == paymentreconciliationdetailidentifiertypecodinglist.size()-1) {p.addPymntRecncliatnDtlIdTypCdgSys("]]");}
+
+
+		 };
 		/******************** paymentreconciliationdetailidentifierperiod ********************************************************************************/
 		org.hl7.fhir.r4.model.Period paymentreconciliationdetailidentifierperiod = paymentreconciliationdetailidentifier.getPeriod();
 
 		/******************** PymntRecncliatn_Dtl_Id_Prd_Strt ********************************************************************************/
+		if(paymentreconciliationdetaili == 0) {p.addPymntRecncliatnDtlIdPrdStrt("[");}
 		if(paymentreconciliationdetailidentifierperiod.hasStart()) {
-			p.setPymntRecncliatnDtlIdPrdStrt(String.valueOf(paymentreconciliationdetailidentifierperiod.getStart()));
+
+			p.addPymntRecncliatnDtlIdPrdStrt("\""+ca.uhn.fhir.util.DateUtils.formatDate(paymentreconciliationdetailidentifierperiod.getStart())+"\"");
+		} else {
+			p.addPymntRecncliatnDtlIdPrdStrt("NULL");
 		}
+
+		if(paymentreconciliationdetaili == paymentreconciliationdetaillist.size()-1) {p.addPymntRecncliatnDtlIdPrdStrt("]");}
+
+
 		/******************** PymntRecncliatn_Dtl_Id_Prd_End ********************************************************************************/
+		if(paymentreconciliationdetaili == 0) {p.addPymntRecncliatnDtlIdPrdEnd("[");}
 		if(paymentreconciliationdetailidentifierperiod.hasEnd()) {
-			p.setPymntRecncliatnDtlIdPrdEnd(String.valueOf(paymentreconciliationdetailidentifierperiod.getEnd()));
+
+			p.addPymntRecncliatnDtlIdPrdEnd("\""+ca.uhn.fhir.util.DateUtils.formatDate(paymentreconciliationdetailidentifierperiod.getEnd())+"\"");
+		} else {
+			p.addPymntRecncliatnDtlIdPrdEnd("NULL");
 		}
-		/******************** PymntRecncliatn_Dtl_Id_Assigner ********************************************************************************/
-		if(paymentreconciliationdetailidentifier.hasAssigner()) {
-			p.setPymntRecncliatnDtlIdAssigner(String.valueOf(paymentreconciliationdetailidentifier.getAssigner()));
-		}
-		/******************** PymntRecncliatn_Dtl_Id_Sys ********************************************************************************/
-		if(paymentreconciliationdetailidentifier.hasSystem()) {
-			p.setPymntRecncliatnDtlIdSys(String.valueOf(paymentreconciliationdetailidentifier.getSystem()));
-		}
+
+		if(paymentreconciliationdetaili == paymentreconciliationdetaillist.size()-1) {p.addPymntRecncliatnDtlIdPrdEnd("]");}
+
+
 		/******************** paymentreconciliationdetailidentifieruse ********************************************************************************/
 		org.hl7.fhir.r4.model.Identifier.IdentifierUse paymentreconciliationdetailidentifieruse = paymentreconciliationdetailidentifier.getUse();
-		p.setPymntRecncliatnDtlIdUse(paymentreconciliationdetailidentifieruse.toCode());
+		if(paymentreconciliationdetailidentifieruse!=null) {
+		if(paymentreconciliationdetaili == 0) {
 
-		/******************** PymntRecncliatn_Dtl_Responsible ********************************************************************************/
-		if(paymentreconciliationdetail.hasResponsible()) {
-			p.setPymntRecncliatnDtlResponsible(String.valueOf(paymentreconciliationdetail.getResponsible()));
+		p.addPymntRecncliatnDtlIdUse("[");		}
+			p.addPymntRecncliatnDtlIdUse(paymentreconciliationdetailidentifieruse.toCode());
+		if(paymentreconciliationdetaili == paymentreconciliationdetaillist.size()-1) {
+
+		p.addPymntRecncliatnDtlIdUse("]");		}
+
+		} else {
+			p.addPymntRecncliatnDtlIdUse("NULL");
 		}
+
+		/******************** PymntRecncliatn_Dtl_Id_Assigner ********************************************************************************/
+		if(paymentreconciliationdetaili == 0) {p.addPymntRecncliatnDtlIdAssigner("[");}
+		if(paymentreconciliationdetailidentifier.hasAssigner()) {
+
+			if(paymentreconciliationdetailidentifier.getAssigner().getReference() != null) {
+			p.addPymntRecncliatnDtlIdAssigner(paymentreconciliationdetailidentifier.getAssigner().getReference());
+			}
+		} else {
+			p.addPymntRecncliatnDtlIdAssigner("NULL");
+		}
+
+		if(paymentreconciliationdetaili == paymentreconciliationdetaillist.size()-1) {p.addPymntRecncliatnDtlIdAssigner("]");}
+
+
+		/******************** PymntRecncliatn_Dtl_Id_Sys ********************************************************************************/
+		if(paymentreconciliationdetaili == 0) {p.addPymntRecncliatnDtlIdSys("[");}
+		if(paymentreconciliationdetailidentifier.hasSystem()) {
+
+			p.addPymntRecncliatnDtlIdSys(String.valueOf(paymentreconciliationdetailidentifier.getSystem()));
+		} else {
+			p.addPymntRecncliatnDtlIdSys("NULL");
+		}
+
+		if(paymentreconciliationdetaili == paymentreconciliationdetaillist.size()-1) {p.addPymntRecncliatnDtlIdSys("]");}
+
+
 		/******************** PymntRecncliatn_Dtl_Rsps ********************************************************************************/
+		if(paymentreconciliationdetaili == 0) {p.addPymntRecncliatnDtlRsps("[");}
 		if(paymentreconciliationdetail.hasResponse()) {
-			p.setPymntRecncliatnDtlRsps(String.valueOf(paymentreconciliationdetail.getResponse()));
+
+			if(paymentreconciliationdetail.getResponse().getReference() != null) {
+			p.addPymntRecncliatnDtlRsps(paymentreconciliationdetail.getResponse().getReference());
+			}
+		} else {
+			p.addPymntRecncliatnDtlRsps("NULL");
 		}
+
+		if(paymentreconciliationdetaili == paymentreconciliationdetaillist.size()-1) {p.addPymntRecncliatnDtlRsps("]");}
+
+
 		/******************** PymntRecncliatn_Dtl_Payee ********************************************************************************/
+		if(paymentreconciliationdetaili == 0) {p.addPymntRecncliatnDtlPayee("[");}
 		if(paymentreconciliationdetail.hasPayee()) {
-			p.setPymntRecncliatnDtlPayee(String.valueOf(paymentreconciliationdetail.getPayee()));
+
+			if(paymentreconciliationdetail.getPayee().getReference() != null) {
+			p.addPymntRecncliatnDtlPayee(paymentreconciliationdetail.getPayee().getReference());
+			}
+		} else {
+			p.addPymntRecncliatnDtlPayee("NULL");
 		}
+
+		if(paymentreconciliationdetaili == paymentreconciliationdetaillist.size()-1) {p.addPymntRecncliatnDtlPayee("]");}
+
+
 		/******************** paymentreconciliationdetailamount ********************************************************************************/
 		org.hl7.fhir.r4.model.Money paymentreconciliationdetailamount = paymentreconciliationdetail.getAmount();
 
 		/******************** PymntRecncliatn_Dtl_Amnt_Vl ********************************************************************************/
+		if(paymentreconciliationdetaili == 0) {p.addPymntRecncliatnDtlAmntVl("[");}
 		if(paymentreconciliationdetailamount.hasValue()) {
-			p.setPymntRecncliatnDtlAmntVl(String.valueOf(paymentreconciliationdetailamount.getValue()));
+
+			p.addPymntRecncliatnDtlAmntVl(String.valueOf(paymentreconciliationdetailamount.getValue()));
+		} else {
+			p.addPymntRecncliatnDtlAmntVl("NULL");
 		}
+
+		if(paymentreconciliationdetaili == paymentreconciliationdetaillist.size()-1) {p.addPymntRecncliatnDtlAmntVl("]");}
+
+
 		/******************** PymntRecncliatn_Dtl_Amnt_Crncy ********************************************************************************/
+		if(paymentreconciliationdetaili == 0) {p.addPymntRecncliatnDtlAmntCrncy("[");}
 		if(paymentreconciliationdetailamount.hasCurrency()) {
-			p.setPymntRecncliatnDtlAmntCrncy(String.valueOf(paymentreconciliationdetailamount.getCurrency()));
+
+			p.addPymntRecncliatnDtlAmntCrncy(String.valueOf(paymentreconciliationdetailamount.getCurrency()));
+		} else {
+			p.addPymntRecncliatnDtlAmntCrncy("NULL");
 		}
+
+		if(paymentreconciliationdetaili == paymentreconciliationdetaillist.size()-1) {p.addPymntRecncliatnDtlAmntCrncy("]");}
+
+
+		/******************** PymntRecncliatn_Dtl_Submitter ********************************************************************************/
+		if(paymentreconciliationdetaili == 0) {p.addPymntRecncliatnDtlSubmitter("[");}
+		if(paymentreconciliationdetail.hasSubmitter()) {
+
+			if(paymentreconciliationdetail.getSubmitter().getReference() != null) {
+			p.addPymntRecncliatnDtlSubmitter(paymentreconciliationdetail.getSubmitter().getReference());
+			}
+		} else {
+			p.addPymntRecncliatnDtlSubmitter("NULL");
+		}
+
+		if(paymentreconciliationdetaili == paymentreconciliationdetaillist.size()-1) {p.addPymntRecncliatnDtlSubmitter("]");}
+
+
+		/******************** paymentreconciliationdetailpredecessor ********************************************************************************/
+		org.hl7.fhir.r4.model.Identifier paymentreconciliationdetailpredecessor = paymentreconciliationdetail.getPredecessor();
+
+		/******************** PymntRecncliatn_Dtl_Predecessor_Vl ********************************************************************************/
+		if(paymentreconciliationdetaili == 0) {p.addPymntRecncliatnDtlPredecessorVl("[");}
+		if(paymentreconciliationdetailpredecessor.hasValue()) {
+
+			p.addPymntRecncliatnDtlPredecessorVl(String.valueOf(paymentreconciliationdetailpredecessor.getValue()));
+		} else {
+			p.addPymntRecncliatnDtlPredecessorVl("NULL");
+		}
+
+		if(paymentreconciliationdetaili == paymentreconciliationdetaillist.size()-1) {p.addPymntRecncliatnDtlPredecessorVl("]");}
+
+
+		/******************** paymentreconciliationdetailpredecessortype ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept paymentreconciliationdetailpredecessortype = paymentreconciliationdetailpredecessor.getType();
+
+		/******************** PymntRecncliatn_Dtl_Predecessor_Typ_Txt ********************************************************************************/
+		if(paymentreconciliationdetaili == 0) {p.addPymntRecncliatnDtlPredecessorTypTxt("[");}
+		if(paymentreconciliationdetailpredecessortype.hasText()) {
+
+			p.addPymntRecncliatnDtlPredecessorTypTxt(String.valueOf(paymentreconciliationdetailpredecessortype.getText()));
+		} else {
+			p.addPymntRecncliatnDtlPredecessorTypTxt("NULL");
+		}
+
+		if(paymentreconciliationdetaili == paymentreconciliationdetaillist.size()-1) {p.addPymntRecncliatnDtlPredecessorTypTxt("]");}
+
+
+		/******************** paymentreconciliationdetailpredecessortypecoding ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.Coding> paymentreconciliationdetailpredecessortypecodinglist = paymentreconciliationdetailpredecessortype.getCoding();
+		for(int paymentreconciliationdetailpredecessortypecodingi = 0; paymentreconciliationdetailpredecessortypecodingi<paymentreconciliationdetailpredecessortypecodinglist.size();paymentreconciliationdetailpredecessortypecodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  paymentreconciliationdetailpredecessortypecoding = paymentreconciliationdetailpredecessortypecodinglist.get(paymentreconciliationdetailpredecessortypecodingi);
+
+		/******************** PymntRecncliatn_Dtl_Predecessor_Typ_Cdg_Dsply ********************************************************************************/
+		if(paymentreconciliationdetailpredecessortypecodingi == 0) {p.addPymntRecncliatnDtlPredecessorTypCdgDsply("[[");}
+		if(paymentreconciliationdetailpredecessortypecoding.hasDisplay()) {
+
+			p.addPymntRecncliatnDtlPredecessorTypCdgDsply(String.valueOf(paymentreconciliationdetailpredecessortypecoding.getDisplay()));
+		} else {
+			p.addPymntRecncliatnDtlPredecessorTypCdgDsply("NULL");
+		}
+
+		if(paymentreconciliationdetailpredecessortypecodingi == paymentreconciliationdetailpredecessortypecodinglist.size()-1) {p.addPymntRecncliatnDtlPredecessorTypCdgDsply("]]");}
+
+
+		/******************** PymntRecncliatn_Dtl_Predecessor_Typ_Cdg_Vrsn ********************************************************************************/
+		if(paymentreconciliationdetailpredecessortypecodingi == 0) {p.addPymntRecncliatnDtlPredecessorTypCdgVrsn("[[");}
+		if(paymentreconciliationdetailpredecessortypecoding.hasVersion()) {
+
+			p.addPymntRecncliatnDtlPredecessorTypCdgVrsn(String.valueOf(paymentreconciliationdetailpredecessortypecoding.getVersion()));
+		} else {
+			p.addPymntRecncliatnDtlPredecessorTypCdgVrsn("NULL");
+		}
+
+		if(paymentreconciliationdetailpredecessortypecodingi == paymentreconciliationdetailpredecessortypecodinglist.size()-1) {p.addPymntRecncliatnDtlPredecessorTypCdgVrsn("]]");}
+
+
+		/******************** PymntRecncliatn_Dtl_Predecessor_Typ_Cdg_Cd ********************************************************************************/
+		if(paymentreconciliationdetailpredecessortypecodingi == 0) {p.addPymntRecncliatnDtlPredecessorTypCdgCd("[[");}
+		if(paymentreconciliationdetailpredecessortypecoding.hasCode()) {
+
+			p.addPymntRecncliatnDtlPredecessorTypCdgCd(String.valueOf(paymentreconciliationdetailpredecessortypecoding.getCode()));
+		} else {
+			p.addPymntRecncliatnDtlPredecessorTypCdgCd("NULL");
+		}
+
+		if(paymentreconciliationdetailpredecessortypecodingi == paymentreconciliationdetailpredecessortypecodinglist.size()-1) {p.addPymntRecncliatnDtlPredecessorTypCdgCd("]]");}
+
+
+		/******************** PymntRecncliatn_Dtl_Predecessor_Typ_Cdg_UsrSltd ********************************************************************************/
+		if(paymentreconciliationdetailpredecessortypecodingi == 0) {p.addPymntRecncliatnDtlPredecessorTypCdgUsrSltd("[[");}
+		if(paymentreconciliationdetailpredecessortypecoding.hasUserSelected()) {
+
+			p.addPymntRecncliatnDtlPredecessorTypCdgUsrSltd(String.valueOf(paymentreconciliationdetailpredecessortypecoding.getUserSelected()));
+		} else {
+			p.addPymntRecncliatnDtlPredecessorTypCdgUsrSltd("NULL");
+		}
+
+		if(paymentreconciliationdetailpredecessortypecodingi == paymentreconciliationdetailpredecessortypecodinglist.size()-1) {p.addPymntRecncliatnDtlPredecessorTypCdgUsrSltd("]]");}
+
+
+		/******************** PymntRecncliatn_Dtl_Predecessor_Typ_Cdg_Sys ********************************************************************************/
+		if(paymentreconciliationdetailpredecessortypecodingi == 0) {p.addPymntRecncliatnDtlPredecessorTypCdgSys("[[");}
+		if(paymentreconciliationdetailpredecessortypecoding.hasSystem()) {
+
+			p.addPymntRecncliatnDtlPredecessorTypCdgSys(String.valueOf(paymentreconciliationdetailpredecessortypecoding.getSystem()));
+		} else {
+			p.addPymntRecncliatnDtlPredecessorTypCdgSys("NULL");
+		}
+
+		if(paymentreconciliationdetailpredecessortypecodingi == paymentreconciliationdetailpredecessortypecodinglist.size()-1) {p.addPymntRecncliatnDtlPredecessorTypCdgSys("]]");}
+
+
+		 };
+		/******************** paymentreconciliationdetailpredecessorperiod ********************************************************************************/
+		org.hl7.fhir.r4.model.Period paymentreconciliationdetailpredecessorperiod = paymentreconciliationdetailpredecessor.getPeriod();
+
+		/******************** PymntRecncliatn_Dtl_Predecessor_Prd_Strt ********************************************************************************/
+		if(paymentreconciliationdetaili == 0) {p.addPymntRecncliatnDtlPredecessorPrdStrt("[");}
+		if(paymentreconciliationdetailpredecessorperiod.hasStart()) {
+
+			p.addPymntRecncliatnDtlPredecessorPrdStrt("\""+ca.uhn.fhir.util.DateUtils.formatDate(paymentreconciliationdetailpredecessorperiod.getStart())+"\"");
+		} else {
+			p.addPymntRecncliatnDtlPredecessorPrdStrt("NULL");
+		}
+
+		if(paymentreconciliationdetaili == paymentreconciliationdetaillist.size()-1) {p.addPymntRecncliatnDtlPredecessorPrdStrt("]");}
+
+
+		/******************** PymntRecncliatn_Dtl_Predecessor_Prd_End ********************************************************************************/
+		if(paymentreconciliationdetaili == 0) {p.addPymntRecncliatnDtlPredecessorPrdEnd("[");}
+		if(paymentreconciliationdetailpredecessorperiod.hasEnd()) {
+
+			p.addPymntRecncliatnDtlPredecessorPrdEnd("\""+ca.uhn.fhir.util.DateUtils.formatDate(paymentreconciliationdetailpredecessorperiod.getEnd())+"\"");
+		} else {
+			p.addPymntRecncliatnDtlPredecessorPrdEnd("NULL");
+		}
+
+		if(paymentreconciliationdetaili == paymentreconciliationdetaillist.size()-1) {p.addPymntRecncliatnDtlPredecessorPrdEnd("]");}
+
+
+		/******************** paymentreconciliationdetailpredecessoruse ********************************************************************************/
+		org.hl7.fhir.r4.model.Identifier.IdentifierUse paymentreconciliationdetailpredecessoruse = paymentreconciliationdetailpredecessor.getUse();
+		if(paymentreconciliationdetailpredecessoruse!=null) {
+		if(paymentreconciliationdetaili == 0) {
+
+		p.addPymntRecncliatnDtlPredecessorUse("[");		}
+			p.addPymntRecncliatnDtlPredecessorUse(paymentreconciliationdetailpredecessoruse.toCode());
+		if(paymentreconciliationdetaili == paymentreconciliationdetaillist.size()-1) {
+
+		p.addPymntRecncliatnDtlPredecessorUse("]");		}
+
+		} else {
+			p.addPymntRecncliatnDtlPredecessorUse("NULL");
+		}
+
+		/******************** PymntRecncliatn_Dtl_Predecessor_Assigner ********************************************************************************/
+		if(paymentreconciliationdetaili == 0) {p.addPymntRecncliatnDtlPredecessorAssigner("[");}
+		if(paymentreconciliationdetailpredecessor.hasAssigner()) {
+
+			if(paymentreconciliationdetailpredecessor.getAssigner().getReference() != null) {
+			p.addPymntRecncliatnDtlPredecessorAssigner(paymentreconciliationdetailpredecessor.getAssigner().getReference());
+			}
+		} else {
+			p.addPymntRecncliatnDtlPredecessorAssigner("NULL");
+		}
+
+		if(paymentreconciliationdetaili == paymentreconciliationdetaillist.size()-1) {p.addPymntRecncliatnDtlPredecessorAssigner("]");}
+
+
+		/******************** PymntRecncliatn_Dtl_Predecessor_Sys ********************************************************************************/
+		if(paymentreconciliationdetaili == 0) {p.addPymntRecncliatnDtlPredecessorSys("[");}
+		if(paymentreconciliationdetailpredecessor.hasSystem()) {
+
+			p.addPymntRecncliatnDtlPredecessorSys(String.valueOf(paymentreconciliationdetailpredecessor.getSystem()));
+		} else {
+			p.addPymntRecncliatnDtlPredecessorSys("NULL");
+		}
+
+		if(paymentreconciliationdetaili == paymentreconciliationdetaillist.size()-1) {p.addPymntRecncliatnDtlPredecessorSys("]");}
+
+
+		/******************** PymntRecncliatn_Dtl_Responsible ********************************************************************************/
+		if(paymentreconciliationdetaili == 0) {p.addPymntRecncliatnDtlResponsible("[");}
+		if(paymentreconciliationdetail.hasResponsible()) {
+
+			if(paymentreconciliationdetail.getResponsible().getReference() != null) {
+			p.addPymntRecncliatnDtlResponsible(paymentreconciliationdetail.getResponsible().getReference());
+			}
+		} else {
+			p.addPymntRecncliatnDtlResponsible("NULL");
+		}
+
+		if(paymentreconciliationdetaili == paymentreconciliationdetaillist.size()-1) {p.addPymntRecncliatnDtlResponsible("]");}
+
+
+		 };
+		/******************** paymentreconciliationpaymentamount ********************************************************************************/
+		org.hl7.fhir.r4.model.Money paymentreconciliationpaymentamount = paymentreconciliation.getPaymentAmount();
+
+		/******************** PymntRecncliatn_PymntAmnt_Vl ********************************************************************************/
+		if(paymentreconciliationpaymentamount.hasValue()) {
+
+			p.addPymntRecncliatnPymntAmntVl(String.valueOf(paymentreconciliationpaymentamount.getValue()));
+		} else {
+			p.addPymntRecncliatnPymntAmntVl("NULL");
+		}
+
+
+		/******************** PymntRecncliatn_PymntAmnt_Crncy ********************************************************************************/
+		if(paymentreconciliationpaymentamount.hasCurrency()) {
+
+			p.addPymntRecncliatnPymntAmntCrncy(String.valueOf(paymentreconciliationpaymentamount.getCurrency()));
+		} else {
+			p.addPymntRecncliatnPymntAmntCrncy("NULL");
+		}
+
+
+		/******************** PymntRecncliatn_PymntDt ********************************************************************************/
+		if(paymentreconciliation.hasPaymentDate()) {
+
+			p.addPymntRecncliatnPymntDt("\""+ca.uhn.fhir.util.DateUtils.formatDate(paymentreconciliation.getPaymentDate())+"\"");
+		} else {
+			p.addPymntRecncliatnPymntDt("NULL");
+		}
+
+
+		/******************** paymentreconciliationoutcome ********************************************************************************/
+		org.hl7.fhir.r4.model.Enumerations.RemittanceOutcome paymentreconciliationoutcome = paymentreconciliation.getOutcome();
+		if(paymentreconciliationoutcome!=null) {
+			p.addPymntRecncliatnOutcome(paymentreconciliationoutcome.toCode());
+		} else {
+			p.addPymntRecncliatnOutcome("NULL");
+		}
+
+		/******************** PymntRecncliatn_Rqstor ********************************************************************************/
+		if(paymentreconciliation.hasRequestor()) {
+
+			if(paymentreconciliation.getRequestor().getReference() != null) {
+			p.addPymntRecncliatnRqstor(paymentreconciliation.getRequestor().getReference());
+			}
+		} else {
+			p.addPymntRecncliatnRqstor("NULL");
+		}
+
+
 		/******************** paymentreconciliationformcode ********************************************************************************/
 		org.hl7.fhir.r4.model.CodeableConcept paymentreconciliationformcode = paymentreconciliation.getFormCode();
 
 		/******************** PymntRecncliatn_FrmCd_Txt ********************************************************************************/
 		if(paymentreconciliationformcode.hasText()) {
-			p.setPymntRecncliatnFrmCdTxt(String.valueOf(paymentreconciliationformcode.getText()));
+
+			p.addPymntRecncliatnFrmCdTxt(String.valueOf(paymentreconciliationformcode.getText()));
+		} else {
+			p.addPymntRecncliatnFrmCdTxt("NULL");
 		}
+
+
 		/******************** paymentreconciliationformcodecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding paymentreconciliationformcodecoding = paymentreconciliationformcode.getCodingFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.Coding> paymentreconciliationformcodecodinglist = paymentreconciliationformcode.getCoding();
+		for(int paymentreconciliationformcodecodingi = 0; paymentreconciliationformcodecodingi<paymentreconciliationformcodecodinglist.size();paymentreconciliationformcodecodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  paymentreconciliationformcodecoding = paymentreconciliationformcodecodinglist.get(paymentreconciliationformcodecodingi);
+
+		/******************** PymntRecncliatn_FrmCd_Cdg_Dsply ********************************************************************************/
+		if(paymentreconciliationformcodecodingi == 0) {p.addPymntRecncliatnFrmCdCdgDsply("[");}
+		if(paymentreconciliationformcodecoding.hasDisplay()) {
+
+			p.addPymntRecncliatnFrmCdCdgDsply(String.valueOf(paymentreconciliationformcodecoding.getDisplay()));
+		} else {
+			p.addPymntRecncliatnFrmCdCdgDsply("NULL");
+		}
+
+		if(paymentreconciliationformcodecodingi == paymentreconciliationformcodecodinglist.size()-1) {p.addPymntRecncliatnFrmCdCdgDsply("]");}
+
 
 		/******************** PymntRecncliatn_FrmCd_Cdg_Vrsn ********************************************************************************/
+		if(paymentreconciliationformcodecodingi == 0) {p.addPymntRecncliatnFrmCdCdgVrsn("[");}
 		if(paymentreconciliationformcodecoding.hasVersion()) {
-			p.setPymntRecncliatnFrmCdCdgVrsn(String.valueOf(paymentreconciliationformcodecoding.getVersion()));
+
+			p.addPymntRecncliatnFrmCdCdgVrsn(String.valueOf(paymentreconciliationformcodecoding.getVersion()));
+		} else {
+			p.addPymntRecncliatnFrmCdCdgVrsn("NULL");
 		}
-		/******************** PymntRecncliatn_FrmCd_Cdg_Dsply ********************************************************************************/
-		if(paymentreconciliationformcodecoding.hasDisplay()) {
-			p.setPymntRecncliatnFrmCdCdgDsply(String.valueOf(paymentreconciliationformcodecoding.getDisplay()));
-		}
+
+		if(paymentreconciliationformcodecodingi == paymentreconciliationformcodecodinglist.size()-1) {p.addPymntRecncliatnFrmCdCdgVrsn("]");}
+
+
 		/******************** PymntRecncliatn_FrmCd_Cdg_Cd ********************************************************************************/
+		if(paymentreconciliationformcodecodingi == 0) {p.addPymntRecncliatnFrmCdCdgCd("[");}
 		if(paymentreconciliationformcodecoding.hasCode()) {
-			p.setPymntRecncliatnFrmCdCdgCd(String.valueOf(paymentreconciliationformcodecoding.getCode()));
+
+			p.addPymntRecncliatnFrmCdCdgCd(String.valueOf(paymentreconciliationformcodecoding.getCode()));
+		} else {
+			p.addPymntRecncliatnFrmCdCdgCd("NULL");
 		}
+
+		if(paymentreconciliationformcodecodingi == paymentreconciliationformcodecodinglist.size()-1) {p.addPymntRecncliatnFrmCdCdgCd("]");}
+
+
 		/******************** PymntRecncliatn_FrmCd_Cdg_UsrSltd ********************************************************************************/
+		if(paymentreconciliationformcodecodingi == 0) {p.addPymntRecncliatnFrmCdCdgUsrSltd("[");}
 		if(paymentreconciliationformcodecoding.hasUserSelected()) {
-			p.setPymntRecncliatnFrmCdCdgUsrSltd(String.valueOf(paymentreconciliationformcodecoding.getUserSelected()));
+
+			p.addPymntRecncliatnFrmCdCdgUsrSltd(String.valueOf(paymentreconciliationformcodecoding.getUserSelected()));
+		} else {
+			p.addPymntRecncliatnFrmCdCdgUsrSltd("NULL");
 		}
+
+		if(paymentreconciliationformcodecodingi == paymentreconciliationformcodecodinglist.size()-1) {p.addPymntRecncliatnFrmCdCdgUsrSltd("]");}
+
+
 		/******************** PymntRecncliatn_FrmCd_Cdg_Sys ********************************************************************************/
+		if(paymentreconciliationformcodecodingi == 0) {p.addPymntRecncliatnFrmCdCdgSys("[");}
 		if(paymentreconciliationformcodecoding.hasSystem()) {
-			p.setPymntRecncliatnFrmCdCdgSys(String.valueOf(paymentreconciliationformcodecoding.getSystem()));
-		}
-		/******************** paymentreconciliationidentifier ********************************************************************************/
-		org.hl7.fhir.r4.model.Identifier paymentreconciliationidentifier = paymentreconciliation.getIdentifierFirstRep();
 
-		/******************** PymntRecncliatn_Id_Vl ********************************************************************************/
-		if(paymentreconciliationidentifier.hasValue()) {
-			p.setPymntRecncliatnIdVl(String.valueOf(paymentreconciliationidentifier.getValue()));
+			p.addPymntRecncliatnFrmCdCdgSys(String.valueOf(paymentreconciliationformcodecoding.getSystem()));
+		} else {
+			p.addPymntRecncliatnFrmCdCdgSys("NULL");
 		}
-		/******************** paymentreconciliationidentifiertype ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept paymentreconciliationidentifiertype = paymentreconciliationidentifier.getType();
 
-		/******************** PymntRecncliatn_Id_Typ_Txt ********************************************************************************/
-		if(paymentreconciliationidentifiertype.hasText()) {
-			p.setPymntRecncliatnIdTypTxt(String.valueOf(paymentreconciliationidentifiertype.getText()));
-		}
-		/******************** paymentreconciliationidentifiertypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding paymentreconciliationidentifiertypecoding = paymentreconciliationidentifiertype.getCodingFirstRep();
+		if(paymentreconciliationformcodecodingi == paymentreconciliationformcodecodinglist.size()-1) {p.addPymntRecncliatnFrmCdCdgSys("]");}
 
-		/******************** PymntRecncliatn_Id_Typ_Cdg_Vrsn ********************************************************************************/
-		if(paymentreconciliationidentifiertypecoding.hasVersion()) {
-			p.setPymntRecncliatnIdTypCdgVrsn(String.valueOf(paymentreconciliationidentifiertypecoding.getVersion()));
-		}
-		/******************** PymntRecncliatn_Id_Typ_Cdg_Dsply ********************************************************************************/
-		if(paymentreconciliationidentifiertypecoding.hasDisplay()) {
-			p.setPymntRecncliatnIdTypCdgDsply(String.valueOf(paymentreconciliationidentifiertypecoding.getDisplay()));
-		}
-		/******************** PymntRecncliatn_Id_Typ_Cdg_Cd ********************************************************************************/
-		if(paymentreconciliationidentifiertypecoding.hasCode()) {
-			p.setPymntRecncliatnIdTypCdgCd(String.valueOf(paymentreconciliationidentifiertypecoding.getCode()));
-		}
-		/******************** PymntRecncliatn_Id_Typ_Cdg_UsrSltd ********************************************************************************/
-		if(paymentreconciliationidentifiertypecoding.hasUserSelected()) {
-			p.setPymntRecncliatnIdTypCdgUsrSltd(String.valueOf(paymentreconciliationidentifiertypecoding.getUserSelected()));
-		}
-		/******************** PymntRecncliatn_Id_Typ_Cdg_Sys ********************************************************************************/
-		if(paymentreconciliationidentifiertypecoding.hasSystem()) {
-			p.setPymntRecncliatnIdTypCdgSys(String.valueOf(paymentreconciliationidentifiertypecoding.getSystem()));
-		}
-		/******************** paymentreconciliationidentifierperiod ********************************************************************************/
-		org.hl7.fhir.r4.model.Period paymentreconciliationidentifierperiod = paymentreconciliationidentifier.getPeriod();
 
-		/******************** PymntRecncliatn_Id_Prd_Strt ********************************************************************************/
-		if(paymentreconciliationidentifierperiod.hasStart()) {
-			p.setPymntRecncliatnIdPrdStrt(String.valueOf(paymentreconciliationidentifierperiod.getStart()));
-		}
-		/******************** PymntRecncliatn_Id_Prd_End ********************************************************************************/
-		if(paymentreconciliationidentifierperiod.hasEnd()) {
-			p.setPymntRecncliatnIdPrdEnd(String.valueOf(paymentreconciliationidentifierperiod.getEnd()));
-		}
-		/******************** PymntRecncliatn_Id_Assigner ********************************************************************************/
-		if(paymentreconciliationidentifier.hasAssigner()) {
-			p.setPymntRecncliatnIdAssigner(String.valueOf(paymentreconciliationidentifier.getAssigner()));
-		}
-		/******************** PymntRecncliatn_Id_Sys ********************************************************************************/
-		if(paymentreconciliationidentifier.hasSystem()) {
-			p.setPymntRecncliatnIdSys(String.valueOf(paymentreconciliationidentifier.getSystem()));
-		}
-		/******************** paymentreconciliationidentifieruse ********************************************************************************/
-		org.hl7.fhir.r4.model.Identifier.IdentifierUse paymentreconciliationidentifieruse = paymentreconciliationidentifier.getUse();
-		p.setPymntRecncliatnIdUse(paymentreconciliationidentifieruse.toCode());
+		 };
+		/******************** paymentreconciliationprocessnote ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.PaymentReconciliation.NotesComponent> paymentreconciliationprocessnotelist = paymentreconciliation.getProcessNote();
+		for(int paymentreconciliationprocessnotei = 0; paymentreconciliationprocessnotei<paymentreconciliationprocessnotelist.size();paymentreconciliationprocessnotei++ ) {
+		org.hl7.fhir.r4.model.PaymentReconciliation.NotesComponent  paymentreconciliationprocessnote = paymentreconciliationprocessnotelist.get(paymentreconciliationprocessnotei);
 
+		/******************** paymentreconciliationprocessnotetype ********************************************************************************/
+		org.hl7.fhir.r4.model.Enumerations.NoteType paymentreconciliationprocessnotetype = paymentreconciliationprocessnote.getType();
+		if(paymentreconciliationprocessnotetype!=null) {
+		if(paymentreconciliationprocessnotei == 0) {
+
+		p.addPymntRecncliatnProcessNtTyp("[");		}
+			p.addPymntRecncliatnProcessNtTyp(paymentreconciliationprocessnotetype.toCode());
+		if(paymentreconciliationprocessnotei == paymentreconciliationprocessnotelist.size()-1) {
+
+		p.addPymntRecncliatnProcessNtTyp("]");		}
+
+		} else {
+			p.addPymntRecncliatnProcessNtTyp("NULL");
+		}
+
+		/******************** PymntRecncliatn_ProcessNt_Txt ********************************************************************************/
+		if(paymentreconciliationprocessnotei == 0) {p.addPymntRecncliatnProcessNtTxt("[");}
+		if(paymentreconciliationprocessnote.hasText()) {
+
+			p.addPymntRecncliatnProcessNtTxt(String.valueOf(paymentreconciliationprocessnote.getText()));
+		} else {
+			p.addPymntRecncliatnProcessNtTxt("NULL");
+		}
+
+		if(paymentreconciliationprocessnotei == paymentreconciliationprocessnotelist.size()-1) {p.addPymntRecncliatnProcessNtTxt("]");}
+
+
+		 };
 		/******************** paymentreconciliationpaymentidentifier ********************************************************************************/
 		org.hl7.fhir.r4.model.Identifier paymentreconciliationpaymentidentifier = paymentreconciliation.getPaymentIdentifier();
 
 		/******************** PymntRecncliatn_PymntId_Vl ********************************************************************************/
 		if(paymentreconciliationpaymentidentifier.hasValue()) {
-			p.setPymntRecncliatnPymntIdVl(String.valueOf(paymentreconciliationpaymentidentifier.getValue()));
+
+			p.addPymntRecncliatnPymntIdVl(String.valueOf(paymentreconciliationpaymentidentifier.getValue()));
+		} else {
+			p.addPymntRecncliatnPymntIdVl("NULL");
 		}
+
+
 		/******************** paymentreconciliationpaymentidentifiertype ********************************************************************************/
 		org.hl7.fhir.r4.model.CodeableConcept paymentreconciliationpaymentidentifiertype = paymentreconciliationpaymentidentifier.getType();
 
 		/******************** PymntRecncliatn_PymntId_Typ_Txt ********************************************************************************/
 		if(paymentreconciliationpaymentidentifiertype.hasText()) {
-			p.setPymntRecncliatnPymntIdTypTxt(String.valueOf(paymentreconciliationpaymentidentifiertype.getText()));
+
+			p.addPymntRecncliatnPymntIdTypTxt(String.valueOf(paymentreconciliationpaymentidentifiertype.getText()));
+		} else {
+			p.addPymntRecncliatnPymntIdTypTxt("NULL");
 		}
+
+
 		/******************** paymentreconciliationpaymentidentifiertypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding paymentreconciliationpaymentidentifiertypecoding = paymentreconciliationpaymentidentifiertype.getCodingFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.Coding> paymentreconciliationpaymentidentifiertypecodinglist = paymentreconciliationpaymentidentifiertype.getCoding();
+		for(int paymentreconciliationpaymentidentifiertypecodingi = 0; paymentreconciliationpaymentidentifiertypecodingi<paymentreconciliationpaymentidentifiertypecodinglist.size();paymentreconciliationpaymentidentifiertypecodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  paymentreconciliationpaymentidentifiertypecoding = paymentreconciliationpaymentidentifiertypecodinglist.get(paymentreconciliationpaymentidentifiertypecodingi);
+
+		/******************** PymntRecncliatn_PymntId_Typ_Cdg_Dsply ********************************************************************************/
+		if(paymentreconciliationpaymentidentifiertypecodingi == 0) {p.addPymntRecncliatnPymntIdTypCdgDsply("[");}
+		if(paymentreconciliationpaymentidentifiertypecoding.hasDisplay()) {
+
+			p.addPymntRecncliatnPymntIdTypCdgDsply(String.valueOf(paymentreconciliationpaymentidentifiertypecoding.getDisplay()));
+		} else {
+			p.addPymntRecncliatnPymntIdTypCdgDsply("NULL");
+		}
+
+		if(paymentreconciliationpaymentidentifiertypecodingi == paymentreconciliationpaymentidentifiertypecodinglist.size()-1) {p.addPymntRecncliatnPymntIdTypCdgDsply("]");}
+
 
 		/******************** PymntRecncliatn_PymntId_Typ_Cdg_Vrsn ********************************************************************************/
+		if(paymentreconciliationpaymentidentifiertypecodingi == 0) {p.addPymntRecncliatnPymntIdTypCdgVrsn("[");}
 		if(paymentreconciliationpaymentidentifiertypecoding.hasVersion()) {
-			p.setPymntRecncliatnPymntIdTypCdgVrsn(String.valueOf(paymentreconciliationpaymentidentifiertypecoding.getVersion()));
+
+			p.addPymntRecncliatnPymntIdTypCdgVrsn(String.valueOf(paymentreconciliationpaymentidentifiertypecoding.getVersion()));
+		} else {
+			p.addPymntRecncliatnPymntIdTypCdgVrsn("NULL");
 		}
-		/******************** PymntRecncliatn_PymntId_Typ_Cdg_Dsply ********************************************************************************/
-		if(paymentreconciliationpaymentidentifiertypecoding.hasDisplay()) {
-			p.setPymntRecncliatnPymntIdTypCdgDsply(String.valueOf(paymentreconciliationpaymentidentifiertypecoding.getDisplay()));
-		}
+
+		if(paymentreconciliationpaymentidentifiertypecodingi == paymentreconciliationpaymentidentifiertypecodinglist.size()-1) {p.addPymntRecncliatnPymntIdTypCdgVrsn("]");}
+
+
 		/******************** PymntRecncliatn_PymntId_Typ_Cdg_Cd ********************************************************************************/
+		if(paymentreconciliationpaymentidentifiertypecodingi == 0) {p.addPymntRecncliatnPymntIdTypCdgCd("[");}
 		if(paymentreconciliationpaymentidentifiertypecoding.hasCode()) {
-			p.setPymntRecncliatnPymntIdTypCdgCd(String.valueOf(paymentreconciliationpaymentidentifiertypecoding.getCode()));
+
+			p.addPymntRecncliatnPymntIdTypCdgCd(String.valueOf(paymentreconciliationpaymentidentifiertypecoding.getCode()));
+		} else {
+			p.addPymntRecncliatnPymntIdTypCdgCd("NULL");
 		}
+
+		if(paymentreconciliationpaymentidentifiertypecodingi == paymentreconciliationpaymentidentifiertypecodinglist.size()-1) {p.addPymntRecncliatnPymntIdTypCdgCd("]");}
+
+
 		/******************** PymntRecncliatn_PymntId_Typ_Cdg_UsrSltd ********************************************************************************/
+		if(paymentreconciliationpaymentidentifiertypecodingi == 0) {p.addPymntRecncliatnPymntIdTypCdgUsrSltd("[");}
 		if(paymentreconciliationpaymentidentifiertypecoding.hasUserSelected()) {
-			p.setPymntRecncliatnPymntIdTypCdgUsrSltd(String.valueOf(paymentreconciliationpaymentidentifiertypecoding.getUserSelected()));
+
+			p.addPymntRecncliatnPymntIdTypCdgUsrSltd(String.valueOf(paymentreconciliationpaymentidentifiertypecoding.getUserSelected()));
+		} else {
+			p.addPymntRecncliatnPymntIdTypCdgUsrSltd("NULL");
 		}
+
+		if(paymentreconciliationpaymentidentifiertypecodingi == paymentreconciliationpaymentidentifiertypecodinglist.size()-1) {p.addPymntRecncliatnPymntIdTypCdgUsrSltd("]");}
+
+
 		/******************** PymntRecncliatn_PymntId_Typ_Cdg_Sys ********************************************************************************/
+		if(paymentreconciliationpaymentidentifiertypecodingi == 0) {p.addPymntRecncliatnPymntIdTypCdgSys("[");}
 		if(paymentreconciliationpaymentidentifiertypecoding.hasSystem()) {
-			p.setPymntRecncliatnPymntIdTypCdgSys(String.valueOf(paymentreconciliationpaymentidentifiertypecoding.getSystem()));
+
+			p.addPymntRecncliatnPymntIdTypCdgSys(String.valueOf(paymentreconciliationpaymentidentifiertypecoding.getSystem()));
+		} else {
+			p.addPymntRecncliatnPymntIdTypCdgSys("NULL");
 		}
+
+		if(paymentreconciliationpaymentidentifiertypecodingi == paymentreconciliationpaymentidentifiertypecodinglist.size()-1) {p.addPymntRecncliatnPymntIdTypCdgSys("]");}
+
+
+		 };
 		/******************** paymentreconciliationpaymentidentifierperiod ********************************************************************************/
 		org.hl7.fhir.r4.model.Period paymentreconciliationpaymentidentifierperiod = paymentreconciliationpaymentidentifier.getPeriod();
 
 		/******************** PymntRecncliatn_PymntId_Prd_Strt ********************************************************************************/
 		if(paymentreconciliationpaymentidentifierperiod.hasStart()) {
-			p.setPymntRecncliatnPymntIdPrdStrt(String.valueOf(paymentreconciliationpaymentidentifierperiod.getStart()));
+
+			p.addPymntRecncliatnPymntIdPrdStrt("\""+ca.uhn.fhir.util.DateUtils.formatDate(paymentreconciliationpaymentidentifierperiod.getStart())+"\"");
+		} else {
+			p.addPymntRecncliatnPymntIdPrdStrt("NULL");
 		}
+
+
 		/******************** PymntRecncliatn_PymntId_Prd_End ********************************************************************************/
 		if(paymentreconciliationpaymentidentifierperiod.hasEnd()) {
-			p.setPymntRecncliatnPymntIdPrdEnd(String.valueOf(paymentreconciliationpaymentidentifierperiod.getEnd()));
+
+			p.addPymntRecncliatnPymntIdPrdEnd("\""+ca.uhn.fhir.util.DateUtils.formatDate(paymentreconciliationpaymentidentifierperiod.getEnd())+"\"");
+		} else {
+			p.addPymntRecncliatnPymntIdPrdEnd("NULL");
 		}
-		/******************** PymntRecncliatn_PymntId_Assigner ********************************************************************************/
-		if(paymentreconciliationpaymentidentifier.hasAssigner()) {
-			p.setPymntRecncliatnPymntIdAssigner(String.valueOf(paymentreconciliationpaymentidentifier.getAssigner()));
-		}
-		/******************** PymntRecncliatn_PymntId_Sys ********************************************************************************/
-		if(paymentreconciliationpaymentidentifier.hasSystem()) {
-			p.setPymntRecncliatnPymntIdSys(String.valueOf(paymentreconciliationpaymentidentifier.getSystem()));
-		}
+
+
 		/******************** paymentreconciliationpaymentidentifieruse ********************************************************************************/
 		org.hl7.fhir.r4.model.Identifier.IdentifierUse paymentreconciliationpaymentidentifieruse = paymentreconciliationpaymentidentifier.getUse();
-		p.setPymntRecncliatnPymntIdUse(paymentreconciliationpaymentidentifieruse.toCode());
-
-		/******************** paymentreconciliationprocessnote ********************************************************************************/
-		org.hl7.fhir.r4.model.PaymentReconciliation.NotesComponent paymentreconciliationprocessnote = paymentreconciliation.getProcessNoteFirstRep();
-
-		/******************** paymentreconciliationprocessnotetype ********************************************************************************/
-		org.hl7.fhir.r4.model.Enumerations.NoteType paymentreconciliationprocessnotetype = paymentreconciliationprocessnote.getType();
-		p.setPymntRecncliatnProcessNtTyp(paymentreconciliationprocessnotetype.toCode());
-
-		/******************** PymntRecncliatn_ProcessNt_Txt ********************************************************************************/
-		if(paymentreconciliationprocessnote.hasText()) {
-			p.setPymntRecncliatnProcessNtTxt(String.valueOf(paymentreconciliationprocessnote.getText()));
+		if(paymentreconciliationpaymentidentifieruse!=null) {
+			p.addPymntRecncliatnPymntIdUse(paymentreconciliationpaymentidentifieruse.toCode());
+		} else {
+			p.addPymntRecncliatnPymntIdUse("NULL");
 		}
+
+		/******************** PymntRecncliatn_PymntId_Assigner ********************************************************************************/
+		if(paymentreconciliationpaymentidentifier.hasAssigner()) {
+
+			if(paymentreconciliationpaymentidentifier.getAssigner().getReference() != null) {
+			p.addPymntRecncliatnPymntIdAssigner(paymentreconciliationpaymentidentifier.getAssigner().getReference());
+			}
+		} else {
+			p.addPymntRecncliatnPymntIdAssigner("NULL");
+		}
+
+
+		/******************** PymntRecncliatn_PymntId_Sys ********************************************************************************/
+		if(paymentreconciliationpaymentidentifier.hasSystem()) {
+
+			p.addPymntRecncliatnPymntIdSys(String.valueOf(paymentreconciliationpaymentidentifier.getSystem()));
+		} else {
+			p.addPymntRecncliatnPymntIdSys("NULL");
+		}
+
+
 		return p;
 	}
 }

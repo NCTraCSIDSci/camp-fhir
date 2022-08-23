@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Jun 27, 2022, 10:40:10 AM by Hibernate Tools 5.6.1.Final
+// Generated Aug 17, 2022, 11:08:48 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -53,6 +53,20 @@ public class PaymentNotice  implements java.io.Serializable {
         this.id = id;
     }
     
+    public void addId(String id) {
+    	if( id != null ) {
+	    	if( this.id == null ) {
+	        	this.id = id;
+	        } else if(this.id.substring(this.id.length() - 1).equals("]") & id.equals("[")) {
+	        	this.id = this.id+ "," + id;
+	        } else if(id.equals("[") | id.equals("]") | this.id.substring(this.id.length() - 1).equals("[")) {
+	        	this.id = this.id+id;
+	        } else  {
+	            this.id = this.id+ "," +id;
+	        }
+        }
+    }
+    
     
     
     public String getPymntNoticeAmntCrncy() {
@@ -61,6 +75,20 @@ public class PaymentNotice  implements java.io.Serializable {
     
     public void setPymntNoticeAmntCrncy(String pymntNoticeAmntCrncy) {
         this.pymntNoticeAmntCrncy = pymntNoticeAmntCrncy;
+    }
+    
+    public void addPymntNoticeAmntCrncy(String pymntNoticeAmntCrncy) {
+    	if( pymntNoticeAmntCrncy != null ) {
+	    	if( this.pymntNoticeAmntCrncy == null ) {
+	        	this.pymntNoticeAmntCrncy = pymntNoticeAmntCrncy;
+	        } else if(this.pymntNoticeAmntCrncy.substring(this.pymntNoticeAmntCrncy.length() - 1).equals("]") & pymntNoticeAmntCrncy.equals("[")) {
+	        	this.pymntNoticeAmntCrncy = this.pymntNoticeAmntCrncy+ "," + pymntNoticeAmntCrncy;
+	        } else if(pymntNoticeAmntCrncy.equals("[") | pymntNoticeAmntCrncy.equals("]") | this.pymntNoticeAmntCrncy.substring(this.pymntNoticeAmntCrncy.length() - 1).equals("[")) {
+	        	this.pymntNoticeAmntCrncy = this.pymntNoticeAmntCrncy+pymntNoticeAmntCrncy;
+	        } else  {
+	            this.pymntNoticeAmntCrncy = this.pymntNoticeAmntCrncy+ "," +pymntNoticeAmntCrncy;
+	        }
+        }
     }
     
     
@@ -73,6 +101,20 @@ public class PaymentNotice  implements java.io.Serializable {
         this.pymntNoticeAmntVl = pymntNoticeAmntVl;
     }
     
+    public void addPymntNoticeAmntVl(String pymntNoticeAmntVl) {
+    	if( pymntNoticeAmntVl != null ) {
+	    	if( this.pymntNoticeAmntVl == null ) {
+	        	this.pymntNoticeAmntVl = pymntNoticeAmntVl;
+	        } else if(this.pymntNoticeAmntVl.substring(this.pymntNoticeAmntVl.length() - 1).equals("]") & pymntNoticeAmntVl.equals("[")) {
+	        	this.pymntNoticeAmntVl = this.pymntNoticeAmntVl+ "," + pymntNoticeAmntVl;
+	        } else if(pymntNoticeAmntVl.equals("[") | pymntNoticeAmntVl.equals("]") | this.pymntNoticeAmntVl.substring(this.pymntNoticeAmntVl.length() - 1).equals("[")) {
+	        	this.pymntNoticeAmntVl = this.pymntNoticeAmntVl+pymntNoticeAmntVl;
+	        } else  {
+	            this.pymntNoticeAmntVl = this.pymntNoticeAmntVl+ "," +pymntNoticeAmntVl;
+	        }
+        }
+    }
+    
     
     
     public String getPymntNoticeCreated() {
@@ -81,6 +123,20 @@ public class PaymentNotice  implements java.io.Serializable {
     
     public void setPymntNoticeCreated(String pymntNoticeCreated) {
         this.pymntNoticeCreated = pymntNoticeCreated;
+    }
+    
+    public void addPymntNoticeCreated(String pymntNoticeCreated) {
+    	if( pymntNoticeCreated != null ) {
+	    	if( this.pymntNoticeCreated == null ) {
+	        	this.pymntNoticeCreated = pymntNoticeCreated;
+	        } else if(this.pymntNoticeCreated.substring(this.pymntNoticeCreated.length() - 1).equals("]") & pymntNoticeCreated.equals("[")) {
+	        	this.pymntNoticeCreated = this.pymntNoticeCreated+ "," + pymntNoticeCreated;
+	        } else if(pymntNoticeCreated.equals("[") | pymntNoticeCreated.equals("]") | this.pymntNoticeCreated.substring(this.pymntNoticeCreated.length() - 1).equals("[")) {
+	        	this.pymntNoticeCreated = this.pymntNoticeCreated+pymntNoticeCreated;
+	        } else  {
+	            this.pymntNoticeCreated = this.pymntNoticeCreated+ "," +pymntNoticeCreated;
+	        }
+        }
     }
     
     
@@ -93,6 +149,20 @@ public class PaymentNotice  implements java.io.Serializable {
         this.pymntNoticeIdAssigner = pymntNoticeIdAssigner;
     }
     
+    public void addPymntNoticeIdAssigner(String pymntNoticeIdAssigner) {
+    	if( pymntNoticeIdAssigner != null ) {
+	    	if( this.pymntNoticeIdAssigner == null ) {
+	        	this.pymntNoticeIdAssigner = pymntNoticeIdAssigner;
+	        } else if(this.pymntNoticeIdAssigner.substring(this.pymntNoticeIdAssigner.length() - 1).equals("]") & pymntNoticeIdAssigner.equals("[")) {
+	        	this.pymntNoticeIdAssigner = this.pymntNoticeIdAssigner+ "," + pymntNoticeIdAssigner;
+	        } else if(pymntNoticeIdAssigner.equals("[") | pymntNoticeIdAssigner.equals("]") | this.pymntNoticeIdAssigner.substring(this.pymntNoticeIdAssigner.length() - 1).equals("[")) {
+	        	this.pymntNoticeIdAssigner = this.pymntNoticeIdAssigner+pymntNoticeIdAssigner;
+	        } else  {
+	            this.pymntNoticeIdAssigner = this.pymntNoticeIdAssigner+ "," +pymntNoticeIdAssigner;
+	        }
+        }
+    }
+    
     
     
     public String getPymntNoticeIdPrdEnd() {
@@ -101,6 +171,20 @@ public class PaymentNotice  implements java.io.Serializable {
     
     public void setPymntNoticeIdPrdEnd(String pymntNoticeIdPrdEnd) {
         this.pymntNoticeIdPrdEnd = pymntNoticeIdPrdEnd;
+    }
+    
+    public void addPymntNoticeIdPrdEnd(String pymntNoticeIdPrdEnd) {
+    	if( pymntNoticeIdPrdEnd != null ) {
+	    	if( this.pymntNoticeIdPrdEnd == null ) {
+	        	this.pymntNoticeIdPrdEnd = pymntNoticeIdPrdEnd;
+	        } else if(this.pymntNoticeIdPrdEnd.substring(this.pymntNoticeIdPrdEnd.length() - 1).equals("]") & pymntNoticeIdPrdEnd.equals("[")) {
+	        	this.pymntNoticeIdPrdEnd = this.pymntNoticeIdPrdEnd+ "," + pymntNoticeIdPrdEnd;
+	        } else if(pymntNoticeIdPrdEnd.equals("[") | pymntNoticeIdPrdEnd.equals("]") | this.pymntNoticeIdPrdEnd.substring(this.pymntNoticeIdPrdEnd.length() - 1).equals("[")) {
+	        	this.pymntNoticeIdPrdEnd = this.pymntNoticeIdPrdEnd+pymntNoticeIdPrdEnd;
+	        } else  {
+	            this.pymntNoticeIdPrdEnd = this.pymntNoticeIdPrdEnd+ "," +pymntNoticeIdPrdEnd;
+	        }
+        }
     }
     
     
@@ -113,6 +197,20 @@ public class PaymentNotice  implements java.io.Serializable {
         this.pymntNoticeIdPrdStrt = pymntNoticeIdPrdStrt;
     }
     
+    public void addPymntNoticeIdPrdStrt(String pymntNoticeIdPrdStrt) {
+    	if( pymntNoticeIdPrdStrt != null ) {
+	    	if( this.pymntNoticeIdPrdStrt == null ) {
+	        	this.pymntNoticeIdPrdStrt = pymntNoticeIdPrdStrt;
+	        } else if(this.pymntNoticeIdPrdStrt.substring(this.pymntNoticeIdPrdStrt.length() - 1).equals("]") & pymntNoticeIdPrdStrt.equals("[")) {
+	        	this.pymntNoticeIdPrdStrt = this.pymntNoticeIdPrdStrt+ "," + pymntNoticeIdPrdStrt;
+	        } else if(pymntNoticeIdPrdStrt.equals("[") | pymntNoticeIdPrdStrt.equals("]") | this.pymntNoticeIdPrdStrt.substring(this.pymntNoticeIdPrdStrt.length() - 1).equals("[")) {
+	        	this.pymntNoticeIdPrdStrt = this.pymntNoticeIdPrdStrt+pymntNoticeIdPrdStrt;
+	        } else  {
+	            this.pymntNoticeIdPrdStrt = this.pymntNoticeIdPrdStrt+ "," +pymntNoticeIdPrdStrt;
+	        }
+        }
+    }
+    
     
     
     public String getPymntNoticeIdSys() {
@@ -121,6 +219,20 @@ public class PaymentNotice  implements java.io.Serializable {
     
     public void setPymntNoticeIdSys(String pymntNoticeIdSys) {
         this.pymntNoticeIdSys = pymntNoticeIdSys;
+    }
+    
+    public void addPymntNoticeIdSys(String pymntNoticeIdSys) {
+    	if( pymntNoticeIdSys != null ) {
+	    	if( this.pymntNoticeIdSys == null ) {
+	        	this.pymntNoticeIdSys = pymntNoticeIdSys;
+	        } else if(this.pymntNoticeIdSys.substring(this.pymntNoticeIdSys.length() - 1).equals("]") & pymntNoticeIdSys.equals("[")) {
+	        	this.pymntNoticeIdSys = this.pymntNoticeIdSys+ "," + pymntNoticeIdSys;
+	        } else if(pymntNoticeIdSys.equals("[") | pymntNoticeIdSys.equals("]") | this.pymntNoticeIdSys.substring(this.pymntNoticeIdSys.length() - 1).equals("[")) {
+	        	this.pymntNoticeIdSys = this.pymntNoticeIdSys+pymntNoticeIdSys;
+	        } else  {
+	            this.pymntNoticeIdSys = this.pymntNoticeIdSys+ "," +pymntNoticeIdSys;
+	        }
+        }
     }
     
     
@@ -133,6 +245,20 @@ public class PaymentNotice  implements java.io.Serializable {
         this.pymntNoticeIdTypCdgCd = pymntNoticeIdTypCdgCd;
     }
     
+    public void addPymntNoticeIdTypCdgCd(String pymntNoticeIdTypCdgCd) {
+    	if( pymntNoticeIdTypCdgCd != null ) {
+	    	if( this.pymntNoticeIdTypCdgCd == null ) {
+	        	this.pymntNoticeIdTypCdgCd = pymntNoticeIdTypCdgCd;
+	        } else if(this.pymntNoticeIdTypCdgCd.substring(this.pymntNoticeIdTypCdgCd.length() - 1).equals("]") & pymntNoticeIdTypCdgCd.equals("[")) {
+	        	this.pymntNoticeIdTypCdgCd = this.pymntNoticeIdTypCdgCd+ "," + pymntNoticeIdTypCdgCd;
+	        } else if(pymntNoticeIdTypCdgCd.equals("[") | pymntNoticeIdTypCdgCd.equals("]") | this.pymntNoticeIdTypCdgCd.substring(this.pymntNoticeIdTypCdgCd.length() - 1).equals("[")) {
+	        	this.pymntNoticeIdTypCdgCd = this.pymntNoticeIdTypCdgCd+pymntNoticeIdTypCdgCd;
+	        } else  {
+	            this.pymntNoticeIdTypCdgCd = this.pymntNoticeIdTypCdgCd+ "," +pymntNoticeIdTypCdgCd;
+	        }
+        }
+    }
+    
     
     
     public String getPymntNoticeIdTypCdgDsply() {
@@ -141,6 +267,20 @@ public class PaymentNotice  implements java.io.Serializable {
     
     public void setPymntNoticeIdTypCdgDsply(String pymntNoticeIdTypCdgDsply) {
         this.pymntNoticeIdTypCdgDsply = pymntNoticeIdTypCdgDsply;
+    }
+    
+    public void addPymntNoticeIdTypCdgDsply(String pymntNoticeIdTypCdgDsply) {
+    	if( pymntNoticeIdTypCdgDsply != null ) {
+	    	if( this.pymntNoticeIdTypCdgDsply == null ) {
+	        	this.pymntNoticeIdTypCdgDsply = pymntNoticeIdTypCdgDsply;
+	        } else if(this.pymntNoticeIdTypCdgDsply.substring(this.pymntNoticeIdTypCdgDsply.length() - 1).equals("]") & pymntNoticeIdTypCdgDsply.equals("[")) {
+	        	this.pymntNoticeIdTypCdgDsply = this.pymntNoticeIdTypCdgDsply+ "," + pymntNoticeIdTypCdgDsply;
+	        } else if(pymntNoticeIdTypCdgDsply.equals("[") | pymntNoticeIdTypCdgDsply.equals("]") | this.pymntNoticeIdTypCdgDsply.substring(this.pymntNoticeIdTypCdgDsply.length() - 1).equals("[")) {
+	        	this.pymntNoticeIdTypCdgDsply = this.pymntNoticeIdTypCdgDsply+pymntNoticeIdTypCdgDsply;
+	        } else  {
+	            this.pymntNoticeIdTypCdgDsply = this.pymntNoticeIdTypCdgDsply+ "," +pymntNoticeIdTypCdgDsply;
+	        }
+        }
     }
     
     
@@ -153,6 +293,20 @@ public class PaymentNotice  implements java.io.Serializable {
         this.pymntNoticeIdTypCdgSys = pymntNoticeIdTypCdgSys;
     }
     
+    public void addPymntNoticeIdTypCdgSys(String pymntNoticeIdTypCdgSys) {
+    	if( pymntNoticeIdTypCdgSys != null ) {
+	    	if( this.pymntNoticeIdTypCdgSys == null ) {
+	        	this.pymntNoticeIdTypCdgSys = pymntNoticeIdTypCdgSys;
+	        } else if(this.pymntNoticeIdTypCdgSys.substring(this.pymntNoticeIdTypCdgSys.length() - 1).equals("]") & pymntNoticeIdTypCdgSys.equals("[")) {
+	        	this.pymntNoticeIdTypCdgSys = this.pymntNoticeIdTypCdgSys+ "," + pymntNoticeIdTypCdgSys;
+	        } else if(pymntNoticeIdTypCdgSys.equals("[") | pymntNoticeIdTypCdgSys.equals("]") | this.pymntNoticeIdTypCdgSys.substring(this.pymntNoticeIdTypCdgSys.length() - 1).equals("[")) {
+	        	this.pymntNoticeIdTypCdgSys = this.pymntNoticeIdTypCdgSys+pymntNoticeIdTypCdgSys;
+	        } else  {
+	            this.pymntNoticeIdTypCdgSys = this.pymntNoticeIdTypCdgSys+ "," +pymntNoticeIdTypCdgSys;
+	        }
+        }
+    }
+    
     
     
     public String getPymntNoticeIdTypCdgUsrSltd() {
@@ -161,6 +315,20 @@ public class PaymentNotice  implements java.io.Serializable {
     
     public void setPymntNoticeIdTypCdgUsrSltd(String pymntNoticeIdTypCdgUsrSltd) {
         this.pymntNoticeIdTypCdgUsrSltd = pymntNoticeIdTypCdgUsrSltd;
+    }
+    
+    public void addPymntNoticeIdTypCdgUsrSltd(String pymntNoticeIdTypCdgUsrSltd) {
+    	if( pymntNoticeIdTypCdgUsrSltd != null ) {
+	    	if( this.pymntNoticeIdTypCdgUsrSltd == null ) {
+	        	this.pymntNoticeIdTypCdgUsrSltd = pymntNoticeIdTypCdgUsrSltd;
+	        } else if(this.pymntNoticeIdTypCdgUsrSltd.substring(this.pymntNoticeIdTypCdgUsrSltd.length() - 1).equals("]") & pymntNoticeIdTypCdgUsrSltd.equals("[")) {
+	        	this.pymntNoticeIdTypCdgUsrSltd = this.pymntNoticeIdTypCdgUsrSltd+ "," + pymntNoticeIdTypCdgUsrSltd;
+	        } else if(pymntNoticeIdTypCdgUsrSltd.equals("[") | pymntNoticeIdTypCdgUsrSltd.equals("]") | this.pymntNoticeIdTypCdgUsrSltd.substring(this.pymntNoticeIdTypCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.pymntNoticeIdTypCdgUsrSltd = this.pymntNoticeIdTypCdgUsrSltd+pymntNoticeIdTypCdgUsrSltd;
+	        } else  {
+	            this.pymntNoticeIdTypCdgUsrSltd = this.pymntNoticeIdTypCdgUsrSltd+ "," +pymntNoticeIdTypCdgUsrSltd;
+	        }
+        }
     }
     
     
@@ -173,6 +341,20 @@ public class PaymentNotice  implements java.io.Serializable {
         this.pymntNoticeIdTypCdgVrsn = pymntNoticeIdTypCdgVrsn;
     }
     
+    public void addPymntNoticeIdTypCdgVrsn(String pymntNoticeIdTypCdgVrsn) {
+    	if( pymntNoticeIdTypCdgVrsn != null ) {
+	    	if( this.pymntNoticeIdTypCdgVrsn == null ) {
+	        	this.pymntNoticeIdTypCdgVrsn = pymntNoticeIdTypCdgVrsn;
+	        } else if(this.pymntNoticeIdTypCdgVrsn.substring(this.pymntNoticeIdTypCdgVrsn.length() - 1).equals("]") & pymntNoticeIdTypCdgVrsn.equals("[")) {
+	        	this.pymntNoticeIdTypCdgVrsn = this.pymntNoticeIdTypCdgVrsn+ "," + pymntNoticeIdTypCdgVrsn;
+	        } else if(pymntNoticeIdTypCdgVrsn.equals("[") | pymntNoticeIdTypCdgVrsn.equals("]") | this.pymntNoticeIdTypCdgVrsn.substring(this.pymntNoticeIdTypCdgVrsn.length() - 1).equals("[")) {
+	        	this.pymntNoticeIdTypCdgVrsn = this.pymntNoticeIdTypCdgVrsn+pymntNoticeIdTypCdgVrsn;
+	        } else  {
+	            this.pymntNoticeIdTypCdgVrsn = this.pymntNoticeIdTypCdgVrsn+ "," +pymntNoticeIdTypCdgVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getPymntNoticeIdTypTxt() {
@@ -181,6 +363,20 @@ public class PaymentNotice  implements java.io.Serializable {
     
     public void setPymntNoticeIdTypTxt(String pymntNoticeIdTypTxt) {
         this.pymntNoticeIdTypTxt = pymntNoticeIdTypTxt;
+    }
+    
+    public void addPymntNoticeIdTypTxt(String pymntNoticeIdTypTxt) {
+    	if( pymntNoticeIdTypTxt != null ) {
+	    	if( this.pymntNoticeIdTypTxt == null ) {
+	        	this.pymntNoticeIdTypTxt = pymntNoticeIdTypTxt;
+	        } else if(this.pymntNoticeIdTypTxt.substring(this.pymntNoticeIdTypTxt.length() - 1).equals("]") & pymntNoticeIdTypTxt.equals("[")) {
+	        	this.pymntNoticeIdTypTxt = this.pymntNoticeIdTypTxt+ "," + pymntNoticeIdTypTxt;
+	        } else if(pymntNoticeIdTypTxt.equals("[") | pymntNoticeIdTypTxt.equals("]") | this.pymntNoticeIdTypTxt.substring(this.pymntNoticeIdTypTxt.length() - 1).equals("[")) {
+	        	this.pymntNoticeIdTypTxt = this.pymntNoticeIdTypTxt+pymntNoticeIdTypTxt;
+	        } else  {
+	            this.pymntNoticeIdTypTxt = this.pymntNoticeIdTypTxt+ "," +pymntNoticeIdTypTxt;
+	        }
+        }
     }
     
     
@@ -193,6 +389,20 @@ public class PaymentNotice  implements java.io.Serializable {
         this.pymntNoticeIdUse = pymntNoticeIdUse;
     }
     
+    public void addPymntNoticeIdUse(String pymntNoticeIdUse) {
+    	if( pymntNoticeIdUse != null ) {
+	    	if( this.pymntNoticeIdUse == null ) {
+	        	this.pymntNoticeIdUse = pymntNoticeIdUse;
+	        } else if(this.pymntNoticeIdUse.substring(this.pymntNoticeIdUse.length() - 1).equals("]") & pymntNoticeIdUse.equals("[")) {
+	        	this.pymntNoticeIdUse = this.pymntNoticeIdUse+ "," + pymntNoticeIdUse;
+	        } else if(pymntNoticeIdUse.equals("[") | pymntNoticeIdUse.equals("]") | this.pymntNoticeIdUse.substring(this.pymntNoticeIdUse.length() - 1).equals("[")) {
+	        	this.pymntNoticeIdUse = this.pymntNoticeIdUse+pymntNoticeIdUse;
+	        } else  {
+	            this.pymntNoticeIdUse = this.pymntNoticeIdUse+ "," +pymntNoticeIdUse;
+	        }
+        }
+    }
+    
     
     
     public String getPymntNoticeIdVl() {
@@ -201,6 +411,20 @@ public class PaymentNotice  implements java.io.Serializable {
     
     public void setPymntNoticeIdVl(String pymntNoticeIdVl) {
         this.pymntNoticeIdVl = pymntNoticeIdVl;
+    }
+    
+    public void addPymntNoticeIdVl(String pymntNoticeIdVl) {
+    	if( pymntNoticeIdVl != null ) {
+	    	if( this.pymntNoticeIdVl == null ) {
+	        	this.pymntNoticeIdVl = pymntNoticeIdVl;
+	        } else if(this.pymntNoticeIdVl.substring(this.pymntNoticeIdVl.length() - 1).equals("]") & pymntNoticeIdVl.equals("[")) {
+	        	this.pymntNoticeIdVl = this.pymntNoticeIdVl+ "," + pymntNoticeIdVl;
+	        } else if(pymntNoticeIdVl.equals("[") | pymntNoticeIdVl.equals("]") | this.pymntNoticeIdVl.substring(this.pymntNoticeIdVl.length() - 1).equals("[")) {
+	        	this.pymntNoticeIdVl = this.pymntNoticeIdVl+pymntNoticeIdVl;
+	        } else  {
+	            this.pymntNoticeIdVl = this.pymntNoticeIdVl+ "," +pymntNoticeIdVl;
+	        }
+        }
     }
     
     
@@ -213,6 +437,20 @@ public class PaymentNotice  implements java.io.Serializable {
         this.pymntNoticePayee = pymntNoticePayee;
     }
     
+    public void addPymntNoticePayee(String pymntNoticePayee) {
+    	if( pymntNoticePayee != null ) {
+	    	if( this.pymntNoticePayee == null ) {
+	        	this.pymntNoticePayee = pymntNoticePayee;
+	        } else if(this.pymntNoticePayee.substring(this.pymntNoticePayee.length() - 1).equals("]") & pymntNoticePayee.equals("[")) {
+	        	this.pymntNoticePayee = this.pymntNoticePayee+ "," + pymntNoticePayee;
+	        } else if(pymntNoticePayee.equals("[") | pymntNoticePayee.equals("]") | this.pymntNoticePayee.substring(this.pymntNoticePayee.length() - 1).equals("[")) {
+	        	this.pymntNoticePayee = this.pymntNoticePayee+pymntNoticePayee;
+	        } else  {
+	            this.pymntNoticePayee = this.pymntNoticePayee+ "," +pymntNoticePayee;
+	        }
+        }
+    }
+    
     
     
     public String getPymntNoticePymnt() {
@@ -221,6 +459,20 @@ public class PaymentNotice  implements java.io.Serializable {
     
     public void setPymntNoticePymnt(String pymntNoticePymnt) {
         this.pymntNoticePymnt = pymntNoticePymnt;
+    }
+    
+    public void addPymntNoticePymnt(String pymntNoticePymnt) {
+    	if( pymntNoticePymnt != null ) {
+	    	if( this.pymntNoticePymnt == null ) {
+	        	this.pymntNoticePymnt = pymntNoticePymnt;
+	        } else if(this.pymntNoticePymnt.substring(this.pymntNoticePymnt.length() - 1).equals("]") & pymntNoticePymnt.equals("[")) {
+	        	this.pymntNoticePymnt = this.pymntNoticePymnt+ "," + pymntNoticePymnt;
+	        } else if(pymntNoticePymnt.equals("[") | pymntNoticePymnt.equals("]") | this.pymntNoticePymnt.substring(this.pymntNoticePymnt.length() - 1).equals("[")) {
+	        	this.pymntNoticePymnt = this.pymntNoticePymnt+pymntNoticePymnt;
+	        } else  {
+	            this.pymntNoticePymnt = this.pymntNoticePymnt+ "," +pymntNoticePymnt;
+	        }
+        }
     }
     
     
@@ -233,6 +485,20 @@ public class PaymentNotice  implements java.io.Serializable {
         this.pymntNoticePymntDt = pymntNoticePymntDt;
     }
     
+    public void addPymntNoticePymntDt(String pymntNoticePymntDt) {
+    	if( pymntNoticePymntDt != null ) {
+	    	if( this.pymntNoticePymntDt == null ) {
+	        	this.pymntNoticePymntDt = pymntNoticePymntDt;
+	        } else if(this.pymntNoticePymntDt.substring(this.pymntNoticePymntDt.length() - 1).equals("]") & pymntNoticePymntDt.equals("[")) {
+	        	this.pymntNoticePymntDt = this.pymntNoticePymntDt+ "," + pymntNoticePymntDt;
+	        } else if(pymntNoticePymntDt.equals("[") | pymntNoticePymntDt.equals("]") | this.pymntNoticePymntDt.substring(this.pymntNoticePymntDt.length() - 1).equals("[")) {
+	        	this.pymntNoticePymntDt = this.pymntNoticePymntDt+pymntNoticePymntDt;
+	        } else  {
+	            this.pymntNoticePymntDt = this.pymntNoticePymntDt+ "," +pymntNoticePymntDt;
+	        }
+        }
+    }
+    
     
     
     public String getPymntNoticePymntStsCdgCd() {
@@ -241,6 +507,20 @@ public class PaymentNotice  implements java.io.Serializable {
     
     public void setPymntNoticePymntStsCdgCd(String pymntNoticePymntStsCdgCd) {
         this.pymntNoticePymntStsCdgCd = pymntNoticePymntStsCdgCd;
+    }
+    
+    public void addPymntNoticePymntStsCdgCd(String pymntNoticePymntStsCdgCd) {
+    	if( pymntNoticePymntStsCdgCd != null ) {
+	    	if( this.pymntNoticePymntStsCdgCd == null ) {
+	        	this.pymntNoticePymntStsCdgCd = pymntNoticePymntStsCdgCd;
+	        } else if(this.pymntNoticePymntStsCdgCd.substring(this.pymntNoticePymntStsCdgCd.length() - 1).equals("]") & pymntNoticePymntStsCdgCd.equals("[")) {
+	        	this.pymntNoticePymntStsCdgCd = this.pymntNoticePymntStsCdgCd+ "," + pymntNoticePymntStsCdgCd;
+	        } else if(pymntNoticePymntStsCdgCd.equals("[") | pymntNoticePymntStsCdgCd.equals("]") | this.pymntNoticePymntStsCdgCd.substring(this.pymntNoticePymntStsCdgCd.length() - 1).equals("[")) {
+	        	this.pymntNoticePymntStsCdgCd = this.pymntNoticePymntStsCdgCd+pymntNoticePymntStsCdgCd;
+	        } else  {
+	            this.pymntNoticePymntStsCdgCd = this.pymntNoticePymntStsCdgCd+ "," +pymntNoticePymntStsCdgCd;
+	        }
+        }
     }
     
     
@@ -253,6 +533,20 @@ public class PaymentNotice  implements java.io.Serializable {
         this.pymntNoticePymntStsCdgDsply = pymntNoticePymntStsCdgDsply;
     }
     
+    public void addPymntNoticePymntStsCdgDsply(String pymntNoticePymntStsCdgDsply) {
+    	if( pymntNoticePymntStsCdgDsply != null ) {
+	    	if( this.pymntNoticePymntStsCdgDsply == null ) {
+	        	this.pymntNoticePymntStsCdgDsply = pymntNoticePymntStsCdgDsply;
+	        } else if(this.pymntNoticePymntStsCdgDsply.substring(this.pymntNoticePymntStsCdgDsply.length() - 1).equals("]") & pymntNoticePymntStsCdgDsply.equals("[")) {
+	        	this.pymntNoticePymntStsCdgDsply = this.pymntNoticePymntStsCdgDsply+ "," + pymntNoticePymntStsCdgDsply;
+	        } else if(pymntNoticePymntStsCdgDsply.equals("[") | pymntNoticePymntStsCdgDsply.equals("]") | this.pymntNoticePymntStsCdgDsply.substring(this.pymntNoticePymntStsCdgDsply.length() - 1).equals("[")) {
+	        	this.pymntNoticePymntStsCdgDsply = this.pymntNoticePymntStsCdgDsply+pymntNoticePymntStsCdgDsply;
+	        } else  {
+	            this.pymntNoticePymntStsCdgDsply = this.pymntNoticePymntStsCdgDsply+ "," +pymntNoticePymntStsCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getPymntNoticePymntStsCdgSys() {
@@ -261,6 +555,20 @@ public class PaymentNotice  implements java.io.Serializable {
     
     public void setPymntNoticePymntStsCdgSys(String pymntNoticePymntStsCdgSys) {
         this.pymntNoticePymntStsCdgSys = pymntNoticePymntStsCdgSys;
+    }
+    
+    public void addPymntNoticePymntStsCdgSys(String pymntNoticePymntStsCdgSys) {
+    	if( pymntNoticePymntStsCdgSys != null ) {
+	    	if( this.pymntNoticePymntStsCdgSys == null ) {
+	        	this.pymntNoticePymntStsCdgSys = pymntNoticePymntStsCdgSys;
+	        } else if(this.pymntNoticePymntStsCdgSys.substring(this.pymntNoticePymntStsCdgSys.length() - 1).equals("]") & pymntNoticePymntStsCdgSys.equals("[")) {
+	        	this.pymntNoticePymntStsCdgSys = this.pymntNoticePymntStsCdgSys+ "," + pymntNoticePymntStsCdgSys;
+	        } else if(pymntNoticePymntStsCdgSys.equals("[") | pymntNoticePymntStsCdgSys.equals("]") | this.pymntNoticePymntStsCdgSys.substring(this.pymntNoticePymntStsCdgSys.length() - 1).equals("[")) {
+	        	this.pymntNoticePymntStsCdgSys = this.pymntNoticePymntStsCdgSys+pymntNoticePymntStsCdgSys;
+	        } else  {
+	            this.pymntNoticePymntStsCdgSys = this.pymntNoticePymntStsCdgSys+ "," +pymntNoticePymntStsCdgSys;
+	        }
+        }
     }
     
     
@@ -273,6 +581,20 @@ public class PaymentNotice  implements java.io.Serializable {
         this.pymntNoticePymntStsCdgUsrSltd = pymntNoticePymntStsCdgUsrSltd;
     }
     
+    public void addPymntNoticePymntStsCdgUsrSltd(String pymntNoticePymntStsCdgUsrSltd) {
+    	if( pymntNoticePymntStsCdgUsrSltd != null ) {
+	    	if( this.pymntNoticePymntStsCdgUsrSltd == null ) {
+	        	this.pymntNoticePymntStsCdgUsrSltd = pymntNoticePymntStsCdgUsrSltd;
+	        } else if(this.pymntNoticePymntStsCdgUsrSltd.substring(this.pymntNoticePymntStsCdgUsrSltd.length() - 1).equals("]") & pymntNoticePymntStsCdgUsrSltd.equals("[")) {
+	        	this.pymntNoticePymntStsCdgUsrSltd = this.pymntNoticePymntStsCdgUsrSltd+ "," + pymntNoticePymntStsCdgUsrSltd;
+	        } else if(pymntNoticePymntStsCdgUsrSltd.equals("[") | pymntNoticePymntStsCdgUsrSltd.equals("]") | this.pymntNoticePymntStsCdgUsrSltd.substring(this.pymntNoticePymntStsCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.pymntNoticePymntStsCdgUsrSltd = this.pymntNoticePymntStsCdgUsrSltd+pymntNoticePymntStsCdgUsrSltd;
+	        } else  {
+	            this.pymntNoticePymntStsCdgUsrSltd = this.pymntNoticePymntStsCdgUsrSltd+ "," +pymntNoticePymntStsCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getPymntNoticePymntStsCdgVrsn() {
@@ -281,6 +603,20 @@ public class PaymentNotice  implements java.io.Serializable {
     
     public void setPymntNoticePymntStsCdgVrsn(String pymntNoticePymntStsCdgVrsn) {
         this.pymntNoticePymntStsCdgVrsn = pymntNoticePymntStsCdgVrsn;
+    }
+    
+    public void addPymntNoticePymntStsCdgVrsn(String pymntNoticePymntStsCdgVrsn) {
+    	if( pymntNoticePymntStsCdgVrsn != null ) {
+	    	if( this.pymntNoticePymntStsCdgVrsn == null ) {
+	        	this.pymntNoticePymntStsCdgVrsn = pymntNoticePymntStsCdgVrsn;
+	        } else if(this.pymntNoticePymntStsCdgVrsn.substring(this.pymntNoticePymntStsCdgVrsn.length() - 1).equals("]") & pymntNoticePymntStsCdgVrsn.equals("[")) {
+	        	this.pymntNoticePymntStsCdgVrsn = this.pymntNoticePymntStsCdgVrsn+ "," + pymntNoticePymntStsCdgVrsn;
+	        } else if(pymntNoticePymntStsCdgVrsn.equals("[") | pymntNoticePymntStsCdgVrsn.equals("]") | this.pymntNoticePymntStsCdgVrsn.substring(this.pymntNoticePymntStsCdgVrsn.length() - 1).equals("[")) {
+	        	this.pymntNoticePymntStsCdgVrsn = this.pymntNoticePymntStsCdgVrsn+pymntNoticePymntStsCdgVrsn;
+	        } else  {
+	            this.pymntNoticePymntStsCdgVrsn = this.pymntNoticePymntStsCdgVrsn+ "," +pymntNoticePymntStsCdgVrsn;
+	        }
+        }
     }
     
     
@@ -293,6 +629,20 @@ public class PaymentNotice  implements java.io.Serializable {
         this.pymntNoticePymntStsTxt = pymntNoticePymntStsTxt;
     }
     
+    public void addPymntNoticePymntStsTxt(String pymntNoticePymntStsTxt) {
+    	if( pymntNoticePymntStsTxt != null ) {
+	    	if( this.pymntNoticePymntStsTxt == null ) {
+	        	this.pymntNoticePymntStsTxt = pymntNoticePymntStsTxt;
+	        } else if(this.pymntNoticePymntStsTxt.substring(this.pymntNoticePymntStsTxt.length() - 1).equals("]") & pymntNoticePymntStsTxt.equals("[")) {
+	        	this.pymntNoticePymntStsTxt = this.pymntNoticePymntStsTxt+ "," + pymntNoticePymntStsTxt;
+	        } else if(pymntNoticePymntStsTxt.equals("[") | pymntNoticePymntStsTxt.equals("]") | this.pymntNoticePymntStsTxt.substring(this.pymntNoticePymntStsTxt.length() - 1).equals("[")) {
+	        	this.pymntNoticePymntStsTxt = this.pymntNoticePymntStsTxt+pymntNoticePymntStsTxt;
+	        } else  {
+	            this.pymntNoticePymntStsTxt = this.pymntNoticePymntStsTxt+ "," +pymntNoticePymntStsTxt;
+	        }
+        }
+    }
+    
     
     
     public String getPymntNoticeProvider() {
@@ -301,6 +651,20 @@ public class PaymentNotice  implements java.io.Serializable {
     
     public void setPymntNoticeProvider(String pymntNoticeProvider) {
         this.pymntNoticeProvider = pymntNoticeProvider;
+    }
+    
+    public void addPymntNoticeProvider(String pymntNoticeProvider) {
+    	if( pymntNoticeProvider != null ) {
+	    	if( this.pymntNoticeProvider == null ) {
+	        	this.pymntNoticeProvider = pymntNoticeProvider;
+	        } else if(this.pymntNoticeProvider.substring(this.pymntNoticeProvider.length() - 1).equals("]") & pymntNoticeProvider.equals("[")) {
+	        	this.pymntNoticeProvider = this.pymntNoticeProvider+ "," + pymntNoticeProvider;
+	        } else if(pymntNoticeProvider.equals("[") | pymntNoticeProvider.equals("]") | this.pymntNoticeProvider.substring(this.pymntNoticeProvider.length() - 1).equals("[")) {
+	        	this.pymntNoticeProvider = this.pymntNoticeProvider+pymntNoticeProvider;
+	        } else  {
+	            this.pymntNoticeProvider = this.pymntNoticeProvider+ "," +pymntNoticeProvider;
+	        }
+        }
     }
     
     
@@ -313,6 +677,20 @@ public class PaymentNotice  implements java.io.Serializable {
         this.pymntNoticeRecipient = pymntNoticeRecipient;
     }
     
+    public void addPymntNoticeRecipient(String pymntNoticeRecipient) {
+    	if( pymntNoticeRecipient != null ) {
+	    	if( this.pymntNoticeRecipient == null ) {
+	        	this.pymntNoticeRecipient = pymntNoticeRecipient;
+	        } else if(this.pymntNoticeRecipient.substring(this.pymntNoticeRecipient.length() - 1).equals("]") & pymntNoticeRecipient.equals("[")) {
+	        	this.pymntNoticeRecipient = this.pymntNoticeRecipient+ "," + pymntNoticeRecipient;
+	        } else if(pymntNoticeRecipient.equals("[") | pymntNoticeRecipient.equals("]") | this.pymntNoticeRecipient.substring(this.pymntNoticeRecipient.length() - 1).equals("[")) {
+	        	this.pymntNoticeRecipient = this.pymntNoticeRecipient+pymntNoticeRecipient;
+	        } else  {
+	            this.pymntNoticeRecipient = this.pymntNoticeRecipient+ "," +pymntNoticeRecipient;
+	        }
+        }
+    }
+    
     
     
     public String getPymntNoticeRqst() {
@@ -321,6 +699,20 @@ public class PaymentNotice  implements java.io.Serializable {
     
     public void setPymntNoticeRqst(String pymntNoticeRqst) {
         this.pymntNoticeRqst = pymntNoticeRqst;
+    }
+    
+    public void addPymntNoticeRqst(String pymntNoticeRqst) {
+    	if( pymntNoticeRqst != null ) {
+	    	if( this.pymntNoticeRqst == null ) {
+	        	this.pymntNoticeRqst = pymntNoticeRqst;
+	        } else if(this.pymntNoticeRqst.substring(this.pymntNoticeRqst.length() - 1).equals("]") & pymntNoticeRqst.equals("[")) {
+	        	this.pymntNoticeRqst = this.pymntNoticeRqst+ "," + pymntNoticeRqst;
+	        } else if(pymntNoticeRqst.equals("[") | pymntNoticeRqst.equals("]") | this.pymntNoticeRqst.substring(this.pymntNoticeRqst.length() - 1).equals("[")) {
+	        	this.pymntNoticeRqst = this.pymntNoticeRqst+pymntNoticeRqst;
+	        } else  {
+	            this.pymntNoticeRqst = this.pymntNoticeRqst+ "," +pymntNoticeRqst;
+	        }
+        }
     }
     
     
@@ -333,6 +725,20 @@ public class PaymentNotice  implements java.io.Serializable {
         this.pymntNoticeRsps = pymntNoticeRsps;
     }
     
+    public void addPymntNoticeRsps(String pymntNoticeRsps) {
+    	if( pymntNoticeRsps != null ) {
+	    	if( this.pymntNoticeRsps == null ) {
+	        	this.pymntNoticeRsps = pymntNoticeRsps;
+	        } else if(this.pymntNoticeRsps.substring(this.pymntNoticeRsps.length() - 1).equals("]") & pymntNoticeRsps.equals("[")) {
+	        	this.pymntNoticeRsps = this.pymntNoticeRsps+ "," + pymntNoticeRsps;
+	        } else if(pymntNoticeRsps.equals("[") | pymntNoticeRsps.equals("]") | this.pymntNoticeRsps.substring(this.pymntNoticeRsps.length() - 1).equals("[")) {
+	        	this.pymntNoticeRsps = this.pymntNoticeRsps+pymntNoticeRsps;
+	        } else  {
+	            this.pymntNoticeRsps = this.pymntNoticeRsps+ "," +pymntNoticeRsps;
+	        }
+        }
+    }
+    
     
     
     public String getPymntNoticeSts() {
@@ -341,6 +747,20 @@ public class PaymentNotice  implements java.io.Serializable {
     
     public void setPymntNoticeSts(String pymntNoticeSts) {
         this.pymntNoticeSts = pymntNoticeSts;
+    }
+    
+    public void addPymntNoticeSts(String pymntNoticeSts) {
+    	if( pymntNoticeSts != null ) {
+	    	if( this.pymntNoticeSts == null ) {
+	        	this.pymntNoticeSts = pymntNoticeSts;
+	        } else if(this.pymntNoticeSts.substring(this.pymntNoticeSts.length() - 1).equals("]") & pymntNoticeSts.equals("[")) {
+	        	this.pymntNoticeSts = this.pymntNoticeSts+ "," + pymntNoticeSts;
+	        } else if(pymntNoticeSts.equals("[") | pymntNoticeSts.equals("]") | this.pymntNoticeSts.substring(this.pymntNoticeSts.length() - 1).equals("[")) {
+	        	this.pymntNoticeSts = this.pymntNoticeSts+pymntNoticeSts;
+	        } else  {
+	            this.pymntNoticeSts = this.pymntNoticeSts+ "," +pymntNoticeSts;
+	        }
+        }
     }
     
     

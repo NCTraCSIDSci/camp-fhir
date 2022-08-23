@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Jun 27, 2022, 10:40:10 AM by Hibernate Tools 5.6.1.Final
+// Generated Aug 17, 2022, 11:08:48 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -59,6 +59,20 @@ public class Schedule  implements java.io.Serializable {
         this.id = id;
     }
     
+    public void addId(String id) {
+    	if( id != null ) {
+	    	if( this.id == null ) {
+	        	this.id = id;
+	        } else if(this.id.substring(this.id.length() - 1).equals("]") & id.equals("[")) {
+	        	this.id = this.id+ "," + id;
+	        } else if(id.equals("[") | id.equals("]") | this.id.substring(this.id.length() - 1).equals("[")) {
+	        	this.id = this.id+id;
+	        } else  {
+	            this.id = this.id+ "," +id;
+	        }
+        }
+    }
+    
     
     
     public String getSchdlActive() {
@@ -67,6 +81,20 @@ public class Schedule  implements java.io.Serializable {
     
     public void setSchdlActive(String schdlActive) {
         this.schdlActive = schdlActive;
+    }
+    
+    public void addSchdlActive(String schdlActive) {
+    	if( schdlActive != null ) {
+	    	if( this.schdlActive == null ) {
+	        	this.schdlActive = schdlActive;
+	        } else if(this.schdlActive.substring(this.schdlActive.length() - 1).equals("]") & schdlActive.equals("[")) {
+	        	this.schdlActive = this.schdlActive+ "," + schdlActive;
+	        } else if(schdlActive.equals("[") | schdlActive.equals("]") | this.schdlActive.substring(this.schdlActive.length() - 1).equals("[")) {
+	        	this.schdlActive = this.schdlActive+schdlActive;
+	        } else  {
+	            this.schdlActive = this.schdlActive+ "," +schdlActive;
+	        }
+        }
     }
     
     
@@ -79,6 +107,20 @@ public class Schedule  implements java.io.Serializable {
         this.schdlActor = schdlActor;
     }
     
+    public void addSchdlActor(String schdlActor) {
+    	if( schdlActor != null ) {
+	    	if( this.schdlActor == null ) {
+	        	this.schdlActor = schdlActor;
+	        } else if(this.schdlActor.substring(this.schdlActor.length() - 1).equals("]") & schdlActor.equals("[")) {
+	        	this.schdlActor = this.schdlActor+ "," + schdlActor;
+	        } else if(schdlActor.equals("[") | schdlActor.equals("]") | this.schdlActor.substring(this.schdlActor.length() - 1).equals("[")) {
+	        	this.schdlActor = this.schdlActor+schdlActor;
+	        } else  {
+	            this.schdlActor = this.schdlActor+ "," +schdlActor;
+	        }
+        }
+    }
+    
     
     
     public String getSchdlComment() {
@@ -87,6 +129,20 @@ public class Schedule  implements java.io.Serializable {
     
     public void setSchdlComment(String schdlComment) {
         this.schdlComment = schdlComment;
+    }
+    
+    public void addSchdlComment(String schdlComment) {
+    	if( schdlComment != null ) {
+	    	if( this.schdlComment == null ) {
+	        	this.schdlComment = schdlComment;
+	        } else if(this.schdlComment.substring(this.schdlComment.length() - 1).equals("]") & schdlComment.equals("[")) {
+	        	this.schdlComment = this.schdlComment+ "," + schdlComment;
+	        } else if(schdlComment.equals("[") | schdlComment.equals("]") | this.schdlComment.substring(this.schdlComment.length() - 1).equals("[")) {
+	        	this.schdlComment = this.schdlComment+schdlComment;
+	        } else  {
+	            this.schdlComment = this.schdlComment+ "," +schdlComment;
+	        }
+        }
     }
     
     
@@ -99,6 +155,20 @@ public class Schedule  implements java.io.Serializable {
         this.schdlIdAssigner = schdlIdAssigner;
     }
     
+    public void addSchdlIdAssigner(String schdlIdAssigner) {
+    	if( schdlIdAssigner != null ) {
+	    	if( this.schdlIdAssigner == null ) {
+	        	this.schdlIdAssigner = schdlIdAssigner;
+	        } else if(this.schdlIdAssigner.substring(this.schdlIdAssigner.length() - 1).equals("]") & schdlIdAssigner.equals("[")) {
+	        	this.schdlIdAssigner = this.schdlIdAssigner+ "," + schdlIdAssigner;
+	        } else if(schdlIdAssigner.equals("[") | schdlIdAssigner.equals("]") | this.schdlIdAssigner.substring(this.schdlIdAssigner.length() - 1).equals("[")) {
+	        	this.schdlIdAssigner = this.schdlIdAssigner+schdlIdAssigner;
+	        } else  {
+	            this.schdlIdAssigner = this.schdlIdAssigner+ "," +schdlIdAssigner;
+	        }
+        }
+    }
+    
     
     
     public String getSchdlIdPrdEnd() {
@@ -107,6 +177,20 @@ public class Schedule  implements java.io.Serializable {
     
     public void setSchdlIdPrdEnd(String schdlIdPrdEnd) {
         this.schdlIdPrdEnd = schdlIdPrdEnd;
+    }
+    
+    public void addSchdlIdPrdEnd(String schdlIdPrdEnd) {
+    	if( schdlIdPrdEnd != null ) {
+	    	if( this.schdlIdPrdEnd == null ) {
+	        	this.schdlIdPrdEnd = schdlIdPrdEnd;
+	        } else if(this.schdlIdPrdEnd.substring(this.schdlIdPrdEnd.length() - 1).equals("]") & schdlIdPrdEnd.equals("[")) {
+	        	this.schdlIdPrdEnd = this.schdlIdPrdEnd+ "," + schdlIdPrdEnd;
+	        } else if(schdlIdPrdEnd.equals("[") | schdlIdPrdEnd.equals("]") | this.schdlIdPrdEnd.substring(this.schdlIdPrdEnd.length() - 1).equals("[")) {
+	        	this.schdlIdPrdEnd = this.schdlIdPrdEnd+schdlIdPrdEnd;
+	        } else  {
+	            this.schdlIdPrdEnd = this.schdlIdPrdEnd+ "," +schdlIdPrdEnd;
+	        }
+        }
     }
     
     
@@ -119,6 +203,20 @@ public class Schedule  implements java.io.Serializable {
         this.schdlIdPrdStrt = schdlIdPrdStrt;
     }
     
+    public void addSchdlIdPrdStrt(String schdlIdPrdStrt) {
+    	if( schdlIdPrdStrt != null ) {
+	    	if( this.schdlIdPrdStrt == null ) {
+	        	this.schdlIdPrdStrt = schdlIdPrdStrt;
+	        } else if(this.schdlIdPrdStrt.substring(this.schdlIdPrdStrt.length() - 1).equals("]") & schdlIdPrdStrt.equals("[")) {
+	        	this.schdlIdPrdStrt = this.schdlIdPrdStrt+ "," + schdlIdPrdStrt;
+	        } else if(schdlIdPrdStrt.equals("[") | schdlIdPrdStrt.equals("]") | this.schdlIdPrdStrt.substring(this.schdlIdPrdStrt.length() - 1).equals("[")) {
+	        	this.schdlIdPrdStrt = this.schdlIdPrdStrt+schdlIdPrdStrt;
+	        } else  {
+	            this.schdlIdPrdStrt = this.schdlIdPrdStrt+ "," +schdlIdPrdStrt;
+	        }
+        }
+    }
+    
     
     
     public String getSchdlIdSys() {
@@ -127,6 +225,20 @@ public class Schedule  implements java.io.Serializable {
     
     public void setSchdlIdSys(String schdlIdSys) {
         this.schdlIdSys = schdlIdSys;
+    }
+    
+    public void addSchdlIdSys(String schdlIdSys) {
+    	if( schdlIdSys != null ) {
+	    	if( this.schdlIdSys == null ) {
+	        	this.schdlIdSys = schdlIdSys;
+	        } else if(this.schdlIdSys.substring(this.schdlIdSys.length() - 1).equals("]") & schdlIdSys.equals("[")) {
+	        	this.schdlIdSys = this.schdlIdSys+ "," + schdlIdSys;
+	        } else if(schdlIdSys.equals("[") | schdlIdSys.equals("]") | this.schdlIdSys.substring(this.schdlIdSys.length() - 1).equals("[")) {
+	        	this.schdlIdSys = this.schdlIdSys+schdlIdSys;
+	        } else  {
+	            this.schdlIdSys = this.schdlIdSys+ "," +schdlIdSys;
+	        }
+        }
     }
     
     
@@ -139,6 +251,20 @@ public class Schedule  implements java.io.Serializable {
         this.schdlIdTypCdgCd = schdlIdTypCdgCd;
     }
     
+    public void addSchdlIdTypCdgCd(String schdlIdTypCdgCd) {
+    	if( schdlIdTypCdgCd != null ) {
+	    	if( this.schdlIdTypCdgCd == null ) {
+	        	this.schdlIdTypCdgCd = schdlIdTypCdgCd;
+	        } else if(this.schdlIdTypCdgCd.substring(this.schdlIdTypCdgCd.length() - 1).equals("]") & schdlIdTypCdgCd.equals("[")) {
+	        	this.schdlIdTypCdgCd = this.schdlIdTypCdgCd+ "," + schdlIdTypCdgCd;
+	        } else if(schdlIdTypCdgCd.equals("[") | schdlIdTypCdgCd.equals("]") | this.schdlIdTypCdgCd.substring(this.schdlIdTypCdgCd.length() - 1).equals("[")) {
+	        	this.schdlIdTypCdgCd = this.schdlIdTypCdgCd+schdlIdTypCdgCd;
+	        } else  {
+	            this.schdlIdTypCdgCd = this.schdlIdTypCdgCd+ "," +schdlIdTypCdgCd;
+	        }
+        }
+    }
+    
     
     
     public String getSchdlIdTypCdgDsply() {
@@ -147,6 +273,20 @@ public class Schedule  implements java.io.Serializable {
     
     public void setSchdlIdTypCdgDsply(String schdlIdTypCdgDsply) {
         this.schdlIdTypCdgDsply = schdlIdTypCdgDsply;
+    }
+    
+    public void addSchdlIdTypCdgDsply(String schdlIdTypCdgDsply) {
+    	if( schdlIdTypCdgDsply != null ) {
+	    	if( this.schdlIdTypCdgDsply == null ) {
+	        	this.schdlIdTypCdgDsply = schdlIdTypCdgDsply;
+	        } else if(this.schdlIdTypCdgDsply.substring(this.schdlIdTypCdgDsply.length() - 1).equals("]") & schdlIdTypCdgDsply.equals("[")) {
+	        	this.schdlIdTypCdgDsply = this.schdlIdTypCdgDsply+ "," + schdlIdTypCdgDsply;
+	        } else if(schdlIdTypCdgDsply.equals("[") | schdlIdTypCdgDsply.equals("]") | this.schdlIdTypCdgDsply.substring(this.schdlIdTypCdgDsply.length() - 1).equals("[")) {
+	        	this.schdlIdTypCdgDsply = this.schdlIdTypCdgDsply+schdlIdTypCdgDsply;
+	        } else  {
+	            this.schdlIdTypCdgDsply = this.schdlIdTypCdgDsply+ "," +schdlIdTypCdgDsply;
+	        }
+        }
     }
     
     
@@ -159,6 +299,20 @@ public class Schedule  implements java.io.Serializable {
         this.schdlIdTypCdgSys = schdlIdTypCdgSys;
     }
     
+    public void addSchdlIdTypCdgSys(String schdlIdTypCdgSys) {
+    	if( schdlIdTypCdgSys != null ) {
+	    	if( this.schdlIdTypCdgSys == null ) {
+	        	this.schdlIdTypCdgSys = schdlIdTypCdgSys;
+	        } else if(this.schdlIdTypCdgSys.substring(this.schdlIdTypCdgSys.length() - 1).equals("]") & schdlIdTypCdgSys.equals("[")) {
+	        	this.schdlIdTypCdgSys = this.schdlIdTypCdgSys+ "," + schdlIdTypCdgSys;
+	        } else if(schdlIdTypCdgSys.equals("[") | schdlIdTypCdgSys.equals("]") | this.schdlIdTypCdgSys.substring(this.schdlIdTypCdgSys.length() - 1).equals("[")) {
+	        	this.schdlIdTypCdgSys = this.schdlIdTypCdgSys+schdlIdTypCdgSys;
+	        } else  {
+	            this.schdlIdTypCdgSys = this.schdlIdTypCdgSys+ "," +schdlIdTypCdgSys;
+	        }
+        }
+    }
+    
     
     
     public String getSchdlIdTypCdgUsrSltd() {
@@ -167,6 +321,20 @@ public class Schedule  implements java.io.Serializable {
     
     public void setSchdlIdTypCdgUsrSltd(String schdlIdTypCdgUsrSltd) {
         this.schdlIdTypCdgUsrSltd = schdlIdTypCdgUsrSltd;
+    }
+    
+    public void addSchdlIdTypCdgUsrSltd(String schdlIdTypCdgUsrSltd) {
+    	if( schdlIdTypCdgUsrSltd != null ) {
+	    	if( this.schdlIdTypCdgUsrSltd == null ) {
+	        	this.schdlIdTypCdgUsrSltd = schdlIdTypCdgUsrSltd;
+	        } else if(this.schdlIdTypCdgUsrSltd.substring(this.schdlIdTypCdgUsrSltd.length() - 1).equals("]") & schdlIdTypCdgUsrSltd.equals("[")) {
+	        	this.schdlIdTypCdgUsrSltd = this.schdlIdTypCdgUsrSltd+ "," + schdlIdTypCdgUsrSltd;
+	        } else if(schdlIdTypCdgUsrSltd.equals("[") | schdlIdTypCdgUsrSltd.equals("]") | this.schdlIdTypCdgUsrSltd.substring(this.schdlIdTypCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.schdlIdTypCdgUsrSltd = this.schdlIdTypCdgUsrSltd+schdlIdTypCdgUsrSltd;
+	        } else  {
+	            this.schdlIdTypCdgUsrSltd = this.schdlIdTypCdgUsrSltd+ "," +schdlIdTypCdgUsrSltd;
+	        }
+        }
     }
     
     
@@ -179,6 +347,20 @@ public class Schedule  implements java.io.Serializable {
         this.schdlIdTypCdgVrsn = schdlIdTypCdgVrsn;
     }
     
+    public void addSchdlIdTypCdgVrsn(String schdlIdTypCdgVrsn) {
+    	if( schdlIdTypCdgVrsn != null ) {
+	    	if( this.schdlIdTypCdgVrsn == null ) {
+	        	this.schdlIdTypCdgVrsn = schdlIdTypCdgVrsn;
+	        } else if(this.schdlIdTypCdgVrsn.substring(this.schdlIdTypCdgVrsn.length() - 1).equals("]") & schdlIdTypCdgVrsn.equals("[")) {
+	        	this.schdlIdTypCdgVrsn = this.schdlIdTypCdgVrsn+ "," + schdlIdTypCdgVrsn;
+	        } else if(schdlIdTypCdgVrsn.equals("[") | schdlIdTypCdgVrsn.equals("]") | this.schdlIdTypCdgVrsn.substring(this.schdlIdTypCdgVrsn.length() - 1).equals("[")) {
+	        	this.schdlIdTypCdgVrsn = this.schdlIdTypCdgVrsn+schdlIdTypCdgVrsn;
+	        } else  {
+	            this.schdlIdTypCdgVrsn = this.schdlIdTypCdgVrsn+ "," +schdlIdTypCdgVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getSchdlIdTypTxt() {
@@ -187,6 +369,20 @@ public class Schedule  implements java.io.Serializable {
     
     public void setSchdlIdTypTxt(String schdlIdTypTxt) {
         this.schdlIdTypTxt = schdlIdTypTxt;
+    }
+    
+    public void addSchdlIdTypTxt(String schdlIdTypTxt) {
+    	if( schdlIdTypTxt != null ) {
+	    	if( this.schdlIdTypTxt == null ) {
+	        	this.schdlIdTypTxt = schdlIdTypTxt;
+	        } else if(this.schdlIdTypTxt.substring(this.schdlIdTypTxt.length() - 1).equals("]") & schdlIdTypTxt.equals("[")) {
+	        	this.schdlIdTypTxt = this.schdlIdTypTxt+ "," + schdlIdTypTxt;
+	        } else if(schdlIdTypTxt.equals("[") | schdlIdTypTxt.equals("]") | this.schdlIdTypTxt.substring(this.schdlIdTypTxt.length() - 1).equals("[")) {
+	        	this.schdlIdTypTxt = this.schdlIdTypTxt+schdlIdTypTxt;
+	        } else  {
+	            this.schdlIdTypTxt = this.schdlIdTypTxt+ "," +schdlIdTypTxt;
+	        }
+        }
     }
     
     
@@ -199,6 +395,20 @@ public class Schedule  implements java.io.Serializable {
         this.schdlIdUse = schdlIdUse;
     }
     
+    public void addSchdlIdUse(String schdlIdUse) {
+    	if( schdlIdUse != null ) {
+	    	if( this.schdlIdUse == null ) {
+	        	this.schdlIdUse = schdlIdUse;
+	        } else if(this.schdlIdUse.substring(this.schdlIdUse.length() - 1).equals("]") & schdlIdUse.equals("[")) {
+	        	this.schdlIdUse = this.schdlIdUse+ "," + schdlIdUse;
+	        } else if(schdlIdUse.equals("[") | schdlIdUse.equals("]") | this.schdlIdUse.substring(this.schdlIdUse.length() - 1).equals("[")) {
+	        	this.schdlIdUse = this.schdlIdUse+schdlIdUse;
+	        } else  {
+	            this.schdlIdUse = this.schdlIdUse+ "," +schdlIdUse;
+	        }
+        }
+    }
+    
     
     
     public String getSchdlIdVl() {
@@ -207,6 +417,20 @@ public class Schedule  implements java.io.Serializable {
     
     public void setSchdlIdVl(String schdlIdVl) {
         this.schdlIdVl = schdlIdVl;
+    }
+    
+    public void addSchdlIdVl(String schdlIdVl) {
+    	if( schdlIdVl != null ) {
+	    	if( this.schdlIdVl == null ) {
+	        	this.schdlIdVl = schdlIdVl;
+	        } else if(this.schdlIdVl.substring(this.schdlIdVl.length() - 1).equals("]") & schdlIdVl.equals("[")) {
+	        	this.schdlIdVl = this.schdlIdVl+ "," + schdlIdVl;
+	        } else if(schdlIdVl.equals("[") | schdlIdVl.equals("]") | this.schdlIdVl.substring(this.schdlIdVl.length() - 1).equals("[")) {
+	        	this.schdlIdVl = this.schdlIdVl+schdlIdVl;
+	        } else  {
+	            this.schdlIdVl = this.schdlIdVl+ "," +schdlIdVl;
+	        }
+        }
     }
     
     
@@ -219,6 +443,20 @@ public class Schedule  implements java.io.Serializable {
         this.schdlPlnningHorizonEnd = schdlPlnningHorizonEnd;
     }
     
+    public void addSchdlPlnningHorizonEnd(String schdlPlnningHorizonEnd) {
+    	if( schdlPlnningHorizonEnd != null ) {
+	    	if( this.schdlPlnningHorizonEnd == null ) {
+	        	this.schdlPlnningHorizonEnd = schdlPlnningHorizonEnd;
+	        } else if(this.schdlPlnningHorizonEnd.substring(this.schdlPlnningHorizonEnd.length() - 1).equals("]") & schdlPlnningHorizonEnd.equals("[")) {
+	        	this.schdlPlnningHorizonEnd = this.schdlPlnningHorizonEnd+ "," + schdlPlnningHorizonEnd;
+	        } else if(schdlPlnningHorizonEnd.equals("[") | schdlPlnningHorizonEnd.equals("]") | this.schdlPlnningHorizonEnd.substring(this.schdlPlnningHorizonEnd.length() - 1).equals("[")) {
+	        	this.schdlPlnningHorizonEnd = this.schdlPlnningHorizonEnd+schdlPlnningHorizonEnd;
+	        } else  {
+	            this.schdlPlnningHorizonEnd = this.schdlPlnningHorizonEnd+ "," +schdlPlnningHorizonEnd;
+	        }
+        }
+    }
+    
     
     
     public String getSchdlPlnningHorizonStrt() {
@@ -227,6 +465,20 @@ public class Schedule  implements java.io.Serializable {
     
     public void setSchdlPlnningHorizonStrt(String schdlPlnningHorizonStrt) {
         this.schdlPlnningHorizonStrt = schdlPlnningHorizonStrt;
+    }
+    
+    public void addSchdlPlnningHorizonStrt(String schdlPlnningHorizonStrt) {
+    	if( schdlPlnningHorizonStrt != null ) {
+	    	if( this.schdlPlnningHorizonStrt == null ) {
+	        	this.schdlPlnningHorizonStrt = schdlPlnningHorizonStrt;
+	        } else if(this.schdlPlnningHorizonStrt.substring(this.schdlPlnningHorizonStrt.length() - 1).equals("]") & schdlPlnningHorizonStrt.equals("[")) {
+	        	this.schdlPlnningHorizonStrt = this.schdlPlnningHorizonStrt+ "," + schdlPlnningHorizonStrt;
+	        } else if(schdlPlnningHorizonStrt.equals("[") | schdlPlnningHorizonStrt.equals("]") | this.schdlPlnningHorizonStrt.substring(this.schdlPlnningHorizonStrt.length() - 1).equals("[")) {
+	        	this.schdlPlnningHorizonStrt = this.schdlPlnningHorizonStrt+schdlPlnningHorizonStrt;
+	        } else  {
+	            this.schdlPlnningHorizonStrt = this.schdlPlnningHorizonStrt+ "," +schdlPlnningHorizonStrt;
+	        }
+        }
     }
     
     
@@ -239,6 +491,20 @@ public class Schedule  implements java.io.Serializable {
         this.schdlSrvCtgryCdgCd = schdlSrvCtgryCdgCd;
     }
     
+    public void addSchdlSrvCtgryCdgCd(String schdlSrvCtgryCdgCd) {
+    	if( schdlSrvCtgryCdgCd != null ) {
+	    	if( this.schdlSrvCtgryCdgCd == null ) {
+	        	this.schdlSrvCtgryCdgCd = schdlSrvCtgryCdgCd;
+	        } else if(this.schdlSrvCtgryCdgCd.substring(this.schdlSrvCtgryCdgCd.length() - 1).equals("]") & schdlSrvCtgryCdgCd.equals("[")) {
+	        	this.schdlSrvCtgryCdgCd = this.schdlSrvCtgryCdgCd+ "," + schdlSrvCtgryCdgCd;
+	        } else if(schdlSrvCtgryCdgCd.equals("[") | schdlSrvCtgryCdgCd.equals("]") | this.schdlSrvCtgryCdgCd.substring(this.schdlSrvCtgryCdgCd.length() - 1).equals("[")) {
+	        	this.schdlSrvCtgryCdgCd = this.schdlSrvCtgryCdgCd+schdlSrvCtgryCdgCd;
+	        } else  {
+	            this.schdlSrvCtgryCdgCd = this.schdlSrvCtgryCdgCd+ "," +schdlSrvCtgryCdgCd;
+	        }
+        }
+    }
+    
     
     
     public String getSchdlSrvCtgryCdgDsply() {
@@ -247,6 +513,20 @@ public class Schedule  implements java.io.Serializable {
     
     public void setSchdlSrvCtgryCdgDsply(String schdlSrvCtgryCdgDsply) {
         this.schdlSrvCtgryCdgDsply = schdlSrvCtgryCdgDsply;
+    }
+    
+    public void addSchdlSrvCtgryCdgDsply(String schdlSrvCtgryCdgDsply) {
+    	if( schdlSrvCtgryCdgDsply != null ) {
+	    	if( this.schdlSrvCtgryCdgDsply == null ) {
+	        	this.schdlSrvCtgryCdgDsply = schdlSrvCtgryCdgDsply;
+	        } else if(this.schdlSrvCtgryCdgDsply.substring(this.schdlSrvCtgryCdgDsply.length() - 1).equals("]") & schdlSrvCtgryCdgDsply.equals("[")) {
+	        	this.schdlSrvCtgryCdgDsply = this.schdlSrvCtgryCdgDsply+ "," + schdlSrvCtgryCdgDsply;
+	        } else if(schdlSrvCtgryCdgDsply.equals("[") | schdlSrvCtgryCdgDsply.equals("]") | this.schdlSrvCtgryCdgDsply.substring(this.schdlSrvCtgryCdgDsply.length() - 1).equals("[")) {
+	        	this.schdlSrvCtgryCdgDsply = this.schdlSrvCtgryCdgDsply+schdlSrvCtgryCdgDsply;
+	        } else  {
+	            this.schdlSrvCtgryCdgDsply = this.schdlSrvCtgryCdgDsply+ "," +schdlSrvCtgryCdgDsply;
+	        }
+        }
     }
     
     
@@ -259,6 +539,20 @@ public class Schedule  implements java.io.Serializable {
         this.schdlSrvCtgryCdgSys = schdlSrvCtgryCdgSys;
     }
     
+    public void addSchdlSrvCtgryCdgSys(String schdlSrvCtgryCdgSys) {
+    	if( schdlSrvCtgryCdgSys != null ) {
+	    	if( this.schdlSrvCtgryCdgSys == null ) {
+	        	this.schdlSrvCtgryCdgSys = schdlSrvCtgryCdgSys;
+	        } else if(this.schdlSrvCtgryCdgSys.substring(this.schdlSrvCtgryCdgSys.length() - 1).equals("]") & schdlSrvCtgryCdgSys.equals("[")) {
+	        	this.schdlSrvCtgryCdgSys = this.schdlSrvCtgryCdgSys+ "," + schdlSrvCtgryCdgSys;
+	        } else if(schdlSrvCtgryCdgSys.equals("[") | schdlSrvCtgryCdgSys.equals("]") | this.schdlSrvCtgryCdgSys.substring(this.schdlSrvCtgryCdgSys.length() - 1).equals("[")) {
+	        	this.schdlSrvCtgryCdgSys = this.schdlSrvCtgryCdgSys+schdlSrvCtgryCdgSys;
+	        } else  {
+	            this.schdlSrvCtgryCdgSys = this.schdlSrvCtgryCdgSys+ "," +schdlSrvCtgryCdgSys;
+	        }
+        }
+    }
+    
     
     
     public String getSchdlSrvCtgryCdgUsrSltd() {
@@ -267,6 +561,20 @@ public class Schedule  implements java.io.Serializable {
     
     public void setSchdlSrvCtgryCdgUsrSltd(String schdlSrvCtgryCdgUsrSltd) {
         this.schdlSrvCtgryCdgUsrSltd = schdlSrvCtgryCdgUsrSltd;
+    }
+    
+    public void addSchdlSrvCtgryCdgUsrSltd(String schdlSrvCtgryCdgUsrSltd) {
+    	if( schdlSrvCtgryCdgUsrSltd != null ) {
+	    	if( this.schdlSrvCtgryCdgUsrSltd == null ) {
+	        	this.schdlSrvCtgryCdgUsrSltd = schdlSrvCtgryCdgUsrSltd;
+	        } else if(this.schdlSrvCtgryCdgUsrSltd.substring(this.schdlSrvCtgryCdgUsrSltd.length() - 1).equals("]") & schdlSrvCtgryCdgUsrSltd.equals("[")) {
+	        	this.schdlSrvCtgryCdgUsrSltd = this.schdlSrvCtgryCdgUsrSltd+ "," + schdlSrvCtgryCdgUsrSltd;
+	        } else if(schdlSrvCtgryCdgUsrSltd.equals("[") | schdlSrvCtgryCdgUsrSltd.equals("]") | this.schdlSrvCtgryCdgUsrSltd.substring(this.schdlSrvCtgryCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.schdlSrvCtgryCdgUsrSltd = this.schdlSrvCtgryCdgUsrSltd+schdlSrvCtgryCdgUsrSltd;
+	        } else  {
+	            this.schdlSrvCtgryCdgUsrSltd = this.schdlSrvCtgryCdgUsrSltd+ "," +schdlSrvCtgryCdgUsrSltd;
+	        }
+        }
     }
     
     
@@ -279,6 +587,20 @@ public class Schedule  implements java.io.Serializable {
         this.schdlSrvCtgryCdgVrsn = schdlSrvCtgryCdgVrsn;
     }
     
+    public void addSchdlSrvCtgryCdgVrsn(String schdlSrvCtgryCdgVrsn) {
+    	if( schdlSrvCtgryCdgVrsn != null ) {
+	    	if( this.schdlSrvCtgryCdgVrsn == null ) {
+	        	this.schdlSrvCtgryCdgVrsn = schdlSrvCtgryCdgVrsn;
+	        } else if(this.schdlSrvCtgryCdgVrsn.substring(this.schdlSrvCtgryCdgVrsn.length() - 1).equals("]") & schdlSrvCtgryCdgVrsn.equals("[")) {
+	        	this.schdlSrvCtgryCdgVrsn = this.schdlSrvCtgryCdgVrsn+ "," + schdlSrvCtgryCdgVrsn;
+	        } else if(schdlSrvCtgryCdgVrsn.equals("[") | schdlSrvCtgryCdgVrsn.equals("]") | this.schdlSrvCtgryCdgVrsn.substring(this.schdlSrvCtgryCdgVrsn.length() - 1).equals("[")) {
+	        	this.schdlSrvCtgryCdgVrsn = this.schdlSrvCtgryCdgVrsn+schdlSrvCtgryCdgVrsn;
+	        } else  {
+	            this.schdlSrvCtgryCdgVrsn = this.schdlSrvCtgryCdgVrsn+ "," +schdlSrvCtgryCdgVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getSchdlSrvCtgryTxt() {
@@ -287,6 +609,20 @@ public class Schedule  implements java.io.Serializable {
     
     public void setSchdlSrvCtgryTxt(String schdlSrvCtgryTxt) {
         this.schdlSrvCtgryTxt = schdlSrvCtgryTxt;
+    }
+    
+    public void addSchdlSrvCtgryTxt(String schdlSrvCtgryTxt) {
+    	if( schdlSrvCtgryTxt != null ) {
+	    	if( this.schdlSrvCtgryTxt == null ) {
+	        	this.schdlSrvCtgryTxt = schdlSrvCtgryTxt;
+	        } else if(this.schdlSrvCtgryTxt.substring(this.schdlSrvCtgryTxt.length() - 1).equals("]") & schdlSrvCtgryTxt.equals("[")) {
+	        	this.schdlSrvCtgryTxt = this.schdlSrvCtgryTxt+ "," + schdlSrvCtgryTxt;
+	        } else if(schdlSrvCtgryTxt.equals("[") | schdlSrvCtgryTxt.equals("]") | this.schdlSrvCtgryTxt.substring(this.schdlSrvCtgryTxt.length() - 1).equals("[")) {
+	        	this.schdlSrvCtgryTxt = this.schdlSrvCtgryTxt+schdlSrvCtgryTxt;
+	        } else  {
+	            this.schdlSrvCtgryTxt = this.schdlSrvCtgryTxt+ "," +schdlSrvCtgryTxt;
+	        }
+        }
     }
     
     
@@ -299,6 +635,20 @@ public class Schedule  implements java.io.Serializable {
         this.schdlSrvTypCdgCd = schdlSrvTypCdgCd;
     }
     
+    public void addSchdlSrvTypCdgCd(String schdlSrvTypCdgCd) {
+    	if( schdlSrvTypCdgCd != null ) {
+	    	if( this.schdlSrvTypCdgCd == null ) {
+	        	this.schdlSrvTypCdgCd = schdlSrvTypCdgCd;
+	        } else if(this.schdlSrvTypCdgCd.substring(this.schdlSrvTypCdgCd.length() - 1).equals("]") & schdlSrvTypCdgCd.equals("[")) {
+	        	this.schdlSrvTypCdgCd = this.schdlSrvTypCdgCd+ "," + schdlSrvTypCdgCd;
+	        } else if(schdlSrvTypCdgCd.equals("[") | schdlSrvTypCdgCd.equals("]") | this.schdlSrvTypCdgCd.substring(this.schdlSrvTypCdgCd.length() - 1).equals("[")) {
+	        	this.schdlSrvTypCdgCd = this.schdlSrvTypCdgCd+schdlSrvTypCdgCd;
+	        } else  {
+	            this.schdlSrvTypCdgCd = this.schdlSrvTypCdgCd+ "," +schdlSrvTypCdgCd;
+	        }
+        }
+    }
+    
     
     
     public String getSchdlSrvTypCdgDsply() {
@@ -307,6 +657,20 @@ public class Schedule  implements java.io.Serializable {
     
     public void setSchdlSrvTypCdgDsply(String schdlSrvTypCdgDsply) {
         this.schdlSrvTypCdgDsply = schdlSrvTypCdgDsply;
+    }
+    
+    public void addSchdlSrvTypCdgDsply(String schdlSrvTypCdgDsply) {
+    	if( schdlSrvTypCdgDsply != null ) {
+	    	if( this.schdlSrvTypCdgDsply == null ) {
+	        	this.schdlSrvTypCdgDsply = schdlSrvTypCdgDsply;
+	        } else if(this.schdlSrvTypCdgDsply.substring(this.schdlSrvTypCdgDsply.length() - 1).equals("]") & schdlSrvTypCdgDsply.equals("[")) {
+	        	this.schdlSrvTypCdgDsply = this.schdlSrvTypCdgDsply+ "," + schdlSrvTypCdgDsply;
+	        } else if(schdlSrvTypCdgDsply.equals("[") | schdlSrvTypCdgDsply.equals("]") | this.schdlSrvTypCdgDsply.substring(this.schdlSrvTypCdgDsply.length() - 1).equals("[")) {
+	        	this.schdlSrvTypCdgDsply = this.schdlSrvTypCdgDsply+schdlSrvTypCdgDsply;
+	        } else  {
+	            this.schdlSrvTypCdgDsply = this.schdlSrvTypCdgDsply+ "," +schdlSrvTypCdgDsply;
+	        }
+        }
     }
     
     
@@ -319,6 +683,20 @@ public class Schedule  implements java.io.Serializable {
         this.schdlSrvTypCdgSys = schdlSrvTypCdgSys;
     }
     
+    public void addSchdlSrvTypCdgSys(String schdlSrvTypCdgSys) {
+    	if( schdlSrvTypCdgSys != null ) {
+	    	if( this.schdlSrvTypCdgSys == null ) {
+	        	this.schdlSrvTypCdgSys = schdlSrvTypCdgSys;
+	        } else if(this.schdlSrvTypCdgSys.substring(this.schdlSrvTypCdgSys.length() - 1).equals("]") & schdlSrvTypCdgSys.equals("[")) {
+	        	this.schdlSrvTypCdgSys = this.schdlSrvTypCdgSys+ "," + schdlSrvTypCdgSys;
+	        } else if(schdlSrvTypCdgSys.equals("[") | schdlSrvTypCdgSys.equals("]") | this.schdlSrvTypCdgSys.substring(this.schdlSrvTypCdgSys.length() - 1).equals("[")) {
+	        	this.schdlSrvTypCdgSys = this.schdlSrvTypCdgSys+schdlSrvTypCdgSys;
+	        } else  {
+	            this.schdlSrvTypCdgSys = this.schdlSrvTypCdgSys+ "," +schdlSrvTypCdgSys;
+	        }
+        }
+    }
+    
     
     
     public String getSchdlSrvTypCdgUsrSltd() {
@@ -327,6 +705,20 @@ public class Schedule  implements java.io.Serializable {
     
     public void setSchdlSrvTypCdgUsrSltd(String schdlSrvTypCdgUsrSltd) {
         this.schdlSrvTypCdgUsrSltd = schdlSrvTypCdgUsrSltd;
+    }
+    
+    public void addSchdlSrvTypCdgUsrSltd(String schdlSrvTypCdgUsrSltd) {
+    	if( schdlSrvTypCdgUsrSltd != null ) {
+	    	if( this.schdlSrvTypCdgUsrSltd == null ) {
+	        	this.schdlSrvTypCdgUsrSltd = schdlSrvTypCdgUsrSltd;
+	        } else if(this.schdlSrvTypCdgUsrSltd.substring(this.schdlSrvTypCdgUsrSltd.length() - 1).equals("]") & schdlSrvTypCdgUsrSltd.equals("[")) {
+	        	this.schdlSrvTypCdgUsrSltd = this.schdlSrvTypCdgUsrSltd+ "," + schdlSrvTypCdgUsrSltd;
+	        } else if(schdlSrvTypCdgUsrSltd.equals("[") | schdlSrvTypCdgUsrSltd.equals("]") | this.schdlSrvTypCdgUsrSltd.substring(this.schdlSrvTypCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.schdlSrvTypCdgUsrSltd = this.schdlSrvTypCdgUsrSltd+schdlSrvTypCdgUsrSltd;
+	        } else  {
+	            this.schdlSrvTypCdgUsrSltd = this.schdlSrvTypCdgUsrSltd+ "," +schdlSrvTypCdgUsrSltd;
+	        }
+        }
     }
     
     
@@ -339,6 +731,20 @@ public class Schedule  implements java.io.Serializable {
         this.schdlSrvTypCdgVrsn = schdlSrvTypCdgVrsn;
     }
     
+    public void addSchdlSrvTypCdgVrsn(String schdlSrvTypCdgVrsn) {
+    	if( schdlSrvTypCdgVrsn != null ) {
+	    	if( this.schdlSrvTypCdgVrsn == null ) {
+	        	this.schdlSrvTypCdgVrsn = schdlSrvTypCdgVrsn;
+	        } else if(this.schdlSrvTypCdgVrsn.substring(this.schdlSrvTypCdgVrsn.length() - 1).equals("]") & schdlSrvTypCdgVrsn.equals("[")) {
+	        	this.schdlSrvTypCdgVrsn = this.schdlSrvTypCdgVrsn+ "," + schdlSrvTypCdgVrsn;
+	        } else if(schdlSrvTypCdgVrsn.equals("[") | schdlSrvTypCdgVrsn.equals("]") | this.schdlSrvTypCdgVrsn.substring(this.schdlSrvTypCdgVrsn.length() - 1).equals("[")) {
+	        	this.schdlSrvTypCdgVrsn = this.schdlSrvTypCdgVrsn+schdlSrvTypCdgVrsn;
+	        } else  {
+	            this.schdlSrvTypCdgVrsn = this.schdlSrvTypCdgVrsn+ "," +schdlSrvTypCdgVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getSchdlSrvTypTxt() {
@@ -347,6 +753,20 @@ public class Schedule  implements java.io.Serializable {
     
     public void setSchdlSrvTypTxt(String schdlSrvTypTxt) {
         this.schdlSrvTypTxt = schdlSrvTypTxt;
+    }
+    
+    public void addSchdlSrvTypTxt(String schdlSrvTypTxt) {
+    	if( schdlSrvTypTxt != null ) {
+	    	if( this.schdlSrvTypTxt == null ) {
+	        	this.schdlSrvTypTxt = schdlSrvTypTxt;
+	        } else if(this.schdlSrvTypTxt.substring(this.schdlSrvTypTxt.length() - 1).equals("]") & schdlSrvTypTxt.equals("[")) {
+	        	this.schdlSrvTypTxt = this.schdlSrvTypTxt+ "," + schdlSrvTypTxt;
+	        } else if(schdlSrvTypTxt.equals("[") | schdlSrvTypTxt.equals("]") | this.schdlSrvTypTxt.substring(this.schdlSrvTypTxt.length() - 1).equals("[")) {
+	        	this.schdlSrvTypTxt = this.schdlSrvTypTxt+schdlSrvTypTxt;
+	        } else  {
+	            this.schdlSrvTypTxt = this.schdlSrvTypTxt+ "," +schdlSrvTypTxt;
+	        }
+        }
     }
     
     
@@ -359,6 +779,20 @@ public class Schedule  implements java.io.Serializable {
         this.schdlSpcltyCdgCd = schdlSpcltyCdgCd;
     }
     
+    public void addSchdlSpcltyCdgCd(String schdlSpcltyCdgCd) {
+    	if( schdlSpcltyCdgCd != null ) {
+	    	if( this.schdlSpcltyCdgCd == null ) {
+	        	this.schdlSpcltyCdgCd = schdlSpcltyCdgCd;
+	        } else if(this.schdlSpcltyCdgCd.substring(this.schdlSpcltyCdgCd.length() - 1).equals("]") & schdlSpcltyCdgCd.equals("[")) {
+	        	this.schdlSpcltyCdgCd = this.schdlSpcltyCdgCd+ "," + schdlSpcltyCdgCd;
+	        } else if(schdlSpcltyCdgCd.equals("[") | schdlSpcltyCdgCd.equals("]") | this.schdlSpcltyCdgCd.substring(this.schdlSpcltyCdgCd.length() - 1).equals("[")) {
+	        	this.schdlSpcltyCdgCd = this.schdlSpcltyCdgCd+schdlSpcltyCdgCd;
+	        } else  {
+	            this.schdlSpcltyCdgCd = this.schdlSpcltyCdgCd+ "," +schdlSpcltyCdgCd;
+	        }
+        }
+    }
+    
     
     
     public String getSchdlSpcltyCdgDsply() {
@@ -367,6 +801,20 @@ public class Schedule  implements java.io.Serializable {
     
     public void setSchdlSpcltyCdgDsply(String schdlSpcltyCdgDsply) {
         this.schdlSpcltyCdgDsply = schdlSpcltyCdgDsply;
+    }
+    
+    public void addSchdlSpcltyCdgDsply(String schdlSpcltyCdgDsply) {
+    	if( schdlSpcltyCdgDsply != null ) {
+	    	if( this.schdlSpcltyCdgDsply == null ) {
+	        	this.schdlSpcltyCdgDsply = schdlSpcltyCdgDsply;
+	        } else if(this.schdlSpcltyCdgDsply.substring(this.schdlSpcltyCdgDsply.length() - 1).equals("]") & schdlSpcltyCdgDsply.equals("[")) {
+	        	this.schdlSpcltyCdgDsply = this.schdlSpcltyCdgDsply+ "," + schdlSpcltyCdgDsply;
+	        } else if(schdlSpcltyCdgDsply.equals("[") | schdlSpcltyCdgDsply.equals("]") | this.schdlSpcltyCdgDsply.substring(this.schdlSpcltyCdgDsply.length() - 1).equals("[")) {
+	        	this.schdlSpcltyCdgDsply = this.schdlSpcltyCdgDsply+schdlSpcltyCdgDsply;
+	        } else  {
+	            this.schdlSpcltyCdgDsply = this.schdlSpcltyCdgDsply+ "," +schdlSpcltyCdgDsply;
+	        }
+        }
     }
     
     
@@ -379,6 +827,20 @@ public class Schedule  implements java.io.Serializable {
         this.schdlSpcltyCdgSys = schdlSpcltyCdgSys;
     }
     
+    public void addSchdlSpcltyCdgSys(String schdlSpcltyCdgSys) {
+    	if( schdlSpcltyCdgSys != null ) {
+	    	if( this.schdlSpcltyCdgSys == null ) {
+	        	this.schdlSpcltyCdgSys = schdlSpcltyCdgSys;
+	        } else if(this.schdlSpcltyCdgSys.substring(this.schdlSpcltyCdgSys.length() - 1).equals("]") & schdlSpcltyCdgSys.equals("[")) {
+	        	this.schdlSpcltyCdgSys = this.schdlSpcltyCdgSys+ "," + schdlSpcltyCdgSys;
+	        } else if(schdlSpcltyCdgSys.equals("[") | schdlSpcltyCdgSys.equals("]") | this.schdlSpcltyCdgSys.substring(this.schdlSpcltyCdgSys.length() - 1).equals("[")) {
+	        	this.schdlSpcltyCdgSys = this.schdlSpcltyCdgSys+schdlSpcltyCdgSys;
+	        } else  {
+	            this.schdlSpcltyCdgSys = this.schdlSpcltyCdgSys+ "," +schdlSpcltyCdgSys;
+	        }
+        }
+    }
+    
     
     
     public String getSchdlSpcltyCdgUsrSltd() {
@@ -387,6 +849,20 @@ public class Schedule  implements java.io.Serializable {
     
     public void setSchdlSpcltyCdgUsrSltd(String schdlSpcltyCdgUsrSltd) {
         this.schdlSpcltyCdgUsrSltd = schdlSpcltyCdgUsrSltd;
+    }
+    
+    public void addSchdlSpcltyCdgUsrSltd(String schdlSpcltyCdgUsrSltd) {
+    	if( schdlSpcltyCdgUsrSltd != null ) {
+	    	if( this.schdlSpcltyCdgUsrSltd == null ) {
+	        	this.schdlSpcltyCdgUsrSltd = schdlSpcltyCdgUsrSltd;
+	        } else if(this.schdlSpcltyCdgUsrSltd.substring(this.schdlSpcltyCdgUsrSltd.length() - 1).equals("]") & schdlSpcltyCdgUsrSltd.equals("[")) {
+	        	this.schdlSpcltyCdgUsrSltd = this.schdlSpcltyCdgUsrSltd+ "," + schdlSpcltyCdgUsrSltd;
+	        } else if(schdlSpcltyCdgUsrSltd.equals("[") | schdlSpcltyCdgUsrSltd.equals("]") | this.schdlSpcltyCdgUsrSltd.substring(this.schdlSpcltyCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.schdlSpcltyCdgUsrSltd = this.schdlSpcltyCdgUsrSltd+schdlSpcltyCdgUsrSltd;
+	        } else  {
+	            this.schdlSpcltyCdgUsrSltd = this.schdlSpcltyCdgUsrSltd+ "," +schdlSpcltyCdgUsrSltd;
+	        }
+        }
     }
     
     
@@ -399,6 +875,20 @@ public class Schedule  implements java.io.Serializable {
         this.schdlSpcltyCdgVrsn = schdlSpcltyCdgVrsn;
     }
     
+    public void addSchdlSpcltyCdgVrsn(String schdlSpcltyCdgVrsn) {
+    	if( schdlSpcltyCdgVrsn != null ) {
+	    	if( this.schdlSpcltyCdgVrsn == null ) {
+	        	this.schdlSpcltyCdgVrsn = schdlSpcltyCdgVrsn;
+	        } else if(this.schdlSpcltyCdgVrsn.substring(this.schdlSpcltyCdgVrsn.length() - 1).equals("]") & schdlSpcltyCdgVrsn.equals("[")) {
+	        	this.schdlSpcltyCdgVrsn = this.schdlSpcltyCdgVrsn+ "," + schdlSpcltyCdgVrsn;
+	        } else if(schdlSpcltyCdgVrsn.equals("[") | schdlSpcltyCdgVrsn.equals("]") | this.schdlSpcltyCdgVrsn.substring(this.schdlSpcltyCdgVrsn.length() - 1).equals("[")) {
+	        	this.schdlSpcltyCdgVrsn = this.schdlSpcltyCdgVrsn+schdlSpcltyCdgVrsn;
+	        } else  {
+	            this.schdlSpcltyCdgVrsn = this.schdlSpcltyCdgVrsn+ "," +schdlSpcltyCdgVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getSchdlSpcltyTxt() {
@@ -407,6 +897,20 @@ public class Schedule  implements java.io.Serializable {
     
     public void setSchdlSpcltyTxt(String schdlSpcltyTxt) {
         this.schdlSpcltyTxt = schdlSpcltyTxt;
+    }
+    
+    public void addSchdlSpcltyTxt(String schdlSpcltyTxt) {
+    	if( schdlSpcltyTxt != null ) {
+	    	if( this.schdlSpcltyTxt == null ) {
+	        	this.schdlSpcltyTxt = schdlSpcltyTxt;
+	        } else if(this.schdlSpcltyTxt.substring(this.schdlSpcltyTxt.length() - 1).equals("]") & schdlSpcltyTxt.equals("[")) {
+	        	this.schdlSpcltyTxt = this.schdlSpcltyTxt+ "," + schdlSpcltyTxt;
+	        } else if(schdlSpcltyTxt.equals("[") | schdlSpcltyTxt.equals("]") | this.schdlSpcltyTxt.substring(this.schdlSpcltyTxt.length() - 1).equals("[")) {
+	        	this.schdlSpcltyTxt = this.schdlSpcltyTxt+schdlSpcltyTxt;
+	        } else  {
+	            this.schdlSpcltyTxt = this.schdlSpcltyTxt+ "," +schdlSpcltyTxt;
+	        }
+        }
     }
     
     

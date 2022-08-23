@@ -11,25 +11,39 @@ public class LinkageConversion
 		linkage.setId(l.getId());
 
 		/******************** Linkage_Active ********************************************************************************/
-		if(l.getLinkageActive() != null) {
-			linkage.setActive(Boolean.parseBoolean(l.getLinkageActive()));
+		if(l.getLinkageActive() != null ) {
+
+			if(l.getLinkageActive().replace("[","").replace("]","").equals("NULL") | l.getLinkageActive()==null) {} else {
+			linkage.setActive(Boolean.parseBoolean(l.getLinkageActive().replace("[","").replace("]","").replace("\"","")));
+			}
 		}
 		/******************** Linkage_Athr ********************************************************************************/
-		if(l.getLinkageAthr() != null) {
-			linkage.setAuthor( new org.hl7.fhir.r4.model.Reference(l.getLinkageAthr()));
-		}
-		/******************** linkageitem ********************************************************************************/
-		org.hl7.fhir.r4.model.Linkage.LinkageItemComponent linkageitem =  new org.hl7.fhir.r4.model.Linkage.LinkageItemComponent();
-		linkage.addItem(linkageitem);
+		if(l.getLinkageAthr() != null ) {
 
+			if(l.getLinkageAthr().replace("[","").replace("]","").equals("NULL") | l.getLinkageAthr()==null) {} else {
+			linkage.setAuthor(new org.hl7.fhir.r4.model.Reference(l.getLinkageAthr().replace("[","").replace("]","").replace("\"","")));
+			}
+		}
 		/******************** Linkage_Itm_Rsrc ********************************************************************************/
-		if(l.getLinkageItmRsrc() != null) {
-			linkageitem.setResource( new org.hl7.fhir.r4.model.Reference(l.getLinkageItmRsrc()));
-		}
-		/******************** linkageitemtype ********************************************************************************/
-		org.hl7.fhir.r4.model.Linkage.LinkageTypeEnumFactory linkageitemtype =  new org.hl7.fhir.r4.model.Linkage.LinkageTypeEnumFactory();
-		linkageitem.setType(linkageitemtype.fromCode(l.getLinkageItmTyp()));
+		if(l.getLinkageItmRsrc() != null ) {
 
+			String[] arrayi0 = l.getLinkageItmRsrc().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(linkage.getItem().size() < i0+1) { linkage.addItem(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {linkage.getItem().get(i0).setResource(new org.hl7.fhir.r4.model.Reference(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
+		/******************** Linkage_Itm_Typ ********************************************************************************/
+		if(l.getLinkageItmTyp() != null ) {
+
+			String[] arrayi0 = l.getLinkageItmTyp().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(linkage.getItem().size() < i0+1) { linkage.addItem(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {linkage.getItem().get(i0).setType(new org.hl7.fhir.r4.model.Linkage.LinkageTypeEnumFactory().fromCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		return linkage;
 	}
 }

@@ -10,271 +10,515 @@ public class ListResourceConversion
 		/******************** id ********************************************************************************/
 		listresource.setId(l.getId());
 
-		/******************** listresourcecode ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept listresourcecode =  new org.hl7.fhir.r4.model.CodeableConcept();
-		listresource.setCode(listresourcecode);
-
-		/******************** listresourcecodecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding listresourcecodecoding =  new org.hl7.fhir.r4.model.Coding();
-		listresourcecode.addCoding(listresourcecodecoding);
-
 		/******************** ListRsrc_Cd_Cdg_Cd ********************************************************************************/
-		if(l.getListRsrcCdCdgCd() != null) {
-			listresourcecodecoding.setCode(l.getListRsrcCdCdgCd());
+		if(l.getListRsrcCdCdgCd() != null ) {
+
+			String[] arrayi0 = l.getListRsrcCdCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(listresource.getCode().getCoding().size() < i0+1) { listresource.getCode().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {listresource.getCode().getCoding().get(i0).setCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** ListRsrc_Cd_Cdg_Dsply ********************************************************************************/
-		if(l.getListRsrcCdCdgDsply() != null) {
-			listresourcecodecoding.setDisplay(l.getListRsrcCdCdgDsply());
+		if(l.getListRsrcCdCdgDsply() != null ) {
+
+			String[] arrayi0 = l.getListRsrcCdCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(listresource.getCode().getCoding().size() < i0+1) { listresource.getCode().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {listresource.getCode().getCoding().get(i0).setDisplay(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** ListRsrc_Cd_Cdg_Sys ********************************************************************************/
-		if(l.getListRsrcCdCdgSys() != null) {
-			listresourcecodecoding.setSystem(l.getListRsrcCdCdgSys());
+		if(l.getListRsrcCdCdgSys() != null ) {
+
+			String[] arrayi0 = l.getListRsrcCdCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(listresource.getCode().getCoding().size() < i0+1) { listresource.getCode().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {listresource.getCode().getCoding().get(i0).setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** ListRsrc_Cd_Cdg_UsrSltd ********************************************************************************/
-		if(l.getListRsrcCdCdgUsrSltd() != null) {
-			listresourcecodecoding.setUserSelected(Boolean.parseBoolean(l.getListRsrcCdCdgUsrSltd()));
+		if(l.getListRsrcCdCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = l.getListRsrcCdCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(listresource.getCode().getCoding().size() < i0+1) { listresource.getCode().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {listresource.getCode().getCoding().get(i0).setUserSelected(Boolean.parseBoolean(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** ListRsrc_Cd_Cdg_Vrsn ********************************************************************************/
-		if(l.getListRsrcCdCdgVrsn() != null) {
-			listresourcecodecoding.setVersion(l.getListRsrcCdCdgVrsn());
+		if(l.getListRsrcCdCdgVrsn() != null ) {
+
+			String[] arrayi0 = l.getListRsrcCdCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(listresource.getCode().getCoding().size() < i0+1) { listresource.getCode().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {listresource.getCode().getCoding().get(i0).setVersion(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** ListRsrc_Cd_Txt ********************************************************************************/
-		if(l.getListRsrcCdTxt() != null) {
-			listresourcecode.setText(l.getListRsrcCdTxt());
+		if(l.getListRsrcCdTxt() != null ) {
+
+			if(l.getListRsrcCdTxt().replace("[","").replace("]","").equals("NULL") | l.getListRsrcCdTxt()==null) {} else {
+			listresource.getCode().setText(l.getListRsrcCdTxt().replace("[","").replace("]","").replace("\"",""));
+			}
 		}
 		/******************** ListRsrc_Dt ********************************************************************************/
-		if(l.getListRsrcDt() != null) {
-			java.text.SimpleDateFormat ListRsrc_Dtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date ListRsrc_Dtdate = ListRsrc_Dtsdf.parse(l.getListRsrcDt());
-			listresource.setDate(ListRsrc_Dtdate);
+		if(l.getListRsrcDt() != null ) {
+
+			if(l.getListRsrcDt().replace("[","").replace("]","").equals("NULL") | l.getListRsrcDt()==null) {} else {
+			listresource.setDate(l.getListRsrcDt().replace("[","").replace("]","").equals("NULL") | l.getListRsrcDt()==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(l.getListRsrcDt().replace("[","").replace("]","").replace("\"","")));
+			}
 		}
-		/******************** listresourceemptyreason ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept listresourceemptyreason =  new org.hl7.fhir.r4.model.CodeableConcept();
-		listresource.setEmptyReason(listresourceemptyreason);
-
-		/******************** listresourceemptyreasoncoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding listresourceemptyreasoncoding =  new org.hl7.fhir.r4.model.Coding();
-		listresourceemptyreason.addCoding(listresourceemptyreasoncoding);
-
 		/******************** ListRsrc_EmptyRsn_Cdg_Cd ********************************************************************************/
-		if(l.getListRsrcEmptyRsnCdgCd() != null) {
-			listresourceemptyreasoncoding.setCode(l.getListRsrcEmptyRsnCdgCd());
+		if(l.getListRsrcEmptyRsnCdgCd() != null ) {
+
+			String[] arrayi0 = l.getListRsrcEmptyRsnCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(listresource.getEmptyReason().getCoding().size() < i0+1) { listresource.getEmptyReason().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {listresource.getEmptyReason().getCoding().get(i0).setCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** ListRsrc_EmptyRsn_Cdg_Dsply ********************************************************************************/
-		if(l.getListRsrcEmptyRsnCdgDsply() != null) {
-			listresourceemptyreasoncoding.setDisplay(l.getListRsrcEmptyRsnCdgDsply());
+		if(l.getListRsrcEmptyRsnCdgDsply() != null ) {
+
+			String[] arrayi0 = l.getListRsrcEmptyRsnCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(listresource.getEmptyReason().getCoding().size() < i0+1) { listresource.getEmptyReason().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {listresource.getEmptyReason().getCoding().get(i0).setDisplay(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** ListRsrc_EmptyRsn_Cdg_Sys ********************************************************************************/
-		if(l.getListRsrcEmptyRsnCdgSys() != null) {
-			listresourceemptyreasoncoding.setSystem(l.getListRsrcEmptyRsnCdgSys());
+		if(l.getListRsrcEmptyRsnCdgSys() != null ) {
+
+			String[] arrayi0 = l.getListRsrcEmptyRsnCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(listresource.getEmptyReason().getCoding().size() < i0+1) { listresource.getEmptyReason().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {listresource.getEmptyReason().getCoding().get(i0).setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** ListRsrc_EmptyRsn_Cdg_UsrSltd ********************************************************************************/
-		if(l.getListRsrcEmptyRsnCdgUsrSltd() != null) {
-			listresourceemptyreasoncoding.setUserSelected(Boolean.parseBoolean(l.getListRsrcEmptyRsnCdgUsrSltd()));
+		if(l.getListRsrcEmptyRsnCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = l.getListRsrcEmptyRsnCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(listresource.getEmptyReason().getCoding().size() < i0+1) { listresource.getEmptyReason().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {listresource.getEmptyReason().getCoding().get(i0).setUserSelected(Boolean.parseBoolean(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** ListRsrc_EmptyRsn_Cdg_Vrsn ********************************************************************************/
-		if(l.getListRsrcEmptyRsnCdgVrsn() != null) {
-			listresourceemptyreasoncoding.setVersion(l.getListRsrcEmptyRsnCdgVrsn());
+		if(l.getListRsrcEmptyRsnCdgVrsn() != null ) {
+
+			String[] arrayi0 = l.getListRsrcEmptyRsnCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(listresource.getEmptyReason().getCoding().size() < i0+1) { listresource.getEmptyReason().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {listresource.getEmptyReason().getCoding().get(i0).setVersion(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** ListRsrc_EmptyRsn_Txt ********************************************************************************/
-		if(l.getListRsrcEmptyRsnTxt() != null) {
-			listresourceemptyreason.setText(l.getListRsrcEmptyRsnTxt());
+		if(l.getListRsrcEmptyRsnTxt() != null ) {
+
+			if(l.getListRsrcEmptyRsnTxt().replace("[","").replace("]","").equals("NULL") | l.getListRsrcEmptyRsnTxt()==null) {} else {
+			listresource.getEmptyReason().setText(l.getListRsrcEmptyRsnTxt().replace("[","").replace("]","").replace("\"",""));
+			}
 		}
 		/******************** ListRsrc_Enc ********************************************************************************/
-		if(l.getListRsrcEnc() != null) {
-			listresource.setEncounter( new org.hl7.fhir.r4.model.Reference(l.getListRsrcEnc()));
-		}
-		/******************** listresourceentry ********************************************************************************/
-		org.hl7.fhir.r4.model.ListResource.ListEntryComponent listresourceentry =  new org.hl7.fhir.r4.model.ListResource.ListEntryComponent();
-		listresource.addEntry(listresourceentry);
+		if(l.getListRsrcEnc() != null ) {
 
+			if(l.getListRsrcEnc().replace("[","").replace("]","").equals("NULL") | l.getListRsrcEnc()==null) {} else {
+			listresource.setEncounter(new org.hl7.fhir.r4.model.Reference(l.getListRsrcEnc().replace("[","").replace("]","").replace("\"","")));
+			}
+		}
 		/******************** ListRsrc_Entry_Dt ********************************************************************************/
-		if(l.getListRsrcEntryDt() != null) {
-			java.text.SimpleDateFormat ListRsrc_Entry_Dtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date ListRsrc_Entry_Dtdate = ListRsrc_Entry_Dtsdf.parse(l.getListRsrcEntryDt());
-			listresourceentry.setDate(ListRsrc_Entry_Dtdate);
+		if(l.getListRsrcEntryDt() != null ) {
+
+			String[] arrayi0 = l.getListRsrcEntryDt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(listresource.getEntry().size() < i0+1) { listresource.addEntry(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {listresource.getEntry().get(i0).setDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** ListRsrc_Entry_Deleted ********************************************************************************/
-		if(l.getListRsrcEntryDeleted() != null) {
-			listresourceentry.setDeleted(Boolean.parseBoolean(l.getListRsrcEntryDeleted()));
+		if(l.getListRsrcEntryDeleted() != null ) {
+
+			String[] arrayi0 = l.getListRsrcEntryDeleted().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(listresource.getEntry().size() < i0+1) { listresource.addEntry(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {listresource.getEntry().get(i0).setDeleted(Boolean.parseBoolean(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
-		/******************** listresourceentryflag ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept listresourceentryflag =  new org.hl7.fhir.r4.model.CodeableConcept();
-		listresourceentry.setFlag(listresourceentryflag);
-
-		/******************** listresourceentryflagcoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding listresourceentryflagcoding =  new org.hl7.fhir.r4.model.Coding();
-		listresourceentryflag.addCoding(listresourceentryflagcoding);
-
 		/******************** ListRsrc_Entry_Flag_Cdg_Cd ********************************************************************************/
-		if(l.getListRsrcEntryFlagCdgCd() != null) {
-			listresourceentryflagcoding.setCode(l.getListRsrcEntryFlagCdgCd());
+		if(l.getListRsrcEntryFlagCdgCd() != null ) {
+
+			String[] arrayi0 = l.getListRsrcEntryFlagCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(listresource.getEntry().size() < i0+1) { listresource.addEntry(); }
+				String[] arrayi1 = l.getListRsrcEntryFlagCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(listresource.getEntry().get(i0).getFlag().getCoding().size() < i1+1) { listresource.getEntry().get(i0).getFlag().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {listresource.getEntry().get(i0).getFlag().getCoding().get(i1).setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** ListRsrc_Entry_Flag_Cdg_Dsply ********************************************************************************/
-		if(l.getListRsrcEntryFlagCdgDsply() != null) {
-			listresourceentryflagcoding.setDisplay(l.getListRsrcEntryFlagCdgDsply());
+		if(l.getListRsrcEntryFlagCdgDsply() != null ) {
+
+			String[] arrayi0 = l.getListRsrcEntryFlagCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(listresource.getEntry().size() < i0+1) { listresource.addEntry(); }
+				String[] arrayi1 = l.getListRsrcEntryFlagCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(listresource.getEntry().get(i0).getFlag().getCoding().size() < i1+1) { listresource.getEntry().get(i0).getFlag().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {listresource.getEntry().get(i0).getFlag().getCoding().get(i1).setDisplay(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** ListRsrc_Entry_Flag_Cdg_Sys ********************************************************************************/
-		if(l.getListRsrcEntryFlagCdgSys() != null) {
-			listresourceentryflagcoding.setSystem(l.getListRsrcEntryFlagCdgSys());
+		if(l.getListRsrcEntryFlagCdgSys() != null ) {
+
+			String[] arrayi0 = l.getListRsrcEntryFlagCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(listresource.getEntry().size() < i0+1) { listresource.addEntry(); }
+				String[] arrayi1 = l.getListRsrcEntryFlagCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(listresource.getEntry().get(i0).getFlag().getCoding().size() < i1+1) { listresource.getEntry().get(i0).getFlag().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {listresource.getEntry().get(i0).getFlag().getCoding().get(i1).setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** ListRsrc_Entry_Flag_Cdg_UsrSltd ********************************************************************************/
-		if(l.getListRsrcEntryFlagCdgUsrSltd() != null) {
-			listresourceentryflagcoding.setUserSelected(Boolean.parseBoolean(l.getListRsrcEntryFlagCdgUsrSltd()));
+		if(l.getListRsrcEntryFlagCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = l.getListRsrcEntryFlagCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(listresource.getEntry().size() < i0+1) { listresource.addEntry(); }
+				String[] arrayi1 = l.getListRsrcEntryFlagCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(listresource.getEntry().get(i0).getFlag().getCoding().size() < i1+1) { listresource.getEntry().get(i0).getFlag().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {listresource.getEntry().get(i0).getFlag().getCoding().get(i1).setUserSelected(Boolean.parseBoolean(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
 		}
 		/******************** ListRsrc_Entry_Flag_Cdg_Vrsn ********************************************************************************/
-		if(l.getListRsrcEntryFlagCdgVrsn() != null) {
-			listresourceentryflagcoding.setVersion(l.getListRsrcEntryFlagCdgVrsn());
+		if(l.getListRsrcEntryFlagCdgVrsn() != null ) {
+
+			String[] arrayi0 = l.getListRsrcEntryFlagCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(listresource.getEntry().size() < i0+1) { listresource.addEntry(); }
+				String[] arrayi1 = l.getListRsrcEntryFlagCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(listresource.getEntry().get(i0).getFlag().getCoding().size() < i1+1) { listresource.getEntry().get(i0).getFlag().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {listresource.getEntry().get(i0).getFlag().getCoding().get(i1).setVersion(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** ListRsrc_Entry_Flag_Txt ********************************************************************************/
-		if(l.getListRsrcEntryFlagTxt() != null) {
-			listresourceentryflag.setText(l.getListRsrcEntryFlagTxt());
+		if(l.getListRsrcEntryFlagTxt() != null ) {
+
+			String[] arrayi0 = l.getListRsrcEntryFlagTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(listresource.getEntry().size() < i0+1) { listresource.addEntry(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {listresource.getEntry().get(i0).getFlag().setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** ListRsrc_Entry_Itm ********************************************************************************/
-		if(l.getListRsrcEntryItm() != null) {
-			listresourceentry.setItem( new org.hl7.fhir.r4.model.Reference(l.getListRsrcEntryItm()));
-		}
-		/******************** listresourceidentifier ********************************************************************************/
-		org.hl7.fhir.r4.model.Identifier listresourceidentifier =  new org.hl7.fhir.r4.model.Identifier();
-		listresource.addIdentifier(listresourceidentifier);
+		if(l.getListRsrcEntryItm() != null ) {
 
+			String[] arrayi0 = l.getListRsrcEntryItm().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(listresource.getEntry().size() < i0+1) { listresource.addEntry(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {listresource.getEntry().get(i0).setItem(new org.hl7.fhir.r4.model.Reference(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** ListRsrc_Id_Assigner ********************************************************************************/
-		if(l.getListRsrcIdAssigner() != null) {
-			listresourceidentifier.setAssigner( new org.hl7.fhir.r4.model.Reference(l.getListRsrcIdAssigner()));
-		}
-		/******************** listresourceidentifierperiod ********************************************************************************/
-		org.hl7.fhir.r4.model.Period listresourceidentifierperiod =  new org.hl7.fhir.r4.model.Period();
-		listresourceidentifier.setPeriod(listresourceidentifierperiod);
+		if(l.getListRsrcIdAssigner() != null ) {
 
+			String[] arrayi0 = l.getListRsrcIdAssigner().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(listresource.getIdentifier().size() < i0+1) { listresource.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {listresource.getIdentifier().get(i0).setAssigner(new org.hl7.fhir.r4.model.Reference(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** ListRsrc_Id_Prd_End ********************************************************************************/
-		if(l.getListRsrcIdPrdEnd() != null) {
-			java.text.SimpleDateFormat ListRsrc_Id_Prd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date ListRsrc_Id_Prd_Enddate = ListRsrc_Id_Prd_Endsdf.parse(l.getListRsrcIdPrdEnd());
-			listresourceidentifierperiod.setEnd(ListRsrc_Id_Prd_Enddate);
+		if(l.getListRsrcIdPrdEnd() != null ) {
+
+			String[] arrayi0 = l.getListRsrcIdPrdEnd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(listresource.getIdentifier().size() < i0+1) { listresource.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {listresource.getIdentifier().get(i0).getPeriod().setEnd(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** ListRsrc_Id_Prd_Strt ********************************************************************************/
-		if(l.getListRsrcIdPrdStrt() != null) {
-			java.text.SimpleDateFormat ListRsrc_Id_Prd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date ListRsrc_Id_Prd_Strtdate = ListRsrc_Id_Prd_Strtsdf.parse(l.getListRsrcIdPrdStrt());
-			listresourceidentifierperiod.setStart(ListRsrc_Id_Prd_Strtdate);
+		if(l.getListRsrcIdPrdStrt() != null ) {
+
+			String[] arrayi0 = l.getListRsrcIdPrdStrt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(listresource.getIdentifier().size() < i0+1) { listresource.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {listresource.getIdentifier().get(i0).getPeriod().setStart(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** ListRsrc_Id_Sys ********************************************************************************/
-		if(l.getListRsrcIdSys() != null) {
-			listresourceidentifier.setSystem(l.getListRsrcIdSys());
+		if(l.getListRsrcIdSys() != null ) {
+
+			String[] arrayi0 = l.getListRsrcIdSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(listresource.getIdentifier().size() < i0+1) { listresource.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {listresource.getIdentifier().get(i0).setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
-		/******************** listresourceidentifiertype ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept listresourceidentifiertype =  new org.hl7.fhir.r4.model.CodeableConcept();
-		listresourceidentifier.setType(listresourceidentifiertype);
-
-		/******************** listresourceidentifiertypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding listresourceidentifiertypecoding =  new org.hl7.fhir.r4.model.Coding();
-		listresourceidentifiertype.addCoding(listresourceidentifiertypecoding);
-
 		/******************** ListRsrc_Id_Typ_Cdg_Cd ********************************************************************************/
-		if(l.getListRsrcIdTypCdgCd() != null) {
-			listresourceidentifiertypecoding.setCode(l.getListRsrcIdTypCdgCd());
+		if(l.getListRsrcIdTypCdgCd() != null ) {
+
+			String[] arrayi0 = l.getListRsrcIdTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(listresource.getIdentifier().size() < i0+1) { listresource.addIdentifier(); }
+				String[] arrayi1 = l.getListRsrcIdTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(listresource.getIdentifier().get(i0).getType().getCoding().size() < i1+1) { listresource.getIdentifier().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {listresource.getIdentifier().get(i0).getType().getCoding().get(i1).setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** ListRsrc_Id_Typ_Cdg_Dsply ********************************************************************************/
-		if(l.getListRsrcIdTypCdgDsply() != null) {
-			listresourceidentifiertypecoding.setDisplay(l.getListRsrcIdTypCdgDsply());
+		if(l.getListRsrcIdTypCdgDsply() != null ) {
+
+			String[] arrayi0 = l.getListRsrcIdTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(listresource.getIdentifier().size() < i0+1) { listresource.addIdentifier(); }
+				String[] arrayi1 = l.getListRsrcIdTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(listresource.getIdentifier().get(i0).getType().getCoding().size() < i1+1) { listresource.getIdentifier().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {listresource.getIdentifier().get(i0).getType().getCoding().get(i1).setDisplay(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** ListRsrc_Id_Typ_Cdg_Sys ********************************************************************************/
-		if(l.getListRsrcIdTypCdgSys() != null) {
-			listresourceidentifiertypecoding.setSystem(l.getListRsrcIdTypCdgSys());
+		if(l.getListRsrcIdTypCdgSys() != null ) {
+
+			String[] arrayi0 = l.getListRsrcIdTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(listresource.getIdentifier().size() < i0+1) { listresource.addIdentifier(); }
+				String[] arrayi1 = l.getListRsrcIdTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(listresource.getIdentifier().get(i0).getType().getCoding().size() < i1+1) { listresource.getIdentifier().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {listresource.getIdentifier().get(i0).getType().getCoding().get(i1).setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** ListRsrc_Id_Typ_Cdg_UsrSltd ********************************************************************************/
-		if(l.getListRsrcIdTypCdgUsrSltd() != null) {
-			listresourceidentifiertypecoding.setUserSelected(Boolean.parseBoolean(l.getListRsrcIdTypCdgUsrSltd()));
+		if(l.getListRsrcIdTypCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = l.getListRsrcIdTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(listresource.getIdentifier().size() < i0+1) { listresource.addIdentifier(); }
+				String[] arrayi1 = l.getListRsrcIdTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(listresource.getIdentifier().get(i0).getType().getCoding().size() < i1+1) { listresource.getIdentifier().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {listresource.getIdentifier().get(i0).getType().getCoding().get(i1).setUserSelected(Boolean.parseBoolean(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
 		}
 		/******************** ListRsrc_Id_Typ_Cdg_Vrsn ********************************************************************************/
-		if(l.getListRsrcIdTypCdgVrsn() != null) {
-			listresourceidentifiertypecoding.setVersion(l.getListRsrcIdTypCdgVrsn());
+		if(l.getListRsrcIdTypCdgVrsn() != null ) {
+
+			String[] arrayi0 = l.getListRsrcIdTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(listresource.getIdentifier().size() < i0+1) { listresource.addIdentifier(); }
+				String[] arrayi1 = l.getListRsrcIdTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(listresource.getIdentifier().get(i0).getType().getCoding().size() < i1+1) { listresource.getIdentifier().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {listresource.getIdentifier().get(i0).getType().getCoding().get(i1).setVersion(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** ListRsrc_Id_Typ_Txt ********************************************************************************/
-		if(l.getListRsrcIdTypTxt() != null) {
-			listresourceidentifiertype.setText(l.getListRsrcIdTypTxt());
-		}
-		/******************** listresourceidentifieruse ********************************************************************************/
-		org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory listresourceidentifieruse =  new org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory();
-		listresourceidentifier.setUse(listresourceidentifieruse.fromCode(l.getListRsrcIdUse()));
+		if(l.getListRsrcIdTypTxt() != null ) {
 
+			String[] arrayi0 = l.getListRsrcIdTypTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(listresource.getIdentifier().size() < i0+1) { listresource.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {listresource.getIdentifier().get(i0).getType().setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
+		}
+		/******************** ListRsrc_Id_Use ********************************************************************************/
+		if(l.getListRsrcIdUse() != null ) {
+
+			String[] arrayi0 = l.getListRsrcIdUse().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(listresource.getIdentifier().size() < i0+1) { listresource.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {listresource.getIdentifier().get(i0).setUse(new org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory().fromCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** ListRsrc_Id_Vl ********************************************************************************/
-		if(l.getListRsrcIdVl() != null) {
-			listresourceidentifier.setValue(l.getListRsrcIdVl());
+		if(l.getListRsrcIdVl() != null ) {
+
+			String[] arrayi0 = l.getListRsrcIdVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(listresource.getIdentifier().size() < i0+1) { listresource.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {listresource.getIdentifier().get(i0).setValue(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
-		/******************** listresourcemode ********************************************************************************/
-		org.hl7.fhir.r4.model.ListResource.ListModeEnumFactory listresourcemode =  new org.hl7.fhir.r4.model.ListResource.ListModeEnumFactory();
-		listresource.setMode(listresourcemode.fromCode(l.getListRsrcMode()));
+		/******************** ListRsrc_Mode ********************************************************************************/
+		if(l.getListRsrcMode() != null ) {
 
-		/******************** listresourcenote ********************************************************************************/
-		org.hl7.fhir.r4.model.Annotation listresourcenote =  new org.hl7.fhir.r4.model.Annotation();
-		listresource.addNote(listresourcenote);
-
+			if(l.getListRsrcMode().replace("[","").replace("]","").equals("NULL") | l.getListRsrcMode()==null) {} else {
+			listresource.setMode(new org.hl7.fhir.r4.model.ListResource.ListModeEnumFactory().fromCode(l.getListRsrcMode().replace("[","").replace("]","").replace("\"","")));
+			}
+		}
 		/******************** ListRsrc_Nt_AthrRfrnc ********************************************************************************/
-		if(l.getListRsrcNtAthrRfrnc() != null) {
-			listresourcenote.setAuthor( new org.hl7.fhir.r4.model.Reference(l.getListRsrcNtAthrRfrnc()));
+		if(l.getListRsrcNtAthrRfrnc() != null ) {
+
+			String[] arrayi0 = l.getListRsrcNtAthrRfrnc().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(listresource.getNote().size() < i0+1) { listresource.addNote(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {listresource.getNote().get(i0).setAuthor(new org.hl7.fhir.r4.model.Reference(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** ListRsrc_Nt_AthrStrgTyp ********************************************************************************/
-		if(l.getListRsrcNtAthrStrgTyp() != null) {
-			listresourcenote.setAuthor( new org.hl7.fhir.r4.model.StringType(l.getListRsrcNtAthrStrgTyp()));
+		if(l.getListRsrcNtAthrStrgTyp() != null ) {
+
+			String[] arrayi0 = l.getListRsrcNtAthrStrgTyp().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(listresource.getNote().size() < i0+1) { listresource.addNote(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {listresource.getNote().get(i0).setAuthor(new org.hl7.fhir.r4.model.StringType(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** ListRsrc_Nt_Txt ********************************************************************************/
-		if(l.getListRsrcNtTxt() != null) {
-			listresourcenote.setText(l.getListRsrcNtTxt());
+		if(l.getListRsrcNtTxt() != null ) {
+
+			String[] arrayi0 = l.getListRsrcNtTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(listresource.getNote().size() < i0+1) { listresource.addNote(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {listresource.getNote().get(i0).setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** ListRsrc_Nt_Time ********************************************************************************/
-		if(l.getListRsrcNtTime() != null) {
-			java.text.SimpleDateFormat ListRsrc_Nt_Timesdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date ListRsrc_Nt_Timedate = ListRsrc_Nt_Timesdf.parse(l.getListRsrcNtTime());
-			listresourcenote.setTime(ListRsrc_Nt_Timedate);
+		if(l.getListRsrcNtTime() != null ) {
+
+			String[] arrayi0 = l.getListRsrcNtTime().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(listresource.getNote().size() < i0+1) { listresource.addNote(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {listresource.getNote().get(i0).setTime(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
-		/******************** listresourceorderedby ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept listresourceorderedby =  new org.hl7.fhir.r4.model.CodeableConcept();
-		listresource.setOrderedBy(listresourceorderedby);
-
-		/******************** listresourceorderedbycoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding listresourceorderedbycoding =  new org.hl7.fhir.r4.model.Coding();
-		listresourceorderedby.addCoding(listresourceorderedbycoding);
-
 		/******************** ListRsrc_OrdredBy_Cdg_Cd ********************************************************************************/
-		if(l.getListRsrcOrdredByCdgCd() != null) {
-			listresourceorderedbycoding.setCode(l.getListRsrcOrdredByCdgCd());
+		if(l.getListRsrcOrdredByCdgCd() != null ) {
+
+			String[] arrayi0 = l.getListRsrcOrdredByCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(listresource.getOrderedBy().getCoding().size() < i0+1) { listresource.getOrderedBy().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {listresource.getOrderedBy().getCoding().get(i0).setCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** ListRsrc_OrdredBy_Cdg_Dsply ********************************************************************************/
-		if(l.getListRsrcOrdredByCdgDsply() != null) {
-			listresourceorderedbycoding.setDisplay(l.getListRsrcOrdredByCdgDsply());
+		if(l.getListRsrcOrdredByCdgDsply() != null ) {
+
+			String[] arrayi0 = l.getListRsrcOrdredByCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(listresource.getOrderedBy().getCoding().size() < i0+1) { listresource.getOrderedBy().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {listresource.getOrderedBy().getCoding().get(i0).setDisplay(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** ListRsrc_OrdredBy_Cdg_Sys ********************************************************************************/
-		if(l.getListRsrcOrdredByCdgSys() != null) {
-			listresourceorderedbycoding.setSystem(l.getListRsrcOrdredByCdgSys());
+		if(l.getListRsrcOrdredByCdgSys() != null ) {
+
+			String[] arrayi0 = l.getListRsrcOrdredByCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(listresource.getOrderedBy().getCoding().size() < i0+1) { listresource.getOrderedBy().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {listresource.getOrderedBy().getCoding().get(i0).setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** ListRsrc_OrdredBy_Cdg_UsrSltd ********************************************************************************/
-		if(l.getListRsrcOrdredByCdgUsrSltd() != null) {
-			listresourceorderedbycoding.setUserSelected(Boolean.parseBoolean(l.getListRsrcOrdredByCdgUsrSltd()));
+		if(l.getListRsrcOrdredByCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = l.getListRsrcOrdredByCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(listresource.getOrderedBy().getCoding().size() < i0+1) { listresource.getOrderedBy().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {listresource.getOrderedBy().getCoding().get(i0).setUserSelected(Boolean.parseBoolean(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** ListRsrc_OrdredBy_Cdg_Vrsn ********************************************************************************/
-		if(l.getListRsrcOrdredByCdgVrsn() != null) {
-			listresourceorderedbycoding.setVersion(l.getListRsrcOrdredByCdgVrsn());
+		if(l.getListRsrcOrdredByCdgVrsn() != null ) {
+
+			String[] arrayi0 = l.getListRsrcOrdredByCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(listresource.getOrderedBy().getCoding().size() < i0+1) { listresource.getOrderedBy().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {listresource.getOrderedBy().getCoding().get(i0).setVersion(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** ListRsrc_OrdredBy_Txt ********************************************************************************/
-		if(l.getListRsrcOrdredByTxt() != null) {
-			listresourceorderedby.setText(l.getListRsrcOrdredByTxt());
+		if(l.getListRsrcOrdredByTxt() != null ) {
+
+			if(l.getListRsrcOrdredByTxt().replace("[","").replace("]","").equals("NULL") | l.getListRsrcOrdredByTxt()==null) {} else {
+			listresource.getOrderedBy().setText(l.getListRsrcOrdredByTxt().replace("[","").replace("]","").replace("\"",""));
+			}
 		}
 		/******************** ListRsrc_Src ********************************************************************************/
-		if(l.getListRsrcSrc() != null) {
-			listresource.setSource( new org.hl7.fhir.r4.model.Reference(l.getListRsrcSrc()));
-		}
-		/******************** listresourcestatus ********************************************************************************/
-		org.hl7.fhir.r4.model.ListResource.ListStatusEnumFactory listresourcestatus =  new org.hl7.fhir.r4.model.ListResource.ListStatusEnumFactory();
-		listresource.setStatus(listresourcestatus.fromCode(l.getListRsrcSts()));
+		if(l.getListRsrcSrc() != null ) {
 
+			if(l.getListRsrcSrc().replace("[","").replace("]","").equals("NULL") | l.getListRsrcSrc()==null) {} else {
+			listresource.setSource(new org.hl7.fhir.r4.model.Reference(l.getListRsrcSrc().replace("[","").replace("]","").replace("\"","")));
+			}
+		}
+		/******************** ListRsrc_Sts ********************************************************************************/
+		if(l.getListRsrcSts() != null ) {
+
+			if(l.getListRsrcSts().replace("[","").replace("]","").equals("NULL") | l.getListRsrcSts()==null) {} else {
+			listresource.setStatus(new org.hl7.fhir.r4.model.ListResource.ListStatusEnumFactory().fromCode(l.getListRsrcSts().replace("[","").replace("]","").replace("\"","")));
+			}
+		}
 		/******************** ListRsrc_Sbjct ********************************************************************************/
-		if(l.getListRsrcSbjct() != null) {
-			listresource.setSubject( new org.hl7.fhir.r4.model.Reference(l.getListRsrcSbjct()));
+		if(l.getListRsrcSbjct() != null ) {
+
+			if(l.getListRsrcSbjct().replace("[","").replace("]","").equals("NULL") | l.getListRsrcSbjct()==null) {} else {
+			listresource.setSubject(new org.hl7.fhir.r4.model.Reference(l.getListRsrcSbjct().replace("[","").replace("]","").replace("\"","")));
+			}
 		}
 		/******************** ListRsrc_Ttl ********************************************************************************/
-		if(l.getListRsrcTtl() != null) {
-			listresource.setTitle(l.getListRsrcTtl());
+		if(l.getListRsrcTtl() != null ) {
+
+			if(l.getListRsrcTtl().replace("[","").replace("]","").equals("NULL") | l.getListRsrcTtl()==null) {} else {
+			listresource.setTitle(l.getListRsrcTtl().replace("[","").replace("]","").replace("\"",""));
+			}
 		}
 		return listresource;
 	}

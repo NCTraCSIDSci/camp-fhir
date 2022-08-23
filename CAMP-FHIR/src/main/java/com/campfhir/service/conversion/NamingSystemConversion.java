@@ -10,323 +10,642 @@ public class NamingSystemConversion
 		/******************** id ********************************************************************************/
 		namingsystem.setId(n.getId());
 
-		/******************** namingsystemcontact ********************************************************************************/
-		org.hl7.fhir.r4.model.ContactDetail namingsystemcontact =  new org.hl7.fhir.r4.model.ContactDetail();
-		namingsystem.addContact(namingsystemcontact);
-
 		/******************** NmingSys_Cntct_Nm ********************************************************************************/
-		if(n.getNmingSysCntctNm() != null) {
-			namingsystemcontact.setName(n.getNmingSysCntctNm());
+		if(n.getNmingSysCntctNm() != null ) {
+
+			String[] arrayi0 = n.getNmingSysCntctNm().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(namingsystem.getContact().size() < i0+1) { namingsystem.addContact(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {namingsystem.getContact().get(i0).setName(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
-		/******************** namingsystemcontacttelecom ********************************************************************************/
-		org.hl7.fhir.r4.model.ContactPoint namingsystemcontacttelecom =  new org.hl7.fhir.r4.model.ContactPoint();
-		namingsystemcontact.addTelecom(namingsystemcontacttelecom);
-
-		/******************** namingsystemcontacttelecomperiod ********************************************************************************/
-		org.hl7.fhir.r4.model.Period namingsystemcontacttelecomperiod =  new org.hl7.fhir.r4.model.Period();
-		namingsystemcontacttelecom.setPeriod(namingsystemcontacttelecomperiod);
-
 		/******************** NmingSys_Cntct_Tlcm_Prd_End ********************************************************************************/
-		if(n.getNmingSysCntctTlcmPrdEnd() != null) {
-			java.text.SimpleDateFormat NmingSys_Cntct_Tlcm_Prd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date NmingSys_Cntct_Tlcm_Prd_Enddate = NmingSys_Cntct_Tlcm_Prd_Endsdf.parse(n.getNmingSysCntctTlcmPrdEnd());
-			namingsystemcontacttelecomperiod.setEnd(NmingSys_Cntct_Tlcm_Prd_Enddate);
+		if(n.getNmingSysCntctTlcmPrdEnd() != null ) {
+
+			String[] arrayi0 = n.getNmingSysCntctTlcmPrdEnd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(namingsystem.getContact().size() < i0+1) { namingsystem.addContact(); }
+				String[] arrayi1 = n.getNmingSysCntctTlcmPrdEnd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(namingsystem.getContact().get(i0).getTelecom().size() < i1+1) { namingsystem.getContact().get(i0).addTelecom(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {namingsystem.getContact().get(i0).getTelecom().get(i1).getPeriod().setEnd(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi1[i1].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
 		}
 		/******************** NmingSys_Cntct_Tlcm_Prd_Strt ********************************************************************************/
-		if(n.getNmingSysCntctTlcmPrdStrt() != null) {
-			java.text.SimpleDateFormat NmingSys_Cntct_Tlcm_Prd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date NmingSys_Cntct_Tlcm_Prd_Strtdate = NmingSys_Cntct_Tlcm_Prd_Strtsdf.parse(n.getNmingSysCntctTlcmPrdStrt());
-			namingsystemcontacttelecomperiod.setStart(NmingSys_Cntct_Tlcm_Prd_Strtdate);
+		if(n.getNmingSysCntctTlcmPrdStrt() != null ) {
+
+			String[] arrayi0 = n.getNmingSysCntctTlcmPrdStrt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(namingsystem.getContact().size() < i0+1) { namingsystem.addContact(); }
+				String[] arrayi1 = n.getNmingSysCntctTlcmPrdStrt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(namingsystem.getContact().get(i0).getTelecom().size() < i1+1) { namingsystem.getContact().get(i0).addTelecom(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {namingsystem.getContact().get(i0).getTelecom().get(i1).getPeriod().setStart(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi1[i1].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
 		}
 		/******************** NmingSys_Cntct_Tlcm_Rnk ********************************************************************************/
-		if(n.getNmingSysCntctTlcmRnk() != null) {
-			namingsystemcontacttelecom.setRank(Integer.parseInt(n.getNmingSysCntctTlcmRnk()));
+		if(n.getNmingSysCntctTlcmRnk() != null ) {
+
+			String[] arrayi0 = n.getNmingSysCntctTlcmRnk().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(namingsystem.getContact().size() < i0+1) { namingsystem.addContact(); }
+				String[] arrayi1 = n.getNmingSysCntctTlcmRnk().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(namingsystem.getContact().get(i0).getTelecom().size() < i1+1) { namingsystem.getContact().get(i0).addTelecom(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {namingsystem.getContact().get(i0).getTelecom().get(i1).setRank(Integer.parseInt(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
 		}
-		/******************** namingsystemcontacttelecomsystem ********************************************************************************/
-		org.hl7.fhir.r4.model.ContactPoint.ContactPointSystemEnumFactory namingsystemcontacttelecomsystem =  new org.hl7.fhir.r4.model.ContactPoint.ContactPointSystemEnumFactory();
-		namingsystemcontacttelecom.setSystem(namingsystemcontacttelecomsystem.fromCode(n.getNmingSysCntctTlcmSys()));
+		/******************** NmingSys_Cntct_Tlcm_Sys ********************************************************************************/
+		if(n.getNmingSysCntctTlcmSys() != null ) {
 
-		/******************** namingsystemcontacttelecomuse ********************************************************************************/
-		org.hl7.fhir.r4.model.ContactPoint.ContactPointUseEnumFactory namingsystemcontacttelecomuse =  new org.hl7.fhir.r4.model.ContactPoint.ContactPointUseEnumFactory();
-		namingsystemcontacttelecom.setUse(namingsystemcontacttelecomuse.fromCode(n.getNmingSysCntctTlcmUse()));
+			String[] arrayi0 = n.getNmingSysCntctTlcmSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(namingsystem.getContact().size() < i0+1) { namingsystem.addContact(); }
+				String[] arrayi1 = n.getNmingSysCntctTlcmSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(namingsystem.getContact().get(i0).getTelecom().size() < i1+1) { namingsystem.getContact().get(i0).addTelecom(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {namingsystem.getContact().get(i0).getTelecom().get(i1).setSystem(new org.hl7.fhir.r4.model.ContactPoint.ContactPointSystemEnumFactory().fromCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
 
+		}
+		/******************** NmingSys_Cntct_Tlcm_Use ********************************************************************************/
+		if(n.getNmingSysCntctTlcmUse() != null ) {
+
+			String[] arrayi0 = n.getNmingSysCntctTlcmUse().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(namingsystem.getContact().size() < i0+1) { namingsystem.addContact(); }
+				String[] arrayi1 = n.getNmingSysCntctTlcmUse().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(namingsystem.getContact().get(i0).getTelecom().size() < i1+1) { namingsystem.getContact().get(i0).addTelecom(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {namingsystem.getContact().get(i0).getTelecom().get(i1).setUse(new org.hl7.fhir.r4.model.ContactPoint.ContactPointUseEnumFactory().fromCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
+		}
 		/******************** NmingSys_Cntct_Tlcm_Vl ********************************************************************************/
-		if(n.getNmingSysCntctTlcmVl() != null) {
-			namingsystemcontacttelecom.setValue(n.getNmingSysCntctTlcmVl());
+		if(n.getNmingSysCntctTlcmVl() != null ) {
+
+			String[] arrayi0 = n.getNmingSysCntctTlcmVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(namingsystem.getContact().size() < i0+1) { namingsystem.addContact(); }
+				String[] arrayi1 = n.getNmingSysCntctTlcmVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(namingsystem.getContact().get(i0).getTelecom().size() < i1+1) { namingsystem.getContact().get(i0).addTelecom(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {namingsystem.getContact().get(i0).getTelecom().get(i1).setValue(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NmingSys_Dt ********************************************************************************/
-		if(n.getNmingSysDt() != null) {
-			java.text.SimpleDateFormat NmingSys_Dtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date NmingSys_Dtdate = NmingSys_Dtsdf.parse(n.getNmingSysDt());
-			namingsystem.setDate(NmingSys_Dtdate);
+		if(n.getNmingSysDt() != null ) {
+
+			if(n.getNmingSysDt().replace("[","").replace("]","").equals("NULL") | n.getNmingSysDt()==null) {} else {
+			namingsystem.setDate(n.getNmingSysDt().replace("[","").replace("]","").equals("NULL") | n.getNmingSysDt()==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(n.getNmingSysDt().replace("[","").replace("]","").replace("\"","")));
+			}
 		}
 		/******************** NmingSys_Dscrptn ********************************************************************************/
-		if(n.getNmingSysDscrptn() != null) {
-			namingsystem.setDescription(n.getNmingSysDscrptn());
+		if(n.getNmingSysDscrptn() != null ) {
+
+			if(n.getNmingSysDscrptn().replace("[","").replace("]","").equals("NULL") | n.getNmingSysDscrptn()==null) {} else {
+			namingsystem.setDescription(n.getNmingSysDscrptn().replace("[","").replace("]","").replace("\"",""));
+			}
 		}
-		/******************** namingsystemjurisdiction ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept namingsystemjurisdiction =  new org.hl7.fhir.r4.model.CodeableConcept();
-		namingsystem.addJurisdiction(namingsystemjurisdiction);
-
-		/******************** namingsystemjurisdictioncoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding namingsystemjurisdictioncoding =  new org.hl7.fhir.r4.model.Coding();
-		namingsystemjurisdiction.addCoding(namingsystemjurisdictioncoding);
-
 		/******************** NmingSys_Jrsdctn_Cdg_Cd ********************************************************************************/
-		if(n.getNmingSysJrsdctnCdgCd() != null) {
-			namingsystemjurisdictioncoding.setCode(n.getNmingSysJrsdctnCdgCd());
+		if(n.getNmingSysJrsdctnCdgCd() != null ) {
+
+			String[] arrayi0 = n.getNmingSysJrsdctnCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(namingsystem.getJurisdiction().size() < i0+1) { namingsystem.addJurisdiction(); }
+				String[] arrayi1 = n.getNmingSysJrsdctnCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(namingsystem.getJurisdiction().get(i0).getCoding().size() < i1+1) { namingsystem.getJurisdiction().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {namingsystem.getJurisdiction().get(i0).getCoding().get(i1).setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NmingSys_Jrsdctn_Cdg_Dsply ********************************************************************************/
-		if(n.getNmingSysJrsdctnCdgDsply() != null) {
-			namingsystemjurisdictioncoding.setDisplay(n.getNmingSysJrsdctnCdgDsply());
+		if(n.getNmingSysJrsdctnCdgDsply() != null ) {
+
+			String[] arrayi0 = n.getNmingSysJrsdctnCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(namingsystem.getJurisdiction().size() < i0+1) { namingsystem.addJurisdiction(); }
+				String[] arrayi1 = n.getNmingSysJrsdctnCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(namingsystem.getJurisdiction().get(i0).getCoding().size() < i1+1) { namingsystem.getJurisdiction().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {namingsystem.getJurisdiction().get(i0).getCoding().get(i1).setDisplay(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NmingSys_Jrsdctn_Cdg_Sys ********************************************************************************/
-		if(n.getNmingSysJrsdctnCdgSys() != null) {
-			namingsystemjurisdictioncoding.setSystem(n.getNmingSysJrsdctnCdgSys());
+		if(n.getNmingSysJrsdctnCdgSys() != null ) {
+
+			String[] arrayi0 = n.getNmingSysJrsdctnCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(namingsystem.getJurisdiction().size() < i0+1) { namingsystem.addJurisdiction(); }
+				String[] arrayi1 = n.getNmingSysJrsdctnCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(namingsystem.getJurisdiction().get(i0).getCoding().size() < i1+1) { namingsystem.getJurisdiction().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {namingsystem.getJurisdiction().get(i0).getCoding().get(i1).setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NmingSys_Jrsdctn_Cdg_UsrSltd ********************************************************************************/
-		if(n.getNmingSysJrsdctnCdgUsrSltd() != null) {
-			namingsystemjurisdictioncoding.setUserSelected(Boolean.parseBoolean(n.getNmingSysJrsdctnCdgUsrSltd()));
+		if(n.getNmingSysJrsdctnCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = n.getNmingSysJrsdctnCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(namingsystem.getJurisdiction().size() < i0+1) { namingsystem.addJurisdiction(); }
+				String[] arrayi1 = n.getNmingSysJrsdctnCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(namingsystem.getJurisdiction().get(i0).getCoding().size() < i1+1) { namingsystem.getJurisdiction().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {namingsystem.getJurisdiction().get(i0).getCoding().get(i1).setUserSelected(Boolean.parseBoolean(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
 		}
 		/******************** NmingSys_Jrsdctn_Cdg_Vrsn ********************************************************************************/
-		if(n.getNmingSysJrsdctnCdgVrsn() != null) {
-			namingsystemjurisdictioncoding.setVersion(n.getNmingSysJrsdctnCdgVrsn());
+		if(n.getNmingSysJrsdctnCdgVrsn() != null ) {
+
+			String[] arrayi0 = n.getNmingSysJrsdctnCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(namingsystem.getJurisdiction().size() < i0+1) { namingsystem.addJurisdiction(); }
+				String[] arrayi1 = n.getNmingSysJrsdctnCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(namingsystem.getJurisdiction().get(i0).getCoding().size() < i1+1) { namingsystem.getJurisdiction().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {namingsystem.getJurisdiction().get(i0).getCoding().get(i1).setVersion(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NmingSys_Jrsdctn_Txt ********************************************************************************/
-		if(n.getNmingSysJrsdctnTxt() != null) {
-			namingsystemjurisdiction.setText(n.getNmingSysJrsdctnTxt());
-		}
-		/******************** namingsystemkind ********************************************************************************/
-		org.hl7.fhir.r4.model.NamingSystem.NamingSystemTypeEnumFactory namingsystemkind =  new org.hl7.fhir.r4.model.NamingSystem.NamingSystemTypeEnumFactory();
-		namingsystem.setKind(namingsystemkind.fromCode(n.getNmingSysKind()));
+		if(n.getNmingSysJrsdctnTxt() != null ) {
 
+			String[] arrayi0 = n.getNmingSysJrsdctnTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(namingsystem.getJurisdiction().size() < i0+1) { namingsystem.addJurisdiction(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {namingsystem.getJurisdiction().get(i0).setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
+		}
+		/******************** NmingSys_Kind ********************************************************************************/
+		if(n.getNmingSysKind() != null ) {
+
+			if(n.getNmingSysKind().replace("[","").replace("]","").equals("NULL") | n.getNmingSysKind()==null) {} else {
+			namingsystem.setKind(new org.hl7.fhir.r4.model.NamingSystem.NamingSystemTypeEnumFactory().fromCode(n.getNmingSysKind().replace("[","").replace("]","").replace("\"","")));
+			}
+		}
 		/******************** NmingSys_Nm ********************************************************************************/
-		if(n.getNmingSysNm() != null) {
-			namingsystem.setName(n.getNmingSysNm());
+		if(n.getNmingSysNm() != null ) {
+
+			if(n.getNmingSysNm().replace("[","").replace("]","").equals("NULL") | n.getNmingSysNm()==null) {} else {
+			namingsystem.setName(n.getNmingSysNm().replace("[","").replace("]","").replace("\"",""));
+			}
 		}
 		/******************** NmingSys_Pblshr ********************************************************************************/
-		if(n.getNmingSysPblshr() != null) {
-			namingsystem.setPublisher(n.getNmingSysPblshr());
+		if(n.getNmingSysPblshr() != null ) {
+
+			if(n.getNmingSysPblshr().replace("[","").replace("]","").equals("NULL") | n.getNmingSysPblshr()==null) {} else {
+			namingsystem.setPublisher(n.getNmingSysPblshr().replace("[","").replace("]","").replace("\"",""));
+			}
 		}
 		/******************** NmingSys_Responsible ********************************************************************************/
-		if(n.getNmingSysResponsible() != null) {
-			namingsystem.setResponsible(n.getNmingSysResponsible());
+		if(n.getNmingSysResponsible() != null ) {
+
+			if(n.getNmingSysResponsible().replace("[","").replace("]","").equals("NULL") | n.getNmingSysResponsible()==null) {} else {
+			namingsystem.setResponsible(n.getNmingSysResponsible().replace("[","").replace("]","").replace("\"",""));
+			}
 		}
-		/******************** namingsystemstatus ********************************************************************************/
-		org.hl7.fhir.r4.model.Enumerations.PublicationStatusEnumFactory namingsystemstatus =  new org.hl7.fhir.r4.model.Enumerations.PublicationStatusEnumFactory();
-		namingsystem.setStatus(namingsystemstatus.fromCode(n.getNmingSysSts()));
+		/******************** NmingSys_Sts ********************************************************************************/
+		if(n.getNmingSysSts() != null ) {
 
-		/******************** namingsystemtype ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept namingsystemtype =  new org.hl7.fhir.r4.model.CodeableConcept();
-		namingsystem.setType(namingsystemtype);
-
-		/******************** namingsystemtypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding namingsystemtypecoding =  new org.hl7.fhir.r4.model.Coding();
-		namingsystemtype.addCoding(namingsystemtypecoding);
-
+			if(n.getNmingSysSts().replace("[","").replace("]","").equals("NULL") | n.getNmingSysSts()==null) {} else {
+			namingsystem.setStatus(new org.hl7.fhir.r4.model.Enumerations.PublicationStatusEnumFactory().fromCode(n.getNmingSysSts().replace("[","").replace("]","").replace("\"","")));
+			}
+		}
 		/******************** NmingSys_Typ_Cdg_Cd ********************************************************************************/
-		if(n.getNmingSysTypCdgCd() != null) {
-			namingsystemtypecoding.setCode(n.getNmingSysTypCdgCd());
+		if(n.getNmingSysTypCdgCd() != null ) {
+
+			String[] arrayi0 = n.getNmingSysTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(namingsystem.getType().getCoding().size() < i0+1) { namingsystem.getType().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {namingsystem.getType().getCoding().get(i0).setCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** NmingSys_Typ_Cdg_Dsply ********************************************************************************/
-		if(n.getNmingSysTypCdgDsply() != null) {
-			namingsystemtypecoding.setDisplay(n.getNmingSysTypCdgDsply());
+		if(n.getNmingSysTypCdgDsply() != null ) {
+
+			String[] arrayi0 = n.getNmingSysTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(namingsystem.getType().getCoding().size() < i0+1) { namingsystem.getType().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {namingsystem.getType().getCoding().get(i0).setDisplay(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** NmingSys_Typ_Cdg_Sys ********************************************************************************/
-		if(n.getNmingSysTypCdgSys() != null) {
-			namingsystemtypecoding.setSystem(n.getNmingSysTypCdgSys());
+		if(n.getNmingSysTypCdgSys() != null ) {
+
+			String[] arrayi0 = n.getNmingSysTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(namingsystem.getType().getCoding().size() < i0+1) { namingsystem.getType().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {namingsystem.getType().getCoding().get(i0).setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** NmingSys_Typ_Cdg_UsrSltd ********************************************************************************/
-		if(n.getNmingSysTypCdgUsrSltd() != null) {
-			namingsystemtypecoding.setUserSelected(Boolean.parseBoolean(n.getNmingSysTypCdgUsrSltd()));
+		if(n.getNmingSysTypCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = n.getNmingSysTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(namingsystem.getType().getCoding().size() < i0+1) { namingsystem.getType().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {namingsystem.getType().getCoding().get(i0).setUserSelected(Boolean.parseBoolean(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** NmingSys_Typ_Cdg_Vrsn ********************************************************************************/
-		if(n.getNmingSysTypCdgVrsn() != null) {
-			namingsystemtypecoding.setVersion(n.getNmingSysTypCdgVrsn());
+		if(n.getNmingSysTypCdgVrsn() != null ) {
+
+			String[] arrayi0 = n.getNmingSysTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(namingsystem.getType().getCoding().size() < i0+1) { namingsystem.getType().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {namingsystem.getType().getCoding().get(i0).setVersion(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** NmingSys_Typ_Txt ********************************************************************************/
-		if(n.getNmingSysTypTxt() != null) {
-			namingsystemtype.setText(n.getNmingSysTypTxt());
-		}
-		/******************** namingsystemuniqueid ********************************************************************************/
-		org.hl7.fhir.r4.model.NamingSystem.NamingSystemUniqueIdComponent namingsystemuniqueid =  new org.hl7.fhir.r4.model.NamingSystem.NamingSystemUniqueIdComponent();
-		namingsystem.addUniqueId(namingsystemuniqueid);
+		if(n.getNmingSysTypTxt() != null ) {
 
+			if(n.getNmingSysTypTxt().replace("[","").replace("]","").equals("NULL") | n.getNmingSysTypTxt()==null) {} else {
+			namingsystem.getType().setText(n.getNmingSysTypTxt().replace("[","").replace("]","").replace("\"",""));
+			}
+		}
 		/******************** NmingSys_UniqueId_Comment ********************************************************************************/
-		if(n.getNmingSysUniqueIdComment() != null) {
-			namingsystemuniqueid.setComment(n.getNmingSysUniqueIdComment());
-		}
-		/******************** namingsystemuniqueidperiod ********************************************************************************/
-		org.hl7.fhir.r4.model.Period namingsystemuniqueidperiod =  new org.hl7.fhir.r4.model.Period();
-		namingsystemuniqueid.setPeriod(namingsystemuniqueidperiod);
+		if(n.getNmingSysUniqueIdComment() != null ) {
 
+			String[] arrayi0 = n.getNmingSysUniqueIdComment().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(namingsystem.getUniqueId().size() < i0+1) { namingsystem.addUniqueId(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {namingsystem.getUniqueId().get(i0).setComment(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
+		}
 		/******************** NmingSys_UniqueId_Prd_End ********************************************************************************/
-		if(n.getNmingSysUniqueIdPrdEnd() != null) {
-			java.text.SimpleDateFormat NmingSys_UniqueId_Prd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date NmingSys_UniqueId_Prd_Enddate = NmingSys_UniqueId_Prd_Endsdf.parse(n.getNmingSysUniqueIdPrdEnd());
-			namingsystemuniqueidperiod.setEnd(NmingSys_UniqueId_Prd_Enddate);
+		if(n.getNmingSysUniqueIdPrdEnd() != null ) {
+
+			String[] arrayi0 = n.getNmingSysUniqueIdPrdEnd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(namingsystem.getUniqueId().size() < i0+1) { namingsystem.addUniqueId(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {namingsystem.getUniqueId().get(i0).getPeriod().setEnd(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** NmingSys_UniqueId_Prd_Strt ********************************************************************************/
-		if(n.getNmingSysUniqueIdPrdStrt() != null) {
-			java.text.SimpleDateFormat NmingSys_UniqueId_Prd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date NmingSys_UniqueId_Prd_Strtdate = NmingSys_UniqueId_Prd_Strtsdf.parse(n.getNmingSysUniqueIdPrdStrt());
-			namingsystemuniqueidperiod.setStart(NmingSys_UniqueId_Prd_Strtdate);
+		if(n.getNmingSysUniqueIdPrdStrt() != null ) {
+
+			String[] arrayi0 = n.getNmingSysUniqueIdPrdStrt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(namingsystem.getUniqueId().size() < i0+1) { namingsystem.addUniqueId(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {namingsystem.getUniqueId().get(i0).getPeriod().setStart(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** NmingSys_UniqueId_Preferred ********************************************************************************/
-		if(n.getNmingSysUniqueIdPreferred() != null) {
-			namingsystemuniqueid.setPreferred(Boolean.parseBoolean(n.getNmingSysUniqueIdPreferred()));
-		}
-		/******************** namingsystemuniqueidtype ********************************************************************************/
-		org.hl7.fhir.r4.model.NamingSystem.NamingSystemIdentifierTypeEnumFactory namingsystemuniqueidtype =  new org.hl7.fhir.r4.model.NamingSystem.NamingSystemIdentifierTypeEnumFactory();
-		namingsystemuniqueid.setType(namingsystemuniqueidtype.fromCode(n.getNmingSysUniqueIdTyp()));
+		if(n.getNmingSysUniqueIdPreferred() != null ) {
 
+			String[] arrayi0 = n.getNmingSysUniqueIdPreferred().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(namingsystem.getUniqueId().size() < i0+1) { namingsystem.addUniqueId(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {namingsystem.getUniqueId().get(i0).setPreferred(Boolean.parseBoolean(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
+		/******************** NmingSys_UniqueId_Typ ********************************************************************************/
+		if(n.getNmingSysUniqueIdTyp() != null ) {
+
+			String[] arrayi0 = n.getNmingSysUniqueIdTyp().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(namingsystem.getUniqueId().size() < i0+1) { namingsystem.addUniqueId(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {namingsystem.getUniqueId().get(i0).setType(new org.hl7.fhir.r4.model.NamingSystem.NamingSystemIdentifierTypeEnumFactory().fromCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** NmingSys_UniqueId_Vl ********************************************************************************/
-		if(n.getNmingSysUniqueIdVl() != null) {
-			namingsystemuniqueid.setValue(n.getNmingSysUniqueIdVl());
+		if(n.getNmingSysUniqueIdVl() != null ) {
+
+			String[] arrayi0 = n.getNmingSysUniqueIdVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(namingsystem.getUniqueId().size() < i0+1) { namingsystem.addUniqueId(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {namingsystem.getUniqueId().get(i0).setValue(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** NmingSys_Usg ********************************************************************************/
-		if(n.getNmingSysUsg() != null) {
-			namingsystem.setUsage(n.getNmingSysUsg());
+		if(n.getNmingSysUsg() != null ) {
+
+			if(n.getNmingSysUsg().replace("[","").replace("]","").equals("NULL") | n.getNmingSysUsg()==null) {} else {
+			namingsystem.setUsage(n.getNmingSysUsg().replace("[","").replace("]","").replace("\"",""));
+			}
 		}
-		/******************** namingsystemusecontext ********************************************************************************/
-		org.hl7.fhir.r4.model.UsageContext namingsystemusecontext =  new org.hl7.fhir.r4.model.UsageContext();
-		namingsystem.addUseContext(namingsystemusecontext);
-
-		/******************** namingsystemusecontextcode ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding namingsystemusecontextcode =  new org.hl7.fhir.r4.model.Coding();
-		namingsystemusecontext.setCode(namingsystemusecontextcode);
-
 		/******************** NmingSys_UseCntxt_Cd_Cd ********************************************************************************/
-		if(n.getNmingSysUseCntxtCdCd() != null) {
-			namingsystemusecontextcode.setCode(n.getNmingSysUseCntxtCdCd());
+		if(n.getNmingSysUseCntxtCdCd() != null ) {
+
+			String[] arrayi0 = n.getNmingSysUseCntxtCdCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(namingsystem.getUseContext().size() < i0+1) { namingsystem.addUseContext(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {namingsystem.getUseContext().get(i0).getCode().setCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** NmingSys_UseCntxt_Cd_Dsply ********************************************************************************/
-		if(n.getNmingSysUseCntxtCdDsply() != null) {
-			namingsystemusecontextcode.setDisplay(n.getNmingSysUseCntxtCdDsply());
+		if(n.getNmingSysUseCntxtCdDsply() != null ) {
+
+			String[] arrayi0 = n.getNmingSysUseCntxtCdDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(namingsystem.getUseContext().size() < i0+1) { namingsystem.addUseContext(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {namingsystem.getUseContext().get(i0).getCode().setDisplay(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** NmingSys_UseCntxt_Cd_Sys ********************************************************************************/
-		if(n.getNmingSysUseCntxtCdSys() != null) {
-			namingsystemusecontextcode.setSystem(n.getNmingSysUseCntxtCdSys());
+		if(n.getNmingSysUseCntxtCdSys() != null ) {
+
+			String[] arrayi0 = n.getNmingSysUseCntxtCdSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(namingsystem.getUseContext().size() < i0+1) { namingsystem.addUseContext(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {namingsystem.getUseContext().get(i0).getCode().setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** NmingSys_UseCntxt_Cd_UsrSltd ********************************************************************************/
-		if(n.getNmingSysUseCntxtCdUsrSltd() != null) {
-			namingsystemusecontextcode.setUserSelected(Boolean.parseBoolean(n.getNmingSysUseCntxtCdUsrSltd()));
+		if(n.getNmingSysUseCntxtCdUsrSltd() != null ) {
+
+			String[] arrayi0 = n.getNmingSysUseCntxtCdUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(namingsystem.getUseContext().size() < i0+1) { namingsystem.addUseContext(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {namingsystem.getUseContext().get(i0).getCode().setUserSelected(Boolean.parseBoolean(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** NmingSys_UseCntxt_Cd_Vrsn ********************************************************************************/
-		if(n.getNmingSysUseCntxtCdVrsn() != null) {
-			namingsystemusecontextcode.setVersion(n.getNmingSysUseCntxtCdVrsn());
+		if(n.getNmingSysUseCntxtCdVrsn() != null ) {
+
+			String[] arrayi0 = n.getNmingSysUseCntxtCdVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(namingsystem.getUseContext().size() < i0+1) { namingsystem.addUseContext(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {namingsystem.getUseContext().get(i0).getCode().setVersion(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
-		/******************** namingsystemusecontextvaluecodeableconcept ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept namingsystemusecontextvaluecodeableconcept =  new org.hl7.fhir.r4.model.CodeableConcept();
-		namingsystemusecontext.setValue(namingsystemusecontextvaluecodeableconcept);
-
-		/******************** namingsystemusecontextvaluecodeableconceptcoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding namingsystemusecontextvaluecodeableconceptcoding =  new org.hl7.fhir.r4.model.Coding();
-		namingsystemusecontextvaluecodeableconcept.addCoding(namingsystemusecontextvaluecodeableconceptcoding);
-
 		/******************** NmingSys_UseCntxt_VlCdbleCncpt_Cdg_Cd ********************************************************************************/
-		if(n.getNmingSysUseCntxtVlCdbleCncptCdgCd() != null) {
-			namingsystemusecontextvaluecodeableconceptcoding.setCode(n.getNmingSysUseCntxtVlCdbleCncptCdgCd());
+		if(n.getNmingSysUseCntxtVlCdbleCncptCdgCd() != null ) {
+
+			String[] arrayi0 = n.getNmingSysUseCntxtVlCdbleCncptCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(namingsystem.getUseContext().size() < i0+1) { namingsystem.addUseContext(); }
+				String[] arrayi1 = n.getNmingSysUseCntxtVlCdbleCncptCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(namingsystem.getUseContext().get(i0).getValueCodeableConcept().getCoding().size() < i1+1) { namingsystem.getUseContext().get(i0).getValueCodeableConcept().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {namingsystem.getUseContext().get(i0).getValueCodeableConcept().getCoding().get(i1).setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NmingSys_UseCntxt_VlCdbleCncpt_Cdg_Dsply ********************************************************************************/
-		if(n.getNmingSysUseCntxtVlCdbleCncptCdgDsply() != null) {
-			namingsystemusecontextvaluecodeableconceptcoding.setDisplay(n.getNmingSysUseCntxtVlCdbleCncptCdgDsply());
+		if(n.getNmingSysUseCntxtVlCdbleCncptCdgDsply() != null ) {
+
+			String[] arrayi0 = n.getNmingSysUseCntxtVlCdbleCncptCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(namingsystem.getUseContext().size() < i0+1) { namingsystem.addUseContext(); }
+				String[] arrayi1 = n.getNmingSysUseCntxtVlCdbleCncptCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(namingsystem.getUseContext().get(i0).getValueCodeableConcept().getCoding().size() < i1+1) { namingsystem.getUseContext().get(i0).getValueCodeableConcept().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {namingsystem.getUseContext().get(i0).getValueCodeableConcept().getCoding().get(i1).setDisplay(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NmingSys_UseCntxt_VlCdbleCncpt_Cdg_Sys ********************************************************************************/
-		if(n.getNmingSysUseCntxtVlCdbleCncptCdgSys() != null) {
-			namingsystemusecontextvaluecodeableconceptcoding.setSystem(n.getNmingSysUseCntxtVlCdbleCncptCdgSys());
+		if(n.getNmingSysUseCntxtVlCdbleCncptCdgSys() != null ) {
+
+			String[] arrayi0 = n.getNmingSysUseCntxtVlCdbleCncptCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(namingsystem.getUseContext().size() < i0+1) { namingsystem.addUseContext(); }
+				String[] arrayi1 = n.getNmingSysUseCntxtVlCdbleCncptCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(namingsystem.getUseContext().get(i0).getValueCodeableConcept().getCoding().size() < i1+1) { namingsystem.getUseContext().get(i0).getValueCodeableConcept().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {namingsystem.getUseContext().get(i0).getValueCodeableConcept().getCoding().get(i1).setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NmingSys_UseCntxt_VlCdbleCncpt_Cdg_UsrSltd ********************************************************************************/
-		if(n.getNmingSysUseCntxtVlCdbleCncptCdgUsrSltd() != null) {
-			namingsystemusecontextvaluecodeableconceptcoding.setUserSelected(Boolean.parseBoolean(n.getNmingSysUseCntxtVlCdbleCncptCdgUsrSltd()));
+		if(n.getNmingSysUseCntxtVlCdbleCncptCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = n.getNmingSysUseCntxtVlCdbleCncptCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(namingsystem.getUseContext().size() < i0+1) { namingsystem.addUseContext(); }
+				String[] arrayi1 = n.getNmingSysUseCntxtVlCdbleCncptCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(namingsystem.getUseContext().get(i0).getValueCodeableConcept().getCoding().size() < i1+1) { namingsystem.getUseContext().get(i0).getValueCodeableConcept().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {namingsystem.getUseContext().get(i0).getValueCodeableConcept().getCoding().get(i1).setUserSelected(Boolean.parseBoolean(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
 		}
 		/******************** NmingSys_UseCntxt_VlCdbleCncpt_Cdg_Vrsn ********************************************************************************/
-		if(n.getNmingSysUseCntxtVlCdbleCncptCdgVrsn() != null) {
-			namingsystemusecontextvaluecodeableconceptcoding.setVersion(n.getNmingSysUseCntxtVlCdbleCncptCdgVrsn());
+		if(n.getNmingSysUseCntxtVlCdbleCncptCdgVrsn() != null ) {
+
+			String[] arrayi0 = n.getNmingSysUseCntxtVlCdbleCncptCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(namingsystem.getUseContext().size() < i0+1) { namingsystem.addUseContext(); }
+				String[] arrayi1 = n.getNmingSysUseCntxtVlCdbleCncptCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(namingsystem.getUseContext().get(i0).getValueCodeableConcept().getCoding().size() < i1+1) { namingsystem.getUseContext().get(i0).getValueCodeableConcept().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {namingsystem.getUseContext().get(i0).getValueCodeableConcept().getCoding().get(i1).setVersion(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** NmingSys_UseCntxt_VlCdbleCncpt_Txt ********************************************************************************/
-		if(n.getNmingSysUseCntxtVlCdbleCncptTxt() != null) {
-			namingsystemusecontextvaluecodeableconcept.setText(n.getNmingSysUseCntxtVlCdbleCncptTxt());
-		}
-		/******************** namingsystemusecontextvaluequantity ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity namingsystemusecontextvaluequantity =  new org.hl7.fhir.r4.model.Quantity();
-		namingsystemusecontext.setValue(namingsystemusecontextvaluequantity);
+		if(n.getNmingSysUseCntxtVlCdbleCncptTxt() != null ) {
 
+			String[] arrayi0 = n.getNmingSysUseCntxtVlCdbleCncptTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(namingsystem.getUseContext().size() < i0+1) { namingsystem.addUseContext(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {namingsystem.getUseContext().get(i0).getValueCodeableConcept().setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
+		}
 		/******************** NmingSys_UseCntxt_VlQnty_Cd ********************************************************************************/
-		if(n.getNmingSysUseCntxtVlQntyCd() != null) {
-			namingsystemusecontextvaluequantity.setCode(n.getNmingSysUseCntxtVlQntyCd());
-		}
-		/******************** namingsystemusecontextvaluequantitycomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory namingsystemusecontextvaluequantitycomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-		namingsystemusecontextvaluequantity.setComparator(namingsystemusecontextvaluequantitycomparator.fromCode(n.getNmingSysUseCntxtVlQntyCmprtr()));
+		if(n.getNmingSysUseCntxtVlQntyCd() != null ) {
 
+			String[] arrayi0 = n.getNmingSysUseCntxtVlQntyCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(namingsystem.getUseContext().size() < i0+1) { namingsystem.addUseContext(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {namingsystem.getUseContext().get(i0).getValueQuantity().setCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
+		}
+		/******************** NmingSys_UseCntxt_VlQnty_Cmprtr ********************************************************************************/
+		if(n.getNmingSysUseCntxtVlQntyCmprtr() != null ) {
+
+			String[] arrayi0 = n.getNmingSysUseCntxtVlQntyCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(namingsystem.getUseContext().size() < i0+1) { namingsystem.addUseContext(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {namingsystem.getUseContext().get(i0).getValueQuantity().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** NmingSys_UseCntxt_VlQnty_Sys ********************************************************************************/
-		if(n.getNmingSysUseCntxtVlQntySys() != null) {
-			namingsystemusecontextvaluequantity.setSystem(n.getNmingSysUseCntxtVlQntySys());
+		if(n.getNmingSysUseCntxtVlQntySys() != null ) {
+
+			String[] arrayi0 = n.getNmingSysUseCntxtVlQntySys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(namingsystem.getUseContext().size() < i0+1) { namingsystem.addUseContext(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {namingsystem.getUseContext().get(i0).getValueQuantity().setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** NmingSys_UseCntxt_VlQnty_Unt ********************************************************************************/
-		if(n.getNmingSysUseCntxtVlQntyUnt() != null) {
-			namingsystemusecontextvaluequantity.setUnit(n.getNmingSysUseCntxtVlQntyUnt());
+		if(n.getNmingSysUseCntxtVlQntyUnt() != null ) {
+
+			String[] arrayi0 = n.getNmingSysUseCntxtVlQntyUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(namingsystem.getUseContext().size() < i0+1) { namingsystem.addUseContext(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {namingsystem.getUseContext().get(i0).getValueQuantity().setUnit(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** NmingSys_UseCntxt_VlQnty_Vl ********************************************************************************/
-		if(n.getNmingSysUseCntxtVlQntyVl() != null) {
-			namingsystemusecontextvaluequantity.setValue(Double.parseDouble((n.getNmingSysUseCntxtVlQntyVl())));
+		if(n.getNmingSysUseCntxtVlQntyVl() != null ) {
+
+			String[] arrayi0 = n.getNmingSysUseCntxtVlQntyVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(namingsystem.getUseContext().size() < i0+1) { namingsystem.addUseContext(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {namingsystem.getUseContext().get(i0).getValueQuantity().setValue((new java.math.BigDecimal((arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+			}
+
 		}
-		/******************** namingsystemusecontextvaluerange ********************************************************************************/
-		org.hl7.fhir.r4.model.Range namingsystemusecontextvaluerange =  new org.hl7.fhir.r4.model.Range();
-		namingsystemusecontext.setValue(namingsystemusecontextvaluerange);
-
-		/******************** namingsystemusecontextvaluerangehigh ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity namingsystemusecontextvaluerangehigh =  new org.hl7.fhir.r4.model.Quantity();
-		namingsystemusecontextvaluerange.setHigh(namingsystemusecontextvaluerangehigh);
-
 		/******************** NmingSys_UseCntxt_VlRng_Hi_Cd ********************************************************************************/
-		if(n.getNmingSysUseCntxtVlRngHiCd() != null) {
-			namingsystemusecontextvaluerangehigh.setCode(n.getNmingSysUseCntxtVlRngHiCd());
-		}
-		/******************** namingsystemusecontextvaluerangehighcomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory namingsystemusecontextvaluerangehighcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-		namingsystemusecontextvaluerangehigh.setComparator(namingsystemusecontextvaluerangehighcomparator.fromCode(n.getNmingSysUseCntxtVlRngHiCmprtr()));
+		if(n.getNmingSysUseCntxtVlRngHiCd() != null ) {
 
+			String[] arrayi0 = n.getNmingSysUseCntxtVlRngHiCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(namingsystem.getUseContext().size() < i0+1) { namingsystem.addUseContext(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {namingsystem.getUseContext().get(i0).getValueRange().getHigh().setCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
+		}
+		/******************** NmingSys_UseCntxt_VlRng_Hi_Cmprtr ********************************************************************************/
+		if(n.getNmingSysUseCntxtVlRngHiCmprtr() != null ) {
+
+			String[] arrayi0 = n.getNmingSysUseCntxtVlRngHiCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(namingsystem.getUseContext().size() < i0+1) { namingsystem.addUseContext(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {namingsystem.getUseContext().get(i0).getValueRange().getHigh().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** NmingSys_UseCntxt_VlRng_Hi_Sys ********************************************************************************/
-		if(n.getNmingSysUseCntxtVlRngHiSys() != null) {
-			namingsystemusecontextvaluerangehigh.setSystem(n.getNmingSysUseCntxtVlRngHiSys());
+		if(n.getNmingSysUseCntxtVlRngHiSys() != null ) {
+
+			String[] arrayi0 = n.getNmingSysUseCntxtVlRngHiSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(namingsystem.getUseContext().size() < i0+1) { namingsystem.addUseContext(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {namingsystem.getUseContext().get(i0).getValueRange().getHigh().setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** NmingSys_UseCntxt_VlRng_Hi_Unt ********************************************************************************/
-		if(n.getNmingSysUseCntxtVlRngHiUnt() != null) {
-			namingsystemusecontextvaluerangehigh.setUnit(n.getNmingSysUseCntxtVlRngHiUnt());
+		if(n.getNmingSysUseCntxtVlRngHiUnt() != null ) {
+
+			String[] arrayi0 = n.getNmingSysUseCntxtVlRngHiUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(namingsystem.getUseContext().size() < i0+1) { namingsystem.addUseContext(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {namingsystem.getUseContext().get(i0).getValueRange().getHigh().setUnit(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** NmingSys_UseCntxt_VlRng_Hi_Vl ********************************************************************************/
-		if(n.getNmingSysUseCntxtVlRngHiVl() != null) {
-			namingsystemusecontextvaluerangehigh.setValue(Double.parseDouble((n.getNmingSysUseCntxtVlRngHiVl())));
-		}
-		/******************** namingsystemusecontextvaluerangelow ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity namingsystemusecontextvaluerangelow =  new org.hl7.fhir.r4.model.Quantity();
-		namingsystemusecontextvaluerange.setLow(namingsystemusecontextvaluerangelow);
+		if(n.getNmingSysUseCntxtVlRngHiVl() != null ) {
 
+			String[] arrayi0 = n.getNmingSysUseCntxtVlRngHiVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(namingsystem.getUseContext().size() < i0+1) { namingsystem.addUseContext(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {namingsystem.getUseContext().get(i0).getValueRange().getHigh().setValue((new java.math.BigDecimal((arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+			}
+
+		}
 		/******************** NmingSys_UseCntxt_VlRng_Lw_Cd ********************************************************************************/
-		if(n.getNmingSysUseCntxtVlRngLwCd() != null) {
-			namingsystemusecontextvaluerangelow.setCode(n.getNmingSysUseCntxtVlRngLwCd());
-		}
-		/******************** namingsystemusecontextvaluerangelowcomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory namingsystemusecontextvaluerangelowcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-		namingsystemusecontextvaluerangelow.setComparator(namingsystemusecontextvaluerangelowcomparator.fromCode(n.getNmingSysUseCntxtVlRngLwCmprtr()));
+		if(n.getNmingSysUseCntxtVlRngLwCd() != null ) {
 
+			String[] arrayi0 = n.getNmingSysUseCntxtVlRngLwCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(namingsystem.getUseContext().size() < i0+1) { namingsystem.addUseContext(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {namingsystem.getUseContext().get(i0).getValueRange().getLow().setCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
+		}
+		/******************** NmingSys_UseCntxt_VlRng_Lw_Cmprtr ********************************************************************************/
+		if(n.getNmingSysUseCntxtVlRngLwCmprtr() != null ) {
+
+			String[] arrayi0 = n.getNmingSysUseCntxtVlRngLwCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(namingsystem.getUseContext().size() < i0+1) { namingsystem.addUseContext(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {namingsystem.getUseContext().get(i0).getValueRange().getLow().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** NmingSys_UseCntxt_VlRng_Lw_Sys ********************************************************************************/
-		if(n.getNmingSysUseCntxtVlRngLwSys() != null) {
-			namingsystemusecontextvaluerangelow.setSystem(n.getNmingSysUseCntxtVlRngLwSys());
+		if(n.getNmingSysUseCntxtVlRngLwSys() != null ) {
+
+			String[] arrayi0 = n.getNmingSysUseCntxtVlRngLwSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(namingsystem.getUseContext().size() < i0+1) { namingsystem.addUseContext(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {namingsystem.getUseContext().get(i0).getValueRange().getLow().setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** NmingSys_UseCntxt_VlRng_Lw_Unt ********************************************************************************/
-		if(n.getNmingSysUseCntxtVlRngLwUnt() != null) {
-			namingsystemusecontextvaluerangelow.setUnit(n.getNmingSysUseCntxtVlRngLwUnt());
+		if(n.getNmingSysUseCntxtVlRngLwUnt() != null ) {
+
+			String[] arrayi0 = n.getNmingSysUseCntxtVlRngLwUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(namingsystem.getUseContext().size() < i0+1) { namingsystem.addUseContext(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {namingsystem.getUseContext().get(i0).getValueRange().getLow().setUnit(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** NmingSys_UseCntxt_VlRng_Lw_Vl ********************************************************************************/
-		if(n.getNmingSysUseCntxtVlRngLwVl() != null) {
-			namingsystemusecontextvaluerangelow.setValue(Double.parseDouble((n.getNmingSysUseCntxtVlRngLwVl())));
+		if(n.getNmingSysUseCntxtVlRngLwVl() != null ) {
+
+			String[] arrayi0 = n.getNmingSysUseCntxtVlRngLwVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(namingsystem.getUseContext().size() < i0+1) { namingsystem.addUseContext(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {namingsystem.getUseContext().get(i0).getValueRange().getLow().setValue((new java.math.BigDecimal((arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+			}
+
 		}
 		/******************** NmingSys_UseCntxt_VlRfrnc ********************************************************************************/
-		if(n.getNmingSysUseCntxtVlRfrnc() != null) {
-			namingsystemusecontext.setValue( new org.hl7.fhir.r4.model.Reference(n.getNmingSysUseCntxtVlRfrnc()));
+		if(n.getNmingSysUseCntxtVlRfrnc() != null ) {
+
+			String[] arrayi0 = n.getNmingSysUseCntxtVlRfrnc().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(namingsystem.getUseContext().size() < i0+1) { namingsystem.addUseContext(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {namingsystem.getUseContext().get(i0).setValue(new org.hl7.fhir.r4.model.Reference(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		return namingsystem;
 	}

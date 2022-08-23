@@ -8,289 +8,762 @@ public class LocationBidirectionalConversion
 		 main.java.com.campfhir.model.Location l = new  main.java.com.campfhir.model.Location();
 
 		/******************** id ********************************************************************************/
-		location.setId(l.getId());
+		l.setId(location.getIdElement().getIdPart());
 
 		/******************** Lctn_Nm ********************************************************************************/
 		if(location.hasName()) {
-			l.setLctnNm(String.valueOf(location.getName()));
+
+			l.addLctnNm(String.valueOf(location.getName()));
+		} else {
+			l.addLctnNm("NULL");
 		}
+
+
+		/******************** locationtype ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.CodeableConcept> locationtypelist = location.getType();
+		for(int locationtypei = 0; locationtypei<locationtypelist.size();locationtypei++ ) {
+		org.hl7.fhir.r4.model.CodeableConcept  locationtype = locationtypelist.get(locationtypei);
+
+		/******************** Lctn_Typ_Txt ********************************************************************************/
+		if(locationtypei == 0) {l.addLctnTypTxt("[");}
+		if(locationtype.hasText()) {
+
+			l.addLctnTypTxt(String.valueOf(locationtype.getText()));
+		} else {
+			l.addLctnTypTxt("NULL");
+		}
+
+		if(locationtypei == locationtypelist.size()-1) {l.addLctnTypTxt("]");}
+
+
+		/******************** locationtypecoding ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.Coding> locationtypecodinglist = locationtype.getCoding();
+		for(int locationtypecodingi = 0; locationtypecodingi<locationtypecodinglist.size();locationtypecodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  locationtypecoding = locationtypecodinglist.get(locationtypecodingi);
+
+		/******************** Lctn_Typ_Cdg_Dsply ********************************************************************************/
+		if(locationtypecodingi == 0) {l.addLctnTypCdgDsply("[[");}
+		if(locationtypecoding.hasDisplay()) {
+
+			l.addLctnTypCdgDsply(String.valueOf(locationtypecoding.getDisplay()));
+		} else {
+			l.addLctnTypCdgDsply("NULL");
+		}
+
+		if(locationtypecodingi == locationtypecodinglist.size()-1) {l.addLctnTypCdgDsply("]]");}
+
+
+		/******************** Lctn_Typ_Cdg_Vrsn ********************************************************************************/
+		if(locationtypecodingi == 0) {l.addLctnTypCdgVrsn("[[");}
+		if(locationtypecoding.hasVersion()) {
+
+			l.addLctnTypCdgVrsn(String.valueOf(locationtypecoding.getVersion()));
+		} else {
+			l.addLctnTypCdgVrsn("NULL");
+		}
+
+		if(locationtypecodingi == locationtypecodinglist.size()-1) {l.addLctnTypCdgVrsn("]]");}
+
+
+		/******************** Lctn_Typ_Cdg_Cd ********************************************************************************/
+		if(locationtypecodingi == 0) {l.addLctnTypCdgCd("[[");}
+		if(locationtypecoding.hasCode()) {
+
+			l.addLctnTypCdgCd(String.valueOf(locationtypecoding.getCode()));
+		} else {
+			l.addLctnTypCdgCd("NULL");
+		}
+
+		if(locationtypecodingi == locationtypecodinglist.size()-1) {l.addLctnTypCdgCd("]]");}
+
+
+		/******************** Lctn_Typ_Cdg_UsrSltd ********************************************************************************/
+		if(locationtypecodingi == 0) {l.addLctnTypCdgUsrSltd("[[");}
+		if(locationtypecoding.hasUserSelected()) {
+
+			l.addLctnTypCdgUsrSltd(String.valueOf(locationtypecoding.getUserSelected()));
+		} else {
+			l.addLctnTypCdgUsrSltd("NULL");
+		}
+
+		if(locationtypecodingi == locationtypecodinglist.size()-1) {l.addLctnTypCdgUsrSltd("]]");}
+
+
+		/******************** Lctn_Typ_Cdg_Sys ********************************************************************************/
+		if(locationtypecodingi == 0) {l.addLctnTypCdgSys("[[");}
+		if(locationtypecoding.hasSystem()) {
+
+			l.addLctnTypCdgSys(String.valueOf(locationtypecoding.getSystem()));
+		} else {
+			l.addLctnTypCdgSys("NULL");
+		}
+
+		if(locationtypecodingi == locationtypecodinglist.size()-1) {l.addLctnTypCdgSys("]]");}
+
+
+		 };
+		 };
 		/******************** locationaddress ********************************************************************************/
 		org.hl7.fhir.r4.model.Address locationaddress = location.getAddress();
 
 		/******************** Lctn_Addr_State ********************************************************************************/
 		if(locationaddress.hasState()) {
-			l.setLctnAddrState(String.valueOf(locationaddress.getState()));
+
+			l.addLctnAddrState(String.valueOf(locationaddress.getState()));
+		} else {
+			l.addLctnAddrState("NULL");
 		}
+
+
 		/******************** locationaddresstype ********************************************************************************/
 		org.hl7.fhir.r4.model.Address.AddressType locationaddresstype = locationaddress.getType();
-		l.setLctnAddrTyp(locationaddresstype.toCode());
+		if(locationaddresstype!=null) {
+			l.addLctnAddrTyp(locationaddresstype.toCode());
+		} else {
+			l.addLctnAddrTyp("NULL");
+		}
 
 		/******************** Lctn_Addr_Cntry ********************************************************************************/
 		if(locationaddress.hasCountry()) {
-			l.setLctnAddrCntry(String.valueOf(locationaddress.getCountry()));
+
+			l.addLctnAddrCntry(String.valueOf(locationaddress.getCountry()));
+		} else {
+			l.addLctnAddrCntry("NULL");
 		}
+
+
 		/******************** locationaddressperiod ********************************************************************************/
 		org.hl7.fhir.r4.model.Period locationaddressperiod = locationaddress.getPeriod();
 
 		/******************** Lctn_Addr_Prd_Strt ********************************************************************************/
 		if(locationaddressperiod.hasStart()) {
-			l.setLctnAddrPrdStrt(String.valueOf(locationaddressperiod.getStart()));
+
+			l.addLctnAddrPrdStrt("\""+ca.uhn.fhir.util.DateUtils.formatDate(locationaddressperiod.getStart())+"\"");
+		} else {
+			l.addLctnAddrPrdStrt("NULL");
 		}
+
+
 		/******************** Lctn_Addr_Prd_End ********************************************************************************/
 		if(locationaddressperiod.hasEnd()) {
-			l.setLctnAddrPrdEnd(String.valueOf(locationaddressperiod.getEnd()));
+
+			l.addLctnAddrPrdEnd("\""+ca.uhn.fhir.util.DateUtils.formatDate(locationaddressperiod.getEnd())+"\"");
+		} else {
+			l.addLctnAddrPrdEnd("NULL");
 		}
-		/******************** Lctn_Addr_Txt ********************************************************************************/
-		if(locationaddress.hasText()) {
-			l.setLctnAddrTxt(String.valueOf(locationaddress.getText()));
+
+
+		/******************** Lctn_Addr_District ********************************************************************************/
+		if(locationaddress.hasDistrict()) {
+
+			l.addLctnAddrDistrict(String.valueOf(locationaddress.getDistrict()));
+		} else {
+			l.addLctnAddrDistrict("NULL");
 		}
-		/******************** locationaddressuse ********************************************************************************/
-		org.hl7.fhir.r4.model.Address.AddressUse locationaddressuse = locationaddress.getUse();
-		l.setLctnAddrUse(locationaddressuse.toCode());
+
+
+		/******************** Lctn_Addr_PostalCd ********************************************************************************/
+		if(locationaddress.hasPostalCode()) {
+
+			l.addLctnAddrPostalCd(String.valueOf(locationaddress.getPostalCode()));
+		} else {
+			l.addLctnAddrPostalCd("NULL");
+		}
+
+
+		/******************** Lctn_Addr_Line ********************************************************************************/
+		if(locationaddress.hasLine()) {
+
+			String  array = "[";
+			for(int incr=0; incr<locationaddress.getLine().size(); incr++) {
+				array = array + locationaddress.getLine().get(incr).getValueAsString() + ",";
+			}
+			array = array.substring(0, array.length() -1);
+			array = array + "]";
+			l.addLctnAddrLine(array);
+
+		} else {
+			l.addLctnAddrLine("NULL");
+		}
+
 
 		/******************** Lctn_Addr_City ********************************************************************************/
 		if(locationaddress.hasCity()) {
-			l.setLctnAddrCity(String.valueOf(locationaddress.getCity()));
-		}
-		/******************** Lctn_Addr_District ********************************************************************************/
-		if(locationaddress.hasDistrict()) {
-			l.setLctnAddrDistrict(String.valueOf(locationaddress.getDistrict()));
-		}
-		/******************** Lctn_Addr_PostalCd ********************************************************************************/
-		if(locationaddress.hasPostalCode()) {
-			l.setLctnAddrPostalCd(String.valueOf(locationaddress.getPostalCode()));
-		}
-		/******************** locationtype ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept locationtype = location.getTypeFirstRep();
 
-		/******************** Lctn_Typ_Txt ********************************************************************************/
-		if(locationtype.hasText()) {
-			l.setLctnTypTxt(String.valueOf(locationtype.getText()));
+			l.addLctnAddrCity(String.valueOf(locationaddress.getCity()));
+		} else {
+			l.addLctnAddrCity("NULL");
 		}
-		/******************** locationtypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding locationtypecoding = locationtype.getCodingFirstRep();
 
-		/******************** Lctn_Typ_Cdg_Vrsn ********************************************************************************/
-		if(locationtypecoding.hasVersion()) {
-			l.setLctnTypCdgVrsn(String.valueOf(locationtypecoding.getVersion()));
+
+		/******************** locationaddressuse ********************************************************************************/
+		org.hl7.fhir.r4.model.Address.AddressUse locationaddressuse = locationaddress.getUse();
+		if(locationaddressuse!=null) {
+			l.addLctnAddrUse(locationaddressuse.toCode());
+		} else {
+			l.addLctnAddrUse("NULL");
 		}
-		/******************** Lctn_Typ_Cdg_Dsply ********************************************************************************/
-		if(locationtypecoding.hasDisplay()) {
-			l.setLctnTypCdgDsply(String.valueOf(locationtypecoding.getDisplay()));
+
+		/******************** Lctn_Addr_Txt ********************************************************************************/
+		if(locationaddress.hasText()) {
+
+			l.addLctnAddrTxt(String.valueOf(locationaddress.getText()));
+		} else {
+			l.addLctnAddrTxt("NULL");
 		}
-		/******************** Lctn_Typ_Cdg_Cd ********************************************************************************/
-		if(locationtypecoding.hasCode()) {
-			l.setLctnTypCdgCd(String.valueOf(locationtypecoding.getCode()));
-		}
-		/******************** Lctn_Typ_Cdg_UsrSltd ********************************************************************************/
-		if(locationtypecoding.hasUserSelected()) {
-			l.setLctnTypCdgUsrSltd(String.valueOf(locationtypecoding.getUserSelected()));
-		}
-		/******************** Lctn_Typ_Cdg_Sys ********************************************************************************/
-		if(locationtypecoding.hasSystem()) {
-			l.setLctnTypCdgSys(String.valueOf(locationtypecoding.getSystem()));
-		}
-		/******************** Lctn_PartOf ********************************************************************************/
-		if(location.hasPartOf()) {
-			l.setLctnPartOf(String.valueOf(location.getPartOf()));
-		}
+
+
 		/******************** locationstatus ********************************************************************************/
 		org.hl7.fhir.r4.model.Location.LocationStatus locationstatus = location.getStatus();
-		l.setLctnSts(locationstatus.toCode());
+		if(locationstatus!=null) {
+			l.addLctnSts(locationstatus.toCode());
+		} else {
+			l.addLctnSts("NULL");
+		}
+
+		/******************** Lctn_Endpoint ********************************************************************************/
+		if(location.hasEndpoint()) {
+
+			String  array = "[";
+			for(int incr=0; incr<location.getEndpoint().size(); incr++) {
+				array = array + location.getEndpoint().get(incr).getReference() + ",";
+			}
+			array = array.substring(0, array.length() -1);
+			array = array + "]";
+			l.addLctnEndpoint(array);
+
+		} else {
+			l.addLctnEndpoint("NULL");
+		}
+
 
 		/******************** Lctn_Dscrptn ********************************************************************************/
 		if(location.hasDescription()) {
-			l.setLctnDscrptn(String.valueOf(location.getDescription()));
+
+			l.addLctnDscrptn(String.valueOf(location.getDescription()));
+		} else {
+			l.addLctnDscrptn("NULL");
 		}
+
+
+		/******************** locationidentifier ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.Identifier> locationidentifierlist = location.getIdentifier();
+		for(int locationidentifieri = 0; locationidentifieri<locationidentifierlist.size();locationidentifieri++ ) {
+		org.hl7.fhir.r4.model.Identifier  locationidentifier = locationidentifierlist.get(locationidentifieri);
+
+		/******************** Lctn_Id_Vl ********************************************************************************/
+		if(locationidentifieri == 0) {l.addLctnIdVl("[");}
+		if(locationidentifier.hasValue()) {
+
+			l.addLctnIdVl(String.valueOf(locationidentifier.getValue()));
+		} else {
+			l.addLctnIdVl("NULL");
+		}
+
+		if(locationidentifieri == locationidentifierlist.size()-1) {l.addLctnIdVl("]");}
+
+
+		/******************** locationidentifiertype ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept locationidentifiertype = locationidentifier.getType();
+
+		/******************** Lctn_Id_Typ_Txt ********************************************************************************/
+		if(locationidentifieri == 0) {l.addLctnIdTypTxt("[");}
+		if(locationidentifiertype.hasText()) {
+
+			l.addLctnIdTypTxt(String.valueOf(locationidentifiertype.getText()));
+		} else {
+			l.addLctnIdTypTxt("NULL");
+		}
+
+		if(locationidentifieri == locationidentifierlist.size()-1) {l.addLctnIdTypTxt("]");}
+
+
+		/******************** locationidentifiertypecoding ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.Coding> locationidentifiertypecodinglist = locationidentifiertype.getCoding();
+		for(int locationidentifiertypecodingi = 0; locationidentifiertypecodingi<locationidentifiertypecodinglist.size();locationidentifiertypecodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  locationidentifiertypecoding = locationidentifiertypecodinglist.get(locationidentifiertypecodingi);
+
+		/******************** Lctn_Id_Typ_Cdg_Dsply ********************************************************************************/
+		if(locationidentifiertypecodingi == 0) {l.addLctnIdTypCdgDsply("[[");}
+		if(locationidentifiertypecoding.hasDisplay()) {
+
+			l.addLctnIdTypCdgDsply(String.valueOf(locationidentifiertypecoding.getDisplay()));
+		} else {
+			l.addLctnIdTypCdgDsply("NULL");
+		}
+
+		if(locationidentifiertypecodingi == locationidentifiertypecodinglist.size()-1) {l.addLctnIdTypCdgDsply("]]");}
+
+
+		/******************** Lctn_Id_Typ_Cdg_Vrsn ********************************************************************************/
+		if(locationidentifiertypecodingi == 0) {l.addLctnIdTypCdgVrsn("[[");}
+		if(locationidentifiertypecoding.hasVersion()) {
+
+			l.addLctnIdTypCdgVrsn(String.valueOf(locationidentifiertypecoding.getVersion()));
+		} else {
+			l.addLctnIdTypCdgVrsn("NULL");
+		}
+
+		if(locationidentifiertypecodingi == locationidentifiertypecodinglist.size()-1) {l.addLctnIdTypCdgVrsn("]]");}
+
+
+		/******************** Lctn_Id_Typ_Cdg_Cd ********************************************************************************/
+		if(locationidentifiertypecodingi == 0) {l.addLctnIdTypCdgCd("[[");}
+		if(locationidentifiertypecoding.hasCode()) {
+
+			l.addLctnIdTypCdgCd(String.valueOf(locationidentifiertypecoding.getCode()));
+		} else {
+			l.addLctnIdTypCdgCd("NULL");
+		}
+
+		if(locationidentifiertypecodingi == locationidentifiertypecodinglist.size()-1) {l.addLctnIdTypCdgCd("]]");}
+
+
+		/******************** Lctn_Id_Typ_Cdg_UsrSltd ********************************************************************************/
+		if(locationidentifiertypecodingi == 0) {l.addLctnIdTypCdgUsrSltd("[[");}
+		if(locationidentifiertypecoding.hasUserSelected()) {
+
+			l.addLctnIdTypCdgUsrSltd(String.valueOf(locationidentifiertypecoding.getUserSelected()));
+		} else {
+			l.addLctnIdTypCdgUsrSltd("NULL");
+		}
+
+		if(locationidentifiertypecodingi == locationidentifiertypecodinglist.size()-1) {l.addLctnIdTypCdgUsrSltd("]]");}
+
+
+		/******************** Lctn_Id_Typ_Cdg_Sys ********************************************************************************/
+		if(locationidentifiertypecodingi == 0) {l.addLctnIdTypCdgSys("[[");}
+		if(locationidentifiertypecoding.hasSystem()) {
+
+			l.addLctnIdTypCdgSys(String.valueOf(locationidentifiertypecoding.getSystem()));
+		} else {
+			l.addLctnIdTypCdgSys("NULL");
+		}
+
+		if(locationidentifiertypecodingi == locationidentifiertypecodinglist.size()-1) {l.addLctnIdTypCdgSys("]]");}
+
+
+		 };
+		/******************** locationidentifierperiod ********************************************************************************/
+		org.hl7.fhir.r4.model.Period locationidentifierperiod = locationidentifier.getPeriod();
+
+		/******************** Lctn_Id_Prd_Strt ********************************************************************************/
+		if(locationidentifieri == 0) {l.addLctnIdPrdStrt("[");}
+		if(locationidentifierperiod.hasStart()) {
+
+			l.addLctnIdPrdStrt("\""+ca.uhn.fhir.util.DateUtils.formatDate(locationidentifierperiod.getStart())+"\"");
+		} else {
+			l.addLctnIdPrdStrt("NULL");
+		}
+
+		if(locationidentifieri == locationidentifierlist.size()-1) {l.addLctnIdPrdStrt("]");}
+
+
+		/******************** Lctn_Id_Prd_End ********************************************************************************/
+		if(locationidentifieri == 0) {l.addLctnIdPrdEnd("[");}
+		if(locationidentifierperiod.hasEnd()) {
+
+			l.addLctnIdPrdEnd("\""+ca.uhn.fhir.util.DateUtils.formatDate(locationidentifierperiod.getEnd())+"\"");
+		} else {
+			l.addLctnIdPrdEnd("NULL");
+		}
+
+		if(locationidentifieri == locationidentifierlist.size()-1) {l.addLctnIdPrdEnd("]");}
+
+
+		/******************** locationidentifieruse ********************************************************************************/
+		org.hl7.fhir.r4.model.Identifier.IdentifierUse locationidentifieruse = locationidentifier.getUse();
+		if(locationidentifieruse!=null) {
+		if(locationidentifieri == 0) {
+
+		l.addLctnIdUse("[");		}
+			l.addLctnIdUse(locationidentifieruse.toCode());
+		if(locationidentifieri == locationidentifierlist.size()-1) {
+
+		l.addLctnIdUse("]");		}
+
+		} else {
+			l.addLctnIdUse("NULL");
+		}
+
+		/******************** Lctn_Id_Assigner ********************************************************************************/
+		if(locationidentifieri == 0) {l.addLctnIdAssigner("[");}
+		if(locationidentifier.hasAssigner()) {
+
+			if(locationidentifier.getAssigner().getReference() != null) {
+			l.addLctnIdAssigner(locationidentifier.getAssigner().getReference());
+			}
+		} else {
+			l.addLctnIdAssigner("NULL");
+		}
+
+		if(locationidentifieri == locationidentifierlist.size()-1) {l.addLctnIdAssigner("]");}
+
+
+		/******************** Lctn_Id_Sys ********************************************************************************/
+		if(locationidentifieri == 0) {l.addLctnIdSys("[");}
+		if(locationidentifier.hasSystem()) {
+
+			l.addLctnIdSys(String.valueOf(locationidentifier.getSystem()));
+		} else {
+			l.addLctnIdSys("NULL");
+		}
+
+		if(locationidentifieri == locationidentifierlist.size()-1) {l.addLctnIdSys("]");}
+
+
+		 };
+		/******************** locationoperationalstatus ********************************************************************************/
+		org.hl7.fhir.r4.model.Coding locationoperationalstatus = location.getOperationalStatus();
+
+		/******************** Lctn_OprtnalSts_Dsply ********************************************************************************/
+		if(locationoperationalstatus.hasDisplay()) {
+
+			l.addLctnOprtnalStsDsply(String.valueOf(locationoperationalstatus.getDisplay()));
+		} else {
+			l.addLctnOprtnalStsDsply("NULL");
+		}
+
+
+		/******************** Lctn_OprtnalSts_Vrsn ********************************************************************************/
+		if(locationoperationalstatus.hasVersion()) {
+
+			l.addLctnOprtnalStsVrsn(String.valueOf(locationoperationalstatus.getVersion()));
+		} else {
+			l.addLctnOprtnalStsVrsn("NULL");
+		}
+
+
+		/******************** Lctn_OprtnalSts_Cd ********************************************************************************/
+		if(locationoperationalstatus.hasCode()) {
+
+			l.addLctnOprtnalStsCd(String.valueOf(locationoperationalstatus.getCode()));
+		} else {
+			l.addLctnOprtnalStsCd("NULL");
+		}
+
+
+		/******************** Lctn_OprtnalSts_UsrSltd ********************************************************************************/
+		if(locationoperationalstatus.hasUserSelected()) {
+
+			l.addLctnOprtnalStsUsrSltd(String.valueOf(locationoperationalstatus.getUserSelected()));
+		} else {
+			l.addLctnOprtnalStsUsrSltd("NULL");
+		}
+
+
+		/******************** Lctn_OprtnalSts_Sys ********************************************************************************/
+		if(locationoperationalstatus.hasSystem()) {
+
+			l.addLctnOprtnalStsSys(String.valueOf(locationoperationalstatus.getSystem()));
+		} else {
+			l.addLctnOprtnalStsSys("NULL");
+		}
+
+
+		/******************** locationposition ********************************************************************************/
+		org.hl7.fhir.r4.model.Location.LocationPositionComponent locationposition = location.getPosition();
+
+		/******************** Lctn_Position_Longitude ********************************************************************************/
+		if(locationposition.hasLongitude()) {
+
+			l.addLctnPositionLongitude(String.valueOf(locationposition.getLongitude()));
+		} else {
+			l.addLctnPositionLongitude("NULL");
+		}
+
+
+		/******************** Lctn_Position_Latitude ********************************************************************************/
+		if(locationposition.hasLatitude()) {
+
+			l.addLctnPositionLatitude(String.valueOf(locationposition.getLatitude()));
+		} else {
+			l.addLctnPositionLatitude("NULL");
+		}
+
+
+		/******************** Lctn_Position_Altitude ********************************************************************************/
+		if(locationposition.hasAltitude()) {
+
+			l.addLctnPositionAltitude(String.valueOf(locationposition.getAltitude()));
+		} else {
+			l.addLctnPositionAltitude("NULL");
+		}
+
+
 		/******************** locationphysicaltype ********************************************************************************/
 		org.hl7.fhir.r4.model.CodeableConcept locationphysicaltype = location.getPhysicalType();
 
 		/******************** Lctn_PhysclTyp_Txt ********************************************************************************/
 		if(locationphysicaltype.hasText()) {
-			l.setLctnPhysclTypTxt(String.valueOf(locationphysicaltype.getText()));
+
+			l.addLctnPhysclTypTxt(String.valueOf(locationphysicaltype.getText()));
+		} else {
+			l.addLctnPhysclTypTxt("NULL");
 		}
+
+
 		/******************** locationphysicaltypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding locationphysicaltypecoding = locationphysicaltype.getCodingFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.Coding> locationphysicaltypecodinglist = locationphysicaltype.getCoding();
+		for(int locationphysicaltypecodingi = 0; locationphysicaltypecodingi<locationphysicaltypecodinglist.size();locationphysicaltypecodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  locationphysicaltypecoding = locationphysicaltypecodinglist.get(locationphysicaltypecodingi);
+
+		/******************** Lctn_PhysclTyp_Cdg_Dsply ********************************************************************************/
+		if(locationphysicaltypecodingi == 0) {l.addLctnPhysclTypCdgDsply("[");}
+		if(locationphysicaltypecoding.hasDisplay()) {
+
+			l.addLctnPhysclTypCdgDsply(String.valueOf(locationphysicaltypecoding.getDisplay()));
+		} else {
+			l.addLctnPhysclTypCdgDsply("NULL");
+		}
+
+		if(locationphysicaltypecodingi == locationphysicaltypecodinglist.size()-1) {l.addLctnPhysclTypCdgDsply("]");}
+
 
 		/******************** Lctn_PhysclTyp_Cdg_Vrsn ********************************************************************************/
+		if(locationphysicaltypecodingi == 0) {l.addLctnPhysclTypCdgVrsn("[");}
 		if(locationphysicaltypecoding.hasVersion()) {
-			l.setLctnPhysclTypCdgVrsn(String.valueOf(locationphysicaltypecoding.getVersion()));
-		}
-		/******************** Lctn_PhysclTyp_Cdg_Dsply ********************************************************************************/
-		if(locationphysicaltypecoding.hasDisplay()) {
-			l.setLctnPhysclTypCdgDsply(String.valueOf(locationphysicaltypecoding.getDisplay()));
-		}
-		/******************** Lctn_PhysclTyp_Cdg_Cd ********************************************************************************/
-		if(locationphysicaltypecoding.hasCode()) {
-			l.setLctnPhysclTypCdgCd(String.valueOf(locationphysicaltypecoding.getCode()));
-		}
-		/******************** Lctn_PhysclTyp_Cdg_UsrSltd ********************************************************************************/
-		if(locationphysicaltypecoding.hasUserSelected()) {
-			l.setLctnPhysclTypCdgUsrSltd(String.valueOf(locationphysicaltypecoding.getUserSelected()));
-		}
-		/******************** Lctn_PhysclTyp_Cdg_Sys ********************************************************************************/
-		if(locationphysicaltypecoding.hasSystem()) {
-			l.setLctnPhysclTypCdgSys(String.valueOf(locationphysicaltypecoding.getSystem()));
-		}
-		/******************** locationposition ********************************************************************************/
-		org.hl7.fhir.r4.model.Location.LocationPositionComponent locationposition = location.getPosition();
 
-		/******************** Lctn_Position_Latitude ********************************************************************************/
-		if(locationposition.hasLatitude()) {
-			l.setLctnPositionLatitude(String.valueOf(locationposition.getLatitude()));
+			l.addLctnPhysclTypCdgVrsn(String.valueOf(locationphysicaltypecoding.getVersion()));
+		} else {
+			l.addLctnPhysclTypCdgVrsn("NULL");
 		}
-		/******************** Lctn_Position_Longitude ********************************************************************************/
-		if(locationposition.hasLongitude()) {
-			l.setLctnPositionLongitude(String.valueOf(locationposition.getLongitude()));
+
+		if(locationphysicaltypecodingi == locationphysicaltypecodinglist.size()-1) {l.addLctnPhysclTypCdgVrsn("]");}
+
+
+		/******************** Lctn_PhysclTyp_Cdg_Cd ********************************************************************************/
+		if(locationphysicaltypecodingi == 0) {l.addLctnPhysclTypCdgCd("[");}
+		if(locationphysicaltypecoding.hasCode()) {
+
+			l.addLctnPhysclTypCdgCd(String.valueOf(locationphysicaltypecoding.getCode()));
+		} else {
+			l.addLctnPhysclTypCdgCd("NULL");
 		}
-		/******************** Lctn_Position_Altitude ********************************************************************************/
-		if(locationposition.hasAltitude()) {
-			l.setLctnPositionAltitude(String.valueOf(locationposition.getAltitude()));
+
+		if(locationphysicaltypecodingi == locationphysicaltypecodinglist.size()-1) {l.addLctnPhysclTypCdgCd("]");}
+
+
+		/******************** Lctn_PhysclTyp_Cdg_UsrSltd ********************************************************************************/
+		if(locationphysicaltypecodingi == 0) {l.addLctnPhysclTypCdgUsrSltd("[");}
+		if(locationphysicaltypecoding.hasUserSelected()) {
+
+			l.addLctnPhysclTypCdgUsrSltd(String.valueOf(locationphysicaltypecoding.getUserSelected()));
+		} else {
+			l.addLctnPhysclTypCdgUsrSltd("NULL");
 		}
+
+		if(locationphysicaltypecodingi == locationphysicaltypecodinglist.size()-1) {l.addLctnPhysclTypCdgUsrSltd("]");}
+
+
+		/******************** Lctn_PhysclTyp_Cdg_Sys ********************************************************************************/
+		if(locationphysicaltypecodingi == 0) {l.addLctnPhysclTypCdgSys("[");}
+		if(locationphysicaltypecoding.hasSystem()) {
+
+			l.addLctnPhysclTypCdgSys(String.valueOf(locationphysicaltypecoding.getSystem()));
+		} else {
+			l.addLctnPhysclTypCdgSys("NULL");
+		}
+
+		if(locationphysicaltypecodingi == locationphysicaltypecodinglist.size()-1) {l.addLctnPhysclTypCdgSys("]");}
+
+
+		 };
 		/******************** locationmode ********************************************************************************/
 		org.hl7.fhir.r4.model.Location.LocationMode locationmode = location.getMode();
-		l.setLctnMode(locationmode.toCode());
+		if(locationmode!=null) {
+			l.addLctnMode(locationmode.toCode());
+		} else {
+			l.addLctnMode("NULL");
+		}
 
 		/******************** locationhoursofoperation ********************************************************************************/
-		org.hl7.fhir.r4.model.Location.LocationHoursOfOperationComponent locationhoursofoperation = location.getHoursOfOperationFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.Location.LocationHoursOfOperationComponent> locationhoursofoperationlist = location.getHoursOfOperation();
+		for(int locationhoursofoperationi = 0; locationhoursofoperationi<locationhoursofoperationlist.size();locationhoursofoperationi++ ) {
+		org.hl7.fhir.r4.model.Location.LocationHoursOfOperationComponent  locationhoursofoperation = locationhoursofoperationlist.get(locationhoursofoperationi);
 
 		/******************** Lctn_HoursOfOprtn_OpeningTime ********************************************************************************/
+		if(locationhoursofoperationi == 0) {l.addLctnHoursOfOprtnOpeningTime("[");}
 		if(locationhoursofoperation.hasOpeningTime()) {
-			l.setLctnHoursOfOprtnOpeningTime(String.valueOf(locationhoursofoperation.getOpeningTime()));
+
+			l.addLctnHoursOfOprtnOpeningTime(String.valueOf(locationhoursofoperation.getOpeningTime()));
+		} else {
+			l.addLctnHoursOfOprtnOpeningTime("NULL");
 		}
+
+		if(locationhoursofoperationi == locationhoursofoperationlist.size()-1) {l.addLctnHoursOfOprtnOpeningTime("]");}
+
+
 		/******************** Lctn_HoursOfOprtn_ClosingTime ********************************************************************************/
+		if(locationhoursofoperationi == 0) {l.addLctnHoursOfOprtnClosingTime("[");}
 		if(locationhoursofoperation.hasClosingTime()) {
-			l.setLctnHoursOfOprtnClosingTime(String.valueOf(locationhoursofoperation.getClosingTime()));
+
+			l.addLctnHoursOfOprtnClosingTime(String.valueOf(locationhoursofoperation.getClosingTime()));
+		} else {
+			l.addLctnHoursOfOprtnClosingTime("NULL");
 		}
+
+		if(locationhoursofoperationi == locationhoursofoperationlist.size()-1) {l.addLctnHoursOfOprtnClosingTime("]");}
+
+
 		/******************** Lctn_HoursOfOprtn_AllDay ********************************************************************************/
+		if(locationhoursofoperationi == 0) {l.addLctnHoursOfOprtnAllDay("[");}
 		if(locationhoursofoperation.hasAllDay()) {
-			l.setLctnHoursOfOprtnAllDay(String.valueOf(locationhoursofoperation.getAllDay()));
+
+			l.addLctnHoursOfOprtnAllDay(String.valueOf(locationhoursofoperation.getAllDay()));
+		} else {
+			l.addLctnHoursOfOprtnAllDay("NULL");
 		}
+
+		if(locationhoursofoperationi == locationhoursofoperationlist.size()-1) {l.addLctnHoursOfOprtnAllDay("]");}
+
+
+		/******************** locationhoursofoperationdaysofweek ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.Enumeration<org.hl7.fhir.r4.model.Location.DaysOfWeek>> locationhoursofoperationdaysofweeklist = locationhoursofoperation.getDaysOfWeek();
+		for(int locationhoursofoperationdaysofweeki = 0; locationhoursofoperationdaysofweeki<locationhoursofoperationdaysofweeklist.size();locationhoursofoperationdaysofweeki++ ) {
+		org.hl7.fhir.r4.model.Enumeration<org.hl7.fhir.r4.model.Location.DaysOfWeek>  locationhoursofoperationdaysofweek = locationhoursofoperationdaysofweeklist.get(locationhoursofoperationdaysofweeki);
+		if(locationhoursofoperationdaysofweek!=null) {
+			l.addLctnHoursOfOprtnDaysOfWeek(locationhoursofoperationdaysofweek.getCode());
+		} else {
+			l.addLctnHoursOfOprtnDaysOfWeek("NULL");
+		}
+		 };
+
+		 };
+		/******************** Lctn_AvailabilityExceptions ********************************************************************************/
+		if(location.hasAvailabilityExceptions()) {
+
+			l.addLctnAvailabilityExceptions(String.valueOf(location.getAvailabilityExceptions()));
+		} else {
+			l.addLctnAvailabilityExceptions("NULL");
+		}
+
+
 		/******************** locationtelecom ********************************************************************************/
-		org.hl7.fhir.r4.model.ContactPoint locationtelecom = location.getTelecomFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.ContactPoint> locationtelecomlist = location.getTelecom();
+		for(int locationtelecomi = 0; locationtelecomi<locationtelecomlist.size();locationtelecomi++ ) {
+		org.hl7.fhir.r4.model.ContactPoint  locationtelecom = locationtelecomlist.get(locationtelecomi);
 
 		/******************** Lctn_Tlcm_Vl ********************************************************************************/
+		if(locationtelecomi == 0) {l.addLctnTlcmVl("[");}
 		if(locationtelecom.hasValue()) {
-			l.setLctnTlcmVl(String.valueOf(locationtelecom.getValue()));
+
+			l.addLctnTlcmVl(String.valueOf(locationtelecom.getValue()));
+		} else {
+			l.addLctnTlcmVl("NULL");
 		}
+
+		if(locationtelecomi == locationtelecomlist.size()-1) {l.addLctnTlcmVl("]");}
+
+
 		/******************** locationtelecomperiod ********************************************************************************/
 		org.hl7.fhir.r4.model.Period locationtelecomperiod = locationtelecom.getPeriod();
 
 		/******************** Lctn_Tlcm_Prd_Strt ********************************************************************************/
+		if(locationtelecomi == 0) {l.addLctnTlcmPrdStrt("[");}
 		if(locationtelecomperiod.hasStart()) {
-			l.setLctnTlcmPrdStrt(String.valueOf(locationtelecomperiod.getStart()));
+
+			l.addLctnTlcmPrdStrt("\""+ca.uhn.fhir.util.DateUtils.formatDate(locationtelecomperiod.getStart())+"\"");
+		} else {
+			l.addLctnTlcmPrdStrt("NULL");
 		}
+
+		if(locationtelecomi == locationtelecomlist.size()-1) {l.addLctnTlcmPrdStrt("]");}
+
+
 		/******************** Lctn_Tlcm_Prd_End ********************************************************************************/
+		if(locationtelecomi == 0) {l.addLctnTlcmPrdEnd("[");}
 		if(locationtelecomperiod.hasEnd()) {
-			l.setLctnTlcmPrdEnd(String.valueOf(locationtelecomperiod.getEnd()));
+
+			l.addLctnTlcmPrdEnd("\""+ca.uhn.fhir.util.DateUtils.formatDate(locationtelecomperiod.getEnd())+"\"");
+		} else {
+			l.addLctnTlcmPrdEnd("NULL");
 		}
-		/******************** locationtelecomsystem ********************************************************************************/
-		org.hl7.fhir.r4.model.ContactPoint.ContactPointSystem locationtelecomsystem = locationtelecom.getSystem();
-		l.setLctnTlcmSys(locationtelecomsystem.toCode());
+
+		if(locationtelecomi == locationtelecomlist.size()-1) {l.addLctnTlcmPrdEnd("]");}
+
 
 		/******************** locationtelecomuse ********************************************************************************/
 		org.hl7.fhir.r4.model.ContactPoint.ContactPointUse locationtelecomuse = locationtelecom.getUse();
-		l.setLctnTlcmUse(locationtelecomuse.toCode());
+		if(locationtelecomuse!=null) {
+		if(locationtelecomi == 0) {
+
+		l.addLctnTlcmUse("[");		}
+			l.addLctnTlcmUse(locationtelecomuse.toCode());
+		if(locationtelecomi == locationtelecomlist.size()-1) {
+
+		l.addLctnTlcmUse("]");		}
+
+		} else {
+			l.addLctnTlcmUse("NULL");
+		}
+
+		/******************** locationtelecomsystem ********************************************************************************/
+		org.hl7.fhir.r4.model.ContactPoint.ContactPointSystem locationtelecomsystem = locationtelecom.getSystem();
+		if(locationtelecomsystem!=null) {
+		if(locationtelecomi == 0) {
+
+		l.addLctnTlcmSys("[");		}
+			l.addLctnTlcmSys(locationtelecomsystem.toCode());
+		if(locationtelecomi == locationtelecomlist.size()-1) {
+
+		l.addLctnTlcmSys("]");		}
+
+		} else {
+			l.addLctnTlcmSys("NULL");
+		}
 
 		/******************** Lctn_Tlcm_Rnk ********************************************************************************/
+		if(locationtelecomi == 0) {l.addLctnTlcmRnk("[");}
 		if(locationtelecom.hasRank()) {
-			l.setLctnTlcmRnk(String.valueOf(locationtelecom.getRank()));
-		}
-		/******************** locationidentifier ********************************************************************************/
-		org.hl7.fhir.r4.model.Identifier locationidentifier = location.getIdentifierFirstRep();
 
-		/******************** Lctn_Id_Vl ********************************************************************************/
-		if(locationidentifier.hasValue()) {
-			l.setLctnIdVl(String.valueOf(locationidentifier.getValue()));
+			l.addLctnTlcmRnk(String.valueOf(locationtelecom.getRank()));
+		} else {
+			l.addLctnTlcmRnk("NULL");
 		}
-		/******************** locationidentifiertype ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept locationidentifiertype = locationidentifier.getType();
 
-		/******************** Lctn_Id_Typ_Txt ********************************************************************************/
-		if(locationidentifiertype.hasText()) {
-			l.setLctnIdTypTxt(String.valueOf(locationidentifiertype.getText()));
-		}
-		/******************** locationidentifiertypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding locationidentifiertypecoding = locationidentifiertype.getCodingFirstRep();
+		if(locationtelecomi == locationtelecomlist.size()-1) {l.addLctnTlcmRnk("]");}
 
-		/******************** Lctn_Id_Typ_Cdg_Vrsn ********************************************************************************/
-		if(locationidentifiertypecoding.hasVersion()) {
-			l.setLctnIdTypCdgVrsn(String.valueOf(locationidentifiertypecoding.getVersion()));
-		}
-		/******************** Lctn_Id_Typ_Cdg_Dsply ********************************************************************************/
-		if(locationidentifiertypecoding.hasDisplay()) {
-			l.setLctnIdTypCdgDsply(String.valueOf(locationidentifiertypecoding.getDisplay()));
-		}
-		/******************** Lctn_Id_Typ_Cdg_Cd ********************************************************************************/
-		if(locationidentifiertypecoding.hasCode()) {
-			l.setLctnIdTypCdgCd(String.valueOf(locationidentifiertypecoding.getCode()));
-		}
-		/******************** Lctn_Id_Typ_Cdg_UsrSltd ********************************************************************************/
-		if(locationidentifiertypecoding.hasUserSelected()) {
-			l.setLctnIdTypCdgUsrSltd(String.valueOf(locationidentifiertypecoding.getUserSelected()));
-		}
-		/******************** Lctn_Id_Typ_Cdg_Sys ********************************************************************************/
-		if(locationidentifiertypecoding.hasSystem()) {
-			l.setLctnIdTypCdgSys(String.valueOf(locationidentifiertypecoding.getSystem()));
-		}
-		/******************** locationidentifierperiod ********************************************************************************/
-		org.hl7.fhir.r4.model.Period locationidentifierperiod = locationidentifier.getPeriod();
 
-		/******************** Lctn_Id_Prd_Strt ********************************************************************************/
-		if(locationidentifierperiod.hasStart()) {
-			l.setLctnIdPrdStrt(String.valueOf(locationidentifierperiod.getStart()));
-		}
-		/******************** Lctn_Id_Prd_End ********************************************************************************/
-		if(locationidentifierperiod.hasEnd()) {
-			l.setLctnIdPrdEnd(String.valueOf(locationidentifierperiod.getEnd()));
-		}
-		/******************** Lctn_Id_Assigner ********************************************************************************/
-		if(locationidentifier.hasAssigner()) {
-			l.setLctnIdAssigner(String.valueOf(locationidentifier.getAssigner()));
-		}
-		/******************** Lctn_Id_Sys ********************************************************************************/
-		if(locationidentifier.hasSystem()) {
-			l.setLctnIdSys(String.valueOf(locationidentifier.getSystem()));
-		}
-		/******************** locationidentifieruse ********************************************************************************/
-		org.hl7.fhir.r4.model.Identifier.IdentifierUse locationidentifieruse = locationidentifier.getUse();
-		l.setLctnIdUse(locationidentifieruse.toCode());
+		 };
+		/******************** Lctn_Alias ********************************************************************************/
+		if(location.hasAlias()) {
 
-		/******************** Lctn_Endpoint ********************************************************************************/
-		if(location.hasEndpoint()) {
-			l.setLctnEndpoint(String.valueOf(location.getEndpointFirstRep()));
+			String  array = "[";
+			for(int incr=0; incr<location.getAlias().size(); incr++) {
+				array = array + location.getAlias().get(incr).getValueAsString() + ",";
+			}
+			array = array.substring(0, array.length() -1);
+			array = array + "]";
+			l.addLctnAlias(array);
+
+		} else {
+			l.addLctnAlias("NULL");
 		}
+
+
 		/******************** Lctn_ManagingOrgnztn ********************************************************************************/
 		if(location.hasManagingOrganization()) {
-			l.setLctnManagingOrgnztn(String.valueOf(location.getManagingOrganization()));
-		}
-		/******************** locationoperationalstatus ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding locationoperationalstatus = location.getOperationalStatus();
 
-		/******************** Lctn_OprtnalSts_Vrsn ********************************************************************************/
-		if(locationoperationalstatus.hasVersion()) {
-			l.setLctnOprtnalStsVrsn(String.valueOf(locationoperationalstatus.getVersion()));
+			if(location.getManagingOrganization().getReference() != null) {
+			l.addLctnManagingOrgnztn(location.getManagingOrganization().getReference());
+			}
+		} else {
+			l.addLctnManagingOrgnztn("NULL");
 		}
-		/******************** Lctn_OprtnalSts_Dsply ********************************************************************************/
-		if(locationoperationalstatus.hasDisplay()) {
-			l.setLctnOprtnalStsDsply(String.valueOf(locationoperationalstatus.getDisplay()));
+
+
+		/******************** Lctn_PartOf ********************************************************************************/
+		if(location.hasPartOf()) {
+
+			if(location.getPartOf().getReference() != null) {
+			l.addLctnPartOf(location.getPartOf().getReference());
+			}
+		} else {
+			l.addLctnPartOf("NULL");
 		}
-		/******************** Lctn_OprtnalSts_Cd ********************************************************************************/
-		if(locationoperationalstatus.hasCode()) {
-			l.setLctnOprtnalStsCd(String.valueOf(locationoperationalstatus.getCode()));
-		}
-		/******************** Lctn_OprtnalSts_UsrSltd ********************************************************************************/
-		if(locationoperationalstatus.hasUserSelected()) {
-			l.setLctnOprtnalStsUsrSltd(String.valueOf(locationoperationalstatus.getUserSelected()));
-		}
-		/******************** Lctn_OprtnalSts_Sys ********************************************************************************/
-		if(locationoperationalstatus.hasSystem()) {
-			l.setLctnOprtnalStsSys(String.valueOf(locationoperationalstatus.getSystem()));
-		}
-		/******************** Lctn_AvailabilityExceptions ********************************************************************************/
-		if(location.hasAvailabilityExceptions()) {
-			l.setLctnAvailabilityExceptions(String.valueOf(location.getAvailabilityExceptions()));
-		}
+
+
 		return l;
 	}
 }

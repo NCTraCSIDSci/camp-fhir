@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Jun 27, 2022, 10:40:10 AM by Hibernate Tools 5.6.1.Final
+// Generated Aug 17, 2022, 11:08:48 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -54,6 +54,20 @@ public class Flag  implements java.io.Serializable {
         this.id = id;
     }
     
+    public void addId(String id) {
+    	if( id != null ) {
+	    	if( this.id == null ) {
+	        	this.id = id;
+	        } else if(this.id.substring(this.id.length() - 1).equals("]") & id.equals("[")) {
+	        	this.id = this.id+ "," + id;
+	        } else if(id.equals("[") | id.equals("]") | this.id.substring(this.id.length() - 1).equals("[")) {
+	        	this.id = this.id+id;
+	        } else  {
+	            this.id = this.id+ "," +id;
+	        }
+        }
+    }
+    
     
     
     public String getFlagAthr() {
@@ -62,6 +76,20 @@ public class Flag  implements java.io.Serializable {
     
     public void setFlagAthr(String flagAthr) {
         this.flagAthr = flagAthr;
+    }
+    
+    public void addFlagAthr(String flagAthr) {
+    	if( flagAthr != null ) {
+	    	if( this.flagAthr == null ) {
+	        	this.flagAthr = flagAthr;
+	        } else if(this.flagAthr.substring(this.flagAthr.length() - 1).equals("]") & flagAthr.equals("[")) {
+	        	this.flagAthr = this.flagAthr+ "," + flagAthr;
+	        } else if(flagAthr.equals("[") | flagAthr.equals("]") | this.flagAthr.substring(this.flagAthr.length() - 1).equals("[")) {
+	        	this.flagAthr = this.flagAthr+flagAthr;
+	        } else  {
+	            this.flagAthr = this.flagAthr+ "," +flagAthr;
+	        }
+        }
     }
     
     
@@ -74,6 +102,20 @@ public class Flag  implements java.io.Serializable {
         this.flagCtgryCdgCd = flagCtgryCdgCd;
     }
     
+    public void addFlagCtgryCdgCd(String flagCtgryCdgCd) {
+    	if( flagCtgryCdgCd != null ) {
+	    	if( this.flagCtgryCdgCd == null ) {
+	        	this.flagCtgryCdgCd = flagCtgryCdgCd;
+	        } else if(this.flagCtgryCdgCd.substring(this.flagCtgryCdgCd.length() - 1).equals("]") & flagCtgryCdgCd.equals("[")) {
+	        	this.flagCtgryCdgCd = this.flagCtgryCdgCd+ "," + flagCtgryCdgCd;
+	        } else if(flagCtgryCdgCd.equals("[") | flagCtgryCdgCd.equals("]") | this.flagCtgryCdgCd.substring(this.flagCtgryCdgCd.length() - 1).equals("[")) {
+	        	this.flagCtgryCdgCd = this.flagCtgryCdgCd+flagCtgryCdgCd;
+	        } else  {
+	            this.flagCtgryCdgCd = this.flagCtgryCdgCd+ "," +flagCtgryCdgCd;
+	        }
+        }
+    }
+    
     
     
     public String getFlagCtgryCdgDsply() {
@@ -82,6 +124,20 @@ public class Flag  implements java.io.Serializable {
     
     public void setFlagCtgryCdgDsply(String flagCtgryCdgDsply) {
         this.flagCtgryCdgDsply = flagCtgryCdgDsply;
+    }
+    
+    public void addFlagCtgryCdgDsply(String flagCtgryCdgDsply) {
+    	if( flagCtgryCdgDsply != null ) {
+	    	if( this.flagCtgryCdgDsply == null ) {
+	        	this.flagCtgryCdgDsply = flagCtgryCdgDsply;
+	        } else if(this.flagCtgryCdgDsply.substring(this.flagCtgryCdgDsply.length() - 1).equals("]") & flagCtgryCdgDsply.equals("[")) {
+	        	this.flagCtgryCdgDsply = this.flagCtgryCdgDsply+ "," + flagCtgryCdgDsply;
+	        } else if(flagCtgryCdgDsply.equals("[") | flagCtgryCdgDsply.equals("]") | this.flagCtgryCdgDsply.substring(this.flagCtgryCdgDsply.length() - 1).equals("[")) {
+	        	this.flagCtgryCdgDsply = this.flagCtgryCdgDsply+flagCtgryCdgDsply;
+	        } else  {
+	            this.flagCtgryCdgDsply = this.flagCtgryCdgDsply+ "," +flagCtgryCdgDsply;
+	        }
+        }
     }
     
     
@@ -94,6 +150,20 @@ public class Flag  implements java.io.Serializable {
         this.flagCtgryCdgSys = flagCtgryCdgSys;
     }
     
+    public void addFlagCtgryCdgSys(String flagCtgryCdgSys) {
+    	if( flagCtgryCdgSys != null ) {
+	    	if( this.flagCtgryCdgSys == null ) {
+	        	this.flagCtgryCdgSys = flagCtgryCdgSys;
+	        } else if(this.flagCtgryCdgSys.substring(this.flagCtgryCdgSys.length() - 1).equals("]") & flagCtgryCdgSys.equals("[")) {
+	        	this.flagCtgryCdgSys = this.flagCtgryCdgSys+ "," + flagCtgryCdgSys;
+	        } else if(flagCtgryCdgSys.equals("[") | flagCtgryCdgSys.equals("]") | this.flagCtgryCdgSys.substring(this.flagCtgryCdgSys.length() - 1).equals("[")) {
+	        	this.flagCtgryCdgSys = this.flagCtgryCdgSys+flagCtgryCdgSys;
+	        } else  {
+	            this.flagCtgryCdgSys = this.flagCtgryCdgSys+ "," +flagCtgryCdgSys;
+	        }
+        }
+    }
+    
     
     
     public String getFlagCtgryCdgUsrSltd() {
@@ -102,6 +172,20 @@ public class Flag  implements java.io.Serializable {
     
     public void setFlagCtgryCdgUsrSltd(String flagCtgryCdgUsrSltd) {
         this.flagCtgryCdgUsrSltd = flagCtgryCdgUsrSltd;
+    }
+    
+    public void addFlagCtgryCdgUsrSltd(String flagCtgryCdgUsrSltd) {
+    	if( flagCtgryCdgUsrSltd != null ) {
+	    	if( this.flagCtgryCdgUsrSltd == null ) {
+	        	this.flagCtgryCdgUsrSltd = flagCtgryCdgUsrSltd;
+	        } else if(this.flagCtgryCdgUsrSltd.substring(this.flagCtgryCdgUsrSltd.length() - 1).equals("]") & flagCtgryCdgUsrSltd.equals("[")) {
+	        	this.flagCtgryCdgUsrSltd = this.flagCtgryCdgUsrSltd+ "," + flagCtgryCdgUsrSltd;
+	        } else if(flagCtgryCdgUsrSltd.equals("[") | flagCtgryCdgUsrSltd.equals("]") | this.flagCtgryCdgUsrSltd.substring(this.flagCtgryCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.flagCtgryCdgUsrSltd = this.flagCtgryCdgUsrSltd+flagCtgryCdgUsrSltd;
+	        } else  {
+	            this.flagCtgryCdgUsrSltd = this.flagCtgryCdgUsrSltd+ "," +flagCtgryCdgUsrSltd;
+	        }
+        }
     }
     
     
@@ -114,6 +198,20 @@ public class Flag  implements java.io.Serializable {
         this.flagCtgryCdgVrsn = flagCtgryCdgVrsn;
     }
     
+    public void addFlagCtgryCdgVrsn(String flagCtgryCdgVrsn) {
+    	if( flagCtgryCdgVrsn != null ) {
+	    	if( this.flagCtgryCdgVrsn == null ) {
+	        	this.flagCtgryCdgVrsn = flagCtgryCdgVrsn;
+	        } else if(this.flagCtgryCdgVrsn.substring(this.flagCtgryCdgVrsn.length() - 1).equals("]") & flagCtgryCdgVrsn.equals("[")) {
+	        	this.flagCtgryCdgVrsn = this.flagCtgryCdgVrsn+ "," + flagCtgryCdgVrsn;
+	        } else if(flagCtgryCdgVrsn.equals("[") | flagCtgryCdgVrsn.equals("]") | this.flagCtgryCdgVrsn.substring(this.flagCtgryCdgVrsn.length() - 1).equals("[")) {
+	        	this.flagCtgryCdgVrsn = this.flagCtgryCdgVrsn+flagCtgryCdgVrsn;
+	        } else  {
+	            this.flagCtgryCdgVrsn = this.flagCtgryCdgVrsn+ "," +flagCtgryCdgVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getFlagCtgryTxt() {
@@ -122,6 +220,20 @@ public class Flag  implements java.io.Serializable {
     
     public void setFlagCtgryTxt(String flagCtgryTxt) {
         this.flagCtgryTxt = flagCtgryTxt;
+    }
+    
+    public void addFlagCtgryTxt(String flagCtgryTxt) {
+    	if( flagCtgryTxt != null ) {
+	    	if( this.flagCtgryTxt == null ) {
+	        	this.flagCtgryTxt = flagCtgryTxt;
+	        } else if(this.flagCtgryTxt.substring(this.flagCtgryTxt.length() - 1).equals("]") & flagCtgryTxt.equals("[")) {
+	        	this.flagCtgryTxt = this.flagCtgryTxt+ "," + flagCtgryTxt;
+	        } else if(flagCtgryTxt.equals("[") | flagCtgryTxt.equals("]") | this.flagCtgryTxt.substring(this.flagCtgryTxt.length() - 1).equals("[")) {
+	        	this.flagCtgryTxt = this.flagCtgryTxt+flagCtgryTxt;
+	        } else  {
+	            this.flagCtgryTxt = this.flagCtgryTxt+ "," +flagCtgryTxt;
+	        }
+        }
     }
     
     
@@ -134,6 +246,20 @@ public class Flag  implements java.io.Serializable {
         this.flagCdCdgCd = flagCdCdgCd;
     }
     
+    public void addFlagCdCdgCd(String flagCdCdgCd) {
+    	if( flagCdCdgCd != null ) {
+	    	if( this.flagCdCdgCd == null ) {
+	        	this.flagCdCdgCd = flagCdCdgCd;
+	        } else if(this.flagCdCdgCd.substring(this.flagCdCdgCd.length() - 1).equals("]") & flagCdCdgCd.equals("[")) {
+	        	this.flagCdCdgCd = this.flagCdCdgCd+ "," + flagCdCdgCd;
+	        } else if(flagCdCdgCd.equals("[") | flagCdCdgCd.equals("]") | this.flagCdCdgCd.substring(this.flagCdCdgCd.length() - 1).equals("[")) {
+	        	this.flagCdCdgCd = this.flagCdCdgCd+flagCdCdgCd;
+	        } else  {
+	            this.flagCdCdgCd = this.flagCdCdgCd+ "," +flagCdCdgCd;
+	        }
+        }
+    }
+    
     
     
     public String getFlagCdCdgDsply() {
@@ -142,6 +268,20 @@ public class Flag  implements java.io.Serializable {
     
     public void setFlagCdCdgDsply(String flagCdCdgDsply) {
         this.flagCdCdgDsply = flagCdCdgDsply;
+    }
+    
+    public void addFlagCdCdgDsply(String flagCdCdgDsply) {
+    	if( flagCdCdgDsply != null ) {
+	    	if( this.flagCdCdgDsply == null ) {
+	        	this.flagCdCdgDsply = flagCdCdgDsply;
+	        } else if(this.flagCdCdgDsply.substring(this.flagCdCdgDsply.length() - 1).equals("]") & flagCdCdgDsply.equals("[")) {
+	        	this.flagCdCdgDsply = this.flagCdCdgDsply+ "," + flagCdCdgDsply;
+	        } else if(flagCdCdgDsply.equals("[") | flagCdCdgDsply.equals("]") | this.flagCdCdgDsply.substring(this.flagCdCdgDsply.length() - 1).equals("[")) {
+	        	this.flagCdCdgDsply = this.flagCdCdgDsply+flagCdCdgDsply;
+	        } else  {
+	            this.flagCdCdgDsply = this.flagCdCdgDsply+ "," +flagCdCdgDsply;
+	        }
+        }
     }
     
     
@@ -154,6 +294,20 @@ public class Flag  implements java.io.Serializable {
         this.flagCdCdgSys = flagCdCdgSys;
     }
     
+    public void addFlagCdCdgSys(String flagCdCdgSys) {
+    	if( flagCdCdgSys != null ) {
+	    	if( this.flagCdCdgSys == null ) {
+	        	this.flagCdCdgSys = flagCdCdgSys;
+	        } else if(this.flagCdCdgSys.substring(this.flagCdCdgSys.length() - 1).equals("]") & flagCdCdgSys.equals("[")) {
+	        	this.flagCdCdgSys = this.flagCdCdgSys+ "," + flagCdCdgSys;
+	        } else if(flagCdCdgSys.equals("[") | flagCdCdgSys.equals("]") | this.flagCdCdgSys.substring(this.flagCdCdgSys.length() - 1).equals("[")) {
+	        	this.flagCdCdgSys = this.flagCdCdgSys+flagCdCdgSys;
+	        } else  {
+	            this.flagCdCdgSys = this.flagCdCdgSys+ "," +flagCdCdgSys;
+	        }
+        }
+    }
+    
     
     
     public String getFlagCdCdgUsrSltd() {
@@ -162,6 +316,20 @@ public class Flag  implements java.io.Serializable {
     
     public void setFlagCdCdgUsrSltd(String flagCdCdgUsrSltd) {
         this.flagCdCdgUsrSltd = flagCdCdgUsrSltd;
+    }
+    
+    public void addFlagCdCdgUsrSltd(String flagCdCdgUsrSltd) {
+    	if( flagCdCdgUsrSltd != null ) {
+	    	if( this.flagCdCdgUsrSltd == null ) {
+	        	this.flagCdCdgUsrSltd = flagCdCdgUsrSltd;
+	        } else if(this.flagCdCdgUsrSltd.substring(this.flagCdCdgUsrSltd.length() - 1).equals("]") & flagCdCdgUsrSltd.equals("[")) {
+	        	this.flagCdCdgUsrSltd = this.flagCdCdgUsrSltd+ "," + flagCdCdgUsrSltd;
+	        } else if(flagCdCdgUsrSltd.equals("[") | flagCdCdgUsrSltd.equals("]") | this.flagCdCdgUsrSltd.substring(this.flagCdCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.flagCdCdgUsrSltd = this.flagCdCdgUsrSltd+flagCdCdgUsrSltd;
+	        } else  {
+	            this.flagCdCdgUsrSltd = this.flagCdCdgUsrSltd+ "," +flagCdCdgUsrSltd;
+	        }
+        }
     }
     
     
@@ -174,6 +342,20 @@ public class Flag  implements java.io.Serializable {
         this.flagCdCdgVrsn = flagCdCdgVrsn;
     }
     
+    public void addFlagCdCdgVrsn(String flagCdCdgVrsn) {
+    	if( flagCdCdgVrsn != null ) {
+	    	if( this.flagCdCdgVrsn == null ) {
+	        	this.flagCdCdgVrsn = flagCdCdgVrsn;
+	        } else if(this.flagCdCdgVrsn.substring(this.flagCdCdgVrsn.length() - 1).equals("]") & flagCdCdgVrsn.equals("[")) {
+	        	this.flagCdCdgVrsn = this.flagCdCdgVrsn+ "," + flagCdCdgVrsn;
+	        } else if(flagCdCdgVrsn.equals("[") | flagCdCdgVrsn.equals("]") | this.flagCdCdgVrsn.substring(this.flagCdCdgVrsn.length() - 1).equals("[")) {
+	        	this.flagCdCdgVrsn = this.flagCdCdgVrsn+flagCdCdgVrsn;
+	        } else  {
+	            this.flagCdCdgVrsn = this.flagCdCdgVrsn+ "," +flagCdCdgVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getFlagCdTxt() {
@@ -182,6 +364,20 @@ public class Flag  implements java.io.Serializable {
     
     public void setFlagCdTxt(String flagCdTxt) {
         this.flagCdTxt = flagCdTxt;
+    }
+    
+    public void addFlagCdTxt(String flagCdTxt) {
+    	if( flagCdTxt != null ) {
+	    	if( this.flagCdTxt == null ) {
+	        	this.flagCdTxt = flagCdTxt;
+	        } else if(this.flagCdTxt.substring(this.flagCdTxt.length() - 1).equals("]") & flagCdTxt.equals("[")) {
+	        	this.flagCdTxt = this.flagCdTxt+ "," + flagCdTxt;
+	        } else if(flagCdTxt.equals("[") | flagCdTxt.equals("]") | this.flagCdTxt.substring(this.flagCdTxt.length() - 1).equals("[")) {
+	        	this.flagCdTxt = this.flagCdTxt+flagCdTxt;
+	        } else  {
+	            this.flagCdTxt = this.flagCdTxt+ "," +flagCdTxt;
+	        }
+        }
     }
     
     
@@ -194,6 +390,20 @@ public class Flag  implements java.io.Serializable {
         this.flagEnc = flagEnc;
     }
     
+    public void addFlagEnc(String flagEnc) {
+    	if( flagEnc != null ) {
+	    	if( this.flagEnc == null ) {
+	        	this.flagEnc = flagEnc;
+	        } else if(this.flagEnc.substring(this.flagEnc.length() - 1).equals("]") & flagEnc.equals("[")) {
+	        	this.flagEnc = this.flagEnc+ "," + flagEnc;
+	        } else if(flagEnc.equals("[") | flagEnc.equals("]") | this.flagEnc.substring(this.flagEnc.length() - 1).equals("[")) {
+	        	this.flagEnc = this.flagEnc+flagEnc;
+	        } else  {
+	            this.flagEnc = this.flagEnc+ "," +flagEnc;
+	        }
+        }
+    }
+    
     
     
     public String getFlagIdAssigner() {
@@ -202,6 +412,20 @@ public class Flag  implements java.io.Serializable {
     
     public void setFlagIdAssigner(String flagIdAssigner) {
         this.flagIdAssigner = flagIdAssigner;
+    }
+    
+    public void addFlagIdAssigner(String flagIdAssigner) {
+    	if( flagIdAssigner != null ) {
+	    	if( this.flagIdAssigner == null ) {
+	        	this.flagIdAssigner = flagIdAssigner;
+	        } else if(this.flagIdAssigner.substring(this.flagIdAssigner.length() - 1).equals("]") & flagIdAssigner.equals("[")) {
+	        	this.flagIdAssigner = this.flagIdAssigner+ "," + flagIdAssigner;
+	        } else if(flagIdAssigner.equals("[") | flagIdAssigner.equals("]") | this.flagIdAssigner.substring(this.flagIdAssigner.length() - 1).equals("[")) {
+	        	this.flagIdAssigner = this.flagIdAssigner+flagIdAssigner;
+	        } else  {
+	            this.flagIdAssigner = this.flagIdAssigner+ "," +flagIdAssigner;
+	        }
+        }
     }
     
     
@@ -214,6 +438,20 @@ public class Flag  implements java.io.Serializable {
         this.flagIdPrdEnd = flagIdPrdEnd;
     }
     
+    public void addFlagIdPrdEnd(String flagIdPrdEnd) {
+    	if( flagIdPrdEnd != null ) {
+	    	if( this.flagIdPrdEnd == null ) {
+	        	this.flagIdPrdEnd = flagIdPrdEnd;
+	        } else if(this.flagIdPrdEnd.substring(this.flagIdPrdEnd.length() - 1).equals("]") & flagIdPrdEnd.equals("[")) {
+	        	this.flagIdPrdEnd = this.flagIdPrdEnd+ "," + flagIdPrdEnd;
+	        } else if(flagIdPrdEnd.equals("[") | flagIdPrdEnd.equals("]") | this.flagIdPrdEnd.substring(this.flagIdPrdEnd.length() - 1).equals("[")) {
+	        	this.flagIdPrdEnd = this.flagIdPrdEnd+flagIdPrdEnd;
+	        } else  {
+	            this.flagIdPrdEnd = this.flagIdPrdEnd+ "," +flagIdPrdEnd;
+	        }
+        }
+    }
+    
     
     
     public String getFlagIdPrdStrt() {
@@ -222,6 +460,20 @@ public class Flag  implements java.io.Serializable {
     
     public void setFlagIdPrdStrt(String flagIdPrdStrt) {
         this.flagIdPrdStrt = flagIdPrdStrt;
+    }
+    
+    public void addFlagIdPrdStrt(String flagIdPrdStrt) {
+    	if( flagIdPrdStrt != null ) {
+	    	if( this.flagIdPrdStrt == null ) {
+	        	this.flagIdPrdStrt = flagIdPrdStrt;
+	        } else if(this.flagIdPrdStrt.substring(this.flagIdPrdStrt.length() - 1).equals("]") & flagIdPrdStrt.equals("[")) {
+	        	this.flagIdPrdStrt = this.flagIdPrdStrt+ "," + flagIdPrdStrt;
+	        } else if(flagIdPrdStrt.equals("[") | flagIdPrdStrt.equals("]") | this.flagIdPrdStrt.substring(this.flagIdPrdStrt.length() - 1).equals("[")) {
+	        	this.flagIdPrdStrt = this.flagIdPrdStrt+flagIdPrdStrt;
+	        } else  {
+	            this.flagIdPrdStrt = this.flagIdPrdStrt+ "," +flagIdPrdStrt;
+	        }
+        }
     }
     
     
@@ -234,6 +486,20 @@ public class Flag  implements java.io.Serializable {
         this.flagIdSys = flagIdSys;
     }
     
+    public void addFlagIdSys(String flagIdSys) {
+    	if( flagIdSys != null ) {
+	    	if( this.flagIdSys == null ) {
+	        	this.flagIdSys = flagIdSys;
+	        } else if(this.flagIdSys.substring(this.flagIdSys.length() - 1).equals("]") & flagIdSys.equals("[")) {
+	        	this.flagIdSys = this.flagIdSys+ "," + flagIdSys;
+	        } else if(flagIdSys.equals("[") | flagIdSys.equals("]") | this.flagIdSys.substring(this.flagIdSys.length() - 1).equals("[")) {
+	        	this.flagIdSys = this.flagIdSys+flagIdSys;
+	        } else  {
+	            this.flagIdSys = this.flagIdSys+ "," +flagIdSys;
+	        }
+        }
+    }
+    
     
     
     public String getFlagIdTypCdgCd() {
@@ -242,6 +508,20 @@ public class Flag  implements java.io.Serializable {
     
     public void setFlagIdTypCdgCd(String flagIdTypCdgCd) {
         this.flagIdTypCdgCd = flagIdTypCdgCd;
+    }
+    
+    public void addFlagIdTypCdgCd(String flagIdTypCdgCd) {
+    	if( flagIdTypCdgCd != null ) {
+	    	if( this.flagIdTypCdgCd == null ) {
+	        	this.flagIdTypCdgCd = flagIdTypCdgCd;
+	        } else if(this.flagIdTypCdgCd.substring(this.flagIdTypCdgCd.length() - 1).equals("]") & flagIdTypCdgCd.equals("[")) {
+	        	this.flagIdTypCdgCd = this.flagIdTypCdgCd+ "," + flagIdTypCdgCd;
+	        } else if(flagIdTypCdgCd.equals("[") | flagIdTypCdgCd.equals("]") | this.flagIdTypCdgCd.substring(this.flagIdTypCdgCd.length() - 1).equals("[")) {
+	        	this.flagIdTypCdgCd = this.flagIdTypCdgCd+flagIdTypCdgCd;
+	        } else  {
+	            this.flagIdTypCdgCd = this.flagIdTypCdgCd+ "," +flagIdTypCdgCd;
+	        }
+        }
     }
     
     
@@ -254,6 +534,20 @@ public class Flag  implements java.io.Serializable {
         this.flagIdTypCdgDsply = flagIdTypCdgDsply;
     }
     
+    public void addFlagIdTypCdgDsply(String flagIdTypCdgDsply) {
+    	if( flagIdTypCdgDsply != null ) {
+	    	if( this.flagIdTypCdgDsply == null ) {
+	        	this.flagIdTypCdgDsply = flagIdTypCdgDsply;
+	        } else if(this.flagIdTypCdgDsply.substring(this.flagIdTypCdgDsply.length() - 1).equals("]") & flagIdTypCdgDsply.equals("[")) {
+	        	this.flagIdTypCdgDsply = this.flagIdTypCdgDsply+ "," + flagIdTypCdgDsply;
+	        } else if(flagIdTypCdgDsply.equals("[") | flagIdTypCdgDsply.equals("]") | this.flagIdTypCdgDsply.substring(this.flagIdTypCdgDsply.length() - 1).equals("[")) {
+	        	this.flagIdTypCdgDsply = this.flagIdTypCdgDsply+flagIdTypCdgDsply;
+	        } else  {
+	            this.flagIdTypCdgDsply = this.flagIdTypCdgDsply+ "," +flagIdTypCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getFlagIdTypCdgSys() {
@@ -262,6 +556,20 @@ public class Flag  implements java.io.Serializable {
     
     public void setFlagIdTypCdgSys(String flagIdTypCdgSys) {
         this.flagIdTypCdgSys = flagIdTypCdgSys;
+    }
+    
+    public void addFlagIdTypCdgSys(String flagIdTypCdgSys) {
+    	if( flagIdTypCdgSys != null ) {
+	    	if( this.flagIdTypCdgSys == null ) {
+	        	this.flagIdTypCdgSys = flagIdTypCdgSys;
+	        } else if(this.flagIdTypCdgSys.substring(this.flagIdTypCdgSys.length() - 1).equals("]") & flagIdTypCdgSys.equals("[")) {
+	        	this.flagIdTypCdgSys = this.flagIdTypCdgSys+ "," + flagIdTypCdgSys;
+	        } else if(flagIdTypCdgSys.equals("[") | flagIdTypCdgSys.equals("]") | this.flagIdTypCdgSys.substring(this.flagIdTypCdgSys.length() - 1).equals("[")) {
+	        	this.flagIdTypCdgSys = this.flagIdTypCdgSys+flagIdTypCdgSys;
+	        } else  {
+	            this.flagIdTypCdgSys = this.flagIdTypCdgSys+ "," +flagIdTypCdgSys;
+	        }
+        }
     }
     
     
@@ -274,6 +582,20 @@ public class Flag  implements java.io.Serializable {
         this.flagIdTypCdgUsrSltd = flagIdTypCdgUsrSltd;
     }
     
+    public void addFlagIdTypCdgUsrSltd(String flagIdTypCdgUsrSltd) {
+    	if( flagIdTypCdgUsrSltd != null ) {
+	    	if( this.flagIdTypCdgUsrSltd == null ) {
+	        	this.flagIdTypCdgUsrSltd = flagIdTypCdgUsrSltd;
+	        } else if(this.flagIdTypCdgUsrSltd.substring(this.flagIdTypCdgUsrSltd.length() - 1).equals("]") & flagIdTypCdgUsrSltd.equals("[")) {
+	        	this.flagIdTypCdgUsrSltd = this.flagIdTypCdgUsrSltd+ "," + flagIdTypCdgUsrSltd;
+	        } else if(flagIdTypCdgUsrSltd.equals("[") | flagIdTypCdgUsrSltd.equals("]") | this.flagIdTypCdgUsrSltd.substring(this.flagIdTypCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.flagIdTypCdgUsrSltd = this.flagIdTypCdgUsrSltd+flagIdTypCdgUsrSltd;
+	        } else  {
+	            this.flagIdTypCdgUsrSltd = this.flagIdTypCdgUsrSltd+ "," +flagIdTypCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getFlagIdTypCdgVrsn() {
@@ -282,6 +604,20 @@ public class Flag  implements java.io.Serializable {
     
     public void setFlagIdTypCdgVrsn(String flagIdTypCdgVrsn) {
         this.flagIdTypCdgVrsn = flagIdTypCdgVrsn;
+    }
+    
+    public void addFlagIdTypCdgVrsn(String flagIdTypCdgVrsn) {
+    	if( flagIdTypCdgVrsn != null ) {
+	    	if( this.flagIdTypCdgVrsn == null ) {
+	        	this.flagIdTypCdgVrsn = flagIdTypCdgVrsn;
+	        } else if(this.flagIdTypCdgVrsn.substring(this.flagIdTypCdgVrsn.length() - 1).equals("]") & flagIdTypCdgVrsn.equals("[")) {
+	        	this.flagIdTypCdgVrsn = this.flagIdTypCdgVrsn+ "," + flagIdTypCdgVrsn;
+	        } else if(flagIdTypCdgVrsn.equals("[") | flagIdTypCdgVrsn.equals("]") | this.flagIdTypCdgVrsn.substring(this.flagIdTypCdgVrsn.length() - 1).equals("[")) {
+	        	this.flagIdTypCdgVrsn = this.flagIdTypCdgVrsn+flagIdTypCdgVrsn;
+	        } else  {
+	            this.flagIdTypCdgVrsn = this.flagIdTypCdgVrsn+ "," +flagIdTypCdgVrsn;
+	        }
+        }
     }
     
     
@@ -294,6 +630,20 @@ public class Flag  implements java.io.Serializable {
         this.flagIdTypTxt = flagIdTypTxt;
     }
     
+    public void addFlagIdTypTxt(String flagIdTypTxt) {
+    	if( flagIdTypTxt != null ) {
+	    	if( this.flagIdTypTxt == null ) {
+	        	this.flagIdTypTxt = flagIdTypTxt;
+	        } else if(this.flagIdTypTxt.substring(this.flagIdTypTxt.length() - 1).equals("]") & flagIdTypTxt.equals("[")) {
+	        	this.flagIdTypTxt = this.flagIdTypTxt+ "," + flagIdTypTxt;
+	        } else if(flagIdTypTxt.equals("[") | flagIdTypTxt.equals("]") | this.flagIdTypTxt.substring(this.flagIdTypTxt.length() - 1).equals("[")) {
+	        	this.flagIdTypTxt = this.flagIdTypTxt+flagIdTypTxt;
+	        } else  {
+	            this.flagIdTypTxt = this.flagIdTypTxt+ "," +flagIdTypTxt;
+	        }
+        }
+    }
+    
     
     
     public String getFlagIdUse() {
@@ -302,6 +652,20 @@ public class Flag  implements java.io.Serializable {
     
     public void setFlagIdUse(String flagIdUse) {
         this.flagIdUse = flagIdUse;
+    }
+    
+    public void addFlagIdUse(String flagIdUse) {
+    	if( flagIdUse != null ) {
+	    	if( this.flagIdUse == null ) {
+	        	this.flagIdUse = flagIdUse;
+	        } else if(this.flagIdUse.substring(this.flagIdUse.length() - 1).equals("]") & flagIdUse.equals("[")) {
+	        	this.flagIdUse = this.flagIdUse+ "," + flagIdUse;
+	        } else if(flagIdUse.equals("[") | flagIdUse.equals("]") | this.flagIdUse.substring(this.flagIdUse.length() - 1).equals("[")) {
+	        	this.flagIdUse = this.flagIdUse+flagIdUse;
+	        } else  {
+	            this.flagIdUse = this.flagIdUse+ "," +flagIdUse;
+	        }
+        }
     }
     
     
@@ -314,6 +678,20 @@ public class Flag  implements java.io.Serializable {
         this.flagIdVl = flagIdVl;
     }
     
+    public void addFlagIdVl(String flagIdVl) {
+    	if( flagIdVl != null ) {
+	    	if( this.flagIdVl == null ) {
+	        	this.flagIdVl = flagIdVl;
+	        } else if(this.flagIdVl.substring(this.flagIdVl.length() - 1).equals("]") & flagIdVl.equals("[")) {
+	        	this.flagIdVl = this.flagIdVl+ "," + flagIdVl;
+	        } else if(flagIdVl.equals("[") | flagIdVl.equals("]") | this.flagIdVl.substring(this.flagIdVl.length() - 1).equals("[")) {
+	        	this.flagIdVl = this.flagIdVl+flagIdVl;
+	        } else  {
+	            this.flagIdVl = this.flagIdVl+ "," +flagIdVl;
+	        }
+        }
+    }
+    
     
     
     public String getFlagPrdEnd() {
@@ -322,6 +700,20 @@ public class Flag  implements java.io.Serializable {
     
     public void setFlagPrdEnd(String flagPrdEnd) {
         this.flagPrdEnd = flagPrdEnd;
+    }
+    
+    public void addFlagPrdEnd(String flagPrdEnd) {
+    	if( flagPrdEnd != null ) {
+	    	if( this.flagPrdEnd == null ) {
+	        	this.flagPrdEnd = flagPrdEnd;
+	        } else if(this.flagPrdEnd.substring(this.flagPrdEnd.length() - 1).equals("]") & flagPrdEnd.equals("[")) {
+	        	this.flagPrdEnd = this.flagPrdEnd+ "," + flagPrdEnd;
+	        } else if(flagPrdEnd.equals("[") | flagPrdEnd.equals("]") | this.flagPrdEnd.substring(this.flagPrdEnd.length() - 1).equals("[")) {
+	        	this.flagPrdEnd = this.flagPrdEnd+flagPrdEnd;
+	        } else  {
+	            this.flagPrdEnd = this.flagPrdEnd+ "," +flagPrdEnd;
+	        }
+        }
     }
     
     
@@ -334,6 +726,20 @@ public class Flag  implements java.io.Serializable {
         this.flagPrdStrt = flagPrdStrt;
     }
     
+    public void addFlagPrdStrt(String flagPrdStrt) {
+    	if( flagPrdStrt != null ) {
+	    	if( this.flagPrdStrt == null ) {
+	        	this.flagPrdStrt = flagPrdStrt;
+	        } else if(this.flagPrdStrt.substring(this.flagPrdStrt.length() - 1).equals("]") & flagPrdStrt.equals("[")) {
+	        	this.flagPrdStrt = this.flagPrdStrt+ "," + flagPrdStrt;
+	        } else if(flagPrdStrt.equals("[") | flagPrdStrt.equals("]") | this.flagPrdStrt.substring(this.flagPrdStrt.length() - 1).equals("[")) {
+	        	this.flagPrdStrt = this.flagPrdStrt+flagPrdStrt;
+	        } else  {
+	            this.flagPrdStrt = this.flagPrdStrt+ "," +flagPrdStrt;
+	        }
+        }
+    }
+    
     
     
     public String getFlagSts() {
@@ -344,6 +750,20 @@ public class Flag  implements java.io.Serializable {
         this.flagSts = flagSts;
     }
     
+    public void addFlagSts(String flagSts) {
+    	if( flagSts != null ) {
+	    	if( this.flagSts == null ) {
+	        	this.flagSts = flagSts;
+	        } else if(this.flagSts.substring(this.flagSts.length() - 1).equals("]") & flagSts.equals("[")) {
+	        	this.flagSts = this.flagSts+ "," + flagSts;
+	        } else if(flagSts.equals("[") | flagSts.equals("]") | this.flagSts.substring(this.flagSts.length() - 1).equals("[")) {
+	        	this.flagSts = this.flagSts+flagSts;
+	        } else  {
+	            this.flagSts = this.flagSts+ "," +flagSts;
+	        }
+        }
+    }
+    
     
     
     public String getFlagSbjct() {
@@ -352,6 +772,20 @@ public class Flag  implements java.io.Serializable {
     
     public void setFlagSbjct(String flagSbjct) {
         this.flagSbjct = flagSbjct;
+    }
+    
+    public void addFlagSbjct(String flagSbjct) {
+    	if( flagSbjct != null ) {
+	    	if( this.flagSbjct == null ) {
+	        	this.flagSbjct = flagSbjct;
+	        } else if(this.flagSbjct.substring(this.flagSbjct.length() - 1).equals("]") & flagSbjct.equals("[")) {
+	        	this.flagSbjct = this.flagSbjct+ "," + flagSbjct;
+	        } else if(flagSbjct.equals("[") | flagSbjct.equals("]") | this.flagSbjct.substring(this.flagSbjct.length() - 1).equals("[")) {
+	        	this.flagSbjct = this.flagSbjct+flagSbjct;
+	        } else  {
+	            this.flagSbjct = this.flagSbjct+ "," +flagSbjct;
+	        }
+        }
     }
     
     

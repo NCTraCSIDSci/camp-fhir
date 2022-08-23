@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Jun 27, 2022, 10:40:10 AM by Hibernate Tools 5.6.1.Final
+// Generated Aug 17, 2022, 11:08:48 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -70,6 +70,20 @@ public class PractitionerRole  implements java.io.Serializable {
         this.id = id;
     }
     
+    public void addId(String id) {
+    	if( id != null ) {
+	    	if( this.id == null ) {
+	        	this.id = id;
+	        } else if(this.id.substring(this.id.length() - 1).equals("]") & id.equals("[")) {
+	        	this.id = this.id+ "," + id;
+	        } else if(id.equals("[") | id.equals("]") | this.id.substring(this.id.length() - 1).equals("[")) {
+	        	this.id = this.id+id;
+	        } else  {
+	            this.id = this.id+ "," +id;
+	        }
+        }
+    }
+    
     
     
     public String getPrctitnrRoleActive() {
@@ -78,6 +92,20 @@ public class PractitionerRole  implements java.io.Serializable {
     
     public void setPrctitnrRoleActive(String prctitnrRoleActive) {
         this.prctitnrRoleActive = prctitnrRoleActive;
+    }
+    
+    public void addPrctitnrRoleActive(String prctitnrRoleActive) {
+    	if( prctitnrRoleActive != null ) {
+	    	if( this.prctitnrRoleActive == null ) {
+	        	this.prctitnrRoleActive = prctitnrRoleActive;
+	        } else if(this.prctitnrRoleActive.substring(this.prctitnrRoleActive.length() - 1).equals("]") & prctitnrRoleActive.equals("[")) {
+	        	this.prctitnrRoleActive = this.prctitnrRoleActive+ "," + prctitnrRoleActive;
+	        } else if(prctitnrRoleActive.equals("[") | prctitnrRoleActive.equals("]") | this.prctitnrRoleActive.substring(this.prctitnrRoleActive.length() - 1).equals("[")) {
+	        	this.prctitnrRoleActive = this.prctitnrRoleActive+prctitnrRoleActive;
+	        } else  {
+	            this.prctitnrRoleActive = this.prctitnrRoleActive+ "," +prctitnrRoleActive;
+	        }
+        }
     }
     
     
@@ -90,6 +118,20 @@ public class PractitionerRole  implements java.io.Serializable {
         this.prctitnrRoleAvailabilityExceptions = prctitnrRoleAvailabilityExceptions;
     }
     
+    public void addPrctitnrRoleAvailabilityExceptions(String prctitnrRoleAvailabilityExceptions) {
+    	if( prctitnrRoleAvailabilityExceptions != null ) {
+	    	if( this.prctitnrRoleAvailabilityExceptions == null ) {
+	        	this.prctitnrRoleAvailabilityExceptions = prctitnrRoleAvailabilityExceptions;
+	        } else if(this.prctitnrRoleAvailabilityExceptions.substring(this.prctitnrRoleAvailabilityExceptions.length() - 1).equals("]") & prctitnrRoleAvailabilityExceptions.equals("[")) {
+	        	this.prctitnrRoleAvailabilityExceptions = this.prctitnrRoleAvailabilityExceptions+ "," + prctitnrRoleAvailabilityExceptions;
+	        } else if(prctitnrRoleAvailabilityExceptions.equals("[") | prctitnrRoleAvailabilityExceptions.equals("]") | this.prctitnrRoleAvailabilityExceptions.substring(this.prctitnrRoleAvailabilityExceptions.length() - 1).equals("[")) {
+	        	this.prctitnrRoleAvailabilityExceptions = this.prctitnrRoleAvailabilityExceptions+prctitnrRoleAvailabilityExceptions;
+	        } else  {
+	            this.prctitnrRoleAvailabilityExceptions = this.prctitnrRoleAvailabilityExceptions+ "," +prctitnrRoleAvailabilityExceptions;
+	        }
+        }
+    }
+    
     
     
     public String getPrctitnrRoleAvailableTimeAllDay() {
@@ -98,6 +140,20 @@ public class PractitionerRole  implements java.io.Serializable {
     
     public void setPrctitnrRoleAvailableTimeAllDay(String prctitnrRoleAvailableTimeAllDay) {
         this.prctitnrRoleAvailableTimeAllDay = prctitnrRoleAvailableTimeAllDay;
+    }
+    
+    public void addPrctitnrRoleAvailableTimeAllDay(String prctitnrRoleAvailableTimeAllDay) {
+    	if( prctitnrRoleAvailableTimeAllDay != null ) {
+	    	if( this.prctitnrRoleAvailableTimeAllDay == null ) {
+	        	this.prctitnrRoleAvailableTimeAllDay = prctitnrRoleAvailableTimeAllDay;
+	        } else if(this.prctitnrRoleAvailableTimeAllDay.substring(this.prctitnrRoleAvailableTimeAllDay.length() - 1).equals("]") & prctitnrRoleAvailableTimeAllDay.equals("[")) {
+	        	this.prctitnrRoleAvailableTimeAllDay = this.prctitnrRoleAvailableTimeAllDay+ "," + prctitnrRoleAvailableTimeAllDay;
+	        } else if(prctitnrRoleAvailableTimeAllDay.equals("[") | prctitnrRoleAvailableTimeAllDay.equals("]") | this.prctitnrRoleAvailableTimeAllDay.substring(this.prctitnrRoleAvailableTimeAllDay.length() - 1).equals("[")) {
+	        	this.prctitnrRoleAvailableTimeAllDay = this.prctitnrRoleAvailableTimeAllDay+prctitnrRoleAvailableTimeAllDay;
+	        } else  {
+	            this.prctitnrRoleAvailableTimeAllDay = this.prctitnrRoleAvailableTimeAllDay+ "," +prctitnrRoleAvailableTimeAllDay;
+	        }
+        }
     }
     
     
@@ -110,6 +166,20 @@ public class PractitionerRole  implements java.io.Serializable {
         this.prctitnrRoleAvailableTimeAvailableEndTime = prctitnrRoleAvailableTimeAvailableEndTime;
     }
     
+    public void addPrctitnrRoleAvailableTimeAvailableEndTime(String prctitnrRoleAvailableTimeAvailableEndTime) {
+    	if( prctitnrRoleAvailableTimeAvailableEndTime != null ) {
+	    	if( this.prctitnrRoleAvailableTimeAvailableEndTime == null ) {
+	        	this.prctitnrRoleAvailableTimeAvailableEndTime = prctitnrRoleAvailableTimeAvailableEndTime;
+	        } else if(this.prctitnrRoleAvailableTimeAvailableEndTime.substring(this.prctitnrRoleAvailableTimeAvailableEndTime.length() - 1).equals("]") & prctitnrRoleAvailableTimeAvailableEndTime.equals("[")) {
+	        	this.prctitnrRoleAvailableTimeAvailableEndTime = this.prctitnrRoleAvailableTimeAvailableEndTime+ "," + prctitnrRoleAvailableTimeAvailableEndTime;
+	        } else if(prctitnrRoleAvailableTimeAvailableEndTime.equals("[") | prctitnrRoleAvailableTimeAvailableEndTime.equals("]") | this.prctitnrRoleAvailableTimeAvailableEndTime.substring(this.prctitnrRoleAvailableTimeAvailableEndTime.length() - 1).equals("[")) {
+	        	this.prctitnrRoleAvailableTimeAvailableEndTime = this.prctitnrRoleAvailableTimeAvailableEndTime+prctitnrRoleAvailableTimeAvailableEndTime;
+	        } else  {
+	            this.prctitnrRoleAvailableTimeAvailableEndTime = this.prctitnrRoleAvailableTimeAvailableEndTime+ "," +prctitnrRoleAvailableTimeAvailableEndTime;
+	        }
+        }
+    }
+    
     
     
     public String getPrctitnrRoleAvailableTimeAvailableStrtTime() {
@@ -118,6 +188,20 @@ public class PractitionerRole  implements java.io.Serializable {
     
     public void setPrctitnrRoleAvailableTimeAvailableStrtTime(String prctitnrRoleAvailableTimeAvailableStrtTime) {
         this.prctitnrRoleAvailableTimeAvailableStrtTime = prctitnrRoleAvailableTimeAvailableStrtTime;
+    }
+    
+    public void addPrctitnrRoleAvailableTimeAvailableStrtTime(String prctitnrRoleAvailableTimeAvailableStrtTime) {
+    	if( prctitnrRoleAvailableTimeAvailableStrtTime != null ) {
+	    	if( this.prctitnrRoleAvailableTimeAvailableStrtTime == null ) {
+	        	this.prctitnrRoleAvailableTimeAvailableStrtTime = prctitnrRoleAvailableTimeAvailableStrtTime;
+	        } else if(this.prctitnrRoleAvailableTimeAvailableStrtTime.substring(this.prctitnrRoleAvailableTimeAvailableStrtTime.length() - 1).equals("]") & prctitnrRoleAvailableTimeAvailableStrtTime.equals("[")) {
+	        	this.prctitnrRoleAvailableTimeAvailableStrtTime = this.prctitnrRoleAvailableTimeAvailableStrtTime+ "," + prctitnrRoleAvailableTimeAvailableStrtTime;
+	        } else if(prctitnrRoleAvailableTimeAvailableStrtTime.equals("[") | prctitnrRoleAvailableTimeAvailableStrtTime.equals("]") | this.prctitnrRoleAvailableTimeAvailableStrtTime.substring(this.prctitnrRoleAvailableTimeAvailableStrtTime.length() - 1).equals("[")) {
+	        	this.prctitnrRoleAvailableTimeAvailableStrtTime = this.prctitnrRoleAvailableTimeAvailableStrtTime+prctitnrRoleAvailableTimeAvailableStrtTime;
+	        } else  {
+	            this.prctitnrRoleAvailableTimeAvailableStrtTime = this.prctitnrRoleAvailableTimeAvailableStrtTime+ "," +prctitnrRoleAvailableTimeAvailableStrtTime;
+	        }
+        }
     }
     
     
@@ -130,6 +214,20 @@ public class PractitionerRole  implements java.io.Serializable {
         this.prctitnrRoleAvailableTimeDaysOfWeek = prctitnrRoleAvailableTimeDaysOfWeek;
     }
     
+    public void addPrctitnrRoleAvailableTimeDaysOfWeek(String prctitnrRoleAvailableTimeDaysOfWeek) {
+    	if( prctitnrRoleAvailableTimeDaysOfWeek != null ) {
+	    	if( this.prctitnrRoleAvailableTimeDaysOfWeek == null ) {
+	        	this.prctitnrRoleAvailableTimeDaysOfWeek = prctitnrRoleAvailableTimeDaysOfWeek;
+	        } else if(this.prctitnrRoleAvailableTimeDaysOfWeek.substring(this.prctitnrRoleAvailableTimeDaysOfWeek.length() - 1).equals("]") & prctitnrRoleAvailableTimeDaysOfWeek.equals("[")) {
+	        	this.prctitnrRoleAvailableTimeDaysOfWeek = this.prctitnrRoleAvailableTimeDaysOfWeek+ "," + prctitnrRoleAvailableTimeDaysOfWeek;
+	        } else if(prctitnrRoleAvailableTimeDaysOfWeek.equals("[") | prctitnrRoleAvailableTimeDaysOfWeek.equals("]") | this.prctitnrRoleAvailableTimeDaysOfWeek.substring(this.prctitnrRoleAvailableTimeDaysOfWeek.length() - 1).equals("[")) {
+	        	this.prctitnrRoleAvailableTimeDaysOfWeek = this.prctitnrRoleAvailableTimeDaysOfWeek+prctitnrRoleAvailableTimeDaysOfWeek;
+	        } else  {
+	            this.prctitnrRoleAvailableTimeDaysOfWeek = this.prctitnrRoleAvailableTimeDaysOfWeek+ "," +prctitnrRoleAvailableTimeDaysOfWeek;
+	        }
+        }
+    }
+    
     
     
     public String getPrctitnrRoleCdCdgCd() {
@@ -138,6 +236,20 @@ public class PractitionerRole  implements java.io.Serializable {
     
     public void setPrctitnrRoleCdCdgCd(String prctitnrRoleCdCdgCd) {
         this.prctitnrRoleCdCdgCd = prctitnrRoleCdCdgCd;
+    }
+    
+    public void addPrctitnrRoleCdCdgCd(String prctitnrRoleCdCdgCd) {
+    	if( prctitnrRoleCdCdgCd != null ) {
+	    	if( this.prctitnrRoleCdCdgCd == null ) {
+	        	this.prctitnrRoleCdCdgCd = prctitnrRoleCdCdgCd;
+	        } else if(this.prctitnrRoleCdCdgCd.substring(this.prctitnrRoleCdCdgCd.length() - 1).equals("]") & prctitnrRoleCdCdgCd.equals("[")) {
+	        	this.prctitnrRoleCdCdgCd = this.prctitnrRoleCdCdgCd+ "," + prctitnrRoleCdCdgCd;
+	        } else if(prctitnrRoleCdCdgCd.equals("[") | prctitnrRoleCdCdgCd.equals("]") | this.prctitnrRoleCdCdgCd.substring(this.prctitnrRoleCdCdgCd.length() - 1).equals("[")) {
+	        	this.prctitnrRoleCdCdgCd = this.prctitnrRoleCdCdgCd+prctitnrRoleCdCdgCd;
+	        } else  {
+	            this.prctitnrRoleCdCdgCd = this.prctitnrRoleCdCdgCd+ "," +prctitnrRoleCdCdgCd;
+	        }
+        }
     }
     
     
@@ -150,6 +262,20 @@ public class PractitionerRole  implements java.io.Serializable {
         this.prctitnrRoleCdCdgDsply = prctitnrRoleCdCdgDsply;
     }
     
+    public void addPrctitnrRoleCdCdgDsply(String prctitnrRoleCdCdgDsply) {
+    	if( prctitnrRoleCdCdgDsply != null ) {
+	    	if( this.prctitnrRoleCdCdgDsply == null ) {
+	        	this.prctitnrRoleCdCdgDsply = prctitnrRoleCdCdgDsply;
+	        } else if(this.prctitnrRoleCdCdgDsply.substring(this.prctitnrRoleCdCdgDsply.length() - 1).equals("]") & prctitnrRoleCdCdgDsply.equals("[")) {
+	        	this.prctitnrRoleCdCdgDsply = this.prctitnrRoleCdCdgDsply+ "," + prctitnrRoleCdCdgDsply;
+	        } else if(prctitnrRoleCdCdgDsply.equals("[") | prctitnrRoleCdCdgDsply.equals("]") | this.prctitnrRoleCdCdgDsply.substring(this.prctitnrRoleCdCdgDsply.length() - 1).equals("[")) {
+	        	this.prctitnrRoleCdCdgDsply = this.prctitnrRoleCdCdgDsply+prctitnrRoleCdCdgDsply;
+	        } else  {
+	            this.prctitnrRoleCdCdgDsply = this.prctitnrRoleCdCdgDsply+ "," +prctitnrRoleCdCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getPrctitnrRoleCdCdgSys() {
@@ -158,6 +284,20 @@ public class PractitionerRole  implements java.io.Serializable {
     
     public void setPrctitnrRoleCdCdgSys(String prctitnrRoleCdCdgSys) {
         this.prctitnrRoleCdCdgSys = prctitnrRoleCdCdgSys;
+    }
+    
+    public void addPrctitnrRoleCdCdgSys(String prctitnrRoleCdCdgSys) {
+    	if( prctitnrRoleCdCdgSys != null ) {
+	    	if( this.prctitnrRoleCdCdgSys == null ) {
+	        	this.prctitnrRoleCdCdgSys = prctitnrRoleCdCdgSys;
+	        } else if(this.prctitnrRoleCdCdgSys.substring(this.prctitnrRoleCdCdgSys.length() - 1).equals("]") & prctitnrRoleCdCdgSys.equals("[")) {
+	        	this.prctitnrRoleCdCdgSys = this.prctitnrRoleCdCdgSys+ "," + prctitnrRoleCdCdgSys;
+	        } else if(prctitnrRoleCdCdgSys.equals("[") | prctitnrRoleCdCdgSys.equals("]") | this.prctitnrRoleCdCdgSys.substring(this.prctitnrRoleCdCdgSys.length() - 1).equals("[")) {
+	        	this.prctitnrRoleCdCdgSys = this.prctitnrRoleCdCdgSys+prctitnrRoleCdCdgSys;
+	        } else  {
+	            this.prctitnrRoleCdCdgSys = this.prctitnrRoleCdCdgSys+ "," +prctitnrRoleCdCdgSys;
+	        }
+        }
     }
     
     
@@ -170,6 +310,20 @@ public class PractitionerRole  implements java.io.Serializable {
         this.prctitnrRoleCdCdgUsrSltd = prctitnrRoleCdCdgUsrSltd;
     }
     
+    public void addPrctitnrRoleCdCdgUsrSltd(String prctitnrRoleCdCdgUsrSltd) {
+    	if( prctitnrRoleCdCdgUsrSltd != null ) {
+	    	if( this.prctitnrRoleCdCdgUsrSltd == null ) {
+	        	this.prctitnrRoleCdCdgUsrSltd = prctitnrRoleCdCdgUsrSltd;
+	        } else if(this.prctitnrRoleCdCdgUsrSltd.substring(this.prctitnrRoleCdCdgUsrSltd.length() - 1).equals("]") & prctitnrRoleCdCdgUsrSltd.equals("[")) {
+	        	this.prctitnrRoleCdCdgUsrSltd = this.prctitnrRoleCdCdgUsrSltd+ "," + prctitnrRoleCdCdgUsrSltd;
+	        } else if(prctitnrRoleCdCdgUsrSltd.equals("[") | prctitnrRoleCdCdgUsrSltd.equals("]") | this.prctitnrRoleCdCdgUsrSltd.substring(this.prctitnrRoleCdCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.prctitnrRoleCdCdgUsrSltd = this.prctitnrRoleCdCdgUsrSltd+prctitnrRoleCdCdgUsrSltd;
+	        } else  {
+	            this.prctitnrRoleCdCdgUsrSltd = this.prctitnrRoleCdCdgUsrSltd+ "," +prctitnrRoleCdCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getPrctitnrRoleCdCdgVrsn() {
@@ -178,6 +332,20 @@ public class PractitionerRole  implements java.io.Serializable {
     
     public void setPrctitnrRoleCdCdgVrsn(String prctitnrRoleCdCdgVrsn) {
         this.prctitnrRoleCdCdgVrsn = prctitnrRoleCdCdgVrsn;
+    }
+    
+    public void addPrctitnrRoleCdCdgVrsn(String prctitnrRoleCdCdgVrsn) {
+    	if( prctitnrRoleCdCdgVrsn != null ) {
+	    	if( this.prctitnrRoleCdCdgVrsn == null ) {
+	        	this.prctitnrRoleCdCdgVrsn = prctitnrRoleCdCdgVrsn;
+	        } else if(this.prctitnrRoleCdCdgVrsn.substring(this.prctitnrRoleCdCdgVrsn.length() - 1).equals("]") & prctitnrRoleCdCdgVrsn.equals("[")) {
+	        	this.prctitnrRoleCdCdgVrsn = this.prctitnrRoleCdCdgVrsn+ "," + prctitnrRoleCdCdgVrsn;
+	        } else if(prctitnrRoleCdCdgVrsn.equals("[") | prctitnrRoleCdCdgVrsn.equals("]") | this.prctitnrRoleCdCdgVrsn.substring(this.prctitnrRoleCdCdgVrsn.length() - 1).equals("[")) {
+	        	this.prctitnrRoleCdCdgVrsn = this.prctitnrRoleCdCdgVrsn+prctitnrRoleCdCdgVrsn;
+	        } else  {
+	            this.prctitnrRoleCdCdgVrsn = this.prctitnrRoleCdCdgVrsn+ "," +prctitnrRoleCdCdgVrsn;
+	        }
+        }
     }
     
     
@@ -190,6 +358,20 @@ public class PractitionerRole  implements java.io.Serializable {
         this.prctitnrRoleCdTxt = prctitnrRoleCdTxt;
     }
     
+    public void addPrctitnrRoleCdTxt(String prctitnrRoleCdTxt) {
+    	if( prctitnrRoleCdTxt != null ) {
+	    	if( this.prctitnrRoleCdTxt == null ) {
+	        	this.prctitnrRoleCdTxt = prctitnrRoleCdTxt;
+	        } else if(this.prctitnrRoleCdTxt.substring(this.prctitnrRoleCdTxt.length() - 1).equals("]") & prctitnrRoleCdTxt.equals("[")) {
+	        	this.prctitnrRoleCdTxt = this.prctitnrRoleCdTxt+ "," + prctitnrRoleCdTxt;
+	        } else if(prctitnrRoleCdTxt.equals("[") | prctitnrRoleCdTxt.equals("]") | this.prctitnrRoleCdTxt.substring(this.prctitnrRoleCdTxt.length() - 1).equals("[")) {
+	        	this.prctitnrRoleCdTxt = this.prctitnrRoleCdTxt+prctitnrRoleCdTxt;
+	        } else  {
+	            this.prctitnrRoleCdTxt = this.prctitnrRoleCdTxt+ "," +prctitnrRoleCdTxt;
+	        }
+        }
+    }
+    
     
     
     public String getPrctitnrRoleEndpoint() {
@@ -198,6 +380,20 @@ public class PractitionerRole  implements java.io.Serializable {
     
     public void setPrctitnrRoleEndpoint(String prctitnrRoleEndpoint) {
         this.prctitnrRoleEndpoint = prctitnrRoleEndpoint;
+    }
+    
+    public void addPrctitnrRoleEndpoint(String prctitnrRoleEndpoint) {
+    	if( prctitnrRoleEndpoint != null ) {
+	    	if( this.prctitnrRoleEndpoint == null ) {
+	        	this.prctitnrRoleEndpoint = prctitnrRoleEndpoint;
+	        } else if(this.prctitnrRoleEndpoint.substring(this.prctitnrRoleEndpoint.length() - 1).equals("]") & prctitnrRoleEndpoint.equals("[")) {
+	        	this.prctitnrRoleEndpoint = this.prctitnrRoleEndpoint+ "," + prctitnrRoleEndpoint;
+	        } else if(prctitnrRoleEndpoint.equals("[") | prctitnrRoleEndpoint.equals("]") | this.prctitnrRoleEndpoint.substring(this.prctitnrRoleEndpoint.length() - 1).equals("[")) {
+	        	this.prctitnrRoleEndpoint = this.prctitnrRoleEndpoint+prctitnrRoleEndpoint;
+	        } else  {
+	            this.prctitnrRoleEndpoint = this.prctitnrRoleEndpoint+ "," +prctitnrRoleEndpoint;
+	        }
+        }
     }
     
     
@@ -210,6 +406,20 @@ public class PractitionerRole  implements java.io.Serializable {
         this.prctitnrRoleHlthcrSrv = prctitnrRoleHlthcrSrv;
     }
     
+    public void addPrctitnrRoleHlthcrSrv(String prctitnrRoleHlthcrSrv) {
+    	if( prctitnrRoleHlthcrSrv != null ) {
+	    	if( this.prctitnrRoleHlthcrSrv == null ) {
+	        	this.prctitnrRoleHlthcrSrv = prctitnrRoleHlthcrSrv;
+	        } else if(this.prctitnrRoleHlthcrSrv.substring(this.prctitnrRoleHlthcrSrv.length() - 1).equals("]") & prctitnrRoleHlthcrSrv.equals("[")) {
+	        	this.prctitnrRoleHlthcrSrv = this.prctitnrRoleHlthcrSrv+ "," + prctitnrRoleHlthcrSrv;
+	        } else if(prctitnrRoleHlthcrSrv.equals("[") | prctitnrRoleHlthcrSrv.equals("]") | this.prctitnrRoleHlthcrSrv.substring(this.prctitnrRoleHlthcrSrv.length() - 1).equals("[")) {
+	        	this.prctitnrRoleHlthcrSrv = this.prctitnrRoleHlthcrSrv+prctitnrRoleHlthcrSrv;
+	        } else  {
+	            this.prctitnrRoleHlthcrSrv = this.prctitnrRoleHlthcrSrv+ "," +prctitnrRoleHlthcrSrv;
+	        }
+        }
+    }
+    
     
     
     public String getPrctitnrRoleIdAssigner() {
@@ -218,6 +428,20 @@ public class PractitionerRole  implements java.io.Serializable {
     
     public void setPrctitnrRoleIdAssigner(String prctitnrRoleIdAssigner) {
         this.prctitnrRoleIdAssigner = prctitnrRoleIdAssigner;
+    }
+    
+    public void addPrctitnrRoleIdAssigner(String prctitnrRoleIdAssigner) {
+    	if( prctitnrRoleIdAssigner != null ) {
+	    	if( this.prctitnrRoleIdAssigner == null ) {
+	        	this.prctitnrRoleIdAssigner = prctitnrRoleIdAssigner;
+	        } else if(this.prctitnrRoleIdAssigner.substring(this.prctitnrRoleIdAssigner.length() - 1).equals("]") & prctitnrRoleIdAssigner.equals("[")) {
+	        	this.prctitnrRoleIdAssigner = this.prctitnrRoleIdAssigner+ "," + prctitnrRoleIdAssigner;
+	        } else if(prctitnrRoleIdAssigner.equals("[") | prctitnrRoleIdAssigner.equals("]") | this.prctitnrRoleIdAssigner.substring(this.prctitnrRoleIdAssigner.length() - 1).equals("[")) {
+	        	this.prctitnrRoleIdAssigner = this.prctitnrRoleIdAssigner+prctitnrRoleIdAssigner;
+	        } else  {
+	            this.prctitnrRoleIdAssigner = this.prctitnrRoleIdAssigner+ "," +prctitnrRoleIdAssigner;
+	        }
+        }
     }
     
     
@@ -230,6 +454,20 @@ public class PractitionerRole  implements java.io.Serializable {
         this.prctitnrRoleIdPrdEnd = prctitnrRoleIdPrdEnd;
     }
     
+    public void addPrctitnrRoleIdPrdEnd(String prctitnrRoleIdPrdEnd) {
+    	if( prctitnrRoleIdPrdEnd != null ) {
+	    	if( this.prctitnrRoleIdPrdEnd == null ) {
+	        	this.prctitnrRoleIdPrdEnd = prctitnrRoleIdPrdEnd;
+	        } else if(this.prctitnrRoleIdPrdEnd.substring(this.prctitnrRoleIdPrdEnd.length() - 1).equals("]") & prctitnrRoleIdPrdEnd.equals("[")) {
+	        	this.prctitnrRoleIdPrdEnd = this.prctitnrRoleIdPrdEnd+ "," + prctitnrRoleIdPrdEnd;
+	        } else if(prctitnrRoleIdPrdEnd.equals("[") | prctitnrRoleIdPrdEnd.equals("]") | this.prctitnrRoleIdPrdEnd.substring(this.prctitnrRoleIdPrdEnd.length() - 1).equals("[")) {
+	        	this.prctitnrRoleIdPrdEnd = this.prctitnrRoleIdPrdEnd+prctitnrRoleIdPrdEnd;
+	        } else  {
+	            this.prctitnrRoleIdPrdEnd = this.prctitnrRoleIdPrdEnd+ "," +prctitnrRoleIdPrdEnd;
+	        }
+        }
+    }
+    
     
     
     public String getPrctitnrRoleIdPrdStrt() {
@@ -238,6 +476,20 @@ public class PractitionerRole  implements java.io.Serializable {
     
     public void setPrctitnrRoleIdPrdStrt(String prctitnrRoleIdPrdStrt) {
         this.prctitnrRoleIdPrdStrt = prctitnrRoleIdPrdStrt;
+    }
+    
+    public void addPrctitnrRoleIdPrdStrt(String prctitnrRoleIdPrdStrt) {
+    	if( prctitnrRoleIdPrdStrt != null ) {
+	    	if( this.prctitnrRoleIdPrdStrt == null ) {
+	        	this.prctitnrRoleIdPrdStrt = prctitnrRoleIdPrdStrt;
+	        } else if(this.prctitnrRoleIdPrdStrt.substring(this.prctitnrRoleIdPrdStrt.length() - 1).equals("]") & prctitnrRoleIdPrdStrt.equals("[")) {
+	        	this.prctitnrRoleIdPrdStrt = this.prctitnrRoleIdPrdStrt+ "," + prctitnrRoleIdPrdStrt;
+	        } else if(prctitnrRoleIdPrdStrt.equals("[") | prctitnrRoleIdPrdStrt.equals("]") | this.prctitnrRoleIdPrdStrt.substring(this.prctitnrRoleIdPrdStrt.length() - 1).equals("[")) {
+	        	this.prctitnrRoleIdPrdStrt = this.prctitnrRoleIdPrdStrt+prctitnrRoleIdPrdStrt;
+	        } else  {
+	            this.prctitnrRoleIdPrdStrt = this.prctitnrRoleIdPrdStrt+ "," +prctitnrRoleIdPrdStrt;
+	        }
+        }
     }
     
     
@@ -250,6 +502,20 @@ public class PractitionerRole  implements java.io.Serializable {
         this.prctitnrRoleIdSys = prctitnrRoleIdSys;
     }
     
+    public void addPrctitnrRoleIdSys(String prctitnrRoleIdSys) {
+    	if( prctitnrRoleIdSys != null ) {
+	    	if( this.prctitnrRoleIdSys == null ) {
+	        	this.prctitnrRoleIdSys = prctitnrRoleIdSys;
+	        } else if(this.prctitnrRoleIdSys.substring(this.prctitnrRoleIdSys.length() - 1).equals("]") & prctitnrRoleIdSys.equals("[")) {
+	        	this.prctitnrRoleIdSys = this.prctitnrRoleIdSys+ "," + prctitnrRoleIdSys;
+	        } else if(prctitnrRoleIdSys.equals("[") | prctitnrRoleIdSys.equals("]") | this.prctitnrRoleIdSys.substring(this.prctitnrRoleIdSys.length() - 1).equals("[")) {
+	        	this.prctitnrRoleIdSys = this.prctitnrRoleIdSys+prctitnrRoleIdSys;
+	        } else  {
+	            this.prctitnrRoleIdSys = this.prctitnrRoleIdSys+ "," +prctitnrRoleIdSys;
+	        }
+        }
+    }
+    
     
     
     public String getPrctitnrRoleIdTypCdgCd() {
@@ -258,6 +524,20 @@ public class PractitionerRole  implements java.io.Serializable {
     
     public void setPrctitnrRoleIdTypCdgCd(String prctitnrRoleIdTypCdgCd) {
         this.prctitnrRoleIdTypCdgCd = prctitnrRoleIdTypCdgCd;
+    }
+    
+    public void addPrctitnrRoleIdTypCdgCd(String prctitnrRoleIdTypCdgCd) {
+    	if( prctitnrRoleIdTypCdgCd != null ) {
+	    	if( this.prctitnrRoleIdTypCdgCd == null ) {
+	        	this.prctitnrRoleIdTypCdgCd = prctitnrRoleIdTypCdgCd;
+	        } else if(this.prctitnrRoleIdTypCdgCd.substring(this.prctitnrRoleIdTypCdgCd.length() - 1).equals("]") & prctitnrRoleIdTypCdgCd.equals("[")) {
+	        	this.prctitnrRoleIdTypCdgCd = this.prctitnrRoleIdTypCdgCd+ "," + prctitnrRoleIdTypCdgCd;
+	        } else if(prctitnrRoleIdTypCdgCd.equals("[") | prctitnrRoleIdTypCdgCd.equals("]") | this.prctitnrRoleIdTypCdgCd.substring(this.prctitnrRoleIdTypCdgCd.length() - 1).equals("[")) {
+	        	this.prctitnrRoleIdTypCdgCd = this.prctitnrRoleIdTypCdgCd+prctitnrRoleIdTypCdgCd;
+	        } else  {
+	            this.prctitnrRoleIdTypCdgCd = this.prctitnrRoleIdTypCdgCd+ "," +prctitnrRoleIdTypCdgCd;
+	        }
+        }
     }
     
     
@@ -270,6 +550,20 @@ public class PractitionerRole  implements java.io.Serializable {
         this.prctitnrRoleIdTypCdgDsply = prctitnrRoleIdTypCdgDsply;
     }
     
+    public void addPrctitnrRoleIdTypCdgDsply(String prctitnrRoleIdTypCdgDsply) {
+    	if( prctitnrRoleIdTypCdgDsply != null ) {
+	    	if( this.prctitnrRoleIdTypCdgDsply == null ) {
+	        	this.prctitnrRoleIdTypCdgDsply = prctitnrRoleIdTypCdgDsply;
+	        } else if(this.prctitnrRoleIdTypCdgDsply.substring(this.prctitnrRoleIdTypCdgDsply.length() - 1).equals("]") & prctitnrRoleIdTypCdgDsply.equals("[")) {
+	        	this.prctitnrRoleIdTypCdgDsply = this.prctitnrRoleIdTypCdgDsply+ "," + prctitnrRoleIdTypCdgDsply;
+	        } else if(prctitnrRoleIdTypCdgDsply.equals("[") | prctitnrRoleIdTypCdgDsply.equals("]") | this.prctitnrRoleIdTypCdgDsply.substring(this.prctitnrRoleIdTypCdgDsply.length() - 1).equals("[")) {
+	        	this.prctitnrRoleIdTypCdgDsply = this.prctitnrRoleIdTypCdgDsply+prctitnrRoleIdTypCdgDsply;
+	        } else  {
+	            this.prctitnrRoleIdTypCdgDsply = this.prctitnrRoleIdTypCdgDsply+ "," +prctitnrRoleIdTypCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getPrctitnrRoleIdTypCdgSys() {
@@ -278,6 +572,20 @@ public class PractitionerRole  implements java.io.Serializable {
     
     public void setPrctitnrRoleIdTypCdgSys(String prctitnrRoleIdTypCdgSys) {
         this.prctitnrRoleIdTypCdgSys = prctitnrRoleIdTypCdgSys;
+    }
+    
+    public void addPrctitnrRoleIdTypCdgSys(String prctitnrRoleIdTypCdgSys) {
+    	if( prctitnrRoleIdTypCdgSys != null ) {
+	    	if( this.prctitnrRoleIdTypCdgSys == null ) {
+	        	this.prctitnrRoleIdTypCdgSys = prctitnrRoleIdTypCdgSys;
+	        } else if(this.prctitnrRoleIdTypCdgSys.substring(this.prctitnrRoleIdTypCdgSys.length() - 1).equals("]") & prctitnrRoleIdTypCdgSys.equals("[")) {
+	        	this.prctitnrRoleIdTypCdgSys = this.prctitnrRoleIdTypCdgSys+ "," + prctitnrRoleIdTypCdgSys;
+	        } else if(prctitnrRoleIdTypCdgSys.equals("[") | prctitnrRoleIdTypCdgSys.equals("]") | this.prctitnrRoleIdTypCdgSys.substring(this.prctitnrRoleIdTypCdgSys.length() - 1).equals("[")) {
+	        	this.prctitnrRoleIdTypCdgSys = this.prctitnrRoleIdTypCdgSys+prctitnrRoleIdTypCdgSys;
+	        } else  {
+	            this.prctitnrRoleIdTypCdgSys = this.prctitnrRoleIdTypCdgSys+ "," +prctitnrRoleIdTypCdgSys;
+	        }
+        }
     }
     
     
@@ -290,6 +598,20 @@ public class PractitionerRole  implements java.io.Serializable {
         this.prctitnrRoleIdTypCdgUsrSltd = prctitnrRoleIdTypCdgUsrSltd;
     }
     
+    public void addPrctitnrRoleIdTypCdgUsrSltd(String prctitnrRoleIdTypCdgUsrSltd) {
+    	if( prctitnrRoleIdTypCdgUsrSltd != null ) {
+	    	if( this.prctitnrRoleIdTypCdgUsrSltd == null ) {
+	        	this.prctitnrRoleIdTypCdgUsrSltd = prctitnrRoleIdTypCdgUsrSltd;
+	        } else if(this.prctitnrRoleIdTypCdgUsrSltd.substring(this.prctitnrRoleIdTypCdgUsrSltd.length() - 1).equals("]") & prctitnrRoleIdTypCdgUsrSltd.equals("[")) {
+	        	this.prctitnrRoleIdTypCdgUsrSltd = this.prctitnrRoleIdTypCdgUsrSltd+ "," + prctitnrRoleIdTypCdgUsrSltd;
+	        } else if(prctitnrRoleIdTypCdgUsrSltd.equals("[") | prctitnrRoleIdTypCdgUsrSltd.equals("]") | this.prctitnrRoleIdTypCdgUsrSltd.substring(this.prctitnrRoleIdTypCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.prctitnrRoleIdTypCdgUsrSltd = this.prctitnrRoleIdTypCdgUsrSltd+prctitnrRoleIdTypCdgUsrSltd;
+	        } else  {
+	            this.prctitnrRoleIdTypCdgUsrSltd = this.prctitnrRoleIdTypCdgUsrSltd+ "," +prctitnrRoleIdTypCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getPrctitnrRoleIdTypCdgVrsn() {
@@ -298,6 +620,20 @@ public class PractitionerRole  implements java.io.Serializable {
     
     public void setPrctitnrRoleIdTypCdgVrsn(String prctitnrRoleIdTypCdgVrsn) {
         this.prctitnrRoleIdTypCdgVrsn = prctitnrRoleIdTypCdgVrsn;
+    }
+    
+    public void addPrctitnrRoleIdTypCdgVrsn(String prctitnrRoleIdTypCdgVrsn) {
+    	if( prctitnrRoleIdTypCdgVrsn != null ) {
+	    	if( this.prctitnrRoleIdTypCdgVrsn == null ) {
+	        	this.prctitnrRoleIdTypCdgVrsn = prctitnrRoleIdTypCdgVrsn;
+	        } else if(this.prctitnrRoleIdTypCdgVrsn.substring(this.prctitnrRoleIdTypCdgVrsn.length() - 1).equals("]") & prctitnrRoleIdTypCdgVrsn.equals("[")) {
+	        	this.prctitnrRoleIdTypCdgVrsn = this.prctitnrRoleIdTypCdgVrsn+ "," + prctitnrRoleIdTypCdgVrsn;
+	        } else if(prctitnrRoleIdTypCdgVrsn.equals("[") | prctitnrRoleIdTypCdgVrsn.equals("]") | this.prctitnrRoleIdTypCdgVrsn.substring(this.prctitnrRoleIdTypCdgVrsn.length() - 1).equals("[")) {
+	        	this.prctitnrRoleIdTypCdgVrsn = this.prctitnrRoleIdTypCdgVrsn+prctitnrRoleIdTypCdgVrsn;
+	        } else  {
+	            this.prctitnrRoleIdTypCdgVrsn = this.prctitnrRoleIdTypCdgVrsn+ "," +prctitnrRoleIdTypCdgVrsn;
+	        }
+        }
     }
     
     
@@ -310,6 +646,20 @@ public class PractitionerRole  implements java.io.Serializable {
         this.prctitnrRoleIdTypTxt = prctitnrRoleIdTypTxt;
     }
     
+    public void addPrctitnrRoleIdTypTxt(String prctitnrRoleIdTypTxt) {
+    	if( prctitnrRoleIdTypTxt != null ) {
+	    	if( this.prctitnrRoleIdTypTxt == null ) {
+	        	this.prctitnrRoleIdTypTxt = prctitnrRoleIdTypTxt;
+	        } else if(this.prctitnrRoleIdTypTxt.substring(this.prctitnrRoleIdTypTxt.length() - 1).equals("]") & prctitnrRoleIdTypTxt.equals("[")) {
+	        	this.prctitnrRoleIdTypTxt = this.prctitnrRoleIdTypTxt+ "," + prctitnrRoleIdTypTxt;
+	        } else if(prctitnrRoleIdTypTxt.equals("[") | prctitnrRoleIdTypTxt.equals("]") | this.prctitnrRoleIdTypTxt.substring(this.prctitnrRoleIdTypTxt.length() - 1).equals("[")) {
+	        	this.prctitnrRoleIdTypTxt = this.prctitnrRoleIdTypTxt+prctitnrRoleIdTypTxt;
+	        } else  {
+	            this.prctitnrRoleIdTypTxt = this.prctitnrRoleIdTypTxt+ "," +prctitnrRoleIdTypTxt;
+	        }
+        }
+    }
+    
     
     
     public String getPrctitnrRoleIdUse() {
@@ -318,6 +668,20 @@ public class PractitionerRole  implements java.io.Serializable {
     
     public void setPrctitnrRoleIdUse(String prctitnrRoleIdUse) {
         this.prctitnrRoleIdUse = prctitnrRoleIdUse;
+    }
+    
+    public void addPrctitnrRoleIdUse(String prctitnrRoleIdUse) {
+    	if( prctitnrRoleIdUse != null ) {
+	    	if( this.prctitnrRoleIdUse == null ) {
+	        	this.prctitnrRoleIdUse = prctitnrRoleIdUse;
+	        } else if(this.prctitnrRoleIdUse.substring(this.prctitnrRoleIdUse.length() - 1).equals("]") & prctitnrRoleIdUse.equals("[")) {
+	        	this.prctitnrRoleIdUse = this.prctitnrRoleIdUse+ "," + prctitnrRoleIdUse;
+	        } else if(prctitnrRoleIdUse.equals("[") | prctitnrRoleIdUse.equals("]") | this.prctitnrRoleIdUse.substring(this.prctitnrRoleIdUse.length() - 1).equals("[")) {
+	        	this.prctitnrRoleIdUse = this.prctitnrRoleIdUse+prctitnrRoleIdUse;
+	        } else  {
+	            this.prctitnrRoleIdUse = this.prctitnrRoleIdUse+ "," +prctitnrRoleIdUse;
+	        }
+        }
     }
     
     
@@ -330,6 +694,20 @@ public class PractitionerRole  implements java.io.Serializable {
         this.prctitnrRoleIdVl = prctitnrRoleIdVl;
     }
     
+    public void addPrctitnrRoleIdVl(String prctitnrRoleIdVl) {
+    	if( prctitnrRoleIdVl != null ) {
+	    	if( this.prctitnrRoleIdVl == null ) {
+	        	this.prctitnrRoleIdVl = prctitnrRoleIdVl;
+	        } else if(this.prctitnrRoleIdVl.substring(this.prctitnrRoleIdVl.length() - 1).equals("]") & prctitnrRoleIdVl.equals("[")) {
+	        	this.prctitnrRoleIdVl = this.prctitnrRoleIdVl+ "," + prctitnrRoleIdVl;
+	        } else if(prctitnrRoleIdVl.equals("[") | prctitnrRoleIdVl.equals("]") | this.prctitnrRoleIdVl.substring(this.prctitnrRoleIdVl.length() - 1).equals("[")) {
+	        	this.prctitnrRoleIdVl = this.prctitnrRoleIdVl+prctitnrRoleIdVl;
+	        } else  {
+	            this.prctitnrRoleIdVl = this.prctitnrRoleIdVl+ "," +prctitnrRoleIdVl;
+	        }
+        }
+    }
+    
     
     
     public String getPrctitnrRoleLctn() {
@@ -338,6 +716,20 @@ public class PractitionerRole  implements java.io.Serializable {
     
     public void setPrctitnrRoleLctn(String prctitnrRoleLctn) {
         this.prctitnrRoleLctn = prctitnrRoleLctn;
+    }
+    
+    public void addPrctitnrRoleLctn(String prctitnrRoleLctn) {
+    	if( prctitnrRoleLctn != null ) {
+	    	if( this.prctitnrRoleLctn == null ) {
+	        	this.prctitnrRoleLctn = prctitnrRoleLctn;
+	        } else if(this.prctitnrRoleLctn.substring(this.prctitnrRoleLctn.length() - 1).equals("]") & prctitnrRoleLctn.equals("[")) {
+	        	this.prctitnrRoleLctn = this.prctitnrRoleLctn+ "," + prctitnrRoleLctn;
+	        } else if(prctitnrRoleLctn.equals("[") | prctitnrRoleLctn.equals("]") | this.prctitnrRoleLctn.substring(this.prctitnrRoleLctn.length() - 1).equals("[")) {
+	        	this.prctitnrRoleLctn = this.prctitnrRoleLctn+prctitnrRoleLctn;
+	        } else  {
+	            this.prctitnrRoleLctn = this.prctitnrRoleLctn+ "," +prctitnrRoleLctn;
+	        }
+        }
     }
     
     
@@ -350,6 +742,20 @@ public class PractitionerRole  implements java.io.Serializable {
         this.prctitnrRoleNotAvailableDscrptn = prctitnrRoleNotAvailableDscrptn;
     }
     
+    public void addPrctitnrRoleNotAvailableDscrptn(String prctitnrRoleNotAvailableDscrptn) {
+    	if( prctitnrRoleNotAvailableDscrptn != null ) {
+	    	if( this.prctitnrRoleNotAvailableDscrptn == null ) {
+	        	this.prctitnrRoleNotAvailableDscrptn = prctitnrRoleNotAvailableDscrptn;
+	        } else if(this.prctitnrRoleNotAvailableDscrptn.substring(this.prctitnrRoleNotAvailableDscrptn.length() - 1).equals("]") & prctitnrRoleNotAvailableDscrptn.equals("[")) {
+	        	this.prctitnrRoleNotAvailableDscrptn = this.prctitnrRoleNotAvailableDscrptn+ "," + prctitnrRoleNotAvailableDscrptn;
+	        } else if(prctitnrRoleNotAvailableDscrptn.equals("[") | prctitnrRoleNotAvailableDscrptn.equals("]") | this.prctitnrRoleNotAvailableDscrptn.substring(this.prctitnrRoleNotAvailableDscrptn.length() - 1).equals("[")) {
+	        	this.prctitnrRoleNotAvailableDscrptn = this.prctitnrRoleNotAvailableDscrptn+prctitnrRoleNotAvailableDscrptn;
+	        } else  {
+	            this.prctitnrRoleNotAvailableDscrptn = this.prctitnrRoleNotAvailableDscrptn+ "," +prctitnrRoleNotAvailableDscrptn;
+	        }
+        }
+    }
+    
     
     
     public String getPrctitnrRoleNotAvailableDuringEnd() {
@@ -358,6 +764,20 @@ public class PractitionerRole  implements java.io.Serializable {
     
     public void setPrctitnrRoleNotAvailableDuringEnd(String prctitnrRoleNotAvailableDuringEnd) {
         this.prctitnrRoleNotAvailableDuringEnd = prctitnrRoleNotAvailableDuringEnd;
+    }
+    
+    public void addPrctitnrRoleNotAvailableDuringEnd(String prctitnrRoleNotAvailableDuringEnd) {
+    	if( prctitnrRoleNotAvailableDuringEnd != null ) {
+	    	if( this.prctitnrRoleNotAvailableDuringEnd == null ) {
+	        	this.prctitnrRoleNotAvailableDuringEnd = prctitnrRoleNotAvailableDuringEnd;
+	        } else if(this.prctitnrRoleNotAvailableDuringEnd.substring(this.prctitnrRoleNotAvailableDuringEnd.length() - 1).equals("]") & prctitnrRoleNotAvailableDuringEnd.equals("[")) {
+	        	this.prctitnrRoleNotAvailableDuringEnd = this.prctitnrRoleNotAvailableDuringEnd+ "," + prctitnrRoleNotAvailableDuringEnd;
+	        } else if(prctitnrRoleNotAvailableDuringEnd.equals("[") | prctitnrRoleNotAvailableDuringEnd.equals("]") | this.prctitnrRoleNotAvailableDuringEnd.substring(this.prctitnrRoleNotAvailableDuringEnd.length() - 1).equals("[")) {
+	        	this.prctitnrRoleNotAvailableDuringEnd = this.prctitnrRoleNotAvailableDuringEnd+prctitnrRoleNotAvailableDuringEnd;
+	        } else  {
+	            this.prctitnrRoleNotAvailableDuringEnd = this.prctitnrRoleNotAvailableDuringEnd+ "," +prctitnrRoleNotAvailableDuringEnd;
+	        }
+        }
     }
     
     
@@ -370,6 +790,20 @@ public class PractitionerRole  implements java.io.Serializable {
         this.prctitnrRoleNotAvailableDuringStrt = prctitnrRoleNotAvailableDuringStrt;
     }
     
+    public void addPrctitnrRoleNotAvailableDuringStrt(String prctitnrRoleNotAvailableDuringStrt) {
+    	if( prctitnrRoleNotAvailableDuringStrt != null ) {
+	    	if( this.prctitnrRoleNotAvailableDuringStrt == null ) {
+	        	this.prctitnrRoleNotAvailableDuringStrt = prctitnrRoleNotAvailableDuringStrt;
+	        } else if(this.prctitnrRoleNotAvailableDuringStrt.substring(this.prctitnrRoleNotAvailableDuringStrt.length() - 1).equals("]") & prctitnrRoleNotAvailableDuringStrt.equals("[")) {
+	        	this.prctitnrRoleNotAvailableDuringStrt = this.prctitnrRoleNotAvailableDuringStrt+ "," + prctitnrRoleNotAvailableDuringStrt;
+	        } else if(prctitnrRoleNotAvailableDuringStrt.equals("[") | prctitnrRoleNotAvailableDuringStrt.equals("]") | this.prctitnrRoleNotAvailableDuringStrt.substring(this.prctitnrRoleNotAvailableDuringStrt.length() - 1).equals("[")) {
+	        	this.prctitnrRoleNotAvailableDuringStrt = this.prctitnrRoleNotAvailableDuringStrt+prctitnrRoleNotAvailableDuringStrt;
+	        } else  {
+	            this.prctitnrRoleNotAvailableDuringStrt = this.prctitnrRoleNotAvailableDuringStrt+ "," +prctitnrRoleNotAvailableDuringStrt;
+	        }
+        }
+    }
+    
     
     
     public String getPrctitnrRoleOrgnztn() {
@@ -378,6 +812,20 @@ public class PractitionerRole  implements java.io.Serializable {
     
     public void setPrctitnrRoleOrgnztn(String prctitnrRoleOrgnztn) {
         this.prctitnrRoleOrgnztn = prctitnrRoleOrgnztn;
+    }
+    
+    public void addPrctitnrRoleOrgnztn(String prctitnrRoleOrgnztn) {
+    	if( prctitnrRoleOrgnztn != null ) {
+	    	if( this.prctitnrRoleOrgnztn == null ) {
+	        	this.prctitnrRoleOrgnztn = prctitnrRoleOrgnztn;
+	        } else if(this.prctitnrRoleOrgnztn.substring(this.prctitnrRoleOrgnztn.length() - 1).equals("]") & prctitnrRoleOrgnztn.equals("[")) {
+	        	this.prctitnrRoleOrgnztn = this.prctitnrRoleOrgnztn+ "," + prctitnrRoleOrgnztn;
+	        } else if(prctitnrRoleOrgnztn.equals("[") | prctitnrRoleOrgnztn.equals("]") | this.prctitnrRoleOrgnztn.substring(this.prctitnrRoleOrgnztn.length() - 1).equals("[")) {
+	        	this.prctitnrRoleOrgnztn = this.prctitnrRoleOrgnztn+prctitnrRoleOrgnztn;
+	        } else  {
+	            this.prctitnrRoleOrgnztn = this.prctitnrRoleOrgnztn+ "," +prctitnrRoleOrgnztn;
+	        }
+        }
     }
     
     
@@ -390,6 +838,20 @@ public class PractitionerRole  implements java.io.Serializable {
         this.prctitnrRolePrdEnd = prctitnrRolePrdEnd;
     }
     
+    public void addPrctitnrRolePrdEnd(String prctitnrRolePrdEnd) {
+    	if( prctitnrRolePrdEnd != null ) {
+	    	if( this.prctitnrRolePrdEnd == null ) {
+	        	this.prctitnrRolePrdEnd = prctitnrRolePrdEnd;
+	        } else if(this.prctitnrRolePrdEnd.substring(this.prctitnrRolePrdEnd.length() - 1).equals("]") & prctitnrRolePrdEnd.equals("[")) {
+	        	this.prctitnrRolePrdEnd = this.prctitnrRolePrdEnd+ "," + prctitnrRolePrdEnd;
+	        } else if(prctitnrRolePrdEnd.equals("[") | prctitnrRolePrdEnd.equals("]") | this.prctitnrRolePrdEnd.substring(this.prctitnrRolePrdEnd.length() - 1).equals("[")) {
+	        	this.prctitnrRolePrdEnd = this.prctitnrRolePrdEnd+prctitnrRolePrdEnd;
+	        } else  {
+	            this.prctitnrRolePrdEnd = this.prctitnrRolePrdEnd+ "," +prctitnrRolePrdEnd;
+	        }
+        }
+    }
+    
     
     
     public String getPrctitnrRolePrdStrt() {
@@ -398,6 +860,20 @@ public class PractitionerRole  implements java.io.Serializable {
     
     public void setPrctitnrRolePrdStrt(String prctitnrRolePrdStrt) {
         this.prctitnrRolePrdStrt = prctitnrRolePrdStrt;
+    }
+    
+    public void addPrctitnrRolePrdStrt(String prctitnrRolePrdStrt) {
+    	if( prctitnrRolePrdStrt != null ) {
+	    	if( this.prctitnrRolePrdStrt == null ) {
+	        	this.prctitnrRolePrdStrt = prctitnrRolePrdStrt;
+	        } else if(this.prctitnrRolePrdStrt.substring(this.prctitnrRolePrdStrt.length() - 1).equals("]") & prctitnrRolePrdStrt.equals("[")) {
+	        	this.prctitnrRolePrdStrt = this.prctitnrRolePrdStrt+ "," + prctitnrRolePrdStrt;
+	        } else if(prctitnrRolePrdStrt.equals("[") | prctitnrRolePrdStrt.equals("]") | this.prctitnrRolePrdStrt.substring(this.prctitnrRolePrdStrt.length() - 1).equals("[")) {
+	        	this.prctitnrRolePrdStrt = this.prctitnrRolePrdStrt+prctitnrRolePrdStrt;
+	        } else  {
+	            this.prctitnrRolePrdStrt = this.prctitnrRolePrdStrt+ "," +prctitnrRolePrdStrt;
+	        }
+        }
     }
     
     
@@ -410,6 +886,20 @@ public class PractitionerRole  implements java.io.Serializable {
         this.prctitnrRolePrctitnr = prctitnrRolePrctitnr;
     }
     
+    public void addPrctitnrRolePrctitnr(String prctitnrRolePrctitnr) {
+    	if( prctitnrRolePrctitnr != null ) {
+	    	if( this.prctitnrRolePrctitnr == null ) {
+	        	this.prctitnrRolePrctitnr = prctitnrRolePrctitnr;
+	        } else if(this.prctitnrRolePrctitnr.substring(this.prctitnrRolePrctitnr.length() - 1).equals("]") & prctitnrRolePrctitnr.equals("[")) {
+	        	this.prctitnrRolePrctitnr = this.prctitnrRolePrctitnr+ "," + prctitnrRolePrctitnr;
+	        } else if(prctitnrRolePrctitnr.equals("[") | prctitnrRolePrctitnr.equals("]") | this.prctitnrRolePrctitnr.substring(this.prctitnrRolePrctitnr.length() - 1).equals("[")) {
+	        	this.prctitnrRolePrctitnr = this.prctitnrRolePrctitnr+prctitnrRolePrctitnr;
+	        } else  {
+	            this.prctitnrRolePrctitnr = this.prctitnrRolePrctitnr+ "," +prctitnrRolePrctitnr;
+	        }
+        }
+    }
+    
     
     
     public String getPrctitnrRoleSpcltyCdgCd() {
@@ -418,6 +908,20 @@ public class PractitionerRole  implements java.io.Serializable {
     
     public void setPrctitnrRoleSpcltyCdgCd(String prctitnrRoleSpcltyCdgCd) {
         this.prctitnrRoleSpcltyCdgCd = prctitnrRoleSpcltyCdgCd;
+    }
+    
+    public void addPrctitnrRoleSpcltyCdgCd(String prctitnrRoleSpcltyCdgCd) {
+    	if( prctitnrRoleSpcltyCdgCd != null ) {
+	    	if( this.prctitnrRoleSpcltyCdgCd == null ) {
+	        	this.prctitnrRoleSpcltyCdgCd = prctitnrRoleSpcltyCdgCd;
+	        } else if(this.prctitnrRoleSpcltyCdgCd.substring(this.prctitnrRoleSpcltyCdgCd.length() - 1).equals("]") & prctitnrRoleSpcltyCdgCd.equals("[")) {
+	        	this.prctitnrRoleSpcltyCdgCd = this.prctitnrRoleSpcltyCdgCd+ "," + prctitnrRoleSpcltyCdgCd;
+	        } else if(prctitnrRoleSpcltyCdgCd.equals("[") | prctitnrRoleSpcltyCdgCd.equals("]") | this.prctitnrRoleSpcltyCdgCd.substring(this.prctitnrRoleSpcltyCdgCd.length() - 1).equals("[")) {
+	        	this.prctitnrRoleSpcltyCdgCd = this.prctitnrRoleSpcltyCdgCd+prctitnrRoleSpcltyCdgCd;
+	        } else  {
+	            this.prctitnrRoleSpcltyCdgCd = this.prctitnrRoleSpcltyCdgCd+ "," +prctitnrRoleSpcltyCdgCd;
+	        }
+        }
     }
     
     
@@ -430,6 +934,20 @@ public class PractitionerRole  implements java.io.Serializable {
         this.prctitnrRoleSpcltyCdgDsply = prctitnrRoleSpcltyCdgDsply;
     }
     
+    public void addPrctitnrRoleSpcltyCdgDsply(String prctitnrRoleSpcltyCdgDsply) {
+    	if( prctitnrRoleSpcltyCdgDsply != null ) {
+	    	if( this.prctitnrRoleSpcltyCdgDsply == null ) {
+	        	this.prctitnrRoleSpcltyCdgDsply = prctitnrRoleSpcltyCdgDsply;
+	        } else if(this.prctitnrRoleSpcltyCdgDsply.substring(this.prctitnrRoleSpcltyCdgDsply.length() - 1).equals("]") & prctitnrRoleSpcltyCdgDsply.equals("[")) {
+	        	this.prctitnrRoleSpcltyCdgDsply = this.prctitnrRoleSpcltyCdgDsply+ "," + prctitnrRoleSpcltyCdgDsply;
+	        } else if(prctitnrRoleSpcltyCdgDsply.equals("[") | prctitnrRoleSpcltyCdgDsply.equals("]") | this.prctitnrRoleSpcltyCdgDsply.substring(this.prctitnrRoleSpcltyCdgDsply.length() - 1).equals("[")) {
+	        	this.prctitnrRoleSpcltyCdgDsply = this.prctitnrRoleSpcltyCdgDsply+prctitnrRoleSpcltyCdgDsply;
+	        } else  {
+	            this.prctitnrRoleSpcltyCdgDsply = this.prctitnrRoleSpcltyCdgDsply+ "," +prctitnrRoleSpcltyCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getPrctitnrRoleSpcltyCdgSys() {
@@ -438,6 +956,20 @@ public class PractitionerRole  implements java.io.Serializable {
     
     public void setPrctitnrRoleSpcltyCdgSys(String prctitnrRoleSpcltyCdgSys) {
         this.prctitnrRoleSpcltyCdgSys = prctitnrRoleSpcltyCdgSys;
+    }
+    
+    public void addPrctitnrRoleSpcltyCdgSys(String prctitnrRoleSpcltyCdgSys) {
+    	if( prctitnrRoleSpcltyCdgSys != null ) {
+	    	if( this.prctitnrRoleSpcltyCdgSys == null ) {
+	        	this.prctitnrRoleSpcltyCdgSys = prctitnrRoleSpcltyCdgSys;
+	        } else if(this.prctitnrRoleSpcltyCdgSys.substring(this.prctitnrRoleSpcltyCdgSys.length() - 1).equals("]") & prctitnrRoleSpcltyCdgSys.equals("[")) {
+	        	this.prctitnrRoleSpcltyCdgSys = this.prctitnrRoleSpcltyCdgSys+ "," + prctitnrRoleSpcltyCdgSys;
+	        } else if(prctitnrRoleSpcltyCdgSys.equals("[") | prctitnrRoleSpcltyCdgSys.equals("]") | this.prctitnrRoleSpcltyCdgSys.substring(this.prctitnrRoleSpcltyCdgSys.length() - 1).equals("[")) {
+	        	this.prctitnrRoleSpcltyCdgSys = this.prctitnrRoleSpcltyCdgSys+prctitnrRoleSpcltyCdgSys;
+	        } else  {
+	            this.prctitnrRoleSpcltyCdgSys = this.prctitnrRoleSpcltyCdgSys+ "," +prctitnrRoleSpcltyCdgSys;
+	        }
+        }
     }
     
     
@@ -450,6 +982,20 @@ public class PractitionerRole  implements java.io.Serializable {
         this.prctitnrRoleSpcltyCdgUsrSltd = prctitnrRoleSpcltyCdgUsrSltd;
     }
     
+    public void addPrctitnrRoleSpcltyCdgUsrSltd(String prctitnrRoleSpcltyCdgUsrSltd) {
+    	if( prctitnrRoleSpcltyCdgUsrSltd != null ) {
+	    	if( this.prctitnrRoleSpcltyCdgUsrSltd == null ) {
+	        	this.prctitnrRoleSpcltyCdgUsrSltd = prctitnrRoleSpcltyCdgUsrSltd;
+	        } else if(this.prctitnrRoleSpcltyCdgUsrSltd.substring(this.prctitnrRoleSpcltyCdgUsrSltd.length() - 1).equals("]") & prctitnrRoleSpcltyCdgUsrSltd.equals("[")) {
+	        	this.prctitnrRoleSpcltyCdgUsrSltd = this.prctitnrRoleSpcltyCdgUsrSltd+ "," + prctitnrRoleSpcltyCdgUsrSltd;
+	        } else if(prctitnrRoleSpcltyCdgUsrSltd.equals("[") | prctitnrRoleSpcltyCdgUsrSltd.equals("]") | this.prctitnrRoleSpcltyCdgUsrSltd.substring(this.prctitnrRoleSpcltyCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.prctitnrRoleSpcltyCdgUsrSltd = this.prctitnrRoleSpcltyCdgUsrSltd+prctitnrRoleSpcltyCdgUsrSltd;
+	        } else  {
+	            this.prctitnrRoleSpcltyCdgUsrSltd = this.prctitnrRoleSpcltyCdgUsrSltd+ "," +prctitnrRoleSpcltyCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getPrctitnrRoleSpcltyCdgVrsn() {
@@ -458,6 +1004,20 @@ public class PractitionerRole  implements java.io.Serializable {
     
     public void setPrctitnrRoleSpcltyCdgVrsn(String prctitnrRoleSpcltyCdgVrsn) {
         this.prctitnrRoleSpcltyCdgVrsn = prctitnrRoleSpcltyCdgVrsn;
+    }
+    
+    public void addPrctitnrRoleSpcltyCdgVrsn(String prctitnrRoleSpcltyCdgVrsn) {
+    	if( prctitnrRoleSpcltyCdgVrsn != null ) {
+	    	if( this.prctitnrRoleSpcltyCdgVrsn == null ) {
+	        	this.prctitnrRoleSpcltyCdgVrsn = prctitnrRoleSpcltyCdgVrsn;
+	        } else if(this.prctitnrRoleSpcltyCdgVrsn.substring(this.prctitnrRoleSpcltyCdgVrsn.length() - 1).equals("]") & prctitnrRoleSpcltyCdgVrsn.equals("[")) {
+	        	this.prctitnrRoleSpcltyCdgVrsn = this.prctitnrRoleSpcltyCdgVrsn+ "," + prctitnrRoleSpcltyCdgVrsn;
+	        } else if(prctitnrRoleSpcltyCdgVrsn.equals("[") | prctitnrRoleSpcltyCdgVrsn.equals("]") | this.prctitnrRoleSpcltyCdgVrsn.substring(this.prctitnrRoleSpcltyCdgVrsn.length() - 1).equals("[")) {
+	        	this.prctitnrRoleSpcltyCdgVrsn = this.prctitnrRoleSpcltyCdgVrsn+prctitnrRoleSpcltyCdgVrsn;
+	        } else  {
+	            this.prctitnrRoleSpcltyCdgVrsn = this.prctitnrRoleSpcltyCdgVrsn+ "," +prctitnrRoleSpcltyCdgVrsn;
+	        }
+        }
     }
     
     
@@ -470,6 +1030,20 @@ public class PractitionerRole  implements java.io.Serializable {
         this.prctitnrRoleSpcltyTxt = prctitnrRoleSpcltyTxt;
     }
     
+    public void addPrctitnrRoleSpcltyTxt(String prctitnrRoleSpcltyTxt) {
+    	if( prctitnrRoleSpcltyTxt != null ) {
+	    	if( this.prctitnrRoleSpcltyTxt == null ) {
+	        	this.prctitnrRoleSpcltyTxt = prctitnrRoleSpcltyTxt;
+	        } else if(this.prctitnrRoleSpcltyTxt.substring(this.prctitnrRoleSpcltyTxt.length() - 1).equals("]") & prctitnrRoleSpcltyTxt.equals("[")) {
+	        	this.prctitnrRoleSpcltyTxt = this.prctitnrRoleSpcltyTxt+ "," + prctitnrRoleSpcltyTxt;
+	        } else if(prctitnrRoleSpcltyTxt.equals("[") | prctitnrRoleSpcltyTxt.equals("]") | this.prctitnrRoleSpcltyTxt.substring(this.prctitnrRoleSpcltyTxt.length() - 1).equals("[")) {
+	        	this.prctitnrRoleSpcltyTxt = this.prctitnrRoleSpcltyTxt+prctitnrRoleSpcltyTxt;
+	        } else  {
+	            this.prctitnrRoleSpcltyTxt = this.prctitnrRoleSpcltyTxt+ "," +prctitnrRoleSpcltyTxt;
+	        }
+        }
+    }
+    
     
     
     public String getPrctitnrRoleTlcmPrdEnd() {
@@ -478,6 +1052,20 @@ public class PractitionerRole  implements java.io.Serializable {
     
     public void setPrctitnrRoleTlcmPrdEnd(String prctitnrRoleTlcmPrdEnd) {
         this.prctitnrRoleTlcmPrdEnd = prctitnrRoleTlcmPrdEnd;
+    }
+    
+    public void addPrctitnrRoleTlcmPrdEnd(String prctitnrRoleTlcmPrdEnd) {
+    	if( prctitnrRoleTlcmPrdEnd != null ) {
+	    	if( this.prctitnrRoleTlcmPrdEnd == null ) {
+	        	this.prctitnrRoleTlcmPrdEnd = prctitnrRoleTlcmPrdEnd;
+	        } else if(this.prctitnrRoleTlcmPrdEnd.substring(this.prctitnrRoleTlcmPrdEnd.length() - 1).equals("]") & prctitnrRoleTlcmPrdEnd.equals("[")) {
+	        	this.prctitnrRoleTlcmPrdEnd = this.prctitnrRoleTlcmPrdEnd+ "," + prctitnrRoleTlcmPrdEnd;
+	        } else if(prctitnrRoleTlcmPrdEnd.equals("[") | prctitnrRoleTlcmPrdEnd.equals("]") | this.prctitnrRoleTlcmPrdEnd.substring(this.prctitnrRoleTlcmPrdEnd.length() - 1).equals("[")) {
+	        	this.prctitnrRoleTlcmPrdEnd = this.prctitnrRoleTlcmPrdEnd+prctitnrRoleTlcmPrdEnd;
+	        } else  {
+	            this.prctitnrRoleTlcmPrdEnd = this.prctitnrRoleTlcmPrdEnd+ "," +prctitnrRoleTlcmPrdEnd;
+	        }
+        }
     }
     
     
@@ -490,6 +1078,20 @@ public class PractitionerRole  implements java.io.Serializable {
         this.prctitnrRoleTlcmPrdStrt = prctitnrRoleTlcmPrdStrt;
     }
     
+    public void addPrctitnrRoleTlcmPrdStrt(String prctitnrRoleTlcmPrdStrt) {
+    	if( prctitnrRoleTlcmPrdStrt != null ) {
+	    	if( this.prctitnrRoleTlcmPrdStrt == null ) {
+	        	this.prctitnrRoleTlcmPrdStrt = prctitnrRoleTlcmPrdStrt;
+	        } else if(this.prctitnrRoleTlcmPrdStrt.substring(this.prctitnrRoleTlcmPrdStrt.length() - 1).equals("]") & prctitnrRoleTlcmPrdStrt.equals("[")) {
+	        	this.prctitnrRoleTlcmPrdStrt = this.prctitnrRoleTlcmPrdStrt+ "," + prctitnrRoleTlcmPrdStrt;
+	        } else if(prctitnrRoleTlcmPrdStrt.equals("[") | prctitnrRoleTlcmPrdStrt.equals("]") | this.prctitnrRoleTlcmPrdStrt.substring(this.prctitnrRoleTlcmPrdStrt.length() - 1).equals("[")) {
+	        	this.prctitnrRoleTlcmPrdStrt = this.prctitnrRoleTlcmPrdStrt+prctitnrRoleTlcmPrdStrt;
+	        } else  {
+	            this.prctitnrRoleTlcmPrdStrt = this.prctitnrRoleTlcmPrdStrt+ "," +prctitnrRoleTlcmPrdStrt;
+	        }
+        }
+    }
+    
     
     
     public String getPrctitnrRoleTlcmRnk() {
@@ -498,6 +1100,20 @@ public class PractitionerRole  implements java.io.Serializable {
     
     public void setPrctitnrRoleTlcmRnk(String prctitnrRoleTlcmRnk) {
         this.prctitnrRoleTlcmRnk = prctitnrRoleTlcmRnk;
+    }
+    
+    public void addPrctitnrRoleTlcmRnk(String prctitnrRoleTlcmRnk) {
+    	if( prctitnrRoleTlcmRnk != null ) {
+	    	if( this.prctitnrRoleTlcmRnk == null ) {
+	        	this.prctitnrRoleTlcmRnk = prctitnrRoleTlcmRnk;
+	        } else if(this.prctitnrRoleTlcmRnk.substring(this.prctitnrRoleTlcmRnk.length() - 1).equals("]") & prctitnrRoleTlcmRnk.equals("[")) {
+	        	this.prctitnrRoleTlcmRnk = this.prctitnrRoleTlcmRnk+ "," + prctitnrRoleTlcmRnk;
+	        } else if(prctitnrRoleTlcmRnk.equals("[") | prctitnrRoleTlcmRnk.equals("]") | this.prctitnrRoleTlcmRnk.substring(this.prctitnrRoleTlcmRnk.length() - 1).equals("[")) {
+	        	this.prctitnrRoleTlcmRnk = this.prctitnrRoleTlcmRnk+prctitnrRoleTlcmRnk;
+	        } else  {
+	            this.prctitnrRoleTlcmRnk = this.prctitnrRoleTlcmRnk+ "," +prctitnrRoleTlcmRnk;
+	        }
+        }
     }
     
     
@@ -510,6 +1126,20 @@ public class PractitionerRole  implements java.io.Serializable {
         this.prctitnrRoleTlcmSys = prctitnrRoleTlcmSys;
     }
     
+    public void addPrctitnrRoleTlcmSys(String prctitnrRoleTlcmSys) {
+    	if( prctitnrRoleTlcmSys != null ) {
+	    	if( this.prctitnrRoleTlcmSys == null ) {
+	        	this.prctitnrRoleTlcmSys = prctitnrRoleTlcmSys;
+	        } else if(this.prctitnrRoleTlcmSys.substring(this.prctitnrRoleTlcmSys.length() - 1).equals("]") & prctitnrRoleTlcmSys.equals("[")) {
+	        	this.prctitnrRoleTlcmSys = this.prctitnrRoleTlcmSys+ "," + prctitnrRoleTlcmSys;
+	        } else if(prctitnrRoleTlcmSys.equals("[") | prctitnrRoleTlcmSys.equals("]") | this.prctitnrRoleTlcmSys.substring(this.prctitnrRoleTlcmSys.length() - 1).equals("[")) {
+	        	this.prctitnrRoleTlcmSys = this.prctitnrRoleTlcmSys+prctitnrRoleTlcmSys;
+	        } else  {
+	            this.prctitnrRoleTlcmSys = this.prctitnrRoleTlcmSys+ "," +prctitnrRoleTlcmSys;
+	        }
+        }
+    }
+    
     
     
     public String getPrctitnrRoleTlcmUse() {
@@ -520,6 +1150,20 @@ public class PractitionerRole  implements java.io.Serializable {
         this.prctitnrRoleTlcmUse = prctitnrRoleTlcmUse;
     }
     
+    public void addPrctitnrRoleTlcmUse(String prctitnrRoleTlcmUse) {
+    	if( prctitnrRoleTlcmUse != null ) {
+	    	if( this.prctitnrRoleTlcmUse == null ) {
+	        	this.prctitnrRoleTlcmUse = prctitnrRoleTlcmUse;
+	        } else if(this.prctitnrRoleTlcmUse.substring(this.prctitnrRoleTlcmUse.length() - 1).equals("]") & prctitnrRoleTlcmUse.equals("[")) {
+	        	this.prctitnrRoleTlcmUse = this.prctitnrRoleTlcmUse+ "," + prctitnrRoleTlcmUse;
+	        } else if(prctitnrRoleTlcmUse.equals("[") | prctitnrRoleTlcmUse.equals("]") | this.prctitnrRoleTlcmUse.substring(this.prctitnrRoleTlcmUse.length() - 1).equals("[")) {
+	        	this.prctitnrRoleTlcmUse = this.prctitnrRoleTlcmUse+prctitnrRoleTlcmUse;
+	        } else  {
+	            this.prctitnrRoleTlcmUse = this.prctitnrRoleTlcmUse+ "," +prctitnrRoleTlcmUse;
+	        }
+        }
+    }
+    
     
     
     public String getPrctitnrRoleTlcmVl() {
@@ -528,6 +1172,20 @@ public class PractitionerRole  implements java.io.Serializable {
     
     public void setPrctitnrRoleTlcmVl(String prctitnrRoleTlcmVl) {
         this.prctitnrRoleTlcmVl = prctitnrRoleTlcmVl;
+    }
+    
+    public void addPrctitnrRoleTlcmVl(String prctitnrRoleTlcmVl) {
+    	if( prctitnrRoleTlcmVl != null ) {
+	    	if( this.prctitnrRoleTlcmVl == null ) {
+	        	this.prctitnrRoleTlcmVl = prctitnrRoleTlcmVl;
+	        } else if(this.prctitnrRoleTlcmVl.substring(this.prctitnrRoleTlcmVl.length() - 1).equals("]") & prctitnrRoleTlcmVl.equals("[")) {
+	        	this.prctitnrRoleTlcmVl = this.prctitnrRoleTlcmVl+ "," + prctitnrRoleTlcmVl;
+	        } else if(prctitnrRoleTlcmVl.equals("[") | prctitnrRoleTlcmVl.equals("]") | this.prctitnrRoleTlcmVl.substring(this.prctitnrRoleTlcmVl.length() - 1).equals("[")) {
+	        	this.prctitnrRoleTlcmVl = this.prctitnrRoleTlcmVl+prctitnrRoleTlcmVl;
+	        } else  {
+	            this.prctitnrRoleTlcmVl = this.prctitnrRoleTlcmVl+ "," +prctitnrRoleTlcmVl;
+	        }
+        }
     }
     
     

@@ -8,446 +8,472 @@ public class SubstanceReferenceInformationBidirectionalConversion
 		 main.java.com.campfhir.model.SubstanceReferenceInformation s = new  main.java.com.campfhir.model.SubstanceReferenceInformation();
 
 		/******************** id ********************************************************************************/
-		substancereferenceinformation.setId(s.getId());
+		s.setId(substancereferenceinformation.getIdElement().getIdPart());
 
 		/******************** SbstncRfrncInfo_Comment ********************************************************************************/
 		if(substancereferenceinformation.hasComment()) {
-			s.setSbstncRfrncInfoComment(String.valueOf(substancereferenceinformation.getComment()));
+
+			s.addSbstncRfrncInfoComment(String.valueOf(substancereferenceinformation.getComment()));
+		} else {
+			s.addSbstncRfrncInfoComment("NULL");
 		}
+
+
 		/******************** substancereferenceinformationgene ********************************************************************************/
-		org.hl7.fhir.r4.model.SubstanceReferenceInformation.SubstanceReferenceInformationGeneComponent substancereferenceinformationgene = substancereferenceinformation.getGeneFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.SubstanceReferenceInformation.SubstanceReferenceInformationGeneComponent> substancereferenceinformationgenelist = substancereferenceinformation.getGene();
+		for(int substancereferenceinformationgenei = 0; substancereferenceinformationgenei<substancereferenceinformationgenelist.size();substancereferenceinformationgenei++ ) {
+		org.hl7.fhir.r4.model.SubstanceReferenceInformation.SubstanceReferenceInformationGeneComponent  substancereferenceinformationgene = substancereferenceinformationgenelist.get(substancereferenceinformationgenei);
+
+		/******************** SbstncRfrncInfo_Gene_Src ********************************************************************************/
+		if(substancereferenceinformationgenei == 0) {s.addSbstncRfrncInfoGeneSrc("[");}
+		if(substancereferenceinformationgene.hasSource()) {
+
+			String  array = "[";
+			for(int incr=0; incr<substancereferenceinformationgene.getSource().size(); incr++) {
+				array = array + substancereferenceinformationgene.getSource().get(incr).getReference() + ",";
+			}
+			array = array.substring(0, array.length() -1);
+			array = array + "]";
+			s.addSbstncRfrncInfoGeneSrc(array);
+
+		} else {
+			s.addSbstncRfrncInfoGeneSrc("NULL");
+		}
+
+		if(substancereferenceinformationgenei == substancereferenceinformationgenelist.size()-1) {s.addSbstncRfrncInfoGeneSrc("]");}
+
 
 		/******************** substancereferenceinformationgenegene ********************************************************************************/
 		org.hl7.fhir.r4.model.CodeableConcept substancereferenceinformationgenegene = substancereferenceinformationgene.getGene();
 
 		/******************** SbstncRfrncInfo_Gene_Gene_Txt ********************************************************************************/
+		if(substancereferenceinformationgenei == 0) {s.addSbstncRfrncInfoGeneGeneTxt("[");}
 		if(substancereferenceinformationgenegene.hasText()) {
-			s.setSbstncRfrncInfoGeneGeneTxt(String.valueOf(substancereferenceinformationgenegene.getText()));
+
+			s.addSbstncRfrncInfoGeneGeneTxt(String.valueOf(substancereferenceinformationgenegene.getText()));
+		} else {
+			s.addSbstncRfrncInfoGeneGeneTxt("NULL");
 		}
+
+		if(substancereferenceinformationgenei == substancereferenceinformationgenelist.size()-1) {s.addSbstncRfrncInfoGeneGeneTxt("]");}
+
+
 		/******************** substancereferenceinformationgenegenecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding substancereferenceinformationgenegenecoding = substancereferenceinformationgenegene.getCodingFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.Coding> substancereferenceinformationgenegenecodinglist = substancereferenceinformationgenegene.getCoding();
+		for(int substancereferenceinformationgenegenecodingi = 0; substancereferenceinformationgenegenecodingi<substancereferenceinformationgenegenecodinglist.size();substancereferenceinformationgenegenecodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  substancereferenceinformationgenegenecoding = substancereferenceinformationgenegenecodinglist.get(substancereferenceinformationgenegenecodingi);
+
+		/******************** SbstncRfrncInfo_Gene_Gene_Cdg_Dsply ********************************************************************************/
+		if(substancereferenceinformationgenegenecodingi == 0) {s.addSbstncRfrncInfoGeneGeneCdgDsply("[[");}
+		if(substancereferenceinformationgenegenecoding.hasDisplay()) {
+
+			s.addSbstncRfrncInfoGeneGeneCdgDsply(String.valueOf(substancereferenceinformationgenegenecoding.getDisplay()));
+		} else {
+			s.addSbstncRfrncInfoGeneGeneCdgDsply("NULL");
+		}
+
+		if(substancereferenceinformationgenegenecodingi == substancereferenceinformationgenegenecodinglist.size()-1) {s.addSbstncRfrncInfoGeneGeneCdgDsply("]]");}
+
 
 		/******************** SbstncRfrncInfo_Gene_Gene_Cdg_Vrsn ********************************************************************************/
+		if(substancereferenceinformationgenegenecodingi == 0) {s.addSbstncRfrncInfoGeneGeneCdgVrsn("[[");}
 		if(substancereferenceinformationgenegenecoding.hasVersion()) {
-			s.setSbstncRfrncInfoGeneGeneCdgVrsn(String.valueOf(substancereferenceinformationgenegenecoding.getVersion()));
+
+			s.addSbstncRfrncInfoGeneGeneCdgVrsn(String.valueOf(substancereferenceinformationgenegenecoding.getVersion()));
+		} else {
+			s.addSbstncRfrncInfoGeneGeneCdgVrsn("NULL");
 		}
-		/******************** SbstncRfrncInfo_Gene_Gene_Cdg_Dsply ********************************************************************************/
-		if(substancereferenceinformationgenegenecoding.hasDisplay()) {
-			s.setSbstncRfrncInfoGeneGeneCdgDsply(String.valueOf(substancereferenceinformationgenegenecoding.getDisplay()));
-		}
+
+		if(substancereferenceinformationgenegenecodingi == substancereferenceinformationgenegenecodinglist.size()-1) {s.addSbstncRfrncInfoGeneGeneCdgVrsn("]]");}
+
+
 		/******************** SbstncRfrncInfo_Gene_Gene_Cdg_Cd ********************************************************************************/
+		if(substancereferenceinformationgenegenecodingi == 0) {s.addSbstncRfrncInfoGeneGeneCdgCd("[[");}
 		if(substancereferenceinformationgenegenecoding.hasCode()) {
-			s.setSbstncRfrncInfoGeneGeneCdgCd(String.valueOf(substancereferenceinformationgenegenecoding.getCode()));
+
+			s.addSbstncRfrncInfoGeneGeneCdgCd(String.valueOf(substancereferenceinformationgenegenecoding.getCode()));
+		} else {
+			s.addSbstncRfrncInfoGeneGeneCdgCd("NULL");
 		}
+
+		if(substancereferenceinformationgenegenecodingi == substancereferenceinformationgenegenecodinglist.size()-1) {s.addSbstncRfrncInfoGeneGeneCdgCd("]]");}
+
+
 		/******************** SbstncRfrncInfo_Gene_Gene_Cdg_UsrSltd ********************************************************************************/
+		if(substancereferenceinformationgenegenecodingi == 0) {s.addSbstncRfrncInfoGeneGeneCdgUsrSltd("[[");}
 		if(substancereferenceinformationgenegenecoding.hasUserSelected()) {
-			s.setSbstncRfrncInfoGeneGeneCdgUsrSltd(String.valueOf(substancereferenceinformationgenegenecoding.getUserSelected()));
+
+			s.addSbstncRfrncInfoGeneGeneCdgUsrSltd(String.valueOf(substancereferenceinformationgenegenecoding.getUserSelected()));
+		} else {
+			s.addSbstncRfrncInfoGeneGeneCdgUsrSltd("NULL");
 		}
+
+		if(substancereferenceinformationgenegenecodingi == substancereferenceinformationgenegenecodinglist.size()-1) {s.addSbstncRfrncInfoGeneGeneCdgUsrSltd("]]");}
+
+
 		/******************** SbstncRfrncInfo_Gene_Gene_Cdg_Sys ********************************************************************************/
+		if(substancereferenceinformationgenegenecodingi == 0) {s.addSbstncRfrncInfoGeneGeneCdgSys("[[");}
 		if(substancereferenceinformationgenegenecoding.hasSystem()) {
-			s.setSbstncRfrncInfoGeneGeneCdgSys(String.valueOf(substancereferenceinformationgenegenecoding.getSystem()));
+
+			s.addSbstncRfrncInfoGeneGeneCdgSys(String.valueOf(substancereferenceinformationgenegenecoding.getSystem()));
+		} else {
+			s.addSbstncRfrncInfoGeneGeneCdgSys("NULL");
 		}
+
+		if(substancereferenceinformationgenegenecodingi == substancereferenceinformationgenegenecodinglist.size()-1) {s.addSbstncRfrncInfoGeneGeneCdgSys("]]");}
+
+
+		 };
 		/******************** substancereferenceinformationgenegenesequenceorigin ********************************************************************************/
 		org.hl7.fhir.r4.model.CodeableConcept substancereferenceinformationgenegenesequenceorigin = substancereferenceinformationgene.getGeneSequenceOrigin();
 
 		/******************** SbstncRfrncInfo_Gene_GeneSqncOrigin_Txt ********************************************************************************/
+		if(substancereferenceinformationgenei == 0) {s.addSbstncRfrncInfoGeneGeneSqncOriginTxt("[");}
 		if(substancereferenceinformationgenegenesequenceorigin.hasText()) {
-			s.setSbstncRfrncInfoGeneGeneSqncOriginTxt(String.valueOf(substancereferenceinformationgenegenesequenceorigin.getText()));
+
+			s.addSbstncRfrncInfoGeneGeneSqncOriginTxt(String.valueOf(substancereferenceinformationgenegenesequenceorigin.getText()));
+		} else {
+			s.addSbstncRfrncInfoGeneGeneSqncOriginTxt("NULL");
 		}
+
+		if(substancereferenceinformationgenei == substancereferenceinformationgenelist.size()-1) {s.addSbstncRfrncInfoGeneGeneSqncOriginTxt("]");}
+
+
 		/******************** substancereferenceinformationgenegenesequenceorigincoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding substancereferenceinformationgenegenesequenceorigincoding = substancereferenceinformationgenegenesequenceorigin.getCodingFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.Coding> substancereferenceinformationgenegenesequenceorigincodinglist = substancereferenceinformationgenegenesequenceorigin.getCoding();
+		for(int substancereferenceinformationgenegenesequenceorigincodingi = 0; substancereferenceinformationgenegenesequenceorigincodingi<substancereferenceinformationgenegenesequenceorigincodinglist.size();substancereferenceinformationgenegenesequenceorigincodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  substancereferenceinformationgenegenesequenceorigincoding = substancereferenceinformationgenegenesequenceorigincodinglist.get(substancereferenceinformationgenegenesequenceorigincodingi);
+
+		/******************** SbstncRfrncInfo_Gene_GeneSqncOrigin_Cdg_Dsply ********************************************************************************/
+		if(substancereferenceinformationgenegenesequenceorigincodingi == 0) {s.addSbstncRfrncInfoGeneGeneSqncOriginCdgDsply("[[");}
+		if(substancereferenceinformationgenegenesequenceorigincoding.hasDisplay()) {
+
+			s.addSbstncRfrncInfoGeneGeneSqncOriginCdgDsply(String.valueOf(substancereferenceinformationgenegenesequenceorigincoding.getDisplay()));
+		} else {
+			s.addSbstncRfrncInfoGeneGeneSqncOriginCdgDsply("NULL");
+		}
+
+		if(substancereferenceinformationgenegenesequenceorigincodingi == substancereferenceinformationgenegenesequenceorigincodinglist.size()-1) {s.addSbstncRfrncInfoGeneGeneSqncOriginCdgDsply("]]");}
+
 
 		/******************** SbstncRfrncInfo_Gene_GeneSqncOrigin_Cdg_Vrsn ********************************************************************************/
+		if(substancereferenceinformationgenegenesequenceorigincodingi == 0) {s.addSbstncRfrncInfoGeneGeneSqncOriginCdgVrsn("[[");}
 		if(substancereferenceinformationgenegenesequenceorigincoding.hasVersion()) {
-			s.setSbstncRfrncInfoGeneGeneSqncOriginCdgVrsn(String.valueOf(substancereferenceinformationgenegenesequenceorigincoding.getVersion()));
-		}
-		/******************** SbstncRfrncInfo_Gene_GeneSqncOrigin_Cdg_Dsply ********************************************************************************/
-		if(substancereferenceinformationgenegenesequenceorigincoding.hasDisplay()) {
-			s.setSbstncRfrncInfoGeneGeneSqncOriginCdgDsply(String.valueOf(substancereferenceinformationgenegenesequenceorigincoding.getDisplay()));
-		}
-		/******************** SbstncRfrncInfo_Gene_GeneSqncOrigin_Cdg_Cd ********************************************************************************/
-		if(substancereferenceinformationgenegenesequenceorigincoding.hasCode()) {
-			s.setSbstncRfrncInfoGeneGeneSqncOriginCdgCd(String.valueOf(substancereferenceinformationgenegenesequenceorigincoding.getCode()));
-		}
-		/******************** SbstncRfrncInfo_Gene_GeneSqncOrigin_Cdg_UsrSltd ********************************************************************************/
-		if(substancereferenceinformationgenegenesequenceorigincoding.hasUserSelected()) {
-			s.setSbstncRfrncInfoGeneGeneSqncOriginCdgUsrSltd(String.valueOf(substancereferenceinformationgenegenesequenceorigincoding.getUserSelected()));
-		}
-		/******************** SbstncRfrncInfo_Gene_GeneSqncOrigin_Cdg_Sys ********************************************************************************/
-		if(substancereferenceinformationgenegenesequenceorigincoding.hasSystem()) {
-			s.setSbstncRfrncInfoGeneGeneSqncOriginCdgSys(String.valueOf(substancereferenceinformationgenegenesequenceorigincoding.getSystem()));
-		}
-		/******************** SbstncRfrncInfo_Gene_Src ********************************************************************************/
-		if(substancereferenceinformationgene.hasSource()) {
-			s.setSbstncRfrncInfoGeneSrc(String.valueOf(substancereferenceinformationgene.getSourceFirstRep()));
-		}
-		/******************** substancereferenceinformationclassification ********************************************************************************/
-		org.hl7.fhir.r4.model.SubstanceReferenceInformation.SubstanceReferenceInformationClassificationComponent substancereferenceinformationclassification = substancereferenceinformation.getClassificationFirstRep();
 
+			s.addSbstncRfrncInfoGeneGeneSqncOriginCdgVrsn(String.valueOf(substancereferenceinformationgenegenesequenceorigincoding.getVersion()));
+		} else {
+			s.addSbstncRfrncInfoGeneGeneSqncOriginCdgVrsn("NULL");
+		}
+
+		if(substancereferenceinformationgenegenesequenceorigincodingi == substancereferenceinformationgenegenesequenceorigincodinglist.size()-1) {s.addSbstncRfrncInfoGeneGeneSqncOriginCdgVrsn("]]");}
+
+
+		/******************** SbstncRfrncInfo_Gene_GeneSqncOrigin_Cdg_Cd ********************************************************************************/
+		if(substancereferenceinformationgenegenesequenceorigincodingi == 0) {s.addSbstncRfrncInfoGeneGeneSqncOriginCdgCd("[[");}
+		if(substancereferenceinformationgenegenesequenceorigincoding.hasCode()) {
+
+			s.addSbstncRfrncInfoGeneGeneSqncOriginCdgCd(String.valueOf(substancereferenceinformationgenegenesequenceorigincoding.getCode()));
+		} else {
+			s.addSbstncRfrncInfoGeneGeneSqncOriginCdgCd("NULL");
+		}
+
+		if(substancereferenceinformationgenegenesequenceorigincodingi == substancereferenceinformationgenegenesequenceorigincodinglist.size()-1) {s.addSbstncRfrncInfoGeneGeneSqncOriginCdgCd("]]");}
+
+
+		/******************** SbstncRfrncInfo_Gene_GeneSqncOrigin_Cdg_UsrSltd ********************************************************************************/
+		if(substancereferenceinformationgenegenesequenceorigincodingi == 0) {s.addSbstncRfrncInfoGeneGeneSqncOriginCdgUsrSltd("[[");}
+		if(substancereferenceinformationgenegenesequenceorigincoding.hasUserSelected()) {
+
+			s.addSbstncRfrncInfoGeneGeneSqncOriginCdgUsrSltd(String.valueOf(substancereferenceinformationgenegenesequenceorigincoding.getUserSelected()));
+		} else {
+			s.addSbstncRfrncInfoGeneGeneSqncOriginCdgUsrSltd("NULL");
+		}
+
+		if(substancereferenceinformationgenegenesequenceorigincodingi == substancereferenceinformationgenegenesequenceorigincodinglist.size()-1) {s.addSbstncRfrncInfoGeneGeneSqncOriginCdgUsrSltd("]]");}
+
+
+		/******************** SbstncRfrncInfo_Gene_GeneSqncOrigin_Cdg_Sys ********************************************************************************/
+		if(substancereferenceinformationgenegenesequenceorigincodingi == 0) {s.addSbstncRfrncInfoGeneGeneSqncOriginCdgSys("[[");}
+		if(substancereferenceinformationgenegenesequenceorigincoding.hasSystem()) {
+
+			s.addSbstncRfrncInfoGeneGeneSqncOriginCdgSys(String.valueOf(substancereferenceinformationgenegenesequenceorigincoding.getSystem()));
+		} else {
+			s.addSbstncRfrncInfoGeneGeneSqncOriginCdgSys("NULL");
+		}
+
+		if(substancereferenceinformationgenegenesequenceorigincodingi == substancereferenceinformationgenegenesequenceorigincodinglist.size()-1) {s.addSbstncRfrncInfoGeneGeneSqncOriginCdgSys("]]");}
+
+
+		 };
+		 };
+		/******************** substancereferenceinformationclassification ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.SubstanceReferenceInformation.SubstanceReferenceInformationClassificationComponent> substancereferenceinformationclassificationlist = substancereferenceinformation.getClassification();
+		for(int substancereferenceinformationclassificationi = 0; substancereferenceinformationclassificationi<substancereferenceinformationclassificationlist.size();substancereferenceinformationclassificationi++ ) {
+		org.hl7.fhir.r4.model.SubstanceReferenceInformation.SubstanceReferenceInformationClassificationComponent  substancereferenceinformationclassification = substancereferenceinformationclassificationlist.get(substancereferenceinformationclassificationi);
+
+		/******************** SbstncRfrncInfo_Clsfctn_Src ********************************************************************************/
+		if(substancereferenceinformationclassificationi == 0) {s.addSbstncRfrncInfoClsfctnSrc("[");}
+		if(substancereferenceinformationclassification.hasSource()) {
+
+			String  array = "[";
+			for(int incr=0; incr<substancereferenceinformationclassification.getSource().size(); incr++) {
+				array = array + substancereferenceinformationclassification.getSource().get(incr).getReference() + ",";
+			}
+			array = array.substring(0, array.length() -1);
+			array = array + "]";
+			s.addSbstncRfrncInfoClsfctnSrc(array);
+
+		} else {
+			s.addSbstncRfrncInfoClsfctnSrc("NULL");
+		}
+
+		if(substancereferenceinformationclassificationi == substancereferenceinformationclassificationlist.size()-1) {s.addSbstncRfrncInfoClsfctnSrc("]");}
+
+
+		/******************** substancereferenceinformationclassificationdomain ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept substancereferenceinformationclassificationdomain = substancereferenceinformationclassification.getDomain();
+
+		/******************** SbstncRfrncInfo_Clsfctn_Domain_Txt ********************************************************************************/
+		if(substancereferenceinformationclassificationi == 0) {s.addSbstncRfrncInfoClsfctnDomainTxt("[");}
+		if(substancereferenceinformationclassificationdomain.hasText()) {
+
+			s.addSbstncRfrncInfoClsfctnDomainTxt(String.valueOf(substancereferenceinformationclassificationdomain.getText()));
+		} else {
+			s.addSbstncRfrncInfoClsfctnDomainTxt("NULL");
+		}
+
+		if(substancereferenceinformationclassificationi == substancereferenceinformationclassificationlist.size()-1) {s.addSbstncRfrncInfoClsfctnDomainTxt("]");}
+
+
+		/******************** substancereferenceinformationclassificationdomaincoding ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.Coding> substancereferenceinformationclassificationdomaincodinglist = substancereferenceinformationclassificationdomain.getCoding();
+		for(int substancereferenceinformationclassificationdomaincodingi = 0; substancereferenceinformationclassificationdomaincodingi<substancereferenceinformationclassificationdomaincodinglist.size();substancereferenceinformationclassificationdomaincodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  substancereferenceinformationclassificationdomaincoding = substancereferenceinformationclassificationdomaincodinglist.get(substancereferenceinformationclassificationdomaincodingi);
+
+		/******************** SbstncRfrncInfo_Clsfctn_Domain_Cdg_Dsply ********************************************************************************/
+		if(substancereferenceinformationclassificationdomaincodingi == 0) {s.addSbstncRfrncInfoClsfctnDomainCdgDsply("[[");}
+		if(substancereferenceinformationclassificationdomaincoding.hasDisplay()) {
+
+			s.addSbstncRfrncInfoClsfctnDomainCdgDsply(String.valueOf(substancereferenceinformationclassificationdomaincoding.getDisplay()));
+		} else {
+			s.addSbstncRfrncInfoClsfctnDomainCdgDsply("NULL");
+		}
+
+		if(substancereferenceinformationclassificationdomaincodingi == substancereferenceinformationclassificationdomaincodinglist.size()-1) {s.addSbstncRfrncInfoClsfctnDomainCdgDsply("]]");}
+
+
+		/******************** SbstncRfrncInfo_Clsfctn_Domain_Cdg_Vrsn ********************************************************************************/
+		if(substancereferenceinformationclassificationdomaincodingi == 0) {s.addSbstncRfrncInfoClsfctnDomainCdgVrsn("[[");}
+		if(substancereferenceinformationclassificationdomaincoding.hasVersion()) {
+
+			s.addSbstncRfrncInfoClsfctnDomainCdgVrsn(String.valueOf(substancereferenceinformationclassificationdomaincoding.getVersion()));
+		} else {
+			s.addSbstncRfrncInfoClsfctnDomainCdgVrsn("NULL");
+		}
+
+		if(substancereferenceinformationclassificationdomaincodingi == substancereferenceinformationclassificationdomaincodinglist.size()-1) {s.addSbstncRfrncInfoClsfctnDomainCdgVrsn("]]");}
+
+
+		/******************** SbstncRfrncInfo_Clsfctn_Domain_Cdg_Cd ********************************************************************************/
+		if(substancereferenceinformationclassificationdomaincodingi == 0) {s.addSbstncRfrncInfoClsfctnDomainCdgCd("[[");}
+		if(substancereferenceinformationclassificationdomaincoding.hasCode()) {
+
+			s.addSbstncRfrncInfoClsfctnDomainCdgCd(String.valueOf(substancereferenceinformationclassificationdomaincoding.getCode()));
+		} else {
+			s.addSbstncRfrncInfoClsfctnDomainCdgCd("NULL");
+		}
+
+		if(substancereferenceinformationclassificationdomaincodingi == substancereferenceinformationclassificationdomaincodinglist.size()-1) {s.addSbstncRfrncInfoClsfctnDomainCdgCd("]]");}
+
+
+		/******************** SbstncRfrncInfo_Clsfctn_Domain_Cdg_UsrSltd ********************************************************************************/
+		if(substancereferenceinformationclassificationdomaincodingi == 0) {s.addSbstncRfrncInfoClsfctnDomainCdgUsrSltd("[[");}
+		if(substancereferenceinformationclassificationdomaincoding.hasUserSelected()) {
+
+			s.addSbstncRfrncInfoClsfctnDomainCdgUsrSltd(String.valueOf(substancereferenceinformationclassificationdomaincoding.getUserSelected()));
+		} else {
+			s.addSbstncRfrncInfoClsfctnDomainCdgUsrSltd("NULL");
+		}
+
+		if(substancereferenceinformationclassificationdomaincodingi == substancereferenceinformationclassificationdomaincodinglist.size()-1) {s.addSbstncRfrncInfoClsfctnDomainCdgUsrSltd("]]");}
+
+
+		/******************** SbstncRfrncInfo_Clsfctn_Domain_Cdg_Sys ********************************************************************************/
+		if(substancereferenceinformationclassificationdomaincodingi == 0) {s.addSbstncRfrncInfoClsfctnDomainCdgSys("[[");}
+		if(substancereferenceinformationclassificationdomaincoding.hasSystem()) {
+
+			s.addSbstncRfrncInfoClsfctnDomainCdgSys(String.valueOf(substancereferenceinformationclassificationdomaincoding.getSystem()));
+		} else {
+			s.addSbstncRfrncInfoClsfctnDomainCdgSys("NULL");
+		}
+
+		if(substancereferenceinformationclassificationdomaincodingi == substancereferenceinformationclassificationdomaincodinglist.size()-1) {s.addSbstncRfrncInfoClsfctnDomainCdgSys("]]");}
+
+
+		 };
 		/******************** substancereferenceinformationclassificationsubtype ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept substancereferenceinformationclassificationsubtype = substancereferenceinformationclassification.getSubtypeFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.CodeableConcept> substancereferenceinformationclassificationsubtypelist = substancereferenceinformationclassification.getSubtype();
+		for(int substancereferenceinformationclassificationsubtypei = 0; substancereferenceinformationclassificationsubtypei<substancereferenceinformationclassificationsubtypelist.size();substancereferenceinformationclassificationsubtypei++ ) {
+		org.hl7.fhir.r4.model.CodeableConcept  substancereferenceinformationclassificationsubtype = substancereferenceinformationclassificationsubtypelist.get(substancereferenceinformationclassificationsubtypei);
 
 		/******************** SbstncRfrncInfo_Clsfctn_Subtype_Txt ********************************************************************************/
+		if(substancereferenceinformationclassificationsubtypei == 0) {s.addSbstncRfrncInfoClsfctnSubtypeTxt("[[");}
 		if(substancereferenceinformationclassificationsubtype.hasText()) {
-			s.setSbstncRfrncInfoClsfctnSubtypeTxt(String.valueOf(substancereferenceinformationclassificationsubtype.getText()));
+
+			s.addSbstncRfrncInfoClsfctnSubtypeTxt(String.valueOf(substancereferenceinformationclassificationsubtype.getText()));
+		} else {
+			s.addSbstncRfrncInfoClsfctnSubtypeTxt("NULL");
 		}
+
+		if(substancereferenceinformationclassificationsubtypei == substancereferenceinformationclassificationsubtypelist.size()-1) {s.addSbstncRfrncInfoClsfctnSubtypeTxt("]]");}
+
+
 		/******************** substancereferenceinformationclassificationsubtypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding substancereferenceinformationclassificationsubtypecoding = substancereferenceinformationclassificationsubtype.getCodingFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.Coding> substancereferenceinformationclassificationsubtypecodinglist = substancereferenceinformationclassificationsubtype.getCoding();
+		for(int substancereferenceinformationclassificationsubtypecodingi = 0; substancereferenceinformationclassificationsubtypecodingi<substancereferenceinformationclassificationsubtypecodinglist.size();substancereferenceinformationclassificationsubtypecodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  substancereferenceinformationclassificationsubtypecoding = substancereferenceinformationclassificationsubtypecodinglist.get(substancereferenceinformationclassificationsubtypecodingi);
+
+		/******************** SbstncRfrncInfo_Clsfctn_Subtype_Cdg_Dsply ********************************************************************************/
+		if(substancereferenceinformationclassificationsubtypecodingi == 0) {s.addSbstncRfrncInfoClsfctnSubtypeCdgDsply("[[[");}
+		if(substancereferenceinformationclassificationsubtypecoding.hasDisplay()) {
+
+			s.addSbstncRfrncInfoClsfctnSubtypeCdgDsply(String.valueOf(substancereferenceinformationclassificationsubtypecoding.getDisplay()));
+		} else {
+			s.addSbstncRfrncInfoClsfctnSubtypeCdgDsply("NULL");
+		}
+
+		if(substancereferenceinformationclassificationsubtypecodingi == substancereferenceinformationclassificationsubtypecodinglist.size()-1) {s.addSbstncRfrncInfoClsfctnSubtypeCdgDsply("]]]");}
+
 
 		/******************** SbstncRfrncInfo_Clsfctn_Subtype_Cdg_Vrsn ********************************************************************************/
+		if(substancereferenceinformationclassificationsubtypecodingi == 0) {s.addSbstncRfrncInfoClsfctnSubtypeCdgVrsn("[[[");}
 		if(substancereferenceinformationclassificationsubtypecoding.hasVersion()) {
-			s.setSbstncRfrncInfoClsfctnSubtypeCdgVrsn(String.valueOf(substancereferenceinformationclassificationsubtypecoding.getVersion()));
+
+			s.addSbstncRfrncInfoClsfctnSubtypeCdgVrsn(String.valueOf(substancereferenceinformationclassificationsubtypecoding.getVersion()));
+		} else {
+			s.addSbstncRfrncInfoClsfctnSubtypeCdgVrsn("NULL");
 		}
-		/******************** SbstncRfrncInfo_Clsfctn_Subtype_Cdg_Dsply ********************************************************************************/
-		if(substancereferenceinformationclassificationsubtypecoding.hasDisplay()) {
-			s.setSbstncRfrncInfoClsfctnSubtypeCdgDsply(String.valueOf(substancereferenceinformationclassificationsubtypecoding.getDisplay()));
-		}
+
+		if(substancereferenceinformationclassificationsubtypecodingi == substancereferenceinformationclassificationsubtypecodinglist.size()-1) {s.addSbstncRfrncInfoClsfctnSubtypeCdgVrsn("]]]");}
+
+
 		/******************** SbstncRfrncInfo_Clsfctn_Subtype_Cdg_Cd ********************************************************************************/
+		if(substancereferenceinformationclassificationsubtypecodingi == 0) {s.addSbstncRfrncInfoClsfctnSubtypeCdgCd("[[[");}
 		if(substancereferenceinformationclassificationsubtypecoding.hasCode()) {
-			s.setSbstncRfrncInfoClsfctnSubtypeCdgCd(String.valueOf(substancereferenceinformationclassificationsubtypecoding.getCode()));
+
+			s.addSbstncRfrncInfoClsfctnSubtypeCdgCd(String.valueOf(substancereferenceinformationclassificationsubtypecoding.getCode()));
+		} else {
+			s.addSbstncRfrncInfoClsfctnSubtypeCdgCd("NULL");
 		}
+
+		if(substancereferenceinformationclassificationsubtypecodingi == substancereferenceinformationclassificationsubtypecodinglist.size()-1) {s.addSbstncRfrncInfoClsfctnSubtypeCdgCd("]]]");}
+
+
 		/******************** SbstncRfrncInfo_Clsfctn_Subtype_Cdg_UsrSltd ********************************************************************************/
+		if(substancereferenceinformationclassificationsubtypecodingi == 0) {s.addSbstncRfrncInfoClsfctnSubtypeCdgUsrSltd("[[[");}
 		if(substancereferenceinformationclassificationsubtypecoding.hasUserSelected()) {
-			s.setSbstncRfrncInfoClsfctnSubtypeCdgUsrSltd(String.valueOf(substancereferenceinformationclassificationsubtypecoding.getUserSelected()));
+
+			s.addSbstncRfrncInfoClsfctnSubtypeCdgUsrSltd(String.valueOf(substancereferenceinformationclassificationsubtypecoding.getUserSelected()));
+		} else {
+			s.addSbstncRfrncInfoClsfctnSubtypeCdgUsrSltd("NULL");
 		}
+
+		if(substancereferenceinformationclassificationsubtypecodingi == substancereferenceinformationclassificationsubtypecodinglist.size()-1) {s.addSbstncRfrncInfoClsfctnSubtypeCdgUsrSltd("]]]");}
+
+
 		/******************** SbstncRfrncInfo_Clsfctn_Subtype_Cdg_Sys ********************************************************************************/
+		if(substancereferenceinformationclassificationsubtypecodingi == 0) {s.addSbstncRfrncInfoClsfctnSubtypeCdgSys("[[[");}
 		if(substancereferenceinformationclassificationsubtypecoding.hasSystem()) {
-			s.setSbstncRfrncInfoClsfctnSubtypeCdgSys(String.valueOf(substancereferenceinformationclassificationsubtypecoding.getSystem()));
+
+			s.addSbstncRfrncInfoClsfctnSubtypeCdgSys(String.valueOf(substancereferenceinformationclassificationsubtypecoding.getSystem()));
+		} else {
+			s.addSbstncRfrncInfoClsfctnSubtypeCdgSys("NULL");
 		}
+
+		if(substancereferenceinformationclassificationsubtypecodingi == substancereferenceinformationclassificationsubtypecodinglist.size()-1) {s.addSbstncRfrncInfoClsfctnSubtypeCdgSys("]]]");}
+
+
+		 };
+		 };
 		/******************** substancereferenceinformationclassificationclassification ********************************************************************************/
 		org.hl7.fhir.r4.model.CodeableConcept substancereferenceinformationclassificationclassification = substancereferenceinformationclassification.getClassification();
 
 		/******************** SbstncRfrncInfo_Clsfctn_Clsfctn_Txt ********************************************************************************/
 		if(substancereferenceinformationclassificationclassification.hasText()) {
-			s.setSbstncRfrncInfoClsfctnClsfctnTxt(String.valueOf(substancereferenceinformationclassificationclassification.getText()));
+
+			s.addSbstncRfrncInfoClsfctnClsfctnTxt(String.valueOf(substancereferenceinformationclassificationclassification.getText()));
+		} else {
+			s.addSbstncRfrncInfoClsfctnClsfctnTxt("NULL");
 		}
+
+
 		/******************** substancereferenceinformationclassificationclassificationcoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding substancereferenceinformationclassificationclassificationcoding = substancereferenceinformationclassificationclassification.getCodingFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.Coding> substancereferenceinformationclassificationclassificationcodinglist = substancereferenceinformationclassificationclassification.getCoding();
+		for(int substancereferenceinformationclassificationclassificationcodingi = 0; substancereferenceinformationclassificationclassificationcodingi<substancereferenceinformationclassificationclassificationcodinglist.size();substancereferenceinformationclassificationclassificationcodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  substancereferenceinformationclassificationclassificationcoding = substancereferenceinformationclassificationclassificationcodinglist.get(substancereferenceinformationclassificationclassificationcodingi);
+
+		/******************** SbstncRfrncInfo_Clsfctn_Clsfctn_Cdg_Dsply ********************************************************************************/
+		if(substancereferenceinformationclassificationclassificationcodingi == 0) {s.addSbstncRfrncInfoClsfctnClsfctnCdgDsply("[[");}
+		if(substancereferenceinformationclassificationclassificationcoding.hasDisplay()) {
+
+			s.addSbstncRfrncInfoClsfctnClsfctnCdgDsply(String.valueOf(substancereferenceinformationclassificationclassificationcoding.getDisplay()));
+		} else {
+			s.addSbstncRfrncInfoClsfctnClsfctnCdgDsply("NULL");
+		}
+
+		if(substancereferenceinformationclassificationclassificationcodingi == substancereferenceinformationclassificationclassificationcodinglist.size()-1) {s.addSbstncRfrncInfoClsfctnClsfctnCdgDsply("]]");}
+
 
 		/******************** SbstncRfrncInfo_Clsfctn_Clsfctn_Cdg_Vrsn ********************************************************************************/
+		if(substancereferenceinformationclassificationclassificationcodingi == 0) {s.addSbstncRfrncInfoClsfctnClsfctnCdgVrsn("[[");}
 		if(substancereferenceinformationclassificationclassificationcoding.hasVersion()) {
-			s.setSbstncRfrncInfoClsfctnClsfctnCdgVrsn(String.valueOf(substancereferenceinformationclassificationclassificationcoding.getVersion()));
+
+			s.addSbstncRfrncInfoClsfctnClsfctnCdgVrsn(String.valueOf(substancereferenceinformationclassificationclassificationcoding.getVersion()));
+		} else {
+			s.addSbstncRfrncInfoClsfctnClsfctnCdgVrsn("NULL");
 		}
-		/******************** SbstncRfrncInfo_Clsfctn_Clsfctn_Cdg_Dsply ********************************************************************************/
-		if(substancereferenceinformationclassificationclassificationcoding.hasDisplay()) {
-			s.setSbstncRfrncInfoClsfctnClsfctnCdgDsply(String.valueOf(substancereferenceinformationclassificationclassificationcoding.getDisplay()));
-		}
+
+		if(substancereferenceinformationclassificationclassificationcodingi == substancereferenceinformationclassificationclassificationcodinglist.size()-1) {s.addSbstncRfrncInfoClsfctnClsfctnCdgVrsn("]]");}
+
+
 		/******************** SbstncRfrncInfo_Clsfctn_Clsfctn_Cdg_Cd ********************************************************************************/
+		if(substancereferenceinformationclassificationclassificationcodingi == 0) {s.addSbstncRfrncInfoClsfctnClsfctnCdgCd("[[");}
 		if(substancereferenceinformationclassificationclassificationcoding.hasCode()) {
-			s.setSbstncRfrncInfoClsfctnClsfctnCdgCd(String.valueOf(substancereferenceinformationclassificationclassificationcoding.getCode()));
+
+			s.addSbstncRfrncInfoClsfctnClsfctnCdgCd(String.valueOf(substancereferenceinformationclassificationclassificationcoding.getCode()));
+		} else {
+			s.addSbstncRfrncInfoClsfctnClsfctnCdgCd("NULL");
 		}
+
+		if(substancereferenceinformationclassificationclassificationcodingi == substancereferenceinformationclassificationclassificationcodinglist.size()-1) {s.addSbstncRfrncInfoClsfctnClsfctnCdgCd("]]");}
+
+
 		/******************** SbstncRfrncInfo_Clsfctn_Clsfctn_Cdg_UsrSltd ********************************************************************************/
+		if(substancereferenceinformationclassificationclassificationcodingi == 0) {s.addSbstncRfrncInfoClsfctnClsfctnCdgUsrSltd("[[");}
 		if(substancereferenceinformationclassificationclassificationcoding.hasUserSelected()) {
-			s.setSbstncRfrncInfoClsfctnClsfctnCdgUsrSltd(String.valueOf(substancereferenceinformationclassificationclassificationcoding.getUserSelected()));
+
+			s.addSbstncRfrncInfoClsfctnClsfctnCdgUsrSltd(String.valueOf(substancereferenceinformationclassificationclassificationcoding.getUserSelected()));
+		} else {
+			s.addSbstncRfrncInfoClsfctnClsfctnCdgUsrSltd("NULL");
 		}
+
+		if(substancereferenceinformationclassificationclassificationcodingi == substancereferenceinformationclassificationclassificationcodinglist.size()-1) {s.addSbstncRfrncInfoClsfctnClsfctnCdgUsrSltd("]]");}
+
+
 		/******************** SbstncRfrncInfo_Clsfctn_Clsfctn_Cdg_Sys ********************************************************************************/
+		if(substancereferenceinformationclassificationclassificationcodingi == 0) {s.addSbstncRfrncInfoClsfctnClsfctnCdgSys("[[");}
 		if(substancereferenceinformationclassificationclassificationcoding.hasSystem()) {
-			s.setSbstncRfrncInfoClsfctnClsfctnCdgSys(String.valueOf(substancereferenceinformationclassificationclassificationcoding.getSystem()));
-		}
-		/******************** SbstncRfrncInfo_Clsfctn_Src ********************************************************************************/
-		if(substancereferenceinformationclassification.hasSource()) {
-			s.setSbstncRfrncInfoClsfctnSrc(String.valueOf(substancereferenceinformationclassification.getSourceFirstRep()));
-		}
-		/******************** substancereferenceinformationclassificationdomain ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept substancereferenceinformationclassificationdomain = substancereferenceinformationclassification.getDomain();
 
-		/******************** SbstncRfrncInfo_Clsfctn_Domain_Txt ********************************************************************************/
-		if(substancereferenceinformationclassificationdomain.hasText()) {
-			s.setSbstncRfrncInfoClsfctnDomainTxt(String.valueOf(substancereferenceinformationclassificationdomain.getText()));
+			s.addSbstncRfrncInfoClsfctnClsfctnCdgSys(String.valueOf(substancereferenceinformationclassificationclassificationcoding.getSystem()));
+		} else {
+			s.addSbstncRfrncInfoClsfctnClsfctnCdgSys("NULL");
 		}
-		/******************** substancereferenceinformationclassificationdomaincoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding substancereferenceinformationclassificationdomaincoding = substancereferenceinformationclassificationdomain.getCodingFirstRep();
 
-		/******************** SbstncRfrncInfo_Clsfctn_Domain_Cdg_Vrsn ********************************************************************************/
-		if(substancereferenceinformationclassificationdomaincoding.hasVersion()) {
-			s.setSbstncRfrncInfoClsfctnDomainCdgVrsn(String.valueOf(substancereferenceinformationclassificationdomaincoding.getVersion()));
-		}
-		/******************** SbstncRfrncInfo_Clsfctn_Domain_Cdg_Dsply ********************************************************************************/
-		if(substancereferenceinformationclassificationdomaincoding.hasDisplay()) {
-			s.setSbstncRfrncInfoClsfctnDomainCdgDsply(String.valueOf(substancereferenceinformationclassificationdomaincoding.getDisplay()));
-		}
-		/******************** SbstncRfrncInfo_Clsfctn_Domain_Cdg_Cd ********************************************************************************/
-		if(substancereferenceinformationclassificationdomaincoding.hasCode()) {
-			s.setSbstncRfrncInfoClsfctnDomainCdgCd(String.valueOf(substancereferenceinformationclassificationdomaincoding.getCode()));
-		}
-		/******************** SbstncRfrncInfo_Clsfctn_Domain_Cdg_UsrSltd ********************************************************************************/
-		if(substancereferenceinformationclassificationdomaincoding.hasUserSelected()) {
-			s.setSbstncRfrncInfoClsfctnDomainCdgUsrSltd(String.valueOf(substancereferenceinformationclassificationdomaincoding.getUserSelected()));
-		}
-		/******************** SbstncRfrncInfo_Clsfctn_Domain_Cdg_Sys ********************************************************************************/
-		if(substancereferenceinformationclassificationdomaincoding.hasSystem()) {
-			s.setSbstncRfrncInfoClsfctnDomainCdgSys(String.valueOf(substancereferenceinformationclassificationdomaincoding.getSystem()));
-		}
-		/******************** substancereferenceinformationgeneelement ********************************************************************************/
-		org.hl7.fhir.r4.model.SubstanceReferenceInformation.SubstanceReferenceInformationGeneElementComponent substancereferenceinformationgeneelement = substancereferenceinformation.getGeneElementFirstRep();
+		if(substancereferenceinformationclassificationclassificationcodingi == substancereferenceinformationclassificationclassificationcodinglist.size()-1) {s.addSbstncRfrncInfoClsfctnClsfctnCdgSys("]]");}
 
-		/******************** substancereferenceinformationgeneelementtype ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept substancereferenceinformationgeneelementtype = substancereferenceinformationgeneelement.getType();
 
-		/******************** SbstncRfrncInfo_GeneElmnt_Typ_Txt ********************************************************************************/
-		if(substancereferenceinformationgeneelementtype.hasText()) {
-			s.setSbstncRfrncInfoGeneElmntTypTxt(String.valueOf(substancereferenceinformationgeneelementtype.getText()));
-		}
-		/******************** substancereferenceinformationgeneelementtypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding substancereferenceinformationgeneelementtypecoding = substancereferenceinformationgeneelementtype.getCodingFirstRep();
-
-		/******************** SbstncRfrncInfo_GeneElmnt_Typ_Cdg_Vrsn ********************************************************************************/
-		if(substancereferenceinformationgeneelementtypecoding.hasVersion()) {
-			s.setSbstncRfrncInfoGeneElmntTypCdgVrsn(String.valueOf(substancereferenceinformationgeneelementtypecoding.getVersion()));
-		}
-		/******************** SbstncRfrncInfo_GeneElmnt_Typ_Cdg_Dsply ********************************************************************************/
-		if(substancereferenceinformationgeneelementtypecoding.hasDisplay()) {
-			s.setSbstncRfrncInfoGeneElmntTypCdgDsply(String.valueOf(substancereferenceinformationgeneelementtypecoding.getDisplay()));
-		}
-		/******************** SbstncRfrncInfo_GeneElmnt_Typ_Cdg_Cd ********************************************************************************/
-		if(substancereferenceinformationgeneelementtypecoding.hasCode()) {
-			s.setSbstncRfrncInfoGeneElmntTypCdgCd(String.valueOf(substancereferenceinformationgeneelementtypecoding.getCode()));
-		}
-		/******************** SbstncRfrncInfo_GeneElmnt_Typ_Cdg_UsrSltd ********************************************************************************/
-		if(substancereferenceinformationgeneelementtypecoding.hasUserSelected()) {
-			s.setSbstncRfrncInfoGeneElmntTypCdgUsrSltd(String.valueOf(substancereferenceinformationgeneelementtypecoding.getUserSelected()));
-		}
-		/******************** SbstncRfrncInfo_GeneElmnt_Typ_Cdg_Sys ********************************************************************************/
-		if(substancereferenceinformationgeneelementtypecoding.hasSystem()) {
-			s.setSbstncRfrncInfoGeneElmntTypCdgSys(String.valueOf(substancereferenceinformationgeneelementtypecoding.getSystem()));
-		}
-		/******************** SbstncRfrncInfo_GeneElmnt_Src ********************************************************************************/
-		if(substancereferenceinformationgeneelement.hasSource()) {
-			s.setSbstncRfrncInfoGeneElmntSrc(String.valueOf(substancereferenceinformationgeneelement.getSourceFirstRep()));
-		}
-		/******************** substancereferenceinformationtarget ********************************************************************************/
-		org.hl7.fhir.r4.model.SubstanceReferenceInformation.SubstanceReferenceInformationTargetComponent substancereferenceinformationtarget = substancereferenceinformation.getTargetFirstRep();
-
-		/******************** substancereferenceinformationtargettype ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept substancereferenceinformationtargettype = substancereferenceinformationtarget.getType();
-
-		/******************** SbstncRfrncInfo_Target_Typ_Txt ********************************************************************************/
-		if(substancereferenceinformationtargettype.hasText()) {
-			s.setSbstncRfrncInfoTarTypTxt(String.valueOf(substancereferenceinformationtargettype.getText()));
-		}
-		/******************** substancereferenceinformationtargettypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding substancereferenceinformationtargettypecoding = substancereferenceinformationtargettype.getCodingFirstRep();
-
-		/******************** SbstncRfrncInfo_Target_Typ_Cdg_Vrsn ********************************************************************************/
-		if(substancereferenceinformationtargettypecoding.hasVersion()) {
-			s.setSbstncRfrncInfoTarTypCdgVrsn(String.valueOf(substancereferenceinformationtargettypecoding.getVersion()));
-		}
-		/******************** SbstncRfrncInfo_Target_Typ_Cdg_Dsply ********************************************************************************/
-		if(substancereferenceinformationtargettypecoding.hasDisplay()) {
-			s.setSbstncRfrncInfoTarTypCdgDsply(String.valueOf(substancereferenceinformationtargettypecoding.getDisplay()));
-		}
-		/******************** SbstncRfrncInfo_Target_Typ_Cdg_Cd ********************************************************************************/
-		if(substancereferenceinformationtargettypecoding.hasCode()) {
-			s.setSbstncRfrncInfoTarTypCdgCd(String.valueOf(substancereferenceinformationtargettypecoding.getCode()));
-		}
-		/******************** SbstncRfrncInfo_Target_Typ_Cdg_UsrSltd ********************************************************************************/
-		if(substancereferenceinformationtargettypecoding.hasUserSelected()) {
-			s.setSbstncRfrncInfoTarTypCdgUsrSltd(String.valueOf(substancereferenceinformationtargettypecoding.getUserSelected()));
-		}
-		/******************** SbstncRfrncInfo_Target_Typ_Cdg_Sys ********************************************************************************/
-		if(substancereferenceinformationtargettypecoding.hasSystem()) {
-			s.setSbstncRfrncInfoTarTypCdgSys(String.valueOf(substancereferenceinformationtargettypecoding.getSystem()));
-		}
-		/******************** substancereferenceinformationtargetinteraction ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept substancereferenceinformationtargetinteraction = substancereferenceinformationtarget.getInteraction();
-
-		/******************** SbstncRfrncInfo_Target_Interaction_Txt ********************************************************************************/
-		if(substancereferenceinformationtargetinteraction.hasText()) {
-			s.setSbstncRfrncInfoTarInteractionTxt(String.valueOf(substancereferenceinformationtargetinteraction.getText()));
-		}
-		/******************** substancereferenceinformationtargetinteractioncoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding substancereferenceinformationtargetinteractioncoding = substancereferenceinformationtargetinteraction.getCodingFirstRep();
-
-		/******************** SbstncRfrncInfo_Target_Interaction_Cdg_Vrsn ********************************************************************************/
-		if(substancereferenceinformationtargetinteractioncoding.hasVersion()) {
-			s.setSbstncRfrncInfoTarInteractionCdgVrsn(String.valueOf(substancereferenceinformationtargetinteractioncoding.getVersion()));
-		}
-		/******************** SbstncRfrncInfo_Target_Interaction_Cdg_Dsply ********************************************************************************/
-		if(substancereferenceinformationtargetinteractioncoding.hasDisplay()) {
-			s.setSbstncRfrncInfoTarInteractionCdgDsply(String.valueOf(substancereferenceinformationtargetinteractioncoding.getDisplay()));
-		}
-		/******************** SbstncRfrncInfo_Target_Interaction_Cdg_Cd ********************************************************************************/
-		if(substancereferenceinformationtargetinteractioncoding.hasCode()) {
-			s.setSbstncRfrncInfoTarInteractionCdgCd(String.valueOf(substancereferenceinformationtargetinteractioncoding.getCode()));
-		}
-		/******************** SbstncRfrncInfo_Target_Interaction_Cdg_UsrSltd ********************************************************************************/
-		if(substancereferenceinformationtargetinteractioncoding.hasUserSelected()) {
-			s.setSbstncRfrncInfoTarInteractionCdgUsrSltd(String.valueOf(substancereferenceinformationtargetinteractioncoding.getUserSelected()));
-		}
-		/******************** SbstncRfrncInfo_Target_Interaction_Cdg_Sys ********************************************************************************/
-		if(substancereferenceinformationtargetinteractioncoding.hasSystem()) {
-			s.setSbstncRfrncInfoTarInteractionCdgSys(String.valueOf(substancereferenceinformationtargetinteractioncoding.getSystem()));
-		}
-		/******************** substancereferenceinformationtargetorganismtype ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept substancereferenceinformationtargetorganismtype = substancereferenceinformationtarget.getOrganismType();
-
-		/******************** SbstncRfrncInfo_Target_OrgnsmTyp_Txt ********************************************************************************/
-		if(substancereferenceinformationtargetorganismtype.hasText()) {
-			s.setSbstncRfrncInfoTarOrgnsmTypTxt(String.valueOf(substancereferenceinformationtargetorganismtype.getText()));
-		}
-		/******************** substancereferenceinformationtargetorganismtypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding substancereferenceinformationtargetorganismtypecoding = substancereferenceinformationtargetorganismtype.getCodingFirstRep();
-
-		/******************** SbstncRfrncInfo_Target_OrgnsmTyp_Cdg_Vrsn ********************************************************************************/
-		if(substancereferenceinformationtargetorganismtypecoding.hasVersion()) {
-			s.setSbstncRfrncInfoTarOrgnsmTypCdgVrsn(String.valueOf(substancereferenceinformationtargetorganismtypecoding.getVersion()));
-		}
-		/******************** SbstncRfrncInfo_Target_OrgnsmTyp_Cdg_Dsply ********************************************************************************/
-		if(substancereferenceinformationtargetorganismtypecoding.hasDisplay()) {
-			s.setSbstncRfrncInfoTarOrgnsmTypCdgDsply(String.valueOf(substancereferenceinformationtargetorganismtypecoding.getDisplay()));
-		}
-		/******************** SbstncRfrncInfo_Target_OrgnsmTyp_Cdg_Cd ********************************************************************************/
-		if(substancereferenceinformationtargetorganismtypecoding.hasCode()) {
-			s.setSbstncRfrncInfoTarOrgnsmTypCdgCd(String.valueOf(substancereferenceinformationtargetorganismtypecoding.getCode()));
-		}
-		/******************** SbstncRfrncInfo_Target_OrgnsmTyp_Cdg_UsrSltd ********************************************************************************/
-		if(substancereferenceinformationtargetorganismtypecoding.hasUserSelected()) {
-			s.setSbstncRfrncInfoTarOrgnsmTypCdgUsrSltd(String.valueOf(substancereferenceinformationtargetorganismtypecoding.getUserSelected()));
-		}
-		/******************** SbstncRfrncInfo_Target_OrgnsmTyp_Cdg_Sys ********************************************************************************/
-		if(substancereferenceinformationtargetorganismtypecoding.hasSystem()) {
-			s.setSbstncRfrncInfoTarOrgnsmTypCdgSys(String.valueOf(substancereferenceinformationtargetorganismtypecoding.getSystem()));
-		}
-		/******************** substancereferenceinformationtargetamountquantity ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity substancereferenceinformationtargetamountquantity = substancereferenceinformationtarget.getAmountQuantity();
-
-		/******************** SbstncRfrncInfo_Target_AmntQnty_Vl ********************************************************************************/
-		if(substancereferenceinformationtargetamountquantity.hasValue()) {
-			s.setSbstncRfrncInfoTarAmntQntyVl(String.valueOf(substancereferenceinformationtargetamountquantity.getValue()));
-		}
-		/******************** substancereferenceinformationtargetamountquantitycomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparator substancereferenceinformationtargetamountquantitycomparator = substancereferenceinformationtargetamountquantity.getComparator();
-		s.setSbstncRfrncInfoTarAmntQntyCmprtr(substancereferenceinformationtargetamountquantitycomparator.toCode());
-
-		/******************** SbstncRfrncInfo_Target_AmntQnty_Cd ********************************************************************************/
-		if(substancereferenceinformationtargetamountquantity.hasCode()) {
-			s.setSbstncRfrncInfoTarAmntQntyCd(String.valueOf(substancereferenceinformationtargetamountquantity.getCode()));
-		}
-		/******************** SbstncRfrncInfo_Target_AmntQnty_Unt ********************************************************************************/
-		if(substancereferenceinformationtargetamountquantity.hasUnit()) {
-			s.setSbstncRfrncInfoTarAmntQntyUnt(String.valueOf(substancereferenceinformationtargetamountquantity.getUnit()));
-		}
-		/******************** SbstncRfrncInfo_Target_AmntQnty_Sys ********************************************************************************/
-		if(substancereferenceinformationtargetamountquantity.hasSystem()) {
-			s.setSbstncRfrncInfoTarAmntQntySys(String.valueOf(substancereferenceinformationtargetamountquantity.getSystem()));
-		}
-		/******************** substancereferenceinformationtargetamountrange ********************************************************************************/
-		org.hl7.fhir.r4.model.Range substancereferenceinformationtargetamountrange = substancereferenceinformationtarget.getAmountRange();
-
-		/******************** substancereferenceinformationtargetamountrangelow ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity substancereferenceinformationtargetamountrangelow = substancereferenceinformationtargetamountrange.getLow();
-
-		/******************** SbstncRfrncInfo_Target_AmntRng_Lw_Vl ********************************************************************************/
-		if(substancereferenceinformationtargetamountrangelow.hasValue()) {
-			s.setSbstncRfrncInfoTarAmntRngLwVl(String.valueOf(substancereferenceinformationtargetamountrangelow.getValue()));
-		}
-		/******************** substancereferenceinformationtargetamountrangelowcomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparator substancereferenceinformationtargetamountrangelowcomparator = substancereferenceinformationtargetamountrangelow.getComparator();
-		s.setSbstncRfrncInfoTarAmntRngLwCmprtr(substancereferenceinformationtargetamountrangelowcomparator.toCode());
-
-		/******************** SbstncRfrncInfo_Target_AmntRng_Lw_Cd ********************************************************************************/
-		if(substancereferenceinformationtargetamountrangelow.hasCode()) {
-			s.setSbstncRfrncInfoTarAmntRngLwCd(String.valueOf(substancereferenceinformationtargetamountrangelow.getCode()));
-		}
-		/******************** SbstncRfrncInfo_Target_AmntRng_Lw_Unt ********************************************************************************/
-		if(substancereferenceinformationtargetamountrangelow.hasUnit()) {
-			s.setSbstncRfrncInfoTarAmntRngLwUnt(String.valueOf(substancereferenceinformationtargetamountrangelow.getUnit()));
-		}
-		/******************** SbstncRfrncInfo_Target_AmntRng_Lw_Sys ********************************************************************************/
-		if(substancereferenceinformationtargetamountrangelow.hasSystem()) {
-			s.setSbstncRfrncInfoTarAmntRngLwSys(String.valueOf(substancereferenceinformationtargetamountrangelow.getSystem()));
-		}
-		/******************** substancereferenceinformationtargetamountrangehigh ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity substancereferenceinformationtargetamountrangehigh = substancereferenceinformationtargetamountrange.getHigh();
-
-		/******************** SbstncRfrncInfo_Target_AmntRng_Hi_Vl ********************************************************************************/
-		if(substancereferenceinformationtargetamountrangehigh.hasValue()) {
-			s.setSbstncRfrncInfoTarAmntRngHiVl(String.valueOf(substancereferenceinformationtargetamountrangehigh.getValue()));
-		}
-		/******************** substancereferenceinformationtargetamountrangehighcomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparator substancereferenceinformationtargetamountrangehighcomparator = substancereferenceinformationtargetamountrangehigh.getComparator();
-		s.setSbstncRfrncInfoTarAmntRngHiCmprtr(substancereferenceinformationtargetamountrangehighcomparator.toCode());
-
-		/******************** SbstncRfrncInfo_Target_AmntRng_Hi_Cd ********************************************************************************/
-		if(substancereferenceinformationtargetamountrangehigh.hasCode()) {
-			s.setSbstncRfrncInfoTarAmntRngHiCd(String.valueOf(substancereferenceinformationtargetamountrangehigh.getCode()));
-		}
-		/******************** SbstncRfrncInfo_Target_AmntRng_Hi_Unt ********************************************************************************/
-		if(substancereferenceinformationtargetamountrangehigh.hasUnit()) {
-			s.setSbstncRfrncInfoTarAmntRngHiUnt(String.valueOf(substancereferenceinformationtargetamountrangehigh.getUnit()));
-		}
-		/******************** SbstncRfrncInfo_Target_AmntRng_Hi_Sys ********************************************************************************/
-		if(substancereferenceinformationtargetamountrangehigh.hasSystem()) {
-			s.setSbstncRfrncInfoTarAmntRngHiSys(String.valueOf(substancereferenceinformationtargetamountrangehigh.getSystem()));
-		}
-		/******************** substancereferenceinformationtargetamounttype ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept substancereferenceinformationtargetamounttype = substancereferenceinformationtarget.getAmountType();
-
-		/******************** SbstncRfrncInfo_Target_AmntTyp_Txt ********************************************************************************/
-		if(substancereferenceinformationtargetamounttype.hasText()) {
-			s.setSbstncRfrncInfoTarAmntTypTxt(String.valueOf(substancereferenceinformationtargetamounttype.getText()));
-		}
-		/******************** substancereferenceinformationtargetamounttypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding substancereferenceinformationtargetamounttypecoding = substancereferenceinformationtargetamounttype.getCodingFirstRep();
-
-		/******************** SbstncRfrncInfo_Target_AmntTyp_Cdg_Vrsn ********************************************************************************/
-		if(substancereferenceinformationtargetamounttypecoding.hasVersion()) {
-			s.setSbstncRfrncInfoTarAmntTypCdgVrsn(String.valueOf(substancereferenceinformationtargetamounttypecoding.getVersion()));
-		}
-		/******************** SbstncRfrncInfo_Target_AmntTyp_Cdg_Dsply ********************************************************************************/
-		if(substancereferenceinformationtargetamounttypecoding.hasDisplay()) {
-			s.setSbstncRfrncInfoTarAmntTypCdgDsply(String.valueOf(substancereferenceinformationtargetamounttypecoding.getDisplay()));
-		}
-		/******************** SbstncRfrncInfo_Target_AmntTyp_Cdg_Cd ********************************************************************************/
-		if(substancereferenceinformationtargetamounttypecoding.hasCode()) {
-			s.setSbstncRfrncInfoTarAmntTypCdgCd(String.valueOf(substancereferenceinformationtargetamounttypecoding.getCode()));
-		}
-		/******************** SbstncRfrncInfo_Target_AmntTyp_Cdg_UsrSltd ********************************************************************************/
-		if(substancereferenceinformationtargetamounttypecoding.hasUserSelected()) {
-			s.setSbstncRfrncInfoTarAmntTypCdgUsrSltd(String.valueOf(substancereferenceinformationtargetamounttypecoding.getUserSelected()));
-		}
-		/******************** SbstncRfrncInfo_Target_AmntTyp_Cdg_Sys ********************************************************************************/
-		if(substancereferenceinformationtargetamounttypecoding.hasSystem()) {
-			s.setSbstncRfrncInfoTarAmntTypCdgSys(String.valueOf(substancereferenceinformationtargetamounttypecoding.getSystem()));
-		}
-		/******************** SbstncRfrncInfo_Target_AmntStrgTyp ********************************************************************************/
-		if(substancereferenceinformationtarget.hasAmountStringType()) {
-			s.setSbstncRfrncInfoTarAmntStrgTyp(String.valueOf(substancereferenceinformationtarget.getAmountStringType()));
-		}
-		/******************** substancereferenceinformationtargetorganism ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept substancereferenceinformationtargetorganism = substancereferenceinformationtarget.getOrganism();
-
-		/******************** SbstncRfrncInfo_Target_Orgnsm_Txt ********************************************************************************/
-		if(substancereferenceinformationtargetorganism.hasText()) {
-			s.setSbstncRfrncInfoTarOrgnsmTxt(String.valueOf(substancereferenceinformationtargetorganism.getText()));
-		}
-		/******************** substancereferenceinformationtargetorganismcoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding substancereferenceinformationtargetorganismcoding = substancereferenceinformationtargetorganism.getCodingFirstRep();
-
-		/******************** SbstncRfrncInfo_Target_Orgnsm_Cdg_Vrsn ********************************************************************************/
-		if(substancereferenceinformationtargetorganismcoding.hasVersion()) {
-			s.setSbstncRfrncInfoTarOrgnsmCdgVrsn(String.valueOf(substancereferenceinformationtargetorganismcoding.getVersion()));
-		}
-		/******************** SbstncRfrncInfo_Target_Orgnsm_Cdg_Dsply ********************************************************************************/
-		if(substancereferenceinformationtargetorganismcoding.hasDisplay()) {
-			s.setSbstncRfrncInfoTarOrgnsmCdgDsply(String.valueOf(substancereferenceinformationtargetorganismcoding.getDisplay()));
-		}
-		/******************** SbstncRfrncInfo_Target_Orgnsm_Cdg_Cd ********************************************************************************/
-		if(substancereferenceinformationtargetorganismcoding.hasCode()) {
-			s.setSbstncRfrncInfoTarOrgnsmCdgCd(String.valueOf(substancereferenceinformationtargetorganismcoding.getCode()));
-		}
-		/******************** SbstncRfrncInfo_Target_Orgnsm_Cdg_UsrSltd ********************************************************************************/
-		if(substancereferenceinformationtargetorganismcoding.hasUserSelected()) {
-			s.setSbstncRfrncInfoTarOrgnsmCdgUsrSltd(String.valueOf(substancereferenceinformationtargetorganismcoding.getUserSelected()));
-		}
-		/******************** SbstncRfrncInfo_Target_Orgnsm_Cdg_Sys ********************************************************************************/
-		if(substancereferenceinformationtargetorganismcoding.hasSystem()) {
-			s.setSbstncRfrncInfoTarOrgnsmCdgSys(String.valueOf(substancereferenceinformationtargetorganismcoding.getSystem()));
-		}
-		/******************** SbstncRfrncInfo_Target_Src ********************************************************************************/
-		if(substancereferenceinformationtarget.hasSource()) {
-			s.setSbstncRfrncInfoTarSrc(String.valueOf(substancereferenceinformationtarget.getSourceFirstRep()));
-		}
+		 };
+		 };
 		return s;
 	}
 }

@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Jun 27, 2022, 10:40:10 AM by Hibernate Tools 5.6.1.Final
+// Generated Aug 17, 2022, 11:08:48 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -106,6 +106,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
         this.id = id;
     }
     
+    public void addId(String id) {
+    	if( id != null ) {
+	    	if( this.id == null ) {
+	        	this.id = id;
+	        } else if(this.id.substring(this.id.length() - 1).equals("]") & id.equals("[")) {
+	        	this.id = this.id+ "," + id;
+	        } else if(id.equals("[") | id.equals("]") | this.id.substring(this.id.length() - 1).equals("[")) {
+	        	this.id = this.id+id;
+	        } else  {
+	            this.id = this.id+ "," +id;
+	        }
+        }
+    }
+    
     
     
     public String getPymntRecncliatnCreated() {
@@ -114,6 +128,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
     
     public void setPymntRecncliatnCreated(String pymntRecncliatnCreated) {
         this.pymntRecncliatnCreated = pymntRecncliatnCreated;
+    }
+    
+    public void addPymntRecncliatnCreated(String pymntRecncliatnCreated) {
+    	if( pymntRecncliatnCreated != null ) {
+	    	if( this.pymntRecncliatnCreated == null ) {
+	        	this.pymntRecncliatnCreated = pymntRecncliatnCreated;
+	        } else if(this.pymntRecncliatnCreated.substring(this.pymntRecncliatnCreated.length() - 1).equals("]") & pymntRecncliatnCreated.equals("[")) {
+	        	this.pymntRecncliatnCreated = this.pymntRecncliatnCreated+ "," + pymntRecncliatnCreated;
+	        } else if(pymntRecncliatnCreated.equals("[") | pymntRecncliatnCreated.equals("]") | this.pymntRecncliatnCreated.substring(this.pymntRecncliatnCreated.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnCreated = this.pymntRecncliatnCreated+pymntRecncliatnCreated;
+	        } else  {
+	            this.pymntRecncliatnCreated = this.pymntRecncliatnCreated+ "," +pymntRecncliatnCreated;
+	        }
+        }
     }
     
     
@@ -126,6 +154,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
         this.pymntRecncliatnDtlAmntCrncy = pymntRecncliatnDtlAmntCrncy;
     }
     
+    public void addPymntRecncliatnDtlAmntCrncy(String pymntRecncliatnDtlAmntCrncy) {
+    	if( pymntRecncliatnDtlAmntCrncy != null ) {
+	    	if( this.pymntRecncliatnDtlAmntCrncy == null ) {
+	        	this.pymntRecncliatnDtlAmntCrncy = pymntRecncliatnDtlAmntCrncy;
+	        } else if(this.pymntRecncliatnDtlAmntCrncy.substring(this.pymntRecncliatnDtlAmntCrncy.length() - 1).equals("]") & pymntRecncliatnDtlAmntCrncy.equals("[")) {
+	        	this.pymntRecncliatnDtlAmntCrncy = this.pymntRecncliatnDtlAmntCrncy+ "," + pymntRecncliatnDtlAmntCrncy;
+	        } else if(pymntRecncliatnDtlAmntCrncy.equals("[") | pymntRecncliatnDtlAmntCrncy.equals("]") | this.pymntRecncliatnDtlAmntCrncy.substring(this.pymntRecncliatnDtlAmntCrncy.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnDtlAmntCrncy = this.pymntRecncliatnDtlAmntCrncy+pymntRecncliatnDtlAmntCrncy;
+	        } else  {
+	            this.pymntRecncliatnDtlAmntCrncy = this.pymntRecncliatnDtlAmntCrncy+ "," +pymntRecncliatnDtlAmntCrncy;
+	        }
+        }
+    }
+    
     
     
     public String getPymntRecncliatnDtlAmntVl() {
@@ -134,6 +176,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
     
     public void setPymntRecncliatnDtlAmntVl(String pymntRecncliatnDtlAmntVl) {
         this.pymntRecncliatnDtlAmntVl = pymntRecncliatnDtlAmntVl;
+    }
+    
+    public void addPymntRecncliatnDtlAmntVl(String pymntRecncliatnDtlAmntVl) {
+    	if( pymntRecncliatnDtlAmntVl != null ) {
+	    	if( this.pymntRecncliatnDtlAmntVl == null ) {
+	        	this.pymntRecncliatnDtlAmntVl = pymntRecncliatnDtlAmntVl;
+	        } else if(this.pymntRecncliatnDtlAmntVl.substring(this.pymntRecncliatnDtlAmntVl.length() - 1).equals("]") & pymntRecncliatnDtlAmntVl.equals("[")) {
+	        	this.pymntRecncliatnDtlAmntVl = this.pymntRecncliatnDtlAmntVl+ "," + pymntRecncliatnDtlAmntVl;
+	        } else if(pymntRecncliatnDtlAmntVl.equals("[") | pymntRecncliatnDtlAmntVl.equals("]") | this.pymntRecncliatnDtlAmntVl.substring(this.pymntRecncliatnDtlAmntVl.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnDtlAmntVl = this.pymntRecncliatnDtlAmntVl+pymntRecncliatnDtlAmntVl;
+	        } else  {
+	            this.pymntRecncliatnDtlAmntVl = this.pymntRecncliatnDtlAmntVl+ "," +pymntRecncliatnDtlAmntVl;
+	        }
+        }
     }
     
     
@@ -146,6 +202,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
         this.pymntRecncliatnDtlDt = pymntRecncliatnDtlDt;
     }
     
+    public void addPymntRecncliatnDtlDt(String pymntRecncliatnDtlDt) {
+    	if( pymntRecncliatnDtlDt != null ) {
+	    	if( this.pymntRecncliatnDtlDt == null ) {
+	        	this.pymntRecncliatnDtlDt = pymntRecncliatnDtlDt;
+	        } else if(this.pymntRecncliatnDtlDt.substring(this.pymntRecncliatnDtlDt.length() - 1).equals("]") & pymntRecncliatnDtlDt.equals("[")) {
+	        	this.pymntRecncliatnDtlDt = this.pymntRecncliatnDtlDt+ "," + pymntRecncliatnDtlDt;
+	        } else if(pymntRecncliatnDtlDt.equals("[") | pymntRecncliatnDtlDt.equals("]") | this.pymntRecncliatnDtlDt.substring(this.pymntRecncliatnDtlDt.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnDtlDt = this.pymntRecncliatnDtlDt+pymntRecncliatnDtlDt;
+	        } else  {
+	            this.pymntRecncliatnDtlDt = this.pymntRecncliatnDtlDt+ "," +pymntRecncliatnDtlDt;
+	        }
+        }
+    }
+    
     
     
     public String getPymntRecncliatnDtlIdAssigner() {
@@ -154,6 +224,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
     
     public void setPymntRecncliatnDtlIdAssigner(String pymntRecncliatnDtlIdAssigner) {
         this.pymntRecncliatnDtlIdAssigner = pymntRecncliatnDtlIdAssigner;
+    }
+    
+    public void addPymntRecncliatnDtlIdAssigner(String pymntRecncliatnDtlIdAssigner) {
+    	if( pymntRecncliatnDtlIdAssigner != null ) {
+	    	if( this.pymntRecncliatnDtlIdAssigner == null ) {
+	        	this.pymntRecncliatnDtlIdAssigner = pymntRecncliatnDtlIdAssigner;
+	        } else if(this.pymntRecncliatnDtlIdAssigner.substring(this.pymntRecncliatnDtlIdAssigner.length() - 1).equals("]") & pymntRecncliatnDtlIdAssigner.equals("[")) {
+	        	this.pymntRecncliatnDtlIdAssigner = this.pymntRecncliatnDtlIdAssigner+ "," + pymntRecncliatnDtlIdAssigner;
+	        } else if(pymntRecncliatnDtlIdAssigner.equals("[") | pymntRecncliatnDtlIdAssigner.equals("]") | this.pymntRecncliatnDtlIdAssigner.substring(this.pymntRecncliatnDtlIdAssigner.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnDtlIdAssigner = this.pymntRecncliatnDtlIdAssigner+pymntRecncliatnDtlIdAssigner;
+	        } else  {
+	            this.pymntRecncliatnDtlIdAssigner = this.pymntRecncliatnDtlIdAssigner+ "," +pymntRecncliatnDtlIdAssigner;
+	        }
+        }
     }
     
     
@@ -166,6 +250,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
         this.pymntRecncliatnDtlIdPrdEnd = pymntRecncliatnDtlIdPrdEnd;
     }
     
+    public void addPymntRecncliatnDtlIdPrdEnd(String pymntRecncliatnDtlIdPrdEnd) {
+    	if( pymntRecncliatnDtlIdPrdEnd != null ) {
+	    	if( this.pymntRecncliatnDtlIdPrdEnd == null ) {
+	        	this.pymntRecncliatnDtlIdPrdEnd = pymntRecncliatnDtlIdPrdEnd;
+	        } else if(this.pymntRecncliatnDtlIdPrdEnd.substring(this.pymntRecncliatnDtlIdPrdEnd.length() - 1).equals("]") & pymntRecncliatnDtlIdPrdEnd.equals("[")) {
+	        	this.pymntRecncliatnDtlIdPrdEnd = this.pymntRecncliatnDtlIdPrdEnd+ "," + pymntRecncliatnDtlIdPrdEnd;
+	        } else if(pymntRecncliatnDtlIdPrdEnd.equals("[") | pymntRecncliatnDtlIdPrdEnd.equals("]") | this.pymntRecncliatnDtlIdPrdEnd.substring(this.pymntRecncliatnDtlIdPrdEnd.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnDtlIdPrdEnd = this.pymntRecncliatnDtlIdPrdEnd+pymntRecncliatnDtlIdPrdEnd;
+	        } else  {
+	            this.pymntRecncliatnDtlIdPrdEnd = this.pymntRecncliatnDtlIdPrdEnd+ "," +pymntRecncliatnDtlIdPrdEnd;
+	        }
+        }
+    }
+    
     
     
     public String getPymntRecncliatnDtlIdPrdStrt() {
@@ -174,6 +272,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
     
     public void setPymntRecncliatnDtlIdPrdStrt(String pymntRecncliatnDtlIdPrdStrt) {
         this.pymntRecncliatnDtlIdPrdStrt = pymntRecncliatnDtlIdPrdStrt;
+    }
+    
+    public void addPymntRecncliatnDtlIdPrdStrt(String pymntRecncliatnDtlIdPrdStrt) {
+    	if( pymntRecncliatnDtlIdPrdStrt != null ) {
+	    	if( this.pymntRecncliatnDtlIdPrdStrt == null ) {
+	        	this.pymntRecncliatnDtlIdPrdStrt = pymntRecncliatnDtlIdPrdStrt;
+	        } else if(this.pymntRecncliatnDtlIdPrdStrt.substring(this.pymntRecncliatnDtlIdPrdStrt.length() - 1).equals("]") & pymntRecncliatnDtlIdPrdStrt.equals("[")) {
+	        	this.pymntRecncliatnDtlIdPrdStrt = this.pymntRecncliatnDtlIdPrdStrt+ "," + pymntRecncliatnDtlIdPrdStrt;
+	        } else if(pymntRecncliatnDtlIdPrdStrt.equals("[") | pymntRecncliatnDtlIdPrdStrt.equals("]") | this.pymntRecncliatnDtlIdPrdStrt.substring(this.pymntRecncliatnDtlIdPrdStrt.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnDtlIdPrdStrt = this.pymntRecncliatnDtlIdPrdStrt+pymntRecncliatnDtlIdPrdStrt;
+	        } else  {
+	            this.pymntRecncliatnDtlIdPrdStrt = this.pymntRecncliatnDtlIdPrdStrt+ "," +pymntRecncliatnDtlIdPrdStrt;
+	        }
+        }
     }
     
     
@@ -186,6 +298,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
         this.pymntRecncliatnDtlIdSys = pymntRecncliatnDtlIdSys;
     }
     
+    public void addPymntRecncliatnDtlIdSys(String pymntRecncliatnDtlIdSys) {
+    	if( pymntRecncliatnDtlIdSys != null ) {
+	    	if( this.pymntRecncliatnDtlIdSys == null ) {
+	        	this.pymntRecncliatnDtlIdSys = pymntRecncliatnDtlIdSys;
+	        } else if(this.pymntRecncliatnDtlIdSys.substring(this.pymntRecncliatnDtlIdSys.length() - 1).equals("]") & pymntRecncliatnDtlIdSys.equals("[")) {
+	        	this.pymntRecncliatnDtlIdSys = this.pymntRecncliatnDtlIdSys+ "," + pymntRecncliatnDtlIdSys;
+	        } else if(pymntRecncliatnDtlIdSys.equals("[") | pymntRecncliatnDtlIdSys.equals("]") | this.pymntRecncliatnDtlIdSys.substring(this.pymntRecncliatnDtlIdSys.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnDtlIdSys = this.pymntRecncliatnDtlIdSys+pymntRecncliatnDtlIdSys;
+	        } else  {
+	            this.pymntRecncliatnDtlIdSys = this.pymntRecncliatnDtlIdSys+ "," +pymntRecncliatnDtlIdSys;
+	        }
+        }
+    }
+    
     
     
     public String getPymntRecncliatnDtlIdTypCdgCd() {
@@ -194,6 +320,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
     
     public void setPymntRecncliatnDtlIdTypCdgCd(String pymntRecncliatnDtlIdTypCdgCd) {
         this.pymntRecncliatnDtlIdTypCdgCd = pymntRecncliatnDtlIdTypCdgCd;
+    }
+    
+    public void addPymntRecncliatnDtlIdTypCdgCd(String pymntRecncliatnDtlIdTypCdgCd) {
+    	if( pymntRecncliatnDtlIdTypCdgCd != null ) {
+	    	if( this.pymntRecncliatnDtlIdTypCdgCd == null ) {
+	        	this.pymntRecncliatnDtlIdTypCdgCd = pymntRecncliatnDtlIdTypCdgCd;
+	        } else if(this.pymntRecncliatnDtlIdTypCdgCd.substring(this.pymntRecncliatnDtlIdTypCdgCd.length() - 1).equals("]") & pymntRecncliatnDtlIdTypCdgCd.equals("[")) {
+	        	this.pymntRecncliatnDtlIdTypCdgCd = this.pymntRecncliatnDtlIdTypCdgCd+ "," + pymntRecncliatnDtlIdTypCdgCd;
+	        } else if(pymntRecncliatnDtlIdTypCdgCd.equals("[") | pymntRecncliatnDtlIdTypCdgCd.equals("]") | this.pymntRecncliatnDtlIdTypCdgCd.substring(this.pymntRecncliatnDtlIdTypCdgCd.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnDtlIdTypCdgCd = this.pymntRecncliatnDtlIdTypCdgCd+pymntRecncliatnDtlIdTypCdgCd;
+	        } else  {
+	            this.pymntRecncliatnDtlIdTypCdgCd = this.pymntRecncliatnDtlIdTypCdgCd+ "," +pymntRecncliatnDtlIdTypCdgCd;
+	        }
+        }
     }
     
     
@@ -206,6 +346,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
         this.pymntRecncliatnDtlIdTypCdgDsply = pymntRecncliatnDtlIdTypCdgDsply;
     }
     
+    public void addPymntRecncliatnDtlIdTypCdgDsply(String pymntRecncliatnDtlIdTypCdgDsply) {
+    	if( pymntRecncliatnDtlIdTypCdgDsply != null ) {
+	    	if( this.pymntRecncliatnDtlIdTypCdgDsply == null ) {
+	        	this.pymntRecncliatnDtlIdTypCdgDsply = pymntRecncliatnDtlIdTypCdgDsply;
+	        } else if(this.pymntRecncliatnDtlIdTypCdgDsply.substring(this.pymntRecncliatnDtlIdTypCdgDsply.length() - 1).equals("]") & pymntRecncliatnDtlIdTypCdgDsply.equals("[")) {
+	        	this.pymntRecncliatnDtlIdTypCdgDsply = this.pymntRecncliatnDtlIdTypCdgDsply+ "," + pymntRecncliatnDtlIdTypCdgDsply;
+	        } else if(pymntRecncliatnDtlIdTypCdgDsply.equals("[") | pymntRecncliatnDtlIdTypCdgDsply.equals("]") | this.pymntRecncliatnDtlIdTypCdgDsply.substring(this.pymntRecncliatnDtlIdTypCdgDsply.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnDtlIdTypCdgDsply = this.pymntRecncliatnDtlIdTypCdgDsply+pymntRecncliatnDtlIdTypCdgDsply;
+	        } else  {
+	            this.pymntRecncliatnDtlIdTypCdgDsply = this.pymntRecncliatnDtlIdTypCdgDsply+ "," +pymntRecncliatnDtlIdTypCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getPymntRecncliatnDtlIdTypCdgSys() {
@@ -214,6 +368,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
     
     public void setPymntRecncliatnDtlIdTypCdgSys(String pymntRecncliatnDtlIdTypCdgSys) {
         this.pymntRecncliatnDtlIdTypCdgSys = pymntRecncliatnDtlIdTypCdgSys;
+    }
+    
+    public void addPymntRecncliatnDtlIdTypCdgSys(String pymntRecncliatnDtlIdTypCdgSys) {
+    	if( pymntRecncliatnDtlIdTypCdgSys != null ) {
+	    	if( this.pymntRecncliatnDtlIdTypCdgSys == null ) {
+	        	this.pymntRecncliatnDtlIdTypCdgSys = pymntRecncliatnDtlIdTypCdgSys;
+	        } else if(this.pymntRecncliatnDtlIdTypCdgSys.substring(this.pymntRecncliatnDtlIdTypCdgSys.length() - 1).equals("]") & pymntRecncliatnDtlIdTypCdgSys.equals("[")) {
+	        	this.pymntRecncliatnDtlIdTypCdgSys = this.pymntRecncliatnDtlIdTypCdgSys+ "," + pymntRecncliatnDtlIdTypCdgSys;
+	        } else if(pymntRecncliatnDtlIdTypCdgSys.equals("[") | pymntRecncliatnDtlIdTypCdgSys.equals("]") | this.pymntRecncliatnDtlIdTypCdgSys.substring(this.pymntRecncliatnDtlIdTypCdgSys.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnDtlIdTypCdgSys = this.pymntRecncliatnDtlIdTypCdgSys+pymntRecncliatnDtlIdTypCdgSys;
+	        } else  {
+	            this.pymntRecncliatnDtlIdTypCdgSys = this.pymntRecncliatnDtlIdTypCdgSys+ "," +pymntRecncliatnDtlIdTypCdgSys;
+	        }
+        }
     }
     
     
@@ -226,6 +394,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
         this.pymntRecncliatnDtlIdTypCdgUsrSltd = pymntRecncliatnDtlIdTypCdgUsrSltd;
     }
     
+    public void addPymntRecncliatnDtlIdTypCdgUsrSltd(String pymntRecncliatnDtlIdTypCdgUsrSltd) {
+    	if( pymntRecncliatnDtlIdTypCdgUsrSltd != null ) {
+	    	if( this.pymntRecncliatnDtlIdTypCdgUsrSltd == null ) {
+	        	this.pymntRecncliatnDtlIdTypCdgUsrSltd = pymntRecncliatnDtlIdTypCdgUsrSltd;
+	        } else if(this.pymntRecncliatnDtlIdTypCdgUsrSltd.substring(this.pymntRecncliatnDtlIdTypCdgUsrSltd.length() - 1).equals("]") & pymntRecncliatnDtlIdTypCdgUsrSltd.equals("[")) {
+	        	this.pymntRecncliatnDtlIdTypCdgUsrSltd = this.pymntRecncliatnDtlIdTypCdgUsrSltd+ "," + pymntRecncliatnDtlIdTypCdgUsrSltd;
+	        } else if(pymntRecncliatnDtlIdTypCdgUsrSltd.equals("[") | pymntRecncliatnDtlIdTypCdgUsrSltd.equals("]") | this.pymntRecncliatnDtlIdTypCdgUsrSltd.substring(this.pymntRecncliatnDtlIdTypCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnDtlIdTypCdgUsrSltd = this.pymntRecncliatnDtlIdTypCdgUsrSltd+pymntRecncliatnDtlIdTypCdgUsrSltd;
+	        } else  {
+	            this.pymntRecncliatnDtlIdTypCdgUsrSltd = this.pymntRecncliatnDtlIdTypCdgUsrSltd+ "," +pymntRecncliatnDtlIdTypCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getPymntRecncliatnDtlIdTypCdgVrsn() {
@@ -234,6 +416,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
     
     public void setPymntRecncliatnDtlIdTypCdgVrsn(String pymntRecncliatnDtlIdTypCdgVrsn) {
         this.pymntRecncliatnDtlIdTypCdgVrsn = pymntRecncliatnDtlIdTypCdgVrsn;
+    }
+    
+    public void addPymntRecncliatnDtlIdTypCdgVrsn(String pymntRecncliatnDtlIdTypCdgVrsn) {
+    	if( pymntRecncliatnDtlIdTypCdgVrsn != null ) {
+	    	if( this.pymntRecncliatnDtlIdTypCdgVrsn == null ) {
+	        	this.pymntRecncliatnDtlIdTypCdgVrsn = pymntRecncliatnDtlIdTypCdgVrsn;
+	        } else if(this.pymntRecncliatnDtlIdTypCdgVrsn.substring(this.pymntRecncliatnDtlIdTypCdgVrsn.length() - 1).equals("]") & pymntRecncliatnDtlIdTypCdgVrsn.equals("[")) {
+	        	this.pymntRecncliatnDtlIdTypCdgVrsn = this.pymntRecncliatnDtlIdTypCdgVrsn+ "," + pymntRecncliatnDtlIdTypCdgVrsn;
+	        } else if(pymntRecncliatnDtlIdTypCdgVrsn.equals("[") | pymntRecncliatnDtlIdTypCdgVrsn.equals("]") | this.pymntRecncliatnDtlIdTypCdgVrsn.substring(this.pymntRecncliatnDtlIdTypCdgVrsn.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnDtlIdTypCdgVrsn = this.pymntRecncliatnDtlIdTypCdgVrsn+pymntRecncliatnDtlIdTypCdgVrsn;
+	        } else  {
+	            this.pymntRecncliatnDtlIdTypCdgVrsn = this.pymntRecncliatnDtlIdTypCdgVrsn+ "," +pymntRecncliatnDtlIdTypCdgVrsn;
+	        }
+        }
     }
     
     
@@ -246,6 +442,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
         this.pymntRecncliatnDtlIdTypTxt = pymntRecncliatnDtlIdTypTxt;
     }
     
+    public void addPymntRecncliatnDtlIdTypTxt(String pymntRecncliatnDtlIdTypTxt) {
+    	if( pymntRecncliatnDtlIdTypTxt != null ) {
+	    	if( this.pymntRecncliatnDtlIdTypTxt == null ) {
+	        	this.pymntRecncliatnDtlIdTypTxt = pymntRecncliatnDtlIdTypTxt;
+	        } else if(this.pymntRecncliatnDtlIdTypTxt.substring(this.pymntRecncliatnDtlIdTypTxt.length() - 1).equals("]") & pymntRecncliatnDtlIdTypTxt.equals("[")) {
+	        	this.pymntRecncliatnDtlIdTypTxt = this.pymntRecncliatnDtlIdTypTxt+ "," + pymntRecncliatnDtlIdTypTxt;
+	        } else if(pymntRecncliatnDtlIdTypTxt.equals("[") | pymntRecncliatnDtlIdTypTxt.equals("]") | this.pymntRecncliatnDtlIdTypTxt.substring(this.pymntRecncliatnDtlIdTypTxt.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnDtlIdTypTxt = this.pymntRecncliatnDtlIdTypTxt+pymntRecncliatnDtlIdTypTxt;
+	        } else  {
+	            this.pymntRecncliatnDtlIdTypTxt = this.pymntRecncliatnDtlIdTypTxt+ "," +pymntRecncliatnDtlIdTypTxt;
+	        }
+        }
+    }
+    
     
     
     public String getPymntRecncliatnDtlIdUse() {
@@ -254,6 +464,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
     
     public void setPymntRecncliatnDtlIdUse(String pymntRecncliatnDtlIdUse) {
         this.pymntRecncliatnDtlIdUse = pymntRecncliatnDtlIdUse;
+    }
+    
+    public void addPymntRecncliatnDtlIdUse(String pymntRecncliatnDtlIdUse) {
+    	if( pymntRecncliatnDtlIdUse != null ) {
+	    	if( this.pymntRecncliatnDtlIdUse == null ) {
+	        	this.pymntRecncliatnDtlIdUse = pymntRecncliatnDtlIdUse;
+	        } else if(this.pymntRecncliatnDtlIdUse.substring(this.pymntRecncliatnDtlIdUse.length() - 1).equals("]") & pymntRecncliatnDtlIdUse.equals("[")) {
+	        	this.pymntRecncliatnDtlIdUse = this.pymntRecncliatnDtlIdUse+ "," + pymntRecncliatnDtlIdUse;
+	        } else if(pymntRecncliatnDtlIdUse.equals("[") | pymntRecncliatnDtlIdUse.equals("]") | this.pymntRecncliatnDtlIdUse.substring(this.pymntRecncliatnDtlIdUse.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnDtlIdUse = this.pymntRecncliatnDtlIdUse+pymntRecncliatnDtlIdUse;
+	        } else  {
+	            this.pymntRecncliatnDtlIdUse = this.pymntRecncliatnDtlIdUse+ "," +pymntRecncliatnDtlIdUse;
+	        }
+        }
     }
     
     
@@ -266,6 +490,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
         this.pymntRecncliatnDtlIdVl = pymntRecncliatnDtlIdVl;
     }
     
+    public void addPymntRecncliatnDtlIdVl(String pymntRecncliatnDtlIdVl) {
+    	if( pymntRecncliatnDtlIdVl != null ) {
+	    	if( this.pymntRecncliatnDtlIdVl == null ) {
+	        	this.pymntRecncliatnDtlIdVl = pymntRecncliatnDtlIdVl;
+	        } else if(this.pymntRecncliatnDtlIdVl.substring(this.pymntRecncliatnDtlIdVl.length() - 1).equals("]") & pymntRecncliatnDtlIdVl.equals("[")) {
+	        	this.pymntRecncliatnDtlIdVl = this.pymntRecncliatnDtlIdVl+ "," + pymntRecncliatnDtlIdVl;
+	        } else if(pymntRecncliatnDtlIdVl.equals("[") | pymntRecncliatnDtlIdVl.equals("]") | this.pymntRecncliatnDtlIdVl.substring(this.pymntRecncliatnDtlIdVl.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnDtlIdVl = this.pymntRecncliatnDtlIdVl+pymntRecncliatnDtlIdVl;
+	        } else  {
+	            this.pymntRecncliatnDtlIdVl = this.pymntRecncliatnDtlIdVl+ "," +pymntRecncliatnDtlIdVl;
+	        }
+        }
+    }
+    
     
     
     public String getPymntRecncliatnDtlPayee() {
@@ -274,6 +512,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
     
     public void setPymntRecncliatnDtlPayee(String pymntRecncliatnDtlPayee) {
         this.pymntRecncliatnDtlPayee = pymntRecncliatnDtlPayee;
+    }
+    
+    public void addPymntRecncliatnDtlPayee(String pymntRecncliatnDtlPayee) {
+    	if( pymntRecncliatnDtlPayee != null ) {
+	    	if( this.pymntRecncliatnDtlPayee == null ) {
+	        	this.pymntRecncliatnDtlPayee = pymntRecncliatnDtlPayee;
+	        } else if(this.pymntRecncliatnDtlPayee.substring(this.pymntRecncliatnDtlPayee.length() - 1).equals("]") & pymntRecncliatnDtlPayee.equals("[")) {
+	        	this.pymntRecncliatnDtlPayee = this.pymntRecncliatnDtlPayee+ "," + pymntRecncliatnDtlPayee;
+	        } else if(pymntRecncliatnDtlPayee.equals("[") | pymntRecncliatnDtlPayee.equals("]") | this.pymntRecncliatnDtlPayee.substring(this.pymntRecncliatnDtlPayee.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnDtlPayee = this.pymntRecncliatnDtlPayee+pymntRecncliatnDtlPayee;
+	        } else  {
+	            this.pymntRecncliatnDtlPayee = this.pymntRecncliatnDtlPayee+ "," +pymntRecncliatnDtlPayee;
+	        }
+        }
     }
     
     
@@ -286,6 +538,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
         this.pymntRecncliatnDtlPredecessorAssigner = pymntRecncliatnDtlPredecessorAssigner;
     }
     
+    public void addPymntRecncliatnDtlPredecessorAssigner(String pymntRecncliatnDtlPredecessorAssigner) {
+    	if( pymntRecncliatnDtlPredecessorAssigner != null ) {
+	    	if( this.pymntRecncliatnDtlPredecessorAssigner == null ) {
+	        	this.pymntRecncliatnDtlPredecessorAssigner = pymntRecncliatnDtlPredecessorAssigner;
+	        } else if(this.pymntRecncliatnDtlPredecessorAssigner.substring(this.pymntRecncliatnDtlPredecessorAssigner.length() - 1).equals("]") & pymntRecncliatnDtlPredecessorAssigner.equals("[")) {
+	        	this.pymntRecncliatnDtlPredecessorAssigner = this.pymntRecncliatnDtlPredecessorAssigner+ "," + pymntRecncliatnDtlPredecessorAssigner;
+	        } else if(pymntRecncliatnDtlPredecessorAssigner.equals("[") | pymntRecncliatnDtlPredecessorAssigner.equals("]") | this.pymntRecncliatnDtlPredecessorAssigner.substring(this.pymntRecncliatnDtlPredecessorAssigner.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnDtlPredecessorAssigner = this.pymntRecncliatnDtlPredecessorAssigner+pymntRecncliatnDtlPredecessorAssigner;
+	        } else  {
+	            this.pymntRecncliatnDtlPredecessorAssigner = this.pymntRecncliatnDtlPredecessorAssigner+ "," +pymntRecncliatnDtlPredecessorAssigner;
+	        }
+        }
+    }
+    
     
     
     public String getPymntRecncliatnDtlPredecessorPrdEnd() {
@@ -294,6 +560,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
     
     public void setPymntRecncliatnDtlPredecessorPrdEnd(String pymntRecncliatnDtlPredecessorPrdEnd) {
         this.pymntRecncliatnDtlPredecessorPrdEnd = pymntRecncliatnDtlPredecessorPrdEnd;
+    }
+    
+    public void addPymntRecncliatnDtlPredecessorPrdEnd(String pymntRecncliatnDtlPredecessorPrdEnd) {
+    	if( pymntRecncliatnDtlPredecessorPrdEnd != null ) {
+	    	if( this.pymntRecncliatnDtlPredecessorPrdEnd == null ) {
+	        	this.pymntRecncliatnDtlPredecessorPrdEnd = pymntRecncliatnDtlPredecessorPrdEnd;
+	        } else if(this.pymntRecncliatnDtlPredecessorPrdEnd.substring(this.pymntRecncliatnDtlPredecessorPrdEnd.length() - 1).equals("]") & pymntRecncliatnDtlPredecessorPrdEnd.equals("[")) {
+	        	this.pymntRecncliatnDtlPredecessorPrdEnd = this.pymntRecncliatnDtlPredecessorPrdEnd+ "," + pymntRecncliatnDtlPredecessorPrdEnd;
+	        } else if(pymntRecncliatnDtlPredecessorPrdEnd.equals("[") | pymntRecncliatnDtlPredecessorPrdEnd.equals("]") | this.pymntRecncliatnDtlPredecessorPrdEnd.substring(this.pymntRecncliatnDtlPredecessorPrdEnd.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnDtlPredecessorPrdEnd = this.pymntRecncliatnDtlPredecessorPrdEnd+pymntRecncliatnDtlPredecessorPrdEnd;
+	        } else  {
+	            this.pymntRecncliatnDtlPredecessorPrdEnd = this.pymntRecncliatnDtlPredecessorPrdEnd+ "," +pymntRecncliatnDtlPredecessorPrdEnd;
+	        }
+        }
     }
     
     
@@ -306,6 +586,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
         this.pymntRecncliatnDtlPredecessorPrdStrt = pymntRecncliatnDtlPredecessorPrdStrt;
     }
     
+    public void addPymntRecncliatnDtlPredecessorPrdStrt(String pymntRecncliatnDtlPredecessorPrdStrt) {
+    	if( pymntRecncliatnDtlPredecessorPrdStrt != null ) {
+	    	if( this.pymntRecncliatnDtlPredecessorPrdStrt == null ) {
+	        	this.pymntRecncliatnDtlPredecessorPrdStrt = pymntRecncliatnDtlPredecessorPrdStrt;
+	        } else if(this.pymntRecncliatnDtlPredecessorPrdStrt.substring(this.pymntRecncliatnDtlPredecessorPrdStrt.length() - 1).equals("]") & pymntRecncliatnDtlPredecessorPrdStrt.equals("[")) {
+	        	this.pymntRecncliatnDtlPredecessorPrdStrt = this.pymntRecncliatnDtlPredecessorPrdStrt+ "," + pymntRecncliatnDtlPredecessorPrdStrt;
+	        } else if(pymntRecncliatnDtlPredecessorPrdStrt.equals("[") | pymntRecncliatnDtlPredecessorPrdStrt.equals("]") | this.pymntRecncliatnDtlPredecessorPrdStrt.substring(this.pymntRecncliatnDtlPredecessorPrdStrt.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnDtlPredecessorPrdStrt = this.pymntRecncliatnDtlPredecessorPrdStrt+pymntRecncliatnDtlPredecessorPrdStrt;
+	        } else  {
+	            this.pymntRecncliatnDtlPredecessorPrdStrt = this.pymntRecncliatnDtlPredecessorPrdStrt+ "," +pymntRecncliatnDtlPredecessorPrdStrt;
+	        }
+        }
+    }
+    
     
     
     public String getPymntRecncliatnDtlPredecessorSys() {
@@ -314,6 +608,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
     
     public void setPymntRecncliatnDtlPredecessorSys(String pymntRecncliatnDtlPredecessorSys) {
         this.pymntRecncliatnDtlPredecessorSys = pymntRecncliatnDtlPredecessorSys;
+    }
+    
+    public void addPymntRecncliatnDtlPredecessorSys(String pymntRecncliatnDtlPredecessorSys) {
+    	if( pymntRecncliatnDtlPredecessorSys != null ) {
+	    	if( this.pymntRecncliatnDtlPredecessorSys == null ) {
+	        	this.pymntRecncliatnDtlPredecessorSys = pymntRecncliatnDtlPredecessorSys;
+	        } else if(this.pymntRecncliatnDtlPredecessorSys.substring(this.pymntRecncliatnDtlPredecessorSys.length() - 1).equals("]") & pymntRecncliatnDtlPredecessorSys.equals("[")) {
+	        	this.pymntRecncliatnDtlPredecessorSys = this.pymntRecncliatnDtlPredecessorSys+ "," + pymntRecncliatnDtlPredecessorSys;
+	        } else if(pymntRecncliatnDtlPredecessorSys.equals("[") | pymntRecncliatnDtlPredecessorSys.equals("]") | this.pymntRecncliatnDtlPredecessorSys.substring(this.pymntRecncliatnDtlPredecessorSys.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnDtlPredecessorSys = this.pymntRecncliatnDtlPredecessorSys+pymntRecncliatnDtlPredecessorSys;
+	        } else  {
+	            this.pymntRecncliatnDtlPredecessorSys = this.pymntRecncliatnDtlPredecessorSys+ "," +pymntRecncliatnDtlPredecessorSys;
+	        }
+        }
     }
     
     
@@ -326,6 +634,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
         this.pymntRecncliatnDtlPredecessorTypCdgCd = pymntRecncliatnDtlPredecessorTypCdgCd;
     }
     
+    public void addPymntRecncliatnDtlPredecessorTypCdgCd(String pymntRecncliatnDtlPredecessorTypCdgCd) {
+    	if( pymntRecncliatnDtlPredecessorTypCdgCd != null ) {
+	    	if( this.pymntRecncliatnDtlPredecessorTypCdgCd == null ) {
+	        	this.pymntRecncliatnDtlPredecessorTypCdgCd = pymntRecncliatnDtlPredecessorTypCdgCd;
+	        } else if(this.pymntRecncliatnDtlPredecessorTypCdgCd.substring(this.pymntRecncliatnDtlPredecessorTypCdgCd.length() - 1).equals("]") & pymntRecncliatnDtlPredecessorTypCdgCd.equals("[")) {
+	        	this.pymntRecncliatnDtlPredecessorTypCdgCd = this.pymntRecncliatnDtlPredecessorTypCdgCd+ "," + pymntRecncliatnDtlPredecessorTypCdgCd;
+	        } else if(pymntRecncliatnDtlPredecessorTypCdgCd.equals("[") | pymntRecncliatnDtlPredecessorTypCdgCd.equals("]") | this.pymntRecncliatnDtlPredecessorTypCdgCd.substring(this.pymntRecncliatnDtlPredecessorTypCdgCd.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnDtlPredecessorTypCdgCd = this.pymntRecncliatnDtlPredecessorTypCdgCd+pymntRecncliatnDtlPredecessorTypCdgCd;
+	        } else  {
+	            this.pymntRecncliatnDtlPredecessorTypCdgCd = this.pymntRecncliatnDtlPredecessorTypCdgCd+ "," +pymntRecncliatnDtlPredecessorTypCdgCd;
+	        }
+        }
+    }
+    
     
     
     public String getPymntRecncliatnDtlPredecessorTypCdgDsply() {
@@ -334,6 +656,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
     
     public void setPymntRecncliatnDtlPredecessorTypCdgDsply(String pymntRecncliatnDtlPredecessorTypCdgDsply) {
         this.pymntRecncliatnDtlPredecessorTypCdgDsply = pymntRecncliatnDtlPredecessorTypCdgDsply;
+    }
+    
+    public void addPymntRecncliatnDtlPredecessorTypCdgDsply(String pymntRecncliatnDtlPredecessorTypCdgDsply) {
+    	if( pymntRecncliatnDtlPredecessorTypCdgDsply != null ) {
+	    	if( this.pymntRecncliatnDtlPredecessorTypCdgDsply == null ) {
+	        	this.pymntRecncliatnDtlPredecessorTypCdgDsply = pymntRecncliatnDtlPredecessorTypCdgDsply;
+	        } else if(this.pymntRecncliatnDtlPredecessorTypCdgDsply.substring(this.pymntRecncliatnDtlPredecessorTypCdgDsply.length() - 1).equals("]") & pymntRecncliatnDtlPredecessorTypCdgDsply.equals("[")) {
+	        	this.pymntRecncliatnDtlPredecessorTypCdgDsply = this.pymntRecncliatnDtlPredecessorTypCdgDsply+ "," + pymntRecncliatnDtlPredecessorTypCdgDsply;
+	        } else if(pymntRecncliatnDtlPredecessorTypCdgDsply.equals("[") | pymntRecncliatnDtlPredecessorTypCdgDsply.equals("]") | this.pymntRecncliatnDtlPredecessorTypCdgDsply.substring(this.pymntRecncliatnDtlPredecessorTypCdgDsply.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnDtlPredecessorTypCdgDsply = this.pymntRecncliatnDtlPredecessorTypCdgDsply+pymntRecncliatnDtlPredecessorTypCdgDsply;
+	        } else  {
+	            this.pymntRecncliatnDtlPredecessorTypCdgDsply = this.pymntRecncliatnDtlPredecessorTypCdgDsply+ "," +pymntRecncliatnDtlPredecessorTypCdgDsply;
+	        }
+        }
     }
     
     
@@ -346,6 +682,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
         this.pymntRecncliatnDtlPredecessorTypCdgSys = pymntRecncliatnDtlPredecessorTypCdgSys;
     }
     
+    public void addPymntRecncliatnDtlPredecessorTypCdgSys(String pymntRecncliatnDtlPredecessorTypCdgSys) {
+    	if( pymntRecncliatnDtlPredecessorTypCdgSys != null ) {
+	    	if( this.pymntRecncliatnDtlPredecessorTypCdgSys == null ) {
+	        	this.pymntRecncliatnDtlPredecessorTypCdgSys = pymntRecncliatnDtlPredecessorTypCdgSys;
+	        } else if(this.pymntRecncliatnDtlPredecessorTypCdgSys.substring(this.pymntRecncliatnDtlPredecessorTypCdgSys.length() - 1).equals("]") & pymntRecncliatnDtlPredecessorTypCdgSys.equals("[")) {
+	        	this.pymntRecncliatnDtlPredecessorTypCdgSys = this.pymntRecncliatnDtlPredecessorTypCdgSys+ "," + pymntRecncliatnDtlPredecessorTypCdgSys;
+	        } else if(pymntRecncliatnDtlPredecessorTypCdgSys.equals("[") | pymntRecncliatnDtlPredecessorTypCdgSys.equals("]") | this.pymntRecncliatnDtlPredecessorTypCdgSys.substring(this.pymntRecncliatnDtlPredecessorTypCdgSys.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnDtlPredecessorTypCdgSys = this.pymntRecncliatnDtlPredecessorTypCdgSys+pymntRecncliatnDtlPredecessorTypCdgSys;
+	        } else  {
+	            this.pymntRecncliatnDtlPredecessorTypCdgSys = this.pymntRecncliatnDtlPredecessorTypCdgSys+ "," +pymntRecncliatnDtlPredecessorTypCdgSys;
+	        }
+        }
+    }
+    
     
     
     public String getPymntRecncliatnDtlPredecessorTypCdgUsrSltd() {
@@ -354,6 +704,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
     
     public void setPymntRecncliatnDtlPredecessorTypCdgUsrSltd(String pymntRecncliatnDtlPredecessorTypCdgUsrSltd) {
         this.pymntRecncliatnDtlPredecessorTypCdgUsrSltd = pymntRecncliatnDtlPredecessorTypCdgUsrSltd;
+    }
+    
+    public void addPymntRecncliatnDtlPredecessorTypCdgUsrSltd(String pymntRecncliatnDtlPredecessorTypCdgUsrSltd) {
+    	if( pymntRecncliatnDtlPredecessorTypCdgUsrSltd != null ) {
+	    	if( this.pymntRecncliatnDtlPredecessorTypCdgUsrSltd == null ) {
+	        	this.pymntRecncliatnDtlPredecessorTypCdgUsrSltd = pymntRecncliatnDtlPredecessorTypCdgUsrSltd;
+	        } else if(this.pymntRecncliatnDtlPredecessorTypCdgUsrSltd.substring(this.pymntRecncliatnDtlPredecessorTypCdgUsrSltd.length() - 1).equals("]") & pymntRecncliatnDtlPredecessorTypCdgUsrSltd.equals("[")) {
+	        	this.pymntRecncliatnDtlPredecessorTypCdgUsrSltd = this.pymntRecncliatnDtlPredecessorTypCdgUsrSltd+ "," + pymntRecncliatnDtlPredecessorTypCdgUsrSltd;
+	        } else if(pymntRecncliatnDtlPredecessorTypCdgUsrSltd.equals("[") | pymntRecncliatnDtlPredecessorTypCdgUsrSltd.equals("]") | this.pymntRecncliatnDtlPredecessorTypCdgUsrSltd.substring(this.pymntRecncliatnDtlPredecessorTypCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnDtlPredecessorTypCdgUsrSltd = this.pymntRecncliatnDtlPredecessorTypCdgUsrSltd+pymntRecncliatnDtlPredecessorTypCdgUsrSltd;
+	        } else  {
+	            this.pymntRecncliatnDtlPredecessorTypCdgUsrSltd = this.pymntRecncliatnDtlPredecessorTypCdgUsrSltd+ "," +pymntRecncliatnDtlPredecessorTypCdgUsrSltd;
+	        }
+        }
     }
     
     
@@ -366,6 +730,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
         this.pymntRecncliatnDtlPredecessorTypCdgVrsn = pymntRecncliatnDtlPredecessorTypCdgVrsn;
     }
     
+    public void addPymntRecncliatnDtlPredecessorTypCdgVrsn(String pymntRecncliatnDtlPredecessorTypCdgVrsn) {
+    	if( pymntRecncliatnDtlPredecessorTypCdgVrsn != null ) {
+	    	if( this.pymntRecncliatnDtlPredecessorTypCdgVrsn == null ) {
+	        	this.pymntRecncliatnDtlPredecessorTypCdgVrsn = pymntRecncliatnDtlPredecessorTypCdgVrsn;
+	        } else if(this.pymntRecncliatnDtlPredecessorTypCdgVrsn.substring(this.pymntRecncliatnDtlPredecessorTypCdgVrsn.length() - 1).equals("]") & pymntRecncliatnDtlPredecessorTypCdgVrsn.equals("[")) {
+	        	this.pymntRecncliatnDtlPredecessorTypCdgVrsn = this.pymntRecncliatnDtlPredecessorTypCdgVrsn+ "," + pymntRecncliatnDtlPredecessorTypCdgVrsn;
+	        } else if(pymntRecncliatnDtlPredecessorTypCdgVrsn.equals("[") | pymntRecncliatnDtlPredecessorTypCdgVrsn.equals("]") | this.pymntRecncliatnDtlPredecessorTypCdgVrsn.substring(this.pymntRecncliatnDtlPredecessorTypCdgVrsn.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnDtlPredecessorTypCdgVrsn = this.pymntRecncliatnDtlPredecessorTypCdgVrsn+pymntRecncliatnDtlPredecessorTypCdgVrsn;
+	        } else  {
+	            this.pymntRecncliatnDtlPredecessorTypCdgVrsn = this.pymntRecncliatnDtlPredecessorTypCdgVrsn+ "," +pymntRecncliatnDtlPredecessorTypCdgVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getPymntRecncliatnDtlPredecessorTypTxt() {
@@ -374,6 +752,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
     
     public void setPymntRecncliatnDtlPredecessorTypTxt(String pymntRecncliatnDtlPredecessorTypTxt) {
         this.pymntRecncliatnDtlPredecessorTypTxt = pymntRecncliatnDtlPredecessorTypTxt;
+    }
+    
+    public void addPymntRecncliatnDtlPredecessorTypTxt(String pymntRecncliatnDtlPredecessorTypTxt) {
+    	if( pymntRecncliatnDtlPredecessorTypTxt != null ) {
+	    	if( this.pymntRecncliatnDtlPredecessorTypTxt == null ) {
+	        	this.pymntRecncliatnDtlPredecessorTypTxt = pymntRecncliatnDtlPredecessorTypTxt;
+	        } else if(this.pymntRecncliatnDtlPredecessorTypTxt.substring(this.pymntRecncliatnDtlPredecessorTypTxt.length() - 1).equals("]") & pymntRecncliatnDtlPredecessorTypTxt.equals("[")) {
+	        	this.pymntRecncliatnDtlPredecessorTypTxt = this.pymntRecncliatnDtlPredecessorTypTxt+ "," + pymntRecncliatnDtlPredecessorTypTxt;
+	        } else if(pymntRecncliatnDtlPredecessorTypTxt.equals("[") | pymntRecncliatnDtlPredecessorTypTxt.equals("]") | this.pymntRecncliatnDtlPredecessorTypTxt.substring(this.pymntRecncliatnDtlPredecessorTypTxt.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnDtlPredecessorTypTxt = this.pymntRecncliatnDtlPredecessorTypTxt+pymntRecncliatnDtlPredecessorTypTxt;
+	        } else  {
+	            this.pymntRecncliatnDtlPredecessorTypTxt = this.pymntRecncliatnDtlPredecessorTypTxt+ "," +pymntRecncliatnDtlPredecessorTypTxt;
+	        }
+        }
     }
     
     
@@ -386,6 +778,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
         this.pymntRecncliatnDtlPredecessorUse = pymntRecncliatnDtlPredecessorUse;
     }
     
+    public void addPymntRecncliatnDtlPredecessorUse(String pymntRecncliatnDtlPredecessorUse) {
+    	if( pymntRecncliatnDtlPredecessorUse != null ) {
+	    	if( this.pymntRecncliatnDtlPredecessorUse == null ) {
+	        	this.pymntRecncliatnDtlPredecessorUse = pymntRecncliatnDtlPredecessorUse;
+	        } else if(this.pymntRecncliatnDtlPredecessorUse.substring(this.pymntRecncliatnDtlPredecessorUse.length() - 1).equals("]") & pymntRecncliatnDtlPredecessorUse.equals("[")) {
+	        	this.pymntRecncliatnDtlPredecessorUse = this.pymntRecncliatnDtlPredecessorUse+ "," + pymntRecncliatnDtlPredecessorUse;
+	        } else if(pymntRecncliatnDtlPredecessorUse.equals("[") | pymntRecncliatnDtlPredecessorUse.equals("]") | this.pymntRecncliatnDtlPredecessorUse.substring(this.pymntRecncliatnDtlPredecessorUse.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnDtlPredecessorUse = this.pymntRecncliatnDtlPredecessorUse+pymntRecncliatnDtlPredecessorUse;
+	        } else  {
+	            this.pymntRecncliatnDtlPredecessorUse = this.pymntRecncliatnDtlPredecessorUse+ "," +pymntRecncliatnDtlPredecessorUse;
+	        }
+        }
+    }
+    
     
     
     public String getPymntRecncliatnDtlPredecessorVl() {
@@ -394,6 +800,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
     
     public void setPymntRecncliatnDtlPredecessorVl(String pymntRecncliatnDtlPredecessorVl) {
         this.pymntRecncliatnDtlPredecessorVl = pymntRecncliatnDtlPredecessorVl;
+    }
+    
+    public void addPymntRecncliatnDtlPredecessorVl(String pymntRecncliatnDtlPredecessorVl) {
+    	if( pymntRecncliatnDtlPredecessorVl != null ) {
+	    	if( this.pymntRecncliatnDtlPredecessorVl == null ) {
+	        	this.pymntRecncliatnDtlPredecessorVl = pymntRecncliatnDtlPredecessorVl;
+	        } else if(this.pymntRecncliatnDtlPredecessorVl.substring(this.pymntRecncliatnDtlPredecessorVl.length() - 1).equals("]") & pymntRecncliatnDtlPredecessorVl.equals("[")) {
+	        	this.pymntRecncliatnDtlPredecessorVl = this.pymntRecncliatnDtlPredecessorVl+ "," + pymntRecncliatnDtlPredecessorVl;
+	        } else if(pymntRecncliatnDtlPredecessorVl.equals("[") | pymntRecncliatnDtlPredecessorVl.equals("]") | this.pymntRecncliatnDtlPredecessorVl.substring(this.pymntRecncliatnDtlPredecessorVl.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnDtlPredecessorVl = this.pymntRecncliatnDtlPredecessorVl+pymntRecncliatnDtlPredecessorVl;
+	        } else  {
+	            this.pymntRecncliatnDtlPredecessorVl = this.pymntRecncliatnDtlPredecessorVl+ "," +pymntRecncliatnDtlPredecessorVl;
+	        }
+        }
     }
     
     
@@ -406,6 +826,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
         this.pymntRecncliatnDtlRqst = pymntRecncliatnDtlRqst;
     }
     
+    public void addPymntRecncliatnDtlRqst(String pymntRecncliatnDtlRqst) {
+    	if( pymntRecncliatnDtlRqst != null ) {
+	    	if( this.pymntRecncliatnDtlRqst == null ) {
+	        	this.pymntRecncliatnDtlRqst = pymntRecncliatnDtlRqst;
+	        } else if(this.pymntRecncliatnDtlRqst.substring(this.pymntRecncliatnDtlRqst.length() - 1).equals("]") & pymntRecncliatnDtlRqst.equals("[")) {
+	        	this.pymntRecncliatnDtlRqst = this.pymntRecncliatnDtlRqst+ "," + pymntRecncliatnDtlRqst;
+	        } else if(pymntRecncliatnDtlRqst.equals("[") | pymntRecncliatnDtlRqst.equals("]") | this.pymntRecncliatnDtlRqst.substring(this.pymntRecncliatnDtlRqst.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnDtlRqst = this.pymntRecncliatnDtlRqst+pymntRecncliatnDtlRqst;
+	        } else  {
+	            this.pymntRecncliatnDtlRqst = this.pymntRecncliatnDtlRqst+ "," +pymntRecncliatnDtlRqst;
+	        }
+        }
+    }
+    
     
     
     public String getPymntRecncliatnDtlRsps() {
@@ -414,6 +848,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
     
     public void setPymntRecncliatnDtlRsps(String pymntRecncliatnDtlRsps) {
         this.pymntRecncliatnDtlRsps = pymntRecncliatnDtlRsps;
+    }
+    
+    public void addPymntRecncliatnDtlRsps(String pymntRecncliatnDtlRsps) {
+    	if( pymntRecncliatnDtlRsps != null ) {
+	    	if( this.pymntRecncliatnDtlRsps == null ) {
+	        	this.pymntRecncliatnDtlRsps = pymntRecncliatnDtlRsps;
+	        } else if(this.pymntRecncliatnDtlRsps.substring(this.pymntRecncliatnDtlRsps.length() - 1).equals("]") & pymntRecncliatnDtlRsps.equals("[")) {
+	        	this.pymntRecncliatnDtlRsps = this.pymntRecncliatnDtlRsps+ "," + pymntRecncliatnDtlRsps;
+	        } else if(pymntRecncliatnDtlRsps.equals("[") | pymntRecncliatnDtlRsps.equals("]") | this.pymntRecncliatnDtlRsps.substring(this.pymntRecncliatnDtlRsps.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnDtlRsps = this.pymntRecncliatnDtlRsps+pymntRecncliatnDtlRsps;
+	        } else  {
+	            this.pymntRecncliatnDtlRsps = this.pymntRecncliatnDtlRsps+ "," +pymntRecncliatnDtlRsps;
+	        }
+        }
     }
     
     
@@ -426,6 +874,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
         this.pymntRecncliatnDtlResponsible = pymntRecncliatnDtlResponsible;
     }
     
+    public void addPymntRecncliatnDtlResponsible(String pymntRecncliatnDtlResponsible) {
+    	if( pymntRecncliatnDtlResponsible != null ) {
+	    	if( this.pymntRecncliatnDtlResponsible == null ) {
+	        	this.pymntRecncliatnDtlResponsible = pymntRecncliatnDtlResponsible;
+	        } else if(this.pymntRecncliatnDtlResponsible.substring(this.pymntRecncliatnDtlResponsible.length() - 1).equals("]") & pymntRecncliatnDtlResponsible.equals("[")) {
+	        	this.pymntRecncliatnDtlResponsible = this.pymntRecncliatnDtlResponsible+ "," + pymntRecncliatnDtlResponsible;
+	        } else if(pymntRecncliatnDtlResponsible.equals("[") | pymntRecncliatnDtlResponsible.equals("]") | this.pymntRecncliatnDtlResponsible.substring(this.pymntRecncliatnDtlResponsible.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnDtlResponsible = this.pymntRecncliatnDtlResponsible+pymntRecncliatnDtlResponsible;
+	        } else  {
+	            this.pymntRecncliatnDtlResponsible = this.pymntRecncliatnDtlResponsible+ "," +pymntRecncliatnDtlResponsible;
+	        }
+        }
+    }
+    
     
     
     public String getPymntRecncliatnDtlSubmitter() {
@@ -434,6 +896,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
     
     public void setPymntRecncliatnDtlSubmitter(String pymntRecncliatnDtlSubmitter) {
         this.pymntRecncliatnDtlSubmitter = pymntRecncliatnDtlSubmitter;
+    }
+    
+    public void addPymntRecncliatnDtlSubmitter(String pymntRecncliatnDtlSubmitter) {
+    	if( pymntRecncliatnDtlSubmitter != null ) {
+	    	if( this.pymntRecncliatnDtlSubmitter == null ) {
+	        	this.pymntRecncliatnDtlSubmitter = pymntRecncliatnDtlSubmitter;
+	        } else if(this.pymntRecncliatnDtlSubmitter.substring(this.pymntRecncliatnDtlSubmitter.length() - 1).equals("]") & pymntRecncliatnDtlSubmitter.equals("[")) {
+	        	this.pymntRecncliatnDtlSubmitter = this.pymntRecncliatnDtlSubmitter+ "," + pymntRecncliatnDtlSubmitter;
+	        } else if(pymntRecncliatnDtlSubmitter.equals("[") | pymntRecncliatnDtlSubmitter.equals("]") | this.pymntRecncliatnDtlSubmitter.substring(this.pymntRecncliatnDtlSubmitter.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnDtlSubmitter = this.pymntRecncliatnDtlSubmitter+pymntRecncliatnDtlSubmitter;
+	        } else  {
+	            this.pymntRecncliatnDtlSubmitter = this.pymntRecncliatnDtlSubmitter+ "," +pymntRecncliatnDtlSubmitter;
+	        }
+        }
     }
     
     
@@ -446,6 +922,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
         this.pymntRecncliatnDtlTypCdgCd = pymntRecncliatnDtlTypCdgCd;
     }
     
+    public void addPymntRecncliatnDtlTypCdgCd(String pymntRecncliatnDtlTypCdgCd) {
+    	if( pymntRecncliatnDtlTypCdgCd != null ) {
+	    	if( this.pymntRecncliatnDtlTypCdgCd == null ) {
+	        	this.pymntRecncliatnDtlTypCdgCd = pymntRecncliatnDtlTypCdgCd;
+	        } else if(this.pymntRecncliatnDtlTypCdgCd.substring(this.pymntRecncliatnDtlTypCdgCd.length() - 1).equals("]") & pymntRecncliatnDtlTypCdgCd.equals("[")) {
+	        	this.pymntRecncliatnDtlTypCdgCd = this.pymntRecncliatnDtlTypCdgCd+ "," + pymntRecncliatnDtlTypCdgCd;
+	        } else if(pymntRecncliatnDtlTypCdgCd.equals("[") | pymntRecncliatnDtlTypCdgCd.equals("]") | this.pymntRecncliatnDtlTypCdgCd.substring(this.pymntRecncliatnDtlTypCdgCd.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnDtlTypCdgCd = this.pymntRecncliatnDtlTypCdgCd+pymntRecncliatnDtlTypCdgCd;
+	        } else  {
+	            this.pymntRecncliatnDtlTypCdgCd = this.pymntRecncliatnDtlTypCdgCd+ "," +pymntRecncliatnDtlTypCdgCd;
+	        }
+        }
+    }
+    
     
     
     public String getPymntRecncliatnDtlTypCdgDsply() {
@@ -454,6 +944,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
     
     public void setPymntRecncliatnDtlTypCdgDsply(String pymntRecncliatnDtlTypCdgDsply) {
         this.pymntRecncliatnDtlTypCdgDsply = pymntRecncliatnDtlTypCdgDsply;
+    }
+    
+    public void addPymntRecncliatnDtlTypCdgDsply(String pymntRecncliatnDtlTypCdgDsply) {
+    	if( pymntRecncliatnDtlTypCdgDsply != null ) {
+	    	if( this.pymntRecncliatnDtlTypCdgDsply == null ) {
+	        	this.pymntRecncliatnDtlTypCdgDsply = pymntRecncliatnDtlTypCdgDsply;
+	        } else if(this.pymntRecncliatnDtlTypCdgDsply.substring(this.pymntRecncliatnDtlTypCdgDsply.length() - 1).equals("]") & pymntRecncliatnDtlTypCdgDsply.equals("[")) {
+	        	this.pymntRecncliatnDtlTypCdgDsply = this.pymntRecncliatnDtlTypCdgDsply+ "," + pymntRecncliatnDtlTypCdgDsply;
+	        } else if(pymntRecncliatnDtlTypCdgDsply.equals("[") | pymntRecncliatnDtlTypCdgDsply.equals("]") | this.pymntRecncliatnDtlTypCdgDsply.substring(this.pymntRecncliatnDtlTypCdgDsply.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnDtlTypCdgDsply = this.pymntRecncliatnDtlTypCdgDsply+pymntRecncliatnDtlTypCdgDsply;
+	        } else  {
+	            this.pymntRecncliatnDtlTypCdgDsply = this.pymntRecncliatnDtlTypCdgDsply+ "," +pymntRecncliatnDtlTypCdgDsply;
+	        }
+        }
     }
     
     
@@ -466,6 +970,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
         this.pymntRecncliatnDtlTypCdgSys = pymntRecncliatnDtlTypCdgSys;
     }
     
+    public void addPymntRecncliatnDtlTypCdgSys(String pymntRecncliatnDtlTypCdgSys) {
+    	if( pymntRecncliatnDtlTypCdgSys != null ) {
+	    	if( this.pymntRecncliatnDtlTypCdgSys == null ) {
+	        	this.pymntRecncliatnDtlTypCdgSys = pymntRecncliatnDtlTypCdgSys;
+	        } else if(this.pymntRecncliatnDtlTypCdgSys.substring(this.pymntRecncliatnDtlTypCdgSys.length() - 1).equals("]") & pymntRecncliatnDtlTypCdgSys.equals("[")) {
+	        	this.pymntRecncliatnDtlTypCdgSys = this.pymntRecncliatnDtlTypCdgSys+ "," + pymntRecncliatnDtlTypCdgSys;
+	        } else if(pymntRecncliatnDtlTypCdgSys.equals("[") | pymntRecncliatnDtlTypCdgSys.equals("]") | this.pymntRecncliatnDtlTypCdgSys.substring(this.pymntRecncliatnDtlTypCdgSys.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnDtlTypCdgSys = this.pymntRecncliatnDtlTypCdgSys+pymntRecncliatnDtlTypCdgSys;
+	        } else  {
+	            this.pymntRecncliatnDtlTypCdgSys = this.pymntRecncliatnDtlTypCdgSys+ "," +pymntRecncliatnDtlTypCdgSys;
+	        }
+        }
+    }
+    
     
     
     public String getPymntRecncliatnDtlTypCdgUsrSltd() {
@@ -474,6 +992,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
     
     public void setPymntRecncliatnDtlTypCdgUsrSltd(String pymntRecncliatnDtlTypCdgUsrSltd) {
         this.pymntRecncliatnDtlTypCdgUsrSltd = pymntRecncliatnDtlTypCdgUsrSltd;
+    }
+    
+    public void addPymntRecncliatnDtlTypCdgUsrSltd(String pymntRecncliatnDtlTypCdgUsrSltd) {
+    	if( pymntRecncliatnDtlTypCdgUsrSltd != null ) {
+	    	if( this.pymntRecncliatnDtlTypCdgUsrSltd == null ) {
+	        	this.pymntRecncliatnDtlTypCdgUsrSltd = pymntRecncliatnDtlTypCdgUsrSltd;
+	        } else if(this.pymntRecncliatnDtlTypCdgUsrSltd.substring(this.pymntRecncliatnDtlTypCdgUsrSltd.length() - 1).equals("]") & pymntRecncliatnDtlTypCdgUsrSltd.equals("[")) {
+	        	this.pymntRecncliatnDtlTypCdgUsrSltd = this.pymntRecncliatnDtlTypCdgUsrSltd+ "," + pymntRecncliatnDtlTypCdgUsrSltd;
+	        } else if(pymntRecncliatnDtlTypCdgUsrSltd.equals("[") | pymntRecncliatnDtlTypCdgUsrSltd.equals("]") | this.pymntRecncliatnDtlTypCdgUsrSltd.substring(this.pymntRecncliatnDtlTypCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnDtlTypCdgUsrSltd = this.pymntRecncliatnDtlTypCdgUsrSltd+pymntRecncliatnDtlTypCdgUsrSltd;
+	        } else  {
+	            this.pymntRecncliatnDtlTypCdgUsrSltd = this.pymntRecncliatnDtlTypCdgUsrSltd+ "," +pymntRecncliatnDtlTypCdgUsrSltd;
+	        }
+        }
     }
     
     
@@ -486,6 +1018,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
         this.pymntRecncliatnDtlTypCdgVrsn = pymntRecncliatnDtlTypCdgVrsn;
     }
     
+    public void addPymntRecncliatnDtlTypCdgVrsn(String pymntRecncliatnDtlTypCdgVrsn) {
+    	if( pymntRecncliatnDtlTypCdgVrsn != null ) {
+	    	if( this.pymntRecncliatnDtlTypCdgVrsn == null ) {
+	        	this.pymntRecncliatnDtlTypCdgVrsn = pymntRecncliatnDtlTypCdgVrsn;
+	        } else if(this.pymntRecncliatnDtlTypCdgVrsn.substring(this.pymntRecncliatnDtlTypCdgVrsn.length() - 1).equals("]") & pymntRecncliatnDtlTypCdgVrsn.equals("[")) {
+	        	this.pymntRecncliatnDtlTypCdgVrsn = this.pymntRecncliatnDtlTypCdgVrsn+ "," + pymntRecncliatnDtlTypCdgVrsn;
+	        } else if(pymntRecncliatnDtlTypCdgVrsn.equals("[") | pymntRecncliatnDtlTypCdgVrsn.equals("]") | this.pymntRecncliatnDtlTypCdgVrsn.substring(this.pymntRecncliatnDtlTypCdgVrsn.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnDtlTypCdgVrsn = this.pymntRecncliatnDtlTypCdgVrsn+pymntRecncliatnDtlTypCdgVrsn;
+	        } else  {
+	            this.pymntRecncliatnDtlTypCdgVrsn = this.pymntRecncliatnDtlTypCdgVrsn+ "," +pymntRecncliatnDtlTypCdgVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getPymntRecncliatnDtlTypTxt() {
@@ -494,6 +1040,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
     
     public void setPymntRecncliatnDtlTypTxt(String pymntRecncliatnDtlTypTxt) {
         this.pymntRecncliatnDtlTypTxt = pymntRecncliatnDtlTypTxt;
+    }
+    
+    public void addPymntRecncliatnDtlTypTxt(String pymntRecncliatnDtlTypTxt) {
+    	if( pymntRecncliatnDtlTypTxt != null ) {
+	    	if( this.pymntRecncliatnDtlTypTxt == null ) {
+	        	this.pymntRecncliatnDtlTypTxt = pymntRecncliatnDtlTypTxt;
+	        } else if(this.pymntRecncliatnDtlTypTxt.substring(this.pymntRecncliatnDtlTypTxt.length() - 1).equals("]") & pymntRecncliatnDtlTypTxt.equals("[")) {
+	        	this.pymntRecncliatnDtlTypTxt = this.pymntRecncliatnDtlTypTxt+ "," + pymntRecncliatnDtlTypTxt;
+	        } else if(pymntRecncliatnDtlTypTxt.equals("[") | pymntRecncliatnDtlTypTxt.equals("]") | this.pymntRecncliatnDtlTypTxt.substring(this.pymntRecncliatnDtlTypTxt.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnDtlTypTxt = this.pymntRecncliatnDtlTypTxt+pymntRecncliatnDtlTypTxt;
+	        } else  {
+	            this.pymntRecncliatnDtlTypTxt = this.pymntRecncliatnDtlTypTxt+ "," +pymntRecncliatnDtlTypTxt;
+	        }
+        }
     }
     
     
@@ -506,6 +1066,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
         this.pymntRecncliatnDisposition = pymntRecncliatnDisposition;
     }
     
+    public void addPymntRecncliatnDisposition(String pymntRecncliatnDisposition) {
+    	if( pymntRecncliatnDisposition != null ) {
+	    	if( this.pymntRecncliatnDisposition == null ) {
+	        	this.pymntRecncliatnDisposition = pymntRecncliatnDisposition;
+	        } else if(this.pymntRecncliatnDisposition.substring(this.pymntRecncliatnDisposition.length() - 1).equals("]") & pymntRecncliatnDisposition.equals("[")) {
+	        	this.pymntRecncliatnDisposition = this.pymntRecncliatnDisposition+ "," + pymntRecncliatnDisposition;
+	        } else if(pymntRecncliatnDisposition.equals("[") | pymntRecncliatnDisposition.equals("]") | this.pymntRecncliatnDisposition.substring(this.pymntRecncliatnDisposition.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnDisposition = this.pymntRecncliatnDisposition+pymntRecncliatnDisposition;
+	        } else  {
+	            this.pymntRecncliatnDisposition = this.pymntRecncliatnDisposition+ "," +pymntRecncliatnDisposition;
+	        }
+        }
+    }
+    
     
     
     public String getPymntRecncliatnFrmCdCdgCd() {
@@ -514,6 +1088,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
     
     public void setPymntRecncliatnFrmCdCdgCd(String pymntRecncliatnFrmCdCdgCd) {
         this.pymntRecncliatnFrmCdCdgCd = pymntRecncliatnFrmCdCdgCd;
+    }
+    
+    public void addPymntRecncliatnFrmCdCdgCd(String pymntRecncliatnFrmCdCdgCd) {
+    	if( pymntRecncliatnFrmCdCdgCd != null ) {
+	    	if( this.pymntRecncliatnFrmCdCdgCd == null ) {
+	        	this.pymntRecncliatnFrmCdCdgCd = pymntRecncliatnFrmCdCdgCd;
+	        } else if(this.pymntRecncliatnFrmCdCdgCd.substring(this.pymntRecncliatnFrmCdCdgCd.length() - 1).equals("]") & pymntRecncliatnFrmCdCdgCd.equals("[")) {
+	        	this.pymntRecncliatnFrmCdCdgCd = this.pymntRecncliatnFrmCdCdgCd+ "," + pymntRecncliatnFrmCdCdgCd;
+	        } else if(pymntRecncliatnFrmCdCdgCd.equals("[") | pymntRecncliatnFrmCdCdgCd.equals("]") | this.pymntRecncliatnFrmCdCdgCd.substring(this.pymntRecncliatnFrmCdCdgCd.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnFrmCdCdgCd = this.pymntRecncliatnFrmCdCdgCd+pymntRecncliatnFrmCdCdgCd;
+	        } else  {
+	            this.pymntRecncliatnFrmCdCdgCd = this.pymntRecncliatnFrmCdCdgCd+ "," +pymntRecncliatnFrmCdCdgCd;
+	        }
+        }
     }
     
     
@@ -526,6 +1114,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
         this.pymntRecncliatnFrmCdCdgDsply = pymntRecncliatnFrmCdCdgDsply;
     }
     
+    public void addPymntRecncliatnFrmCdCdgDsply(String pymntRecncliatnFrmCdCdgDsply) {
+    	if( pymntRecncliatnFrmCdCdgDsply != null ) {
+	    	if( this.pymntRecncliatnFrmCdCdgDsply == null ) {
+	        	this.pymntRecncliatnFrmCdCdgDsply = pymntRecncliatnFrmCdCdgDsply;
+	        } else if(this.pymntRecncliatnFrmCdCdgDsply.substring(this.pymntRecncliatnFrmCdCdgDsply.length() - 1).equals("]") & pymntRecncliatnFrmCdCdgDsply.equals("[")) {
+	        	this.pymntRecncliatnFrmCdCdgDsply = this.pymntRecncliatnFrmCdCdgDsply+ "," + pymntRecncliatnFrmCdCdgDsply;
+	        } else if(pymntRecncliatnFrmCdCdgDsply.equals("[") | pymntRecncliatnFrmCdCdgDsply.equals("]") | this.pymntRecncliatnFrmCdCdgDsply.substring(this.pymntRecncliatnFrmCdCdgDsply.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnFrmCdCdgDsply = this.pymntRecncliatnFrmCdCdgDsply+pymntRecncliatnFrmCdCdgDsply;
+	        } else  {
+	            this.pymntRecncliatnFrmCdCdgDsply = this.pymntRecncliatnFrmCdCdgDsply+ "," +pymntRecncliatnFrmCdCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getPymntRecncliatnFrmCdCdgSys() {
@@ -534,6 +1136,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
     
     public void setPymntRecncliatnFrmCdCdgSys(String pymntRecncliatnFrmCdCdgSys) {
         this.pymntRecncliatnFrmCdCdgSys = pymntRecncliatnFrmCdCdgSys;
+    }
+    
+    public void addPymntRecncliatnFrmCdCdgSys(String pymntRecncliatnFrmCdCdgSys) {
+    	if( pymntRecncliatnFrmCdCdgSys != null ) {
+	    	if( this.pymntRecncliatnFrmCdCdgSys == null ) {
+	        	this.pymntRecncliatnFrmCdCdgSys = pymntRecncliatnFrmCdCdgSys;
+	        } else if(this.pymntRecncliatnFrmCdCdgSys.substring(this.pymntRecncliatnFrmCdCdgSys.length() - 1).equals("]") & pymntRecncliatnFrmCdCdgSys.equals("[")) {
+	        	this.pymntRecncliatnFrmCdCdgSys = this.pymntRecncliatnFrmCdCdgSys+ "," + pymntRecncliatnFrmCdCdgSys;
+	        } else if(pymntRecncliatnFrmCdCdgSys.equals("[") | pymntRecncliatnFrmCdCdgSys.equals("]") | this.pymntRecncliatnFrmCdCdgSys.substring(this.pymntRecncliatnFrmCdCdgSys.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnFrmCdCdgSys = this.pymntRecncliatnFrmCdCdgSys+pymntRecncliatnFrmCdCdgSys;
+	        } else  {
+	            this.pymntRecncliatnFrmCdCdgSys = this.pymntRecncliatnFrmCdCdgSys+ "," +pymntRecncliatnFrmCdCdgSys;
+	        }
+        }
     }
     
     
@@ -546,6 +1162,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
         this.pymntRecncliatnFrmCdCdgUsrSltd = pymntRecncliatnFrmCdCdgUsrSltd;
     }
     
+    public void addPymntRecncliatnFrmCdCdgUsrSltd(String pymntRecncliatnFrmCdCdgUsrSltd) {
+    	if( pymntRecncliatnFrmCdCdgUsrSltd != null ) {
+	    	if( this.pymntRecncliatnFrmCdCdgUsrSltd == null ) {
+	        	this.pymntRecncliatnFrmCdCdgUsrSltd = pymntRecncliatnFrmCdCdgUsrSltd;
+	        } else if(this.pymntRecncliatnFrmCdCdgUsrSltd.substring(this.pymntRecncliatnFrmCdCdgUsrSltd.length() - 1).equals("]") & pymntRecncliatnFrmCdCdgUsrSltd.equals("[")) {
+	        	this.pymntRecncliatnFrmCdCdgUsrSltd = this.pymntRecncliatnFrmCdCdgUsrSltd+ "," + pymntRecncliatnFrmCdCdgUsrSltd;
+	        } else if(pymntRecncliatnFrmCdCdgUsrSltd.equals("[") | pymntRecncliatnFrmCdCdgUsrSltd.equals("]") | this.pymntRecncliatnFrmCdCdgUsrSltd.substring(this.pymntRecncliatnFrmCdCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnFrmCdCdgUsrSltd = this.pymntRecncliatnFrmCdCdgUsrSltd+pymntRecncliatnFrmCdCdgUsrSltd;
+	        } else  {
+	            this.pymntRecncliatnFrmCdCdgUsrSltd = this.pymntRecncliatnFrmCdCdgUsrSltd+ "," +pymntRecncliatnFrmCdCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getPymntRecncliatnFrmCdCdgVrsn() {
@@ -554,6 +1184,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
     
     public void setPymntRecncliatnFrmCdCdgVrsn(String pymntRecncliatnFrmCdCdgVrsn) {
         this.pymntRecncliatnFrmCdCdgVrsn = pymntRecncliatnFrmCdCdgVrsn;
+    }
+    
+    public void addPymntRecncliatnFrmCdCdgVrsn(String pymntRecncliatnFrmCdCdgVrsn) {
+    	if( pymntRecncliatnFrmCdCdgVrsn != null ) {
+	    	if( this.pymntRecncliatnFrmCdCdgVrsn == null ) {
+	        	this.pymntRecncliatnFrmCdCdgVrsn = pymntRecncliatnFrmCdCdgVrsn;
+	        } else if(this.pymntRecncliatnFrmCdCdgVrsn.substring(this.pymntRecncliatnFrmCdCdgVrsn.length() - 1).equals("]") & pymntRecncliatnFrmCdCdgVrsn.equals("[")) {
+	        	this.pymntRecncliatnFrmCdCdgVrsn = this.pymntRecncliatnFrmCdCdgVrsn+ "," + pymntRecncliatnFrmCdCdgVrsn;
+	        } else if(pymntRecncliatnFrmCdCdgVrsn.equals("[") | pymntRecncliatnFrmCdCdgVrsn.equals("]") | this.pymntRecncliatnFrmCdCdgVrsn.substring(this.pymntRecncliatnFrmCdCdgVrsn.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnFrmCdCdgVrsn = this.pymntRecncliatnFrmCdCdgVrsn+pymntRecncliatnFrmCdCdgVrsn;
+	        } else  {
+	            this.pymntRecncliatnFrmCdCdgVrsn = this.pymntRecncliatnFrmCdCdgVrsn+ "," +pymntRecncliatnFrmCdCdgVrsn;
+	        }
+        }
     }
     
     
@@ -566,6 +1210,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
         this.pymntRecncliatnFrmCdTxt = pymntRecncliatnFrmCdTxt;
     }
     
+    public void addPymntRecncliatnFrmCdTxt(String pymntRecncliatnFrmCdTxt) {
+    	if( pymntRecncliatnFrmCdTxt != null ) {
+	    	if( this.pymntRecncliatnFrmCdTxt == null ) {
+	        	this.pymntRecncliatnFrmCdTxt = pymntRecncliatnFrmCdTxt;
+	        } else if(this.pymntRecncliatnFrmCdTxt.substring(this.pymntRecncliatnFrmCdTxt.length() - 1).equals("]") & pymntRecncliatnFrmCdTxt.equals("[")) {
+	        	this.pymntRecncliatnFrmCdTxt = this.pymntRecncliatnFrmCdTxt+ "," + pymntRecncliatnFrmCdTxt;
+	        } else if(pymntRecncliatnFrmCdTxt.equals("[") | pymntRecncliatnFrmCdTxt.equals("]") | this.pymntRecncliatnFrmCdTxt.substring(this.pymntRecncliatnFrmCdTxt.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnFrmCdTxt = this.pymntRecncliatnFrmCdTxt+pymntRecncliatnFrmCdTxt;
+	        } else  {
+	            this.pymntRecncliatnFrmCdTxt = this.pymntRecncliatnFrmCdTxt+ "," +pymntRecncliatnFrmCdTxt;
+	        }
+        }
+    }
+    
     
     
     public String getPymntRecncliatnIdAssigner() {
@@ -574,6 +1232,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
     
     public void setPymntRecncliatnIdAssigner(String pymntRecncliatnIdAssigner) {
         this.pymntRecncliatnIdAssigner = pymntRecncliatnIdAssigner;
+    }
+    
+    public void addPymntRecncliatnIdAssigner(String pymntRecncliatnIdAssigner) {
+    	if( pymntRecncliatnIdAssigner != null ) {
+	    	if( this.pymntRecncliatnIdAssigner == null ) {
+	        	this.pymntRecncliatnIdAssigner = pymntRecncliatnIdAssigner;
+	        } else if(this.pymntRecncliatnIdAssigner.substring(this.pymntRecncliatnIdAssigner.length() - 1).equals("]") & pymntRecncliatnIdAssigner.equals("[")) {
+	        	this.pymntRecncliatnIdAssigner = this.pymntRecncliatnIdAssigner+ "," + pymntRecncliatnIdAssigner;
+	        } else if(pymntRecncliatnIdAssigner.equals("[") | pymntRecncliatnIdAssigner.equals("]") | this.pymntRecncliatnIdAssigner.substring(this.pymntRecncliatnIdAssigner.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnIdAssigner = this.pymntRecncliatnIdAssigner+pymntRecncliatnIdAssigner;
+	        } else  {
+	            this.pymntRecncliatnIdAssigner = this.pymntRecncliatnIdAssigner+ "," +pymntRecncliatnIdAssigner;
+	        }
+        }
     }
     
     
@@ -586,6 +1258,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
         this.pymntRecncliatnIdPrdEnd = pymntRecncliatnIdPrdEnd;
     }
     
+    public void addPymntRecncliatnIdPrdEnd(String pymntRecncliatnIdPrdEnd) {
+    	if( pymntRecncliatnIdPrdEnd != null ) {
+	    	if( this.pymntRecncliatnIdPrdEnd == null ) {
+	        	this.pymntRecncliatnIdPrdEnd = pymntRecncliatnIdPrdEnd;
+	        } else if(this.pymntRecncliatnIdPrdEnd.substring(this.pymntRecncliatnIdPrdEnd.length() - 1).equals("]") & pymntRecncliatnIdPrdEnd.equals("[")) {
+	        	this.pymntRecncliatnIdPrdEnd = this.pymntRecncliatnIdPrdEnd+ "," + pymntRecncliatnIdPrdEnd;
+	        } else if(pymntRecncliatnIdPrdEnd.equals("[") | pymntRecncliatnIdPrdEnd.equals("]") | this.pymntRecncliatnIdPrdEnd.substring(this.pymntRecncliatnIdPrdEnd.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnIdPrdEnd = this.pymntRecncliatnIdPrdEnd+pymntRecncliatnIdPrdEnd;
+	        } else  {
+	            this.pymntRecncliatnIdPrdEnd = this.pymntRecncliatnIdPrdEnd+ "," +pymntRecncliatnIdPrdEnd;
+	        }
+        }
+    }
+    
     
     
     public String getPymntRecncliatnIdPrdStrt() {
@@ -594,6 +1280,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
     
     public void setPymntRecncliatnIdPrdStrt(String pymntRecncliatnIdPrdStrt) {
         this.pymntRecncliatnIdPrdStrt = pymntRecncliatnIdPrdStrt;
+    }
+    
+    public void addPymntRecncliatnIdPrdStrt(String pymntRecncliatnIdPrdStrt) {
+    	if( pymntRecncliatnIdPrdStrt != null ) {
+	    	if( this.pymntRecncliatnIdPrdStrt == null ) {
+	        	this.pymntRecncliatnIdPrdStrt = pymntRecncliatnIdPrdStrt;
+	        } else if(this.pymntRecncliatnIdPrdStrt.substring(this.pymntRecncliatnIdPrdStrt.length() - 1).equals("]") & pymntRecncliatnIdPrdStrt.equals("[")) {
+	        	this.pymntRecncliatnIdPrdStrt = this.pymntRecncliatnIdPrdStrt+ "," + pymntRecncliatnIdPrdStrt;
+	        } else if(pymntRecncliatnIdPrdStrt.equals("[") | pymntRecncliatnIdPrdStrt.equals("]") | this.pymntRecncliatnIdPrdStrt.substring(this.pymntRecncliatnIdPrdStrt.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnIdPrdStrt = this.pymntRecncliatnIdPrdStrt+pymntRecncliatnIdPrdStrt;
+	        } else  {
+	            this.pymntRecncliatnIdPrdStrt = this.pymntRecncliatnIdPrdStrt+ "," +pymntRecncliatnIdPrdStrt;
+	        }
+        }
     }
     
     
@@ -606,6 +1306,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
         this.pymntRecncliatnIdSys = pymntRecncliatnIdSys;
     }
     
+    public void addPymntRecncliatnIdSys(String pymntRecncliatnIdSys) {
+    	if( pymntRecncliatnIdSys != null ) {
+	    	if( this.pymntRecncliatnIdSys == null ) {
+	        	this.pymntRecncliatnIdSys = pymntRecncliatnIdSys;
+	        } else if(this.pymntRecncliatnIdSys.substring(this.pymntRecncliatnIdSys.length() - 1).equals("]") & pymntRecncliatnIdSys.equals("[")) {
+	        	this.pymntRecncliatnIdSys = this.pymntRecncliatnIdSys+ "," + pymntRecncliatnIdSys;
+	        } else if(pymntRecncliatnIdSys.equals("[") | pymntRecncliatnIdSys.equals("]") | this.pymntRecncliatnIdSys.substring(this.pymntRecncliatnIdSys.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnIdSys = this.pymntRecncliatnIdSys+pymntRecncliatnIdSys;
+	        } else  {
+	            this.pymntRecncliatnIdSys = this.pymntRecncliatnIdSys+ "," +pymntRecncliatnIdSys;
+	        }
+        }
+    }
+    
     
     
     public String getPymntRecncliatnIdTypCdgCd() {
@@ -614,6 +1328,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
     
     public void setPymntRecncliatnIdTypCdgCd(String pymntRecncliatnIdTypCdgCd) {
         this.pymntRecncliatnIdTypCdgCd = pymntRecncliatnIdTypCdgCd;
+    }
+    
+    public void addPymntRecncliatnIdTypCdgCd(String pymntRecncliatnIdTypCdgCd) {
+    	if( pymntRecncliatnIdTypCdgCd != null ) {
+	    	if( this.pymntRecncliatnIdTypCdgCd == null ) {
+	        	this.pymntRecncliatnIdTypCdgCd = pymntRecncliatnIdTypCdgCd;
+	        } else if(this.pymntRecncliatnIdTypCdgCd.substring(this.pymntRecncliatnIdTypCdgCd.length() - 1).equals("]") & pymntRecncliatnIdTypCdgCd.equals("[")) {
+	        	this.pymntRecncliatnIdTypCdgCd = this.pymntRecncliatnIdTypCdgCd+ "," + pymntRecncliatnIdTypCdgCd;
+	        } else if(pymntRecncliatnIdTypCdgCd.equals("[") | pymntRecncliatnIdTypCdgCd.equals("]") | this.pymntRecncliatnIdTypCdgCd.substring(this.pymntRecncliatnIdTypCdgCd.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnIdTypCdgCd = this.pymntRecncliatnIdTypCdgCd+pymntRecncliatnIdTypCdgCd;
+	        } else  {
+	            this.pymntRecncliatnIdTypCdgCd = this.pymntRecncliatnIdTypCdgCd+ "," +pymntRecncliatnIdTypCdgCd;
+	        }
+        }
     }
     
     
@@ -626,6 +1354,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
         this.pymntRecncliatnIdTypCdgDsply = pymntRecncliatnIdTypCdgDsply;
     }
     
+    public void addPymntRecncliatnIdTypCdgDsply(String pymntRecncliatnIdTypCdgDsply) {
+    	if( pymntRecncliatnIdTypCdgDsply != null ) {
+	    	if( this.pymntRecncliatnIdTypCdgDsply == null ) {
+	        	this.pymntRecncliatnIdTypCdgDsply = pymntRecncliatnIdTypCdgDsply;
+	        } else if(this.pymntRecncliatnIdTypCdgDsply.substring(this.pymntRecncliatnIdTypCdgDsply.length() - 1).equals("]") & pymntRecncliatnIdTypCdgDsply.equals("[")) {
+	        	this.pymntRecncliatnIdTypCdgDsply = this.pymntRecncliatnIdTypCdgDsply+ "," + pymntRecncliatnIdTypCdgDsply;
+	        } else if(pymntRecncliatnIdTypCdgDsply.equals("[") | pymntRecncliatnIdTypCdgDsply.equals("]") | this.pymntRecncliatnIdTypCdgDsply.substring(this.pymntRecncliatnIdTypCdgDsply.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnIdTypCdgDsply = this.pymntRecncliatnIdTypCdgDsply+pymntRecncliatnIdTypCdgDsply;
+	        } else  {
+	            this.pymntRecncliatnIdTypCdgDsply = this.pymntRecncliatnIdTypCdgDsply+ "," +pymntRecncliatnIdTypCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getPymntRecncliatnIdTypCdgSys() {
@@ -634,6 +1376,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
     
     public void setPymntRecncliatnIdTypCdgSys(String pymntRecncliatnIdTypCdgSys) {
         this.pymntRecncliatnIdTypCdgSys = pymntRecncliatnIdTypCdgSys;
+    }
+    
+    public void addPymntRecncliatnIdTypCdgSys(String pymntRecncliatnIdTypCdgSys) {
+    	if( pymntRecncliatnIdTypCdgSys != null ) {
+	    	if( this.pymntRecncliatnIdTypCdgSys == null ) {
+	        	this.pymntRecncliatnIdTypCdgSys = pymntRecncliatnIdTypCdgSys;
+	        } else if(this.pymntRecncliatnIdTypCdgSys.substring(this.pymntRecncliatnIdTypCdgSys.length() - 1).equals("]") & pymntRecncliatnIdTypCdgSys.equals("[")) {
+	        	this.pymntRecncliatnIdTypCdgSys = this.pymntRecncliatnIdTypCdgSys+ "," + pymntRecncliatnIdTypCdgSys;
+	        } else if(pymntRecncliatnIdTypCdgSys.equals("[") | pymntRecncliatnIdTypCdgSys.equals("]") | this.pymntRecncliatnIdTypCdgSys.substring(this.pymntRecncliatnIdTypCdgSys.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnIdTypCdgSys = this.pymntRecncliatnIdTypCdgSys+pymntRecncliatnIdTypCdgSys;
+	        } else  {
+	            this.pymntRecncliatnIdTypCdgSys = this.pymntRecncliatnIdTypCdgSys+ "," +pymntRecncliatnIdTypCdgSys;
+	        }
+        }
     }
     
     
@@ -646,6 +1402,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
         this.pymntRecncliatnIdTypCdgUsrSltd = pymntRecncliatnIdTypCdgUsrSltd;
     }
     
+    public void addPymntRecncliatnIdTypCdgUsrSltd(String pymntRecncliatnIdTypCdgUsrSltd) {
+    	if( pymntRecncliatnIdTypCdgUsrSltd != null ) {
+	    	if( this.pymntRecncliatnIdTypCdgUsrSltd == null ) {
+	        	this.pymntRecncliatnIdTypCdgUsrSltd = pymntRecncliatnIdTypCdgUsrSltd;
+	        } else if(this.pymntRecncliatnIdTypCdgUsrSltd.substring(this.pymntRecncliatnIdTypCdgUsrSltd.length() - 1).equals("]") & pymntRecncliatnIdTypCdgUsrSltd.equals("[")) {
+	        	this.pymntRecncliatnIdTypCdgUsrSltd = this.pymntRecncliatnIdTypCdgUsrSltd+ "," + pymntRecncliatnIdTypCdgUsrSltd;
+	        } else if(pymntRecncliatnIdTypCdgUsrSltd.equals("[") | pymntRecncliatnIdTypCdgUsrSltd.equals("]") | this.pymntRecncliatnIdTypCdgUsrSltd.substring(this.pymntRecncliatnIdTypCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnIdTypCdgUsrSltd = this.pymntRecncliatnIdTypCdgUsrSltd+pymntRecncliatnIdTypCdgUsrSltd;
+	        } else  {
+	            this.pymntRecncliatnIdTypCdgUsrSltd = this.pymntRecncliatnIdTypCdgUsrSltd+ "," +pymntRecncliatnIdTypCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getPymntRecncliatnIdTypCdgVrsn() {
@@ -654,6 +1424,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
     
     public void setPymntRecncliatnIdTypCdgVrsn(String pymntRecncliatnIdTypCdgVrsn) {
         this.pymntRecncliatnIdTypCdgVrsn = pymntRecncliatnIdTypCdgVrsn;
+    }
+    
+    public void addPymntRecncliatnIdTypCdgVrsn(String pymntRecncliatnIdTypCdgVrsn) {
+    	if( pymntRecncliatnIdTypCdgVrsn != null ) {
+	    	if( this.pymntRecncliatnIdTypCdgVrsn == null ) {
+	        	this.pymntRecncliatnIdTypCdgVrsn = pymntRecncliatnIdTypCdgVrsn;
+	        } else if(this.pymntRecncliatnIdTypCdgVrsn.substring(this.pymntRecncliatnIdTypCdgVrsn.length() - 1).equals("]") & pymntRecncliatnIdTypCdgVrsn.equals("[")) {
+	        	this.pymntRecncliatnIdTypCdgVrsn = this.pymntRecncliatnIdTypCdgVrsn+ "," + pymntRecncliatnIdTypCdgVrsn;
+	        } else if(pymntRecncliatnIdTypCdgVrsn.equals("[") | pymntRecncliatnIdTypCdgVrsn.equals("]") | this.pymntRecncliatnIdTypCdgVrsn.substring(this.pymntRecncliatnIdTypCdgVrsn.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnIdTypCdgVrsn = this.pymntRecncliatnIdTypCdgVrsn+pymntRecncliatnIdTypCdgVrsn;
+	        } else  {
+	            this.pymntRecncliatnIdTypCdgVrsn = this.pymntRecncliatnIdTypCdgVrsn+ "," +pymntRecncliatnIdTypCdgVrsn;
+	        }
+        }
     }
     
     
@@ -666,6 +1450,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
         this.pymntRecncliatnIdTypTxt = pymntRecncliatnIdTypTxt;
     }
     
+    public void addPymntRecncliatnIdTypTxt(String pymntRecncliatnIdTypTxt) {
+    	if( pymntRecncliatnIdTypTxt != null ) {
+	    	if( this.pymntRecncliatnIdTypTxt == null ) {
+	        	this.pymntRecncliatnIdTypTxt = pymntRecncliatnIdTypTxt;
+	        } else if(this.pymntRecncliatnIdTypTxt.substring(this.pymntRecncliatnIdTypTxt.length() - 1).equals("]") & pymntRecncliatnIdTypTxt.equals("[")) {
+	        	this.pymntRecncliatnIdTypTxt = this.pymntRecncliatnIdTypTxt+ "," + pymntRecncliatnIdTypTxt;
+	        } else if(pymntRecncliatnIdTypTxt.equals("[") | pymntRecncliatnIdTypTxt.equals("]") | this.pymntRecncliatnIdTypTxt.substring(this.pymntRecncliatnIdTypTxt.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnIdTypTxt = this.pymntRecncliatnIdTypTxt+pymntRecncliatnIdTypTxt;
+	        } else  {
+	            this.pymntRecncliatnIdTypTxt = this.pymntRecncliatnIdTypTxt+ "," +pymntRecncliatnIdTypTxt;
+	        }
+        }
+    }
+    
     
     
     public String getPymntRecncliatnIdUse() {
@@ -674,6 +1472,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
     
     public void setPymntRecncliatnIdUse(String pymntRecncliatnIdUse) {
         this.pymntRecncliatnIdUse = pymntRecncliatnIdUse;
+    }
+    
+    public void addPymntRecncliatnIdUse(String pymntRecncliatnIdUse) {
+    	if( pymntRecncliatnIdUse != null ) {
+	    	if( this.pymntRecncliatnIdUse == null ) {
+	        	this.pymntRecncliatnIdUse = pymntRecncliatnIdUse;
+	        } else if(this.pymntRecncliatnIdUse.substring(this.pymntRecncliatnIdUse.length() - 1).equals("]") & pymntRecncliatnIdUse.equals("[")) {
+	        	this.pymntRecncliatnIdUse = this.pymntRecncliatnIdUse+ "," + pymntRecncliatnIdUse;
+	        } else if(pymntRecncliatnIdUse.equals("[") | pymntRecncliatnIdUse.equals("]") | this.pymntRecncliatnIdUse.substring(this.pymntRecncliatnIdUse.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnIdUse = this.pymntRecncliatnIdUse+pymntRecncliatnIdUse;
+	        } else  {
+	            this.pymntRecncliatnIdUse = this.pymntRecncliatnIdUse+ "," +pymntRecncliatnIdUse;
+	        }
+        }
     }
     
     
@@ -686,6 +1498,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
         this.pymntRecncliatnIdVl = pymntRecncliatnIdVl;
     }
     
+    public void addPymntRecncliatnIdVl(String pymntRecncliatnIdVl) {
+    	if( pymntRecncliatnIdVl != null ) {
+	    	if( this.pymntRecncliatnIdVl == null ) {
+	        	this.pymntRecncliatnIdVl = pymntRecncliatnIdVl;
+	        } else if(this.pymntRecncliatnIdVl.substring(this.pymntRecncliatnIdVl.length() - 1).equals("]") & pymntRecncliatnIdVl.equals("[")) {
+	        	this.pymntRecncliatnIdVl = this.pymntRecncliatnIdVl+ "," + pymntRecncliatnIdVl;
+	        } else if(pymntRecncliatnIdVl.equals("[") | pymntRecncliatnIdVl.equals("]") | this.pymntRecncliatnIdVl.substring(this.pymntRecncliatnIdVl.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnIdVl = this.pymntRecncliatnIdVl+pymntRecncliatnIdVl;
+	        } else  {
+	            this.pymntRecncliatnIdVl = this.pymntRecncliatnIdVl+ "," +pymntRecncliatnIdVl;
+	        }
+        }
+    }
+    
     
     
     public String getPymntRecncliatnOutcome() {
@@ -694,6 +1520,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
     
     public void setPymntRecncliatnOutcome(String pymntRecncliatnOutcome) {
         this.pymntRecncliatnOutcome = pymntRecncliatnOutcome;
+    }
+    
+    public void addPymntRecncliatnOutcome(String pymntRecncliatnOutcome) {
+    	if( pymntRecncliatnOutcome != null ) {
+	    	if( this.pymntRecncliatnOutcome == null ) {
+	        	this.pymntRecncliatnOutcome = pymntRecncliatnOutcome;
+	        } else if(this.pymntRecncliatnOutcome.substring(this.pymntRecncliatnOutcome.length() - 1).equals("]") & pymntRecncliatnOutcome.equals("[")) {
+	        	this.pymntRecncliatnOutcome = this.pymntRecncliatnOutcome+ "," + pymntRecncliatnOutcome;
+	        } else if(pymntRecncliatnOutcome.equals("[") | pymntRecncliatnOutcome.equals("]") | this.pymntRecncliatnOutcome.substring(this.pymntRecncliatnOutcome.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnOutcome = this.pymntRecncliatnOutcome+pymntRecncliatnOutcome;
+	        } else  {
+	            this.pymntRecncliatnOutcome = this.pymntRecncliatnOutcome+ "," +pymntRecncliatnOutcome;
+	        }
+        }
     }
     
     
@@ -706,6 +1546,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
         this.pymntRecncliatnPymntAmntCrncy = pymntRecncliatnPymntAmntCrncy;
     }
     
+    public void addPymntRecncliatnPymntAmntCrncy(String pymntRecncliatnPymntAmntCrncy) {
+    	if( pymntRecncliatnPymntAmntCrncy != null ) {
+	    	if( this.pymntRecncliatnPymntAmntCrncy == null ) {
+	        	this.pymntRecncliatnPymntAmntCrncy = pymntRecncliatnPymntAmntCrncy;
+	        } else if(this.pymntRecncliatnPymntAmntCrncy.substring(this.pymntRecncliatnPymntAmntCrncy.length() - 1).equals("]") & pymntRecncliatnPymntAmntCrncy.equals("[")) {
+	        	this.pymntRecncliatnPymntAmntCrncy = this.pymntRecncliatnPymntAmntCrncy+ "," + pymntRecncliatnPymntAmntCrncy;
+	        } else if(pymntRecncliatnPymntAmntCrncy.equals("[") | pymntRecncliatnPymntAmntCrncy.equals("]") | this.pymntRecncliatnPymntAmntCrncy.substring(this.pymntRecncliatnPymntAmntCrncy.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnPymntAmntCrncy = this.pymntRecncliatnPymntAmntCrncy+pymntRecncliatnPymntAmntCrncy;
+	        } else  {
+	            this.pymntRecncliatnPymntAmntCrncy = this.pymntRecncliatnPymntAmntCrncy+ "," +pymntRecncliatnPymntAmntCrncy;
+	        }
+        }
+    }
+    
     
     
     public String getPymntRecncliatnPymntAmntVl() {
@@ -714,6 +1568,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
     
     public void setPymntRecncliatnPymntAmntVl(String pymntRecncliatnPymntAmntVl) {
         this.pymntRecncliatnPymntAmntVl = pymntRecncliatnPymntAmntVl;
+    }
+    
+    public void addPymntRecncliatnPymntAmntVl(String pymntRecncliatnPymntAmntVl) {
+    	if( pymntRecncliatnPymntAmntVl != null ) {
+	    	if( this.pymntRecncliatnPymntAmntVl == null ) {
+	        	this.pymntRecncliatnPymntAmntVl = pymntRecncliatnPymntAmntVl;
+	        } else if(this.pymntRecncliatnPymntAmntVl.substring(this.pymntRecncliatnPymntAmntVl.length() - 1).equals("]") & pymntRecncliatnPymntAmntVl.equals("[")) {
+	        	this.pymntRecncliatnPymntAmntVl = this.pymntRecncliatnPymntAmntVl+ "," + pymntRecncliatnPymntAmntVl;
+	        } else if(pymntRecncliatnPymntAmntVl.equals("[") | pymntRecncliatnPymntAmntVl.equals("]") | this.pymntRecncliatnPymntAmntVl.substring(this.pymntRecncliatnPymntAmntVl.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnPymntAmntVl = this.pymntRecncliatnPymntAmntVl+pymntRecncliatnPymntAmntVl;
+	        } else  {
+	            this.pymntRecncliatnPymntAmntVl = this.pymntRecncliatnPymntAmntVl+ "," +pymntRecncliatnPymntAmntVl;
+	        }
+        }
     }
     
     
@@ -726,6 +1594,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
         this.pymntRecncliatnPymntDt = pymntRecncliatnPymntDt;
     }
     
+    public void addPymntRecncliatnPymntDt(String pymntRecncliatnPymntDt) {
+    	if( pymntRecncliatnPymntDt != null ) {
+	    	if( this.pymntRecncliatnPymntDt == null ) {
+	        	this.pymntRecncliatnPymntDt = pymntRecncliatnPymntDt;
+	        } else if(this.pymntRecncliatnPymntDt.substring(this.pymntRecncliatnPymntDt.length() - 1).equals("]") & pymntRecncliatnPymntDt.equals("[")) {
+	        	this.pymntRecncliatnPymntDt = this.pymntRecncliatnPymntDt+ "," + pymntRecncliatnPymntDt;
+	        } else if(pymntRecncliatnPymntDt.equals("[") | pymntRecncliatnPymntDt.equals("]") | this.pymntRecncliatnPymntDt.substring(this.pymntRecncliatnPymntDt.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnPymntDt = this.pymntRecncliatnPymntDt+pymntRecncliatnPymntDt;
+	        } else  {
+	            this.pymntRecncliatnPymntDt = this.pymntRecncliatnPymntDt+ "," +pymntRecncliatnPymntDt;
+	        }
+        }
+    }
+    
     
     
     public String getPymntRecncliatnPymntIdAssigner() {
@@ -734,6 +1616,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
     
     public void setPymntRecncliatnPymntIdAssigner(String pymntRecncliatnPymntIdAssigner) {
         this.pymntRecncliatnPymntIdAssigner = pymntRecncliatnPymntIdAssigner;
+    }
+    
+    public void addPymntRecncliatnPymntIdAssigner(String pymntRecncliatnPymntIdAssigner) {
+    	if( pymntRecncliatnPymntIdAssigner != null ) {
+	    	if( this.pymntRecncliatnPymntIdAssigner == null ) {
+	        	this.pymntRecncliatnPymntIdAssigner = pymntRecncliatnPymntIdAssigner;
+	        } else if(this.pymntRecncliatnPymntIdAssigner.substring(this.pymntRecncliatnPymntIdAssigner.length() - 1).equals("]") & pymntRecncliatnPymntIdAssigner.equals("[")) {
+	        	this.pymntRecncliatnPymntIdAssigner = this.pymntRecncliatnPymntIdAssigner+ "," + pymntRecncliatnPymntIdAssigner;
+	        } else if(pymntRecncliatnPymntIdAssigner.equals("[") | pymntRecncliatnPymntIdAssigner.equals("]") | this.pymntRecncliatnPymntIdAssigner.substring(this.pymntRecncliatnPymntIdAssigner.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnPymntIdAssigner = this.pymntRecncliatnPymntIdAssigner+pymntRecncliatnPymntIdAssigner;
+	        } else  {
+	            this.pymntRecncliatnPymntIdAssigner = this.pymntRecncliatnPymntIdAssigner+ "," +pymntRecncliatnPymntIdAssigner;
+	        }
+        }
     }
     
     
@@ -746,6 +1642,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
         this.pymntRecncliatnPymntIdPrdEnd = pymntRecncliatnPymntIdPrdEnd;
     }
     
+    public void addPymntRecncliatnPymntIdPrdEnd(String pymntRecncliatnPymntIdPrdEnd) {
+    	if( pymntRecncliatnPymntIdPrdEnd != null ) {
+	    	if( this.pymntRecncliatnPymntIdPrdEnd == null ) {
+	        	this.pymntRecncliatnPymntIdPrdEnd = pymntRecncliatnPymntIdPrdEnd;
+	        } else if(this.pymntRecncliatnPymntIdPrdEnd.substring(this.pymntRecncliatnPymntIdPrdEnd.length() - 1).equals("]") & pymntRecncliatnPymntIdPrdEnd.equals("[")) {
+	        	this.pymntRecncliatnPymntIdPrdEnd = this.pymntRecncliatnPymntIdPrdEnd+ "," + pymntRecncliatnPymntIdPrdEnd;
+	        } else if(pymntRecncliatnPymntIdPrdEnd.equals("[") | pymntRecncliatnPymntIdPrdEnd.equals("]") | this.pymntRecncliatnPymntIdPrdEnd.substring(this.pymntRecncliatnPymntIdPrdEnd.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnPymntIdPrdEnd = this.pymntRecncliatnPymntIdPrdEnd+pymntRecncliatnPymntIdPrdEnd;
+	        } else  {
+	            this.pymntRecncliatnPymntIdPrdEnd = this.pymntRecncliatnPymntIdPrdEnd+ "," +pymntRecncliatnPymntIdPrdEnd;
+	        }
+        }
+    }
+    
     
     
     public String getPymntRecncliatnPymntIdPrdStrt() {
@@ -754,6 +1664,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
     
     public void setPymntRecncliatnPymntIdPrdStrt(String pymntRecncliatnPymntIdPrdStrt) {
         this.pymntRecncliatnPymntIdPrdStrt = pymntRecncliatnPymntIdPrdStrt;
+    }
+    
+    public void addPymntRecncliatnPymntIdPrdStrt(String pymntRecncliatnPymntIdPrdStrt) {
+    	if( pymntRecncliatnPymntIdPrdStrt != null ) {
+	    	if( this.pymntRecncliatnPymntIdPrdStrt == null ) {
+	        	this.pymntRecncliatnPymntIdPrdStrt = pymntRecncliatnPymntIdPrdStrt;
+	        } else if(this.pymntRecncliatnPymntIdPrdStrt.substring(this.pymntRecncliatnPymntIdPrdStrt.length() - 1).equals("]") & pymntRecncliatnPymntIdPrdStrt.equals("[")) {
+	        	this.pymntRecncliatnPymntIdPrdStrt = this.pymntRecncliatnPymntIdPrdStrt+ "," + pymntRecncliatnPymntIdPrdStrt;
+	        } else if(pymntRecncliatnPymntIdPrdStrt.equals("[") | pymntRecncliatnPymntIdPrdStrt.equals("]") | this.pymntRecncliatnPymntIdPrdStrt.substring(this.pymntRecncliatnPymntIdPrdStrt.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnPymntIdPrdStrt = this.pymntRecncliatnPymntIdPrdStrt+pymntRecncliatnPymntIdPrdStrt;
+	        } else  {
+	            this.pymntRecncliatnPymntIdPrdStrt = this.pymntRecncliatnPymntIdPrdStrt+ "," +pymntRecncliatnPymntIdPrdStrt;
+	        }
+        }
     }
     
     
@@ -766,6 +1690,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
         this.pymntRecncliatnPymntIdSys = pymntRecncliatnPymntIdSys;
     }
     
+    public void addPymntRecncliatnPymntIdSys(String pymntRecncliatnPymntIdSys) {
+    	if( pymntRecncliatnPymntIdSys != null ) {
+	    	if( this.pymntRecncliatnPymntIdSys == null ) {
+	        	this.pymntRecncliatnPymntIdSys = pymntRecncliatnPymntIdSys;
+	        } else if(this.pymntRecncliatnPymntIdSys.substring(this.pymntRecncliatnPymntIdSys.length() - 1).equals("]") & pymntRecncliatnPymntIdSys.equals("[")) {
+	        	this.pymntRecncliatnPymntIdSys = this.pymntRecncliatnPymntIdSys+ "," + pymntRecncliatnPymntIdSys;
+	        } else if(pymntRecncliatnPymntIdSys.equals("[") | pymntRecncliatnPymntIdSys.equals("]") | this.pymntRecncliatnPymntIdSys.substring(this.pymntRecncliatnPymntIdSys.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnPymntIdSys = this.pymntRecncliatnPymntIdSys+pymntRecncliatnPymntIdSys;
+	        } else  {
+	            this.pymntRecncliatnPymntIdSys = this.pymntRecncliatnPymntIdSys+ "," +pymntRecncliatnPymntIdSys;
+	        }
+        }
+    }
+    
     
     
     public String getPymntRecncliatnPymntIdTypCdgCd() {
@@ -774,6 +1712,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
     
     public void setPymntRecncliatnPymntIdTypCdgCd(String pymntRecncliatnPymntIdTypCdgCd) {
         this.pymntRecncliatnPymntIdTypCdgCd = pymntRecncliatnPymntIdTypCdgCd;
+    }
+    
+    public void addPymntRecncliatnPymntIdTypCdgCd(String pymntRecncliatnPymntIdTypCdgCd) {
+    	if( pymntRecncliatnPymntIdTypCdgCd != null ) {
+	    	if( this.pymntRecncliatnPymntIdTypCdgCd == null ) {
+	        	this.pymntRecncliatnPymntIdTypCdgCd = pymntRecncliatnPymntIdTypCdgCd;
+	        } else if(this.pymntRecncliatnPymntIdTypCdgCd.substring(this.pymntRecncliatnPymntIdTypCdgCd.length() - 1).equals("]") & pymntRecncliatnPymntIdTypCdgCd.equals("[")) {
+	        	this.pymntRecncliatnPymntIdTypCdgCd = this.pymntRecncliatnPymntIdTypCdgCd+ "," + pymntRecncliatnPymntIdTypCdgCd;
+	        } else if(pymntRecncliatnPymntIdTypCdgCd.equals("[") | pymntRecncliatnPymntIdTypCdgCd.equals("]") | this.pymntRecncliatnPymntIdTypCdgCd.substring(this.pymntRecncliatnPymntIdTypCdgCd.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnPymntIdTypCdgCd = this.pymntRecncliatnPymntIdTypCdgCd+pymntRecncliatnPymntIdTypCdgCd;
+	        } else  {
+	            this.pymntRecncliatnPymntIdTypCdgCd = this.pymntRecncliatnPymntIdTypCdgCd+ "," +pymntRecncliatnPymntIdTypCdgCd;
+	        }
+        }
     }
     
     
@@ -786,6 +1738,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
         this.pymntRecncliatnPymntIdTypCdgDsply = pymntRecncliatnPymntIdTypCdgDsply;
     }
     
+    public void addPymntRecncliatnPymntIdTypCdgDsply(String pymntRecncliatnPymntIdTypCdgDsply) {
+    	if( pymntRecncliatnPymntIdTypCdgDsply != null ) {
+	    	if( this.pymntRecncliatnPymntIdTypCdgDsply == null ) {
+	        	this.pymntRecncliatnPymntIdTypCdgDsply = pymntRecncliatnPymntIdTypCdgDsply;
+	        } else if(this.pymntRecncliatnPymntIdTypCdgDsply.substring(this.pymntRecncliatnPymntIdTypCdgDsply.length() - 1).equals("]") & pymntRecncliatnPymntIdTypCdgDsply.equals("[")) {
+	        	this.pymntRecncliatnPymntIdTypCdgDsply = this.pymntRecncliatnPymntIdTypCdgDsply+ "," + pymntRecncliatnPymntIdTypCdgDsply;
+	        } else if(pymntRecncliatnPymntIdTypCdgDsply.equals("[") | pymntRecncliatnPymntIdTypCdgDsply.equals("]") | this.pymntRecncliatnPymntIdTypCdgDsply.substring(this.pymntRecncliatnPymntIdTypCdgDsply.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnPymntIdTypCdgDsply = this.pymntRecncliatnPymntIdTypCdgDsply+pymntRecncliatnPymntIdTypCdgDsply;
+	        } else  {
+	            this.pymntRecncliatnPymntIdTypCdgDsply = this.pymntRecncliatnPymntIdTypCdgDsply+ "," +pymntRecncliatnPymntIdTypCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getPymntRecncliatnPymntIdTypCdgSys() {
@@ -794,6 +1760,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
     
     public void setPymntRecncliatnPymntIdTypCdgSys(String pymntRecncliatnPymntIdTypCdgSys) {
         this.pymntRecncliatnPymntIdTypCdgSys = pymntRecncliatnPymntIdTypCdgSys;
+    }
+    
+    public void addPymntRecncliatnPymntIdTypCdgSys(String pymntRecncliatnPymntIdTypCdgSys) {
+    	if( pymntRecncliatnPymntIdTypCdgSys != null ) {
+	    	if( this.pymntRecncliatnPymntIdTypCdgSys == null ) {
+	        	this.pymntRecncliatnPymntIdTypCdgSys = pymntRecncliatnPymntIdTypCdgSys;
+	        } else if(this.pymntRecncliatnPymntIdTypCdgSys.substring(this.pymntRecncliatnPymntIdTypCdgSys.length() - 1).equals("]") & pymntRecncliatnPymntIdTypCdgSys.equals("[")) {
+	        	this.pymntRecncliatnPymntIdTypCdgSys = this.pymntRecncliatnPymntIdTypCdgSys+ "," + pymntRecncliatnPymntIdTypCdgSys;
+	        } else if(pymntRecncliatnPymntIdTypCdgSys.equals("[") | pymntRecncliatnPymntIdTypCdgSys.equals("]") | this.pymntRecncliatnPymntIdTypCdgSys.substring(this.pymntRecncliatnPymntIdTypCdgSys.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnPymntIdTypCdgSys = this.pymntRecncliatnPymntIdTypCdgSys+pymntRecncliatnPymntIdTypCdgSys;
+	        } else  {
+	            this.pymntRecncliatnPymntIdTypCdgSys = this.pymntRecncliatnPymntIdTypCdgSys+ "," +pymntRecncliatnPymntIdTypCdgSys;
+	        }
+        }
     }
     
     
@@ -806,6 +1786,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
         this.pymntRecncliatnPymntIdTypCdgUsrSltd = pymntRecncliatnPymntIdTypCdgUsrSltd;
     }
     
+    public void addPymntRecncliatnPymntIdTypCdgUsrSltd(String pymntRecncliatnPymntIdTypCdgUsrSltd) {
+    	if( pymntRecncliatnPymntIdTypCdgUsrSltd != null ) {
+	    	if( this.pymntRecncliatnPymntIdTypCdgUsrSltd == null ) {
+	        	this.pymntRecncliatnPymntIdTypCdgUsrSltd = pymntRecncliatnPymntIdTypCdgUsrSltd;
+	        } else if(this.pymntRecncliatnPymntIdTypCdgUsrSltd.substring(this.pymntRecncliatnPymntIdTypCdgUsrSltd.length() - 1).equals("]") & pymntRecncliatnPymntIdTypCdgUsrSltd.equals("[")) {
+	        	this.pymntRecncliatnPymntIdTypCdgUsrSltd = this.pymntRecncliatnPymntIdTypCdgUsrSltd+ "," + pymntRecncliatnPymntIdTypCdgUsrSltd;
+	        } else if(pymntRecncliatnPymntIdTypCdgUsrSltd.equals("[") | pymntRecncliatnPymntIdTypCdgUsrSltd.equals("]") | this.pymntRecncliatnPymntIdTypCdgUsrSltd.substring(this.pymntRecncliatnPymntIdTypCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnPymntIdTypCdgUsrSltd = this.pymntRecncliatnPymntIdTypCdgUsrSltd+pymntRecncliatnPymntIdTypCdgUsrSltd;
+	        } else  {
+	            this.pymntRecncliatnPymntIdTypCdgUsrSltd = this.pymntRecncliatnPymntIdTypCdgUsrSltd+ "," +pymntRecncliatnPymntIdTypCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getPymntRecncliatnPymntIdTypCdgVrsn() {
@@ -814,6 +1808,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
     
     public void setPymntRecncliatnPymntIdTypCdgVrsn(String pymntRecncliatnPymntIdTypCdgVrsn) {
         this.pymntRecncliatnPymntIdTypCdgVrsn = pymntRecncliatnPymntIdTypCdgVrsn;
+    }
+    
+    public void addPymntRecncliatnPymntIdTypCdgVrsn(String pymntRecncliatnPymntIdTypCdgVrsn) {
+    	if( pymntRecncliatnPymntIdTypCdgVrsn != null ) {
+	    	if( this.pymntRecncliatnPymntIdTypCdgVrsn == null ) {
+	        	this.pymntRecncliatnPymntIdTypCdgVrsn = pymntRecncliatnPymntIdTypCdgVrsn;
+	        } else if(this.pymntRecncliatnPymntIdTypCdgVrsn.substring(this.pymntRecncliatnPymntIdTypCdgVrsn.length() - 1).equals("]") & pymntRecncliatnPymntIdTypCdgVrsn.equals("[")) {
+	        	this.pymntRecncliatnPymntIdTypCdgVrsn = this.pymntRecncliatnPymntIdTypCdgVrsn+ "," + pymntRecncliatnPymntIdTypCdgVrsn;
+	        } else if(pymntRecncliatnPymntIdTypCdgVrsn.equals("[") | pymntRecncliatnPymntIdTypCdgVrsn.equals("]") | this.pymntRecncliatnPymntIdTypCdgVrsn.substring(this.pymntRecncliatnPymntIdTypCdgVrsn.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnPymntIdTypCdgVrsn = this.pymntRecncliatnPymntIdTypCdgVrsn+pymntRecncliatnPymntIdTypCdgVrsn;
+	        } else  {
+	            this.pymntRecncliatnPymntIdTypCdgVrsn = this.pymntRecncliatnPymntIdTypCdgVrsn+ "," +pymntRecncliatnPymntIdTypCdgVrsn;
+	        }
+        }
     }
     
     
@@ -826,6 +1834,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
         this.pymntRecncliatnPymntIdTypTxt = pymntRecncliatnPymntIdTypTxt;
     }
     
+    public void addPymntRecncliatnPymntIdTypTxt(String pymntRecncliatnPymntIdTypTxt) {
+    	if( pymntRecncliatnPymntIdTypTxt != null ) {
+	    	if( this.pymntRecncliatnPymntIdTypTxt == null ) {
+	        	this.pymntRecncliatnPymntIdTypTxt = pymntRecncliatnPymntIdTypTxt;
+	        } else if(this.pymntRecncliatnPymntIdTypTxt.substring(this.pymntRecncliatnPymntIdTypTxt.length() - 1).equals("]") & pymntRecncliatnPymntIdTypTxt.equals("[")) {
+	        	this.pymntRecncliatnPymntIdTypTxt = this.pymntRecncliatnPymntIdTypTxt+ "," + pymntRecncliatnPymntIdTypTxt;
+	        } else if(pymntRecncliatnPymntIdTypTxt.equals("[") | pymntRecncliatnPymntIdTypTxt.equals("]") | this.pymntRecncliatnPymntIdTypTxt.substring(this.pymntRecncliatnPymntIdTypTxt.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnPymntIdTypTxt = this.pymntRecncliatnPymntIdTypTxt+pymntRecncliatnPymntIdTypTxt;
+	        } else  {
+	            this.pymntRecncliatnPymntIdTypTxt = this.pymntRecncliatnPymntIdTypTxt+ "," +pymntRecncliatnPymntIdTypTxt;
+	        }
+        }
+    }
+    
     
     
     public String getPymntRecncliatnPymntIdUse() {
@@ -834,6 +1856,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
     
     public void setPymntRecncliatnPymntIdUse(String pymntRecncliatnPymntIdUse) {
         this.pymntRecncliatnPymntIdUse = pymntRecncliatnPymntIdUse;
+    }
+    
+    public void addPymntRecncliatnPymntIdUse(String pymntRecncliatnPymntIdUse) {
+    	if( pymntRecncliatnPymntIdUse != null ) {
+	    	if( this.pymntRecncliatnPymntIdUse == null ) {
+	        	this.pymntRecncliatnPymntIdUse = pymntRecncliatnPymntIdUse;
+	        } else if(this.pymntRecncliatnPymntIdUse.substring(this.pymntRecncliatnPymntIdUse.length() - 1).equals("]") & pymntRecncliatnPymntIdUse.equals("[")) {
+	        	this.pymntRecncliatnPymntIdUse = this.pymntRecncliatnPymntIdUse+ "," + pymntRecncliatnPymntIdUse;
+	        } else if(pymntRecncliatnPymntIdUse.equals("[") | pymntRecncliatnPymntIdUse.equals("]") | this.pymntRecncliatnPymntIdUse.substring(this.pymntRecncliatnPymntIdUse.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnPymntIdUse = this.pymntRecncliatnPymntIdUse+pymntRecncliatnPymntIdUse;
+	        } else  {
+	            this.pymntRecncliatnPymntIdUse = this.pymntRecncliatnPymntIdUse+ "," +pymntRecncliatnPymntIdUse;
+	        }
+        }
     }
     
     
@@ -846,6 +1882,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
         this.pymntRecncliatnPymntIdVl = pymntRecncliatnPymntIdVl;
     }
     
+    public void addPymntRecncliatnPymntIdVl(String pymntRecncliatnPymntIdVl) {
+    	if( pymntRecncliatnPymntIdVl != null ) {
+	    	if( this.pymntRecncliatnPymntIdVl == null ) {
+	        	this.pymntRecncliatnPymntIdVl = pymntRecncliatnPymntIdVl;
+	        } else if(this.pymntRecncliatnPymntIdVl.substring(this.pymntRecncliatnPymntIdVl.length() - 1).equals("]") & pymntRecncliatnPymntIdVl.equals("[")) {
+	        	this.pymntRecncliatnPymntIdVl = this.pymntRecncliatnPymntIdVl+ "," + pymntRecncliatnPymntIdVl;
+	        } else if(pymntRecncliatnPymntIdVl.equals("[") | pymntRecncliatnPymntIdVl.equals("]") | this.pymntRecncliatnPymntIdVl.substring(this.pymntRecncliatnPymntIdVl.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnPymntIdVl = this.pymntRecncliatnPymntIdVl+pymntRecncliatnPymntIdVl;
+	        } else  {
+	            this.pymntRecncliatnPymntIdVl = this.pymntRecncliatnPymntIdVl+ "," +pymntRecncliatnPymntIdVl;
+	        }
+        }
+    }
+    
     
     
     public String getPymntRecncliatnPymntIssuer() {
@@ -854,6 +1904,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
     
     public void setPymntRecncliatnPymntIssuer(String pymntRecncliatnPymntIssuer) {
         this.pymntRecncliatnPymntIssuer = pymntRecncliatnPymntIssuer;
+    }
+    
+    public void addPymntRecncliatnPymntIssuer(String pymntRecncliatnPymntIssuer) {
+    	if( pymntRecncliatnPymntIssuer != null ) {
+	    	if( this.pymntRecncliatnPymntIssuer == null ) {
+	        	this.pymntRecncliatnPymntIssuer = pymntRecncliatnPymntIssuer;
+	        } else if(this.pymntRecncliatnPymntIssuer.substring(this.pymntRecncliatnPymntIssuer.length() - 1).equals("]") & pymntRecncliatnPymntIssuer.equals("[")) {
+	        	this.pymntRecncliatnPymntIssuer = this.pymntRecncliatnPymntIssuer+ "," + pymntRecncliatnPymntIssuer;
+	        } else if(pymntRecncliatnPymntIssuer.equals("[") | pymntRecncliatnPymntIssuer.equals("]") | this.pymntRecncliatnPymntIssuer.substring(this.pymntRecncliatnPymntIssuer.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnPymntIssuer = this.pymntRecncliatnPymntIssuer+pymntRecncliatnPymntIssuer;
+	        } else  {
+	            this.pymntRecncliatnPymntIssuer = this.pymntRecncliatnPymntIssuer+ "," +pymntRecncliatnPymntIssuer;
+	        }
+        }
     }
     
     
@@ -866,6 +1930,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
         this.pymntRecncliatnPrdEnd = pymntRecncliatnPrdEnd;
     }
     
+    public void addPymntRecncliatnPrdEnd(String pymntRecncliatnPrdEnd) {
+    	if( pymntRecncliatnPrdEnd != null ) {
+	    	if( this.pymntRecncliatnPrdEnd == null ) {
+	        	this.pymntRecncliatnPrdEnd = pymntRecncliatnPrdEnd;
+	        } else if(this.pymntRecncliatnPrdEnd.substring(this.pymntRecncliatnPrdEnd.length() - 1).equals("]") & pymntRecncliatnPrdEnd.equals("[")) {
+	        	this.pymntRecncliatnPrdEnd = this.pymntRecncliatnPrdEnd+ "," + pymntRecncliatnPrdEnd;
+	        } else if(pymntRecncliatnPrdEnd.equals("[") | pymntRecncliatnPrdEnd.equals("]") | this.pymntRecncliatnPrdEnd.substring(this.pymntRecncliatnPrdEnd.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnPrdEnd = this.pymntRecncliatnPrdEnd+pymntRecncliatnPrdEnd;
+	        } else  {
+	            this.pymntRecncliatnPrdEnd = this.pymntRecncliatnPrdEnd+ "," +pymntRecncliatnPrdEnd;
+	        }
+        }
+    }
+    
     
     
     public String getPymntRecncliatnPrdStrt() {
@@ -874,6 +1952,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
     
     public void setPymntRecncliatnPrdStrt(String pymntRecncliatnPrdStrt) {
         this.pymntRecncliatnPrdStrt = pymntRecncliatnPrdStrt;
+    }
+    
+    public void addPymntRecncliatnPrdStrt(String pymntRecncliatnPrdStrt) {
+    	if( pymntRecncliatnPrdStrt != null ) {
+	    	if( this.pymntRecncliatnPrdStrt == null ) {
+	        	this.pymntRecncliatnPrdStrt = pymntRecncliatnPrdStrt;
+	        } else if(this.pymntRecncliatnPrdStrt.substring(this.pymntRecncliatnPrdStrt.length() - 1).equals("]") & pymntRecncliatnPrdStrt.equals("[")) {
+	        	this.pymntRecncliatnPrdStrt = this.pymntRecncliatnPrdStrt+ "," + pymntRecncliatnPrdStrt;
+	        } else if(pymntRecncliatnPrdStrt.equals("[") | pymntRecncliatnPrdStrt.equals("]") | this.pymntRecncliatnPrdStrt.substring(this.pymntRecncliatnPrdStrt.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnPrdStrt = this.pymntRecncliatnPrdStrt+pymntRecncliatnPrdStrt;
+	        } else  {
+	            this.pymntRecncliatnPrdStrt = this.pymntRecncliatnPrdStrt+ "," +pymntRecncliatnPrdStrt;
+	        }
+        }
     }
     
     
@@ -886,6 +1978,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
         this.pymntRecncliatnProcessNtTxt = pymntRecncliatnProcessNtTxt;
     }
     
+    public void addPymntRecncliatnProcessNtTxt(String pymntRecncliatnProcessNtTxt) {
+    	if( pymntRecncliatnProcessNtTxt != null ) {
+	    	if( this.pymntRecncliatnProcessNtTxt == null ) {
+	        	this.pymntRecncliatnProcessNtTxt = pymntRecncliatnProcessNtTxt;
+	        } else if(this.pymntRecncliatnProcessNtTxt.substring(this.pymntRecncliatnProcessNtTxt.length() - 1).equals("]") & pymntRecncliatnProcessNtTxt.equals("[")) {
+	        	this.pymntRecncliatnProcessNtTxt = this.pymntRecncliatnProcessNtTxt+ "," + pymntRecncliatnProcessNtTxt;
+	        } else if(pymntRecncliatnProcessNtTxt.equals("[") | pymntRecncliatnProcessNtTxt.equals("]") | this.pymntRecncliatnProcessNtTxt.substring(this.pymntRecncliatnProcessNtTxt.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnProcessNtTxt = this.pymntRecncliatnProcessNtTxt+pymntRecncliatnProcessNtTxt;
+	        } else  {
+	            this.pymntRecncliatnProcessNtTxt = this.pymntRecncliatnProcessNtTxt+ "," +pymntRecncliatnProcessNtTxt;
+	        }
+        }
+    }
+    
     
     
     public String getPymntRecncliatnProcessNtTyp() {
@@ -894,6 +2000,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
     
     public void setPymntRecncliatnProcessNtTyp(String pymntRecncliatnProcessNtTyp) {
         this.pymntRecncliatnProcessNtTyp = pymntRecncliatnProcessNtTyp;
+    }
+    
+    public void addPymntRecncliatnProcessNtTyp(String pymntRecncliatnProcessNtTyp) {
+    	if( pymntRecncliatnProcessNtTyp != null ) {
+	    	if( this.pymntRecncliatnProcessNtTyp == null ) {
+	        	this.pymntRecncliatnProcessNtTyp = pymntRecncliatnProcessNtTyp;
+	        } else if(this.pymntRecncliatnProcessNtTyp.substring(this.pymntRecncliatnProcessNtTyp.length() - 1).equals("]") & pymntRecncliatnProcessNtTyp.equals("[")) {
+	        	this.pymntRecncliatnProcessNtTyp = this.pymntRecncliatnProcessNtTyp+ "," + pymntRecncliatnProcessNtTyp;
+	        } else if(pymntRecncliatnProcessNtTyp.equals("[") | pymntRecncliatnProcessNtTyp.equals("]") | this.pymntRecncliatnProcessNtTyp.substring(this.pymntRecncliatnProcessNtTyp.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnProcessNtTyp = this.pymntRecncliatnProcessNtTyp+pymntRecncliatnProcessNtTyp;
+	        } else  {
+	            this.pymntRecncliatnProcessNtTyp = this.pymntRecncliatnProcessNtTyp+ "," +pymntRecncliatnProcessNtTyp;
+	        }
+        }
     }
     
     
@@ -906,6 +2026,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
         this.pymntRecncliatnRqst = pymntRecncliatnRqst;
     }
     
+    public void addPymntRecncliatnRqst(String pymntRecncliatnRqst) {
+    	if( pymntRecncliatnRqst != null ) {
+	    	if( this.pymntRecncliatnRqst == null ) {
+	        	this.pymntRecncliatnRqst = pymntRecncliatnRqst;
+	        } else if(this.pymntRecncliatnRqst.substring(this.pymntRecncliatnRqst.length() - 1).equals("]") & pymntRecncliatnRqst.equals("[")) {
+	        	this.pymntRecncliatnRqst = this.pymntRecncliatnRqst+ "," + pymntRecncliatnRqst;
+	        } else if(pymntRecncliatnRqst.equals("[") | pymntRecncliatnRqst.equals("]") | this.pymntRecncliatnRqst.substring(this.pymntRecncliatnRqst.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnRqst = this.pymntRecncliatnRqst+pymntRecncliatnRqst;
+	        } else  {
+	            this.pymntRecncliatnRqst = this.pymntRecncliatnRqst+ "," +pymntRecncliatnRqst;
+	        }
+        }
+    }
+    
     
     
     public String getPymntRecncliatnRqstor() {
@@ -916,6 +2050,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
         this.pymntRecncliatnRqstor = pymntRecncliatnRqstor;
     }
     
+    public void addPymntRecncliatnRqstor(String pymntRecncliatnRqstor) {
+    	if( pymntRecncliatnRqstor != null ) {
+	    	if( this.pymntRecncliatnRqstor == null ) {
+	        	this.pymntRecncliatnRqstor = pymntRecncliatnRqstor;
+	        } else if(this.pymntRecncliatnRqstor.substring(this.pymntRecncliatnRqstor.length() - 1).equals("]") & pymntRecncliatnRqstor.equals("[")) {
+	        	this.pymntRecncliatnRqstor = this.pymntRecncliatnRqstor+ "," + pymntRecncliatnRqstor;
+	        } else if(pymntRecncliatnRqstor.equals("[") | pymntRecncliatnRqstor.equals("]") | this.pymntRecncliatnRqstor.substring(this.pymntRecncliatnRqstor.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnRqstor = this.pymntRecncliatnRqstor+pymntRecncliatnRqstor;
+	        } else  {
+	            this.pymntRecncliatnRqstor = this.pymntRecncliatnRqstor+ "," +pymntRecncliatnRqstor;
+	        }
+        }
+    }
+    
     
     
     public String getPymntRecncliatnSts() {
@@ -924,6 +2072,20 @@ public class PaymentReconciliation  implements java.io.Serializable {
     
     public void setPymntRecncliatnSts(String pymntRecncliatnSts) {
         this.pymntRecncliatnSts = pymntRecncliatnSts;
+    }
+    
+    public void addPymntRecncliatnSts(String pymntRecncliatnSts) {
+    	if( pymntRecncliatnSts != null ) {
+	    	if( this.pymntRecncliatnSts == null ) {
+	        	this.pymntRecncliatnSts = pymntRecncliatnSts;
+	        } else if(this.pymntRecncliatnSts.substring(this.pymntRecncliatnSts.length() - 1).equals("]") & pymntRecncliatnSts.equals("[")) {
+	        	this.pymntRecncliatnSts = this.pymntRecncliatnSts+ "," + pymntRecncliatnSts;
+	        } else if(pymntRecncliatnSts.equals("[") | pymntRecncliatnSts.equals("]") | this.pymntRecncliatnSts.substring(this.pymntRecncliatnSts.length() - 1).equals("[")) {
+	        	this.pymntRecncliatnSts = this.pymntRecncliatnSts+pymntRecncliatnSts;
+	        } else  {
+	            this.pymntRecncliatnSts = this.pymntRecncliatnSts+ "," +pymntRecncliatnSts;
+	        }
+        }
     }
     
     

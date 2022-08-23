@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Jun 27, 2022, 10:40:10 AM by Hibernate Tools 5.6.1.Final
+// Generated Aug 17, 2022, 11:08:48 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -78,6 +78,20 @@ public class DiagnosticReport  implements java.io.Serializable {
         this.id = id;
     }
     
+    public void addId(String id) {
+    	if( id != null ) {
+	    	if( this.id == null ) {
+	        	this.id = id;
+	        } else if(this.id.substring(this.id.length() - 1).equals("]") & id.equals("[")) {
+	        	this.id = this.id+ "," + id;
+	        } else if(id.equals("[") | id.equals("]") | this.id.substring(this.id.length() - 1).equals("[")) {
+	        	this.id = this.id+id;
+	        } else  {
+	            this.id = this.id+ "," +id;
+	        }
+        }
+    }
+    
     
     
     public String getDiagnosticRptBasedOn() {
@@ -86,6 +100,20 @@ public class DiagnosticReport  implements java.io.Serializable {
     
     public void setDiagnosticRptBasedOn(String diagnosticRptBasedOn) {
         this.diagnosticRptBasedOn = diagnosticRptBasedOn;
+    }
+    
+    public void addDiagnosticRptBasedOn(String diagnosticRptBasedOn) {
+    	if( diagnosticRptBasedOn != null ) {
+	    	if( this.diagnosticRptBasedOn == null ) {
+	        	this.diagnosticRptBasedOn = diagnosticRptBasedOn;
+	        } else if(this.diagnosticRptBasedOn.substring(this.diagnosticRptBasedOn.length() - 1).equals("]") & diagnosticRptBasedOn.equals("[")) {
+	        	this.diagnosticRptBasedOn = this.diagnosticRptBasedOn+ "," + diagnosticRptBasedOn;
+	        } else if(diagnosticRptBasedOn.equals("[") | diagnosticRptBasedOn.equals("]") | this.diagnosticRptBasedOn.substring(this.diagnosticRptBasedOn.length() - 1).equals("[")) {
+	        	this.diagnosticRptBasedOn = this.diagnosticRptBasedOn+diagnosticRptBasedOn;
+	        } else  {
+	            this.diagnosticRptBasedOn = this.diagnosticRptBasedOn+ "," +diagnosticRptBasedOn;
+	        }
+        }
     }
     
     
@@ -98,6 +126,20 @@ public class DiagnosticReport  implements java.io.Serializable {
         this.diagnosticRptCtgryCdgCd = diagnosticRptCtgryCdgCd;
     }
     
+    public void addDiagnosticRptCtgryCdgCd(String diagnosticRptCtgryCdgCd) {
+    	if( diagnosticRptCtgryCdgCd != null ) {
+	    	if( this.diagnosticRptCtgryCdgCd == null ) {
+	        	this.diagnosticRptCtgryCdgCd = diagnosticRptCtgryCdgCd;
+	        } else if(this.diagnosticRptCtgryCdgCd.substring(this.diagnosticRptCtgryCdgCd.length() - 1).equals("]") & diagnosticRptCtgryCdgCd.equals("[")) {
+	        	this.diagnosticRptCtgryCdgCd = this.diagnosticRptCtgryCdgCd+ "," + diagnosticRptCtgryCdgCd;
+	        } else if(diagnosticRptCtgryCdgCd.equals("[") | diagnosticRptCtgryCdgCd.equals("]") | this.diagnosticRptCtgryCdgCd.substring(this.diagnosticRptCtgryCdgCd.length() - 1).equals("[")) {
+	        	this.diagnosticRptCtgryCdgCd = this.diagnosticRptCtgryCdgCd+diagnosticRptCtgryCdgCd;
+	        } else  {
+	            this.diagnosticRptCtgryCdgCd = this.diagnosticRptCtgryCdgCd+ "," +diagnosticRptCtgryCdgCd;
+	        }
+        }
+    }
+    
     
     
     public String getDiagnosticRptCtgryCdgDsply() {
@@ -106,6 +148,20 @@ public class DiagnosticReport  implements java.io.Serializable {
     
     public void setDiagnosticRptCtgryCdgDsply(String diagnosticRptCtgryCdgDsply) {
         this.diagnosticRptCtgryCdgDsply = diagnosticRptCtgryCdgDsply;
+    }
+    
+    public void addDiagnosticRptCtgryCdgDsply(String diagnosticRptCtgryCdgDsply) {
+    	if( diagnosticRptCtgryCdgDsply != null ) {
+	    	if( this.diagnosticRptCtgryCdgDsply == null ) {
+	        	this.diagnosticRptCtgryCdgDsply = diagnosticRptCtgryCdgDsply;
+	        } else if(this.diagnosticRptCtgryCdgDsply.substring(this.diagnosticRptCtgryCdgDsply.length() - 1).equals("]") & diagnosticRptCtgryCdgDsply.equals("[")) {
+	        	this.diagnosticRptCtgryCdgDsply = this.diagnosticRptCtgryCdgDsply+ "," + diagnosticRptCtgryCdgDsply;
+	        } else if(diagnosticRptCtgryCdgDsply.equals("[") | diagnosticRptCtgryCdgDsply.equals("]") | this.diagnosticRptCtgryCdgDsply.substring(this.diagnosticRptCtgryCdgDsply.length() - 1).equals("[")) {
+	        	this.diagnosticRptCtgryCdgDsply = this.diagnosticRptCtgryCdgDsply+diagnosticRptCtgryCdgDsply;
+	        } else  {
+	            this.diagnosticRptCtgryCdgDsply = this.diagnosticRptCtgryCdgDsply+ "," +diagnosticRptCtgryCdgDsply;
+	        }
+        }
     }
     
     
@@ -118,6 +174,20 @@ public class DiagnosticReport  implements java.io.Serializable {
         this.diagnosticRptCtgryCdgSys = diagnosticRptCtgryCdgSys;
     }
     
+    public void addDiagnosticRptCtgryCdgSys(String diagnosticRptCtgryCdgSys) {
+    	if( diagnosticRptCtgryCdgSys != null ) {
+	    	if( this.diagnosticRptCtgryCdgSys == null ) {
+	        	this.diagnosticRptCtgryCdgSys = diagnosticRptCtgryCdgSys;
+	        } else if(this.diagnosticRptCtgryCdgSys.substring(this.diagnosticRptCtgryCdgSys.length() - 1).equals("]") & diagnosticRptCtgryCdgSys.equals("[")) {
+	        	this.diagnosticRptCtgryCdgSys = this.diagnosticRptCtgryCdgSys+ "," + diagnosticRptCtgryCdgSys;
+	        } else if(diagnosticRptCtgryCdgSys.equals("[") | diagnosticRptCtgryCdgSys.equals("]") | this.diagnosticRptCtgryCdgSys.substring(this.diagnosticRptCtgryCdgSys.length() - 1).equals("[")) {
+	        	this.diagnosticRptCtgryCdgSys = this.diagnosticRptCtgryCdgSys+diagnosticRptCtgryCdgSys;
+	        } else  {
+	            this.diagnosticRptCtgryCdgSys = this.diagnosticRptCtgryCdgSys+ "," +diagnosticRptCtgryCdgSys;
+	        }
+        }
+    }
+    
     
     
     public String getDiagnosticRptCtgryCdgUsrSltd() {
@@ -126,6 +196,20 @@ public class DiagnosticReport  implements java.io.Serializable {
     
     public void setDiagnosticRptCtgryCdgUsrSltd(String diagnosticRptCtgryCdgUsrSltd) {
         this.diagnosticRptCtgryCdgUsrSltd = diagnosticRptCtgryCdgUsrSltd;
+    }
+    
+    public void addDiagnosticRptCtgryCdgUsrSltd(String diagnosticRptCtgryCdgUsrSltd) {
+    	if( diagnosticRptCtgryCdgUsrSltd != null ) {
+	    	if( this.diagnosticRptCtgryCdgUsrSltd == null ) {
+	        	this.diagnosticRptCtgryCdgUsrSltd = diagnosticRptCtgryCdgUsrSltd;
+	        } else if(this.diagnosticRptCtgryCdgUsrSltd.substring(this.diagnosticRptCtgryCdgUsrSltd.length() - 1).equals("]") & diagnosticRptCtgryCdgUsrSltd.equals("[")) {
+	        	this.diagnosticRptCtgryCdgUsrSltd = this.diagnosticRptCtgryCdgUsrSltd+ "," + diagnosticRptCtgryCdgUsrSltd;
+	        } else if(diagnosticRptCtgryCdgUsrSltd.equals("[") | diagnosticRptCtgryCdgUsrSltd.equals("]") | this.diagnosticRptCtgryCdgUsrSltd.substring(this.diagnosticRptCtgryCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.diagnosticRptCtgryCdgUsrSltd = this.diagnosticRptCtgryCdgUsrSltd+diagnosticRptCtgryCdgUsrSltd;
+	        } else  {
+	            this.diagnosticRptCtgryCdgUsrSltd = this.diagnosticRptCtgryCdgUsrSltd+ "," +diagnosticRptCtgryCdgUsrSltd;
+	        }
+        }
     }
     
     
@@ -138,6 +222,20 @@ public class DiagnosticReport  implements java.io.Serializable {
         this.diagnosticRptCtgryCdgVrsn = diagnosticRptCtgryCdgVrsn;
     }
     
+    public void addDiagnosticRptCtgryCdgVrsn(String diagnosticRptCtgryCdgVrsn) {
+    	if( diagnosticRptCtgryCdgVrsn != null ) {
+	    	if( this.diagnosticRptCtgryCdgVrsn == null ) {
+	        	this.diagnosticRptCtgryCdgVrsn = diagnosticRptCtgryCdgVrsn;
+	        } else if(this.diagnosticRptCtgryCdgVrsn.substring(this.diagnosticRptCtgryCdgVrsn.length() - 1).equals("]") & diagnosticRptCtgryCdgVrsn.equals("[")) {
+	        	this.diagnosticRptCtgryCdgVrsn = this.diagnosticRptCtgryCdgVrsn+ "," + diagnosticRptCtgryCdgVrsn;
+	        } else if(diagnosticRptCtgryCdgVrsn.equals("[") | diagnosticRptCtgryCdgVrsn.equals("]") | this.diagnosticRptCtgryCdgVrsn.substring(this.diagnosticRptCtgryCdgVrsn.length() - 1).equals("[")) {
+	        	this.diagnosticRptCtgryCdgVrsn = this.diagnosticRptCtgryCdgVrsn+diagnosticRptCtgryCdgVrsn;
+	        } else  {
+	            this.diagnosticRptCtgryCdgVrsn = this.diagnosticRptCtgryCdgVrsn+ "," +diagnosticRptCtgryCdgVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getDiagnosticRptCtgryTxt() {
@@ -146,6 +244,20 @@ public class DiagnosticReport  implements java.io.Serializable {
     
     public void setDiagnosticRptCtgryTxt(String diagnosticRptCtgryTxt) {
         this.diagnosticRptCtgryTxt = diagnosticRptCtgryTxt;
+    }
+    
+    public void addDiagnosticRptCtgryTxt(String diagnosticRptCtgryTxt) {
+    	if( diagnosticRptCtgryTxt != null ) {
+	    	if( this.diagnosticRptCtgryTxt == null ) {
+	        	this.diagnosticRptCtgryTxt = diagnosticRptCtgryTxt;
+	        } else if(this.diagnosticRptCtgryTxt.substring(this.diagnosticRptCtgryTxt.length() - 1).equals("]") & diagnosticRptCtgryTxt.equals("[")) {
+	        	this.diagnosticRptCtgryTxt = this.diagnosticRptCtgryTxt+ "," + diagnosticRptCtgryTxt;
+	        } else if(diagnosticRptCtgryTxt.equals("[") | diagnosticRptCtgryTxt.equals("]") | this.diagnosticRptCtgryTxt.substring(this.diagnosticRptCtgryTxt.length() - 1).equals("[")) {
+	        	this.diagnosticRptCtgryTxt = this.diagnosticRptCtgryTxt+diagnosticRptCtgryTxt;
+	        } else  {
+	            this.diagnosticRptCtgryTxt = this.diagnosticRptCtgryTxt+ "," +diagnosticRptCtgryTxt;
+	        }
+        }
     }
     
     
@@ -158,6 +270,20 @@ public class DiagnosticReport  implements java.io.Serializable {
         this.diagnosticRptCdCdgCd = diagnosticRptCdCdgCd;
     }
     
+    public void addDiagnosticRptCdCdgCd(String diagnosticRptCdCdgCd) {
+    	if( diagnosticRptCdCdgCd != null ) {
+	    	if( this.diagnosticRptCdCdgCd == null ) {
+	        	this.diagnosticRptCdCdgCd = diagnosticRptCdCdgCd;
+	        } else if(this.diagnosticRptCdCdgCd.substring(this.diagnosticRptCdCdgCd.length() - 1).equals("]") & diagnosticRptCdCdgCd.equals("[")) {
+	        	this.diagnosticRptCdCdgCd = this.diagnosticRptCdCdgCd+ "," + diagnosticRptCdCdgCd;
+	        } else if(diagnosticRptCdCdgCd.equals("[") | diagnosticRptCdCdgCd.equals("]") | this.diagnosticRptCdCdgCd.substring(this.diagnosticRptCdCdgCd.length() - 1).equals("[")) {
+	        	this.diagnosticRptCdCdgCd = this.diagnosticRptCdCdgCd+diagnosticRptCdCdgCd;
+	        } else  {
+	            this.diagnosticRptCdCdgCd = this.diagnosticRptCdCdgCd+ "," +diagnosticRptCdCdgCd;
+	        }
+        }
+    }
+    
     
     
     public String getDiagnosticRptCdCdgDsply() {
@@ -166,6 +292,20 @@ public class DiagnosticReport  implements java.io.Serializable {
     
     public void setDiagnosticRptCdCdgDsply(String diagnosticRptCdCdgDsply) {
         this.diagnosticRptCdCdgDsply = diagnosticRptCdCdgDsply;
+    }
+    
+    public void addDiagnosticRptCdCdgDsply(String diagnosticRptCdCdgDsply) {
+    	if( diagnosticRptCdCdgDsply != null ) {
+	    	if( this.diagnosticRptCdCdgDsply == null ) {
+	        	this.diagnosticRptCdCdgDsply = diagnosticRptCdCdgDsply;
+	        } else if(this.diagnosticRptCdCdgDsply.substring(this.diagnosticRptCdCdgDsply.length() - 1).equals("]") & diagnosticRptCdCdgDsply.equals("[")) {
+	        	this.diagnosticRptCdCdgDsply = this.diagnosticRptCdCdgDsply+ "," + diagnosticRptCdCdgDsply;
+	        } else if(diagnosticRptCdCdgDsply.equals("[") | diagnosticRptCdCdgDsply.equals("]") | this.diagnosticRptCdCdgDsply.substring(this.diagnosticRptCdCdgDsply.length() - 1).equals("[")) {
+	        	this.diagnosticRptCdCdgDsply = this.diagnosticRptCdCdgDsply+diagnosticRptCdCdgDsply;
+	        } else  {
+	            this.diagnosticRptCdCdgDsply = this.diagnosticRptCdCdgDsply+ "," +diagnosticRptCdCdgDsply;
+	        }
+        }
     }
     
     
@@ -178,6 +318,20 @@ public class DiagnosticReport  implements java.io.Serializable {
         this.diagnosticRptCdCdgSys = diagnosticRptCdCdgSys;
     }
     
+    public void addDiagnosticRptCdCdgSys(String diagnosticRptCdCdgSys) {
+    	if( diagnosticRptCdCdgSys != null ) {
+	    	if( this.diagnosticRptCdCdgSys == null ) {
+	        	this.diagnosticRptCdCdgSys = diagnosticRptCdCdgSys;
+	        } else if(this.diagnosticRptCdCdgSys.substring(this.diagnosticRptCdCdgSys.length() - 1).equals("]") & diagnosticRptCdCdgSys.equals("[")) {
+	        	this.diagnosticRptCdCdgSys = this.diagnosticRptCdCdgSys+ "," + diagnosticRptCdCdgSys;
+	        } else if(diagnosticRptCdCdgSys.equals("[") | diagnosticRptCdCdgSys.equals("]") | this.diagnosticRptCdCdgSys.substring(this.diagnosticRptCdCdgSys.length() - 1).equals("[")) {
+	        	this.diagnosticRptCdCdgSys = this.diagnosticRptCdCdgSys+diagnosticRptCdCdgSys;
+	        } else  {
+	            this.diagnosticRptCdCdgSys = this.diagnosticRptCdCdgSys+ "," +diagnosticRptCdCdgSys;
+	        }
+        }
+    }
+    
     
     
     public String getDiagnosticRptCdCdgUsrSltd() {
@@ -186,6 +340,20 @@ public class DiagnosticReport  implements java.io.Serializable {
     
     public void setDiagnosticRptCdCdgUsrSltd(String diagnosticRptCdCdgUsrSltd) {
         this.diagnosticRptCdCdgUsrSltd = diagnosticRptCdCdgUsrSltd;
+    }
+    
+    public void addDiagnosticRptCdCdgUsrSltd(String diagnosticRptCdCdgUsrSltd) {
+    	if( diagnosticRptCdCdgUsrSltd != null ) {
+	    	if( this.diagnosticRptCdCdgUsrSltd == null ) {
+	        	this.diagnosticRptCdCdgUsrSltd = diagnosticRptCdCdgUsrSltd;
+	        } else if(this.diagnosticRptCdCdgUsrSltd.substring(this.diagnosticRptCdCdgUsrSltd.length() - 1).equals("]") & diagnosticRptCdCdgUsrSltd.equals("[")) {
+	        	this.diagnosticRptCdCdgUsrSltd = this.diagnosticRptCdCdgUsrSltd+ "," + diagnosticRptCdCdgUsrSltd;
+	        } else if(diagnosticRptCdCdgUsrSltd.equals("[") | diagnosticRptCdCdgUsrSltd.equals("]") | this.diagnosticRptCdCdgUsrSltd.substring(this.diagnosticRptCdCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.diagnosticRptCdCdgUsrSltd = this.diagnosticRptCdCdgUsrSltd+diagnosticRptCdCdgUsrSltd;
+	        } else  {
+	            this.diagnosticRptCdCdgUsrSltd = this.diagnosticRptCdCdgUsrSltd+ "," +diagnosticRptCdCdgUsrSltd;
+	        }
+        }
     }
     
     
@@ -198,6 +366,20 @@ public class DiagnosticReport  implements java.io.Serializable {
         this.diagnosticRptCdCdgVrsn = diagnosticRptCdCdgVrsn;
     }
     
+    public void addDiagnosticRptCdCdgVrsn(String diagnosticRptCdCdgVrsn) {
+    	if( diagnosticRptCdCdgVrsn != null ) {
+	    	if( this.diagnosticRptCdCdgVrsn == null ) {
+	        	this.diagnosticRptCdCdgVrsn = diagnosticRptCdCdgVrsn;
+	        } else if(this.diagnosticRptCdCdgVrsn.substring(this.diagnosticRptCdCdgVrsn.length() - 1).equals("]") & diagnosticRptCdCdgVrsn.equals("[")) {
+	        	this.diagnosticRptCdCdgVrsn = this.diagnosticRptCdCdgVrsn+ "," + diagnosticRptCdCdgVrsn;
+	        } else if(diagnosticRptCdCdgVrsn.equals("[") | diagnosticRptCdCdgVrsn.equals("]") | this.diagnosticRptCdCdgVrsn.substring(this.diagnosticRptCdCdgVrsn.length() - 1).equals("[")) {
+	        	this.diagnosticRptCdCdgVrsn = this.diagnosticRptCdCdgVrsn+diagnosticRptCdCdgVrsn;
+	        } else  {
+	            this.diagnosticRptCdCdgVrsn = this.diagnosticRptCdCdgVrsn+ "," +diagnosticRptCdCdgVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getDiagnosticRptCdTxt() {
@@ -206,6 +388,20 @@ public class DiagnosticReport  implements java.io.Serializable {
     
     public void setDiagnosticRptCdTxt(String diagnosticRptCdTxt) {
         this.diagnosticRptCdTxt = diagnosticRptCdTxt;
+    }
+    
+    public void addDiagnosticRptCdTxt(String diagnosticRptCdTxt) {
+    	if( diagnosticRptCdTxt != null ) {
+	    	if( this.diagnosticRptCdTxt == null ) {
+	        	this.diagnosticRptCdTxt = diagnosticRptCdTxt;
+	        } else if(this.diagnosticRptCdTxt.substring(this.diagnosticRptCdTxt.length() - 1).equals("]") & diagnosticRptCdTxt.equals("[")) {
+	        	this.diagnosticRptCdTxt = this.diagnosticRptCdTxt+ "," + diagnosticRptCdTxt;
+	        } else if(diagnosticRptCdTxt.equals("[") | diagnosticRptCdTxt.equals("]") | this.diagnosticRptCdTxt.substring(this.diagnosticRptCdTxt.length() - 1).equals("[")) {
+	        	this.diagnosticRptCdTxt = this.diagnosticRptCdTxt+diagnosticRptCdTxt;
+	        } else  {
+	            this.diagnosticRptCdTxt = this.diagnosticRptCdTxt+ "," +diagnosticRptCdTxt;
+	        }
+        }
     }
     
     
@@ -218,6 +414,20 @@ public class DiagnosticReport  implements java.io.Serializable {
         this.diagnosticRptConclusion = diagnosticRptConclusion;
     }
     
+    public void addDiagnosticRptConclusion(String diagnosticRptConclusion) {
+    	if( diagnosticRptConclusion != null ) {
+	    	if( this.diagnosticRptConclusion == null ) {
+	        	this.diagnosticRptConclusion = diagnosticRptConclusion;
+	        } else if(this.diagnosticRptConclusion.substring(this.diagnosticRptConclusion.length() - 1).equals("]") & diagnosticRptConclusion.equals("[")) {
+	        	this.diagnosticRptConclusion = this.diagnosticRptConclusion+ "," + diagnosticRptConclusion;
+	        } else if(diagnosticRptConclusion.equals("[") | diagnosticRptConclusion.equals("]") | this.diagnosticRptConclusion.substring(this.diagnosticRptConclusion.length() - 1).equals("[")) {
+	        	this.diagnosticRptConclusion = this.diagnosticRptConclusion+diagnosticRptConclusion;
+	        } else  {
+	            this.diagnosticRptConclusion = this.diagnosticRptConclusion+ "," +diagnosticRptConclusion;
+	        }
+        }
+    }
+    
     
     
     public String getDiagnosticRptConclusionCdCdgCd() {
@@ -226,6 +436,20 @@ public class DiagnosticReport  implements java.io.Serializable {
     
     public void setDiagnosticRptConclusionCdCdgCd(String diagnosticRptConclusionCdCdgCd) {
         this.diagnosticRptConclusionCdCdgCd = diagnosticRptConclusionCdCdgCd;
+    }
+    
+    public void addDiagnosticRptConclusionCdCdgCd(String diagnosticRptConclusionCdCdgCd) {
+    	if( diagnosticRptConclusionCdCdgCd != null ) {
+	    	if( this.diagnosticRptConclusionCdCdgCd == null ) {
+	        	this.diagnosticRptConclusionCdCdgCd = diagnosticRptConclusionCdCdgCd;
+	        } else if(this.diagnosticRptConclusionCdCdgCd.substring(this.diagnosticRptConclusionCdCdgCd.length() - 1).equals("]") & diagnosticRptConclusionCdCdgCd.equals("[")) {
+	        	this.diagnosticRptConclusionCdCdgCd = this.diagnosticRptConclusionCdCdgCd+ "," + diagnosticRptConclusionCdCdgCd;
+	        } else if(diagnosticRptConclusionCdCdgCd.equals("[") | diagnosticRptConclusionCdCdgCd.equals("]") | this.diagnosticRptConclusionCdCdgCd.substring(this.diagnosticRptConclusionCdCdgCd.length() - 1).equals("[")) {
+	        	this.diagnosticRptConclusionCdCdgCd = this.diagnosticRptConclusionCdCdgCd+diagnosticRptConclusionCdCdgCd;
+	        } else  {
+	            this.diagnosticRptConclusionCdCdgCd = this.diagnosticRptConclusionCdCdgCd+ "," +diagnosticRptConclusionCdCdgCd;
+	        }
+        }
     }
     
     
@@ -238,6 +462,20 @@ public class DiagnosticReport  implements java.io.Serializable {
         this.diagnosticRptConclusionCdCdgDsply = diagnosticRptConclusionCdCdgDsply;
     }
     
+    public void addDiagnosticRptConclusionCdCdgDsply(String diagnosticRptConclusionCdCdgDsply) {
+    	if( diagnosticRptConclusionCdCdgDsply != null ) {
+	    	if( this.diagnosticRptConclusionCdCdgDsply == null ) {
+	        	this.diagnosticRptConclusionCdCdgDsply = diagnosticRptConclusionCdCdgDsply;
+	        } else if(this.diagnosticRptConclusionCdCdgDsply.substring(this.diagnosticRptConclusionCdCdgDsply.length() - 1).equals("]") & diagnosticRptConclusionCdCdgDsply.equals("[")) {
+	        	this.diagnosticRptConclusionCdCdgDsply = this.diagnosticRptConclusionCdCdgDsply+ "," + diagnosticRptConclusionCdCdgDsply;
+	        } else if(diagnosticRptConclusionCdCdgDsply.equals("[") | diagnosticRptConclusionCdCdgDsply.equals("]") | this.diagnosticRptConclusionCdCdgDsply.substring(this.diagnosticRptConclusionCdCdgDsply.length() - 1).equals("[")) {
+	        	this.diagnosticRptConclusionCdCdgDsply = this.diagnosticRptConclusionCdCdgDsply+diagnosticRptConclusionCdCdgDsply;
+	        } else  {
+	            this.diagnosticRptConclusionCdCdgDsply = this.diagnosticRptConclusionCdCdgDsply+ "," +diagnosticRptConclusionCdCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getDiagnosticRptConclusionCdCdgSys() {
@@ -246,6 +484,20 @@ public class DiagnosticReport  implements java.io.Serializable {
     
     public void setDiagnosticRptConclusionCdCdgSys(String diagnosticRptConclusionCdCdgSys) {
         this.diagnosticRptConclusionCdCdgSys = diagnosticRptConclusionCdCdgSys;
+    }
+    
+    public void addDiagnosticRptConclusionCdCdgSys(String diagnosticRptConclusionCdCdgSys) {
+    	if( diagnosticRptConclusionCdCdgSys != null ) {
+	    	if( this.diagnosticRptConclusionCdCdgSys == null ) {
+	        	this.diagnosticRptConclusionCdCdgSys = diagnosticRptConclusionCdCdgSys;
+	        } else if(this.diagnosticRptConclusionCdCdgSys.substring(this.diagnosticRptConclusionCdCdgSys.length() - 1).equals("]") & diagnosticRptConclusionCdCdgSys.equals("[")) {
+	        	this.diagnosticRptConclusionCdCdgSys = this.diagnosticRptConclusionCdCdgSys+ "," + diagnosticRptConclusionCdCdgSys;
+	        } else if(diagnosticRptConclusionCdCdgSys.equals("[") | diagnosticRptConclusionCdCdgSys.equals("]") | this.diagnosticRptConclusionCdCdgSys.substring(this.diagnosticRptConclusionCdCdgSys.length() - 1).equals("[")) {
+	        	this.diagnosticRptConclusionCdCdgSys = this.diagnosticRptConclusionCdCdgSys+diagnosticRptConclusionCdCdgSys;
+	        } else  {
+	            this.diagnosticRptConclusionCdCdgSys = this.diagnosticRptConclusionCdCdgSys+ "," +diagnosticRptConclusionCdCdgSys;
+	        }
+        }
     }
     
     
@@ -258,6 +510,20 @@ public class DiagnosticReport  implements java.io.Serializable {
         this.diagnosticRptConclusionCdCdgUsrSltd = diagnosticRptConclusionCdCdgUsrSltd;
     }
     
+    public void addDiagnosticRptConclusionCdCdgUsrSltd(String diagnosticRptConclusionCdCdgUsrSltd) {
+    	if( diagnosticRptConclusionCdCdgUsrSltd != null ) {
+	    	if( this.diagnosticRptConclusionCdCdgUsrSltd == null ) {
+	        	this.diagnosticRptConclusionCdCdgUsrSltd = diagnosticRptConclusionCdCdgUsrSltd;
+	        } else if(this.diagnosticRptConclusionCdCdgUsrSltd.substring(this.diagnosticRptConclusionCdCdgUsrSltd.length() - 1).equals("]") & diagnosticRptConclusionCdCdgUsrSltd.equals("[")) {
+	        	this.diagnosticRptConclusionCdCdgUsrSltd = this.diagnosticRptConclusionCdCdgUsrSltd+ "," + diagnosticRptConclusionCdCdgUsrSltd;
+	        } else if(diagnosticRptConclusionCdCdgUsrSltd.equals("[") | diagnosticRptConclusionCdCdgUsrSltd.equals("]") | this.diagnosticRptConclusionCdCdgUsrSltd.substring(this.diagnosticRptConclusionCdCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.diagnosticRptConclusionCdCdgUsrSltd = this.diagnosticRptConclusionCdCdgUsrSltd+diagnosticRptConclusionCdCdgUsrSltd;
+	        } else  {
+	            this.diagnosticRptConclusionCdCdgUsrSltd = this.diagnosticRptConclusionCdCdgUsrSltd+ "," +diagnosticRptConclusionCdCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getDiagnosticRptConclusionCdCdgVrsn() {
@@ -266,6 +532,20 @@ public class DiagnosticReport  implements java.io.Serializable {
     
     public void setDiagnosticRptConclusionCdCdgVrsn(String diagnosticRptConclusionCdCdgVrsn) {
         this.diagnosticRptConclusionCdCdgVrsn = diagnosticRptConclusionCdCdgVrsn;
+    }
+    
+    public void addDiagnosticRptConclusionCdCdgVrsn(String diagnosticRptConclusionCdCdgVrsn) {
+    	if( diagnosticRptConclusionCdCdgVrsn != null ) {
+	    	if( this.diagnosticRptConclusionCdCdgVrsn == null ) {
+	        	this.diagnosticRptConclusionCdCdgVrsn = diagnosticRptConclusionCdCdgVrsn;
+	        } else if(this.diagnosticRptConclusionCdCdgVrsn.substring(this.diagnosticRptConclusionCdCdgVrsn.length() - 1).equals("]") & diagnosticRptConclusionCdCdgVrsn.equals("[")) {
+	        	this.diagnosticRptConclusionCdCdgVrsn = this.diagnosticRptConclusionCdCdgVrsn+ "," + diagnosticRptConclusionCdCdgVrsn;
+	        } else if(diagnosticRptConclusionCdCdgVrsn.equals("[") | diagnosticRptConclusionCdCdgVrsn.equals("]") | this.diagnosticRptConclusionCdCdgVrsn.substring(this.diagnosticRptConclusionCdCdgVrsn.length() - 1).equals("[")) {
+	        	this.diagnosticRptConclusionCdCdgVrsn = this.diagnosticRptConclusionCdCdgVrsn+diagnosticRptConclusionCdCdgVrsn;
+	        } else  {
+	            this.diagnosticRptConclusionCdCdgVrsn = this.diagnosticRptConclusionCdCdgVrsn+ "," +diagnosticRptConclusionCdCdgVrsn;
+	        }
+        }
     }
     
     
@@ -278,6 +558,20 @@ public class DiagnosticReport  implements java.io.Serializable {
         this.diagnosticRptConclusionCdTxt = diagnosticRptConclusionCdTxt;
     }
     
+    public void addDiagnosticRptConclusionCdTxt(String diagnosticRptConclusionCdTxt) {
+    	if( diagnosticRptConclusionCdTxt != null ) {
+	    	if( this.diagnosticRptConclusionCdTxt == null ) {
+	        	this.diagnosticRptConclusionCdTxt = diagnosticRptConclusionCdTxt;
+	        } else if(this.diagnosticRptConclusionCdTxt.substring(this.diagnosticRptConclusionCdTxt.length() - 1).equals("]") & diagnosticRptConclusionCdTxt.equals("[")) {
+	        	this.diagnosticRptConclusionCdTxt = this.diagnosticRptConclusionCdTxt+ "," + diagnosticRptConclusionCdTxt;
+	        } else if(diagnosticRptConclusionCdTxt.equals("[") | diagnosticRptConclusionCdTxt.equals("]") | this.diagnosticRptConclusionCdTxt.substring(this.diagnosticRptConclusionCdTxt.length() - 1).equals("[")) {
+	        	this.diagnosticRptConclusionCdTxt = this.diagnosticRptConclusionCdTxt+diagnosticRptConclusionCdTxt;
+	        } else  {
+	            this.diagnosticRptConclusionCdTxt = this.diagnosticRptConclusionCdTxt+ "," +diagnosticRptConclusionCdTxt;
+	        }
+        }
+    }
+    
     
     
     public String getDiagnosticRptEfctiveDtTimeTyp() {
@@ -286,6 +580,20 @@ public class DiagnosticReport  implements java.io.Serializable {
     
     public void setDiagnosticRptEfctiveDtTimeTyp(String diagnosticRptEfctiveDtTimeTyp) {
         this.diagnosticRptEfctiveDtTimeTyp = diagnosticRptEfctiveDtTimeTyp;
+    }
+    
+    public void addDiagnosticRptEfctiveDtTimeTyp(String diagnosticRptEfctiveDtTimeTyp) {
+    	if( diagnosticRptEfctiveDtTimeTyp != null ) {
+	    	if( this.diagnosticRptEfctiveDtTimeTyp == null ) {
+	        	this.diagnosticRptEfctiveDtTimeTyp = diagnosticRptEfctiveDtTimeTyp;
+	        } else if(this.diagnosticRptEfctiveDtTimeTyp.substring(this.diagnosticRptEfctiveDtTimeTyp.length() - 1).equals("]") & diagnosticRptEfctiveDtTimeTyp.equals("[")) {
+	        	this.diagnosticRptEfctiveDtTimeTyp = this.diagnosticRptEfctiveDtTimeTyp+ "," + diagnosticRptEfctiveDtTimeTyp;
+	        } else if(diagnosticRptEfctiveDtTimeTyp.equals("[") | diagnosticRptEfctiveDtTimeTyp.equals("]") | this.diagnosticRptEfctiveDtTimeTyp.substring(this.diagnosticRptEfctiveDtTimeTyp.length() - 1).equals("[")) {
+	        	this.diagnosticRptEfctiveDtTimeTyp = this.diagnosticRptEfctiveDtTimeTyp+diagnosticRptEfctiveDtTimeTyp;
+	        } else  {
+	            this.diagnosticRptEfctiveDtTimeTyp = this.diagnosticRptEfctiveDtTimeTyp+ "," +diagnosticRptEfctiveDtTimeTyp;
+	        }
+        }
     }
     
     
@@ -298,6 +606,20 @@ public class DiagnosticReport  implements java.io.Serializable {
         this.diagnosticRptEfctivePrdEnd = diagnosticRptEfctivePrdEnd;
     }
     
+    public void addDiagnosticRptEfctivePrdEnd(String diagnosticRptEfctivePrdEnd) {
+    	if( diagnosticRptEfctivePrdEnd != null ) {
+	    	if( this.diagnosticRptEfctivePrdEnd == null ) {
+	        	this.diagnosticRptEfctivePrdEnd = diagnosticRptEfctivePrdEnd;
+	        } else if(this.diagnosticRptEfctivePrdEnd.substring(this.diagnosticRptEfctivePrdEnd.length() - 1).equals("]") & diagnosticRptEfctivePrdEnd.equals("[")) {
+	        	this.diagnosticRptEfctivePrdEnd = this.diagnosticRptEfctivePrdEnd+ "," + diagnosticRptEfctivePrdEnd;
+	        } else if(diagnosticRptEfctivePrdEnd.equals("[") | diagnosticRptEfctivePrdEnd.equals("]") | this.diagnosticRptEfctivePrdEnd.substring(this.diagnosticRptEfctivePrdEnd.length() - 1).equals("[")) {
+	        	this.diagnosticRptEfctivePrdEnd = this.diagnosticRptEfctivePrdEnd+diagnosticRptEfctivePrdEnd;
+	        } else  {
+	            this.diagnosticRptEfctivePrdEnd = this.diagnosticRptEfctivePrdEnd+ "," +diagnosticRptEfctivePrdEnd;
+	        }
+        }
+    }
+    
     
     
     public String getDiagnosticRptEfctivePrdStrt() {
@@ -306,6 +628,20 @@ public class DiagnosticReport  implements java.io.Serializable {
     
     public void setDiagnosticRptEfctivePrdStrt(String diagnosticRptEfctivePrdStrt) {
         this.diagnosticRptEfctivePrdStrt = diagnosticRptEfctivePrdStrt;
+    }
+    
+    public void addDiagnosticRptEfctivePrdStrt(String diagnosticRptEfctivePrdStrt) {
+    	if( diagnosticRptEfctivePrdStrt != null ) {
+	    	if( this.diagnosticRptEfctivePrdStrt == null ) {
+	        	this.diagnosticRptEfctivePrdStrt = diagnosticRptEfctivePrdStrt;
+	        } else if(this.diagnosticRptEfctivePrdStrt.substring(this.diagnosticRptEfctivePrdStrt.length() - 1).equals("]") & diagnosticRptEfctivePrdStrt.equals("[")) {
+	        	this.diagnosticRptEfctivePrdStrt = this.diagnosticRptEfctivePrdStrt+ "," + diagnosticRptEfctivePrdStrt;
+	        } else if(diagnosticRptEfctivePrdStrt.equals("[") | diagnosticRptEfctivePrdStrt.equals("]") | this.diagnosticRptEfctivePrdStrt.substring(this.diagnosticRptEfctivePrdStrt.length() - 1).equals("[")) {
+	        	this.diagnosticRptEfctivePrdStrt = this.diagnosticRptEfctivePrdStrt+diagnosticRptEfctivePrdStrt;
+	        } else  {
+	            this.diagnosticRptEfctivePrdStrt = this.diagnosticRptEfctivePrdStrt+ "," +diagnosticRptEfctivePrdStrt;
+	        }
+        }
     }
     
     
@@ -318,6 +654,20 @@ public class DiagnosticReport  implements java.io.Serializable {
         this.diagnosticRptEnc = diagnosticRptEnc;
     }
     
+    public void addDiagnosticRptEnc(String diagnosticRptEnc) {
+    	if( diagnosticRptEnc != null ) {
+	    	if( this.diagnosticRptEnc == null ) {
+	        	this.diagnosticRptEnc = diagnosticRptEnc;
+	        } else if(this.diagnosticRptEnc.substring(this.diagnosticRptEnc.length() - 1).equals("]") & diagnosticRptEnc.equals("[")) {
+	        	this.diagnosticRptEnc = this.diagnosticRptEnc+ "," + diagnosticRptEnc;
+	        } else if(diagnosticRptEnc.equals("[") | diagnosticRptEnc.equals("]") | this.diagnosticRptEnc.substring(this.diagnosticRptEnc.length() - 1).equals("[")) {
+	        	this.diagnosticRptEnc = this.diagnosticRptEnc+diagnosticRptEnc;
+	        } else  {
+	            this.diagnosticRptEnc = this.diagnosticRptEnc+ "," +diagnosticRptEnc;
+	        }
+        }
+    }
+    
     
     
     public String getDiagnosticRptIdAssigner() {
@@ -326,6 +676,20 @@ public class DiagnosticReport  implements java.io.Serializable {
     
     public void setDiagnosticRptIdAssigner(String diagnosticRptIdAssigner) {
         this.diagnosticRptIdAssigner = diagnosticRptIdAssigner;
+    }
+    
+    public void addDiagnosticRptIdAssigner(String diagnosticRptIdAssigner) {
+    	if( diagnosticRptIdAssigner != null ) {
+	    	if( this.diagnosticRptIdAssigner == null ) {
+	        	this.diagnosticRptIdAssigner = diagnosticRptIdAssigner;
+	        } else if(this.diagnosticRptIdAssigner.substring(this.diagnosticRptIdAssigner.length() - 1).equals("]") & diagnosticRptIdAssigner.equals("[")) {
+	        	this.diagnosticRptIdAssigner = this.diagnosticRptIdAssigner+ "," + diagnosticRptIdAssigner;
+	        } else if(diagnosticRptIdAssigner.equals("[") | diagnosticRptIdAssigner.equals("]") | this.diagnosticRptIdAssigner.substring(this.diagnosticRptIdAssigner.length() - 1).equals("[")) {
+	        	this.diagnosticRptIdAssigner = this.diagnosticRptIdAssigner+diagnosticRptIdAssigner;
+	        } else  {
+	            this.diagnosticRptIdAssigner = this.diagnosticRptIdAssigner+ "," +diagnosticRptIdAssigner;
+	        }
+        }
     }
     
     
@@ -338,6 +702,20 @@ public class DiagnosticReport  implements java.io.Serializable {
         this.diagnosticRptIdPrdEnd = diagnosticRptIdPrdEnd;
     }
     
+    public void addDiagnosticRptIdPrdEnd(String diagnosticRptIdPrdEnd) {
+    	if( diagnosticRptIdPrdEnd != null ) {
+	    	if( this.diagnosticRptIdPrdEnd == null ) {
+	        	this.diagnosticRptIdPrdEnd = diagnosticRptIdPrdEnd;
+	        } else if(this.diagnosticRptIdPrdEnd.substring(this.diagnosticRptIdPrdEnd.length() - 1).equals("]") & diagnosticRptIdPrdEnd.equals("[")) {
+	        	this.diagnosticRptIdPrdEnd = this.diagnosticRptIdPrdEnd+ "," + diagnosticRptIdPrdEnd;
+	        } else if(diagnosticRptIdPrdEnd.equals("[") | diagnosticRptIdPrdEnd.equals("]") | this.diagnosticRptIdPrdEnd.substring(this.diagnosticRptIdPrdEnd.length() - 1).equals("[")) {
+	        	this.diagnosticRptIdPrdEnd = this.diagnosticRptIdPrdEnd+diagnosticRptIdPrdEnd;
+	        } else  {
+	            this.diagnosticRptIdPrdEnd = this.diagnosticRptIdPrdEnd+ "," +diagnosticRptIdPrdEnd;
+	        }
+        }
+    }
+    
     
     
     public String getDiagnosticRptIdPrdStrt() {
@@ -346,6 +724,20 @@ public class DiagnosticReport  implements java.io.Serializable {
     
     public void setDiagnosticRptIdPrdStrt(String diagnosticRptIdPrdStrt) {
         this.diagnosticRptIdPrdStrt = diagnosticRptIdPrdStrt;
+    }
+    
+    public void addDiagnosticRptIdPrdStrt(String diagnosticRptIdPrdStrt) {
+    	if( diagnosticRptIdPrdStrt != null ) {
+	    	if( this.diagnosticRptIdPrdStrt == null ) {
+	        	this.diagnosticRptIdPrdStrt = diagnosticRptIdPrdStrt;
+	        } else if(this.diagnosticRptIdPrdStrt.substring(this.diagnosticRptIdPrdStrt.length() - 1).equals("]") & diagnosticRptIdPrdStrt.equals("[")) {
+	        	this.diagnosticRptIdPrdStrt = this.diagnosticRptIdPrdStrt+ "," + diagnosticRptIdPrdStrt;
+	        } else if(diagnosticRptIdPrdStrt.equals("[") | diagnosticRptIdPrdStrt.equals("]") | this.diagnosticRptIdPrdStrt.substring(this.diagnosticRptIdPrdStrt.length() - 1).equals("[")) {
+	        	this.diagnosticRptIdPrdStrt = this.diagnosticRptIdPrdStrt+diagnosticRptIdPrdStrt;
+	        } else  {
+	            this.diagnosticRptIdPrdStrt = this.diagnosticRptIdPrdStrt+ "," +diagnosticRptIdPrdStrt;
+	        }
+        }
     }
     
     
@@ -358,6 +750,20 @@ public class DiagnosticReport  implements java.io.Serializable {
         this.diagnosticRptIdSys = diagnosticRptIdSys;
     }
     
+    public void addDiagnosticRptIdSys(String diagnosticRptIdSys) {
+    	if( diagnosticRptIdSys != null ) {
+	    	if( this.diagnosticRptIdSys == null ) {
+	        	this.diagnosticRptIdSys = diagnosticRptIdSys;
+	        } else if(this.diagnosticRptIdSys.substring(this.diagnosticRptIdSys.length() - 1).equals("]") & diagnosticRptIdSys.equals("[")) {
+	        	this.diagnosticRptIdSys = this.diagnosticRptIdSys+ "," + diagnosticRptIdSys;
+	        } else if(diagnosticRptIdSys.equals("[") | diagnosticRptIdSys.equals("]") | this.diagnosticRptIdSys.substring(this.diagnosticRptIdSys.length() - 1).equals("[")) {
+	        	this.diagnosticRptIdSys = this.diagnosticRptIdSys+diagnosticRptIdSys;
+	        } else  {
+	            this.diagnosticRptIdSys = this.diagnosticRptIdSys+ "," +diagnosticRptIdSys;
+	        }
+        }
+    }
+    
     
     
     public String getDiagnosticRptIdTypCdgCd() {
@@ -366,6 +772,20 @@ public class DiagnosticReport  implements java.io.Serializable {
     
     public void setDiagnosticRptIdTypCdgCd(String diagnosticRptIdTypCdgCd) {
         this.diagnosticRptIdTypCdgCd = diagnosticRptIdTypCdgCd;
+    }
+    
+    public void addDiagnosticRptIdTypCdgCd(String diagnosticRptIdTypCdgCd) {
+    	if( diagnosticRptIdTypCdgCd != null ) {
+	    	if( this.diagnosticRptIdTypCdgCd == null ) {
+	        	this.diagnosticRptIdTypCdgCd = diagnosticRptIdTypCdgCd;
+	        } else if(this.diagnosticRptIdTypCdgCd.substring(this.diagnosticRptIdTypCdgCd.length() - 1).equals("]") & diagnosticRptIdTypCdgCd.equals("[")) {
+	        	this.diagnosticRptIdTypCdgCd = this.diagnosticRptIdTypCdgCd+ "," + diagnosticRptIdTypCdgCd;
+	        } else if(diagnosticRptIdTypCdgCd.equals("[") | diagnosticRptIdTypCdgCd.equals("]") | this.diagnosticRptIdTypCdgCd.substring(this.diagnosticRptIdTypCdgCd.length() - 1).equals("[")) {
+	        	this.diagnosticRptIdTypCdgCd = this.diagnosticRptIdTypCdgCd+diagnosticRptIdTypCdgCd;
+	        } else  {
+	            this.diagnosticRptIdTypCdgCd = this.diagnosticRptIdTypCdgCd+ "," +diagnosticRptIdTypCdgCd;
+	        }
+        }
     }
     
     
@@ -378,6 +798,20 @@ public class DiagnosticReport  implements java.io.Serializable {
         this.diagnosticRptIdTypCdgDsply = diagnosticRptIdTypCdgDsply;
     }
     
+    public void addDiagnosticRptIdTypCdgDsply(String diagnosticRptIdTypCdgDsply) {
+    	if( diagnosticRptIdTypCdgDsply != null ) {
+	    	if( this.diagnosticRptIdTypCdgDsply == null ) {
+	        	this.diagnosticRptIdTypCdgDsply = diagnosticRptIdTypCdgDsply;
+	        } else if(this.diagnosticRptIdTypCdgDsply.substring(this.diagnosticRptIdTypCdgDsply.length() - 1).equals("]") & diagnosticRptIdTypCdgDsply.equals("[")) {
+	        	this.diagnosticRptIdTypCdgDsply = this.diagnosticRptIdTypCdgDsply+ "," + diagnosticRptIdTypCdgDsply;
+	        } else if(diagnosticRptIdTypCdgDsply.equals("[") | diagnosticRptIdTypCdgDsply.equals("]") | this.diagnosticRptIdTypCdgDsply.substring(this.diagnosticRptIdTypCdgDsply.length() - 1).equals("[")) {
+	        	this.diagnosticRptIdTypCdgDsply = this.diagnosticRptIdTypCdgDsply+diagnosticRptIdTypCdgDsply;
+	        } else  {
+	            this.diagnosticRptIdTypCdgDsply = this.diagnosticRptIdTypCdgDsply+ "," +diagnosticRptIdTypCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getDiagnosticRptIdTypCdgSys() {
@@ -386,6 +820,20 @@ public class DiagnosticReport  implements java.io.Serializable {
     
     public void setDiagnosticRptIdTypCdgSys(String diagnosticRptIdTypCdgSys) {
         this.diagnosticRptIdTypCdgSys = diagnosticRptIdTypCdgSys;
+    }
+    
+    public void addDiagnosticRptIdTypCdgSys(String diagnosticRptIdTypCdgSys) {
+    	if( diagnosticRptIdTypCdgSys != null ) {
+	    	if( this.diagnosticRptIdTypCdgSys == null ) {
+	        	this.diagnosticRptIdTypCdgSys = diagnosticRptIdTypCdgSys;
+	        } else if(this.diagnosticRptIdTypCdgSys.substring(this.diagnosticRptIdTypCdgSys.length() - 1).equals("]") & diagnosticRptIdTypCdgSys.equals("[")) {
+	        	this.diagnosticRptIdTypCdgSys = this.diagnosticRptIdTypCdgSys+ "," + diagnosticRptIdTypCdgSys;
+	        } else if(diagnosticRptIdTypCdgSys.equals("[") | diagnosticRptIdTypCdgSys.equals("]") | this.diagnosticRptIdTypCdgSys.substring(this.diagnosticRptIdTypCdgSys.length() - 1).equals("[")) {
+	        	this.diagnosticRptIdTypCdgSys = this.diagnosticRptIdTypCdgSys+diagnosticRptIdTypCdgSys;
+	        } else  {
+	            this.diagnosticRptIdTypCdgSys = this.diagnosticRptIdTypCdgSys+ "," +diagnosticRptIdTypCdgSys;
+	        }
+        }
     }
     
     
@@ -398,6 +846,20 @@ public class DiagnosticReport  implements java.io.Serializable {
         this.diagnosticRptIdTypCdgUsrSltd = diagnosticRptIdTypCdgUsrSltd;
     }
     
+    public void addDiagnosticRptIdTypCdgUsrSltd(String diagnosticRptIdTypCdgUsrSltd) {
+    	if( diagnosticRptIdTypCdgUsrSltd != null ) {
+	    	if( this.diagnosticRptIdTypCdgUsrSltd == null ) {
+	        	this.diagnosticRptIdTypCdgUsrSltd = diagnosticRptIdTypCdgUsrSltd;
+	        } else if(this.diagnosticRptIdTypCdgUsrSltd.substring(this.diagnosticRptIdTypCdgUsrSltd.length() - 1).equals("]") & diagnosticRptIdTypCdgUsrSltd.equals("[")) {
+	        	this.diagnosticRptIdTypCdgUsrSltd = this.diagnosticRptIdTypCdgUsrSltd+ "," + diagnosticRptIdTypCdgUsrSltd;
+	        } else if(diagnosticRptIdTypCdgUsrSltd.equals("[") | diagnosticRptIdTypCdgUsrSltd.equals("]") | this.diagnosticRptIdTypCdgUsrSltd.substring(this.diagnosticRptIdTypCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.diagnosticRptIdTypCdgUsrSltd = this.diagnosticRptIdTypCdgUsrSltd+diagnosticRptIdTypCdgUsrSltd;
+	        } else  {
+	            this.diagnosticRptIdTypCdgUsrSltd = this.diagnosticRptIdTypCdgUsrSltd+ "," +diagnosticRptIdTypCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getDiagnosticRptIdTypCdgVrsn() {
@@ -406,6 +868,20 @@ public class DiagnosticReport  implements java.io.Serializable {
     
     public void setDiagnosticRptIdTypCdgVrsn(String diagnosticRptIdTypCdgVrsn) {
         this.diagnosticRptIdTypCdgVrsn = diagnosticRptIdTypCdgVrsn;
+    }
+    
+    public void addDiagnosticRptIdTypCdgVrsn(String diagnosticRptIdTypCdgVrsn) {
+    	if( diagnosticRptIdTypCdgVrsn != null ) {
+	    	if( this.diagnosticRptIdTypCdgVrsn == null ) {
+	        	this.diagnosticRptIdTypCdgVrsn = diagnosticRptIdTypCdgVrsn;
+	        } else if(this.diagnosticRptIdTypCdgVrsn.substring(this.diagnosticRptIdTypCdgVrsn.length() - 1).equals("]") & diagnosticRptIdTypCdgVrsn.equals("[")) {
+	        	this.diagnosticRptIdTypCdgVrsn = this.diagnosticRptIdTypCdgVrsn+ "," + diagnosticRptIdTypCdgVrsn;
+	        } else if(diagnosticRptIdTypCdgVrsn.equals("[") | diagnosticRptIdTypCdgVrsn.equals("]") | this.diagnosticRptIdTypCdgVrsn.substring(this.diagnosticRptIdTypCdgVrsn.length() - 1).equals("[")) {
+	        	this.diagnosticRptIdTypCdgVrsn = this.diagnosticRptIdTypCdgVrsn+diagnosticRptIdTypCdgVrsn;
+	        } else  {
+	            this.diagnosticRptIdTypCdgVrsn = this.diagnosticRptIdTypCdgVrsn+ "," +diagnosticRptIdTypCdgVrsn;
+	        }
+        }
     }
     
     
@@ -418,6 +894,20 @@ public class DiagnosticReport  implements java.io.Serializable {
         this.diagnosticRptIdTypTxt = diagnosticRptIdTypTxt;
     }
     
+    public void addDiagnosticRptIdTypTxt(String diagnosticRptIdTypTxt) {
+    	if( diagnosticRptIdTypTxt != null ) {
+	    	if( this.diagnosticRptIdTypTxt == null ) {
+	        	this.diagnosticRptIdTypTxt = diagnosticRptIdTypTxt;
+	        } else if(this.diagnosticRptIdTypTxt.substring(this.diagnosticRptIdTypTxt.length() - 1).equals("]") & diagnosticRptIdTypTxt.equals("[")) {
+	        	this.diagnosticRptIdTypTxt = this.diagnosticRptIdTypTxt+ "," + diagnosticRptIdTypTxt;
+	        } else if(diagnosticRptIdTypTxt.equals("[") | diagnosticRptIdTypTxt.equals("]") | this.diagnosticRptIdTypTxt.substring(this.diagnosticRptIdTypTxt.length() - 1).equals("[")) {
+	        	this.diagnosticRptIdTypTxt = this.diagnosticRptIdTypTxt+diagnosticRptIdTypTxt;
+	        } else  {
+	            this.diagnosticRptIdTypTxt = this.diagnosticRptIdTypTxt+ "," +diagnosticRptIdTypTxt;
+	        }
+        }
+    }
+    
     
     
     public String getDiagnosticRptIdUse() {
@@ -426,6 +916,20 @@ public class DiagnosticReport  implements java.io.Serializable {
     
     public void setDiagnosticRptIdUse(String diagnosticRptIdUse) {
         this.diagnosticRptIdUse = diagnosticRptIdUse;
+    }
+    
+    public void addDiagnosticRptIdUse(String diagnosticRptIdUse) {
+    	if( diagnosticRptIdUse != null ) {
+	    	if( this.diagnosticRptIdUse == null ) {
+	        	this.diagnosticRptIdUse = diagnosticRptIdUse;
+	        } else if(this.diagnosticRptIdUse.substring(this.diagnosticRptIdUse.length() - 1).equals("]") & diagnosticRptIdUse.equals("[")) {
+	        	this.diagnosticRptIdUse = this.diagnosticRptIdUse+ "," + diagnosticRptIdUse;
+	        } else if(diagnosticRptIdUse.equals("[") | diagnosticRptIdUse.equals("]") | this.diagnosticRptIdUse.substring(this.diagnosticRptIdUse.length() - 1).equals("[")) {
+	        	this.diagnosticRptIdUse = this.diagnosticRptIdUse+diagnosticRptIdUse;
+	        } else  {
+	            this.diagnosticRptIdUse = this.diagnosticRptIdUse+ "," +diagnosticRptIdUse;
+	        }
+        }
     }
     
     
@@ -438,6 +942,20 @@ public class DiagnosticReport  implements java.io.Serializable {
         this.diagnosticRptIdVl = diagnosticRptIdVl;
     }
     
+    public void addDiagnosticRptIdVl(String diagnosticRptIdVl) {
+    	if( diagnosticRptIdVl != null ) {
+	    	if( this.diagnosticRptIdVl == null ) {
+	        	this.diagnosticRptIdVl = diagnosticRptIdVl;
+	        } else if(this.diagnosticRptIdVl.substring(this.diagnosticRptIdVl.length() - 1).equals("]") & diagnosticRptIdVl.equals("[")) {
+	        	this.diagnosticRptIdVl = this.diagnosticRptIdVl+ "," + diagnosticRptIdVl;
+	        } else if(diagnosticRptIdVl.equals("[") | diagnosticRptIdVl.equals("]") | this.diagnosticRptIdVl.substring(this.diagnosticRptIdVl.length() - 1).equals("[")) {
+	        	this.diagnosticRptIdVl = this.diagnosticRptIdVl+diagnosticRptIdVl;
+	        } else  {
+	            this.diagnosticRptIdVl = this.diagnosticRptIdVl+ "," +diagnosticRptIdVl;
+	        }
+        }
+    }
+    
     
     
     public String getDiagnosticRptImgngStdy() {
@@ -446,6 +964,20 @@ public class DiagnosticReport  implements java.io.Serializable {
     
     public void setDiagnosticRptImgngStdy(String diagnosticRptImgngStdy) {
         this.diagnosticRptImgngStdy = diagnosticRptImgngStdy;
+    }
+    
+    public void addDiagnosticRptImgngStdy(String diagnosticRptImgngStdy) {
+    	if( diagnosticRptImgngStdy != null ) {
+	    	if( this.diagnosticRptImgngStdy == null ) {
+	        	this.diagnosticRptImgngStdy = diagnosticRptImgngStdy;
+	        } else if(this.diagnosticRptImgngStdy.substring(this.diagnosticRptImgngStdy.length() - 1).equals("]") & diagnosticRptImgngStdy.equals("[")) {
+	        	this.diagnosticRptImgngStdy = this.diagnosticRptImgngStdy+ "," + diagnosticRptImgngStdy;
+	        } else if(diagnosticRptImgngStdy.equals("[") | diagnosticRptImgngStdy.equals("]") | this.diagnosticRptImgngStdy.substring(this.diagnosticRptImgngStdy.length() - 1).equals("[")) {
+	        	this.diagnosticRptImgngStdy = this.diagnosticRptImgngStdy+diagnosticRptImgngStdy;
+	        } else  {
+	            this.diagnosticRptImgngStdy = this.diagnosticRptImgngStdy+ "," +diagnosticRptImgngStdy;
+	        }
+        }
     }
     
     
@@ -458,6 +990,20 @@ public class DiagnosticReport  implements java.io.Serializable {
         this.diagnosticRptIssued = diagnosticRptIssued;
     }
     
+    public void addDiagnosticRptIssued(String diagnosticRptIssued) {
+    	if( diagnosticRptIssued != null ) {
+	    	if( this.diagnosticRptIssued == null ) {
+	        	this.diagnosticRptIssued = diagnosticRptIssued;
+	        } else if(this.diagnosticRptIssued.substring(this.diagnosticRptIssued.length() - 1).equals("]") & diagnosticRptIssued.equals("[")) {
+	        	this.diagnosticRptIssued = this.diagnosticRptIssued+ "," + diagnosticRptIssued;
+	        } else if(diagnosticRptIssued.equals("[") | diagnosticRptIssued.equals("]") | this.diagnosticRptIssued.substring(this.diagnosticRptIssued.length() - 1).equals("[")) {
+	        	this.diagnosticRptIssued = this.diagnosticRptIssued+diagnosticRptIssued;
+	        } else  {
+	            this.diagnosticRptIssued = this.diagnosticRptIssued+ "," +diagnosticRptIssued;
+	        }
+        }
+    }
+    
     
     
     public String getDiagnosticRptMediaComment() {
@@ -466,6 +1012,20 @@ public class DiagnosticReport  implements java.io.Serializable {
     
     public void setDiagnosticRptMediaComment(String diagnosticRptMediaComment) {
         this.diagnosticRptMediaComment = diagnosticRptMediaComment;
+    }
+    
+    public void addDiagnosticRptMediaComment(String diagnosticRptMediaComment) {
+    	if( diagnosticRptMediaComment != null ) {
+	    	if( this.diagnosticRptMediaComment == null ) {
+	        	this.diagnosticRptMediaComment = diagnosticRptMediaComment;
+	        } else if(this.diagnosticRptMediaComment.substring(this.diagnosticRptMediaComment.length() - 1).equals("]") & diagnosticRptMediaComment.equals("[")) {
+	        	this.diagnosticRptMediaComment = this.diagnosticRptMediaComment+ "," + diagnosticRptMediaComment;
+	        } else if(diagnosticRptMediaComment.equals("[") | diagnosticRptMediaComment.equals("]") | this.diagnosticRptMediaComment.substring(this.diagnosticRptMediaComment.length() - 1).equals("[")) {
+	        	this.diagnosticRptMediaComment = this.diagnosticRptMediaComment+diagnosticRptMediaComment;
+	        } else  {
+	            this.diagnosticRptMediaComment = this.diagnosticRptMediaComment+ "," +diagnosticRptMediaComment;
+	        }
+        }
     }
     
     
@@ -478,6 +1038,20 @@ public class DiagnosticReport  implements java.io.Serializable {
         this.diagnosticRptMediaLink = diagnosticRptMediaLink;
     }
     
+    public void addDiagnosticRptMediaLink(String diagnosticRptMediaLink) {
+    	if( diagnosticRptMediaLink != null ) {
+	    	if( this.diagnosticRptMediaLink == null ) {
+	        	this.diagnosticRptMediaLink = diagnosticRptMediaLink;
+	        } else if(this.diagnosticRptMediaLink.substring(this.diagnosticRptMediaLink.length() - 1).equals("]") & diagnosticRptMediaLink.equals("[")) {
+	        	this.diagnosticRptMediaLink = this.diagnosticRptMediaLink+ "," + diagnosticRptMediaLink;
+	        } else if(diagnosticRptMediaLink.equals("[") | diagnosticRptMediaLink.equals("]") | this.diagnosticRptMediaLink.substring(this.diagnosticRptMediaLink.length() - 1).equals("[")) {
+	        	this.diagnosticRptMediaLink = this.diagnosticRptMediaLink+diagnosticRptMediaLink;
+	        } else  {
+	            this.diagnosticRptMediaLink = this.diagnosticRptMediaLink+ "," +diagnosticRptMediaLink;
+	        }
+        }
+    }
+    
     
     
     public String getDiagnosticRptPrfrmr() {
@@ -486,6 +1060,20 @@ public class DiagnosticReport  implements java.io.Serializable {
     
     public void setDiagnosticRptPrfrmr(String diagnosticRptPrfrmr) {
         this.diagnosticRptPrfrmr = diagnosticRptPrfrmr;
+    }
+    
+    public void addDiagnosticRptPrfrmr(String diagnosticRptPrfrmr) {
+    	if( diagnosticRptPrfrmr != null ) {
+	    	if( this.diagnosticRptPrfrmr == null ) {
+	        	this.diagnosticRptPrfrmr = diagnosticRptPrfrmr;
+	        } else if(this.diagnosticRptPrfrmr.substring(this.diagnosticRptPrfrmr.length() - 1).equals("]") & diagnosticRptPrfrmr.equals("[")) {
+	        	this.diagnosticRptPrfrmr = this.diagnosticRptPrfrmr+ "," + diagnosticRptPrfrmr;
+	        } else if(diagnosticRptPrfrmr.equals("[") | diagnosticRptPrfrmr.equals("]") | this.diagnosticRptPrfrmr.substring(this.diagnosticRptPrfrmr.length() - 1).equals("[")) {
+	        	this.diagnosticRptPrfrmr = this.diagnosticRptPrfrmr+diagnosticRptPrfrmr;
+	        } else  {
+	            this.diagnosticRptPrfrmr = this.diagnosticRptPrfrmr+ "," +diagnosticRptPrfrmr;
+	        }
+        }
     }
     
     
@@ -498,6 +1086,20 @@ public class DiagnosticReport  implements java.io.Serializable {
         this.diagnosticRptPresentedFrmCntntTyp = diagnosticRptPresentedFrmCntntTyp;
     }
     
+    public void addDiagnosticRptPresentedFrmCntntTyp(String diagnosticRptPresentedFrmCntntTyp) {
+    	if( diagnosticRptPresentedFrmCntntTyp != null ) {
+	    	if( this.diagnosticRptPresentedFrmCntntTyp == null ) {
+	        	this.diagnosticRptPresentedFrmCntntTyp = diagnosticRptPresentedFrmCntntTyp;
+	        } else if(this.diagnosticRptPresentedFrmCntntTyp.substring(this.diagnosticRptPresentedFrmCntntTyp.length() - 1).equals("]") & diagnosticRptPresentedFrmCntntTyp.equals("[")) {
+	        	this.diagnosticRptPresentedFrmCntntTyp = this.diagnosticRptPresentedFrmCntntTyp+ "," + diagnosticRptPresentedFrmCntntTyp;
+	        } else if(diagnosticRptPresentedFrmCntntTyp.equals("[") | diagnosticRptPresentedFrmCntntTyp.equals("]") | this.diagnosticRptPresentedFrmCntntTyp.substring(this.diagnosticRptPresentedFrmCntntTyp.length() - 1).equals("[")) {
+	        	this.diagnosticRptPresentedFrmCntntTyp = this.diagnosticRptPresentedFrmCntntTyp+diagnosticRptPresentedFrmCntntTyp;
+	        } else  {
+	            this.diagnosticRptPresentedFrmCntntTyp = this.diagnosticRptPresentedFrmCntntTyp+ "," +diagnosticRptPresentedFrmCntntTyp;
+	        }
+        }
+    }
+    
     
     
     public String getDiagnosticRptPresentedFrmCreation() {
@@ -506,6 +1108,20 @@ public class DiagnosticReport  implements java.io.Serializable {
     
     public void setDiagnosticRptPresentedFrmCreation(String diagnosticRptPresentedFrmCreation) {
         this.diagnosticRptPresentedFrmCreation = diagnosticRptPresentedFrmCreation;
+    }
+    
+    public void addDiagnosticRptPresentedFrmCreation(String diagnosticRptPresentedFrmCreation) {
+    	if( diagnosticRptPresentedFrmCreation != null ) {
+	    	if( this.diagnosticRptPresentedFrmCreation == null ) {
+	        	this.diagnosticRptPresentedFrmCreation = diagnosticRptPresentedFrmCreation;
+	        } else if(this.diagnosticRptPresentedFrmCreation.substring(this.diagnosticRptPresentedFrmCreation.length() - 1).equals("]") & diagnosticRptPresentedFrmCreation.equals("[")) {
+	        	this.diagnosticRptPresentedFrmCreation = this.diagnosticRptPresentedFrmCreation+ "," + diagnosticRptPresentedFrmCreation;
+	        } else if(diagnosticRptPresentedFrmCreation.equals("[") | diagnosticRptPresentedFrmCreation.equals("]") | this.diagnosticRptPresentedFrmCreation.substring(this.diagnosticRptPresentedFrmCreation.length() - 1).equals("[")) {
+	        	this.diagnosticRptPresentedFrmCreation = this.diagnosticRptPresentedFrmCreation+diagnosticRptPresentedFrmCreation;
+	        } else  {
+	            this.diagnosticRptPresentedFrmCreation = this.diagnosticRptPresentedFrmCreation+ "," +diagnosticRptPresentedFrmCreation;
+	        }
+        }
     }
     
     
@@ -518,6 +1134,20 @@ public class DiagnosticReport  implements java.io.Serializable {
         this.diagnosticRptPresentedFrmData = diagnosticRptPresentedFrmData;
     }
     
+    public void addDiagnosticRptPresentedFrmData(String diagnosticRptPresentedFrmData) {
+    	if( diagnosticRptPresentedFrmData != null ) {
+	    	if( this.diagnosticRptPresentedFrmData == null ) {
+	        	this.diagnosticRptPresentedFrmData = diagnosticRptPresentedFrmData;
+	        } else if(this.diagnosticRptPresentedFrmData.substring(this.diagnosticRptPresentedFrmData.length() - 1).equals("]") & diagnosticRptPresentedFrmData.equals("[")) {
+	        	this.diagnosticRptPresentedFrmData = this.diagnosticRptPresentedFrmData+ "," + diagnosticRptPresentedFrmData;
+	        } else if(diagnosticRptPresentedFrmData.equals("[") | diagnosticRptPresentedFrmData.equals("]") | this.diagnosticRptPresentedFrmData.substring(this.diagnosticRptPresentedFrmData.length() - 1).equals("[")) {
+	        	this.diagnosticRptPresentedFrmData = this.diagnosticRptPresentedFrmData+diagnosticRptPresentedFrmData;
+	        } else  {
+	            this.diagnosticRptPresentedFrmData = this.diagnosticRptPresentedFrmData+ "," +diagnosticRptPresentedFrmData;
+	        }
+        }
+    }
+    
     
     
     public String getDiagnosticRptPresentedFrmHash() {
@@ -526,6 +1156,20 @@ public class DiagnosticReport  implements java.io.Serializable {
     
     public void setDiagnosticRptPresentedFrmHash(String diagnosticRptPresentedFrmHash) {
         this.diagnosticRptPresentedFrmHash = diagnosticRptPresentedFrmHash;
+    }
+    
+    public void addDiagnosticRptPresentedFrmHash(String diagnosticRptPresentedFrmHash) {
+    	if( diagnosticRptPresentedFrmHash != null ) {
+	    	if( this.diagnosticRptPresentedFrmHash == null ) {
+	        	this.diagnosticRptPresentedFrmHash = diagnosticRptPresentedFrmHash;
+	        } else if(this.diagnosticRptPresentedFrmHash.substring(this.diagnosticRptPresentedFrmHash.length() - 1).equals("]") & diagnosticRptPresentedFrmHash.equals("[")) {
+	        	this.diagnosticRptPresentedFrmHash = this.diagnosticRptPresentedFrmHash+ "," + diagnosticRptPresentedFrmHash;
+	        } else if(diagnosticRptPresentedFrmHash.equals("[") | diagnosticRptPresentedFrmHash.equals("]") | this.diagnosticRptPresentedFrmHash.substring(this.diagnosticRptPresentedFrmHash.length() - 1).equals("[")) {
+	        	this.diagnosticRptPresentedFrmHash = this.diagnosticRptPresentedFrmHash+diagnosticRptPresentedFrmHash;
+	        } else  {
+	            this.diagnosticRptPresentedFrmHash = this.diagnosticRptPresentedFrmHash+ "," +diagnosticRptPresentedFrmHash;
+	        }
+        }
     }
     
     
@@ -538,6 +1182,20 @@ public class DiagnosticReport  implements java.io.Serializable {
         this.diagnosticRptPresentedFrmLnguage = diagnosticRptPresentedFrmLnguage;
     }
     
+    public void addDiagnosticRptPresentedFrmLnguage(String diagnosticRptPresentedFrmLnguage) {
+    	if( diagnosticRptPresentedFrmLnguage != null ) {
+	    	if( this.diagnosticRptPresentedFrmLnguage == null ) {
+	        	this.diagnosticRptPresentedFrmLnguage = diagnosticRptPresentedFrmLnguage;
+	        } else if(this.diagnosticRptPresentedFrmLnguage.substring(this.diagnosticRptPresentedFrmLnguage.length() - 1).equals("]") & diagnosticRptPresentedFrmLnguage.equals("[")) {
+	        	this.diagnosticRptPresentedFrmLnguage = this.diagnosticRptPresentedFrmLnguage+ "," + diagnosticRptPresentedFrmLnguage;
+	        } else if(diagnosticRptPresentedFrmLnguage.equals("[") | diagnosticRptPresentedFrmLnguage.equals("]") | this.diagnosticRptPresentedFrmLnguage.substring(this.diagnosticRptPresentedFrmLnguage.length() - 1).equals("[")) {
+	        	this.diagnosticRptPresentedFrmLnguage = this.diagnosticRptPresentedFrmLnguage+diagnosticRptPresentedFrmLnguage;
+	        } else  {
+	            this.diagnosticRptPresentedFrmLnguage = this.diagnosticRptPresentedFrmLnguage+ "," +diagnosticRptPresentedFrmLnguage;
+	        }
+        }
+    }
+    
     
     
     public String getDiagnosticRptPresentedFrmSz() {
@@ -546,6 +1204,20 @@ public class DiagnosticReport  implements java.io.Serializable {
     
     public void setDiagnosticRptPresentedFrmSz(String diagnosticRptPresentedFrmSz) {
         this.diagnosticRptPresentedFrmSz = diagnosticRptPresentedFrmSz;
+    }
+    
+    public void addDiagnosticRptPresentedFrmSz(String diagnosticRptPresentedFrmSz) {
+    	if( diagnosticRptPresentedFrmSz != null ) {
+	    	if( this.diagnosticRptPresentedFrmSz == null ) {
+	        	this.diagnosticRptPresentedFrmSz = diagnosticRptPresentedFrmSz;
+	        } else if(this.diagnosticRptPresentedFrmSz.substring(this.diagnosticRptPresentedFrmSz.length() - 1).equals("]") & diagnosticRptPresentedFrmSz.equals("[")) {
+	        	this.diagnosticRptPresentedFrmSz = this.diagnosticRptPresentedFrmSz+ "," + diagnosticRptPresentedFrmSz;
+	        } else if(diagnosticRptPresentedFrmSz.equals("[") | diagnosticRptPresentedFrmSz.equals("]") | this.diagnosticRptPresentedFrmSz.substring(this.diagnosticRptPresentedFrmSz.length() - 1).equals("[")) {
+	        	this.diagnosticRptPresentedFrmSz = this.diagnosticRptPresentedFrmSz+diagnosticRptPresentedFrmSz;
+	        } else  {
+	            this.diagnosticRptPresentedFrmSz = this.diagnosticRptPresentedFrmSz+ "," +diagnosticRptPresentedFrmSz;
+	        }
+        }
     }
     
     
@@ -558,6 +1230,20 @@ public class DiagnosticReport  implements java.io.Serializable {
         this.diagnosticRptPresentedFrmTtl = diagnosticRptPresentedFrmTtl;
     }
     
+    public void addDiagnosticRptPresentedFrmTtl(String diagnosticRptPresentedFrmTtl) {
+    	if( diagnosticRptPresentedFrmTtl != null ) {
+	    	if( this.diagnosticRptPresentedFrmTtl == null ) {
+	        	this.diagnosticRptPresentedFrmTtl = diagnosticRptPresentedFrmTtl;
+	        } else if(this.diagnosticRptPresentedFrmTtl.substring(this.diagnosticRptPresentedFrmTtl.length() - 1).equals("]") & diagnosticRptPresentedFrmTtl.equals("[")) {
+	        	this.diagnosticRptPresentedFrmTtl = this.diagnosticRptPresentedFrmTtl+ "," + diagnosticRptPresentedFrmTtl;
+	        } else if(diagnosticRptPresentedFrmTtl.equals("[") | diagnosticRptPresentedFrmTtl.equals("]") | this.diagnosticRptPresentedFrmTtl.substring(this.diagnosticRptPresentedFrmTtl.length() - 1).equals("[")) {
+	        	this.diagnosticRptPresentedFrmTtl = this.diagnosticRptPresentedFrmTtl+diagnosticRptPresentedFrmTtl;
+	        } else  {
+	            this.diagnosticRptPresentedFrmTtl = this.diagnosticRptPresentedFrmTtl+ "," +diagnosticRptPresentedFrmTtl;
+	        }
+        }
+    }
+    
     
     
     public String getDiagnosticRptPresentedFrmUrl() {
@@ -566,6 +1252,20 @@ public class DiagnosticReport  implements java.io.Serializable {
     
     public void setDiagnosticRptPresentedFrmUrl(String diagnosticRptPresentedFrmUrl) {
         this.diagnosticRptPresentedFrmUrl = diagnosticRptPresentedFrmUrl;
+    }
+    
+    public void addDiagnosticRptPresentedFrmUrl(String diagnosticRptPresentedFrmUrl) {
+    	if( diagnosticRptPresentedFrmUrl != null ) {
+	    	if( this.diagnosticRptPresentedFrmUrl == null ) {
+	        	this.diagnosticRptPresentedFrmUrl = diagnosticRptPresentedFrmUrl;
+	        } else if(this.diagnosticRptPresentedFrmUrl.substring(this.diagnosticRptPresentedFrmUrl.length() - 1).equals("]") & diagnosticRptPresentedFrmUrl.equals("[")) {
+	        	this.diagnosticRptPresentedFrmUrl = this.diagnosticRptPresentedFrmUrl+ "," + diagnosticRptPresentedFrmUrl;
+	        } else if(diagnosticRptPresentedFrmUrl.equals("[") | diagnosticRptPresentedFrmUrl.equals("]") | this.diagnosticRptPresentedFrmUrl.substring(this.diagnosticRptPresentedFrmUrl.length() - 1).equals("[")) {
+	        	this.diagnosticRptPresentedFrmUrl = this.diagnosticRptPresentedFrmUrl+diagnosticRptPresentedFrmUrl;
+	        } else  {
+	            this.diagnosticRptPresentedFrmUrl = this.diagnosticRptPresentedFrmUrl+ "," +diagnosticRptPresentedFrmUrl;
+	        }
+        }
     }
     
     
@@ -578,6 +1278,20 @@ public class DiagnosticReport  implements java.io.Serializable {
         this.diagnosticRptRslt = diagnosticRptRslt;
     }
     
+    public void addDiagnosticRptRslt(String diagnosticRptRslt) {
+    	if( diagnosticRptRslt != null ) {
+	    	if( this.diagnosticRptRslt == null ) {
+	        	this.diagnosticRptRslt = diagnosticRptRslt;
+	        } else if(this.diagnosticRptRslt.substring(this.diagnosticRptRslt.length() - 1).equals("]") & diagnosticRptRslt.equals("[")) {
+	        	this.diagnosticRptRslt = this.diagnosticRptRslt+ "," + diagnosticRptRslt;
+	        } else if(diagnosticRptRslt.equals("[") | diagnosticRptRslt.equals("]") | this.diagnosticRptRslt.substring(this.diagnosticRptRslt.length() - 1).equals("[")) {
+	        	this.diagnosticRptRslt = this.diagnosticRptRslt+diagnosticRptRslt;
+	        } else  {
+	            this.diagnosticRptRslt = this.diagnosticRptRslt+ "," +diagnosticRptRslt;
+	        }
+        }
+    }
+    
     
     
     public String getDiagnosticRptRsltsInterpreter() {
@@ -586,6 +1300,20 @@ public class DiagnosticReport  implements java.io.Serializable {
     
     public void setDiagnosticRptRsltsInterpreter(String diagnosticRptRsltsInterpreter) {
         this.diagnosticRptRsltsInterpreter = diagnosticRptRsltsInterpreter;
+    }
+    
+    public void addDiagnosticRptRsltsInterpreter(String diagnosticRptRsltsInterpreter) {
+    	if( diagnosticRptRsltsInterpreter != null ) {
+	    	if( this.diagnosticRptRsltsInterpreter == null ) {
+	        	this.diagnosticRptRsltsInterpreter = diagnosticRptRsltsInterpreter;
+	        } else if(this.diagnosticRptRsltsInterpreter.substring(this.diagnosticRptRsltsInterpreter.length() - 1).equals("]") & diagnosticRptRsltsInterpreter.equals("[")) {
+	        	this.diagnosticRptRsltsInterpreter = this.diagnosticRptRsltsInterpreter+ "," + diagnosticRptRsltsInterpreter;
+	        } else if(diagnosticRptRsltsInterpreter.equals("[") | diagnosticRptRsltsInterpreter.equals("]") | this.diagnosticRptRsltsInterpreter.substring(this.diagnosticRptRsltsInterpreter.length() - 1).equals("[")) {
+	        	this.diagnosticRptRsltsInterpreter = this.diagnosticRptRsltsInterpreter+diagnosticRptRsltsInterpreter;
+	        } else  {
+	            this.diagnosticRptRsltsInterpreter = this.diagnosticRptRsltsInterpreter+ "," +diagnosticRptRsltsInterpreter;
+	        }
+        }
     }
     
     
@@ -598,6 +1326,20 @@ public class DiagnosticReport  implements java.io.Serializable {
         this.diagnosticRptSpcmn = diagnosticRptSpcmn;
     }
     
+    public void addDiagnosticRptSpcmn(String diagnosticRptSpcmn) {
+    	if( diagnosticRptSpcmn != null ) {
+	    	if( this.diagnosticRptSpcmn == null ) {
+	        	this.diagnosticRptSpcmn = diagnosticRptSpcmn;
+	        } else if(this.diagnosticRptSpcmn.substring(this.diagnosticRptSpcmn.length() - 1).equals("]") & diagnosticRptSpcmn.equals("[")) {
+	        	this.diagnosticRptSpcmn = this.diagnosticRptSpcmn+ "," + diagnosticRptSpcmn;
+	        } else if(diagnosticRptSpcmn.equals("[") | diagnosticRptSpcmn.equals("]") | this.diagnosticRptSpcmn.substring(this.diagnosticRptSpcmn.length() - 1).equals("[")) {
+	        	this.diagnosticRptSpcmn = this.diagnosticRptSpcmn+diagnosticRptSpcmn;
+	        } else  {
+	            this.diagnosticRptSpcmn = this.diagnosticRptSpcmn+ "," +diagnosticRptSpcmn;
+	        }
+        }
+    }
+    
     
     
     public String getDiagnosticRptSts() {
@@ -608,6 +1350,20 @@ public class DiagnosticReport  implements java.io.Serializable {
         this.diagnosticRptSts = diagnosticRptSts;
     }
     
+    public void addDiagnosticRptSts(String diagnosticRptSts) {
+    	if( diagnosticRptSts != null ) {
+	    	if( this.diagnosticRptSts == null ) {
+	        	this.diagnosticRptSts = diagnosticRptSts;
+	        } else if(this.diagnosticRptSts.substring(this.diagnosticRptSts.length() - 1).equals("]") & diagnosticRptSts.equals("[")) {
+	        	this.diagnosticRptSts = this.diagnosticRptSts+ "," + diagnosticRptSts;
+	        } else if(diagnosticRptSts.equals("[") | diagnosticRptSts.equals("]") | this.diagnosticRptSts.substring(this.diagnosticRptSts.length() - 1).equals("[")) {
+	        	this.diagnosticRptSts = this.diagnosticRptSts+diagnosticRptSts;
+	        } else  {
+	            this.diagnosticRptSts = this.diagnosticRptSts+ "," +diagnosticRptSts;
+	        }
+        }
+    }
+    
     
     
     public String getDiagnosticRptSbjct() {
@@ -616,6 +1372,20 @@ public class DiagnosticReport  implements java.io.Serializable {
     
     public void setDiagnosticRptSbjct(String diagnosticRptSbjct) {
         this.diagnosticRptSbjct = diagnosticRptSbjct;
+    }
+    
+    public void addDiagnosticRptSbjct(String diagnosticRptSbjct) {
+    	if( diagnosticRptSbjct != null ) {
+	    	if( this.diagnosticRptSbjct == null ) {
+	        	this.diagnosticRptSbjct = diagnosticRptSbjct;
+	        } else if(this.diagnosticRptSbjct.substring(this.diagnosticRptSbjct.length() - 1).equals("]") & diagnosticRptSbjct.equals("[")) {
+	        	this.diagnosticRptSbjct = this.diagnosticRptSbjct+ "," + diagnosticRptSbjct;
+	        } else if(diagnosticRptSbjct.equals("[") | diagnosticRptSbjct.equals("]") | this.diagnosticRptSbjct.substring(this.diagnosticRptSbjct.length() - 1).equals("[")) {
+	        	this.diagnosticRptSbjct = this.diagnosticRptSbjct+diagnosticRptSbjct;
+	        } else  {
+	            this.diagnosticRptSbjct = this.diagnosticRptSbjct+ "," +diagnosticRptSbjct;
+	        }
+        }
     }
     
     

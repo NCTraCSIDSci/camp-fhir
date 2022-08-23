@@ -11,1097 +11,2826 @@ public class MedicinalProductIngredientConversion
 		medicinalproductingredient.setId(m.getId());
 
 		/******************** MdcnlPrdctIgrdnt_AllergenicIndicator ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntAllergenicIndicator() != null) {
-			medicinalproductingredient.setAllergenicIndicator(Boolean.parseBoolean(m.getMdcnlPrdctIgrdntAllergenicIndicator()));
-		}
-		/******************** medicinalproductingredientidentifier ********************************************************************************/
-		org.hl7.fhir.r4.model.Identifier medicinalproductingredientidentifier =  new org.hl7.fhir.r4.model.Identifier();
-		medicinalproductingredient.setIdentifier(medicinalproductingredientidentifier);
+		if(m.getMdcnlPrdctIgrdntAllergenicIndicator() != null ) {
 
+			if(m.getMdcnlPrdctIgrdntAllergenicIndicator().replace("[","").replace("]","").equals("NULL") | m.getMdcnlPrdctIgrdntAllergenicIndicator()==null) {} else {
+			medicinalproductingredient.setAllergenicIndicator(Boolean.parseBoolean(m.getMdcnlPrdctIgrdntAllergenicIndicator().replace("[","").replace("]","").replace("\"","")));
+			}
+		}
 		/******************** MdcnlPrdctIgrdnt_Id_Assigner ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntIdAssigner() != null) {
-			medicinalproductingredientidentifier.setAssigner( new org.hl7.fhir.r4.model.Reference(m.getMdcnlPrdctIgrdntIdAssigner()));
-		}
-		/******************** medicinalproductingredientidentifierperiod ********************************************************************************/
-		org.hl7.fhir.r4.model.Period medicinalproductingredientidentifierperiod =  new org.hl7.fhir.r4.model.Period();
-		medicinalproductingredientidentifier.setPeriod(medicinalproductingredientidentifierperiod);
+		if(m.getMdcnlPrdctIgrdntIdAssigner() != null ) {
 
+			if(m.getMdcnlPrdctIgrdntIdAssigner().replace("[","").replace("]","").equals("NULL") | m.getMdcnlPrdctIgrdntIdAssigner()==null) {} else {
+			medicinalproductingredient.getIdentifier().setAssigner(new org.hl7.fhir.r4.model.Reference(m.getMdcnlPrdctIgrdntIdAssigner().replace("[","").replace("]","").replace("\"","")));
+			}
+		}
 		/******************** MdcnlPrdctIgrdnt_Id_Prd_End ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntIdPrdEnd() != null) {
-			java.text.SimpleDateFormat MdcnlPrdctIgrdnt_Id_Prd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date MdcnlPrdctIgrdnt_Id_Prd_Enddate = MdcnlPrdctIgrdnt_Id_Prd_Endsdf.parse(m.getMdcnlPrdctIgrdntIdPrdEnd());
-			medicinalproductingredientidentifierperiod.setEnd(MdcnlPrdctIgrdnt_Id_Prd_Enddate);
+		if(m.getMdcnlPrdctIgrdntIdPrdEnd() != null ) {
+
+			if(m.getMdcnlPrdctIgrdntIdPrdEnd().replace("[","").replace("]","").equals("NULL") | m.getMdcnlPrdctIgrdntIdPrdEnd()==null) {} else {
+			medicinalproductingredient.getIdentifier().getPeriod().setEnd(m.getMdcnlPrdctIgrdntIdPrdEnd().replace("[","").replace("]","").equals("NULL") | m.getMdcnlPrdctIgrdntIdPrdEnd()==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(m.getMdcnlPrdctIgrdntIdPrdEnd().replace("[","").replace("]","").replace("\"","")));
+			}
 		}
 		/******************** MdcnlPrdctIgrdnt_Id_Prd_Strt ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntIdPrdStrt() != null) {
-			java.text.SimpleDateFormat MdcnlPrdctIgrdnt_Id_Prd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date MdcnlPrdctIgrdnt_Id_Prd_Strtdate = MdcnlPrdctIgrdnt_Id_Prd_Strtsdf.parse(m.getMdcnlPrdctIgrdntIdPrdStrt());
-			medicinalproductingredientidentifierperiod.setStart(MdcnlPrdctIgrdnt_Id_Prd_Strtdate);
+		if(m.getMdcnlPrdctIgrdntIdPrdStrt() != null ) {
+
+			if(m.getMdcnlPrdctIgrdntIdPrdStrt().replace("[","").replace("]","").equals("NULL") | m.getMdcnlPrdctIgrdntIdPrdStrt()==null) {} else {
+			medicinalproductingredient.getIdentifier().getPeriod().setStart(m.getMdcnlPrdctIgrdntIdPrdStrt().replace("[","").replace("]","").equals("NULL") | m.getMdcnlPrdctIgrdntIdPrdStrt()==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(m.getMdcnlPrdctIgrdntIdPrdStrt().replace("[","").replace("]","").replace("\"","")));
+			}
 		}
 		/******************** MdcnlPrdctIgrdnt_Id_Sys ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntIdSys() != null) {
-			medicinalproductingredientidentifier.setSystem(m.getMdcnlPrdctIgrdntIdSys());
+		if(m.getMdcnlPrdctIgrdntIdSys() != null ) {
+
+			if(m.getMdcnlPrdctIgrdntIdSys().replace("[","").replace("]","").equals("NULL") | m.getMdcnlPrdctIgrdntIdSys()==null) {} else {
+			medicinalproductingredient.getIdentifier().setSystem(m.getMdcnlPrdctIgrdntIdSys().replace("[","").replace("]","").replace("\"",""));
+			}
 		}
-		/******************** medicinalproductingredientidentifiertype ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept medicinalproductingredientidentifiertype =  new org.hl7.fhir.r4.model.CodeableConcept();
-		medicinalproductingredientidentifier.setType(medicinalproductingredientidentifiertype);
-
-		/******************** medicinalproductingredientidentifiertypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding medicinalproductingredientidentifiertypecoding =  new org.hl7.fhir.r4.model.Coding();
-		medicinalproductingredientidentifiertype.addCoding(medicinalproductingredientidentifiertypecoding);
-
 		/******************** MdcnlPrdctIgrdnt_Id_Typ_Cdg_Cd ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntIdTypCdgCd() != null) {
-			medicinalproductingredientidentifiertypecoding.setCode(m.getMdcnlPrdctIgrdntIdTypCdgCd());
+		if(m.getMdcnlPrdctIgrdntIdTypCdgCd() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntIdTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getIdentifier().getType().getCoding().size() < i0+1) { medicinalproductingredient.getIdentifier().getType().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicinalproductingredient.getIdentifier().getType().getCoding().get(i0).setCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_Id_Typ_Cdg_Dsply ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntIdTypCdgDsply() != null) {
-			medicinalproductingredientidentifiertypecoding.setDisplay(m.getMdcnlPrdctIgrdntIdTypCdgDsply());
+		if(m.getMdcnlPrdctIgrdntIdTypCdgDsply() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntIdTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getIdentifier().getType().getCoding().size() < i0+1) { medicinalproductingredient.getIdentifier().getType().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicinalproductingredient.getIdentifier().getType().getCoding().get(i0).setDisplay(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_Id_Typ_Cdg_Sys ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntIdTypCdgSys() != null) {
-			medicinalproductingredientidentifiertypecoding.setSystem(m.getMdcnlPrdctIgrdntIdTypCdgSys());
+		if(m.getMdcnlPrdctIgrdntIdTypCdgSys() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntIdTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getIdentifier().getType().getCoding().size() < i0+1) { medicinalproductingredient.getIdentifier().getType().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicinalproductingredient.getIdentifier().getType().getCoding().get(i0).setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_Id_Typ_Cdg_UsrSltd ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntIdTypCdgUsrSltd() != null) {
-			medicinalproductingredientidentifiertypecoding.setUserSelected(Boolean.parseBoolean(m.getMdcnlPrdctIgrdntIdTypCdgUsrSltd()));
+		if(m.getMdcnlPrdctIgrdntIdTypCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntIdTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getIdentifier().getType().getCoding().size() < i0+1) { medicinalproductingredient.getIdentifier().getType().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicinalproductingredient.getIdentifier().getType().getCoding().get(i0).setUserSelected(Boolean.parseBoolean(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_Id_Typ_Cdg_Vrsn ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntIdTypCdgVrsn() != null) {
-			medicinalproductingredientidentifiertypecoding.setVersion(m.getMdcnlPrdctIgrdntIdTypCdgVrsn());
+		if(m.getMdcnlPrdctIgrdntIdTypCdgVrsn() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntIdTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getIdentifier().getType().getCoding().size() < i0+1) { medicinalproductingredient.getIdentifier().getType().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicinalproductingredient.getIdentifier().getType().getCoding().get(i0).setVersion(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_Id_Typ_Txt ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntIdTypTxt() != null) {
-			medicinalproductingredientidentifiertype.setText(m.getMdcnlPrdctIgrdntIdTypTxt());
-		}
-		/******************** medicinalproductingredientidentifieruse ********************************************************************************/
-		org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory medicinalproductingredientidentifieruse =  new org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory();
-		medicinalproductingredientidentifier.setUse(medicinalproductingredientidentifieruse.fromCode(m.getMdcnlPrdctIgrdntIdUse()));
+		if(m.getMdcnlPrdctIgrdntIdTypTxt() != null ) {
 
+			if(m.getMdcnlPrdctIgrdntIdTypTxt().replace("[","").replace("]","").equals("NULL") | m.getMdcnlPrdctIgrdntIdTypTxt()==null) {} else {
+			medicinalproductingredient.getIdentifier().getType().setText(m.getMdcnlPrdctIgrdntIdTypTxt().replace("[","").replace("]","").replace("\"",""));
+			}
+		}
+		/******************** MdcnlPrdctIgrdnt_Id_Use ********************************************************************************/
+		if(m.getMdcnlPrdctIgrdntIdUse() != null ) {
+
+			if(m.getMdcnlPrdctIgrdntIdUse().replace("[","").replace("]","").equals("NULL") | m.getMdcnlPrdctIgrdntIdUse()==null) {} else {
+			medicinalproductingredient.getIdentifier().setUse(new org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory().fromCode(m.getMdcnlPrdctIgrdntIdUse().replace("[","").replace("]","").replace("\"","")));
+			}
+		}
 		/******************** MdcnlPrdctIgrdnt_Id_Vl ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntIdVl() != null) {
-			medicinalproductingredientidentifier.setValue(m.getMdcnlPrdctIgrdntIdVl());
+		if(m.getMdcnlPrdctIgrdntIdVl() != null ) {
+
+			if(m.getMdcnlPrdctIgrdntIdVl().replace("[","").replace("]","").equals("NULL") | m.getMdcnlPrdctIgrdntIdVl()==null) {} else {
+			medicinalproductingredient.getIdentifier().setValue(m.getMdcnlPrdctIgrdntIdVl().replace("[","").replace("]","").replace("\"",""));
+			}
 		}
 		/******************** MdcnlPrdctIgrdnt_Manufacturer ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntManufacturer() != null) {
-			medicinalproductingredient.addManufacturer( new org.hl7.fhir.r4.model.Reference(m.getMdcnlPrdctIgrdntManufacturer()));
+		if(m.getMdcnlPrdctIgrdntManufacturer() != null ) {
+
+				for( String currListStrSplit : m.getMdcnlPrdctIgrdntManufacturer().replace("[","").replace("]","").replace("\"","").split(",")){
+			if(currListStrSplit.replace("[","").replace("]","").equals("NULL") | currListStrSplit==null) {} else {
+			medicinalproductingredient.addManufacturer(new org.hl7.fhir.r4.model.Reference(currListStrSplit.replace("[","").replace("]","").replace("\"","")));
+			}				}
+
 		}
-		/******************** medicinalproductingredientrole ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept medicinalproductingredientrole =  new org.hl7.fhir.r4.model.CodeableConcept();
-		medicinalproductingredient.setRole(medicinalproductingredientrole);
-
-		/******************** medicinalproductingredientrolecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding medicinalproductingredientrolecoding =  new org.hl7.fhir.r4.model.Coding();
-		medicinalproductingredientrole.addCoding(medicinalproductingredientrolecoding);
-
 		/******************** MdcnlPrdctIgrdnt_Role_Cdg_Cd ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntRoleCdgCd() != null) {
-			medicinalproductingredientrolecoding.setCode(m.getMdcnlPrdctIgrdntRoleCdgCd());
+		if(m.getMdcnlPrdctIgrdntRoleCdgCd() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntRoleCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getRole().getCoding().size() < i0+1) { medicinalproductingredient.getRole().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicinalproductingredient.getRole().getCoding().get(i0).setCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_Role_Cdg_Dsply ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntRoleCdgDsply() != null) {
-			medicinalproductingredientrolecoding.setDisplay(m.getMdcnlPrdctIgrdntRoleCdgDsply());
+		if(m.getMdcnlPrdctIgrdntRoleCdgDsply() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntRoleCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getRole().getCoding().size() < i0+1) { medicinalproductingredient.getRole().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicinalproductingredient.getRole().getCoding().get(i0).setDisplay(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_Role_Cdg_Sys ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntRoleCdgSys() != null) {
-			medicinalproductingredientrolecoding.setSystem(m.getMdcnlPrdctIgrdntRoleCdgSys());
+		if(m.getMdcnlPrdctIgrdntRoleCdgSys() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntRoleCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getRole().getCoding().size() < i0+1) { medicinalproductingredient.getRole().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicinalproductingredient.getRole().getCoding().get(i0).setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_Role_Cdg_UsrSltd ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntRoleCdgUsrSltd() != null) {
-			medicinalproductingredientrolecoding.setUserSelected(Boolean.parseBoolean(m.getMdcnlPrdctIgrdntRoleCdgUsrSltd()));
+		if(m.getMdcnlPrdctIgrdntRoleCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntRoleCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getRole().getCoding().size() < i0+1) { medicinalproductingredient.getRole().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicinalproductingredient.getRole().getCoding().get(i0).setUserSelected(Boolean.parseBoolean(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_Role_Cdg_Vrsn ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntRoleCdgVrsn() != null) {
-			medicinalproductingredientrolecoding.setVersion(m.getMdcnlPrdctIgrdntRoleCdgVrsn());
+		if(m.getMdcnlPrdctIgrdntRoleCdgVrsn() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntRoleCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getRole().getCoding().size() < i0+1) { medicinalproductingredient.getRole().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicinalproductingredient.getRole().getCoding().get(i0).setVersion(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_Role_Txt ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntRoleTxt() != null) {
-			medicinalproductingredientrole.setText(m.getMdcnlPrdctIgrdntRoleTxt());
+		if(m.getMdcnlPrdctIgrdntRoleTxt() != null ) {
+
+			if(m.getMdcnlPrdctIgrdntRoleTxt().replace("[","").replace("]","").equals("NULL") | m.getMdcnlPrdctIgrdntRoleTxt()==null) {} else {
+			medicinalproductingredient.getRole().setText(m.getMdcnlPrdctIgrdntRoleTxt().replace("[","").replace("]","").replace("\"",""));
+			}
 		}
-		/******************** medicinalproductingredientspecifiedsubstance ********************************************************************************/
-		org.hl7.fhir.r4.model.MedicinalProductIngredient.MedicinalProductIngredientSpecifiedSubstanceComponent medicinalproductingredientspecifiedsubstance =  new org.hl7.fhir.r4.model.MedicinalProductIngredient.MedicinalProductIngredientSpecifiedSubstanceComponent();
-		medicinalproductingredient.addSpecifiedSubstance(medicinalproductingredientspecifiedsubstance);
-
-		/******************** medicinalproductingredientspecifiedsubstancecode ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept medicinalproductingredientspecifiedsubstancecode =  new org.hl7.fhir.r4.model.CodeableConcept();
-		medicinalproductingredientspecifiedsubstance.setCode(medicinalproductingredientspecifiedsubstancecode);
-
-		/******************** medicinalproductingredientspecifiedsubstancecodecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding medicinalproductingredientspecifiedsubstancecodecoding =  new org.hl7.fhir.r4.model.Coding();
-		medicinalproductingredientspecifiedsubstancecode.addCoding(medicinalproductingredientspecifiedsubstancecodecoding);
-
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Cd_Cdg_Cd ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncCdCdgCd() != null) {
-			medicinalproductingredientspecifiedsubstancecodecoding.setCode(m.getMdcnlPrdctIgrdntSpcfdSbstncCdCdgCd());
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncCdCdgCd() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncCdCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncCdCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getCode().getCoding().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).getCode().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getCode().getCoding().get(i1).setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Cd_Cdg_Dsply ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncCdCdgDsply() != null) {
-			medicinalproductingredientspecifiedsubstancecodecoding.setDisplay(m.getMdcnlPrdctIgrdntSpcfdSbstncCdCdgDsply());
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncCdCdgDsply() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncCdCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncCdCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getCode().getCoding().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).getCode().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getCode().getCoding().get(i1).setDisplay(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Cd_Cdg_Sys ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncCdCdgSys() != null) {
-			medicinalproductingredientspecifiedsubstancecodecoding.setSystem(m.getMdcnlPrdctIgrdntSpcfdSbstncCdCdgSys());
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncCdCdgSys() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncCdCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncCdCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getCode().getCoding().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).getCode().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getCode().getCoding().get(i1).setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Cd_Cdg_UsrSltd ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncCdCdgUsrSltd() != null) {
-			medicinalproductingredientspecifiedsubstancecodecoding.setUserSelected(Boolean.parseBoolean(m.getMdcnlPrdctIgrdntSpcfdSbstncCdCdgUsrSltd()));
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncCdCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncCdCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncCdCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getCode().getCoding().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).getCode().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getCode().getCoding().get(i1).setUserSelected(Boolean.parseBoolean(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Cd_Cdg_Vrsn ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncCdCdgVrsn() != null) {
-			medicinalproductingredientspecifiedsubstancecodecoding.setVersion(m.getMdcnlPrdctIgrdntSpcfdSbstncCdCdgVrsn());
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncCdCdgVrsn() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncCdCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncCdCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getCode().getCoding().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).getCode().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getCode().getCoding().get(i1).setVersion(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Cd_Txt ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncCdTxt() != null) {
-			medicinalproductingredientspecifiedsubstancecode.setText(m.getMdcnlPrdctIgrdntSpcfdSbstncCdTxt());
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncCdTxt() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncCdTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getCode().setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
-		/******************** medicinalproductingredientspecifiedsubstanceconfidentiality ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept medicinalproductingredientspecifiedsubstanceconfidentiality =  new org.hl7.fhir.r4.model.CodeableConcept();
-		medicinalproductingredientspecifiedsubstance.setConfidentiality(medicinalproductingredientspecifiedsubstanceconfidentiality);
-
-		/******************** medicinalproductingredientspecifiedsubstanceconfidentialitycoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding medicinalproductingredientspecifiedsubstanceconfidentialitycoding =  new org.hl7.fhir.r4.model.Coding();
-		medicinalproductingredientspecifiedsubstanceconfidentiality.addCoding(medicinalproductingredientspecifiedsubstanceconfidentialitycoding);
-
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Confidentiality_Cdg_Cd ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncConfidentialityCdgCd() != null) {
-			medicinalproductingredientspecifiedsubstanceconfidentialitycoding.setCode(m.getMdcnlPrdctIgrdntSpcfdSbstncConfidentialityCdgCd());
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncConfidentialityCdgCd() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncConfidentialityCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncConfidentialityCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getConfidentiality().getCoding().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).getConfidentiality().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getConfidentiality().getCoding().get(i1).setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Confidentiality_Cdg_Dsply ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncConfidentialityCdgDsply() != null) {
-			medicinalproductingredientspecifiedsubstanceconfidentialitycoding.setDisplay(m.getMdcnlPrdctIgrdntSpcfdSbstncConfidentialityCdgDsply());
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncConfidentialityCdgDsply() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncConfidentialityCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncConfidentialityCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getConfidentiality().getCoding().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).getConfidentiality().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getConfidentiality().getCoding().get(i1).setDisplay(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Confidentiality_Cdg_Sys ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncConfidentialityCdgSys() != null) {
-			medicinalproductingredientspecifiedsubstanceconfidentialitycoding.setSystem(m.getMdcnlPrdctIgrdntSpcfdSbstncConfidentialityCdgSys());
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncConfidentialityCdgSys() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncConfidentialityCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncConfidentialityCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getConfidentiality().getCoding().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).getConfidentiality().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getConfidentiality().getCoding().get(i1).setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Confidentiality_Cdg_UsrSltd ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncConfidentialityCdgUsrSltd() != null) {
-			medicinalproductingredientspecifiedsubstanceconfidentialitycoding.setUserSelected(Boolean.parseBoolean(m.getMdcnlPrdctIgrdntSpcfdSbstncConfidentialityCdgUsrSltd()));
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncConfidentialityCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncConfidentialityCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncConfidentialityCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getConfidentiality().getCoding().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).getConfidentiality().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getConfidentiality().getCoding().get(i1).setUserSelected(Boolean.parseBoolean(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Confidentiality_Cdg_Vrsn ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncConfidentialityCdgVrsn() != null) {
-			medicinalproductingredientspecifiedsubstanceconfidentialitycoding.setVersion(m.getMdcnlPrdctIgrdntSpcfdSbstncConfidentialityCdgVrsn());
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncConfidentialityCdgVrsn() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncConfidentialityCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncConfidentialityCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getConfidentiality().getCoding().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).getConfidentiality().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getConfidentiality().getCoding().get(i1).setVersion(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Confidentiality_Txt ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncConfidentialityTxt() != null) {
-			medicinalproductingredientspecifiedsubstanceconfidentiality.setText(m.getMdcnlPrdctIgrdntSpcfdSbstncConfidentialityTxt());
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncConfidentialityTxt() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncConfidentialityTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getConfidentiality().setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
-		/******************** medicinalproductingredientspecifiedsubstancegroup ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept medicinalproductingredientspecifiedsubstancegroup =  new org.hl7.fhir.r4.model.CodeableConcept();
-		medicinalproductingredientspecifiedsubstance.setGroup(medicinalproductingredientspecifiedsubstancegroup);
-
-		/******************** medicinalproductingredientspecifiedsubstancegroupcoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding medicinalproductingredientspecifiedsubstancegroupcoding =  new org.hl7.fhir.r4.model.Coding();
-		medicinalproductingredientspecifiedsubstancegroup.addCoding(medicinalproductingredientspecifiedsubstancegroupcoding);
-
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Grp_Cdg_Cd ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncGrpCdgCd() != null) {
-			medicinalproductingredientspecifiedsubstancegroupcoding.setCode(m.getMdcnlPrdctIgrdntSpcfdSbstncGrpCdgCd());
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncGrpCdgCd() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncGrpCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncGrpCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getGroup().getCoding().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).getGroup().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getGroup().getCoding().get(i1).setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Grp_Cdg_Dsply ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncGrpCdgDsply() != null) {
-			medicinalproductingredientspecifiedsubstancegroupcoding.setDisplay(m.getMdcnlPrdctIgrdntSpcfdSbstncGrpCdgDsply());
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncGrpCdgDsply() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncGrpCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncGrpCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getGroup().getCoding().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).getGroup().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getGroup().getCoding().get(i1).setDisplay(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Grp_Cdg_Sys ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncGrpCdgSys() != null) {
-			medicinalproductingredientspecifiedsubstancegroupcoding.setSystem(m.getMdcnlPrdctIgrdntSpcfdSbstncGrpCdgSys());
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncGrpCdgSys() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncGrpCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncGrpCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getGroup().getCoding().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).getGroup().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getGroup().getCoding().get(i1).setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Grp_Cdg_UsrSltd ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncGrpCdgUsrSltd() != null) {
-			medicinalproductingredientspecifiedsubstancegroupcoding.setUserSelected(Boolean.parseBoolean(m.getMdcnlPrdctIgrdntSpcfdSbstncGrpCdgUsrSltd()));
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncGrpCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncGrpCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncGrpCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getGroup().getCoding().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).getGroup().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getGroup().getCoding().get(i1).setUserSelected(Boolean.parseBoolean(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Grp_Cdg_Vrsn ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncGrpCdgVrsn() != null) {
-			medicinalproductingredientspecifiedsubstancegroupcoding.setVersion(m.getMdcnlPrdctIgrdntSpcfdSbstncGrpCdgVrsn());
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncGrpCdgVrsn() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncGrpCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncGrpCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getGroup().getCoding().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).getGroup().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getGroup().getCoding().get(i1).setVersion(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Grp_Txt ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncGrpTxt() != null) {
-			medicinalproductingredientspecifiedsubstancegroup.setText(m.getMdcnlPrdctIgrdntSpcfdSbstncGrpTxt());
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncGrpTxt() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncGrpTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getGroup().setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
-		/******************** medicinalproductingredientspecifiedsubstancestrength ********************************************************************************/
-		org.hl7.fhir.r4.model.MedicinalProductIngredient.MedicinalProductIngredientSpecifiedSubstanceStrengthComponent medicinalproductingredientspecifiedsubstancestrength =  new org.hl7.fhir.r4.model.MedicinalProductIngredient.MedicinalProductIngredientSpecifiedSubstanceStrengthComponent();
-		medicinalproductingredientspecifiedsubstance.addStrength(medicinalproductingredientspecifiedsubstancestrength);
-
-		/******************** medicinalproductingredientspecifiedsubstancestrengthconcentration ********************************************************************************/
-		org.hl7.fhir.r4.model.Ratio medicinalproductingredientspecifiedsubstancestrengthconcentration =  new org.hl7.fhir.r4.model.Ratio();
-		medicinalproductingredientspecifiedsubstancestrength.setConcentration(medicinalproductingredientspecifiedsubstancestrengthconcentration);
-
-		/******************** medicinalproductingredientspecifiedsubstancestrengthconcentrationdenominator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity medicinalproductingredientspecifiedsubstancestrengthconcentrationdenominator =  new org.hl7.fhir.r4.model.Quantity();
-		medicinalproductingredientspecifiedsubstancestrengthconcentration.setDenominator(medicinalproductingredientspecifiedsubstancestrengthconcentrationdenominator);
-
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Cncntrtn_Dnmntr_Cd ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnDnmntrCd() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthconcentrationdenominator.setCode(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnDnmntrCd());
-		}
-		/******************** medicinalproductingredientspecifiedsubstancestrengthconcentrationdenominatorcomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicinalproductingredientspecifiedsubstancestrengthconcentrationdenominatorcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-		medicinalproductingredientspecifiedsubstancestrengthconcentrationdenominator.setComparator(medicinalproductingredientspecifiedsubstancestrengthconcentrationdenominatorcomparator.fromCode(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnDnmntrCmprtr()));
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnDnmntrCd() != null ) {
 
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnDnmntrCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnDnmntrCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getConcentration().getDenominator().setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
+		}
+		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Cncntrtn_Dnmntr_Cmprtr ********************************************************************************/
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnDnmntrCmprtr() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnDnmntrCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnDnmntrCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getConcentration().getDenominator().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
+		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Cncntrtn_Dnmntr_Sys ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnDnmntrSys() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthconcentrationdenominator.setSystem(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnDnmntrSys());
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnDnmntrSys() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnDnmntrSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnDnmntrSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getConcentration().getDenominator().setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Cncntrtn_Dnmntr_Unt ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnDnmntrUnt() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthconcentrationdenominator.setUnit(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnDnmntrUnt());
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnDnmntrUnt() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnDnmntrUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnDnmntrUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getConcentration().getDenominator().setUnit(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Cncntrtn_Dnmntr_Vl ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnDnmntrVl() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthconcentrationdenominator.setValue(Double.parseDouble((m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnDnmntrVl())));
-		}
-		/******************** medicinalproductingredientspecifiedsubstancestrengthconcentrationnumerator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity medicinalproductingredientspecifiedsubstancestrengthconcentrationnumerator =  new org.hl7.fhir.r4.model.Quantity();
-		medicinalproductingredientspecifiedsubstancestrengthconcentration.setNumerator(medicinalproductingredientspecifiedsubstancestrengthconcentrationnumerator);
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnDnmntrVl() != null ) {
 
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnDnmntrVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnDnmntrVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getConcentration().getDenominator().setValue((new java.math.BigDecimal((arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+				}
+			}
+
+		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Cncntrtn_Nmrtr_Cd ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnNmrtrCd() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthconcentrationnumerator.setCode(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnNmrtrCd());
-		}
-		/******************** medicinalproductingredientspecifiedsubstancestrengthconcentrationnumeratorcomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicinalproductingredientspecifiedsubstancestrengthconcentrationnumeratorcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-		medicinalproductingredientspecifiedsubstancestrengthconcentrationnumerator.setComparator(medicinalproductingredientspecifiedsubstancestrengthconcentrationnumeratorcomparator.fromCode(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnNmrtrCmprtr()));
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnNmrtrCd() != null ) {
 
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnNmrtrCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnNmrtrCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getConcentration().getNumerator().setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
+		}
+		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Cncntrtn_Nmrtr_Cmprtr ********************************************************************************/
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnNmrtrCmprtr() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnNmrtrCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnNmrtrCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getConcentration().getNumerator().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
+		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Cncntrtn_Nmrtr_Sys ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnNmrtrSys() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthconcentrationnumerator.setSystem(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnNmrtrSys());
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnNmrtrSys() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnNmrtrSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnNmrtrSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getConcentration().getNumerator().setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Cncntrtn_Nmrtr_Unt ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnNmrtrUnt() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthconcentrationnumerator.setUnit(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnNmrtrUnt());
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnNmrtrUnt() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnNmrtrUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnNmrtrUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getConcentration().getNumerator().setUnit(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Cncntrtn_Nmrtr_Vl ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnNmrtrVl() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthconcentrationnumerator.setValue(Double.parseDouble((m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnNmrtrVl())));
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnNmrtrVl() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnNmrtrVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnNmrtrVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getConcentration().getNumerator().setValue((new java.math.BigDecimal((arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+				}
+			}
+
 		}
-		/******************** medicinalproductingredientspecifiedsubstancestrengthconcentrationlowlimit ********************************************************************************/
-		org.hl7.fhir.r4.model.Ratio medicinalproductingredientspecifiedsubstancestrengthconcentrationlowlimit =  new org.hl7.fhir.r4.model.Ratio();
-		medicinalproductingredientspecifiedsubstancestrength.setConcentrationLowLimit(medicinalproductingredientspecifiedsubstancestrengthconcentrationlowlimit);
-
-		/******************** medicinalproductingredientspecifiedsubstancestrengthconcentrationlowlimitdenominator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity medicinalproductingredientspecifiedsubstancestrengthconcentrationlowlimitdenominator =  new org.hl7.fhir.r4.model.Quantity();
-		medicinalproductingredientspecifiedsubstancestrengthconcentrationlowlimit.setDenominator(medicinalproductingredientspecifiedsubstancestrengthconcentrationlowlimitdenominator);
-
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_CncntrtnLwLmt_Dnmntr_Cd ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtDnmntrCd() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthconcentrationlowlimitdenominator.setCode(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtDnmntrCd());
-		}
-		/******************** medicinalproductingredientspecifiedsubstancestrengthconcentrationlowlimitdenominatorcomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicinalproductingredientspecifiedsubstancestrengthconcentrationlowlimitdenominatorcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-		medicinalproductingredientspecifiedsubstancestrengthconcentrationlowlimitdenominator.setComparator(medicinalproductingredientspecifiedsubstancestrengthconcentrationlowlimitdenominatorcomparator.fromCode(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtDnmntrCmprtr()));
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtDnmntrCd() != null ) {
 
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtDnmntrCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtDnmntrCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getConcentrationLowLimit().getDenominator().setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
+		}
+		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_CncntrtnLwLmt_Dnmntr_Cmprtr ********************************************************************************/
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtDnmntrCmprtr() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtDnmntrCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtDnmntrCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getConcentrationLowLimit().getDenominator().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
+		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_CncntrtnLwLmt_Dnmntr_Sys ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtDnmntrSys() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthconcentrationlowlimitdenominator.setSystem(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtDnmntrSys());
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtDnmntrSys() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtDnmntrSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtDnmntrSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getConcentrationLowLimit().getDenominator().setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_CncntrtnLwLmt_Dnmntr_Unt ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtDnmntrUnt() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthconcentrationlowlimitdenominator.setUnit(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtDnmntrUnt());
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtDnmntrUnt() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtDnmntrUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtDnmntrUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getConcentrationLowLimit().getDenominator().setUnit(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_CncntrtnLwLmt_Dnmntr_Vl ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtDnmntrVl() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthconcentrationlowlimitdenominator.setValue(Double.parseDouble((m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtDnmntrVl())));
-		}
-		/******************** medicinalproductingredientspecifiedsubstancestrengthconcentrationlowlimitnumerator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity medicinalproductingredientspecifiedsubstancestrengthconcentrationlowlimitnumerator =  new org.hl7.fhir.r4.model.Quantity();
-		medicinalproductingredientspecifiedsubstancestrengthconcentrationlowlimit.setNumerator(medicinalproductingredientspecifiedsubstancestrengthconcentrationlowlimitnumerator);
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtDnmntrVl() != null ) {
 
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtDnmntrVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtDnmntrVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getConcentrationLowLimit().getDenominator().setValue((new java.math.BigDecimal((arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+				}
+			}
+
+		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_CncntrtnLwLmt_Nmrtr_Cd ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtNmrtrCd() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthconcentrationlowlimitnumerator.setCode(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtNmrtrCd());
-		}
-		/******************** medicinalproductingredientspecifiedsubstancestrengthconcentrationlowlimitnumeratorcomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicinalproductingredientspecifiedsubstancestrengthconcentrationlowlimitnumeratorcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-		medicinalproductingredientspecifiedsubstancestrengthconcentrationlowlimitnumerator.setComparator(medicinalproductingredientspecifiedsubstancestrengthconcentrationlowlimitnumeratorcomparator.fromCode(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtNmrtrCmprtr()));
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtNmrtrCd() != null ) {
 
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtNmrtrCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtNmrtrCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getConcentrationLowLimit().getNumerator().setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
+		}
+		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_CncntrtnLwLmt_Nmrtr_Cmprtr ********************************************************************************/
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtNmrtrCmprtr() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtNmrtrCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtNmrtrCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getConcentrationLowLimit().getNumerator().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
+		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_CncntrtnLwLmt_Nmrtr_Sys ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtNmrtrSys() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthconcentrationlowlimitnumerator.setSystem(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtNmrtrSys());
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtNmrtrSys() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtNmrtrSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtNmrtrSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getConcentrationLowLimit().getNumerator().setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_CncntrtnLwLmt_Nmrtr_Unt ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtNmrtrUnt() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthconcentrationlowlimitnumerator.setUnit(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtNmrtrUnt());
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtNmrtrUnt() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtNmrtrUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtNmrtrUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getConcentrationLowLimit().getNumerator().setUnit(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_CncntrtnLwLmt_Nmrtr_Vl ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtNmrtrVl() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthconcentrationlowlimitnumerator.setValue(Double.parseDouble((m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtNmrtrVl())));
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtNmrtrVl() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtNmrtrVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCncntrtnLwLmtNmrtrVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getConcentrationLowLimit().getNumerator().setValue((new java.math.BigDecimal((arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+				}
+			}
+
 		}
-		/******************** medicinalproductingredientspecifiedsubstancestrengthcountry ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept medicinalproductingredientspecifiedsubstancestrengthcountry =  new org.hl7.fhir.r4.model.CodeableConcept();
-		medicinalproductingredientspecifiedsubstancestrength.addCountry(medicinalproductingredientspecifiedsubstancestrengthcountry);
-
-		/******************** medicinalproductingredientspecifiedsubstancestrengthcountrycoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding medicinalproductingredientspecifiedsubstancestrengthcountrycoding =  new org.hl7.fhir.r4.model.Coding();
-		medicinalproductingredientspecifiedsubstancestrengthcountry.addCoding(medicinalproductingredientspecifiedsubstancestrengthcountrycoding);
-
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Cntry_Cdg_Cd ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCntryCdgCd() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthcountrycoding.setCode(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCntryCdgCd());
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCntryCdgCd() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCntryCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCntryCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					String[] arrayi2 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCntryCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+						if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getCountry().size() < i2+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).addCountry(); }
+						String[] arrayi3 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCntryCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i3 = 0; i3 < arrayi3.length; i3++) {
+							if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getCountry().get(i2).getCoding().size() < i3+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getCountry().get(i2).addCoding(); }
+							if(arrayi3[i3].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi3[i3]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getCountry().get(i2).getCoding().get(i3).setCode(arrayi3[i3].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+						}
+					}
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Cntry_Cdg_Dsply ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCntryCdgDsply() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthcountrycoding.setDisplay(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCntryCdgDsply());
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCntryCdgDsply() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCntryCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCntryCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					String[] arrayi2 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCntryCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+						if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getCountry().size() < i2+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).addCountry(); }
+						String[] arrayi3 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCntryCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i3 = 0; i3 < arrayi3.length; i3++) {
+							if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getCountry().get(i2).getCoding().size() < i3+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getCountry().get(i2).addCoding(); }
+							if(arrayi3[i3].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi3[i3]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getCountry().get(i2).getCoding().get(i3).setDisplay(arrayi3[i3].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+						}
+					}
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Cntry_Cdg_Sys ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCntryCdgSys() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthcountrycoding.setSystem(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCntryCdgSys());
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCntryCdgSys() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCntryCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCntryCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					String[] arrayi2 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCntryCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+						if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getCountry().size() < i2+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).addCountry(); }
+						String[] arrayi3 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCntryCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i3 = 0; i3 < arrayi3.length; i3++) {
+							if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getCountry().get(i2).getCoding().size() < i3+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getCountry().get(i2).addCoding(); }
+							if(arrayi3[i3].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi3[i3]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getCountry().get(i2).getCoding().get(i3).setSystem(arrayi3[i3].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+						}
+					}
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Cntry_Cdg_UsrSltd ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCntryCdgUsrSltd() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthcountrycoding.setUserSelected(Boolean.parseBoolean(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCntryCdgUsrSltd()));
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCntryCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCntryCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCntryCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					String[] arrayi2 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCntryCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+						if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getCountry().size() < i2+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).addCountry(); }
+						String[] arrayi3 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCntryCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i3 = 0; i3 < arrayi3.length; i3++) {
+							if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getCountry().get(i2).getCoding().size() < i3+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getCountry().get(i2).addCoding(); }
+							if(arrayi3[i3].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi3[i3]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getCountry().get(i2).getCoding().get(i3).setUserSelected(Boolean.parseBoolean(arrayi3[i3].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+						}
+					}
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Cntry_Cdg_Vrsn ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCntryCdgVrsn() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthcountrycoding.setVersion(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCntryCdgVrsn());
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCntryCdgVrsn() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCntryCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCntryCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					String[] arrayi2 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCntryCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+						if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getCountry().size() < i2+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).addCountry(); }
+						String[] arrayi3 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCntryCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i3 = 0; i3 < arrayi3.length; i3++) {
+							if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getCountry().get(i2).getCoding().size() < i3+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getCountry().get(i2).addCoding(); }
+							if(arrayi3[i3].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi3[i3]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getCountry().get(i2).getCoding().get(i3).setVersion(arrayi3[i3].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+						}
+					}
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Cntry_Txt ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCntryTxt() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthcountry.setText(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCntryTxt());
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrCntryTxt() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCntryTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCntryTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					String[] arrayi2 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrCntryTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+						if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getCountry().size() < i2+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).addCountry(); }
+						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getCountry().get(i2).setText(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+					}
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_MsrmentPoint ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrMsrmentPoint() != null) {
-			medicinalproductingredientspecifiedsubstancestrength.setMeasurementPoint(m.getMdcnlPrdctIgrdntSpcfdSbstncStrMsrmentPoint());
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrMsrmentPoint() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrMsrmentPoint().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrMsrmentPoint().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).setMeasurementPoint(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
-		/******************** medicinalproductingredientspecifiedsubstancestrengthpresentation ********************************************************************************/
-		org.hl7.fhir.r4.model.Ratio medicinalproductingredientspecifiedsubstancestrengthpresentation =  new org.hl7.fhir.r4.model.Ratio();
-		medicinalproductingredientspecifiedsubstancestrength.setPresentation(medicinalproductingredientspecifiedsubstancestrengthpresentation);
-
-		/******************** medicinalproductingredientspecifiedsubstancestrengthpresentationdenominator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity medicinalproductingredientspecifiedsubstancestrengthpresentationdenominator =  new org.hl7.fhir.r4.model.Quantity();
-		medicinalproductingredientspecifiedsubstancestrengthpresentation.setDenominator(medicinalproductingredientspecifiedsubstancestrengthpresentationdenominator);
-
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Prsnttn_Dnmntr_Cd ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnDnmntrCd() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthpresentationdenominator.setCode(m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnDnmntrCd());
-		}
-		/******************** medicinalproductingredientspecifiedsubstancestrengthpresentationdenominatorcomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicinalproductingredientspecifiedsubstancestrengthpresentationdenominatorcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-		medicinalproductingredientspecifiedsubstancestrengthpresentationdenominator.setComparator(medicinalproductingredientspecifiedsubstancestrengthpresentationdenominatorcomparator.fromCode(m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnDnmntrCmprtr()));
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnDnmntrCd() != null ) {
 
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnDnmntrCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnDnmntrCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getPresentation().getDenominator().setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
+		}
+		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Prsnttn_Dnmntr_Cmprtr ********************************************************************************/
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnDnmntrCmprtr() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnDnmntrCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnDnmntrCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getPresentation().getDenominator().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
+		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Prsnttn_Dnmntr_Sys ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnDnmntrSys() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthpresentationdenominator.setSystem(m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnDnmntrSys());
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnDnmntrSys() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnDnmntrSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnDnmntrSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getPresentation().getDenominator().setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Prsnttn_Dnmntr_Unt ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnDnmntrUnt() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthpresentationdenominator.setUnit(m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnDnmntrUnt());
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnDnmntrUnt() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnDnmntrUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnDnmntrUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getPresentation().getDenominator().setUnit(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Prsnttn_Dnmntr_Vl ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnDnmntrVl() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthpresentationdenominator.setValue(Double.parseDouble((m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnDnmntrVl())));
-		}
-		/******************** medicinalproductingredientspecifiedsubstancestrengthpresentationnumerator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity medicinalproductingredientspecifiedsubstancestrengthpresentationnumerator =  new org.hl7.fhir.r4.model.Quantity();
-		medicinalproductingredientspecifiedsubstancestrengthpresentation.setNumerator(medicinalproductingredientspecifiedsubstancestrengthpresentationnumerator);
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnDnmntrVl() != null ) {
 
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnDnmntrVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnDnmntrVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getPresentation().getDenominator().setValue((new java.math.BigDecimal((arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+				}
+			}
+
+		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Prsnttn_Nmrtr_Cd ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnNmrtrCd() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthpresentationnumerator.setCode(m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnNmrtrCd());
-		}
-		/******************** medicinalproductingredientspecifiedsubstancestrengthpresentationnumeratorcomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicinalproductingredientspecifiedsubstancestrengthpresentationnumeratorcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-		medicinalproductingredientspecifiedsubstancestrengthpresentationnumerator.setComparator(medicinalproductingredientspecifiedsubstancestrengthpresentationnumeratorcomparator.fromCode(m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnNmrtrCmprtr()));
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnNmrtrCd() != null ) {
 
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnNmrtrCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnNmrtrCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getPresentation().getNumerator().setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
+		}
+		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Prsnttn_Nmrtr_Cmprtr ********************************************************************************/
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnNmrtrCmprtr() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnNmrtrCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnNmrtrCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getPresentation().getNumerator().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
+		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Prsnttn_Nmrtr_Sys ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnNmrtrSys() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthpresentationnumerator.setSystem(m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnNmrtrSys());
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnNmrtrSys() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnNmrtrSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnNmrtrSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getPresentation().getNumerator().setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Prsnttn_Nmrtr_Unt ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnNmrtrUnt() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthpresentationnumerator.setUnit(m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnNmrtrUnt());
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnNmrtrUnt() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnNmrtrUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnNmrtrUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getPresentation().getNumerator().setUnit(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_Prsnttn_Nmrtr_Vl ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnNmrtrVl() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthpresentationnumerator.setValue(Double.parseDouble((m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnNmrtrVl())));
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnNmrtrVl() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnNmrtrVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnNmrtrVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getPresentation().getNumerator().setValue((new java.math.BigDecimal((arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+				}
+			}
+
 		}
-		/******************** medicinalproductingredientspecifiedsubstancestrengthpresentationlowlimit ********************************************************************************/
-		org.hl7.fhir.r4.model.Ratio medicinalproductingredientspecifiedsubstancestrengthpresentationlowlimit =  new org.hl7.fhir.r4.model.Ratio();
-		medicinalproductingredientspecifiedsubstancestrength.setPresentationLowLimit(medicinalproductingredientspecifiedsubstancestrengthpresentationlowlimit);
-
-		/******************** medicinalproductingredientspecifiedsubstancestrengthpresentationlowlimitdenominator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity medicinalproductingredientspecifiedsubstancestrengthpresentationlowlimitdenominator =  new org.hl7.fhir.r4.model.Quantity();
-		medicinalproductingredientspecifiedsubstancestrengthpresentationlowlimit.setDenominator(medicinalproductingredientspecifiedsubstancestrengthpresentationlowlimitdenominator);
-
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_PrsnttnLwLmt_Dnmntr_Cd ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtDnmntrCd() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthpresentationlowlimitdenominator.setCode(m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtDnmntrCd());
-		}
-		/******************** medicinalproductingredientspecifiedsubstancestrengthpresentationlowlimitdenominatorcomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicinalproductingredientspecifiedsubstancestrengthpresentationlowlimitdenominatorcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-		medicinalproductingredientspecifiedsubstancestrengthpresentationlowlimitdenominator.setComparator(medicinalproductingredientspecifiedsubstancestrengthpresentationlowlimitdenominatorcomparator.fromCode(m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtDnmntrCmprtr()));
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtDnmntrCd() != null ) {
 
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtDnmntrCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtDnmntrCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getPresentationLowLimit().getDenominator().setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
+		}
+		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_PrsnttnLwLmt_Dnmntr_Cmprtr ********************************************************************************/
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtDnmntrCmprtr() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtDnmntrCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtDnmntrCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getPresentationLowLimit().getDenominator().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
+		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_PrsnttnLwLmt_Dnmntr_Sys ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtDnmntrSys() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthpresentationlowlimitdenominator.setSystem(m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtDnmntrSys());
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtDnmntrSys() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtDnmntrSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtDnmntrSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getPresentationLowLimit().getDenominator().setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_PrsnttnLwLmt_Dnmntr_Unt ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtDnmntrUnt() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthpresentationlowlimitdenominator.setUnit(m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtDnmntrUnt());
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtDnmntrUnt() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtDnmntrUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtDnmntrUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getPresentationLowLimit().getDenominator().setUnit(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_PrsnttnLwLmt_Dnmntr_Vl ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtDnmntrVl() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthpresentationlowlimitdenominator.setValue(Double.parseDouble((m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtDnmntrVl())));
-		}
-		/******************** medicinalproductingredientspecifiedsubstancestrengthpresentationlowlimitnumerator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity medicinalproductingredientspecifiedsubstancestrengthpresentationlowlimitnumerator =  new org.hl7.fhir.r4.model.Quantity();
-		medicinalproductingredientspecifiedsubstancestrengthpresentationlowlimit.setNumerator(medicinalproductingredientspecifiedsubstancestrengthpresentationlowlimitnumerator);
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtDnmntrVl() != null ) {
 
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtDnmntrVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtDnmntrVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getPresentationLowLimit().getDenominator().setValue((new java.math.BigDecimal((arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+				}
+			}
+
+		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_PrsnttnLwLmt_Nmrtr_Cd ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtNmrtrCd() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthpresentationlowlimitnumerator.setCode(m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtNmrtrCd());
-		}
-		/******************** medicinalproductingredientspecifiedsubstancestrengthpresentationlowlimitnumeratorcomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicinalproductingredientspecifiedsubstancestrengthpresentationlowlimitnumeratorcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-		medicinalproductingredientspecifiedsubstancestrengthpresentationlowlimitnumerator.setComparator(medicinalproductingredientspecifiedsubstancestrengthpresentationlowlimitnumeratorcomparator.fromCode(m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtNmrtrCmprtr()));
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtNmrtrCd() != null ) {
 
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtNmrtrCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtNmrtrCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getPresentationLowLimit().getNumerator().setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
+		}
+		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_PrsnttnLwLmt_Nmrtr_Cmprtr ********************************************************************************/
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtNmrtrCmprtr() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtNmrtrCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtNmrtrCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getPresentationLowLimit().getNumerator().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
+		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_PrsnttnLwLmt_Nmrtr_Sys ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtNmrtrSys() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthpresentationlowlimitnumerator.setSystem(m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtNmrtrSys());
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtNmrtrSys() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtNmrtrSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtNmrtrSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getPresentationLowLimit().getNumerator().setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_PrsnttnLwLmt_Nmrtr_Unt ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtNmrtrUnt() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthpresentationlowlimitnumerator.setUnit(m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtNmrtrUnt());
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtNmrtrUnt() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtNmrtrUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtNmrtrUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getPresentationLowLimit().getNumerator().setUnit(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_PrsnttnLwLmt_Nmrtr_Vl ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtNmrtrVl() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthpresentationlowlimitnumerator.setValue(Double.parseDouble((m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtNmrtrVl())));
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtNmrtrVl() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtNmrtrVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrPrsnttnLwLmtNmrtrVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getPresentationLowLimit().getNumerator().setValue((new java.math.BigDecimal((arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+				}
+			}
+
 		}
-		/******************** medicinalproductingredientspecifiedsubstancestrengthreferencestrength ********************************************************************************/
-		org.hl7.fhir.r4.model.MedicinalProductIngredient.MedicinalProductIngredientSpecifiedSubstanceStrengthReferenceStrengthComponent medicinalproductingredientspecifiedsubstancestrengthreferencestrength =  new org.hl7.fhir.r4.model.MedicinalProductIngredient.MedicinalProductIngredientSpecifiedSubstanceStrengthReferenceStrengthComponent();
-		medicinalproductingredientspecifiedsubstancestrength.addReferenceStrength(medicinalproductingredientspecifiedsubstancestrengthreferencestrength);
-
-		/******************** medicinalproductingredientspecifiedsubstancestrengthreferencestrengthcountry ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept medicinalproductingredientspecifiedsubstancestrengthreferencestrengthcountry =  new org.hl7.fhir.r4.model.CodeableConcept();
-		medicinalproductingredientspecifiedsubstancestrengthreferencestrength.addCountry(medicinalproductingredientspecifiedsubstancestrengthreferencestrengthcountry);
-
-		/******************** medicinalproductingredientspecifiedsubstancestrengthreferencestrengthcountrycoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding medicinalproductingredientspecifiedsubstancestrengthreferencestrengthcountrycoding =  new org.hl7.fhir.r4.model.Coding();
-		medicinalproductingredientspecifiedsubstancestrengthreferencestrengthcountry.addCoding(medicinalproductingredientspecifiedsubstancestrengthreferencestrengthcountrycoding);
-
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Cntry_Cdg_Cd ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrCntryCdgCd() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthreferencestrengthcountrycoding.setCode(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrCntryCdgCd());
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrCntryCdgCd() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrCntryCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrCntryCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					String[] arrayi2 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrCntryCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+						if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getReferenceStrength().size() < i2+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).addReferenceStrength(); }
+						String[] arrayi3 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrCntryCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i3 = 0; i3 < arrayi3.length; i3++) {
+							if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getReferenceStrength().get(i2).getCountry().size() < i3+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getReferenceStrength().get(i2).addCountry(); }
+							String[] arrayi4 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrCntryCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i3].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+							for(int i4 = 0; i4 < arrayi4.length; i4++) {
+								if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getReferenceStrength().get(i2).getCountry().get(i3).getCoding().size() < i4+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getReferenceStrength().get(i2).getCountry().get(i3).addCoding(); }
+								if(arrayi4[i4].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi4[i4]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getReferenceStrength().get(i2).getCountry().get(i3).getCoding().get(i4).setCode(arrayi4[i4].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+							}
+						}
+					}
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Cntry_Cdg_Dsply ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrCntryCdgDsply() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthreferencestrengthcountrycoding.setDisplay(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrCntryCdgDsply());
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrCntryCdgDsply() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrCntryCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrCntryCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					String[] arrayi2 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrCntryCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+						if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getReferenceStrength().size() < i2+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).addReferenceStrength(); }
+						String[] arrayi3 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrCntryCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i3 = 0; i3 < arrayi3.length; i3++) {
+							if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getReferenceStrength().get(i2).getCountry().size() < i3+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getReferenceStrength().get(i2).addCountry(); }
+							String[] arrayi4 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrCntryCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i3].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+							for(int i4 = 0; i4 < arrayi4.length; i4++) {
+								if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getReferenceStrength().get(i2).getCountry().get(i3).getCoding().size() < i4+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getReferenceStrength().get(i2).getCountry().get(i3).addCoding(); }
+								if(arrayi4[i4].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi4[i4]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getReferenceStrength().get(i2).getCountry().get(i3).getCoding().get(i4).setDisplay(arrayi4[i4].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+							}
+						}
+					}
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Cntry_Cdg_Sys ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrCntryCdgSys() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthreferencestrengthcountrycoding.setSystem(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrCntryCdgSys());
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrCntryCdgSys() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrCntryCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrCntryCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					String[] arrayi2 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrCntryCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+						if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getReferenceStrength().size() < i2+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).addReferenceStrength(); }
+						String[] arrayi3 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrCntryCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i3 = 0; i3 < arrayi3.length; i3++) {
+							if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getReferenceStrength().get(i2).getCountry().size() < i3+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getReferenceStrength().get(i2).addCountry(); }
+							String[] arrayi4 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrCntryCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i3].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+							for(int i4 = 0; i4 < arrayi4.length; i4++) {
+								if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getReferenceStrength().get(i2).getCountry().get(i3).getCoding().size() < i4+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getReferenceStrength().get(i2).getCountry().get(i3).addCoding(); }
+								if(arrayi4[i4].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi4[i4]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getReferenceStrength().get(i2).getCountry().get(i3).getCoding().get(i4).setSystem(arrayi4[i4].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+							}
+						}
+					}
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Cntry_Cdg_UsrSltd ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrCntryCdgUsrSltd() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthreferencestrengthcountrycoding.setUserSelected(Boolean.parseBoolean(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrCntryCdgUsrSltd()));
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrCntryCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrCntryCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrCntryCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					String[] arrayi2 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrCntryCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+						if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getReferenceStrength().size() < i2+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).addReferenceStrength(); }
+						String[] arrayi3 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrCntryCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i3 = 0; i3 < arrayi3.length; i3++) {
+							if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getReferenceStrength().get(i2).getCountry().size() < i3+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getReferenceStrength().get(i2).addCountry(); }
+							String[] arrayi4 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrCntryCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i3].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+							for(int i4 = 0; i4 < arrayi4.length; i4++) {
+								if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getReferenceStrength().get(i2).getCountry().get(i3).getCoding().size() < i4+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getReferenceStrength().get(i2).getCountry().get(i3).addCoding(); }
+								if(arrayi4[i4].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi4[i4]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getReferenceStrength().get(i2).getCountry().get(i3).getCoding().get(i4).setUserSelected(Boolean.parseBoolean(arrayi4[i4].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+							}
+						}
+					}
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Cntry_Cdg_Vrsn ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrCntryCdgVrsn() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthreferencestrengthcountrycoding.setVersion(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrCntryCdgVrsn());
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrCntryCdgVrsn() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrCntryCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrCntryCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					String[] arrayi2 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrCntryCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+						if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getReferenceStrength().size() < i2+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).addReferenceStrength(); }
+						String[] arrayi3 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrCntryCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i3 = 0; i3 < arrayi3.length; i3++) {
+							if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getReferenceStrength().get(i2).getCountry().size() < i3+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getReferenceStrength().get(i2).addCountry(); }
+							String[] arrayi4 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrCntryCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i3].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+							for(int i4 = 0; i4 < arrayi4.length; i4++) {
+								if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getReferenceStrength().get(i2).getCountry().get(i3).getCoding().size() < i4+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getReferenceStrength().get(i2).getCountry().get(i3).addCoding(); }
+								if(arrayi4[i4].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi4[i4]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getReferenceStrength().get(i2).getCountry().get(i3).getCoding().get(i4).setVersion(arrayi4[i4].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+							}
+						}
+					}
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Cntry_Txt ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrCntryTxt() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthreferencestrengthcountry.setText(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrCntryTxt());
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrCntryTxt() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrCntryTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrCntryTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					String[] arrayi2 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrCntryTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+						if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getReferenceStrength().size() < i2+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).addReferenceStrength(); }
+						String[] arrayi3 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrCntryTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i3 = 0; i3 < arrayi3.length; i3++) {
+							if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getReferenceStrength().get(i2).getCountry().size() < i3+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getReferenceStrength().get(i2).addCountry(); }
+							if(arrayi3[i3].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi3[i3]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getReferenceStrength().get(i2).getCountry().get(i3).setText(arrayi3[i3].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+						}
+					}
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_MsrmentPoint ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrMsrmentPoint() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthreferencestrength.setMeasurementPoint(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrMsrmentPoint());
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrMsrmentPoint() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrMsrmentPoint().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrMsrmentPoint().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					String[] arrayi2 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrMsrmentPoint().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+						if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getReferenceStrength().size() < i2+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).addReferenceStrength(); }
+						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getReferenceStrength().get(i2).setMeasurementPoint(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+					}
+				}
+			}
+
 		}
-		/******************** medicinalproductingredientspecifiedsubstancestrengthreferencestrengthstrength ********************************************************************************/
-		org.hl7.fhir.r4.model.Ratio medicinalproductingredientspecifiedsubstancestrengthreferencestrengthstrength =  new org.hl7.fhir.r4.model.Ratio();
-		medicinalproductingredientspecifiedsubstancestrengthreferencestrength.setStrength(medicinalproductingredientspecifiedsubstancestrengthreferencestrengthstrength);
-
-		/******************** medicinalproductingredientspecifiedsubstancestrengthreferencestrengthstrengthdenominator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity medicinalproductingredientspecifiedsubstancestrengthreferencestrengthstrengthdenominator =  new org.hl7.fhir.r4.model.Quantity();
-		medicinalproductingredientspecifiedsubstancestrengthreferencestrengthstrength.setDenominator(medicinalproductingredientspecifiedsubstancestrengthreferencestrengthstrengthdenominator);
-
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Str_Dnmntr_Cd ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrDnmntrCd() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthreferencestrengthstrengthdenominator.setCode(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrDnmntrCd());
-		}
-		/******************** medicinalproductingredientspecifiedsubstancestrengthreferencestrengthstrengthdenominatorcomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicinalproductingredientspecifiedsubstancestrengthreferencestrengthstrengthdenominatorcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-		medicinalproductingredientspecifiedsubstancestrengthreferencestrengthstrengthdenominator.setComparator(medicinalproductingredientspecifiedsubstancestrengthreferencestrengthstrengthdenominatorcomparator.fromCode(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrDnmntrCmprtr()));
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrDnmntrCd() != null ) {
 
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrDnmntrCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrDnmntrCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					String[] arrayi2 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrDnmntrCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+						if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getReferenceStrength().size() < i2+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).addReferenceStrength(); }
+						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getReferenceStrength().get(i2).getStrength().getDenominator().setCode(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+					}
+				}
+			}
+
+		}
+		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Str_Dnmntr_Cmprtr ********************************************************************************/
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrDnmntrCmprtr() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrDnmntrCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrDnmntrCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					String[] arrayi2 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrDnmntrCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+						if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getReferenceStrength().size() < i2+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).addReferenceStrength(); }
+						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getReferenceStrength().get(i2).getStrength().getDenominator().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+					}
+				}
+			}
+
+		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Str_Dnmntr_Sys ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrDnmntrSys() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthreferencestrengthstrengthdenominator.setSystem(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrDnmntrSys());
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrDnmntrSys() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrDnmntrSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrDnmntrSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					String[] arrayi2 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrDnmntrSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+						if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getReferenceStrength().size() < i2+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).addReferenceStrength(); }
+						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getReferenceStrength().get(i2).getStrength().getDenominator().setSystem(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+					}
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Str_Dnmntr_Unt ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrDnmntrUnt() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthreferencestrengthstrengthdenominator.setUnit(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrDnmntrUnt());
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrDnmntrUnt() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrDnmntrUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrDnmntrUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					String[] arrayi2 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrDnmntrUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+						if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getReferenceStrength().size() < i2+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).addReferenceStrength(); }
+						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getReferenceStrength().get(i2).getStrength().getDenominator().setUnit(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+					}
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Str_Dnmntr_Vl ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrDnmntrVl() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthreferencestrengthstrengthdenominator.setValue(Double.parseDouble((m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrDnmntrVl())));
-		}
-		/******************** medicinalproductingredientspecifiedsubstancestrengthreferencestrengthstrengthnumerator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity medicinalproductingredientspecifiedsubstancestrengthreferencestrengthstrengthnumerator =  new org.hl7.fhir.r4.model.Quantity();
-		medicinalproductingredientspecifiedsubstancestrengthreferencestrengthstrength.setNumerator(medicinalproductingredientspecifiedsubstancestrengthreferencestrengthstrengthnumerator);
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrDnmntrVl() != null ) {
 
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrDnmntrVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrDnmntrVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					String[] arrayi2 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrDnmntrVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+						if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getReferenceStrength().size() < i2+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).addReferenceStrength(); }
+						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getReferenceStrength().get(i2).getStrength().getDenominator().setValue((new java.math.BigDecimal((arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+					}
+				}
+			}
+
+		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Str_Nmrtr_Cd ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrNmrtrCd() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthreferencestrengthstrengthnumerator.setCode(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrNmrtrCd());
-		}
-		/******************** medicinalproductingredientspecifiedsubstancestrengthreferencestrengthstrengthnumeratorcomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicinalproductingredientspecifiedsubstancestrengthreferencestrengthstrengthnumeratorcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-		medicinalproductingredientspecifiedsubstancestrengthreferencestrengthstrengthnumerator.setComparator(medicinalproductingredientspecifiedsubstancestrengthreferencestrengthstrengthnumeratorcomparator.fromCode(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrNmrtrCmprtr()));
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrNmrtrCd() != null ) {
 
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrNmrtrCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrNmrtrCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					String[] arrayi2 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrNmrtrCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+						if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getReferenceStrength().size() < i2+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).addReferenceStrength(); }
+						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getReferenceStrength().get(i2).getStrength().getNumerator().setCode(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+					}
+				}
+			}
+
+		}
+		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Str_Nmrtr_Cmprtr ********************************************************************************/
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrNmrtrCmprtr() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrNmrtrCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrNmrtrCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					String[] arrayi2 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrNmrtrCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+						if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getReferenceStrength().size() < i2+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).addReferenceStrength(); }
+						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getReferenceStrength().get(i2).getStrength().getNumerator().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+					}
+				}
+			}
+
+		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Str_Nmrtr_Sys ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrNmrtrSys() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthreferencestrengthstrengthnumerator.setSystem(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrNmrtrSys());
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrNmrtrSys() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrNmrtrSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrNmrtrSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					String[] arrayi2 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrNmrtrSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+						if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getReferenceStrength().size() < i2+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).addReferenceStrength(); }
+						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getReferenceStrength().get(i2).getStrength().getNumerator().setSystem(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+					}
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Str_Nmrtr_Unt ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrNmrtrUnt() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthreferencestrengthstrengthnumerator.setUnit(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrNmrtrUnt());
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrNmrtrUnt() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrNmrtrUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrNmrtrUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					String[] arrayi2 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrNmrtrUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+						if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getReferenceStrength().size() < i2+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).addReferenceStrength(); }
+						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getReferenceStrength().get(i2).getStrength().getNumerator().setUnit(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+					}
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Str_Nmrtr_Vl ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrNmrtrVl() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthreferencestrengthstrengthnumerator.setValue(Double.parseDouble((m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrNmrtrVl())));
-		}
-		/******************** medicinalproductingredientspecifiedsubstancestrengthreferencestrengthstrengthlowlimit ********************************************************************************/
-		org.hl7.fhir.r4.model.Ratio medicinalproductingredientspecifiedsubstancestrengthreferencestrengthstrengthlowlimit =  new org.hl7.fhir.r4.model.Ratio();
-		medicinalproductingredientspecifiedsubstancestrengthreferencestrength.setStrengthLowLimit(medicinalproductingredientspecifiedsubstancestrengthreferencestrengthstrengthlowlimit);
+		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrNmrtrVl() != null ) {
 
-		/******************** medicinalproductingredientspecifiedsubstancestrengthreferencestrengthstrengthlowlimitdenominator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity medicinalproductingredientspecifiedsubstancestrengthreferencestrengthstrengthlowlimitdenominator =  new org.hl7.fhir.r4.model.Quantity();
-		medicinalproductingredientspecifiedsubstancestrengthreferencestrengthstrengthlowlimit.setDenominator(medicinalproductingredientspecifiedsubstancestrengthreferencestrengthstrengthlowlimitdenominator);
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrNmrtrVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrNmrtrVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().size() < i1+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addStrength(); }
+					String[] arrayi2 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrNmrtrVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+						if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getReferenceStrength().size() < i2+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).addReferenceStrength(); }
+						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getStrength().get(i1).getReferenceStrength().get(i2).getStrength().getNumerator().setValue((new java.math.BigDecimal((arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+					}
+				}
+			}
 
-		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_StrLwLmt_Dnmntr_Cd ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtDnmntrCd() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthreferencestrengthstrengthlowlimitdenominator.setCode(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtDnmntrCd());
 		}
-		/******************** medicinalproductingredientspecifiedsubstancestrengthreferencestrengthstrengthlowlimitdenominatorcomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicinalproductingredientspecifiedsubstancestrengthreferencestrengthstrengthlowlimitdenominatorcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-		medicinalproductingredientspecifiedsubstancestrengthreferencestrengthstrengthlowlimitdenominator.setComparator(medicinalproductingredientspecifiedsubstancestrengthreferencestrengthstrengthlowlimitdenominatorcomparator.fromCode(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtDnmntrCmprtr()));
-
-		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_StrLwLmt_Dnmntr_Sys ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtDnmntrSys() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthreferencestrengthstrengthlowlimitdenominator.setSystem(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtDnmntrSys());
-		}
-		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_StrLwLmt_Dnmntr_Unt ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtDnmntrUnt() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthreferencestrengthstrengthlowlimitdenominator.setUnit(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtDnmntrUnt());
-		}
-		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_StrLwLmt_Dnmntr_Vl ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtDnmntrVl() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthreferencestrengthstrengthlowlimitdenominator.setValue(Double.parseDouble((m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtDnmntrVl())));
-		}
-		/******************** medicinalproductingredientspecifiedsubstancestrengthreferencestrengthstrengthlowlimitnumerator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity medicinalproductingredientspecifiedsubstancestrengthreferencestrengthstrengthlowlimitnumerator =  new org.hl7.fhir.r4.model.Quantity();
-		medicinalproductingredientspecifiedsubstancestrengthreferencestrengthstrengthlowlimit.setNumerator(medicinalproductingredientspecifiedsubstancestrengthreferencestrengthstrengthlowlimitnumerator);
-
-		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_StrLwLmt_Nmrtr_Cd ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtNmrtrCd() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthreferencestrengthstrengthlowlimitnumerator.setCode(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtNmrtrCd());
-		}
-		/******************** medicinalproductingredientspecifiedsubstancestrengthreferencestrengthstrengthlowlimitnumeratorcomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicinalproductingredientspecifiedsubstancestrengthreferencestrengthstrengthlowlimitnumeratorcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-		medicinalproductingredientspecifiedsubstancestrengthreferencestrengthstrengthlowlimitnumerator.setComparator(medicinalproductingredientspecifiedsubstancestrengthreferencestrengthstrengthlowlimitnumeratorcomparator.fromCode(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtNmrtrCmprtr()));
-
-		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_StrLwLmt_Nmrtr_Sys ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtNmrtrSys() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthreferencestrengthstrengthlowlimitnumerator.setSystem(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtNmrtrSys());
-		}
-		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_StrLwLmt_Nmrtr_Unt ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtNmrtrUnt() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthreferencestrengthstrengthlowlimitnumerator.setUnit(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtNmrtrUnt());
-		}
-		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_StrLwLmt_Nmrtr_Vl ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtNmrtrVl() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthreferencestrengthstrengthlowlimitnumerator.setValue(Double.parseDouble((m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtNmrtrVl())));
-		}
-		/******************** medicinalproductingredientspecifiedsubstancestrengthreferencestrengthsubstance ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept medicinalproductingredientspecifiedsubstancestrengthreferencestrengthsubstance =  new org.hl7.fhir.r4.model.CodeableConcept();
-		medicinalproductingredientspecifiedsubstancestrengthreferencestrength.setSubstance(medicinalproductingredientspecifiedsubstancestrengthreferencestrengthsubstance);
-
-		/******************** medicinalproductingredientspecifiedsubstancestrengthreferencestrengthsubstancecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding medicinalproductingredientspecifiedsubstancestrengthreferencestrengthsubstancecoding =  new org.hl7.fhir.r4.model.Coding();
-		medicinalproductingredientspecifiedsubstancestrengthreferencestrengthsubstance.addCoding(medicinalproductingredientspecifiedsubstancestrengthreferencestrengthsubstancecoding);
-
-		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Sbstnc_Cdg_Cd ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrSbstncCdgCd() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthreferencestrengthsubstancecoding.setCode(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrSbstncCdgCd());
-		}
-		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Sbstnc_Cdg_Dsply ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrSbstncCdgDsply() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthreferencestrengthsubstancecoding.setDisplay(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrSbstncCdgDsply());
-		}
-		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Sbstnc_Cdg_Sys ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrSbstncCdgSys() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthreferencestrengthsubstancecoding.setSystem(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrSbstncCdgSys());
-		}
-		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Sbstnc_Cdg_UsrSltd ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrSbstncCdgUsrSltd() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthreferencestrengthsubstancecoding.setUserSelected(Boolean.parseBoolean(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrSbstncCdgUsrSltd()));
-		}
-		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Sbstnc_Cdg_Vrsn ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrSbstncCdgVrsn() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthreferencestrengthsubstancecoding.setVersion(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrSbstncCdgVrsn());
-		}
-		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Sbstnc_Txt ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrSbstncTxt() != null) {
-			medicinalproductingredientspecifiedsubstancestrengthreferencestrengthsubstance.setText(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrSbstncTxt());
-		}
-		/******************** medicinalproductingredientsubstance ********************************************************************************/
-		org.hl7.fhir.r4.model.MedicinalProductIngredient.MedicinalProductIngredientSubstanceComponent medicinalproductingredientsubstance =  new org.hl7.fhir.r4.model.MedicinalProductIngredient.MedicinalProductIngredientSubstanceComponent();
-		medicinalproductingredient.setSubstance(medicinalproductingredientsubstance);
-
-		/******************** medicinalproductingredientsubstancecode ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept medicinalproductingredientsubstancecode =  new org.hl7.fhir.r4.model.CodeableConcept();
-		medicinalproductingredientsubstance.setCode(medicinalproductingredientsubstancecode);
-
-		/******************** medicinalproductingredientsubstancecodecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding medicinalproductingredientsubstancecodecoding =  new org.hl7.fhir.r4.model.Coding();
-		medicinalproductingredientsubstancecode.addCoding(medicinalproductingredientsubstancecodecoding);
-
-		/******************** MdcnlPrdctIgrdnt_Sbstnc_Cd_Cdg_Cd ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncCdCdgCd() != null) {
-			medicinalproductingredientsubstancecodecoding.setCode(m.getMdcnlPrdctIgrdntSbstncCdCdgCd());
-		}
-		/******************** MdcnlPrdctIgrdnt_Sbstnc_Cd_Cdg_Dsply ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncCdCdgDsply() != null) {
-			medicinalproductingredientsubstancecodecoding.setDisplay(m.getMdcnlPrdctIgrdntSbstncCdCdgDsply());
-		}
-		/******************** MdcnlPrdctIgrdnt_Sbstnc_Cd_Cdg_Sys ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncCdCdgSys() != null) {
-			medicinalproductingredientsubstancecodecoding.setSystem(m.getMdcnlPrdctIgrdntSbstncCdCdgSys());
-		}
-		/******************** MdcnlPrdctIgrdnt_Sbstnc_Cd_Cdg_UsrSltd ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncCdCdgUsrSltd() != null) {
-			medicinalproductingredientsubstancecodecoding.setUserSelected(Boolean.parseBoolean(m.getMdcnlPrdctIgrdntSbstncCdCdgUsrSltd()));
-		}
-		/******************** MdcnlPrdctIgrdnt_Sbstnc_Cd_Cdg_Vrsn ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncCdCdgVrsn() != null) {
-			medicinalproductingredientsubstancecodecoding.setVersion(m.getMdcnlPrdctIgrdntSbstncCdCdgVrsn());
-		}
-		/******************** MdcnlPrdctIgrdnt_Sbstnc_Cd_Txt ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncCdTxt() != null) {
-			medicinalproductingredientsubstancecode.setText(m.getMdcnlPrdctIgrdntSbstncCdTxt());
-		}
-		/******************** medicinalproductingredientsubstancestrength ********************************************************************************/
-		org.hl7.fhir.r4.model.MedicinalProductIngredient.MedicinalProductIngredientSpecifiedSubstanceStrengthComponent medicinalproductingredientsubstancestrength =  new org.hl7.fhir.r4.model.MedicinalProductIngredient.MedicinalProductIngredientSpecifiedSubstanceStrengthComponent();
-		medicinalproductingredientsubstance.addStrength(medicinalproductingredientsubstancestrength);
-
-		/******************** medicinalproductingredientsubstancestrengthconcentration ********************************************************************************/
-		org.hl7.fhir.r4.model.Ratio medicinalproductingredientsubstancestrengthconcentration =  new org.hl7.fhir.r4.model.Ratio();
-		medicinalproductingredientsubstancestrength.setConcentration(medicinalproductingredientsubstancestrengthconcentration);
-
-		/******************** medicinalproductingredientsubstancestrengthconcentrationdenominator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity medicinalproductingredientsubstancestrengthconcentrationdenominator =  new org.hl7.fhir.r4.model.Quantity();
-		medicinalproductingredientsubstancestrengthconcentration.setDenominator(medicinalproductingredientsubstancestrengthconcentrationdenominator);
-
-		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_Cncntrtn_Dnmntr_Cd ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrCncntrtnDnmntrCd() != null) {
-			medicinalproductingredientsubstancestrengthconcentrationdenominator.setCode(m.getMdcnlPrdctIgrdntSbstncStrCncntrtnDnmntrCd());
-		}
-		/******************** medicinalproductingredientsubstancestrengthconcentrationdenominatorcomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicinalproductingredientsubstancestrengthconcentrationdenominatorcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-		medicinalproductingredientsubstancestrengthconcentrationdenominator.setComparator(medicinalproductingredientsubstancestrengthconcentrationdenominatorcomparator.fromCode(m.getMdcnlPrdctIgrdntSbstncStrCncntrtnDnmntrCmprtr()));
-
-		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_Cncntrtn_Dnmntr_Sys ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrCncntrtnDnmntrSys() != null) {
-			medicinalproductingredientsubstancestrengthconcentrationdenominator.setSystem(m.getMdcnlPrdctIgrdntSbstncStrCncntrtnDnmntrSys());
-		}
+//		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_StrLwLmt_Dnmntr_Cd ********************************************************************************/
+//		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtDnmntrCd() != null ) {
+//
+//			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtDnmntrCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+//				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+//					String[] arrayi2 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtDnmntrCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+//						if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getReferenceStrength().size() < i2+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addReferenceStrength(); }
+//						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getReferenceStrength().get(i2).getStrengthLowLimit().getDenominator().setCode(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+//					}
+//				}
+//			}
+//
+//		}
+//		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_StrLwLmt_Dnmntr_Cmprtr ********************************************************************************/
+//		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtDnmntrCmprtr() != null ) {
+//
+//			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtDnmntrCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+//				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+//					String[] arrayi2 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtDnmntrCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+//						if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getReferenceStrength().size() < i2+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addReferenceStrength(); }
+//						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getReferenceStrength().get(i2).getStrengthLowLimit().getDenominator().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+//					}
+//				}
+//			}
+//
+//		}
+//		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_StrLwLmt_Dnmntr_Sys ********************************************************************************/
+//		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtDnmntrSys() != null ) {
+//
+//			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtDnmntrSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+//				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+//					String[] arrayi2 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtDnmntrSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+//						if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getReferenceStrength().size() < i2+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addReferenceStrength(); }
+//						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getReferenceStrength().get(i2).getStrengthLowLimit().getDenominator().setSystem(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+//					}
+//				}
+//			}
+//
+//		}
+//		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_StrLwLmt_Dnmntr_Unt ********************************************************************************/
+//		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtDnmntrUnt() != null ) {
+//
+//			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtDnmntrUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+//				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+//					String[] arrayi2 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtDnmntrUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+//						if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getReferenceStrength().size() < i2+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addReferenceStrength(); }
+//						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getReferenceStrength().get(i2).getStrengthLowLimit().getDenominator().setUnit(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+//					}
+//				}
+//			}
+//
+//		}
+//		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_StrLwLmt_Dnmntr_Vl ********************************************************************************/
+//		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtDnmntrVl() != null ) {
+//
+//			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtDnmntrVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+//				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+//					String[] arrayi2 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtDnmntrVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+//						if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getReferenceStrength().size() < i2+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addReferenceStrength(); }
+//						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getReferenceStrength().get(i2).getStrengthLowLimit().getDenominator().setValue((new java.math.BigDecimal((arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+//					}
+//				}
+//			}
+//
+//		}
+//		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_StrLwLmt_Nmrtr_Cd ********************************************************************************/
+//		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtNmrtrCd() != null ) {
+//
+//			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtNmrtrCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+//				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+//					String[] arrayi2 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtNmrtrCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+//						if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getReferenceStrength().size() < i2+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addReferenceStrength(); }
+//						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getReferenceStrength().get(i2).getStrengthLowLimit().getNumerator().setCode(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+//					}
+//				}
+//			}
+//
+//		}
+//		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_StrLwLmt_Nmrtr_Cmprtr ********************************************************************************/
+//		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtNmrtrCmprtr() != null ) {
+//
+//			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtNmrtrCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+//				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+//					String[] arrayi2 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtNmrtrCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+//						if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getReferenceStrength().size() < i2+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addReferenceStrength(); }
+//						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getReferenceStrength().get(i2).getStrengthLowLimit().getNumerator().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+//					}
+//				}
+//			}
+//
+//		}
+//		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_StrLwLmt_Nmrtr_Sys ********************************************************************************/
+//		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtNmrtrSys() != null ) {
+//
+//			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtNmrtrSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+//				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+//					String[] arrayi2 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtNmrtrSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+//						if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getReferenceStrength().size() < i2+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addReferenceStrength(); }
+//						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getReferenceStrength().get(i2).getStrengthLowLimit().getNumerator().setSystem(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+//					}
+//				}
+//			}
+//
+//		}
+//		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_StrLwLmt_Nmrtr_Unt ********************************************************************************/
+//		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtNmrtrUnt() != null ) {
+//
+//			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtNmrtrUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+//				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+//					String[] arrayi2 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtNmrtrUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+//						if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getReferenceStrength().size() < i2+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addReferenceStrength(); }
+//						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getReferenceStrength().get(i2).getStrengthLowLimit().getNumerator().setUnit(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+//					}
+//				}
+//			}
+//
+//		}
+//		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_StrLwLmt_Nmrtr_Vl ********************************************************************************/
+//		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtNmrtrVl() != null ) {
+//
+//			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtNmrtrVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+//				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+//					String[] arrayi2 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrStrLwLmtNmrtrVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+//						if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getReferenceStrength().size() < i2+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addReferenceStrength(); }
+//						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getReferenceStrength().get(i2).getStrengthLowLimit().getNumerator().setValue((new java.math.BigDecimal((arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+//					}
+//				}
+//			}
+//
+//		}
+//		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Sbstnc_Cdg_Cd ********************************************************************************/
+//		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrSbstncCdgCd() != null ) {
+//
+//			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrSbstncCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+//				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+//					String[] arrayi2 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrSbstncCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+//						if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getReferenceStrength().size() < i2+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addReferenceStrength(); }
+//						String[] arrayi3 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrSbstncCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//						for(int i3 = 0; i3 < arrayi3.length; i3++) {
+//							if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getReferenceStrength().get(i2).getSubstance().getCoding().size() < i3+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).getReferenceStrength().get(i2).getSubstance().addCoding(); }
+//							if(arrayi3[i3].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi3[i3]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getReferenceStrength().get(i2).getSubstance().getCoding().get(i3).setCode(arrayi3[i3].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+//						}
+//					}
+//				}
+//			}
+//
+//		}
+//		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Sbstnc_Cdg_Dsply ********************************************************************************/
+//		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrSbstncCdgDsply() != null ) {
+//
+//			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrSbstncCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+//				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+//					String[] arrayi2 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrSbstncCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+//						if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getReferenceStrength().size() < i2+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addReferenceStrength(); }
+//						String[] arrayi3 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrSbstncCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//						for(int i3 = 0; i3 < arrayi3.length; i3++) {
+//							if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getReferenceStrength().get(i2).getSubstance().getCoding().size() < i3+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).getReferenceStrength().get(i2).getSubstance().addCoding(); }
+//							if(arrayi3[i3].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi3[i3]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getReferenceStrength().get(i2).getSubstance().getCoding().get(i3).setDisplay(arrayi3[i3].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+//						}
+//					}
+//				}
+//			}
+//
+//		}
+//		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Sbstnc_Cdg_Sys ********************************************************************************/
+//		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrSbstncCdgSys() != null ) {
+//
+//			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrSbstncCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+//				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+//					String[] arrayi2 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrSbstncCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+//						if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getReferenceStrength().size() < i2+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addReferenceStrength(); }
+//						String[] arrayi3 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrSbstncCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//						for(int i3 = 0; i3 < arrayi3.length; i3++) {
+//							if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getReferenceStrength().get(i2).getSubstance().getCoding().size() < i3+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).getReferenceStrength().get(i2).getSubstance().addCoding(); }
+//							if(arrayi3[i3].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi3[i3]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getReferenceStrength().get(i2).getSubstance().getCoding().get(i3).setSystem(arrayi3[i3].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+//						}
+//					}
+//				}
+//			}
+//
+//		}
+//		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Sbstnc_Cdg_UsrSltd ********************************************************************************/
+//		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrSbstncCdgUsrSltd() != null ) {
+//
+//			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrSbstncCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+//				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+//					String[] arrayi2 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrSbstncCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+//						if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getReferenceStrength().size() < i2+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addReferenceStrength(); }
+//						String[] arrayi3 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrSbstncCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//						for(int i3 = 0; i3 < arrayi3.length; i3++) {
+//							if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getReferenceStrength().get(i2).getSubstance().getCoding().size() < i3+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).getReferenceStrength().get(i2).getSubstance().addCoding(); }
+//							if(arrayi3[i3].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi3[i3]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getReferenceStrength().get(i2).getSubstance().getCoding().get(i3).setUserSelected(Boolean.parseBoolean(arrayi3[i3].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+//						}
+//					}
+//				}
+//			}
+//
+//		}
+//		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Sbstnc_Cdg_Vrsn ********************************************************************************/
+//		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrSbstncCdgVrsn() != null ) {
+//
+//			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrSbstncCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+//				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+//					String[] arrayi2 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrSbstncCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+//						if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getReferenceStrength().size() < i2+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addReferenceStrength(); }
+//						String[] arrayi3 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrSbstncCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//						for(int i3 = 0; i3 < arrayi3.length; i3++) {
+//							if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getReferenceStrength().get(i2).getSubstance().getCoding().size() < i3+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).getReferenceStrength().get(i2).getSubstance().addCoding(); }
+//							if(arrayi3[i3].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi3[i3]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getReferenceStrength().get(i2).getSubstance().getCoding().get(i3).setVersion(arrayi3[i3].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+//						}
+//					}
+//				}
+//			}
+//
+//		}
+//		/******************** MdcnlPrdctIgrdnt_SpcfdSbstnc_Str_RfrncStr_Sbstnc_Txt ********************************************************************************/
+//		if(m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrSbstncTxt() != null ) {
+//
+//			String[] arrayi0 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrSbstncTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+//				if(medicinalproductingredient.getSpecifiedSubstance().size() < i0+1) { medicinalproductingredient.addSpecifiedSubstance(); }
+//					String[] arrayi2 = m.getMdcnlPrdctIgrdntSpcfdSbstncStrRfrncStrSbstncTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+//						if(medicinalproductingredient.getSpecifiedSubstance().get(i0).getReferenceStrength().size() < i2+1) { medicinalproductingredient.getSpecifiedSubstance().get(i0).addReferenceStrength(); }
+//						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {medicinalproductingredient.getSpecifiedSubstance().get(i0).getReferenceStrength().get(i2).getSubstance().setText(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+//					}
+//				}
+//			}
+//
+//		}
+//		/******************** MdcnlPrdctIgrdnt_Sbstnc_Cd_Cdg_Cd ********************************************************************************/
+//		if(m.getMdcnlPrdctIgrdntSbstncCdCdgCd() != null ) {
+//
+//			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncCdCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+//				if(medicinalproductingredient.getSubstance().getCode().getCoding().size() < i0+1) { medicinalproductingredient.getSubstance().getCode().addCoding(); }
+//				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicinalproductingredient.getSubstance().getCode().getCoding().get(i0).setCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+//			}
+//
+//		}
+//		/******************** MdcnlPrdctIgrdnt_Sbstnc_Cd_Cdg_Dsply ********************************************************************************/
+//		if(m.getMdcnlPrdctIgrdntSbstncCdCdgDsply() != null ) {
+//
+//			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncCdCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+//				if(medicinalproductingredient.getSubstance().getCode().getCoding().size() < i0+1) { medicinalproductingredient.getSubstance().getCode().addCoding(); }
+//				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicinalproductingredient.getSubstance().getCode().getCoding().get(i0).setDisplay(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+//			}
+//
+//		}
+//		/******************** MdcnlPrdctIgrdnt_Sbstnc_Cd_Cdg_Sys ********************************************************************************/
+//		if(m.getMdcnlPrdctIgrdntSbstncCdCdgSys() != null ) {
+//
+//			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncCdCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+//				if(medicinalproductingredient.getSubstance().getCode().getCoding().size() < i0+1) { medicinalproductingredient.getSubstance().getCode().addCoding(); }
+//				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicinalproductingredient.getSubstance().getCode().getCoding().get(i0).setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+//			}
+//
+//		}
+//		/******************** MdcnlPrdctIgrdnt_Sbstnc_Cd_Cdg_UsrSltd ********************************************************************************/
+//		if(m.getMdcnlPrdctIgrdntSbstncCdCdgUsrSltd() != null ) {
+//
+//			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncCdCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+//				if(medicinalproductingredient.getSubstance().getCode().getCoding().size() < i0+1) { medicinalproductingredient.getSubstance().getCode().addCoding(); }
+//				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicinalproductingredient.getSubstance().getCode().getCoding().get(i0).setUserSelected(Boolean.parseBoolean(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+//			}
+//
+//		}
+//		/******************** MdcnlPrdctIgrdnt_Sbstnc_Cd_Cdg_Vrsn ********************************************************************************/
+//		if(m.getMdcnlPrdctIgrdntSbstncCdCdgVrsn() != null ) {
+//
+//			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncCdCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+//				if(medicinalproductingredient.getSubstance().getCode().getCoding().size() < i0+1) { medicinalproductingredient.getSubstance().getCode().addCoding(); }
+//				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicinalproductingredient.getSubstance().getCode().getCoding().get(i0).setVersion(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+//			}
+//
+//		}
+//		/******************** MdcnlPrdctIgrdnt_Sbstnc_Cd_Txt ********************************************************************************/
+//		if(m.getMdcnlPrdctIgrdntSbstncCdTxt() != null ) {
+//
+//			if(m.getMdcnlPrdctIgrdntSbstncCdTxt().replace("[","").replace("]","").equals("NULL") | m.getMdcnlPrdctIgrdntSbstncCdTxt()==null) {} else {
+//			medicinalproductingredient.getSubstance().getCode().setText(m.getMdcnlPrdctIgrdntSbstncCdTxt().replace("[","").replace("]","").replace("\"",""));
+//			}
+//		}
+//		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_Cncntrtn_Dnmntr_Cd ********************************************************************************/
+//		if(m.getMdcnlPrdctIgrdntSbstncStrCncntrtnDnmntrCd() != null ) {
+//
+//			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrCncntrtnDnmntrCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+//				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+//				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getConcentration().getDenominator().setCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+//			}
+//
+//		}
+//		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_Cncntrtn_Dnmntr_Cmprtr ********************************************************************************/
+//		if(m.getMdcnlPrdctIgrdntSbstncStrCncntrtnDnmntrCmprtr() != null ) {
+//
+//			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrCncntrtnDnmntrCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+//				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+//				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getConcentration().getDenominator().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+//			}
+//
+//		}
+//		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_Cncntrtn_Dnmntr_Sys ********************************************************************************/
+//		if(m.getMdcnlPrdctIgrdntSbstncStrCncntrtnDnmntrSys() != null ) {
+//
+//			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrCncntrtnDnmntrSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+//				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+//				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getConcentration().getDenominator().setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+//			}
+//
+//		}
 		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_Cncntrtn_Dnmntr_Unt ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrCncntrtnDnmntrUnt() != null) {
-			medicinalproductingredientsubstancestrengthconcentrationdenominator.setUnit(m.getMdcnlPrdctIgrdntSbstncStrCncntrtnDnmntrUnt());
+		if(m.getMdcnlPrdctIgrdntSbstncStrCncntrtnDnmntrUnt() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrCncntrtnDnmntrUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getConcentration().getDenominator().setUnit(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_Cncntrtn_Dnmntr_Vl ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrCncntrtnDnmntrVl() != null) {
-			medicinalproductingredientsubstancestrengthconcentrationdenominator.setValue(Double.parseDouble((m.getMdcnlPrdctIgrdntSbstncStrCncntrtnDnmntrVl())));
-		}
-		/******************** medicinalproductingredientsubstancestrengthconcentrationnumerator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity medicinalproductingredientsubstancestrengthconcentrationnumerator =  new org.hl7.fhir.r4.model.Quantity();
-		medicinalproductingredientsubstancestrengthconcentration.setNumerator(medicinalproductingredientsubstancestrengthconcentrationnumerator);
+		if(m.getMdcnlPrdctIgrdntSbstncStrCncntrtnDnmntrVl() != null ) {
 
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrCncntrtnDnmntrVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getConcentration().getDenominator().setValue((new java.math.BigDecimal((arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+			}
+
+		}
 		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_Cncntrtn_Nmrtr_Cd ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrCncntrtnNmrtrCd() != null) {
-			medicinalproductingredientsubstancestrengthconcentrationnumerator.setCode(m.getMdcnlPrdctIgrdntSbstncStrCncntrtnNmrtrCd());
-		}
-		/******************** medicinalproductingredientsubstancestrengthconcentrationnumeratorcomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicinalproductingredientsubstancestrengthconcentrationnumeratorcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-		medicinalproductingredientsubstancestrengthconcentrationnumerator.setComparator(medicinalproductingredientsubstancestrengthconcentrationnumeratorcomparator.fromCode(m.getMdcnlPrdctIgrdntSbstncStrCncntrtnNmrtrCmprtr()));
+		if(m.getMdcnlPrdctIgrdntSbstncStrCncntrtnNmrtrCd() != null ) {
 
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrCncntrtnNmrtrCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getConcentration().getNumerator().setCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
+		}
+		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_Cncntrtn_Nmrtr_Cmprtr ********************************************************************************/
+		if(m.getMdcnlPrdctIgrdntSbstncStrCncntrtnNmrtrCmprtr() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrCncntrtnNmrtrCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getConcentration().getNumerator().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_Cncntrtn_Nmrtr_Sys ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrCncntrtnNmrtrSys() != null) {
-			medicinalproductingredientsubstancestrengthconcentrationnumerator.setSystem(m.getMdcnlPrdctIgrdntSbstncStrCncntrtnNmrtrSys());
+		if(m.getMdcnlPrdctIgrdntSbstncStrCncntrtnNmrtrSys() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrCncntrtnNmrtrSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getConcentration().getNumerator().setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_Cncntrtn_Nmrtr_Unt ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrCncntrtnNmrtrUnt() != null) {
-			medicinalproductingredientsubstancestrengthconcentrationnumerator.setUnit(m.getMdcnlPrdctIgrdntSbstncStrCncntrtnNmrtrUnt());
+		if(m.getMdcnlPrdctIgrdntSbstncStrCncntrtnNmrtrUnt() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrCncntrtnNmrtrUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getConcentration().getNumerator().setUnit(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_Cncntrtn_Nmrtr_Vl ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrCncntrtnNmrtrVl() != null) {
-			medicinalproductingredientsubstancestrengthconcentrationnumerator.setValue(Double.parseDouble((m.getMdcnlPrdctIgrdntSbstncStrCncntrtnNmrtrVl())));
+		if(m.getMdcnlPrdctIgrdntSbstncStrCncntrtnNmrtrVl() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrCncntrtnNmrtrVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getConcentration().getNumerator().setValue((new java.math.BigDecimal((arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+			}
+
 		}
-		/******************** medicinalproductingredientsubstancestrengthconcentrationlowlimit ********************************************************************************/
-		org.hl7.fhir.r4.model.Ratio medicinalproductingredientsubstancestrengthconcentrationlowlimit =  new org.hl7.fhir.r4.model.Ratio();
-		medicinalproductingredientsubstancestrength.setConcentrationLowLimit(medicinalproductingredientsubstancestrengthconcentrationlowlimit);
-
-		/******************** medicinalproductingredientsubstancestrengthconcentrationlowlimitdenominator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity medicinalproductingredientsubstancestrengthconcentrationlowlimitdenominator =  new org.hl7.fhir.r4.model.Quantity();
-		medicinalproductingredientsubstancestrengthconcentrationlowlimit.setDenominator(medicinalproductingredientsubstancestrengthconcentrationlowlimitdenominator);
-
 		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_CncntrtnLwLmt_Dnmntr_Cd ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrCncntrtnLwLmtDnmntrCd() != null) {
-			medicinalproductingredientsubstancestrengthconcentrationlowlimitdenominator.setCode(m.getMdcnlPrdctIgrdntSbstncStrCncntrtnLwLmtDnmntrCd());
-		}
-		/******************** medicinalproductingredientsubstancestrengthconcentrationlowlimitdenominatorcomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicinalproductingredientsubstancestrengthconcentrationlowlimitdenominatorcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-		medicinalproductingredientsubstancestrengthconcentrationlowlimitdenominator.setComparator(medicinalproductingredientsubstancestrengthconcentrationlowlimitdenominatorcomparator.fromCode(m.getMdcnlPrdctIgrdntSbstncStrCncntrtnLwLmtDnmntrCmprtr()));
+		if(m.getMdcnlPrdctIgrdntSbstncStrCncntrtnLwLmtDnmntrCd() != null ) {
 
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrCncntrtnLwLmtDnmntrCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getConcentrationLowLimit().getDenominator().setCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
+		}
+		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_CncntrtnLwLmt_Dnmntr_Cmprtr ********************************************************************************/
+		if(m.getMdcnlPrdctIgrdntSbstncStrCncntrtnLwLmtDnmntrCmprtr() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrCncntrtnLwLmtDnmntrCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getConcentrationLowLimit().getDenominator().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_CncntrtnLwLmt_Dnmntr_Sys ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrCncntrtnLwLmtDnmntrSys() != null) {
-			medicinalproductingredientsubstancestrengthconcentrationlowlimitdenominator.setSystem(m.getMdcnlPrdctIgrdntSbstncStrCncntrtnLwLmtDnmntrSys());
+		if(m.getMdcnlPrdctIgrdntSbstncStrCncntrtnLwLmtDnmntrSys() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrCncntrtnLwLmtDnmntrSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getConcentrationLowLimit().getDenominator().setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_CncntrtnLwLmt_Dnmntr_Unt ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrCncntrtnLwLmtDnmntrUnt() != null) {
-			medicinalproductingredientsubstancestrengthconcentrationlowlimitdenominator.setUnit(m.getMdcnlPrdctIgrdntSbstncStrCncntrtnLwLmtDnmntrUnt());
+		if(m.getMdcnlPrdctIgrdntSbstncStrCncntrtnLwLmtDnmntrUnt() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrCncntrtnLwLmtDnmntrUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getConcentrationLowLimit().getDenominator().setUnit(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_CncntrtnLwLmt_Dnmntr_Vl ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrCncntrtnLwLmtDnmntrVl() != null) {
-			medicinalproductingredientsubstancestrengthconcentrationlowlimitdenominator.setValue(Double.parseDouble((m.getMdcnlPrdctIgrdntSbstncStrCncntrtnLwLmtDnmntrVl())));
-		}
-		/******************** medicinalproductingredientsubstancestrengthconcentrationlowlimitnumerator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity medicinalproductingredientsubstancestrengthconcentrationlowlimitnumerator =  new org.hl7.fhir.r4.model.Quantity();
-		medicinalproductingredientsubstancestrengthconcentrationlowlimit.setNumerator(medicinalproductingredientsubstancestrengthconcentrationlowlimitnumerator);
+		if(m.getMdcnlPrdctIgrdntSbstncStrCncntrtnLwLmtDnmntrVl() != null ) {
 
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrCncntrtnLwLmtDnmntrVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getConcentrationLowLimit().getDenominator().setValue((new java.math.BigDecimal((arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+			}
+
+		}
 		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_CncntrtnLwLmt_Nmrtr_Cd ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrCncntrtnLwLmtNmrtrCd() != null) {
-			medicinalproductingredientsubstancestrengthconcentrationlowlimitnumerator.setCode(m.getMdcnlPrdctIgrdntSbstncStrCncntrtnLwLmtNmrtrCd());
-		}
-		/******************** medicinalproductingredientsubstancestrengthconcentrationlowlimitnumeratorcomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicinalproductingredientsubstancestrengthconcentrationlowlimitnumeratorcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-		medicinalproductingredientsubstancestrengthconcentrationlowlimitnumerator.setComparator(medicinalproductingredientsubstancestrengthconcentrationlowlimitnumeratorcomparator.fromCode(m.getMdcnlPrdctIgrdntSbstncStrCncntrtnLwLmtNmrtrCmprtr()));
+		if(m.getMdcnlPrdctIgrdntSbstncStrCncntrtnLwLmtNmrtrCd() != null ) {
 
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrCncntrtnLwLmtNmrtrCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getConcentrationLowLimit().getNumerator().setCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
+		}
+		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_CncntrtnLwLmt_Nmrtr_Cmprtr ********************************************************************************/
+		if(m.getMdcnlPrdctIgrdntSbstncStrCncntrtnLwLmtNmrtrCmprtr() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrCncntrtnLwLmtNmrtrCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getConcentrationLowLimit().getNumerator().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_CncntrtnLwLmt_Nmrtr_Sys ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrCncntrtnLwLmtNmrtrSys() != null) {
-			medicinalproductingredientsubstancestrengthconcentrationlowlimitnumerator.setSystem(m.getMdcnlPrdctIgrdntSbstncStrCncntrtnLwLmtNmrtrSys());
+		if(m.getMdcnlPrdctIgrdntSbstncStrCncntrtnLwLmtNmrtrSys() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrCncntrtnLwLmtNmrtrSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getConcentrationLowLimit().getNumerator().setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_CncntrtnLwLmt_Nmrtr_Unt ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrCncntrtnLwLmtNmrtrUnt() != null) {
-			medicinalproductingredientsubstancestrengthconcentrationlowlimitnumerator.setUnit(m.getMdcnlPrdctIgrdntSbstncStrCncntrtnLwLmtNmrtrUnt());
+		if(m.getMdcnlPrdctIgrdntSbstncStrCncntrtnLwLmtNmrtrUnt() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrCncntrtnLwLmtNmrtrUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getConcentrationLowLimit().getNumerator().setUnit(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_CncntrtnLwLmt_Nmrtr_Vl ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrCncntrtnLwLmtNmrtrVl() != null) {
-			medicinalproductingredientsubstancestrengthconcentrationlowlimitnumerator.setValue(Double.parseDouble((m.getMdcnlPrdctIgrdntSbstncStrCncntrtnLwLmtNmrtrVl())));
+		if(m.getMdcnlPrdctIgrdntSbstncStrCncntrtnLwLmtNmrtrVl() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrCncntrtnLwLmtNmrtrVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getConcentrationLowLimit().getNumerator().setValue((new java.math.BigDecimal((arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+			}
+
 		}
-		/******************** medicinalproductingredientsubstancestrengthcountry ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept medicinalproductingredientsubstancestrengthcountry =  new org.hl7.fhir.r4.model.CodeableConcept();
-		medicinalproductingredientsubstancestrength.addCountry(medicinalproductingredientsubstancestrengthcountry);
-
-		/******************** medicinalproductingredientsubstancestrengthcountrycoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding medicinalproductingredientsubstancestrengthcountrycoding =  new org.hl7.fhir.r4.model.Coding();
-		medicinalproductingredientsubstancestrengthcountry.addCoding(medicinalproductingredientsubstancestrengthcountrycoding);
-
 		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_Cntry_Cdg_Cd ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrCntryCdgCd() != null) {
-			medicinalproductingredientsubstancestrengthcountrycoding.setCode(m.getMdcnlPrdctIgrdntSbstncStrCntryCdgCd());
+		if(m.getMdcnlPrdctIgrdntSbstncStrCntryCdgCd() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrCntryCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSbstncStrCntryCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSubstance().getStrength().get(i0).getCountry().size() < i1+1) { medicinalproductingredient.getSubstance().getStrength().get(i0).addCountry(); }
+					String[] arrayi2 = m.getMdcnlPrdctIgrdntSbstncStrCntryCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+						if(medicinalproductingredient.getSubstance().getStrength().get(i0).getCountry().get(i1).getCoding().size() < i2+1) { medicinalproductingredient.getSubstance().getStrength().get(i0).getCountry().get(i1).addCoding(); }
+						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getCountry().get(i1).getCoding().get(i2).setCode(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+					}
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_Cntry_Cdg_Dsply ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrCntryCdgDsply() != null) {
-			medicinalproductingredientsubstancestrengthcountrycoding.setDisplay(m.getMdcnlPrdctIgrdntSbstncStrCntryCdgDsply());
+		if(m.getMdcnlPrdctIgrdntSbstncStrCntryCdgDsply() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrCntryCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSbstncStrCntryCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSubstance().getStrength().get(i0).getCountry().size() < i1+1) { medicinalproductingredient.getSubstance().getStrength().get(i0).addCountry(); }
+					String[] arrayi2 = m.getMdcnlPrdctIgrdntSbstncStrCntryCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+						if(medicinalproductingredient.getSubstance().getStrength().get(i0).getCountry().get(i1).getCoding().size() < i2+1) { medicinalproductingredient.getSubstance().getStrength().get(i0).getCountry().get(i1).addCoding(); }
+						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getCountry().get(i1).getCoding().get(i2).setDisplay(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+					}
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_Cntry_Cdg_Sys ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrCntryCdgSys() != null) {
-			medicinalproductingredientsubstancestrengthcountrycoding.setSystem(m.getMdcnlPrdctIgrdntSbstncStrCntryCdgSys());
+		if(m.getMdcnlPrdctIgrdntSbstncStrCntryCdgSys() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrCntryCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSbstncStrCntryCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSubstance().getStrength().get(i0).getCountry().size() < i1+1) { medicinalproductingredient.getSubstance().getStrength().get(i0).addCountry(); }
+					String[] arrayi2 = m.getMdcnlPrdctIgrdntSbstncStrCntryCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+						if(medicinalproductingredient.getSubstance().getStrength().get(i0).getCountry().get(i1).getCoding().size() < i2+1) { medicinalproductingredient.getSubstance().getStrength().get(i0).getCountry().get(i1).addCoding(); }
+						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getCountry().get(i1).getCoding().get(i2).setSystem(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+					}
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_Cntry_Cdg_UsrSltd ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrCntryCdgUsrSltd() != null) {
-			medicinalproductingredientsubstancestrengthcountrycoding.setUserSelected(Boolean.parseBoolean(m.getMdcnlPrdctIgrdntSbstncStrCntryCdgUsrSltd()));
+		if(m.getMdcnlPrdctIgrdntSbstncStrCntryCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrCntryCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSbstncStrCntryCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSubstance().getStrength().get(i0).getCountry().size() < i1+1) { medicinalproductingredient.getSubstance().getStrength().get(i0).addCountry(); }
+					String[] arrayi2 = m.getMdcnlPrdctIgrdntSbstncStrCntryCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+						if(medicinalproductingredient.getSubstance().getStrength().get(i0).getCountry().get(i1).getCoding().size() < i2+1) { medicinalproductingredient.getSubstance().getStrength().get(i0).getCountry().get(i1).addCoding(); }
+						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getCountry().get(i1).getCoding().get(i2).setUserSelected(Boolean.parseBoolean(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+					}
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_Cntry_Cdg_Vrsn ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrCntryCdgVrsn() != null) {
-			medicinalproductingredientsubstancestrengthcountrycoding.setVersion(m.getMdcnlPrdctIgrdntSbstncStrCntryCdgVrsn());
+		if(m.getMdcnlPrdctIgrdntSbstncStrCntryCdgVrsn() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrCntryCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSbstncStrCntryCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSubstance().getStrength().get(i0).getCountry().size() < i1+1) { medicinalproductingredient.getSubstance().getStrength().get(i0).addCountry(); }
+					String[] arrayi2 = m.getMdcnlPrdctIgrdntSbstncStrCntryCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+						if(medicinalproductingredient.getSubstance().getStrength().get(i0).getCountry().get(i1).getCoding().size() < i2+1) { medicinalproductingredient.getSubstance().getStrength().get(i0).getCountry().get(i1).addCoding(); }
+						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getCountry().get(i1).getCoding().get(i2).setVersion(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+					}
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_Cntry_Txt ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrCntryTxt() != null) {
-			medicinalproductingredientsubstancestrengthcountry.setText(m.getMdcnlPrdctIgrdntSbstncStrCntryTxt());
+		if(m.getMdcnlPrdctIgrdntSbstncStrCntryTxt() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrCntryTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSbstncStrCntryTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSubstance().getStrength().get(i0).getCountry().size() < i1+1) { medicinalproductingredient.getSubstance().getStrength().get(i0).addCountry(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getCountry().get(i1).setText(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_MsrmentPoint ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrMsrmentPoint() != null) {
-			medicinalproductingredientsubstancestrength.setMeasurementPoint(m.getMdcnlPrdctIgrdntSbstncStrMsrmentPoint());
+		if(m.getMdcnlPrdctIgrdntSbstncStrMsrmentPoint() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrMsrmentPoint().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).setMeasurementPoint(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
-		/******************** medicinalproductingredientsubstancestrengthpresentation ********************************************************************************/
-		org.hl7.fhir.r4.model.Ratio medicinalproductingredientsubstancestrengthpresentation =  new org.hl7.fhir.r4.model.Ratio();
-		medicinalproductingredientsubstancestrength.setPresentation(medicinalproductingredientsubstancestrengthpresentation);
-
-		/******************** medicinalproductingredientsubstancestrengthpresentationdenominator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity medicinalproductingredientsubstancestrengthpresentationdenominator =  new org.hl7.fhir.r4.model.Quantity();
-		medicinalproductingredientsubstancestrengthpresentation.setDenominator(medicinalproductingredientsubstancestrengthpresentationdenominator);
-
 		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_Prsnttn_Dnmntr_Cd ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrPrsnttnDnmntrCd() != null) {
-			medicinalproductingredientsubstancestrengthpresentationdenominator.setCode(m.getMdcnlPrdctIgrdntSbstncStrPrsnttnDnmntrCd());
-		}
-		/******************** medicinalproductingredientsubstancestrengthpresentationdenominatorcomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicinalproductingredientsubstancestrengthpresentationdenominatorcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-		medicinalproductingredientsubstancestrengthpresentationdenominator.setComparator(medicinalproductingredientsubstancestrengthpresentationdenominatorcomparator.fromCode(m.getMdcnlPrdctIgrdntSbstncStrPrsnttnDnmntrCmprtr()));
+		if(m.getMdcnlPrdctIgrdntSbstncStrPrsnttnDnmntrCd() != null ) {
 
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrPrsnttnDnmntrCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getPresentation().getDenominator().setCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
+		}
+		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_Prsnttn_Dnmntr_Cmprtr ********************************************************************************/
+		if(m.getMdcnlPrdctIgrdntSbstncStrPrsnttnDnmntrCmprtr() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrPrsnttnDnmntrCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getPresentation().getDenominator().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_Prsnttn_Dnmntr_Sys ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrPrsnttnDnmntrSys() != null) {
-			medicinalproductingredientsubstancestrengthpresentationdenominator.setSystem(m.getMdcnlPrdctIgrdntSbstncStrPrsnttnDnmntrSys());
+		if(m.getMdcnlPrdctIgrdntSbstncStrPrsnttnDnmntrSys() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrPrsnttnDnmntrSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getPresentation().getDenominator().setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_Prsnttn_Dnmntr_Unt ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrPrsnttnDnmntrUnt() != null) {
-			medicinalproductingredientsubstancestrengthpresentationdenominator.setUnit(m.getMdcnlPrdctIgrdntSbstncStrPrsnttnDnmntrUnt());
+		if(m.getMdcnlPrdctIgrdntSbstncStrPrsnttnDnmntrUnt() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrPrsnttnDnmntrUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getPresentation().getDenominator().setUnit(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_Prsnttn_Dnmntr_Vl ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrPrsnttnDnmntrVl() != null) {
-			medicinalproductingredientsubstancestrengthpresentationdenominator.setValue(Double.parseDouble((m.getMdcnlPrdctIgrdntSbstncStrPrsnttnDnmntrVl())));
-		}
-		/******************** medicinalproductingredientsubstancestrengthpresentationnumerator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity medicinalproductingredientsubstancestrengthpresentationnumerator =  new org.hl7.fhir.r4.model.Quantity();
-		medicinalproductingredientsubstancestrengthpresentation.setNumerator(medicinalproductingredientsubstancestrengthpresentationnumerator);
+		if(m.getMdcnlPrdctIgrdntSbstncStrPrsnttnDnmntrVl() != null ) {
 
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrPrsnttnDnmntrVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getPresentation().getDenominator().setValue((new java.math.BigDecimal((arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+			}
+
+		}
 		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_Prsnttn_Nmrtr_Cd ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrPrsnttnNmrtrCd() != null) {
-			medicinalproductingredientsubstancestrengthpresentationnumerator.setCode(m.getMdcnlPrdctIgrdntSbstncStrPrsnttnNmrtrCd());
-		}
-		/******************** medicinalproductingredientsubstancestrengthpresentationnumeratorcomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicinalproductingredientsubstancestrengthpresentationnumeratorcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-		medicinalproductingredientsubstancestrengthpresentationnumerator.setComparator(medicinalproductingredientsubstancestrengthpresentationnumeratorcomparator.fromCode(m.getMdcnlPrdctIgrdntSbstncStrPrsnttnNmrtrCmprtr()));
+		if(m.getMdcnlPrdctIgrdntSbstncStrPrsnttnNmrtrCd() != null ) {
 
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrPrsnttnNmrtrCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getPresentation().getNumerator().setCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
+		}
+		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_Prsnttn_Nmrtr_Cmprtr ********************************************************************************/
+		if(m.getMdcnlPrdctIgrdntSbstncStrPrsnttnNmrtrCmprtr() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrPrsnttnNmrtrCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getPresentation().getNumerator().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_Prsnttn_Nmrtr_Sys ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrPrsnttnNmrtrSys() != null) {
-			medicinalproductingredientsubstancestrengthpresentationnumerator.setSystem(m.getMdcnlPrdctIgrdntSbstncStrPrsnttnNmrtrSys());
+		if(m.getMdcnlPrdctIgrdntSbstncStrPrsnttnNmrtrSys() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrPrsnttnNmrtrSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getPresentation().getNumerator().setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_Prsnttn_Nmrtr_Unt ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrPrsnttnNmrtrUnt() != null) {
-			medicinalproductingredientsubstancestrengthpresentationnumerator.setUnit(m.getMdcnlPrdctIgrdntSbstncStrPrsnttnNmrtrUnt());
+		if(m.getMdcnlPrdctIgrdntSbstncStrPrsnttnNmrtrUnt() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrPrsnttnNmrtrUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getPresentation().getNumerator().setUnit(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_Prsnttn_Nmrtr_Vl ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrPrsnttnNmrtrVl() != null) {
-			medicinalproductingredientsubstancestrengthpresentationnumerator.setValue(Double.parseDouble((m.getMdcnlPrdctIgrdntSbstncStrPrsnttnNmrtrVl())));
+		if(m.getMdcnlPrdctIgrdntSbstncStrPrsnttnNmrtrVl() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrPrsnttnNmrtrVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getPresentation().getNumerator().setValue((new java.math.BigDecimal((arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+			}
+
 		}
-		/******************** medicinalproductingredientsubstancestrengthpresentationlowlimit ********************************************************************************/
-		org.hl7.fhir.r4.model.Ratio medicinalproductingredientsubstancestrengthpresentationlowlimit =  new org.hl7.fhir.r4.model.Ratio();
-		medicinalproductingredientsubstancestrength.setPresentationLowLimit(medicinalproductingredientsubstancestrengthpresentationlowlimit);
-
-		/******************** medicinalproductingredientsubstancestrengthpresentationlowlimitdenominator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity medicinalproductingredientsubstancestrengthpresentationlowlimitdenominator =  new org.hl7.fhir.r4.model.Quantity();
-		medicinalproductingredientsubstancestrengthpresentationlowlimit.setDenominator(medicinalproductingredientsubstancestrengthpresentationlowlimitdenominator);
-
 		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_PrsnttnLwLmt_Dnmntr_Cd ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrPrsnttnLwLmtDnmntrCd() != null) {
-			medicinalproductingredientsubstancestrengthpresentationlowlimitdenominator.setCode(m.getMdcnlPrdctIgrdntSbstncStrPrsnttnLwLmtDnmntrCd());
-		}
-		/******************** medicinalproductingredientsubstancestrengthpresentationlowlimitdenominatorcomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicinalproductingredientsubstancestrengthpresentationlowlimitdenominatorcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-		medicinalproductingredientsubstancestrengthpresentationlowlimitdenominator.setComparator(medicinalproductingredientsubstancestrengthpresentationlowlimitdenominatorcomparator.fromCode(m.getMdcnlPrdctIgrdntSbstncStrPrsnttnLwLmtDnmntrCmprtr()));
+		if(m.getMdcnlPrdctIgrdntSbstncStrPrsnttnLwLmtDnmntrCd() != null ) {
 
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrPrsnttnLwLmtDnmntrCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getPresentationLowLimit().getDenominator().setCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
+		}
+		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_PrsnttnLwLmt_Dnmntr_Cmprtr ********************************************************************************/
+		if(m.getMdcnlPrdctIgrdntSbstncStrPrsnttnLwLmtDnmntrCmprtr() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrPrsnttnLwLmtDnmntrCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getPresentationLowLimit().getDenominator().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_PrsnttnLwLmt_Dnmntr_Sys ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrPrsnttnLwLmtDnmntrSys() != null) {
-			medicinalproductingredientsubstancestrengthpresentationlowlimitdenominator.setSystem(m.getMdcnlPrdctIgrdntSbstncStrPrsnttnLwLmtDnmntrSys());
+		if(m.getMdcnlPrdctIgrdntSbstncStrPrsnttnLwLmtDnmntrSys() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrPrsnttnLwLmtDnmntrSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getPresentationLowLimit().getDenominator().setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_PrsnttnLwLmt_Dnmntr_Unt ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrPrsnttnLwLmtDnmntrUnt() != null) {
-			medicinalproductingredientsubstancestrengthpresentationlowlimitdenominator.setUnit(m.getMdcnlPrdctIgrdntSbstncStrPrsnttnLwLmtDnmntrUnt());
+		if(m.getMdcnlPrdctIgrdntSbstncStrPrsnttnLwLmtDnmntrUnt() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrPrsnttnLwLmtDnmntrUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getPresentationLowLimit().getDenominator().setUnit(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_PrsnttnLwLmt_Dnmntr_Vl ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrPrsnttnLwLmtDnmntrVl() != null) {
-			medicinalproductingredientsubstancestrengthpresentationlowlimitdenominator.setValue(Double.parseDouble((m.getMdcnlPrdctIgrdntSbstncStrPrsnttnLwLmtDnmntrVl())));
-		}
-		/******************** medicinalproductingredientsubstancestrengthpresentationlowlimitnumerator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity medicinalproductingredientsubstancestrengthpresentationlowlimitnumerator =  new org.hl7.fhir.r4.model.Quantity();
-		medicinalproductingredientsubstancestrengthpresentationlowlimit.setNumerator(medicinalproductingredientsubstancestrengthpresentationlowlimitnumerator);
+		if(m.getMdcnlPrdctIgrdntSbstncStrPrsnttnLwLmtDnmntrVl() != null ) {
 
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrPrsnttnLwLmtDnmntrVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getPresentationLowLimit().getDenominator().setValue((new java.math.BigDecimal((arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+			}
+
+		}
 		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_PrsnttnLwLmt_Nmrtr_Cd ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrPrsnttnLwLmtNmrtrCd() != null) {
-			medicinalproductingredientsubstancestrengthpresentationlowlimitnumerator.setCode(m.getMdcnlPrdctIgrdntSbstncStrPrsnttnLwLmtNmrtrCd());
-		}
-		/******************** medicinalproductingredientsubstancestrengthpresentationlowlimitnumeratorcomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicinalproductingredientsubstancestrengthpresentationlowlimitnumeratorcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-		medicinalproductingredientsubstancestrengthpresentationlowlimitnumerator.setComparator(medicinalproductingredientsubstancestrengthpresentationlowlimitnumeratorcomparator.fromCode(m.getMdcnlPrdctIgrdntSbstncStrPrsnttnLwLmtNmrtrCmprtr()));
+		if(m.getMdcnlPrdctIgrdntSbstncStrPrsnttnLwLmtNmrtrCd() != null ) {
 
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrPrsnttnLwLmtNmrtrCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getPresentationLowLimit().getNumerator().setCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
+		}
+		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_PrsnttnLwLmt_Nmrtr_Cmprtr ********************************************************************************/
+		if(m.getMdcnlPrdctIgrdntSbstncStrPrsnttnLwLmtNmrtrCmprtr() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrPrsnttnLwLmtNmrtrCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getPresentationLowLimit().getNumerator().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_PrsnttnLwLmt_Nmrtr_Sys ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrPrsnttnLwLmtNmrtrSys() != null) {
-			medicinalproductingredientsubstancestrengthpresentationlowlimitnumerator.setSystem(m.getMdcnlPrdctIgrdntSbstncStrPrsnttnLwLmtNmrtrSys());
+		if(m.getMdcnlPrdctIgrdntSbstncStrPrsnttnLwLmtNmrtrSys() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrPrsnttnLwLmtNmrtrSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getPresentationLowLimit().getNumerator().setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_PrsnttnLwLmt_Nmrtr_Unt ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrPrsnttnLwLmtNmrtrUnt() != null) {
-			medicinalproductingredientsubstancestrengthpresentationlowlimitnumerator.setUnit(m.getMdcnlPrdctIgrdntSbstncStrPrsnttnLwLmtNmrtrUnt());
+		if(m.getMdcnlPrdctIgrdntSbstncStrPrsnttnLwLmtNmrtrUnt() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrPrsnttnLwLmtNmrtrUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getPresentationLowLimit().getNumerator().setUnit(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_PrsnttnLwLmt_Nmrtr_Vl ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrPrsnttnLwLmtNmrtrVl() != null) {
-			medicinalproductingredientsubstancestrengthpresentationlowlimitnumerator.setValue(Double.parseDouble((m.getMdcnlPrdctIgrdntSbstncStrPrsnttnLwLmtNmrtrVl())));
+		if(m.getMdcnlPrdctIgrdntSbstncStrPrsnttnLwLmtNmrtrVl() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrPrsnttnLwLmtNmrtrVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getPresentationLowLimit().getNumerator().setValue((new java.math.BigDecimal((arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+			}
+
 		}
-		/******************** medicinalproductingredientsubstancestrengthreferencestrength ********************************************************************************/
-		org.hl7.fhir.r4.model.MedicinalProductIngredient.MedicinalProductIngredientSpecifiedSubstanceStrengthReferenceStrengthComponent medicinalproductingredientsubstancestrengthreferencestrength =  new org.hl7.fhir.r4.model.MedicinalProductIngredient.MedicinalProductIngredientSpecifiedSubstanceStrengthReferenceStrengthComponent();
-		medicinalproductingredientsubstancestrength.addReferenceStrength(medicinalproductingredientsubstancestrengthreferencestrength);
-
-		/******************** medicinalproductingredientsubstancestrengthreferencestrengthcountry ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept medicinalproductingredientsubstancestrengthreferencestrengthcountry =  new org.hl7.fhir.r4.model.CodeableConcept();
-		medicinalproductingredientsubstancestrengthreferencestrength.addCountry(medicinalproductingredientsubstancestrengthreferencestrengthcountry);
-
-		/******************** medicinalproductingredientsubstancestrengthreferencestrengthcountrycoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding medicinalproductingredientsubstancestrengthreferencestrengthcountrycoding =  new org.hl7.fhir.r4.model.Coding();
-		medicinalproductingredientsubstancestrengthreferencestrengthcountry.addCoding(medicinalproductingredientsubstancestrengthreferencestrengthcountrycoding);
-
 		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Cntry_Cdg_Cd ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrCntryCdgCd() != null) {
-			medicinalproductingredientsubstancestrengthreferencestrengthcountrycoding.setCode(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrCntryCdgCd());
+		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrCntryCdgCd() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrCntryCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrCntryCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSubstance().getStrength().get(i0).getReferenceStrength().size() < i1+1) { medicinalproductingredient.getSubstance().getStrength().get(i0).addReferenceStrength(); }
+					String[] arrayi2 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrCntryCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+						if(medicinalproductingredient.getSubstance().getStrength().get(i0).getReferenceStrength().get(i1).getCountry().size() < i2+1) { medicinalproductingredient.getSubstance().getStrength().get(i0).getReferenceStrength().get(i1).addCountry(); }
+						String[] arrayi3 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrCntryCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i3 = 0; i3 < arrayi3.length; i3++) {
+							if(medicinalproductingredient.getSubstance().getStrength().get(i0).getReferenceStrength().get(i1).getCountry().get(i2).getCoding().size() < i3+1) { medicinalproductingredient.getSubstance().getStrength().get(i0).getReferenceStrength().get(i1).getCountry().get(i2).addCoding(); }
+							if(arrayi3[i3].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi3[i3]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getReferenceStrength().get(i1).getCountry().get(i2).getCoding().get(i3).setCode(arrayi3[i3].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+						}
+					}
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Cntry_Cdg_Dsply ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrCntryCdgDsply() != null) {
-			medicinalproductingredientsubstancestrengthreferencestrengthcountrycoding.setDisplay(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrCntryCdgDsply());
+		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrCntryCdgDsply() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrCntryCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrCntryCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSubstance().getStrength().get(i0).getReferenceStrength().size() < i1+1) { medicinalproductingredient.getSubstance().getStrength().get(i0).addReferenceStrength(); }
+					String[] arrayi2 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrCntryCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+						if(medicinalproductingredient.getSubstance().getStrength().get(i0).getReferenceStrength().get(i1).getCountry().size() < i2+1) { medicinalproductingredient.getSubstance().getStrength().get(i0).getReferenceStrength().get(i1).addCountry(); }
+						String[] arrayi3 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrCntryCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i3 = 0; i3 < arrayi3.length; i3++) {
+							if(medicinalproductingredient.getSubstance().getStrength().get(i0).getReferenceStrength().get(i1).getCountry().get(i2).getCoding().size() < i3+1) { medicinalproductingredient.getSubstance().getStrength().get(i0).getReferenceStrength().get(i1).getCountry().get(i2).addCoding(); }
+							if(arrayi3[i3].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi3[i3]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getReferenceStrength().get(i1).getCountry().get(i2).getCoding().get(i3).setDisplay(arrayi3[i3].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+						}
+					}
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Cntry_Cdg_Sys ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrCntryCdgSys() != null) {
-			medicinalproductingredientsubstancestrengthreferencestrengthcountrycoding.setSystem(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrCntryCdgSys());
+		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrCntryCdgSys() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrCntryCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrCntryCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSubstance().getStrength().get(i0).getReferenceStrength().size() < i1+1) { medicinalproductingredient.getSubstance().getStrength().get(i0).addReferenceStrength(); }
+					String[] arrayi2 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrCntryCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+						if(medicinalproductingredient.getSubstance().getStrength().get(i0).getReferenceStrength().get(i1).getCountry().size() < i2+1) { medicinalproductingredient.getSubstance().getStrength().get(i0).getReferenceStrength().get(i1).addCountry(); }
+						String[] arrayi3 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrCntryCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i3 = 0; i3 < arrayi3.length; i3++) {
+							if(medicinalproductingredient.getSubstance().getStrength().get(i0).getReferenceStrength().get(i1).getCountry().get(i2).getCoding().size() < i3+1) { medicinalproductingredient.getSubstance().getStrength().get(i0).getReferenceStrength().get(i1).getCountry().get(i2).addCoding(); }
+							if(arrayi3[i3].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi3[i3]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getReferenceStrength().get(i1).getCountry().get(i2).getCoding().get(i3).setSystem(arrayi3[i3].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+						}
+					}
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Cntry_Cdg_UsrSltd ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrCntryCdgUsrSltd() != null) {
-			medicinalproductingredientsubstancestrengthreferencestrengthcountrycoding.setUserSelected(Boolean.parseBoolean(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrCntryCdgUsrSltd()));
+		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrCntryCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrCntryCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrCntryCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSubstance().getStrength().get(i0).getReferenceStrength().size() < i1+1) { medicinalproductingredient.getSubstance().getStrength().get(i0).addReferenceStrength(); }
+					String[] arrayi2 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrCntryCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+						if(medicinalproductingredient.getSubstance().getStrength().get(i0).getReferenceStrength().get(i1).getCountry().size() < i2+1) { medicinalproductingredient.getSubstance().getStrength().get(i0).getReferenceStrength().get(i1).addCountry(); }
+						String[] arrayi3 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrCntryCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i3 = 0; i3 < arrayi3.length; i3++) {
+							if(medicinalproductingredient.getSubstance().getStrength().get(i0).getReferenceStrength().get(i1).getCountry().get(i2).getCoding().size() < i3+1) { medicinalproductingredient.getSubstance().getStrength().get(i0).getReferenceStrength().get(i1).getCountry().get(i2).addCoding(); }
+							if(arrayi3[i3].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi3[i3]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getReferenceStrength().get(i1).getCountry().get(i2).getCoding().get(i3).setUserSelected(Boolean.parseBoolean(arrayi3[i3].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+						}
+					}
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Cntry_Cdg_Vrsn ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrCntryCdgVrsn() != null) {
-			medicinalproductingredientsubstancestrengthreferencestrengthcountrycoding.setVersion(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrCntryCdgVrsn());
+		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrCntryCdgVrsn() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrCntryCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrCntryCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSubstance().getStrength().get(i0).getReferenceStrength().size() < i1+1) { medicinalproductingredient.getSubstance().getStrength().get(i0).addReferenceStrength(); }
+					String[] arrayi2 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrCntryCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+						if(medicinalproductingredient.getSubstance().getStrength().get(i0).getReferenceStrength().get(i1).getCountry().size() < i2+1) { medicinalproductingredient.getSubstance().getStrength().get(i0).getReferenceStrength().get(i1).addCountry(); }
+						String[] arrayi3 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrCntryCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i2].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+						for(int i3 = 0; i3 < arrayi3.length; i3++) {
+							if(medicinalproductingredient.getSubstance().getStrength().get(i0).getReferenceStrength().get(i1).getCountry().get(i2).getCoding().size() < i3+1) { medicinalproductingredient.getSubstance().getStrength().get(i0).getReferenceStrength().get(i1).getCountry().get(i2).addCoding(); }
+							if(arrayi3[i3].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi3[i3]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getReferenceStrength().get(i1).getCountry().get(i2).getCoding().get(i3).setVersion(arrayi3[i3].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+						}
+					}
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Cntry_Txt ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrCntryTxt() != null) {
-			medicinalproductingredientsubstancestrengthreferencestrengthcountry.setText(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrCntryTxt());
+		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrCntryTxt() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrCntryTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrCntryTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSubstance().getStrength().get(i0).getReferenceStrength().size() < i1+1) { medicinalproductingredient.getSubstance().getStrength().get(i0).addReferenceStrength(); }
+					String[] arrayi2 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrCntryTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+						if(medicinalproductingredient.getSubstance().getStrength().get(i0).getReferenceStrength().get(i1).getCountry().size() < i2+1) { medicinalproductingredient.getSubstance().getStrength().get(i0).getReferenceStrength().get(i1).addCountry(); }
+						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getReferenceStrength().get(i1).getCountry().get(i2).setText(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+					}
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_MsrmentPoint ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrMsrmentPoint() != null) {
-			medicinalproductingredientsubstancestrengthreferencestrength.setMeasurementPoint(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrMsrmentPoint());
+		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrMsrmentPoint() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrMsrmentPoint().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrMsrmentPoint().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSubstance().getStrength().get(i0).getReferenceStrength().size() < i1+1) { medicinalproductingredient.getSubstance().getStrength().get(i0).addReferenceStrength(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getReferenceStrength().get(i1).setMeasurementPoint(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
-		/******************** medicinalproductingredientsubstancestrengthreferencestrengthstrength ********************************************************************************/
-		org.hl7.fhir.r4.model.Ratio medicinalproductingredientsubstancestrengthreferencestrengthstrength =  new org.hl7.fhir.r4.model.Ratio();
-		medicinalproductingredientsubstancestrengthreferencestrength.setStrength(medicinalproductingredientsubstancestrengthreferencestrengthstrength);
-
-		/******************** medicinalproductingredientsubstancestrengthreferencestrengthstrengthdenominator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity medicinalproductingredientsubstancestrengthreferencestrengthstrengthdenominator =  new org.hl7.fhir.r4.model.Quantity();
-		medicinalproductingredientsubstancestrengthreferencestrengthstrength.setDenominator(medicinalproductingredientsubstancestrengthreferencestrengthstrengthdenominator);
-
 		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Str_Dnmntr_Cd ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrDnmntrCd() != null) {
-			medicinalproductingredientsubstancestrengthreferencestrengthstrengthdenominator.setCode(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrDnmntrCd());
-		}
-		/******************** medicinalproductingredientsubstancestrengthreferencestrengthstrengthdenominatorcomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicinalproductingredientsubstancestrengthreferencestrengthstrengthdenominatorcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-		medicinalproductingredientsubstancestrengthreferencestrengthstrengthdenominator.setComparator(medicinalproductingredientsubstancestrengthreferencestrengthstrengthdenominatorcomparator.fromCode(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrDnmntrCmprtr()));
+		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrDnmntrCd() != null ) {
 
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrDnmntrCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrDnmntrCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSubstance().getStrength().get(i0).getReferenceStrength().size() < i1+1) { medicinalproductingredient.getSubstance().getStrength().get(i0).addReferenceStrength(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getReferenceStrength().get(i1).getStrength().getDenominator().setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
+		}
+		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Str_Dnmntr_Cmprtr ********************************************************************************/
+		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrDnmntrCmprtr() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrDnmntrCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrDnmntrCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSubstance().getStrength().get(i0).getReferenceStrength().size() < i1+1) { medicinalproductingredient.getSubstance().getStrength().get(i0).addReferenceStrength(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getReferenceStrength().get(i1).getStrength().getDenominator().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
+		}
 		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Str_Dnmntr_Sys ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrDnmntrSys() != null) {
-			medicinalproductingredientsubstancestrengthreferencestrengthstrengthdenominator.setSystem(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrDnmntrSys());
+		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrDnmntrSys() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrDnmntrSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrDnmntrSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSubstance().getStrength().get(i0).getReferenceStrength().size() < i1+1) { medicinalproductingredient.getSubstance().getStrength().get(i0).addReferenceStrength(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getReferenceStrength().get(i1).getStrength().getDenominator().setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Str_Dnmntr_Unt ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrDnmntrUnt() != null) {
-			medicinalproductingredientsubstancestrengthreferencestrengthstrengthdenominator.setUnit(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrDnmntrUnt());
+		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrDnmntrUnt() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrDnmntrUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrDnmntrUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSubstance().getStrength().get(i0).getReferenceStrength().size() < i1+1) { medicinalproductingredient.getSubstance().getStrength().get(i0).addReferenceStrength(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getReferenceStrength().get(i1).getStrength().getDenominator().setUnit(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Str_Dnmntr_Vl ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrDnmntrVl() != null) {
-			medicinalproductingredientsubstancestrengthreferencestrengthstrengthdenominator.setValue(Double.parseDouble((m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrDnmntrVl())));
-		}
-		/******************** medicinalproductingredientsubstancestrengthreferencestrengthstrengthnumerator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity medicinalproductingredientsubstancestrengthreferencestrengthstrengthnumerator =  new org.hl7.fhir.r4.model.Quantity();
-		medicinalproductingredientsubstancestrengthreferencestrengthstrength.setNumerator(medicinalproductingredientsubstancestrengthreferencestrengthstrengthnumerator);
+		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrDnmntrVl() != null ) {
 
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrDnmntrVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrDnmntrVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSubstance().getStrength().get(i0).getReferenceStrength().size() < i1+1) { medicinalproductingredient.getSubstance().getStrength().get(i0).addReferenceStrength(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getReferenceStrength().get(i1).getStrength().getDenominator().setValue((new java.math.BigDecimal((arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+				}
+			}
+
+		}
 		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Str_Nmrtr_Cd ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrNmrtrCd() != null) {
-			medicinalproductingredientsubstancestrengthreferencestrengthstrengthnumerator.setCode(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrNmrtrCd());
-		}
-		/******************** medicinalproductingredientsubstancestrengthreferencestrengthstrengthnumeratorcomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicinalproductingredientsubstancestrengthreferencestrengthstrengthnumeratorcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-		medicinalproductingredientsubstancestrengthreferencestrengthstrengthnumerator.setComparator(medicinalproductingredientsubstancestrengthreferencestrengthstrengthnumeratorcomparator.fromCode(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrNmrtrCmprtr()));
+		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrNmrtrCd() != null ) {
 
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrNmrtrCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrNmrtrCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSubstance().getStrength().get(i0).getReferenceStrength().size() < i1+1) { medicinalproductingredient.getSubstance().getStrength().get(i0).addReferenceStrength(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getReferenceStrength().get(i1).getStrength().getNumerator().setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
+		}
+		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Str_Nmrtr_Cmprtr ********************************************************************************/
+		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrNmrtrCmprtr() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrNmrtrCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrNmrtrCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSubstance().getStrength().get(i0).getReferenceStrength().size() < i1+1) { medicinalproductingredient.getSubstance().getStrength().get(i0).addReferenceStrength(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getReferenceStrength().get(i1).getStrength().getNumerator().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
+		}
 		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Str_Nmrtr_Sys ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrNmrtrSys() != null) {
-			medicinalproductingredientsubstancestrengthreferencestrengthstrengthnumerator.setSystem(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrNmrtrSys());
+		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrNmrtrSys() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrNmrtrSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrNmrtrSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSubstance().getStrength().get(i0).getReferenceStrength().size() < i1+1) { medicinalproductingredient.getSubstance().getStrength().get(i0).addReferenceStrength(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getReferenceStrength().get(i1).getStrength().getNumerator().setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Str_Nmrtr_Unt ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrNmrtrUnt() != null) {
-			medicinalproductingredientsubstancestrengthreferencestrengthstrengthnumerator.setUnit(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrNmrtrUnt());
+		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrNmrtrUnt() != null ) {
+
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrNmrtrUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrNmrtrUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSubstance().getStrength().get(i0).getReferenceStrength().size() < i1+1) { medicinalproductingredient.getSubstance().getStrength().get(i0).addReferenceStrength(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getReferenceStrength().get(i1).getStrength().getNumerator().setUnit(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Str_Nmrtr_Vl ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrNmrtrVl() != null) {
-			medicinalproductingredientsubstancestrengthreferencestrengthstrengthnumerator.setValue(Double.parseDouble((m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrNmrtrVl())));
-		}
-		/******************** medicinalproductingredientsubstancestrengthreferencestrengthstrengthlowlimit ********************************************************************************/
-		org.hl7.fhir.r4.model.Ratio medicinalproductingredientsubstancestrengthreferencestrengthstrengthlowlimit =  new org.hl7.fhir.r4.model.Ratio();
-		medicinalproductingredientsubstancestrengthreferencestrength.setStrengthLowLimit(medicinalproductingredientsubstancestrengthreferencestrengthstrengthlowlimit);
+		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrNmrtrVl() != null ) {
 
-		/******************** medicinalproductingredientsubstancestrengthreferencestrengthstrengthlowlimitdenominator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity medicinalproductingredientsubstancestrengthreferencestrengthstrengthlowlimitdenominator =  new org.hl7.fhir.r4.model.Quantity();
-		medicinalproductingredientsubstancestrengthreferencestrengthstrengthlowlimit.setDenominator(medicinalproductingredientsubstancestrengthreferencestrengthstrengthlowlimitdenominator);
+			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrNmrtrVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(medicinalproductingredient.getSubstance().getStrength().size() < i0+1) { medicinalproductingredient.getSubstance().addStrength(); }
+				String[] arrayi1 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrNmrtrVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(medicinalproductingredient.getSubstance().getStrength().get(i0).getReferenceStrength().size() < i1+1) { medicinalproductingredient.getSubstance().getStrength().get(i0).addReferenceStrength(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSubstance().getStrength().get(i0).getReferenceStrength().get(i1).getStrength().getNumerator().setValue((new java.math.BigDecimal((arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+				}
+			}
 
-		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_StrLwLmt_Dnmntr_Cd ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtDnmntrCd() != null) {
-			medicinalproductingredientsubstancestrengthreferencestrengthstrengthlowlimitdenominator.setCode(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtDnmntrCd());
 		}
-		/******************** medicinalproductingredientsubstancestrengthreferencestrengthstrengthlowlimitdenominatorcomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicinalproductingredientsubstancestrengthreferencestrengthstrengthlowlimitdenominatorcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-		medicinalproductingredientsubstancestrengthreferencestrengthstrengthlowlimitdenominator.setComparator(medicinalproductingredientsubstancestrengthreferencestrengthstrengthlowlimitdenominatorcomparator.fromCode(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtDnmntrCmprtr()));
-
-		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_StrLwLmt_Dnmntr_Sys ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtDnmntrSys() != null) {
-			medicinalproductingredientsubstancestrengthreferencestrengthstrengthlowlimitdenominator.setSystem(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtDnmntrSys());
-		}
-		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_StrLwLmt_Dnmntr_Unt ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtDnmntrUnt() != null) {
-			medicinalproductingredientsubstancestrengthreferencestrengthstrengthlowlimitdenominator.setUnit(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtDnmntrUnt());
-		}
-		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_StrLwLmt_Dnmntr_Vl ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtDnmntrVl() != null) {
-			medicinalproductingredientsubstancestrengthreferencestrengthstrengthlowlimitdenominator.setValue(Double.parseDouble((m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtDnmntrVl())));
-		}
-		/******************** medicinalproductingredientsubstancestrengthreferencestrengthstrengthlowlimitnumerator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity medicinalproductingredientsubstancestrengthreferencestrengthstrengthlowlimitnumerator =  new org.hl7.fhir.r4.model.Quantity();
-		medicinalproductingredientsubstancestrengthreferencestrengthstrengthlowlimit.setNumerator(medicinalproductingredientsubstancestrengthreferencestrengthstrengthlowlimitnumerator);
-
-		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_StrLwLmt_Nmrtr_Cd ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtNmrtrCd() != null) {
-			medicinalproductingredientsubstancestrengthreferencestrengthstrengthlowlimitnumerator.setCode(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtNmrtrCd());
-		}
-		/******************** medicinalproductingredientsubstancestrengthreferencestrengthstrengthlowlimitnumeratorcomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory medicinalproductingredientsubstancestrengthreferencestrengthstrengthlowlimitnumeratorcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-		medicinalproductingredientsubstancestrengthreferencestrengthstrengthlowlimitnumerator.setComparator(medicinalproductingredientsubstancestrengthreferencestrengthstrengthlowlimitnumeratorcomparator.fromCode(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtNmrtrCmprtr()));
-
-		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_StrLwLmt_Nmrtr_Sys ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtNmrtrSys() != null) {
-			medicinalproductingredientsubstancestrengthreferencestrengthstrengthlowlimitnumerator.setSystem(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtNmrtrSys());
-		}
-		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_StrLwLmt_Nmrtr_Unt ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtNmrtrUnt() != null) {
-			medicinalproductingredientsubstancestrengthreferencestrengthstrengthlowlimitnumerator.setUnit(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtNmrtrUnt());
-		}
-		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_StrLwLmt_Nmrtr_Vl ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtNmrtrVl() != null) {
-			medicinalproductingredientsubstancestrengthreferencestrengthstrengthlowlimitnumerator.setValue(Double.parseDouble((m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtNmrtrVl())));
-		}
-		/******************** medicinalproductingredientsubstancestrengthreferencestrengthsubstance ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept medicinalproductingredientsubstancestrengthreferencestrengthsubstance =  new org.hl7.fhir.r4.model.CodeableConcept();
-		medicinalproductingredientsubstancestrengthreferencestrength.setSubstance(medicinalproductingredientsubstancestrengthreferencestrengthsubstance);
-
-		/******************** medicinalproductingredientsubstancestrengthreferencestrengthsubstancecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding medicinalproductingredientsubstancestrengthreferencestrengthsubstancecoding =  new org.hl7.fhir.r4.model.Coding();
-		medicinalproductingredientsubstancestrengthreferencestrengthsubstance.addCoding(medicinalproductingredientsubstancestrengthreferencestrengthsubstancecoding);
-
-		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Sbstnc_Cdg_Cd ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrSbstncCdgCd() != null) {
-			medicinalproductingredientsubstancestrengthreferencestrengthsubstancecoding.setCode(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrSbstncCdgCd());
-		}
-		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Sbstnc_Cdg_Dsply ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrSbstncCdgDsply() != null) {
-			medicinalproductingredientsubstancestrengthreferencestrengthsubstancecoding.setDisplay(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrSbstncCdgDsply());
-		}
-		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Sbstnc_Cdg_Sys ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrSbstncCdgSys() != null) {
-			medicinalproductingredientsubstancestrengthreferencestrengthsubstancecoding.setSystem(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrSbstncCdgSys());
-		}
-		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Sbstnc_Cdg_UsrSltd ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrSbstncCdgUsrSltd() != null) {
-			medicinalproductingredientsubstancestrengthreferencestrengthsubstancecoding.setUserSelected(Boolean.parseBoolean(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrSbstncCdgUsrSltd()));
-		}
-		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Sbstnc_Cdg_Vrsn ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrSbstncCdgVrsn() != null) {
-			medicinalproductingredientsubstancestrengthreferencestrengthsubstancecoding.setVersion(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrSbstncCdgVrsn());
-		}
-		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Sbstnc_Txt ********************************************************************************/
-		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrSbstncTxt() != null) {
-			medicinalproductingredientsubstancestrengthreferencestrengthsubstance.setText(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrSbstncTxt());
-		}
+//		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_StrLwLmt_Dnmntr_Cd ********************************************************************************/
+//		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtDnmntrCd() != null ) {
+//
+//			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtDnmntrCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+//				if(medicinalproductingredient.getSubstance().size() < i0+1) { medicinalproductingredient.addSubstance(); }
+//				String[] arrayi1 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtDnmntrCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+//					if(medicinalproductingredient.getSubstance().get(i0).getReferenceStrength().size() < i1+1) { medicinalproductingredient.getSubstance().get(i0).addReferenceStrength(); }
+//					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSubstance().get(i0).getReferenceStrength().get(i1).getStrengthLowLimit().getDenominator().setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+//				}
+//			}
+//
+//		}
+//		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_StrLwLmt_Dnmntr_Cmprtr ********************************************************************************/
+//		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtDnmntrCmprtr() != null ) {
+//
+//			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtDnmntrCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+//				if(medicinalproductingredient.getSubstance().size() < i0+1) { medicinalproductingredient.addSubstance(); }
+//				String[] arrayi1 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtDnmntrCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+//					if(medicinalproductingredient.getSubstance().get(i0).getReferenceStrength().size() < i1+1) { medicinalproductingredient.getSubstance().get(i0).addReferenceStrength(); }
+//					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSubstance().get(i0).getReferenceStrength().get(i1).getStrengthLowLimit().getDenominator().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+//				}
+//			}
+//
+//		}
+//		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_StrLwLmt_Dnmntr_Sys ********************************************************************************/
+//		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtDnmntrSys() != null ) {
+//
+//			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtDnmntrSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+//				if(medicinalproductingredient.getSubstance().size() < i0+1) { medicinalproductingredient.addSubstance(); }
+//				String[] arrayi1 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtDnmntrSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+//					if(medicinalproductingredient.getSubstance().get(i0).getReferenceStrength().size() < i1+1) { medicinalproductingredient.getSubstance().get(i0).addReferenceStrength(); }
+//					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSubstance().get(i0).getReferenceStrength().get(i1).getStrengthLowLimit().getDenominator().setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+//				}
+//			}
+//
+//		}
+//		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_StrLwLmt_Dnmntr_Unt ********************************************************************************/
+//		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtDnmntrUnt() != null ) {
+//
+//			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtDnmntrUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+//				if(medicinalproductingredient.getSubstance().size() < i0+1) { medicinalproductingredient.addSubstance(); }
+//				String[] arrayi1 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtDnmntrUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+//					if(medicinalproductingredient.getSubstance().get(i0).getReferenceStrength().size() < i1+1) { medicinalproductingredient.getSubstance().get(i0).addReferenceStrength(); }
+//					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSubstance().get(i0).getReferenceStrength().get(i1).getStrengthLowLimit().getDenominator().setUnit(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+//				}
+//			}
+//
+//		}
+//		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_StrLwLmt_Dnmntr_Vl ********************************************************************************/
+//		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtDnmntrVl() != null ) {
+//
+//			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtDnmntrVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+//				if(medicinalproductingredient.getSubstance().size() < i0+1) { medicinalproductingredient.addSubstance(); }
+//				String[] arrayi1 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtDnmntrVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+//					if(medicinalproductingredient.getSubstance().get(i0).getReferenceStrength().size() < i1+1) { medicinalproductingredient.getSubstance().get(i0).addReferenceStrength(); }
+//					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSubstance().get(i0).getReferenceStrength().get(i1).getStrengthLowLimit().getDenominator().setValue((new java.math.BigDecimal((arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+//				}
+//			}
+//
+//		}
+//		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_StrLwLmt_Nmrtr_Cd ********************************************************************************/
+//		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtNmrtrCd() != null ) {
+//
+//			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtNmrtrCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+//				if(medicinalproductingredient.getSubstance().size() < i0+1) { medicinalproductingredient.addSubstance(); }
+//				String[] arrayi1 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtNmrtrCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+//					if(medicinalproductingredient.getSubstance().get(i0).getReferenceStrength().size() < i1+1) { medicinalproductingredient.getSubstance().get(i0).addReferenceStrength(); }
+//					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSubstance().get(i0).getReferenceStrength().get(i1).getStrengthLowLimit().getNumerator().setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+//				}
+//			}
+//
+//		}
+//		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_StrLwLmt_Nmrtr_Cmprtr ********************************************************************************/
+//		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtNmrtrCmprtr() != null ) {
+//
+//			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtNmrtrCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+//				if(medicinalproductingredient.getSubstance().size() < i0+1) { medicinalproductingredient.addSubstance(); }
+//				String[] arrayi1 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtNmrtrCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+//					if(medicinalproductingredient.getSubstance().get(i0).getReferenceStrength().size() < i1+1) { medicinalproductingredient.getSubstance().get(i0).addReferenceStrength(); }
+//					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSubstance().get(i0).getReferenceStrength().get(i1).getStrengthLowLimit().getNumerator().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+//				}
+//			}
+//
+//		}
+//		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_StrLwLmt_Nmrtr_Sys ********************************************************************************/
+//		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtNmrtrSys() != null ) {
+//
+//			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtNmrtrSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+//				if(medicinalproductingredient.getSubstance().size() < i0+1) { medicinalproductingredient.addSubstance(); }
+//				String[] arrayi1 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtNmrtrSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+//					if(medicinalproductingredient.getSubstance().get(i0).getReferenceStrength().size() < i1+1) { medicinalproductingredient.getSubstance().get(i0).addReferenceStrength(); }
+//					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSubstance().get(i0).getReferenceStrength().get(i1).getStrengthLowLimit().getNumerator().setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+//				}
+//			}
+//
+//		}
+//		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_StrLwLmt_Nmrtr_Unt ********************************************************************************/
+//		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtNmrtrUnt() != null ) {
+//
+//			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtNmrtrUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+//				if(medicinalproductingredient.getSubstance().size() < i0+1) { medicinalproductingredient.addSubstance(); }
+//				String[] arrayi1 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtNmrtrUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+//					if(medicinalproductingredient.getSubstance().get(i0).getReferenceStrength().size() < i1+1) { medicinalproductingredient.getSubstance().get(i0).addReferenceStrength(); }
+//					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSubstance().get(i0).getReferenceStrength().get(i1).getStrengthLowLimit().getNumerator().setUnit(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+//				}
+//			}
+//
+//		}
+//		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_StrLwLmt_Nmrtr_Vl ********************************************************************************/
+//		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtNmrtrVl() != null ) {
+//
+//			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtNmrtrVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+//				if(medicinalproductingredient.getSubstance().size() < i0+1) { medicinalproductingredient.addSubstance(); }
+//				String[] arrayi1 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrStrLwLmtNmrtrVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+//					if(medicinalproductingredient.getSubstance().get(i0).getReferenceStrength().size() < i1+1) { medicinalproductingredient.getSubstance().get(i0).addReferenceStrength(); }
+//					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSubstance().get(i0).getReferenceStrength().get(i1).getStrengthLowLimit().getNumerator().setValue((new java.math.BigDecimal((arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+//				}
+//			}
+//
+//		}
+//		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Sbstnc_Cdg_Cd ********************************************************************************/
+//		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrSbstncCdgCd() != null ) {
+//
+//			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrSbstncCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+//				if(medicinalproductingredient.getSubstance().size() < i0+1) { medicinalproductingredient.addSubstance(); }
+//				String[] arrayi1 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrSbstncCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+//					if(medicinalproductingredient.getSubstance().get(i0).getReferenceStrength().size() < i1+1) { medicinalproductingredient.getSubstance().get(i0).addReferenceStrength(); }
+//					String[] arrayi2 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrSbstncCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+//						if(medicinalproductingredient.getSubstance().get(i0).getReferenceStrength().get(i1).getSubstance().getCoding().size() < i2+1) { medicinalproductingredient.getSubstance().get(i0).getReferenceStrength().get(i1).getSubstance().addCoding(); }
+//						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {medicinalproductingredient.getSubstance().get(i0).getReferenceStrength().get(i1).getSubstance().getCoding().get(i2).setCode(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+//					}
+//				}
+//			}
+//
+//		}
+//		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Sbstnc_Cdg_Dsply ********************************************************************************/
+//		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrSbstncCdgDsply() != null ) {
+//
+//			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrSbstncCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+//				if(medicinalproductingredient.getSubstance().size() < i0+1) { medicinalproductingredient.addSubstance(); }
+//				String[] arrayi1 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrSbstncCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+//					if(medicinalproductingredient.getSubstance().get(i0).getReferenceStrength().size() < i1+1) { medicinalproductingredient.getSubstance().get(i0).addReferenceStrength(); }
+//					String[] arrayi2 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrSbstncCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+//						if(medicinalproductingredient.getSubstance().get(i0).getReferenceStrength().get(i1).getSubstance().getCoding().size() < i2+1) { medicinalproductingredient.getSubstance().get(i0).getReferenceStrength().get(i1).getSubstance().addCoding(); }
+//						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {medicinalproductingredient.getSubstance().get(i0).getReferenceStrength().get(i1).getSubstance().getCoding().get(i2).setDisplay(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+//					}
+//				}
+//			}
+//
+//		}
+//		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Sbstnc_Cdg_Sys ********************************************************************************/
+//		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrSbstncCdgSys() != null ) {
+//
+//			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrSbstncCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+//				if(medicinalproductingredient.getSubstance().size() < i0+1) { medicinalproductingredient.addSubstance(); }
+//				String[] arrayi1 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrSbstncCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+//					if(medicinalproductingredient.getSubstance().get(i0).getReferenceStrength().size() < i1+1) { medicinalproductingredient.getSubstance().get(i0).addReferenceStrength(); }
+//					String[] arrayi2 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrSbstncCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+//						if(medicinalproductingredient.getSubstance().get(i0).getReferenceStrength().get(i1).getSubstance().getCoding().size() < i2+1) { medicinalproductingredient.getSubstance().get(i0).getReferenceStrength().get(i1).getSubstance().addCoding(); }
+//						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {medicinalproductingredient.getSubstance().get(i0).getReferenceStrength().get(i1).getSubstance().getCoding().get(i2).setSystem(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+//					}
+//				}
+//			}
+//
+//		}
+//		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Sbstnc_Cdg_UsrSltd ********************************************************************************/
+//		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrSbstncCdgUsrSltd() != null ) {
+//
+//			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrSbstncCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+//				if(medicinalproductingredient.getSubstance().size() < i0+1) { medicinalproductingredient.addSubstance(); }
+//				String[] arrayi1 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrSbstncCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+//					if(medicinalproductingredient.getSubstance().get(i0).getReferenceStrength().size() < i1+1) { medicinalproductingredient.getSubstance().get(i0).addReferenceStrength(); }
+//					String[] arrayi2 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrSbstncCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+//						if(medicinalproductingredient.getSubstance().get(i0).getReferenceStrength().get(i1).getSubstance().getCoding().size() < i2+1) { medicinalproductingredient.getSubstance().get(i0).getReferenceStrength().get(i1).getSubstance().addCoding(); }
+//						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {medicinalproductingredient.getSubstance().get(i0).getReferenceStrength().get(i1).getSubstance().getCoding().get(i2).setUserSelected(Boolean.parseBoolean(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+//					}
+//				}
+//			}
+//
+//		}
+//		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Sbstnc_Cdg_Vrsn ********************************************************************************/
+//		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrSbstncCdgVrsn() != null ) {
+//
+//			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrSbstncCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+//				if(medicinalproductingredient.getSubstance().size() < i0+1) { medicinalproductingredient.addSubstance(); }
+//				String[] arrayi1 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrSbstncCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+//					if(medicinalproductingredient.getSubstance().get(i0).getReferenceStrength().size() < i1+1) { medicinalproductingredient.getSubstance().get(i0).addReferenceStrength(); }
+//					String[] arrayi2 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrSbstncCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+//						if(medicinalproductingredient.getSubstance().get(i0).getReferenceStrength().get(i1).getSubstance().getCoding().size() < i2+1) { medicinalproductingredient.getSubstance().get(i0).getReferenceStrength().get(i1).getSubstance().addCoding(); }
+//						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {medicinalproductingredient.getSubstance().get(i0).getReferenceStrength().get(i1).getSubstance().getCoding().get(i2).setVersion(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+//					}
+//				}
+//			}
+//
+//		}
+//		/******************** MdcnlPrdctIgrdnt_Sbstnc_Str_RfrncStr_Sbstnc_Txt ********************************************************************************/
+//		if(m.getMdcnlPrdctIgrdntSbstncStrRfrncStrSbstncTxt() != null ) {
+//
+//			String[] arrayi0 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrSbstncTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+//				if(medicinalproductingredient.getSubstance().size() < i0+1) { medicinalproductingredient.addSubstance(); }
+//				String[] arrayi1 = m.getMdcnlPrdctIgrdntSbstncStrRfrncStrSbstncTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+//				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+//					if(medicinalproductingredient.getSubstance().get(i0).getReferenceStrength().size() < i1+1) { medicinalproductingredient.getSubstance().get(i0).addReferenceStrength(); }
+//					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {medicinalproductingredient.getSubstance().get(i0).getReferenceStrength().get(i1).getSubstance().setText(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+//				}
+//			}
+//
+//		}
 		return medicinalproductingredient;
 	}
 }

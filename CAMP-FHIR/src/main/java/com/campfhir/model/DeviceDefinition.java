@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Jun 27, 2022, 10:40:10 AM by Hibernate Tools 5.6.1.Final
+// Generated Aug 17, 2022, 11:08:48 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -197,6 +197,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.id = id;
     }
     
+    public void addId(String id) {
+    	if( id != null ) {
+	    	if( this.id == null ) {
+	        	this.id = id;
+	        } else if(this.id.substring(this.id.length() - 1).equals("]") & id.equals("[")) {
+	        	this.id = this.id+ "," + id;
+	        } else if(id.equals("[") | id.equals("]") | this.id.substring(this.id.length() - 1).equals("[")) {
+	        	this.id = this.id+id;
+	        } else  {
+	            this.id = this.id+ "," +id;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnCapbltyDscrptnCdgCd() {
@@ -205,6 +219,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnCapbltyDscrptnCdgCd(String dvcDfnCapbltyDscrptnCdgCd) {
         this.dvcDfnCapbltyDscrptnCdgCd = dvcDfnCapbltyDscrptnCdgCd;
+    }
+    
+    public void addDvcDfnCapbltyDscrptnCdgCd(String dvcDfnCapbltyDscrptnCdgCd) {
+    	if( dvcDfnCapbltyDscrptnCdgCd != null ) {
+	    	if( this.dvcDfnCapbltyDscrptnCdgCd == null ) {
+	        	this.dvcDfnCapbltyDscrptnCdgCd = dvcDfnCapbltyDscrptnCdgCd;
+	        } else if(this.dvcDfnCapbltyDscrptnCdgCd.substring(this.dvcDfnCapbltyDscrptnCdgCd.length() - 1).equals("]") & dvcDfnCapbltyDscrptnCdgCd.equals("[")) {
+	        	this.dvcDfnCapbltyDscrptnCdgCd = this.dvcDfnCapbltyDscrptnCdgCd+ "," + dvcDfnCapbltyDscrptnCdgCd;
+	        } else if(dvcDfnCapbltyDscrptnCdgCd.equals("[") | dvcDfnCapbltyDscrptnCdgCd.equals("]") | this.dvcDfnCapbltyDscrptnCdgCd.substring(this.dvcDfnCapbltyDscrptnCdgCd.length() - 1).equals("[")) {
+	        	this.dvcDfnCapbltyDscrptnCdgCd = this.dvcDfnCapbltyDscrptnCdgCd+dvcDfnCapbltyDscrptnCdgCd;
+	        } else  {
+	            this.dvcDfnCapbltyDscrptnCdgCd = this.dvcDfnCapbltyDscrptnCdgCd+ "," +dvcDfnCapbltyDscrptnCdgCd;
+	        }
+        }
     }
     
     
@@ -217,6 +245,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnCapbltyDscrptnCdgDsply = dvcDfnCapbltyDscrptnCdgDsply;
     }
     
+    public void addDvcDfnCapbltyDscrptnCdgDsply(String dvcDfnCapbltyDscrptnCdgDsply) {
+    	if( dvcDfnCapbltyDscrptnCdgDsply != null ) {
+	    	if( this.dvcDfnCapbltyDscrptnCdgDsply == null ) {
+	        	this.dvcDfnCapbltyDscrptnCdgDsply = dvcDfnCapbltyDscrptnCdgDsply;
+	        } else if(this.dvcDfnCapbltyDscrptnCdgDsply.substring(this.dvcDfnCapbltyDscrptnCdgDsply.length() - 1).equals("]") & dvcDfnCapbltyDscrptnCdgDsply.equals("[")) {
+	        	this.dvcDfnCapbltyDscrptnCdgDsply = this.dvcDfnCapbltyDscrptnCdgDsply+ "," + dvcDfnCapbltyDscrptnCdgDsply;
+	        } else if(dvcDfnCapbltyDscrptnCdgDsply.equals("[") | dvcDfnCapbltyDscrptnCdgDsply.equals("]") | this.dvcDfnCapbltyDscrptnCdgDsply.substring(this.dvcDfnCapbltyDscrptnCdgDsply.length() - 1).equals("[")) {
+	        	this.dvcDfnCapbltyDscrptnCdgDsply = this.dvcDfnCapbltyDscrptnCdgDsply+dvcDfnCapbltyDscrptnCdgDsply;
+	        } else  {
+	            this.dvcDfnCapbltyDscrptnCdgDsply = this.dvcDfnCapbltyDscrptnCdgDsply+ "," +dvcDfnCapbltyDscrptnCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnCapbltyDscrptnCdgSys() {
@@ -225,6 +267,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnCapbltyDscrptnCdgSys(String dvcDfnCapbltyDscrptnCdgSys) {
         this.dvcDfnCapbltyDscrptnCdgSys = dvcDfnCapbltyDscrptnCdgSys;
+    }
+    
+    public void addDvcDfnCapbltyDscrptnCdgSys(String dvcDfnCapbltyDscrptnCdgSys) {
+    	if( dvcDfnCapbltyDscrptnCdgSys != null ) {
+	    	if( this.dvcDfnCapbltyDscrptnCdgSys == null ) {
+	        	this.dvcDfnCapbltyDscrptnCdgSys = dvcDfnCapbltyDscrptnCdgSys;
+	        } else if(this.dvcDfnCapbltyDscrptnCdgSys.substring(this.dvcDfnCapbltyDscrptnCdgSys.length() - 1).equals("]") & dvcDfnCapbltyDscrptnCdgSys.equals("[")) {
+	        	this.dvcDfnCapbltyDscrptnCdgSys = this.dvcDfnCapbltyDscrptnCdgSys+ "," + dvcDfnCapbltyDscrptnCdgSys;
+	        } else if(dvcDfnCapbltyDscrptnCdgSys.equals("[") | dvcDfnCapbltyDscrptnCdgSys.equals("]") | this.dvcDfnCapbltyDscrptnCdgSys.substring(this.dvcDfnCapbltyDscrptnCdgSys.length() - 1).equals("[")) {
+	        	this.dvcDfnCapbltyDscrptnCdgSys = this.dvcDfnCapbltyDscrptnCdgSys+dvcDfnCapbltyDscrptnCdgSys;
+	        } else  {
+	            this.dvcDfnCapbltyDscrptnCdgSys = this.dvcDfnCapbltyDscrptnCdgSys+ "," +dvcDfnCapbltyDscrptnCdgSys;
+	        }
+        }
     }
     
     
@@ -237,6 +293,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnCapbltyDscrptnCdgUsrSltd = dvcDfnCapbltyDscrptnCdgUsrSltd;
     }
     
+    public void addDvcDfnCapbltyDscrptnCdgUsrSltd(String dvcDfnCapbltyDscrptnCdgUsrSltd) {
+    	if( dvcDfnCapbltyDscrptnCdgUsrSltd != null ) {
+	    	if( this.dvcDfnCapbltyDscrptnCdgUsrSltd == null ) {
+	        	this.dvcDfnCapbltyDscrptnCdgUsrSltd = dvcDfnCapbltyDscrptnCdgUsrSltd;
+	        } else if(this.dvcDfnCapbltyDscrptnCdgUsrSltd.substring(this.dvcDfnCapbltyDscrptnCdgUsrSltd.length() - 1).equals("]") & dvcDfnCapbltyDscrptnCdgUsrSltd.equals("[")) {
+	        	this.dvcDfnCapbltyDscrptnCdgUsrSltd = this.dvcDfnCapbltyDscrptnCdgUsrSltd+ "," + dvcDfnCapbltyDscrptnCdgUsrSltd;
+	        } else if(dvcDfnCapbltyDscrptnCdgUsrSltd.equals("[") | dvcDfnCapbltyDscrptnCdgUsrSltd.equals("]") | this.dvcDfnCapbltyDscrptnCdgUsrSltd.substring(this.dvcDfnCapbltyDscrptnCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.dvcDfnCapbltyDscrptnCdgUsrSltd = this.dvcDfnCapbltyDscrptnCdgUsrSltd+dvcDfnCapbltyDscrptnCdgUsrSltd;
+	        } else  {
+	            this.dvcDfnCapbltyDscrptnCdgUsrSltd = this.dvcDfnCapbltyDscrptnCdgUsrSltd+ "," +dvcDfnCapbltyDscrptnCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnCapbltyDscrptnCdgVrsn() {
@@ -245,6 +315,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnCapbltyDscrptnCdgVrsn(String dvcDfnCapbltyDscrptnCdgVrsn) {
         this.dvcDfnCapbltyDscrptnCdgVrsn = dvcDfnCapbltyDscrptnCdgVrsn;
+    }
+    
+    public void addDvcDfnCapbltyDscrptnCdgVrsn(String dvcDfnCapbltyDscrptnCdgVrsn) {
+    	if( dvcDfnCapbltyDscrptnCdgVrsn != null ) {
+	    	if( this.dvcDfnCapbltyDscrptnCdgVrsn == null ) {
+	        	this.dvcDfnCapbltyDscrptnCdgVrsn = dvcDfnCapbltyDscrptnCdgVrsn;
+	        } else if(this.dvcDfnCapbltyDscrptnCdgVrsn.substring(this.dvcDfnCapbltyDscrptnCdgVrsn.length() - 1).equals("]") & dvcDfnCapbltyDscrptnCdgVrsn.equals("[")) {
+	        	this.dvcDfnCapbltyDscrptnCdgVrsn = this.dvcDfnCapbltyDscrptnCdgVrsn+ "," + dvcDfnCapbltyDscrptnCdgVrsn;
+	        } else if(dvcDfnCapbltyDscrptnCdgVrsn.equals("[") | dvcDfnCapbltyDscrptnCdgVrsn.equals("]") | this.dvcDfnCapbltyDscrptnCdgVrsn.substring(this.dvcDfnCapbltyDscrptnCdgVrsn.length() - 1).equals("[")) {
+	        	this.dvcDfnCapbltyDscrptnCdgVrsn = this.dvcDfnCapbltyDscrptnCdgVrsn+dvcDfnCapbltyDscrptnCdgVrsn;
+	        } else  {
+	            this.dvcDfnCapbltyDscrptnCdgVrsn = this.dvcDfnCapbltyDscrptnCdgVrsn+ "," +dvcDfnCapbltyDscrptnCdgVrsn;
+	        }
+        }
     }
     
     
@@ -257,6 +341,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnCapbltyDscrptnTxt = dvcDfnCapbltyDscrptnTxt;
     }
     
+    public void addDvcDfnCapbltyDscrptnTxt(String dvcDfnCapbltyDscrptnTxt) {
+    	if( dvcDfnCapbltyDscrptnTxt != null ) {
+	    	if( this.dvcDfnCapbltyDscrptnTxt == null ) {
+	        	this.dvcDfnCapbltyDscrptnTxt = dvcDfnCapbltyDscrptnTxt;
+	        } else if(this.dvcDfnCapbltyDscrptnTxt.substring(this.dvcDfnCapbltyDscrptnTxt.length() - 1).equals("]") & dvcDfnCapbltyDscrptnTxt.equals("[")) {
+	        	this.dvcDfnCapbltyDscrptnTxt = this.dvcDfnCapbltyDscrptnTxt+ "," + dvcDfnCapbltyDscrptnTxt;
+	        } else if(dvcDfnCapbltyDscrptnTxt.equals("[") | dvcDfnCapbltyDscrptnTxt.equals("]") | this.dvcDfnCapbltyDscrptnTxt.substring(this.dvcDfnCapbltyDscrptnTxt.length() - 1).equals("[")) {
+	        	this.dvcDfnCapbltyDscrptnTxt = this.dvcDfnCapbltyDscrptnTxt+dvcDfnCapbltyDscrptnTxt;
+	        } else  {
+	            this.dvcDfnCapbltyDscrptnTxt = this.dvcDfnCapbltyDscrptnTxt+ "," +dvcDfnCapbltyDscrptnTxt;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnCapbltyTypCdgCd() {
@@ -265,6 +363,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnCapbltyTypCdgCd(String dvcDfnCapbltyTypCdgCd) {
         this.dvcDfnCapbltyTypCdgCd = dvcDfnCapbltyTypCdgCd;
+    }
+    
+    public void addDvcDfnCapbltyTypCdgCd(String dvcDfnCapbltyTypCdgCd) {
+    	if( dvcDfnCapbltyTypCdgCd != null ) {
+	    	if( this.dvcDfnCapbltyTypCdgCd == null ) {
+	        	this.dvcDfnCapbltyTypCdgCd = dvcDfnCapbltyTypCdgCd;
+	        } else if(this.dvcDfnCapbltyTypCdgCd.substring(this.dvcDfnCapbltyTypCdgCd.length() - 1).equals("]") & dvcDfnCapbltyTypCdgCd.equals("[")) {
+	        	this.dvcDfnCapbltyTypCdgCd = this.dvcDfnCapbltyTypCdgCd+ "," + dvcDfnCapbltyTypCdgCd;
+	        } else if(dvcDfnCapbltyTypCdgCd.equals("[") | dvcDfnCapbltyTypCdgCd.equals("]") | this.dvcDfnCapbltyTypCdgCd.substring(this.dvcDfnCapbltyTypCdgCd.length() - 1).equals("[")) {
+	        	this.dvcDfnCapbltyTypCdgCd = this.dvcDfnCapbltyTypCdgCd+dvcDfnCapbltyTypCdgCd;
+	        } else  {
+	            this.dvcDfnCapbltyTypCdgCd = this.dvcDfnCapbltyTypCdgCd+ "," +dvcDfnCapbltyTypCdgCd;
+	        }
+        }
     }
     
     
@@ -277,6 +389,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnCapbltyTypCdgDsply = dvcDfnCapbltyTypCdgDsply;
     }
     
+    public void addDvcDfnCapbltyTypCdgDsply(String dvcDfnCapbltyTypCdgDsply) {
+    	if( dvcDfnCapbltyTypCdgDsply != null ) {
+	    	if( this.dvcDfnCapbltyTypCdgDsply == null ) {
+	        	this.dvcDfnCapbltyTypCdgDsply = dvcDfnCapbltyTypCdgDsply;
+	        } else if(this.dvcDfnCapbltyTypCdgDsply.substring(this.dvcDfnCapbltyTypCdgDsply.length() - 1).equals("]") & dvcDfnCapbltyTypCdgDsply.equals("[")) {
+	        	this.dvcDfnCapbltyTypCdgDsply = this.dvcDfnCapbltyTypCdgDsply+ "," + dvcDfnCapbltyTypCdgDsply;
+	        } else if(dvcDfnCapbltyTypCdgDsply.equals("[") | dvcDfnCapbltyTypCdgDsply.equals("]") | this.dvcDfnCapbltyTypCdgDsply.substring(this.dvcDfnCapbltyTypCdgDsply.length() - 1).equals("[")) {
+	        	this.dvcDfnCapbltyTypCdgDsply = this.dvcDfnCapbltyTypCdgDsply+dvcDfnCapbltyTypCdgDsply;
+	        } else  {
+	            this.dvcDfnCapbltyTypCdgDsply = this.dvcDfnCapbltyTypCdgDsply+ "," +dvcDfnCapbltyTypCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnCapbltyTypCdgSys() {
@@ -285,6 +411,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnCapbltyTypCdgSys(String dvcDfnCapbltyTypCdgSys) {
         this.dvcDfnCapbltyTypCdgSys = dvcDfnCapbltyTypCdgSys;
+    }
+    
+    public void addDvcDfnCapbltyTypCdgSys(String dvcDfnCapbltyTypCdgSys) {
+    	if( dvcDfnCapbltyTypCdgSys != null ) {
+	    	if( this.dvcDfnCapbltyTypCdgSys == null ) {
+	        	this.dvcDfnCapbltyTypCdgSys = dvcDfnCapbltyTypCdgSys;
+	        } else if(this.dvcDfnCapbltyTypCdgSys.substring(this.dvcDfnCapbltyTypCdgSys.length() - 1).equals("]") & dvcDfnCapbltyTypCdgSys.equals("[")) {
+	        	this.dvcDfnCapbltyTypCdgSys = this.dvcDfnCapbltyTypCdgSys+ "," + dvcDfnCapbltyTypCdgSys;
+	        } else if(dvcDfnCapbltyTypCdgSys.equals("[") | dvcDfnCapbltyTypCdgSys.equals("]") | this.dvcDfnCapbltyTypCdgSys.substring(this.dvcDfnCapbltyTypCdgSys.length() - 1).equals("[")) {
+	        	this.dvcDfnCapbltyTypCdgSys = this.dvcDfnCapbltyTypCdgSys+dvcDfnCapbltyTypCdgSys;
+	        } else  {
+	            this.dvcDfnCapbltyTypCdgSys = this.dvcDfnCapbltyTypCdgSys+ "," +dvcDfnCapbltyTypCdgSys;
+	        }
+        }
     }
     
     
@@ -297,6 +437,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnCapbltyTypCdgUsrSltd = dvcDfnCapbltyTypCdgUsrSltd;
     }
     
+    public void addDvcDfnCapbltyTypCdgUsrSltd(String dvcDfnCapbltyTypCdgUsrSltd) {
+    	if( dvcDfnCapbltyTypCdgUsrSltd != null ) {
+	    	if( this.dvcDfnCapbltyTypCdgUsrSltd == null ) {
+	        	this.dvcDfnCapbltyTypCdgUsrSltd = dvcDfnCapbltyTypCdgUsrSltd;
+	        } else if(this.dvcDfnCapbltyTypCdgUsrSltd.substring(this.dvcDfnCapbltyTypCdgUsrSltd.length() - 1).equals("]") & dvcDfnCapbltyTypCdgUsrSltd.equals("[")) {
+	        	this.dvcDfnCapbltyTypCdgUsrSltd = this.dvcDfnCapbltyTypCdgUsrSltd+ "," + dvcDfnCapbltyTypCdgUsrSltd;
+	        } else if(dvcDfnCapbltyTypCdgUsrSltd.equals("[") | dvcDfnCapbltyTypCdgUsrSltd.equals("]") | this.dvcDfnCapbltyTypCdgUsrSltd.substring(this.dvcDfnCapbltyTypCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.dvcDfnCapbltyTypCdgUsrSltd = this.dvcDfnCapbltyTypCdgUsrSltd+dvcDfnCapbltyTypCdgUsrSltd;
+	        } else  {
+	            this.dvcDfnCapbltyTypCdgUsrSltd = this.dvcDfnCapbltyTypCdgUsrSltd+ "," +dvcDfnCapbltyTypCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnCapbltyTypCdgVrsn() {
@@ -305,6 +459,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnCapbltyTypCdgVrsn(String dvcDfnCapbltyTypCdgVrsn) {
         this.dvcDfnCapbltyTypCdgVrsn = dvcDfnCapbltyTypCdgVrsn;
+    }
+    
+    public void addDvcDfnCapbltyTypCdgVrsn(String dvcDfnCapbltyTypCdgVrsn) {
+    	if( dvcDfnCapbltyTypCdgVrsn != null ) {
+	    	if( this.dvcDfnCapbltyTypCdgVrsn == null ) {
+	        	this.dvcDfnCapbltyTypCdgVrsn = dvcDfnCapbltyTypCdgVrsn;
+	        } else if(this.dvcDfnCapbltyTypCdgVrsn.substring(this.dvcDfnCapbltyTypCdgVrsn.length() - 1).equals("]") & dvcDfnCapbltyTypCdgVrsn.equals("[")) {
+	        	this.dvcDfnCapbltyTypCdgVrsn = this.dvcDfnCapbltyTypCdgVrsn+ "," + dvcDfnCapbltyTypCdgVrsn;
+	        } else if(dvcDfnCapbltyTypCdgVrsn.equals("[") | dvcDfnCapbltyTypCdgVrsn.equals("]") | this.dvcDfnCapbltyTypCdgVrsn.substring(this.dvcDfnCapbltyTypCdgVrsn.length() - 1).equals("[")) {
+	        	this.dvcDfnCapbltyTypCdgVrsn = this.dvcDfnCapbltyTypCdgVrsn+dvcDfnCapbltyTypCdgVrsn;
+	        } else  {
+	            this.dvcDfnCapbltyTypCdgVrsn = this.dvcDfnCapbltyTypCdgVrsn+ "," +dvcDfnCapbltyTypCdgVrsn;
+	        }
+        }
     }
     
     
@@ -317,6 +485,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnCapbltyTypTxt = dvcDfnCapbltyTypTxt;
     }
     
+    public void addDvcDfnCapbltyTypTxt(String dvcDfnCapbltyTypTxt) {
+    	if( dvcDfnCapbltyTypTxt != null ) {
+	    	if( this.dvcDfnCapbltyTypTxt == null ) {
+	        	this.dvcDfnCapbltyTypTxt = dvcDfnCapbltyTypTxt;
+	        } else if(this.dvcDfnCapbltyTypTxt.substring(this.dvcDfnCapbltyTypTxt.length() - 1).equals("]") & dvcDfnCapbltyTypTxt.equals("[")) {
+	        	this.dvcDfnCapbltyTypTxt = this.dvcDfnCapbltyTypTxt+ "," + dvcDfnCapbltyTypTxt;
+	        } else if(dvcDfnCapbltyTypTxt.equals("[") | dvcDfnCapbltyTypTxt.equals("]") | this.dvcDfnCapbltyTypTxt.substring(this.dvcDfnCapbltyTypTxt.length() - 1).equals("[")) {
+	        	this.dvcDfnCapbltyTypTxt = this.dvcDfnCapbltyTypTxt+dvcDfnCapbltyTypTxt;
+	        } else  {
+	            this.dvcDfnCapbltyTypTxt = this.dvcDfnCapbltyTypTxt+ "," +dvcDfnCapbltyTypTxt;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnCntctPrdEnd() {
@@ -325,6 +507,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnCntctPrdEnd(String dvcDfnCntctPrdEnd) {
         this.dvcDfnCntctPrdEnd = dvcDfnCntctPrdEnd;
+    }
+    
+    public void addDvcDfnCntctPrdEnd(String dvcDfnCntctPrdEnd) {
+    	if( dvcDfnCntctPrdEnd != null ) {
+	    	if( this.dvcDfnCntctPrdEnd == null ) {
+	        	this.dvcDfnCntctPrdEnd = dvcDfnCntctPrdEnd;
+	        } else if(this.dvcDfnCntctPrdEnd.substring(this.dvcDfnCntctPrdEnd.length() - 1).equals("]") & dvcDfnCntctPrdEnd.equals("[")) {
+	        	this.dvcDfnCntctPrdEnd = this.dvcDfnCntctPrdEnd+ "," + dvcDfnCntctPrdEnd;
+	        } else if(dvcDfnCntctPrdEnd.equals("[") | dvcDfnCntctPrdEnd.equals("]") | this.dvcDfnCntctPrdEnd.substring(this.dvcDfnCntctPrdEnd.length() - 1).equals("[")) {
+	        	this.dvcDfnCntctPrdEnd = this.dvcDfnCntctPrdEnd+dvcDfnCntctPrdEnd;
+	        } else  {
+	            this.dvcDfnCntctPrdEnd = this.dvcDfnCntctPrdEnd+ "," +dvcDfnCntctPrdEnd;
+	        }
+        }
     }
     
     
@@ -337,6 +533,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnCntctPrdStrt = dvcDfnCntctPrdStrt;
     }
     
+    public void addDvcDfnCntctPrdStrt(String dvcDfnCntctPrdStrt) {
+    	if( dvcDfnCntctPrdStrt != null ) {
+	    	if( this.dvcDfnCntctPrdStrt == null ) {
+	        	this.dvcDfnCntctPrdStrt = dvcDfnCntctPrdStrt;
+	        } else if(this.dvcDfnCntctPrdStrt.substring(this.dvcDfnCntctPrdStrt.length() - 1).equals("]") & dvcDfnCntctPrdStrt.equals("[")) {
+	        	this.dvcDfnCntctPrdStrt = this.dvcDfnCntctPrdStrt+ "," + dvcDfnCntctPrdStrt;
+	        } else if(dvcDfnCntctPrdStrt.equals("[") | dvcDfnCntctPrdStrt.equals("]") | this.dvcDfnCntctPrdStrt.substring(this.dvcDfnCntctPrdStrt.length() - 1).equals("[")) {
+	        	this.dvcDfnCntctPrdStrt = this.dvcDfnCntctPrdStrt+dvcDfnCntctPrdStrt;
+	        } else  {
+	            this.dvcDfnCntctPrdStrt = this.dvcDfnCntctPrdStrt+ "," +dvcDfnCntctPrdStrt;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnCntctRnk() {
@@ -345,6 +555,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnCntctRnk(String dvcDfnCntctRnk) {
         this.dvcDfnCntctRnk = dvcDfnCntctRnk;
+    }
+    
+    public void addDvcDfnCntctRnk(String dvcDfnCntctRnk) {
+    	if( dvcDfnCntctRnk != null ) {
+	    	if( this.dvcDfnCntctRnk == null ) {
+	        	this.dvcDfnCntctRnk = dvcDfnCntctRnk;
+	        } else if(this.dvcDfnCntctRnk.substring(this.dvcDfnCntctRnk.length() - 1).equals("]") & dvcDfnCntctRnk.equals("[")) {
+	        	this.dvcDfnCntctRnk = this.dvcDfnCntctRnk+ "," + dvcDfnCntctRnk;
+	        } else if(dvcDfnCntctRnk.equals("[") | dvcDfnCntctRnk.equals("]") | this.dvcDfnCntctRnk.substring(this.dvcDfnCntctRnk.length() - 1).equals("[")) {
+	        	this.dvcDfnCntctRnk = this.dvcDfnCntctRnk+dvcDfnCntctRnk;
+	        } else  {
+	            this.dvcDfnCntctRnk = this.dvcDfnCntctRnk+ "," +dvcDfnCntctRnk;
+	        }
+        }
     }
     
     
@@ -357,6 +581,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnCntctSys = dvcDfnCntctSys;
     }
     
+    public void addDvcDfnCntctSys(String dvcDfnCntctSys) {
+    	if( dvcDfnCntctSys != null ) {
+	    	if( this.dvcDfnCntctSys == null ) {
+	        	this.dvcDfnCntctSys = dvcDfnCntctSys;
+	        } else if(this.dvcDfnCntctSys.substring(this.dvcDfnCntctSys.length() - 1).equals("]") & dvcDfnCntctSys.equals("[")) {
+	        	this.dvcDfnCntctSys = this.dvcDfnCntctSys+ "," + dvcDfnCntctSys;
+	        } else if(dvcDfnCntctSys.equals("[") | dvcDfnCntctSys.equals("]") | this.dvcDfnCntctSys.substring(this.dvcDfnCntctSys.length() - 1).equals("[")) {
+	        	this.dvcDfnCntctSys = this.dvcDfnCntctSys+dvcDfnCntctSys;
+	        } else  {
+	            this.dvcDfnCntctSys = this.dvcDfnCntctSys+ "," +dvcDfnCntctSys;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnCntctUse() {
@@ -365,6 +603,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnCntctUse(String dvcDfnCntctUse) {
         this.dvcDfnCntctUse = dvcDfnCntctUse;
+    }
+    
+    public void addDvcDfnCntctUse(String dvcDfnCntctUse) {
+    	if( dvcDfnCntctUse != null ) {
+	    	if( this.dvcDfnCntctUse == null ) {
+	        	this.dvcDfnCntctUse = dvcDfnCntctUse;
+	        } else if(this.dvcDfnCntctUse.substring(this.dvcDfnCntctUse.length() - 1).equals("]") & dvcDfnCntctUse.equals("[")) {
+	        	this.dvcDfnCntctUse = this.dvcDfnCntctUse+ "," + dvcDfnCntctUse;
+	        } else if(dvcDfnCntctUse.equals("[") | dvcDfnCntctUse.equals("]") | this.dvcDfnCntctUse.substring(this.dvcDfnCntctUse.length() - 1).equals("[")) {
+	        	this.dvcDfnCntctUse = this.dvcDfnCntctUse+dvcDfnCntctUse;
+	        } else  {
+	            this.dvcDfnCntctUse = this.dvcDfnCntctUse+ "," +dvcDfnCntctUse;
+	        }
+        }
     }
     
     
@@ -377,6 +629,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnCntctVl = dvcDfnCntctVl;
     }
     
+    public void addDvcDfnCntctVl(String dvcDfnCntctVl) {
+    	if( dvcDfnCntctVl != null ) {
+	    	if( this.dvcDfnCntctVl == null ) {
+	        	this.dvcDfnCntctVl = dvcDfnCntctVl;
+	        } else if(this.dvcDfnCntctVl.substring(this.dvcDfnCntctVl.length() - 1).equals("]") & dvcDfnCntctVl.equals("[")) {
+	        	this.dvcDfnCntctVl = this.dvcDfnCntctVl+ "," + dvcDfnCntctVl;
+	        } else if(dvcDfnCntctVl.equals("[") | dvcDfnCntctVl.equals("]") | this.dvcDfnCntctVl.substring(this.dvcDfnCntctVl.length() - 1).equals("[")) {
+	        	this.dvcDfnCntctVl = this.dvcDfnCntctVl+dvcDfnCntctVl;
+	        } else  {
+	            this.dvcDfnCntctVl = this.dvcDfnCntctVl+ "," +dvcDfnCntctVl;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnDvcNmNm() {
@@ -385,6 +651,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnDvcNmNm(String dvcDfnDvcNmNm) {
         this.dvcDfnDvcNmNm = dvcDfnDvcNmNm;
+    }
+    
+    public void addDvcDfnDvcNmNm(String dvcDfnDvcNmNm) {
+    	if( dvcDfnDvcNmNm != null ) {
+	    	if( this.dvcDfnDvcNmNm == null ) {
+	        	this.dvcDfnDvcNmNm = dvcDfnDvcNmNm;
+	        } else if(this.dvcDfnDvcNmNm.substring(this.dvcDfnDvcNmNm.length() - 1).equals("]") & dvcDfnDvcNmNm.equals("[")) {
+	        	this.dvcDfnDvcNmNm = this.dvcDfnDvcNmNm+ "," + dvcDfnDvcNmNm;
+	        } else if(dvcDfnDvcNmNm.equals("[") | dvcDfnDvcNmNm.equals("]") | this.dvcDfnDvcNmNm.substring(this.dvcDfnDvcNmNm.length() - 1).equals("[")) {
+	        	this.dvcDfnDvcNmNm = this.dvcDfnDvcNmNm+dvcDfnDvcNmNm;
+	        } else  {
+	            this.dvcDfnDvcNmNm = this.dvcDfnDvcNmNm+ "," +dvcDfnDvcNmNm;
+	        }
+        }
     }
     
     
@@ -397,6 +677,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnDvcNmTyp = dvcDfnDvcNmTyp;
     }
     
+    public void addDvcDfnDvcNmTyp(String dvcDfnDvcNmTyp) {
+    	if( dvcDfnDvcNmTyp != null ) {
+	    	if( this.dvcDfnDvcNmTyp == null ) {
+	        	this.dvcDfnDvcNmTyp = dvcDfnDvcNmTyp;
+	        } else if(this.dvcDfnDvcNmTyp.substring(this.dvcDfnDvcNmTyp.length() - 1).equals("]") & dvcDfnDvcNmTyp.equals("[")) {
+	        	this.dvcDfnDvcNmTyp = this.dvcDfnDvcNmTyp+ "," + dvcDfnDvcNmTyp;
+	        } else if(dvcDfnDvcNmTyp.equals("[") | dvcDfnDvcNmTyp.equals("]") | this.dvcDfnDvcNmTyp.substring(this.dvcDfnDvcNmTyp.length() - 1).equals("[")) {
+	        	this.dvcDfnDvcNmTyp = this.dvcDfnDvcNmTyp+dvcDfnDvcNmTyp;
+	        } else  {
+	            this.dvcDfnDvcNmTyp = this.dvcDfnDvcNmTyp+ "," +dvcDfnDvcNmTyp;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnIdAssigner() {
@@ -405,6 +699,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnIdAssigner(String dvcDfnIdAssigner) {
         this.dvcDfnIdAssigner = dvcDfnIdAssigner;
+    }
+    
+    public void addDvcDfnIdAssigner(String dvcDfnIdAssigner) {
+    	if( dvcDfnIdAssigner != null ) {
+	    	if( this.dvcDfnIdAssigner == null ) {
+	        	this.dvcDfnIdAssigner = dvcDfnIdAssigner;
+	        } else if(this.dvcDfnIdAssigner.substring(this.dvcDfnIdAssigner.length() - 1).equals("]") & dvcDfnIdAssigner.equals("[")) {
+	        	this.dvcDfnIdAssigner = this.dvcDfnIdAssigner+ "," + dvcDfnIdAssigner;
+	        } else if(dvcDfnIdAssigner.equals("[") | dvcDfnIdAssigner.equals("]") | this.dvcDfnIdAssigner.substring(this.dvcDfnIdAssigner.length() - 1).equals("[")) {
+	        	this.dvcDfnIdAssigner = this.dvcDfnIdAssigner+dvcDfnIdAssigner;
+	        } else  {
+	            this.dvcDfnIdAssigner = this.dvcDfnIdAssigner+ "," +dvcDfnIdAssigner;
+	        }
+        }
     }
     
     
@@ -417,6 +725,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnIdPrdEnd = dvcDfnIdPrdEnd;
     }
     
+    public void addDvcDfnIdPrdEnd(String dvcDfnIdPrdEnd) {
+    	if( dvcDfnIdPrdEnd != null ) {
+	    	if( this.dvcDfnIdPrdEnd == null ) {
+	        	this.dvcDfnIdPrdEnd = dvcDfnIdPrdEnd;
+	        } else if(this.dvcDfnIdPrdEnd.substring(this.dvcDfnIdPrdEnd.length() - 1).equals("]") & dvcDfnIdPrdEnd.equals("[")) {
+	        	this.dvcDfnIdPrdEnd = this.dvcDfnIdPrdEnd+ "," + dvcDfnIdPrdEnd;
+	        } else if(dvcDfnIdPrdEnd.equals("[") | dvcDfnIdPrdEnd.equals("]") | this.dvcDfnIdPrdEnd.substring(this.dvcDfnIdPrdEnd.length() - 1).equals("[")) {
+	        	this.dvcDfnIdPrdEnd = this.dvcDfnIdPrdEnd+dvcDfnIdPrdEnd;
+	        } else  {
+	            this.dvcDfnIdPrdEnd = this.dvcDfnIdPrdEnd+ "," +dvcDfnIdPrdEnd;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnIdPrdStrt() {
@@ -425,6 +747,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnIdPrdStrt(String dvcDfnIdPrdStrt) {
         this.dvcDfnIdPrdStrt = dvcDfnIdPrdStrt;
+    }
+    
+    public void addDvcDfnIdPrdStrt(String dvcDfnIdPrdStrt) {
+    	if( dvcDfnIdPrdStrt != null ) {
+	    	if( this.dvcDfnIdPrdStrt == null ) {
+	        	this.dvcDfnIdPrdStrt = dvcDfnIdPrdStrt;
+	        } else if(this.dvcDfnIdPrdStrt.substring(this.dvcDfnIdPrdStrt.length() - 1).equals("]") & dvcDfnIdPrdStrt.equals("[")) {
+	        	this.dvcDfnIdPrdStrt = this.dvcDfnIdPrdStrt+ "," + dvcDfnIdPrdStrt;
+	        } else if(dvcDfnIdPrdStrt.equals("[") | dvcDfnIdPrdStrt.equals("]") | this.dvcDfnIdPrdStrt.substring(this.dvcDfnIdPrdStrt.length() - 1).equals("[")) {
+	        	this.dvcDfnIdPrdStrt = this.dvcDfnIdPrdStrt+dvcDfnIdPrdStrt;
+	        } else  {
+	            this.dvcDfnIdPrdStrt = this.dvcDfnIdPrdStrt+ "," +dvcDfnIdPrdStrt;
+	        }
+        }
     }
     
     
@@ -437,6 +773,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnIdSys = dvcDfnIdSys;
     }
     
+    public void addDvcDfnIdSys(String dvcDfnIdSys) {
+    	if( dvcDfnIdSys != null ) {
+	    	if( this.dvcDfnIdSys == null ) {
+	        	this.dvcDfnIdSys = dvcDfnIdSys;
+	        } else if(this.dvcDfnIdSys.substring(this.dvcDfnIdSys.length() - 1).equals("]") & dvcDfnIdSys.equals("[")) {
+	        	this.dvcDfnIdSys = this.dvcDfnIdSys+ "," + dvcDfnIdSys;
+	        } else if(dvcDfnIdSys.equals("[") | dvcDfnIdSys.equals("]") | this.dvcDfnIdSys.substring(this.dvcDfnIdSys.length() - 1).equals("[")) {
+	        	this.dvcDfnIdSys = this.dvcDfnIdSys+dvcDfnIdSys;
+	        } else  {
+	            this.dvcDfnIdSys = this.dvcDfnIdSys+ "," +dvcDfnIdSys;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnIdTypCdgCd() {
@@ -445,6 +795,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnIdTypCdgCd(String dvcDfnIdTypCdgCd) {
         this.dvcDfnIdTypCdgCd = dvcDfnIdTypCdgCd;
+    }
+    
+    public void addDvcDfnIdTypCdgCd(String dvcDfnIdTypCdgCd) {
+    	if( dvcDfnIdTypCdgCd != null ) {
+	    	if( this.dvcDfnIdTypCdgCd == null ) {
+	        	this.dvcDfnIdTypCdgCd = dvcDfnIdTypCdgCd;
+	        } else if(this.dvcDfnIdTypCdgCd.substring(this.dvcDfnIdTypCdgCd.length() - 1).equals("]") & dvcDfnIdTypCdgCd.equals("[")) {
+	        	this.dvcDfnIdTypCdgCd = this.dvcDfnIdTypCdgCd+ "," + dvcDfnIdTypCdgCd;
+	        } else if(dvcDfnIdTypCdgCd.equals("[") | dvcDfnIdTypCdgCd.equals("]") | this.dvcDfnIdTypCdgCd.substring(this.dvcDfnIdTypCdgCd.length() - 1).equals("[")) {
+	        	this.dvcDfnIdTypCdgCd = this.dvcDfnIdTypCdgCd+dvcDfnIdTypCdgCd;
+	        } else  {
+	            this.dvcDfnIdTypCdgCd = this.dvcDfnIdTypCdgCd+ "," +dvcDfnIdTypCdgCd;
+	        }
+        }
     }
     
     
@@ -457,6 +821,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnIdTypCdgDsply = dvcDfnIdTypCdgDsply;
     }
     
+    public void addDvcDfnIdTypCdgDsply(String dvcDfnIdTypCdgDsply) {
+    	if( dvcDfnIdTypCdgDsply != null ) {
+	    	if( this.dvcDfnIdTypCdgDsply == null ) {
+	        	this.dvcDfnIdTypCdgDsply = dvcDfnIdTypCdgDsply;
+	        } else if(this.dvcDfnIdTypCdgDsply.substring(this.dvcDfnIdTypCdgDsply.length() - 1).equals("]") & dvcDfnIdTypCdgDsply.equals("[")) {
+	        	this.dvcDfnIdTypCdgDsply = this.dvcDfnIdTypCdgDsply+ "," + dvcDfnIdTypCdgDsply;
+	        } else if(dvcDfnIdTypCdgDsply.equals("[") | dvcDfnIdTypCdgDsply.equals("]") | this.dvcDfnIdTypCdgDsply.substring(this.dvcDfnIdTypCdgDsply.length() - 1).equals("[")) {
+	        	this.dvcDfnIdTypCdgDsply = this.dvcDfnIdTypCdgDsply+dvcDfnIdTypCdgDsply;
+	        } else  {
+	            this.dvcDfnIdTypCdgDsply = this.dvcDfnIdTypCdgDsply+ "," +dvcDfnIdTypCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnIdTypCdgSys() {
@@ -465,6 +843,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnIdTypCdgSys(String dvcDfnIdTypCdgSys) {
         this.dvcDfnIdTypCdgSys = dvcDfnIdTypCdgSys;
+    }
+    
+    public void addDvcDfnIdTypCdgSys(String dvcDfnIdTypCdgSys) {
+    	if( dvcDfnIdTypCdgSys != null ) {
+	    	if( this.dvcDfnIdTypCdgSys == null ) {
+	        	this.dvcDfnIdTypCdgSys = dvcDfnIdTypCdgSys;
+	        } else if(this.dvcDfnIdTypCdgSys.substring(this.dvcDfnIdTypCdgSys.length() - 1).equals("]") & dvcDfnIdTypCdgSys.equals("[")) {
+	        	this.dvcDfnIdTypCdgSys = this.dvcDfnIdTypCdgSys+ "," + dvcDfnIdTypCdgSys;
+	        } else if(dvcDfnIdTypCdgSys.equals("[") | dvcDfnIdTypCdgSys.equals("]") | this.dvcDfnIdTypCdgSys.substring(this.dvcDfnIdTypCdgSys.length() - 1).equals("[")) {
+	        	this.dvcDfnIdTypCdgSys = this.dvcDfnIdTypCdgSys+dvcDfnIdTypCdgSys;
+	        } else  {
+	            this.dvcDfnIdTypCdgSys = this.dvcDfnIdTypCdgSys+ "," +dvcDfnIdTypCdgSys;
+	        }
+        }
     }
     
     
@@ -477,6 +869,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnIdTypCdgUsrSltd = dvcDfnIdTypCdgUsrSltd;
     }
     
+    public void addDvcDfnIdTypCdgUsrSltd(String dvcDfnIdTypCdgUsrSltd) {
+    	if( dvcDfnIdTypCdgUsrSltd != null ) {
+	    	if( this.dvcDfnIdTypCdgUsrSltd == null ) {
+	        	this.dvcDfnIdTypCdgUsrSltd = dvcDfnIdTypCdgUsrSltd;
+	        } else if(this.dvcDfnIdTypCdgUsrSltd.substring(this.dvcDfnIdTypCdgUsrSltd.length() - 1).equals("]") & dvcDfnIdTypCdgUsrSltd.equals("[")) {
+	        	this.dvcDfnIdTypCdgUsrSltd = this.dvcDfnIdTypCdgUsrSltd+ "," + dvcDfnIdTypCdgUsrSltd;
+	        } else if(dvcDfnIdTypCdgUsrSltd.equals("[") | dvcDfnIdTypCdgUsrSltd.equals("]") | this.dvcDfnIdTypCdgUsrSltd.substring(this.dvcDfnIdTypCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.dvcDfnIdTypCdgUsrSltd = this.dvcDfnIdTypCdgUsrSltd+dvcDfnIdTypCdgUsrSltd;
+	        } else  {
+	            this.dvcDfnIdTypCdgUsrSltd = this.dvcDfnIdTypCdgUsrSltd+ "," +dvcDfnIdTypCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnIdTypCdgVrsn() {
@@ -485,6 +891,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnIdTypCdgVrsn(String dvcDfnIdTypCdgVrsn) {
         this.dvcDfnIdTypCdgVrsn = dvcDfnIdTypCdgVrsn;
+    }
+    
+    public void addDvcDfnIdTypCdgVrsn(String dvcDfnIdTypCdgVrsn) {
+    	if( dvcDfnIdTypCdgVrsn != null ) {
+	    	if( this.dvcDfnIdTypCdgVrsn == null ) {
+	        	this.dvcDfnIdTypCdgVrsn = dvcDfnIdTypCdgVrsn;
+	        } else if(this.dvcDfnIdTypCdgVrsn.substring(this.dvcDfnIdTypCdgVrsn.length() - 1).equals("]") & dvcDfnIdTypCdgVrsn.equals("[")) {
+	        	this.dvcDfnIdTypCdgVrsn = this.dvcDfnIdTypCdgVrsn+ "," + dvcDfnIdTypCdgVrsn;
+	        } else if(dvcDfnIdTypCdgVrsn.equals("[") | dvcDfnIdTypCdgVrsn.equals("]") | this.dvcDfnIdTypCdgVrsn.substring(this.dvcDfnIdTypCdgVrsn.length() - 1).equals("[")) {
+	        	this.dvcDfnIdTypCdgVrsn = this.dvcDfnIdTypCdgVrsn+dvcDfnIdTypCdgVrsn;
+	        } else  {
+	            this.dvcDfnIdTypCdgVrsn = this.dvcDfnIdTypCdgVrsn+ "," +dvcDfnIdTypCdgVrsn;
+	        }
+        }
     }
     
     
@@ -497,6 +917,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnIdTypTxt = dvcDfnIdTypTxt;
     }
     
+    public void addDvcDfnIdTypTxt(String dvcDfnIdTypTxt) {
+    	if( dvcDfnIdTypTxt != null ) {
+	    	if( this.dvcDfnIdTypTxt == null ) {
+	        	this.dvcDfnIdTypTxt = dvcDfnIdTypTxt;
+	        } else if(this.dvcDfnIdTypTxt.substring(this.dvcDfnIdTypTxt.length() - 1).equals("]") & dvcDfnIdTypTxt.equals("[")) {
+	        	this.dvcDfnIdTypTxt = this.dvcDfnIdTypTxt+ "," + dvcDfnIdTypTxt;
+	        } else if(dvcDfnIdTypTxt.equals("[") | dvcDfnIdTypTxt.equals("]") | this.dvcDfnIdTypTxt.substring(this.dvcDfnIdTypTxt.length() - 1).equals("[")) {
+	        	this.dvcDfnIdTypTxt = this.dvcDfnIdTypTxt+dvcDfnIdTypTxt;
+	        } else  {
+	            this.dvcDfnIdTypTxt = this.dvcDfnIdTypTxt+ "," +dvcDfnIdTypTxt;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnIdUse() {
@@ -505,6 +939,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnIdUse(String dvcDfnIdUse) {
         this.dvcDfnIdUse = dvcDfnIdUse;
+    }
+    
+    public void addDvcDfnIdUse(String dvcDfnIdUse) {
+    	if( dvcDfnIdUse != null ) {
+	    	if( this.dvcDfnIdUse == null ) {
+	        	this.dvcDfnIdUse = dvcDfnIdUse;
+	        } else if(this.dvcDfnIdUse.substring(this.dvcDfnIdUse.length() - 1).equals("]") & dvcDfnIdUse.equals("[")) {
+	        	this.dvcDfnIdUse = this.dvcDfnIdUse+ "," + dvcDfnIdUse;
+	        } else if(dvcDfnIdUse.equals("[") | dvcDfnIdUse.equals("]") | this.dvcDfnIdUse.substring(this.dvcDfnIdUse.length() - 1).equals("[")) {
+	        	this.dvcDfnIdUse = this.dvcDfnIdUse+dvcDfnIdUse;
+	        } else  {
+	            this.dvcDfnIdUse = this.dvcDfnIdUse+ "," +dvcDfnIdUse;
+	        }
+        }
     }
     
     
@@ -517,6 +965,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnIdVl = dvcDfnIdVl;
     }
     
+    public void addDvcDfnIdVl(String dvcDfnIdVl) {
+    	if( dvcDfnIdVl != null ) {
+	    	if( this.dvcDfnIdVl == null ) {
+	        	this.dvcDfnIdVl = dvcDfnIdVl;
+	        } else if(this.dvcDfnIdVl.substring(this.dvcDfnIdVl.length() - 1).equals("]") & dvcDfnIdVl.equals("[")) {
+	        	this.dvcDfnIdVl = this.dvcDfnIdVl+ "," + dvcDfnIdVl;
+	        } else if(dvcDfnIdVl.equals("[") | dvcDfnIdVl.equals("]") | this.dvcDfnIdVl.substring(this.dvcDfnIdVl.length() - 1).equals("[")) {
+	        	this.dvcDfnIdVl = this.dvcDfnIdVl+dvcDfnIdVl;
+	        } else  {
+	            this.dvcDfnIdVl = this.dvcDfnIdVl+ "," +dvcDfnIdVl;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnLnguageCdCdgCd() {
@@ -525,6 +987,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnLnguageCdCdgCd(String dvcDfnLnguageCdCdgCd) {
         this.dvcDfnLnguageCdCdgCd = dvcDfnLnguageCdCdgCd;
+    }
+    
+    public void addDvcDfnLnguageCdCdgCd(String dvcDfnLnguageCdCdgCd) {
+    	if( dvcDfnLnguageCdCdgCd != null ) {
+	    	if( this.dvcDfnLnguageCdCdgCd == null ) {
+	        	this.dvcDfnLnguageCdCdgCd = dvcDfnLnguageCdCdgCd;
+	        } else if(this.dvcDfnLnguageCdCdgCd.substring(this.dvcDfnLnguageCdCdgCd.length() - 1).equals("]") & dvcDfnLnguageCdCdgCd.equals("[")) {
+	        	this.dvcDfnLnguageCdCdgCd = this.dvcDfnLnguageCdCdgCd+ "," + dvcDfnLnguageCdCdgCd;
+	        } else if(dvcDfnLnguageCdCdgCd.equals("[") | dvcDfnLnguageCdCdgCd.equals("]") | this.dvcDfnLnguageCdCdgCd.substring(this.dvcDfnLnguageCdCdgCd.length() - 1).equals("[")) {
+	        	this.dvcDfnLnguageCdCdgCd = this.dvcDfnLnguageCdCdgCd+dvcDfnLnguageCdCdgCd;
+	        } else  {
+	            this.dvcDfnLnguageCdCdgCd = this.dvcDfnLnguageCdCdgCd+ "," +dvcDfnLnguageCdCdgCd;
+	        }
+        }
     }
     
     
@@ -537,6 +1013,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnLnguageCdCdgDsply = dvcDfnLnguageCdCdgDsply;
     }
     
+    public void addDvcDfnLnguageCdCdgDsply(String dvcDfnLnguageCdCdgDsply) {
+    	if( dvcDfnLnguageCdCdgDsply != null ) {
+	    	if( this.dvcDfnLnguageCdCdgDsply == null ) {
+	        	this.dvcDfnLnguageCdCdgDsply = dvcDfnLnguageCdCdgDsply;
+	        } else if(this.dvcDfnLnguageCdCdgDsply.substring(this.dvcDfnLnguageCdCdgDsply.length() - 1).equals("]") & dvcDfnLnguageCdCdgDsply.equals("[")) {
+	        	this.dvcDfnLnguageCdCdgDsply = this.dvcDfnLnguageCdCdgDsply+ "," + dvcDfnLnguageCdCdgDsply;
+	        } else if(dvcDfnLnguageCdCdgDsply.equals("[") | dvcDfnLnguageCdCdgDsply.equals("]") | this.dvcDfnLnguageCdCdgDsply.substring(this.dvcDfnLnguageCdCdgDsply.length() - 1).equals("[")) {
+	        	this.dvcDfnLnguageCdCdgDsply = this.dvcDfnLnguageCdCdgDsply+dvcDfnLnguageCdCdgDsply;
+	        } else  {
+	            this.dvcDfnLnguageCdCdgDsply = this.dvcDfnLnguageCdCdgDsply+ "," +dvcDfnLnguageCdCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnLnguageCdCdgSys() {
@@ -545,6 +1035,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnLnguageCdCdgSys(String dvcDfnLnguageCdCdgSys) {
         this.dvcDfnLnguageCdCdgSys = dvcDfnLnguageCdCdgSys;
+    }
+    
+    public void addDvcDfnLnguageCdCdgSys(String dvcDfnLnguageCdCdgSys) {
+    	if( dvcDfnLnguageCdCdgSys != null ) {
+	    	if( this.dvcDfnLnguageCdCdgSys == null ) {
+	        	this.dvcDfnLnguageCdCdgSys = dvcDfnLnguageCdCdgSys;
+	        } else if(this.dvcDfnLnguageCdCdgSys.substring(this.dvcDfnLnguageCdCdgSys.length() - 1).equals("]") & dvcDfnLnguageCdCdgSys.equals("[")) {
+	        	this.dvcDfnLnguageCdCdgSys = this.dvcDfnLnguageCdCdgSys+ "," + dvcDfnLnguageCdCdgSys;
+	        } else if(dvcDfnLnguageCdCdgSys.equals("[") | dvcDfnLnguageCdCdgSys.equals("]") | this.dvcDfnLnguageCdCdgSys.substring(this.dvcDfnLnguageCdCdgSys.length() - 1).equals("[")) {
+	        	this.dvcDfnLnguageCdCdgSys = this.dvcDfnLnguageCdCdgSys+dvcDfnLnguageCdCdgSys;
+	        } else  {
+	            this.dvcDfnLnguageCdCdgSys = this.dvcDfnLnguageCdCdgSys+ "," +dvcDfnLnguageCdCdgSys;
+	        }
+        }
     }
     
     
@@ -557,6 +1061,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnLnguageCdCdgUsrSltd = dvcDfnLnguageCdCdgUsrSltd;
     }
     
+    public void addDvcDfnLnguageCdCdgUsrSltd(String dvcDfnLnguageCdCdgUsrSltd) {
+    	if( dvcDfnLnguageCdCdgUsrSltd != null ) {
+	    	if( this.dvcDfnLnguageCdCdgUsrSltd == null ) {
+	        	this.dvcDfnLnguageCdCdgUsrSltd = dvcDfnLnguageCdCdgUsrSltd;
+	        } else if(this.dvcDfnLnguageCdCdgUsrSltd.substring(this.dvcDfnLnguageCdCdgUsrSltd.length() - 1).equals("]") & dvcDfnLnguageCdCdgUsrSltd.equals("[")) {
+	        	this.dvcDfnLnguageCdCdgUsrSltd = this.dvcDfnLnguageCdCdgUsrSltd+ "," + dvcDfnLnguageCdCdgUsrSltd;
+	        } else if(dvcDfnLnguageCdCdgUsrSltd.equals("[") | dvcDfnLnguageCdCdgUsrSltd.equals("]") | this.dvcDfnLnguageCdCdgUsrSltd.substring(this.dvcDfnLnguageCdCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.dvcDfnLnguageCdCdgUsrSltd = this.dvcDfnLnguageCdCdgUsrSltd+dvcDfnLnguageCdCdgUsrSltd;
+	        } else  {
+	            this.dvcDfnLnguageCdCdgUsrSltd = this.dvcDfnLnguageCdCdgUsrSltd+ "," +dvcDfnLnguageCdCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnLnguageCdCdgVrsn() {
@@ -565,6 +1083,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnLnguageCdCdgVrsn(String dvcDfnLnguageCdCdgVrsn) {
         this.dvcDfnLnguageCdCdgVrsn = dvcDfnLnguageCdCdgVrsn;
+    }
+    
+    public void addDvcDfnLnguageCdCdgVrsn(String dvcDfnLnguageCdCdgVrsn) {
+    	if( dvcDfnLnguageCdCdgVrsn != null ) {
+	    	if( this.dvcDfnLnguageCdCdgVrsn == null ) {
+	        	this.dvcDfnLnguageCdCdgVrsn = dvcDfnLnguageCdCdgVrsn;
+	        } else if(this.dvcDfnLnguageCdCdgVrsn.substring(this.dvcDfnLnguageCdCdgVrsn.length() - 1).equals("]") & dvcDfnLnguageCdCdgVrsn.equals("[")) {
+	        	this.dvcDfnLnguageCdCdgVrsn = this.dvcDfnLnguageCdCdgVrsn+ "," + dvcDfnLnguageCdCdgVrsn;
+	        } else if(dvcDfnLnguageCdCdgVrsn.equals("[") | dvcDfnLnguageCdCdgVrsn.equals("]") | this.dvcDfnLnguageCdCdgVrsn.substring(this.dvcDfnLnguageCdCdgVrsn.length() - 1).equals("[")) {
+	        	this.dvcDfnLnguageCdCdgVrsn = this.dvcDfnLnguageCdCdgVrsn+dvcDfnLnguageCdCdgVrsn;
+	        } else  {
+	            this.dvcDfnLnguageCdCdgVrsn = this.dvcDfnLnguageCdCdgVrsn+ "," +dvcDfnLnguageCdCdgVrsn;
+	        }
+        }
     }
     
     
@@ -577,6 +1109,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnLnguageCdTxt = dvcDfnLnguageCdTxt;
     }
     
+    public void addDvcDfnLnguageCdTxt(String dvcDfnLnguageCdTxt) {
+    	if( dvcDfnLnguageCdTxt != null ) {
+	    	if( this.dvcDfnLnguageCdTxt == null ) {
+	        	this.dvcDfnLnguageCdTxt = dvcDfnLnguageCdTxt;
+	        } else if(this.dvcDfnLnguageCdTxt.substring(this.dvcDfnLnguageCdTxt.length() - 1).equals("]") & dvcDfnLnguageCdTxt.equals("[")) {
+	        	this.dvcDfnLnguageCdTxt = this.dvcDfnLnguageCdTxt+ "," + dvcDfnLnguageCdTxt;
+	        } else if(dvcDfnLnguageCdTxt.equals("[") | dvcDfnLnguageCdTxt.equals("]") | this.dvcDfnLnguageCdTxt.substring(this.dvcDfnLnguageCdTxt.length() - 1).equals("[")) {
+	        	this.dvcDfnLnguageCdTxt = this.dvcDfnLnguageCdTxt+dvcDfnLnguageCdTxt;
+	        } else  {
+	            this.dvcDfnLnguageCdTxt = this.dvcDfnLnguageCdTxt+ "," +dvcDfnLnguageCdTxt;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnManufacturerRfrnc() {
@@ -585,6 +1131,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnManufacturerRfrnc(String dvcDfnManufacturerRfrnc) {
         this.dvcDfnManufacturerRfrnc = dvcDfnManufacturerRfrnc;
+    }
+    
+    public void addDvcDfnManufacturerRfrnc(String dvcDfnManufacturerRfrnc) {
+    	if( dvcDfnManufacturerRfrnc != null ) {
+	    	if( this.dvcDfnManufacturerRfrnc == null ) {
+	        	this.dvcDfnManufacturerRfrnc = dvcDfnManufacturerRfrnc;
+	        } else if(this.dvcDfnManufacturerRfrnc.substring(this.dvcDfnManufacturerRfrnc.length() - 1).equals("]") & dvcDfnManufacturerRfrnc.equals("[")) {
+	        	this.dvcDfnManufacturerRfrnc = this.dvcDfnManufacturerRfrnc+ "," + dvcDfnManufacturerRfrnc;
+	        } else if(dvcDfnManufacturerRfrnc.equals("[") | dvcDfnManufacturerRfrnc.equals("]") | this.dvcDfnManufacturerRfrnc.substring(this.dvcDfnManufacturerRfrnc.length() - 1).equals("[")) {
+	        	this.dvcDfnManufacturerRfrnc = this.dvcDfnManufacturerRfrnc+dvcDfnManufacturerRfrnc;
+	        } else  {
+	            this.dvcDfnManufacturerRfrnc = this.dvcDfnManufacturerRfrnc+ "," +dvcDfnManufacturerRfrnc;
+	        }
+        }
     }
     
     
@@ -597,6 +1157,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnManufacturerStrgTyp = dvcDfnManufacturerStrgTyp;
     }
     
+    public void addDvcDfnManufacturerStrgTyp(String dvcDfnManufacturerStrgTyp) {
+    	if( dvcDfnManufacturerStrgTyp != null ) {
+	    	if( this.dvcDfnManufacturerStrgTyp == null ) {
+	        	this.dvcDfnManufacturerStrgTyp = dvcDfnManufacturerStrgTyp;
+	        } else if(this.dvcDfnManufacturerStrgTyp.substring(this.dvcDfnManufacturerStrgTyp.length() - 1).equals("]") & dvcDfnManufacturerStrgTyp.equals("[")) {
+	        	this.dvcDfnManufacturerStrgTyp = this.dvcDfnManufacturerStrgTyp+ "," + dvcDfnManufacturerStrgTyp;
+	        } else if(dvcDfnManufacturerStrgTyp.equals("[") | dvcDfnManufacturerStrgTyp.equals("]") | this.dvcDfnManufacturerStrgTyp.substring(this.dvcDfnManufacturerStrgTyp.length() - 1).equals("[")) {
+	        	this.dvcDfnManufacturerStrgTyp = this.dvcDfnManufacturerStrgTyp+dvcDfnManufacturerStrgTyp;
+	        } else  {
+	            this.dvcDfnManufacturerStrgTyp = this.dvcDfnManufacturerStrgTyp+ "," +dvcDfnManufacturerStrgTyp;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnMtrlAllergenicIndicator() {
@@ -605,6 +1179,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnMtrlAllergenicIndicator(String dvcDfnMtrlAllergenicIndicator) {
         this.dvcDfnMtrlAllergenicIndicator = dvcDfnMtrlAllergenicIndicator;
+    }
+    
+    public void addDvcDfnMtrlAllergenicIndicator(String dvcDfnMtrlAllergenicIndicator) {
+    	if( dvcDfnMtrlAllergenicIndicator != null ) {
+	    	if( this.dvcDfnMtrlAllergenicIndicator == null ) {
+	        	this.dvcDfnMtrlAllergenicIndicator = dvcDfnMtrlAllergenicIndicator;
+	        } else if(this.dvcDfnMtrlAllergenicIndicator.substring(this.dvcDfnMtrlAllergenicIndicator.length() - 1).equals("]") & dvcDfnMtrlAllergenicIndicator.equals("[")) {
+	        	this.dvcDfnMtrlAllergenicIndicator = this.dvcDfnMtrlAllergenicIndicator+ "," + dvcDfnMtrlAllergenicIndicator;
+	        } else if(dvcDfnMtrlAllergenicIndicator.equals("[") | dvcDfnMtrlAllergenicIndicator.equals("]") | this.dvcDfnMtrlAllergenicIndicator.substring(this.dvcDfnMtrlAllergenicIndicator.length() - 1).equals("[")) {
+	        	this.dvcDfnMtrlAllergenicIndicator = this.dvcDfnMtrlAllergenicIndicator+dvcDfnMtrlAllergenicIndicator;
+	        } else  {
+	            this.dvcDfnMtrlAllergenicIndicator = this.dvcDfnMtrlAllergenicIndicator+ "," +dvcDfnMtrlAllergenicIndicator;
+	        }
+        }
     }
     
     
@@ -617,6 +1205,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnMtrlAlternate = dvcDfnMtrlAlternate;
     }
     
+    public void addDvcDfnMtrlAlternate(String dvcDfnMtrlAlternate) {
+    	if( dvcDfnMtrlAlternate != null ) {
+	    	if( this.dvcDfnMtrlAlternate == null ) {
+	        	this.dvcDfnMtrlAlternate = dvcDfnMtrlAlternate;
+	        } else if(this.dvcDfnMtrlAlternate.substring(this.dvcDfnMtrlAlternate.length() - 1).equals("]") & dvcDfnMtrlAlternate.equals("[")) {
+	        	this.dvcDfnMtrlAlternate = this.dvcDfnMtrlAlternate+ "," + dvcDfnMtrlAlternate;
+	        } else if(dvcDfnMtrlAlternate.equals("[") | dvcDfnMtrlAlternate.equals("]") | this.dvcDfnMtrlAlternate.substring(this.dvcDfnMtrlAlternate.length() - 1).equals("[")) {
+	        	this.dvcDfnMtrlAlternate = this.dvcDfnMtrlAlternate+dvcDfnMtrlAlternate;
+	        } else  {
+	            this.dvcDfnMtrlAlternate = this.dvcDfnMtrlAlternate+ "," +dvcDfnMtrlAlternate;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnMtrlSbstncCdgCd() {
@@ -625,6 +1227,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnMtrlSbstncCdgCd(String dvcDfnMtrlSbstncCdgCd) {
         this.dvcDfnMtrlSbstncCdgCd = dvcDfnMtrlSbstncCdgCd;
+    }
+    
+    public void addDvcDfnMtrlSbstncCdgCd(String dvcDfnMtrlSbstncCdgCd) {
+    	if( dvcDfnMtrlSbstncCdgCd != null ) {
+	    	if( this.dvcDfnMtrlSbstncCdgCd == null ) {
+	        	this.dvcDfnMtrlSbstncCdgCd = dvcDfnMtrlSbstncCdgCd;
+	        } else if(this.dvcDfnMtrlSbstncCdgCd.substring(this.dvcDfnMtrlSbstncCdgCd.length() - 1).equals("]") & dvcDfnMtrlSbstncCdgCd.equals("[")) {
+	        	this.dvcDfnMtrlSbstncCdgCd = this.dvcDfnMtrlSbstncCdgCd+ "," + dvcDfnMtrlSbstncCdgCd;
+	        } else if(dvcDfnMtrlSbstncCdgCd.equals("[") | dvcDfnMtrlSbstncCdgCd.equals("]") | this.dvcDfnMtrlSbstncCdgCd.substring(this.dvcDfnMtrlSbstncCdgCd.length() - 1).equals("[")) {
+	        	this.dvcDfnMtrlSbstncCdgCd = this.dvcDfnMtrlSbstncCdgCd+dvcDfnMtrlSbstncCdgCd;
+	        } else  {
+	            this.dvcDfnMtrlSbstncCdgCd = this.dvcDfnMtrlSbstncCdgCd+ "," +dvcDfnMtrlSbstncCdgCd;
+	        }
+        }
     }
     
     
@@ -637,6 +1253,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnMtrlSbstncCdgDsply = dvcDfnMtrlSbstncCdgDsply;
     }
     
+    public void addDvcDfnMtrlSbstncCdgDsply(String dvcDfnMtrlSbstncCdgDsply) {
+    	if( dvcDfnMtrlSbstncCdgDsply != null ) {
+	    	if( this.dvcDfnMtrlSbstncCdgDsply == null ) {
+	        	this.dvcDfnMtrlSbstncCdgDsply = dvcDfnMtrlSbstncCdgDsply;
+	        } else if(this.dvcDfnMtrlSbstncCdgDsply.substring(this.dvcDfnMtrlSbstncCdgDsply.length() - 1).equals("]") & dvcDfnMtrlSbstncCdgDsply.equals("[")) {
+	        	this.dvcDfnMtrlSbstncCdgDsply = this.dvcDfnMtrlSbstncCdgDsply+ "," + dvcDfnMtrlSbstncCdgDsply;
+	        } else if(dvcDfnMtrlSbstncCdgDsply.equals("[") | dvcDfnMtrlSbstncCdgDsply.equals("]") | this.dvcDfnMtrlSbstncCdgDsply.substring(this.dvcDfnMtrlSbstncCdgDsply.length() - 1).equals("[")) {
+	        	this.dvcDfnMtrlSbstncCdgDsply = this.dvcDfnMtrlSbstncCdgDsply+dvcDfnMtrlSbstncCdgDsply;
+	        } else  {
+	            this.dvcDfnMtrlSbstncCdgDsply = this.dvcDfnMtrlSbstncCdgDsply+ "," +dvcDfnMtrlSbstncCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnMtrlSbstncCdgSys() {
@@ -645,6 +1275,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnMtrlSbstncCdgSys(String dvcDfnMtrlSbstncCdgSys) {
         this.dvcDfnMtrlSbstncCdgSys = dvcDfnMtrlSbstncCdgSys;
+    }
+    
+    public void addDvcDfnMtrlSbstncCdgSys(String dvcDfnMtrlSbstncCdgSys) {
+    	if( dvcDfnMtrlSbstncCdgSys != null ) {
+	    	if( this.dvcDfnMtrlSbstncCdgSys == null ) {
+	        	this.dvcDfnMtrlSbstncCdgSys = dvcDfnMtrlSbstncCdgSys;
+	        } else if(this.dvcDfnMtrlSbstncCdgSys.substring(this.dvcDfnMtrlSbstncCdgSys.length() - 1).equals("]") & dvcDfnMtrlSbstncCdgSys.equals("[")) {
+	        	this.dvcDfnMtrlSbstncCdgSys = this.dvcDfnMtrlSbstncCdgSys+ "," + dvcDfnMtrlSbstncCdgSys;
+	        } else if(dvcDfnMtrlSbstncCdgSys.equals("[") | dvcDfnMtrlSbstncCdgSys.equals("]") | this.dvcDfnMtrlSbstncCdgSys.substring(this.dvcDfnMtrlSbstncCdgSys.length() - 1).equals("[")) {
+	        	this.dvcDfnMtrlSbstncCdgSys = this.dvcDfnMtrlSbstncCdgSys+dvcDfnMtrlSbstncCdgSys;
+	        } else  {
+	            this.dvcDfnMtrlSbstncCdgSys = this.dvcDfnMtrlSbstncCdgSys+ "," +dvcDfnMtrlSbstncCdgSys;
+	        }
+        }
     }
     
     
@@ -657,6 +1301,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnMtrlSbstncCdgUsrSltd = dvcDfnMtrlSbstncCdgUsrSltd;
     }
     
+    public void addDvcDfnMtrlSbstncCdgUsrSltd(String dvcDfnMtrlSbstncCdgUsrSltd) {
+    	if( dvcDfnMtrlSbstncCdgUsrSltd != null ) {
+	    	if( this.dvcDfnMtrlSbstncCdgUsrSltd == null ) {
+	        	this.dvcDfnMtrlSbstncCdgUsrSltd = dvcDfnMtrlSbstncCdgUsrSltd;
+	        } else if(this.dvcDfnMtrlSbstncCdgUsrSltd.substring(this.dvcDfnMtrlSbstncCdgUsrSltd.length() - 1).equals("]") & dvcDfnMtrlSbstncCdgUsrSltd.equals("[")) {
+	        	this.dvcDfnMtrlSbstncCdgUsrSltd = this.dvcDfnMtrlSbstncCdgUsrSltd+ "," + dvcDfnMtrlSbstncCdgUsrSltd;
+	        } else if(dvcDfnMtrlSbstncCdgUsrSltd.equals("[") | dvcDfnMtrlSbstncCdgUsrSltd.equals("]") | this.dvcDfnMtrlSbstncCdgUsrSltd.substring(this.dvcDfnMtrlSbstncCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.dvcDfnMtrlSbstncCdgUsrSltd = this.dvcDfnMtrlSbstncCdgUsrSltd+dvcDfnMtrlSbstncCdgUsrSltd;
+	        } else  {
+	            this.dvcDfnMtrlSbstncCdgUsrSltd = this.dvcDfnMtrlSbstncCdgUsrSltd+ "," +dvcDfnMtrlSbstncCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnMtrlSbstncCdgVrsn() {
@@ -665,6 +1323,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnMtrlSbstncCdgVrsn(String dvcDfnMtrlSbstncCdgVrsn) {
         this.dvcDfnMtrlSbstncCdgVrsn = dvcDfnMtrlSbstncCdgVrsn;
+    }
+    
+    public void addDvcDfnMtrlSbstncCdgVrsn(String dvcDfnMtrlSbstncCdgVrsn) {
+    	if( dvcDfnMtrlSbstncCdgVrsn != null ) {
+	    	if( this.dvcDfnMtrlSbstncCdgVrsn == null ) {
+	        	this.dvcDfnMtrlSbstncCdgVrsn = dvcDfnMtrlSbstncCdgVrsn;
+	        } else if(this.dvcDfnMtrlSbstncCdgVrsn.substring(this.dvcDfnMtrlSbstncCdgVrsn.length() - 1).equals("]") & dvcDfnMtrlSbstncCdgVrsn.equals("[")) {
+	        	this.dvcDfnMtrlSbstncCdgVrsn = this.dvcDfnMtrlSbstncCdgVrsn+ "," + dvcDfnMtrlSbstncCdgVrsn;
+	        } else if(dvcDfnMtrlSbstncCdgVrsn.equals("[") | dvcDfnMtrlSbstncCdgVrsn.equals("]") | this.dvcDfnMtrlSbstncCdgVrsn.substring(this.dvcDfnMtrlSbstncCdgVrsn.length() - 1).equals("[")) {
+	        	this.dvcDfnMtrlSbstncCdgVrsn = this.dvcDfnMtrlSbstncCdgVrsn+dvcDfnMtrlSbstncCdgVrsn;
+	        } else  {
+	            this.dvcDfnMtrlSbstncCdgVrsn = this.dvcDfnMtrlSbstncCdgVrsn+ "," +dvcDfnMtrlSbstncCdgVrsn;
+	        }
+        }
     }
     
     
@@ -677,6 +1349,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnMtrlSbstncTxt = dvcDfnMtrlSbstncTxt;
     }
     
+    public void addDvcDfnMtrlSbstncTxt(String dvcDfnMtrlSbstncTxt) {
+    	if( dvcDfnMtrlSbstncTxt != null ) {
+	    	if( this.dvcDfnMtrlSbstncTxt == null ) {
+	        	this.dvcDfnMtrlSbstncTxt = dvcDfnMtrlSbstncTxt;
+	        } else if(this.dvcDfnMtrlSbstncTxt.substring(this.dvcDfnMtrlSbstncTxt.length() - 1).equals("]") & dvcDfnMtrlSbstncTxt.equals("[")) {
+	        	this.dvcDfnMtrlSbstncTxt = this.dvcDfnMtrlSbstncTxt+ "," + dvcDfnMtrlSbstncTxt;
+	        } else if(dvcDfnMtrlSbstncTxt.equals("[") | dvcDfnMtrlSbstncTxt.equals("]") | this.dvcDfnMtrlSbstncTxt.substring(this.dvcDfnMtrlSbstncTxt.length() - 1).equals("[")) {
+	        	this.dvcDfnMtrlSbstncTxt = this.dvcDfnMtrlSbstncTxt+dvcDfnMtrlSbstncTxt;
+	        } else  {
+	            this.dvcDfnMtrlSbstncTxt = this.dvcDfnMtrlSbstncTxt+ "," +dvcDfnMtrlSbstncTxt;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnModelNmbr() {
@@ -685,6 +1371,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnModelNmbr(String dvcDfnModelNmbr) {
         this.dvcDfnModelNmbr = dvcDfnModelNmbr;
+    }
+    
+    public void addDvcDfnModelNmbr(String dvcDfnModelNmbr) {
+    	if( dvcDfnModelNmbr != null ) {
+	    	if( this.dvcDfnModelNmbr == null ) {
+	        	this.dvcDfnModelNmbr = dvcDfnModelNmbr;
+	        } else if(this.dvcDfnModelNmbr.substring(this.dvcDfnModelNmbr.length() - 1).equals("]") & dvcDfnModelNmbr.equals("[")) {
+	        	this.dvcDfnModelNmbr = this.dvcDfnModelNmbr+ "," + dvcDfnModelNmbr;
+	        } else if(dvcDfnModelNmbr.equals("[") | dvcDfnModelNmbr.equals("]") | this.dvcDfnModelNmbr.substring(this.dvcDfnModelNmbr.length() - 1).equals("[")) {
+	        	this.dvcDfnModelNmbr = this.dvcDfnModelNmbr+dvcDfnModelNmbr;
+	        } else  {
+	            this.dvcDfnModelNmbr = this.dvcDfnModelNmbr+ "," +dvcDfnModelNmbr;
+	        }
+        }
     }
     
     
@@ -697,6 +1397,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnNtAthrRfrnc = dvcDfnNtAthrRfrnc;
     }
     
+    public void addDvcDfnNtAthrRfrnc(String dvcDfnNtAthrRfrnc) {
+    	if( dvcDfnNtAthrRfrnc != null ) {
+	    	if( this.dvcDfnNtAthrRfrnc == null ) {
+	        	this.dvcDfnNtAthrRfrnc = dvcDfnNtAthrRfrnc;
+	        } else if(this.dvcDfnNtAthrRfrnc.substring(this.dvcDfnNtAthrRfrnc.length() - 1).equals("]") & dvcDfnNtAthrRfrnc.equals("[")) {
+	        	this.dvcDfnNtAthrRfrnc = this.dvcDfnNtAthrRfrnc+ "," + dvcDfnNtAthrRfrnc;
+	        } else if(dvcDfnNtAthrRfrnc.equals("[") | dvcDfnNtAthrRfrnc.equals("]") | this.dvcDfnNtAthrRfrnc.substring(this.dvcDfnNtAthrRfrnc.length() - 1).equals("[")) {
+	        	this.dvcDfnNtAthrRfrnc = this.dvcDfnNtAthrRfrnc+dvcDfnNtAthrRfrnc;
+	        } else  {
+	            this.dvcDfnNtAthrRfrnc = this.dvcDfnNtAthrRfrnc+ "," +dvcDfnNtAthrRfrnc;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnNtAthrStrgTyp() {
@@ -705,6 +1419,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnNtAthrStrgTyp(String dvcDfnNtAthrStrgTyp) {
         this.dvcDfnNtAthrStrgTyp = dvcDfnNtAthrStrgTyp;
+    }
+    
+    public void addDvcDfnNtAthrStrgTyp(String dvcDfnNtAthrStrgTyp) {
+    	if( dvcDfnNtAthrStrgTyp != null ) {
+	    	if( this.dvcDfnNtAthrStrgTyp == null ) {
+	        	this.dvcDfnNtAthrStrgTyp = dvcDfnNtAthrStrgTyp;
+	        } else if(this.dvcDfnNtAthrStrgTyp.substring(this.dvcDfnNtAthrStrgTyp.length() - 1).equals("]") & dvcDfnNtAthrStrgTyp.equals("[")) {
+	        	this.dvcDfnNtAthrStrgTyp = this.dvcDfnNtAthrStrgTyp+ "," + dvcDfnNtAthrStrgTyp;
+	        } else if(dvcDfnNtAthrStrgTyp.equals("[") | dvcDfnNtAthrStrgTyp.equals("]") | this.dvcDfnNtAthrStrgTyp.substring(this.dvcDfnNtAthrStrgTyp.length() - 1).equals("[")) {
+	        	this.dvcDfnNtAthrStrgTyp = this.dvcDfnNtAthrStrgTyp+dvcDfnNtAthrStrgTyp;
+	        } else  {
+	            this.dvcDfnNtAthrStrgTyp = this.dvcDfnNtAthrStrgTyp+ "," +dvcDfnNtAthrStrgTyp;
+	        }
+        }
     }
     
     
@@ -717,6 +1445,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnNtTxt = dvcDfnNtTxt;
     }
     
+    public void addDvcDfnNtTxt(String dvcDfnNtTxt) {
+    	if( dvcDfnNtTxt != null ) {
+	    	if( this.dvcDfnNtTxt == null ) {
+	        	this.dvcDfnNtTxt = dvcDfnNtTxt;
+	        } else if(this.dvcDfnNtTxt.substring(this.dvcDfnNtTxt.length() - 1).equals("]") & dvcDfnNtTxt.equals("[")) {
+	        	this.dvcDfnNtTxt = this.dvcDfnNtTxt+ "," + dvcDfnNtTxt;
+	        } else if(dvcDfnNtTxt.equals("[") | dvcDfnNtTxt.equals("]") | this.dvcDfnNtTxt.substring(this.dvcDfnNtTxt.length() - 1).equals("[")) {
+	        	this.dvcDfnNtTxt = this.dvcDfnNtTxt+dvcDfnNtTxt;
+	        } else  {
+	            this.dvcDfnNtTxt = this.dvcDfnNtTxt+ "," +dvcDfnNtTxt;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnNtTime() {
@@ -725,6 +1467,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnNtTime(String dvcDfnNtTime) {
         this.dvcDfnNtTime = dvcDfnNtTime;
+    }
+    
+    public void addDvcDfnNtTime(String dvcDfnNtTime) {
+    	if( dvcDfnNtTime != null ) {
+	    	if( this.dvcDfnNtTime == null ) {
+	        	this.dvcDfnNtTime = dvcDfnNtTime;
+	        } else if(this.dvcDfnNtTime.substring(this.dvcDfnNtTime.length() - 1).equals("]") & dvcDfnNtTime.equals("[")) {
+	        	this.dvcDfnNtTime = this.dvcDfnNtTime+ "," + dvcDfnNtTime;
+	        } else if(dvcDfnNtTime.equals("[") | dvcDfnNtTime.equals("]") | this.dvcDfnNtTime.substring(this.dvcDfnNtTime.length() - 1).equals("[")) {
+	        	this.dvcDfnNtTime = this.dvcDfnNtTime+dvcDfnNtTime;
+	        } else  {
+	            this.dvcDfnNtTime = this.dvcDfnNtTime+ "," +dvcDfnNtTime;
+	        }
+        }
     }
     
     
@@ -737,6 +1493,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnOnlineInfo = dvcDfnOnlineInfo;
     }
     
+    public void addDvcDfnOnlineInfo(String dvcDfnOnlineInfo) {
+    	if( dvcDfnOnlineInfo != null ) {
+	    	if( this.dvcDfnOnlineInfo == null ) {
+	        	this.dvcDfnOnlineInfo = dvcDfnOnlineInfo;
+	        } else if(this.dvcDfnOnlineInfo.substring(this.dvcDfnOnlineInfo.length() - 1).equals("]") & dvcDfnOnlineInfo.equals("[")) {
+	        	this.dvcDfnOnlineInfo = this.dvcDfnOnlineInfo+ "," + dvcDfnOnlineInfo;
+	        } else if(dvcDfnOnlineInfo.equals("[") | dvcDfnOnlineInfo.equals("]") | this.dvcDfnOnlineInfo.substring(this.dvcDfnOnlineInfo.length() - 1).equals("[")) {
+	        	this.dvcDfnOnlineInfo = this.dvcDfnOnlineInfo+dvcDfnOnlineInfo;
+	        } else  {
+	            this.dvcDfnOnlineInfo = this.dvcDfnOnlineInfo+ "," +dvcDfnOnlineInfo;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnOwner() {
@@ -745,6 +1515,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnOwner(String dvcDfnOwner) {
         this.dvcDfnOwner = dvcDfnOwner;
+    }
+    
+    public void addDvcDfnOwner(String dvcDfnOwner) {
+    	if( dvcDfnOwner != null ) {
+	    	if( this.dvcDfnOwner == null ) {
+	        	this.dvcDfnOwner = dvcDfnOwner;
+	        } else if(this.dvcDfnOwner.substring(this.dvcDfnOwner.length() - 1).equals("]") & dvcDfnOwner.equals("[")) {
+	        	this.dvcDfnOwner = this.dvcDfnOwner+ "," + dvcDfnOwner;
+	        } else if(dvcDfnOwner.equals("[") | dvcDfnOwner.equals("]") | this.dvcDfnOwner.substring(this.dvcDfnOwner.length() - 1).equals("[")) {
+	        	this.dvcDfnOwner = this.dvcDfnOwner+dvcDfnOwner;
+	        } else  {
+	            this.dvcDfnOwner = this.dvcDfnOwner+ "," +dvcDfnOwner;
+	        }
+        }
     }
     
     
@@ -757,6 +1541,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnParentDvc = dvcDfnParentDvc;
     }
     
+    public void addDvcDfnParentDvc(String dvcDfnParentDvc) {
+    	if( dvcDfnParentDvc != null ) {
+	    	if( this.dvcDfnParentDvc == null ) {
+	        	this.dvcDfnParentDvc = dvcDfnParentDvc;
+	        } else if(this.dvcDfnParentDvc.substring(this.dvcDfnParentDvc.length() - 1).equals("]") & dvcDfnParentDvc.equals("[")) {
+	        	this.dvcDfnParentDvc = this.dvcDfnParentDvc+ "," + dvcDfnParentDvc;
+	        } else if(dvcDfnParentDvc.equals("[") | dvcDfnParentDvc.equals("]") | this.dvcDfnParentDvc.substring(this.dvcDfnParentDvc.length() - 1).equals("[")) {
+	        	this.dvcDfnParentDvc = this.dvcDfnParentDvc+dvcDfnParentDvc;
+	        } else  {
+	            this.dvcDfnParentDvc = this.dvcDfnParentDvc+ "," +dvcDfnParentDvc;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnPhysclCrctrstcsColor() {
@@ -765,6 +1563,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnPhysclCrctrstcsColor(String dvcDfnPhysclCrctrstcsColor) {
         this.dvcDfnPhysclCrctrstcsColor = dvcDfnPhysclCrctrstcsColor;
+    }
+    
+    public void addDvcDfnPhysclCrctrstcsColor(String dvcDfnPhysclCrctrstcsColor) {
+    	if( dvcDfnPhysclCrctrstcsColor != null ) {
+	    	if( this.dvcDfnPhysclCrctrstcsColor == null ) {
+	        	this.dvcDfnPhysclCrctrstcsColor = dvcDfnPhysclCrctrstcsColor;
+	        } else if(this.dvcDfnPhysclCrctrstcsColor.substring(this.dvcDfnPhysclCrctrstcsColor.length() - 1).equals("]") & dvcDfnPhysclCrctrstcsColor.equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsColor = this.dvcDfnPhysclCrctrstcsColor+ "," + dvcDfnPhysclCrctrstcsColor;
+	        } else if(dvcDfnPhysclCrctrstcsColor.equals("[") | dvcDfnPhysclCrctrstcsColor.equals("]") | this.dvcDfnPhysclCrctrstcsColor.substring(this.dvcDfnPhysclCrctrstcsColor.length() - 1).equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsColor = this.dvcDfnPhysclCrctrstcsColor+dvcDfnPhysclCrctrstcsColor;
+	        } else  {
+	            this.dvcDfnPhysclCrctrstcsColor = this.dvcDfnPhysclCrctrstcsColor+ "," +dvcDfnPhysclCrctrstcsColor;
+	        }
+        }
     }
     
     
@@ -777,6 +1589,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnPhysclCrctrstcsDepthCd = dvcDfnPhysclCrctrstcsDepthCd;
     }
     
+    public void addDvcDfnPhysclCrctrstcsDepthCd(String dvcDfnPhysclCrctrstcsDepthCd) {
+    	if( dvcDfnPhysclCrctrstcsDepthCd != null ) {
+	    	if( this.dvcDfnPhysclCrctrstcsDepthCd == null ) {
+	        	this.dvcDfnPhysclCrctrstcsDepthCd = dvcDfnPhysclCrctrstcsDepthCd;
+	        } else if(this.dvcDfnPhysclCrctrstcsDepthCd.substring(this.dvcDfnPhysclCrctrstcsDepthCd.length() - 1).equals("]") & dvcDfnPhysclCrctrstcsDepthCd.equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsDepthCd = this.dvcDfnPhysclCrctrstcsDepthCd+ "," + dvcDfnPhysclCrctrstcsDepthCd;
+	        } else if(dvcDfnPhysclCrctrstcsDepthCd.equals("[") | dvcDfnPhysclCrctrstcsDepthCd.equals("]") | this.dvcDfnPhysclCrctrstcsDepthCd.substring(this.dvcDfnPhysclCrctrstcsDepthCd.length() - 1).equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsDepthCd = this.dvcDfnPhysclCrctrstcsDepthCd+dvcDfnPhysclCrctrstcsDepthCd;
+	        } else  {
+	            this.dvcDfnPhysclCrctrstcsDepthCd = this.dvcDfnPhysclCrctrstcsDepthCd+ "," +dvcDfnPhysclCrctrstcsDepthCd;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnPhysclCrctrstcsDepthCmprtr() {
@@ -785,6 +1611,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnPhysclCrctrstcsDepthCmprtr(String dvcDfnPhysclCrctrstcsDepthCmprtr) {
         this.dvcDfnPhysclCrctrstcsDepthCmprtr = dvcDfnPhysclCrctrstcsDepthCmprtr;
+    }
+    
+    public void addDvcDfnPhysclCrctrstcsDepthCmprtr(String dvcDfnPhysclCrctrstcsDepthCmprtr) {
+    	if( dvcDfnPhysclCrctrstcsDepthCmprtr != null ) {
+	    	if( this.dvcDfnPhysclCrctrstcsDepthCmprtr == null ) {
+	        	this.dvcDfnPhysclCrctrstcsDepthCmprtr = dvcDfnPhysclCrctrstcsDepthCmprtr;
+	        } else if(this.dvcDfnPhysclCrctrstcsDepthCmprtr.substring(this.dvcDfnPhysclCrctrstcsDepthCmprtr.length() - 1).equals("]") & dvcDfnPhysclCrctrstcsDepthCmprtr.equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsDepthCmprtr = this.dvcDfnPhysclCrctrstcsDepthCmprtr+ "," + dvcDfnPhysclCrctrstcsDepthCmprtr;
+	        } else if(dvcDfnPhysclCrctrstcsDepthCmprtr.equals("[") | dvcDfnPhysclCrctrstcsDepthCmprtr.equals("]") | this.dvcDfnPhysclCrctrstcsDepthCmprtr.substring(this.dvcDfnPhysclCrctrstcsDepthCmprtr.length() - 1).equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsDepthCmprtr = this.dvcDfnPhysclCrctrstcsDepthCmprtr+dvcDfnPhysclCrctrstcsDepthCmprtr;
+	        } else  {
+	            this.dvcDfnPhysclCrctrstcsDepthCmprtr = this.dvcDfnPhysclCrctrstcsDepthCmprtr+ "," +dvcDfnPhysclCrctrstcsDepthCmprtr;
+	        }
+        }
     }
     
     
@@ -797,6 +1637,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnPhysclCrctrstcsDepthSys = dvcDfnPhysclCrctrstcsDepthSys;
     }
     
+    public void addDvcDfnPhysclCrctrstcsDepthSys(String dvcDfnPhysclCrctrstcsDepthSys) {
+    	if( dvcDfnPhysclCrctrstcsDepthSys != null ) {
+	    	if( this.dvcDfnPhysclCrctrstcsDepthSys == null ) {
+	        	this.dvcDfnPhysclCrctrstcsDepthSys = dvcDfnPhysclCrctrstcsDepthSys;
+	        } else if(this.dvcDfnPhysclCrctrstcsDepthSys.substring(this.dvcDfnPhysclCrctrstcsDepthSys.length() - 1).equals("]") & dvcDfnPhysclCrctrstcsDepthSys.equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsDepthSys = this.dvcDfnPhysclCrctrstcsDepthSys+ "," + dvcDfnPhysclCrctrstcsDepthSys;
+	        } else if(dvcDfnPhysclCrctrstcsDepthSys.equals("[") | dvcDfnPhysclCrctrstcsDepthSys.equals("]") | this.dvcDfnPhysclCrctrstcsDepthSys.substring(this.dvcDfnPhysclCrctrstcsDepthSys.length() - 1).equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsDepthSys = this.dvcDfnPhysclCrctrstcsDepthSys+dvcDfnPhysclCrctrstcsDepthSys;
+	        } else  {
+	            this.dvcDfnPhysclCrctrstcsDepthSys = this.dvcDfnPhysclCrctrstcsDepthSys+ "," +dvcDfnPhysclCrctrstcsDepthSys;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnPhysclCrctrstcsDepthUnt() {
@@ -805,6 +1659,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnPhysclCrctrstcsDepthUnt(String dvcDfnPhysclCrctrstcsDepthUnt) {
         this.dvcDfnPhysclCrctrstcsDepthUnt = dvcDfnPhysclCrctrstcsDepthUnt;
+    }
+    
+    public void addDvcDfnPhysclCrctrstcsDepthUnt(String dvcDfnPhysclCrctrstcsDepthUnt) {
+    	if( dvcDfnPhysclCrctrstcsDepthUnt != null ) {
+	    	if( this.dvcDfnPhysclCrctrstcsDepthUnt == null ) {
+	        	this.dvcDfnPhysclCrctrstcsDepthUnt = dvcDfnPhysclCrctrstcsDepthUnt;
+	        } else if(this.dvcDfnPhysclCrctrstcsDepthUnt.substring(this.dvcDfnPhysclCrctrstcsDepthUnt.length() - 1).equals("]") & dvcDfnPhysclCrctrstcsDepthUnt.equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsDepthUnt = this.dvcDfnPhysclCrctrstcsDepthUnt+ "," + dvcDfnPhysclCrctrstcsDepthUnt;
+	        } else if(dvcDfnPhysclCrctrstcsDepthUnt.equals("[") | dvcDfnPhysclCrctrstcsDepthUnt.equals("]") | this.dvcDfnPhysclCrctrstcsDepthUnt.substring(this.dvcDfnPhysclCrctrstcsDepthUnt.length() - 1).equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsDepthUnt = this.dvcDfnPhysclCrctrstcsDepthUnt+dvcDfnPhysclCrctrstcsDepthUnt;
+	        } else  {
+	            this.dvcDfnPhysclCrctrstcsDepthUnt = this.dvcDfnPhysclCrctrstcsDepthUnt+ "," +dvcDfnPhysclCrctrstcsDepthUnt;
+	        }
+        }
     }
     
     
@@ -817,6 +1685,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnPhysclCrctrstcsDepthVl = dvcDfnPhysclCrctrstcsDepthVl;
     }
     
+    public void addDvcDfnPhysclCrctrstcsDepthVl(String dvcDfnPhysclCrctrstcsDepthVl) {
+    	if( dvcDfnPhysclCrctrstcsDepthVl != null ) {
+	    	if( this.dvcDfnPhysclCrctrstcsDepthVl == null ) {
+	        	this.dvcDfnPhysclCrctrstcsDepthVl = dvcDfnPhysclCrctrstcsDepthVl;
+	        } else if(this.dvcDfnPhysclCrctrstcsDepthVl.substring(this.dvcDfnPhysclCrctrstcsDepthVl.length() - 1).equals("]") & dvcDfnPhysclCrctrstcsDepthVl.equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsDepthVl = this.dvcDfnPhysclCrctrstcsDepthVl+ "," + dvcDfnPhysclCrctrstcsDepthVl;
+	        } else if(dvcDfnPhysclCrctrstcsDepthVl.equals("[") | dvcDfnPhysclCrctrstcsDepthVl.equals("]") | this.dvcDfnPhysclCrctrstcsDepthVl.substring(this.dvcDfnPhysclCrctrstcsDepthVl.length() - 1).equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsDepthVl = this.dvcDfnPhysclCrctrstcsDepthVl+dvcDfnPhysclCrctrstcsDepthVl;
+	        } else  {
+	            this.dvcDfnPhysclCrctrstcsDepthVl = this.dvcDfnPhysclCrctrstcsDepthVl+ "," +dvcDfnPhysclCrctrstcsDepthVl;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnPhysclCrctrstcsExternalDiameterCd() {
@@ -825,6 +1707,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnPhysclCrctrstcsExternalDiameterCd(String dvcDfnPhysclCrctrstcsExternalDiameterCd) {
         this.dvcDfnPhysclCrctrstcsExternalDiameterCd = dvcDfnPhysclCrctrstcsExternalDiameterCd;
+    }
+    
+    public void addDvcDfnPhysclCrctrstcsExternalDiameterCd(String dvcDfnPhysclCrctrstcsExternalDiameterCd) {
+    	if( dvcDfnPhysclCrctrstcsExternalDiameterCd != null ) {
+	    	if( this.dvcDfnPhysclCrctrstcsExternalDiameterCd == null ) {
+	        	this.dvcDfnPhysclCrctrstcsExternalDiameterCd = dvcDfnPhysclCrctrstcsExternalDiameterCd;
+	        } else if(this.dvcDfnPhysclCrctrstcsExternalDiameterCd.substring(this.dvcDfnPhysclCrctrstcsExternalDiameterCd.length() - 1).equals("]") & dvcDfnPhysclCrctrstcsExternalDiameterCd.equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsExternalDiameterCd = this.dvcDfnPhysclCrctrstcsExternalDiameterCd+ "," + dvcDfnPhysclCrctrstcsExternalDiameterCd;
+	        } else if(dvcDfnPhysclCrctrstcsExternalDiameterCd.equals("[") | dvcDfnPhysclCrctrstcsExternalDiameterCd.equals("]") | this.dvcDfnPhysclCrctrstcsExternalDiameterCd.substring(this.dvcDfnPhysclCrctrstcsExternalDiameterCd.length() - 1).equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsExternalDiameterCd = this.dvcDfnPhysclCrctrstcsExternalDiameterCd+dvcDfnPhysclCrctrstcsExternalDiameterCd;
+	        } else  {
+	            this.dvcDfnPhysclCrctrstcsExternalDiameterCd = this.dvcDfnPhysclCrctrstcsExternalDiameterCd+ "," +dvcDfnPhysclCrctrstcsExternalDiameterCd;
+	        }
+        }
     }
     
     
@@ -837,6 +1733,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnPhysclCrctrstcsExternalDiameterCmprtr = dvcDfnPhysclCrctrstcsExternalDiameterCmprtr;
     }
     
+    public void addDvcDfnPhysclCrctrstcsExternalDiameterCmprtr(String dvcDfnPhysclCrctrstcsExternalDiameterCmprtr) {
+    	if( dvcDfnPhysclCrctrstcsExternalDiameterCmprtr != null ) {
+	    	if( this.dvcDfnPhysclCrctrstcsExternalDiameterCmprtr == null ) {
+	        	this.dvcDfnPhysclCrctrstcsExternalDiameterCmprtr = dvcDfnPhysclCrctrstcsExternalDiameterCmprtr;
+	        } else if(this.dvcDfnPhysclCrctrstcsExternalDiameterCmprtr.substring(this.dvcDfnPhysclCrctrstcsExternalDiameterCmprtr.length() - 1).equals("]") & dvcDfnPhysclCrctrstcsExternalDiameterCmprtr.equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsExternalDiameterCmprtr = this.dvcDfnPhysclCrctrstcsExternalDiameterCmprtr+ "," + dvcDfnPhysclCrctrstcsExternalDiameterCmprtr;
+	        } else if(dvcDfnPhysclCrctrstcsExternalDiameterCmprtr.equals("[") | dvcDfnPhysclCrctrstcsExternalDiameterCmprtr.equals("]") | this.dvcDfnPhysclCrctrstcsExternalDiameterCmprtr.substring(this.dvcDfnPhysclCrctrstcsExternalDiameterCmprtr.length() - 1).equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsExternalDiameterCmprtr = this.dvcDfnPhysclCrctrstcsExternalDiameterCmprtr+dvcDfnPhysclCrctrstcsExternalDiameterCmprtr;
+	        } else  {
+	            this.dvcDfnPhysclCrctrstcsExternalDiameterCmprtr = this.dvcDfnPhysclCrctrstcsExternalDiameterCmprtr+ "," +dvcDfnPhysclCrctrstcsExternalDiameterCmprtr;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnPhysclCrctrstcsExternalDiameterSys() {
@@ -845,6 +1755,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnPhysclCrctrstcsExternalDiameterSys(String dvcDfnPhysclCrctrstcsExternalDiameterSys) {
         this.dvcDfnPhysclCrctrstcsExternalDiameterSys = dvcDfnPhysclCrctrstcsExternalDiameterSys;
+    }
+    
+    public void addDvcDfnPhysclCrctrstcsExternalDiameterSys(String dvcDfnPhysclCrctrstcsExternalDiameterSys) {
+    	if( dvcDfnPhysclCrctrstcsExternalDiameterSys != null ) {
+	    	if( this.dvcDfnPhysclCrctrstcsExternalDiameterSys == null ) {
+	        	this.dvcDfnPhysclCrctrstcsExternalDiameterSys = dvcDfnPhysclCrctrstcsExternalDiameterSys;
+	        } else if(this.dvcDfnPhysclCrctrstcsExternalDiameterSys.substring(this.dvcDfnPhysclCrctrstcsExternalDiameterSys.length() - 1).equals("]") & dvcDfnPhysclCrctrstcsExternalDiameterSys.equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsExternalDiameterSys = this.dvcDfnPhysclCrctrstcsExternalDiameterSys+ "," + dvcDfnPhysclCrctrstcsExternalDiameterSys;
+	        } else if(dvcDfnPhysclCrctrstcsExternalDiameterSys.equals("[") | dvcDfnPhysclCrctrstcsExternalDiameterSys.equals("]") | this.dvcDfnPhysclCrctrstcsExternalDiameterSys.substring(this.dvcDfnPhysclCrctrstcsExternalDiameterSys.length() - 1).equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsExternalDiameterSys = this.dvcDfnPhysclCrctrstcsExternalDiameterSys+dvcDfnPhysclCrctrstcsExternalDiameterSys;
+	        } else  {
+	            this.dvcDfnPhysclCrctrstcsExternalDiameterSys = this.dvcDfnPhysclCrctrstcsExternalDiameterSys+ "," +dvcDfnPhysclCrctrstcsExternalDiameterSys;
+	        }
+        }
     }
     
     
@@ -857,6 +1781,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnPhysclCrctrstcsExternalDiameterUnt = dvcDfnPhysclCrctrstcsExternalDiameterUnt;
     }
     
+    public void addDvcDfnPhysclCrctrstcsExternalDiameterUnt(String dvcDfnPhysclCrctrstcsExternalDiameterUnt) {
+    	if( dvcDfnPhysclCrctrstcsExternalDiameterUnt != null ) {
+	    	if( this.dvcDfnPhysclCrctrstcsExternalDiameterUnt == null ) {
+	        	this.dvcDfnPhysclCrctrstcsExternalDiameterUnt = dvcDfnPhysclCrctrstcsExternalDiameterUnt;
+	        } else if(this.dvcDfnPhysclCrctrstcsExternalDiameterUnt.substring(this.dvcDfnPhysclCrctrstcsExternalDiameterUnt.length() - 1).equals("]") & dvcDfnPhysclCrctrstcsExternalDiameterUnt.equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsExternalDiameterUnt = this.dvcDfnPhysclCrctrstcsExternalDiameterUnt+ "," + dvcDfnPhysclCrctrstcsExternalDiameterUnt;
+	        } else if(dvcDfnPhysclCrctrstcsExternalDiameterUnt.equals("[") | dvcDfnPhysclCrctrstcsExternalDiameterUnt.equals("]") | this.dvcDfnPhysclCrctrstcsExternalDiameterUnt.substring(this.dvcDfnPhysclCrctrstcsExternalDiameterUnt.length() - 1).equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsExternalDiameterUnt = this.dvcDfnPhysclCrctrstcsExternalDiameterUnt+dvcDfnPhysclCrctrstcsExternalDiameterUnt;
+	        } else  {
+	            this.dvcDfnPhysclCrctrstcsExternalDiameterUnt = this.dvcDfnPhysclCrctrstcsExternalDiameterUnt+ "," +dvcDfnPhysclCrctrstcsExternalDiameterUnt;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnPhysclCrctrstcsExternalDiameterVl() {
@@ -865,6 +1803,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnPhysclCrctrstcsExternalDiameterVl(String dvcDfnPhysclCrctrstcsExternalDiameterVl) {
         this.dvcDfnPhysclCrctrstcsExternalDiameterVl = dvcDfnPhysclCrctrstcsExternalDiameterVl;
+    }
+    
+    public void addDvcDfnPhysclCrctrstcsExternalDiameterVl(String dvcDfnPhysclCrctrstcsExternalDiameterVl) {
+    	if( dvcDfnPhysclCrctrstcsExternalDiameterVl != null ) {
+	    	if( this.dvcDfnPhysclCrctrstcsExternalDiameterVl == null ) {
+	        	this.dvcDfnPhysclCrctrstcsExternalDiameterVl = dvcDfnPhysclCrctrstcsExternalDiameterVl;
+	        } else if(this.dvcDfnPhysclCrctrstcsExternalDiameterVl.substring(this.dvcDfnPhysclCrctrstcsExternalDiameterVl.length() - 1).equals("]") & dvcDfnPhysclCrctrstcsExternalDiameterVl.equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsExternalDiameterVl = this.dvcDfnPhysclCrctrstcsExternalDiameterVl+ "," + dvcDfnPhysclCrctrstcsExternalDiameterVl;
+	        } else if(dvcDfnPhysclCrctrstcsExternalDiameterVl.equals("[") | dvcDfnPhysclCrctrstcsExternalDiameterVl.equals("]") | this.dvcDfnPhysclCrctrstcsExternalDiameterVl.substring(this.dvcDfnPhysclCrctrstcsExternalDiameterVl.length() - 1).equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsExternalDiameterVl = this.dvcDfnPhysclCrctrstcsExternalDiameterVl+dvcDfnPhysclCrctrstcsExternalDiameterVl;
+	        } else  {
+	            this.dvcDfnPhysclCrctrstcsExternalDiameterVl = this.dvcDfnPhysclCrctrstcsExternalDiameterVl+ "," +dvcDfnPhysclCrctrstcsExternalDiameterVl;
+	        }
+        }
     }
     
     
@@ -877,6 +1829,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnPhysclCrctrstcsHeightCd = dvcDfnPhysclCrctrstcsHeightCd;
     }
     
+    public void addDvcDfnPhysclCrctrstcsHeightCd(String dvcDfnPhysclCrctrstcsHeightCd) {
+    	if( dvcDfnPhysclCrctrstcsHeightCd != null ) {
+	    	if( this.dvcDfnPhysclCrctrstcsHeightCd == null ) {
+	        	this.dvcDfnPhysclCrctrstcsHeightCd = dvcDfnPhysclCrctrstcsHeightCd;
+	        } else if(this.dvcDfnPhysclCrctrstcsHeightCd.substring(this.dvcDfnPhysclCrctrstcsHeightCd.length() - 1).equals("]") & dvcDfnPhysclCrctrstcsHeightCd.equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsHeightCd = this.dvcDfnPhysclCrctrstcsHeightCd+ "," + dvcDfnPhysclCrctrstcsHeightCd;
+	        } else if(dvcDfnPhysclCrctrstcsHeightCd.equals("[") | dvcDfnPhysclCrctrstcsHeightCd.equals("]") | this.dvcDfnPhysclCrctrstcsHeightCd.substring(this.dvcDfnPhysclCrctrstcsHeightCd.length() - 1).equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsHeightCd = this.dvcDfnPhysclCrctrstcsHeightCd+dvcDfnPhysclCrctrstcsHeightCd;
+	        } else  {
+	            this.dvcDfnPhysclCrctrstcsHeightCd = this.dvcDfnPhysclCrctrstcsHeightCd+ "," +dvcDfnPhysclCrctrstcsHeightCd;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnPhysclCrctrstcsHeightCmprtr() {
@@ -885,6 +1851,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnPhysclCrctrstcsHeightCmprtr(String dvcDfnPhysclCrctrstcsHeightCmprtr) {
         this.dvcDfnPhysclCrctrstcsHeightCmprtr = dvcDfnPhysclCrctrstcsHeightCmprtr;
+    }
+    
+    public void addDvcDfnPhysclCrctrstcsHeightCmprtr(String dvcDfnPhysclCrctrstcsHeightCmprtr) {
+    	if( dvcDfnPhysclCrctrstcsHeightCmprtr != null ) {
+	    	if( this.dvcDfnPhysclCrctrstcsHeightCmprtr == null ) {
+	        	this.dvcDfnPhysclCrctrstcsHeightCmprtr = dvcDfnPhysclCrctrstcsHeightCmprtr;
+	        } else if(this.dvcDfnPhysclCrctrstcsHeightCmprtr.substring(this.dvcDfnPhysclCrctrstcsHeightCmprtr.length() - 1).equals("]") & dvcDfnPhysclCrctrstcsHeightCmprtr.equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsHeightCmprtr = this.dvcDfnPhysclCrctrstcsHeightCmprtr+ "," + dvcDfnPhysclCrctrstcsHeightCmprtr;
+	        } else if(dvcDfnPhysclCrctrstcsHeightCmprtr.equals("[") | dvcDfnPhysclCrctrstcsHeightCmprtr.equals("]") | this.dvcDfnPhysclCrctrstcsHeightCmprtr.substring(this.dvcDfnPhysclCrctrstcsHeightCmprtr.length() - 1).equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsHeightCmprtr = this.dvcDfnPhysclCrctrstcsHeightCmprtr+dvcDfnPhysclCrctrstcsHeightCmprtr;
+	        } else  {
+	            this.dvcDfnPhysclCrctrstcsHeightCmprtr = this.dvcDfnPhysclCrctrstcsHeightCmprtr+ "," +dvcDfnPhysclCrctrstcsHeightCmprtr;
+	        }
+        }
     }
     
     
@@ -897,6 +1877,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnPhysclCrctrstcsHeightSys = dvcDfnPhysclCrctrstcsHeightSys;
     }
     
+    public void addDvcDfnPhysclCrctrstcsHeightSys(String dvcDfnPhysclCrctrstcsHeightSys) {
+    	if( dvcDfnPhysclCrctrstcsHeightSys != null ) {
+	    	if( this.dvcDfnPhysclCrctrstcsHeightSys == null ) {
+	        	this.dvcDfnPhysclCrctrstcsHeightSys = dvcDfnPhysclCrctrstcsHeightSys;
+	        } else if(this.dvcDfnPhysclCrctrstcsHeightSys.substring(this.dvcDfnPhysclCrctrstcsHeightSys.length() - 1).equals("]") & dvcDfnPhysclCrctrstcsHeightSys.equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsHeightSys = this.dvcDfnPhysclCrctrstcsHeightSys+ "," + dvcDfnPhysclCrctrstcsHeightSys;
+	        } else if(dvcDfnPhysclCrctrstcsHeightSys.equals("[") | dvcDfnPhysclCrctrstcsHeightSys.equals("]") | this.dvcDfnPhysclCrctrstcsHeightSys.substring(this.dvcDfnPhysclCrctrstcsHeightSys.length() - 1).equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsHeightSys = this.dvcDfnPhysclCrctrstcsHeightSys+dvcDfnPhysclCrctrstcsHeightSys;
+	        } else  {
+	            this.dvcDfnPhysclCrctrstcsHeightSys = this.dvcDfnPhysclCrctrstcsHeightSys+ "," +dvcDfnPhysclCrctrstcsHeightSys;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnPhysclCrctrstcsHeightUnt() {
@@ -905,6 +1899,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnPhysclCrctrstcsHeightUnt(String dvcDfnPhysclCrctrstcsHeightUnt) {
         this.dvcDfnPhysclCrctrstcsHeightUnt = dvcDfnPhysclCrctrstcsHeightUnt;
+    }
+    
+    public void addDvcDfnPhysclCrctrstcsHeightUnt(String dvcDfnPhysclCrctrstcsHeightUnt) {
+    	if( dvcDfnPhysclCrctrstcsHeightUnt != null ) {
+	    	if( this.dvcDfnPhysclCrctrstcsHeightUnt == null ) {
+	        	this.dvcDfnPhysclCrctrstcsHeightUnt = dvcDfnPhysclCrctrstcsHeightUnt;
+	        } else if(this.dvcDfnPhysclCrctrstcsHeightUnt.substring(this.dvcDfnPhysclCrctrstcsHeightUnt.length() - 1).equals("]") & dvcDfnPhysclCrctrstcsHeightUnt.equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsHeightUnt = this.dvcDfnPhysclCrctrstcsHeightUnt+ "," + dvcDfnPhysclCrctrstcsHeightUnt;
+	        } else if(dvcDfnPhysclCrctrstcsHeightUnt.equals("[") | dvcDfnPhysclCrctrstcsHeightUnt.equals("]") | this.dvcDfnPhysclCrctrstcsHeightUnt.substring(this.dvcDfnPhysclCrctrstcsHeightUnt.length() - 1).equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsHeightUnt = this.dvcDfnPhysclCrctrstcsHeightUnt+dvcDfnPhysclCrctrstcsHeightUnt;
+	        } else  {
+	            this.dvcDfnPhysclCrctrstcsHeightUnt = this.dvcDfnPhysclCrctrstcsHeightUnt+ "," +dvcDfnPhysclCrctrstcsHeightUnt;
+	        }
+        }
     }
     
     
@@ -917,6 +1925,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnPhysclCrctrstcsHeightVl = dvcDfnPhysclCrctrstcsHeightVl;
     }
     
+    public void addDvcDfnPhysclCrctrstcsHeightVl(String dvcDfnPhysclCrctrstcsHeightVl) {
+    	if( dvcDfnPhysclCrctrstcsHeightVl != null ) {
+	    	if( this.dvcDfnPhysclCrctrstcsHeightVl == null ) {
+	        	this.dvcDfnPhysclCrctrstcsHeightVl = dvcDfnPhysclCrctrstcsHeightVl;
+	        } else if(this.dvcDfnPhysclCrctrstcsHeightVl.substring(this.dvcDfnPhysclCrctrstcsHeightVl.length() - 1).equals("]") & dvcDfnPhysclCrctrstcsHeightVl.equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsHeightVl = this.dvcDfnPhysclCrctrstcsHeightVl+ "," + dvcDfnPhysclCrctrstcsHeightVl;
+	        } else if(dvcDfnPhysclCrctrstcsHeightVl.equals("[") | dvcDfnPhysclCrctrstcsHeightVl.equals("]") | this.dvcDfnPhysclCrctrstcsHeightVl.substring(this.dvcDfnPhysclCrctrstcsHeightVl.length() - 1).equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsHeightVl = this.dvcDfnPhysclCrctrstcsHeightVl+dvcDfnPhysclCrctrstcsHeightVl;
+	        } else  {
+	            this.dvcDfnPhysclCrctrstcsHeightVl = this.dvcDfnPhysclCrctrstcsHeightVl+ "," +dvcDfnPhysclCrctrstcsHeightVl;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnPhysclCrctrstcsImageCntntTyp() {
@@ -925,6 +1947,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnPhysclCrctrstcsImageCntntTyp(String dvcDfnPhysclCrctrstcsImageCntntTyp) {
         this.dvcDfnPhysclCrctrstcsImageCntntTyp = dvcDfnPhysclCrctrstcsImageCntntTyp;
+    }
+    
+    public void addDvcDfnPhysclCrctrstcsImageCntntTyp(String dvcDfnPhysclCrctrstcsImageCntntTyp) {
+    	if( dvcDfnPhysclCrctrstcsImageCntntTyp != null ) {
+	    	if( this.dvcDfnPhysclCrctrstcsImageCntntTyp == null ) {
+	        	this.dvcDfnPhysclCrctrstcsImageCntntTyp = dvcDfnPhysclCrctrstcsImageCntntTyp;
+	        } else if(this.dvcDfnPhysclCrctrstcsImageCntntTyp.substring(this.dvcDfnPhysclCrctrstcsImageCntntTyp.length() - 1).equals("]") & dvcDfnPhysclCrctrstcsImageCntntTyp.equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsImageCntntTyp = this.dvcDfnPhysclCrctrstcsImageCntntTyp+ "," + dvcDfnPhysclCrctrstcsImageCntntTyp;
+	        } else if(dvcDfnPhysclCrctrstcsImageCntntTyp.equals("[") | dvcDfnPhysclCrctrstcsImageCntntTyp.equals("]") | this.dvcDfnPhysclCrctrstcsImageCntntTyp.substring(this.dvcDfnPhysclCrctrstcsImageCntntTyp.length() - 1).equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsImageCntntTyp = this.dvcDfnPhysclCrctrstcsImageCntntTyp+dvcDfnPhysclCrctrstcsImageCntntTyp;
+	        } else  {
+	            this.dvcDfnPhysclCrctrstcsImageCntntTyp = this.dvcDfnPhysclCrctrstcsImageCntntTyp+ "," +dvcDfnPhysclCrctrstcsImageCntntTyp;
+	        }
+        }
     }
     
     
@@ -937,6 +1973,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnPhysclCrctrstcsImageCreation = dvcDfnPhysclCrctrstcsImageCreation;
     }
     
+    public void addDvcDfnPhysclCrctrstcsImageCreation(String dvcDfnPhysclCrctrstcsImageCreation) {
+    	if( dvcDfnPhysclCrctrstcsImageCreation != null ) {
+	    	if( this.dvcDfnPhysclCrctrstcsImageCreation == null ) {
+	        	this.dvcDfnPhysclCrctrstcsImageCreation = dvcDfnPhysclCrctrstcsImageCreation;
+	        } else if(this.dvcDfnPhysclCrctrstcsImageCreation.substring(this.dvcDfnPhysclCrctrstcsImageCreation.length() - 1).equals("]") & dvcDfnPhysclCrctrstcsImageCreation.equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsImageCreation = this.dvcDfnPhysclCrctrstcsImageCreation+ "," + dvcDfnPhysclCrctrstcsImageCreation;
+	        } else if(dvcDfnPhysclCrctrstcsImageCreation.equals("[") | dvcDfnPhysclCrctrstcsImageCreation.equals("]") | this.dvcDfnPhysclCrctrstcsImageCreation.substring(this.dvcDfnPhysclCrctrstcsImageCreation.length() - 1).equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsImageCreation = this.dvcDfnPhysclCrctrstcsImageCreation+dvcDfnPhysclCrctrstcsImageCreation;
+	        } else  {
+	            this.dvcDfnPhysclCrctrstcsImageCreation = this.dvcDfnPhysclCrctrstcsImageCreation+ "," +dvcDfnPhysclCrctrstcsImageCreation;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnPhysclCrctrstcsImageData() {
@@ -945,6 +1995,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnPhysclCrctrstcsImageData(String dvcDfnPhysclCrctrstcsImageData) {
         this.dvcDfnPhysclCrctrstcsImageData = dvcDfnPhysclCrctrstcsImageData;
+    }
+    
+    public void addDvcDfnPhysclCrctrstcsImageData(String dvcDfnPhysclCrctrstcsImageData) {
+    	if( dvcDfnPhysclCrctrstcsImageData != null ) {
+	    	if( this.dvcDfnPhysclCrctrstcsImageData == null ) {
+	        	this.dvcDfnPhysclCrctrstcsImageData = dvcDfnPhysclCrctrstcsImageData;
+	        } else if(this.dvcDfnPhysclCrctrstcsImageData.substring(this.dvcDfnPhysclCrctrstcsImageData.length() - 1).equals("]") & dvcDfnPhysclCrctrstcsImageData.equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsImageData = this.dvcDfnPhysclCrctrstcsImageData+ "," + dvcDfnPhysclCrctrstcsImageData;
+	        } else if(dvcDfnPhysclCrctrstcsImageData.equals("[") | dvcDfnPhysclCrctrstcsImageData.equals("]") | this.dvcDfnPhysclCrctrstcsImageData.substring(this.dvcDfnPhysclCrctrstcsImageData.length() - 1).equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsImageData = this.dvcDfnPhysclCrctrstcsImageData+dvcDfnPhysclCrctrstcsImageData;
+	        } else  {
+	            this.dvcDfnPhysclCrctrstcsImageData = this.dvcDfnPhysclCrctrstcsImageData+ "," +dvcDfnPhysclCrctrstcsImageData;
+	        }
+        }
     }
     
     
@@ -957,6 +2021,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnPhysclCrctrstcsImageHash = dvcDfnPhysclCrctrstcsImageHash;
     }
     
+    public void addDvcDfnPhysclCrctrstcsImageHash(String dvcDfnPhysclCrctrstcsImageHash) {
+    	if( dvcDfnPhysclCrctrstcsImageHash != null ) {
+	    	if( this.dvcDfnPhysclCrctrstcsImageHash == null ) {
+	        	this.dvcDfnPhysclCrctrstcsImageHash = dvcDfnPhysclCrctrstcsImageHash;
+	        } else if(this.dvcDfnPhysclCrctrstcsImageHash.substring(this.dvcDfnPhysclCrctrstcsImageHash.length() - 1).equals("]") & dvcDfnPhysclCrctrstcsImageHash.equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsImageHash = this.dvcDfnPhysclCrctrstcsImageHash+ "," + dvcDfnPhysclCrctrstcsImageHash;
+	        } else if(dvcDfnPhysclCrctrstcsImageHash.equals("[") | dvcDfnPhysclCrctrstcsImageHash.equals("]") | this.dvcDfnPhysclCrctrstcsImageHash.substring(this.dvcDfnPhysclCrctrstcsImageHash.length() - 1).equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsImageHash = this.dvcDfnPhysclCrctrstcsImageHash+dvcDfnPhysclCrctrstcsImageHash;
+	        } else  {
+	            this.dvcDfnPhysclCrctrstcsImageHash = this.dvcDfnPhysclCrctrstcsImageHash+ "," +dvcDfnPhysclCrctrstcsImageHash;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnPhysclCrctrstcsImageLnguage() {
@@ -965,6 +2043,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnPhysclCrctrstcsImageLnguage(String dvcDfnPhysclCrctrstcsImageLnguage) {
         this.dvcDfnPhysclCrctrstcsImageLnguage = dvcDfnPhysclCrctrstcsImageLnguage;
+    }
+    
+    public void addDvcDfnPhysclCrctrstcsImageLnguage(String dvcDfnPhysclCrctrstcsImageLnguage) {
+    	if( dvcDfnPhysclCrctrstcsImageLnguage != null ) {
+	    	if( this.dvcDfnPhysclCrctrstcsImageLnguage == null ) {
+	        	this.dvcDfnPhysclCrctrstcsImageLnguage = dvcDfnPhysclCrctrstcsImageLnguage;
+	        } else if(this.dvcDfnPhysclCrctrstcsImageLnguage.substring(this.dvcDfnPhysclCrctrstcsImageLnguage.length() - 1).equals("]") & dvcDfnPhysclCrctrstcsImageLnguage.equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsImageLnguage = this.dvcDfnPhysclCrctrstcsImageLnguage+ "," + dvcDfnPhysclCrctrstcsImageLnguage;
+	        } else if(dvcDfnPhysclCrctrstcsImageLnguage.equals("[") | dvcDfnPhysclCrctrstcsImageLnguage.equals("]") | this.dvcDfnPhysclCrctrstcsImageLnguage.substring(this.dvcDfnPhysclCrctrstcsImageLnguage.length() - 1).equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsImageLnguage = this.dvcDfnPhysclCrctrstcsImageLnguage+dvcDfnPhysclCrctrstcsImageLnguage;
+	        } else  {
+	            this.dvcDfnPhysclCrctrstcsImageLnguage = this.dvcDfnPhysclCrctrstcsImageLnguage+ "," +dvcDfnPhysclCrctrstcsImageLnguage;
+	        }
+        }
     }
     
     
@@ -977,6 +2069,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnPhysclCrctrstcsImageSz = dvcDfnPhysclCrctrstcsImageSz;
     }
     
+    public void addDvcDfnPhysclCrctrstcsImageSz(String dvcDfnPhysclCrctrstcsImageSz) {
+    	if( dvcDfnPhysclCrctrstcsImageSz != null ) {
+	    	if( this.dvcDfnPhysclCrctrstcsImageSz == null ) {
+	        	this.dvcDfnPhysclCrctrstcsImageSz = dvcDfnPhysclCrctrstcsImageSz;
+	        } else if(this.dvcDfnPhysclCrctrstcsImageSz.substring(this.dvcDfnPhysclCrctrstcsImageSz.length() - 1).equals("]") & dvcDfnPhysclCrctrstcsImageSz.equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsImageSz = this.dvcDfnPhysclCrctrstcsImageSz+ "," + dvcDfnPhysclCrctrstcsImageSz;
+	        } else if(dvcDfnPhysclCrctrstcsImageSz.equals("[") | dvcDfnPhysclCrctrstcsImageSz.equals("]") | this.dvcDfnPhysclCrctrstcsImageSz.substring(this.dvcDfnPhysclCrctrstcsImageSz.length() - 1).equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsImageSz = this.dvcDfnPhysclCrctrstcsImageSz+dvcDfnPhysclCrctrstcsImageSz;
+	        } else  {
+	            this.dvcDfnPhysclCrctrstcsImageSz = this.dvcDfnPhysclCrctrstcsImageSz+ "," +dvcDfnPhysclCrctrstcsImageSz;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnPhysclCrctrstcsImageTtl() {
@@ -985,6 +2091,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnPhysclCrctrstcsImageTtl(String dvcDfnPhysclCrctrstcsImageTtl) {
         this.dvcDfnPhysclCrctrstcsImageTtl = dvcDfnPhysclCrctrstcsImageTtl;
+    }
+    
+    public void addDvcDfnPhysclCrctrstcsImageTtl(String dvcDfnPhysclCrctrstcsImageTtl) {
+    	if( dvcDfnPhysclCrctrstcsImageTtl != null ) {
+	    	if( this.dvcDfnPhysclCrctrstcsImageTtl == null ) {
+	        	this.dvcDfnPhysclCrctrstcsImageTtl = dvcDfnPhysclCrctrstcsImageTtl;
+	        } else if(this.dvcDfnPhysclCrctrstcsImageTtl.substring(this.dvcDfnPhysclCrctrstcsImageTtl.length() - 1).equals("]") & dvcDfnPhysclCrctrstcsImageTtl.equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsImageTtl = this.dvcDfnPhysclCrctrstcsImageTtl+ "," + dvcDfnPhysclCrctrstcsImageTtl;
+	        } else if(dvcDfnPhysclCrctrstcsImageTtl.equals("[") | dvcDfnPhysclCrctrstcsImageTtl.equals("]") | this.dvcDfnPhysclCrctrstcsImageTtl.substring(this.dvcDfnPhysclCrctrstcsImageTtl.length() - 1).equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsImageTtl = this.dvcDfnPhysclCrctrstcsImageTtl+dvcDfnPhysclCrctrstcsImageTtl;
+	        } else  {
+	            this.dvcDfnPhysclCrctrstcsImageTtl = this.dvcDfnPhysclCrctrstcsImageTtl+ "," +dvcDfnPhysclCrctrstcsImageTtl;
+	        }
+        }
     }
     
     
@@ -997,6 +2117,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnPhysclCrctrstcsImageUrl = dvcDfnPhysclCrctrstcsImageUrl;
     }
     
+    public void addDvcDfnPhysclCrctrstcsImageUrl(String dvcDfnPhysclCrctrstcsImageUrl) {
+    	if( dvcDfnPhysclCrctrstcsImageUrl != null ) {
+	    	if( this.dvcDfnPhysclCrctrstcsImageUrl == null ) {
+	        	this.dvcDfnPhysclCrctrstcsImageUrl = dvcDfnPhysclCrctrstcsImageUrl;
+	        } else if(this.dvcDfnPhysclCrctrstcsImageUrl.substring(this.dvcDfnPhysclCrctrstcsImageUrl.length() - 1).equals("]") & dvcDfnPhysclCrctrstcsImageUrl.equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsImageUrl = this.dvcDfnPhysclCrctrstcsImageUrl+ "," + dvcDfnPhysclCrctrstcsImageUrl;
+	        } else if(dvcDfnPhysclCrctrstcsImageUrl.equals("[") | dvcDfnPhysclCrctrstcsImageUrl.equals("]") | this.dvcDfnPhysclCrctrstcsImageUrl.substring(this.dvcDfnPhysclCrctrstcsImageUrl.length() - 1).equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsImageUrl = this.dvcDfnPhysclCrctrstcsImageUrl+dvcDfnPhysclCrctrstcsImageUrl;
+	        } else  {
+	            this.dvcDfnPhysclCrctrstcsImageUrl = this.dvcDfnPhysclCrctrstcsImageUrl+ "," +dvcDfnPhysclCrctrstcsImageUrl;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnPhysclCrctrstcsImprint() {
@@ -1005,6 +2139,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnPhysclCrctrstcsImprint(String dvcDfnPhysclCrctrstcsImprint) {
         this.dvcDfnPhysclCrctrstcsImprint = dvcDfnPhysclCrctrstcsImprint;
+    }
+    
+    public void addDvcDfnPhysclCrctrstcsImprint(String dvcDfnPhysclCrctrstcsImprint) {
+    	if( dvcDfnPhysclCrctrstcsImprint != null ) {
+	    	if( this.dvcDfnPhysclCrctrstcsImprint == null ) {
+	        	this.dvcDfnPhysclCrctrstcsImprint = dvcDfnPhysclCrctrstcsImprint;
+	        } else if(this.dvcDfnPhysclCrctrstcsImprint.substring(this.dvcDfnPhysclCrctrstcsImprint.length() - 1).equals("]") & dvcDfnPhysclCrctrstcsImprint.equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsImprint = this.dvcDfnPhysclCrctrstcsImprint+ "," + dvcDfnPhysclCrctrstcsImprint;
+	        } else if(dvcDfnPhysclCrctrstcsImprint.equals("[") | dvcDfnPhysclCrctrstcsImprint.equals("]") | this.dvcDfnPhysclCrctrstcsImprint.substring(this.dvcDfnPhysclCrctrstcsImprint.length() - 1).equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsImprint = this.dvcDfnPhysclCrctrstcsImprint+dvcDfnPhysclCrctrstcsImprint;
+	        } else  {
+	            this.dvcDfnPhysclCrctrstcsImprint = this.dvcDfnPhysclCrctrstcsImprint+ "," +dvcDfnPhysclCrctrstcsImprint;
+	        }
+        }
     }
     
     
@@ -1017,6 +2165,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnPhysclCrctrstcsNominalVolumeCd = dvcDfnPhysclCrctrstcsNominalVolumeCd;
     }
     
+    public void addDvcDfnPhysclCrctrstcsNominalVolumeCd(String dvcDfnPhysclCrctrstcsNominalVolumeCd) {
+    	if( dvcDfnPhysclCrctrstcsNominalVolumeCd != null ) {
+	    	if( this.dvcDfnPhysclCrctrstcsNominalVolumeCd == null ) {
+	        	this.dvcDfnPhysclCrctrstcsNominalVolumeCd = dvcDfnPhysclCrctrstcsNominalVolumeCd;
+	        } else if(this.dvcDfnPhysclCrctrstcsNominalVolumeCd.substring(this.dvcDfnPhysclCrctrstcsNominalVolumeCd.length() - 1).equals("]") & dvcDfnPhysclCrctrstcsNominalVolumeCd.equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsNominalVolumeCd = this.dvcDfnPhysclCrctrstcsNominalVolumeCd+ "," + dvcDfnPhysclCrctrstcsNominalVolumeCd;
+	        } else if(dvcDfnPhysclCrctrstcsNominalVolumeCd.equals("[") | dvcDfnPhysclCrctrstcsNominalVolumeCd.equals("]") | this.dvcDfnPhysclCrctrstcsNominalVolumeCd.substring(this.dvcDfnPhysclCrctrstcsNominalVolumeCd.length() - 1).equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsNominalVolumeCd = this.dvcDfnPhysclCrctrstcsNominalVolumeCd+dvcDfnPhysclCrctrstcsNominalVolumeCd;
+	        } else  {
+	            this.dvcDfnPhysclCrctrstcsNominalVolumeCd = this.dvcDfnPhysclCrctrstcsNominalVolumeCd+ "," +dvcDfnPhysclCrctrstcsNominalVolumeCd;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnPhysclCrctrstcsNominalVolumeCmprtr() {
@@ -1025,6 +2187,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnPhysclCrctrstcsNominalVolumeCmprtr(String dvcDfnPhysclCrctrstcsNominalVolumeCmprtr) {
         this.dvcDfnPhysclCrctrstcsNominalVolumeCmprtr = dvcDfnPhysclCrctrstcsNominalVolumeCmprtr;
+    }
+    
+    public void addDvcDfnPhysclCrctrstcsNominalVolumeCmprtr(String dvcDfnPhysclCrctrstcsNominalVolumeCmprtr) {
+    	if( dvcDfnPhysclCrctrstcsNominalVolumeCmprtr != null ) {
+	    	if( this.dvcDfnPhysclCrctrstcsNominalVolumeCmprtr == null ) {
+	        	this.dvcDfnPhysclCrctrstcsNominalVolumeCmprtr = dvcDfnPhysclCrctrstcsNominalVolumeCmprtr;
+	        } else if(this.dvcDfnPhysclCrctrstcsNominalVolumeCmprtr.substring(this.dvcDfnPhysclCrctrstcsNominalVolumeCmprtr.length() - 1).equals("]") & dvcDfnPhysclCrctrstcsNominalVolumeCmprtr.equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsNominalVolumeCmprtr = this.dvcDfnPhysclCrctrstcsNominalVolumeCmprtr+ "," + dvcDfnPhysclCrctrstcsNominalVolumeCmprtr;
+	        } else if(dvcDfnPhysclCrctrstcsNominalVolumeCmprtr.equals("[") | dvcDfnPhysclCrctrstcsNominalVolumeCmprtr.equals("]") | this.dvcDfnPhysclCrctrstcsNominalVolumeCmprtr.substring(this.dvcDfnPhysclCrctrstcsNominalVolumeCmprtr.length() - 1).equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsNominalVolumeCmprtr = this.dvcDfnPhysclCrctrstcsNominalVolumeCmprtr+dvcDfnPhysclCrctrstcsNominalVolumeCmprtr;
+	        } else  {
+	            this.dvcDfnPhysclCrctrstcsNominalVolumeCmprtr = this.dvcDfnPhysclCrctrstcsNominalVolumeCmprtr+ "," +dvcDfnPhysclCrctrstcsNominalVolumeCmprtr;
+	        }
+        }
     }
     
     
@@ -1037,6 +2213,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnPhysclCrctrstcsNominalVolumeSys = dvcDfnPhysclCrctrstcsNominalVolumeSys;
     }
     
+    public void addDvcDfnPhysclCrctrstcsNominalVolumeSys(String dvcDfnPhysclCrctrstcsNominalVolumeSys) {
+    	if( dvcDfnPhysclCrctrstcsNominalVolumeSys != null ) {
+	    	if( this.dvcDfnPhysclCrctrstcsNominalVolumeSys == null ) {
+	        	this.dvcDfnPhysclCrctrstcsNominalVolumeSys = dvcDfnPhysclCrctrstcsNominalVolumeSys;
+	        } else if(this.dvcDfnPhysclCrctrstcsNominalVolumeSys.substring(this.dvcDfnPhysclCrctrstcsNominalVolumeSys.length() - 1).equals("]") & dvcDfnPhysclCrctrstcsNominalVolumeSys.equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsNominalVolumeSys = this.dvcDfnPhysclCrctrstcsNominalVolumeSys+ "," + dvcDfnPhysclCrctrstcsNominalVolumeSys;
+	        } else if(dvcDfnPhysclCrctrstcsNominalVolumeSys.equals("[") | dvcDfnPhysclCrctrstcsNominalVolumeSys.equals("]") | this.dvcDfnPhysclCrctrstcsNominalVolumeSys.substring(this.dvcDfnPhysclCrctrstcsNominalVolumeSys.length() - 1).equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsNominalVolumeSys = this.dvcDfnPhysclCrctrstcsNominalVolumeSys+dvcDfnPhysclCrctrstcsNominalVolumeSys;
+	        } else  {
+	            this.dvcDfnPhysclCrctrstcsNominalVolumeSys = this.dvcDfnPhysclCrctrstcsNominalVolumeSys+ "," +dvcDfnPhysclCrctrstcsNominalVolumeSys;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnPhysclCrctrstcsNominalVolumeUnt() {
@@ -1045,6 +2235,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnPhysclCrctrstcsNominalVolumeUnt(String dvcDfnPhysclCrctrstcsNominalVolumeUnt) {
         this.dvcDfnPhysclCrctrstcsNominalVolumeUnt = dvcDfnPhysclCrctrstcsNominalVolumeUnt;
+    }
+    
+    public void addDvcDfnPhysclCrctrstcsNominalVolumeUnt(String dvcDfnPhysclCrctrstcsNominalVolumeUnt) {
+    	if( dvcDfnPhysclCrctrstcsNominalVolumeUnt != null ) {
+	    	if( this.dvcDfnPhysclCrctrstcsNominalVolumeUnt == null ) {
+	        	this.dvcDfnPhysclCrctrstcsNominalVolumeUnt = dvcDfnPhysclCrctrstcsNominalVolumeUnt;
+	        } else if(this.dvcDfnPhysclCrctrstcsNominalVolumeUnt.substring(this.dvcDfnPhysclCrctrstcsNominalVolumeUnt.length() - 1).equals("]") & dvcDfnPhysclCrctrstcsNominalVolumeUnt.equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsNominalVolumeUnt = this.dvcDfnPhysclCrctrstcsNominalVolumeUnt+ "," + dvcDfnPhysclCrctrstcsNominalVolumeUnt;
+	        } else if(dvcDfnPhysclCrctrstcsNominalVolumeUnt.equals("[") | dvcDfnPhysclCrctrstcsNominalVolumeUnt.equals("]") | this.dvcDfnPhysclCrctrstcsNominalVolumeUnt.substring(this.dvcDfnPhysclCrctrstcsNominalVolumeUnt.length() - 1).equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsNominalVolumeUnt = this.dvcDfnPhysclCrctrstcsNominalVolumeUnt+dvcDfnPhysclCrctrstcsNominalVolumeUnt;
+	        } else  {
+	            this.dvcDfnPhysclCrctrstcsNominalVolumeUnt = this.dvcDfnPhysclCrctrstcsNominalVolumeUnt+ "," +dvcDfnPhysclCrctrstcsNominalVolumeUnt;
+	        }
+        }
     }
     
     
@@ -1057,6 +2261,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnPhysclCrctrstcsNominalVolumeVl = dvcDfnPhysclCrctrstcsNominalVolumeVl;
     }
     
+    public void addDvcDfnPhysclCrctrstcsNominalVolumeVl(String dvcDfnPhysclCrctrstcsNominalVolumeVl) {
+    	if( dvcDfnPhysclCrctrstcsNominalVolumeVl != null ) {
+	    	if( this.dvcDfnPhysclCrctrstcsNominalVolumeVl == null ) {
+	        	this.dvcDfnPhysclCrctrstcsNominalVolumeVl = dvcDfnPhysclCrctrstcsNominalVolumeVl;
+	        } else if(this.dvcDfnPhysclCrctrstcsNominalVolumeVl.substring(this.dvcDfnPhysclCrctrstcsNominalVolumeVl.length() - 1).equals("]") & dvcDfnPhysclCrctrstcsNominalVolumeVl.equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsNominalVolumeVl = this.dvcDfnPhysclCrctrstcsNominalVolumeVl+ "," + dvcDfnPhysclCrctrstcsNominalVolumeVl;
+	        } else if(dvcDfnPhysclCrctrstcsNominalVolumeVl.equals("[") | dvcDfnPhysclCrctrstcsNominalVolumeVl.equals("]") | this.dvcDfnPhysclCrctrstcsNominalVolumeVl.substring(this.dvcDfnPhysclCrctrstcsNominalVolumeVl.length() - 1).equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsNominalVolumeVl = this.dvcDfnPhysclCrctrstcsNominalVolumeVl+dvcDfnPhysclCrctrstcsNominalVolumeVl;
+	        } else  {
+	            this.dvcDfnPhysclCrctrstcsNominalVolumeVl = this.dvcDfnPhysclCrctrstcsNominalVolumeVl+ "," +dvcDfnPhysclCrctrstcsNominalVolumeVl;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnPhysclCrctrstcsScoringCdgCd() {
@@ -1065,6 +2283,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnPhysclCrctrstcsScoringCdgCd(String dvcDfnPhysclCrctrstcsScoringCdgCd) {
         this.dvcDfnPhysclCrctrstcsScoringCdgCd = dvcDfnPhysclCrctrstcsScoringCdgCd;
+    }
+    
+    public void addDvcDfnPhysclCrctrstcsScoringCdgCd(String dvcDfnPhysclCrctrstcsScoringCdgCd) {
+    	if( dvcDfnPhysclCrctrstcsScoringCdgCd != null ) {
+	    	if( this.dvcDfnPhysclCrctrstcsScoringCdgCd == null ) {
+	        	this.dvcDfnPhysclCrctrstcsScoringCdgCd = dvcDfnPhysclCrctrstcsScoringCdgCd;
+	        } else if(this.dvcDfnPhysclCrctrstcsScoringCdgCd.substring(this.dvcDfnPhysclCrctrstcsScoringCdgCd.length() - 1).equals("]") & dvcDfnPhysclCrctrstcsScoringCdgCd.equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsScoringCdgCd = this.dvcDfnPhysclCrctrstcsScoringCdgCd+ "," + dvcDfnPhysclCrctrstcsScoringCdgCd;
+	        } else if(dvcDfnPhysclCrctrstcsScoringCdgCd.equals("[") | dvcDfnPhysclCrctrstcsScoringCdgCd.equals("]") | this.dvcDfnPhysclCrctrstcsScoringCdgCd.substring(this.dvcDfnPhysclCrctrstcsScoringCdgCd.length() - 1).equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsScoringCdgCd = this.dvcDfnPhysclCrctrstcsScoringCdgCd+dvcDfnPhysclCrctrstcsScoringCdgCd;
+	        } else  {
+	            this.dvcDfnPhysclCrctrstcsScoringCdgCd = this.dvcDfnPhysclCrctrstcsScoringCdgCd+ "," +dvcDfnPhysclCrctrstcsScoringCdgCd;
+	        }
+        }
     }
     
     
@@ -1077,6 +2309,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnPhysclCrctrstcsScoringCdgDsply = dvcDfnPhysclCrctrstcsScoringCdgDsply;
     }
     
+    public void addDvcDfnPhysclCrctrstcsScoringCdgDsply(String dvcDfnPhysclCrctrstcsScoringCdgDsply) {
+    	if( dvcDfnPhysclCrctrstcsScoringCdgDsply != null ) {
+	    	if( this.dvcDfnPhysclCrctrstcsScoringCdgDsply == null ) {
+	        	this.dvcDfnPhysclCrctrstcsScoringCdgDsply = dvcDfnPhysclCrctrstcsScoringCdgDsply;
+	        } else if(this.dvcDfnPhysclCrctrstcsScoringCdgDsply.substring(this.dvcDfnPhysclCrctrstcsScoringCdgDsply.length() - 1).equals("]") & dvcDfnPhysclCrctrstcsScoringCdgDsply.equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsScoringCdgDsply = this.dvcDfnPhysclCrctrstcsScoringCdgDsply+ "," + dvcDfnPhysclCrctrstcsScoringCdgDsply;
+	        } else if(dvcDfnPhysclCrctrstcsScoringCdgDsply.equals("[") | dvcDfnPhysclCrctrstcsScoringCdgDsply.equals("]") | this.dvcDfnPhysclCrctrstcsScoringCdgDsply.substring(this.dvcDfnPhysclCrctrstcsScoringCdgDsply.length() - 1).equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsScoringCdgDsply = this.dvcDfnPhysclCrctrstcsScoringCdgDsply+dvcDfnPhysclCrctrstcsScoringCdgDsply;
+	        } else  {
+	            this.dvcDfnPhysclCrctrstcsScoringCdgDsply = this.dvcDfnPhysclCrctrstcsScoringCdgDsply+ "," +dvcDfnPhysclCrctrstcsScoringCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnPhysclCrctrstcsScoringCdgSys() {
@@ -1085,6 +2331,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnPhysclCrctrstcsScoringCdgSys(String dvcDfnPhysclCrctrstcsScoringCdgSys) {
         this.dvcDfnPhysclCrctrstcsScoringCdgSys = dvcDfnPhysclCrctrstcsScoringCdgSys;
+    }
+    
+    public void addDvcDfnPhysclCrctrstcsScoringCdgSys(String dvcDfnPhysclCrctrstcsScoringCdgSys) {
+    	if( dvcDfnPhysclCrctrstcsScoringCdgSys != null ) {
+	    	if( this.dvcDfnPhysclCrctrstcsScoringCdgSys == null ) {
+	        	this.dvcDfnPhysclCrctrstcsScoringCdgSys = dvcDfnPhysclCrctrstcsScoringCdgSys;
+	        } else if(this.dvcDfnPhysclCrctrstcsScoringCdgSys.substring(this.dvcDfnPhysclCrctrstcsScoringCdgSys.length() - 1).equals("]") & dvcDfnPhysclCrctrstcsScoringCdgSys.equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsScoringCdgSys = this.dvcDfnPhysclCrctrstcsScoringCdgSys+ "," + dvcDfnPhysclCrctrstcsScoringCdgSys;
+	        } else if(dvcDfnPhysclCrctrstcsScoringCdgSys.equals("[") | dvcDfnPhysclCrctrstcsScoringCdgSys.equals("]") | this.dvcDfnPhysclCrctrstcsScoringCdgSys.substring(this.dvcDfnPhysclCrctrstcsScoringCdgSys.length() - 1).equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsScoringCdgSys = this.dvcDfnPhysclCrctrstcsScoringCdgSys+dvcDfnPhysclCrctrstcsScoringCdgSys;
+	        } else  {
+	            this.dvcDfnPhysclCrctrstcsScoringCdgSys = this.dvcDfnPhysclCrctrstcsScoringCdgSys+ "," +dvcDfnPhysclCrctrstcsScoringCdgSys;
+	        }
+        }
     }
     
     
@@ -1097,6 +2357,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnPhysclCrctrstcsScoringCdgUsrSltd = dvcDfnPhysclCrctrstcsScoringCdgUsrSltd;
     }
     
+    public void addDvcDfnPhysclCrctrstcsScoringCdgUsrSltd(String dvcDfnPhysclCrctrstcsScoringCdgUsrSltd) {
+    	if( dvcDfnPhysclCrctrstcsScoringCdgUsrSltd != null ) {
+	    	if( this.dvcDfnPhysclCrctrstcsScoringCdgUsrSltd == null ) {
+	        	this.dvcDfnPhysclCrctrstcsScoringCdgUsrSltd = dvcDfnPhysclCrctrstcsScoringCdgUsrSltd;
+	        } else if(this.dvcDfnPhysclCrctrstcsScoringCdgUsrSltd.substring(this.dvcDfnPhysclCrctrstcsScoringCdgUsrSltd.length() - 1).equals("]") & dvcDfnPhysclCrctrstcsScoringCdgUsrSltd.equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsScoringCdgUsrSltd = this.dvcDfnPhysclCrctrstcsScoringCdgUsrSltd+ "," + dvcDfnPhysclCrctrstcsScoringCdgUsrSltd;
+	        } else if(dvcDfnPhysclCrctrstcsScoringCdgUsrSltd.equals("[") | dvcDfnPhysclCrctrstcsScoringCdgUsrSltd.equals("]") | this.dvcDfnPhysclCrctrstcsScoringCdgUsrSltd.substring(this.dvcDfnPhysclCrctrstcsScoringCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsScoringCdgUsrSltd = this.dvcDfnPhysclCrctrstcsScoringCdgUsrSltd+dvcDfnPhysclCrctrstcsScoringCdgUsrSltd;
+	        } else  {
+	            this.dvcDfnPhysclCrctrstcsScoringCdgUsrSltd = this.dvcDfnPhysclCrctrstcsScoringCdgUsrSltd+ "," +dvcDfnPhysclCrctrstcsScoringCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnPhysclCrctrstcsScoringCdgVrsn() {
@@ -1105,6 +2379,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnPhysclCrctrstcsScoringCdgVrsn(String dvcDfnPhysclCrctrstcsScoringCdgVrsn) {
         this.dvcDfnPhysclCrctrstcsScoringCdgVrsn = dvcDfnPhysclCrctrstcsScoringCdgVrsn;
+    }
+    
+    public void addDvcDfnPhysclCrctrstcsScoringCdgVrsn(String dvcDfnPhysclCrctrstcsScoringCdgVrsn) {
+    	if( dvcDfnPhysclCrctrstcsScoringCdgVrsn != null ) {
+	    	if( this.dvcDfnPhysclCrctrstcsScoringCdgVrsn == null ) {
+	        	this.dvcDfnPhysclCrctrstcsScoringCdgVrsn = dvcDfnPhysclCrctrstcsScoringCdgVrsn;
+	        } else if(this.dvcDfnPhysclCrctrstcsScoringCdgVrsn.substring(this.dvcDfnPhysclCrctrstcsScoringCdgVrsn.length() - 1).equals("]") & dvcDfnPhysclCrctrstcsScoringCdgVrsn.equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsScoringCdgVrsn = this.dvcDfnPhysclCrctrstcsScoringCdgVrsn+ "," + dvcDfnPhysclCrctrstcsScoringCdgVrsn;
+	        } else if(dvcDfnPhysclCrctrstcsScoringCdgVrsn.equals("[") | dvcDfnPhysclCrctrstcsScoringCdgVrsn.equals("]") | this.dvcDfnPhysclCrctrstcsScoringCdgVrsn.substring(this.dvcDfnPhysclCrctrstcsScoringCdgVrsn.length() - 1).equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsScoringCdgVrsn = this.dvcDfnPhysclCrctrstcsScoringCdgVrsn+dvcDfnPhysclCrctrstcsScoringCdgVrsn;
+	        } else  {
+	            this.dvcDfnPhysclCrctrstcsScoringCdgVrsn = this.dvcDfnPhysclCrctrstcsScoringCdgVrsn+ "," +dvcDfnPhysclCrctrstcsScoringCdgVrsn;
+	        }
+        }
     }
     
     
@@ -1117,6 +2405,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnPhysclCrctrstcsScoringTxt = dvcDfnPhysclCrctrstcsScoringTxt;
     }
     
+    public void addDvcDfnPhysclCrctrstcsScoringTxt(String dvcDfnPhysclCrctrstcsScoringTxt) {
+    	if( dvcDfnPhysclCrctrstcsScoringTxt != null ) {
+	    	if( this.dvcDfnPhysclCrctrstcsScoringTxt == null ) {
+	        	this.dvcDfnPhysclCrctrstcsScoringTxt = dvcDfnPhysclCrctrstcsScoringTxt;
+	        } else if(this.dvcDfnPhysclCrctrstcsScoringTxt.substring(this.dvcDfnPhysclCrctrstcsScoringTxt.length() - 1).equals("]") & dvcDfnPhysclCrctrstcsScoringTxt.equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsScoringTxt = this.dvcDfnPhysclCrctrstcsScoringTxt+ "," + dvcDfnPhysclCrctrstcsScoringTxt;
+	        } else if(dvcDfnPhysclCrctrstcsScoringTxt.equals("[") | dvcDfnPhysclCrctrstcsScoringTxt.equals("]") | this.dvcDfnPhysclCrctrstcsScoringTxt.substring(this.dvcDfnPhysclCrctrstcsScoringTxt.length() - 1).equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsScoringTxt = this.dvcDfnPhysclCrctrstcsScoringTxt+dvcDfnPhysclCrctrstcsScoringTxt;
+	        } else  {
+	            this.dvcDfnPhysclCrctrstcsScoringTxt = this.dvcDfnPhysclCrctrstcsScoringTxt+ "," +dvcDfnPhysclCrctrstcsScoringTxt;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnPhysclCrctrstcsShape() {
@@ -1125,6 +2427,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnPhysclCrctrstcsShape(String dvcDfnPhysclCrctrstcsShape) {
         this.dvcDfnPhysclCrctrstcsShape = dvcDfnPhysclCrctrstcsShape;
+    }
+    
+    public void addDvcDfnPhysclCrctrstcsShape(String dvcDfnPhysclCrctrstcsShape) {
+    	if( dvcDfnPhysclCrctrstcsShape != null ) {
+	    	if( this.dvcDfnPhysclCrctrstcsShape == null ) {
+	        	this.dvcDfnPhysclCrctrstcsShape = dvcDfnPhysclCrctrstcsShape;
+	        } else if(this.dvcDfnPhysclCrctrstcsShape.substring(this.dvcDfnPhysclCrctrstcsShape.length() - 1).equals("]") & dvcDfnPhysclCrctrstcsShape.equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsShape = this.dvcDfnPhysclCrctrstcsShape+ "," + dvcDfnPhysclCrctrstcsShape;
+	        } else if(dvcDfnPhysclCrctrstcsShape.equals("[") | dvcDfnPhysclCrctrstcsShape.equals("]") | this.dvcDfnPhysclCrctrstcsShape.substring(this.dvcDfnPhysclCrctrstcsShape.length() - 1).equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsShape = this.dvcDfnPhysclCrctrstcsShape+dvcDfnPhysclCrctrstcsShape;
+	        } else  {
+	            this.dvcDfnPhysclCrctrstcsShape = this.dvcDfnPhysclCrctrstcsShape+ "," +dvcDfnPhysclCrctrstcsShape;
+	        }
+        }
     }
     
     
@@ -1137,6 +2453,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnPhysclCrctrstcsWghtCd = dvcDfnPhysclCrctrstcsWghtCd;
     }
     
+    public void addDvcDfnPhysclCrctrstcsWghtCd(String dvcDfnPhysclCrctrstcsWghtCd) {
+    	if( dvcDfnPhysclCrctrstcsWghtCd != null ) {
+	    	if( this.dvcDfnPhysclCrctrstcsWghtCd == null ) {
+	        	this.dvcDfnPhysclCrctrstcsWghtCd = dvcDfnPhysclCrctrstcsWghtCd;
+	        } else if(this.dvcDfnPhysclCrctrstcsWghtCd.substring(this.dvcDfnPhysclCrctrstcsWghtCd.length() - 1).equals("]") & dvcDfnPhysclCrctrstcsWghtCd.equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsWghtCd = this.dvcDfnPhysclCrctrstcsWghtCd+ "," + dvcDfnPhysclCrctrstcsWghtCd;
+	        } else if(dvcDfnPhysclCrctrstcsWghtCd.equals("[") | dvcDfnPhysclCrctrstcsWghtCd.equals("]") | this.dvcDfnPhysclCrctrstcsWghtCd.substring(this.dvcDfnPhysclCrctrstcsWghtCd.length() - 1).equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsWghtCd = this.dvcDfnPhysclCrctrstcsWghtCd+dvcDfnPhysclCrctrstcsWghtCd;
+	        } else  {
+	            this.dvcDfnPhysclCrctrstcsWghtCd = this.dvcDfnPhysclCrctrstcsWghtCd+ "," +dvcDfnPhysclCrctrstcsWghtCd;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnPhysclCrctrstcsWghtCmprtr() {
@@ -1145,6 +2475,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnPhysclCrctrstcsWghtCmprtr(String dvcDfnPhysclCrctrstcsWghtCmprtr) {
         this.dvcDfnPhysclCrctrstcsWghtCmprtr = dvcDfnPhysclCrctrstcsWghtCmprtr;
+    }
+    
+    public void addDvcDfnPhysclCrctrstcsWghtCmprtr(String dvcDfnPhysclCrctrstcsWghtCmprtr) {
+    	if( dvcDfnPhysclCrctrstcsWghtCmprtr != null ) {
+	    	if( this.dvcDfnPhysclCrctrstcsWghtCmprtr == null ) {
+	        	this.dvcDfnPhysclCrctrstcsWghtCmprtr = dvcDfnPhysclCrctrstcsWghtCmprtr;
+	        } else if(this.dvcDfnPhysclCrctrstcsWghtCmprtr.substring(this.dvcDfnPhysclCrctrstcsWghtCmprtr.length() - 1).equals("]") & dvcDfnPhysclCrctrstcsWghtCmprtr.equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsWghtCmprtr = this.dvcDfnPhysclCrctrstcsWghtCmprtr+ "," + dvcDfnPhysclCrctrstcsWghtCmprtr;
+	        } else if(dvcDfnPhysclCrctrstcsWghtCmprtr.equals("[") | dvcDfnPhysclCrctrstcsWghtCmprtr.equals("]") | this.dvcDfnPhysclCrctrstcsWghtCmprtr.substring(this.dvcDfnPhysclCrctrstcsWghtCmprtr.length() - 1).equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsWghtCmprtr = this.dvcDfnPhysclCrctrstcsWghtCmprtr+dvcDfnPhysclCrctrstcsWghtCmprtr;
+	        } else  {
+	            this.dvcDfnPhysclCrctrstcsWghtCmprtr = this.dvcDfnPhysclCrctrstcsWghtCmprtr+ "," +dvcDfnPhysclCrctrstcsWghtCmprtr;
+	        }
+        }
     }
     
     
@@ -1157,6 +2501,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnPhysclCrctrstcsWghtSys = dvcDfnPhysclCrctrstcsWghtSys;
     }
     
+    public void addDvcDfnPhysclCrctrstcsWghtSys(String dvcDfnPhysclCrctrstcsWghtSys) {
+    	if( dvcDfnPhysclCrctrstcsWghtSys != null ) {
+	    	if( this.dvcDfnPhysclCrctrstcsWghtSys == null ) {
+	        	this.dvcDfnPhysclCrctrstcsWghtSys = dvcDfnPhysclCrctrstcsWghtSys;
+	        } else if(this.dvcDfnPhysclCrctrstcsWghtSys.substring(this.dvcDfnPhysclCrctrstcsWghtSys.length() - 1).equals("]") & dvcDfnPhysclCrctrstcsWghtSys.equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsWghtSys = this.dvcDfnPhysclCrctrstcsWghtSys+ "," + dvcDfnPhysclCrctrstcsWghtSys;
+	        } else if(dvcDfnPhysclCrctrstcsWghtSys.equals("[") | dvcDfnPhysclCrctrstcsWghtSys.equals("]") | this.dvcDfnPhysclCrctrstcsWghtSys.substring(this.dvcDfnPhysclCrctrstcsWghtSys.length() - 1).equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsWghtSys = this.dvcDfnPhysclCrctrstcsWghtSys+dvcDfnPhysclCrctrstcsWghtSys;
+	        } else  {
+	            this.dvcDfnPhysclCrctrstcsWghtSys = this.dvcDfnPhysclCrctrstcsWghtSys+ "," +dvcDfnPhysclCrctrstcsWghtSys;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnPhysclCrctrstcsWghtUnt() {
@@ -1165,6 +2523,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnPhysclCrctrstcsWghtUnt(String dvcDfnPhysclCrctrstcsWghtUnt) {
         this.dvcDfnPhysclCrctrstcsWghtUnt = dvcDfnPhysclCrctrstcsWghtUnt;
+    }
+    
+    public void addDvcDfnPhysclCrctrstcsWghtUnt(String dvcDfnPhysclCrctrstcsWghtUnt) {
+    	if( dvcDfnPhysclCrctrstcsWghtUnt != null ) {
+	    	if( this.dvcDfnPhysclCrctrstcsWghtUnt == null ) {
+	        	this.dvcDfnPhysclCrctrstcsWghtUnt = dvcDfnPhysclCrctrstcsWghtUnt;
+	        } else if(this.dvcDfnPhysclCrctrstcsWghtUnt.substring(this.dvcDfnPhysclCrctrstcsWghtUnt.length() - 1).equals("]") & dvcDfnPhysclCrctrstcsWghtUnt.equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsWghtUnt = this.dvcDfnPhysclCrctrstcsWghtUnt+ "," + dvcDfnPhysclCrctrstcsWghtUnt;
+	        } else if(dvcDfnPhysclCrctrstcsWghtUnt.equals("[") | dvcDfnPhysclCrctrstcsWghtUnt.equals("]") | this.dvcDfnPhysclCrctrstcsWghtUnt.substring(this.dvcDfnPhysclCrctrstcsWghtUnt.length() - 1).equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsWghtUnt = this.dvcDfnPhysclCrctrstcsWghtUnt+dvcDfnPhysclCrctrstcsWghtUnt;
+	        } else  {
+	            this.dvcDfnPhysclCrctrstcsWghtUnt = this.dvcDfnPhysclCrctrstcsWghtUnt+ "," +dvcDfnPhysclCrctrstcsWghtUnt;
+	        }
+        }
     }
     
     
@@ -1177,6 +2549,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnPhysclCrctrstcsWghtVl = dvcDfnPhysclCrctrstcsWghtVl;
     }
     
+    public void addDvcDfnPhysclCrctrstcsWghtVl(String dvcDfnPhysclCrctrstcsWghtVl) {
+    	if( dvcDfnPhysclCrctrstcsWghtVl != null ) {
+	    	if( this.dvcDfnPhysclCrctrstcsWghtVl == null ) {
+	        	this.dvcDfnPhysclCrctrstcsWghtVl = dvcDfnPhysclCrctrstcsWghtVl;
+	        } else if(this.dvcDfnPhysclCrctrstcsWghtVl.substring(this.dvcDfnPhysclCrctrstcsWghtVl.length() - 1).equals("]") & dvcDfnPhysclCrctrstcsWghtVl.equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsWghtVl = this.dvcDfnPhysclCrctrstcsWghtVl+ "," + dvcDfnPhysclCrctrstcsWghtVl;
+	        } else if(dvcDfnPhysclCrctrstcsWghtVl.equals("[") | dvcDfnPhysclCrctrstcsWghtVl.equals("]") | this.dvcDfnPhysclCrctrstcsWghtVl.substring(this.dvcDfnPhysclCrctrstcsWghtVl.length() - 1).equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsWghtVl = this.dvcDfnPhysclCrctrstcsWghtVl+dvcDfnPhysclCrctrstcsWghtVl;
+	        } else  {
+	            this.dvcDfnPhysclCrctrstcsWghtVl = this.dvcDfnPhysclCrctrstcsWghtVl+ "," +dvcDfnPhysclCrctrstcsWghtVl;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnPhysclCrctrstcsWidthCd() {
@@ -1185,6 +2571,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnPhysclCrctrstcsWidthCd(String dvcDfnPhysclCrctrstcsWidthCd) {
         this.dvcDfnPhysclCrctrstcsWidthCd = dvcDfnPhysclCrctrstcsWidthCd;
+    }
+    
+    public void addDvcDfnPhysclCrctrstcsWidthCd(String dvcDfnPhysclCrctrstcsWidthCd) {
+    	if( dvcDfnPhysclCrctrstcsWidthCd != null ) {
+	    	if( this.dvcDfnPhysclCrctrstcsWidthCd == null ) {
+	        	this.dvcDfnPhysclCrctrstcsWidthCd = dvcDfnPhysclCrctrstcsWidthCd;
+	        } else if(this.dvcDfnPhysclCrctrstcsWidthCd.substring(this.dvcDfnPhysclCrctrstcsWidthCd.length() - 1).equals("]") & dvcDfnPhysclCrctrstcsWidthCd.equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsWidthCd = this.dvcDfnPhysclCrctrstcsWidthCd+ "," + dvcDfnPhysclCrctrstcsWidthCd;
+	        } else if(dvcDfnPhysclCrctrstcsWidthCd.equals("[") | dvcDfnPhysclCrctrstcsWidthCd.equals("]") | this.dvcDfnPhysclCrctrstcsWidthCd.substring(this.dvcDfnPhysclCrctrstcsWidthCd.length() - 1).equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsWidthCd = this.dvcDfnPhysclCrctrstcsWidthCd+dvcDfnPhysclCrctrstcsWidthCd;
+	        } else  {
+	            this.dvcDfnPhysclCrctrstcsWidthCd = this.dvcDfnPhysclCrctrstcsWidthCd+ "," +dvcDfnPhysclCrctrstcsWidthCd;
+	        }
+        }
     }
     
     
@@ -1197,6 +2597,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnPhysclCrctrstcsWidthCmprtr = dvcDfnPhysclCrctrstcsWidthCmprtr;
     }
     
+    public void addDvcDfnPhysclCrctrstcsWidthCmprtr(String dvcDfnPhysclCrctrstcsWidthCmprtr) {
+    	if( dvcDfnPhysclCrctrstcsWidthCmprtr != null ) {
+	    	if( this.dvcDfnPhysclCrctrstcsWidthCmprtr == null ) {
+	        	this.dvcDfnPhysclCrctrstcsWidthCmprtr = dvcDfnPhysclCrctrstcsWidthCmprtr;
+	        } else if(this.dvcDfnPhysclCrctrstcsWidthCmprtr.substring(this.dvcDfnPhysclCrctrstcsWidthCmprtr.length() - 1).equals("]") & dvcDfnPhysclCrctrstcsWidthCmprtr.equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsWidthCmprtr = this.dvcDfnPhysclCrctrstcsWidthCmprtr+ "," + dvcDfnPhysclCrctrstcsWidthCmprtr;
+	        } else if(dvcDfnPhysclCrctrstcsWidthCmprtr.equals("[") | dvcDfnPhysclCrctrstcsWidthCmprtr.equals("]") | this.dvcDfnPhysclCrctrstcsWidthCmprtr.substring(this.dvcDfnPhysclCrctrstcsWidthCmprtr.length() - 1).equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsWidthCmprtr = this.dvcDfnPhysclCrctrstcsWidthCmprtr+dvcDfnPhysclCrctrstcsWidthCmprtr;
+	        } else  {
+	            this.dvcDfnPhysclCrctrstcsWidthCmprtr = this.dvcDfnPhysclCrctrstcsWidthCmprtr+ "," +dvcDfnPhysclCrctrstcsWidthCmprtr;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnPhysclCrctrstcsWidthSys() {
@@ -1205,6 +2619,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnPhysclCrctrstcsWidthSys(String dvcDfnPhysclCrctrstcsWidthSys) {
         this.dvcDfnPhysclCrctrstcsWidthSys = dvcDfnPhysclCrctrstcsWidthSys;
+    }
+    
+    public void addDvcDfnPhysclCrctrstcsWidthSys(String dvcDfnPhysclCrctrstcsWidthSys) {
+    	if( dvcDfnPhysclCrctrstcsWidthSys != null ) {
+	    	if( this.dvcDfnPhysclCrctrstcsWidthSys == null ) {
+	        	this.dvcDfnPhysclCrctrstcsWidthSys = dvcDfnPhysclCrctrstcsWidthSys;
+	        } else if(this.dvcDfnPhysclCrctrstcsWidthSys.substring(this.dvcDfnPhysclCrctrstcsWidthSys.length() - 1).equals("]") & dvcDfnPhysclCrctrstcsWidthSys.equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsWidthSys = this.dvcDfnPhysclCrctrstcsWidthSys+ "," + dvcDfnPhysclCrctrstcsWidthSys;
+	        } else if(dvcDfnPhysclCrctrstcsWidthSys.equals("[") | dvcDfnPhysclCrctrstcsWidthSys.equals("]") | this.dvcDfnPhysclCrctrstcsWidthSys.substring(this.dvcDfnPhysclCrctrstcsWidthSys.length() - 1).equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsWidthSys = this.dvcDfnPhysclCrctrstcsWidthSys+dvcDfnPhysclCrctrstcsWidthSys;
+	        } else  {
+	            this.dvcDfnPhysclCrctrstcsWidthSys = this.dvcDfnPhysclCrctrstcsWidthSys+ "," +dvcDfnPhysclCrctrstcsWidthSys;
+	        }
+        }
     }
     
     
@@ -1217,6 +2645,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnPhysclCrctrstcsWidthUnt = dvcDfnPhysclCrctrstcsWidthUnt;
     }
     
+    public void addDvcDfnPhysclCrctrstcsWidthUnt(String dvcDfnPhysclCrctrstcsWidthUnt) {
+    	if( dvcDfnPhysclCrctrstcsWidthUnt != null ) {
+	    	if( this.dvcDfnPhysclCrctrstcsWidthUnt == null ) {
+	        	this.dvcDfnPhysclCrctrstcsWidthUnt = dvcDfnPhysclCrctrstcsWidthUnt;
+	        } else if(this.dvcDfnPhysclCrctrstcsWidthUnt.substring(this.dvcDfnPhysclCrctrstcsWidthUnt.length() - 1).equals("]") & dvcDfnPhysclCrctrstcsWidthUnt.equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsWidthUnt = this.dvcDfnPhysclCrctrstcsWidthUnt+ "," + dvcDfnPhysclCrctrstcsWidthUnt;
+	        } else if(dvcDfnPhysclCrctrstcsWidthUnt.equals("[") | dvcDfnPhysclCrctrstcsWidthUnt.equals("]") | this.dvcDfnPhysclCrctrstcsWidthUnt.substring(this.dvcDfnPhysclCrctrstcsWidthUnt.length() - 1).equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsWidthUnt = this.dvcDfnPhysclCrctrstcsWidthUnt+dvcDfnPhysclCrctrstcsWidthUnt;
+	        } else  {
+	            this.dvcDfnPhysclCrctrstcsWidthUnt = this.dvcDfnPhysclCrctrstcsWidthUnt+ "," +dvcDfnPhysclCrctrstcsWidthUnt;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnPhysclCrctrstcsWidthVl() {
@@ -1225,6 +2667,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnPhysclCrctrstcsWidthVl(String dvcDfnPhysclCrctrstcsWidthVl) {
         this.dvcDfnPhysclCrctrstcsWidthVl = dvcDfnPhysclCrctrstcsWidthVl;
+    }
+    
+    public void addDvcDfnPhysclCrctrstcsWidthVl(String dvcDfnPhysclCrctrstcsWidthVl) {
+    	if( dvcDfnPhysclCrctrstcsWidthVl != null ) {
+	    	if( this.dvcDfnPhysclCrctrstcsWidthVl == null ) {
+	        	this.dvcDfnPhysclCrctrstcsWidthVl = dvcDfnPhysclCrctrstcsWidthVl;
+	        } else if(this.dvcDfnPhysclCrctrstcsWidthVl.substring(this.dvcDfnPhysclCrctrstcsWidthVl.length() - 1).equals("]") & dvcDfnPhysclCrctrstcsWidthVl.equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsWidthVl = this.dvcDfnPhysclCrctrstcsWidthVl+ "," + dvcDfnPhysclCrctrstcsWidthVl;
+	        } else if(dvcDfnPhysclCrctrstcsWidthVl.equals("[") | dvcDfnPhysclCrctrstcsWidthVl.equals("]") | this.dvcDfnPhysclCrctrstcsWidthVl.substring(this.dvcDfnPhysclCrctrstcsWidthVl.length() - 1).equals("[")) {
+	        	this.dvcDfnPhysclCrctrstcsWidthVl = this.dvcDfnPhysclCrctrstcsWidthVl+dvcDfnPhysclCrctrstcsWidthVl;
+	        } else  {
+	            this.dvcDfnPhysclCrctrstcsWidthVl = this.dvcDfnPhysclCrctrstcsWidthVl+ "," +dvcDfnPhysclCrctrstcsWidthVl;
+	        }
+        }
     }
     
     
@@ -1237,6 +2693,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnPrptyTypCdgCd = dvcDfnPrptyTypCdgCd;
     }
     
+    public void addDvcDfnPrptyTypCdgCd(String dvcDfnPrptyTypCdgCd) {
+    	if( dvcDfnPrptyTypCdgCd != null ) {
+	    	if( this.dvcDfnPrptyTypCdgCd == null ) {
+	        	this.dvcDfnPrptyTypCdgCd = dvcDfnPrptyTypCdgCd;
+	        } else if(this.dvcDfnPrptyTypCdgCd.substring(this.dvcDfnPrptyTypCdgCd.length() - 1).equals("]") & dvcDfnPrptyTypCdgCd.equals("[")) {
+	        	this.dvcDfnPrptyTypCdgCd = this.dvcDfnPrptyTypCdgCd+ "," + dvcDfnPrptyTypCdgCd;
+	        } else if(dvcDfnPrptyTypCdgCd.equals("[") | dvcDfnPrptyTypCdgCd.equals("]") | this.dvcDfnPrptyTypCdgCd.substring(this.dvcDfnPrptyTypCdgCd.length() - 1).equals("[")) {
+	        	this.dvcDfnPrptyTypCdgCd = this.dvcDfnPrptyTypCdgCd+dvcDfnPrptyTypCdgCd;
+	        } else  {
+	            this.dvcDfnPrptyTypCdgCd = this.dvcDfnPrptyTypCdgCd+ "," +dvcDfnPrptyTypCdgCd;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnPrptyTypCdgDsply() {
@@ -1245,6 +2715,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnPrptyTypCdgDsply(String dvcDfnPrptyTypCdgDsply) {
         this.dvcDfnPrptyTypCdgDsply = dvcDfnPrptyTypCdgDsply;
+    }
+    
+    public void addDvcDfnPrptyTypCdgDsply(String dvcDfnPrptyTypCdgDsply) {
+    	if( dvcDfnPrptyTypCdgDsply != null ) {
+	    	if( this.dvcDfnPrptyTypCdgDsply == null ) {
+	        	this.dvcDfnPrptyTypCdgDsply = dvcDfnPrptyTypCdgDsply;
+	        } else if(this.dvcDfnPrptyTypCdgDsply.substring(this.dvcDfnPrptyTypCdgDsply.length() - 1).equals("]") & dvcDfnPrptyTypCdgDsply.equals("[")) {
+	        	this.dvcDfnPrptyTypCdgDsply = this.dvcDfnPrptyTypCdgDsply+ "," + dvcDfnPrptyTypCdgDsply;
+	        } else if(dvcDfnPrptyTypCdgDsply.equals("[") | dvcDfnPrptyTypCdgDsply.equals("]") | this.dvcDfnPrptyTypCdgDsply.substring(this.dvcDfnPrptyTypCdgDsply.length() - 1).equals("[")) {
+	        	this.dvcDfnPrptyTypCdgDsply = this.dvcDfnPrptyTypCdgDsply+dvcDfnPrptyTypCdgDsply;
+	        } else  {
+	            this.dvcDfnPrptyTypCdgDsply = this.dvcDfnPrptyTypCdgDsply+ "," +dvcDfnPrptyTypCdgDsply;
+	        }
+        }
     }
     
     
@@ -1257,6 +2741,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnPrptyTypCdgSys = dvcDfnPrptyTypCdgSys;
     }
     
+    public void addDvcDfnPrptyTypCdgSys(String dvcDfnPrptyTypCdgSys) {
+    	if( dvcDfnPrptyTypCdgSys != null ) {
+	    	if( this.dvcDfnPrptyTypCdgSys == null ) {
+	        	this.dvcDfnPrptyTypCdgSys = dvcDfnPrptyTypCdgSys;
+	        } else if(this.dvcDfnPrptyTypCdgSys.substring(this.dvcDfnPrptyTypCdgSys.length() - 1).equals("]") & dvcDfnPrptyTypCdgSys.equals("[")) {
+	        	this.dvcDfnPrptyTypCdgSys = this.dvcDfnPrptyTypCdgSys+ "," + dvcDfnPrptyTypCdgSys;
+	        } else if(dvcDfnPrptyTypCdgSys.equals("[") | dvcDfnPrptyTypCdgSys.equals("]") | this.dvcDfnPrptyTypCdgSys.substring(this.dvcDfnPrptyTypCdgSys.length() - 1).equals("[")) {
+	        	this.dvcDfnPrptyTypCdgSys = this.dvcDfnPrptyTypCdgSys+dvcDfnPrptyTypCdgSys;
+	        } else  {
+	            this.dvcDfnPrptyTypCdgSys = this.dvcDfnPrptyTypCdgSys+ "," +dvcDfnPrptyTypCdgSys;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnPrptyTypCdgUsrSltd() {
@@ -1265,6 +2763,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnPrptyTypCdgUsrSltd(String dvcDfnPrptyTypCdgUsrSltd) {
         this.dvcDfnPrptyTypCdgUsrSltd = dvcDfnPrptyTypCdgUsrSltd;
+    }
+    
+    public void addDvcDfnPrptyTypCdgUsrSltd(String dvcDfnPrptyTypCdgUsrSltd) {
+    	if( dvcDfnPrptyTypCdgUsrSltd != null ) {
+	    	if( this.dvcDfnPrptyTypCdgUsrSltd == null ) {
+	        	this.dvcDfnPrptyTypCdgUsrSltd = dvcDfnPrptyTypCdgUsrSltd;
+	        } else if(this.dvcDfnPrptyTypCdgUsrSltd.substring(this.dvcDfnPrptyTypCdgUsrSltd.length() - 1).equals("]") & dvcDfnPrptyTypCdgUsrSltd.equals("[")) {
+	        	this.dvcDfnPrptyTypCdgUsrSltd = this.dvcDfnPrptyTypCdgUsrSltd+ "," + dvcDfnPrptyTypCdgUsrSltd;
+	        } else if(dvcDfnPrptyTypCdgUsrSltd.equals("[") | dvcDfnPrptyTypCdgUsrSltd.equals("]") | this.dvcDfnPrptyTypCdgUsrSltd.substring(this.dvcDfnPrptyTypCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.dvcDfnPrptyTypCdgUsrSltd = this.dvcDfnPrptyTypCdgUsrSltd+dvcDfnPrptyTypCdgUsrSltd;
+	        } else  {
+	            this.dvcDfnPrptyTypCdgUsrSltd = this.dvcDfnPrptyTypCdgUsrSltd+ "," +dvcDfnPrptyTypCdgUsrSltd;
+	        }
+        }
     }
     
     
@@ -1277,6 +2789,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnPrptyTypCdgVrsn = dvcDfnPrptyTypCdgVrsn;
     }
     
+    public void addDvcDfnPrptyTypCdgVrsn(String dvcDfnPrptyTypCdgVrsn) {
+    	if( dvcDfnPrptyTypCdgVrsn != null ) {
+	    	if( this.dvcDfnPrptyTypCdgVrsn == null ) {
+	        	this.dvcDfnPrptyTypCdgVrsn = dvcDfnPrptyTypCdgVrsn;
+	        } else if(this.dvcDfnPrptyTypCdgVrsn.substring(this.dvcDfnPrptyTypCdgVrsn.length() - 1).equals("]") & dvcDfnPrptyTypCdgVrsn.equals("[")) {
+	        	this.dvcDfnPrptyTypCdgVrsn = this.dvcDfnPrptyTypCdgVrsn+ "," + dvcDfnPrptyTypCdgVrsn;
+	        } else if(dvcDfnPrptyTypCdgVrsn.equals("[") | dvcDfnPrptyTypCdgVrsn.equals("]") | this.dvcDfnPrptyTypCdgVrsn.substring(this.dvcDfnPrptyTypCdgVrsn.length() - 1).equals("[")) {
+	        	this.dvcDfnPrptyTypCdgVrsn = this.dvcDfnPrptyTypCdgVrsn+dvcDfnPrptyTypCdgVrsn;
+	        } else  {
+	            this.dvcDfnPrptyTypCdgVrsn = this.dvcDfnPrptyTypCdgVrsn+ "," +dvcDfnPrptyTypCdgVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnPrptyTypTxt() {
@@ -1285,6 +2811,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnPrptyTypTxt(String dvcDfnPrptyTypTxt) {
         this.dvcDfnPrptyTypTxt = dvcDfnPrptyTypTxt;
+    }
+    
+    public void addDvcDfnPrptyTypTxt(String dvcDfnPrptyTypTxt) {
+    	if( dvcDfnPrptyTypTxt != null ) {
+	    	if( this.dvcDfnPrptyTypTxt == null ) {
+	        	this.dvcDfnPrptyTypTxt = dvcDfnPrptyTypTxt;
+	        } else if(this.dvcDfnPrptyTypTxt.substring(this.dvcDfnPrptyTypTxt.length() - 1).equals("]") & dvcDfnPrptyTypTxt.equals("[")) {
+	        	this.dvcDfnPrptyTypTxt = this.dvcDfnPrptyTypTxt+ "," + dvcDfnPrptyTypTxt;
+	        } else if(dvcDfnPrptyTypTxt.equals("[") | dvcDfnPrptyTypTxt.equals("]") | this.dvcDfnPrptyTypTxt.substring(this.dvcDfnPrptyTypTxt.length() - 1).equals("[")) {
+	        	this.dvcDfnPrptyTypTxt = this.dvcDfnPrptyTypTxt+dvcDfnPrptyTypTxt;
+	        } else  {
+	            this.dvcDfnPrptyTypTxt = this.dvcDfnPrptyTypTxt+ "," +dvcDfnPrptyTypTxt;
+	        }
+        }
     }
     
     
@@ -1297,6 +2837,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnPrptyVlCdCdgCd = dvcDfnPrptyVlCdCdgCd;
     }
     
+    public void addDvcDfnPrptyVlCdCdgCd(String dvcDfnPrptyVlCdCdgCd) {
+    	if( dvcDfnPrptyVlCdCdgCd != null ) {
+	    	if( this.dvcDfnPrptyVlCdCdgCd == null ) {
+	        	this.dvcDfnPrptyVlCdCdgCd = dvcDfnPrptyVlCdCdgCd;
+	        } else if(this.dvcDfnPrptyVlCdCdgCd.substring(this.dvcDfnPrptyVlCdCdgCd.length() - 1).equals("]") & dvcDfnPrptyVlCdCdgCd.equals("[")) {
+	        	this.dvcDfnPrptyVlCdCdgCd = this.dvcDfnPrptyVlCdCdgCd+ "," + dvcDfnPrptyVlCdCdgCd;
+	        } else if(dvcDfnPrptyVlCdCdgCd.equals("[") | dvcDfnPrptyVlCdCdgCd.equals("]") | this.dvcDfnPrptyVlCdCdgCd.substring(this.dvcDfnPrptyVlCdCdgCd.length() - 1).equals("[")) {
+	        	this.dvcDfnPrptyVlCdCdgCd = this.dvcDfnPrptyVlCdCdgCd+dvcDfnPrptyVlCdCdgCd;
+	        } else  {
+	            this.dvcDfnPrptyVlCdCdgCd = this.dvcDfnPrptyVlCdCdgCd+ "," +dvcDfnPrptyVlCdCdgCd;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnPrptyVlCdCdgDsply() {
@@ -1305,6 +2859,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnPrptyVlCdCdgDsply(String dvcDfnPrptyVlCdCdgDsply) {
         this.dvcDfnPrptyVlCdCdgDsply = dvcDfnPrptyVlCdCdgDsply;
+    }
+    
+    public void addDvcDfnPrptyVlCdCdgDsply(String dvcDfnPrptyVlCdCdgDsply) {
+    	if( dvcDfnPrptyVlCdCdgDsply != null ) {
+	    	if( this.dvcDfnPrptyVlCdCdgDsply == null ) {
+	        	this.dvcDfnPrptyVlCdCdgDsply = dvcDfnPrptyVlCdCdgDsply;
+	        } else if(this.dvcDfnPrptyVlCdCdgDsply.substring(this.dvcDfnPrptyVlCdCdgDsply.length() - 1).equals("]") & dvcDfnPrptyVlCdCdgDsply.equals("[")) {
+	        	this.dvcDfnPrptyVlCdCdgDsply = this.dvcDfnPrptyVlCdCdgDsply+ "," + dvcDfnPrptyVlCdCdgDsply;
+	        } else if(dvcDfnPrptyVlCdCdgDsply.equals("[") | dvcDfnPrptyVlCdCdgDsply.equals("]") | this.dvcDfnPrptyVlCdCdgDsply.substring(this.dvcDfnPrptyVlCdCdgDsply.length() - 1).equals("[")) {
+	        	this.dvcDfnPrptyVlCdCdgDsply = this.dvcDfnPrptyVlCdCdgDsply+dvcDfnPrptyVlCdCdgDsply;
+	        } else  {
+	            this.dvcDfnPrptyVlCdCdgDsply = this.dvcDfnPrptyVlCdCdgDsply+ "," +dvcDfnPrptyVlCdCdgDsply;
+	        }
+        }
     }
     
     
@@ -1317,6 +2885,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnPrptyVlCdCdgSys = dvcDfnPrptyVlCdCdgSys;
     }
     
+    public void addDvcDfnPrptyVlCdCdgSys(String dvcDfnPrptyVlCdCdgSys) {
+    	if( dvcDfnPrptyVlCdCdgSys != null ) {
+	    	if( this.dvcDfnPrptyVlCdCdgSys == null ) {
+	        	this.dvcDfnPrptyVlCdCdgSys = dvcDfnPrptyVlCdCdgSys;
+	        } else if(this.dvcDfnPrptyVlCdCdgSys.substring(this.dvcDfnPrptyVlCdCdgSys.length() - 1).equals("]") & dvcDfnPrptyVlCdCdgSys.equals("[")) {
+	        	this.dvcDfnPrptyVlCdCdgSys = this.dvcDfnPrptyVlCdCdgSys+ "," + dvcDfnPrptyVlCdCdgSys;
+	        } else if(dvcDfnPrptyVlCdCdgSys.equals("[") | dvcDfnPrptyVlCdCdgSys.equals("]") | this.dvcDfnPrptyVlCdCdgSys.substring(this.dvcDfnPrptyVlCdCdgSys.length() - 1).equals("[")) {
+	        	this.dvcDfnPrptyVlCdCdgSys = this.dvcDfnPrptyVlCdCdgSys+dvcDfnPrptyVlCdCdgSys;
+	        } else  {
+	            this.dvcDfnPrptyVlCdCdgSys = this.dvcDfnPrptyVlCdCdgSys+ "," +dvcDfnPrptyVlCdCdgSys;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnPrptyVlCdCdgUsrSltd() {
@@ -1325,6 +2907,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnPrptyVlCdCdgUsrSltd(String dvcDfnPrptyVlCdCdgUsrSltd) {
         this.dvcDfnPrptyVlCdCdgUsrSltd = dvcDfnPrptyVlCdCdgUsrSltd;
+    }
+    
+    public void addDvcDfnPrptyVlCdCdgUsrSltd(String dvcDfnPrptyVlCdCdgUsrSltd) {
+    	if( dvcDfnPrptyVlCdCdgUsrSltd != null ) {
+	    	if( this.dvcDfnPrptyVlCdCdgUsrSltd == null ) {
+	        	this.dvcDfnPrptyVlCdCdgUsrSltd = dvcDfnPrptyVlCdCdgUsrSltd;
+	        } else if(this.dvcDfnPrptyVlCdCdgUsrSltd.substring(this.dvcDfnPrptyVlCdCdgUsrSltd.length() - 1).equals("]") & dvcDfnPrptyVlCdCdgUsrSltd.equals("[")) {
+	        	this.dvcDfnPrptyVlCdCdgUsrSltd = this.dvcDfnPrptyVlCdCdgUsrSltd+ "," + dvcDfnPrptyVlCdCdgUsrSltd;
+	        } else if(dvcDfnPrptyVlCdCdgUsrSltd.equals("[") | dvcDfnPrptyVlCdCdgUsrSltd.equals("]") | this.dvcDfnPrptyVlCdCdgUsrSltd.substring(this.dvcDfnPrptyVlCdCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.dvcDfnPrptyVlCdCdgUsrSltd = this.dvcDfnPrptyVlCdCdgUsrSltd+dvcDfnPrptyVlCdCdgUsrSltd;
+	        } else  {
+	            this.dvcDfnPrptyVlCdCdgUsrSltd = this.dvcDfnPrptyVlCdCdgUsrSltd+ "," +dvcDfnPrptyVlCdCdgUsrSltd;
+	        }
+        }
     }
     
     
@@ -1337,6 +2933,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnPrptyVlCdCdgVrsn = dvcDfnPrptyVlCdCdgVrsn;
     }
     
+    public void addDvcDfnPrptyVlCdCdgVrsn(String dvcDfnPrptyVlCdCdgVrsn) {
+    	if( dvcDfnPrptyVlCdCdgVrsn != null ) {
+	    	if( this.dvcDfnPrptyVlCdCdgVrsn == null ) {
+	        	this.dvcDfnPrptyVlCdCdgVrsn = dvcDfnPrptyVlCdCdgVrsn;
+	        } else if(this.dvcDfnPrptyVlCdCdgVrsn.substring(this.dvcDfnPrptyVlCdCdgVrsn.length() - 1).equals("]") & dvcDfnPrptyVlCdCdgVrsn.equals("[")) {
+	        	this.dvcDfnPrptyVlCdCdgVrsn = this.dvcDfnPrptyVlCdCdgVrsn+ "," + dvcDfnPrptyVlCdCdgVrsn;
+	        } else if(dvcDfnPrptyVlCdCdgVrsn.equals("[") | dvcDfnPrptyVlCdCdgVrsn.equals("]") | this.dvcDfnPrptyVlCdCdgVrsn.substring(this.dvcDfnPrptyVlCdCdgVrsn.length() - 1).equals("[")) {
+	        	this.dvcDfnPrptyVlCdCdgVrsn = this.dvcDfnPrptyVlCdCdgVrsn+dvcDfnPrptyVlCdCdgVrsn;
+	        } else  {
+	            this.dvcDfnPrptyVlCdCdgVrsn = this.dvcDfnPrptyVlCdCdgVrsn+ "," +dvcDfnPrptyVlCdCdgVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnPrptyVlCdTxt() {
@@ -1345,6 +2955,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnPrptyVlCdTxt(String dvcDfnPrptyVlCdTxt) {
         this.dvcDfnPrptyVlCdTxt = dvcDfnPrptyVlCdTxt;
+    }
+    
+    public void addDvcDfnPrptyVlCdTxt(String dvcDfnPrptyVlCdTxt) {
+    	if( dvcDfnPrptyVlCdTxt != null ) {
+	    	if( this.dvcDfnPrptyVlCdTxt == null ) {
+	        	this.dvcDfnPrptyVlCdTxt = dvcDfnPrptyVlCdTxt;
+	        } else if(this.dvcDfnPrptyVlCdTxt.substring(this.dvcDfnPrptyVlCdTxt.length() - 1).equals("]") & dvcDfnPrptyVlCdTxt.equals("[")) {
+	        	this.dvcDfnPrptyVlCdTxt = this.dvcDfnPrptyVlCdTxt+ "," + dvcDfnPrptyVlCdTxt;
+	        } else if(dvcDfnPrptyVlCdTxt.equals("[") | dvcDfnPrptyVlCdTxt.equals("]") | this.dvcDfnPrptyVlCdTxt.substring(this.dvcDfnPrptyVlCdTxt.length() - 1).equals("[")) {
+	        	this.dvcDfnPrptyVlCdTxt = this.dvcDfnPrptyVlCdTxt+dvcDfnPrptyVlCdTxt;
+	        } else  {
+	            this.dvcDfnPrptyVlCdTxt = this.dvcDfnPrptyVlCdTxt+ "," +dvcDfnPrptyVlCdTxt;
+	        }
+        }
     }
     
     
@@ -1357,6 +2981,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnPrptyVlQntyCd = dvcDfnPrptyVlQntyCd;
     }
     
+    public void addDvcDfnPrptyVlQntyCd(String dvcDfnPrptyVlQntyCd) {
+    	if( dvcDfnPrptyVlQntyCd != null ) {
+	    	if( this.dvcDfnPrptyVlQntyCd == null ) {
+	        	this.dvcDfnPrptyVlQntyCd = dvcDfnPrptyVlQntyCd;
+	        } else if(this.dvcDfnPrptyVlQntyCd.substring(this.dvcDfnPrptyVlQntyCd.length() - 1).equals("]") & dvcDfnPrptyVlQntyCd.equals("[")) {
+	        	this.dvcDfnPrptyVlQntyCd = this.dvcDfnPrptyVlQntyCd+ "," + dvcDfnPrptyVlQntyCd;
+	        } else if(dvcDfnPrptyVlQntyCd.equals("[") | dvcDfnPrptyVlQntyCd.equals("]") | this.dvcDfnPrptyVlQntyCd.substring(this.dvcDfnPrptyVlQntyCd.length() - 1).equals("[")) {
+	        	this.dvcDfnPrptyVlQntyCd = this.dvcDfnPrptyVlQntyCd+dvcDfnPrptyVlQntyCd;
+	        } else  {
+	            this.dvcDfnPrptyVlQntyCd = this.dvcDfnPrptyVlQntyCd+ "," +dvcDfnPrptyVlQntyCd;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnPrptyVlQntyCmprtr() {
@@ -1365,6 +3003,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnPrptyVlQntyCmprtr(String dvcDfnPrptyVlQntyCmprtr) {
         this.dvcDfnPrptyVlQntyCmprtr = dvcDfnPrptyVlQntyCmprtr;
+    }
+    
+    public void addDvcDfnPrptyVlQntyCmprtr(String dvcDfnPrptyVlQntyCmprtr) {
+    	if( dvcDfnPrptyVlQntyCmprtr != null ) {
+	    	if( this.dvcDfnPrptyVlQntyCmprtr == null ) {
+	        	this.dvcDfnPrptyVlQntyCmprtr = dvcDfnPrptyVlQntyCmprtr;
+	        } else if(this.dvcDfnPrptyVlQntyCmprtr.substring(this.dvcDfnPrptyVlQntyCmprtr.length() - 1).equals("]") & dvcDfnPrptyVlQntyCmprtr.equals("[")) {
+	        	this.dvcDfnPrptyVlQntyCmprtr = this.dvcDfnPrptyVlQntyCmprtr+ "," + dvcDfnPrptyVlQntyCmprtr;
+	        } else if(dvcDfnPrptyVlQntyCmprtr.equals("[") | dvcDfnPrptyVlQntyCmprtr.equals("]") | this.dvcDfnPrptyVlQntyCmprtr.substring(this.dvcDfnPrptyVlQntyCmprtr.length() - 1).equals("[")) {
+	        	this.dvcDfnPrptyVlQntyCmprtr = this.dvcDfnPrptyVlQntyCmprtr+dvcDfnPrptyVlQntyCmprtr;
+	        } else  {
+	            this.dvcDfnPrptyVlQntyCmprtr = this.dvcDfnPrptyVlQntyCmprtr+ "," +dvcDfnPrptyVlQntyCmprtr;
+	        }
+        }
     }
     
     
@@ -1377,6 +3029,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnPrptyVlQntySys = dvcDfnPrptyVlQntySys;
     }
     
+    public void addDvcDfnPrptyVlQntySys(String dvcDfnPrptyVlQntySys) {
+    	if( dvcDfnPrptyVlQntySys != null ) {
+	    	if( this.dvcDfnPrptyVlQntySys == null ) {
+	        	this.dvcDfnPrptyVlQntySys = dvcDfnPrptyVlQntySys;
+	        } else if(this.dvcDfnPrptyVlQntySys.substring(this.dvcDfnPrptyVlQntySys.length() - 1).equals("]") & dvcDfnPrptyVlQntySys.equals("[")) {
+	        	this.dvcDfnPrptyVlQntySys = this.dvcDfnPrptyVlQntySys+ "," + dvcDfnPrptyVlQntySys;
+	        } else if(dvcDfnPrptyVlQntySys.equals("[") | dvcDfnPrptyVlQntySys.equals("]") | this.dvcDfnPrptyVlQntySys.substring(this.dvcDfnPrptyVlQntySys.length() - 1).equals("[")) {
+	        	this.dvcDfnPrptyVlQntySys = this.dvcDfnPrptyVlQntySys+dvcDfnPrptyVlQntySys;
+	        } else  {
+	            this.dvcDfnPrptyVlQntySys = this.dvcDfnPrptyVlQntySys+ "," +dvcDfnPrptyVlQntySys;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnPrptyVlQntyUnt() {
@@ -1385,6 +3051,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnPrptyVlQntyUnt(String dvcDfnPrptyVlQntyUnt) {
         this.dvcDfnPrptyVlQntyUnt = dvcDfnPrptyVlQntyUnt;
+    }
+    
+    public void addDvcDfnPrptyVlQntyUnt(String dvcDfnPrptyVlQntyUnt) {
+    	if( dvcDfnPrptyVlQntyUnt != null ) {
+	    	if( this.dvcDfnPrptyVlQntyUnt == null ) {
+	        	this.dvcDfnPrptyVlQntyUnt = dvcDfnPrptyVlQntyUnt;
+	        } else if(this.dvcDfnPrptyVlQntyUnt.substring(this.dvcDfnPrptyVlQntyUnt.length() - 1).equals("]") & dvcDfnPrptyVlQntyUnt.equals("[")) {
+	        	this.dvcDfnPrptyVlQntyUnt = this.dvcDfnPrptyVlQntyUnt+ "," + dvcDfnPrptyVlQntyUnt;
+	        } else if(dvcDfnPrptyVlQntyUnt.equals("[") | dvcDfnPrptyVlQntyUnt.equals("]") | this.dvcDfnPrptyVlQntyUnt.substring(this.dvcDfnPrptyVlQntyUnt.length() - 1).equals("[")) {
+	        	this.dvcDfnPrptyVlQntyUnt = this.dvcDfnPrptyVlQntyUnt+dvcDfnPrptyVlQntyUnt;
+	        } else  {
+	            this.dvcDfnPrptyVlQntyUnt = this.dvcDfnPrptyVlQntyUnt+ "," +dvcDfnPrptyVlQntyUnt;
+	        }
+        }
     }
     
     
@@ -1397,6 +3077,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnPrptyVlQntyVl = dvcDfnPrptyVlQntyVl;
     }
     
+    public void addDvcDfnPrptyVlQntyVl(String dvcDfnPrptyVlQntyVl) {
+    	if( dvcDfnPrptyVlQntyVl != null ) {
+	    	if( this.dvcDfnPrptyVlQntyVl == null ) {
+	        	this.dvcDfnPrptyVlQntyVl = dvcDfnPrptyVlQntyVl;
+	        } else if(this.dvcDfnPrptyVlQntyVl.substring(this.dvcDfnPrptyVlQntyVl.length() - 1).equals("]") & dvcDfnPrptyVlQntyVl.equals("[")) {
+	        	this.dvcDfnPrptyVlQntyVl = this.dvcDfnPrptyVlQntyVl+ "," + dvcDfnPrptyVlQntyVl;
+	        } else if(dvcDfnPrptyVlQntyVl.equals("[") | dvcDfnPrptyVlQntyVl.equals("]") | this.dvcDfnPrptyVlQntyVl.substring(this.dvcDfnPrptyVlQntyVl.length() - 1).equals("[")) {
+	        	this.dvcDfnPrptyVlQntyVl = this.dvcDfnPrptyVlQntyVl+dvcDfnPrptyVlQntyVl;
+	        } else  {
+	            this.dvcDfnPrptyVlQntyVl = this.dvcDfnPrptyVlQntyVl+ "," +dvcDfnPrptyVlQntyVl;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnQntyCd() {
@@ -1405,6 +3099,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnQntyCd(String dvcDfnQntyCd) {
         this.dvcDfnQntyCd = dvcDfnQntyCd;
+    }
+    
+    public void addDvcDfnQntyCd(String dvcDfnQntyCd) {
+    	if( dvcDfnQntyCd != null ) {
+	    	if( this.dvcDfnQntyCd == null ) {
+	        	this.dvcDfnQntyCd = dvcDfnQntyCd;
+	        } else if(this.dvcDfnQntyCd.substring(this.dvcDfnQntyCd.length() - 1).equals("]") & dvcDfnQntyCd.equals("[")) {
+	        	this.dvcDfnQntyCd = this.dvcDfnQntyCd+ "," + dvcDfnQntyCd;
+	        } else if(dvcDfnQntyCd.equals("[") | dvcDfnQntyCd.equals("]") | this.dvcDfnQntyCd.substring(this.dvcDfnQntyCd.length() - 1).equals("[")) {
+	        	this.dvcDfnQntyCd = this.dvcDfnQntyCd+dvcDfnQntyCd;
+	        } else  {
+	            this.dvcDfnQntyCd = this.dvcDfnQntyCd+ "," +dvcDfnQntyCd;
+	        }
+        }
     }
     
     
@@ -1417,6 +3125,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnQntyCmprtr = dvcDfnQntyCmprtr;
     }
     
+    public void addDvcDfnQntyCmprtr(String dvcDfnQntyCmprtr) {
+    	if( dvcDfnQntyCmprtr != null ) {
+	    	if( this.dvcDfnQntyCmprtr == null ) {
+	        	this.dvcDfnQntyCmprtr = dvcDfnQntyCmprtr;
+	        } else if(this.dvcDfnQntyCmprtr.substring(this.dvcDfnQntyCmprtr.length() - 1).equals("]") & dvcDfnQntyCmprtr.equals("[")) {
+	        	this.dvcDfnQntyCmprtr = this.dvcDfnQntyCmprtr+ "," + dvcDfnQntyCmprtr;
+	        } else if(dvcDfnQntyCmprtr.equals("[") | dvcDfnQntyCmprtr.equals("]") | this.dvcDfnQntyCmprtr.substring(this.dvcDfnQntyCmprtr.length() - 1).equals("[")) {
+	        	this.dvcDfnQntyCmprtr = this.dvcDfnQntyCmprtr+dvcDfnQntyCmprtr;
+	        } else  {
+	            this.dvcDfnQntyCmprtr = this.dvcDfnQntyCmprtr+ "," +dvcDfnQntyCmprtr;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnQntySys() {
@@ -1425,6 +3147,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnQntySys(String dvcDfnQntySys) {
         this.dvcDfnQntySys = dvcDfnQntySys;
+    }
+    
+    public void addDvcDfnQntySys(String dvcDfnQntySys) {
+    	if( dvcDfnQntySys != null ) {
+	    	if( this.dvcDfnQntySys == null ) {
+	        	this.dvcDfnQntySys = dvcDfnQntySys;
+	        } else if(this.dvcDfnQntySys.substring(this.dvcDfnQntySys.length() - 1).equals("]") & dvcDfnQntySys.equals("[")) {
+	        	this.dvcDfnQntySys = this.dvcDfnQntySys+ "," + dvcDfnQntySys;
+	        } else if(dvcDfnQntySys.equals("[") | dvcDfnQntySys.equals("]") | this.dvcDfnQntySys.substring(this.dvcDfnQntySys.length() - 1).equals("[")) {
+	        	this.dvcDfnQntySys = this.dvcDfnQntySys+dvcDfnQntySys;
+	        } else  {
+	            this.dvcDfnQntySys = this.dvcDfnQntySys+ "," +dvcDfnQntySys;
+	        }
+        }
     }
     
     
@@ -1437,6 +3173,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnQntyUnt = dvcDfnQntyUnt;
     }
     
+    public void addDvcDfnQntyUnt(String dvcDfnQntyUnt) {
+    	if( dvcDfnQntyUnt != null ) {
+	    	if( this.dvcDfnQntyUnt == null ) {
+	        	this.dvcDfnQntyUnt = dvcDfnQntyUnt;
+	        } else if(this.dvcDfnQntyUnt.substring(this.dvcDfnQntyUnt.length() - 1).equals("]") & dvcDfnQntyUnt.equals("[")) {
+	        	this.dvcDfnQntyUnt = this.dvcDfnQntyUnt+ "," + dvcDfnQntyUnt;
+	        } else if(dvcDfnQntyUnt.equals("[") | dvcDfnQntyUnt.equals("]") | this.dvcDfnQntyUnt.substring(this.dvcDfnQntyUnt.length() - 1).equals("[")) {
+	        	this.dvcDfnQntyUnt = this.dvcDfnQntyUnt+dvcDfnQntyUnt;
+	        } else  {
+	            this.dvcDfnQntyUnt = this.dvcDfnQntyUnt+ "," +dvcDfnQntyUnt;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnQntyVl() {
@@ -1445,6 +3195,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnQntyVl(String dvcDfnQntyVl) {
         this.dvcDfnQntyVl = dvcDfnQntyVl;
+    }
+    
+    public void addDvcDfnQntyVl(String dvcDfnQntyVl) {
+    	if( dvcDfnQntyVl != null ) {
+	    	if( this.dvcDfnQntyVl == null ) {
+	        	this.dvcDfnQntyVl = dvcDfnQntyVl;
+	        } else if(this.dvcDfnQntyVl.substring(this.dvcDfnQntyVl.length() - 1).equals("]") & dvcDfnQntyVl.equals("[")) {
+	        	this.dvcDfnQntyVl = this.dvcDfnQntyVl+ "," + dvcDfnQntyVl;
+	        } else if(dvcDfnQntyVl.equals("[") | dvcDfnQntyVl.equals("]") | this.dvcDfnQntyVl.substring(this.dvcDfnQntyVl.length() - 1).equals("[")) {
+	        	this.dvcDfnQntyVl = this.dvcDfnQntyVl+dvcDfnQntyVl;
+	        } else  {
+	            this.dvcDfnQntyVl = this.dvcDfnQntyVl+ "," +dvcDfnQntyVl;
+	        }
+        }
     }
     
     
@@ -1457,6 +3221,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnSafetyCdgCd = dvcDfnSafetyCdgCd;
     }
     
+    public void addDvcDfnSafetyCdgCd(String dvcDfnSafetyCdgCd) {
+    	if( dvcDfnSafetyCdgCd != null ) {
+	    	if( this.dvcDfnSafetyCdgCd == null ) {
+	        	this.dvcDfnSafetyCdgCd = dvcDfnSafetyCdgCd;
+	        } else if(this.dvcDfnSafetyCdgCd.substring(this.dvcDfnSafetyCdgCd.length() - 1).equals("]") & dvcDfnSafetyCdgCd.equals("[")) {
+	        	this.dvcDfnSafetyCdgCd = this.dvcDfnSafetyCdgCd+ "," + dvcDfnSafetyCdgCd;
+	        } else if(dvcDfnSafetyCdgCd.equals("[") | dvcDfnSafetyCdgCd.equals("]") | this.dvcDfnSafetyCdgCd.substring(this.dvcDfnSafetyCdgCd.length() - 1).equals("[")) {
+	        	this.dvcDfnSafetyCdgCd = this.dvcDfnSafetyCdgCd+dvcDfnSafetyCdgCd;
+	        } else  {
+	            this.dvcDfnSafetyCdgCd = this.dvcDfnSafetyCdgCd+ "," +dvcDfnSafetyCdgCd;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnSafetyCdgDsply() {
@@ -1465,6 +3243,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnSafetyCdgDsply(String dvcDfnSafetyCdgDsply) {
         this.dvcDfnSafetyCdgDsply = dvcDfnSafetyCdgDsply;
+    }
+    
+    public void addDvcDfnSafetyCdgDsply(String dvcDfnSafetyCdgDsply) {
+    	if( dvcDfnSafetyCdgDsply != null ) {
+	    	if( this.dvcDfnSafetyCdgDsply == null ) {
+	        	this.dvcDfnSafetyCdgDsply = dvcDfnSafetyCdgDsply;
+	        } else if(this.dvcDfnSafetyCdgDsply.substring(this.dvcDfnSafetyCdgDsply.length() - 1).equals("]") & dvcDfnSafetyCdgDsply.equals("[")) {
+	        	this.dvcDfnSafetyCdgDsply = this.dvcDfnSafetyCdgDsply+ "," + dvcDfnSafetyCdgDsply;
+	        } else if(dvcDfnSafetyCdgDsply.equals("[") | dvcDfnSafetyCdgDsply.equals("]") | this.dvcDfnSafetyCdgDsply.substring(this.dvcDfnSafetyCdgDsply.length() - 1).equals("[")) {
+	        	this.dvcDfnSafetyCdgDsply = this.dvcDfnSafetyCdgDsply+dvcDfnSafetyCdgDsply;
+	        } else  {
+	            this.dvcDfnSafetyCdgDsply = this.dvcDfnSafetyCdgDsply+ "," +dvcDfnSafetyCdgDsply;
+	        }
+        }
     }
     
     
@@ -1477,6 +3269,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnSafetyCdgSys = dvcDfnSafetyCdgSys;
     }
     
+    public void addDvcDfnSafetyCdgSys(String dvcDfnSafetyCdgSys) {
+    	if( dvcDfnSafetyCdgSys != null ) {
+	    	if( this.dvcDfnSafetyCdgSys == null ) {
+	        	this.dvcDfnSafetyCdgSys = dvcDfnSafetyCdgSys;
+	        } else if(this.dvcDfnSafetyCdgSys.substring(this.dvcDfnSafetyCdgSys.length() - 1).equals("]") & dvcDfnSafetyCdgSys.equals("[")) {
+	        	this.dvcDfnSafetyCdgSys = this.dvcDfnSafetyCdgSys+ "," + dvcDfnSafetyCdgSys;
+	        } else if(dvcDfnSafetyCdgSys.equals("[") | dvcDfnSafetyCdgSys.equals("]") | this.dvcDfnSafetyCdgSys.substring(this.dvcDfnSafetyCdgSys.length() - 1).equals("[")) {
+	        	this.dvcDfnSafetyCdgSys = this.dvcDfnSafetyCdgSys+dvcDfnSafetyCdgSys;
+	        } else  {
+	            this.dvcDfnSafetyCdgSys = this.dvcDfnSafetyCdgSys+ "," +dvcDfnSafetyCdgSys;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnSafetyCdgUsrSltd() {
@@ -1485,6 +3291,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnSafetyCdgUsrSltd(String dvcDfnSafetyCdgUsrSltd) {
         this.dvcDfnSafetyCdgUsrSltd = dvcDfnSafetyCdgUsrSltd;
+    }
+    
+    public void addDvcDfnSafetyCdgUsrSltd(String dvcDfnSafetyCdgUsrSltd) {
+    	if( dvcDfnSafetyCdgUsrSltd != null ) {
+	    	if( this.dvcDfnSafetyCdgUsrSltd == null ) {
+	        	this.dvcDfnSafetyCdgUsrSltd = dvcDfnSafetyCdgUsrSltd;
+	        } else if(this.dvcDfnSafetyCdgUsrSltd.substring(this.dvcDfnSafetyCdgUsrSltd.length() - 1).equals("]") & dvcDfnSafetyCdgUsrSltd.equals("[")) {
+	        	this.dvcDfnSafetyCdgUsrSltd = this.dvcDfnSafetyCdgUsrSltd+ "," + dvcDfnSafetyCdgUsrSltd;
+	        } else if(dvcDfnSafetyCdgUsrSltd.equals("[") | dvcDfnSafetyCdgUsrSltd.equals("]") | this.dvcDfnSafetyCdgUsrSltd.substring(this.dvcDfnSafetyCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.dvcDfnSafetyCdgUsrSltd = this.dvcDfnSafetyCdgUsrSltd+dvcDfnSafetyCdgUsrSltd;
+	        } else  {
+	            this.dvcDfnSafetyCdgUsrSltd = this.dvcDfnSafetyCdgUsrSltd+ "," +dvcDfnSafetyCdgUsrSltd;
+	        }
+        }
     }
     
     
@@ -1497,6 +3317,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnSafetyCdgVrsn = dvcDfnSafetyCdgVrsn;
     }
     
+    public void addDvcDfnSafetyCdgVrsn(String dvcDfnSafetyCdgVrsn) {
+    	if( dvcDfnSafetyCdgVrsn != null ) {
+	    	if( this.dvcDfnSafetyCdgVrsn == null ) {
+	        	this.dvcDfnSafetyCdgVrsn = dvcDfnSafetyCdgVrsn;
+	        } else if(this.dvcDfnSafetyCdgVrsn.substring(this.dvcDfnSafetyCdgVrsn.length() - 1).equals("]") & dvcDfnSafetyCdgVrsn.equals("[")) {
+	        	this.dvcDfnSafetyCdgVrsn = this.dvcDfnSafetyCdgVrsn+ "," + dvcDfnSafetyCdgVrsn;
+	        } else if(dvcDfnSafetyCdgVrsn.equals("[") | dvcDfnSafetyCdgVrsn.equals("]") | this.dvcDfnSafetyCdgVrsn.substring(this.dvcDfnSafetyCdgVrsn.length() - 1).equals("[")) {
+	        	this.dvcDfnSafetyCdgVrsn = this.dvcDfnSafetyCdgVrsn+dvcDfnSafetyCdgVrsn;
+	        } else  {
+	            this.dvcDfnSafetyCdgVrsn = this.dvcDfnSafetyCdgVrsn+ "," +dvcDfnSafetyCdgVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnSafetyTxt() {
@@ -1505,6 +3339,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnSafetyTxt(String dvcDfnSafetyTxt) {
         this.dvcDfnSafetyTxt = dvcDfnSafetyTxt;
+    }
+    
+    public void addDvcDfnSafetyTxt(String dvcDfnSafetyTxt) {
+    	if( dvcDfnSafetyTxt != null ) {
+	    	if( this.dvcDfnSafetyTxt == null ) {
+	        	this.dvcDfnSafetyTxt = dvcDfnSafetyTxt;
+	        } else if(this.dvcDfnSafetyTxt.substring(this.dvcDfnSafetyTxt.length() - 1).equals("]") & dvcDfnSafetyTxt.equals("[")) {
+	        	this.dvcDfnSafetyTxt = this.dvcDfnSafetyTxt+ "," + dvcDfnSafetyTxt;
+	        } else if(dvcDfnSafetyTxt.equals("[") | dvcDfnSafetyTxt.equals("]") | this.dvcDfnSafetyTxt.substring(this.dvcDfnSafetyTxt.length() - 1).equals("[")) {
+	        	this.dvcDfnSafetyTxt = this.dvcDfnSafetyTxt+dvcDfnSafetyTxt;
+	        } else  {
+	            this.dvcDfnSafetyTxt = this.dvcDfnSafetyTxt+ "," +dvcDfnSafetyTxt;
+	        }
+        }
     }
     
     
@@ -1517,6 +3365,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnShlfLfStrgIdAssigner = dvcDfnShlfLfStrgIdAssigner;
     }
     
+    public void addDvcDfnShlfLfStrgIdAssigner(String dvcDfnShlfLfStrgIdAssigner) {
+    	if( dvcDfnShlfLfStrgIdAssigner != null ) {
+	    	if( this.dvcDfnShlfLfStrgIdAssigner == null ) {
+	        	this.dvcDfnShlfLfStrgIdAssigner = dvcDfnShlfLfStrgIdAssigner;
+	        } else if(this.dvcDfnShlfLfStrgIdAssigner.substring(this.dvcDfnShlfLfStrgIdAssigner.length() - 1).equals("]") & dvcDfnShlfLfStrgIdAssigner.equals("[")) {
+	        	this.dvcDfnShlfLfStrgIdAssigner = this.dvcDfnShlfLfStrgIdAssigner+ "," + dvcDfnShlfLfStrgIdAssigner;
+	        } else if(dvcDfnShlfLfStrgIdAssigner.equals("[") | dvcDfnShlfLfStrgIdAssigner.equals("]") | this.dvcDfnShlfLfStrgIdAssigner.substring(this.dvcDfnShlfLfStrgIdAssigner.length() - 1).equals("[")) {
+	        	this.dvcDfnShlfLfStrgIdAssigner = this.dvcDfnShlfLfStrgIdAssigner+dvcDfnShlfLfStrgIdAssigner;
+	        } else  {
+	            this.dvcDfnShlfLfStrgIdAssigner = this.dvcDfnShlfLfStrgIdAssigner+ "," +dvcDfnShlfLfStrgIdAssigner;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnShlfLfStrgIdPrdEnd() {
@@ -1525,6 +3387,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnShlfLfStrgIdPrdEnd(String dvcDfnShlfLfStrgIdPrdEnd) {
         this.dvcDfnShlfLfStrgIdPrdEnd = dvcDfnShlfLfStrgIdPrdEnd;
+    }
+    
+    public void addDvcDfnShlfLfStrgIdPrdEnd(String dvcDfnShlfLfStrgIdPrdEnd) {
+    	if( dvcDfnShlfLfStrgIdPrdEnd != null ) {
+	    	if( this.dvcDfnShlfLfStrgIdPrdEnd == null ) {
+	        	this.dvcDfnShlfLfStrgIdPrdEnd = dvcDfnShlfLfStrgIdPrdEnd;
+	        } else if(this.dvcDfnShlfLfStrgIdPrdEnd.substring(this.dvcDfnShlfLfStrgIdPrdEnd.length() - 1).equals("]") & dvcDfnShlfLfStrgIdPrdEnd.equals("[")) {
+	        	this.dvcDfnShlfLfStrgIdPrdEnd = this.dvcDfnShlfLfStrgIdPrdEnd+ "," + dvcDfnShlfLfStrgIdPrdEnd;
+	        } else if(dvcDfnShlfLfStrgIdPrdEnd.equals("[") | dvcDfnShlfLfStrgIdPrdEnd.equals("]") | this.dvcDfnShlfLfStrgIdPrdEnd.substring(this.dvcDfnShlfLfStrgIdPrdEnd.length() - 1).equals("[")) {
+	        	this.dvcDfnShlfLfStrgIdPrdEnd = this.dvcDfnShlfLfStrgIdPrdEnd+dvcDfnShlfLfStrgIdPrdEnd;
+	        } else  {
+	            this.dvcDfnShlfLfStrgIdPrdEnd = this.dvcDfnShlfLfStrgIdPrdEnd+ "," +dvcDfnShlfLfStrgIdPrdEnd;
+	        }
+        }
     }
     
     
@@ -1537,6 +3413,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnShlfLfStrgIdPrdStrt = dvcDfnShlfLfStrgIdPrdStrt;
     }
     
+    public void addDvcDfnShlfLfStrgIdPrdStrt(String dvcDfnShlfLfStrgIdPrdStrt) {
+    	if( dvcDfnShlfLfStrgIdPrdStrt != null ) {
+	    	if( this.dvcDfnShlfLfStrgIdPrdStrt == null ) {
+	        	this.dvcDfnShlfLfStrgIdPrdStrt = dvcDfnShlfLfStrgIdPrdStrt;
+	        } else if(this.dvcDfnShlfLfStrgIdPrdStrt.substring(this.dvcDfnShlfLfStrgIdPrdStrt.length() - 1).equals("]") & dvcDfnShlfLfStrgIdPrdStrt.equals("[")) {
+	        	this.dvcDfnShlfLfStrgIdPrdStrt = this.dvcDfnShlfLfStrgIdPrdStrt+ "," + dvcDfnShlfLfStrgIdPrdStrt;
+	        } else if(dvcDfnShlfLfStrgIdPrdStrt.equals("[") | dvcDfnShlfLfStrgIdPrdStrt.equals("]") | this.dvcDfnShlfLfStrgIdPrdStrt.substring(this.dvcDfnShlfLfStrgIdPrdStrt.length() - 1).equals("[")) {
+	        	this.dvcDfnShlfLfStrgIdPrdStrt = this.dvcDfnShlfLfStrgIdPrdStrt+dvcDfnShlfLfStrgIdPrdStrt;
+	        } else  {
+	            this.dvcDfnShlfLfStrgIdPrdStrt = this.dvcDfnShlfLfStrgIdPrdStrt+ "," +dvcDfnShlfLfStrgIdPrdStrt;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnShlfLfStrgIdSys() {
@@ -1545,6 +3435,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnShlfLfStrgIdSys(String dvcDfnShlfLfStrgIdSys) {
         this.dvcDfnShlfLfStrgIdSys = dvcDfnShlfLfStrgIdSys;
+    }
+    
+    public void addDvcDfnShlfLfStrgIdSys(String dvcDfnShlfLfStrgIdSys) {
+    	if( dvcDfnShlfLfStrgIdSys != null ) {
+	    	if( this.dvcDfnShlfLfStrgIdSys == null ) {
+	        	this.dvcDfnShlfLfStrgIdSys = dvcDfnShlfLfStrgIdSys;
+	        } else if(this.dvcDfnShlfLfStrgIdSys.substring(this.dvcDfnShlfLfStrgIdSys.length() - 1).equals("]") & dvcDfnShlfLfStrgIdSys.equals("[")) {
+	        	this.dvcDfnShlfLfStrgIdSys = this.dvcDfnShlfLfStrgIdSys+ "," + dvcDfnShlfLfStrgIdSys;
+	        } else if(dvcDfnShlfLfStrgIdSys.equals("[") | dvcDfnShlfLfStrgIdSys.equals("]") | this.dvcDfnShlfLfStrgIdSys.substring(this.dvcDfnShlfLfStrgIdSys.length() - 1).equals("[")) {
+	        	this.dvcDfnShlfLfStrgIdSys = this.dvcDfnShlfLfStrgIdSys+dvcDfnShlfLfStrgIdSys;
+	        } else  {
+	            this.dvcDfnShlfLfStrgIdSys = this.dvcDfnShlfLfStrgIdSys+ "," +dvcDfnShlfLfStrgIdSys;
+	        }
+        }
     }
     
     
@@ -1557,6 +3461,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnShlfLfStrgIdTypCdgCd = dvcDfnShlfLfStrgIdTypCdgCd;
     }
     
+    public void addDvcDfnShlfLfStrgIdTypCdgCd(String dvcDfnShlfLfStrgIdTypCdgCd) {
+    	if( dvcDfnShlfLfStrgIdTypCdgCd != null ) {
+	    	if( this.dvcDfnShlfLfStrgIdTypCdgCd == null ) {
+	        	this.dvcDfnShlfLfStrgIdTypCdgCd = dvcDfnShlfLfStrgIdTypCdgCd;
+	        } else if(this.dvcDfnShlfLfStrgIdTypCdgCd.substring(this.dvcDfnShlfLfStrgIdTypCdgCd.length() - 1).equals("]") & dvcDfnShlfLfStrgIdTypCdgCd.equals("[")) {
+	        	this.dvcDfnShlfLfStrgIdTypCdgCd = this.dvcDfnShlfLfStrgIdTypCdgCd+ "," + dvcDfnShlfLfStrgIdTypCdgCd;
+	        } else if(dvcDfnShlfLfStrgIdTypCdgCd.equals("[") | dvcDfnShlfLfStrgIdTypCdgCd.equals("]") | this.dvcDfnShlfLfStrgIdTypCdgCd.substring(this.dvcDfnShlfLfStrgIdTypCdgCd.length() - 1).equals("[")) {
+	        	this.dvcDfnShlfLfStrgIdTypCdgCd = this.dvcDfnShlfLfStrgIdTypCdgCd+dvcDfnShlfLfStrgIdTypCdgCd;
+	        } else  {
+	            this.dvcDfnShlfLfStrgIdTypCdgCd = this.dvcDfnShlfLfStrgIdTypCdgCd+ "," +dvcDfnShlfLfStrgIdTypCdgCd;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnShlfLfStrgIdTypCdgDsply() {
@@ -1565,6 +3483,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnShlfLfStrgIdTypCdgDsply(String dvcDfnShlfLfStrgIdTypCdgDsply) {
         this.dvcDfnShlfLfStrgIdTypCdgDsply = dvcDfnShlfLfStrgIdTypCdgDsply;
+    }
+    
+    public void addDvcDfnShlfLfStrgIdTypCdgDsply(String dvcDfnShlfLfStrgIdTypCdgDsply) {
+    	if( dvcDfnShlfLfStrgIdTypCdgDsply != null ) {
+	    	if( this.dvcDfnShlfLfStrgIdTypCdgDsply == null ) {
+	        	this.dvcDfnShlfLfStrgIdTypCdgDsply = dvcDfnShlfLfStrgIdTypCdgDsply;
+	        } else if(this.dvcDfnShlfLfStrgIdTypCdgDsply.substring(this.dvcDfnShlfLfStrgIdTypCdgDsply.length() - 1).equals("]") & dvcDfnShlfLfStrgIdTypCdgDsply.equals("[")) {
+	        	this.dvcDfnShlfLfStrgIdTypCdgDsply = this.dvcDfnShlfLfStrgIdTypCdgDsply+ "," + dvcDfnShlfLfStrgIdTypCdgDsply;
+	        } else if(dvcDfnShlfLfStrgIdTypCdgDsply.equals("[") | dvcDfnShlfLfStrgIdTypCdgDsply.equals("]") | this.dvcDfnShlfLfStrgIdTypCdgDsply.substring(this.dvcDfnShlfLfStrgIdTypCdgDsply.length() - 1).equals("[")) {
+	        	this.dvcDfnShlfLfStrgIdTypCdgDsply = this.dvcDfnShlfLfStrgIdTypCdgDsply+dvcDfnShlfLfStrgIdTypCdgDsply;
+	        } else  {
+	            this.dvcDfnShlfLfStrgIdTypCdgDsply = this.dvcDfnShlfLfStrgIdTypCdgDsply+ "," +dvcDfnShlfLfStrgIdTypCdgDsply;
+	        }
+        }
     }
     
     
@@ -1577,6 +3509,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnShlfLfStrgIdTypCdgSys = dvcDfnShlfLfStrgIdTypCdgSys;
     }
     
+    public void addDvcDfnShlfLfStrgIdTypCdgSys(String dvcDfnShlfLfStrgIdTypCdgSys) {
+    	if( dvcDfnShlfLfStrgIdTypCdgSys != null ) {
+	    	if( this.dvcDfnShlfLfStrgIdTypCdgSys == null ) {
+	        	this.dvcDfnShlfLfStrgIdTypCdgSys = dvcDfnShlfLfStrgIdTypCdgSys;
+	        } else if(this.dvcDfnShlfLfStrgIdTypCdgSys.substring(this.dvcDfnShlfLfStrgIdTypCdgSys.length() - 1).equals("]") & dvcDfnShlfLfStrgIdTypCdgSys.equals("[")) {
+	        	this.dvcDfnShlfLfStrgIdTypCdgSys = this.dvcDfnShlfLfStrgIdTypCdgSys+ "," + dvcDfnShlfLfStrgIdTypCdgSys;
+	        } else if(dvcDfnShlfLfStrgIdTypCdgSys.equals("[") | dvcDfnShlfLfStrgIdTypCdgSys.equals("]") | this.dvcDfnShlfLfStrgIdTypCdgSys.substring(this.dvcDfnShlfLfStrgIdTypCdgSys.length() - 1).equals("[")) {
+	        	this.dvcDfnShlfLfStrgIdTypCdgSys = this.dvcDfnShlfLfStrgIdTypCdgSys+dvcDfnShlfLfStrgIdTypCdgSys;
+	        } else  {
+	            this.dvcDfnShlfLfStrgIdTypCdgSys = this.dvcDfnShlfLfStrgIdTypCdgSys+ "," +dvcDfnShlfLfStrgIdTypCdgSys;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnShlfLfStrgIdTypCdgUsrSltd() {
@@ -1585,6 +3531,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnShlfLfStrgIdTypCdgUsrSltd(String dvcDfnShlfLfStrgIdTypCdgUsrSltd) {
         this.dvcDfnShlfLfStrgIdTypCdgUsrSltd = dvcDfnShlfLfStrgIdTypCdgUsrSltd;
+    }
+    
+    public void addDvcDfnShlfLfStrgIdTypCdgUsrSltd(String dvcDfnShlfLfStrgIdTypCdgUsrSltd) {
+    	if( dvcDfnShlfLfStrgIdTypCdgUsrSltd != null ) {
+	    	if( this.dvcDfnShlfLfStrgIdTypCdgUsrSltd == null ) {
+	        	this.dvcDfnShlfLfStrgIdTypCdgUsrSltd = dvcDfnShlfLfStrgIdTypCdgUsrSltd;
+	        } else if(this.dvcDfnShlfLfStrgIdTypCdgUsrSltd.substring(this.dvcDfnShlfLfStrgIdTypCdgUsrSltd.length() - 1).equals("]") & dvcDfnShlfLfStrgIdTypCdgUsrSltd.equals("[")) {
+	        	this.dvcDfnShlfLfStrgIdTypCdgUsrSltd = this.dvcDfnShlfLfStrgIdTypCdgUsrSltd+ "," + dvcDfnShlfLfStrgIdTypCdgUsrSltd;
+	        } else if(dvcDfnShlfLfStrgIdTypCdgUsrSltd.equals("[") | dvcDfnShlfLfStrgIdTypCdgUsrSltd.equals("]") | this.dvcDfnShlfLfStrgIdTypCdgUsrSltd.substring(this.dvcDfnShlfLfStrgIdTypCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.dvcDfnShlfLfStrgIdTypCdgUsrSltd = this.dvcDfnShlfLfStrgIdTypCdgUsrSltd+dvcDfnShlfLfStrgIdTypCdgUsrSltd;
+	        } else  {
+	            this.dvcDfnShlfLfStrgIdTypCdgUsrSltd = this.dvcDfnShlfLfStrgIdTypCdgUsrSltd+ "," +dvcDfnShlfLfStrgIdTypCdgUsrSltd;
+	        }
+        }
     }
     
     
@@ -1597,6 +3557,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnShlfLfStrgIdTypCdgVrsn = dvcDfnShlfLfStrgIdTypCdgVrsn;
     }
     
+    public void addDvcDfnShlfLfStrgIdTypCdgVrsn(String dvcDfnShlfLfStrgIdTypCdgVrsn) {
+    	if( dvcDfnShlfLfStrgIdTypCdgVrsn != null ) {
+	    	if( this.dvcDfnShlfLfStrgIdTypCdgVrsn == null ) {
+	        	this.dvcDfnShlfLfStrgIdTypCdgVrsn = dvcDfnShlfLfStrgIdTypCdgVrsn;
+	        } else if(this.dvcDfnShlfLfStrgIdTypCdgVrsn.substring(this.dvcDfnShlfLfStrgIdTypCdgVrsn.length() - 1).equals("]") & dvcDfnShlfLfStrgIdTypCdgVrsn.equals("[")) {
+	        	this.dvcDfnShlfLfStrgIdTypCdgVrsn = this.dvcDfnShlfLfStrgIdTypCdgVrsn+ "," + dvcDfnShlfLfStrgIdTypCdgVrsn;
+	        } else if(dvcDfnShlfLfStrgIdTypCdgVrsn.equals("[") | dvcDfnShlfLfStrgIdTypCdgVrsn.equals("]") | this.dvcDfnShlfLfStrgIdTypCdgVrsn.substring(this.dvcDfnShlfLfStrgIdTypCdgVrsn.length() - 1).equals("[")) {
+	        	this.dvcDfnShlfLfStrgIdTypCdgVrsn = this.dvcDfnShlfLfStrgIdTypCdgVrsn+dvcDfnShlfLfStrgIdTypCdgVrsn;
+	        } else  {
+	            this.dvcDfnShlfLfStrgIdTypCdgVrsn = this.dvcDfnShlfLfStrgIdTypCdgVrsn+ "," +dvcDfnShlfLfStrgIdTypCdgVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnShlfLfStrgIdTypTxt() {
@@ -1605,6 +3579,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnShlfLfStrgIdTypTxt(String dvcDfnShlfLfStrgIdTypTxt) {
         this.dvcDfnShlfLfStrgIdTypTxt = dvcDfnShlfLfStrgIdTypTxt;
+    }
+    
+    public void addDvcDfnShlfLfStrgIdTypTxt(String dvcDfnShlfLfStrgIdTypTxt) {
+    	if( dvcDfnShlfLfStrgIdTypTxt != null ) {
+	    	if( this.dvcDfnShlfLfStrgIdTypTxt == null ) {
+	        	this.dvcDfnShlfLfStrgIdTypTxt = dvcDfnShlfLfStrgIdTypTxt;
+	        } else if(this.dvcDfnShlfLfStrgIdTypTxt.substring(this.dvcDfnShlfLfStrgIdTypTxt.length() - 1).equals("]") & dvcDfnShlfLfStrgIdTypTxt.equals("[")) {
+	        	this.dvcDfnShlfLfStrgIdTypTxt = this.dvcDfnShlfLfStrgIdTypTxt+ "," + dvcDfnShlfLfStrgIdTypTxt;
+	        } else if(dvcDfnShlfLfStrgIdTypTxt.equals("[") | dvcDfnShlfLfStrgIdTypTxt.equals("]") | this.dvcDfnShlfLfStrgIdTypTxt.substring(this.dvcDfnShlfLfStrgIdTypTxt.length() - 1).equals("[")) {
+	        	this.dvcDfnShlfLfStrgIdTypTxt = this.dvcDfnShlfLfStrgIdTypTxt+dvcDfnShlfLfStrgIdTypTxt;
+	        } else  {
+	            this.dvcDfnShlfLfStrgIdTypTxt = this.dvcDfnShlfLfStrgIdTypTxt+ "," +dvcDfnShlfLfStrgIdTypTxt;
+	        }
+        }
     }
     
     
@@ -1617,6 +3605,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnShlfLfStrgIdUse = dvcDfnShlfLfStrgIdUse;
     }
     
+    public void addDvcDfnShlfLfStrgIdUse(String dvcDfnShlfLfStrgIdUse) {
+    	if( dvcDfnShlfLfStrgIdUse != null ) {
+	    	if( this.dvcDfnShlfLfStrgIdUse == null ) {
+	        	this.dvcDfnShlfLfStrgIdUse = dvcDfnShlfLfStrgIdUse;
+	        } else if(this.dvcDfnShlfLfStrgIdUse.substring(this.dvcDfnShlfLfStrgIdUse.length() - 1).equals("]") & dvcDfnShlfLfStrgIdUse.equals("[")) {
+	        	this.dvcDfnShlfLfStrgIdUse = this.dvcDfnShlfLfStrgIdUse+ "," + dvcDfnShlfLfStrgIdUse;
+	        } else if(dvcDfnShlfLfStrgIdUse.equals("[") | dvcDfnShlfLfStrgIdUse.equals("]") | this.dvcDfnShlfLfStrgIdUse.substring(this.dvcDfnShlfLfStrgIdUse.length() - 1).equals("[")) {
+	        	this.dvcDfnShlfLfStrgIdUse = this.dvcDfnShlfLfStrgIdUse+dvcDfnShlfLfStrgIdUse;
+	        } else  {
+	            this.dvcDfnShlfLfStrgIdUse = this.dvcDfnShlfLfStrgIdUse+ "," +dvcDfnShlfLfStrgIdUse;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnShlfLfStrgIdVl() {
@@ -1625,6 +3627,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnShlfLfStrgIdVl(String dvcDfnShlfLfStrgIdVl) {
         this.dvcDfnShlfLfStrgIdVl = dvcDfnShlfLfStrgIdVl;
+    }
+    
+    public void addDvcDfnShlfLfStrgIdVl(String dvcDfnShlfLfStrgIdVl) {
+    	if( dvcDfnShlfLfStrgIdVl != null ) {
+	    	if( this.dvcDfnShlfLfStrgIdVl == null ) {
+	        	this.dvcDfnShlfLfStrgIdVl = dvcDfnShlfLfStrgIdVl;
+	        } else if(this.dvcDfnShlfLfStrgIdVl.substring(this.dvcDfnShlfLfStrgIdVl.length() - 1).equals("]") & dvcDfnShlfLfStrgIdVl.equals("[")) {
+	        	this.dvcDfnShlfLfStrgIdVl = this.dvcDfnShlfLfStrgIdVl+ "," + dvcDfnShlfLfStrgIdVl;
+	        } else if(dvcDfnShlfLfStrgIdVl.equals("[") | dvcDfnShlfLfStrgIdVl.equals("]") | this.dvcDfnShlfLfStrgIdVl.substring(this.dvcDfnShlfLfStrgIdVl.length() - 1).equals("[")) {
+	        	this.dvcDfnShlfLfStrgIdVl = this.dvcDfnShlfLfStrgIdVl+dvcDfnShlfLfStrgIdVl;
+	        } else  {
+	            this.dvcDfnShlfLfStrgIdVl = this.dvcDfnShlfLfStrgIdVl+ "," +dvcDfnShlfLfStrgIdVl;
+	        }
+        }
     }
     
     
@@ -1637,6 +3653,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnShlfLfStrgPrdCd = dvcDfnShlfLfStrgPrdCd;
     }
     
+    public void addDvcDfnShlfLfStrgPrdCd(String dvcDfnShlfLfStrgPrdCd) {
+    	if( dvcDfnShlfLfStrgPrdCd != null ) {
+	    	if( this.dvcDfnShlfLfStrgPrdCd == null ) {
+	        	this.dvcDfnShlfLfStrgPrdCd = dvcDfnShlfLfStrgPrdCd;
+	        } else if(this.dvcDfnShlfLfStrgPrdCd.substring(this.dvcDfnShlfLfStrgPrdCd.length() - 1).equals("]") & dvcDfnShlfLfStrgPrdCd.equals("[")) {
+	        	this.dvcDfnShlfLfStrgPrdCd = this.dvcDfnShlfLfStrgPrdCd+ "," + dvcDfnShlfLfStrgPrdCd;
+	        } else if(dvcDfnShlfLfStrgPrdCd.equals("[") | dvcDfnShlfLfStrgPrdCd.equals("]") | this.dvcDfnShlfLfStrgPrdCd.substring(this.dvcDfnShlfLfStrgPrdCd.length() - 1).equals("[")) {
+	        	this.dvcDfnShlfLfStrgPrdCd = this.dvcDfnShlfLfStrgPrdCd+dvcDfnShlfLfStrgPrdCd;
+	        } else  {
+	            this.dvcDfnShlfLfStrgPrdCd = this.dvcDfnShlfLfStrgPrdCd+ "," +dvcDfnShlfLfStrgPrdCd;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnShlfLfStrgPrdCmprtr() {
@@ -1645,6 +3675,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnShlfLfStrgPrdCmprtr(String dvcDfnShlfLfStrgPrdCmprtr) {
         this.dvcDfnShlfLfStrgPrdCmprtr = dvcDfnShlfLfStrgPrdCmprtr;
+    }
+    
+    public void addDvcDfnShlfLfStrgPrdCmprtr(String dvcDfnShlfLfStrgPrdCmprtr) {
+    	if( dvcDfnShlfLfStrgPrdCmprtr != null ) {
+	    	if( this.dvcDfnShlfLfStrgPrdCmprtr == null ) {
+	        	this.dvcDfnShlfLfStrgPrdCmprtr = dvcDfnShlfLfStrgPrdCmprtr;
+	        } else if(this.dvcDfnShlfLfStrgPrdCmprtr.substring(this.dvcDfnShlfLfStrgPrdCmprtr.length() - 1).equals("]") & dvcDfnShlfLfStrgPrdCmprtr.equals("[")) {
+	        	this.dvcDfnShlfLfStrgPrdCmprtr = this.dvcDfnShlfLfStrgPrdCmprtr+ "," + dvcDfnShlfLfStrgPrdCmprtr;
+	        } else if(dvcDfnShlfLfStrgPrdCmprtr.equals("[") | dvcDfnShlfLfStrgPrdCmprtr.equals("]") | this.dvcDfnShlfLfStrgPrdCmprtr.substring(this.dvcDfnShlfLfStrgPrdCmprtr.length() - 1).equals("[")) {
+	        	this.dvcDfnShlfLfStrgPrdCmprtr = this.dvcDfnShlfLfStrgPrdCmprtr+dvcDfnShlfLfStrgPrdCmprtr;
+	        } else  {
+	            this.dvcDfnShlfLfStrgPrdCmprtr = this.dvcDfnShlfLfStrgPrdCmprtr+ "," +dvcDfnShlfLfStrgPrdCmprtr;
+	        }
+        }
     }
     
     
@@ -1657,6 +3701,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnShlfLfStrgPrdSys = dvcDfnShlfLfStrgPrdSys;
     }
     
+    public void addDvcDfnShlfLfStrgPrdSys(String dvcDfnShlfLfStrgPrdSys) {
+    	if( dvcDfnShlfLfStrgPrdSys != null ) {
+	    	if( this.dvcDfnShlfLfStrgPrdSys == null ) {
+	        	this.dvcDfnShlfLfStrgPrdSys = dvcDfnShlfLfStrgPrdSys;
+	        } else if(this.dvcDfnShlfLfStrgPrdSys.substring(this.dvcDfnShlfLfStrgPrdSys.length() - 1).equals("]") & dvcDfnShlfLfStrgPrdSys.equals("[")) {
+	        	this.dvcDfnShlfLfStrgPrdSys = this.dvcDfnShlfLfStrgPrdSys+ "," + dvcDfnShlfLfStrgPrdSys;
+	        } else if(dvcDfnShlfLfStrgPrdSys.equals("[") | dvcDfnShlfLfStrgPrdSys.equals("]") | this.dvcDfnShlfLfStrgPrdSys.substring(this.dvcDfnShlfLfStrgPrdSys.length() - 1).equals("[")) {
+	        	this.dvcDfnShlfLfStrgPrdSys = this.dvcDfnShlfLfStrgPrdSys+dvcDfnShlfLfStrgPrdSys;
+	        } else  {
+	            this.dvcDfnShlfLfStrgPrdSys = this.dvcDfnShlfLfStrgPrdSys+ "," +dvcDfnShlfLfStrgPrdSys;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnShlfLfStrgPrdUnt() {
@@ -1665,6 +3723,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnShlfLfStrgPrdUnt(String dvcDfnShlfLfStrgPrdUnt) {
         this.dvcDfnShlfLfStrgPrdUnt = dvcDfnShlfLfStrgPrdUnt;
+    }
+    
+    public void addDvcDfnShlfLfStrgPrdUnt(String dvcDfnShlfLfStrgPrdUnt) {
+    	if( dvcDfnShlfLfStrgPrdUnt != null ) {
+	    	if( this.dvcDfnShlfLfStrgPrdUnt == null ) {
+	        	this.dvcDfnShlfLfStrgPrdUnt = dvcDfnShlfLfStrgPrdUnt;
+	        } else if(this.dvcDfnShlfLfStrgPrdUnt.substring(this.dvcDfnShlfLfStrgPrdUnt.length() - 1).equals("]") & dvcDfnShlfLfStrgPrdUnt.equals("[")) {
+	        	this.dvcDfnShlfLfStrgPrdUnt = this.dvcDfnShlfLfStrgPrdUnt+ "," + dvcDfnShlfLfStrgPrdUnt;
+	        } else if(dvcDfnShlfLfStrgPrdUnt.equals("[") | dvcDfnShlfLfStrgPrdUnt.equals("]") | this.dvcDfnShlfLfStrgPrdUnt.substring(this.dvcDfnShlfLfStrgPrdUnt.length() - 1).equals("[")) {
+	        	this.dvcDfnShlfLfStrgPrdUnt = this.dvcDfnShlfLfStrgPrdUnt+dvcDfnShlfLfStrgPrdUnt;
+	        } else  {
+	            this.dvcDfnShlfLfStrgPrdUnt = this.dvcDfnShlfLfStrgPrdUnt+ "," +dvcDfnShlfLfStrgPrdUnt;
+	        }
+        }
     }
     
     
@@ -1677,6 +3749,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnShlfLfStrgPrdVl = dvcDfnShlfLfStrgPrdVl;
     }
     
+    public void addDvcDfnShlfLfStrgPrdVl(String dvcDfnShlfLfStrgPrdVl) {
+    	if( dvcDfnShlfLfStrgPrdVl != null ) {
+	    	if( this.dvcDfnShlfLfStrgPrdVl == null ) {
+	        	this.dvcDfnShlfLfStrgPrdVl = dvcDfnShlfLfStrgPrdVl;
+	        } else if(this.dvcDfnShlfLfStrgPrdVl.substring(this.dvcDfnShlfLfStrgPrdVl.length() - 1).equals("]") & dvcDfnShlfLfStrgPrdVl.equals("[")) {
+	        	this.dvcDfnShlfLfStrgPrdVl = this.dvcDfnShlfLfStrgPrdVl+ "," + dvcDfnShlfLfStrgPrdVl;
+	        } else if(dvcDfnShlfLfStrgPrdVl.equals("[") | dvcDfnShlfLfStrgPrdVl.equals("]") | this.dvcDfnShlfLfStrgPrdVl.substring(this.dvcDfnShlfLfStrgPrdVl.length() - 1).equals("[")) {
+	        	this.dvcDfnShlfLfStrgPrdVl = this.dvcDfnShlfLfStrgPrdVl+dvcDfnShlfLfStrgPrdVl;
+	        } else  {
+	            this.dvcDfnShlfLfStrgPrdVl = this.dvcDfnShlfLfStrgPrdVl+ "," +dvcDfnShlfLfStrgPrdVl;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnShlfLfStrgSpclPrctnsFrStrgCdgCd() {
@@ -1685,6 +3771,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnShlfLfStrgSpclPrctnsFrStrgCdgCd(String dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgCd) {
         this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgCd = dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgCd;
+    }
+    
+    public void addDvcDfnShlfLfStrgSpclPrctnsFrStrgCdgCd(String dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgCd) {
+    	if( dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgCd != null ) {
+	    	if( this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgCd == null ) {
+	        	this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgCd = dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgCd;
+	        } else if(this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgCd.substring(this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgCd.length() - 1).equals("]") & dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgCd.equals("[")) {
+	        	this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgCd = this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgCd+ "," + dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgCd;
+	        } else if(dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgCd.equals("[") | dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgCd.equals("]") | this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgCd.substring(this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgCd.length() - 1).equals("[")) {
+	        	this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgCd = this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgCd+dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgCd;
+	        } else  {
+	            this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgCd = this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgCd+ "," +dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgCd;
+	        }
+        }
     }
     
     
@@ -1697,6 +3797,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgDsply = dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgDsply;
     }
     
+    public void addDvcDfnShlfLfStrgSpclPrctnsFrStrgCdgDsply(String dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgDsply) {
+    	if( dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgDsply != null ) {
+	    	if( this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgDsply == null ) {
+	        	this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgDsply = dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgDsply;
+	        } else if(this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgDsply.substring(this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgDsply.length() - 1).equals("]") & dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgDsply.equals("[")) {
+	        	this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgDsply = this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgDsply+ "," + dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgDsply;
+	        } else if(dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgDsply.equals("[") | dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgDsply.equals("]") | this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgDsply.substring(this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgDsply.length() - 1).equals("[")) {
+	        	this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgDsply = this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgDsply+dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgDsply;
+	        } else  {
+	            this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgDsply = this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgDsply+ "," +dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnShlfLfStrgSpclPrctnsFrStrgCdgSys() {
@@ -1705,6 +3819,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnShlfLfStrgSpclPrctnsFrStrgCdgSys(String dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgSys) {
         this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgSys = dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgSys;
+    }
+    
+    public void addDvcDfnShlfLfStrgSpclPrctnsFrStrgCdgSys(String dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgSys) {
+    	if( dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgSys != null ) {
+	    	if( this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgSys == null ) {
+	        	this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgSys = dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgSys;
+	        } else if(this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgSys.substring(this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgSys.length() - 1).equals("]") & dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgSys.equals("[")) {
+	        	this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgSys = this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgSys+ "," + dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgSys;
+	        } else if(dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgSys.equals("[") | dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgSys.equals("]") | this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgSys.substring(this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgSys.length() - 1).equals("[")) {
+	        	this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgSys = this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgSys+dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgSys;
+	        } else  {
+	            this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgSys = this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgSys+ "," +dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgSys;
+	        }
+        }
     }
     
     
@@ -1717,6 +3845,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgUsrSltd = dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgUsrSltd;
     }
     
+    public void addDvcDfnShlfLfStrgSpclPrctnsFrStrgCdgUsrSltd(String dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgUsrSltd) {
+    	if( dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgUsrSltd != null ) {
+	    	if( this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgUsrSltd == null ) {
+	        	this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgUsrSltd = dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgUsrSltd;
+	        } else if(this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgUsrSltd.substring(this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgUsrSltd.length() - 1).equals("]") & dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgUsrSltd.equals("[")) {
+	        	this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgUsrSltd = this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgUsrSltd+ "," + dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgUsrSltd;
+	        } else if(dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgUsrSltd.equals("[") | dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgUsrSltd.equals("]") | this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgUsrSltd.substring(this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgUsrSltd = this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgUsrSltd+dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgUsrSltd;
+	        } else  {
+	            this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgUsrSltd = this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgUsrSltd+ "," +dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnShlfLfStrgSpclPrctnsFrStrgCdgVrsn() {
@@ -1725,6 +3867,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnShlfLfStrgSpclPrctnsFrStrgCdgVrsn(String dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgVrsn) {
         this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgVrsn = dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgVrsn;
+    }
+    
+    public void addDvcDfnShlfLfStrgSpclPrctnsFrStrgCdgVrsn(String dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgVrsn) {
+    	if( dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgVrsn != null ) {
+	    	if( this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgVrsn == null ) {
+	        	this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgVrsn = dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgVrsn;
+	        } else if(this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgVrsn.substring(this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgVrsn.length() - 1).equals("]") & dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgVrsn.equals("[")) {
+	        	this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgVrsn = this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgVrsn+ "," + dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgVrsn;
+	        } else if(dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgVrsn.equals("[") | dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgVrsn.equals("]") | this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgVrsn.substring(this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgVrsn.length() - 1).equals("[")) {
+	        	this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgVrsn = this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgVrsn+dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgVrsn;
+	        } else  {
+	            this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgVrsn = this.dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgVrsn+ "," +dvcDfnShlfLfStrgSpclPrctnsFrStrgCdgVrsn;
+	        }
+        }
     }
     
     
@@ -1737,6 +3893,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnShlfLfStrgSpclPrctnsFrStrgTxt = dvcDfnShlfLfStrgSpclPrctnsFrStrgTxt;
     }
     
+    public void addDvcDfnShlfLfStrgSpclPrctnsFrStrgTxt(String dvcDfnShlfLfStrgSpclPrctnsFrStrgTxt) {
+    	if( dvcDfnShlfLfStrgSpclPrctnsFrStrgTxt != null ) {
+	    	if( this.dvcDfnShlfLfStrgSpclPrctnsFrStrgTxt == null ) {
+	        	this.dvcDfnShlfLfStrgSpclPrctnsFrStrgTxt = dvcDfnShlfLfStrgSpclPrctnsFrStrgTxt;
+	        } else if(this.dvcDfnShlfLfStrgSpclPrctnsFrStrgTxt.substring(this.dvcDfnShlfLfStrgSpclPrctnsFrStrgTxt.length() - 1).equals("]") & dvcDfnShlfLfStrgSpclPrctnsFrStrgTxt.equals("[")) {
+	        	this.dvcDfnShlfLfStrgSpclPrctnsFrStrgTxt = this.dvcDfnShlfLfStrgSpclPrctnsFrStrgTxt+ "," + dvcDfnShlfLfStrgSpclPrctnsFrStrgTxt;
+	        } else if(dvcDfnShlfLfStrgSpclPrctnsFrStrgTxt.equals("[") | dvcDfnShlfLfStrgSpclPrctnsFrStrgTxt.equals("]") | this.dvcDfnShlfLfStrgSpclPrctnsFrStrgTxt.substring(this.dvcDfnShlfLfStrgSpclPrctnsFrStrgTxt.length() - 1).equals("[")) {
+	        	this.dvcDfnShlfLfStrgSpclPrctnsFrStrgTxt = this.dvcDfnShlfLfStrgSpclPrctnsFrStrgTxt+dvcDfnShlfLfStrgSpclPrctnsFrStrgTxt;
+	        } else  {
+	            this.dvcDfnShlfLfStrgSpclPrctnsFrStrgTxt = this.dvcDfnShlfLfStrgSpclPrctnsFrStrgTxt+ "," +dvcDfnShlfLfStrgSpclPrctnsFrStrgTxt;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnShlfLfStrgTypCdgCd() {
@@ -1745,6 +3915,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnShlfLfStrgTypCdgCd(String dvcDfnShlfLfStrgTypCdgCd) {
         this.dvcDfnShlfLfStrgTypCdgCd = dvcDfnShlfLfStrgTypCdgCd;
+    }
+    
+    public void addDvcDfnShlfLfStrgTypCdgCd(String dvcDfnShlfLfStrgTypCdgCd) {
+    	if( dvcDfnShlfLfStrgTypCdgCd != null ) {
+	    	if( this.dvcDfnShlfLfStrgTypCdgCd == null ) {
+	        	this.dvcDfnShlfLfStrgTypCdgCd = dvcDfnShlfLfStrgTypCdgCd;
+	        } else if(this.dvcDfnShlfLfStrgTypCdgCd.substring(this.dvcDfnShlfLfStrgTypCdgCd.length() - 1).equals("]") & dvcDfnShlfLfStrgTypCdgCd.equals("[")) {
+	        	this.dvcDfnShlfLfStrgTypCdgCd = this.dvcDfnShlfLfStrgTypCdgCd+ "," + dvcDfnShlfLfStrgTypCdgCd;
+	        } else if(dvcDfnShlfLfStrgTypCdgCd.equals("[") | dvcDfnShlfLfStrgTypCdgCd.equals("]") | this.dvcDfnShlfLfStrgTypCdgCd.substring(this.dvcDfnShlfLfStrgTypCdgCd.length() - 1).equals("[")) {
+	        	this.dvcDfnShlfLfStrgTypCdgCd = this.dvcDfnShlfLfStrgTypCdgCd+dvcDfnShlfLfStrgTypCdgCd;
+	        } else  {
+	            this.dvcDfnShlfLfStrgTypCdgCd = this.dvcDfnShlfLfStrgTypCdgCd+ "," +dvcDfnShlfLfStrgTypCdgCd;
+	        }
+        }
     }
     
     
@@ -1757,6 +3941,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnShlfLfStrgTypCdgDsply = dvcDfnShlfLfStrgTypCdgDsply;
     }
     
+    public void addDvcDfnShlfLfStrgTypCdgDsply(String dvcDfnShlfLfStrgTypCdgDsply) {
+    	if( dvcDfnShlfLfStrgTypCdgDsply != null ) {
+	    	if( this.dvcDfnShlfLfStrgTypCdgDsply == null ) {
+	        	this.dvcDfnShlfLfStrgTypCdgDsply = dvcDfnShlfLfStrgTypCdgDsply;
+	        } else if(this.dvcDfnShlfLfStrgTypCdgDsply.substring(this.dvcDfnShlfLfStrgTypCdgDsply.length() - 1).equals("]") & dvcDfnShlfLfStrgTypCdgDsply.equals("[")) {
+	        	this.dvcDfnShlfLfStrgTypCdgDsply = this.dvcDfnShlfLfStrgTypCdgDsply+ "," + dvcDfnShlfLfStrgTypCdgDsply;
+	        } else if(dvcDfnShlfLfStrgTypCdgDsply.equals("[") | dvcDfnShlfLfStrgTypCdgDsply.equals("]") | this.dvcDfnShlfLfStrgTypCdgDsply.substring(this.dvcDfnShlfLfStrgTypCdgDsply.length() - 1).equals("[")) {
+	        	this.dvcDfnShlfLfStrgTypCdgDsply = this.dvcDfnShlfLfStrgTypCdgDsply+dvcDfnShlfLfStrgTypCdgDsply;
+	        } else  {
+	            this.dvcDfnShlfLfStrgTypCdgDsply = this.dvcDfnShlfLfStrgTypCdgDsply+ "," +dvcDfnShlfLfStrgTypCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnShlfLfStrgTypCdgSys() {
@@ -1765,6 +3963,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnShlfLfStrgTypCdgSys(String dvcDfnShlfLfStrgTypCdgSys) {
         this.dvcDfnShlfLfStrgTypCdgSys = dvcDfnShlfLfStrgTypCdgSys;
+    }
+    
+    public void addDvcDfnShlfLfStrgTypCdgSys(String dvcDfnShlfLfStrgTypCdgSys) {
+    	if( dvcDfnShlfLfStrgTypCdgSys != null ) {
+	    	if( this.dvcDfnShlfLfStrgTypCdgSys == null ) {
+	        	this.dvcDfnShlfLfStrgTypCdgSys = dvcDfnShlfLfStrgTypCdgSys;
+	        } else if(this.dvcDfnShlfLfStrgTypCdgSys.substring(this.dvcDfnShlfLfStrgTypCdgSys.length() - 1).equals("]") & dvcDfnShlfLfStrgTypCdgSys.equals("[")) {
+	        	this.dvcDfnShlfLfStrgTypCdgSys = this.dvcDfnShlfLfStrgTypCdgSys+ "," + dvcDfnShlfLfStrgTypCdgSys;
+	        } else if(dvcDfnShlfLfStrgTypCdgSys.equals("[") | dvcDfnShlfLfStrgTypCdgSys.equals("]") | this.dvcDfnShlfLfStrgTypCdgSys.substring(this.dvcDfnShlfLfStrgTypCdgSys.length() - 1).equals("[")) {
+	        	this.dvcDfnShlfLfStrgTypCdgSys = this.dvcDfnShlfLfStrgTypCdgSys+dvcDfnShlfLfStrgTypCdgSys;
+	        } else  {
+	            this.dvcDfnShlfLfStrgTypCdgSys = this.dvcDfnShlfLfStrgTypCdgSys+ "," +dvcDfnShlfLfStrgTypCdgSys;
+	        }
+        }
     }
     
     
@@ -1777,6 +3989,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnShlfLfStrgTypCdgUsrSltd = dvcDfnShlfLfStrgTypCdgUsrSltd;
     }
     
+    public void addDvcDfnShlfLfStrgTypCdgUsrSltd(String dvcDfnShlfLfStrgTypCdgUsrSltd) {
+    	if( dvcDfnShlfLfStrgTypCdgUsrSltd != null ) {
+	    	if( this.dvcDfnShlfLfStrgTypCdgUsrSltd == null ) {
+	        	this.dvcDfnShlfLfStrgTypCdgUsrSltd = dvcDfnShlfLfStrgTypCdgUsrSltd;
+	        } else if(this.dvcDfnShlfLfStrgTypCdgUsrSltd.substring(this.dvcDfnShlfLfStrgTypCdgUsrSltd.length() - 1).equals("]") & dvcDfnShlfLfStrgTypCdgUsrSltd.equals("[")) {
+	        	this.dvcDfnShlfLfStrgTypCdgUsrSltd = this.dvcDfnShlfLfStrgTypCdgUsrSltd+ "," + dvcDfnShlfLfStrgTypCdgUsrSltd;
+	        } else if(dvcDfnShlfLfStrgTypCdgUsrSltd.equals("[") | dvcDfnShlfLfStrgTypCdgUsrSltd.equals("]") | this.dvcDfnShlfLfStrgTypCdgUsrSltd.substring(this.dvcDfnShlfLfStrgTypCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.dvcDfnShlfLfStrgTypCdgUsrSltd = this.dvcDfnShlfLfStrgTypCdgUsrSltd+dvcDfnShlfLfStrgTypCdgUsrSltd;
+	        } else  {
+	            this.dvcDfnShlfLfStrgTypCdgUsrSltd = this.dvcDfnShlfLfStrgTypCdgUsrSltd+ "," +dvcDfnShlfLfStrgTypCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnShlfLfStrgTypCdgVrsn() {
@@ -1785,6 +4011,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnShlfLfStrgTypCdgVrsn(String dvcDfnShlfLfStrgTypCdgVrsn) {
         this.dvcDfnShlfLfStrgTypCdgVrsn = dvcDfnShlfLfStrgTypCdgVrsn;
+    }
+    
+    public void addDvcDfnShlfLfStrgTypCdgVrsn(String dvcDfnShlfLfStrgTypCdgVrsn) {
+    	if( dvcDfnShlfLfStrgTypCdgVrsn != null ) {
+	    	if( this.dvcDfnShlfLfStrgTypCdgVrsn == null ) {
+	        	this.dvcDfnShlfLfStrgTypCdgVrsn = dvcDfnShlfLfStrgTypCdgVrsn;
+	        } else if(this.dvcDfnShlfLfStrgTypCdgVrsn.substring(this.dvcDfnShlfLfStrgTypCdgVrsn.length() - 1).equals("]") & dvcDfnShlfLfStrgTypCdgVrsn.equals("[")) {
+	        	this.dvcDfnShlfLfStrgTypCdgVrsn = this.dvcDfnShlfLfStrgTypCdgVrsn+ "," + dvcDfnShlfLfStrgTypCdgVrsn;
+	        } else if(dvcDfnShlfLfStrgTypCdgVrsn.equals("[") | dvcDfnShlfLfStrgTypCdgVrsn.equals("]") | this.dvcDfnShlfLfStrgTypCdgVrsn.substring(this.dvcDfnShlfLfStrgTypCdgVrsn.length() - 1).equals("[")) {
+	        	this.dvcDfnShlfLfStrgTypCdgVrsn = this.dvcDfnShlfLfStrgTypCdgVrsn+dvcDfnShlfLfStrgTypCdgVrsn;
+	        } else  {
+	            this.dvcDfnShlfLfStrgTypCdgVrsn = this.dvcDfnShlfLfStrgTypCdgVrsn+ "," +dvcDfnShlfLfStrgTypCdgVrsn;
+	        }
+        }
     }
     
     
@@ -1797,6 +4037,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnShlfLfStrgTypTxt = dvcDfnShlfLfStrgTypTxt;
     }
     
+    public void addDvcDfnShlfLfStrgTypTxt(String dvcDfnShlfLfStrgTypTxt) {
+    	if( dvcDfnShlfLfStrgTypTxt != null ) {
+	    	if( this.dvcDfnShlfLfStrgTypTxt == null ) {
+	        	this.dvcDfnShlfLfStrgTypTxt = dvcDfnShlfLfStrgTypTxt;
+	        } else if(this.dvcDfnShlfLfStrgTypTxt.substring(this.dvcDfnShlfLfStrgTypTxt.length() - 1).equals("]") & dvcDfnShlfLfStrgTypTxt.equals("[")) {
+	        	this.dvcDfnShlfLfStrgTypTxt = this.dvcDfnShlfLfStrgTypTxt+ "," + dvcDfnShlfLfStrgTypTxt;
+	        } else if(dvcDfnShlfLfStrgTypTxt.equals("[") | dvcDfnShlfLfStrgTypTxt.equals("]") | this.dvcDfnShlfLfStrgTypTxt.substring(this.dvcDfnShlfLfStrgTypTxt.length() - 1).equals("[")) {
+	        	this.dvcDfnShlfLfStrgTypTxt = this.dvcDfnShlfLfStrgTypTxt+dvcDfnShlfLfStrgTypTxt;
+	        } else  {
+	            this.dvcDfnShlfLfStrgTypTxt = this.dvcDfnShlfLfStrgTypTxt+ "," +dvcDfnShlfLfStrgTypTxt;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnSpclizationSysTyp() {
@@ -1805,6 +4059,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnSpclizationSysTyp(String dvcDfnSpclizationSysTyp) {
         this.dvcDfnSpclizationSysTyp = dvcDfnSpclizationSysTyp;
+    }
+    
+    public void addDvcDfnSpclizationSysTyp(String dvcDfnSpclizationSysTyp) {
+    	if( dvcDfnSpclizationSysTyp != null ) {
+	    	if( this.dvcDfnSpclizationSysTyp == null ) {
+	        	this.dvcDfnSpclizationSysTyp = dvcDfnSpclizationSysTyp;
+	        } else if(this.dvcDfnSpclizationSysTyp.substring(this.dvcDfnSpclizationSysTyp.length() - 1).equals("]") & dvcDfnSpclizationSysTyp.equals("[")) {
+	        	this.dvcDfnSpclizationSysTyp = this.dvcDfnSpclizationSysTyp+ "," + dvcDfnSpclizationSysTyp;
+	        } else if(dvcDfnSpclizationSysTyp.equals("[") | dvcDfnSpclizationSysTyp.equals("]") | this.dvcDfnSpclizationSysTyp.substring(this.dvcDfnSpclizationSysTyp.length() - 1).equals("[")) {
+	        	this.dvcDfnSpclizationSysTyp = this.dvcDfnSpclizationSysTyp+dvcDfnSpclizationSysTyp;
+	        } else  {
+	            this.dvcDfnSpclizationSysTyp = this.dvcDfnSpclizationSysTyp+ "," +dvcDfnSpclizationSysTyp;
+	        }
+        }
     }
     
     
@@ -1817,6 +4085,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnSpclizationVrsn = dvcDfnSpclizationVrsn;
     }
     
+    public void addDvcDfnSpclizationVrsn(String dvcDfnSpclizationVrsn) {
+    	if( dvcDfnSpclizationVrsn != null ) {
+	    	if( this.dvcDfnSpclizationVrsn == null ) {
+	        	this.dvcDfnSpclizationVrsn = dvcDfnSpclizationVrsn;
+	        } else if(this.dvcDfnSpclizationVrsn.substring(this.dvcDfnSpclizationVrsn.length() - 1).equals("]") & dvcDfnSpclizationVrsn.equals("[")) {
+	        	this.dvcDfnSpclizationVrsn = this.dvcDfnSpclizationVrsn+ "," + dvcDfnSpclizationVrsn;
+	        } else if(dvcDfnSpclizationVrsn.equals("[") | dvcDfnSpclizationVrsn.equals("]") | this.dvcDfnSpclizationVrsn.substring(this.dvcDfnSpclizationVrsn.length() - 1).equals("[")) {
+	        	this.dvcDfnSpclizationVrsn = this.dvcDfnSpclizationVrsn+dvcDfnSpclizationVrsn;
+	        } else  {
+	            this.dvcDfnSpclizationVrsn = this.dvcDfnSpclizationVrsn+ "," +dvcDfnSpclizationVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnTypCdgCd() {
@@ -1825,6 +4107,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnTypCdgCd(String dvcDfnTypCdgCd) {
         this.dvcDfnTypCdgCd = dvcDfnTypCdgCd;
+    }
+    
+    public void addDvcDfnTypCdgCd(String dvcDfnTypCdgCd) {
+    	if( dvcDfnTypCdgCd != null ) {
+	    	if( this.dvcDfnTypCdgCd == null ) {
+	        	this.dvcDfnTypCdgCd = dvcDfnTypCdgCd;
+	        } else if(this.dvcDfnTypCdgCd.substring(this.dvcDfnTypCdgCd.length() - 1).equals("]") & dvcDfnTypCdgCd.equals("[")) {
+	        	this.dvcDfnTypCdgCd = this.dvcDfnTypCdgCd+ "," + dvcDfnTypCdgCd;
+	        } else if(dvcDfnTypCdgCd.equals("[") | dvcDfnTypCdgCd.equals("]") | this.dvcDfnTypCdgCd.substring(this.dvcDfnTypCdgCd.length() - 1).equals("[")) {
+	        	this.dvcDfnTypCdgCd = this.dvcDfnTypCdgCd+dvcDfnTypCdgCd;
+	        } else  {
+	            this.dvcDfnTypCdgCd = this.dvcDfnTypCdgCd+ "," +dvcDfnTypCdgCd;
+	        }
+        }
     }
     
     
@@ -1837,6 +4133,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnTypCdgDsply = dvcDfnTypCdgDsply;
     }
     
+    public void addDvcDfnTypCdgDsply(String dvcDfnTypCdgDsply) {
+    	if( dvcDfnTypCdgDsply != null ) {
+	    	if( this.dvcDfnTypCdgDsply == null ) {
+	        	this.dvcDfnTypCdgDsply = dvcDfnTypCdgDsply;
+	        } else if(this.dvcDfnTypCdgDsply.substring(this.dvcDfnTypCdgDsply.length() - 1).equals("]") & dvcDfnTypCdgDsply.equals("[")) {
+	        	this.dvcDfnTypCdgDsply = this.dvcDfnTypCdgDsply+ "," + dvcDfnTypCdgDsply;
+	        } else if(dvcDfnTypCdgDsply.equals("[") | dvcDfnTypCdgDsply.equals("]") | this.dvcDfnTypCdgDsply.substring(this.dvcDfnTypCdgDsply.length() - 1).equals("[")) {
+	        	this.dvcDfnTypCdgDsply = this.dvcDfnTypCdgDsply+dvcDfnTypCdgDsply;
+	        } else  {
+	            this.dvcDfnTypCdgDsply = this.dvcDfnTypCdgDsply+ "," +dvcDfnTypCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnTypCdgSys() {
@@ -1845,6 +4155,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnTypCdgSys(String dvcDfnTypCdgSys) {
         this.dvcDfnTypCdgSys = dvcDfnTypCdgSys;
+    }
+    
+    public void addDvcDfnTypCdgSys(String dvcDfnTypCdgSys) {
+    	if( dvcDfnTypCdgSys != null ) {
+	    	if( this.dvcDfnTypCdgSys == null ) {
+	        	this.dvcDfnTypCdgSys = dvcDfnTypCdgSys;
+	        } else if(this.dvcDfnTypCdgSys.substring(this.dvcDfnTypCdgSys.length() - 1).equals("]") & dvcDfnTypCdgSys.equals("[")) {
+	        	this.dvcDfnTypCdgSys = this.dvcDfnTypCdgSys+ "," + dvcDfnTypCdgSys;
+	        } else if(dvcDfnTypCdgSys.equals("[") | dvcDfnTypCdgSys.equals("]") | this.dvcDfnTypCdgSys.substring(this.dvcDfnTypCdgSys.length() - 1).equals("[")) {
+	        	this.dvcDfnTypCdgSys = this.dvcDfnTypCdgSys+dvcDfnTypCdgSys;
+	        } else  {
+	            this.dvcDfnTypCdgSys = this.dvcDfnTypCdgSys+ "," +dvcDfnTypCdgSys;
+	        }
+        }
     }
     
     
@@ -1857,6 +4181,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnTypCdgUsrSltd = dvcDfnTypCdgUsrSltd;
     }
     
+    public void addDvcDfnTypCdgUsrSltd(String dvcDfnTypCdgUsrSltd) {
+    	if( dvcDfnTypCdgUsrSltd != null ) {
+	    	if( this.dvcDfnTypCdgUsrSltd == null ) {
+	        	this.dvcDfnTypCdgUsrSltd = dvcDfnTypCdgUsrSltd;
+	        } else if(this.dvcDfnTypCdgUsrSltd.substring(this.dvcDfnTypCdgUsrSltd.length() - 1).equals("]") & dvcDfnTypCdgUsrSltd.equals("[")) {
+	        	this.dvcDfnTypCdgUsrSltd = this.dvcDfnTypCdgUsrSltd+ "," + dvcDfnTypCdgUsrSltd;
+	        } else if(dvcDfnTypCdgUsrSltd.equals("[") | dvcDfnTypCdgUsrSltd.equals("]") | this.dvcDfnTypCdgUsrSltd.substring(this.dvcDfnTypCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.dvcDfnTypCdgUsrSltd = this.dvcDfnTypCdgUsrSltd+dvcDfnTypCdgUsrSltd;
+	        } else  {
+	            this.dvcDfnTypCdgUsrSltd = this.dvcDfnTypCdgUsrSltd+ "," +dvcDfnTypCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnTypCdgVrsn() {
@@ -1865,6 +4203,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnTypCdgVrsn(String dvcDfnTypCdgVrsn) {
         this.dvcDfnTypCdgVrsn = dvcDfnTypCdgVrsn;
+    }
+    
+    public void addDvcDfnTypCdgVrsn(String dvcDfnTypCdgVrsn) {
+    	if( dvcDfnTypCdgVrsn != null ) {
+	    	if( this.dvcDfnTypCdgVrsn == null ) {
+	        	this.dvcDfnTypCdgVrsn = dvcDfnTypCdgVrsn;
+	        } else if(this.dvcDfnTypCdgVrsn.substring(this.dvcDfnTypCdgVrsn.length() - 1).equals("]") & dvcDfnTypCdgVrsn.equals("[")) {
+	        	this.dvcDfnTypCdgVrsn = this.dvcDfnTypCdgVrsn+ "," + dvcDfnTypCdgVrsn;
+	        } else if(dvcDfnTypCdgVrsn.equals("[") | dvcDfnTypCdgVrsn.equals("]") | this.dvcDfnTypCdgVrsn.substring(this.dvcDfnTypCdgVrsn.length() - 1).equals("[")) {
+	        	this.dvcDfnTypCdgVrsn = this.dvcDfnTypCdgVrsn+dvcDfnTypCdgVrsn;
+	        } else  {
+	            this.dvcDfnTypCdgVrsn = this.dvcDfnTypCdgVrsn+ "," +dvcDfnTypCdgVrsn;
+	        }
+        }
     }
     
     
@@ -1877,6 +4229,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnTypTxt = dvcDfnTypTxt;
     }
     
+    public void addDvcDfnTypTxt(String dvcDfnTypTxt) {
+    	if( dvcDfnTypTxt != null ) {
+	    	if( this.dvcDfnTypTxt == null ) {
+	        	this.dvcDfnTypTxt = dvcDfnTypTxt;
+	        } else if(this.dvcDfnTypTxt.substring(this.dvcDfnTypTxt.length() - 1).equals("]") & dvcDfnTypTxt.equals("[")) {
+	        	this.dvcDfnTypTxt = this.dvcDfnTypTxt+ "," + dvcDfnTypTxt;
+	        } else if(dvcDfnTypTxt.equals("[") | dvcDfnTypTxt.equals("]") | this.dvcDfnTypTxt.substring(this.dvcDfnTypTxt.length() - 1).equals("[")) {
+	        	this.dvcDfnTypTxt = this.dvcDfnTypTxt+dvcDfnTypTxt;
+	        } else  {
+	            this.dvcDfnTypTxt = this.dvcDfnTypTxt+ "," +dvcDfnTypTxt;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnUdiDvcIdDvcId() {
@@ -1885,6 +4251,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnUdiDvcIdDvcId(String dvcDfnUdiDvcIdDvcId) {
         this.dvcDfnUdiDvcIdDvcId = dvcDfnUdiDvcIdDvcId;
+    }
+    
+    public void addDvcDfnUdiDvcIdDvcId(String dvcDfnUdiDvcIdDvcId) {
+    	if( dvcDfnUdiDvcIdDvcId != null ) {
+	    	if( this.dvcDfnUdiDvcIdDvcId == null ) {
+	        	this.dvcDfnUdiDvcIdDvcId = dvcDfnUdiDvcIdDvcId;
+	        } else if(this.dvcDfnUdiDvcIdDvcId.substring(this.dvcDfnUdiDvcIdDvcId.length() - 1).equals("]") & dvcDfnUdiDvcIdDvcId.equals("[")) {
+	        	this.dvcDfnUdiDvcIdDvcId = this.dvcDfnUdiDvcIdDvcId+ "," + dvcDfnUdiDvcIdDvcId;
+	        } else if(dvcDfnUdiDvcIdDvcId.equals("[") | dvcDfnUdiDvcIdDvcId.equals("]") | this.dvcDfnUdiDvcIdDvcId.substring(this.dvcDfnUdiDvcIdDvcId.length() - 1).equals("[")) {
+	        	this.dvcDfnUdiDvcIdDvcId = this.dvcDfnUdiDvcIdDvcId+dvcDfnUdiDvcIdDvcId;
+	        } else  {
+	            this.dvcDfnUdiDvcIdDvcId = this.dvcDfnUdiDvcIdDvcId+ "," +dvcDfnUdiDvcIdDvcId;
+	        }
+        }
     }
     
     
@@ -1897,6 +4277,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnUdiDvcIdIssuer = dvcDfnUdiDvcIdIssuer;
     }
     
+    public void addDvcDfnUdiDvcIdIssuer(String dvcDfnUdiDvcIdIssuer) {
+    	if( dvcDfnUdiDvcIdIssuer != null ) {
+	    	if( this.dvcDfnUdiDvcIdIssuer == null ) {
+	        	this.dvcDfnUdiDvcIdIssuer = dvcDfnUdiDvcIdIssuer;
+	        } else if(this.dvcDfnUdiDvcIdIssuer.substring(this.dvcDfnUdiDvcIdIssuer.length() - 1).equals("]") & dvcDfnUdiDvcIdIssuer.equals("[")) {
+	        	this.dvcDfnUdiDvcIdIssuer = this.dvcDfnUdiDvcIdIssuer+ "," + dvcDfnUdiDvcIdIssuer;
+	        } else if(dvcDfnUdiDvcIdIssuer.equals("[") | dvcDfnUdiDvcIdIssuer.equals("]") | this.dvcDfnUdiDvcIdIssuer.substring(this.dvcDfnUdiDvcIdIssuer.length() - 1).equals("[")) {
+	        	this.dvcDfnUdiDvcIdIssuer = this.dvcDfnUdiDvcIdIssuer+dvcDfnUdiDvcIdIssuer;
+	        } else  {
+	            this.dvcDfnUdiDvcIdIssuer = this.dvcDfnUdiDvcIdIssuer+ "," +dvcDfnUdiDvcIdIssuer;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnUdiDvcIdJrsdctn() {
@@ -1905,6 +4299,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnUdiDvcIdJrsdctn(String dvcDfnUdiDvcIdJrsdctn) {
         this.dvcDfnUdiDvcIdJrsdctn = dvcDfnUdiDvcIdJrsdctn;
+    }
+    
+    public void addDvcDfnUdiDvcIdJrsdctn(String dvcDfnUdiDvcIdJrsdctn) {
+    	if( dvcDfnUdiDvcIdJrsdctn != null ) {
+	    	if( this.dvcDfnUdiDvcIdJrsdctn == null ) {
+	        	this.dvcDfnUdiDvcIdJrsdctn = dvcDfnUdiDvcIdJrsdctn;
+	        } else if(this.dvcDfnUdiDvcIdJrsdctn.substring(this.dvcDfnUdiDvcIdJrsdctn.length() - 1).equals("]") & dvcDfnUdiDvcIdJrsdctn.equals("[")) {
+	        	this.dvcDfnUdiDvcIdJrsdctn = this.dvcDfnUdiDvcIdJrsdctn+ "," + dvcDfnUdiDvcIdJrsdctn;
+	        } else if(dvcDfnUdiDvcIdJrsdctn.equals("[") | dvcDfnUdiDvcIdJrsdctn.equals("]") | this.dvcDfnUdiDvcIdJrsdctn.substring(this.dvcDfnUdiDvcIdJrsdctn.length() - 1).equals("[")) {
+	        	this.dvcDfnUdiDvcIdJrsdctn = this.dvcDfnUdiDvcIdJrsdctn+dvcDfnUdiDvcIdJrsdctn;
+	        } else  {
+	            this.dvcDfnUdiDvcIdJrsdctn = this.dvcDfnUdiDvcIdJrsdctn+ "," +dvcDfnUdiDvcIdJrsdctn;
+	        }
+        }
     }
     
     
@@ -1917,6 +4325,20 @@ public class DeviceDefinition  implements java.io.Serializable {
         this.dvcDfnUrl = dvcDfnUrl;
     }
     
+    public void addDvcDfnUrl(String dvcDfnUrl) {
+    	if( dvcDfnUrl != null ) {
+	    	if( this.dvcDfnUrl == null ) {
+	        	this.dvcDfnUrl = dvcDfnUrl;
+	        } else if(this.dvcDfnUrl.substring(this.dvcDfnUrl.length() - 1).equals("]") & dvcDfnUrl.equals("[")) {
+	        	this.dvcDfnUrl = this.dvcDfnUrl+ "," + dvcDfnUrl;
+	        } else if(dvcDfnUrl.equals("[") | dvcDfnUrl.equals("]") | this.dvcDfnUrl.substring(this.dvcDfnUrl.length() - 1).equals("[")) {
+	        	this.dvcDfnUrl = this.dvcDfnUrl+dvcDfnUrl;
+	        } else  {
+	            this.dvcDfnUrl = this.dvcDfnUrl+ "," +dvcDfnUrl;
+	        }
+        }
+    }
+    
     
     
     public String getDvcDfnVrsn() {
@@ -1925,6 +4347,20 @@ public class DeviceDefinition  implements java.io.Serializable {
     
     public void setDvcDfnVrsn(String dvcDfnVrsn) {
         this.dvcDfnVrsn = dvcDfnVrsn;
+    }
+    
+    public void addDvcDfnVrsn(String dvcDfnVrsn) {
+    	if( dvcDfnVrsn != null ) {
+	    	if( this.dvcDfnVrsn == null ) {
+	        	this.dvcDfnVrsn = dvcDfnVrsn;
+	        } else if(this.dvcDfnVrsn.substring(this.dvcDfnVrsn.length() - 1).equals("]") & dvcDfnVrsn.equals("[")) {
+	        	this.dvcDfnVrsn = this.dvcDfnVrsn+ "," + dvcDfnVrsn;
+	        } else if(dvcDfnVrsn.equals("[") | dvcDfnVrsn.equals("]") | this.dvcDfnVrsn.substring(this.dvcDfnVrsn.length() - 1).equals("[")) {
+	        	this.dvcDfnVrsn = this.dvcDfnVrsn+dvcDfnVrsn;
+	        } else  {
+	            this.dvcDfnVrsn = this.dvcDfnVrsn+ "," +dvcDfnVrsn;
+	        }
+        }
     }
     
     

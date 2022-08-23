@@ -10,281 +10,484 @@ public class BiologicallyDerivedProductConversion
 		/******************** id ********************************************************************************/
 		biologicallyderivedproduct.setId(b.getId());
 
-		/******************** biologicallyderivedproductcollection ********************************************************************************/
-		org.hl7.fhir.r4.model.BiologicallyDerivedProduct.BiologicallyDerivedProductCollectionComponent biologicallyderivedproductcollection =  new org.hl7.fhir.r4.model.BiologicallyDerivedProduct.BiologicallyDerivedProductCollectionComponent();
-		biologicallyderivedproduct.setCollection(biologicallyderivedproductcollection);
-
 		/******************** BiologicallyDerivedPrdct_Collection_CollectedDtTimeTyp ********************************************************************************/
-		if(b.getBiologicallyDerivedPrdctCollectionCollectedDtTimeTyp() != null) {
-			biologicallyderivedproductcollection.setCollected( new org.hl7.fhir.r4.model.DateTimeType(b.getBiologicallyDerivedPrdctCollectionCollectedDtTimeTyp()));
-		}
-		/******************** biologicallyderivedproductcollectioncollectedperiod ********************************************************************************/
-		org.hl7.fhir.r4.model.Period biologicallyderivedproductcollectioncollectedperiod =  new org.hl7.fhir.r4.model.Period();
-		biologicallyderivedproductcollection.setCollected(biologicallyderivedproductcollectioncollectedperiod);
+		if(b.getBiologicallyDerivedPrdctCollectionCollectedDtTimeTyp() != null ) {
 
+			if(b.getBiologicallyDerivedPrdctCollectionCollectedDtTimeTyp().replace("[","").replace("]","").equals("NULL") | b.getBiologicallyDerivedPrdctCollectionCollectedDtTimeTyp()==null) {} else {
+			biologicallyderivedproduct.getCollection().setCollected(new org.hl7.fhir.r4.model.DateTimeType(b.getBiologicallyDerivedPrdctCollectionCollectedDtTimeTyp().replace("[","").replace("]","").replace("\"","")));
+			}
+		}
 		/******************** BiologicallyDerivedPrdct_Collection_CollectedPrd_End ********************************************************************************/
-		if(b.getBiologicallyDerivedPrdctCollectionCollectedPrdEnd() != null) {
-			java.text.SimpleDateFormat BiologicallyDerivedPrdct_Collection_CollectedPrd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date BiologicallyDerivedPrdct_Collection_CollectedPrd_Enddate = BiologicallyDerivedPrdct_Collection_CollectedPrd_Endsdf.parse(b.getBiologicallyDerivedPrdctCollectionCollectedPrdEnd());
-			biologicallyderivedproductcollectioncollectedperiod.setEnd(BiologicallyDerivedPrdct_Collection_CollectedPrd_Enddate);
+		if(b.getBiologicallyDerivedPrdctCollectionCollectedPrdEnd() != null ) {
+
+			if(b.getBiologicallyDerivedPrdctCollectionCollectedPrdEnd().replace("[","").replace("]","").equals("NULL") | b.getBiologicallyDerivedPrdctCollectionCollectedPrdEnd()==null) {} else {
+			biologicallyderivedproduct.getCollection().getCollectedPeriod().setEnd(b.getBiologicallyDerivedPrdctCollectionCollectedPrdEnd().replace("[","").replace("]","").equals("NULL") | b.getBiologicallyDerivedPrdctCollectionCollectedPrdEnd()==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(b.getBiologicallyDerivedPrdctCollectionCollectedPrdEnd().replace("[","").replace("]","").replace("\"","")));
+			}
 		}
 		/******************** BiologicallyDerivedPrdct_Collection_CollectedPrd_Strt ********************************************************************************/
-		if(b.getBiologicallyDerivedPrdctCollectionCollectedPrdStrt() != null) {
-			java.text.SimpleDateFormat BiologicallyDerivedPrdct_Collection_CollectedPrd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date BiologicallyDerivedPrdct_Collection_CollectedPrd_Strtdate = BiologicallyDerivedPrdct_Collection_CollectedPrd_Strtsdf.parse(b.getBiologicallyDerivedPrdctCollectionCollectedPrdStrt());
-			biologicallyderivedproductcollectioncollectedperiod.setStart(BiologicallyDerivedPrdct_Collection_CollectedPrd_Strtdate);
+		if(b.getBiologicallyDerivedPrdctCollectionCollectedPrdStrt() != null ) {
+
+			if(b.getBiologicallyDerivedPrdctCollectionCollectedPrdStrt().replace("[","").replace("]","").equals("NULL") | b.getBiologicallyDerivedPrdctCollectionCollectedPrdStrt()==null) {} else {
+			biologicallyderivedproduct.getCollection().getCollectedPeriod().setStart(b.getBiologicallyDerivedPrdctCollectionCollectedPrdStrt().replace("[","").replace("]","").equals("NULL") | b.getBiologicallyDerivedPrdctCollectionCollectedPrdStrt()==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(b.getBiologicallyDerivedPrdctCollectionCollectedPrdStrt().replace("[","").replace("]","").replace("\"","")));
+			}
 		}
 		/******************** BiologicallyDerivedPrdct_Collection_Collector ********************************************************************************/
-		if(b.getBiologicallyDerivedPrdctCollectionCollector() != null) {
-			biologicallyderivedproductcollection.setCollector( new org.hl7.fhir.r4.model.Reference(b.getBiologicallyDerivedPrdctCollectionCollector()));
+		if(b.getBiologicallyDerivedPrdctCollectionCollector() != null ) {
+
+			if(b.getBiologicallyDerivedPrdctCollectionCollector().replace("[","").replace("]","").equals("NULL") | b.getBiologicallyDerivedPrdctCollectionCollector()==null) {} else {
+			biologicallyderivedproduct.getCollection().setCollector(new org.hl7.fhir.r4.model.Reference(b.getBiologicallyDerivedPrdctCollectionCollector().replace("[","").replace("]","").replace("\"","")));
+			}
 		}
 		/******************** BiologicallyDerivedPrdct_Collection_Src ********************************************************************************/
-		if(b.getBiologicallyDerivedPrdctCollectionSrc() != null) {
-			biologicallyderivedproductcollection.setSource( new org.hl7.fhir.r4.model.Reference(b.getBiologicallyDerivedPrdctCollectionSrc()));
-		}
-		/******************** biologicallyderivedproductidentifier ********************************************************************************/
-		org.hl7.fhir.r4.model.Identifier biologicallyderivedproductidentifier =  new org.hl7.fhir.r4.model.Identifier();
-		biologicallyderivedproduct.addIdentifier(biologicallyderivedproductidentifier);
+		if(b.getBiologicallyDerivedPrdctCollectionSrc() != null ) {
 
+			if(b.getBiologicallyDerivedPrdctCollectionSrc().replace("[","").replace("]","").equals("NULL") | b.getBiologicallyDerivedPrdctCollectionSrc()==null) {} else {
+			biologicallyderivedproduct.getCollection().setSource(new org.hl7.fhir.r4.model.Reference(b.getBiologicallyDerivedPrdctCollectionSrc().replace("[","").replace("]","").replace("\"","")));
+			}
+		}
 		/******************** BiologicallyDerivedPrdct_Id_Assigner ********************************************************************************/
-		if(b.getBiologicallyDerivedPrdctIdAssigner() != null) {
-			biologicallyderivedproductidentifier.setAssigner( new org.hl7.fhir.r4.model.Reference(b.getBiologicallyDerivedPrdctIdAssigner()));
-		}
-		/******************** biologicallyderivedproductidentifierperiod ********************************************************************************/
-		org.hl7.fhir.r4.model.Period biologicallyderivedproductidentifierperiod =  new org.hl7.fhir.r4.model.Period();
-		biologicallyderivedproductidentifier.setPeriod(biologicallyderivedproductidentifierperiod);
+		if(b.getBiologicallyDerivedPrdctIdAssigner() != null ) {
 
+			String[] arrayi0 = b.getBiologicallyDerivedPrdctIdAssigner().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(biologicallyderivedproduct.getIdentifier().size() < i0+1) { biologicallyderivedproduct.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {biologicallyderivedproduct.getIdentifier().get(i0).setAssigner(new org.hl7.fhir.r4.model.Reference(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** BiologicallyDerivedPrdct_Id_Prd_End ********************************************************************************/
-		if(b.getBiologicallyDerivedPrdctIdPrdEnd() != null) {
-			java.text.SimpleDateFormat BiologicallyDerivedPrdct_Id_Prd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date BiologicallyDerivedPrdct_Id_Prd_Enddate = BiologicallyDerivedPrdct_Id_Prd_Endsdf.parse(b.getBiologicallyDerivedPrdctIdPrdEnd());
-			biologicallyderivedproductidentifierperiod.setEnd(BiologicallyDerivedPrdct_Id_Prd_Enddate);
+		if(b.getBiologicallyDerivedPrdctIdPrdEnd() != null ) {
+
+			String[] arrayi0 = b.getBiologicallyDerivedPrdctIdPrdEnd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(biologicallyderivedproduct.getIdentifier().size() < i0+1) { biologicallyderivedproduct.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {biologicallyderivedproduct.getIdentifier().get(i0).getPeriod().setEnd(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** BiologicallyDerivedPrdct_Id_Prd_Strt ********************************************************************************/
-		if(b.getBiologicallyDerivedPrdctIdPrdStrt() != null) {
-			java.text.SimpleDateFormat BiologicallyDerivedPrdct_Id_Prd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date BiologicallyDerivedPrdct_Id_Prd_Strtdate = BiologicallyDerivedPrdct_Id_Prd_Strtsdf.parse(b.getBiologicallyDerivedPrdctIdPrdStrt());
-			biologicallyderivedproductidentifierperiod.setStart(BiologicallyDerivedPrdct_Id_Prd_Strtdate);
+		if(b.getBiologicallyDerivedPrdctIdPrdStrt() != null ) {
+
+			String[] arrayi0 = b.getBiologicallyDerivedPrdctIdPrdStrt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(biologicallyderivedproduct.getIdentifier().size() < i0+1) { biologicallyderivedproduct.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {biologicallyderivedproduct.getIdentifier().get(i0).getPeriod().setStart(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** BiologicallyDerivedPrdct_Id_Sys ********************************************************************************/
-		if(b.getBiologicallyDerivedPrdctIdSys() != null) {
-			biologicallyderivedproductidentifier.setSystem(b.getBiologicallyDerivedPrdctIdSys());
+		if(b.getBiologicallyDerivedPrdctIdSys() != null ) {
+
+			String[] arrayi0 = b.getBiologicallyDerivedPrdctIdSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(biologicallyderivedproduct.getIdentifier().size() < i0+1) { biologicallyderivedproduct.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {biologicallyderivedproduct.getIdentifier().get(i0).setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
-		/******************** biologicallyderivedproductidentifiertype ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept biologicallyderivedproductidentifiertype =  new org.hl7.fhir.r4.model.CodeableConcept();
-		biologicallyderivedproductidentifier.setType(biologicallyderivedproductidentifiertype);
-
-		/******************** biologicallyderivedproductidentifiertypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding biologicallyderivedproductidentifiertypecoding =  new org.hl7.fhir.r4.model.Coding();
-		biologicallyderivedproductidentifiertype.addCoding(biologicallyderivedproductidentifiertypecoding);
-
 		/******************** BiologicallyDerivedPrdct_Id_Typ_Cdg_Cd ********************************************************************************/
-		if(b.getBiologicallyDerivedPrdctIdTypCdgCd() != null) {
-			biologicallyderivedproductidentifiertypecoding.setCode(b.getBiologicallyDerivedPrdctIdTypCdgCd());
+		if(b.getBiologicallyDerivedPrdctIdTypCdgCd() != null ) {
+
+			String[] arrayi0 = b.getBiologicallyDerivedPrdctIdTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(biologicallyderivedproduct.getIdentifier().size() < i0+1) { biologicallyderivedproduct.addIdentifier(); }
+				String[] arrayi1 = b.getBiologicallyDerivedPrdctIdTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(biologicallyderivedproduct.getIdentifier().get(i0).getType().getCoding().size() < i1+1) { biologicallyderivedproduct.getIdentifier().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {biologicallyderivedproduct.getIdentifier().get(i0).getType().getCoding().get(i1).setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** BiologicallyDerivedPrdct_Id_Typ_Cdg_Dsply ********************************************************************************/
-		if(b.getBiologicallyDerivedPrdctIdTypCdgDsply() != null) {
-			biologicallyderivedproductidentifiertypecoding.setDisplay(b.getBiologicallyDerivedPrdctIdTypCdgDsply());
+		if(b.getBiologicallyDerivedPrdctIdTypCdgDsply() != null ) {
+
+			String[] arrayi0 = b.getBiologicallyDerivedPrdctIdTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(biologicallyderivedproduct.getIdentifier().size() < i0+1) { biologicallyderivedproduct.addIdentifier(); }
+				String[] arrayi1 = b.getBiologicallyDerivedPrdctIdTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(biologicallyderivedproduct.getIdentifier().get(i0).getType().getCoding().size() < i1+1) { biologicallyderivedproduct.getIdentifier().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {biologicallyderivedproduct.getIdentifier().get(i0).getType().getCoding().get(i1).setDisplay(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** BiologicallyDerivedPrdct_Id_Typ_Cdg_Sys ********************************************************************************/
-		if(b.getBiologicallyDerivedPrdctIdTypCdgSys() != null) {
-			biologicallyderivedproductidentifiertypecoding.setSystem(b.getBiologicallyDerivedPrdctIdTypCdgSys());
+		if(b.getBiologicallyDerivedPrdctIdTypCdgSys() != null ) {
+
+			String[] arrayi0 = b.getBiologicallyDerivedPrdctIdTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(biologicallyderivedproduct.getIdentifier().size() < i0+1) { biologicallyderivedproduct.addIdentifier(); }
+				String[] arrayi1 = b.getBiologicallyDerivedPrdctIdTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(biologicallyderivedproduct.getIdentifier().get(i0).getType().getCoding().size() < i1+1) { biologicallyderivedproduct.getIdentifier().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {biologicallyderivedproduct.getIdentifier().get(i0).getType().getCoding().get(i1).setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** BiologicallyDerivedPrdct_Id_Typ_Cdg_UsrSltd ********************************************************************************/
-		if(b.getBiologicallyDerivedPrdctIdTypCdgUsrSltd() != null) {
-			biologicallyderivedproductidentifiertypecoding.setUserSelected(Boolean.parseBoolean(b.getBiologicallyDerivedPrdctIdTypCdgUsrSltd()));
+		if(b.getBiologicallyDerivedPrdctIdTypCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = b.getBiologicallyDerivedPrdctIdTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(biologicallyderivedproduct.getIdentifier().size() < i0+1) { biologicallyderivedproduct.addIdentifier(); }
+				String[] arrayi1 = b.getBiologicallyDerivedPrdctIdTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(biologicallyderivedproduct.getIdentifier().get(i0).getType().getCoding().size() < i1+1) { biologicallyderivedproduct.getIdentifier().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {biologicallyderivedproduct.getIdentifier().get(i0).getType().getCoding().get(i1).setUserSelected(Boolean.parseBoolean(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
 		}
 		/******************** BiologicallyDerivedPrdct_Id_Typ_Cdg_Vrsn ********************************************************************************/
-		if(b.getBiologicallyDerivedPrdctIdTypCdgVrsn() != null) {
-			biologicallyderivedproductidentifiertypecoding.setVersion(b.getBiologicallyDerivedPrdctIdTypCdgVrsn());
+		if(b.getBiologicallyDerivedPrdctIdTypCdgVrsn() != null ) {
+
+			String[] arrayi0 = b.getBiologicallyDerivedPrdctIdTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(biologicallyderivedproduct.getIdentifier().size() < i0+1) { biologicallyderivedproduct.addIdentifier(); }
+				String[] arrayi1 = b.getBiologicallyDerivedPrdctIdTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(biologicallyderivedproduct.getIdentifier().get(i0).getType().getCoding().size() < i1+1) { biologicallyderivedproduct.getIdentifier().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {biologicallyderivedproduct.getIdentifier().get(i0).getType().getCoding().get(i1).setVersion(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** BiologicallyDerivedPrdct_Id_Typ_Txt ********************************************************************************/
-		if(b.getBiologicallyDerivedPrdctIdTypTxt() != null) {
-			biologicallyderivedproductidentifiertype.setText(b.getBiologicallyDerivedPrdctIdTypTxt());
-		}
-		/******************** biologicallyderivedproductidentifieruse ********************************************************************************/
-		org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory biologicallyderivedproductidentifieruse =  new org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory();
-		biologicallyderivedproductidentifier.setUse(biologicallyderivedproductidentifieruse.fromCode(b.getBiologicallyDerivedPrdctIdUse()));
+		if(b.getBiologicallyDerivedPrdctIdTypTxt() != null ) {
 
+			String[] arrayi0 = b.getBiologicallyDerivedPrdctIdTypTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(biologicallyderivedproduct.getIdentifier().size() < i0+1) { biologicallyderivedproduct.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {biologicallyderivedproduct.getIdentifier().get(i0).getType().setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
+		}
+		/******************** BiologicallyDerivedPrdct_Id_Use ********************************************************************************/
+		if(b.getBiologicallyDerivedPrdctIdUse() != null ) {
+
+			String[] arrayi0 = b.getBiologicallyDerivedPrdctIdUse().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(biologicallyderivedproduct.getIdentifier().size() < i0+1) { biologicallyderivedproduct.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {biologicallyderivedproduct.getIdentifier().get(i0).setUse(new org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory().fromCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** BiologicallyDerivedPrdct_Id_Vl ********************************************************************************/
-		if(b.getBiologicallyDerivedPrdctIdVl() != null) {
-			biologicallyderivedproductidentifier.setValue(b.getBiologicallyDerivedPrdctIdVl());
-		}
-		/******************** biologicallyderivedproductmanipulation ********************************************************************************/
-		org.hl7.fhir.r4.model.BiologicallyDerivedProduct.BiologicallyDerivedProductManipulationComponent biologicallyderivedproductmanipulation =  new org.hl7.fhir.r4.model.BiologicallyDerivedProduct.BiologicallyDerivedProductManipulationComponent();
-		biologicallyderivedproduct.setManipulation(biologicallyderivedproductmanipulation);
+		if(b.getBiologicallyDerivedPrdctIdVl() != null ) {
 
+			String[] arrayi0 = b.getBiologicallyDerivedPrdctIdVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(biologicallyderivedproduct.getIdentifier().size() < i0+1) { biologicallyderivedproduct.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {biologicallyderivedproduct.getIdentifier().get(i0).setValue(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
+		}
 		/******************** BiologicallyDerivedPrdct_Manipulation_Dscrptn ********************************************************************************/
-		if(b.getBiologicallyDerivedPrdctManipulationDscrptn() != null) {
-			biologicallyderivedproductmanipulation.setDescription(b.getBiologicallyDerivedPrdctManipulationDscrptn());
+		if(b.getBiologicallyDerivedPrdctManipulationDscrptn() != null ) {
+
+			if(b.getBiologicallyDerivedPrdctManipulationDscrptn().replace("[","").replace("]","").equals("NULL") | b.getBiologicallyDerivedPrdctManipulationDscrptn()==null) {} else {
+			biologicallyderivedproduct.getManipulation().setDescription(b.getBiologicallyDerivedPrdctManipulationDscrptn().replace("[","").replace("]","").replace("\"",""));
+			}
 		}
 		/******************** BiologicallyDerivedPrdct_Manipulation_TimeDtTimeTyp ********************************************************************************/
-		if(b.getBiologicallyDerivedPrdctManipulationTimeDtTimeTyp() != null) {
-			biologicallyderivedproductmanipulation.setTime( new org.hl7.fhir.r4.model.DateTimeType(b.getBiologicallyDerivedPrdctManipulationTimeDtTimeTyp()));
-		}
-		/******************** biologicallyderivedproductmanipulationtimeperiod ********************************************************************************/
-		org.hl7.fhir.r4.model.Period biologicallyderivedproductmanipulationtimeperiod =  new org.hl7.fhir.r4.model.Period();
-		biologicallyderivedproductmanipulation.setTime(biologicallyderivedproductmanipulationtimeperiod);
+		if(b.getBiologicallyDerivedPrdctManipulationTimeDtTimeTyp() != null ) {
 
+			if(b.getBiologicallyDerivedPrdctManipulationTimeDtTimeTyp().replace("[","").replace("]","").equals("NULL") | b.getBiologicallyDerivedPrdctManipulationTimeDtTimeTyp()==null) {} else {
+			biologicallyderivedproduct.getManipulation().setTime(new org.hl7.fhir.r4.model.DateTimeType(b.getBiologicallyDerivedPrdctManipulationTimeDtTimeTyp().replace("[","").replace("]","").replace("\"","")));
+			}
+		}
 		/******************** BiologicallyDerivedPrdct_Manipulation_TimePrd_End ********************************************************************************/
-		if(b.getBiologicallyDerivedPrdctManipulationTimePrdEnd() != null) {
-			java.text.SimpleDateFormat BiologicallyDerivedPrdct_Manipulation_TimePrd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date BiologicallyDerivedPrdct_Manipulation_TimePrd_Enddate = BiologicallyDerivedPrdct_Manipulation_TimePrd_Endsdf.parse(b.getBiologicallyDerivedPrdctManipulationTimePrdEnd());
-			biologicallyderivedproductmanipulationtimeperiod.setEnd(BiologicallyDerivedPrdct_Manipulation_TimePrd_Enddate);
+		if(b.getBiologicallyDerivedPrdctManipulationTimePrdEnd() != null ) {
+
+			if(b.getBiologicallyDerivedPrdctManipulationTimePrdEnd().replace("[","").replace("]","").equals("NULL") | b.getBiologicallyDerivedPrdctManipulationTimePrdEnd()==null) {} else {
+			biologicallyderivedproduct.getManipulation().getTimePeriod().setEnd(b.getBiologicallyDerivedPrdctManipulationTimePrdEnd().replace("[","").replace("]","").equals("NULL") | b.getBiologicallyDerivedPrdctManipulationTimePrdEnd()==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(b.getBiologicallyDerivedPrdctManipulationTimePrdEnd().replace("[","").replace("]","").replace("\"","")));
+			}
 		}
 		/******************** BiologicallyDerivedPrdct_Manipulation_TimePrd_Strt ********************************************************************************/
-		if(b.getBiologicallyDerivedPrdctManipulationTimePrdStrt() != null) {
-			java.text.SimpleDateFormat BiologicallyDerivedPrdct_Manipulation_TimePrd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date BiologicallyDerivedPrdct_Manipulation_TimePrd_Strtdate = BiologicallyDerivedPrdct_Manipulation_TimePrd_Strtsdf.parse(b.getBiologicallyDerivedPrdctManipulationTimePrdStrt());
-			biologicallyderivedproductmanipulationtimeperiod.setStart(BiologicallyDerivedPrdct_Manipulation_TimePrd_Strtdate);
+		if(b.getBiologicallyDerivedPrdctManipulationTimePrdStrt() != null ) {
+
+			if(b.getBiologicallyDerivedPrdctManipulationTimePrdStrt().replace("[","").replace("]","").equals("NULL") | b.getBiologicallyDerivedPrdctManipulationTimePrdStrt()==null) {} else {
+			biologicallyderivedproduct.getManipulation().getTimePeriod().setStart(b.getBiologicallyDerivedPrdctManipulationTimePrdStrt().replace("[","").replace("]","").equals("NULL") | b.getBiologicallyDerivedPrdctManipulationTimePrdStrt()==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(b.getBiologicallyDerivedPrdctManipulationTimePrdStrt().replace("[","").replace("]","").replace("\"","")));
+			}
 		}
 		/******************** BiologicallyDerivedPrdct_Parent ********************************************************************************/
-		if(b.getBiologicallyDerivedPrdctParent() != null) {
-			biologicallyderivedproduct.addParent( new org.hl7.fhir.r4.model.Reference(b.getBiologicallyDerivedPrdctParent()));
-		}
-		/******************** biologicallyderivedproductprocessing ********************************************************************************/
-		org.hl7.fhir.r4.model.BiologicallyDerivedProduct.BiologicallyDerivedProductProcessingComponent biologicallyderivedproductprocessing =  new org.hl7.fhir.r4.model.BiologicallyDerivedProduct.BiologicallyDerivedProductProcessingComponent();
-		biologicallyderivedproduct.addProcessing(biologicallyderivedproductprocessing);
+		if(b.getBiologicallyDerivedPrdctParent() != null ) {
 
+				for( String currListStrSplit : b.getBiologicallyDerivedPrdctParent().replace("[","").replace("]","").replace("\"","").split(",")){
+			if(currListStrSplit.replace("[","").replace("]","").equals("NULL") | currListStrSplit==null) {} else {
+			biologicallyderivedproduct.addParent(new org.hl7.fhir.r4.model.Reference(currListStrSplit.replace("[","").replace("]","").replace("\"","")));
+			}				}
+
+		}
 		/******************** BiologicallyDerivedPrdct_Processing_Addtv ********************************************************************************/
-		if(b.getBiologicallyDerivedPrdctProcessingAddtv() != null) {
-			biologicallyderivedproductprocessing.setAdditive( new org.hl7.fhir.r4.model.Reference(b.getBiologicallyDerivedPrdctProcessingAddtv()));
+		if(b.getBiologicallyDerivedPrdctProcessingAddtv() != null ) {
+
+			String[] arrayi0 = b.getBiologicallyDerivedPrdctProcessingAddtv().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(biologicallyderivedproduct.getProcessing().size() < i0+1) { biologicallyderivedproduct.addProcessing(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {biologicallyderivedproduct.getProcessing().get(i0).setAdditive(new org.hl7.fhir.r4.model.Reference(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** BiologicallyDerivedPrdct_Processing_Dscrptn ********************************************************************************/
-		if(b.getBiologicallyDerivedPrdctProcessingDscrptn() != null) {
-			biologicallyderivedproductprocessing.setDescription(b.getBiologicallyDerivedPrdctProcessingDscrptn());
+		if(b.getBiologicallyDerivedPrdctProcessingDscrptn() != null ) {
+
+			String[] arrayi0 = b.getBiologicallyDerivedPrdctProcessingDscrptn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(biologicallyderivedproduct.getProcessing().size() < i0+1) { biologicallyderivedproduct.addProcessing(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {biologicallyderivedproduct.getProcessing().get(i0).setDescription(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
-		/******************** biologicallyderivedproductprocessingprocedure ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept biologicallyderivedproductprocessingprocedure =  new org.hl7.fhir.r4.model.CodeableConcept();
-		biologicallyderivedproductprocessing.setProcedure(biologicallyderivedproductprocessingprocedure);
-
-		/******************** biologicallyderivedproductprocessingprocedurecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding biologicallyderivedproductprocessingprocedurecoding =  new org.hl7.fhir.r4.model.Coding();
-		biologicallyderivedproductprocessingprocedure.addCoding(biologicallyderivedproductprocessingprocedurecoding);
-
 		/******************** BiologicallyDerivedPrdct_Processing_Prcdr_Cdg_Cd ********************************************************************************/
-		if(b.getBiologicallyDerivedPrdctProcessingPrcdrCdgCd() != null) {
-			biologicallyderivedproductprocessingprocedurecoding.setCode(b.getBiologicallyDerivedPrdctProcessingPrcdrCdgCd());
+		if(b.getBiologicallyDerivedPrdctProcessingPrcdrCdgCd() != null ) {
+
+			String[] arrayi0 = b.getBiologicallyDerivedPrdctProcessingPrcdrCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(biologicallyderivedproduct.getProcessing().size() < i0+1) { biologicallyderivedproduct.addProcessing(); }
+				String[] arrayi1 = b.getBiologicallyDerivedPrdctProcessingPrcdrCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(biologicallyderivedproduct.getProcessing().get(i0).getProcedure().getCoding().size() < i1+1) { biologicallyderivedproduct.getProcessing().get(i0).getProcedure().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {biologicallyderivedproduct.getProcessing().get(i0).getProcedure().getCoding().get(i1).setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** BiologicallyDerivedPrdct_Processing_Prcdr_Cdg_Dsply ********************************************************************************/
-		if(b.getBiologicallyDerivedPrdctProcessingPrcdrCdgDsply() != null) {
-			biologicallyderivedproductprocessingprocedurecoding.setDisplay(b.getBiologicallyDerivedPrdctProcessingPrcdrCdgDsply());
+		if(b.getBiologicallyDerivedPrdctProcessingPrcdrCdgDsply() != null ) {
+
+			String[] arrayi0 = b.getBiologicallyDerivedPrdctProcessingPrcdrCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(biologicallyderivedproduct.getProcessing().size() < i0+1) { biologicallyderivedproduct.addProcessing(); }
+				String[] arrayi1 = b.getBiologicallyDerivedPrdctProcessingPrcdrCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(biologicallyderivedproduct.getProcessing().get(i0).getProcedure().getCoding().size() < i1+1) { biologicallyderivedproduct.getProcessing().get(i0).getProcedure().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {biologicallyderivedproduct.getProcessing().get(i0).getProcedure().getCoding().get(i1).setDisplay(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** BiologicallyDerivedPrdct_Processing_Prcdr_Cdg_Sys ********************************************************************************/
-		if(b.getBiologicallyDerivedPrdctProcessingPrcdrCdgSys() != null) {
-			biologicallyderivedproductprocessingprocedurecoding.setSystem(b.getBiologicallyDerivedPrdctProcessingPrcdrCdgSys());
+		if(b.getBiologicallyDerivedPrdctProcessingPrcdrCdgSys() != null ) {
+
+			String[] arrayi0 = b.getBiologicallyDerivedPrdctProcessingPrcdrCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(biologicallyderivedproduct.getProcessing().size() < i0+1) { biologicallyderivedproduct.addProcessing(); }
+				String[] arrayi1 = b.getBiologicallyDerivedPrdctProcessingPrcdrCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(biologicallyderivedproduct.getProcessing().get(i0).getProcedure().getCoding().size() < i1+1) { biologicallyderivedproduct.getProcessing().get(i0).getProcedure().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {biologicallyderivedproduct.getProcessing().get(i0).getProcedure().getCoding().get(i1).setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** BiologicallyDerivedPrdct_Processing_Prcdr_Cdg_UsrSltd ********************************************************************************/
-		if(b.getBiologicallyDerivedPrdctProcessingPrcdrCdgUsrSltd() != null) {
-			biologicallyderivedproductprocessingprocedurecoding.setUserSelected(Boolean.parseBoolean(b.getBiologicallyDerivedPrdctProcessingPrcdrCdgUsrSltd()));
+		if(b.getBiologicallyDerivedPrdctProcessingPrcdrCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = b.getBiologicallyDerivedPrdctProcessingPrcdrCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(biologicallyderivedproduct.getProcessing().size() < i0+1) { biologicallyderivedproduct.addProcessing(); }
+				String[] arrayi1 = b.getBiologicallyDerivedPrdctProcessingPrcdrCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(biologicallyderivedproduct.getProcessing().get(i0).getProcedure().getCoding().size() < i1+1) { biologicallyderivedproduct.getProcessing().get(i0).getProcedure().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {biologicallyderivedproduct.getProcessing().get(i0).getProcedure().getCoding().get(i1).setUserSelected(Boolean.parseBoolean(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
 		}
 		/******************** BiologicallyDerivedPrdct_Processing_Prcdr_Cdg_Vrsn ********************************************************************************/
-		if(b.getBiologicallyDerivedPrdctProcessingPrcdrCdgVrsn() != null) {
-			biologicallyderivedproductprocessingprocedurecoding.setVersion(b.getBiologicallyDerivedPrdctProcessingPrcdrCdgVrsn());
+		if(b.getBiologicallyDerivedPrdctProcessingPrcdrCdgVrsn() != null ) {
+
+			String[] arrayi0 = b.getBiologicallyDerivedPrdctProcessingPrcdrCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(biologicallyderivedproduct.getProcessing().size() < i0+1) { biologicallyderivedproduct.addProcessing(); }
+				String[] arrayi1 = b.getBiologicallyDerivedPrdctProcessingPrcdrCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(biologicallyderivedproduct.getProcessing().get(i0).getProcedure().getCoding().size() < i1+1) { biologicallyderivedproduct.getProcessing().get(i0).getProcedure().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {biologicallyderivedproduct.getProcessing().get(i0).getProcedure().getCoding().get(i1).setVersion(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** BiologicallyDerivedPrdct_Processing_Prcdr_Txt ********************************************************************************/
-		if(b.getBiologicallyDerivedPrdctProcessingPrcdrTxt() != null) {
-			biologicallyderivedproductprocessingprocedure.setText(b.getBiologicallyDerivedPrdctProcessingPrcdrTxt());
+		if(b.getBiologicallyDerivedPrdctProcessingPrcdrTxt() != null ) {
+
+			String[] arrayi0 = b.getBiologicallyDerivedPrdctProcessingPrcdrTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(biologicallyderivedproduct.getProcessing().size() < i0+1) { biologicallyderivedproduct.addProcessing(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {biologicallyderivedproduct.getProcessing().get(i0).getProcedure().setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** BiologicallyDerivedPrdct_Processing_TimeDtTimeTyp ********************************************************************************/
-		if(b.getBiologicallyDerivedPrdctProcessingTimeDtTimeTyp() != null) {
-			biologicallyderivedproductprocessing.setTime( new org.hl7.fhir.r4.model.DateTimeType(b.getBiologicallyDerivedPrdctProcessingTimeDtTimeTyp()));
-		}
-		/******************** biologicallyderivedproductprocessingtimeperiod ********************************************************************************/
-		org.hl7.fhir.r4.model.Period biologicallyderivedproductprocessingtimeperiod =  new org.hl7.fhir.r4.model.Period();
-		biologicallyderivedproductprocessing.setTime(biologicallyderivedproductprocessingtimeperiod);
+		if(b.getBiologicallyDerivedPrdctProcessingTimeDtTimeTyp() != null ) {
 
+			String[] arrayi0 = b.getBiologicallyDerivedPrdctProcessingTimeDtTimeTyp().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(biologicallyderivedproduct.getProcessing().size() < i0+1) { biologicallyderivedproduct.addProcessing(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {biologicallyderivedproduct.getProcessing().get(i0).setTime(new org.hl7.fhir.r4.model.DateTimeType(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** BiologicallyDerivedPrdct_Processing_TimePrd_End ********************************************************************************/
-		if(b.getBiologicallyDerivedPrdctProcessingTimePrdEnd() != null) {
-			java.text.SimpleDateFormat BiologicallyDerivedPrdct_Processing_TimePrd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date BiologicallyDerivedPrdct_Processing_TimePrd_Enddate = BiologicallyDerivedPrdct_Processing_TimePrd_Endsdf.parse(b.getBiologicallyDerivedPrdctProcessingTimePrdEnd());
-			biologicallyderivedproductprocessingtimeperiod.setEnd(BiologicallyDerivedPrdct_Processing_TimePrd_Enddate);
+		if(b.getBiologicallyDerivedPrdctProcessingTimePrdEnd() != null ) {
+
+			String[] arrayi0 = b.getBiologicallyDerivedPrdctProcessingTimePrdEnd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(biologicallyderivedproduct.getProcessing().size() < i0+1) { biologicallyderivedproduct.addProcessing(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {biologicallyderivedproduct.getProcessing().get(i0).getTimePeriod().setEnd(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** BiologicallyDerivedPrdct_Processing_TimePrd_Strt ********************************************************************************/
-		if(b.getBiologicallyDerivedPrdctProcessingTimePrdStrt() != null) {
-			java.text.SimpleDateFormat BiologicallyDerivedPrdct_Processing_TimePrd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date BiologicallyDerivedPrdct_Processing_TimePrd_Strtdate = BiologicallyDerivedPrdct_Processing_TimePrd_Strtsdf.parse(b.getBiologicallyDerivedPrdctProcessingTimePrdStrt());
-			biologicallyderivedproductprocessingtimeperiod.setStart(BiologicallyDerivedPrdct_Processing_TimePrd_Strtdate);
+		if(b.getBiologicallyDerivedPrdctProcessingTimePrdStrt() != null ) {
+
+			String[] arrayi0 = b.getBiologicallyDerivedPrdctProcessingTimePrdStrt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(biologicallyderivedproduct.getProcessing().size() < i0+1) { biologicallyderivedproduct.addProcessing(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {biologicallyderivedproduct.getProcessing().get(i0).getTimePeriod().setStart(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
-		/******************** biologicallyderivedproductproductcategory ********************************************************************************/
-		org.hl7.fhir.r4.model.BiologicallyDerivedProduct.BiologicallyDerivedProductCategoryEnumFactory biologicallyderivedproductproductcategory =  new org.hl7.fhir.r4.model.BiologicallyDerivedProduct.BiologicallyDerivedProductCategoryEnumFactory();
-		biologicallyderivedproduct.setProductCategory(biologicallyderivedproductproductcategory.fromCode(b.getBiologicallyDerivedPrdctPrdctCtgry()));
+		/******************** BiologicallyDerivedPrdct_PrdctCtgry ********************************************************************************/
+		if(b.getBiologicallyDerivedPrdctPrdctCtgry() != null ) {
 
-		/******************** biologicallyderivedproductproductcode ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept biologicallyderivedproductproductcode =  new org.hl7.fhir.r4.model.CodeableConcept();
-		biologicallyderivedproduct.setProductCode(biologicallyderivedproductproductcode);
-
-		/******************** biologicallyderivedproductproductcodecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding biologicallyderivedproductproductcodecoding =  new org.hl7.fhir.r4.model.Coding();
-		biologicallyderivedproductproductcode.addCoding(biologicallyderivedproductproductcodecoding);
-
+			if(b.getBiologicallyDerivedPrdctPrdctCtgry().replace("[","").replace("]","").equals("NULL") | b.getBiologicallyDerivedPrdctPrdctCtgry()==null) {} else {
+			biologicallyderivedproduct.setProductCategory(new org.hl7.fhir.r4.model.BiologicallyDerivedProduct.BiologicallyDerivedProductCategoryEnumFactory().fromCode(b.getBiologicallyDerivedPrdctPrdctCtgry().replace("[","").replace("]","").replace("\"","")));
+			}
+		}
 		/******************** BiologicallyDerivedPrdct_PrdctCd_Cdg_Cd ********************************************************************************/
-		if(b.getBiologicallyDerivedPrdctPrdctCdCdgCd() != null) {
-			biologicallyderivedproductproductcodecoding.setCode(b.getBiologicallyDerivedPrdctPrdctCdCdgCd());
+		if(b.getBiologicallyDerivedPrdctPrdctCdCdgCd() != null ) {
+
+			String[] arrayi0 = b.getBiologicallyDerivedPrdctPrdctCdCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(biologicallyderivedproduct.getProductCode().getCoding().size() < i0+1) { biologicallyderivedproduct.getProductCode().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {biologicallyderivedproduct.getProductCode().getCoding().get(i0).setCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** BiologicallyDerivedPrdct_PrdctCd_Cdg_Dsply ********************************************************************************/
-		if(b.getBiologicallyDerivedPrdctPrdctCdCdgDsply() != null) {
-			biologicallyderivedproductproductcodecoding.setDisplay(b.getBiologicallyDerivedPrdctPrdctCdCdgDsply());
+		if(b.getBiologicallyDerivedPrdctPrdctCdCdgDsply() != null ) {
+
+			String[] arrayi0 = b.getBiologicallyDerivedPrdctPrdctCdCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(biologicallyderivedproduct.getProductCode().getCoding().size() < i0+1) { biologicallyderivedproduct.getProductCode().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {biologicallyderivedproduct.getProductCode().getCoding().get(i0).setDisplay(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** BiologicallyDerivedPrdct_PrdctCd_Cdg_Sys ********************************************************************************/
-		if(b.getBiologicallyDerivedPrdctPrdctCdCdgSys() != null) {
-			biologicallyderivedproductproductcodecoding.setSystem(b.getBiologicallyDerivedPrdctPrdctCdCdgSys());
+		if(b.getBiologicallyDerivedPrdctPrdctCdCdgSys() != null ) {
+
+			String[] arrayi0 = b.getBiologicallyDerivedPrdctPrdctCdCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(biologicallyderivedproduct.getProductCode().getCoding().size() < i0+1) { biologicallyderivedproduct.getProductCode().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {biologicallyderivedproduct.getProductCode().getCoding().get(i0).setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** BiologicallyDerivedPrdct_PrdctCd_Cdg_UsrSltd ********************************************************************************/
-		if(b.getBiologicallyDerivedPrdctPrdctCdCdgUsrSltd() != null) {
-			biologicallyderivedproductproductcodecoding.setUserSelected(Boolean.parseBoolean(b.getBiologicallyDerivedPrdctPrdctCdCdgUsrSltd()));
+		if(b.getBiologicallyDerivedPrdctPrdctCdCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = b.getBiologicallyDerivedPrdctPrdctCdCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(biologicallyderivedproduct.getProductCode().getCoding().size() < i0+1) { biologicallyderivedproduct.getProductCode().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {biologicallyderivedproduct.getProductCode().getCoding().get(i0).setUserSelected(Boolean.parseBoolean(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** BiologicallyDerivedPrdct_PrdctCd_Cdg_Vrsn ********************************************************************************/
-		if(b.getBiologicallyDerivedPrdctPrdctCdCdgVrsn() != null) {
-			biologicallyderivedproductproductcodecoding.setVersion(b.getBiologicallyDerivedPrdctPrdctCdCdgVrsn());
+		if(b.getBiologicallyDerivedPrdctPrdctCdCdgVrsn() != null ) {
+
+			String[] arrayi0 = b.getBiologicallyDerivedPrdctPrdctCdCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(biologicallyderivedproduct.getProductCode().getCoding().size() < i0+1) { biologicallyderivedproduct.getProductCode().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {biologicallyderivedproduct.getProductCode().getCoding().get(i0).setVersion(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** BiologicallyDerivedPrdct_PrdctCd_Txt ********************************************************************************/
-		if(b.getBiologicallyDerivedPrdctPrdctCdTxt() != null) {
-			biologicallyderivedproductproductcode.setText(b.getBiologicallyDerivedPrdctPrdctCdTxt());
+		if(b.getBiologicallyDerivedPrdctPrdctCdTxt() != null ) {
+
+			if(b.getBiologicallyDerivedPrdctPrdctCdTxt().replace("[","").replace("]","").equals("NULL") | b.getBiologicallyDerivedPrdctPrdctCdTxt()==null) {} else {
+			biologicallyderivedproduct.getProductCode().setText(b.getBiologicallyDerivedPrdctPrdctCdTxt().replace("[","").replace("]","").replace("\"",""));
+			}
 		}
 		/******************** BiologicallyDerivedPrdct_Qnty ********************************************************************************/
-		if(b.getBiologicallyDerivedPrdctQnty() != null) {
-			biologicallyderivedproduct.setQuantity(Integer.parseInt(b.getBiologicallyDerivedPrdctQnty()));
+		if(b.getBiologicallyDerivedPrdctQnty() != null ) {
+
+			if(b.getBiologicallyDerivedPrdctQnty().replace("[","").replace("]","").equals("NULL") | b.getBiologicallyDerivedPrdctQnty()==null) {} else {
+			biologicallyderivedproduct.setQuantity(Integer.parseInt(b.getBiologicallyDerivedPrdctQnty().replace("[","").replace("]","").replace("\"","")));
+			}
 		}
 		/******************** BiologicallyDerivedPrdct_Rqst ********************************************************************************/
-		if(b.getBiologicallyDerivedPrdctRqst() != null) {
-			biologicallyderivedproduct.addRequest( new org.hl7.fhir.r4.model.Reference(b.getBiologicallyDerivedPrdctRqst()));
+		if(b.getBiologicallyDerivedPrdctRqst() != null ) {
+
+				for( String currListStrSplit : b.getBiologicallyDerivedPrdctRqst().replace("[","").replace("]","").replace("\"","").split(",")){
+			if(currListStrSplit.replace("[","").replace("]","").equals("NULL") | currListStrSplit==null) {} else {
+			biologicallyderivedproduct.addRequest(new org.hl7.fhir.r4.model.Reference(currListStrSplit.replace("[","").replace("]","").replace("\"","")));
+			}				}
+
 		}
-		/******************** biologicallyderivedproductstatus ********************************************************************************/
-		org.hl7.fhir.r4.model.BiologicallyDerivedProduct.BiologicallyDerivedProductStatusEnumFactory biologicallyderivedproductstatus =  new org.hl7.fhir.r4.model.BiologicallyDerivedProduct.BiologicallyDerivedProductStatusEnumFactory();
-		biologicallyderivedproduct.setStatus(biologicallyderivedproductstatus.fromCode(b.getBiologicallyDerivedPrdctSts()));
+		/******************** BiologicallyDerivedPrdct_Sts ********************************************************************************/
+		if(b.getBiologicallyDerivedPrdctSts() != null ) {
 
-		/******************** biologicallyderivedproductstorage ********************************************************************************/
-		org.hl7.fhir.r4.model.BiologicallyDerivedProduct.BiologicallyDerivedProductStorageComponent biologicallyderivedproductstorage =  new org.hl7.fhir.r4.model.BiologicallyDerivedProduct.BiologicallyDerivedProductStorageComponent();
-		biologicallyderivedproduct.addStorage(biologicallyderivedproductstorage);
-
+			if(b.getBiologicallyDerivedPrdctSts().replace("[","").replace("]","").equals("NULL") | b.getBiologicallyDerivedPrdctSts()==null) {} else {
+			biologicallyderivedproduct.setStatus(new org.hl7.fhir.r4.model.BiologicallyDerivedProduct.BiologicallyDerivedProductStatusEnumFactory().fromCode(b.getBiologicallyDerivedPrdctSts().replace("[","").replace("]","").replace("\"","")));
+			}
+		}
 		/******************** BiologicallyDerivedPrdct_Storage_Dscrptn ********************************************************************************/
-		if(b.getBiologicallyDerivedPrdctStorageDscrptn() != null) {
-			biologicallyderivedproductstorage.setDescription(b.getBiologicallyDerivedPrdctStorageDscrptn());
-		}
-		/******************** biologicallyderivedproductstorageduration ********************************************************************************/
-		org.hl7.fhir.r4.model.Period biologicallyderivedproductstorageduration =  new org.hl7.fhir.r4.model.Period();
-		biologicallyderivedproductstorage.setDuration(biologicallyderivedproductstorageduration);
+		if(b.getBiologicallyDerivedPrdctStorageDscrptn() != null ) {
 
+			String[] arrayi0 = b.getBiologicallyDerivedPrdctStorageDscrptn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(biologicallyderivedproduct.getStorage().size() < i0+1) { biologicallyderivedproduct.addStorage(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {biologicallyderivedproduct.getStorage().get(i0).setDescription(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
+		}
 		/******************** BiologicallyDerivedPrdct_Storage_Duration_End ********************************************************************************/
-		if(b.getBiologicallyDerivedPrdctStorageDurationEnd() != null) {
-			java.text.SimpleDateFormat BiologicallyDerivedPrdct_Storage_Duration_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date BiologicallyDerivedPrdct_Storage_Duration_Enddate = BiologicallyDerivedPrdct_Storage_Duration_Endsdf.parse(b.getBiologicallyDerivedPrdctStorageDurationEnd());
-			biologicallyderivedproductstorageduration.setEnd(BiologicallyDerivedPrdct_Storage_Duration_Enddate);
+		if(b.getBiologicallyDerivedPrdctStorageDurationEnd() != null ) {
+
+			String[] arrayi0 = b.getBiologicallyDerivedPrdctStorageDurationEnd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(biologicallyderivedproduct.getStorage().size() < i0+1) { biologicallyderivedproduct.addStorage(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {biologicallyderivedproduct.getStorage().get(i0).getDuration().setEnd(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** BiologicallyDerivedPrdct_Storage_Duration_Strt ********************************************************************************/
-		if(b.getBiologicallyDerivedPrdctStorageDurationStrt() != null) {
-			java.text.SimpleDateFormat BiologicallyDerivedPrdct_Storage_Duration_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date BiologicallyDerivedPrdct_Storage_Duration_Strtdate = BiologicallyDerivedPrdct_Storage_Duration_Strtsdf.parse(b.getBiologicallyDerivedPrdctStorageDurationStrt());
-			biologicallyderivedproductstorageduration.setStart(BiologicallyDerivedPrdct_Storage_Duration_Strtdate);
-		}
-		/******************** biologicallyderivedproductstoragescale ********************************************************************************/
-		org.hl7.fhir.r4.model.BiologicallyDerivedProduct.BiologicallyDerivedProductStorageScaleEnumFactory biologicallyderivedproductstoragescale =  new org.hl7.fhir.r4.model.BiologicallyDerivedProduct.BiologicallyDerivedProductStorageScaleEnumFactory();
-		biologicallyderivedproductstorage.setScale(biologicallyderivedproductstoragescale.fromCode(b.getBiologicallyDerivedPrdctStorageScale()));
+		if(b.getBiologicallyDerivedPrdctStorageDurationStrt() != null ) {
 
+			String[] arrayi0 = b.getBiologicallyDerivedPrdctStorageDurationStrt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(biologicallyderivedproduct.getStorage().size() < i0+1) { biologicallyderivedproduct.addStorage(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {biologicallyderivedproduct.getStorage().get(i0).getDuration().setStart(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
+		/******************** BiologicallyDerivedPrdct_Storage_Scale ********************************************************************************/
+		if(b.getBiologicallyDerivedPrdctStorageScale() != null ) {
+
+			String[] arrayi0 = b.getBiologicallyDerivedPrdctStorageScale().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(biologicallyderivedproduct.getStorage().size() < i0+1) { biologicallyderivedproduct.addStorage(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {biologicallyderivedproduct.getStorage().get(i0).setScale(new org.hl7.fhir.r4.model.BiologicallyDerivedProduct.BiologicallyDerivedProductStorageScaleEnumFactory().fromCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** BiologicallyDerivedPrdct_Storage_Temperature ********************************************************************************/
-		if(b.getBiologicallyDerivedPrdctStorageTemperature() != null) {
-			biologicallyderivedproductstorage.setTemperature(Double.parseDouble((b.getBiologicallyDerivedPrdctStorageTemperature())));
+		if(b.getBiologicallyDerivedPrdctStorageTemperature() != null ) {
+
+			String[] arrayi0 = b.getBiologicallyDerivedPrdctStorageTemperature().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(biologicallyderivedproduct.getStorage().size() < i0+1) { biologicallyderivedproduct.addStorage(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {biologicallyderivedproduct.getStorage().get(i0).setTemperature((Double.parseDouble((arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+			}
+
 		}
 		return biologicallyderivedproduct;
 	}

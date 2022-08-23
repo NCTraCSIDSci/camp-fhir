@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Jun 27, 2022, 10:40:10 AM by Hibernate Tools 5.6.1.Final
+// Generated Aug 17, 2022, 11:08:48 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -66,6 +66,20 @@ public class Slot  implements java.io.Serializable {
         this.id = id;
     }
     
+    public void addId(String id) {
+    	if( id != null ) {
+	    	if( this.id == null ) {
+	        	this.id = id;
+	        } else if(this.id.substring(this.id.length() - 1).equals("]") & id.equals("[")) {
+	        	this.id = this.id+ "," + id;
+	        } else if(id.equals("[") | id.equals("]") | this.id.substring(this.id.length() - 1).equals("[")) {
+	        	this.id = this.id+id;
+	        } else  {
+	            this.id = this.id+ "," +id;
+	        }
+        }
+    }
+    
     
     
     public String getSlotAppmntTypCdgCd() {
@@ -74,6 +88,20 @@ public class Slot  implements java.io.Serializable {
     
     public void setSlotAppmntTypCdgCd(String slotAppmntTypCdgCd) {
         this.slotAppmntTypCdgCd = slotAppmntTypCdgCd;
+    }
+    
+    public void addSlotAppmntTypCdgCd(String slotAppmntTypCdgCd) {
+    	if( slotAppmntTypCdgCd != null ) {
+	    	if( this.slotAppmntTypCdgCd == null ) {
+	        	this.slotAppmntTypCdgCd = slotAppmntTypCdgCd;
+	        } else if(this.slotAppmntTypCdgCd.substring(this.slotAppmntTypCdgCd.length() - 1).equals("]") & slotAppmntTypCdgCd.equals("[")) {
+	        	this.slotAppmntTypCdgCd = this.slotAppmntTypCdgCd+ "," + slotAppmntTypCdgCd;
+	        } else if(slotAppmntTypCdgCd.equals("[") | slotAppmntTypCdgCd.equals("]") | this.slotAppmntTypCdgCd.substring(this.slotAppmntTypCdgCd.length() - 1).equals("[")) {
+	        	this.slotAppmntTypCdgCd = this.slotAppmntTypCdgCd+slotAppmntTypCdgCd;
+	        } else  {
+	            this.slotAppmntTypCdgCd = this.slotAppmntTypCdgCd+ "," +slotAppmntTypCdgCd;
+	        }
+        }
     }
     
     
@@ -86,6 +114,20 @@ public class Slot  implements java.io.Serializable {
         this.slotAppmntTypCdgDsply = slotAppmntTypCdgDsply;
     }
     
+    public void addSlotAppmntTypCdgDsply(String slotAppmntTypCdgDsply) {
+    	if( slotAppmntTypCdgDsply != null ) {
+	    	if( this.slotAppmntTypCdgDsply == null ) {
+	        	this.slotAppmntTypCdgDsply = slotAppmntTypCdgDsply;
+	        } else if(this.slotAppmntTypCdgDsply.substring(this.slotAppmntTypCdgDsply.length() - 1).equals("]") & slotAppmntTypCdgDsply.equals("[")) {
+	        	this.slotAppmntTypCdgDsply = this.slotAppmntTypCdgDsply+ "," + slotAppmntTypCdgDsply;
+	        } else if(slotAppmntTypCdgDsply.equals("[") | slotAppmntTypCdgDsply.equals("]") | this.slotAppmntTypCdgDsply.substring(this.slotAppmntTypCdgDsply.length() - 1).equals("[")) {
+	        	this.slotAppmntTypCdgDsply = this.slotAppmntTypCdgDsply+slotAppmntTypCdgDsply;
+	        } else  {
+	            this.slotAppmntTypCdgDsply = this.slotAppmntTypCdgDsply+ "," +slotAppmntTypCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getSlotAppmntTypCdgSys() {
@@ -94,6 +136,20 @@ public class Slot  implements java.io.Serializable {
     
     public void setSlotAppmntTypCdgSys(String slotAppmntTypCdgSys) {
         this.slotAppmntTypCdgSys = slotAppmntTypCdgSys;
+    }
+    
+    public void addSlotAppmntTypCdgSys(String slotAppmntTypCdgSys) {
+    	if( slotAppmntTypCdgSys != null ) {
+	    	if( this.slotAppmntTypCdgSys == null ) {
+	        	this.slotAppmntTypCdgSys = slotAppmntTypCdgSys;
+	        } else if(this.slotAppmntTypCdgSys.substring(this.slotAppmntTypCdgSys.length() - 1).equals("]") & slotAppmntTypCdgSys.equals("[")) {
+	        	this.slotAppmntTypCdgSys = this.slotAppmntTypCdgSys+ "," + slotAppmntTypCdgSys;
+	        } else if(slotAppmntTypCdgSys.equals("[") | slotAppmntTypCdgSys.equals("]") | this.slotAppmntTypCdgSys.substring(this.slotAppmntTypCdgSys.length() - 1).equals("[")) {
+	        	this.slotAppmntTypCdgSys = this.slotAppmntTypCdgSys+slotAppmntTypCdgSys;
+	        } else  {
+	            this.slotAppmntTypCdgSys = this.slotAppmntTypCdgSys+ "," +slotAppmntTypCdgSys;
+	        }
+        }
     }
     
     
@@ -106,6 +162,20 @@ public class Slot  implements java.io.Serializable {
         this.slotAppmntTypCdgUsrSltd = slotAppmntTypCdgUsrSltd;
     }
     
+    public void addSlotAppmntTypCdgUsrSltd(String slotAppmntTypCdgUsrSltd) {
+    	if( slotAppmntTypCdgUsrSltd != null ) {
+	    	if( this.slotAppmntTypCdgUsrSltd == null ) {
+	        	this.slotAppmntTypCdgUsrSltd = slotAppmntTypCdgUsrSltd;
+	        } else if(this.slotAppmntTypCdgUsrSltd.substring(this.slotAppmntTypCdgUsrSltd.length() - 1).equals("]") & slotAppmntTypCdgUsrSltd.equals("[")) {
+	        	this.slotAppmntTypCdgUsrSltd = this.slotAppmntTypCdgUsrSltd+ "," + slotAppmntTypCdgUsrSltd;
+	        } else if(slotAppmntTypCdgUsrSltd.equals("[") | slotAppmntTypCdgUsrSltd.equals("]") | this.slotAppmntTypCdgUsrSltd.substring(this.slotAppmntTypCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.slotAppmntTypCdgUsrSltd = this.slotAppmntTypCdgUsrSltd+slotAppmntTypCdgUsrSltd;
+	        } else  {
+	            this.slotAppmntTypCdgUsrSltd = this.slotAppmntTypCdgUsrSltd+ "," +slotAppmntTypCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getSlotAppmntTypCdgVrsn() {
@@ -114,6 +184,20 @@ public class Slot  implements java.io.Serializable {
     
     public void setSlotAppmntTypCdgVrsn(String slotAppmntTypCdgVrsn) {
         this.slotAppmntTypCdgVrsn = slotAppmntTypCdgVrsn;
+    }
+    
+    public void addSlotAppmntTypCdgVrsn(String slotAppmntTypCdgVrsn) {
+    	if( slotAppmntTypCdgVrsn != null ) {
+	    	if( this.slotAppmntTypCdgVrsn == null ) {
+	        	this.slotAppmntTypCdgVrsn = slotAppmntTypCdgVrsn;
+	        } else if(this.slotAppmntTypCdgVrsn.substring(this.slotAppmntTypCdgVrsn.length() - 1).equals("]") & slotAppmntTypCdgVrsn.equals("[")) {
+	        	this.slotAppmntTypCdgVrsn = this.slotAppmntTypCdgVrsn+ "," + slotAppmntTypCdgVrsn;
+	        } else if(slotAppmntTypCdgVrsn.equals("[") | slotAppmntTypCdgVrsn.equals("]") | this.slotAppmntTypCdgVrsn.substring(this.slotAppmntTypCdgVrsn.length() - 1).equals("[")) {
+	        	this.slotAppmntTypCdgVrsn = this.slotAppmntTypCdgVrsn+slotAppmntTypCdgVrsn;
+	        } else  {
+	            this.slotAppmntTypCdgVrsn = this.slotAppmntTypCdgVrsn+ "," +slotAppmntTypCdgVrsn;
+	        }
+        }
     }
     
     
@@ -126,6 +210,20 @@ public class Slot  implements java.io.Serializable {
         this.slotAppmntTypTxt = slotAppmntTypTxt;
     }
     
+    public void addSlotAppmntTypTxt(String slotAppmntTypTxt) {
+    	if( slotAppmntTypTxt != null ) {
+	    	if( this.slotAppmntTypTxt == null ) {
+	        	this.slotAppmntTypTxt = slotAppmntTypTxt;
+	        } else if(this.slotAppmntTypTxt.substring(this.slotAppmntTypTxt.length() - 1).equals("]") & slotAppmntTypTxt.equals("[")) {
+	        	this.slotAppmntTypTxt = this.slotAppmntTypTxt+ "," + slotAppmntTypTxt;
+	        } else if(slotAppmntTypTxt.equals("[") | slotAppmntTypTxt.equals("]") | this.slotAppmntTypTxt.substring(this.slotAppmntTypTxt.length() - 1).equals("[")) {
+	        	this.slotAppmntTypTxt = this.slotAppmntTypTxt+slotAppmntTypTxt;
+	        } else  {
+	            this.slotAppmntTypTxt = this.slotAppmntTypTxt+ "," +slotAppmntTypTxt;
+	        }
+        }
+    }
+    
     
     
     public String getSlotComment() {
@@ -134,6 +232,20 @@ public class Slot  implements java.io.Serializable {
     
     public void setSlotComment(String slotComment) {
         this.slotComment = slotComment;
+    }
+    
+    public void addSlotComment(String slotComment) {
+    	if( slotComment != null ) {
+	    	if( this.slotComment == null ) {
+	        	this.slotComment = slotComment;
+	        } else if(this.slotComment.substring(this.slotComment.length() - 1).equals("]") & slotComment.equals("[")) {
+	        	this.slotComment = this.slotComment+ "," + slotComment;
+	        } else if(slotComment.equals("[") | slotComment.equals("]") | this.slotComment.substring(this.slotComment.length() - 1).equals("[")) {
+	        	this.slotComment = this.slotComment+slotComment;
+	        } else  {
+	            this.slotComment = this.slotComment+ "," +slotComment;
+	        }
+        }
     }
     
     
@@ -146,6 +258,20 @@ public class Slot  implements java.io.Serializable {
         this.slotEnd = slotEnd;
     }
     
+    public void addSlotEnd(String slotEnd) {
+    	if( slotEnd != null ) {
+	    	if( this.slotEnd == null ) {
+	        	this.slotEnd = slotEnd;
+	        } else if(this.slotEnd.substring(this.slotEnd.length() - 1).equals("]") & slotEnd.equals("[")) {
+	        	this.slotEnd = this.slotEnd+ "," + slotEnd;
+	        } else if(slotEnd.equals("[") | slotEnd.equals("]") | this.slotEnd.substring(this.slotEnd.length() - 1).equals("[")) {
+	        	this.slotEnd = this.slotEnd+slotEnd;
+	        } else  {
+	            this.slotEnd = this.slotEnd+ "," +slotEnd;
+	        }
+        }
+    }
+    
     
     
     public String getSlotIdAssigner() {
@@ -154,6 +280,20 @@ public class Slot  implements java.io.Serializable {
     
     public void setSlotIdAssigner(String slotIdAssigner) {
         this.slotIdAssigner = slotIdAssigner;
+    }
+    
+    public void addSlotIdAssigner(String slotIdAssigner) {
+    	if( slotIdAssigner != null ) {
+	    	if( this.slotIdAssigner == null ) {
+	        	this.slotIdAssigner = slotIdAssigner;
+	        } else if(this.slotIdAssigner.substring(this.slotIdAssigner.length() - 1).equals("]") & slotIdAssigner.equals("[")) {
+	        	this.slotIdAssigner = this.slotIdAssigner+ "," + slotIdAssigner;
+	        } else if(slotIdAssigner.equals("[") | slotIdAssigner.equals("]") | this.slotIdAssigner.substring(this.slotIdAssigner.length() - 1).equals("[")) {
+	        	this.slotIdAssigner = this.slotIdAssigner+slotIdAssigner;
+	        } else  {
+	            this.slotIdAssigner = this.slotIdAssigner+ "," +slotIdAssigner;
+	        }
+        }
     }
     
     
@@ -166,6 +306,20 @@ public class Slot  implements java.io.Serializable {
         this.slotIdPrdEnd = slotIdPrdEnd;
     }
     
+    public void addSlotIdPrdEnd(String slotIdPrdEnd) {
+    	if( slotIdPrdEnd != null ) {
+	    	if( this.slotIdPrdEnd == null ) {
+	        	this.slotIdPrdEnd = slotIdPrdEnd;
+	        } else if(this.slotIdPrdEnd.substring(this.slotIdPrdEnd.length() - 1).equals("]") & slotIdPrdEnd.equals("[")) {
+	        	this.slotIdPrdEnd = this.slotIdPrdEnd+ "," + slotIdPrdEnd;
+	        } else if(slotIdPrdEnd.equals("[") | slotIdPrdEnd.equals("]") | this.slotIdPrdEnd.substring(this.slotIdPrdEnd.length() - 1).equals("[")) {
+	        	this.slotIdPrdEnd = this.slotIdPrdEnd+slotIdPrdEnd;
+	        } else  {
+	            this.slotIdPrdEnd = this.slotIdPrdEnd+ "," +slotIdPrdEnd;
+	        }
+        }
+    }
+    
     
     
     public String getSlotIdPrdStrt() {
@@ -174,6 +328,20 @@ public class Slot  implements java.io.Serializable {
     
     public void setSlotIdPrdStrt(String slotIdPrdStrt) {
         this.slotIdPrdStrt = slotIdPrdStrt;
+    }
+    
+    public void addSlotIdPrdStrt(String slotIdPrdStrt) {
+    	if( slotIdPrdStrt != null ) {
+	    	if( this.slotIdPrdStrt == null ) {
+	        	this.slotIdPrdStrt = slotIdPrdStrt;
+	        } else if(this.slotIdPrdStrt.substring(this.slotIdPrdStrt.length() - 1).equals("]") & slotIdPrdStrt.equals("[")) {
+	        	this.slotIdPrdStrt = this.slotIdPrdStrt+ "," + slotIdPrdStrt;
+	        } else if(slotIdPrdStrt.equals("[") | slotIdPrdStrt.equals("]") | this.slotIdPrdStrt.substring(this.slotIdPrdStrt.length() - 1).equals("[")) {
+	        	this.slotIdPrdStrt = this.slotIdPrdStrt+slotIdPrdStrt;
+	        } else  {
+	            this.slotIdPrdStrt = this.slotIdPrdStrt+ "," +slotIdPrdStrt;
+	        }
+        }
     }
     
     
@@ -186,6 +354,20 @@ public class Slot  implements java.io.Serializable {
         this.slotIdSys = slotIdSys;
     }
     
+    public void addSlotIdSys(String slotIdSys) {
+    	if( slotIdSys != null ) {
+	    	if( this.slotIdSys == null ) {
+	        	this.slotIdSys = slotIdSys;
+	        } else if(this.slotIdSys.substring(this.slotIdSys.length() - 1).equals("]") & slotIdSys.equals("[")) {
+	        	this.slotIdSys = this.slotIdSys+ "," + slotIdSys;
+	        } else if(slotIdSys.equals("[") | slotIdSys.equals("]") | this.slotIdSys.substring(this.slotIdSys.length() - 1).equals("[")) {
+	        	this.slotIdSys = this.slotIdSys+slotIdSys;
+	        } else  {
+	            this.slotIdSys = this.slotIdSys+ "," +slotIdSys;
+	        }
+        }
+    }
+    
     
     
     public String getSlotIdTypCdgCd() {
@@ -194,6 +376,20 @@ public class Slot  implements java.io.Serializable {
     
     public void setSlotIdTypCdgCd(String slotIdTypCdgCd) {
         this.slotIdTypCdgCd = slotIdTypCdgCd;
+    }
+    
+    public void addSlotIdTypCdgCd(String slotIdTypCdgCd) {
+    	if( slotIdTypCdgCd != null ) {
+	    	if( this.slotIdTypCdgCd == null ) {
+	        	this.slotIdTypCdgCd = slotIdTypCdgCd;
+	        } else if(this.slotIdTypCdgCd.substring(this.slotIdTypCdgCd.length() - 1).equals("]") & slotIdTypCdgCd.equals("[")) {
+	        	this.slotIdTypCdgCd = this.slotIdTypCdgCd+ "," + slotIdTypCdgCd;
+	        } else if(slotIdTypCdgCd.equals("[") | slotIdTypCdgCd.equals("]") | this.slotIdTypCdgCd.substring(this.slotIdTypCdgCd.length() - 1).equals("[")) {
+	        	this.slotIdTypCdgCd = this.slotIdTypCdgCd+slotIdTypCdgCd;
+	        } else  {
+	            this.slotIdTypCdgCd = this.slotIdTypCdgCd+ "," +slotIdTypCdgCd;
+	        }
+        }
     }
     
     
@@ -206,6 +402,20 @@ public class Slot  implements java.io.Serializable {
         this.slotIdTypCdgDsply = slotIdTypCdgDsply;
     }
     
+    public void addSlotIdTypCdgDsply(String slotIdTypCdgDsply) {
+    	if( slotIdTypCdgDsply != null ) {
+	    	if( this.slotIdTypCdgDsply == null ) {
+	        	this.slotIdTypCdgDsply = slotIdTypCdgDsply;
+	        } else if(this.slotIdTypCdgDsply.substring(this.slotIdTypCdgDsply.length() - 1).equals("]") & slotIdTypCdgDsply.equals("[")) {
+	        	this.slotIdTypCdgDsply = this.slotIdTypCdgDsply+ "," + slotIdTypCdgDsply;
+	        } else if(slotIdTypCdgDsply.equals("[") | slotIdTypCdgDsply.equals("]") | this.slotIdTypCdgDsply.substring(this.slotIdTypCdgDsply.length() - 1).equals("[")) {
+	        	this.slotIdTypCdgDsply = this.slotIdTypCdgDsply+slotIdTypCdgDsply;
+	        } else  {
+	            this.slotIdTypCdgDsply = this.slotIdTypCdgDsply+ "," +slotIdTypCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getSlotIdTypCdgSys() {
@@ -214,6 +424,20 @@ public class Slot  implements java.io.Serializable {
     
     public void setSlotIdTypCdgSys(String slotIdTypCdgSys) {
         this.slotIdTypCdgSys = slotIdTypCdgSys;
+    }
+    
+    public void addSlotIdTypCdgSys(String slotIdTypCdgSys) {
+    	if( slotIdTypCdgSys != null ) {
+	    	if( this.slotIdTypCdgSys == null ) {
+	        	this.slotIdTypCdgSys = slotIdTypCdgSys;
+	        } else if(this.slotIdTypCdgSys.substring(this.slotIdTypCdgSys.length() - 1).equals("]") & slotIdTypCdgSys.equals("[")) {
+	        	this.slotIdTypCdgSys = this.slotIdTypCdgSys+ "," + slotIdTypCdgSys;
+	        } else if(slotIdTypCdgSys.equals("[") | slotIdTypCdgSys.equals("]") | this.slotIdTypCdgSys.substring(this.slotIdTypCdgSys.length() - 1).equals("[")) {
+	        	this.slotIdTypCdgSys = this.slotIdTypCdgSys+slotIdTypCdgSys;
+	        } else  {
+	            this.slotIdTypCdgSys = this.slotIdTypCdgSys+ "," +slotIdTypCdgSys;
+	        }
+        }
     }
     
     
@@ -226,6 +450,20 @@ public class Slot  implements java.io.Serializable {
         this.slotIdTypCdgUsrSltd = slotIdTypCdgUsrSltd;
     }
     
+    public void addSlotIdTypCdgUsrSltd(String slotIdTypCdgUsrSltd) {
+    	if( slotIdTypCdgUsrSltd != null ) {
+	    	if( this.slotIdTypCdgUsrSltd == null ) {
+	        	this.slotIdTypCdgUsrSltd = slotIdTypCdgUsrSltd;
+	        } else if(this.slotIdTypCdgUsrSltd.substring(this.slotIdTypCdgUsrSltd.length() - 1).equals("]") & slotIdTypCdgUsrSltd.equals("[")) {
+	        	this.slotIdTypCdgUsrSltd = this.slotIdTypCdgUsrSltd+ "," + slotIdTypCdgUsrSltd;
+	        } else if(slotIdTypCdgUsrSltd.equals("[") | slotIdTypCdgUsrSltd.equals("]") | this.slotIdTypCdgUsrSltd.substring(this.slotIdTypCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.slotIdTypCdgUsrSltd = this.slotIdTypCdgUsrSltd+slotIdTypCdgUsrSltd;
+	        } else  {
+	            this.slotIdTypCdgUsrSltd = this.slotIdTypCdgUsrSltd+ "," +slotIdTypCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getSlotIdTypCdgVrsn() {
@@ -234,6 +472,20 @@ public class Slot  implements java.io.Serializable {
     
     public void setSlotIdTypCdgVrsn(String slotIdTypCdgVrsn) {
         this.slotIdTypCdgVrsn = slotIdTypCdgVrsn;
+    }
+    
+    public void addSlotIdTypCdgVrsn(String slotIdTypCdgVrsn) {
+    	if( slotIdTypCdgVrsn != null ) {
+	    	if( this.slotIdTypCdgVrsn == null ) {
+	        	this.slotIdTypCdgVrsn = slotIdTypCdgVrsn;
+	        } else if(this.slotIdTypCdgVrsn.substring(this.slotIdTypCdgVrsn.length() - 1).equals("]") & slotIdTypCdgVrsn.equals("[")) {
+	        	this.slotIdTypCdgVrsn = this.slotIdTypCdgVrsn+ "," + slotIdTypCdgVrsn;
+	        } else if(slotIdTypCdgVrsn.equals("[") | slotIdTypCdgVrsn.equals("]") | this.slotIdTypCdgVrsn.substring(this.slotIdTypCdgVrsn.length() - 1).equals("[")) {
+	        	this.slotIdTypCdgVrsn = this.slotIdTypCdgVrsn+slotIdTypCdgVrsn;
+	        } else  {
+	            this.slotIdTypCdgVrsn = this.slotIdTypCdgVrsn+ "," +slotIdTypCdgVrsn;
+	        }
+        }
     }
     
     
@@ -246,6 +498,20 @@ public class Slot  implements java.io.Serializable {
         this.slotIdTypTxt = slotIdTypTxt;
     }
     
+    public void addSlotIdTypTxt(String slotIdTypTxt) {
+    	if( slotIdTypTxt != null ) {
+	    	if( this.slotIdTypTxt == null ) {
+	        	this.slotIdTypTxt = slotIdTypTxt;
+	        } else if(this.slotIdTypTxt.substring(this.slotIdTypTxt.length() - 1).equals("]") & slotIdTypTxt.equals("[")) {
+	        	this.slotIdTypTxt = this.slotIdTypTxt+ "," + slotIdTypTxt;
+	        } else if(slotIdTypTxt.equals("[") | slotIdTypTxt.equals("]") | this.slotIdTypTxt.substring(this.slotIdTypTxt.length() - 1).equals("[")) {
+	        	this.slotIdTypTxt = this.slotIdTypTxt+slotIdTypTxt;
+	        } else  {
+	            this.slotIdTypTxt = this.slotIdTypTxt+ "," +slotIdTypTxt;
+	        }
+        }
+    }
+    
     
     
     public String getSlotIdUse() {
@@ -254,6 +520,20 @@ public class Slot  implements java.io.Serializable {
     
     public void setSlotIdUse(String slotIdUse) {
         this.slotIdUse = slotIdUse;
+    }
+    
+    public void addSlotIdUse(String slotIdUse) {
+    	if( slotIdUse != null ) {
+	    	if( this.slotIdUse == null ) {
+	        	this.slotIdUse = slotIdUse;
+	        } else if(this.slotIdUse.substring(this.slotIdUse.length() - 1).equals("]") & slotIdUse.equals("[")) {
+	        	this.slotIdUse = this.slotIdUse+ "," + slotIdUse;
+	        } else if(slotIdUse.equals("[") | slotIdUse.equals("]") | this.slotIdUse.substring(this.slotIdUse.length() - 1).equals("[")) {
+	        	this.slotIdUse = this.slotIdUse+slotIdUse;
+	        } else  {
+	            this.slotIdUse = this.slotIdUse+ "," +slotIdUse;
+	        }
+        }
     }
     
     
@@ -266,6 +546,20 @@ public class Slot  implements java.io.Serializable {
         this.slotIdVl = slotIdVl;
     }
     
+    public void addSlotIdVl(String slotIdVl) {
+    	if( slotIdVl != null ) {
+	    	if( this.slotIdVl == null ) {
+	        	this.slotIdVl = slotIdVl;
+	        } else if(this.slotIdVl.substring(this.slotIdVl.length() - 1).equals("]") & slotIdVl.equals("[")) {
+	        	this.slotIdVl = this.slotIdVl+ "," + slotIdVl;
+	        } else if(slotIdVl.equals("[") | slotIdVl.equals("]") | this.slotIdVl.substring(this.slotIdVl.length() - 1).equals("[")) {
+	        	this.slotIdVl = this.slotIdVl+slotIdVl;
+	        } else  {
+	            this.slotIdVl = this.slotIdVl+ "," +slotIdVl;
+	        }
+        }
+    }
+    
     
     
     public String getSlotOverbooked() {
@@ -274,6 +568,20 @@ public class Slot  implements java.io.Serializable {
     
     public void setSlotOverbooked(String slotOverbooked) {
         this.slotOverbooked = slotOverbooked;
+    }
+    
+    public void addSlotOverbooked(String slotOverbooked) {
+    	if( slotOverbooked != null ) {
+	    	if( this.slotOverbooked == null ) {
+	        	this.slotOverbooked = slotOverbooked;
+	        } else if(this.slotOverbooked.substring(this.slotOverbooked.length() - 1).equals("]") & slotOverbooked.equals("[")) {
+	        	this.slotOverbooked = this.slotOverbooked+ "," + slotOverbooked;
+	        } else if(slotOverbooked.equals("[") | slotOverbooked.equals("]") | this.slotOverbooked.substring(this.slotOverbooked.length() - 1).equals("[")) {
+	        	this.slotOverbooked = this.slotOverbooked+slotOverbooked;
+	        } else  {
+	            this.slotOverbooked = this.slotOverbooked+ "," +slotOverbooked;
+	        }
+        }
     }
     
     
@@ -286,6 +594,20 @@ public class Slot  implements java.io.Serializable {
         this.slotSchdl = slotSchdl;
     }
     
+    public void addSlotSchdl(String slotSchdl) {
+    	if( slotSchdl != null ) {
+	    	if( this.slotSchdl == null ) {
+	        	this.slotSchdl = slotSchdl;
+	        } else if(this.slotSchdl.substring(this.slotSchdl.length() - 1).equals("]") & slotSchdl.equals("[")) {
+	        	this.slotSchdl = this.slotSchdl+ "," + slotSchdl;
+	        } else if(slotSchdl.equals("[") | slotSchdl.equals("]") | this.slotSchdl.substring(this.slotSchdl.length() - 1).equals("[")) {
+	        	this.slotSchdl = this.slotSchdl+slotSchdl;
+	        } else  {
+	            this.slotSchdl = this.slotSchdl+ "," +slotSchdl;
+	        }
+        }
+    }
+    
     
     
     public String getSlotSrvCtgryCdgCd() {
@@ -294,6 +616,20 @@ public class Slot  implements java.io.Serializable {
     
     public void setSlotSrvCtgryCdgCd(String slotSrvCtgryCdgCd) {
         this.slotSrvCtgryCdgCd = slotSrvCtgryCdgCd;
+    }
+    
+    public void addSlotSrvCtgryCdgCd(String slotSrvCtgryCdgCd) {
+    	if( slotSrvCtgryCdgCd != null ) {
+	    	if( this.slotSrvCtgryCdgCd == null ) {
+	        	this.slotSrvCtgryCdgCd = slotSrvCtgryCdgCd;
+	        } else if(this.slotSrvCtgryCdgCd.substring(this.slotSrvCtgryCdgCd.length() - 1).equals("]") & slotSrvCtgryCdgCd.equals("[")) {
+	        	this.slotSrvCtgryCdgCd = this.slotSrvCtgryCdgCd+ "," + slotSrvCtgryCdgCd;
+	        } else if(slotSrvCtgryCdgCd.equals("[") | slotSrvCtgryCdgCd.equals("]") | this.slotSrvCtgryCdgCd.substring(this.slotSrvCtgryCdgCd.length() - 1).equals("[")) {
+	        	this.slotSrvCtgryCdgCd = this.slotSrvCtgryCdgCd+slotSrvCtgryCdgCd;
+	        } else  {
+	            this.slotSrvCtgryCdgCd = this.slotSrvCtgryCdgCd+ "," +slotSrvCtgryCdgCd;
+	        }
+        }
     }
     
     
@@ -306,6 +642,20 @@ public class Slot  implements java.io.Serializable {
         this.slotSrvCtgryCdgDsply = slotSrvCtgryCdgDsply;
     }
     
+    public void addSlotSrvCtgryCdgDsply(String slotSrvCtgryCdgDsply) {
+    	if( slotSrvCtgryCdgDsply != null ) {
+	    	if( this.slotSrvCtgryCdgDsply == null ) {
+	        	this.slotSrvCtgryCdgDsply = slotSrvCtgryCdgDsply;
+	        } else if(this.slotSrvCtgryCdgDsply.substring(this.slotSrvCtgryCdgDsply.length() - 1).equals("]") & slotSrvCtgryCdgDsply.equals("[")) {
+	        	this.slotSrvCtgryCdgDsply = this.slotSrvCtgryCdgDsply+ "," + slotSrvCtgryCdgDsply;
+	        } else if(slotSrvCtgryCdgDsply.equals("[") | slotSrvCtgryCdgDsply.equals("]") | this.slotSrvCtgryCdgDsply.substring(this.slotSrvCtgryCdgDsply.length() - 1).equals("[")) {
+	        	this.slotSrvCtgryCdgDsply = this.slotSrvCtgryCdgDsply+slotSrvCtgryCdgDsply;
+	        } else  {
+	            this.slotSrvCtgryCdgDsply = this.slotSrvCtgryCdgDsply+ "," +slotSrvCtgryCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getSlotSrvCtgryCdgSys() {
@@ -314,6 +664,20 @@ public class Slot  implements java.io.Serializable {
     
     public void setSlotSrvCtgryCdgSys(String slotSrvCtgryCdgSys) {
         this.slotSrvCtgryCdgSys = slotSrvCtgryCdgSys;
+    }
+    
+    public void addSlotSrvCtgryCdgSys(String slotSrvCtgryCdgSys) {
+    	if( slotSrvCtgryCdgSys != null ) {
+	    	if( this.slotSrvCtgryCdgSys == null ) {
+	        	this.slotSrvCtgryCdgSys = slotSrvCtgryCdgSys;
+	        } else if(this.slotSrvCtgryCdgSys.substring(this.slotSrvCtgryCdgSys.length() - 1).equals("]") & slotSrvCtgryCdgSys.equals("[")) {
+	        	this.slotSrvCtgryCdgSys = this.slotSrvCtgryCdgSys+ "," + slotSrvCtgryCdgSys;
+	        } else if(slotSrvCtgryCdgSys.equals("[") | slotSrvCtgryCdgSys.equals("]") | this.slotSrvCtgryCdgSys.substring(this.slotSrvCtgryCdgSys.length() - 1).equals("[")) {
+	        	this.slotSrvCtgryCdgSys = this.slotSrvCtgryCdgSys+slotSrvCtgryCdgSys;
+	        } else  {
+	            this.slotSrvCtgryCdgSys = this.slotSrvCtgryCdgSys+ "," +slotSrvCtgryCdgSys;
+	        }
+        }
     }
     
     
@@ -326,6 +690,20 @@ public class Slot  implements java.io.Serializable {
         this.slotSrvCtgryCdgUsrSltd = slotSrvCtgryCdgUsrSltd;
     }
     
+    public void addSlotSrvCtgryCdgUsrSltd(String slotSrvCtgryCdgUsrSltd) {
+    	if( slotSrvCtgryCdgUsrSltd != null ) {
+	    	if( this.slotSrvCtgryCdgUsrSltd == null ) {
+	        	this.slotSrvCtgryCdgUsrSltd = slotSrvCtgryCdgUsrSltd;
+	        } else if(this.slotSrvCtgryCdgUsrSltd.substring(this.slotSrvCtgryCdgUsrSltd.length() - 1).equals("]") & slotSrvCtgryCdgUsrSltd.equals("[")) {
+	        	this.slotSrvCtgryCdgUsrSltd = this.slotSrvCtgryCdgUsrSltd+ "," + slotSrvCtgryCdgUsrSltd;
+	        } else if(slotSrvCtgryCdgUsrSltd.equals("[") | slotSrvCtgryCdgUsrSltd.equals("]") | this.slotSrvCtgryCdgUsrSltd.substring(this.slotSrvCtgryCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.slotSrvCtgryCdgUsrSltd = this.slotSrvCtgryCdgUsrSltd+slotSrvCtgryCdgUsrSltd;
+	        } else  {
+	            this.slotSrvCtgryCdgUsrSltd = this.slotSrvCtgryCdgUsrSltd+ "," +slotSrvCtgryCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getSlotSrvCtgryCdgVrsn() {
@@ -334,6 +712,20 @@ public class Slot  implements java.io.Serializable {
     
     public void setSlotSrvCtgryCdgVrsn(String slotSrvCtgryCdgVrsn) {
         this.slotSrvCtgryCdgVrsn = slotSrvCtgryCdgVrsn;
+    }
+    
+    public void addSlotSrvCtgryCdgVrsn(String slotSrvCtgryCdgVrsn) {
+    	if( slotSrvCtgryCdgVrsn != null ) {
+	    	if( this.slotSrvCtgryCdgVrsn == null ) {
+	        	this.slotSrvCtgryCdgVrsn = slotSrvCtgryCdgVrsn;
+	        } else if(this.slotSrvCtgryCdgVrsn.substring(this.slotSrvCtgryCdgVrsn.length() - 1).equals("]") & slotSrvCtgryCdgVrsn.equals("[")) {
+	        	this.slotSrvCtgryCdgVrsn = this.slotSrvCtgryCdgVrsn+ "," + slotSrvCtgryCdgVrsn;
+	        } else if(slotSrvCtgryCdgVrsn.equals("[") | slotSrvCtgryCdgVrsn.equals("]") | this.slotSrvCtgryCdgVrsn.substring(this.slotSrvCtgryCdgVrsn.length() - 1).equals("[")) {
+	        	this.slotSrvCtgryCdgVrsn = this.slotSrvCtgryCdgVrsn+slotSrvCtgryCdgVrsn;
+	        } else  {
+	            this.slotSrvCtgryCdgVrsn = this.slotSrvCtgryCdgVrsn+ "," +slotSrvCtgryCdgVrsn;
+	        }
+        }
     }
     
     
@@ -346,6 +738,20 @@ public class Slot  implements java.io.Serializable {
         this.slotSrvCtgryTxt = slotSrvCtgryTxt;
     }
     
+    public void addSlotSrvCtgryTxt(String slotSrvCtgryTxt) {
+    	if( slotSrvCtgryTxt != null ) {
+	    	if( this.slotSrvCtgryTxt == null ) {
+	        	this.slotSrvCtgryTxt = slotSrvCtgryTxt;
+	        } else if(this.slotSrvCtgryTxt.substring(this.slotSrvCtgryTxt.length() - 1).equals("]") & slotSrvCtgryTxt.equals("[")) {
+	        	this.slotSrvCtgryTxt = this.slotSrvCtgryTxt+ "," + slotSrvCtgryTxt;
+	        } else if(slotSrvCtgryTxt.equals("[") | slotSrvCtgryTxt.equals("]") | this.slotSrvCtgryTxt.substring(this.slotSrvCtgryTxt.length() - 1).equals("[")) {
+	        	this.slotSrvCtgryTxt = this.slotSrvCtgryTxt+slotSrvCtgryTxt;
+	        } else  {
+	            this.slotSrvCtgryTxt = this.slotSrvCtgryTxt+ "," +slotSrvCtgryTxt;
+	        }
+        }
+    }
+    
     
     
     public String getSlotSrvTypCdgCd() {
@@ -354,6 +760,20 @@ public class Slot  implements java.io.Serializable {
     
     public void setSlotSrvTypCdgCd(String slotSrvTypCdgCd) {
         this.slotSrvTypCdgCd = slotSrvTypCdgCd;
+    }
+    
+    public void addSlotSrvTypCdgCd(String slotSrvTypCdgCd) {
+    	if( slotSrvTypCdgCd != null ) {
+	    	if( this.slotSrvTypCdgCd == null ) {
+	        	this.slotSrvTypCdgCd = slotSrvTypCdgCd;
+	        } else if(this.slotSrvTypCdgCd.substring(this.slotSrvTypCdgCd.length() - 1).equals("]") & slotSrvTypCdgCd.equals("[")) {
+	        	this.slotSrvTypCdgCd = this.slotSrvTypCdgCd+ "," + slotSrvTypCdgCd;
+	        } else if(slotSrvTypCdgCd.equals("[") | slotSrvTypCdgCd.equals("]") | this.slotSrvTypCdgCd.substring(this.slotSrvTypCdgCd.length() - 1).equals("[")) {
+	        	this.slotSrvTypCdgCd = this.slotSrvTypCdgCd+slotSrvTypCdgCd;
+	        } else  {
+	            this.slotSrvTypCdgCd = this.slotSrvTypCdgCd+ "," +slotSrvTypCdgCd;
+	        }
+        }
     }
     
     
@@ -366,6 +786,20 @@ public class Slot  implements java.io.Serializable {
         this.slotSrvTypCdgDsply = slotSrvTypCdgDsply;
     }
     
+    public void addSlotSrvTypCdgDsply(String slotSrvTypCdgDsply) {
+    	if( slotSrvTypCdgDsply != null ) {
+	    	if( this.slotSrvTypCdgDsply == null ) {
+	        	this.slotSrvTypCdgDsply = slotSrvTypCdgDsply;
+	        } else if(this.slotSrvTypCdgDsply.substring(this.slotSrvTypCdgDsply.length() - 1).equals("]") & slotSrvTypCdgDsply.equals("[")) {
+	        	this.slotSrvTypCdgDsply = this.slotSrvTypCdgDsply+ "," + slotSrvTypCdgDsply;
+	        } else if(slotSrvTypCdgDsply.equals("[") | slotSrvTypCdgDsply.equals("]") | this.slotSrvTypCdgDsply.substring(this.slotSrvTypCdgDsply.length() - 1).equals("[")) {
+	        	this.slotSrvTypCdgDsply = this.slotSrvTypCdgDsply+slotSrvTypCdgDsply;
+	        } else  {
+	            this.slotSrvTypCdgDsply = this.slotSrvTypCdgDsply+ "," +slotSrvTypCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getSlotSrvTypCdgSys() {
@@ -374,6 +808,20 @@ public class Slot  implements java.io.Serializable {
     
     public void setSlotSrvTypCdgSys(String slotSrvTypCdgSys) {
         this.slotSrvTypCdgSys = slotSrvTypCdgSys;
+    }
+    
+    public void addSlotSrvTypCdgSys(String slotSrvTypCdgSys) {
+    	if( slotSrvTypCdgSys != null ) {
+	    	if( this.slotSrvTypCdgSys == null ) {
+	        	this.slotSrvTypCdgSys = slotSrvTypCdgSys;
+	        } else if(this.slotSrvTypCdgSys.substring(this.slotSrvTypCdgSys.length() - 1).equals("]") & slotSrvTypCdgSys.equals("[")) {
+	        	this.slotSrvTypCdgSys = this.slotSrvTypCdgSys+ "," + slotSrvTypCdgSys;
+	        } else if(slotSrvTypCdgSys.equals("[") | slotSrvTypCdgSys.equals("]") | this.slotSrvTypCdgSys.substring(this.slotSrvTypCdgSys.length() - 1).equals("[")) {
+	        	this.slotSrvTypCdgSys = this.slotSrvTypCdgSys+slotSrvTypCdgSys;
+	        } else  {
+	            this.slotSrvTypCdgSys = this.slotSrvTypCdgSys+ "," +slotSrvTypCdgSys;
+	        }
+        }
     }
     
     
@@ -386,6 +834,20 @@ public class Slot  implements java.io.Serializable {
         this.slotSrvTypCdgUsrSltd = slotSrvTypCdgUsrSltd;
     }
     
+    public void addSlotSrvTypCdgUsrSltd(String slotSrvTypCdgUsrSltd) {
+    	if( slotSrvTypCdgUsrSltd != null ) {
+	    	if( this.slotSrvTypCdgUsrSltd == null ) {
+	        	this.slotSrvTypCdgUsrSltd = slotSrvTypCdgUsrSltd;
+	        } else if(this.slotSrvTypCdgUsrSltd.substring(this.slotSrvTypCdgUsrSltd.length() - 1).equals("]") & slotSrvTypCdgUsrSltd.equals("[")) {
+	        	this.slotSrvTypCdgUsrSltd = this.slotSrvTypCdgUsrSltd+ "," + slotSrvTypCdgUsrSltd;
+	        } else if(slotSrvTypCdgUsrSltd.equals("[") | slotSrvTypCdgUsrSltd.equals("]") | this.slotSrvTypCdgUsrSltd.substring(this.slotSrvTypCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.slotSrvTypCdgUsrSltd = this.slotSrvTypCdgUsrSltd+slotSrvTypCdgUsrSltd;
+	        } else  {
+	            this.slotSrvTypCdgUsrSltd = this.slotSrvTypCdgUsrSltd+ "," +slotSrvTypCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getSlotSrvTypCdgVrsn() {
@@ -394,6 +856,20 @@ public class Slot  implements java.io.Serializable {
     
     public void setSlotSrvTypCdgVrsn(String slotSrvTypCdgVrsn) {
         this.slotSrvTypCdgVrsn = slotSrvTypCdgVrsn;
+    }
+    
+    public void addSlotSrvTypCdgVrsn(String slotSrvTypCdgVrsn) {
+    	if( slotSrvTypCdgVrsn != null ) {
+	    	if( this.slotSrvTypCdgVrsn == null ) {
+	        	this.slotSrvTypCdgVrsn = slotSrvTypCdgVrsn;
+	        } else if(this.slotSrvTypCdgVrsn.substring(this.slotSrvTypCdgVrsn.length() - 1).equals("]") & slotSrvTypCdgVrsn.equals("[")) {
+	        	this.slotSrvTypCdgVrsn = this.slotSrvTypCdgVrsn+ "," + slotSrvTypCdgVrsn;
+	        } else if(slotSrvTypCdgVrsn.equals("[") | slotSrvTypCdgVrsn.equals("]") | this.slotSrvTypCdgVrsn.substring(this.slotSrvTypCdgVrsn.length() - 1).equals("[")) {
+	        	this.slotSrvTypCdgVrsn = this.slotSrvTypCdgVrsn+slotSrvTypCdgVrsn;
+	        } else  {
+	            this.slotSrvTypCdgVrsn = this.slotSrvTypCdgVrsn+ "," +slotSrvTypCdgVrsn;
+	        }
+        }
     }
     
     
@@ -406,6 +882,20 @@ public class Slot  implements java.io.Serializable {
         this.slotSrvTypTxt = slotSrvTypTxt;
     }
     
+    public void addSlotSrvTypTxt(String slotSrvTypTxt) {
+    	if( slotSrvTypTxt != null ) {
+	    	if( this.slotSrvTypTxt == null ) {
+	        	this.slotSrvTypTxt = slotSrvTypTxt;
+	        } else if(this.slotSrvTypTxt.substring(this.slotSrvTypTxt.length() - 1).equals("]") & slotSrvTypTxt.equals("[")) {
+	        	this.slotSrvTypTxt = this.slotSrvTypTxt+ "," + slotSrvTypTxt;
+	        } else if(slotSrvTypTxt.equals("[") | slotSrvTypTxt.equals("]") | this.slotSrvTypTxt.substring(this.slotSrvTypTxt.length() - 1).equals("[")) {
+	        	this.slotSrvTypTxt = this.slotSrvTypTxt+slotSrvTypTxt;
+	        } else  {
+	            this.slotSrvTypTxt = this.slotSrvTypTxt+ "," +slotSrvTypTxt;
+	        }
+        }
+    }
+    
     
     
     public String getSlotSpcltyCdgCd() {
@@ -414,6 +904,20 @@ public class Slot  implements java.io.Serializable {
     
     public void setSlotSpcltyCdgCd(String slotSpcltyCdgCd) {
         this.slotSpcltyCdgCd = slotSpcltyCdgCd;
+    }
+    
+    public void addSlotSpcltyCdgCd(String slotSpcltyCdgCd) {
+    	if( slotSpcltyCdgCd != null ) {
+	    	if( this.slotSpcltyCdgCd == null ) {
+	        	this.slotSpcltyCdgCd = slotSpcltyCdgCd;
+	        } else if(this.slotSpcltyCdgCd.substring(this.slotSpcltyCdgCd.length() - 1).equals("]") & slotSpcltyCdgCd.equals("[")) {
+	        	this.slotSpcltyCdgCd = this.slotSpcltyCdgCd+ "," + slotSpcltyCdgCd;
+	        } else if(slotSpcltyCdgCd.equals("[") | slotSpcltyCdgCd.equals("]") | this.slotSpcltyCdgCd.substring(this.slotSpcltyCdgCd.length() - 1).equals("[")) {
+	        	this.slotSpcltyCdgCd = this.slotSpcltyCdgCd+slotSpcltyCdgCd;
+	        } else  {
+	            this.slotSpcltyCdgCd = this.slotSpcltyCdgCd+ "," +slotSpcltyCdgCd;
+	        }
+        }
     }
     
     
@@ -426,6 +930,20 @@ public class Slot  implements java.io.Serializable {
         this.slotSpcltyCdgDsply = slotSpcltyCdgDsply;
     }
     
+    public void addSlotSpcltyCdgDsply(String slotSpcltyCdgDsply) {
+    	if( slotSpcltyCdgDsply != null ) {
+	    	if( this.slotSpcltyCdgDsply == null ) {
+	        	this.slotSpcltyCdgDsply = slotSpcltyCdgDsply;
+	        } else if(this.slotSpcltyCdgDsply.substring(this.slotSpcltyCdgDsply.length() - 1).equals("]") & slotSpcltyCdgDsply.equals("[")) {
+	        	this.slotSpcltyCdgDsply = this.slotSpcltyCdgDsply+ "," + slotSpcltyCdgDsply;
+	        } else if(slotSpcltyCdgDsply.equals("[") | slotSpcltyCdgDsply.equals("]") | this.slotSpcltyCdgDsply.substring(this.slotSpcltyCdgDsply.length() - 1).equals("[")) {
+	        	this.slotSpcltyCdgDsply = this.slotSpcltyCdgDsply+slotSpcltyCdgDsply;
+	        } else  {
+	            this.slotSpcltyCdgDsply = this.slotSpcltyCdgDsply+ "," +slotSpcltyCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getSlotSpcltyCdgSys() {
@@ -434,6 +952,20 @@ public class Slot  implements java.io.Serializable {
     
     public void setSlotSpcltyCdgSys(String slotSpcltyCdgSys) {
         this.slotSpcltyCdgSys = slotSpcltyCdgSys;
+    }
+    
+    public void addSlotSpcltyCdgSys(String slotSpcltyCdgSys) {
+    	if( slotSpcltyCdgSys != null ) {
+	    	if( this.slotSpcltyCdgSys == null ) {
+	        	this.slotSpcltyCdgSys = slotSpcltyCdgSys;
+	        } else if(this.slotSpcltyCdgSys.substring(this.slotSpcltyCdgSys.length() - 1).equals("]") & slotSpcltyCdgSys.equals("[")) {
+	        	this.slotSpcltyCdgSys = this.slotSpcltyCdgSys+ "," + slotSpcltyCdgSys;
+	        } else if(slotSpcltyCdgSys.equals("[") | slotSpcltyCdgSys.equals("]") | this.slotSpcltyCdgSys.substring(this.slotSpcltyCdgSys.length() - 1).equals("[")) {
+	        	this.slotSpcltyCdgSys = this.slotSpcltyCdgSys+slotSpcltyCdgSys;
+	        } else  {
+	            this.slotSpcltyCdgSys = this.slotSpcltyCdgSys+ "," +slotSpcltyCdgSys;
+	        }
+        }
     }
     
     
@@ -446,6 +978,20 @@ public class Slot  implements java.io.Serializable {
         this.slotSpcltyCdgUsrSltd = slotSpcltyCdgUsrSltd;
     }
     
+    public void addSlotSpcltyCdgUsrSltd(String slotSpcltyCdgUsrSltd) {
+    	if( slotSpcltyCdgUsrSltd != null ) {
+	    	if( this.slotSpcltyCdgUsrSltd == null ) {
+	        	this.slotSpcltyCdgUsrSltd = slotSpcltyCdgUsrSltd;
+	        } else if(this.slotSpcltyCdgUsrSltd.substring(this.slotSpcltyCdgUsrSltd.length() - 1).equals("]") & slotSpcltyCdgUsrSltd.equals("[")) {
+	        	this.slotSpcltyCdgUsrSltd = this.slotSpcltyCdgUsrSltd+ "," + slotSpcltyCdgUsrSltd;
+	        } else if(slotSpcltyCdgUsrSltd.equals("[") | slotSpcltyCdgUsrSltd.equals("]") | this.slotSpcltyCdgUsrSltd.substring(this.slotSpcltyCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.slotSpcltyCdgUsrSltd = this.slotSpcltyCdgUsrSltd+slotSpcltyCdgUsrSltd;
+	        } else  {
+	            this.slotSpcltyCdgUsrSltd = this.slotSpcltyCdgUsrSltd+ "," +slotSpcltyCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getSlotSpcltyCdgVrsn() {
@@ -454,6 +1000,20 @@ public class Slot  implements java.io.Serializable {
     
     public void setSlotSpcltyCdgVrsn(String slotSpcltyCdgVrsn) {
         this.slotSpcltyCdgVrsn = slotSpcltyCdgVrsn;
+    }
+    
+    public void addSlotSpcltyCdgVrsn(String slotSpcltyCdgVrsn) {
+    	if( slotSpcltyCdgVrsn != null ) {
+	    	if( this.slotSpcltyCdgVrsn == null ) {
+	        	this.slotSpcltyCdgVrsn = slotSpcltyCdgVrsn;
+	        } else if(this.slotSpcltyCdgVrsn.substring(this.slotSpcltyCdgVrsn.length() - 1).equals("]") & slotSpcltyCdgVrsn.equals("[")) {
+	        	this.slotSpcltyCdgVrsn = this.slotSpcltyCdgVrsn+ "," + slotSpcltyCdgVrsn;
+	        } else if(slotSpcltyCdgVrsn.equals("[") | slotSpcltyCdgVrsn.equals("]") | this.slotSpcltyCdgVrsn.substring(this.slotSpcltyCdgVrsn.length() - 1).equals("[")) {
+	        	this.slotSpcltyCdgVrsn = this.slotSpcltyCdgVrsn+slotSpcltyCdgVrsn;
+	        } else  {
+	            this.slotSpcltyCdgVrsn = this.slotSpcltyCdgVrsn+ "," +slotSpcltyCdgVrsn;
+	        }
+        }
     }
     
     
@@ -466,6 +1026,20 @@ public class Slot  implements java.io.Serializable {
         this.slotSpcltyTxt = slotSpcltyTxt;
     }
     
+    public void addSlotSpcltyTxt(String slotSpcltyTxt) {
+    	if( slotSpcltyTxt != null ) {
+	    	if( this.slotSpcltyTxt == null ) {
+	        	this.slotSpcltyTxt = slotSpcltyTxt;
+	        } else if(this.slotSpcltyTxt.substring(this.slotSpcltyTxt.length() - 1).equals("]") & slotSpcltyTxt.equals("[")) {
+	        	this.slotSpcltyTxt = this.slotSpcltyTxt+ "," + slotSpcltyTxt;
+	        } else if(slotSpcltyTxt.equals("[") | slotSpcltyTxt.equals("]") | this.slotSpcltyTxt.substring(this.slotSpcltyTxt.length() - 1).equals("[")) {
+	        	this.slotSpcltyTxt = this.slotSpcltyTxt+slotSpcltyTxt;
+	        } else  {
+	            this.slotSpcltyTxt = this.slotSpcltyTxt+ "," +slotSpcltyTxt;
+	        }
+        }
+    }
+    
     
     
     public String getSlotStrt() {
@@ -476,6 +1050,20 @@ public class Slot  implements java.io.Serializable {
         this.slotStrt = slotStrt;
     }
     
+    public void addSlotStrt(String slotStrt) {
+    	if( slotStrt != null ) {
+	    	if( this.slotStrt == null ) {
+	        	this.slotStrt = slotStrt;
+	        } else if(this.slotStrt.substring(this.slotStrt.length() - 1).equals("]") & slotStrt.equals("[")) {
+	        	this.slotStrt = this.slotStrt+ "," + slotStrt;
+	        } else if(slotStrt.equals("[") | slotStrt.equals("]") | this.slotStrt.substring(this.slotStrt.length() - 1).equals("[")) {
+	        	this.slotStrt = this.slotStrt+slotStrt;
+	        } else  {
+	            this.slotStrt = this.slotStrt+ "," +slotStrt;
+	        }
+        }
+    }
+    
     
     
     public String getSlotSts() {
@@ -484,6 +1072,20 @@ public class Slot  implements java.io.Serializable {
     
     public void setSlotSts(String slotSts) {
         this.slotSts = slotSts;
+    }
+    
+    public void addSlotSts(String slotSts) {
+    	if( slotSts != null ) {
+	    	if( this.slotSts == null ) {
+	        	this.slotSts = slotSts;
+	        } else if(this.slotSts.substring(this.slotSts.length() - 1).equals("]") & slotSts.equals("[")) {
+	        	this.slotSts = this.slotSts+ "," + slotSts;
+	        } else if(slotSts.equals("[") | slotSts.equals("]") | this.slotSts.substring(this.slotSts.length() - 1).equals("[")) {
+	        	this.slotSts = this.slotSts+slotSts;
+	        } else  {
+	            this.slotSts = this.slotSts+ "," +slotSts;
+	        }
+        }
     }
     
     

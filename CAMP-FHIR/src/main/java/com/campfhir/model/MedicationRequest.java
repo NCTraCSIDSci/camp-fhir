@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Jun 27, 2022, 10:40:10 AM by Hibernate Tools 5.6.1.Final
+// Generated Aug 17, 2022, 11:08:48 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -290,6 +290,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.id = id;
     }
     
+    public void addId(String id) {
+    	if( id != null ) {
+	    	if( this.id == null ) {
+	        	this.id = id;
+	        } else if(this.id.substring(this.id.length() - 1).equals("]") & id.equals("[")) {
+	        	this.id = this.id+ "," + id;
+	        } else if(id.equals("[") | id.equals("]") | this.id.substring(this.id.length() - 1).equals("[")) {
+	        	this.id = this.id+id;
+	        } else  {
+	            this.id = this.id+ "," +id;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstAthredOn() {
@@ -298,6 +312,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstAthredOn(String mdctnRqstAthredOn) {
         this.mdctnRqstAthredOn = mdctnRqstAthredOn;
+    }
+    
+    public void addMdctnRqstAthredOn(String mdctnRqstAthredOn) {
+    	if( mdctnRqstAthredOn != null ) {
+	    	if( this.mdctnRqstAthredOn == null ) {
+	        	this.mdctnRqstAthredOn = mdctnRqstAthredOn;
+	        } else if(this.mdctnRqstAthredOn.substring(this.mdctnRqstAthredOn.length() - 1).equals("]") & mdctnRqstAthredOn.equals("[")) {
+	        	this.mdctnRqstAthredOn = this.mdctnRqstAthredOn+ "," + mdctnRqstAthredOn;
+	        } else if(mdctnRqstAthredOn.equals("[") | mdctnRqstAthredOn.equals("]") | this.mdctnRqstAthredOn.substring(this.mdctnRqstAthredOn.length() - 1).equals("[")) {
+	        	this.mdctnRqstAthredOn = this.mdctnRqstAthredOn+mdctnRqstAthredOn;
+	        } else  {
+	            this.mdctnRqstAthredOn = this.mdctnRqstAthredOn+ "," +mdctnRqstAthredOn;
+	        }
+        }
     }
     
     
@@ -310,6 +338,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstBasedOn = mdctnRqstBasedOn;
     }
     
+    public void addMdctnRqstBasedOn(String mdctnRqstBasedOn) {
+    	if( mdctnRqstBasedOn != null ) {
+	    	if( this.mdctnRqstBasedOn == null ) {
+	        	this.mdctnRqstBasedOn = mdctnRqstBasedOn;
+	        } else if(this.mdctnRqstBasedOn.substring(this.mdctnRqstBasedOn.length() - 1).equals("]") & mdctnRqstBasedOn.equals("[")) {
+	        	this.mdctnRqstBasedOn = this.mdctnRqstBasedOn+ "," + mdctnRqstBasedOn;
+	        } else if(mdctnRqstBasedOn.equals("[") | mdctnRqstBasedOn.equals("]") | this.mdctnRqstBasedOn.substring(this.mdctnRqstBasedOn.length() - 1).equals("[")) {
+	        	this.mdctnRqstBasedOn = this.mdctnRqstBasedOn+mdctnRqstBasedOn;
+	        } else  {
+	            this.mdctnRqstBasedOn = this.mdctnRqstBasedOn+ "," +mdctnRqstBasedOn;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstCtgryCdgCd() {
@@ -318,6 +360,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstCtgryCdgCd(String mdctnRqstCtgryCdgCd) {
         this.mdctnRqstCtgryCdgCd = mdctnRqstCtgryCdgCd;
+    }
+    
+    public void addMdctnRqstCtgryCdgCd(String mdctnRqstCtgryCdgCd) {
+    	if( mdctnRqstCtgryCdgCd != null ) {
+	    	if( this.mdctnRqstCtgryCdgCd == null ) {
+	        	this.mdctnRqstCtgryCdgCd = mdctnRqstCtgryCdgCd;
+	        } else if(this.mdctnRqstCtgryCdgCd.substring(this.mdctnRqstCtgryCdgCd.length() - 1).equals("]") & mdctnRqstCtgryCdgCd.equals("[")) {
+	        	this.mdctnRqstCtgryCdgCd = this.mdctnRqstCtgryCdgCd+ "," + mdctnRqstCtgryCdgCd;
+	        } else if(mdctnRqstCtgryCdgCd.equals("[") | mdctnRqstCtgryCdgCd.equals("]") | this.mdctnRqstCtgryCdgCd.substring(this.mdctnRqstCtgryCdgCd.length() - 1).equals("[")) {
+	        	this.mdctnRqstCtgryCdgCd = this.mdctnRqstCtgryCdgCd+mdctnRqstCtgryCdgCd;
+	        } else  {
+	            this.mdctnRqstCtgryCdgCd = this.mdctnRqstCtgryCdgCd+ "," +mdctnRqstCtgryCdgCd;
+	        }
+        }
     }
     
     
@@ -330,6 +386,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstCtgryCdgDsply = mdctnRqstCtgryCdgDsply;
     }
     
+    public void addMdctnRqstCtgryCdgDsply(String mdctnRqstCtgryCdgDsply) {
+    	if( mdctnRqstCtgryCdgDsply != null ) {
+	    	if( this.mdctnRqstCtgryCdgDsply == null ) {
+	        	this.mdctnRqstCtgryCdgDsply = mdctnRqstCtgryCdgDsply;
+	        } else if(this.mdctnRqstCtgryCdgDsply.substring(this.mdctnRqstCtgryCdgDsply.length() - 1).equals("]") & mdctnRqstCtgryCdgDsply.equals("[")) {
+	        	this.mdctnRqstCtgryCdgDsply = this.mdctnRqstCtgryCdgDsply+ "," + mdctnRqstCtgryCdgDsply;
+	        } else if(mdctnRqstCtgryCdgDsply.equals("[") | mdctnRqstCtgryCdgDsply.equals("]") | this.mdctnRqstCtgryCdgDsply.substring(this.mdctnRqstCtgryCdgDsply.length() - 1).equals("[")) {
+	        	this.mdctnRqstCtgryCdgDsply = this.mdctnRqstCtgryCdgDsply+mdctnRqstCtgryCdgDsply;
+	        } else  {
+	            this.mdctnRqstCtgryCdgDsply = this.mdctnRqstCtgryCdgDsply+ "," +mdctnRqstCtgryCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstCtgryCdgSys() {
@@ -338,6 +408,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstCtgryCdgSys(String mdctnRqstCtgryCdgSys) {
         this.mdctnRqstCtgryCdgSys = mdctnRqstCtgryCdgSys;
+    }
+    
+    public void addMdctnRqstCtgryCdgSys(String mdctnRqstCtgryCdgSys) {
+    	if( mdctnRqstCtgryCdgSys != null ) {
+	    	if( this.mdctnRqstCtgryCdgSys == null ) {
+	        	this.mdctnRqstCtgryCdgSys = mdctnRqstCtgryCdgSys;
+	        } else if(this.mdctnRqstCtgryCdgSys.substring(this.mdctnRqstCtgryCdgSys.length() - 1).equals("]") & mdctnRqstCtgryCdgSys.equals("[")) {
+	        	this.mdctnRqstCtgryCdgSys = this.mdctnRqstCtgryCdgSys+ "," + mdctnRqstCtgryCdgSys;
+	        } else if(mdctnRqstCtgryCdgSys.equals("[") | mdctnRqstCtgryCdgSys.equals("]") | this.mdctnRqstCtgryCdgSys.substring(this.mdctnRqstCtgryCdgSys.length() - 1).equals("[")) {
+	        	this.mdctnRqstCtgryCdgSys = this.mdctnRqstCtgryCdgSys+mdctnRqstCtgryCdgSys;
+	        } else  {
+	            this.mdctnRqstCtgryCdgSys = this.mdctnRqstCtgryCdgSys+ "," +mdctnRqstCtgryCdgSys;
+	        }
+        }
     }
     
     
@@ -350,6 +434,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstCtgryCdgUsrSltd = mdctnRqstCtgryCdgUsrSltd;
     }
     
+    public void addMdctnRqstCtgryCdgUsrSltd(String mdctnRqstCtgryCdgUsrSltd) {
+    	if( mdctnRqstCtgryCdgUsrSltd != null ) {
+	    	if( this.mdctnRqstCtgryCdgUsrSltd == null ) {
+	        	this.mdctnRqstCtgryCdgUsrSltd = mdctnRqstCtgryCdgUsrSltd;
+	        } else if(this.mdctnRqstCtgryCdgUsrSltd.substring(this.mdctnRqstCtgryCdgUsrSltd.length() - 1).equals("]") & mdctnRqstCtgryCdgUsrSltd.equals("[")) {
+	        	this.mdctnRqstCtgryCdgUsrSltd = this.mdctnRqstCtgryCdgUsrSltd+ "," + mdctnRqstCtgryCdgUsrSltd;
+	        } else if(mdctnRqstCtgryCdgUsrSltd.equals("[") | mdctnRqstCtgryCdgUsrSltd.equals("]") | this.mdctnRqstCtgryCdgUsrSltd.substring(this.mdctnRqstCtgryCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.mdctnRqstCtgryCdgUsrSltd = this.mdctnRqstCtgryCdgUsrSltd+mdctnRqstCtgryCdgUsrSltd;
+	        } else  {
+	            this.mdctnRqstCtgryCdgUsrSltd = this.mdctnRqstCtgryCdgUsrSltd+ "," +mdctnRqstCtgryCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstCtgryCdgVrsn() {
@@ -358,6 +456,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstCtgryCdgVrsn(String mdctnRqstCtgryCdgVrsn) {
         this.mdctnRqstCtgryCdgVrsn = mdctnRqstCtgryCdgVrsn;
+    }
+    
+    public void addMdctnRqstCtgryCdgVrsn(String mdctnRqstCtgryCdgVrsn) {
+    	if( mdctnRqstCtgryCdgVrsn != null ) {
+	    	if( this.mdctnRqstCtgryCdgVrsn == null ) {
+	        	this.mdctnRqstCtgryCdgVrsn = mdctnRqstCtgryCdgVrsn;
+	        } else if(this.mdctnRqstCtgryCdgVrsn.substring(this.mdctnRqstCtgryCdgVrsn.length() - 1).equals("]") & mdctnRqstCtgryCdgVrsn.equals("[")) {
+	        	this.mdctnRqstCtgryCdgVrsn = this.mdctnRqstCtgryCdgVrsn+ "," + mdctnRqstCtgryCdgVrsn;
+	        } else if(mdctnRqstCtgryCdgVrsn.equals("[") | mdctnRqstCtgryCdgVrsn.equals("]") | this.mdctnRqstCtgryCdgVrsn.substring(this.mdctnRqstCtgryCdgVrsn.length() - 1).equals("[")) {
+	        	this.mdctnRqstCtgryCdgVrsn = this.mdctnRqstCtgryCdgVrsn+mdctnRqstCtgryCdgVrsn;
+	        } else  {
+	            this.mdctnRqstCtgryCdgVrsn = this.mdctnRqstCtgryCdgVrsn+ "," +mdctnRqstCtgryCdgVrsn;
+	        }
+        }
     }
     
     
@@ -370,6 +482,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstCtgryTxt = mdctnRqstCtgryTxt;
     }
     
+    public void addMdctnRqstCtgryTxt(String mdctnRqstCtgryTxt) {
+    	if( mdctnRqstCtgryTxt != null ) {
+	    	if( this.mdctnRqstCtgryTxt == null ) {
+	        	this.mdctnRqstCtgryTxt = mdctnRqstCtgryTxt;
+	        } else if(this.mdctnRqstCtgryTxt.substring(this.mdctnRqstCtgryTxt.length() - 1).equals("]") & mdctnRqstCtgryTxt.equals("[")) {
+	        	this.mdctnRqstCtgryTxt = this.mdctnRqstCtgryTxt+ "," + mdctnRqstCtgryTxt;
+	        } else if(mdctnRqstCtgryTxt.equals("[") | mdctnRqstCtgryTxt.equals("]") | this.mdctnRqstCtgryTxt.substring(this.mdctnRqstCtgryTxt.length() - 1).equals("[")) {
+	        	this.mdctnRqstCtgryTxt = this.mdctnRqstCtgryTxt+mdctnRqstCtgryTxt;
+	        } else  {
+	            this.mdctnRqstCtgryTxt = this.mdctnRqstCtgryTxt+ "," +mdctnRqstCtgryTxt;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstCourseOfThrpyTypCdgCd() {
@@ -378,6 +504,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstCourseOfThrpyTypCdgCd(String mdctnRqstCourseOfThrpyTypCdgCd) {
         this.mdctnRqstCourseOfThrpyTypCdgCd = mdctnRqstCourseOfThrpyTypCdgCd;
+    }
+    
+    public void addMdctnRqstCourseOfThrpyTypCdgCd(String mdctnRqstCourseOfThrpyTypCdgCd) {
+    	if( mdctnRqstCourseOfThrpyTypCdgCd != null ) {
+	    	if( this.mdctnRqstCourseOfThrpyTypCdgCd == null ) {
+	        	this.mdctnRqstCourseOfThrpyTypCdgCd = mdctnRqstCourseOfThrpyTypCdgCd;
+	        } else if(this.mdctnRqstCourseOfThrpyTypCdgCd.substring(this.mdctnRqstCourseOfThrpyTypCdgCd.length() - 1).equals("]") & mdctnRqstCourseOfThrpyTypCdgCd.equals("[")) {
+	        	this.mdctnRqstCourseOfThrpyTypCdgCd = this.mdctnRqstCourseOfThrpyTypCdgCd+ "," + mdctnRqstCourseOfThrpyTypCdgCd;
+	        } else if(mdctnRqstCourseOfThrpyTypCdgCd.equals("[") | mdctnRqstCourseOfThrpyTypCdgCd.equals("]") | this.mdctnRqstCourseOfThrpyTypCdgCd.substring(this.mdctnRqstCourseOfThrpyTypCdgCd.length() - 1).equals("[")) {
+	        	this.mdctnRqstCourseOfThrpyTypCdgCd = this.mdctnRqstCourseOfThrpyTypCdgCd+mdctnRqstCourseOfThrpyTypCdgCd;
+	        } else  {
+	            this.mdctnRqstCourseOfThrpyTypCdgCd = this.mdctnRqstCourseOfThrpyTypCdgCd+ "," +mdctnRqstCourseOfThrpyTypCdgCd;
+	        }
+        }
     }
     
     
@@ -390,6 +530,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstCourseOfThrpyTypCdgDsply = mdctnRqstCourseOfThrpyTypCdgDsply;
     }
     
+    public void addMdctnRqstCourseOfThrpyTypCdgDsply(String mdctnRqstCourseOfThrpyTypCdgDsply) {
+    	if( mdctnRqstCourseOfThrpyTypCdgDsply != null ) {
+	    	if( this.mdctnRqstCourseOfThrpyTypCdgDsply == null ) {
+	        	this.mdctnRqstCourseOfThrpyTypCdgDsply = mdctnRqstCourseOfThrpyTypCdgDsply;
+	        } else if(this.mdctnRqstCourseOfThrpyTypCdgDsply.substring(this.mdctnRqstCourseOfThrpyTypCdgDsply.length() - 1).equals("]") & mdctnRqstCourseOfThrpyTypCdgDsply.equals("[")) {
+	        	this.mdctnRqstCourseOfThrpyTypCdgDsply = this.mdctnRqstCourseOfThrpyTypCdgDsply+ "," + mdctnRqstCourseOfThrpyTypCdgDsply;
+	        } else if(mdctnRqstCourseOfThrpyTypCdgDsply.equals("[") | mdctnRqstCourseOfThrpyTypCdgDsply.equals("]") | this.mdctnRqstCourseOfThrpyTypCdgDsply.substring(this.mdctnRqstCourseOfThrpyTypCdgDsply.length() - 1).equals("[")) {
+	        	this.mdctnRqstCourseOfThrpyTypCdgDsply = this.mdctnRqstCourseOfThrpyTypCdgDsply+mdctnRqstCourseOfThrpyTypCdgDsply;
+	        } else  {
+	            this.mdctnRqstCourseOfThrpyTypCdgDsply = this.mdctnRqstCourseOfThrpyTypCdgDsply+ "," +mdctnRqstCourseOfThrpyTypCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstCourseOfThrpyTypCdgSys() {
@@ -398,6 +552,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstCourseOfThrpyTypCdgSys(String mdctnRqstCourseOfThrpyTypCdgSys) {
         this.mdctnRqstCourseOfThrpyTypCdgSys = mdctnRqstCourseOfThrpyTypCdgSys;
+    }
+    
+    public void addMdctnRqstCourseOfThrpyTypCdgSys(String mdctnRqstCourseOfThrpyTypCdgSys) {
+    	if( mdctnRqstCourseOfThrpyTypCdgSys != null ) {
+	    	if( this.mdctnRqstCourseOfThrpyTypCdgSys == null ) {
+	        	this.mdctnRqstCourseOfThrpyTypCdgSys = mdctnRqstCourseOfThrpyTypCdgSys;
+	        } else if(this.mdctnRqstCourseOfThrpyTypCdgSys.substring(this.mdctnRqstCourseOfThrpyTypCdgSys.length() - 1).equals("]") & mdctnRqstCourseOfThrpyTypCdgSys.equals("[")) {
+	        	this.mdctnRqstCourseOfThrpyTypCdgSys = this.mdctnRqstCourseOfThrpyTypCdgSys+ "," + mdctnRqstCourseOfThrpyTypCdgSys;
+	        } else if(mdctnRqstCourseOfThrpyTypCdgSys.equals("[") | mdctnRqstCourseOfThrpyTypCdgSys.equals("]") | this.mdctnRqstCourseOfThrpyTypCdgSys.substring(this.mdctnRqstCourseOfThrpyTypCdgSys.length() - 1).equals("[")) {
+	        	this.mdctnRqstCourseOfThrpyTypCdgSys = this.mdctnRqstCourseOfThrpyTypCdgSys+mdctnRqstCourseOfThrpyTypCdgSys;
+	        } else  {
+	            this.mdctnRqstCourseOfThrpyTypCdgSys = this.mdctnRqstCourseOfThrpyTypCdgSys+ "," +mdctnRqstCourseOfThrpyTypCdgSys;
+	        }
+        }
     }
     
     
@@ -410,6 +578,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstCourseOfThrpyTypCdgUsrSltd = mdctnRqstCourseOfThrpyTypCdgUsrSltd;
     }
     
+    public void addMdctnRqstCourseOfThrpyTypCdgUsrSltd(String mdctnRqstCourseOfThrpyTypCdgUsrSltd) {
+    	if( mdctnRqstCourseOfThrpyTypCdgUsrSltd != null ) {
+	    	if( this.mdctnRqstCourseOfThrpyTypCdgUsrSltd == null ) {
+	        	this.mdctnRqstCourseOfThrpyTypCdgUsrSltd = mdctnRqstCourseOfThrpyTypCdgUsrSltd;
+	        } else if(this.mdctnRqstCourseOfThrpyTypCdgUsrSltd.substring(this.mdctnRqstCourseOfThrpyTypCdgUsrSltd.length() - 1).equals("]") & mdctnRqstCourseOfThrpyTypCdgUsrSltd.equals("[")) {
+	        	this.mdctnRqstCourseOfThrpyTypCdgUsrSltd = this.mdctnRqstCourseOfThrpyTypCdgUsrSltd+ "," + mdctnRqstCourseOfThrpyTypCdgUsrSltd;
+	        } else if(mdctnRqstCourseOfThrpyTypCdgUsrSltd.equals("[") | mdctnRqstCourseOfThrpyTypCdgUsrSltd.equals("]") | this.mdctnRqstCourseOfThrpyTypCdgUsrSltd.substring(this.mdctnRqstCourseOfThrpyTypCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.mdctnRqstCourseOfThrpyTypCdgUsrSltd = this.mdctnRqstCourseOfThrpyTypCdgUsrSltd+mdctnRqstCourseOfThrpyTypCdgUsrSltd;
+	        } else  {
+	            this.mdctnRqstCourseOfThrpyTypCdgUsrSltd = this.mdctnRqstCourseOfThrpyTypCdgUsrSltd+ "," +mdctnRqstCourseOfThrpyTypCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstCourseOfThrpyTypCdgVrsn() {
@@ -418,6 +600,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstCourseOfThrpyTypCdgVrsn(String mdctnRqstCourseOfThrpyTypCdgVrsn) {
         this.mdctnRqstCourseOfThrpyTypCdgVrsn = mdctnRqstCourseOfThrpyTypCdgVrsn;
+    }
+    
+    public void addMdctnRqstCourseOfThrpyTypCdgVrsn(String mdctnRqstCourseOfThrpyTypCdgVrsn) {
+    	if( mdctnRqstCourseOfThrpyTypCdgVrsn != null ) {
+	    	if( this.mdctnRqstCourseOfThrpyTypCdgVrsn == null ) {
+	        	this.mdctnRqstCourseOfThrpyTypCdgVrsn = mdctnRqstCourseOfThrpyTypCdgVrsn;
+	        } else if(this.mdctnRqstCourseOfThrpyTypCdgVrsn.substring(this.mdctnRqstCourseOfThrpyTypCdgVrsn.length() - 1).equals("]") & mdctnRqstCourseOfThrpyTypCdgVrsn.equals("[")) {
+	        	this.mdctnRqstCourseOfThrpyTypCdgVrsn = this.mdctnRqstCourseOfThrpyTypCdgVrsn+ "," + mdctnRqstCourseOfThrpyTypCdgVrsn;
+	        } else if(mdctnRqstCourseOfThrpyTypCdgVrsn.equals("[") | mdctnRqstCourseOfThrpyTypCdgVrsn.equals("]") | this.mdctnRqstCourseOfThrpyTypCdgVrsn.substring(this.mdctnRqstCourseOfThrpyTypCdgVrsn.length() - 1).equals("[")) {
+	        	this.mdctnRqstCourseOfThrpyTypCdgVrsn = this.mdctnRqstCourseOfThrpyTypCdgVrsn+mdctnRqstCourseOfThrpyTypCdgVrsn;
+	        } else  {
+	            this.mdctnRqstCourseOfThrpyTypCdgVrsn = this.mdctnRqstCourseOfThrpyTypCdgVrsn+ "," +mdctnRqstCourseOfThrpyTypCdgVrsn;
+	        }
+        }
     }
     
     
@@ -430,6 +626,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstCourseOfThrpyTypTxt = mdctnRqstCourseOfThrpyTypTxt;
     }
     
+    public void addMdctnRqstCourseOfThrpyTypTxt(String mdctnRqstCourseOfThrpyTypTxt) {
+    	if( mdctnRqstCourseOfThrpyTypTxt != null ) {
+	    	if( this.mdctnRqstCourseOfThrpyTypTxt == null ) {
+	        	this.mdctnRqstCourseOfThrpyTypTxt = mdctnRqstCourseOfThrpyTypTxt;
+	        } else if(this.mdctnRqstCourseOfThrpyTypTxt.substring(this.mdctnRqstCourseOfThrpyTypTxt.length() - 1).equals("]") & mdctnRqstCourseOfThrpyTypTxt.equals("[")) {
+	        	this.mdctnRqstCourseOfThrpyTypTxt = this.mdctnRqstCourseOfThrpyTypTxt+ "," + mdctnRqstCourseOfThrpyTypTxt;
+	        } else if(mdctnRqstCourseOfThrpyTypTxt.equals("[") | mdctnRqstCourseOfThrpyTypTxt.equals("]") | this.mdctnRqstCourseOfThrpyTypTxt.substring(this.mdctnRqstCourseOfThrpyTypTxt.length() - 1).equals("[")) {
+	        	this.mdctnRqstCourseOfThrpyTypTxt = this.mdctnRqstCourseOfThrpyTypTxt+mdctnRqstCourseOfThrpyTypTxt;
+	        } else  {
+	            this.mdctnRqstCourseOfThrpyTypTxt = this.mdctnRqstCourseOfThrpyTypTxt+ "," +mdctnRqstCourseOfThrpyTypTxt;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDetectedIssue() {
@@ -438,6 +648,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDetectedIssue(String mdctnRqstDetectedIssue) {
         this.mdctnRqstDetectedIssue = mdctnRqstDetectedIssue;
+    }
+    
+    public void addMdctnRqstDetectedIssue(String mdctnRqstDetectedIssue) {
+    	if( mdctnRqstDetectedIssue != null ) {
+	    	if( this.mdctnRqstDetectedIssue == null ) {
+	        	this.mdctnRqstDetectedIssue = mdctnRqstDetectedIssue;
+	        } else if(this.mdctnRqstDetectedIssue.substring(this.mdctnRqstDetectedIssue.length() - 1).equals("]") & mdctnRqstDetectedIssue.equals("[")) {
+	        	this.mdctnRqstDetectedIssue = this.mdctnRqstDetectedIssue+ "," + mdctnRqstDetectedIssue;
+	        } else if(mdctnRqstDetectedIssue.equals("[") | mdctnRqstDetectedIssue.equals("]") | this.mdctnRqstDetectedIssue.substring(this.mdctnRqstDetectedIssue.length() - 1).equals("[")) {
+	        	this.mdctnRqstDetectedIssue = this.mdctnRqstDetectedIssue+mdctnRqstDetectedIssue;
+	        } else  {
+	            this.mdctnRqstDetectedIssue = this.mdctnRqstDetectedIssue+ "," +mdctnRqstDetectedIssue;
+	        }
+        }
     }
     
     
@@ -450,6 +674,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDispnsRqstDispnsIntervalCd = mdctnRqstDispnsRqstDispnsIntervalCd;
     }
     
+    public void addMdctnRqstDispnsRqstDispnsIntervalCd(String mdctnRqstDispnsRqstDispnsIntervalCd) {
+    	if( mdctnRqstDispnsRqstDispnsIntervalCd != null ) {
+	    	if( this.mdctnRqstDispnsRqstDispnsIntervalCd == null ) {
+	        	this.mdctnRqstDispnsRqstDispnsIntervalCd = mdctnRqstDispnsRqstDispnsIntervalCd;
+	        } else if(this.mdctnRqstDispnsRqstDispnsIntervalCd.substring(this.mdctnRqstDispnsRqstDispnsIntervalCd.length() - 1).equals("]") & mdctnRqstDispnsRqstDispnsIntervalCd.equals("[")) {
+	        	this.mdctnRqstDispnsRqstDispnsIntervalCd = this.mdctnRqstDispnsRqstDispnsIntervalCd+ "," + mdctnRqstDispnsRqstDispnsIntervalCd;
+	        } else if(mdctnRqstDispnsRqstDispnsIntervalCd.equals("[") | mdctnRqstDispnsRqstDispnsIntervalCd.equals("]") | this.mdctnRqstDispnsRqstDispnsIntervalCd.substring(this.mdctnRqstDispnsRqstDispnsIntervalCd.length() - 1).equals("[")) {
+	        	this.mdctnRqstDispnsRqstDispnsIntervalCd = this.mdctnRqstDispnsRqstDispnsIntervalCd+mdctnRqstDispnsRqstDispnsIntervalCd;
+	        } else  {
+	            this.mdctnRqstDispnsRqstDispnsIntervalCd = this.mdctnRqstDispnsRqstDispnsIntervalCd+ "," +mdctnRqstDispnsRqstDispnsIntervalCd;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDispnsRqstDispnsIntervalCmprtr() {
@@ -458,6 +696,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDispnsRqstDispnsIntervalCmprtr(String mdctnRqstDispnsRqstDispnsIntervalCmprtr) {
         this.mdctnRqstDispnsRqstDispnsIntervalCmprtr = mdctnRqstDispnsRqstDispnsIntervalCmprtr;
+    }
+    
+    public void addMdctnRqstDispnsRqstDispnsIntervalCmprtr(String mdctnRqstDispnsRqstDispnsIntervalCmprtr) {
+    	if( mdctnRqstDispnsRqstDispnsIntervalCmprtr != null ) {
+	    	if( this.mdctnRqstDispnsRqstDispnsIntervalCmprtr == null ) {
+	        	this.mdctnRqstDispnsRqstDispnsIntervalCmprtr = mdctnRqstDispnsRqstDispnsIntervalCmprtr;
+	        } else if(this.mdctnRqstDispnsRqstDispnsIntervalCmprtr.substring(this.mdctnRqstDispnsRqstDispnsIntervalCmprtr.length() - 1).equals("]") & mdctnRqstDispnsRqstDispnsIntervalCmprtr.equals("[")) {
+	        	this.mdctnRqstDispnsRqstDispnsIntervalCmprtr = this.mdctnRqstDispnsRqstDispnsIntervalCmprtr+ "," + mdctnRqstDispnsRqstDispnsIntervalCmprtr;
+	        } else if(mdctnRqstDispnsRqstDispnsIntervalCmprtr.equals("[") | mdctnRqstDispnsRqstDispnsIntervalCmprtr.equals("]") | this.mdctnRqstDispnsRqstDispnsIntervalCmprtr.substring(this.mdctnRqstDispnsRqstDispnsIntervalCmprtr.length() - 1).equals("[")) {
+	        	this.mdctnRqstDispnsRqstDispnsIntervalCmprtr = this.mdctnRqstDispnsRqstDispnsIntervalCmprtr+mdctnRqstDispnsRqstDispnsIntervalCmprtr;
+	        } else  {
+	            this.mdctnRqstDispnsRqstDispnsIntervalCmprtr = this.mdctnRqstDispnsRqstDispnsIntervalCmprtr+ "," +mdctnRqstDispnsRqstDispnsIntervalCmprtr;
+	        }
+        }
     }
     
     
@@ -470,6 +722,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDispnsRqstDispnsIntervalSys = mdctnRqstDispnsRqstDispnsIntervalSys;
     }
     
+    public void addMdctnRqstDispnsRqstDispnsIntervalSys(String mdctnRqstDispnsRqstDispnsIntervalSys) {
+    	if( mdctnRqstDispnsRqstDispnsIntervalSys != null ) {
+	    	if( this.mdctnRqstDispnsRqstDispnsIntervalSys == null ) {
+	        	this.mdctnRqstDispnsRqstDispnsIntervalSys = mdctnRqstDispnsRqstDispnsIntervalSys;
+	        } else if(this.mdctnRqstDispnsRqstDispnsIntervalSys.substring(this.mdctnRqstDispnsRqstDispnsIntervalSys.length() - 1).equals("]") & mdctnRqstDispnsRqstDispnsIntervalSys.equals("[")) {
+	        	this.mdctnRqstDispnsRqstDispnsIntervalSys = this.mdctnRqstDispnsRqstDispnsIntervalSys+ "," + mdctnRqstDispnsRqstDispnsIntervalSys;
+	        } else if(mdctnRqstDispnsRqstDispnsIntervalSys.equals("[") | mdctnRqstDispnsRqstDispnsIntervalSys.equals("]") | this.mdctnRqstDispnsRqstDispnsIntervalSys.substring(this.mdctnRqstDispnsRqstDispnsIntervalSys.length() - 1).equals("[")) {
+	        	this.mdctnRqstDispnsRqstDispnsIntervalSys = this.mdctnRqstDispnsRqstDispnsIntervalSys+mdctnRqstDispnsRqstDispnsIntervalSys;
+	        } else  {
+	            this.mdctnRqstDispnsRqstDispnsIntervalSys = this.mdctnRqstDispnsRqstDispnsIntervalSys+ "," +mdctnRqstDispnsRqstDispnsIntervalSys;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDispnsRqstDispnsIntervalUnt() {
@@ -478,6 +744,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDispnsRqstDispnsIntervalUnt(String mdctnRqstDispnsRqstDispnsIntervalUnt) {
         this.mdctnRqstDispnsRqstDispnsIntervalUnt = mdctnRqstDispnsRqstDispnsIntervalUnt;
+    }
+    
+    public void addMdctnRqstDispnsRqstDispnsIntervalUnt(String mdctnRqstDispnsRqstDispnsIntervalUnt) {
+    	if( mdctnRqstDispnsRqstDispnsIntervalUnt != null ) {
+	    	if( this.mdctnRqstDispnsRqstDispnsIntervalUnt == null ) {
+	        	this.mdctnRqstDispnsRqstDispnsIntervalUnt = mdctnRqstDispnsRqstDispnsIntervalUnt;
+	        } else if(this.mdctnRqstDispnsRqstDispnsIntervalUnt.substring(this.mdctnRqstDispnsRqstDispnsIntervalUnt.length() - 1).equals("]") & mdctnRqstDispnsRqstDispnsIntervalUnt.equals("[")) {
+	        	this.mdctnRqstDispnsRqstDispnsIntervalUnt = this.mdctnRqstDispnsRqstDispnsIntervalUnt+ "," + mdctnRqstDispnsRqstDispnsIntervalUnt;
+	        } else if(mdctnRqstDispnsRqstDispnsIntervalUnt.equals("[") | mdctnRqstDispnsRqstDispnsIntervalUnt.equals("]") | this.mdctnRqstDispnsRqstDispnsIntervalUnt.substring(this.mdctnRqstDispnsRqstDispnsIntervalUnt.length() - 1).equals("[")) {
+	        	this.mdctnRqstDispnsRqstDispnsIntervalUnt = this.mdctnRqstDispnsRqstDispnsIntervalUnt+mdctnRqstDispnsRqstDispnsIntervalUnt;
+	        } else  {
+	            this.mdctnRqstDispnsRqstDispnsIntervalUnt = this.mdctnRqstDispnsRqstDispnsIntervalUnt+ "," +mdctnRqstDispnsRqstDispnsIntervalUnt;
+	        }
+        }
     }
     
     
@@ -490,6 +770,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDispnsRqstDispnsIntervalVl = mdctnRqstDispnsRqstDispnsIntervalVl;
     }
     
+    public void addMdctnRqstDispnsRqstDispnsIntervalVl(String mdctnRqstDispnsRqstDispnsIntervalVl) {
+    	if( mdctnRqstDispnsRqstDispnsIntervalVl != null ) {
+	    	if( this.mdctnRqstDispnsRqstDispnsIntervalVl == null ) {
+	        	this.mdctnRqstDispnsRqstDispnsIntervalVl = mdctnRqstDispnsRqstDispnsIntervalVl;
+	        } else if(this.mdctnRqstDispnsRqstDispnsIntervalVl.substring(this.mdctnRqstDispnsRqstDispnsIntervalVl.length() - 1).equals("]") & mdctnRqstDispnsRqstDispnsIntervalVl.equals("[")) {
+	        	this.mdctnRqstDispnsRqstDispnsIntervalVl = this.mdctnRqstDispnsRqstDispnsIntervalVl+ "," + mdctnRqstDispnsRqstDispnsIntervalVl;
+	        } else if(mdctnRqstDispnsRqstDispnsIntervalVl.equals("[") | mdctnRqstDispnsRqstDispnsIntervalVl.equals("]") | this.mdctnRqstDispnsRqstDispnsIntervalVl.substring(this.mdctnRqstDispnsRqstDispnsIntervalVl.length() - 1).equals("[")) {
+	        	this.mdctnRqstDispnsRqstDispnsIntervalVl = this.mdctnRqstDispnsRqstDispnsIntervalVl+mdctnRqstDispnsRqstDispnsIntervalVl;
+	        } else  {
+	            this.mdctnRqstDispnsRqstDispnsIntervalVl = this.mdctnRqstDispnsRqstDispnsIntervalVl+ "," +mdctnRqstDispnsRqstDispnsIntervalVl;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDispnsRqstExpectedSpplyDurationCd() {
@@ -498,6 +792,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDispnsRqstExpectedSpplyDurationCd(String mdctnRqstDispnsRqstExpectedSpplyDurationCd) {
         this.mdctnRqstDispnsRqstExpectedSpplyDurationCd = mdctnRqstDispnsRqstExpectedSpplyDurationCd;
+    }
+    
+    public void addMdctnRqstDispnsRqstExpectedSpplyDurationCd(String mdctnRqstDispnsRqstExpectedSpplyDurationCd) {
+    	if( mdctnRqstDispnsRqstExpectedSpplyDurationCd != null ) {
+	    	if( this.mdctnRqstDispnsRqstExpectedSpplyDurationCd == null ) {
+	        	this.mdctnRqstDispnsRqstExpectedSpplyDurationCd = mdctnRqstDispnsRqstExpectedSpplyDurationCd;
+	        } else if(this.mdctnRqstDispnsRqstExpectedSpplyDurationCd.substring(this.mdctnRqstDispnsRqstExpectedSpplyDurationCd.length() - 1).equals("]") & mdctnRqstDispnsRqstExpectedSpplyDurationCd.equals("[")) {
+	        	this.mdctnRqstDispnsRqstExpectedSpplyDurationCd = this.mdctnRqstDispnsRqstExpectedSpplyDurationCd+ "," + mdctnRqstDispnsRqstExpectedSpplyDurationCd;
+	        } else if(mdctnRqstDispnsRqstExpectedSpplyDurationCd.equals("[") | mdctnRqstDispnsRqstExpectedSpplyDurationCd.equals("]") | this.mdctnRqstDispnsRqstExpectedSpplyDurationCd.substring(this.mdctnRqstDispnsRqstExpectedSpplyDurationCd.length() - 1).equals("[")) {
+	        	this.mdctnRqstDispnsRqstExpectedSpplyDurationCd = this.mdctnRqstDispnsRqstExpectedSpplyDurationCd+mdctnRqstDispnsRqstExpectedSpplyDurationCd;
+	        } else  {
+	            this.mdctnRqstDispnsRqstExpectedSpplyDurationCd = this.mdctnRqstDispnsRqstExpectedSpplyDurationCd+ "," +mdctnRqstDispnsRqstExpectedSpplyDurationCd;
+	        }
+        }
     }
     
     
@@ -510,6 +818,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDispnsRqstExpectedSpplyDurationCmprtr = mdctnRqstDispnsRqstExpectedSpplyDurationCmprtr;
     }
     
+    public void addMdctnRqstDispnsRqstExpectedSpplyDurationCmprtr(String mdctnRqstDispnsRqstExpectedSpplyDurationCmprtr) {
+    	if( mdctnRqstDispnsRqstExpectedSpplyDurationCmprtr != null ) {
+	    	if( this.mdctnRqstDispnsRqstExpectedSpplyDurationCmprtr == null ) {
+	        	this.mdctnRqstDispnsRqstExpectedSpplyDurationCmprtr = mdctnRqstDispnsRqstExpectedSpplyDurationCmprtr;
+	        } else if(this.mdctnRqstDispnsRqstExpectedSpplyDurationCmprtr.substring(this.mdctnRqstDispnsRqstExpectedSpplyDurationCmprtr.length() - 1).equals("]") & mdctnRqstDispnsRqstExpectedSpplyDurationCmprtr.equals("[")) {
+	        	this.mdctnRqstDispnsRqstExpectedSpplyDurationCmprtr = this.mdctnRqstDispnsRqstExpectedSpplyDurationCmprtr+ "," + mdctnRqstDispnsRqstExpectedSpplyDurationCmprtr;
+	        } else if(mdctnRqstDispnsRqstExpectedSpplyDurationCmprtr.equals("[") | mdctnRqstDispnsRqstExpectedSpplyDurationCmprtr.equals("]") | this.mdctnRqstDispnsRqstExpectedSpplyDurationCmprtr.substring(this.mdctnRqstDispnsRqstExpectedSpplyDurationCmprtr.length() - 1).equals("[")) {
+	        	this.mdctnRqstDispnsRqstExpectedSpplyDurationCmprtr = this.mdctnRqstDispnsRqstExpectedSpplyDurationCmprtr+mdctnRqstDispnsRqstExpectedSpplyDurationCmprtr;
+	        } else  {
+	            this.mdctnRqstDispnsRqstExpectedSpplyDurationCmprtr = this.mdctnRqstDispnsRqstExpectedSpplyDurationCmprtr+ "," +mdctnRqstDispnsRqstExpectedSpplyDurationCmprtr;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDispnsRqstExpectedSpplyDurationSys() {
@@ -518,6 +840,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDispnsRqstExpectedSpplyDurationSys(String mdctnRqstDispnsRqstExpectedSpplyDurationSys) {
         this.mdctnRqstDispnsRqstExpectedSpplyDurationSys = mdctnRqstDispnsRqstExpectedSpplyDurationSys;
+    }
+    
+    public void addMdctnRqstDispnsRqstExpectedSpplyDurationSys(String mdctnRqstDispnsRqstExpectedSpplyDurationSys) {
+    	if( mdctnRqstDispnsRqstExpectedSpplyDurationSys != null ) {
+	    	if( this.mdctnRqstDispnsRqstExpectedSpplyDurationSys == null ) {
+	        	this.mdctnRqstDispnsRqstExpectedSpplyDurationSys = mdctnRqstDispnsRqstExpectedSpplyDurationSys;
+	        } else if(this.mdctnRqstDispnsRqstExpectedSpplyDurationSys.substring(this.mdctnRqstDispnsRqstExpectedSpplyDurationSys.length() - 1).equals("]") & mdctnRqstDispnsRqstExpectedSpplyDurationSys.equals("[")) {
+	        	this.mdctnRqstDispnsRqstExpectedSpplyDurationSys = this.mdctnRqstDispnsRqstExpectedSpplyDurationSys+ "," + mdctnRqstDispnsRqstExpectedSpplyDurationSys;
+	        } else if(mdctnRqstDispnsRqstExpectedSpplyDurationSys.equals("[") | mdctnRqstDispnsRqstExpectedSpplyDurationSys.equals("]") | this.mdctnRqstDispnsRqstExpectedSpplyDurationSys.substring(this.mdctnRqstDispnsRqstExpectedSpplyDurationSys.length() - 1).equals("[")) {
+	        	this.mdctnRqstDispnsRqstExpectedSpplyDurationSys = this.mdctnRqstDispnsRqstExpectedSpplyDurationSys+mdctnRqstDispnsRqstExpectedSpplyDurationSys;
+	        } else  {
+	            this.mdctnRqstDispnsRqstExpectedSpplyDurationSys = this.mdctnRqstDispnsRqstExpectedSpplyDurationSys+ "," +mdctnRqstDispnsRqstExpectedSpplyDurationSys;
+	        }
+        }
     }
     
     
@@ -530,6 +866,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDispnsRqstExpectedSpplyDurationUnt = mdctnRqstDispnsRqstExpectedSpplyDurationUnt;
     }
     
+    public void addMdctnRqstDispnsRqstExpectedSpplyDurationUnt(String mdctnRqstDispnsRqstExpectedSpplyDurationUnt) {
+    	if( mdctnRqstDispnsRqstExpectedSpplyDurationUnt != null ) {
+	    	if( this.mdctnRqstDispnsRqstExpectedSpplyDurationUnt == null ) {
+	        	this.mdctnRqstDispnsRqstExpectedSpplyDurationUnt = mdctnRqstDispnsRqstExpectedSpplyDurationUnt;
+	        } else if(this.mdctnRqstDispnsRqstExpectedSpplyDurationUnt.substring(this.mdctnRqstDispnsRqstExpectedSpplyDurationUnt.length() - 1).equals("]") & mdctnRqstDispnsRqstExpectedSpplyDurationUnt.equals("[")) {
+	        	this.mdctnRqstDispnsRqstExpectedSpplyDurationUnt = this.mdctnRqstDispnsRqstExpectedSpplyDurationUnt+ "," + mdctnRqstDispnsRqstExpectedSpplyDurationUnt;
+	        } else if(mdctnRqstDispnsRqstExpectedSpplyDurationUnt.equals("[") | mdctnRqstDispnsRqstExpectedSpplyDurationUnt.equals("]") | this.mdctnRqstDispnsRqstExpectedSpplyDurationUnt.substring(this.mdctnRqstDispnsRqstExpectedSpplyDurationUnt.length() - 1).equals("[")) {
+	        	this.mdctnRqstDispnsRqstExpectedSpplyDurationUnt = this.mdctnRqstDispnsRqstExpectedSpplyDurationUnt+mdctnRqstDispnsRqstExpectedSpplyDurationUnt;
+	        } else  {
+	            this.mdctnRqstDispnsRqstExpectedSpplyDurationUnt = this.mdctnRqstDispnsRqstExpectedSpplyDurationUnt+ "," +mdctnRqstDispnsRqstExpectedSpplyDurationUnt;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDispnsRqstExpectedSpplyDurationVl() {
@@ -538,6 +888,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDispnsRqstExpectedSpplyDurationVl(String mdctnRqstDispnsRqstExpectedSpplyDurationVl) {
         this.mdctnRqstDispnsRqstExpectedSpplyDurationVl = mdctnRqstDispnsRqstExpectedSpplyDurationVl;
+    }
+    
+    public void addMdctnRqstDispnsRqstExpectedSpplyDurationVl(String mdctnRqstDispnsRqstExpectedSpplyDurationVl) {
+    	if( mdctnRqstDispnsRqstExpectedSpplyDurationVl != null ) {
+	    	if( this.mdctnRqstDispnsRqstExpectedSpplyDurationVl == null ) {
+	        	this.mdctnRqstDispnsRqstExpectedSpplyDurationVl = mdctnRqstDispnsRqstExpectedSpplyDurationVl;
+	        } else if(this.mdctnRqstDispnsRqstExpectedSpplyDurationVl.substring(this.mdctnRqstDispnsRqstExpectedSpplyDurationVl.length() - 1).equals("]") & mdctnRqstDispnsRqstExpectedSpplyDurationVl.equals("[")) {
+	        	this.mdctnRqstDispnsRqstExpectedSpplyDurationVl = this.mdctnRqstDispnsRqstExpectedSpplyDurationVl+ "," + mdctnRqstDispnsRqstExpectedSpplyDurationVl;
+	        } else if(mdctnRqstDispnsRqstExpectedSpplyDurationVl.equals("[") | mdctnRqstDispnsRqstExpectedSpplyDurationVl.equals("]") | this.mdctnRqstDispnsRqstExpectedSpplyDurationVl.substring(this.mdctnRqstDispnsRqstExpectedSpplyDurationVl.length() - 1).equals("[")) {
+	        	this.mdctnRqstDispnsRqstExpectedSpplyDurationVl = this.mdctnRqstDispnsRqstExpectedSpplyDurationVl+mdctnRqstDispnsRqstExpectedSpplyDurationVl;
+	        } else  {
+	            this.mdctnRqstDispnsRqstExpectedSpplyDurationVl = this.mdctnRqstDispnsRqstExpectedSpplyDurationVl+ "," +mdctnRqstDispnsRqstExpectedSpplyDurationVl;
+	        }
+        }
     }
     
     
@@ -550,6 +914,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDispnsRqstInitialFillDurationCd = mdctnRqstDispnsRqstInitialFillDurationCd;
     }
     
+    public void addMdctnRqstDispnsRqstInitialFillDurationCd(String mdctnRqstDispnsRqstInitialFillDurationCd) {
+    	if( mdctnRqstDispnsRqstInitialFillDurationCd != null ) {
+	    	if( this.mdctnRqstDispnsRqstInitialFillDurationCd == null ) {
+	        	this.mdctnRqstDispnsRqstInitialFillDurationCd = mdctnRqstDispnsRqstInitialFillDurationCd;
+	        } else if(this.mdctnRqstDispnsRqstInitialFillDurationCd.substring(this.mdctnRqstDispnsRqstInitialFillDurationCd.length() - 1).equals("]") & mdctnRqstDispnsRqstInitialFillDurationCd.equals("[")) {
+	        	this.mdctnRqstDispnsRqstInitialFillDurationCd = this.mdctnRqstDispnsRqstInitialFillDurationCd+ "," + mdctnRqstDispnsRqstInitialFillDurationCd;
+	        } else if(mdctnRqstDispnsRqstInitialFillDurationCd.equals("[") | mdctnRqstDispnsRqstInitialFillDurationCd.equals("]") | this.mdctnRqstDispnsRqstInitialFillDurationCd.substring(this.mdctnRqstDispnsRqstInitialFillDurationCd.length() - 1).equals("[")) {
+	        	this.mdctnRqstDispnsRqstInitialFillDurationCd = this.mdctnRqstDispnsRqstInitialFillDurationCd+mdctnRqstDispnsRqstInitialFillDurationCd;
+	        } else  {
+	            this.mdctnRqstDispnsRqstInitialFillDurationCd = this.mdctnRqstDispnsRqstInitialFillDurationCd+ "," +mdctnRqstDispnsRqstInitialFillDurationCd;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDispnsRqstInitialFillDurationCmprtr() {
@@ -558,6 +936,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDispnsRqstInitialFillDurationCmprtr(String mdctnRqstDispnsRqstInitialFillDurationCmprtr) {
         this.mdctnRqstDispnsRqstInitialFillDurationCmprtr = mdctnRqstDispnsRqstInitialFillDurationCmprtr;
+    }
+    
+    public void addMdctnRqstDispnsRqstInitialFillDurationCmprtr(String mdctnRqstDispnsRqstInitialFillDurationCmprtr) {
+    	if( mdctnRqstDispnsRqstInitialFillDurationCmprtr != null ) {
+	    	if( this.mdctnRqstDispnsRqstInitialFillDurationCmprtr == null ) {
+	        	this.mdctnRqstDispnsRqstInitialFillDurationCmprtr = mdctnRqstDispnsRqstInitialFillDurationCmprtr;
+	        } else if(this.mdctnRqstDispnsRqstInitialFillDurationCmprtr.substring(this.mdctnRqstDispnsRqstInitialFillDurationCmprtr.length() - 1).equals("]") & mdctnRqstDispnsRqstInitialFillDurationCmprtr.equals("[")) {
+	        	this.mdctnRqstDispnsRqstInitialFillDurationCmprtr = this.mdctnRqstDispnsRqstInitialFillDurationCmprtr+ "," + mdctnRqstDispnsRqstInitialFillDurationCmprtr;
+	        } else if(mdctnRqstDispnsRqstInitialFillDurationCmprtr.equals("[") | mdctnRqstDispnsRqstInitialFillDurationCmprtr.equals("]") | this.mdctnRqstDispnsRqstInitialFillDurationCmprtr.substring(this.mdctnRqstDispnsRqstInitialFillDurationCmprtr.length() - 1).equals("[")) {
+	        	this.mdctnRqstDispnsRqstInitialFillDurationCmprtr = this.mdctnRqstDispnsRqstInitialFillDurationCmprtr+mdctnRqstDispnsRqstInitialFillDurationCmprtr;
+	        } else  {
+	            this.mdctnRqstDispnsRqstInitialFillDurationCmprtr = this.mdctnRqstDispnsRqstInitialFillDurationCmprtr+ "," +mdctnRqstDispnsRqstInitialFillDurationCmprtr;
+	        }
+        }
     }
     
     
@@ -570,6 +962,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDispnsRqstInitialFillDurationSys = mdctnRqstDispnsRqstInitialFillDurationSys;
     }
     
+    public void addMdctnRqstDispnsRqstInitialFillDurationSys(String mdctnRqstDispnsRqstInitialFillDurationSys) {
+    	if( mdctnRqstDispnsRqstInitialFillDurationSys != null ) {
+	    	if( this.mdctnRqstDispnsRqstInitialFillDurationSys == null ) {
+	        	this.mdctnRqstDispnsRqstInitialFillDurationSys = mdctnRqstDispnsRqstInitialFillDurationSys;
+	        } else if(this.mdctnRqstDispnsRqstInitialFillDurationSys.substring(this.mdctnRqstDispnsRqstInitialFillDurationSys.length() - 1).equals("]") & mdctnRqstDispnsRqstInitialFillDurationSys.equals("[")) {
+	        	this.mdctnRqstDispnsRqstInitialFillDurationSys = this.mdctnRqstDispnsRqstInitialFillDurationSys+ "," + mdctnRqstDispnsRqstInitialFillDurationSys;
+	        } else if(mdctnRqstDispnsRqstInitialFillDurationSys.equals("[") | mdctnRqstDispnsRqstInitialFillDurationSys.equals("]") | this.mdctnRqstDispnsRqstInitialFillDurationSys.substring(this.mdctnRqstDispnsRqstInitialFillDurationSys.length() - 1).equals("[")) {
+	        	this.mdctnRqstDispnsRqstInitialFillDurationSys = this.mdctnRqstDispnsRqstInitialFillDurationSys+mdctnRqstDispnsRqstInitialFillDurationSys;
+	        } else  {
+	            this.mdctnRqstDispnsRqstInitialFillDurationSys = this.mdctnRqstDispnsRqstInitialFillDurationSys+ "," +mdctnRqstDispnsRqstInitialFillDurationSys;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDispnsRqstInitialFillDurationUnt() {
@@ -578,6 +984,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDispnsRqstInitialFillDurationUnt(String mdctnRqstDispnsRqstInitialFillDurationUnt) {
         this.mdctnRqstDispnsRqstInitialFillDurationUnt = mdctnRqstDispnsRqstInitialFillDurationUnt;
+    }
+    
+    public void addMdctnRqstDispnsRqstInitialFillDurationUnt(String mdctnRqstDispnsRqstInitialFillDurationUnt) {
+    	if( mdctnRqstDispnsRqstInitialFillDurationUnt != null ) {
+	    	if( this.mdctnRqstDispnsRqstInitialFillDurationUnt == null ) {
+	        	this.mdctnRqstDispnsRqstInitialFillDurationUnt = mdctnRqstDispnsRqstInitialFillDurationUnt;
+	        } else if(this.mdctnRqstDispnsRqstInitialFillDurationUnt.substring(this.mdctnRqstDispnsRqstInitialFillDurationUnt.length() - 1).equals("]") & mdctnRqstDispnsRqstInitialFillDurationUnt.equals("[")) {
+	        	this.mdctnRqstDispnsRqstInitialFillDurationUnt = this.mdctnRqstDispnsRqstInitialFillDurationUnt+ "," + mdctnRqstDispnsRqstInitialFillDurationUnt;
+	        } else if(mdctnRqstDispnsRqstInitialFillDurationUnt.equals("[") | mdctnRqstDispnsRqstInitialFillDurationUnt.equals("]") | this.mdctnRqstDispnsRqstInitialFillDurationUnt.substring(this.mdctnRqstDispnsRqstInitialFillDurationUnt.length() - 1).equals("[")) {
+	        	this.mdctnRqstDispnsRqstInitialFillDurationUnt = this.mdctnRqstDispnsRqstInitialFillDurationUnt+mdctnRqstDispnsRqstInitialFillDurationUnt;
+	        } else  {
+	            this.mdctnRqstDispnsRqstInitialFillDurationUnt = this.mdctnRqstDispnsRqstInitialFillDurationUnt+ "," +mdctnRqstDispnsRqstInitialFillDurationUnt;
+	        }
+        }
     }
     
     
@@ -590,6 +1010,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDispnsRqstInitialFillDurationVl = mdctnRqstDispnsRqstInitialFillDurationVl;
     }
     
+    public void addMdctnRqstDispnsRqstInitialFillDurationVl(String mdctnRqstDispnsRqstInitialFillDurationVl) {
+    	if( mdctnRqstDispnsRqstInitialFillDurationVl != null ) {
+	    	if( this.mdctnRqstDispnsRqstInitialFillDurationVl == null ) {
+	        	this.mdctnRqstDispnsRqstInitialFillDurationVl = mdctnRqstDispnsRqstInitialFillDurationVl;
+	        } else if(this.mdctnRqstDispnsRqstInitialFillDurationVl.substring(this.mdctnRqstDispnsRqstInitialFillDurationVl.length() - 1).equals("]") & mdctnRqstDispnsRqstInitialFillDurationVl.equals("[")) {
+	        	this.mdctnRqstDispnsRqstInitialFillDurationVl = this.mdctnRqstDispnsRqstInitialFillDurationVl+ "," + mdctnRqstDispnsRqstInitialFillDurationVl;
+	        } else if(mdctnRqstDispnsRqstInitialFillDurationVl.equals("[") | mdctnRqstDispnsRqstInitialFillDurationVl.equals("]") | this.mdctnRqstDispnsRqstInitialFillDurationVl.substring(this.mdctnRqstDispnsRqstInitialFillDurationVl.length() - 1).equals("[")) {
+	        	this.mdctnRqstDispnsRqstInitialFillDurationVl = this.mdctnRqstDispnsRqstInitialFillDurationVl+mdctnRqstDispnsRqstInitialFillDurationVl;
+	        } else  {
+	            this.mdctnRqstDispnsRqstInitialFillDurationVl = this.mdctnRqstDispnsRqstInitialFillDurationVl+ "," +mdctnRqstDispnsRqstInitialFillDurationVl;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDispnsRqstInitialFillQntyCd() {
@@ -598,6 +1032,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDispnsRqstInitialFillQntyCd(String mdctnRqstDispnsRqstInitialFillQntyCd) {
         this.mdctnRqstDispnsRqstInitialFillQntyCd = mdctnRqstDispnsRqstInitialFillQntyCd;
+    }
+    
+    public void addMdctnRqstDispnsRqstInitialFillQntyCd(String mdctnRqstDispnsRqstInitialFillQntyCd) {
+    	if( mdctnRqstDispnsRqstInitialFillQntyCd != null ) {
+	    	if( this.mdctnRqstDispnsRqstInitialFillQntyCd == null ) {
+	        	this.mdctnRqstDispnsRqstInitialFillQntyCd = mdctnRqstDispnsRqstInitialFillQntyCd;
+	        } else if(this.mdctnRqstDispnsRqstInitialFillQntyCd.substring(this.mdctnRqstDispnsRqstInitialFillQntyCd.length() - 1).equals("]") & mdctnRqstDispnsRqstInitialFillQntyCd.equals("[")) {
+	        	this.mdctnRqstDispnsRqstInitialFillQntyCd = this.mdctnRqstDispnsRqstInitialFillQntyCd+ "," + mdctnRqstDispnsRqstInitialFillQntyCd;
+	        } else if(mdctnRqstDispnsRqstInitialFillQntyCd.equals("[") | mdctnRqstDispnsRqstInitialFillQntyCd.equals("]") | this.mdctnRqstDispnsRqstInitialFillQntyCd.substring(this.mdctnRqstDispnsRqstInitialFillQntyCd.length() - 1).equals("[")) {
+	        	this.mdctnRqstDispnsRqstInitialFillQntyCd = this.mdctnRqstDispnsRqstInitialFillQntyCd+mdctnRqstDispnsRqstInitialFillQntyCd;
+	        } else  {
+	            this.mdctnRqstDispnsRqstInitialFillQntyCd = this.mdctnRqstDispnsRqstInitialFillQntyCd+ "," +mdctnRqstDispnsRqstInitialFillQntyCd;
+	        }
+        }
     }
     
     
@@ -610,6 +1058,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDispnsRqstInitialFillQntyCmprtr = mdctnRqstDispnsRqstInitialFillQntyCmprtr;
     }
     
+    public void addMdctnRqstDispnsRqstInitialFillQntyCmprtr(String mdctnRqstDispnsRqstInitialFillQntyCmprtr) {
+    	if( mdctnRqstDispnsRqstInitialFillQntyCmprtr != null ) {
+	    	if( this.mdctnRqstDispnsRqstInitialFillQntyCmprtr == null ) {
+	        	this.mdctnRqstDispnsRqstInitialFillQntyCmprtr = mdctnRqstDispnsRqstInitialFillQntyCmprtr;
+	        } else if(this.mdctnRqstDispnsRqstInitialFillQntyCmprtr.substring(this.mdctnRqstDispnsRqstInitialFillQntyCmprtr.length() - 1).equals("]") & mdctnRqstDispnsRqstInitialFillQntyCmprtr.equals("[")) {
+	        	this.mdctnRqstDispnsRqstInitialFillQntyCmprtr = this.mdctnRqstDispnsRqstInitialFillQntyCmprtr+ "," + mdctnRqstDispnsRqstInitialFillQntyCmprtr;
+	        } else if(mdctnRqstDispnsRqstInitialFillQntyCmprtr.equals("[") | mdctnRqstDispnsRqstInitialFillQntyCmprtr.equals("]") | this.mdctnRqstDispnsRqstInitialFillQntyCmprtr.substring(this.mdctnRqstDispnsRqstInitialFillQntyCmprtr.length() - 1).equals("[")) {
+	        	this.mdctnRqstDispnsRqstInitialFillQntyCmprtr = this.mdctnRqstDispnsRqstInitialFillQntyCmprtr+mdctnRqstDispnsRqstInitialFillQntyCmprtr;
+	        } else  {
+	            this.mdctnRqstDispnsRqstInitialFillQntyCmprtr = this.mdctnRqstDispnsRqstInitialFillQntyCmprtr+ "," +mdctnRqstDispnsRqstInitialFillQntyCmprtr;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDispnsRqstInitialFillQntySys() {
@@ -618,6 +1080,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDispnsRqstInitialFillQntySys(String mdctnRqstDispnsRqstInitialFillQntySys) {
         this.mdctnRqstDispnsRqstInitialFillQntySys = mdctnRqstDispnsRqstInitialFillQntySys;
+    }
+    
+    public void addMdctnRqstDispnsRqstInitialFillQntySys(String mdctnRqstDispnsRqstInitialFillQntySys) {
+    	if( mdctnRqstDispnsRqstInitialFillQntySys != null ) {
+	    	if( this.mdctnRqstDispnsRqstInitialFillQntySys == null ) {
+	        	this.mdctnRqstDispnsRqstInitialFillQntySys = mdctnRqstDispnsRqstInitialFillQntySys;
+	        } else if(this.mdctnRqstDispnsRqstInitialFillQntySys.substring(this.mdctnRqstDispnsRqstInitialFillQntySys.length() - 1).equals("]") & mdctnRqstDispnsRqstInitialFillQntySys.equals("[")) {
+	        	this.mdctnRqstDispnsRqstInitialFillQntySys = this.mdctnRqstDispnsRqstInitialFillQntySys+ "," + mdctnRqstDispnsRqstInitialFillQntySys;
+	        } else if(mdctnRqstDispnsRqstInitialFillQntySys.equals("[") | mdctnRqstDispnsRqstInitialFillQntySys.equals("]") | this.mdctnRqstDispnsRqstInitialFillQntySys.substring(this.mdctnRqstDispnsRqstInitialFillQntySys.length() - 1).equals("[")) {
+	        	this.mdctnRqstDispnsRqstInitialFillQntySys = this.mdctnRqstDispnsRqstInitialFillQntySys+mdctnRqstDispnsRqstInitialFillQntySys;
+	        } else  {
+	            this.mdctnRqstDispnsRqstInitialFillQntySys = this.mdctnRqstDispnsRqstInitialFillQntySys+ "," +mdctnRqstDispnsRqstInitialFillQntySys;
+	        }
+        }
     }
     
     
@@ -630,6 +1106,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDispnsRqstInitialFillQntyUnt = mdctnRqstDispnsRqstInitialFillQntyUnt;
     }
     
+    public void addMdctnRqstDispnsRqstInitialFillQntyUnt(String mdctnRqstDispnsRqstInitialFillQntyUnt) {
+    	if( mdctnRqstDispnsRqstInitialFillQntyUnt != null ) {
+	    	if( this.mdctnRqstDispnsRqstInitialFillQntyUnt == null ) {
+	        	this.mdctnRqstDispnsRqstInitialFillQntyUnt = mdctnRqstDispnsRqstInitialFillQntyUnt;
+	        } else if(this.mdctnRqstDispnsRqstInitialFillQntyUnt.substring(this.mdctnRqstDispnsRqstInitialFillQntyUnt.length() - 1).equals("]") & mdctnRqstDispnsRqstInitialFillQntyUnt.equals("[")) {
+	        	this.mdctnRqstDispnsRqstInitialFillQntyUnt = this.mdctnRqstDispnsRqstInitialFillQntyUnt+ "," + mdctnRqstDispnsRqstInitialFillQntyUnt;
+	        } else if(mdctnRqstDispnsRqstInitialFillQntyUnt.equals("[") | mdctnRqstDispnsRqstInitialFillQntyUnt.equals("]") | this.mdctnRqstDispnsRqstInitialFillQntyUnt.substring(this.mdctnRqstDispnsRqstInitialFillQntyUnt.length() - 1).equals("[")) {
+	        	this.mdctnRqstDispnsRqstInitialFillQntyUnt = this.mdctnRqstDispnsRqstInitialFillQntyUnt+mdctnRqstDispnsRqstInitialFillQntyUnt;
+	        } else  {
+	            this.mdctnRqstDispnsRqstInitialFillQntyUnt = this.mdctnRqstDispnsRqstInitialFillQntyUnt+ "," +mdctnRqstDispnsRqstInitialFillQntyUnt;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDispnsRqstInitialFillQntyVl() {
@@ -638,6 +1128,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDispnsRqstInitialFillQntyVl(String mdctnRqstDispnsRqstInitialFillQntyVl) {
         this.mdctnRqstDispnsRqstInitialFillQntyVl = mdctnRqstDispnsRqstInitialFillQntyVl;
+    }
+    
+    public void addMdctnRqstDispnsRqstInitialFillQntyVl(String mdctnRqstDispnsRqstInitialFillQntyVl) {
+    	if( mdctnRqstDispnsRqstInitialFillQntyVl != null ) {
+	    	if( this.mdctnRqstDispnsRqstInitialFillQntyVl == null ) {
+	        	this.mdctnRqstDispnsRqstInitialFillQntyVl = mdctnRqstDispnsRqstInitialFillQntyVl;
+	        } else if(this.mdctnRqstDispnsRqstInitialFillQntyVl.substring(this.mdctnRqstDispnsRqstInitialFillQntyVl.length() - 1).equals("]") & mdctnRqstDispnsRqstInitialFillQntyVl.equals("[")) {
+	        	this.mdctnRqstDispnsRqstInitialFillQntyVl = this.mdctnRqstDispnsRqstInitialFillQntyVl+ "," + mdctnRqstDispnsRqstInitialFillQntyVl;
+	        } else if(mdctnRqstDispnsRqstInitialFillQntyVl.equals("[") | mdctnRqstDispnsRqstInitialFillQntyVl.equals("]") | this.mdctnRqstDispnsRqstInitialFillQntyVl.substring(this.mdctnRqstDispnsRqstInitialFillQntyVl.length() - 1).equals("[")) {
+	        	this.mdctnRqstDispnsRqstInitialFillQntyVl = this.mdctnRqstDispnsRqstInitialFillQntyVl+mdctnRqstDispnsRqstInitialFillQntyVl;
+	        } else  {
+	            this.mdctnRqstDispnsRqstInitialFillQntyVl = this.mdctnRqstDispnsRqstInitialFillQntyVl+ "," +mdctnRqstDispnsRqstInitialFillQntyVl;
+	        }
+        }
     }
     
     
@@ -650,6 +1154,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDispnsRqstNmbrOfRptsAllowed = mdctnRqstDispnsRqstNmbrOfRptsAllowed;
     }
     
+    public void addMdctnRqstDispnsRqstNmbrOfRptsAllowed(String mdctnRqstDispnsRqstNmbrOfRptsAllowed) {
+    	if( mdctnRqstDispnsRqstNmbrOfRptsAllowed != null ) {
+	    	if( this.mdctnRqstDispnsRqstNmbrOfRptsAllowed == null ) {
+	        	this.mdctnRqstDispnsRqstNmbrOfRptsAllowed = mdctnRqstDispnsRqstNmbrOfRptsAllowed;
+	        } else if(this.mdctnRqstDispnsRqstNmbrOfRptsAllowed.substring(this.mdctnRqstDispnsRqstNmbrOfRptsAllowed.length() - 1).equals("]") & mdctnRqstDispnsRqstNmbrOfRptsAllowed.equals("[")) {
+	        	this.mdctnRqstDispnsRqstNmbrOfRptsAllowed = this.mdctnRqstDispnsRqstNmbrOfRptsAllowed+ "," + mdctnRqstDispnsRqstNmbrOfRptsAllowed;
+	        } else if(mdctnRqstDispnsRqstNmbrOfRptsAllowed.equals("[") | mdctnRqstDispnsRqstNmbrOfRptsAllowed.equals("]") | this.mdctnRqstDispnsRqstNmbrOfRptsAllowed.substring(this.mdctnRqstDispnsRqstNmbrOfRptsAllowed.length() - 1).equals("[")) {
+	        	this.mdctnRqstDispnsRqstNmbrOfRptsAllowed = this.mdctnRqstDispnsRqstNmbrOfRptsAllowed+mdctnRqstDispnsRqstNmbrOfRptsAllowed;
+	        } else  {
+	            this.mdctnRqstDispnsRqstNmbrOfRptsAllowed = this.mdctnRqstDispnsRqstNmbrOfRptsAllowed+ "," +mdctnRqstDispnsRqstNmbrOfRptsAllowed;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDispnsRqstPrfrmr() {
@@ -658,6 +1176,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDispnsRqstPrfrmr(String mdctnRqstDispnsRqstPrfrmr) {
         this.mdctnRqstDispnsRqstPrfrmr = mdctnRqstDispnsRqstPrfrmr;
+    }
+    
+    public void addMdctnRqstDispnsRqstPrfrmr(String mdctnRqstDispnsRqstPrfrmr) {
+    	if( mdctnRqstDispnsRqstPrfrmr != null ) {
+	    	if( this.mdctnRqstDispnsRqstPrfrmr == null ) {
+	        	this.mdctnRqstDispnsRqstPrfrmr = mdctnRqstDispnsRqstPrfrmr;
+	        } else if(this.mdctnRqstDispnsRqstPrfrmr.substring(this.mdctnRqstDispnsRqstPrfrmr.length() - 1).equals("]") & mdctnRqstDispnsRqstPrfrmr.equals("[")) {
+	        	this.mdctnRqstDispnsRqstPrfrmr = this.mdctnRqstDispnsRqstPrfrmr+ "," + mdctnRqstDispnsRqstPrfrmr;
+	        } else if(mdctnRqstDispnsRqstPrfrmr.equals("[") | mdctnRqstDispnsRqstPrfrmr.equals("]") | this.mdctnRqstDispnsRqstPrfrmr.substring(this.mdctnRqstDispnsRqstPrfrmr.length() - 1).equals("[")) {
+	        	this.mdctnRqstDispnsRqstPrfrmr = this.mdctnRqstDispnsRqstPrfrmr+mdctnRqstDispnsRqstPrfrmr;
+	        } else  {
+	            this.mdctnRqstDispnsRqstPrfrmr = this.mdctnRqstDispnsRqstPrfrmr+ "," +mdctnRqstDispnsRqstPrfrmr;
+	        }
+        }
     }
     
     
@@ -670,6 +1202,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDispnsRqstQntyCd = mdctnRqstDispnsRqstQntyCd;
     }
     
+    public void addMdctnRqstDispnsRqstQntyCd(String mdctnRqstDispnsRqstQntyCd) {
+    	if( mdctnRqstDispnsRqstQntyCd != null ) {
+	    	if( this.mdctnRqstDispnsRqstQntyCd == null ) {
+	        	this.mdctnRqstDispnsRqstQntyCd = mdctnRqstDispnsRqstQntyCd;
+	        } else if(this.mdctnRqstDispnsRqstQntyCd.substring(this.mdctnRqstDispnsRqstQntyCd.length() - 1).equals("]") & mdctnRqstDispnsRqstQntyCd.equals("[")) {
+	        	this.mdctnRqstDispnsRqstQntyCd = this.mdctnRqstDispnsRqstQntyCd+ "," + mdctnRqstDispnsRqstQntyCd;
+	        } else if(mdctnRqstDispnsRqstQntyCd.equals("[") | mdctnRqstDispnsRqstQntyCd.equals("]") | this.mdctnRqstDispnsRqstQntyCd.substring(this.mdctnRqstDispnsRqstQntyCd.length() - 1).equals("[")) {
+	        	this.mdctnRqstDispnsRqstQntyCd = this.mdctnRqstDispnsRqstQntyCd+mdctnRqstDispnsRqstQntyCd;
+	        } else  {
+	            this.mdctnRqstDispnsRqstQntyCd = this.mdctnRqstDispnsRqstQntyCd+ "," +mdctnRqstDispnsRqstQntyCd;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDispnsRqstQntyCmprtr() {
@@ -678,6 +1224,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDispnsRqstQntyCmprtr(String mdctnRqstDispnsRqstQntyCmprtr) {
         this.mdctnRqstDispnsRqstQntyCmprtr = mdctnRqstDispnsRqstQntyCmprtr;
+    }
+    
+    public void addMdctnRqstDispnsRqstQntyCmprtr(String mdctnRqstDispnsRqstQntyCmprtr) {
+    	if( mdctnRqstDispnsRqstQntyCmprtr != null ) {
+	    	if( this.mdctnRqstDispnsRqstQntyCmprtr == null ) {
+	        	this.mdctnRqstDispnsRqstQntyCmprtr = mdctnRqstDispnsRqstQntyCmprtr;
+	        } else if(this.mdctnRqstDispnsRqstQntyCmprtr.substring(this.mdctnRqstDispnsRqstQntyCmprtr.length() - 1).equals("]") & mdctnRqstDispnsRqstQntyCmprtr.equals("[")) {
+	        	this.mdctnRqstDispnsRqstQntyCmprtr = this.mdctnRqstDispnsRqstQntyCmprtr+ "," + mdctnRqstDispnsRqstQntyCmprtr;
+	        } else if(mdctnRqstDispnsRqstQntyCmprtr.equals("[") | mdctnRqstDispnsRqstQntyCmprtr.equals("]") | this.mdctnRqstDispnsRqstQntyCmprtr.substring(this.mdctnRqstDispnsRqstQntyCmprtr.length() - 1).equals("[")) {
+	        	this.mdctnRqstDispnsRqstQntyCmprtr = this.mdctnRqstDispnsRqstQntyCmprtr+mdctnRqstDispnsRqstQntyCmprtr;
+	        } else  {
+	            this.mdctnRqstDispnsRqstQntyCmprtr = this.mdctnRqstDispnsRqstQntyCmprtr+ "," +mdctnRqstDispnsRqstQntyCmprtr;
+	        }
+        }
     }
     
     
@@ -690,6 +1250,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDispnsRqstQntySys = mdctnRqstDispnsRqstQntySys;
     }
     
+    public void addMdctnRqstDispnsRqstQntySys(String mdctnRqstDispnsRqstQntySys) {
+    	if( mdctnRqstDispnsRqstQntySys != null ) {
+	    	if( this.mdctnRqstDispnsRqstQntySys == null ) {
+	        	this.mdctnRqstDispnsRqstQntySys = mdctnRqstDispnsRqstQntySys;
+	        } else if(this.mdctnRqstDispnsRqstQntySys.substring(this.mdctnRqstDispnsRqstQntySys.length() - 1).equals("]") & mdctnRqstDispnsRqstQntySys.equals("[")) {
+	        	this.mdctnRqstDispnsRqstQntySys = this.mdctnRqstDispnsRqstQntySys+ "," + mdctnRqstDispnsRqstQntySys;
+	        } else if(mdctnRqstDispnsRqstQntySys.equals("[") | mdctnRqstDispnsRqstQntySys.equals("]") | this.mdctnRqstDispnsRqstQntySys.substring(this.mdctnRqstDispnsRqstQntySys.length() - 1).equals("[")) {
+	        	this.mdctnRqstDispnsRqstQntySys = this.mdctnRqstDispnsRqstQntySys+mdctnRqstDispnsRqstQntySys;
+	        } else  {
+	            this.mdctnRqstDispnsRqstQntySys = this.mdctnRqstDispnsRqstQntySys+ "," +mdctnRqstDispnsRqstQntySys;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDispnsRqstQntyUnt() {
@@ -698,6 +1272,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDispnsRqstQntyUnt(String mdctnRqstDispnsRqstQntyUnt) {
         this.mdctnRqstDispnsRqstQntyUnt = mdctnRqstDispnsRqstQntyUnt;
+    }
+    
+    public void addMdctnRqstDispnsRqstQntyUnt(String mdctnRqstDispnsRqstQntyUnt) {
+    	if( mdctnRqstDispnsRqstQntyUnt != null ) {
+	    	if( this.mdctnRqstDispnsRqstQntyUnt == null ) {
+	        	this.mdctnRqstDispnsRqstQntyUnt = mdctnRqstDispnsRqstQntyUnt;
+	        } else if(this.mdctnRqstDispnsRqstQntyUnt.substring(this.mdctnRqstDispnsRqstQntyUnt.length() - 1).equals("]") & mdctnRqstDispnsRqstQntyUnt.equals("[")) {
+	        	this.mdctnRqstDispnsRqstQntyUnt = this.mdctnRqstDispnsRqstQntyUnt+ "," + mdctnRqstDispnsRqstQntyUnt;
+	        } else if(mdctnRqstDispnsRqstQntyUnt.equals("[") | mdctnRqstDispnsRqstQntyUnt.equals("]") | this.mdctnRqstDispnsRqstQntyUnt.substring(this.mdctnRqstDispnsRqstQntyUnt.length() - 1).equals("[")) {
+	        	this.mdctnRqstDispnsRqstQntyUnt = this.mdctnRqstDispnsRqstQntyUnt+mdctnRqstDispnsRqstQntyUnt;
+	        } else  {
+	            this.mdctnRqstDispnsRqstQntyUnt = this.mdctnRqstDispnsRqstQntyUnt+ "," +mdctnRqstDispnsRqstQntyUnt;
+	        }
+        }
     }
     
     
@@ -710,6 +1298,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDispnsRqstQntyVl = mdctnRqstDispnsRqstQntyVl;
     }
     
+    public void addMdctnRqstDispnsRqstQntyVl(String mdctnRqstDispnsRqstQntyVl) {
+    	if( mdctnRqstDispnsRqstQntyVl != null ) {
+	    	if( this.mdctnRqstDispnsRqstQntyVl == null ) {
+	        	this.mdctnRqstDispnsRqstQntyVl = mdctnRqstDispnsRqstQntyVl;
+	        } else if(this.mdctnRqstDispnsRqstQntyVl.substring(this.mdctnRqstDispnsRqstQntyVl.length() - 1).equals("]") & mdctnRqstDispnsRqstQntyVl.equals("[")) {
+	        	this.mdctnRqstDispnsRqstQntyVl = this.mdctnRqstDispnsRqstQntyVl+ "," + mdctnRqstDispnsRqstQntyVl;
+	        } else if(mdctnRqstDispnsRqstQntyVl.equals("[") | mdctnRqstDispnsRqstQntyVl.equals("]") | this.mdctnRqstDispnsRqstQntyVl.substring(this.mdctnRqstDispnsRqstQntyVl.length() - 1).equals("[")) {
+	        	this.mdctnRqstDispnsRqstQntyVl = this.mdctnRqstDispnsRqstQntyVl+mdctnRqstDispnsRqstQntyVl;
+	        } else  {
+	            this.mdctnRqstDispnsRqstQntyVl = this.mdctnRqstDispnsRqstQntyVl+ "," +mdctnRqstDispnsRqstQntyVl;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDispnsRqstValidityPrdEnd() {
@@ -718,6 +1320,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDispnsRqstValidityPrdEnd(String mdctnRqstDispnsRqstValidityPrdEnd) {
         this.mdctnRqstDispnsRqstValidityPrdEnd = mdctnRqstDispnsRqstValidityPrdEnd;
+    }
+    
+    public void addMdctnRqstDispnsRqstValidityPrdEnd(String mdctnRqstDispnsRqstValidityPrdEnd) {
+    	if( mdctnRqstDispnsRqstValidityPrdEnd != null ) {
+	    	if( this.mdctnRqstDispnsRqstValidityPrdEnd == null ) {
+	        	this.mdctnRqstDispnsRqstValidityPrdEnd = mdctnRqstDispnsRqstValidityPrdEnd;
+	        } else if(this.mdctnRqstDispnsRqstValidityPrdEnd.substring(this.mdctnRqstDispnsRqstValidityPrdEnd.length() - 1).equals("]") & mdctnRqstDispnsRqstValidityPrdEnd.equals("[")) {
+	        	this.mdctnRqstDispnsRqstValidityPrdEnd = this.mdctnRqstDispnsRqstValidityPrdEnd+ "," + mdctnRqstDispnsRqstValidityPrdEnd;
+	        } else if(mdctnRqstDispnsRqstValidityPrdEnd.equals("[") | mdctnRqstDispnsRqstValidityPrdEnd.equals("]") | this.mdctnRqstDispnsRqstValidityPrdEnd.substring(this.mdctnRqstDispnsRqstValidityPrdEnd.length() - 1).equals("[")) {
+	        	this.mdctnRqstDispnsRqstValidityPrdEnd = this.mdctnRqstDispnsRqstValidityPrdEnd+mdctnRqstDispnsRqstValidityPrdEnd;
+	        } else  {
+	            this.mdctnRqstDispnsRqstValidityPrdEnd = this.mdctnRqstDispnsRqstValidityPrdEnd+ "," +mdctnRqstDispnsRqstValidityPrdEnd;
+	        }
+        }
     }
     
     
@@ -730,6 +1346,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDispnsRqstValidityPrdStrt = mdctnRqstDispnsRqstValidityPrdStrt;
     }
     
+    public void addMdctnRqstDispnsRqstValidityPrdStrt(String mdctnRqstDispnsRqstValidityPrdStrt) {
+    	if( mdctnRqstDispnsRqstValidityPrdStrt != null ) {
+	    	if( this.mdctnRqstDispnsRqstValidityPrdStrt == null ) {
+	        	this.mdctnRqstDispnsRqstValidityPrdStrt = mdctnRqstDispnsRqstValidityPrdStrt;
+	        } else if(this.mdctnRqstDispnsRqstValidityPrdStrt.substring(this.mdctnRqstDispnsRqstValidityPrdStrt.length() - 1).equals("]") & mdctnRqstDispnsRqstValidityPrdStrt.equals("[")) {
+	        	this.mdctnRqstDispnsRqstValidityPrdStrt = this.mdctnRqstDispnsRqstValidityPrdStrt+ "," + mdctnRqstDispnsRqstValidityPrdStrt;
+	        } else if(mdctnRqstDispnsRqstValidityPrdStrt.equals("[") | mdctnRqstDispnsRqstValidityPrdStrt.equals("]") | this.mdctnRqstDispnsRqstValidityPrdStrt.substring(this.mdctnRqstDispnsRqstValidityPrdStrt.length() - 1).equals("[")) {
+	        	this.mdctnRqstDispnsRqstValidityPrdStrt = this.mdctnRqstDispnsRqstValidityPrdStrt+mdctnRqstDispnsRqstValidityPrdStrt;
+	        } else  {
+	            this.mdctnRqstDispnsRqstValidityPrdStrt = this.mdctnRqstDispnsRqstValidityPrdStrt+ "," +mdctnRqstDispnsRqstValidityPrdStrt;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDoNotPerform() {
@@ -738,6 +1368,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDoNotPerform(String mdctnRqstDoNotPerform) {
         this.mdctnRqstDoNotPerform = mdctnRqstDoNotPerform;
+    }
+    
+    public void addMdctnRqstDoNotPerform(String mdctnRqstDoNotPerform) {
+    	if( mdctnRqstDoNotPerform != null ) {
+	    	if( this.mdctnRqstDoNotPerform == null ) {
+	        	this.mdctnRqstDoNotPerform = mdctnRqstDoNotPerform;
+	        } else if(this.mdctnRqstDoNotPerform.substring(this.mdctnRqstDoNotPerform.length() - 1).equals("]") & mdctnRqstDoNotPerform.equals("[")) {
+	        	this.mdctnRqstDoNotPerform = this.mdctnRqstDoNotPerform+ "," + mdctnRqstDoNotPerform;
+	        } else if(mdctnRqstDoNotPerform.equals("[") | mdctnRqstDoNotPerform.equals("]") | this.mdctnRqstDoNotPerform.substring(this.mdctnRqstDoNotPerform.length() - 1).equals("[")) {
+	        	this.mdctnRqstDoNotPerform = this.mdctnRqstDoNotPerform+mdctnRqstDoNotPerform;
+	        } else  {
+	            this.mdctnRqstDoNotPerform = this.mdctnRqstDoNotPerform+ "," +mdctnRqstDoNotPerform;
+	        }
+        }
     }
     
     
@@ -750,6 +1394,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgCd = mdctnRqstDsgInstrctnAddtnlInstrctnCdgCd;
     }
     
+    public void addMdctnRqstDsgInstrctnAddtnlInstrctnCdgCd(String mdctnRqstDsgInstrctnAddtnlInstrctnCdgCd) {
+    	if( mdctnRqstDsgInstrctnAddtnlInstrctnCdgCd != null ) {
+	    	if( this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgCd == null ) {
+	        	this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgCd = mdctnRqstDsgInstrctnAddtnlInstrctnCdgCd;
+	        } else if(this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgCd.substring(this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgCd.length() - 1).equals("]") & mdctnRqstDsgInstrctnAddtnlInstrctnCdgCd.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgCd = this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgCd+ "," + mdctnRqstDsgInstrctnAddtnlInstrctnCdgCd;
+	        } else if(mdctnRqstDsgInstrctnAddtnlInstrctnCdgCd.equals("[") | mdctnRqstDsgInstrctnAddtnlInstrctnCdgCd.equals("]") | this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgCd.substring(this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgCd.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgCd = this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgCd+mdctnRqstDsgInstrctnAddtnlInstrctnCdgCd;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgCd = this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgCd+ "," +mdctnRqstDsgInstrctnAddtnlInstrctnCdgCd;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnAddtnlInstrctnCdgDsply() {
@@ -758,6 +1416,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnAddtnlInstrctnCdgDsply(String mdctnRqstDsgInstrctnAddtnlInstrctnCdgDsply) {
         this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgDsply = mdctnRqstDsgInstrctnAddtnlInstrctnCdgDsply;
+    }
+    
+    public void addMdctnRqstDsgInstrctnAddtnlInstrctnCdgDsply(String mdctnRqstDsgInstrctnAddtnlInstrctnCdgDsply) {
+    	if( mdctnRqstDsgInstrctnAddtnlInstrctnCdgDsply != null ) {
+	    	if( this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgDsply == null ) {
+	        	this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgDsply = mdctnRqstDsgInstrctnAddtnlInstrctnCdgDsply;
+	        } else if(this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgDsply.substring(this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgDsply.length() - 1).equals("]") & mdctnRqstDsgInstrctnAddtnlInstrctnCdgDsply.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgDsply = this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgDsply+ "," + mdctnRqstDsgInstrctnAddtnlInstrctnCdgDsply;
+	        } else if(mdctnRqstDsgInstrctnAddtnlInstrctnCdgDsply.equals("[") | mdctnRqstDsgInstrctnAddtnlInstrctnCdgDsply.equals("]") | this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgDsply.substring(this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgDsply.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgDsply = this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgDsply+mdctnRqstDsgInstrctnAddtnlInstrctnCdgDsply;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgDsply = this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgDsply+ "," +mdctnRqstDsgInstrctnAddtnlInstrctnCdgDsply;
+	        }
+        }
     }
     
     
@@ -770,6 +1442,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgSys = mdctnRqstDsgInstrctnAddtnlInstrctnCdgSys;
     }
     
+    public void addMdctnRqstDsgInstrctnAddtnlInstrctnCdgSys(String mdctnRqstDsgInstrctnAddtnlInstrctnCdgSys) {
+    	if( mdctnRqstDsgInstrctnAddtnlInstrctnCdgSys != null ) {
+	    	if( this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgSys == null ) {
+	        	this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgSys = mdctnRqstDsgInstrctnAddtnlInstrctnCdgSys;
+	        } else if(this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgSys.substring(this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgSys.length() - 1).equals("]") & mdctnRqstDsgInstrctnAddtnlInstrctnCdgSys.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgSys = this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgSys+ "," + mdctnRqstDsgInstrctnAddtnlInstrctnCdgSys;
+	        } else if(mdctnRqstDsgInstrctnAddtnlInstrctnCdgSys.equals("[") | mdctnRqstDsgInstrctnAddtnlInstrctnCdgSys.equals("]") | this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgSys.substring(this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgSys.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgSys = this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgSys+mdctnRqstDsgInstrctnAddtnlInstrctnCdgSys;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgSys = this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgSys+ "," +mdctnRqstDsgInstrctnAddtnlInstrctnCdgSys;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnAddtnlInstrctnCdgUsrSltd() {
@@ -778,6 +1464,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnAddtnlInstrctnCdgUsrSltd(String mdctnRqstDsgInstrctnAddtnlInstrctnCdgUsrSltd) {
         this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgUsrSltd = mdctnRqstDsgInstrctnAddtnlInstrctnCdgUsrSltd;
+    }
+    
+    public void addMdctnRqstDsgInstrctnAddtnlInstrctnCdgUsrSltd(String mdctnRqstDsgInstrctnAddtnlInstrctnCdgUsrSltd) {
+    	if( mdctnRqstDsgInstrctnAddtnlInstrctnCdgUsrSltd != null ) {
+	    	if( this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgUsrSltd == null ) {
+	        	this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgUsrSltd = mdctnRqstDsgInstrctnAddtnlInstrctnCdgUsrSltd;
+	        } else if(this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgUsrSltd.substring(this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgUsrSltd.length() - 1).equals("]") & mdctnRqstDsgInstrctnAddtnlInstrctnCdgUsrSltd.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgUsrSltd = this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgUsrSltd+ "," + mdctnRqstDsgInstrctnAddtnlInstrctnCdgUsrSltd;
+	        } else if(mdctnRqstDsgInstrctnAddtnlInstrctnCdgUsrSltd.equals("[") | mdctnRqstDsgInstrctnAddtnlInstrctnCdgUsrSltd.equals("]") | this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgUsrSltd.substring(this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgUsrSltd = this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgUsrSltd+mdctnRqstDsgInstrctnAddtnlInstrctnCdgUsrSltd;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgUsrSltd = this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgUsrSltd+ "," +mdctnRqstDsgInstrctnAddtnlInstrctnCdgUsrSltd;
+	        }
+        }
     }
     
     
@@ -790,6 +1490,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgVrsn = mdctnRqstDsgInstrctnAddtnlInstrctnCdgVrsn;
     }
     
+    public void addMdctnRqstDsgInstrctnAddtnlInstrctnCdgVrsn(String mdctnRqstDsgInstrctnAddtnlInstrctnCdgVrsn) {
+    	if( mdctnRqstDsgInstrctnAddtnlInstrctnCdgVrsn != null ) {
+	    	if( this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgVrsn == null ) {
+	        	this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgVrsn = mdctnRqstDsgInstrctnAddtnlInstrctnCdgVrsn;
+	        } else if(this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgVrsn.substring(this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgVrsn.length() - 1).equals("]") & mdctnRqstDsgInstrctnAddtnlInstrctnCdgVrsn.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgVrsn = this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgVrsn+ "," + mdctnRqstDsgInstrctnAddtnlInstrctnCdgVrsn;
+	        } else if(mdctnRqstDsgInstrctnAddtnlInstrctnCdgVrsn.equals("[") | mdctnRqstDsgInstrctnAddtnlInstrctnCdgVrsn.equals("]") | this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgVrsn.substring(this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgVrsn.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgVrsn = this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgVrsn+mdctnRqstDsgInstrctnAddtnlInstrctnCdgVrsn;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgVrsn = this.mdctnRqstDsgInstrctnAddtnlInstrctnCdgVrsn+ "," +mdctnRqstDsgInstrctnAddtnlInstrctnCdgVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnAddtnlInstrctnTxt() {
@@ -798,6 +1512,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnAddtnlInstrctnTxt(String mdctnRqstDsgInstrctnAddtnlInstrctnTxt) {
         this.mdctnRqstDsgInstrctnAddtnlInstrctnTxt = mdctnRqstDsgInstrctnAddtnlInstrctnTxt;
+    }
+    
+    public void addMdctnRqstDsgInstrctnAddtnlInstrctnTxt(String mdctnRqstDsgInstrctnAddtnlInstrctnTxt) {
+    	if( mdctnRqstDsgInstrctnAddtnlInstrctnTxt != null ) {
+	    	if( this.mdctnRqstDsgInstrctnAddtnlInstrctnTxt == null ) {
+	        	this.mdctnRqstDsgInstrctnAddtnlInstrctnTxt = mdctnRqstDsgInstrctnAddtnlInstrctnTxt;
+	        } else if(this.mdctnRqstDsgInstrctnAddtnlInstrctnTxt.substring(this.mdctnRqstDsgInstrctnAddtnlInstrctnTxt.length() - 1).equals("]") & mdctnRqstDsgInstrctnAddtnlInstrctnTxt.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnAddtnlInstrctnTxt = this.mdctnRqstDsgInstrctnAddtnlInstrctnTxt+ "," + mdctnRqstDsgInstrctnAddtnlInstrctnTxt;
+	        } else if(mdctnRqstDsgInstrctnAddtnlInstrctnTxt.equals("[") | mdctnRqstDsgInstrctnAddtnlInstrctnTxt.equals("]") | this.mdctnRqstDsgInstrctnAddtnlInstrctnTxt.substring(this.mdctnRqstDsgInstrctnAddtnlInstrctnTxt.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnAddtnlInstrctnTxt = this.mdctnRqstDsgInstrctnAddtnlInstrctnTxt+mdctnRqstDsgInstrctnAddtnlInstrctnTxt;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnAddtnlInstrctnTxt = this.mdctnRqstDsgInstrctnAddtnlInstrctnTxt+ "," +mdctnRqstDsgInstrctnAddtnlInstrctnTxt;
+	        }
+        }
     }
     
     
@@ -810,6 +1538,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnAsNdBooleanTyp = mdctnRqstDsgInstrctnAsNdBooleanTyp;
     }
     
+    public void addMdctnRqstDsgInstrctnAsNdBooleanTyp(String mdctnRqstDsgInstrctnAsNdBooleanTyp) {
+    	if( mdctnRqstDsgInstrctnAsNdBooleanTyp != null ) {
+	    	if( this.mdctnRqstDsgInstrctnAsNdBooleanTyp == null ) {
+	        	this.mdctnRqstDsgInstrctnAsNdBooleanTyp = mdctnRqstDsgInstrctnAsNdBooleanTyp;
+	        } else if(this.mdctnRqstDsgInstrctnAsNdBooleanTyp.substring(this.mdctnRqstDsgInstrctnAsNdBooleanTyp.length() - 1).equals("]") & mdctnRqstDsgInstrctnAsNdBooleanTyp.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnAsNdBooleanTyp = this.mdctnRqstDsgInstrctnAsNdBooleanTyp+ "," + mdctnRqstDsgInstrctnAsNdBooleanTyp;
+	        } else if(mdctnRqstDsgInstrctnAsNdBooleanTyp.equals("[") | mdctnRqstDsgInstrctnAsNdBooleanTyp.equals("]") | this.mdctnRqstDsgInstrctnAsNdBooleanTyp.substring(this.mdctnRqstDsgInstrctnAsNdBooleanTyp.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnAsNdBooleanTyp = this.mdctnRqstDsgInstrctnAsNdBooleanTyp+mdctnRqstDsgInstrctnAsNdBooleanTyp;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnAsNdBooleanTyp = this.mdctnRqstDsgInstrctnAsNdBooleanTyp+ "," +mdctnRqstDsgInstrctnAsNdBooleanTyp;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnAsNdCdbleCncptCdgCd() {
@@ -818,6 +1560,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnAsNdCdbleCncptCdgCd(String mdctnRqstDsgInstrctnAsNdCdbleCncptCdgCd) {
         this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgCd = mdctnRqstDsgInstrctnAsNdCdbleCncptCdgCd;
+    }
+    
+    public void addMdctnRqstDsgInstrctnAsNdCdbleCncptCdgCd(String mdctnRqstDsgInstrctnAsNdCdbleCncptCdgCd) {
+    	if( mdctnRqstDsgInstrctnAsNdCdbleCncptCdgCd != null ) {
+	    	if( this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgCd == null ) {
+	        	this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgCd = mdctnRqstDsgInstrctnAsNdCdbleCncptCdgCd;
+	        } else if(this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgCd.substring(this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgCd.length() - 1).equals("]") & mdctnRqstDsgInstrctnAsNdCdbleCncptCdgCd.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgCd = this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgCd+ "," + mdctnRqstDsgInstrctnAsNdCdbleCncptCdgCd;
+	        } else if(mdctnRqstDsgInstrctnAsNdCdbleCncptCdgCd.equals("[") | mdctnRqstDsgInstrctnAsNdCdbleCncptCdgCd.equals("]") | this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgCd.substring(this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgCd.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgCd = this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgCd+mdctnRqstDsgInstrctnAsNdCdbleCncptCdgCd;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgCd = this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgCd+ "," +mdctnRqstDsgInstrctnAsNdCdbleCncptCdgCd;
+	        }
+        }
     }
     
     
@@ -830,6 +1586,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgDsply = mdctnRqstDsgInstrctnAsNdCdbleCncptCdgDsply;
     }
     
+    public void addMdctnRqstDsgInstrctnAsNdCdbleCncptCdgDsply(String mdctnRqstDsgInstrctnAsNdCdbleCncptCdgDsply) {
+    	if( mdctnRqstDsgInstrctnAsNdCdbleCncptCdgDsply != null ) {
+	    	if( this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgDsply == null ) {
+	        	this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgDsply = mdctnRqstDsgInstrctnAsNdCdbleCncptCdgDsply;
+	        } else if(this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgDsply.substring(this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgDsply.length() - 1).equals("]") & mdctnRqstDsgInstrctnAsNdCdbleCncptCdgDsply.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgDsply = this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgDsply+ "," + mdctnRqstDsgInstrctnAsNdCdbleCncptCdgDsply;
+	        } else if(mdctnRqstDsgInstrctnAsNdCdbleCncptCdgDsply.equals("[") | mdctnRqstDsgInstrctnAsNdCdbleCncptCdgDsply.equals("]") | this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgDsply.substring(this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgDsply.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgDsply = this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgDsply+mdctnRqstDsgInstrctnAsNdCdbleCncptCdgDsply;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgDsply = this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgDsply+ "," +mdctnRqstDsgInstrctnAsNdCdbleCncptCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnAsNdCdbleCncptCdgSys() {
@@ -838,6 +1608,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnAsNdCdbleCncptCdgSys(String mdctnRqstDsgInstrctnAsNdCdbleCncptCdgSys) {
         this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgSys = mdctnRqstDsgInstrctnAsNdCdbleCncptCdgSys;
+    }
+    
+    public void addMdctnRqstDsgInstrctnAsNdCdbleCncptCdgSys(String mdctnRqstDsgInstrctnAsNdCdbleCncptCdgSys) {
+    	if( mdctnRqstDsgInstrctnAsNdCdbleCncptCdgSys != null ) {
+	    	if( this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgSys == null ) {
+	        	this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgSys = mdctnRqstDsgInstrctnAsNdCdbleCncptCdgSys;
+	        } else if(this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgSys.substring(this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgSys.length() - 1).equals("]") & mdctnRqstDsgInstrctnAsNdCdbleCncptCdgSys.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgSys = this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgSys+ "," + mdctnRqstDsgInstrctnAsNdCdbleCncptCdgSys;
+	        } else if(mdctnRqstDsgInstrctnAsNdCdbleCncptCdgSys.equals("[") | mdctnRqstDsgInstrctnAsNdCdbleCncptCdgSys.equals("]") | this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgSys.substring(this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgSys.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgSys = this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgSys+mdctnRqstDsgInstrctnAsNdCdbleCncptCdgSys;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgSys = this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgSys+ "," +mdctnRqstDsgInstrctnAsNdCdbleCncptCdgSys;
+	        }
+        }
     }
     
     
@@ -850,6 +1634,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgUsrSltd = mdctnRqstDsgInstrctnAsNdCdbleCncptCdgUsrSltd;
     }
     
+    public void addMdctnRqstDsgInstrctnAsNdCdbleCncptCdgUsrSltd(String mdctnRqstDsgInstrctnAsNdCdbleCncptCdgUsrSltd) {
+    	if( mdctnRqstDsgInstrctnAsNdCdbleCncptCdgUsrSltd != null ) {
+	    	if( this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgUsrSltd == null ) {
+	        	this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgUsrSltd = mdctnRqstDsgInstrctnAsNdCdbleCncptCdgUsrSltd;
+	        } else if(this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgUsrSltd.substring(this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgUsrSltd.length() - 1).equals("]") & mdctnRqstDsgInstrctnAsNdCdbleCncptCdgUsrSltd.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgUsrSltd = this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgUsrSltd+ "," + mdctnRqstDsgInstrctnAsNdCdbleCncptCdgUsrSltd;
+	        } else if(mdctnRqstDsgInstrctnAsNdCdbleCncptCdgUsrSltd.equals("[") | mdctnRqstDsgInstrctnAsNdCdbleCncptCdgUsrSltd.equals("]") | this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgUsrSltd.substring(this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgUsrSltd = this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgUsrSltd+mdctnRqstDsgInstrctnAsNdCdbleCncptCdgUsrSltd;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgUsrSltd = this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgUsrSltd+ "," +mdctnRqstDsgInstrctnAsNdCdbleCncptCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnAsNdCdbleCncptCdgVrsn() {
@@ -858,6 +1656,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnAsNdCdbleCncptCdgVrsn(String mdctnRqstDsgInstrctnAsNdCdbleCncptCdgVrsn) {
         this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgVrsn = mdctnRqstDsgInstrctnAsNdCdbleCncptCdgVrsn;
+    }
+    
+    public void addMdctnRqstDsgInstrctnAsNdCdbleCncptCdgVrsn(String mdctnRqstDsgInstrctnAsNdCdbleCncptCdgVrsn) {
+    	if( mdctnRqstDsgInstrctnAsNdCdbleCncptCdgVrsn != null ) {
+	    	if( this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgVrsn == null ) {
+	        	this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgVrsn = mdctnRqstDsgInstrctnAsNdCdbleCncptCdgVrsn;
+	        } else if(this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgVrsn.substring(this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgVrsn.length() - 1).equals("]") & mdctnRqstDsgInstrctnAsNdCdbleCncptCdgVrsn.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgVrsn = this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgVrsn+ "," + mdctnRqstDsgInstrctnAsNdCdbleCncptCdgVrsn;
+	        } else if(mdctnRqstDsgInstrctnAsNdCdbleCncptCdgVrsn.equals("[") | mdctnRqstDsgInstrctnAsNdCdbleCncptCdgVrsn.equals("]") | this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgVrsn.substring(this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgVrsn.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgVrsn = this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgVrsn+mdctnRqstDsgInstrctnAsNdCdbleCncptCdgVrsn;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgVrsn = this.mdctnRqstDsgInstrctnAsNdCdbleCncptCdgVrsn+ "," +mdctnRqstDsgInstrctnAsNdCdbleCncptCdgVrsn;
+	        }
+        }
     }
     
     
@@ -870,6 +1682,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnAsNdCdbleCncptTxt = mdctnRqstDsgInstrctnAsNdCdbleCncptTxt;
     }
     
+    public void addMdctnRqstDsgInstrctnAsNdCdbleCncptTxt(String mdctnRqstDsgInstrctnAsNdCdbleCncptTxt) {
+    	if( mdctnRqstDsgInstrctnAsNdCdbleCncptTxt != null ) {
+	    	if( this.mdctnRqstDsgInstrctnAsNdCdbleCncptTxt == null ) {
+	        	this.mdctnRqstDsgInstrctnAsNdCdbleCncptTxt = mdctnRqstDsgInstrctnAsNdCdbleCncptTxt;
+	        } else if(this.mdctnRqstDsgInstrctnAsNdCdbleCncptTxt.substring(this.mdctnRqstDsgInstrctnAsNdCdbleCncptTxt.length() - 1).equals("]") & mdctnRqstDsgInstrctnAsNdCdbleCncptTxt.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnAsNdCdbleCncptTxt = this.mdctnRqstDsgInstrctnAsNdCdbleCncptTxt+ "," + mdctnRqstDsgInstrctnAsNdCdbleCncptTxt;
+	        } else if(mdctnRqstDsgInstrctnAsNdCdbleCncptTxt.equals("[") | mdctnRqstDsgInstrctnAsNdCdbleCncptTxt.equals("]") | this.mdctnRqstDsgInstrctnAsNdCdbleCncptTxt.substring(this.mdctnRqstDsgInstrctnAsNdCdbleCncptTxt.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnAsNdCdbleCncptTxt = this.mdctnRqstDsgInstrctnAsNdCdbleCncptTxt+mdctnRqstDsgInstrctnAsNdCdbleCncptTxt;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnAsNdCdbleCncptTxt = this.mdctnRqstDsgInstrctnAsNdCdbleCncptTxt+ "," +mdctnRqstDsgInstrctnAsNdCdbleCncptTxt;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnDoseAndRtDoseQntyCd() {
@@ -878,6 +1704,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnDoseAndRtDoseQntyCd(String mdctnRqstDsgInstrctnDoseAndRtDoseQntyCd) {
         this.mdctnRqstDsgInstrctnDoseAndRtDoseQntyCd = mdctnRqstDsgInstrctnDoseAndRtDoseQntyCd;
+    }
+    
+    public void addMdctnRqstDsgInstrctnDoseAndRtDoseQntyCd(String mdctnRqstDsgInstrctnDoseAndRtDoseQntyCd) {
+    	if( mdctnRqstDsgInstrctnDoseAndRtDoseQntyCd != null ) {
+	    	if( this.mdctnRqstDsgInstrctnDoseAndRtDoseQntyCd == null ) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtDoseQntyCd = mdctnRqstDsgInstrctnDoseAndRtDoseQntyCd;
+	        } else if(this.mdctnRqstDsgInstrctnDoseAndRtDoseQntyCd.substring(this.mdctnRqstDsgInstrctnDoseAndRtDoseQntyCd.length() - 1).equals("]") & mdctnRqstDsgInstrctnDoseAndRtDoseQntyCd.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtDoseQntyCd = this.mdctnRqstDsgInstrctnDoseAndRtDoseQntyCd+ "," + mdctnRqstDsgInstrctnDoseAndRtDoseQntyCd;
+	        } else if(mdctnRqstDsgInstrctnDoseAndRtDoseQntyCd.equals("[") | mdctnRqstDsgInstrctnDoseAndRtDoseQntyCd.equals("]") | this.mdctnRqstDsgInstrctnDoseAndRtDoseQntyCd.substring(this.mdctnRqstDsgInstrctnDoseAndRtDoseQntyCd.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtDoseQntyCd = this.mdctnRqstDsgInstrctnDoseAndRtDoseQntyCd+mdctnRqstDsgInstrctnDoseAndRtDoseQntyCd;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnDoseAndRtDoseQntyCd = this.mdctnRqstDsgInstrctnDoseAndRtDoseQntyCd+ "," +mdctnRqstDsgInstrctnDoseAndRtDoseQntyCd;
+	        }
+        }
     }
     
     
@@ -890,6 +1730,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnDoseAndRtDoseQntyCmprtr = mdctnRqstDsgInstrctnDoseAndRtDoseQntyCmprtr;
     }
     
+    public void addMdctnRqstDsgInstrctnDoseAndRtDoseQntyCmprtr(String mdctnRqstDsgInstrctnDoseAndRtDoseQntyCmprtr) {
+    	if( mdctnRqstDsgInstrctnDoseAndRtDoseQntyCmprtr != null ) {
+	    	if( this.mdctnRqstDsgInstrctnDoseAndRtDoseQntyCmprtr == null ) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtDoseQntyCmprtr = mdctnRqstDsgInstrctnDoseAndRtDoseQntyCmprtr;
+	        } else if(this.mdctnRqstDsgInstrctnDoseAndRtDoseQntyCmprtr.substring(this.mdctnRqstDsgInstrctnDoseAndRtDoseQntyCmprtr.length() - 1).equals("]") & mdctnRqstDsgInstrctnDoseAndRtDoseQntyCmprtr.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtDoseQntyCmprtr = this.mdctnRqstDsgInstrctnDoseAndRtDoseQntyCmprtr+ "," + mdctnRqstDsgInstrctnDoseAndRtDoseQntyCmprtr;
+	        } else if(mdctnRqstDsgInstrctnDoseAndRtDoseQntyCmprtr.equals("[") | mdctnRqstDsgInstrctnDoseAndRtDoseQntyCmprtr.equals("]") | this.mdctnRqstDsgInstrctnDoseAndRtDoseQntyCmprtr.substring(this.mdctnRqstDsgInstrctnDoseAndRtDoseQntyCmprtr.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtDoseQntyCmprtr = this.mdctnRqstDsgInstrctnDoseAndRtDoseQntyCmprtr+mdctnRqstDsgInstrctnDoseAndRtDoseQntyCmprtr;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnDoseAndRtDoseQntyCmprtr = this.mdctnRqstDsgInstrctnDoseAndRtDoseQntyCmprtr+ "," +mdctnRqstDsgInstrctnDoseAndRtDoseQntyCmprtr;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnDoseAndRtDoseQntySys() {
@@ -898,6 +1752,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnDoseAndRtDoseQntySys(String mdctnRqstDsgInstrctnDoseAndRtDoseQntySys) {
         this.mdctnRqstDsgInstrctnDoseAndRtDoseQntySys = mdctnRqstDsgInstrctnDoseAndRtDoseQntySys;
+    }
+    
+    public void addMdctnRqstDsgInstrctnDoseAndRtDoseQntySys(String mdctnRqstDsgInstrctnDoseAndRtDoseQntySys) {
+    	if( mdctnRqstDsgInstrctnDoseAndRtDoseQntySys != null ) {
+	    	if( this.mdctnRqstDsgInstrctnDoseAndRtDoseQntySys == null ) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtDoseQntySys = mdctnRqstDsgInstrctnDoseAndRtDoseQntySys;
+	        } else if(this.mdctnRqstDsgInstrctnDoseAndRtDoseQntySys.substring(this.mdctnRqstDsgInstrctnDoseAndRtDoseQntySys.length() - 1).equals("]") & mdctnRqstDsgInstrctnDoseAndRtDoseQntySys.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtDoseQntySys = this.mdctnRqstDsgInstrctnDoseAndRtDoseQntySys+ "," + mdctnRqstDsgInstrctnDoseAndRtDoseQntySys;
+	        } else if(mdctnRqstDsgInstrctnDoseAndRtDoseQntySys.equals("[") | mdctnRqstDsgInstrctnDoseAndRtDoseQntySys.equals("]") | this.mdctnRqstDsgInstrctnDoseAndRtDoseQntySys.substring(this.mdctnRqstDsgInstrctnDoseAndRtDoseQntySys.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtDoseQntySys = this.mdctnRqstDsgInstrctnDoseAndRtDoseQntySys+mdctnRqstDsgInstrctnDoseAndRtDoseQntySys;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnDoseAndRtDoseQntySys = this.mdctnRqstDsgInstrctnDoseAndRtDoseQntySys+ "," +mdctnRqstDsgInstrctnDoseAndRtDoseQntySys;
+	        }
+        }
     }
     
     
@@ -910,6 +1778,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnDoseAndRtDoseQntyUnt = mdctnRqstDsgInstrctnDoseAndRtDoseQntyUnt;
     }
     
+    public void addMdctnRqstDsgInstrctnDoseAndRtDoseQntyUnt(String mdctnRqstDsgInstrctnDoseAndRtDoseQntyUnt) {
+    	if( mdctnRqstDsgInstrctnDoseAndRtDoseQntyUnt != null ) {
+	    	if( this.mdctnRqstDsgInstrctnDoseAndRtDoseQntyUnt == null ) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtDoseQntyUnt = mdctnRqstDsgInstrctnDoseAndRtDoseQntyUnt;
+	        } else if(this.mdctnRqstDsgInstrctnDoseAndRtDoseQntyUnt.substring(this.mdctnRqstDsgInstrctnDoseAndRtDoseQntyUnt.length() - 1).equals("]") & mdctnRqstDsgInstrctnDoseAndRtDoseQntyUnt.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtDoseQntyUnt = this.mdctnRqstDsgInstrctnDoseAndRtDoseQntyUnt+ "," + mdctnRqstDsgInstrctnDoseAndRtDoseQntyUnt;
+	        } else if(mdctnRqstDsgInstrctnDoseAndRtDoseQntyUnt.equals("[") | mdctnRqstDsgInstrctnDoseAndRtDoseQntyUnt.equals("]") | this.mdctnRqstDsgInstrctnDoseAndRtDoseQntyUnt.substring(this.mdctnRqstDsgInstrctnDoseAndRtDoseQntyUnt.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtDoseQntyUnt = this.mdctnRqstDsgInstrctnDoseAndRtDoseQntyUnt+mdctnRqstDsgInstrctnDoseAndRtDoseQntyUnt;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnDoseAndRtDoseQntyUnt = this.mdctnRqstDsgInstrctnDoseAndRtDoseQntyUnt+ "," +mdctnRqstDsgInstrctnDoseAndRtDoseQntyUnt;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnDoseAndRtDoseQntyVl() {
@@ -918,6 +1800,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnDoseAndRtDoseQntyVl(String mdctnRqstDsgInstrctnDoseAndRtDoseQntyVl) {
         this.mdctnRqstDsgInstrctnDoseAndRtDoseQntyVl = mdctnRqstDsgInstrctnDoseAndRtDoseQntyVl;
+    }
+    
+    public void addMdctnRqstDsgInstrctnDoseAndRtDoseQntyVl(String mdctnRqstDsgInstrctnDoseAndRtDoseQntyVl) {
+    	if( mdctnRqstDsgInstrctnDoseAndRtDoseQntyVl != null ) {
+	    	if( this.mdctnRqstDsgInstrctnDoseAndRtDoseQntyVl == null ) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtDoseQntyVl = mdctnRqstDsgInstrctnDoseAndRtDoseQntyVl;
+	        } else if(this.mdctnRqstDsgInstrctnDoseAndRtDoseQntyVl.substring(this.mdctnRqstDsgInstrctnDoseAndRtDoseQntyVl.length() - 1).equals("]") & mdctnRqstDsgInstrctnDoseAndRtDoseQntyVl.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtDoseQntyVl = this.mdctnRqstDsgInstrctnDoseAndRtDoseQntyVl+ "," + mdctnRqstDsgInstrctnDoseAndRtDoseQntyVl;
+	        } else if(mdctnRqstDsgInstrctnDoseAndRtDoseQntyVl.equals("[") | mdctnRqstDsgInstrctnDoseAndRtDoseQntyVl.equals("]") | this.mdctnRqstDsgInstrctnDoseAndRtDoseQntyVl.substring(this.mdctnRqstDsgInstrctnDoseAndRtDoseQntyVl.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtDoseQntyVl = this.mdctnRqstDsgInstrctnDoseAndRtDoseQntyVl+mdctnRqstDsgInstrctnDoseAndRtDoseQntyVl;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnDoseAndRtDoseQntyVl = this.mdctnRqstDsgInstrctnDoseAndRtDoseQntyVl+ "," +mdctnRqstDsgInstrctnDoseAndRtDoseQntyVl;
+	        }
+        }
     }
     
     
@@ -930,6 +1826,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiCd = mdctnRqstDsgInstrctnDoseAndRtDoseRngHiCd;
     }
     
+    public void addMdctnRqstDsgInstrctnDoseAndRtDoseRngHiCd(String mdctnRqstDsgInstrctnDoseAndRtDoseRngHiCd) {
+    	if( mdctnRqstDsgInstrctnDoseAndRtDoseRngHiCd != null ) {
+	    	if( this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiCd == null ) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiCd = mdctnRqstDsgInstrctnDoseAndRtDoseRngHiCd;
+	        } else if(this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiCd.substring(this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiCd.length() - 1).equals("]") & mdctnRqstDsgInstrctnDoseAndRtDoseRngHiCd.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiCd = this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiCd+ "," + mdctnRqstDsgInstrctnDoseAndRtDoseRngHiCd;
+	        } else if(mdctnRqstDsgInstrctnDoseAndRtDoseRngHiCd.equals("[") | mdctnRqstDsgInstrctnDoseAndRtDoseRngHiCd.equals("]") | this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiCd.substring(this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiCd.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiCd = this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiCd+mdctnRqstDsgInstrctnDoseAndRtDoseRngHiCd;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiCd = this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiCd+ "," +mdctnRqstDsgInstrctnDoseAndRtDoseRngHiCd;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnDoseAndRtDoseRngHiCmprtr() {
@@ -938,6 +1848,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnDoseAndRtDoseRngHiCmprtr(String mdctnRqstDsgInstrctnDoseAndRtDoseRngHiCmprtr) {
         this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiCmprtr = mdctnRqstDsgInstrctnDoseAndRtDoseRngHiCmprtr;
+    }
+    
+    public void addMdctnRqstDsgInstrctnDoseAndRtDoseRngHiCmprtr(String mdctnRqstDsgInstrctnDoseAndRtDoseRngHiCmprtr) {
+    	if( mdctnRqstDsgInstrctnDoseAndRtDoseRngHiCmprtr != null ) {
+	    	if( this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiCmprtr == null ) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiCmprtr = mdctnRqstDsgInstrctnDoseAndRtDoseRngHiCmprtr;
+	        } else if(this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiCmprtr.substring(this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiCmprtr.length() - 1).equals("]") & mdctnRqstDsgInstrctnDoseAndRtDoseRngHiCmprtr.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiCmprtr = this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiCmprtr+ "," + mdctnRqstDsgInstrctnDoseAndRtDoseRngHiCmprtr;
+	        } else if(mdctnRqstDsgInstrctnDoseAndRtDoseRngHiCmprtr.equals("[") | mdctnRqstDsgInstrctnDoseAndRtDoseRngHiCmprtr.equals("]") | this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiCmprtr.substring(this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiCmprtr.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiCmprtr = this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiCmprtr+mdctnRqstDsgInstrctnDoseAndRtDoseRngHiCmprtr;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiCmprtr = this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiCmprtr+ "," +mdctnRqstDsgInstrctnDoseAndRtDoseRngHiCmprtr;
+	        }
+        }
     }
     
     
@@ -950,6 +1874,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiSys = mdctnRqstDsgInstrctnDoseAndRtDoseRngHiSys;
     }
     
+    public void addMdctnRqstDsgInstrctnDoseAndRtDoseRngHiSys(String mdctnRqstDsgInstrctnDoseAndRtDoseRngHiSys) {
+    	if( mdctnRqstDsgInstrctnDoseAndRtDoseRngHiSys != null ) {
+	    	if( this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiSys == null ) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiSys = mdctnRqstDsgInstrctnDoseAndRtDoseRngHiSys;
+	        } else if(this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiSys.substring(this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiSys.length() - 1).equals("]") & mdctnRqstDsgInstrctnDoseAndRtDoseRngHiSys.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiSys = this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiSys+ "," + mdctnRqstDsgInstrctnDoseAndRtDoseRngHiSys;
+	        } else if(mdctnRqstDsgInstrctnDoseAndRtDoseRngHiSys.equals("[") | mdctnRqstDsgInstrctnDoseAndRtDoseRngHiSys.equals("]") | this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiSys.substring(this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiSys.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiSys = this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiSys+mdctnRqstDsgInstrctnDoseAndRtDoseRngHiSys;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiSys = this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiSys+ "," +mdctnRqstDsgInstrctnDoseAndRtDoseRngHiSys;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnDoseAndRtDoseRngHiUnt() {
@@ -958,6 +1896,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnDoseAndRtDoseRngHiUnt(String mdctnRqstDsgInstrctnDoseAndRtDoseRngHiUnt) {
         this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiUnt = mdctnRqstDsgInstrctnDoseAndRtDoseRngHiUnt;
+    }
+    
+    public void addMdctnRqstDsgInstrctnDoseAndRtDoseRngHiUnt(String mdctnRqstDsgInstrctnDoseAndRtDoseRngHiUnt) {
+    	if( mdctnRqstDsgInstrctnDoseAndRtDoseRngHiUnt != null ) {
+	    	if( this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiUnt == null ) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiUnt = mdctnRqstDsgInstrctnDoseAndRtDoseRngHiUnt;
+	        } else if(this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiUnt.substring(this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiUnt.length() - 1).equals("]") & mdctnRqstDsgInstrctnDoseAndRtDoseRngHiUnt.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiUnt = this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiUnt+ "," + mdctnRqstDsgInstrctnDoseAndRtDoseRngHiUnt;
+	        } else if(mdctnRqstDsgInstrctnDoseAndRtDoseRngHiUnt.equals("[") | mdctnRqstDsgInstrctnDoseAndRtDoseRngHiUnt.equals("]") | this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiUnt.substring(this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiUnt.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiUnt = this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiUnt+mdctnRqstDsgInstrctnDoseAndRtDoseRngHiUnt;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiUnt = this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiUnt+ "," +mdctnRqstDsgInstrctnDoseAndRtDoseRngHiUnt;
+	        }
+        }
     }
     
     
@@ -970,6 +1922,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiVl = mdctnRqstDsgInstrctnDoseAndRtDoseRngHiVl;
     }
     
+    public void addMdctnRqstDsgInstrctnDoseAndRtDoseRngHiVl(String mdctnRqstDsgInstrctnDoseAndRtDoseRngHiVl) {
+    	if( mdctnRqstDsgInstrctnDoseAndRtDoseRngHiVl != null ) {
+	    	if( this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiVl == null ) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiVl = mdctnRqstDsgInstrctnDoseAndRtDoseRngHiVl;
+	        } else if(this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiVl.substring(this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiVl.length() - 1).equals("]") & mdctnRqstDsgInstrctnDoseAndRtDoseRngHiVl.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiVl = this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiVl+ "," + mdctnRqstDsgInstrctnDoseAndRtDoseRngHiVl;
+	        } else if(mdctnRqstDsgInstrctnDoseAndRtDoseRngHiVl.equals("[") | mdctnRqstDsgInstrctnDoseAndRtDoseRngHiVl.equals("]") | this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiVl.substring(this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiVl.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiVl = this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiVl+mdctnRqstDsgInstrctnDoseAndRtDoseRngHiVl;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiVl = this.mdctnRqstDsgInstrctnDoseAndRtDoseRngHiVl+ "," +mdctnRqstDsgInstrctnDoseAndRtDoseRngHiVl;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnDoseAndRtDoseRngLwCd() {
@@ -978,6 +1944,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnDoseAndRtDoseRngLwCd(String mdctnRqstDsgInstrctnDoseAndRtDoseRngLwCd) {
         this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwCd = mdctnRqstDsgInstrctnDoseAndRtDoseRngLwCd;
+    }
+    
+    public void addMdctnRqstDsgInstrctnDoseAndRtDoseRngLwCd(String mdctnRqstDsgInstrctnDoseAndRtDoseRngLwCd) {
+    	if( mdctnRqstDsgInstrctnDoseAndRtDoseRngLwCd != null ) {
+	    	if( this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwCd == null ) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwCd = mdctnRqstDsgInstrctnDoseAndRtDoseRngLwCd;
+	        } else if(this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwCd.substring(this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwCd.length() - 1).equals("]") & mdctnRqstDsgInstrctnDoseAndRtDoseRngLwCd.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwCd = this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwCd+ "," + mdctnRqstDsgInstrctnDoseAndRtDoseRngLwCd;
+	        } else if(mdctnRqstDsgInstrctnDoseAndRtDoseRngLwCd.equals("[") | mdctnRqstDsgInstrctnDoseAndRtDoseRngLwCd.equals("]") | this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwCd.substring(this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwCd.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwCd = this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwCd+mdctnRqstDsgInstrctnDoseAndRtDoseRngLwCd;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwCd = this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwCd+ "," +mdctnRqstDsgInstrctnDoseAndRtDoseRngLwCd;
+	        }
+        }
     }
     
     
@@ -990,6 +1970,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwCmprtr = mdctnRqstDsgInstrctnDoseAndRtDoseRngLwCmprtr;
     }
     
+    public void addMdctnRqstDsgInstrctnDoseAndRtDoseRngLwCmprtr(String mdctnRqstDsgInstrctnDoseAndRtDoseRngLwCmprtr) {
+    	if( mdctnRqstDsgInstrctnDoseAndRtDoseRngLwCmprtr != null ) {
+	    	if( this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwCmprtr == null ) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwCmprtr = mdctnRqstDsgInstrctnDoseAndRtDoseRngLwCmprtr;
+	        } else if(this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwCmprtr.substring(this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwCmprtr.length() - 1).equals("]") & mdctnRqstDsgInstrctnDoseAndRtDoseRngLwCmprtr.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwCmprtr = this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwCmprtr+ "," + mdctnRqstDsgInstrctnDoseAndRtDoseRngLwCmprtr;
+	        } else if(mdctnRqstDsgInstrctnDoseAndRtDoseRngLwCmprtr.equals("[") | mdctnRqstDsgInstrctnDoseAndRtDoseRngLwCmprtr.equals("]") | this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwCmprtr.substring(this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwCmprtr.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwCmprtr = this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwCmprtr+mdctnRqstDsgInstrctnDoseAndRtDoseRngLwCmprtr;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwCmprtr = this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwCmprtr+ "," +mdctnRqstDsgInstrctnDoseAndRtDoseRngLwCmprtr;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnDoseAndRtDoseRngLwSys() {
@@ -998,6 +1992,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnDoseAndRtDoseRngLwSys(String mdctnRqstDsgInstrctnDoseAndRtDoseRngLwSys) {
         this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwSys = mdctnRqstDsgInstrctnDoseAndRtDoseRngLwSys;
+    }
+    
+    public void addMdctnRqstDsgInstrctnDoseAndRtDoseRngLwSys(String mdctnRqstDsgInstrctnDoseAndRtDoseRngLwSys) {
+    	if( mdctnRqstDsgInstrctnDoseAndRtDoseRngLwSys != null ) {
+	    	if( this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwSys == null ) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwSys = mdctnRqstDsgInstrctnDoseAndRtDoseRngLwSys;
+	        } else if(this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwSys.substring(this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwSys.length() - 1).equals("]") & mdctnRqstDsgInstrctnDoseAndRtDoseRngLwSys.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwSys = this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwSys+ "," + mdctnRqstDsgInstrctnDoseAndRtDoseRngLwSys;
+	        } else if(mdctnRqstDsgInstrctnDoseAndRtDoseRngLwSys.equals("[") | mdctnRqstDsgInstrctnDoseAndRtDoseRngLwSys.equals("]") | this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwSys.substring(this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwSys.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwSys = this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwSys+mdctnRqstDsgInstrctnDoseAndRtDoseRngLwSys;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwSys = this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwSys+ "," +mdctnRqstDsgInstrctnDoseAndRtDoseRngLwSys;
+	        }
+        }
     }
     
     
@@ -1010,6 +2018,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwUnt = mdctnRqstDsgInstrctnDoseAndRtDoseRngLwUnt;
     }
     
+    public void addMdctnRqstDsgInstrctnDoseAndRtDoseRngLwUnt(String mdctnRqstDsgInstrctnDoseAndRtDoseRngLwUnt) {
+    	if( mdctnRqstDsgInstrctnDoseAndRtDoseRngLwUnt != null ) {
+	    	if( this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwUnt == null ) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwUnt = mdctnRqstDsgInstrctnDoseAndRtDoseRngLwUnt;
+	        } else if(this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwUnt.substring(this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwUnt.length() - 1).equals("]") & mdctnRqstDsgInstrctnDoseAndRtDoseRngLwUnt.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwUnt = this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwUnt+ "," + mdctnRqstDsgInstrctnDoseAndRtDoseRngLwUnt;
+	        } else if(mdctnRqstDsgInstrctnDoseAndRtDoseRngLwUnt.equals("[") | mdctnRqstDsgInstrctnDoseAndRtDoseRngLwUnt.equals("]") | this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwUnt.substring(this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwUnt.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwUnt = this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwUnt+mdctnRqstDsgInstrctnDoseAndRtDoseRngLwUnt;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwUnt = this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwUnt+ "," +mdctnRqstDsgInstrctnDoseAndRtDoseRngLwUnt;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnDoseAndRtDoseRngLwVl() {
@@ -1018,6 +2040,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnDoseAndRtDoseRngLwVl(String mdctnRqstDsgInstrctnDoseAndRtDoseRngLwVl) {
         this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwVl = mdctnRqstDsgInstrctnDoseAndRtDoseRngLwVl;
+    }
+    
+    public void addMdctnRqstDsgInstrctnDoseAndRtDoseRngLwVl(String mdctnRqstDsgInstrctnDoseAndRtDoseRngLwVl) {
+    	if( mdctnRqstDsgInstrctnDoseAndRtDoseRngLwVl != null ) {
+	    	if( this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwVl == null ) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwVl = mdctnRqstDsgInstrctnDoseAndRtDoseRngLwVl;
+	        } else if(this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwVl.substring(this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwVl.length() - 1).equals("]") & mdctnRqstDsgInstrctnDoseAndRtDoseRngLwVl.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwVl = this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwVl+ "," + mdctnRqstDsgInstrctnDoseAndRtDoseRngLwVl;
+	        } else if(mdctnRqstDsgInstrctnDoseAndRtDoseRngLwVl.equals("[") | mdctnRqstDsgInstrctnDoseAndRtDoseRngLwVl.equals("]") | this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwVl.substring(this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwVl.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwVl = this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwVl+mdctnRqstDsgInstrctnDoseAndRtDoseRngLwVl;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwVl = this.mdctnRqstDsgInstrctnDoseAndRtDoseRngLwVl+ "," +mdctnRqstDsgInstrctnDoseAndRtDoseRngLwVl;
+	        }
+        }
     }
     
     
@@ -1030,6 +2066,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnDoseAndRtRtQntyCd = mdctnRqstDsgInstrctnDoseAndRtRtQntyCd;
     }
     
+    public void addMdctnRqstDsgInstrctnDoseAndRtRtQntyCd(String mdctnRqstDsgInstrctnDoseAndRtRtQntyCd) {
+    	if( mdctnRqstDsgInstrctnDoseAndRtRtQntyCd != null ) {
+	    	if( this.mdctnRqstDsgInstrctnDoseAndRtRtQntyCd == null ) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtQntyCd = mdctnRqstDsgInstrctnDoseAndRtRtQntyCd;
+	        } else if(this.mdctnRqstDsgInstrctnDoseAndRtRtQntyCd.substring(this.mdctnRqstDsgInstrctnDoseAndRtRtQntyCd.length() - 1).equals("]") & mdctnRqstDsgInstrctnDoseAndRtRtQntyCd.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtQntyCd = this.mdctnRqstDsgInstrctnDoseAndRtRtQntyCd+ "," + mdctnRqstDsgInstrctnDoseAndRtRtQntyCd;
+	        } else if(mdctnRqstDsgInstrctnDoseAndRtRtQntyCd.equals("[") | mdctnRqstDsgInstrctnDoseAndRtRtQntyCd.equals("]") | this.mdctnRqstDsgInstrctnDoseAndRtRtQntyCd.substring(this.mdctnRqstDsgInstrctnDoseAndRtRtQntyCd.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtQntyCd = this.mdctnRqstDsgInstrctnDoseAndRtRtQntyCd+mdctnRqstDsgInstrctnDoseAndRtRtQntyCd;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnDoseAndRtRtQntyCd = this.mdctnRqstDsgInstrctnDoseAndRtRtQntyCd+ "," +mdctnRqstDsgInstrctnDoseAndRtRtQntyCd;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnDoseAndRtRtQntyCmprtr() {
@@ -1038,6 +2088,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnDoseAndRtRtQntyCmprtr(String mdctnRqstDsgInstrctnDoseAndRtRtQntyCmprtr) {
         this.mdctnRqstDsgInstrctnDoseAndRtRtQntyCmprtr = mdctnRqstDsgInstrctnDoseAndRtRtQntyCmprtr;
+    }
+    
+    public void addMdctnRqstDsgInstrctnDoseAndRtRtQntyCmprtr(String mdctnRqstDsgInstrctnDoseAndRtRtQntyCmprtr) {
+    	if( mdctnRqstDsgInstrctnDoseAndRtRtQntyCmprtr != null ) {
+	    	if( this.mdctnRqstDsgInstrctnDoseAndRtRtQntyCmprtr == null ) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtQntyCmprtr = mdctnRqstDsgInstrctnDoseAndRtRtQntyCmprtr;
+	        } else if(this.mdctnRqstDsgInstrctnDoseAndRtRtQntyCmprtr.substring(this.mdctnRqstDsgInstrctnDoseAndRtRtQntyCmprtr.length() - 1).equals("]") & mdctnRqstDsgInstrctnDoseAndRtRtQntyCmprtr.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtQntyCmprtr = this.mdctnRqstDsgInstrctnDoseAndRtRtQntyCmprtr+ "," + mdctnRqstDsgInstrctnDoseAndRtRtQntyCmprtr;
+	        } else if(mdctnRqstDsgInstrctnDoseAndRtRtQntyCmprtr.equals("[") | mdctnRqstDsgInstrctnDoseAndRtRtQntyCmprtr.equals("]") | this.mdctnRqstDsgInstrctnDoseAndRtRtQntyCmprtr.substring(this.mdctnRqstDsgInstrctnDoseAndRtRtQntyCmprtr.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtQntyCmprtr = this.mdctnRqstDsgInstrctnDoseAndRtRtQntyCmprtr+mdctnRqstDsgInstrctnDoseAndRtRtQntyCmprtr;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnDoseAndRtRtQntyCmprtr = this.mdctnRqstDsgInstrctnDoseAndRtRtQntyCmprtr+ "," +mdctnRqstDsgInstrctnDoseAndRtRtQntyCmprtr;
+	        }
+        }
     }
     
     
@@ -1050,6 +2114,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnDoseAndRtRtQntySys = mdctnRqstDsgInstrctnDoseAndRtRtQntySys;
     }
     
+    public void addMdctnRqstDsgInstrctnDoseAndRtRtQntySys(String mdctnRqstDsgInstrctnDoseAndRtRtQntySys) {
+    	if( mdctnRqstDsgInstrctnDoseAndRtRtQntySys != null ) {
+	    	if( this.mdctnRqstDsgInstrctnDoseAndRtRtQntySys == null ) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtQntySys = mdctnRqstDsgInstrctnDoseAndRtRtQntySys;
+	        } else if(this.mdctnRqstDsgInstrctnDoseAndRtRtQntySys.substring(this.mdctnRqstDsgInstrctnDoseAndRtRtQntySys.length() - 1).equals("]") & mdctnRqstDsgInstrctnDoseAndRtRtQntySys.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtQntySys = this.mdctnRqstDsgInstrctnDoseAndRtRtQntySys+ "," + mdctnRqstDsgInstrctnDoseAndRtRtQntySys;
+	        } else if(mdctnRqstDsgInstrctnDoseAndRtRtQntySys.equals("[") | mdctnRqstDsgInstrctnDoseAndRtRtQntySys.equals("]") | this.mdctnRqstDsgInstrctnDoseAndRtRtQntySys.substring(this.mdctnRqstDsgInstrctnDoseAndRtRtQntySys.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtQntySys = this.mdctnRqstDsgInstrctnDoseAndRtRtQntySys+mdctnRqstDsgInstrctnDoseAndRtRtQntySys;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnDoseAndRtRtQntySys = this.mdctnRqstDsgInstrctnDoseAndRtRtQntySys+ "," +mdctnRqstDsgInstrctnDoseAndRtRtQntySys;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnDoseAndRtRtQntyUnt() {
@@ -1058,6 +2136,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnDoseAndRtRtQntyUnt(String mdctnRqstDsgInstrctnDoseAndRtRtQntyUnt) {
         this.mdctnRqstDsgInstrctnDoseAndRtRtQntyUnt = mdctnRqstDsgInstrctnDoseAndRtRtQntyUnt;
+    }
+    
+    public void addMdctnRqstDsgInstrctnDoseAndRtRtQntyUnt(String mdctnRqstDsgInstrctnDoseAndRtRtQntyUnt) {
+    	if( mdctnRqstDsgInstrctnDoseAndRtRtQntyUnt != null ) {
+	    	if( this.mdctnRqstDsgInstrctnDoseAndRtRtQntyUnt == null ) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtQntyUnt = mdctnRqstDsgInstrctnDoseAndRtRtQntyUnt;
+	        } else if(this.mdctnRqstDsgInstrctnDoseAndRtRtQntyUnt.substring(this.mdctnRqstDsgInstrctnDoseAndRtRtQntyUnt.length() - 1).equals("]") & mdctnRqstDsgInstrctnDoseAndRtRtQntyUnt.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtQntyUnt = this.mdctnRqstDsgInstrctnDoseAndRtRtQntyUnt+ "," + mdctnRqstDsgInstrctnDoseAndRtRtQntyUnt;
+	        } else if(mdctnRqstDsgInstrctnDoseAndRtRtQntyUnt.equals("[") | mdctnRqstDsgInstrctnDoseAndRtRtQntyUnt.equals("]") | this.mdctnRqstDsgInstrctnDoseAndRtRtQntyUnt.substring(this.mdctnRqstDsgInstrctnDoseAndRtRtQntyUnt.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtQntyUnt = this.mdctnRqstDsgInstrctnDoseAndRtRtQntyUnt+mdctnRqstDsgInstrctnDoseAndRtRtQntyUnt;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnDoseAndRtRtQntyUnt = this.mdctnRqstDsgInstrctnDoseAndRtRtQntyUnt+ "," +mdctnRqstDsgInstrctnDoseAndRtRtQntyUnt;
+	        }
+        }
     }
     
     
@@ -1070,6 +2162,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnDoseAndRtRtQntyVl = mdctnRqstDsgInstrctnDoseAndRtRtQntyVl;
     }
     
+    public void addMdctnRqstDsgInstrctnDoseAndRtRtQntyVl(String mdctnRqstDsgInstrctnDoseAndRtRtQntyVl) {
+    	if( mdctnRqstDsgInstrctnDoseAndRtRtQntyVl != null ) {
+	    	if( this.mdctnRqstDsgInstrctnDoseAndRtRtQntyVl == null ) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtQntyVl = mdctnRqstDsgInstrctnDoseAndRtRtQntyVl;
+	        } else if(this.mdctnRqstDsgInstrctnDoseAndRtRtQntyVl.substring(this.mdctnRqstDsgInstrctnDoseAndRtRtQntyVl.length() - 1).equals("]") & mdctnRqstDsgInstrctnDoseAndRtRtQntyVl.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtQntyVl = this.mdctnRqstDsgInstrctnDoseAndRtRtQntyVl+ "," + mdctnRqstDsgInstrctnDoseAndRtRtQntyVl;
+	        } else if(mdctnRqstDsgInstrctnDoseAndRtRtQntyVl.equals("[") | mdctnRqstDsgInstrctnDoseAndRtRtQntyVl.equals("]") | this.mdctnRqstDsgInstrctnDoseAndRtRtQntyVl.substring(this.mdctnRqstDsgInstrctnDoseAndRtRtQntyVl.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtQntyVl = this.mdctnRqstDsgInstrctnDoseAndRtRtQntyVl+mdctnRqstDsgInstrctnDoseAndRtRtQntyVl;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnDoseAndRtRtQntyVl = this.mdctnRqstDsgInstrctnDoseAndRtRtQntyVl+ "," +mdctnRqstDsgInstrctnDoseAndRtRtQntyVl;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnDoseAndRtRtRngHiCd() {
@@ -1078,6 +2184,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnDoseAndRtRtRngHiCd(String mdctnRqstDsgInstrctnDoseAndRtRtRngHiCd) {
         this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiCd = mdctnRqstDsgInstrctnDoseAndRtRtRngHiCd;
+    }
+    
+    public void addMdctnRqstDsgInstrctnDoseAndRtRtRngHiCd(String mdctnRqstDsgInstrctnDoseAndRtRtRngHiCd) {
+    	if( mdctnRqstDsgInstrctnDoseAndRtRtRngHiCd != null ) {
+	    	if( this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiCd == null ) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiCd = mdctnRqstDsgInstrctnDoseAndRtRtRngHiCd;
+	        } else if(this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiCd.substring(this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiCd.length() - 1).equals("]") & mdctnRqstDsgInstrctnDoseAndRtRtRngHiCd.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiCd = this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiCd+ "," + mdctnRqstDsgInstrctnDoseAndRtRtRngHiCd;
+	        } else if(mdctnRqstDsgInstrctnDoseAndRtRtRngHiCd.equals("[") | mdctnRqstDsgInstrctnDoseAndRtRtRngHiCd.equals("]") | this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiCd.substring(this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiCd.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiCd = this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiCd+mdctnRqstDsgInstrctnDoseAndRtRtRngHiCd;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiCd = this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiCd+ "," +mdctnRqstDsgInstrctnDoseAndRtRtRngHiCd;
+	        }
+        }
     }
     
     
@@ -1090,6 +2210,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiCmprtr = mdctnRqstDsgInstrctnDoseAndRtRtRngHiCmprtr;
     }
     
+    public void addMdctnRqstDsgInstrctnDoseAndRtRtRngHiCmprtr(String mdctnRqstDsgInstrctnDoseAndRtRtRngHiCmprtr) {
+    	if( mdctnRqstDsgInstrctnDoseAndRtRtRngHiCmprtr != null ) {
+	    	if( this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiCmprtr == null ) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiCmprtr = mdctnRqstDsgInstrctnDoseAndRtRtRngHiCmprtr;
+	        } else if(this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiCmprtr.substring(this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiCmprtr.length() - 1).equals("]") & mdctnRqstDsgInstrctnDoseAndRtRtRngHiCmprtr.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiCmprtr = this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiCmprtr+ "," + mdctnRqstDsgInstrctnDoseAndRtRtRngHiCmprtr;
+	        } else if(mdctnRqstDsgInstrctnDoseAndRtRtRngHiCmprtr.equals("[") | mdctnRqstDsgInstrctnDoseAndRtRtRngHiCmprtr.equals("]") | this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiCmprtr.substring(this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiCmprtr.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiCmprtr = this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiCmprtr+mdctnRqstDsgInstrctnDoseAndRtRtRngHiCmprtr;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiCmprtr = this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiCmprtr+ "," +mdctnRqstDsgInstrctnDoseAndRtRtRngHiCmprtr;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnDoseAndRtRtRngHiSys() {
@@ -1098,6 +2232,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnDoseAndRtRtRngHiSys(String mdctnRqstDsgInstrctnDoseAndRtRtRngHiSys) {
         this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiSys = mdctnRqstDsgInstrctnDoseAndRtRtRngHiSys;
+    }
+    
+    public void addMdctnRqstDsgInstrctnDoseAndRtRtRngHiSys(String mdctnRqstDsgInstrctnDoseAndRtRtRngHiSys) {
+    	if( mdctnRqstDsgInstrctnDoseAndRtRtRngHiSys != null ) {
+	    	if( this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiSys == null ) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiSys = mdctnRqstDsgInstrctnDoseAndRtRtRngHiSys;
+	        } else if(this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiSys.substring(this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiSys.length() - 1).equals("]") & mdctnRqstDsgInstrctnDoseAndRtRtRngHiSys.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiSys = this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiSys+ "," + mdctnRqstDsgInstrctnDoseAndRtRtRngHiSys;
+	        } else if(mdctnRqstDsgInstrctnDoseAndRtRtRngHiSys.equals("[") | mdctnRqstDsgInstrctnDoseAndRtRtRngHiSys.equals("]") | this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiSys.substring(this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiSys.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiSys = this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiSys+mdctnRqstDsgInstrctnDoseAndRtRtRngHiSys;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiSys = this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiSys+ "," +mdctnRqstDsgInstrctnDoseAndRtRtRngHiSys;
+	        }
+        }
     }
     
     
@@ -1110,6 +2258,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiUnt = mdctnRqstDsgInstrctnDoseAndRtRtRngHiUnt;
     }
     
+    public void addMdctnRqstDsgInstrctnDoseAndRtRtRngHiUnt(String mdctnRqstDsgInstrctnDoseAndRtRtRngHiUnt) {
+    	if( mdctnRqstDsgInstrctnDoseAndRtRtRngHiUnt != null ) {
+	    	if( this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiUnt == null ) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiUnt = mdctnRqstDsgInstrctnDoseAndRtRtRngHiUnt;
+	        } else if(this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiUnt.substring(this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiUnt.length() - 1).equals("]") & mdctnRqstDsgInstrctnDoseAndRtRtRngHiUnt.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiUnt = this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiUnt+ "," + mdctnRqstDsgInstrctnDoseAndRtRtRngHiUnt;
+	        } else if(mdctnRqstDsgInstrctnDoseAndRtRtRngHiUnt.equals("[") | mdctnRqstDsgInstrctnDoseAndRtRtRngHiUnt.equals("]") | this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiUnt.substring(this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiUnt.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiUnt = this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiUnt+mdctnRqstDsgInstrctnDoseAndRtRtRngHiUnt;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiUnt = this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiUnt+ "," +mdctnRqstDsgInstrctnDoseAndRtRtRngHiUnt;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnDoseAndRtRtRngHiVl() {
@@ -1118,6 +2280,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnDoseAndRtRtRngHiVl(String mdctnRqstDsgInstrctnDoseAndRtRtRngHiVl) {
         this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiVl = mdctnRqstDsgInstrctnDoseAndRtRtRngHiVl;
+    }
+    
+    public void addMdctnRqstDsgInstrctnDoseAndRtRtRngHiVl(String mdctnRqstDsgInstrctnDoseAndRtRtRngHiVl) {
+    	if( mdctnRqstDsgInstrctnDoseAndRtRtRngHiVl != null ) {
+	    	if( this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiVl == null ) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiVl = mdctnRqstDsgInstrctnDoseAndRtRtRngHiVl;
+	        } else if(this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiVl.substring(this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiVl.length() - 1).equals("]") & mdctnRqstDsgInstrctnDoseAndRtRtRngHiVl.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiVl = this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiVl+ "," + mdctnRqstDsgInstrctnDoseAndRtRtRngHiVl;
+	        } else if(mdctnRqstDsgInstrctnDoseAndRtRtRngHiVl.equals("[") | mdctnRqstDsgInstrctnDoseAndRtRtRngHiVl.equals("]") | this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiVl.substring(this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiVl.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiVl = this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiVl+mdctnRqstDsgInstrctnDoseAndRtRtRngHiVl;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiVl = this.mdctnRqstDsgInstrctnDoseAndRtRtRngHiVl+ "," +mdctnRqstDsgInstrctnDoseAndRtRtRngHiVl;
+	        }
+        }
     }
     
     
@@ -1130,6 +2306,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwCd = mdctnRqstDsgInstrctnDoseAndRtRtRngLwCd;
     }
     
+    public void addMdctnRqstDsgInstrctnDoseAndRtRtRngLwCd(String mdctnRqstDsgInstrctnDoseAndRtRtRngLwCd) {
+    	if( mdctnRqstDsgInstrctnDoseAndRtRtRngLwCd != null ) {
+	    	if( this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwCd == null ) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwCd = mdctnRqstDsgInstrctnDoseAndRtRtRngLwCd;
+	        } else if(this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwCd.substring(this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwCd.length() - 1).equals("]") & mdctnRqstDsgInstrctnDoseAndRtRtRngLwCd.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwCd = this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwCd+ "," + mdctnRqstDsgInstrctnDoseAndRtRtRngLwCd;
+	        } else if(mdctnRqstDsgInstrctnDoseAndRtRtRngLwCd.equals("[") | mdctnRqstDsgInstrctnDoseAndRtRtRngLwCd.equals("]") | this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwCd.substring(this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwCd.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwCd = this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwCd+mdctnRqstDsgInstrctnDoseAndRtRtRngLwCd;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwCd = this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwCd+ "," +mdctnRqstDsgInstrctnDoseAndRtRtRngLwCd;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnDoseAndRtRtRngLwCmprtr() {
@@ -1138,6 +2328,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnDoseAndRtRtRngLwCmprtr(String mdctnRqstDsgInstrctnDoseAndRtRtRngLwCmprtr) {
         this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwCmprtr = mdctnRqstDsgInstrctnDoseAndRtRtRngLwCmprtr;
+    }
+    
+    public void addMdctnRqstDsgInstrctnDoseAndRtRtRngLwCmprtr(String mdctnRqstDsgInstrctnDoseAndRtRtRngLwCmprtr) {
+    	if( mdctnRqstDsgInstrctnDoseAndRtRtRngLwCmprtr != null ) {
+	    	if( this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwCmprtr == null ) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwCmprtr = mdctnRqstDsgInstrctnDoseAndRtRtRngLwCmprtr;
+	        } else if(this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwCmprtr.substring(this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwCmprtr.length() - 1).equals("]") & mdctnRqstDsgInstrctnDoseAndRtRtRngLwCmprtr.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwCmprtr = this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwCmprtr+ "," + mdctnRqstDsgInstrctnDoseAndRtRtRngLwCmprtr;
+	        } else if(mdctnRqstDsgInstrctnDoseAndRtRtRngLwCmprtr.equals("[") | mdctnRqstDsgInstrctnDoseAndRtRtRngLwCmprtr.equals("]") | this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwCmprtr.substring(this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwCmprtr.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwCmprtr = this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwCmprtr+mdctnRqstDsgInstrctnDoseAndRtRtRngLwCmprtr;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwCmprtr = this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwCmprtr+ "," +mdctnRqstDsgInstrctnDoseAndRtRtRngLwCmprtr;
+	        }
+        }
     }
     
     
@@ -1150,6 +2354,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwSys = mdctnRqstDsgInstrctnDoseAndRtRtRngLwSys;
     }
     
+    public void addMdctnRqstDsgInstrctnDoseAndRtRtRngLwSys(String mdctnRqstDsgInstrctnDoseAndRtRtRngLwSys) {
+    	if( mdctnRqstDsgInstrctnDoseAndRtRtRngLwSys != null ) {
+	    	if( this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwSys == null ) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwSys = mdctnRqstDsgInstrctnDoseAndRtRtRngLwSys;
+	        } else if(this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwSys.substring(this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwSys.length() - 1).equals("]") & mdctnRqstDsgInstrctnDoseAndRtRtRngLwSys.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwSys = this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwSys+ "," + mdctnRqstDsgInstrctnDoseAndRtRtRngLwSys;
+	        } else if(mdctnRqstDsgInstrctnDoseAndRtRtRngLwSys.equals("[") | mdctnRqstDsgInstrctnDoseAndRtRtRngLwSys.equals("]") | this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwSys.substring(this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwSys.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwSys = this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwSys+mdctnRqstDsgInstrctnDoseAndRtRtRngLwSys;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwSys = this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwSys+ "," +mdctnRqstDsgInstrctnDoseAndRtRtRngLwSys;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnDoseAndRtRtRngLwUnt() {
@@ -1158,6 +2376,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnDoseAndRtRtRngLwUnt(String mdctnRqstDsgInstrctnDoseAndRtRtRngLwUnt) {
         this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwUnt = mdctnRqstDsgInstrctnDoseAndRtRtRngLwUnt;
+    }
+    
+    public void addMdctnRqstDsgInstrctnDoseAndRtRtRngLwUnt(String mdctnRqstDsgInstrctnDoseAndRtRtRngLwUnt) {
+    	if( mdctnRqstDsgInstrctnDoseAndRtRtRngLwUnt != null ) {
+	    	if( this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwUnt == null ) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwUnt = mdctnRqstDsgInstrctnDoseAndRtRtRngLwUnt;
+	        } else if(this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwUnt.substring(this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwUnt.length() - 1).equals("]") & mdctnRqstDsgInstrctnDoseAndRtRtRngLwUnt.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwUnt = this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwUnt+ "," + mdctnRqstDsgInstrctnDoseAndRtRtRngLwUnt;
+	        } else if(mdctnRqstDsgInstrctnDoseAndRtRtRngLwUnt.equals("[") | mdctnRqstDsgInstrctnDoseAndRtRtRngLwUnt.equals("]") | this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwUnt.substring(this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwUnt.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwUnt = this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwUnt+mdctnRqstDsgInstrctnDoseAndRtRtRngLwUnt;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwUnt = this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwUnt+ "," +mdctnRqstDsgInstrctnDoseAndRtRtRngLwUnt;
+	        }
+        }
     }
     
     
@@ -1170,6 +2402,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwVl = mdctnRqstDsgInstrctnDoseAndRtRtRngLwVl;
     }
     
+    public void addMdctnRqstDsgInstrctnDoseAndRtRtRngLwVl(String mdctnRqstDsgInstrctnDoseAndRtRtRngLwVl) {
+    	if( mdctnRqstDsgInstrctnDoseAndRtRtRngLwVl != null ) {
+	    	if( this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwVl == null ) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwVl = mdctnRqstDsgInstrctnDoseAndRtRtRngLwVl;
+	        } else if(this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwVl.substring(this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwVl.length() - 1).equals("]") & mdctnRqstDsgInstrctnDoseAndRtRtRngLwVl.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwVl = this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwVl+ "," + mdctnRqstDsgInstrctnDoseAndRtRtRngLwVl;
+	        } else if(mdctnRqstDsgInstrctnDoseAndRtRtRngLwVl.equals("[") | mdctnRqstDsgInstrctnDoseAndRtRtRngLwVl.equals("]") | this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwVl.substring(this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwVl.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwVl = this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwVl+mdctnRqstDsgInstrctnDoseAndRtRtRngLwVl;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwVl = this.mdctnRqstDsgInstrctnDoseAndRtRtRngLwVl+ "," +mdctnRqstDsgInstrctnDoseAndRtRtRngLwVl;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrCd() {
@@ -1178,6 +2424,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrCd(String mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrCd) {
         this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrCd = mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrCd;
+    }
+    
+    public void addMdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrCd(String mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrCd) {
+    	if( mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrCd != null ) {
+	    	if( this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrCd == null ) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrCd = mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrCd;
+	        } else if(this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrCd.substring(this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrCd.length() - 1).equals("]") & mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrCd.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrCd = this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrCd+ "," + mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrCd;
+	        } else if(mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrCd.equals("[") | mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrCd.equals("]") | this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrCd.substring(this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrCd.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrCd = this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrCd+mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrCd;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrCd = this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrCd+ "," +mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrCd;
+	        }
+        }
     }
     
     
@@ -1190,6 +2450,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrCmprtr = mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrCmprtr;
     }
     
+    public void addMdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrCmprtr(String mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrCmprtr) {
+    	if( mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrCmprtr != null ) {
+	    	if( this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrCmprtr == null ) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrCmprtr = mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrCmprtr;
+	        } else if(this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrCmprtr.substring(this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrCmprtr.length() - 1).equals("]") & mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrCmprtr.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrCmprtr = this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrCmprtr+ "," + mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrCmprtr;
+	        } else if(mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrCmprtr.equals("[") | mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrCmprtr.equals("]") | this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrCmprtr.substring(this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrCmprtr.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrCmprtr = this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrCmprtr+mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrCmprtr;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrCmprtr = this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrCmprtr+ "," +mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrCmprtr;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrSys() {
@@ -1198,6 +2472,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrSys(String mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrSys) {
         this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrSys = mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrSys;
+    }
+    
+    public void addMdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrSys(String mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrSys) {
+    	if( mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrSys != null ) {
+	    	if( this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrSys == null ) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrSys = mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrSys;
+	        } else if(this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrSys.substring(this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrSys.length() - 1).equals("]") & mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrSys.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrSys = this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrSys+ "," + mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrSys;
+	        } else if(mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrSys.equals("[") | mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrSys.equals("]") | this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrSys.substring(this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrSys.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrSys = this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrSys+mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrSys;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrSys = this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrSys+ "," +mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrSys;
+	        }
+        }
     }
     
     
@@ -1210,6 +2498,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrUnt = mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrUnt;
     }
     
+    public void addMdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrUnt(String mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrUnt) {
+    	if( mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrUnt != null ) {
+	    	if( this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrUnt == null ) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrUnt = mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrUnt;
+	        } else if(this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrUnt.substring(this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrUnt.length() - 1).equals("]") & mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrUnt.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrUnt = this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrUnt+ "," + mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrUnt;
+	        } else if(mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrUnt.equals("[") | mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrUnt.equals("]") | this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrUnt.substring(this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrUnt.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrUnt = this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrUnt+mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrUnt;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrUnt = this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrUnt+ "," +mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrUnt;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrVl() {
@@ -1218,6 +2520,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrVl(String mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrVl) {
         this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrVl = mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrVl;
+    }
+    
+    public void addMdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrVl(String mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrVl) {
+    	if( mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrVl != null ) {
+	    	if( this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrVl == null ) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrVl = mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrVl;
+	        } else if(this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrVl.substring(this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrVl.length() - 1).equals("]") & mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrVl.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrVl = this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrVl+ "," + mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrVl;
+	        } else if(mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrVl.equals("[") | mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrVl.equals("]") | this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrVl.substring(this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrVl.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrVl = this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrVl+mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrVl;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrVl = this.mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrVl+ "," +mdctnRqstDsgInstrctnDoseAndRtRtRtioDnmntrVl;
+	        }
+        }
     }
     
     
@@ -1230,6 +2546,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrCd = mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrCd;
     }
     
+    public void addMdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrCd(String mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrCd) {
+    	if( mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrCd != null ) {
+	    	if( this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrCd == null ) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrCd = mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrCd;
+	        } else if(this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrCd.substring(this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrCd.length() - 1).equals("]") & mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrCd.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrCd = this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrCd+ "," + mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrCd;
+	        } else if(mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrCd.equals("[") | mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrCd.equals("]") | this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrCd.substring(this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrCd.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrCd = this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrCd+mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrCd;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrCd = this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrCd+ "," +mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrCd;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrCmprtr() {
@@ -1238,6 +2568,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrCmprtr(String mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrCmprtr) {
         this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrCmprtr = mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrCmprtr;
+    }
+    
+    public void addMdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrCmprtr(String mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrCmprtr) {
+    	if( mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrCmprtr != null ) {
+	    	if( this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrCmprtr == null ) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrCmprtr = mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrCmprtr;
+	        } else if(this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrCmprtr.substring(this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrCmprtr.length() - 1).equals("]") & mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrCmprtr.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrCmprtr = this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrCmprtr+ "," + mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrCmprtr;
+	        } else if(mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrCmprtr.equals("[") | mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrCmprtr.equals("]") | this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrCmprtr.substring(this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrCmprtr.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrCmprtr = this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrCmprtr+mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrCmprtr;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrCmprtr = this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrCmprtr+ "," +mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrCmprtr;
+	        }
+        }
     }
     
     
@@ -1250,6 +2594,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrSys = mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrSys;
     }
     
+    public void addMdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrSys(String mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrSys) {
+    	if( mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrSys != null ) {
+	    	if( this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrSys == null ) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrSys = mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrSys;
+	        } else if(this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrSys.substring(this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrSys.length() - 1).equals("]") & mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrSys.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrSys = this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrSys+ "," + mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrSys;
+	        } else if(mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrSys.equals("[") | mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrSys.equals("]") | this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrSys.substring(this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrSys.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrSys = this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrSys+mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrSys;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrSys = this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrSys+ "," +mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrSys;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrUnt() {
@@ -1258,6 +2616,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrUnt(String mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrUnt) {
         this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrUnt = mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrUnt;
+    }
+    
+    public void addMdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrUnt(String mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrUnt) {
+    	if( mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrUnt != null ) {
+	    	if( this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrUnt == null ) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrUnt = mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrUnt;
+	        } else if(this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrUnt.substring(this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrUnt.length() - 1).equals("]") & mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrUnt.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrUnt = this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrUnt+ "," + mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrUnt;
+	        } else if(mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrUnt.equals("[") | mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrUnt.equals("]") | this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrUnt.substring(this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrUnt.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrUnt = this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrUnt+mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrUnt;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrUnt = this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrUnt+ "," +mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrUnt;
+	        }
+        }
     }
     
     
@@ -1270,6 +2642,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrVl = mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrVl;
     }
     
+    public void addMdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrVl(String mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrVl) {
+    	if( mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrVl != null ) {
+	    	if( this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrVl == null ) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrVl = mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrVl;
+	        } else if(this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrVl.substring(this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrVl.length() - 1).equals("]") & mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrVl.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrVl = this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrVl+ "," + mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrVl;
+	        } else if(mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrVl.equals("[") | mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrVl.equals("]") | this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrVl.substring(this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrVl.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrVl = this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrVl+mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrVl;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrVl = this.mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrVl+ "," +mdctnRqstDsgInstrctnDoseAndRtRtRtioNmrtrVl;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnDoseAndRtTypCdgCd() {
@@ -1278,6 +2664,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnDoseAndRtTypCdgCd(String mdctnRqstDsgInstrctnDoseAndRtTypCdgCd) {
         this.mdctnRqstDsgInstrctnDoseAndRtTypCdgCd = mdctnRqstDsgInstrctnDoseAndRtTypCdgCd;
+    }
+    
+    public void addMdctnRqstDsgInstrctnDoseAndRtTypCdgCd(String mdctnRqstDsgInstrctnDoseAndRtTypCdgCd) {
+    	if( mdctnRqstDsgInstrctnDoseAndRtTypCdgCd != null ) {
+	    	if( this.mdctnRqstDsgInstrctnDoseAndRtTypCdgCd == null ) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtTypCdgCd = mdctnRqstDsgInstrctnDoseAndRtTypCdgCd;
+	        } else if(this.mdctnRqstDsgInstrctnDoseAndRtTypCdgCd.substring(this.mdctnRqstDsgInstrctnDoseAndRtTypCdgCd.length() - 1).equals("]") & mdctnRqstDsgInstrctnDoseAndRtTypCdgCd.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtTypCdgCd = this.mdctnRqstDsgInstrctnDoseAndRtTypCdgCd+ "," + mdctnRqstDsgInstrctnDoseAndRtTypCdgCd;
+	        } else if(mdctnRqstDsgInstrctnDoseAndRtTypCdgCd.equals("[") | mdctnRqstDsgInstrctnDoseAndRtTypCdgCd.equals("]") | this.mdctnRqstDsgInstrctnDoseAndRtTypCdgCd.substring(this.mdctnRqstDsgInstrctnDoseAndRtTypCdgCd.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtTypCdgCd = this.mdctnRqstDsgInstrctnDoseAndRtTypCdgCd+mdctnRqstDsgInstrctnDoseAndRtTypCdgCd;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnDoseAndRtTypCdgCd = this.mdctnRqstDsgInstrctnDoseAndRtTypCdgCd+ "," +mdctnRqstDsgInstrctnDoseAndRtTypCdgCd;
+	        }
+        }
     }
     
     
@@ -1290,6 +2690,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnDoseAndRtTypCdgDsply = mdctnRqstDsgInstrctnDoseAndRtTypCdgDsply;
     }
     
+    public void addMdctnRqstDsgInstrctnDoseAndRtTypCdgDsply(String mdctnRqstDsgInstrctnDoseAndRtTypCdgDsply) {
+    	if( mdctnRqstDsgInstrctnDoseAndRtTypCdgDsply != null ) {
+	    	if( this.mdctnRqstDsgInstrctnDoseAndRtTypCdgDsply == null ) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtTypCdgDsply = mdctnRqstDsgInstrctnDoseAndRtTypCdgDsply;
+	        } else if(this.mdctnRqstDsgInstrctnDoseAndRtTypCdgDsply.substring(this.mdctnRqstDsgInstrctnDoseAndRtTypCdgDsply.length() - 1).equals("]") & mdctnRqstDsgInstrctnDoseAndRtTypCdgDsply.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtTypCdgDsply = this.mdctnRqstDsgInstrctnDoseAndRtTypCdgDsply+ "," + mdctnRqstDsgInstrctnDoseAndRtTypCdgDsply;
+	        } else if(mdctnRqstDsgInstrctnDoseAndRtTypCdgDsply.equals("[") | mdctnRqstDsgInstrctnDoseAndRtTypCdgDsply.equals("]") | this.mdctnRqstDsgInstrctnDoseAndRtTypCdgDsply.substring(this.mdctnRqstDsgInstrctnDoseAndRtTypCdgDsply.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtTypCdgDsply = this.mdctnRqstDsgInstrctnDoseAndRtTypCdgDsply+mdctnRqstDsgInstrctnDoseAndRtTypCdgDsply;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnDoseAndRtTypCdgDsply = this.mdctnRqstDsgInstrctnDoseAndRtTypCdgDsply+ "," +mdctnRqstDsgInstrctnDoseAndRtTypCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnDoseAndRtTypCdgSys() {
@@ -1298,6 +2712,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnDoseAndRtTypCdgSys(String mdctnRqstDsgInstrctnDoseAndRtTypCdgSys) {
         this.mdctnRqstDsgInstrctnDoseAndRtTypCdgSys = mdctnRqstDsgInstrctnDoseAndRtTypCdgSys;
+    }
+    
+    public void addMdctnRqstDsgInstrctnDoseAndRtTypCdgSys(String mdctnRqstDsgInstrctnDoseAndRtTypCdgSys) {
+    	if( mdctnRqstDsgInstrctnDoseAndRtTypCdgSys != null ) {
+	    	if( this.mdctnRqstDsgInstrctnDoseAndRtTypCdgSys == null ) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtTypCdgSys = mdctnRqstDsgInstrctnDoseAndRtTypCdgSys;
+	        } else if(this.mdctnRqstDsgInstrctnDoseAndRtTypCdgSys.substring(this.mdctnRqstDsgInstrctnDoseAndRtTypCdgSys.length() - 1).equals("]") & mdctnRqstDsgInstrctnDoseAndRtTypCdgSys.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtTypCdgSys = this.mdctnRqstDsgInstrctnDoseAndRtTypCdgSys+ "," + mdctnRqstDsgInstrctnDoseAndRtTypCdgSys;
+	        } else if(mdctnRqstDsgInstrctnDoseAndRtTypCdgSys.equals("[") | mdctnRqstDsgInstrctnDoseAndRtTypCdgSys.equals("]") | this.mdctnRqstDsgInstrctnDoseAndRtTypCdgSys.substring(this.mdctnRqstDsgInstrctnDoseAndRtTypCdgSys.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtTypCdgSys = this.mdctnRqstDsgInstrctnDoseAndRtTypCdgSys+mdctnRqstDsgInstrctnDoseAndRtTypCdgSys;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnDoseAndRtTypCdgSys = this.mdctnRqstDsgInstrctnDoseAndRtTypCdgSys+ "," +mdctnRqstDsgInstrctnDoseAndRtTypCdgSys;
+	        }
+        }
     }
     
     
@@ -1310,6 +2738,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnDoseAndRtTypCdgUsrSltd = mdctnRqstDsgInstrctnDoseAndRtTypCdgUsrSltd;
     }
     
+    public void addMdctnRqstDsgInstrctnDoseAndRtTypCdgUsrSltd(String mdctnRqstDsgInstrctnDoseAndRtTypCdgUsrSltd) {
+    	if( mdctnRqstDsgInstrctnDoseAndRtTypCdgUsrSltd != null ) {
+	    	if( this.mdctnRqstDsgInstrctnDoseAndRtTypCdgUsrSltd == null ) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtTypCdgUsrSltd = mdctnRqstDsgInstrctnDoseAndRtTypCdgUsrSltd;
+	        } else if(this.mdctnRqstDsgInstrctnDoseAndRtTypCdgUsrSltd.substring(this.mdctnRqstDsgInstrctnDoseAndRtTypCdgUsrSltd.length() - 1).equals("]") & mdctnRqstDsgInstrctnDoseAndRtTypCdgUsrSltd.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtTypCdgUsrSltd = this.mdctnRqstDsgInstrctnDoseAndRtTypCdgUsrSltd+ "," + mdctnRqstDsgInstrctnDoseAndRtTypCdgUsrSltd;
+	        } else if(mdctnRqstDsgInstrctnDoseAndRtTypCdgUsrSltd.equals("[") | mdctnRqstDsgInstrctnDoseAndRtTypCdgUsrSltd.equals("]") | this.mdctnRqstDsgInstrctnDoseAndRtTypCdgUsrSltd.substring(this.mdctnRqstDsgInstrctnDoseAndRtTypCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtTypCdgUsrSltd = this.mdctnRqstDsgInstrctnDoseAndRtTypCdgUsrSltd+mdctnRqstDsgInstrctnDoseAndRtTypCdgUsrSltd;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnDoseAndRtTypCdgUsrSltd = this.mdctnRqstDsgInstrctnDoseAndRtTypCdgUsrSltd+ "," +mdctnRqstDsgInstrctnDoseAndRtTypCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnDoseAndRtTypCdgVrsn() {
@@ -1318,6 +2760,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnDoseAndRtTypCdgVrsn(String mdctnRqstDsgInstrctnDoseAndRtTypCdgVrsn) {
         this.mdctnRqstDsgInstrctnDoseAndRtTypCdgVrsn = mdctnRqstDsgInstrctnDoseAndRtTypCdgVrsn;
+    }
+    
+    public void addMdctnRqstDsgInstrctnDoseAndRtTypCdgVrsn(String mdctnRqstDsgInstrctnDoseAndRtTypCdgVrsn) {
+    	if( mdctnRqstDsgInstrctnDoseAndRtTypCdgVrsn != null ) {
+	    	if( this.mdctnRqstDsgInstrctnDoseAndRtTypCdgVrsn == null ) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtTypCdgVrsn = mdctnRqstDsgInstrctnDoseAndRtTypCdgVrsn;
+	        } else if(this.mdctnRqstDsgInstrctnDoseAndRtTypCdgVrsn.substring(this.mdctnRqstDsgInstrctnDoseAndRtTypCdgVrsn.length() - 1).equals("]") & mdctnRqstDsgInstrctnDoseAndRtTypCdgVrsn.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtTypCdgVrsn = this.mdctnRqstDsgInstrctnDoseAndRtTypCdgVrsn+ "," + mdctnRqstDsgInstrctnDoseAndRtTypCdgVrsn;
+	        } else if(mdctnRqstDsgInstrctnDoseAndRtTypCdgVrsn.equals("[") | mdctnRqstDsgInstrctnDoseAndRtTypCdgVrsn.equals("]") | this.mdctnRqstDsgInstrctnDoseAndRtTypCdgVrsn.substring(this.mdctnRqstDsgInstrctnDoseAndRtTypCdgVrsn.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtTypCdgVrsn = this.mdctnRqstDsgInstrctnDoseAndRtTypCdgVrsn+mdctnRqstDsgInstrctnDoseAndRtTypCdgVrsn;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnDoseAndRtTypCdgVrsn = this.mdctnRqstDsgInstrctnDoseAndRtTypCdgVrsn+ "," +mdctnRqstDsgInstrctnDoseAndRtTypCdgVrsn;
+	        }
+        }
     }
     
     
@@ -1330,6 +2786,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnDoseAndRtTypTxt = mdctnRqstDsgInstrctnDoseAndRtTypTxt;
     }
     
+    public void addMdctnRqstDsgInstrctnDoseAndRtTypTxt(String mdctnRqstDsgInstrctnDoseAndRtTypTxt) {
+    	if( mdctnRqstDsgInstrctnDoseAndRtTypTxt != null ) {
+	    	if( this.mdctnRqstDsgInstrctnDoseAndRtTypTxt == null ) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtTypTxt = mdctnRqstDsgInstrctnDoseAndRtTypTxt;
+	        } else if(this.mdctnRqstDsgInstrctnDoseAndRtTypTxt.substring(this.mdctnRqstDsgInstrctnDoseAndRtTypTxt.length() - 1).equals("]") & mdctnRqstDsgInstrctnDoseAndRtTypTxt.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtTypTxt = this.mdctnRqstDsgInstrctnDoseAndRtTypTxt+ "," + mdctnRqstDsgInstrctnDoseAndRtTypTxt;
+	        } else if(mdctnRqstDsgInstrctnDoseAndRtTypTxt.equals("[") | mdctnRqstDsgInstrctnDoseAndRtTypTxt.equals("]") | this.mdctnRqstDsgInstrctnDoseAndRtTypTxt.substring(this.mdctnRqstDsgInstrctnDoseAndRtTypTxt.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnDoseAndRtTypTxt = this.mdctnRqstDsgInstrctnDoseAndRtTypTxt+mdctnRqstDsgInstrctnDoseAndRtTypTxt;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnDoseAndRtTypTxt = this.mdctnRqstDsgInstrctnDoseAndRtTypTxt+ "," +mdctnRqstDsgInstrctnDoseAndRtTypTxt;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnMxDosePerAdmnstnCd() {
@@ -1338,6 +2808,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnMxDosePerAdmnstnCd(String mdctnRqstDsgInstrctnMxDosePerAdmnstnCd) {
         this.mdctnRqstDsgInstrctnMxDosePerAdmnstnCd = mdctnRqstDsgInstrctnMxDosePerAdmnstnCd;
+    }
+    
+    public void addMdctnRqstDsgInstrctnMxDosePerAdmnstnCd(String mdctnRqstDsgInstrctnMxDosePerAdmnstnCd) {
+    	if( mdctnRqstDsgInstrctnMxDosePerAdmnstnCd != null ) {
+	    	if( this.mdctnRqstDsgInstrctnMxDosePerAdmnstnCd == null ) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerAdmnstnCd = mdctnRqstDsgInstrctnMxDosePerAdmnstnCd;
+	        } else if(this.mdctnRqstDsgInstrctnMxDosePerAdmnstnCd.substring(this.mdctnRqstDsgInstrctnMxDosePerAdmnstnCd.length() - 1).equals("]") & mdctnRqstDsgInstrctnMxDosePerAdmnstnCd.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerAdmnstnCd = this.mdctnRqstDsgInstrctnMxDosePerAdmnstnCd+ "," + mdctnRqstDsgInstrctnMxDosePerAdmnstnCd;
+	        } else if(mdctnRqstDsgInstrctnMxDosePerAdmnstnCd.equals("[") | mdctnRqstDsgInstrctnMxDosePerAdmnstnCd.equals("]") | this.mdctnRqstDsgInstrctnMxDosePerAdmnstnCd.substring(this.mdctnRqstDsgInstrctnMxDosePerAdmnstnCd.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerAdmnstnCd = this.mdctnRqstDsgInstrctnMxDosePerAdmnstnCd+mdctnRqstDsgInstrctnMxDosePerAdmnstnCd;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnMxDosePerAdmnstnCd = this.mdctnRqstDsgInstrctnMxDosePerAdmnstnCd+ "," +mdctnRqstDsgInstrctnMxDosePerAdmnstnCd;
+	        }
+        }
     }
     
     
@@ -1350,6 +2834,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnMxDosePerAdmnstnCmprtr = mdctnRqstDsgInstrctnMxDosePerAdmnstnCmprtr;
     }
     
+    public void addMdctnRqstDsgInstrctnMxDosePerAdmnstnCmprtr(String mdctnRqstDsgInstrctnMxDosePerAdmnstnCmprtr) {
+    	if( mdctnRqstDsgInstrctnMxDosePerAdmnstnCmprtr != null ) {
+	    	if( this.mdctnRqstDsgInstrctnMxDosePerAdmnstnCmprtr == null ) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerAdmnstnCmprtr = mdctnRqstDsgInstrctnMxDosePerAdmnstnCmprtr;
+	        } else if(this.mdctnRqstDsgInstrctnMxDosePerAdmnstnCmprtr.substring(this.mdctnRqstDsgInstrctnMxDosePerAdmnstnCmprtr.length() - 1).equals("]") & mdctnRqstDsgInstrctnMxDosePerAdmnstnCmprtr.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerAdmnstnCmprtr = this.mdctnRqstDsgInstrctnMxDosePerAdmnstnCmprtr+ "," + mdctnRqstDsgInstrctnMxDosePerAdmnstnCmprtr;
+	        } else if(mdctnRqstDsgInstrctnMxDosePerAdmnstnCmprtr.equals("[") | mdctnRqstDsgInstrctnMxDosePerAdmnstnCmprtr.equals("]") | this.mdctnRqstDsgInstrctnMxDosePerAdmnstnCmprtr.substring(this.mdctnRqstDsgInstrctnMxDosePerAdmnstnCmprtr.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerAdmnstnCmprtr = this.mdctnRqstDsgInstrctnMxDosePerAdmnstnCmprtr+mdctnRqstDsgInstrctnMxDosePerAdmnstnCmprtr;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnMxDosePerAdmnstnCmprtr = this.mdctnRqstDsgInstrctnMxDosePerAdmnstnCmprtr+ "," +mdctnRqstDsgInstrctnMxDosePerAdmnstnCmprtr;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnMxDosePerAdmnstnSys() {
@@ -1358,6 +2856,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnMxDosePerAdmnstnSys(String mdctnRqstDsgInstrctnMxDosePerAdmnstnSys) {
         this.mdctnRqstDsgInstrctnMxDosePerAdmnstnSys = mdctnRqstDsgInstrctnMxDosePerAdmnstnSys;
+    }
+    
+    public void addMdctnRqstDsgInstrctnMxDosePerAdmnstnSys(String mdctnRqstDsgInstrctnMxDosePerAdmnstnSys) {
+    	if( mdctnRqstDsgInstrctnMxDosePerAdmnstnSys != null ) {
+	    	if( this.mdctnRqstDsgInstrctnMxDosePerAdmnstnSys == null ) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerAdmnstnSys = mdctnRqstDsgInstrctnMxDosePerAdmnstnSys;
+	        } else if(this.mdctnRqstDsgInstrctnMxDosePerAdmnstnSys.substring(this.mdctnRqstDsgInstrctnMxDosePerAdmnstnSys.length() - 1).equals("]") & mdctnRqstDsgInstrctnMxDosePerAdmnstnSys.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerAdmnstnSys = this.mdctnRqstDsgInstrctnMxDosePerAdmnstnSys+ "," + mdctnRqstDsgInstrctnMxDosePerAdmnstnSys;
+	        } else if(mdctnRqstDsgInstrctnMxDosePerAdmnstnSys.equals("[") | mdctnRqstDsgInstrctnMxDosePerAdmnstnSys.equals("]") | this.mdctnRqstDsgInstrctnMxDosePerAdmnstnSys.substring(this.mdctnRqstDsgInstrctnMxDosePerAdmnstnSys.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerAdmnstnSys = this.mdctnRqstDsgInstrctnMxDosePerAdmnstnSys+mdctnRqstDsgInstrctnMxDosePerAdmnstnSys;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnMxDosePerAdmnstnSys = this.mdctnRqstDsgInstrctnMxDosePerAdmnstnSys+ "," +mdctnRqstDsgInstrctnMxDosePerAdmnstnSys;
+	        }
+        }
     }
     
     
@@ -1370,6 +2882,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnMxDosePerAdmnstnUnt = mdctnRqstDsgInstrctnMxDosePerAdmnstnUnt;
     }
     
+    public void addMdctnRqstDsgInstrctnMxDosePerAdmnstnUnt(String mdctnRqstDsgInstrctnMxDosePerAdmnstnUnt) {
+    	if( mdctnRqstDsgInstrctnMxDosePerAdmnstnUnt != null ) {
+	    	if( this.mdctnRqstDsgInstrctnMxDosePerAdmnstnUnt == null ) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerAdmnstnUnt = mdctnRqstDsgInstrctnMxDosePerAdmnstnUnt;
+	        } else if(this.mdctnRqstDsgInstrctnMxDosePerAdmnstnUnt.substring(this.mdctnRqstDsgInstrctnMxDosePerAdmnstnUnt.length() - 1).equals("]") & mdctnRqstDsgInstrctnMxDosePerAdmnstnUnt.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerAdmnstnUnt = this.mdctnRqstDsgInstrctnMxDosePerAdmnstnUnt+ "," + mdctnRqstDsgInstrctnMxDosePerAdmnstnUnt;
+	        } else if(mdctnRqstDsgInstrctnMxDosePerAdmnstnUnt.equals("[") | mdctnRqstDsgInstrctnMxDosePerAdmnstnUnt.equals("]") | this.mdctnRqstDsgInstrctnMxDosePerAdmnstnUnt.substring(this.mdctnRqstDsgInstrctnMxDosePerAdmnstnUnt.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerAdmnstnUnt = this.mdctnRqstDsgInstrctnMxDosePerAdmnstnUnt+mdctnRqstDsgInstrctnMxDosePerAdmnstnUnt;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnMxDosePerAdmnstnUnt = this.mdctnRqstDsgInstrctnMxDosePerAdmnstnUnt+ "," +mdctnRqstDsgInstrctnMxDosePerAdmnstnUnt;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnMxDosePerAdmnstnVl() {
@@ -1378,6 +2904,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnMxDosePerAdmnstnVl(String mdctnRqstDsgInstrctnMxDosePerAdmnstnVl) {
         this.mdctnRqstDsgInstrctnMxDosePerAdmnstnVl = mdctnRqstDsgInstrctnMxDosePerAdmnstnVl;
+    }
+    
+    public void addMdctnRqstDsgInstrctnMxDosePerAdmnstnVl(String mdctnRqstDsgInstrctnMxDosePerAdmnstnVl) {
+    	if( mdctnRqstDsgInstrctnMxDosePerAdmnstnVl != null ) {
+	    	if( this.mdctnRqstDsgInstrctnMxDosePerAdmnstnVl == null ) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerAdmnstnVl = mdctnRqstDsgInstrctnMxDosePerAdmnstnVl;
+	        } else if(this.mdctnRqstDsgInstrctnMxDosePerAdmnstnVl.substring(this.mdctnRqstDsgInstrctnMxDosePerAdmnstnVl.length() - 1).equals("]") & mdctnRqstDsgInstrctnMxDosePerAdmnstnVl.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerAdmnstnVl = this.mdctnRqstDsgInstrctnMxDosePerAdmnstnVl+ "," + mdctnRqstDsgInstrctnMxDosePerAdmnstnVl;
+	        } else if(mdctnRqstDsgInstrctnMxDosePerAdmnstnVl.equals("[") | mdctnRqstDsgInstrctnMxDosePerAdmnstnVl.equals("]") | this.mdctnRqstDsgInstrctnMxDosePerAdmnstnVl.substring(this.mdctnRqstDsgInstrctnMxDosePerAdmnstnVl.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerAdmnstnVl = this.mdctnRqstDsgInstrctnMxDosePerAdmnstnVl+mdctnRqstDsgInstrctnMxDosePerAdmnstnVl;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnMxDosePerAdmnstnVl = this.mdctnRqstDsgInstrctnMxDosePerAdmnstnVl+ "," +mdctnRqstDsgInstrctnMxDosePerAdmnstnVl;
+	        }
+        }
     }
     
     
@@ -1390,6 +2930,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnMxDosePerLifetimeCd = mdctnRqstDsgInstrctnMxDosePerLifetimeCd;
     }
     
+    public void addMdctnRqstDsgInstrctnMxDosePerLifetimeCd(String mdctnRqstDsgInstrctnMxDosePerLifetimeCd) {
+    	if( mdctnRqstDsgInstrctnMxDosePerLifetimeCd != null ) {
+	    	if( this.mdctnRqstDsgInstrctnMxDosePerLifetimeCd == null ) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerLifetimeCd = mdctnRqstDsgInstrctnMxDosePerLifetimeCd;
+	        } else if(this.mdctnRqstDsgInstrctnMxDosePerLifetimeCd.substring(this.mdctnRqstDsgInstrctnMxDosePerLifetimeCd.length() - 1).equals("]") & mdctnRqstDsgInstrctnMxDosePerLifetimeCd.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerLifetimeCd = this.mdctnRqstDsgInstrctnMxDosePerLifetimeCd+ "," + mdctnRqstDsgInstrctnMxDosePerLifetimeCd;
+	        } else if(mdctnRqstDsgInstrctnMxDosePerLifetimeCd.equals("[") | mdctnRqstDsgInstrctnMxDosePerLifetimeCd.equals("]") | this.mdctnRqstDsgInstrctnMxDosePerLifetimeCd.substring(this.mdctnRqstDsgInstrctnMxDosePerLifetimeCd.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerLifetimeCd = this.mdctnRqstDsgInstrctnMxDosePerLifetimeCd+mdctnRqstDsgInstrctnMxDosePerLifetimeCd;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnMxDosePerLifetimeCd = this.mdctnRqstDsgInstrctnMxDosePerLifetimeCd+ "," +mdctnRqstDsgInstrctnMxDosePerLifetimeCd;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnMxDosePerLifetimeCmprtr() {
@@ -1398,6 +2952,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnMxDosePerLifetimeCmprtr(String mdctnRqstDsgInstrctnMxDosePerLifetimeCmprtr) {
         this.mdctnRqstDsgInstrctnMxDosePerLifetimeCmprtr = mdctnRqstDsgInstrctnMxDosePerLifetimeCmprtr;
+    }
+    
+    public void addMdctnRqstDsgInstrctnMxDosePerLifetimeCmprtr(String mdctnRqstDsgInstrctnMxDosePerLifetimeCmprtr) {
+    	if( mdctnRqstDsgInstrctnMxDosePerLifetimeCmprtr != null ) {
+	    	if( this.mdctnRqstDsgInstrctnMxDosePerLifetimeCmprtr == null ) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerLifetimeCmprtr = mdctnRqstDsgInstrctnMxDosePerLifetimeCmprtr;
+	        } else if(this.mdctnRqstDsgInstrctnMxDosePerLifetimeCmprtr.substring(this.mdctnRqstDsgInstrctnMxDosePerLifetimeCmprtr.length() - 1).equals("]") & mdctnRqstDsgInstrctnMxDosePerLifetimeCmprtr.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerLifetimeCmprtr = this.mdctnRqstDsgInstrctnMxDosePerLifetimeCmprtr+ "," + mdctnRqstDsgInstrctnMxDosePerLifetimeCmprtr;
+	        } else if(mdctnRqstDsgInstrctnMxDosePerLifetimeCmprtr.equals("[") | mdctnRqstDsgInstrctnMxDosePerLifetimeCmprtr.equals("]") | this.mdctnRqstDsgInstrctnMxDosePerLifetimeCmprtr.substring(this.mdctnRqstDsgInstrctnMxDosePerLifetimeCmprtr.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerLifetimeCmprtr = this.mdctnRqstDsgInstrctnMxDosePerLifetimeCmprtr+mdctnRqstDsgInstrctnMxDosePerLifetimeCmprtr;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnMxDosePerLifetimeCmprtr = this.mdctnRqstDsgInstrctnMxDosePerLifetimeCmprtr+ "," +mdctnRqstDsgInstrctnMxDosePerLifetimeCmprtr;
+	        }
+        }
     }
     
     
@@ -1410,6 +2978,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnMxDosePerLifetimeSys = mdctnRqstDsgInstrctnMxDosePerLifetimeSys;
     }
     
+    public void addMdctnRqstDsgInstrctnMxDosePerLifetimeSys(String mdctnRqstDsgInstrctnMxDosePerLifetimeSys) {
+    	if( mdctnRqstDsgInstrctnMxDosePerLifetimeSys != null ) {
+	    	if( this.mdctnRqstDsgInstrctnMxDosePerLifetimeSys == null ) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerLifetimeSys = mdctnRqstDsgInstrctnMxDosePerLifetimeSys;
+	        } else if(this.mdctnRqstDsgInstrctnMxDosePerLifetimeSys.substring(this.mdctnRqstDsgInstrctnMxDosePerLifetimeSys.length() - 1).equals("]") & mdctnRqstDsgInstrctnMxDosePerLifetimeSys.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerLifetimeSys = this.mdctnRqstDsgInstrctnMxDosePerLifetimeSys+ "," + mdctnRqstDsgInstrctnMxDosePerLifetimeSys;
+	        } else if(mdctnRqstDsgInstrctnMxDosePerLifetimeSys.equals("[") | mdctnRqstDsgInstrctnMxDosePerLifetimeSys.equals("]") | this.mdctnRqstDsgInstrctnMxDosePerLifetimeSys.substring(this.mdctnRqstDsgInstrctnMxDosePerLifetimeSys.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerLifetimeSys = this.mdctnRqstDsgInstrctnMxDosePerLifetimeSys+mdctnRqstDsgInstrctnMxDosePerLifetimeSys;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnMxDosePerLifetimeSys = this.mdctnRqstDsgInstrctnMxDosePerLifetimeSys+ "," +mdctnRqstDsgInstrctnMxDosePerLifetimeSys;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnMxDosePerLifetimeUnt() {
@@ -1418,6 +3000,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnMxDosePerLifetimeUnt(String mdctnRqstDsgInstrctnMxDosePerLifetimeUnt) {
         this.mdctnRqstDsgInstrctnMxDosePerLifetimeUnt = mdctnRqstDsgInstrctnMxDosePerLifetimeUnt;
+    }
+    
+    public void addMdctnRqstDsgInstrctnMxDosePerLifetimeUnt(String mdctnRqstDsgInstrctnMxDosePerLifetimeUnt) {
+    	if( mdctnRqstDsgInstrctnMxDosePerLifetimeUnt != null ) {
+	    	if( this.mdctnRqstDsgInstrctnMxDosePerLifetimeUnt == null ) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerLifetimeUnt = mdctnRqstDsgInstrctnMxDosePerLifetimeUnt;
+	        } else if(this.mdctnRqstDsgInstrctnMxDosePerLifetimeUnt.substring(this.mdctnRqstDsgInstrctnMxDosePerLifetimeUnt.length() - 1).equals("]") & mdctnRqstDsgInstrctnMxDosePerLifetimeUnt.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerLifetimeUnt = this.mdctnRqstDsgInstrctnMxDosePerLifetimeUnt+ "," + mdctnRqstDsgInstrctnMxDosePerLifetimeUnt;
+	        } else if(mdctnRqstDsgInstrctnMxDosePerLifetimeUnt.equals("[") | mdctnRqstDsgInstrctnMxDosePerLifetimeUnt.equals("]") | this.mdctnRqstDsgInstrctnMxDosePerLifetimeUnt.substring(this.mdctnRqstDsgInstrctnMxDosePerLifetimeUnt.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerLifetimeUnt = this.mdctnRqstDsgInstrctnMxDosePerLifetimeUnt+mdctnRqstDsgInstrctnMxDosePerLifetimeUnt;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnMxDosePerLifetimeUnt = this.mdctnRqstDsgInstrctnMxDosePerLifetimeUnt+ "," +mdctnRqstDsgInstrctnMxDosePerLifetimeUnt;
+	        }
+        }
     }
     
     
@@ -1430,6 +3026,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnMxDosePerLifetimeVl = mdctnRqstDsgInstrctnMxDosePerLifetimeVl;
     }
     
+    public void addMdctnRqstDsgInstrctnMxDosePerLifetimeVl(String mdctnRqstDsgInstrctnMxDosePerLifetimeVl) {
+    	if( mdctnRqstDsgInstrctnMxDosePerLifetimeVl != null ) {
+	    	if( this.mdctnRqstDsgInstrctnMxDosePerLifetimeVl == null ) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerLifetimeVl = mdctnRqstDsgInstrctnMxDosePerLifetimeVl;
+	        } else if(this.mdctnRqstDsgInstrctnMxDosePerLifetimeVl.substring(this.mdctnRqstDsgInstrctnMxDosePerLifetimeVl.length() - 1).equals("]") & mdctnRqstDsgInstrctnMxDosePerLifetimeVl.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerLifetimeVl = this.mdctnRqstDsgInstrctnMxDosePerLifetimeVl+ "," + mdctnRqstDsgInstrctnMxDosePerLifetimeVl;
+	        } else if(mdctnRqstDsgInstrctnMxDosePerLifetimeVl.equals("[") | mdctnRqstDsgInstrctnMxDosePerLifetimeVl.equals("]") | this.mdctnRqstDsgInstrctnMxDosePerLifetimeVl.substring(this.mdctnRqstDsgInstrctnMxDosePerLifetimeVl.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerLifetimeVl = this.mdctnRqstDsgInstrctnMxDosePerLifetimeVl+mdctnRqstDsgInstrctnMxDosePerLifetimeVl;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnMxDosePerLifetimeVl = this.mdctnRqstDsgInstrctnMxDosePerLifetimeVl+ "," +mdctnRqstDsgInstrctnMxDosePerLifetimeVl;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnMxDosePerPrdDnmntrCd() {
@@ -1438,6 +3048,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnMxDosePerPrdDnmntrCd(String mdctnRqstDsgInstrctnMxDosePerPrdDnmntrCd) {
         this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrCd = mdctnRqstDsgInstrctnMxDosePerPrdDnmntrCd;
+    }
+    
+    public void addMdctnRqstDsgInstrctnMxDosePerPrdDnmntrCd(String mdctnRqstDsgInstrctnMxDosePerPrdDnmntrCd) {
+    	if( mdctnRqstDsgInstrctnMxDosePerPrdDnmntrCd != null ) {
+	    	if( this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrCd == null ) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrCd = mdctnRqstDsgInstrctnMxDosePerPrdDnmntrCd;
+	        } else if(this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrCd.substring(this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrCd.length() - 1).equals("]") & mdctnRqstDsgInstrctnMxDosePerPrdDnmntrCd.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrCd = this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrCd+ "," + mdctnRqstDsgInstrctnMxDosePerPrdDnmntrCd;
+	        } else if(mdctnRqstDsgInstrctnMxDosePerPrdDnmntrCd.equals("[") | mdctnRqstDsgInstrctnMxDosePerPrdDnmntrCd.equals("]") | this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrCd.substring(this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrCd.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrCd = this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrCd+mdctnRqstDsgInstrctnMxDosePerPrdDnmntrCd;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrCd = this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrCd+ "," +mdctnRqstDsgInstrctnMxDosePerPrdDnmntrCd;
+	        }
+        }
     }
     
     
@@ -1450,6 +3074,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrCmprtr = mdctnRqstDsgInstrctnMxDosePerPrdDnmntrCmprtr;
     }
     
+    public void addMdctnRqstDsgInstrctnMxDosePerPrdDnmntrCmprtr(String mdctnRqstDsgInstrctnMxDosePerPrdDnmntrCmprtr) {
+    	if( mdctnRqstDsgInstrctnMxDosePerPrdDnmntrCmprtr != null ) {
+	    	if( this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrCmprtr == null ) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrCmprtr = mdctnRqstDsgInstrctnMxDosePerPrdDnmntrCmprtr;
+	        } else if(this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrCmprtr.substring(this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrCmprtr.length() - 1).equals("]") & mdctnRqstDsgInstrctnMxDosePerPrdDnmntrCmprtr.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrCmprtr = this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrCmprtr+ "," + mdctnRqstDsgInstrctnMxDosePerPrdDnmntrCmprtr;
+	        } else if(mdctnRqstDsgInstrctnMxDosePerPrdDnmntrCmprtr.equals("[") | mdctnRqstDsgInstrctnMxDosePerPrdDnmntrCmprtr.equals("]") | this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrCmprtr.substring(this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrCmprtr.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrCmprtr = this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrCmprtr+mdctnRqstDsgInstrctnMxDosePerPrdDnmntrCmprtr;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrCmprtr = this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrCmprtr+ "," +mdctnRqstDsgInstrctnMxDosePerPrdDnmntrCmprtr;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnMxDosePerPrdDnmntrSys() {
@@ -1458,6 +3096,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnMxDosePerPrdDnmntrSys(String mdctnRqstDsgInstrctnMxDosePerPrdDnmntrSys) {
         this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrSys = mdctnRqstDsgInstrctnMxDosePerPrdDnmntrSys;
+    }
+    
+    public void addMdctnRqstDsgInstrctnMxDosePerPrdDnmntrSys(String mdctnRqstDsgInstrctnMxDosePerPrdDnmntrSys) {
+    	if( mdctnRqstDsgInstrctnMxDosePerPrdDnmntrSys != null ) {
+	    	if( this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrSys == null ) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrSys = mdctnRqstDsgInstrctnMxDosePerPrdDnmntrSys;
+	        } else if(this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrSys.substring(this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrSys.length() - 1).equals("]") & mdctnRqstDsgInstrctnMxDosePerPrdDnmntrSys.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrSys = this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrSys+ "," + mdctnRqstDsgInstrctnMxDosePerPrdDnmntrSys;
+	        } else if(mdctnRqstDsgInstrctnMxDosePerPrdDnmntrSys.equals("[") | mdctnRqstDsgInstrctnMxDosePerPrdDnmntrSys.equals("]") | this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrSys.substring(this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrSys.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrSys = this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrSys+mdctnRqstDsgInstrctnMxDosePerPrdDnmntrSys;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrSys = this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrSys+ "," +mdctnRqstDsgInstrctnMxDosePerPrdDnmntrSys;
+	        }
+        }
     }
     
     
@@ -1470,6 +3122,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrUnt = mdctnRqstDsgInstrctnMxDosePerPrdDnmntrUnt;
     }
     
+    public void addMdctnRqstDsgInstrctnMxDosePerPrdDnmntrUnt(String mdctnRqstDsgInstrctnMxDosePerPrdDnmntrUnt) {
+    	if( mdctnRqstDsgInstrctnMxDosePerPrdDnmntrUnt != null ) {
+	    	if( this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrUnt == null ) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrUnt = mdctnRqstDsgInstrctnMxDosePerPrdDnmntrUnt;
+	        } else if(this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrUnt.substring(this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrUnt.length() - 1).equals("]") & mdctnRqstDsgInstrctnMxDosePerPrdDnmntrUnt.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrUnt = this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrUnt+ "," + mdctnRqstDsgInstrctnMxDosePerPrdDnmntrUnt;
+	        } else if(mdctnRqstDsgInstrctnMxDosePerPrdDnmntrUnt.equals("[") | mdctnRqstDsgInstrctnMxDosePerPrdDnmntrUnt.equals("]") | this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrUnt.substring(this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrUnt.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrUnt = this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrUnt+mdctnRqstDsgInstrctnMxDosePerPrdDnmntrUnt;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrUnt = this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrUnt+ "," +mdctnRqstDsgInstrctnMxDosePerPrdDnmntrUnt;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnMxDosePerPrdDnmntrVl() {
@@ -1478,6 +3144,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnMxDosePerPrdDnmntrVl(String mdctnRqstDsgInstrctnMxDosePerPrdDnmntrVl) {
         this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrVl = mdctnRqstDsgInstrctnMxDosePerPrdDnmntrVl;
+    }
+    
+    public void addMdctnRqstDsgInstrctnMxDosePerPrdDnmntrVl(String mdctnRqstDsgInstrctnMxDosePerPrdDnmntrVl) {
+    	if( mdctnRqstDsgInstrctnMxDosePerPrdDnmntrVl != null ) {
+	    	if( this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrVl == null ) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrVl = mdctnRqstDsgInstrctnMxDosePerPrdDnmntrVl;
+	        } else if(this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrVl.substring(this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrVl.length() - 1).equals("]") & mdctnRqstDsgInstrctnMxDosePerPrdDnmntrVl.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrVl = this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrVl+ "," + mdctnRqstDsgInstrctnMxDosePerPrdDnmntrVl;
+	        } else if(mdctnRqstDsgInstrctnMxDosePerPrdDnmntrVl.equals("[") | mdctnRqstDsgInstrctnMxDosePerPrdDnmntrVl.equals("]") | this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrVl.substring(this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrVl.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrVl = this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrVl+mdctnRqstDsgInstrctnMxDosePerPrdDnmntrVl;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrVl = this.mdctnRqstDsgInstrctnMxDosePerPrdDnmntrVl+ "," +mdctnRqstDsgInstrctnMxDosePerPrdDnmntrVl;
+	        }
+        }
     }
     
     
@@ -1490,6 +3170,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrCd = mdctnRqstDsgInstrctnMxDosePerPrdNmrtrCd;
     }
     
+    public void addMdctnRqstDsgInstrctnMxDosePerPrdNmrtrCd(String mdctnRqstDsgInstrctnMxDosePerPrdNmrtrCd) {
+    	if( mdctnRqstDsgInstrctnMxDosePerPrdNmrtrCd != null ) {
+	    	if( this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrCd == null ) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrCd = mdctnRqstDsgInstrctnMxDosePerPrdNmrtrCd;
+	        } else if(this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrCd.substring(this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrCd.length() - 1).equals("]") & mdctnRqstDsgInstrctnMxDosePerPrdNmrtrCd.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrCd = this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrCd+ "," + mdctnRqstDsgInstrctnMxDosePerPrdNmrtrCd;
+	        } else if(mdctnRqstDsgInstrctnMxDosePerPrdNmrtrCd.equals("[") | mdctnRqstDsgInstrctnMxDosePerPrdNmrtrCd.equals("]") | this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrCd.substring(this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrCd.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrCd = this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrCd+mdctnRqstDsgInstrctnMxDosePerPrdNmrtrCd;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrCd = this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrCd+ "," +mdctnRqstDsgInstrctnMxDosePerPrdNmrtrCd;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnMxDosePerPrdNmrtrCmprtr() {
@@ -1498,6 +3192,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnMxDosePerPrdNmrtrCmprtr(String mdctnRqstDsgInstrctnMxDosePerPrdNmrtrCmprtr) {
         this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrCmprtr = mdctnRqstDsgInstrctnMxDosePerPrdNmrtrCmprtr;
+    }
+    
+    public void addMdctnRqstDsgInstrctnMxDosePerPrdNmrtrCmprtr(String mdctnRqstDsgInstrctnMxDosePerPrdNmrtrCmprtr) {
+    	if( mdctnRqstDsgInstrctnMxDosePerPrdNmrtrCmprtr != null ) {
+	    	if( this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrCmprtr == null ) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrCmprtr = mdctnRqstDsgInstrctnMxDosePerPrdNmrtrCmprtr;
+	        } else if(this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrCmprtr.substring(this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrCmprtr.length() - 1).equals("]") & mdctnRqstDsgInstrctnMxDosePerPrdNmrtrCmprtr.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrCmprtr = this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrCmprtr+ "," + mdctnRqstDsgInstrctnMxDosePerPrdNmrtrCmprtr;
+	        } else if(mdctnRqstDsgInstrctnMxDosePerPrdNmrtrCmprtr.equals("[") | mdctnRqstDsgInstrctnMxDosePerPrdNmrtrCmprtr.equals("]") | this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrCmprtr.substring(this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrCmprtr.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrCmprtr = this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrCmprtr+mdctnRqstDsgInstrctnMxDosePerPrdNmrtrCmprtr;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrCmprtr = this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrCmprtr+ "," +mdctnRqstDsgInstrctnMxDosePerPrdNmrtrCmprtr;
+	        }
+        }
     }
     
     
@@ -1510,6 +3218,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrSys = mdctnRqstDsgInstrctnMxDosePerPrdNmrtrSys;
     }
     
+    public void addMdctnRqstDsgInstrctnMxDosePerPrdNmrtrSys(String mdctnRqstDsgInstrctnMxDosePerPrdNmrtrSys) {
+    	if( mdctnRqstDsgInstrctnMxDosePerPrdNmrtrSys != null ) {
+	    	if( this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrSys == null ) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrSys = mdctnRqstDsgInstrctnMxDosePerPrdNmrtrSys;
+	        } else if(this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrSys.substring(this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrSys.length() - 1).equals("]") & mdctnRqstDsgInstrctnMxDosePerPrdNmrtrSys.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrSys = this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrSys+ "," + mdctnRqstDsgInstrctnMxDosePerPrdNmrtrSys;
+	        } else if(mdctnRqstDsgInstrctnMxDosePerPrdNmrtrSys.equals("[") | mdctnRqstDsgInstrctnMxDosePerPrdNmrtrSys.equals("]") | this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrSys.substring(this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrSys.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrSys = this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrSys+mdctnRqstDsgInstrctnMxDosePerPrdNmrtrSys;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrSys = this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrSys+ "," +mdctnRqstDsgInstrctnMxDosePerPrdNmrtrSys;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnMxDosePerPrdNmrtrUnt() {
@@ -1518,6 +3240,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnMxDosePerPrdNmrtrUnt(String mdctnRqstDsgInstrctnMxDosePerPrdNmrtrUnt) {
         this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrUnt = mdctnRqstDsgInstrctnMxDosePerPrdNmrtrUnt;
+    }
+    
+    public void addMdctnRqstDsgInstrctnMxDosePerPrdNmrtrUnt(String mdctnRqstDsgInstrctnMxDosePerPrdNmrtrUnt) {
+    	if( mdctnRqstDsgInstrctnMxDosePerPrdNmrtrUnt != null ) {
+	    	if( this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrUnt == null ) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrUnt = mdctnRqstDsgInstrctnMxDosePerPrdNmrtrUnt;
+	        } else if(this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrUnt.substring(this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrUnt.length() - 1).equals("]") & mdctnRqstDsgInstrctnMxDosePerPrdNmrtrUnt.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrUnt = this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrUnt+ "," + mdctnRqstDsgInstrctnMxDosePerPrdNmrtrUnt;
+	        } else if(mdctnRqstDsgInstrctnMxDosePerPrdNmrtrUnt.equals("[") | mdctnRqstDsgInstrctnMxDosePerPrdNmrtrUnt.equals("]") | this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrUnt.substring(this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrUnt.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrUnt = this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrUnt+mdctnRqstDsgInstrctnMxDosePerPrdNmrtrUnt;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrUnt = this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrUnt+ "," +mdctnRqstDsgInstrctnMxDosePerPrdNmrtrUnt;
+	        }
+        }
     }
     
     
@@ -1530,6 +3266,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrVl = mdctnRqstDsgInstrctnMxDosePerPrdNmrtrVl;
     }
     
+    public void addMdctnRqstDsgInstrctnMxDosePerPrdNmrtrVl(String mdctnRqstDsgInstrctnMxDosePerPrdNmrtrVl) {
+    	if( mdctnRqstDsgInstrctnMxDosePerPrdNmrtrVl != null ) {
+	    	if( this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrVl == null ) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrVl = mdctnRqstDsgInstrctnMxDosePerPrdNmrtrVl;
+	        } else if(this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrVl.substring(this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrVl.length() - 1).equals("]") & mdctnRqstDsgInstrctnMxDosePerPrdNmrtrVl.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrVl = this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrVl+ "," + mdctnRqstDsgInstrctnMxDosePerPrdNmrtrVl;
+	        } else if(mdctnRqstDsgInstrctnMxDosePerPrdNmrtrVl.equals("[") | mdctnRqstDsgInstrctnMxDosePerPrdNmrtrVl.equals("]") | this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrVl.substring(this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrVl.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrVl = this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrVl+mdctnRqstDsgInstrctnMxDosePerPrdNmrtrVl;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrVl = this.mdctnRqstDsgInstrctnMxDosePerPrdNmrtrVl+ "," +mdctnRqstDsgInstrctnMxDosePerPrdNmrtrVl;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnMthdCdgCd() {
@@ -1538,6 +3288,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnMthdCdgCd(String mdctnRqstDsgInstrctnMthdCdgCd) {
         this.mdctnRqstDsgInstrctnMthdCdgCd = mdctnRqstDsgInstrctnMthdCdgCd;
+    }
+    
+    public void addMdctnRqstDsgInstrctnMthdCdgCd(String mdctnRqstDsgInstrctnMthdCdgCd) {
+    	if( mdctnRqstDsgInstrctnMthdCdgCd != null ) {
+	    	if( this.mdctnRqstDsgInstrctnMthdCdgCd == null ) {
+	        	this.mdctnRqstDsgInstrctnMthdCdgCd = mdctnRqstDsgInstrctnMthdCdgCd;
+	        } else if(this.mdctnRqstDsgInstrctnMthdCdgCd.substring(this.mdctnRqstDsgInstrctnMthdCdgCd.length() - 1).equals("]") & mdctnRqstDsgInstrctnMthdCdgCd.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnMthdCdgCd = this.mdctnRqstDsgInstrctnMthdCdgCd+ "," + mdctnRqstDsgInstrctnMthdCdgCd;
+	        } else if(mdctnRqstDsgInstrctnMthdCdgCd.equals("[") | mdctnRqstDsgInstrctnMthdCdgCd.equals("]") | this.mdctnRqstDsgInstrctnMthdCdgCd.substring(this.mdctnRqstDsgInstrctnMthdCdgCd.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnMthdCdgCd = this.mdctnRqstDsgInstrctnMthdCdgCd+mdctnRqstDsgInstrctnMthdCdgCd;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnMthdCdgCd = this.mdctnRqstDsgInstrctnMthdCdgCd+ "," +mdctnRqstDsgInstrctnMthdCdgCd;
+	        }
+        }
     }
     
     
@@ -1550,6 +3314,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnMthdCdgDsply = mdctnRqstDsgInstrctnMthdCdgDsply;
     }
     
+    public void addMdctnRqstDsgInstrctnMthdCdgDsply(String mdctnRqstDsgInstrctnMthdCdgDsply) {
+    	if( mdctnRqstDsgInstrctnMthdCdgDsply != null ) {
+	    	if( this.mdctnRqstDsgInstrctnMthdCdgDsply == null ) {
+	        	this.mdctnRqstDsgInstrctnMthdCdgDsply = mdctnRqstDsgInstrctnMthdCdgDsply;
+	        } else if(this.mdctnRqstDsgInstrctnMthdCdgDsply.substring(this.mdctnRqstDsgInstrctnMthdCdgDsply.length() - 1).equals("]") & mdctnRqstDsgInstrctnMthdCdgDsply.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnMthdCdgDsply = this.mdctnRqstDsgInstrctnMthdCdgDsply+ "," + mdctnRqstDsgInstrctnMthdCdgDsply;
+	        } else if(mdctnRqstDsgInstrctnMthdCdgDsply.equals("[") | mdctnRqstDsgInstrctnMthdCdgDsply.equals("]") | this.mdctnRqstDsgInstrctnMthdCdgDsply.substring(this.mdctnRqstDsgInstrctnMthdCdgDsply.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnMthdCdgDsply = this.mdctnRqstDsgInstrctnMthdCdgDsply+mdctnRqstDsgInstrctnMthdCdgDsply;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnMthdCdgDsply = this.mdctnRqstDsgInstrctnMthdCdgDsply+ "," +mdctnRqstDsgInstrctnMthdCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnMthdCdgSys() {
@@ -1558,6 +3336,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnMthdCdgSys(String mdctnRqstDsgInstrctnMthdCdgSys) {
         this.mdctnRqstDsgInstrctnMthdCdgSys = mdctnRqstDsgInstrctnMthdCdgSys;
+    }
+    
+    public void addMdctnRqstDsgInstrctnMthdCdgSys(String mdctnRqstDsgInstrctnMthdCdgSys) {
+    	if( mdctnRqstDsgInstrctnMthdCdgSys != null ) {
+	    	if( this.mdctnRqstDsgInstrctnMthdCdgSys == null ) {
+	        	this.mdctnRqstDsgInstrctnMthdCdgSys = mdctnRqstDsgInstrctnMthdCdgSys;
+	        } else if(this.mdctnRqstDsgInstrctnMthdCdgSys.substring(this.mdctnRqstDsgInstrctnMthdCdgSys.length() - 1).equals("]") & mdctnRqstDsgInstrctnMthdCdgSys.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnMthdCdgSys = this.mdctnRqstDsgInstrctnMthdCdgSys+ "," + mdctnRqstDsgInstrctnMthdCdgSys;
+	        } else if(mdctnRqstDsgInstrctnMthdCdgSys.equals("[") | mdctnRqstDsgInstrctnMthdCdgSys.equals("]") | this.mdctnRqstDsgInstrctnMthdCdgSys.substring(this.mdctnRqstDsgInstrctnMthdCdgSys.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnMthdCdgSys = this.mdctnRqstDsgInstrctnMthdCdgSys+mdctnRqstDsgInstrctnMthdCdgSys;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnMthdCdgSys = this.mdctnRqstDsgInstrctnMthdCdgSys+ "," +mdctnRqstDsgInstrctnMthdCdgSys;
+	        }
+        }
     }
     
     
@@ -1570,6 +3362,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnMthdCdgUsrSltd = mdctnRqstDsgInstrctnMthdCdgUsrSltd;
     }
     
+    public void addMdctnRqstDsgInstrctnMthdCdgUsrSltd(String mdctnRqstDsgInstrctnMthdCdgUsrSltd) {
+    	if( mdctnRqstDsgInstrctnMthdCdgUsrSltd != null ) {
+	    	if( this.mdctnRqstDsgInstrctnMthdCdgUsrSltd == null ) {
+	        	this.mdctnRqstDsgInstrctnMthdCdgUsrSltd = mdctnRqstDsgInstrctnMthdCdgUsrSltd;
+	        } else if(this.mdctnRqstDsgInstrctnMthdCdgUsrSltd.substring(this.mdctnRqstDsgInstrctnMthdCdgUsrSltd.length() - 1).equals("]") & mdctnRqstDsgInstrctnMthdCdgUsrSltd.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnMthdCdgUsrSltd = this.mdctnRqstDsgInstrctnMthdCdgUsrSltd+ "," + mdctnRqstDsgInstrctnMthdCdgUsrSltd;
+	        } else if(mdctnRqstDsgInstrctnMthdCdgUsrSltd.equals("[") | mdctnRqstDsgInstrctnMthdCdgUsrSltd.equals("]") | this.mdctnRqstDsgInstrctnMthdCdgUsrSltd.substring(this.mdctnRqstDsgInstrctnMthdCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnMthdCdgUsrSltd = this.mdctnRqstDsgInstrctnMthdCdgUsrSltd+mdctnRqstDsgInstrctnMthdCdgUsrSltd;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnMthdCdgUsrSltd = this.mdctnRqstDsgInstrctnMthdCdgUsrSltd+ "," +mdctnRqstDsgInstrctnMthdCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnMthdCdgVrsn() {
@@ -1578,6 +3384,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnMthdCdgVrsn(String mdctnRqstDsgInstrctnMthdCdgVrsn) {
         this.mdctnRqstDsgInstrctnMthdCdgVrsn = mdctnRqstDsgInstrctnMthdCdgVrsn;
+    }
+    
+    public void addMdctnRqstDsgInstrctnMthdCdgVrsn(String mdctnRqstDsgInstrctnMthdCdgVrsn) {
+    	if( mdctnRqstDsgInstrctnMthdCdgVrsn != null ) {
+	    	if( this.mdctnRqstDsgInstrctnMthdCdgVrsn == null ) {
+	        	this.mdctnRqstDsgInstrctnMthdCdgVrsn = mdctnRqstDsgInstrctnMthdCdgVrsn;
+	        } else if(this.mdctnRqstDsgInstrctnMthdCdgVrsn.substring(this.mdctnRqstDsgInstrctnMthdCdgVrsn.length() - 1).equals("]") & mdctnRqstDsgInstrctnMthdCdgVrsn.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnMthdCdgVrsn = this.mdctnRqstDsgInstrctnMthdCdgVrsn+ "," + mdctnRqstDsgInstrctnMthdCdgVrsn;
+	        } else if(mdctnRqstDsgInstrctnMthdCdgVrsn.equals("[") | mdctnRqstDsgInstrctnMthdCdgVrsn.equals("]") | this.mdctnRqstDsgInstrctnMthdCdgVrsn.substring(this.mdctnRqstDsgInstrctnMthdCdgVrsn.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnMthdCdgVrsn = this.mdctnRqstDsgInstrctnMthdCdgVrsn+mdctnRqstDsgInstrctnMthdCdgVrsn;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnMthdCdgVrsn = this.mdctnRqstDsgInstrctnMthdCdgVrsn+ "," +mdctnRqstDsgInstrctnMthdCdgVrsn;
+	        }
+        }
     }
     
     
@@ -1590,6 +3410,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnMthdTxt = mdctnRqstDsgInstrctnMthdTxt;
     }
     
+    public void addMdctnRqstDsgInstrctnMthdTxt(String mdctnRqstDsgInstrctnMthdTxt) {
+    	if( mdctnRqstDsgInstrctnMthdTxt != null ) {
+	    	if( this.mdctnRqstDsgInstrctnMthdTxt == null ) {
+	        	this.mdctnRqstDsgInstrctnMthdTxt = mdctnRqstDsgInstrctnMthdTxt;
+	        } else if(this.mdctnRqstDsgInstrctnMthdTxt.substring(this.mdctnRqstDsgInstrctnMthdTxt.length() - 1).equals("]") & mdctnRqstDsgInstrctnMthdTxt.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnMthdTxt = this.mdctnRqstDsgInstrctnMthdTxt+ "," + mdctnRqstDsgInstrctnMthdTxt;
+	        } else if(mdctnRqstDsgInstrctnMthdTxt.equals("[") | mdctnRqstDsgInstrctnMthdTxt.equals("]") | this.mdctnRqstDsgInstrctnMthdTxt.substring(this.mdctnRqstDsgInstrctnMthdTxt.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnMthdTxt = this.mdctnRqstDsgInstrctnMthdTxt+mdctnRqstDsgInstrctnMthdTxt;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnMthdTxt = this.mdctnRqstDsgInstrctnMthdTxt+ "," +mdctnRqstDsgInstrctnMthdTxt;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnPntInstrctn() {
@@ -1598,6 +3432,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnPntInstrctn(String mdctnRqstDsgInstrctnPntInstrctn) {
         this.mdctnRqstDsgInstrctnPntInstrctn = mdctnRqstDsgInstrctnPntInstrctn;
+    }
+    
+    public void addMdctnRqstDsgInstrctnPntInstrctn(String mdctnRqstDsgInstrctnPntInstrctn) {
+    	if( mdctnRqstDsgInstrctnPntInstrctn != null ) {
+	    	if( this.mdctnRqstDsgInstrctnPntInstrctn == null ) {
+	        	this.mdctnRqstDsgInstrctnPntInstrctn = mdctnRqstDsgInstrctnPntInstrctn;
+	        } else if(this.mdctnRqstDsgInstrctnPntInstrctn.substring(this.mdctnRqstDsgInstrctnPntInstrctn.length() - 1).equals("]") & mdctnRqstDsgInstrctnPntInstrctn.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnPntInstrctn = this.mdctnRqstDsgInstrctnPntInstrctn+ "," + mdctnRqstDsgInstrctnPntInstrctn;
+	        } else if(mdctnRqstDsgInstrctnPntInstrctn.equals("[") | mdctnRqstDsgInstrctnPntInstrctn.equals("]") | this.mdctnRqstDsgInstrctnPntInstrctn.substring(this.mdctnRqstDsgInstrctnPntInstrctn.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnPntInstrctn = this.mdctnRqstDsgInstrctnPntInstrctn+mdctnRqstDsgInstrctnPntInstrctn;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnPntInstrctn = this.mdctnRqstDsgInstrctnPntInstrctn+ "," +mdctnRqstDsgInstrctnPntInstrctn;
+	        }
+        }
     }
     
     
@@ -1610,6 +3458,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnRouteCdgCd = mdctnRqstDsgInstrctnRouteCdgCd;
     }
     
+    public void addMdctnRqstDsgInstrctnRouteCdgCd(String mdctnRqstDsgInstrctnRouteCdgCd) {
+    	if( mdctnRqstDsgInstrctnRouteCdgCd != null ) {
+	    	if( this.mdctnRqstDsgInstrctnRouteCdgCd == null ) {
+	        	this.mdctnRqstDsgInstrctnRouteCdgCd = mdctnRqstDsgInstrctnRouteCdgCd;
+	        } else if(this.mdctnRqstDsgInstrctnRouteCdgCd.substring(this.mdctnRqstDsgInstrctnRouteCdgCd.length() - 1).equals("]") & mdctnRqstDsgInstrctnRouteCdgCd.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnRouteCdgCd = this.mdctnRqstDsgInstrctnRouteCdgCd+ "," + mdctnRqstDsgInstrctnRouteCdgCd;
+	        } else if(mdctnRqstDsgInstrctnRouteCdgCd.equals("[") | mdctnRqstDsgInstrctnRouteCdgCd.equals("]") | this.mdctnRqstDsgInstrctnRouteCdgCd.substring(this.mdctnRqstDsgInstrctnRouteCdgCd.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnRouteCdgCd = this.mdctnRqstDsgInstrctnRouteCdgCd+mdctnRqstDsgInstrctnRouteCdgCd;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnRouteCdgCd = this.mdctnRqstDsgInstrctnRouteCdgCd+ "," +mdctnRqstDsgInstrctnRouteCdgCd;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnRouteCdgDsply() {
@@ -1618,6 +3480,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnRouteCdgDsply(String mdctnRqstDsgInstrctnRouteCdgDsply) {
         this.mdctnRqstDsgInstrctnRouteCdgDsply = mdctnRqstDsgInstrctnRouteCdgDsply;
+    }
+    
+    public void addMdctnRqstDsgInstrctnRouteCdgDsply(String mdctnRqstDsgInstrctnRouteCdgDsply) {
+    	if( mdctnRqstDsgInstrctnRouteCdgDsply != null ) {
+	    	if( this.mdctnRqstDsgInstrctnRouteCdgDsply == null ) {
+	        	this.mdctnRqstDsgInstrctnRouteCdgDsply = mdctnRqstDsgInstrctnRouteCdgDsply;
+	        } else if(this.mdctnRqstDsgInstrctnRouteCdgDsply.substring(this.mdctnRqstDsgInstrctnRouteCdgDsply.length() - 1).equals("]") & mdctnRqstDsgInstrctnRouteCdgDsply.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnRouteCdgDsply = this.mdctnRqstDsgInstrctnRouteCdgDsply+ "," + mdctnRqstDsgInstrctnRouteCdgDsply;
+	        } else if(mdctnRqstDsgInstrctnRouteCdgDsply.equals("[") | mdctnRqstDsgInstrctnRouteCdgDsply.equals("]") | this.mdctnRqstDsgInstrctnRouteCdgDsply.substring(this.mdctnRqstDsgInstrctnRouteCdgDsply.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnRouteCdgDsply = this.mdctnRqstDsgInstrctnRouteCdgDsply+mdctnRqstDsgInstrctnRouteCdgDsply;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnRouteCdgDsply = this.mdctnRqstDsgInstrctnRouteCdgDsply+ "," +mdctnRqstDsgInstrctnRouteCdgDsply;
+	        }
+        }
     }
     
     
@@ -1630,6 +3506,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnRouteCdgSys = mdctnRqstDsgInstrctnRouteCdgSys;
     }
     
+    public void addMdctnRqstDsgInstrctnRouteCdgSys(String mdctnRqstDsgInstrctnRouteCdgSys) {
+    	if( mdctnRqstDsgInstrctnRouteCdgSys != null ) {
+	    	if( this.mdctnRqstDsgInstrctnRouteCdgSys == null ) {
+	        	this.mdctnRqstDsgInstrctnRouteCdgSys = mdctnRqstDsgInstrctnRouteCdgSys;
+	        } else if(this.mdctnRqstDsgInstrctnRouteCdgSys.substring(this.mdctnRqstDsgInstrctnRouteCdgSys.length() - 1).equals("]") & mdctnRqstDsgInstrctnRouteCdgSys.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnRouteCdgSys = this.mdctnRqstDsgInstrctnRouteCdgSys+ "," + mdctnRqstDsgInstrctnRouteCdgSys;
+	        } else if(mdctnRqstDsgInstrctnRouteCdgSys.equals("[") | mdctnRqstDsgInstrctnRouteCdgSys.equals("]") | this.mdctnRqstDsgInstrctnRouteCdgSys.substring(this.mdctnRqstDsgInstrctnRouteCdgSys.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnRouteCdgSys = this.mdctnRqstDsgInstrctnRouteCdgSys+mdctnRqstDsgInstrctnRouteCdgSys;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnRouteCdgSys = this.mdctnRqstDsgInstrctnRouteCdgSys+ "," +mdctnRqstDsgInstrctnRouteCdgSys;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnRouteCdgUsrSltd() {
@@ -1638,6 +3528,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnRouteCdgUsrSltd(String mdctnRqstDsgInstrctnRouteCdgUsrSltd) {
         this.mdctnRqstDsgInstrctnRouteCdgUsrSltd = mdctnRqstDsgInstrctnRouteCdgUsrSltd;
+    }
+    
+    public void addMdctnRqstDsgInstrctnRouteCdgUsrSltd(String mdctnRqstDsgInstrctnRouteCdgUsrSltd) {
+    	if( mdctnRqstDsgInstrctnRouteCdgUsrSltd != null ) {
+	    	if( this.mdctnRqstDsgInstrctnRouteCdgUsrSltd == null ) {
+	        	this.mdctnRqstDsgInstrctnRouteCdgUsrSltd = mdctnRqstDsgInstrctnRouteCdgUsrSltd;
+	        } else if(this.mdctnRqstDsgInstrctnRouteCdgUsrSltd.substring(this.mdctnRqstDsgInstrctnRouteCdgUsrSltd.length() - 1).equals("]") & mdctnRqstDsgInstrctnRouteCdgUsrSltd.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnRouteCdgUsrSltd = this.mdctnRqstDsgInstrctnRouteCdgUsrSltd+ "," + mdctnRqstDsgInstrctnRouteCdgUsrSltd;
+	        } else if(mdctnRqstDsgInstrctnRouteCdgUsrSltd.equals("[") | mdctnRqstDsgInstrctnRouteCdgUsrSltd.equals("]") | this.mdctnRqstDsgInstrctnRouteCdgUsrSltd.substring(this.mdctnRqstDsgInstrctnRouteCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnRouteCdgUsrSltd = this.mdctnRqstDsgInstrctnRouteCdgUsrSltd+mdctnRqstDsgInstrctnRouteCdgUsrSltd;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnRouteCdgUsrSltd = this.mdctnRqstDsgInstrctnRouteCdgUsrSltd+ "," +mdctnRqstDsgInstrctnRouteCdgUsrSltd;
+	        }
+        }
     }
     
     
@@ -1650,6 +3554,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnRouteCdgVrsn = mdctnRqstDsgInstrctnRouteCdgVrsn;
     }
     
+    public void addMdctnRqstDsgInstrctnRouteCdgVrsn(String mdctnRqstDsgInstrctnRouteCdgVrsn) {
+    	if( mdctnRqstDsgInstrctnRouteCdgVrsn != null ) {
+	    	if( this.mdctnRqstDsgInstrctnRouteCdgVrsn == null ) {
+	        	this.mdctnRqstDsgInstrctnRouteCdgVrsn = mdctnRqstDsgInstrctnRouteCdgVrsn;
+	        } else if(this.mdctnRqstDsgInstrctnRouteCdgVrsn.substring(this.mdctnRqstDsgInstrctnRouteCdgVrsn.length() - 1).equals("]") & mdctnRqstDsgInstrctnRouteCdgVrsn.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnRouteCdgVrsn = this.mdctnRqstDsgInstrctnRouteCdgVrsn+ "," + mdctnRqstDsgInstrctnRouteCdgVrsn;
+	        } else if(mdctnRqstDsgInstrctnRouteCdgVrsn.equals("[") | mdctnRqstDsgInstrctnRouteCdgVrsn.equals("]") | this.mdctnRqstDsgInstrctnRouteCdgVrsn.substring(this.mdctnRqstDsgInstrctnRouteCdgVrsn.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnRouteCdgVrsn = this.mdctnRqstDsgInstrctnRouteCdgVrsn+mdctnRqstDsgInstrctnRouteCdgVrsn;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnRouteCdgVrsn = this.mdctnRqstDsgInstrctnRouteCdgVrsn+ "," +mdctnRqstDsgInstrctnRouteCdgVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnRouteTxt() {
@@ -1658,6 +3576,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnRouteTxt(String mdctnRqstDsgInstrctnRouteTxt) {
         this.mdctnRqstDsgInstrctnRouteTxt = mdctnRqstDsgInstrctnRouteTxt;
+    }
+    
+    public void addMdctnRqstDsgInstrctnRouteTxt(String mdctnRqstDsgInstrctnRouteTxt) {
+    	if( mdctnRqstDsgInstrctnRouteTxt != null ) {
+	    	if( this.mdctnRqstDsgInstrctnRouteTxt == null ) {
+	        	this.mdctnRqstDsgInstrctnRouteTxt = mdctnRqstDsgInstrctnRouteTxt;
+	        } else if(this.mdctnRqstDsgInstrctnRouteTxt.substring(this.mdctnRqstDsgInstrctnRouteTxt.length() - 1).equals("]") & mdctnRqstDsgInstrctnRouteTxt.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnRouteTxt = this.mdctnRqstDsgInstrctnRouteTxt+ "," + mdctnRqstDsgInstrctnRouteTxt;
+	        } else if(mdctnRqstDsgInstrctnRouteTxt.equals("[") | mdctnRqstDsgInstrctnRouteTxt.equals("]") | this.mdctnRqstDsgInstrctnRouteTxt.substring(this.mdctnRqstDsgInstrctnRouteTxt.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnRouteTxt = this.mdctnRqstDsgInstrctnRouteTxt+mdctnRqstDsgInstrctnRouteTxt;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnRouteTxt = this.mdctnRqstDsgInstrctnRouteTxt+ "," +mdctnRqstDsgInstrctnRouteTxt;
+	        }
+        }
     }
     
     
@@ -1670,6 +3602,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnSqnc = mdctnRqstDsgInstrctnSqnc;
     }
     
+    public void addMdctnRqstDsgInstrctnSqnc(String mdctnRqstDsgInstrctnSqnc) {
+    	if( mdctnRqstDsgInstrctnSqnc != null ) {
+	    	if( this.mdctnRqstDsgInstrctnSqnc == null ) {
+	        	this.mdctnRqstDsgInstrctnSqnc = mdctnRqstDsgInstrctnSqnc;
+	        } else if(this.mdctnRqstDsgInstrctnSqnc.substring(this.mdctnRqstDsgInstrctnSqnc.length() - 1).equals("]") & mdctnRqstDsgInstrctnSqnc.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnSqnc = this.mdctnRqstDsgInstrctnSqnc+ "," + mdctnRqstDsgInstrctnSqnc;
+	        } else if(mdctnRqstDsgInstrctnSqnc.equals("[") | mdctnRqstDsgInstrctnSqnc.equals("]") | this.mdctnRqstDsgInstrctnSqnc.substring(this.mdctnRqstDsgInstrctnSqnc.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnSqnc = this.mdctnRqstDsgInstrctnSqnc+mdctnRqstDsgInstrctnSqnc;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnSqnc = this.mdctnRqstDsgInstrctnSqnc+ "," +mdctnRqstDsgInstrctnSqnc;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnSiteCdgCd() {
@@ -1678,6 +3624,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnSiteCdgCd(String mdctnRqstDsgInstrctnSiteCdgCd) {
         this.mdctnRqstDsgInstrctnSiteCdgCd = mdctnRqstDsgInstrctnSiteCdgCd;
+    }
+    
+    public void addMdctnRqstDsgInstrctnSiteCdgCd(String mdctnRqstDsgInstrctnSiteCdgCd) {
+    	if( mdctnRqstDsgInstrctnSiteCdgCd != null ) {
+	    	if( this.mdctnRqstDsgInstrctnSiteCdgCd == null ) {
+	        	this.mdctnRqstDsgInstrctnSiteCdgCd = mdctnRqstDsgInstrctnSiteCdgCd;
+	        } else if(this.mdctnRqstDsgInstrctnSiteCdgCd.substring(this.mdctnRqstDsgInstrctnSiteCdgCd.length() - 1).equals("]") & mdctnRqstDsgInstrctnSiteCdgCd.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnSiteCdgCd = this.mdctnRqstDsgInstrctnSiteCdgCd+ "," + mdctnRqstDsgInstrctnSiteCdgCd;
+	        } else if(mdctnRqstDsgInstrctnSiteCdgCd.equals("[") | mdctnRqstDsgInstrctnSiteCdgCd.equals("]") | this.mdctnRqstDsgInstrctnSiteCdgCd.substring(this.mdctnRqstDsgInstrctnSiteCdgCd.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnSiteCdgCd = this.mdctnRqstDsgInstrctnSiteCdgCd+mdctnRqstDsgInstrctnSiteCdgCd;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnSiteCdgCd = this.mdctnRqstDsgInstrctnSiteCdgCd+ "," +mdctnRqstDsgInstrctnSiteCdgCd;
+	        }
+        }
     }
     
     
@@ -1690,6 +3650,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnSiteCdgDsply = mdctnRqstDsgInstrctnSiteCdgDsply;
     }
     
+    public void addMdctnRqstDsgInstrctnSiteCdgDsply(String mdctnRqstDsgInstrctnSiteCdgDsply) {
+    	if( mdctnRqstDsgInstrctnSiteCdgDsply != null ) {
+	    	if( this.mdctnRqstDsgInstrctnSiteCdgDsply == null ) {
+	        	this.mdctnRqstDsgInstrctnSiteCdgDsply = mdctnRqstDsgInstrctnSiteCdgDsply;
+	        } else if(this.mdctnRqstDsgInstrctnSiteCdgDsply.substring(this.mdctnRqstDsgInstrctnSiteCdgDsply.length() - 1).equals("]") & mdctnRqstDsgInstrctnSiteCdgDsply.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnSiteCdgDsply = this.mdctnRqstDsgInstrctnSiteCdgDsply+ "," + mdctnRqstDsgInstrctnSiteCdgDsply;
+	        } else if(mdctnRqstDsgInstrctnSiteCdgDsply.equals("[") | mdctnRqstDsgInstrctnSiteCdgDsply.equals("]") | this.mdctnRqstDsgInstrctnSiteCdgDsply.substring(this.mdctnRqstDsgInstrctnSiteCdgDsply.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnSiteCdgDsply = this.mdctnRqstDsgInstrctnSiteCdgDsply+mdctnRqstDsgInstrctnSiteCdgDsply;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnSiteCdgDsply = this.mdctnRqstDsgInstrctnSiteCdgDsply+ "," +mdctnRqstDsgInstrctnSiteCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnSiteCdgSys() {
@@ -1698,6 +3672,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnSiteCdgSys(String mdctnRqstDsgInstrctnSiteCdgSys) {
         this.mdctnRqstDsgInstrctnSiteCdgSys = mdctnRqstDsgInstrctnSiteCdgSys;
+    }
+    
+    public void addMdctnRqstDsgInstrctnSiteCdgSys(String mdctnRqstDsgInstrctnSiteCdgSys) {
+    	if( mdctnRqstDsgInstrctnSiteCdgSys != null ) {
+	    	if( this.mdctnRqstDsgInstrctnSiteCdgSys == null ) {
+	        	this.mdctnRqstDsgInstrctnSiteCdgSys = mdctnRqstDsgInstrctnSiteCdgSys;
+	        } else if(this.mdctnRqstDsgInstrctnSiteCdgSys.substring(this.mdctnRqstDsgInstrctnSiteCdgSys.length() - 1).equals("]") & mdctnRqstDsgInstrctnSiteCdgSys.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnSiteCdgSys = this.mdctnRqstDsgInstrctnSiteCdgSys+ "," + mdctnRqstDsgInstrctnSiteCdgSys;
+	        } else if(mdctnRqstDsgInstrctnSiteCdgSys.equals("[") | mdctnRqstDsgInstrctnSiteCdgSys.equals("]") | this.mdctnRqstDsgInstrctnSiteCdgSys.substring(this.mdctnRqstDsgInstrctnSiteCdgSys.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnSiteCdgSys = this.mdctnRqstDsgInstrctnSiteCdgSys+mdctnRqstDsgInstrctnSiteCdgSys;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnSiteCdgSys = this.mdctnRqstDsgInstrctnSiteCdgSys+ "," +mdctnRqstDsgInstrctnSiteCdgSys;
+	        }
+        }
     }
     
     
@@ -1710,6 +3698,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnSiteCdgUsrSltd = mdctnRqstDsgInstrctnSiteCdgUsrSltd;
     }
     
+    public void addMdctnRqstDsgInstrctnSiteCdgUsrSltd(String mdctnRqstDsgInstrctnSiteCdgUsrSltd) {
+    	if( mdctnRqstDsgInstrctnSiteCdgUsrSltd != null ) {
+	    	if( this.mdctnRqstDsgInstrctnSiteCdgUsrSltd == null ) {
+	        	this.mdctnRqstDsgInstrctnSiteCdgUsrSltd = mdctnRqstDsgInstrctnSiteCdgUsrSltd;
+	        } else if(this.mdctnRqstDsgInstrctnSiteCdgUsrSltd.substring(this.mdctnRqstDsgInstrctnSiteCdgUsrSltd.length() - 1).equals("]") & mdctnRqstDsgInstrctnSiteCdgUsrSltd.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnSiteCdgUsrSltd = this.mdctnRqstDsgInstrctnSiteCdgUsrSltd+ "," + mdctnRqstDsgInstrctnSiteCdgUsrSltd;
+	        } else if(mdctnRqstDsgInstrctnSiteCdgUsrSltd.equals("[") | mdctnRqstDsgInstrctnSiteCdgUsrSltd.equals("]") | this.mdctnRqstDsgInstrctnSiteCdgUsrSltd.substring(this.mdctnRqstDsgInstrctnSiteCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnSiteCdgUsrSltd = this.mdctnRqstDsgInstrctnSiteCdgUsrSltd+mdctnRqstDsgInstrctnSiteCdgUsrSltd;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnSiteCdgUsrSltd = this.mdctnRqstDsgInstrctnSiteCdgUsrSltd+ "," +mdctnRqstDsgInstrctnSiteCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnSiteCdgVrsn() {
@@ -1718,6 +3720,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnSiteCdgVrsn(String mdctnRqstDsgInstrctnSiteCdgVrsn) {
         this.mdctnRqstDsgInstrctnSiteCdgVrsn = mdctnRqstDsgInstrctnSiteCdgVrsn;
+    }
+    
+    public void addMdctnRqstDsgInstrctnSiteCdgVrsn(String mdctnRqstDsgInstrctnSiteCdgVrsn) {
+    	if( mdctnRqstDsgInstrctnSiteCdgVrsn != null ) {
+	    	if( this.mdctnRqstDsgInstrctnSiteCdgVrsn == null ) {
+	        	this.mdctnRqstDsgInstrctnSiteCdgVrsn = mdctnRqstDsgInstrctnSiteCdgVrsn;
+	        } else if(this.mdctnRqstDsgInstrctnSiteCdgVrsn.substring(this.mdctnRqstDsgInstrctnSiteCdgVrsn.length() - 1).equals("]") & mdctnRqstDsgInstrctnSiteCdgVrsn.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnSiteCdgVrsn = this.mdctnRqstDsgInstrctnSiteCdgVrsn+ "," + mdctnRqstDsgInstrctnSiteCdgVrsn;
+	        } else if(mdctnRqstDsgInstrctnSiteCdgVrsn.equals("[") | mdctnRqstDsgInstrctnSiteCdgVrsn.equals("]") | this.mdctnRqstDsgInstrctnSiteCdgVrsn.substring(this.mdctnRqstDsgInstrctnSiteCdgVrsn.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnSiteCdgVrsn = this.mdctnRqstDsgInstrctnSiteCdgVrsn+mdctnRqstDsgInstrctnSiteCdgVrsn;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnSiteCdgVrsn = this.mdctnRqstDsgInstrctnSiteCdgVrsn+ "," +mdctnRqstDsgInstrctnSiteCdgVrsn;
+	        }
+        }
     }
     
     
@@ -1730,6 +3746,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnSiteTxt = mdctnRqstDsgInstrctnSiteTxt;
     }
     
+    public void addMdctnRqstDsgInstrctnSiteTxt(String mdctnRqstDsgInstrctnSiteTxt) {
+    	if( mdctnRqstDsgInstrctnSiteTxt != null ) {
+	    	if( this.mdctnRqstDsgInstrctnSiteTxt == null ) {
+	        	this.mdctnRqstDsgInstrctnSiteTxt = mdctnRqstDsgInstrctnSiteTxt;
+	        } else if(this.mdctnRqstDsgInstrctnSiteTxt.substring(this.mdctnRqstDsgInstrctnSiteTxt.length() - 1).equals("]") & mdctnRqstDsgInstrctnSiteTxt.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnSiteTxt = this.mdctnRqstDsgInstrctnSiteTxt+ "," + mdctnRqstDsgInstrctnSiteTxt;
+	        } else if(mdctnRqstDsgInstrctnSiteTxt.equals("[") | mdctnRqstDsgInstrctnSiteTxt.equals("]") | this.mdctnRqstDsgInstrctnSiteTxt.substring(this.mdctnRqstDsgInstrctnSiteTxt.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnSiteTxt = this.mdctnRqstDsgInstrctnSiteTxt+mdctnRqstDsgInstrctnSiteTxt;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnSiteTxt = this.mdctnRqstDsgInstrctnSiteTxt+ "," +mdctnRqstDsgInstrctnSiteTxt;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnTxt() {
@@ -1738,6 +3768,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnTxt(String mdctnRqstDsgInstrctnTxt) {
         this.mdctnRqstDsgInstrctnTxt = mdctnRqstDsgInstrctnTxt;
+    }
+    
+    public void addMdctnRqstDsgInstrctnTxt(String mdctnRqstDsgInstrctnTxt) {
+    	if( mdctnRqstDsgInstrctnTxt != null ) {
+	    	if( this.mdctnRqstDsgInstrctnTxt == null ) {
+	        	this.mdctnRqstDsgInstrctnTxt = mdctnRqstDsgInstrctnTxt;
+	        } else if(this.mdctnRqstDsgInstrctnTxt.substring(this.mdctnRqstDsgInstrctnTxt.length() - 1).equals("]") & mdctnRqstDsgInstrctnTxt.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTxt = this.mdctnRqstDsgInstrctnTxt+ "," + mdctnRqstDsgInstrctnTxt;
+	        } else if(mdctnRqstDsgInstrctnTxt.equals("[") | mdctnRqstDsgInstrctnTxt.equals("]") | this.mdctnRqstDsgInstrctnTxt.substring(this.mdctnRqstDsgInstrctnTxt.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTxt = this.mdctnRqstDsgInstrctnTxt+mdctnRqstDsgInstrctnTxt;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnTxt = this.mdctnRqstDsgInstrctnTxt+ "," +mdctnRqstDsgInstrctnTxt;
+	        }
+        }
     }
     
     
@@ -1750,6 +3794,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnTmgCdCdgCd = mdctnRqstDsgInstrctnTmgCdCdgCd;
     }
     
+    public void addMdctnRqstDsgInstrctnTmgCdCdgCd(String mdctnRqstDsgInstrctnTmgCdCdgCd) {
+    	if( mdctnRqstDsgInstrctnTmgCdCdgCd != null ) {
+	    	if( this.mdctnRqstDsgInstrctnTmgCdCdgCd == null ) {
+	        	this.mdctnRqstDsgInstrctnTmgCdCdgCd = mdctnRqstDsgInstrctnTmgCdCdgCd;
+	        } else if(this.mdctnRqstDsgInstrctnTmgCdCdgCd.substring(this.mdctnRqstDsgInstrctnTmgCdCdgCd.length() - 1).equals("]") & mdctnRqstDsgInstrctnTmgCdCdgCd.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgCdCdgCd = this.mdctnRqstDsgInstrctnTmgCdCdgCd+ "," + mdctnRqstDsgInstrctnTmgCdCdgCd;
+	        } else if(mdctnRqstDsgInstrctnTmgCdCdgCd.equals("[") | mdctnRqstDsgInstrctnTmgCdCdgCd.equals("]") | this.mdctnRqstDsgInstrctnTmgCdCdgCd.substring(this.mdctnRqstDsgInstrctnTmgCdCdgCd.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgCdCdgCd = this.mdctnRqstDsgInstrctnTmgCdCdgCd+mdctnRqstDsgInstrctnTmgCdCdgCd;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnTmgCdCdgCd = this.mdctnRqstDsgInstrctnTmgCdCdgCd+ "," +mdctnRqstDsgInstrctnTmgCdCdgCd;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnTmgCdCdgDsply() {
@@ -1758,6 +3816,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnTmgCdCdgDsply(String mdctnRqstDsgInstrctnTmgCdCdgDsply) {
         this.mdctnRqstDsgInstrctnTmgCdCdgDsply = mdctnRqstDsgInstrctnTmgCdCdgDsply;
+    }
+    
+    public void addMdctnRqstDsgInstrctnTmgCdCdgDsply(String mdctnRqstDsgInstrctnTmgCdCdgDsply) {
+    	if( mdctnRqstDsgInstrctnTmgCdCdgDsply != null ) {
+	    	if( this.mdctnRqstDsgInstrctnTmgCdCdgDsply == null ) {
+	        	this.mdctnRqstDsgInstrctnTmgCdCdgDsply = mdctnRqstDsgInstrctnTmgCdCdgDsply;
+	        } else if(this.mdctnRqstDsgInstrctnTmgCdCdgDsply.substring(this.mdctnRqstDsgInstrctnTmgCdCdgDsply.length() - 1).equals("]") & mdctnRqstDsgInstrctnTmgCdCdgDsply.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgCdCdgDsply = this.mdctnRqstDsgInstrctnTmgCdCdgDsply+ "," + mdctnRqstDsgInstrctnTmgCdCdgDsply;
+	        } else if(mdctnRqstDsgInstrctnTmgCdCdgDsply.equals("[") | mdctnRqstDsgInstrctnTmgCdCdgDsply.equals("]") | this.mdctnRqstDsgInstrctnTmgCdCdgDsply.substring(this.mdctnRqstDsgInstrctnTmgCdCdgDsply.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgCdCdgDsply = this.mdctnRqstDsgInstrctnTmgCdCdgDsply+mdctnRqstDsgInstrctnTmgCdCdgDsply;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnTmgCdCdgDsply = this.mdctnRqstDsgInstrctnTmgCdCdgDsply+ "," +mdctnRqstDsgInstrctnTmgCdCdgDsply;
+	        }
+        }
     }
     
     
@@ -1770,6 +3842,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnTmgCdCdgSys = mdctnRqstDsgInstrctnTmgCdCdgSys;
     }
     
+    public void addMdctnRqstDsgInstrctnTmgCdCdgSys(String mdctnRqstDsgInstrctnTmgCdCdgSys) {
+    	if( mdctnRqstDsgInstrctnTmgCdCdgSys != null ) {
+	    	if( this.mdctnRqstDsgInstrctnTmgCdCdgSys == null ) {
+	        	this.mdctnRqstDsgInstrctnTmgCdCdgSys = mdctnRqstDsgInstrctnTmgCdCdgSys;
+	        } else if(this.mdctnRqstDsgInstrctnTmgCdCdgSys.substring(this.mdctnRqstDsgInstrctnTmgCdCdgSys.length() - 1).equals("]") & mdctnRqstDsgInstrctnTmgCdCdgSys.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgCdCdgSys = this.mdctnRqstDsgInstrctnTmgCdCdgSys+ "," + mdctnRqstDsgInstrctnTmgCdCdgSys;
+	        } else if(mdctnRqstDsgInstrctnTmgCdCdgSys.equals("[") | mdctnRqstDsgInstrctnTmgCdCdgSys.equals("]") | this.mdctnRqstDsgInstrctnTmgCdCdgSys.substring(this.mdctnRqstDsgInstrctnTmgCdCdgSys.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgCdCdgSys = this.mdctnRqstDsgInstrctnTmgCdCdgSys+mdctnRqstDsgInstrctnTmgCdCdgSys;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnTmgCdCdgSys = this.mdctnRqstDsgInstrctnTmgCdCdgSys+ "," +mdctnRqstDsgInstrctnTmgCdCdgSys;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnTmgCdCdgUsrSltd() {
@@ -1778,6 +3864,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnTmgCdCdgUsrSltd(String mdctnRqstDsgInstrctnTmgCdCdgUsrSltd) {
         this.mdctnRqstDsgInstrctnTmgCdCdgUsrSltd = mdctnRqstDsgInstrctnTmgCdCdgUsrSltd;
+    }
+    
+    public void addMdctnRqstDsgInstrctnTmgCdCdgUsrSltd(String mdctnRqstDsgInstrctnTmgCdCdgUsrSltd) {
+    	if( mdctnRqstDsgInstrctnTmgCdCdgUsrSltd != null ) {
+	    	if( this.mdctnRqstDsgInstrctnTmgCdCdgUsrSltd == null ) {
+	        	this.mdctnRqstDsgInstrctnTmgCdCdgUsrSltd = mdctnRqstDsgInstrctnTmgCdCdgUsrSltd;
+	        } else if(this.mdctnRqstDsgInstrctnTmgCdCdgUsrSltd.substring(this.mdctnRqstDsgInstrctnTmgCdCdgUsrSltd.length() - 1).equals("]") & mdctnRqstDsgInstrctnTmgCdCdgUsrSltd.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgCdCdgUsrSltd = this.mdctnRqstDsgInstrctnTmgCdCdgUsrSltd+ "," + mdctnRqstDsgInstrctnTmgCdCdgUsrSltd;
+	        } else if(mdctnRqstDsgInstrctnTmgCdCdgUsrSltd.equals("[") | mdctnRqstDsgInstrctnTmgCdCdgUsrSltd.equals("]") | this.mdctnRqstDsgInstrctnTmgCdCdgUsrSltd.substring(this.mdctnRqstDsgInstrctnTmgCdCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgCdCdgUsrSltd = this.mdctnRqstDsgInstrctnTmgCdCdgUsrSltd+mdctnRqstDsgInstrctnTmgCdCdgUsrSltd;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnTmgCdCdgUsrSltd = this.mdctnRqstDsgInstrctnTmgCdCdgUsrSltd+ "," +mdctnRqstDsgInstrctnTmgCdCdgUsrSltd;
+	        }
+        }
     }
     
     
@@ -1790,6 +3890,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnTmgCdCdgVrsn = mdctnRqstDsgInstrctnTmgCdCdgVrsn;
     }
     
+    public void addMdctnRqstDsgInstrctnTmgCdCdgVrsn(String mdctnRqstDsgInstrctnTmgCdCdgVrsn) {
+    	if( mdctnRqstDsgInstrctnTmgCdCdgVrsn != null ) {
+	    	if( this.mdctnRqstDsgInstrctnTmgCdCdgVrsn == null ) {
+	        	this.mdctnRqstDsgInstrctnTmgCdCdgVrsn = mdctnRqstDsgInstrctnTmgCdCdgVrsn;
+	        } else if(this.mdctnRqstDsgInstrctnTmgCdCdgVrsn.substring(this.mdctnRqstDsgInstrctnTmgCdCdgVrsn.length() - 1).equals("]") & mdctnRqstDsgInstrctnTmgCdCdgVrsn.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgCdCdgVrsn = this.mdctnRqstDsgInstrctnTmgCdCdgVrsn+ "," + mdctnRqstDsgInstrctnTmgCdCdgVrsn;
+	        } else if(mdctnRqstDsgInstrctnTmgCdCdgVrsn.equals("[") | mdctnRqstDsgInstrctnTmgCdCdgVrsn.equals("]") | this.mdctnRqstDsgInstrctnTmgCdCdgVrsn.substring(this.mdctnRqstDsgInstrctnTmgCdCdgVrsn.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgCdCdgVrsn = this.mdctnRqstDsgInstrctnTmgCdCdgVrsn+mdctnRqstDsgInstrctnTmgCdCdgVrsn;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnTmgCdCdgVrsn = this.mdctnRqstDsgInstrctnTmgCdCdgVrsn+ "," +mdctnRqstDsgInstrctnTmgCdCdgVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnTmgCdTxt() {
@@ -1798,6 +3912,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnTmgCdTxt(String mdctnRqstDsgInstrctnTmgCdTxt) {
         this.mdctnRqstDsgInstrctnTmgCdTxt = mdctnRqstDsgInstrctnTmgCdTxt;
+    }
+    
+    public void addMdctnRqstDsgInstrctnTmgCdTxt(String mdctnRqstDsgInstrctnTmgCdTxt) {
+    	if( mdctnRqstDsgInstrctnTmgCdTxt != null ) {
+	    	if( this.mdctnRqstDsgInstrctnTmgCdTxt == null ) {
+	        	this.mdctnRqstDsgInstrctnTmgCdTxt = mdctnRqstDsgInstrctnTmgCdTxt;
+	        } else if(this.mdctnRqstDsgInstrctnTmgCdTxt.substring(this.mdctnRqstDsgInstrctnTmgCdTxt.length() - 1).equals("]") & mdctnRqstDsgInstrctnTmgCdTxt.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgCdTxt = this.mdctnRqstDsgInstrctnTmgCdTxt+ "," + mdctnRqstDsgInstrctnTmgCdTxt;
+	        } else if(mdctnRqstDsgInstrctnTmgCdTxt.equals("[") | mdctnRqstDsgInstrctnTmgCdTxt.equals("]") | this.mdctnRqstDsgInstrctnTmgCdTxt.substring(this.mdctnRqstDsgInstrctnTmgCdTxt.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgCdTxt = this.mdctnRqstDsgInstrctnTmgCdTxt+mdctnRqstDsgInstrctnTmgCdTxt;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnTmgCdTxt = this.mdctnRqstDsgInstrctnTmgCdTxt+ "," +mdctnRqstDsgInstrctnTmgCdTxt;
+	        }
+        }
     }
     
     
@@ -1810,6 +3938,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnTmgEvnt = mdctnRqstDsgInstrctnTmgEvnt;
     }
     
+    public void addMdctnRqstDsgInstrctnTmgEvnt(String mdctnRqstDsgInstrctnTmgEvnt) {
+    	if( mdctnRqstDsgInstrctnTmgEvnt != null ) {
+	    	if( this.mdctnRqstDsgInstrctnTmgEvnt == null ) {
+	        	this.mdctnRqstDsgInstrctnTmgEvnt = mdctnRqstDsgInstrctnTmgEvnt;
+	        } else if(this.mdctnRqstDsgInstrctnTmgEvnt.substring(this.mdctnRqstDsgInstrctnTmgEvnt.length() - 1).equals("]") & mdctnRqstDsgInstrctnTmgEvnt.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgEvnt = this.mdctnRqstDsgInstrctnTmgEvnt+ "," + mdctnRqstDsgInstrctnTmgEvnt;
+	        } else if(mdctnRqstDsgInstrctnTmgEvnt.equals("[") | mdctnRqstDsgInstrctnTmgEvnt.equals("]") | this.mdctnRqstDsgInstrctnTmgEvnt.substring(this.mdctnRqstDsgInstrctnTmgEvnt.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgEvnt = this.mdctnRqstDsgInstrctnTmgEvnt+mdctnRqstDsgInstrctnTmgEvnt;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnTmgEvnt = this.mdctnRqstDsgInstrctnTmgEvnt+ "," +mdctnRqstDsgInstrctnTmgEvnt;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnTmgRptBndsDurationCd() {
@@ -1818,6 +3960,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnTmgRptBndsDurationCd(String mdctnRqstDsgInstrctnTmgRptBndsDurationCd) {
         this.mdctnRqstDsgInstrctnTmgRptBndsDurationCd = mdctnRqstDsgInstrctnTmgRptBndsDurationCd;
+    }
+    
+    public void addMdctnRqstDsgInstrctnTmgRptBndsDurationCd(String mdctnRqstDsgInstrctnTmgRptBndsDurationCd) {
+    	if( mdctnRqstDsgInstrctnTmgRptBndsDurationCd != null ) {
+	    	if( this.mdctnRqstDsgInstrctnTmgRptBndsDurationCd == null ) {
+	        	this.mdctnRqstDsgInstrctnTmgRptBndsDurationCd = mdctnRqstDsgInstrctnTmgRptBndsDurationCd;
+	        } else if(this.mdctnRqstDsgInstrctnTmgRptBndsDurationCd.substring(this.mdctnRqstDsgInstrctnTmgRptBndsDurationCd.length() - 1).equals("]") & mdctnRqstDsgInstrctnTmgRptBndsDurationCd.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptBndsDurationCd = this.mdctnRqstDsgInstrctnTmgRptBndsDurationCd+ "," + mdctnRqstDsgInstrctnTmgRptBndsDurationCd;
+	        } else if(mdctnRqstDsgInstrctnTmgRptBndsDurationCd.equals("[") | mdctnRqstDsgInstrctnTmgRptBndsDurationCd.equals("]") | this.mdctnRqstDsgInstrctnTmgRptBndsDurationCd.substring(this.mdctnRqstDsgInstrctnTmgRptBndsDurationCd.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptBndsDurationCd = this.mdctnRqstDsgInstrctnTmgRptBndsDurationCd+mdctnRqstDsgInstrctnTmgRptBndsDurationCd;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnTmgRptBndsDurationCd = this.mdctnRqstDsgInstrctnTmgRptBndsDurationCd+ "," +mdctnRqstDsgInstrctnTmgRptBndsDurationCd;
+	        }
+        }
     }
     
     
@@ -1830,6 +3986,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnTmgRptBndsDurationCmprtr = mdctnRqstDsgInstrctnTmgRptBndsDurationCmprtr;
     }
     
+    public void addMdctnRqstDsgInstrctnTmgRptBndsDurationCmprtr(String mdctnRqstDsgInstrctnTmgRptBndsDurationCmprtr) {
+    	if( mdctnRqstDsgInstrctnTmgRptBndsDurationCmprtr != null ) {
+	    	if( this.mdctnRqstDsgInstrctnTmgRptBndsDurationCmprtr == null ) {
+	        	this.mdctnRqstDsgInstrctnTmgRptBndsDurationCmprtr = mdctnRqstDsgInstrctnTmgRptBndsDurationCmprtr;
+	        } else if(this.mdctnRqstDsgInstrctnTmgRptBndsDurationCmprtr.substring(this.mdctnRqstDsgInstrctnTmgRptBndsDurationCmprtr.length() - 1).equals("]") & mdctnRqstDsgInstrctnTmgRptBndsDurationCmprtr.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptBndsDurationCmprtr = this.mdctnRqstDsgInstrctnTmgRptBndsDurationCmprtr+ "," + mdctnRqstDsgInstrctnTmgRptBndsDurationCmprtr;
+	        } else if(mdctnRqstDsgInstrctnTmgRptBndsDurationCmprtr.equals("[") | mdctnRqstDsgInstrctnTmgRptBndsDurationCmprtr.equals("]") | this.mdctnRqstDsgInstrctnTmgRptBndsDurationCmprtr.substring(this.mdctnRqstDsgInstrctnTmgRptBndsDurationCmprtr.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptBndsDurationCmprtr = this.mdctnRqstDsgInstrctnTmgRptBndsDurationCmprtr+mdctnRqstDsgInstrctnTmgRptBndsDurationCmprtr;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnTmgRptBndsDurationCmprtr = this.mdctnRqstDsgInstrctnTmgRptBndsDurationCmprtr+ "," +mdctnRqstDsgInstrctnTmgRptBndsDurationCmprtr;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnTmgRptBndsDurationSys() {
@@ -1838,6 +4008,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnTmgRptBndsDurationSys(String mdctnRqstDsgInstrctnTmgRptBndsDurationSys) {
         this.mdctnRqstDsgInstrctnTmgRptBndsDurationSys = mdctnRqstDsgInstrctnTmgRptBndsDurationSys;
+    }
+    
+    public void addMdctnRqstDsgInstrctnTmgRptBndsDurationSys(String mdctnRqstDsgInstrctnTmgRptBndsDurationSys) {
+    	if( mdctnRqstDsgInstrctnTmgRptBndsDurationSys != null ) {
+	    	if( this.mdctnRqstDsgInstrctnTmgRptBndsDurationSys == null ) {
+	        	this.mdctnRqstDsgInstrctnTmgRptBndsDurationSys = mdctnRqstDsgInstrctnTmgRptBndsDurationSys;
+	        } else if(this.mdctnRqstDsgInstrctnTmgRptBndsDurationSys.substring(this.mdctnRqstDsgInstrctnTmgRptBndsDurationSys.length() - 1).equals("]") & mdctnRqstDsgInstrctnTmgRptBndsDurationSys.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptBndsDurationSys = this.mdctnRqstDsgInstrctnTmgRptBndsDurationSys+ "," + mdctnRqstDsgInstrctnTmgRptBndsDurationSys;
+	        } else if(mdctnRqstDsgInstrctnTmgRptBndsDurationSys.equals("[") | mdctnRqstDsgInstrctnTmgRptBndsDurationSys.equals("]") | this.mdctnRqstDsgInstrctnTmgRptBndsDurationSys.substring(this.mdctnRqstDsgInstrctnTmgRptBndsDurationSys.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptBndsDurationSys = this.mdctnRqstDsgInstrctnTmgRptBndsDurationSys+mdctnRqstDsgInstrctnTmgRptBndsDurationSys;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnTmgRptBndsDurationSys = this.mdctnRqstDsgInstrctnTmgRptBndsDurationSys+ "," +mdctnRqstDsgInstrctnTmgRptBndsDurationSys;
+	        }
+        }
     }
     
     
@@ -1850,6 +4034,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnTmgRptBndsDurationUnt = mdctnRqstDsgInstrctnTmgRptBndsDurationUnt;
     }
     
+    public void addMdctnRqstDsgInstrctnTmgRptBndsDurationUnt(String mdctnRqstDsgInstrctnTmgRptBndsDurationUnt) {
+    	if( mdctnRqstDsgInstrctnTmgRptBndsDurationUnt != null ) {
+	    	if( this.mdctnRqstDsgInstrctnTmgRptBndsDurationUnt == null ) {
+	        	this.mdctnRqstDsgInstrctnTmgRptBndsDurationUnt = mdctnRqstDsgInstrctnTmgRptBndsDurationUnt;
+	        } else if(this.mdctnRqstDsgInstrctnTmgRptBndsDurationUnt.substring(this.mdctnRqstDsgInstrctnTmgRptBndsDurationUnt.length() - 1).equals("]") & mdctnRqstDsgInstrctnTmgRptBndsDurationUnt.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptBndsDurationUnt = this.mdctnRqstDsgInstrctnTmgRptBndsDurationUnt+ "," + mdctnRqstDsgInstrctnTmgRptBndsDurationUnt;
+	        } else if(mdctnRqstDsgInstrctnTmgRptBndsDurationUnt.equals("[") | mdctnRqstDsgInstrctnTmgRptBndsDurationUnt.equals("]") | this.mdctnRqstDsgInstrctnTmgRptBndsDurationUnt.substring(this.mdctnRqstDsgInstrctnTmgRptBndsDurationUnt.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptBndsDurationUnt = this.mdctnRqstDsgInstrctnTmgRptBndsDurationUnt+mdctnRqstDsgInstrctnTmgRptBndsDurationUnt;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnTmgRptBndsDurationUnt = this.mdctnRqstDsgInstrctnTmgRptBndsDurationUnt+ "," +mdctnRqstDsgInstrctnTmgRptBndsDurationUnt;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnTmgRptBndsDurationVl() {
@@ -1858,6 +4056,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnTmgRptBndsDurationVl(String mdctnRqstDsgInstrctnTmgRptBndsDurationVl) {
         this.mdctnRqstDsgInstrctnTmgRptBndsDurationVl = mdctnRqstDsgInstrctnTmgRptBndsDurationVl;
+    }
+    
+    public void addMdctnRqstDsgInstrctnTmgRptBndsDurationVl(String mdctnRqstDsgInstrctnTmgRptBndsDurationVl) {
+    	if( mdctnRqstDsgInstrctnTmgRptBndsDurationVl != null ) {
+	    	if( this.mdctnRqstDsgInstrctnTmgRptBndsDurationVl == null ) {
+	        	this.mdctnRqstDsgInstrctnTmgRptBndsDurationVl = mdctnRqstDsgInstrctnTmgRptBndsDurationVl;
+	        } else if(this.mdctnRqstDsgInstrctnTmgRptBndsDurationVl.substring(this.mdctnRqstDsgInstrctnTmgRptBndsDurationVl.length() - 1).equals("]") & mdctnRqstDsgInstrctnTmgRptBndsDurationVl.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptBndsDurationVl = this.mdctnRqstDsgInstrctnTmgRptBndsDurationVl+ "," + mdctnRqstDsgInstrctnTmgRptBndsDurationVl;
+	        } else if(mdctnRqstDsgInstrctnTmgRptBndsDurationVl.equals("[") | mdctnRqstDsgInstrctnTmgRptBndsDurationVl.equals("]") | this.mdctnRqstDsgInstrctnTmgRptBndsDurationVl.substring(this.mdctnRqstDsgInstrctnTmgRptBndsDurationVl.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptBndsDurationVl = this.mdctnRqstDsgInstrctnTmgRptBndsDurationVl+mdctnRqstDsgInstrctnTmgRptBndsDurationVl;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnTmgRptBndsDurationVl = this.mdctnRqstDsgInstrctnTmgRptBndsDurationVl+ "," +mdctnRqstDsgInstrctnTmgRptBndsDurationVl;
+	        }
+        }
     }
     
     
@@ -1870,6 +4082,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnTmgRptBndsPrdEnd = mdctnRqstDsgInstrctnTmgRptBndsPrdEnd;
     }
     
+    public void addMdctnRqstDsgInstrctnTmgRptBndsPrdEnd(String mdctnRqstDsgInstrctnTmgRptBndsPrdEnd) {
+    	if( mdctnRqstDsgInstrctnTmgRptBndsPrdEnd != null ) {
+	    	if( this.mdctnRqstDsgInstrctnTmgRptBndsPrdEnd == null ) {
+	        	this.mdctnRqstDsgInstrctnTmgRptBndsPrdEnd = mdctnRqstDsgInstrctnTmgRptBndsPrdEnd;
+	        } else if(this.mdctnRqstDsgInstrctnTmgRptBndsPrdEnd.substring(this.mdctnRqstDsgInstrctnTmgRptBndsPrdEnd.length() - 1).equals("]") & mdctnRqstDsgInstrctnTmgRptBndsPrdEnd.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptBndsPrdEnd = this.mdctnRqstDsgInstrctnTmgRptBndsPrdEnd+ "," + mdctnRqstDsgInstrctnTmgRptBndsPrdEnd;
+	        } else if(mdctnRqstDsgInstrctnTmgRptBndsPrdEnd.equals("[") | mdctnRqstDsgInstrctnTmgRptBndsPrdEnd.equals("]") | this.mdctnRqstDsgInstrctnTmgRptBndsPrdEnd.substring(this.mdctnRqstDsgInstrctnTmgRptBndsPrdEnd.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptBndsPrdEnd = this.mdctnRqstDsgInstrctnTmgRptBndsPrdEnd+mdctnRqstDsgInstrctnTmgRptBndsPrdEnd;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnTmgRptBndsPrdEnd = this.mdctnRqstDsgInstrctnTmgRptBndsPrdEnd+ "," +mdctnRqstDsgInstrctnTmgRptBndsPrdEnd;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnTmgRptBndsPrdStrt() {
@@ -1878,6 +4104,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnTmgRptBndsPrdStrt(String mdctnRqstDsgInstrctnTmgRptBndsPrdStrt) {
         this.mdctnRqstDsgInstrctnTmgRptBndsPrdStrt = mdctnRqstDsgInstrctnTmgRptBndsPrdStrt;
+    }
+    
+    public void addMdctnRqstDsgInstrctnTmgRptBndsPrdStrt(String mdctnRqstDsgInstrctnTmgRptBndsPrdStrt) {
+    	if( mdctnRqstDsgInstrctnTmgRptBndsPrdStrt != null ) {
+	    	if( this.mdctnRqstDsgInstrctnTmgRptBndsPrdStrt == null ) {
+	        	this.mdctnRqstDsgInstrctnTmgRptBndsPrdStrt = mdctnRqstDsgInstrctnTmgRptBndsPrdStrt;
+	        } else if(this.mdctnRqstDsgInstrctnTmgRptBndsPrdStrt.substring(this.mdctnRqstDsgInstrctnTmgRptBndsPrdStrt.length() - 1).equals("]") & mdctnRqstDsgInstrctnTmgRptBndsPrdStrt.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptBndsPrdStrt = this.mdctnRqstDsgInstrctnTmgRptBndsPrdStrt+ "," + mdctnRqstDsgInstrctnTmgRptBndsPrdStrt;
+	        } else if(mdctnRqstDsgInstrctnTmgRptBndsPrdStrt.equals("[") | mdctnRqstDsgInstrctnTmgRptBndsPrdStrt.equals("]") | this.mdctnRqstDsgInstrctnTmgRptBndsPrdStrt.substring(this.mdctnRqstDsgInstrctnTmgRptBndsPrdStrt.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptBndsPrdStrt = this.mdctnRqstDsgInstrctnTmgRptBndsPrdStrt+mdctnRqstDsgInstrctnTmgRptBndsPrdStrt;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnTmgRptBndsPrdStrt = this.mdctnRqstDsgInstrctnTmgRptBndsPrdStrt+ "," +mdctnRqstDsgInstrctnTmgRptBndsPrdStrt;
+	        }
+        }
     }
     
     
@@ -1890,6 +4130,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnTmgRptBndsRngHiCd = mdctnRqstDsgInstrctnTmgRptBndsRngHiCd;
     }
     
+    public void addMdctnRqstDsgInstrctnTmgRptBndsRngHiCd(String mdctnRqstDsgInstrctnTmgRptBndsRngHiCd) {
+    	if( mdctnRqstDsgInstrctnTmgRptBndsRngHiCd != null ) {
+	    	if( this.mdctnRqstDsgInstrctnTmgRptBndsRngHiCd == null ) {
+	        	this.mdctnRqstDsgInstrctnTmgRptBndsRngHiCd = mdctnRqstDsgInstrctnTmgRptBndsRngHiCd;
+	        } else if(this.mdctnRqstDsgInstrctnTmgRptBndsRngHiCd.substring(this.mdctnRqstDsgInstrctnTmgRptBndsRngHiCd.length() - 1).equals("]") & mdctnRqstDsgInstrctnTmgRptBndsRngHiCd.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptBndsRngHiCd = this.mdctnRqstDsgInstrctnTmgRptBndsRngHiCd+ "," + mdctnRqstDsgInstrctnTmgRptBndsRngHiCd;
+	        } else if(mdctnRqstDsgInstrctnTmgRptBndsRngHiCd.equals("[") | mdctnRqstDsgInstrctnTmgRptBndsRngHiCd.equals("]") | this.mdctnRqstDsgInstrctnTmgRptBndsRngHiCd.substring(this.mdctnRqstDsgInstrctnTmgRptBndsRngHiCd.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptBndsRngHiCd = this.mdctnRqstDsgInstrctnTmgRptBndsRngHiCd+mdctnRqstDsgInstrctnTmgRptBndsRngHiCd;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnTmgRptBndsRngHiCd = this.mdctnRqstDsgInstrctnTmgRptBndsRngHiCd+ "," +mdctnRqstDsgInstrctnTmgRptBndsRngHiCd;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnTmgRptBndsRngHiCmprtr() {
@@ -1898,6 +4152,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnTmgRptBndsRngHiCmprtr(String mdctnRqstDsgInstrctnTmgRptBndsRngHiCmprtr) {
         this.mdctnRqstDsgInstrctnTmgRptBndsRngHiCmprtr = mdctnRqstDsgInstrctnTmgRptBndsRngHiCmprtr;
+    }
+    
+    public void addMdctnRqstDsgInstrctnTmgRptBndsRngHiCmprtr(String mdctnRqstDsgInstrctnTmgRptBndsRngHiCmprtr) {
+    	if( mdctnRqstDsgInstrctnTmgRptBndsRngHiCmprtr != null ) {
+	    	if( this.mdctnRqstDsgInstrctnTmgRptBndsRngHiCmprtr == null ) {
+	        	this.mdctnRqstDsgInstrctnTmgRptBndsRngHiCmprtr = mdctnRqstDsgInstrctnTmgRptBndsRngHiCmprtr;
+	        } else if(this.mdctnRqstDsgInstrctnTmgRptBndsRngHiCmprtr.substring(this.mdctnRqstDsgInstrctnTmgRptBndsRngHiCmprtr.length() - 1).equals("]") & mdctnRqstDsgInstrctnTmgRptBndsRngHiCmprtr.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptBndsRngHiCmprtr = this.mdctnRqstDsgInstrctnTmgRptBndsRngHiCmprtr+ "," + mdctnRqstDsgInstrctnTmgRptBndsRngHiCmprtr;
+	        } else if(mdctnRqstDsgInstrctnTmgRptBndsRngHiCmprtr.equals("[") | mdctnRqstDsgInstrctnTmgRptBndsRngHiCmprtr.equals("]") | this.mdctnRqstDsgInstrctnTmgRptBndsRngHiCmprtr.substring(this.mdctnRqstDsgInstrctnTmgRptBndsRngHiCmprtr.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptBndsRngHiCmprtr = this.mdctnRqstDsgInstrctnTmgRptBndsRngHiCmprtr+mdctnRqstDsgInstrctnTmgRptBndsRngHiCmprtr;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnTmgRptBndsRngHiCmprtr = this.mdctnRqstDsgInstrctnTmgRptBndsRngHiCmprtr+ "," +mdctnRqstDsgInstrctnTmgRptBndsRngHiCmprtr;
+	        }
+        }
     }
     
     
@@ -1910,6 +4178,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnTmgRptBndsRngHiSys = mdctnRqstDsgInstrctnTmgRptBndsRngHiSys;
     }
     
+    public void addMdctnRqstDsgInstrctnTmgRptBndsRngHiSys(String mdctnRqstDsgInstrctnTmgRptBndsRngHiSys) {
+    	if( mdctnRqstDsgInstrctnTmgRptBndsRngHiSys != null ) {
+	    	if( this.mdctnRqstDsgInstrctnTmgRptBndsRngHiSys == null ) {
+	        	this.mdctnRqstDsgInstrctnTmgRptBndsRngHiSys = mdctnRqstDsgInstrctnTmgRptBndsRngHiSys;
+	        } else if(this.mdctnRqstDsgInstrctnTmgRptBndsRngHiSys.substring(this.mdctnRqstDsgInstrctnTmgRptBndsRngHiSys.length() - 1).equals("]") & mdctnRqstDsgInstrctnTmgRptBndsRngHiSys.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptBndsRngHiSys = this.mdctnRqstDsgInstrctnTmgRptBndsRngHiSys+ "," + mdctnRqstDsgInstrctnTmgRptBndsRngHiSys;
+	        } else if(mdctnRqstDsgInstrctnTmgRptBndsRngHiSys.equals("[") | mdctnRqstDsgInstrctnTmgRptBndsRngHiSys.equals("]") | this.mdctnRqstDsgInstrctnTmgRptBndsRngHiSys.substring(this.mdctnRqstDsgInstrctnTmgRptBndsRngHiSys.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptBndsRngHiSys = this.mdctnRqstDsgInstrctnTmgRptBndsRngHiSys+mdctnRqstDsgInstrctnTmgRptBndsRngHiSys;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnTmgRptBndsRngHiSys = this.mdctnRqstDsgInstrctnTmgRptBndsRngHiSys+ "," +mdctnRqstDsgInstrctnTmgRptBndsRngHiSys;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnTmgRptBndsRngHiUnt() {
@@ -1918,6 +4200,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnTmgRptBndsRngHiUnt(String mdctnRqstDsgInstrctnTmgRptBndsRngHiUnt) {
         this.mdctnRqstDsgInstrctnTmgRptBndsRngHiUnt = mdctnRqstDsgInstrctnTmgRptBndsRngHiUnt;
+    }
+    
+    public void addMdctnRqstDsgInstrctnTmgRptBndsRngHiUnt(String mdctnRqstDsgInstrctnTmgRptBndsRngHiUnt) {
+    	if( mdctnRqstDsgInstrctnTmgRptBndsRngHiUnt != null ) {
+	    	if( this.mdctnRqstDsgInstrctnTmgRptBndsRngHiUnt == null ) {
+	        	this.mdctnRqstDsgInstrctnTmgRptBndsRngHiUnt = mdctnRqstDsgInstrctnTmgRptBndsRngHiUnt;
+	        } else if(this.mdctnRqstDsgInstrctnTmgRptBndsRngHiUnt.substring(this.mdctnRqstDsgInstrctnTmgRptBndsRngHiUnt.length() - 1).equals("]") & mdctnRqstDsgInstrctnTmgRptBndsRngHiUnt.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptBndsRngHiUnt = this.mdctnRqstDsgInstrctnTmgRptBndsRngHiUnt+ "," + mdctnRqstDsgInstrctnTmgRptBndsRngHiUnt;
+	        } else if(mdctnRqstDsgInstrctnTmgRptBndsRngHiUnt.equals("[") | mdctnRqstDsgInstrctnTmgRptBndsRngHiUnt.equals("]") | this.mdctnRqstDsgInstrctnTmgRptBndsRngHiUnt.substring(this.mdctnRqstDsgInstrctnTmgRptBndsRngHiUnt.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptBndsRngHiUnt = this.mdctnRqstDsgInstrctnTmgRptBndsRngHiUnt+mdctnRqstDsgInstrctnTmgRptBndsRngHiUnt;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnTmgRptBndsRngHiUnt = this.mdctnRqstDsgInstrctnTmgRptBndsRngHiUnt+ "," +mdctnRqstDsgInstrctnTmgRptBndsRngHiUnt;
+	        }
+        }
     }
     
     
@@ -1930,6 +4226,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnTmgRptBndsRngHiVl = mdctnRqstDsgInstrctnTmgRptBndsRngHiVl;
     }
     
+    public void addMdctnRqstDsgInstrctnTmgRptBndsRngHiVl(String mdctnRqstDsgInstrctnTmgRptBndsRngHiVl) {
+    	if( mdctnRqstDsgInstrctnTmgRptBndsRngHiVl != null ) {
+	    	if( this.mdctnRqstDsgInstrctnTmgRptBndsRngHiVl == null ) {
+	        	this.mdctnRqstDsgInstrctnTmgRptBndsRngHiVl = mdctnRqstDsgInstrctnTmgRptBndsRngHiVl;
+	        } else if(this.mdctnRqstDsgInstrctnTmgRptBndsRngHiVl.substring(this.mdctnRqstDsgInstrctnTmgRptBndsRngHiVl.length() - 1).equals("]") & mdctnRqstDsgInstrctnTmgRptBndsRngHiVl.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptBndsRngHiVl = this.mdctnRqstDsgInstrctnTmgRptBndsRngHiVl+ "," + mdctnRqstDsgInstrctnTmgRptBndsRngHiVl;
+	        } else if(mdctnRqstDsgInstrctnTmgRptBndsRngHiVl.equals("[") | mdctnRqstDsgInstrctnTmgRptBndsRngHiVl.equals("]") | this.mdctnRqstDsgInstrctnTmgRptBndsRngHiVl.substring(this.mdctnRqstDsgInstrctnTmgRptBndsRngHiVl.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptBndsRngHiVl = this.mdctnRqstDsgInstrctnTmgRptBndsRngHiVl+mdctnRqstDsgInstrctnTmgRptBndsRngHiVl;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnTmgRptBndsRngHiVl = this.mdctnRqstDsgInstrctnTmgRptBndsRngHiVl+ "," +mdctnRqstDsgInstrctnTmgRptBndsRngHiVl;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnTmgRptBndsRngLwCd() {
@@ -1938,6 +4248,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnTmgRptBndsRngLwCd(String mdctnRqstDsgInstrctnTmgRptBndsRngLwCd) {
         this.mdctnRqstDsgInstrctnTmgRptBndsRngLwCd = mdctnRqstDsgInstrctnTmgRptBndsRngLwCd;
+    }
+    
+    public void addMdctnRqstDsgInstrctnTmgRptBndsRngLwCd(String mdctnRqstDsgInstrctnTmgRptBndsRngLwCd) {
+    	if( mdctnRqstDsgInstrctnTmgRptBndsRngLwCd != null ) {
+	    	if( this.mdctnRqstDsgInstrctnTmgRptBndsRngLwCd == null ) {
+	        	this.mdctnRqstDsgInstrctnTmgRptBndsRngLwCd = mdctnRqstDsgInstrctnTmgRptBndsRngLwCd;
+	        } else if(this.mdctnRqstDsgInstrctnTmgRptBndsRngLwCd.substring(this.mdctnRqstDsgInstrctnTmgRptBndsRngLwCd.length() - 1).equals("]") & mdctnRqstDsgInstrctnTmgRptBndsRngLwCd.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptBndsRngLwCd = this.mdctnRqstDsgInstrctnTmgRptBndsRngLwCd+ "," + mdctnRqstDsgInstrctnTmgRptBndsRngLwCd;
+	        } else if(mdctnRqstDsgInstrctnTmgRptBndsRngLwCd.equals("[") | mdctnRqstDsgInstrctnTmgRptBndsRngLwCd.equals("]") | this.mdctnRqstDsgInstrctnTmgRptBndsRngLwCd.substring(this.mdctnRqstDsgInstrctnTmgRptBndsRngLwCd.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptBndsRngLwCd = this.mdctnRqstDsgInstrctnTmgRptBndsRngLwCd+mdctnRqstDsgInstrctnTmgRptBndsRngLwCd;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnTmgRptBndsRngLwCd = this.mdctnRqstDsgInstrctnTmgRptBndsRngLwCd+ "," +mdctnRqstDsgInstrctnTmgRptBndsRngLwCd;
+	        }
+        }
     }
     
     
@@ -1950,6 +4274,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnTmgRptBndsRngLwCmprtr = mdctnRqstDsgInstrctnTmgRptBndsRngLwCmprtr;
     }
     
+    public void addMdctnRqstDsgInstrctnTmgRptBndsRngLwCmprtr(String mdctnRqstDsgInstrctnTmgRptBndsRngLwCmprtr) {
+    	if( mdctnRqstDsgInstrctnTmgRptBndsRngLwCmprtr != null ) {
+	    	if( this.mdctnRqstDsgInstrctnTmgRptBndsRngLwCmprtr == null ) {
+	        	this.mdctnRqstDsgInstrctnTmgRptBndsRngLwCmprtr = mdctnRqstDsgInstrctnTmgRptBndsRngLwCmprtr;
+	        } else if(this.mdctnRqstDsgInstrctnTmgRptBndsRngLwCmprtr.substring(this.mdctnRqstDsgInstrctnTmgRptBndsRngLwCmprtr.length() - 1).equals("]") & mdctnRqstDsgInstrctnTmgRptBndsRngLwCmprtr.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptBndsRngLwCmprtr = this.mdctnRqstDsgInstrctnTmgRptBndsRngLwCmprtr+ "," + mdctnRqstDsgInstrctnTmgRptBndsRngLwCmprtr;
+	        } else if(mdctnRqstDsgInstrctnTmgRptBndsRngLwCmprtr.equals("[") | mdctnRqstDsgInstrctnTmgRptBndsRngLwCmprtr.equals("]") | this.mdctnRqstDsgInstrctnTmgRptBndsRngLwCmprtr.substring(this.mdctnRqstDsgInstrctnTmgRptBndsRngLwCmprtr.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptBndsRngLwCmprtr = this.mdctnRqstDsgInstrctnTmgRptBndsRngLwCmprtr+mdctnRqstDsgInstrctnTmgRptBndsRngLwCmprtr;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnTmgRptBndsRngLwCmprtr = this.mdctnRqstDsgInstrctnTmgRptBndsRngLwCmprtr+ "," +mdctnRqstDsgInstrctnTmgRptBndsRngLwCmprtr;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnTmgRptBndsRngLwSys() {
@@ -1958,6 +4296,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnTmgRptBndsRngLwSys(String mdctnRqstDsgInstrctnTmgRptBndsRngLwSys) {
         this.mdctnRqstDsgInstrctnTmgRptBndsRngLwSys = mdctnRqstDsgInstrctnTmgRptBndsRngLwSys;
+    }
+    
+    public void addMdctnRqstDsgInstrctnTmgRptBndsRngLwSys(String mdctnRqstDsgInstrctnTmgRptBndsRngLwSys) {
+    	if( mdctnRqstDsgInstrctnTmgRptBndsRngLwSys != null ) {
+	    	if( this.mdctnRqstDsgInstrctnTmgRptBndsRngLwSys == null ) {
+	        	this.mdctnRqstDsgInstrctnTmgRptBndsRngLwSys = mdctnRqstDsgInstrctnTmgRptBndsRngLwSys;
+	        } else if(this.mdctnRqstDsgInstrctnTmgRptBndsRngLwSys.substring(this.mdctnRqstDsgInstrctnTmgRptBndsRngLwSys.length() - 1).equals("]") & mdctnRqstDsgInstrctnTmgRptBndsRngLwSys.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptBndsRngLwSys = this.mdctnRqstDsgInstrctnTmgRptBndsRngLwSys+ "," + mdctnRqstDsgInstrctnTmgRptBndsRngLwSys;
+	        } else if(mdctnRqstDsgInstrctnTmgRptBndsRngLwSys.equals("[") | mdctnRqstDsgInstrctnTmgRptBndsRngLwSys.equals("]") | this.mdctnRqstDsgInstrctnTmgRptBndsRngLwSys.substring(this.mdctnRqstDsgInstrctnTmgRptBndsRngLwSys.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptBndsRngLwSys = this.mdctnRqstDsgInstrctnTmgRptBndsRngLwSys+mdctnRqstDsgInstrctnTmgRptBndsRngLwSys;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnTmgRptBndsRngLwSys = this.mdctnRqstDsgInstrctnTmgRptBndsRngLwSys+ "," +mdctnRqstDsgInstrctnTmgRptBndsRngLwSys;
+	        }
+        }
     }
     
     
@@ -1970,6 +4322,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnTmgRptBndsRngLwUnt = mdctnRqstDsgInstrctnTmgRptBndsRngLwUnt;
     }
     
+    public void addMdctnRqstDsgInstrctnTmgRptBndsRngLwUnt(String mdctnRqstDsgInstrctnTmgRptBndsRngLwUnt) {
+    	if( mdctnRqstDsgInstrctnTmgRptBndsRngLwUnt != null ) {
+	    	if( this.mdctnRqstDsgInstrctnTmgRptBndsRngLwUnt == null ) {
+	        	this.mdctnRqstDsgInstrctnTmgRptBndsRngLwUnt = mdctnRqstDsgInstrctnTmgRptBndsRngLwUnt;
+	        } else if(this.mdctnRqstDsgInstrctnTmgRptBndsRngLwUnt.substring(this.mdctnRqstDsgInstrctnTmgRptBndsRngLwUnt.length() - 1).equals("]") & mdctnRqstDsgInstrctnTmgRptBndsRngLwUnt.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptBndsRngLwUnt = this.mdctnRqstDsgInstrctnTmgRptBndsRngLwUnt+ "," + mdctnRqstDsgInstrctnTmgRptBndsRngLwUnt;
+	        } else if(mdctnRqstDsgInstrctnTmgRptBndsRngLwUnt.equals("[") | mdctnRqstDsgInstrctnTmgRptBndsRngLwUnt.equals("]") | this.mdctnRqstDsgInstrctnTmgRptBndsRngLwUnt.substring(this.mdctnRqstDsgInstrctnTmgRptBndsRngLwUnt.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptBndsRngLwUnt = this.mdctnRqstDsgInstrctnTmgRptBndsRngLwUnt+mdctnRqstDsgInstrctnTmgRptBndsRngLwUnt;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnTmgRptBndsRngLwUnt = this.mdctnRqstDsgInstrctnTmgRptBndsRngLwUnt+ "," +mdctnRqstDsgInstrctnTmgRptBndsRngLwUnt;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnTmgRptBndsRngLwVl() {
@@ -1978,6 +4344,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnTmgRptBndsRngLwVl(String mdctnRqstDsgInstrctnTmgRptBndsRngLwVl) {
         this.mdctnRqstDsgInstrctnTmgRptBndsRngLwVl = mdctnRqstDsgInstrctnTmgRptBndsRngLwVl;
+    }
+    
+    public void addMdctnRqstDsgInstrctnTmgRptBndsRngLwVl(String mdctnRqstDsgInstrctnTmgRptBndsRngLwVl) {
+    	if( mdctnRqstDsgInstrctnTmgRptBndsRngLwVl != null ) {
+	    	if( this.mdctnRqstDsgInstrctnTmgRptBndsRngLwVl == null ) {
+	        	this.mdctnRqstDsgInstrctnTmgRptBndsRngLwVl = mdctnRqstDsgInstrctnTmgRptBndsRngLwVl;
+	        } else if(this.mdctnRqstDsgInstrctnTmgRptBndsRngLwVl.substring(this.mdctnRqstDsgInstrctnTmgRptBndsRngLwVl.length() - 1).equals("]") & mdctnRqstDsgInstrctnTmgRptBndsRngLwVl.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptBndsRngLwVl = this.mdctnRqstDsgInstrctnTmgRptBndsRngLwVl+ "," + mdctnRqstDsgInstrctnTmgRptBndsRngLwVl;
+	        } else if(mdctnRqstDsgInstrctnTmgRptBndsRngLwVl.equals("[") | mdctnRqstDsgInstrctnTmgRptBndsRngLwVl.equals("]") | this.mdctnRqstDsgInstrctnTmgRptBndsRngLwVl.substring(this.mdctnRqstDsgInstrctnTmgRptBndsRngLwVl.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptBndsRngLwVl = this.mdctnRqstDsgInstrctnTmgRptBndsRngLwVl+mdctnRqstDsgInstrctnTmgRptBndsRngLwVl;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnTmgRptBndsRngLwVl = this.mdctnRqstDsgInstrctnTmgRptBndsRngLwVl+ "," +mdctnRqstDsgInstrctnTmgRptBndsRngLwVl;
+	        }
+        }
     }
     
     
@@ -1990,6 +4370,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnTmgRptCnt = mdctnRqstDsgInstrctnTmgRptCnt;
     }
     
+    public void addMdctnRqstDsgInstrctnTmgRptCnt(String mdctnRqstDsgInstrctnTmgRptCnt) {
+    	if( mdctnRqstDsgInstrctnTmgRptCnt != null ) {
+	    	if( this.mdctnRqstDsgInstrctnTmgRptCnt == null ) {
+	        	this.mdctnRqstDsgInstrctnTmgRptCnt = mdctnRqstDsgInstrctnTmgRptCnt;
+	        } else if(this.mdctnRqstDsgInstrctnTmgRptCnt.substring(this.mdctnRqstDsgInstrctnTmgRptCnt.length() - 1).equals("]") & mdctnRqstDsgInstrctnTmgRptCnt.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptCnt = this.mdctnRqstDsgInstrctnTmgRptCnt+ "," + mdctnRqstDsgInstrctnTmgRptCnt;
+	        } else if(mdctnRqstDsgInstrctnTmgRptCnt.equals("[") | mdctnRqstDsgInstrctnTmgRptCnt.equals("]") | this.mdctnRqstDsgInstrctnTmgRptCnt.substring(this.mdctnRqstDsgInstrctnTmgRptCnt.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptCnt = this.mdctnRqstDsgInstrctnTmgRptCnt+mdctnRqstDsgInstrctnTmgRptCnt;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnTmgRptCnt = this.mdctnRqstDsgInstrctnTmgRptCnt+ "," +mdctnRqstDsgInstrctnTmgRptCnt;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnTmgRptCntMx() {
@@ -1998,6 +4392,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnTmgRptCntMx(String mdctnRqstDsgInstrctnTmgRptCntMx) {
         this.mdctnRqstDsgInstrctnTmgRptCntMx = mdctnRqstDsgInstrctnTmgRptCntMx;
+    }
+    
+    public void addMdctnRqstDsgInstrctnTmgRptCntMx(String mdctnRqstDsgInstrctnTmgRptCntMx) {
+    	if( mdctnRqstDsgInstrctnTmgRptCntMx != null ) {
+	    	if( this.mdctnRqstDsgInstrctnTmgRptCntMx == null ) {
+	        	this.mdctnRqstDsgInstrctnTmgRptCntMx = mdctnRqstDsgInstrctnTmgRptCntMx;
+	        } else if(this.mdctnRqstDsgInstrctnTmgRptCntMx.substring(this.mdctnRqstDsgInstrctnTmgRptCntMx.length() - 1).equals("]") & mdctnRqstDsgInstrctnTmgRptCntMx.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptCntMx = this.mdctnRqstDsgInstrctnTmgRptCntMx+ "," + mdctnRqstDsgInstrctnTmgRptCntMx;
+	        } else if(mdctnRqstDsgInstrctnTmgRptCntMx.equals("[") | mdctnRqstDsgInstrctnTmgRptCntMx.equals("]") | this.mdctnRqstDsgInstrctnTmgRptCntMx.substring(this.mdctnRqstDsgInstrctnTmgRptCntMx.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptCntMx = this.mdctnRqstDsgInstrctnTmgRptCntMx+mdctnRqstDsgInstrctnTmgRptCntMx;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnTmgRptCntMx = this.mdctnRqstDsgInstrctnTmgRptCntMx+ "," +mdctnRqstDsgInstrctnTmgRptCntMx;
+	        }
+        }
     }
     
     
@@ -2010,6 +4418,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnTmgRptDayOfWeek = mdctnRqstDsgInstrctnTmgRptDayOfWeek;
     }
     
+    public void addMdctnRqstDsgInstrctnTmgRptDayOfWeek(String mdctnRqstDsgInstrctnTmgRptDayOfWeek) {
+    	if( mdctnRqstDsgInstrctnTmgRptDayOfWeek != null ) {
+	    	if( this.mdctnRqstDsgInstrctnTmgRptDayOfWeek == null ) {
+	        	this.mdctnRqstDsgInstrctnTmgRptDayOfWeek = mdctnRqstDsgInstrctnTmgRptDayOfWeek;
+	        } else if(this.mdctnRqstDsgInstrctnTmgRptDayOfWeek.substring(this.mdctnRqstDsgInstrctnTmgRptDayOfWeek.length() - 1).equals("]") & mdctnRqstDsgInstrctnTmgRptDayOfWeek.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptDayOfWeek = this.mdctnRqstDsgInstrctnTmgRptDayOfWeek+ "," + mdctnRqstDsgInstrctnTmgRptDayOfWeek;
+	        } else if(mdctnRqstDsgInstrctnTmgRptDayOfWeek.equals("[") | mdctnRqstDsgInstrctnTmgRptDayOfWeek.equals("]") | this.mdctnRqstDsgInstrctnTmgRptDayOfWeek.substring(this.mdctnRqstDsgInstrctnTmgRptDayOfWeek.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptDayOfWeek = this.mdctnRqstDsgInstrctnTmgRptDayOfWeek+mdctnRqstDsgInstrctnTmgRptDayOfWeek;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnTmgRptDayOfWeek = this.mdctnRqstDsgInstrctnTmgRptDayOfWeek+ "," +mdctnRqstDsgInstrctnTmgRptDayOfWeek;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnTmgRptDuration() {
@@ -2018,6 +4440,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnTmgRptDuration(String mdctnRqstDsgInstrctnTmgRptDuration) {
         this.mdctnRqstDsgInstrctnTmgRptDuration = mdctnRqstDsgInstrctnTmgRptDuration;
+    }
+    
+    public void addMdctnRqstDsgInstrctnTmgRptDuration(String mdctnRqstDsgInstrctnTmgRptDuration) {
+    	if( mdctnRqstDsgInstrctnTmgRptDuration != null ) {
+	    	if( this.mdctnRqstDsgInstrctnTmgRptDuration == null ) {
+	        	this.mdctnRqstDsgInstrctnTmgRptDuration = mdctnRqstDsgInstrctnTmgRptDuration;
+	        } else if(this.mdctnRqstDsgInstrctnTmgRptDuration.substring(this.mdctnRqstDsgInstrctnTmgRptDuration.length() - 1).equals("]") & mdctnRqstDsgInstrctnTmgRptDuration.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptDuration = this.mdctnRqstDsgInstrctnTmgRptDuration+ "," + mdctnRqstDsgInstrctnTmgRptDuration;
+	        } else if(mdctnRqstDsgInstrctnTmgRptDuration.equals("[") | mdctnRqstDsgInstrctnTmgRptDuration.equals("]") | this.mdctnRqstDsgInstrctnTmgRptDuration.substring(this.mdctnRqstDsgInstrctnTmgRptDuration.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptDuration = this.mdctnRqstDsgInstrctnTmgRptDuration+mdctnRqstDsgInstrctnTmgRptDuration;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnTmgRptDuration = this.mdctnRqstDsgInstrctnTmgRptDuration+ "," +mdctnRqstDsgInstrctnTmgRptDuration;
+	        }
+        }
     }
     
     
@@ -2030,6 +4466,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnTmgRptDurationMx = mdctnRqstDsgInstrctnTmgRptDurationMx;
     }
     
+    public void addMdctnRqstDsgInstrctnTmgRptDurationMx(String mdctnRqstDsgInstrctnTmgRptDurationMx) {
+    	if( mdctnRqstDsgInstrctnTmgRptDurationMx != null ) {
+	    	if( this.mdctnRqstDsgInstrctnTmgRptDurationMx == null ) {
+	        	this.mdctnRqstDsgInstrctnTmgRptDurationMx = mdctnRqstDsgInstrctnTmgRptDurationMx;
+	        } else if(this.mdctnRqstDsgInstrctnTmgRptDurationMx.substring(this.mdctnRqstDsgInstrctnTmgRptDurationMx.length() - 1).equals("]") & mdctnRqstDsgInstrctnTmgRptDurationMx.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptDurationMx = this.mdctnRqstDsgInstrctnTmgRptDurationMx+ "," + mdctnRqstDsgInstrctnTmgRptDurationMx;
+	        } else if(mdctnRqstDsgInstrctnTmgRptDurationMx.equals("[") | mdctnRqstDsgInstrctnTmgRptDurationMx.equals("]") | this.mdctnRqstDsgInstrctnTmgRptDurationMx.substring(this.mdctnRqstDsgInstrctnTmgRptDurationMx.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptDurationMx = this.mdctnRqstDsgInstrctnTmgRptDurationMx+mdctnRqstDsgInstrctnTmgRptDurationMx;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnTmgRptDurationMx = this.mdctnRqstDsgInstrctnTmgRptDurationMx+ "," +mdctnRqstDsgInstrctnTmgRptDurationMx;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnTmgRptDurationUnt() {
@@ -2038,6 +4488,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnTmgRptDurationUnt(String mdctnRqstDsgInstrctnTmgRptDurationUnt) {
         this.mdctnRqstDsgInstrctnTmgRptDurationUnt = mdctnRqstDsgInstrctnTmgRptDurationUnt;
+    }
+    
+    public void addMdctnRqstDsgInstrctnTmgRptDurationUnt(String mdctnRqstDsgInstrctnTmgRptDurationUnt) {
+    	if( mdctnRqstDsgInstrctnTmgRptDurationUnt != null ) {
+	    	if( this.mdctnRqstDsgInstrctnTmgRptDurationUnt == null ) {
+	        	this.mdctnRqstDsgInstrctnTmgRptDurationUnt = mdctnRqstDsgInstrctnTmgRptDurationUnt;
+	        } else if(this.mdctnRqstDsgInstrctnTmgRptDurationUnt.substring(this.mdctnRqstDsgInstrctnTmgRptDurationUnt.length() - 1).equals("]") & mdctnRqstDsgInstrctnTmgRptDurationUnt.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptDurationUnt = this.mdctnRqstDsgInstrctnTmgRptDurationUnt+ "," + mdctnRqstDsgInstrctnTmgRptDurationUnt;
+	        } else if(mdctnRqstDsgInstrctnTmgRptDurationUnt.equals("[") | mdctnRqstDsgInstrctnTmgRptDurationUnt.equals("]") | this.mdctnRqstDsgInstrctnTmgRptDurationUnt.substring(this.mdctnRqstDsgInstrctnTmgRptDurationUnt.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptDurationUnt = this.mdctnRqstDsgInstrctnTmgRptDurationUnt+mdctnRqstDsgInstrctnTmgRptDurationUnt;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnTmgRptDurationUnt = this.mdctnRqstDsgInstrctnTmgRptDurationUnt+ "," +mdctnRqstDsgInstrctnTmgRptDurationUnt;
+	        }
+        }
     }
     
     
@@ -2050,6 +4514,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnTmgRptFrqncy = mdctnRqstDsgInstrctnTmgRptFrqncy;
     }
     
+    public void addMdctnRqstDsgInstrctnTmgRptFrqncy(String mdctnRqstDsgInstrctnTmgRptFrqncy) {
+    	if( mdctnRqstDsgInstrctnTmgRptFrqncy != null ) {
+	    	if( this.mdctnRqstDsgInstrctnTmgRptFrqncy == null ) {
+	        	this.mdctnRqstDsgInstrctnTmgRptFrqncy = mdctnRqstDsgInstrctnTmgRptFrqncy;
+	        } else if(this.mdctnRqstDsgInstrctnTmgRptFrqncy.substring(this.mdctnRqstDsgInstrctnTmgRptFrqncy.length() - 1).equals("]") & mdctnRqstDsgInstrctnTmgRptFrqncy.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptFrqncy = this.mdctnRqstDsgInstrctnTmgRptFrqncy+ "," + mdctnRqstDsgInstrctnTmgRptFrqncy;
+	        } else if(mdctnRqstDsgInstrctnTmgRptFrqncy.equals("[") | mdctnRqstDsgInstrctnTmgRptFrqncy.equals("]") | this.mdctnRqstDsgInstrctnTmgRptFrqncy.substring(this.mdctnRqstDsgInstrctnTmgRptFrqncy.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptFrqncy = this.mdctnRqstDsgInstrctnTmgRptFrqncy+mdctnRqstDsgInstrctnTmgRptFrqncy;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnTmgRptFrqncy = this.mdctnRqstDsgInstrctnTmgRptFrqncy+ "," +mdctnRqstDsgInstrctnTmgRptFrqncy;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnTmgRptFrqncyMx() {
@@ -2058,6 +4536,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnTmgRptFrqncyMx(String mdctnRqstDsgInstrctnTmgRptFrqncyMx) {
         this.mdctnRqstDsgInstrctnTmgRptFrqncyMx = mdctnRqstDsgInstrctnTmgRptFrqncyMx;
+    }
+    
+    public void addMdctnRqstDsgInstrctnTmgRptFrqncyMx(String mdctnRqstDsgInstrctnTmgRptFrqncyMx) {
+    	if( mdctnRqstDsgInstrctnTmgRptFrqncyMx != null ) {
+	    	if( this.mdctnRqstDsgInstrctnTmgRptFrqncyMx == null ) {
+	        	this.mdctnRqstDsgInstrctnTmgRptFrqncyMx = mdctnRqstDsgInstrctnTmgRptFrqncyMx;
+	        } else if(this.mdctnRqstDsgInstrctnTmgRptFrqncyMx.substring(this.mdctnRqstDsgInstrctnTmgRptFrqncyMx.length() - 1).equals("]") & mdctnRqstDsgInstrctnTmgRptFrqncyMx.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptFrqncyMx = this.mdctnRqstDsgInstrctnTmgRptFrqncyMx+ "," + mdctnRqstDsgInstrctnTmgRptFrqncyMx;
+	        } else if(mdctnRqstDsgInstrctnTmgRptFrqncyMx.equals("[") | mdctnRqstDsgInstrctnTmgRptFrqncyMx.equals("]") | this.mdctnRqstDsgInstrctnTmgRptFrqncyMx.substring(this.mdctnRqstDsgInstrctnTmgRptFrqncyMx.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptFrqncyMx = this.mdctnRqstDsgInstrctnTmgRptFrqncyMx+mdctnRqstDsgInstrctnTmgRptFrqncyMx;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnTmgRptFrqncyMx = this.mdctnRqstDsgInstrctnTmgRptFrqncyMx+ "," +mdctnRqstDsgInstrctnTmgRptFrqncyMx;
+	        }
+        }
     }
     
     
@@ -2070,6 +4562,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnTmgRptOff = mdctnRqstDsgInstrctnTmgRptOff;
     }
     
+    public void addMdctnRqstDsgInstrctnTmgRptOff(String mdctnRqstDsgInstrctnTmgRptOff) {
+    	if( mdctnRqstDsgInstrctnTmgRptOff != null ) {
+	    	if( this.mdctnRqstDsgInstrctnTmgRptOff == null ) {
+	        	this.mdctnRqstDsgInstrctnTmgRptOff = mdctnRqstDsgInstrctnTmgRptOff;
+	        } else if(this.mdctnRqstDsgInstrctnTmgRptOff.substring(this.mdctnRqstDsgInstrctnTmgRptOff.length() - 1).equals("]") & mdctnRqstDsgInstrctnTmgRptOff.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptOff = this.mdctnRqstDsgInstrctnTmgRptOff+ "," + mdctnRqstDsgInstrctnTmgRptOff;
+	        } else if(mdctnRqstDsgInstrctnTmgRptOff.equals("[") | mdctnRqstDsgInstrctnTmgRptOff.equals("]") | this.mdctnRqstDsgInstrctnTmgRptOff.substring(this.mdctnRqstDsgInstrctnTmgRptOff.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptOff = this.mdctnRqstDsgInstrctnTmgRptOff+mdctnRqstDsgInstrctnTmgRptOff;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnTmgRptOff = this.mdctnRqstDsgInstrctnTmgRptOff+ "," +mdctnRqstDsgInstrctnTmgRptOff;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnTmgRptPrd() {
@@ -2078,6 +4584,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnTmgRptPrd(String mdctnRqstDsgInstrctnTmgRptPrd) {
         this.mdctnRqstDsgInstrctnTmgRptPrd = mdctnRqstDsgInstrctnTmgRptPrd;
+    }
+    
+    public void addMdctnRqstDsgInstrctnTmgRptPrd(String mdctnRqstDsgInstrctnTmgRptPrd) {
+    	if( mdctnRqstDsgInstrctnTmgRptPrd != null ) {
+	    	if( this.mdctnRqstDsgInstrctnTmgRptPrd == null ) {
+	        	this.mdctnRqstDsgInstrctnTmgRptPrd = mdctnRqstDsgInstrctnTmgRptPrd;
+	        } else if(this.mdctnRqstDsgInstrctnTmgRptPrd.substring(this.mdctnRqstDsgInstrctnTmgRptPrd.length() - 1).equals("]") & mdctnRqstDsgInstrctnTmgRptPrd.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptPrd = this.mdctnRqstDsgInstrctnTmgRptPrd+ "," + mdctnRqstDsgInstrctnTmgRptPrd;
+	        } else if(mdctnRqstDsgInstrctnTmgRptPrd.equals("[") | mdctnRqstDsgInstrctnTmgRptPrd.equals("]") | this.mdctnRqstDsgInstrctnTmgRptPrd.substring(this.mdctnRqstDsgInstrctnTmgRptPrd.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptPrd = this.mdctnRqstDsgInstrctnTmgRptPrd+mdctnRqstDsgInstrctnTmgRptPrd;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnTmgRptPrd = this.mdctnRqstDsgInstrctnTmgRptPrd+ "," +mdctnRqstDsgInstrctnTmgRptPrd;
+	        }
+        }
     }
     
     
@@ -2090,6 +4610,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnTmgRptPrdMx = mdctnRqstDsgInstrctnTmgRptPrdMx;
     }
     
+    public void addMdctnRqstDsgInstrctnTmgRptPrdMx(String mdctnRqstDsgInstrctnTmgRptPrdMx) {
+    	if( mdctnRqstDsgInstrctnTmgRptPrdMx != null ) {
+	    	if( this.mdctnRqstDsgInstrctnTmgRptPrdMx == null ) {
+	        	this.mdctnRqstDsgInstrctnTmgRptPrdMx = mdctnRqstDsgInstrctnTmgRptPrdMx;
+	        } else if(this.mdctnRqstDsgInstrctnTmgRptPrdMx.substring(this.mdctnRqstDsgInstrctnTmgRptPrdMx.length() - 1).equals("]") & mdctnRqstDsgInstrctnTmgRptPrdMx.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptPrdMx = this.mdctnRqstDsgInstrctnTmgRptPrdMx+ "," + mdctnRqstDsgInstrctnTmgRptPrdMx;
+	        } else if(mdctnRqstDsgInstrctnTmgRptPrdMx.equals("[") | mdctnRqstDsgInstrctnTmgRptPrdMx.equals("]") | this.mdctnRqstDsgInstrctnTmgRptPrdMx.substring(this.mdctnRqstDsgInstrctnTmgRptPrdMx.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptPrdMx = this.mdctnRqstDsgInstrctnTmgRptPrdMx+mdctnRqstDsgInstrctnTmgRptPrdMx;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnTmgRptPrdMx = this.mdctnRqstDsgInstrctnTmgRptPrdMx+ "," +mdctnRqstDsgInstrctnTmgRptPrdMx;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnTmgRptPrdUnt() {
@@ -2098,6 +4632,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnTmgRptPrdUnt(String mdctnRqstDsgInstrctnTmgRptPrdUnt) {
         this.mdctnRqstDsgInstrctnTmgRptPrdUnt = mdctnRqstDsgInstrctnTmgRptPrdUnt;
+    }
+    
+    public void addMdctnRqstDsgInstrctnTmgRptPrdUnt(String mdctnRqstDsgInstrctnTmgRptPrdUnt) {
+    	if( mdctnRqstDsgInstrctnTmgRptPrdUnt != null ) {
+	    	if( this.mdctnRqstDsgInstrctnTmgRptPrdUnt == null ) {
+	        	this.mdctnRqstDsgInstrctnTmgRptPrdUnt = mdctnRqstDsgInstrctnTmgRptPrdUnt;
+	        } else if(this.mdctnRqstDsgInstrctnTmgRptPrdUnt.substring(this.mdctnRqstDsgInstrctnTmgRptPrdUnt.length() - 1).equals("]") & mdctnRqstDsgInstrctnTmgRptPrdUnt.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptPrdUnt = this.mdctnRqstDsgInstrctnTmgRptPrdUnt+ "," + mdctnRqstDsgInstrctnTmgRptPrdUnt;
+	        } else if(mdctnRqstDsgInstrctnTmgRptPrdUnt.equals("[") | mdctnRqstDsgInstrctnTmgRptPrdUnt.equals("]") | this.mdctnRqstDsgInstrctnTmgRptPrdUnt.substring(this.mdctnRqstDsgInstrctnTmgRptPrdUnt.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptPrdUnt = this.mdctnRqstDsgInstrctnTmgRptPrdUnt+mdctnRqstDsgInstrctnTmgRptPrdUnt;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnTmgRptPrdUnt = this.mdctnRqstDsgInstrctnTmgRptPrdUnt+ "," +mdctnRqstDsgInstrctnTmgRptPrdUnt;
+	        }
+        }
     }
     
     
@@ -2110,6 +4658,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstDsgInstrctnTmgRptTimeOfDay = mdctnRqstDsgInstrctnTmgRptTimeOfDay;
     }
     
+    public void addMdctnRqstDsgInstrctnTmgRptTimeOfDay(String mdctnRqstDsgInstrctnTmgRptTimeOfDay) {
+    	if( mdctnRqstDsgInstrctnTmgRptTimeOfDay != null ) {
+	    	if( this.mdctnRqstDsgInstrctnTmgRptTimeOfDay == null ) {
+	        	this.mdctnRqstDsgInstrctnTmgRptTimeOfDay = mdctnRqstDsgInstrctnTmgRptTimeOfDay;
+	        } else if(this.mdctnRqstDsgInstrctnTmgRptTimeOfDay.substring(this.mdctnRqstDsgInstrctnTmgRptTimeOfDay.length() - 1).equals("]") & mdctnRqstDsgInstrctnTmgRptTimeOfDay.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptTimeOfDay = this.mdctnRqstDsgInstrctnTmgRptTimeOfDay+ "," + mdctnRqstDsgInstrctnTmgRptTimeOfDay;
+	        } else if(mdctnRqstDsgInstrctnTmgRptTimeOfDay.equals("[") | mdctnRqstDsgInstrctnTmgRptTimeOfDay.equals("]") | this.mdctnRqstDsgInstrctnTmgRptTimeOfDay.substring(this.mdctnRqstDsgInstrctnTmgRptTimeOfDay.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptTimeOfDay = this.mdctnRqstDsgInstrctnTmgRptTimeOfDay+mdctnRqstDsgInstrctnTmgRptTimeOfDay;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnTmgRptTimeOfDay = this.mdctnRqstDsgInstrctnTmgRptTimeOfDay+ "," +mdctnRqstDsgInstrctnTmgRptTimeOfDay;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstDsgInstrctnTmgRptWhen() {
@@ -2118,6 +4680,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstDsgInstrctnTmgRptWhen(String mdctnRqstDsgInstrctnTmgRptWhen) {
         this.mdctnRqstDsgInstrctnTmgRptWhen = mdctnRqstDsgInstrctnTmgRptWhen;
+    }
+    
+    public void addMdctnRqstDsgInstrctnTmgRptWhen(String mdctnRqstDsgInstrctnTmgRptWhen) {
+    	if( mdctnRqstDsgInstrctnTmgRptWhen != null ) {
+	    	if( this.mdctnRqstDsgInstrctnTmgRptWhen == null ) {
+	        	this.mdctnRqstDsgInstrctnTmgRptWhen = mdctnRqstDsgInstrctnTmgRptWhen;
+	        } else if(this.mdctnRqstDsgInstrctnTmgRptWhen.substring(this.mdctnRqstDsgInstrctnTmgRptWhen.length() - 1).equals("]") & mdctnRqstDsgInstrctnTmgRptWhen.equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptWhen = this.mdctnRqstDsgInstrctnTmgRptWhen+ "," + mdctnRqstDsgInstrctnTmgRptWhen;
+	        } else if(mdctnRqstDsgInstrctnTmgRptWhen.equals("[") | mdctnRqstDsgInstrctnTmgRptWhen.equals("]") | this.mdctnRqstDsgInstrctnTmgRptWhen.substring(this.mdctnRqstDsgInstrctnTmgRptWhen.length() - 1).equals("[")) {
+	        	this.mdctnRqstDsgInstrctnTmgRptWhen = this.mdctnRqstDsgInstrctnTmgRptWhen+mdctnRqstDsgInstrctnTmgRptWhen;
+	        } else  {
+	            this.mdctnRqstDsgInstrctnTmgRptWhen = this.mdctnRqstDsgInstrctnTmgRptWhen+ "," +mdctnRqstDsgInstrctnTmgRptWhen;
+	        }
+        }
     }
     
     
@@ -2130,6 +4706,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstEnc = mdctnRqstEnc;
     }
     
+    public void addMdctnRqstEnc(String mdctnRqstEnc) {
+    	if( mdctnRqstEnc != null ) {
+	    	if( this.mdctnRqstEnc == null ) {
+	        	this.mdctnRqstEnc = mdctnRqstEnc;
+	        } else if(this.mdctnRqstEnc.substring(this.mdctnRqstEnc.length() - 1).equals("]") & mdctnRqstEnc.equals("[")) {
+	        	this.mdctnRqstEnc = this.mdctnRqstEnc+ "," + mdctnRqstEnc;
+	        } else if(mdctnRqstEnc.equals("[") | mdctnRqstEnc.equals("]") | this.mdctnRqstEnc.substring(this.mdctnRqstEnc.length() - 1).equals("[")) {
+	        	this.mdctnRqstEnc = this.mdctnRqstEnc+mdctnRqstEnc;
+	        } else  {
+	            this.mdctnRqstEnc = this.mdctnRqstEnc+ "," +mdctnRqstEnc;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstEvntHis() {
@@ -2138,6 +4728,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstEvntHis(String mdctnRqstEvntHis) {
         this.mdctnRqstEvntHis = mdctnRqstEvntHis;
+    }
+    
+    public void addMdctnRqstEvntHis(String mdctnRqstEvntHis) {
+    	if( mdctnRqstEvntHis != null ) {
+	    	if( this.mdctnRqstEvntHis == null ) {
+	        	this.mdctnRqstEvntHis = mdctnRqstEvntHis;
+	        } else if(this.mdctnRqstEvntHis.substring(this.mdctnRqstEvntHis.length() - 1).equals("]") & mdctnRqstEvntHis.equals("[")) {
+	        	this.mdctnRqstEvntHis = this.mdctnRqstEvntHis+ "," + mdctnRqstEvntHis;
+	        } else if(mdctnRqstEvntHis.equals("[") | mdctnRqstEvntHis.equals("]") | this.mdctnRqstEvntHis.substring(this.mdctnRqstEvntHis.length() - 1).equals("[")) {
+	        	this.mdctnRqstEvntHis = this.mdctnRqstEvntHis+mdctnRqstEvntHis;
+	        } else  {
+	            this.mdctnRqstEvntHis = this.mdctnRqstEvntHis+ "," +mdctnRqstEvntHis;
+	        }
+        }
     }
     
     
@@ -2150,6 +4754,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstGrpIdAssigner = mdctnRqstGrpIdAssigner;
     }
     
+    public void addMdctnRqstGrpIdAssigner(String mdctnRqstGrpIdAssigner) {
+    	if( mdctnRqstGrpIdAssigner != null ) {
+	    	if( this.mdctnRqstGrpIdAssigner == null ) {
+	        	this.mdctnRqstGrpIdAssigner = mdctnRqstGrpIdAssigner;
+	        } else if(this.mdctnRqstGrpIdAssigner.substring(this.mdctnRqstGrpIdAssigner.length() - 1).equals("]") & mdctnRqstGrpIdAssigner.equals("[")) {
+	        	this.mdctnRqstGrpIdAssigner = this.mdctnRqstGrpIdAssigner+ "," + mdctnRqstGrpIdAssigner;
+	        } else if(mdctnRqstGrpIdAssigner.equals("[") | mdctnRqstGrpIdAssigner.equals("]") | this.mdctnRqstGrpIdAssigner.substring(this.mdctnRqstGrpIdAssigner.length() - 1).equals("[")) {
+	        	this.mdctnRqstGrpIdAssigner = this.mdctnRqstGrpIdAssigner+mdctnRqstGrpIdAssigner;
+	        } else  {
+	            this.mdctnRqstGrpIdAssigner = this.mdctnRqstGrpIdAssigner+ "," +mdctnRqstGrpIdAssigner;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstGrpIdPrdEnd() {
@@ -2158,6 +4776,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstGrpIdPrdEnd(String mdctnRqstGrpIdPrdEnd) {
         this.mdctnRqstGrpIdPrdEnd = mdctnRqstGrpIdPrdEnd;
+    }
+    
+    public void addMdctnRqstGrpIdPrdEnd(String mdctnRqstGrpIdPrdEnd) {
+    	if( mdctnRqstGrpIdPrdEnd != null ) {
+	    	if( this.mdctnRqstGrpIdPrdEnd == null ) {
+	        	this.mdctnRqstGrpIdPrdEnd = mdctnRqstGrpIdPrdEnd;
+	        } else if(this.mdctnRqstGrpIdPrdEnd.substring(this.mdctnRqstGrpIdPrdEnd.length() - 1).equals("]") & mdctnRqstGrpIdPrdEnd.equals("[")) {
+	        	this.mdctnRqstGrpIdPrdEnd = this.mdctnRqstGrpIdPrdEnd+ "," + mdctnRqstGrpIdPrdEnd;
+	        } else if(mdctnRqstGrpIdPrdEnd.equals("[") | mdctnRqstGrpIdPrdEnd.equals("]") | this.mdctnRqstGrpIdPrdEnd.substring(this.mdctnRqstGrpIdPrdEnd.length() - 1).equals("[")) {
+	        	this.mdctnRqstGrpIdPrdEnd = this.mdctnRqstGrpIdPrdEnd+mdctnRqstGrpIdPrdEnd;
+	        } else  {
+	            this.mdctnRqstGrpIdPrdEnd = this.mdctnRqstGrpIdPrdEnd+ "," +mdctnRqstGrpIdPrdEnd;
+	        }
+        }
     }
     
     
@@ -2170,6 +4802,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstGrpIdPrdStrt = mdctnRqstGrpIdPrdStrt;
     }
     
+    public void addMdctnRqstGrpIdPrdStrt(String mdctnRqstGrpIdPrdStrt) {
+    	if( mdctnRqstGrpIdPrdStrt != null ) {
+	    	if( this.mdctnRqstGrpIdPrdStrt == null ) {
+	        	this.mdctnRqstGrpIdPrdStrt = mdctnRqstGrpIdPrdStrt;
+	        } else if(this.mdctnRqstGrpIdPrdStrt.substring(this.mdctnRqstGrpIdPrdStrt.length() - 1).equals("]") & mdctnRqstGrpIdPrdStrt.equals("[")) {
+	        	this.mdctnRqstGrpIdPrdStrt = this.mdctnRqstGrpIdPrdStrt+ "," + mdctnRqstGrpIdPrdStrt;
+	        } else if(mdctnRqstGrpIdPrdStrt.equals("[") | mdctnRqstGrpIdPrdStrt.equals("]") | this.mdctnRqstGrpIdPrdStrt.substring(this.mdctnRqstGrpIdPrdStrt.length() - 1).equals("[")) {
+	        	this.mdctnRqstGrpIdPrdStrt = this.mdctnRqstGrpIdPrdStrt+mdctnRqstGrpIdPrdStrt;
+	        } else  {
+	            this.mdctnRqstGrpIdPrdStrt = this.mdctnRqstGrpIdPrdStrt+ "," +mdctnRqstGrpIdPrdStrt;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstGrpIdSys() {
@@ -2178,6 +4824,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstGrpIdSys(String mdctnRqstGrpIdSys) {
         this.mdctnRqstGrpIdSys = mdctnRqstGrpIdSys;
+    }
+    
+    public void addMdctnRqstGrpIdSys(String mdctnRqstGrpIdSys) {
+    	if( mdctnRqstGrpIdSys != null ) {
+	    	if( this.mdctnRqstGrpIdSys == null ) {
+	        	this.mdctnRqstGrpIdSys = mdctnRqstGrpIdSys;
+	        } else if(this.mdctnRqstGrpIdSys.substring(this.mdctnRqstGrpIdSys.length() - 1).equals("]") & mdctnRqstGrpIdSys.equals("[")) {
+	        	this.mdctnRqstGrpIdSys = this.mdctnRqstGrpIdSys+ "," + mdctnRqstGrpIdSys;
+	        } else if(mdctnRqstGrpIdSys.equals("[") | mdctnRqstGrpIdSys.equals("]") | this.mdctnRqstGrpIdSys.substring(this.mdctnRqstGrpIdSys.length() - 1).equals("[")) {
+	        	this.mdctnRqstGrpIdSys = this.mdctnRqstGrpIdSys+mdctnRqstGrpIdSys;
+	        } else  {
+	            this.mdctnRqstGrpIdSys = this.mdctnRqstGrpIdSys+ "," +mdctnRqstGrpIdSys;
+	        }
+        }
     }
     
     
@@ -2190,6 +4850,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstGrpIdTypCdgCd = mdctnRqstGrpIdTypCdgCd;
     }
     
+    public void addMdctnRqstGrpIdTypCdgCd(String mdctnRqstGrpIdTypCdgCd) {
+    	if( mdctnRqstGrpIdTypCdgCd != null ) {
+	    	if( this.mdctnRqstGrpIdTypCdgCd == null ) {
+	        	this.mdctnRqstGrpIdTypCdgCd = mdctnRqstGrpIdTypCdgCd;
+	        } else if(this.mdctnRqstGrpIdTypCdgCd.substring(this.mdctnRqstGrpIdTypCdgCd.length() - 1).equals("]") & mdctnRqstGrpIdTypCdgCd.equals("[")) {
+	        	this.mdctnRqstGrpIdTypCdgCd = this.mdctnRqstGrpIdTypCdgCd+ "," + mdctnRqstGrpIdTypCdgCd;
+	        } else if(mdctnRqstGrpIdTypCdgCd.equals("[") | mdctnRqstGrpIdTypCdgCd.equals("]") | this.mdctnRqstGrpIdTypCdgCd.substring(this.mdctnRqstGrpIdTypCdgCd.length() - 1).equals("[")) {
+	        	this.mdctnRqstGrpIdTypCdgCd = this.mdctnRqstGrpIdTypCdgCd+mdctnRqstGrpIdTypCdgCd;
+	        } else  {
+	            this.mdctnRqstGrpIdTypCdgCd = this.mdctnRqstGrpIdTypCdgCd+ "," +mdctnRqstGrpIdTypCdgCd;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstGrpIdTypCdgDsply() {
@@ -2198,6 +4872,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstGrpIdTypCdgDsply(String mdctnRqstGrpIdTypCdgDsply) {
         this.mdctnRqstGrpIdTypCdgDsply = mdctnRqstGrpIdTypCdgDsply;
+    }
+    
+    public void addMdctnRqstGrpIdTypCdgDsply(String mdctnRqstGrpIdTypCdgDsply) {
+    	if( mdctnRqstGrpIdTypCdgDsply != null ) {
+	    	if( this.mdctnRqstGrpIdTypCdgDsply == null ) {
+	        	this.mdctnRqstGrpIdTypCdgDsply = mdctnRqstGrpIdTypCdgDsply;
+	        } else if(this.mdctnRqstGrpIdTypCdgDsply.substring(this.mdctnRqstGrpIdTypCdgDsply.length() - 1).equals("]") & mdctnRqstGrpIdTypCdgDsply.equals("[")) {
+	        	this.mdctnRqstGrpIdTypCdgDsply = this.mdctnRqstGrpIdTypCdgDsply+ "," + mdctnRqstGrpIdTypCdgDsply;
+	        } else if(mdctnRqstGrpIdTypCdgDsply.equals("[") | mdctnRqstGrpIdTypCdgDsply.equals("]") | this.mdctnRqstGrpIdTypCdgDsply.substring(this.mdctnRqstGrpIdTypCdgDsply.length() - 1).equals("[")) {
+	        	this.mdctnRqstGrpIdTypCdgDsply = this.mdctnRqstGrpIdTypCdgDsply+mdctnRqstGrpIdTypCdgDsply;
+	        } else  {
+	            this.mdctnRqstGrpIdTypCdgDsply = this.mdctnRqstGrpIdTypCdgDsply+ "," +mdctnRqstGrpIdTypCdgDsply;
+	        }
+        }
     }
     
     
@@ -2210,6 +4898,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstGrpIdTypCdgSys = mdctnRqstGrpIdTypCdgSys;
     }
     
+    public void addMdctnRqstGrpIdTypCdgSys(String mdctnRqstGrpIdTypCdgSys) {
+    	if( mdctnRqstGrpIdTypCdgSys != null ) {
+	    	if( this.mdctnRqstGrpIdTypCdgSys == null ) {
+	        	this.mdctnRqstGrpIdTypCdgSys = mdctnRqstGrpIdTypCdgSys;
+	        } else if(this.mdctnRqstGrpIdTypCdgSys.substring(this.mdctnRqstGrpIdTypCdgSys.length() - 1).equals("]") & mdctnRqstGrpIdTypCdgSys.equals("[")) {
+	        	this.mdctnRqstGrpIdTypCdgSys = this.mdctnRqstGrpIdTypCdgSys+ "," + mdctnRqstGrpIdTypCdgSys;
+	        } else if(mdctnRqstGrpIdTypCdgSys.equals("[") | mdctnRqstGrpIdTypCdgSys.equals("]") | this.mdctnRqstGrpIdTypCdgSys.substring(this.mdctnRqstGrpIdTypCdgSys.length() - 1).equals("[")) {
+	        	this.mdctnRqstGrpIdTypCdgSys = this.mdctnRqstGrpIdTypCdgSys+mdctnRqstGrpIdTypCdgSys;
+	        } else  {
+	            this.mdctnRqstGrpIdTypCdgSys = this.mdctnRqstGrpIdTypCdgSys+ "," +mdctnRqstGrpIdTypCdgSys;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstGrpIdTypCdgUsrSltd() {
@@ -2218,6 +4920,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstGrpIdTypCdgUsrSltd(String mdctnRqstGrpIdTypCdgUsrSltd) {
         this.mdctnRqstGrpIdTypCdgUsrSltd = mdctnRqstGrpIdTypCdgUsrSltd;
+    }
+    
+    public void addMdctnRqstGrpIdTypCdgUsrSltd(String mdctnRqstGrpIdTypCdgUsrSltd) {
+    	if( mdctnRqstGrpIdTypCdgUsrSltd != null ) {
+	    	if( this.mdctnRqstGrpIdTypCdgUsrSltd == null ) {
+	        	this.mdctnRqstGrpIdTypCdgUsrSltd = mdctnRqstGrpIdTypCdgUsrSltd;
+	        } else if(this.mdctnRqstGrpIdTypCdgUsrSltd.substring(this.mdctnRqstGrpIdTypCdgUsrSltd.length() - 1).equals("]") & mdctnRqstGrpIdTypCdgUsrSltd.equals("[")) {
+	        	this.mdctnRqstGrpIdTypCdgUsrSltd = this.mdctnRqstGrpIdTypCdgUsrSltd+ "," + mdctnRqstGrpIdTypCdgUsrSltd;
+	        } else if(mdctnRqstGrpIdTypCdgUsrSltd.equals("[") | mdctnRqstGrpIdTypCdgUsrSltd.equals("]") | this.mdctnRqstGrpIdTypCdgUsrSltd.substring(this.mdctnRqstGrpIdTypCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.mdctnRqstGrpIdTypCdgUsrSltd = this.mdctnRqstGrpIdTypCdgUsrSltd+mdctnRqstGrpIdTypCdgUsrSltd;
+	        } else  {
+	            this.mdctnRqstGrpIdTypCdgUsrSltd = this.mdctnRqstGrpIdTypCdgUsrSltd+ "," +mdctnRqstGrpIdTypCdgUsrSltd;
+	        }
+        }
     }
     
     
@@ -2230,6 +4946,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstGrpIdTypCdgVrsn = mdctnRqstGrpIdTypCdgVrsn;
     }
     
+    public void addMdctnRqstGrpIdTypCdgVrsn(String mdctnRqstGrpIdTypCdgVrsn) {
+    	if( mdctnRqstGrpIdTypCdgVrsn != null ) {
+	    	if( this.mdctnRqstGrpIdTypCdgVrsn == null ) {
+	        	this.mdctnRqstGrpIdTypCdgVrsn = mdctnRqstGrpIdTypCdgVrsn;
+	        } else if(this.mdctnRqstGrpIdTypCdgVrsn.substring(this.mdctnRqstGrpIdTypCdgVrsn.length() - 1).equals("]") & mdctnRqstGrpIdTypCdgVrsn.equals("[")) {
+	        	this.mdctnRqstGrpIdTypCdgVrsn = this.mdctnRqstGrpIdTypCdgVrsn+ "," + mdctnRqstGrpIdTypCdgVrsn;
+	        } else if(mdctnRqstGrpIdTypCdgVrsn.equals("[") | mdctnRqstGrpIdTypCdgVrsn.equals("]") | this.mdctnRqstGrpIdTypCdgVrsn.substring(this.mdctnRqstGrpIdTypCdgVrsn.length() - 1).equals("[")) {
+	        	this.mdctnRqstGrpIdTypCdgVrsn = this.mdctnRqstGrpIdTypCdgVrsn+mdctnRqstGrpIdTypCdgVrsn;
+	        } else  {
+	            this.mdctnRqstGrpIdTypCdgVrsn = this.mdctnRqstGrpIdTypCdgVrsn+ "," +mdctnRqstGrpIdTypCdgVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstGrpIdTypTxt() {
@@ -2238,6 +4968,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstGrpIdTypTxt(String mdctnRqstGrpIdTypTxt) {
         this.mdctnRqstGrpIdTypTxt = mdctnRqstGrpIdTypTxt;
+    }
+    
+    public void addMdctnRqstGrpIdTypTxt(String mdctnRqstGrpIdTypTxt) {
+    	if( mdctnRqstGrpIdTypTxt != null ) {
+	    	if( this.mdctnRqstGrpIdTypTxt == null ) {
+	        	this.mdctnRqstGrpIdTypTxt = mdctnRqstGrpIdTypTxt;
+	        } else if(this.mdctnRqstGrpIdTypTxt.substring(this.mdctnRqstGrpIdTypTxt.length() - 1).equals("]") & mdctnRqstGrpIdTypTxt.equals("[")) {
+	        	this.mdctnRqstGrpIdTypTxt = this.mdctnRqstGrpIdTypTxt+ "," + mdctnRqstGrpIdTypTxt;
+	        } else if(mdctnRqstGrpIdTypTxt.equals("[") | mdctnRqstGrpIdTypTxt.equals("]") | this.mdctnRqstGrpIdTypTxt.substring(this.mdctnRqstGrpIdTypTxt.length() - 1).equals("[")) {
+	        	this.mdctnRqstGrpIdTypTxt = this.mdctnRqstGrpIdTypTxt+mdctnRqstGrpIdTypTxt;
+	        } else  {
+	            this.mdctnRqstGrpIdTypTxt = this.mdctnRqstGrpIdTypTxt+ "," +mdctnRqstGrpIdTypTxt;
+	        }
+        }
     }
     
     
@@ -2250,6 +4994,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstGrpIdUse = mdctnRqstGrpIdUse;
     }
     
+    public void addMdctnRqstGrpIdUse(String mdctnRqstGrpIdUse) {
+    	if( mdctnRqstGrpIdUse != null ) {
+	    	if( this.mdctnRqstGrpIdUse == null ) {
+	        	this.mdctnRqstGrpIdUse = mdctnRqstGrpIdUse;
+	        } else if(this.mdctnRqstGrpIdUse.substring(this.mdctnRqstGrpIdUse.length() - 1).equals("]") & mdctnRqstGrpIdUse.equals("[")) {
+	        	this.mdctnRqstGrpIdUse = this.mdctnRqstGrpIdUse+ "," + mdctnRqstGrpIdUse;
+	        } else if(mdctnRqstGrpIdUse.equals("[") | mdctnRqstGrpIdUse.equals("]") | this.mdctnRqstGrpIdUse.substring(this.mdctnRqstGrpIdUse.length() - 1).equals("[")) {
+	        	this.mdctnRqstGrpIdUse = this.mdctnRqstGrpIdUse+mdctnRqstGrpIdUse;
+	        } else  {
+	            this.mdctnRqstGrpIdUse = this.mdctnRqstGrpIdUse+ "," +mdctnRqstGrpIdUse;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstGrpIdVl() {
@@ -2258,6 +5016,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstGrpIdVl(String mdctnRqstGrpIdVl) {
         this.mdctnRqstGrpIdVl = mdctnRqstGrpIdVl;
+    }
+    
+    public void addMdctnRqstGrpIdVl(String mdctnRqstGrpIdVl) {
+    	if( mdctnRqstGrpIdVl != null ) {
+	    	if( this.mdctnRqstGrpIdVl == null ) {
+	        	this.mdctnRqstGrpIdVl = mdctnRqstGrpIdVl;
+	        } else if(this.mdctnRqstGrpIdVl.substring(this.mdctnRqstGrpIdVl.length() - 1).equals("]") & mdctnRqstGrpIdVl.equals("[")) {
+	        	this.mdctnRqstGrpIdVl = this.mdctnRqstGrpIdVl+ "," + mdctnRqstGrpIdVl;
+	        } else if(mdctnRqstGrpIdVl.equals("[") | mdctnRqstGrpIdVl.equals("]") | this.mdctnRqstGrpIdVl.substring(this.mdctnRqstGrpIdVl.length() - 1).equals("[")) {
+	        	this.mdctnRqstGrpIdVl = this.mdctnRqstGrpIdVl+mdctnRqstGrpIdVl;
+	        } else  {
+	            this.mdctnRqstGrpIdVl = this.mdctnRqstGrpIdVl+ "," +mdctnRqstGrpIdVl;
+	        }
+        }
     }
     
     
@@ -2270,6 +5042,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstIdAssigner = mdctnRqstIdAssigner;
     }
     
+    public void addMdctnRqstIdAssigner(String mdctnRqstIdAssigner) {
+    	if( mdctnRqstIdAssigner != null ) {
+	    	if( this.mdctnRqstIdAssigner == null ) {
+	        	this.mdctnRqstIdAssigner = mdctnRqstIdAssigner;
+	        } else if(this.mdctnRqstIdAssigner.substring(this.mdctnRqstIdAssigner.length() - 1).equals("]") & mdctnRqstIdAssigner.equals("[")) {
+	        	this.mdctnRqstIdAssigner = this.mdctnRqstIdAssigner+ "," + mdctnRqstIdAssigner;
+	        } else if(mdctnRqstIdAssigner.equals("[") | mdctnRqstIdAssigner.equals("]") | this.mdctnRqstIdAssigner.substring(this.mdctnRqstIdAssigner.length() - 1).equals("[")) {
+	        	this.mdctnRqstIdAssigner = this.mdctnRqstIdAssigner+mdctnRqstIdAssigner;
+	        } else  {
+	            this.mdctnRqstIdAssigner = this.mdctnRqstIdAssigner+ "," +mdctnRqstIdAssigner;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstIdPrdEnd() {
@@ -2278,6 +5064,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstIdPrdEnd(String mdctnRqstIdPrdEnd) {
         this.mdctnRqstIdPrdEnd = mdctnRqstIdPrdEnd;
+    }
+    
+    public void addMdctnRqstIdPrdEnd(String mdctnRqstIdPrdEnd) {
+    	if( mdctnRqstIdPrdEnd != null ) {
+	    	if( this.mdctnRqstIdPrdEnd == null ) {
+	        	this.mdctnRqstIdPrdEnd = mdctnRqstIdPrdEnd;
+	        } else if(this.mdctnRqstIdPrdEnd.substring(this.mdctnRqstIdPrdEnd.length() - 1).equals("]") & mdctnRqstIdPrdEnd.equals("[")) {
+	        	this.mdctnRqstIdPrdEnd = this.mdctnRqstIdPrdEnd+ "," + mdctnRqstIdPrdEnd;
+	        } else if(mdctnRqstIdPrdEnd.equals("[") | mdctnRqstIdPrdEnd.equals("]") | this.mdctnRqstIdPrdEnd.substring(this.mdctnRqstIdPrdEnd.length() - 1).equals("[")) {
+	        	this.mdctnRqstIdPrdEnd = this.mdctnRqstIdPrdEnd+mdctnRqstIdPrdEnd;
+	        } else  {
+	            this.mdctnRqstIdPrdEnd = this.mdctnRqstIdPrdEnd+ "," +mdctnRqstIdPrdEnd;
+	        }
+        }
     }
     
     
@@ -2290,6 +5090,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstIdPrdStrt = mdctnRqstIdPrdStrt;
     }
     
+    public void addMdctnRqstIdPrdStrt(String mdctnRqstIdPrdStrt) {
+    	if( mdctnRqstIdPrdStrt != null ) {
+	    	if( this.mdctnRqstIdPrdStrt == null ) {
+	        	this.mdctnRqstIdPrdStrt = mdctnRqstIdPrdStrt;
+	        } else if(this.mdctnRqstIdPrdStrt.substring(this.mdctnRqstIdPrdStrt.length() - 1).equals("]") & mdctnRqstIdPrdStrt.equals("[")) {
+	        	this.mdctnRqstIdPrdStrt = this.mdctnRqstIdPrdStrt+ "," + mdctnRqstIdPrdStrt;
+	        } else if(mdctnRqstIdPrdStrt.equals("[") | mdctnRqstIdPrdStrt.equals("]") | this.mdctnRqstIdPrdStrt.substring(this.mdctnRqstIdPrdStrt.length() - 1).equals("[")) {
+	        	this.mdctnRqstIdPrdStrt = this.mdctnRqstIdPrdStrt+mdctnRqstIdPrdStrt;
+	        } else  {
+	            this.mdctnRqstIdPrdStrt = this.mdctnRqstIdPrdStrt+ "," +mdctnRqstIdPrdStrt;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstIdSys() {
@@ -2298,6 +5112,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstIdSys(String mdctnRqstIdSys) {
         this.mdctnRqstIdSys = mdctnRqstIdSys;
+    }
+    
+    public void addMdctnRqstIdSys(String mdctnRqstIdSys) {
+    	if( mdctnRqstIdSys != null ) {
+	    	if( this.mdctnRqstIdSys == null ) {
+	        	this.mdctnRqstIdSys = mdctnRqstIdSys;
+	        } else if(this.mdctnRqstIdSys.substring(this.mdctnRqstIdSys.length() - 1).equals("]") & mdctnRqstIdSys.equals("[")) {
+	        	this.mdctnRqstIdSys = this.mdctnRqstIdSys+ "," + mdctnRqstIdSys;
+	        } else if(mdctnRqstIdSys.equals("[") | mdctnRqstIdSys.equals("]") | this.mdctnRqstIdSys.substring(this.mdctnRqstIdSys.length() - 1).equals("[")) {
+	        	this.mdctnRqstIdSys = this.mdctnRqstIdSys+mdctnRqstIdSys;
+	        } else  {
+	            this.mdctnRqstIdSys = this.mdctnRqstIdSys+ "," +mdctnRqstIdSys;
+	        }
+        }
     }
     
     
@@ -2310,6 +5138,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstIdTypCdgCd = mdctnRqstIdTypCdgCd;
     }
     
+    public void addMdctnRqstIdTypCdgCd(String mdctnRqstIdTypCdgCd) {
+    	if( mdctnRqstIdTypCdgCd != null ) {
+	    	if( this.mdctnRqstIdTypCdgCd == null ) {
+	        	this.mdctnRqstIdTypCdgCd = mdctnRqstIdTypCdgCd;
+	        } else if(this.mdctnRqstIdTypCdgCd.substring(this.mdctnRqstIdTypCdgCd.length() - 1).equals("]") & mdctnRqstIdTypCdgCd.equals("[")) {
+	        	this.mdctnRqstIdTypCdgCd = this.mdctnRqstIdTypCdgCd+ "," + mdctnRqstIdTypCdgCd;
+	        } else if(mdctnRqstIdTypCdgCd.equals("[") | mdctnRqstIdTypCdgCd.equals("]") | this.mdctnRqstIdTypCdgCd.substring(this.mdctnRqstIdTypCdgCd.length() - 1).equals("[")) {
+	        	this.mdctnRqstIdTypCdgCd = this.mdctnRqstIdTypCdgCd+mdctnRqstIdTypCdgCd;
+	        } else  {
+	            this.mdctnRqstIdTypCdgCd = this.mdctnRqstIdTypCdgCd+ "," +mdctnRqstIdTypCdgCd;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstIdTypCdgDsply() {
@@ -2318,6 +5160,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstIdTypCdgDsply(String mdctnRqstIdTypCdgDsply) {
         this.mdctnRqstIdTypCdgDsply = mdctnRqstIdTypCdgDsply;
+    }
+    
+    public void addMdctnRqstIdTypCdgDsply(String mdctnRqstIdTypCdgDsply) {
+    	if( mdctnRqstIdTypCdgDsply != null ) {
+	    	if( this.mdctnRqstIdTypCdgDsply == null ) {
+	        	this.mdctnRqstIdTypCdgDsply = mdctnRqstIdTypCdgDsply;
+	        } else if(this.mdctnRqstIdTypCdgDsply.substring(this.mdctnRqstIdTypCdgDsply.length() - 1).equals("]") & mdctnRqstIdTypCdgDsply.equals("[")) {
+	        	this.mdctnRqstIdTypCdgDsply = this.mdctnRqstIdTypCdgDsply+ "," + mdctnRqstIdTypCdgDsply;
+	        } else if(mdctnRqstIdTypCdgDsply.equals("[") | mdctnRqstIdTypCdgDsply.equals("]") | this.mdctnRqstIdTypCdgDsply.substring(this.mdctnRqstIdTypCdgDsply.length() - 1).equals("[")) {
+	        	this.mdctnRqstIdTypCdgDsply = this.mdctnRqstIdTypCdgDsply+mdctnRqstIdTypCdgDsply;
+	        } else  {
+	            this.mdctnRqstIdTypCdgDsply = this.mdctnRqstIdTypCdgDsply+ "," +mdctnRqstIdTypCdgDsply;
+	        }
+        }
     }
     
     
@@ -2330,6 +5186,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstIdTypCdgSys = mdctnRqstIdTypCdgSys;
     }
     
+    public void addMdctnRqstIdTypCdgSys(String mdctnRqstIdTypCdgSys) {
+    	if( mdctnRqstIdTypCdgSys != null ) {
+	    	if( this.mdctnRqstIdTypCdgSys == null ) {
+	        	this.mdctnRqstIdTypCdgSys = mdctnRqstIdTypCdgSys;
+	        } else if(this.mdctnRqstIdTypCdgSys.substring(this.mdctnRqstIdTypCdgSys.length() - 1).equals("]") & mdctnRqstIdTypCdgSys.equals("[")) {
+	        	this.mdctnRqstIdTypCdgSys = this.mdctnRqstIdTypCdgSys+ "," + mdctnRqstIdTypCdgSys;
+	        } else if(mdctnRqstIdTypCdgSys.equals("[") | mdctnRqstIdTypCdgSys.equals("]") | this.mdctnRqstIdTypCdgSys.substring(this.mdctnRqstIdTypCdgSys.length() - 1).equals("[")) {
+	        	this.mdctnRqstIdTypCdgSys = this.mdctnRqstIdTypCdgSys+mdctnRqstIdTypCdgSys;
+	        } else  {
+	            this.mdctnRqstIdTypCdgSys = this.mdctnRqstIdTypCdgSys+ "," +mdctnRqstIdTypCdgSys;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstIdTypCdgUsrSltd() {
@@ -2338,6 +5208,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstIdTypCdgUsrSltd(String mdctnRqstIdTypCdgUsrSltd) {
         this.mdctnRqstIdTypCdgUsrSltd = mdctnRqstIdTypCdgUsrSltd;
+    }
+    
+    public void addMdctnRqstIdTypCdgUsrSltd(String mdctnRqstIdTypCdgUsrSltd) {
+    	if( mdctnRqstIdTypCdgUsrSltd != null ) {
+	    	if( this.mdctnRqstIdTypCdgUsrSltd == null ) {
+	        	this.mdctnRqstIdTypCdgUsrSltd = mdctnRqstIdTypCdgUsrSltd;
+	        } else if(this.mdctnRqstIdTypCdgUsrSltd.substring(this.mdctnRqstIdTypCdgUsrSltd.length() - 1).equals("]") & mdctnRqstIdTypCdgUsrSltd.equals("[")) {
+	        	this.mdctnRqstIdTypCdgUsrSltd = this.mdctnRqstIdTypCdgUsrSltd+ "," + mdctnRqstIdTypCdgUsrSltd;
+	        } else if(mdctnRqstIdTypCdgUsrSltd.equals("[") | mdctnRqstIdTypCdgUsrSltd.equals("]") | this.mdctnRqstIdTypCdgUsrSltd.substring(this.mdctnRqstIdTypCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.mdctnRqstIdTypCdgUsrSltd = this.mdctnRqstIdTypCdgUsrSltd+mdctnRqstIdTypCdgUsrSltd;
+	        } else  {
+	            this.mdctnRqstIdTypCdgUsrSltd = this.mdctnRqstIdTypCdgUsrSltd+ "," +mdctnRqstIdTypCdgUsrSltd;
+	        }
+        }
     }
     
     
@@ -2350,6 +5234,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstIdTypCdgVrsn = mdctnRqstIdTypCdgVrsn;
     }
     
+    public void addMdctnRqstIdTypCdgVrsn(String mdctnRqstIdTypCdgVrsn) {
+    	if( mdctnRqstIdTypCdgVrsn != null ) {
+	    	if( this.mdctnRqstIdTypCdgVrsn == null ) {
+	        	this.mdctnRqstIdTypCdgVrsn = mdctnRqstIdTypCdgVrsn;
+	        } else if(this.mdctnRqstIdTypCdgVrsn.substring(this.mdctnRqstIdTypCdgVrsn.length() - 1).equals("]") & mdctnRqstIdTypCdgVrsn.equals("[")) {
+	        	this.mdctnRqstIdTypCdgVrsn = this.mdctnRqstIdTypCdgVrsn+ "," + mdctnRqstIdTypCdgVrsn;
+	        } else if(mdctnRqstIdTypCdgVrsn.equals("[") | mdctnRqstIdTypCdgVrsn.equals("]") | this.mdctnRqstIdTypCdgVrsn.substring(this.mdctnRqstIdTypCdgVrsn.length() - 1).equals("[")) {
+	        	this.mdctnRqstIdTypCdgVrsn = this.mdctnRqstIdTypCdgVrsn+mdctnRqstIdTypCdgVrsn;
+	        } else  {
+	            this.mdctnRqstIdTypCdgVrsn = this.mdctnRqstIdTypCdgVrsn+ "," +mdctnRqstIdTypCdgVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstIdTypTxt() {
@@ -2358,6 +5256,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstIdTypTxt(String mdctnRqstIdTypTxt) {
         this.mdctnRqstIdTypTxt = mdctnRqstIdTypTxt;
+    }
+    
+    public void addMdctnRqstIdTypTxt(String mdctnRqstIdTypTxt) {
+    	if( mdctnRqstIdTypTxt != null ) {
+	    	if( this.mdctnRqstIdTypTxt == null ) {
+	        	this.mdctnRqstIdTypTxt = mdctnRqstIdTypTxt;
+	        } else if(this.mdctnRqstIdTypTxt.substring(this.mdctnRqstIdTypTxt.length() - 1).equals("]") & mdctnRqstIdTypTxt.equals("[")) {
+	        	this.mdctnRqstIdTypTxt = this.mdctnRqstIdTypTxt+ "," + mdctnRqstIdTypTxt;
+	        } else if(mdctnRqstIdTypTxt.equals("[") | mdctnRqstIdTypTxt.equals("]") | this.mdctnRqstIdTypTxt.substring(this.mdctnRqstIdTypTxt.length() - 1).equals("[")) {
+	        	this.mdctnRqstIdTypTxt = this.mdctnRqstIdTypTxt+mdctnRqstIdTypTxt;
+	        } else  {
+	            this.mdctnRqstIdTypTxt = this.mdctnRqstIdTypTxt+ "," +mdctnRqstIdTypTxt;
+	        }
+        }
     }
     
     
@@ -2370,6 +5282,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstIdUse = mdctnRqstIdUse;
     }
     
+    public void addMdctnRqstIdUse(String mdctnRqstIdUse) {
+    	if( mdctnRqstIdUse != null ) {
+	    	if( this.mdctnRqstIdUse == null ) {
+	        	this.mdctnRqstIdUse = mdctnRqstIdUse;
+	        } else if(this.mdctnRqstIdUse.substring(this.mdctnRqstIdUse.length() - 1).equals("]") & mdctnRqstIdUse.equals("[")) {
+	        	this.mdctnRqstIdUse = this.mdctnRqstIdUse+ "," + mdctnRqstIdUse;
+	        } else if(mdctnRqstIdUse.equals("[") | mdctnRqstIdUse.equals("]") | this.mdctnRqstIdUse.substring(this.mdctnRqstIdUse.length() - 1).equals("[")) {
+	        	this.mdctnRqstIdUse = this.mdctnRqstIdUse+mdctnRqstIdUse;
+	        } else  {
+	            this.mdctnRqstIdUse = this.mdctnRqstIdUse+ "," +mdctnRqstIdUse;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstIdVl() {
@@ -2378,6 +5304,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstIdVl(String mdctnRqstIdVl) {
         this.mdctnRqstIdVl = mdctnRqstIdVl;
+    }
+    
+    public void addMdctnRqstIdVl(String mdctnRqstIdVl) {
+    	if( mdctnRqstIdVl != null ) {
+	    	if( this.mdctnRqstIdVl == null ) {
+	        	this.mdctnRqstIdVl = mdctnRqstIdVl;
+	        } else if(this.mdctnRqstIdVl.substring(this.mdctnRqstIdVl.length() - 1).equals("]") & mdctnRqstIdVl.equals("[")) {
+	        	this.mdctnRqstIdVl = this.mdctnRqstIdVl+ "," + mdctnRqstIdVl;
+	        } else if(mdctnRqstIdVl.equals("[") | mdctnRqstIdVl.equals("]") | this.mdctnRqstIdVl.substring(this.mdctnRqstIdVl.length() - 1).equals("[")) {
+	        	this.mdctnRqstIdVl = this.mdctnRqstIdVl+mdctnRqstIdVl;
+	        } else  {
+	            this.mdctnRqstIdVl = this.mdctnRqstIdVl+ "," +mdctnRqstIdVl;
+	        }
+        }
     }
     
     
@@ -2390,6 +5330,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstInstantiatesCanonical = mdctnRqstInstantiatesCanonical;
     }
     
+    public void addMdctnRqstInstantiatesCanonical(String mdctnRqstInstantiatesCanonical) {
+    	if( mdctnRqstInstantiatesCanonical != null ) {
+	    	if( this.mdctnRqstInstantiatesCanonical == null ) {
+	        	this.mdctnRqstInstantiatesCanonical = mdctnRqstInstantiatesCanonical;
+	        } else if(this.mdctnRqstInstantiatesCanonical.substring(this.mdctnRqstInstantiatesCanonical.length() - 1).equals("]") & mdctnRqstInstantiatesCanonical.equals("[")) {
+	        	this.mdctnRqstInstantiatesCanonical = this.mdctnRqstInstantiatesCanonical+ "," + mdctnRqstInstantiatesCanonical;
+	        } else if(mdctnRqstInstantiatesCanonical.equals("[") | mdctnRqstInstantiatesCanonical.equals("]") | this.mdctnRqstInstantiatesCanonical.substring(this.mdctnRqstInstantiatesCanonical.length() - 1).equals("[")) {
+	        	this.mdctnRqstInstantiatesCanonical = this.mdctnRqstInstantiatesCanonical+mdctnRqstInstantiatesCanonical;
+	        } else  {
+	            this.mdctnRqstInstantiatesCanonical = this.mdctnRqstInstantiatesCanonical+ "," +mdctnRqstInstantiatesCanonical;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstInstantiatesUri() {
@@ -2398,6 +5352,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstInstantiatesUri(String mdctnRqstInstantiatesUri) {
         this.mdctnRqstInstantiatesUri = mdctnRqstInstantiatesUri;
+    }
+    
+    public void addMdctnRqstInstantiatesUri(String mdctnRqstInstantiatesUri) {
+    	if( mdctnRqstInstantiatesUri != null ) {
+	    	if( this.mdctnRqstInstantiatesUri == null ) {
+	        	this.mdctnRqstInstantiatesUri = mdctnRqstInstantiatesUri;
+	        } else if(this.mdctnRqstInstantiatesUri.substring(this.mdctnRqstInstantiatesUri.length() - 1).equals("]") & mdctnRqstInstantiatesUri.equals("[")) {
+	        	this.mdctnRqstInstantiatesUri = this.mdctnRqstInstantiatesUri+ "," + mdctnRqstInstantiatesUri;
+	        } else if(mdctnRqstInstantiatesUri.equals("[") | mdctnRqstInstantiatesUri.equals("]") | this.mdctnRqstInstantiatesUri.substring(this.mdctnRqstInstantiatesUri.length() - 1).equals("[")) {
+	        	this.mdctnRqstInstantiatesUri = this.mdctnRqstInstantiatesUri+mdctnRqstInstantiatesUri;
+	        } else  {
+	            this.mdctnRqstInstantiatesUri = this.mdctnRqstInstantiatesUri+ "," +mdctnRqstInstantiatesUri;
+	        }
+        }
     }
     
     
@@ -2410,6 +5378,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstInsrnc = mdctnRqstInsrnc;
     }
     
+    public void addMdctnRqstInsrnc(String mdctnRqstInsrnc) {
+    	if( mdctnRqstInsrnc != null ) {
+	    	if( this.mdctnRqstInsrnc == null ) {
+	        	this.mdctnRqstInsrnc = mdctnRqstInsrnc;
+	        } else if(this.mdctnRqstInsrnc.substring(this.mdctnRqstInsrnc.length() - 1).equals("]") & mdctnRqstInsrnc.equals("[")) {
+	        	this.mdctnRqstInsrnc = this.mdctnRqstInsrnc+ "," + mdctnRqstInsrnc;
+	        } else if(mdctnRqstInsrnc.equals("[") | mdctnRqstInsrnc.equals("]") | this.mdctnRqstInsrnc.substring(this.mdctnRqstInsrnc.length() - 1).equals("[")) {
+	        	this.mdctnRqstInsrnc = this.mdctnRqstInsrnc+mdctnRqstInsrnc;
+	        } else  {
+	            this.mdctnRqstInsrnc = this.mdctnRqstInsrnc+ "," +mdctnRqstInsrnc;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstIntent() {
@@ -2418,6 +5400,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstIntent(String mdctnRqstIntent) {
         this.mdctnRqstIntent = mdctnRqstIntent;
+    }
+    
+    public void addMdctnRqstIntent(String mdctnRqstIntent) {
+    	if( mdctnRqstIntent != null ) {
+	    	if( this.mdctnRqstIntent == null ) {
+	        	this.mdctnRqstIntent = mdctnRqstIntent;
+	        } else if(this.mdctnRqstIntent.substring(this.mdctnRqstIntent.length() - 1).equals("]") & mdctnRqstIntent.equals("[")) {
+	        	this.mdctnRqstIntent = this.mdctnRqstIntent+ "," + mdctnRqstIntent;
+	        } else if(mdctnRqstIntent.equals("[") | mdctnRqstIntent.equals("]") | this.mdctnRqstIntent.substring(this.mdctnRqstIntent.length() - 1).equals("[")) {
+	        	this.mdctnRqstIntent = this.mdctnRqstIntent+mdctnRqstIntent;
+	        } else  {
+	            this.mdctnRqstIntent = this.mdctnRqstIntent+ "," +mdctnRqstIntent;
+	        }
+        }
     }
     
     
@@ -2430,6 +5426,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstMdctnCdbleCncptCdgCd = mdctnRqstMdctnCdbleCncptCdgCd;
     }
     
+    public void addMdctnRqstMdctnCdbleCncptCdgCd(String mdctnRqstMdctnCdbleCncptCdgCd) {
+    	if( mdctnRqstMdctnCdbleCncptCdgCd != null ) {
+	    	if( this.mdctnRqstMdctnCdbleCncptCdgCd == null ) {
+	        	this.mdctnRqstMdctnCdbleCncptCdgCd = mdctnRqstMdctnCdbleCncptCdgCd;
+	        } else if(this.mdctnRqstMdctnCdbleCncptCdgCd.substring(this.mdctnRqstMdctnCdbleCncptCdgCd.length() - 1).equals("]") & mdctnRqstMdctnCdbleCncptCdgCd.equals("[")) {
+	        	this.mdctnRqstMdctnCdbleCncptCdgCd = this.mdctnRqstMdctnCdbleCncptCdgCd+ "," + mdctnRqstMdctnCdbleCncptCdgCd;
+	        } else if(mdctnRqstMdctnCdbleCncptCdgCd.equals("[") | mdctnRqstMdctnCdbleCncptCdgCd.equals("]") | this.mdctnRqstMdctnCdbleCncptCdgCd.substring(this.mdctnRqstMdctnCdbleCncptCdgCd.length() - 1).equals("[")) {
+	        	this.mdctnRqstMdctnCdbleCncptCdgCd = this.mdctnRqstMdctnCdbleCncptCdgCd+mdctnRqstMdctnCdbleCncptCdgCd;
+	        } else  {
+	            this.mdctnRqstMdctnCdbleCncptCdgCd = this.mdctnRqstMdctnCdbleCncptCdgCd+ "," +mdctnRqstMdctnCdbleCncptCdgCd;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstMdctnCdbleCncptCdgDsply() {
@@ -2438,6 +5448,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstMdctnCdbleCncptCdgDsply(String mdctnRqstMdctnCdbleCncptCdgDsply) {
         this.mdctnRqstMdctnCdbleCncptCdgDsply = mdctnRqstMdctnCdbleCncptCdgDsply;
+    }
+    
+    public void addMdctnRqstMdctnCdbleCncptCdgDsply(String mdctnRqstMdctnCdbleCncptCdgDsply) {
+    	if( mdctnRqstMdctnCdbleCncptCdgDsply != null ) {
+	    	if( this.mdctnRqstMdctnCdbleCncptCdgDsply == null ) {
+	        	this.mdctnRqstMdctnCdbleCncptCdgDsply = mdctnRqstMdctnCdbleCncptCdgDsply;
+	        } else if(this.mdctnRqstMdctnCdbleCncptCdgDsply.substring(this.mdctnRqstMdctnCdbleCncptCdgDsply.length() - 1).equals("]") & mdctnRqstMdctnCdbleCncptCdgDsply.equals("[")) {
+	        	this.mdctnRqstMdctnCdbleCncptCdgDsply = this.mdctnRqstMdctnCdbleCncptCdgDsply+ "," + mdctnRqstMdctnCdbleCncptCdgDsply;
+	        } else if(mdctnRqstMdctnCdbleCncptCdgDsply.equals("[") | mdctnRqstMdctnCdbleCncptCdgDsply.equals("]") | this.mdctnRqstMdctnCdbleCncptCdgDsply.substring(this.mdctnRqstMdctnCdbleCncptCdgDsply.length() - 1).equals("[")) {
+	        	this.mdctnRqstMdctnCdbleCncptCdgDsply = this.mdctnRqstMdctnCdbleCncptCdgDsply+mdctnRqstMdctnCdbleCncptCdgDsply;
+	        } else  {
+	            this.mdctnRqstMdctnCdbleCncptCdgDsply = this.mdctnRqstMdctnCdbleCncptCdgDsply+ "," +mdctnRqstMdctnCdbleCncptCdgDsply;
+	        }
+        }
     }
     
     
@@ -2450,6 +5474,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstMdctnCdbleCncptCdgSys = mdctnRqstMdctnCdbleCncptCdgSys;
     }
     
+    public void addMdctnRqstMdctnCdbleCncptCdgSys(String mdctnRqstMdctnCdbleCncptCdgSys) {
+    	if( mdctnRqstMdctnCdbleCncptCdgSys != null ) {
+	    	if( this.mdctnRqstMdctnCdbleCncptCdgSys == null ) {
+	        	this.mdctnRqstMdctnCdbleCncptCdgSys = mdctnRqstMdctnCdbleCncptCdgSys;
+	        } else if(this.mdctnRqstMdctnCdbleCncptCdgSys.substring(this.mdctnRqstMdctnCdbleCncptCdgSys.length() - 1).equals("]") & mdctnRqstMdctnCdbleCncptCdgSys.equals("[")) {
+	        	this.mdctnRqstMdctnCdbleCncptCdgSys = this.mdctnRqstMdctnCdbleCncptCdgSys+ "," + mdctnRqstMdctnCdbleCncptCdgSys;
+	        } else if(mdctnRqstMdctnCdbleCncptCdgSys.equals("[") | mdctnRqstMdctnCdbleCncptCdgSys.equals("]") | this.mdctnRqstMdctnCdbleCncptCdgSys.substring(this.mdctnRqstMdctnCdbleCncptCdgSys.length() - 1).equals("[")) {
+	        	this.mdctnRqstMdctnCdbleCncptCdgSys = this.mdctnRqstMdctnCdbleCncptCdgSys+mdctnRqstMdctnCdbleCncptCdgSys;
+	        } else  {
+	            this.mdctnRqstMdctnCdbleCncptCdgSys = this.mdctnRqstMdctnCdbleCncptCdgSys+ "," +mdctnRqstMdctnCdbleCncptCdgSys;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstMdctnCdbleCncptCdgUsrSltd() {
@@ -2458,6 +5496,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstMdctnCdbleCncptCdgUsrSltd(String mdctnRqstMdctnCdbleCncptCdgUsrSltd) {
         this.mdctnRqstMdctnCdbleCncptCdgUsrSltd = mdctnRqstMdctnCdbleCncptCdgUsrSltd;
+    }
+    
+    public void addMdctnRqstMdctnCdbleCncptCdgUsrSltd(String mdctnRqstMdctnCdbleCncptCdgUsrSltd) {
+    	if( mdctnRqstMdctnCdbleCncptCdgUsrSltd != null ) {
+	    	if( this.mdctnRqstMdctnCdbleCncptCdgUsrSltd == null ) {
+	        	this.mdctnRqstMdctnCdbleCncptCdgUsrSltd = mdctnRqstMdctnCdbleCncptCdgUsrSltd;
+	        } else if(this.mdctnRqstMdctnCdbleCncptCdgUsrSltd.substring(this.mdctnRqstMdctnCdbleCncptCdgUsrSltd.length() - 1).equals("]") & mdctnRqstMdctnCdbleCncptCdgUsrSltd.equals("[")) {
+	        	this.mdctnRqstMdctnCdbleCncptCdgUsrSltd = this.mdctnRqstMdctnCdbleCncptCdgUsrSltd+ "," + mdctnRqstMdctnCdbleCncptCdgUsrSltd;
+	        } else if(mdctnRqstMdctnCdbleCncptCdgUsrSltd.equals("[") | mdctnRqstMdctnCdbleCncptCdgUsrSltd.equals("]") | this.mdctnRqstMdctnCdbleCncptCdgUsrSltd.substring(this.mdctnRqstMdctnCdbleCncptCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.mdctnRqstMdctnCdbleCncptCdgUsrSltd = this.mdctnRqstMdctnCdbleCncptCdgUsrSltd+mdctnRqstMdctnCdbleCncptCdgUsrSltd;
+	        } else  {
+	            this.mdctnRqstMdctnCdbleCncptCdgUsrSltd = this.mdctnRqstMdctnCdbleCncptCdgUsrSltd+ "," +mdctnRqstMdctnCdbleCncptCdgUsrSltd;
+	        }
+        }
     }
     
     
@@ -2470,6 +5522,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstMdctnCdbleCncptCdgVrsn = mdctnRqstMdctnCdbleCncptCdgVrsn;
     }
     
+    public void addMdctnRqstMdctnCdbleCncptCdgVrsn(String mdctnRqstMdctnCdbleCncptCdgVrsn) {
+    	if( mdctnRqstMdctnCdbleCncptCdgVrsn != null ) {
+	    	if( this.mdctnRqstMdctnCdbleCncptCdgVrsn == null ) {
+	        	this.mdctnRqstMdctnCdbleCncptCdgVrsn = mdctnRqstMdctnCdbleCncptCdgVrsn;
+	        } else if(this.mdctnRqstMdctnCdbleCncptCdgVrsn.substring(this.mdctnRqstMdctnCdbleCncptCdgVrsn.length() - 1).equals("]") & mdctnRqstMdctnCdbleCncptCdgVrsn.equals("[")) {
+	        	this.mdctnRqstMdctnCdbleCncptCdgVrsn = this.mdctnRqstMdctnCdbleCncptCdgVrsn+ "," + mdctnRqstMdctnCdbleCncptCdgVrsn;
+	        } else if(mdctnRqstMdctnCdbleCncptCdgVrsn.equals("[") | mdctnRqstMdctnCdbleCncptCdgVrsn.equals("]") | this.mdctnRqstMdctnCdbleCncptCdgVrsn.substring(this.mdctnRqstMdctnCdbleCncptCdgVrsn.length() - 1).equals("[")) {
+	        	this.mdctnRqstMdctnCdbleCncptCdgVrsn = this.mdctnRqstMdctnCdbleCncptCdgVrsn+mdctnRqstMdctnCdbleCncptCdgVrsn;
+	        } else  {
+	            this.mdctnRqstMdctnCdbleCncptCdgVrsn = this.mdctnRqstMdctnCdbleCncptCdgVrsn+ "," +mdctnRqstMdctnCdbleCncptCdgVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstMdctnCdbleCncptTxt() {
@@ -2478,6 +5544,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstMdctnCdbleCncptTxt(String mdctnRqstMdctnCdbleCncptTxt) {
         this.mdctnRqstMdctnCdbleCncptTxt = mdctnRqstMdctnCdbleCncptTxt;
+    }
+    
+    public void addMdctnRqstMdctnCdbleCncptTxt(String mdctnRqstMdctnCdbleCncptTxt) {
+    	if( mdctnRqstMdctnCdbleCncptTxt != null ) {
+	    	if( this.mdctnRqstMdctnCdbleCncptTxt == null ) {
+	        	this.mdctnRqstMdctnCdbleCncptTxt = mdctnRqstMdctnCdbleCncptTxt;
+	        } else if(this.mdctnRqstMdctnCdbleCncptTxt.substring(this.mdctnRqstMdctnCdbleCncptTxt.length() - 1).equals("]") & mdctnRqstMdctnCdbleCncptTxt.equals("[")) {
+	        	this.mdctnRqstMdctnCdbleCncptTxt = this.mdctnRqstMdctnCdbleCncptTxt+ "," + mdctnRqstMdctnCdbleCncptTxt;
+	        } else if(mdctnRqstMdctnCdbleCncptTxt.equals("[") | mdctnRqstMdctnCdbleCncptTxt.equals("]") | this.mdctnRqstMdctnCdbleCncptTxt.substring(this.mdctnRqstMdctnCdbleCncptTxt.length() - 1).equals("[")) {
+	        	this.mdctnRqstMdctnCdbleCncptTxt = this.mdctnRqstMdctnCdbleCncptTxt+mdctnRqstMdctnCdbleCncptTxt;
+	        } else  {
+	            this.mdctnRqstMdctnCdbleCncptTxt = this.mdctnRqstMdctnCdbleCncptTxt+ "," +mdctnRqstMdctnCdbleCncptTxt;
+	        }
+        }
     }
     
     
@@ -2490,6 +5570,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstMdctnRfrnc = mdctnRqstMdctnRfrnc;
     }
     
+    public void addMdctnRqstMdctnRfrnc(String mdctnRqstMdctnRfrnc) {
+    	if( mdctnRqstMdctnRfrnc != null ) {
+	    	if( this.mdctnRqstMdctnRfrnc == null ) {
+	        	this.mdctnRqstMdctnRfrnc = mdctnRqstMdctnRfrnc;
+	        } else if(this.mdctnRqstMdctnRfrnc.substring(this.mdctnRqstMdctnRfrnc.length() - 1).equals("]") & mdctnRqstMdctnRfrnc.equals("[")) {
+	        	this.mdctnRqstMdctnRfrnc = this.mdctnRqstMdctnRfrnc+ "," + mdctnRqstMdctnRfrnc;
+	        } else if(mdctnRqstMdctnRfrnc.equals("[") | mdctnRqstMdctnRfrnc.equals("]") | this.mdctnRqstMdctnRfrnc.substring(this.mdctnRqstMdctnRfrnc.length() - 1).equals("[")) {
+	        	this.mdctnRqstMdctnRfrnc = this.mdctnRqstMdctnRfrnc+mdctnRqstMdctnRfrnc;
+	        } else  {
+	            this.mdctnRqstMdctnRfrnc = this.mdctnRqstMdctnRfrnc+ "," +mdctnRqstMdctnRfrnc;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstNtAthrRfrnc() {
@@ -2498,6 +5592,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstNtAthrRfrnc(String mdctnRqstNtAthrRfrnc) {
         this.mdctnRqstNtAthrRfrnc = mdctnRqstNtAthrRfrnc;
+    }
+    
+    public void addMdctnRqstNtAthrRfrnc(String mdctnRqstNtAthrRfrnc) {
+    	if( mdctnRqstNtAthrRfrnc != null ) {
+	    	if( this.mdctnRqstNtAthrRfrnc == null ) {
+	        	this.mdctnRqstNtAthrRfrnc = mdctnRqstNtAthrRfrnc;
+	        } else if(this.mdctnRqstNtAthrRfrnc.substring(this.mdctnRqstNtAthrRfrnc.length() - 1).equals("]") & mdctnRqstNtAthrRfrnc.equals("[")) {
+	        	this.mdctnRqstNtAthrRfrnc = this.mdctnRqstNtAthrRfrnc+ "," + mdctnRqstNtAthrRfrnc;
+	        } else if(mdctnRqstNtAthrRfrnc.equals("[") | mdctnRqstNtAthrRfrnc.equals("]") | this.mdctnRqstNtAthrRfrnc.substring(this.mdctnRqstNtAthrRfrnc.length() - 1).equals("[")) {
+	        	this.mdctnRqstNtAthrRfrnc = this.mdctnRqstNtAthrRfrnc+mdctnRqstNtAthrRfrnc;
+	        } else  {
+	            this.mdctnRqstNtAthrRfrnc = this.mdctnRqstNtAthrRfrnc+ "," +mdctnRqstNtAthrRfrnc;
+	        }
+        }
     }
     
     
@@ -2510,6 +5618,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstNtAthrStrgTyp = mdctnRqstNtAthrStrgTyp;
     }
     
+    public void addMdctnRqstNtAthrStrgTyp(String mdctnRqstNtAthrStrgTyp) {
+    	if( mdctnRqstNtAthrStrgTyp != null ) {
+	    	if( this.mdctnRqstNtAthrStrgTyp == null ) {
+	        	this.mdctnRqstNtAthrStrgTyp = mdctnRqstNtAthrStrgTyp;
+	        } else if(this.mdctnRqstNtAthrStrgTyp.substring(this.mdctnRqstNtAthrStrgTyp.length() - 1).equals("]") & mdctnRqstNtAthrStrgTyp.equals("[")) {
+	        	this.mdctnRqstNtAthrStrgTyp = this.mdctnRqstNtAthrStrgTyp+ "," + mdctnRqstNtAthrStrgTyp;
+	        } else if(mdctnRqstNtAthrStrgTyp.equals("[") | mdctnRqstNtAthrStrgTyp.equals("]") | this.mdctnRqstNtAthrStrgTyp.substring(this.mdctnRqstNtAthrStrgTyp.length() - 1).equals("[")) {
+	        	this.mdctnRqstNtAthrStrgTyp = this.mdctnRqstNtAthrStrgTyp+mdctnRqstNtAthrStrgTyp;
+	        } else  {
+	            this.mdctnRqstNtAthrStrgTyp = this.mdctnRqstNtAthrStrgTyp+ "," +mdctnRqstNtAthrStrgTyp;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstNtTxt() {
@@ -2518,6 +5640,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstNtTxt(String mdctnRqstNtTxt) {
         this.mdctnRqstNtTxt = mdctnRqstNtTxt;
+    }
+    
+    public void addMdctnRqstNtTxt(String mdctnRqstNtTxt) {
+    	if( mdctnRqstNtTxt != null ) {
+	    	if( this.mdctnRqstNtTxt == null ) {
+	        	this.mdctnRqstNtTxt = mdctnRqstNtTxt;
+	        } else if(this.mdctnRqstNtTxt.substring(this.mdctnRqstNtTxt.length() - 1).equals("]") & mdctnRqstNtTxt.equals("[")) {
+	        	this.mdctnRqstNtTxt = this.mdctnRqstNtTxt+ "," + mdctnRqstNtTxt;
+	        } else if(mdctnRqstNtTxt.equals("[") | mdctnRqstNtTxt.equals("]") | this.mdctnRqstNtTxt.substring(this.mdctnRqstNtTxt.length() - 1).equals("[")) {
+	        	this.mdctnRqstNtTxt = this.mdctnRqstNtTxt+mdctnRqstNtTxt;
+	        } else  {
+	            this.mdctnRqstNtTxt = this.mdctnRqstNtTxt+ "," +mdctnRqstNtTxt;
+	        }
+        }
     }
     
     
@@ -2530,6 +5666,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstNtTime = mdctnRqstNtTime;
     }
     
+    public void addMdctnRqstNtTime(String mdctnRqstNtTime) {
+    	if( mdctnRqstNtTime != null ) {
+	    	if( this.mdctnRqstNtTime == null ) {
+	        	this.mdctnRqstNtTime = mdctnRqstNtTime;
+	        } else if(this.mdctnRqstNtTime.substring(this.mdctnRqstNtTime.length() - 1).equals("]") & mdctnRqstNtTime.equals("[")) {
+	        	this.mdctnRqstNtTime = this.mdctnRqstNtTime+ "," + mdctnRqstNtTime;
+	        } else if(mdctnRqstNtTime.equals("[") | mdctnRqstNtTime.equals("]") | this.mdctnRqstNtTime.substring(this.mdctnRqstNtTime.length() - 1).equals("[")) {
+	        	this.mdctnRqstNtTime = this.mdctnRqstNtTime+mdctnRqstNtTime;
+	        } else  {
+	            this.mdctnRqstNtTime = this.mdctnRqstNtTime+ "," +mdctnRqstNtTime;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstPrfrmr() {
@@ -2538,6 +5688,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstPrfrmr(String mdctnRqstPrfrmr) {
         this.mdctnRqstPrfrmr = mdctnRqstPrfrmr;
+    }
+    
+    public void addMdctnRqstPrfrmr(String mdctnRqstPrfrmr) {
+    	if( mdctnRqstPrfrmr != null ) {
+	    	if( this.mdctnRqstPrfrmr == null ) {
+	        	this.mdctnRqstPrfrmr = mdctnRqstPrfrmr;
+	        } else if(this.mdctnRqstPrfrmr.substring(this.mdctnRqstPrfrmr.length() - 1).equals("]") & mdctnRqstPrfrmr.equals("[")) {
+	        	this.mdctnRqstPrfrmr = this.mdctnRqstPrfrmr+ "," + mdctnRqstPrfrmr;
+	        } else if(mdctnRqstPrfrmr.equals("[") | mdctnRqstPrfrmr.equals("]") | this.mdctnRqstPrfrmr.substring(this.mdctnRqstPrfrmr.length() - 1).equals("[")) {
+	        	this.mdctnRqstPrfrmr = this.mdctnRqstPrfrmr+mdctnRqstPrfrmr;
+	        } else  {
+	            this.mdctnRqstPrfrmr = this.mdctnRqstPrfrmr+ "," +mdctnRqstPrfrmr;
+	        }
+        }
     }
     
     
@@ -2550,6 +5714,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstPrfrmrTypCdgCd = mdctnRqstPrfrmrTypCdgCd;
     }
     
+    public void addMdctnRqstPrfrmrTypCdgCd(String mdctnRqstPrfrmrTypCdgCd) {
+    	if( mdctnRqstPrfrmrTypCdgCd != null ) {
+	    	if( this.mdctnRqstPrfrmrTypCdgCd == null ) {
+	        	this.mdctnRqstPrfrmrTypCdgCd = mdctnRqstPrfrmrTypCdgCd;
+	        } else if(this.mdctnRqstPrfrmrTypCdgCd.substring(this.mdctnRqstPrfrmrTypCdgCd.length() - 1).equals("]") & mdctnRqstPrfrmrTypCdgCd.equals("[")) {
+	        	this.mdctnRqstPrfrmrTypCdgCd = this.mdctnRqstPrfrmrTypCdgCd+ "," + mdctnRqstPrfrmrTypCdgCd;
+	        } else if(mdctnRqstPrfrmrTypCdgCd.equals("[") | mdctnRqstPrfrmrTypCdgCd.equals("]") | this.mdctnRqstPrfrmrTypCdgCd.substring(this.mdctnRqstPrfrmrTypCdgCd.length() - 1).equals("[")) {
+	        	this.mdctnRqstPrfrmrTypCdgCd = this.mdctnRqstPrfrmrTypCdgCd+mdctnRqstPrfrmrTypCdgCd;
+	        } else  {
+	            this.mdctnRqstPrfrmrTypCdgCd = this.mdctnRqstPrfrmrTypCdgCd+ "," +mdctnRqstPrfrmrTypCdgCd;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstPrfrmrTypCdgDsply() {
@@ -2558,6 +5736,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstPrfrmrTypCdgDsply(String mdctnRqstPrfrmrTypCdgDsply) {
         this.mdctnRqstPrfrmrTypCdgDsply = mdctnRqstPrfrmrTypCdgDsply;
+    }
+    
+    public void addMdctnRqstPrfrmrTypCdgDsply(String mdctnRqstPrfrmrTypCdgDsply) {
+    	if( mdctnRqstPrfrmrTypCdgDsply != null ) {
+	    	if( this.mdctnRqstPrfrmrTypCdgDsply == null ) {
+	        	this.mdctnRqstPrfrmrTypCdgDsply = mdctnRqstPrfrmrTypCdgDsply;
+	        } else if(this.mdctnRqstPrfrmrTypCdgDsply.substring(this.mdctnRqstPrfrmrTypCdgDsply.length() - 1).equals("]") & mdctnRqstPrfrmrTypCdgDsply.equals("[")) {
+	        	this.mdctnRqstPrfrmrTypCdgDsply = this.mdctnRqstPrfrmrTypCdgDsply+ "," + mdctnRqstPrfrmrTypCdgDsply;
+	        } else if(mdctnRqstPrfrmrTypCdgDsply.equals("[") | mdctnRqstPrfrmrTypCdgDsply.equals("]") | this.mdctnRqstPrfrmrTypCdgDsply.substring(this.mdctnRqstPrfrmrTypCdgDsply.length() - 1).equals("[")) {
+	        	this.mdctnRqstPrfrmrTypCdgDsply = this.mdctnRqstPrfrmrTypCdgDsply+mdctnRqstPrfrmrTypCdgDsply;
+	        } else  {
+	            this.mdctnRqstPrfrmrTypCdgDsply = this.mdctnRqstPrfrmrTypCdgDsply+ "," +mdctnRqstPrfrmrTypCdgDsply;
+	        }
+        }
     }
     
     
@@ -2570,6 +5762,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstPrfrmrTypCdgSys = mdctnRqstPrfrmrTypCdgSys;
     }
     
+    public void addMdctnRqstPrfrmrTypCdgSys(String mdctnRqstPrfrmrTypCdgSys) {
+    	if( mdctnRqstPrfrmrTypCdgSys != null ) {
+	    	if( this.mdctnRqstPrfrmrTypCdgSys == null ) {
+	        	this.mdctnRqstPrfrmrTypCdgSys = mdctnRqstPrfrmrTypCdgSys;
+	        } else if(this.mdctnRqstPrfrmrTypCdgSys.substring(this.mdctnRqstPrfrmrTypCdgSys.length() - 1).equals("]") & mdctnRqstPrfrmrTypCdgSys.equals("[")) {
+	        	this.mdctnRqstPrfrmrTypCdgSys = this.mdctnRqstPrfrmrTypCdgSys+ "," + mdctnRqstPrfrmrTypCdgSys;
+	        } else if(mdctnRqstPrfrmrTypCdgSys.equals("[") | mdctnRqstPrfrmrTypCdgSys.equals("]") | this.mdctnRqstPrfrmrTypCdgSys.substring(this.mdctnRqstPrfrmrTypCdgSys.length() - 1).equals("[")) {
+	        	this.mdctnRqstPrfrmrTypCdgSys = this.mdctnRqstPrfrmrTypCdgSys+mdctnRqstPrfrmrTypCdgSys;
+	        } else  {
+	            this.mdctnRqstPrfrmrTypCdgSys = this.mdctnRqstPrfrmrTypCdgSys+ "," +mdctnRqstPrfrmrTypCdgSys;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstPrfrmrTypCdgUsrSltd() {
@@ -2578,6 +5784,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstPrfrmrTypCdgUsrSltd(String mdctnRqstPrfrmrTypCdgUsrSltd) {
         this.mdctnRqstPrfrmrTypCdgUsrSltd = mdctnRqstPrfrmrTypCdgUsrSltd;
+    }
+    
+    public void addMdctnRqstPrfrmrTypCdgUsrSltd(String mdctnRqstPrfrmrTypCdgUsrSltd) {
+    	if( mdctnRqstPrfrmrTypCdgUsrSltd != null ) {
+	    	if( this.mdctnRqstPrfrmrTypCdgUsrSltd == null ) {
+	        	this.mdctnRqstPrfrmrTypCdgUsrSltd = mdctnRqstPrfrmrTypCdgUsrSltd;
+	        } else if(this.mdctnRqstPrfrmrTypCdgUsrSltd.substring(this.mdctnRqstPrfrmrTypCdgUsrSltd.length() - 1).equals("]") & mdctnRqstPrfrmrTypCdgUsrSltd.equals("[")) {
+	        	this.mdctnRqstPrfrmrTypCdgUsrSltd = this.mdctnRqstPrfrmrTypCdgUsrSltd+ "," + mdctnRqstPrfrmrTypCdgUsrSltd;
+	        } else if(mdctnRqstPrfrmrTypCdgUsrSltd.equals("[") | mdctnRqstPrfrmrTypCdgUsrSltd.equals("]") | this.mdctnRqstPrfrmrTypCdgUsrSltd.substring(this.mdctnRqstPrfrmrTypCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.mdctnRqstPrfrmrTypCdgUsrSltd = this.mdctnRqstPrfrmrTypCdgUsrSltd+mdctnRqstPrfrmrTypCdgUsrSltd;
+	        } else  {
+	            this.mdctnRqstPrfrmrTypCdgUsrSltd = this.mdctnRqstPrfrmrTypCdgUsrSltd+ "," +mdctnRqstPrfrmrTypCdgUsrSltd;
+	        }
+        }
     }
     
     
@@ -2590,6 +5810,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstPrfrmrTypCdgVrsn = mdctnRqstPrfrmrTypCdgVrsn;
     }
     
+    public void addMdctnRqstPrfrmrTypCdgVrsn(String mdctnRqstPrfrmrTypCdgVrsn) {
+    	if( mdctnRqstPrfrmrTypCdgVrsn != null ) {
+	    	if( this.mdctnRqstPrfrmrTypCdgVrsn == null ) {
+	        	this.mdctnRqstPrfrmrTypCdgVrsn = mdctnRqstPrfrmrTypCdgVrsn;
+	        } else if(this.mdctnRqstPrfrmrTypCdgVrsn.substring(this.mdctnRqstPrfrmrTypCdgVrsn.length() - 1).equals("]") & mdctnRqstPrfrmrTypCdgVrsn.equals("[")) {
+	        	this.mdctnRqstPrfrmrTypCdgVrsn = this.mdctnRqstPrfrmrTypCdgVrsn+ "," + mdctnRqstPrfrmrTypCdgVrsn;
+	        } else if(mdctnRqstPrfrmrTypCdgVrsn.equals("[") | mdctnRqstPrfrmrTypCdgVrsn.equals("]") | this.mdctnRqstPrfrmrTypCdgVrsn.substring(this.mdctnRqstPrfrmrTypCdgVrsn.length() - 1).equals("[")) {
+	        	this.mdctnRqstPrfrmrTypCdgVrsn = this.mdctnRqstPrfrmrTypCdgVrsn+mdctnRqstPrfrmrTypCdgVrsn;
+	        } else  {
+	            this.mdctnRqstPrfrmrTypCdgVrsn = this.mdctnRqstPrfrmrTypCdgVrsn+ "," +mdctnRqstPrfrmrTypCdgVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstPrfrmrTypTxt() {
@@ -2598,6 +5832,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstPrfrmrTypTxt(String mdctnRqstPrfrmrTypTxt) {
         this.mdctnRqstPrfrmrTypTxt = mdctnRqstPrfrmrTypTxt;
+    }
+    
+    public void addMdctnRqstPrfrmrTypTxt(String mdctnRqstPrfrmrTypTxt) {
+    	if( mdctnRqstPrfrmrTypTxt != null ) {
+	    	if( this.mdctnRqstPrfrmrTypTxt == null ) {
+	        	this.mdctnRqstPrfrmrTypTxt = mdctnRqstPrfrmrTypTxt;
+	        } else if(this.mdctnRqstPrfrmrTypTxt.substring(this.mdctnRqstPrfrmrTypTxt.length() - 1).equals("]") & mdctnRqstPrfrmrTypTxt.equals("[")) {
+	        	this.mdctnRqstPrfrmrTypTxt = this.mdctnRqstPrfrmrTypTxt+ "," + mdctnRqstPrfrmrTypTxt;
+	        } else if(mdctnRqstPrfrmrTypTxt.equals("[") | mdctnRqstPrfrmrTypTxt.equals("]") | this.mdctnRqstPrfrmrTypTxt.substring(this.mdctnRqstPrfrmrTypTxt.length() - 1).equals("[")) {
+	        	this.mdctnRqstPrfrmrTypTxt = this.mdctnRqstPrfrmrTypTxt+mdctnRqstPrfrmrTypTxt;
+	        } else  {
+	            this.mdctnRqstPrfrmrTypTxt = this.mdctnRqstPrfrmrTypTxt+ "," +mdctnRqstPrfrmrTypTxt;
+	        }
+        }
     }
     
     
@@ -2610,6 +5858,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstPriorPrescription = mdctnRqstPriorPrescription;
     }
     
+    public void addMdctnRqstPriorPrescription(String mdctnRqstPriorPrescription) {
+    	if( mdctnRqstPriorPrescription != null ) {
+	    	if( this.mdctnRqstPriorPrescription == null ) {
+	        	this.mdctnRqstPriorPrescription = mdctnRqstPriorPrescription;
+	        } else if(this.mdctnRqstPriorPrescription.substring(this.mdctnRqstPriorPrescription.length() - 1).equals("]") & mdctnRqstPriorPrescription.equals("[")) {
+	        	this.mdctnRqstPriorPrescription = this.mdctnRqstPriorPrescription+ "," + mdctnRqstPriorPrescription;
+	        } else if(mdctnRqstPriorPrescription.equals("[") | mdctnRqstPriorPrescription.equals("]") | this.mdctnRqstPriorPrescription.substring(this.mdctnRqstPriorPrescription.length() - 1).equals("[")) {
+	        	this.mdctnRqstPriorPrescription = this.mdctnRqstPriorPrescription+mdctnRqstPriorPrescription;
+	        } else  {
+	            this.mdctnRqstPriorPrescription = this.mdctnRqstPriorPrescription+ "," +mdctnRqstPriorPrescription;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstPriority() {
@@ -2618,6 +5880,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstPriority(String mdctnRqstPriority) {
         this.mdctnRqstPriority = mdctnRqstPriority;
+    }
+    
+    public void addMdctnRqstPriority(String mdctnRqstPriority) {
+    	if( mdctnRqstPriority != null ) {
+	    	if( this.mdctnRqstPriority == null ) {
+	        	this.mdctnRqstPriority = mdctnRqstPriority;
+	        } else if(this.mdctnRqstPriority.substring(this.mdctnRqstPriority.length() - 1).equals("]") & mdctnRqstPriority.equals("[")) {
+	        	this.mdctnRqstPriority = this.mdctnRqstPriority+ "," + mdctnRqstPriority;
+	        } else if(mdctnRqstPriority.equals("[") | mdctnRqstPriority.equals("]") | this.mdctnRqstPriority.substring(this.mdctnRqstPriority.length() - 1).equals("[")) {
+	        	this.mdctnRqstPriority = this.mdctnRqstPriority+mdctnRqstPriority;
+	        } else  {
+	            this.mdctnRqstPriority = this.mdctnRqstPriority+ "," +mdctnRqstPriority;
+	        }
+        }
     }
     
     
@@ -2630,6 +5906,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstRsnCdCdgCd = mdctnRqstRsnCdCdgCd;
     }
     
+    public void addMdctnRqstRsnCdCdgCd(String mdctnRqstRsnCdCdgCd) {
+    	if( mdctnRqstRsnCdCdgCd != null ) {
+	    	if( this.mdctnRqstRsnCdCdgCd == null ) {
+	        	this.mdctnRqstRsnCdCdgCd = mdctnRqstRsnCdCdgCd;
+	        } else if(this.mdctnRqstRsnCdCdgCd.substring(this.mdctnRqstRsnCdCdgCd.length() - 1).equals("]") & mdctnRqstRsnCdCdgCd.equals("[")) {
+	        	this.mdctnRqstRsnCdCdgCd = this.mdctnRqstRsnCdCdgCd+ "," + mdctnRqstRsnCdCdgCd;
+	        } else if(mdctnRqstRsnCdCdgCd.equals("[") | mdctnRqstRsnCdCdgCd.equals("]") | this.mdctnRqstRsnCdCdgCd.substring(this.mdctnRqstRsnCdCdgCd.length() - 1).equals("[")) {
+	        	this.mdctnRqstRsnCdCdgCd = this.mdctnRqstRsnCdCdgCd+mdctnRqstRsnCdCdgCd;
+	        } else  {
+	            this.mdctnRqstRsnCdCdgCd = this.mdctnRqstRsnCdCdgCd+ "," +mdctnRqstRsnCdCdgCd;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstRsnCdCdgDsply() {
@@ -2638,6 +5928,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstRsnCdCdgDsply(String mdctnRqstRsnCdCdgDsply) {
         this.mdctnRqstRsnCdCdgDsply = mdctnRqstRsnCdCdgDsply;
+    }
+    
+    public void addMdctnRqstRsnCdCdgDsply(String mdctnRqstRsnCdCdgDsply) {
+    	if( mdctnRqstRsnCdCdgDsply != null ) {
+	    	if( this.mdctnRqstRsnCdCdgDsply == null ) {
+	        	this.mdctnRqstRsnCdCdgDsply = mdctnRqstRsnCdCdgDsply;
+	        } else if(this.mdctnRqstRsnCdCdgDsply.substring(this.mdctnRqstRsnCdCdgDsply.length() - 1).equals("]") & mdctnRqstRsnCdCdgDsply.equals("[")) {
+	        	this.mdctnRqstRsnCdCdgDsply = this.mdctnRqstRsnCdCdgDsply+ "," + mdctnRqstRsnCdCdgDsply;
+	        } else if(mdctnRqstRsnCdCdgDsply.equals("[") | mdctnRqstRsnCdCdgDsply.equals("]") | this.mdctnRqstRsnCdCdgDsply.substring(this.mdctnRqstRsnCdCdgDsply.length() - 1).equals("[")) {
+	        	this.mdctnRqstRsnCdCdgDsply = this.mdctnRqstRsnCdCdgDsply+mdctnRqstRsnCdCdgDsply;
+	        } else  {
+	            this.mdctnRqstRsnCdCdgDsply = this.mdctnRqstRsnCdCdgDsply+ "," +mdctnRqstRsnCdCdgDsply;
+	        }
+        }
     }
     
     
@@ -2650,6 +5954,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstRsnCdCdgSys = mdctnRqstRsnCdCdgSys;
     }
     
+    public void addMdctnRqstRsnCdCdgSys(String mdctnRqstRsnCdCdgSys) {
+    	if( mdctnRqstRsnCdCdgSys != null ) {
+	    	if( this.mdctnRqstRsnCdCdgSys == null ) {
+	        	this.mdctnRqstRsnCdCdgSys = mdctnRqstRsnCdCdgSys;
+	        } else if(this.mdctnRqstRsnCdCdgSys.substring(this.mdctnRqstRsnCdCdgSys.length() - 1).equals("]") & mdctnRqstRsnCdCdgSys.equals("[")) {
+	        	this.mdctnRqstRsnCdCdgSys = this.mdctnRqstRsnCdCdgSys+ "," + mdctnRqstRsnCdCdgSys;
+	        } else if(mdctnRqstRsnCdCdgSys.equals("[") | mdctnRqstRsnCdCdgSys.equals("]") | this.mdctnRqstRsnCdCdgSys.substring(this.mdctnRqstRsnCdCdgSys.length() - 1).equals("[")) {
+	        	this.mdctnRqstRsnCdCdgSys = this.mdctnRqstRsnCdCdgSys+mdctnRqstRsnCdCdgSys;
+	        } else  {
+	            this.mdctnRqstRsnCdCdgSys = this.mdctnRqstRsnCdCdgSys+ "," +mdctnRqstRsnCdCdgSys;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstRsnCdCdgUsrSltd() {
@@ -2658,6 +5976,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstRsnCdCdgUsrSltd(String mdctnRqstRsnCdCdgUsrSltd) {
         this.mdctnRqstRsnCdCdgUsrSltd = mdctnRqstRsnCdCdgUsrSltd;
+    }
+    
+    public void addMdctnRqstRsnCdCdgUsrSltd(String mdctnRqstRsnCdCdgUsrSltd) {
+    	if( mdctnRqstRsnCdCdgUsrSltd != null ) {
+	    	if( this.mdctnRqstRsnCdCdgUsrSltd == null ) {
+	        	this.mdctnRqstRsnCdCdgUsrSltd = mdctnRqstRsnCdCdgUsrSltd;
+	        } else if(this.mdctnRqstRsnCdCdgUsrSltd.substring(this.mdctnRqstRsnCdCdgUsrSltd.length() - 1).equals("]") & mdctnRqstRsnCdCdgUsrSltd.equals("[")) {
+	        	this.mdctnRqstRsnCdCdgUsrSltd = this.mdctnRqstRsnCdCdgUsrSltd+ "," + mdctnRqstRsnCdCdgUsrSltd;
+	        } else if(mdctnRqstRsnCdCdgUsrSltd.equals("[") | mdctnRqstRsnCdCdgUsrSltd.equals("]") | this.mdctnRqstRsnCdCdgUsrSltd.substring(this.mdctnRqstRsnCdCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.mdctnRqstRsnCdCdgUsrSltd = this.mdctnRqstRsnCdCdgUsrSltd+mdctnRqstRsnCdCdgUsrSltd;
+	        } else  {
+	            this.mdctnRqstRsnCdCdgUsrSltd = this.mdctnRqstRsnCdCdgUsrSltd+ "," +mdctnRqstRsnCdCdgUsrSltd;
+	        }
+        }
     }
     
     
@@ -2670,6 +6002,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstRsnCdCdgVrsn = mdctnRqstRsnCdCdgVrsn;
     }
     
+    public void addMdctnRqstRsnCdCdgVrsn(String mdctnRqstRsnCdCdgVrsn) {
+    	if( mdctnRqstRsnCdCdgVrsn != null ) {
+	    	if( this.mdctnRqstRsnCdCdgVrsn == null ) {
+	        	this.mdctnRqstRsnCdCdgVrsn = mdctnRqstRsnCdCdgVrsn;
+	        } else if(this.mdctnRqstRsnCdCdgVrsn.substring(this.mdctnRqstRsnCdCdgVrsn.length() - 1).equals("]") & mdctnRqstRsnCdCdgVrsn.equals("[")) {
+	        	this.mdctnRqstRsnCdCdgVrsn = this.mdctnRqstRsnCdCdgVrsn+ "," + mdctnRqstRsnCdCdgVrsn;
+	        } else if(mdctnRqstRsnCdCdgVrsn.equals("[") | mdctnRqstRsnCdCdgVrsn.equals("]") | this.mdctnRqstRsnCdCdgVrsn.substring(this.mdctnRqstRsnCdCdgVrsn.length() - 1).equals("[")) {
+	        	this.mdctnRqstRsnCdCdgVrsn = this.mdctnRqstRsnCdCdgVrsn+mdctnRqstRsnCdCdgVrsn;
+	        } else  {
+	            this.mdctnRqstRsnCdCdgVrsn = this.mdctnRqstRsnCdCdgVrsn+ "," +mdctnRqstRsnCdCdgVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstRsnCdTxt() {
@@ -2678,6 +6024,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstRsnCdTxt(String mdctnRqstRsnCdTxt) {
         this.mdctnRqstRsnCdTxt = mdctnRqstRsnCdTxt;
+    }
+    
+    public void addMdctnRqstRsnCdTxt(String mdctnRqstRsnCdTxt) {
+    	if( mdctnRqstRsnCdTxt != null ) {
+	    	if( this.mdctnRqstRsnCdTxt == null ) {
+	        	this.mdctnRqstRsnCdTxt = mdctnRqstRsnCdTxt;
+	        } else if(this.mdctnRqstRsnCdTxt.substring(this.mdctnRqstRsnCdTxt.length() - 1).equals("]") & mdctnRqstRsnCdTxt.equals("[")) {
+	        	this.mdctnRqstRsnCdTxt = this.mdctnRqstRsnCdTxt+ "," + mdctnRqstRsnCdTxt;
+	        } else if(mdctnRqstRsnCdTxt.equals("[") | mdctnRqstRsnCdTxt.equals("]") | this.mdctnRqstRsnCdTxt.substring(this.mdctnRqstRsnCdTxt.length() - 1).equals("[")) {
+	        	this.mdctnRqstRsnCdTxt = this.mdctnRqstRsnCdTxt+mdctnRqstRsnCdTxt;
+	        } else  {
+	            this.mdctnRqstRsnCdTxt = this.mdctnRqstRsnCdTxt+ "," +mdctnRqstRsnCdTxt;
+	        }
+        }
     }
     
     
@@ -2690,6 +6050,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstRsnRfrnc = mdctnRqstRsnRfrnc;
     }
     
+    public void addMdctnRqstRsnRfrnc(String mdctnRqstRsnRfrnc) {
+    	if( mdctnRqstRsnRfrnc != null ) {
+	    	if( this.mdctnRqstRsnRfrnc == null ) {
+	        	this.mdctnRqstRsnRfrnc = mdctnRqstRsnRfrnc;
+	        } else if(this.mdctnRqstRsnRfrnc.substring(this.mdctnRqstRsnRfrnc.length() - 1).equals("]") & mdctnRqstRsnRfrnc.equals("[")) {
+	        	this.mdctnRqstRsnRfrnc = this.mdctnRqstRsnRfrnc+ "," + mdctnRqstRsnRfrnc;
+	        } else if(mdctnRqstRsnRfrnc.equals("[") | mdctnRqstRsnRfrnc.equals("]") | this.mdctnRqstRsnRfrnc.substring(this.mdctnRqstRsnRfrnc.length() - 1).equals("[")) {
+	        	this.mdctnRqstRsnRfrnc = this.mdctnRqstRsnRfrnc+mdctnRqstRsnRfrnc;
+	        } else  {
+	            this.mdctnRqstRsnRfrnc = this.mdctnRqstRsnRfrnc+ "," +mdctnRqstRsnRfrnc;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstRecorder() {
@@ -2698,6 +6072,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstRecorder(String mdctnRqstRecorder) {
         this.mdctnRqstRecorder = mdctnRqstRecorder;
+    }
+    
+    public void addMdctnRqstRecorder(String mdctnRqstRecorder) {
+    	if( mdctnRqstRecorder != null ) {
+	    	if( this.mdctnRqstRecorder == null ) {
+	        	this.mdctnRqstRecorder = mdctnRqstRecorder;
+	        } else if(this.mdctnRqstRecorder.substring(this.mdctnRqstRecorder.length() - 1).equals("]") & mdctnRqstRecorder.equals("[")) {
+	        	this.mdctnRqstRecorder = this.mdctnRqstRecorder+ "," + mdctnRqstRecorder;
+	        } else if(mdctnRqstRecorder.equals("[") | mdctnRqstRecorder.equals("]") | this.mdctnRqstRecorder.substring(this.mdctnRqstRecorder.length() - 1).equals("[")) {
+	        	this.mdctnRqstRecorder = this.mdctnRqstRecorder+mdctnRqstRecorder;
+	        } else  {
+	            this.mdctnRqstRecorder = this.mdctnRqstRecorder+ "," +mdctnRqstRecorder;
+	        }
+        }
     }
     
     
@@ -2710,6 +6098,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstRptedBooleanTyp = mdctnRqstRptedBooleanTyp;
     }
     
+    public void addMdctnRqstRptedBooleanTyp(String mdctnRqstRptedBooleanTyp) {
+    	if( mdctnRqstRptedBooleanTyp != null ) {
+	    	if( this.mdctnRqstRptedBooleanTyp == null ) {
+	        	this.mdctnRqstRptedBooleanTyp = mdctnRqstRptedBooleanTyp;
+	        } else if(this.mdctnRqstRptedBooleanTyp.substring(this.mdctnRqstRptedBooleanTyp.length() - 1).equals("]") & mdctnRqstRptedBooleanTyp.equals("[")) {
+	        	this.mdctnRqstRptedBooleanTyp = this.mdctnRqstRptedBooleanTyp+ "," + mdctnRqstRptedBooleanTyp;
+	        } else if(mdctnRqstRptedBooleanTyp.equals("[") | mdctnRqstRptedBooleanTyp.equals("]") | this.mdctnRqstRptedBooleanTyp.substring(this.mdctnRqstRptedBooleanTyp.length() - 1).equals("[")) {
+	        	this.mdctnRqstRptedBooleanTyp = this.mdctnRqstRptedBooleanTyp+mdctnRqstRptedBooleanTyp;
+	        } else  {
+	            this.mdctnRqstRptedBooleanTyp = this.mdctnRqstRptedBooleanTyp+ "," +mdctnRqstRptedBooleanTyp;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstRptedRfrnc() {
@@ -2718,6 +6120,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstRptedRfrnc(String mdctnRqstRptedRfrnc) {
         this.mdctnRqstRptedRfrnc = mdctnRqstRptedRfrnc;
+    }
+    
+    public void addMdctnRqstRptedRfrnc(String mdctnRqstRptedRfrnc) {
+    	if( mdctnRqstRptedRfrnc != null ) {
+	    	if( this.mdctnRqstRptedRfrnc == null ) {
+	        	this.mdctnRqstRptedRfrnc = mdctnRqstRptedRfrnc;
+	        } else if(this.mdctnRqstRptedRfrnc.substring(this.mdctnRqstRptedRfrnc.length() - 1).equals("]") & mdctnRqstRptedRfrnc.equals("[")) {
+	        	this.mdctnRqstRptedRfrnc = this.mdctnRqstRptedRfrnc+ "," + mdctnRqstRptedRfrnc;
+	        } else if(mdctnRqstRptedRfrnc.equals("[") | mdctnRqstRptedRfrnc.equals("]") | this.mdctnRqstRptedRfrnc.substring(this.mdctnRqstRptedRfrnc.length() - 1).equals("[")) {
+	        	this.mdctnRqstRptedRfrnc = this.mdctnRqstRptedRfrnc+mdctnRqstRptedRfrnc;
+	        } else  {
+	            this.mdctnRqstRptedRfrnc = this.mdctnRqstRptedRfrnc+ "," +mdctnRqstRptedRfrnc;
+	        }
+        }
     }
     
     
@@ -2730,6 +6146,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstRqster = mdctnRqstRqster;
     }
     
+    public void addMdctnRqstRqster(String mdctnRqstRqster) {
+    	if( mdctnRqstRqster != null ) {
+	    	if( this.mdctnRqstRqster == null ) {
+	        	this.mdctnRqstRqster = mdctnRqstRqster;
+	        } else if(this.mdctnRqstRqster.substring(this.mdctnRqstRqster.length() - 1).equals("]") & mdctnRqstRqster.equals("[")) {
+	        	this.mdctnRqstRqster = this.mdctnRqstRqster+ "," + mdctnRqstRqster;
+	        } else if(mdctnRqstRqster.equals("[") | mdctnRqstRqster.equals("]") | this.mdctnRqstRqster.substring(this.mdctnRqstRqster.length() - 1).equals("[")) {
+	        	this.mdctnRqstRqster = this.mdctnRqstRqster+mdctnRqstRqster;
+	        } else  {
+	            this.mdctnRqstRqster = this.mdctnRqstRqster+ "," +mdctnRqstRqster;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstSts() {
@@ -2738,6 +6168,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstSts(String mdctnRqstSts) {
         this.mdctnRqstSts = mdctnRqstSts;
+    }
+    
+    public void addMdctnRqstSts(String mdctnRqstSts) {
+    	if( mdctnRqstSts != null ) {
+	    	if( this.mdctnRqstSts == null ) {
+	        	this.mdctnRqstSts = mdctnRqstSts;
+	        } else if(this.mdctnRqstSts.substring(this.mdctnRqstSts.length() - 1).equals("]") & mdctnRqstSts.equals("[")) {
+	        	this.mdctnRqstSts = this.mdctnRqstSts+ "," + mdctnRqstSts;
+	        } else if(mdctnRqstSts.equals("[") | mdctnRqstSts.equals("]") | this.mdctnRqstSts.substring(this.mdctnRqstSts.length() - 1).equals("[")) {
+	        	this.mdctnRqstSts = this.mdctnRqstSts+mdctnRqstSts;
+	        } else  {
+	            this.mdctnRqstSts = this.mdctnRqstSts+ "," +mdctnRqstSts;
+	        }
+        }
     }
     
     
@@ -2750,6 +6194,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstStsRsnCdgCd = mdctnRqstStsRsnCdgCd;
     }
     
+    public void addMdctnRqstStsRsnCdgCd(String mdctnRqstStsRsnCdgCd) {
+    	if( mdctnRqstStsRsnCdgCd != null ) {
+	    	if( this.mdctnRqstStsRsnCdgCd == null ) {
+	        	this.mdctnRqstStsRsnCdgCd = mdctnRqstStsRsnCdgCd;
+	        } else if(this.mdctnRqstStsRsnCdgCd.substring(this.mdctnRqstStsRsnCdgCd.length() - 1).equals("]") & mdctnRqstStsRsnCdgCd.equals("[")) {
+	        	this.mdctnRqstStsRsnCdgCd = this.mdctnRqstStsRsnCdgCd+ "," + mdctnRqstStsRsnCdgCd;
+	        } else if(mdctnRqstStsRsnCdgCd.equals("[") | mdctnRqstStsRsnCdgCd.equals("]") | this.mdctnRqstStsRsnCdgCd.substring(this.mdctnRqstStsRsnCdgCd.length() - 1).equals("[")) {
+	        	this.mdctnRqstStsRsnCdgCd = this.mdctnRqstStsRsnCdgCd+mdctnRqstStsRsnCdgCd;
+	        } else  {
+	            this.mdctnRqstStsRsnCdgCd = this.mdctnRqstStsRsnCdgCd+ "," +mdctnRqstStsRsnCdgCd;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstStsRsnCdgDsply() {
@@ -2758,6 +6216,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstStsRsnCdgDsply(String mdctnRqstStsRsnCdgDsply) {
         this.mdctnRqstStsRsnCdgDsply = mdctnRqstStsRsnCdgDsply;
+    }
+    
+    public void addMdctnRqstStsRsnCdgDsply(String mdctnRqstStsRsnCdgDsply) {
+    	if( mdctnRqstStsRsnCdgDsply != null ) {
+	    	if( this.mdctnRqstStsRsnCdgDsply == null ) {
+	        	this.mdctnRqstStsRsnCdgDsply = mdctnRqstStsRsnCdgDsply;
+	        } else if(this.mdctnRqstStsRsnCdgDsply.substring(this.mdctnRqstStsRsnCdgDsply.length() - 1).equals("]") & mdctnRqstStsRsnCdgDsply.equals("[")) {
+	        	this.mdctnRqstStsRsnCdgDsply = this.mdctnRqstStsRsnCdgDsply+ "," + mdctnRqstStsRsnCdgDsply;
+	        } else if(mdctnRqstStsRsnCdgDsply.equals("[") | mdctnRqstStsRsnCdgDsply.equals("]") | this.mdctnRqstStsRsnCdgDsply.substring(this.mdctnRqstStsRsnCdgDsply.length() - 1).equals("[")) {
+	        	this.mdctnRqstStsRsnCdgDsply = this.mdctnRqstStsRsnCdgDsply+mdctnRqstStsRsnCdgDsply;
+	        } else  {
+	            this.mdctnRqstStsRsnCdgDsply = this.mdctnRqstStsRsnCdgDsply+ "," +mdctnRqstStsRsnCdgDsply;
+	        }
+        }
     }
     
     
@@ -2770,6 +6242,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstStsRsnCdgSys = mdctnRqstStsRsnCdgSys;
     }
     
+    public void addMdctnRqstStsRsnCdgSys(String mdctnRqstStsRsnCdgSys) {
+    	if( mdctnRqstStsRsnCdgSys != null ) {
+	    	if( this.mdctnRqstStsRsnCdgSys == null ) {
+	        	this.mdctnRqstStsRsnCdgSys = mdctnRqstStsRsnCdgSys;
+	        } else if(this.mdctnRqstStsRsnCdgSys.substring(this.mdctnRqstStsRsnCdgSys.length() - 1).equals("]") & mdctnRqstStsRsnCdgSys.equals("[")) {
+	        	this.mdctnRqstStsRsnCdgSys = this.mdctnRqstStsRsnCdgSys+ "," + mdctnRqstStsRsnCdgSys;
+	        } else if(mdctnRqstStsRsnCdgSys.equals("[") | mdctnRqstStsRsnCdgSys.equals("]") | this.mdctnRqstStsRsnCdgSys.substring(this.mdctnRqstStsRsnCdgSys.length() - 1).equals("[")) {
+	        	this.mdctnRqstStsRsnCdgSys = this.mdctnRqstStsRsnCdgSys+mdctnRqstStsRsnCdgSys;
+	        } else  {
+	            this.mdctnRqstStsRsnCdgSys = this.mdctnRqstStsRsnCdgSys+ "," +mdctnRqstStsRsnCdgSys;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstStsRsnCdgUsrSltd() {
@@ -2778,6 +6264,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstStsRsnCdgUsrSltd(String mdctnRqstStsRsnCdgUsrSltd) {
         this.mdctnRqstStsRsnCdgUsrSltd = mdctnRqstStsRsnCdgUsrSltd;
+    }
+    
+    public void addMdctnRqstStsRsnCdgUsrSltd(String mdctnRqstStsRsnCdgUsrSltd) {
+    	if( mdctnRqstStsRsnCdgUsrSltd != null ) {
+	    	if( this.mdctnRqstStsRsnCdgUsrSltd == null ) {
+	        	this.mdctnRqstStsRsnCdgUsrSltd = mdctnRqstStsRsnCdgUsrSltd;
+	        } else if(this.mdctnRqstStsRsnCdgUsrSltd.substring(this.mdctnRqstStsRsnCdgUsrSltd.length() - 1).equals("]") & mdctnRqstStsRsnCdgUsrSltd.equals("[")) {
+	        	this.mdctnRqstStsRsnCdgUsrSltd = this.mdctnRqstStsRsnCdgUsrSltd+ "," + mdctnRqstStsRsnCdgUsrSltd;
+	        } else if(mdctnRqstStsRsnCdgUsrSltd.equals("[") | mdctnRqstStsRsnCdgUsrSltd.equals("]") | this.mdctnRqstStsRsnCdgUsrSltd.substring(this.mdctnRqstStsRsnCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.mdctnRqstStsRsnCdgUsrSltd = this.mdctnRqstStsRsnCdgUsrSltd+mdctnRqstStsRsnCdgUsrSltd;
+	        } else  {
+	            this.mdctnRqstStsRsnCdgUsrSltd = this.mdctnRqstStsRsnCdgUsrSltd+ "," +mdctnRqstStsRsnCdgUsrSltd;
+	        }
+        }
     }
     
     
@@ -2790,6 +6290,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstStsRsnCdgVrsn = mdctnRqstStsRsnCdgVrsn;
     }
     
+    public void addMdctnRqstStsRsnCdgVrsn(String mdctnRqstStsRsnCdgVrsn) {
+    	if( mdctnRqstStsRsnCdgVrsn != null ) {
+	    	if( this.mdctnRqstStsRsnCdgVrsn == null ) {
+	        	this.mdctnRqstStsRsnCdgVrsn = mdctnRqstStsRsnCdgVrsn;
+	        } else if(this.mdctnRqstStsRsnCdgVrsn.substring(this.mdctnRqstStsRsnCdgVrsn.length() - 1).equals("]") & mdctnRqstStsRsnCdgVrsn.equals("[")) {
+	        	this.mdctnRqstStsRsnCdgVrsn = this.mdctnRqstStsRsnCdgVrsn+ "," + mdctnRqstStsRsnCdgVrsn;
+	        } else if(mdctnRqstStsRsnCdgVrsn.equals("[") | mdctnRqstStsRsnCdgVrsn.equals("]") | this.mdctnRqstStsRsnCdgVrsn.substring(this.mdctnRqstStsRsnCdgVrsn.length() - 1).equals("[")) {
+	        	this.mdctnRqstStsRsnCdgVrsn = this.mdctnRqstStsRsnCdgVrsn+mdctnRqstStsRsnCdgVrsn;
+	        } else  {
+	            this.mdctnRqstStsRsnCdgVrsn = this.mdctnRqstStsRsnCdgVrsn+ "," +mdctnRqstStsRsnCdgVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstStsRsnTxt() {
@@ -2798,6 +6312,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstStsRsnTxt(String mdctnRqstStsRsnTxt) {
         this.mdctnRqstStsRsnTxt = mdctnRqstStsRsnTxt;
+    }
+    
+    public void addMdctnRqstStsRsnTxt(String mdctnRqstStsRsnTxt) {
+    	if( mdctnRqstStsRsnTxt != null ) {
+	    	if( this.mdctnRqstStsRsnTxt == null ) {
+	        	this.mdctnRqstStsRsnTxt = mdctnRqstStsRsnTxt;
+	        } else if(this.mdctnRqstStsRsnTxt.substring(this.mdctnRqstStsRsnTxt.length() - 1).equals("]") & mdctnRqstStsRsnTxt.equals("[")) {
+	        	this.mdctnRqstStsRsnTxt = this.mdctnRqstStsRsnTxt+ "," + mdctnRqstStsRsnTxt;
+	        } else if(mdctnRqstStsRsnTxt.equals("[") | mdctnRqstStsRsnTxt.equals("]") | this.mdctnRqstStsRsnTxt.substring(this.mdctnRqstStsRsnTxt.length() - 1).equals("[")) {
+	        	this.mdctnRqstStsRsnTxt = this.mdctnRqstStsRsnTxt+mdctnRqstStsRsnTxt;
+	        } else  {
+	            this.mdctnRqstStsRsnTxt = this.mdctnRqstStsRsnTxt+ "," +mdctnRqstStsRsnTxt;
+	        }
+        }
     }
     
     
@@ -2810,6 +6338,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstSbjct = mdctnRqstSbjct;
     }
     
+    public void addMdctnRqstSbjct(String mdctnRqstSbjct) {
+    	if( mdctnRqstSbjct != null ) {
+	    	if( this.mdctnRqstSbjct == null ) {
+	        	this.mdctnRqstSbjct = mdctnRqstSbjct;
+	        } else if(this.mdctnRqstSbjct.substring(this.mdctnRqstSbjct.length() - 1).equals("]") & mdctnRqstSbjct.equals("[")) {
+	        	this.mdctnRqstSbjct = this.mdctnRqstSbjct+ "," + mdctnRqstSbjct;
+	        } else if(mdctnRqstSbjct.equals("[") | mdctnRqstSbjct.equals("]") | this.mdctnRqstSbjct.substring(this.mdctnRqstSbjct.length() - 1).equals("[")) {
+	        	this.mdctnRqstSbjct = this.mdctnRqstSbjct+mdctnRqstSbjct;
+	        } else  {
+	            this.mdctnRqstSbjct = this.mdctnRqstSbjct+ "," +mdctnRqstSbjct;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstSubstitutionAllowedBooleanTyp() {
@@ -2818,6 +6360,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstSubstitutionAllowedBooleanTyp(String mdctnRqstSubstitutionAllowedBooleanTyp) {
         this.mdctnRqstSubstitutionAllowedBooleanTyp = mdctnRqstSubstitutionAllowedBooleanTyp;
+    }
+    
+    public void addMdctnRqstSubstitutionAllowedBooleanTyp(String mdctnRqstSubstitutionAllowedBooleanTyp) {
+    	if( mdctnRqstSubstitutionAllowedBooleanTyp != null ) {
+	    	if( this.mdctnRqstSubstitutionAllowedBooleanTyp == null ) {
+	        	this.mdctnRqstSubstitutionAllowedBooleanTyp = mdctnRqstSubstitutionAllowedBooleanTyp;
+	        } else if(this.mdctnRqstSubstitutionAllowedBooleanTyp.substring(this.mdctnRqstSubstitutionAllowedBooleanTyp.length() - 1).equals("]") & mdctnRqstSubstitutionAllowedBooleanTyp.equals("[")) {
+	        	this.mdctnRqstSubstitutionAllowedBooleanTyp = this.mdctnRqstSubstitutionAllowedBooleanTyp+ "," + mdctnRqstSubstitutionAllowedBooleanTyp;
+	        } else if(mdctnRqstSubstitutionAllowedBooleanTyp.equals("[") | mdctnRqstSubstitutionAllowedBooleanTyp.equals("]") | this.mdctnRqstSubstitutionAllowedBooleanTyp.substring(this.mdctnRqstSubstitutionAllowedBooleanTyp.length() - 1).equals("[")) {
+	        	this.mdctnRqstSubstitutionAllowedBooleanTyp = this.mdctnRqstSubstitutionAllowedBooleanTyp+mdctnRqstSubstitutionAllowedBooleanTyp;
+	        } else  {
+	            this.mdctnRqstSubstitutionAllowedBooleanTyp = this.mdctnRqstSubstitutionAllowedBooleanTyp+ "," +mdctnRqstSubstitutionAllowedBooleanTyp;
+	        }
+        }
     }
     
     
@@ -2830,6 +6386,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstSubstitutionAllowedCdbleCncptCdgCd = mdctnRqstSubstitutionAllowedCdbleCncptCdgCd;
     }
     
+    public void addMdctnRqstSubstitutionAllowedCdbleCncptCdgCd(String mdctnRqstSubstitutionAllowedCdbleCncptCdgCd) {
+    	if( mdctnRqstSubstitutionAllowedCdbleCncptCdgCd != null ) {
+	    	if( this.mdctnRqstSubstitutionAllowedCdbleCncptCdgCd == null ) {
+	        	this.mdctnRqstSubstitutionAllowedCdbleCncptCdgCd = mdctnRqstSubstitutionAllowedCdbleCncptCdgCd;
+	        } else if(this.mdctnRqstSubstitutionAllowedCdbleCncptCdgCd.substring(this.mdctnRqstSubstitutionAllowedCdbleCncptCdgCd.length() - 1).equals("]") & mdctnRqstSubstitutionAllowedCdbleCncptCdgCd.equals("[")) {
+	        	this.mdctnRqstSubstitutionAllowedCdbleCncptCdgCd = this.mdctnRqstSubstitutionAllowedCdbleCncptCdgCd+ "," + mdctnRqstSubstitutionAllowedCdbleCncptCdgCd;
+	        } else if(mdctnRqstSubstitutionAllowedCdbleCncptCdgCd.equals("[") | mdctnRqstSubstitutionAllowedCdbleCncptCdgCd.equals("]") | this.mdctnRqstSubstitutionAllowedCdbleCncptCdgCd.substring(this.mdctnRqstSubstitutionAllowedCdbleCncptCdgCd.length() - 1).equals("[")) {
+	        	this.mdctnRqstSubstitutionAllowedCdbleCncptCdgCd = this.mdctnRqstSubstitutionAllowedCdbleCncptCdgCd+mdctnRqstSubstitutionAllowedCdbleCncptCdgCd;
+	        } else  {
+	            this.mdctnRqstSubstitutionAllowedCdbleCncptCdgCd = this.mdctnRqstSubstitutionAllowedCdbleCncptCdgCd+ "," +mdctnRqstSubstitutionAllowedCdbleCncptCdgCd;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstSubstitutionAllowedCdbleCncptCdgDsply() {
@@ -2838,6 +6408,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstSubstitutionAllowedCdbleCncptCdgDsply(String mdctnRqstSubstitutionAllowedCdbleCncptCdgDsply) {
         this.mdctnRqstSubstitutionAllowedCdbleCncptCdgDsply = mdctnRqstSubstitutionAllowedCdbleCncptCdgDsply;
+    }
+    
+    public void addMdctnRqstSubstitutionAllowedCdbleCncptCdgDsply(String mdctnRqstSubstitutionAllowedCdbleCncptCdgDsply) {
+    	if( mdctnRqstSubstitutionAllowedCdbleCncptCdgDsply != null ) {
+	    	if( this.mdctnRqstSubstitutionAllowedCdbleCncptCdgDsply == null ) {
+	        	this.mdctnRqstSubstitutionAllowedCdbleCncptCdgDsply = mdctnRqstSubstitutionAllowedCdbleCncptCdgDsply;
+	        } else if(this.mdctnRqstSubstitutionAllowedCdbleCncptCdgDsply.substring(this.mdctnRqstSubstitutionAllowedCdbleCncptCdgDsply.length() - 1).equals("]") & mdctnRqstSubstitutionAllowedCdbleCncptCdgDsply.equals("[")) {
+	        	this.mdctnRqstSubstitutionAllowedCdbleCncptCdgDsply = this.mdctnRqstSubstitutionAllowedCdbleCncptCdgDsply+ "," + mdctnRqstSubstitutionAllowedCdbleCncptCdgDsply;
+	        } else if(mdctnRqstSubstitutionAllowedCdbleCncptCdgDsply.equals("[") | mdctnRqstSubstitutionAllowedCdbleCncptCdgDsply.equals("]") | this.mdctnRqstSubstitutionAllowedCdbleCncptCdgDsply.substring(this.mdctnRqstSubstitutionAllowedCdbleCncptCdgDsply.length() - 1).equals("[")) {
+	        	this.mdctnRqstSubstitutionAllowedCdbleCncptCdgDsply = this.mdctnRqstSubstitutionAllowedCdbleCncptCdgDsply+mdctnRqstSubstitutionAllowedCdbleCncptCdgDsply;
+	        } else  {
+	            this.mdctnRqstSubstitutionAllowedCdbleCncptCdgDsply = this.mdctnRqstSubstitutionAllowedCdbleCncptCdgDsply+ "," +mdctnRqstSubstitutionAllowedCdbleCncptCdgDsply;
+	        }
+        }
     }
     
     
@@ -2850,6 +6434,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstSubstitutionAllowedCdbleCncptCdgSys = mdctnRqstSubstitutionAllowedCdbleCncptCdgSys;
     }
     
+    public void addMdctnRqstSubstitutionAllowedCdbleCncptCdgSys(String mdctnRqstSubstitutionAllowedCdbleCncptCdgSys) {
+    	if( mdctnRqstSubstitutionAllowedCdbleCncptCdgSys != null ) {
+	    	if( this.mdctnRqstSubstitutionAllowedCdbleCncptCdgSys == null ) {
+	        	this.mdctnRqstSubstitutionAllowedCdbleCncptCdgSys = mdctnRqstSubstitutionAllowedCdbleCncptCdgSys;
+	        } else if(this.mdctnRqstSubstitutionAllowedCdbleCncptCdgSys.substring(this.mdctnRqstSubstitutionAllowedCdbleCncptCdgSys.length() - 1).equals("]") & mdctnRqstSubstitutionAllowedCdbleCncptCdgSys.equals("[")) {
+	        	this.mdctnRqstSubstitutionAllowedCdbleCncptCdgSys = this.mdctnRqstSubstitutionAllowedCdbleCncptCdgSys+ "," + mdctnRqstSubstitutionAllowedCdbleCncptCdgSys;
+	        } else if(mdctnRqstSubstitutionAllowedCdbleCncptCdgSys.equals("[") | mdctnRqstSubstitutionAllowedCdbleCncptCdgSys.equals("]") | this.mdctnRqstSubstitutionAllowedCdbleCncptCdgSys.substring(this.mdctnRqstSubstitutionAllowedCdbleCncptCdgSys.length() - 1).equals("[")) {
+	        	this.mdctnRqstSubstitutionAllowedCdbleCncptCdgSys = this.mdctnRqstSubstitutionAllowedCdbleCncptCdgSys+mdctnRqstSubstitutionAllowedCdbleCncptCdgSys;
+	        } else  {
+	            this.mdctnRqstSubstitutionAllowedCdbleCncptCdgSys = this.mdctnRqstSubstitutionAllowedCdbleCncptCdgSys+ "," +mdctnRqstSubstitutionAllowedCdbleCncptCdgSys;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstSubstitutionAllowedCdbleCncptCdgUsrSltd() {
@@ -2858,6 +6456,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstSubstitutionAllowedCdbleCncptCdgUsrSltd(String mdctnRqstSubstitutionAllowedCdbleCncptCdgUsrSltd) {
         this.mdctnRqstSubstitutionAllowedCdbleCncptCdgUsrSltd = mdctnRqstSubstitutionAllowedCdbleCncptCdgUsrSltd;
+    }
+    
+    public void addMdctnRqstSubstitutionAllowedCdbleCncptCdgUsrSltd(String mdctnRqstSubstitutionAllowedCdbleCncptCdgUsrSltd) {
+    	if( mdctnRqstSubstitutionAllowedCdbleCncptCdgUsrSltd != null ) {
+	    	if( this.mdctnRqstSubstitutionAllowedCdbleCncptCdgUsrSltd == null ) {
+	        	this.mdctnRqstSubstitutionAllowedCdbleCncptCdgUsrSltd = mdctnRqstSubstitutionAllowedCdbleCncptCdgUsrSltd;
+	        } else if(this.mdctnRqstSubstitutionAllowedCdbleCncptCdgUsrSltd.substring(this.mdctnRqstSubstitutionAllowedCdbleCncptCdgUsrSltd.length() - 1).equals("]") & mdctnRqstSubstitutionAllowedCdbleCncptCdgUsrSltd.equals("[")) {
+	        	this.mdctnRqstSubstitutionAllowedCdbleCncptCdgUsrSltd = this.mdctnRqstSubstitutionAllowedCdbleCncptCdgUsrSltd+ "," + mdctnRqstSubstitutionAllowedCdbleCncptCdgUsrSltd;
+	        } else if(mdctnRqstSubstitutionAllowedCdbleCncptCdgUsrSltd.equals("[") | mdctnRqstSubstitutionAllowedCdbleCncptCdgUsrSltd.equals("]") | this.mdctnRqstSubstitutionAllowedCdbleCncptCdgUsrSltd.substring(this.mdctnRqstSubstitutionAllowedCdbleCncptCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.mdctnRqstSubstitutionAllowedCdbleCncptCdgUsrSltd = this.mdctnRqstSubstitutionAllowedCdbleCncptCdgUsrSltd+mdctnRqstSubstitutionAllowedCdbleCncptCdgUsrSltd;
+	        } else  {
+	            this.mdctnRqstSubstitutionAllowedCdbleCncptCdgUsrSltd = this.mdctnRqstSubstitutionAllowedCdbleCncptCdgUsrSltd+ "," +mdctnRqstSubstitutionAllowedCdbleCncptCdgUsrSltd;
+	        }
+        }
     }
     
     
@@ -2870,6 +6482,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstSubstitutionAllowedCdbleCncptCdgVrsn = mdctnRqstSubstitutionAllowedCdbleCncptCdgVrsn;
     }
     
+    public void addMdctnRqstSubstitutionAllowedCdbleCncptCdgVrsn(String mdctnRqstSubstitutionAllowedCdbleCncptCdgVrsn) {
+    	if( mdctnRqstSubstitutionAllowedCdbleCncptCdgVrsn != null ) {
+	    	if( this.mdctnRqstSubstitutionAllowedCdbleCncptCdgVrsn == null ) {
+	        	this.mdctnRqstSubstitutionAllowedCdbleCncptCdgVrsn = mdctnRqstSubstitutionAllowedCdbleCncptCdgVrsn;
+	        } else if(this.mdctnRqstSubstitutionAllowedCdbleCncptCdgVrsn.substring(this.mdctnRqstSubstitutionAllowedCdbleCncptCdgVrsn.length() - 1).equals("]") & mdctnRqstSubstitutionAllowedCdbleCncptCdgVrsn.equals("[")) {
+	        	this.mdctnRqstSubstitutionAllowedCdbleCncptCdgVrsn = this.mdctnRqstSubstitutionAllowedCdbleCncptCdgVrsn+ "," + mdctnRqstSubstitutionAllowedCdbleCncptCdgVrsn;
+	        } else if(mdctnRqstSubstitutionAllowedCdbleCncptCdgVrsn.equals("[") | mdctnRqstSubstitutionAllowedCdbleCncptCdgVrsn.equals("]") | this.mdctnRqstSubstitutionAllowedCdbleCncptCdgVrsn.substring(this.mdctnRqstSubstitutionAllowedCdbleCncptCdgVrsn.length() - 1).equals("[")) {
+	        	this.mdctnRqstSubstitutionAllowedCdbleCncptCdgVrsn = this.mdctnRqstSubstitutionAllowedCdbleCncptCdgVrsn+mdctnRqstSubstitutionAllowedCdbleCncptCdgVrsn;
+	        } else  {
+	            this.mdctnRqstSubstitutionAllowedCdbleCncptCdgVrsn = this.mdctnRqstSubstitutionAllowedCdbleCncptCdgVrsn+ "," +mdctnRqstSubstitutionAllowedCdbleCncptCdgVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstSubstitutionAllowedCdbleCncptTxt() {
@@ -2878,6 +6504,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstSubstitutionAllowedCdbleCncptTxt(String mdctnRqstSubstitutionAllowedCdbleCncptTxt) {
         this.mdctnRqstSubstitutionAllowedCdbleCncptTxt = mdctnRqstSubstitutionAllowedCdbleCncptTxt;
+    }
+    
+    public void addMdctnRqstSubstitutionAllowedCdbleCncptTxt(String mdctnRqstSubstitutionAllowedCdbleCncptTxt) {
+    	if( mdctnRqstSubstitutionAllowedCdbleCncptTxt != null ) {
+	    	if( this.mdctnRqstSubstitutionAllowedCdbleCncptTxt == null ) {
+	        	this.mdctnRqstSubstitutionAllowedCdbleCncptTxt = mdctnRqstSubstitutionAllowedCdbleCncptTxt;
+	        } else if(this.mdctnRqstSubstitutionAllowedCdbleCncptTxt.substring(this.mdctnRqstSubstitutionAllowedCdbleCncptTxt.length() - 1).equals("]") & mdctnRqstSubstitutionAllowedCdbleCncptTxt.equals("[")) {
+	        	this.mdctnRqstSubstitutionAllowedCdbleCncptTxt = this.mdctnRqstSubstitutionAllowedCdbleCncptTxt+ "," + mdctnRqstSubstitutionAllowedCdbleCncptTxt;
+	        } else if(mdctnRqstSubstitutionAllowedCdbleCncptTxt.equals("[") | mdctnRqstSubstitutionAllowedCdbleCncptTxt.equals("]") | this.mdctnRqstSubstitutionAllowedCdbleCncptTxt.substring(this.mdctnRqstSubstitutionAllowedCdbleCncptTxt.length() - 1).equals("[")) {
+	        	this.mdctnRqstSubstitutionAllowedCdbleCncptTxt = this.mdctnRqstSubstitutionAllowedCdbleCncptTxt+mdctnRqstSubstitutionAllowedCdbleCncptTxt;
+	        } else  {
+	            this.mdctnRqstSubstitutionAllowedCdbleCncptTxt = this.mdctnRqstSubstitutionAllowedCdbleCncptTxt+ "," +mdctnRqstSubstitutionAllowedCdbleCncptTxt;
+	        }
+        }
     }
     
     
@@ -2890,6 +6530,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstSubstitutionRsnCdgCd = mdctnRqstSubstitutionRsnCdgCd;
     }
     
+    public void addMdctnRqstSubstitutionRsnCdgCd(String mdctnRqstSubstitutionRsnCdgCd) {
+    	if( mdctnRqstSubstitutionRsnCdgCd != null ) {
+	    	if( this.mdctnRqstSubstitutionRsnCdgCd == null ) {
+	        	this.mdctnRqstSubstitutionRsnCdgCd = mdctnRqstSubstitutionRsnCdgCd;
+	        } else if(this.mdctnRqstSubstitutionRsnCdgCd.substring(this.mdctnRqstSubstitutionRsnCdgCd.length() - 1).equals("]") & mdctnRqstSubstitutionRsnCdgCd.equals("[")) {
+	        	this.mdctnRqstSubstitutionRsnCdgCd = this.mdctnRqstSubstitutionRsnCdgCd+ "," + mdctnRqstSubstitutionRsnCdgCd;
+	        } else if(mdctnRqstSubstitutionRsnCdgCd.equals("[") | mdctnRqstSubstitutionRsnCdgCd.equals("]") | this.mdctnRqstSubstitutionRsnCdgCd.substring(this.mdctnRqstSubstitutionRsnCdgCd.length() - 1).equals("[")) {
+	        	this.mdctnRqstSubstitutionRsnCdgCd = this.mdctnRqstSubstitutionRsnCdgCd+mdctnRqstSubstitutionRsnCdgCd;
+	        } else  {
+	            this.mdctnRqstSubstitutionRsnCdgCd = this.mdctnRqstSubstitutionRsnCdgCd+ "," +mdctnRqstSubstitutionRsnCdgCd;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstSubstitutionRsnCdgDsply() {
@@ -2898,6 +6552,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstSubstitutionRsnCdgDsply(String mdctnRqstSubstitutionRsnCdgDsply) {
         this.mdctnRqstSubstitutionRsnCdgDsply = mdctnRqstSubstitutionRsnCdgDsply;
+    }
+    
+    public void addMdctnRqstSubstitutionRsnCdgDsply(String mdctnRqstSubstitutionRsnCdgDsply) {
+    	if( mdctnRqstSubstitutionRsnCdgDsply != null ) {
+	    	if( this.mdctnRqstSubstitutionRsnCdgDsply == null ) {
+	        	this.mdctnRqstSubstitutionRsnCdgDsply = mdctnRqstSubstitutionRsnCdgDsply;
+	        } else if(this.mdctnRqstSubstitutionRsnCdgDsply.substring(this.mdctnRqstSubstitutionRsnCdgDsply.length() - 1).equals("]") & mdctnRqstSubstitutionRsnCdgDsply.equals("[")) {
+	        	this.mdctnRqstSubstitutionRsnCdgDsply = this.mdctnRqstSubstitutionRsnCdgDsply+ "," + mdctnRqstSubstitutionRsnCdgDsply;
+	        } else if(mdctnRqstSubstitutionRsnCdgDsply.equals("[") | mdctnRqstSubstitutionRsnCdgDsply.equals("]") | this.mdctnRqstSubstitutionRsnCdgDsply.substring(this.mdctnRqstSubstitutionRsnCdgDsply.length() - 1).equals("[")) {
+	        	this.mdctnRqstSubstitutionRsnCdgDsply = this.mdctnRqstSubstitutionRsnCdgDsply+mdctnRqstSubstitutionRsnCdgDsply;
+	        } else  {
+	            this.mdctnRqstSubstitutionRsnCdgDsply = this.mdctnRqstSubstitutionRsnCdgDsply+ "," +mdctnRqstSubstitutionRsnCdgDsply;
+	        }
+        }
     }
     
     
@@ -2910,6 +6578,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstSubstitutionRsnCdgSys = mdctnRqstSubstitutionRsnCdgSys;
     }
     
+    public void addMdctnRqstSubstitutionRsnCdgSys(String mdctnRqstSubstitutionRsnCdgSys) {
+    	if( mdctnRqstSubstitutionRsnCdgSys != null ) {
+	    	if( this.mdctnRqstSubstitutionRsnCdgSys == null ) {
+	        	this.mdctnRqstSubstitutionRsnCdgSys = mdctnRqstSubstitutionRsnCdgSys;
+	        } else if(this.mdctnRqstSubstitutionRsnCdgSys.substring(this.mdctnRqstSubstitutionRsnCdgSys.length() - 1).equals("]") & mdctnRqstSubstitutionRsnCdgSys.equals("[")) {
+	        	this.mdctnRqstSubstitutionRsnCdgSys = this.mdctnRqstSubstitutionRsnCdgSys+ "," + mdctnRqstSubstitutionRsnCdgSys;
+	        } else if(mdctnRqstSubstitutionRsnCdgSys.equals("[") | mdctnRqstSubstitutionRsnCdgSys.equals("]") | this.mdctnRqstSubstitutionRsnCdgSys.substring(this.mdctnRqstSubstitutionRsnCdgSys.length() - 1).equals("[")) {
+	        	this.mdctnRqstSubstitutionRsnCdgSys = this.mdctnRqstSubstitutionRsnCdgSys+mdctnRqstSubstitutionRsnCdgSys;
+	        } else  {
+	            this.mdctnRqstSubstitutionRsnCdgSys = this.mdctnRqstSubstitutionRsnCdgSys+ "," +mdctnRqstSubstitutionRsnCdgSys;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstSubstitutionRsnCdgUsrSltd() {
@@ -2918,6 +6600,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstSubstitutionRsnCdgUsrSltd(String mdctnRqstSubstitutionRsnCdgUsrSltd) {
         this.mdctnRqstSubstitutionRsnCdgUsrSltd = mdctnRqstSubstitutionRsnCdgUsrSltd;
+    }
+    
+    public void addMdctnRqstSubstitutionRsnCdgUsrSltd(String mdctnRqstSubstitutionRsnCdgUsrSltd) {
+    	if( mdctnRqstSubstitutionRsnCdgUsrSltd != null ) {
+	    	if( this.mdctnRqstSubstitutionRsnCdgUsrSltd == null ) {
+	        	this.mdctnRqstSubstitutionRsnCdgUsrSltd = mdctnRqstSubstitutionRsnCdgUsrSltd;
+	        } else if(this.mdctnRqstSubstitutionRsnCdgUsrSltd.substring(this.mdctnRqstSubstitutionRsnCdgUsrSltd.length() - 1).equals("]") & mdctnRqstSubstitutionRsnCdgUsrSltd.equals("[")) {
+	        	this.mdctnRqstSubstitutionRsnCdgUsrSltd = this.mdctnRqstSubstitutionRsnCdgUsrSltd+ "," + mdctnRqstSubstitutionRsnCdgUsrSltd;
+	        } else if(mdctnRqstSubstitutionRsnCdgUsrSltd.equals("[") | mdctnRqstSubstitutionRsnCdgUsrSltd.equals("]") | this.mdctnRqstSubstitutionRsnCdgUsrSltd.substring(this.mdctnRqstSubstitutionRsnCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.mdctnRqstSubstitutionRsnCdgUsrSltd = this.mdctnRqstSubstitutionRsnCdgUsrSltd+mdctnRqstSubstitutionRsnCdgUsrSltd;
+	        } else  {
+	            this.mdctnRqstSubstitutionRsnCdgUsrSltd = this.mdctnRqstSubstitutionRsnCdgUsrSltd+ "," +mdctnRqstSubstitutionRsnCdgUsrSltd;
+	        }
+        }
     }
     
     
@@ -2930,6 +6626,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstSubstitutionRsnCdgVrsn = mdctnRqstSubstitutionRsnCdgVrsn;
     }
     
+    public void addMdctnRqstSubstitutionRsnCdgVrsn(String mdctnRqstSubstitutionRsnCdgVrsn) {
+    	if( mdctnRqstSubstitutionRsnCdgVrsn != null ) {
+	    	if( this.mdctnRqstSubstitutionRsnCdgVrsn == null ) {
+	        	this.mdctnRqstSubstitutionRsnCdgVrsn = mdctnRqstSubstitutionRsnCdgVrsn;
+	        } else if(this.mdctnRqstSubstitutionRsnCdgVrsn.substring(this.mdctnRqstSubstitutionRsnCdgVrsn.length() - 1).equals("]") & mdctnRqstSubstitutionRsnCdgVrsn.equals("[")) {
+	        	this.mdctnRqstSubstitutionRsnCdgVrsn = this.mdctnRqstSubstitutionRsnCdgVrsn+ "," + mdctnRqstSubstitutionRsnCdgVrsn;
+	        } else if(mdctnRqstSubstitutionRsnCdgVrsn.equals("[") | mdctnRqstSubstitutionRsnCdgVrsn.equals("]") | this.mdctnRqstSubstitutionRsnCdgVrsn.substring(this.mdctnRqstSubstitutionRsnCdgVrsn.length() - 1).equals("[")) {
+	        	this.mdctnRqstSubstitutionRsnCdgVrsn = this.mdctnRqstSubstitutionRsnCdgVrsn+mdctnRqstSubstitutionRsnCdgVrsn;
+	        } else  {
+	            this.mdctnRqstSubstitutionRsnCdgVrsn = this.mdctnRqstSubstitutionRsnCdgVrsn+ "," +mdctnRqstSubstitutionRsnCdgVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstSubstitutionRsnTxt() {
@@ -2940,6 +6650,20 @@ public class MedicationRequest  implements java.io.Serializable {
         this.mdctnRqstSubstitutionRsnTxt = mdctnRqstSubstitutionRsnTxt;
     }
     
+    public void addMdctnRqstSubstitutionRsnTxt(String mdctnRqstSubstitutionRsnTxt) {
+    	if( mdctnRqstSubstitutionRsnTxt != null ) {
+	    	if( this.mdctnRqstSubstitutionRsnTxt == null ) {
+	        	this.mdctnRqstSubstitutionRsnTxt = mdctnRqstSubstitutionRsnTxt;
+	        } else if(this.mdctnRqstSubstitutionRsnTxt.substring(this.mdctnRqstSubstitutionRsnTxt.length() - 1).equals("]") & mdctnRqstSubstitutionRsnTxt.equals("[")) {
+	        	this.mdctnRqstSubstitutionRsnTxt = this.mdctnRqstSubstitutionRsnTxt+ "," + mdctnRqstSubstitutionRsnTxt;
+	        } else if(mdctnRqstSubstitutionRsnTxt.equals("[") | mdctnRqstSubstitutionRsnTxt.equals("]") | this.mdctnRqstSubstitutionRsnTxt.substring(this.mdctnRqstSubstitutionRsnTxt.length() - 1).equals("[")) {
+	        	this.mdctnRqstSubstitutionRsnTxt = this.mdctnRqstSubstitutionRsnTxt+mdctnRqstSubstitutionRsnTxt;
+	        } else  {
+	            this.mdctnRqstSubstitutionRsnTxt = this.mdctnRqstSubstitutionRsnTxt+ "," +mdctnRqstSubstitutionRsnTxt;
+	        }
+        }
+    }
+    
     
     
     public String getMdctnRqstSprtingInfo() {
@@ -2948,6 +6672,20 @@ public class MedicationRequest  implements java.io.Serializable {
     
     public void setMdctnRqstSprtingInfo(String mdctnRqstSprtingInfo) {
         this.mdctnRqstSprtingInfo = mdctnRqstSprtingInfo;
+    }
+    
+    public void addMdctnRqstSprtingInfo(String mdctnRqstSprtingInfo) {
+    	if( mdctnRqstSprtingInfo != null ) {
+	    	if( this.mdctnRqstSprtingInfo == null ) {
+	        	this.mdctnRqstSprtingInfo = mdctnRqstSprtingInfo;
+	        } else if(this.mdctnRqstSprtingInfo.substring(this.mdctnRqstSprtingInfo.length() - 1).equals("]") & mdctnRqstSprtingInfo.equals("[")) {
+	        	this.mdctnRqstSprtingInfo = this.mdctnRqstSprtingInfo+ "," + mdctnRqstSprtingInfo;
+	        } else if(mdctnRqstSprtingInfo.equals("[") | mdctnRqstSprtingInfo.equals("]") | this.mdctnRqstSprtingInfo.substring(this.mdctnRqstSprtingInfo.length() - 1).equals("[")) {
+	        	this.mdctnRqstSprtingInfo = this.mdctnRqstSprtingInfo+mdctnRqstSprtingInfo;
+	        } else  {
+	            this.mdctnRqstSprtingInfo = this.mdctnRqstSprtingInfo+ "," +mdctnRqstSprtingInfo;
+	        }
+        }
     }
     
     

@@ -60,7 +60,6 @@ Provnce_Signature_Typ_UsrSltd TEXT,
 Provnce_Signature_Typ_Vrsn TEXT,
 Provnce_Signature_When TEXT,
 Provnce_Signature_Who TEXT,
-Provnce_Tar TEXT,
 PRIMARY KEY(id)) ENGINE=MyISAM
     ROW_FORMAT=COMPRESSED 
     KEY_BLOCK_SIZE=8;

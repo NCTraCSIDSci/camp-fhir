@@ -8,143 +8,290 @@ public class DeviceMetricBidirectionalConversion
 		 main.java.com.campfhir.model.DeviceMetric d = new  main.java.com.campfhir.model.DeviceMetric();
 
 		/******************** id ********************************************************************************/
-		devicemetric.setId(d.getId());
+		d.setId(devicemetric.getIdElement().getIdPart());
 
 		/******************** DvcMetric_Parent ********************************************************************************/
 		if(devicemetric.hasParent()) {
-			d.setDvcMetricParent(String.valueOf(devicemetric.getParent()));
+
+			if(devicemetric.getParent().getReference() != null) {
+			d.addDvcMetricParent(devicemetric.getParent().getReference());
+			}
+		} else {
+			d.addDvcMetricParent("NULL");
 		}
+
+
 		/******************** devicemetrictype ********************************************************************************/
 		org.hl7.fhir.r4.model.CodeableConcept devicemetrictype = devicemetric.getType();
 
 		/******************** DvcMetric_Typ_Txt ********************************************************************************/
 		if(devicemetrictype.hasText()) {
-			d.setDvcMetricTypTxt(String.valueOf(devicemetrictype.getText()));
+
+			d.addDvcMetricTypTxt(String.valueOf(devicemetrictype.getText()));
+		} else {
+			d.addDvcMetricTypTxt("NULL");
 		}
+
+
 		/******************** devicemetrictypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding devicemetrictypecoding = devicemetrictype.getCodingFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.Coding> devicemetrictypecodinglist = devicemetrictype.getCoding();
+		for(int devicemetrictypecodingi = 0; devicemetrictypecodingi<devicemetrictypecodinglist.size();devicemetrictypecodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  devicemetrictypecoding = devicemetrictypecodinglist.get(devicemetrictypecodingi);
+
+		/******************** DvcMetric_Typ_Cdg_Dsply ********************************************************************************/
+		if(devicemetrictypecodingi == 0) {d.addDvcMetricTypCdgDsply("[");}
+		if(devicemetrictypecoding.hasDisplay()) {
+
+			d.addDvcMetricTypCdgDsply(String.valueOf(devicemetrictypecoding.getDisplay()));
+		} else {
+			d.addDvcMetricTypCdgDsply("NULL");
+		}
+
+		if(devicemetrictypecodingi == devicemetrictypecodinglist.size()-1) {d.addDvcMetricTypCdgDsply("]");}
+
 
 		/******************** DvcMetric_Typ_Cdg_Vrsn ********************************************************************************/
+		if(devicemetrictypecodingi == 0) {d.addDvcMetricTypCdgVrsn("[");}
 		if(devicemetrictypecoding.hasVersion()) {
-			d.setDvcMetricTypCdgVrsn(String.valueOf(devicemetrictypecoding.getVersion()));
+
+			d.addDvcMetricTypCdgVrsn(String.valueOf(devicemetrictypecoding.getVersion()));
+		} else {
+			d.addDvcMetricTypCdgVrsn("NULL");
 		}
-		/******************** DvcMetric_Typ_Cdg_Dsply ********************************************************************************/
-		if(devicemetrictypecoding.hasDisplay()) {
-			d.setDvcMetricTypCdgDsply(String.valueOf(devicemetrictypecoding.getDisplay()));
-		}
+
+		if(devicemetrictypecodingi == devicemetrictypecodinglist.size()-1) {d.addDvcMetricTypCdgVrsn("]");}
+
+
 		/******************** DvcMetric_Typ_Cdg_Cd ********************************************************************************/
+		if(devicemetrictypecodingi == 0) {d.addDvcMetricTypCdgCd("[");}
 		if(devicemetrictypecoding.hasCode()) {
-			d.setDvcMetricTypCdgCd(String.valueOf(devicemetrictypecoding.getCode()));
+
+			d.addDvcMetricTypCdgCd(String.valueOf(devicemetrictypecoding.getCode()));
+		} else {
+			d.addDvcMetricTypCdgCd("NULL");
 		}
+
+		if(devicemetrictypecodingi == devicemetrictypecodinglist.size()-1) {d.addDvcMetricTypCdgCd("]");}
+
+
 		/******************** DvcMetric_Typ_Cdg_UsrSltd ********************************************************************************/
+		if(devicemetrictypecodingi == 0) {d.addDvcMetricTypCdgUsrSltd("[");}
 		if(devicemetrictypecoding.hasUserSelected()) {
-			d.setDvcMetricTypCdgUsrSltd(String.valueOf(devicemetrictypecoding.getUserSelected()));
+
+			d.addDvcMetricTypCdgUsrSltd(String.valueOf(devicemetrictypecoding.getUserSelected()));
+		} else {
+			d.addDvcMetricTypCdgUsrSltd("NULL");
 		}
+
+		if(devicemetrictypecodingi == devicemetrictypecodinglist.size()-1) {d.addDvcMetricTypCdgUsrSltd("]");}
+
+
 		/******************** DvcMetric_Typ_Cdg_Sys ********************************************************************************/
+		if(devicemetrictypecodingi == 0) {d.addDvcMetricTypCdgSys("[");}
 		if(devicemetrictypecoding.hasSystem()) {
-			d.setDvcMetricTypCdgSys(String.valueOf(devicemetrictypecoding.getSystem()));
+
+			d.addDvcMetricTypCdgSys(String.valueOf(devicemetrictypecoding.getSystem()));
+		} else {
+			d.addDvcMetricTypCdgSys("NULL");
 		}
+
+		if(devicemetrictypecodingi == devicemetrictypecodinglist.size()-1) {d.addDvcMetricTypCdgSys("]");}
+
+
+		 };
 		/******************** DvcMetric_Src ********************************************************************************/
 		if(devicemetric.hasSource()) {
-			d.setDvcMetricSrc(String.valueOf(devicemetric.getSource()));
-		}
-		/******************** devicemetricunit ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept devicemetricunit = devicemetric.getUnit();
 
-		/******************** DvcMetric_Unt_Txt ********************************************************************************/
-		if(devicemetricunit.hasText()) {
-			d.setDvcMetricUntTxt(String.valueOf(devicemetricunit.getText()));
+			if(devicemetric.getSource().getReference() != null) {
+			d.addDvcMetricSrc(devicemetric.getSource().getReference());
+			}
+		} else {
+			d.addDvcMetricSrc("NULL");
 		}
-		/******************** devicemetricunitcoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding devicemetricunitcoding = devicemetricunit.getCodingFirstRep();
 
-		/******************** DvcMetric_Unt_Cdg_Vrsn ********************************************************************************/
-		if(devicemetricunitcoding.hasVersion()) {
-			d.setDvcMetricUntCdgVrsn(String.valueOf(devicemetricunitcoding.getVersion()));
-		}
-		/******************** DvcMetric_Unt_Cdg_Dsply ********************************************************************************/
-		if(devicemetricunitcoding.hasDisplay()) {
-			d.setDvcMetricUntCdgDsply(String.valueOf(devicemetricunitcoding.getDisplay()));
-		}
-		/******************** DvcMetric_Unt_Cdg_Cd ********************************************************************************/
-		if(devicemetricunitcoding.hasCode()) {
-			d.setDvcMetricUntCdgCd(String.valueOf(devicemetricunitcoding.getCode()));
-		}
-		/******************** DvcMetric_Unt_Cdg_UsrSltd ********************************************************************************/
-		if(devicemetricunitcoding.hasUserSelected()) {
-			d.setDvcMetricUntCdgUsrSltd(String.valueOf(devicemetricunitcoding.getUserSelected()));
-		}
-		/******************** DvcMetric_Unt_Cdg_Sys ********************************************************************************/
-		if(devicemetricunitcoding.hasSystem()) {
-			d.setDvcMetricUntCdgSys(String.valueOf(devicemetricunitcoding.getSystem()));
-		}
-		/******************** devicemetriccolor ********************************************************************************/
-		org.hl7.fhir.r4.model.DeviceMetric.DeviceMetricColor devicemetriccolor = devicemetric.getColor();
-		d.setDvcMetricColor(devicemetriccolor.toCode());
-
-		/******************** devicemetriccategory ********************************************************************************/
-		org.hl7.fhir.r4.model.DeviceMetric.DeviceMetricCategory devicemetriccategory = devicemetric.getCategory();
-		d.setDvcMetricCtgry(devicemetriccategory.toCode());
 
 		/******************** devicemetricidentifier ********************************************************************************/
-		org.hl7.fhir.r4.model.Identifier devicemetricidentifier = devicemetric.getIdentifierFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.Identifier> devicemetricidentifierlist = devicemetric.getIdentifier();
+		for(int devicemetricidentifieri = 0; devicemetricidentifieri<devicemetricidentifierlist.size();devicemetricidentifieri++ ) {
+		org.hl7.fhir.r4.model.Identifier  devicemetricidentifier = devicemetricidentifierlist.get(devicemetricidentifieri);
 
 		/******************** DvcMetric_Id_Vl ********************************************************************************/
+		if(devicemetricidentifieri == 0) {d.addDvcMetricIdVl("[");}
 		if(devicemetricidentifier.hasValue()) {
-			d.setDvcMetricIdVl(String.valueOf(devicemetricidentifier.getValue()));
+
+			d.addDvcMetricIdVl(String.valueOf(devicemetricidentifier.getValue()));
+		} else {
+			d.addDvcMetricIdVl("NULL");
 		}
+
+		if(devicemetricidentifieri == devicemetricidentifierlist.size()-1) {d.addDvcMetricIdVl("]");}
+
+
 		/******************** devicemetricidentifiertype ********************************************************************************/
 		org.hl7.fhir.r4.model.CodeableConcept devicemetricidentifiertype = devicemetricidentifier.getType();
 
 		/******************** DvcMetric_Id_Typ_Txt ********************************************************************************/
+		if(devicemetricidentifieri == 0) {d.addDvcMetricIdTypTxt("[");}
 		if(devicemetricidentifiertype.hasText()) {
-			d.setDvcMetricIdTypTxt(String.valueOf(devicemetricidentifiertype.getText()));
+
+			d.addDvcMetricIdTypTxt(String.valueOf(devicemetricidentifiertype.getText()));
+		} else {
+			d.addDvcMetricIdTypTxt("NULL");
 		}
+
+		if(devicemetricidentifieri == devicemetricidentifierlist.size()-1) {d.addDvcMetricIdTypTxt("]");}
+
+
 		/******************** devicemetricidentifiertypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding devicemetricidentifiertypecoding = devicemetricidentifiertype.getCodingFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.Coding> devicemetricidentifiertypecodinglist = devicemetricidentifiertype.getCoding();
+		for(int devicemetricidentifiertypecodingi = 0; devicemetricidentifiertypecodingi<devicemetricidentifiertypecodinglist.size();devicemetricidentifiertypecodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  devicemetricidentifiertypecoding = devicemetricidentifiertypecodinglist.get(devicemetricidentifiertypecodingi);
+
+		/******************** DvcMetric_Id_Typ_Cdg_Dsply ********************************************************************************/
+		if(devicemetricidentifiertypecodingi == 0) {d.addDvcMetricIdTypCdgDsply("[[");}
+		if(devicemetricidentifiertypecoding.hasDisplay()) {
+
+			d.addDvcMetricIdTypCdgDsply(String.valueOf(devicemetricidentifiertypecoding.getDisplay()));
+		} else {
+			d.addDvcMetricIdTypCdgDsply("NULL");
+		}
+
+		if(devicemetricidentifiertypecodingi == devicemetricidentifiertypecodinglist.size()-1) {d.addDvcMetricIdTypCdgDsply("]]");}
+
 
 		/******************** DvcMetric_Id_Typ_Cdg_Vrsn ********************************************************************************/
+		if(devicemetricidentifiertypecodingi == 0) {d.addDvcMetricIdTypCdgVrsn("[[");}
 		if(devicemetricidentifiertypecoding.hasVersion()) {
-			d.setDvcMetricIdTypCdgVrsn(String.valueOf(devicemetricidentifiertypecoding.getVersion()));
+
+			d.addDvcMetricIdTypCdgVrsn(String.valueOf(devicemetricidentifiertypecoding.getVersion()));
+		} else {
+			d.addDvcMetricIdTypCdgVrsn("NULL");
 		}
-		/******************** DvcMetric_Id_Typ_Cdg_Dsply ********************************************************************************/
-		if(devicemetricidentifiertypecoding.hasDisplay()) {
-			d.setDvcMetricIdTypCdgDsply(String.valueOf(devicemetricidentifiertypecoding.getDisplay()));
-		}
+
+		if(devicemetricidentifiertypecodingi == devicemetricidentifiertypecodinglist.size()-1) {d.addDvcMetricIdTypCdgVrsn("]]");}
+
+
 		/******************** DvcMetric_Id_Typ_Cdg_Cd ********************************************************************************/
+		if(devicemetricidentifiertypecodingi == 0) {d.addDvcMetricIdTypCdgCd("[[");}
 		if(devicemetricidentifiertypecoding.hasCode()) {
-			d.setDvcMetricIdTypCdgCd(String.valueOf(devicemetricidentifiertypecoding.getCode()));
+
+			d.addDvcMetricIdTypCdgCd(String.valueOf(devicemetricidentifiertypecoding.getCode()));
+		} else {
+			d.addDvcMetricIdTypCdgCd("NULL");
 		}
+
+		if(devicemetricidentifiertypecodingi == devicemetricidentifiertypecodinglist.size()-1) {d.addDvcMetricIdTypCdgCd("]]");}
+
+
 		/******************** DvcMetric_Id_Typ_Cdg_UsrSltd ********************************************************************************/
+		if(devicemetricidentifiertypecodingi == 0) {d.addDvcMetricIdTypCdgUsrSltd("[[");}
 		if(devicemetricidentifiertypecoding.hasUserSelected()) {
-			d.setDvcMetricIdTypCdgUsrSltd(String.valueOf(devicemetricidentifiertypecoding.getUserSelected()));
+
+			d.addDvcMetricIdTypCdgUsrSltd(String.valueOf(devicemetricidentifiertypecoding.getUserSelected()));
+		} else {
+			d.addDvcMetricIdTypCdgUsrSltd("NULL");
 		}
+
+		if(devicemetricidentifiertypecodingi == devicemetricidentifiertypecodinglist.size()-1) {d.addDvcMetricIdTypCdgUsrSltd("]]");}
+
+
 		/******************** DvcMetric_Id_Typ_Cdg_Sys ********************************************************************************/
+		if(devicemetricidentifiertypecodingi == 0) {d.addDvcMetricIdTypCdgSys("[[");}
 		if(devicemetricidentifiertypecoding.hasSystem()) {
-			d.setDvcMetricIdTypCdgSys(String.valueOf(devicemetricidentifiertypecoding.getSystem()));
+
+			d.addDvcMetricIdTypCdgSys(String.valueOf(devicemetricidentifiertypecoding.getSystem()));
+		} else {
+			d.addDvcMetricIdTypCdgSys("NULL");
 		}
+
+		if(devicemetricidentifiertypecodingi == devicemetricidentifiertypecodinglist.size()-1) {d.addDvcMetricIdTypCdgSys("]]");}
+
+
+		 };
 		/******************** devicemetricidentifierperiod ********************************************************************************/
 		org.hl7.fhir.r4.model.Period devicemetricidentifierperiod = devicemetricidentifier.getPeriod();
 
 		/******************** DvcMetric_Id_Prd_Strt ********************************************************************************/
+		if(devicemetricidentifieri == 0) {d.addDvcMetricIdPrdStrt("[");}
 		if(devicemetricidentifierperiod.hasStart()) {
-			d.setDvcMetricIdPrdStrt(String.valueOf(devicemetricidentifierperiod.getStart()));
+
+			d.addDvcMetricIdPrdStrt("\""+ca.uhn.fhir.util.DateUtils.formatDate(devicemetricidentifierperiod.getStart())+"\"");
+		} else {
+			d.addDvcMetricIdPrdStrt("NULL");
 		}
+
+		if(devicemetricidentifieri == devicemetricidentifierlist.size()-1) {d.addDvcMetricIdPrdStrt("]");}
+
+
 		/******************** DvcMetric_Id_Prd_End ********************************************************************************/
+		if(devicemetricidentifieri == 0) {d.addDvcMetricIdPrdEnd("[");}
 		if(devicemetricidentifierperiod.hasEnd()) {
-			d.setDvcMetricIdPrdEnd(String.valueOf(devicemetricidentifierperiod.getEnd()));
+
+			d.addDvcMetricIdPrdEnd("\""+ca.uhn.fhir.util.DateUtils.formatDate(devicemetricidentifierperiod.getEnd())+"\"");
+		} else {
+			d.addDvcMetricIdPrdEnd("NULL");
 		}
-		/******************** DvcMetric_Id_Assigner ********************************************************************************/
-		if(devicemetricidentifier.hasAssigner()) {
-			d.setDvcMetricIdAssigner(String.valueOf(devicemetricidentifier.getAssigner()));
-		}
-		/******************** DvcMetric_Id_Sys ********************************************************************************/
-		if(devicemetricidentifier.hasSystem()) {
-			d.setDvcMetricIdSys(String.valueOf(devicemetricidentifier.getSystem()));
-		}
+
+		if(devicemetricidentifieri == devicemetricidentifierlist.size()-1) {d.addDvcMetricIdPrdEnd("]");}
+
+
 		/******************** devicemetricidentifieruse ********************************************************************************/
 		org.hl7.fhir.r4.model.Identifier.IdentifierUse devicemetricidentifieruse = devicemetricidentifier.getUse();
-		d.setDvcMetricIdUse(devicemetricidentifieruse.toCode());
+		if(devicemetricidentifieruse!=null) {
+		if(devicemetricidentifieri == 0) {
+
+		d.addDvcMetricIdUse("[");		}
+			d.addDvcMetricIdUse(devicemetricidentifieruse.toCode());
+		if(devicemetricidentifieri == devicemetricidentifierlist.size()-1) {
+
+		d.addDvcMetricIdUse("]");		}
+
+		} else {
+			d.addDvcMetricIdUse("NULL");
+		}
+
+		/******************** DvcMetric_Id_Assigner ********************************************************************************/
+		if(devicemetricidentifieri == 0) {d.addDvcMetricIdAssigner("[");}
+		if(devicemetricidentifier.hasAssigner()) {
+
+			if(devicemetricidentifier.getAssigner().getReference() != null) {
+			d.addDvcMetricIdAssigner(devicemetricidentifier.getAssigner().getReference());
+			}
+		} else {
+			d.addDvcMetricIdAssigner("NULL");
+		}
+
+		if(devicemetricidentifieri == devicemetricidentifierlist.size()-1) {d.addDvcMetricIdAssigner("]");}
+
+
+		/******************** DvcMetric_Id_Sys ********************************************************************************/
+		if(devicemetricidentifieri == 0) {d.addDvcMetricIdSys("[");}
+		if(devicemetricidentifier.hasSystem()) {
+
+			d.addDvcMetricIdSys(String.valueOf(devicemetricidentifier.getSystem()));
+		} else {
+			d.addDvcMetricIdSys("NULL");
+		}
+
+		if(devicemetricidentifieri == devicemetricidentifierlist.size()-1) {d.addDvcMetricIdSys("]");}
+
+
+		 };
+		/******************** devicemetriccategory ********************************************************************************/
+		org.hl7.fhir.r4.model.DeviceMetric.DeviceMetricCategory devicemetriccategory = devicemetric.getCategory();
+		if(devicemetriccategory!=null) {
+			d.addDvcMetricCtgry(devicemetriccategory.toCode());
+		} else {
+			d.addDvcMetricCtgry("NULL");
+		}
+
+		/******************** devicemetricoperationalstatus ********************************************************************************/
+		org.hl7.fhir.r4.model.DeviceMetric.DeviceMetricOperationalStatus devicemetricoperationalstatus = devicemetric.getOperationalStatus();
+		if(devicemetricoperationalstatus!=null) {
+			d.addDvcMetricOprtnalSts(devicemetricoperationalstatus.toCode());
+		} else {
+			d.addDvcMetricOprtnalSts("NULL");
+		}
 
 		/******************** devicemetricmeasurementperiod ********************************************************************************/
 		org.hl7.fhir.r4.model.Timing devicemetricmeasurementperiod = devicemetric.getMeasurementPeriod();
@@ -154,77 +301,219 @@ public class DeviceMetricBidirectionalConversion
 
 		/******************** DvcMetric_MsrmentPrd_Cd_Txt ********************************************************************************/
 		if(devicemetricmeasurementperiodcode.hasText()) {
-			d.setDvcMetricMsrmentPrdCdTxt(String.valueOf(devicemetricmeasurementperiodcode.getText()));
+
+			d.addDvcMetricMsrmentPrdCdTxt(String.valueOf(devicemetricmeasurementperiodcode.getText()));
+		} else {
+			d.addDvcMetricMsrmentPrdCdTxt("NULL");
 		}
+
+
 		/******************** devicemetricmeasurementperiodcodecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding devicemetricmeasurementperiodcodecoding = devicemetricmeasurementperiodcode.getCodingFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.Coding> devicemetricmeasurementperiodcodecodinglist = devicemetricmeasurementperiodcode.getCoding();
+		for(int devicemetricmeasurementperiodcodecodingi = 0; devicemetricmeasurementperiodcodecodingi<devicemetricmeasurementperiodcodecodinglist.size();devicemetricmeasurementperiodcodecodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  devicemetricmeasurementperiodcodecoding = devicemetricmeasurementperiodcodecodinglist.get(devicemetricmeasurementperiodcodecodingi);
+
+		/******************** DvcMetric_MsrmentPrd_Cd_Cdg_Dsply ********************************************************************************/
+		if(devicemetricmeasurementperiodcodecodingi == 0) {d.addDvcMetricMsrmentPrdCdCdgDsply("[");}
+		if(devicemetricmeasurementperiodcodecoding.hasDisplay()) {
+
+			d.addDvcMetricMsrmentPrdCdCdgDsply(String.valueOf(devicemetricmeasurementperiodcodecoding.getDisplay()));
+		} else {
+			d.addDvcMetricMsrmentPrdCdCdgDsply("NULL");
+		}
+
+		if(devicemetricmeasurementperiodcodecodingi == devicemetricmeasurementperiodcodecodinglist.size()-1) {d.addDvcMetricMsrmentPrdCdCdgDsply("]");}
+
 
 		/******************** DvcMetric_MsrmentPrd_Cd_Cdg_Vrsn ********************************************************************************/
+		if(devicemetricmeasurementperiodcodecodingi == 0) {d.addDvcMetricMsrmentPrdCdCdgVrsn("[");}
 		if(devicemetricmeasurementperiodcodecoding.hasVersion()) {
-			d.setDvcMetricMsrmentPrdCdCdgVrsn(String.valueOf(devicemetricmeasurementperiodcodecoding.getVersion()));
+
+			d.addDvcMetricMsrmentPrdCdCdgVrsn(String.valueOf(devicemetricmeasurementperiodcodecoding.getVersion()));
+		} else {
+			d.addDvcMetricMsrmentPrdCdCdgVrsn("NULL");
 		}
-		/******************** DvcMetric_MsrmentPrd_Cd_Cdg_Dsply ********************************************************************************/
-		if(devicemetricmeasurementperiodcodecoding.hasDisplay()) {
-			d.setDvcMetricMsrmentPrdCdCdgDsply(String.valueOf(devicemetricmeasurementperiodcodecoding.getDisplay()));
-		}
+
+		if(devicemetricmeasurementperiodcodecodingi == devicemetricmeasurementperiodcodecodinglist.size()-1) {d.addDvcMetricMsrmentPrdCdCdgVrsn("]");}
+
+
 		/******************** DvcMetric_MsrmentPrd_Cd_Cdg_Cd ********************************************************************************/
+		if(devicemetricmeasurementperiodcodecodingi == 0) {d.addDvcMetricMsrmentPrdCdCdgCd("[");}
 		if(devicemetricmeasurementperiodcodecoding.hasCode()) {
-			d.setDvcMetricMsrmentPrdCdCdgCd(String.valueOf(devicemetricmeasurementperiodcodecoding.getCode()));
+
+			d.addDvcMetricMsrmentPrdCdCdgCd(String.valueOf(devicemetricmeasurementperiodcodecoding.getCode()));
+		} else {
+			d.addDvcMetricMsrmentPrdCdCdgCd("NULL");
 		}
+
+		if(devicemetricmeasurementperiodcodecodingi == devicemetricmeasurementperiodcodecodinglist.size()-1) {d.addDvcMetricMsrmentPrdCdCdgCd("]");}
+
+
 		/******************** DvcMetric_MsrmentPrd_Cd_Cdg_UsrSltd ********************************************************************************/
+		if(devicemetricmeasurementperiodcodecodingi == 0) {d.addDvcMetricMsrmentPrdCdCdgUsrSltd("[");}
 		if(devicemetricmeasurementperiodcodecoding.hasUserSelected()) {
-			d.setDvcMetricMsrmentPrdCdCdgUsrSltd(String.valueOf(devicemetricmeasurementperiodcodecoding.getUserSelected()));
+
+			d.addDvcMetricMsrmentPrdCdCdgUsrSltd(String.valueOf(devicemetricmeasurementperiodcodecoding.getUserSelected()));
+		} else {
+			d.addDvcMetricMsrmentPrdCdCdgUsrSltd("NULL");
 		}
+
+		if(devicemetricmeasurementperiodcodecodingi == devicemetricmeasurementperiodcodecodinglist.size()-1) {d.addDvcMetricMsrmentPrdCdCdgUsrSltd("]");}
+
+
 		/******************** DvcMetric_MsrmentPrd_Cd_Cdg_Sys ********************************************************************************/
+		if(devicemetricmeasurementperiodcodecodingi == 0) {d.addDvcMetricMsrmentPrdCdCdgSys("[");}
 		if(devicemetricmeasurementperiodcodecoding.hasSystem()) {
-			d.setDvcMetricMsrmentPrdCdCdgSys(String.valueOf(devicemetricmeasurementperiodcodecoding.getSystem()));
+
+			d.addDvcMetricMsrmentPrdCdCdgSys(String.valueOf(devicemetricmeasurementperiodcodecoding.getSystem()));
+		} else {
+			d.addDvcMetricMsrmentPrdCdCdgSys("NULL");
 		}
+
+		if(devicemetricmeasurementperiodcodecodingi == devicemetricmeasurementperiodcodecodinglist.size()-1) {d.addDvcMetricMsrmentPrdCdCdgSys("]");}
+
+
+		 };
+		/******************** DvcMetric_MsrmentPrd_Evnt ********************************************************************************/
+		if(devicemetricmeasurementperiod.hasEvent()) {
+
+			String  array = "[";
+			for(int incr=0; incr<devicemetricmeasurementperiod.getEvent().size(); incr++) {
+				array = array + devicemetricmeasurementperiod.getEvent().get(incr).getValueAsString() + ",";
+			}
+			array = array.substring(0, array.length() -1);
+			array = array + "]";
+			d.addDvcMetricMsrmentPrdEvnt(array);
+
+		} else {
+			d.addDvcMetricMsrmentPrdEvnt("NULL");
+		}
+
+
 		/******************** devicemetricmeasurementperiodrepeat ********************************************************************************/
 		org.hl7.fhir.r4.model.Timing.TimingRepeatComponent devicemetricmeasurementperiodrepeat = devicemetricmeasurementperiod.getRepeat();
 
 		/******************** DvcMetric_MsrmentPrd_Rpt_Off ********************************************************************************/
 		if(devicemetricmeasurementperiodrepeat.hasOffset()) {
-			d.setDvcMetricMsrmentPrdRptOff(String.valueOf(devicemetricmeasurementperiodrepeat.getOffset()));
+
+			d.addDvcMetricMsrmentPrdRptOff(String.valueOf(devicemetricmeasurementperiodrepeat.getOffset()));
+		} else {
+			d.addDvcMetricMsrmentPrdRptOff("NULL");
 		}
+
+
 		/******************** DvcMetric_MsrmentPrd_Rpt_Cnt ********************************************************************************/
 		if(devicemetricmeasurementperiodrepeat.hasCount()) {
-			d.setDvcMetricMsrmentPrdRptCnt(String.valueOf(devicemetricmeasurementperiodrepeat.getCount()));
+
+			d.addDvcMetricMsrmentPrdRptCnt(String.valueOf(devicemetricmeasurementperiodrepeat.getCount()));
+		} else {
+			d.addDvcMetricMsrmentPrdRptCnt("NULL");
 		}
-		/******************** DvcMetric_MsrmentPrd_Rpt_Frqncy ********************************************************************************/
-		if(devicemetricmeasurementperiodrepeat.hasFrequency()) {
-			d.setDvcMetricMsrmentPrdRptFrqncy(String.valueOf(devicemetricmeasurementperiodrepeat.getFrequency()));
-		}
+
+
 		/******************** DvcMetric_MsrmentPrd_Rpt_Prd ********************************************************************************/
 		if(devicemetricmeasurementperiodrepeat.hasPeriod()) {
-			d.setDvcMetricMsrmentPrdRptPrd(String.valueOf(devicemetricmeasurementperiodrepeat.getPeriod()));
+
+			d.addDvcMetricMsrmentPrdRptPrd(String.valueOf(devicemetricmeasurementperiodrepeat.getPeriod()));
+		} else {
+			d.addDvcMetricMsrmentPrdRptPrd("NULL");
 		}
-		/******************** DvcMetric_MsrmentPrd_Rpt_Duration ********************************************************************************/
-		if(devicemetricmeasurementperiodrepeat.hasDuration()) {
-			d.setDvcMetricMsrmentPrdRptDuration(String.valueOf(devicemetricmeasurementperiodrepeat.getDuration()));
+
+
+		/******************** DvcMetric_MsrmentPrd_Rpt_CntMx ********************************************************************************/
+		if(devicemetricmeasurementperiodrepeat.hasCountMax()) {
+
+			d.addDvcMetricMsrmentPrdRptCntMx(String.valueOf(devicemetricmeasurementperiodrepeat.getCountMax()));
+		} else {
+			d.addDvcMetricMsrmentPrdRptCntMx("NULL");
 		}
+
+
+		/******************** DvcMetric_MsrmentPrd_Rpt_DurationMx ********************************************************************************/
+		if(devicemetricmeasurementperiodrepeat.hasDurationMax()) {
+
+			d.addDvcMetricMsrmentPrdRptDurationMx(String.valueOf(devicemetricmeasurementperiodrepeat.getDurationMax()));
+		} else {
+			d.addDvcMetricMsrmentPrdRptDurationMx("NULL");
+		}
+
+
+		/******************** devicemetricmeasurementperiodrepeatboundsperiod ********************************************************************************/
+		org.hl7.fhir.r4.model.Period devicemetricmeasurementperiodrepeatboundsperiod = devicemetricmeasurementperiodrepeat.getBoundsPeriod();
+
+		/******************** DvcMetric_MsrmentPrd_Rpt_BndsPrd_Strt ********************************************************************************/
+		if(devicemetricmeasurementperiodrepeatboundsperiod.hasStart()) {
+
+			d.addDvcMetricMsrmentPrdRptBndsPrdStrt("\""+ca.uhn.fhir.util.DateUtils.formatDate(devicemetricmeasurementperiodrepeatboundsperiod.getStart())+"\"");
+		} else {
+			d.addDvcMetricMsrmentPrdRptBndsPrdStrt("NULL");
+		}
+
+
+		/******************** DvcMetric_MsrmentPrd_Rpt_BndsPrd_End ********************************************************************************/
+		if(devicemetricmeasurementperiodrepeatboundsperiod.hasEnd()) {
+
+			d.addDvcMetricMsrmentPrdRptBndsPrdEnd("\""+ca.uhn.fhir.util.DateUtils.formatDate(devicemetricmeasurementperiodrepeatboundsperiod.getEnd())+"\"");
+		} else {
+			d.addDvcMetricMsrmentPrdRptBndsPrdEnd("NULL");
+		}
+
+
+		/******************** devicemetricmeasurementperiodrepeatdurationunit ********************************************************************************/
+		org.hl7.fhir.r4.model.Timing.UnitsOfTime devicemetricmeasurementperiodrepeatdurationunit = devicemetricmeasurementperiodrepeat.getDurationUnit();
+		if(devicemetricmeasurementperiodrepeatdurationunit!=null) {
+			d.addDvcMetricMsrmentPrdRptDurationUnt(devicemetricmeasurementperiodrepeatdurationunit.toCode());
+		} else {
+			d.addDvcMetricMsrmentPrdRptDurationUnt("NULL");
+		}
+
 		/******************** devicemetricmeasurementperiodrepeatboundsduration ********************************************************************************/
 		org.hl7.fhir.r4.model.Duration devicemetricmeasurementperiodrepeatboundsduration = devicemetricmeasurementperiodrepeat.getBoundsDuration();
 
 		/******************** DvcMetric_MsrmentPrd_Rpt_BndsDuration_Vl ********************************************************************************/
 		if(devicemetricmeasurementperiodrepeatboundsduration.hasValue()) {
-			d.setDvcMetricMsrmentPrdRptBndsDurationVl(String.valueOf(devicemetricmeasurementperiodrepeatboundsduration.getValue()));
+
+			d.addDvcMetricMsrmentPrdRptBndsDurationVl(String.valueOf(devicemetricmeasurementperiodrepeatboundsduration.getValue()));
+		} else {
+			d.addDvcMetricMsrmentPrdRptBndsDurationVl("NULL");
 		}
+
+
 		/******************** devicemetricmeasurementperiodrepeatboundsdurationcomparator ********************************************************************************/
 		org.hl7.fhir.r4.model.Quantity.QuantityComparator devicemetricmeasurementperiodrepeatboundsdurationcomparator = devicemetricmeasurementperiodrepeatboundsduration.getComparator();
-		d.setDvcMetricMsrmentPrdRptBndsDurationCmprtr(devicemetricmeasurementperiodrepeatboundsdurationcomparator.toCode());
+		if(devicemetricmeasurementperiodrepeatboundsdurationcomparator!=null) {
+			d.addDvcMetricMsrmentPrdRptBndsDurationCmprtr(devicemetricmeasurementperiodrepeatboundsdurationcomparator.toCode());
+		} else {
+			d.addDvcMetricMsrmentPrdRptBndsDurationCmprtr("NULL");
+		}
 
 		/******************** DvcMetric_MsrmentPrd_Rpt_BndsDuration_Cd ********************************************************************************/
 		if(devicemetricmeasurementperiodrepeatboundsduration.hasCode()) {
-			d.setDvcMetricMsrmentPrdRptBndsDurationCd(String.valueOf(devicemetricmeasurementperiodrepeatboundsduration.getCode()));
+
+			d.addDvcMetricMsrmentPrdRptBndsDurationCd(String.valueOf(devicemetricmeasurementperiodrepeatboundsduration.getCode()));
+		} else {
+			d.addDvcMetricMsrmentPrdRptBndsDurationCd("NULL");
 		}
+
+
 		/******************** DvcMetric_MsrmentPrd_Rpt_BndsDuration_Unt ********************************************************************************/
 		if(devicemetricmeasurementperiodrepeatboundsduration.hasUnit()) {
-			d.setDvcMetricMsrmentPrdRptBndsDurationUnt(String.valueOf(devicemetricmeasurementperiodrepeatboundsduration.getUnit()));
+
+			d.addDvcMetricMsrmentPrdRptBndsDurationUnt(String.valueOf(devicemetricmeasurementperiodrepeatboundsduration.getUnit()));
+		} else {
+			d.addDvcMetricMsrmentPrdRptBndsDurationUnt("NULL");
 		}
+
+
 		/******************** DvcMetric_MsrmentPrd_Rpt_BndsDuration_Sys ********************************************************************************/
 		if(devicemetricmeasurementperiodrepeatboundsduration.hasSystem()) {
-			d.setDvcMetricMsrmentPrdRptBndsDurationSys(String.valueOf(devicemetricmeasurementperiodrepeatboundsduration.getSystem()));
+
+			d.addDvcMetricMsrmentPrdRptBndsDurationSys(String.valueOf(devicemetricmeasurementperiodrepeatboundsduration.getSystem()));
+		} else {
+			d.addDvcMetricMsrmentPrdRptBndsDurationSys("NULL");
 		}
+
+
 		/******************** devicemetricmeasurementperiodrepeatboundsrange ********************************************************************************/
 		org.hl7.fhir.r4.model.Range devicemetricmeasurementperiodrepeatboundsrange = devicemetricmeasurementperiodrepeat.getBoundsRange();
 
@@ -233,101 +522,311 @@ public class DeviceMetricBidirectionalConversion
 
 		/******************** DvcMetric_MsrmentPrd_Rpt_BndsRng_Lw_Vl ********************************************************************************/
 		if(devicemetricmeasurementperiodrepeatboundsrangelow.hasValue()) {
-			d.setDvcMetricMsrmentPrdRptBndsRngLwVl(String.valueOf(devicemetricmeasurementperiodrepeatboundsrangelow.getValue()));
+
+			d.addDvcMetricMsrmentPrdRptBndsRngLwVl(String.valueOf(devicemetricmeasurementperiodrepeatboundsrangelow.getValue()));
+		} else {
+			d.addDvcMetricMsrmentPrdRptBndsRngLwVl("NULL");
 		}
+
+
 		/******************** devicemetricmeasurementperiodrepeatboundsrangelowcomparator ********************************************************************************/
 		org.hl7.fhir.r4.model.Quantity.QuantityComparator devicemetricmeasurementperiodrepeatboundsrangelowcomparator = devicemetricmeasurementperiodrepeatboundsrangelow.getComparator();
-		d.setDvcMetricMsrmentPrdRptBndsRngLwCmprtr(devicemetricmeasurementperiodrepeatboundsrangelowcomparator.toCode());
+		if(devicemetricmeasurementperiodrepeatboundsrangelowcomparator!=null) {
+			d.addDvcMetricMsrmentPrdRptBndsRngLwCmprtr(devicemetricmeasurementperiodrepeatboundsrangelowcomparator.toCode());
+		} else {
+			d.addDvcMetricMsrmentPrdRptBndsRngLwCmprtr("NULL");
+		}
 
 		/******************** DvcMetric_MsrmentPrd_Rpt_BndsRng_Lw_Cd ********************************************************************************/
 		if(devicemetricmeasurementperiodrepeatboundsrangelow.hasCode()) {
-			d.setDvcMetricMsrmentPrdRptBndsRngLwCd(String.valueOf(devicemetricmeasurementperiodrepeatboundsrangelow.getCode()));
+
+			d.addDvcMetricMsrmentPrdRptBndsRngLwCd(String.valueOf(devicemetricmeasurementperiodrepeatboundsrangelow.getCode()));
+		} else {
+			d.addDvcMetricMsrmentPrdRptBndsRngLwCd("NULL");
 		}
+
+
 		/******************** DvcMetric_MsrmentPrd_Rpt_BndsRng_Lw_Unt ********************************************************************************/
 		if(devicemetricmeasurementperiodrepeatboundsrangelow.hasUnit()) {
-			d.setDvcMetricMsrmentPrdRptBndsRngLwUnt(String.valueOf(devicemetricmeasurementperiodrepeatboundsrangelow.getUnit()));
+
+			d.addDvcMetricMsrmentPrdRptBndsRngLwUnt(String.valueOf(devicemetricmeasurementperiodrepeatboundsrangelow.getUnit()));
+		} else {
+			d.addDvcMetricMsrmentPrdRptBndsRngLwUnt("NULL");
 		}
+
+
 		/******************** DvcMetric_MsrmentPrd_Rpt_BndsRng_Lw_Sys ********************************************************************************/
 		if(devicemetricmeasurementperiodrepeatboundsrangelow.hasSystem()) {
-			d.setDvcMetricMsrmentPrdRptBndsRngLwSys(String.valueOf(devicemetricmeasurementperiodrepeatboundsrangelow.getSystem()));
+
+			d.addDvcMetricMsrmentPrdRptBndsRngLwSys(String.valueOf(devicemetricmeasurementperiodrepeatboundsrangelow.getSystem()));
+		} else {
+			d.addDvcMetricMsrmentPrdRptBndsRngLwSys("NULL");
 		}
+
+
 		/******************** devicemetricmeasurementperiodrepeatboundsrangehigh ********************************************************************************/
 		org.hl7.fhir.r4.model.Quantity devicemetricmeasurementperiodrepeatboundsrangehigh = devicemetricmeasurementperiodrepeatboundsrange.getHigh();
 
 		/******************** DvcMetric_MsrmentPrd_Rpt_BndsRng_Hi_Vl ********************************************************************************/
 		if(devicemetricmeasurementperiodrepeatboundsrangehigh.hasValue()) {
-			d.setDvcMetricMsrmentPrdRptBndsRngHiVl(String.valueOf(devicemetricmeasurementperiodrepeatboundsrangehigh.getValue()));
+
+			d.addDvcMetricMsrmentPrdRptBndsRngHiVl(String.valueOf(devicemetricmeasurementperiodrepeatboundsrangehigh.getValue()));
+		} else {
+			d.addDvcMetricMsrmentPrdRptBndsRngHiVl("NULL");
 		}
+
+
 		/******************** devicemetricmeasurementperiodrepeatboundsrangehighcomparator ********************************************************************************/
 		org.hl7.fhir.r4.model.Quantity.QuantityComparator devicemetricmeasurementperiodrepeatboundsrangehighcomparator = devicemetricmeasurementperiodrepeatboundsrangehigh.getComparator();
-		d.setDvcMetricMsrmentPrdRptBndsRngHiCmprtr(devicemetricmeasurementperiodrepeatboundsrangehighcomparator.toCode());
+		if(devicemetricmeasurementperiodrepeatboundsrangehighcomparator!=null) {
+			d.addDvcMetricMsrmentPrdRptBndsRngHiCmprtr(devicemetricmeasurementperiodrepeatboundsrangehighcomparator.toCode());
+		} else {
+			d.addDvcMetricMsrmentPrdRptBndsRngHiCmprtr("NULL");
+		}
 
 		/******************** DvcMetric_MsrmentPrd_Rpt_BndsRng_Hi_Cd ********************************************************************************/
 		if(devicemetricmeasurementperiodrepeatboundsrangehigh.hasCode()) {
-			d.setDvcMetricMsrmentPrdRptBndsRngHiCd(String.valueOf(devicemetricmeasurementperiodrepeatboundsrangehigh.getCode()));
+
+			d.addDvcMetricMsrmentPrdRptBndsRngHiCd(String.valueOf(devicemetricmeasurementperiodrepeatboundsrangehigh.getCode()));
+		} else {
+			d.addDvcMetricMsrmentPrdRptBndsRngHiCd("NULL");
 		}
+
+
 		/******************** DvcMetric_MsrmentPrd_Rpt_BndsRng_Hi_Unt ********************************************************************************/
 		if(devicemetricmeasurementperiodrepeatboundsrangehigh.hasUnit()) {
-			d.setDvcMetricMsrmentPrdRptBndsRngHiUnt(String.valueOf(devicemetricmeasurementperiodrepeatboundsrangehigh.getUnit()));
+
+			d.addDvcMetricMsrmentPrdRptBndsRngHiUnt(String.valueOf(devicemetricmeasurementperiodrepeatboundsrangehigh.getUnit()));
+		} else {
+			d.addDvcMetricMsrmentPrdRptBndsRngHiUnt("NULL");
 		}
+
+
 		/******************** DvcMetric_MsrmentPrd_Rpt_BndsRng_Hi_Sys ********************************************************************************/
 		if(devicemetricmeasurementperiodrepeatboundsrangehigh.hasSystem()) {
-			d.setDvcMetricMsrmentPrdRptBndsRngHiSys(String.valueOf(devicemetricmeasurementperiodrepeatboundsrangehigh.getSystem()));
-		}
-		/******************** devicemetricmeasurementperiodrepeatboundsperiod ********************************************************************************/
-		org.hl7.fhir.r4.model.Period devicemetricmeasurementperiodrepeatboundsperiod = devicemetricmeasurementperiodrepeat.getBoundsPeriod();
 
-		/******************** DvcMetric_MsrmentPrd_Rpt_BndsPrd_Strt ********************************************************************************/
-		if(devicemetricmeasurementperiodrepeatboundsperiod.hasStart()) {
-			d.setDvcMetricMsrmentPrdRptBndsPrdStrt(String.valueOf(devicemetricmeasurementperiodrepeatboundsperiod.getStart()));
+			d.addDvcMetricMsrmentPrdRptBndsRngHiSys(String.valueOf(devicemetricmeasurementperiodrepeatboundsrangehigh.getSystem()));
+		} else {
+			d.addDvcMetricMsrmentPrdRptBndsRngHiSys("NULL");
 		}
-		/******************** DvcMetric_MsrmentPrd_Rpt_BndsPrd_End ********************************************************************************/
-		if(devicemetricmeasurementperiodrepeatboundsperiod.hasEnd()) {
-			d.setDvcMetricMsrmentPrdRptBndsPrdEnd(String.valueOf(devicemetricmeasurementperiodrepeatboundsperiod.getEnd()));
-		}
-		/******************** DvcMetric_MsrmentPrd_Rpt_PrdMx ********************************************************************************/
-		if(devicemetricmeasurementperiodrepeat.hasPeriodMax()) {
-			d.setDvcMetricMsrmentPrdRptPrdMx(String.valueOf(devicemetricmeasurementperiodrepeat.getPeriodMax()));
-		}
-		/******************** DvcMetric_MsrmentPrd_Rpt_DurationMx ********************************************************************************/
-		if(devicemetricmeasurementperiodrepeat.hasDurationMax()) {
-			d.setDvcMetricMsrmentPrdRptDurationMx(String.valueOf(devicemetricmeasurementperiodrepeat.getDurationMax()));
-		}
-		/******************** DvcMetric_MsrmentPrd_Rpt_CntMx ********************************************************************************/
-		if(devicemetricmeasurementperiodrepeat.hasCountMax()) {
-			d.setDvcMetricMsrmentPrdRptCntMx(String.valueOf(devicemetricmeasurementperiodrepeat.getCountMax()));
-		}
+
+
 		/******************** DvcMetric_MsrmentPrd_Rpt_FrqncyMx ********************************************************************************/
 		if(devicemetricmeasurementperiodrepeat.hasFrequencyMax()) {
-			d.setDvcMetricMsrmentPrdRptFrqncyMx(String.valueOf(devicemetricmeasurementperiodrepeat.getFrequencyMax()));
+
+			d.addDvcMetricMsrmentPrdRptFrqncyMx(String.valueOf(devicemetricmeasurementperiodrepeat.getFrequencyMax()));
+		} else {
+			d.addDvcMetricMsrmentPrdRptFrqncyMx("NULL");
 		}
-		/******************** devicemetricmeasurementperiodrepeatdurationunit ********************************************************************************/
-		org.hl7.fhir.r4.model.Timing.UnitsOfTime devicemetricmeasurementperiodrepeatdurationunit = devicemetricmeasurementperiodrepeat.getDurationUnit();
-		d.setDvcMetricMsrmentPrdRptDurationUnt(devicemetricmeasurementperiodrepeatdurationunit.toCode());
+
+
+		/******************** devicemetricmeasurementperiodrepeatwhen ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.Enumeration<org.hl7.fhir.r4.model.Timing.EventTiming>> devicemetricmeasurementperiodrepeatwhenlist = devicemetricmeasurementperiodrepeat.getWhen();
+		for(int devicemetricmeasurementperiodrepeatwheni = 0; devicemetricmeasurementperiodrepeatwheni<devicemetricmeasurementperiodrepeatwhenlist.size();devicemetricmeasurementperiodrepeatwheni++ ) {
+		org.hl7.fhir.r4.model.Enumeration<org.hl7.fhir.r4.model.Timing.EventTiming>  devicemetricmeasurementperiodrepeatwhen = devicemetricmeasurementperiodrepeatwhenlist.get(devicemetricmeasurementperiodrepeatwheni);
+		if(devicemetricmeasurementperiodrepeatwhen!=null) {
+			d.addDvcMetricMsrmentPrdRptWhen(devicemetricmeasurementperiodrepeatwhen.getCode());
+		} else {
+			d.addDvcMetricMsrmentPrdRptWhen("NULL");
+		}
+		 };
 
 		/******************** devicemetricmeasurementperiodrepeatperiodunit ********************************************************************************/
 		org.hl7.fhir.r4.model.Timing.UnitsOfTime devicemetricmeasurementperiodrepeatperiodunit = devicemetricmeasurementperiodrepeat.getPeriodUnit();
-		d.setDvcMetricMsrmentPrdRptPrdUnt(devicemetricmeasurementperiodrepeatperiodunit.toCode());
+		if(devicemetricmeasurementperiodrepeatperiodunit!=null) {
+			d.addDvcMetricMsrmentPrdRptPrdUnt(devicemetricmeasurementperiodrepeatperiodunit.toCode());
+		} else {
+			d.addDvcMetricMsrmentPrdRptPrdUnt("NULL");
+		}
 
-		/******************** devicemetricoperationalstatus ********************************************************************************/
-		org.hl7.fhir.r4.model.DeviceMetric.DeviceMetricOperationalStatus devicemetricoperationalstatus = devicemetric.getOperationalStatus();
-		d.setDvcMetricOprtnalSts(devicemetricoperationalstatus.toCode());
+		/******************** DvcMetric_MsrmentPrd_Rpt_PrdMx ********************************************************************************/
+		if(devicemetricmeasurementperiodrepeat.hasPeriodMax()) {
 
+			d.addDvcMetricMsrmentPrdRptPrdMx(String.valueOf(devicemetricmeasurementperiodrepeat.getPeriodMax()));
+		} else {
+			d.addDvcMetricMsrmentPrdRptPrdMx("NULL");
+		}
+
+
+		/******************** devicemetricmeasurementperiodrepeatdayofweek ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.Enumeration<org.hl7.fhir.r4.model.Timing.DayOfWeek>> devicemetricmeasurementperiodrepeatdayofweeklist = devicemetricmeasurementperiodrepeat.getDayOfWeek();
+		for(int devicemetricmeasurementperiodrepeatdayofweeki = 0; devicemetricmeasurementperiodrepeatdayofweeki<devicemetricmeasurementperiodrepeatdayofweeklist.size();devicemetricmeasurementperiodrepeatdayofweeki++ ) {
+		org.hl7.fhir.r4.model.Enumeration<org.hl7.fhir.r4.model.Timing.DayOfWeek>  devicemetricmeasurementperiodrepeatdayofweek = devicemetricmeasurementperiodrepeatdayofweeklist.get(devicemetricmeasurementperiodrepeatdayofweeki);
+		if(devicemetricmeasurementperiodrepeatdayofweek!=null) {
+			d.addDvcMetricMsrmentPrdRptDayOfWeek(devicemetricmeasurementperiodrepeatdayofweek.getCode());
+		} else {
+			d.addDvcMetricMsrmentPrdRptDayOfWeek("NULL");
+		}
+		 };
+
+		/******************** DvcMetric_MsrmentPrd_Rpt_TimeOfDay ********************************************************************************/
+		if(devicemetricmeasurementperiodrepeat.hasTimeOfDay()) {
+
+			String  array = "[";
+			for(int incr=0; incr<devicemetricmeasurementperiodrepeat.getTimeOfDay().size(); incr++) {
+				array = array + devicemetricmeasurementperiodrepeat.getTimeOfDay().get(incr).getValueAsString() + ",";
+			}
+			array = array.substring(0, array.length() -1);
+			array = array + "]";
+			d.addDvcMetricMsrmentPrdRptTimeOfDay(array);
+
+		} else {
+			d.addDvcMetricMsrmentPrdRptTimeOfDay("NULL");
+		}
+
+
+		/******************** DvcMetric_MsrmentPrd_Rpt_Duration ********************************************************************************/
+		if(devicemetricmeasurementperiodrepeat.hasDuration()) {
+
+			d.addDvcMetricMsrmentPrdRptDuration(String.valueOf(devicemetricmeasurementperiodrepeat.getDuration()));
+		} else {
+			d.addDvcMetricMsrmentPrdRptDuration("NULL");
+		}
+
+
+		/******************** DvcMetric_MsrmentPrd_Rpt_Frqncy ********************************************************************************/
+		if(devicemetricmeasurementperiodrepeat.hasFrequency()) {
+
+			d.addDvcMetricMsrmentPrdRptFrqncy(String.valueOf(devicemetricmeasurementperiodrepeat.getFrequency()));
+		} else {
+			d.addDvcMetricMsrmentPrdRptFrqncy("NULL");
+		}
+
+
+		/******************** devicemetriccolor ********************************************************************************/
+		org.hl7.fhir.r4.model.DeviceMetric.DeviceMetricColor devicemetriccolor = devicemetric.getColor();
+		if(devicemetriccolor!=null) {
+			d.addDvcMetricColor(devicemetriccolor.toCode());
+		} else {
+			d.addDvcMetricColor("NULL");
+		}
+
+		/******************** devicemetricunit ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept devicemetricunit = devicemetric.getUnit();
+
+		/******************** DvcMetric_Unt_Txt ********************************************************************************/
+		if(devicemetricunit.hasText()) {
+
+			d.addDvcMetricUntTxt(String.valueOf(devicemetricunit.getText()));
+		} else {
+			d.addDvcMetricUntTxt("NULL");
+		}
+
+
+		/******************** devicemetricunitcoding ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.Coding> devicemetricunitcodinglist = devicemetricunit.getCoding();
+		for(int devicemetricunitcodingi = 0; devicemetricunitcodingi<devicemetricunitcodinglist.size();devicemetricunitcodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  devicemetricunitcoding = devicemetricunitcodinglist.get(devicemetricunitcodingi);
+
+		/******************** DvcMetric_Unt_Cdg_Dsply ********************************************************************************/
+		if(devicemetricunitcodingi == 0) {d.addDvcMetricUntCdgDsply("[");}
+		if(devicemetricunitcoding.hasDisplay()) {
+
+			d.addDvcMetricUntCdgDsply(String.valueOf(devicemetricunitcoding.getDisplay()));
+		} else {
+			d.addDvcMetricUntCdgDsply("NULL");
+		}
+
+		if(devicemetricunitcodingi == devicemetricunitcodinglist.size()-1) {d.addDvcMetricUntCdgDsply("]");}
+
+
+		/******************** DvcMetric_Unt_Cdg_Vrsn ********************************************************************************/
+		if(devicemetricunitcodingi == 0) {d.addDvcMetricUntCdgVrsn("[");}
+		if(devicemetricunitcoding.hasVersion()) {
+
+			d.addDvcMetricUntCdgVrsn(String.valueOf(devicemetricunitcoding.getVersion()));
+		} else {
+			d.addDvcMetricUntCdgVrsn("NULL");
+		}
+
+		if(devicemetricunitcodingi == devicemetricunitcodinglist.size()-1) {d.addDvcMetricUntCdgVrsn("]");}
+
+
+		/******************** DvcMetric_Unt_Cdg_Cd ********************************************************************************/
+		if(devicemetricunitcodingi == 0) {d.addDvcMetricUntCdgCd("[");}
+		if(devicemetricunitcoding.hasCode()) {
+
+			d.addDvcMetricUntCdgCd(String.valueOf(devicemetricunitcoding.getCode()));
+		} else {
+			d.addDvcMetricUntCdgCd("NULL");
+		}
+
+		if(devicemetricunitcodingi == devicemetricunitcodinglist.size()-1) {d.addDvcMetricUntCdgCd("]");}
+
+
+		/******************** DvcMetric_Unt_Cdg_UsrSltd ********************************************************************************/
+		if(devicemetricunitcodingi == 0) {d.addDvcMetricUntCdgUsrSltd("[");}
+		if(devicemetricunitcoding.hasUserSelected()) {
+
+			d.addDvcMetricUntCdgUsrSltd(String.valueOf(devicemetricunitcoding.getUserSelected()));
+		} else {
+			d.addDvcMetricUntCdgUsrSltd("NULL");
+		}
+
+		if(devicemetricunitcodingi == devicemetricunitcodinglist.size()-1) {d.addDvcMetricUntCdgUsrSltd("]");}
+
+
+		/******************** DvcMetric_Unt_Cdg_Sys ********************************************************************************/
+		if(devicemetricunitcodingi == 0) {d.addDvcMetricUntCdgSys("[");}
+		if(devicemetricunitcoding.hasSystem()) {
+
+			d.addDvcMetricUntCdgSys(String.valueOf(devicemetricunitcoding.getSystem()));
+		} else {
+			d.addDvcMetricUntCdgSys("NULL");
+		}
+
+		if(devicemetricunitcodingi == devicemetricunitcodinglist.size()-1) {d.addDvcMetricUntCdgSys("]");}
+
+
+		 };
 		/******************** devicemetriccalibration ********************************************************************************/
-		org.hl7.fhir.r4.model.DeviceMetric.DeviceMetricCalibrationComponent devicemetriccalibration = devicemetric.getCalibrationFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.DeviceMetric.DeviceMetricCalibrationComponent> devicemetriccalibrationlist = devicemetric.getCalibration();
+		for(int devicemetriccalibrationi = 0; devicemetriccalibrationi<devicemetriccalibrationlist.size();devicemetriccalibrationi++ ) {
+		org.hl7.fhir.r4.model.DeviceMetric.DeviceMetricCalibrationComponent  devicemetriccalibration = devicemetriccalibrationlist.get(devicemetriccalibrationi);
 
 		/******************** devicemetriccalibrationstate ********************************************************************************/
 		org.hl7.fhir.r4.model.DeviceMetric.DeviceMetricCalibrationState devicemetriccalibrationstate = devicemetriccalibration.getState();
-		d.setDvcMetricCalibrationState(devicemetriccalibrationstate.toCode());
+		if(devicemetriccalibrationstate!=null) {
+		if(devicemetriccalibrationi == 0) {
+
+		d.addDvcMetricCalibrationState("[");		}
+			d.addDvcMetricCalibrationState(devicemetriccalibrationstate.toCode());
+		if(devicemetriccalibrationi == devicemetriccalibrationlist.size()-1) {
+
+		d.addDvcMetricCalibrationState("]");		}
+
+		} else {
+			d.addDvcMetricCalibrationState("NULL");
+		}
 
 		/******************** devicemetriccalibrationtype ********************************************************************************/
 		org.hl7.fhir.r4.model.DeviceMetric.DeviceMetricCalibrationType devicemetriccalibrationtype = devicemetriccalibration.getType();
-		d.setDvcMetricCalibrationTyp(devicemetriccalibrationtype.toCode());
+		if(devicemetriccalibrationtype!=null) {
+		if(devicemetriccalibrationi == 0) {
+
+		d.addDvcMetricCalibrationTyp("[");		}
+			d.addDvcMetricCalibrationTyp(devicemetriccalibrationtype.toCode());
+		if(devicemetriccalibrationi == devicemetriccalibrationlist.size()-1) {
+
+		d.addDvcMetricCalibrationTyp("]");		}
+
+		} else {
+			d.addDvcMetricCalibrationTyp("NULL");
+		}
 
 		/******************** DvcMetric_Calibration_Time ********************************************************************************/
+		if(devicemetriccalibrationi == 0) {d.addDvcMetricCalibrationTime("[");}
 		if(devicemetriccalibration.hasTime()) {
-			d.setDvcMetricCalibrationTime(String.valueOf(devicemetriccalibration.getTime()));
+
+			d.addDvcMetricCalibrationTime("\""+ca.uhn.fhir.util.DateUtils.formatDate(devicemetriccalibration.getTime())+"\"");
+		} else {
+			d.addDvcMetricCalibrationTime("NULL");
 		}
+
+		if(devicemetriccalibrationi == devicemetriccalibrationlist.size()-1) {d.addDvcMetricCalibrationTime("]");}
+
+
+		 };
 		return d;
 	}
 }

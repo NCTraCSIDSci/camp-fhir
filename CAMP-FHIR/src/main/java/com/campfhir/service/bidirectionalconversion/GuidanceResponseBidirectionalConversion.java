@@ -8,390 +8,1060 @@ public class GuidanceResponseBidirectionalConversion
 		 main.java.com.campfhir.model.GuidanceResponse g = new  main.java.com.campfhir.model.GuidanceResponse();
 
 		/******************** id ********************************************************************************/
-		guidanceresponse.setId(g.getId());
+		g.setId(guidanceresponse.getIdElement().getIdPart());
 
 		/******************** GuidnceRsps_Rslt ********************************************************************************/
 		if(guidanceresponse.hasResult()) {
-			g.setGuidnceRspsRslt(String.valueOf(guidanceresponse.getResult()));
+
+			if(guidanceresponse.getResult().getReference() != null) {
+			g.addGuidnceRspsRslt(guidanceresponse.getResult().getReference());
+			}
+		} else {
+			g.addGuidnceRspsRslt("NULL");
 		}
-		/******************** GuidnceRsps_Prfrmr ********************************************************************************/
-		if(guidanceresponse.hasPerformer()) {
-			g.setGuidnceRspsPrfrmr(String.valueOf(guidanceresponse.getPerformer()));
-		}
-		/******************** GuidnceRsps_Enc ********************************************************************************/
-		if(guidanceresponse.hasEncounter()) {
-			g.setGuidnceRspsEnc(String.valueOf(guidanceresponse.getEncounter()));
-		}
+
+
 		/******************** GuidnceRsps_Sbjct ********************************************************************************/
 		if(guidanceresponse.hasSubject()) {
-			g.setGuidnceRspsSbjct(String.valueOf(guidanceresponse.getSubject()));
+
+			if(guidanceresponse.getSubject().getReference() != null) {
+			g.addGuidnceRspsSbjct(guidanceresponse.getSubject().getReference());
+			}
+		} else {
+			g.addGuidnceRspsSbjct("NULL");
 		}
+
+
 		/******************** guidanceresponsestatus ********************************************************************************/
 		org.hl7.fhir.r4.model.GuidanceResponse.GuidanceResponseStatus guidanceresponsestatus = guidanceresponse.getStatus();
-		g.setGuidnceRspsSts(guidanceresponsestatus.toCode());
+		if(guidanceresponsestatus!=null) {
+			g.addGuidnceRspsSts(guidanceresponsestatus.toCode());
+		} else {
+			g.addGuidnceRspsSts("NULL");
+		}
 
+		/******************** GuidnceRsps_Enc ********************************************************************************/
+		if(guidanceresponse.hasEncounter()) {
+
+			if(guidanceresponse.getEncounter().getReference() != null) {
+			g.addGuidnceRspsEnc(guidanceresponse.getEncounter().getReference());
+			}
+		} else {
+			g.addGuidnceRspsEnc("NULL");
+		}
+
+
+		/******************** guidanceresponsereasoncode ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.CodeableConcept> guidanceresponsereasoncodelist = guidanceresponse.getReasonCode();
+		for(int guidanceresponsereasoncodei = 0; guidanceresponsereasoncodei<guidanceresponsereasoncodelist.size();guidanceresponsereasoncodei++ ) {
+		org.hl7.fhir.r4.model.CodeableConcept  guidanceresponsereasoncode = guidanceresponsereasoncodelist.get(guidanceresponsereasoncodei);
+
+		/******************** GuidnceRsps_RsnCd_Txt ********************************************************************************/
+		if(guidanceresponsereasoncodei == 0) {g.addGuidnceRspsRsnCdTxt("[");}
+		if(guidanceresponsereasoncode.hasText()) {
+
+			g.addGuidnceRspsRsnCdTxt(String.valueOf(guidanceresponsereasoncode.getText()));
+		} else {
+			g.addGuidnceRspsRsnCdTxt("NULL");
+		}
+
+		if(guidanceresponsereasoncodei == guidanceresponsereasoncodelist.size()-1) {g.addGuidnceRspsRsnCdTxt("]");}
+
+
+		/******************** guidanceresponsereasoncodecoding ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.Coding> guidanceresponsereasoncodecodinglist = guidanceresponsereasoncode.getCoding();
+		for(int guidanceresponsereasoncodecodingi = 0; guidanceresponsereasoncodecodingi<guidanceresponsereasoncodecodinglist.size();guidanceresponsereasoncodecodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  guidanceresponsereasoncodecoding = guidanceresponsereasoncodecodinglist.get(guidanceresponsereasoncodecodingi);
+
+		/******************** GuidnceRsps_RsnCd_Cdg_Dsply ********************************************************************************/
+		if(guidanceresponsereasoncodecodingi == 0) {g.addGuidnceRspsRsnCdCdgDsply("[[");}
+		if(guidanceresponsereasoncodecoding.hasDisplay()) {
+
+			g.addGuidnceRspsRsnCdCdgDsply(String.valueOf(guidanceresponsereasoncodecoding.getDisplay()));
+		} else {
+			g.addGuidnceRspsRsnCdCdgDsply("NULL");
+		}
+
+		if(guidanceresponsereasoncodecodingi == guidanceresponsereasoncodecodinglist.size()-1) {g.addGuidnceRspsRsnCdCdgDsply("]]");}
+
+
+		/******************** GuidnceRsps_RsnCd_Cdg_Vrsn ********************************************************************************/
+		if(guidanceresponsereasoncodecodingi == 0) {g.addGuidnceRspsRsnCdCdgVrsn("[[");}
+		if(guidanceresponsereasoncodecoding.hasVersion()) {
+
+			g.addGuidnceRspsRsnCdCdgVrsn(String.valueOf(guidanceresponsereasoncodecoding.getVersion()));
+		} else {
+			g.addGuidnceRspsRsnCdCdgVrsn("NULL");
+		}
+
+		if(guidanceresponsereasoncodecodingi == guidanceresponsereasoncodecodinglist.size()-1) {g.addGuidnceRspsRsnCdCdgVrsn("]]");}
+
+
+		/******************** GuidnceRsps_RsnCd_Cdg_Cd ********************************************************************************/
+		if(guidanceresponsereasoncodecodingi == 0) {g.addGuidnceRspsRsnCdCdgCd("[[");}
+		if(guidanceresponsereasoncodecoding.hasCode()) {
+
+			g.addGuidnceRspsRsnCdCdgCd(String.valueOf(guidanceresponsereasoncodecoding.getCode()));
+		} else {
+			g.addGuidnceRspsRsnCdCdgCd("NULL");
+		}
+
+		if(guidanceresponsereasoncodecodingi == guidanceresponsereasoncodecodinglist.size()-1) {g.addGuidnceRspsRsnCdCdgCd("]]");}
+
+
+		/******************** GuidnceRsps_RsnCd_Cdg_UsrSltd ********************************************************************************/
+		if(guidanceresponsereasoncodecodingi == 0) {g.addGuidnceRspsRsnCdCdgUsrSltd("[[");}
+		if(guidanceresponsereasoncodecoding.hasUserSelected()) {
+
+			g.addGuidnceRspsRsnCdCdgUsrSltd(String.valueOf(guidanceresponsereasoncodecoding.getUserSelected()));
+		} else {
+			g.addGuidnceRspsRsnCdCdgUsrSltd("NULL");
+		}
+
+		if(guidanceresponsereasoncodecodingi == guidanceresponsereasoncodecodinglist.size()-1) {g.addGuidnceRspsRsnCdCdgUsrSltd("]]");}
+
+
+		/******************** GuidnceRsps_RsnCd_Cdg_Sys ********************************************************************************/
+		if(guidanceresponsereasoncodecodingi == 0) {g.addGuidnceRspsRsnCdCdgSys("[[");}
+		if(guidanceresponsereasoncodecoding.hasSystem()) {
+
+			g.addGuidnceRspsRsnCdCdgSys(String.valueOf(guidanceresponsereasoncodecoding.getSystem()));
+		} else {
+			g.addGuidnceRspsRsnCdCdgSys("NULL");
+		}
+
+		if(guidanceresponsereasoncodecodingi == guidanceresponsereasoncodecodinglist.size()-1) {g.addGuidnceRspsRsnCdCdgSys("]]");}
+
+
+		 };
+		 };
 		/******************** guidanceresponsenote ********************************************************************************/
-		org.hl7.fhir.r4.model.Annotation guidanceresponsenote = guidanceresponse.getNoteFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.Annotation> guidanceresponsenotelist = guidanceresponse.getNote();
+		for(int guidanceresponsenotei = 0; guidanceresponsenotei<guidanceresponsenotelist.size();guidanceresponsenotei++ ) {
+		org.hl7.fhir.r4.model.Annotation  guidanceresponsenote = guidanceresponsenotelist.get(guidanceresponsenotei);
 
 		/******************** GuidnceRsps_Nt_Time ********************************************************************************/
+		if(guidanceresponsenotei == 0) {g.addGuidnceRspsNtTime("[");}
 		if(guidanceresponsenote.hasTime()) {
-			g.setGuidnceRspsNtTime(String.valueOf(guidanceresponsenote.getTime()));
+
+			g.addGuidnceRspsNtTime("\""+ca.uhn.fhir.util.DateUtils.formatDate(guidanceresponsenote.getTime())+"\"");
+		} else {
+			g.addGuidnceRspsNtTime("NULL");
 		}
-		/******************** GuidnceRsps_Nt_Txt ********************************************************************************/
-		if(guidanceresponsenote.hasText()) {
-			g.setGuidnceRspsNtTxt(String.valueOf(guidanceresponsenote.getText()));
-		}
+
+		if(guidanceresponsenotei == guidanceresponsenotelist.size()-1) {g.addGuidnceRspsNtTime("]");}
+
+
 		/******************** GuidnceRsps_Nt_AthrRfrnc ********************************************************************************/
+		if(guidanceresponsenotei == 0) {g.addGuidnceRspsNtAthrRfrnc("[");}
 		if(guidanceresponsenote.hasAuthorReference()) {
-			g.setGuidnceRspsNtAthrRfrnc(String.valueOf(guidanceresponsenote.getAuthorReference()));
+
+			if(guidanceresponsenote.getAuthorReference().getReference() != null) {
+			g.addGuidnceRspsNtAthrRfrnc(guidanceresponsenote.getAuthorReference().getReference());
+			}
+		} else {
+			g.addGuidnceRspsNtAthrRfrnc("NULL");
 		}
+
+		if(guidanceresponsenotei == guidanceresponsenotelist.size()-1) {g.addGuidnceRspsNtAthrRfrnc("]");}
+
+
+		/******************** GuidnceRsps_Nt_Txt ********************************************************************************/
+		if(guidanceresponsenotei == 0) {g.addGuidnceRspsNtTxt("[");}
+		if(guidanceresponsenote.hasText()) {
+
+			g.addGuidnceRspsNtTxt(String.valueOf(guidanceresponsenote.getText()));
+		} else {
+			g.addGuidnceRspsNtTxt("NULL");
+		}
+
+		if(guidanceresponsenotei == guidanceresponsenotelist.size()-1) {g.addGuidnceRspsNtTxt("]");}
+
+
 		/******************** GuidnceRsps_Nt_AthrStrgTyp ********************************************************************************/
+		if(guidanceresponsenotei == 0) {g.addGuidnceRspsNtAthrStrgTyp("[");}
 		if(guidanceresponsenote.hasAuthorStringType()) {
-			g.setGuidnceRspsNtAthrStrgTyp(String.valueOf(guidanceresponsenote.getAuthorStringType()));
+
+			g.addGuidnceRspsNtAthrStrgTyp("\""+guidanceresponsenote.getAuthorStringType().getValueAsString()+"\"");
+		} else {
+			g.addGuidnceRspsNtAthrStrgTyp("NULL");
 		}
+
+		if(guidanceresponsenotei == guidanceresponsenotelist.size()-1) {g.addGuidnceRspsNtAthrStrgTyp("]");}
+
+
+		 };
+		/******************** GuidnceRsps_RsnRfrnc ********************************************************************************/
+		if(guidanceresponse.hasReasonReference()) {
+
+			String  array = "[";
+			for(int incr=0; incr<guidanceresponse.getReasonReference().size(); incr++) {
+				array = array + guidanceresponse.getReasonReference().get(incr).getReference() + ",";
+			}
+			array = array.substring(0, array.length() -1);
+			array = array + "]";
+			g.addGuidnceRspsRsnRfrnc(array);
+
+		} else {
+			g.addGuidnceRspsRsnRfrnc("NULL");
+		}
+
+
+		/******************** guidanceresponseidentifier ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.Identifier> guidanceresponseidentifierlist = guidanceresponse.getIdentifier();
+		for(int guidanceresponseidentifieri = 0; guidanceresponseidentifieri<guidanceresponseidentifierlist.size();guidanceresponseidentifieri++ ) {
+		org.hl7.fhir.r4.model.Identifier  guidanceresponseidentifier = guidanceresponseidentifierlist.get(guidanceresponseidentifieri);
+
+		/******************** GuidnceRsps_Id_Vl ********************************************************************************/
+		if(guidanceresponseidentifieri == 0) {g.addGuidnceRspsIdVl("[");}
+		if(guidanceresponseidentifier.hasValue()) {
+
+			g.addGuidnceRspsIdVl(String.valueOf(guidanceresponseidentifier.getValue()));
+		} else {
+			g.addGuidnceRspsIdVl("NULL");
+		}
+
+		if(guidanceresponseidentifieri == guidanceresponseidentifierlist.size()-1) {g.addGuidnceRspsIdVl("]");}
+
+
+		/******************** guidanceresponseidentifiertype ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept guidanceresponseidentifiertype = guidanceresponseidentifier.getType();
+
+		/******************** GuidnceRsps_Id_Typ_Txt ********************************************************************************/
+		if(guidanceresponseidentifieri == 0) {g.addGuidnceRspsIdTypTxt("[");}
+		if(guidanceresponseidentifiertype.hasText()) {
+
+			g.addGuidnceRspsIdTypTxt(String.valueOf(guidanceresponseidentifiertype.getText()));
+		} else {
+			g.addGuidnceRspsIdTypTxt("NULL");
+		}
+
+		if(guidanceresponseidentifieri == guidanceresponseidentifierlist.size()-1) {g.addGuidnceRspsIdTypTxt("]");}
+
+
+		/******************** guidanceresponseidentifiertypecoding ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.Coding> guidanceresponseidentifiertypecodinglist = guidanceresponseidentifiertype.getCoding();
+		for(int guidanceresponseidentifiertypecodingi = 0; guidanceresponseidentifiertypecodingi<guidanceresponseidentifiertypecodinglist.size();guidanceresponseidentifiertypecodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  guidanceresponseidentifiertypecoding = guidanceresponseidentifiertypecodinglist.get(guidanceresponseidentifiertypecodingi);
+
+		/******************** GuidnceRsps_Id_Typ_Cdg_Dsply ********************************************************************************/
+		if(guidanceresponseidentifiertypecodingi == 0) {g.addGuidnceRspsIdTypCdgDsply("[[");}
+		if(guidanceresponseidentifiertypecoding.hasDisplay()) {
+
+			g.addGuidnceRspsIdTypCdgDsply(String.valueOf(guidanceresponseidentifiertypecoding.getDisplay()));
+		} else {
+			g.addGuidnceRspsIdTypCdgDsply("NULL");
+		}
+
+		if(guidanceresponseidentifiertypecodingi == guidanceresponseidentifiertypecodinglist.size()-1) {g.addGuidnceRspsIdTypCdgDsply("]]");}
+
+
+		/******************** GuidnceRsps_Id_Typ_Cdg_Vrsn ********************************************************************************/
+		if(guidanceresponseidentifiertypecodingi == 0) {g.addGuidnceRspsIdTypCdgVrsn("[[");}
+		if(guidanceresponseidentifiertypecoding.hasVersion()) {
+
+			g.addGuidnceRspsIdTypCdgVrsn(String.valueOf(guidanceresponseidentifiertypecoding.getVersion()));
+		} else {
+			g.addGuidnceRspsIdTypCdgVrsn("NULL");
+		}
+
+		if(guidanceresponseidentifiertypecodingi == guidanceresponseidentifiertypecodinglist.size()-1) {g.addGuidnceRspsIdTypCdgVrsn("]]");}
+
+
+		/******************** GuidnceRsps_Id_Typ_Cdg_Cd ********************************************************************************/
+		if(guidanceresponseidentifiertypecodingi == 0) {g.addGuidnceRspsIdTypCdgCd("[[");}
+		if(guidanceresponseidentifiertypecoding.hasCode()) {
+
+			g.addGuidnceRspsIdTypCdgCd(String.valueOf(guidanceresponseidentifiertypecoding.getCode()));
+		} else {
+			g.addGuidnceRspsIdTypCdgCd("NULL");
+		}
+
+		if(guidanceresponseidentifiertypecodingi == guidanceresponseidentifiertypecodinglist.size()-1) {g.addGuidnceRspsIdTypCdgCd("]]");}
+
+
+		/******************** GuidnceRsps_Id_Typ_Cdg_UsrSltd ********************************************************************************/
+		if(guidanceresponseidentifiertypecodingi == 0) {g.addGuidnceRspsIdTypCdgUsrSltd("[[");}
+		if(guidanceresponseidentifiertypecoding.hasUserSelected()) {
+
+			g.addGuidnceRspsIdTypCdgUsrSltd(String.valueOf(guidanceresponseidentifiertypecoding.getUserSelected()));
+		} else {
+			g.addGuidnceRspsIdTypCdgUsrSltd("NULL");
+		}
+
+		if(guidanceresponseidentifiertypecodingi == guidanceresponseidentifiertypecodinglist.size()-1) {g.addGuidnceRspsIdTypCdgUsrSltd("]]");}
+
+
+		/******************** GuidnceRsps_Id_Typ_Cdg_Sys ********************************************************************************/
+		if(guidanceresponseidentifiertypecodingi == 0) {g.addGuidnceRspsIdTypCdgSys("[[");}
+		if(guidanceresponseidentifiertypecoding.hasSystem()) {
+
+			g.addGuidnceRspsIdTypCdgSys(String.valueOf(guidanceresponseidentifiertypecoding.getSystem()));
+		} else {
+			g.addGuidnceRspsIdTypCdgSys("NULL");
+		}
+
+		if(guidanceresponseidentifiertypecodingi == guidanceresponseidentifiertypecodinglist.size()-1) {g.addGuidnceRspsIdTypCdgSys("]]");}
+
+
+		 };
+		/******************** guidanceresponseidentifierperiod ********************************************************************************/
+		org.hl7.fhir.r4.model.Period guidanceresponseidentifierperiod = guidanceresponseidentifier.getPeriod();
+
+		/******************** GuidnceRsps_Id_Prd_Strt ********************************************************************************/
+		if(guidanceresponseidentifieri == 0) {g.addGuidnceRspsIdPrdStrt("[");}
+		if(guidanceresponseidentifierperiod.hasStart()) {
+
+			g.addGuidnceRspsIdPrdStrt("\""+ca.uhn.fhir.util.DateUtils.formatDate(guidanceresponseidentifierperiod.getStart())+"\"");
+		} else {
+			g.addGuidnceRspsIdPrdStrt("NULL");
+		}
+
+		if(guidanceresponseidentifieri == guidanceresponseidentifierlist.size()-1) {g.addGuidnceRspsIdPrdStrt("]");}
+
+
+		/******************** GuidnceRsps_Id_Prd_End ********************************************************************************/
+		if(guidanceresponseidentifieri == 0) {g.addGuidnceRspsIdPrdEnd("[");}
+		if(guidanceresponseidentifierperiod.hasEnd()) {
+
+			g.addGuidnceRspsIdPrdEnd("\""+ca.uhn.fhir.util.DateUtils.formatDate(guidanceresponseidentifierperiod.getEnd())+"\"");
+		} else {
+			g.addGuidnceRspsIdPrdEnd("NULL");
+		}
+
+		if(guidanceresponseidentifieri == guidanceresponseidentifierlist.size()-1) {g.addGuidnceRspsIdPrdEnd("]");}
+
+
+		/******************** guidanceresponseidentifieruse ********************************************************************************/
+		org.hl7.fhir.r4.model.Identifier.IdentifierUse guidanceresponseidentifieruse = guidanceresponseidentifier.getUse();
+		if(guidanceresponseidentifieruse!=null) {
+		if(guidanceresponseidentifieri == 0) {
+
+		g.addGuidnceRspsIdUse("[");		}
+			g.addGuidnceRspsIdUse(guidanceresponseidentifieruse.toCode());
+		if(guidanceresponseidentifieri == guidanceresponseidentifierlist.size()-1) {
+
+		g.addGuidnceRspsIdUse("]");		}
+
+		} else {
+			g.addGuidnceRspsIdUse("NULL");
+		}
+
+		/******************** GuidnceRsps_Id_Assigner ********************************************************************************/
+		if(guidanceresponseidentifieri == 0) {g.addGuidnceRspsIdAssigner("[");}
+		if(guidanceresponseidentifier.hasAssigner()) {
+
+			if(guidanceresponseidentifier.getAssigner().getReference() != null) {
+			g.addGuidnceRspsIdAssigner(guidanceresponseidentifier.getAssigner().getReference());
+			}
+		} else {
+			g.addGuidnceRspsIdAssigner("NULL");
+		}
+
+		if(guidanceresponseidentifieri == guidanceresponseidentifierlist.size()-1) {g.addGuidnceRspsIdAssigner("]");}
+
+
+		/******************** GuidnceRsps_Id_Sys ********************************************************************************/
+		if(guidanceresponseidentifieri == 0) {g.addGuidnceRspsIdSys("[");}
+		if(guidanceresponseidentifier.hasSystem()) {
+
+			g.addGuidnceRspsIdSys(String.valueOf(guidanceresponseidentifier.getSystem()));
+		} else {
+			g.addGuidnceRspsIdSys("NULL");
+		}
+
+		if(guidanceresponseidentifieri == guidanceresponseidentifierlist.size()-1) {g.addGuidnceRspsIdSys("]");}
+
+
+		 };
+		/******************** GuidnceRsps_Prfrmr ********************************************************************************/
+		if(guidanceresponse.hasPerformer()) {
+
+			if(guidanceresponse.getPerformer().getReference() != null) {
+			g.addGuidnceRspsPrfrmr(guidanceresponse.getPerformer().getReference());
+			}
+		} else {
+			g.addGuidnceRspsPrfrmr("NULL");
+		}
+
+
+		/******************** GuidnceRsps_ModuleCanonicalTyp ********************************************************************************/
+		if(guidanceresponse.hasModuleCanonicalType()) {
+
+			g.addGuidnceRspsModuleCanonicalTyp("\""+guidanceresponse.getModuleCanonicalType().getValueAsString()+"\"");
+		} else {
+			g.addGuidnceRspsModuleCanonicalTyp("NULL");
+		}
+
+
 		/******************** GuidnceRsps_OccrnceDtTime ********************************************************************************/
 		if(guidanceresponse.hasOccurrenceDateTime()) {
-			g.setGuidnceRspsOccrnceDtTime(String.valueOf(guidanceresponse.getOccurrenceDateTime()));
+
+			g.addGuidnceRspsOccrnceDtTime("\""+ca.uhn.fhir.util.DateUtils.formatDate(guidanceresponse.getOccurrenceDateTime())+"\"");
+		} else {
+			g.addGuidnceRspsOccrnceDtTime("NULL");
 		}
+
+
 		/******************** GuidnceRsps_EvaluationMsg ********************************************************************************/
 		if(guidanceresponse.hasEvaluationMessage()) {
-			g.setGuidnceRspsEvaluationMsg(String.valueOf(guidanceresponse.getEvaluationMessageFirstRep()));
-		}
-		/******************** GuidnceRsps_OutputPrmtrs ********************************************************************************/
-		if(guidanceresponse.hasOutputParameters()) {
-			g.setGuidnceRspsOutputPrmtrs(String.valueOf(guidanceresponse.getOutputParameters()));
-		}
-		/******************** guidanceresponsedatarequirement ********************************************************************************/
-		org.hl7.fhir.r4.model.DataRequirement guidanceresponsedatarequirement = guidanceresponse.getDataRequirementFirstRep();
 
-		/******************** GuidnceRsps_DataRqrment_Typ ********************************************************************************/
-		if(guidanceresponsedatarequirement.hasType()) {
-			g.setGuidnceRspsDataRqrmentTyp(String.valueOf(guidanceresponsedatarequirement.getType()));
-		}
-		/******************** guidanceresponsedatarequirementsubjectcodeableconcept ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept guidanceresponsedatarequirementsubjectcodeableconcept = guidanceresponsedatarequirement.getSubjectCodeableConcept();
+			String  array = "[";
+			for(int incr=0; incr<guidanceresponse.getEvaluationMessage().size(); incr++) {
+				array = array + guidanceresponse.getEvaluationMessage().get(incr).getReference() + ",";
+			}
+			array = array.substring(0, array.length() -1);
+			array = array + "]";
+			g.addGuidnceRspsEvaluationMsg(array);
 
-		/******************** GuidnceRsps_DataRqrment_SbjctCdbleCncpt_Txt ********************************************************************************/
-		if(guidanceresponsedatarequirementsubjectcodeableconcept.hasText()) {
-			g.setGuidnceRspsDataRqrmentSbjctCdbleCncptTxt(String.valueOf(guidanceresponsedatarequirementsubjectcodeableconcept.getText()));
+		} else {
+			g.addGuidnceRspsEvaluationMsg("NULL");
 		}
-		/******************** guidanceresponsedatarequirementsubjectcodeableconceptcoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding guidanceresponsedatarequirementsubjectcodeableconceptcoding = guidanceresponsedatarequirementsubjectcodeableconcept.getCodingFirstRep();
 
-		/******************** GuidnceRsps_DataRqrment_SbjctCdbleCncpt_Cdg_Vrsn ********************************************************************************/
-		if(guidanceresponsedatarequirementsubjectcodeableconceptcoding.hasVersion()) {
-			g.setGuidnceRspsDataRqrmentSbjctCdbleCncptCdgVrsn(String.valueOf(guidanceresponsedatarequirementsubjectcodeableconceptcoding.getVersion()));
-		}
-		/******************** GuidnceRsps_DataRqrment_SbjctCdbleCncpt_Cdg_Dsply ********************************************************************************/
-		if(guidanceresponsedatarequirementsubjectcodeableconceptcoding.hasDisplay()) {
-			g.setGuidnceRspsDataRqrmentSbjctCdbleCncptCdgDsply(String.valueOf(guidanceresponsedatarequirementsubjectcodeableconceptcoding.getDisplay()));
-		}
-		/******************** GuidnceRsps_DataRqrment_SbjctCdbleCncpt_Cdg_Cd ********************************************************************************/
-		if(guidanceresponsedatarequirementsubjectcodeableconceptcoding.hasCode()) {
-			g.setGuidnceRspsDataRqrmentSbjctCdbleCncptCdgCd(String.valueOf(guidanceresponsedatarequirementsubjectcodeableconceptcoding.getCode()));
-		}
-		/******************** GuidnceRsps_DataRqrment_SbjctCdbleCncpt_Cdg_UsrSltd ********************************************************************************/
-		if(guidanceresponsedatarequirementsubjectcodeableconceptcoding.hasUserSelected()) {
-			g.setGuidnceRspsDataRqrmentSbjctCdbleCncptCdgUsrSltd(String.valueOf(guidanceresponsedatarequirementsubjectcodeableconceptcoding.getUserSelected()));
-		}
-		/******************** GuidnceRsps_DataRqrment_SbjctCdbleCncpt_Cdg_Sys ********************************************************************************/
-		if(guidanceresponsedatarequirementsubjectcodeableconceptcoding.hasSystem()) {
-			g.setGuidnceRspsDataRqrmentSbjctCdbleCncptCdgSys(String.valueOf(guidanceresponsedatarequirementsubjectcodeableconceptcoding.getSystem()));
-		}
-		/******************** GuidnceRsps_DataRqrment_SbjctRfrnc ********************************************************************************/
-		if(guidanceresponsedatarequirement.hasSubjectReference()) {
-			g.setGuidnceRspsDataRqrmentSbjctRfrnc(String.valueOf(guidanceresponsedatarequirement.getSubjectReference()));
-		}
-		/******************** GuidnceRsps_DataRqrment_Lmt ********************************************************************************/
-		if(guidanceresponsedatarequirement.hasLimit()) {
-			g.setGuidnceRspsDataRqrmentLmt(String.valueOf(guidanceresponsedatarequirement.getLimit()));
-		}
-		/******************** guidanceresponsedatarequirementsort ********************************************************************************/
-		org.hl7.fhir.r4.model.DataRequirement.DataRequirementSortComponent guidanceresponsedatarequirementsort = guidanceresponsedatarequirement.getSortFirstRep();
 
-		/******************** GuidnceRsps_DataRqrment_Sort_Path ********************************************************************************/
-		if(guidanceresponsedatarequirementsort.hasPath()) {
-			g.setGuidnceRspsDataRqrmentSortPath(String.valueOf(guidanceresponsedatarequirementsort.getPath()));
-		}
-		/******************** guidanceresponsedatarequirementsortdirection ********************************************************************************/
-		org.hl7.fhir.r4.model.DataRequirement.SortDirection guidanceresponsedatarequirementsortdirection = guidanceresponsedatarequirementsort.getDirection();
-		g.setGuidnceRspsDataRqrmentSortDirection(guidanceresponsedatarequirementsortdirection.toCode());
-
-		/******************** guidanceresponsedatarequirementdatefilter ********************************************************************************/
-		org.hl7.fhir.r4.model.DataRequirement.DataRequirementDateFilterComponent guidanceresponsedatarequirementdatefilter = guidanceresponsedatarequirement.getDateFilterFirstRep();
-
-		/******************** GuidnceRsps_DataRqrment_DtFltr_Path ********************************************************************************/
-		if(guidanceresponsedatarequirementdatefilter.hasPath()) {
-			g.setGuidnceRspsDataRqrmentDtFltrPath(String.valueOf(guidanceresponsedatarequirementdatefilter.getPath()));
-		}
-		/******************** GuidnceRsps_DataRqrment_DtFltr_SrchParam ********************************************************************************/
-		if(guidanceresponsedatarequirementdatefilter.hasSearchParam()) {
-			g.setGuidnceRspsDataRqrmentDtFltrSrchParam(String.valueOf(guidanceresponsedatarequirementdatefilter.getSearchParam()));
-		}
-		/******************** GuidnceRsps_DataRqrment_DtFltr_VlDtTimeTyp ********************************************************************************/
-		if(guidanceresponsedatarequirementdatefilter.hasValueDateTimeType()) {
-			g.setGuidnceRspsDataRqrmentDtFltrVlDtTimeTyp(String.valueOf(guidanceresponsedatarequirementdatefilter.getValueDateTimeType()));
-		}
-		/******************** guidanceresponsedatarequirementdatefiltervalueduration ********************************************************************************/
-		org.hl7.fhir.r4.model.Duration guidanceresponsedatarequirementdatefiltervalueduration = guidanceresponsedatarequirementdatefilter.getValueDuration();
-
-		/******************** GuidnceRsps_DataRqrment_DtFltr_VlDuration_Vl ********************************************************************************/
-		if(guidanceresponsedatarequirementdatefiltervalueduration.hasValue()) {
-			g.setGuidnceRspsDataRqrmentDtFltrVlDurationVl(String.valueOf(guidanceresponsedatarequirementdatefiltervalueduration.getValue()));
-		}
-		/******************** guidanceresponsedatarequirementdatefiltervaluedurationcomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparator guidanceresponsedatarequirementdatefiltervaluedurationcomparator = guidanceresponsedatarequirementdatefiltervalueduration.getComparator();
-		g.setGuidnceRspsDataRqrmentDtFltrVlDurationCmprtr(guidanceresponsedatarequirementdatefiltervaluedurationcomparator.toCode());
-
-		/******************** GuidnceRsps_DataRqrment_DtFltr_VlDuration_Cd ********************************************************************************/
-		if(guidanceresponsedatarequirementdatefiltervalueduration.hasCode()) {
-			g.setGuidnceRspsDataRqrmentDtFltrVlDurationCd(String.valueOf(guidanceresponsedatarequirementdatefiltervalueduration.getCode()));
-		}
-		/******************** GuidnceRsps_DataRqrment_DtFltr_VlDuration_Unt ********************************************************************************/
-		if(guidanceresponsedatarequirementdatefiltervalueduration.hasUnit()) {
-			g.setGuidnceRspsDataRqrmentDtFltrVlDurationUnt(String.valueOf(guidanceresponsedatarequirementdatefiltervalueduration.getUnit()));
-		}
-		/******************** GuidnceRsps_DataRqrment_DtFltr_VlDuration_Sys ********************************************************************************/
-		if(guidanceresponsedatarequirementdatefiltervalueduration.hasSystem()) {
-			g.setGuidnceRspsDataRqrmentDtFltrVlDurationSys(String.valueOf(guidanceresponsedatarequirementdatefiltervalueduration.getSystem()));
-		}
-		/******************** guidanceresponsedatarequirementdatefiltervalueperiod ********************************************************************************/
-		org.hl7.fhir.r4.model.Period guidanceresponsedatarequirementdatefiltervalueperiod = guidanceresponsedatarequirementdatefilter.getValuePeriod();
-
-		/******************** GuidnceRsps_DataRqrment_DtFltr_VlPrd_Strt ********************************************************************************/
-		if(guidanceresponsedatarequirementdatefiltervalueperiod.hasStart()) {
-			g.setGuidnceRspsDataRqrmentDtFltrVlPrdStrt(String.valueOf(guidanceresponsedatarequirementdatefiltervalueperiod.getStart()));
-		}
-		/******************** GuidnceRsps_DataRqrment_DtFltr_VlPrd_End ********************************************************************************/
-		if(guidanceresponsedatarequirementdatefiltervalueperiod.hasEnd()) {
-			g.setGuidnceRspsDataRqrmentDtFltrVlPrdEnd(String.valueOf(guidanceresponsedatarequirementdatefiltervalueperiod.getEnd()));
-		}
-		/******************** guidanceresponsedatarequirementcodefilter ********************************************************************************/
-		org.hl7.fhir.r4.model.DataRequirement.DataRequirementCodeFilterComponent guidanceresponsedatarequirementcodefilter = guidanceresponsedatarequirement.getCodeFilterFirstRep();
-
-		/******************** GuidnceRsps_DataRqrment_CdFltr_Path ********************************************************************************/
-		if(guidanceresponsedatarequirementcodefilter.hasPath()) {
-			g.setGuidnceRspsDataRqrmentCdFltrPath(String.valueOf(guidanceresponsedatarequirementcodefilter.getPath()));
-		}
-		/******************** GuidnceRsps_DataRqrment_CdFltr_SrchParam ********************************************************************************/
-		if(guidanceresponsedatarequirementcodefilter.hasSearchParam()) {
-			g.setGuidnceRspsDataRqrmentCdFltrSrchParam(String.valueOf(guidanceresponsedatarequirementcodefilter.getSearchParam()));
-		}
-		/******************** GuidnceRsps_DataRqrment_CdFltr_VlSt ********************************************************************************/
-		if(guidanceresponsedatarequirementcodefilter.hasValueSet()) {
-			g.setGuidnceRspsDataRqrmentCdFltrVlSt(String.valueOf(guidanceresponsedatarequirementcodefilter.getValueSet()));
-		}
-		/******************** guidanceresponsedatarequirementcodefiltercode ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding guidanceresponsedatarequirementcodefiltercode = guidanceresponsedatarequirementcodefilter.getCodeFirstRep();
-
-		/******************** GuidnceRsps_DataRqrment_CdFltr_Cd_Vrsn ********************************************************************************/
-		if(guidanceresponsedatarequirementcodefiltercode.hasVersion()) {
-			g.setGuidnceRspsDataRqrmentCdFltrCdVrsn(String.valueOf(guidanceresponsedatarequirementcodefiltercode.getVersion()));
-		}
-		/******************** GuidnceRsps_DataRqrment_CdFltr_Cd_Dsply ********************************************************************************/
-		if(guidanceresponsedatarequirementcodefiltercode.hasDisplay()) {
-			g.setGuidnceRspsDataRqrmentCdFltrCdDsply(String.valueOf(guidanceresponsedatarequirementcodefiltercode.getDisplay()));
-		}
-		/******************** GuidnceRsps_DataRqrment_CdFltr_Cd_UsrSltd ********************************************************************************/
-		if(guidanceresponsedatarequirementcodefiltercode.hasUserSelected()) {
-			g.setGuidnceRspsDataRqrmentCdFltrCdUsrSltd(String.valueOf(guidanceresponsedatarequirementcodefiltercode.getUserSelected()));
-		}
-		/******************** GuidnceRsps_DataRqrment_CdFltr_Cd_Sys ********************************************************************************/
-		if(guidanceresponsedatarequirementcodefiltercode.hasSystem()) {
-			g.setGuidnceRspsDataRqrmentCdFltrCdSys(String.valueOf(guidanceresponsedatarequirementcodefiltercode.getSystem()));
-		}
 		/******************** guidanceresponsemodulecodeableconcept ********************************************************************************/
 		org.hl7.fhir.r4.model.CodeableConcept guidanceresponsemodulecodeableconcept = guidanceresponse.getModuleCodeableConcept();
 
 		/******************** GuidnceRsps_ModuleCdbleCncpt_Txt ********************************************************************************/
 		if(guidanceresponsemodulecodeableconcept.hasText()) {
-			g.setGuidnceRspsModuleCdbleCncptTxt(String.valueOf(guidanceresponsemodulecodeableconcept.getText()));
+
+			g.addGuidnceRspsModuleCdbleCncptTxt(String.valueOf(guidanceresponsemodulecodeableconcept.getText()));
+		} else {
+			g.addGuidnceRspsModuleCdbleCncptTxt("NULL");
 		}
+
+
 		/******************** guidanceresponsemodulecodeableconceptcoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding guidanceresponsemodulecodeableconceptcoding = guidanceresponsemodulecodeableconcept.getCodingFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.Coding> guidanceresponsemodulecodeableconceptcodinglist = guidanceresponsemodulecodeableconcept.getCoding();
+		for(int guidanceresponsemodulecodeableconceptcodingi = 0; guidanceresponsemodulecodeableconceptcodingi<guidanceresponsemodulecodeableconceptcodinglist.size();guidanceresponsemodulecodeableconceptcodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  guidanceresponsemodulecodeableconceptcoding = guidanceresponsemodulecodeableconceptcodinglist.get(guidanceresponsemodulecodeableconceptcodingi);
+
+		/******************** GuidnceRsps_ModuleCdbleCncpt_Cdg_Dsply ********************************************************************************/
+		if(guidanceresponsemodulecodeableconceptcodingi == 0) {g.addGuidnceRspsModuleCdbleCncptCdgDsply("[");}
+		if(guidanceresponsemodulecodeableconceptcoding.hasDisplay()) {
+
+			g.addGuidnceRspsModuleCdbleCncptCdgDsply(String.valueOf(guidanceresponsemodulecodeableconceptcoding.getDisplay()));
+		} else {
+			g.addGuidnceRspsModuleCdbleCncptCdgDsply("NULL");
+		}
+
+		if(guidanceresponsemodulecodeableconceptcodingi == guidanceresponsemodulecodeableconceptcodinglist.size()-1) {g.addGuidnceRspsModuleCdbleCncptCdgDsply("]");}
+
 
 		/******************** GuidnceRsps_ModuleCdbleCncpt_Cdg_Vrsn ********************************************************************************/
+		if(guidanceresponsemodulecodeableconceptcodingi == 0) {g.addGuidnceRspsModuleCdbleCncptCdgVrsn("[");}
 		if(guidanceresponsemodulecodeableconceptcoding.hasVersion()) {
-			g.setGuidnceRspsModuleCdbleCncptCdgVrsn(String.valueOf(guidanceresponsemodulecodeableconceptcoding.getVersion()));
+
+			g.addGuidnceRspsModuleCdbleCncptCdgVrsn(String.valueOf(guidanceresponsemodulecodeableconceptcoding.getVersion()));
+		} else {
+			g.addGuidnceRspsModuleCdbleCncptCdgVrsn("NULL");
 		}
-		/******************** GuidnceRsps_ModuleCdbleCncpt_Cdg_Dsply ********************************************************************************/
-		if(guidanceresponsemodulecodeableconceptcoding.hasDisplay()) {
-			g.setGuidnceRspsModuleCdbleCncptCdgDsply(String.valueOf(guidanceresponsemodulecodeableconceptcoding.getDisplay()));
-		}
+
+		if(guidanceresponsemodulecodeableconceptcodingi == guidanceresponsemodulecodeableconceptcodinglist.size()-1) {g.addGuidnceRspsModuleCdbleCncptCdgVrsn("]");}
+
+
 		/******************** GuidnceRsps_ModuleCdbleCncpt_Cdg_Cd ********************************************************************************/
+		if(guidanceresponsemodulecodeableconceptcodingi == 0) {g.addGuidnceRspsModuleCdbleCncptCdgCd("[");}
 		if(guidanceresponsemodulecodeableconceptcoding.hasCode()) {
-			g.setGuidnceRspsModuleCdbleCncptCdgCd(String.valueOf(guidanceresponsemodulecodeableconceptcoding.getCode()));
+
+			g.addGuidnceRspsModuleCdbleCncptCdgCd(String.valueOf(guidanceresponsemodulecodeableconceptcoding.getCode()));
+		} else {
+			g.addGuidnceRspsModuleCdbleCncptCdgCd("NULL");
 		}
+
+		if(guidanceresponsemodulecodeableconceptcodingi == guidanceresponsemodulecodeableconceptcodinglist.size()-1) {g.addGuidnceRspsModuleCdbleCncptCdgCd("]");}
+
+
 		/******************** GuidnceRsps_ModuleCdbleCncpt_Cdg_UsrSltd ********************************************************************************/
+		if(guidanceresponsemodulecodeableconceptcodingi == 0) {g.addGuidnceRspsModuleCdbleCncptCdgUsrSltd("[");}
 		if(guidanceresponsemodulecodeableconceptcoding.hasUserSelected()) {
-			g.setGuidnceRspsModuleCdbleCncptCdgUsrSltd(String.valueOf(guidanceresponsemodulecodeableconceptcoding.getUserSelected()));
+
+			g.addGuidnceRspsModuleCdbleCncptCdgUsrSltd(String.valueOf(guidanceresponsemodulecodeableconceptcoding.getUserSelected()));
+		} else {
+			g.addGuidnceRspsModuleCdbleCncptCdgUsrSltd("NULL");
 		}
+
+		if(guidanceresponsemodulecodeableconceptcodingi == guidanceresponsemodulecodeableconceptcodinglist.size()-1) {g.addGuidnceRspsModuleCdbleCncptCdgUsrSltd("]");}
+
+
 		/******************** GuidnceRsps_ModuleCdbleCncpt_Cdg_Sys ********************************************************************************/
+		if(guidanceresponsemodulecodeableconceptcodingi == 0) {g.addGuidnceRspsModuleCdbleCncptCdgSys("[");}
 		if(guidanceresponsemodulecodeableconceptcoding.hasSystem()) {
-			g.setGuidnceRspsModuleCdbleCncptCdgSys(String.valueOf(guidanceresponsemodulecodeableconceptcoding.getSystem()));
+
+			g.addGuidnceRspsModuleCdbleCncptCdgSys(String.valueOf(guidanceresponsemodulecodeableconceptcoding.getSystem()));
+		} else {
+			g.addGuidnceRspsModuleCdbleCncptCdgSys("NULL");
 		}
-		/******************** GuidnceRsps_ModuleCanonicalTyp ********************************************************************************/
-		if(guidanceresponse.hasModuleCanonicalType()) {
-			g.setGuidnceRspsModuleCanonicalTyp(String.valueOf(guidanceresponse.getModuleCanonicalType()));
+
+		if(guidanceresponsemodulecodeableconceptcodingi == guidanceresponsemodulecodeableconceptcodinglist.size()-1) {g.addGuidnceRspsModuleCdbleCncptCdgSys("]");}
+
+
+		 };
+		/******************** GuidnceRsps_OutputPrmtrs ********************************************************************************/
+		if(guidanceresponse.hasOutputParameters()) {
+
+			if(guidanceresponse.getOutputParameters().getReference() != null) {
+			g.addGuidnceRspsOutputPrmtrs(guidanceresponse.getOutputParameters().getReference());
+			}
+		} else {
+			g.addGuidnceRspsOutputPrmtrs("NULL");
 		}
+
+
 		/******************** guidanceresponserequestidentifier ********************************************************************************/
 		org.hl7.fhir.r4.model.Identifier guidanceresponserequestidentifier = guidanceresponse.getRequestIdentifier();
 
 		/******************** GuidnceRsps_RqstId_Vl ********************************************************************************/
 		if(guidanceresponserequestidentifier.hasValue()) {
-			g.setGuidnceRspsRqstIdVl(String.valueOf(guidanceresponserequestidentifier.getValue()));
+
+			g.addGuidnceRspsRqstIdVl(String.valueOf(guidanceresponserequestidentifier.getValue()));
+		} else {
+			g.addGuidnceRspsRqstIdVl("NULL");
 		}
+
+
 		/******************** guidanceresponserequestidentifiertype ********************************************************************************/
 		org.hl7.fhir.r4.model.CodeableConcept guidanceresponserequestidentifiertype = guidanceresponserequestidentifier.getType();
 
 		/******************** GuidnceRsps_RqstId_Typ_Txt ********************************************************************************/
 		if(guidanceresponserequestidentifiertype.hasText()) {
-			g.setGuidnceRspsRqstIdTypTxt(String.valueOf(guidanceresponserequestidentifiertype.getText()));
+
+			g.addGuidnceRspsRqstIdTypTxt(String.valueOf(guidanceresponserequestidentifiertype.getText()));
+		} else {
+			g.addGuidnceRspsRqstIdTypTxt("NULL");
 		}
+
+
 		/******************** guidanceresponserequestidentifiertypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding guidanceresponserequestidentifiertypecoding = guidanceresponserequestidentifiertype.getCodingFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.Coding> guidanceresponserequestidentifiertypecodinglist = guidanceresponserequestidentifiertype.getCoding();
+		for(int guidanceresponserequestidentifiertypecodingi = 0; guidanceresponserequestidentifiertypecodingi<guidanceresponserequestidentifiertypecodinglist.size();guidanceresponserequestidentifiertypecodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  guidanceresponserequestidentifiertypecoding = guidanceresponserequestidentifiertypecodinglist.get(guidanceresponserequestidentifiertypecodingi);
+
+		/******************** GuidnceRsps_RqstId_Typ_Cdg_Dsply ********************************************************************************/
+		if(guidanceresponserequestidentifiertypecodingi == 0) {g.addGuidnceRspsRqstIdTypCdgDsply("[");}
+		if(guidanceresponserequestidentifiertypecoding.hasDisplay()) {
+
+			g.addGuidnceRspsRqstIdTypCdgDsply(String.valueOf(guidanceresponserequestidentifiertypecoding.getDisplay()));
+		} else {
+			g.addGuidnceRspsRqstIdTypCdgDsply("NULL");
+		}
+
+		if(guidanceresponserequestidentifiertypecodingi == guidanceresponserequestidentifiertypecodinglist.size()-1) {g.addGuidnceRspsRqstIdTypCdgDsply("]");}
+
 
 		/******************** GuidnceRsps_RqstId_Typ_Cdg_Vrsn ********************************************************************************/
+		if(guidanceresponserequestidentifiertypecodingi == 0) {g.addGuidnceRspsRqstIdTypCdgVrsn("[");}
 		if(guidanceresponserequestidentifiertypecoding.hasVersion()) {
-			g.setGuidnceRspsRqstIdTypCdgVrsn(String.valueOf(guidanceresponserequestidentifiertypecoding.getVersion()));
+
+			g.addGuidnceRspsRqstIdTypCdgVrsn(String.valueOf(guidanceresponserequestidentifiertypecoding.getVersion()));
+		} else {
+			g.addGuidnceRspsRqstIdTypCdgVrsn("NULL");
 		}
-		/******************** GuidnceRsps_RqstId_Typ_Cdg_Dsply ********************************************************************************/
-		if(guidanceresponserequestidentifiertypecoding.hasDisplay()) {
-			g.setGuidnceRspsRqstIdTypCdgDsply(String.valueOf(guidanceresponserequestidentifiertypecoding.getDisplay()));
-		}
+
+		if(guidanceresponserequestidentifiertypecodingi == guidanceresponserequestidentifiertypecodinglist.size()-1) {g.addGuidnceRspsRqstIdTypCdgVrsn("]");}
+
+
 		/******************** GuidnceRsps_RqstId_Typ_Cdg_Cd ********************************************************************************/
+		if(guidanceresponserequestidentifiertypecodingi == 0) {g.addGuidnceRspsRqstIdTypCdgCd("[");}
 		if(guidanceresponserequestidentifiertypecoding.hasCode()) {
-			g.setGuidnceRspsRqstIdTypCdgCd(String.valueOf(guidanceresponserequestidentifiertypecoding.getCode()));
+
+			g.addGuidnceRspsRqstIdTypCdgCd(String.valueOf(guidanceresponserequestidentifiertypecoding.getCode()));
+		} else {
+			g.addGuidnceRspsRqstIdTypCdgCd("NULL");
 		}
+
+		if(guidanceresponserequestidentifiertypecodingi == guidanceresponserequestidentifiertypecodinglist.size()-1) {g.addGuidnceRspsRqstIdTypCdgCd("]");}
+
+
 		/******************** GuidnceRsps_RqstId_Typ_Cdg_UsrSltd ********************************************************************************/
+		if(guidanceresponserequestidentifiertypecodingi == 0) {g.addGuidnceRspsRqstIdTypCdgUsrSltd("[");}
 		if(guidanceresponserequestidentifiertypecoding.hasUserSelected()) {
-			g.setGuidnceRspsRqstIdTypCdgUsrSltd(String.valueOf(guidanceresponserequestidentifiertypecoding.getUserSelected()));
+
+			g.addGuidnceRspsRqstIdTypCdgUsrSltd(String.valueOf(guidanceresponserequestidentifiertypecoding.getUserSelected()));
+		} else {
+			g.addGuidnceRspsRqstIdTypCdgUsrSltd("NULL");
 		}
+
+		if(guidanceresponserequestidentifiertypecodingi == guidanceresponserequestidentifiertypecodinglist.size()-1) {g.addGuidnceRspsRqstIdTypCdgUsrSltd("]");}
+
+
 		/******************** GuidnceRsps_RqstId_Typ_Cdg_Sys ********************************************************************************/
+		if(guidanceresponserequestidentifiertypecodingi == 0) {g.addGuidnceRspsRqstIdTypCdgSys("[");}
 		if(guidanceresponserequestidentifiertypecoding.hasSystem()) {
-			g.setGuidnceRspsRqstIdTypCdgSys(String.valueOf(guidanceresponserequestidentifiertypecoding.getSystem()));
+
+			g.addGuidnceRspsRqstIdTypCdgSys(String.valueOf(guidanceresponserequestidentifiertypecoding.getSystem()));
+		} else {
+			g.addGuidnceRspsRqstIdTypCdgSys("NULL");
 		}
+
+		if(guidanceresponserequestidentifiertypecodingi == guidanceresponserequestidentifiertypecodinglist.size()-1) {g.addGuidnceRspsRqstIdTypCdgSys("]");}
+
+
+		 };
 		/******************** guidanceresponserequestidentifierperiod ********************************************************************************/
 		org.hl7.fhir.r4.model.Period guidanceresponserequestidentifierperiod = guidanceresponserequestidentifier.getPeriod();
 
 		/******************** GuidnceRsps_RqstId_Prd_Strt ********************************************************************************/
 		if(guidanceresponserequestidentifierperiod.hasStart()) {
-			g.setGuidnceRspsRqstIdPrdStrt(String.valueOf(guidanceresponserequestidentifierperiod.getStart()));
+
+			g.addGuidnceRspsRqstIdPrdStrt("\""+ca.uhn.fhir.util.DateUtils.formatDate(guidanceresponserequestidentifierperiod.getStart())+"\"");
+		} else {
+			g.addGuidnceRspsRqstIdPrdStrt("NULL");
 		}
+
+
 		/******************** GuidnceRsps_RqstId_Prd_End ********************************************************************************/
 		if(guidanceresponserequestidentifierperiod.hasEnd()) {
-			g.setGuidnceRspsRqstIdPrdEnd(String.valueOf(guidanceresponserequestidentifierperiod.getEnd()));
+
+			g.addGuidnceRspsRqstIdPrdEnd("\""+ca.uhn.fhir.util.DateUtils.formatDate(guidanceresponserequestidentifierperiod.getEnd())+"\"");
+		} else {
+			g.addGuidnceRspsRqstIdPrdEnd("NULL");
 		}
-		/******************** GuidnceRsps_RqstId_Assigner ********************************************************************************/
-		if(guidanceresponserequestidentifier.hasAssigner()) {
-			g.setGuidnceRspsRqstIdAssigner(String.valueOf(guidanceresponserequestidentifier.getAssigner()));
-		}
-		/******************** GuidnceRsps_RqstId_Sys ********************************************************************************/
-		if(guidanceresponserequestidentifier.hasSystem()) {
-			g.setGuidnceRspsRqstIdSys(String.valueOf(guidanceresponserequestidentifier.getSystem()));
-		}
+
+
 		/******************** guidanceresponserequestidentifieruse ********************************************************************************/
 		org.hl7.fhir.r4.model.Identifier.IdentifierUse guidanceresponserequestidentifieruse = guidanceresponserequestidentifier.getUse();
-		g.setGuidnceRspsRqstIdUse(guidanceresponserequestidentifieruse.toCode());
+		if(guidanceresponserequestidentifieruse!=null) {
+			g.addGuidnceRspsRqstIdUse(guidanceresponserequestidentifieruse.toCode());
+		} else {
+			g.addGuidnceRspsRqstIdUse("NULL");
+		}
 
-		/******************** guidanceresponseidentifier ********************************************************************************/
-		org.hl7.fhir.r4.model.Identifier guidanceresponseidentifier = guidanceresponse.getIdentifierFirstRep();
+		/******************** GuidnceRsps_RqstId_Assigner ********************************************************************************/
+		if(guidanceresponserequestidentifier.hasAssigner()) {
 
-		/******************** GuidnceRsps_Id_Vl ********************************************************************************/
-		if(guidanceresponseidentifier.hasValue()) {
-			g.setGuidnceRspsIdVl(String.valueOf(guidanceresponseidentifier.getValue()));
+			if(guidanceresponserequestidentifier.getAssigner().getReference() != null) {
+			g.addGuidnceRspsRqstIdAssigner(guidanceresponserequestidentifier.getAssigner().getReference());
+			}
+		} else {
+			g.addGuidnceRspsRqstIdAssigner("NULL");
 		}
-		/******************** guidanceresponseidentifiertype ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept guidanceresponseidentifiertype = guidanceresponseidentifier.getType();
 
-		/******************** GuidnceRsps_Id_Typ_Txt ********************************************************************************/
-		if(guidanceresponseidentifiertype.hasText()) {
-			g.setGuidnceRspsIdTypTxt(String.valueOf(guidanceresponseidentifiertype.getText()));
-		}
-		/******************** guidanceresponseidentifiertypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding guidanceresponseidentifiertypecoding = guidanceresponseidentifiertype.getCodingFirstRep();
 
-		/******************** GuidnceRsps_Id_Typ_Cdg_Vrsn ********************************************************************************/
-		if(guidanceresponseidentifiertypecoding.hasVersion()) {
-			g.setGuidnceRspsIdTypCdgVrsn(String.valueOf(guidanceresponseidentifiertypecoding.getVersion()));
-		}
-		/******************** GuidnceRsps_Id_Typ_Cdg_Dsply ********************************************************************************/
-		if(guidanceresponseidentifiertypecoding.hasDisplay()) {
-			g.setGuidnceRspsIdTypCdgDsply(String.valueOf(guidanceresponseidentifiertypecoding.getDisplay()));
-		}
-		/******************** GuidnceRsps_Id_Typ_Cdg_Cd ********************************************************************************/
-		if(guidanceresponseidentifiertypecoding.hasCode()) {
-			g.setGuidnceRspsIdTypCdgCd(String.valueOf(guidanceresponseidentifiertypecoding.getCode()));
-		}
-		/******************** GuidnceRsps_Id_Typ_Cdg_UsrSltd ********************************************************************************/
-		if(guidanceresponseidentifiertypecoding.hasUserSelected()) {
-			g.setGuidnceRspsIdTypCdgUsrSltd(String.valueOf(guidanceresponseidentifiertypecoding.getUserSelected()));
-		}
-		/******************** GuidnceRsps_Id_Typ_Cdg_Sys ********************************************************************************/
-		if(guidanceresponseidentifiertypecoding.hasSystem()) {
-			g.setGuidnceRspsIdTypCdgSys(String.valueOf(guidanceresponseidentifiertypecoding.getSystem()));
-		}
-		/******************** guidanceresponseidentifierperiod ********************************************************************************/
-		org.hl7.fhir.r4.model.Period guidanceresponseidentifierperiod = guidanceresponseidentifier.getPeriod();
+		/******************** GuidnceRsps_RqstId_Sys ********************************************************************************/
+		if(guidanceresponserequestidentifier.hasSystem()) {
 
-		/******************** GuidnceRsps_Id_Prd_Strt ********************************************************************************/
-		if(guidanceresponseidentifierperiod.hasStart()) {
-			g.setGuidnceRspsIdPrdStrt(String.valueOf(guidanceresponseidentifierperiod.getStart()));
+			g.addGuidnceRspsRqstIdSys(String.valueOf(guidanceresponserequestidentifier.getSystem()));
+		} else {
+			g.addGuidnceRspsRqstIdSys("NULL");
 		}
-		/******************** GuidnceRsps_Id_Prd_End ********************************************************************************/
-		if(guidanceresponseidentifierperiod.hasEnd()) {
-			g.setGuidnceRspsIdPrdEnd(String.valueOf(guidanceresponseidentifierperiod.getEnd()));
-		}
-		/******************** GuidnceRsps_Id_Assigner ********************************************************************************/
-		if(guidanceresponseidentifier.hasAssigner()) {
-			g.setGuidnceRspsIdAssigner(String.valueOf(guidanceresponseidentifier.getAssigner()));
-		}
-		/******************** GuidnceRsps_Id_Sys ********************************************************************************/
-		if(guidanceresponseidentifier.hasSystem()) {
-			g.setGuidnceRspsIdSys(String.valueOf(guidanceresponseidentifier.getSystem()));
-		}
-		/******************** guidanceresponseidentifieruse ********************************************************************************/
-		org.hl7.fhir.r4.model.Identifier.IdentifierUse guidanceresponseidentifieruse = guidanceresponseidentifier.getUse();
-		g.setGuidnceRspsIdUse(guidanceresponseidentifieruse.toCode());
 
-		/******************** guidanceresponsereasoncode ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept guidanceresponsereasoncode = guidanceresponse.getReasonCodeFirstRep();
 
-		/******************** GuidnceRsps_RsnCd_Txt ********************************************************************************/
-		if(guidanceresponsereasoncode.hasText()) {
-			g.setGuidnceRspsRsnCdTxt(String.valueOf(guidanceresponsereasoncode.getText()));
-		}
-		/******************** guidanceresponsereasoncodecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding guidanceresponsereasoncodecoding = guidanceresponsereasoncode.getCodingFirstRep();
-
-		/******************** GuidnceRsps_RsnCd_Cdg_Vrsn ********************************************************************************/
-		if(guidanceresponsereasoncodecoding.hasVersion()) {
-			g.setGuidnceRspsRsnCdCdgVrsn(String.valueOf(guidanceresponsereasoncodecoding.getVersion()));
-		}
-		/******************** GuidnceRsps_RsnCd_Cdg_Dsply ********************************************************************************/
-		if(guidanceresponsereasoncodecoding.hasDisplay()) {
-			g.setGuidnceRspsRsnCdCdgDsply(String.valueOf(guidanceresponsereasoncodecoding.getDisplay()));
-		}
-		/******************** GuidnceRsps_RsnCd_Cdg_Cd ********************************************************************************/
-		if(guidanceresponsereasoncodecoding.hasCode()) {
-			g.setGuidnceRspsRsnCdCdgCd(String.valueOf(guidanceresponsereasoncodecoding.getCode()));
-		}
-		/******************** GuidnceRsps_RsnCd_Cdg_UsrSltd ********************************************************************************/
-		if(guidanceresponsereasoncodecoding.hasUserSelected()) {
-			g.setGuidnceRspsRsnCdCdgUsrSltd(String.valueOf(guidanceresponsereasoncodecoding.getUserSelected()));
-		}
-		/******************** GuidnceRsps_RsnCd_Cdg_Sys ********************************************************************************/
-		if(guidanceresponsereasoncodecoding.hasSystem()) {
-			g.setGuidnceRspsRsnCdCdgSys(String.valueOf(guidanceresponsereasoncodecoding.getSystem()));
-		}
-		/******************** GuidnceRsps_RsnRfrnc ********************************************************************************/
-		if(guidanceresponse.hasReasonReference()) {
-			g.setGuidnceRspsRsnRfrnc(String.valueOf(guidanceresponse.getReasonReferenceFirstRep()));
-		}
 		/******************** GuidnceRsps_ModuleUriTyp ********************************************************************************/
 		if(guidanceresponse.hasModuleUriType()) {
-			g.setGuidnceRspsModuleUriTyp(String.valueOf(guidanceresponse.getModuleUriType()));
+
+			g.addGuidnceRspsModuleUriTyp("\""+guidanceresponse.getModuleUriType().getValueAsString()+"\"");
+		} else {
+			g.addGuidnceRspsModuleUriTyp("NULL");
 		}
+
+
+		/******************** guidanceresponsedatarequirement ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.DataRequirement> guidanceresponsedatarequirementlist = guidanceresponse.getDataRequirement();
+		for(int guidanceresponsedatarequirementi = 0; guidanceresponsedatarequirementi<guidanceresponsedatarequirementlist.size();guidanceresponsedatarequirementi++ ) {
+		org.hl7.fhir.r4.model.DataRequirement  guidanceresponsedatarequirement = guidanceresponsedatarequirementlist.get(guidanceresponsedatarequirementi);
+
+		/******************** GuidnceRsps_DataRqrment_Typ ********************************************************************************/
+		if(guidanceresponsedatarequirementi == 0) {g.addGuidnceRspsDataRqrmentTyp("[");}
+		if(guidanceresponsedatarequirement.hasType()) {
+
+			g.addGuidnceRspsDataRqrmentTyp(String.valueOf(guidanceresponsedatarequirement.getType()));
+		} else {
+			g.addGuidnceRspsDataRqrmentTyp("NULL");
+		}
+
+		if(guidanceresponsedatarequirementi == guidanceresponsedatarequirementlist.size()-1) {g.addGuidnceRspsDataRqrmentTyp("]");}
+
+
+		/******************** guidanceresponsedatarequirementsort ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.DataRequirement.DataRequirementSortComponent> guidanceresponsedatarequirementsortlist = guidanceresponsedatarequirement.getSort();
+		for(int guidanceresponsedatarequirementsorti = 0; guidanceresponsedatarequirementsorti<guidanceresponsedatarequirementsortlist.size();guidanceresponsedatarequirementsorti++ ) {
+		org.hl7.fhir.r4.model.DataRequirement.DataRequirementSortComponent  guidanceresponsedatarequirementsort = guidanceresponsedatarequirementsortlist.get(guidanceresponsedatarequirementsorti);
+
+		/******************** GuidnceRsps_DataRqrment_Sort_Path ********************************************************************************/
+		if(guidanceresponsedatarequirementsorti == 0) {g.addGuidnceRspsDataRqrmentSortPath("[[");}
+		if(guidanceresponsedatarequirementsort.hasPath()) {
+
+			g.addGuidnceRspsDataRqrmentSortPath(String.valueOf(guidanceresponsedatarequirementsort.getPath()));
+		} else {
+			g.addGuidnceRspsDataRqrmentSortPath("NULL");
+		}
+
+		if(guidanceresponsedatarequirementsorti == guidanceresponsedatarequirementsortlist.size()-1) {g.addGuidnceRspsDataRqrmentSortPath("]]");}
+
+
+		/******************** guidanceresponsedatarequirementsortdirection ********************************************************************************/
+		org.hl7.fhir.r4.model.DataRequirement.SortDirection guidanceresponsedatarequirementsortdirection = guidanceresponsedatarequirementsort.getDirection();
+		if(guidanceresponsedatarequirementsortdirection!=null) {
+		if(guidanceresponsedatarequirementsorti == 0) {
+
+		g.addGuidnceRspsDataRqrmentSortDirection("[[");		}
+			g.addGuidnceRspsDataRqrmentSortDirection(guidanceresponsedatarequirementsortdirection.toCode());
+		if(guidanceresponsedatarequirementsorti == guidanceresponsedatarequirementsortlist.size()-1) {
+
+		g.addGuidnceRspsDataRqrmentSortDirection("]]");		}
+
+		} else {
+			g.addGuidnceRspsDataRqrmentSortDirection("NULL");
+		}
+
+		 };
+		/******************** GuidnceRsps_DataRqrment_SbjctRfrnc ********************************************************************************/
+		if(guidanceresponsedatarequirement.hasSubjectReference()) {
+
+			if(guidanceresponsedatarequirement.getSubjectReference().getReference() != null) {
+			g.addGuidnceRspsDataRqrmentSbjctRfrnc(guidanceresponsedatarequirement.getSubjectReference().getReference());
+			}
+		} else {
+			g.addGuidnceRspsDataRqrmentSbjctRfrnc("NULL");
+		}
+
+
+		/******************** guidanceresponsedatarequirementsubjectcodeableconcept ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept guidanceresponsedatarequirementsubjectcodeableconcept = guidanceresponsedatarequirement.getSubjectCodeableConcept();
+
+		/******************** GuidnceRsps_DataRqrment_SbjctCdbleCncpt_Txt ********************************************************************************/
+		if(guidanceresponsedatarequirementsubjectcodeableconcept.hasText()) {
+
+			g.addGuidnceRspsDataRqrmentSbjctCdbleCncptTxt(String.valueOf(guidanceresponsedatarequirementsubjectcodeableconcept.getText()));
+		} else {
+			g.addGuidnceRspsDataRqrmentSbjctCdbleCncptTxt("NULL");
+		}
+
+
+		/******************** guidanceresponsedatarequirementsubjectcodeableconceptcoding ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.Coding> guidanceresponsedatarequirementsubjectcodeableconceptcodinglist = guidanceresponsedatarequirementsubjectcodeableconcept.getCoding();
+		for(int guidanceresponsedatarequirementsubjectcodeableconceptcodingi = 0; guidanceresponsedatarequirementsubjectcodeableconceptcodingi<guidanceresponsedatarequirementsubjectcodeableconceptcodinglist.size();guidanceresponsedatarequirementsubjectcodeableconceptcodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  guidanceresponsedatarequirementsubjectcodeableconceptcoding = guidanceresponsedatarequirementsubjectcodeableconceptcodinglist.get(guidanceresponsedatarequirementsubjectcodeableconceptcodingi);
+
+		/******************** GuidnceRsps_DataRqrment_SbjctCdbleCncpt_Cdg_Dsply ********************************************************************************/
+		if(guidanceresponsedatarequirementsubjectcodeableconceptcodingi == 0) {g.addGuidnceRspsDataRqrmentSbjctCdbleCncptCdgDsply("[[");}
+		if(guidanceresponsedatarequirementsubjectcodeableconceptcoding.hasDisplay()) {
+
+			g.addGuidnceRspsDataRqrmentSbjctCdbleCncptCdgDsply(String.valueOf(guidanceresponsedatarequirementsubjectcodeableconceptcoding.getDisplay()));
+		} else {
+			g.addGuidnceRspsDataRqrmentSbjctCdbleCncptCdgDsply("NULL");
+		}
+
+		if(guidanceresponsedatarequirementsubjectcodeableconceptcodingi == guidanceresponsedatarequirementsubjectcodeableconceptcodinglist.size()-1) {g.addGuidnceRspsDataRqrmentSbjctCdbleCncptCdgDsply("]]");}
+
+
+		/******************** GuidnceRsps_DataRqrment_SbjctCdbleCncpt_Cdg_Vrsn ********************************************************************************/
+		if(guidanceresponsedatarequirementsubjectcodeableconceptcodingi == 0) {g.addGuidnceRspsDataRqrmentSbjctCdbleCncptCdgVrsn("[[");}
+		if(guidanceresponsedatarequirementsubjectcodeableconceptcoding.hasVersion()) {
+
+			g.addGuidnceRspsDataRqrmentSbjctCdbleCncptCdgVrsn(String.valueOf(guidanceresponsedatarequirementsubjectcodeableconceptcoding.getVersion()));
+		} else {
+			g.addGuidnceRspsDataRqrmentSbjctCdbleCncptCdgVrsn("NULL");
+		}
+
+		if(guidanceresponsedatarequirementsubjectcodeableconceptcodingi == guidanceresponsedatarequirementsubjectcodeableconceptcodinglist.size()-1) {g.addGuidnceRspsDataRqrmentSbjctCdbleCncptCdgVrsn("]]");}
+
+
+		/******************** GuidnceRsps_DataRqrment_SbjctCdbleCncpt_Cdg_Cd ********************************************************************************/
+		if(guidanceresponsedatarequirementsubjectcodeableconceptcodingi == 0) {g.addGuidnceRspsDataRqrmentSbjctCdbleCncptCdgCd("[[");}
+		if(guidanceresponsedatarequirementsubjectcodeableconceptcoding.hasCode()) {
+
+			g.addGuidnceRspsDataRqrmentSbjctCdbleCncptCdgCd(String.valueOf(guidanceresponsedatarequirementsubjectcodeableconceptcoding.getCode()));
+		} else {
+			g.addGuidnceRspsDataRqrmentSbjctCdbleCncptCdgCd("NULL");
+		}
+
+		if(guidanceresponsedatarequirementsubjectcodeableconceptcodingi == guidanceresponsedatarequirementsubjectcodeableconceptcodinglist.size()-1) {g.addGuidnceRspsDataRqrmentSbjctCdbleCncptCdgCd("]]");}
+
+
+		/******************** GuidnceRsps_DataRqrment_SbjctCdbleCncpt_Cdg_UsrSltd ********************************************************************************/
+		if(guidanceresponsedatarequirementsubjectcodeableconceptcodingi == 0) {g.addGuidnceRspsDataRqrmentSbjctCdbleCncptCdgUsrSltd("[[");}
+		if(guidanceresponsedatarequirementsubjectcodeableconceptcoding.hasUserSelected()) {
+
+			g.addGuidnceRspsDataRqrmentSbjctCdbleCncptCdgUsrSltd(String.valueOf(guidanceresponsedatarequirementsubjectcodeableconceptcoding.getUserSelected()));
+		} else {
+			g.addGuidnceRspsDataRqrmentSbjctCdbleCncptCdgUsrSltd("NULL");
+		}
+
+		if(guidanceresponsedatarequirementsubjectcodeableconceptcodingi == guidanceresponsedatarequirementsubjectcodeableconceptcodinglist.size()-1) {g.addGuidnceRspsDataRqrmentSbjctCdbleCncptCdgUsrSltd("]]");}
+
+
+		/******************** GuidnceRsps_DataRqrment_SbjctCdbleCncpt_Cdg_Sys ********************************************************************************/
+		if(guidanceresponsedatarequirementsubjectcodeableconceptcodingi == 0) {g.addGuidnceRspsDataRqrmentSbjctCdbleCncptCdgSys("[[");}
+		if(guidanceresponsedatarequirementsubjectcodeableconceptcoding.hasSystem()) {
+
+			g.addGuidnceRspsDataRqrmentSbjctCdbleCncptCdgSys(String.valueOf(guidanceresponsedatarequirementsubjectcodeableconceptcoding.getSystem()));
+		} else {
+			g.addGuidnceRspsDataRqrmentSbjctCdbleCncptCdgSys("NULL");
+		}
+
+		if(guidanceresponsedatarequirementsubjectcodeableconceptcodingi == guidanceresponsedatarequirementsubjectcodeableconceptcodinglist.size()-1) {g.addGuidnceRspsDataRqrmentSbjctCdbleCncptCdgSys("]]");}
+
+
+		 };
+		/******************** GuidnceRsps_DataRqrment_Profile ********************************************************************************/
+		if(guidanceresponsedatarequirement.hasProfile()) {
+
+			String  array = "[";
+			for(int incr=0; incr<guidanceresponsedatarequirement.getProfile().size(); incr++) {
+				array = array + guidanceresponsedatarequirement.getProfile().get(incr).getValueAsString() + ",";
+			}
+			array = array.substring(0, array.length() -1);
+			array = array + "]";
+			g.addGuidnceRspsDataRqrmentProfile(array);
+
+		} else {
+			g.addGuidnceRspsDataRqrmentProfile("NULL");
+		}
+
+
+		/******************** GuidnceRsps_DataRqrment_MustSupport ********************************************************************************/
+		if(guidanceresponsedatarequirement.hasMustSupport()) {
+
+			String  array = "[";
+			for(int incr=0; incr<guidanceresponsedatarequirement.getMustSupport().size(); incr++) {
+				array = array + guidanceresponsedatarequirement.getMustSupport().get(incr).getValueAsString() + ",";
+			}
+			array = array.substring(0, array.length() -1);
+			array = array + "]";
+			g.addGuidnceRspsDataRqrmentMustSupport(array);
+
+		} else {
+			g.addGuidnceRspsDataRqrmentMustSupport("NULL");
+		}
+
+
+		/******************** guidanceresponsedatarequirementcodefilter ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.DataRequirement.DataRequirementCodeFilterComponent> guidanceresponsedatarequirementcodefilterlist = guidanceresponsedatarequirement.getCodeFilter();
+		for(int guidanceresponsedatarequirementcodefilteri = 0; guidanceresponsedatarequirementcodefilteri<guidanceresponsedatarequirementcodefilterlist.size();guidanceresponsedatarequirementcodefilteri++ ) {
+		org.hl7.fhir.r4.model.DataRequirement.DataRequirementCodeFilterComponent  guidanceresponsedatarequirementcodefilter = guidanceresponsedatarequirementcodefilterlist.get(guidanceresponsedatarequirementcodefilteri);
+
+		/******************** GuidnceRsps_DataRqrment_CdFltr_Path ********************************************************************************/
+		if(guidanceresponsedatarequirementcodefilteri == 0) {g.addGuidnceRspsDataRqrmentCdFltrPath("[[");}
+		if(guidanceresponsedatarequirementcodefilter.hasPath()) {
+
+			g.addGuidnceRspsDataRqrmentCdFltrPath(String.valueOf(guidanceresponsedatarequirementcodefilter.getPath()));
+		} else {
+			g.addGuidnceRspsDataRqrmentCdFltrPath("NULL");
+		}
+
+		if(guidanceresponsedatarequirementcodefilteri == guidanceresponsedatarequirementcodefilterlist.size()-1) {g.addGuidnceRspsDataRqrmentCdFltrPath("]]");}
+
+
+		/******************** guidanceresponsedatarequirementcodefiltercode ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.Coding> guidanceresponsedatarequirementcodefiltercodelist = guidanceresponsedatarequirementcodefilter.getCode();
+		for(int guidanceresponsedatarequirementcodefiltercodei = 0; guidanceresponsedatarequirementcodefiltercodei<guidanceresponsedatarequirementcodefiltercodelist.size();guidanceresponsedatarequirementcodefiltercodei++ ) {
+		org.hl7.fhir.r4.model.Coding  guidanceresponsedatarequirementcodefiltercode = guidanceresponsedatarequirementcodefiltercodelist.get(guidanceresponsedatarequirementcodefiltercodei);
+
+		/******************** GuidnceRsps_DataRqrment_CdFltr_Cd_Dsply ********************************************************************************/
+		if(guidanceresponsedatarequirementcodefiltercodei == 0) {g.addGuidnceRspsDataRqrmentCdFltrCdDsply("[[[");}
+		if(guidanceresponsedatarequirementcodefiltercode.hasDisplay()) {
+
+			g.addGuidnceRspsDataRqrmentCdFltrCdDsply(String.valueOf(guidanceresponsedatarequirementcodefiltercode.getDisplay()));
+		} else {
+			g.addGuidnceRspsDataRqrmentCdFltrCdDsply("NULL");
+		}
+
+		if(guidanceresponsedatarequirementcodefiltercodei == guidanceresponsedatarequirementcodefiltercodelist.size()-1) {g.addGuidnceRspsDataRqrmentCdFltrCdDsply("]]]");}
+
+
+		/******************** GuidnceRsps_DataRqrment_CdFltr_Cd_Vrsn ********************************************************************************/
+		if(guidanceresponsedatarequirementcodefiltercodei == 0) {g.addGuidnceRspsDataRqrmentCdFltrCdVrsn("[[[");}
+		if(guidanceresponsedatarequirementcodefiltercode.hasVersion()) {
+
+			g.addGuidnceRspsDataRqrmentCdFltrCdVrsn(String.valueOf(guidanceresponsedatarequirementcodefiltercode.getVersion()));
+		} else {
+			g.addGuidnceRspsDataRqrmentCdFltrCdVrsn("NULL");
+		}
+
+		if(guidanceresponsedatarequirementcodefiltercodei == guidanceresponsedatarequirementcodefiltercodelist.size()-1) {g.addGuidnceRspsDataRqrmentCdFltrCdVrsn("]]]");}
+
+
+		/******************** GuidnceRsps_DataRqrment_CdFltr_Cd_UsrSltd ********************************************************************************/
+		if(guidanceresponsedatarequirementcodefiltercodei == 0) {g.addGuidnceRspsDataRqrmentCdFltrCdUsrSltd("[[[");}
+		if(guidanceresponsedatarequirementcodefiltercode.hasUserSelected()) {
+
+			g.addGuidnceRspsDataRqrmentCdFltrCdUsrSltd(String.valueOf(guidanceresponsedatarequirementcodefiltercode.getUserSelected()));
+		} else {
+			g.addGuidnceRspsDataRqrmentCdFltrCdUsrSltd("NULL");
+		}
+
+		if(guidanceresponsedatarequirementcodefiltercodei == guidanceresponsedatarequirementcodefiltercodelist.size()-1) {g.addGuidnceRspsDataRqrmentCdFltrCdUsrSltd("]]]");}
+
+
+		/******************** GuidnceRsps_DataRqrment_CdFltr_Cd_Sys ********************************************************************************/
+		if(guidanceresponsedatarequirementcodefiltercodei == 0) {g.addGuidnceRspsDataRqrmentCdFltrCdSys("[[[");}
+		if(guidanceresponsedatarequirementcodefiltercode.hasSystem()) {
+
+			g.addGuidnceRspsDataRqrmentCdFltrCdSys(String.valueOf(guidanceresponsedatarequirementcodefiltercode.getSystem()));
+		} else {
+			g.addGuidnceRspsDataRqrmentCdFltrCdSys("NULL");
+		}
+
+		if(guidanceresponsedatarequirementcodefiltercodei == guidanceresponsedatarequirementcodefiltercodelist.size()-1) {g.addGuidnceRspsDataRqrmentCdFltrCdSys("]]]");}
+
+
+		 };
+		/******************** GuidnceRsps_DataRqrment_CdFltr_SrchParam ********************************************************************************/
+		if(guidanceresponsedatarequirementcodefilter.hasSearchParam()) {
+
+			g.addGuidnceRspsDataRqrmentCdFltrSrchParam(String.valueOf(guidanceresponsedatarequirementcodefilter.getSearchParam()));
+		} else {
+			g.addGuidnceRspsDataRqrmentCdFltrSrchParam("NULL");
+		}
+
+
+		/******************** GuidnceRsps_DataRqrment_CdFltr_VlSt ********************************************************************************/
+		if(guidanceresponsedatarequirementcodefilter.hasValueSet()) {
+
+			g.addGuidnceRspsDataRqrmentCdFltrVlSt(String.valueOf(guidanceresponsedatarequirementcodefilter.getValueSet()));
+		} else {
+			g.addGuidnceRspsDataRqrmentCdFltrVlSt("NULL");
+		}
+
+
+		 };
+		/******************** GuidnceRsps_DataRqrment_Lmt ********************************************************************************/
+		if(guidanceresponsedatarequirement.hasLimit()) {
+
+			g.addGuidnceRspsDataRqrmentLmt(String.valueOf(guidanceresponsedatarequirement.getLimit()));
+		} else {
+			g.addGuidnceRspsDataRqrmentLmt("NULL");
+		}
+
+
+		/******************** guidanceresponsedatarequirementdatefilter ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.DataRequirement.DataRequirementDateFilterComponent> guidanceresponsedatarequirementdatefilterlist = guidanceresponsedatarequirement.getDateFilter();
+		for(int guidanceresponsedatarequirementdatefilteri = 0; guidanceresponsedatarequirementdatefilteri<guidanceresponsedatarequirementdatefilterlist.size();guidanceresponsedatarequirementdatefilteri++ ) {
+		org.hl7.fhir.r4.model.DataRequirement.DataRequirementDateFilterComponent  guidanceresponsedatarequirementdatefilter = guidanceresponsedatarequirementdatefilterlist.get(guidanceresponsedatarequirementdatefilteri);
+
+		/******************** GuidnceRsps_DataRqrment_DtFltr_Path ********************************************************************************/
+		if(guidanceresponsedatarequirementdatefilteri == 0) {g.addGuidnceRspsDataRqrmentDtFltrPath("[[");}
+		if(guidanceresponsedatarequirementdatefilter.hasPath()) {
+
+			g.addGuidnceRspsDataRqrmentDtFltrPath(String.valueOf(guidanceresponsedatarequirementdatefilter.getPath()));
+		} else {
+			g.addGuidnceRspsDataRqrmentDtFltrPath("NULL");
+		}
+
+		if(guidanceresponsedatarequirementdatefilteri == guidanceresponsedatarequirementdatefilterlist.size()-1) {g.addGuidnceRspsDataRqrmentDtFltrPath("]]");}
+
+
+		/******************** GuidnceRsps_DataRqrment_DtFltr_SrchParam ********************************************************************************/
+		if(guidanceresponsedatarequirementdatefilteri == 0) {g.addGuidnceRspsDataRqrmentDtFltrSrchParam("[[");}
+		if(guidanceresponsedatarequirementdatefilter.hasSearchParam()) {
+
+			g.addGuidnceRspsDataRqrmentDtFltrSrchParam(String.valueOf(guidanceresponsedatarequirementdatefilter.getSearchParam()));
+		} else {
+			g.addGuidnceRspsDataRqrmentDtFltrSrchParam("NULL");
+		}
+
+		if(guidanceresponsedatarequirementdatefilteri == guidanceresponsedatarequirementdatefilterlist.size()-1) {g.addGuidnceRspsDataRqrmentDtFltrSrchParam("]]");}
+
+
+		/******************** guidanceresponsedatarequirementdatefiltervalueduration ********************************************************************************/
+		org.hl7.fhir.r4.model.Duration guidanceresponsedatarequirementdatefiltervalueduration = guidanceresponsedatarequirementdatefilter.getValueDuration();
+
+		/******************** GuidnceRsps_DataRqrment_DtFltr_VlDuration_Vl ********************************************************************************/
+		if(guidanceresponsedatarequirementdatefilteri == 0) {g.addGuidnceRspsDataRqrmentDtFltrVlDurationVl("[[");}
+		if(guidanceresponsedatarequirementdatefiltervalueduration.hasValue()) {
+
+			g.addGuidnceRspsDataRqrmentDtFltrVlDurationVl(String.valueOf(guidanceresponsedatarequirementdatefiltervalueduration.getValue()));
+		} else {
+			g.addGuidnceRspsDataRqrmentDtFltrVlDurationVl("NULL");
+		}
+
+		if(guidanceresponsedatarequirementdatefilteri == guidanceresponsedatarequirementdatefilterlist.size()-1) {g.addGuidnceRspsDataRqrmentDtFltrVlDurationVl("]]");}
+
+
+		/******************** guidanceresponsedatarequirementdatefiltervaluedurationcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparator guidanceresponsedatarequirementdatefiltervaluedurationcomparator = guidanceresponsedatarequirementdatefiltervalueduration.getComparator();
+		if(guidanceresponsedatarequirementdatefiltervaluedurationcomparator!=null) {
+		if(guidanceresponsedatarequirementdatefilteri == 0) {
+
+		g.addGuidnceRspsDataRqrmentDtFltrVlDurationCmprtr("[[");		}
+			g.addGuidnceRspsDataRqrmentDtFltrVlDurationCmprtr(guidanceresponsedatarequirementdatefiltervaluedurationcomparator.toCode());
+		if(guidanceresponsedatarequirementdatefilteri == guidanceresponsedatarequirementdatefilterlist.size()-1) {
+
+		g.addGuidnceRspsDataRqrmentDtFltrVlDurationCmprtr("]]");		}
+
+		} else {
+			g.addGuidnceRspsDataRqrmentDtFltrVlDurationCmprtr("NULL");
+		}
+
+		/******************** GuidnceRsps_DataRqrment_DtFltr_VlDuration_Cd ********************************************************************************/
+		if(guidanceresponsedatarequirementdatefilteri == 0) {g.addGuidnceRspsDataRqrmentDtFltrVlDurationCd("[[");}
+		if(guidanceresponsedatarequirementdatefiltervalueduration.hasCode()) {
+
+			g.addGuidnceRspsDataRqrmentDtFltrVlDurationCd(String.valueOf(guidanceresponsedatarequirementdatefiltervalueduration.getCode()));
+		} else {
+			g.addGuidnceRspsDataRqrmentDtFltrVlDurationCd("NULL");
+		}
+
+		if(guidanceresponsedatarequirementdatefilteri == guidanceresponsedatarequirementdatefilterlist.size()-1) {g.addGuidnceRspsDataRqrmentDtFltrVlDurationCd("]]");}
+
+
+		/******************** GuidnceRsps_DataRqrment_DtFltr_VlDuration_Unt ********************************************************************************/
+		if(guidanceresponsedatarequirementdatefilteri == 0) {g.addGuidnceRspsDataRqrmentDtFltrVlDurationUnt("[[");}
+		if(guidanceresponsedatarequirementdatefiltervalueduration.hasUnit()) {
+
+			g.addGuidnceRspsDataRqrmentDtFltrVlDurationUnt(String.valueOf(guidanceresponsedatarequirementdatefiltervalueduration.getUnit()));
+		} else {
+			g.addGuidnceRspsDataRqrmentDtFltrVlDurationUnt("NULL");
+		}
+
+		if(guidanceresponsedatarequirementdatefilteri == guidanceresponsedatarequirementdatefilterlist.size()-1) {g.addGuidnceRspsDataRqrmentDtFltrVlDurationUnt("]]");}
+
+
+		/******************** GuidnceRsps_DataRqrment_DtFltr_VlDuration_Sys ********************************************************************************/
+		if(guidanceresponsedatarequirementdatefilteri == 0) {g.addGuidnceRspsDataRqrmentDtFltrVlDurationSys("[[");}
+		if(guidanceresponsedatarequirementdatefiltervalueduration.hasSystem()) {
+
+			g.addGuidnceRspsDataRqrmentDtFltrVlDurationSys(String.valueOf(guidanceresponsedatarequirementdatefiltervalueduration.getSystem()));
+		} else {
+			g.addGuidnceRspsDataRqrmentDtFltrVlDurationSys("NULL");
+		}
+
+		if(guidanceresponsedatarequirementdatefilteri == guidanceresponsedatarequirementdatefilterlist.size()-1) {g.addGuidnceRspsDataRqrmentDtFltrVlDurationSys("]]");}
+
+
+		/******************** GuidnceRsps_DataRqrment_DtFltr_VlDtTimeTyp ********************************************************************************/
+		if(guidanceresponsedatarequirementdatefilteri == 0) {g.addGuidnceRspsDataRqrmentDtFltrVlDtTimeTyp("[[");}
+		if(guidanceresponsedatarequirementdatefilter.hasValueDateTimeType()) {
+
+			g.addGuidnceRspsDataRqrmentDtFltrVlDtTimeTyp("\""+guidanceresponsedatarequirementdatefilter.getValueDateTimeType().getValueAsString()+"\"");
+		} else {
+			g.addGuidnceRspsDataRqrmentDtFltrVlDtTimeTyp("NULL");
+		}
+
+		if(guidanceresponsedatarequirementdatefilteri == guidanceresponsedatarequirementdatefilterlist.size()-1) {g.addGuidnceRspsDataRqrmentDtFltrVlDtTimeTyp("]]");}
+
+
+		/******************** guidanceresponsedatarequirementdatefiltervalueperiod ********************************************************************************/
+		org.hl7.fhir.r4.model.Period guidanceresponsedatarequirementdatefiltervalueperiod = guidanceresponsedatarequirementdatefilter.getValuePeriod();
+
+		/******************** GuidnceRsps_DataRqrment_DtFltr_VlPrd_Strt ********************************************************************************/
+		if(guidanceresponsedatarequirementdatefilteri == 0) {g.addGuidnceRspsDataRqrmentDtFltrVlPrdStrt("[[");}
+		if(guidanceresponsedatarequirementdatefiltervalueperiod.hasStart()) {
+
+			g.addGuidnceRspsDataRqrmentDtFltrVlPrdStrt("\""+ca.uhn.fhir.util.DateUtils.formatDate(guidanceresponsedatarequirementdatefiltervalueperiod.getStart())+"\"");
+		} else {
+			g.addGuidnceRspsDataRqrmentDtFltrVlPrdStrt("NULL");
+		}
+
+		if(guidanceresponsedatarequirementdatefilteri == guidanceresponsedatarequirementdatefilterlist.size()-1) {g.addGuidnceRspsDataRqrmentDtFltrVlPrdStrt("]]");}
+
+
+		/******************** GuidnceRsps_DataRqrment_DtFltr_VlPrd_End ********************************************************************************/
+		if(guidanceresponsedatarequirementdatefilteri == 0) {g.addGuidnceRspsDataRqrmentDtFltrVlPrdEnd("[[");}
+		if(guidanceresponsedatarequirementdatefiltervalueperiod.hasEnd()) {
+
+			g.addGuidnceRspsDataRqrmentDtFltrVlPrdEnd("\""+ca.uhn.fhir.util.DateUtils.formatDate(guidanceresponsedatarequirementdatefiltervalueperiod.getEnd())+"\"");
+		} else {
+			g.addGuidnceRspsDataRqrmentDtFltrVlPrdEnd("NULL");
+		}
+
+		if(guidanceresponsedatarequirementdatefilteri == guidanceresponsedatarequirementdatefilterlist.size()-1) {g.addGuidnceRspsDataRqrmentDtFltrVlPrdEnd("]]");}
+
+
+		 };
+		 };
 		return g;
 	}
 }

@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Jun 27, 2022, 10:40:10 AM by Hibernate Tools 5.6.1.Final
+// Generated Aug 17, 2022, 11:08:48 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -75,6 +75,20 @@ public class DocumentManifest  implements java.io.Serializable {
         this.id = id;
     }
     
+    public void addId(String id) {
+    	if( id != null ) {
+	    	if( this.id == null ) {
+	        	this.id = id;
+	        } else if(this.id.substring(this.id.length() - 1).equals("]") & id.equals("[")) {
+	        	this.id = this.id+ "," + id;
+	        } else if(id.equals("[") | id.equals("]") | this.id.substring(this.id.length() - 1).equals("[")) {
+	        	this.id = this.id+id;
+	        } else  {
+	            this.id = this.id+ "," +id;
+	        }
+        }
+    }
+    
     
     
     public String getDocManifestAthr() {
@@ -83,6 +97,20 @@ public class DocumentManifest  implements java.io.Serializable {
     
     public void setDocManifestAthr(String docManifestAthr) {
         this.docManifestAthr = docManifestAthr;
+    }
+    
+    public void addDocManifestAthr(String docManifestAthr) {
+    	if( docManifestAthr != null ) {
+	    	if( this.docManifestAthr == null ) {
+	        	this.docManifestAthr = docManifestAthr;
+	        } else if(this.docManifestAthr.substring(this.docManifestAthr.length() - 1).equals("]") & docManifestAthr.equals("[")) {
+	        	this.docManifestAthr = this.docManifestAthr+ "," + docManifestAthr;
+	        } else if(docManifestAthr.equals("[") | docManifestAthr.equals("]") | this.docManifestAthr.substring(this.docManifestAthr.length() - 1).equals("[")) {
+	        	this.docManifestAthr = this.docManifestAthr+docManifestAthr;
+	        } else  {
+	            this.docManifestAthr = this.docManifestAthr+ "," +docManifestAthr;
+	        }
+        }
     }
     
     
@@ -95,6 +123,20 @@ public class DocumentManifest  implements java.io.Serializable {
         this.docManifestCntnt = docManifestCntnt;
     }
     
+    public void addDocManifestCntnt(String docManifestCntnt) {
+    	if( docManifestCntnt != null ) {
+	    	if( this.docManifestCntnt == null ) {
+	        	this.docManifestCntnt = docManifestCntnt;
+	        } else if(this.docManifestCntnt.substring(this.docManifestCntnt.length() - 1).equals("]") & docManifestCntnt.equals("[")) {
+	        	this.docManifestCntnt = this.docManifestCntnt+ "," + docManifestCntnt;
+	        } else if(docManifestCntnt.equals("[") | docManifestCntnt.equals("]") | this.docManifestCntnt.substring(this.docManifestCntnt.length() - 1).equals("[")) {
+	        	this.docManifestCntnt = this.docManifestCntnt+docManifestCntnt;
+	        } else  {
+	            this.docManifestCntnt = this.docManifestCntnt+ "," +docManifestCntnt;
+	        }
+        }
+    }
+    
     
     
     public String getDocManifestCreated() {
@@ -103,6 +145,20 @@ public class DocumentManifest  implements java.io.Serializable {
     
     public void setDocManifestCreated(String docManifestCreated) {
         this.docManifestCreated = docManifestCreated;
+    }
+    
+    public void addDocManifestCreated(String docManifestCreated) {
+    	if( docManifestCreated != null ) {
+	    	if( this.docManifestCreated == null ) {
+	        	this.docManifestCreated = docManifestCreated;
+	        } else if(this.docManifestCreated.substring(this.docManifestCreated.length() - 1).equals("]") & docManifestCreated.equals("[")) {
+	        	this.docManifestCreated = this.docManifestCreated+ "," + docManifestCreated;
+	        } else if(docManifestCreated.equals("[") | docManifestCreated.equals("]") | this.docManifestCreated.substring(this.docManifestCreated.length() - 1).equals("[")) {
+	        	this.docManifestCreated = this.docManifestCreated+docManifestCreated;
+	        } else  {
+	            this.docManifestCreated = this.docManifestCreated+ "," +docManifestCreated;
+	        }
+        }
     }
     
     
@@ -115,6 +171,20 @@ public class DocumentManifest  implements java.io.Serializable {
         this.docManifestDscrptn = docManifestDscrptn;
     }
     
+    public void addDocManifestDscrptn(String docManifestDscrptn) {
+    	if( docManifestDscrptn != null ) {
+	    	if( this.docManifestDscrptn == null ) {
+	        	this.docManifestDscrptn = docManifestDscrptn;
+	        } else if(this.docManifestDscrptn.substring(this.docManifestDscrptn.length() - 1).equals("]") & docManifestDscrptn.equals("[")) {
+	        	this.docManifestDscrptn = this.docManifestDscrptn+ "," + docManifestDscrptn;
+	        } else if(docManifestDscrptn.equals("[") | docManifestDscrptn.equals("]") | this.docManifestDscrptn.substring(this.docManifestDscrptn.length() - 1).equals("[")) {
+	        	this.docManifestDscrptn = this.docManifestDscrptn+docManifestDscrptn;
+	        } else  {
+	            this.docManifestDscrptn = this.docManifestDscrptn+ "," +docManifestDscrptn;
+	        }
+        }
+    }
+    
     
     
     public String getDocManifestIdAssigner() {
@@ -123,6 +193,20 @@ public class DocumentManifest  implements java.io.Serializable {
     
     public void setDocManifestIdAssigner(String docManifestIdAssigner) {
         this.docManifestIdAssigner = docManifestIdAssigner;
+    }
+    
+    public void addDocManifestIdAssigner(String docManifestIdAssigner) {
+    	if( docManifestIdAssigner != null ) {
+	    	if( this.docManifestIdAssigner == null ) {
+	        	this.docManifestIdAssigner = docManifestIdAssigner;
+	        } else if(this.docManifestIdAssigner.substring(this.docManifestIdAssigner.length() - 1).equals("]") & docManifestIdAssigner.equals("[")) {
+	        	this.docManifestIdAssigner = this.docManifestIdAssigner+ "," + docManifestIdAssigner;
+	        } else if(docManifestIdAssigner.equals("[") | docManifestIdAssigner.equals("]") | this.docManifestIdAssigner.substring(this.docManifestIdAssigner.length() - 1).equals("[")) {
+	        	this.docManifestIdAssigner = this.docManifestIdAssigner+docManifestIdAssigner;
+	        } else  {
+	            this.docManifestIdAssigner = this.docManifestIdAssigner+ "," +docManifestIdAssigner;
+	        }
+        }
     }
     
     
@@ -135,6 +219,20 @@ public class DocumentManifest  implements java.io.Serializable {
         this.docManifestIdPrdEnd = docManifestIdPrdEnd;
     }
     
+    public void addDocManifestIdPrdEnd(String docManifestIdPrdEnd) {
+    	if( docManifestIdPrdEnd != null ) {
+	    	if( this.docManifestIdPrdEnd == null ) {
+	        	this.docManifestIdPrdEnd = docManifestIdPrdEnd;
+	        } else if(this.docManifestIdPrdEnd.substring(this.docManifestIdPrdEnd.length() - 1).equals("]") & docManifestIdPrdEnd.equals("[")) {
+	        	this.docManifestIdPrdEnd = this.docManifestIdPrdEnd+ "," + docManifestIdPrdEnd;
+	        } else if(docManifestIdPrdEnd.equals("[") | docManifestIdPrdEnd.equals("]") | this.docManifestIdPrdEnd.substring(this.docManifestIdPrdEnd.length() - 1).equals("[")) {
+	        	this.docManifestIdPrdEnd = this.docManifestIdPrdEnd+docManifestIdPrdEnd;
+	        } else  {
+	            this.docManifestIdPrdEnd = this.docManifestIdPrdEnd+ "," +docManifestIdPrdEnd;
+	        }
+        }
+    }
+    
     
     
     public String getDocManifestIdPrdStrt() {
@@ -143,6 +241,20 @@ public class DocumentManifest  implements java.io.Serializable {
     
     public void setDocManifestIdPrdStrt(String docManifestIdPrdStrt) {
         this.docManifestIdPrdStrt = docManifestIdPrdStrt;
+    }
+    
+    public void addDocManifestIdPrdStrt(String docManifestIdPrdStrt) {
+    	if( docManifestIdPrdStrt != null ) {
+	    	if( this.docManifestIdPrdStrt == null ) {
+	        	this.docManifestIdPrdStrt = docManifestIdPrdStrt;
+	        } else if(this.docManifestIdPrdStrt.substring(this.docManifestIdPrdStrt.length() - 1).equals("]") & docManifestIdPrdStrt.equals("[")) {
+	        	this.docManifestIdPrdStrt = this.docManifestIdPrdStrt+ "," + docManifestIdPrdStrt;
+	        } else if(docManifestIdPrdStrt.equals("[") | docManifestIdPrdStrt.equals("]") | this.docManifestIdPrdStrt.substring(this.docManifestIdPrdStrt.length() - 1).equals("[")) {
+	        	this.docManifestIdPrdStrt = this.docManifestIdPrdStrt+docManifestIdPrdStrt;
+	        } else  {
+	            this.docManifestIdPrdStrt = this.docManifestIdPrdStrt+ "," +docManifestIdPrdStrt;
+	        }
+        }
     }
     
     
@@ -155,6 +267,20 @@ public class DocumentManifest  implements java.io.Serializable {
         this.docManifestIdSys = docManifestIdSys;
     }
     
+    public void addDocManifestIdSys(String docManifestIdSys) {
+    	if( docManifestIdSys != null ) {
+	    	if( this.docManifestIdSys == null ) {
+	        	this.docManifestIdSys = docManifestIdSys;
+	        } else if(this.docManifestIdSys.substring(this.docManifestIdSys.length() - 1).equals("]") & docManifestIdSys.equals("[")) {
+	        	this.docManifestIdSys = this.docManifestIdSys+ "," + docManifestIdSys;
+	        } else if(docManifestIdSys.equals("[") | docManifestIdSys.equals("]") | this.docManifestIdSys.substring(this.docManifestIdSys.length() - 1).equals("[")) {
+	        	this.docManifestIdSys = this.docManifestIdSys+docManifestIdSys;
+	        } else  {
+	            this.docManifestIdSys = this.docManifestIdSys+ "," +docManifestIdSys;
+	        }
+        }
+    }
+    
     
     
     public String getDocManifestIdTypCdgCd() {
@@ -163,6 +289,20 @@ public class DocumentManifest  implements java.io.Serializable {
     
     public void setDocManifestIdTypCdgCd(String docManifestIdTypCdgCd) {
         this.docManifestIdTypCdgCd = docManifestIdTypCdgCd;
+    }
+    
+    public void addDocManifestIdTypCdgCd(String docManifestIdTypCdgCd) {
+    	if( docManifestIdTypCdgCd != null ) {
+	    	if( this.docManifestIdTypCdgCd == null ) {
+	        	this.docManifestIdTypCdgCd = docManifestIdTypCdgCd;
+	        } else if(this.docManifestIdTypCdgCd.substring(this.docManifestIdTypCdgCd.length() - 1).equals("]") & docManifestIdTypCdgCd.equals("[")) {
+	        	this.docManifestIdTypCdgCd = this.docManifestIdTypCdgCd+ "," + docManifestIdTypCdgCd;
+	        } else if(docManifestIdTypCdgCd.equals("[") | docManifestIdTypCdgCd.equals("]") | this.docManifestIdTypCdgCd.substring(this.docManifestIdTypCdgCd.length() - 1).equals("[")) {
+	        	this.docManifestIdTypCdgCd = this.docManifestIdTypCdgCd+docManifestIdTypCdgCd;
+	        } else  {
+	            this.docManifestIdTypCdgCd = this.docManifestIdTypCdgCd+ "," +docManifestIdTypCdgCd;
+	        }
+        }
     }
     
     
@@ -175,6 +315,20 @@ public class DocumentManifest  implements java.io.Serializable {
         this.docManifestIdTypCdgDsply = docManifestIdTypCdgDsply;
     }
     
+    public void addDocManifestIdTypCdgDsply(String docManifestIdTypCdgDsply) {
+    	if( docManifestIdTypCdgDsply != null ) {
+	    	if( this.docManifestIdTypCdgDsply == null ) {
+	        	this.docManifestIdTypCdgDsply = docManifestIdTypCdgDsply;
+	        } else if(this.docManifestIdTypCdgDsply.substring(this.docManifestIdTypCdgDsply.length() - 1).equals("]") & docManifestIdTypCdgDsply.equals("[")) {
+	        	this.docManifestIdTypCdgDsply = this.docManifestIdTypCdgDsply+ "," + docManifestIdTypCdgDsply;
+	        } else if(docManifestIdTypCdgDsply.equals("[") | docManifestIdTypCdgDsply.equals("]") | this.docManifestIdTypCdgDsply.substring(this.docManifestIdTypCdgDsply.length() - 1).equals("[")) {
+	        	this.docManifestIdTypCdgDsply = this.docManifestIdTypCdgDsply+docManifestIdTypCdgDsply;
+	        } else  {
+	            this.docManifestIdTypCdgDsply = this.docManifestIdTypCdgDsply+ "," +docManifestIdTypCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getDocManifestIdTypCdgSys() {
@@ -183,6 +337,20 @@ public class DocumentManifest  implements java.io.Serializable {
     
     public void setDocManifestIdTypCdgSys(String docManifestIdTypCdgSys) {
         this.docManifestIdTypCdgSys = docManifestIdTypCdgSys;
+    }
+    
+    public void addDocManifestIdTypCdgSys(String docManifestIdTypCdgSys) {
+    	if( docManifestIdTypCdgSys != null ) {
+	    	if( this.docManifestIdTypCdgSys == null ) {
+	        	this.docManifestIdTypCdgSys = docManifestIdTypCdgSys;
+	        } else if(this.docManifestIdTypCdgSys.substring(this.docManifestIdTypCdgSys.length() - 1).equals("]") & docManifestIdTypCdgSys.equals("[")) {
+	        	this.docManifestIdTypCdgSys = this.docManifestIdTypCdgSys+ "," + docManifestIdTypCdgSys;
+	        } else if(docManifestIdTypCdgSys.equals("[") | docManifestIdTypCdgSys.equals("]") | this.docManifestIdTypCdgSys.substring(this.docManifestIdTypCdgSys.length() - 1).equals("[")) {
+	        	this.docManifestIdTypCdgSys = this.docManifestIdTypCdgSys+docManifestIdTypCdgSys;
+	        } else  {
+	            this.docManifestIdTypCdgSys = this.docManifestIdTypCdgSys+ "," +docManifestIdTypCdgSys;
+	        }
+        }
     }
     
     
@@ -195,6 +363,20 @@ public class DocumentManifest  implements java.io.Serializable {
         this.docManifestIdTypCdgUsrSltd = docManifestIdTypCdgUsrSltd;
     }
     
+    public void addDocManifestIdTypCdgUsrSltd(String docManifestIdTypCdgUsrSltd) {
+    	if( docManifestIdTypCdgUsrSltd != null ) {
+	    	if( this.docManifestIdTypCdgUsrSltd == null ) {
+	        	this.docManifestIdTypCdgUsrSltd = docManifestIdTypCdgUsrSltd;
+	        } else if(this.docManifestIdTypCdgUsrSltd.substring(this.docManifestIdTypCdgUsrSltd.length() - 1).equals("]") & docManifestIdTypCdgUsrSltd.equals("[")) {
+	        	this.docManifestIdTypCdgUsrSltd = this.docManifestIdTypCdgUsrSltd+ "," + docManifestIdTypCdgUsrSltd;
+	        } else if(docManifestIdTypCdgUsrSltd.equals("[") | docManifestIdTypCdgUsrSltd.equals("]") | this.docManifestIdTypCdgUsrSltd.substring(this.docManifestIdTypCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.docManifestIdTypCdgUsrSltd = this.docManifestIdTypCdgUsrSltd+docManifestIdTypCdgUsrSltd;
+	        } else  {
+	            this.docManifestIdTypCdgUsrSltd = this.docManifestIdTypCdgUsrSltd+ "," +docManifestIdTypCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getDocManifestIdTypCdgVrsn() {
@@ -203,6 +385,20 @@ public class DocumentManifest  implements java.io.Serializable {
     
     public void setDocManifestIdTypCdgVrsn(String docManifestIdTypCdgVrsn) {
         this.docManifestIdTypCdgVrsn = docManifestIdTypCdgVrsn;
+    }
+    
+    public void addDocManifestIdTypCdgVrsn(String docManifestIdTypCdgVrsn) {
+    	if( docManifestIdTypCdgVrsn != null ) {
+	    	if( this.docManifestIdTypCdgVrsn == null ) {
+	        	this.docManifestIdTypCdgVrsn = docManifestIdTypCdgVrsn;
+	        } else if(this.docManifestIdTypCdgVrsn.substring(this.docManifestIdTypCdgVrsn.length() - 1).equals("]") & docManifestIdTypCdgVrsn.equals("[")) {
+	        	this.docManifestIdTypCdgVrsn = this.docManifestIdTypCdgVrsn+ "," + docManifestIdTypCdgVrsn;
+	        } else if(docManifestIdTypCdgVrsn.equals("[") | docManifestIdTypCdgVrsn.equals("]") | this.docManifestIdTypCdgVrsn.substring(this.docManifestIdTypCdgVrsn.length() - 1).equals("[")) {
+	        	this.docManifestIdTypCdgVrsn = this.docManifestIdTypCdgVrsn+docManifestIdTypCdgVrsn;
+	        } else  {
+	            this.docManifestIdTypCdgVrsn = this.docManifestIdTypCdgVrsn+ "," +docManifestIdTypCdgVrsn;
+	        }
+        }
     }
     
     
@@ -215,6 +411,20 @@ public class DocumentManifest  implements java.io.Serializable {
         this.docManifestIdTypTxt = docManifestIdTypTxt;
     }
     
+    public void addDocManifestIdTypTxt(String docManifestIdTypTxt) {
+    	if( docManifestIdTypTxt != null ) {
+	    	if( this.docManifestIdTypTxt == null ) {
+	        	this.docManifestIdTypTxt = docManifestIdTypTxt;
+	        } else if(this.docManifestIdTypTxt.substring(this.docManifestIdTypTxt.length() - 1).equals("]") & docManifestIdTypTxt.equals("[")) {
+	        	this.docManifestIdTypTxt = this.docManifestIdTypTxt+ "," + docManifestIdTypTxt;
+	        } else if(docManifestIdTypTxt.equals("[") | docManifestIdTypTxt.equals("]") | this.docManifestIdTypTxt.substring(this.docManifestIdTypTxt.length() - 1).equals("[")) {
+	        	this.docManifestIdTypTxt = this.docManifestIdTypTxt+docManifestIdTypTxt;
+	        } else  {
+	            this.docManifestIdTypTxt = this.docManifestIdTypTxt+ "," +docManifestIdTypTxt;
+	        }
+        }
+    }
+    
     
     
     public String getDocManifestIdUse() {
@@ -223,6 +433,20 @@ public class DocumentManifest  implements java.io.Serializable {
     
     public void setDocManifestIdUse(String docManifestIdUse) {
         this.docManifestIdUse = docManifestIdUse;
+    }
+    
+    public void addDocManifestIdUse(String docManifestIdUse) {
+    	if( docManifestIdUse != null ) {
+	    	if( this.docManifestIdUse == null ) {
+	        	this.docManifestIdUse = docManifestIdUse;
+	        } else if(this.docManifestIdUse.substring(this.docManifestIdUse.length() - 1).equals("]") & docManifestIdUse.equals("[")) {
+	        	this.docManifestIdUse = this.docManifestIdUse+ "," + docManifestIdUse;
+	        } else if(docManifestIdUse.equals("[") | docManifestIdUse.equals("]") | this.docManifestIdUse.substring(this.docManifestIdUse.length() - 1).equals("[")) {
+	        	this.docManifestIdUse = this.docManifestIdUse+docManifestIdUse;
+	        } else  {
+	            this.docManifestIdUse = this.docManifestIdUse+ "," +docManifestIdUse;
+	        }
+        }
     }
     
     
@@ -235,6 +459,20 @@ public class DocumentManifest  implements java.io.Serializable {
         this.docManifestIdVl = docManifestIdVl;
     }
     
+    public void addDocManifestIdVl(String docManifestIdVl) {
+    	if( docManifestIdVl != null ) {
+	    	if( this.docManifestIdVl == null ) {
+	        	this.docManifestIdVl = docManifestIdVl;
+	        } else if(this.docManifestIdVl.substring(this.docManifestIdVl.length() - 1).equals("]") & docManifestIdVl.equals("[")) {
+	        	this.docManifestIdVl = this.docManifestIdVl+ "," + docManifestIdVl;
+	        } else if(docManifestIdVl.equals("[") | docManifestIdVl.equals("]") | this.docManifestIdVl.substring(this.docManifestIdVl.length() - 1).equals("[")) {
+	        	this.docManifestIdVl = this.docManifestIdVl+docManifestIdVl;
+	        } else  {
+	            this.docManifestIdVl = this.docManifestIdVl+ "," +docManifestIdVl;
+	        }
+        }
+    }
+    
     
     
     public String getDocManifestMasterIdAssigner() {
@@ -243,6 +481,20 @@ public class DocumentManifest  implements java.io.Serializable {
     
     public void setDocManifestMasterIdAssigner(String docManifestMasterIdAssigner) {
         this.docManifestMasterIdAssigner = docManifestMasterIdAssigner;
+    }
+    
+    public void addDocManifestMasterIdAssigner(String docManifestMasterIdAssigner) {
+    	if( docManifestMasterIdAssigner != null ) {
+	    	if( this.docManifestMasterIdAssigner == null ) {
+	        	this.docManifestMasterIdAssigner = docManifestMasterIdAssigner;
+	        } else if(this.docManifestMasterIdAssigner.substring(this.docManifestMasterIdAssigner.length() - 1).equals("]") & docManifestMasterIdAssigner.equals("[")) {
+	        	this.docManifestMasterIdAssigner = this.docManifestMasterIdAssigner+ "," + docManifestMasterIdAssigner;
+	        } else if(docManifestMasterIdAssigner.equals("[") | docManifestMasterIdAssigner.equals("]") | this.docManifestMasterIdAssigner.substring(this.docManifestMasterIdAssigner.length() - 1).equals("[")) {
+	        	this.docManifestMasterIdAssigner = this.docManifestMasterIdAssigner+docManifestMasterIdAssigner;
+	        } else  {
+	            this.docManifestMasterIdAssigner = this.docManifestMasterIdAssigner+ "," +docManifestMasterIdAssigner;
+	        }
+        }
     }
     
     
@@ -255,6 +507,20 @@ public class DocumentManifest  implements java.io.Serializable {
         this.docManifestMasterIdPrdEnd = docManifestMasterIdPrdEnd;
     }
     
+    public void addDocManifestMasterIdPrdEnd(String docManifestMasterIdPrdEnd) {
+    	if( docManifestMasterIdPrdEnd != null ) {
+	    	if( this.docManifestMasterIdPrdEnd == null ) {
+	        	this.docManifestMasterIdPrdEnd = docManifestMasterIdPrdEnd;
+	        } else if(this.docManifestMasterIdPrdEnd.substring(this.docManifestMasterIdPrdEnd.length() - 1).equals("]") & docManifestMasterIdPrdEnd.equals("[")) {
+	        	this.docManifestMasterIdPrdEnd = this.docManifestMasterIdPrdEnd+ "," + docManifestMasterIdPrdEnd;
+	        } else if(docManifestMasterIdPrdEnd.equals("[") | docManifestMasterIdPrdEnd.equals("]") | this.docManifestMasterIdPrdEnd.substring(this.docManifestMasterIdPrdEnd.length() - 1).equals("[")) {
+	        	this.docManifestMasterIdPrdEnd = this.docManifestMasterIdPrdEnd+docManifestMasterIdPrdEnd;
+	        } else  {
+	            this.docManifestMasterIdPrdEnd = this.docManifestMasterIdPrdEnd+ "," +docManifestMasterIdPrdEnd;
+	        }
+        }
+    }
+    
     
     
     public String getDocManifestMasterIdPrdStrt() {
@@ -263,6 +529,20 @@ public class DocumentManifest  implements java.io.Serializable {
     
     public void setDocManifestMasterIdPrdStrt(String docManifestMasterIdPrdStrt) {
         this.docManifestMasterIdPrdStrt = docManifestMasterIdPrdStrt;
+    }
+    
+    public void addDocManifestMasterIdPrdStrt(String docManifestMasterIdPrdStrt) {
+    	if( docManifestMasterIdPrdStrt != null ) {
+	    	if( this.docManifestMasterIdPrdStrt == null ) {
+	        	this.docManifestMasterIdPrdStrt = docManifestMasterIdPrdStrt;
+	        } else if(this.docManifestMasterIdPrdStrt.substring(this.docManifestMasterIdPrdStrt.length() - 1).equals("]") & docManifestMasterIdPrdStrt.equals("[")) {
+	        	this.docManifestMasterIdPrdStrt = this.docManifestMasterIdPrdStrt+ "," + docManifestMasterIdPrdStrt;
+	        } else if(docManifestMasterIdPrdStrt.equals("[") | docManifestMasterIdPrdStrt.equals("]") | this.docManifestMasterIdPrdStrt.substring(this.docManifestMasterIdPrdStrt.length() - 1).equals("[")) {
+	        	this.docManifestMasterIdPrdStrt = this.docManifestMasterIdPrdStrt+docManifestMasterIdPrdStrt;
+	        } else  {
+	            this.docManifestMasterIdPrdStrt = this.docManifestMasterIdPrdStrt+ "," +docManifestMasterIdPrdStrt;
+	        }
+        }
     }
     
     
@@ -275,6 +555,20 @@ public class DocumentManifest  implements java.io.Serializable {
         this.docManifestMasterIdSys = docManifestMasterIdSys;
     }
     
+    public void addDocManifestMasterIdSys(String docManifestMasterIdSys) {
+    	if( docManifestMasterIdSys != null ) {
+	    	if( this.docManifestMasterIdSys == null ) {
+	        	this.docManifestMasterIdSys = docManifestMasterIdSys;
+	        } else if(this.docManifestMasterIdSys.substring(this.docManifestMasterIdSys.length() - 1).equals("]") & docManifestMasterIdSys.equals("[")) {
+	        	this.docManifestMasterIdSys = this.docManifestMasterIdSys+ "," + docManifestMasterIdSys;
+	        } else if(docManifestMasterIdSys.equals("[") | docManifestMasterIdSys.equals("]") | this.docManifestMasterIdSys.substring(this.docManifestMasterIdSys.length() - 1).equals("[")) {
+	        	this.docManifestMasterIdSys = this.docManifestMasterIdSys+docManifestMasterIdSys;
+	        } else  {
+	            this.docManifestMasterIdSys = this.docManifestMasterIdSys+ "," +docManifestMasterIdSys;
+	        }
+        }
+    }
+    
     
     
     public String getDocManifestMasterIdTypCdgCd() {
@@ -283,6 +577,20 @@ public class DocumentManifest  implements java.io.Serializable {
     
     public void setDocManifestMasterIdTypCdgCd(String docManifestMasterIdTypCdgCd) {
         this.docManifestMasterIdTypCdgCd = docManifestMasterIdTypCdgCd;
+    }
+    
+    public void addDocManifestMasterIdTypCdgCd(String docManifestMasterIdTypCdgCd) {
+    	if( docManifestMasterIdTypCdgCd != null ) {
+	    	if( this.docManifestMasterIdTypCdgCd == null ) {
+	        	this.docManifestMasterIdTypCdgCd = docManifestMasterIdTypCdgCd;
+	        } else if(this.docManifestMasterIdTypCdgCd.substring(this.docManifestMasterIdTypCdgCd.length() - 1).equals("]") & docManifestMasterIdTypCdgCd.equals("[")) {
+	        	this.docManifestMasterIdTypCdgCd = this.docManifestMasterIdTypCdgCd+ "," + docManifestMasterIdTypCdgCd;
+	        } else if(docManifestMasterIdTypCdgCd.equals("[") | docManifestMasterIdTypCdgCd.equals("]") | this.docManifestMasterIdTypCdgCd.substring(this.docManifestMasterIdTypCdgCd.length() - 1).equals("[")) {
+	        	this.docManifestMasterIdTypCdgCd = this.docManifestMasterIdTypCdgCd+docManifestMasterIdTypCdgCd;
+	        } else  {
+	            this.docManifestMasterIdTypCdgCd = this.docManifestMasterIdTypCdgCd+ "," +docManifestMasterIdTypCdgCd;
+	        }
+        }
     }
     
     
@@ -295,6 +603,20 @@ public class DocumentManifest  implements java.io.Serializable {
         this.docManifestMasterIdTypCdgDsply = docManifestMasterIdTypCdgDsply;
     }
     
+    public void addDocManifestMasterIdTypCdgDsply(String docManifestMasterIdTypCdgDsply) {
+    	if( docManifestMasterIdTypCdgDsply != null ) {
+	    	if( this.docManifestMasterIdTypCdgDsply == null ) {
+	        	this.docManifestMasterIdTypCdgDsply = docManifestMasterIdTypCdgDsply;
+	        } else if(this.docManifestMasterIdTypCdgDsply.substring(this.docManifestMasterIdTypCdgDsply.length() - 1).equals("]") & docManifestMasterIdTypCdgDsply.equals("[")) {
+	        	this.docManifestMasterIdTypCdgDsply = this.docManifestMasterIdTypCdgDsply+ "," + docManifestMasterIdTypCdgDsply;
+	        } else if(docManifestMasterIdTypCdgDsply.equals("[") | docManifestMasterIdTypCdgDsply.equals("]") | this.docManifestMasterIdTypCdgDsply.substring(this.docManifestMasterIdTypCdgDsply.length() - 1).equals("[")) {
+	        	this.docManifestMasterIdTypCdgDsply = this.docManifestMasterIdTypCdgDsply+docManifestMasterIdTypCdgDsply;
+	        } else  {
+	            this.docManifestMasterIdTypCdgDsply = this.docManifestMasterIdTypCdgDsply+ "," +docManifestMasterIdTypCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getDocManifestMasterIdTypCdgSys() {
@@ -303,6 +625,20 @@ public class DocumentManifest  implements java.io.Serializable {
     
     public void setDocManifestMasterIdTypCdgSys(String docManifestMasterIdTypCdgSys) {
         this.docManifestMasterIdTypCdgSys = docManifestMasterIdTypCdgSys;
+    }
+    
+    public void addDocManifestMasterIdTypCdgSys(String docManifestMasterIdTypCdgSys) {
+    	if( docManifestMasterIdTypCdgSys != null ) {
+	    	if( this.docManifestMasterIdTypCdgSys == null ) {
+	        	this.docManifestMasterIdTypCdgSys = docManifestMasterIdTypCdgSys;
+	        } else if(this.docManifestMasterIdTypCdgSys.substring(this.docManifestMasterIdTypCdgSys.length() - 1).equals("]") & docManifestMasterIdTypCdgSys.equals("[")) {
+	        	this.docManifestMasterIdTypCdgSys = this.docManifestMasterIdTypCdgSys+ "," + docManifestMasterIdTypCdgSys;
+	        } else if(docManifestMasterIdTypCdgSys.equals("[") | docManifestMasterIdTypCdgSys.equals("]") | this.docManifestMasterIdTypCdgSys.substring(this.docManifestMasterIdTypCdgSys.length() - 1).equals("[")) {
+	        	this.docManifestMasterIdTypCdgSys = this.docManifestMasterIdTypCdgSys+docManifestMasterIdTypCdgSys;
+	        } else  {
+	            this.docManifestMasterIdTypCdgSys = this.docManifestMasterIdTypCdgSys+ "," +docManifestMasterIdTypCdgSys;
+	        }
+        }
     }
     
     
@@ -315,6 +651,20 @@ public class DocumentManifest  implements java.io.Serializable {
         this.docManifestMasterIdTypCdgUsrSltd = docManifestMasterIdTypCdgUsrSltd;
     }
     
+    public void addDocManifestMasterIdTypCdgUsrSltd(String docManifestMasterIdTypCdgUsrSltd) {
+    	if( docManifestMasterIdTypCdgUsrSltd != null ) {
+	    	if( this.docManifestMasterIdTypCdgUsrSltd == null ) {
+	        	this.docManifestMasterIdTypCdgUsrSltd = docManifestMasterIdTypCdgUsrSltd;
+	        } else if(this.docManifestMasterIdTypCdgUsrSltd.substring(this.docManifestMasterIdTypCdgUsrSltd.length() - 1).equals("]") & docManifestMasterIdTypCdgUsrSltd.equals("[")) {
+	        	this.docManifestMasterIdTypCdgUsrSltd = this.docManifestMasterIdTypCdgUsrSltd+ "," + docManifestMasterIdTypCdgUsrSltd;
+	        } else if(docManifestMasterIdTypCdgUsrSltd.equals("[") | docManifestMasterIdTypCdgUsrSltd.equals("]") | this.docManifestMasterIdTypCdgUsrSltd.substring(this.docManifestMasterIdTypCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.docManifestMasterIdTypCdgUsrSltd = this.docManifestMasterIdTypCdgUsrSltd+docManifestMasterIdTypCdgUsrSltd;
+	        } else  {
+	            this.docManifestMasterIdTypCdgUsrSltd = this.docManifestMasterIdTypCdgUsrSltd+ "," +docManifestMasterIdTypCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getDocManifestMasterIdTypCdgVrsn() {
@@ -323,6 +673,20 @@ public class DocumentManifest  implements java.io.Serializable {
     
     public void setDocManifestMasterIdTypCdgVrsn(String docManifestMasterIdTypCdgVrsn) {
         this.docManifestMasterIdTypCdgVrsn = docManifestMasterIdTypCdgVrsn;
+    }
+    
+    public void addDocManifestMasterIdTypCdgVrsn(String docManifestMasterIdTypCdgVrsn) {
+    	if( docManifestMasterIdTypCdgVrsn != null ) {
+	    	if( this.docManifestMasterIdTypCdgVrsn == null ) {
+	        	this.docManifestMasterIdTypCdgVrsn = docManifestMasterIdTypCdgVrsn;
+	        } else if(this.docManifestMasterIdTypCdgVrsn.substring(this.docManifestMasterIdTypCdgVrsn.length() - 1).equals("]") & docManifestMasterIdTypCdgVrsn.equals("[")) {
+	        	this.docManifestMasterIdTypCdgVrsn = this.docManifestMasterIdTypCdgVrsn+ "," + docManifestMasterIdTypCdgVrsn;
+	        } else if(docManifestMasterIdTypCdgVrsn.equals("[") | docManifestMasterIdTypCdgVrsn.equals("]") | this.docManifestMasterIdTypCdgVrsn.substring(this.docManifestMasterIdTypCdgVrsn.length() - 1).equals("[")) {
+	        	this.docManifestMasterIdTypCdgVrsn = this.docManifestMasterIdTypCdgVrsn+docManifestMasterIdTypCdgVrsn;
+	        } else  {
+	            this.docManifestMasterIdTypCdgVrsn = this.docManifestMasterIdTypCdgVrsn+ "," +docManifestMasterIdTypCdgVrsn;
+	        }
+        }
     }
     
     
@@ -335,6 +699,20 @@ public class DocumentManifest  implements java.io.Serializable {
         this.docManifestMasterIdTypTxt = docManifestMasterIdTypTxt;
     }
     
+    public void addDocManifestMasterIdTypTxt(String docManifestMasterIdTypTxt) {
+    	if( docManifestMasterIdTypTxt != null ) {
+	    	if( this.docManifestMasterIdTypTxt == null ) {
+	        	this.docManifestMasterIdTypTxt = docManifestMasterIdTypTxt;
+	        } else if(this.docManifestMasterIdTypTxt.substring(this.docManifestMasterIdTypTxt.length() - 1).equals("]") & docManifestMasterIdTypTxt.equals("[")) {
+	        	this.docManifestMasterIdTypTxt = this.docManifestMasterIdTypTxt+ "," + docManifestMasterIdTypTxt;
+	        } else if(docManifestMasterIdTypTxt.equals("[") | docManifestMasterIdTypTxt.equals("]") | this.docManifestMasterIdTypTxt.substring(this.docManifestMasterIdTypTxt.length() - 1).equals("[")) {
+	        	this.docManifestMasterIdTypTxt = this.docManifestMasterIdTypTxt+docManifestMasterIdTypTxt;
+	        } else  {
+	            this.docManifestMasterIdTypTxt = this.docManifestMasterIdTypTxt+ "," +docManifestMasterIdTypTxt;
+	        }
+        }
+    }
+    
     
     
     public String getDocManifestMasterIdUse() {
@@ -343,6 +721,20 @@ public class DocumentManifest  implements java.io.Serializable {
     
     public void setDocManifestMasterIdUse(String docManifestMasterIdUse) {
         this.docManifestMasterIdUse = docManifestMasterIdUse;
+    }
+    
+    public void addDocManifestMasterIdUse(String docManifestMasterIdUse) {
+    	if( docManifestMasterIdUse != null ) {
+	    	if( this.docManifestMasterIdUse == null ) {
+	        	this.docManifestMasterIdUse = docManifestMasterIdUse;
+	        } else if(this.docManifestMasterIdUse.substring(this.docManifestMasterIdUse.length() - 1).equals("]") & docManifestMasterIdUse.equals("[")) {
+	        	this.docManifestMasterIdUse = this.docManifestMasterIdUse+ "," + docManifestMasterIdUse;
+	        } else if(docManifestMasterIdUse.equals("[") | docManifestMasterIdUse.equals("]") | this.docManifestMasterIdUse.substring(this.docManifestMasterIdUse.length() - 1).equals("[")) {
+	        	this.docManifestMasterIdUse = this.docManifestMasterIdUse+docManifestMasterIdUse;
+	        } else  {
+	            this.docManifestMasterIdUse = this.docManifestMasterIdUse+ "," +docManifestMasterIdUse;
+	        }
+        }
     }
     
     
@@ -355,6 +747,20 @@ public class DocumentManifest  implements java.io.Serializable {
         this.docManifestMasterIdVl = docManifestMasterIdVl;
     }
     
+    public void addDocManifestMasterIdVl(String docManifestMasterIdVl) {
+    	if( docManifestMasterIdVl != null ) {
+	    	if( this.docManifestMasterIdVl == null ) {
+	        	this.docManifestMasterIdVl = docManifestMasterIdVl;
+	        } else if(this.docManifestMasterIdVl.substring(this.docManifestMasterIdVl.length() - 1).equals("]") & docManifestMasterIdVl.equals("[")) {
+	        	this.docManifestMasterIdVl = this.docManifestMasterIdVl+ "," + docManifestMasterIdVl;
+	        } else if(docManifestMasterIdVl.equals("[") | docManifestMasterIdVl.equals("]") | this.docManifestMasterIdVl.substring(this.docManifestMasterIdVl.length() - 1).equals("[")) {
+	        	this.docManifestMasterIdVl = this.docManifestMasterIdVl+docManifestMasterIdVl;
+	        } else  {
+	            this.docManifestMasterIdVl = this.docManifestMasterIdVl+ "," +docManifestMasterIdVl;
+	        }
+        }
+    }
+    
     
     
     public String getDocManifestRecipient() {
@@ -363,6 +769,20 @@ public class DocumentManifest  implements java.io.Serializable {
     
     public void setDocManifestRecipient(String docManifestRecipient) {
         this.docManifestRecipient = docManifestRecipient;
+    }
+    
+    public void addDocManifestRecipient(String docManifestRecipient) {
+    	if( docManifestRecipient != null ) {
+	    	if( this.docManifestRecipient == null ) {
+	        	this.docManifestRecipient = docManifestRecipient;
+	        } else if(this.docManifestRecipient.substring(this.docManifestRecipient.length() - 1).equals("]") & docManifestRecipient.equals("[")) {
+	        	this.docManifestRecipient = this.docManifestRecipient+ "," + docManifestRecipient;
+	        } else if(docManifestRecipient.equals("[") | docManifestRecipient.equals("]") | this.docManifestRecipient.substring(this.docManifestRecipient.length() - 1).equals("[")) {
+	        	this.docManifestRecipient = this.docManifestRecipient+docManifestRecipient;
+	        } else  {
+	            this.docManifestRecipient = this.docManifestRecipient+ "," +docManifestRecipient;
+	        }
+        }
     }
     
     
@@ -375,6 +795,20 @@ public class DocumentManifest  implements java.io.Serializable {
         this.docManifestRltedIdAssigner = docManifestRltedIdAssigner;
     }
     
+    public void addDocManifestRltedIdAssigner(String docManifestRltedIdAssigner) {
+    	if( docManifestRltedIdAssigner != null ) {
+	    	if( this.docManifestRltedIdAssigner == null ) {
+	        	this.docManifestRltedIdAssigner = docManifestRltedIdAssigner;
+	        } else if(this.docManifestRltedIdAssigner.substring(this.docManifestRltedIdAssigner.length() - 1).equals("]") & docManifestRltedIdAssigner.equals("[")) {
+	        	this.docManifestRltedIdAssigner = this.docManifestRltedIdAssigner+ "," + docManifestRltedIdAssigner;
+	        } else if(docManifestRltedIdAssigner.equals("[") | docManifestRltedIdAssigner.equals("]") | this.docManifestRltedIdAssigner.substring(this.docManifestRltedIdAssigner.length() - 1).equals("[")) {
+	        	this.docManifestRltedIdAssigner = this.docManifestRltedIdAssigner+docManifestRltedIdAssigner;
+	        } else  {
+	            this.docManifestRltedIdAssigner = this.docManifestRltedIdAssigner+ "," +docManifestRltedIdAssigner;
+	        }
+        }
+    }
+    
     
     
     public String getDocManifestRltedIdPrdEnd() {
@@ -383,6 +817,20 @@ public class DocumentManifest  implements java.io.Serializable {
     
     public void setDocManifestRltedIdPrdEnd(String docManifestRltedIdPrdEnd) {
         this.docManifestRltedIdPrdEnd = docManifestRltedIdPrdEnd;
+    }
+    
+    public void addDocManifestRltedIdPrdEnd(String docManifestRltedIdPrdEnd) {
+    	if( docManifestRltedIdPrdEnd != null ) {
+	    	if( this.docManifestRltedIdPrdEnd == null ) {
+	        	this.docManifestRltedIdPrdEnd = docManifestRltedIdPrdEnd;
+	        } else if(this.docManifestRltedIdPrdEnd.substring(this.docManifestRltedIdPrdEnd.length() - 1).equals("]") & docManifestRltedIdPrdEnd.equals("[")) {
+	        	this.docManifestRltedIdPrdEnd = this.docManifestRltedIdPrdEnd+ "," + docManifestRltedIdPrdEnd;
+	        } else if(docManifestRltedIdPrdEnd.equals("[") | docManifestRltedIdPrdEnd.equals("]") | this.docManifestRltedIdPrdEnd.substring(this.docManifestRltedIdPrdEnd.length() - 1).equals("[")) {
+	        	this.docManifestRltedIdPrdEnd = this.docManifestRltedIdPrdEnd+docManifestRltedIdPrdEnd;
+	        } else  {
+	            this.docManifestRltedIdPrdEnd = this.docManifestRltedIdPrdEnd+ "," +docManifestRltedIdPrdEnd;
+	        }
+        }
     }
     
     
@@ -395,6 +843,20 @@ public class DocumentManifest  implements java.io.Serializable {
         this.docManifestRltedIdPrdStrt = docManifestRltedIdPrdStrt;
     }
     
+    public void addDocManifestRltedIdPrdStrt(String docManifestRltedIdPrdStrt) {
+    	if( docManifestRltedIdPrdStrt != null ) {
+	    	if( this.docManifestRltedIdPrdStrt == null ) {
+	        	this.docManifestRltedIdPrdStrt = docManifestRltedIdPrdStrt;
+	        } else if(this.docManifestRltedIdPrdStrt.substring(this.docManifestRltedIdPrdStrt.length() - 1).equals("]") & docManifestRltedIdPrdStrt.equals("[")) {
+	        	this.docManifestRltedIdPrdStrt = this.docManifestRltedIdPrdStrt+ "," + docManifestRltedIdPrdStrt;
+	        } else if(docManifestRltedIdPrdStrt.equals("[") | docManifestRltedIdPrdStrt.equals("]") | this.docManifestRltedIdPrdStrt.substring(this.docManifestRltedIdPrdStrt.length() - 1).equals("[")) {
+	        	this.docManifestRltedIdPrdStrt = this.docManifestRltedIdPrdStrt+docManifestRltedIdPrdStrt;
+	        } else  {
+	            this.docManifestRltedIdPrdStrt = this.docManifestRltedIdPrdStrt+ "," +docManifestRltedIdPrdStrt;
+	        }
+        }
+    }
+    
     
     
     public String getDocManifestRltedIdSys() {
@@ -403,6 +865,20 @@ public class DocumentManifest  implements java.io.Serializable {
     
     public void setDocManifestRltedIdSys(String docManifestRltedIdSys) {
         this.docManifestRltedIdSys = docManifestRltedIdSys;
+    }
+    
+    public void addDocManifestRltedIdSys(String docManifestRltedIdSys) {
+    	if( docManifestRltedIdSys != null ) {
+	    	if( this.docManifestRltedIdSys == null ) {
+	        	this.docManifestRltedIdSys = docManifestRltedIdSys;
+	        } else if(this.docManifestRltedIdSys.substring(this.docManifestRltedIdSys.length() - 1).equals("]") & docManifestRltedIdSys.equals("[")) {
+	        	this.docManifestRltedIdSys = this.docManifestRltedIdSys+ "," + docManifestRltedIdSys;
+	        } else if(docManifestRltedIdSys.equals("[") | docManifestRltedIdSys.equals("]") | this.docManifestRltedIdSys.substring(this.docManifestRltedIdSys.length() - 1).equals("[")) {
+	        	this.docManifestRltedIdSys = this.docManifestRltedIdSys+docManifestRltedIdSys;
+	        } else  {
+	            this.docManifestRltedIdSys = this.docManifestRltedIdSys+ "," +docManifestRltedIdSys;
+	        }
+        }
     }
     
     
@@ -415,6 +891,20 @@ public class DocumentManifest  implements java.io.Serializable {
         this.docManifestRltedIdTypCdgCd = docManifestRltedIdTypCdgCd;
     }
     
+    public void addDocManifestRltedIdTypCdgCd(String docManifestRltedIdTypCdgCd) {
+    	if( docManifestRltedIdTypCdgCd != null ) {
+	    	if( this.docManifestRltedIdTypCdgCd == null ) {
+	        	this.docManifestRltedIdTypCdgCd = docManifestRltedIdTypCdgCd;
+	        } else if(this.docManifestRltedIdTypCdgCd.substring(this.docManifestRltedIdTypCdgCd.length() - 1).equals("]") & docManifestRltedIdTypCdgCd.equals("[")) {
+	        	this.docManifestRltedIdTypCdgCd = this.docManifestRltedIdTypCdgCd+ "," + docManifestRltedIdTypCdgCd;
+	        } else if(docManifestRltedIdTypCdgCd.equals("[") | docManifestRltedIdTypCdgCd.equals("]") | this.docManifestRltedIdTypCdgCd.substring(this.docManifestRltedIdTypCdgCd.length() - 1).equals("[")) {
+	        	this.docManifestRltedIdTypCdgCd = this.docManifestRltedIdTypCdgCd+docManifestRltedIdTypCdgCd;
+	        } else  {
+	            this.docManifestRltedIdTypCdgCd = this.docManifestRltedIdTypCdgCd+ "," +docManifestRltedIdTypCdgCd;
+	        }
+        }
+    }
+    
     
     
     public String getDocManifestRltedIdTypCdgDsply() {
@@ -423,6 +913,20 @@ public class DocumentManifest  implements java.io.Serializable {
     
     public void setDocManifestRltedIdTypCdgDsply(String docManifestRltedIdTypCdgDsply) {
         this.docManifestRltedIdTypCdgDsply = docManifestRltedIdTypCdgDsply;
+    }
+    
+    public void addDocManifestRltedIdTypCdgDsply(String docManifestRltedIdTypCdgDsply) {
+    	if( docManifestRltedIdTypCdgDsply != null ) {
+	    	if( this.docManifestRltedIdTypCdgDsply == null ) {
+	        	this.docManifestRltedIdTypCdgDsply = docManifestRltedIdTypCdgDsply;
+	        } else if(this.docManifestRltedIdTypCdgDsply.substring(this.docManifestRltedIdTypCdgDsply.length() - 1).equals("]") & docManifestRltedIdTypCdgDsply.equals("[")) {
+	        	this.docManifestRltedIdTypCdgDsply = this.docManifestRltedIdTypCdgDsply+ "," + docManifestRltedIdTypCdgDsply;
+	        } else if(docManifestRltedIdTypCdgDsply.equals("[") | docManifestRltedIdTypCdgDsply.equals("]") | this.docManifestRltedIdTypCdgDsply.substring(this.docManifestRltedIdTypCdgDsply.length() - 1).equals("[")) {
+	        	this.docManifestRltedIdTypCdgDsply = this.docManifestRltedIdTypCdgDsply+docManifestRltedIdTypCdgDsply;
+	        } else  {
+	            this.docManifestRltedIdTypCdgDsply = this.docManifestRltedIdTypCdgDsply+ "," +docManifestRltedIdTypCdgDsply;
+	        }
+        }
     }
     
     
@@ -435,6 +939,20 @@ public class DocumentManifest  implements java.io.Serializable {
         this.docManifestRltedIdTypCdgSys = docManifestRltedIdTypCdgSys;
     }
     
+    public void addDocManifestRltedIdTypCdgSys(String docManifestRltedIdTypCdgSys) {
+    	if( docManifestRltedIdTypCdgSys != null ) {
+	    	if( this.docManifestRltedIdTypCdgSys == null ) {
+	        	this.docManifestRltedIdTypCdgSys = docManifestRltedIdTypCdgSys;
+	        } else if(this.docManifestRltedIdTypCdgSys.substring(this.docManifestRltedIdTypCdgSys.length() - 1).equals("]") & docManifestRltedIdTypCdgSys.equals("[")) {
+	        	this.docManifestRltedIdTypCdgSys = this.docManifestRltedIdTypCdgSys+ "," + docManifestRltedIdTypCdgSys;
+	        } else if(docManifestRltedIdTypCdgSys.equals("[") | docManifestRltedIdTypCdgSys.equals("]") | this.docManifestRltedIdTypCdgSys.substring(this.docManifestRltedIdTypCdgSys.length() - 1).equals("[")) {
+	        	this.docManifestRltedIdTypCdgSys = this.docManifestRltedIdTypCdgSys+docManifestRltedIdTypCdgSys;
+	        } else  {
+	            this.docManifestRltedIdTypCdgSys = this.docManifestRltedIdTypCdgSys+ "," +docManifestRltedIdTypCdgSys;
+	        }
+        }
+    }
+    
     
     
     public String getDocManifestRltedIdTypCdgUsrSltd() {
@@ -443,6 +961,20 @@ public class DocumentManifest  implements java.io.Serializable {
     
     public void setDocManifestRltedIdTypCdgUsrSltd(String docManifestRltedIdTypCdgUsrSltd) {
         this.docManifestRltedIdTypCdgUsrSltd = docManifestRltedIdTypCdgUsrSltd;
+    }
+    
+    public void addDocManifestRltedIdTypCdgUsrSltd(String docManifestRltedIdTypCdgUsrSltd) {
+    	if( docManifestRltedIdTypCdgUsrSltd != null ) {
+	    	if( this.docManifestRltedIdTypCdgUsrSltd == null ) {
+	        	this.docManifestRltedIdTypCdgUsrSltd = docManifestRltedIdTypCdgUsrSltd;
+	        } else if(this.docManifestRltedIdTypCdgUsrSltd.substring(this.docManifestRltedIdTypCdgUsrSltd.length() - 1).equals("]") & docManifestRltedIdTypCdgUsrSltd.equals("[")) {
+	        	this.docManifestRltedIdTypCdgUsrSltd = this.docManifestRltedIdTypCdgUsrSltd+ "," + docManifestRltedIdTypCdgUsrSltd;
+	        } else if(docManifestRltedIdTypCdgUsrSltd.equals("[") | docManifestRltedIdTypCdgUsrSltd.equals("]") | this.docManifestRltedIdTypCdgUsrSltd.substring(this.docManifestRltedIdTypCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.docManifestRltedIdTypCdgUsrSltd = this.docManifestRltedIdTypCdgUsrSltd+docManifestRltedIdTypCdgUsrSltd;
+	        } else  {
+	            this.docManifestRltedIdTypCdgUsrSltd = this.docManifestRltedIdTypCdgUsrSltd+ "," +docManifestRltedIdTypCdgUsrSltd;
+	        }
+        }
     }
     
     
@@ -455,6 +987,20 @@ public class DocumentManifest  implements java.io.Serializable {
         this.docManifestRltedIdTypCdgVrsn = docManifestRltedIdTypCdgVrsn;
     }
     
+    public void addDocManifestRltedIdTypCdgVrsn(String docManifestRltedIdTypCdgVrsn) {
+    	if( docManifestRltedIdTypCdgVrsn != null ) {
+	    	if( this.docManifestRltedIdTypCdgVrsn == null ) {
+	        	this.docManifestRltedIdTypCdgVrsn = docManifestRltedIdTypCdgVrsn;
+	        } else if(this.docManifestRltedIdTypCdgVrsn.substring(this.docManifestRltedIdTypCdgVrsn.length() - 1).equals("]") & docManifestRltedIdTypCdgVrsn.equals("[")) {
+	        	this.docManifestRltedIdTypCdgVrsn = this.docManifestRltedIdTypCdgVrsn+ "," + docManifestRltedIdTypCdgVrsn;
+	        } else if(docManifestRltedIdTypCdgVrsn.equals("[") | docManifestRltedIdTypCdgVrsn.equals("]") | this.docManifestRltedIdTypCdgVrsn.substring(this.docManifestRltedIdTypCdgVrsn.length() - 1).equals("[")) {
+	        	this.docManifestRltedIdTypCdgVrsn = this.docManifestRltedIdTypCdgVrsn+docManifestRltedIdTypCdgVrsn;
+	        } else  {
+	            this.docManifestRltedIdTypCdgVrsn = this.docManifestRltedIdTypCdgVrsn+ "," +docManifestRltedIdTypCdgVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getDocManifestRltedIdTypTxt() {
@@ -463,6 +1009,20 @@ public class DocumentManifest  implements java.io.Serializable {
     
     public void setDocManifestRltedIdTypTxt(String docManifestRltedIdTypTxt) {
         this.docManifestRltedIdTypTxt = docManifestRltedIdTypTxt;
+    }
+    
+    public void addDocManifestRltedIdTypTxt(String docManifestRltedIdTypTxt) {
+    	if( docManifestRltedIdTypTxt != null ) {
+	    	if( this.docManifestRltedIdTypTxt == null ) {
+	        	this.docManifestRltedIdTypTxt = docManifestRltedIdTypTxt;
+	        } else if(this.docManifestRltedIdTypTxt.substring(this.docManifestRltedIdTypTxt.length() - 1).equals("]") & docManifestRltedIdTypTxt.equals("[")) {
+	        	this.docManifestRltedIdTypTxt = this.docManifestRltedIdTypTxt+ "," + docManifestRltedIdTypTxt;
+	        } else if(docManifestRltedIdTypTxt.equals("[") | docManifestRltedIdTypTxt.equals("]") | this.docManifestRltedIdTypTxt.substring(this.docManifestRltedIdTypTxt.length() - 1).equals("[")) {
+	        	this.docManifestRltedIdTypTxt = this.docManifestRltedIdTypTxt+docManifestRltedIdTypTxt;
+	        } else  {
+	            this.docManifestRltedIdTypTxt = this.docManifestRltedIdTypTxt+ "," +docManifestRltedIdTypTxt;
+	        }
+        }
     }
     
     
@@ -475,6 +1035,20 @@ public class DocumentManifest  implements java.io.Serializable {
         this.docManifestRltedIdUse = docManifestRltedIdUse;
     }
     
+    public void addDocManifestRltedIdUse(String docManifestRltedIdUse) {
+    	if( docManifestRltedIdUse != null ) {
+	    	if( this.docManifestRltedIdUse == null ) {
+	        	this.docManifestRltedIdUse = docManifestRltedIdUse;
+	        } else if(this.docManifestRltedIdUse.substring(this.docManifestRltedIdUse.length() - 1).equals("]") & docManifestRltedIdUse.equals("[")) {
+	        	this.docManifestRltedIdUse = this.docManifestRltedIdUse+ "," + docManifestRltedIdUse;
+	        } else if(docManifestRltedIdUse.equals("[") | docManifestRltedIdUse.equals("]") | this.docManifestRltedIdUse.substring(this.docManifestRltedIdUse.length() - 1).equals("[")) {
+	        	this.docManifestRltedIdUse = this.docManifestRltedIdUse+docManifestRltedIdUse;
+	        } else  {
+	            this.docManifestRltedIdUse = this.docManifestRltedIdUse+ "," +docManifestRltedIdUse;
+	        }
+        }
+    }
+    
     
     
     public String getDocManifestRltedIdVl() {
@@ -483,6 +1057,20 @@ public class DocumentManifest  implements java.io.Serializable {
     
     public void setDocManifestRltedIdVl(String docManifestRltedIdVl) {
         this.docManifestRltedIdVl = docManifestRltedIdVl;
+    }
+    
+    public void addDocManifestRltedIdVl(String docManifestRltedIdVl) {
+    	if( docManifestRltedIdVl != null ) {
+	    	if( this.docManifestRltedIdVl == null ) {
+	        	this.docManifestRltedIdVl = docManifestRltedIdVl;
+	        } else if(this.docManifestRltedIdVl.substring(this.docManifestRltedIdVl.length() - 1).equals("]") & docManifestRltedIdVl.equals("[")) {
+	        	this.docManifestRltedIdVl = this.docManifestRltedIdVl+ "," + docManifestRltedIdVl;
+	        } else if(docManifestRltedIdVl.equals("[") | docManifestRltedIdVl.equals("]") | this.docManifestRltedIdVl.substring(this.docManifestRltedIdVl.length() - 1).equals("[")) {
+	        	this.docManifestRltedIdVl = this.docManifestRltedIdVl+docManifestRltedIdVl;
+	        } else  {
+	            this.docManifestRltedIdVl = this.docManifestRltedIdVl+ "," +docManifestRltedIdVl;
+	        }
+        }
     }
     
     
@@ -495,6 +1083,20 @@ public class DocumentManifest  implements java.io.Serializable {
         this.docManifestRltedRef = docManifestRltedRef;
     }
     
+    public void addDocManifestRltedRef(String docManifestRltedRef) {
+    	if( docManifestRltedRef != null ) {
+	    	if( this.docManifestRltedRef == null ) {
+	        	this.docManifestRltedRef = docManifestRltedRef;
+	        } else if(this.docManifestRltedRef.substring(this.docManifestRltedRef.length() - 1).equals("]") & docManifestRltedRef.equals("[")) {
+	        	this.docManifestRltedRef = this.docManifestRltedRef+ "," + docManifestRltedRef;
+	        } else if(docManifestRltedRef.equals("[") | docManifestRltedRef.equals("]") | this.docManifestRltedRef.substring(this.docManifestRltedRef.length() - 1).equals("[")) {
+	        	this.docManifestRltedRef = this.docManifestRltedRef+docManifestRltedRef;
+	        } else  {
+	            this.docManifestRltedRef = this.docManifestRltedRef+ "," +docManifestRltedRef;
+	        }
+        }
+    }
+    
     
     
     public String getDocManifestSrc() {
@@ -503,6 +1105,20 @@ public class DocumentManifest  implements java.io.Serializable {
     
     public void setDocManifestSrc(String docManifestSrc) {
         this.docManifestSrc = docManifestSrc;
+    }
+    
+    public void addDocManifestSrc(String docManifestSrc) {
+    	if( docManifestSrc != null ) {
+	    	if( this.docManifestSrc == null ) {
+	        	this.docManifestSrc = docManifestSrc;
+	        } else if(this.docManifestSrc.substring(this.docManifestSrc.length() - 1).equals("]") & docManifestSrc.equals("[")) {
+	        	this.docManifestSrc = this.docManifestSrc+ "," + docManifestSrc;
+	        } else if(docManifestSrc.equals("[") | docManifestSrc.equals("]") | this.docManifestSrc.substring(this.docManifestSrc.length() - 1).equals("[")) {
+	        	this.docManifestSrc = this.docManifestSrc+docManifestSrc;
+	        } else  {
+	            this.docManifestSrc = this.docManifestSrc+ "," +docManifestSrc;
+	        }
+        }
     }
     
     
@@ -515,6 +1131,20 @@ public class DocumentManifest  implements java.io.Serializable {
         this.docManifestSts = docManifestSts;
     }
     
+    public void addDocManifestSts(String docManifestSts) {
+    	if( docManifestSts != null ) {
+	    	if( this.docManifestSts == null ) {
+	        	this.docManifestSts = docManifestSts;
+	        } else if(this.docManifestSts.substring(this.docManifestSts.length() - 1).equals("]") & docManifestSts.equals("[")) {
+	        	this.docManifestSts = this.docManifestSts+ "," + docManifestSts;
+	        } else if(docManifestSts.equals("[") | docManifestSts.equals("]") | this.docManifestSts.substring(this.docManifestSts.length() - 1).equals("[")) {
+	        	this.docManifestSts = this.docManifestSts+docManifestSts;
+	        } else  {
+	            this.docManifestSts = this.docManifestSts+ "," +docManifestSts;
+	        }
+        }
+    }
+    
     
     
     public String getDocManifestSbjct() {
@@ -523,6 +1153,20 @@ public class DocumentManifest  implements java.io.Serializable {
     
     public void setDocManifestSbjct(String docManifestSbjct) {
         this.docManifestSbjct = docManifestSbjct;
+    }
+    
+    public void addDocManifestSbjct(String docManifestSbjct) {
+    	if( docManifestSbjct != null ) {
+	    	if( this.docManifestSbjct == null ) {
+	        	this.docManifestSbjct = docManifestSbjct;
+	        } else if(this.docManifestSbjct.substring(this.docManifestSbjct.length() - 1).equals("]") & docManifestSbjct.equals("[")) {
+	        	this.docManifestSbjct = this.docManifestSbjct+ "," + docManifestSbjct;
+	        } else if(docManifestSbjct.equals("[") | docManifestSbjct.equals("]") | this.docManifestSbjct.substring(this.docManifestSbjct.length() - 1).equals("[")) {
+	        	this.docManifestSbjct = this.docManifestSbjct+docManifestSbjct;
+	        } else  {
+	            this.docManifestSbjct = this.docManifestSbjct+ "," +docManifestSbjct;
+	        }
+        }
     }
     
     
@@ -535,6 +1179,20 @@ public class DocumentManifest  implements java.io.Serializable {
         this.docManifestTypCdgCd = docManifestTypCdgCd;
     }
     
+    public void addDocManifestTypCdgCd(String docManifestTypCdgCd) {
+    	if( docManifestTypCdgCd != null ) {
+	    	if( this.docManifestTypCdgCd == null ) {
+	        	this.docManifestTypCdgCd = docManifestTypCdgCd;
+	        } else if(this.docManifestTypCdgCd.substring(this.docManifestTypCdgCd.length() - 1).equals("]") & docManifestTypCdgCd.equals("[")) {
+	        	this.docManifestTypCdgCd = this.docManifestTypCdgCd+ "," + docManifestTypCdgCd;
+	        } else if(docManifestTypCdgCd.equals("[") | docManifestTypCdgCd.equals("]") | this.docManifestTypCdgCd.substring(this.docManifestTypCdgCd.length() - 1).equals("[")) {
+	        	this.docManifestTypCdgCd = this.docManifestTypCdgCd+docManifestTypCdgCd;
+	        } else  {
+	            this.docManifestTypCdgCd = this.docManifestTypCdgCd+ "," +docManifestTypCdgCd;
+	        }
+        }
+    }
+    
     
     
     public String getDocManifestTypCdgDsply() {
@@ -543,6 +1201,20 @@ public class DocumentManifest  implements java.io.Serializable {
     
     public void setDocManifestTypCdgDsply(String docManifestTypCdgDsply) {
         this.docManifestTypCdgDsply = docManifestTypCdgDsply;
+    }
+    
+    public void addDocManifestTypCdgDsply(String docManifestTypCdgDsply) {
+    	if( docManifestTypCdgDsply != null ) {
+	    	if( this.docManifestTypCdgDsply == null ) {
+	        	this.docManifestTypCdgDsply = docManifestTypCdgDsply;
+	        } else if(this.docManifestTypCdgDsply.substring(this.docManifestTypCdgDsply.length() - 1).equals("]") & docManifestTypCdgDsply.equals("[")) {
+	        	this.docManifestTypCdgDsply = this.docManifestTypCdgDsply+ "," + docManifestTypCdgDsply;
+	        } else if(docManifestTypCdgDsply.equals("[") | docManifestTypCdgDsply.equals("]") | this.docManifestTypCdgDsply.substring(this.docManifestTypCdgDsply.length() - 1).equals("[")) {
+	        	this.docManifestTypCdgDsply = this.docManifestTypCdgDsply+docManifestTypCdgDsply;
+	        } else  {
+	            this.docManifestTypCdgDsply = this.docManifestTypCdgDsply+ "," +docManifestTypCdgDsply;
+	        }
+        }
     }
     
     
@@ -555,6 +1227,20 @@ public class DocumentManifest  implements java.io.Serializable {
         this.docManifestTypCdgSys = docManifestTypCdgSys;
     }
     
+    public void addDocManifestTypCdgSys(String docManifestTypCdgSys) {
+    	if( docManifestTypCdgSys != null ) {
+	    	if( this.docManifestTypCdgSys == null ) {
+	        	this.docManifestTypCdgSys = docManifestTypCdgSys;
+	        } else if(this.docManifestTypCdgSys.substring(this.docManifestTypCdgSys.length() - 1).equals("]") & docManifestTypCdgSys.equals("[")) {
+	        	this.docManifestTypCdgSys = this.docManifestTypCdgSys+ "," + docManifestTypCdgSys;
+	        } else if(docManifestTypCdgSys.equals("[") | docManifestTypCdgSys.equals("]") | this.docManifestTypCdgSys.substring(this.docManifestTypCdgSys.length() - 1).equals("[")) {
+	        	this.docManifestTypCdgSys = this.docManifestTypCdgSys+docManifestTypCdgSys;
+	        } else  {
+	            this.docManifestTypCdgSys = this.docManifestTypCdgSys+ "," +docManifestTypCdgSys;
+	        }
+        }
+    }
+    
     
     
     public String getDocManifestTypCdgUsrSltd() {
@@ -563,6 +1249,20 @@ public class DocumentManifest  implements java.io.Serializable {
     
     public void setDocManifestTypCdgUsrSltd(String docManifestTypCdgUsrSltd) {
         this.docManifestTypCdgUsrSltd = docManifestTypCdgUsrSltd;
+    }
+    
+    public void addDocManifestTypCdgUsrSltd(String docManifestTypCdgUsrSltd) {
+    	if( docManifestTypCdgUsrSltd != null ) {
+	    	if( this.docManifestTypCdgUsrSltd == null ) {
+	        	this.docManifestTypCdgUsrSltd = docManifestTypCdgUsrSltd;
+	        } else if(this.docManifestTypCdgUsrSltd.substring(this.docManifestTypCdgUsrSltd.length() - 1).equals("]") & docManifestTypCdgUsrSltd.equals("[")) {
+	        	this.docManifestTypCdgUsrSltd = this.docManifestTypCdgUsrSltd+ "," + docManifestTypCdgUsrSltd;
+	        } else if(docManifestTypCdgUsrSltd.equals("[") | docManifestTypCdgUsrSltd.equals("]") | this.docManifestTypCdgUsrSltd.substring(this.docManifestTypCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.docManifestTypCdgUsrSltd = this.docManifestTypCdgUsrSltd+docManifestTypCdgUsrSltd;
+	        } else  {
+	            this.docManifestTypCdgUsrSltd = this.docManifestTypCdgUsrSltd+ "," +docManifestTypCdgUsrSltd;
+	        }
+        }
     }
     
     
@@ -575,6 +1275,20 @@ public class DocumentManifest  implements java.io.Serializable {
         this.docManifestTypCdgVrsn = docManifestTypCdgVrsn;
     }
     
+    public void addDocManifestTypCdgVrsn(String docManifestTypCdgVrsn) {
+    	if( docManifestTypCdgVrsn != null ) {
+	    	if( this.docManifestTypCdgVrsn == null ) {
+	        	this.docManifestTypCdgVrsn = docManifestTypCdgVrsn;
+	        } else if(this.docManifestTypCdgVrsn.substring(this.docManifestTypCdgVrsn.length() - 1).equals("]") & docManifestTypCdgVrsn.equals("[")) {
+	        	this.docManifestTypCdgVrsn = this.docManifestTypCdgVrsn+ "," + docManifestTypCdgVrsn;
+	        } else if(docManifestTypCdgVrsn.equals("[") | docManifestTypCdgVrsn.equals("]") | this.docManifestTypCdgVrsn.substring(this.docManifestTypCdgVrsn.length() - 1).equals("[")) {
+	        	this.docManifestTypCdgVrsn = this.docManifestTypCdgVrsn+docManifestTypCdgVrsn;
+	        } else  {
+	            this.docManifestTypCdgVrsn = this.docManifestTypCdgVrsn+ "," +docManifestTypCdgVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getDocManifestTypTxt() {
@@ -583,6 +1297,20 @@ public class DocumentManifest  implements java.io.Serializable {
     
     public void setDocManifestTypTxt(String docManifestTypTxt) {
         this.docManifestTypTxt = docManifestTypTxt;
+    }
+    
+    public void addDocManifestTypTxt(String docManifestTypTxt) {
+    	if( docManifestTypTxt != null ) {
+	    	if( this.docManifestTypTxt == null ) {
+	        	this.docManifestTypTxt = docManifestTypTxt;
+	        } else if(this.docManifestTypTxt.substring(this.docManifestTypTxt.length() - 1).equals("]") & docManifestTypTxt.equals("[")) {
+	        	this.docManifestTypTxt = this.docManifestTypTxt+ "," + docManifestTypTxt;
+	        } else if(docManifestTypTxt.equals("[") | docManifestTypTxt.equals("]") | this.docManifestTypTxt.substring(this.docManifestTypTxt.length() - 1).equals("[")) {
+	        	this.docManifestTypTxt = this.docManifestTypTxt+docManifestTypTxt;
+	        } else  {
+	            this.docManifestTypTxt = this.docManifestTypTxt+ "," +docManifestTypTxt;
+	        }
+        }
     }
     
     

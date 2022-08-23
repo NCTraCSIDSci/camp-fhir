@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Jun 27, 2022, 10:40:10 AM by Hibernate Tools 5.6.1.Final
+// Generated Aug 17, 2022, 11:08:48 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -58,6 +58,20 @@ public class MessageHeader  implements java.io.Serializable {
         this.id = id;
     }
     
+    public void addId(String id) {
+    	if( id != null ) {
+	    	if( this.id == null ) {
+	        	this.id = id;
+	        } else if(this.id.substring(this.id.length() - 1).equals("]") & id.equals("[")) {
+	        	this.id = this.id+ "," + id;
+	        } else if(id.equals("[") | id.equals("]") | this.id.substring(this.id.length() - 1).equals("[")) {
+	        	this.id = this.id+id;
+	        } else  {
+	            this.id = this.id+ "," +id;
+	        }
+        }
+    }
+    
     
     
     public String getMsgHeaderAthr() {
@@ -66,6 +80,20 @@ public class MessageHeader  implements java.io.Serializable {
     
     public void setMsgHeaderAthr(String msgHeaderAthr) {
         this.msgHeaderAthr = msgHeaderAthr;
+    }
+    
+    public void addMsgHeaderAthr(String msgHeaderAthr) {
+    	if( msgHeaderAthr != null ) {
+	    	if( this.msgHeaderAthr == null ) {
+	        	this.msgHeaderAthr = msgHeaderAthr;
+	        } else if(this.msgHeaderAthr.substring(this.msgHeaderAthr.length() - 1).equals("]") & msgHeaderAthr.equals("[")) {
+	        	this.msgHeaderAthr = this.msgHeaderAthr+ "," + msgHeaderAthr;
+	        } else if(msgHeaderAthr.equals("[") | msgHeaderAthr.equals("]") | this.msgHeaderAthr.substring(this.msgHeaderAthr.length() - 1).equals("[")) {
+	        	this.msgHeaderAthr = this.msgHeaderAthr+msgHeaderAthr;
+	        } else  {
+	            this.msgHeaderAthr = this.msgHeaderAthr+ "," +msgHeaderAthr;
+	        }
+        }
     }
     
     
@@ -78,6 +106,20 @@ public class MessageHeader  implements java.io.Serializable {
         this.msgHeaderDfn = msgHeaderDfn;
     }
     
+    public void addMsgHeaderDfn(String msgHeaderDfn) {
+    	if( msgHeaderDfn != null ) {
+	    	if( this.msgHeaderDfn == null ) {
+	        	this.msgHeaderDfn = msgHeaderDfn;
+	        } else if(this.msgHeaderDfn.substring(this.msgHeaderDfn.length() - 1).equals("]") & msgHeaderDfn.equals("[")) {
+	        	this.msgHeaderDfn = this.msgHeaderDfn+ "," + msgHeaderDfn;
+	        } else if(msgHeaderDfn.equals("[") | msgHeaderDfn.equals("]") | this.msgHeaderDfn.substring(this.msgHeaderDfn.length() - 1).equals("[")) {
+	        	this.msgHeaderDfn = this.msgHeaderDfn+msgHeaderDfn;
+	        } else  {
+	            this.msgHeaderDfn = this.msgHeaderDfn+ "," +msgHeaderDfn;
+	        }
+        }
+    }
+    
     
     
     public String getMsgHeaderDestinationEndpoint() {
@@ -86,6 +128,20 @@ public class MessageHeader  implements java.io.Serializable {
     
     public void setMsgHeaderDestinationEndpoint(String msgHeaderDestinationEndpoint) {
         this.msgHeaderDestinationEndpoint = msgHeaderDestinationEndpoint;
+    }
+    
+    public void addMsgHeaderDestinationEndpoint(String msgHeaderDestinationEndpoint) {
+    	if( msgHeaderDestinationEndpoint != null ) {
+	    	if( this.msgHeaderDestinationEndpoint == null ) {
+	        	this.msgHeaderDestinationEndpoint = msgHeaderDestinationEndpoint;
+	        } else if(this.msgHeaderDestinationEndpoint.substring(this.msgHeaderDestinationEndpoint.length() - 1).equals("]") & msgHeaderDestinationEndpoint.equals("[")) {
+	        	this.msgHeaderDestinationEndpoint = this.msgHeaderDestinationEndpoint+ "," + msgHeaderDestinationEndpoint;
+	        } else if(msgHeaderDestinationEndpoint.equals("[") | msgHeaderDestinationEndpoint.equals("]") | this.msgHeaderDestinationEndpoint.substring(this.msgHeaderDestinationEndpoint.length() - 1).equals("[")) {
+	        	this.msgHeaderDestinationEndpoint = this.msgHeaderDestinationEndpoint+msgHeaderDestinationEndpoint;
+	        } else  {
+	            this.msgHeaderDestinationEndpoint = this.msgHeaderDestinationEndpoint+ "," +msgHeaderDestinationEndpoint;
+	        }
+        }
     }
     
     
@@ -98,6 +154,20 @@ public class MessageHeader  implements java.io.Serializable {
         this.msgHeaderDestinationNm = msgHeaderDestinationNm;
     }
     
+    public void addMsgHeaderDestinationNm(String msgHeaderDestinationNm) {
+    	if( msgHeaderDestinationNm != null ) {
+	    	if( this.msgHeaderDestinationNm == null ) {
+	        	this.msgHeaderDestinationNm = msgHeaderDestinationNm;
+	        } else if(this.msgHeaderDestinationNm.substring(this.msgHeaderDestinationNm.length() - 1).equals("]") & msgHeaderDestinationNm.equals("[")) {
+	        	this.msgHeaderDestinationNm = this.msgHeaderDestinationNm+ "," + msgHeaderDestinationNm;
+	        } else if(msgHeaderDestinationNm.equals("[") | msgHeaderDestinationNm.equals("]") | this.msgHeaderDestinationNm.substring(this.msgHeaderDestinationNm.length() - 1).equals("[")) {
+	        	this.msgHeaderDestinationNm = this.msgHeaderDestinationNm+msgHeaderDestinationNm;
+	        } else  {
+	            this.msgHeaderDestinationNm = this.msgHeaderDestinationNm+ "," +msgHeaderDestinationNm;
+	        }
+        }
+    }
+    
     
     
     public String getMsgHeaderDestinationReceiver() {
@@ -106,6 +176,20 @@ public class MessageHeader  implements java.io.Serializable {
     
     public void setMsgHeaderDestinationReceiver(String msgHeaderDestinationReceiver) {
         this.msgHeaderDestinationReceiver = msgHeaderDestinationReceiver;
+    }
+    
+    public void addMsgHeaderDestinationReceiver(String msgHeaderDestinationReceiver) {
+    	if( msgHeaderDestinationReceiver != null ) {
+	    	if( this.msgHeaderDestinationReceiver == null ) {
+	        	this.msgHeaderDestinationReceiver = msgHeaderDestinationReceiver;
+	        } else if(this.msgHeaderDestinationReceiver.substring(this.msgHeaderDestinationReceiver.length() - 1).equals("]") & msgHeaderDestinationReceiver.equals("[")) {
+	        	this.msgHeaderDestinationReceiver = this.msgHeaderDestinationReceiver+ "," + msgHeaderDestinationReceiver;
+	        } else if(msgHeaderDestinationReceiver.equals("[") | msgHeaderDestinationReceiver.equals("]") | this.msgHeaderDestinationReceiver.substring(this.msgHeaderDestinationReceiver.length() - 1).equals("[")) {
+	        	this.msgHeaderDestinationReceiver = this.msgHeaderDestinationReceiver+msgHeaderDestinationReceiver;
+	        } else  {
+	            this.msgHeaderDestinationReceiver = this.msgHeaderDestinationReceiver+ "," +msgHeaderDestinationReceiver;
+	        }
+        }
     }
     
     
@@ -118,6 +202,20 @@ public class MessageHeader  implements java.io.Serializable {
         this.msgHeaderEnterer = msgHeaderEnterer;
     }
     
+    public void addMsgHeaderEnterer(String msgHeaderEnterer) {
+    	if( msgHeaderEnterer != null ) {
+	    	if( this.msgHeaderEnterer == null ) {
+	        	this.msgHeaderEnterer = msgHeaderEnterer;
+	        } else if(this.msgHeaderEnterer.substring(this.msgHeaderEnterer.length() - 1).equals("]") & msgHeaderEnterer.equals("[")) {
+	        	this.msgHeaderEnterer = this.msgHeaderEnterer+ "," + msgHeaderEnterer;
+	        } else if(msgHeaderEnterer.equals("[") | msgHeaderEnterer.equals("]") | this.msgHeaderEnterer.substring(this.msgHeaderEnterer.length() - 1).equals("[")) {
+	        	this.msgHeaderEnterer = this.msgHeaderEnterer+msgHeaderEnterer;
+	        } else  {
+	            this.msgHeaderEnterer = this.msgHeaderEnterer+ "," +msgHeaderEnterer;
+	        }
+        }
+    }
+    
     
     
     public String getMsgHeaderEvntCdgCd() {
@@ -126,6 +224,20 @@ public class MessageHeader  implements java.io.Serializable {
     
     public void setMsgHeaderEvntCdgCd(String msgHeaderEvntCdgCd) {
         this.msgHeaderEvntCdgCd = msgHeaderEvntCdgCd;
+    }
+    
+    public void addMsgHeaderEvntCdgCd(String msgHeaderEvntCdgCd) {
+    	if( msgHeaderEvntCdgCd != null ) {
+	    	if( this.msgHeaderEvntCdgCd == null ) {
+	        	this.msgHeaderEvntCdgCd = msgHeaderEvntCdgCd;
+	        } else if(this.msgHeaderEvntCdgCd.substring(this.msgHeaderEvntCdgCd.length() - 1).equals("]") & msgHeaderEvntCdgCd.equals("[")) {
+	        	this.msgHeaderEvntCdgCd = this.msgHeaderEvntCdgCd+ "," + msgHeaderEvntCdgCd;
+	        } else if(msgHeaderEvntCdgCd.equals("[") | msgHeaderEvntCdgCd.equals("]") | this.msgHeaderEvntCdgCd.substring(this.msgHeaderEvntCdgCd.length() - 1).equals("[")) {
+	        	this.msgHeaderEvntCdgCd = this.msgHeaderEvntCdgCd+msgHeaderEvntCdgCd;
+	        } else  {
+	            this.msgHeaderEvntCdgCd = this.msgHeaderEvntCdgCd+ "," +msgHeaderEvntCdgCd;
+	        }
+        }
     }
     
     
@@ -138,6 +250,20 @@ public class MessageHeader  implements java.io.Serializable {
         this.msgHeaderEvntCdgDsply = msgHeaderEvntCdgDsply;
     }
     
+    public void addMsgHeaderEvntCdgDsply(String msgHeaderEvntCdgDsply) {
+    	if( msgHeaderEvntCdgDsply != null ) {
+	    	if( this.msgHeaderEvntCdgDsply == null ) {
+	        	this.msgHeaderEvntCdgDsply = msgHeaderEvntCdgDsply;
+	        } else if(this.msgHeaderEvntCdgDsply.substring(this.msgHeaderEvntCdgDsply.length() - 1).equals("]") & msgHeaderEvntCdgDsply.equals("[")) {
+	        	this.msgHeaderEvntCdgDsply = this.msgHeaderEvntCdgDsply+ "," + msgHeaderEvntCdgDsply;
+	        } else if(msgHeaderEvntCdgDsply.equals("[") | msgHeaderEvntCdgDsply.equals("]") | this.msgHeaderEvntCdgDsply.substring(this.msgHeaderEvntCdgDsply.length() - 1).equals("[")) {
+	        	this.msgHeaderEvntCdgDsply = this.msgHeaderEvntCdgDsply+msgHeaderEvntCdgDsply;
+	        } else  {
+	            this.msgHeaderEvntCdgDsply = this.msgHeaderEvntCdgDsply+ "," +msgHeaderEvntCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getMsgHeaderEvntCdgSys() {
@@ -146,6 +272,20 @@ public class MessageHeader  implements java.io.Serializable {
     
     public void setMsgHeaderEvntCdgSys(String msgHeaderEvntCdgSys) {
         this.msgHeaderEvntCdgSys = msgHeaderEvntCdgSys;
+    }
+    
+    public void addMsgHeaderEvntCdgSys(String msgHeaderEvntCdgSys) {
+    	if( msgHeaderEvntCdgSys != null ) {
+	    	if( this.msgHeaderEvntCdgSys == null ) {
+	        	this.msgHeaderEvntCdgSys = msgHeaderEvntCdgSys;
+	        } else if(this.msgHeaderEvntCdgSys.substring(this.msgHeaderEvntCdgSys.length() - 1).equals("]") & msgHeaderEvntCdgSys.equals("[")) {
+	        	this.msgHeaderEvntCdgSys = this.msgHeaderEvntCdgSys+ "," + msgHeaderEvntCdgSys;
+	        } else if(msgHeaderEvntCdgSys.equals("[") | msgHeaderEvntCdgSys.equals("]") | this.msgHeaderEvntCdgSys.substring(this.msgHeaderEvntCdgSys.length() - 1).equals("[")) {
+	        	this.msgHeaderEvntCdgSys = this.msgHeaderEvntCdgSys+msgHeaderEvntCdgSys;
+	        } else  {
+	            this.msgHeaderEvntCdgSys = this.msgHeaderEvntCdgSys+ "," +msgHeaderEvntCdgSys;
+	        }
+        }
     }
     
     
@@ -158,6 +298,20 @@ public class MessageHeader  implements java.io.Serializable {
         this.msgHeaderEvntCdgUsrSltd = msgHeaderEvntCdgUsrSltd;
     }
     
+    public void addMsgHeaderEvntCdgUsrSltd(String msgHeaderEvntCdgUsrSltd) {
+    	if( msgHeaderEvntCdgUsrSltd != null ) {
+	    	if( this.msgHeaderEvntCdgUsrSltd == null ) {
+	        	this.msgHeaderEvntCdgUsrSltd = msgHeaderEvntCdgUsrSltd;
+	        } else if(this.msgHeaderEvntCdgUsrSltd.substring(this.msgHeaderEvntCdgUsrSltd.length() - 1).equals("]") & msgHeaderEvntCdgUsrSltd.equals("[")) {
+	        	this.msgHeaderEvntCdgUsrSltd = this.msgHeaderEvntCdgUsrSltd+ "," + msgHeaderEvntCdgUsrSltd;
+	        } else if(msgHeaderEvntCdgUsrSltd.equals("[") | msgHeaderEvntCdgUsrSltd.equals("]") | this.msgHeaderEvntCdgUsrSltd.substring(this.msgHeaderEvntCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.msgHeaderEvntCdgUsrSltd = this.msgHeaderEvntCdgUsrSltd+msgHeaderEvntCdgUsrSltd;
+	        } else  {
+	            this.msgHeaderEvntCdgUsrSltd = this.msgHeaderEvntCdgUsrSltd+ "," +msgHeaderEvntCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getMsgHeaderEvntCdgVrsn() {
@@ -166,6 +320,20 @@ public class MessageHeader  implements java.io.Serializable {
     
     public void setMsgHeaderEvntCdgVrsn(String msgHeaderEvntCdgVrsn) {
         this.msgHeaderEvntCdgVrsn = msgHeaderEvntCdgVrsn;
+    }
+    
+    public void addMsgHeaderEvntCdgVrsn(String msgHeaderEvntCdgVrsn) {
+    	if( msgHeaderEvntCdgVrsn != null ) {
+	    	if( this.msgHeaderEvntCdgVrsn == null ) {
+	        	this.msgHeaderEvntCdgVrsn = msgHeaderEvntCdgVrsn;
+	        } else if(this.msgHeaderEvntCdgVrsn.substring(this.msgHeaderEvntCdgVrsn.length() - 1).equals("]") & msgHeaderEvntCdgVrsn.equals("[")) {
+	        	this.msgHeaderEvntCdgVrsn = this.msgHeaderEvntCdgVrsn+ "," + msgHeaderEvntCdgVrsn;
+	        } else if(msgHeaderEvntCdgVrsn.equals("[") | msgHeaderEvntCdgVrsn.equals("]") | this.msgHeaderEvntCdgVrsn.substring(this.msgHeaderEvntCdgVrsn.length() - 1).equals("[")) {
+	        	this.msgHeaderEvntCdgVrsn = this.msgHeaderEvntCdgVrsn+msgHeaderEvntCdgVrsn;
+	        } else  {
+	            this.msgHeaderEvntCdgVrsn = this.msgHeaderEvntCdgVrsn+ "," +msgHeaderEvntCdgVrsn;
+	        }
+        }
     }
     
     
@@ -178,6 +346,20 @@ public class MessageHeader  implements java.io.Serializable {
         this.msgHeaderEvntUriTyp = msgHeaderEvntUriTyp;
     }
     
+    public void addMsgHeaderEvntUriTyp(String msgHeaderEvntUriTyp) {
+    	if( msgHeaderEvntUriTyp != null ) {
+	    	if( this.msgHeaderEvntUriTyp == null ) {
+	        	this.msgHeaderEvntUriTyp = msgHeaderEvntUriTyp;
+	        } else if(this.msgHeaderEvntUriTyp.substring(this.msgHeaderEvntUriTyp.length() - 1).equals("]") & msgHeaderEvntUriTyp.equals("[")) {
+	        	this.msgHeaderEvntUriTyp = this.msgHeaderEvntUriTyp+ "," + msgHeaderEvntUriTyp;
+	        } else if(msgHeaderEvntUriTyp.equals("[") | msgHeaderEvntUriTyp.equals("]") | this.msgHeaderEvntUriTyp.substring(this.msgHeaderEvntUriTyp.length() - 1).equals("[")) {
+	        	this.msgHeaderEvntUriTyp = this.msgHeaderEvntUriTyp+msgHeaderEvntUriTyp;
+	        } else  {
+	            this.msgHeaderEvntUriTyp = this.msgHeaderEvntUriTyp+ "," +msgHeaderEvntUriTyp;
+	        }
+        }
+    }
+    
     
     
     public String getMsgHeaderFocus() {
@@ -186,6 +368,20 @@ public class MessageHeader  implements java.io.Serializable {
     
     public void setMsgHeaderFocus(String msgHeaderFocus) {
         this.msgHeaderFocus = msgHeaderFocus;
+    }
+    
+    public void addMsgHeaderFocus(String msgHeaderFocus) {
+    	if( msgHeaderFocus != null ) {
+	    	if( this.msgHeaderFocus == null ) {
+	        	this.msgHeaderFocus = msgHeaderFocus;
+	        } else if(this.msgHeaderFocus.substring(this.msgHeaderFocus.length() - 1).equals("]") & msgHeaderFocus.equals("[")) {
+	        	this.msgHeaderFocus = this.msgHeaderFocus+ "," + msgHeaderFocus;
+	        } else if(msgHeaderFocus.equals("[") | msgHeaderFocus.equals("]") | this.msgHeaderFocus.substring(this.msgHeaderFocus.length() - 1).equals("[")) {
+	        	this.msgHeaderFocus = this.msgHeaderFocus+msgHeaderFocus;
+	        } else  {
+	            this.msgHeaderFocus = this.msgHeaderFocus+ "," +msgHeaderFocus;
+	        }
+        }
     }
     
     
@@ -198,6 +394,20 @@ public class MessageHeader  implements java.io.Serializable {
         this.msgHeaderRsnCdgCd = msgHeaderRsnCdgCd;
     }
     
+    public void addMsgHeaderRsnCdgCd(String msgHeaderRsnCdgCd) {
+    	if( msgHeaderRsnCdgCd != null ) {
+	    	if( this.msgHeaderRsnCdgCd == null ) {
+	        	this.msgHeaderRsnCdgCd = msgHeaderRsnCdgCd;
+	        } else if(this.msgHeaderRsnCdgCd.substring(this.msgHeaderRsnCdgCd.length() - 1).equals("]") & msgHeaderRsnCdgCd.equals("[")) {
+	        	this.msgHeaderRsnCdgCd = this.msgHeaderRsnCdgCd+ "," + msgHeaderRsnCdgCd;
+	        } else if(msgHeaderRsnCdgCd.equals("[") | msgHeaderRsnCdgCd.equals("]") | this.msgHeaderRsnCdgCd.substring(this.msgHeaderRsnCdgCd.length() - 1).equals("[")) {
+	        	this.msgHeaderRsnCdgCd = this.msgHeaderRsnCdgCd+msgHeaderRsnCdgCd;
+	        } else  {
+	            this.msgHeaderRsnCdgCd = this.msgHeaderRsnCdgCd+ "," +msgHeaderRsnCdgCd;
+	        }
+        }
+    }
+    
     
     
     public String getMsgHeaderRsnCdgDsply() {
@@ -206,6 +416,20 @@ public class MessageHeader  implements java.io.Serializable {
     
     public void setMsgHeaderRsnCdgDsply(String msgHeaderRsnCdgDsply) {
         this.msgHeaderRsnCdgDsply = msgHeaderRsnCdgDsply;
+    }
+    
+    public void addMsgHeaderRsnCdgDsply(String msgHeaderRsnCdgDsply) {
+    	if( msgHeaderRsnCdgDsply != null ) {
+	    	if( this.msgHeaderRsnCdgDsply == null ) {
+	        	this.msgHeaderRsnCdgDsply = msgHeaderRsnCdgDsply;
+	        } else if(this.msgHeaderRsnCdgDsply.substring(this.msgHeaderRsnCdgDsply.length() - 1).equals("]") & msgHeaderRsnCdgDsply.equals("[")) {
+	        	this.msgHeaderRsnCdgDsply = this.msgHeaderRsnCdgDsply+ "," + msgHeaderRsnCdgDsply;
+	        } else if(msgHeaderRsnCdgDsply.equals("[") | msgHeaderRsnCdgDsply.equals("]") | this.msgHeaderRsnCdgDsply.substring(this.msgHeaderRsnCdgDsply.length() - 1).equals("[")) {
+	        	this.msgHeaderRsnCdgDsply = this.msgHeaderRsnCdgDsply+msgHeaderRsnCdgDsply;
+	        } else  {
+	            this.msgHeaderRsnCdgDsply = this.msgHeaderRsnCdgDsply+ "," +msgHeaderRsnCdgDsply;
+	        }
+        }
     }
     
     
@@ -218,6 +442,20 @@ public class MessageHeader  implements java.io.Serializable {
         this.msgHeaderRsnCdgSys = msgHeaderRsnCdgSys;
     }
     
+    public void addMsgHeaderRsnCdgSys(String msgHeaderRsnCdgSys) {
+    	if( msgHeaderRsnCdgSys != null ) {
+	    	if( this.msgHeaderRsnCdgSys == null ) {
+	        	this.msgHeaderRsnCdgSys = msgHeaderRsnCdgSys;
+	        } else if(this.msgHeaderRsnCdgSys.substring(this.msgHeaderRsnCdgSys.length() - 1).equals("]") & msgHeaderRsnCdgSys.equals("[")) {
+	        	this.msgHeaderRsnCdgSys = this.msgHeaderRsnCdgSys+ "," + msgHeaderRsnCdgSys;
+	        } else if(msgHeaderRsnCdgSys.equals("[") | msgHeaderRsnCdgSys.equals("]") | this.msgHeaderRsnCdgSys.substring(this.msgHeaderRsnCdgSys.length() - 1).equals("[")) {
+	        	this.msgHeaderRsnCdgSys = this.msgHeaderRsnCdgSys+msgHeaderRsnCdgSys;
+	        } else  {
+	            this.msgHeaderRsnCdgSys = this.msgHeaderRsnCdgSys+ "," +msgHeaderRsnCdgSys;
+	        }
+        }
+    }
+    
     
     
     public String getMsgHeaderRsnCdgUsrSltd() {
@@ -226,6 +464,20 @@ public class MessageHeader  implements java.io.Serializable {
     
     public void setMsgHeaderRsnCdgUsrSltd(String msgHeaderRsnCdgUsrSltd) {
         this.msgHeaderRsnCdgUsrSltd = msgHeaderRsnCdgUsrSltd;
+    }
+    
+    public void addMsgHeaderRsnCdgUsrSltd(String msgHeaderRsnCdgUsrSltd) {
+    	if( msgHeaderRsnCdgUsrSltd != null ) {
+	    	if( this.msgHeaderRsnCdgUsrSltd == null ) {
+	        	this.msgHeaderRsnCdgUsrSltd = msgHeaderRsnCdgUsrSltd;
+	        } else if(this.msgHeaderRsnCdgUsrSltd.substring(this.msgHeaderRsnCdgUsrSltd.length() - 1).equals("]") & msgHeaderRsnCdgUsrSltd.equals("[")) {
+	        	this.msgHeaderRsnCdgUsrSltd = this.msgHeaderRsnCdgUsrSltd+ "," + msgHeaderRsnCdgUsrSltd;
+	        } else if(msgHeaderRsnCdgUsrSltd.equals("[") | msgHeaderRsnCdgUsrSltd.equals("]") | this.msgHeaderRsnCdgUsrSltd.substring(this.msgHeaderRsnCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.msgHeaderRsnCdgUsrSltd = this.msgHeaderRsnCdgUsrSltd+msgHeaderRsnCdgUsrSltd;
+	        } else  {
+	            this.msgHeaderRsnCdgUsrSltd = this.msgHeaderRsnCdgUsrSltd+ "," +msgHeaderRsnCdgUsrSltd;
+	        }
+        }
     }
     
     
@@ -238,6 +490,20 @@ public class MessageHeader  implements java.io.Serializable {
         this.msgHeaderRsnCdgVrsn = msgHeaderRsnCdgVrsn;
     }
     
+    public void addMsgHeaderRsnCdgVrsn(String msgHeaderRsnCdgVrsn) {
+    	if( msgHeaderRsnCdgVrsn != null ) {
+	    	if( this.msgHeaderRsnCdgVrsn == null ) {
+	        	this.msgHeaderRsnCdgVrsn = msgHeaderRsnCdgVrsn;
+	        } else if(this.msgHeaderRsnCdgVrsn.substring(this.msgHeaderRsnCdgVrsn.length() - 1).equals("]") & msgHeaderRsnCdgVrsn.equals("[")) {
+	        	this.msgHeaderRsnCdgVrsn = this.msgHeaderRsnCdgVrsn+ "," + msgHeaderRsnCdgVrsn;
+	        } else if(msgHeaderRsnCdgVrsn.equals("[") | msgHeaderRsnCdgVrsn.equals("]") | this.msgHeaderRsnCdgVrsn.substring(this.msgHeaderRsnCdgVrsn.length() - 1).equals("[")) {
+	        	this.msgHeaderRsnCdgVrsn = this.msgHeaderRsnCdgVrsn+msgHeaderRsnCdgVrsn;
+	        } else  {
+	            this.msgHeaderRsnCdgVrsn = this.msgHeaderRsnCdgVrsn+ "," +msgHeaderRsnCdgVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getMsgHeaderRsnTxt() {
@@ -246,6 +512,20 @@ public class MessageHeader  implements java.io.Serializable {
     
     public void setMsgHeaderRsnTxt(String msgHeaderRsnTxt) {
         this.msgHeaderRsnTxt = msgHeaderRsnTxt;
+    }
+    
+    public void addMsgHeaderRsnTxt(String msgHeaderRsnTxt) {
+    	if( msgHeaderRsnTxt != null ) {
+	    	if( this.msgHeaderRsnTxt == null ) {
+	        	this.msgHeaderRsnTxt = msgHeaderRsnTxt;
+	        } else if(this.msgHeaderRsnTxt.substring(this.msgHeaderRsnTxt.length() - 1).equals("]") & msgHeaderRsnTxt.equals("[")) {
+	        	this.msgHeaderRsnTxt = this.msgHeaderRsnTxt+ "," + msgHeaderRsnTxt;
+	        } else if(msgHeaderRsnTxt.equals("[") | msgHeaderRsnTxt.equals("]") | this.msgHeaderRsnTxt.substring(this.msgHeaderRsnTxt.length() - 1).equals("[")) {
+	        	this.msgHeaderRsnTxt = this.msgHeaderRsnTxt+msgHeaderRsnTxt;
+	        } else  {
+	            this.msgHeaderRsnTxt = this.msgHeaderRsnTxt+ "," +msgHeaderRsnTxt;
+	        }
+        }
     }
     
     
@@ -258,6 +538,20 @@ public class MessageHeader  implements java.io.Serializable {
         this.msgHeaderRspsCd = msgHeaderRspsCd;
     }
     
+    public void addMsgHeaderRspsCd(String msgHeaderRspsCd) {
+    	if( msgHeaderRspsCd != null ) {
+	    	if( this.msgHeaderRspsCd == null ) {
+	        	this.msgHeaderRspsCd = msgHeaderRspsCd;
+	        } else if(this.msgHeaderRspsCd.substring(this.msgHeaderRspsCd.length() - 1).equals("]") & msgHeaderRspsCd.equals("[")) {
+	        	this.msgHeaderRspsCd = this.msgHeaderRspsCd+ "," + msgHeaderRspsCd;
+	        } else if(msgHeaderRspsCd.equals("[") | msgHeaderRspsCd.equals("]") | this.msgHeaderRspsCd.substring(this.msgHeaderRspsCd.length() - 1).equals("[")) {
+	        	this.msgHeaderRspsCd = this.msgHeaderRspsCd+msgHeaderRspsCd;
+	        } else  {
+	            this.msgHeaderRspsCd = this.msgHeaderRspsCd+ "," +msgHeaderRspsCd;
+	        }
+        }
+    }
+    
     
     
     public String getMsgHeaderRspsDtls() {
@@ -266,6 +560,20 @@ public class MessageHeader  implements java.io.Serializable {
     
     public void setMsgHeaderRspsDtls(String msgHeaderRspsDtls) {
         this.msgHeaderRspsDtls = msgHeaderRspsDtls;
+    }
+    
+    public void addMsgHeaderRspsDtls(String msgHeaderRspsDtls) {
+    	if( msgHeaderRspsDtls != null ) {
+	    	if( this.msgHeaderRspsDtls == null ) {
+	        	this.msgHeaderRspsDtls = msgHeaderRspsDtls;
+	        } else if(this.msgHeaderRspsDtls.substring(this.msgHeaderRspsDtls.length() - 1).equals("]") & msgHeaderRspsDtls.equals("[")) {
+	        	this.msgHeaderRspsDtls = this.msgHeaderRspsDtls+ "," + msgHeaderRspsDtls;
+	        } else if(msgHeaderRspsDtls.equals("[") | msgHeaderRspsDtls.equals("]") | this.msgHeaderRspsDtls.substring(this.msgHeaderRspsDtls.length() - 1).equals("[")) {
+	        	this.msgHeaderRspsDtls = this.msgHeaderRspsDtls+msgHeaderRspsDtls;
+	        } else  {
+	            this.msgHeaderRspsDtls = this.msgHeaderRspsDtls+ "," +msgHeaderRspsDtls;
+	        }
+        }
     }
     
     
@@ -278,6 +586,20 @@ public class MessageHeader  implements java.io.Serializable {
         this.msgHeaderRspsId = msgHeaderRspsId;
     }
     
+    public void addMsgHeaderRspsId(String msgHeaderRspsId) {
+    	if( msgHeaderRspsId != null ) {
+	    	if( this.msgHeaderRspsId == null ) {
+	        	this.msgHeaderRspsId = msgHeaderRspsId;
+	        } else if(this.msgHeaderRspsId.substring(this.msgHeaderRspsId.length() - 1).equals("]") & msgHeaderRspsId.equals("[")) {
+	        	this.msgHeaderRspsId = this.msgHeaderRspsId+ "," + msgHeaderRspsId;
+	        } else if(msgHeaderRspsId.equals("[") | msgHeaderRspsId.equals("]") | this.msgHeaderRspsId.substring(this.msgHeaderRspsId.length() - 1).equals("[")) {
+	        	this.msgHeaderRspsId = this.msgHeaderRspsId+msgHeaderRspsId;
+	        } else  {
+	            this.msgHeaderRspsId = this.msgHeaderRspsId+ "," +msgHeaderRspsId;
+	        }
+        }
+    }
+    
     
     
     public String getMsgHeaderResponsible() {
@@ -286,6 +608,20 @@ public class MessageHeader  implements java.io.Serializable {
     
     public void setMsgHeaderResponsible(String msgHeaderResponsible) {
         this.msgHeaderResponsible = msgHeaderResponsible;
+    }
+    
+    public void addMsgHeaderResponsible(String msgHeaderResponsible) {
+    	if( msgHeaderResponsible != null ) {
+	    	if( this.msgHeaderResponsible == null ) {
+	        	this.msgHeaderResponsible = msgHeaderResponsible;
+	        } else if(this.msgHeaderResponsible.substring(this.msgHeaderResponsible.length() - 1).equals("]") & msgHeaderResponsible.equals("[")) {
+	        	this.msgHeaderResponsible = this.msgHeaderResponsible+ "," + msgHeaderResponsible;
+	        } else if(msgHeaderResponsible.equals("[") | msgHeaderResponsible.equals("]") | this.msgHeaderResponsible.substring(this.msgHeaderResponsible.length() - 1).equals("[")) {
+	        	this.msgHeaderResponsible = this.msgHeaderResponsible+msgHeaderResponsible;
+	        } else  {
+	            this.msgHeaderResponsible = this.msgHeaderResponsible+ "," +msgHeaderResponsible;
+	        }
+        }
     }
     
     
@@ -298,6 +634,20 @@ public class MessageHeader  implements java.io.Serializable {
         this.msgHeaderSender = msgHeaderSender;
     }
     
+    public void addMsgHeaderSender(String msgHeaderSender) {
+    	if( msgHeaderSender != null ) {
+	    	if( this.msgHeaderSender == null ) {
+	        	this.msgHeaderSender = msgHeaderSender;
+	        } else if(this.msgHeaderSender.substring(this.msgHeaderSender.length() - 1).equals("]") & msgHeaderSender.equals("[")) {
+	        	this.msgHeaderSender = this.msgHeaderSender+ "," + msgHeaderSender;
+	        } else if(msgHeaderSender.equals("[") | msgHeaderSender.equals("]") | this.msgHeaderSender.substring(this.msgHeaderSender.length() - 1).equals("[")) {
+	        	this.msgHeaderSender = this.msgHeaderSender+msgHeaderSender;
+	        } else  {
+	            this.msgHeaderSender = this.msgHeaderSender+ "," +msgHeaderSender;
+	        }
+        }
+    }
+    
     
     
     public String getMsgHeaderSrcCntctPrdEnd() {
@@ -306,6 +656,20 @@ public class MessageHeader  implements java.io.Serializable {
     
     public void setMsgHeaderSrcCntctPrdEnd(String msgHeaderSrcCntctPrdEnd) {
         this.msgHeaderSrcCntctPrdEnd = msgHeaderSrcCntctPrdEnd;
+    }
+    
+    public void addMsgHeaderSrcCntctPrdEnd(String msgHeaderSrcCntctPrdEnd) {
+    	if( msgHeaderSrcCntctPrdEnd != null ) {
+	    	if( this.msgHeaderSrcCntctPrdEnd == null ) {
+	        	this.msgHeaderSrcCntctPrdEnd = msgHeaderSrcCntctPrdEnd;
+	        } else if(this.msgHeaderSrcCntctPrdEnd.substring(this.msgHeaderSrcCntctPrdEnd.length() - 1).equals("]") & msgHeaderSrcCntctPrdEnd.equals("[")) {
+	        	this.msgHeaderSrcCntctPrdEnd = this.msgHeaderSrcCntctPrdEnd+ "," + msgHeaderSrcCntctPrdEnd;
+	        } else if(msgHeaderSrcCntctPrdEnd.equals("[") | msgHeaderSrcCntctPrdEnd.equals("]") | this.msgHeaderSrcCntctPrdEnd.substring(this.msgHeaderSrcCntctPrdEnd.length() - 1).equals("[")) {
+	        	this.msgHeaderSrcCntctPrdEnd = this.msgHeaderSrcCntctPrdEnd+msgHeaderSrcCntctPrdEnd;
+	        } else  {
+	            this.msgHeaderSrcCntctPrdEnd = this.msgHeaderSrcCntctPrdEnd+ "," +msgHeaderSrcCntctPrdEnd;
+	        }
+        }
     }
     
     
@@ -318,6 +682,20 @@ public class MessageHeader  implements java.io.Serializable {
         this.msgHeaderSrcCntctPrdStrt = msgHeaderSrcCntctPrdStrt;
     }
     
+    public void addMsgHeaderSrcCntctPrdStrt(String msgHeaderSrcCntctPrdStrt) {
+    	if( msgHeaderSrcCntctPrdStrt != null ) {
+	    	if( this.msgHeaderSrcCntctPrdStrt == null ) {
+	        	this.msgHeaderSrcCntctPrdStrt = msgHeaderSrcCntctPrdStrt;
+	        } else if(this.msgHeaderSrcCntctPrdStrt.substring(this.msgHeaderSrcCntctPrdStrt.length() - 1).equals("]") & msgHeaderSrcCntctPrdStrt.equals("[")) {
+	        	this.msgHeaderSrcCntctPrdStrt = this.msgHeaderSrcCntctPrdStrt+ "," + msgHeaderSrcCntctPrdStrt;
+	        } else if(msgHeaderSrcCntctPrdStrt.equals("[") | msgHeaderSrcCntctPrdStrt.equals("]") | this.msgHeaderSrcCntctPrdStrt.substring(this.msgHeaderSrcCntctPrdStrt.length() - 1).equals("[")) {
+	        	this.msgHeaderSrcCntctPrdStrt = this.msgHeaderSrcCntctPrdStrt+msgHeaderSrcCntctPrdStrt;
+	        } else  {
+	            this.msgHeaderSrcCntctPrdStrt = this.msgHeaderSrcCntctPrdStrt+ "," +msgHeaderSrcCntctPrdStrt;
+	        }
+        }
+    }
+    
     
     
     public String getMsgHeaderSrcCntctRnk() {
@@ -326,6 +704,20 @@ public class MessageHeader  implements java.io.Serializable {
     
     public void setMsgHeaderSrcCntctRnk(String msgHeaderSrcCntctRnk) {
         this.msgHeaderSrcCntctRnk = msgHeaderSrcCntctRnk;
+    }
+    
+    public void addMsgHeaderSrcCntctRnk(String msgHeaderSrcCntctRnk) {
+    	if( msgHeaderSrcCntctRnk != null ) {
+	    	if( this.msgHeaderSrcCntctRnk == null ) {
+	        	this.msgHeaderSrcCntctRnk = msgHeaderSrcCntctRnk;
+	        } else if(this.msgHeaderSrcCntctRnk.substring(this.msgHeaderSrcCntctRnk.length() - 1).equals("]") & msgHeaderSrcCntctRnk.equals("[")) {
+	        	this.msgHeaderSrcCntctRnk = this.msgHeaderSrcCntctRnk+ "," + msgHeaderSrcCntctRnk;
+	        } else if(msgHeaderSrcCntctRnk.equals("[") | msgHeaderSrcCntctRnk.equals("]") | this.msgHeaderSrcCntctRnk.substring(this.msgHeaderSrcCntctRnk.length() - 1).equals("[")) {
+	        	this.msgHeaderSrcCntctRnk = this.msgHeaderSrcCntctRnk+msgHeaderSrcCntctRnk;
+	        } else  {
+	            this.msgHeaderSrcCntctRnk = this.msgHeaderSrcCntctRnk+ "," +msgHeaderSrcCntctRnk;
+	        }
+        }
     }
     
     
@@ -338,6 +730,20 @@ public class MessageHeader  implements java.io.Serializable {
         this.msgHeaderSrcCntctSys = msgHeaderSrcCntctSys;
     }
     
+    public void addMsgHeaderSrcCntctSys(String msgHeaderSrcCntctSys) {
+    	if( msgHeaderSrcCntctSys != null ) {
+	    	if( this.msgHeaderSrcCntctSys == null ) {
+	        	this.msgHeaderSrcCntctSys = msgHeaderSrcCntctSys;
+	        } else if(this.msgHeaderSrcCntctSys.substring(this.msgHeaderSrcCntctSys.length() - 1).equals("]") & msgHeaderSrcCntctSys.equals("[")) {
+	        	this.msgHeaderSrcCntctSys = this.msgHeaderSrcCntctSys+ "," + msgHeaderSrcCntctSys;
+	        } else if(msgHeaderSrcCntctSys.equals("[") | msgHeaderSrcCntctSys.equals("]") | this.msgHeaderSrcCntctSys.substring(this.msgHeaderSrcCntctSys.length() - 1).equals("[")) {
+	        	this.msgHeaderSrcCntctSys = this.msgHeaderSrcCntctSys+msgHeaderSrcCntctSys;
+	        } else  {
+	            this.msgHeaderSrcCntctSys = this.msgHeaderSrcCntctSys+ "," +msgHeaderSrcCntctSys;
+	        }
+        }
+    }
+    
     
     
     public String getMsgHeaderSrcCntctUse() {
@@ -346,6 +752,20 @@ public class MessageHeader  implements java.io.Serializable {
     
     public void setMsgHeaderSrcCntctUse(String msgHeaderSrcCntctUse) {
         this.msgHeaderSrcCntctUse = msgHeaderSrcCntctUse;
+    }
+    
+    public void addMsgHeaderSrcCntctUse(String msgHeaderSrcCntctUse) {
+    	if( msgHeaderSrcCntctUse != null ) {
+	    	if( this.msgHeaderSrcCntctUse == null ) {
+	        	this.msgHeaderSrcCntctUse = msgHeaderSrcCntctUse;
+	        } else if(this.msgHeaderSrcCntctUse.substring(this.msgHeaderSrcCntctUse.length() - 1).equals("]") & msgHeaderSrcCntctUse.equals("[")) {
+	        	this.msgHeaderSrcCntctUse = this.msgHeaderSrcCntctUse+ "," + msgHeaderSrcCntctUse;
+	        } else if(msgHeaderSrcCntctUse.equals("[") | msgHeaderSrcCntctUse.equals("]") | this.msgHeaderSrcCntctUse.substring(this.msgHeaderSrcCntctUse.length() - 1).equals("[")) {
+	        	this.msgHeaderSrcCntctUse = this.msgHeaderSrcCntctUse+msgHeaderSrcCntctUse;
+	        } else  {
+	            this.msgHeaderSrcCntctUse = this.msgHeaderSrcCntctUse+ "," +msgHeaderSrcCntctUse;
+	        }
+        }
     }
     
     
@@ -358,6 +778,20 @@ public class MessageHeader  implements java.io.Serializable {
         this.msgHeaderSrcCntctVl = msgHeaderSrcCntctVl;
     }
     
+    public void addMsgHeaderSrcCntctVl(String msgHeaderSrcCntctVl) {
+    	if( msgHeaderSrcCntctVl != null ) {
+	    	if( this.msgHeaderSrcCntctVl == null ) {
+	        	this.msgHeaderSrcCntctVl = msgHeaderSrcCntctVl;
+	        } else if(this.msgHeaderSrcCntctVl.substring(this.msgHeaderSrcCntctVl.length() - 1).equals("]") & msgHeaderSrcCntctVl.equals("[")) {
+	        	this.msgHeaderSrcCntctVl = this.msgHeaderSrcCntctVl+ "," + msgHeaderSrcCntctVl;
+	        } else if(msgHeaderSrcCntctVl.equals("[") | msgHeaderSrcCntctVl.equals("]") | this.msgHeaderSrcCntctVl.substring(this.msgHeaderSrcCntctVl.length() - 1).equals("[")) {
+	        	this.msgHeaderSrcCntctVl = this.msgHeaderSrcCntctVl+msgHeaderSrcCntctVl;
+	        } else  {
+	            this.msgHeaderSrcCntctVl = this.msgHeaderSrcCntctVl+ "," +msgHeaderSrcCntctVl;
+	        }
+        }
+    }
+    
     
     
     public String getMsgHeaderSrcEndpoint() {
@@ -366,6 +800,20 @@ public class MessageHeader  implements java.io.Serializable {
     
     public void setMsgHeaderSrcEndpoint(String msgHeaderSrcEndpoint) {
         this.msgHeaderSrcEndpoint = msgHeaderSrcEndpoint;
+    }
+    
+    public void addMsgHeaderSrcEndpoint(String msgHeaderSrcEndpoint) {
+    	if( msgHeaderSrcEndpoint != null ) {
+	    	if( this.msgHeaderSrcEndpoint == null ) {
+	        	this.msgHeaderSrcEndpoint = msgHeaderSrcEndpoint;
+	        } else if(this.msgHeaderSrcEndpoint.substring(this.msgHeaderSrcEndpoint.length() - 1).equals("]") & msgHeaderSrcEndpoint.equals("[")) {
+	        	this.msgHeaderSrcEndpoint = this.msgHeaderSrcEndpoint+ "," + msgHeaderSrcEndpoint;
+	        } else if(msgHeaderSrcEndpoint.equals("[") | msgHeaderSrcEndpoint.equals("]") | this.msgHeaderSrcEndpoint.substring(this.msgHeaderSrcEndpoint.length() - 1).equals("[")) {
+	        	this.msgHeaderSrcEndpoint = this.msgHeaderSrcEndpoint+msgHeaderSrcEndpoint;
+	        } else  {
+	            this.msgHeaderSrcEndpoint = this.msgHeaderSrcEndpoint+ "," +msgHeaderSrcEndpoint;
+	        }
+        }
     }
     
     
@@ -378,6 +826,20 @@ public class MessageHeader  implements java.io.Serializable {
         this.msgHeaderSrcNm = msgHeaderSrcNm;
     }
     
+    public void addMsgHeaderSrcNm(String msgHeaderSrcNm) {
+    	if( msgHeaderSrcNm != null ) {
+	    	if( this.msgHeaderSrcNm == null ) {
+	        	this.msgHeaderSrcNm = msgHeaderSrcNm;
+	        } else if(this.msgHeaderSrcNm.substring(this.msgHeaderSrcNm.length() - 1).equals("]") & msgHeaderSrcNm.equals("[")) {
+	        	this.msgHeaderSrcNm = this.msgHeaderSrcNm+ "," + msgHeaderSrcNm;
+	        } else if(msgHeaderSrcNm.equals("[") | msgHeaderSrcNm.equals("]") | this.msgHeaderSrcNm.substring(this.msgHeaderSrcNm.length() - 1).equals("[")) {
+	        	this.msgHeaderSrcNm = this.msgHeaderSrcNm+msgHeaderSrcNm;
+	        } else  {
+	            this.msgHeaderSrcNm = this.msgHeaderSrcNm+ "," +msgHeaderSrcNm;
+	        }
+        }
+    }
+    
     
     
     public String getMsgHeaderSrcSoftware() {
@@ -388,6 +850,20 @@ public class MessageHeader  implements java.io.Serializable {
         this.msgHeaderSrcSoftware = msgHeaderSrcSoftware;
     }
     
+    public void addMsgHeaderSrcSoftware(String msgHeaderSrcSoftware) {
+    	if( msgHeaderSrcSoftware != null ) {
+	    	if( this.msgHeaderSrcSoftware == null ) {
+	        	this.msgHeaderSrcSoftware = msgHeaderSrcSoftware;
+	        } else if(this.msgHeaderSrcSoftware.substring(this.msgHeaderSrcSoftware.length() - 1).equals("]") & msgHeaderSrcSoftware.equals("[")) {
+	        	this.msgHeaderSrcSoftware = this.msgHeaderSrcSoftware+ "," + msgHeaderSrcSoftware;
+	        } else if(msgHeaderSrcSoftware.equals("[") | msgHeaderSrcSoftware.equals("]") | this.msgHeaderSrcSoftware.substring(this.msgHeaderSrcSoftware.length() - 1).equals("[")) {
+	        	this.msgHeaderSrcSoftware = this.msgHeaderSrcSoftware+msgHeaderSrcSoftware;
+	        } else  {
+	            this.msgHeaderSrcSoftware = this.msgHeaderSrcSoftware+ "," +msgHeaderSrcSoftware;
+	        }
+        }
+    }
+    
     
     
     public String getMsgHeaderSrcVrsn() {
@@ -396,6 +872,20 @@ public class MessageHeader  implements java.io.Serializable {
     
     public void setMsgHeaderSrcVrsn(String msgHeaderSrcVrsn) {
         this.msgHeaderSrcVrsn = msgHeaderSrcVrsn;
+    }
+    
+    public void addMsgHeaderSrcVrsn(String msgHeaderSrcVrsn) {
+    	if( msgHeaderSrcVrsn != null ) {
+	    	if( this.msgHeaderSrcVrsn == null ) {
+	        	this.msgHeaderSrcVrsn = msgHeaderSrcVrsn;
+	        } else if(this.msgHeaderSrcVrsn.substring(this.msgHeaderSrcVrsn.length() - 1).equals("]") & msgHeaderSrcVrsn.equals("[")) {
+	        	this.msgHeaderSrcVrsn = this.msgHeaderSrcVrsn+ "," + msgHeaderSrcVrsn;
+	        } else if(msgHeaderSrcVrsn.equals("[") | msgHeaderSrcVrsn.equals("]") | this.msgHeaderSrcVrsn.substring(this.msgHeaderSrcVrsn.length() - 1).equals("[")) {
+	        	this.msgHeaderSrcVrsn = this.msgHeaderSrcVrsn+msgHeaderSrcVrsn;
+	        } else  {
+	            this.msgHeaderSrcVrsn = this.msgHeaderSrcVrsn+ "," +msgHeaderSrcVrsn;
+	        }
+        }
     }
     
     

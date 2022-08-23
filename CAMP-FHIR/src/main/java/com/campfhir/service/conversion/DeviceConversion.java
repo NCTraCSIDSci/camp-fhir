@@ -10,571 +10,1221 @@ public class DeviceConversion
 		/******************** id ********************************************************************************/
 		device.setId(d.getId());
 
-		/******************** devicecontact ********************************************************************************/
-		org.hl7.fhir.r4.model.ContactPoint devicecontact =  new org.hl7.fhir.r4.model.ContactPoint();
-		device.addContact(devicecontact);
-
-		/******************** devicecontactperiod ********************************************************************************/
-		org.hl7.fhir.r4.model.Period devicecontactperiod =  new org.hl7.fhir.r4.model.Period();
-		devicecontact.setPeriod(devicecontactperiod);
-
 		/******************** Dvc_Cntct_Prd_End ********************************************************************************/
-		if(d.getDvcCntctPrdEnd() != null) {
-			java.text.SimpleDateFormat Dvc_Cntct_Prd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date Dvc_Cntct_Prd_Enddate = Dvc_Cntct_Prd_Endsdf.parse(d.getDvcCntctPrdEnd());
-			devicecontactperiod.setEnd(Dvc_Cntct_Prd_Enddate);
+		if(d.getDvcCntctPrdEnd() != null ) {
+
+			String[] arrayi0 = d.getDvcCntctPrdEnd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getContact().size() < i0+1) { device.addContact(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {device.getContact().get(i0).getPeriod().setEnd(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** Dvc_Cntct_Prd_Strt ********************************************************************************/
-		if(d.getDvcCntctPrdStrt() != null) {
-			java.text.SimpleDateFormat Dvc_Cntct_Prd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date Dvc_Cntct_Prd_Strtdate = Dvc_Cntct_Prd_Strtsdf.parse(d.getDvcCntctPrdStrt());
-			devicecontactperiod.setStart(Dvc_Cntct_Prd_Strtdate);
+		if(d.getDvcCntctPrdStrt() != null ) {
+
+			String[] arrayi0 = d.getDvcCntctPrdStrt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getContact().size() < i0+1) { device.addContact(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {device.getContact().get(i0).getPeriod().setStart(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** Dvc_Cntct_Rnk ********************************************************************************/
-		if(d.getDvcCntctRnk() != null) {
-			devicecontact.setRank(Integer.parseInt(d.getDvcCntctRnk()));
+		if(d.getDvcCntctRnk() != null ) {
+
+			String[] arrayi0 = d.getDvcCntctRnk().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getContact().size() < i0+1) { device.addContact(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {device.getContact().get(i0).setRank(Integer.parseInt(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
-		/******************** devicecontactsystem ********************************************************************************/
-		org.hl7.fhir.r4.model.ContactPoint.ContactPointSystemEnumFactory devicecontactsystem =  new org.hl7.fhir.r4.model.ContactPoint.ContactPointSystemEnumFactory();
-		devicecontact.setSystem(devicecontactsystem.fromCode(d.getDvcCntctSys()));
+		/******************** Dvc_Cntct_Sys ********************************************************************************/
+		if(d.getDvcCntctSys() != null ) {
 
-		/******************** devicecontactuse ********************************************************************************/
-		org.hl7.fhir.r4.model.ContactPoint.ContactPointUseEnumFactory devicecontactuse =  new org.hl7.fhir.r4.model.ContactPoint.ContactPointUseEnumFactory();
-		devicecontact.setUse(devicecontactuse.fromCode(d.getDvcCntctUse()));
+			String[] arrayi0 = d.getDvcCntctSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getContact().size() < i0+1) { device.addContact(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {device.getContact().get(i0).setSystem(new org.hl7.fhir.r4.model.ContactPoint.ContactPointSystemEnumFactory().fromCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
 
+		}
+		/******************** Dvc_Cntct_Use ********************************************************************************/
+		if(d.getDvcCntctUse() != null ) {
+
+			String[] arrayi0 = d.getDvcCntctUse().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getContact().size() < i0+1) { device.addContact(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {device.getContact().get(i0).setUse(new org.hl7.fhir.r4.model.ContactPoint.ContactPointUseEnumFactory().fromCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** Dvc_Cntct_Vl ********************************************************************************/
-		if(d.getDvcCntctVl() != null) {
-			devicecontact.setValue(d.getDvcCntctVl());
+		if(d.getDvcCntctVl() != null ) {
+
+			String[] arrayi0 = d.getDvcCntctVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getContact().size() < i0+1) { device.addContact(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {device.getContact().get(i0).setValue(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** Dvc_Dfn ********************************************************************************/
-		if(d.getDvcDfn() != null) {
-			device.setDefinition( new org.hl7.fhir.r4.model.Reference(d.getDvcDfn()));
-		}
-		/******************** devicedevicename ********************************************************************************/
-		org.hl7.fhir.r4.model.Device.DeviceDeviceNameComponent devicedevicename =  new org.hl7.fhir.r4.model.Device.DeviceDeviceNameComponent();
-		device.addDeviceName(devicedevicename);
+		if(d.getDvcDfn() != null ) {
 
+			if(d.getDvcDfn().replace("[","").replace("]","").equals("NULL") | d.getDvcDfn()==null) {} else {
+			device.setDefinition(new org.hl7.fhir.r4.model.Reference(d.getDvcDfn().replace("[","").replace("]","").replace("\"","")));
+			}
+		}
 		/******************** Dvc_DvcNm_Nm ********************************************************************************/
-		if(d.getDvcDvcNmNm() != null) {
-			devicedevicename.setName(d.getDvcDvcNmNm());
-		}
-		/******************** devicedevicenametype ********************************************************************************/
-		org.hl7.fhir.r4.model.Device.DeviceNameTypeEnumFactory devicedevicenametype =  new org.hl7.fhir.r4.model.Device.DeviceNameTypeEnumFactory();
-		devicedevicename.setType(devicedevicenametype.fromCode(d.getDvcDvcNmTyp()));
+		if(d.getDvcDvcNmNm() != null ) {
 
+			String[] arrayi0 = d.getDvcDvcNmNm().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getDeviceName().size() < i0+1) { device.addDeviceName(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {device.getDeviceName().get(i0).setName(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
+		}
+		/******************** Dvc_DvcNm_Typ ********************************************************************************/
+		if(d.getDvcDvcNmTyp() != null ) {
+
+			String[] arrayi0 = d.getDvcDvcNmTyp().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getDeviceName().size() < i0+1) { device.addDeviceName(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {device.getDeviceName().get(i0).setType(new org.hl7.fhir.r4.model.Device.DeviceNameTypeEnumFactory().fromCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** Dvc_DistinctId ********************************************************************************/
-		if(d.getDvcDistinctId() != null) {
-			device.setDistinctIdentifier(d.getDvcDistinctId());
+		if(d.getDvcDistinctId() != null ) {
+
+			if(d.getDvcDistinctId().replace("[","").replace("]","").equals("NULL") | d.getDvcDistinctId()==null) {} else {
+			device.setDistinctIdentifier(d.getDvcDistinctId().replace("[","").replace("]","").replace("\"",""));
+			}
 		}
 		/******************** Dvc_ExpirationDt ********************************************************************************/
-		if(d.getDvcExpirationDt() != null) {
-			java.text.SimpleDateFormat Dvc_ExpirationDtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date Dvc_ExpirationDtdate = Dvc_ExpirationDtsdf.parse(d.getDvcExpirationDt());
-			device.setExpirationDate(Dvc_ExpirationDtdate);
-		}
-		/******************** deviceidentifier ********************************************************************************/
-		org.hl7.fhir.r4.model.Identifier deviceidentifier =  new org.hl7.fhir.r4.model.Identifier();
-		device.addIdentifier(deviceidentifier);
+		if(d.getDvcExpirationDt() != null ) {
 
+			if(d.getDvcExpirationDt().replace("[","").replace("]","").equals("NULL") | d.getDvcExpirationDt()==null) {} else {
+			device.setExpirationDate(d.getDvcExpirationDt().replace("[","").replace("]","").equals("NULL") | d.getDvcExpirationDt()==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(d.getDvcExpirationDt().replace("[","").replace("]","").replace("\"","")));
+			}
+		}
 		/******************** Dvc_Id_Assigner ********************************************************************************/
-		if(d.getDvcIdAssigner() != null) {
-			deviceidentifier.setAssigner( new org.hl7.fhir.r4.model.Reference(d.getDvcIdAssigner()));
-		}
-		/******************** deviceidentifierperiod ********************************************************************************/
-		org.hl7.fhir.r4.model.Period deviceidentifierperiod =  new org.hl7.fhir.r4.model.Period();
-		deviceidentifier.setPeriod(deviceidentifierperiod);
+		if(d.getDvcIdAssigner() != null ) {
 
+			String[] arrayi0 = d.getDvcIdAssigner().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getIdentifier().size() < i0+1) { device.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {device.getIdentifier().get(i0).setAssigner(new org.hl7.fhir.r4.model.Reference(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** Dvc_Id_Prd_End ********************************************************************************/
-		if(d.getDvcIdPrdEnd() != null) {
-			java.text.SimpleDateFormat Dvc_Id_Prd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date Dvc_Id_Prd_Enddate = Dvc_Id_Prd_Endsdf.parse(d.getDvcIdPrdEnd());
-			deviceidentifierperiod.setEnd(Dvc_Id_Prd_Enddate);
+		if(d.getDvcIdPrdEnd() != null ) {
+
+			String[] arrayi0 = d.getDvcIdPrdEnd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getIdentifier().size() < i0+1) { device.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {device.getIdentifier().get(i0).getPeriod().setEnd(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** Dvc_Id_Prd_Strt ********************************************************************************/
-		if(d.getDvcIdPrdStrt() != null) {
-			java.text.SimpleDateFormat Dvc_Id_Prd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date Dvc_Id_Prd_Strtdate = Dvc_Id_Prd_Strtsdf.parse(d.getDvcIdPrdStrt());
-			deviceidentifierperiod.setStart(Dvc_Id_Prd_Strtdate);
+		if(d.getDvcIdPrdStrt() != null ) {
+
+			String[] arrayi0 = d.getDvcIdPrdStrt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getIdentifier().size() < i0+1) { device.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {device.getIdentifier().get(i0).getPeriod().setStart(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** Dvc_Id_Sys ********************************************************************************/
-		if(d.getDvcIdSys() != null) {
-			deviceidentifier.setSystem(d.getDvcIdSys());
+		if(d.getDvcIdSys() != null ) {
+
+			String[] arrayi0 = d.getDvcIdSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getIdentifier().size() < i0+1) { device.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {device.getIdentifier().get(i0).setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
-		/******************** deviceidentifiertype ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept deviceidentifiertype =  new org.hl7.fhir.r4.model.CodeableConcept();
-		deviceidentifier.setType(deviceidentifiertype);
-
-		/******************** deviceidentifiertypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding deviceidentifiertypecoding =  new org.hl7.fhir.r4.model.Coding();
-		deviceidentifiertype.addCoding(deviceidentifiertypecoding);
-
 		/******************** Dvc_Id_Typ_Cdg_Cd ********************************************************************************/
-		if(d.getDvcIdTypCdgCd() != null) {
-			deviceidentifiertypecoding.setCode(d.getDvcIdTypCdgCd());
+		if(d.getDvcIdTypCdgCd() != null ) {
+
+			String[] arrayi0 = d.getDvcIdTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getIdentifier().size() < i0+1) { device.addIdentifier(); }
+				String[] arrayi1 = d.getDvcIdTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(device.getIdentifier().get(i0).getType().getCoding().size() < i1+1) { device.getIdentifier().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {device.getIdentifier().get(i0).getType().getCoding().get(i1).setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** Dvc_Id_Typ_Cdg_Dsply ********************************************************************************/
-		if(d.getDvcIdTypCdgDsply() != null) {
-			deviceidentifiertypecoding.setDisplay(d.getDvcIdTypCdgDsply());
+		if(d.getDvcIdTypCdgDsply() != null ) {
+
+			String[] arrayi0 = d.getDvcIdTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getIdentifier().size() < i0+1) { device.addIdentifier(); }
+				String[] arrayi1 = d.getDvcIdTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(device.getIdentifier().get(i0).getType().getCoding().size() < i1+1) { device.getIdentifier().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {device.getIdentifier().get(i0).getType().getCoding().get(i1).setDisplay(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** Dvc_Id_Typ_Cdg_Sys ********************************************************************************/
-		if(d.getDvcIdTypCdgSys() != null) {
-			deviceidentifiertypecoding.setSystem(d.getDvcIdTypCdgSys());
+		if(d.getDvcIdTypCdgSys() != null ) {
+
+			String[] arrayi0 = d.getDvcIdTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getIdentifier().size() < i0+1) { device.addIdentifier(); }
+				String[] arrayi1 = d.getDvcIdTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(device.getIdentifier().get(i0).getType().getCoding().size() < i1+1) { device.getIdentifier().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {device.getIdentifier().get(i0).getType().getCoding().get(i1).setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** Dvc_Id_Typ_Cdg_UsrSltd ********************************************************************************/
-		if(d.getDvcIdTypCdgUsrSltd() != null) {
-			deviceidentifiertypecoding.setUserSelected(Boolean.parseBoolean(d.getDvcIdTypCdgUsrSltd()));
+		if(d.getDvcIdTypCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = d.getDvcIdTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getIdentifier().size() < i0+1) { device.addIdentifier(); }
+				String[] arrayi1 = d.getDvcIdTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(device.getIdentifier().get(i0).getType().getCoding().size() < i1+1) { device.getIdentifier().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {device.getIdentifier().get(i0).getType().getCoding().get(i1).setUserSelected(Boolean.parseBoolean(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
 		}
 		/******************** Dvc_Id_Typ_Cdg_Vrsn ********************************************************************************/
-		if(d.getDvcIdTypCdgVrsn() != null) {
-			deviceidentifiertypecoding.setVersion(d.getDvcIdTypCdgVrsn());
+		if(d.getDvcIdTypCdgVrsn() != null ) {
+
+			String[] arrayi0 = d.getDvcIdTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getIdentifier().size() < i0+1) { device.addIdentifier(); }
+				String[] arrayi1 = d.getDvcIdTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(device.getIdentifier().get(i0).getType().getCoding().size() < i1+1) { device.getIdentifier().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {device.getIdentifier().get(i0).getType().getCoding().get(i1).setVersion(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** Dvc_Id_Typ_Txt ********************************************************************************/
-		if(d.getDvcIdTypTxt() != null) {
-			deviceidentifiertype.setText(d.getDvcIdTypTxt());
-		}
-		/******************** deviceidentifieruse ********************************************************************************/
-		org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory deviceidentifieruse =  new org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory();
-		deviceidentifier.setUse(deviceidentifieruse.fromCode(d.getDvcIdUse()));
+		if(d.getDvcIdTypTxt() != null ) {
 
+			String[] arrayi0 = d.getDvcIdTypTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getIdentifier().size() < i0+1) { device.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {device.getIdentifier().get(i0).getType().setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
+		}
+		/******************** Dvc_Id_Use ********************************************************************************/
+		if(d.getDvcIdUse() != null ) {
+
+			String[] arrayi0 = d.getDvcIdUse().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getIdentifier().size() < i0+1) { device.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {device.getIdentifier().get(i0).setUse(new org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory().fromCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** Dvc_Id_Vl ********************************************************************************/
-		if(d.getDvcIdVl() != null) {
-			deviceidentifier.setValue(d.getDvcIdVl());
+		if(d.getDvcIdVl() != null ) {
+
+			String[] arrayi0 = d.getDvcIdVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getIdentifier().size() < i0+1) { device.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {device.getIdentifier().get(i0).setValue(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** Dvc_Lctn ********************************************************************************/
-		if(d.getDvcLctn() != null) {
-			device.setLocation( new org.hl7.fhir.r4.model.Reference(d.getDvcLctn()));
+		if(d.getDvcLctn() != null ) {
+
+			if(d.getDvcLctn().replace("[","").replace("]","").equals("NULL") | d.getDvcLctn()==null) {} else {
+			device.setLocation(new org.hl7.fhir.r4.model.Reference(d.getDvcLctn().replace("[","").replace("]","").replace("\"","")));
+			}
 		}
 		/******************** Dvc_LotNmbr ********************************************************************************/
-		if(d.getDvcLotNmbr() != null) {
-			device.setLotNumber(d.getDvcLotNmbr());
+		if(d.getDvcLotNmbr() != null ) {
+
+			if(d.getDvcLotNmbr().replace("[","").replace("]","").equals("NULL") | d.getDvcLotNmbr()==null) {} else {
+			device.setLotNumber(d.getDvcLotNmbr().replace("[","").replace("]","").replace("\"",""));
+			}
 		}
 		/******************** Dvc_ManufactureDt ********************************************************************************/
-		if(d.getDvcManufactureDt() != null) {
-			java.text.SimpleDateFormat Dvc_ManufactureDtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date Dvc_ManufactureDtdate = Dvc_ManufactureDtsdf.parse(d.getDvcManufactureDt());
-			device.setManufactureDate(Dvc_ManufactureDtdate);
+		if(d.getDvcManufactureDt() != null ) {
+
+			if(d.getDvcManufactureDt().replace("[","").replace("]","").equals("NULL") | d.getDvcManufactureDt()==null) {} else {
+			device.setManufactureDate(d.getDvcManufactureDt().replace("[","").replace("]","").equals("NULL") | d.getDvcManufactureDt()==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(d.getDvcManufactureDt().replace("[","").replace("]","").replace("\"","")));
+			}
 		}
 		/******************** Dvc_Manufacturer ********************************************************************************/
-		if(d.getDvcManufacturer() != null) {
-			device.setManufacturer(d.getDvcManufacturer());
+		if(d.getDvcManufacturer() != null ) {
+
+			if(d.getDvcManufacturer().replace("[","").replace("]","").equals("NULL") | d.getDvcManufacturer()==null) {} else {
+			device.setManufacturer(d.getDvcManufacturer().replace("[","").replace("]","").replace("\"",""));
+			}
 		}
 		/******************** Dvc_ModelNmbr ********************************************************************************/
-		if(d.getDvcModelNmbr() != null) {
-			device.setModelNumber(d.getDvcModelNmbr());
-		}
-		/******************** devicenote ********************************************************************************/
-		org.hl7.fhir.r4.model.Annotation devicenote =  new org.hl7.fhir.r4.model.Annotation();
-		device.addNote(devicenote);
+		if(d.getDvcModelNmbr() != null ) {
 
+			if(d.getDvcModelNmbr().replace("[","").replace("]","").equals("NULL") | d.getDvcModelNmbr()==null) {} else {
+			device.setModelNumber(d.getDvcModelNmbr().replace("[","").replace("]","").replace("\"",""));
+			}
+		}
 		/******************** Dvc_Nt_AthrRfrnc ********************************************************************************/
-		if(d.getDvcNtAthrRfrnc() != null) {
-			devicenote.setAuthor( new org.hl7.fhir.r4.model.Reference(d.getDvcNtAthrRfrnc()));
+		if(d.getDvcNtAthrRfrnc() != null ) {
+
+			String[] arrayi0 = d.getDvcNtAthrRfrnc().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getNote().size() < i0+1) { device.addNote(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {device.getNote().get(i0).setAuthor(new org.hl7.fhir.r4.model.Reference(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** Dvc_Nt_AthrStrgTyp ********************************************************************************/
-		if(d.getDvcNtAthrStrgTyp() != null) {
-			devicenote.setAuthor( new org.hl7.fhir.r4.model.StringType(d.getDvcNtAthrStrgTyp()));
+		if(d.getDvcNtAthrStrgTyp() != null ) {
+
+			String[] arrayi0 = d.getDvcNtAthrStrgTyp().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getNote().size() < i0+1) { device.addNote(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {device.getNote().get(i0).setAuthor(new org.hl7.fhir.r4.model.StringType(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** Dvc_Nt_Txt ********************************************************************************/
-		if(d.getDvcNtTxt() != null) {
-			devicenote.setText(d.getDvcNtTxt());
+		if(d.getDvcNtTxt() != null ) {
+
+			String[] arrayi0 = d.getDvcNtTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getNote().size() < i0+1) { device.addNote(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {device.getNote().get(i0).setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** Dvc_Nt_Time ********************************************************************************/
-		if(d.getDvcNtTime() != null) {
-			java.text.SimpleDateFormat Dvc_Nt_Timesdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date Dvc_Nt_Timedate = Dvc_Nt_Timesdf.parse(d.getDvcNtTime());
-			devicenote.setTime(Dvc_Nt_Timedate);
+		if(d.getDvcNtTime() != null ) {
+
+			String[] arrayi0 = d.getDvcNtTime().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getNote().size() < i0+1) { device.addNote(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {device.getNote().get(i0).setTime(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** Dvc_Owner ********************************************************************************/
-		if(d.getDvcOwner() != null) {
-			device.setOwner( new org.hl7.fhir.r4.model.Reference(d.getDvcOwner()));
+		if(d.getDvcOwner() != null ) {
+
+			if(d.getDvcOwner().replace("[","").replace("]","").equals("NULL") | d.getDvcOwner()==null) {} else {
+			device.setOwner(new org.hl7.fhir.r4.model.Reference(d.getDvcOwner().replace("[","").replace("]","").replace("\"","")));
+			}
 		}
 		/******************** Dvc_Parent ********************************************************************************/
-		if(d.getDvcParent() != null) {
-			device.setParent( new org.hl7.fhir.r4.model.Reference(d.getDvcParent()));
+		if(d.getDvcParent() != null ) {
+
+			if(d.getDvcParent().replace("[","").replace("]","").equals("NULL") | d.getDvcParent()==null) {} else {
+			device.setParent(new org.hl7.fhir.r4.model.Reference(d.getDvcParent().replace("[","").replace("]","").replace("\"","")));
+			}
 		}
 		/******************** Dvc_PartNmbr ********************************************************************************/
-		if(d.getDvcPartNmbr() != null) {
-			device.setPartNumber(d.getDvcPartNmbr());
+		if(d.getDvcPartNmbr() != null ) {
+
+			if(d.getDvcPartNmbr().replace("[","").replace("]","").equals("NULL") | d.getDvcPartNmbr()==null) {} else {
+			device.setPartNumber(d.getDvcPartNmbr().replace("[","").replace("]","").replace("\"",""));
+			}
 		}
 		/******************** Dvc_Pnt ********************************************************************************/
-		if(d.getDvcPnt() != null) {
-			device.setPatient( new org.hl7.fhir.r4.model.Reference(d.getDvcPnt()));
+		if(d.getDvcPnt() != null ) {
+
+			if(d.getDvcPnt().replace("[","").replace("]","").equals("NULL") | d.getDvcPnt()==null) {} else {
+			device.setPatient(new org.hl7.fhir.r4.model.Reference(d.getDvcPnt().replace("[","").replace("]","").replace("\"","")));
+			}
 		}
-		/******************** deviceproperty ********************************************************************************/
-		org.hl7.fhir.r4.model.Device.DevicePropertyComponent deviceproperty =  new org.hl7.fhir.r4.model.Device.DevicePropertyComponent();
-		device.addProperty(deviceproperty);
-
-		/******************** devicepropertytype ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept devicepropertytype =  new org.hl7.fhir.r4.model.CodeableConcept();
-		deviceproperty.setType(devicepropertytype);
-
-		/******************** devicepropertytypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding devicepropertytypecoding =  new org.hl7.fhir.r4.model.Coding();
-		devicepropertytype.addCoding(devicepropertytypecoding);
-
 		/******************** Dvc_Prpty_Typ_Cdg_Cd ********************************************************************************/
-		if(d.getDvcPrptyTypCdgCd() != null) {
-			devicepropertytypecoding.setCode(d.getDvcPrptyTypCdgCd());
+		if(d.getDvcPrptyTypCdgCd() != null ) {
+
+			String[] arrayi0 = d.getDvcPrptyTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getProperty().size() < i0+1) { device.addProperty(); }
+				String[] arrayi1 = d.getDvcPrptyTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(device.getProperty().get(i0).getType().getCoding().size() < i1+1) { device.getProperty().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {device.getProperty().get(i0).getType().getCoding().get(i1).setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** Dvc_Prpty_Typ_Cdg_Dsply ********************************************************************************/
-		if(d.getDvcPrptyTypCdgDsply() != null) {
-			devicepropertytypecoding.setDisplay(d.getDvcPrptyTypCdgDsply());
+		if(d.getDvcPrptyTypCdgDsply() != null ) {
+
+			String[] arrayi0 = d.getDvcPrptyTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getProperty().size() < i0+1) { device.addProperty(); }
+				String[] arrayi1 = d.getDvcPrptyTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(device.getProperty().get(i0).getType().getCoding().size() < i1+1) { device.getProperty().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {device.getProperty().get(i0).getType().getCoding().get(i1).setDisplay(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** Dvc_Prpty_Typ_Cdg_Sys ********************************************************************************/
-		if(d.getDvcPrptyTypCdgSys() != null) {
-			devicepropertytypecoding.setSystem(d.getDvcPrptyTypCdgSys());
+		if(d.getDvcPrptyTypCdgSys() != null ) {
+
+			String[] arrayi0 = d.getDvcPrptyTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getProperty().size() < i0+1) { device.addProperty(); }
+				String[] arrayi1 = d.getDvcPrptyTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(device.getProperty().get(i0).getType().getCoding().size() < i1+1) { device.getProperty().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {device.getProperty().get(i0).getType().getCoding().get(i1).setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** Dvc_Prpty_Typ_Cdg_UsrSltd ********************************************************************************/
-		if(d.getDvcPrptyTypCdgUsrSltd() != null) {
-			devicepropertytypecoding.setUserSelected(Boolean.parseBoolean(d.getDvcPrptyTypCdgUsrSltd()));
+		if(d.getDvcPrptyTypCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = d.getDvcPrptyTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getProperty().size() < i0+1) { device.addProperty(); }
+				String[] arrayi1 = d.getDvcPrptyTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(device.getProperty().get(i0).getType().getCoding().size() < i1+1) { device.getProperty().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {device.getProperty().get(i0).getType().getCoding().get(i1).setUserSelected(Boolean.parseBoolean(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
 		}
 		/******************** Dvc_Prpty_Typ_Cdg_Vrsn ********************************************************************************/
-		if(d.getDvcPrptyTypCdgVrsn() != null) {
-			devicepropertytypecoding.setVersion(d.getDvcPrptyTypCdgVrsn());
+		if(d.getDvcPrptyTypCdgVrsn() != null ) {
+
+			String[] arrayi0 = d.getDvcPrptyTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getProperty().size() < i0+1) { device.addProperty(); }
+				String[] arrayi1 = d.getDvcPrptyTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(device.getProperty().get(i0).getType().getCoding().size() < i1+1) { device.getProperty().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {device.getProperty().get(i0).getType().getCoding().get(i1).setVersion(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** Dvc_Prpty_Typ_Txt ********************************************************************************/
-		if(d.getDvcPrptyTypTxt() != null) {
-			devicepropertytype.setText(d.getDvcPrptyTypTxt());
+		if(d.getDvcPrptyTypTxt() != null ) {
+
+			String[] arrayi0 = d.getDvcPrptyTypTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getProperty().size() < i0+1) { device.addProperty(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {device.getProperty().get(i0).getType().setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
-		/******************** devicepropertyvaluecode ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept devicepropertyvaluecode =  new org.hl7.fhir.r4.model.CodeableConcept();
-		deviceproperty.addValueCode(devicepropertyvaluecode);
-
-		/******************** devicepropertyvaluecodecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding devicepropertyvaluecodecoding =  new org.hl7.fhir.r4.model.Coding();
-		devicepropertyvaluecode.addCoding(devicepropertyvaluecodecoding);
-
 		/******************** Dvc_Prpty_VlCd_Cdg_Cd ********************************************************************************/
-		if(d.getDvcPrptyVlCdCdgCd() != null) {
-			devicepropertyvaluecodecoding.setCode(d.getDvcPrptyVlCdCdgCd());
+		if(d.getDvcPrptyVlCdCdgCd() != null ) {
+
+			String[] arrayi0 = d.getDvcPrptyVlCdCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getProperty().size() < i0+1) { device.addProperty(); }
+				String[] arrayi1 = d.getDvcPrptyVlCdCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(device.getProperty().get(i0).getValueCode().size() < i1+1) { device.getProperty().get(i0).addValueCode(); }
+					String[] arrayi2 = d.getDvcPrptyVlCdCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+						if(device.getProperty().get(i0).getValueCode().get(i1).getCoding().size() < i2+1) { device.getProperty().get(i0).getValueCode().get(i1).addCoding(); }
+						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {device.getProperty().get(i0).getValueCode().get(i1).getCoding().get(i2).setCode(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+					}
+				}
+			}
+
 		}
 		/******************** Dvc_Prpty_VlCd_Cdg_Dsply ********************************************************************************/
-		if(d.getDvcPrptyVlCdCdgDsply() != null) {
-			devicepropertyvaluecodecoding.setDisplay(d.getDvcPrptyVlCdCdgDsply());
+		if(d.getDvcPrptyVlCdCdgDsply() != null ) {
+
+			String[] arrayi0 = d.getDvcPrptyVlCdCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getProperty().size() < i0+1) { device.addProperty(); }
+				String[] arrayi1 = d.getDvcPrptyVlCdCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(device.getProperty().get(i0).getValueCode().size() < i1+1) { device.getProperty().get(i0).addValueCode(); }
+					String[] arrayi2 = d.getDvcPrptyVlCdCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+						if(device.getProperty().get(i0).getValueCode().get(i1).getCoding().size() < i2+1) { device.getProperty().get(i0).getValueCode().get(i1).addCoding(); }
+						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {device.getProperty().get(i0).getValueCode().get(i1).getCoding().get(i2).setDisplay(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+					}
+				}
+			}
+
 		}
 		/******************** Dvc_Prpty_VlCd_Cdg_Sys ********************************************************************************/
-		if(d.getDvcPrptyVlCdCdgSys() != null) {
-			devicepropertyvaluecodecoding.setSystem(d.getDvcPrptyVlCdCdgSys());
+		if(d.getDvcPrptyVlCdCdgSys() != null ) {
+
+			String[] arrayi0 = d.getDvcPrptyVlCdCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getProperty().size() < i0+1) { device.addProperty(); }
+				String[] arrayi1 = d.getDvcPrptyVlCdCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(device.getProperty().get(i0).getValueCode().size() < i1+1) { device.getProperty().get(i0).addValueCode(); }
+					String[] arrayi2 = d.getDvcPrptyVlCdCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+						if(device.getProperty().get(i0).getValueCode().get(i1).getCoding().size() < i2+1) { device.getProperty().get(i0).getValueCode().get(i1).addCoding(); }
+						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {device.getProperty().get(i0).getValueCode().get(i1).getCoding().get(i2).setSystem(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+					}
+				}
+			}
+
 		}
 		/******************** Dvc_Prpty_VlCd_Cdg_UsrSltd ********************************************************************************/
-		if(d.getDvcPrptyVlCdCdgUsrSltd() != null) {
-			devicepropertyvaluecodecoding.setUserSelected(Boolean.parseBoolean(d.getDvcPrptyVlCdCdgUsrSltd()));
+		if(d.getDvcPrptyVlCdCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = d.getDvcPrptyVlCdCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getProperty().size() < i0+1) { device.addProperty(); }
+				String[] arrayi1 = d.getDvcPrptyVlCdCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(device.getProperty().get(i0).getValueCode().size() < i1+1) { device.getProperty().get(i0).addValueCode(); }
+					String[] arrayi2 = d.getDvcPrptyVlCdCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+						if(device.getProperty().get(i0).getValueCode().get(i1).getCoding().size() < i2+1) { device.getProperty().get(i0).getValueCode().get(i1).addCoding(); }
+						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {device.getProperty().get(i0).getValueCode().get(i1).getCoding().get(i2).setUserSelected(Boolean.parseBoolean(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+					}
+				}
+			}
+
 		}
 		/******************** Dvc_Prpty_VlCd_Cdg_Vrsn ********************************************************************************/
-		if(d.getDvcPrptyVlCdCdgVrsn() != null) {
-			devicepropertyvaluecodecoding.setVersion(d.getDvcPrptyVlCdCdgVrsn());
+		if(d.getDvcPrptyVlCdCdgVrsn() != null ) {
+
+			String[] arrayi0 = d.getDvcPrptyVlCdCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getProperty().size() < i0+1) { device.addProperty(); }
+				String[] arrayi1 = d.getDvcPrptyVlCdCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(device.getProperty().get(i0).getValueCode().size() < i1+1) { device.getProperty().get(i0).addValueCode(); }
+					String[] arrayi2 = d.getDvcPrptyVlCdCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i1].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+					for(int i2 = 0; i2 < arrayi2.length; i2++) {
+						if(device.getProperty().get(i0).getValueCode().get(i1).getCoding().size() < i2+1) { device.getProperty().get(i0).getValueCode().get(i1).addCoding(); }
+						if(arrayi2[i2].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi2[i2]==null) {} else {device.getProperty().get(i0).getValueCode().get(i1).getCoding().get(i2).setVersion(arrayi2[i2].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+					}
+				}
+			}
+
 		}
 		/******************** Dvc_Prpty_VlCd_Txt ********************************************************************************/
-		if(d.getDvcPrptyVlCdTxt() != null) {
-			devicepropertyvaluecode.setText(d.getDvcPrptyVlCdTxt());
-		}
-		/******************** devicepropertyvaluequantity ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity devicepropertyvaluequantity =  new org.hl7.fhir.r4.model.Quantity();
-		deviceproperty.addValueQuantity(devicepropertyvaluequantity);
+		if(d.getDvcPrptyVlCdTxt() != null ) {
 
+			String[] arrayi0 = d.getDvcPrptyVlCdTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getProperty().size() < i0+1) { device.addProperty(); }
+				String[] arrayi1 = d.getDvcPrptyVlCdTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(device.getProperty().get(i0).getValueCode().size() < i1+1) { device.getProperty().get(i0).addValueCode(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {device.getProperty().get(i0).getValueCode().get(i1).setText(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
+		}
 		/******************** Dvc_Prpty_VlQnty_Cd ********************************************************************************/
-		if(d.getDvcPrptyVlQntyCd() != null) {
-			devicepropertyvaluequantity.setCode(d.getDvcPrptyVlQntyCd());
-		}
-		/******************** devicepropertyvaluequantitycomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory devicepropertyvaluequantitycomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-		devicepropertyvaluequantity.setComparator(devicepropertyvaluequantitycomparator.fromCode(d.getDvcPrptyVlQntyCmprtr()));
+		if(d.getDvcPrptyVlQntyCd() != null ) {
 
+			String[] arrayi0 = d.getDvcPrptyVlQntyCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getProperty().size() < i0+1) { device.addProperty(); }
+				String[] arrayi1 = d.getDvcPrptyVlQntyCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(device.getProperty().get(i0).getValueQuantity().size() < i1+1) { device.getProperty().get(i0).addValueQuantity(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {device.getProperty().get(i0).getValueQuantity().get(i1).setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
+		}
+		/******************** Dvc_Prpty_VlQnty_Cmprtr ********************************************************************************/
+		if(d.getDvcPrptyVlQntyCmprtr() != null ) {
+
+			String[] arrayi0 = d.getDvcPrptyVlQntyCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getProperty().size() < i0+1) { device.addProperty(); }
+				String[] arrayi1 = d.getDvcPrptyVlQntyCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(device.getProperty().get(i0).getValueQuantity().size() < i1+1) { device.getProperty().get(i0).addValueQuantity(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {device.getProperty().get(i0).getValueQuantity().get(i1).setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
+		}
 		/******************** Dvc_Prpty_VlQnty_Sys ********************************************************************************/
-		if(d.getDvcPrptyVlQntySys() != null) {
-			devicepropertyvaluequantity.setSystem(d.getDvcPrptyVlQntySys());
+		if(d.getDvcPrptyVlQntySys() != null ) {
+
+			String[] arrayi0 = d.getDvcPrptyVlQntySys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getProperty().size() < i0+1) { device.addProperty(); }
+				String[] arrayi1 = d.getDvcPrptyVlQntySys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(device.getProperty().get(i0).getValueQuantity().size() < i1+1) { device.getProperty().get(i0).addValueQuantity(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {device.getProperty().get(i0).getValueQuantity().get(i1).setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** Dvc_Prpty_VlQnty_Unt ********************************************************************************/
-		if(d.getDvcPrptyVlQntyUnt() != null) {
-			devicepropertyvaluequantity.setUnit(d.getDvcPrptyVlQntyUnt());
+		if(d.getDvcPrptyVlQntyUnt() != null ) {
+
+			String[] arrayi0 = d.getDvcPrptyVlQntyUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getProperty().size() < i0+1) { device.addProperty(); }
+				String[] arrayi1 = d.getDvcPrptyVlQntyUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(device.getProperty().get(i0).getValueQuantity().size() < i1+1) { device.getProperty().get(i0).addValueQuantity(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {device.getProperty().get(i0).getValueQuantity().get(i1).setUnit(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** Dvc_Prpty_VlQnty_Vl ********************************************************************************/
-		if(d.getDvcPrptyVlQntyVl() != null) {
-			devicepropertyvaluequantity.setValue(Double.parseDouble((d.getDvcPrptyVlQntyVl())));
+		if(d.getDvcPrptyVlQntyVl() != null ) {
+
+			String[] arrayi0 = d.getDvcPrptyVlQntyVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getProperty().size() < i0+1) { device.addProperty(); }
+				String[] arrayi1 = d.getDvcPrptyVlQntyVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(device.getProperty().get(i0).getValueQuantity().size() < i1+1) { device.getProperty().get(i0).addValueQuantity(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {device.getProperty().get(i0).getValueQuantity().get(i1).setValue((new java.math.BigDecimal((arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+				}
+			}
+
 		}
-		/******************** devicesafety ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept devicesafety =  new org.hl7.fhir.r4.model.CodeableConcept();
-		device.addSafety(devicesafety);
-
-		/******************** devicesafetycoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding devicesafetycoding =  new org.hl7.fhir.r4.model.Coding();
-		devicesafety.addCoding(devicesafetycoding);
-
 		/******************** Dvc_Safety_Cdg_Cd ********************************************************************************/
-		if(d.getDvcSafetyCdgCd() != null) {
-			devicesafetycoding.setCode(d.getDvcSafetyCdgCd());
+		if(d.getDvcSafetyCdgCd() != null ) {
+
+			String[] arrayi0 = d.getDvcSafetyCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getSafety().size() < i0+1) { device.addSafety(); }
+				String[] arrayi1 = d.getDvcSafetyCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(device.getSafety().get(i0).getCoding().size() < i1+1) { device.getSafety().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {device.getSafety().get(i0).getCoding().get(i1).setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** Dvc_Safety_Cdg_Dsply ********************************************************************************/
-		if(d.getDvcSafetyCdgDsply() != null) {
-			devicesafetycoding.setDisplay(d.getDvcSafetyCdgDsply());
+		if(d.getDvcSafetyCdgDsply() != null ) {
+
+			String[] arrayi0 = d.getDvcSafetyCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getSafety().size() < i0+1) { device.addSafety(); }
+				String[] arrayi1 = d.getDvcSafetyCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(device.getSafety().get(i0).getCoding().size() < i1+1) { device.getSafety().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {device.getSafety().get(i0).getCoding().get(i1).setDisplay(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** Dvc_Safety_Cdg_Sys ********************************************************************************/
-		if(d.getDvcSafetyCdgSys() != null) {
-			devicesafetycoding.setSystem(d.getDvcSafetyCdgSys());
+		if(d.getDvcSafetyCdgSys() != null ) {
+
+			String[] arrayi0 = d.getDvcSafetyCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getSafety().size() < i0+1) { device.addSafety(); }
+				String[] arrayi1 = d.getDvcSafetyCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(device.getSafety().get(i0).getCoding().size() < i1+1) { device.getSafety().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {device.getSafety().get(i0).getCoding().get(i1).setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** Dvc_Safety_Cdg_UsrSltd ********************************************************************************/
-		if(d.getDvcSafetyCdgUsrSltd() != null) {
-			devicesafetycoding.setUserSelected(Boolean.parseBoolean(d.getDvcSafetyCdgUsrSltd()));
+		if(d.getDvcSafetyCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = d.getDvcSafetyCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getSafety().size() < i0+1) { device.addSafety(); }
+				String[] arrayi1 = d.getDvcSafetyCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(device.getSafety().get(i0).getCoding().size() < i1+1) { device.getSafety().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {device.getSafety().get(i0).getCoding().get(i1).setUserSelected(Boolean.parseBoolean(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
 		}
 		/******************** Dvc_Safety_Cdg_Vrsn ********************************************************************************/
-		if(d.getDvcSafetyCdgVrsn() != null) {
-			devicesafetycoding.setVersion(d.getDvcSafetyCdgVrsn());
+		if(d.getDvcSafetyCdgVrsn() != null ) {
+
+			String[] arrayi0 = d.getDvcSafetyCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getSafety().size() < i0+1) { device.addSafety(); }
+				String[] arrayi1 = d.getDvcSafetyCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(device.getSafety().get(i0).getCoding().size() < i1+1) { device.getSafety().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {device.getSafety().get(i0).getCoding().get(i1).setVersion(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** Dvc_Safety_Txt ********************************************************************************/
-		if(d.getDvcSafetyTxt() != null) {
-			devicesafety.setText(d.getDvcSafetyTxt());
+		if(d.getDvcSafetyTxt() != null ) {
+
+			String[] arrayi0 = d.getDvcSafetyTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getSafety().size() < i0+1) { device.addSafety(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {device.getSafety().get(i0).setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** Dvc_SerialNmbr ********************************************************************************/
-		if(d.getDvcSerialNmbr() != null) {
-			device.setSerialNumber(d.getDvcSerialNmbr());
+		if(d.getDvcSerialNmbr() != null ) {
+
+			if(d.getDvcSerialNmbr().replace("[","").replace("]","").equals("NULL") | d.getDvcSerialNmbr()==null) {} else {
+			device.setSerialNumber(d.getDvcSerialNmbr().replace("[","").replace("]","").replace("\"",""));
+			}
 		}
-		/******************** devicespecialization ********************************************************************************/
-		org.hl7.fhir.r4.model.Device.DeviceSpecializationComponent devicespecialization =  new org.hl7.fhir.r4.model.Device.DeviceSpecializationComponent();
-		device.addSpecialization(devicespecialization);
-
-		/******************** devicespecializationsystemtype ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept devicespecializationsystemtype =  new org.hl7.fhir.r4.model.CodeableConcept();
-		devicespecialization.setSystemType(devicespecializationsystemtype);
-
-		/******************** devicespecializationsystemtypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding devicespecializationsystemtypecoding =  new org.hl7.fhir.r4.model.Coding();
-		devicespecializationsystemtype.addCoding(devicespecializationsystemtypecoding);
-
 		/******************** Dvc_Spclization_SysTyp_Cdg_Cd ********************************************************************************/
-		if(d.getDvcSpclizationSysTypCdgCd() != null) {
-			devicespecializationsystemtypecoding.setCode(d.getDvcSpclizationSysTypCdgCd());
+		if(d.getDvcSpclizationSysTypCdgCd() != null ) {
+
+			String[] arrayi0 = d.getDvcSpclizationSysTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getSpecialization().size() < i0+1) { device.addSpecialization(); }
+				String[] arrayi1 = d.getDvcSpclizationSysTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(device.getSpecialization().get(i0).getSystemType().getCoding().size() < i1+1) { device.getSpecialization().get(i0).getSystemType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {device.getSpecialization().get(i0).getSystemType().getCoding().get(i1).setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** Dvc_Spclization_SysTyp_Cdg_Dsply ********************************************************************************/
-		if(d.getDvcSpclizationSysTypCdgDsply() != null) {
-			devicespecializationsystemtypecoding.setDisplay(d.getDvcSpclizationSysTypCdgDsply());
+		if(d.getDvcSpclizationSysTypCdgDsply() != null ) {
+
+			String[] arrayi0 = d.getDvcSpclizationSysTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getSpecialization().size() < i0+1) { device.addSpecialization(); }
+				String[] arrayi1 = d.getDvcSpclizationSysTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(device.getSpecialization().get(i0).getSystemType().getCoding().size() < i1+1) { device.getSpecialization().get(i0).getSystemType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {device.getSpecialization().get(i0).getSystemType().getCoding().get(i1).setDisplay(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** Dvc_Spclization_SysTyp_Cdg_Sys ********************************************************************************/
-		if(d.getDvcSpclizationSysTypCdgSys() != null) {
-			devicespecializationsystemtypecoding.setSystem(d.getDvcSpclizationSysTypCdgSys());
+		if(d.getDvcSpclizationSysTypCdgSys() != null ) {
+
+			String[] arrayi0 = d.getDvcSpclizationSysTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getSpecialization().size() < i0+1) { device.addSpecialization(); }
+				String[] arrayi1 = d.getDvcSpclizationSysTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(device.getSpecialization().get(i0).getSystemType().getCoding().size() < i1+1) { device.getSpecialization().get(i0).getSystemType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {device.getSpecialization().get(i0).getSystemType().getCoding().get(i1).setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** Dvc_Spclization_SysTyp_Cdg_UsrSltd ********************************************************************************/
-		if(d.getDvcSpclizationSysTypCdgUsrSltd() != null) {
-			devicespecializationsystemtypecoding.setUserSelected(Boolean.parseBoolean(d.getDvcSpclizationSysTypCdgUsrSltd()));
+		if(d.getDvcSpclizationSysTypCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = d.getDvcSpclizationSysTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getSpecialization().size() < i0+1) { device.addSpecialization(); }
+				String[] arrayi1 = d.getDvcSpclizationSysTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(device.getSpecialization().get(i0).getSystemType().getCoding().size() < i1+1) { device.getSpecialization().get(i0).getSystemType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {device.getSpecialization().get(i0).getSystemType().getCoding().get(i1).setUserSelected(Boolean.parseBoolean(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
 		}
 		/******************** Dvc_Spclization_SysTyp_Cdg_Vrsn ********************************************************************************/
-		if(d.getDvcSpclizationSysTypCdgVrsn() != null) {
-			devicespecializationsystemtypecoding.setVersion(d.getDvcSpclizationSysTypCdgVrsn());
+		if(d.getDvcSpclizationSysTypCdgVrsn() != null ) {
+
+			String[] arrayi0 = d.getDvcSpclizationSysTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getSpecialization().size() < i0+1) { device.addSpecialization(); }
+				String[] arrayi1 = d.getDvcSpclizationSysTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(device.getSpecialization().get(i0).getSystemType().getCoding().size() < i1+1) { device.getSpecialization().get(i0).getSystemType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {device.getSpecialization().get(i0).getSystemType().getCoding().get(i1).setVersion(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** Dvc_Spclization_SysTyp_Txt ********************************************************************************/
-		if(d.getDvcSpclizationSysTypTxt() != null) {
-			devicespecializationsystemtype.setText(d.getDvcSpclizationSysTypTxt());
+		if(d.getDvcSpclizationSysTypTxt() != null ) {
+
+			String[] arrayi0 = d.getDvcSpclizationSysTypTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getSpecialization().size() < i0+1) { device.addSpecialization(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {device.getSpecialization().get(i0).getSystemType().setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** Dvc_Spclization_Vrsn ********************************************************************************/
-		if(d.getDvcSpclizationVrsn() != null) {
-			devicespecialization.setVersion(d.getDvcSpclizationVrsn());
+		if(d.getDvcSpclizationVrsn() != null ) {
+
+			String[] arrayi0 = d.getDvcSpclizationVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getSpecialization().size() < i0+1) { device.addSpecialization(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {device.getSpecialization().get(i0).setVersion(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
-		/******************** devicestatus ********************************************************************************/
-		org.hl7.fhir.r4.model.Device.FHIRDeviceStatusEnumFactory devicestatus =  new org.hl7.fhir.r4.model.Device.FHIRDeviceStatusEnumFactory();
-		device.setStatus(devicestatus.fromCode(d.getDvcSts()));
+		/******************** Dvc_Sts ********************************************************************************/
+		if(d.getDvcSts() != null ) {
 
-		/******************** devicestatusreason ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept devicestatusreason =  new org.hl7.fhir.r4.model.CodeableConcept();
-		device.addStatusReason(devicestatusreason);
-
-		/******************** devicestatusreasoncoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding devicestatusreasoncoding =  new org.hl7.fhir.r4.model.Coding();
-		devicestatusreason.addCoding(devicestatusreasoncoding);
-
+			if(d.getDvcSts().replace("[","").replace("]","").equals("NULL") | d.getDvcSts()==null) {} else {
+			device.setStatus(new org.hl7.fhir.r4.model.Device.FHIRDeviceStatusEnumFactory().fromCode(d.getDvcSts().replace("[","").replace("]","").replace("\"","")));
+			}
+		}
 		/******************** Dvc_StsRsn_Cdg_Cd ********************************************************************************/
-		if(d.getDvcStsRsnCdgCd() != null) {
-			devicestatusreasoncoding.setCode(d.getDvcStsRsnCdgCd());
+		if(d.getDvcStsRsnCdgCd() != null ) {
+
+			String[] arrayi0 = d.getDvcStsRsnCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getStatusReason().size() < i0+1) { device.addStatusReason(); }
+				String[] arrayi1 = d.getDvcStsRsnCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(device.getStatusReason().get(i0).getCoding().size() < i1+1) { device.getStatusReason().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {device.getStatusReason().get(i0).getCoding().get(i1).setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** Dvc_StsRsn_Cdg_Dsply ********************************************************************************/
-		if(d.getDvcStsRsnCdgDsply() != null) {
-			devicestatusreasoncoding.setDisplay(d.getDvcStsRsnCdgDsply());
+		if(d.getDvcStsRsnCdgDsply() != null ) {
+
+			String[] arrayi0 = d.getDvcStsRsnCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getStatusReason().size() < i0+1) { device.addStatusReason(); }
+				String[] arrayi1 = d.getDvcStsRsnCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(device.getStatusReason().get(i0).getCoding().size() < i1+1) { device.getStatusReason().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {device.getStatusReason().get(i0).getCoding().get(i1).setDisplay(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** Dvc_StsRsn_Cdg_Sys ********************************************************************************/
-		if(d.getDvcStsRsnCdgSys() != null) {
-			devicestatusreasoncoding.setSystem(d.getDvcStsRsnCdgSys());
+		if(d.getDvcStsRsnCdgSys() != null ) {
+
+			String[] arrayi0 = d.getDvcStsRsnCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getStatusReason().size() < i0+1) { device.addStatusReason(); }
+				String[] arrayi1 = d.getDvcStsRsnCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(device.getStatusReason().get(i0).getCoding().size() < i1+1) { device.getStatusReason().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {device.getStatusReason().get(i0).getCoding().get(i1).setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** Dvc_StsRsn_Cdg_UsrSltd ********************************************************************************/
-		if(d.getDvcStsRsnCdgUsrSltd() != null) {
-			devicestatusreasoncoding.setUserSelected(Boolean.parseBoolean(d.getDvcStsRsnCdgUsrSltd()));
+		if(d.getDvcStsRsnCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = d.getDvcStsRsnCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getStatusReason().size() < i0+1) { device.addStatusReason(); }
+				String[] arrayi1 = d.getDvcStsRsnCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(device.getStatusReason().get(i0).getCoding().size() < i1+1) { device.getStatusReason().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {device.getStatusReason().get(i0).getCoding().get(i1).setUserSelected(Boolean.parseBoolean(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
 		}
 		/******************** Dvc_StsRsn_Cdg_Vrsn ********************************************************************************/
-		if(d.getDvcStsRsnCdgVrsn() != null) {
-			devicestatusreasoncoding.setVersion(d.getDvcStsRsnCdgVrsn());
+		if(d.getDvcStsRsnCdgVrsn() != null ) {
+
+			String[] arrayi0 = d.getDvcStsRsnCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getStatusReason().size() < i0+1) { device.addStatusReason(); }
+				String[] arrayi1 = d.getDvcStsRsnCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(device.getStatusReason().get(i0).getCoding().size() < i1+1) { device.getStatusReason().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {device.getStatusReason().get(i0).getCoding().get(i1).setVersion(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** Dvc_StsRsn_Txt ********************************************************************************/
-		if(d.getDvcStsRsnTxt() != null) {
-			devicestatusreason.setText(d.getDvcStsRsnTxt());
+		if(d.getDvcStsRsnTxt() != null ) {
+
+			String[] arrayi0 = d.getDvcStsRsnTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getStatusReason().size() < i0+1) { device.addStatusReason(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {device.getStatusReason().get(i0).setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
-		/******************** devicetype ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept devicetype =  new org.hl7.fhir.r4.model.CodeableConcept();
-		device.setType(devicetype);
-
-		/******************** devicetypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding devicetypecoding =  new org.hl7.fhir.r4.model.Coding();
-		devicetype.addCoding(devicetypecoding);
-
 		/******************** Dvc_Typ_Cdg_Cd ********************************************************************************/
-		if(d.getDvcTypCdgCd() != null) {
-			devicetypecoding.setCode(d.getDvcTypCdgCd());
+		if(d.getDvcTypCdgCd() != null ) {
+
+			String[] arrayi0 = d.getDvcTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getType().getCoding().size() < i0+1) { device.getType().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {device.getType().getCoding().get(i0).setCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** Dvc_Typ_Cdg_Dsply ********************************************************************************/
-		if(d.getDvcTypCdgDsply() != null) {
-			devicetypecoding.setDisplay(d.getDvcTypCdgDsply());
+		if(d.getDvcTypCdgDsply() != null ) {
+
+			String[] arrayi0 = d.getDvcTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getType().getCoding().size() < i0+1) { device.getType().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {device.getType().getCoding().get(i0).setDisplay(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** Dvc_Typ_Cdg_Sys ********************************************************************************/
-		if(d.getDvcTypCdgSys() != null) {
-			devicetypecoding.setSystem(d.getDvcTypCdgSys());
+		if(d.getDvcTypCdgSys() != null ) {
+
+			String[] arrayi0 = d.getDvcTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getType().getCoding().size() < i0+1) { device.getType().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {device.getType().getCoding().get(i0).setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** Dvc_Typ_Cdg_UsrSltd ********************************************************************************/
-		if(d.getDvcTypCdgUsrSltd() != null) {
-			devicetypecoding.setUserSelected(Boolean.parseBoolean(d.getDvcTypCdgUsrSltd()));
+		if(d.getDvcTypCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = d.getDvcTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getType().getCoding().size() < i0+1) { device.getType().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {device.getType().getCoding().get(i0).setUserSelected(Boolean.parseBoolean(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** Dvc_Typ_Cdg_Vrsn ********************************************************************************/
-		if(d.getDvcTypCdgVrsn() != null) {
-			devicetypecoding.setVersion(d.getDvcTypCdgVrsn());
+		if(d.getDvcTypCdgVrsn() != null ) {
+
+			String[] arrayi0 = d.getDvcTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getType().getCoding().size() < i0+1) { device.getType().addCoding(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {device.getType().getCoding().get(i0).setVersion(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** Dvc_Typ_Txt ********************************************************************************/
-		if(d.getDvcTypTxt() != null) {
-			devicetype.setText(d.getDvcTypTxt());
-		}
-		/******************** deviceudicarrier ********************************************************************************/
-		org.hl7.fhir.r4.model.Device.DeviceUdiCarrierComponent deviceudicarrier =  new org.hl7.fhir.r4.model.Device.DeviceUdiCarrierComponent();
-		device.addUdiCarrier(deviceudicarrier);
+		if(d.getDvcTypTxt() != null ) {
 
+			if(d.getDvcTypTxt().replace("[","").replace("]","").equals("NULL") | d.getDvcTypTxt()==null) {} else {
+			device.getType().setText(d.getDvcTypTxt().replace("[","").replace("]","").replace("\"",""));
+			}
+		}
 		/******************** Dvc_UdiCarrier_CarrierAidc ********************************************************************************/
-		if(d.getDvcUdiCarrierCarrierAidc() != null) {
-			deviceudicarrier.setCarrierAIDCElement(new org.hl7.fhir.r4.model.Base64BinaryType(d.getDvcUdiCarrierCarrierAidc()));
+		if(d.getDvcUdiCarrierCarrierAidc() != null ) {
+
+			String[] arrayi0 = d.getDvcUdiCarrierCarrierAidc().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getUdiCarrier().size() < i0+1) { device.addUdiCarrier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {device.getUdiCarrier().get(i0).setCarrierAIDC(arrayi0[i0].replace("[","").replace("]","").replace("\"","").getBytes()); }
+			}
+
 		}
 		/******************** Dvc_UdiCarrier_CarrierHrf ********************************************************************************/
-		if(d.getDvcUdiCarrierCarrierHrf() != null) {
-			deviceudicarrier.setCarrierHRF(d.getDvcUdiCarrierCarrierHrf());
+		if(d.getDvcUdiCarrierCarrierHrf() != null ) {
+
+			String[] arrayi0 = d.getDvcUdiCarrierCarrierHrf().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getUdiCarrier().size() < i0+1) { device.addUdiCarrier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {device.getUdiCarrier().get(i0).setCarrierHRF(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** Dvc_UdiCarrier_DvcId ********************************************************************************/
-		if(d.getDvcUdiCarrierDvcId() != null) {
-			deviceudicarrier.setDeviceIdentifier(d.getDvcUdiCarrierDvcId());
-		}
-		/******************** deviceudicarrierentrytype ********************************************************************************/
-		org.hl7.fhir.r4.model.Device.UDIEntryTypeEnumFactory deviceudicarrierentrytype =  new org.hl7.fhir.r4.model.Device.UDIEntryTypeEnumFactory();
-		deviceudicarrier.setEntryType(deviceudicarrierentrytype.fromCode(d.getDvcUdiCarrierEntryTyp()));
+		if(d.getDvcUdiCarrierDvcId() != null ) {
 
+			String[] arrayi0 = d.getDvcUdiCarrierDvcId().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getUdiCarrier().size() < i0+1) { device.addUdiCarrier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {device.getUdiCarrier().get(i0).setDeviceIdentifier(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
+		}
+		/******************** Dvc_UdiCarrier_EntryTyp ********************************************************************************/
+		if(d.getDvcUdiCarrierEntryTyp() != null ) {
+
+			String[] arrayi0 = d.getDvcUdiCarrierEntryTyp().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getUdiCarrier().size() < i0+1) { device.addUdiCarrier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {device.getUdiCarrier().get(i0).setEntryType(new org.hl7.fhir.r4.model.Device.UDIEntryTypeEnumFactory().fromCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** Dvc_UdiCarrier_Issuer ********************************************************************************/
-		if(d.getDvcUdiCarrierIssuer() != null) {
-			deviceudicarrier.setIssuer(d.getDvcUdiCarrierIssuer());
+		if(d.getDvcUdiCarrierIssuer() != null ) {
+
+			String[] arrayi0 = d.getDvcUdiCarrierIssuer().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getUdiCarrier().size() < i0+1) { device.addUdiCarrier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {device.getUdiCarrier().get(i0).setIssuer(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** Dvc_UdiCarrier_Jrsdctn ********************************************************************************/
-		if(d.getDvcUdiCarrierJrsdctn() != null) {
-			deviceudicarrier.setJurisdiction(d.getDvcUdiCarrierJrsdctn());
+		if(d.getDvcUdiCarrierJrsdctn() != null ) {
+
+			String[] arrayi0 = d.getDvcUdiCarrierJrsdctn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getUdiCarrier().size() < i0+1) { device.addUdiCarrier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {device.getUdiCarrier().get(i0).setJurisdiction(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** Dvc_Url ********************************************************************************/
-		if(d.getDvcUrl() != null) {
-			device.setUrl(d.getDvcUrl());
+		if(d.getDvcUrl() != null ) {
+
+			if(d.getDvcUrl().replace("[","").replace("]","").equals("NULL") | d.getDvcUrl()==null) {} else {
+			device.setUrl(d.getDvcUrl().replace("[","").replace("]","").replace("\"",""));
+			}
 		}
-		/******************** deviceversion ********************************************************************************/
-		org.hl7.fhir.r4.model.Device.DeviceVersionComponent deviceversion =  new org.hl7.fhir.r4.model.Device.DeviceVersionComponent();
-		device.addVersion(deviceversion);
-
-		/******************** deviceversioncomponent ********************************************************************************/
-		org.hl7.fhir.r4.model.Identifier deviceversioncomponent =  new org.hl7.fhir.r4.model.Identifier();
-		deviceversion.setComponent(deviceversioncomponent);
-
 		/******************** Dvc_Vrsn_Cmpnt_Assigner ********************************************************************************/
-		if(d.getDvcVrsnCmpntAssigner() != null) {
-			deviceversioncomponent.setAssigner( new org.hl7.fhir.r4.model.Reference(d.getDvcVrsnCmpntAssigner()));
-		}
-		/******************** deviceversioncomponentperiod ********************************************************************************/
-		org.hl7.fhir.r4.model.Period deviceversioncomponentperiod =  new org.hl7.fhir.r4.model.Period();
-		deviceversioncomponent.setPeriod(deviceversioncomponentperiod);
+		if(d.getDvcVrsnCmpntAssigner() != null ) {
 
+			String[] arrayi0 = d.getDvcVrsnCmpntAssigner().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getVersion().size() < i0+1) { device.addVersion(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {device.getVersion().get(i0).getComponent().setAssigner(new org.hl7.fhir.r4.model.Reference(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** Dvc_Vrsn_Cmpnt_Prd_End ********************************************************************************/
-		if(d.getDvcVrsnCmpntPrdEnd() != null) {
-			java.text.SimpleDateFormat Dvc_Vrsn_Cmpnt_Prd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date Dvc_Vrsn_Cmpnt_Prd_Enddate = Dvc_Vrsn_Cmpnt_Prd_Endsdf.parse(d.getDvcVrsnCmpntPrdEnd());
-			deviceversioncomponentperiod.setEnd(Dvc_Vrsn_Cmpnt_Prd_Enddate);
+		if(d.getDvcVrsnCmpntPrdEnd() != null ) {
+
+			String[] arrayi0 = d.getDvcVrsnCmpntPrdEnd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getVersion().size() < i0+1) { device.addVersion(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {device.getVersion().get(i0).getComponent().getPeriod().setEnd(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** Dvc_Vrsn_Cmpnt_Prd_Strt ********************************************************************************/
-		if(d.getDvcVrsnCmpntPrdStrt() != null) {
-			java.text.SimpleDateFormat Dvc_Vrsn_Cmpnt_Prd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date Dvc_Vrsn_Cmpnt_Prd_Strtdate = Dvc_Vrsn_Cmpnt_Prd_Strtsdf.parse(d.getDvcVrsnCmpntPrdStrt());
-			deviceversioncomponentperiod.setStart(Dvc_Vrsn_Cmpnt_Prd_Strtdate);
+		if(d.getDvcVrsnCmpntPrdStrt() != null ) {
+
+			String[] arrayi0 = d.getDvcVrsnCmpntPrdStrt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getVersion().size() < i0+1) { device.addVersion(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {device.getVersion().get(i0).getComponent().getPeriod().setStart(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** Dvc_Vrsn_Cmpnt_Sys ********************************************************************************/
-		if(d.getDvcVrsnCmpntSys() != null) {
-			deviceversioncomponent.setSystem(d.getDvcVrsnCmpntSys());
+		if(d.getDvcVrsnCmpntSys() != null ) {
+
+			String[] arrayi0 = d.getDvcVrsnCmpntSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getVersion().size() < i0+1) { device.addVersion(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {device.getVersion().get(i0).getComponent().setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
-		/******************** deviceversioncomponenttype ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept deviceversioncomponenttype =  new org.hl7.fhir.r4.model.CodeableConcept();
-		deviceversioncomponent.setType(deviceversioncomponenttype);
-
-		/******************** deviceversioncomponenttypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding deviceversioncomponenttypecoding =  new org.hl7.fhir.r4.model.Coding();
-		deviceversioncomponenttype.addCoding(deviceversioncomponenttypecoding);
-
 		/******************** Dvc_Vrsn_Cmpnt_Typ_Cdg_Cd ********************************************************************************/
-		if(d.getDvcVrsnCmpntTypCdgCd() != null) {
-			deviceversioncomponenttypecoding.setCode(d.getDvcVrsnCmpntTypCdgCd());
+		if(d.getDvcVrsnCmpntTypCdgCd() != null ) {
+
+			String[] arrayi0 = d.getDvcVrsnCmpntTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getVersion().size() < i0+1) { device.addVersion(); }
+				String[] arrayi1 = d.getDvcVrsnCmpntTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(device.getVersion().get(i0).getComponent().getType().getCoding().size() < i1+1) { device.getVersion().get(i0).getComponent().getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {device.getVersion().get(i0).getComponent().getType().getCoding().get(i1).setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** Dvc_Vrsn_Cmpnt_Typ_Cdg_Dsply ********************************************************************************/
-		if(d.getDvcVrsnCmpntTypCdgDsply() != null) {
-			deviceversioncomponenttypecoding.setDisplay(d.getDvcVrsnCmpntTypCdgDsply());
+		if(d.getDvcVrsnCmpntTypCdgDsply() != null ) {
+
+			String[] arrayi0 = d.getDvcVrsnCmpntTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getVersion().size() < i0+1) { device.addVersion(); }
+				String[] arrayi1 = d.getDvcVrsnCmpntTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(device.getVersion().get(i0).getComponent().getType().getCoding().size() < i1+1) { device.getVersion().get(i0).getComponent().getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {device.getVersion().get(i0).getComponent().getType().getCoding().get(i1).setDisplay(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** Dvc_Vrsn_Cmpnt_Typ_Cdg_Sys ********************************************************************************/
-		if(d.getDvcVrsnCmpntTypCdgSys() != null) {
-			deviceversioncomponenttypecoding.setSystem(d.getDvcVrsnCmpntTypCdgSys());
+		if(d.getDvcVrsnCmpntTypCdgSys() != null ) {
+
+			String[] arrayi0 = d.getDvcVrsnCmpntTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getVersion().size() < i0+1) { device.addVersion(); }
+				String[] arrayi1 = d.getDvcVrsnCmpntTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(device.getVersion().get(i0).getComponent().getType().getCoding().size() < i1+1) { device.getVersion().get(i0).getComponent().getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {device.getVersion().get(i0).getComponent().getType().getCoding().get(i1).setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** Dvc_Vrsn_Cmpnt_Typ_Cdg_UsrSltd ********************************************************************************/
-		if(d.getDvcVrsnCmpntTypCdgUsrSltd() != null) {
-			deviceversioncomponenttypecoding.setUserSelected(Boolean.parseBoolean(d.getDvcVrsnCmpntTypCdgUsrSltd()));
+		if(d.getDvcVrsnCmpntTypCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = d.getDvcVrsnCmpntTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getVersion().size() < i0+1) { device.addVersion(); }
+				String[] arrayi1 = d.getDvcVrsnCmpntTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(device.getVersion().get(i0).getComponent().getType().getCoding().size() < i1+1) { device.getVersion().get(i0).getComponent().getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {device.getVersion().get(i0).getComponent().getType().getCoding().get(i1).setUserSelected(Boolean.parseBoolean(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
 		}
 		/******************** Dvc_Vrsn_Cmpnt_Typ_Cdg_Vrsn ********************************************************************************/
-		if(d.getDvcVrsnCmpntTypCdgVrsn() != null) {
-			deviceversioncomponenttypecoding.setVersion(d.getDvcVrsnCmpntTypCdgVrsn());
+		if(d.getDvcVrsnCmpntTypCdgVrsn() != null ) {
+
+			String[] arrayi0 = d.getDvcVrsnCmpntTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getVersion().size() < i0+1) { device.addVersion(); }
+				String[] arrayi1 = d.getDvcVrsnCmpntTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(device.getVersion().get(i0).getComponent().getType().getCoding().size() < i1+1) { device.getVersion().get(i0).getComponent().getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {device.getVersion().get(i0).getComponent().getType().getCoding().get(i1).setVersion(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** Dvc_Vrsn_Cmpnt_Typ_Txt ********************************************************************************/
-		if(d.getDvcVrsnCmpntTypTxt() != null) {
-			deviceversioncomponenttype.setText(d.getDvcVrsnCmpntTypTxt());
-		}
-		/******************** deviceversioncomponentuse ********************************************************************************/
-		org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory deviceversioncomponentuse =  new org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory();
-		deviceversioncomponent.setUse(deviceversioncomponentuse.fromCode(d.getDvcVrsnCmpntUse()));
+		if(d.getDvcVrsnCmpntTypTxt() != null ) {
 
+			String[] arrayi0 = d.getDvcVrsnCmpntTypTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getVersion().size() < i0+1) { device.addVersion(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {device.getVersion().get(i0).getComponent().getType().setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
+		}
+		/******************** Dvc_Vrsn_Cmpnt_Use ********************************************************************************/
+		if(d.getDvcVrsnCmpntUse() != null ) {
+
+			String[] arrayi0 = d.getDvcVrsnCmpntUse().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getVersion().size() < i0+1) { device.addVersion(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {device.getVersion().get(i0).getComponent().setUse(new org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory().fromCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** Dvc_Vrsn_Cmpnt_Vl ********************************************************************************/
-		if(d.getDvcVrsnCmpntVl() != null) {
-			deviceversioncomponent.setValue(d.getDvcVrsnCmpntVl());
+		if(d.getDvcVrsnCmpntVl() != null ) {
+
+			String[] arrayi0 = d.getDvcVrsnCmpntVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getVersion().size() < i0+1) { device.addVersion(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {device.getVersion().get(i0).getComponent().setValue(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
-		/******************** deviceversiontype ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept deviceversiontype =  new org.hl7.fhir.r4.model.CodeableConcept();
-		deviceversion.setType(deviceversiontype);
-
-		/******************** deviceversiontypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding deviceversiontypecoding =  new org.hl7.fhir.r4.model.Coding();
-		deviceversiontype.addCoding(deviceversiontypecoding);
-
 		/******************** Dvc_Vrsn_Typ_Cdg_Cd ********************************************************************************/
-		if(d.getDvcVrsnTypCdgCd() != null) {
-			deviceversiontypecoding.setCode(d.getDvcVrsnTypCdgCd());
+		if(d.getDvcVrsnTypCdgCd() != null ) {
+
+			String[] arrayi0 = d.getDvcVrsnTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getVersion().size() < i0+1) { device.addVersion(); }
+				String[] arrayi1 = d.getDvcVrsnTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(device.getVersion().get(i0).getType().getCoding().size() < i1+1) { device.getVersion().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {device.getVersion().get(i0).getType().getCoding().get(i1).setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** Dvc_Vrsn_Typ_Cdg_Dsply ********************************************************************************/
-		if(d.getDvcVrsnTypCdgDsply() != null) {
-			deviceversiontypecoding.setDisplay(d.getDvcVrsnTypCdgDsply());
+		if(d.getDvcVrsnTypCdgDsply() != null ) {
+
+			String[] arrayi0 = d.getDvcVrsnTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getVersion().size() < i0+1) { device.addVersion(); }
+				String[] arrayi1 = d.getDvcVrsnTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(device.getVersion().get(i0).getType().getCoding().size() < i1+1) { device.getVersion().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {device.getVersion().get(i0).getType().getCoding().get(i1).setDisplay(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** Dvc_Vrsn_Typ_Cdg_Sys ********************************************************************************/
-		if(d.getDvcVrsnTypCdgSys() != null) {
-			deviceversiontypecoding.setSystem(d.getDvcVrsnTypCdgSys());
+		if(d.getDvcVrsnTypCdgSys() != null ) {
+
+			String[] arrayi0 = d.getDvcVrsnTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getVersion().size() < i0+1) { device.addVersion(); }
+				String[] arrayi1 = d.getDvcVrsnTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(device.getVersion().get(i0).getType().getCoding().size() < i1+1) { device.getVersion().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {device.getVersion().get(i0).getType().getCoding().get(i1).setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** Dvc_Vrsn_Typ_Cdg_UsrSltd ********************************************************************************/
-		if(d.getDvcVrsnTypCdgUsrSltd() != null) {
-			deviceversiontypecoding.setUserSelected(Boolean.parseBoolean(d.getDvcVrsnTypCdgUsrSltd()));
+		if(d.getDvcVrsnTypCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = d.getDvcVrsnTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getVersion().size() < i0+1) { device.addVersion(); }
+				String[] arrayi1 = d.getDvcVrsnTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(device.getVersion().get(i0).getType().getCoding().size() < i1+1) { device.getVersion().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {device.getVersion().get(i0).getType().getCoding().get(i1).setUserSelected(Boolean.parseBoolean(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
 		}
 		/******************** Dvc_Vrsn_Typ_Cdg_Vrsn ********************************************************************************/
-		if(d.getDvcVrsnTypCdgVrsn() != null) {
-			deviceversiontypecoding.setVersion(d.getDvcVrsnTypCdgVrsn());
+		if(d.getDvcVrsnTypCdgVrsn() != null ) {
+
+			String[] arrayi0 = d.getDvcVrsnTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getVersion().size() < i0+1) { device.addVersion(); }
+				String[] arrayi1 = d.getDvcVrsnTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(device.getVersion().get(i0).getType().getCoding().size() < i1+1) { device.getVersion().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {device.getVersion().get(i0).getType().getCoding().get(i1).setVersion(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** Dvc_Vrsn_Typ_Txt ********************************************************************************/
-		if(d.getDvcVrsnTypTxt() != null) {
-			deviceversiontype.setText(d.getDvcVrsnTypTxt());
+		if(d.getDvcVrsnTypTxt() != null ) {
+
+			String[] arrayi0 = d.getDvcVrsnTypTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getVersion().size() < i0+1) { device.addVersion(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {device.getVersion().get(i0).getType().setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** Dvc_Vrsn_Vl ********************************************************************************/
-		if(d.getDvcVrsnVl() != null) {
-			deviceversion.setValue(d.getDvcVrsnVl());
+		if(d.getDvcVrsnVl() != null ) {
+
+			String[] arrayi0 = d.getDvcVrsnVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(device.getVersion().size() < i0+1) { device.addVersion(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {device.getVersion().get(i0).setValue(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		return device;
 	}

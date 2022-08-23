@@ -11,1162 +11,846 @@ public class StructureDefinitionConversion
 		structuredefinition.setId(s.getId());
 
 		/******************** StrctrDfn_Abstract ********************************************************************************/
-		if(s.getStrctrDfnAbstract() != null) {
-			structuredefinition.setAbstract(Boolean.parseBoolean(s.getStrctrDfnAbstract()));
+		if(s.getStrctrDfnAbstract() != null ) {
+
+			if(s.getStrctrDfnAbstract().replace("[","").replace("]","").equals("NULL") | s.getStrctrDfnAbstract()==null) {} else {
+			structuredefinition.setAbstract(Boolean.parseBoolean(s.getStrctrDfnAbstract().replace("[","").replace("]","").replace("\"","")));
+			}
 		}
 		/******************** StrctrDfn_BaseDfn ********************************************************************************/
-		if(s.getStrctrDfnBaseDfn() != null) {
-			structuredefinition.setBaseDefinition(s.getStrctrDfnBaseDfn());
-		}
-		/******************** structuredefinitioncontact ********************************************************************************/
-		org.hl7.fhir.r4.model.ContactDetail structuredefinitioncontact =  new org.hl7.fhir.r4.model.ContactDetail();
-		structuredefinition.addContact(structuredefinitioncontact);
+		if(s.getStrctrDfnBaseDfn() != null ) {
 
+			if(s.getStrctrDfnBaseDfn().replace("[","").replace("]","").equals("NULL") | s.getStrctrDfnBaseDfn()==null) {} else {
+			structuredefinition.setBaseDefinition(s.getStrctrDfnBaseDfn().replace("[","").replace("]","").replace("\"",""));
+			}
+		}
 		/******************** StrctrDfn_Cntct_Nm ********************************************************************************/
-		if(s.getStrctrDfnCntctNm() != null) {
-			structuredefinitioncontact.setName(s.getStrctrDfnCntctNm());
+		if(s.getStrctrDfnCntctNm() != null ) {
+
+			String[] arrayi0 = s.getStrctrDfnCntctNm().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getContact().size() < i0+1) { structuredefinition.addContact(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {structuredefinition.getContact().get(i0).setName(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
-		/******************** structuredefinitioncontacttelecom ********************************************************************************/
-		org.hl7.fhir.r4.model.ContactPoint structuredefinitioncontacttelecom =  new org.hl7.fhir.r4.model.ContactPoint();
-		structuredefinitioncontact.addTelecom(structuredefinitioncontacttelecom);
-
-		/******************** structuredefinitioncontacttelecomperiod ********************************************************************************/
-		org.hl7.fhir.r4.model.Period structuredefinitioncontacttelecomperiod =  new org.hl7.fhir.r4.model.Period();
-		structuredefinitioncontacttelecom.setPeriod(structuredefinitioncontacttelecomperiod);
-
 		/******************** StrctrDfn_Cntct_Tlcm_Prd_End ********************************************************************************/
-		if(s.getStrctrDfnCntctTlcmPrdEnd() != null) {
-			java.text.SimpleDateFormat StrctrDfn_Cntct_Tlcm_Prd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date StrctrDfn_Cntct_Tlcm_Prd_Enddate = StrctrDfn_Cntct_Tlcm_Prd_Endsdf.parse(s.getStrctrDfnCntctTlcmPrdEnd());
-			structuredefinitioncontacttelecomperiod.setEnd(StrctrDfn_Cntct_Tlcm_Prd_Enddate);
+		if(s.getStrctrDfnCntctTlcmPrdEnd() != null ) {
+
+			String[] arrayi0 = s.getStrctrDfnCntctTlcmPrdEnd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getContact().size() < i0+1) { structuredefinition.addContact(); }
+				String[] arrayi1 = s.getStrctrDfnCntctTlcmPrdEnd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(structuredefinition.getContact().get(i0).getTelecom().size() < i1+1) { structuredefinition.getContact().get(i0).addTelecom(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {structuredefinition.getContact().get(i0).getTelecom().get(i1).getPeriod().setEnd(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi1[i1].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
 		}
 		/******************** StrctrDfn_Cntct_Tlcm_Prd_Strt ********************************************************************************/
-		if(s.getStrctrDfnCntctTlcmPrdStrt() != null) {
-			java.text.SimpleDateFormat StrctrDfn_Cntct_Tlcm_Prd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date StrctrDfn_Cntct_Tlcm_Prd_Strtdate = StrctrDfn_Cntct_Tlcm_Prd_Strtsdf.parse(s.getStrctrDfnCntctTlcmPrdStrt());
-			structuredefinitioncontacttelecomperiod.setStart(StrctrDfn_Cntct_Tlcm_Prd_Strtdate);
+		if(s.getStrctrDfnCntctTlcmPrdStrt() != null ) {
+
+			String[] arrayi0 = s.getStrctrDfnCntctTlcmPrdStrt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getContact().size() < i0+1) { structuredefinition.addContact(); }
+				String[] arrayi1 = s.getStrctrDfnCntctTlcmPrdStrt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(structuredefinition.getContact().get(i0).getTelecom().size() < i1+1) { structuredefinition.getContact().get(i0).addTelecom(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {structuredefinition.getContact().get(i0).getTelecom().get(i1).getPeriod().setStart(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi1[i1].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
 		}
 		/******************** StrctrDfn_Cntct_Tlcm_Rnk ********************************************************************************/
-		if(s.getStrctrDfnCntctTlcmRnk() != null) {
-			structuredefinitioncontacttelecom.setRank(Integer.parseInt(s.getStrctrDfnCntctTlcmRnk()));
+		if(s.getStrctrDfnCntctTlcmRnk() != null ) {
+
+			String[] arrayi0 = s.getStrctrDfnCntctTlcmRnk().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getContact().size() < i0+1) { structuredefinition.addContact(); }
+				String[] arrayi1 = s.getStrctrDfnCntctTlcmRnk().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(structuredefinition.getContact().get(i0).getTelecom().size() < i1+1) { structuredefinition.getContact().get(i0).addTelecom(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {structuredefinition.getContact().get(i0).getTelecom().get(i1).setRank(Integer.parseInt(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
 		}
-		/******************** structuredefinitioncontacttelecomsystem ********************************************************************************/
-		org.hl7.fhir.r4.model.ContactPoint.ContactPointSystemEnumFactory structuredefinitioncontacttelecomsystem =  new org.hl7.fhir.r4.model.ContactPoint.ContactPointSystemEnumFactory();
-		structuredefinitioncontacttelecom.setSystem(structuredefinitioncontacttelecomsystem.fromCode(s.getStrctrDfnCntctTlcmSys()));
+		/******************** StrctrDfn_Cntct_Tlcm_Sys ********************************************************************************/
+		if(s.getStrctrDfnCntctTlcmSys() != null ) {
 
-		/******************** structuredefinitioncontacttelecomuse ********************************************************************************/
-		org.hl7.fhir.r4.model.ContactPoint.ContactPointUseEnumFactory structuredefinitioncontacttelecomuse =  new org.hl7.fhir.r4.model.ContactPoint.ContactPointUseEnumFactory();
-		structuredefinitioncontacttelecom.setUse(structuredefinitioncontacttelecomuse.fromCode(s.getStrctrDfnCntctTlcmUse()));
+			String[] arrayi0 = s.getStrctrDfnCntctTlcmSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getContact().size() < i0+1) { structuredefinition.addContact(); }
+				String[] arrayi1 = s.getStrctrDfnCntctTlcmSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(structuredefinition.getContact().get(i0).getTelecom().size() < i1+1) { structuredefinition.getContact().get(i0).addTelecom(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {structuredefinition.getContact().get(i0).getTelecom().get(i1).setSystem(new org.hl7.fhir.r4.model.ContactPoint.ContactPointSystemEnumFactory().fromCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
 
+		}
+		/******************** StrctrDfn_Cntct_Tlcm_Use ********************************************************************************/
+		if(s.getStrctrDfnCntctTlcmUse() != null ) {
+
+			String[] arrayi0 = s.getStrctrDfnCntctTlcmUse().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getContact().size() < i0+1) { structuredefinition.addContact(); }
+				String[] arrayi1 = s.getStrctrDfnCntctTlcmUse().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(structuredefinition.getContact().get(i0).getTelecom().size() < i1+1) { structuredefinition.getContact().get(i0).addTelecom(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {structuredefinition.getContact().get(i0).getTelecom().get(i1).setUse(new org.hl7.fhir.r4.model.ContactPoint.ContactPointUseEnumFactory().fromCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
+		}
 		/******************** StrctrDfn_Cntct_Tlcm_Vl ********************************************************************************/
-		if(s.getStrctrDfnCntctTlcmVl() != null) {
-			structuredefinitioncontacttelecom.setValue(s.getStrctrDfnCntctTlcmVl());
-		}
-		/******************** structuredefinitioncontext ********************************************************************************/
-		org.hl7.fhir.r4.model.StructureDefinition.StructureDefinitionContextComponent structuredefinitioncontext =  new org.hl7.fhir.r4.model.StructureDefinition.StructureDefinitionContextComponent();
-		structuredefinition.addContext(structuredefinitioncontext);
+		if(s.getStrctrDfnCntctTlcmVl() != null ) {
 
+			String[] arrayi0 = s.getStrctrDfnCntctTlcmVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getContact().size() < i0+1) { structuredefinition.addContact(); }
+				String[] arrayi1 = s.getStrctrDfnCntctTlcmVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(structuredefinition.getContact().get(i0).getTelecom().size() < i1+1) { structuredefinition.getContact().get(i0).addTelecom(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {structuredefinition.getContact().get(i0).getTelecom().get(i1).setValue(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
+		}
 		/******************** StrctrDfn_Cntxt_Exprsn ********************************************************************************/
-		if(s.getStrctrDfnCntxtExprsn() != null) {
-			structuredefinitioncontext.setExpression(s.getStrctrDfnCntxtExprsn());
-		}
-		/******************** structuredefinitioncontexttype ********************************************************************************/
-		org.hl7.fhir.r4.model.StructureDefinition.ExtensionContextTypeEnumFactory structuredefinitioncontexttype =  new org.hl7.fhir.r4.model.StructureDefinition.ExtensionContextTypeEnumFactory();
-		structuredefinitioncontext.setType(structuredefinitioncontexttype.fromCode(s.getStrctrDfnCntxtTyp()));
+		if(s.getStrctrDfnCntxtExprsn() != null ) {
 
+			String[] arrayi0 = s.getStrctrDfnCntxtExprsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getContext().size() < i0+1) { structuredefinition.addContext(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {structuredefinition.getContext().get(i0).setExpression(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
+		}
+		/******************** StrctrDfn_Cntxt_Typ ********************************************************************************/
+		if(s.getStrctrDfnCntxtTyp() != null ) {
+
+			String[] arrayi0 = s.getStrctrDfnCntxtTyp().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getContext().size() < i0+1) { structuredefinition.addContext(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {structuredefinition.getContext().get(i0).setType(new org.hl7.fhir.r4.model.StructureDefinition.ExtensionContextTypeEnumFactory().fromCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** StrctrDfn_CntxtInvariant ********************************************************************************/
-		if(s.getStrctrDfnCntxtInvariant() != null) {
-			structuredefinition.addContextInvariant(s.getStrctrDfnCntxtInvariant());
+		if(s.getStrctrDfnCntxtInvariant() != null ) {
+
+				for( String currListStrSplit : s.getStrctrDfnCntxtInvariant().replace("[","").replace("]","").replace("\"","").split(",")){
+			if(currListStrSplit.replace("[","").replace("]","").equals("NULL") | currListStrSplit==null) {} else {
+			structuredefinition.addContextInvariant(currListStrSplit.replace("[","").replace("]","").replace("\"",""));
+			}				}
+
 		}
 		/******************** StrctrDfn_Copyright ********************************************************************************/
-		if(s.getStrctrDfnCopyright() != null) {
-			structuredefinition.setCopyright(s.getStrctrDfnCopyright());
+		if(s.getStrctrDfnCopyright() != null ) {
+
+			if(s.getStrctrDfnCopyright().replace("[","").replace("]","").equals("NULL") | s.getStrctrDfnCopyright()==null) {} else {
+			structuredefinition.setCopyright(s.getStrctrDfnCopyright().replace("[","").replace("]","").replace("\"",""));
+			}
 		}
 		/******************** StrctrDfn_Dt ********************************************************************************/
-		if(s.getStrctrDfnDt() != null) {
-			java.text.SimpleDateFormat StrctrDfn_Dtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date StrctrDfn_Dtdate = StrctrDfn_Dtsdf.parse(s.getStrctrDfnDt());
-			structuredefinition.setDate(StrctrDfn_Dtdate);
-		}
-		/******************** structuredefinitionderivation ********************************************************************************/
-		org.hl7.fhir.r4.model.StructureDefinition.TypeDerivationRuleEnumFactory structuredefinitionderivation =  new org.hl7.fhir.r4.model.StructureDefinition.TypeDerivationRuleEnumFactory();
-		structuredefinition.setDerivation(structuredefinitionderivation.fromCode(s.getStrctrDfnDerivation()));
+		if(s.getStrctrDfnDt() != null ) {
 
+			if(s.getStrctrDfnDt().replace("[","").replace("]","").equals("NULL") | s.getStrctrDfnDt()==null) {} else {
+			structuredefinition.setDate(s.getStrctrDfnDt().replace("[","").replace("]","").equals("NULL") | s.getStrctrDfnDt()==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(s.getStrctrDfnDt().replace("[","").replace("]","").replace("\"","")));
+			}
+		}
+		/******************** StrctrDfn_Derivation ********************************************************************************/
+		if(s.getStrctrDfnDerivation() != null ) {
+
+			if(s.getStrctrDfnDerivation().replace("[","").replace("]","").equals("NULL") | s.getStrctrDfnDerivation()==null) {} else {
+			structuredefinition.setDerivation(new org.hl7.fhir.r4.model.StructureDefinition.TypeDerivationRuleEnumFactory().fromCode(s.getStrctrDfnDerivation().replace("[","").replace("]","").replace("\"","")));
+			}
+		}
 		/******************** StrctrDfn_Dscrptn ********************************************************************************/
-		if(s.getStrctrDfnDscrptn() != null) {
-			structuredefinition.setDescription(s.getStrctrDfnDscrptn());
-		}
-		/******************** structuredefinitiondifferential ********************************************************************************/
-		org.hl7.fhir.r4.model.StructureDefinition.StructureDefinitionDifferentialComponent structuredefinitiondifferential =  new org.hl7.fhir.r4.model.StructureDefinition.StructureDefinitionDifferentialComponent();
-		structuredefinition.setDifferential(structuredefinitiondifferential);
+		if(s.getStrctrDfnDscrptn() != null ) {
 
-		/******************** structuredefinitiondifferentialelement ********************************************************************************/
-		org.hl7.fhir.r4.model.ElementDefinition structuredefinitiondifferentialelement =  new org.hl7.fhir.r4.model.ElementDefinition();
-		structuredefinitiondifferential.addElement(structuredefinitiondifferentialelement);
-
-		/******************** StrctrDfn_Dffntial_Elmnt_Alias ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntAlias() != null) {
-			structuredefinitiondifferentialelement.addAlias(s.getStrctrDfnDffntialElmntAlias());
+			if(s.getStrctrDfnDscrptn().replace("[","").replace("]","").equals("NULL") | s.getStrctrDfnDscrptn()==null) {} else {
+			structuredefinition.setDescription(s.getStrctrDfnDscrptn().replace("[","").replace("]","").replace("\"",""));
+			}
 		}
-		/******************** structuredefinitiondifferentialelementbase ********************************************************************************/
-		org.hl7.fhir.r4.model.ElementDefinition.ElementDefinitionBaseComponent structuredefinitiondifferentialelementbase =  new org.hl7.fhir.r4.model.ElementDefinition.ElementDefinitionBaseComponent();
-		structuredefinitiondifferentialelement.setBase(structuredefinitiondifferentialelementbase);
-
-		/******************** StrctrDfn_Dffntial_Elmnt_Base_Mx ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntBaseMx() != null) {
-			structuredefinitiondifferentialelementbase.setMax(s.getStrctrDfnDffntialElmntBaseMx());
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_Base_Min ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntBaseMin() != null) {
-			structuredefinitiondifferentialelementbase.setMin(Integer.parseInt(s.getStrctrDfnDffntialElmntBaseMin()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_Base_Path ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntBasePath() != null) {
-			structuredefinitiondifferentialelementbase.setPath(s.getStrctrDfnDffntialElmntBasePath());
-		}
-		/******************** structuredefinitiondifferentialelementbinding ********************************************************************************/
-		org.hl7.fhir.r4.model.ElementDefinition.ElementDefinitionBindingComponent structuredefinitiondifferentialelementbinding =  new org.hl7.fhir.r4.model.ElementDefinition.ElementDefinitionBindingComponent();
-		structuredefinitiondifferentialelement.setBinding(structuredefinitiondifferentialelementbinding);
-
-		/******************** StrctrDfn_Dffntial_Elmnt_Binding_Dscrptn ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntBindingDscrptn() != null) {
-			structuredefinitiondifferentialelementbinding.setDescription(s.getStrctrDfnDffntialElmntBindingDscrptn());
-		}
-		/******************** structuredefinitiondifferentialelementbindingstrength ********************************************************************************/
-		org.hl7.fhir.r4.model.Enumerations.BindingStrengthEnumFactory structuredefinitiondifferentialelementbindingstrength =  new org.hl7.fhir.r4.model.Enumerations.BindingStrengthEnumFactory();
-		structuredefinitiondifferentialelementbinding.setStrength(structuredefinitiondifferentialelementbindingstrength.fromCode(s.getStrctrDfnDffntialElmntBindingStr()));
-
-		/******************** StrctrDfn_Dffntial_Elmnt_Binding_VlSt ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntBindingVlSt() != null) {
-			structuredefinitiondifferentialelementbinding.setValueSet(s.getStrctrDfnDffntialElmntBindingVlSt());
-		}
-		/******************** structuredefinitiondifferentialelementcode ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding structuredefinitiondifferentialelementcode =  new org.hl7.fhir.r4.model.Coding();
-		structuredefinitiondifferentialelement.addCode(structuredefinitiondifferentialelementcode);
-
-		/******************** StrctrDfn_Dffntial_Elmnt_Cd_Cd ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntCdCd() != null) {
-			structuredefinitiondifferentialelementcode.setCode(s.getStrctrDfnDffntialElmntCdCd());
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_Cd_Dsply ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntCdDsply() != null) {
-			structuredefinitiondifferentialelementcode.setDisplay(s.getStrctrDfnDffntialElmntCdDsply());
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_Cd_Sys ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntCdSys() != null) {
-			structuredefinitiondifferentialelementcode.setSystem(s.getStrctrDfnDffntialElmntCdSys());
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_Cd_UsrSltd ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntCdUsrSltd() != null) {
-			structuredefinitiondifferentialelementcode.setUserSelected(Boolean.parseBoolean(s.getStrctrDfnDffntialElmntCdUsrSltd()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_Cd_Vrsn ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntCdVrsn() != null) {
-			structuredefinitiondifferentialelementcode.setVersion(s.getStrctrDfnDffntialElmntCdVrsn());
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_Comment ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntComment() != null) {
-			structuredefinitiondifferentialelement.setComment(s.getStrctrDfnDffntialElmntComment());
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_Cndtn ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntCndtn() != null) {
-			structuredefinitiondifferentialelement.addCondition(s.getStrctrDfnDffntialElmntCndtn());
-		}
-		/******************** structuredefinitiondifferentialelementconstraint ********************************************************************************/
-		org.hl7.fhir.r4.model.ElementDefinition.ElementDefinitionConstraintComponent structuredefinitiondifferentialelementconstraint =  new org.hl7.fhir.r4.model.ElementDefinition.ElementDefinitionConstraintComponent();
-		structuredefinitiondifferentialelement.addConstraint(structuredefinitiondifferentialelementconstraint);
-
-		/******************** StrctrDfn_Dffntial_Elmnt_Constraint_Exprsn ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntConstraintExprsn() != null) {
-			structuredefinitiondifferentialelementconstraint.setExpression(s.getStrctrDfnDffntialElmntConstraintExprsn());
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_Constraint_Human ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntConstraintHuman() != null) {
-			structuredefinitiondifferentialelementconstraint.setHuman(s.getStrctrDfnDffntialElmntConstraintHuman());
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_Constraint_Key ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntConstraintKey() != null) {
-			structuredefinitiondifferentialelementconstraint.setKey(s.getStrctrDfnDffntialElmntConstraintKey());
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_Constraint_Rqrments ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntConstraintRqrments() != null) {
-			structuredefinitiondifferentialelementconstraint.setRequirements(s.getStrctrDfnDffntialElmntConstraintRqrments());
-		}
-		/******************** structuredefinitiondifferentialelementconstraintseverity ********************************************************************************/
-		org.hl7.fhir.r4.model.ElementDefinition.ConstraintSeverityEnumFactory structuredefinitiondifferentialelementconstraintseverity =  new org.hl7.fhir.r4.model.ElementDefinition.ConstraintSeverityEnumFactory();
-		structuredefinitiondifferentialelementconstraint.setSeverity(structuredefinitiondifferentialelementconstraintseverity.fromCode(s.getStrctrDfnDffntialElmntConstraintSeverity()));
-
-		/******************** StrctrDfn_Dffntial_Elmnt_Constraint_Src ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntConstraintSrc() != null) {
-			structuredefinitiondifferentialelementconstraint.setSource(s.getStrctrDfnDffntialElmntConstraintSrc());
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_Constraint_Xpath ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntConstraintXpath() != null) {
-			structuredefinitiondifferentialelementconstraint.setXpath(s.getStrctrDfnDffntialElmntConstraintXpath());
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_CntntRfrnc ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntCntntRfrnc() != null) {
-			structuredefinitiondifferentialelement.setContentReference(s.getStrctrDfnDffntialElmntCntntRfrnc());
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_Dfn ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntDfn() != null) {
-			structuredefinitiondifferentialelement.setDefinition(s.getStrctrDfnDffntialElmntDfn());
-		}
-		/******************** structuredefinitiondifferentialelementexample ********************************************************************************/
-		org.hl7.fhir.r4.model.ElementDefinition.ElementDefinitionExampleComponent structuredefinitiondifferentialelementexample =  new org.hl7.fhir.r4.model.ElementDefinition.ElementDefinitionExampleComponent();
-		structuredefinitiondifferentialelement.addExample(structuredefinitiondifferentialelementexample);
-
-		/******************** StrctrDfn_Dffntial_Elmnt_Example_Lbl ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntExampleLbl() != null) {
-			structuredefinitiondifferentialelementexample.setLabel(s.getStrctrDfnDffntialElmntExampleLbl());
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_IsMdfr ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntIsMdfr() != null) {
-			structuredefinitiondifferentialelement.setIsModifier(Boolean.parseBoolean(s.getStrctrDfnDffntialElmntIsMdfr()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_IsMdfrRsn ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntIsMdfrRsn() != null) {
-			structuredefinitiondifferentialelement.setIsModifierReason(s.getStrctrDfnDffntialElmntIsMdfrRsn());
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_IsSummary ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntIsSummary() != null) {
-			structuredefinitiondifferentialelement.setIsSummary(Boolean.parseBoolean(s.getStrctrDfnDffntialElmntIsSummary()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_Lbl ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntLbl() != null) {
-			structuredefinitiondifferentialelement.setLabel(s.getStrctrDfnDffntialElmntLbl());
-		}
-		/******************** structuredefinitiondifferentialelementmapping ********************************************************************************/
-		org.hl7.fhir.r4.model.ElementDefinition.ElementDefinitionMappingComponent structuredefinitiondifferentialelementmapping =  new org.hl7.fhir.r4.model.ElementDefinition.ElementDefinitionMappingComponent();
-		structuredefinitiondifferentialelement.addMapping(structuredefinitiondifferentialelementmapping);
-
-		/******************** StrctrDfn_Dffntial_Elmnt_Mapping_Comment ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntMappingComment() != null) {
-			structuredefinitiondifferentialelementmapping.setComment(s.getStrctrDfnDffntialElmntMappingComment());
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_Mapping_Identity ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntMappingIdentity() != null) {
-			structuredefinitiondifferentialelementmapping.setIdentity(s.getStrctrDfnDffntialElmntMappingIdentity());
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_Mapping_Lnguage ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntMappingLnguage() != null) {
-			structuredefinitiondifferentialelementmapping.setLanguage(s.getStrctrDfnDffntialElmntMappingLnguage());
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_Mapping_Map ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntMappingMap() != null) {
-			structuredefinitiondifferentialelementmapping.setMap(s.getStrctrDfnDffntialElmntMappingMap());
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_Mx ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntMx() != null) {
-			structuredefinitiondifferentialelement.setMax(s.getStrctrDfnDffntialElmntMx());
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_MxLength ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntMxLength() != null) {
-			structuredefinitiondifferentialelement.setMaxLength(Integer.parseInt(s.getStrctrDfnDffntialElmntMxLength()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_MxVlDtTimeTyp ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntMxVlDtTimeTyp() != null) {
-			structuredefinitiondifferentialelement.setMaxValue( new org.hl7.fhir.r4.model.DateTimeType(s.getStrctrDfnDffntialElmntMxVlDtTimeTyp()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_MxVlDtTyp ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntMxVlDtTyp() != null) {
-			structuredefinitiondifferentialelement.setMaxValue( new org.hl7.fhir.r4.model.DateType(s.getStrctrDfnDffntialElmntMxVlDtTyp()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_MxVlDecimalTyp ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntMxVlDecimalTyp() != null) {
-			structuredefinitiondifferentialelement.setMaxValue( new org.hl7.fhir.r4.model.DecimalType(s.getStrctrDfnDffntialElmntMxVlDecimalTyp()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_MxVlInstantTyp ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntMxVlInstantTyp() != null) {
-			structuredefinitiondifferentialelement.setMaxValue( new org.hl7.fhir.r4.model.InstantType(s.getStrctrDfnDffntialElmntMxVlInstantTyp()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_MxVlIntegerTyp ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntMxVlIntegerTyp() != null) {
-			structuredefinitiondifferentialelement.setMaxValue( new org.hl7.fhir.r4.model.IntegerType(s.getStrctrDfnDffntialElmntMxVlIntegerTyp()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_MxVlPositiveIntTyp ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntMxVlPositiveIntTyp() != null) {
-			structuredefinitiondifferentialelement.setMaxValue( new org.hl7.fhir.r4.model.PositiveIntType(s.getStrctrDfnDffntialElmntMxVlPositiveIntTyp()));
-		}
-		/******************** structuredefinitiondifferentialelementmaxvaluequantity ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity structuredefinitiondifferentialelementmaxvaluequantity =  new org.hl7.fhir.r4.model.Quantity();
-		structuredefinitiondifferentialelement.setMaxValue(structuredefinitiondifferentialelementmaxvaluequantity);
-
-		/******************** StrctrDfn_Dffntial_Elmnt_MxVlQnty_Cd ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntMxVlQntyCd() != null) {
-			structuredefinitiondifferentialelementmaxvaluequantity.setCode(s.getStrctrDfnDffntialElmntMxVlQntyCd());
-		}
-		/******************** structuredefinitiondifferentialelementmaxvaluequantitycomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory structuredefinitiondifferentialelementmaxvaluequantitycomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-		structuredefinitiondifferentialelementmaxvaluequantity.setComparator(structuredefinitiondifferentialelementmaxvaluequantitycomparator.fromCode(s.getStrctrDfnDffntialElmntMxVlQntyCmprtr()));
-
-		/******************** StrctrDfn_Dffntial_Elmnt_MxVlQnty_Sys ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntMxVlQntySys() != null) {
-			structuredefinitiondifferentialelementmaxvaluequantity.setSystem(s.getStrctrDfnDffntialElmntMxVlQntySys());
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_MxVlQnty_Unt ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntMxVlQntyUnt() != null) {
-			structuredefinitiondifferentialelementmaxvaluequantity.setUnit(s.getStrctrDfnDffntialElmntMxVlQntyUnt());
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_MxVlQnty_Vl ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntMxVlQntyVl() != null) {
-			structuredefinitiondifferentialelementmaxvaluequantity.setValue(Double.parseDouble((s.getStrctrDfnDffntialElmntMxVlQntyVl())));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_MxVlTimeTyp ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntMxVlTimeTyp() != null) {
-			structuredefinitiondifferentialelement.setMaxValue( new org.hl7.fhir.r4.model.TimeType(s.getStrctrDfnDffntialElmntMxVlTimeTyp()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_MxVlUnsignedIntTyp ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntMxVlUnsignedIntTyp() != null) {
-			structuredefinitiondifferentialelement.setMaxValue( new org.hl7.fhir.r4.model.UnsignedIntType(s.getStrctrDfnDffntialElmntMxVlUnsignedIntTyp()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_MeaningWhenMissing ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntMeaningWhenMissing() != null) {
-			structuredefinitiondifferentialelement.setMeaningWhenMissing(s.getStrctrDfnDffntialElmntMeaningWhenMissing());
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_Min ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntMin() != null) {
-			structuredefinitiondifferentialelement.setMin(Integer.parseInt(s.getStrctrDfnDffntialElmntMin()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_MinVlDtTimeTyp ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntMinVlDtTimeTyp() != null) {
-			structuredefinitiondifferentialelement.setMinValue( new org.hl7.fhir.r4.model.DateTimeType(s.getStrctrDfnDffntialElmntMinVlDtTimeTyp()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_MinVlDtTyp ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntMinVlDtTyp() != null) {
-			structuredefinitiondifferentialelement.setMinValue( new org.hl7.fhir.r4.model.DateType(s.getStrctrDfnDffntialElmntMinVlDtTyp()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_MinVlDecimalTyp ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntMinVlDecimalTyp() != null) {
-			structuredefinitiondifferentialelement.setMinValue( new org.hl7.fhir.r4.model.DecimalType(s.getStrctrDfnDffntialElmntMinVlDecimalTyp()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_MinVlInstantTyp ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntMinVlInstantTyp() != null) {
-			structuredefinitiondifferentialelement.setMinValue( new org.hl7.fhir.r4.model.InstantType(s.getStrctrDfnDffntialElmntMinVlInstantTyp()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_MinVlIntegerTyp ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntMinVlIntegerTyp() != null) {
-			structuredefinitiondifferentialelement.setMinValue( new org.hl7.fhir.r4.model.IntegerType(s.getStrctrDfnDffntialElmntMinVlIntegerTyp()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_MinVlPositiveIntTyp ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntMinVlPositiveIntTyp() != null) {
-			structuredefinitiondifferentialelement.setMinValue( new org.hl7.fhir.r4.model.PositiveIntType(s.getStrctrDfnDffntialElmntMinVlPositiveIntTyp()));
-		}
-		/******************** structuredefinitiondifferentialelementminvaluequantity ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity structuredefinitiondifferentialelementminvaluequantity =  new org.hl7.fhir.r4.model.Quantity();
-		structuredefinitiondifferentialelement.setMinValue(structuredefinitiondifferentialelementminvaluequantity);
-
-		/******************** StrctrDfn_Dffntial_Elmnt_MinVlQnty_Cd ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntMinVlQntyCd() != null) {
-			structuredefinitiondifferentialelementminvaluequantity.setCode(s.getStrctrDfnDffntialElmntMinVlQntyCd());
-		}
-		/******************** structuredefinitiondifferentialelementminvaluequantitycomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory structuredefinitiondifferentialelementminvaluequantitycomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-		structuredefinitiondifferentialelementminvaluequantity.setComparator(structuredefinitiondifferentialelementminvaluequantitycomparator.fromCode(s.getStrctrDfnDffntialElmntMinVlQntyCmprtr()));
-
-		/******************** StrctrDfn_Dffntial_Elmnt_MinVlQnty_Sys ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntMinVlQntySys() != null) {
-			structuredefinitiondifferentialelementminvaluequantity.setSystem(s.getStrctrDfnDffntialElmntMinVlQntySys());
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_MinVlQnty_Unt ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntMinVlQntyUnt() != null) {
-			structuredefinitiondifferentialelementminvaluequantity.setUnit(s.getStrctrDfnDffntialElmntMinVlQntyUnt());
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_MinVlQnty_Vl ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntMinVlQntyVl() != null) {
-			structuredefinitiondifferentialelementminvaluequantity.setValue(Double.parseDouble((s.getStrctrDfnDffntialElmntMinVlQntyVl())));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_MinVlTimeTyp ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntMinVlTimeTyp() != null) {
-			structuredefinitiondifferentialelement.setMinValue( new org.hl7.fhir.r4.model.TimeType(s.getStrctrDfnDffntialElmntMinVlTimeTyp()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_MinVlUnsignedIntTyp ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntMinVlUnsignedIntTyp() != null) {
-			structuredefinitiondifferentialelement.setMinValue( new org.hl7.fhir.r4.model.UnsignedIntType(s.getStrctrDfnDffntialElmntMinVlUnsignedIntTyp()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_MustSupport ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntMustSupport() != null) {
-			structuredefinitiondifferentialelement.setMustSupport(Boolean.parseBoolean(s.getStrctrDfnDffntialElmntMustSupport()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_OrdrMeaning ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntOrdrMeaning() != null) {
-			structuredefinitiondifferentialelement.setOrderMeaning(s.getStrctrDfnDffntialElmntOrdrMeaning());
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_Path ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntPath() != null) {
-			structuredefinitiondifferentialelement.setPath(s.getStrctrDfnDffntialElmntPath());
-		}
-		/******************** structuredefinitiondifferentialelementrepresentation ********************************************************************************/
-		org.hl7.fhir.r4.model.ElementDefinition.PropertyRepresentationEnumFactory structuredefinitiondifferentialelementrepresentation =  new org.hl7.fhir.r4.model.ElementDefinition.PropertyRepresentationEnumFactory();
-		structuredefinitiondifferentialelement.addRepresentation(structuredefinitiondifferentialelementrepresentation.fromCode(s.getStrctrDfnDffntialElmntRepresentation()));
-
-		/******************** StrctrDfn_Dffntial_Elmnt_Rqrments ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntRqrments() != null) {
-			structuredefinitiondifferentialelement.setRequirements(s.getStrctrDfnDffntialElmntRqrments());
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_Short ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntShort() != null) {
-			structuredefinitiondifferentialelement.setShort(s.getStrctrDfnDffntialElmntShort());
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_SliceIsConstraining ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntSliceIsConstraining() != null) {
-			structuredefinitiondifferentialelement.setSliceIsConstraining(Boolean.parseBoolean(s.getStrctrDfnDffntialElmntSliceIsConstraining()));
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_SliceNm ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntSliceNm() != null) {
-			structuredefinitiondifferentialelement.setSliceName(s.getStrctrDfnDffntialElmntSliceNm());
-		}
-		/******************** structuredefinitiondifferentialelementslicing ********************************************************************************/
-		org.hl7.fhir.r4.model.ElementDefinition.ElementDefinitionSlicingComponent structuredefinitiondifferentialelementslicing =  new org.hl7.fhir.r4.model.ElementDefinition.ElementDefinitionSlicingComponent();
-		structuredefinitiondifferentialelement.setSlicing(structuredefinitiondifferentialelementslicing);
-
-		/******************** StrctrDfn_Dffntial_Elmnt_Slicing_Dscrptn ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntSlicingDscrptn() != null) {
-			structuredefinitiondifferentialelementslicing.setDescription(s.getStrctrDfnDffntialElmntSlicingDscrptn());
-		}
-		/******************** structuredefinitiondifferentialelementslicingdiscriminator ********************************************************************************/
-		org.hl7.fhir.r4.model.ElementDefinition.ElementDefinitionSlicingDiscriminatorComponent structuredefinitiondifferentialelementslicingdiscriminator =  new org.hl7.fhir.r4.model.ElementDefinition.ElementDefinitionSlicingDiscriminatorComponent();
-		structuredefinitiondifferentialelementslicing.addDiscriminator(structuredefinitiondifferentialelementslicingdiscriminator);
-
-		/******************** StrctrDfn_Dffntial_Elmnt_Slicing_Discriminator_Path ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntSlicingDiscriminatorPath() != null) {
-			structuredefinitiondifferentialelementslicingdiscriminator.setPath(s.getStrctrDfnDffntialElmntSlicingDiscriminatorPath());
-		}
-		/******************** structuredefinitiondifferentialelementslicingdiscriminatortype ********************************************************************************/
-		org.hl7.fhir.r4.model.ElementDefinition.DiscriminatorTypeEnumFactory structuredefinitiondifferentialelementslicingdiscriminatortype =  new org.hl7.fhir.r4.model.ElementDefinition.DiscriminatorTypeEnumFactory();
-		structuredefinitiondifferentialelementslicingdiscriminator.setType(structuredefinitiondifferentialelementslicingdiscriminatortype.fromCode(s.getStrctrDfnDffntialElmntSlicingDiscriminatorTyp()));
-
-		/******************** StrctrDfn_Dffntial_Elmnt_Slicing_Ordred ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntSlicingOrdred() != null) {
-			structuredefinitiondifferentialelementslicing.setOrdered(Boolean.parseBoolean(s.getStrctrDfnDffntialElmntSlicingOrdred()));
-		}
-		/******************** structuredefinitiondifferentialelementslicingrules ********************************************************************************/
-		org.hl7.fhir.r4.model.ElementDefinition.SlicingRulesEnumFactory structuredefinitiondifferentialelementslicingrules =  new org.hl7.fhir.r4.model.ElementDefinition.SlicingRulesEnumFactory();
-		structuredefinitiondifferentialelementslicing.setRules(structuredefinitiondifferentialelementslicingrules.fromCode(s.getStrctrDfnDffntialElmntSlicingRules()));
-
-		/******************** structuredefinitiondifferentialelementtype ********************************************************************************/
-		org.hl7.fhir.r4.model.ElementDefinition.TypeRefComponent structuredefinitiondifferentialelementtype =  new org.hl7.fhir.r4.model.ElementDefinition.TypeRefComponent();
-		structuredefinitiondifferentialelement.addType(structuredefinitiondifferentialelementtype);
-
-		/******************** structuredefinitiondifferentialelementtypeaggregation ********************************************************************************/
-		org.hl7.fhir.r4.model.ElementDefinition.AggregationModeEnumFactory structuredefinitiondifferentialelementtypeaggregation =  new org.hl7.fhir.r4.model.ElementDefinition.AggregationModeEnumFactory();
-		structuredefinitiondifferentialelementtype.addAggregation(structuredefinitiondifferentialelementtypeaggregation.fromCode(s.getStrctrDfnDffntialElmntTypAggregation()));
-
-		/******************** StrctrDfn_Dffntial_Elmnt_Typ_Cd ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntTypCd() != null) {
-			structuredefinitiondifferentialelementtype.setCode(s.getStrctrDfnDffntialElmntTypCd());
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_Typ_Profile ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntTypProfile() != null) {
-			structuredefinitiondifferentialelementtype.addProfile(s.getStrctrDfnDffntialElmntTypProfile());
-		}
-		/******************** StrctrDfn_Dffntial_Elmnt_Typ_TarProfile ********************************************************************************/
-		if(s.getStrctrDfnDffntialElmntTypTarProfile() != null) {
-			structuredefinitiondifferentialelementtype.addTargetProfile(s.getStrctrDfnDffntialElmntTypTarProfile());
-		}
-		/******************** structuredefinitiondifferentialelementtypeversioning ********************************************************************************/
-		org.hl7.fhir.r4.model.ElementDefinition.ReferenceVersionRulesEnumFactory structuredefinitiondifferentialelementtypeversioning =  new org.hl7.fhir.r4.model.ElementDefinition.ReferenceVersionRulesEnumFactory();
-		structuredefinitiondifferentialelementtype.setVersioning(structuredefinitiondifferentialelementtypeversioning.fromCode(s.getStrctrDfnDffntialElmntTypVrsning()));
-
 		/******************** StrctrDfn_Exprmtl ********************************************************************************/
-		if(s.getStrctrDfnExprmtl() != null) {
-			structuredefinition.setExperimental(Boolean.parseBoolean(s.getStrctrDfnExprmtl()));
+		if(s.getStrctrDfnExprmtl() != null ) {
+
+			if(s.getStrctrDfnExprmtl().replace("[","").replace("]","").equals("NULL") | s.getStrctrDfnExprmtl()==null) {} else {
+			structuredefinition.setExperimental(Boolean.parseBoolean(s.getStrctrDfnExprmtl().replace("[","").replace("]","").replace("\"","")));
+			}
 		}
-		/******************** structuredefinitionfhirversion ********************************************************************************/
-		org.hl7.fhir.r4.model.Enumerations.FHIRVersionEnumFactory structuredefinitionfhirversion =  new org.hl7.fhir.r4.model.Enumerations.FHIRVersionEnumFactory();
-		structuredefinition.setFhirVersion(structuredefinitionfhirversion.fromCode(s.getStrctrDfnFhirVrsn()));
+		/******************** StrctrDfn_FhirVrsn ********************************************************************************/
+		if(s.getStrctrDfnFhirVrsn() != null ) {
 
-		/******************** structuredefinitionidentifier ********************************************************************************/
-		org.hl7.fhir.r4.model.Identifier structuredefinitionidentifier =  new org.hl7.fhir.r4.model.Identifier();
-		structuredefinition.addIdentifier(structuredefinitionidentifier);
-
+			if(s.getStrctrDfnFhirVrsn().replace("[","").replace("]","").equals("NULL") | s.getStrctrDfnFhirVrsn()==null) {} else {
+			structuredefinition.setFhirVersion(new org.hl7.fhir.r4.model.Enumerations.FHIRVersionEnumFactory().fromCode(s.getStrctrDfnFhirVrsn().replace("[","").replace("]","").replace("\"","")));
+			}
+		}
 		/******************** StrctrDfn_Id_Assigner ********************************************************************************/
-		if(s.getStrctrDfnIdAssigner() != null) {
-			structuredefinitionidentifier.setAssigner( new org.hl7.fhir.r4.model.Reference(s.getStrctrDfnIdAssigner()));
-		}
-		/******************** structuredefinitionidentifierperiod ********************************************************************************/
-		org.hl7.fhir.r4.model.Period structuredefinitionidentifierperiod =  new org.hl7.fhir.r4.model.Period();
-		structuredefinitionidentifier.setPeriod(structuredefinitionidentifierperiod);
+		if(s.getStrctrDfnIdAssigner() != null ) {
 
+			String[] arrayi0 = s.getStrctrDfnIdAssigner().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getIdentifier().size() < i0+1) { structuredefinition.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {structuredefinition.getIdentifier().get(i0).setAssigner(new org.hl7.fhir.r4.model.Reference(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** StrctrDfn_Id_Prd_End ********************************************************************************/
-		if(s.getStrctrDfnIdPrdEnd() != null) {
-			java.text.SimpleDateFormat StrctrDfn_Id_Prd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date StrctrDfn_Id_Prd_Enddate = StrctrDfn_Id_Prd_Endsdf.parse(s.getStrctrDfnIdPrdEnd());
-			structuredefinitionidentifierperiod.setEnd(StrctrDfn_Id_Prd_Enddate);
+		if(s.getStrctrDfnIdPrdEnd() != null ) {
+
+			String[] arrayi0 = s.getStrctrDfnIdPrdEnd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getIdentifier().size() < i0+1) { structuredefinition.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {structuredefinition.getIdentifier().get(i0).getPeriod().setEnd(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** StrctrDfn_Id_Prd_Strt ********************************************************************************/
-		if(s.getStrctrDfnIdPrdStrt() != null) {
-			java.text.SimpleDateFormat StrctrDfn_Id_Prd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date StrctrDfn_Id_Prd_Strtdate = StrctrDfn_Id_Prd_Strtsdf.parse(s.getStrctrDfnIdPrdStrt());
-			structuredefinitionidentifierperiod.setStart(StrctrDfn_Id_Prd_Strtdate);
+		if(s.getStrctrDfnIdPrdStrt() != null ) {
+
+			String[] arrayi0 = s.getStrctrDfnIdPrdStrt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getIdentifier().size() < i0+1) { structuredefinition.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {structuredefinition.getIdentifier().get(i0).getPeriod().setStart(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** StrctrDfn_Id_Sys ********************************************************************************/
-		if(s.getStrctrDfnIdSys() != null) {
-			structuredefinitionidentifier.setSystem(s.getStrctrDfnIdSys());
+		if(s.getStrctrDfnIdSys() != null ) {
+
+			String[] arrayi0 = s.getStrctrDfnIdSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getIdentifier().size() < i0+1) { structuredefinition.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {structuredefinition.getIdentifier().get(i0).setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
-		/******************** structuredefinitionidentifiertype ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept structuredefinitionidentifiertype =  new org.hl7.fhir.r4.model.CodeableConcept();
-		structuredefinitionidentifier.setType(structuredefinitionidentifiertype);
-
-		/******************** structuredefinitionidentifiertypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding structuredefinitionidentifiertypecoding =  new org.hl7.fhir.r4.model.Coding();
-		structuredefinitionidentifiertype.addCoding(structuredefinitionidentifiertypecoding);
-
 		/******************** StrctrDfn_Id_Typ_Cdg_Cd ********************************************************************************/
-		if(s.getStrctrDfnIdTypCdgCd() != null) {
-			structuredefinitionidentifiertypecoding.setCode(s.getStrctrDfnIdTypCdgCd());
+		if(s.getStrctrDfnIdTypCdgCd() != null ) {
+
+			String[] arrayi0 = s.getStrctrDfnIdTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getIdentifier().size() < i0+1) { structuredefinition.addIdentifier(); }
+				String[] arrayi1 = s.getStrctrDfnIdTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(structuredefinition.getIdentifier().get(i0).getType().getCoding().size() < i1+1) { structuredefinition.getIdentifier().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {structuredefinition.getIdentifier().get(i0).getType().getCoding().get(i1).setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** StrctrDfn_Id_Typ_Cdg_Dsply ********************************************************************************/
-		if(s.getStrctrDfnIdTypCdgDsply() != null) {
-			structuredefinitionidentifiertypecoding.setDisplay(s.getStrctrDfnIdTypCdgDsply());
+		if(s.getStrctrDfnIdTypCdgDsply() != null ) {
+
+			String[] arrayi0 = s.getStrctrDfnIdTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getIdentifier().size() < i0+1) { structuredefinition.addIdentifier(); }
+				String[] arrayi1 = s.getStrctrDfnIdTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(structuredefinition.getIdentifier().get(i0).getType().getCoding().size() < i1+1) { structuredefinition.getIdentifier().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {structuredefinition.getIdentifier().get(i0).getType().getCoding().get(i1).setDisplay(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** StrctrDfn_Id_Typ_Cdg_Sys ********************************************************************************/
-		if(s.getStrctrDfnIdTypCdgSys() != null) {
-			structuredefinitionidentifiertypecoding.setSystem(s.getStrctrDfnIdTypCdgSys());
+		if(s.getStrctrDfnIdTypCdgSys() != null ) {
+
+			String[] arrayi0 = s.getStrctrDfnIdTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getIdentifier().size() < i0+1) { structuredefinition.addIdentifier(); }
+				String[] arrayi1 = s.getStrctrDfnIdTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(structuredefinition.getIdentifier().get(i0).getType().getCoding().size() < i1+1) { structuredefinition.getIdentifier().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {structuredefinition.getIdentifier().get(i0).getType().getCoding().get(i1).setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** StrctrDfn_Id_Typ_Cdg_UsrSltd ********************************************************************************/
-		if(s.getStrctrDfnIdTypCdgUsrSltd() != null) {
-			structuredefinitionidentifiertypecoding.setUserSelected(Boolean.parseBoolean(s.getStrctrDfnIdTypCdgUsrSltd()));
+		if(s.getStrctrDfnIdTypCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = s.getStrctrDfnIdTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getIdentifier().size() < i0+1) { structuredefinition.addIdentifier(); }
+				String[] arrayi1 = s.getStrctrDfnIdTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(structuredefinition.getIdentifier().get(i0).getType().getCoding().size() < i1+1) { structuredefinition.getIdentifier().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {structuredefinition.getIdentifier().get(i0).getType().getCoding().get(i1).setUserSelected(Boolean.parseBoolean(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
 		}
 		/******************** StrctrDfn_Id_Typ_Cdg_Vrsn ********************************************************************************/
-		if(s.getStrctrDfnIdTypCdgVrsn() != null) {
-			structuredefinitionidentifiertypecoding.setVersion(s.getStrctrDfnIdTypCdgVrsn());
+		if(s.getStrctrDfnIdTypCdgVrsn() != null ) {
+
+			String[] arrayi0 = s.getStrctrDfnIdTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getIdentifier().size() < i0+1) { structuredefinition.addIdentifier(); }
+				String[] arrayi1 = s.getStrctrDfnIdTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(structuredefinition.getIdentifier().get(i0).getType().getCoding().size() < i1+1) { structuredefinition.getIdentifier().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {structuredefinition.getIdentifier().get(i0).getType().getCoding().get(i1).setVersion(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** StrctrDfn_Id_Typ_Txt ********************************************************************************/
-		if(s.getStrctrDfnIdTypTxt() != null) {
-			structuredefinitionidentifiertype.setText(s.getStrctrDfnIdTypTxt());
-		}
-		/******************** structuredefinitionidentifieruse ********************************************************************************/
-		org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory structuredefinitionidentifieruse =  new org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory();
-		structuredefinitionidentifier.setUse(structuredefinitionidentifieruse.fromCode(s.getStrctrDfnIdUse()));
+		if(s.getStrctrDfnIdTypTxt() != null ) {
 
+			String[] arrayi0 = s.getStrctrDfnIdTypTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getIdentifier().size() < i0+1) { structuredefinition.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {structuredefinition.getIdentifier().get(i0).getType().setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
+		}
+		/******************** StrctrDfn_Id_Use ********************************************************************************/
+		if(s.getStrctrDfnIdUse() != null ) {
+
+			String[] arrayi0 = s.getStrctrDfnIdUse().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getIdentifier().size() < i0+1) { structuredefinition.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {structuredefinition.getIdentifier().get(i0).setUse(new org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory().fromCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** StrctrDfn_Id_Vl ********************************************************************************/
-		if(s.getStrctrDfnIdVl() != null) {
-			structuredefinitionidentifier.setValue(s.getStrctrDfnIdVl());
+		if(s.getStrctrDfnIdVl() != null ) {
+
+			String[] arrayi0 = s.getStrctrDfnIdVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getIdentifier().size() < i0+1) { structuredefinition.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {structuredefinition.getIdentifier().get(i0).setValue(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
-		/******************** structuredefinitionjurisdiction ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept structuredefinitionjurisdiction =  new org.hl7.fhir.r4.model.CodeableConcept();
-		structuredefinition.addJurisdiction(structuredefinitionjurisdiction);
-
-		/******************** structuredefinitionjurisdictioncoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding structuredefinitionjurisdictioncoding =  new org.hl7.fhir.r4.model.Coding();
-		structuredefinitionjurisdiction.addCoding(structuredefinitionjurisdictioncoding);
-
 		/******************** StrctrDfn_Jrsdctn_Cdg_Cd ********************************************************************************/
-		if(s.getStrctrDfnJrsdctnCdgCd() != null) {
-			structuredefinitionjurisdictioncoding.setCode(s.getStrctrDfnJrsdctnCdgCd());
+		if(s.getStrctrDfnJrsdctnCdgCd() != null ) {
+
+			String[] arrayi0 = s.getStrctrDfnJrsdctnCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getJurisdiction().size() < i0+1) { structuredefinition.addJurisdiction(); }
+				String[] arrayi1 = s.getStrctrDfnJrsdctnCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(structuredefinition.getJurisdiction().get(i0).getCoding().size() < i1+1) { structuredefinition.getJurisdiction().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {structuredefinition.getJurisdiction().get(i0).getCoding().get(i1).setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** StrctrDfn_Jrsdctn_Cdg_Dsply ********************************************************************************/
-		if(s.getStrctrDfnJrsdctnCdgDsply() != null) {
-			structuredefinitionjurisdictioncoding.setDisplay(s.getStrctrDfnJrsdctnCdgDsply());
+		if(s.getStrctrDfnJrsdctnCdgDsply() != null ) {
+
+			String[] arrayi0 = s.getStrctrDfnJrsdctnCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getJurisdiction().size() < i0+1) { structuredefinition.addJurisdiction(); }
+				String[] arrayi1 = s.getStrctrDfnJrsdctnCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(structuredefinition.getJurisdiction().get(i0).getCoding().size() < i1+1) { structuredefinition.getJurisdiction().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {structuredefinition.getJurisdiction().get(i0).getCoding().get(i1).setDisplay(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** StrctrDfn_Jrsdctn_Cdg_Sys ********************************************************************************/
-		if(s.getStrctrDfnJrsdctnCdgSys() != null) {
-			structuredefinitionjurisdictioncoding.setSystem(s.getStrctrDfnJrsdctnCdgSys());
+		if(s.getStrctrDfnJrsdctnCdgSys() != null ) {
+
+			String[] arrayi0 = s.getStrctrDfnJrsdctnCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getJurisdiction().size() < i0+1) { structuredefinition.addJurisdiction(); }
+				String[] arrayi1 = s.getStrctrDfnJrsdctnCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(structuredefinition.getJurisdiction().get(i0).getCoding().size() < i1+1) { structuredefinition.getJurisdiction().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {structuredefinition.getJurisdiction().get(i0).getCoding().get(i1).setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** StrctrDfn_Jrsdctn_Cdg_UsrSltd ********************************************************************************/
-		if(s.getStrctrDfnJrsdctnCdgUsrSltd() != null) {
-			structuredefinitionjurisdictioncoding.setUserSelected(Boolean.parseBoolean(s.getStrctrDfnJrsdctnCdgUsrSltd()));
+		if(s.getStrctrDfnJrsdctnCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = s.getStrctrDfnJrsdctnCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getJurisdiction().size() < i0+1) { structuredefinition.addJurisdiction(); }
+				String[] arrayi1 = s.getStrctrDfnJrsdctnCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(structuredefinition.getJurisdiction().get(i0).getCoding().size() < i1+1) { structuredefinition.getJurisdiction().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {structuredefinition.getJurisdiction().get(i0).getCoding().get(i1).setUserSelected(Boolean.parseBoolean(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
 		}
 		/******************** StrctrDfn_Jrsdctn_Cdg_Vrsn ********************************************************************************/
-		if(s.getStrctrDfnJrsdctnCdgVrsn() != null) {
-			structuredefinitionjurisdictioncoding.setVersion(s.getStrctrDfnJrsdctnCdgVrsn());
+		if(s.getStrctrDfnJrsdctnCdgVrsn() != null ) {
+
+			String[] arrayi0 = s.getStrctrDfnJrsdctnCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getJurisdiction().size() < i0+1) { structuredefinition.addJurisdiction(); }
+				String[] arrayi1 = s.getStrctrDfnJrsdctnCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(structuredefinition.getJurisdiction().get(i0).getCoding().size() < i1+1) { structuredefinition.getJurisdiction().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {structuredefinition.getJurisdiction().get(i0).getCoding().get(i1).setVersion(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** StrctrDfn_Jrsdctn_Txt ********************************************************************************/
-		if(s.getStrctrDfnJrsdctnTxt() != null) {
-			structuredefinitionjurisdiction.setText(s.getStrctrDfnJrsdctnTxt());
-		}
-		/******************** structuredefinitionkeyword ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding structuredefinitionkeyword =  new org.hl7.fhir.r4.model.Coding();
-		structuredefinition.addKeyword(structuredefinitionkeyword);
+		if(s.getStrctrDfnJrsdctnTxt() != null ) {
 
+			String[] arrayi0 = s.getStrctrDfnJrsdctnTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getJurisdiction().size() < i0+1) { structuredefinition.addJurisdiction(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {structuredefinition.getJurisdiction().get(i0).setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
+		}
 		/******************** StrctrDfn_Keyword_Cd ********************************************************************************/
-		if(s.getStrctrDfnKeywordCd() != null) {
-			structuredefinitionkeyword.setCode(s.getStrctrDfnKeywordCd());
+		if(s.getStrctrDfnKeywordCd() != null ) {
+
+			String[] arrayi0 = s.getStrctrDfnKeywordCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getKeyword().size() < i0+1) { structuredefinition.addKeyword(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {structuredefinition.getKeyword().get(i0).setCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** StrctrDfn_Keyword_Dsply ********************************************************************************/
-		if(s.getStrctrDfnKeywordDsply() != null) {
-			structuredefinitionkeyword.setDisplay(s.getStrctrDfnKeywordDsply());
+		if(s.getStrctrDfnKeywordDsply() != null ) {
+
+			String[] arrayi0 = s.getStrctrDfnKeywordDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getKeyword().size() < i0+1) { structuredefinition.addKeyword(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {structuredefinition.getKeyword().get(i0).setDisplay(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** StrctrDfn_Keyword_Sys ********************************************************************************/
-		if(s.getStrctrDfnKeywordSys() != null) {
-			structuredefinitionkeyword.setSystem(s.getStrctrDfnKeywordSys());
+		if(s.getStrctrDfnKeywordSys() != null ) {
+
+			String[] arrayi0 = s.getStrctrDfnKeywordSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getKeyword().size() < i0+1) { structuredefinition.addKeyword(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {structuredefinition.getKeyword().get(i0).setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** StrctrDfn_Keyword_UsrSltd ********************************************************************************/
-		if(s.getStrctrDfnKeywordUsrSltd() != null) {
-			structuredefinitionkeyword.setUserSelected(Boolean.parseBoolean(s.getStrctrDfnKeywordUsrSltd()));
+		if(s.getStrctrDfnKeywordUsrSltd() != null ) {
+
+			String[] arrayi0 = s.getStrctrDfnKeywordUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getKeyword().size() < i0+1) { structuredefinition.addKeyword(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {structuredefinition.getKeyword().get(i0).setUserSelected(Boolean.parseBoolean(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** StrctrDfn_Keyword_Vrsn ********************************************************************************/
-		if(s.getStrctrDfnKeywordVrsn() != null) {
-			structuredefinitionkeyword.setVersion(s.getStrctrDfnKeywordVrsn());
+		if(s.getStrctrDfnKeywordVrsn() != null ) {
+
+			String[] arrayi0 = s.getStrctrDfnKeywordVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getKeyword().size() < i0+1) { structuredefinition.addKeyword(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {structuredefinition.getKeyword().get(i0).setVersion(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
-		/******************** structuredefinitionkind ********************************************************************************/
-		org.hl7.fhir.r4.model.StructureDefinition.StructureDefinitionKindEnumFactory structuredefinitionkind =  new org.hl7.fhir.r4.model.StructureDefinition.StructureDefinitionKindEnumFactory();
-		structuredefinition.setKind(structuredefinitionkind.fromCode(s.getStrctrDfnKind()));
+		/******************** StrctrDfn_Kind ********************************************************************************/
+		if(s.getStrctrDfnKind() != null ) {
 
-		/******************** structuredefinitionmapping ********************************************************************************/
-		org.hl7.fhir.r4.model.StructureDefinition.StructureDefinitionMappingComponent structuredefinitionmapping =  new org.hl7.fhir.r4.model.StructureDefinition.StructureDefinitionMappingComponent();
-		structuredefinition.addMapping(structuredefinitionmapping);
-
+			if(s.getStrctrDfnKind().replace("[","").replace("]","").equals("NULL") | s.getStrctrDfnKind()==null) {} else {
+			structuredefinition.setKind(new org.hl7.fhir.r4.model.StructureDefinition.StructureDefinitionKindEnumFactory().fromCode(s.getStrctrDfnKind().replace("[","").replace("]","").replace("\"","")));
+			}
+		}
 		/******************** StrctrDfn_Mapping_Comment ********************************************************************************/
-		if(s.getStrctrDfnMappingComment() != null) {
-			structuredefinitionmapping.setComment(s.getStrctrDfnMappingComment());
+		if(s.getStrctrDfnMappingComment() != null ) {
+
+			String[] arrayi0 = s.getStrctrDfnMappingComment().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getMapping().size() < i0+1) { structuredefinition.addMapping(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {structuredefinition.getMapping().get(i0).setComment(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** StrctrDfn_Mapping_Identity ********************************************************************************/
-		if(s.getStrctrDfnMappingIdentity() != null) {
-			structuredefinitionmapping.setIdentity(s.getStrctrDfnMappingIdentity());
+		if(s.getStrctrDfnMappingIdentity() != null ) {
+
+			String[] arrayi0 = s.getStrctrDfnMappingIdentity().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getMapping().size() < i0+1) { structuredefinition.addMapping(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {structuredefinition.getMapping().get(i0).setIdentity(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** StrctrDfn_Mapping_Nm ********************************************************************************/
-		if(s.getStrctrDfnMappingNm() != null) {
-			structuredefinitionmapping.setName(s.getStrctrDfnMappingNm());
+		if(s.getStrctrDfnMappingNm() != null ) {
+
+			String[] arrayi0 = s.getStrctrDfnMappingNm().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getMapping().size() < i0+1) { structuredefinition.addMapping(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {structuredefinition.getMapping().get(i0).setName(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** StrctrDfn_Mapping_Uri ********************************************************************************/
-		if(s.getStrctrDfnMappingUri() != null) {
-			structuredefinitionmapping.setUri(s.getStrctrDfnMappingUri());
+		if(s.getStrctrDfnMappingUri() != null ) {
+
+			String[] arrayi0 = s.getStrctrDfnMappingUri().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getMapping().size() < i0+1) { structuredefinition.addMapping(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {structuredefinition.getMapping().get(i0).setUri(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** StrctrDfn_Nm ********************************************************************************/
-		if(s.getStrctrDfnNm() != null) {
-			structuredefinition.setName(s.getStrctrDfnNm());
+		if(s.getStrctrDfnNm() != null ) {
+
+			if(s.getStrctrDfnNm().replace("[","").replace("]","").equals("NULL") | s.getStrctrDfnNm()==null) {} else {
+			structuredefinition.setName(s.getStrctrDfnNm().replace("[","").replace("]","").replace("\"",""));
+			}
 		}
 		/******************** StrctrDfn_Pblshr ********************************************************************************/
-		if(s.getStrctrDfnPblshr() != null) {
-			structuredefinition.setPublisher(s.getStrctrDfnPblshr());
+		if(s.getStrctrDfnPblshr() != null ) {
+
+			if(s.getStrctrDfnPblshr().replace("[","").replace("]","").equals("NULL") | s.getStrctrDfnPblshr()==null) {} else {
+			structuredefinition.setPublisher(s.getStrctrDfnPblshr().replace("[","").replace("]","").replace("\"",""));
+			}
 		}
 		/******************** StrctrDfn_Prpse ********************************************************************************/
-		if(s.getStrctrDfnPrpse() != null) {
-			structuredefinition.setPurpose(s.getStrctrDfnPrpse());
-		}
-		/******************** structuredefinitionsnapshot ********************************************************************************/
-		org.hl7.fhir.r4.model.StructureDefinition.StructureDefinitionSnapshotComponent structuredefinitionsnapshot =  new org.hl7.fhir.r4.model.StructureDefinition.StructureDefinitionSnapshotComponent();
-		structuredefinition.setSnapshot(structuredefinitionsnapshot);
+		if(s.getStrctrDfnPrpse() != null ) {
 
-		/******************** structuredefinitionsnapshotelement ********************************************************************************/
-		org.hl7.fhir.r4.model.ElementDefinition structuredefinitionsnapshotelement =  new org.hl7.fhir.r4.model.ElementDefinition();
-		structuredefinitionsnapshot.addElement(structuredefinitionsnapshotelement);
+			if(s.getStrctrDfnPrpse().replace("[","").replace("]","").equals("NULL") | s.getStrctrDfnPrpse()==null) {} else {
+			structuredefinition.setPurpose(s.getStrctrDfnPrpse().replace("[","").replace("]","").replace("\"",""));
+			}
+		}
+		/******************** StrctrDfn_Sts ********************************************************************************/
+		if(s.getStrctrDfnSts() != null ) {
 
-		/******************** StrctrDfn_Snpsht_Elmnt_Alias ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntAlias() != null) {
-			structuredefinitionsnapshotelement.addAlias(s.getStrctrDfnSnpshtElmntAlias());
+			if(s.getStrctrDfnSts().replace("[","").replace("]","").equals("NULL") | s.getStrctrDfnSts()==null) {} else {
+			structuredefinition.setStatus(new org.hl7.fhir.r4.model.Enumerations.PublicationStatusEnumFactory().fromCode(s.getStrctrDfnSts().replace("[","").replace("]","").replace("\"","")));
+			}
 		}
-		/******************** structuredefinitionsnapshotelementbase ********************************************************************************/
-		org.hl7.fhir.r4.model.ElementDefinition.ElementDefinitionBaseComponent structuredefinitionsnapshotelementbase =  new org.hl7.fhir.r4.model.ElementDefinition.ElementDefinitionBaseComponent();
-		structuredefinitionsnapshotelement.setBase(structuredefinitionsnapshotelementbase);
-
-		/******************** StrctrDfn_Snpsht_Elmnt_Base_Mx ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntBaseMx() != null) {
-			structuredefinitionsnapshotelementbase.setMax(s.getStrctrDfnSnpshtElmntBaseMx());
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_Base_Min ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntBaseMin() != null) {
-			structuredefinitionsnapshotelementbase.setMin(Integer.parseInt(s.getStrctrDfnSnpshtElmntBaseMin()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_Base_Path ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntBasePath() != null) {
-			structuredefinitionsnapshotelementbase.setPath(s.getStrctrDfnSnpshtElmntBasePath());
-		}
-		/******************** structuredefinitionsnapshotelementbinding ********************************************************************************/
-		org.hl7.fhir.r4.model.ElementDefinition.ElementDefinitionBindingComponent structuredefinitionsnapshotelementbinding =  new org.hl7.fhir.r4.model.ElementDefinition.ElementDefinitionBindingComponent();
-		structuredefinitionsnapshotelement.setBinding(structuredefinitionsnapshotelementbinding);
-
-		/******************** StrctrDfn_Snpsht_Elmnt_Binding_Dscrptn ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntBindingDscrptn() != null) {
-			structuredefinitionsnapshotelementbinding.setDescription(s.getStrctrDfnSnpshtElmntBindingDscrptn());
-		}
-		/******************** structuredefinitionsnapshotelementbindingstrength ********************************************************************************/
-		org.hl7.fhir.r4.model.Enumerations.BindingStrengthEnumFactory structuredefinitionsnapshotelementbindingstrength =  new org.hl7.fhir.r4.model.Enumerations.BindingStrengthEnumFactory();
-		structuredefinitionsnapshotelementbinding.setStrength(structuredefinitionsnapshotelementbindingstrength.fromCode(s.getStrctrDfnSnpshtElmntBindingStr()));
-
-		/******************** StrctrDfn_Snpsht_Elmnt_Binding_VlSt ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntBindingVlSt() != null) {
-			structuredefinitionsnapshotelementbinding.setValueSet(s.getStrctrDfnSnpshtElmntBindingVlSt());
-		}
-		/******************** structuredefinitionsnapshotelementcode ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding structuredefinitionsnapshotelementcode =  new org.hl7.fhir.r4.model.Coding();
-		structuredefinitionsnapshotelement.addCode(structuredefinitionsnapshotelementcode);
-
-		/******************** StrctrDfn_Snpsht_Elmnt_Cd_Cd ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntCdCd() != null) {
-			structuredefinitionsnapshotelementcode.setCode(s.getStrctrDfnSnpshtElmntCdCd());
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_Cd_Dsply ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntCdDsply() != null) {
-			structuredefinitionsnapshotelementcode.setDisplay(s.getStrctrDfnSnpshtElmntCdDsply());
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_Cd_Sys ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntCdSys() != null) {
-			structuredefinitionsnapshotelementcode.setSystem(s.getStrctrDfnSnpshtElmntCdSys());
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_Cd_UsrSltd ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntCdUsrSltd() != null) {
-			structuredefinitionsnapshotelementcode.setUserSelected(Boolean.parseBoolean(s.getStrctrDfnSnpshtElmntCdUsrSltd()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_Cd_Vrsn ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntCdVrsn() != null) {
-			structuredefinitionsnapshotelementcode.setVersion(s.getStrctrDfnSnpshtElmntCdVrsn());
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_Comment ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntComment() != null) {
-			structuredefinitionsnapshotelement.setComment(s.getStrctrDfnSnpshtElmntComment());
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_Cndtn ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntCndtn() != null) {
-			structuredefinitionsnapshotelement.addCondition(s.getStrctrDfnSnpshtElmntCndtn());
-		}
-		/******************** structuredefinitionsnapshotelementconstraint ********************************************************************************/
-		org.hl7.fhir.r4.model.ElementDefinition.ElementDefinitionConstraintComponent structuredefinitionsnapshotelementconstraint =  new org.hl7.fhir.r4.model.ElementDefinition.ElementDefinitionConstraintComponent();
-		structuredefinitionsnapshotelement.addConstraint(structuredefinitionsnapshotelementconstraint);
-
-		/******************** StrctrDfn_Snpsht_Elmnt_Constraint_Exprsn ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntConstraintExprsn() != null) {
-			structuredefinitionsnapshotelementconstraint.setExpression(s.getStrctrDfnSnpshtElmntConstraintExprsn());
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_Constraint_Human ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntConstraintHuman() != null) {
-			structuredefinitionsnapshotelementconstraint.setHuman(s.getStrctrDfnSnpshtElmntConstraintHuman());
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_Constraint_Key ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntConstraintKey() != null) {
-			structuredefinitionsnapshotelementconstraint.setKey(s.getStrctrDfnSnpshtElmntConstraintKey());
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_Constraint_Rqrments ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntConstraintRqrments() != null) {
-			structuredefinitionsnapshotelementconstraint.setRequirements(s.getStrctrDfnSnpshtElmntConstraintRqrments());
-		}
-		/******************** structuredefinitionsnapshotelementconstraintseverity ********************************************************************************/
-		org.hl7.fhir.r4.model.ElementDefinition.ConstraintSeverityEnumFactory structuredefinitionsnapshotelementconstraintseverity =  new org.hl7.fhir.r4.model.ElementDefinition.ConstraintSeverityEnumFactory();
-		structuredefinitionsnapshotelementconstraint.setSeverity(structuredefinitionsnapshotelementconstraintseverity.fromCode(s.getStrctrDfnSnpshtElmntConstraintSeverity()));
-
-		/******************** StrctrDfn_Snpsht_Elmnt_Constraint_Src ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntConstraintSrc() != null) {
-			structuredefinitionsnapshotelementconstraint.setSource(s.getStrctrDfnSnpshtElmntConstraintSrc());
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_Constraint_Xpath ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntConstraintXpath() != null) {
-			structuredefinitionsnapshotelementconstraint.setXpath(s.getStrctrDfnSnpshtElmntConstraintXpath());
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_CntntRfrnc ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntCntntRfrnc() != null) {
-			structuredefinitionsnapshotelement.setContentReference(s.getStrctrDfnSnpshtElmntCntntRfrnc());
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_Dfn ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntDfn() != null) {
-			structuredefinitionsnapshotelement.setDefinition(s.getStrctrDfnSnpshtElmntDfn());
-		}
-		/******************** structuredefinitionsnapshotelementexample ********************************************************************************/
-		org.hl7.fhir.r4.model.ElementDefinition.ElementDefinitionExampleComponent structuredefinitionsnapshotelementexample =  new org.hl7.fhir.r4.model.ElementDefinition.ElementDefinitionExampleComponent();
-		structuredefinitionsnapshotelement.addExample(structuredefinitionsnapshotelementexample);
-
-		/******************** StrctrDfn_Snpsht_Elmnt_Example_Lbl ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntExampleLbl() != null) {
-			structuredefinitionsnapshotelementexample.setLabel(s.getStrctrDfnSnpshtElmntExampleLbl());
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_IsMdfr ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntIsMdfr() != null) {
-			structuredefinitionsnapshotelement.setIsModifier(Boolean.parseBoolean(s.getStrctrDfnSnpshtElmntIsMdfr()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_IsMdfrRsn ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntIsMdfrRsn() != null) {
-			structuredefinitionsnapshotelement.setIsModifierReason(s.getStrctrDfnSnpshtElmntIsMdfrRsn());
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_IsSummary ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntIsSummary() != null) {
-			structuredefinitionsnapshotelement.setIsSummary(Boolean.parseBoolean(s.getStrctrDfnSnpshtElmntIsSummary()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_Lbl ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntLbl() != null) {
-			structuredefinitionsnapshotelement.setLabel(s.getStrctrDfnSnpshtElmntLbl());
-		}
-		/******************** structuredefinitionsnapshotelementmapping ********************************************************************************/
-		org.hl7.fhir.r4.model.ElementDefinition.ElementDefinitionMappingComponent structuredefinitionsnapshotelementmapping =  new org.hl7.fhir.r4.model.ElementDefinition.ElementDefinitionMappingComponent();
-		structuredefinitionsnapshotelement.addMapping(structuredefinitionsnapshotelementmapping);
-
-		/******************** StrctrDfn_Snpsht_Elmnt_Mapping_Comment ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntMappingComment() != null) {
-			structuredefinitionsnapshotelementmapping.setComment(s.getStrctrDfnSnpshtElmntMappingComment());
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_Mapping_Identity ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntMappingIdentity() != null) {
-			structuredefinitionsnapshotelementmapping.setIdentity(s.getStrctrDfnSnpshtElmntMappingIdentity());
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_Mapping_Lnguage ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntMappingLnguage() != null) {
-			structuredefinitionsnapshotelementmapping.setLanguage(s.getStrctrDfnSnpshtElmntMappingLnguage());
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_Mapping_Map ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntMappingMap() != null) {
-			structuredefinitionsnapshotelementmapping.setMap(s.getStrctrDfnSnpshtElmntMappingMap());
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_Mx ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntMx() != null) {
-			structuredefinitionsnapshotelement.setMax(s.getStrctrDfnSnpshtElmntMx());
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_MxLength ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntMxLength() != null) {
-			structuredefinitionsnapshotelement.setMaxLength(Integer.parseInt(s.getStrctrDfnSnpshtElmntMxLength()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_MxVlDtTimeTyp ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntMxVlDtTimeTyp() != null) {
-			structuredefinitionsnapshotelement.setMaxValue( new org.hl7.fhir.r4.model.DateTimeType(s.getStrctrDfnSnpshtElmntMxVlDtTimeTyp()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_MxVlDtTyp ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntMxVlDtTyp() != null) {
-			structuredefinitionsnapshotelement.setMaxValue( new org.hl7.fhir.r4.model.DateType(s.getStrctrDfnSnpshtElmntMxVlDtTyp()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_MxVlDecimalTyp ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntMxVlDecimalTyp() != null) {
-			structuredefinitionsnapshotelement.setMaxValue( new org.hl7.fhir.r4.model.DecimalType(s.getStrctrDfnSnpshtElmntMxVlDecimalTyp()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_MxVlInstantTyp ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntMxVlInstantTyp() != null) {
-			structuredefinitionsnapshotelement.setMaxValue( new org.hl7.fhir.r4.model.InstantType(s.getStrctrDfnSnpshtElmntMxVlInstantTyp()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_MxVlIntegerTyp ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntMxVlIntegerTyp() != null) {
-			structuredefinitionsnapshotelement.setMaxValue( new org.hl7.fhir.r4.model.IntegerType(s.getStrctrDfnSnpshtElmntMxVlIntegerTyp()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_MxVlPositiveIntTyp ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntMxVlPositiveIntTyp() != null) {
-			structuredefinitionsnapshotelement.setMaxValue( new org.hl7.fhir.r4.model.PositiveIntType(s.getStrctrDfnSnpshtElmntMxVlPositiveIntTyp()));
-		}
-		/******************** structuredefinitionsnapshotelementmaxvaluequantity ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity structuredefinitionsnapshotelementmaxvaluequantity =  new org.hl7.fhir.r4.model.Quantity();
-		structuredefinitionsnapshotelement.setMaxValue(structuredefinitionsnapshotelementmaxvaluequantity);
-
-		/******************** StrctrDfn_Snpsht_Elmnt_MxVlQnty_Cd ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntMxVlQntyCd() != null) {
-			structuredefinitionsnapshotelementmaxvaluequantity.setCode(s.getStrctrDfnSnpshtElmntMxVlQntyCd());
-		}
-		/******************** structuredefinitionsnapshotelementmaxvaluequantitycomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory structuredefinitionsnapshotelementmaxvaluequantitycomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-		structuredefinitionsnapshotelementmaxvaluequantity.setComparator(structuredefinitionsnapshotelementmaxvaluequantitycomparator.fromCode(s.getStrctrDfnSnpshtElmntMxVlQntyCmprtr()));
-
-		/******************** StrctrDfn_Snpsht_Elmnt_MxVlQnty_Sys ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntMxVlQntySys() != null) {
-			structuredefinitionsnapshotelementmaxvaluequantity.setSystem(s.getStrctrDfnSnpshtElmntMxVlQntySys());
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_MxVlQnty_Unt ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntMxVlQntyUnt() != null) {
-			structuredefinitionsnapshotelementmaxvaluequantity.setUnit(s.getStrctrDfnSnpshtElmntMxVlQntyUnt());
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_MxVlQnty_Vl ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntMxVlQntyVl() != null) {
-			structuredefinitionsnapshotelementmaxvaluequantity.setValue(Double.parseDouble((s.getStrctrDfnSnpshtElmntMxVlQntyVl())));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_MxVlTimeTyp ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntMxVlTimeTyp() != null) {
-			structuredefinitionsnapshotelement.setMaxValue( new org.hl7.fhir.r4.model.TimeType(s.getStrctrDfnSnpshtElmntMxVlTimeTyp()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_MxVlUnsignedIntTyp ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntMxVlUnsignedIntTyp() != null) {
-			structuredefinitionsnapshotelement.setMaxValue( new org.hl7.fhir.r4.model.UnsignedIntType(s.getStrctrDfnSnpshtElmntMxVlUnsignedIntTyp()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_MeaningWhenMissing ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntMeaningWhenMissing() != null) {
-			structuredefinitionsnapshotelement.setMeaningWhenMissing(s.getStrctrDfnSnpshtElmntMeaningWhenMissing());
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_Min ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntMin() != null) {
-			structuredefinitionsnapshotelement.setMin(Integer.parseInt(s.getStrctrDfnSnpshtElmntMin()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_MinVlDtTimeTyp ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntMinVlDtTimeTyp() != null) {
-			structuredefinitionsnapshotelement.setMinValue( new org.hl7.fhir.r4.model.DateTimeType(s.getStrctrDfnSnpshtElmntMinVlDtTimeTyp()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_MinVlDtTyp ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntMinVlDtTyp() != null) {
-			structuredefinitionsnapshotelement.setMinValue( new org.hl7.fhir.r4.model.DateType(s.getStrctrDfnSnpshtElmntMinVlDtTyp()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_MinVlDecimalTyp ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntMinVlDecimalTyp() != null) {
-			structuredefinitionsnapshotelement.setMinValue( new org.hl7.fhir.r4.model.DecimalType(s.getStrctrDfnSnpshtElmntMinVlDecimalTyp()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_MinVlInstantTyp ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntMinVlInstantTyp() != null) {
-			structuredefinitionsnapshotelement.setMinValue( new org.hl7.fhir.r4.model.InstantType(s.getStrctrDfnSnpshtElmntMinVlInstantTyp()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_MinVlIntegerTyp ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntMinVlIntegerTyp() != null) {
-			structuredefinitionsnapshotelement.setMinValue( new org.hl7.fhir.r4.model.IntegerType(s.getStrctrDfnSnpshtElmntMinVlIntegerTyp()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_MinVlPositiveIntTyp ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntMinVlPositiveIntTyp() != null) {
-			structuredefinitionsnapshotelement.setMinValue( new org.hl7.fhir.r4.model.PositiveIntType(s.getStrctrDfnSnpshtElmntMinVlPositiveIntTyp()));
-		}
-		/******************** structuredefinitionsnapshotelementminvaluequantity ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity structuredefinitionsnapshotelementminvaluequantity =  new org.hl7.fhir.r4.model.Quantity();
-		structuredefinitionsnapshotelement.setMinValue(structuredefinitionsnapshotelementminvaluequantity);
-
-		/******************** StrctrDfn_Snpsht_Elmnt_MinVlQnty_Cd ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntMinVlQntyCd() != null) {
-			structuredefinitionsnapshotelementminvaluequantity.setCode(s.getStrctrDfnSnpshtElmntMinVlQntyCd());
-		}
-		/******************** structuredefinitionsnapshotelementminvaluequantitycomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory structuredefinitionsnapshotelementminvaluequantitycomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-		structuredefinitionsnapshotelementminvaluequantity.setComparator(structuredefinitionsnapshotelementminvaluequantitycomparator.fromCode(s.getStrctrDfnSnpshtElmntMinVlQntyCmprtr()));
-
-		/******************** StrctrDfn_Snpsht_Elmnt_MinVlQnty_Sys ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntMinVlQntySys() != null) {
-			structuredefinitionsnapshotelementminvaluequantity.setSystem(s.getStrctrDfnSnpshtElmntMinVlQntySys());
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_MinVlQnty_Unt ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntMinVlQntyUnt() != null) {
-			structuredefinitionsnapshotelementminvaluequantity.setUnit(s.getStrctrDfnSnpshtElmntMinVlQntyUnt());
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_MinVlQnty_Vl ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntMinVlQntyVl() != null) {
-			structuredefinitionsnapshotelementminvaluequantity.setValue(Double.parseDouble((s.getStrctrDfnSnpshtElmntMinVlQntyVl())));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_MinVlTimeTyp ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntMinVlTimeTyp() != null) {
-			structuredefinitionsnapshotelement.setMinValue( new org.hl7.fhir.r4.model.TimeType(s.getStrctrDfnSnpshtElmntMinVlTimeTyp()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_MinVlUnsignedIntTyp ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntMinVlUnsignedIntTyp() != null) {
-			structuredefinitionsnapshotelement.setMinValue( new org.hl7.fhir.r4.model.UnsignedIntType(s.getStrctrDfnSnpshtElmntMinVlUnsignedIntTyp()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_MustSupport ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntMustSupport() != null) {
-			structuredefinitionsnapshotelement.setMustSupport(Boolean.parseBoolean(s.getStrctrDfnSnpshtElmntMustSupport()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_OrdrMeaning ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntOrdrMeaning() != null) {
-			structuredefinitionsnapshotelement.setOrderMeaning(s.getStrctrDfnSnpshtElmntOrdrMeaning());
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_Path ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntPath() != null) {
-			structuredefinitionsnapshotelement.setPath(s.getStrctrDfnSnpshtElmntPath());
-		}
-		/******************** structuredefinitionsnapshotelementrepresentation ********************************************************************************/
-		org.hl7.fhir.r4.model.ElementDefinition.PropertyRepresentationEnumFactory structuredefinitionsnapshotelementrepresentation =  new org.hl7.fhir.r4.model.ElementDefinition.PropertyRepresentationEnumFactory();
-		structuredefinitionsnapshotelement.addRepresentation(structuredefinitionsnapshotelementrepresentation.fromCode(s.getStrctrDfnSnpshtElmntRepresentation()));
-
-		/******************** StrctrDfn_Snpsht_Elmnt_Rqrments ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntRqrments() != null) {
-			structuredefinitionsnapshotelement.setRequirements(s.getStrctrDfnSnpshtElmntRqrments());
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_Short ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntShort() != null) {
-			structuredefinitionsnapshotelement.setShort(s.getStrctrDfnSnpshtElmntShort());
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_SliceIsConstraining ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntSliceIsConstraining() != null) {
-			structuredefinitionsnapshotelement.setSliceIsConstraining(Boolean.parseBoolean(s.getStrctrDfnSnpshtElmntSliceIsConstraining()));
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_SliceNm ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntSliceNm() != null) {
-			structuredefinitionsnapshotelement.setSliceName(s.getStrctrDfnSnpshtElmntSliceNm());
-		}
-		/******************** structuredefinitionsnapshotelementslicing ********************************************************************************/
-		org.hl7.fhir.r4.model.ElementDefinition.ElementDefinitionSlicingComponent structuredefinitionsnapshotelementslicing =  new org.hl7.fhir.r4.model.ElementDefinition.ElementDefinitionSlicingComponent();
-		structuredefinitionsnapshotelement.setSlicing(structuredefinitionsnapshotelementslicing);
-
-		/******************** StrctrDfn_Snpsht_Elmnt_Slicing_Dscrptn ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntSlicingDscrptn() != null) {
-			structuredefinitionsnapshotelementslicing.setDescription(s.getStrctrDfnSnpshtElmntSlicingDscrptn());
-		}
-		/******************** structuredefinitionsnapshotelementslicingdiscriminator ********************************************************************************/
-		org.hl7.fhir.r4.model.ElementDefinition.ElementDefinitionSlicingDiscriminatorComponent structuredefinitionsnapshotelementslicingdiscriminator =  new org.hl7.fhir.r4.model.ElementDefinition.ElementDefinitionSlicingDiscriminatorComponent();
-		structuredefinitionsnapshotelementslicing.addDiscriminator(structuredefinitionsnapshotelementslicingdiscriminator);
-
-		/******************** StrctrDfn_Snpsht_Elmnt_Slicing_Discriminator_Path ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntSlicingDiscriminatorPath() != null) {
-			structuredefinitionsnapshotelementslicingdiscriminator.setPath(s.getStrctrDfnSnpshtElmntSlicingDiscriminatorPath());
-		}
-		/******************** structuredefinitionsnapshotelementslicingdiscriminatortype ********************************************************************************/
-		org.hl7.fhir.r4.model.ElementDefinition.DiscriminatorTypeEnumFactory structuredefinitionsnapshotelementslicingdiscriminatortype =  new org.hl7.fhir.r4.model.ElementDefinition.DiscriminatorTypeEnumFactory();
-		structuredefinitionsnapshotelementslicingdiscriminator.setType(structuredefinitionsnapshotelementslicingdiscriminatortype.fromCode(s.getStrctrDfnSnpshtElmntSlicingDiscriminatorTyp()));
-
-		/******************** StrctrDfn_Snpsht_Elmnt_Slicing_Ordred ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntSlicingOrdred() != null) {
-			structuredefinitionsnapshotelementslicing.setOrdered(Boolean.parseBoolean(s.getStrctrDfnSnpshtElmntSlicingOrdred()));
-		}
-		/******************** structuredefinitionsnapshotelementslicingrules ********************************************************************************/
-		org.hl7.fhir.r4.model.ElementDefinition.SlicingRulesEnumFactory structuredefinitionsnapshotelementslicingrules =  new org.hl7.fhir.r4.model.ElementDefinition.SlicingRulesEnumFactory();
-		structuredefinitionsnapshotelementslicing.setRules(structuredefinitionsnapshotelementslicingrules.fromCode(s.getStrctrDfnSnpshtElmntSlicingRules()));
-
-		/******************** structuredefinitionsnapshotelementtype ********************************************************************************/
-		org.hl7.fhir.r4.model.ElementDefinition.TypeRefComponent structuredefinitionsnapshotelementtype =  new org.hl7.fhir.r4.model.ElementDefinition.TypeRefComponent();
-		structuredefinitionsnapshotelement.addType(structuredefinitionsnapshotelementtype);
-
-		/******************** structuredefinitionsnapshotelementtypeaggregation ********************************************************************************/
-		org.hl7.fhir.r4.model.ElementDefinition.AggregationModeEnumFactory structuredefinitionsnapshotelementtypeaggregation =  new org.hl7.fhir.r4.model.ElementDefinition.AggregationModeEnumFactory();
-		structuredefinitionsnapshotelementtype.addAggregation(structuredefinitionsnapshotelementtypeaggregation.fromCode(s.getStrctrDfnSnpshtElmntTypAggregation()));
-
-		/******************** StrctrDfn_Snpsht_Elmnt_Typ_Cd ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntTypCd() != null) {
-			structuredefinitionsnapshotelementtype.setCode(s.getStrctrDfnSnpshtElmntTypCd());
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_Typ_Profile ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntTypProfile() != null) {
-			structuredefinitionsnapshotelementtype.addProfile(s.getStrctrDfnSnpshtElmntTypProfile());
-		}
-		/******************** StrctrDfn_Snpsht_Elmnt_Typ_TarProfile ********************************************************************************/
-		if(s.getStrctrDfnSnpshtElmntTypTarProfile() != null) {
-			structuredefinitionsnapshotelementtype.addTargetProfile(s.getStrctrDfnSnpshtElmntTypTarProfile());
-		}
-		/******************** structuredefinitionsnapshotelementtypeversioning ********************************************************************************/
-		org.hl7.fhir.r4.model.ElementDefinition.ReferenceVersionRulesEnumFactory structuredefinitionsnapshotelementtypeversioning =  new org.hl7.fhir.r4.model.ElementDefinition.ReferenceVersionRulesEnumFactory();
-		structuredefinitionsnapshotelementtype.setVersioning(structuredefinitionsnapshotelementtypeversioning.fromCode(s.getStrctrDfnSnpshtElmntTypVrsning()));
-
-		/******************** structuredefinitionstatus ********************************************************************************/
-		org.hl7.fhir.r4.model.Enumerations.PublicationStatusEnumFactory structuredefinitionstatus =  new org.hl7.fhir.r4.model.Enumerations.PublicationStatusEnumFactory();
-		structuredefinition.setStatus(structuredefinitionstatus.fromCode(s.getStrctrDfnSts()));
-
 		/******************** StrctrDfn_Ttl ********************************************************************************/
-		if(s.getStrctrDfnTtl() != null) {
-			structuredefinition.setTitle(s.getStrctrDfnTtl());
+		if(s.getStrctrDfnTtl() != null ) {
+
+			if(s.getStrctrDfnTtl().replace("[","").replace("]","").equals("NULL") | s.getStrctrDfnTtl()==null) {} else {
+			structuredefinition.setTitle(s.getStrctrDfnTtl().replace("[","").replace("]","").replace("\"",""));
+			}
 		}
 		/******************** StrctrDfn_Typ ********************************************************************************/
-		if(s.getStrctrDfnTyp() != null) {
-			structuredefinition.setType(s.getStrctrDfnTyp());
+		if(s.getStrctrDfnTyp() != null ) {
+
+			if(s.getStrctrDfnTyp().replace("[","").replace("]","").equals("NULL") | s.getStrctrDfnTyp()==null) {} else {
+			structuredefinition.setType(s.getStrctrDfnTyp().replace("[","").replace("]","").replace("\"",""));
+			}
 		}
 		/******************** StrctrDfn_Url ********************************************************************************/
-		if(s.getStrctrDfnUrl() != null) {
-			structuredefinition.setUrl(s.getStrctrDfnUrl());
+		if(s.getStrctrDfnUrl() != null ) {
+
+			if(s.getStrctrDfnUrl().replace("[","").replace("]","").equals("NULL") | s.getStrctrDfnUrl()==null) {} else {
+			structuredefinition.setUrl(s.getStrctrDfnUrl().replace("[","").replace("]","").replace("\"",""));
+			}
 		}
-		/******************** structuredefinitionusecontext ********************************************************************************/
-		org.hl7.fhir.r4.model.UsageContext structuredefinitionusecontext =  new org.hl7.fhir.r4.model.UsageContext();
-		structuredefinition.addUseContext(structuredefinitionusecontext);
-
-		/******************** structuredefinitionusecontextcode ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding structuredefinitionusecontextcode =  new org.hl7.fhir.r4.model.Coding();
-		structuredefinitionusecontext.setCode(structuredefinitionusecontextcode);
-
 		/******************** StrctrDfn_UseCntxt_Cd_Cd ********************************************************************************/
-		if(s.getStrctrDfnUseCntxtCdCd() != null) {
-			structuredefinitionusecontextcode.setCode(s.getStrctrDfnUseCntxtCdCd());
+		if(s.getStrctrDfnUseCntxtCdCd() != null ) {
+
+			String[] arrayi0 = s.getStrctrDfnUseCntxtCdCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getUseContext().size() < i0+1) { structuredefinition.addUseContext(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {structuredefinition.getUseContext().get(i0).getCode().setCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** StrctrDfn_UseCntxt_Cd_Dsply ********************************************************************************/
-		if(s.getStrctrDfnUseCntxtCdDsply() != null) {
-			structuredefinitionusecontextcode.setDisplay(s.getStrctrDfnUseCntxtCdDsply());
+		if(s.getStrctrDfnUseCntxtCdDsply() != null ) {
+
+			String[] arrayi0 = s.getStrctrDfnUseCntxtCdDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getUseContext().size() < i0+1) { structuredefinition.addUseContext(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {structuredefinition.getUseContext().get(i0).getCode().setDisplay(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** StrctrDfn_UseCntxt_Cd_Sys ********************************************************************************/
-		if(s.getStrctrDfnUseCntxtCdSys() != null) {
-			structuredefinitionusecontextcode.setSystem(s.getStrctrDfnUseCntxtCdSys());
+		if(s.getStrctrDfnUseCntxtCdSys() != null ) {
+
+			String[] arrayi0 = s.getStrctrDfnUseCntxtCdSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getUseContext().size() < i0+1) { structuredefinition.addUseContext(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {structuredefinition.getUseContext().get(i0).getCode().setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** StrctrDfn_UseCntxt_Cd_UsrSltd ********************************************************************************/
-		if(s.getStrctrDfnUseCntxtCdUsrSltd() != null) {
-			structuredefinitionusecontextcode.setUserSelected(Boolean.parseBoolean(s.getStrctrDfnUseCntxtCdUsrSltd()));
+		if(s.getStrctrDfnUseCntxtCdUsrSltd() != null ) {
+
+			String[] arrayi0 = s.getStrctrDfnUseCntxtCdUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getUseContext().size() < i0+1) { structuredefinition.addUseContext(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {structuredefinition.getUseContext().get(i0).getCode().setUserSelected(Boolean.parseBoolean(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** StrctrDfn_UseCntxt_Cd_Vrsn ********************************************************************************/
-		if(s.getStrctrDfnUseCntxtCdVrsn() != null) {
-			structuredefinitionusecontextcode.setVersion(s.getStrctrDfnUseCntxtCdVrsn());
+		if(s.getStrctrDfnUseCntxtCdVrsn() != null ) {
+
+			String[] arrayi0 = s.getStrctrDfnUseCntxtCdVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getUseContext().size() < i0+1) { structuredefinition.addUseContext(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {structuredefinition.getUseContext().get(i0).getCode().setVersion(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
-		/******************** structuredefinitionusecontextvaluecodeableconcept ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept structuredefinitionusecontextvaluecodeableconcept =  new org.hl7.fhir.r4.model.CodeableConcept();
-		structuredefinitionusecontext.setValue(structuredefinitionusecontextvaluecodeableconcept);
-
-		/******************** structuredefinitionusecontextvaluecodeableconceptcoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding structuredefinitionusecontextvaluecodeableconceptcoding =  new org.hl7.fhir.r4.model.Coding();
-		structuredefinitionusecontextvaluecodeableconcept.addCoding(structuredefinitionusecontextvaluecodeableconceptcoding);
-
 		/******************** StrctrDfn_UseCntxt_VlCdbleCncpt_Cdg_Cd ********************************************************************************/
-		if(s.getStrctrDfnUseCntxtVlCdbleCncptCdgCd() != null) {
-			structuredefinitionusecontextvaluecodeableconceptcoding.setCode(s.getStrctrDfnUseCntxtVlCdbleCncptCdgCd());
+		if(s.getStrctrDfnUseCntxtVlCdbleCncptCdgCd() != null ) {
+
+			String[] arrayi0 = s.getStrctrDfnUseCntxtVlCdbleCncptCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getUseContext().size() < i0+1) { structuredefinition.addUseContext(); }
+				String[] arrayi1 = s.getStrctrDfnUseCntxtVlCdbleCncptCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(structuredefinition.getUseContext().get(i0).getValueCodeableConcept().getCoding().size() < i1+1) { structuredefinition.getUseContext().get(i0).getValueCodeableConcept().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {structuredefinition.getUseContext().get(i0).getValueCodeableConcept().getCoding().get(i1).setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** StrctrDfn_UseCntxt_VlCdbleCncpt_Cdg_Dsply ********************************************************************************/
-		if(s.getStrctrDfnUseCntxtVlCdbleCncptCdgDsply() != null) {
-			structuredefinitionusecontextvaluecodeableconceptcoding.setDisplay(s.getStrctrDfnUseCntxtVlCdbleCncptCdgDsply());
+		if(s.getStrctrDfnUseCntxtVlCdbleCncptCdgDsply() != null ) {
+
+			String[] arrayi0 = s.getStrctrDfnUseCntxtVlCdbleCncptCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getUseContext().size() < i0+1) { structuredefinition.addUseContext(); }
+				String[] arrayi1 = s.getStrctrDfnUseCntxtVlCdbleCncptCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(structuredefinition.getUseContext().get(i0).getValueCodeableConcept().getCoding().size() < i1+1) { structuredefinition.getUseContext().get(i0).getValueCodeableConcept().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {structuredefinition.getUseContext().get(i0).getValueCodeableConcept().getCoding().get(i1).setDisplay(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** StrctrDfn_UseCntxt_VlCdbleCncpt_Cdg_Sys ********************************************************************************/
-		if(s.getStrctrDfnUseCntxtVlCdbleCncptCdgSys() != null) {
-			structuredefinitionusecontextvaluecodeableconceptcoding.setSystem(s.getStrctrDfnUseCntxtVlCdbleCncptCdgSys());
+		if(s.getStrctrDfnUseCntxtVlCdbleCncptCdgSys() != null ) {
+
+			String[] arrayi0 = s.getStrctrDfnUseCntxtVlCdbleCncptCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getUseContext().size() < i0+1) { structuredefinition.addUseContext(); }
+				String[] arrayi1 = s.getStrctrDfnUseCntxtVlCdbleCncptCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(structuredefinition.getUseContext().get(i0).getValueCodeableConcept().getCoding().size() < i1+1) { structuredefinition.getUseContext().get(i0).getValueCodeableConcept().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {structuredefinition.getUseContext().get(i0).getValueCodeableConcept().getCoding().get(i1).setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** StrctrDfn_UseCntxt_VlCdbleCncpt_Cdg_UsrSltd ********************************************************************************/
-		if(s.getStrctrDfnUseCntxtVlCdbleCncptCdgUsrSltd() != null) {
-			structuredefinitionusecontextvaluecodeableconceptcoding.setUserSelected(Boolean.parseBoolean(s.getStrctrDfnUseCntxtVlCdbleCncptCdgUsrSltd()));
+		if(s.getStrctrDfnUseCntxtVlCdbleCncptCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = s.getStrctrDfnUseCntxtVlCdbleCncptCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getUseContext().size() < i0+1) { structuredefinition.addUseContext(); }
+				String[] arrayi1 = s.getStrctrDfnUseCntxtVlCdbleCncptCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(structuredefinition.getUseContext().get(i0).getValueCodeableConcept().getCoding().size() < i1+1) { structuredefinition.getUseContext().get(i0).getValueCodeableConcept().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {structuredefinition.getUseContext().get(i0).getValueCodeableConcept().getCoding().get(i1).setUserSelected(Boolean.parseBoolean(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
 		}
 		/******************** StrctrDfn_UseCntxt_VlCdbleCncpt_Cdg_Vrsn ********************************************************************************/
-		if(s.getStrctrDfnUseCntxtVlCdbleCncptCdgVrsn() != null) {
-			structuredefinitionusecontextvaluecodeableconceptcoding.setVersion(s.getStrctrDfnUseCntxtVlCdbleCncptCdgVrsn());
+		if(s.getStrctrDfnUseCntxtVlCdbleCncptCdgVrsn() != null ) {
+
+			String[] arrayi0 = s.getStrctrDfnUseCntxtVlCdbleCncptCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getUseContext().size() < i0+1) { structuredefinition.addUseContext(); }
+				String[] arrayi1 = s.getStrctrDfnUseCntxtVlCdbleCncptCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(structuredefinition.getUseContext().get(i0).getValueCodeableConcept().getCoding().size() < i1+1) { structuredefinition.getUseContext().get(i0).getValueCodeableConcept().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {structuredefinition.getUseContext().get(i0).getValueCodeableConcept().getCoding().get(i1).setVersion(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** StrctrDfn_UseCntxt_VlCdbleCncpt_Txt ********************************************************************************/
-		if(s.getStrctrDfnUseCntxtVlCdbleCncptTxt() != null) {
-			structuredefinitionusecontextvaluecodeableconcept.setText(s.getStrctrDfnUseCntxtVlCdbleCncptTxt());
-		}
-		/******************** structuredefinitionusecontextvaluequantity ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity structuredefinitionusecontextvaluequantity =  new org.hl7.fhir.r4.model.Quantity();
-		structuredefinitionusecontext.setValue(structuredefinitionusecontextvaluequantity);
+		if(s.getStrctrDfnUseCntxtVlCdbleCncptTxt() != null ) {
 
+			String[] arrayi0 = s.getStrctrDfnUseCntxtVlCdbleCncptTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getUseContext().size() < i0+1) { structuredefinition.addUseContext(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {structuredefinition.getUseContext().get(i0).getValueCodeableConcept().setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
+		}
 		/******************** StrctrDfn_UseCntxt_VlQnty_Cd ********************************************************************************/
-		if(s.getStrctrDfnUseCntxtVlQntyCd() != null) {
-			structuredefinitionusecontextvaluequantity.setCode(s.getStrctrDfnUseCntxtVlQntyCd());
-		}
-		/******************** structuredefinitionusecontextvaluequantitycomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory structuredefinitionusecontextvaluequantitycomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-		structuredefinitionusecontextvaluequantity.setComparator(structuredefinitionusecontextvaluequantitycomparator.fromCode(s.getStrctrDfnUseCntxtVlQntyCmprtr()));
+		if(s.getStrctrDfnUseCntxtVlQntyCd() != null ) {
 
+			String[] arrayi0 = s.getStrctrDfnUseCntxtVlQntyCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getUseContext().size() < i0+1) { structuredefinition.addUseContext(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {structuredefinition.getUseContext().get(i0).getValueQuantity().setCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
+		}
+		/******************** StrctrDfn_UseCntxt_VlQnty_Cmprtr ********************************************************************************/
+		if(s.getStrctrDfnUseCntxtVlQntyCmprtr() != null ) {
+
+			String[] arrayi0 = s.getStrctrDfnUseCntxtVlQntyCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getUseContext().size() < i0+1) { structuredefinition.addUseContext(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {structuredefinition.getUseContext().get(i0).getValueQuantity().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** StrctrDfn_UseCntxt_VlQnty_Sys ********************************************************************************/
-		if(s.getStrctrDfnUseCntxtVlQntySys() != null) {
-			structuredefinitionusecontextvaluequantity.setSystem(s.getStrctrDfnUseCntxtVlQntySys());
+		if(s.getStrctrDfnUseCntxtVlQntySys() != null ) {
+
+			String[] arrayi0 = s.getStrctrDfnUseCntxtVlQntySys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getUseContext().size() < i0+1) { structuredefinition.addUseContext(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {structuredefinition.getUseContext().get(i0).getValueQuantity().setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** StrctrDfn_UseCntxt_VlQnty_Unt ********************************************************************************/
-		if(s.getStrctrDfnUseCntxtVlQntyUnt() != null) {
-			structuredefinitionusecontextvaluequantity.setUnit(s.getStrctrDfnUseCntxtVlQntyUnt());
+		if(s.getStrctrDfnUseCntxtVlQntyUnt() != null ) {
+
+			String[] arrayi0 = s.getStrctrDfnUseCntxtVlQntyUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getUseContext().size() < i0+1) { structuredefinition.addUseContext(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {structuredefinition.getUseContext().get(i0).getValueQuantity().setUnit(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** StrctrDfn_UseCntxt_VlQnty_Vl ********************************************************************************/
-		if(s.getStrctrDfnUseCntxtVlQntyVl() != null) {
-			structuredefinitionusecontextvaluequantity.setValue(Double.parseDouble((s.getStrctrDfnUseCntxtVlQntyVl())));
+		if(s.getStrctrDfnUseCntxtVlQntyVl() != null ) {
+
+			String[] arrayi0 = s.getStrctrDfnUseCntxtVlQntyVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getUseContext().size() < i0+1) { structuredefinition.addUseContext(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {structuredefinition.getUseContext().get(i0).getValueQuantity().setValue((new java.math.BigDecimal((arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+			}
+
 		}
-		/******************** structuredefinitionusecontextvaluerange ********************************************************************************/
-		org.hl7.fhir.r4.model.Range structuredefinitionusecontextvaluerange =  new org.hl7.fhir.r4.model.Range();
-		structuredefinitionusecontext.setValue(structuredefinitionusecontextvaluerange);
-
-		/******************** structuredefinitionusecontextvaluerangehigh ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity structuredefinitionusecontextvaluerangehigh =  new org.hl7.fhir.r4.model.Quantity();
-		structuredefinitionusecontextvaluerange.setHigh(structuredefinitionusecontextvaluerangehigh);
-
 		/******************** StrctrDfn_UseCntxt_VlRng_Hi_Cd ********************************************************************************/
-		if(s.getStrctrDfnUseCntxtVlRngHiCd() != null) {
-			structuredefinitionusecontextvaluerangehigh.setCode(s.getStrctrDfnUseCntxtVlRngHiCd());
-		}
-		/******************** structuredefinitionusecontextvaluerangehighcomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory structuredefinitionusecontextvaluerangehighcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-		structuredefinitionusecontextvaluerangehigh.setComparator(structuredefinitionusecontextvaluerangehighcomparator.fromCode(s.getStrctrDfnUseCntxtVlRngHiCmprtr()));
+		if(s.getStrctrDfnUseCntxtVlRngHiCd() != null ) {
 
+			String[] arrayi0 = s.getStrctrDfnUseCntxtVlRngHiCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getUseContext().size() < i0+1) { structuredefinition.addUseContext(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {structuredefinition.getUseContext().get(i0).getValueRange().getHigh().setCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
+		}
+		/******************** StrctrDfn_UseCntxt_VlRng_Hi_Cmprtr ********************************************************************************/
+		if(s.getStrctrDfnUseCntxtVlRngHiCmprtr() != null ) {
+
+			String[] arrayi0 = s.getStrctrDfnUseCntxtVlRngHiCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getUseContext().size() < i0+1) { structuredefinition.addUseContext(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {structuredefinition.getUseContext().get(i0).getValueRange().getHigh().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** StrctrDfn_UseCntxt_VlRng_Hi_Sys ********************************************************************************/
-		if(s.getStrctrDfnUseCntxtVlRngHiSys() != null) {
-			structuredefinitionusecontextvaluerangehigh.setSystem(s.getStrctrDfnUseCntxtVlRngHiSys());
+		if(s.getStrctrDfnUseCntxtVlRngHiSys() != null ) {
+
+			String[] arrayi0 = s.getStrctrDfnUseCntxtVlRngHiSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getUseContext().size() < i0+1) { structuredefinition.addUseContext(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {structuredefinition.getUseContext().get(i0).getValueRange().getHigh().setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** StrctrDfn_UseCntxt_VlRng_Hi_Unt ********************************************************************************/
-		if(s.getStrctrDfnUseCntxtVlRngHiUnt() != null) {
-			structuredefinitionusecontextvaluerangehigh.setUnit(s.getStrctrDfnUseCntxtVlRngHiUnt());
+		if(s.getStrctrDfnUseCntxtVlRngHiUnt() != null ) {
+
+			String[] arrayi0 = s.getStrctrDfnUseCntxtVlRngHiUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getUseContext().size() < i0+1) { structuredefinition.addUseContext(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {structuredefinition.getUseContext().get(i0).getValueRange().getHigh().setUnit(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** StrctrDfn_UseCntxt_VlRng_Hi_Vl ********************************************************************************/
-		if(s.getStrctrDfnUseCntxtVlRngHiVl() != null) {
-			structuredefinitionusecontextvaluerangehigh.setValue(Double.parseDouble((s.getStrctrDfnUseCntxtVlRngHiVl())));
-		}
-		/******************** structuredefinitionusecontextvaluerangelow ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity structuredefinitionusecontextvaluerangelow =  new org.hl7.fhir.r4.model.Quantity();
-		structuredefinitionusecontextvaluerange.setLow(structuredefinitionusecontextvaluerangelow);
+		if(s.getStrctrDfnUseCntxtVlRngHiVl() != null ) {
 
+			String[] arrayi0 = s.getStrctrDfnUseCntxtVlRngHiVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getUseContext().size() < i0+1) { structuredefinition.addUseContext(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {structuredefinition.getUseContext().get(i0).getValueRange().getHigh().setValue((new java.math.BigDecimal((arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+			}
+
+		}
 		/******************** StrctrDfn_UseCntxt_VlRng_Lw_Cd ********************************************************************************/
-		if(s.getStrctrDfnUseCntxtVlRngLwCd() != null) {
-			structuredefinitionusecontextvaluerangelow.setCode(s.getStrctrDfnUseCntxtVlRngLwCd());
-		}
-		/******************** structuredefinitionusecontextvaluerangelowcomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory structuredefinitionusecontextvaluerangelowcomparator =  new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
-		structuredefinitionusecontextvaluerangelow.setComparator(structuredefinitionusecontextvaluerangelowcomparator.fromCode(s.getStrctrDfnUseCntxtVlRngLwCmprtr()));
+		if(s.getStrctrDfnUseCntxtVlRngLwCd() != null ) {
 
+			String[] arrayi0 = s.getStrctrDfnUseCntxtVlRngLwCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getUseContext().size() < i0+1) { structuredefinition.addUseContext(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {structuredefinition.getUseContext().get(i0).getValueRange().getLow().setCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
+		}
+		/******************** StrctrDfn_UseCntxt_VlRng_Lw_Cmprtr ********************************************************************************/
+		if(s.getStrctrDfnUseCntxtVlRngLwCmprtr() != null ) {
+
+			String[] arrayi0 = s.getStrctrDfnUseCntxtVlRngLwCmprtr().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getUseContext().size() < i0+1) { structuredefinition.addUseContext(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {structuredefinition.getUseContext().get(i0).getValueRange().getLow().setComparator(new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory().fromCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** StrctrDfn_UseCntxt_VlRng_Lw_Sys ********************************************************************************/
-		if(s.getStrctrDfnUseCntxtVlRngLwSys() != null) {
-			structuredefinitionusecontextvaluerangelow.setSystem(s.getStrctrDfnUseCntxtVlRngLwSys());
+		if(s.getStrctrDfnUseCntxtVlRngLwSys() != null ) {
+
+			String[] arrayi0 = s.getStrctrDfnUseCntxtVlRngLwSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getUseContext().size() < i0+1) { structuredefinition.addUseContext(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {structuredefinition.getUseContext().get(i0).getValueRange().getLow().setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** StrctrDfn_UseCntxt_VlRng_Lw_Unt ********************************************************************************/
-		if(s.getStrctrDfnUseCntxtVlRngLwUnt() != null) {
-			structuredefinitionusecontextvaluerangelow.setUnit(s.getStrctrDfnUseCntxtVlRngLwUnt());
+		if(s.getStrctrDfnUseCntxtVlRngLwUnt() != null ) {
+
+			String[] arrayi0 = s.getStrctrDfnUseCntxtVlRngLwUnt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getUseContext().size() < i0+1) { structuredefinition.addUseContext(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {structuredefinition.getUseContext().get(i0).getValueRange().getLow().setUnit(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** StrctrDfn_UseCntxt_VlRng_Lw_Vl ********************************************************************************/
-		if(s.getStrctrDfnUseCntxtVlRngLwVl() != null) {
-			structuredefinitionusecontextvaluerangelow.setValue(Double.parseDouble((s.getStrctrDfnUseCntxtVlRngLwVl())));
+		if(s.getStrctrDfnUseCntxtVlRngLwVl() != null ) {
+
+			String[] arrayi0 = s.getStrctrDfnUseCntxtVlRngLwVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getUseContext().size() < i0+1) { structuredefinition.addUseContext(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {structuredefinition.getUseContext().get(i0).getValueRange().getLow().setValue((new java.math.BigDecimal((arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))))); }
+			}
+
 		}
 		/******************** StrctrDfn_UseCntxt_VlRfrnc ********************************************************************************/
-		if(s.getStrctrDfnUseCntxtVlRfrnc() != null) {
-			structuredefinitionusecontext.setValue( new org.hl7.fhir.r4.model.Reference(s.getStrctrDfnUseCntxtVlRfrnc()));
+		if(s.getStrctrDfnUseCntxtVlRfrnc() != null ) {
+
+			String[] arrayi0 = s.getStrctrDfnUseCntxtVlRfrnc().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(structuredefinition.getUseContext().size() < i0+1) { structuredefinition.addUseContext(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {structuredefinition.getUseContext().get(i0).setValue(new org.hl7.fhir.r4.model.Reference(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** StrctrDfn_Vrsn ********************************************************************************/
-		if(s.getStrctrDfnVrsn() != null) {
-			structuredefinition.setVersion(s.getStrctrDfnVrsn());
+		if(s.getStrctrDfnVrsn() != null ) {
+
+			if(s.getStrctrDfnVrsn().replace("[","").replace("]","").equals("NULL") | s.getStrctrDfnVrsn()==null) {} else {
+			structuredefinition.setVersion(s.getStrctrDfnVrsn().replace("[","").replace("]","").replace("\"",""));
+			}
 		}
 		return structuredefinition;
 	}

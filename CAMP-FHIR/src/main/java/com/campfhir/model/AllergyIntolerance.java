@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Jun 27, 2022, 10:40:10 AM by Hibernate Tools 5.6.1.Final
+// Generated Aug 17, 2022, 11:08:48 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -111,6 +111,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
         this.id = id;
     }
     
+    public void addId(String id) {
+    	if( id != null ) {
+	    	if( this.id == null ) {
+	        	this.id = id;
+	        } else if(this.id.substring(this.id.length() - 1).equals("]") & id.equals("[")) {
+	        	this.id = this.id+ "," + id;
+	        } else if(id.equals("[") | id.equals("]") | this.id.substring(this.id.length() - 1).equals("[")) {
+	        	this.id = this.id+id;
+	        } else  {
+	            this.id = this.id+ "," +id;
+	        }
+        }
+    }
+    
     
     
     public String getAlrgyIntoleranceAsserter() {
@@ -119,6 +133,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
     
     public void setAlrgyIntoleranceAsserter(String alrgyIntoleranceAsserter) {
         this.alrgyIntoleranceAsserter = alrgyIntoleranceAsserter;
+    }
+    
+    public void addAlrgyIntoleranceAsserter(String alrgyIntoleranceAsserter) {
+    	if( alrgyIntoleranceAsserter != null ) {
+	    	if( this.alrgyIntoleranceAsserter == null ) {
+	        	this.alrgyIntoleranceAsserter = alrgyIntoleranceAsserter;
+	        } else if(this.alrgyIntoleranceAsserter.substring(this.alrgyIntoleranceAsserter.length() - 1).equals("]") & alrgyIntoleranceAsserter.equals("[")) {
+	        	this.alrgyIntoleranceAsserter = this.alrgyIntoleranceAsserter+ "," + alrgyIntoleranceAsserter;
+	        } else if(alrgyIntoleranceAsserter.equals("[") | alrgyIntoleranceAsserter.equals("]") | this.alrgyIntoleranceAsserter.substring(this.alrgyIntoleranceAsserter.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceAsserter = this.alrgyIntoleranceAsserter+alrgyIntoleranceAsserter;
+	        } else  {
+	            this.alrgyIntoleranceAsserter = this.alrgyIntoleranceAsserter+ "," +alrgyIntoleranceAsserter;
+	        }
+        }
     }
     
     
@@ -131,6 +159,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
         this.alrgyIntoleranceCtgry = alrgyIntoleranceCtgry;
     }
     
+    public void addAlrgyIntoleranceCtgry(String alrgyIntoleranceCtgry) {
+    	if( alrgyIntoleranceCtgry != null ) {
+	    	if( this.alrgyIntoleranceCtgry == null ) {
+	        	this.alrgyIntoleranceCtgry = alrgyIntoleranceCtgry;
+	        } else if(this.alrgyIntoleranceCtgry.substring(this.alrgyIntoleranceCtgry.length() - 1).equals("]") & alrgyIntoleranceCtgry.equals("[")) {
+	        	this.alrgyIntoleranceCtgry = this.alrgyIntoleranceCtgry+ "," + alrgyIntoleranceCtgry;
+	        } else if(alrgyIntoleranceCtgry.equals("[") | alrgyIntoleranceCtgry.equals("]") | this.alrgyIntoleranceCtgry.substring(this.alrgyIntoleranceCtgry.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceCtgry = this.alrgyIntoleranceCtgry+alrgyIntoleranceCtgry;
+	        } else  {
+	            this.alrgyIntoleranceCtgry = this.alrgyIntoleranceCtgry+ "," +alrgyIntoleranceCtgry;
+	        }
+        }
+    }
+    
     
     
     public String getAlrgyIntoleranceClnclStsCdgCd() {
@@ -139,6 +181,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
     
     public void setAlrgyIntoleranceClnclStsCdgCd(String alrgyIntoleranceClnclStsCdgCd) {
         this.alrgyIntoleranceClnclStsCdgCd = alrgyIntoleranceClnclStsCdgCd;
+    }
+    
+    public void addAlrgyIntoleranceClnclStsCdgCd(String alrgyIntoleranceClnclStsCdgCd) {
+    	if( alrgyIntoleranceClnclStsCdgCd != null ) {
+	    	if( this.alrgyIntoleranceClnclStsCdgCd == null ) {
+	        	this.alrgyIntoleranceClnclStsCdgCd = alrgyIntoleranceClnclStsCdgCd;
+	        } else if(this.alrgyIntoleranceClnclStsCdgCd.substring(this.alrgyIntoleranceClnclStsCdgCd.length() - 1).equals("]") & alrgyIntoleranceClnclStsCdgCd.equals("[")) {
+	        	this.alrgyIntoleranceClnclStsCdgCd = this.alrgyIntoleranceClnclStsCdgCd+ "," + alrgyIntoleranceClnclStsCdgCd;
+	        } else if(alrgyIntoleranceClnclStsCdgCd.equals("[") | alrgyIntoleranceClnclStsCdgCd.equals("]") | this.alrgyIntoleranceClnclStsCdgCd.substring(this.alrgyIntoleranceClnclStsCdgCd.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceClnclStsCdgCd = this.alrgyIntoleranceClnclStsCdgCd+alrgyIntoleranceClnclStsCdgCd;
+	        } else  {
+	            this.alrgyIntoleranceClnclStsCdgCd = this.alrgyIntoleranceClnclStsCdgCd+ "," +alrgyIntoleranceClnclStsCdgCd;
+	        }
+        }
     }
     
     
@@ -151,6 +207,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
         this.alrgyIntoleranceClnclStsCdgDsply = alrgyIntoleranceClnclStsCdgDsply;
     }
     
+    public void addAlrgyIntoleranceClnclStsCdgDsply(String alrgyIntoleranceClnclStsCdgDsply) {
+    	if( alrgyIntoleranceClnclStsCdgDsply != null ) {
+	    	if( this.alrgyIntoleranceClnclStsCdgDsply == null ) {
+	        	this.alrgyIntoleranceClnclStsCdgDsply = alrgyIntoleranceClnclStsCdgDsply;
+	        } else if(this.alrgyIntoleranceClnclStsCdgDsply.substring(this.alrgyIntoleranceClnclStsCdgDsply.length() - 1).equals("]") & alrgyIntoleranceClnclStsCdgDsply.equals("[")) {
+	        	this.alrgyIntoleranceClnclStsCdgDsply = this.alrgyIntoleranceClnclStsCdgDsply+ "," + alrgyIntoleranceClnclStsCdgDsply;
+	        } else if(alrgyIntoleranceClnclStsCdgDsply.equals("[") | alrgyIntoleranceClnclStsCdgDsply.equals("]") | this.alrgyIntoleranceClnclStsCdgDsply.substring(this.alrgyIntoleranceClnclStsCdgDsply.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceClnclStsCdgDsply = this.alrgyIntoleranceClnclStsCdgDsply+alrgyIntoleranceClnclStsCdgDsply;
+	        } else  {
+	            this.alrgyIntoleranceClnclStsCdgDsply = this.alrgyIntoleranceClnclStsCdgDsply+ "," +alrgyIntoleranceClnclStsCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getAlrgyIntoleranceClnclStsCdgSys() {
@@ -159,6 +229,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
     
     public void setAlrgyIntoleranceClnclStsCdgSys(String alrgyIntoleranceClnclStsCdgSys) {
         this.alrgyIntoleranceClnclStsCdgSys = alrgyIntoleranceClnclStsCdgSys;
+    }
+    
+    public void addAlrgyIntoleranceClnclStsCdgSys(String alrgyIntoleranceClnclStsCdgSys) {
+    	if( alrgyIntoleranceClnclStsCdgSys != null ) {
+	    	if( this.alrgyIntoleranceClnclStsCdgSys == null ) {
+	        	this.alrgyIntoleranceClnclStsCdgSys = alrgyIntoleranceClnclStsCdgSys;
+	        } else if(this.alrgyIntoleranceClnclStsCdgSys.substring(this.alrgyIntoleranceClnclStsCdgSys.length() - 1).equals("]") & alrgyIntoleranceClnclStsCdgSys.equals("[")) {
+	        	this.alrgyIntoleranceClnclStsCdgSys = this.alrgyIntoleranceClnclStsCdgSys+ "," + alrgyIntoleranceClnclStsCdgSys;
+	        } else if(alrgyIntoleranceClnclStsCdgSys.equals("[") | alrgyIntoleranceClnclStsCdgSys.equals("]") | this.alrgyIntoleranceClnclStsCdgSys.substring(this.alrgyIntoleranceClnclStsCdgSys.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceClnclStsCdgSys = this.alrgyIntoleranceClnclStsCdgSys+alrgyIntoleranceClnclStsCdgSys;
+	        } else  {
+	            this.alrgyIntoleranceClnclStsCdgSys = this.alrgyIntoleranceClnclStsCdgSys+ "," +alrgyIntoleranceClnclStsCdgSys;
+	        }
+        }
     }
     
     
@@ -171,6 +255,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
         this.alrgyIntoleranceClnclStsCdgUsrSltd = alrgyIntoleranceClnclStsCdgUsrSltd;
     }
     
+    public void addAlrgyIntoleranceClnclStsCdgUsrSltd(String alrgyIntoleranceClnclStsCdgUsrSltd) {
+    	if( alrgyIntoleranceClnclStsCdgUsrSltd != null ) {
+	    	if( this.alrgyIntoleranceClnclStsCdgUsrSltd == null ) {
+	        	this.alrgyIntoleranceClnclStsCdgUsrSltd = alrgyIntoleranceClnclStsCdgUsrSltd;
+	        } else if(this.alrgyIntoleranceClnclStsCdgUsrSltd.substring(this.alrgyIntoleranceClnclStsCdgUsrSltd.length() - 1).equals("]") & alrgyIntoleranceClnclStsCdgUsrSltd.equals("[")) {
+	        	this.alrgyIntoleranceClnclStsCdgUsrSltd = this.alrgyIntoleranceClnclStsCdgUsrSltd+ "," + alrgyIntoleranceClnclStsCdgUsrSltd;
+	        } else if(alrgyIntoleranceClnclStsCdgUsrSltd.equals("[") | alrgyIntoleranceClnclStsCdgUsrSltd.equals("]") | this.alrgyIntoleranceClnclStsCdgUsrSltd.substring(this.alrgyIntoleranceClnclStsCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceClnclStsCdgUsrSltd = this.alrgyIntoleranceClnclStsCdgUsrSltd+alrgyIntoleranceClnclStsCdgUsrSltd;
+	        } else  {
+	            this.alrgyIntoleranceClnclStsCdgUsrSltd = this.alrgyIntoleranceClnclStsCdgUsrSltd+ "," +alrgyIntoleranceClnclStsCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getAlrgyIntoleranceClnclStsCdgVrsn() {
@@ -179,6 +277,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
     
     public void setAlrgyIntoleranceClnclStsCdgVrsn(String alrgyIntoleranceClnclStsCdgVrsn) {
         this.alrgyIntoleranceClnclStsCdgVrsn = alrgyIntoleranceClnclStsCdgVrsn;
+    }
+    
+    public void addAlrgyIntoleranceClnclStsCdgVrsn(String alrgyIntoleranceClnclStsCdgVrsn) {
+    	if( alrgyIntoleranceClnclStsCdgVrsn != null ) {
+	    	if( this.alrgyIntoleranceClnclStsCdgVrsn == null ) {
+	        	this.alrgyIntoleranceClnclStsCdgVrsn = alrgyIntoleranceClnclStsCdgVrsn;
+	        } else if(this.alrgyIntoleranceClnclStsCdgVrsn.substring(this.alrgyIntoleranceClnclStsCdgVrsn.length() - 1).equals("]") & alrgyIntoleranceClnclStsCdgVrsn.equals("[")) {
+	        	this.alrgyIntoleranceClnclStsCdgVrsn = this.alrgyIntoleranceClnclStsCdgVrsn+ "," + alrgyIntoleranceClnclStsCdgVrsn;
+	        } else if(alrgyIntoleranceClnclStsCdgVrsn.equals("[") | alrgyIntoleranceClnclStsCdgVrsn.equals("]") | this.alrgyIntoleranceClnclStsCdgVrsn.substring(this.alrgyIntoleranceClnclStsCdgVrsn.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceClnclStsCdgVrsn = this.alrgyIntoleranceClnclStsCdgVrsn+alrgyIntoleranceClnclStsCdgVrsn;
+	        } else  {
+	            this.alrgyIntoleranceClnclStsCdgVrsn = this.alrgyIntoleranceClnclStsCdgVrsn+ "," +alrgyIntoleranceClnclStsCdgVrsn;
+	        }
+        }
     }
     
     
@@ -191,6 +303,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
         this.alrgyIntoleranceClnclStsTxt = alrgyIntoleranceClnclStsTxt;
     }
     
+    public void addAlrgyIntoleranceClnclStsTxt(String alrgyIntoleranceClnclStsTxt) {
+    	if( alrgyIntoleranceClnclStsTxt != null ) {
+	    	if( this.alrgyIntoleranceClnclStsTxt == null ) {
+	        	this.alrgyIntoleranceClnclStsTxt = alrgyIntoleranceClnclStsTxt;
+	        } else if(this.alrgyIntoleranceClnclStsTxt.substring(this.alrgyIntoleranceClnclStsTxt.length() - 1).equals("]") & alrgyIntoleranceClnclStsTxt.equals("[")) {
+	        	this.alrgyIntoleranceClnclStsTxt = this.alrgyIntoleranceClnclStsTxt+ "," + alrgyIntoleranceClnclStsTxt;
+	        } else if(alrgyIntoleranceClnclStsTxt.equals("[") | alrgyIntoleranceClnclStsTxt.equals("]") | this.alrgyIntoleranceClnclStsTxt.substring(this.alrgyIntoleranceClnclStsTxt.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceClnclStsTxt = this.alrgyIntoleranceClnclStsTxt+alrgyIntoleranceClnclStsTxt;
+	        } else  {
+	            this.alrgyIntoleranceClnclStsTxt = this.alrgyIntoleranceClnclStsTxt+ "," +alrgyIntoleranceClnclStsTxt;
+	        }
+        }
+    }
+    
     
     
     public String getAlrgyIntoleranceCdCdgCd() {
@@ -199,6 +325,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
     
     public void setAlrgyIntoleranceCdCdgCd(String alrgyIntoleranceCdCdgCd) {
         this.alrgyIntoleranceCdCdgCd = alrgyIntoleranceCdCdgCd;
+    }
+    
+    public void addAlrgyIntoleranceCdCdgCd(String alrgyIntoleranceCdCdgCd) {
+    	if( alrgyIntoleranceCdCdgCd != null ) {
+	    	if( this.alrgyIntoleranceCdCdgCd == null ) {
+	        	this.alrgyIntoleranceCdCdgCd = alrgyIntoleranceCdCdgCd;
+	        } else if(this.alrgyIntoleranceCdCdgCd.substring(this.alrgyIntoleranceCdCdgCd.length() - 1).equals("]") & alrgyIntoleranceCdCdgCd.equals("[")) {
+	        	this.alrgyIntoleranceCdCdgCd = this.alrgyIntoleranceCdCdgCd+ "," + alrgyIntoleranceCdCdgCd;
+	        } else if(alrgyIntoleranceCdCdgCd.equals("[") | alrgyIntoleranceCdCdgCd.equals("]") | this.alrgyIntoleranceCdCdgCd.substring(this.alrgyIntoleranceCdCdgCd.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceCdCdgCd = this.alrgyIntoleranceCdCdgCd+alrgyIntoleranceCdCdgCd;
+	        } else  {
+	            this.alrgyIntoleranceCdCdgCd = this.alrgyIntoleranceCdCdgCd+ "," +alrgyIntoleranceCdCdgCd;
+	        }
+        }
     }
     
     
@@ -211,6 +351,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
         this.alrgyIntoleranceCdCdgDsply = alrgyIntoleranceCdCdgDsply;
     }
     
+    public void addAlrgyIntoleranceCdCdgDsply(String alrgyIntoleranceCdCdgDsply) {
+    	if( alrgyIntoleranceCdCdgDsply != null ) {
+	    	if( this.alrgyIntoleranceCdCdgDsply == null ) {
+	        	this.alrgyIntoleranceCdCdgDsply = alrgyIntoleranceCdCdgDsply;
+	        } else if(this.alrgyIntoleranceCdCdgDsply.substring(this.alrgyIntoleranceCdCdgDsply.length() - 1).equals("]") & alrgyIntoleranceCdCdgDsply.equals("[")) {
+	        	this.alrgyIntoleranceCdCdgDsply = this.alrgyIntoleranceCdCdgDsply+ "," + alrgyIntoleranceCdCdgDsply;
+	        } else if(alrgyIntoleranceCdCdgDsply.equals("[") | alrgyIntoleranceCdCdgDsply.equals("]") | this.alrgyIntoleranceCdCdgDsply.substring(this.alrgyIntoleranceCdCdgDsply.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceCdCdgDsply = this.alrgyIntoleranceCdCdgDsply+alrgyIntoleranceCdCdgDsply;
+	        } else  {
+	            this.alrgyIntoleranceCdCdgDsply = this.alrgyIntoleranceCdCdgDsply+ "," +alrgyIntoleranceCdCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getAlrgyIntoleranceCdCdgSys() {
@@ -219,6 +373,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
     
     public void setAlrgyIntoleranceCdCdgSys(String alrgyIntoleranceCdCdgSys) {
         this.alrgyIntoleranceCdCdgSys = alrgyIntoleranceCdCdgSys;
+    }
+    
+    public void addAlrgyIntoleranceCdCdgSys(String alrgyIntoleranceCdCdgSys) {
+    	if( alrgyIntoleranceCdCdgSys != null ) {
+	    	if( this.alrgyIntoleranceCdCdgSys == null ) {
+	        	this.alrgyIntoleranceCdCdgSys = alrgyIntoleranceCdCdgSys;
+	        } else if(this.alrgyIntoleranceCdCdgSys.substring(this.alrgyIntoleranceCdCdgSys.length() - 1).equals("]") & alrgyIntoleranceCdCdgSys.equals("[")) {
+	        	this.alrgyIntoleranceCdCdgSys = this.alrgyIntoleranceCdCdgSys+ "," + alrgyIntoleranceCdCdgSys;
+	        } else if(alrgyIntoleranceCdCdgSys.equals("[") | alrgyIntoleranceCdCdgSys.equals("]") | this.alrgyIntoleranceCdCdgSys.substring(this.alrgyIntoleranceCdCdgSys.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceCdCdgSys = this.alrgyIntoleranceCdCdgSys+alrgyIntoleranceCdCdgSys;
+	        } else  {
+	            this.alrgyIntoleranceCdCdgSys = this.alrgyIntoleranceCdCdgSys+ "," +alrgyIntoleranceCdCdgSys;
+	        }
+        }
     }
     
     
@@ -231,6 +399,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
         this.alrgyIntoleranceCdCdgUsrSltd = alrgyIntoleranceCdCdgUsrSltd;
     }
     
+    public void addAlrgyIntoleranceCdCdgUsrSltd(String alrgyIntoleranceCdCdgUsrSltd) {
+    	if( alrgyIntoleranceCdCdgUsrSltd != null ) {
+	    	if( this.alrgyIntoleranceCdCdgUsrSltd == null ) {
+	        	this.alrgyIntoleranceCdCdgUsrSltd = alrgyIntoleranceCdCdgUsrSltd;
+	        } else if(this.alrgyIntoleranceCdCdgUsrSltd.substring(this.alrgyIntoleranceCdCdgUsrSltd.length() - 1).equals("]") & alrgyIntoleranceCdCdgUsrSltd.equals("[")) {
+	        	this.alrgyIntoleranceCdCdgUsrSltd = this.alrgyIntoleranceCdCdgUsrSltd+ "," + alrgyIntoleranceCdCdgUsrSltd;
+	        } else if(alrgyIntoleranceCdCdgUsrSltd.equals("[") | alrgyIntoleranceCdCdgUsrSltd.equals("]") | this.alrgyIntoleranceCdCdgUsrSltd.substring(this.alrgyIntoleranceCdCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceCdCdgUsrSltd = this.alrgyIntoleranceCdCdgUsrSltd+alrgyIntoleranceCdCdgUsrSltd;
+	        } else  {
+	            this.alrgyIntoleranceCdCdgUsrSltd = this.alrgyIntoleranceCdCdgUsrSltd+ "," +alrgyIntoleranceCdCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getAlrgyIntoleranceCdCdgVrsn() {
@@ -239,6 +421,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
     
     public void setAlrgyIntoleranceCdCdgVrsn(String alrgyIntoleranceCdCdgVrsn) {
         this.alrgyIntoleranceCdCdgVrsn = alrgyIntoleranceCdCdgVrsn;
+    }
+    
+    public void addAlrgyIntoleranceCdCdgVrsn(String alrgyIntoleranceCdCdgVrsn) {
+    	if( alrgyIntoleranceCdCdgVrsn != null ) {
+	    	if( this.alrgyIntoleranceCdCdgVrsn == null ) {
+	        	this.alrgyIntoleranceCdCdgVrsn = alrgyIntoleranceCdCdgVrsn;
+	        } else if(this.alrgyIntoleranceCdCdgVrsn.substring(this.alrgyIntoleranceCdCdgVrsn.length() - 1).equals("]") & alrgyIntoleranceCdCdgVrsn.equals("[")) {
+	        	this.alrgyIntoleranceCdCdgVrsn = this.alrgyIntoleranceCdCdgVrsn+ "," + alrgyIntoleranceCdCdgVrsn;
+	        } else if(alrgyIntoleranceCdCdgVrsn.equals("[") | alrgyIntoleranceCdCdgVrsn.equals("]") | this.alrgyIntoleranceCdCdgVrsn.substring(this.alrgyIntoleranceCdCdgVrsn.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceCdCdgVrsn = this.alrgyIntoleranceCdCdgVrsn+alrgyIntoleranceCdCdgVrsn;
+	        } else  {
+	            this.alrgyIntoleranceCdCdgVrsn = this.alrgyIntoleranceCdCdgVrsn+ "," +alrgyIntoleranceCdCdgVrsn;
+	        }
+        }
     }
     
     
@@ -251,6 +447,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
         this.alrgyIntoleranceCdTxt = alrgyIntoleranceCdTxt;
     }
     
+    public void addAlrgyIntoleranceCdTxt(String alrgyIntoleranceCdTxt) {
+    	if( alrgyIntoleranceCdTxt != null ) {
+	    	if( this.alrgyIntoleranceCdTxt == null ) {
+	        	this.alrgyIntoleranceCdTxt = alrgyIntoleranceCdTxt;
+	        } else if(this.alrgyIntoleranceCdTxt.substring(this.alrgyIntoleranceCdTxt.length() - 1).equals("]") & alrgyIntoleranceCdTxt.equals("[")) {
+	        	this.alrgyIntoleranceCdTxt = this.alrgyIntoleranceCdTxt+ "," + alrgyIntoleranceCdTxt;
+	        } else if(alrgyIntoleranceCdTxt.equals("[") | alrgyIntoleranceCdTxt.equals("]") | this.alrgyIntoleranceCdTxt.substring(this.alrgyIntoleranceCdTxt.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceCdTxt = this.alrgyIntoleranceCdTxt+alrgyIntoleranceCdTxt;
+	        } else  {
+	            this.alrgyIntoleranceCdTxt = this.alrgyIntoleranceCdTxt+ "," +alrgyIntoleranceCdTxt;
+	        }
+        }
+    }
+    
     
     
     public String getAlrgyIntoleranceCriticality() {
@@ -259,6 +469,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
     
     public void setAlrgyIntoleranceCriticality(String alrgyIntoleranceCriticality) {
         this.alrgyIntoleranceCriticality = alrgyIntoleranceCriticality;
+    }
+    
+    public void addAlrgyIntoleranceCriticality(String alrgyIntoleranceCriticality) {
+    	if( alrgyIntoleranceCriticality != null ) {
+	    	if( this.alrgyIntoleranceCriticality == null ) {
+	        	this.alrgyIntoleranceCriticality = alrgyIntoleranceCriticality;
+	        } else if(this.alrgyIntoleranceCriticality.substring(this.alrgyIntoleranceCriticality.length() - 1).equals("]") & alrgyIntoleranceCriticality.equals("[")) {
+	        	this.alrgyIntoleranceCriticality = this.alrgyIntoleranceCriticality+ "," + alrgyIntoleranceCriticality;
+	        } else if(alrgyIntoleranceCriticality.equals("[") | alrgyIntoleranceCriticality.equals("]") | this.alrgyIntoleranceCriticality.substring(this.alrgyIntoleranceCriticality.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceCriticality = this.alrgyIntoleranceCriticality+alrgyIntoleranceCriticality;
+	        } else  {
+	            this.alrgyIntoleranceCriticality = this.alrgyIntoleranceCriticality+ "," +alrgyIntoleranceCriticality;
+	        }
+        }
     }
     
     
@@ -271,6 +495,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
         this.alrgyIntoleranceEnc = alrgyIntoleranceEnc;
     }
     
+    public void addAlrgyIntoleranceEnc(String alrgyIntoleranceEnc) {
+    	if( alrgyIntoleranceEnc != null ) {
+	    	if( this.alrgyIntoleranceEnc == null ) {
+	        	this.alrgyIntoleranceEnc = alrgyIntoleranceEnc;
+	        } else if(this.alrgyIntoleranceEnc.substring(this.alrgyIntoleranceEnc.length() - 1).equals("]") & alrgyIntoleranceEnc.equals("[")) {
+	        	this.alrgyIntoleranceEnc = this.alrgyIntoleranceEnc+ "," + alrgyIntoleranceEnc;
+	        } else if(alrgyIntoleranceEnc.equals("[") | alrgyIntoleranceEnc.equals("]") | this.alrgyIntoleranceEnc.substring(this.alrgyIntoleranceEnc.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceEnc = this.alrgyIntoleranceEnc+alrgyIntoleranceEnc;
+	        } else  {
+	            this.alrgyIntoleranceEnc = this.alrgyIntoleranceEnc+ "," +alrgyIntoleranceEnc;
+	        }
+        }
+    }
+    
     
     
     public String getAlrgyIntoleranceIdAssigner() {
@@ -279,6 +517,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
     
     public void setAlrgyIntoleranceIdAssigner(String alrgyIntoleranceIdAssigner) {
         this.alrgyIntoleranceIdAssigner = alrgyIntoleranceIdAssigner;
+    }
+    
+    public void addAlrgyIntoleranceIdAssigner(String alrgyIntoleranceIdAssigner) {
+    	if( alrgyIntoleranceIdAssigner != null ) {
+	    	if( this.alrgyIntoleranceIdAssigner == null ) {
+	        	this.alrgyIntoleranceIdAssigner = alrgyIntoleranceIdAssigner;
+	        } else if(this.alrgyIntoleranceIdAssigner.substring(this.alrgyIntoleranceIdAssigner.length() - 1).equals("]") & alrgyIntoleranceIdAssigner.equals("[")) {
+	        	this.alrgyIntoleranceIdAssigner = this.alrgyIntoleranceIdAssigner+ "," + alrgyIntoleranceIdAssigner;
+	        } else if(alrgyIntoleranceIdAssigner.equals("[") | alrgyIntoleranceIdAssigner.equals("]") | this.alrgyIntoleranceIdAssigner.substring(this.alrgyIntoleranceIdAssigner.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceIdAssigner = this.alrgyIntoleranceIdAssigner+alrgyIntoleranceIdAssigner;
+	        } else  {
+	            this.alrgyIntoleranceIdAssigner = this.alrgyIntoleranceIdAssigner+ "," +alrgyIntoleranceIdAssigner;
+	        }
+        }
     }
     
     
@@ -291,6 +543,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
         this.alrgyIntoleranceIdPrdEnd = alrgyIntoleranceIdPrdEnd;
     }
     
+    public void addAlrgyIntoleranceIdPrdEnd(String alrgyIntoleranceIdPrdEnd) {
+    	if( alrgyIntoleranceIdPrdEnd != null ) {
+	    	if( this.alrgyIntoleranceIdPrdEnd == null ) {
+	        	this.alrgyIntoleranceIdPrdEnd = alrgyIntoleranceIdPrdEnd;
+	        } else if(this.alrgyIntoleranceIdPrdEnd.substring(this.alrgyIntoleranceIdPrdEnd.length() - 1).equals("]") & alrgyIntoleranceIdPrdEnd.equals("[")) {
+	        	this.alrgyIntoleranceIdPrdEnd = this.alrgyIntoleranceIdPrdEnd+ "," + alrgyIntoleranceIdPrdEnd;
+	        } else if(alrgyIntoleranceIdPrdEnd.equals("[") | alrgyIntoleranceIdPrdEnd.equals("]") | this.alrgyIntoleranceIdPrdEnd.substring(this.alrgyIntoleranceIdPrdEnd.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceIdPrdEnd = this.alrgyIntoleranceIdPrdEnd+alrgyIntoleranceIdPrdEnd;
+	        } else  {
+	            this.alrgyIntoleranceIdPrdEnd = this.alrgyIntoleranceIdPrdEnd+ "," +alrgyIntoleranceIdPrdEnd;
+	        }
+        }
+    }
+    
     
     
     public String getAlrgyIntoleranceIdPrdStrt() {
@@ -299,6 +565,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
     
     public void setAlrgyIntoleranceIdPrdStrt(String alrgyIntoleranceIdPrdStrt) {
         this.alrgyIntoleranceIdPrdStrt = alrgyIntoleranceIdPrdStrt;
+    }
+    
+    public void addAlrgyIntoleranceIdPrdStrt(String alrgyIntoleranceIdPrdStrt) {
+    	if( alrgyIntoleranceIdPrdStrt != null ) {
+	    	if( this.alrgyIntoleranceIdPrdStrt == null ) {
+	        	this.alrgyIntoleranceIdPrdStrt = alrgyIntoleranceIdPrdStrt;
+	        } else if(this.alrgyIntoleranceIdPrdStrt.substring(this.alrgyIntoleranceIdPrdStrt.length() - 1).equals("]") & alrgyIntoleranceIdPrdStrt.equals("[")) {
+	        	this.alrgyIntoleranceIdPrdStrt = this.alrgyIntoleranceIdPrdStrt+ "," + alrgyIntoleranceIdPrdStrt;
+	        } else if(alrgyIntoleranceIdPrdStrt.equals("[") | alrgyIntoleranceIdPrdStrt.equals("]") | this.alrgyIntoleranceIdPrdStrt.substring(this.alrgyIntoleranceIdPrdStrt.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceIdPrdStrt = this.alrgyIntoleranceIdPrdStrt+alrgyIntoleranceIdPrdStrt;
+	        } else  {
+	            this.alrgyIntoleranceIdPrdStrt = this.alrgyIntoleranceIdPrdStrt+ "," +alrgyIntoleranceIdPrdStrt;
+	        }
+        }
     }
     
     
@@ -311,6 +591,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
         this.alrgyIntoleranceIdSys = alrgyIntoleranceIdSys;
     }
     
+    public void addAlrgyIntoleranceIdSys(String alrgyIntoleranceIdSys) {
+    	if( alrgyIntoleranceIdSys != null ) {
+	    	if( this.alrgyIntoleranceIdSys == null ) {
+	        	this.alrgyIntoleranceIdSys = alrgyIntoleranceIdSys;
+	        } else if(this.alrgyIntoleranceIdSys.substring(this.alrgyIntoleranceIdSys.length() - 1).equals("]") & alrgyIntoleranceIdSys.equals("[")) {
+	        	this.alrgyIntoleranceIdSys = this.alrgyIntoleranceIdSys+ "," + alrgyIntoleranceIdSys;
+	        } else if(alrgyIntoleranceIdSys.equals("[") | alrgyIntoleranceIdSys.equals("]") | this.alrgyIntoleranceIdSys.substring(this.alrgyIntoleranceIdSys.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceIdSys = this.alrgyIntoleranceIdSys+alrgyIntoleranceIdSys;
+	        } else  {
+	            this.alrgyIntoleranceIdSys = this.alrgyIntoleranceIdSys+ "," +alrgyIntoleranceIdSys;
+	        }
+        }
+    }
+    
     
     
     public String getAlrgyIntoleranceIdTypCdgCd() {
@@ -319,6 +613,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
     
     public void setAlrgyIntoleranceIdTypCdgCd(String alrgyIntoleranceIdTypCdgCd) {
         this.alrgyIntoleranceIdTypCdgCd = alrgyIntoleranceIdTypCdgCd;
+    }
+    
+    public void addAlrgyIntoleranceIdTypCdgCd(String alrgyIntoleranceIdTypCdgCd) {
+    	if( alrgyIntoleranceIdTypCdgCd != null ) {
+	    	if( this.alrgyIntoleranceIdTypCdgCd == null ) {
+	        	this.alrgyIntoleranceIdTypCdgCd = alrgyIntoleranceIdTypCdgCd;
+	        } else if(this.alrgyIntoleranceIdTypCdgCd.substring(this.alrgyIntoleranceIdTypCdgCd.length() - 1).equals("]") & alrgyIntoleranceIdTypCdgCd.equals("[")) {
+	        	this.alrgyIntoleranceIdTypCdgCd = this.alrgyIntoleranceIdTypCdgCd+ "," + alrgyIntoleranceIdTypCdgCd;
+	        } else if(alrgyIntoleranceIdTypCdgCd.equals("[") | alrgyIntoleranceIdTypCdgCd.equals("]") | this.alrgyIntoleranceIdTypCdgCd.substring(this.alrgyIntoleranceIdTypCdgCd.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceIdTypCdgCd = this.alrgyIntoleranceIdTypCdgCd+alrgyIntoleranceIdTypCdgCd;
+	        } else  {
+	            this.alrgyIntoleranceIdTypCdgCd = this.alrgyIntoleranceIdTypCdgCd+ "," +alrgyIntoleranceIdTypCdgCd;
+	        }
+        }
     }
     
     
@@ -331,6 +639,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
         this.alrgyIntoleranceIdTypCdgDsply = alrgyIntoleranceIdTypCdgDsply;
     }
     
+    public void addAlrgyIntoleranceIdTypCdgDsply(String alrgyIntoleranceIdTypCdgDsply) {
+    	if( alrgyIntoleranceIdTypCdgDsply != null ) {
+	    	if( this.alrgyIntoleranceIdTypCdgDsply == null ) {
+	        	this.alrgyIntoleranceIdTypCdgDsply = alrgyIntoleranceIdTypCdgDsply;
+	        } else if(this.alrgyIntoleranceIdTypCdgDsply.substring(this.alrgyIntoleranceIdTypCdgDsply.length() - 1).equals("]") & alrgyIntoleranceIdTypCdgDsply.equals("[")) {
+	        	this.alrgyIntoleranceIdTypCdgDsply = this.alrgyIntoleranceIdTypCdgDsply+ "," + alrgyIntoleranceIdTypCdgDsply;
+	        } else if(alrgyIntoleranceIdTypCdgDsply.equals("[") | alrgyIntoleranceIdTypCdgDsply.equals("]") | this.alrgyIntoleranceIdTypCdgDsply.substring(this.alrgyIntoleranceIdTypCdgDsply.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceIdTypCdgDsply = this.alrgyIntoleranceIdTypCdgDsply+alrgyIntoleranceIdTypCdgDsply;
+	        } else  {
+	            this.alrgyIntoleranceIdTypCdgDsply = this.alrgyIntoleranceIdTypCdgDsply+ "," +alrgyIntoleranceIdTypCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getAlrgyIntoleranceIdTypCdgSys() {
@@ -339,6 +661,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
     
     public void setAlrgyIntoleranceIdTypCdgSys(String alrgyIntoleranceIdTypCdgSys) {
         this.alrgyIntoleranceIdTypCdgSys = alrgyIntoleranceIdTypCdgSys;
+    }
+    
+    public void addAlrgyIntoleranceIdTypCdgSys(String alrgyIntoleranceIdTypCdgSys) {
+    	if( alrgyIntoleranceIdTypCdgSys != null ) {
+	    	if( this.alrgyIntoleranceIdTypCdgSys == null ) {
+	        	this.alrgyIntoleranceIdTypCdgSys = alrgyIntoleranceIdTypCdgSys;
+	        } else if(this.alrgyIntoleranceIdTypCdgSys.substring(this.alrgyIntoleranceIdTypCdgSys.length() - 1).equals("]") & alrgyIntoleranceIdTypCdgSys.equals("[")) {
+	        	this.alrgyIntoleranceIdTypCdgSys = this.alrgyIntoleranceIdTypCdgSys+ "," + alrgyIntoleranceIdTypCdgSys;
+	        } else if(alrgyIntoleranceIdTypCdgSys.equals("[") | alrgyIntoleranceIdTypCdgSys.equals("]") | this.alrgyIntoleranceIdTypCdgSys.substring(this.alrgyIntoleranceIdTypCdgSys.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceIdTypCdgSys = this.alrgyIntoleranceIdTypCdgSys+alrgyIntoleranceIdTypCdgSys;
+	        } else  {
+	            this.alrgyIntoleranceIdTypCdgSys = this.alrgyIntoleranceIdTypCdgSys+ "," +alrgyIntoleranceIdTypCdgSys;
+	        }
+        }
     }
     
     
@@ -351,6 +687,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
         this.alrgyIntoleranceIdTypCdgUsrSltd = alrgyIntoleranceIdTypCdgUsrSltd;
     }
     
+    public void addAlrgyIntoleranceIdTypCdgUsrSltd(String alrgyIntoleranceIdTypCdgUsrSltd) {
+    	if( alrgyIntoleranceIdTypCdgUsrSltd != null ) {
+	    	if( this.alrgyIntoleranceIdTypCdgUsrSltd == null ) {
+	        	this.alrgyIntoleranceIdTypCdgUsrSltd = alrgyIntoleranceIdTypCdgUsrSltd;
+	        } else if(this.alrgyIntoleranceIdTypCdgUsrSltd.substring(this.alrgyIntoleranceIdTypCdgUsrSltd.length() - 1).equals("]") & alrgyIntoleranceIdTypCdgUsrSltd.equals("[")) {
+	        	this.alrgyIntoleranceIdTypCdgUsrSltd = this.alrgyIntoleranceIdTypCdgUsrSltd+ "," + alrgyIntoleranceIdTypCdgUsrSltd;
+	        } else if(alrgyIntoleranceIdTypCdgUsrSltd.equals("[") | alrgyIntoleranceIdTypCdgUsrSltd.equals("]") | this.alrgyIntoleranceIdTypCdgUsrSltd.substring(this.alrgyIntoleranceIdTypCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceIdTypCdgUsrSltd = this.alrgyIntoleranceIdTypCdgUsrSltd+alrgyIntoleranceIdTypCdgUsrSltd;
+	        } else  {
+	            this.alrgyIntoleranceIdTypCdgUsrSltd = this.alrgyIntoleranceIdTypCdgUsrSltd+ "," +alrgyIntoleranceIdTypCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getAlrgyIntoleranceIdTypCdgVrsn() {
@@ -359,6 +709,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
     
     public void setAlrgyIntoleranceIdTypCdgVrsn(String alrgyIntoleranceIdTypCdgVrsn) {
         this.alrgyIntoleranceIdTypCdgVrsn = alrgyIntoleranceIdTypCdgVrsn;
+    }
+    
+    public void addAlrgyIntoleranceIdTypCdgVrsn(String alrgyIntoleranceIdTypCdgVrsn) {
+    	if( alrgyIntoleranceIdTypCdgVrsn != null ) {
+	    	if( this.alrgyIntoleranceIdTypCdgVrsn == null ) {
+	        	this.alrgyIntoleranceIdTypCdgVrsn = alrgyIntoleranceIdTypCdgVrsn;
+	        } else if(this.alrgyIntoleranceIdTypCdgVrsn.substring(this.alrgyIntoleranceIdTypCdgVrsn.length() - 1).equals("]") & alrgyIntoleranceIdTypCdgVrsn.equals("[")) {
+	        	this.alrgyIntoleranceIdTypCdgVrsn = this.alrgyIntoleranceIdTypCdgVrsn+ "," + alrgyIntoleranceIdTypCdgVrsn;
+	        } else if(alrgyIntoleranceIdTypCdgVrsn.equals("[") | alrgyIntoleranceIdTypCdgVrsn.equals("]") | this.alrgyIntoleranceIdTypCdgVrsn.substring(this.alrgyIntoleranceIdTypCdgVrsn.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceIdTypCdgVrsn = this.alrgyIntoleranceIdTypCdgVrsn+alrgyIntoleranceIdTypCdgVrsn;
+	        } else  {
+	            this.alrgyIntoleranceIdTypCdgVrsn = this.alrgyIntoleranceIdTypCdgVrsn+ "," +alrgyIntoleranceIdTypCdgVrsn;
+	        }
+        }
     }
     
     
@@ -371,6 +735,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
         this.alrgyIntoleranceIdTypTxt = alrgyIntoleranceIdTypTxt;
     }
     
+    public void addAlrgyIntoleranceIdTypTxt(String alrgyIntoleranceIdTypTxt) {
+    	if( alrgyIntoleranceIdTypTxt != null ) {
+	    	if( this.alrgyIntoleranceIdTypTxt == null ) {
+	        	this.alrgyIntoleranceIdTypTxt = alrgyIntoleranceIdTypTxt;
+	        } else if(this.alrgyIntoleranceIdTypTxt.substring(this.alrgyIntoleranceIdTypTxt.length() - 1).equals("]") & alrgyIntoleranceIdTypTxt.equals("[")) {
+	        	this.alrgyIntoleranceIdTypTxt = this.alrgyIntoleranceIdTypTxt+ "," + alrgyIntoleranceIdTypTxt;
+	        } else if(alrgyIntoleranceIdTypTxt.equals("[") | alrgyIntoleranceIdTypTxt.equals("]") | this.alrgyIntoleranceIdTypTxt.substring(this.alrgyIntoleranceIdTypTxt.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceIdTypTxt = this.alrgyIntoleranceIdTypTxt+alrgyIntoleranceIdTypTxt;
+	        } else  {
+	            this.alrgyIntoleranceIdTypTxt = this.alrgyIntoleranceIdTypTxt+ "," +alrgyIntoleranceIdTypTxt;
+	        }
+        }
+    }
+    
     
     
     public String getAlrgyIntoleranceIdUse() {
@@ -379,6 +757,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
     
     public void setAlrgyIntoleranceIdUse(String alrgyIntoleranceIdUse) {
         this.alrgyIntoleranceIdUse = alrgyIntoleranceIdUse;
+    }
+    
+    public void addAlrgyIntoleranceIdUse(String alrgyIntoleranceIdUse) {
+    	if( alrgyIntoleranceIdUse != null ) {
+	    	if( this.alrgyIntoleranceIdUse == null ) {
+	        	this.alrgyIntoleranceIdUse = alrgyIntoleranceIdUse;
+	        } else if(this.alrgyIntoleranceIdUse.substring(this.alrgyIntoleranceIdUse.length() - 1).equals("]") & alrgyIntoleranceIdUse.equals("[")) {
+	        	this.alrgyIntoleranceIdUse = this.alrgyIntoleranceIdUse+ "," + alrgyIntoleranceIdUse;
+	        } else if(alrgyIntoleranceIdUse.equals("[") | alrgyIntoleranceIdUse.equals("]") | this.alrgyIntoleranceIdUse.substring(this.alrgyIntoleranceIdUse.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceIdUse = this.alrgyIntoleranceIdUse+alrgyIntoleranceIdUse;
+	        } else  {
+	            this.alrgyIntoleranceIdUse = this.alrgyIntoleranceIdUse+ "," +alrgyIntoleranceIdUse;
+	        }
+        }
     }
     
     
@@ -391,6 +783,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
         this.alrgyIntoleranceIdVl = alrgyIntoleranceIdVl;
     }
     
+    public void addAlrgyIntoleranceIdVl(String alrgyIntoleranceIdVl) {
+    	if( alrgyIntoleranceIdVl != null ) {
+	    	if( this.alrgyIntoleranceIdVl == null ) {
+	        	this.alrgyIntoleranceIdVl = alrgyIntoleranceIdVl;
+	        } else if(this.alrgyIntoleranceIdVl.substring(this.alrgyIntoleranceIdVl.length() - 1).equals("]") & alrgyIntoleranceIdVl.equals("[")) {
+	        	this.alrgyIntoleranceIdVl = this.alrgyIntoleranceIdVl+ "," + alrgyIntoleranceIdVl;
+	        } else if(alrgyIntoleranceIdVl.equals("[") | alrgyIntoleranceIdVl.equals("]") | this.alrgyIntoleranceIdVl.substring(this.alrgyIntoleranceIdVl.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceIdVl = this.alrgyIntoleranceIdVl+alrgyIntoleranceIdVl;
+	        } else  {
+	            this.alrgyIntoleranceIdVl = this.alrgyIntoleranceIdVl+ "," +alrgyIntoleranceIdVl;
+	        }
+        }
+    }
+    
     
     
     public String getAlrgyIntoleranceLastOccrnce() {
@@ -399,6 +805,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
     
     public void setAlrgyIntoleranceLastOccrnce(String alrgyIntoleranceLastOccrnce) {
         this.alrgyIntoleranceLastOccrnce = alrgyIntoleranceLastOccrnce;
+    }
+    
+    public void addAlrgyIntoleranceLastOccrnce(String alrgyIntoleranceLastOccrnce) {
+    	if( alrgyIntoleranceLastOccrnce != null ) {
+	    	if( this.alrgyIntoleranceLastOccrnce == null ) {
+	        	this.alrgyIntoleranceLastOccrnce = alrgyIntoleranceLastOccrnce;
+	        } else if(this.alrgyIntoleranceLastOccrnce.substring(this.alrgyIntoleranceLastOccrnce.length() - 1).equals("]") & alrgyIntoleranceLastOccrnce.equals("[")) {
+	        	this.alrgyIntoleranceLastOccrnce = this.alrgyIntoleranceLastOccrnce+ "," + alrgyIntoleranceLastOccrnce;
+	        } else if(alrgyIntoleranceLastOccrnce.equals("[") | alrgyIntoleranceLastOccrnce.equals("]") | this.alrgyIntoleranceLastOccrnce.substring(this.alrgyIntoleranceLastOccrnce.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceLastOccrnce = this.alrgyIntoleranceLastOccrnce+alrgyIntoleranceLastOccrnce;
+	        } else  {
+	            this.alrgyIntoleranceLastOccrnce = this.alrgyIntoleranceLastOccrnce+ "," +alrgyIntoleranceLastOccrnce;
+	        }
+        }
     }
     
     
@@ -411,6 +831,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
         this.alrgyIntoleranceNtAthrRfrnc = alrgyIntoleranceNtAthrRfrnc;
     }
     
+    public void addAlrgyIntoleranceNtAthrRfrnc(String alrgyIntoleranceNtAthrRfrnc) {
+    	if( alrgyIntoleranceNtAthrRfrnc != null ) {
+	    	if( this.alrgyIntoleranceNtAthrRfrnc == null ) {
+	        	this.alrgyIntoleranceNtAthrRfrnc = alrgyIntoleranceNtAthrRfrnc;
+	        } else if(this.alrgyIntoleranceNtAthrRfrnc.substring(this.alrgyIntoleranceNtAthrRfrnc.length() - 1).equals("]") & alrgyIntoleranceNtAthrRfrnc.equals("[")) {
+	        	this.alrgyIntoleranceNtAthrRfrnc = this.alrgyIntoleranceNtAthrRfrnc+ "," + alrgyIntoleranceNtAthrRfrnc;
+	        } else if(alrgyIntoleranceNtAthrRfrnc.equals("[") | alrgyIntoleranceNtAthrRfrnc.equals("]") | this.alrgyIntoleranceNtAthrRfrnc.substring(this.alrgyIntoleranceNtAthrRfrnc.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceNtAthrRfrnc = this.alrgyIntoleranceNtAthrRfrnc+alrgyIntoleranceNtAthrRfrnc;
+	        } else  {
+	            this.alrgyIntoleranceNtAthrRfrnc = this.alrgyIntoleranceNtAthrRfrnc+ "," +alrgyIntoleranceNtAthrRfrnc;
+	        }
+        }
+    }
+    
     
     
     public String getAlrgyIntoleranceNtAthrStrgTyp() {
@@ -419,6 +853,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
     
     public void setAlrgyIntoleranceNtAthrStrgTyp(String alrgyIntoleranceNtAthrStrgTyp) {
         this.alrgyIntoleranceNtAthrStrgTyp = alrgyIntoleranceNtAthrStrgTyp;
+    }
+    
+    public void addAlrgyIntoleranceNtAthrStrgTyp(String alrgyIntoleranceNtAthrStrgTyp) {
+    	if( alrgyIntoleranceNtAthrStrgTyp != null ) {
+	    	if( this.alrgyIntoleranceNtAthrStrgTyp == null ) {
+	        	this.alrgyIntoleranceNtAthrStrgTyp = alrgyIntoleranceNtAthrStrgTyp;
+	        } else if(this.alrgyIntoleranceNtAthrStrgTyp.substring(this.alrgyIntoleranceNtAthrStrgTyp.length() - 1).equals("]") & alrgyIntoleranceNtAthrStrgTyp.equals("[")) {
+	        	this.alrgyIntoleranceNtAthrStrgTyp = this.alrgyIntoleranceNtAthrStrgTyp+ "," + alrgyIntoleranceNtAthrStrgTyp;
+	        } else if(alrgyIntoleranceNtAthrStrgTyp.equals("[") | alrgyIntoleranceNtAthrStrgTyp.equals("]") | this.alrgyIntoleranceNtAthrStrgTyp.substring(this.alrgyIntoleranceNtAthrStrgTyp.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceNtAthrStrgTyp = this.alrgyIntoleranceNtAthrStrgTyp+alrgyIntoleranceNtAthrStrgTyp;
+	        } else  {
+	            this.alrgyIntoleranceNtAthrStrgTyp = this.alrgyIntoleranceNtAthrStrgTyp+ "," +alrgyIntoleranceNtAthrStrgTyp;
+	        }
+        }
     }
     
     
@@ -431,6 +879,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
         this.alrgyIntoleranceNtTxt = alrgyIntoleranceNtTxt;
     }
     
+    public void addAlrgyIntoleranceNtTxt(String alrgyIntoleranceNtTxt) {
+    	if( alrgyIntoleranceNtTxt != null ) {
+	    	if( this.alrgyIntoleranceNtTxt == null ) {
+	        	this.alrgyIntoleranceNtTxt = alrgyIntoleranceNtTxt;
+	        } else if(this.alrgyIntoleranceNtTxt.substring(this.alrgyIntoleranceNtTxt.length() - 1).equals("]") & alrgyIntoleranceNtTxt.equals("[")) {
+	        	this.alrgyIntoleranceNtTxt = this.alrgyIntoleranceNtTxt+ "," + alrgyIntoleranceNtTxt;
+	        } else if(alrgyIntoleranceNtTxt.equals("[") | alrgyIntoleranceNtTxt.equals("]") | this.alrgyIntoleranceNtTxt.substring(this.alrgyIntoleranceNtTxt.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceNtTxt = this.alrgyIntoleranceNtTxt+alrgyIntoleranceNtTxt;
+	        } else  {
+	            this.alrgyIntoleranceNtTxt = this.alrgyIntoleranceNtTxt+ "," +alrgyIntoleranceNtTxt;
+	        }
+        }
+    }
+    
     
     
     public String getAlrgyIntoleranceNtTime() {
@@ -439,6 +901,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
     
     public void setAlrgyIntoleranceNtTime(String alrgyIntoleranceNtTime) {
         this.alrgyIntoleranceNtTime = alrgyIntoleranceNtTime;
+    }
+    
+    public void addAlrgyIntoleranceNtTime(String alrgyIntoleranceNtTime) {
+    	if( alrgyIntoleranceNtTime != null ) {
+	    	if( this.alrgyIntoleranceNtTime == null ) {
+	        	this.alrgyIntoleranceNtTime = alrgyIntoleranceNtTime;
+	        } else if(this.alrgyIntoleranceNtTime.substring(this.alrgyIntoleranceNtTime.length() - 1).equals("]") & alrgyIntoleranceNtTime.equals("[")) {
+	        	this.alrgyIntoleranceNtTime = this.alrgyIntoleranceNtTime+ "," + alrgyIntoleranceNtTime;
+	        } else if(alrgyIntoleranceNtTime.equals("[") | alrgyIntoleranceNtTime.equals("]") | this.alrgyIntoleranceNtTime.substring(this.alrgyIntoleranceNtTime.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceNtTime = this.alrgyIntoleranceNtTime+alrgyIntoleranceNtTime;
+	        } else  {
+	            this.alrgyIntoleranceNtTime = this.alrgyIntoleranceNtTime+ "," +alrgyIntoleranceNtTime;
+	        }
+        }
     }
     
     
@@ -451,6 +927,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
         this.alrgyIntoleranceOnAgeCd = alrgyIntoleranceOnAgeCd;
     }
     
+    public void addAlrgyIntoleranceOnAgeCd(String alrgyIntoleranceOnAgeCd) {
+    	if( alrgyIntoleranceOnAgeCd != null ) {
+	    	if( this.alrgyIntoleranceOnAgeCd == null ) {
+	        	this.alrgyIntoleranceOnAgeCd = alrgyIntoleranceOnAgeCd;
+	        } else if(this.alrgyIntoleranceOnAgeCd.substring(this.alrgyIntoleranceOnAgeCd.length() - 1).equals("]") & alrgyIntoleranceOnAgeCd.equals("[")) {
+	        	this.alrgyIntoleranceOnAgeCd = this.alrgyIntoleranceOnAgeCd+ "," + alrgyIntoleranceOnAgeCd;
+	        } else if(alrgyIntoleranceOnAgeCd.equals("[") | alrgyIntoleranceOnAgeCd.equals("]") | this.alrgyIntoleranceOnAgeCd.substring(this.alrgyIntoleranceOnAgeCd.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceOnAgeCd = this.alrgyIntoleranceOnAgeCd+alrgyIntoleranceOnAgeCd;
+	        } else  {
+	            this.alrgyIntoleranceOnAgeCd = this.alrgyIntoleranceOnAgeCd+ "," +alrgyIntoleranceOnAgeCd;
+	        }
+        }
+    }
+    
     
     
     public String getAlrgyIntoleranceOnAgeCmprtr() {
@@ -459,6 +949,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
     
     public void setAlrgyIntoleranceOnAgeCmprtr(String alrgyIntoleranceOnAgeCmprtr) {
         this.alrgyIntoleranceOnAgeCmprtr = alrgyIntoleranceOnAgeCmprtr;
+    }
+    
+    public void addAlrgyIntoleranceOnAgeCmprtr(String alrgyIntoleranceOnAgeCmprtr) {
+    	if( alrgyIntoleranceOnAgeCmprtr != null ) {
+	    	if( this.alrgyIntoleranceOnAgeCmprtr == null ) {
+	        	this.alrgyIntoleranceOnAgeCmprtr = alrgyIntoleranceOnAgeCmprtr;
+	        } else if(this.alrgyIntoleranceOnAgeCmprtr.substring(this.alrgyIntoleranceOnAgeCmprtr.length() - 1).equals("]") & alrgyIntoleranceOnAgeCmprtr.equals("[")) {
+	        	this.alrgyIntoleranceOnAgeCmprtr = this.alrgyIntoleranceOnAgeCmprtr+ "," + alrgyIntoleranceOnAgeCmprtr;
+	        } else if(alrgyIntoleranceOnAgeCmprtr.equals("[") | alrgyIntoleranceOnAgeCmprtr.equals("]") | this.alrgyIntoleranceOnAgeCmprtr.substring(this.alrgyIntoleranceOnAgeCmprtr.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceOnAgeCmprtr = this.alrgyIntoleranceOnAgeCmprtr+alrgyIntoleranceOnAgeCmprtr;
+	        } else  {
+	            this.alrgyIntoleranceOnAgeCmprtr = this.alrgyIntoleranceOnAgeCmprtr+ "," +alrgyIntoleranceOnAgeCmprtr;
+	        }
+        }
     }
     
     
@@ -471,6 +975,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
         this.alrgyIntoleranceOnAgeSys = alrgyIntoleranceOnAgeSys;
     }
     
+    public void addAlrgyIntoleranceOnAgeSys(String alrgyIntoleranceOnAgeSys) {
+    	if( alrgyIntoleranceOnAgeSys != null ) {
+	    	if( this.alrgyIntoleranceOnAgeSys == null ) {
+	        	this.alrgyIntoleranceOnAgeSys = alrgyIntoleranceOnAgeSys;
+	        } else if(this.alrgyIntoleranceOnAgeSys.substring(this.alrgyIntoleranceOnAgeSys.length() - 1).equals("]") & alrgyIntoleranceOnAgeSys.equals("[")) {
+	        	this.alrgyIntoleranceOnAgeSys = this.alrgyIntoleranceOnAgeSys+ "," + alrgyIntoleranceOnAgeSys;
+	        } else if(alrgyIntoleranceOnAgeSys.equals("[") | alrgyIntoleranceOnAgeSys.equals("]") | this.alrgyIntoleranceOnAgeSys.substring(this.alrgyIntoleranceOnAgeSys.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceOnAgeSys = this.alrgyIntoleranceOnAgeSys+alrgyIntoleranceOnAgeSys;
+	        } else  {
+	            this.alrgyIntoleranceOnAgeSys = this.alrgyIntoleranceOnAgeSys+ "," +alrgyIntoleranceOnAgeSys;
+	        }
+        }
+    }
+    
     
     
     public String getAlrgyIntoleranceOnAgeUnt() {
@@ -479,6 +997,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
     
     public void setAlrgyIntoleranceOnAgeUnt(String alrgyIntoleranceOnAgeUnt) {
         this.alrgyIntoleranceOnAgeUnt = alrgyIntoleranceOnAgeUnt;
+    }
+    
+    public void addAlrgyIntoleranceOnAgeUnt(String alrgyIntoleranceOnAgeUnt) {
+    	if( alrgyIntoleranceOnAgeUnt != null ) {
+	    	if( this.alrgyIntoleranceOnAgeUnt == null ) {
+	        	this.alrgyIntoleranceOnAgeUnt = alrgyIntoleranceOnAgeUnt;
+	        } else if(this.alrgyIntoleranceOnAgeUnt.substring(this.alrgyIntoleranceOnAgeUnt.length() - 1).equals("]") & alrgyIntoleranceOnAgeUnt.equals("[")) {
+	        	this.alrgyIntoleranceOnAgeUnt = this.alrgyIntoleranceOnAgeUnt+ "," + alrgyIntoleranceOnAgeUnt;
+	        } else if(alrgyIntoleranceOnAgeUnt.equals("[") | alrgyIntoleranceOnAgeUnt.equals("]") | this.alrgyIntoleranceOnAgeUnt.substring(this.alrgyIntoleranceOnAgeUnt.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceOnAgeUnt = this.alrgyIntoleranceOnAgeUnt+alrgyIntoleranceOnAgeUnt;
+	        } else  {
+	            this.alrgyIntoleranceOnAgeUnt = this.alrgyIntoleranceOnAgeUnt+ "," +alrgyIntoleranceOnAgeUnt;
+	        }
+        }
     }
     
     
@@ -491,6 +1023,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
         this.alrgyIntoleranceOnAgeVl = alrgyIntoleranceOnAgeVl;
     }
     
+    public void addAlrgyIntoleranceOnAgeVl(String alrgyIntoleranceOnAgeVl) {
+    	if( alrgyIntoleranceOnAgeVl != null ) {
+	    	if( this.alrgyIntoleranceOnAgeVl == null ) {
+	        	this.alrgyIntoleranceOnAgeVl = alrgyIntoleranceOnAgeVl;
+	        } else if(this.alrgyIntoleranceOnAgeVl.substring(this.alrgyIntoleranceOnAgeVl.length() - 1).equals("]") & alrgyIntoleranceOnAgeVl.equals("[")) {
+	        	this.alrgyIntoleranceOnAgeVl = this.alrgyIntoleranceOnAgeVl+ "," + alrgyIntoleranceOnAgeVl;
+	        } else if(alrgyIntoleranceOnAgeVl.equals("[") | alrgyIntoleranceOnAgeVl.equals("]") | this.alrgyIntoleranceOnAgeVl.substring(this.alrgyIntoleranceOnAgeVl.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceOnAgeVl = this.alrgyIntoleranceOnAgeVl+alrgyIntoleranceOnAgeVl;
+	        } else  {
+	            this.alrgyIntoleranceOnAgeVl = this.alrgyIntoleranceOnAgeVl+ "," +alrgyIntoleranceOnAgeVl;
+	        }
+        }
+    }
+    
     
     
     public String getAlrgyIntoleranceOnDtTimeTyp() {
@@ -499,6 +1045,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
     
     public void setAlrgyIntoleranceOnDtTimeTyp(String alrgyIntoleranceOnDtTimeTyp) {
         this.alrgyIntoleranceOnDtTimeTyp = alrgyIntoleranceOnDtTimeTyp;
+    }
+    
+    public void addAlrgyIntoleranceOnDtTimeTyp(String alrgyIntoleranceOnDtTimeTyp) {
+    	if( alrgyIntoleranceOnDtTimeTyp != null ) {
+	    	if( this.alrgyIntoleranceOnDtTimeTyp == null ) {
+	        	this.alrgyIntoleranceOnDtTimeTyp = alrgyIntoleranceOnDtTimeTyp;
+	        } else if(this.alrgyIntoleranceOnDtTimeTyp.substring(this.alrgyIntoleranceOnDtTimeTyp.length() - 1).equals("]") & alrgyIntoleranceOnDtTimeTyp.equals("[")) {
+	        	this.alrgyIntoleranceOnDtTimeTyp = this.alrgyIntoleranceOnDtTimeTyp+ "," + alrgyIntoleranceOnDtTimeTyp;
+	        } else if(alrgyIntoleranceOnDtTimeTyp.equals("[") | alrgyIntoleranceOnDtTimeTyp.equals("]") | this.alrgyIntoleranceOnDtTimeTyp.substring(this.alrgyIntoleranceOnDtTimeTyp.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceOnDtTimeTyp = this.alrgyIntoleranceOnDtTimeTyp+alrgyIntoleranceOnDtTimeTyp;
+	        } else  {
+	            this.alrgyIntoleranceOnDtTimeTyp = this.alrgyIntoleranceOnDtTimeTyp+ "," +alrgyIntoleranceOnDtTimeTyp;
+	        }
+        }
     }
     
     
@@ -511,6 +1071,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
         this.alrgyIntoleranceOnPrdEnd = alrgyIntoleranceOnPrdEnd;
     }
     
+    public void addAlrgyIntoleranceOnPrdEnd(String alrgyIntoleranceOnPrdEnd) {
+    	if( alrgyIntoleranceOnPrdEnd != null ) {
+	    	if( this.alrgyIntoleranceOnPrdEnd == null ) {
+	        	this.alrgyIntoleranceOnPrdEnd = alrgyIntoleranceOnPrdEnd;
+	        } else if(this.alrgyIntoleranceOnPrdEnd.substring(this.alrgyIntoleranceOnPrdEnd.length() - 1).equals("]") & alrgyIntoleranceOnPrdEnd.equals("[")) {
+	        	this.alrgyIntoleranceOnPrdEnd = this.alrgyIntoleranceOnPrdEnd+ "," + alrgyIntoleranceOnPrdEnd;
+	        } else if(alrgyIntoleranceOnPrdEnd.equals("[") | alrgyIntoleranceOnPrdEnd.equals("]") | this.alrgyIntoleranceOnPrdEnd.substring(this.alrgyIntoleranceOnPrdEnd.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceOnPrdEnd = this.alrgyIntoleranceOnPrdEnd+alrgyIntoleranceOnPrdEnd;
+	        } else  {
+	            this.alrgyIntoleranceOnPrdEnd = this.alrgyIntoleranceOnPrdEnd+ "," +alrgyIntoleranceOnPrdEnd;
+	        }
+        }
+    }
+    
     
     
     public String getAlrgyIntoleranceOnPrdStrt() {
@@ -519,6 +1093,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
     
     public void setAlrgyIntoleranceOnPrdStrt(String alrgyIntoleranceOnPrdStrt) {
         this.alrgyIntoleranceOnPrdStrt = alrgyIntoleranceOnPrdStrt;
+    }
+    
+    public void addAlrgyIntoleranceOnPrdStrt(String alrgyIntoleranceOnPrdStrt) {
+    	if( alrgyIntoleranceOnPrdStrt != null ) {
+	    	if( this.alrgyIntoleranceOnPrdStrt == null ) {
+	        	this.alrgyIntoleranceOnPrdStrt = alrgyIntoleranceOnPrdStrt;
+	        } else if(this.alrgyIntoleranceOnPrdStrt.substring(this.alrgyIntoleranceOnPrdStrt.length() - 1).equals("]") & alrgyIntoleranceOnPrdStrt.equals("[")) {
+	        	this.alrgyIntoleranceOnPrdStrt = this.alrgyIntoleranceOnPrdStrt+ "," + alrgyIntoleranceOnPrdStrt;
+	        } else if(alrgyIntoleranceOnPrdStrt.equals("[") | alrgyIntoleranceOnPrdStrt.equals("]") | this.alrgyIntoleranceOnPrdStrt.substring(this.alrgyIntoleranceOnPrdStrt.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceOnPrdStrt = this.alrgyIntoleranceOnPrdStrt+alrgyIntoleranceOnPrdStrt;
+	        } else  {
+	            this.alrgyIntoleranceOnPrdStrt = this.alrgyIntoleranceOnPrdStrt+ "," +alrgyIntoleranceOnPrdStrt;
+	        }
+        }
     }
     
     
@@ -531,6 +1119,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
         this.alrgyIntoleranceOnRngHiCd = alrgyIntoleranceOnRngHiCd;
     }
     
+    public void addAlrgyIntoleranceOnRngHiCd(String alrgyIntoleranceOnRngHiCd) {
+    	if( alrgyIntoleranceOnRngHiCd != null ) {
+	    	if( this.alrgyIntoleranceOnRngHiCd == null ) {
+	        	this.alrgyIntoleranceOnRngHiCd = alrgyIntoleranceOnRngHiCd;
+	        } else if(this.alrgyIntoleranceOnRngHiCd.substring(this.alrgyIntoleranceOnRngHiCd.length() - 1).equals("]") & alrgyIntoleranceOnRngHiCd.equals("[")) {
+	        	this.alrgyIntoleranceOnRngHiCd = this.alrgyIntoleranceOnRngHiCd+ "," + alrgyIntoleranceOnRngHiCd;
+	        } else if(alrgyIntoleranceOnRngHiCd.equals("[") | alrgyIntoleranceOnRngHiCd.equals("]") | this.alrgyIntoleranceOnRngHiCd.substring(this.alrgyIntoleranceOnRngHiCd.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceOnRngHiCd = this.alrgyIntoleranceOnRngHiCd+alrgyIntoleranceOnRngHiCd;
+	        } else  {
+	            this.alrgyIntoleranceOnRngHiCd = this.alrgyIntoleranceOnRngHiCd+ "," +alrgyIntoleranceOnRngHiCd;
+	        }
+        }
+    }
+    
     
     
     public String getAlrgyIntoleranceOnRngHiCmprtr() {
@@ -539,6 +1141,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
     
     public void setAlrgyIntoleranceOnRngHiCmprtr(String alrgyIntoleranceOnRngHiCmprtr) {
         this.alrgyIntoleranceOnRngHiCmprtr = alrgyIntoleranceOnRngHiCmprtr;
+    }
+    
+    public void addAlrgyIntoleranceOnRngHiCmprtr(String alrgyIntoleranceOnRngHiCmprtr) {
+    	if( alrgyIntoleranceOnRngHiCmprtr != null ) {
+	    	if( this.alrgyIntoleranceOnRngHiCmprtr == null ) {
+	        	this.alrgyIntoleranceOnRngHiCmprtr = alrgyIntoleranceOnRngHiCmprtr;
+	        } else if(this.alrgyIntoleranceOnRngHiCmprtr.substring(this.alrgyIntoleranceOnRngHiCmprtr.length() - 1).equals("]") & alrgyIntoleranceOnRngHiCmprtr.equals("[")) {
+	        	this.alrgyIntoleranceOnRngHiCmprtr = this.alrgyIntoleranceOnRngHiCmprtr+ "," + alrgyIntoleranceOnRngHiCmprtr;
+	        } else if(alrgyIntoleranceOnRngHiCmprtr.equals("[") | alrgyIntoleranceOnRngHiCmprtr.equals("]") | this.alrgyIntoleranceOnRngHiCmprtr.substring(this.alrgyIntoleranceOnRngHiCmprtr.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceOnRngHiCmprtr = this.alrgyIntoleranceOnRngHiCmprtr+alrgyIntoleranceOnRngHiCmprtr;
+	        } else  {
+	            this.alrgyIntoleranceOnRngHiCmprtr = this.alrgyIntoleranceOnRngHiCmprtr+ "," +alrgyIntoleranceOnRngHiCmprtr;
+	        }
+        }
     }
     
     
@@ -551,6 +1167,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
         this.alrgyIntoleranceOnRngHiSys = alrgyIntoleranceOnRngHiSys;
     }
     
+    public void addAlrgyIntoleranceOnRngHiSys(String alrgyIntoleranceOnRngHiSys) {
+    	if( alrgyIntoleranceOnRngHiSys != null ) {
+	    	if( this.alrgyIntoleranceOnRngHiSys == null ) {
+	        	this.alrgyIntoleranceOnRngHiSys = alrgyIntoleranceOnRngHiSys;
+	        } else if(this.alrgyIntoleranceOnRngHiSys.substring(this.alrgyIntoleranceOnRngHiSys.length() - 1).equals("]") & alrgyIntoleranceOnRngHiSys.equals("[")) {
+	        	this.alrgyIntoleranceOnRngHiSys = this.alrgyIntoleranceOnRngHiSys+ "," + alrgyIntoleranceOnRngHiSys;
+	        } else if(alrgyIntoleranceOnRngHiSys.equals("[") | alrgyIntoleranceOnRngHiSys.equals("]") | this.alrgyIntoleranceOnRngHiSys.substring(this.alrgyIntoleranceOnRngHiSys.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceOnRngHiSys = this.alrgyIntoleranceOnRngHiSys+alrgyIntoleranceOnRngHiSys;
+	        } else  {
+	            this.alrgyIntoleranceOnRngHiSys = this.alrgyIntoleranceOnRngHiSys+ "," +alrgyIntoleranceOnRngHiSys;
+	        }
+        }
+    }
+    
     
     
     public String getAlrgyIntoleranceOnRngHiUnt() {
@@ -559,6 +1189,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
     
     public void setAlrgyIntoleranceOnRngHiUnt(String alrgyIntoleranceOnRngHiUnt) {
         this.alrgyIntoleranceOnRngHiUnt = alrgyIntoleranceOnRngHiUnt;
+    }
+    
+    public void addAlrgyIntoleranceOnRngHiUnt(String alrgyIntoleranceOnRngHiUnt) {
+    	if( alrgyIntoleranceOnRngHiUnt != null ) {
+	    	if( this.alrgyIntoleranceOnRngHiUnt == null ) {
+	        	this.alrgyIntoleranceOnRngHiUnt = alrgyIntoleranceOnRngHiUnt;
+	        } else if(this.alrgyIntoleranceOnRngHiUnt.substring(this.alrgyIntoleranceOnRngHiUnt.length() - 1).equals("]") & alrgyIntoleranceOnRngHiUnt.equals("[")) {
+	        	this.alrgyIntoleranceOnRngHiUnt = this.alrgyIntoleranceOnRngHiUnt+ "," + alrgyIntoleranceOnRngHiUnt;
+	        } else if(alrgyIntoleranceOnRngHiUnt.equals("[") | alrgyIntoleranceOnRngHiUnt.equals("]") | this.alrgyIntoleranceOnRngHiUnt.substring(this.alrgyIntoleranceOnRngHiUnt.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceOnRngHiUnt = this.alrgyIntoleranceOnRngHiUnt+alrgyIntoleranceOnRngHiUnt;
+	        } else  {
+	            this.alrgyIntoleranceOnRngHiUnt = this.alrgyIntoleranceOnRngHiUnt+ "," +alrgyIntoleranceOnRngHiUnt;
+	        }
+        }
     }
     
     
@@ -571,6 +1215,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
         this.alrgyIntoleranceOnRngHiVl = alrgyIntoleranceOnRngHiVl;
     }
     
+    public void addAlrgyIntoleranceOnRngHiVl(String alrgyIntoleranceOnRngHiVl) {
+    	if( alrgyIntoleranceOnRngHiVl != null ) {
+	    	if( this.alrgyIntoleranceOnRngHiVl == null ) {
+	        	this.alrgyIntoleranceOnRngHiVl = alrgyIntoleranceOnRngHiVl;
+	        } else if(this.alrgyIntoleranceOnRngHiVl.substring(this.alrgyIntoleranceOnRngHiVl.length() - 1).equals("]") & alrgyIntoleranceOnRngHiVl.equals("[")) {
+	        	this.alrgyIntoleranceOnRngHiVl = this.alrgyIntoleranceOnRngHiVl+ "," + alrgyIntoleranceOnRngHiVl;
+	        } else if(alrgyIntoleranceOnRngHiVl.equals("[") | alrgyIntoleranceOnRngHiVl.equals("]") | this.alrgyIntoleranceOnRngHiVl.substring(this.alrgyIntoleranceOnRngHiVl.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceOnRngHiVl = this.alrgyIntoleranceOnRngHiVl+alrgyIntoleranceOnRngHiVl;
+	        } else  {
+	            this.alrgyIntoleranceOnRngHiVl = this.alrgyIntoleranceOnRngHiVl+ "," +alrgyIntoleranceOnRngHiVl;
+	        }
+        }
+    }
+    
     
     
     public String getAlrgyIntoleranceOnRngLwCd() {
@@ -579,6 +1237,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
     
     public void setAlrgyIntoleranceOnRngLwCd(String alrgyIntoleranceOnRngLwCd) {
         this.alrgyIntoleranceOnRngLwCd = alrgyIntoleranceOnRngLwCd;
+    }
+    
+    public void addAlrgyIntoleranceOnRngLwCd(String alrgyIntoleranceOnRngLwCd) {
+    	if( alrgyIntoleranceOnRngLwCd != null ) {
+	    	if( this.alrgyIntoleranceOnRngLwCd == null ) {
+	        	this.alrgyIntoleranceOnRngLwCd = alrgyIntoleranceOnRngLwCd;
+	        } else if(this.alrgyIntoleranceOnRngLwCd.substring(this.alrgyIntoleranceOnRngLwCd.length() - 1).equals("]") & alrgyIntoleranceOnRngLwCd.equals("[")) {
+	        	this.alrgyIntoleranceOnRngLwCd = this.alrgyIntoleranceOnRngLwCd+ "," + alrgyIntoleranceOnRngLwCd;
+	        } else if(alrgyIntoleranceOnRngLwCd.equals("[") | alrgyIntoleranceOnRngLwCd.equals("]") | this.alrgyIntoleranceOnRngLwCd.substring(this.alrgyIntoleranceOnRngLwCd.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceOnRngLwCd = this.alrgyIntoleranceOnRngLwCd+alrgyIntoleranceOnRngLwCd;
+	        } else  {
+	            this.alrgyIntoleranceOnRngLwCd = this.alrgyIntoleranceOnRngLwCd+ "," +alrgyIntoleranceOnRngLwCd;
+	        }
+        }
     }
     
     
@@ -591,6 +1263,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
         this.alrgyIntoleranceOnRngLwCmprtr = alrgyIntoleranceOnRngLwCmprtr;
     }
     
+    public void addAlrgyIntoleranceOnRngLwCmprtr(String alrgyIntoleranceOnRngLwCmprtr) {
+    	if( alrgyIntoleranceOnRngLwCmprtr != null ) {
+	    	if( this.alrgyIntoleranceOnRngLwCmprtr == null ) {
+	        	this.alrgyIntoleranceOnRngLwCmprtr = alrgyIntoleranceOnRngLwCmprtr;
+	        } else if(this.alrgyIntoleranceOnRngLwCmprtr.substring(this.alrgyIntoleranceOnRngLwCmprtr.length() - 1).equals("]") & alrgyIntoleranceOnRngLwCmprtr.equals("[")) {
+	        	this.alrgyIntoleranceOnRngLwCmprtr = this.alrgyIntoleranceOnRngLwCmprtr+ "," + alrgyIntoleranceOnRngLwCmprtr;
+	        } else if(alrgyIntoleranceOnRngLwCmprtr.equals("[") | alrgyIntoleranceOnRngLwCmprtr.equals("]") | this.alrgyIntoleranceOnRngLwCmprtr.substring(this.alrgyIntoleranceOnRngLwCmprtr.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceOnRngLwCmprtr = this.alrgyIntoleranceOnRngLwCmprtr+alrgyIntoleranceOnRngLwCmprtr;
+	        } else  {
+	            this.alrgyIntoleranceOnRngLwCmprtr = this.alrgyIntoleranceOnRngLwCmprtr+ "," +alrgyIntoleranceOnRngLwCmprtr;
+	        }
+        }
+    }
+    
     
     
     public String getAlrgyIntoleranceOnRngLwSys() {
@@ -599,6 +1285,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
     
     public void setAlrgyIntoleranceOnRngLwSys(String alrgyIntoleranceOnRngLwSys) {
         this.alrgyIntoleranceOnRngLwSys = alrgyIntoleranceOnRngLwSys;
+    }
+    
+    public void addAlrgyIntoleranceOnRngLwSys(String alrgyIntoleranceOnRngLwSys) {
+    	if( alrgyIntoleranceOnRngLwSys != null ) {
+	    	if( this.alrgyIntoleranceOnRngLwSys == null ) {
+	        	this.alrgyIntoleranceOnRngLwSys = alrgyIntoleranceOnRngLwSys;
+	        } else if(this.alrgyIntoleranceOnRngLwSys.substring(this.alrgyIntoleranceOnRngLwSys.length() - 1).equals("]") & alrgyIntoleranceOnRngLwSys.equals("[")) {
+	        	this.alrgyIntoleranceOnRngLwSys = this.alrgyIntoleranceOnRngLwSys+ "," + alrgyIntoleranceOnRngLwSys;
+	        } else if(alrgyIntoleranceOnRngLwSys.equals("[") | alrgyIntoleranceOnRngLwSys.equals("]") | this.alrgyIntoleranceOnRngLwSys.substring(this.alrgyIntoleranceOnRngLwSys.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceOnRngLwSys = this.alrgyIntoleranceOnRngLwSys+alrgyIntoleranceOnRngLwSys;
+	        } else  {
+	            this.alrgyIntoleranceOnRngLwSys = this.alrgyIntoleranceOnRngLwSys+ "," +alrgyIntoleranceOnRngLwSys;
+	        }
+        }
     }
     
     
@@ -611,6 +1311,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
         this.alrgyIntoleranceOnRngLwUnt = alrgyIntoleranceOnRngLwUnt;
     }
     
+    public void addAlrgyIntoleranceOnRngLwUnt(String alrgyIntoleranceOnRngLwUnt) {
+    	if( alrgyIntoleranceOnRngLwUnt != null ) {
+	    	if( this.alrgyIntoleranceOnRngLwUnt == null ) {
+	        	this.alrgyIntoleranceOnRngLwUnt = alrgyIntoleranceOnRngLwUnt;
+	        } else if(this.alrgyIntoleranceOnRngLwUnt.substring(this.alrgyIntoleranceOnRngLwUnt.length() - 1).equals("]") & alrgyIntoleranceOnRngLwUnt.equals("[")) {
+	        	this.alrgyIntoleranceOnRngLwUnt = this.alrgyIntoleranceOnRngLwUnt+ "," + alrgyIntoleranceOnRngLwUnt;
+	        } else if(alrgyIntoleranceOnRngLwUnt.equals("[") | alrgyIntoleranceOnRngLwUnt.equals("]") | this.alrgyIntoleranceOnRngLwUnt.substring(this.alrgyIntoleranceOnRngLwUnt.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceOnRngLwUnt = this.alrgyIntoleranceOnRngLwUnt+alrgyIntoleranceOnRngLwUnt;
+	        } else  {
+	            this.alrgyIntoleranceOnRngLwUnt = this.alrgyIntoleranceOnRngLwUnt+ "," +alrgyIntoleranceOnRngLwUnt;
+	        }
+        }
+    }
+    
     
     
     public String getAlrgyIntoleranceOnRngLwVl() {
@@ -619,6 +1333,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
     
     public void setAlrgyIntoleranceOnRngLwVl(String alrgyIntoleranceOnRngLwVl) {
         this.alrgyIntoleranceOnRngLwVl = alrgyIntoleranceOnRngLwVl;
+    }
+    
+    public void addAlrgyIntoleranceOnRngLwVl(String alrgyIntoleranceOnRngLwVl) {
+    	if( alrgyIntoleranceOnRngLwVl != null ) {
+	    	if( this.alrgyIntoleranceOnRngLwVl == null ) {
+	        	this.alrgyIntoleranceOnRngLwVl = alrgyIntoleranceOnRngLwVl;
+	        } else if(this.alrgyIntoleranceOnRngLwVl.substring(this.alrgyIntoleranceOnRngLwVl.length() - 1).equals("]") & alrgyIntoleranceOnRngLwVl.equals("[")) {
+	        	this.alrgyIntoleranceOnRngLwVl = this.alrgyIntoleranceOnRngLwVl+ "," + alrgyIntoleranceOnRngLwVl;
+	        } else if(alrgyIntoleranceOnRngLwVl.equals("[") | alrgyIntoleranceOnRngLwVl.equals("]") | this.alrgyIntoleranceOnRngLwVl.substring(this.alrgyIntoleranceOnRngLwVl.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceOnRngLwVl = this.alrgyIntoleranceOnRngLwVl+alrgyIntoleranceOnRngLwVl;
+	        } else  {
+	            this.alrgyIntoleranceOnRngLwVl = this.alrgyIntoleranceOnRngLwVl+ "," +alrgyIntoleranceOnRngLwVl;
+	        }
+        }
     }
     
     
@@ -631,6 +1359,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
         this.alrgyIntoleranceOnStrgTyp = alrgyIntoleranceOnStrgTyp;
     }
     
+    public void addAlrgyIntoleranceOnStrgTyp(String alrgyIntoleranceOnStrgTyp) {
+    	if( alrgyIntoleranceOnStrgTyp != null ) {
+	    	if( this.alrgyIntoleranceOnStrgTyp == null ) {
+	        	this.alrgyIntoleranceOnStrgTyp = alrgyIntoleranceOnStrgTyp;
+	        } else if(this.alrgyIntoleranceOnStrgTyp.substring(this.alrgyIntoleranceOnStrgTyp.length() - 1).equals("]") & alrgyIntoleranceOnStrgTyp.equals("[")) {
+	        	this.alrgyIntoleranceOnStrgTyp = this.alrgyIntoleranceOnStrgTyp+ "," + alrgyIntoleranceOnStrgTyp;
+	        } else if(alrgyIntoleranceOnStrgTyp.equals("[") | alrgyIntoleranceOnStrgTyp.equals("]") | this.alrgyIntoleranceOnStrgTyp.substring(this.alrgyIntoleranceOnStrgTyp.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceOnStrgTyp = this.alrgyIntoleranceOnStrgTyp+alrgyIntoleranceOnStrgTyp;
+	        } else  {
+	            this.alrgyIntoleranceOnStrgTyp = this.alrgyIntoleranceOnStrgTyp+ "," +alrgyIntoleranceOnStrgTyp;
+	        }
+        }
+    }
+    
     
     
     public String getAlrgyIntolerancePnt() {
@@ -639,6 +1381,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
     
     public void setAlrgyIntolerancePnt(String alrgyIntolerancePnt) {
         this.alrgyIntolerancePnt = alrgyIntolerancePnt;
+    }
+    
+    public void addAlrgyIntolerancePnt(String alrgyIntolerancePnt) {
+    	if( alrgyIntolerancePnt != null ) {
+	    	if( this.alrgyIntolerancePnt == null ) {
+	        	this.alrgyIntolerancePnt = alrgyIntolerancePnt;
+	        } else if(this.alrgyIntolerancePnt.substring(this.alrgyIntolerancePnt.length() - 1).equals("]") & alrgyIntolerancePnt.equals("[")) {
+	        	this.alrgyIntolerancePnt = this.alrgyIntolerancePnt+ "," + alrgyIntolerancePnt;
+	        } else if(alrgyIntolerancePnt.equals("[") | alrgyIntolerancePnt.equals("]") | this.alrgyIntolerancePnt.substring(this.alrgyIntolerancePnt.length() - 1).equals("[")) {
+	        	this.alrgyIntolerancePnt = this.alrgyIntolerancePnt+alrgyIntolerancePnt;
+	        } else  {
+	            this.alrgyIntolerancePnt = this.alrgyIntolerancePnt+ "," +alrgyIntolerancePnt;
+	        }
+        }
     }
     
     
@@ -651,6 +1407,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
         this.alrgyIntoleranceReactionDscrptn = alrgyIntoleranceReactionDscrptn;
     }
     
+    public void addAlrgyIntoleranceReactionDscrptn(String alrgyIntoleranceReactionDscrptn) {
+    	if( alrgyIntoleranceReactionDscrptn != null ) {
+	    	if( this.alrgyIntoleranceReactionDscrptn == null ) {
+	        	this.alrgyIntoleranceReactionDscrptn = alrgyIntoleranceReactionDscrptn;
+	        } else if(this.alrgyIntoleranceReactionDscrptn.substring(this.alrgyIntoleranceReactionDscrptn.length() - 1).equals("]") & alrgyIntoleranceReactionDscrptn.equals("[")) {
+	        	this.alrgyIntoleranceReactionDscrptn = this.alrgyIntoleranceReactionDscrptn+ "," + alrgyIntoleranceReactionDscrptn;
+	        } else if(alrgyIntoleranceReactionDscrptn.equals("[") | alrgyIntoleranceReactionDscrptn.equals("]") | this.alrgyIntoleranceReactionDscrptn.substring(this.alrgyIntoleranceReactionDscrptn.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceReactionDscrptn = this.alrgyIntoleranceReactionDscrptn+alrgyIntoleranceReactionDscrptn;
+	        } else  {
+	            this.alrgyIntoleranceReactionDscrptn = this.alrgyIntoleranceReactionDscrptn+ "," +alrgyIntoleranceReactionDscrptn;
+	        }
+        }
+    }
+    
     
     
     public String getAlrgyIntoleranceReactionExposureRouteCdgCd() {
@@ -659,6 +1429,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
     
     public void setAlrgyIntoleranceReactionExposureRouteCdgCd(String alrgyIntoleranceReactionExposureRouteCdgCd) {
         this.alrgyIntoleranceReactionExposureRouteCdgCd = alrgyIntoleranceReactionExposureRouteCdgCd;
+    }
+    
+    public void addAlrgyIntoleranceReactionExposureRouteCdgCd(String alrgyIntoleranceReactionExposureRouteCdgCd) {
+    	if( alrgyIntoleranceReactionExposureRouteCdgCd != null ) {
+	    	if( this.alrgyIntoleranceReactionExposureRouteCdgCd == null ) {
+	        	this.alrgyIntoleranceReactionExposureRouteCdgCd = alrgyIntoleranceReactionExposureRouteCdgCd;
+	        } else if(this.alrgyIntoleranceReactionExposureRouteCdgCd.substring(this.alrgyIntoleranceReactionExposureRouteCdgCd.length() - 1).equals("]") & alrgyIntoleranceReactionExposureRouteCdgCd.equals("[")) {
+	        	this.alrgyIntoleranceReactionExposureRouteCdgCd = this.alrgyIntoleranceReactionExposureRouteCdgCd+ "," + alrgyIntoleranceReactionExposureRouteCdgCd;
+	        } else if(alrgyIntoleranceReactionExposureRouteCdgCd.equals("[") | alrgyIntoleranceReactionExposureRouteCdgCd.equals("]") | this.alrgyIntoleranceReactionExposureRouteCdgCd.substring(this.alrgyIntoleranceReactionExposureRouteCdgCd.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceReactionExposureRouteCdgCd = this.alrgyIntoleranceReactionExposureRouteCdgCd+alrgyIntoleranceReactionExposureRouteCdgCd;
+	        } else  {
+	            this.alrgyIntoleranceReactionExposureRouteCdgCd = this.alrgyIntoleranceReactionExposureRouteCdgCd+ "," +alrgyIntoleranceReactionExposureRouteCdgCd;
+	        }
+        }
     }
     
     
@@ -671,6 +1455,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
         this.alrgyIntoleranceReactionExposureRouteCdgDsply = alrgyIntoleranceReactionExposureRouteCdgDsply;
     }
     
+    public void addAlrgyIntoleranceReactionExposureRouteCdgDsply(String alrgyIntoleranceReactionExposureRouteCdgDsply) {
+    	if( alrgyIntoleranceReactionExposureRouteCdgDsply != null ) {
+	    	if( this.alrgyIntoleranceReactionExposureRouteCdgDsply == null ) {
+	        	this.alrgyIntoleranceReactionExposureRouteCdgDsply = alrgyIntoleranceReactionExposureRouteCdgDsply;
+	        } else if(this.alrgyIntoleranceReactionExposureRouteCdgDsply.substring(this.alrgyIntoleranceReactionExposureRouteCdgDsply.length() - 1).equals("]") & alrgyIntoleranceReactionExposureRouteCdgDsply.equals("[")) {
+	        	this.alrgyIntoleranceReactionExposureRouteCdgDsply = this.alrgyIntoleranceReactionExposureRouteCdgDsply+ "," + alrgyIntoleranceReactionExposureRouteCdgDsply;
+	        } else if(alrgyIntoleranceReactionExposureRouteCdgDsply.equals("[") | alrgyIntoleranceReactionExposureRouteCdgDsply.equals("]") | this.alrgyIntoleranceReactionExposureRouteCdgDsply.substring(this.alrgyIntoleranceReactionExposureRouteCdgDsply.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceReactionExposureRouteCdgDsply = this.alrgyIntoleranceReactionExposureRouteCdgDsply+alrgyIntoleranceReactionExposureRouteCdgDsply;
+	        } else  {
+	            this.alrgyIntoleranceReactionExposureRouteCdgDsply = this.alrgyIntoleranceReactionExposureRouteCdgDsply+ "," +alrgyIntoleranceReactionExposureRouteCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getAlrgyIntoleranceReactionExposureRouteCdgSys() {
@@ -679,6 +1477,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
     
     public void setAlrgyIntoleranceReactionExposureRouteCdgSys(String alrgyIntoleranceReactionExposureRouteCdgSys) {
         this.alrgyIntoleranceReactionExposureRouteCdgSys = alrgyIntoleranceReactionExposureRouteCdgSys;
+    }
+    
+    public void addAlrgyIntoleranceReactionExposureRouteCdgSys(String alrgyIntoleranceReactionExposureRouteCdgSys) {
+    	if( alrgyIntoleranceReactionExposureRouteCdgSys != null ) {
+	    	if( this.alrgyIntoleranceReactionExposureRouteCdgSys == null ) {
+	        	this.alrgyIntoleranceReactionExposureRouteCdgSys = alrgyIntoleranceReactionExposureRouteCdgSys;
+	        } else if(this.alrgyIntoleranceReactionExposureRouteCdgSys.substring(this.alrgyIntoleranceReactionExposureRouteCdgSys.length() - 1).equals("]") & alrgyIntoleranceReactionExposureRouteCdgSys.equals("[")) {
+	        	this.alrgyIntoleranceReactionExposureRouteCdgSys = this.alrgyIntoleranceReactionExposureRouteCdgSys+ "," + alrgyIntoleranceReactionExposureRouteCdgSys;
+	        } else if(alrgyIntoleranceReactionExposureRouteCdgSys.equals("[") | alrgyIntoleranceReactionExposureRouteCdgSys.equals("]") | this.alrgyIntoleranceReactionExposureRouteCdgSys.substring(this.alrgyIntoleranceReactionExposureRouteCdgSys.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceReactionExposureRouteCdgSys = this.alrgyIntoleranceReactionExposureRouteCdgSys+alrgyIntoleranceReactionExposureRouteCdgSys;
+	        } else  {
+	            this.alrgyIntoleranceReactionExposureRouteCdgSys = this.alrgyIntoleranceReactionExposureRouteCdgSys+ "," +alrgyIntoleranceReactionExposureRouteCdgSys;
+	        }
+        }
     }
     
     
@@ -691,6 +1503,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
         this.alrgyIntoleranceReactionExposureRouteCdgUsrSltd = alrgyIntoleranceReactionExposureRouteCdgUsrSltd;
     }
     
+    public void addAlrgyIntoleranceReactionExposureRouteCdgUsrSltd(String alrgyIntoleranceReactionExposureRouteCdgUsrSltd) {
+    	if( alrgyIntoleranceReactionExposureRouteCdgUsrSltd != null ) {
+	    	if( this.alrgyIntoleranceReactionExposureRouteCdgUsrSltd == null ) {
+	        	this.alrgyIntoleranceReactionExposureRouteCdgUsrSltd = alrgyIntoleranceReactionExposureRouteCdgUsrSltd;
+	        } else if(this.alrgyIntoleranceReactionExposureRouteCdgUsrSltd.substring(this.alrgyIntoleranceReactionExposureRouteCdgUsrSltd.length() - 1).equals("]") & alrgyIntoleranceReactionExposureRouteCdgUsrSltd.equals("[")) {
+	        	this.alrgyIntoleranceReactionExposureRouteCdgUsrSltd = this.alrgyIntoleranceReactionExposureRouteCdgUsrSltd+ "," + alrgyIntoleranceReactionExposureRouteCdgUsrSltd;
+	        } else if(alrgyIntoleranceReactionExposureRouteCdgUsrSltd.equals("[") | alrgyIntoleranceReactionExposureRouteCdgUsrSltd.equals("]") | this.alrgyIntoleranceReactionExposureRouteCdgUsrSltd.substring(this.alrgyIntoleranceReactionExposureRouteCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceReactionExposureRouteCdgUsrSltd = this.alrgyIntoleranceReactionExposureRouteCdgUsrSltd+alrgyIntoleranceReactionExposureRouteCdgUsrSltd;
+	        } else  {
+	            this.alrgyIntoleranceReactionExposureRouteCdgUsrSltd = this.alrgyIntoleranceReactionExposureRouteCdgUsrSltd+ "," +alrgyIntoleranceReactionExposureRouteCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getAlrgyIntoleranceReactionExposureRouteCdgVrsn() {
@@ -699,6 +1525,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
     
     public void setAlrgyIntoleranceReactionExposureRouteCdgVrsn(String alrgyIntoleranceReactionExposureRouteCdgVrsn) {
         this.alrgyIntoleranceReactionExposureRouteCdgVrsn = alrgyIntoleranceReactionExposureRouteCdgVrsn;
+    }
+    
+    public void addAlrgyIntoleranceReactionExposureRouteCdgVrsn(String alrgyIntoleranceReactionExposureRouteCdgVrsn) {
+    	if( alrgyIntoleranceReactionExposureRouteCdgVrsn != null ) {
+	    	if( this.alrgyIntoleranceReactionExposureRouteCdgVrsn == null ) {
+	        	this.alrgyIntoleranceReactionExposureRouteCdgVrsn = alrgyIntoleranceReactionExposureRouteCdgVrsn;
+	        } else if(this.alrgyIntoleranceReactionExposureRouteCdgVrsn.substring(this.alrgyIntoleranceReactionExposureRouteCdgVrsn.length() - 1).equals("]") & alrgyIntoleranceReactionExposureRouteCdgVrsn.equals("[")) {
+	        	this.alrgyIntoleranceReactionExposureRouteCdgVrsn = this.alrgyIntoleranceReactionExposureRouteCdgVrsn+ "," + alrgyIntoleranceReactionExposureRouteCdgVrsn;
+	        } else if(alrgyIntoleranceReactionExposureRouteCdgVrsn.equals("[") | alrgyIntoleranceReactionExposureRouteCdgVrsn.equals("]") | this.alrgyIntoleranceReactionExposureRouteCdgVrsn.substring(this.alrgyIntoleranceReactionExposureRouteCdgVrsn.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceReactionExposureRouteCdgVrsn = this.alrgyIntoleranceReactionExposureRouteCdgVrsn+alrgyIntoleranceReactionExposureRouteCdgVrsn;
+	        } else  {
+	            this.alrgyIntoleranceReactionExposureRouteCdgVrsn = this.alrgyIntoleranceReactionExposureRouteCdgVrsn+ "," +alrgyIntoleranceReactionExposureRouteCdgVrsn;
+	        }
+        }
     }
     
     
@@ -711,6 +1551,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
         this.alrgyIntoleranceReactionExposureRouteTxt = alrgyIntoleranceReactionExposureRouteTxt;
     }
     
+    public void addAlrgyIntoleranceReactionExposureRouteTxt(String alrgyIntoleranceReactionExposureRouteTxt) {
+    	if( alrgyIntoleranceReactionExposureRouteTxt != null ) {
+	    	if( this.alrgyIntoleranceReactionExposureRouteTxt == null ) {
+	        	this.alrgyIntoleranceReactionExposureRouteTxt = alrgyIntoleranceReactionExposureRouteTxt;
+	        } else if(this.alrgyIntoleranceReactionExposureRouteTxt.substring(this.alrgyIntoleranceReactionExposureRouteTxt.length() - 1).equals("]") & alrgyIntoleranceReactionExposureRouteTxt.equals("[")) {
+	        	this.alrgyIntoleranceReactionExposureRouteTxt = this.alrgyIntoleranceReactionExposureRouteTxt+ "," + alrgyIntoleranceReactionExposureRouteTxt;
+	        } else if(alrgyIntoleranceReactionExposureRouteTxt.equals("[") | alrgyIntoleranceReactionExposureRouteTxt.equals("]") | this.alrgyIntoleranceReactionExposureRouteTxt.substring(this.alrgyIntoleranceReactionExposureRouteTxt.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceReactionExposureRouteTxt = this.alrgyIntoleranceReactionExposureRouteTxt+alrgyIntoleranceReactionExposureRouteTxt;
+	        } else  {
+	            this.alrgyIntoleranceReactionExposureRouteTxt = this.alrgyIntoleranceReactionExposureRouteTxt+ "," +alrgyIntoleranceReactionExposureRouteTxt;
+	        }
+        }
+    }
+    
     
     
     public String getAlrgyIntoleranceReactionManifestationCdgCd() {
@@ -719,6 +1573,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
     
     public void setAlrgyIntoleranceReactionManifestationCdgCd(String alrgyIntoleranceReactionManifestationCdgCd) {
         this.alrgyIntoleranceReactionManifestationCdgCd = alrgyIntoleranceReactionManifestationCdgCd;
+    }
+    
+    public void addAlrgyIntoleranceReactionManifestationCdgCd(String alrgyIntoleranceReactionManifestationCdgCd) {
+    	if( alrgyIntoleranceReactionManifestationCdgCd != null ) {
+	    	if( this.alrgyIntoleranceReactionManifestationCdgCd == null ) {
+	        	this.alrgyIntoleranceReactionManifestationCdgCd = alrgyIntoleranceReactionManifestationCdgCd;
+	        } else if(this.alrgyIntoleranceReactionManifestationCdgCd.substring(this.alrgyIntoleranceReactionManifestationCdgCd.length() - 1).equals("]") & alrgyIntoleranceReactionManifestationCdgCd.equals("[")) {
+	        	this.alrgyIntoleranceReactionManifestationCdgCd = this.alrgyIntoleranceReactionManifestationCdgCd+ "," + alrgyIntoleranceReactionManifestationCdgCd;
+	        } else if(alrgyIntoleranceReactionManifestationCdgCd.equals("[") | alrgyIntoleranceReactionManifestationCdgCd.equals("]") | this.alrgyIntoleranceReactionManifestationCdgCd.substring(this.alrgyIntoleranceReactionManifestationCdgCd.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceReactionManifestationCdgCd = this.alrgyIntoleranceReactionManifestationCdgCd+alrgyIntoleranceReactionManifestationCdgCd;
+	        } else  {
+	            this.alrgyIntoleranceReactionManifestationCdgCd = this.alrgyIntoleranceReactionManifestationCdgCd+ "," +alrgyIntoleranceReactionManifestationCdgCd;
+	        }
+        }
     }
     
     
@@ -731,6 +1599,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
         this.alrgyIntoleranceReactionManifestationCdgDsply = alrgyIntoleranceReactionManifestationCdgDsply;
     }
     
+    public void addAlrgyIntoleranceReactionManifestationCdgDsply(String alrgyIntoleranceReactionManifestationCdgDsply) {
+    	if( alrgyIntoleranceReactionManifestationCdgDsply != null ) {
+	    	if( this.alrgyIntoleranceReactionManifestationCdgDsply == null ) {
+	        	this.alrgyIntoleranceReactionManifestationCdgDsply = alrgyIntoleranceReactionManifestationCdgDsply;
+	        } else if(this.alrgyIntoleranceReactionManifestationCdgDsply.substring(this.alrgyIntoleranceReactionManifestationCdgDsply.length() - 1).equals("]") & alrgyIntoleranceReactionManifestationCdgDsply.equals("[")) {
+	        	this.alrgyIntoleranceReactionManifestationCdgDsply = this.alrgyIntoleranceReactionManifestationCdgDsply+ "," + alrgyIntoleranceReactionManifestationCdgDsply;
+	        } else if(alrgyIntoleranceReactionManifestationCdgDsply.equals("[") | alrgyIntoleranceReactionManifestationCdgDsply.equals("]") | this.alrgyIntoleranceReactionManifestationCdgDsply.substring(this.alrgyIntoleranceReactionManifestationCdgDsply.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceReactionManifestationCdgDsply = this.alrgyIntoleranceReactionManifestationCdgDsply+alrgyIntoleranceReactionManifestationCdgDsply;
+	        } else  {
+	            this.alrgyIntoleranceReactionManifestationCdgDsply = this.alrgyIntoleranceReactionManifestationCdgDsply+ "," +alrgyIntoleranceReactionManifestationCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getAlrgyIntoleranceReactionManifestationCdgSys() {
@@ -739,6 +1621,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
     
     public void setAlrgyIntoleranceReactionManifestationCdgSys(String alrgyIntoleranceReactionManifestationCdgSys) {
         this.alrgyIntoleranceReactionManifestationCdgSys = alrgyIntoleranceReactionManifestationCdgSys;
+    }
+    
+    public void addAlrgyIntoleranceReactionManifestationCdgSys(String alrgyIntoleranceReactionManifestationCdgSys) {
+    	if( alrgyIntoleranceReactionManifestationCdgSys != null ) {
+	    	if( this.alrgyIntoleranceReactionManifestationCdgSys == null ) {
+	        	this.alrgyIntoleranceReactionManifestationCdgSys = alrgyIntoleranceReactionManifestationCdgSys;
+	        } else if(this.alrgyIntoleranceReactionManifestationCdgSys.substring(this.alrgyIntoleranceReactionManifestationCdgSys.length() - 1).equals("]") & alrgyIntoleranceReactionManifestationCdgSys.equals("[")) {
+	        	this.alrgyIntoleranceReactionManifestationCdgSys = this.alrgyIntoleranceReactionManifestationCdgSys+ "," + alrgyIntoleranceReactionManifestationCdgSys;
+	        } else if(alrgyIntoleranceReactionManifestationCdgSys.equals("[") | alrgyIntoleranceReactionManifestationCdgSys.equals("]") | this.alrgyIntoleranceReactionManifestationCdgSys.substring(this.alrgyIntoleranceReactionManifestationCdgSys.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceReactionManifestationCdgSys = this.alrgyIntoleranceReactionManifestationCdgSys+alrgyIntoleranceReactionManifestationCdgSys;
+	        } else  {
+	            this.alrgyIntoleranceReactionManifestationCdgSys = this.alrgyIntoleranceReactionManifestationCdgSys+ "," +alrgyIntoleranceReactionManifestationCdgSys;
+	        }
+        }
     }
     
     
@@ -751,6 +1647,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
         this.alrgyIntoleranceReactionManifestationCdgUsrSltd = alrgyIntoleranceReactionManifestationCdgUsrSltd;
     }
     
+    public void addAlrgyIntoleranceReactionManifestationCdgUsrSltd(String alrgyIntoleranceReactionManifestationCdgUsrSltd) {
+    	if( alrgyIntoleranceReactionManifestationCdgUsrSltd != null ) {
+	    	if( this.alrgyIntoleranceReactionManifestationCdgUsrSltd == null ) {
+	        	this.alrgyIntoleranceReactionManifestationCdgUsrSltd = alrgyIntoleranceReactionManifestationCdgUsrSltd;
+	        } else if(this.alrgyIntoleranceReactionManifestationCdgUsrSltd.substring(this.alrgyIntoleranceReactionManifestationCdgUsrSltd.length() - 1).equals("]") & alrgyIntoleranceReactionManifestationCdgUsrSltd.equals("[")) {
+	        	this.alrgyIntoleranceReactionManifestationCdgUsrSltd = this.alrgyIntoleranceReactionManifestationCdgUsrSltd+ "," + alrgyIntoleranceReactionManifestationCdgUsrSltd;
+	        } else if(alrgyIntoleranceReactionManifestationCdgUsrSltd.equals("[") | alrgyIntoleranceReactionManifestationCdgUsrSltd.equals("]") | this.alrgyIntoleranceReactionManifestationCdgUsrSltd.substring(this.alrgyIntoleranceReactionManifestationCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceReactionManifestationCdgUsrSltd = this.alrgyIntoleranceReactionManifestationCdgUsrSltd+alrgyIntoleranceReactionManifestationCdgUsrSltd;
+	        } else  {
+	            this.alrgyIntoleranceReactionManifestationCdgUsrSltd = this.alrgyIntoleranceReactionManifestationCdgUsrSltd+ "," +alrgyIntoleranceReactionManifestationCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getAlrgyIntoleranceReactionManifestationCdgVrsn() {
@@ -759,6 +1669,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
     
     public void setAlrgyIntoleranceReactionManifestationCdgVrsn(String alrgyIntoleranceReactionManifestationCdgVrsn) {
         this.alrgyIntoleranceReactionManifestationCdgVrsn = alrgyIntoleranceReactionManifestationCdgVrsn;
+    }
+    
+    public void addAlrgyIntoleranceReactionManifestationCdgVrsn(String alrgyIntoleranceReactionManifestationCdgVrsn) {
+    	if( alrgyIntoleranceReactionManifestationCdgVrsn != null ) {
+	    	if( this.alrgyIntoleranceReactionManifestationCdgVrsn == null ) {
+	        	this.alrgyIntoleranceReactionManifestationCdgVrsn = alrgyIntoleranceReactionManifestationCdgVrsn;
+	        } else if(this.alrgyIntoleranceReactionManifestationCdgVrsn.substring(this.alrgyIntoleranceReactionManifestationCdgVrsn.length() - 1).equals("]") & alrgyIntoleranceReactionManifestationCdgVrsn.equals("[")) {
+	        	this.alrgyIntoleranceReactionManifestationCdgVrsn = this.alrgyIntoleranceReactionManifestationCdgVrsn+ "," + alrgyIntoleranceReactionManifestationCdgVrsn;
+	        } else if(alrgyIntoleranceReactionManifestationCdgVrsn.equals("[") | alrgyIntoleranceReactionManifestationCdgVrsn.equals("]") | this.alrgyIntoleranceReactionManifestationCdgVrsn.substring(this.alrgyIntoleranceReactionManifestationCdgVrsn.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceReactionManifestationCdgVrsn = this.alrgyIntoleranceReactionManifestationCdgVrsn+alrgyIntoleranceReactionManifestationCdgVrsn;
+	        } else  {
+	            this.alrgyIntoleranceReactionManifestationCdgVrsn = this.alrgyIntoleranceReactionManifestationCdgVrsn+ "," +alrgyIntoleranceReactionManifestationCdgVrsn;
+	        }
+        }
     }
     
     
@@ -771,6 +1695,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
         this.alrgyIntoleranceReactionManifestationTxt = alrgyIntoleranceReactionManifestationTxt;
     }
     
+    public void addAlrgyIntoleranceReactionManifestationTxt(String alrgyIntoleranceReactionManifestationTxt) {
+    	if( alrgyIntoleranceReactionManifestationTxt != null ) {
+	    	if( this.alrgyIntoleranceReactionManifestationTxt == null ) {
+	        	this.alrgyIntoleranceReactionManifestationTxt = alrgyIntoleranceReactionManifestationTxt;
+	        } else if(this.alrgyIntoleranceReactionManifestationTxt.substring(this.alrgyIntoleranceReactionManifestationTxt.length() - 1).equals("]") & alrgyIntoleranceReactionManifestationTxt.equals("[")) {
+	        	this.alrgyIntoleranceReactionManifestationTxt = this.alrgyIntoleranceReactionManifestationTxt+ "," + alrgyIntoleranceReactionManifestationTxt;
+	        } else if(alrgyIntoleranceReactionManifestationTxt.equals("[") | alrgyIntoleranceReactionManifestationTxt.equals("]") | this.alrgyIntoleranceReactionManifestationTxt.substring(this.alrgyIntoleranceReactionManifestationTxt.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceReactionManifestationTxt = this.alrgyIntoleranceReactionManifestationTxt+alrgyIntoleranceReactionManifestationTxt;
+	        } else  {
+	            this.alrgyIntoleranceReactionManifestationTxt = this.alrgyIntoleranceReactionManifestationTxt+ "," +alrgyIntoleranceReactionManifestationTxt;
+	        }
+        }
+    }
+    
     
     
     public String getAlrgyIntoleranceReactionNtAthrRfrnc() {
@@ -779,6 +1717,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
     
     public void setAlrgyIntoleranceReactionNtAthrRfrnc(String alrgyIntoleranceReactionNtAthrRfrnc) {
         this.alrgyIntoleranceReactionNtAthrRfrnc = alrgyIntoleranceReactionNtAthrRfrnc;
+    }
+    
+    public void addAlrgyIntoleranceReactionNtAthrRfrnc(String alrgyIntoleranceReactionNtAthrRfrnc) {
+    	if( alrgyIntoleranceReactionNtAthrRfrnc != null ) {
+	    	if( this.alrgyIntoleranceReactionNtAthrRfrnc == null ) {
+	        	this.alrgyIntoleranceReactionNtAthrRfrnc = alrgyIntoleranceReactionNtAthrRfrnc;
+	        } else if(this.alrgyIntoleranceReactionNtAthrRfrnc.substring(this.alrgyIntoleranceReactionNtAthrRfrnc.length() - 1).equals("]") & alrgyIntoleranceReactionNtAthrRfrnc.equals("[")) {
+	        	this.alrgyIntoleranceReactionNtAthrRfrnc = this.alrgyIntoleranceReactionNtAthrRfrnc+ "," + alrgyIntoleranceReactionNtAthrRfrnc;
+	        } else if(alrgyIntoleranceReactionNtAthrRfrnc.equals("[") | alrgyIntoleranceReactionNtAthrRfrnc.equals("]") | this.alrgyIntoleranceReactionNtAthrRfrnc.substring(this.alrgyIntoleranceReactionNtAthrRfrnc.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceReactionNtAthrRfrnc = this.alrgyIntoleranceReactionNtAthrRfrnc+alrgyIntoleranceReactionNtAthrRfrnc;
+	        } else  {
+	            this.alrgyIntoleranceReactionNtAthrRfrnc = this.alrgyIntoleranceReactionNtAthrRfrnc+ "," +alrgyIntoleranceReactionNtAthrRfrnc;
+	        }
+        }
     }
     
     
@@ -791,6 +1743,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
         this.alrgyIntoleranceReactionNtAthrStrgTyp = alrgyIntoleranceReactionNtAthrStrgTyp;
     }
     
+    public void addAlrgyIntoleranceReactionNtAthrStrgTyp(String alrgyIntoleranceReactionNtAthrStrgTyp) {
+    	if( alrgyIntoleranceReactionNtAthrStrgTyp != null ) {
+	    	if( this.alrgyIntoleranceReactionNtAthrStrgTyp == null ) {
+	        	this.alrgyIntoleranceReactionNtAthrStrgTyp = alrgyIntoleranceReactionNtAthrStrgTyp;
+	        } else if(this.alrgyIntoleranceReactionNtAthrStrgTyp.substring(this.alrgyIntoleranceReactionNtAthrStrgTyp.length() - 1).equals("]") & alrgyIntoleranceReactionNtAthrStrgTyp.equals("[")) {
+	        	this.alrgyIntoleranceReactionNtAthrStrgTyp = this.alrgyIntoleranceReactionNtAthrStrgTyp+ "," + alrgyIntoleranceReactionNtAthrStrgTyp;
+	        } else if(alrgyIntoleranceReactionNtAthrStrgTyp.equals("[") | alrgyIntoleranceReactionNtAthrStrgTyp.equals("]") | this.alrgyIntoleranceReactionNtAthrStrgTyp.substring(this.alrgyIntoleranceReactionNtAthrStrgTyp.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceReactionNtAthrStrgTyp = this.alrgyIntoleranceReactionNtAthrStrgTyp+alrgyIntoleranceReactionNtAthrStrgTyp;
+	        } else  {
+	            this.alrgyIntoleranceReactionNtAthrStrgTyp = this.alrgyIntoleranceReactionNtAthrStrgTyp+ "," +alrgyIntoleranceReactionNtAthrStrgTyp;
+	        }
+        }
+    }
+    
     
     
     public String getAlrgyIntoleranceReactionNtTxt() {
@@ -799,6 +1765,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
     
     public void setAlrgyIntoleranceReactionNtTxt(String alrgyIntoleranceReactionNtTxt) {
         this.alrgyIntoleranceReactionNtTxt = alrgyIntoleranceReactionNtTxt;
+    }
+    
+    public void addAlrgyIntoleranceReactionNtTxt(String alrgyIntoleranceReactionNtTxt) {
+    	if( alrgyIntoleranceReactionNtTxt != null ) {
+	    	if( this.alrgyIntoleranceReactionNtTxt == null ) {
+	        	this.alrgyIntoleranceReactionNtTxt = alrgyIntoleranceReactionNtTxt;
+	        } else if(this.alrgyIntoleranceReactionNtTxt.substring(this.alrgyIntoleranceReactionNtTxt.length() - 1).equals("]") & alrgyIntoleranceReactionNtTxt.equals("[")) {
+	        	this.alrgyIntoleranceReactionNtTxt = this.alrgyIntoleranceReactionNtTxt+ "," + alrgyIntoleranceReactionNtTxt;
+	        } else if(alrgyIntoleranceReactionNtTxt.equals("[") | alrgyIntoleranceReactionNtTxt.equals("]") | this.alrgyIntoleranceReactionNtTxt.substring(this.alrgyIntoleranceReactionNtTxt.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceReactionNtTxt = this.alrgyIntoleranceReactionNtTxt+alrgyIntoleranceReactionNtTxt;
+	        } else  {
+	            this.alrgyIntoleranceReactionNtTxt = this.alrgyIntoleranceReactionNtTxt+ "," +alrgyIntoleranceReactionNtTxt;
+	        }
+        }
     }
     
     
@@ -811,6 +1791,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
         this.alrgyIntoleranceReactionNtTime = alrgyIntoleranceReactionNtTime;
     }
     
+    public void addAlrgyIntoleranceReactionNtTime(String alrgyIntoleranceReactionNtTime) {
+    	if( alrgyIntoleranceReactionNtTime != null ) {
+	    	if( this.alrgyIntoleranceReactionNtTime == null ) {
+	        	this.alrgyIntoleranceReactionNtTime = alrgyIntoleranceReactionNtTime;
+	        } else if(this.alrgyIntoleranceReactionNtTime.substring(this.alrgyIntoleranceReactionNtTime.length() - 1).equals("]") & alrgyIntoleranceReactionNtTime.equals("[")) {
+	        	this.alrgyIntoleranceReactionNtTime = this.alrgyIntoleranceReactionNtTime+ "," + alrgyIntoleranceReactionNtTime;
+	        } else if(alrgyIntoleranceReactionNtTime.equals("[") | alrgyIntoleranceReactionNtTime.equals("]") | this.alrgyIntoleranceReactionNtTime.substring(this.alrgyIntoleranceReactionNtTime.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceReactionNtTime = this.alrgyIntoleranceReactionNtTime+alrgyIntoleranceReactionNtTime;
+	        } else  {
+	            this.alrgyIntoleranceReactionNtTime = this.alrgyIntoleranceReactionNtTime+ "," +alrgyIntoleranceReactionNtTime;
+	        }
+        }
+    }
+    
     
     
     public String getAlrgyIntoleranceReactionOn() {
@@ -819,6 +1813,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
     
     public void setAlrgyIntoleranceReactionOn(String alrgyIntoleranceReactionOn) {
         this.alrgyIntoleranceReactionOn = alrgyIntoleranceReactionOn;
+    }
+    
+    public void addAlrgyIntoleranceReactionOn(String alrgyIntoleranceReactionOn) {
+    	if( alrgyIntoleranceReactionOn != null ) {
+	    	if( this.alrgyIntoleranceReactionOn == null ) {
+	        	this.alrgyIntoleranceReactionOn = alrgyIntoleranceReactionOn;
+	        } else if(this.alrgyIntoleranceReactionOn.substring(this.alrgyIntoleranceReactionOn.length() - 1).equals("]") & alrgyIntoleranceReactionOn.equals("[")) {
+	        	this.alrgyIntoleranceReactionOn = this.alrgyIntoleranceReactionOn+ "," + alrgyIntoleranceReactionOn;
+	        } else if(alrgyIntoleranceReactionOn.equals("[") | alrgyIntoleranceReactionOn.equals("]") | this.alrgyIntoleranceReactionOn.substring(this.alrgyIntoleranceReactionOn.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceReactionOn = this.alrgyIntoleranceReactionOn+alrgyIntoleranceReactionOn;
+	        } else  {
+	            this.alrgyIntoleranceReactionOn = this.alrgyIntoleranceReactionOn+ "," +alrgyIntoleranceReactionOn;
+	        }
+        }
     }
     
     
@@ -831,6 +1839,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
         this.alrgyIntoleranceReactionSeverity = alrgyIntoleranceReactionSeverity;
     }
     
+    public void addAlrgyIntoleranceReactionSeverity(String alrgyIntoleranceReactionSeverity) {
+    	if( alrgyIntoleranceReactionSeverity != null ) {
+	    	if( this.alrgyIntoleranceReactionSeverity == null ) {
+	        	this.alrgyIntoleranceReactionSeverity = alrgyIntoleranceReactionSeverity;
+	        } else if(this.alrgyIntoleranceReactionSeverity.substring(this.alrgyIntoleranceReactionSeverity.length() - 1).equals("]") & alrgyIntoleranceReactionSeverity.equals("[")) {
+	        	this.alrgyIntoleranceReactionSeverity = this.alrgyIntoleranceReactionSeverity+ "," + alrgyIntoleranceReactionSeverity;
+	        } else if(alrgyIntoleranceReactionSeverity.equals("[") | alrgyIntoleranceReactionSeverity.equals("]") | this.alrgyIntoleranceReactionSeverity.substring(this.alrgyIntoleranceReactionSeverity.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceReactionSeverity = this.alrgyIntoleranceReactionSeverity+alrgyIntoleranceReactionSeverity;
+	        } else  {
+	            this.alrgyIntoleranceReactionSeverity = this.alrgyIntoleranceReactionSeverity+ "," +alrgyIntoleranceReactionSeverity;
+	        }
+        }
+    }
+    
     
     
     public String getAlrgyIntoleranceReactionSbstncCdgCd() {
@@ -839,6 +1861,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
     
     public void setAlrgyIntoleranceReactionSbstncCdgCd(String alrgyIntoleranceReactionSbstncCdgCd) {
         this.alrgyIntoleranceReactionSbstncCdgCd = alrgyIntoleranceReactionSbstncCdgCd;
+    }
+    
+    public void addAlrgyIntoleranceReactionSbstncCdgCd(String alrgyIntoleranceReactionSbstncCdgCd) {
+    	if( alrgyIntoleranceReactionSbstncCdgCd != null ) {
+	    	if( this.alrgyIntoleranceReactionSbstncCdgCd == null ) {
+	        	this.alrgyIntoleranceReactionSbstncCdgCd = alrgyIntoleranceReactionSbstncCdgCd;
+	        } else if(this.alrgyIntoleranceReactionSbstncCdgCd.substring(this.alrgyIntoleranceReactionSbstncCdgCd.length() - 1).equals("]") & alrgyIntoleranceReactionSbstncCdgCd.equals("[")) {
+	        	this.alrgyIntoleranceReactionSbstncCdgCd = this.alrgyIntoleranceReactionSbstncCdgCd+ "," + alrgyIntoleranceReactionSbstncCdgCd;
+	        } else if(alrgyIntoleranceReactionSbstncCdgCd.equals("[") | alrgyIntoleranceReactionSbstncCdgCd.equals("]") | this.alrgyIntoleranceReactionSbstncCdgCd.substring(this.alrgyIntoleranceReactionSbstncCdgCd.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceReactionSbstncCdgCd = this.alrgyIntoleranceReactionSbstncCdgCd+alrgyIntoleranceReactionSbstncCdgCd;
+	        } else  {
+	            this.alrgyIntoleranceReactionSbstncCdgCd = this.alrgyIntoleranceReactionSbstncCdgCd+ "," +alrgyIntoleranceReactionSbstncCdgCd;
+	        }
+        }
     }
     
     
@@ -851,6 +1887,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
         this.alrgyIntoleranceReactionSbstncCdgDsply = alrgyIntoleranceReactionSbstncCdgDsply;
     }
     
+    public void addAlrgyIntoleranceReactionSbstncCdgDsply(String alrgyIntoleranceReactionSbstncCdgDsply) {
+    	if( alrgyIntoleranceReactionSbstncCdgDsply != null ) {
+	    	if( this.alrgyIntoleranceReactionSbstncCdgDsply == null ) {
+	        	this.alrgyIntoleranceReactionSbstncCdgDsply = alrgyIntoleranceReactionSbstncCdgDsply;
+	        } else if(this.alrgyIntoleranceReactionSbstncCdgDsply.substring(this.alrgyIntoleranceReactionSbstncCdgDsply.length() - 1).equals("]") & alrgyIntoleranceReactionSbstncCdgDsply.equals("[")) {
+	        	this.alrgyIntoleranceReactionSbstncCdgDsply = this.alrgyIntoleranceReactionSbstncCdgDsply+ "," + alrgyIntoleranceReactionSbstncCdgDsply;
+	        } else if(alrgyIntoleranceReactionSbstncCdgDsply.equals("[") | alrgyIntoleranceReactionSbstncCdgDsply.equals("]") | this.alrgyIntoleranceReactionSbstncCdgDsply.substring(this.alrgyIntoleranceReactionSbstncCdgDsply.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceReactionSbstncCdgDsply = this.alrgyIntoleranceReactionSbstncCdgDsply+alrgyIntoleranceReactionSbstncCdgDsply;
+	        } else  {
+	            this.alrgyIntoleranceReactionSbstncCdgDsply = this.alrgyIntoleranceReactionSbstncCdgDsply+ "," +alrgyIntoleranceReactionSbstncCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getAlrgyIntoleranceReactionSbstncCdgSys() {
@@ -859,6 +1909,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
     
     public void setAlrgyIntoleranceReactionSbstncCdgSys(String alrgyIntoleranceReactionSbstncCdgSys) {
         this.alrgyIntoleranceReactionSbstncCdgSys = alrgyIntoleranceReactionSbstncCdgSys;
+    }
+    
+    public void addAlrgyIntoleranceReactionSbstncCdgSys(String alrgyIntoleranceReactionSbstncCdgSys) {
+    	if( alrgyIntoleranceReactionSbstncCdgSys != null ) {
+	    	if( this.alrgyIntoleranceReactionSbstncCdgSys == null ) {
+	        	this.alrgyIntoleranceReactionSbstncCdgSys = alrgyIntoleranceReactionSbstncCdgSys;
+	        } else if(this.alrgyIntoleranceReactionSbstncCdgSys.substring(this.alrgyIntoleranceReactionSbstncCdgSys.length() - 1).equals("]") & alrgyIntoleranceReactionSbstncCdgSys.equals("[")) {
+	        	this.alrgyIntoleranceReactionSbstncCdgSys = this.alrgyIntoleranceReactionSbstncCdgSys+ "," + alrgyIntoleranceReactionSbstncCdgSys;
+	        } else if(alrgyIntoleranceReactionSbstncCdgSys.equals("[") | alrgyIntoleranceReactionSbstncCdgSys.equals("]") | this.alrgyIntoleranceReactionSbstncCdgSys.substring(this.alrgyIntoleranceReactionSbstncCdgSys.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceReactionSbstncCdgSys = this.alrgyIntoleranceReactionSbstncCdgSys+alrgyIntoleranceReactionSbstncCdgSys;
+	        } else  {
+	            this.alrgyIntoleranceReactionSbstncCdgSys = this.alrgyIntoleranceReactionSbstncCdgSys+ "," +alrgyIntoleranceReactionSbstncCdgSys;
+	        }
+        }
     }
     
     
@@ -871,6 +1935,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
         this.alrgyIntoleranceReactionSbstncCdgUsrSltd = alrgyIntoleranceReactionSbstncCdgUsrSltd;
     }
     
+    public void addAlrgyIntoleranceReactionSbstncCdgUsrSltd(String alrgyIntoleranceReactionSbstncCdgUsrSltd) {
+    	if( alrgyIntoleranceReactionSbstncCdgUsrSltd != null ) {
+	    	if( this.alrgyIntoleranceReactionSbstncCdgUsrSltd == null ) {
+	        	this.alrgyIntoleranceReactionSbstncCdgUsrSltd = alrgyIntoleranceReactionSbstncCdgUsrSltd;
+	        } else if(this.alrgyIntoleranceReactionSbstncCdgUsrSltd.substring(this.alrgyIntoleranceReactionSbstncCdgUsrSltd.length() - 1).equals("]") & alrgyIntoleranceReactionSbstncCdgUsrSltd.equals("[")) {
+	        	this.alrgyIntoleranceReactionSbstncCdgUsrSltd = this.alrgyIntoleranceReactionSbstncCdgUsrSltd+ "," + alrgyIntoleranceReactionSbstncCdgUsrSltd;
+	        } else if(alrgyIntoleranceReactionSbstncCdgUsrSltd.equals("[") | alrgyIntoleranceReactionSbstncCdgUsrSltd.equals("]") | this.alrgyIntoleranceReactionSbstncCdgUsrSltd.substring(this.alrgyIntoleranceReactionSbstncCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceReactionSbstncCdgUsrSltd = this.alrgyIntoleranceReactionSbstncCdgUsrSltd+alrgyIntoleranceReactionSbstncCdgUsrSltd;
+	        } else  {
+	            this.alrgyIntoleranceReactionSbstncCdgUsrSltd = this.alrgyIntoleranceReactionSbstncCdgUsrSltd+ "," +alrgyIntoleranceReactionSbstncCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getAlrgyIntoleranceReactionSbstncCdgVrsn() {
@@ -879,6 +1957,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
     
     public void setAlrgyIntoleranceReactionSbstncCdgVrsn(String alrgyIntoleranceReactionSbstncCdgVrsn) {
         this.alrgyIntoleranceReactionSbstncCdgVrsn = alrgyIntoleranceReactionSbstncCdgVrsn;
+    }
+    
+    public void addAlrgyIntoleranceReactionSbstncCdgVrsn(String alrgyIntoleranceReactionSbstncCdgVrsn) {
+    	if( alrgyIntoleranceReactionSbstncCdgVrsn != null ) {
+	    	if( this.alrgyIntoleranceReactionSbstncCdgVrsn == null ) {
+	        	this.alrgyIntoleranceReactionSbstncCdgVrsn = alrgyIntoleranceReactionSbstncCdgVrsn;
+	        } else if(this.alrgyIntoleranceReactionSbstncCdgVrsn.substring(this.alrgyIntoleranceReactionSbstncCdgVrsn.length() - 1).equals("]") & alrgyIntoleranceReactionSbstncCdgVrsn.equals("[")) {
+	        	this.alrgyIntoleranceReactionSbstncCdgVrsn = this.alrgyIntoleranceReactionSbstncCdgVrsn+ "," + alrgyIntoleranceReactionSbstncCdgVrsn;
+	        } else if(alrgyIntoleranceReactionSbstncCdgVrsn.equals("[") | alrgyIntoleranceReactionSbstncCdgVrsn.equals("]") | this.alrgyIntoleranceReactionSbstncCdgVrsn.substring(this.alrgyIntoleranceReactionSbstncCdgVrsn.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceReactionSbstncCdgVrsn = this.alrgyIntoleranceReactionSbstncCdgVrsn+alrgyIntoleranceReactionSbstncCdgVrsn;
+	        } else  {
+	            this.alrgyIntoleranceReactionSbstncCdgVrsn = this.alrgyIntoleranceReactionSbstncCdgVrsn+ "," +alrgyIntoleranceReactionSbstncCdgVrsn;
+	        }
+        }
     }
     
     
@@ -891,6 +1983,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
         this.alrgyIntoleranceReactionSbstncTxt = alrgyIntoleranceReactionSbstncTxt;
     }
     
+    public void addAlrgyIntoleranceReactionSbstncTxt(String alrgyIntoleranceReactionSbstncTxt) {
+    	if( alrgyIntoleranceReactionSbstncTxt != null ) {
+	    	if( this.alrgyIntoleranceReactionSbstncTxt == null ) {
+	        	this.alrgyIntoleranceReactionSbstncTxt = alrgyIntoleranceReactionSbstncTxt;
+	        } else if(this.alrgyIntoleranceReactionSbstncTxt.substring(this.alrgyIntoleranceReactionSbstncTxt.length() - 1).equals("]") & alrgyIntoleranceReactionSbstncTxt.equals("[")) {
+	        	this.alrgyIntoleranceReactionSbstncTxt = this.alrgyIntoleranceReactionSbstncTxt+ "," + alrgyIntoleranceReactionSbstncTxt;
+	        } else if(alrgyIntoleranceReactionSbstncTxt.equals("[") | alrgyIntoleranceReactionSbstncTxt.equals("]") | this.alrgyIntoleranceReactionSbstncTxt.substring(this.alrgyIntoleranceReactionSbstncTxt.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceReactionSbstncTxt = this.alrgyIntoleranceReactionSbstncTxt+alrgyIntoleranceReactionSbstncTxt;
+	        } else  {
+	            this.alrgyIntoleranceReactionSbstncTxt = this.alrgyIntoleranceReactionSbstncTxt+ "," +alrgyIntoleranceReactionSbstncTxt;
+	        }
+        }
+    }
+    
     
     
     public String getAlrgyIntoleranceRecordedDt() {
@@ -899,6 +2005,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
     
     public void setAlrgyIntoleranceRecordedDt(String alrgyIntoleranceRecordedDt) {
         this.alrgyIntoleranceRecordedDt = alrgyIntoleranceRecordedDt;
+    }
+    
+    public void addAlrgyIntoleranceRecordedDt(String alrgyIntoleranceRecordedDt) {
+    	if( alrgyIntoleranceRecordedDt != null ) {
+	    	if( this.alrgyIntoleranceRecordedDt == null ) {
+	        	this.alrgyIntoleranceRecordedDt = alrgyIntoleranceRecordedDt;
+	        } else if(this.alrgyIntoleranceRecordedDt.substring(this.alrgyIntoleranceRecordedDt.length() - 1).equals("]") & alrgyIntoleranceRecordedDt.equals("[")) {
+	        	this.alrgyIntoleranceRecordedDt = this.alrgyIntoleranceRecordedDt+ "," + alrgyIntoleranceRecordedDt;
+	        } else if(alrgyIntoleranceRecordedDt.equals("[") | alrgyIntoleranceRecordedDt.equals("]") | this.alrgyIntoleranceRecordedDt.substring(this.alrgyIntoleranceRecordedDt.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceRecordedDt = this.alrgyIntoleranceRecordedDt+alrgyIntoleranceRecordedDt;
+	        } else  {
+	            this.alrgyIntoleranceRecordedDt = this.alrgyIntoleranceRecordedDt+ "," +alrgyIntoleranceRecordedDt;
+	        }
+        }
     }
     
     
@@ -911,6 +2031,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
         this.alrgyIntoleranceRecorder = alrgyIntoleranceRecorder;
     }
     
+    public void addAlrgyIntoleranceRecorder(String alrgyIntoleranceRecorder) {
+    	if( alrgyIntoleranceRecorder != null ) {
+	    	if( this.alrgyIntoleranceRecorder == null ) {
+	        	this.alrgyIntoleranceRecorder = alrgyIntoleranceRecorder;
+	        } else if(this.alrgyIntoleranceRecorder.substring(this.alrgyIntoleranceRecorder.length() - 1).equals("]") & alrgyIntoleranceRecorder.equals("[")) {
+	        	this.alrgyIntoleranceRecorder = this.alrgyIntoleranceRecorder+ "," + alrgyIntoleranceRecorder;
+	        } else if(alrgyIntoleranceRecorder.equals("[") | alrgyIntoleranceRecorder.equals("]") | this.alrgyIntoleranceRecorder.substring(this.alrgyIntoleranceRecorder.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceRecorder = this.alrgyIntoleranceRecorder+alrgyIntoleranceRecorder;
+	        } else  {
+	            this.alrgyIntoleranceRecorder = this.alrgyIntoleranceRecorder+ "," +alrgyIntoleranceRecorder;
+	        }
+        }
+    }
+    
     
     
     public String getAlrgyIntoleranceTyp() {
@@ -919,6 +2053,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
     
     public void setAlrgyIntoleranceTyp(String alrgyIntoleranceTyp) {
         this.alrgyIntoleranceTyp = alrgyIntoleranceTyp;
+    }
+    
+    public void addAlrgyIntoleranceTyp(String alrgyIntoleranceTyp) {
+    	if( alrgyIntoleranceTyp != null ) {
+	    	if( this.alrgyIntoleranceTyp == null ) {
+	        	this.alrgyIntoleranceTyp = alrgyIntoleranceTyp;
+	        } else if(this.alrgyIntoleranceTyp.substring(this.alrgyIntoleranceTyp.length() - 1).equals("]") & alrgyIntoleranceTyp.equals("[")) {
+	        	this.alrgyIntoleranceTyp = this.alrgyIntoleranceTyp+ "," + alrgyIntoleranceTyp;
+	        } else if(alrgyIntoleranceTyp.equals("[") | alrgyIntoleranceTyp.equals("]") | this.alrgyIntoleranceTyp.substring(this.alrgyIntoleranceTyp.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceTyp = this.alrgyIntoleranceTyp+alrgyIntoleranceTyp;
+	        } else  {
+	            this.alrgyIntoleranceTyp = this.alrgyIntoleranceTyp+ "," +alrgyIntoleranceTyp;
+	        }
+        }
     }
     
     
@@ -931,6 +2079,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
         this.alrgyIntoleranceVrfctnStsCdgCd = alrgyIntoleranceVrfctnStsCdgCd;
     }
     
+    public void addAlrgyIntoleranceVrfctnStsCdgCd(String alrgyIntoleranceVrfctnStsCdgCd) {
+    	if( alrgyIntoleranceVrfctnStsCdgCd != null ) {
+	    	if( this.alrgyIntoleranceVrfctnStsCdgCd == null ) {
+	        	this.alrgyIntoleranceVrfctnStsCdgCd = alrgyIntoleranceVrfctnStsCdgCd;
+	        } else if(this.alrgyIntoleranceVrfctnStsCdgCd.substring(this.alrgyIntoleranceVrfctnStsCdgCd.length() - 1).equals("]") & alrgyIntoleranceVrfctnStsCdgCd.equals("[")) {
+	        	this.alrgyIntoleranceVrfctnStsCdgCd = this.alrgyIntoleranceVrfctnStsCdgCd+ "," + alrgyIntoleranceVrfctnStsCdgCd;
+	        } else if(alrgyIntoleranceVrfctnStsCdgCd.equals("[") | alrgyIntoleranceVrfctnStsCdgCd.equals("]") | this.alrgyIntoleranceVrfctnStsCdgCd.substring(this.alrgyIntoleranceVrfctnStsCdgCd.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceVrfctnStsCdgCd = this.alrgyIntoleranceVrfctnStsCdgCd+alrgyIntoleranceVrfctnStsCdgCd;
+	        } else  {
+	            this.alrgyIntoleranceVrfctnStsCdgCd = this.alrgyIntoleranceVrfctnStsCdgCd+ "," +alrgyIntoleranceVrfctnStsCdgCd;
+	        }
+        }
+    }
+    
     
     
     public String getAlrgyIntoleranceVrfctnStsCdgDsply() {
@@ -939,6 +2101,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
     
     public void setAlrgyIntoleranceVrfctnStsCdgDsply(String alrgyIntoleranceVrfctnStsCdgDsply) {
         this.alrgyIntoleranceVrfctnStsCdgDsply = alrgyIntoleranceVrfctnStsCdgDsply;
+    }
+    
+    public void addAlrgyIntoleranceVrfctnStsCdgDsply(String alrgyIntoleranceVrfctnStsCdgDsply) {
+    	if( alrgyIntoleranceVrfctnStsCdgDsply != null ) {
+	    	if( this.alrgyIntoleranceVrfctnStsCdgDsply == null ) {
+	        	this.alrgyIntoleranceVrfctnStsCdgDsply = alrgyIntoleranceVrfctnStsCdgDsply;
+	        } else if(this.alrgyIntoleranceVrfctnStsCdgDsply.substring(this.alrgyIntoleranceVrfctnStsCdgDsply.length() - 1).equals("]") & alrgyIntoleranceVrfctnStsCdgDsply.equals("[")) {
+	        	this.alrgyIntoleranceVrfctnStsCdgDsply = this.alrgyIntoleranceVrfctnStsCdgDsply+ "," + alrgyIntoleranceVrfctnStsCdgDsply;
+	        } else if(alrgyIntoleranceVrfctnStsCdgDsply.equals("[") | alrgyIntoleranceVrfctnStsCdgDsply.equals("]") | this.alrgyIntoleranceVrfctnStsCdgDsply.substring(this.alrgyIntoleranceVrfctnStsCdgDsply.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceVrfctnStsCdgDsply = this.alrgyIntoleranceVrfctnStsCdgDsply+alrgyIntoleranceVrfctnStsCdgDsply;
+	        } else  {
+	            this.alrgyIntoleranceVrfctnStsCdgDsply = this.alrgyIntoleranceVrfctnStsCdgDsply+ "," +alrgyIntoleranceVrfctnStsCdgDsply;
+	        }
+        }
     }
     
     
@@ -951,6 +2127,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
         this.alrgyIntoleranceVrfctnStsCdgSys = alrgyIntoleranceVrfctnStsCdgSys;
     }
     
+    public void addAlrgyIntoleranceVrfctnStsCdgSys(String alrgyIntoleranceVrfctnStsCdgSys) {
+    	if( alrgyIntoleranceVrfctnStsCdgSys != null ) {
+	    	if( this.alrgyIntoleranceVrfctnStsCdgSys == null ) {
+	        	this.alrgyIntoleranceVrfctnStsCdgSys = alrgyIntoleranceVrfctnStsCdgSys;
+	        } else if(this.alrgyIntoleranceVrfctnStsCdgSys.substring(this.alrgyIntoleranceVrfctnStsCdgSys.length() - 1).equals("]") & alrgyIntoleranceVrfctnStsCdgSys.equals("[")) {
+	        	this.alrgyIntoleranceVrfctnStsCdgSys = this.alrgyIntoleranceVrfctnStsCdgSys+ "," + alrgyIntoleranceVrfctnStsCdgSys;
+	        } else if(alrgyIntoleranceVrfctnStsCdgSys.equals("[") | alrgyIntoleranceVrfctnStsCdgSys.equals("]") | this.alrgyIntoleranceVrfctnStsCdgSys.substring(this.alrgyIntoleranceVrfctnStsCdgSys.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceVrfctnStsCdgSys = this.alrgyIntoleranceVrfctnStsCdgSys+alrgyIntoleranceVrfctnStsCdgSys;
+	        } else  {
+	            this.alrgyIntoleranceVrfctnStsCdgSys = this.alrgyIntoleranceVrfctnStsCdgSys+ "," +alrgyIntoleranceVrfctnStsCdgSys;
+	        }
+        }
+    }
+    
     
     
     public String getAlrgyIntoleranceVrfctnStsCdgUsrSltd() {
@@ -959,6 +2149,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
     
     public void setAlrgyIntoleranceVrfctnStsCdgUsrSltd(String alrgyIntoleranceVrfctnStsCdgUsrSltd) {
         this.alrgyIntoleranceVrfctnStsCdgUsrSltd = alrgyIntoleranceVrfctnStsCdgUsrSltd;
+    }
+    
+    public void addAlrgyIntoleranceVrfctnStsCdgUsrSltd(String alrgyIntoleranceVrfctnStsCdgUsrSltd) {
+    	if( alrgyIntoleranceVrfctnStsCdgUsrSltd != null ) {
+	    	if( this.alrgyIntoleranceVrfctnStsCdgUsrSltd == null ) {
+	        	this.alrgyIntoleranceVrfctnStsCdgUsrSltd = alrgyIntoleranceVrfctnStsCdgUsrSltd;
+	        } else if(this.alrgyIntoleranceVrfctnStsCdgUsrSltd.substring(this.alrgyIntoleranceVrfctnStsCdgUsrSltd.length() - 1).equals("]") & alrgyIntoleranceVrfctnStsCdgUsrSltd.equals("[")) {
+	        	this.alrgyIntoleranceVrfctnStsCdgUsrSltd = this.alrgyIntoleranceVrfctnStsCdgUsrSltd+ "," + alrgyIntoleranceVrfctnStsCdgUsrSltd;
+	        } else if(alrgyIntoleranceVrfctnStsCdgUsrSltd.equals("[") | alrgyIntoleranceVrfctnStsCdgUsrSltd.equals("]") | this.alrgyIntoleranceVrfctnStsCdgUsrSltd.substring(this.alrgyIntoleranceVrfctnStsCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceVrfctnStsCdgUsrSltd = this.alrgyIntoleranceVrfctnStsCdgUsrSltd+alrgyIntoleranceVrfctnStsCdgUsrSltd;
+	        } else  {
+	            this.alrgyIntoleranceVrfctnStsCdgUsrSltd = this.alrgyIntoleranceVrfctnStsCdgUsrSltd+ "," +alrgyIntoleranceVrfctnStsCdgUsrSltd;
+	        }
+        }
     }
     
     
@@ -971,6 +2175,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
         this.alrgyIntoleranceVrfctnStsCdgVrsn = alrgyIntoleranceVrfctnStsCdgVrsn;
     }
     
+    public void addAlrgyIntoleranceVrfctnStsCdgVrsn(String alrgyIntoleranceVrfctnStsCdgVrsn) {
+    	if( alrgyIntoleranceVrfctnStsCdgVrsn != null ) {
+	    	if( this.alrgyIntoleranceVrfctnStsCdgVrsn == null ) {
+	        	this.alrgyIntoleranceVrfctnStsCdgVrsn = alrgyIntoleranceVrfctnStsCdgVrsn;
+	        } else if(this.alrgyIntoleranceVrfctnStsCdgVrsn.substring(this.alrgyIntoleranceVrfctnStsCdgVrsn.length() - 1).equals("]") & alrgyIntoleranceVrfctnStsCdgVrsn.equals("[")) {
+	        	this.alrgyIntoleranceVrfctnStsCdgVrsn = this.alrgyIntoleranceVrfctnStsCdgVrsn+ "," + alrgyIntoleranceVrfctnStsCdgVrsn;
+	        } else if(alrgyIntoleranceVrfctnStsCdgVrsn.equals("[") | alrgyIntoleranceVrfctnStsCdgVrsn.equals("]") | this.alrgyIntoleranceVrfctnStsCdgVrsn.substring(this.alrgyIntoleranceVrfctnStsCdgVrsn.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceVrfctnStsCdgVrsn = this.alrgyIntoleranceVrfctnStsCdgVrsn+alrgyIntoleranceVrfctnStsCdgVrsn;
+	        } else  {
+	            this.alrgyIntoleranceVrfctnStsCdgVrsn = this.alrgyIntoleranceVrfctnStsCdgVrsn+ "," +alrgyIntoleranceVrfctnStsCdgVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getAlrgyIntoleranceVrfctnStsTxt() {
@@ -979,6 +2197,20 @@ public class AllergyIntolerance  implements java.io.Serializable {
     
     public void setAlrgyIntoleranceVrfctnStsTxt(String alrgyIntoleranceVrfctnStsTxt) {
         this.alrgyIntoleranceVrfctnStsTxt = alrgyIntoleranceVrfctnStsTxt;
+    }
+    
+    public void addAlrgyIntoleranceVrfctnStsTxt(String alrgyIntoleranceVrfctnStsTxt) {
+    	if( alrgyIntoleranceVrfctnStsTxt != null ) {
+	    	if( this.alrgyIntoleranceVrfctnStsTxt == null ) {
+	        	this.alrgyIntoleranceVrfctnStsTxt = alrgyIntoleranceVrfctnStsTxt;
+	        } else if(this.alrgyIntoleranceVrfctnStsTxt.substring(this.alrgyIntoleranceVrfctnStsTxt.length() - 1).equals("]") & alrgyIntoleranceVrfctnStsTxt.equals("[")) {
+	        	this.alrgyIntoleranceVrfctnStsTxt = this.alrgyIntoleranceVrfctnStsTxt+ "," + alrgyIntoleranceVrfctnStsTxt;
+	        } else if(alrgyIntoleranceVrfctnStsTxt.equals("[") | alrgyIntoleranceVrfctnStsTxt.equals("]") | this.alrgyIntoleranceVrfctnStsTxt.substring(this.alrgyIntoleranceVrfctnStsTxt.length() - 1).equals("[")) {
+	        	this.alrgyIntoleranceVrfctnStsTxt = this.alrgyIntoleranceVrfctnStsTxt+alrgyIntoleranceVrfctnStsTxt;
+	        } else  {
+	            this.alrgyIntoleranceVrfctnStsTxt = this.alrgyIntoleranceVrfctnStsTxt+ "," +alrgyIntoleranceVrfctnStsTxt;
+	        }
+        }
     }
     
     

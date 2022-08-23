@@ -8,363 +8,807 @@ public class RiskAssessmentBidirectionalConversion
 		 main.java.com.campfhir.model.RiskAssessment r = new  main.java.com.campfhir.model.RiskAssessment();
 
 		/******************** id ********************************************************************************/
-		riskassessment.setId(r.getId());
+		r.setId(riskassessment.getIdElement().getIdPart());
 
 		/******************** riskassessmentmethod ********************************************************************************/
 		org.hl7.fhir.r4.model.CodeableConcept riskassessmentmethod = riskassessment.getMethod();
 
 		/******************** RskAssmnt_Mthd_Txt ********************************************************************************/
 		if(riskassessmentmethod.hasText()) {
-			r.setRskAssmntMthdTxt(String.valueOf(riskassessmentmethod.getText()));
+
+			r.addRskAssmntMthdTxt(String.valueOf(riskassessmentmethod.getText()));
+		} else {
+			r.addRskAssmntMthdTxt("NULL");
 		}
+
+
 		/******************** riskassessmentmethodcoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding riskassessmentmethodcoding = riskassessmentmethod.getCodingFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.Coding> riskassessmentmethodcodinglist = riskassessmentmethod.getCoding();
+		for(int riskassessmentmethodcodingi = 0; riskassessmentmethodcodingi<riskassessmentmethodcodinglist.size();riskassessmentmethodcodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  riskassessmentmethodcoding = riskassessmentmethodcodinglist.get(riskassessmentmethodcodingi);
+
+		/******************** RskAssmnt_Mthd_Cdg_Dsply ********************************************************************************/
+		if(riskassessmentmethodcodingi == 0) {r.addRskAssmntMthdCdgDsply("[");}
+		if(riskassessmentmethodcoding.hasDisplay()) {
+
+			r.addRskAssmntMthdCdgDsply(String.valueOf(riskassessmentmethodcoding.getDisplay()));
+		} else {
+			r.addRskAssmntMthdCdgDsply("NULL");
+		}
+
+		if(riskassessmentmethodcodingi == riskassessmentmethodcodinglist.size()-1) {r.addRskAssmntMthdCdgDsply("]");}
+
 
 		/******************** RskAssmnt_Mthd_Cdg_Vrsn ********************************************************************************/
+		if(riskassessmentmethodcodingi == 0) {r.addRskAssmntMthdCdgVrsn("[");}
 		if(riskassessmentmethodcoding.hasVersion()) {
-			r.setRskAssmntMthdCdgVrsn(String.valueOf(riskassessmentmethodcoding.getVersion()));
+
+			r.addRskAssmntMthdCdgVrsn(String.valueOf(riskassessmentmethodcoding.getVersion()));
+		} else {
+			r.addRskAssmntMthdCdgVrsn("NULL");
 		}
-		/******************** RskAssmnt_Mthd_Cdg_Dsply ********************************************************************************/
-		if(riskassessmentmethodcoding.hasDisplay()) {
-			r.setRskAssmntMthdCdgDsply(String.valueOf(riskassessmentmethodcoding.getDisplay()));
-		}
+
+		if(riskassessmentmethodcodingi == riskassessmentmethodcodinglist.size()-1) {r.addRskAssmntMthdCdgVrsn("]");}
+
+
 		/******************** RskAssmnt_Mthd_Cdg_Cd ********************************************************************************/
+		if(riskassessmentmethodcodingi == 0) {r.addRskAssmntMthdCdgCd("[");}
 		if(riskassessmentmethodcoding.hasCode()) {
-			r.setRskAssmntMthdCdgCd(String.valueOf(riskassessmentmethodcoding.getCode()));
+
+			r.addRskAssmntMthdCdgCd(String.valueOf(riskassessmentmethodcoding.getCode()));
+		} else {
+			r.addRskAssmntMthdCdgCd("NULL");
 		}
+
+		if(riskassessmentmethodcodingi == riskassessmentmethodcodinglist.size()-1) {r.addRskAssmntMthdCdgCd("]");}
+
+
 		/******************** RskAssmnt_Mthd_Cdg_UsrSltd ********************************************************************************/
+		if(riskassessmentmethodcodingi == 0) {r.addRskAssmntMthdCdgUsrSltd("[");}
 		if(riskassessmentmethodcoding.hasUserSelected()) {
-			r.setRskAssmntMthdCdgUsrSltd(String.valueOf(riskassessmentmethodcoding.getUserSelected()));
+
+			r.addRskAssmntMthdCdgUsrSltd(String.valueOf(riskassessmentmethodcoding.getUserSelected()));
+		} else {
+			r.addRskAssmntMthdCdgUsrSltd("NULL");
 		}
+
+		if(riskassessmentmethodcodingi == riskassessmentmethodcodinglist.size()-1) {r.addRskAssmntMthdCdgUsrSltd("]");}
+
+
 		/******************** RskAssmnt_Mthd_Cdg_Sys ********************************************************************************/
+		if(riskassessmentmethodcodingi == 0) {r.addRskAssmntMthdCdgSys("[");}
 		if(riskassessmentmethodcoding.hasSystem()) {
-			r.setRskAssmntMthdCdgSys(String.valueOf(riskassessmentmethodcoding.getSystem()));
+
+			r.addRskAssmntMthdCdgSys(String.valueOf(riskassessmentmethodcoding.getSystem()));
+		} else {
+			r.addRskAssmntMthdCdgSys("NULL");
 		}
+
+		if(riskassessmentmethodcodingi == riskassessmentmethodcodinglist.size()-1) {r.addRskAssmntMthdCdgSys("]");}
+
+
+		 };
 		/******************** RskAssmnt_Parent ********************************************************************************/
 		if(riskassessment.hasParent()) {
-			r.setRskAssmntParent(String.valueOf(riskassessment.getParent()));
+
+			if(riskassessment.getParent().getReference() != null) {
+			r.addRskAssmntParent(riskassessment.getParent().getReference());
+			}
+		} else {
+			r.addRskAssmntParent("NULL");
 		}
+
+
 		/******************** riskassessmentcode ********************************************************************************/
 		org.hl7.fhir.r4.model.CodeableConcept riskassessmentcode = riskassessment.getCode();
 
 		/******************** RskAssmnt_Cd_Txt ********************************************************************************/
 		if(riskassessmentcode.hasText()) {
-			r.setRskAssmntCdTxt(String.valueOf(riskassessmentcode.getText()));
+
+			r.addRskAssmntCdTxt(String.valueOf(riskassessmentcode.getText()));
+		} else {
+			r.addRskAssmntCdTxt("NULL");
 		}
+
+
 		/******************** riskassessmentcodecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding riskassessmentcodecoding = riskassessmentcode.getCodingFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.Coding> riskassessmentcodecodinglist = riskassessmentcode.getCoding();
+		for(int riskassessmentcodecodingi = 0; riskassessmentcodecodingi<riskassessmentcodecodinglist.size();riskassessmentcodecodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  riskassessmentcodecoding = riskassessmentcodecodinglist.get(riskassessmentcodecodingi);
+
+		/******************** RskAssmnt_Cd_Cdg_Dsply ********************************************************************************/
+		if(riskassessmentcodecodingi == 0) {r.addRskAssmntCdCdgDsply("[");}
+		if(riskassessmentcodecoding.hasDisplay()) {
+
+			r.addRskAssmntCdCdgDsply(String.valueOf(riskassessmentcodecoding.getDisplay()));
+		} else {
+			r.addRskAssmntCdCdgDsply("NULL");
+		}
+
+		if(riskassessmentcodecodingi == riskassessmentcodecodinglist.size()-1) {r.addRskAssmntCdCdgDsply("]");}
+
 
 		/******************** RskAssmnt_Cd_Cdg_Vrsn ********************************************************************************/
+		if(riskassessmentcodecodingi == 0) {r.addRskAssmntCdCdgVrsn("[");}
 		if(riskassessmentcodecoding.hasVersion()) {
-			r.setRskAssmntCdCdgVrsn(String.valueOf(riskassessmentcodecoding.getVersion()));
+
+			r.addRskAssmntCdCdgVrsn(String.valueOf(riskassessmentcodecoding.getVersion()));
+		} else {
+			r.addRskAssmntCdCdgVrsn("NULL");
 		}
-		/******************** RskAssmnt_Cd_Cdg_Dsply ********************************************************************************/
-		if(riskassessmentcodecoding.hasDisplay()) {
-			r.setRskAssmntCdCdgDsply(String.valueOf(riskassessmentcodecoding.getDisplay()));
-		}
+
+		if(riskassessmentcodecodingi == riskassessmentcodecodinglist.size()-1) {r.addRskAssmntCdCdgVrsn("]");}
+
+
 		/******************** RskAssmnt_Cd_Cdg_Cd ********************************************************************************/
+		if(riskassessmentcodecodingi == 0) {r.addRskAssmntCdCdgCd("[");}
 		if(riskassessmentcodecoding.hasCode()) {
-			r.setRskAssmntCdCdgCd(String.valueOf(riskassessmentcodecoding.getCode()));
+
+			r.addRskAssmntCdCdgCd(String.valueOf(riskassessmentcodecoding.getCode()));
+		} else {
+			r.addRskAssmntCdCdgCd("NULL");
 		}
+
+		if(riskassessmentcodecodingi == riskassessmentcodecodinglist.size()-1) {r.addRskAssmntCdCdgCd("]");}
+
+
 		/******************** RskAssmnt_Cd_Cdg_UsrSltd ********************************************************************************/
+		if(riskassessmentcodecodingi == 0) {r.addRskAssmntCdCdgUsrSltd("[");}
 		if(riskassessmentcodecoding.hasUserSelected()) {
-			r.setRskAssmntCdCdgUsrSltd(String.valueOf(riskassessmentcodecoding.getUserSelected()));
+
+			r.addRskAssmntCdCdgUsrSltd(String.valueOf(riskassessmentcodecoding.getUserSelected()));
+		} else {
+			r.addRskAssmntCdCdgUsrSltd("NULL");
 		}
+
+		if(riskassessmentcodecodingi == riskassessmentcodecodinglist.size()-1) {r.addRskAssmntCdCdgUsrSltd("]");}
+
+
 		/******************** RskAssmnt_Cd_Cdg_Sys ********************************************************************************/
+		if(riskassessmentcodecodingi == 0) {r.addRskAssmntCdCdgSys("[");}
 		if(riskassessmentcodecoding.hasSystem()) {
-			r.setRskAssmntCdCdgSys(String.valueOf(riskassessmentcodecoding.getSystem()));
+
+			r.addRskAssmntCdCdgSys(String.valueOf(riskassessmentcodecoding.getSystem()));
+		} else {
+			r.addRskAssmntCdCdgSys("NULL");
 		}
-		/******************** RskAssmnt_Cndtn ********************************************************************************/
-		if(riskassessment.hasCondition()) {
-			r.setRskAssmntCndtn(String.valueOf(riskassessment.getCondition()));
-		}
-		/******************** RskAssmnt_Basis ********************************************************************************/
-		if(riskassessment.hasBasis()) {
-			r.setRskAssmntBasis(String.valueOf(riskassessment.getBasisFirstRep()));
-		}
-		/******************** RskAssmnt_Mitigation ********************************************************************************/
-		if(riskassessment.hasMitigation()) {
-			r.setRskAssmntMitigation(String.valueOf(riskassessment.getMitigation()));
-		}
-		/******************** RskAssmnt_Prfrmr ********************************************************************************/
-		if(riskassessment.hasPerformer()) {
-			r.setRskAssmntPrfrmr(String.valueOf(riskassessment.getPerformer()));
-		}
-		/******************** RskAssmnt_Enc ********************************************************************************/
-		if(riskassessment.hasEncounter()) {
-			r.setRskAssmntEnc(String.valueOf(riskassessment.getEncounter()));
-		}
+
+		if(riskassessmentcodecodingi == riskassessmentcodecodinglist.size()-1) {r.addRskAssmntCdCdgSys("]");}
+
+
+		 };
 		/******************** RskAssmnt_Sbjct ********************************************************************************/
 		if(riskassessment.hasSubject()) {
-			r.setRskAssmntSbjct(String.valueOf(riskassessment.getSubject()));
+
+			if(riskassessment.getSubject().getReference() != null) {
+			r.addRskAssmntSbjct(riskassessment.getSubject().getReference());
+			}
+		} else {
+			r.addRskAssmntSbjct("NULL");
 		}
+
+
 		/******************** riskassessmentstatus ********************************************************************************/
 		org.hl7.fhir.r4.model.RiskAssessment.RiskAssessmentStatus riskassessmentstatus = riskassessment.getStatus();
-		r.setRskAssmntSts(riskassessmentstatus.toCode());
+		if(riskassessmentstatus!=null) {
+			r.addRskAssmntSts(riskassessmentstatus.toCode());
+		} else {
+			r.addRskAssmntSts("NULL");
+		}
+
+		/******************** RskAssmnt_Enc ********************************************************************************/
+		if(riskassessment.hasEncounter()) {
+
+			if(riskassessment.getEncounter().getReference() != null) {
+			r.addRskAssmntEnc(riskassessment.getEncounter().getReference());
+			}
+		} else {
+			r.addRskAssmntEnc("NULL");
+		}
+
 
 		/******************** RskAssmnt_BasedOn ********************************************************************************/
 		if(riskassessment.hasBasedOn()) {
-			r.setRskAssmntBasedOn(String.valueOf(riskassessment.getBasedOn()));
+
+			if(riskassessment.getBasedOn().getReference() != null) {
+			r.addRskAssmntBasedOn(riskassessment.getBasedOn().getReference());
+			}
+		} else {
+			r.addRskAssmntBasedOn("NULL");
 		}
+
+
+		/******************** riskassessmentreasoncode ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.CodeableConcept> riskassessmentreasoncodelist = riskassessment.getReasonCode();
+		for(int riskassessmentreasoncodei = 0; riskassessmentreasoncodei<riskassessmentreasoncodelist.size();riskassessmentreasoncodei++ ) {
+		org.hl7.fhir.r4.model.CodeableConcept  riskassessmentreasoncode = riskassessmentreasoncodelist.get(riskassessmentreasoncodei);
+
+		/******************** RskAssmnt_RsnCd_Txt ********************************************************************************/
+		if(riskassessmentreasoncodei == 0) {r.addRskAssmntRsnCdTxt("[");}
+		if(riskassessmentreasoncode.hasText()) {
+
+			r.addRskAssmntRsnCdTxt(String.valueOf(riskassessmentreasoncode.getText()));
+		} else {
+			r.addRskAssmntRsnCdTxt("NULL");
+		}
+
+		if(riskassessmentreasoncodei == riskassessmentreasoncodelist.size()-1) {r.addRskAssmntRsnCdTxt("]");}
+
+
+		/******************** riskassessmentreasoncodecoding ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.Coding> riskassessmentreasoncodecodinglist = riskassessmentreasoncode.getCoding();
+		for(int riskassessmentreasoncodecodingi = 0; riskassessmentreasoncodecodingi<riskassessmentreasoncodecodinglist.size();riskassessmentreasoncodecodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  riskassessmentreasoncodecoding = riskassessmentreasoncodecodinglist.get(riskassessmentreasoncodecodingi);
+
+		/******************** RskAssmnt_RsnCd_Cdg_Dsply ********************************************************************************/
+		if(riskassessmentreasoncodecodingi == 0) {r.addRskAssmntRsnCdCdgDsply("[[");}
+		if(riskassessmentreasoncodecoding.hasDisplay()) {
+
+			r.addRskAssmntRsnCdCdgDsply(String.valueOf(riskassessmentreasoncodecoding.getDisplay()));
+		} else {
+			r.addRskAssmntRsnCdCdgDsply("NULL");
+		}
+
+		if(riskassessmentreasoncodecodingi == riskassessmentreasoncodecodinglist.size()-1) {r.addRskAssmntRsnCdCdgDsply("]]");}
+
+
+		/******************** RskAssmnt_RsnCd_Cdg_Vrsn ********************************************************************************/
+		if(riskassessmentreasoncodecodingi == 0) {r.addRskAssmntRsnCdCdgVrsn("[[");}
+		if(riskassessmentreasoncodecoding.hasVersion()) {
+
+			r.addRskAssmntRsnCdCdgVrsn(String.valueOf(riskassessmentreasoncodecoding.getVersion()));
+		} else {
+			r.addRskAssmntRsnCdCdgVrsn("NULL");
+		}
+
+		if(riskassessmentreasoncodecodingi == riskassessmentreasoncodecodinglist.size()-1) {r.addRskAssmntRsnCdCdgVrsn("]]");}
+
+
+		/******************** RskAssmnt_RsnCd_Cdg_Cd ********************************************************************************/
+		if(riskassessmentreasoncodecodingi == 0) {r.addRskAssmntRsnCdCdgCd("[[");}
+		if(riskassessmentreasoncodecoding.hasCode()) {
+
+			r.addRskAssmntRsnCdCdgCd(String.valueOf(riskassessmentreasoncodecoding.getCode()));
+		} else {
+			r.addRskAssmntRsnCdCdgCd("NULL");
+		}
+
+		if(riskassessmentreasoncodecodingi == riskassessmentreasoncodecodinglist.size()-1) {r.addRskAssmntRsnCdCdgCd("]]");}
+
+
+		/******************** RskAssmnt_RsnCd_Cdg_UsrSltd ********************************************************************************/
+		if(riskassessmentreasoncodecodingi == 0) {r.addRskAssmntRsnCdCdgUsrSltd("[[");}
+		if(riskassessmentreasoncodecoding.hasUserSelected()) {
+
+			r.addRskAssmntRsnCdCdgUsrSltd(String.valueOf(riskassessmentreasoncodecoding.getUserSelected()));
+		} else {
+			r.addRskAssmntRsnCdCdgUsrSltd("NULL");
+		}
+
+		if(riskassessmentreasoncodecodingi == riskassessmentreasoncodecodinglist.size()-1) {r.addRskAssmntRsnCdCdgUsrSltd("]]");}
+
+
+		/******************** RskAssmnt_RsnCd_Cdg_Sys ********************************************************************************/
+		if(riskassessmentreasoncodecodingi == 0) {r.addRskAssmntRsnCdCdgSys("[[");}
+		if(riskassessmentreasoncodecoding.hasSystem()) {
+
+			r.addRskAssmntRsnCdCdgSys(String.valueOf(riskassessmentreasoncodecoding.getSystem()));
+		} else {
+			r.addRskAssmntRsnCdCdgSys("NULL");
+		}
+
+		if(riskassessmentreasoncodecodingi == riskassessmentreasoncodecodinglist.size()-1) {r.addRskAssmntRsnCdCdgSys("]]");}
+
+
+		 };
+		 };
 		/******************** riskassessmentnote ********************************************************************************/
-		org.hl7.fhir.r4.model.Annotation riskassessmentnote = riskassessment.getNoteFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.Annotation> riskassessmentnotelist = riskassessment.getNote();
+		for(int riskassessmentnotei = 0; riskassessmentnotei<riskassessmentnotelist.size();riskassessmentnotei++ ) {
+		org.hl7.fhir.r4.model.Annotation  riskassessmentnote = riskassessmentnotelist.get(riskassessmentnotei);
 
 		/******************** RskAssmnt_Nt_Time ********************************************************************************/
+		if(riskassessmentnotei == 0) {r.addRskAssmntNtTime("[");}
 		if(riskassessmentnote.hasTime()) {
-			r.setRskAssmntNtTime(String.valueOf(riskassessmentnote.getTime()));
+
+			r.addRskAssmntNtTime("\""+ca.uhn.fhir.util.DateUtils.formatDate(riskassessmentnote.getTime())+"\"");
+		} else {
+			r.addRskAssmntNtTime("NULL");
 		}
-		/******************** RskAssmnt_Nt_Txt ********************************************************************************/
-		if(riskassessmentnote.hasText()) {
-			r.setRskAssmntNtTxt(String.valueOf(riskassessmentnote.getText()));
-		}
+
+		if(riskassessmentnotei == riskassessmentnotelist.size()-1) {r.addRskAssmntNtTime("]");}
+
+
 		/******************** RskAssmnt_Nt_AthrRfrnc ********************************************************************************/
+		if(riskassessmentnotei == 0) {r.addRskAssmntNtAthrRfrnc("[");}
 		if(riskassessmentnote.hasAuthorReference()) {
-			r.setRskAssmntNtAthrRfrnc(String.valueOf(riskassessmentnote.getAuthorReference()));
+
+			if(riskassessmentnote.getAuthorReference().getReference() != null) {
+			r.addRskAssmntNtAthrRfrnc(riskassessmentnote.getAuthorReference().getReference());
+			}
+		} else {
+			r.addRskAssmntNtAthrRfrnc("NULL");
 		}
+
+		if(riskassessmentnotei == riskassessmentnotelist.size()-1) {r.addRskAssmntNtAthrRfrnc("]");}
+
+
+		/******************** RskAssmnt_Nt_Txt ********************************************************************************/
+		if(riskassessmentnotei == 0) {r.addRskAssmntNtTxt("[");}
+		if(riskassessmentnote.hasText()) {
+
+			r.addRskAssmntNtTxt(String.valueOf(riskassessmentnote.getText()));
+		} else {
+			r.addRskAssmntNtTxt("NULL");
+		}
+
+		if(riskassessmentnotei == riskassessmentnotelist.size()-1) {r.addRskAssmntNtTxt("]");}
+
+
 		/******************** RskAssmnt_Nt_AthrStrgTyp ********************************************************************************/
+		if(riskassessmentnotei == 0) {r.addRskAssmntNtAthrStrgTyp("[");}
 		if(riskassessmentnote.hasAuthorStringType()) {
-			r.setRskAssmntNtAthrStrgTyp(String.valueOf(riskassessmentnote.getAuthorStringType()));
+
+			r.addRskAssmntNtAthrStrgTyp("\""+riskassessmentnote.getAuthorStringType().getValueAsString()+"\"");
+		} else {
+			r.addRskAssmntNtAthrStrgTyp("NULL");
 		}
+
+		if(riskassessmentnotei == riskassessmentnotelist.size()-1) {r.addRskAssmntNtAthrStrgTyp("]");}
+
+
+		 };
+		/******************** RskAssmnt_RsnRfrnc ********************************************************************************/
+		if(riskassessment.hasReasonReference()) {
+
+			String  array = "[";
+			for(int incr=0; incr<riskassessment.getReasonReference().size(); incr++) {
+				array = array + riskassessment.getReasonReference().get(incr).getReference() + ",";
+			}
+			array = array.substring(0, array.length() -1);
+			array = array + "]";
+			r.addRskAssmntRsnRfrnc(array);
+
+		} else {
+			r.addRskAssmntRsnRfrnc("NULL");
+		}
+
+
 		/******************** riskassessmentidentifier ********************************************************************************/
-		org.hl7.fhir.r4.model.Identifier riskassessmentidentifier = riskassessment.getIdentifierFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.Identifier> riskassessmentidentifierlist = riskassessment.getIdentifier();
+		for(int riskassessmentidentifieri = 0; riskassessmentidentifieri<riskassessmentidentifierlist.size();riskassessmentidentifieri++ ) {
+		org.hl7.fhir.r4.model.Identifier  riskassessmentidentifier = riskassessmentidentifierlist.get(riskassessmentidentifieri);
 
 		/******************** RskAssmnt_Id_Vl ********************************************************************************/
+		if(riskassessmentidentifieri == 0) {r.addRskAssmntIdVl("[");}
 		if(riskassessmentidentifier.hasValue()) {
-			r.setRskAssmntIdVl(String.valueOf(riskassessmentidentifier.getValue()));
+
+			r.addRskAssmntIdVl(String.valueOf(riskassessmentidentifier.getValue()));
+		} else {
+			r.addRskAssmntIdVl("NULL");
 		}
+
+		if(riskassessmentidentifieri == riskassessmentidentifierlist.size()-1) {r.addRskAssmntIdVl("]");}
+
+
 		/******************** riskassessmentidentifiertype ********************************************************************************/
 		org.hl7.fhir.r4.model.CodeableConcept riskassessmentidentifiertype = riskassessmentidentifier.getType();
 
 		/******************** RskAssmnt_Id_Typ_Txt ********************************************************************************/
+		if(riskassessmentidentifieri == 0) {r.addRskAssmntIdTypTxt("[");}
 		if(riskassessmentidentifiertype.hasText()) {
-			r.setRskAssmntIdTypTxt(String.valueOf(riskassessmentidentifiertype.getText()));
+
+			r.addRskAssmntIdTypTxt(String.valueOf(riskassessmentidentifiertype.getText()));
+		} else {
+			r.addRskAssmntIdTypTxt("NULL");
 		}
+
+		if(riskassessmentidentifieri == riskassessmentidentifierlist.size()-1) {r.addRskAssmntIdTypTxt("]");}
+
+
 		/******************** riskassessmentidentifiertypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding riskassessmentidentifiertypecoding = riskassessmentidentifiertype.getCodingFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.Coding> riskassessmentidentifiertypecodinglist = riskassessmentidentifiertype.getCoding();
+		for(int riskassessmentidentifiertypecodingi = 0; riskassessmentidentifiertypecodingi<riskassessmentidentifiertypecodinglist.size();riskassessmentidentifiertypecodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  riskassessmentidentifiertypecoding = riskassessmentidentifiertypecodinglist.get(riskassessmentidentifiertypecodingi);
+
+		/******************** RskAssmnt_Id_Typ_Cdg_Dsply ********************************************************************************/
+		if(riskassessmentidentifiertypecodingi == 0) {r.addRskAssmntIdTypCdgDsply("[[");}
+		if(riskassessmentidentifiertypecoding.hasDisplay()) {
+
+			r.addRskAssmntIdTypCdgDsply(String.valueOf(riskassessmentidentifiertypecoding.getDisplay()));
+		} else {
+			r.addRskAssmntIdTypCdgDsply("NULL");
+		}
+
+		if(riskassessmentidentifiertypecodingi == riskassessmentidentifiertypecodinglist.size()-1) {r.addRskAssmntIdTypCdgDsply("]]");}
+
 
 		/******************** RskAssmnt_Id_Typ_Cdg_Vrsn ********************************************************************************/
+		if(riskassessmentidentifiertypecodingi == 0) {r.addRskAssmntIdTypCdgVrsn("[[");}
 		if(riskassessmentidentifiertypecoding.hasVersion()) {
-			r.setRskAssmntIdTypCdgVrsn(String.valueOf(riskassessmentidentifiertypecoding.getVersion()));
+
+			r.addRskAssmntIdTypCdgVrsn(String.valueOf(riskassessmentidentifiertypecoding.getVersion()));
+		} else {
+			r.addRskAssmntIdTypCdgVrsn("NULL");
 		}
-		/******************** RskAssmnt_Id_Typ_Cdg_Dsply ********************************************************************************/
-		if(riskassessmentidentifiertypecoding.hasDisplay()) {
-			r.setRskAssmntIdTypCdgDsply(String.valueOf(riskassessmentidentifiertypecoding.getDisplay()));
-		}
+
+		if(riskassessmentidentifiertypecodingi == riskassessmentidentifiertypecodinglist.size()-1) {r.addRskAssmntIdTypCdgVrsn("]]");}
+
+
 		/******************** RskAssmnt_Id_Typ_Cdg_Cd ********************************************************************************/
+		if(riskassessmentidentifiertypecodingi == 0) {r.addRskAssmntIdTypCdgCd("[[");}
 		if(riskassessmentidentifiertypecoding.hasCode()) {
-			r.setRskAssmntIdTypCdgCd(String.valueOf(riskassessmentidentifiertypecoding.getCode()));
+
+			r.addRskAssmntIdTypCdgCd(String.valueOf(riskassessmentidentifiertypecoding.getCode()));
+		} else {
+			r.addRskAssmntIdTypCdgCd("NULL");
 		}
+
+		if(riskassessmentidentifiertypecodingi == riskassessmentidentifiertypecodinglist.size()-1) {r.addRskAssmntIdTypCdgCd("]]");}
+
+
 		/******************** RskAssmnt_Id_Typ_Cdg_UsrSltd ********************************************************************************/
+		if(riskassessmentidentifiertypecodingi == 0) {r.addRskAssmntIdTypCdgUsrSltd("[[");}
 		if(riskassessmentidentifiertypecoding.hasUserSelected()) {
-			r.setRskAssmntIdTypCdgUsrSltd(String.valueOf(riskassessmentidentifiertypecoding.getUserSelected()));
+
+			r.addRskAssmntIdTypCdgUsrSltd(String.valueOf(riskassessmentidentifiertypecoding.getUserSelected()));
+		} else {
+			r.addRskAssmntIdTypCdgUsrSltd("NULL");
 		}
+
+		if(riskassessmentidentifiertypecodingi == riskassessmentidentifiertypecodinglist.size()-1) {r.addRskAssmntIdTypCdgUsrSltd("]]");}
+
+
 		/******************** RskAssmnt_Id_Typ_Cdg_Sys ********************************************************************************/
+		if(riskassessmentidentifiertypecodingi == 0) {r.addRskAssmntIdTypCdgSys("[[");}
 		if(riskassessmentidentifiertypecoding.hasSystem()) {
-			r.setRskAssmntIdTypCdgSys(String.valueOf(riskassessmentidentifiertypecoding.getSystem()));
+
+			r.addRskAssmntIdTypCdgSys(String.valueOf(riskassessmentidentifiertypecoding.getSystem()));
+		} else {
+			r.addRskAssmntIdTypCdgSys("NULL");
 		}
+
+		if(riskassessmentidentifiertypecodingi == riskassessmentidentifiertypecodinglist.size()-1) {r.addRskAssmntIdTypCdgSys("]]");}
+
+
+		 };
 		/******************** riskassessmentidentifierperiod ********************************************************************************/
 		org.hl7.fhir.r4.model.Period riskassessmentidentifierperiod = riskassessmentidentifier.getPeriod();
 
 		/******************** RskAssmnt_Id_Prd_Strt ********************************************************************************/
+		if(riskassessmentidentifieri == 0) {r.addRskAssmntIdPrdStrt("[");}
 		if(riskassessmentidentifierperiod.hasStart()) {
-			r.setRskAssmntIdPrdStrt(String.valueOf(riskassessmentidentifierperiod.getStart()));
+
+			r.addRskAssmntIdPrdStrt("\""+ca.uhn.fhir.util.DateUtils.formatDate(riskassessmentidentifierperiod.getStart())+"\"");
+		} else {
+			r.addRskAssmntIdPrdStrt("NULL");
 		}
+
+		if(riskassessmentidentifieri == riskassessmentidentifierlist.size()-1) {r.addRskAssmntIdPrdStrt("]");}
+
+
 		/******************** RskAssmnt_Id_Prd_End ********************************************************************************/
+		if(riskassessmentidentifieri == 0) {r.addRskAssmntIdPrdEnd("[");}
 		if(riskassessmentidentifierperiod.hasEnd()) {
-			r.setRskAssmntIdPrdEnd(String.valueOf(riskassessmentidentifierperiod.getEnd()));
+
+			r.addRskAssmntIdPrdEnd("\""+ca.uhn.fhir.util.DateUtils.formatDate(riskassessmentidentifierperiod.getEnd())+"\"");
+		} else {
+			r.addRskAssmntIdPrdEnd("NULL");
 		}
-		/******************** RskAssmnt_Id_Assigner ********************************************************************************/
-		if(riskassessmentidentifier.hasAssigner()) {
-			r.setRskAssmntIdAssigner(String.valueOf(riskassessmentidentifier.getAssigner()));
-		}
-		/******************** RskAssmnt_Id_Sys ********************************************************************************/
-		if(riskassessmentidentifier.hasSystem()) {
-			r.setRskAssmntIdSys(String.valueOf(riskassessmentidentifier.getSystem()));
-		}
+
+		if(riskassessmentidentifieri == riskassessmentidentifierlist.size()-1) {r.addRskAssmntIdPrdEnd("]");}
+
+
 		/******************** riskassessmentidentifieruse ********************************************************************************/
 		org.hl7.fhir.r4.model.Identifier.IdentifierUse riskassessmentidentifieruse = riskassessmentidentifier.getUse();
-		r.setRskAssmntIdUse(riskassessmentidentifieruse.toCode());
+		if(riskassessmentidentifieruse!=null) {
+		if(riskassessmentidentifieri == 0) {
 
-		/******************** riskassessmentreasoncode ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept riskassessmentreasoncode = riskassessment.getReasonCodeFirstRep();
+		r.addRskAssmntIdUse("[");		}
+			r.addRskAssmntIdUse(riskassessmentidentifieruse.toCode());
+		if(riskassessmentidentifieri == riskassessmentidentifierlist.size()-1) {
 
-		/******************** RskAssmnt_RsnCd_Txt ********************************************************************************/
-		if(riskassessmentreasoncode.hasText()) {
-			r.setRskAssmntRsnCdTxt(String.valueOf(riskassessmentreasoncode.getText()));
-		}
-		/******************** riskassessmentreasoncodecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding riskassessmentreasoncodecoding = riskassessmentreasoncode.getCodingFirstRep();
+		r.addRskAssmntIdUse("]");		}
 
-		/******************** RskAssmnt_RsnCd_Cdg_Vrsn ********************************************************************************/
-		if(riskassessmentreasoncodecoding.hasVersion()) {
-			r.setRskAssmntRsnCdCdgVrsn(String.valueOf(riskassessmentreasoncodecoding.getVersion()));
+		} else {
+			r.addRskAssmntIdUse("NULL");
 		}
-		/******************** RskAssmnt_RsnCd_Cdg_Dsply ********************************************************************************/
-		if(riskassessmentreasoncodecoding.hasDisplay()) {
-			r.setRskAssmntRsnCdCdgDsply(String.valueOf(riskassessmentreasoncodecoding.getDisplay()));
+
+		/******************** RskAssmnt_Id_Assigner ********************************************************************************/
+		if(riskassessmentidentifieri == 0) {r.addRskAssmntIdAssigner("[");}
+		if(riskassessmentidentifier.hasAssigner()) {
+
+			if(riskassessmentidentifier.getAssigner().getReference() != null) {
+			r.addRskAssmntIdAssigner(riskassessmentidentifier.getAssigner().getReference());
+			}
+		} else {
+			r.addRskAssmntIdAssigner("NULL");
 		}
-		/******************** RskAssmnt_RsnCd_Cdg_Cd ********************************************************************************/
-		if(riskassessmentreasoncodecoding.hasCode()) {
-			r.setRskAssmntRsnCdCdgCd(String.valueOf(riskassessmentreasoncodecoding.getCode()));
+
+		if(riskassessmentidentifieri == riskassessmentidentifierlist.size()-1) {r.addRskAssmntIdAssigner("]");}
+
+
+		/******************** RskAssmnt_Id_Sys ********************************************************************************/
+		if(riskassessmentidentifieri == 0) {r.addRskAssmntIdSys("[");}
+		if(riskassessmentidentifier.hasSystem()) {
+
+			r.addRskAssmntIdSys(String.valueOf(riskassessmentidentifier.getSystem()));
+		} else {
+			r.addRskAssmntIdSys("NULL");
 		}
-		/******************** RskAssmnt_RsnCd_Cdg_UsrSltd ********************************************************************************/
-		if(riskassessmentreasoncodecoding.hasUserSelected()) {
-			r.setRskAssmntRsnCdCdgUsrSltd(String.valueOf(riskassessmentreasoncodecoding.getUserSelected()));
+
+		if(riskassessmentidentifieri == riskassessmentidentifierlist.size()-1) {r.addRskAssmntIdSys("]");}
+
+
+		 };
+		/******************** RskAssmnt_OccrnceDtTimeTyp ********************************************************************************/
+		if(riskassessment.hasOccurrenceDateTimeType()) {
+
+			r.addRskAssmntOccrnceDtTimeTyp("\""+riskassessment.getOccurrenceDateTimeType().getValueAsString()+"\"");
+		} else {
+			r.addRskAssmntOccrnceDtTimeTyp("NULL");
 		}
-		/******************** RskAssmnt_RsnCd_Cdg_Sys ********************************************************************************/
-		if(riskassessmentreasoncodecoding.hasSystem()) {
-			r.setRskAssmntRsnCdCdgSys(String.valueOf(riskassessmentreasoncodecoding.getSystem()));
-		}
-		/******************** RskAssmnt_RsnRfrnc ********************************************************************************/
-		if(riskassessment.hasReasonReference()) {
-			r.setRskAssmntRsnRfrnc(String.valueOf(riskassessment.getReasonReferenceFirstRep()));
-		}
+
+
 		/******************** riskassessmentoccurrenceperiod ********************************************************************************/
 		org.hl7.fhir.r4.model.Period riskassessmentoccurrenceperiod = riskassessment.getOccurrencePeriod();
 
 		/******************** RskAssmnt_OccrncePrd_Strt ********************************************************************************/
 		if(riskassessmentoccurrenceperiod.hasStart()) {
-			r.setRskAssmntOccrncePrdStrt(String.valueOf(riskassessmentoccurrenceperiod.getStart()));
+
+			r.addRskAssmntOccrncePrdStrt("\""+ca.uhn.fhir.util.DateUtils.formatDate(riskassessmentoccurrenceperiod.getStart())+"\"");
+		} else {
+			r.addRskAssmntOccrncePrdStrt("NULL");
 		}
+
+
 		/******************** RskAssmnt_OccrncePrd_End ********************************************************************************/
 		if(riskassessmentoccurrenceperiod.hasEnd()) {
-			r.setRskAssmntOccrncePrdEnd(String.valueOf(riskassessmentoccurrenceperiod.getEnd()));
+
+			r.addRskAssmntOccrncePrdEnd("\""+ca.uhn.fhir.util.DateUtils.formatDate(riskassessmentoccurrenceperiod.getEnd())+"\"");
+		} else {
+			r.addRskAssmntOccrncePrdEnd("NULL");
 		}
-		/******************** RskAssmnt_OccrnceDtTimeTyp ********************************************************************************/
-		if(riskassessment.hasOccurrenceDateTimeType()) {
-			r.setRskAssmntOccrnceDtTimeTyp(String.valueOf(riskassessment.getOccurrenceDateTimeType()));
+
+
+		/******************** RskAssmnt_Cndtn ********************************************************************************/
+		if(riskassessment.hasCondition()) {
+
+			if(riskassessment.getCondition().getReference() != null) {
+			r.addRskAssmntCndtn(riskassessment.getCondition().getReference());
+			}
+		} else {
+			r.addRskAssmntCndtn("NULL");
 		}
+
+
+		/******************** RskAssmnt_Basis ********************************************************************************/
+		if(riskassessment.hasBasis()) {
+
+			String  array = "[";
+			for(int incr=0; incr<riskassessment.getBasis().size(); incr++) {
+				array = array + riskassessment.getBasis().get(incr).getReference() + ",";
+			}
+			array = array.substring(0, array.length() -1);
+			array = array + "]";
+			r.addRskAssmntBasis(array);
+
+		} else {
+			r.addRskAssmntBasis("NULL");
+		}
+
+
+		/******************** RskAssmnt_Prfrmr ********************************************************************************/
+		if(riskassessment.hasPerformer()) {
+
+			if(riskassessment.getPerformer().getReference() != null) {
+			r.addRskAssmntPrfrmr(riskassessment.getPerformer().getReference());
+			}
+		} else {
+			r.addRskAssmntPrfrmr("NULL");
+		}
+
+
+		/******************** RskAssmnt_Mitigation ********************************************************************************/
+		if(riskassessment.hasMitigation()) {
+
+			r.addRskAssmntMitigation(String.valueOf(riskassessment.getMitigation()));
+		} else {
+			r.addRskAssmntMitigation("NULL");
+		}
+
+
 		/******************** riskassessmentprediction ********************************************************************************/
-		org.hl7.fhir.r4.model.RiskAssessment.RiskAssessmentPredictionComponent riskassessmentprediction = riskassessment.getPredictionFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.RiskAssessment.RiskAssessmentPredictionComponent> riskassessmentpredictionlist = riskassessment.getPrediction();
+		for(int riskassessmentpredictioni = 0; riskassessmentpredictioni<riskassessmentpredictionlist.size();riskassessmentpredictioni++ ) {
+		org.hl7.fhir.r4.model.RiskAssessment.RiskAssessmentPredictionComponent  riskassessmentprediction = riskassessmentpredictionlist.get(riskassessmentpredictioni);
 
 		/******************** riskassessmentpredictionoutcome ********************************************************************************/
 		org.hl7.fhir.r4.model.CodeableConcept riskassessmentpredictionoutcome = riskassessmentprediction.getOutcome();
 
 		/******************** RskAssmnt_Prediction_Outcome_Txt ********************************************************************************/
+		if(riskassessmentpredictioni == 0) {r.addRskAssmntPredictionOutcomeTxt("[");}
 		if(riskassessmentpredictionoutcome.hasText()) {
-			r.setRskAssmntPredictionOutcomeTxt(String.valueOf(riskassessmentpredictionoutcome.getText()));
+
+			r.addRskAssmntPredictionOutcomeTxt(String.valueOf(riskassessmentpredictionoutcome.getText()));
+		} else {
+			r.addRskAssmntPredictionOutcomeTxt("NULL");
 		}
+
+		if(riskassessmentpredictioni == riskassessmentpredictionlist.size()-1) {r.addRskAssmntPredictionOutcomeTxt("]");}
+
+
 		/******************** riskassessmentpredictionoutcomecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding riskassessmentpredictionoutcomecoding = riskassessmentpredictionoutcome.getCodingFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.Coding> riskassessmentpredictionoutcomecodinglist = riskassessmentpredictionoutcome.getCoding();
+		for(int riskassessmentpredictionoutcomecodingi = 0; riskassessmentpredictionoutcomecodingi<riskassessmentpredictionoutcomecodinglist.size();riskassessmentpredictionoutcomecodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  riskassessmentpredictionoutcomecoding = riskassessmentpredictionoutcomecodinglist.get(riskassessmentpredictionoutcomecodingi);
+
+		/******************** RskAssmnt_Prediction_Outcome_Cdg_Dsply ********************************************************************************/
+		if(riskassessmentpredictionoutcomecodingi == 0) {r.addRskAssmntPredictionOutcomeCdgDsply("[[");}
+		if(riskassessmentpredictionoutcomecoding.hasDisplay()) {
+
+			r.addRskAssmntPredictionOutcomeCdgDsply(String.valueOf(riskassessmentpredictionoutcomecoding.getDisplay()));
+		} else {
+			r.addRskAssmntPredictionOutcomeCdgDsply("NULL");
+		}
+
+		if(riskassessmentpredictionoutcomecodingi == riskassessmentpredictionoutcomecodinglist.size()-1) {r.addRskAssmntPredictionOutcomeCdgDsply("]]");}
+
 
 		/******************** RskAssmnt_Prediction_Outcome_Cdg_Vrsn ********************************************************************************/
+		if(riskassessmentpredictionoutcomecodingi == 0) {r.addRskAssmntPredictionOutcomeCdgVrsn("[[");}
 		if(riskassessmentpredictionoutcomecoding.hasVersion()) {
-			r.setRskAssmntPredictionOutcomeCdgVrsn(String.valueOf(riskassessmentpredictionoutcomecoding.getVersion()));
+
+			r.addRskAssmntPredictionOutcomeCdgVrsn(String.valueOf(riskassessmentpredictionoutcomecoding.getVersion()));
+		} else {
+			r.addRskAssmntPredictionOutcomeCdgVrsn("NULL");
 		}
-		/******************** RskAssmnt_Prediction_Outcome_Cdg_Dsply ********************************************************************************/
-		if(riskassessmentpredictionoutcomecoding.hasDisplay()) {
-			r.setRskAssmntPredictionOutcomeCdgDsply(String.valueOf(riskassessmentpredictionoutcomecoding.getDisplay()));
-		}
+
+		if(riskassessmentpredictionoutcomecodingi == riskassessmentpredictionoutcomecodinglist.size()-1) {r.addRskAssmntPredictionOutcomeCdgVrsn("]]");}
+
+
 		/******************** RskAssmnt_Prediction_Outcome_Cdg_Cd ********************************************************************************/
+		if(riskassessmentpredictionoutcomecodingi == 0) {r.addRskAssmntPredictionOutcomeCdgCd("[[");}
 		if(riskassessmentpredictionoutcomecoding.hasCode()) {
-			r.setRskAssmntPredictionOutcomeCdgCd(String.valueOf(riskassessmentpredictionoutcomecoding.getCode()));
+
+			r.addRskAssmntPredictionOutcomeCdgCd(String.valueOf(riskassessmentpredictionoutcomecoding.getCode()));
+		} else {
+			r.addRskAssmntPredictionOutcomeCdgCd("NULL");
 		}
+
+		if(riskassessmentpredictionoutcomecodingi == riskassessmentpredictionoutcomecodinglist.size()-1) {r.addRskAssmntPredictionOutcomeCdgCd("]]");}
+
+
 		/******************** RskAssmnt_Prediction_Outcome_Cdg_UsrSltd ********************************************************************************/
+		if(riskassessmentpredictionoutcomecodingi == 0) {r.addRskAssmntPredictionOutcomeCdgUsrSltd("[[");}
 		if(riskassessmentpredictionoutcomecoding.hasUserSelected()) {
-			r.setRskAssmntPredictionOutcomeCdgUsrSltd(String.valueOf(riskassessmentpredictionoutcomecoding.getUserSelected()));
+
+			r.addRskAssmntPredictionOutcomeCdgUsrSltd(String.valueOf(riskassessmentpredictionoutcomecoding.getUserSelected()));
+		} else {
+			r.addRskAssmntPredictionOutcomeCdgUsrSltd("NULL");
 		}
+
+		if(riskassessmentpredictionoutcomecodingi == riskassessmentpredictionoutcomecodinglist.size()-1) {r.addRskAssmntPredictionOutcomeCdgUsrSltd("]]");}
+
+
 		/******************** RskAssmnt_Prediction_Outcome_Cdg_Sys ********************************************************************************/
+		if(riskassessmentpredictionoutcomecodingi == 0) {r.addRskAssmntPredictionOutcomeCdgSys("[[");}
 		if(riskassessmentpredictionoutcomecoding.hasSystem()) {
-			r.setRskAssmntPredictionOutcomeCdgSys(String.valueOf(riskassessmentpredictionoutcomecoding.getSystem()));
-		}
-		/******************** RskAssmnt_Prediction_ProbabilityDecimalTyp ********************************************************************************/
-		if(riskassessmentprediction.hasProbabilityDecimalType()) {
-			r.setRskAssmntPredictionProbabilityDecimalTyp(String.valueOf(riskassessmentprediction.getProbabilityDecimalType()));
-		}
-		/******************** riskassessmentpredictionprobabilityrange ********************************************************************************/
-		org.hl7.fhir.r4.model.Range riskassessmentpredictionprobabilityrange = riskassessmentprediction.getProbabilityRange();
 
-		/******************** riskassessmentpredictionprobabilityrangelow ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity riskassessmentpredictionprobabilityrangelow = riskassessmentpredictionprobabilityrange.getLow();
+			r.addRskAssmntPredictionOutcomeCdgSys(String.valueOf(riskassessmentpredictionoutcomecoding.getSystem()));
+		} else {
+			r.addRskAssmntPredictionOutcomeCdgSys("NULL");
+		}
 
-		/******************** RskAssmnt_Prediction_ProbabilityRng_Lw_Vl ********************************************************************************/
-		if(riskassessmentpredictionprobabilityrangelow.hasValue()) {
-			r.setRskAssmntPredictionProbabilityRngLwVl(String.valueOf(riskassessmentpredictionprobabilityrangelow.getValue()));
-		}
-		/******************** riskassessmentpredictionprobabilityrangelowcomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparator riskassessmentpredictionprobabilityrangelowcomparator = riskassessmentpredictionprobabilityrangelow.getComparator();
-		r.setRskAssmntPredictionProbabilityRngLwCmprtr(riskassessmentpredictionprobabilityrangelowcomparator.toCode());
+		if(riskassessmentpredictionoutcomecodingi == riskassessmentpredictionoutcomecodinglist.size()-1) {r.addRskAssmntPredictionOutcomeCdgSys("]]");}
 
-		/******************** RskAssmnt_Prediction_ProbabilityRng_Lw_Cd ********************************************************************************/
-		if(riskassessmentpredictionprobabilityrangelow.hasCode()) {
-			r.setRskAssmntPredictionProbabilityRngLwCd(String.valueOf(riskassessmentpredictionprobabilityrangelow.getCode()));
-		}
-		/******************** RskAssmnt_Prediction_ProbabilityRng_Lw_Unt ********************************************************************************/
-		if(riskassessmentpredictionprobabilityrangelow.hasUnit()) {
-			r.setRskAssmntPredictionProbabilityRngLwUnt(String.valueOf(riskassessmentpredictionprobabilityrangelow.getUnit()));
-		}
-		/******************** RskAssmnt_Prediction_ProbabilityRng_Lw_Sys ********************************************************************************/
-		if(riskassessmentpredictionprobabilityrangelow.hasSystem()) {
-			r.setRskAssmntPredictionProbabilityRngLwSys(String.valueOf(riskassessmentpredictionprobabilityrangelow.getSystem()));
-		}
-		/******************** riskassessmentpredictionprobabilityrangehigh ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity riskassessmentpredictionprobabilityrangehigh = riskassessmentpredictionprobabilityrange.getHigh();
 
-		/******************** RskAssmnt_Prediction_ProbabilityRng_Hi_Vl ********************************************************************************/
-		if(riskassessmentpredictionprobabilityrangehigh.hasValue()) {
-			r.setRskAssmntPredictionProbabilityRngHiVl(String.valueOf(riskassessmentpredictionprobabilityrangehigh.getValue()));
-		}
-		/******************** riskassessmentpredictionprobabilityrangehighcomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparator riskassessmentpredictionprobabilityrangehighcomparator = riskassessmentpredictionprobabilityrangehigh.getComparator();
-		r.setRskAssmntPredictionProbabilityRngHiCmprtr(riskassessmentpredictionprobabilityrangehighcomparator.toCode());
+		 };
+		/******************** RskAssmnt_Prediction_Rtionale ********************************************************************************/
+		if(riskassessmentpredictioni == 0) {r.addRskAssmntPredictionRtionale("[");}
+		if(riskassessmentprediction.hasRationale()) {
 
-		/******************** RskAssmnt_Prediction_ProbabilityRng_Hi_Cd ********************************************************************************/
-		if(riskassessmentpredictionprobabilityrangehigh.hasCode()) {
-			r.setRskAssmntPredictionProbabilityRngHiCd(String.valueOf(riskassessmentpredictionprobabilityrangehigh.getCode()));
+			r.addRskAssmntPredictionRtionale(String.valueOf(riskassessmentprediction.getRationale()));
+		} else {
+			r.addRskAssmntPredictionRtionale("NULL");
 		}
-		/******************** RskAssmnt_Prediction_ProbabilityRng_Hi_Unt ********************************************************************************/
-		if(riskassessmentpredictionprobabilityrangehigh.hasUnit()) {
-			r.setRskAssmntPredictionProbabilityRngHiUnt(String.valueOf(riskassessmentpredictionprobabilityrangehigh.getUnit()));
-		}
-		/******************** RskAssmnt_Prediction_ProbabilityRng_Hi_Sys ********************************************************************************/
-		if(riskassessmentpredictionprobabilityrangehigh.hasSystem()) {
-			r.setRskAssmntPredictionProbabilityRngHiSys(String.valueOf(riskassessmentpredictionprobabilityrangehigh.getSystem()));
-		}
-		/******************** riskassessmentpredictionwhenperiod ********************************************************************************/
-		org.hl7.fhir.r4.model.Period riskassessmentpredictionwhenperiod = riskassessmentprediction.getWhenPeriod();
 
-		/******************** RskAssmnt_Prediction_WhenPrd_Strt ********************************************************************************/
-		if(riskassessmentpredictionwhenperiod.hasStart()) {
-			r.setRskAssmntPredictionWhenPrdStrt(String.valueOf(riskassessmentpredictionwhenperiod.getStart()));
-		}
-		/******************** RskAssmnt_Prediction_WhenPrd_End ********************************************************************************/
-		if(riskassessmentpredictionwhenperiod.hasEnd()) {
-			r.setRskAssmntPredictionWhenPrdEnd(String.valueOf(riskassessmentpredictionwhenperiod.getEnd()));
-		}
+		if(riskassessmentpredictioni == riskassessmentpredictionlist.size()-1) {r.addRskAssmntPredictionRtionale("]");}
+
+
 		/******************** riskassessmentpredictionqualitativerisk ********************************************************************************/
 		org.hl7.fhir.r4.model.CodeableConcept riskassessmentpredictionqualitativerisk = riskassessmentprediction.getQualitativeRisk();
 
 		/******************** RskAssmnt_Prediction_QualitativeRsk_Txt ********************************************************************************/
+		if(riskassessmentpredictioni == 0) {r.addRskAssmntPredictionQualitativeRskTxt("[");}
 		if(riskassessmentpredictionqualitativerisk.hasText()) {
-			r.setRskAssmntPredictionQualitativeRskTxt(String.valueOf(riskassessmentpredictionqualitativerisk.getText()));
+
+			r.addRskAssmntPredictionQualitativeRskTxt(String.valueOf(riskassessmentpredictionqualitativerisk.getText()));
+		} else {
+			r.addRskAssmntPredictionQualitativeRskTxt("NULL");
 		}
+
+		if(riskassessmentpredictioni == riskassessmentpredictionlist.size()-1) {r.addRskAssmntPredictionQualitativeRskTxt("]");}
+
+
 		/******************** riskassessmentpredictionqualitativeriskcoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding riskassessmentpredictionqualitativeriskcoding = riskassessmentpredictionqualitativerisk.getCodingFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.Coding> riskassessmentpredictionqualitativeriskcodinglist = riskassessmentpredictionqualitativerisk.getCoding();
+		for(int riskassessmentpredictionqualitativeriskcodingi = 0; riskassessmentpredictionqualitativeriskcodingi<riskassessmentpredictionqualitativeriskcodinglist.size();riskassessmentpredictionqualitativeriskcodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  riskassessmentpredictionqualitativeriskcoding = riskassessmentpredictionqualitativeriskcodinglist.get(riskassessmentpredictionqualitativeriskcodingi);
+
+		/******************** RskAssmnt_Prediction_QualitativeRsk_Cdg_Dsply ********************************************************************************/
+		if(riskassessmentpredictionqualitativeriskcodingi == 0) {r.addRskAssmntPredictionQualitativeRskCdgDsply("[[");}
+		if(riskassessmentpredictionqualitativeriskcoding.hasDisplay()) {
+
+			r.addRskAssmntPredictionQualitativeRskCdgDsply(String.valueOf(riskassessmentpredictionqualitativeriskcoding.getDisplay()));
+		} else {
+			r.addRskAssmntPredictionQualitativeRskCdgDsply("NULL");
+		}
+
+		if(riskassessmentpredictionqualitativeriskcodingi == riskassessmentpredictionqualitativeriskcodinglist.size()-1) {r.addRskAssmntPredictionQualitativeRskCdgDsply("]]");}
+
 
 		/******************** RskAssmnt_Prediction_QualitativeRsk_Cdg_Vrsn ********************************************************************************/
+		if(riskassessmentpredictionqualitativeriskcodingi == 0) {r.addRskAssmntPredictionQualitativeRskCdgVrsn("[[");}
 		if(riskassessmentpredictionqualitativeriskcoding.hasVersion()) {
-			r.setRskAssmntPredictionQualitativeRskCdgVrsn(String.valueOf(riskassessmentpredictionqualitativeriskcoding.getVersion()));
+
+			r.addRskAssmntPredictionQualitativeRskCdgVrsn(String.valueOf(riskassessmentpredictionqualitativeriskcoding.getVersion()));
+		} else {
+			r.addRskAssmntPredictionQualitativeRskCdgVrsn("NULL");
 		}
-		/******************** RskAssmnt_Prediction_QualitativeRsk_Cdg_Dsply ********************************************************************************/
-		if(riskassessmentpredictionqualitativeriskcoding.hasDisplay()) {
-			r.setRskAssmntPredictionQualitativeRskCdgDsply(String.valueOf(riskassessmentpredictionqualitativeriskcoding.getDisplay()));
-		}
+
+		if(riskassessmentpredictionqualitativeriskcodingi == riskassessmentpredictionqualitativeriskcodinglist.size()-1) {r.addRskAssmntPredictionQualitativeRskCdgVrsn("]]");}
+
+
 		/******************** RskAssmnt_Prediction_QualitativeRsk_Cdg_Cd ********************************************************************************/
+		if(riskassessmentpredictionqualitativeriskcodingi == 0) {r.addRskAssmntPredictionQualitativeRskCdgCd("[[");}
 		if(riskassessmentpredictionqualitativeriskcoding.hasCode()) {
-			r.setRskAssmntPredictionQualitativeRskCdgCd(String.valueOf(riskassessmentpredictionqualitativeriskcoding.getCode()));
+
+			r.addRskAssmntPredictionQualitativeRskCdgCd(String.valueOf(riskassessmentpredictionqualitativeriskcoding.getCode()));
+		} else {
+			r.addRskAssmntPredictionQualitativeRskCdgCd("NULL");
 		}
+
+		if(riskassessmentpredictionqualitativeriskcodingi == riskassessmentpredictionqualitativeriskcodinglist.size()-1) {r.addRskAssmntPredictionQualitativeRskCdgCd("]]");}
+
+
 		/******************** RskAssmnt_Prediction_QualitativeRsk_Cdg_UsrSltd ********************************************************************************/
+		if(riskassessmentpredictionqualitativeriskcodingi == 0) {r.addRskAssmntPredictionQualitativeRskCdgUsrSltd("[[");}
 		if(riskassessmentpredictionqualitativeriskcoding.hasUserSelected()) {
-			r.setRskAssmntPredictionQualitativeRskCdgUsrSltd(String.valueOf(riskassessmentpredictionqualitativeriskcoding.getUserSelected()));
+
+			r.addRskAssmntPredictionQualitativeRskCdgUsrSltd(String.valueOf(riskassessmentpredictionqualitativeriskcoding.getUserSelected()));
+		} else {
+			r.addRskAssmntPredictionQualitativeRskCdgUsrSltd("NULL");
 		}
+
+		if(riskassessmentpredictionqualitativeriskcodingi == riskassessmentpredictionqualitativeriskcodinglist.size()-1) {r.addRskAssmntPredictionQualitativeRskCdgUsrSltd("]]");}
+
+
 		/******************** RskAssmnt_Prediction_QualitativeRsk_Cdg_Sys ********************************************************************************/
+		if(riskassessmentpredictionqualitativeriskcodingi == 0) {r.addRskAssmntPredictionQualitativeRskCdgSys("[[");}
 		if(riskassessmentpredictionqualitativeriskcoding.hasSystem()) {
-			r.setRskAssmntPredictionQualitativeRskCdgSys(String.valueOf(riskassessmentpredictionqualitativeriskcoding.getSystem()));
+
+			r.addRskAssmntPredictionQualitativeRskCdgSys(String.valueOf(riskassessmentpredictionqualitativeriskcoding.getSystem()));
+		} else {
+			r.addRskAssmntPredictionQualitativeRskCdgSys("NULL");
 		}
+
+		if(riskassessmentpredictionqualitativeriskcodingi == riskassessmentpredictionqualitativeriskcodinglist.size()-1) {r.addRskAssmntPredictionQualitativeRskCdgSys("]]");}
+
+
+		 };
 		/******************** RskAssmnt_Prediction_RelativeRsk ********************************************************************************/
+		if(riskassessmentpredictioni == 0) {r.addRskAssmntPredictionRelativeRsk("[");}
 		if(riskassessmentprediction.hasRelativeRisk()) {
-			r.setRskAssmntPredictionRelativeRsk(String.valueOf(riskassessmentprediction.getRelativeRisk()));
+
+			r.addRskAssmntPredictionRelativeRsk(String.valueOf(riskassessmentprediction.getRelativeRisk()));
+		} else {
+			r.addRskAssmntPredictionRelativeRsk("NULL");
 		}
+
+		if(riskassessmentpredictioni == riskassessmentpredictionlist.size()-1) {r.addRskAssmntPredictionRelativeRsk("]");}
+
+
 		/******************** riskassessmentpredictionwhenrange ********************************************************************************/
 		org.hl7.fhir.r4.model.Range riskassessmentpredictionwhenrange = riskassessmentprediction.getWhenRange();
 
@@ -372,52 +816,309 @@ public class RiskAssessmentBidirectionalConversion
 		org.hl7.fhir.r4.model.Quantity riskassessmentpredictionwhenrangelow = riskassessmentpredictionwhenrange.getLow();
 
 		/******************** RskAssmnt_Prediction_WhenRng_Lw_Vl ********************************************************************************/
+		if(riskassessmentpredictioni == 0) {r.addRskAssmntPredictionWhenRngLwVl("[");}
 		if(riskassessmentpredictionwhenrangelow.hasValue()) {
-			r.setRskAssmntPredictionWhenRngLwVl(String.valueOf(riskassessmentpredictionwhenrangelow.getValue()));
+
+			r.addRskAssmntPredictionWhenRngLwVl(String.valueOf(riskassessmentpredictionwhenrangelow.getValue()));
+		} else {
+			r.addRskAssmntPredictionWhenRngLwVl("NULL");
 		}
+
+		if(riskassessmentpredictioni == riskassessmentpredictionlist.size()-1) {r.addRskAssmntPredictionWhenRngLwVl("]");}
+
+
 		/******************** riskassessmentpredictionwhenrangelowcomparator ********************************************************************************/
 		org.hl7.fhir.r4.model.Quantity.QuantityComparator riskassessmentpredictionwhenrangelowcomparator = riskassessmentpredictionwhenrangelow.getComparator();
-		r.setRskAssmntPredictionWhenRngLwCmprtr(riskassessmentpredictionwhenrangelowcomparator.toCode());
+		if(riskassessmentpredictionwhenrangelowcomparator!=null) {
+		if(riskassessmentpredictioni == 0) {
+
+		r.addRskAssmntPredictionWhenRngLwCmprtr("[");		}
+			r.addRskAssmntPredictionWhenRngLwCmprtr(riskassessmentpredictionwhenrangelowcomparator.toCode());
+		if(riskassessmentpredictioni == riskassessmentpredictionlist.size()-1) {
+
+		r.addRskAssmntPredictionWhenRngLwCmprtr("]");		}
+
+		} else {
+			r.addRskAssmntPredictionWhenRngLwCmprtr("NULL");
+		}
 
 		/******************** RskAssmnt_Prediction_WhenRng_Lw_Cd ********************************************************************************/
+		if(riskassessmentpredictioni == 0) {r.addRskAssmntPredictionWhenRngLwCd("[");}
 		if(riskassessmentpredictionwhenrangelow.hasCode()) {
-			r.setRskAssmntPredictionWhenRngLwCd(String.valueOf(riskassessmentpredictionwhenrangelow.getCode()));
+
+			r.addRskAssmntPredictionWhenRngLwCd(String.valueOf(riskassessmentpredictionwhenrangelow.getCode()));
+		} else {
+			r.addRskAssmntPredictionWhenRngLwCd("NULL");
 		}
+
+		if(riskassessmentpredictioni == riskassessmentpredictionlist.size()-1) {r.addRskAssmntPredictionWhenRngLwCd("]");}
+
+
 		/******************** RskAssmnt_Prediction_WhenRng_Lw_Unt ********************************************************************************/
+		if(riskassessmentpredictioni == 0) {r.addRskAssmntPredictionWhenRngLwUnt("[");}
 		if(riskassessmentpredictionwhenrangelow.hasUnit()) {
-			r.setRskAssmntPredictionWhenRngLwUnt(String.valueOf(riskassessmentpredictionwhenrangelow.getUnit()));
+
+			r.addRskAssmntPredictionWhenRngLwUnt(String.valueOf(riskassessmentpredictionwhenrangelow.getUnit()));
+		} else {
+			r.addRskAssmntPredictionWhenRngLwUnt("NULL");
 		}
+
+		if(riskassessmentpredictioni == riskassessmentpredictionlist.size()-1) {r.addRskAssmntPredictionWhenRngLwUnt("]");}
+
+
 		/******************** RskAssmnt_Prediction_WhenRng_Lw_Sys ********************************************************************************/
+		if(riskassessmentpredictioni == 0) {r.addRskAssmntPredictionWhenRngLwSys("[");}
 		if(riskassessmentpredictionwhenrangelow.hasSystem()) {
-			r.setRskAssmntPredictionWhenRngLwSys(String.valueOf(riskassessmentpredictionwhenrangelow.getSystem()));
+
+			r.addRskAssmntPredictionWhenRngLwSys(String.valueOf(riskassessmentpredictionwhenrangelow.getSystem()));
+		} else {
+			r.addRskAssmntPredictionWhenRngLwSys("NULL");
 		}
+
+		if(riskassessmentpredictioni == riskassessmentpredictionlist.size()-1) {r.addRskAssmntPredictionWhenRngLwSys("]");}
+
+
 		/******************** riskassessmentpredictionwhenrangehigh ********************************************************************************/
 		org.hl7.fhir.r4.model.Quantity riskassessmentpredictionwhenrangehigh = riskassessmentpredictionwhenrange.getHigh();
 
 		/******************** RskAssmnt_Prediction_WhenRng_Hi_Vl ********************************************************************************/
+		if(riskassessmentpredictioni == 0) {r.addRskAssmntPredictionWhenRngHiVl("[");}
 		if(riskassessmentpredictionwhenrangehigh.hasValue()) {
-			r.setRskAssmntPredictionWhenRngHiVl(String.valueOf(riskassessmentpredictionwhenrangehigh.getValue()));
+
+			r.addRskAssmntPredictionWhenRngHiVl(String.valueOf(riskassessmentpredictionwhenrangehigh.getValue()));
+		} else {
+			r.addRskAssmntPredictionWhenRngHiVl("NULL");
 		}
+
+		if(riskassessmentpredictioni == riskassessmentpredictionlist.size()-1) {r.addRskAssmntPredictionWhenRngHiVl("]");}
+
+
 		/******************** riskassessmentpredictionwhenrangehighcomparator ********************************************************************************/
 		org.hl7.fhir.r4.model.Quantity.QuantityComparator riskassessmentpredictionwhenrangehighcomparator = riskassessmentpredictionwhenrangehigh.getComparator();
-		r.setRskAssmntPredictionWhenRngHiCmprtr(riskassessmentpredictionwhenrangehighcomparator.toCode());
+		if(riskassessmentpredictionwhenrangehighcomparator!=null) {
+		if(riskassessmentpredictioni == 0) {
+
+		r.addRskAssmntPredictionWhenRngHiCmprtr("[");		}
+			r.addRskAssmntPredictionWhenRngHiCmprtr(riskassessmentpredictionwhenrangehighcomparator.toCode());
+		if(riskassessmentpredictioni == riskassessmentpredictionlist.size()-1) {
+
+		r.addRskAssmntPredictionWhenRngHiCmprtr("]");		}
+
+		} else {
+			r.addRskAssmntPredictionWhenRngHiCmprtr("NULL");
+		}
 
 		/******************** RskAssmnt_Prediction_WhenRng_Hi_Cd ********************************************************************************/
+		if(riskassessmentpredictioni == 0) {r.addRskAssmntPredictionWhenRngHiCd("[");}
 		if(riskassessmentpredictionwhenrangehigh.hasCode()) {
-			r.setRskAssmntPredictionWhenRngHiCd(String.valueOf(riskassessmentpredictionwhenrangehigh.getCode()));
+
+			r.addRskAssmntPredictionWhenRngHiCd(String.valueOf(riskassessmentpredictionwhenrangehigh.getCode()));
+		} else {
+			r.addRskAssmntPredictionWhenRngHiCd("NULL");
 		}
+
+		if(riskassessmentpredictioni == riskassessmentpredictionlist.size()-1) {r.addRskAssmntPredictionWhenRngHiCd("]");}
+
+
 		/******************** RskAssmnt_Prediction_WhenRng_Hi_Unt ********************************************************************************/
+		if(riskassessmentpredictioni == 0) {r.addRskAssmntPredictionWhenRngHiUnt("[");}
 		if(riskassessmentpredictionwhenrangehigh.hasUnit()) {
-			r.setRskAssmntPredictionWhenRngHiUnt(String.valueOf(riskassessmentpredictionwhenrangehigh.getUnit()));
+
+			r.addRskAssmntPredictionWhenRngHiUnt(String.valueOf(riskassessmentpredictionwhenrangehigh.getUnit()));
+		} else {
+			r.addRskAssmntPredictionWhenRngHiUnt("NULL");
 		}
+
+		if(riskassessmentpredictioni == riskassessmentpredictionlist.size()-1) {r.addRskAssmntPredictionWhenRngHiUnt("]");}
+
+
 		/******************** RskAssmnt_Prediction_WhenRng_Hi_Sys ********************************************************************************/
+		if(riskassessmentpredictioni == 0) {r.addRskAssmntPredictionWhenRngHiSys("[");}
 		if(riskassessmentpredictionwhenrangehigh.hasSystem()) {
-			r.setRskAssmntPredictionWhenRngHiSys(String.valueOf(riskassessmentpredictionwhenrangehigh.getSystem()));
+
+			r.addRskAssmntPredictionWhenRngHiSys(String.valueOf(riskassessmentpredictionwhenrangehigh.getSystem()));
+		} else {
+			r.addRskAssmntPredictionWhenRngHiSys("NULL");
 		}
-		/******************** RskAssmnt_Prediction_Rtionale ********************************************************************************/
-		if(riskassessmentprediction.hasRationale()) {
-			r.setRskAssmntPredictionRtionale(String.valueOf(riskassessmentprediction.getRationale()));
+
+		if(riskassessmentpredictioni == riskassessmentpredictionlist.size()-1) {r.addRskAssmntPredictionWhenRngHiSys("]");}
+
+
+		/******************** riskassessmentpredictionwhenperiod ********************************************************************************/
+		org.hl7.fhir.r4.model.Period riskassessmentpredictionwhenperiod = riskassessmentprediction.getWhenPeriod();
+
+		/******************** RskAssmnt_Prediction_WhenPrd_Strt ********************************************************************************/
+		if(riskassessmentpredictioni == 0) {r.addRskAssmntPredictionWhenPrdStrt("[");}
+		if(riskassessmentpredictionwhenperiod.hasStart()) {
+
+			r.addRskAssmntPredictionWhenPrdStrt("\""+ca.uhn.fhir.util.DateUtils.formatDate(riskassessmentpredictionwhenperiod.getStart())+"\"");
+		} else {
+			r.addRskAssmntPredictionWhenPrdStrt("NULL");
 		}
+
+		if(riskassessmentpredictioni == riskassessmentpredictionlist.size()-1) {r.addRskAssmntPredictionWhenPrdStrt("]");}
+
+
+		/******************** RskAssmnt_Prediction_WhenPrd_End ********************************************************************************/
+		if(riskassessmentpredictioni == 0) {r.addRskAssmntPredictionWhenPrdEnd("[");}
+		if(riskassessmentpredictionwhenperiod.hasEnd()) {
+
+			r.addRskAssmntPredictionWhenPrdEnd("\""+ca.uhn.fhir.util.DateUtils.formatDate(riskassessmentpredictionwhenperiod.getEnd())+"\"");
+		} else {
+			r.addRskAssmntPredictionWhenPrdEnd("NULL");
+		}
+
+		if(riskassessmentpredictioni == riskassessmentpredictionlist.size()-1) {r.addRskAssmntPredictionWhenPrdEnd("]");}
+
+
+		/******************** riskassessmentpredictionprobabilityrange ********************************************************************************/
+		org.hl7.fhir.r4.model.Range riskassessmentpredictionprobabilityrange = riskassessmentprediction.getProbabilityRange();
+
+		/******************** riskassessmentpredictionprobabilityrangelow ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity riskassessmentpredictionprobabilityrangelow = riskassessmentpredictionprobabilityrange.getLow();
+
+		/******************** RskAssmnt_Prediction_ProbabilityRng_Lw_Vl ********************************************************************************/
+		if(riskassessmentpredictioni == 0) {r.addRskAssmntPredictionProbabilityRngLwVl("[");}
+		if(riskassessmentpredictionprobabilityrangelow.hasValue()) {
+
+			r.addRskAssmntPredictionProbabilityRngLwVl(String.valueOf(riskassessmentpredictionprobabilityrangelow.getValue()));
+		} else {
+			r.addRskAssmntPredictionProbabilityRngLwVl("NULL");
+		}
+
+		if(riskassessmentpredictioni == riskassessmentpredictionlist.size()-1) {r.addRskAssmntPredictionProbabilityRngLwVl("]");}
+
+
+		/******************** riskassessmentpredictionprobabilityrangelowcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparator riskassessmentpredictionprobabilityrangelowcomparator = riskassessmentpredictionprobabilityrangelow.getComparator();
+		if(riskassessmentpredictionprobabilityrangelowcomparator!=null) {
+		if(riskassessmentpredictioni == 0) {
+
+		r.addRskAssmntPredictionProbabilityRngLwCmprtr("[");		}
+			r.addRskAssmntPredictionProbabilityRngLwCmprtr(riskassessmentpredictionprobabilityrangelowcomparator.toCode());
+		if(riskassessmentpredictioni == riskassessmentpredictionlist.size()-1) {
+
+		r.addRskAssmntPredictionProbabilityRngLwCmprtr("]");		}
+
+		} else {
+			r.addRskAssmntPredictionProbabilityRngLwCmprtr("NULL");
+		}
+
+		/******************** RskAssmnt_Prediction_ProbabilityRng_Lw_Cd ********************************************************************************/
+		if(riskassessmentpredictioni == 0) {r.addRskAssmntPredictionProbabilityRngLwCd("[");}
+		if(riskassessmentpredictionprobabilityrangelow.hasCode()) {
+
+			r.addRskAssmntPredictionProbabilityRngLwCd(String.valueOf(riskassessmentpredictionprobabilityrangelow.getCode()));
+		} else {
+			r.addRskAssmntPredictionProbabilityRngLwCd("NULL");
+		}
+
+		if(riskassessmentpredictioni == riskassessmentpredictionlist.size()-1) {r.addRskAssmntPredictionProbabilityRngLwCd("]");}
+
+
+		/******************** RskAssmnt_Prediction_ProbabilityRng_Lw_Unt ********************************************************************************/
+		if(riskassessmentpredictioni == 0) {r.addRskAssmntPredictionProbabilityRngLwUnt("[");}
+		if(riskassessmentpredictionprobabilityrangelow.hasUnit()) {
+
+			r.addRskAssmntPredictionProbabilityRngLwUnt(String.valueOf(riskassessmentpredictionprobabilityrangelow.getUnit()));
+		} else {
+			r.addRskAssmntPredictionProbabilityRngLwUnt("NULL");
+		}
+
+		if(riskassessmentpredictioni == riskassessmentpredictionlist.size()-1) {r.addRskAssmntPredictionProbabilityRngLwUnt("]");}
+
+
+		/******************** RskAssmnt_Prediction_ProbabilityRng_Lw_Sys ********************************************************************************/
+		if(riskassessmentpredictioni == 0) {r.addRskAssmntPredictionProbabilityRngLwSys("[");}
+		if(riskassessmentpredictionprobabilityrangelow.hasSystem()) {
+
+			r.addRskAssmntPredictionProbabilityRngLwSys(String.valueOf(riskassessmentpredictionprobabilityrangelow.getSystem()));
+		} else {
+			r.addRskAssmntPredictionProbabilityRngLwSys("NULL");
+		}
+
+		if(riskassessmentpredictioni == riskassessmentpredictionlist.size()-1) {r.addRskAssmntPredictionProbabilityRngLwSys("]");}
+
+
+		/******************** riskassessmentpredictionprobabilityrangehigh ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity riskassessmentpredictionprobabilityrangehigh = riskassessmentpredictionprobabilityrange.getHigh();
+
+		/******************** RskAssmnt_Prediction_ProbabilityRng_Hi_Vl ********************************************************************************/
+		if(riskassessmentpredictioni == 0) {r.addRskAssmntPredictionProbabilityRngHiVl("[");}
+		if(riskassessmentpredictionprobabilityrangehigh.hasValue()) {
+
+			r.addRskAssmntPredictionProbabilityRngHiVl(String.valueOf(riskassessmentpredictionprobabilityrangehigh.getValue()));
+		} else {
+			r.addRskAssmntPredictionProbabilityRngHiVl("NULL");
+		}
+
+		if(riskassessmentpredictioni == riskassessmentpredictionlist.size()-1) {r.addRskAssmntPredictionProbabilityRngHiVl("]");}
+
+
+		/******************** riskassessmentpredictionprobabilityrangehighcomparator ********************************************************************************/
+		org.hl7.fhir.r4.model.Quantity.QuantityComparator riskassessmentpredictionprobabilityrangehighcomparator = riskassessmentpredictionprobabilityrangehigh.getComparator();
+		if(riskassessmentpredictionprobabilityrangehighcomparator!=null) {
+		if(riskassessmentpredictioni == 0) {
+
+		r.addRskAssmntPredictionProbabilityRngHiCmprtr("[");		}
+			r.addRskAssmntPredictionProbabilityRngHiCmprtr(riskassessmentpredictionprobabilityrangehighcomparator.toCode());
+		if(riskassessmentpredictioni == riskassessmentpredictionlist.size()-1) {
+
+		r.addRskAssmntPredictionProbabilityRngHiCmprtr("]");		}
+
+		} else {
+			r.addRskAssmntPredictionProbabilityRngHiCmprtr("NULL");
+		}
+
+		/******************** RskAssmnt_Prediction_ProbabilityRng_Hi_Cd ********************************************************************************/
+		if(riskassessmentpredictioni == 0) {r.addRskAssmntPredictionProbabilityRngHiCd("[");}
+		if(riskassessmentpredictionprobabilityrangehigh.hasCode()) {
+
+			r.addRskAssmntPredictionProbabilityRngHiCd(String.valueOf(riskassessmentpredictionprobabilityrangehigh.getCode()));
+		} else {
+			r.addRskAssmntPredictionProbabilityRngHiCd("NULL");
+		}
+
+		if(riskassessmentpredictioni == riskassessmentpredictionlist.size()-1) {r.addRskAssmntPredictionProbabilityRngHiCd("]");}
+
+
+		/******************** RskAssmnt_Prediction_ProbabilityRng_Hi_Unt ********************************************************************************/
+		if(riskassessmentpredictioni == 0) {r.addRskAssmntPredictionProbabilityRngHiUnt("[");}
+		if(riskassessmentpredictionprobabilityrangehigh.hasUnit()) {
+
+			r.addRskAssmntPredictionProbabilityRngHiUnt(String.valueOf(riskassessmentpredictionprobabilityrangehigh.getUnit()));
+		} else {
+			r.addRskAssmntPredictionProbabilityRngHiUnt("NULL");
+		}
+
+		if(riskassessmentpredictioni == riskassessmentpredictionlist.size()-1) {r.addRskAssmntPredictionProbabilityRngHiUnt("]");}
+
+
+		/******************** RskAssmnt_Prediction_ProbabilityRng_Hi_Sys ********************************************************************************/
+		if(riskassessmentpredictioni == 0) {r.addRskAssmntPredictionProbabilityRngHiSys("[");}
+		if(riskassessmentpredictionprobabilityrangehigh.hasSystem()) {
+
+			r.addRskAssmntPredictionProbabilityRngHiSys(String.valueOf(riskassessmentpredictionprobabilityrangehigh.getSystem()));
+		} else {
+			r.addRskAssmntPredictionProbabilityRngHiSys("NULL");
+		}
+
+		if(riskassessmentpredictioni == riskassessmentpredictionlist.size()-1) {r.addRskAssmntPredictionProbabilityRngHiSys("]");}
+
+
+		/******************** RskAssmnt_Prediction_ProbabilityDecimalTyp ********************************************************************************/
+		if(riskassessmentpredictioni == 0) {r.addRskAssmntPredictionProbabilityDecimalTyp("[");}
+		if(riskassessmentprediction.hasProbabilityDecimalType()) {
+
+			r.addRskAssmntPredictionProbabilityDecimalTyp("\""+riskassessmentprediction.getProbabilityDecimalType().getValueAsString()+"\"");
+		} else {
+			r.addRskAssmntPredictionProbabilityDecimalTyp("NULL");
+		}
+
+		if(riskassessmentpredictioni == riskassessmentpredictionlist.size()-1) {r.addRskAssmntPredictionProbabilityDecimalTyp("]");}
+
+
+		 };
 		return r;
 	}
 }

@@ -8,308 +8,369 @@ public class MedicinalProductAuthorizationBidirectionalConversion
 		 main.java.com.campfhir.model.MedicinalProductAuthorization m = new  main.java.com.campfhir.model.MedicinalProductAuthorization();
 
 		/******************** id ********************************************************************************/
-		medicinalproductauthorization.setId(m.getId());
+		m.setId(medicinalproductauthorization.getIdElement().getIdPart());
 
-		/******************** MdcnlPrdctAthztn_DtOfFirstAthztn ********************************************************************************/
-		if(medicinalproductauthorization.hasDateOfFirstAuthorization()) {
-			m.setMdcnlPrdctAthztnDtOfFirstAthztn(String.valueOf(medicinalproductauthorization.getDateOfFirstAuthorization()));
-		}
-		/******************** MdcnlPrdctAthztn_InternationalBirthDt ********************************************************************************/
-		if(medicinalproductauthorization.hasInternationalBirthDate()) {
-			m.setMdcnlPrdctAthztnInternationalBirthDt(String.valueOf(medicinalproductauthorization.getInternationalBirthDate()));
-		}
-		/******************** medicinalproductauthorizationdataexclusivityperiod ********************************************************************************/
-		org.hl7.fhir.r4.model.Period medicinalproductauthorizationdataexclusivityperiod = medicinalproductauthorization.getDataExclusivityPeriod();
-
-		/******************** MdcnlPrdctAthztn_DataExclusivityPrd_Strt ********************************************************************************/
-		if(medicinalproductauthorizationdataexclusivityperiod.hasStart()) {
-			m.setMdcnlPrdctAthztnDataExclusivityPrdStrt(String.valueOf(medicinalproductauthorizationdataexclusivityperiod.getStart()));
-		}
-		/******************** MdcnlPrdctAthztn_DataExclusivityPrd_End ********************************************************************************/
-		if(medicinalproductauthorizationdataexclusivityperiod.hasEnd()) {
-			m.setMdcnlPrdctAthztnDataExclusivityPrdEnd(String.valueOf(medicinalproductauthorizationdataexclusivityperiod.getEnd()));
-		}
-		/******************** medicinalproductauthorizationjurisdictionalauthorization ********************************************************************************/
-		org.hl7.fhir.r4.model.MedicinalProductAuthorization.MedicinalProductAuthorizationJurisdictionalAuthorizationComponent medicinalproductauthorizationjurisdictionalauthorization = medicinalproductauthorization.getJurisdictionalAuthorizationFirstRep();
-
-		/******************** medicinalproductauthorizationjurisdictionalauthorizationcountry ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept medicinalproductauthorizationjurisdictionalauthorizationcountry = medicinalproductauthorizationjurisdictionalauthorization.getCountry();
-
-		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_Cntry_Txt ********************************************************************************/
-		if(medicinalproductauthorizationjurisdictionalauthorizationcountry.hasText()) {
-			m.setMdcnlPrdctAthztnJrsdctnalAthztnCntryTxt(String.valueOf(medicinalproductauthorizationjurisdictionalauthorizationcountry.getText()));
-		}
-		/******************** medicinalproductauthorizationjurisdictionalauthorizationcountrycoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding medicinalproductauthorizationjurisdictionalauthorizationcountrycoding = medicinalproductauthorizationjurisdictionalauthorizationcountry.getCodingFirstRep();
-
-		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_Cntry_Cdg_Vrsn ********************************************************************************/
-		if(medicinalproductauthorizationjurisdictionalauthorizationcountrycoding.hasVersion()) {
-			m.setMdcnlPrdctAthztnJrsdctnalAthztnCntryCdgVrsn(String.valueOf(medicinalproductauthorizationjurisdictionalauthorizationcountrycoding.getVersion()));
-		}
-		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_Cntry_Cdg_Dsply ********************************************************************************/
-		if(medicinalproductauthorizationjurisdictionalauthorizationcountrycoding.hasDisplay()) {
-			m.setMdcnlPrdctAthztnJrsdctnalAthztnCntryCdgDsply(String.valueOf(medicinalproductauthorizationjurisdictionalauthorizationcountrycoding.getDisplay()));
-		}
-		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_Cntry_Cdg_Cd ********************************************************************************/
-		if(medicinalproductauthorizationjurisdictionalauthorizationcountrycoding.hasCode()) {
-			m.setMdcnlPrdctAthztnJrsdctnalAthztnCntryCdgCd(String.valueOf(medicinalproductauthorizationjurisdictionalauthorizationcountrycoding.getCode()));
-		}
-		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_Cntry_Cdg_UsrSltd ********************************************************************************/
-		if(medicinalproductauthorizationjurisdictionalauthorizationcountrycoding.hasUserSelected()) {
-			m.setMdcnlPrdctAthztnJrsdctnalAthztnCntryCdgUsrSltd(String.valueOf(medicinalproductauthorizationjurisdictionalauthorizationcountrycoding.getUserSelected()));
-		}
-		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_Cntry_Cdg_Sys ********************************************************************************/
-		if(medicinalproductauthorizationjurisdictionalauthorizationcountrycoding.hasSystem()) {
-			m.setMdcnlPrdctAthztnJrsdctnalAthztnCntryCdgSys(String.valueOf(medicinalproductauthorizationjurisdictionalauthorizationcountrycoding.getSystem()));
-		}
-		/******************** medicinalproductauthorizationjurisdictionalauthorizationvalidityperiod ********************************************************************************/
-		org.hl7.fhir.r4.model.Period medicinalproductauthorizationjurisdictionalauthorizationvalidityperiod = medicinalproductauthorizationjurisdictionalauthorization.getValidityPeriod();
-
-		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_ValidityPrd_Strt ********************************************************************************/
-		if(medicinalproductauthorizationjurisdictionalauthorizationvalidityperiod.hasStart()) {
-			m.setMdcnlPrdctAthztnJrsdctnalAthztnValidityPrdStrt(String.valueOf(medicinalproductauthorizationjurisdictionalauthorizationvalidityperiod.getStart()));
-		}
-		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_ValidityPrd_End ********************************************************************************/
-		if(medicinalproductauthorizationjurisdictionalauthorizationvalidityperiod.hasEnd()) {
-			m.setMdcnlPrdctAthztnJrsdctnalAthztnValidityPrdEnd(String.valueOf(medicinalproductauthorizationjurisdictionalauthorizationvalidityperiod.getEnd()));
-		}
-		/******************** medicinalproductauthorizationjurisdictionalauthorizationidentifier ********************************************************************************/
-		org.hl7.fhir.r4.model.Identifier medicinalproductauthorizationjurisdictionalauthorizationidentifier = medicinalproductauthorizationjurisdictionalauthorization.getIdentifierFirstRep();
-
-		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_Id_Vl ********************************************************************************/
-		if(medicinalproductauthorizationjurisdictionalauthorizationidentifier.hasValue()) {
-			m.setMdcnlPrdctAthztnJrsdctnalAthztnIdVl(String.valueOf(medicinalproductauthorizationjurisdictionalauthorizationidentifier.getValue()));
-		}
-		/******************** medicinalproductauthorizationjurisdictionalauthorizationidentifiertype ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept medicinalproductauthorizationjurisdictionalauthorizationidentifiertype = medicinalproductauthorizationjurisdictionalauthorizationidentifier.getType();
-
-		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_Id_Typ_Txt ********************************************************************************/
-		if(medicinalproductauthorizationjurisdictionalauthorizationidentifiertype.hasText()) {
-			m.setMdcnlPrdctAthztnJrsdctnalAthztnIdTypTxt(String.valueOf(medicinalproductauthorizationjurisdictionalauthorizationidentifiertype.getText()));
-		}
-		/******************** medicinalproductauthorizationjurisdictionalauthorizationidentifiertypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding medicinalproductauthorizationjurisdictionalauthorizationidentifiertypecoding = medicinalproductauthorizationjurisdictionalauthorizationidentifiertype.getCodingFirstRep();
-
-		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_Id_Typ_Cdg_Vrsn ********************************************************************************/
-		if(medicinalproductauthorizationjurisdictionalauthorizationidentifiertypecoding.hasVersion()) {
-			m.setMdcnlPrdctAthztnJrsdctnalAthztnIdTypCdgVrsn(String.valueOf(medicinalproductauthorizationjurisdictionalauthorizationidentifiertypecoding.getVersion()));
-		}
-		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_Id_Typ_Cdg_Dsply ********************************************************************************/
-		if(medicinalproductauthorizationjurisdictionalauthorizationidentifiertypecoding.hasDisplay()) {
-			m.setMdcnlPrdctAthztnJrsdctnalAthztnIdTypCdgDsply(String.valueOf(medicinalproductauthorizationjurisdictionalauthorizationidentifiertypecoding.getDisplay()));
-		}
-		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_Id_Typ_Cdg_Cd ********************************************************************************/
-		if(medicinalproductauthorizationjurisdictionalauthorizationidentifiertypecoding.hasCode()) {
-			m.setMdcnlPrdctAthztnJrsdctnalAthztnIdTypCdgCd(String.valueOf(medicinalproductauthorizationjurisdictionalauthorizationidentifiertypecoding.getCode()));
-		}
-		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_Id_Typ_Cdg_UsrSltd ********************************************************************************/
-		if(medicinalproductauthorizationjurisdictionalauthorizationidentifiertypecoding.hasUserSelected()) {
-			m.setMdcnlPrdctAthztnJrsdctnalAthztnIdTypCdgUsrSltd(String.valueOf(medicinalproductauthorizationjurisdictionalauthorizationidentifiertypecoding.getUserSelected()));
-		}
-		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_Id_Typ_Cdg_Sys ********************************************************************************/
-		if(medicinalproductauthorizationjurisdictionalauthorizationidentifiertypecoding.hasSystem()) {
-			m.setMdcnlPrdctAthztnJrsdctnalAthztnIdTypCdgSys(String.valueOf(medicinalproductauthorizationjurisdictionalauthorizationidentifiertypecoding.getSystem()));
-		}
-		/******************** medicinalproductauthorizationjurisdictionalauthorizationidentifierperiod ********************************************************************************/
-		org.hl7.fhir.r4.model.Period medicinalproductauthorizationjurisdictionalauthorizationidentifierperiod = medicinalproductauthorizationjurisdictionalauthorizationidentifier.getPeriod();
-
-		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_Id_Prd_Strt ********************************************************************************/
-		if(medicinalproductauthorizationjurisdictionalauthorizationidentifierperiod.hasStart()) {
-			m.setMdcnlPrdctAthztnJrsdctnalAthztnIdPrdStrt(String.valueOf(medicinalproductauthorizationjurisdictionalauthorizationidentifierperiod.getStart()));
-		}
-		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_Id_Prd_End ********************************************************************************/
-		if(medicinalproductauthorizationjurisdictionalauthorizationidentifierperiod.hasEnd()) {
-			m.setMdcnlPrdctAthztnJrsdctnalAthztnIdPrdEnd(String.valueOf(medicinalproductauthorizationjurisdictionalauthorizationidentifierperiod.getEnd()));
-		}
-		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_Id_Assigner ********************************************************************************/
-		if(medicinalproductauthorizationjurisdictionalauthorizationidentifier.hasAssigner()) {
-			m.setMdcnlPrdctAthztnJrsdctnalAthztnIdAssigner(String.valueOf(medicinalproductauthorizationjurisdictionalauthorizationidentifier.getAssigner()));
-		}
-		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_Id_Sys ********************************************************************************/
-		if(medicinalproductauthorizationjurisdictionalauthorizationidentifier.hasSystem()) {
-			m.setMdcnlPrdctAthztnJrsdctnalAthztnIdSys(String.valueOf(medicinalproductauthorizationjurisdictionalauthorizationidentifier.getSystem()));
-		}
-		/******************** medicinalproductauthorizationjurisdictionalauthorizationidentifieruse ********************************************************************************/
-		org.hl7.fhir.r4.model.Identifier.IdentifierUse medicinalproductauthorizationjurisdictionalauthorizationidentifieruse = medicinalproductauthorizationjurisdictionalauthorizationidentifier.getUse();
-		m.setMdcnlPrdctAthztnJrsdctnalAthztnIdUse(medicinalproductauthorizationjurisdictionalauthorizationidentifieruse.toCode());
-
-		/******************** medicinalproductauthorizationjurisdictionalauthorizationlegalstatusofsupply ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept medicinalproductauthorizationjurisdictionalauthorizationlegalstatusofsupply = medicinalproductauthorizationjurisdictionalauthorization.getLegalStatusOfSupply();
-
-		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_LegalStsOfSpply_Txt ********************************************************************************/
-		if(medicinalproductauthorizationjurisdictionalauthorizationlegalstatusofsupply.hasText()) {
-			m.setMdcnlPrdctAthztnJrsdctnalAthztnLegalStsOfSpplyTxt(String.valueOf(medicinalproductauthorizationjurisdictionalauthorizationlegalstatusofsupply.getText()));
-		}
-		/******************** medicinalproductauthorizationjurisdictionalauthorizationlegalstatusofsupplycoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding medicinalproductauthorizationjurisdictionalauthorizationlegalstatusofsupplycoding = medicinalproductauthorizationjurisdictionalauthorizationlegalstatusofsupply.getCodingFirstRep();
-
-		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_LegalStsOfSpply_Cdg_Vrsn ********************************************************************************/
-		if(medicinalproductauthorizationjurisdictionalauthorizationlegalstatusofsupplycoding.hasVersion()) {
-			m.setMdcnlPrdctAthztnJrsdctnalAthztnLegalStsOfSpplyCdgVrsn(String.valueOf(medicinalproductauthorizationjurisdictionalauthorizationlegalstatusofsupplycoding.getVersion()));
-		}
-		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_LegalStsOfSpply_Cdg_Dsply ********************************************************************************/
-		if(medicinalproductauthorizationjurisdictionalauthorizationlegalstatusofsupplycoding.hasDisplay()) {
-			m.setMdcnlPrdctAthztnJrsdctnalAthztnLegalStsOfSpplyCdgDsply(String.valueOf(medicinalproductauthorizationjurisdictionalauthorizationlegalstatusofsupplycoding.getDisplay()));
-		}
-		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_LegalStsOfSpply_Cdg_Cd ********************************************************************************/
-		if(medicinalproductauthorizationjurisdictionalauthorizationlegalstatusofsupplycoding.hasCode()) {
-			m.setMdcnlPrdctAthztnJrsdctnalAthztnLegalStsOfSpplyCdgCd(String.valueOf(medicinalproductauthorizationjurisdictionalauthorizationlegalstatusofsupplycoding.getCode()));
-		}
-		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_LegalStsOfSpply_Cdg_UsrSltd ********************************************************************************/
-		if(medicinalproductauthorizationjurisdictionalauthorizationlegalstatusofsupplycoding.hasUserSelected()) {
-			m.setMdcnlPrdctAthztnJrsdctnalAthztnLegalStsOfSpplyCdgUsrSltd(String.valueOf(medicinalproductauthorizationjurisdictionalauthorizationlegalstatusofsupplycoding.getUserSelected()));
-		}
-		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_LegalStsOfSpply_Cdg_Sys ********************************************************************************/
-		if(medicinalproductauthorizationjurisdictionalauthorizationlegalstatusofsupplycoding.hasSystem()) {
-			m.setMdcnlPrdctAthztnJrsdctnalAthztnLegalStsOfSpplyCdgSys(String.valueOf(medicinalproductauthorizationjurisdictionalauthorizationlegalstatusofsupplycoding.getSystem()));
-		}
-		/******************** medicinalproductauthorizationjurisdictionalauthorizationjurisdiction ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept medicinalproductauthorizationjurisdictionalauthorizationjurisdiction = medicinalproductauthorizationjurisdictionalauthorization.getJurisdictionFirstRep();
-
-		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_Jrsdctn_Txt ********************************************************************************/
-		if(medicinalproductauthorizationjurisdictionalauthorizationjurisdiction.hasText()) {
-			m.setMdcnlPrdctAthztnJrsdctnalAthztnJrsdctnTxt(String.valueOf(medicinalproductauthorizationjurisdictionalauthorizationjurisdiction.getText()));
-		}
-		/******************** medicinalproductauthorizationjurisdictionalauthorizationjurisdictioncoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding medicinalproductauthorizationjurisdictionalauthorizationjurisdictioncoding = medicinalproductauthorizationjurisdictionalauthorizationjurisdiction.getCodingFirstRep();
-
-		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_Jrsdctn_Cdg_Vrsn ********************************************************************************/
-		if(medicinalproductauthorizationjurisdictionalauthorizationjurisdictioncoding.hasVersion()) {
-			m.setMdcnlPrdctAthztnJrsdctnalAthztnJrsdctnCdgVrsn(String.valueOf(medicinalproductauthorizationjurisdictionalauthorizationjurisdictioncoding.getVersion()));
-		}
-		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_Jrsdctn_Cdg_Dsply ********************************************************************************/
-		if(medicinalproductauthorizationjurisdictionalauthorizationjurisdictioncoding.hasDisplay()) {
-			m.setMdcnlPrdctAthztnJrsdctnalAthztnJrsdctnCdgDsply(String.valueOf(medicinalproductauthorizationjurisdictionalauthorizationjurisdictioncoding.getDisplay()));
-		}
-		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_Jrsdctn_Cdg_Cd ********************************************************************************/
-		if(medicinalproductauthorizationjurisdictionalauthorizationjurisdictioncoding.hasCode()) {
-			m.setMdcnlPrdctAthztnJrsdctnalAthztnJrsdctnCdgCd(String.valueOf(medicinalproductauthorizationjurisdictionalauthorizationjurisdictioncoding.getCode()));
-		}
-		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_Jrsdctn_Cdg_UsrSltd ********************************************************************************/
-		if(medicinalproductauthorizationjurisdictionalauthorizationjurisdictioncoding.hasUserSelected()) {
-			m.setMdcnlPrdctAthztnJrsdctnalAthztnJrsdctnCdgUsrSltd(String.valueOf(medicinalproductauthorizationjurisdictionalauthorizationjurisdictioncoding.getUserSelected()));
-		}
-		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_Jrsdctn_Cdg_Sys ********************************************************************************/
-		if(medicinalproductauthorizationjurisdictionalauthorizationjurisdictioncoding.hasSystem()) {
-			m.setMdcnlPrdctAthztnJrsdctnalAthztnJrsdctnCdgSys(String.valueOf(medicinalproductauthorizationjurisdictionalauthorizationjurisdictioncoding.getSystem()));
-		}
 		/******************** medicinalproductauthorizationcountry ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept medicinalproductauthorizationcountry = medicinalproductauthorization.getCountryFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.CodeableConcept> medicinalproductauthorizationcountrylist = medicinalproductauthorization.getCountry();
+		for(int medicinalproductauthorizationcountryi = 0; medicinalproductauthorizationcountryi<medicinalproductauthorizationcountrylist.size();medicinalproductauthorizationcountryi++ ) {
+		org.hl7.fhir.r4.model.CodeableConcept  medicinalproductauthorizationcountry = medicinalproductauthorizationcountrylist.get(medicinalproductauthorizationcountryi);
 
 		/******************** MdcnlPrdctAthztn_Cntry_Txt ********************************************************************************/
+		if(medicinalproductauthorizationcountryi == 0) {m.addMdcnlPrdctAthztnCntryTxt("[");}
 		if(medicinalproductauthorizationcountry.hasText()) {
-			m.setMdcnlPrdctAthztnCntryTxt(String.valueOf(medicinalproductauthorizationcountry.getText()));
+
+			m.addMdcnlPrdctAthztnCntryTxt(String.valueOf(medicinalproductauthorizationcountry.getText()));
+		} else {
+			m.addMdcnlPrdctAthztnCntryTxt("NULL");
 		}
+
+		if(medicinalproductauthorizationcountryi == medicinalproductauthorizationcountrylist.size()-1) {m.addMdcnlPrdctAthztnCntryTxt("]");}
+
+
 		/******************** medicinalproductauthorizationcountrycoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding medicinalproductauthorizationcountrycoding = medicinalproductauthorizationcountry.getCodingFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.Coding> medicinalproductauthorizationcountrycodinglist = medicinalproductauthorizationcountry.getCoding();
+		for(int medicinalproductauthorizationcountrycodingi = 0; medicinalproductauthorizationcountrycodingi<medicinalproductauthorizationcountrycodinglist.size();medicinalproductauthorizationcountrycodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  medicinalproductauthorizationcountrycoding = medicinalproductauthorizationcountrycodinglist.get(medicinalproductauthorizationcountrycodingi);
+
+		/******************** MdcnlPrdctAthztn_Cntry_Cdg_Dsply ********************************************************************************/
+		if(medicinalproductauthorizationcountrycodingi == 0) {m.addMdcnlPrdctAthztnCntryCdgDsply("[[");}
+		if(medicinalproductauthorizationcountrycoding.hasDisplay()) {
+
+			m.addMdcnlPrdctAthztnCntryCdgDsply(String.valueOf(medicinalproductauthorizationcountrycoding.getDisplay()));
+		} else {
+			m.addMdcnlPrdctAthztnCntryCdgDsply("NULL");
+		}
+
+		if(medicinalproductauthorizationcountrycodingi == medicinalproductauthorizationcountrycodinglist.size()-1) {m.addMdcnlPrdctAthztnCntryCdgDsply("]]");}
+
 
 		/******************** MdcnlPrdctAthztn_Cntry_Cdg_Vrsn ********************************************************************************/
+		if(medicinalproductauthorizationcountrycodingi == 0) {m.addMdcnlPrdctAthztnCntryCdgVrsn("[[");}
 		if(medicinalproductauthorizationcountrycoding.hasVersion()) {
-			m.setMdcnlPrdctAthztnCntryCdgVrsn(String.valueOf(medicinalproductauthorizationcountrycoding.getVersion()));
+
+			m.addMdcnlPrdctAthztnCntryCdgVrsn(String.valueOf(medicinalproductauthorizationcountrycoding.getVersion()));
+		} else {
+			m.addMdcnlPrdctAthztnCntryCdgVrsn("NULL");
 		}
-		/******************** MdcnlPrdctAthztn_Cntry_Cdg_Dsply ********************************************************************************/
-		if(medicinalproductauthorizationcountrycoding.hasDisplay()) {
-			m.setMdcnlPrdctAthztnCntryCdgDsply(String.valueOf(medicinalproductauthorizationcountrycoding.getDisplay()));
-		}
+
+		if(medicinalproductauthorizationcountrycodingi == medicinalproductauthorizationcountrycodinglist.size()-1) {m.addMdcnlPrdctAthztnCntryCdgVrsn("]]");}
+
+
 		/******************** MdcnlPrdctAthztn_Cntry_Cdg_Cd ********************************************************************************/
+		if(medicinalproductauthorizationcountrycodingi == 0) {m.addMdcnlPrdctAthztnCntryCdgCd("[[");}
 		if(medicinalproductauthorizationcountrycoding.hasCode()) {
-			m.setMdcnlPrdctAthztnCntryCdgCd(String.valueOf(medicinalproductauthorizationcountrycoding.getCode()));
+
+			m.addMdcnlPrdctAthztnCntryCdgCd(String.valueOf(medicinalproductauthorizationcountrycoding.getCode()));
+		} else {
+			m.addMdcnlPrdctAthztnCntryCdgCd("NULL");
 		}
+
+		if(medicinalproductauthorizationcountrycodingi == medicinalproductauthorizationcountrycodinglist.size()-1) {m.addMdcnlPrdctAthztnCntryCdgCd("]]");}
+
+
 		/******************** MdcnlPrdctAthztn_Cntry_Cdg_UsrSltd ********************************************************************************/
+		if(medicinalproductauthorizationcountrycodingi == 0) {m.addMdcnlPrdctAthztnCntryCdgUsrSltd("[[");}
 		if(medicinalproductauthorizationcountrycoding.hasUserSelected()) {
-			m.setMdcnlPrdctAthztnCntryCdgUsrSltd(String.valueOf(medicinalproductauthorizationcountrycoding.getUserSelected()));
+
+			m.addMdcnlPrdctAthztnCntryCdgUsrSltd(String.valueOf(medicinalproductauthorizationcountrycoding.getUserSelected()));
+		} else {
+			m.addMdcnlPrdctAthztnCntryCdgUsrSltd("NULL");
 		}
+
+		if(medicinalproductauthorizationcountrycodingi == medicinalproductauthorizationcountrycodinglist.size()-1) {m.addMdcnlPrdctAthztnCntryCdgUsrSltd("]]");}
+
+
 		/******************** MdcnlPrdctAthztn_Cntry_Cdg_Sys ********************************************************************************/
+		if(medicinalproductauthorizationcountrycodingi == 0) {m.addMdcnlPrdctAthztnCntryCdgSys("[[");}
 		if(medicinalproductauthorizationcountrycoding.hasSystem()) {
-			m.setMdcnlPrdctAthztnCntryCdgSys(String.valueOf(medicinalproductauthorizationcountrycoding.getSystem()));
-		}
-		/******************** medicinalproductauthorizationlegalbasis ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept medicinalproductauthorizationlegalbasis = medicinalproductauthorization.getLegalBasis();
 
-		/******************** MdcnlPrdctAthztn_LegalBasis_Txt ********************************************************************************/
-		if(medicinalproductauthorizationlegalbasis.hasText()) {
-			m.setMdcnlPrdctAthztnLegalBasisTxt(String.valueOf(medicinalproductauthorizationlegalbasis.getText()));
+			m.addMdcnlPrdctAthztnCntryCdgSys(String.valueOf(medicinalproductauthorizationcountrycoding.getSystem()));
+		} else {
+			m.addMdcnlPrdctAthztnCntryCdgSys("NULL");
 		}
-		/******************** medicinalproductauthorizationlegalbasiscoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding medicinalproductauthorizationlegalbasiscoding = medicinalproductauthorizationlegalbasis.getCodingFirstRep();
 
-		/******************** MdcnlPrdctAthztn_LegalBasis_Cdg_Vrsn ********************************************************************************/
-		if(medicinalproductauthorizationlegalbasiscoding.hasVersion()) {
-			m.setMdcnlPrdctAthztnLegalBasisCdgVrsn(String.valueOf(medicinalproductauthorizationlegalbasiscoding.getVersion()));
-		}
-		/******************** MdcnlPrdctAthztn_LegalBasis_Cdg_Dsply ********************************************************************************/
-		if(medicinalproductauthorizationlegalbasiscoding.hasDisplay()) {
-			m.setMdcnlPrdctAthztnLegalBasisCdgDsply(String.valueOf(medicinalproductauthorizationlegalbasiscoding.getDisplay()));
-		}
-		/******************** MdcnlPrdctAthztn_LegalBasis_Cdg_Cd ********************************************************************************/
-		if(medicinalproductauthorizationlegalbasiscoding.hasCode()) {
-			m.setMdcnlPrdctAthztnLegalBasisCdgCd(String.valueOf(medicinalproductauthorizationlegalbasiscoding.getCode()));
-		}
-		/******************** MdcnlPrdctAthztn_LegalBasis_Cdg_UsrSltd ********************************************************************************/
-		if(medicinalproductauthorizationlegalbasiscoding.hasUserSelected()) {
-			m.setMdcnlPrdctAthztnLegalBasisCdgUsrSltd(String.valueOf(medicinalproductauthorizationlegalbasiscoding.getUserSelected()));
-		}
-		/******************** MdcnlPrdctAthztn_LegalBasis_Cdg_Sys ********************************************************************************/
-		if(medicinalproductauthorizationlegalbasiscoding.hasSystem()) {
-			m.setMdcnlPrdctAthztnLegalBasisCdgSys(String.valueOf(medicinalproductauthorizationlegalbasiscoding.getSystem()));
-		}
-		/******************** MdcnlPrdctAthztn_RestoreDt ********************************************************************************/
-		if(medicinalproductauthorization.hasRestoreDate()) {
-			m.setMdcnlPrdctAthztnRestoreDt(String.valueOf(medicinalproductauthorization.getRestoreDate()));
-		}
-		/******************** MdcnlPrdctAthztn_Holder ********************************************************************************/
-		if(medicinalproductauthorization.hasHolder()) {
-			m.setMdcnlPrdctAthztnHolder(String.valueOf(medicinalproductauthorization.getHolder()));
-		}
-		/******************** MdcnlPrdctAthztn_Regulator ********************************************************************************/
-		if(medicinalproductauthorization.hasRegulator()) {
-			m.setMdcnlPrdctAthztnRegulator(String.valueOf(medicinalproductauthorization.getRegulator()));
-		}
+		if(medicinalproductauthorizationcountrycodingi == medicinalproductauthorizationcountrycodinglist.size()-1) {m.addMdcnlPrdctAthztnCntryCdgSys("]]");}
+
+
+		 };
+		 };
 		/******************** MdcnlPrdctAthztn_Sbjct ********************************************************************************/
 		if(medicinalproductauthorization.hasSubject()) {
-			m.setMdcnlPrdctAthztnSbjct(String.valueOf(medicinalproductauthorization.getSubject()));
+
+			if(medicinalproductauthorization.getSubject().getReference() != null) {
+			m.addMdcnlPrdctAthztnSbjct(medicinalproductauthorization.getSubject().getReference());
+			}
+		} else {
+			m.addMdcnlPrdctAthztnSbjct("NULL");
 		}
+
+
 		/******************** medicinalproductauthorizationstatus ********************************************************************************/
 		org.hl7.fhir.r4.model.CodeableConcept medicinalproductauthorizationstatus = medicinalproductauthorization.getStatus();
 
 		/******************** MdcnlPrdctAthztn_Sts_Txt ********************************************************************************/
 		if(medicinalproductauthorizationstatus.hasText()) {
-			m.setMdcnlPrdctAthztnStsTxt(String.valueOf(medicinalproductauthorizationstatus.getText()));
+
+			m.addMdcnlPrdctAthztnStsTxt(String.valueOf(medicinalproductauthorizationstatus.getText()));
+		} else {
+			m.addMdcnlPrdctAthztnStsTxt("NULL");
 		}
+
+
 		/******************** medicinalproductauthorizationstatuscoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding medicinalproductauthorizationstatuscoding = medicinalproductauthorizationstatus.getCodingFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.Coding> medicinalproductauthorizationstatuscodinglist = medicinalproductauthorizationstatus.getCoding();
+		for(int medicinalproductauthorizationstatuscodingi = 0; medicinalproductauthorizationstatuscodingi<medicinalproductauthorizationstatuscodinglist.size();medicinalproductauthorizationstatuscodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  medicinalproductauthorizationstatuscoding = medicinalproductauthorizationstatuscodinglist.get(medicinalproductauthorizationstatuscodingi);
+
+		/******************** MdcnlPrdctAthztn_Sts_Cdg_Dsply ********************************************************************************/
+		if(medicinalproductauthorizationstatuscodingi == 0) {m.addMdcnlPrdctAthztnStsCdgDsply("[");}
+		if(medicinalproductauthorizationstatuscoding.hasDisplay()) {
+
+			m.addMdcnlPrdctAthztnStsCdgDsply(String.valueOf(medicinalproductauthorizationstatuscoding.getDisplay()));
+		} else {
+			m.addMdcnlPrdctAthztnStsCdgDsply("NULL");
+		}
+
+		if(medicinalproductauthorizationstatuscodingi == medicinalproductauthorizationstatuscodinglist.size()-1) {m.addMdcnlPrdctAthztnStsCdgDsply("]");}
+
 
 		/******************** MdcnlPrdctAthztn_Sts_Cdg_Vrsn ********************************************************************************/
+		if(medicinalproductauthorizationstatuscodingi == 0) {m.addMdcnlPrdctAthztnStsCdgVrsn("[");}
 		if(medicinalproductauthorizationstatuscoding.hasVersion()) {
-			m.setMdcnlPrdctAthztnStsCdgVrsn(String.valueOf(medicinalproductauthorizationstatuscoding.getVersion()));
+
+			m.addMdcnlPrdctAthztnStsCdgVrsn(String.valueOf(medicinalproductauthorizationstatuscoding.getVersion()));
+		} else {
+			m.addMdcnlPrdctAthztnStsCdgVrsn("NULL");
 		}
-		/******************** MdcnlPrdctAthztn_Sts_Cdg_Dsply ********************************************************************************/
-		if(medicinalproductauthorizationstatuscoding.hasDisplay()) {
-			m.setMdcnlPrdctAthztnStsCdgDsply(String.valueOf(medicinalproductauthorizationstatuscoding.getDisplay()));
-		}
+
+		if(medicinalproductauthorizationstatuscodingi == medicinalproductauthorizationstatuscodinglist.size()-1) {m.addMdcnlPrdctAthztnStsCdgVrsn("]");}
+
+
 		/******************** MdcnlPrdctAthztn_Sts_Cdg_Cd ********************************************************************************/
+		if(medicinalproductauthorizationstatuscodingi == 0) {m.addMdcnlPrdctAthztnStsCdgCd("[");}
 		if(medicinalproductauthorizationstatuscoding.hasCode()) {
-			m.setMdcnlPrdctAthztnStsCdgCd(String.valueOf(medicinalproductauthorizationstatuscoding.getCode()));
+
+			m.addMdcnlPrdctAthztnStsCdgCd(String.valueOf(medicinalproductauthorizationstatuscoding.getCode()));
+		} else {
+			m.addMdcnlPrdctAthztnStsCdgCd("NULL");
 		}
+
+		if(medicinalproductauthorizationstatuscodingi == medicinalproductauthorizationstatuscodinglist.size()-1) {m.addMdcnlPrdctAthztnStsCdgCd("]");}
+
+
 		/******************** MdcnlPrdctAthztn_Sts_Cdg_UsrSltd ********************************************************************************/
+		if(medicinalproductauthorizationstatuscodingi == 0) {m.addMdcnlPrdctAthztnStsCdgUsrSltd("[");}
 		if(medicinalproductauthorizationstatuscoding.hasUserSelected()) {
-			m.setMdcnlPrdctAthztnStsCdgUsrSltd(String.valueOf(medicinalproductauthorizationstatuscoding.getUserSelected()));
+
+			m.addMdcnlPrdctAthztnStsCdgUsrSltd(String.valueOf(medicinalproductauthorizationstatuscoding.getUserSelected()));
+		} else {
+			m.addMdcnlPrdctAthztnStsCdgUsrSltd("NULL");
 		}
+
+		if(medicinalproductauthorizationstatuscodingi == medicinalproductauthorizationstatuscodinglist.size()-1) {m.addMdcnlPrdctAthztnStsCdgUsrSltd("]");}
+
+
 		/******************** MdcnlPrdctAthztn_Sts_Cdg_Sys ********************************************************************************/
+		if(medicinalproductauthorizationstatuscodingi == 0) {m.addMdcnlPrdctAthztnStsCdgSys("[");}
 		if(medicinalproductauthorizationstatuscoding.hasSystem()) {
-			m.setMdcnlPrdctAthztnStsCdgSys(String.valueOf(medicinalproductauthorizationstatuscoding.getSystem()));
+
+			m.addMdcnlPrdctAthztnStsCdgSys(String.valueOf(medicinalproductauthorizationstatuscoding.getSystem()));
+		} else {
+			m.addMdcnlPrdctAthztnStsCdgSys("NULL");
 		}
+
+		if(medicinalproductauthorizationstatuscodingi == medicinalproductauthorizationstatuscodinglist.size()-1) {m.addMdcnlPrdctAthztnStsCdgSys("]");}
+
+
+		 };
+		/******************** medicinalproductauthorizationidentifier ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.Identifier> medicinalproductauthorizationidentifierlist = medicinalproductauthorization.getIdentifier();
+		for(int medicinalproductauthorizationidentifieri = 0; medicinalproductauthorizationidentifieri<medicinalproductauthorizationidentifierlist.size();medicinalproductauthorizationidentifieri++ ) {
+		org.hl7.fhir.r4.model.Identifier  medicinalproductauthorizationidentifier = medicinalproductauthorizationidentifierlist.get(medicinalproductauthorizationidentifieri);
+
+		/******************** MdcnlPrdctAthztn_Id_Vl ********************************************************************************/
+		if(medicinalproductauthorizationidentifieri == 0) {m.addMdcnlPrdctAthztnIdVl("[");}
+		if(medicinalproductauthorizationidentifier.hasValue()) {
+
+			m.addMdcnlPrdctAthztnIdVl(String.valueOf(medicinalproductauthorizationidentifier.getValue()));
+		} else {
+			m.addMdcnlPrdctAthztnIdVl("NULL");
+		}
+
+		if(medicinalproductauthorizationidentifieri == medicinalproductauthorizationidentifierlist.size()-1) {m.addMdcnlPrdctAthztnIdVl("]");}
+
+
+		/******************** medicinalproductauthorizationidentifiertype ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept medicinalproductauthorizationidentifiertype = medicinalproductauthorizationidentifier.getType();
+
+		/******************** MdcnlPrdctAthztn_Id_Typ_Txt ********************************************************************************/
+		if(medicinalproductauthorizationidentifieri == 0) {m.addMdcnlPrdctAthztnIdTypTxt("[");}
+		if(medicinalproductauthorizationidentifiertype.hasText()) {
+
+			m.addMdcnlPrdctAthztnIdTypTxt(String.valueOf(medicinalproductauthorizationidentifiertype.getText()));
+		} else {
+			m.addMdcnlPrdctAthztnIdTypTxt("NULL");
+		}
+
+		if(medicinalproductauthorizationidentifieri == medicinalproductauthorizationidentifierlist.size()-1) {m.addMdcnlPrdctAthztnIdTypTxt("]");}
+
+
+		/******************** medicinalproductauthorizationidentifiertypecoding ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.Coding> medicinalproductauthorizationidentifiertypecodinglist = medicinalproductauthorizationidentifiertype.getCoding();
+		for(int medicinalproductauthorizationidentifiertypecodingi = 0; medicinalproductauthorizationidentifiertypecodingi<medicinalproductauthorizationidentifiertypecodinglist.size();medicinalproductauthorizationidentifiertypecodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  medicinalproductauthorizationidentifiertypecoding = medicinalproductauthorizationidentifiertypecodinglist.get(medicinalproductauthorizationidentifiertypecodingi);
+
+		/******************** MdcnlPrdctAthztn_Id_Typ_Cdg_Dsply ********************************************************************************/
+		if(medicinalproductauthorizationidentifiertypecodingi == 0) {m.addMdcnlPrdctAthztnIdTypCdgDsply("[[");}
+		if(medicinalproductauthorizationidentifiertypecoding.hasDisplay()) {
+
+			m.addMdcnlPrdctAthztnIdTypCdgDsply(String.valueOf(medicinalproductauthorizationidentifiertypecoding.getDisplay()));
+		} else {
+			m.addMdcnlPrdctAthztnIdTypCdgDsply("NULL");
+		}
+
+		if(medicinalproductauthorizationidentifiertypecodingi == medicinalproductauthorizationidentifiertypecodinglist.size()-1) {m.addMdcnlPrdctAthztnIdTypCdgDsply("]]");}
+
+
+		/******************** MdcnlPrdctAthztn_Id_Typ_Cdg_Vrsn ********************************************************************************/
+		if(medicinalproductauthorizationidentifiertypecodingi == 0) {m.addMdcnlPrdctAthztnIdTypCdgVrsn("[[");}
+		if(medicinalproductauthorizationidentifiertypecoding.hasVersion()) {
+
+			m.addMdcnlPrdctAthztnIdTypCdgVrsn(String.valueOf(medicinalproductauthorizationidentifiertypecoding.getVersion()));
+		} else {
+			m.addMdcnlPrdctAthztnIdTypCdgVrsn("NULL");
+		}
+
+		if(medicinalproductauthorizationidentifiertypecodingi == medicinalproductauthorizationidentifiertypecodinglist.size()-1) {m.addMdcnlPrdctAthztnIdTypCdgVrsn("]]");}
+
+
+		/******************** MdcnlPrdctAthztn_Id_Typ_Cdg_Cd ********************************************************************************/
+		if(medicinalproductauthorizationidentifiertypecodingi == 0) {m.addMdcnlPrdctAthztnIdTypCdgCd("[[");}
+		if(medicinalproductauthorizationidentifiertypecoding.hasCode()) {
+
+			m.addMdcnlPrdctAthztnIdTypCdgCd(String.valueOf(medicinalproductauthorizationidentifiertypecoding.getCode()));
+		} else {
+			m.addMdcnlPrdctAthztnIdTypCdgCd("NULL");
+		}
+
+		if(medicinalproductauthorizationidentifiertypecodingi == medicinalproductauthorizationidentifiertypecodinglist.size()-1) {m.addMdcnlPrdctAthztnIdTypCdgCd("]]");}
+
+
+		/******************** MdcnlPrdctAthztn_Id_Typ_Cdg_UsrSltd ********************************************************************************/
+		if(medicinalproductauthorizationidentifiertypecodingi == 0) {m.addMdcnlPrdctAthztnIdTypCdgUsrSltd("[[");}
+		if(medicinalproductauthorizationidentifiertypecoding.hasUserSelected()) {
+
+			m.addMdcnlPrdctAthztnIdTypCdgUsrSltd(String.valueOf(medicinalproductauthorizationidentifiertypecoding.getUserSelected()));
+		} else {
+			m.addMdcnlPrdctAthztnIdTypCdgUsrSltd("NULL");
+		}
+
+		if(medicinalproductauthorizationidentifiertypecodingi == medicinalproductauthorizationidentifiertypecodinglist.size()-1) {m.addMdcnlPrdctAthztnIdTypCdgUsrSltd("]]");}
+
+
+		/******************** MdcnlPrdctAthztn_Id_Typ_Cdg_Sys ********************************************************************************/
+		if(medicinalproductauthorizationidentifiertypecodingi == 0) {m.addMdcnlPrdctAthztnIdTypCdgSys("[[");}
+		if(medicinalproductauthorizationidentifiertypecoding.hasSystem()) {
+
+			m.addMdcnlPrdctAthztnIdTypCdgSys(String.valueOf(medicinalproductauthorizationidentifiertypecoding.getSystem()));
+		} else {
+			m.addMdcnlPrdctAthztnIdTypCdgSys("NULL");
+		}
+
+		if(medicinalproductauthorizationidentifiertypecodingi == medicinalproductauthorizationidentifiertypecodinglist.size()-1) {m.addMdcnlPrdctAthztnIdTypCdgSys("]]");}
+
+
+		 };
+		/******************** medicinalproductauthorizationidentifierperiod ********************************************************************************/
+		org.hl7.fhir.r4.model.Period medicinalproductauthorizationidentifierperiod = medicinalproductauthorizationidentifier.getPeriod();
+
+		/******************** MdcnlPrdctAthztn_Id_Prd_Strt ********************************************************************************/
+		if(medicinalproductauthorizationidentifieri == 0) {m.addMdcnlPrdctAthztnIdPrdStrt("[");}
+		if(medicinalproductauthorizationidentifierperiod.hasStart()) {
+
+			m.addMdcnlPrdctAthztnIdPrdStrt("\""+ca.uhn.fhir.util.DateUtils.formatDate(medicinalproductauthorizationidentifierperiod.getStart())+"\"");
+		} else {
+			m.addMdcnlPrdctAthztnIdPrdStrt("NULL");
+		}
+
+		if(medicinalproductauthorizationidentifieri == medicinalproductauthorizationidentifierlist.size()-1) {m.addMdcnlPrdctAthztnIdPrdStrt("]");}
+
+
+		/******************** MdcnlPrdctAthztn_Id_Prd_End ********************************************************************************/
+		if(medicinalproductauthorizationidentifieri == 0) {m.addMdcnlPrdctAthztnIdPrdEnd("[");}
+		if(medicinalproductauthorizationidentifierperiod.hasEnd()) {
+
+			m.addMdcnlPrdctAthztnIdPrdEnd("\""+ca.uhn.fhir.util.DateUtils.formatDate(medicinalproductauthorizationidentifierperiod.getEnd())+"\"");
+		} else {
+			m.addMdcnlPrdctAthztnIdPrdEnd("NULL");
+		}
+
+		if(medicinalproductauthorizationidentifieri == medicinalproductauthorizationidentifierlist.size()-1) {m.addMdcnlPrdctAthztnIdPrdEnd("]");}
+
+
+		/******************** medicinalproductauthorizationidentifieruse ********************************************************************************/
+		org.hl7.fhir.r4.model.Identifier.IdentifierUse medicinalproductauthorizationidentifieruse = medicinalproductauthorizationidentifier.getUse();
+		if(medicinalproductauthorizationidentifieruse!=null) {
+		if(medicinalproductauthorizationidentifieri == 0) {
+
+		m.addMdcnlPrdctAthztnIdUse("[");		}
+			m.addMdcnlPrdctAthztnIdUse(medicinalproductauthorizationidentifieruse.toCode());
+		if(medicinalproductauthorizationidentifieri == medicinalproductauthorizationidentifierlist.size()-1) {
+
+		m.addMdcnlPrdctAthztnIdUse("]");		}
+
+		} else {
+			m.addMdcnlPrdctAthztnIdUse("NULL");
+		}
+
+		/******************** MdcnlPrdctAthztn_Id_Assigner ********************************************************************************/
+		if(medicinalproductauthorizationidentifieri == 0) {m.addMdcnlPrdctAthztnIdAssigner("[");}
+		if(medicinalproductauthorizationidentifier.hasAssigner()) {
+
+			if(medicinalproductauthorizationidentifier.getAssigner().getReference() != null) {
+			m.addMdcnlPrdctAthztnIdAssigner(medicinalproductauthorizationidentifier.getAssigner().getReference());
+			}
+		} else {
+			m.addMdcnlPrdctAthztnIdAssigner("NULL");
+		}
+
+		if(medicinalproductauthorizationidentifieri == medicinalproductauthorizationidentifierlist.size()-1) {m.addMdcnlPrdctAthztnIdAssigner("]");}
+
+
+		/******************** MdcnlPrdctAthztn_Id_Sys ********************************************************************************/
+		if(medicinalproductauthorizationidentifieri == 0) {m.addMdcnlPrdctAthztnIdSys("[");}
+		if(medicinalproductauthorizationidentifier.hasSystem()) {
+
+			m.addMdcnlPrdctAthztnIdSys(String.valueOf(medicinalproductauthorizationidentifier.getSystem()));
+		} else {
+			m.addMdcnlPrdctAthztnIdSys("NULL");
+		}
+
+		if(medicinalproductauthorizationidentifieri == medicinalproductauthorizationidentifierlist.size()-1) {m.addMdcnlPrdctAthztnIdSys("]");}
+
+
+		 };
 		/******************** medicinalproductauthorizationvalidityperiod ********************************************************************************/
 		org.hl7.fhir.r4.model.Period medicinalproductauthorizationvalidityperiod = medicinalproductauthorization.getValidityPeriod();
 
 		/******************** MdcnlPrdctAthztn_ValidityPrd_Strt ********************************************************************************/
 		if(medicinalproductauthorizationvalidityperiod.hasStart()) {
-			m.setMdcnlPrdctAthztnValidityPrdStrt(String.valueOf(medicinalproductauthorizationvalidityperiod.getStart()));
+
+			m.addMdcnlPrdctAthztnValidityPrdStrt("\""+ca.uhn.fhir.util.DateUtils.formatDate(medicinalproductauthorizationvalidityperiod.getStart())+"\"");
+		} else {
+			m.addMdcnlPrdctAthztnValidityPrdStrt("NULL");
 		}
+
+
 		/******************** MdcnlPrdctAthztn_ValidityPrd_End ********************************************************************************/
 		if(medicinalproductauthorizationvalidityperiod.hasEnd()) {
-			m.setMdcnlPrdctAthztnValidityPrdEnd(String.valueOf(medicinalproductauthorizationvalidityperiod.getEnd()));
+
+			m.addMdcnlPrdctAthztnValidityPrdEnd("\""+ca.uhn.fhir.util.DateUtils.formatDate(medicinalproductauthorizationvalidityperiod.getEnd())+"\"");
+		} else {
+			m.addMdcnlPrdctAthztnValidityPrdEnd("NULL");
 		}
+
+
 		/******************** medicinalproductauthorizationprocedure ********************************************************************************/
 		org.hl7.fhir.r4.model.MedicinalProductAuthorization.MedicinalProductAuthorizationProcedureComponent medicinalproductauthorizationprocedure = medicinalproductauthorization.getProcedure();
 
@@ -318,200 +379,926 @@ public class MedicinalProductAuthorizationBidirectionalConversion
 
 		/******************** MdcnlPrdctAthztn_Prcdr_Typ_Txt ********************************************************************************/
 		if(medicinalproductauthorizationproceduretype.hasText()) {
-			m.setMdcnlPrdctAthztnPrcdrTypTxt(String.valueOf(medicinalproductauthorizationproceduretype.getText()));
+
+			m.addMdcnlPrdctAthztnPrcdrTypTxt(String.valueOf(medicinalproductauthorizationproceduretype.getText()));
+		} else {
+			m.addMdcnlPrdctAthztnPrcdrTypTxt("NULL");
 		}
+
+
 		/******************** medicinalproductauthorizationproceduretypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding medicinalproductauthorizationproceduretypecoding = medicinalproductauthorizationproceduretype.getCodingFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.Coding> medicinalproductauthorizationproceduretypecodinglist = medicinalproductauthorizationproceduretype.getCoding();
+		for(int medicinalproductauthorizationproceduretypecodingi = 0; medicinalproductauthorizationproceduretypecodingi<medicinalproductauthorizationproceduretypecodinglist.size();medicinalproductauthorizationproceduretypecodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  medicinalproductauthorizationproceduretypecoding = medicinalproductauthorizationproceduretypecodinglist.get(medicinalproductauthorizationproceduretypecodingi);
+
+		/******************** MdcnlPrdctAthztn_Prcdr_Typ_Cdg_Dsply ********************************************************************************/
+		if(medicinalproductauthorizationproceduretypecodingi == 0) {m.addMdcnlPrdctAthztnPrcdrTypCdgDsply("[");}
+		if(medicinalproductauthorizationproceduretypecoding.hasDisplay()) {
+
+			m.addMdcnlPrdctAthztnPrcdrTypCdgDsply(String.valueOf(medicinalproductauthorizationproceduretypecoding.getDisplay()));
+		} else {
+			m.addMdcnlPrdctAthztnPrcdrTypCdgDsply("NULL");
+		}
+
+		if(medicinalproductauthorizationproceduretypecodingi == medicinalproductauthorizationproceduretypecodinglist.size()-1) {m.addMdcnlPrdctAthztnPrcdrTypCdgDsply("]");}
+
 
 		/******************** MdcnlPrdctAthztn_Prcdr_Typ_Cdg_Vrsn ********************************************************************************/
+		if(medicinalproductauthorizationproceduretypecodingi == 0) {m.addMdcnlPrdctAthztnPrcdrTypCdgVrsn("[");}
 		if(medicinalproductauthorizationproceduretypecoding.hasVersion()) {
-			m.setMdcnlPrdctAthztnPrcdrTypCdgVrsn(String.valueOf(medicinalproductauthorizationproceduretypecoding.getVersion()));
-		}
-		/******************** MdcnlPrdctAthztn_Prcdr_Typ_Cdg_Dsply ********************************************************************************/
-		if(medicinalproductauthorizationproceduretypecoding.hasDisplay()) {
-			m.setMdcnlPrdctAthztnPrcdrTypCdgDsply(String.valueOf(medicinalproductauthorizationproceduretypecoding.getDisplay()));
-		}
-		/******************** MdcnlPrdctAthztn_Prcdr_Typ_Cdg_Cd ********************************************************************************/
-		if(medicinalproductauthorizationproceduretypecoding.hasCode()) {
-			m.setMdcnlPrdctAthztnPrcdrTypCdgCd(String.valueOf(medicinalproductauthorizationproceduretypecoding.getCode()));
-		}
-		/******************** MdcnlPrdctAthztn_Prcdr_Typ_Cdg_UsrSltd ********************************************************************************/
-		if(medicinalproductauthorizationproceduretypecoding.hasUserSelected()) {
-			m.setMdcnlPrdctAthztnPrcdrTypCdgUsrSltd(String.valueOf(medicinalproductauthorizationproceduretypecoding.getUserSelected()));
-		}
-		/******************** MdcnlPrdctAthztn_Prcdr_Typ_Cdg_Sys ********************************************************************************/
-		if(medicinalproductauthorizationproceduretypecoding.hasSystem()) {
-			m.setMdcnlPrdctAthztnPrcdrTypCdgSys(String.valueOf(medicinalproductauthorizationproceduretypecoding.getSystem()));
-		}
-		/******************** medicinalproductauthorizationproceduredateperiod ********************************************************************************/
-		org.hl7.fhir.r4.model.Period medicinalproductauthorizationproceduredateperiod = medicinalproductauthorizationprocedure.getDatePeriod();
 
-		/******************** MdcnlPrdctAthztn_Prcdr_DtPrd_Strt ********************************************************************************/
-		if(medicinalproductauthorizationproceduredateperiod.hasStart()) {
-			m.setMdcnlPrdctAthztnPrcdrDtPrdStrt(String.valueOf(medicinalproductauthorizationproceduredateperiod.getStart()));
+			m.addMdcnlPrdctAthztnPrcdrTypCdgVrsn(String.valueOf(medicinalproductauthorizationproceduretypecoding.getVersion()));
+		} else {
+			m.addMdcnlPrdctAthztnPrcdrTypCdgVrsn("NULL");
 		}
-		/******************** MdcnlPrdctAthztn_Prcdr_DtPrd_End ********************************************************************************/
-		if(medicinalproductauthorizationproceduredateperiod.hasEnd()) {
-			m.setMdcnlPrdctAthztnPrcdrDtPrdEnd(String.valueOf(medicinalproductauthorizationproceduredateperiod.getEnd()));
+
+		if(medicinalproductauthorizationproceduretypecodingi == medicinalproductauthorizationproceduretypecodinglist.size()-1) {m.addMdcnlPrdctAthztnPrcdrTypCdgVrsn("]");}
+
+
+		/******************** MdcnlPrdctAthztn_Prcdr_Typ_Cdg_Cd ********************************************************************************/
+		if(medicinalproductauthorizationproceduretypecodingi == 0) {m.addMdcnlPrdctAthztnPrcdrTypCdgCd("[");}
+		if(medicinalproductauthorizationproceduretypecoding.hasCode()) {
+
+			m.addMdcnlPrdctAthztnPrcdrTypCdgCd(String.valueOf(medicinalproductauthorizationproceduretypecoding.getCode()));
+		} else {
+			m.addMdcnlPrdctAthztnPrcdrTypCdgCd("NULL");
 		}
-		/******************** MdcnlPrdctAthztn_Prcdr_DtDtTimeTyp ********************************************************************************/
-		if(medicinalproductauthorizationprocedure.hasDateDateTimeType()) {
-			m.setMdcnlPrdctAthztnPrcdrDtDtTimeTyp(String.valueOf(medicinalproductauthorizationprocedure.getDateDateTimeType()));
+
+		if(medicinalproductauthorizationproceduretypecodingi == medicinalproductauthorizationproceduretypecodinglist.size()-1) {m.addMdcnlPrdctAthztnPrcdrTypCdgCd("]");}
+
+
+		/******************** MdcnlPrdctAthztn_Prcdr_Typ_Cdg_UsrSltd ********************************************************************************/
+		if(medicinalproductauthorizationproceduretypecodingi == 0) {m.addMdcnlPrdctAthztnPrcdrTypCdgUsrSltd("[");}
+		if(medicinalproductauthorizationproceduretypecoding.hasUserSelected()) {
+
+			m.addMdcnlPrdctAthztnPrcdrTypCdgUsrSltd(String.valueOf(medicinalproductauthorizationproceduretypecoding.getUserSelected()));
+		} else {
+			m.addMdcnlPrdctAthztnPrcdrTypCdgUsrSltd("NULL");
 		}
+
+		if(medicinalproductauthorizationproceduretypecodingi == medicinalproductauthorizationproceduretypecodinglist.size()-1) {m.addMdcnlPrdctAthztnPrcdrTypCdgUsrSltd("]");}
+
+
+		/******************** MdcnlPrdctAthztn_Prcdr_Typ_Cdg_Sys ********************************************************************************/
+		if(medicinalproductauthorizationproceduretypecodingi == 0) {m.addMdcnlPrdctAthztnPrcdrTypCdgSys("[");}
+		if(medicinalproductauthorizationproceduretypecoding.hasSystem()) {
+
+			m.addMdcnlPrdctAthztnPrcdrTypCdgSys(String.valueOf(medicinalproductauthorizationproceduretypecoding.getSystem()));
+		} else {
+			m.addMdcnlPrdctAthztnPrcdrTypCdgSys("NULL");
+		}
+
+		if(medicinalproductauthorizationproceduretypecodingi == medicinalproductauthorizationproceduretypecodinglist.size()-1) {m.addMdcnlPrdctAthztnPrcdrTypCdgSys("]");}
+
+
+		 };
 		/******************** medicinalproductauthorizationprocedureidentifier ********************************************************************************/
 		org.hl7.fhir.r4.model.Identifier medicinalproductauthorizationprocedureidentifier = medicinalproductauthorizationprocedure.getIdentifier();
 
 		/******************** MdcnlPrdctAthztn_Prcdr_Id_Vl ********************************************************************************/
 		if(medicinalproductauthorizationprocedureidentifier.hasValue()) {
-			m.setMdcnlPrdctAthztnPrcdrIdVl(String.valueOf(medicinalproductauthorizationprocedureidentifier.getValue()));
+
+			m.addMdcnlPrdctAthztnPrcdrIdVl(String.valueOf(medicinalproductauthorizationprocedureidentifier.getValue()));
+		} else {
+			m.addMdcnlPrdctAthztnPrcdrIdVl("NULL");
 		}
+
+
 		/******************** medicinalproductauthorizationprocedureidentifiertype ********************************************************************************/
 		org.hl7.fhir.r4.model.CodeableConcept medicinalproductauthorizationprocedureidentifiertype = medicinalproductauthorizationprocedureidentifier.getType();
 
 		/******************** MdcnlPrdctAthztn_Prcdr_Id_Typ_Txt ********************************************************************************/
 		if(medicinalproductauthorizationprocedureidentifiertype.hasText()) {
-			m.setMdcnlPrdctAthztnPrcdrIdTypTxt(String.valueOf(medicinalproductauthorizationprocedureidentifiertype.getText()));
+
+			m.addMdcnlPrdctAthztnPrcdrIdTypTxt(String.valueOf(medicinalproductauthorizationprocedureidentifiertype.getText()));
+		} else {
+			m.addMdcnlPrdctAthztnPrcdrIdTypTxt("NULL");
 		}
+
+
 		/******************** medicinalproductauthorizationprocedureidentifiertypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding medicinalproductauthorizationprocedureidentifiertypecoding = medicinalproductauthorizationprocedureidentifiertype.getCodingFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.Coding> medicinalproductauthorizationprocedureidentifiertypecodinglist = medicinalproductauthorizationprocedureidentifiertype.getCoding();
+		for(int medicinalproductauthorizationprocedureidentifiertypecodingi = 0; medicinalproductauthorizationprocedureidentifiertypecodingi<medicinalproductauthorizationprocedureidentifiertypecodinglist.size();medicinalproductauthorizationprocedureidentifiertypecodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  medicinalproductauthorizationprocedureidentifiertypecoding = medicinalproductauthorizationprocedureidentifiertypecodinglist.get(medicinalproductauthorizationprocedureidentifiertypecodingi);
+
+		/******************** MdcnlPrdctAthztn_Prcdr_Id_Typ_Cdg_Dsply ********************************************************************************/
+		if(medicinalproductauthorizationprocedureidentifiertypecodingi == 0) {m.addMdcnlPrdctAthztnPrcdrIdTypCdgDsply("[");}
+		if(medicinalproductauthorizationprocedureidentifiertypecoding.hasDisplay()) {
+
+			m.addMdcnlPrdctAthztnPrcdrIdTypCdgDsply(String.valueOf(medicinalproductauthorizationprocedureidentifiertypecoding.getDisplay()));
+		} else {
+			m.addMdcnlPrdctAthztnPrcdrIdTypCdgDsply("NULL");
+		}
+
+		if(medicinalproductauthorizationprocedureidentifiertypecodingi == medicinalproductauthorizationprocedureidentifiertypecodinglist.size()-1) {m.addMdcnlPrdctAthztnPrcdrIdTypCdgDsply("]");}
+
 
 		/******************** MdcnlPrdctAthztn_Prcdr_Id_Typ_Cdg_Vrsn ********************************************************************************/
+		if(medicinalproductauthorizationprocedureidentifiertypecodingi == 0) {m.addMdcnlPrdctAthztnPrcdrIdTypCdgVrsn("[");}
 		if(medicinalproductauthorizationprocedureidentifiertypecoding.hasVersion()) {
-			m.setMdcnlPrdctAthztnPrcdrIdTypCdgVrsn(String.valueOf(medicinalproductauthorizationprocedureidentifiertypecoding.getVersion()));
+
+			m.addMdcnlPrdctAthztnPrcdrIdTypCdgVrsn(String.valueOf(medicinalproductauthorizationprocedureidentifiertypecoding.getVersion()));
+		} else {
+			m.addMdcnlPrdctAthztnPrcdrIdTypCdgVrsn("NULL");
 		}
-		/******************** MdcnlPrdctAthztn_Prcdr_Id_Typ_Cdg_Dsply ********************************************************************************/
-		if(medicinalproductauthorizationprocedureidentifiertypecoding.hasDisplay()) {
-			m.setMdcnlPrdctAthztnPrcdrIdTypCdgDsply(String.valueOf(medicinalproductauthorizationprocedureidentifiertypecoding.getDisplay()));
-		}
+
+		if(medicinalproductauthorizationprocedureidentifiertypecodingi == medicinalproductauthorizationprocedureidentifiertypecodinglist.size()-1) {m.addMdcnlPrdctAthztnPrcdrIdTypCdgVrsn("]");}
+
+
 		/******************** MdcnlPrdctAthztn_Prcdr_Id_Typ_Cdg_Cd ********************************************************************************/
+		if(medicinalproductauthorizationprocedureidentifiertypecodingi == 0) {m.addMdcnlPrdctAthztnPrcdrIdTypCdgCd("[");}
 		if(medicinalproductauthorizationprocedureidentifiertypecoding.hasCode()) {
-			m.setMdcnlPrdctAthztnPrcdrIdTypCdgCd(String.valueOf(medicinalproductauthorizationprocedureidentifiertypecoding.getCode()));
+
+			m.addMdcnlPrdctAthztnPrcdrIdTypCdgCd(String.valueOf(medicinalproductauthorizationprocedureidentifiertypecoding.getCode()));
+		} else {
+			m.addMdcnlPrdctAthztnPrcdrIdTypCdgCd("NULL");
 		}
+
+		if(medicinalproductauthorizationprocedureidentifiertypecodingi == medicinalproductauthorizationprocedureidentifiertypecodinglist.size()-1) {m.addMdcnlPrdctAthztnPrcdrIdTypCdgCd("]");}
+
+
 		/******************** MdcnlPrdctAthztn_Prcdr_Id_Typ_Cdg_UsrSltd ********************************************************************************/
+		if(medicinalproductauthorizationprocedureidentifiertypecodingi == 0) {m.addMdcnlPrdctAthztnPrcdrIdTypCdgUsrSltd("[");}
 		if(medicinalproductauthorizationprocedureidentifiertypecoding.hasUserSelected()) {
-			m.setMdcnlPrdctAthztnPrcdrIdTypCdgUsrSltd(String.valueOf(medicinalproductauthorizationprocedureidentifiertypecoding.getUserSelected()));
+
+			m.addMdcnlPrdctAthztnPrcdrIdTypCdgUsrSltd(String.valueOf(medicinalproductauthorizationprocedureidentifiertypecoding.getUserSelected()));
+		} else {
+			m.addMdcnlPrdctAthztnPrcdrIdTypCdgUsrSltd("NULL");
 		}
+
+		if(medicinalproductauthorizationprocedureidentifiertypecodingi == medicinalproductauthorizationprocedureidentifiertypecodinglist.size()-1) {m.addMdcnlPrdctAthztnPrcdrIdTypCdgUsrSltd("]");}
+
+
 		/******************** MdcnlPrdctAthztn_Prcdr_Id_Typ_Cdg_Sys ********************************************************************************/
+		if(medicinalproductauthorizationprocedureidentifiertypecodingi == 0) {m.addMdcnlPrdctAthztnPrcdrIdTypCdgSys("[");}
 		if(medicinalproductauthorizationprocedureidentifiertypecoding.hasSystem()) {
-			m.setMdcnlPrdctAthztnPrcdrIdTypCdgSys(String.valueOf(medicinalproductauthorizationprocedureidentifiertypecoding.getSystem()));
+
+			m.addMdcnlPrdctAthztnPrcdrIdTypCdgSys(String.valueOf(medicinalproductauthorizationprocedureidentifiertypecoding.getSystem()));
+		} else {
+			m.addMdcnlPrdctAthztnPrcdrIdTypCdgSys("NULL");
 		}
+
+		if(medicinalproductauthorizationprocedureidentifiertypecodingi == medicinalproductauthorizationprocedureidentifiertypecodinglist.size()-1) {m.addMdcnlPrdctAthztnPrcdrIdTypCdgSys("]");}
+
+
+		 };
 		/******************** medicinalproductauthorizationprocedureidentifierperiod ********************************************************************************/
 		org.hl7.fhir.r4.model.Period medicinalproductauthorizationprocedureidentifierperiod = medicinalproductauthorizationprocedureidentifier.getPeriod();
 
 		/******************** MdcnlPrdctAthztn_Prcdr_Id_Prd_Strt ********************************************************************************/
 		if(medicinalproductauthorizationprocedureidentifierperiod.hasStart()) {
-			m.setMdcnlPrdctAthztnPrcdrIdPrdStrt(String.valueOf(medicinalproductauthorizationprocedureidentifierperiod.getStart()));
+
+			m.addMdcnlPrdctAthztnPrcdrIdPrdStrt("\""+ca.uhn.fhir.util.DateUtils.formatDate(medicinalproductauthorizationprocedureidentifierperiod.getStart())+"\"");
+		} else {
+			m.addMdcnlPrdctAthztnPrcdrIdPrdStrt("NULL");
 		}
+
+
 		/******************** MdcnlPrdctAthztn_Prcdr_Id_Prd_End ********************************************************************************/
 		if(medicinalproductauthorizationprocedureidentifierperiod.hasEnd()) {
-			m.setMdcnlPrdctAthztnPrcdrIdPrdEnd(String.valueOf(medicinalproductauthorizationprocedureidentifierperiod.getEnd()));
+
+			m.addMdcnlPrdctAthztnPrcdrIdPrdEnd("\""+ca.uhn.fhir.util.DateUtils.formatDate(medicinalproductauthorizationprocedureidentifierperiod.getEnd())+"\"");
+		} else {
+			m.addMdcnlPrdctAthztnPrcdrIdPrdEnd("NULL");
 		}
-		/******************** MdcnlPrdctAthztn_Prcdr_Id_Assigner ********************************************************************************/
-		if(medicinalproductauthorizationprocedureidentifier.hasAssigner()) {
-			m.setMdcnlPrdctAthztnPrcdrIdAssigner(String.valueOf(medicinalproductauthorizationprocedureidentifier.getAssigner()));
-		}
-		/******************** MdcnlPrdctAthztn_Prcdr_Id_Sys ********************************************************************************/
-		if(medicinalproductauthorizationprocedureidentifier.hasSystem()) {
-			m.setMdcnlPrdctAthztnPrcdrIdSys(String.valueOf(medicinalproductauthorizationprocedureidentifier.getSystem()));
-		}
+
+
 		/******************** medicinalproductauthorizationprocedureidentifieruse ********************************************************************************/
 		org.hl7.fhir.r4.model.Identifier.IdentifierUse medicinalproductauthorizationprocedureidentifieruse = medicinalproductauthorizationprocedureidentifier.getUse();
-		m.setMdcnlPrdctAthztnPrcdrIdUse(medicinalproductauthorizationprocedureidentifieruse.toCode());
+		if(medicinalproductauthorizationprocedureidentifieruse!=null) {
+			m.addMdcnlPrdctAthztnPrcdrIdUse(medicinalproductauthorizationprocedureidentifieruse.toCode());
+		} else {
+			m.addMdcnlPrdctAthztnPrcdrIdUse("NULL");
+		}
+
+		/******************** MdcnlPrdctAthztn_Prcdr_Id_Assigner ********************************************************************************/
+		if(medicinalproductauthorizationprocedureidentifier.hasAssigner()) {
+
+			if(medicinalproductauthorizationprocedureidentifier.getAssigner().getReference() != null) {
+			m.addMdcnlPrdctAthztnPrcdrIdAssigner(medicinalproductauthorizationprocedureidentifier.getAssigner().getReference());
+			}
+		} else {
+			m.addMdcnlPrdctAthztnPrcdrIdAssigner("NULL");
+		}
+
+
+		/******************** MdcnlPrdctAthztn_Prcdr_Id_Sys ********************************************************************************/
+		if(medicinalproductauthorizationprocedureidentifier.hasSystem()) {
+
+			m.addMdcnlPrdctAthztnPrcdrIdSys(String.valueOf(medicinalproductauthorizationprocedureidentifier.getSystem()));
+		} else {
+			m.addMdcnlPrdctAthztnPrcdrIdSys("NULL");
+		}
+
+
+		/******************** MdcnlPrdctAthztn_Prcdr_DtDtTimeTyp ********************************************************************************/
+		if(medicinalproductauthorizationprocedure.hasDateDateTimeType()) {
+
+			m.addMdcnlPrdctAthztnPrcdrDtDtTimeTyp("\""+medicinalproductauthorizationprocedure.getDateDateTimeType().getValueAsString()+"\"");
+		} else {
+			m.addMdcnlPrdctAthztnPrcdrDtDtTimeTyp("NULL");
+		}
+
+
+		/******************** medicinalproductauthorizationproceduredateperiod ********************************************************************************/
+		org.hl7.fhir.r4.model.Period medicinalproductauthorizationproceduredateperiod = medicinalproductauthorizationprocedure.getDatePeriod();
+
+		/******************** MdcnlPrdctAthztn_Prcdr_DtPrd_Strt ********************************************************************************/
+		if(medicinalproductauthorizationproceduredateperiod.hasStart()) {
+
+			m.addMdcnlPrdctAthztnPrcdrDtPrdStrt("\""+ca.uhn.fhir.util.DateUtils.formatDate(medicinalproductauthorizationproceduredateperiod.getStart())+"\"");
+		} else {
+			m.addMdcnlPrdctAthztnPrcdrDtPrdStrt("NULL");
+		}
+
+
+		/******************** MdcnlPrdctAthztn_Prcdr_DtPrd_End ********************************************************************************/
+		if(medicinalproductauthorizationproceduredateperiod.hasEnd()) {
+
+			m.addMdcnlPrdctAthztnPrcdrDtPrdEnd("\""+ca.uhn.fhir.util.DateUtils.formatDate(medicinalproductauthorizationproceduredateperiod.getEnd())+"\"");
+		} else {
+			m.addMdcnlPrdctAthztnPrcdrDtPrdEnd("NULL");
+		}
+
 
 		/******************** MdcnlPrdctAthztn_StsDt ********************************************************************************/
 		if(medicinalproductauthorization.hasStatusDate()) {
-			m.setMdcnlPrdctAthztnStsDt(String.valueOf(medicinalproductauthorization.getStatusDate()));
-		}
-		/******************** medicinalproductauthorizationidentifier ********************************************************************************/
-		org.hl7.fhir.r4.model.Identifier medicinalproductauthorizationidentifier = medicinalproductauthorization.getIdentifierFirstRep();
 
-		/******************** MdcnlPrdctAthztn_Id_Vl ********************************************************************************/
-		if(medicinalproductauthorizationidentifier.hasValue()) {
-			m.setMdcnlPrdctAthztnIdVl(String.valueOf(medicinalproductauthorizationidentifier.getValue()));
+			m.addMdcnlPrdctAthztnStsDt("\""+ca.uhn.fhir.util.DateUtils.formatDate(medicinalproductauthorization.getStatusDate())+"\"");
+		} else {
+			m.addMdcnlPrdctAthztnStsDt("NULL");
 		}
-		/******************** medicinalproductauthorizationidentifiertype ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept medicinalproductauthorizationidentifiertype = medicinalproductauthorizationidentifier.getType();
 
-		/******************** MdcnlPrdctAthztn_Id_Typ_Txt ********************************************************************************/
-		if(medicinalproductauthorizationidentifiertype.hasText()) {
-			m.setMdcnlPrdctAthztnIdTypTxt(String.valueOf(medicinalproductauthorizationidentifiertype.getText()));
-		}
-		/******************** medicinalproductauthorizationidentifiertypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding medicinalproductauthorizationidentifiertypecoding = medicinalproductauthorizationidentifiertype.getCodingFirstRep();
 
-		/******************** MdcnlPrdctAthztn_Id_Typ_Cdg_Vrsn ********************************************************************************/
-		if(medicinalproductauthorizationidentifiertypecoding.hasVersion()) {
-			m.setMdcnlPrdctAthztnIdTypCdgVrsn(String.valueOf(medicinalproductauthorizationidentifiertypecoding.getVersion()));
-		}
-		/******************** MdcnlPrdctAthztn_Id_Typ_Cdg_Dsply ********************************************************************************/
-		if(medicinalproductauthorizationidentifiertypecoding.hasDisplay()) {
-			m.setMdcnlPrdctAthztnIdTypCdgDsply(String.valueOf(medicinalproductauthorizationidentifiertypecoding.getDisplay()));
-		}
-		/******************** MdcnlPrdctAthztn_Id_Typ_Cdg_Cd ********************************************************************************/
-		if(medicinalproductauthorizationidentifiertypecoding.hasCode()) {
-			m.setMdcnlPrdctAthztnIdTypCdgCd(String.valueOf(medicinalproductauthorizationidentifiertypecoding.getCode()));
-		}
-		/******************** MdcnlPrdctAthztn_Id_Typ_Cdg_UsrSltd ********************************************************************************/
-		if(medicinalproductauthorizationidentifiertypecoding.hasUserSelected()) {
-			m.setMdcnlPrdctAthztnIdTypCdgUsrSltd(String.valueOf(medicinalproductauthorizationidentifiertypecoding.getUserSelected()));
-		}
-		/******************** MdcnlPrdctAthztn_Id_Typ_Cdg_Sys ********************************************************************************/
-		if(medicinalproductauthorizationidentifiertypecoding.hasSystem()) {
-			m.setMdcnlPrdctAthztnIdTypCdgSys(String.valueOf(medicinalproductauthorizationidentifiertypecoding.getSystem()));
-		}
-		/******************** medicinalproductauthorizationidentifierperiod ********************************************************************************/
-		org.hl7.fhir.r4.model.Period medicinalproductauthorizationidentifierperiod = medicinalproductauthorizationidentifier.getPeriod();
+		/******************** medicinalproductauthorizationdataexclusivityperiod ********************************************************************************/
+		org.hl7.fhir.r4.model.Period medicinalproductauthorizationdataexclusivityperiod = medicinalproductauthorization.getDataExclusivityPeriod();
 
-		/******************** MdcnlPrdctAthztn_Id_Prd_Strt ********************************************************************************/
-		if(medicinalproductauthorizationidentifierperiod.hasStart()) {
-			m.setMdcnlPrdctAthztnIdPrdStrt(String.valueOf(medicinalproductauthorizationidentifierperiod.getStart()));
+		/******************** MdcnlPrdctAthztn_DataExclusivityPrd_Strt ********************************************************************************/
+		if(medicinalproductauthorizationdataexclusivityperiod.hasStart()) {
+
+			m.addMdcnlPrdctAthztnDataExclusivityPrdStrt("\""+ca.uhn.fhir.util.DateUtils.formatDate(medicinalproductauthorizationdataexclusivityperiod.getStart())+"\"");
+		} else {
+			m.addMdcnlPrdctAthztnDataExclusivityPrdStrt("NULL");
 		}
-		/******************** MdcnlPrdctAthztn_Id_Prd_End ********************************************************************************/
-		if(medicinalproductauthorizationidentifierperiod.hasEnd()) {
-			m.setMdcnlPrdctAthztnIdPrdEnd(String.valueOf(medicinalproductauthorizationidentifierperiod.getEnd()));
+
+
+		/******************** MdcnlPrdctAthztn_DataExclusivityPrd_End ********************************************************************************/
+		if(medicinalproductauthorizationdataexclusivityperiod.hasEnd()) {
+
+			m.addMdcnlPrdctAthztnDataExclusivityPrdEnd("\""+ca.uhn.fhir.util.DateUtils.formatDate(medicinalproductauthorizationdataexclusivityperiod.getEnd())+"\"");
+		} else {
+			m.addMdcnlPrdctAthztnDataExclusivityPrdEnd("NULL");
 		}
-		/******************** MdcnlPrdctAthztn_Id_Assigner ********************************************************************************/
-		if(medicinalproductauthorizationidentifier.hasAssigner()) {
-			m.setMdcnlPrdctAthztnIdAssigner(String.valueOf(medicinalproductauthorizationidentifier.getAssigner()));
+
+
+		/******************** MdcnlPrdctAthztn_InternationalBirthDt ********************************************************************************/
+		if(medicinalproductauthorization.hasInternationalBirthDate()) {
+
+			m.addMdcnlPrdctAthztnInternationalBirthDt("\""+ca.uhn.fhir.util.DateUtils.formatDate(medicinalproductauthorization.getInternationalBirthDate())+"\"");
+		} else {
+			m.addMdcnlPrdctAthztnInternationalBirthDt("NULL");
 		}
-		/******************** MdcnlPrdctAthztn_Id_Sys ********************************************************************************/
-		if(medicinalproductauthorizationidentifier.hasSystem()) {
-			m.setMdcnlPrdctAthztnIdSys(String.valueOf(medicinalproductauthorizationidentifier.getSystem()));
+
+
+		/******************** medicinalproductauthorizationjurisdictionalauthorization ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.MedicinalProductAuthorization.MedicinalProductAuthorizationJurisdictionalAuthorizationComponent> medicinalproductauthorizationjurisdictionalauthorizationlist = medicinalproductauthorization.getJurisdictionalAuthorization();
+		for(int medicinalproductauthorizationjurisdictionalauthorizationi = 0; medicinalproductauthorizationjurisdictionalauthorizationi<medicinalproductauthorizationjurisdictionalauthorizationlist.size();medicinalproductauthorizationjurisdictionalauthorizationi++ ) {
+		org.hl7.fhir.r4.model.MedicinalProductAuthorization.MedicinalProductAuthorizationJurisdictionalAuthorizationComponent  medicinalproductauthorizationjurisdictionalauthorization = medicinalproductauthorizationjurisdictionalauthorizationlist.get(medicinalproductauthorizationjurisdictionalauthorizationi);
+
+		/******************** medicinalproductauthorizationjurisdictionalauthorizationcountry ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept medicinalproductauthorizationjurisdictionalauthorizationcountry = medicinalproductauthorizationjurisdictionalauthorization.getCountry();
+
+		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_Cntry_Txt ********************************************************************************/
+		if(medicinalproductauthorizationjurisdictionalauthorizationi == 0) {m.addMdcnlPrdctAthztnJrsdctnalAthztnCntryTxt("[");}
+		if(medicinalproductauthorizationjurisdictionalauthorizationcountry.hasText()) {
+
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnCntryTxt(String.valueOf(medicinalproductauthorizationjurisdictionalauthorizationcountry.getText()));
+		} else {
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnCntryTxt("NULL");
 		}
-		/******************** medicinalproductauthorizationidentifieruse ********************************************************************************/
-		org.hl7.fhir.r4.model.Identifier.IdentifierUse medicinalproductauthorizationidentifieruse = medicinalproductauthorizationidentifier.getUse();
-		m.setMdcnlPrdctAthztnIdUse(medicinalproductauthorizationidentifieruse.toCode());
+
+		if(medicinalproductauthorizationjurisdictionalauthorizationi == medicinalproductauthorizationjurisdictionalauthorizationlist.size()-1) {m.addMdcnlPrdctAthztnJrsdctnalAthztnCntryTxt("]");}
+
+
+		/******************** medicinalproductauthorizationjurisdictionalauthorizationcountrycoding ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.Coding> medicinalproductauthorizationjurisdictionalauthorizationcountrycodinglist = medicinalproductauthorizationjurisdictionalauthorizationcountry.getCoding();
+		for(int medicinalproductauthorizationjurisdictionalauthorizationcountrycodingi = 0; medicinalproductauthorizationjurisdictionalauthorizationcountrycodingi<medicinalproductauthorizationjurisdictionalauthorizationcountrycodinglist.size();medicinalproductauthorizationjurisdictionalauthorizationcountrycodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  medicinalproductauthorizationjurisdictionalauthorizationcountrycoding = medicinalproductauthorizationjurisdictionalauthorizationcountrycodinglist.get(medicinalproductauthorizationjurisdictionalauthorizationcountrycodingi);
+
+		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_Cntry_Cdg_Dsply ********************************************************************************/
+		if(medicinalproductauthorizationjurisdictionalauthorizationcountrycodingi == 0) {m.addMdcnlPrdctAthztnJrsdctnalAthztnCntryCdgDsply("[[");}
+		if(medicinalproductauthorizationjurisdictionalauthorizationcountrycoding.hasDisplay()) {
+
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnCntryCdgDsply(String.valueOf(medicinalproductauthorizationjurisdictionalauthorizationcountrycoding.getDisplay()));
+		} else {
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnCntryCdgDsply("NULL");
+		}
+
+		if(medicinalproductauthorizationjurisdictionalauthorizationcountrycodingi == medicinalproductauthorizationjurisdictionalauthorizationcountrycodinglist.size()-1) {m.addMdcnlPrdctAthztnJrsdctnalAthztnCntryCdgDsply("]]");}
+
+
+		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_Cntry_Cdg_Vrsn ********************************************************************************/
+		if(medicinalproductauthorizationjurisdictionalauthorizationcountrycodingi == 0) {m.addMdcnlPrdctAthztnJrsdctnalAthztnCntryCdgVrsn("[[");}
+		if(medicinalproductauthorizationjurisdictionalauthorizationcountrycoding.hasVersion()) {
+
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnCntryCdgVrsn(String.valueOf(medicinalproductauthorizationjurisdictionalauthorizationcountrycoding.getVersion()));
+		} else {
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnCntryCdgVrsn("NULL");
+		}
+
+		if(medicinalproductauthorizationjurisdictionalauthorizationcountrycodingi == medicinalproductauthorizationjurisdictionalauthorizationcountrycodinglist.size()-1) {m.addMdcnlPrdctAthztnJrsdctnalAthztnCntryCdgVrsn("]]");}
+
+
+		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_Cntry_Cdg_Cd ********************************************************************************/
+		if(medicinalproductauthorizationjurisdictionalauthorizationcountrycodingi == 0) {m.addMdcnlPrdctAthztnJrsdctnalAthztnCntryCdgCd("[[");}
+		if(medicinalproductauthorizationjurisdictionalauthorizationcountrycoding.hasCode()) {
+
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnCntryCdgCd(String.valueOf(medicinalproductauthorizationjurisdictionalauthorizationcountrycoding.getCode()));
+		} else {
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnCntryCdgCd("NULL");
+		}
+
+		if(medicinalproductauthorizationjurisdictionalauthorizationcountrycodingi == medicinalproductauthorizationjurisdictionalauthorizationcountrycodinglist.size()-1) {m.addMdcnlPrdctAthztnJrsdctnalAthztnCntryCdgCd("]]");}
+
+
+		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_Cntry_Cdg_UsrSltd ********************************************************************************/
+		if(medicinalproductauthorizationjurisdictionalauthorizationcountrycodingi == 0) {m.addMdcnlPrdctAthztnJrsdctnalAthztnCntryCdgUsrSltd("[[");}
+		if(medicinalproductauthorizationjurisdictionalauthorizationcountrycoding.hasUserSelected()) {
+
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnCntryCdgUsrSltd(String.valueOf(medicinalproductauthorizationjurisdictionalauthorizationcountrycoding.getUserSelected()));
+		} else {
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnCntryCdgUsrSltd("NULL");
+		}
+
+		if(medicinalproductauthorizationjurisdictionalauthorizationcountrycodingi == medicinalproductauthorizationjurisdictionalauthorizationcountrycodinglist.size()-1) {m.addMdcnlPrdctAthztnJrsdctnalAthztnCntryCdgUsrSltd("]]");}
+
+
+		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_Cntry_Cdg_Sys ********************************************************************************/
+		if(medicinalproductauthorizationjurisdictionalauthorizationcountrycodingi == 0) {m.addMdcnlPrdctAthztnJrsdctnalAthztnCntryCdgSys("[[");}
+		if(medicinalproductauthorizationjurisdictionalauthorizationcountrycoding.hasSystem()) {
+
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnCntryCdgSys(String.valueOf(medicinalproductauthorizationjurisdictionalauthorizationcountrycoding.getSystem()));
+		} else {
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnCntryCdgSys("NULL");
+		}
+
+		if(medicinalproductauthorizationjurisdictionalauthorizationcountrycodingi == medicinalproductauthorizationjurisdictionalauthorizationcountrycodinglist.size()-1) {m.addMdcnlPrdctAthztnJrsdctnalAthztnCntryCdgSys("]]");}
+
+
+		 };
+		/******************** medicinalproductauthorizationjurisdictionalauthorizationidentifier ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.Identifier> medicinalproductauthorizationjurisdictionalauthorizationidentifierlist = medicinalproductauthorizationjurisdictionalauthorization.getIdentifier();
+		for(int medicinalproductauthorizationjurisdictionalauthorizationidentifieri = 0; medicinalproductauthorizationjurisdictionalauthorizationidentifieri<medicinalproductauthorizationjurisdictionalauthorizationidentifierlist.size();medicinalproductauthorizationjurisdictionalauthorizationidentifieri++ ) {
+		org.hl7.fhir.r4.model.Identifier  medicinalproductauthorizationjurisdictionalauthorizationidentifier = medicinalproductauthorizationjurisdictionalauthorizationidentifierlist.get(medicinalproductauthorizationjurisdictionalauthorizationidentifieri);
+
+		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_Id_Vl ********************************************************************************/
+		if(medicinalproductauthorizationjurisdictionalauthorizationidentifieri == 0) {m.addMdcnlPrdctAthztnJrsdctnalAthztnIdVl("[[");}
+		if(medicinalproductauthorizationjurisdictionalauthorizationidentifier.hasValue()) {
+
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnIdVl(String.valueOf(medicinalproductauthorizationjurisdictionalauthorizationidentifier.getValue()));
+		} else {
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnIdVl("NULL");
+		}
+
+		if(medicinalproductauthorizationjurisdictionalauthorizationidentifieri == medicinalproductauthorizationjurisdictionalauthorizationidentifierlist.size()-1) {m.addMdcnlPrdctAthztnJrsdctnalAthztnIdVl("]]");}
+
+
+		/******************** medicinalproductauthorizationjurisdictionalauthorizationidentifiertype ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept medicinalproductauthorizationjurisdictionalauthorizationidentifiertype = medicinalproductauthorizationjurisdictionalauthorizationidentifier.getType();
+
+		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_Id_Typ_Txt ********************************************************************************/
+		if(medicinalproductauthorizationjurisdictionalauthorizationidentifieri == 0) {m.addMdcnlPrdctAthztnJrsdctnalAthztnIdTypTxt("[[");}
+		if(medicinalproductauthorizationjurisdictionalauthorizationidentifiertype.hasText()) {
+
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnIdTypTxt(String.valueOf(medicinalproductauthorizationjurisdictionalauthorizationidentifiertype.getText()));
+		} else {
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnIdTypTxt("NULL");
+		}
+
+		if(medicinalproductauthorizationjurisdictionalauthorizationidentifieri == medicinalproductauthorizationjurisdictionalauthorizationidentifierlist.size()-1) {m.addMdcnlPrdctAthztnJrsdctnalAthztnIdTypTxt("]]");}
+
+
+		/******************** medicinalproductauthorizationjurisdictionalauthorizationidentifiertypecoding ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.Coding> medicinalproductauthorizationjurisdictionalauthorizationidentifiertypecodinglist = medicinalproductauthorizationjurisdictionalauthorizationidentifiertype.getCoding();
+		for(int medicinalproductauthorizationjurisdictionalauthorizationidentifiertypecodingi = 0; medicinalproductauthorizationjurisdictionalauthorizationidentifiertypecodingi<medicinalproductauthorizationjurisdictionalauthorizationidentifiertypecodinglist.size();medicinalproductauthorizationjurisdictionalauthorizationidentifiertypecodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  medicinalproductauthorizationjurisdictionalauthorizationidentifiertypecoding = medicinalproductauthorizationjurisdictionalauthorizationidentifiertypecodinglist.get(medicinalproductauthorizationjurisdictionalauthorizationidentifiertypecodingi);
+
+		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_Id_Typ_Cdg_Dsply ********************************************************************************/
+		if(medicinalproductauthorizationjurisdictionalauthorizationidentifiertypecodingi == 0) {m.addMdcnlPrdctAthztnJrsdctnalAthztnIdTypCdgDsply("[[[");}
+		if(medicinalproductauthorizationjurisdictionalauthorizationidentifiertypecoding.hasDisplay()) {
+
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnIdTypCdgDsply(String.valueOf(medicinalproductauthorizationjurisdictionalauthorizationidentifiertypecoding.getDisplay()));
+		} else {
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnIdTypCdgDsply("NULL");
+		}
+
+		if(medicinalproductauthorizationjurisdictionalauthorizationidentifiertypecodingi == medicinalproductauthorizationjurisdictionalauthorizationidentifiertypecodinglist.size()-1) {m.addMdcnlPrdctAthztnJrsdctnalAthztnIdTypCdgDsply("]]]");}
+
+
+		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_Id_Typ_Cdg_Vrsn ********************************************************************************/
+		if(medicinalproductauthorizationjurisdictionalauthorizationidentifiertypecodingi == 0) {m.addMdcnlPrdctAthztnJrsdctnalAthztnIdTypCdgVrsn("[[[");}
+		if(medicinalproductauthorizationjurisdictionalauthorizationidentifiertypecoding.hasVersion()) {
+
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnIdTypCdgVrsn(String.valueOf(medicinalproductauthorizationjurisdictionalauthorizationidentifiertypecoding.getVersion()));
+		} else {
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnIdTypCdgVrsn("NULL");
+		}
+
+		if(medicinalproductauthorizationjurisdictionalauthorizationidentifiertypecodingi == medicinalproductauthorizationjurisdictionalauthorizationidentifiertypecodinglist.size()-1) {m.addMdcnlPrdctAthztnJrsdctnalAthztnIdTypCdgVrsn("]]]");}
+
+
+		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_Id_Typ_Cdg_Cd ********************************************************************************/
+		if(medicinalproductauthorizationjurisdictionalauthorizationidentifiertypecodingi == 0) {m.addMdcnlPrdctAthztnJrsdctnalAthztnIdTypCdgCd("[[[");}
+		if(medicinalproductauthorizationjurisdictionalauthorizationidentifiertypecoding.hasCode()) {
+
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnIdTypCdgCd(String.valueOf(medicinalproductauthorizationjurisdictionalauthorizationidentifiertypecoding.getCode()));
+		} else {
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnIdTypCdgCd("NULL");
+		}
+
+		if(medicinalproductauthorizationjurisdictionalauthorizationidentifiertypecodingi == medicinalproductauthorizationjurisdictionalauthorizationidentifiertypecodinglist.size()-1) {m.addMdcnlPrdctAthztnJrsdctnalAthztnIdTypCdgCd("]]]");}
+
+
+		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_Id_Typ_Cdg_UsrSltd ********************************************************************************/
+		if(medicinalproductauthorizationjurisdictionalauthorizationidentifiertypecodingi == 0) {m.addMdcnlPrdctAthztnJrsdctnalAthztnIdTypCdgUsrSltd("[[[");}
+		if(medicinalproductauthorizationjurisdictionalauthorizationidentifiertypecoding.hasUserSelected()) {
+
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnIdTypCdgUsrSltd(String.valueOf(medicinalproductauthorizationjurisdictionalauthorizationidentifiertypecoding.getUserSelected()));
+		} else {
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnIdTypCdgUsrSltd("NULL");
+		}
+
+		if(medicinalproductauthorizationjurisdictionalauthorizationidentifiertypecodingi == medicinalproductauthorizationjurisdictionalauthorizationidentifiertypecodinglist.size()-1) {m.addMdcnlPrdctAthztnJrsdctnalAthztnIdTypCdgUsrSltd("]]]");}
+
+
+		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_Id_Typ_Cdg_Sys ********************************************************************************/
+		if(medicinalproductauthorizationjurisdictionalauthorizationidentifiertypecodingi == 0) {m.addMdcnlPrdctAthztnJrsdctnalAthztnIdTypCdgSys("[[[");}
+		if(medicinalproductauthorizationjurisdictionalauthorizationidentifiertypecoding.hasSystem()) {
+
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnIdTypCdgSys(String.valueOf(medicinalproductauthorizationjurisdictionalauthorizationidentifiertypecoding.getSystem()));
+		} else {
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnIdTypCdgSys("NULL");
+		}
+
+		if(medicinalproductauthorizationjurisdictionalauthorizationidentifiertypecodingi == medicinalproductauthorizationjurisdictionalauthorizationidentifiertypecodinglist.size()-1) {m.addMdcnlPrdctAthztnJrsdctnalAthztnIdTypCdgSys("]]]");}
+
+
+		 };
+		/******************** medicinalproductauthorizationjurisdictionalauthorizationidentifierperiod ********************************************************************************/
+		org.hl7.fhir.r4.model.Period medicinalproductauthorizationjurisdictionalauthorizationidentifierperiod = medicinalproductauthorizationjurisdictionalauthorizationidentifier.getPeriod();
+
+		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_Id_Prd_Strt ********************************************************************************/
+		if(medicinalproductauthorizationjurisdictionalauthorizationidentifieri == 0) {m.addMdcnlPrdctAthztnJrsdctnalAthztnIdPrdStrt("[[");}
+		if(medicinalproductauthorizationjurisdictionalauthorizationidentifierperiod.hasStart()) {
+
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnIdPrdStrt("\""+ca.uhn.fhir.util.DateUtils.formatDate(medicinalproductauthorizationjurisdictionalauthorizationidentifierperiod.getStart())+"\"");
+		} else {
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnIdPrdStrt("NULL");
+		}
+
+		if(medicinalproductauthorizationjurisdictionalauthorizationidentifieri == medicinalproductauthorizationjurisdictionalauthorizationidentifierlist.size()-1) {m.addMdcnlPrdctAthztnJrsdctnalAthztnIdPrdStrt("]]");}
+
+
+		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_Id_Prd_End ********************************************************************************/
+		if(medicinalproductauthorizationjurisdictionalauthorizationidentifieri == 0) {m.addMdcnlPrdctAthztnJrsdctnalAthztnIdPrdEnd("[[");}
+		if(medicinalproductauthorizationjurisdictionalauthorizationidentifierperiod.hasEnd()) {
+
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnIdPrdEnd("\""+ca.uhn.fhir.util.DateUtils.formatDate(medicinalproductauthorizationjurisdictionalauthorizationidentifierperiod.getEnd())+"\"");
+		} else {
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnIdPrdEnd("NULL");
+		}
+
+		if(medicinalproductauthorizationjurisdictionalauthorizationidentifieri == medicinalproductauthorizationjurisdictionalauthorizationidentifierlist.size()-1) {m.addMdcnlPrdctAthztnJrsdctnalAthztnIdPrdEnd("]]");}
+
+
+		/******************** medicinalproductauthorizationjurisdictionalauthorizationidentifieruse ********************************************************************************/
+		org.hl7.fhir.r4.model.Identifier.IdentifierUse medicinalproductauthorizationjurisdictionalauthorizationidentifieruse = medicinalproductauthorizationjurisdictionalauthorizationidentifier.getUse();
+		if(medicinalproductauthorizationjurisdictionalauthorizationidentifieruse!=null) {
+		if(medicinalproductauthorizationjurisdictionalauthorizationidentifieri == 0) {
+
+		m.addMdcnlPrdctAthztnJrsdctnalAthztnIdUse("[[");		}
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnIdUse(medicinalproductauthorizationjurisdictionalauthorizationidentifieruse.toCode());
+		if(medicinalproductauthorizationjurisdictionalauthorizationidentifieri == medicinalproductauthorizationjurisdictionalauthorizationidentifierlist.size()-1) {
+
+		m.addMdcnlPrdctAthztnJrsdctnalAthztnIdUse("]]");		}
+
+		} else {
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnIdUse("NULL");
+		}
+
+		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_Id_Assigner ********************************************************************************/
+		if(medicinalproductauthorizationjurisdictionalauthorizationidentifieri == 0) {m.addMdcnlPrdctAthztnJrsdctnalAthztnIdAssigner("[[");}
+		if(medicinalproductauthorizationjurisdictionalauthorizationidentifier.hasAssigner()) {
+
+			if(medicinalproductauthorizationjurisdictionalauthorizationidentifier.getAssigner().getReference() != null) {
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnIdAssigner(medicinalproductauthorizationjurisdictionalauthorizationidentifier.getAssigner().getReference());
+			}
+		} else {
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnIdAssigner("NULL");
+		}
+
+		if(medicinalproductauthorizationjurisdictionalauthorizationidentifieri == medicinalproductauthorizationjurisdictionalauthorizationidentifierlist.size()-1) {m.addMdcnlPrdctAthztnJrsdctnalAthztnIdAssigner("]]");}
+
+
+		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_Id_Sys ********************************************************************************/
+		if(medicinalproductauthorizationjurisdictionalauthorizationidentifieri == 0) {m.addMdcnlPrdctAthztnJrsdctnalAthztnIdSys("[[");}
+		if(medicinalproductauthorizationjurisdictionalauthorizationidentifier.hasSystem()) {
+
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnIdSys(String.valueOf(medicinalproductauthorizationjurisdictionalauthorizationidentifier.getSystem()));
+		} else {
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnIdSys("NULL");
+		}
+
+		if(medicinalproductauthorizationjurisdictionalauthorizationidentifieri == medicinalproductauthorizationjurisdictionalauthorizationidentifierlist.size()-1) {m.addMdcnlPrdctAthztnJrsdctnalAthztnIdSys("]]");}
+
+
+		 };
+		/******************** medicinalproductauthorizationjurisdictionalauthorizationvalidityperiod ********************************************************************************/
+		org.hl7.fhir.r4.model.Period medicinalproductauthorizationjurisdictionalauthorizationvalidityperiod = medicinalproductauthorizationjurisdictionalauthorization.getValidityPeriod();
+
+		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_ValidityPrd_Strt ********************************************************************************/
+		if(medicinalproductauthorizationjurisdictionalauthorizationvalidityperiod.hasStart()) {
+
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnValidityPrdStrt("\""+ca.uhn.fhir.util.DateUtils.formatDate(medicinalproductauthorizationjurisdictionalauthorizationvalidityperiod.getStart())+"\"");
+		} else {
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnValidityPrdStrt("NULL");
+		}
+
+
+		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_ValidityPrd_End ********************************************************************************/
+		if(medicinalproductauthorizationjurisdictionalauthorizationvalidityperiod.hasEnd()) {
+
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnValidityPrdEnd("\""+ca.uhn.fhir.util.DateUtils.formatDate(medicinalproductauthorizationjurisdictionalauthorizationvalidityperiod.getEnd())+"\"");
+		} else {
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnValidityPrdEnd("NULL");
+		}
+
+
+		/******************** medicinalproductauthorizationjurisdictionalauthorizationlegalstatusofsupply ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept medicinalproductauthorizationjurisdictionalauthorizationlegalstatusofsupply = medicinalproductauthorizationjurisdictionalauthorization.getLegalStatusOfSupply();
+
+		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_LegalStsOfSpply_Txt ********************************************************************************/
+		if(medicinalproductauthorizationjurisdictionalauthorizationlegalstatusofsupply.hasText()) {
+
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnLegalStsOfSpplyTxt(String.valueOf(medicinalproductauthorizationjurisdictionalauthorizationlegalstatusofsupply.getText()));
+		} else {
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnLegalStsOfSpplyTxt("NULL");
+		}
+
+
+		/******************** medicinalproductauthorizationjurisdictionalauthorizationlegalstatusofsupplycoding ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.Coding> medicinalproductauthorizationjurisdictionalauthorizationlegalstatusofsupplycodinglist = medicinalproductauthorizationjurisdictionalauthorizationlegalstatusofsupply.getCoding();
+		for(int medicinalproductauthorizationjurisdictionalauthorizationlegalstatusofsupplycodingi = 0; medicinalproductauthorizationjurisdictionalauthorizationlegalstatusofsupplycodingi<medicinalproductauthorizationjurisdictionalauthorizationlegalstatusofsupplycodinglist.size();medicinalproductauthorizationjurisdictionalauthorizationlegalstatusofsupplycodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  medicinalproductauthorizationjurisdictionalauthorizationlegalstatusofsupplycoding = medicinalproductauthorizationjurisdictionalauthorizationlegalstatusofsupplycodinglist.get(medicinalproductauthorizationjurisdictionalauthorizationlegalstatusofsupplycodingi);
+
+		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_LegalStsOfSpply_Cdg_Dsply ********************************************************************************/
+		if(medicinalproductauthorizationjurisdictionalauthorizationlegalstatusofsupplycodingi == 0) {m.addMdcnlPrdctAthztnJrsdctnalAthztnLegalStsOfSpplyCdgDsply("[[");}
+		if(medicinalproductauthorizationjurisdictionalauthorizationlegalstatusofsupplycoding.hasDisplay()) {
+
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnLegalStsOfSpplyCdgDsply(String.valueOf(medicinalproductauthorizationjurisdictionalauthorizationlegalstatusofsupplycoding.getDisplay()));
+		} else {
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnLegalStsOfSpplyCdgDsply("NULL");
+		}
+
+		if(medicinalproductauthorizationjurisdictionalauthorizationlegalstatusofsupplycodingi == medicinalproductauthorizationjurisdictionalauthorizationlegalstatusofsupplycodinglist.size()-1) {m.addMdcnlPrdctAthztnJrsdctnalAthztnLegalStsOfSpplyCdgDsply("]]");}
+
+
+		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_LegalStsOfSpply_Cdg_Vrsn ********************************************************************************/
+		if(medicinalproductauthorizationjurisdictionalauthorizationlegalstatusofsupplycodingi == 0) {m.addMdcnlPrdctAthztnJrsdctnalAthztnLegalStsOfSpplyCdgVrsn("[[");}
+		if(medicinalproductauthorizationjurisdictionalauthorizationlegalstatusofsupplycoding.hasVersion()) {
+
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnLegalStsOfSpplyCdgVrsn(String.valueOf(medicinalproductauthorizationjurisdictionalauthorizationlegalstatusofsupplycoding.getVersion()));
+		} else {
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnLegalStsOfSpplyCdgVrsn("NULL");
+		}
+
+		if(medicinalproductauthorizationjurisdictionalauthorizationlegalstatusofsupplycodingi == medicinalproductauthorizationjurisdictionalauthorizationlegalstatusofsupplycodinglist.size()-1) {m.addMdcnlPrdctAthztnJrsdctnalAthztnLegalStsOfSpplyCdgVrsn("]]");}
+
+
+		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_LegalStsOfSpply_Cdg_Cd ********************************************************************************/
+		if(medicinalproductauthorizationjurisdictionalauthorizationlegalstatusofsupplycodingi == 0) {m.addMdcnlPrdctAthztnJrsdctnalAthztnLegalStsOfSpplyCdgCd("[[");}
+		if(medicinalproductauthorizationjurisdictionalauthorizationlegalstatusofsupplycoding.hasCode()) {
+
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnLegalStsOfSpplyCdgCd(String.valueOf(medicinalproductauthorizationjurisdictionalauthorizationlegalstatusofsupplycoding.getCode()));
+		} else {
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnLegalStsOfSpplyCdgCd("NULL");
+		}
+
+		if(medicinalproductauthorizationjurisdictionalauthorizationlegalstatusofsupplycodingi == medicinalproductauthorizationjurisdictionalauthorizationlegalstatusofsupplycodinglist.size()-1) {m.addMdcnlPrdctAthztnJrsdctnalAthztnLegalStsOfSpplyCdgCd("]]");}
+
+
+		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_LegalStsOfSpply_Cdg_UsrSltd ********************************************************************************/
+		if(medicinalproductauthorizationjurisdictionalauthorizationlegalstatusofsupplycodingi == 0) {m.addMdcnlPrdctAthztnJrsdctnalAthztnLegalStsOfSpplyCdgUsrSltd("[[");}
+		if(medicinalproductauthorizationjurisdictionalauthorizationlegalstatusofsupplycoding.hasUserSelected()) {
+
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnLegalStsOfSpplyCdgUsrSltd(String.valueOf(medicinalproductauthorizationjurisdictionalauthorizationlegalstatusofsupplycoding.getUserSelected()));
+		} else {
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnLegalStsOfSpplyCdgUsrSltd("NULL");
+		}
+
+		if(medicinalproductauthorizationjurisdictionalauthorizationlegalstatusofsupplycodingi == medicinalproductauthorizationjurisdictionalauthorizationlegalstatusofsupplycodinglist.size()-1) {m.addMdcnlPrdctAthztnJrsdctnalAthztnLegalStsOfSpplyCdgUsrSltd("]]");}
+
+
+		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_LegalStsOfSpply_Cdg_Sys ********************************************************************************/
+		if(medicinalproductauthorizationjurisdictionalauthorizationlegalstatusofsupplycodingi == 0) {m.addMdcnlPrdctAthztnJrsdctnalAthztnLegalStsOfSpplyCdgSys("[[");}
+		if(medicinalproductauthorizationjurisdictionalauthorizationlegalstatusofsupplycoding.hasSystem()) {
+
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnLegalStsOfSpplyCdgSys(String.valueOf(medicinalproductauthorizationjurisdictionalauthorizationlegalstatusofsupplycoding.getSystem()));
+		} else {
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnLegalStsOfSpplyCdgSys("NULL");
+		}
+
+		if(medicinalproductauthorizationjurisdictionalauthorizationlegalstatusofsupplycodingi == medicinalproductauthorizationjurisdictionalauthorizationlegalstatusofsupplycodinglist.size()-1) {m.addMdcnlPrdctAthztnJrsdctnalAthztnLegalStsOfSpplyCdgSys("]]");}
+
+
+		 };
+		/******************** medicinalproductauthorizationjurisdictionalauthorizationjurisdiction ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.CodeableConcept> medicinalproductauthorizationjurisdictionalauthorizationjurisdictionlist = medicinalproductauthorizationjurisdictionalauthorization.getJurisdiction();
+		for(int medicinalproductauthorizationjurisdictionalauthorizationjurisdictioni = 0; medicinalproductauthorizationjurisdictionalauthorizationjurisdictioni<medicinalproductauthorizationjurisdictionalauthorizationjurisdictionlist.size();medicinalproductauthorizationjurisdictionalauthorizationjurisdictioni++ ) {
+		org.hl7.fhir.r4.model.CodeableConcept  medicinalproductauthorizationjurisdictionalauthorizationjurisdiction = medicinalproductauthorizationjurisdictionalauthorizationjurisdictionlist.get(medicinalproductauthorizationjurisdictionalauthorizationjurisdictioni);
+
+		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_Jrsdctn_Txt ********************************************************************************/
+		if(medicinalproductauthorizationjurisdictionalauthorizationjurisdictioni == 0) {m.addMdcnlPrdctAthztnJrsdctnalAthztnJrsdctnTxt("[[");}
+		if(medicinalproductauthorizationjurisdictionalauthorizationjurisdiction.hasText()) {
+
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnJrsdctnTxt(String.valueOf(medicinalproductauthorizationjurisdictionalauthorizationjurisdiction.getText()));
+		} else {
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnJrsdctnTxt("NULL");
+		}
+
+		if(medicinalproductauthorizationjurisdictionalauthorizationjurisdictioni == medicinalproductauthorizationjurisdictionalauthorizationjurisdictionlist.size()-1) {m.addMdcnlPrdctAthztnJrsdctnalAthztnJrsdctnTxt("]]");}
+
+
+		/******************** medicinalproductauthorizationjurisdictionalauthorizationjurisdictioncoding ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.Coding> medicinalproductauthorizationjurisdictionalauthorizationjurisdictioncodinglist = medicinalproductauthorizationjurisdictionalauthorizationjurisdiction.getCoding();
+		for(int medicinalproductauthorizationjurisdictionalauthorizationjurisdictioncodingi = 0; medicinalproductauthorizationjurisdictionalauthorizationjurisdictioncodingi<medicinalproductauthorizationjurisdictionalauthorizationjurisdictioncodinglist.size();medicinalproductauthorizationjurisdictionalauthorizationjurisdictioncodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  medicinalproductauthorizationjurisdictionalauthorizationjurisdictioncoding = medicinalproductauthorizationjurisdictionalauthorizationjurisdictioncodinglist.get(medicinalproductauthorizationjurisdictionalauthorizationjurisdictioncodingi);
+
+		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_Jrsdctn_Cdg_Dsply ********************************************************************************/
+		if(medicinalproductauthorizationjurisdictionalauthorizationjurisdictioncodingi == 0) {m.addMdcnlPrdctAthztnJrsdctnalAthztnJrsdctnCdgDsply("[[[");}
+		if(medicinalproductauthorizationjurisdictionalauthorizationjurisdictioncoding.hasDisplay()) {
+
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnJrsdctnCdgDsply(String.valueOf(medicinalproductauthorizationjurisdictionalauthorizationjurisdictioncoding.getDisplay()));
+		} else {
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnJrsdctnCdgDsply("NULL");
+		}
+
+		if(medicinalproductauthorizationjurisdictionalauthorizationjurisdictioncodingi == medicinalproductauthorizationjurisdictionalauthorizationjurisdictioncodinglist.size()-1) {m.addMdcnlPrdctAthztnJrsdctnalAthztnJrsdctnCdgDsply("]]]");}
+
+
+		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_Jrsdctn_Cdg_Vrsn ********************************************************************************/
+		if(medicinalproductauthorizationjurisdictionalauthorizationjurisdictioncodingi == 0) {m.addMdcnlPrdctAthztnJrsdctnalAthztnJrsdctnCdgVrsn("[[[");}
+		if(medicinalproductauthorizationjurisdictionalauthorizationjurisdictioncoding.hasVersion()) {
+
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnJrsdctnCdgVrsn(String.valueOf(medicinalproductauthorizationjurisdictionalauthorizationjurisdictioncoding.getVersion()));
+		} else {
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnJrsdctnCdgVrsn("NULL");
+		}
+
+		if(medicinalproductauthorizationjurisdictionalauthorizationjurisdictioncodingi == medicinalproductauthorizationjurisdictionalauthorizationjurisdictioncodinglist.size()-1) {m.addMdcnlPrdctAthztnJrsdctnalAthztnJrsdctnCdgVrsn("]]]");}
+
+
+		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_Jrsdctn_Cdg_Cd ********************************************************************************/
+		if(medicinalproductauthorizationjurisdictionalauthorizationjurisdictioncodingi == 0) {m.addMdcnlPrdctAthztnJrsdctnalAthztnJrsdctnCdgCd("[[[");}
+		if(medicinalproductauthorizationjurisdictionalauthorizationjurisdictioncoding.hasCode()) {
+
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnJrsdctnCdgCd(String.valueOf(medicinalproductauthorizationjurisdictionalauthorizationjurisdictioncoding.getCode()));
+		} else {
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnJrsdctnCdgCd("NULL");
+		}
+
+		if(medicinalproductauthorizationjurisdictionalauthorizationjurisdictioncodingi == medicinalproductauthorizationjurisdictionalauthorizationjurisdictioncodinglist.size()-1) {m.addMdcnlPrdctAthztnJrsdctnalAthztnJrsdctnCdgCd("]]]");}
+
+
+		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_Jrsdctn_Cdg_UsrSltd ********************************************************************************/
+		if(medicinalproductauthorizationjurisdictionalauthorizationjurisdictioncodingi == 0) {m.addMdcnlPrdctAthztnJrsdctnalAthztnJrsdctnCdgUsrSltd("[[[");}
+		if(medicinalproductauthorizationjurisdictionalauthorizationjurisdictioncoding.hasUserSelected()) {
+
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnJrsdctnCdgUsrSltd(String.valueOf(medicinalproductauthorizationjurisdictionalauthorizationjurisdictioncoding.getUserSelected()));
+		} else {
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnJrsdctnCdgUsrSltd("NULL");
+		}
+
+		if(medicinalproductauthorizationjurisdictionalauthorizationjurisdictioncodingi == medicinalproductauthorizationjurisdictionalauthorizationjurisdictioncodinglist.size()-1) {m.addMdcnlPrdctAthztnJrsdctnalAthztnJrsdctnCdgUsrSltd("]]]");}
+
+
+		/******************** MdcnlPrdctAthztn_JrsdctnalAthztn_Jrsdctn_Cdg_Sys ********************************************************************************/
+		if(medicinalproductauthorizationjurisdictionalauthorizationjurisdictioncodingi == 0) {m.addMdcnlPrdctAthztnJrsdctnalAthztnJrsdctnCdgSys("[[[");}
+		if(medicinalproductauthorizationjurisdictionalauthorizationjurisdictioncoding.hasSystem()) {
+
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnJrsdctnCdgSys(String.valueOf(medicinalproductauthorizationjurisdictionalauthorizationjurisdictioncoding.getSystem()));
+		} else {
+			m.addMdcnlPrdctAthztnJrsdctnalAthztnJrsdctnCdgSys("NULL");
+		}
+
+		if(medicinalproductauthorizationjurisdictionalauthorizationjurisdictioncodingi == medicinalproductauthorizationjurisdictionalauthorizationjurisdictioncodinglist.size()-1) {m.addMdcnlPrdctAthztnJrsdctnalAthztnJrsdctnCdgSys("]]]");}
+
+
+		 };
+		 };
+		 };
+		/******************** MdcnlPrdctAthztn_DtOfFirstAthztn ********************************************************************************/
+		if(medicinalproductauthorization.hasDateOfFirstAuthorization()) {
+
+			m.addMdcnlPrdctAthztnDtOfFirstAthztn("\""+ca.uhn.fhir.util.DateUtils.formatDate(medicinalproductauthorization.getDateOfFirstAuthorization())+"\"");
+		} else {
+			m.addMdcnlPrdctAthztnDtOfFirstAthztn("NULL");
+		}
+
 
 		/******************** medicinalproductauthorizationjurisdiction ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept medicinalproductauthorizationjurisdiction = medicinalproductauthorization.getJurisdictionFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.CodeableConcept> medicinalproductauthorizationjurisdictionlist = medicinalproductauthorization.getJurisdiction();
+		for(int medicinalproductauthorizationjurisdictioni = 0; medicinalproductauthorizationjurisdictioni<medicinalproductauthorizationjurisdictionlist.size();medicinalproductauthorizationjurisdictioni++ ) {
+		org.hl7.fhir.r4.model.CodeableConcept  medicinalproductauthorizationjurisdiction = medicinalproductauthorizationjurisdictionlist.get(medicinalproductauthorizationjurisdictioni);
 
 		/******************** MdcnlPrdctAthztn_Jrsdctn_Txt ********************************************************************************/
+		if(medicinalproductauthorizationjurisdictioni == 0) {m.addMdcnlPrdctAthztnJrsdctnTxt("[");}
 		if(medicinalproductauthorizationjurisdiction.hasText()) {
-			m.setMdcnlPrdctAthztnJrsdctnTxt(String.valueOf(medicinalproductauthorizationjurisdiction.getText()));
+
+			m.addMdcnlPrdctAthztnJrsdctnTxt(String.valueOf(medicinalproductauthorizationjurisdiction.getText()));
+		} else {
+			m.addMdcnlPrdctAthztnJrsdctnTxt("NULL");
 		}
+
+		if(medicinalproductauthorizationjurisdictioni == medicinalproductauthorizationjurisdictionlist.size()-1) {m.addMdcnlPrdctAthztnJrsdctnTxt("]");}
+
+
 		/******************** medicinalproductauthorizationjurisdictioncoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding medicinalproductauthorizationjurisdictioncoding = medicinalproductauthorizationjurisdiction.getCodingFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.Coding> medicinalproductauthorizationjurisdictioncodinglist = medicinalproductauthorizationjurisdiction.getCoding();
+		for(int medicinalproductauthorizationjurisdictioncodingi = 0; medicinalproductauthorizationjurisdictioncodingi<medicinalproductauthorizationjurisdictioncodinglist.size();medicinalproductauthorizationjurisdictioncodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  medicinalproductauthorizationjurisdictioncoding = medicinalproductauthorizationjurisdictioncodinglist.get(medicinalproductauthorizationjurisdictioncodingi);
+
+		/******************** MdcnlPrdctAthztn_Jrsdctn_Cdg_Dsply ********************************************************************************/
+		if(medicinalproductauthorizationjurisdictioncodingi == 0) {m.addMdcnlPrdctAthztnJrsdctnCdgDsply("[[");}
+		if(medicinalproductauthorizationjurisdictioncoding.hasDisplay()) {
+
+			m.addMdcnlPrdctAthztnJrsdctnCdgDsply(String.valueOf(medicinalproductauthorizationjurisdictioncoding.getDisplay()));
+		} else {
+			m.addMdcnlPrdctAthztnJrsdctnCdgDsply("NULL");
+		}
+
+		if(medicinalproductauthorizationjurisdictioncodingi == medicinalproductauthorizationjurisdictioncodinglist.size()-1) {m.addMdcnlPrdctAthztnJrsdctnCdgDsply("]]");}
+
 
 		/******************** MdcnlPrdctAthztn_Jrsdctn_Cdg_Vrsn ********************************************************************************/
+		if(medicinalproductauthorizationjurisdictioncodingi == 0) {m.addMdcnlPrdctAthztnJrsdctnCdgVrsn("[[");}
 		if(medicinalproductauthorizationjurisdictioncoding.hasVersion()) {
-			m.setMdcnlPrdctAthztnJrsdctnCdgVrsn(String.valueOf(medicinalproductauthorizationjurisdictioncoding.getVersion()));
+
+			m.addMdcnlPrdctAthztnJrsdctnCdgVrsn(String.valueOf(medicinalproductauthorizationjurisdictioncoding.getVersion()));
+		} else {
+			m.addMdcnlPrdctAthztnJrsdctnCdgVrsn("NULL");
 		}
-		/******************** MdcnlPrdctAthztn_Jrsdctn_Cdg_Dsply ********************************************************************************/
-		if(medicinalproductauthorizationjurisdictioncoding.hasDisplay()) {
-			m.setMdcnlPrdctAthztnJrsdctnCdgDsply(String.valueOf(medicinalproductauthorizationjurisdictioncoding.getDisplay()));
-		}
+
+		if(medicinalproductauthorizationjurisdictioncodingi == medicinalproductauthorizationjurisdictioncodinglist.size()-1) {m.addMdcnlPrdctAthztnJrsdctnCdgVrsn("]]");}
+
+
 		/******************** MdcnlPrdctAthztn_Jrsdctn_Cdg_Cd ********************************************************************************/
+		if(medicinalproductauthorizationjurisdictioncodingi == 0) {m.addMdcnlPrdctAthztnJrsdctnCdgCd("[[");}
 		if(medicinalproductauthorizationjurisdictioncoding.hasCode()) {
-			m.setMdcnlPrdctAthztnJrsdctnCdgCd(String.valueOf(medicinalproductauthorizationjurisdictioncoding.getCode()));
+
+			m.addMdcnlPrdctAthztnJrsdctnCdgCd(String.valueOf(medicinalproductauthorizationjurisdictioncoding.getCode()));
+		} else {
+			m.addMdcnlPrdctAthztnJrsdctnCdgCd("NULL");
 		}
+
+		if(medicinalproductauthorizationjurisdictioncodingi == medicinalproductauthorizationjurisdictioncodinglist.size()-1) {m.addMdcnlPrdctAthztnJrsdctnCdgCd("]]");}
+
+
 		/******************** MdcnlPrdctAthztn_Jrsdctn_Cdg_UsrSltd ********************************************************************************/
+		if(medicinalproductauthorizationjurisdictioncodingi == 0) {m.addMdcnlPrdctAthztnJrsdctnCdgUsrSltd("[[");}
 		if(medicinalproductauthorizationjurisdictioncoding.hasUserSelected()) {
-			m.setMdcnlPrdctAthztnJrsdctnCdgUsrSltd(String.valueOf(medicinalproductauthorizationjurisdictioncoding.getUserSelected()));
+
+			m.addMdcnlPrdctAthztnJrsdctnCdgUsrSltd(String.valueOf(medicinalproductauthorizationjurisdictioncoding.getUserSelected()));
+		} else {
+			m.addMdcnlPrdctAthztnJrsdctnCdgUsrSltd("NULL");
 		}
+
+		if(medicinalproductauthorizationjurisdictioncodingi == medicinalproductauthorizationjurisdictioncodinglist.size()-1) {m.addMdcnlPrdctAthztnJrsdctnCdgUsrSltd("]]");}
+
+
 		/******************** MdcnlPrdctAthztn_Jrsdctn_Cdg_Sys ********************************************************************************/
+		if(medicinalproductauthorizationjurisdictioncodingi == 0) {m.addMdcnlPrdctAthztnJrsdctnCdgSys("[[");}
 		if(medicinalproductauthorizationjurisdictioncoding.hasSystem()) {
-			m.setMdcnlPrdctAthztnJrsdctnCdgSys(String.valueOf(medicinalproductauthorizationjurisdictioncoding.getSystem()));
+
+			m.addMdcnlPrdctAthztnJrsdctnCdgSys(String.valueOf(medicinalproductauthorizationjurisdictioncoding.getSystem()));
+		} else {
+			m.addMdcnlPrdctAthztnJrsdctnCdgSys("NULL");
 		}
+
+		if(medicinalproductauthorizationjurisdictioncodingi == medicinalproductauthorizationjurisdictioncodinglist.size()-1) {m.addMdcnlPrdctAthztnJrsdctnCdgSys("]]");}
+
+
+		 };
+		 };
+		/******************** MdcnlPrdctAthztn_RestoreDt ********************************************************************************/
+		if(medicinalproductauthorization.hasRestoreDate()) {
+
+			m.addMdcnlPrdctAthztnRestoreDt("\""+ca.uhn.fhir.util.DateUtils.formatDate(medicinalproductauthorization.getRestoreDate())+"\"");
+		} else {
+			m.addMdcnlPrdctAthztnRestoreDt("NULL");
+		}
+
+
+		/******************** MdcnlPrdctAthztn_Holder ********************************************************************************/
+		if(medicinalproductauthorization.hasHolder()) {
+
+			if(medicinalproductauthorization.getHolder().getReference() != null) {
+			m.addMdcnlPrdctAthztnHolder(medicinalproductauthorization.getHolder().getReference());
+			}
+		} else {
+			m.addMdcnlPrdctAthztnHolder("NULL");
+		}
+
+
+		/******************** MdcnlPrdctAthztn_Regulator ********************************************************************************/
+		if(medicinalproductauthorization.hasRegulator()) {
+
+			if(medicinalproductauthorization.getRegulator().getReference() != null) {
+			m.addMdcnlPrdctAthztnRegulator(medicinalproductauthorization.getRegulator().getReference());
+			}
+		} else {
+			m.addMdcnlPrdctAthztnRegulator("NULL");
+		}
+
+
+		/******************** medicinalproductauthorizationlegalbasis ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept medicinalproductauthorizationlegalbasis = medicinalproductauthorization.getLegalBasis();
+
+		/******************** MdcnlPrdctAthztn_LegalBasis_Txt ********************************************************************************/
+		if(medicinalproductauthorizationlegalbasis.hasText()) {
+
+			m.addMdcnlPrdctAthztnLegalBasisTxt(String.valueOf(medicinalproductauthorizationlegalbasis.getText()));
+		} else {
+			m.addMdcnlPrdctAthztnLegalBasisTxt("NULL");
+		}
+
+
+		/******************** medicinalproductauthorizationlegalbasiscoding ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.Coding> medicinalproductauthorizationlegalbasiscodinglist = medicinalproductauthorizationlegalbasis.getCoding();
+		for(int medicinalproductauthorizationlegalbasiscodingi = 0; medicinalproductauthorizationlegalbasiscodingi<medicinalproductauthorizationlegalbasiscodinglist.size();medicinalproductauthorizationlegalbasiscodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  medicinalproductauthorizationlegalbasiscoding = medicinalproductauthorizationlegalbasiscodinglist.get(medicinalproductauthorizationlegalbasiscodingi);
+
+		/******************** MdcnlPrdctAthztn_LegalBasis_Cdg_Dsply ********************************************************************************/
+		if(medicinalproductauthorizationlegalbasiscodingi == 0) {m.addMdcnlPrdctAthztnLegalBasisCdgDsply("[");}
+		if(medicinalproductauthorizationlegalbasiscoding.hasDisplay()) {
+
+			m.addMdcnlPrdctAthztnLegalBasisCdgDsply(String.valueOf(medicinalproductauthorizationlegalbasiscoding.getDisplay()));
+		} else {
+			m.addMdcnlPrdctAthztnLegalBasisCdgDsply("NULL");
+		}
+
+		if(medicinalproductauthorizationlegalbasiscodingi == medicinalproductauthorizationlegalbasiscodinglist.size()-1) {m.addMdcnlPrdctAthztnLegalBasisCdgDsply("]");}
+
+
+		/******************** MdcnlPrdctAthztn_LegalBasis_Cdg_Vrsn ********************************************************************************/
+		if(medicinalproductauthorizationlegalbasiscodingi == 0) {m.addMdcnlPrdctAthztnLegalBasisCdgVrsn("[");}
+		if(medicinalproductauthorizationlegalbasiscoding.hasVersion()) {
+
+			m.addMdcnlPrdctAthztnLegalBasisCdgVrsn(String.valueOf(medicinalproductauthorizationlegalbasiscoding.getVersion()));
+		} else {
+			m.addMdcnlPrdctAthztnLegalBasisCdgVrsn("NULL");
+		}
+
+		if(medicinalproductauthorizationlegalbasiscodingi == medicinalproductauthorizationlegalbasiscodinglist.size()-1) {m.addMdcnlPrdctAthztnLegalBasisCdgVrsn("]");}
+
+
+		/******************** MdcnlPrdctAthztn_LegalBasis_Cdg_Cd ********************************************************************************/
+		if(medicinalproductauthorizationlegalbasiscodingi == 0) {m.addMdcnlPrdctAthztnLegalBasisCdgCd("[");}
+		if(medicinalproductauthorizationlegalbasiscoding.hasCode()) {
+
+			m.addMdcnlPrdctAthztnLegalBasisCdgCd(String.valueOf(medicinalproductauthorizationlegalbasiscoding.getCode()));
+		} else {
+			m.addMdcnlPrdctAthztnLegalBasisCdgCd("NULL");
+		}
+
+		if(medicinalproductauthorizationlegalbasiscodingi == medicinalproductauthorizationlegalbasiscodinglist.size()-1) {m.addMdcnlPrdctAthztnLegalBasisCdgCd("]");}
+
+
+		/******************** MdcnlPrdctAthztn_LegalBasis_Cdg_UsrSltd ********************************************************************************/
+		if(medicinalproductauthorizationlegalbasiscodingi == 0) {m.addMdcnlPrdctAthztnLegalBasisCdgUsrSltd("[");}
+		if(medicinalproductauthorizationlegalbasiscoding.hasUserSelected()) {
+
+			m.addMdcnlPrdctAthztnLegalBasisCdgUsrSltd(String.valueOf(medicinalproductauthorizationlegalbasiscoding.getUserSelected()));
+		} else {
+			m.addMdcnlPrdctAthztnLegalBasisCdgUsrSltd("NULL");
+		}
+
+		if(medicinalproductauthorizationlegalbasiscodingi == medicinalproductauthorizationlegalbasiscodinglist.size()-1) {m.addMdcnlPrdctAthztnLegalBasisCdgUsrSltd("]");}
+
+
+		/******************** MdcnlPrdctAthztn_LegalBasis_Cdg_Sys ********************************************************************************/
+		if(medicinalproductauthorizationlegalbasiscodingi == 0) {m.addMdcnlPrdctAthztnLegalBasisCdgSys("[");}
+		if(medicinalproductauthorizationlegalbasiscoding.hasSystem()) {
+
+			m.addMdcnlPrdctAthztnLegalBasisCdgSys(String.valueOf(medicinalproductauthorizationlegalbasiscoding.getSystem()));
+		} else {
+			m.addMdcnlPrdctAthztnLegalBasisCdgSys("NULL");
+		}
+
+		if(medicinalproductauthorizationlegalbasiscodingi == medicinalproductauthorizationlegalbasiscodinglist.size()-1) {m.addMdcnlPrdctAthztnLegalBasisCdgSys("]");}
+
+
+		 };
 		return m;
 	}
 }

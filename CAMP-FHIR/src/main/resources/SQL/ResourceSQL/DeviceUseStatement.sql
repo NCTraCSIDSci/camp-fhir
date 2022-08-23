@@ -66,7 +66,6 @@ DvcUseStmnt_TmgTmg_Rpt_BndsRng_Lw_Unt TEXT,
 DvcUseStmnt_TmgTmg_Rpt_BndsRng_Lw_Vl TEXT,
 DvcUseStmnt_TmgTmg_Rpt_Cnt TEXT,
 DvcUseStmnt_TmgTmg_Rpt_CntMx TEXT,
-DvcUseStmnt_TmgTmg_Rpt_DayOfWeek TEXT,
 DvcUseStmnt_TmgTmg_Rpt_Duration TEXT,
 DvcUseStmnt_TmgTmg_Rpt_DurationMx TEXT,
 DvcUseStmnt_TmgTmg_Rpt_DurationUnt TEXT,
@@ -77,7 +76,6 @@ DvcUseStmnt_TmgTmg_Rpt_Prd TEXT,
 DvcUseStmnt_TmgTmg_Rpt_PrdMx TEXT,
 DvcUseStmnt_TmgTmg_Rpt_PrdUnt TEXT,
 DvcUseStmnt_TmgTmg_Rpt_TimeOfDay TEXT,
-DvcUseStmnt_TmgTmg_Rpt_When TEXT,
 PRIMARY KEY(id)) ENGINE=MyISAM
     ROW_FORMAT=COMPRESSED 
     KEY_BLOCK_SIZE=8;

@@ -11,216 +11,435 @@ public class OrganizationAffiliationConversion
 		organizationaffiliation.setId(o.getId());
 
 		/******************** OrgnztnAffiliation_Active ********************************************************************************/
-		if(o.getOrgnztnAffiliationActive() != null) {
-			organizationaffiliation.setActive(Boolean.parseBoolean(o.getOrgnztnAffiliationActive()));
+		if(o.getOrgnztnAffiliationActive() != null ) {
+
+			if(o.getOrgnztnAffiliationActive().replace("[","").replace("]","").equals("NULL") | o.getOrgnztnAffiliationActive()==null) {} else {
+			organizationaffiliation.setActive(Boolean.parseBoolean(o.getOrgnztnAffiliationActive().replace("[","").replace("]","").replace("\"","")));
+			}
 		}
-		/******************** organizationaffiliationcode ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept organizationaffiliationcode =  new org.hl7.fhir.r4.model.CodeableConcept();
-		organizationaffiliation.addCode(organizationaffiliationcode);
-
-		/******************** organizationaffiliationcodecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding organizationaffiliationcodecoding =  new org.hl7.fhir.r4.model.Coding();
-		organizationaffiliationcode.addCoding(organizationaffiliationcodecoding);
-
 		/******************** OrgnztnAffiliation_Cd_Cdg_Cd ********************************************************************************/
-		if(o.getOrgnztnAffiliationCdCdgCd() != null) {
-			organizationaffiliationcodecoding.setCode(o.getOrgnztnAffiliationCdCdgCd());
+		if(o.getOrgnztnAffiliationCdCdgCd() != null ) {
+
+			String[] arrayi0 = o.getOrgnztnAffiliationCdCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(organizationaffiliation.getCode().size() < i0+1) { organizationaffiliation.addCode(); }
+				String[] arrayi1 = o.getOrgnztnAffiliationCdCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(organizationaffiliation.getCode().get(i0).getCoding().size() < i1+1) { organizationaffiliation.getCode().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {organizationaffiliation.getCode().get(i0).getCoding().get(i1).setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** OrgnztnAffiliation_Cd_Cdg_Dsply ********************************************************************************/
-		if(o.getOrgnztnAffiliationCdCdgDsply() != null) {
-			organizationaffiliationcodecoding.setDisplay(o.getOrgnztnAffiliationCdCdgDsply());
+		if(o.getOrgnztnAffiliationCdCdgDsply() != null ) {
+
+			String[] arrayi0 = o.getOrgnztnAffiliationCdCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(organizationaffiliation.getCode().size() < i0+1) { organizationaffiliation.addCode(); }
+				String[] arrayi1 = o.getOrgnztnAffiliationCdCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(organizationaffiliation.getCode().get(i0).getCoding().size() < i1+1) { organizationaffiliation.getCode().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {organizationaffiliation.getCode().get(i0).getCoding().get(i1).setDisplay(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** OrgnztnAffiliation_Cd_Cdg_Sys ********************************************************************************/
-		if(o.getOrgnztnAffiliationCdCdgSys() != null) {
-			organizationaffiliationcodecoding.setSystem(o.getOrgnztnAffiliationCdCdgSys());
+		if(o.getOrgnztnAffiliationCdCdgSys() != null ) {
+
+			String[] arrayi0 = o.getOrgnztnAffiliationCdCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(organizationaffiliation.getCode().size() < i0+1) { organizationaffiliation.addCode(); }
+				String[] arrayi1 = o.getOrgnztnAffiliationCdCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(organizationaffiliation.getCode().get(i0).getCoding().size() < i1+1) { organizationaffiliation.getCode().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {organizationaffiliation.getCode().get(i0).getCoding().get(i1).setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** OrgnztnAffiliation_Cd_Cdg_UsrSltd ********************************************************************************/
-		if(o.getOrgnztnAffiliationCdCdgUsrSltd() != null) {
-			organizationaffiliationcodecoding.setUserSelected(Boolean.parseBoolean(o.getOrgnztnAffiliationCdCdgUsrSltd()));
+		if(o.getOrgnztnAffiliationCdCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = o.getOrgnztnAffiliationCdCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(organizationaffiliation.getCode().size() < i0+1) { organizationaffiliation.addCode(); }
+				String[] arrayi1 = o.getOrgnztnAffiliationCdCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(organizationaffiliation.getCode().get(i0).getCoding().size() < i1+1) { organizationaffiliation.getCode().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {organizationaffiliation.getCode().get(i0).getCoding().get(i1).setUserSelected(Boolean.parseBoolean(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
 		}
 		/******************** OrgnztnAffiliation_Cd_Cdg_Vrsn ********************************************************************************/
-		if(o.getOrgnztnAffiliationCdCdgVrsn() != null) {
-			organizationaffiliationcodecoding.setVersion(o.getOrgnztnAffiliationCdCdgVrsn());
+		if(o.getOrgnztnAffiliationCdCdgVrsn() != null ) {
+
+			String[] arrayi0 = o.getOrgnztnAffiliationCdCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(organizationaffiliation.getCode().size() < i0+1) { organizationaffiliation.addCode(); }
+				String[] arrayi1 = o.getOrgnztnAffiliationCdCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(organizationaffiliation.getCode().get(i0).getCoding().size() < i1+1) { organizationaffiliation.getCode().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {organizationaffiliation.getCode().get(i0).getCoding().get(i1).setVersion(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** OrgnztnAffiliation_Cd_Txt ********************************************************************************/
-		if(o.getOrgnztnAffiliationCdTxt() != null) {
-			organizationaffiliationcode.setText(o.getOrgnztnAffiliationCdTxt());
+		if(o.getOrgnztnAffiliationCdTxt() != null ) {
+
+			String[] arrayi0 = o.getOrgnztnAffiliationCdTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(organizationaffiliation.getCode().size() < i0+1) { organizationaffiliation.addCode(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {organizationaffiliation.getCode().get(i0).setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** OrgnztnAffiliation_Endpoint ********************************************************************************/
-		if(o.getOrgnztnAffiliationEndpoint() != null) {
-			organizationaffiliation.addEndpoint( new org.hl7.fhir.r4.model.Reference(o.getOrgnztnAffiliationEndpoint()));
+		if(o.getOrgnztnAffiliationEndpoint() != null ) {
+
+				for( String currListStrSplit : o.getOrgnztnAffiliationEndpoint().replace("[","").replace("]","").replace("\"","").split(",")){
+			if(currListStrSplit.replace("[","").replace("]","").equals("NULL") | currListStrSplit==null) {} else {
+			organizationaffiliation.addEndpoint(new org.hl7.fhir.r4.model.Reference(currListStrSplit.replace("[","").replace("]","").replace("\"","")));
+			}				}
+
 		}
 		/******************** OrgnztnAffiliation_HlthcrSrv ********************************************************************************/
-		if(o.getOrgnztnAffiliationHlthcrSrv() != null) {
-			organizationaffiliation.addHealthcareService( new org.hl7.fhir.r4.model.Reference(o.getOrgnztnAffiliationHlthcrSrv()));
-		}
-		/******************** organizationaffiliationidentifier ********************************************************************************/
-		org.hl7.fhir.r4.model.Identifier organizationaffiliationidentifier =  new org.hl7.fhir.r4.model.Identifier();
-		organizationaffiliation.addIdentifier(organizationaffiliationidentifier);
+		if(o.getOrgnztnAffiliationHlthcrSrv() != null ) {
 
+				for( String currListStrSplit : o.getOrgnztnAffiliationHlthcrSrv().replace("[","").replace("]","").replace("\"","").split(",")){
+			if(currListStrSplit.replace("[","").replace("]","").equals("NULL") | currListStrSplit==null) {} else {
+			organizationaffiliation.addHealthcareService(new org.hl7.fhir.r4.model.Reference(currListStrSplit.replace("[","").replace("]","").replace("\"","")));
+			}				}
+
+		}
 		/******************** OrgnztnAffiliation_Id_Assigner ********************************************************************************/
-		if(o.getOrgnztnAffiliationIdAssigner() != null) {
-			organizationaffiliationidentifier.setAssigner( new org.hl7.fhir.r4.model.Reference(o.getOrgnztnAffiliationIdAssigner()));
-		}
-		/******************** organizationaffiliationidentifierperiod ********************************************************************************/
-		org.hl7.fhir.r4.model.Period organizationaffiliationidentifierperiod =  new org.hl7.fhir.r4.model.Period();
-		organizationaffiliationidentifier.setPeriod(organizationaffiliationidentifierperiod);
+		if(o.getOrgnztnAffiliationIdAssigner() != null ) {
 
+			String[] arrayi0 = o.getOrgnztnAffiliationIdAssigner().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(organizationaffiliation.getIdentifier().size() < i0+1) { organizationaffiliation.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {organizationaffiliation.getIdentifier().get(i0).setAssigner(new org.hl7.fhir.r4.model.Reference(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** OrgnztnAffiliation_Id_Prd_End ********************************************************************************/
-		if(o.getOrgnztnAffiliationIdPrdEnd() != null) {
-			java.text.SimpleDateFormat OrgnztnAffiliation_Id_Prd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date OrgnztnAffiliation_Id_Prd_Enddate = OrgnztnAffiliation_Id_Prd_Endsdf.parse(o.getOrgnztnAffiliationIdPrdEnd());
-			organizationaffiliationidentifierperiod.setEnd(OrgnztnAffiliation_Id_Prd_Enddate);
+		if(o.getOrgnztnAffiliationIdPrdEnd() != null ) {
+
+			String[] arrayi0 = o.getOrgnztnAffiliationIdPrdEnd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(organizationaffiliation.getIdentifier().size() < i0+1) { organizationaffiliation.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {organizationaffiliation.getIdentifier().get(i0).getPeriod().setEnd(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** OrgnztnAffiliation_Id_Prd_Strt ********************************************************************************/
-		if(o.getOrgnztnAffiliationIdPrdStrt() != null) {
-			java.text.SimpleDateFormat OrgnztnAffiliation_Id_Prd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date OrgnztnAffiliation_Id_Prd_Strtdate = OrgnztnAffiliation_Id_Prd_Strtsdf.parse(o.getOrgnztnAffiliationIdPrdStrt());
-			organizationaffiliationidentifierperiod.setStart(OrgnztnAffiliation_Id_Prd_Strtdate);
+		if(o.getOrgnztnAffiliationIdPrdStrt() != null ) {
+
+			String[] arrayi0 = o.getOrgnztnAffiliationIdPrdStrt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(organizationaffiliation.getIdentifier().size() < i0+1) { organizationaffiliation.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {organizationaffiliation.getIdentifier().get(i0).getPeriod().setStart(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** OrgnztnAffiliation_Id_Sys ********************************************************************************/
-		if(o.getOrgnztnAffiliationIdSys() != null) {
-			organizationaffiliationidentifier.setSystem(o.getOrgnztnAffiliationIdSys());
+		if(o.getOrgnztnAffiliationIdSys() != null ) {
+
+			String[] arrayi0 = o.getOrgnztnAffiliationIdSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(organizationaffiliation.getIdentifier().size() < i0+1) { organizationaffiliation.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {organizationaffiliation.getIdentifier().get(i0).setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
-		/******************** organizationaffiliationidentifiertype ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept organizationaffiliationidentifiertype =  new org.hl7.fhir.r4.model.CodeableConcept();
-		organizationaffiliationidentifier.setType(organizationaffiliationidentifiertype);
-
-		/******************** organizationaffiliationidentifiertypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding organizationaffiliationidentifiertypecoding =  new org.hl7.fhir.r4.model.Coding();
-		organizationaffiliationidentifiertype.addCoding(organizationaffiliationidentifiertypecoding);
-
 		/******************** OrgnztnAffiliation_Id_Typ_Cdg_Cd ********************************************************************************/
-		if(o.getOrgnztnAffiliationIdTypCdgCd() != null) {
-			organizationaffiliationidentifiertypecoding.setCode(o.getOrgnztnAffiliationIdTypCdgCd());
+		if(o.getOrgnztnAffiliationIdTypCdgCd() != null ) {
+
+			String[] arrayi0 = o.getOrgnztnAffiliationIdTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(organizationaffiliation.getIdentifier().size() < i0+1) { organizationaffiliation.addIdentifier(); }
+				String[] arrayi1 = o.getOrgnztnAffiliationIdTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(organizationaffiliation.getIdentifier().get(i0).getType().getCoding().size() < i1+1) { organizationaffiliation.getIdentifier().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {organizationaffiliation.getIdentifier().get(i0).getType().getCoding().get(i1).setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** OrgnztnAffiliation_Id_Typ_Cdg_Dsply ********************************************************************************/
-		if(o.getOrgnztnAffiliationIdTypCdgDsply() != null) {
-			organizationaffiliationidentifiertypecoding.setDisplay(o.getOrgnztnAffiliationIdTypCdgDsply());
+		if(o.getOrgnztnAffiliationIdTypCdgDsply() != null ) {
+
+			String[] arrayi0 = o.getOrgnztnAffiliationIdTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(organizationaffiliation.getIdentifier().size() < i0+1) { organizationaffiliation.addIdentifier(); }
+				String[] arrayi1 = o.getOrgnztnAffiliationIdTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(organizationaffiliation.getIdentifier().get(i0).getType().getCoding().size() < i1+1) { organizationaffiliation.getIdentifier().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {organizationaffiliation.getIdentifier().get(i0).getType().getCoding().get(i1).setDisplay(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** OrgnztnAffiliation_Id_Typ_Cdg_Sys ********************************************************************************/
-		if(o.getOrgnztnAffiliationIdTypCdgSys() != null) {
-			organizationaffiliationidentifiertypecoding.setSystem(o.getOrgnztnAffiliationIdTypCdgSys());
+		if(o.getOrgnztnAffiliationIdTypCdgSys() != null ) {
+
+			String[] arrayi0 = o.getOrgnztnAffiliationIdTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(organizationaffiliation.getIdentifier().size() < i0+1) { organizationaffiliation.addIdentifier(); }
+				String[] arrayi1 = o.getOrgnztnAffiliationIdTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(organizationaffiliation.getIdentifier().get(i0).getType().getCoding().size() < i1+1) { organizationaffiliation.getIdentifier().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {organizationaffiliation.getIdentifier().get(i0).getType().getCoding().get(i1).setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** OrgnztnAffiliation_Id_Typ_Cdg_UsrSltd ********************************************************************************/
-		if(o.getOrgnztnAffiliationIdTypCdgUsrSltd() != null) {
-			organizationaffiliationidentifiertypecoding.setUserSelected(Boolean.parseBoolean(o.getOrgnztnAffiliationIdTypCdgUsrSltd()));
+		if(o.getOrgnztnAffiliationIdTypCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = o.getOrgnztnAffiliationIdTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(organizationaffiliation.getIdentifier().size() < i0+1) { organizationaffiliation.addIdentifier(); }
+				String[] arrayi1 = o.getOrgnztnAffiliationIdTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(organizationaffiliation.getIdentifier().get(i0).getType().getCoding().size() < i1+1) { organizationaffiliation.getIdentifier().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {organizationaffiliation.getIdentifier().get(i0).getType().getCoding().get(i1).setUserSelected(Boolean.parseBoolean(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
 		}
 		/******************** OrgnztnAffiliation_Id_Typ_Cdg_Vrsn ********************************************************************************/
-		if(o.getOrgnztnAffiliationIdTypCdgVrsn() != null) {
-			organizationaffiliationidentifiertypecoding.setVersion(o.getOrgnztnAffiliationIdTypCdgVrsn());
+		if(o.getOrgnztnAffiliationIdTypCdgVrsn() != null ) {
+
+			String[] arrayi0 = o.getOrgnztnAffiliationIdTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(organizationaffiliation.getIdentifier().size() < i0+1) { organizationaffiliation.addIdentifier(); }
+				String[] arrayi1 = o.getOrgnztnAffiliationIdTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(organizationaffiliation.getIdentifier().get(i0).getType().getCoding().size() < i1+1) { organizationaffiliation.getIdentifier().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {organizationaffiliation.getIdentifier().get(i0).getType().getCoding().get(i1).setVersion(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** OrgnztnAffiliation_Id_Typ_Txt ********************************************************************************/
-		if(o.getOrgnztnAffiliationIdTypTxt() != null) {
-			organizationaffiliationidentifiertype.setText(o.getOrgnztnAffiliationIdTypTxt());
-		}
-		/******************** organizationaffiliationidentifieruse ********************************************************************************/
-		org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory organizationaffiliationidentifieruse =  new org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory();
-		organizationaffiliationidentifier.setUse(organizationaffiliationidentifieruse.fromCode(o.getOrgnztnAffiliationIdUse()));
+		if(o.getOrgnztnAffiliationIdTypTxt() != null ) {
 
+			String[] arrayi0 = o.getOrgnztnAffiliationIdTypTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(organizationaffiliation.getIdentifier().size() < i0+1) { organizationaffiliation.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {organizationaffiliation.getIdentifier().get(i0).getType().setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
+		}
+		/******************** OrgnztnAffiliation_Id_Use ********************************************************************************/
+		if(o.getOrgnztnAffiliationIdUse() != null ) {
+
+			String[] arrayi0 = o.getOrgnztnAffiliationIdUse().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(organizationaffiliation.getIdentifier().size() < i0+1) { organizationaffiliation.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {organizationaffiliation.getIdentifier().get(i0).setUse(new org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory().fromCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** OrgnztnAffiliation_Id_Vl ********************************************************************************/
-		if(o.getOrgnztnAffiliationIdVl() != null) {
-			organizationaffiliationidentifier.setValue(o.getOrgnztnAffiliationIdVl());
+		if(o.getOrgnztnAffiliationIdVl() != null ) {
+
+			String[] arrayi0 = o.getOrgnztnAffiliationIdVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(organizationaffiliation.getIdentifier().size() < i0+1) { organizationaffiliation.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {organizationaffiliation.getIdentifier().get(i0).setValue(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		/******************** OrgnztnAffiliation_Lctn ********************************************************************************/
-		if(o.getOrgnztnAffiliationLctn() != null) {
-			organizationaffiliation.addLocation( new org.hl7.fhir.r4.model.Reference(o.getOrgnztnAffiliationLctn()));
+		if(o.getOrgnztnAffiliationLctn() != null ) {
+
+				for( String currListStrSplit : o.getOrgnztnAffiliationLctn().replace("[","").replace("]","").replace("\"","").split(",")){
+			if(currListStrSplit.replace("[","").replace("]","").equals("NULL") | currListStrSplit==null) {} else {
+			organizationaffiliation.addLocation(new org.hl7.fhir.r4.model.Reference(currListStrSplit.replace("[","").replace("]","").replace("\"","")));
+			}				}
+
 		}
 		/******************** OrgnztnAffiliation_Network ********************************************************************************/
-		if(o.getOrgnztnAffiliationNetwork() != null) {
-			organizationaffiliation.addNetwork( new org.hl7.fhir.r4.model.Reference(o.getOrgnztnAffiliationNetwork()));
+		if(o.getOrgnztnAffiliationNetwork() != null ) {
+
+				for( String currListStrSplit : o.getOrgnztnAffiliationNetwork().replace("[","").replace("]","").replace("\"","").split(",")){
+			if(currListStrSplit.replace("[","").replace("]","").equals("NULL") | currListStrSplit==null) {} else {
+			organizationaffiliation.addNetwork(new org.hl7.fhir.r4.model.Reference(currListStrSplit.replace("[","").replace("]","").replace("\"","")));
+			}				}
+
 		}
 		/******************** OrgnztnAffiliation_Orgnztn ********************************************************************************/
-		if(o.getOrgnztnAffiliationOrgnztn() != null) {
-			organizationaffiliation.setOrganization( new org.hl7.fhir.r4.model.Reference(o.getOrgnztnAffiliationOrgnztn()));
+		if(o.getOrgnztnAffiliationOrgnztn() != null ) {
+
+			if(o.getOrgnztnAffiliationOrgnztn().replace("[","").replace("]","").equals("NULL") | o.getOrgnztnAffiliationOrgnztn()==null) {} else {
+			organizationaffiliation.setOrganization(new org.hl7.fhir.r4.model.Reference(o.getOrgnztnAffiliationOrgnztn().replace("[","").replace("]","").replace("\"","")));
+			}
 		}
 		/******************** OrgnztnAffiliation_ParticipatingOrgnztn ********************************************************************************/
-		if(o.getOrgnztnAffiliationParticipatingOrgnztn() != null) {
-			organizationaffiliation.setParticipatingOrganization( new org.hl7.fhir.r4.model.Reference(o.getOrgnztnAffiliationParticipatingOrgnztn()));
-		}
-		/******************** organizationaffiliationperiod ********************************************************************************/
-		org.hl7.fhir.r4.model.Period organizationaffiliationperiod =  new org.hl7.fhir.r4.model.Period();
-		organizationaffiliation.setPeriod(organizationaffiliationperiod);
+		if(o.getOrgnztnAffiliationParticipatingOrgnztn() != null ) {
 
+			if(o.getOrgnztnAffiliationParticipatingOrgnztn().replace("[","").replace("]","").equals("NULL") | o.getOrgnztnAffiliationParticipatingOrgnztn()==null) {} else {
+			organizationaffiliation.setParticipatingOrganization(new org.hl7.fhir.r4.model.Reference(o.getOrgnztnAffiliationParticipatingOrgnztn().replace("[","").replace("]","").replace("\"","")));
+			}
+		}
 		/******************** OrgnztnAffiliation_Prd_End ********************************************************************************/
-		if(o.getOrgnztnAffiliationPrdEnd() != null) {
-			java.text.SimpleDateFormat OrgnztnAffiliation_Prd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date OrgnztnAffiliation_Prd_Enddate = OrgnztnAffiliation_Prd_Endsdf.parse(o.getOrgnztnAffiliationPrdEnd());
-			organizationaffiliationperiod.setEnd(OrgnztnAffiliation_Prd_Enddate);
+		if(o.getOrgnztnAffiliationPrdEnd() != null ) {
+
+			if(o.getOrgnztnAffiliationPrdEnd().replace("[","").replace("]","").equals("NULL") | o.getOrgnztnAffiliationPrdEnd()==null) {} else {
+			organizationaffiliation.getPeriod().setEnd(o.getOrgnztnAffiliationPrdEnd().replace("[","").replace("]","").equals("NULL") | o.getOrgnztnAffiliationPrdEnd()==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(o.getOrgnztnAffiliationPrdEnd().replace("[","").replace("]","").replace("\"","")));
+			}
 		}
 		/******************** OrgnztnAffiliation_Prd_Strt ********************************************************************************/
-		if(o.getOrgnztnAffiliationPrdStrt() != null) {
-			java.text.SimpleDateFormat OrgnztnAffiliation_Prd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date OrgnztnAffiliation_Prd_Strtdate = OrgnztnAffiliation_Prd_Strtsdf.parse(o.getOrgnztnAffiliationPrdStrt());
-			organizationaffiliationperiod.setStart(OrgnztnAffiliation_Prd_Strtdate);
+		if(o.getOrgnztnAffiliationPrdStrt() != null ) {
+
+			if(o.getOrgnztnAffiliationPrdStrt().replace("[","").replace("]","").equals("NULL") | o.getOrgnztnAffiliationPrdStrt()==null) {} else {
+			organizationaffiliation.getPeriod().setStart(o.getOrgnztnAffiliationPrdStrt().replace("[","").replace("]","").equals("NULL") | o.getOrgnztnAffiliationPrdStrt()==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(o.getOrgnztnAffiliationPrdStrt().replace("[","").replace("]","").replace("\"","")));
+			}
 		}
-		/******************** organizationaffiliationspecialty ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept organizationaffiliationspecialty =  new org.hl7.fhir.r4.model.CodeableConcept();
-		organizationaffiliation.addSpecialty(organizationaffiliationspecialty);
-
-		/******************** organizationaffiliationspecialtycoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding organizationaffiliationspecialtycoding =  new org.hl7.fhir.r4.model.Coding();
-		organizationaffiliationspecialty.addCoding(organizationaffiliationspecialtycoding);
-
 		/******************** OrgnztnAffiliation_Spclty_Cdg_Cd ********************************************************************************/
-		if(o.getOrgnztnAffiliationSpcltyCdgCd() != null) {
-			organizationaffiliationspecialtycoding.setCode(o.getOrgnztnAffiliationSpcltyCdgCd());
+		if(o.getOrgnztnAffiliationSpcltyCdgCd() != null ) {
+
+			String[] arrayi0 = o.getOrgnztnAffiliationSpcltyCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(organizationaffiliation.getSpecialty().size() < i0+1) { organizationaffiliation.addSpecialty(); }
+				String[] arrayi1 = o.getOrgnztnAffiliationSpcltyCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(organizationaffiliation.getSpecialty().get(i0).getCoding().size() < i1+1) { organizationaffiliation.getSpecialty().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {organizationaffiliation.getSpecialty().get(i0).getCoding().get(i1).setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** OrgnztnAffiliation_Spclty_Cdg_Dsply ********************************************************************************/
-		if(o.getOrgnztnAffiliationSpcltyCdgDsply() != null) {
-			organizationaffiliationspecialtycoding.setDisplay(o.getOrgnztnAffiliationSpcltyCdgDsply());
+		if(o.getOrgnztnAffiliationSpcltyCdgDsply() != null ) {
+
+			String[] arrayi0 = o.getOrgnztnAffiliationSpcltyCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(organizationaffiliation.getSpecialty().size() < i0+1) { organizationaffiliation.addSpecialty(); }
+				String[] arrayi1 = o.getOrgnztnAffiliationSpcltyCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(organizationaffiliation.getSpecialty().get(i0).getCoding().size() < i1+1) { organizationaffiliation.getSpecialty().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {organizationaffiliation.getSpecialty().get(i0).getCoding().get(i1).setDisplay(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** OrgnztnAffiliation_Spclty_Cdg_Sys ********************************************************************************/
-		if(o.getOrgnztnAffiliationSpcltyCdgSys() != null) {
-			organizationaffiliationspecialtycoding.setSystem(o.getOrgnztnAffiliationSpcltyCdgSys());
+		if(o.getOrgnztnAffiliationSpcltyCdgSys() != null ) {
+
+			String[] arrayi0 = o.getOrgnztnAffiliationSpcltyCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(organizationaffiliation.getSpecialty().size() < i0+1) { organizationaffiliation.addSpecialty(); }
+				String[] arrayi1 = o.getOrgnztnAffiliationSpcltyCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(organizationaffiliation.getSpecialty().get(i0).getCoding().size() < i1+1) { organizationaffiliation.getSpecialty().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {organizationaffiliation.getSpecialty().get(i0).getCoding().get(i1).setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** OrgnztnAffiliation_Spclty_Cdg_UsrSltd ********************************************************************************/
-		if(o.getOrgnztnAffiliationSpcltyCdgUsrSltd() != null) {
-			organizationaffiliationspecialtycoding.setUserSelected(Boolean.parseBoolean(o.getOrgnztnAffiliationSpcltyCdgUsrSltd()));
+		if(o.getOrgnztnAffiliationSpcltyCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = o.getOrgnztnAffiliationSpcltyCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(organizationaffiliation.getSpecialty().size() < i0+1) { organizationaffiliation.addSpecialty(); }
+				String[] arrayi1 = o.getOrgnztnAffiliationSpcltyCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(organizationaffiliation.getSpecialty().get(i0).getCoding().size() < i1+1) { organizationaffiliation.getSpecialty().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {organizationaffiliation.getSpecialty().get(i0).getCoding().get(i1).setUserSelected(Boolean.parseBoolean(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
 		}
 		/******************** OrgnztnAffiliation_Spclty_Cdg_Vrsn ********************************************************************************/
-		if(o.getOrgnztnAffiliationSpcltyCdgVrsn() != null) {
-			organizationaffiliationspecialtycoding.setVersion(o.getOrgnztnAffiliationSpcltyCdgVrsn());
+		if(o.getOrgnztnAffiliationSpcltyCdgVrsn() != null ) {
+
+			String[] arrayi0 = o.getOrgnztnAffiliationSpcltyCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(organizationaffiliation.getSpecialty().size() < i0+1) { organizationaffiliation.addSpecialty(); }
+				String[] arrayi1 = o.getOrgnztnAffiliationSpcltyCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(organizationaffiliation.getSpecialty().get(i0).getCoding().size() < i1+1) { organizationaffiliation.getSpecialty().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {organizationaffiliation.getSpecialty().get(i0).getCoding().get(i1).setVersion(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** OrgnztnAffiliation_Spclty_Txt ********************************************************************************/
-		if(o.getOrgnztnAffiliationSpcltyTxt() != null) {
-			organizationaffiliationspecialty.setText(o.getOrgnztnAffiliationSpcltyTxt());
+		if(o.getOrgnztnAffiliationSpcltyTxt() != null ) {
+
+			String[] arrayi0 = o.getOrgnztnAffiliationSpcltyTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(organizationaffiliation.getSpecialty().size() < i0+1) { organizationaffiliation.addSpecialty(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {organizationaffiliation.getSpecialty().get(i0).setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
-		/******************** organizationaffiliationtelecom ********************************************************************************/
-		org.hl7.fhir.r4.model.ContactPoint organizationaffiliationtelecom =  new org.hl7.fhir.r4.model.ContactPoint();
-		organizationaffiliation.addTelecom(organizationaffiliationtelecom);
-
-		/******************** organizationaffiliationtelecomperiod ********************************************************************************/
-		org.hl7.fhir.r4.model.Period organizationaffiliationtelecomperiod =  new org.hl7.fhir.r4.model.Period();
-		organizationaffiliationtelecom.setPeriod(organizationaffiliationtelecomperiod);
-
 		/******************** OrgnztnAffiliation_Tlcm_Prd_End ********************************************************************************/
-		if(o.getOrgnztnAffiliationTlcmPrdEnd() != null) {
-			java.text.SimpleDateFormat OrgnztnAffiliation_Tlcm_Prd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date OrgnztnAffiliation_Tlcm_Prd_Enddate = OrgnztnAffiliation_Tlcm_Prd_Endsdf.parse(o.getOrgnztnAffiliationTlcmPrdEnd());
-			organizationaffiliationtelecomperiod.setEnd(OrgnztnAffiliation_Tlcm_Prd_Enddate);
+		if(o.getOrgnztnAffiliationTlcmPrdEnd() != null ) {
+
+			String[] arrayi0 = o.getOrgnztnAffiliationTlcmPrdEnd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(organizationaffiliation.getTelecom().size() < i0+1) { organizationaffiliation.addTelecom(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {organizationaffiliation.getTelecom().get(i0).getPeriod().setEnd(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** OrgnztnAffiliation_Tlcm_Prd_Strt ********************************************************************************/
-		if(o.getOrgnztnAffiliationTlcmPrdStrt() != null) {
-			java.text.SimpleDateFormat OrgnztnAffiliation_Tlcm_Prd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date OrgnztnAffiliation_Tlcm_Prd_Strtdate = OrgnztnAffiliation_Tlcm_Prd_Strtsdf.parse(o.getOrgnztnAffiliationTlcmPrdStrt());
-			organizationaffiliationtelecomperiod.setStart(OrgnztnAffiliation_Tlcm_Prd_Strtdate);
+		if(o.getOrgnztnAffiliationTlcmPrdStrt() != null ) {
+
+			String[] arrayi0 = o.getOrgnztnAffiliationTlcmPrdStrt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(organizationaffiliation.getTelecom().size() < i0+1) { organizationaffiliation.addTelecom(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {organizationaffiliation.getTelecom().get(i0).getPeriod().setStart(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** OrgnztnAffiliation_Tlcm_Rnk ********************************************************************************/
-		if(o.getOrgnztnAffiliationTlcmRnk() != null) {
-			organizationaffiliationtelecom.setRank(Integer.parseInt(o.getOrgnztnAffiliationTlcmRnk()));
+		if(o.getOrgnztnAffiliationTlcmRnk() != null ) {
+
+			String[] arrayi0 = o.getOrgnztnAffiliationTlcmRnk().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(organizationaffiliation.getTelecom().size() < i0+1) { organizationaffiliation.addTelecom(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {organizationaffiliation.getTelecom().get(i0).setRank(Integer.parseInt(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
-		/******************** organizationaffiliationtelecomsystem ********************************************************************************/
-		org.hl7.fhir.r4.model.ContactPoint.ContactPointSystemEnumFactory organizationaffiliationtelecomsystem =  new org.hl7.fhir.r4.model.ContactPoint.ContactPointSystemEnumFactory();
-		organizationaffiliationtelecom.setSystem(organizationaffiliationtelecomsystem.fromCode(o.getOrgnztnAffiliationTlcmSys()));
+		/******************** OrgnztnAffiliation_Tlcm_Sys ********************************************************************************/
+		if(o.getOrgnztnAffiliationTlcmSys() != null ) {
 
-		/******************** organizationaffiliationtelecomuse ********************************************************************************/
-		org.hl7.fhir.r4.model.ContactPoint.ContactPointUseEnumFactory organizationaffiliationtelecomuse =  new org.hl7.fhir.r4.model.ContactPoint.ContactPointUseEnumFactory();
-		organizationaffiliationtelecom.setUse(organizationaffiliationtelecomuse.fromCode(o.getOrgnztnAffiliationTlcmUse()));
+			String[] arrayi0 = o.getOrgnztnAffiliationTlcmSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(organizationaffiliation.getTelecom().size() < i0+1) { organizationaffiliation.addTelecom(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {organizationaffiliation.getTelecom().get(i0).setSystem(new org.hl7.fhir.r4.model.ContactPoint.ContactPointSystemEnumFactory().fromCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
 
+		}
+		/******************** OrgnztnAffiliation_Tlcm_Use ********************************************************************************/
+		if(o.getOrgnztnAffiliationTlcmUse() != null ) {
+
+			String[] arrayi0 = o.getOrgnztnAffiliationTlcmUse().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(organizationaffiliation.getTelecom().size() < i0+1) { organizationaffiliation.addTelecom(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {organizationaffiliation.getTelecom().get(i0).setUse(new org.hl7.fhir.r4.model.ContactPoint.ContactPointUseEnumFactory().fromCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** OrgnztnAffiliation_Tlcm_Vl ********************************************************************************/
-		if(o.getOrgnztnAffiliationTlcmVl() != null) {
-			organizationaffiliationtelecom.setValue(o.getOrgnztnAffiliationTlcmVl());
+		if(o.getOrgnztnAffiliationTlcmVl() != null ) {
+
+			String[] arrayi0 = o.getOrgnztnAffiliationTlcmVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(organizationaffiliation.getTelecom().size() < i0+1) { organizationaffiliation.addTelecom(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {organizationaffiliation.getTelecom().get(i0).setValue(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		return organizationaffiliation;
 	}

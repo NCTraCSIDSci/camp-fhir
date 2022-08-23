@@ -11,196 +11,421 @@ public class ScheduleConversion
 		schedule.setId(s.getId());
 
 		/******************** Schdl_Active ********************************************************************************/
-		if(s.getSchdlActive() != null) {
-			schedule.setActive(Boolean.parseBoolean(s.getSchdlActive()));
+		if(s.getSchdlActive() != null ) {
+
+			if(s.getSchdlActive().replace("[","").replace("]","").equals("NULL") | s.getSchdlActive()==null) {} else {
+			schedule.setActive(Boolean.parseBoolean(s.getSchdlActive().replace("[","").replace("]","").replace("\"","")));
+			}
 		}
 		/******************** Schdl_Actor ********************************************************************************/
-		if(s.getSchdlActor() != null) {
-			schedule.addActor( new org.hl7.fhir.r4.model.Reference(s.getSchdlActor()));
+		if(s.getSchdlActor() != null ) {
+
+				for( String currListStrSplit : s.getSchdlActor().replace("[","").replace("]","").replace("\"","").split(",")){
+			if(currListStrSplit.replace("[","").replace("]","").equals("NULL") | currListStrSplit==null) {} else {
+			schedule.addActor(new org.hl7.fhir.r4.model.Reference(currListStrSplit.replace("[","").replace("]","").replace("\"","")));
+			}				}
+
 		}
 		/******************** Schdl_Comment ********************************************************************************/
-		if(s.getSchdlComment() != null) {
-			schedule.setComment(s.getSchdlComment());
-		}
-		/******************** scheduleidentifier ********************************************************************************/
-		org.hl7.fhir.r4.model.Identifier scheduleidentifier =  new org.hl7.fhir.r4.model.Identifier();
-		schedule.addIdentifier(scheduleidentifier);
+		if(s.getSchdlComment() != null ) {
 
+			if(s.getSchdlComment().replace("[","").replace("]","").equals("NULL") | s.getSchdlComment()==null) {} else {
+			schedule.setComment(s.getSchdlComment().replace("[","").replace("]","").replace("\"",""));
+			}
+		}
 		/******************** Schdl_Id_Assigner ********************************************************************************/
-		if(s.getSchdlIdAssigner() != null) {
-			scheduleidentifier.setAssigner( new org.hl7.fhir.r4.model.Reference(s.getSchdlIdAssigner()));
-		}
-		/******************** scheduleidentifierperiod ********************************************************************************/
-		org.hl7.fhir.r4.model.Period scheduleidentifierperiod =  new org.hl7.fhir.r4.model.Period();
-		scheduleidentifier.setPeriod(scheduleidentifierperiod);
+		if(s.getSchdlIdAssigner() != null ) {
 
+			String[] arrayi0 = s.getSchdlIdAssigner().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(schedule.getIdentifier().size() < i0+1) { schedule.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {schedule.getIdentifier().get(i0).setAssigner(new org.hl7.fhir.r4.model.Reference(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** Schdl_Id_Prd_End ********************************************************************************/
-		if(s.getSchdlIdPrdEnd() != null) {
-			java.text.SimpleDateFormat Schdl_Id_Prd_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date Schdl_Id_Prd_Enddate = Schdl_Id_Prd_Endsdf.parse(s.getSchdlIdPrdEnd());
-			scheduleidentifierperiod.setEnd(Schdl_Id_Prd_Enddate);
+		if(s.getSchdlIdPrdEnd() != null ) {
+
+			String[] arrayi0 = s.getSchdlIdPrdEnd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(schedule.getIdentifier().size() < i0+1) { schedule.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {schedule.getIdentifier().get(i0).getPeriod().setEnd(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** Schdl_Id_Prd_Strt ********************************************************************************/
-		if(s.getSchdlIdPrdStrt() != null) {
-			java.text.SimpleDateFormat Schdl_Id_Prd_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date Schdl_Id_Prd_Strtdate = Schdl_Id_Prd_Strtsdf.parse(s.getSchdlIdPrdStrt());
-			scheduleidentifierperiod.setStart(Schdl_Id_Prd_Strtdate);
+		if(s.getSchdlIdPrdStrt() != null ) {
+
+			String[] arrayi0 = s.getSchdlIdPrdStrt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(schedule.getIdentifier().size() < i0+1) { schedule.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {schedule.getIdentifier().get(i0).getPeriod().setStart(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").equals("NULL") | arrayi0[i0].replace("[","").replace("]","").replace("\"","")==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
 		}
 		/******************** Schdl_Id_Sys ********************************************************************************/
-		if(s.getSchdlIdSys() != null) {
-			scheduleidentifier.setSystem(s.getSchdlIdSys());
+		if(s.getSchdlIdSys() != null ) {
+
+			String[] arrayi0 = s.getSchdlIdSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(schedule.getIdentifier().size() < i0+1) { schedule.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {schedule.getIdentifier().get(i0).setSystem(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
-		/******************** scheduleidentifiertype ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept scheduleidentifiertype =  new org.hl7.fhir.r4.model.CodeableConcept();
-		scheduleidentifier.setType(scheduleidentifiertype);
-
-		/******************** scheduleidentifiertypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding scheduleidentifiertypecoding =  new org.hl7.fhir.r4.model.Coding();
-		scheduleidentifiertype.addCoding(scheduleidentifiertypecoding);
-
 		/******************** Schdl_Id_Typ_Cdg_Cd ********************************************************************************/
-		if(s.getSchdlIdTypCdgCd() != null) {
-			scheduleidentifiertypecoding.setCode(s.getSchdlIdTypCdgCd());
+		if(s.getSchdlIdTypCdgCd() != null ) {
+
+			String[] arrayi0 = s.getSchdlIdTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(schedule.getIdentifier().size() < i0+1) { schedule.addIdentifier(); }
+				String[] arrayi1 = s.getSchdlIdTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(schedule.getIdentifier().get(i0).getType().getCoding().size() < i1+1) { schedule.getIdentifier().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {schedule.getIdentifier().get(i0).getType().getCoding().get(i1).setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** Schdl_Id_Typ_Cdg_Dsply ********************************************************************************/
-		if(s.getSchdlIdTypCdgDsply() != null) {
-			scheduleidentifiertypecoding.setDisplay(s.getSchdlIdTypCdgDsply());
+		if(s.getSchdlIdTypCdgDsply() != null ) {
+
+			String[] arrayi0 = s.getSchdlIdTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(schedule.getIdentifier().size() < i0+1) { schedule.addIdentifier(); }
+				String[] arrayi1 = s.getSchdlIdTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(schedule.getIdentifier().get(i0).getType().getCoding().size() < i1+1) { schedule.getIdentifier().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {schedule.getIdentifier().get(i0).getType().getCoding().get(i1).setDisplay(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** Schdl_Id_Typ_Cdg_Sys ********************************************************************************/
-		if(s.getSchdlIdTypCdgSys() != null) {
-			scheduleidentifiertypecoding.setSystem(s.getSchdlIdTypCdgSys());
+		if(s.getSchdlIdTypCdgSys() != null ) {
+
+			String[] arrayi0 = s.getSchdlIdTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(schedule.getIdentifier().size() < i0+1) { schedule.addIdentifier(); }
+				String[] arrayi1 = s.getSchdlIdTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(schedule.getIdentifier().get(i0).getType().getCoding().size() < i1+1) { schedule.getIdentifier().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {schedule.getIdentifier().get(i0).getType().getCoding().get(i1).setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** Schdl_Id_Typ_Cdg_UsrSltd ********************************************************************************/
-		if(s.getSchdlIdTypCdgUsrSltd() != null) {
-			scheduleidentifiertypecoding.setUserSelected(Boolean.parseBoolean(s.getSchdlIdTypCdgUsrSltd()));
+		if(s.getSchdlIdTypCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = s.getSchdlIdTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(schedule.getIdentifier().size() < i0+1) { schedule.addIdentifier(); }
+				String[] arrayi1 = s.getSchdlIdTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(schedule.getIdentifier().get(i0).getType().getCoding().size() < i1+1) { schedule.getIdentifier().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {schedule.getIdentifier().get(i0).getType().getCoding().get(i1).setUserSelected(Boolean.parseBoolean(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
 		}
 		/******************** Schdl_Id_Typ_Cdg_Vrsn ********************************************************************************/
-		if(s.getSchdlIdTypCdgVrsn() != null) {
-			scheduleidentifiertypecoding.setVersion(s.getSchdlIdTypCdgVrsn());
+		if(s.getSchdlIdTypCdgVrsn() != null ) {
+
+			String[] arrayi0 = s.getSchdlIdTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(schedule.getIdentifier().size() < i0+1) { schedule.addIdentifier(); }
+				String[] arrayi1 = s.getSchdlIdTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(schedule.getIdentifier().get(i0).getType().getCoding().size() < i1+1) { schedule.getIdentifier().get(i0).getType().addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {schedule.getIdentifier().get(i0).getType().getCoding().get(i1).setVersion(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** Schdl_Id_Typ_Txt ********************************************************************************/
-		if(s.getSchdlIdTypTxt() != null) {
-			scheduleidentifiertype.setText(s.getSchdlIdTypTxt());
-		}
-		/******************** scheduleidentifieruse ********************************************************************************/
-		org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory scheduleidentifieruse =  new org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory();
-		scheduleidentifier.setUse(scheduleidentifieruse.fromCode(s.getSchdlIdUse()));
+		if(s.getSchdlIdTypTxt() != null ) {
 
+			String[] arrayi0 = s.getSchdlIdTypTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(schedule.getIdentifier().size() < i0+1) { schedule.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {schedule.getIdentifier().get(i0).getType().setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
+		}
+		/******************** Schdl_Id_Use ********************************************************************************/
+		if(s.getSchdlIdUse() != null ) {
+
+			String[] arrayi0 = s.getSchdlIdUse().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(schedule.getIdentifier().size() < i0+1) { schedule.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {schedule.getIdentifier().get(i0).setUse(new org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory().fromCode(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+			}
+
+		}
 		/******************** Schdl_Id_Vl ********************************************************************************/
-		if(s.getSchdlIdVl() != null) {
-			scheduleidentifier.setValue(s.getSchdlIdVl());
-		}
-		/******************** scheduleplanninghorizon ********************************************************************************/
-		org.hl7.fhir.r4.model.Period scheduleplanninghorizon =  new org.hl7.fhir.r4.model.Period();
-		schedule.setPlanningHorizon(scheduleplanninghorizon);
+		if(s.getSchdlIdVl() != null ) {
 
+			String[] arrayi0 = s.getSchdlIdVl().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(schedule.getIdentifier().size() < i0+1) { schedule.addIdentifier(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {schedule.getIdentifier().get(i0).setValue(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
+		}
 		/******************** Schdl_PlnningHorizon_End ********************************************************************************/
-		if(s.getSchdlPlnningHorizonEnd() != null) {
-			java.text.SimpleDateFormat Schdl_PlnningHorizon_Endsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date Schdl_PlnningHorizon_Enddate = Schdl_PlnningHorizon_Endsdf.parse(s.getSchdlPlnningHorizonEnd());
-			scheduleplanninghorizon.setEnd(Schdl_PlnningHorizon_Enddate);
+		if(s.getSchdlPlnningHorizonEnd() != null ) {
+
+			if(s.getSchdlPlnningHorizonEnd().replace("[","").replace("]","").equals("NULL") | s.getSchdlPlnningHorizonEnd()==null) {} else {
+			schedule.getPlanningHorizon().setEnd(s.getSchdlPlnningHorizonEnd().replace("[","").replace("]","").equals("NULL") | s.getSchdlPlnningHorizonEnd()==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(s.getSchdlPlnningHorizonEnd().replace("[","").replace("]","").replace("\"","")));
+			}
 		}
 		/******************** Schdl_PlnningHorizon_Strt ********************************************************************************/
-		if(s.getSchdlPlnningHorizonStrt() != null) {
-			java.text.SimpleDateFormat Schdl_PlnningHorizon_Strtsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date Schdl_PlnningHorizon_Strtdate = Schdl_PlnningHorizon_Strtsdf.parse(s.getSchdlPlnningHorizonStrt());
-			scheduleplanninghorizon.setStart(Schdl_PlnningHorizon_Strtdate);
+		if(s.getSchdlPlnningHorizonStrt() != null ) {
+
+			if(s.getSchdlPlnningHorizonStrt().replace("[","").replace("]","").equals("NULL") | s.getSchdlPlnningHorizonStrt()==null) {} else {
+			schedule.getPlanningHorizon().setStart(s.getSchdlPlnningHorizonStrt().replace("[","").replace("]","").equals("NULL") | s.getSchdlPlnningHorizonStrt()==null ? null : ca.uhn.fhir.util.DateUtils.parseDate(s.getSchdlPlnningHorizonStrt().replace("[","").replace("]","").replace("\"","")));
+			}
 		}
-		/******************** scheduleservicecategory ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept scheduleservicecategory =  new org.hl7.fhir.r4.model.CodeableConcept();
-		schedule.addServiceCategory(scheduleservicecategory);
-
-		/******************** scheduleservicecategorycoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding scheduleservicecategorycoding =  new org.hl7.fhir.r4.model.Coding();
-		scheduleservicecategory.addCoding(scheduleservicecategorycoding);
-
 		/******************** Schdl_SrvCtgry_Cdg_Cd ********************************************************************************/
-		if(s.getSchdlSrvCtgryCdgCd() != null) {
-			scheduleservicecategorycoding.setCode(s.getSchdlSrvCtgryCdgCd());
+		if(s.getSchdlSrvCtgryCdgCd() != null ) {
+
+			String[] arrayi0 = s.getSchdlSrvCtgryCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(schedule.getServiceCategory().size() < i0+1) { schedule.addServiceCategory(); }
+				String[] arrayi1 = s.getSchdlSrvCtgryCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(schedule.getServiceCategory().get(i0).getCoding().size() < i1+1) { schedule.getServiceCategory().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {schedule.getServiceCategory().get(i0).getCoding().get(i1).setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** Schdl_SrvCtgry_Cdg_Dsply ********************************************************************************/
-		if(s.getSchdlSrvCtgryCdgDsply() != null) {
-			scheduleservicecategorycoding.setDisplay(s.getSchdlSrvCtgryCdgDsply());
+		if(s.getSchdlSrvCtgryCdgDsply() != null ) {
+
+			String[] arrayi0 = s.getSchdlSrvCtgryCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(schedule.getServiceCategory().size() < i0+1) { schedule.addServiceCategory(); }
+				String[] arrayi1 = s.getSchdlSrvCtgryCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(schedule.getServiceCategory().get(i0).getCoding().size() < i1+1) { schedule.getServiceCategory().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {schedule.getServiceCategory().get(i0).getCoding().get(i1).setDisplay(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** Schdl_SrvCtgry_Cdg_Sys ********************************************************************************/
-		if(s.getSchdlSrvCtgryCdgSys() != null) {
-			scheduleservicecategorycoding.setSystem(s.getSchdlSrvCtgryCdgSys());
+		if(s.getSchdlSrvCtgryCdgSys() != null ) {
+
+			String[] arrayi0 = s.getSchdlSrvCtgryCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(schedule.getServiceCategory().size() < i0+1) { schedule.addServiceCategory(); }
+				String[] arrayi1 = s.getSchdlSrvCtgryCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(schedule.getServiceCategory().get(i0).getCoding().size() < i1+1) { schedule.getServiceCategory().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {schedule.getServiceCategory().get(i0).getCoding().get(i1).setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** Schdl_SrvCtgry_Cdg_UsrSltd ********************************************************************************/
-		if(s.getSchdlSrvCtgryCdgUsrSltd() != null) {
-			scheduleservicecategorycoding.setUserSelected(Boolean.parseBoolean(s.getSchdlSrvCtgryCdgUsrSltd()));
+		if(s.getSchdlSrvCtgryCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = s.getSchdlSrvCtgryCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(schedule.getServiceCategory().size() < i0+1) { schedule.addServiceCategory(); }
+				String[] arrayi1 = s.getSchdlSrvCtgryCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(schedule.getServiceCategory().get(i0).getCoding().size() < i1+1) { schedule.getServiceCategory().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {schedule.getServiceCategory().get(i0).getCoding().get(i1).setUserSelected(Boolean.parseBoolean(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
 		}
 		/******************** Schdl_SrvCtgry_Cdg_Vrsn ********************************************************************************/
-		if(s.getSchdlSrvCtgryCdgVrsn() != null) {
-			scheduleservicecategorycoding.setVersion(s.getSchdlSrvCtgryCdgVrsn());
+		if(s.getSchdlSrvCtgryCdgVrsn() != null ) {
+
+			String[] arrayi0 = s.getSchdlSrvCtgryCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(schedule.getServiceCategory().size() < i0+1) { schedule.addServiceCategory(); }
+				String[] arrayi1 = s.getSchdlSrvCtgryCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(schedule.getServiceCategory().get(i0).getCoding().size() < i1+1) { schedule.getServiceCategory().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {schedule.getServiceCategory().get(i0).getCoding().get(i1).setVersion(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** Schdl_SrvCtgry_Txt ********************************************************************************/
-		if(s.getSchdlSrvCtgryTxt() != null) {
-			scheduleservicecategory.setText(s.getSchdlSrvCtgryTxt());
+		if(s.getSchdlSrvCtgryTxt() != null ) {
+
+			String[] arrayi0 = s.getSchdlSrvCtgryTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(schedule.getServiceCategory().size() < i0+1) { schedule.addServiceCategory(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {schedule.getServiceCategory().get(i0).setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
-		/******************** scheduleservicetype ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept scheduleservicetype =  new org.hl7.fhir.r4.model.CodeableConcept();
-		schedule.addServiceType(scheduleservicetype);
-
-		/******************** scheduleservicetypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding scheduleservicetypecoding =  new org.hl7.fhir.r4.model.Coding();
-		scheduleservicetype.addCoding(scheduleservicetypecoding);
-
 		/******************** Schdl_SrvTyp_Cdg_Cd ********************************************************************************/
-		if(s.getSchdlSrvTypCdgCd() != null) {
-			scheduleservicetypecoding.setCode(s.getSchdlSrvTypCdgCd());
+		if(s.getSchdlSrvTypCdgCd() != null ) {
+
+			String[] arrayi0 = s.getSchdlSrvTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(schedule.getServiceType().size() < i0+1) { schedule.addServiceType(); }
+				String[] arrayi1 = s.getSchdlSrvTypCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(schedule.getServiceType().get(i0).getCoding().size() < i1+1) { schedule.getServiceType().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {schedule.getServiceType().get(i0).getCoding().get(i1).setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** Schdl_SrvTyp_Cdg_Dsply ********************************************************************************/
-		if(s.getSchdlSrvTypCdgDsply() != null) {
-			scheduleservicetypecoding.setDisplay(s.getSchdlSrvTypCdgDsply());
+		if(s.getSchdlSrvTypCdgDsply() != null ) {
+
+			String[] arrayi0 = s.getSchdlSrvTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(schedule.getServiceType().size() < i0+1) { schedule.addServiceType(); }
+				String[] arrayi1 = s.getSchdlSrvTypCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(schedule.getServiceType().get(i0).getCoding().size() < i1+1) { schedule.getServiceType().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {schedule.getServiceType().get(i0).getCoding().get(i1).setDisplay(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** Schdl_SrvTyp_Cdg_Sys ********************************************************************************/
-		if(s.getSchdlSrvTypCdgSys() != null) {
-			scheduleservicetypecoding.setSystem(s.getSchdlSrvTypCdgSys());
+		if(s.getSchdlSrvTypCdgSys() != null ) {
+
+			String[] arrayi0 = s.getSchdlSrvTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(schedule.getServiceType().size() < i0+1) { schedule.addServiceType(); }
+				String[] arrayi1 = s.getSchdlSrvTypCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(schedule.getServiceType().get(i0).getCoding().size() < i1+1) { schedule.getServiceType().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {schedule.getServiceType().get(i0).getCoding().get(i1).setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** Schdl_SrvTyp_Cdg_UsrSltd ********************************************************************************/
-		if(s.getSchdlSrvTypCdgUsrSltd() != null) {
-			scheduleservicetypecoding.setUserSelected(Boolean.parseBoolean(s.getSchdlSrvTypCdgUsrSltd()));
+		if(s.getSchdlSrvTypCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = s.getSchdlSrvTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(schedule.getServiceType().size() < i0+1) { schedule.addServiceType(); }
+				String[] arrayi1 = s.getSchdlSrvTypCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(schedule.getServiceType().get(i0).getCoding().size() < i1+1) { schedule.getServiceType().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {schedule.getServiceType().get(i0).getCoding().get(i1).setUserSelected(Boolean.parseBoolean(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
 		}
 		/******************** Schdl_SrvTyp_Cdg_Vrsn ********************************************************************************/
-		if(s.getSchdlSrvTypCdgVrsn() != null) {
-			scheduleservicetypecoding.setVersion(s.getSchdlSrvTypCdgVrsn());
+		if(s.getSchdlSrvTypCdgVrsn() != null ) {
+
+			String[] arrayi0 = s.getSchdlSrvTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(schedule.getServiceType().size() < i0+1) { schedule.addServiceType(); }
+				String[] arrayi1 = s.getSchdlSrvTypCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(schedule.getServiceType().get(i0).getCoding().size() < i1+1) { schedule.getServiceType().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {schedule.getServiceType().get(i0).getCoding().get(i1).setVersion(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** Schdl_SrvTyp_Txt ********************************************************************************/
-		if(s.getSchdlSrvTypTxt() != null) {
-			scheduleservicetype.setText(s.getSchdlSrvTypTxt());
+		if(s.getSchdlSrvTypTxt() != null ) {
+
+			String[] arrayi0 = s.getSchdlSrvTypTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(schedule.getServiceType().size() < i0+1) { schedule.addServiceType(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {schedule.getServiceType().get(i0).setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
-		/******************** schedulespecialty ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept schedulespecialty =  new org.hl7.fhir.r4.model.CodeableConcept();
-		schedule.addSpecialty(schedulespecialty);
-
-		/******************** schedulespecialtycoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding schedulespecialtycoding =  new org.hl7.fhir.r4.model.Coding();
-		schedulespecialty.addCoding(schedulespecialtycoding);
-
 		/******************** Schdl_Spclty_Cdg_Cd ********************************************************************************/
-		if(s.getSchdlSpcltyCdgCd() != null) {
-			schedulespecialtycoding.setCode(s.getSchdlSpcltyCdgCd());
+		if(s.getSchdlSpcltyCdgCd() != null ) {
+
+			String[] arrayi0 = s.getSchdlSpcltyCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(schedule.getSpecialty().size() < i0+1) { schedule.addSpecialty(); }
+				String[] arrayi1 = s.getSchdlSpcltyCdgCd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(schedule.getSpecialty().get(i0).getCoding().size() < i1+1) { schedule.getSpecialty().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {schedule.getSpecialty().get(i0).getCoding().get(i1).setCode(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** Schdl_Spclty_Cdg_Dsply ********************************************************************************/
-		if(s.getSchdlSpcltyCdgDsply() != null) {
-			schedulespecialtycoding.setDisplay(s.getSchdlSpcltyCdgDsply());
+		if(s.getSchdlSpcltyCdgDsply() != null ) {
+
+			String[] arrayi0 = s.getSchdlSpcltyCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(schedule.getSpecialty().size() < i0+1) { schedule.addSpecialty(); }
+				String[] arrayi1 = s.getSchdlSpcltyCdgDsply().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(schedule.getSpecialty().get(i0).getCoding().size() < i1+1) { schedule.getSpecialty().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {schedule.getSpecialty().get(i0).getCoding().get(i1).setDisplay(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** Schdl_Spclty_Cdg_Sys ********************************************************************************/
-		if(s.getSchdlSpcltyCdgSys() != null) {
-			schedulespecialtycoding.setSystem(s.getSchdlSpcltyCdgSys());
+		if(s.getSchdlSpcltyCdgSys() != null ) {
+
+			String[] arrayi0 = s.getSchdlSpcltyCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(schedule.getSpecialty().size() < i0+1) { schedule.addSpecialty(); }
+				String[] arrayi1 = s.getSchdlSpcltyCdgSys().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(schedule.getSpecialty().get(i0).getCoding().size() < i1+1) { schedule.getSpecialty().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {schedule.getSpecialty().get(i0).getCoding().get(i1).setSystem(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** Schdl_Spclty_Cdg_UsrSltd ********************************************************************************/
-		if(s.getSchdlSpcltyCdgUsrSltd() != null) {
-			schedulespecialtycoding.setUserSelected(Boolean.parseBoolean(s.getSchdlSpcltyCdgUsrSltd()));
+		if(s.getSchdlSpcltyCdgUsrSltd() != null ) {
+
+			String[] arrayi0 = s.getSchdlSpcltyCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(schedule.getSpecialty().size() < i0+1) { schedule.addSpecialty(); }
+				String[] arrayi1 = s.getSchdlSpcltyCdgUsrSltd().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(schedule.getSpecialty().get(i0).getCoding().size() < i1+1) { schedule.getSpecialty().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {schedule.getSpecialty().get(i0).getCoding().get(i1).setUserSelected(Boolean.parseBoolean(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"",""))); }
+				}
+			}
+
 		}
 		/******************** Schdl_Spclty_Cdg_Vrsn ********************************************************************************/
-		if(s.getSchdlSpcltyCdgVrsn() != null) {
-			schedulespecialtycoding.setVersion(s.getSchdlSpcltyCdgVrsn());
+		if(s.getSchdlSpcltyCdgVrsn() != null ) {
+
+			String[] arrayi0 = s.getSchdlSpcltyCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(schedule.getSpecialty().size() < i0+1) { schedule.addSpecialty(); }
+				String[] arrayi1 = s.getSchdlSpcltyCdgVrsn().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])")[i0].replace("[","").replace("]","").replace("\"","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+				for(int i1 = 0; i1 < arrayi1.length; i1++) {
+					if(schedule.getSpecialty().get(i0).getCoding().size() < i1+1) { schedule.getSpecialty().get(i0).addCoding(); }
+					if(arrayi1[i1].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi1[i1]==null) {} else {schedule.getSpecialty().get(i0).getCoding().get(i1).setVersion(arrayi1[i1].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+				}
+			}
+
 		}
 		/******************** Schdl_Spclty_Txt ********************************************************************************/
-		if(s.getSchdlSpcltyTxt() != null) {
-			schedulespecialty.setText(s.getSchdlSpcltyTxt());
+		if(s.getSchdlSpcltyTxt() != null ) {
+
+			String[] arrayi0 = s.getSchdlSpcltyTxt().replaceFirst("^\\[","").replaceFirst("\\]$","").split(",(?![^\\[\\\"]*[\\]\\\"])");
+			for(int i0 = 0; i0 < arrayi0.length; i0++) {
+				if(schedule.getSpecialty().size() < i0+1) { schedule.addSpecialty(); }
+				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {schedule.getSpecialty().get(i0).setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
+			}
+
 		}
 		return schedule;
 	}

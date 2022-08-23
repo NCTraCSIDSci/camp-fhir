@@ -8,73 +8,184 @@ public class SubscriptionBidirectionalConversion
 		 main.java.com.campfhir.model.Subscription s = new  main.java.com.campfhir.model.Subscription();
 
 		/******************** id ********************************************************************************/
-		subscription.setId(s.getId());
+		s.setId(subscription.getIdElement().getIdPart());
 
 		/******************** subscriptionchannel ********************************************************************************/
 		org.hl7.fhir.r4.model.Subscription.SubscriptionChannelComponent subscriptionchannel = subscription.getChannel();
 
 		/******************** subscriptionchanneltype ********************************************************************************/
 		org.hl7.fhir.r4.model.Subscription.SubscriptionChannelType subscriptionchanneltype = subscriptionchannel.getType();
-		s.setSubscriptionChannelTyp(subscriptionchanneltype.toCode());
+		if(subscriptionchanneltype!=null) {
+			s.addSubscriptionChannelTyp(subscriptionchanneltype.toCode());
+		} else {
+			s.addSubscriptionChannelTyp("NULL");
+		}
 
 		/******************** Subscription_Channel_Payload ********************************************************************************/
 		if(subscriptionchannel.hasPayload()) {
-			s.setSubscriptionChannelPayload(String.valueOf(subscriptionchannel.getPayload()));
+
+			s.addSubscriptionChannelPayload(String.valueOf(subscriptionchannel.getPayload()));
+		} else {
+			s.addSubscriptionChannelPayload("NULL");
 		}
+
+
+		/******************** Subscription_Channel_Header ********************************************************************************/
+		if(subscriptionchannel.hasHeader()) {
+
+			String  array = "[";
+			for(int incr=0; incr<subscriptionchannel.getHeader().size(); incr++) {
+				array = array + subscriptionchannel.getHeader().get(incr).getValueAsString() + ",";
+			}
+			array = array.substring(0, array.length() -1);
+			array = array + "]";
+			s.addSubscriptionChannelHeader(array);
+
+		} else {
+			s.addSubscriptionChannelHeader("NULL");
+		}
+
+
 		/******************** Subscription_Channel_Endpoint ********************************************************************************/
 		if(subscriptionchannel.hasEndpoint()) {
-			s.setSubscriptionChannelEndpoint(String.valueOf(subscriptionchannel.getEndpoint()));
+
+			s.addSubscriptionChannelEndpoint(String.valueOf(subscriptionchannel.getEndpoint()));
+		} else {
+			s.addSubscriptionChannelEndpoint("NULL");
 		}
+
+
 		/******************** Subscription_Rsn ********************************************************************************/
 		if(subscription.hasReason()) {
-			s.setSubscriptionRsn(String.valueOf(subscription.getReason()));
+
+			s.addSubscriptionRsn(String.valueOf(subscription.getReason()));
+		} else {
+			s.addSubscriptionRsn("NULL");
 		}
-		/******************** Subscription_Error ********************************************************************************/
-		if(subscription.hasError()) {
-			s.setSubscriptionError(String.valueOf(subscription.getError()));
-		}
+
+
 		/******************** subscriptionstatus ********************************************************************************/
 		org.hl7.fhir.r4.model.Subscription.SubscriptionStatus subscriptionstatus = subscription.getStatus();
-		s.setSubscriptionSts(subscriptionstatus.toCode());
-
-		/******************** Subscription_End ********************************************************************************/
-		if(subscription.hasEnd()) {
-			s.setSubscriptionEnd(String.valueOf(subscription.getEnd()));
+		if(subscriptionstatus!=null) {
+			s.addSubscriptionSts(subscriptionstatus.toCode());
+		} else {
+			s.addSubscriptionSts("NULL");
 		}
+
 		/******************** subscriptioncontact ********************************************************************************/
-		org.hl7.fhir.r4.model.ContactPoint subscriptioncontact = subscription.getContactFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.ContactPoint> subscriptioncontactlist = subscription.getContact();
+		for(int subscriptioncontacti = 0; subscriptioncontacti<subscriptioncontactlist.size();subscriptioncontacti++ ) {
+		org.hl7.fhir.r4.model.ContactPoint  subscriptioncontact = subscriptioncontactlist.get(subscriptioncontacti);
 
 		/******************** Subscription_Cntct_Vl ********************************************************************************/
+		if(subscriptioncontacti == 0) {s.addSubscriptionCntctVl("[");}
 		if(subscriptioncontact.hasValue()) {
-			s.setSubscriptionCntctVl(String.valueOf(subscriptioncontact.getValue()));
+
+			s.addSubscriptionCntctVl(String.valueOf(subscriptioncontact.getValue()));
+		} else {
+			s.addSubscriptionCntctVl("NULL");
 		}
+
+		if(subscriptioncontacti == subscriptioncontactlist.size()-1) {s.addSubscriptionCntctVl("]");}
+
+
 		/******************** subscriptioncontactperiod ********************************************************************************/
 		org.hl7.fhir.r4.model.Period subscriptioncontactperiod = subscriptioncontact.getPeriod();
 
 		/******************** Subscription_Cntct_Prd_Strt ********************************************************************************/
+		if(subscriptioncontacti == 0) {s.addSubscriptionCntctPrdStrt("[");}
 		if(subscriptioncontactperiod.hasStart()) {
-			s.setSubscriptionCntctPrdStrt(String.valueOf(subscriptioncontactperiod.getStart()));
+
+			s.addSubscriptionCntctPrdStrt("\""+ca.uhn.fhir.util.DateUtils.formatDate(subscriptioncontactperiod.getStart())+"\"");
+		} else {
+			s.addSubscriptionCntctPrdStrt("NULL");
 		}
+
+		if(subscriptioncontacti == subscriptioncontactlist.size()-1) {s.addSubscriptionCntctPrdStrt("]");}
+
+
 		/******************** Subscription_Cntct_Prd_End ********************************************************************************/
+		if(subscriptioncontacti == 0) {s.addSubscriptionCntctPrdEnd("[");}
 		if(subscriptioncontactperiod.hasEnd()) {
-			s.setSubscriptionCntctPrdEnd(String.valueOf(subscriptioncontactperiod.getEnd()));
+
+			s.addSubscriptionCntctPrdEnd("\""+ca.uhn.fhir.util.DateUtils.formatDate(subscriptioncontactperiod.getEnd())+"\"");
+		} else {
+			s.addSubscriptionCntctPrdEnd("NULL");
 		}
-		/******************** subscriptioncontactsystem ********************************************************************************/
-		org.hl7.fhir.r4.model.ContactPoint.ContactPointSystem subscriptioncontactsystem = subscriptioncontact.getSystem();
-		s.setSubscriptionCntctSys(subscriptioncontactsystem.toCode());
+
+		if(subscriptioncontacti == subscriptioncontactlist.size()-1) {s.addSubscriptionCntctPrdEnd("]");}
+
 
 		/******************** subscriptioncontactuse ********************************************************************************/
 		org.hl7.fhir.r4.model.ContactPoint.ContactPointUse subscriptioncontactuse = subscriptioncontact.getUse();
-		s.setSubscriptionCntctUse(subscriptioncontactuse.toCode());
+		if(subscriptioncontactuse!=null) {
+		if(subscriptioncontacti == 0) {
+
+		s.addSubscriptionCntctUse("[");		}
+			s.addSubscriptionCntctUse(subscriptioncontactuse.toCode());
+		if(subscriptioncontacti == subscriptioncontactlist.size()-1) {
+
+		s.addSubscriptionCntctUse("]");		}
+
+		} else {
+			s.addSubscriptionCntctUse("NULL");
+		}
+
+		/******************** subscriptioncontactsystem ********************************************************************************/
+		org.hl7.fhir.r4.model.ContactPoint.ContactPointSystem subscriptioncontactsystem = subscriptioncontact.getSystem();
+		if(subscriptioncontactsystem!=null) {
+		if(subscriptioncontacti == 0) {
+
+		s.addSubscriptionCntctSys("[");		}
+			s.addSubscriptionCntctSys(subscriptioncontactsystem.toCode());
+		if(subscriptioncontacti == subscriptioncontactlist.size()-1) {
+
+		s.addSubscriptionCntctSys("]");		}
+
+		} else {
+			s.addSubscriptionCntctSys("NULL");
+		}
 
 		/******************** Subscription_Cntct_Rnk ********************************************************************************/
+		if(subscriptioncontacti == 0) {s.addSubscriptionCntctRnk("[");}
 		if(subscriptioncontact.hasRank()) {
-			s.setSubscriptionCntctRnk(String.valueOf(subscriptioncontact.getRank()));
+
+			s.addSubscriptionCntctRnk(String.valueOf(subscriptioncontact.getRank()));
+		} else {
+			s.addSubscriptionCntctRnk("NULL");
 		}
+
+		if(subscriptioncontacti == subscriptioncontactlist.size()-1) {s.addSubscriptionCntctRnk("]");}
+
+
+		 };
 		/******************** Subscription_Criteria ********************************************************************************/
 		if(subscription.hasCriteria()) {
-			s.setSubscriptionCriteria(String.valueOf(subscription.getCriteria()));
+
+			s.addSubscriptionCriteria(String.valueOf(subscription.getCriteria()));
+		} else {
+			s.addSubscriptionCriteria("NULL");
 		}
+
+
+		/******************** Subscription_End ********************************************************************************/
+		if(subscription.hasEnd()) {
+
+			s.addSubscriptionEnd("\""+ca.uhn.fhir.util.DateUtils.formatDate(subscription.getEnd())+"\"");
+		} else {
+			s.addSubscriptionEnd("NULL");
+		}
+
+
+		/******************** Subscription_Error ********************************************************************************/
+		if(subscription.hasError()) {
+
+			s.addSubscriptionError(String.valueOf(subscription.getError()));
+		} else {
+			s.addSubscriptionError("NULL");
+		}
+
+
 		return s;
 	}
 }

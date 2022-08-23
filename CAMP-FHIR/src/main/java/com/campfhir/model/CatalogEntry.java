@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Jun 27, 2022, 10:40:10 AM by Hibernate Tools 5.6.1.Final
+// Generated Aug 17, 2022, 11:08:48 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -81,6 +81,20 @@ public class CatalogEntry  implements java.io.Serializable {
         this.id = id;
     }
     
+    public void addId(String id) {
+    	if( id != null ) {
+	    	if( this.id == null ) {
+	        	this.id = id;
+	        } else if(this.id.substring(this.id.length() - 1).equals("]") & id.equals("[")) {
+	        	this.id = this.id+ "," + id;
+	        } else if(id.equals("[") | id.equals("]") | this.id.substring(this.id.length() - 1).equals("[")) {
+	        	this.id = this.id+id;
+	        } else  {
+	            this.id = this.id+ "," +id;
+	        }
+        }
+    }
+    
     
     
     public String getCatalogEntryAddtnlCrctrstcCdgCd() {
@@ -89,6 +103,20 @@ public class CatalogEntry  implements java.io.Serializable {
     
     public void setCatalogEntryAddtnlCrctrstcCdgCd(String catalogEntryAddtnlCrctrstcCdgCd) {
         this.catalogEntryAddtnlCrctrstcCdgCd = catalogEntryAddtnlCrctrstcCdgCd;
+    }
+    
+    public void addCatalogEntryAddtnlCrctrstcCdgCd(String catalogEntryAddtnlCrctrstcCdgCd) {
+    	if( catalogEntryAddtnlCrctrstcCdgCd != null ) {
+	    	if( this.catalogEntryAddtnlCrctrstcCdgCd == null ) {
+	        	this.catalogEntryAddtnlCrctrstcCdgCd = catalogEntryAddtnlCrctrstcCdgCd;
+	        } else if(this.catalogEntryAddtnlCrctrstcCdgCd.substring(this.catalogEntryAddtnlCrctrstcCdgCd.length() - 1).equals("]") & catalogEntryAddtnlCrctrstcCdgCd.equals("[")) {
+	        	this.catalogEntryAddtnlCrctrstcCdgCd = this.catalogEntryAddtnlCrctrstcCdgCd+ "," + catalogEntryAddtnlCrctrstcCdgCd;
+	        } else if(catalogEntryAddtnlCrctrstcCdgCd.equals("[") | catalogEntryAddtnlCrctrstcCdgCd.equals("]") | this.catalogEntryAddtnlCrctrstcCdgCd.substring(this.catalogEntryAddtnlCrctrstcCdgCd.length() - 1).equals("[")) {
+	        	this.catalogEntryAddtnlCrctrstcCdgCd = this.catalogEntryAddtnlCrctrstcCdgCd+catalogEntryAddtnlCrctrstcCdgCd;
+	        } else  {
+	            this.catalogEntryAddtnlCrctrstcCdgCd = this.catalogEntryAddtnlCrctrstcCdgCd+ "," +catalogEntryAddtnlCrctrstcCdgCd;
+	        }
+        }
     }
     
     
@@ -101,6 +129,20 @@ public class CatalogEntry  implements java.io.Serializable {
         this.catalogEntryAddtnlCrctrstcCdgDsply = catalogEntryAddtnlCrctrstcCdgDsply;
     }
     
+    public void addCatalogEntryAddtnlCrctrstcCdgDsply(String catalogEntryAddtnlCrctrstcCdgDsply) {
+    	if( catalogEntryAddtnlCrctrstcCdgDsply != null ) {
+	    	if( this.catalogEntryAddtnlCrctrstcCdgDsply == null ) {
+	        	this.catalogEntryAddtnlCrctrstcCdgDsply = catalogEntryAddtnlCrctrstcCdgDsply;
+	        } else if(this.catalogEntryAddtnlCrctrstcCdgDsply.substring(this.catalogEntryAddtnlCrctrstcCdgDsply.length() - 1).equals("]") & catalogEntryAddtnlCrctrstcCdgDsply.equals("[")) {
+	        	this.catalogEntryAddtnlCrctrstcCdgDsply = this.catalogEntryAddtnlCrctrstcCdgDsply+ "," + catalogEntryAddtnlCrctrstcCdgDsply;
+	        } else if(catalogEntryAddtnlCrctrstcCdgDsply.equals("[") | catalogEntryAddtnlCrctrstcCdgDsply.equals("]") | this.catalogEntryAddtnlCrctrstcCdgDsply.substring(this.catalogEntryAddtnlCrctrstcCdgDsply.length() - 1).equals("[")) {
+	        	this.catalogEntryAddtnlCrctrstcCdgDsply = this.catalogEntryAddtnlCrctrstcCdgDsply+catalogEntryAddtnlCrctrstcCdgDsply;
+	        } else  {
+	            this.catalogEntryAddtnlCrctrstcCdgDsply = this.catalogEntryAddtnlCrctrstcCdgDsply+ "," +catalogEntryAddtnlCrctrstcCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getCatalogEntryAddtnlCrctrstcCdgSys() {
@@ -109,6 +151,20 @@ public class CatalogEntry  implements java.io.Serializable {
     
     public void setCatalogEntryAddtnlCrctrstcCdgSys(String catalogEntryAddtnlCrctrstcCdgSys) {
         this.catalogEntryAddtnlCrctrstcCdgSys = catalogEntryAddtnlCrctrstcCdgSys;
+    }
+    
+    public void addCatalogEntryAddtnlCrctrstcCdgSys(String catalogEntryAddtnlCrctrstcCdgSys) {
+    	if( catalogEntryAddtnlCrctrstcCdgSys != null ) {
+	    	if( this.catalogEntryAddtnlCrctrstcCdgSys == null ) {
+	        	this.catalogEntryAddtnlCrctrstcCdgSys = catalogEntryAddtnlCrctrstcCdgSys;
+	        } else if(this.catalogEntryAddtnlCrctrstcCdgSys.substring(this.catalogEntryAddtnlCrctrstcCdgSys.length() - 1).equals("]") & catalogEntryAddtnlCrctrstcCdgSys.equals("[")) {
+	        	this.catalogEntryAddtnlCrctrstcCdgSys = this.catalogEntryAddtnlCrctrstcCdgSys+ "," + catalogEntryAddtnlCrctrstcCdgSys;
+	        } else if(catalogEntryAddtnlCrctrstcCdgSys.equals("[") | catalogEntryAddtnlCrctrstcCdgSys.equals("]") | this.catalogEntryAddtnlCrctrstcCdgSys.substring(this.catalogEntryAddtnlCrctrstcCdgSys.length() - 1).equals("[")) {
+	        	this.catalogEntryAddtnlCrctrstcCdgSys = this.catalogEntryAddtnlCrctrstcCdgSys+catalogEntryAddtnlCrctrstcCdgSys;
+	        } else  {
+	            this.catalogEntryAddtnlCrctrstcCdgSys = this.catalogEntryAddtnlCrctrstcCdgSys+ "," +catalogEntryAddtnlCrctrstcCdgSys;
+	        }
+        }
     }
     
     
@@ -121,6 +177,20 @@ public class CatalogEntry  implements java.io.Serializable {
         this.catalogEntryAddtnlCrctrstcCdgUsrSltd = catalogEntryAddtnlCrctrstcCdgUsrSltd;
     }
     
+    public void addCatalogEntryAddtnlCrctrstcCdgUsrSltd(String catalogEntryAddtnlCrctrstcCdgUsrSltd) {
+    	if( catalogEntryAddtnlCrctrstcCdgUsrSltd != null ) {
+	    	if( this.catalogEntryAddtnlCrctrstcCdgUsrSltd == null ) {
+	        	this.catalogEntryAddtnlCrctrstcCdgUsrSltd = catalogEntryAddtnlCrctrstcCdgUsrSltd;
+	        } else if(this.catalogEntryAddtnlCrctrstcCdgUsrSltd.substring(this.catalogEntryAddtnlCrctrstcCdgUsrSltd.length() - 1).equals("]") & catalogEntryAddtnlCrctrstcCdgUsrSltd.equals("[")) {
+	        	this.catalogEntryAddtnlCrctrstcCdgUsrSltd = this.catalogEntryAddtnlCrctrstcCdgUsrSltd+ "," + catalogEntryAddtnlCrctrstcCdgUsrSltd;
+	        } else if(catalogEntryAddtnlCrctrstcCdgUsrSltd.equals("[") | catalogEntryAddtnlCrctrstcCdgUsrSltd.equals("]") | this.catalogEntryAddtnlCrctrstcCdgUsrSltd.substring(this.catalogEntryAddtnlCrctrstcCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.catalogEntryAddtnlCrctrstcCdgUsrSltd = this.catalogEntryAddtnlCrctrstcCdgUsrSltd+catalogEntryAddtnlCrctrstcCdgUsrSltd;
+	        } else  {
+	            this.catalogEntryAddtnlCrctrstcCdgUsrSltd = this.catalogEntryAddtnlCrctrstcCdgUsrSltd+ "," +catalogEntryAddtnlCrctrstcCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getCatalogEntryAddtnlCrctrstcCdgVrsn() {
@@ -129,6 +199,20 @@ public class CatalogEntry  implements java.io.Serializable {
     
     public void setCatalogEntryAddtnlCrctrstcCdgVrsn(String catalogEntryAddtnlCrctrstcCdgVrsn) {
         this.catalogEntryAddtnlCrctrstcCdgVrsn = catalogEntryAddtnlCrctrstcCdgVrsn;
+    }
+    
+    public void addCatalogEntryAddtnlCrctrstcCdgVrsn(String catalogEntryAddtnlCrctrstcCdgVrsn) {
+    	if( catalogEntryAddtnlCrctrstcCdgVrsn != null ) {
+	    	if( this.catalogEntryAddtnlCrctrstcCdgVrsn == null ) {
+	        	this.catalogEntryAddtnlCrctrstcCdgVrsn = catalogEntryAddtnlCrctrstcCdgVrsn;
+	        } else if(this.catalogEntryAddtnlCrctrstcCdgVrsn.substring(this.catalogEntryAddtnlCrctrstcCdgVrsn.length() - 1).equals("]") & catalogEntryAddtnlCrctrstcCdgVrsn.equals("[")) {
+	        	this.catalogEntryAddtnlCrctrstcCdgVrsn = this.catalogEntryAddtnlCrctrstcCdgVrsn+ "," + catalogEntryAddtnlCrctrstcCdgVrsn;
+	        } else if(catalogEntryAddtnlCrctrstcCdgVrsn.equals("[") | catalogEntryAddtnlCrctrstcCdgVrsn.equals("]") | this.catalogEntryAddtnlCrctrstcCdgVrsn.substring(this.catalogEntryAddtnlCrctrstcCdgVrsn.length() - 1).equals("[")) {
+	        	this.catalogEntryAddtnlCrctrstcCdgVrsn = this.catalogEntryAddtnlCrctrstcCdgVrsn+catalogEntryAddtnlCrctrstcCdgVrsn;
+	        } else  {
+	            this.catalogEntryAddtnlCrctrstcCdgVrsn = this.catalogEntryAddtnlCrctrstcCdgVrsn+ "," +catalogEntryAddtnlCrctrstcCdgVrsn;
+	        }
+        }
     }
     
     
@@ -141,6 +225,20 @@ public class CatalogEntry  implements java.io.Serializable {
         this.catalogEntryAddtnlCrctrstcTxt = catalogEntryAddtnlCrctrstcTxt;
     }
     
+    public void addCatalogEntryAddtnlCrctrstcTxt(String catalogEntryAddtnlCrctrstcTxt) {
+    	if( catalogEntryAddtnlCrctrstcTxt != null ) {
+	    	if( this.catalogEntryAddtnlCrctrstcTxt == null ) {
+	        	this.catalogEntryAddtnlCrctrstcTxt = catalogEntryAddtnlCrctrstcTxt;
+	        } else if(this.catalogEntryAddtnlCrctrstcTxt.substring(this.catalogEntryAddtnlCrctrstcTxt.length() - 1).equals("]") & catalogEntryAddtnlCrctrstcTxt.equals("[")) {
+	        	this.catalogEntryAddtnlCrctrstcTxt = this.catalogEntryAddtnlCrctrstcTxt+ "," + catalogEntryAddtnlCrctrstcTxt;
+	        } else if(catalogEntryAddtnlCrctrstcTxt.equals("[") | catalogEntryAddtnlCrctrstcTxt.equals("]") | this.catalogEntryAddtnlCrctrstcTxt.substring(this.catalogEntryAddtnlCrctrstcTxt.length() - 1).equals("[")) {
+	        	this.catalogEntryAddtnlCrctrstcTxt = this.catalogEntryAddtnlCrctrstcTxt+catalogEntryAddtnlCrctrstcTxt;
+	        } else  {
+	            this.catalogEntryAddtnlCrctrstcTxt = this.catalogEntryAddtnlCrctrstcTxt+ "," +catalogEntryAddtnlCrctrstcTxt;
+	        }
+        }
+    }
+    
     
     
     public String getCatalogEntryAddtnlClsfctnCdgCd() {
@@ -149,6 +247,20 @@ public class CatalogEntry  implements java.io.Serializable {
     
     public void setCatalogEntryAddtnlClsfctnCdgCd(String catalogEntryAddtnlClsfctnCdgCd) {
         this.catalogEntryAddtnlClsfctnCdgCd = catalogEntryAddtnlClsfctnCdgCd;
+    }
+    
+    public void addCatalogEntryAddtnlClsfctnCdgCd(String catalogEntryAddtnlClsfctnCdgCd) {
+    	if( catalogEntryAddtnlClsfctnCdgCd != null ) {
+	    	if( this.catalogEntryAddtnlClsfctnCdgCd == null ) {
+	        	this.catalogEntryAddtnlClsfctnCdgCd = catalogEntryAddtnlClsfctnCdgCd;
+	        } else if(this.catalogEntryAddtnlClsfctnCdgCd.substring(this.catalogEntryAddtnlClsfctnCdgCd.length() - 1).equals("]") & catalogEntryAddtnlClsfctnCdgCd.equals("[")) {
+	        	this.catalogEntryAddtnlClsfctnCdgCd = this.catalogEntryAddtnlClsfctnCdgCd+ "," + catalogEntryAddtnlClsfctnCdgCd;
+	        } else if(catalogEntryAddtnlClsfctnCdgCd.equals("[") | catalogEntryAddtnlClsfctnCdgCd.equals("]") | this.catalogEntryAddtnlClsfctnCdgCd.substring(this.catalogEntryAddtnlClsfctnCdgCd.length() - 1).equals("[")) {
+	        	this.catalogEntryAddtnlClsfctnCdgCd = this.catalogEntryAddtnlClsfctnCdgCd+catalogEntryAddtnlClsfctnCdgCd;
+	        } else  {
+	            this.catalogEntryAddtnlClsfctnCdgCd = this.catalogEntryAddtnlClsfctnCdgCd+ "," +catalogEntryAddtnlClsfctnCdgCd;
+	        }
+        }
     }
     
     
@@ -161,6 +273,20 @@ public class CatalogEntry  implements java.io.Serializable {
         this.catalogEntryAddtnlClsfctnCdgDsply = catalogEntryAddtnlClsfctnCdgDsply;
     }
     
+    public void addCatalogEntryAddtnlClsfctnCdgDsply(String catalogEntryAddtnlClsfctnCdgDsply) {
+    	if( catalogEntryAddtnlClsfctnCdgDsply != null ) {
+	    	if( this.catalogEntryAddtnlClsfctnCdgDsply == null ) {
+	        	this.catalogEntryAddtnlClsfctnCdgDsply = catalogEntryAddtnlClsfctnCdgDsply;
+	        } else if(this.catalogEntryAddtnlClsfctnCdgDsply.substring(this.catalogEntryAddtnlClsfctnCdgDsply.length() - 1).equals("]") & catalogEntryAddtnlClsfctnCdgDsply.equals("[")) {
+	        	this.catalogEntryAddtnlClsfctnCdgDsply = this.catalogEntryAddtnlClsfctnCdgDsply+ "," + catalogEntryAddtnlClsfctnCdgDsply;
+	        } else if(catalogEntryAddtnlClsfctnCdgDsply.equals("[") | catalogEntryAddtnlClsfctnCdgDsply.equals("]") | this.catalogEntryAddtnlClsfctnCdgDsply.substring(this.catalogEntryAddtnlClsfctnCdgDsply.length() - 1).equals("[")) {
+	        	this.catalogEntryAddtnlClsfctnCdgDsply = this.catalogEntryAddtnlClsfctnCdgDsply+catalogEntryAddtnlClsfctnCdgDsply;
+	        } else  {
+	            this.catalogEntryAddtnlClsfctnCdgDsply = this.catalogEntryAddtnlClsfctnCdgDsply+ "," +catalogEntryAddtnlClsfctnCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getCatalogEntryAddtnlClsfctnCdgSys() {
@@ -169,6 +295,20 @@ public class CatalogEntry  implements java.io.Serializable {
     
     public void setCatalogEntryAddtnlClsfctnCdgSys(String catalogEntryAddtnlClsfctnCdgSys) {
         this.catalogEntryAddtnlClsfctnCdgSys = catalogEntryAddtnlClsfctnCdgSys;
+    }
+    
+    public void addCatalogEntryAddtnlClsfctnCdgSys(String catalogEntryAddtnlClsfctnCdgSys) {
+    	if( catalogEntryAddtnlClsfctnCdgSys != null ) {
+	    	if( this.catalogEntryAddtnlClsfctnCdgSys == null ) {
+	        	this.catalogEntryAddtnlClsfctnCdgSys = catalogEntryAddtnlClsfctnCdgSys;
+	        } else if(this.catalogEntryAddtnlClsfctnCdgSys.substring(this.catalogEntryAddtnlClsfctnCdgSys.length() - 1).equals("]") & catalogEntryAddtnlClsfctnCdgSys.equals("[")) {
+	        	this.catalogEntryAddtnlClsfctnCdgSys = this.catalogEntryAddtnlClsfctnCdgSys+ "," + catalogEntryAddtnlClsfctnCdgSys;
+	        } else if(catalogEntryAddtnlClsfctnCdgSys.equals("[") | catalogEntryAddtnlClsfctnCdgSys.equals("]") | this.catalogEntryAddtnlClsfctnCdgSys.substring(this.catalogEntryAddtnlClsfctnCdgSys.length() - 1).equals("[")) {
+	        	this.catalogEntryAddtnlClsfctnCdgSys = this.catalogEntryAddtnlClsfctnCdgSys+catalogEntryAddtnlClsfctnCdgSys;
+	        } else  {
+	            this.catalogEntryAddtnlClsfctnCdgSys = this.catalogEntryAddtnlClsfctnCdgSys+ "," +catalogEntryAddtnlClsfctnCdgSys;
+	        }
+        }
     }
     
     
@@ -181,6 +321,20 @@ public class CatalogEntry  implements java.io.Serializable {
         this.catalogEntryAddtnlClsfctnCdgUsrSltd = catalogEntryAddtnlClsfctnCdgUsrSltd;
     }
     
+    public void addCatalogEntryAddtnlClsfctnCdgUsrSltd(String catalogEntryAddtnlClsfctnCdgUsrSltd) {
+    	if( catalogEntryAddtnlClsfctnCdgUsrSltd != null ) {
+	    	if( this.catalogEntryAddtnlClsfctnCdgUsrSltd == null ) {
+	        	this.catalogEntryAddtnlClsfctnCdgUsrSltd = catalogEntryAddtnlClsfctnCdgUsrSltd;
+	        } else if(this.catalogEntryAddtnlClsfctnCdgUsrSltd.substring(this.catalogEntryAddtnlClsfctnCdgUsrSltd.length() - 1).equals("]") & catalogEntryAddtnlClsfctnCdgUsrSltd.equals("[")) {
+	        	this.catalogEntryAddtnlClsfctnCdgUsrSltd = this.catalogEntryAddtnlClsfctnCdgUsrSltd+ "," + catalogEntryAddtnlClsfctnCdgUsrSltd;
+	        } else if(catalogEntryAddtnlClsfctnCdgUsrSltd.equals("[") | catalogEntryAddtnlClsfctnCdgUsrSltd.equals("]") | this.catalogEntryAddtnlClsfctnCdgUsrSltd.substring(this.catalogEntryAddtnlClsfctnCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.catalogEntryAddtnlClsfctnCdgUsrSltd = this.catalogEntryAddtnlClsfctnCdgUsrSltd+catalogEntryAddtnlClsfctnCdgUsrSltd;
+	        } else  {
+	            this.catalogEntryAddtnlClsfctnCdgUsrSltd = this.catalogEntryAddtnlClsfctnCdgUsrSltd+ "," +catalogEntryAddtnlClsfctnCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getCatalogEntryAddtnlClsfctnCdgVrsn() {
@@ -189,6 +343,20 @@ public class CatalogEntry  implements java.io.Serializable {
     
     public void setCatalogEntryAddtnlClsfctnCdgVrsn(String catalogEntryAddtnlClsfctnCdgVrsn) {
         this.catalogEntryAddtnlClsfctnCdgVrsn = catalogEntryAddtnlClsfctnCdgVrsn;
+    }
+    
+    public void addCatalogEntryAddtnlClsfctnCdgVrsn(String catalogEntryAddtnlClsfctnCdgVrsn) {
+    	if( catalogEntryAddtnlClsfctnCdgVrsn != null ) {
+	    	if( this.catalogEntryAddtnlClsfctnCdgVrsn == null ) {
+	        	this.catalogEntryAddtnlClsfctnCdgVrsn = catalogEntryAddtnlClsfctnCdgVrsn;
+	        } else if(this.catalogEntryAddtnlClsfctnCdgVrsn.substring(this.catalogEntryAddtnlClsfctnCdgVrsn.length() - 1).equals("]") & catalogEntryAddtnlClsfctnCdgVrsn.equals("[")) {
+	        	this.catalogEntryAddtnlClsfctnCdgVrsn = this.catalogEntryAddtnlClsfctnCdgVrsn+ "," + catalogEntryAddtnlClsfctnCdgVrsn;
+	        } else if(catalogEntryAddtnlClsfctnCdgVrsn.equals("[") | catalogEntryAddtnlClsfctnCdgVrsn.equals("]") | this.catalogEntryAddtnlClsfctnCdgVrsn.substring(this.catalogEntryAddtnlClsfctnCdgVrsn.length() - 1).equals("[")) {
+	        	this.catalogEntryAddtnlClsfctnCdgVrsn = this.catalogEntryAddtnlClsfctnCdgVrsn+catalogEntryAddtnlClsfctnCdgVrsn;
+	        } else  {
+	            this.catalogEntryAddtnlClsfctnCdgVrsn = this.catalogEntryAddtnlClsfctnCdgVrsn+ "," +catalogEntryAddtnlClsfctnCdgVrsn;
+	        }
+        }
     }
     
     
@@ -201,6 +369,20 @@ public class CatalogEntry  implements java.io.Serializable {
         this.catalogEntryAddtnlClsfctnTxt = catalogEntryAddtnlClsfctnTxt;
     }
     
+    public void addCatalogEntryAddtnlClsfctnTxt(String catalogEntryAddtnlClsfctnTxt) {
+    	if( catalogEntryAddtnlClsfctnTxt != null ) {
+	    	if( this.catalogEntryAddtnlClsfctnTxt == null ) {
+	        	this.catalogEntryAddtnlClsfctnTxt = catalogEntryAddtnlClsfctnTxt;
+	        } else if(this.catalogEntryAddtnlClsfctnTxt.substring(this.catalogEntryAddtnlClsfctnTxt.length() - 1).equals("]") & catalogEntryAddtnlClsfctnTxt.equals("[")) {
+	        	this.catalogEntryAddtnlClsfctnTxt = this.catalogEntryAddtnlClsfctnTxt+ "," + catalogEntryAddtnlClsfctnTxt;
+	        } else if(catalogEntryAddtnlClsfctnTxt.equals("[") | catalogEntryAddtnlClsfctnTxt.equals("]") | this.catalogEntryAddtnlClsfctnTxt.substring(this.catalogEntryAddtnlClsfctnTxt.length() - 1).equals("[")) {
+	        	this.catalogEntryAddtnlClsfctnTxt = this.catalogEntryAddtnlClsfctnTxt+catalogEntryAddtnlClsfctnTxt;
+	        } else  {
+	            this.catalogEntryAddtnlClsfctnTxt = this.catalogEntryAddtnlClsfctnTxt+ "," +catalogEntryAddtnlClsfctnTxt;
+	        }
+        }
+    }
+    
     
     
     public String getCatalogEntryAddtnlIdAssigner() {
@@ -209,6 +391,20 @@ public class CatalogEntry  implements java.io.Serializable {
     
     public void setCatalogEntryAddtnlIdAssigner(String catalogEntryAddtnlIdAssigner) {
         this.catalogEntryAddtnlIdAssigner = catalogEntryAddtnlIdAssigner;
+    }
+    
+    public void addCatalogEntryAddtnlIdAssigner(String catalogEntryAddtnlIdAssigner) {
+    	if( catalogEntryAddtnlIdAssigner != null ) {
+	    	if( this.catalogEntryAddtnlIdAssigner == null ) {
+	        	this.catalogEntryAddtnlIdAssigner = catalogEntryAddtnlIdAssigner;
+	        } else if(this.catalogEntryAddtnlIdAssigner.substring(this.catalogEntryAddtnlIdAssigner.length() - 1).equals("]") & catalogEntryAddtnlIdAssigner.equals("[")) {
+	        	this.catalogEntryAddtnlIdAssigner = this.catalogEntryAddtnlIdAssigner+ "," + catalogEntryAddtnlIdAssigner;
+	        } else if(catalogEntryAddtnlIdAssigner.equals("[") | catalogEntryAddtnlIdAssigner.equals("]") | this.catalogEntryAddtnlIdAssigner.substring(this.catalogEntryAddtnlIdAssigner.length() - 1).equals("[")) {
+	        	this.catalogEntryAddtnlIdAssigner = this.catalogEntryAddtnlIdAssigner+catalogEntryAddtnlIdAssigner;
+	        } else  {
+	            this.catalogEntryAddtnlIdAssigner = this.catalogEntryAddtnlIdAssigner+ "," +catalogEntryAddtnlIdAssigner;
+	        }
+        }
     }
     
     
@@ -221,6 +417,20 @@ public class CatalogEntry  implements java.io.Serializable {
         this.catalogEntryAddtnlIdPrdEnd = catalogEntryAddtnlIdPrdEnd;
     }
     
+    public void addCatalogEntryAddtnlIdPrdEnd(String catalogEntryAddtnlIdPrdEnd) {
+    	if( catalogEntryAddtnlIdPrdEnd != null ) {
+	    	if( this.catalogEntryAddtnlIdPrdEnd == null ) {
+	        	this.catalogEntryAddtnlIdPrdEnd = catalogEntryAddtnlIdPrdEnd;
+	        } else if(this.catalogEntryAddtnlIdPrdEnd.substring(this.catalogEntryAddtnlIdPrdEnd.length() - 1).equals("]") & catalogEntryAddtnlIdPrdEnd.equals("[")) {
+	        	this.catalogEntryAddtnlIdPrdEnd = this.catalogEntryAddtnlIdPrdEnd+ "," + catalogEntryAddtnlIdPrdEnd;
+	        } else if(catalogEntryAddtnlIdPrdEnd.equals("[") | catalogEntryAddtnlIdPrdEnd.equals("]") | this.catalogEntryAddtnlIdPrdEnd.substring(this.catalogEntryAddtnlIdPrdEnd.length() - 1).equals("[")) {
+	        	this.catalogEntryAddtnlIdPrdEnd = this.catalogEntryAddtnlIdPrdEnd+catalogEntryAddtnlIdPrdEnd;
+	        } else  {
+	            this.catalogEntryAddtnlIdPrdEnd = this.catalogEntryAddtnlIdPrdEnd+ "," +catalogEntryAddtnlIdPrdEnd;
+	        }
+        }
+    }
+    
     
     
     public String getCatalogEntryAddtnlIdPrdStrt() {
@@ -229,6 +439,20 @@ public class CatalogEntry  implements java.io.Serializable {
     
     public void setCatalogEntryAddtnlIdPrdStrt(String catalogEntryAddtnlIdPrdStrt) {
         this.catalogEntryAddtnlIdPrdStrt = catalogEntryAddtnlIdPrdStrt;
+    }
+    
+    public void addCatalogEntryAddtnlIdPrdStrt(String catalogEntryAddtnlIdPrdStrt) {
+    	if( catalogEntryAddtnlIdPrdStrt != null ) {
+	    	if( this.catalogEntryAddtnlIdPrdStrt == null ) {
+	        	this.catalogEntryAddtnlIdPrdStrt = catalogEntryAddtnlIdPrdStrt;
+	        } else if(this.catalogEntryAddtnlIdPrdStrt.substring(this.catalogEntryAddtnlIdPrdStrt.length() - 1).equals("]") & catalogEntryAddtnlIdPrdStrt.equals("[")) {
+	        	this.catalogEntryAddtnlIdPrdStrt = this.catalogEntryAddtnlIdPrdStrt+ "," + catalogEntryAddtnlIdPrdStrt;
+	        } else if(catalogEntryAddtnlIdPrdStrt.equals("[") | catalogEntryAddtnlIdPrdStrt.equals("]") | this.catalogEntryAddtnlIdPrdStrt.substring(this.catalogEntryAddtnlIdPrdStrt.length() - 1).equals("[")) {
+	        	this.catalogEntryAddtnlIdPrdStrt = this.catalogEntryAddtnlIdPrdStrt+catalogEntryAddtnlIdPrdStrt;
+	        } else  {
+	            this.catalogEntryAddtnlIdPrdStrt = this.catalogEntryAddtnlIdPrdStrt+ "," +catalogEntryAddtnlIdPrdStrt;
+	        }
+        }
     }
     
     
@@ -241,6 +465,20 @@ public class CatalogEntry  implements java.io.Serializable {
         this.catalogEntryAddtnlIdSys = catalogEntryAddtnlIdSys;
     }
     
+    public void addCatalogEntryAddtnlIdSys(String catalogEntryAddtnlIdSys) {
+    	if( catalogEntryAddtnlIdSys != null ) {
+	    	if( this.catalogEntryAddtnlIdSys == null ) {
+	        	this.catalogEntryAddtnlIdSys = catalogEntryAddtnlIdSys;
+	        } else if(this.catalogEntryAddtnlIdSys.substring(this.catalogEntryAddtnlIdSys.length() - 1).equals("]") & catalogEntryAddtnlIdSys.equals("[")) {
+	        	this.catalogEntryAddtnlIdSys = this.catalogEntryAddtnlIdSys+ "," + catalogEntryAddtnlIdSys;
+	        } else if(catalogEntryAddtnlIdSys.equals("[") | catalogEntryAddtnlIdSys.equals("]") | this.catalogEntryAddtnlIdSys.substring(this.catalogEntryAddtnlIdSys.length() - 1).equals("[")) {
+	        	this.catalogEntryAddtnlIdSys = this.catalogEntryAddtnlIdSys+catalogEntryAddtnlIdSys;
+	        } else  {
+	            this.catalogEntryAddtnlIdSys = this.catalogEntryAddtnlIdSys+ "," +catalogEntryAddtnlIdSys;
+	        }
+        }
+    }
+    
     
     
     public String getCatalogEntryAddtnlIdTypCdgCd() {
@@ -249,6 +487,20 @@ public class CatalogEntry  implements java.io.Serializable {
     
     public void setCatalogEntryAddtnlIdTypCdgCd(String catalogEntryAddtnlIdTypCdgCd) {
         this.catalogEntryAddtnlIdTypCdgCd = catalogEntryAddtnlIdTypCdgCd;
+    }
+    
+    public void addCatalogEntryAddtnlIdTypCdgCd(String catalogEntryAddtnlIdTypCdgCd) {
+    	if( catalogEntryAddtnlIdTypCdgCd != null ) {
+	    	if( this.catalogEntryAddtnlIdTypCdgCd == null ) {
+	        	this.catalogEntryAddtnlIdTypCdgCd = catalogEntryAddtnlIdTypCdgCd;
+	        } else if(this.catalogEntryAddtnlIdTypCdgCd.substring(this.catalogEntryAddtnlIdTypCdgCd.length() - 1).equals("]") & catalogEntryAddtnlIdTypCdgCd.equals("[")) {
+	        	this.catalogEntryAddtnlIdTypCdgCd = this.catalogEntryAddtnlIdTypCdgCd+ "," + catalogEntryAddtnlIdTypCdgCd;
+	        } else if(catalogEntryAddtnlIdTypCdgCd.equals("[") | catalogEntryAddtnlIdTypCdgCd.equals("]") | this.catalogEntryAddtnlIdTypCdgCd.substring(this.catalogEntryAddtnlIdTypCdgCd.length() - 1).equals("[")) {
+	        	this.catalogEntryAddtnlIdTypCdgCd = this.catalogEntryAddtnlIdTypCdgCd+catalogEntryAddtnlIdTypCdgCd;
+	        } else  {
+	            this.catalogEntryAddtnlIdTypCdgCd = this.catalogEntryAddtnlIdTypCdgCd+ "," +catalogEntryAddtnlIdTypCdgCd;
+	        }
+        }
     }
     
     
@@ -261,6 +513,20 @@ public class CatalogEntry  implements java.io.Serializable {
         this.catalogEntryAddtnlIdTypCdgDsply = catalogEntryAddtnlIdTypCdgDsply;
     }
     
+    public void addCatalogEntryAddtnlIdTypCdgDsply(String catalogEntryAddtnlIdTypCdgDsply) {
+    	if( catalogEntryAddtnlIdTypCdgDsply != null ) {
+	    	if( this.catalogEntryAddtnlIdTypCdgDsply == null ) {
+	        	this.catalogEntryAddtnlIdTypCdgDsply = catalogEntryAddtnlIdTypCdgDsply;
+	        } else if(this.catalogEntryAddtnlIdTypCdgDsply.substring(this.catalogEntryAddtnlIdTypCdgDsply.length() - 1).equals("]") & catalogEntryAddtnlIdTypCdgDsply.equals("[")) {
+	        	this.catalogEntryAddtnlIdTypCdgDsply = this.catalogEntryAddtnlIdTypCdgDsply+ "," + catalogEntryAddtnlIdTypCdgDsply;
+	        } else if(catalogEntryAddtnlIdTypCdgDsply.equals("[") | catalogEntryAddtnlIdTypCdgDsply.equals("]") | this.catalogEntryAddtnlIdTypCdgDsply.substring(this.catalogEntryAddtnlIdTypCdgDsply.length() - 1).equals("[")) {
+	        	this.catalogEntryAddtnlIdTypCdgDsply = this.catalogEntryAddtnlIdTypCdgDsply+catalogEntryAddtnlIdTypCdgDsply;
+	        } else  {
+	            this.catalogEntryAddtnlIdTypCdgDsply = this.catalogEntryAddtnlIdTypCdgDsply+ "," +catalogEntryAddtnlIdTypCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getCatalogEntryAddtnlIdTypCdgSys() {
@@ -269,6 +535,20 @@ public class CatalogEntry  implements java.io.Serializable {
     
     public void setCatalogEntryAddtnlIdTypCdgSys(String catalogEntryAddtnlIdTypCdgSys) {
         this.catalogEntryAddtnlIdTypCdgSys = catalogEntryAddtnlIdTypCdgSys;
+    }
+    
+    public void addCatalogEntryAddtnlIdTypCdgSys(String catalogEntryAddtnlIdTypCdgSys) {
+    	if( catalogEntryAddtnlIdTypCdgSys != null ) {
+	    	if( this.catalogEntryAddtnlIdTypCdgSys == null ) {
+	        	this.catalogEntryAddtnlIdTypCdgSys = catalogEntryAddtnlIdTypCdgSys;
+	        } else if(this.catalogEntryAddtnlIdTypCdgSys.substring(this.catalogEntryAddtnlIdTypCdgSys.length() - 1).equals("]") & catalogEntryAddtnlIdTypCdgSys.equals("[")) {
+	        	this.catalogEntryAddtnlIdTypCdgSys = this.catalogEntryAddtnlIdTypCdgSys+ "," + catalogEntryAddtnlIdTypCdgSys;
+	        } else if(catalogEntryAddtnlIdTypCdgSys.equals("[") | catalogEntryAddtnlIdTypCdgSys.equals("]") | this.catalogEntryAddtnlIdTypCdgSys.substring(this.catalogEntryAddtnlIdTypCdgSys.length() - 1).equals("[")) {
+	        	this.catalogEntryAddtnlIdTypCdgSys = this.catalogEntryAddtnlIdTypCdgSys+catalogEntryAddtnlIdTypCdgSys;
+	        } else  {
+	            this.catalogEntryAddtnlIdTypCdgSys = this.catalogEntryAddtnlIdTypCdgSys+ "," +catalogEntryAddtnlIdTypCdgSys;
+	        }
+        }
     }
     
     
@@ -281,6 +561,20 @@ public class CatalogEntry  implements java.io.Serializable {
         this.catalogEntryAddtnlIdTypCdgUsrSltd = catalogEntryAddtnlIdTypCdgUsrSltd;
     }
     
+    public void addCatalogEntryAddtnlIdTypCdgUsrSltd(String catalogEntryAddtnlIdTypCdgUsrSltd) {
+    	if( catalogEntryAddtnlIdTypCdgUsrSltd != null ) {
+	    	if( this.catalogEntryAddtnlIdTypCdgUsrSltd == null ) {
+	        	this.catalogEntryAddtnlIdTypCdgUsrSltd = catalogEntryAddtnlIdTypCdgUsrSltd;
+	        } else if(this.catalogEntryAddtnlIdTypCdgUsrSltd.substring(this.catalogEntryAddtnlIdTypCdgUsrSltd.length() - 1).equals("]") & catalogEntryAddtnlIdTypCdgUsrSltd.equals("[")) {
+	        	this.catalogEntryAddtnlIdTypCdgUsrSltd = this.catalogEntryAddtnlIdTypCdgUsrSltd+ "," + catalogEntryAddtnlIdTypCdgUsrSltd;
+	        } else if(catalogEntryAddtnlIdTypCdgUsrSltd.equals("[") | catalogEntryAddtnlIdTypCdgUsrSltd.equals("]") | this.catalogEntryAddtnlIdTypCdgUsrSltd.substring(this.catalogEntryAddtnlIdTypCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.catalogEntryAddtnlIdTypCdgUsrSltd = this.catalogEntryAddtnlIdTypCdgUsrSltd+catalogEntryAddtnlIdTypCdgUsrSltd;
+	        } else  {
+	            this.catalogEntryAddtnlIdTypCdgUsrSltd = this.catalogEntryAddtnlIdTypCdgUsrSltd+ "," +catalogEntryAddtnlIdTypCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getCatalogEntryAddtnlIdTypCdgVrsn() {
@@ -289,6 +583,20 @@ public class CatalogEntry  implements java.io.Serializable {
     
     public void setCatalogEntryAddtnlIdTypCdgVrsn(String catalogEntryAddtnlIdTypCdgVrsn) {
         this.catalogEntryAddtnlIdTypCdgVrsn = catalogEntryAddtnlIdTypCdgVrsn;
+    }
+    
+    public void addCatalogEntryAddtnlIdTypCdgVrsn(String catalogEntryAddtnlIdTypCdgVrsn) {
+    	if( catalogEntryAddtnlIdTypCdgVrsn != null ) {
+	    	if( this.catalogEntryAddtnlIdTypCdgVrsn == null ) {
+	        	this.catalogEntryAddtnlIdTypCdgVrsn = catalogEntryAddtnlIdTypCdgVrsn;
+	        } else if(this.catalogEntryAddtnlIdTypCdgVrsn.substring(this.catalogEntryAddtnlIdTypCdgVrsn.length() - 1).equals("]") & catalogEntryAddtnlIdTypCdgVrsn.equals("[")) {
+	        	this.catalogEntryAddtnlIdTypCdgVrsn = this.catalogEntryAddtnlIdTypCdgVrsn+ "," + catalogEntryAddtnlIdTypCdgVrsn;
+	        } else if(catalogEntryAddtnlIdTypCdgVrsn.equals("[") | catalogEntryAddtnlIdTypCdgVrsn.equals("]") | this.catalogEntryAddtnlIdTypCdgVrsn.substring(this.catalogEntryAddtnlIdTypCdgVrsn.length() - 1).equals("[")) {
+	        	this.catalogEntryAddtnlIdTypCdgVrsn = this.catalogEntryAddtnlIdTypCdgVrsn+catalogEntryAddtnlIdTypCdgVrsn;
+	        } else  {
+	            this.catalogEntryAddtnlIdTypCdgVrsn = this.catalogEntryAddtnlIdTypCdgVrsn+ "," +catalogEntryAddtnlIdTypCdgVrsn;
+	        }
+        }
     }
     
     
@@ -301,6 +609,20 @@ public class CatalogEntry  implements java.io.Serializable {
         this.catalogEntryAddtnlIdTypTxt = catalogEntryAddtnlIdTypTxt;
     }
     
+    public void addCatalogEntryAddtnlIdTypTxt(String catalogEntryAddtnlIdTypTxt) {
+    	if( catalogEntryAddtnlIdTypTxt != null ) {
+	    	if( this.catalogEntryAddtnlIdTypTxt == null ) {
+	        	this.catalogEntryAddtnlIdTypTxt = catalogEntryAddtnlIdTypTxt;
+	        } else if(this.catalogEntryAddtnlIdTypTxt.substring(this.catalogEntryAddtnlIdTypTxt.length() - 1).equals("]") & catalogEntryAddtnlIdTypTxt.equals("[")) {
+	        	this.catalogEntryAddtnlIdTypTxt = this.catalogEntryAddtnlIdTypTxt+ "," + catalogEntryAddtnlIdTypTxt;
+	        } else if(catalogEntryAddtnlIdTypTxt.equals("[") | catalogEntryAddtnlIdTypTxt.equals("]") | this.catalogEntryAddtnlIdTypTxt.substring(this.catalogEntryAddtnlIdTypTxt.length() - 1).equals("[")) {
+	        	this.catalogEntryAddtnlIdTypTxt = this.catalogEntryAddtnlIdTypTxt+catalogEntryAddtnlIdTypTxt;
+	        } else  {
+	            this.catalogEntryAddtnlIdTypTxt = this.catalogEntryAddtnlIdTypTxt+ "," +catalogEntryAddtnlIdTypTxt;
+	        }
+        }
+    }
+    
     
     
     public String getCatalogEntryAddtnlIdUse() {
@@ -309,6 +631,20 @@ public class CatalogEntry  implements java.io.Serializable {
     
     public void setCatalogEntryAddtnlIdUse(String catalogEntryAddtnlIdUse) {
         this.catalogEntryAddtnlIdUse = catalogEntryAddtnlIdUse;
+    }
+    
+    public void addCatalogEntryAddtnlIdUse(String catalogEntryAddtnlIdUse) {
+    	if( catalogEntryAddtnlIdUse != null ) {
+	    	if( this.catalogEntryAddtnlIdUse == null ) {
+	        	this.catalogEntryAddtnlIdUse = catalogEntryAddtnlIdUse;
+	        } else if(this.catalogEntryAddtnlIdUse.substring(this.catalogEntryAddtnlIdUse.length() - 1).equals("]") & catalogEntryAddtnlIdUse.equals("[")) {
+	        	this.catalogEntryAddtnlIdUse = this.catalogEntryAddtnlIdUse+ "," + catalogEntryAddtnlIdUse;
+	        } else if(catalogEntryAddtnlIdUse.equals("[") | catalogEntryAddtnlIdUse.equals("]") | this.catalogEntryAddtnlIdUse.substring(this.catalogEntryAddtnlIdUse.length() - 1).equals("[")) {
+	        	this.catalogEntryAddtnlIdUse = this.catalogEntryAddtnlIdUse+catalogEntryAddtnlIdUse;
+	        } else  {
+	            this.catalogEntryAddtnlIdUse = this.catalogEntryAddtnlIdUse+ "," +catalogEntryAddtnlIdUse;
+	        }
+        }
     }
     
     
@@ -321,6 +657,20 @@ public class CatalogEntry  implements java.io.Serializable {
         this.catalogEntryAddtnlIdVl = catalogEntryAddtnlIdVl;
     }
     
+    public void addCatalogEntryAddtnlIdVl(String catalogEntryAddtnlIdVl) {
+    	if( catalogEntryAddtnlIdVl != null ) {
+	    	if( this.catalogEntryAddtnlIdVl == null ) {
+	        	this.catalogEntryAddtnlIdVl = catalogEntryAddtnlIdVl;
+	        } else if(this.catalogEntryAddtnlIdVl.substring(this.catalogEntryAddtnlIdVl.length() - 1).equals("]") & catalogEntryAddtnlIdVl.equals("[")) {
+	        	this.catalogEntryAddtnlIdVl = this.catalogEntryAddtnlIdVl+ "," + catalogEntryAddtnlIdVl;
+	        } else if(catalogEntryAddtnlIdVl.equals("[") | catalogEntryAddtnlIdVl.equals("]") | this.catalogEntryAddtnlIdVl.substring(this.catalogEntryAddtnlIdVl.length() - 1).equals("[")) {
+	        	this.catalogEntryAddtnlIdVl = this.catalogEntryAddtnlIdVl+catalogEntryAddtnlIdVl;
+	        } else  {
+	            this.catalogEntryAddtnlIdVl = this.catalogEntryAddtnlIdVl+ "," +catalogEntryAddtnlIdVl;
+	        }
+        }
+    }
+    
     
     
     public String getCatalogEntryClsfctnCdgCd() {
@@ -329,6 +679,20 @@ public class CatalogEntry  implements java.io.Serializable {
     
     public void setCatalogEntryClsfctnCdgCd(String catalogEntryClsfctnCdgCd) {
         this.catalogEntryClsfctnCdgCd = catalogEntryClsfctnCdgCd;
+    }
+    
+    public void addCatalogEntryClsfctnCdgCd(String catalogEntryClsfctnCdgCd) {
+    	if( catalogEntryClsfctnCdgCd != null ) {
+	    	if( this.catalogEntryClsfctnCdgCd == null ) {
+	        	this.catalogEntryClsfctnCdgCd = catalogEntryClsfctnCdgCd;
+	        } else if(this.catalogEntryClsfctnCdgCd.substring(this.catalogEntryClsfctnCdgCd.length() - 1).equals("]") & catalogEntryClsfctnCdgCd.equals("[")) {
+	        	this.catalogEntryClsfctnCdgCd = this.catalogEntryClsfctnCdgCd+ "," + catalogEntryClsfctnCdgCd;
+	        } else if(catalogEntryClsfctnCdgCd.equals("[") | catalogEntryClsfctnCdgCd.equals("]") | this.catalogEntryClsfctnCdgCd.substring(this.catalogEntryClsfctnCdgCd.length() - 1).equals("[")) {
+	        	this.catalogEntryClsfctnCdgCd = this.catalogEntryClsfctnCdgCd+catalogEntryClsfctnCdgCd;
+	        } else  {
+	            this.catalogEntryClsfctnCdgCd = this.catalogEntryClsfctnCdgCd+ "," +catalogEntryClsfctnCdgCd;
+	        }
+        }
     }
     
     
@@ -341,6 +705,20 @@ public class CatalogEntry  implements java.io.Serializable {
         this.catalogEntryClsfctnCdgDsply = catalogEntryClsfctnCdgDsply;
     }
     
+    public void addCatalogEntryClsfctnCdgDsply(String catalogEntryClsfctnCdgDsply) {
+    	if( catalogEntryClsfctnCdgDsply != null ) {
+	    	if( this.catalogEntryClsfctnCdgDsply == null ) {
+	        	this.catalogEntryClsfctnCdgDsply = catalogEntryClsfctnCdgDsply;
+	        } else if(this.catalogEntryClsfctnCdgDsply.substring(this.catalogEntryClsfctnCdgDsply.length() - 1).equals("]") & catalogEntryClsfctnCdgDsply.equals("[")) {
+	        	this.catalogEntryClsfctnCdgDsply = this.catalogEntryClsfctnCdgDsply+ "," + catalogEntryClsfctnCdgDsply;
+	        } else if(catalogEntryClsfctnCdgDsply.equals("[") | catalogEntryClsfctnCdgDsply.equals("]") | this.catalogEntryClsfctnCdgDsply.substring(this.catalogEntryClsfctnCdgDsply.length() - 1).equals("[")) {
+	        	this.catalogEntryClsfctnCdgDsply = this.catalogEntryClsfctnCdgDsply+catalogEntryClsfctnCdgDsply;
+	        } else  {
+	            this.catalogEntryClsfctnCdgDsply = this.catalogEntryClsfctnCdgDsply+ "," +catalogEntryClsfctnCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getCatalogEntryClsfctnCdgSys() {
@@ -349,6 +727,20 @@ public class CatalogEntry  implements java.io.Serializable {
     
     public void setCatalogEntryClsfctnCdgSys(String catalogEntryClsfctnCdgSys) {
         this.catalogEntryClsfctnCdgSys = catalogEntryClsfctnCdgSys;
+    }
+    
+    public void addCatalogEntryClsfctnCdgSys(String catalogEntryClsfctnCdgSys) {
+    	if( catalogEntryClsfctnCdgSys != null ) {
+	    	if( this.catalogEntryClsfctnCdgSys == null ) {
+	        	this.catalogEntryClsfctnCdgSys = catalogEntryClsfctnCdgSys;
+	        } else if(this.catalogEntryClsfctnCdgSys.substring(this.catalogEntryClsfctnCdgSys.length() - 1).equals("]") & catalogEntryClsfctnCdgSys.equals("[")) {
+	        	this.catalogEntryClsfctnCdgSys = this.catalogEntryClsfctnCdgSys+ "," + catalogEntryClsfctnCdgSys;
+	        } else if(catalogEntryClsfctnCdgSys.equals("[") | catalogEntryClsfctnCdgSys.equals("]") | this.catalogEntryClsfctnCdgSys.substring(this.catalogEntryClsfctnCdgSys.length() - 1).equals("[")) {
+	        	this.catalogEntryClsfctnCdgSys = this.catalogEntryClsfctnCdgSys+catalogEntryClsfctnCdgSys;
+	        } else  {
+	            this.catalogEntryClsfctnCdgSys = this.catalogEntryClsfctnCdgSys+ "," +catalogEntryClsfctnCdgSys;
+	        }
+        }
     }
     
     
@@ -361,6 +753,20 @@ public class CatalogEntry  implements java.io.Serializable {
         this.catalogEntryClsfctnCdgUsrSltd = catalogEntryClsfctnCdgUsrSltd;
     }
     
+    public void addCatalogEntryClsfctnCdgUsrSltd(String catalogEntryClsfctnCdgUsrSltd) {
+    	if( catalogEntryClsfctnCdgUsrSltd != null ) {
+	    	if( this.catalogEntryClsfctnCdgUsrSltd == null ) {
+	        	this.catalogEntryClsfctnCdgUsrSltd = catalogEntryClsfctnCdgUsrSltd;
+	        } else if(this.catalogEntryClsfctnCdgUsrSltd.substring(this.catalogEntryClsfctnCdgUsrSltd.length() - 1).equals("]") & catalogEntryClsfctnCdgUsrSltd.equals("[")) {
+	        	this.catalogEntryClsfctnCdgUsrSltd = this.catalogEntryClsfctnCdgUsrSltd+ "," + catalogEntryClsfctnCdgUsrSltd;
+	        } else if(catalogEntryClsfctnCdgUsrSltd.equals("[") | catalogEntryClsfctnCdgUsrSltd.equals("]") | this.catalogEntryClsfctnCdgUsrSltd.substring(this.catalogEntryClsfctnCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.catalogEntryClsfctnCdgUsrSltd = this.catalogEntryClsfctnCdgUsrSltd+catalogEntryClsfctnCdgUsrSltd;
+	        } else  {
+	            this.catalogEntryClsfctnCdgUsrSltd = this.catalogEntryClsfctnCdgUsrSltd+ "," +catalogEntryClsfctnCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getCatalogEntryClsfctnCdgVrsn() {
@@ -369,6 +775,20 @@ public class CatalogEntry  implements java.io.Serializable {
     
     public void setCatalogEntryClsfctnCdgVrsn(String catalogEntryClsfctnCdgVrsn) {
         this.catalogEntryClsfctnCdgVrsn = catalogEntryClsfctnCdgVrsn;
+    }
+    
+    public void addCatalogEntryClsfctnCdgVrsn(String catalogEntryClsfctnCdgVrsn) {
+    	if( catalogEntryClsfctnCdgVrsn != null ) {
+	    	if( this.catalogEntryClsfctnCdgVrsn == null ) {
+	        	this.catalogEntryClsfctnCdgVrsn = catalogEntryClsfctnCdgVrsn;
+	        } else if(this.catalogEntryClsfctnCdgVrsn.substring(this.catalogEntryClsfctnCdgVrsn.length() - 1).equals("]") & catalogEntryClsfctnCdgVrsn.equals("[")) {
+	        	this.catalogEntryClsfctnCdgVrsn = this.catalogEntryClsfctnCdgVrsn+ "," + catalogEntryClsfctnCdgVrsn;
+	        } else if(catalogEntryClsfctnCdgVrsn.equals("[") | catalogEntryClsfctnCdgVrsn.equals("]") | this.catalogEntryClsfctnCdgVrsn.substring(this.catalogEntryClsfctnCdgVrsn.length() - 1).equals("[")) {
+	        	this.catalogEntryClsfctnCdgVrsn = this.catalogEntryClsfctnCdgVrsn+catalogEntryClsfctnCdgVrsn;
+	        } else  {
+	            this.catalogEntryClsfctnCdgVrsn = this.catalogEntryClsfctnCdgVrsn+ "," +catalogEntryClsfctnCdgVrsn;
+	        }
+        }
     }
     
     
@@ -381,6 +801,20 @@ public class CatalogEntry  implements java.io.Serializable {
         this.catalogEntryClsfctnTxt = catalogEntryClsfctnTxt;
     }
     
+    public void addCatalogEntryClsfctnTxt(String catalogEntryClsfctnTxt) {
+    	if( catalogEntryClsfctnTxt != null ) {
+	    	if( this.catalogEntryClsfctnTxt == null ) {
+	        	this.catalogEntryClsfctnTxt = catalogEntryClsfctnTxt;
+	        } else if(this.catalogEntryClsfctnTxt.substring(this.catalogEntryClsfctnTxt.length() - 1).equals("]") & catalogEntryClsfctnTxt.equals("[")) {
+	        	this.catalogEntryClsfctnTxt = this.catalogEntryClsfctnTxt+ "," + catalogEntryClsfctnTxt;
+	        } else if(catalogEntryClsfctnTxt.equals("[") | catalogEntryClsfctnTxt.equals("]") | this.catalogEntryClsfctnTxt.substring(this.catalogEntryClsfctnTxt.length() - 1).equals("[")) {
+	        	this.catalogEntryClsfctnTxt = this.catalogEntryClsfctnTxt+catalogEntryClsfctnTxt;
+	        } else  {
+	            this.catalogEntryClsfctnTxt = this.catalogEntryClsfctnTxt+ "," +catalogEntryClsfctnTxt;
+	        }
+        }
+    }
+    
     
     
     public String getCatalogEntryIdAssigner() {
@@ -389,6 +823,20 @@ public class CatalogEntry  implements java.io.Serializable {
     
     public void setCatalogEntryIdAssigner(String catalogEntryIdAssigner) {
         this.catalogEntryIdAssigner = catalogEntryIdAssigner;
+    }
+    
+    public void addCatalogEntryIdAssigner(String catalogEntryIdAssigner) {
+    	if( catalogEntryIdAssigner != null ) {
+	    	if( this.catalogEntryIdAssigner == null ) {
+	        	this.catalogEntryIdAssigner = catalogEntryIdAssigner;
+	        } else if(this.catalogEntryIdAssigner.substring(this.catalogEntryIdAssigner.length() - 1).equals("]") & catalogEntryIdAssigner.equals("[")) {
+	        	this.catalogEntryIdAssigner = this.catalogEntryIdAssigner+ "," + catalogEntryIdAssigner;
+	        } else if(catalogEntryIdAssigner.equals("[") | catalogEntryIdAssigner.equals("]") | this.catalogEntryIdAssigner.substring(this.catalogEntryIdAssigner.length() - 1).equals("[")) {
+	        	this.catalogEntryIdAssigner = this.catalogEntryIdAssigner+catalogEntryIdAssigner;
+	        } else  {
+	            this.catalogEntryIdAssigner = this.catalogEntryIdAssigner+ "," +catalogEntryIdAssigner;
+	        }
+        }
     }
     
     
@@ -401,6 +849,20 @@ public class CatalogEntry  implements java.io.Serializable {
         this.catalogEntryIdPrdEnd = catalogEntryIdPrdEnd;
     }
     
+    public void addCatalogEntryIdPrdEnd(String catalogEntryIdPrdEnd) {
+    	if( catalogEntryIdPrdEnd != null ) {
+	    	if( this.catalogEntryIdPrdEnd == null ) {
+	        	this.catalogEntryIdPrdEnd = catalogEntryIdPrdEnd;
+	        } else if(this.catalogEntryIdPrdEnd.substring(this.catalogEntryIdPrdEnd.length() - 1).equals("]") & catalogEntryIdPrdEnd.equals("[")) {
+	        	this.catalogEntryIdPrdEnd = this.catalogEntryIdPrdEnd+ "," + catalogEntryIdPrdEnd;
+	        } else if(catalogEntryIdPrdEnd.equals("[") | catalogEntryIdPrdEnd.equals("]") | this.catalogEntryIdPrdEnd.substring(this.catalogEntryIdPrdEnd.length() - 1).equals("[")) {
+	        	this.catalogEntryIdPrdEnd = this.catalogEntryIdPrdEnd+catalogEntryIdPrdEnd;
+	        } else  {
+	            this.catalogEntryIdPrdEnd = this.catalogEntryIdPrdEnd+ "," +catalogEntryIdPrdEnd;
+	        }
+        }
+    }
+    
     
     
     public String getCatalogEntryIdPrdStrt() {
@@ -409,6 +871,20 @@ public class CatalogEntry  implements java.io.Serializable {
     
     public void setCatalogEntryIdPrdStrt(String catalogEntryIdPrdStrt) {
         this.catalogEntryIdPrdStrt = catalogEntryIdPrdStrt;
+    }
+    
+    public void addCatalogEntryIdPrdStrt(String catalogEntryIdPrdStrt) {
+    	if( catalogEntryIdPrdStrt != null ) {
+	    	if( this.catalogEntryIdPrdStrt == null ) {
+	        	this.catalogEntryIdPrdStrt = catalogEntryIdPrdStrt;
+	        } else if(this.catalogEntryIdPrdStrt.substring(this.catalogEntryIdPrdStrt.length() - 1).equals("]") & catalogEntryIdPrdStrt.equals("[")) {
+	        	this.catalogEntryIdPrdStrt = this.catalogEntryIdPrdStrt+ "," + catalogEntryIdPrdStrt;
+	        } else if(catalogEntryIdPrdStrt.equals("[") | catalogEntryIdPrdStrt.equals("]") | this.catalogEntryIdPrdStrt.substring(this.catalogEntryIdPrdStrt.length() - 1).equals("[")) {
+	        	this.catalogEntryIdPrdStrt = this.catalogEntryIdPrdStrt+catalogEntryIdPrdStrt;
+	        } else  {
+	            this.catalogEntryIdPrdStrt = this.catalogEntryIdPrdStrt+ "," +catalogEntryIdPrdStrt;
+	        }
+        }
     }
     
     
@@ -421,6 +897,20 @@ public class CatalogEntry  implements java.io.Serializable {
         this.catalogEntryIdSys = catalogEntryIdSys;
     }
     
+    public void addCatalogEntryIdSys(String catalogEntryIdSys) {
+    	if( catalogEntryIdSys != null ) {
+	    	if( this.catalogEntryIdSys == null ) {
+	        	this.catalogEntryIdSys = catalogEntryIdSys;
+	        } else if(this.catalogEntryIdSys.substring(this.catalogEntryIdSys.length() - 1).equals("]") & catalogEntryIdSys.equals("[")) {
+	        	this.catalogEntryIdSys = this.catalogEntryIdSys+ "," + catalogEntryIdSys;
+	        } else if(catalogEntryIdSys.equals("[") | catalogEntryIdSys.equals("]") | this.catalogEntryIdSys.substring(this.catalogEntryIdSys.length() - 1).equals("[")) {
+	        	this.catalogEntryIdSys = this.catalogEntryIdSys+catalogEntryIdSys;
+	        } else  {
+	            this.catalogEntryIdSys = this.catalogEntryIdSys+ "," +catalogEntryIdSys;
+	        }
+        }
+    }
+    
     
     
     public String getCatalogEntryIdTypCdgCd() {
@@ -429,6 +919,20 @@ public class CatalogEntry  implements java.io.Serializable {
     
     public void setCatalogEntryIdTypCdgCd(String catalogEntryIdTypCdgCd) {
         this.catalogEntryIdTypCdgCd = catalogEntryIdTypCdgCd;
+    }
+    
+    public void addCatalogEntryIdTypCdgCd(String catalogEntryIdTypCdgCd) {
+    	if( catalogEntryIdTypCdgCd != null ) {
+	    	if( this.catalogEntryIdTypCdgCd == null ) {
+	        	this.catalogEntryIdTypCdgCd = catalogEntryIdTypCdgCd;
+	        } else if(this.catalogEntryIdTypCdgCd.substring(this.catalogEntryIdTypCdgCd.length() - 1).equals("]") & catalogEntryIdTypCdgCd.equals("[")) {
+	        	this.catalogEntryIdTypCdgCd = this.catalogEntryIdTypCdgCd+ "," + catalogEntryIdTypCdgCd;
+	        } else if(catalogEntryIdTypCdgCd.equals("[") | catalogEntryIdTypCdgCd.equals("]") | this.catalogEntryIdTypCdgCd.substring(this.catalogEntryIdTypCdgCd.length() - 1).equals("[")) {
+	        	this.catalogEntryIdTypCdgCd = this.catalogEntryIdTypCdgCd+catalogEntryIdTypCdgCd;
+	        } else  {
+	            this.catalogEntryIdTypCdgCd = this.catalogEntryIdTypCdgCd+ "," +catalogEntryIdTypCdgCd;
+	        }
+        }
     }
     
     
@@ -441,6 +945,20 @@ public class CatalogEntry  implements java.io.Serializable {
         this.catalogEntryIdTypCdgDsply = catalogEntryIdTypCdgDsply;
     }
     
+    public void addCatalogEntryIdTypCdgDsply(String catalogEntryIdTypCdgDsply) {
+    	if( catalogEntryIdTypCdgDsply != null ) {
+	    	if( this.catalogEntryIdTypCdgDsply == null ) {
+	        	this.catalogEntryIdTypCdgDsply = catalogEntryIdTypCdgDsply;
+	        } else if(this.catalogEntryIdTypCdgDsply.substring(this.catalogEntryIdTypCdgDsply.length() - 1).equals("]") & catalogEntryIdTypCdgDsply.equals("[")) {
+	        	this.catalogEntryIdTypCdgDsply = this.catalogEntryIdTypCdgDsply+ "," + catalogEntryIdTypCdgDsply;
+	        } else if(catalogEntryIdTypCdgDsply.equals("[") | catalogEntryIdTypCdgDsply.equals("]") | this.catalogEntryIdTypCdgDsply.substring(this.catalogEntryIdTypCdgDsply.length() - 1).equals("[")) {
+	        	this.catalogEntryIdTypCdgDsply = this.catalogEntryIdTypCdgDsply+catalogEntryIdTypCdgDsply;
+	        } else  {
+	            this.catalogEntryIdTypCdgDsply = this.catalogEntryIdTypCdgDsply+ "," +catalogEntryIdTypCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getCatalogEntryIdTypCdgSys() {
@@ -449,6 +967,20 @@ public class CatalogEntry  implements java.io.Serializable {
     
     public void setCatalogEntryIdTypCdgSys(String catalogEntryIdTypCdgSys) {
         this.catalogEntryIdTypCdgSys = catalogEntryIdTypCdgSys;
+    }
+    
+    public void addCatalogEntryIdTypCdgSys(String catalogEntryIdTypCdgSys) {
+    	if( catalogEntryIdTypCdgSys != null ) {
+	    	if( this.catalogEntryIdTypCdgSys == null ) {
+	        	this.catalogEntryIdTypCdgSys = catalogEntryIdTypCdgSys;
+	        } else if(this.catalogEntryIdTypCdgSys.substring(this.catalogEntryIdTypCdgSys.length() - 1).equals("]") & catalogEntryIdTypCdgSys.equals("[")) {
+	        	this.catalogEntryIdTypCdgSys = this.catalogEntryIdTypCdgSys+ "," + catalogEntryIdTypCdgSys;
+	        } else if(catalogEntryIdTypCdgSys.equals("[") | catalogEntryIdTypCdgSys.equals("]") | this.catalogEntryIdTypCdgSys.substring(this.catalogEntryIdTypCdgSys.length() - 1).equals("[")) {
+	        	this.catalogEntryIdTypCdgSys = this.catalogEntryIdTypCdgSys+catalogEntryIdTypCdgSys;
+	        } else  {
+	            this.catalogEntryIdTypCdgSys = this.catalogEntryIdTypCdgSys+ "," +catalogEntryIdTypCdgSys;
+	        }
+        }
     }
     
     
@@ -461,6 +993,20 @@ public class CatalogEntry  implements java.io.Serializable {
         this.catalogEntryIdTypCdgUsrSltd = catalogEntryIdTypCdgUsrSltd;
     }
     
+    public void addCatalogEntryIdTypCdgUsrSltd(String catalogEntryIdTypCdgUsrSltd) {
+    	if( catalogEntryIdTypCdgUsrSltd != null ) {
+	    	if( this.catalogEntryIdTypCdgUsrSltd == null ) {
+	        	this.catalogEntryIdTypCdgUsrSltd = catalogEntryIdTypCdgUsrSltd;
+	        } else if(this.catalogEntryIdTypCdgUsrSltd.substring(this.catalogEntryIdTypCdgUsrSltd.length() - 1).equals("]") & catalogEntryIdTypCdgUsrSltd.equals("[")) {
+	        	this.catalogEntryIdTypCdgUsrSltd = this.catalogEntryIdTypCdgUsrSltd+ "," + catalogEntryIdTypCdgUsrSltd;
+	        } else if(catalogEntryIdTypCdgUsrSltd.equals("[") | catalogEntryIdTypCdgUsrSltd.equals("]") | this.catalogEntryIdTypCdgUsrSltd.substring(this.catalogEntryIdTypCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.catalogEntryIdTypCdgUsrSltd = this.catalogEntryIdTypCdgUsrSltd+catalogEntryIdTypCdgUsrSltd;
+	        } else  {
+	            this.catalogEntryIdTypCdgUsrSltd = this.catalogEntryIdTypCdgUsrSltd+ "," +catalogEntryIdTypCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getCatalogEntryIdTypCdgVrsn() {
@@ -469,6 +1015,20 @@ public class CatalogEntry  implements java.io.Serializable {
     
     public void setCatalogEntryIdTypCdgVrsn(String catalogEntryIdTypCdgVrsn) {
         this.catalogEntryIdTypCdgVrsn = catalogEntryIdTypCdgVrsn;
+    }
+    
+    public void addCatalogEntryIdTypCdgVrsn(String catalogEntryIdTypCdgVrsn) {
+    	if( catalogEntryIdTypCdgVrsn != null ) {
+	    	if( this.catalogEntryIdTypCdgVrsn == null ) {
+	        	this.catalogEntryIdTypCdgVrsn = catalogEntryIdTypCdgVrsn;
+	        } else if(this.catalogEntryIdTypCdgVrsn.substring(this.catalogEntryIdTypCdgVrsn.length() - 1).equals("]") & catalogEntryIdTypCdgVrsn.equals("[")) {
+	        	this.catalogEntryIdTypCdgVrsn = this.catalogEntryIdTypCdgVrsn+ "," + catalogEntryIdTypCdgVrsn;
+	        } else if(catalogEntryIdTypCdgVrsn.equals("[") | catalogEntryIdTypCdgVrsn.equals("]") | this.catalogEntryIdTypCdgVrsn.substring(this.catalogEntryIdTypCdgVrsn.length() - 1).equals("[")) {
+	        	this.catalogEntryIdTypCdgVrsn = this.catalogEntryIdTypCdgVrsn+catalogEntryIdTypCdgVrsn;
+	        } else  {
+	            this.catalogEntryIdTypCdgVrsn = this.catalogEntryIdTypCdgVrsn+ "," +catalogEntryIdTypCdgVrsn;
+	        }
+        }
     }
     
     
@@ -481,6 +1041,20 @@ public class CatalogEntry  implements java.io.Serializable {
         this.catalogEntryIdTypTxt = catalogEntryIdTypTxt;
     }
     
+    public void addCatalogEntryIdTypTxt(String catalogEntryIdTypTxt) {
+    	if( catalogEntryIdTypTxt != null ) {
+	    	if( this.catalogEntryIdTypTxt == null ) {
+	        	this.catalogEntryIdTypTxt = catalogEntryIdTypTxt;
+	        } else if(this.catalogEntryIdTypTxt.substring(this.catalogEntryIdTypTxt.length() - 1).equals("]") & catalogEntryIdTypTxt.equals("[")) {
+	        	this.catalogEntryIdTypTxt = this.catalogEntryIdTypTxt+ "," + catalogEntryIdTypTxt;
+	        } else if(catalogEntryIdTypTxt.equals("[") | catalogEntryIdTypTxt.equals("]") | this.catalogEntryIdTypTxt.substring(this.catalogEntryIdTypTxt.length() - 1).equals("[")) {
+	        	this.catalogEntryIdTypTxt = this.catalogEntryIdTypTxt+catalogEntryIdTypTxt;
+	        } else  {
+	            this.catalogEntryIdTypTxt = this.catalogEntryIdTypTxt+ "," +catalogEntryIdTypTxt;
+	        }
+        }
+    }
+    
     
     
     public String getCatalogEntryIdUse() {
@@ -489,6 +1063,20 @@ public class CatalogEntry  implements java.io.Serializable {
     
     public void setCatalogEntryIdUse(String catalogEntryIdUse) {
         this.catalogEntryIdUse = catalogEntryIdUse;
+    }
+    
+    public void addCatalogEntryIdUse(String catalogEntryIdUse) {
+    	if( catalogEntryIdUse != null ) {
+	    	if( this.catalogEntryIdUse == null ) {
+	        	this.catalogEntryIdUse = catalogEntryIdUse;
+	        } else if(this.catalogEntryIdUse.substring(this.catalogEntryIdUse.length() - 1).equals("]") & catalogEntryIdUse.equals("[")) {
+	        	this.catalogEntryIdUse = this.catalogEntryIdUse+ "," + catalogEntryIdUse;
+	        } else if(catalogEntryIdUse.equals("[") | catalogEntryIdUse.equals("]") | this.catalogEntryIdUse.substring(this.catalogEntryIdUse.length() - 1).equals("[")) {
+	        	this.catalogEntryIdUse = this.catalogEntryIdUse+catalogEntryIdUse;
+	        } else  {
+	            this.catalogEntryIdUse = this.catalogEntryIdUse+ "," +catalogEntryIdUse;
+	        }
+        }
     }
     
     
@@ -501,6 +1089,20 @@ public class CatalogEntry  implements java.io.Serializable {
         this.catalogEntryIdVl = catalogEntryIdVl;
     }
     
+    public void addCatalogEntryIdVl(String catalogEntryIdVl) {
+    	if( catalogEntryIdVl != null ) {
+	    	if( this.catalogEntryIdVl == null ) {
+	        	this.catalogEntryIdVl = catalogEntryIdVl;
+	        } else if(this.catalogEntryIdVl.substring(this.catalogEntryIdVl.length() - 1).equals("]") & catalogEntryIdVl.equals("[")) {
+	        	this.catalogEntryIdVl = this.catalogEntryIdVl+ "," + catalogEntryIdVl;
+	        } else if(catalogEntryIdVl.equals("[") | catalogEntryIdVl.equals("]") | this.catalogEntryIdVl.substring(this.catalogEntryIdVl.length() - 1).equals("[")) {
+	        	this.catalogEntryIdVl = this.catalogEntryIdVl+catalogEntryIdVl;
+	        } else  {
+	            this.catalogEntryIdVl = this.catalogEntryIdVl+ "," +catalogEntryIdVl;
+	        }
+        }
+    }
+    
     
     
     public String getCatalogEntryLastUpdated() {
@@ -509,6 +1111,20 @@ public class CatalogEntry  implements java.io.Serializable {
     
     public void setCatalogEntryLastUpdated(String catalogEntryLastUpdated) {
         this.catalogEntryLastUpdated = catalogEntryLastUpdated;
+    }
+    
+    public void addCatalogEntryLastUpdated(String catalogEntryLastUpdated) {
+    	if( catalogEntryLastUpdated != null ) {
+	    	if( this.catalogEntryLastUpdated == null ) {
+	        	this.catalogEntryLastUpdated = catalogEntryLastUpdated;
+	        } else if(this.catalogEntryLastUpdated.substring(this.catalogEntryLastUpdated.length() - 1).equals("]") & catalogEntryLastUpdated.equals("[")) {
+	        	this.catalogEntryLastUpdated = this.catalogEntryLastUpdated+ "," + catalogEntryLastUpdated;
+	        } else if(catalogEntryLastUpdated.equals("[") | catalogEntryLastUpdated.equals("]") | this.catalogEntryLastUpdated.substring(this.catalogEntryLastUpdated.length() - 1).equals("[")) {
+	        	this.catalogEntryLastUpdated = this.catalogEntryLastUpdated+catalogEntryLastUpdated;
+	        } else  {
+	            this.catalogEntryLastUpdated = this.catalogEntryLastUpdated+ "," +catalogEntryLastUpdated;
+	        }
+        }
     }
     
     
@@ -521,6 +1137,20 @@ public class CatalogEntry  implements java.io.Serializable {
         this.catalogEntryOrdrable = catalogEntryOrdrable;
     }
     
+    public void addCatalogEntryOrdrable(String catalogEntryOrdrable) {
+    	if( catalogEntryOrdrable != null ) {
+	    	if( this.catalogEntryOrdrable == null ) {
+	        	this.catalogEntryOrdrable = catalogEntryOrdrable;
+	        } else if(this.catalogEntryOrdrable.substring(this.catalogEntryOrdrable.length() - 1).equals("]") & catalogEntryOrdrable.equals("[")) {
+	        	this.catalogEntryOrdrable = this.catalogEntryOrdrable+ "," + catalogEntryOrdrable;
+	        } else if(catalogEntryOrdrable.equals("[") | catalogEntryOrdrable.equals("]") | this.catalogEntryOrdrable.substring(this.catalogEntryOrdrable.length() - 1).equals("[")) {
+	        	this.catalogEntryOrdrable = this.catalogEntryOrdrable+catalogEntryOrdrable;
+	        } else  {
+	            this.catalogEntryOrdrable = this.catalogEntryOrdrable+ "," +catalogEntryOrdrable;
+	        }
+        }
+    }
+    
     
     
     public String getCatalogEntryRfrncdItm() {
@@ -529,6 +1159,20 @@ public class CatalogEntry  implements java.io.Serializable {
     
     public void setCatalogEntryRfrncdItm(String catalogEntryRfrncdItm) {
         this.catalogEntryRfrncdItm = catalogEntryRfrncdItm;
+    }
+    
+    public void addCatalogEntryRfrncdItm(String catalogEntryRfrncdItm) {
+    	if( catalogEntryRfrncdItm != null ) {
+	    	if( this.catalogEntryRfrncdItm == null ) {
+	        	this.catalogEntryRfrncdItm = catalogEntryRfrncdItm;
+	        } else if(this.catalogEntryRfrncdItm.substring(this.catalogEntryRfrncdItm.length() - 1).equals("]") & catalogEntryRfrncdItm.equals("[")) {
+	        	this.catalogEntryRfrncdItm = this.catalogEntryRfrncdItm+ "," + catalogEntryRfrncdItm;
+	        } else if(catalogEntryRfrncdItm.equals("[") | catalogEntryRfrncdItm.equals("]") | this.catalogEntryRfrncdItm.substring(this.catalogEntryRfrncdItm.length() - 1).equals("[")) {
+	        	this.catalogEntryRfrncdItm = this.catalogEntryRfrncdItm+catalogEntryRfrncdItm;
+	        } else  {
+	            this.catalogEntryRfrncdItm = this.catalogEntryRfrncdItm+ "," +catalogEntryRfrncdItm;
+	        }
+        }
     }
     
     
@@ -541,6 +1185,20 @@ public class CatalogEntry  implements java.io.Serializable {
         this.catalogEntryRltedEntryItm = catalogEntryRltedEntryItm;
     }
     
+    public void addCatalogEntryRltedEntryItm(String catalogEntryRltedEntryItm) {
+    	if( catalogEntryRltedEntryItm != null ) {
+	    	if( this.catalogEntryRltedEntryItm == null ) {
+	        	this.catalogEntryRltedEntryItm = catalogEntryRltedEntryItm;
+	        } else if(this.catalogEntryRltedEntryItm.substring(this.catalogEntryRltedEntryItm.length() - 1).equals("]") & catalogEntryRltedEntryItm.equals("[")) {
+	        	this.catalogEntryRltedEntryItm = this.catalogEntryRltedEntryItm+ "," + catalogEntryRltedEntryItm;
+	        } else if(catalogEntryRltedEntryItm.equals("[") | catalogEntryRltedEntryItm.equals("]") | this.catalogEntryRltedEntryItm.substring(this.catalogEntryRltedEntryItm.length() - 1).equals("[")) {
+	        	this.catalogEntryRltedEntryItm = this.catalogEntryRltedEntryItm+catalogEntryRltedEntryItm;
+	        } else  {
+	            this.catalogEntryRltedEntryItm = this.catalogEntryRltedEntryItm+ "," +catalogEntryRltedEntryItm;
+	        }
+        }
+    }
+    
     
     
     public String getCatalogEntryRltedEntryRelationtype() {
@@ -549,6 +1207,20 @@ public class CatalogEntry  implements java.io.Serializable {
     
     public void setCatalogEntryRltedEntryRelationtype(String catalogEntryRltedEntryRelationtype) {
         this.catalogEntryRltedEntryRelationtype = catalogEntryRltedEntryRelationtype;
+    }
+    
+    public void addCatalogEntryRltedEntryRelationtype(String catalogEntryRltedEntryRelationtype) {
+    	if( catalogEntryRltedEntryRelationtype != null ) {
+	    	if( this.catalogEntryRltedEntryRelationtype == null ) {
+	        	this.catalogEntryRltedEntryRelationtype = catalogEntryRltedEntryRelationtype;
+	        } else if(this.catalogEntryRltedEntryRelationtype.substring(this.catalogEntryRltedEntryRelationtype.length() - 1).equals("]") & catalogEntryRltedEntryRelationtype.equals("[")) {
+	        	this.catalogEntryRltedEntryRelationtype = this.catalogEntryRltedEntryRelationtype+ "," + catalogEntryRltedEntryRelationtype;
+	        } else if(catalogEntryRltedEntryRelationtype.equals("[") | catalogEntryRltedEntryRelationtype.equals("]") | this.catalogEntryRltedEntryRelationtype.substring(this.catalogEntryRltedEntryRelationtype.length() - 1).equals("[")) {
+	        	this.catalogEntryRltedEntryRelationtype = this.catalogEntryRltedEntryRelationtype+catalogEntryRltedEntryRelationtype;
+	        } else  {
+	            this.catalogEntryRltedEntryRelationtype = this.catalogEntryRltedEntryRelationtype+ "," +catalogEntryRltedEntryRelationtype;
+	        }
+        }
     }
     
     
@@ -561,6 +1233,20 @@ public class CatalogEntry  implements java.io.Serializable {
         this.catalogEntrySts = catalogEntrySts;
     }
     
+    public void addCatalogEntrySts(String catalogEntrySts) {
+    	if( catalogEntrySts != null ) {
+	    	if( this.catalogEntrySts == null ) {
+	        	this.catalogEntrySts = catalogEntrySts;
+	        } else if(this.catalogEntrySts.substring(this.catalogEntrySts.length() - 1).equals("]") & catalogEntrySts.equals("[")) {
+	        	this.catalogEntrySts = this.catalogEntrySts+ "," + catalogEntrySts;
+	        } else if(catalogEntrySts.equals("[") | catalogEntrySts.equals("]") | this.catalogEntrySts.substring(this.catalogEntrySts.length() - 1).equals("[")) {
+	        	this.catalogEntrySts = this.catalogEntrySts+catalogEntrySts;
+	        } else  {
+	            this.catalogEntrySts = this.catalogEntrySts+ "," +catalogEntrySts;
+	        }
+        }
+    }
+    
     
     
     public String getCatalogEntryTypCdgCd() {
@@ -569,6 +1255,20 @@ public class CatalogEntry  implements java.io.Serializable {
     
     public void setCatalogEntryTypCdgCd(String catalogEntryTypCdgCd) {
         this.catalogEntryTypCdgCd = catalogEntryTypCdgCd;
+    }
+    
+    public void addCatalogEntryTypCdgCd(String catalogEntryTypCdgCd) {
+    	if( catalogEntryTypCdgCd != null ) {
+	    	if( this.catalogEntryTypCdgCd == null ) {
+	        	this.catalogEntryTypCdgCd = catalogEntryTypCdgCd;
+	        } else if(this.catalogEntryTypCdgCd.substring(this.catalogEntryTypCdgCd.length() - 1).equals("]") & catalogEntryTypCdgCd.equals("[")) {
+	        	this.catalogEntryTypCdgCd = this.catalogEntryTypCdgCd+ "," + catalogEntryTypCdgCd;
+	        } else if(catalogEntryTypCdgCd.equals("[") | catalogEntryTypCdgCd.equals("]") | this.catalogEntryTypCdgCd.substring(this.catalogEntryTypCdgCd.length() - 1).equals("[")) {
+	        	this.catalogEntryTypCdgCd = this.catalogEntryTypCdgCd+catalogEntryTypCdgCd;
+	        } else  {
+	            this.catalogEntryTypCdgCd = this.catalogEntryTypCdgCd+ "," +catalogEntryTypCdgCd;
+	        }
+        }
     }
     
     
@@ -581,6 +1281,20 @@ public class CatalogEntry  implements java.io.Serializable {
         this.catalogEntryTypCdgDsply = catalogEntryTypCdgDsply;
     }
     
+    public void addCatalogEntryTypCdgDsply(String catalogEntryTypCdgDsply) {
+    	if( catalogEntryTypCdgDsply != null ) {
+	    	if( this.catalogEntryTypCdgDsply == null ) {
+	        	this.catalogEntryTypCdgDsply = catalogEntryTypCdgDsply;
+	        } else if(this.catalogEntryTypCdgDsply.substring(this.catalogEntryTypCdgDsply.length() - 1).equals("]") & catalogEntryTypCdgDsply.equals("[")) {
+	        	this.catalogEntryTypCdgDsply = this.catalogEntryTypCdgDsply+ "," + catalogEntryTypCdgDsply;
+	        } else if(catalogEntryTypCdgDsply.equals("[") | catalogEntryTypCdgDsply.equals("]") | this.catalogEntryTypCdgDsply.substring(this.catalogEntryTypCdgDsply.length() - 1).equals("[")) {
+	        	this.catalogEntryTypCdgDsply = this.catalogEntryTypCdgDsply+catalogEntryTypCdgDsply;
+	        } else  {
+	            this.catalogEntryTypCdgDsply = this.catalogEntryTypCdgDsply+ "," +catalogEntryTypCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getCatalogEntryTypCdgSys() {
@@ -589,6 +1303,20 @@ public class CatalogEntry  implements java.io.Serializable {
     
     public void setCatalogEntryTypCdgSys(String catalogEntryTypCdgSys) {
         this.catalogEntryTypCdgSys = catalogEntryTypCdgSys;
+    }
+    
+    public void addCatalogEntryTypCdgSys(String catalogEntryTypCdgSys) {
+    	if( catalogEntryTypCdgSys != null ) {
+	    	if( this.catalogEntryTypCdgSys == null ) {
+	        	this.catalogEntryTypCdgSys = catalogEntryTypCdgSys;
+	        } else if(this.catalogEntryTypCdgSys.substring(this.catalogEntryTypCdgSys.length() - 1).equals("]") & catalogEntryTypCdgSys.equals("[")) {
+	        	this.catalogEntryTypCdgSys = this.catalogEntryTypCdgSys+ "," + catalogEntryTypCdgSys;
+	        } else if(catalogEntryTypCdgSys.equals("[") | catalogEntryTypCdgSys.equals("]") | this.catalogEntryTypCdgSys.substring(this.catalogEntryTypCdgSys.length() - 1).equals("[")) {
+	        	this.catalogEntryTypCdgSys = this.catalogEntryTypCdgSys+catalogEntryTypCdgSys;
+	        } else  {
+	            this.catalogEntryTypCdgSys = this.catalogEntryTypCdgSys+ "," +catalogEntryTypCdgSys;
+	        }
+        }
     }
     
     
@@ -601,6 +1329,20 @@ public class CatalogEntry  implements java.io.Serializable {
         this.catalogEntryTypCdgUsrSltd = catalogEntryTypCdgUsrSltd;
     }
     
+    public void addCatalogEntryTypCdgUsrSltd(String catalogEntryTypCdgUsrSltd) {
+    	if( catalogEntryTypCdgUsrSltd != null ) {
+	    	if( this.catalogEntryTypCdgUsrSltd == null ) {
+	        	this.catalogEntryTypCdgUsrSltd = catalogEntryTypCdgUsrSltd;
+	        } else if(this.catalogEntryTypCdgUsrSltd.substring(this.catalogEntryTypCdgUsrSltd.length() - 1).equals("]") & catalogEntryTypCdgUsrSltd.equals("[")) {
+	        	this.catalogEntryTypCdgUsrSltd = this.catalogEntryTypCdgUsrSltd+ "," + catalogEntryTypCdgUsrSltd;
+	        } else if(catalogEntryTypCdgUsrSltd.equals("[") | catalogEntryTypCdgUsrSltd.equals("]") | this.catalogEntryTypCdgUsrSltd.substring(this.catalogEntryTypCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.catalogEntryTypCdgUsrSltd = this.catalogEntryTypCdgUsrSltd+catalogEntryTypCdgUsrSltd;
+	        } else  {
+	            this.catalogEntryTypCdgUsrSltd = this.catalogEntryTypCdgUsrSltd+ "," +catalogEntryTypCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getCatalogEntryTypCdgVrsn() {
@@ -609,6 +1351,20 @@ public class CatalogEntry  implements java.io.Serializable {
     
     public void setCatalogEntryTypCdgVrsn(String catalogEntryTypCdgVrsn) {
         this.catalogEntryTypCdgVrsn = catalogEntryTypCdgVrsn;
+    }
+    
+    public void addCatalogEntryTypCdgVrsn(String catalogEntryTypCdgVrsn) {
+    	if( catalogEntryTypCdgVrsn != null ) {
+	    	if( this.catalogEntryTypCdgVrsn == null ) {
+	        	this.catalogEntryTypCdgVrsn = catalogEntryTypCdgVrsn;
+	        } else if(this.catalogEntryTypCdgVrsn.substring(this.catalogEntryTypCdgVrsn.length() - 1).equals("]") & catalogEntryTypCdgVrsn.equals("[")) {
+	        	this.catalogEntryTypCdgVrsn = this.catalogEntryTypCdgVrsn+ "," + catalogEntryTypCdgVrsn;
+	        } else if(catalogEntryTypCdgVrsn.equals("[") | catalogEntryTypCdgVrsn.equals("]") | this.catalogEntryTypCdgVrsn.substring(this.catalogEntryTypCdgVrsn.length() - 1).equals("[")) {
+	        	this.catalogEntryTypCdgVrsn = this.catalogEntryTypCdgVrsn+catalogEntryTypCdgVrsn;
+	        } else  {
+	            this.catalogEntryTypCdgVrsn = this.catalogEntryTypCdgVrsn+ "," +catalogEntryTypCdgVrsn;
+	        }
+        }
     }
     
     
@@ -621,6 +1377,20 @@ public class CatalogEntry  implements java.io.Serializable {
         this.catalogEntryTypTxt = catalogEntryTypTxt;
     }
     
+    public void addCatalogEntryTypTxt(String catalogEntryTypTxt) {
+    	if( catalogEntryTypTxt != null ) {
+	    	if( this.catalogEntryTypTxt == null ) {
+	        	this.catalogEntryTypTxt = catalogEntryTypTxt;
+	        } else if(this.catalogEntryTypTxt.substring(this.catalogEntryTypTxt.length() - 1).equals("]") & catalogEntryTypTxt.equals("[")) {
+	        	this.catalogEntryTypTxt = this.catalogEntryTypTxt+ "," + catalogEntryTypTxt;
+	        } else if(catalogEntryTypTxt.equals("[") | catalogEntryTypTxt.equals("]") | this.catalogEntryTypTxt.substring(this.catalogEntryTypTxt.length() - 1).equals("[")) {
+	        	this.catalogEntryTypTxt = this.catalogEntryTypTxt+catalogEntryTypTxt;
+	        } else  {
+	            this.catalogEntryTypTxt = this.catalogEntryTypTxt+ "," +catalogEntryTypTxt;
+	        }
+        }
+    }
+    
     
     
     public String getCatalogEntryValidTo() {
@@ -629,6 +1399,20 @@ public class CatalogEntry  implements java.io.Serializable {
     
     public void setCatalogEntryValidTo(String catalogEntryValidTo) {
         this.catalogEntryValidTo = catalogEntryValidTo;
+    }
+    
+    public void addCatalogEntryValidTo(String catalogEntryValidTo) {
+    	if( catalogEntryValidTo != null ) {
+	    	if( this.catalogEntryValidTo == null ) {
+	        	this.catalogEntryValidTo = catalogEntryValidTo;
+	        } else if(this.catalogEntryValidTo.substring(this.catalogEntryValidTo.length() - 1).equals("]") & catalogEntryValidTo.equals("[")) {
+	        	this.catalogEntryValidTo = this.catalogEntryValidTo+ "," + catalogEntryValidTo;
+	        } else if(catalogEntryValidTo.equals("[") | catalogEntryValidTo.equals("]") | this.catalogEntryValidTo.substring(this.catalogEntryValidTo.length() - 1).equals("[")) {
+	        	this.catalogEntryValidTo = this.catalogEntryValidTo+catalogEntryValidTo;
+	        } else  {
+	            this.catalogEntryValidTo = this.catalogEntryValidTo+ "," +catalogEntryValidTo;
+	        }
+        }
     }
     
     
@@ -641,6 +1425,20 @@ public class CatalogEntry  implements java.io.Serializable {
         this.catalogEntryValidityPrdEnd = catalogEntryValidityPrdEnd;
     }
     
+    public void addCatalogEntryValidityPrdEnd(String catalogEntryValidityPrdEnd) {
+    	if( catalogEntryValidityPrdEnd != null ) {
+	    	if( this.catalogEntryValidityPrdEnd == null ) {
+	        	this.catalogEntryValidityPrdEnd = catalogEntryValidityPrdEnd;
+	        } else if(this.catalogEntryValidityPrdEnd.substring(this.catalogEntryValidityPrdEnd.length() - 1).equals("]") & catalogEntryValidityPrdEnd.equals("[")) {
+	        	this.catalogEntryValidityPrdEnd = this.catalogEntryValidityPrdEnd+ "," + catalogEntryValidityPrdEnd;
+	        } else if(catalogEntryValidityPrdEnd.equals("[") | catalogEntryValidityPrdEnd.equals("]") | this.catalogEntryValidityPrdEnd.substring(this.catalogEntryValidityPrdEnd.length() - 1).equals("[")) {
+	        	this.catalogEntryValidityPrdEnd = this.catalogEntryValidityPrdEnd+catalogEntryValidityPrdEnd;
+	        } else  {
+	            this.catalogEntryValidityPrdEnd = this.catalogEntryValidityPrdEnd+ "," +catalogEntryValidityPrdEnd;
+	        }
+        }
+    }
+    
     
     
     public String getCatalogEntryValidityPrdStrt() {
@@ -649,6 +1447,20 @@ public class CatalogEntry  implements java.io.Serializable {
     
     public void setCatalogEntryValidityPrdStrt(String catalogEntryValidityPrdStrt) {
         this.catalogEntryValidityPrdStrt = catalogEntryValidityPrdStrt;
+    }
+    
+    public void addCatalogEntryValidityPrdStrt(String catalogEntryValidityPrdStrt) {
+    	if( catalogEntryValidityPrdStrt != null ) {
+	    	if( this.catalogEntryValidityPrdStrt == null ) {
+	        	this.catalogEntryValidityPrdStrt = catalogEntryValidityPrdStrt;
+	        } else if(this.catalogEntryValidityPrdStrt.substring(this.catalogEntryValidityPrdStrt.length() - 1).equals("]") & catalogEntryValidityPrdStrt.equals("[")) {
+	        	this.catalogEntryValidityPrdStrt = this.catalogEntryValidityPrdStrt+ "," + catalogEntryValidityPrdStrt;
+	        } else if(catalogEntryValidityPrdStrt.equals("[") | catalogEntryValidityPrdStrt.equals("]") | this.catalogEntryValidityPrdStrt.substring(this.catalogEntryValidityPrdStrt.length() - 1).equals("[")) {
+	        	this.catalogEntryValidityPrdStrt = this.catalogEntryValidityPrdStrt+catalogEntryValidityPrdStrt;
+	        } else  {
+	            this.catalogEntryValidityPrdStrt = this.catalogEntryValidityPrdStrt+ "," +catalogEntryValidityPrdStrt;
+	        }
+        }
     }
     
     

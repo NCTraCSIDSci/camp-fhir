@@ -8,522 +8,800 @@ public class GoalBidirectionalConversion
 		 main.java.com.campfhir.model.Goal g = new  main.java.com.campfhir.model.Goal();
 
 		/******************** id ********************************************************************************/
-		goal.setId(g.getId());
+		g.setId(goal.getIdElement().getIdPart());
 
 		/******************** goalpriority ********************************************************************************/
 		org.hl7.fhir.r4.model.CodeableConcept goalpriority = goal.getPriority();
 
 		/******************** Goal_Priority_Txt ********************************************************************************/
 		if(goalpriority.hasText()) {
-			g.setGoalPriorityTxt(String.valueOf(goalpriority.getText()));
+
+			g.addGoalPriorityTxt(String.valueOf(goalpriority.getText()));
+		} else {
+			g.addGoalPriorityTxt("NULL");
 		}
+
+
 		/******************** goalprioritycoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding goalprioritycoding = goalpriority.getCodingFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.Coding> goalprioritycodinglist = goalpriority.getCoding();
+		for(int goalprioritycodingi = 0; goalprioritycodingi<goalprioritycodinglist.size();goalprioritycodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  goalprioritycoding = goalprioritycodinglist.get(goalprioritycodingi);
+
+		/******************** Goal_Priority_Cdg_Dsply ********************************************************************************/
+		if(goalprioritycodingi == 0) {g.addGoalPriorityCdgDsply("[");}
+		if(goalprioritycoding.hasDisplay()) {
+
+			g.addGoalPriorityCdgDsply(String.valueOf(goalprioritycoding.getDisplay()));
+		} else {
+			g.addGoalPriorityCdgDsply("NULL");
+		}
+
+		if(goalprioritycodingi == goalprioritycodinglist.size()-1) {g.addGoalPriorityCdgDsply("]");}
+
 
 		/******************** Goal_Priority_Cdg_Vrsn ********************************************************************************/
+		if(goalprioritycodingi == 0) {g.addGoalPriorityCdgVrsn("[");}
 		if(goalprioritycoding.hasVersion()) {
-			g.setGoalPriorityCdgVrsn(String.valueOf(goalprioritycoding.getVersion()));
+
+			g.addGoalPriorityCdgVrsn(String.valueOf(goalprioritycoding.getVersion()));
+		} else {
+			g.addGoalPriorityCdgVrsn("NULL");
 		}
-		/******************** Goal_Priority_Cdg_Dsply ********************************************************************************/
-		if(goalprioritycoding.hasDisplay()) {
-			g.setGoalPriorityCdgDsply(String.valueOf(goalprioritycoding.getDisplay()));
-		}
+
+		if(goalprioritycodingi == goalprioritycodinglist.size()-1) {g.addGoalPriorityCdgVrsn("]");}
+
+
 		/******************** Goal_Priority_Cdg_Cd ********************************************************************************/
+		if(goalprioritycodingi == 0) {g.addGoalPriorityCdgCd("[");}
 		if(goalprioritycoding.hasCode()) {
-			g.setGoalPriorityCdgCd(String.valueOf(goalprioritycoding.getCode()));
+
+			g.addGoalPriorityCdgCd(String.valueOf(goalprioritycoding.getCode()));
+		} else {
+			g.addGoalPriorityCdgCd("NULL");
 		}
+
+		if(goalprioritycodingi == goalprioritycodinglist.size()-1) {g.addGoalPriorityCdgCd("]");}
+
+
 		/******************** Goal_Priority_Cdg_UsrSltd ********************************************************************************/
+		if(goalprioritycodingi == 0) {g.addGoalPriorityCdgUsrSltd("[");}
 		if(goalprioritycoding.hasUserSelected()) {
-			g.setGoalPriorityCdgUsrSltd(String.valueOf(goalprioritycoding.getUserSelected()));
+
+			g.addGoalPriorityCdgUsrSltd(String.valueOf(goalprioritycoding.getUserSelected()));
+		} else {
+			g.addGoalPriorityCdgUsrSltd("NULL");
 		}
+
+		if(goalprioritycodingi == goalprioritycodinglist.size()-1) {g.addGoalPriorityCdgUsrSltd("]");}
+
+
 		/******************** Goal_Priority_Cdg_Sys ********************************************************************************/
+		if(goalprioritycodingi == 0) {g.addGoalPriorityCdgSys("[");}
 		if(goalprioritycoding.hasSystem()) {
-			g.setGoalPriorityCdgSys(String.valueOf(goalprioritycoding.getSystem()));
+
+			g.addGoalPriorityCdgSys(String.valueOf(goalprioritycoding.getSystem()));
+		} else {
+			g.addGoalPriorityCdgSys("NULL");
 		}
-		/******************** Goal_StsRsn ********************************************************************************/
-		if(goal.hasStatusReason()) {
-			g.setGoalStsRsn(String.valueOf(goal.getStatusReason()));
-		}
+
+		if(goalprioritycodingi == goalprioritycodinglist.size()-1) {g.addGoalPriorityCdgSys("]");}
+
+
+		 };
 		/******************** Goal_Sbjct ********************************************************************************/
 		if(goal.hasSubject()) {
-			g.setGoalSbjct(String.valueOf(goal.getSubject()));
-		}
-		/******************** goalnote ********************************************************************************/
-		org.hl7.fhir.r4.model.Annotation goalnote = goal.getNoteFirstRep();
 
-		/******************** Goal_Nt_Time ********************************************************************************/
-		if(goalnote.hasTime()) {
-			g.setGoalNtTime(String.valueOf(goalnote.getTime()));
+			if(goal.getSubject().getReference() != null) {
+			g.addGoalSbjct(goal.getSubject().getReference());
+			}
+		} else {
+			g.addGoalSbjct("NULL");
 		}
-		/******************** Goal_Nt_Txt ********************************************************************************/
-		if(goalnote.hasText()) {
-			g.setGoalNtTxt(String.valueOf(goalnote.getText()));
-		}
-		/******************** Goal_Nt_AthrRfrnc ********************************************************************************/
-		if(goalnote.hasAuthorReference()) {
-			g.setGoalNtAthrRfrnc(String.valueOf(goalnote.getAuthorReference()));
-		}
-		/******************** Goal_Nt_AthrStrgTyp ********************************************************************************/
-		if(goalnote.hasAuthorStringType()) {
-			g.setGoalNtAthrStrgTyp(String.valueOf(goalnote.getAuthorStringType()));
-		}
+
+
 		/******************** goaldescription ********************************************************************************/
 		org.hl7.fhir.r4.model.CodeableConcept goaldescription = goal.getDescription();
 
 		/******************** Goal_Dscrptn_Txt ********************************************************************************/
 		if(goaldescription.hasText()) {
-			g.setGoalDscrptnTxt(String.valueOf(goaldescription.getText()));
+
+			g.addGoalDscrptnTxt(String.valueOf(goaldescription.getText()));
+		} else {
+			g.addGoalDscrptnTxt("NULL");
 		}
+
+
 		/******************** goaldescriptioncoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding goaldescriptioncoding = goaldescription.getCodingFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.Coding> goaldescriptioncodinglist = goaldescription.getCoding();
+		for(int goaldescriptioncodingi = 0; goaldescriptioncodingi<goaldescriptioncodinglist.size();goaldescriptioncodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  goaldescriptioncoding = goaldescriptioncodinglist.get(goaldescriptioncodingi);
+
+		/******************** Goal_Dscrptn_Cdg_Dsply ********************************************************************************/
+		if(goaldescriptioncodingi == 0) {g.addGoalDscrptnCdgDsply("[");}
+		if(goaldescriptioncoding.hasDisplay()) {
+
+			g.addGoalDscrptnCdgDsply(String.valueOf(goaldescriptioncoding.getDisplay()));
+		} else {
+			g.addGoalDscrptnCdgDsply("NULL");
+		}
+
+		if(goaldescriptioncodingi == goaldescriptioncodinglist.size()-1) {g.addGoalDscrptnCdgDsply("]");}
+
 
 		/******************** Goal_Dscrptn_Cdg_Vrsn ********************************************************************************/
+		if(goaldescriptioncodingi == 0) {g.addGoalDscrptnCdgVrsn("[");}
 		if(goaldescriptioncoding.hasVersion()) {
-			g.setGoalDscrptnCdgVrsn(String.valueOf(goaldescriptioncoding.getVersion()));
+
+			g.addGoalDscrptnCdgVrsn(String.valueOf(goaldescriptioncoding.getVersion()));
+		} else {
+			g.addGoalDscrptnCdgVrsn("NULL");
 		}
-		/******************** Goal_Dscrptn_Cdg_Dsply ********************************************************************************/
-		if(goaldescriptioncoding.hasDisplay()) {
-			g.setGoalDscrptnCdgDsply(String.valueOf(goaldescriptioncoding.getDisplay()));
-		}
+
+		if(goaldescriptioncodingi == goaldescriptioncodinglist.size()-1) {g.addGoalDscrptnCdgVrsn("]");}
+
+
 		/******************** Goal_Dscrptn_Cdg_Cd ********************************************************************************/
+		if(goaldescriptioncodingi == 0) {g.addGoalDscrptnCdgCd("[");}
 		if(goaldescriptioncoding.hasCode()) {
-			g.setGoalDscrptnCdgCd(String.valueOf(goaldescriptioncoding.getCode()));
+
+			g.addGoalDscrptnCdgCd(String.valueOf(goaldescriptioncoding.getCode()));
+		} else {
+			g.addGoalDscrptnCdgCd("NULL");
 		}
+
+		if(goaldescriptioncodingi == goaldescriptioncodinglist.size()-1) {g.addGoalDscrptnCdgCd("]");}
+
+
 		/******************** Goal_Dscrptn_Cdg_UsrSltd ********************************************************************************/
+		if(goaldescriptioncodingi == 0) {g.addGoalDscrptnCdgUsrSltd("[");}
 		if(goaldescriptioncoding.hasUserSelected()) {
-			g.setGoalDscrptnCdgUsrSltd(String.valueOf(goaldescriptioncoding.getUserSelected()));
+
+			g.addGoalDscrptnCdgUsrSltd(String.valueOf(goaldescriptioncoding.getUserSelected()));
+		} else {
+			g.addGoalDscrptnCdgUsrSltd("NULL");
 		}
+
+		if(goaldescriptioncodingi == goaldescriptioncodinglist.size()-1) {g.addGoalDscrptnCdgUsrSltd("]");}
+
+
 		/******************** Goal_Dscrptn_Cdg_Sys ********************************************************************************/
+		if(goaldescriptioncodingi == 0) {g.addGoalDscrptnCdgSys("[");}
 		if(goaldescriptioncoding.hasSystem()) {
-			g.setGoalDscrptnCdgSys(String.valueOf(goaldescriptioncoding.getSystem()));
-		}
-		/******************** Goal_ExpressedBy ********************************************************************************/
-		if(goal.hasExpressedBy()) {
-			g.setGoalExpressedBy(String.valueOf(goal.getExpressedBy()));
-		}
-		/******************** goallifecyclestatus ********************************************************************************/
-		org.hl7.fhir.r4.model.Goal.GoalLifecycleStatus goallifecyclestatus = goal.getLifecycleStatus();
-		g.setGoalLifecycleSts(goallifecyclestatus.toCode());
 
-		/******************** Goal_StsDt ********************************************************************************/
-		if(goal.hasStatusDate()) {
-			g.setGoalStsDt(String.valueOf(goal.getStatusDate()));
+			g.addGoalDscrptnCdgSys(String.valueOf(goaldescriptioncoding.getSystem()));
+		} else {
+			g.addGoalDscrptnCdgSys("NULL");
 		}
-		/******************** Goal_StrtDtTyp ********************************************************************************/
-		if(goal.hasStartDateType()) {
-			g.setGoalStrtDtTyp(String.valueOf(goal.getStartDateType()));
-		}
-		/******************** goalstartcodeableconcept ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept goalstartcodeableconcept = goal.getStartCodeableConcept();
 
-		/******************** Goal_StrtCdbleCncpt_Txt ********************************************************************************/
-		if(goalstartcodeableconcept.hasText()) {
-			g.setGoalStrtCdbleCncptTxt(String.valueOf(goalstartcodeableconcept.getText()));
-		}
-		/******************** goalstartcodeableconceptcoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding goalstartcodeableconceptcoding = goalstartcodeableconcept.getCodingFirstRep();
+		if(goaldescriptioncodingi == goaldescriptioncodinglist.size()-1) {g.addGoalDscrptnCdgSys("]");}
 
-		/******************** Goal_StrtCdbleCncpt_Cdg_Vrsn ********************************************************************************/
-		if(goalstartcodeableconceptcoding.hasVersion()) {
-			g.setGoalStrtCdbleCncptCdgVrsn(String.valueOf(goalstartcodeableconceptcoding.getVersion()));
-		}
-		/******************** Goal_StrtCdbleCncpt_Cdg_Dsply ********************************************************************************/
-		if(goalstartcodeableconceptcoding.hasDisplay()) {
-			g.setGoalStrtCdbleCncptCdgDsply(String.valueOf(goalstartcodeableconceptcoding.getDisplay()));
-		}
-		/******************** Goal_StrtCdbleCncpt_Cdg_Cd ********************************************************************************/
-		if(goalstartcodeableconceptcoding.hasCode()) {
-			g.setGoalStrtCdbleCncptCdgCd(String.valueOf(goalstartcodeableconceptcoding.getCode()));
-		}
-		/******************** Goal_StrtCdbleCncpt_Cdg_UsrSltd ********************************************************************************/
-		if(goalstartcodeableconceptcoding.hasUserSelected()) {
-			g.setGoalStrtCdbleCncptCdgUsrSltd(String.valueOf(goalstartcodeableconceptcoding.getUserSelected()));
-		}
-		/******************** Goal_StrtCdbleCncpt_Cdg_Sys ********************************************************************************/
-		if(goalstartcodeableconceptcoding.hasSystem()) {
-			g.setGoalStrtCdbleCncptCdgSys(String.valueOf(goalstartcodeableconceptcoding.getSystem()));
-		}
-		/******************** goaloutcomecode ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept goaloutcomecode = goal.getOutcomeCodeFirstRep();
 
-		/******************** Goal_OutcomeCd_Txt ********************************************************************************/
-		if(goaloutcomecode.hasText()) {
-			g.setGoalOutcomeCdTxt(String.valueOf(goaloutcomecode.getText()));
-		}
-		/******************** goaloutcomecodecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding goaloutcomecodecoding = goaloutcomecode.getCodingFirstRep();
+		 };
+		/******************** goalnote ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.Annotation> goalnotelist = goal.getNote();
+		for(int goalnotei = 0; goalnotei<goalnotelist.size();goalnotei++ ) {
+		org.hl7.fhir.r4.model.Annotation  goalnote = goalnotelist.get(goalnotei);
 
-		/******************** Goal_OutcomeCd_Cdg_Vrsn ********************************************************************************/
-		if(goaloutcomecodecoding.hasVersion()) {
-			g.setGoalOutcomeCdCdgVrsn(String.valueOf(goaloutcomecodecoding.getVersion()));
+		/******************** Goal_Nt_Time ********************************************************************************/
+		if(goalnotei == 0) {g.addGoalNtTime("[");}
+		if(goalnote.hasTime()) {
+
+			g.addGoalNtTime("\""+ca.uhn.fhir.util.DateUtils.formatDate(goalnote.getTime())+"\"");
+		} else {
+			g.addGoalNtTime("NULL");
 		}
-		/******************** Goal_OutcomeCd_Cdg_Dsply ********************************************************************************/
-		if(goaloutcomecodecoding.hasDisplay()) {
-			g.setGoalOutcomeCdCdgDsply(String.valueOf(goaloutcomecodecoding.getDisplay()));
+
+		if(goalnotei == goalnotelist.size()-1) {g.addGoalNtTime("]");}
+
+
+		/******************** Goal_Nt_AthrRfrnc ********************************************************************************/
+		if(goalnotei == 0) {g.addGoalNtAthrRfrnc("[");}
+		if(goalnote.hasAuthorReference()) {
+
+			if(goalnote.getAuthorReference().getReference() != null) {
+			g.addGoalNtAthrRfrnc(goalnote.getAuthorReference().getReference());
+			}
+		} else {
+			g.addGoalNtAthrRfrnc("NULL");
 		}
-		/******************** Goal_OutcomeCd_Cdg_Cd ********************************************************************************/
-		if(goaloutcomecodecoding.hasCode()) {
-			g.setGoalOutcomeCdCdgCd(String.valueOf(goaloutcomecodecoding.getCode()));
+
+		if(goalnotei == goalnotelist.size()-1) {g.addGoalNtAthrRfrnc("]");}
+
+
+		/******************** Goal_Nt_Txt ********************************************************************************/
+		if(goalnotei == 0) {g.addGoalNtTxt("[");}
+		if(goalnote.hasText()) {
+
+			g.addGoalNtTxt(String.valueOf(goalnote.getText()));
+		} else {
+			g.addGoalNtTxt("NULL");
 		}
-		/******************** Goal_OutcomeCd_Cdg_UsrSltd ********************************************************************************/
-		if(goaloutcomecodecoding.hasUserSelected()) {
-			g.setGoalOutcomeCdCdgUsrSltd(String.valueOf(goaloutcomecodecoding.getUserSelected()));
+
+		if(goalnotei == goalnotelist.size()-1) {g.addGoalNtTxt("]");}
+
+
+		/******************** Goal_Nt_AthrStrgTyp ********************************************************************************/
+		if(goalnotei == 0) {g.addGoalNtAthrStrgTyp("[");}
+		if(goalnote.hasAuthorStringType()) {
+
+			g.addGoalNtAthrStrgTyp("\""+goalnote.getAuthorStringType().getValueAsString()+"\"");
+		} else {
+			g.addGoalNtAthrStrgTyp("NULL");
 		}
-		/******************** Goal_OutcomeCd_Cdg_Sys ********************************************************************************/
-		if(goaloutcomecodecoding.hasSystem()) {
-			g.setGoalOutcomeCdCdgSys(String.valueOf(goaloutcomecodecoding.getSystem()));
+
+		if(goalnotei == goalnotelist.size()-1) {g.addGoalNtAthrStrgTyp("]");}
+
+
+		 };
+		/******************** goalidentifier ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.Identifier> goalidentifierlist = goal.getIdentifier();
+		for(int goalidentifieri = 0; goalidentifieri<goalidentifierlist.size();goalidentifieri++ ) {
+		org.hl7.fhir.r4.model.Identifier  goalidentifier = goalidentifierlist.get(goalidentifieri);
+
+		/******************** Goal_Id_Vl ********************************************************************************/
+		if(goalidentifieri == 0) {g.addGoalIdVl("[");}
+		if(goalidentifier.hasValue()) {
+
+			g.addGoalIdVl(String.valueOf(goalidentifier.getValue()));
+		} else {
+			g.addGoalIdVl("NULL");
 		}
+
+		if(goalidentifieri == goalidentifierlist.size()-1) {g.addGoalIdVl("]");}
+
+
+		/******************** goalidentifiertype ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept goalidentifiertype = goalidentifier.getType();
+
+		/******************** Goal_Id_Typ_Txt ********************************************************************************/
+		if(goalidentifieri == 0) {g.addGoalIdTypTxt("[");}
+		if(goalidentifiertype.hasText()) {
+
+			g.addGoalIdTypTxt(String.valueOf(goalidentifiertype.getText()));
+		} else {
+			g.addGoalIdTypTxt("NULL");
+		}
+
+		if(goalidentifieri == goalidentifierlist.size()-1) {g.addGoalIdTypTxt("]");}
+
+
+		/******************** goalidentifiertypecoding ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.Coding> goalidentifiertypecodinglist = goalidentifiertype.getCoding();
+		for(int goalidentifiertypecodingi = 0; goalidentifiertypecodingi<goalidentifiertypecodinglist.size();goalidentifiertypecodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  goalidentifiertypecoding = goalidentifiertypecodinglist.get(goalidentifiertypecodingi);
+
+		/******************** Goal_Id_Typ_Cdg_Dsply ********************************************************************************/
+		if(goalidentifiertypecodingi == 0) {g.addGoalIdTypCdgDsply("[[");}
+		if(goalidentifiertypecoding.hasDisplay()) {
+
+			g.addGoalIdTypCdgDsply(String.valueOf(goalidentifiertypecoding.getDisplay()));
+		} else {
+			g.addGoalIdTypCdgDsply("NULL");
+		}
+
+		if(goalidentifiertypecodingi == goalidentifiertypecodinglist.size()-1) {g.addGoalIdTypCdgDsply("]]");}
+
+
+		/******************** Goal_Id_Typ_Cdg_Vrsn ********************************************************************************/
+		if(goalidentifiertypecodingi == 0) {g.addGoalIdTypCdgVrsn("[[");}
+		if(goalidentifiertypecoding.hasVersion()) {
+
+			g.addGoalIdTypCdgVrsn(String.valueOf(goalidentifiertypecoding.getVersion()));
+		} else {
+			g.addGoalIdTypCdgVrsn("NULL");
+		}
+
+		if(goalidentifiertypecodingi == goalidentifiertypecodinglist.size()-1) {g.addGoalIdTypCdgVrsn("]]");}
+
+
+		/******************** Goal_Id_Typ_Cdg_Cd ********************************************************************************/
+		if(goalidentifiertypecodingi == 0) {g.addGoalIdTypCdgCd("[[");}
+		if(goalidentifiertypecoding.hasCode()) {
+
+			g.addGoalIdTypCdgCd(String.valueOf(goalidentifiertypecoding.getCode()));
+		} else {
+			g.addGoalIdTypCdgCd("NULL");
+		}
+
+		if(goalidentifiertypecodingi == goalidentifiertypecodinglist.size()-1) {g.addGoalIdTypCdgCd("]]");}
+
+
+		/******************** Goal_Id_Typ_Cdg_UsrSltd ********************************************************************************/
+		if(goalidentifiertypecodingi == 0) {g.addGoalIdTypCdgUsrSltd("[[");}
+		if(goalidentifiertypecoding.hasUserSelected()) {
+
+			g.addGoalIdTypCdgUsrSltd(String.valueOf(goalidentifiertypecoding.getUserSelected()));
+		} else {
+			g.addGoalIdTypCdgUsrSltd("NULL");
+		}
+
+		if(goalidentifiertypecodingi == goalidentifiertypecodinglist.size()-1) {g.addGoalIdTypCdgUsrSltd("]]");}
+
+
+		/******************** Goal_Id_Typ_Cdg_Sys ********************************************************************************/
+		if(goalidentifiertypecodingi == 0) {g.addGoalIdTypCdgSys("[[");}
+		if(goalidentifiertypecoding.hasSystem()) {
+
+			g.addGoalIdTypCdgSys(String.valueOf(goalidentifiertypecoding.getSystem()));
+		} else {
+			g.addGoalIdTypCdgSys("NULL");
+		}
+
+		if(goalidentifiertypecodingi == goalidentifiertypecodinglist.size()-1) {g.addGoalIdTypCdgSys("]]");}
+
+
+		 };
+		/******************** goalidentifierperiod ********************************************************************************/
+		org.hl7.fhir.r4.model.Period goalidentifierperiod = goalidentifier.getPeriod();
+
+		/******************** Goal_Id_Prd_Strt ********************************************************************************/
+		if(goalidentifieri == 0) {g.addGoalIdPrdStrt("[");}
+		if(goalidentifierperiod.hasStart()) {
+
+			g.addGoalIdPrdStrt("\""+ca.uhn.fhir.util.DateUtils.formatDate(goalidentifierperiod.getStart())+"\"");
+		} else {
+			g.addGoalIdPrdStrt("NULL");
+		}
+
+		if(goalidentifieri == goalidentifierlist.size()-1) {g.addGoalIdPrdStrt("]");}
+
+
+		/******************** Goal_Id_Prd_End ********************************************************************************/
+		if(goalidentifieri == 0) {g.addGoalIdPrdEnd("[");}
+		if(goalidentifierperiod.hasEnd()) {
+
+			g.addGoalIdPrdEnd("\""+ca.uhn.fhir.util.DateUtils.formatDate(goalidentifierperiod.getEnd())+"\"");
+		} else {
+			g.addGoalIdPrdEnd("NULL");
+		}
+
+		if(goalidentifieri == goalidentifierlist.size()-1) {g.addGoalIdPrdEnd("]");}
+
+
+		/******************** goalidentifieruse ********************************************************************************/
+		org.hl7.fhir.r4.model.Identifier.IdentifierUse goalidentifieruse = goalidentifier.getUse();
+		if(goalidentifieruse!=null) {
+		if(goalidentifieri == 0) {
+
+		g.addGoalIdUse("[");		}
+			g.addGoalIdUse(goalidentifieruse.toCode());
+		if(goalidentifieri == goalidentifierlist.size()-1) {
+
+		g.addGoalIdUse("]");		}
+
+		} else {
+			g.addGoalIdUse("NULL");
+		}
+
+		/******************** Goal_Id_Assigner ********************************************************************************/
+		if(goalidentifieri == 0) {g.addGoalIdAssigner("[");}
+		if(goalidentifier.hasAssigner()) {
+
+			if(goalidentifier.getAssigner().getReference() != null) {
+			g.addGoalIdAssigner(goalidentifier.getAssigner().getReference());
+			}
+		} else {
+			g.addGoalIdAssigner("NULL");
+		}
+
+		if(goalidentifieri == goalidentifierlist.size()-1) {g.addGoalIdAssigner("]");}
+
+
+		/******************** Goal_Id_Sys ********************************************************************************/
+		if(goalidentifieri == 0) {g.addGoalIdSys("[");}
+		if(goalidentifier.hasSystem()) {
+
+			g.addGoalIdSys(String.valueOf(goalidentifier.getSystem()));
+		} else {
+			g.addGoalIdSys("NULL");
+		}
+
+		if(goalidentifieri == goalidentifierlist.size()-1) {g.addGoalIdSys("]");}
+
+
+		 };
+		/******************** goalcategory ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.CodeableConcept> goalcategorylist = goal.getCategory();
+		for(int goalcategoryi = 0; goalcategoryi<goalcategorylist.size();goalcategoryi++ ) {
+		org.hl7.fhir.r4.model.CodeableConcept  goalcategory = goalcategorylist.get(goalcategoryi);
+
+		/******************** Goal_Ctgry_Txt ********************************************************************************/
+		if(goalcategoryi == 0) {g.addGoalCtgryTxt("[");}
+		if(goalcategory.hasText()) {
+
+			g.addGoalCtgryTxt(String.valueOf(goalcategory.getText()));
+		} else {
+			g.addGoalCtgryTxt("NULL");
+		}
+
+		if(goalcategoryi == goalcategorylist.size()-1) {g.addGoalCtgryTxt("]");}
+
+
+		/******************** goalcategorycoding ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.Coding> goalcategorycodinglist = goalcategory.getCoding();
+		for(int goalcategorycodingi = 0; goalcategorycodingi<goalcategorycodinglist.size();goalcategorycodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  goalcategorycoding = goalcategorycodinglist.get(goalcategorycodingi);
+
+		/******************** Goal_Ctgry_Cdg_Dsply ********************************************************************************/
+		if(goalcategorycodingi == 0) {g.addGoalCtgryCdgDsply("[[");}
+		if(goalcategorycoding.hasDisplay()) {
+
+			g.addGoalCtgryCdgDsply(String.valueOf(goalcategorycoding.getDisplay()));
+		} else {
+			g.addGoalCtgryCdgDsply("NULL");
+		}
+
+		if(goalcategorycodingi == goalcategorycodinglist.size()-1) {g.addGoalCtgryCdgDsply("]]");}
+
+
+		/******************** Goal_Ctgry_Cdg_Vrsn ********************************************************************************/
+		if(goalcategorycodingi == 0) {g.addGoalCtgryCdgVrsn("[[");}
+		if(goalcategorycoding.hasVersion()) {
+
+			g.addGoalCtgryCdgVrsn(String.valueOf(goalcategorycoding.getVersion()));
+		} else {
+			g.addGoalCtgryCdgVrsn("NULL");
+		}
+
+		if(goalcategorycodingi == goalcategorycodinglist.size()-1) {g.addGoalCtgryCdgVrsn("]]");}
+
+
+		/******************** Goal_Ctgry_Cdg_Cd ********************************************************************************/
+		if(goalcategorycodingi == 0) {g.addGoalCtgryCdgCd("[[");}
+		if(goalcategorycoding.hasCode()) {
+
+			g.addGoalCtgryCdgCd(String.valueOf(goalcategorycoding.getCode()));
+		} else {
+			g.addGoalCtgryCdgCd("NULL");
+		}
+
+		if(goalcategorycodingi == goalcategorycodinglist.size()-1) {g.addGoalCtgryCdgCd("]]");}
+
+
+		/******************** Goal_Ctgry_Cdg_UsrSltd ********************************************************************************/
+		if(goalcategorycodingi == 0) {g.addGoalCtgryCdgUsrSltd("[[");}
+		if(goalcategorycoding.hasUserSelected()) {
+
+			g.addGoalCtgryCdgUsrSltd(String.valueOf(goalcategorycoding.getUserSelected()));
+		} else {
+			g.addGoalCtgryCdgUsrSltd("NULL");
+		}
+
+		if(goalcategorycodingi == goalcategorycodinglist.size()-1) {g.addGoalCtgryCdgUsrSltd("]]");}
+
+
+		/******************** Goal_Ctgry_Cdg_Sys ********************************************************************************/
+		if(goalcategorycodingi == 0) {g.addGoalCtgryCdgSys("[[");}
+		if(goalcategorycoding.hasSystem()) {
+
+			g.addGoalCtgryCdgSys(String.valueOf(goalcategorycoding.getSystem()));
+		} else {
+			g.addGoalCtgryCdgSys("NULL");
+		}
+
+		if(goalcategorycodingi == goalcategorycodinglist.size()-1) {g.addGoalCtgryCdgSys("]]");}
+
+
+		 };
+		 };
 		/******************** goalachievementstatus ********************************************************************************/
 		org.hl7.fhir.r4.model.CodeableConcept goalachievementstatus = goal.getAchievementStatus();
 
 		/******************** Goal_AchievementSts_Txt ********************************************************************************/
 		if(goalachievementstatus.hasText()) {
-			g.setGoalAchievementStsTxt(String.valueOf(goalachievementstatus.getText()));
+
+			g.addGoalAchievementStsTxt(String.valueOf(goalachievementstatus.getText()));
+		} else {
+			g.addGoalAchievementStsTxt("NULL");
 		}
+
+
 		/******************** goalachievementstatuscoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding goalachievementstatuscoding = goalachievementstatus.getCodingFirstRep();
+		java.util.List<org.hl7.fhir.r4.model.Coding> goalachievementstatuscodinglist = goalachievementstatus.getCoding();
+		for(int goalachievementstatuscodingi = 0; goalachievementstatuscodingi<goalachievementstatuscodinglist.size();goalachievementstatuscodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  goalachievementstatuscoding = goalachievementstatuscodinglist.get(goalachievementstatuscodingi);
+
+		/******************** Goal_AchievementSts_Cdg_Dsply ********************************************************************************/
+		if(goalachievementstatuscodingi == 0) {g.addGoalAchievementStsCdgDsply("[");}
+		if(goalachievementstatuscoding.hasDisplay()) {
+
+			g.addGoalAchievementStsCdgDsply(String.valueOf(goalachievementstatuscoding.getDisplay()));
+		} else {
+			g.addGoalAchievementStsCdgDsply("NULL");
+		}
+
+		if(goalachievementstatuscodingi == goalachievementstatuscodinglist.size()-1) {g.addGoalAchievementStsCdgDsply("]");}
+
 
 		/******************** Goal_AchievementSts_Cdg_Vrsn ********************************************************************************/
+		if(goalachievementstatuscodingi == 0) {g.addGoalAchievementStsCdgVrsn("[");}
 		if(goalachievementstatuscoding.hasVersion()) {
-			g.setGoalAchievementStsCdgVrsn(String.valueOf(goalachievementstatuscoding.getVersion()));
+
+			g.addGoalAchievementStsCdgVrsn(String.valueOf(goalachievementstatuscoding.getVersion()));
+		} else {
+			g.addGoalAchievementStsCdgVrsn("NULL");
 		}
-		/******************** Goal_AchievementSts_Cdg_Dsply ********************************************************************************/
-		if(goalachievementstatuscoding.hasDisplay()) {
-			g.setGoalAchievementStsCdgDsply(String.valueOf(goalachievementstatuscoding.getDisplay()));
-		}
+
+		if(goalachievementstatuscodingi == goalachievementstatuscodinglist.size()-1) {g.addGoalAchievementStsCdgVrsn("]");}
+
+
 		/******************** Goal_AchievementSts_Cdg_Cd ********************************************************************************/
+		if(goalachievementstatuscodingi == 0) {g.addGoalAchievementStsCdgCd("[");}
 		if(goalachievementstatuscoding.hasCode()) {
-			g.setGoalAchievementStsCdgCd(String.valueOf(goalachievementstatuscoding.getCode()));
+
+			g.addGoalAchievementStsCdgCd(String.valueOf(goalachievementstatuscoding.getCode()));
+		} else {
+			g.addGoalAchievementStsCdgCd("NULL");
 		}
+
+		if(goalachievementstatuscodingi == goalachievementstatuscodinglist.size()-1) {g.addGoalAchievementStsCdgCd("]");}
+
+
 		/******************** Goal_AchievementSts_Cdg_UsrSltd ********************************************************************************/
+		if(goalachievementstatuscodingi == 0) {g.addGoalAchievementStsCdgUsrSltd("[");}
 		if(goalachievementstatuscoding.hasUserSelected()) {
-			g.setGoalAchievementStsCdgUsrSltd(String.valueOf(goalachievementstatuscoding.getUserSelected()));
+
+			g.addGoalAchievementStsCdgUsrSltd(String.valueOf(goalachievementstatuscoding.getUserSelected()));
+		} else {
+			g.addGoalAchievementStsCdgUsrSltd("NULL");
 		}
+
+		if(goalachievementstatuscodingi == goalachievementstatuscodinglist.size()-1) {g.addGoalAchievementStsCdgUsrSltd("]");}
+
+
 		/******************** Goal_AchievementSts_Cdg_Sys ********************************************************************************/
+		if(goalachievementstatuscodingi == 0) {g.addGoalAchievementStsCdgSys("[");}
 		if(goalachievementstatuscoding.hasSystem()) {
-			g.setGoalAchievementStsCdgSys(String.valueOf(goalachievementstatuscoding.getSystem()));
+
+			g.addGoalAchievementStsCdgSys(String.valueOf(goalachievementstatuscoding.getSystem()));
+		} else {
+			g.addGoalAchievementStsCdgSys("NULL");
 		}
+
+		if(goalachievementstatuscodingi == goalachievementstatuscodinglist.size()-1) {g.addGoalAchievementStsCdgSys("]");}
+
+
+		 };
 		/******************** Goal_OutcomeRfrnc ********************************************************************************/
 		if(goal.hasOutcomeReference()) {
-			g.setGoalOutcomeRfrnc(String.valueOf(goal.getOutcomeReferenceFirstRep()));
+
+			String  array = "[";
+			for(int incr=0; incr<goal.getOutcomeReference().size(); incr++) {
+				array = array + goal.getOutcomeReference().get(incr).getReference() + ",";
+			}
+			array = array.substring(0, array.length() -1);
+			array = array + "]";
+			g.addGoalOutcomeRfrnc(array);
+
+		} else {
+			g.addGoalOutcomeRfrnc("NULL");
 		}
+
+
+		/******************** goalstartcodeableconcept ********************************************************************************/
+		org.hl7.fhir.r4.model.CodeableConcept goalstartcodeableconcept = goal.getStartCodeableConcept();
+
+		/******************** Goal_StrtCdbleCncpt_Txt ********************************************************************************/
+		if(goalstartcodeableconcept.hasText()) {
+
+			g.addGoalStrtCdbleCncptTxt(String.valueOf(goalstartcodeableconcept.getText()));
+		} else {
+			g.addGoalStrtCdbleCncptTxt("NULL");
+		}
+
+
+		/******************** goalstartcodeableconceptcoding ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.Coding> goalstartcodeableconceptcodinglist = goalstartcodeableconcept.getCoding();
+		for(int goalstartcodeableconceptcodingi = 0; goalstartcodeableconceptcodingi<goalstartcodeableconceptcodinglist.size();goalstartcodeableconceptcodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  goalstartcodeableconceptcoding = goalstartcodeableconceptcodinglist.get(goalstartcodeableconceptcodingi);
+
+		/******************** Goal_StrtCdbleCncpt_Cdg_Dsply ********************************************************************************/
+		if(goalstartcodeableconceptcodingi == 0) {g.addGoalStrtCdbleCncptCdgDsply("[");}
+		if(goalstartcodeableconceptcoding.hasDisplay()) {
+
+			g.addGoalStrtCdbleCncptCdgDsply(String.valueOf(goalstartcodeableconceptcoding.getDisplay()));
+		} else {
+			g.addGoalStrtCdbleCncptCdgDsply("NULL");
+		}
+
+		if(goalstartcodeableconceptcodingi == goalstartcodeableconceptcodinglist.size()-1) {g.addGoalStrtCdbleCncptCdgDsply("]");}
+
+
+		/******************** Goal_StrtCdbleCncpt_Cdg_Vrsn ********************************************************************************/
+		if(goalstartcodeableconceptcodingi == 0) {g.addGoalStrtCdbleCncptCdgVrsn("[");}
+		if(goalstartcodeableconceptcoding.hasVersion()) {
+
+			g.addGoalStrtCdbleCncptCdgVrsn(String.valueOf(goalstartcodeableconceptcoding.getVersion()));
+		} else {
+			g.addGoalStrtCdbleCncptCdgVrsn("NULL");
+		}
+
+		if(goalstartcodeableconceptcodingi == goalstartcodeableconceptcodinglist.size()-1) {g.addGoalStrtCdbleCncptCdgVrsn("]");}
+
+
+		/******************** Goal_StrtCdbleCncpt_Cdg_Cd ********************************************************************************/
+		if(goalstartcodeableconceptcodingi == 0) {g.addGoalStrtCdbleCncptCdgCd("[");}
+		if(goalstartcodeableconceptcoding.hasCode()) {
+
+			g.addGoalStrtCdbleCncptCdgCd(String.valueOf(goalstartcodeableconceptcoding.getCode()));
+		} else {
+			g.addGoalStrtCdbleCncptCdgCd("NULL");
+		}
+
+		if(goalstartcodeableconceptcodingi == goalstartcodeableconceptcodinglist.size()-1) {g.addGoalStrtCdbleCncptCdgCd("]");}
+
+
+		/******************** Goal_StrtCdbleCncpt_Cdg_UsrSltd ********************************************************************************/
+		if(goalstartcodeableconceptcodingi == 0) {g.addGoalStrtCdbleCncptCdgUsrSltd("[");}
+		if(goalstartcodeableconceptcoding.hasUserSelected()) {
+
+			g.addGoalStrtCdbleCncptCdgUsrSltd(String.valueOf(goalstartcodeableconceptcoding.getUserSelected()));
+		} else {
+			g.addGoalStrtCdbleCncptCdgUsrSltd("NULL");
+		}
+
+		if(goalstartcodeableconceptcodingi == goalstartcodeableconceptcodinglist.size()-1) {g.addGoalStrtCdbleCncptCdgUsrSltd("]");}
+
+
+		/******************** Goal_StrtCdbleCncpt_Cdg_Sys ********************************************************************************/
+		if(goalstartcodeableconceptcodingi == 0) {g.addGoalStrtCdbleCncptCdgSys("[");}
+		if(goalstartcodeableconceptcoding.hasSystem()) {
+
+			g.addGoalStrtCdbleCncptCdgSys(String.valueOf(goalstartcodeableconceptcoding.getSystem()));
+		} else {
+			g.addGoalStrtCdbleCncptCdgSys("NULL");
+		}
+
+		if(goalstartcodeableconceptcodingi == goalstartcodeableconceptcodinglist.size()-1) {g.addGoalStrtCdbleCncptCdgSys("]");}
+
+
+		 };
+		/******************** Goal_StsDt ********************************************************************************/
+		if(goal.hasStatusDate()) {
+
+			g.addGoalStsDt("\""+ca.uhn.fhir.util.DateUtils.formatDate(goal.getStatusDate())+"\"");
+		} else {
+			g.addGoalStsDt("NULL");
+		}
+
+
+		/******************** Goal_ExpressedBy ********************************************************************************/
+		if(goal.hasExpressedBy()) {
+
+			if(goal.getExpressedBy().getReference() != null) {
+			g.addGoalExpressedBy(goal.getExpressedBy().getReference());
+			}
+		} else {
+			g.addGoalExpressedBy("NULL");
+		}
+
+
 		/******************** Goal_Addres ********************************************************************************/
 		if(goal.hasAddresses()) {
-			g.setGoalAddres(String.valueOf(goal.getAddressesFirstRep()));
-		}
-		/******************** goalidentifier ********************************************************************************/
-		org.hl7.fhir.r4.model.Identifier goalidentifier = goal.getIdentifierFirstRep();
 
-		/******************** Goal_Id_Vl ********************************************************************************/
-		if(goalidentifier.hasValue()) {
-			g.setGoalIdVl(String.valueOf(goalidentifier.getValue()));
-		}
-		/******************** goalidentifiertype ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept goalidentifiertype = goalidentifier.getType();
+			String  array = "[";
+			for(int incr=0; incr<goal.getAddresses().size(); incr++) {
+				array = array + goal.getAddresses().get(incr).getReference() + ",";
+			}
+			array = array.substring(0, array.length() -1);
+			array = array + "]";
+			g.addGoalAddres(array);
 
-		/******************** Goal_Id_Typ_Txt ********************************************************************************/
-		if(goalidentifiertype.hasText()) {
-			g.setGoalIdTypTxt(String.valueOf(goalidentifiertype.getText()));
+		} else {
+			g.addGoalAddres("NULL");
 		}
-		/******************** goalidentifiertypecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding goalidentifiertypecoding = goalidentifiertype.getCodingFirstRep();
 
-		/******************** Goal_Id_Typ_Cdg_Vrsn ********************************************************************************/
-		if(goalidentifiertypecoding.hasVersion()) {
-			g.setGoalIdTypCdgVrsn(String.valueOf(goalidentifiertypecoding.getVersion()));
-		}
-		/******************** Goal_Id_Typ_Cdg_Dsply ********************************************************************************/
-		if(goalidentifiertypecoding.hasDisplay()) {
-			g.setGoalIdTypCdgDsply(String.valueOf(goalidentifiertypecoding.getDisplay()));
-		}
-		/******************** Goal_Id_Typ_Cdg_Cd ********************************************************************************/
-		if(goalidentifiertypecoding.hasCode()) {
-			g.setGoalIdTypCdgCd(String.valueOf(goalidentifiertypecoding.getCode()));
-		}
-		/******************** Goal_Id_Typ_Cdg_UsrSltd ********************************************************************************/
-		if(goalidentifiertypecoding.hasUserSelected()) {
-			g.setGoalIdTypCdgUsrSltd(String.valueOf(goalidentifiertypecoding.getUserSelected()));
-		}
-		/******************** Goal_Id_Typ_Cdg_Sys ********************************************************************************/
-		if(goalidentifiertypecoding.hasSystem()) {
-			g.setGoalIdTypCdgSys(String.valueOf(goalidentifiertypecoding.getSystem()));
-		}
-		/******************** goalidentifierperiod ********************************************************************************/
-		org.hl7.fhir.r4.model.Period goalidentifierperiod = goalidentifier.getPeriod();
 
-		/******************** Goal_Id_Prd_Strt ********************************************************************************/
-		if(goalidentifierperiod.hasStart()) {
-			g.setGoalIdPrdStrt(String.valueOf(goalidentifierperiod.getStart()));
-		}
-		/******************** Goal_Id_Prd_End ********************************************************************************/
-		if(goalidentifierperiod.hasEnd()) {
-			g.setGoalIdPrdEnd(String.valueOf(goalidentifierperiod.getEnd()));
-		}
-		/******************** Goal_Id_Assigner ********************************************************************************/
-		if(goalidentifier.hasAssigner()) {
-			g.setGoalIdAssigner(String.valueOf(goalidentifier.getAssigner()));
-		}
-		/******************** Goal_Id_Sys ********************************************************************************/
-		if(goalidentifier.hasSystem()) {
-			g.setGoalIdSys(String.valueOf(goalidentifier.getSystem()));
-		}
-		/******************** goalidentifieruse ********************************************************************************/
-		org.hl7.fhir.r4.model.Identifier.IdentifierUse goalidentifieruse = goalidentifier.getUse();
-		g.setGoalIdUse(goalidentifieruse.toCode());
+		/******************** Goal_StrtDtTyp ********************************************************************************/
+		if(goal.hasStartDateType()) {
 
-		/******************** goalcategory ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept goalcategory = goal.getCategoryFirstRep();
+			g.addGoalStrtDtTyp("\""+goal.getStartDateType().getValueAsString()+"\"");
+		} else {
+			g.addGoalStrtDtTyp("NULL");
+		}
 
-		/******************** Goal_Ctgry_Txt ********************************************************************************/
-		if(goalcategory.hasText()) {
-			g.setGoalCtgryTxt(String.valueOf(goalcategory.getText()));
-		}
-		/******************** goalcategorycoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding goalcategorycoding = goalcategory.getCodingFirstRep();
 
-		/******************** Goal_Ctgry_Cdg_Vrsn ********************************************************************************/
-		if(goalcategorycoding.hasVersion()) {
-			g.setGoalCtgryCdgVrsn(String.valueOf(goalcategorycoding.getVersion()));
+		/******************** goallifecyclestatus ********************************************************************************/
+		org.hl7.fhir.r4.model.Goal.GoalLifecycleStatus goallifecyclestatus = goal.getLifecycleStatus();
+		if(goallifecyclestatus!=null) {
+			g.addGoalLifecycleSts(goallifecyclestatus.toCode());
+		} else {
+			g.addGoalLifecycleSts("NULL");
 		}
-		/******************** Goal_Ctgry_Cdg_Dsply ********************************************************************************/
-		if(goalcategorycoding.hasDisplay()) {
-			g.setGoalCtgryCdgDsply(String.valueOf(goalcategorycoding.getDisplay()));
-		}
-		/******************** Goal_Ctgry_Cdg_Cd ********************************************************************************/
-		if(goalcategorycoding.hasCode()) {
-			g.setGoalCtgryCdgCd(String.valueOf(goalcategorycoding.getCode()));
-		}
-		/******************** Goal_Ctgry_Cdg_UsrSltd ********************************************************************************/
-		if(goalcategorycoding.hasUserSelected()) {
-			g.setGoalCtgryCdgUsrSltd(String.valueOf(goalcategorycoding.getUserSelected()));
-		}
-		/******************** Goal_Ctgry_Cdg_Sys ********************************************************************************/
-		if(goalcategorycoding.hasSystem()) {
-			g.setGoalCtgryCdgSys(String.valueOf(goalcategorycoding.getSystem()));
-		}
-		/******************** goaltarget ********************************************************************************/
-		org.hl7.fhir.r4.model.Goal.GoalTargetComponent goaltarget = goal.getTargetFirstRep();
 
-		/******************** Goal_Target_DtlStrgTyp ********************************************************************************/
-		if(goaltarget.hasDetailStringType()) {
-			g.setGoalTarDtlStrgTyp(String.valueOf(goaltarget.getDetailStringType()));
-		}
-		/******************** goaltargetdetailcodeableconcept ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept goaltargetdetailcodeableconcept = goaltarget.getDetailCodeableConcept();
+		/******************** goaloutcomecode ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.CodeableConcept> goaloutcomecodelist = goal.getOutcomeCode();
+		for(int goaloutcomecodei = 0; goaloutcomecodei<goaloutcomecodelist.size();goaloutcomecodei++ ) {
+		org.hl7.fhir.r4.model.CodeableConcept  goaloutcomecode = goaloutcomecodelist.get(goaloutcomecodei);
 
-		/******************** Goal_Target_DtlCdbleCncpt_Txt ********************************************************************************/
-		if(goaltargetdetailcodeableconcept.hasText()) {
-			g.setGoalTarDtlCdbleCncptTxt(String.valueOf(goaltargetdetailcodeableconcept.getText()));
-		}
-		/******************** goaltargetdetailcodeableconceptcoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding goaltargetdetailcodeableconceptcoding = goaltargetdetailcodeableconcept.getCodingFirstRep();
+		/******************** Goal_OutcomeCd_Txt ********************************************************************************/
+		if(goaloutcomecodei == 0) {g.addGoalOutcomeCdTxt("[");}
+		if(goaloutcomecode.hasText()) {
 
-		/******************** Goal_Target_DtlCdbleCncpt_Cdg_Vrsn ********************************************************************************/
-		if(goaltargetdetailcodeableconceptcoding.hasVersion()) {
-			g.setGoalTarDtlCdbleCncptCdgVrsn(String.valueOf(goaltargetdetailcodeableconceptcoding.getVersion()));
+			g.addGoalOutcomeCdTxt(String.valueOf(goaloutcomecode.getText()));
+		} else {
+			g.addGoalOutcomeCdTxt("NULL");
 		}
-		/******************** Goal_Target_DtlCdbleCncpt_Cdg_Dsply ********************************************************************************/
-		if(goaltargetdetailcodeableconceptcoding.hasDisplay()) {
-			g.setGoalTarDtlCdbleCncptCdgDsply(String.valueOf(goaltargetdetailcodeableconceptcoding.getDisplay()));
-		}
-		/******************** Goal_Target_DtlCdbleCncpt_Cdg_Cd ********************************************************************************/
-		if(goaltargetdetailcodeableconceptcoding.hasCode()) {
-			g.setGoalTarDtlCdbleCncptCdgCd(String.valueOf(goaltargetdetailcodeableconceptcoding.getCode()));
-		}
-		/******************** Goal_Target_DtlCdbleCncpt_Cdg_UsrSltd ********************************************************************************/
-		if(goaltargetdetailcodeableconceptcoding.hasUserSelected()) {
-			g.setGoalTarDtlCdbleCncptCdgUsrSltd(String.valueOf(goaltargetdetailcodeableconceptcoding.getUserSelected()));
-		}
-		/******************** Goal_Target_DtlCdbleCncpt_Cdg_Sys ********************************************************************************/
-		if(goaltargetdetailcodeableconceptcoding.hasSystem()) {
-			g.setGoalTarDtlCdbleCncptCdgSys(String.valueOf(goaltargetdetailcodeableconceptcoding.getSystem()));
-		}
-		/******************** Goal_Target_DtlBooleanTyp ********************************************************************************/
-		if(goaltarget.hasDetailBooleanType()) {
-			g.setGoalTarDtlBooleanTyp(String.valueOf(goaltarget.getDetailBooleanType()));
-		}
-		/******************** Goal_Target_DtlIntegerTyp ********************************************************************************/
-		if(goaltarget.hasDetailIntegerType()) {
-			g.setGoalTarDtlIntegerTyp(String.valueOf(goaltarget.getDetailIntegerType()));
-		}
-		/******************** goaltargetdueduration ********************************************************************************/
-		org.hl7.fhir.r4.model.Duration goaltargetdueduration = goaltarget.getDueDuration();
 
-		/******************** Goal_Target_DueDuration_Vl ********************************************************************************/
-		if(goaltargetdueduration.hasValue()) {
-			g.setGoalTarDueDurationVl(String.valueOf(goaltargetdueduration.getValue()));
-		}
-		/******************** goaltargetduedurationcomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparator goaltargetduedurationcomparator = goaltargetdueduration.getComparator();
-		g.setGoalTarDueDurationCmprtr(goaltargetduedurationcomparator.toCode());
+		if(goaloutcomecodei == goaloutcomecodelist.size()-1) {g.addGoalOutcomeCdTxt("]");}
 
-		/******************** Goal_Target_DueDuration_Cd ********************************************************************************/
-		if(goaltargetdueduration.hasCode()) {
-			g.setGoalTarDueDurationCd(String.valueOf(goaltargetdueduration.getCode()));
-		}
-		/******************** Goal_Target_DueDuration_Unt ********************************************************************************/
-		if(goaltargetdueduration.hasUnit()) {
-			g.setGoalTarDueDurationUnt(String.valueOf(goaltargetdueduration.getUnit()));
-		}
-		/******************** Goal_Target_DueDuration_Sys ********************************************************************************/
-		if(goaltargetdueduration.hasSystem()) {
-			g.setGoalTarDueDurationSys(String.valueOf(goaltargetdueduration.getSystem()));
-		}
-		/******************** goaltargetdetailratio ********************************************************************************/
-		org.hl7.fhir.r4.model.Ratio goaltargetdetailratio = goaltarget.getDetailRatio();
 
-		/******************** goaltargetdetailratiodenominator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity goaltargetdetailratiodenominator = goaltargetdetailratio.getDenominator();
+		/******************** goaloutcomecodecoding ********************************************************************************/
+		java.util.List<org.hl7.fhir.r4.model.Coding> goaloutcomecodecodinglist = goaloutcomecode.getCoding();
+		for(int goaloutcomecodecodingi = 0; goaloutcomecodecodingi<goaloutcomecodecodinglist.size();goaloutcomecodecodingi++ ) {
+		org.hl7.fhir.r4.model.Coding  goaloutcomecodecoding = goaloutcomecodecodinglist.get(goaloutcomecodecodingi);
 
-		/******************** Goal_Target_DtlRtio_Dnmntr_Vl ********************************************************************************/
-		if(goaltargetdetailratiodenominator.hasValue()) {
-			g.setGoalTarDtlRtioDnmntrVl(String.valueOf(goaltargetdetailratiodenominator.getValue()));
-		}
-		/******************** goaltargetdetailratiodenominatorcomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparator goaltargetdetailratiodenominatorcomparator = goaltargetdetailratiodenominator.getComparator();
-		g.setGoalTarDtlRtioDnmntrCmprtr(goaltargetdetailratiodenominatorcomparator.toCode());
+		/******************** Goal_OutcomeCd_Cdg_Dsply ********************************************************************************/
+		if(goaloutcomecodecodingi == 0) {g.addGoalOutcomeCdCdgDsply("[[");}
+		if(goaloutcomecodecoding.hasDisplay()) {
 
-		/******************** Goal_Target_DtlRtio_Dnmntr_Cd ********************************************************************************/
-		if(goaltargetdetailratiodenominator.hasCode()) {
-			g.setGoalTarDtlRtioDnmntrCd(String.valueOf(goaltargetdetailratiodenominator.getCode()));
+			g.addGoalOutcomeCdCdgDsply(String.valueOf(goaloutcomecodecoding.getDisplay()));
+		} else {
+			g.addGoalOutcomeCdCdgDsply("NULL");
 		}
-		/******************** Goal_Target_DtlRtio_Dnmntr_Unt ********************************************************************************/
-		if(goaltargetdetailratiodenominator.hasUnit()) {
-			g.setGoalTarDtlRtioDnmntrUnt(String.valueOf(goaltargetdetailratiodenominator.getUnit()));
-		}
-		/******************** Goal_Target_DtlRtio_Dnmntr_Sys ********************************************************************************/
-		if(goaltargetdetailratiodenominator.hasSystem()) {
-			g.setGoalTarDtlRtioDnmntrSys(String.valueOf(goaltargetdetailratiodenominator.getSystem()));
-		}
-		/******************** goaltargetdetailrationumerator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity goaltargetdetailrationumerator = goaltargetdetailratio.getNumerator();
 
-		/******************** Goal_Target_DtlRtio_Nmrtr_Vl ********************************************************************************/
-		if(goaltargetdetailrationumerator.hasValue()) {
-			g.setGoalTarDtlRtioNmrtrVl(String.valueOf(goaltargetdetailrationumerator.getValue()));
-		}
-		/******************** goaltargetdetailrationumeratorcomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparator goaltargetdetailrationumeratorcomparator = goaltargetdetailrationumerator.getComparator();
-		g.setGoalTarDtlRtioNmrtrCmprtr(goaltargetdetailrationumeratorcomparator.toCode());
+		if(goaloutcomecodecodingi == goaloutcomecodecodinglist.size()-1) {g.addGoalOutcomeCdCdgDsply("]]");}
 
-		/******************** Goal_Target_DtlRtio_Nmrtr_Cd ********************************************************************************/
-		if(goaltargetdetailrationumerator.hasCode()) {
-			g.setGoalTarDtlRtioNmrtrCd(String.valueOf(goaltargetdetailrationumerator.getCode()));
-		}
-		/******************** Goal_Target_DtlRtio_Nmrtr_Unt ********************************************************************************/
-		if(goaltargetdetailrationumerator.hasUnit()) {
-			g.setGoalTarDtlRtioNmrtrUnt(String.valueOf(goaltargetdetailrationumerator.getUnit()));
-		}
-		/******************** Goal_Target_DtlRtio_Nmrtr_Sys ********************************************************************************/
-		if(goaltargetdetailrationumerator.hasSystem()) {
-			g.setGoalTarDtlRtioNmrtrSys(String.valueOf(goaltargetdetailrationumerator.getSystem()));
-		}
-		/******************** goaltargetdetailquantity ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity goaltargetdetailquantity = goaltarget.getDetailQuantity();
 
-		/******************** Goal_Target_DtlQnty_Vl ********************************************************************************/
-		if(goaltargetdetailquantity.hasValue()) {
-			g.setGoalTarDtlQntyVl(String.valueOf(goaltargetdetailquantity.getValue()));
-		}
-		/******************** goaltargetdetailquantitycomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparator goaltargetdetailquantitycomparator = goaltargetdetailquantity.getComparator();
-		g.setGoalTarDtlQntyCmprtr(goaltargetdetailquantitycomparator.toCode());
+		/******************** Goal_OutcomeCd_Cdg_Vrsn ********************************************************************************/
+		if(goaloutcomecodecodingi == 0) {g.addGoalOutcomeCdCdgVrsn("[[");}
+		if(goaloutcomecodecoding.hasVersion()) {
 
-		/******************** Goal_Target_DtlQnty_Cd ********************************************************************************/
-		if(goaltargetdetailquantity.hasCode()) {
-			g.setGoalTarDtlQntyCd(String.valueOf(goaltargetdetailquantity.getCode()));
+			g.addGoalOutcomeCdCdgVrsn(String.valueOf(goaloutcomecodecoding.getVersion()));
+		} else {
+			g.addGoalOutcomeCdCdgVrsn("NULL");
 		}
-		/******************** Goal_Target_DtlQnty_Unt ********************************************************************************/
-		if(goaltargetdetailquantity.hasUnit()) {
-			g.setGoalTarDtlQntyUnt(String.valueOf(goaltargetdetailquantity.getUnit()));
-		}
-		/******************** Goal_Target_DtlQnty_Sys ********************************************************************************/
-		if(goaltargetdetailquantity.hasSystem()) {
-			g.setGoalTarDtlQntySys(String.valueOf(goaltargetdetailquantity.getSystem()));
-		}
-		/******************** goaltargetdetailrange ********************************************************************************/
-		org.hl7.fhir.r4.model.Range goaltargetdetailrange = goaltarget.getDetailRange();
 
-		/******************** goaltargetdetailrangelow ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity goaltargetdetailrangelow = goaltargetdetailrange.getLow();
+		if(goaloutcomecodecodingi == goaloutcomecodecodinglist.size()-1) {g.addGoalOutcomeCdCdgVrsn("]]");}
 
-		/******************** Goal_Target_DtlRng_Lw_Vl ********************************************************************************/
-		if(goaltargetdetailrangelow.hasValue()) {
-			g.setGoalTarDtlRngLwVl(String.valueOf(goaltargetdetailrangelow.getValue()));
-		}
-		/******************** goaltargetdetailrangelowcomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparator goaltargetdetailrangelowcomparator = goaltargetdetailrangelow.getComparator();
-		g.setGoalTarDtlRngLwCmprtr(goaltargetdetailrangelowcomparator.toCode());
 
-		/******************** Goal_Target_DtlRng_Lw_Cd ********************************************************************************/
-		if(goaltargetdetailrangelow.hasCode()) {
-			g.setGoalTarDtlRngLwCd(String.valueOf(goaltargetdetailrangelow.getCode()));
-		}
-		/******************** Goal_Target_DtlRng_Lw_Unt ********************************************************************************/
-		if(goaltargetdetailrangelow.hasUnit()) {
-			g.setGoalTarDtlRngLwUnt(String.valueOf(goaltargetdetailrangelow.getUnit()));
-		}
-		/******************** Goal_Target_DtlRng_Lw_Sys ********************************************************************************/
-		if(goaltargetdetailrangelow.hasSystem()) {
-			g.setGoalTarDtlRngLwSys(String.valueOf(goaltargetdetailrangelow.getSystem()));
-		}
-		/******************** goaltargetdetailrangehigh ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity goaltargetdetailrangehigh = goaltargetdetailrange.getHigh();
+		/******************** Goal_OutcomeCd_Cdg_Cd ********************************************************************************/
+		if(goaloutcomecodecodingi == 0) {g.addGoalOutcomeCdCdgCd("[[");}
+		if(goaloutcomecodecoding.hasCode()) {
 
-		/******************** Goal_Target_DtlRng_Hi_Vl ********************************************************************************/
-		if(goaltargetdetailrangehigh.hasValue()) {
-			g.setGoalTarDtlRngHiVl(String.valueOf(goaltargetdetailrangehigh.getValue()));
+			g.addGoalOutcomeCdCdgCd(String.valueOf(goaloutcomecodecoding.getCode()));
+		} else {
+			g.addGoalOutcomeCdCdgCd("NULL");
 		}
-		/******************** goaltargetdetailrangehighcomparator ********************************************************************************/
-		org.hl7.fhir.r4.model.Quantity.QuantityComparator goaltargetdetailrangehighcomparator = goaltargetdetailrangehigh.getComparator();
-		g.setGoalTarDtlRngHiCmprtr(goaltargetdetailrangehighcomparator.toCode());
 
-		/******************** Goal_Target_DtlRng_Hi_Cd ********************************************************************************/
-		if(goaltargetdetailrangehigh.hasCode()) {
-			g.setGoalTarDtlRngHiCd(String.valueOf(goaltargetdetailrangehigh.getCode()));
-		}
-		/******************** Goal_Target_DtlRng_Hi_Unt ********************************************************************************/
-		if(goaltargetdetailrangehigh.hasUnit()) {
-			g.setGoalTarDtlRngHiUnt(String.valueOf(goaltargetdetailrangehigh.getUnit()));
-		}
-		/******************** Goal_Target_DtlRng_Hi_Sys ********************************************************************************/
-		if(goaltargetdetailrangehigh.hasSystem()) {
-			g.setGoalTarDtlRngHiSys(String.valueOf(goaltargetdetailrangehigh.getSystem()));
-		}
-		/******************** Goal_Target_DueDtTyp ********************************************************************************/
-		if(goaltarget.hasDueDateType()) {
-			g.setGoalTarDueDtTyp(String.valueOf(goaltarget.getDueDateType()));
-		}
-		/******************** goaltargetmeasure ********************************************************************************/
-		org.hl7.fhir.r4.model.CodeableConcept goaltargetmeasure = goaltarget.getMeasure();
+		if(goaloutcomecodecodingi == goaloutcomecodecodinglist.size()-1) {g.addGoalOutcomeCdCdgCd("]]");}
 
-		/******************** Goal_Target_Msr_Txt ********************************************************************************/
-		if(goaltargetmeasure.hasText()) {
-			g.setGoalTarMsrTxt(String.valueOf(goaltargetmeasure.getText()));
-		}
-		/******************** goaltargetmeasurecoding ********************************************************************************/
-		org.hl7.fhir.r4.model.Coding goaltargetmeasurecoding = goaltargetmeasure.getCodingFirstRep();
 
-		/******************** Goal_Target_Msr_Cdg_Vrsn ********************************************************************************/
-		if(goaltargetmeasurecoding.hasVersion()) {
-			g.setGoalTarMsrCdgVrsn(String.valueOf(goaltargetmeasurecoding.getVersion()));
+		/******************** Goal_OutcomeCd_Cdg_UsrSltd ********************************************************************************/
+		if(goaloutcomecodecodingi == 0) {g.addGoalOutcomeCdCdgUsrSltd("[[");}
+		if(goaloutcomecodecoding.hasUserSelected()) {
+
+			g.addGoalOutcomeCdCdgUsrSltd(String.valueOf(goaloutcomecodecoding.getUserSelected()));
+		} else {
+			g.addGoalOutcomeCdCdgUsrSltd("NULL");
 		}
-		/******************** Goal_Target_Msr_Cdg_Dsply ********************************************************************************/
-		if(goaltargetmeasurecoding.hasDisplay()) {
-			g.setGoalTarMsrCdgDsply(String.valueOf(goaltargetmeasurecoding.getDisplay()));
+
+		if(goaloutcomecodecodingi == goaloutcomecodecodinglist.size()-1) {g.addGoalOutcomeCdCdgUsrSltd("]]");}
+
+
+		/******************** Goal_OutcomeCd_Cdg_Sys ********************************************************************************/
+		if(goaloutcomecodecodingi == 0) {g.addGoalOutcomeCdCdgSys("[[");}
+		if(goaloutcomecodecoding.hasSystem()) {
+
+			g.addGoalOutcomeCdCdgSys(String.valueOf(goaloutcomecodecoding.getSystem()));
+		} else {
+			g.addGoalOutcomeCdCdgSys("NULL");
 		}
-		/******************** Goal_Target_Msr_Cdg_Cd ********************************************************************************/
-		if(goaltargetmeasurecoding.hasCode()) {
-			g.setGoalTarMsrCdgCd(String.valueOf(goaltargetmeasurecoding.getCode()));
+
+		if(goaloutcomecodecodingi == goaloutcomecodecodinglist.size()-1) {g.addGoalOutcomeCdCdgSys("]]");}
+
+
+		 };
+		 };
+		/******************** Goal_StsRsn ********************************************************************************/
+		if(goal.hasStatusReason()) {
+
+			g.addGoalStsRsn(String.valueOf(goal.getStatusReason()));
+		} else {
+			g.addGoalStsRsn("NULL");
 		}
-		/******************** Goal_Target_Msr_Cdg_UsrSltd ********************************************************************************/
-		if(goaltargetmeasurecoding.hasUserSelected()) {
-			g.setGoalTarMsrCdgUsrSltd(String.valueOf(goaltargetmeasurecoding.getUserSelected()));
-		}
-		/******************** Goal_Target_Msr_Cdg_Sys ********************************************************************************/
-		if(goaltargetmeasurecoding.hasSystem()) {
-			g.setGoalTarMsrCdgSys(String.valueOf(goaltargetmeasurecoding.getSystem()));
-		}
+
+
 		return g;
 	}
 }

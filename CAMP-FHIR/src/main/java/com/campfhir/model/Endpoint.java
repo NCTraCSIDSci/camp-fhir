@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Jun 27, 2022, 10:40:10 AM by Hibernate Tools 5.6.1.Final
+// Generated Aug 17, 2022, 11:08:48 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -61,6 +61,20 @@ public class Endpoint  implements java.io.Serializable {
         this.id = id;
     }
     
+    public void addId(String id) {
+    	if( id != null ) {
+	    	if( this.id == null ) {
+	        	this.id = id;
+	        } else if(this.id.substring(this.id.length() - 1).equals("]") & id.equals("[")) {
+	        	this.id = this.id+ "," + id;
+	        } else if(id.equals("[") | id.equals("]") | this.id.substring(this.id.length() - 1).equals("[")) {
+	        	this.id = this.id+id;
+	        } else  {
+	            this.id = this.id+ "," +id;
+	        }
+        }
+    }
+    
     
     
     public String getEndpointAddr() {
@@ -69,6 +83,20 @@ public class Endpoint  implements java.io.Serializable {
     
     public void setEndpointAddr(String endpointAddr) {
         this.endpointAddr = endpointAddr;
+    }
+    
+    public void addEndpointAddr(String endpointAddr) {
+    	if( endpointAddr != null ) {
+	    	if( this.endpointAddr == null ) {
+	        	this.endpointAddr = endpointAddr;
+	        } else if(this.endpointAddr.substring(this.endpointAddr.length() - 1).equals("]") & endpointAddr.equals("[")) {
+	        	this.endpointAddr = this.endpointAddr+ "," + endpointAddr;
+	        } else if(endpointAddr.equals("[") | endpointAddr.equals("]") | this.endpointAddr.substring(this.endpointAddr.length() - 1).equals("[")) {
+	        	this.endpointAddr = this.endpointAddr+endpointAddr;
+	        } else  {
+	            this.endpointAddr = this.endpointAddr+ "," +endpointAddr;
+	        }
+        }
     }
     
     
@@ -81,6 +109,20 @@ public class Endpoint  implements java.io.Serializable {
         this.endpointConnectionTypCd = endpointConnectionTypCd;
     }
     
+    public void addEndpointConnectionTypCd(String endpointConnectionTypCd) {
+    	if( endpointConnectionTypCd != null ) {
+	    	if( this.endpointConnectionTypCd == null ) {
+	        	this.endpointConnectionTypCd = endpointConnectionTypCd;
+	        } else if(this.endpointConnectionTypCd.substring(this.endpointConnectionTypCd.length() - 1).equals("]") & endpointConnectionTypCd.equals("[")) {
+	        	this.endpointConnectionTypCd = this.endpointConnectionTypCd+ "," + endpointConnectionTypCd;
+	        } else if(endpointConnectionTypCd.equals("[") | endpointConnectionTypCd.equals("]") | this.endpointConnectionTypCd.substring(this.endpointConnectionTypCd.length() - 1).equals("[")) {
+	        	this.endpointConnectionTypCd = this.endpointConnectionTypCd+endpointConnectionTypCd;
+	        } else  {
+	            this.endpointConnectionTypCd = this.endpointConnectionTypCd+ "," +endpointConnectionTypCd;
+	        }
+        }
+    }
+    
     
     
     public String getEndpointConnectionTypDsply() {
@@ -89,6 +131,20 @@ public class Endpoint  implements java.io.Serializable {
     
     public void setEndpointConnectionTypDsply(String endpointConnectionTypDsply) {
         this.endpointConnectionTypDsply = endpointConnectionTypDsply;
+    }
+    
+    public void addEndpointConnectionTypDsply(String endpointConnectionTypDsply) {
+    	if( endpointConnectionTypDsply != null ) {
+	    	if( this.endpointConnectionTypDsply == null ) {
+	        	this.endpointConnectionTypDsply = endpointConnectionTypDsply;
+	        } else if(this.endpointConnectionTypDsply.substring(this.endpointConnectionTypDsply.length() - 1).equals("]") & endpointConnectionTypDsply.equals("[")) {
+	        	this.endpointConnectionTypDsply = this.endpointConnectionTypDsply+ "," + endpointConnectionTypDsply;
+	        } else if(endpointConnectionTypDsply.equals("[") | endpointConnectionTypDsply.equals("]") | this.endpointConnectionTypDsply.substring(this.endpointConnectionTypDsply.length() - 1).equals("[")) {
+	        	this.endpointConnectionTypDsply = this.endpointConnectionTypDsply+endpointConnectionTypDsply;
+	        } else  {
+	            this.endpointConnectionTypDsply = this.endpointConnectionTypDsply+ "," +endpointConnectionTypDsply;
+	        }
+        }
     }
     
     
@@ -101,6 +157,20 @@ public class Endpoint  implements java.io.Serializable {
         this.endpointConnectionTypSys = endpointConnectionTypSys;
     }
     
+    public void addEndpointConnectionTypSys(String endpointConnectionTypSys) {
+    	if( endpointConnectionTypSys != null ) {
+	    	if( this.endpointConnectionTypSys == null ) {
+	        	this.endpointConnectionTypSys = endpointConnectionTypSys;
+	        } else if(this.endpointConnectionTypSys.substring(this.endpointConnectionTypSys.length() - 1).equals("]") & endpointConnectionTypSys.equals("[")) {
+	        	this.endpointConnectionTypSys = this.endpointConnectionTypSys+ "," + endpointConnectionTypSys;
+	        } else if(endpointConnectionTypSys.equals("[") | endpointConnectionTypSys.equals("]") | this.endpointConnectionTypSys.substring(this.endpointConnectionTypSys.length() - 1).equals("[")) {
+	        	this.endpointConnectionTypSys = this.endpointConnectionTypSys+endpointConnectionTypSys;
+	        } else  {
+	            this.endpointConnectionTypSys = this.endpointConnectionTypSys+ "," +endpointConnectionTypSys;
+	        }
+        }
+    }
+    
     
     
     public String getEndpointConnectionTypUsrSltd() {
@@ -109,6 +179,20 @@ public class Endpoint  implements java.io.Serializable {
     
     public void setEndpointConnectionTypUsrSltd(String endpointConnectionTypUsrSltd) {
         this.endpointConnectionTypUsrSltd = endpointConnectionTypUsrSltd;
+    }
+    
+    public void addEndpointConnectionTypUsrSltd(String endpointConnectionTypUsrSltd) {
+    	if( endpointConnectionTypUsrSltd != null ) {
+	    	if( this.endpointConnectionTypUsrSltd == null ) {
+	        	this.endpointConnectionTypUsrSltd = endpointConnectionTypUsrSltd;
+	        } else if(this.endpointConnectionTypUsrSltd.substring(this.endpointConnectionTypUsrSltd.length() - 1).equals("]") & endpointConnectionTypUsrSltd.equals("[")) {
+	        	this.endpointConnectionTypUsrSltd = this.endpointConnectionTypUsrSltd+ "," + endpointConnectionTypUsrSltd;
+	        } else if(endpointConnectionTypUsrSltd.equals("[") | endpointConnectionTypUsrSltd.equals("]") | this.endpointConnectionTypUsrSltd.substring(this.endpointConnectionTypUsrSltd.length() - 1).equals("[")) {
+	        	this.endpointConnectionTypUsrSltd = this.endpointConnectionTypUsrSltd+endpointConnectionTypUsrSltd;
+	        } else  {
+	            this.endpointConnectionTypUsrSltd = this.endpointConnectionTypUsrSltd+ "," +endpointConnectionTypUsrSltd;
+	        }
+        }
     }
     
     
@@ -121,6 +205,20 @@ public class Endpoint  implements java.io.Serializable {
         this.endpointConnectionTypVrsn = endpointConnectionTypVrsn;
     }
     
+    public void addEndpointConnectionTypVrsn(String endpointConnectionTypVrsn) {
+    	if( endpointConnectionTypVrsn != null ) {
+	    	if( this.endpointConnectionTypVrsn == null ) {
+	        	this.endpointConnectionTypVrsn = endpointConnectionTypVrsn;
+	        } else if(this.endpointConnectionTypVrsn.substring(this.endpointConnectionTypVrsn.length() - 1).equals("]") & endpointConnectionTypVrsn.equals("[")) {
+	        	this.endpointConnectionTypVrsn = this.endpointConnectionTypVrsn+ "," + endpointConnectionTypVrsn;
+	        } else if(endpointConnectionTypVrsn.equals("[") | endpointConnectionTypVrsn.equals("]") | this.endpointConnectionTypVrsn.substring(this.endpointConnectionTypVrsn.length() - 1).equals("[")) {
+	        	this.endpointConnectionTypVrsn = this.endpointConnectionTypVrsn+endpointConnectionTypVrsn;
+	        } else  {
+	            this.endpointConnectionTypVrsn = this.endpointConnectionTypVrsn+ "," +endpointConnectionTypVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getEndpointCntctPrdEnd() {
@@ -129,6 +227,20 @@ public class Endpoint  implements java.io.Serializable {
     
     public void setEndpointCntctPrdEnd(String endpointCntctPrdEnd) {
         this.endpointCntctPrdEnd = endpointCntctPrdEnd;
+    }
+    
+    public void addEndpointCntctPrdEnd(String endpointCntctPrdEnd) {
+    	if( endpointCntctPrdEnd != null ) {
+	    	if( this.endpointCntctPrdEnd == null ) {
+	        	this.endpointCntctPrdEnd = endpointCntctPrdEnd;
+	        } else if(this.endpointCntctPrdEnd.substring(this.endpointCntctPrdEnd.length() - 1).equals("]") & endpointCntctPrdEnd.equals("[")) {
+	        	this.endpointCntctPrdEnd = this.endpointCntctPrdEnd+ "," + endpointCntctPrdEnd;
+	        } else if(endpointCntctPrdEnd.equals("[") | endpointCntctPrdEnd.equals("]") | this.endpointCntctPrdEnd.substring(this.endpointCntctPrdEnd.length() - 1).equals("[")) {
+	        	this.endpointCntctPrdEnd = this.endpointCntctPrdEnd+endpointCntctPrdEnd;
+	        } else  {
+	            this.endpointCntctPrdEnd = this.endpointCntctPrdEnd+ "," +endpointCntctPrdEnd;
+	        }
+        }
     }
     
     
@@ -141,6 +253,20 @@ public class Endpoint  implements java.io.Serializable {
         this.endpointCntctPrdStrt = endpointCntctPrdStrt;
     }
     
+    public void addEndpointCntctPrdStrt(String endpointCntctPrdStrt) {
+    	if( endpointCntctPrdStrt != null ) {
+	    	if( this.endpointCntctPrdStrt == null ) {
+	        	this.endpointCntctPrdStrt = endpointCntctPrdStrt;
+	        } else if(this.endpointCntctPrdStrt.substring(this.endpointCntctPrdStrt.length() - 1).equals("]") & endpointCntctPrdStrt.equals("[")) {
+	        	this.endpointCntctPrdStrt = this.endpointCntctPrdStrt+ "," + endpointCntctPrdStrt;
+	        } else if(endpointCntctPrdStrt.equals("[") | endpointCntctPrdStrt.equals("]") | this.endpointCntctPrdStrt.substring(this.endpointCntctPrdStrt.length() - 1).equals("[")) {
+	        	this.endpointCntctPrdStrt = this.endpointCntctPrdStrt+endpointCntctPrdStrt;
+	        } else  {
+	            this.endpointCntctPrdStrt = this.endpointCntctPrdStrt+ "," +endpointCntctPrdStrt;
+	        }
+        }
+    }
+    
     
     
     public String getEndpointCntctRnk() {
@@ -149,6 +275,20 @@ public class Endpoint  implements java.io.Serializable {
     
     public void setEndpointCntctRnk(String endpointCntctRnk) {
         this.endpointCntctRnk = endpointCntctRnk;
+    }
+    
+    public void addEndpointCntctRnk(String endpointCntctRnk) {
+    	if( endpointCntctRnk != null ) {
+	    	if( this.endpointCntctRnk == null ) {
+	        	this.endpointCntctRnk = endpointCntctRnk;
+	        } else if(this.endpointCntctRnk.substring(this.endpointCntctRnk.length() - 1).equals("]") & endpointCntctRnk.equals("[")) {
+	        	this.endpointCntctRnk = this.endpointCntctRnk+ "," + endpointCntctRnk;
+	        } else if(endpointCntctRnk.equals("[") | endpointCntctRnk.equals("]") | this.endpointCntctRnk.substring(this.endpointCntctRnk.length() - 1).equals("[")) {
+	        	this.endpointCntctRnk = this.endpointCntctRnk+endpointCntctRnk;
+	        } else  {
+	            this.endpointCntctRnk = this.endpointCntctRnk+ "," +endpointCntctRnk;
+	        }
+        }
     }
     
     
@@ -161,6 +301,20 @@ public class Endpoint  implements java.io.Serializable {
         this.endpointCntctSys = endpointCntctSys;
     }
     
+    public void addEndpointCntctSys(String endpointCntctSys) {
+    	if( endpointCntctSys != null ) {
+	    	if( this.endpointCntctSys == null ) {
+	        	this.endpointCntctSys = endpointCntctSys;
+	        } else if(this.endpointCntctSys.substring(this.endpointCntctSys.length() - 1).equals("]") & endpointCntctSys.equals("[")) {
+	        	this.endpointCntctSys = this.endpointCntctSys+ "," + endpointCntctSys;
+	        } else if(endpointCntctSys.equals("[") | endpointCntctSys.equals("]") | this.endpointCntctSys.substring(this.endpointCntctSys.length() - 1).equals("[")) {
+	        	this.endpointCntctSys = this.endpointCntctSys+endpointCntctSys;
+	        } else  {
+	            this.endpointCntctSys = this.endpointCntctSys+ "," +endpointCntctSys;
+	        }
+        }
+    }
+    
     
     
     public String getEndpointCntctUse() {
@@ -169,6 +323,20 @@ public class Endpoint  implements java.io.Serializable {
     
     public void setEndpointCntctUse(String endpointCntctUse) {
         this.endpointCntctUse = endpointCntctUse;
+    }
+    
+    public void addEndpointCntctUse(String endpointCntctUse) {
+    	if( endpointCntctUse != null ) {
+	    	if( this.endpointCntctUse == null ) {
+	        	this.endpointCntctUse = endpointCntctUse;
+	        } else if(this.endpointCntctUse.substring(this.endpointCntctUse.length() - 1).equals("]") & endpointCntctUse.equals("[")) {
+	        	this.endpointCntctUse = this.endpointCntctUse+ "," + endpointCntctUse;
+	        } else if(endpointCntctUse.equals("[") | endpointCntctUse.equals("]") | this.endpointCntctUse.substring(this.endpointCntctUse.length() - 1).equals("[")) {
+	        	this.endpointCntctUse = this.endpointCntctUse+endpointCntctUse;
+	        } else  {
+	            this.endpointCntctUse = this.endpointCntctUse+ "," +endpointCntctUse;
+	        }
+        }
     }
     
     
@@ -181,6 +349,20 @@ public class Endpoint  implements java.io.Serializable {
         this.endpointCntctVl = endpointCntctVl;
     }
     
+    public void addEndpointCntctVl(String endpointCntctVl) {
+    	if( endpointCntctVl != null ) {
+	    	if( this.endpointCntctVl == null ) {
+	        	this.endpointCntctVl = endpointCntctVl;
+	        } else if(this.endpointCntctVl.substring(this.endpointCntctVl.length() - 1).equals("]") & endpointCntctVl.equals("[")) {
+	        	this.endpointCntctVl = this.endpointCntctVl+ "," + endpointCntctVl;
+	        } else if(endpointCntctVl.equals("[") | endpointCntctVl.equals("]") | this.endpointCntctVl.substring(this.endpointCntctVl.length() - 1).equals("[")) {
+	        	this.endpointCntctVl = this.endpointCntctVl+endpointCntctVl;
+	        } else  {
+	            this.endpointCntctVl = this.endpointCntctVl+ "," +endpointCntctVl;
+	        }
+        }
+    }
+    
     
     
     public String getEndpointHeader() {
@@ -189,6 +371,20 @@ public class Endpoint  implements java.io.Serializable {
     
     public void setEndpointHeader(String endpointHeader) {
         this.endpointHeader = endpointHeader;
+    }
+    
+    public void addEndpointHeader(String endpointHeader) {
+    	if( endpointHeader != null ) {
+	    	if( this.endpointHeader == null ) {
+	        	this.endpointHeader = endpointHeader;
+	        } else if(this.endpointHeader.substring(this.endpointHeader.length() - 1).equals("]") & endpointHeader.equals("[")) {
+	        	this.endpointHeader = this.endpointHeader+ "," + endpointHeader;
+	        } else if(endpointHeader.equals("[") | endpointHeader.equals("]") | this.endpointHeader.substring(this.endpointHeader.length() - 1).equals("[")) {
+	        	this.endpointHeader = this.endpointHeader+endpointHeader;
+	        } else  {
+	            this.endpointHeader = this.endpointHeader+ "," +endpointHeader;
+	        }
+        }
     }
     
     
@@ -201,6 +397,20 @@ public class Endpoint  implements java.io.Serializable {
         this.endpointIdAssigner = endpointIdAssigner;
     }
     
+    public void addEndpointIdAssigner(String endpointIdAssigner) {
+    	if( endpointIdAssigner != null ) {
+	    	if( this.endpointIdAssigner == null ) {
+	        	this.endpointIdAssigner = endpointIdAssigner;
+	        } else if(this.endpointIdAssigner.substring(this.endpointIdAssigner.length() - 1).equals("]") & endpointIdAssigner.equals("[")) {
+	        	this.endpointIdAssigner = this.endpointIdAssigner+ "," + endpointIdAssigner;
+	        } else if(endpointIdAssigner.equals("[") | endpointIdAssigner.equals("]") | this.endpointIdAssigner.substring(this.endpointIdAssigner.length() - 1).equals("[")) {
+	        	this.endpointIdAssigner = this.endpointIdAssigner+endpointIdAssigner;
+	        } else  {
+	            this.endpointIdAssigner = this.endpointIdAssigner+ "," +endpointIdAssigner;
+	        }
+        }
+    }
+    
     
     
     public String getEndpointIdPrdEnd() {
@@ -209,6 +419,20 @@ public class Endpoint  implements java.io.Serializable {
     
     public void setEndpointIdPrdEnd(String endpointIdPrdEnd) {
         this.endpointIdPrdEnd = endpointIdPrdEnd;
+    }
+    
+    public void addEndpointIdPrdEnd(String endpointIdPrdEnd) {
+    	if( endpointIdPrdEnd != null ) {
+	    	if( this.endpointIdPrdEnd == null ) {
+	        	this.endpointIdPrdEnd = endpointIdPrdEnd;
+	        } else if(this.endpointIdPrdEnd.substring(this.endpointIdPrdEnd.length() - 1).equals("]") & endpointIdPrdEnd.equals("[")) {
+	        	this.endpointIdPrdEnd = this.endpointIdPrdEnd+ "," + endpointIdPrdEnd;
+	        } else if(endpointIdPrdEnd.equals("[") | endpointIdPrdEnd.equals("]") | this.endpointIdPrdEnd.substring(this.endpointIdPrdEnd.length() - 1).equals("[")) {
+	        	this.endpointIdPrdEnd = this.endpointIdPrdEnd+endpointIdPrdEnd;
+	        } else  {
+	            this.endpointIdPrdEnd = this.endpointIdPrdEnd+ "," +endpointIdPrdEnd;
+	        }
+        }
     }
     
     
@@ -221,6 +445,20 @@ public class Endpoint  implements java.io.Serializable {
         this.endpointIdPrdStrt = endpointIdPrdStrt;
     }
     
+    public void addEndpointIdPrdStrt(String endpointIdPrdStrt) {
+    	if( endpointIdPrdStrt != null ) {
+	    	if( this.endpointIdPrdStrt == null ) {
+	        	this.endpointIdPrdStrt = endpointIdPrdStrt;
+	        } else if(this.endpointIdPrdStrt.substring(this.endpointIdPrdStrt.length() - 1).equals("]") & endpointIdPrdStrt.equals("[")) {
+	        	this.endpointIdPrdStrt = this.endpointIdPrdStrt+ "," + endpointIdPrdStrt;
+	        } else if(endpointIdPrdStrt.equals("[") | endpointIdPrdStrt.equals("]") | this.endpointIdPrdStrt.substring(this.endpointIdPrdStrt.length() - 1).equals("[")) {
+	        	this.endpointIdPrdStrt = this.endpointIdPrdStrt+endpointIdPrdStrt;
+	        } else  {
+	            this.endpointIdPrdStrt = this.endpointIdPrdStrt+ "," +endpointIdPrdStrt;
+	        }
+        }
+    }
+    
     
     
     public String getEndpointIdSys() {
@@ -229,6 +467,20 @@ public class Endpoint  implements java.io.Serializable {
     
     public void setEndpointIdSys(String endpointIdSys) {
         this.endpointIdSys = endpointIdSys;
+    }
+    
+    public void addEndpointIdSys(String endpointIdSys) {
+    	if( endpointIdSys != null ) {
+	    	if( this.endpointIdSys == null ) {
+	        	this.endpointIdSys = endpointIdSys;
+	        } else if(this.endpointIdSys.substring(this.endpointIdSys.length() - 1).equals("]") & endpointIdSys.equals("[")) {
+	        	this.endpointIdSys = this.endpointIdSys+ "," + endpointIdSys;
+	        } else if(endpointIdSys.equals("[") | endpointIdSys.equals("]") | this.endpointIdSys.substring(this.endpointIdSys.length() - 1).equals("[")) {
+	        	this.endpointIdSys = this.endpointIdSys+endpointIdSys;
+	        } else  {
+	            this.endpointIdSys = this.endpointIdSys+ "," +endpointIdSys;
+	        }
+        }
     }
     
     
@@ -241,6 +493,20 @@ public class Endpoint  implements java.io.Serializable {
         this.endpointIdTypCdgCd = endpointIdTypCdgCd;
     }
     
+    public void addEndpointIdTypCdgCd(String endpointIdTypCdgCd) {
+    	if( endpointIdTypCdgCd != null ) {
+	    	if( this.endpointIdTypCdgCd == null ) {
+	        	this.endpointIdTypCdgCd = endpointIdTypCdgCd;
+	        } else if(this.endpointIdTypCdgCd.substring(this.endpointIdTypCdgCd.length() - 1).equals("]") & endpointIdTypCdgCd.equals("[")) {
+	        	this.endpointIdTypCdgCd = this.endpointIdTypCdgCd+ "," + endpointIdTypCdgCd;
+	        } else if(endpointIdTypCdgCd.equals("[") | endpointIdTypCdgCd.equals("]") | this.endpointIdTypCdgCd.substring(this.endpointIdTypCdgCd.length() - 1).equals("[")) {
+	        	this.endpointIdTypCdgCd = this.endpointIdTypCdgCd+endpointIdTypCdgCd;
+	        } else  {
+	            this.endpointIdTypCdgCd = this.endpointIdTypCdgCd+ "," +endpointIdTypCdgCd;
+	        }
+        }
+    }
+    
     
     
     public String getEndpointIdTypCdgDsply() {
@@ -249,6 +515,20 @@ public class Endpoint  implements java.io.Serializable {
     
     public void setEndpointIdTypCdgDsply(String endpointIdTypCdgDsply) {
         this.endpointIdTypCdgDsply = endpointIdTypCdgDsply;
+    }
+    
+    public void addEndpointIdTypCdgDsply(String endpointIdTypCdgDsply) {
+    	if( endpointIdTypCdgDsply != null ) {
+	    	if( this.endpointIdTypCdgDsply == null ) {
+	        	this.endpointIdTypCdgDsply = endpointIdTypCdgDsply;
+	        } else if(this.endpointIdTypCdgDsply.substring(this.endpointIdTypCdgDsply.length() - 1).equals("]") & endpointIdTypCdgDsply.equals("[")) {
+	        	this.endpointIdTypCdgDsply = this.endpointIdTypCdgDsply+ "," + endpointIdTypCdgDsply;
+	        } else if(endpointIdTypCdgDsply.equals("[") | endpointIdTypCdgDsply.equals("]") | this.endpointIdTypCdgDsply.substring(this.endpointIdTypCdgDsply.length() - 1).equals("[")) {
+	        	this.endpointIdTypCdgDsply = this.endpointIdTypCdgDsply+endpointIdTypCdgDsply;
+	        } else  {
+	            this.endpointIdTypCdgDsply = this.endpointIdTypCdgDsply+ "," +endpointIdTypCdgDsply;
+	        }
+        }
     }
     
     
@@ -261,6 +541,20 @@ public class Endpoint  implements java.io.Serializable {
         this.endpointIdTypCdgSys = endpointIdTypCdgSys;
     }
     
+    public void addEndpointIdTypCdgSys(String endpointIdTypCdgSys) {
+    	if( endpointIdTypCdgSys != null ) {
+	    	if( this.endpointIdTypCdgSys == null ) {
+	        	this.endpointIdTypCdgSys = endpointIdTypCdgSys;
+	        } else if(this.endpointIdTypCdgSys.substring(this.endpointIdTypCdgSys.length() - 1).equals("]") & endpointIdTypCdgSys.equals("[")) {
+	        	this.endpointIdTypCdgSys = this.endpointIdTypCdgSys+ "," + endpointIdTypCdgSys;
+	        } else if(endpointIdTypCdgSys.equals("[") | endpointIdTypCdgSys.equals("]") | this.endpointIdTypCdgSys.substring(this.endpointIdTypCdgSys.length() - 1).equals("[")) {
+	        	this.endpointIdTypCdgSys = this.endpointIdTypCdgSys+endpointIdTypCdgSys;
+	        } else  {
+	            this.endpointIdTypCdgSys = this.endpointIdTypCdgSys+ "," +endpointIdTypCdgSys;
+	        }
+        }
+    }
+    
     
     
     public String getEndpointIdTypCdgUsrSltd() {
@@ -269,6 +563,20 @@ public class Endpoint  implements java.io.Serializable {
     
     public void setEndpointIdTypCdgUsrSltd(String endpointIdTypCdgUsrSltd) {
         this.endpointIdTypCdgUsrSltd = endpointIdTypCdgUsrSltd;
+    }
+    
+    public void addEndpointIdTypCdgUsrSltd(String endpointIdTypCdgUsrSltd) {
+    	if( endpointIdTypCdgUsrSltd != null ) {
+	    	if( this.endpointIdTypCdgUsrSltd == null ) {
+	        	this.endpointIdTypCdgUsrSltd = endpointIdTypCdgUsrSltd;
+	        } else if(this.endpointIdTypCdgUsrSltd.substring(this.endpointIdTypCdgUsrSltd.length() - 1).equals("]") & endpointIdTypCdgUsrSltd.equals("[")) {
+	        	this.endpointIdTypCdgUsrSltd = this.endpointIdTypCdgUsrSltd+ "," + endpointIdTypCdgUsrSltd;
+	        } else if(endpointIdTypCdgUsrSltd.equals("[") | endpointIdTypCdgUsrSltd.equals("]") | this.endpointIdTypCdgUsrSltd.substring(this.endpointIdTypCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.endpointIdTypCdgUsrSltd = this.endpointIdTypCdgUsrSltd+endpointIdTypCdgUsrSltd;
+	        } else  {
+	            this.endpointIdTypCdgUsrSltd = this.endpointIdTypCdgUsrSltd+ "," +endpointIdTypCdgUsrSltd;
+	        }
+        }
     }
     
     
@@ -281,6 +589,20 @@ public class Endpoint  implements java.io.Serializable {
         this.endpointIdTypCdgVrsn = endpointIdTypCdgVrsn;
     }
     
+    public void addEndpointIdTypCdgVrsn(String endpointIdTypCdgVrsn) {
+    	if( endpointIdTypCdgVrsn != null ) {
+	    	if( this.endpointIdTypCdgVrsn == null ) {
+	        	this.endpointIdTypCdgVrsn = endpointIdTypCdgVrsn;
+	        } else if(this.endpointIdTypCdgVrsn.substring(this.endpointIdTypCdgVrsn.length() - 1).equals("]") & endpointIdTypCdgVrsn.equals("[")) {
+	        	this.endpointIdTypCdgVrsn = this.endpointIdTypCdgVrsn+ "," + endpointIdTypCdgVrsn;
+	        } else if(endpointIdTypCdgVrsn.equals("[") | endpointIdTypCdgVrsn.equals("]") | this.endpointIdTypCdgVrsn.substring(this.endpointIdTypCdgVrsn.length() - 1).equals("[")) {
+	        	this.endpointIdTypCdgVrsn = this.endpointIdTypCdgVrsn+endpointIdTypCdgVrsn;
+	        } else  {
+	            this.endpointIdTypCdgVrsn = this.endpointIdTypCdgVrsn+ "," +endpointIdTypCdgVrsn;
+	        }
+        }
+    }
+    
     
     
     public String getEndpointIdTypTxt() {
@@ -289,6 +611,20 @@ public class Endpoint  implements java.io.Serializable {
     
     public void setEndpointIdTypTxt(String endpointIdTypTxt) {
         this.endpointIdTypTxt = endpointIdTypTxt;
+    }
+    
+    public void addEndpointIdTypTxt(String endpointIdTypTxt) {
+    	if( endpointIdTypTxt != null ) {
+	    	if( this.endpointIdTypTxt == null ) {
+	        	this.endpointIdTypTxt = endpointIdTypTxt;
+	        } else if(this.endpointIdTypTxt.substring(this.endpointIdTypTxt.length() - 1).equals("]") & endpointIdTypTxt.equals("[")) {
+	        	this.endpointIdTypTxt = this.endpointIdTypTxt+ "," + endpointIdTypTxt;
+	        } else if(endpointIdTypTxt.equals("[") | endpointIdTypTxt.equals("]") | this.endpointIdTypTxt.substring(this.endpointIdTypTxt.length() - 1).equals("[")) {
+	        	this.endpointIdTypTxt = this.endpointIdTypTxt+endpointIdTypTxt;
+	        } else  {
+	            this.endpointIdTypTxt = this.endpointIdTypTxt+ "," +endpointIdTypTxt;
+	        }
+        }
     }
     
     
@@ -301,6 +637,20 @@ public class Endpoint  implements java.io.Serializable {
         this.endpointIdUse = endpointIdUse;
     }
     
+    public void addEndpointIdUse(String endpointIdUse) {
+    	if( endpointIdUse != null ) {
+	    	if( this.endpointIdUse == null ) {
+	        	this.endpointIdUse = endpointIdUse;
+	        } else if(this.endpointIdUse.substring(this.endpointIdUse.length() - 1).equals("]") & endpointIdUse.equals("[")) {
+	        	this.endpointIdUse = this.endpointIdUse+ "," + endpointIdUse;
+	        } else if(endpointIdUse.equals("[") | endpointIdUse.equals("]") | this.endpointIdUse.substring(this.endpointIdUse.length() - 1).equals("[")) {
+	        	this.endpointIdUse = this.endpointIdUse+endpointIdUse;
+	        } else  {
+	            this.endpointIdUse = this.endpointIdUse+ "," +endpointIdUse;
+	        }
+        }
+    }
+    
     
     
     public String getEndpointIdVl() {
@@ -309,6 +659,20 @@ public class Endpoint  implements java.io.Serializable {
     
     public void setEndpointIdVl(String endpointIdVl) {
         this.endpointIdVl = endpointIdVl;
+    }
+    
+    public void addEndpointIdVl(String endpointIdVl) {
+    	if( endpointIdVl != null ) {
+	    	if( this.endpointIdVl == null ) {
+	        	this.endpointIdVl = endpointIdVl;
+	        } else if(this.endpointIdVl.substring(this.endpointIdVl.length() - 1).equals("]") & endpointIdVl.equals("[")) {
+	        	this.endpointIdVl = this.endpointIdVl+ "," + endpointIdVl;
+	        } else if(endpointIdVl.equals("[") | endpointIdVl.equals("]") | this.endpointIdVl.substring(this.endpointIdVl.length() - 1).equals("[")) {
+	        	this.endpointIdVl = this.endpointIdVl+endpointIdVl;
+	        } else  {
+	            this.endpointIdVl = this.endpointIdVl+ "," +endpointIdVl;
+	        }
+        }
     }
     
     
@@ -321,6 +685,20 @@ public class Endpoint  implements java.io.Serializable {
         this.endpointManagingOrgnztn = endpointManagingOrgnztn;
     }
     
+    public void addEndpointManagingOrgnztn(String endpointManagingOrgnztn) {
+    	if( endpointManagingOrgnztn != null ) {
+	    	if( this.endpointManagingOrgnztn == null ) {
+	        	this.endpointManagingOrgnztn = endpointManagingOrgnztn;
+	        } else if(this.endpointManagingOrgnztn.substring(this.endpointManagingOrgnztn.length() - 1).equals("]") & endpointManagingOrgnztn.equals("[")) {
+	        	this.endpointManagingOrgnztn = this.endpointManagingOrgnztn+ "," + endpointManagingOrgnztn;
+	        } else if(endpointManagingOrgnztn.equals("[") | endpointManagingOrgnztn.equals("]") | this.endpointManagingOrgnztn.substring(this.endpointManagingOrgnztn.length() - 1).equals("[")) {
+	        	this.endpointManagingOrgnztn = this.endpointManagingOrgnztn+endpointManagingOrgnztn;
+	        } else  {
+	            this.endpointManagingOrgnztn = this.endpointManagingOrgnztn+ "," +endpointManagingOrgnztn;
+	        }
+        }
+    }
+    
     
     
     public String getEndpointNm() {
@@ -329,6 +707,20 @@ public class Endpoint  implements java.io.Serializable {
     
     public void setEndpointNm(String endpointNm) {
         this.endpointNm = endpointNm;
+    }
+    
+    public void addEndpointNm(String endpointNm) {
+    	if( endpointNm != null ) {
+	    	if( this.endpointNm == null ) {
+	        	this.endpointNm = endpointNm;
+	        } else if(this.endpointNm.substring(this.endpointNm.length() - 1).equals("]") & endpointNm.equals("[")) {
+	        	this.endpointNm = this.endpointNm+ "," + endpointNm;
+	        } else if(endpointNm.equals("[") | endpointNm.equals("]") | this.endpointNm.substring(this.endpointNm.length() - 1).equals("[")) {
+	        	this.endpointNm = this.endpointNm+endpointNm;
+	        } else  {
+	            this.endpointNm = this.endpointNm+ "," +endpointNm;
+	        }
+        }
     }
     
     
@@ -341,6 +733,20 @@ public class Endpoint  implements java.io.Serializable {
         this.endpointPayloadMimeTyp = endpointPayloadMimeTyp;
     }
     
+    public void addEndpointPayloadMimeTyp(String endpointPayloadMimeTyp) {
+    	if( endpointPayloadMimeTyp != null ) {
+	    	if( this.endpointPayloadMimeTyp == null ) {
+	        	this.endpointPayloadMimeTyp = endpointPayloadMimeTyp;
+	        } else if(this.endpointPayloadMimeTyp.substring(this.endpointPayloadMimeTyp.length() - 1).equals("]") & endpointPayloadMimeTyp.equals("[")) {
+	        	this.endpointPayloadMimeTyp = this.endpointPayloadMimeTyp+ "," + endpointPayloadMimeTyp;
+	        } else if(endpointPayloadMimeTyp.equals("[") | endpointPayloadMimeTyp.equals("]") | this.endpointPayloadMimeTyp.substring(this.endpointPayloadMimeTyp.length() - 1).equals("[")) {
+	        	this.endpointPayloadMimeTyp = this.endpointPayloadMimeTyp+endpointPayloadMimeTyp;
+	        } else  {
+	            this.endpointPayloadMimeTyp = this.endpointPayloadMimeTyp+ "," +endpointPayloadMimeTyp;
+	        }
+        }
+    }
+    
     
     
     public String getEndpointPayloadTypCdgCd() {
@@ -349,6 +755,20 @@ public class Endpoint  implements java.io.Serializable {
     
     public void setEndpointPayloadTypCdgCd(String endpointPayloadTypCdgCd) {
         this.endpointPayloadTypCdgCd = endpointPayloadTypCdgCd;
+    }
+    
+    public void addEndpointPayloadTypCdgCd(String endpointPayloadTypCdgCd) {
+    	if( endpointPayloadTypCdgCd != null ) {
+	    	if( this.endpointPayloadTypCdgCd == null ) {
+	        	this.endpointPayloadTypCdgCd = endpointPayloadTypCdgCd;
+	        } else if(this.endpointPayloadTypCdgCd.substring(this.endpointPayloadTypCdgCd.length() - 1).equals("]") & endpointPayloadTypCdgCd.equals("[")) {
+	        	this.endpointPayloadTypCdgCd = this.endpointPayloadTypCdgCd+ "," + endpointPayloadTypCdgCd;
+	        } else if(endpointPayloadTypCdgCd.equals("[") | endpointPayloadTypCdgCd.equals("]") | this.endpointPayloadTypCdgCd.substring(this.endpointPayloadTypCdgCd.length() - 1).equals("[")) {
+	        	this.endpointPayloadTypCdgCd = this.endpointPayloadTypCdgCd+endpointPayloadTypCdgCd;
+	        } else  {
+	            this.endpointPayloadTypCdgCd = this.endpointPayloadTypCdgCd+ "," +endpointPayloadTypCdgCd;
+	        }
+        }
     }
     
     
@@ -361,6 +781,20 @@ public class Endpoint  implements java.io.Serializable {
         this.endpointPayloadTypCdgDsply = endpointPayloadTypCdgDsply;
     }
     
+    public void addEndpointPayloadTypCdgDsply(String endpointPayloadTypCdgDsply) {
+    	if( endpointPayloadTypCdgDsply != null ) {
+	    	if( this.endpointPayloadTypCdgDsply == null ) {
+	        	this.endpointPayloadTypCdgDsply = endpointPayloadTypCdgDsply;
+	        } else if(this.endpointPayloadTypCdgDsply.substring(this.endpointPayloadTypCdgDsply.length() - 1).equals("]") & endpointPayloadTypCdgDsply.equals("[")) {
+	        	this.endpointPayloadTypCdgDsply = this.endpointPayloadTypCdgDsply+ "," + endpointPayloadTypCdgDsply;
+	        } else if(endpointPayloadTypCdgDsply.equals("[") | endpointPayloadTypCdgDsply.equals("]") | this.endpointPayloadTypCdgDsply.substring(this.endpointPayloadTypCdgDsply.length() - 1).equals("[")) {
+	        	this.endpointPayloadTypCdgDsply = this.endpointPayloadTypCdgDsply+endpointPayloadTypCdgDsply;
+	        } else  {
+	            this.endpointPayloadTypCdgDsply = this.endpointPayloadTypCdgDsply+ "," +endpointPayloadTypCdgDsply;
+	        }
+        }
+    }
+    
     
     
     public String getEndpointPayloadTypCdgSys() {
@@ -369,6 +803,20 @@ public class Endpoint  implements java.io.Serializable {
     
     public void setEndpointPayloadTypCdgSys(String endpointPayloadTypCdgSys) {
         this.endpointPayloadTypCdgSys = endpointPayloadTypCdgSys;
+    }
+    
+    public void addEndpointPayloadTypCdgSys(String endpointPayloadTypCdgSys) {
+    	if( endpointPayloadTypCdgSys != null ) {
+	    	if( this.endpointPayloadTypCdgSys == null ) {
+	        	this.endpointPayloadTypCdgSys = endpointPayloadTypCdgSys;
+	        } else if(this.endpointPayloadTypCdgSys.substring(this.endpointPayloadTypCdgSys.length() - 1).equals("]") & endpointPayloadTypCdgSys.equals("[")) {
+	        	this.endpointPayloadTypCdgSys = this.endpointPayloadTypCdgSys+ "," + endpointPayloadTypCdgSys;
+	        } else if(endpointPayloadTypCdgSys.equals("[") | endpointPayloadTypCdgSys.equals("]") | this.endpointPayloadTypCdgSys.substring(this.endpointPayloadTypCdgSys.length() - 1).equals("[")) {
+	        	this.endpointPayloadTypCdgSys = this.endpointPayloadTypCdgSys+endpointPayloadTypCdgSys;
+	        } else  {
+	            this.endpointPayloadTypCdgSys = this.endpointPayloadTypCdgSys+ "," +endpointPayloadTypCdgSys;
+	        }
+        }
     }
     
     
@@ -381,6 +829,20 @@ public class Endpoint  implements java.io.Serializable {
         this.endpointPayloadTypCdgUsrSltd = endpointPayloadTypCdgUsrSltd;
     }
     
+    public void addEndpointPayloadTypCdgUsrSltd(String endpointPayloadTypCdgUsrSltd) {
+    	if( endpointPayloadTypCdgUsrSltd != null ) {
+	    	if( this.endpointPayloadTypCdgUsrSltd == null ) {
+	        	this.endpointPayloadTypCdgUsrSltd = endpointPayloadTypCdgUsrSltd;
+	        } else if(this.endpointPayloadTypCdgUsrSltd.substring(this.endpointPayloadTypCdgUsrSltd.length() - 1).equals("]") & endpointPayloadTypCdgUsrSltd.equals("[")) {
+	        	this.endpointPayloadTypCdgUsrSltd = this.endpointPayloadTypCdgUsrSltd+ "," + endpointPayloadTypCdgUsrSltd;
+	        } else if(endpointPayloadTypCdgUsrSltd.equals("[") | endpointPayloadTypCdgUsrSltd.equals("]") | this.endpointPayloadTypCdgUsrSltd.substring(this.endpointPayloadTypCdgUsrSltd.length() - 1).equals("[")) {
+	        	this.endpointPayloadTypCdgUsrSltd = this.endpointPayloadTypCdgUsrSltd+endpointPayloadTypCdgUsrSltd;
+	        } else  {
+	            this.endpointPayloadTypCdgUsrSltd = this.endpointPayloadTypCdgUsrSltd+ "," +endpointPayloadTypCdgUsrSltd;
+	        }
+        }
+    }
+    
     
     
     public String getEndpointPayloadTypCdgVrsn() {
@@ -389,6 +851,20 @@ public class Endpoint  implements java.io.Serializable {
     
     public void setEndpointPayloadTypCdgVrsn(String endpointPayloadTypCdgVrsn) {
         this.endpointPayloadTypCdgVrsn = endpointPayloadTypCdgVrsn;
+    }
+    
+    public void addEndpointPayloadTypCdgVrsn(String endpointPayloadTypCdgVrsn) {
+    	if( endpointPayloadTypCdgVrsn != null ) {
+	    	if( this.endpointPayloadTypCdgVrsn == null ) {
+	        	this.endpointPayloadTypCdgVrsn = endpointPayloadTypCdgVrsn;
+	        } else if(this.endpointPayloadTypCdgVrsn.substring(this.endpointPayloadTypCdgVrsn.length() - 1).equals("]") & endpointPayloadTypCdgVrsn.equals("[")) {
+	        	this.endpointPayloadTypCdgVrsn = this.endpointPayloadTypCdgVrsn+ "," + endpointPayloadTypCdgVrsn;
+	        } else if(endpointPayloadTypCdgVrsn.equals("[") | endpointPayloadTypCdgVrsn.equals("]") | this.endpointPayloadTypCdgVrsn.substring(this.endpointPayloadTypCdgVrsn.length() - 1).equals("[")) {
+	        	this.endpointPayloadTypCdgVrsn = this.endpointPayloadTypCdgVrsn+endpointPayloadTypCdgVrsn;
+	        } else  {
+	            this.endpointPayloadTypCdgVrsn = this.endpointPayloadTypCdgVrsn+ "," +endpointPayloadTypCdgVrsn;
+	        }
+        }
     }
     
     
@@ -401,6 +877,20 @@ public class Endpoint  implements java.io.Serializable {
         this.endpointPayloadTypTxt = endpointPayloadTypTxt;
     }
     
+    public void addEndpointPayloadTypTxt(String endpointPayloadTypTxt) {
+    	if( endpointPayloadTypTxt != null ) {
+	    	if( this.endpointPayloadTypTxt == null ) {
+	        	this.endpointPayloadTypTxt = endpointPayloadTypTxt;
+	        } else if(this.endpointPayloadTypTxt.substring(this.endpointPayloadTypTxt.length() - 1).equals("]") & endpointPayloadTypTxt.equals("[")) {
+	        	this.endpointPayloadTypTxt = this.endpointPayloadTypTxt+ "," + endpointPayloadTypTxt;
+	        } else if(endpointPayloadTypTxt.equals("[") | endpointPayloadTypTxt.equals("]") | this.endpointPayloadTypTxt.substring(this.endpointPayloadTypTxt.length() - 1).equals("[")) {
+	        	this.endpointPayloadTypTxt = this.endpointPayloadTypTxt+endpointPayloadTypTxt;
+	        } else  {
+	            this.endpointPayloadTypTxt = this.endpointPayloadTypTxt+ "," +endpointPayloadTypTxt;
+	        }
+        }
+    }
+    
     
     
     public String getEndpointPrdEnd() {
@@ -409,6 +899,20 @@ public class Endpoint  implements java.io.Serializable {
     
     public void setEndpointPrdEnd(String endpointPrdEnd) {
         this.endpointPrdEnd = endpointPrdEnd;
+    }
+    
+    public void addEndpointPrdEnd(String endpointPrdEnd) {
+    	if( endpointPrdEnd != null ) {
+	    	if( this.endpointPrdEnd == null ) {
+	        	this.endpointPrdEnd = endpointPrdEnd;
+	        } else if(this.endpointPrdEnd.substring(this.endpointPrdEnd.length() - 1).equals("]") & endpointPrdEnd.equals("[")) {
+	        	this.endpointPrdEnd = this.endpointPrdEnd+ "," + endpointPrdEnd;
+	        } else if(endpointPrdEnd.equals("[") | endpointPrdEnd.equals("]") | this.endpointPrdEnd.substring(this.endpointPrdEnd.length() - 1).equals("[")) {
+	        	this.endpointPrdEnd = this.endpointPrdEnd+endpointPrdEnd;
+	        } else  {
+	            this.endpointPrdEnd = this.endpointPrdEnd+ "," +endpointPrdEnd;
+	        }
+        }
     }
     
     
@@ -421,6 +925,20 @@ public class Endpoint  implements java.io.Serializable {
         this.endpointPrdStrt = endpointPrdStrt;
     }
     
+    public void addEndpointPrdStrt(String endpointPrdStrt) {
+    	if( endpointPrdStrt != null ) {
+	    	if( this.endpointPrdStrt == null ) {
+	        	this.endpointPrdStrt = endpointPrdStrt;
+	        } else if(this.endpointPrdStrt.substring(this.endpointPrdStrt.length() - 1).equals("]") & endpointPrdStrt.equals("[")) {
+	        	this.endpointPrdStrt = this.endpointPrdStrt+ "," + endpointPrdStrt;
+	        } else if(endpointPrdStrt.equals("[") | endpointPrdStrt.equals("]") | this.endpointPrdStrt.substring(this.endpointPrdStrt.length() - 1).equals("[")) {
+	        	this.endpointPrdStrt = this.endpointPrdStrt+endpointPrdStrt;
+	        } else  {
+	            this.endpointPrdStrt = this.endpointPrdStrt+ "," +endpointPrdStrt;
+	        }
+        }
+    }
+    
     
     
     public String getEndpointSts() {
@@ -429,6 +947,20 @@ public class Endpoint  implements java.io.Serializable {
     
     public void setEndpointSts(String endpointSts) {
         this.endpointSts = endpointSts;
+    }
+    
+    public void addEndpointSts(String endpointSts) {
+    	if( endpointSts != null ) {
+	    	if( this.endpointSts == null ) {
+	        	this.endpointSts = endpointSts;
+	        } else if(this.endpointSts.substring(this.endpointSts.length() - 1).equals("]") & endpointSts.equals("[")) {
+	        	this.endpointSts = this.endpointSts+ "," + endpointSts;
+	        } else if(endpointSts.equals("[") | endpointSts.equals("]") | this.endpointSts.substring(this.endpointSts.length() - 1).equals("[")) {
+	        	this.endpointSts = this.endpointSts+endpointSts;
+	        } else  {
+	            this.endpointSts = this.endpointSts+ "," +endpointSts;
+	        }
+        }
     }
     
     
