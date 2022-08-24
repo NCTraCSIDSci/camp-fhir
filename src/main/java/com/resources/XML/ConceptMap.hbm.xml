@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Aug 17, 2022, 11:08:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="ConceptMap" optimistic-lock="none" table="ConceptMap">
+        <id name="id" type="string">
+            <column length="64" name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="cncptMapCntctNm" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_Cntct_Nm"/>
+        </property>
+        <property name="cncptMapCntctTlcmPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_Cntct_Tlcm_Prd_End"/>
+        </property>
+        <property name="cncptMapCntctTlcmPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_Cntct_Tlcm_Prd_Strt"/>
+        </property>
+        <property name="cncptMapCntctTlcmRnk" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_Cntct_Tlcm_Rnk"/>
+        </property>
+        <property name="cncptMapCntctTlcmSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_Cntct_Tlcm_Sys"/>
+        </property>
+        <property name="cncptMapCntctTlcmUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_Cntct_Tlcm_Use"/>
+        </property>
+        <property name="cncptMapCntctTlcmVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_Cntct_Tlcm_Vl"/>
+        </property>
+        <property name="cncptMapCopyright" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_Copyright"/>
+        </property>
+        <property name="cncptMapDt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_Dt"/>
+        </property>
+        <property name="cncptMapDscrptn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_Dscrptn"/>
+        </property>
+        <property name="cncptMapExprmtl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_Exprmtl"/>
+        </property>
+        <property name="cncptMapGrpElmntCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_Grp_Elmnt_Cd"/>
+        </property>
+        <property name="cncptMapGrpElmntDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_Grp_Elmnt_Dsply"/>
+        </property>
+        <property name="cncptMapGrpElmntTarCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_Grp_Elmnt_Tar_Cd"/>
+        </property>
+        <property name="cncptMapGrpElmntTarComment" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_Grp_Elmnt_Tar_Comment"/>
+        </property>
+        <property name="cncptMapGrpElmntTarDependsOnDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_Grp_Elmnt_Tar_DependsOn_Dsply"/>
+        </property>
+        <property name="cncptMapGrpElmntTarDependsOnPrpty" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_Grp_Elmnt_Tar_DependsOn_Prpty"/>
+        </property>
+        <property name="cncptMapGrpElmntTarDependsOnSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_Grp_Elmnt_Tar_DependsOn_Sys"/>
+        </property>
+        <property name="cncptMapGrpElmntTarDependsOnVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_Grp_Elmnt_Tar_DependsOn_Vl"/>
+        </property>
+        <property name="cncptMapGrpElmntTarDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_Grp_Elmnt_Tar_Dsply"/>
+        </property>
+        <property name="cncptMapGrpElmntTarEquivalence" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_Grp_Elmnt_Tar_Equivalence"/>
+        </property>
+        <property name="cncptMapGrpElmntTarPrdctDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_Grp_Elmnt_Tar_Prdct_Dsply"/>
+        </property>
+        <property name="cncptMapGrpElmntTarPrdctPrpty" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_Grp_Elmnt_Tar_Prdct_Prpty"/>
+        </property>
+        <property name="cncptMapGrpElmntTarPrdctSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_Grp_Elmnt_Tar_Prdct_Sys"/>
+        </property>
+        <property name="cncptMapGrpElmntTarPrdctVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_Grp_Elmnt_Tar_Prdct_Vl"/>
+        </property>
+        <property name="cncptMapGrpSrc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_Grp_Src"/>
+        </property>
+        <property name="cncptMapGrpSrcVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_Grp_SrcVrsn"/>
+        </property>
+        <property name="cncptMapGrpTarVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_Grp_TarVrsn"/>
+        </property>
+        <property name="cncptMapGrpUnmappedCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_Grp_Unmapped_Cd"/>
+        </property>
+        <property name="cncptMapGrpUnmappedDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_Grp_Unmapped_Dsply"/>
+        </property>
+        <property name="cncptMapGrpUnmappedMode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_Grp_Unmapped_Mode"/>
+        </property>
+        <property name="cncptMapGrpUnmappedUrl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_Grp_Unmapped_Url"/>
+        </property>
+        <property name="cncptMapIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_Id_Assigner"/>
+        </property>
+        <property name="cncptMapIdPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_Id_Prd_End"/>
+        </property>
+        <property name="cncptMapIdPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_Id_Prd_Strt"/>
+        </property>
+        <property name="cncptMapIdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_Id_Sys"/>
+        </property>
+        <property name="cncptMapIdTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_Id_Typ_Cdg_Cd"/>
+        </property>
+        <property name="cncptMapIdTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_Id_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="cncptMapIdTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_Id_Typ_Cdg_Sys"/>
+        </property>
+        <property name="cncptMapIdTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_Id_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="cncptMapIdTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_Id_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="cncptMapIdTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_Id_Typ_Txt"/>
+        </property>
+        <property name="cncptMapIdUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_Id_Use"/>
+        </property>
+        <property name="cncptMapIdVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_Id_Vl"/>
+        </property>
+        <property name="cncptMapJrsdctnCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_Jrsdctn_Cdg_Cd"/>
+        </property>
+        <property name="cncptMapJrsdctnCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_Jrsdctn_Cdg_Dsply"/>
+        </property>
+        <property name="cncptMapJrsdctnCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_Jrsdctn_Cdg_Sys"/>
+        </property>
+        <property name="cncptMapJrsdctnCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_Jrsdctn_Cdg_UsrSltd"/>
+        </property>
+        <property name="cncptMapJrsdctnCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_Jrsdctn_Cdg_Vrsn"/>
+        </property>
+        <property name="cncptMapJrsdctnTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_Jrsdctn_Txt"/>
+        </property>
+        <property name="cncptMapNm" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_Nm"/>
+        </property>
+        <property name="cncptMapPblshr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_Pblshr"/>
+        </property>
+        <property name="cncptMapPrpse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_Prpse"/>
+        </property>
+        <property name="cncptMapSrcCanonicalTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_SrcCanonicalTyp"/>
+        </property>
+        <property name="cncptMapSrcUriTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_SrcUriTyp"/>
+        </property>
+        <property name="cncptMapSts" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_Sts"/>
+        </property>
+        <property name="cncptMapTarCanonicalTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_TarCanonicalTyp"/>
+        </property>
+        <property name="cncptMapTarUriTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_TarUriTyp"/>
+        </property>
+        <property name="cncptMapTtl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_Ttl"/>
+        </property>
+        <property name="cncptMapUrl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_Url"/>
+        </property>
+        <property name="cncptMapUseCntxtCdCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_UseCntxt_Cd_Cd"/>
+        </property>
+        <property name="cncptMapUseCntxtCdDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_UseCntxt_Cd_Dsply"/>
+        </property>
+        <property name="cncptMapUseCntxtCdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_UseCntxt_Cd_Sys"/>
+        </property>
+        <property name="cncptMapUseCntxtCdUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_UseCntxt_Cd_UsrSltd"/>
+        </property>
+        <property name="cncptMapUseCntxtCdVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_UseCntxt_Cd_Vrsn"/>
+        </property>
+        <property name="cncptMapUseCntxtVlCdbleCncptCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_UseCntxt_VlCdbleCncpt_Cdg_Cd"/>
+        </property>
+        <property name="cncptMapUseCntxtVlCdbleCncptCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_UseCntxt_VlCdbleCncpt_Cdg_Dsply"/>
+        </property>
+        <property name="cncptMapUseCntxtVlCdbleCncptCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_UseCntxt_VlCdbleCncpt_Cdg_Sys"/>
+        </property>
+        <property name="cncptMapUseCntxtVlCdbleCncptCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_UseCntxt_VlCdbleCncpt_Cdg_UsrSltd"/>
+        </property>
+        <property name="cncptMapUseCntxtVlCdbleCncptCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_UseCntxt_VlCdbleCncpt_Cdg_Vrsn"/>
+        </property>
+        <property name="cncptMapUseCntxtVlCdbleCncptTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_UseCntxt_VlCdbleCncpt_Txt"/>
+        </property>
+        <property name="cncptMapUseCntxtVlQntyCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_UseCntxt_VlQnty_Cd"/>
+        </property>
+        <property name="cncptMapUseCntxtVlQntyCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_UseCntxt_VlQnty_Cmprtr"/>
+        </property>
+        <property name="cncptMapUseCntxtVlQntySys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_UseCntxt_VlQnty_Sys"/>
+        </property>
+        <property name="cncptMapUseCntxtVlQntyUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_UseCntxt_VlQnty_Unt"/>
+        </property>
+        <property name="cncptMapUseCntxtVlQntyVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_UseCntxt_VlQnty_Vl"/>
+        </property>
+        <property name="cncptMapUseCntxtVlRngHiCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_UseCntxt_VlRng_Hi_Cd"/>
+        </property>
+        <property name="cncptMapUseCntxtVlRngHiCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_UseCntxt_VlRng_Hi_Cmprtr"/>
+        </property>
+        <property name="cncptMapUseCntxtVlRngHiSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_UseCntxt_VlRng_Hi_Sys"/>
+        </property>
+        <property name="cncptMapUseCntxtVlRngHiUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_UseCntxt_VlRng_Hi_Unt"/>
+        </property>
+        <property name="cncptMapUseCntxtVlRngHiVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_UseCntxt_VlRng_Hi_Vl"/>
+        </property>
+        <property name="cncptMapUseCntxtVlRngLwCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_UseCntxt_VlRng_Lw_Cd"/>
+        </property>
+        <property name="cncptMapUseCntxtVlRngLwCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_UseCntxt_VlRng_Lw_Cmprtr"/>
+        </property>
+        <property name="cncptMapUseCntxtVlRngLwSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_UseCntxt_VlRng_Lw_Sys"/>
+        </property>
+        <property name="cncptMapUseCntxtVlRngLwUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_UseCntxt_VlRng_Lw_Unt"/>
+        </property>
+        <property name="cncptMapUseCntxtVlRngLwVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_UseCntxt_VlRng_Lw_Vl"/>
+        </property>
+        <property name="cncptMapUseCntxtVlRfrnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_UseCntxt_VlRfrnc"/>
+        </property>
+        <property name="cncptMapVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CncptMap_Vrsn"/>
+        </property>
+    </class>
+</hibernate-mapping>

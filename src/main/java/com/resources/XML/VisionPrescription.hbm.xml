@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Aug 17, 2022, 11:08:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="VisionPrescription" optimistic-lock="none" table="VisionPrescription">
+        <id name="id" type="string">
+            <column length="64" name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="visionPrescriptionCreated" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VisionPrescription_Created"/>
+        </property>
+        <property name="visionPrescriptionDtWritten" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VisionPrescription_DtWritten"/>
+        </property>
+        <property name="visionPrescriptionEnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VisionPrescription_Enc"/>
+        </property>
+        <property name="visionPrescriptionIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VisionPrescription_Id_Assigner"/>
+        </property>
+        <property name="visionPrescriptionIdPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VisionPrescription_Id_Prd_End"/>
+        </property>
+        <property name="visionPrescriptionIdPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VisionPrescription_Id_Prd_Strt"/>
+        </property>
+        <property name="visionPrescriptionIdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VisionPrescription_Id_Sys"/>
+        </property>
+        <property name="visionPrescriptionIdTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VisionPrescription_Id_Typ_Cdg_Cd"/>
+        </property>
+        <property name="visionPrescriptionIdTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VisionPrescription_Id_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="visionPrescriptionIdTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VisionPrescription_Id_Typ_Cdg_Sys"/>
+        </property>
+        <property name="visionPrescriptionIdTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VisionPrescription_Id_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="visionPrescriptionIdTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VisionPrescription_Id_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="visionPrescriptionIdTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VisionPrescription_Id_Typ_Txt"/>
+        </property>
+        <property name="visionPrescriptionIdUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VisionPrescription_Id_Use"/>
+        </property>
+        <property name="visionPrescriptionIdVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VisionPrescription_Id_Vl"/>
+        </property>
+        <property name="visionPrescriptionLensSpcfctnAdd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VisionPrescription_LensSpcfctn_Add"/>
+        </property>
+        <property name="visionPrescriptionLensSpcfctnAxis" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VisionPrescription_LensSpcfctn_Axis"/>
+        </property>
+        <property name="visionPrescriptionLensSpcfctnBackCurve" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VisionPrescription_LensSpcfctn_BackCurve"/>
+        </property>
+        <property name="visionPrescriptionLensSpcfctnBrand" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VisionPrescription_LensSpcfctn_Brand"/>
+        </property>
+        <property name="visionPrescriptionLensSpcfctnColor" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VisionPrescription_LensSpcfctn_Color"/>
+        </property>
+        <property name="visionPrescriptionLensSpcfctnCylinder" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VisionPrescription_LensSpcfctn_Cylinder"/>
+        </property>
+        <property name="visionPrescriptionLensSpcfctnDiameter" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VisionPrescription_LensSpcfctn_Diameter"/>
+        </property>
+        <property name="visionPrescriptionLensSpcfctnDurationCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VisionPrescription_LensSpcfctn_Duration_Cd"/>
+        </property>
+        <property name="visionPrescriptionLensSpcfctnDurationCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VisionPrescription_LensSpcfctn_Duration_Cmprtr"/>
+        </property>
+        <property name="visionPrescriptionLensSpcfctnDurationSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VisionPrescription_LensSpcfctn_Duration_Sys"/>
+        </property>
+        <property name="visionPrescriptionLensSpcfctnDurationUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VisionPrescription_LensSpcfctn_Duration_Unt"/>
+        </property>
+        <property name="visionPrescriptionLensSpcfctnDurationVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VisionPrescription_LensSpcfctn_Duration_Vl"/>
+        </property>
+        <property name="visionPrescriptionLensSpcfctnEye" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VisionPrescription_LensSpcfctn_Eye"/>
+        </property>
+        <property name="visionPrescriptionLensSpcfctnNtAthrRfrnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VisionPrescription_LensSpcfctn_Nt_AthrRfrnc"/>
+        </property>
+        <property name="visionPrescriptionLensSpcfctnNtAthrStrgTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VisionPrescription_LensSpcfctn_Nt_AthrStrgTyp"/>
+        </property>
+        <property name="visionPrescriptionLensSpcfctnNtTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VisionPrescription_LensSpcfctn_Nt_Txt"/>
+        </property>
+        <property name="visionPrescriptionLensSpcfctnNtTime" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VisionPrescription_LensSpcfctn_Nt_Time"/>
+        </property>
+        <property name="visionPrescriptionLensSpcfctnPower" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VisionPrescription_LensSpcfctn_Power"/>
+        </property>
+        <property name="visionPrescriptionLensSpcfctnPrismAmnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VisionPrescription_LensSpcfctn_Prism_Amnt"/>
+        </property>
+        <property name="visionPrescriptionLensSpcfctnPrismBase" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VisionPrescription_LensSpcfctn_Prism_Base"/>
+        </property>
+        <property name="visionPrescriptionLensSpcfctnPrdctCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VisionPrescription_LensSpcfctn_Prdct_Cdg_Cd"/>
+        </property>
+        <property name="visionPrescriptionLensSpcfctnPrdctCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VisionPrescription_LensSpcfctn_Prdct_Cdg_Dsply"/>
+        </property>
+        <property name="visionPrescriptionLensSpcfctnPrdctCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VisionPrescription_LensSpcfctn_Prdct_Cdg_Sys"/>
+        </property>
+        <property name="visionPrescriptionLensSpcfctnPrdctCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VisionPrescription_LensSpcfctn_Prdct_Cdg_UsrSltd"/>
+        </property>
+        <property name="visionPrescriptionLensSpcfctnPrdctCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VisionPrescription_LensSpcfctn_Prdct_Cdg_Vrsn"/>
+        </property>
+        <property name="visionPrescriptionLensSpcfctnPrdctTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VisionPrescription_LensSpcfctn_Prdct_Txt"/>
+        </property>
+        <property name="visionPrescriptionLensSpcfctnSphere" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VisionPrescription_LensSpcfctn_Sphere"/>
+        </property>
+        <property name="visionPrescriptionPnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VisionPrescription_Pnt"/>
+        </property>
+        <property name="visionPrescriptionPrescriber" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VisionPrescription_Prescriber"/>
+        </property>
+        <property name="visionPrescriptionSts" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VisionPrescription_Sts"/>
+        </property>
+    </class>
+</hibernate-mapping>

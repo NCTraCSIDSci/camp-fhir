@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Aug 17, 2022, 11:08:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Condition" optimistic-lock="none" table="Condition">
+        <id name="id" type="string">
+            <column length="64" name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="cndtnAbatementAgeCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_AbatementAge_Cd"/>
+        </property>
+        <property name="cndtnAbatementAgeCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_AbatementAge_Cmprtr"/>
+        </property>
+        <property name="cndtnAbatementAgeSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_AbatementAge_Sys"/>
+        </property>
+        <property name="cndtnAbatementAgeUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_AbatementAge_Unt"/>
+        </property>
+        <property name="cndtnAbatementAgeVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_AbatementAge_Vl"/>
+        </property>
+        <property name="cndtnAbatementDtTimeTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_AbatementDtTimeTyp"/>
+        </property>
+        <property name="cndtnAbatementPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_AbatementPrd_End"/>
+        </property>
+        <property name="cndtnAbatementPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_AbatementPrd_Strt"/>
+        </property>
+        <property name="cndtnAbatementRngHiCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_AbatementRng_Hi_Cd"/>
+        </property>
+        <property name="cndtnAbatementRngHiCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_AbatementRng_Hi_Cmprtr"/>
+        </property>
+        <property name="cndtnAbatementRngHiSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_AbatementRng_Hi_Sys"/>
+        </property>
+        <property name="cndtnAbatementRngHiUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_AbatementRng_Hi_Unt"/>
+        </property>
+        <property name="cndtnAbatementRngHiVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_AbatementRng_Hi_Vl"/>
+        </property>
+        <property name="cndtnAbatementRngLwCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_AbatementRng_Lw_Cd"/>
+        </property>
+        <property name="cndtnAbatementRngLwCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_AbatementRng_Lw_Cmprtr"/>
+        </property>
+        <property name="cndtnAbatementRngLwSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_AbatementRng_Lw_Sys"/>
+        </property>
+        <property name="cndtnAbatementRngLwUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_AbatementRng_Lw_Unt"/>
+        </property>
+        <property name="cndtnAbatementRngLwVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_AbatementRng_Lw_Vl"/>
+        </property>
+        <property name="cndtnAbatementStrgTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_AbatementStrgTyp"/>
+        </property>
+        <property name="cndtnAsserter" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_Asserter"/>
+        </property>
+        <property name="cndtnBodySiteCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_BodySite_Cdg_Cd"/>
+        </property>
+        <property name="cndtnBodySiteCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_BodySite_Cdg_Dsply"/>
+        </property>
+        <property name="cndtnBodySiteCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_BodySite_Cdg_Sys"/>
+        </property>
+        <property name="cndtnBodySiteCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_BodySite_Cdg_UsrSltd"/>
+        </property>
+        <property name="cndtnBodySiteCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_BodySite_Cdg_Vrsn"/>
+        </property>
+        <property name="cndtnBodySiteTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_BodySite_Txt"/>
+        </property>
+        <property name="cndtnCtgryCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_Ctgry_Cdg_Cd"/>
+        </property>
+        <property name="cndtnCtgryCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_Ctgry_Cdg_Dsply"/>
+        </property>
+        <property name="cndtnCtgryCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_Ctgry_Cdg_Sys"/>
+        </property>
+        <property name="cndtnCtgryCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_Ctgry_Cdg_UsrSltd"/>
+        </property>
+        <property name="cndtnCtgryCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_Ctgry_Cdg_Vrsn"/>
+        </property>
+        <property name="cndtnCtgryTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_Ctgry_Txt"/>
+        </property>
+        <property name="cndtnClnclStsCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_ClnclSts_Cdg_Cd"/>
+        </property>
+        <property name="cndtnClnclStsCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_ClnclSts_Cdg_Dsply"/>
+        </property>
+        <property name="cndtnClnclStsCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_ClnclSts_Cdg_Sys"/>
+        </property>
+        <property name="cndtnClnclStsCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_ClnclSts_Cdg_UsrSltd"/>
+        </property>
+        <property name="cndtnClnclStsCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_ClnclSts_Cdg_Vrsn"/>
+        </property>
+        <property name="cndtnClnclStsTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_ClnclSts_Txt"/>
+        </property>
+        <property name="cndtnCdCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_Cd_Cdg_Cd"/>
+        </property>
+        <property name="cndtnCdCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_Cd_Cdg_Dsply"/>
+        </property>
+        <property name="cndtnCdCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_Cd_Cdg_Sys"/>
+        </property>
+        <property name="cndtnCdCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_Cd_Cdg_UsrSltd"/>
+        </property>
+        <property name="cndtnCdCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_Cd_Cdg_Vrsn"/>
+        </property>
+        <property name="cndtnCdTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_Cd_Txt"/>
+        </property>
+        <property name="cndtnEnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_Enc"/>
+        </property>
+        <property name="cndtnEvdnceCdCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_Evdnce_Cd_Cdg_Cd"/>
+        </property>
+        <property name="cndtnEvdnceCdCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_Evdnce_Cd_Cdg_Dsply"/>
+        </property>
+        <property name="cndtnEvdnceCdCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_Evdnce_Cd_Cdg_Sys"/>
+        </property>
+        <property name="cndtnEvdnceCdCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_Evdnce_Cd_Cdg_UsrSltd"/>
+        </property>
+        <property name="cndtnEvdnceCdCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_Evdnce_Cd_Cdg_Vrsn"/>
+        </property>
+        <property name="cndtnEvdnceCdTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_Evdnce_Cd_Txt"/>
+        </property>
+        <property name="cndtnEvdnceDtl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_Evdnce_Dtl"/>
+        </property>
+        <property name="cndtnIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_Id_Assigner"/>
+        </property>
+        <property name="cndtnIdPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_Id_Prd_End"/>
+        </property>
+        <property name="cndtnIdPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_Id_Prd_Strt"/>
+        </property>
+        <property name="cndtnIdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_Id_Sys"/>
+        </property>
+        <property name="cndtnIdTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_Id_Typ_Cdg_Cd"/>
+        </property>
+        <property name="cndtnIdTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_Id_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="cndtnIdTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_Id_Typ_Cdg_Sys"/>
+        </property>
+        <property name="cndtnIdTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_Id_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="cndtnIdTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_Id_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="cndtnIdTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_Id_Typ_Txt"/>
+        </property>
+        <property name="cndtnIdUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_Id_Use"/>
+        </property>
+        <property name="cndtnIdVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_Id_Vl"/>
+        </property>
+        <property name="cndtnNtAthrRfrnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_Nt_AthrRfrnc"/>
+        </property>
+        <property name="cndtnNtAthrStrgTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_Nt_AthrStrgTyp"/>
+        </property>
+        <property name="cndtnNtTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_Nt_Txt"/>
+        </property>
+        <property name="cndtnNtTime" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_Nt_Time"/>
+        </property>
+        <property name="cndtnOnAgeCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_OnAge_Cd"/>
+        </property>
+        <property name="cndtnOnAgeCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_OnAge_Cmprtr"/>
+        </property>
+        <property name="cndtnOnAgeSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_OnAge_Sys"/>
+        </property>
+        <property name="cndtnOnAgeUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_OnAge_Unt"/>
+        </property>
+        <property name="cndtnOnAgeVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_OnAge_Vl"/>
+        </property>
+        <property name="cndtnOnDtTimeTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_OnDtTimeTyp"/>
+        </property>
+        <property name="cndtnOnPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_OnPrd_End"/>
+        </property>
+        <property name="cndtnOnPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_OnPrd_Strt"/>
+        </property>
+        <property name="cndtnOnRngHiCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_OnRng_Hi_Cd"/>
+        </property>
+        <property name="cndtnOnRngHiCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_OnRng_Hi_Cmprtr"/>
+        </property>
+        <property name="cndtnOnRngHiSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_OnRng_Hi_Sys"/>
+        </property>
+        <property name="cndtnOnRngHiUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_OnRng_Hi_Unt"/>
+        </property>
+        <property name="cndtnOnRngHiVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_OnRng_Hi_Vl"/>
+        </property>
+        <property name="cndtnOnRngLwCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_OnRng_Lw_Cd"/>
+        </property>
+        <property name="cndtnOnRngLwCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_OnRng_Lw_Cmprtr"/>
+        </property>
+        <property name="cndtnOnRngLwSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_OnRng_Lw_Sys"/>
+        </property>
+        <property name="cndtnOnRngLwUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_OnRng_Lw_Unt"/>
+        </property>
+        <property name="cndtnOnRngLwVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_OnRng_Lw_Vl"/>
+        </property>
+        <property name="cndtnOnStrgTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_OnStrgTyp"/>
+        </property>
+        <property name="cndtnRecordedDt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_RecordedDt"/>
+        </property>
+        <property name="cndtnRecorder" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_Recorder"/>
+        </property>
+        <property name="cndtnSeverityCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_Severity_Cdg_Cd"/>
+        </property>
+        <property name="cndtnSeverityCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_Severity_Cdg_Dsply"/>
+        </property>
+        <property name="cndtnSeverityCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_Severity_Cdg_Sys"/>
+        </property>
+        <property name="cndtnSeverityCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_Severity_Cdg_UsrSltd"/>
+        </property>
+        <property name="cndtnSeverityCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_Severity_Cdg_Vrsn"/>
+        </property>
+        <property name="cndtnSeverityTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_Severity_Txt"/>
+        </property>
+        <property name="cndtnStageAssmnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_Stage_Assmnt"/>
+        </property>
+        <property name="cndtnStageSummaryCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_Stage_Summary_Cdg_Cd"/>
+        </property>
+        <property name="cndtnStageSummaryCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_Stage_Summary_Cdg_Dsply"/>
+        </property>
+        <property name="cndtnStageSummaryCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_Stage_Summary_Cdg_Sys"/>
+        </property>
+        <property name="cndtnStageSummaryCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_Stage_Summary_Cdg_UsrSltd"/>
+        </property>
+        <property name="cndtnStageSummaryCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_Stage_Summary_Cdg_Vrsn"/>
+        </property>
+        <property name="cndtnStageSummaryTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_Stage_Summary_Txt"/>
+        </property>
+        <property name="cndtnStageTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_Stage_Typ_Cdg_Cd"/>
+        </property>
+        <property name="cndtnStageTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_Stage_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="cndtnStageTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_Stage_Typ_Cdg_Sys"/>
+        </property>
+        <property name="cndtnStageTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_Stage_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="cndtnStageTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_Stage_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="cndtnStageTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_Stage_Typ_Txt"/>
+        </property>
+        <property name="cndtnSbjct" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_Sbjct"/>
+        </property>
+        <property name="cndtnVrfctnStsCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_VrfctnSts_Cdg_Cd"/>
+        </property>
+        <property name="cndtnVrfctnStsCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_VrfctnSts_Cdg_Dsply"/>
+        </property>
+        <property name="cndtnVrfctnStsCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_VrfctnSts_Cdg_Sys"/>
+        </property>
+        <property name="cndtnVrfctnStsCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_VrfctnSts_Cdg_UsrSltd"/>
+        </property>
+        <property name="cndtnVrfctnStsCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_VrfctnSts_Cdg_Vrsn"/>
+        </property>
+        <property name="cndtnVrfctnStsTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Cndtn_VrfctnSts_Txt"/>
+        </property>
+    </class>
+</hibernate-mapping>

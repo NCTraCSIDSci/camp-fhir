@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Aug 17, 2022, 11:08:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="MedicinalProductContraindication" optimistic-lock="none" table="MedicinalProductContraindication">
+        <id name="id" type="string">
+            <column length="64" name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="mdcnlPrdctCntraindctnComorbidityCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_Comorbidity_Cdg_Cd"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnComorbidityCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_Comorbidity_Cdg_Dsply"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnComorbidityCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_Comorbidity_Cdg_Sys"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnComorbidityCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_Comorbidity_Cdg_UsrSltd"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnComorbidityCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_Comorbidity_Cdg_Vrsn"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnComorbidityTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_Comorbidity_Txt"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnDiseaseCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_Disease_Cdg_Cd"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnDiseaseCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_Disease_Cdg_Dsply"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnDiseaseCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_Disease_Cdg_Sys"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnDiseaseCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_Disease_Cdg_UsrSltd"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnDiseaseCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_Disease_Cdg_Vrsn"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnDiseaseTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_Disease_Txt"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnDiseaseStsCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_DiseaseSts_Cdg_Cd"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnDiseaseStsCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_DiseaseSts_Cdg_Dsply"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnDiseaseStsCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_DiseaseSts_Cdg_Sys"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnDiseaseStsCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_DiseaseSts_Cdg_UsrSltd"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnDiseaseStsCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_DiseaseSts_Cdg_Vrsn"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnDiseaseStsTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_DiseaseSts_Txt"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnOtherThrpyMdctnCdbleCncptCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_OtherThrpy_MdctnCdbleCncpt_Cdg_Cd"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnOtherThrpyMdctnCdbleCncptCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_OtherThrpy_MdctnCdbleCncpt_Cdg_Dsply"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnOtherThrpyMdctnCdbleCncptCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_OtherThrpy_MdctnCdbleCncpt_Cdg_Sys"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnOtherThrpyMdctnCdbleCncptCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_OtherThrpy_MdctnCdbleCncpt_Cdg_UsrSltd"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnOtherThrpyMdctnCdbleCncptCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_OtherThrpy_MdctnCdbleCncpt_Cdg_Vrsn"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnOtherThrpyMdctnCdbleCncptTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_OtherThrpy_MdctnCdbleCncpt_Txt"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnOtherThrpyMdctnRfrnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_OtherThrpy_MdctnRfrnc"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnOtherThrpyThrpyRltnshipTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_OtherThrpy_ThrpyRltnshipTyp_Cdg_Cd"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnOtherThrpyThrpyRltnshipTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_OtherThrpy_ThrpyRltnshipTyp_Cdg_Dsply"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnOtherThrpyThrpyRltnshipTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_OtherThrpy_ThrpyRltnshipTyp_Cdg_Sys"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnOtherThrpyThrpyRltnshipTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_OtherThrpy_ThrpyRltnshipTyp_Cdg_UsrSltd"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnOtherThrpyThrpyRltnshipTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_OtherThrpy_ThrpyRltnshipTyp_Cdg_Vrsn"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnOtherThrpyThrpyRltnshipTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_OtherThrpy_ThrpyRltnshipTyp_Txt"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnPoplnAgeCdbleCncptCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_Popln_AgeCdbleCncpt_Cdg_Cd"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnPoplnAgeCdbleCncptCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_Popln_AgeCdbleCncpt_Cdg_Dsply"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnPoplnAgeCdbleCncptCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_Popln_AgeCdbleCncpt_Cdg_Sys"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnPoplnAgeCdbleCncptCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_Popln_AgeCdbleCncpt_Cdg_UsrSltd"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnPoplnAgeCdbleCncptCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_Popln_AgeCdbleCncpt_Cdg_Vrsn"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnPoplnAgeCdbleCncptTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_Popln_AgeCdbleCncpt_Txt"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnPoplnAgeRngHiCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_Popln_AgeRng_Hi_Cd"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnPoplnAgeRngHiCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_Popln_AgeRng_Hi_Cmprtr"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnPoplnAgeRngHiSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_Popln_AgeRng_Hi_Sys"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnPoplnAgeRngHiUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_Popln_AgeRng_Hi_Unt"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnPoplnAgeRngHiVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_Popln_AgeRng_Hi_Vl"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnPoplnAgeRngLwCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_Popln_AgeRng_Lw_Cd"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnPoplnAgeRngLwCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_Popln_AgeRng_Lw_Cmprtr"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnPoplnAgeRngLwSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_Popln_AgeRng_Lw_Sys"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnPoplnAgeRngLwUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_Popln_AgeRng_Lw_Unt"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnPoplnAgeRngLwVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_Popln_AgeRng_Lw_Vl"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnPoplnGenderCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_Popln_Gender_Cdg_Cd"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnPoplnGenderCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_Popln_Gender_Cdg_Dsply"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnPoplnGenderCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_Popln_Gender_Cdg_Sys"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnPoplnGenderCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_Popln_Gender_Cdg_UsrSltd"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnPoplnGenderCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_Popln_Gender_Cdg_Vrsn"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnPoplnGenderTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_Popln_Gender_Txt"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnPoplnPhysiologicalCndtnCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_Popln_PhysiologicalCndtn_Cdg_Cd"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnPoplnPhysiologicalCndtnCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_Popln_PhysiologicalCndtn_Cdg_Dsply"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnPoplnPhysiologicalCndtnCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_Popln_PhysiologicalCndtn_Cdg_Sys"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnPoplnPhysiologicalCndtnCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_Popln_PhysiologicalCndtn_Cdg_UsrSltd"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnPoplnPhysiologicalCndtnCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_Popln_PhysiologicalCndtn_Cdg_Vrsn"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnPoplnPhysiologicalCndtnTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_Popln_PhysiologicalCndtn_Txt"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnPoplnRaceCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_Popln_Race_Cdg_Cd"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnPoplnRaceCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_Popln_Race_Cdg_Dsply"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnPoplnRaceCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_Popln_Race_Cdg_Sys"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnPoplnRaceCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_Popln_Race_Cdg_UsrSltd"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnPoplnRaceCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_Popln_Race_Cdg_Vrsn"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnPoplnRaceTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_Popln_Race_Txt"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnSbjct" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_Sbjct"/>
+        </property>
+        <property name="mdcnlPrdctCntraindctnTherapeuticIndctn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="MdcnlPrdctCntraindctn_TherapeuticIndctn"/>
+        </property>
+    </class>
+</hibernate-mapping>

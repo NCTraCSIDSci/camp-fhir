@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Aug 17, 2022, 11:08:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="RelatedPerson" optimistic-lock="none" table="RelatedPerson">
+        <id name="id" type="string">
+            <column length="64" name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="rltedPrsnActive" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Active"/>
+        </property>
+        <property name="rltedPrsnAddrCity" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Addr_City"/>
+        </property>
+        <property name="rltedPrsnAddrCntry" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Addr_Cntry"/>
+        </property>
+        <property name="rltedPrsnAddrDistrict" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Addr_District"/>
+        </property>
+        <property name="rltedPrsnAddrLine" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Addr_Line"/>
+        </property>
+        <property name="rltedPrsnAddrPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Addr_Prd_End"/>
+        </property>
+        <property name="rltedPrsnAddrPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Addr_Prd_Strt"/>
+        </property>
+        <property name="rltedPrsnAddrPostalCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Addr_PostalCd"/>
+        </property>
+        <property name="rltedPrsnAddrState" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Addr_State"/>
+        </property>
+        <property name="rltedPrsnAddrTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Addr_Txt"/>
+        </property>
+        <property name="rltedPrsnAddrTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Addr_Typ"/>
+        </property>
+        <property name="rltedPrsnAddrUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Addr_Use"/>
+        </property>
+        <property name="rltedPrsnBirthDt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_BirthDt"/>
+        </property>
+        <property name="rltedPrsnCmmnctnLnguageCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Cmmnctn_Lnguage_Cdg_Cd"/>
+        </property>
+        <property name="rltedPrsnCmmnctnLnguageCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Cmmnctn_Lnguage_Cdg_Dsply"/>
+        </property>
+        <property name="rltedPrsnCmmnctnLnguageCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Cmmnctn_Lnguage_Cdg_Sys"/>
+        </property>
+        <property name="rltedPrsnCmmnctnLnguageCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Cmmnctn_Lnguage_Cdg_UsrSltd"/>
+        </property>
+        <property name="rltedPrsnCmmnctnLnguageCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Cmmnctn_Lnguage_Cdg_Vrsn"/>
+        </property>
+        <property name="rltedPrsnCmmnctnLnguageTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Cmmnctn_Lnguage_Txt"/>
+        </property>
+        <property name="rltedPrsnCmmnctnPreferred" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Cmmnctn_Preferred"/>
+        </property>
+        <property name="rltedPrsnGender" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Gender"/>
+        </property>
+        <property name="rltedPrsnIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Id_Assigner"/>
+        </property>
+        <property name="rltedPrsnIdPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Id_Prd_End"/>
+        </property>
+        <property name="rltedPrsnIdPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Id_Prd_Strt"/>
+        </property>
+        <property name="rltedPrsnIdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Id_Sys"/>
+        </property>
+        <property name="rltedPrsnIdTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Id_Typ_Cdg_Cd"/>
+        </property>
+        <property name="rltedPrsnIdTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Id_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="rltedPrsnIdTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Id_Typ_Cdg_Sys"/>
+        </property>
+        <property name="rltedPrsnIdTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Id_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="rltedPrsnIdTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Id_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="rltedPrsnIdTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Id_Typ_Txt"/>
+        </property>
+        <property name="rltedPrsnIdUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Id_Use"/>
+        </property>
+        <property name="rltedPrsnIdVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Id_Vl"/>
+        </property>
+        <property name="rltedPrsnNmFmly" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Nm_Fmly"/>
+        </property>
+        <property name="rltedPrsnNmGiven" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Nm_Given"/>
+        </property>
+        <property name="rltedPrsnNmPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Nm_Prd_End"/>
+        </property>
+        <property name="rltedPrsnNmPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Nm_Prd_Strt"/>
+        </property>
+        <property name="rltedPrsnNmPrefix" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Nm_Prefix"/>
+        </property>
+        <property name="rltedPrsnNmSuffix" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Nm_Suffix"/>
+        </property>
+        <property name="rltedPrsnNmTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Nm_Txt"/>
+        </property>
+        <property name="rltedPrsnNmUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Nm_Use"/>
+        </property>
+        <property name="rltedPrsnPnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Pnt"/>
+        </property>
+        <property name="rltedPrsnPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Prd_End"/>
+        </property>
+        <property name="rltedPrsnPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Prd_Strt"/>
+        </property>
+        <property name="rltedPrsnPhotoCntntTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Photo_CntntTyp"/>
+        </property>
+        <property name="rltedPrsnPhotoCreation" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Photo_Creation"/>
+        </property>
+        <property name="rltedPrsnPhotoData" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Photo_Data"/>
+        </property>
+        <property name="rltedPrsnPhotoHash" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Photo_Hash"/>
+        </property>
+        <property name="rltedPrsnPhotoLnguage" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Photo_Lnguage"/>
+        </property>
+        <property name="rltedPrsnPhotoSz" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Photo_Sz"/>
+        </property>
+        <property name="rltedPrsnPhotoTtl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Photo_Ttl"/>
+        </property>
+        <property name="rltedPrsnPhotoUrl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Photo_Url"/>
+        </property>
+        <property name="rltedPrsnRltnshipCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Rltnship_Cdg_Cd"/>
+        </property>
+        <property name="rltedPrsnRltnshipCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Rltnship_Cdg_Dsply"/>
+        </property>
+        <property name="rltedPrsnRltnshipCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Rltnship_Cdg_Sys"/>
+        </property>
+        <property name="rltedPrsnRltnshipCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Rltnship_Cdg_UsrSltd"/>
+        </property>
+        <property name="rltedPrsnRltnshipCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Rltnship_Cdg_Vrsn"/>
+        </property>
+        <property name="rltedPrsnRltnshipTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Rltnship_Txt"/>
+        </property>
+        <property name="rltedPrsnTlcmPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Tlcm_Prd_End"/>
+        </property>
+        <property name="rltedPrsnTlcmPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Tlcm_Prd_Strt"/>
+        </property>
+        <property name="rltedPrsnTlcmRnk" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Tlcm_Rnk"/>
+        </property>
+        <property name="rltedPrsnTlcmSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Tlcm_Sys"/>
+        </property>
+        <property name="rltedPrsnTlcmUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Tlcm_Use"/>
+        </property>
+        <property name="rltedPrsnTlcmVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RltedPrsn_Tlcm_Vl"/>
+        </property>
+    </class>
+</hibernate-mapping>

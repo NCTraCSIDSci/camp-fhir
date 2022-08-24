@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Aug 17, 2022, 11:08:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Linkage" optimistic-lock="none" table="Linkage">
+        <id name="id" type="string">
+            <column length="64" name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="linkageActive" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Linkage_Active"/>
+        </property>
+        <property name="linkageAthr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Linkage_Athr"/>
+        </property>
+        <property name="linkageItmRsrc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Linkage_Itm_Rsrc"/>
+        </property>
+        <property name="linkageItmTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Linkage_Itm_Typ"/>
+        </property>
+    </class>
+</hibernate-mapping>

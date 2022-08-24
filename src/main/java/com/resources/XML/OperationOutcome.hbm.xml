@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Aug 17, 2022, 11:08:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="OperationOutcome" optimistic-lock="none" table="OperationOutcome">
+        <id name="id" type="string">
+            <column length="64" name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="oprtnOutcomeIssueCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="OprtnOutcome_Issue_Cd"/>
+        </property>
+        <property name="oprtnOutcomeIssueDtlsCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="OprtnOutcome_Issue_Dtls_Cdg_Cd"/>
+        </property>
+        <property name="oprtnOutcomeIssueDtlsCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="OprtnOutcome_Issue_Dtls_Cdg_Dsply"/>
+        </property>
+        <property name="oprtnOutcomeIssueDtlsCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="OprtnOutcome_Issue_Dtls_Cdg_Sys"/>
+        </property>
+        <property name="oprtnOutcomeIssueDtlsCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="OprtnOutcome_Issue_Dtls_Cdg_UsrSltd"/>
+        </property>
+        <property name="oprtnOutcomeIssueDtlsCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="OprtnOutcome_Issue_Dtls_Cdg_Vrsn"/>
+        </property>
+        <property name="oprtnOutcomeIssueDtlsTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="OprtnOutcome_Issue_Dtls_Txt"/>
+        </property>
+        <property name="oprtnOutcomeIssueDiagnostics" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="OprtnOutcome_Issue_Diagnostics"/>
+        </property>
+        <property name="oprtnOutcomeIssueExprsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="OprtnOutcome_Issue_Exprsn"/>
+        </property>
+        <property name="oprtnOutcomeIssueLctn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="OprtnOutcome_Issue_Lctn"/>
+        </property>
+        <property name="oprtnOutcomeIssueSeverity" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="OprtnOutcome_Issue_Severity"/>
+        </property>
+    </class>
+</hibernate-mapping>

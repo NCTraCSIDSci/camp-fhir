@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Aug 17, 2022, 11:08:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Procedure" optimistic-lock="none" table="Procedure">
+        <id name="id" type="string">
+            <column length="64" name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="prcdrAsserter" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_Asserter"/>
+        </property>
+        <property name="prcdrBasedOn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_BasedOn"/>
+        </property>
+        <property name="prcdrBodySiteCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_BodySite_Cdg_Cd"/>
+        </property>
+        <property name="prcdrBodySiteCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_BodySite_Cdg_Dsply"/>
+        </property>
+        <property name="prcdrBodySiteCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_BodySite_Cdg_Sys"/>
+        </property>
+        <property name="prcdrBodySiteCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_BodySite_Cdg_UsrSltd"/>
+        </property>
+        <property name="prcdrBodySiteCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_BodySite_Cdg_Vrsn"/>
+        </property>
+        <property name="prcdrBodySiteTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_BodySite_Txt"/>
+        </property>
+        <property name="prcdrCtgryCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_Ctgry_Cdg_Cd"/>
+        </property>
+        <property name="prcdrCtgryCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_Ctgry_Cdg_Dsply"/>
+        </property>
+        <property name="prcdrCtgryCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_Ctgry_Cdg_Sys"/>
+        </property>
+        <property name="prcdrCtgryCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_Ctgry_Cdg_UsrSltd"/>
+        </property>
+        <property name="prcdrCtgryCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_Ctgry_Cdg_Vrsn"/>
+        </property>
+        <property name="prcdrCtgryTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_Ctgry_Txt"/>
+        </property>
+        <property name="prcdrCdCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_Cd_Cdg_Cd"/>
+        </property>
+        <property name="prcdrCdCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_Cd_Cdg_Dsply"/>
+        </property>
+        <property name="prcdrCdCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_Cd_Cdg_Sys"/>
+        </property>
+        <property name="prcdrCdCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_Cd_Cdg_UsrSltd"/>
+        </property>
+        <property name="prcdrCdCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_Cd_Cdg_Vrsn"/>
+        </property>
+        <property name="prcdrCdTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_Cd_Txt"/>
+        </property>
+        <property name="prcdrComplicationCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_Complication_Cdg_Cd"/>
+        </property>
+        <property name="prcdrComplicationCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_Complication_Cdg_Dsply"/>
+        </property>
+        <property name="prcdrComplicationCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_Complication_Cdg_Sys"/>
+        </property>
+        <property name="prcdrComplicationCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_Complication_Cdg_UsrSltd"/>
+        </property>
+        <property name="prcdrComplicationCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_Complication_Cdg_Vrsn"/>
+        </property>
+        <property name="prcdrComplicationTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_Complication_Txt"/>
+        </property>
+        <property name="prcdrComplicationDtl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_ComplicationDtl"/>
+        </property>
+        <property name="prcdrEnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_Enc"/>
+        </property>
+        <property name="prcdrFocalDvcActnCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_FocalDvc_Actn_Cdg_Cd"/>
+        </property>
+        <property name="prcdrFocalDvcActnCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_FocalDvc_Actn_Cdg_Dsply"/>
+        </property>
+        <property name="prcdrFocalDvcActnCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_FocalDvc_Actn_Cdg_Sys"/>
+        </property>
+        <property name="prcdrFocalDvcActnCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_FocalDvc_Actn_Cdg_UsrSltd"/>
+        </property>
+        <property name="prcdrFocalDvcActnCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_FocalDvc_Actn_Cdg_Vrsn"/>
+        </property>
+        <property name="prcdrFocalDvcActnTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_FocalDvc_Actn_Txt"/>
+        </property>
+        <property name="prcdrFocalDvcManipulated" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_FocalDvc_Manipulated"/>
+        </property>
+        <property name="prcdrFollowUpCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_FollowUp_Cdg_Cd"/>
+        </property>
+        <property name="prcdrFollowUpCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_FollowUp_Cdg_Dsply"/>
+        </property>
+        <property name="prcdrFollowUpCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_FollowUp_Cdg_Sys"/>
+        </property>
+        <property name="prcdrFollowUpCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_FollowUp_Cdg_UsrSltd"/>
+        </property>
+        <property name="prcdrFollowUpCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_FollowUp_Cdg_Vrsn"/>
+        </property>
+        <property name="prcdrFollowUpTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_FollowUp_Txt"/>
+        </property>
+        <property name="prcdrIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_Id_Assigner"/>
+        </property>
+        <property name="prcdrIdPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_Id_Prd_End"/>
+        </property>
+        <property name="prcdrIdPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_Id_Prd_Strt"/>
+        </property>
+        <property name="prcdrIdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_Id_Sys"/>
+        </property>
+        <property name="prcdrIdTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_Id_Typ_Cdg_Cd"/>
+        </property>
+        <property name="prcdrIdTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_Id_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="prcdrIdTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_Id_Typ_Cdg_Sys"/>
+        </property>
+        <property name="prcdrIdTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_Id_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="prcdrIdTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_Id_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="prcdrIdTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_Id_Typ_Txt"/>
+        </property>
+        <property name="prcdrIdUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_Id_Use"/>
+        </property>
+        <property name="prcdrIdVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_Id_Vl"/>
+        </property>
+        <property name="prcdrInstantiatesCanonical" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_InstantiatesCanonical"/>
+        </property>
+        <property name="prcdrInstantiatesUri" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_InstantiatesUri"/>
+        </property>
+        <property name="prcdrLctn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_Lctn"/>
+        </property>
+        <property name="prcdrNtAthrRfrnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_Nt_AthrRfrnc"/>
+        </property>
+        <property name="prcdrNtAthrStrgTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_Nt_AthrStrgTyp"/>
+        </property>
+        <property name="prcdrNtTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_Nt_Txt"/>
+        </property>
+        <property name="prcdrNtTime" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_Nt_Time"/>
+        </property>
+        <property name="prcdrOutcomeCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_Outcome_Cdg_Cd"/>
+        </property>
+        <property name="prcdrOutcomeCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_Outcome_Cdg_Dsply"/>
+        </property>
+        <property name="prcdrOutcomeCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_Outcome_Cdg_Sys"/>
+        </property>
+        <property name="prcdrOutcomeCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_Outcome_Cdg_UsrSltd"/>
+        </property>
+        <property name="prcdrOutcomeCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_Outcome_Cdg_Vrsn"/>
+        </property>
+        <property name="prcdrOutcomeTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_Outcome_Txt"/>
+        </property>
+        <property name="prcdrPartOf" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_PartOf"/>
+        </property>
+        <property name="prcdrPerformedAgeCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_PerformedAge_Cd"/>
+        </property>
+        <property name="prcdrPerformedAgeCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_PerformedAge_Cmprtr"/>
+        </property>
+        <property name="prcdrPerformedAgeSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_PerformedAge_Sys"/>
+        </property>
+        <property name="prcdrPerformedAgeUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_PerformedAge_Unt"/>
+        </property>
+        <property name="prcdrPerformedAgeVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_PerformedAge_Vl"/>
+        </property>
+        <property name="prcdrPerformedDtTimeTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_PerformedDtTimeTyp"/>
+        </property>
+        <property name="prcdrPerformedPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_PerformedPrd_End"/>
+        </property>
+        <property name="prcdrPerformedPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_PerformedPrd_Strt"/>
+        </property>
+        <property name="prcdrPerformedRngHiCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_PerformedRng_Hi_Cd"/>
+        </property>
+        <property name="prcdrPerformedRngHiCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_PerformedRng_Hi_Cmprtr"/>
+        </property>
+        <property name="prcdrPerformedRngHiSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_PerformedRng_Hi_Sys"/>
+        </property>
+        <property name="prcdrPerformedRngHiUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_PerformedRng_Hi_Unt"/>
+        </property>
+        <property name="prcdrPerformedRngHiVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_PerformedRng_Hi_Vl"/>
+        </property>
+        <property name="prcdrPerformedRngLwCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_PerformedRng_Lw_Cd"/>
+        </property>
+        <property name="prcdrPerformedRngLwCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_PerformedRng_Lw_Cmprtr"/>
+        </property>
+        <property name="prcdrPerformedRngLwSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_PerformedRng_Lw_Sys"/>
+        </property>
+        <property name="prcdrPerformedRngLwUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_PerformedRng_Lw_Unt"/>
+        </property>
+        <property name="prcdrPerformedRngLwVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_PerformedRng_Lw_Vl"/>
+        </property>
+        <property name="prcdrPerformedStrgTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_PerformedStrgTyp"/>
+        </property>
+        <property name="prcdrPrfrmrActor" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_Prfrmr_Actor"/>
+        </property>
+        <property name="prcdrPrfrmrFunctionCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_Prfrmr_Function_Cdg_Cd"/>
+        </property>
+        <property name="prcdrPrfrmrFunctionCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_Prfrmr_Function_Cdg_Dsply"/>
+        </property>
+        <property name="prcdrPrfrmrFunctionCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_Prfrmr_Function_Cdg_Sys"/>
+        </property>
+        <property name="prcdrPrfrmrFunctionCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_Prfrmr_Function_Cdg_UsrSltd"/>
+        </property>
+        <property name="prcdrPrfrmrFunctionCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_Prfrmr_Function_Cdg_Vrsn"/>
+        </property>
+        <property name="prcdrPrfrmrFunctionTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_Prfrmr_Function_Txt"/>
+        </property>
+        <property name="prcdrPrfrmrOnBehalfOf" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_Prfrmr_OnBehalfOf"/>
+        </property>
+        <property name="prcdrRsnCdCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_RsnCd_Cdg_Cd"/>
+        </property>
+        <property name="prcdrRsnCdCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_RsnCd_Cdg_Dsply"/>
+        </property>
+        <property name="prcdrRsnCdCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_RsnCd_Cdg_Sys"/>
+        </property>
+        <property name="prcdrRsnCdCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_RsnCd_Cdg_UsrSltd"/>
+        </property>
+        <property name="prcdrRsnCdCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_RsnCd_Cdg_Vrsn"/>
+        </property>
+        <property name="prcdrRsnCdTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_RsnCd_Txt"/>
+        </property>
+        <property name="prcdrRsnRfrnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_RsnRfrnc"/>
+        </property>
+        <property name="prcdrRecorder" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_Recorder"/>
+        </property>
+        <property name="prcdrRpt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_Rpt"/>
+        </property>
+        <property name="prcdrSts" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_Sts"/>
+        </property>
+        <property name="prcdrStsRsnCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_StsRsn_Cdg_Cd"/>
+        </property>
+        <property name="prcdrStsRsnCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_StsRsn_Cdg_Dsply"/>
+        </property>
+        <property name="prcdrStsRsnCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_StsRsn_Cdg_Sys"/>
+        </property>
+        <property name="prcdrStsRsnCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_StsRsn_Cdg_UsrSltd"/>
+        </property>
+        <property name="prcdrStsRsnCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_StsRsn_Cdg_Vrsn"/>
+        </property>
+        <property name="prcdrStsRsnTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_StsRsn_Txt"/>
+        </property>
+        <property name="prcdrSbjct" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_Sbjct"/>
+        </property>
+        <property name="prcdrUsedCdCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_UsedCd_Cdg_Cd"/>
+        </property>
+        <property name="prcdrUsedCdCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_UsedCd_Cdg_Dsply"/>
+        </property>
+        <property name="prcdrUsedCdCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_UsedCd_Cdg_Sys"/>
+        </property>
+        <property name="prcdrUsedCdCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_UsedCd_Cdg_UsrSltd"/>
+        </property>
+        <property name="prcdrUsedCdCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_UsedCd_Cdg_Vrsn"/>
+        </property>
+        <property name="prcdrUsedCdTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_UsedCd_Txt"/>
+        </property>
+        <property name="prcdrUsedRfrnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Prcdr_UsedRfrnc"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Aug 17, 2022, 11:08:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Group" optimistic-lock="none" table="Group">
+        <id name="id" type="string">
+            <column length="64" name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="grpActive" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_Active"/>
+        </property>
+        <property name="grpActual" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_Actual"/>
+        </property>
+        <property name="grpCrctrstcCdCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_Crctrstc_Cd_Cdg_Cd"/>
+        </property>
+        <property name="grpCrctrstcCdCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_Crctrstc_Cd_Cdg_Dsply"/>
+        </property>
+        <property name="grpCrctrstcCdCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_Crctrstc_Cd_Cdg_Sys"/>
+        </property>
+        <property name="grpCrctrstcCdCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_Crctrstc_Cd_Cdg_UsrSltd"/>
+        </property>
+        <property name="grpCrctrstcCdCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_Crctrstc_Cd_Cdg_Vrsn"/>
+        </property>
+        <property name="grpCrctrstcCdTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_Crctrstc_Cd_Txt"/>
+        </property>
+        <property name="grpCrctrstcExclude" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_Crctrstc_Exclude"/>
+        </property>
+        <property name="grpCrctrstcPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_Crctrstc_Prd_End"/>
+        </property>
+        <property name="grpCrctrstcPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_Crctrstc_Prd_Strt"/>
+        </property>
+        <property name="grpCrctrstcVlBooleanTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_Crctrstc_VlBooleanTyp"/>
+        </property>
+        <property name="grpCrctrstcVlCdbleCncptCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_Crctrstc_VlCdbleCncpt_Cdg_Cd"/>
+        </property>
+        <property name="grpCrctrstcVlCdbleCncptCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_Crctrstc_VlCdbleCncpt_Cdg_Dsply"/>
+        </property>
+        <property name="grpCrctrstcVlCdbleCncptCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_Crctrstc_VlCdbleCncpt_Cdg_Sys"/>
+        </property>
+        <property name="grpCrctrstcVlCdbleCncptCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_Crctrstc_VlCdbleCncpt_Cdg_UsrSltd"/>
+        </property>
+        <property name="grpCrctrstcVlCdbleCncptCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_Crctrstc_VlCdbleCncpt_Cdg_Vrsn"/>
+        </property>
+        <property name="grpCrctrstcVlCdbleCncptTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_Crctrstc_VlCdbleCncpt_Txt"/>
+        </property>
+        <property name="grpCrctrstcVlQntyCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_Crctrstc_VlQnty_Cd"/>
+        </property>
+        <property name="grpCrctrstcVlQntyCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_Crctrstc_VlQnty_Cmprtr"/>
+        </property>
+        <property name="grpCrctrstcVlQntySys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_Crctrstc_VlQnty_Sys"/>
+        </property>
+        <property name="grpCrctrstcVlQntyUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_Crctrstc_VlQnty_Unt"/>
+        </property>
+        <property name="grpCrctrstcVlQntyVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_Crctrstc_VlQnty_Vl"/>
+        </property>
+        <property name="grpCrctrstcVlRngHiCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_Crctrstc_VlRng_Hi_Cd"/>
+        </property>
+        <property name="grpCrctrstcVlRngHiCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_Crctrstc_VlRng_Hi_Cmprtr"/>
+        </property>
+        <property name="grpCrctrstcVlRngHiSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_Crctrstc_VlRng_Hi_Sys"/>
+        </property>
+        <property name="grpCrctrstcVlRngHiUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_Crctrstc_VlRng_Hi_Unt"/>
+        </property>
+        <property name="grpCrctrstcVlRngHiVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_Crctrstc_VlRng_Hi_Vl"/>
+        </property>
+        <property name="grpCrctrstcVlRngLwCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_Crctrstc_VlRng_Lw_Cd"/>
+        </property>
+        <property name="grpCrctrstcVlRngLwCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_Crctrstc_VlRng_Lw_Cmprtr"/>
+        </property>
+        <property name="grpCrctrstcVlRngLwSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_Crctrstc_VlRng_Lw_Sys"/>
+        </property>
+        <property name="grpCrctrstcVlRngLwUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_Crctrstc_VlRng_Lw_Unt"/>
+        </property>
+        <property name="grpCrctrstcVlRngLwVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_Crctrstc_VlRng_Lw_Vl"/>
+        </property>
+        <property name="grpCrctrstcVlRfrnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_Crctrstc_VlRfrnc"/>
+        </property>
+        <property name="grpCdCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_Cd_Cdg_Cd"/>
+        </property>
+        <property name="grpCdCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_Cd_Cdg_Dsply"/>
+        </property>
+        <property name="grpCdCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_Cd_Cdg_Sys"/>
+        </property>
+        <property name="grpCdCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_Cd_Cdg_UsrSltd"/>
+        </property>
+        <property name="grpCdCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_Cd_Cdg_Vrsn"/>
+        </property>
+        <property name="grpCdTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_Cd_Txt"/>
+        </property>
+        <property name="grpIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_Id_Assigner"/>
+        </property>
+        <property name="grpIdPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_Id_Prd_End"/>
+        </property>
+        <property name="grpIdPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_Id_Prd_Strt"/>
+        </property>
+        <property name="grpIdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_Id_Sys"/>
+        </property>
+        <property name="grpIdTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_Id_Typ_Cdg_Cd"/>
+        </property>
+        <property name="grpIdTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_Id_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="grpIdTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_Id_Typ_Cdg_Sys"/>
+        </property>
+        <property name="grpIdTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_Id_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="grpIdTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_Id_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="grpIdTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_Id_Typ_Txt"/>
+        </property>
+        <property name="grpIdUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_Id_Use"/>
+        </property>
+        <property name="grpIdVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_Id_Vl"/>
+        </property>
+        <property name="grpManagingEntity" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_ManagingEntity"/>
+        </property>
+        <property name="grpMmbrEntity" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_Mmbr_Entity"/>
+        </property>
+        <property name="grpMmbrInactive" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_Mmbr_Inactive"/>
+        </property>
+        <property name="grpMmbrPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_Mmbr_Prd_End"/>
+        </property>
+        <property name="grpMmbrPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_Mmbr_Prd_Strt"/>
+        </property>
+        <property name="grpNm" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_Nm"/>
+        </property>
+        <property name="grpQnty" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_Qnty"/>
+        </property>
+        <property name="grpTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Grp_Typ"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Aug 17, 2022, 11:08:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="SubstanceNucleicAcid" optimistic-lock="none" table="SubstanceNucleicAcid">
+        <id name="id" type="string">
+            <column length="64" name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="sbstncNclicAcidAreaOfHybridisation" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_AreaOfHybridisation"/>
+        </property>
+        <property name="sbstncNclicAcidNmbrOfSubunts" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_NmbrOfSubunts"/>
+        </property>
+        <property name="sbstncNclicAcidOligoNucleotideTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_OligoNucleotideTyp_Cdg_Cd"/>
+        </property>
+        <property name="sbstncNclicAcidOligoNucleotideTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_OligoNucleotideTyp_Cdg_Dsply"/>
+        </property>
+        <property name="sbstncNclicAcidOligoNucleotideTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_OligoNucleotideTyp_Cdg_Sys"/>
+        </property>
+        <property name="sbstncNclicAcidOligoNucleotideTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_OligoNucleotideTyp_Cdg_UsrSltd"/>
+        </property>
+        <property name="sbstncNclicAcidOligoNucleotideTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_OligoNucleotideTyp_Cdg_Vrsn"/>
+        </property>
+        <property name="sbstncNclicAcidOligoNucleotideTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_OligoNucleotideTyp_Txt"/>
+        </property>
+        <property name="sbstncNclicAcidSqncTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_SqncTyp_Cdg_Cd"/>
+        </property>
+        <property name="sbstncNclicAcidSqncTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_SqncTyp_Cdg_Dsply"/>
+        </property>
+        <property name="sbstncNclicAcidSqncTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_SqncTyp_Cdg_Sys"/>
+        </property>
+        <property name="sbstncNclicAcidSqncTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_SqncTyp_Cdg_UsrSltd"/>
+        </property>
+        <property name="sbstncNclicAcidSqncTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_SqncTyp_Cdg_Vrsn"/>
+        </property>
+        <property name="sbstncNclicAcidSqncTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_SqncTyp_Txt"/>
+        </property>
+        <property name="sbstncNclicAcidSubuntFivePrimeCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_Subunt_FivePrime_Cdg_Cd"/>
+        </property>
+        <property name="sbstncNclicAcidSubuntFivePrimeCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_Subunt_FivePrime_Cdg_Dsply"/>
+        </property>
+        <property name="sbstncNclicAcidSubuntFivePrimeCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_Subunt_FivePrime_Cdg_Sys"/>
+        </property>
+        <property name="sbstncNclicAcidSubuntFivePrimeCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_Subunt_FivePrime_Cdg_UsrSltd"/>
+        </property>
+        <property name="sbstncNclicAcidSubuntFivePrimeCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_Subunt_FivePrime_Cdg_Vrsn"/>
+        </property>
+        <property name="sbstncNclicAcidSubuntFivePrimeTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_Subunt_FivePrime_Txt"/>
+        </property>
+        <property name="sbstncNclicAcidSubuntLength" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_Subunt_Length"/>
+        </property>
+        <property name="sbstncNclicAcidSubuntLinkageConnectivity" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_Subunt_Linkage_Connectivity"/>
+        </property>
+        <property name="sbstncNclicAcidSubuntLinkageIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_Subunt_Linkage_Id_Assigner"/>
+        </property>
+        <property name="sbstncNclicAcidSubuntLinkageIdPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_Subunt_Linkage_Id_Prd_End"/>
+        </property>
+        <property name="sbstncNclicAcidSubuntLinkageIdPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_Subunt_Linkage_Id_Prd_Strt"/>
+        </property>
+        <property name="sbstncNclicAcidSubuntLinkageIdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_Subunt_Linkage_Id_Sys"/>
+        </property>
+        <property name="sbstncNclicAcidSubuntLinkageIdTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_Subunt_Linkage_Id_Typ_Cdg_Cd"/>
+        </property>
+        <property name="sbstncNclicAcidSubuntLinkageIdTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_Subunt_Linkage_Id_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="sbstncNclicAcidSubuntLinkageIdTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_Subunt_Linkage_Id_Typ_Cdg_Sys"/>
+        </property>
+        <property name="sbstncNclicAcidSubuntLinkageIdTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_Subunt_Linkage_Id_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="sbstncNclicAcidSubuntLinkageIdTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_Subunt_Linkage_Id_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="sbstncNclicAcidSubuntLinkageIdTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_Subunt_Linkage_Id_Typ_Txt"/>
+        </property>
+        <property name="sbstncNclicAcidSubuntLinkageIdUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_Subunt_Linkage_Id_Use"/>
+        </property>
+        <property name="sbstncNclicAcidSubuntLinkageIdVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_Subunt_Linkage_Id_Vl"/>
+        </property>
+        <property name="sbstncNclicAcidSubuntLinkageNm" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_Subunt_Linkage_Nm"/>
+        </property>
+        <property name="sbstncNclicAcidSubuntLinkageResidueSite" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_Subunt_Linkage_ResidueSite"/>
+        </property>
+        <property name="sbstncNclicAcidSubuntSqnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_Subunt_Sqnc"/>
+        </property>
+        <property name="sbstncNclicAcidSubuntSqncAttchmntCntntTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_Subunt_SqncAttchmnt_CntntTyp"/>
+        </property>
+        <property name="sbstncNclicAcidSubuntSqncAttchmntCreation" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_Subunt_SqncAttchmnt_Creation"/>
+        </property>
+        <property name="sbstncNclicAcidSubuntSqncAttchmntData" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_Subunt_SqncAttchmnt_Data"/>
+        </property>
+        <property name="sbstncNclicAcidSubuntSqncAttchmntHash" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_Subunt_SqncAttchmnt_Hash"/>
+        </property>
+        <property name="sbstncNclicAcidSubuntSqncAttchmntLnguage" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_Subunt_SqncAttchmnt_Lnguage"/>
+        </property>
+        <property name="sbstncNclicAcidSubuntSqncAttchmntSz" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_Subunt_SqncAttchmnt_Sz"/>
+        </property>
+        <property name="sbstncNclicAcidSubuntSqncAttchmntTtl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_Subunt_SqncAttchmnt_Ttl"/>
+        </property>
+        <property name="sbstncNclicAcidSubuntSqncAttchmntUrl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_Subunt_SqncAttchmnt_Url"/>
+        </property>
+        <property name="sbstncNclicAcidSubuntSubunt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_Subunt_Subunt"/>
+        </property>
+        <property name="sbstncNclicAcidSubuntSugarIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_Subunt_Sugar_Id_Assigner"/>
+        </property>
+        <property name="sbstncNclicAcidSubuntSugarIdPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_Subunt_Sugar_Id_Prd_End"/>
+        </property>
+        <property name="sbstncNclicAcidSubuntSugarIdPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_Subunt_Sugar_Id_Prd_Strt"/>
+        </property>
+        <property name="sbstncNclicAcidSubuntSugarIdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_Subunt_Sugar_Id_Sys"/>
+        </property>
+        <property name="sbstncNclicAcidSubuntSugarIdTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_Subunt_Sugar_Id_Typ_Cdg_Cd"/>
+        </property>
+        <property name="sbstncNclicAcidSubuntSugarIdTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_Subunt_Sugar_Id_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="sbstncNclicAcidSubuntSugarIdTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_Subunt_Sugar_Id_Typ_Cdg_Sys"/>
+        </property>
+        <property name="sbstncNclicAcidSubuntSugarIdTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_Subunt_Sugar_Id_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="sbstncNclicAcidSubuntSugarIdTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_Subunt_Sugar_Id_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="sbstncNclicAcidSubuntSugarIdTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_Subunt_Sugar_Id_Typ_Txt"/>
+        </property>
+        <property name="sbstncNclicAcidSubuntSugarIdUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_Subunt_Sugar_Id_Use"/>
+        </property>
+        <property name="sbstncNclicAcidSubuntSugarIdVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_Subunt_Sugar_Id_Vl"/>
+        </property>
+        <property name="sbstncNclicAcidSubuntSugarNm" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_Subunt_Sugar_Nm"/>
+        </property>
+        <property name="sbstncNclicAcidSubuntSugarResidueSite" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_Subunt_Sugar_ResidueSite"/>
+        </property>
+        <property name="sbstncNclicAcidSubuntThreePrimeCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_Subunt_ThreePrime_Cdg_Cd"/>
+        </property>
+        <property name="sbstncNclicAcidSubuntThreePrimeCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_Subunt_ThreePrime_Cdg_Dsply"/>
+        </property>
+        <property name="sbstncNclicAcidSubuntThreePrimeCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_Subunt_ThreePrime_Cdg_Sys"/>
+        </property>
+        <property name="sbstncNclicAcidSubuntThreePrimeCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_Subunt_ThreePrime_Cdg_UsrSltd"/>
+        </property>
+        <property name="sbstncNclicAcidSubuntThreePrimeCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_Subunt_ThreePrime_Cdg_Vrsn"/>
+        </property>
+        <property name="sbstncNclicAcidSubuntThreePrimeTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="SbstncNclicAcid_Subunt_ThreePrime_Txt"/>
+        </property>
+    </class>
+</hibernate-mapping>

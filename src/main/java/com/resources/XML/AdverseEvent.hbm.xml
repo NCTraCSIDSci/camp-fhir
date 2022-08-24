@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Aug 17, 2022, 11:08:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="AdverseEvent" optimistic-lock="none" table="AdverseEvent">
+        <id name="id" type="string">
+            <column length="64" name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="advsEvntActuality" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_Actuality"/>
+        </property>
+        <property name="advsEvntCtgryCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_Ctgry_Cdg_Cd"/>
+        </property>
+        <property name="advsEvntCtgryCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_Ctgry_Cdg_Dsply"/>
+        </property>
+        <property name="advsEvntCtgryCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_Ctgry_Cdg_Sys"/>
+        </property>
+        <property name="advsEvntCtgryCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_Ctgry_Cdg_UsrSltd"/>
+        </property>
+        <property name="advsEvntCtgryCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_Ctgry_Cdg_Vrsn"/>
+        </property>
+        <property name="advsEvntCtgryTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_Ctgry_Txt"/>
+        </property>
+        <property name="advsEvntContributor" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_Contributor"/>
+        </property>
+        <property name="advsEvntDt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_Dt"/>
+        </property>
+        <property name="advsEvntDetected" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_Detected"/>
+        </property>
+        <property name="advsEvntEnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_Enc"/>
+        </property>
+        <property name="advsEvntEvntCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_Evnt_Cdg_Cd"/>
+        </property>
+        <property name="advsEvntEvntCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_Evnt_Cdg_Dsply"/>
+        </property>
+        <property name="advsEvntEvntCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_Evnt_Cdg_Sys"/>
+        </property>
+        <property name="advsEvntEvntCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_Evnt_Cdg_UsrSltd"/>
+        </property>
+        <property name="advsEvntEvntCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_Evnt_Cdg_Vrsn"/>
+        </property>
+        <property name="advsEvntEvntTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_Evnt_Txt"/>
+        </property>
+        <property name="advsEvntIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_Id_Assigner"/>
+        </property>
+        <property name="advsEvntIdPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_Id_Prd_End"/>
+        </property>
+        <property name="advsEvntIdPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_Id_Prd_Strt"/>
+        </property>
+        <property name="advsEvntIdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_Id_Sys"/>
+        </property>
+        <property name="advsEvntIdTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_Id_Typ_Cdg_Cd"/>
+        </property>
+        <property name="advsEvntIdTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_Id_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="advsEvntIdTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_Id_Typ_Cdg_Sys"/>
+        </property>
+        <property name="advsEvntIdTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_Id_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="advsEvntIdTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_Id_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="advsEvntIdTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_Id_Typ_Txt"/>
+        </property>
+        <property name="advsEvntIdUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_Id_Use"/>
+        </property>
+        <property name="advsEvntIdVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_Id_Vl"/>
+        </property>
+        <property name="advsEvntLctn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_Lctn"/>
+        </property>
+        <property name="advsEvntOutcomeCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_Outcome_Cdg_Cd"/>
+        </property>
+        <property name="advsEvntOutcomeCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_Outcome_Cdg_Dsply"/>
+        </property>
+        <property name="advsEvntOutcomeCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_Outcome_Cdg_Sys"/>
+        </property>
+        <property name="advsEvntOutcomeCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_Outcome_Cdg_UsrSltd"/>
+        </property>
+        <property name="advsEvntOutcomeCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_Outcome_Cdg_Vrsn"/>
+        </property>
+        <property name="advsEvntOutcomeTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_Outcome_Txt"/>
+        </property>
+        <property name="advsEvntRecordedDt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_RecordedDt"/>
+        </property>
+        <property name="advsEvntRecorder" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_Recorder"/>
+        </property>
+        <property name="advsEvntRfrncDoc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_RfrncDoc"/>
+        </property>
+        <property name="advsEvntRsltingCndtn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_RsltingCndtn"/>
+        </property>
+        <property name="advsEvntSeriousnessCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_Seriousness_Cdg_Cd"/>
+        </property>
+        <property name="advsEvntSeriousnessCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_Seriousness_Cdg_Dsply"/>
+        </property>
+        <property name="advsEvntSeriousnessCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_Seriousness_Cdg_Sys"/>
+        </property>
+        <property name="advsEvntSeriousnessCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_Seriousness_Cdg_UsrSltd"/>
+        </property>
+        <property name="advsEvntSeriousnessCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_Seriousness_Cdg_Vrsn"/>
+        </property>
+        <property name="advsEvntSeriousnessTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_Seriousness_Txt"/>
+        </property>
+        <property name="advsEvntSeverityCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_Severity_Cdg_Cd"/>
+        </property>
+        <property name="advsEvntSeverityCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_Severity_Cdg_Dsply"/>
+        </property>
+        <property name="advsEvntSeverityCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_Severity_Cdg_Sys"/>
+        </property>
+        <property name="advsEvntSeverityCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_Severity_Cdg_UsrSltd"/>
+        </property>
+        <property name="advsEvntSeverityCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_Severity_Cdg_Vrsn"/>
+        </property>
+        <property name="advsEvntSeverityTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_Severity_Txt"/>
+        </property>
+        <property name="advsEvntStdy" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_Stdy"/>
+        </property>
+        <property name="advsEvntSbjct" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_Sbjct"/>
+        </property>
+        <property name="advsEvntSbjctMedicalHis" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_SbjctMedicalHis"/>
+        </property>
+        <property name="advsEvntSuspectEntityCausalityAssmntCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_SuspectEntity_Causality_Assmnt_Cdg_Cd"/>
+        </property>
+        <property name="advsEvntSuspectEntityCausalityAssmntCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_SuspectEntity_Causality_Assmnt_Cdg_Dsply"/>
+        </property>
+        <property name="advsEvntSuspectEntityCausalityAssmntCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_SuspectEntity_Causality_Assmnt_Cdg_Sys"/>
+        </property>
+        <property name="advsEvntSuspectEntityCausalityAssmntCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_SuspectEntity_Causality_Assmnt_Cdg_UsrSltd"/>
+        </property>
+        <property name="advsEvntSuspectEntityCausalityAssmntCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_SuspectEntity_Causality_Assmnt_Cdg_Vrsn"/>
+        </property>
+        <property name="advsEvntSuspectEntityCausalityAssmntTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_SuspectEntity_Causality_Assmnt_Txt"/>
+        </property>
+        <property name="advsEvntSuspectEntityCausalityAthr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_SuspectEntity_Causality_Athr"/>
+        </property>
+        <property name="advsEvntSuspectEntityCausalityMthdCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_SuspectEntity_Causality_Mthd_Cdg_Cd"/>
+        </property>
+        <property name="advsEvntSuspectEntityCausalityMthdCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_SuspectEntity_Causality_Mthd_Cdg_Dsply"/>
+        </property>
+        <property name="advsEvntSuspectEntityCausalityMthdCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_SuspectEntity_Causality_Mthd_Cdg_Sys"/>
+        </property>
+        <property name="advsEvntSuspectEntityCausalityMthdCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_SuspectEntity_Causality_Mthd_Cdg_UsrSltd"/>
+        </property>
+        <property name="advsEvntSuspectEntityCausalityMthdCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_SuspectEntity_Causality_Mthd_Cdg_Vrsn"/>
+        </property>
+        <property name="advsEvntSuspectEntityCausalityMthdTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_SuspectEntity_Causality_Mthd_Txt"/>
+        </property>
+        <property name="advsEvntSuspectEntityCausalityPrdctRltedness" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_SuspectEntity_Causality_PrdctRltedness"/>
+        </property>
+        <property name="advsEvntSuspectEntityInstance" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AdvsEvnt_SuspectEntity_Instance"/>
+        </property>
+    </class>
+</hibernate-mapping>

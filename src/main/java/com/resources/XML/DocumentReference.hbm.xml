@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Aug 17, 2022, 11:08:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="DocumentReference" optimistic-lock="none" table="DocumentReference">
+        <id name="id" type="string">
+            <column length="64" name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="docRfrncAuthenticator" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Authenticator"/>
+        </property>
+        <property name="docRfrncAthr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Athr"/>
+        </property>
+        <property name="docRfrncCtgryCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Ctgry_Cdg_Cd"/>
+        </property>
+        <property name="docRfrncCtgryCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Ctgry_Cdg_Dsply"/>
+        </property>
+        <property name="docRfrncCtgryCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Ctgry_Cdg_Sys"/>
+        </property>
+        <property name="docRfrncCtgryCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Ctgry_Cdg_UsrSltd"/>
+        </property>
+        <property name="docRfrncCtgryCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Ctgry_Cdg_Vrsn"/>
+        </property>
+        <property name="docRfrncCtgryTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Ctgry_Txt"/>
+        </property>
+        <property name="docRfrncCntntAttchmntCntntTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Cntnt_Attchmnt_CntntTyp"/>
+        </property>
+        <property name="docRfrncCntntAttchmntCreation" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Cntnt_Attchmnt_Creation"/>
+        </property>
+        <property name="docRfrncCntntAttchmntData" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Cntnt_Attchmnt_Data"/>
+        </property>
+        <property name="docRfrncCntntAttchmntHash" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Cntnt_Attchmnt_Hash"/>
+        </property>
+        <property name="docRfrncCntntAttchmntLnguage" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Cntnt_Attchmnt_Lnguage"/>
+        </property>
+        <property name="docRfrncCntntAttchmntSz" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Cntnt_Attchmnt_Sz"/>
+        </property>
+        <property name="docRfrncCntntAttchmntTtl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Cntnt_Attchmnt_Ttl"/>
+        </property>
+        <property name="docRfrncCntntAttchmntUrl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Cntnt_Attchmnt_Url"/>
+        </property>
+        <property name="docRfrncCntntFrmatCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Cntnt_Frmat_Cd"/>
+        </property>
+        <property name="docRfrncCntntFrmatDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Cntnt_Frmat_Dsply"/>
+        </property>
+        <property name="docRfrncCntntFrmatSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Cntnt_Frmat_Sys"/>
+        </property>
+        <property name="docRfrncCntntFrmatUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Cntnt_Frmat_UsrSltd"/>
+        </property>
+        <property name="docRfrncCntntFrmatVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Cntnt_Frmat_Vrsn"/>
+        </property>
+        <property name="docRfrncCntxtEnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Cntxt_Enc"/>
+        </property>
+        <property name="docRfrncCntxtEvntCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Cntxt_Evnt_Cdg_Cd"/>
+        </property>
+        <property name="docRfrncCntxtEvntCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Cntxt_Evnt_Cdg_Dsply"/>
+        </property>
+        <property name="docRfrncCntxtEvntCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Cntxt_Evnt_Cdg_Sys"/>
+        </property>
+        <property name="docRfrncCntxtEvntCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Cntxt_Evnt_Cdg_UsrSltd"/>
+        </property>
+        <property name="docRfrncCntxtEvntCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Cntxt_Evnt_Cdg_Vrsn"/>
+        </property>
+        <property name="docRfrncCntxtEvntTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Cntxt_Evnt_Txt"/>
+        </property>
+        <property name="docRfrncCntxtFacilityTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Cntxt_FacilityTyp_Cdg_Cd"/>
+        </property>
+        <property name="docRfrncCntxtFacilityTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Cntxt_FacilityTyp_Cdg_Dsply"/>
+        </property>
+        <property name="docRfrncCntxtFacilityTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Cntxt_FacilityTyp_Cdg_Sys"/>
+        </property>
+        <property name="docRfrncCntxtFacilityTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Cntxt_FacilityTyp_Cdg_UsrSltd"/>
+        </property>
+        <property name="docRfrncCntxtFacilityTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Cntxt_FacilityTyp_Cdg_Vrsn"/>
+        </property>
+        <property name="docRfrncCntxtFacilityTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Cntxt_FacilityTyp_Txt"/>
+        </property>
+        <property name="docRfrncCntxtPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Cntxt_Prd_End"/>
+        </property>
+        <property name="docRfrncCntxtPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Cntxt_Prd_Strt"/>
+        </property>
+        <property name="docRfrncCntxtPracticeSttingCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Cntxt_PracticeStting_Cdg_Cd"/>
+        </property>
+        <property name="docRfrncCntxtPracticeSttingCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Cntxt_PracticeStting_Cdg_Dsply"/>
+        </property>
+        <property name="docRfrncCntxtPracticeSttingCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Cntxt_PracticeStting_Cdg_Sys"/>
+        </property>
+        <property name="docRfrncCntxtPracticeSttingCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Cntxt_PracticeStting_Cdg_UsrSltd"/>
+        </property>
+        <property name="docRfrncCntxtPracticeSttingCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Cntxt_PracticeStting_Cdg_Vrsn"/>
+        </property>
+        <property name="docRfrncCntxtPracticeSttingTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Cntxt_PracticeStting_Txt"/>
+        </property>
+        <property name="docRfrncCntxtRlted" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Cntxt_Rlted"/>
+        </property>
+        <property name="docRfrncCntxtSrcPntInfo" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Cntxt_SrcPntInfo"/>
+        </property>
+        <property name="docRfrncCustodian" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Custodian"/>
+        </property>
+        <property name="docRfrncDt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Dt"/>
+        </property>
+        <property name="docRfrncDscrptn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Dscrptn"/>
+        </property>
+        <property name="docRfrncDocSts" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_DocSts"/>
+        </property>
+        <property name="docRfrncIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Id_Assigner"/>
+        </property>
+        <property name="docRfrncIdPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Id_Prd_End"/>
+        </property>
+        <property name="docRfrncIdPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Id_Prd_Strt"/>
+        </property>
+        <property name="docRfrncIdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Id_Sys"/>
+        </property>
+        <property name="docRfrncIdTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Id_Typ_Cdg_Cd"/>
+        </property>
+        <property name="docRfrncIdTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Id_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="docRfrncIdTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Id_Typ_Cdg_Sys"/>
+        </property>
+        <property name="docRfrncIdTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Id_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="docRfrncIdTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Id_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="docRfrncIdTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Id_Typ_Txt"/>
+        </property>
+        <property name="docRfrncIdUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Id_Use"/>
+        </property>
+        <property name="docRfrncIdVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Id_Vl"/>
+        </property>
+        <property name="docRfrncMasterIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_MasterId_Assigner"/>
+        </property>
+        <property name="docRfrncMasterIdPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_MasterId_Prd_End"/>
+        </property>
+        <property name="docRfrncMasterIdPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_MasterId_Prd_Strt"/>
+        </property>
+        <property name="docRfrncMasterIdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_MasterId_Sys"/>
+        </property>
+        <property name="docRfrncMasterIdTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_MasterId_Typ_Cdg_Cd"/>
+        </property>
+        <property name="docRfrncMasterIdTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_MasterId_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="docRfrncMasterIdTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_MasterId_Typ_Cdg_Sys"/>
+        </property>
+        <property name="docRfrncMasterIdTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_MasterId_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="docRfrncMasterIdTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_MasterId_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="docRfrncMasterIdTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_MasterId_Typ_Txt"/>
+        </property>
+        <property name="docRfrncMasterIdUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_MasterId_Use"/>
+        </property>
+        <property name="docRfrncMasterIdVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_MasterId_Vl"/>
+        </property>
+        <property name="docRfrncRelatesToCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_RelatesTo_Cd"/>
+        </property>
+        <property name="docRfrncSecurityLblCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_SecurityLbl_Cdg_Cd"/>
+        </property>
+        <property name="docRfrncSecurityLblCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_SecurityLbl_Cdg_Dsply"/>
+        </property>
+        <property name="docRfrncSecurityLblCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_SecurityLbl_Cdg_Sys"/>
+        </property>
+        <property name="docRfrncSecurityLblCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_SecurityLbl_Cdg_UsrSltd"/>
+        </property>
+        <property name="docRfrncSecurityLblCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_SecurityLbl_Cdg_Vrsn"/>
+        </property>
+        <property name="docRfrncSecurityLblTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_SecurityLbl_Txt"/>
+        </property>
+        <property name="docRfrncSts" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Sts"/>
+        </property>
+        <property name="docRfrncSbjct" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Sbjct"/>
+        </property>
+        <property name="docRfrncTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Typ_Cdg_Cd"/>
+        </property>
+        <property name="docRfrncTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="docRfrncTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Typ_Cdg_Sys"/>
+        </property>
+        <property name="docRfrncTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="docRfrncTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="docRfrncTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DocRfrnc_Typ_Txt"/>
+        </property>
+    </class>
+</hibernate-mapping>

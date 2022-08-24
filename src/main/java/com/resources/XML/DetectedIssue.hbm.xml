@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Aug 17, 2022, 11:08:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="DetectedIssue" optimistic-lock="none" table="DetectedIssue">
+        <id name="id" type="string">
+            <column length="64" name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="detectedIssueAthr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DetectedIssue_Athr"/>
+        </property>
+        <property name="detectedIssueCdCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DetectedIssue_Cd_Cdg_Cd"/>
+        </property>
+        <property name="detectedIssueCdCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DetectedIssue_Cd_Cdg_Dsply"/>
+        </property>
+        <property name="detectedIssueCdCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DetectedIssue_Cd_Cdg_Sys"/>
+        </property>
+        <property name="detectedIssueCdCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DetectedIssue_Cd_Cdg_UsrSltd"/>
+        </property>
+        <property name="detectedIssueCdCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DetectedIssue_Cd_Cdg_Vrsn"/>
+        </property>
+        <property name="detectedIssueCdTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DetectedIssue_Cd_Txt"/>
+        </property>
+        <property name="detectedIssueDtl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DetectedIssue_Dtl"/>
+        </property>
+        <property name="detectedIssueEvdnceCdCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DetectedIssue_Evdnce_Cd_Cdg_Cd"/>
+        </property>
+        <property name="detectedIssueEvdnceCdCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DetectedIssue_Evdnce_Cd_Cdg_Dsply"/>
+        </property>
+        <property name="detectedIssueEvdnceCdCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DetectedIssue_Evdnce_Cd_Cdg_Sys"/>
+        </property>
+        <property name="detectedIssueEvdnceCdCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DetectedIssue_Evdnce_Cd_Cdg_UsrSltd"/>
+        </property>
+        <property name="detectedIssueEvdnceCdCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DetectedIssue_Evdnce_Cd_Cdg_Vrsn"/>
+        </property>
+        <property name="detectedIssueEvdnceCdTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DetectedIssue_Evdnce_Cd_Txt"/>
+        </property>
+        <property name="detectedIssueEvdnceDtl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DetectedIssue_Evdnce_Dtl"/>
+        </property>
+        <property name="detectedIssueIdentifiedDtTimeTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DetectedIssue_IdentifiedDtTimeTyp"/>
+        </property>
+        <property name="detectedIssueIdentifiedPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DetectedIssue_IdentifiedPrd_End"/>
+        </property>
+        <property name="detectedIssueIdentifiedPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DetectedIssue_IdentifiedPrd_Strt"/>
+        </property>
+        <property name="detectedIssueIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DetectedIssue_Id_Assigner"/>
+        </property>
+        <property name="detectedIssueIdPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DetectedIssue_Id_Prd_End"/>
+        </property>
+        <property name="detectedIssueIdPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DetectedIssue_Id_Prd_Strt"/>
+        </property>
+        <property name="detectedIssueIdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DetectedIssue_Id_Sys"/>
+        </property>
+        <property name="detectedIssueIdTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DetectedIssue_Id_Typ_Cdg_Cd"/>
+        </property>
+        <property name="detectedIssueIdTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DetectedIssue_Id_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="detectedIssueIdTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DetectedIssue_Id_Typ_Cdg_Sys"/>
+        </property>
+        <property name="detectedIssueIdTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DetectedIssue_Id_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="detectedIssueIdTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DetectedIssue_Id_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="detectedIssueIdTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DetectedIssue_Id_Typ_Txt"/>
+        </property>
+        <property name="detectedIssueIdUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DetectedIssue_Id_Use"/>
+        </property>
+        <property name="detectedIssueIdVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DetectedIssue_Id_Vl"/>
+        </property>
+        <property name="detectedIssueImplicated" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DetectedIssue_Implicated"/>
+        </property>
+        <property name="detectedIssueMitigationActnCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DetectedIssue_Mitigation_Actn_Cdg_Cd"/>
+        </property>
+        <property name="detectedIssueMitigationActnCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DetectedIssue_Mitigation_Actn_Cdg_Dsply"/>
+        </property>
+        <property name="detectedIssueMitigationActnCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DetectedIssue_Mitigation_Actn_Cdg_Sys"/>
+        </property>
+        <property name="detectedIssueMitigationActnCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DetectedIssue_Mitigation_Actn_Cdg_UsrSltd"/>
+        </property>
+        <property name="detectedIssueMitigationActnCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DetectedIssue_Mitigation_Actn_Cdg_Vrsn"/>
+        </property>
+        <property name="detectedIssueMitigationActnTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DetectedIssue_Mitigation_Actn_Txt"/>
+        </property>
+        <property name="detectedIssueMitigationAthr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DetectedIssue_Mitigation_Athr"/>
+        </property>
+        <property name="detectedIssueMitigationDt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DetectedIssue_Mitigation_Dt"/>
+        </property>
+        <property name="detectedIssuePnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DetectedIssue_Pnt"/>
+        </property>
+        <property name="detectedIssueRfrnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DetectedIssue_Rfrnc"/>
+        </property>
+        <property name="detectedIssueSeverity" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DetectedIssue_Severity"/>
+        </property>
+        <property name="detectedIssueSts" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="DetectedIssue_Sts"/>
+        </property>
+    </class>
+</hibernate-mapping>

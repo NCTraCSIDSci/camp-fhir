@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Aug 17, 2022, 11:08:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Specimen" optimistic-lock="none" table="Specimen">
+        <id name="id" type="string">
+            <column length="64" name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="spcmnAccessionIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_AccessionId_Assigner"/>
+        </property>
+        <property name="spcmnAccessionIdPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_AccessionId_Prd_End"/>
+        </property>
+        <property name="spcmnAccessionIdPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_AccessionId_Prd_Strt"/>
+        </property>
+        <property name="spcmnAccessionIdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_AccessionId_Sys"/>
+        </property>
+        <property name="spcmnAccessionIdTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_AccessionId_Typ_Cdg_Cd"/>
+        </property>
+        <property name="spcmnAccessionIdTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_AccessionId_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="spcmnAccessionIdTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_AccessionId_Typ_Cdg_Sys"/>
+        </property>
+        <property name="spcmnAccessionIdTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_AccessionId_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="spcmnAccessionIdTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_AccessionId_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="spcmnAccessionIdTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_AccessionId_Typ_Txt"/>
+        </property>
+        <property name="spcmnAccessionIdUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_AccessionId_Use"/>
+        </property>
+        <property name="spcmnAccessionIdVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_AccessionId_Vl"/>
+        </property>
+        <property name="spcmnCollectionBodySiteCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Collection_BodySite_Cdg_Cd"/>
+        </property>
+        <property name="spcmnCollectionBodySiteCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Collection_BodySite_Cdg_Dsply"/>
+        </property>
+        <property name="spcmnCollectionBodySiteCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Collection_BodySite_Cdg_Sys"/>
+        </property>
+        <property name="spcmnCollectionBodySiteCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Collection_BodySite_Cdg_UsrSltd"/>
+        </property>
+        <property name="spcmnCollectionBodySiteCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Collection_BodySite_Cdg_Vrsn"/>
+        </property>
+        <property name="spcmnCollectionBodySiteTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Collection_BodySite_Txt"/>
+        </property>
+        <property name="spcmnCollectionCollectedDtTimeTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Collection_CollectedDtTimeTyp"/>
+        </property>
+        <property name="spcmnCollectionCollectedPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Collection_CollectedPrd_End"/>
+        </property>
+        <property name="spcmnCollectionCollectedPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Collection_CollectedPrd_Strt"/>
+        </property>
+        <property name="spcmnCollectionCollector" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Collection_Collector"/>
+        </property>
+        <property name="spcmnCollectionDurationCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Collection_Duration_Cd"/>
+        </property>
+        <property name="spcmnCollectionDurationCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Collection_Duration_Cmprtr"/>
+        </property>
+        <property name="spcmnCollectionDurationSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Collection_Duration_Sys"/>
+        </property>
+        <property name="spcmnCollectionDurationUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Collection_Duration_Unt"/>
+        </property>
+        <property name="spcmnCollectionDurationVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Collection_Duration_Vl"/>
+        </property>
+        <property name="spcmnCollectionFastingStsCdbleCncptCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Collection_FastingStsCdbleCncpt_Cdg_Cd"/>
+        </property>
+        <property name="spcmnCollectionFastingStsCdbleCncptCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Collection_FastingStsCdbleCncpt_Cdg_Dsply"/>
+        </property>
+        <property name="spcmnCollectionFastingStsCdbleCncptCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Collection_FastingStsCdbleCncpt_Cdg_Sys"/>
+        </property>
+        <property name="spcmnCollectionFastingStsCdbleCncptCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Collection_FastingStsCdbleCncpt_Cdg_UsrSltd"/>
+        </property>
+        <property name="spcmnCollectionFastingStsCdbleCncptCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Collection_FastingStsCdbleCncpt_Cdg_Vrsn"/>
+        </property>
+        <property name="spcmnCollectionFastingStsCdbleCncptTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Collection_FastingStsCdbleCncpt_Txt"/>
+        </property>
+        <property name="spcmnCollectionFastingStsDurationCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Collection_FastingStsDuration_Cd"/>
+        </property>
+        <property name="spcmnCollectionFastingStsDurationCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Collection_FastingStsDuration_Cmprtr"/>
+        </property>
+        <property name="spcmnCollectionFastingStsDurationSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Collection_FastingStsDuration_Sys"/>
+        </property>
+        <property name="spcmnCollectionFastingStsDurationUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Collection_FastingStsDuration_Unt"/>
+        </property>
+        <property name="spcmnCollectionFastingStsDurationVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Collection_FastingStsDuration_Vl"/>
+        </property>
+        <property name="spcmnCollectionMthdCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Collection_Mthd_Cdg_Cd"/>
+        </property>
+        <property name="spcmnCollectionMthdCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Collection_Mthd_Cdg_Dsply"/>
+        </property>
+        <property name="spcmnCollectionMthdCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Collection_Mthd_Cdg_Sys"/>
+        </property>
+        <property name="spcmnCollectionMthdCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Collection_Mthd_Cdg_UsrSltd"/>
+        </property>
+        <property name="spcmnCollectionMthdCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Collection_Mthd_Cdg_Vrsn"/>
+        </property>
+        <property name="spcmnCollectionMthdTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Collection_Mthd_Txt"/>
+        </property>
+        <property name="spcmnCollectionQntyCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Collection_Qnty_Cd"/>
+        </property>
+        <property name="spcmnCollectionQntyCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Collection_Qnty_Cmprtr"/>
+        </property>
+        <property name="spcmnCollectionQntySys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Collection_Qnty_Sys"/>
+        </property>
+        <property name="spcmnCollectionQntyUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Collection_Qnty_Unt"/>
+        </property>
+        <property name="spcmnCollectionQntyVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Collection_Qnty_Vl"/>
+        </property>
+        <property name="spcmnCndtnCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Cndtn_Cdg_Cd"/>
+        </property>
+        <property name="spcmnCndtnCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Cndtn_Cdg_Dsply"/>
+        </property>
+        <property name="spcmnCndtnCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Cndtn_Cdg_Sys"/>
+        </property>
+        <property name="spcmnCndtnCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Cndtn_Cdg_UsrSltd"/>
+        </property>
+        <property name="spcmnCndtnCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Cndtn_Cdg_Vrsn"/>
+        </property>
+        <property name="spcmnCndtnTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Cndtn_Txt"/>
+        </property>
+        <property name="spcmnCntainerAddtvCdbleCncptCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Cntainer_AddtvCdbleCncpt_Cdg_Cd"/>
+        </property>
+        <property name="spcmnCntainerAddtvCdbleCncptCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Cntainer_AddtvCdbleCncpt_Cdg_Dsply"/>
+        </property>
+        <property name="spcmnCntainerAddtvCdbleCncptCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Cntainer_AddtvCdbleCncpt_Cdg_Sys"/>
+        </property>
+        <property name="spcmnCntainerAddtvCdbleCncptCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Cntainer_AddtvCdbleCncpt_Cdg_UsrSltd"/>
+        </property>
+        <property name="spcmnCntainerAddtvCdbleCncptCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Cntainer_AddtvCdbleCncpt_Cdg_Vrsn"/>
+        </property>
+        <property name="spcmnCntainerAddtvCdbleCncptTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Cntainer_AddtvCdbleCncpt_Txt"/>
+        </property>
+        <property name="spcmnCntainerAddtvRfrnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Cntainer_AddtvRfrnc"/>
+        </property>
+        <property name="spcmnCntainerCapacityCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Cntainer_Capacity_Cd"/>
+        </property>
+        <property name="spcmnCntainerCapacityCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Cntainer_Capacity_Cmprtr"/>
+        </property>
+        <property name="spcmnCntainerCapacitySys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Cntainer_Capacity_Sys"/>
+        </property>
+        <property name="spcmnCntainerCapacityUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Cntainer_Capacity_Unt"/>
+        </property>
+        <property name="spcmnCntainerCapacityVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Cntainer_Capacity_Vl"/>
+        </property>
+        <property name="spcmnCntainerDscrptn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Cntainer_Dscrptn"/>
+        </property>
+        <property name="spcmnCntainerIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Cntainer_Id_Assigner"/>
+        </property>
+        <property name="spcmnCntainerIdPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Cntainer_Id_Prd_End"/>
+        </property>
+        <property name="spcmnCntainerIdPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Cntainer_Id_Prd_Strt"/>
+        </property>
+        <property name="spcmnCntainerIdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Cntainer_Id_Sys"/>
+        </property>
+        <property name="spcmnCntainerIdTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Cntainer_Id_Typ_Cdg_Cd"/>
+        </property>
+        <property name="spcmnCntainerIdTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Cntainer_Id_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="spcmnCntainerIdTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Cntainer_Id_Typ_Cdg_Sys"/>
+        </property>
+        <property name="spcmnCntainerIdTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Cntainer_Id_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="spcmnCntainerIdTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Cntainer_Id_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="spcmnCntainerIdTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Cntainer_Id_Typ_Txt"/>
+        </property>
+        <property name="spcmnCntainerIdUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Cntainer_Id_Use"/>
+        </property>
+        <property name="spcmnCntainerIdVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Cntainer_Id_Vl"/>
+        </property>
+        <property name="spcmnCntainerSpcmnQntyCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Cntainer_SpcmnQnty_Cd"/>
+        </property>
+        <property name="spcmnCntainerSpcmnQntyCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Cntainer_SpcmnQnty_Cmprtr"/>
+        </property>
+        <property name="spcmnCntainerSpcmnQntySys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Cntainer_SpcmnQnty_Sys"/>
+        </property>
+        <property name="spcmnCntainerSpcmnQntyUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Cntainer_SpcmnQnty_Unt"/>
+        </property>
+        <property name="spcmnCntainerSpcmnQntyVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Cntainer_SpcmnQnty_Vl"/>
+        </property>
+        <property name="spcmnCntainerTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Cntainer_Typ_Cdg_Cd"/>
+        </property>
+        <property name="spcmnCntainerTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Cntainer_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="spcmnCntainerTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Cntainer_Typ_Cdg_Sys"/>
+        </property>
+        <property name="spcmnCntainerTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Cntainer_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="spcmnCntainerTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Cntainer_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="spcmnCntainerTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Cntainer_Typ_Txt"/>
+        </property>
+        <property name="spcmnIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Id_Assigner"/>
+        </property>
+        <property name="spcmnIdPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Id_Prd_End"/>
+        </property>
+        <property name="spcmnIdPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Id_Prd_Strt"/>
+        </property>
+        <property name="spcmnIdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Id_Sys"/>
+        </property>
+        <property name="spcmnIdTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Id_Typ_Cdg_Cd"/>
+        </property>
+        <property name="spcmnIdTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Id_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="spcmnIdTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Id_Typ_Cdg_Sys"/>
+        </property>
+        <property name="spcmnIdTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Id_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="spcmnIdTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Id_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="spcmnIdTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Id_Typ_Txt"/>
+        </property>
+        <property name="spcmnIdUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Id_Use"/>
+        </property>
+        <property name="spcmnIdVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Id_Vl"/>
+        </property>
+        <property name="spcmnNtAthrRfrnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Nt_AthrRfrnc"/>
+        </property>
+        <property name="spcmnNtAthrStrgTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Nt_AthrStrgTyp"/>
+        </property>
+        <property name="spcmnNtTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Nt_Txt"/>
+        </property>
+        <property name="spcmnNtTime" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Nt_Time"/>
+        </property>
+        <property name="spcmnParent" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Parent"/>
+        </property>
+        <property name="spcmnProcessingAddtv" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Processing_Addtv"/>
+        </property>
+        <property name="spcmnProcessingDscrptn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Processing_Dscrptn"/>
+        </property>
+        <property name="spcmnProcessingPrcdrCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Processing_Prcdr_Cdg_Cd"/>
+        </property>
+        <property name="spcmnProcessingPrcdrCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Processing_Prcdr_Cdg_Dsply"/>
+        </property>
+        <property name="spcmnProcessingPrcdrCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Processing_Prcdr_Cdg_Sys"/>
+        </property>
+        <property name="spcmnProcessingPrcdrCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Processing_Prcdr_Cdg_UsrSltd"/>
+        </property>
+        <property name="spcmnProcessingPrcdrCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Processing_Prcdr_Cdg_Vrsn"/>
+        </property>
+        <property name="spcmnProcessingPrcdrTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Processing_Prcdr_Txt"/>
+        </property>
+        <property name="spcmnProcessingTimeDtTimeTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Processing_TimeDtTimeTyp"/>
+        </property>
+        <property name="spcmnProcessingTimePrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Processing_TimePrd_End"/>
+        </property>
+        <property name="spcmnProcessingTimePrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Processing_TimePrd_Strt"/>
+        </property>
+        <property name="spcmnReceivedTime" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_ReceivedTime"/>
+        </property>
+        <property name="spcmnRqst" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Rqst"/>
+        </property>
+        <property name="spcmnSts" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Sts"/>
+        </property>
+        <property name="spcmnSbjct" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Sbjct"/>
+        </property>
+        <property name="spcmnTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Typ_Cdg_Cd"/>
+        </property>
+        <property name="spcmnTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="spcmnTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Typ_Cdg_Sys"/>
+        </property>
+        <property name="spcmnTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="spcmnTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="spcmnTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Spcmn_Typ_Txt"/>
+        </property>
+    </class>
+</hibernate-mapping>

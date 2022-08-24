@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Aug 17, 2022, 11:08:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="VerificationResult" optimistic-lock="none" table="VerificationResult">
+        <id name="id" type="string">
+            <column length="64" name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="vrfctnRsltAttestationCmmnctnMthdCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Attestation_CmmnctnMthd_Cdg_Cd"/>
+        </property>
+        <property name="vrfctnRsltAttestationCmmnctnMthdCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Attestation_CmmnctnMthd_Cdg_Dsply"/>
+        </property>
+        <property name="vrfctnRsltAttestationCmmnctnMthdCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Attestation_CmmnctnMthd_Cdg_Sys"/>
+        </property>
+        <property name="vrfctnRsltAttestationCmmnctnMthdCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Attestation_CmmnctnMthd_Cdg_UsrSltd"/>
+        </property>
+        <property name="vrfctnRsltAttestationCmmnctnMthdCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Attestation_CmmnctnMthd_Cdg_Vrsn"/>
+        </property>
+        <property name="vrfctnRsltAttestationCmmnctnMthdTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Attestation_CmmnctnMthd_Txt"/>
+        </property>
+        <property name="vrfctnRsltAttestationDt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Attestation_Dt"/>
+        </property>
+        <property name="vrfctnRsltAttestationOnBehalfOf" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Attestation_OnBehalfOf"/>
+        </property>
+        <property name="vrfctnRsltAttestationProxyIdentityCertificate" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Attestation_ProxyIdentityCertificate"/>
+        </property>
+        <property name="vrfctnRsltAttestationProxySignatureData" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Attestation_ProxySignature_Data"/>
+        </property>
+        <property name="vrfctnRsltAttestationProxySignatureOnBehalfOf" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Attestation_ProxySignature_OnBehalfOf"/>
+        </property>
+        <property name="vrfctnRsltAttestationProxySignatureSigFrmat" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Attestation_ProxySignature_SigFrmat"/>
+        </property>
+        <property name="vrfctnRsltAttestationProxySignatureTarFrmat" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Attestation_ProxySignature_TarFrmat"/>
+        </property>
+        <property name="vrfctnRsltAttestationProxySignatureTypCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Attestation_ProxySignature_Typ_Cd"/>
+        </property>
+        <property name="vrfctnRsltAttestationProxySignatureTypDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Attestation_ProxySignature_Typ_Dsply"/>
+        </property>
+        <property name="vrfctnRsltAttestationProxySignatureTypSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Attestation_ProxySignature_Typ_Sys"/>
+        </property>
+        <property name="vrfctnRsltAttestationProxySignatureTypUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Attestation_ProxySignature_Typ_UsrSltd"/>
+        </property>
+        <property name="vrfctnRsltAttestationProxySignatureTypVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Attestation_ProxySignature_Typ_Vrsn"/>
+        </property>
+        <property name="vrfctnRsltAttestationProxySignatureWhen" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Attestation_ProxySignature_When"/>
+        </property>
+        <property name="vrfctnRsltAttestationProxySignatureWho" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Attestation_ProxySignature_Who"/>
+        </property>
+        <property name="vrfctnRsltAttestationSrcIdentityCertificate" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Attestation_SrcIdentityCertificate"/>
+        </property>
+        <property name="vrfctnRsltAttestationSrcSignatureData" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Attestation_SrcSignature_Data"/>
+        </property>
+        <property name="vrfctnRsltAttestationSrcSignatureOnBehalfOf" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Attestation_SrcSignature_OnBehalfOf"/>
+        </property>
+        <property name="vrfctnRsltAttestationSrcSignatureSigFrmat" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Attestation_SrcSignature_SigFrmat"/>
+        </property>
+        <property name="vrfctnRsltAttestationSrcSignatureTarFrmat" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Attestation_SrcSignature_TarFrmat"/>
+        </property>
+        <property name="vrfctnRsltAttestationSrcSignatureTypCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Attestation_SrcSignature_Typ_Cd"/>
+        </property>
+        <property name="vrfctnRsltAttestationSrcSignatureTypDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Attestation_SrcSignature_Typ_Dsply"/>
+        </property>
+        <property name="vrfctnRsltAttestationSrcSignatureTypSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Attestation_SrcSignature_Typ_Sys"/>
+        </property>
+        <property name="vrfctnRsltAttestationSrcSignatureTypUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Attestation_SrcSignature_Typ_UsrSltd"/>
+        </property>
+        <property name="vrfctnRsltAttestationSrcSignatureTypVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Attestation_SrcSignature_Typ_Vrsn"/>
+        </property>
+        <property name="vrfctnRsltAttestationSrcSignatureWhen" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Attestation_SrcSignature_When"/>
+        </property>
+        <property name="vrfctnRsltAttestationSrcSignatureWho" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Attestation_SrcSignature_Who"/>
+        </property>
+        <property name="vrfctnRsltAttestationWho" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Attestation_Who"/>
+        </property>
+        <property name="vrfctnRsltFailureActnCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_FailureActn_Cdg_Cd"/>
+        </property>
+        <property name="vrfctnRsltFailureActnCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_FailureActn_Cdg_Dsply"/>
+        </property>
+        <property name="vrfctnRsltFailureActnCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_FailureActn_Cdg_Sys"/>
+        </property>
+        <property name="vrfctnRsltFailureActnCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_FailureActn_Cdg_UsrSltd"/>
+        </property>
+        <property name="vrfctnRsltFailureActnCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_FailureActn_Cdg_Vrsn"/>
+        </property>
+        <property name="vrfctnRsltFailureActnTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_FailureActn_Txt"/>
+        </property>
+        <property name="vrfctnRsltFrqncyCdCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Frqncy_Cd_Cdg_Cd"/>
+        </property>
+        <property name="vrfctnRsltFrqncyCdCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Frqncy_Cd_Cdg_Dsply"/>
+        </property>
+        <property name="vrfctnRsltFrqncyCdCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Frqncy_Cd_Cdg_Sys"/>
+        </property>
+        <property name="vrfctnRsltFrqncyCdCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Frqncy_Cd_Cdg_UsrSltd"/>
+        </property>
+        <property name="vrfctnRsltFrqncyCdCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Frqncy_Cd_Cdg_Vrsn"/>
+        </property>
+        <property name="vrfctnRsltFrqncyCdTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Frqncy_Cd_Txt"/>
+        </property>
+        <property name="vrfctnRsltFrqncyEvnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Frqncy_Evnt"/>
+        </property>
+        <property name="vrfctnRsltFrqncyRptBndsDurationCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Frqncy_Rpt_BndsDuration_Cd"/>
+        </property>
+        <property name="vrfctnRsltFrqncyRptBndsDurationCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Frqncy_Rpt_BndsDuration_Cmprtr"/>
+        </property>
+        <property name="vrfctnRsltFrqncyRptBndsDurationSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Frqncy_Rpt_BndsDuration_Sys"/>
+        </property>
+        <property name="vrfctnRsltFrqncyRptBndsDurationUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Frqncy_Rpt_BndsDuration_Unt"/>
+        </property>
+        <property name="vrfctnRsltFrqncyRptBndsDurationVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Frqncy_Rpt_BndsDuration_Vl"/>
+        </property>
+        <property name="vrfctnRsltFrqncyRptBndsPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Frqncy_Rpt_BndsPrd_End"/>
+        </property>
+        <property name="vrfctnRsltFrqncyRptBndsPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Frqncy_Rpt_BndsPrd_Strt"/>
+        </property>
+        <property name="vrfctnRsltFrqncyRptBndsRngHiCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Frqncy_Rpt_BndsRng_Hi_Cd"/>
+        </property>
+        <property name="vrfctnRsltFrqncyRptBndsRngHiCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Frqncy_Rpt_BndsRng_Hi_Cmprtr"/>
+        </property>
+        <property name="vrfctnRsltFrqncyRptBndsRngHiSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Frqncy_Rpt_BndsRng_Hi_Sys"/>
+        </property>
+        <property name="vrfctnRsltFrqncyRptBndsRngHiUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Frqncy_Rpt_BndsRng_Hi_Unt"/>
+        </property>
+        <property name="vrfctnRsltFrqncyRptBndsRngHiVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Frqncy_Rpt_BndsRng_Hi_Vl"/>
+        </property>
+        <property name="vrfctnRsltFrqncyRptBndsRngLwCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Frqncy_Rpt_BndsRng_Lw_Cd"/>
+        </property>
+        <property name="vrfctnRsltFrqncyRptBndsRngLwCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Frqncy_Rpt_BndsRng_Lw_Cmprtr"/>
+        </property>
+        <property name="vrfctnRsltFrqncyRptBndsRngLwSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Frqncy_Rpt_BndsRng_Lw_Sys"/>
+        </property>
+        <property name="vrfctnRsltFrqncyRptBndsRngLwUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Frqncy_Rpt_BndsRng_Lw_Unt"/>
+        </property>
+        <property name="vrfctnRsltFrqncyRptBndsRngLwVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Frqncy_Rpt_BndsRng_Lw_Vl"/>
+        </property>
+        <property name="vrfctnRsltFrqncyRptCnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Frqncy_Rpt_Cnt"/>
+        </property>
+        <property name="vrfctnRsltFrqncyRptCntMx" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Frqncy_Rpt_CntMx"/>
+        </property>
+        <property name="vrfctnRsltFrqncyRptDayOfWeek" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Frqncy_Rpt_DayOfWeek"/>
+        </property>
+        <property name="vrfctnRsltFrqncyRptDuration" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Frqncy_Rpt_Duration"/>
+        </property>
+        <property name="vrfctnRsltFrqncyRptDurationMx" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Frqncy_Rpt_DurationMx"/>
+        </property>
+        <property name="vrfctnRsltFrqncyRptDurationUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Frqncy_Rpt_DurationUnt"/>
+        </property>
+        <property name="vrfctnRsltFrqncyRptFrqncy" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Frqncy_Rpt_Frqncy"/>
+        </property>
+        <property name="vrfctnRsltFrqncyRptFrqncyMx" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Frqncy_Rpt_FrqncyMx"/>
+        </property>
+        <property name="vrfctnRsltFrqncyRptOff" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Frqncy_Rpt_Off"/>
+        </property>
+        <property name="vrfctnRsltFrqncyRptPrd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Frqncy_Rpt_Prd"/>
+        </property>
+        <property name="vrfctnRsltFrqncyRptPrdMx" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Frqncy_Rpt_PrdMx"/>
+        </property>
+        <property name="vrfctnRsltFrqncyRptPrdUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Frqncy_Rpt_PrdUnt"/>
+        </property>
+        <property name="vrfctnRsltFrqncyRptTimeOfDay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Frqncy_Rpt_TimeOfDay"/>
+        </property>
+        <property name="vrfctnRsltFrqncyRptWhen" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Frqncy_Rpt_When"/>
+        </property>
+        <property name="vrfctnRsltLastPerformed" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_LastPerformed"/>
+        </property>
+        <property name="vrfctnRsltNeedCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Need_Cdg_Cd"/>
+        </property>
+        <property name="vrfctnRsltNeedCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Need_Cdg_Dsply"/>
+        </property>
+        <property name="vrfctnRsltNeedCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Need_Cdg_Sys"/>
+        </property>
+        <property name="vrfctnRsltNeedCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Need_Cdg_UsrSltd"/>
+        </property>
+        <property name="vrfctnRsltNeedCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Need_Cdg_Vrsn"/>
+        </property>
+        <property name="vrfctnRsltNeedTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Need_Txt"/>
+        </property>
+        <property name="vrfctnRsltNextSchdld" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_NextSchdld"/>
+        </property>
+        <property name="vrfctnRsltPrimarySrcCanPushUpdatesCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_PrimarySrc_CanPushUpdates_Cdg_Cd"/>
+        </property>
+        <property name="vrfctnRsltPrimarySrcCanPushUpdatesCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_PrimarySrc_CanPushUpdates_Cdg_Dsply"/>
+        </property>
+        <property name="vrfctnRsltPrimarySrcCanPushUpdatesCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_PrimarySrc_CanPushUpdates_Cdg_Sys"/>
+        </property>
+        <property name="vrfctnRsltPrimarySrcCanPushUpdatesCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_PrimarySrc_CanPushUpdates_Cdg_UsrSltd"/>
+        </property>
+        <property name="vrfctnRsltPrimarySrcCanPushUpdatesCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_PrimarySrc_CanPushUpdates_Cdg_Vrsn"/>
+        </property>
+        <property name="vrfctnRsltPrimarySrcCanPushUpdatesTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_PrimarySrc_CanPushUpdates_Txt"/>
+        </property>
+        <property name="vrfctnRsltPrimarySrcCmmnctnMthdCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_PrimarySrc_CmmnctnMthd_Cdg_Cd"/>
+        </property>
+        <property name="vrfctnRsltPrimarySrcCmmnctnMthdCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_PrimarySrc_CmmnctnMthd_Cdg_Dsply"/>
+        </property>
+        <property name="vrfctnRsltPrimarySrcCmmnctnMthdCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_PrimarySrc_CmmnctnMthd_Cdg_Sys"/>
+        </property>
+        <property name="vrfctnRsltPrimarySrcCmmnctnMthdCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_PrimarySrc_CmmnctnMthd_Cdg_UsrSltd"/>
+        </property>
+        <property name="vrfctnRsltPrimarySrcCmmnctnMthdCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_PrimarySrc_CmmnctnMthd_Cdg_Vrsn"/>
+        </property>
+        <property name="vrfctnRsltPrimarySrcCmmnctnMthdTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_PrimarySrc_CmmnctnMthd_Txt"/>
+        </property>
+        <property name="vrfctnRsltPrimarySrcPushTypAvailableCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_PrimarySrc_PushTypAvailable_Cdg_Cd"/>
+        </property>
+        <property name="vrfctnRsltPrimarySrcPushTypAvailableCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_PrimarySrc_PushTypAvailable_Cdg_Dsply"/>
+        </property>
+        <property name="vrfctnRsltPrimarySrcPushTypAvailableCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_PrimarySrc_PushTypAvailable_Cdg_Sys"/>
+        </property>
+        <property name="vrfctnRsltPrimarySrcPushTypAvailableCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_PrimarySrc_PushTypAvailable_Cdg_UsrSltd"/>
+        </property>
+        <property name="vrfctnRsltPrimarySrcPushTypAvailableCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_PrimarySrc_PushTypAvailable_Cdg_Vrsn"/>
+        </property>
+        <property name="vrfctnRsltPrimarySrcPushTypAvailableTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_PrimarySrc_PushTypAvailable_Txt"/>
+        </property>
+        <property name="vrfctnRsltPrimarySrcTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_PrimarySrc_Typ_Cdg_Cd"/>
+        </property>
+        <property name="vrfctnRsltPrimarySrcTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_PrimarySrc_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="vrfctnRsltPrimarySrcTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_PrimarySrc_Typ_Cdg_Sys"/>
+        </property>
+        <property name="vrfctnRsltPrimarySrcTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_PrimarySrc_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="vrfctnRsltPrimarySrcTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_PrimarySrc_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="vrfctnRsltPrimarySrcTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_PrimarySrc_Typ_Txt"/>
+        </property>
+        <property name="vrfctnRsltPrimarySrcValidationDt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_PrimarySrc_ValidationDt"/>
+        </property>
+        <property name="vrfctnRsltPrimarySrcValidationStsCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_PrimarySrc_ValidationSts_Cdg_Cd"/>
+        </property>
+        <property name="vrfctnRsltPrimarySrcValidationStsCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_PrimarySrc_ValidationSts_Cdg_Dsply"/>
+        </property>
+        <property name="vrfctnRsltPrimarySrcValidationStsCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_PrimarySrc_ValidationSts_Cdg_Sys"/>
+        </property>
+        <property name="vrfctnRsltPrimarySrcValidationStsCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_PrimarySrc_ValidationSts_Cdg_UsrSltd"/>
+        </property>
+        <property name="vrfctnRsltPrimarySrcValidationStsCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_PrimarySrc_ValidationSts_Cdg_Vrsn"/>
+        </property>
+        <property name="vrfctnRsltPrimarySrcValidationStsTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_PrimarySrc_ValidationSts_Txt"/>
+        </property>
+        <property name="vrfctnRsltPrimarySrcWho" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_PrimarySrc_Who"/>
+        </property>
+        <property name="vrfctnRsltSts" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Sts"/>
+        </property>
+        <property name="vrfctnRsltStsDt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_StsDt"/>
+        </property>
+        <property name="vrfctnRsltTar" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Tar"/>
+        </property>
+        <property name="vrfctnRsltTarLctn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_TarLctn"/>
+        </property>
+        <property name="vrfctnRsltValidationProcessCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_ValidationProcess_Cdg_Cd"/>
+        </property>
+        <property name="vrfctnRsltValidationProcessCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_ValidationProcess_Cdg_Dsply"/>
+        </property>
+        <property name="vrfctnRsltValidationProcessCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_ValidationProcess_Cdg_Sys"/>
+        </property>
+        <property name="vrfctnRsltValidationProcessCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_ValidationProcess_Cdg_UsrSltd"/>
+        </property>
+        <property name="vrfctnRsltValidationProcessCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_ValidationProcess_Cdg_Vrsn"/>
+        </property>
+        <property name="vrfctnRsltValidationProcessTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_ValidationProcess_Txt"/>
+        </property>
+        <property name="vrfctnRsltValidationTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_ValidationTyp_Cdg_Cd"/>
+        </property>
+        <property name="vrfctnRsltValidationTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_ValidationTyp_Cdg_Dsply"/>
+        </property>
+        <property name="vrfctnRsltValidationTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_ValidationTyp_Cdg_Sys"/>
+        </property>
+        <property name="vrfctnRsltValidationTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_ValidationTyp_Cdg_UsrSltd"/>
+        </property>
+        <property name="vrfctnRsltValidationTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_ValidationTyp_Cdg_Vrsn"/>
+        </property>
+        <property name="vrfctnRsltValidationTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_ValidationTyp_Txt"/>
+        </property>
+        <property name="vrfctnRsltValidatorAttestationSignatureData" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Validator_AttestationSignature_Data"/>
+        </property>
+        <property name="vrfctnRsltValidatorAttestationSignatureOnBehalfOf" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Validator_AttestationSignature_OnBehalfOf"/>
+        </property>
+        <property name="vrfctnRsltValidatorAttestationSignatureSigFrmat" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Validator_AttestationSignature_SigFrmat"/>
+        </property>
+        <property name="vrfctnRsltValidatorAttestationSignatureTarFrmat" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Validator_AttestationSignature_TarFrmat"/>
+        </property>
+        <property name="vrfctnRsltValidatorAttestationSignatureTypCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Validator_AttestationSignature_Typ_Cd"/>
+        </property>
+        <property name="vrfctnRsltValidatorAttestationSignatureTypDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Validator_AttestationSignature_Typ_Dsply"/>
+        </property>
+        <property name="vrfctnRsltValidatorAttestationSignatureTypSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Validator_AttestationSignature_Typ_Sys"/>
+        </property>
+        <property name="vrfctnRsltValidatorAttestationSignatureTypUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Validator_AttestationSignature_Typ_UsrSltd"/>
+        </property>
+        <property name="vrfctnRsltValidatorAttestationSignatureTypVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Validator_AttestationSignature_Typ_Vrsn"/>
+        </property>
+        <property name="vrfctnRsltValidatorAttestationSignatureWhen" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Validator_AttestationSignature_When"/>
+        </property>
+        <property name="vrfctnRsltValidatorAttestationSignatureWho" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Validator_AttestationSignature_Who"/>
+        </property>
+        <property name="vrfctnRsltValidatorIdentityCertificate" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Validator_IdentityCertificate"/>
+        </property>
+        <property name="vrfctnRsltValidatorOrgnztn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="VrfctnRslt_Validator_Orgnztn"/>
+        </property>
+    </class>
+</hibernate-mapping>

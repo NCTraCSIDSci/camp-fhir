@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Aug 17, 2022, 11:08:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="RiskAssessment" optimistic-lock="none" table="RiskAssessment">
+        <id name="id" type="string">
+            <column length="64" name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="rskAssmntBasedOn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_BasedOn"/>
+        </property>
+        <property name="rskAssmntBasis" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Basis"/>
+        </property>
+        <property name="rskAssmntCdCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Cd_Cdg_Cd"/>
+        </property>
+        <property name="rskAssmntCdCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Cd_Cdg_Dsply"/>
+        </property>
+        <property name="rskAssmntCdCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Cd_Cdg_Sys"/>
+        </property>
+        <property name="rskAssmntCdCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Cd_Cdg_UsrSltd"/>
+        </property>
+        <property name="rskAssmntCdCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Cd_Cdg_Vrsn"/>
+        </property>
+        <property name="rskAssmntCdTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Cd_Txt"/>
+        </property>
+        <property name="rskAssmntCndtn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Cndtn"/>
+        </property>
+        <property name="rskAssmntEnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Enc"/>
+        </property>
+        <property name="rskAssmntIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Id_Assigner"/>
+        </property>
+        <property name="rskAssmntIdPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Id_Prd_End"/>
+        </property>
+        <property name="rskAssmntIdPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Id_Prd_Strt"/>
+        </property>
+        <property name="rskAssmntIdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Id_Sys"/>
+        </property>
+        <property name="rskAssmntIdTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Id_Typ_Cdg_Cd"/>
+        </property>
+        <property name="rskAssmntIdTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Id_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="rskAssmntIdTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Id_Typ_Cdg_Sys"/>
+        </property>
+        <property name="rskAssmntIdTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Id_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="rskAssmntIdTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Id_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="rskAssmntIdTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Id_Typ_Txt"/>
+        </property>
+        <property name="rskAssmntIdUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Id_Use"/>
+        </property>
+        <property name="rskAssmntIdVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Id_Vl"/>
+        </property>
+        <property name="rskAssmntMthdCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Mthd_Cdg_Cd"/>
+        </property>
+        <property name="rskAssmntMthdCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Mthd_Cdg_Dsply"/>
+        </property>
+        <property name="rskAssmntMthdCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Mthd_Cdg_Sys"/>
+        </property>
+        <property name="rskAssmntMthdCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Mthd_Cdg_UsrSltd"/>
+        </property>
+        <property name="rskAssmntMthdCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Mthd_Cdg_Vrsn"/>
+        </property>
+        <property name="rskAssmntMthdTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Mthd_Txt"/>
+        </property>
+        <property name="rskAssmntMitigation" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Mitigation"/>
+        </property>
+        <property name="rskAssmntNtAthrRfrnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Nt_AthrRfrnc"/>
+        </property>
+        <property name="rskAssmntNtAthrStrgTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Nt_AthrStrgTyp"/>
+        </property>
+        <property name="rskAssmntNtTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Nt_Txt"/>
+        </property>
+        <property name="rskAssmntNtTime" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Nt_Time"/>
+        </property>
+        <property name="rskAssmntOccrnceDtTimeTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_OccrnceDtTimeTyp"/>
+        </property>
+        <property name="rskAssmntOccrncePrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_OccrncePrd_End"/>
+        </property>
+        <property name="rskAssmntOccrncePrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_OccrncePrd_Strt"/>
+        </property>
+        <property name="rskAssmntParent" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Parent"/>
+        </property>
+        <property name="rskAssmntPrfrmr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Prfrmr"/>
+        </property>
+        <property name="rskAssmntPredictionOutcomeCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Prediction_Outcome_Cdg_Cd"/>
+        </property>
+        <property name="rskAssmntPredictionOutcomeCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Prediction_Outcome_Cdg_Dsply"/>
+        </property>
+        <property name="rskAssmntPredictionOutcomeCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Prediction_Outcome_Cdg_Sys"/>
+        </property>
+        <property name="rskAssmntPredictionOutcomeCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Prediction_Outcome_Cdg_UsrSltd"/>
+        </property>
+        <property name="rskAssmntPredictionOutcomeCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Prediction_Outcome_Cdg_Vrsn"/>
+        </property>
+        <property name="rskAssmntPredictionOutcomeTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Prediction_Outcome_Txt"/>
+        </property>
+        <property name="rskAssmntPredictionProbabilityDecimalTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Prediction_ProbabilityDecimalTyp"/>
+        </property>
+        <property name="rskAssmntPredictionProbabilityRngHiCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Prediction_ProbabilityRng_Hi_Cd"/>
+        </property>
+        <property name="rskAssmntPredictionProbabilityRngHiCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Prediction_ProbabilityRng_Hi_Cmprtr"/>
+        </property>
+        <property name="rskAssmntPredictionProbabilityRngHiSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Prediction_ProbabilityRng_Hi_Sys"/>
+        </property>
+        <property name="rskAssmntPredictionProbabilityRngHiUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Prediction_ProbabilityRng_Hi_Unt"/>
+        </property>
+        <property name="rskAssmntPredictionProbabilityRngHiVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Prediction_ProbabilityRng_Hi_Vl"/>
+        </property>
+        <property name="rskAssmntPredictionProbabilityRngLwCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Prediction_ProbabilityRng_Lw_Cd"/>
+        </property>
+        <property name="rskAssmntPredictionProbabilityRngLwCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Prediction_ProbabilityRng_Lw_Cmprtr"/>
+        </property>
+        <property name="rskAssmntPredictionProbabilityRngLwSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Prediction_ProbabilityRng_Lw_Sys"/>
+        </property>
+        <property name="rskAssmntPredictionProbabilityRngLwUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Prediction_ProbabilityRng_Lw_Unt"/>
+        </property>
+        <property name="rskAssmntPredictionProbabilityRngLwVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Prediction_ProbabilityRng_Lw_Vl"/>
+        </property>
+        <property name="rskAssmntPredictionQualitativeRskCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Prediction_QualitativeRsk_Cdg_Cd"/>
+        </property>
+        <property name="rskAssmntPredictionQualitativeRskCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Prediction_QualitativeRsk_Cdg_Dsply"/>
+        </property>
+        <property name="rskAssmntPredictionQualitativeRskCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Prediction_QualitativeRsk_Cdg_Sys"/>
+        </property>
+        <property name="rskAssmntPredictionQualitativeRskCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Prediction_QualitativeRsk_Cdg_UsrSltd"/>
+        </property>
+        <property name="rskAssmntPredictionQualitativeRskCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Prediction_QualitativeRsk_Cdg_Vrsn"/>
+        </property>
+        <property name="rskAssmntPredictionQualitativeRskTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Prediction_QualitativeRsk_Txt"/>
+        </property>
+        <property name="rskAssmntPredictionRtionale" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Prediction_Rtionale"/>
+        </property>
+        <property name="rskAssmntPredictionRelativeRsk" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Prediction_RelativeRsk"/>
+        </property>
+        <property name="rskAssmntPredictionWhenPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Prediction_WhenPrd_End"/>
+        </property>
+        <property name="rskAssmntPredictionWhenPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Prediction_WhenPrd_Strt"/>
+        </property>
+        <property name="rskAssmntPredictionWhenRngHiCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Prediction_WhenRng_Hi_Cd"/>
+        </property>
+        <property name="rskAssmntPredictionWhenRngHiCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Prediction_WhenRng_Hi_Cmprtr"/>
+        </property>
+        <property name="rskAssmntPredictionWhenRngHiSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Prediction_WhenRng_Hi_Sys"/>
+        </property>
+        <property name="rskAssmntPredictionWhenRngHiUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Prediction_WhenRng_Hi_Unt"/>
+        </property>
+        <property name="rskAssmntPredictionWhenRngHiVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Prediction_WhenRng_Hi_Vl"/>
+        </property>
+        <property name="rskAssmntPredictionWhenRngLwCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Prediction_WhenRng_Lw_Cd"/>
+        </property>
+        <property name="rskAssmntPredictionWhenRngLwCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Prediction_WhenRng_Lw_Cmprtr"/>
+        </property>
+        <property name="rskAssmntPredictionWhenRngLwSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Prediction_WhenRng_Lw_Sys"/>
+        </property>
+        <property name="rskAssmntPredictionWhenRngLwUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Prediction_WhenRng_Lw_Unt"/>
+        </property>
+        <property name="rskAssmntPredictionWhenRngLwVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Prediction_WhenRng_Lw_Vl"/>
+        </property>
+        <property name="rskAssmntRsnCdCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_RsnCd_Cdg_Cd"/>
+        </property>
+        <property name="rskAssmntRsnCdCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_RsnCd_Cdg_Dsply"/>
+        </property>
+        <property name="rskAssmntRsnCdCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_RsnCd_Cdg_Sys"/>
+        </property>
+        <property name="rskAssmntRsnCdCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_RsnCd_Cdg_UsrSltd"/>
+        </property>
+        <property name="rskAssmntRsnCdCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_RsnCd_Cdg_Vrsn"/>
+        </property>
+        <property name="rskAssmntRsnCdTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_RsnCd_Txt"/>
+        </property>
+        <property name="rskAssmntRsnRfrnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_RsnRfrnc"/>
+        </property>
+        <property name="rskAssmntSts" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Sts"/>
+        </property>
+        <property name="rskAssmntSbjct" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="RskAssmnt_Sbjct"/>
+        </property>
+    </class>
+</hibernate-mapping>

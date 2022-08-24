@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Aug 17, 2022, 11:08:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Library" optimistic-lock="none" table="Library">
+        <id name="id" type="string">
+            <column length="64" name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="libraryApprovalDt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_ApprovalDt"/>
+        </property>
+        <property name="libraryAthrNm" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Athr_Nm"/>
+        </property>
+        <property name="libraryAthrTlcmPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Athr_Tlcm_Prd_End"/>
+        </property>
+        <property name="libraryAthrTlcmPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Athr_Tlcm_Prd_Strt"/>
+        </property>
+        <property name="libraryAthrTlcmRnk" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Athr_Tlcm_Rnk"/>
+        </property>
+        <property name="libraryAthrTlcmSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Athr_Tlcm_Sys"/>
+        </property>
+        <property name="libraryAthrTlcmUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Athr_Tlcm_Use"/>
+        </property>
+        <property name="libraryAthrTlcmVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Athr_Tlcm_Vl"/>
+        </property>
+        <property name="libraryCntctNm" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Cntct_Nm"/>
+        </property>
+        <property name="libraryCntctTlcmPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Cntct_Tlcm_Prd_End"/>
+        </property>
+        <property name="libraryCntctTlcmPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Cntct_Tlcm_Prd_Strt"/>
+        </property>
+        <property name="libraryCntctTlcmRnk" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Cntct_Tlcm_Rnk"/>
+        </property>
+        <property name="libraryCntctTlcmSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Cntct_Tlcm_Sys"/>
+        </property>
+        <property name="libraryCntctTlcmUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Cntct_Tlcm_Use"/>
+        </property>
+        <property name="libraryCntctTlcmVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Cntct_Tlcm_Vl"/>
+        </property>
+        <property name="libraryCntntCntntTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Cntnt_CntntTyp"/>
+        </property>
+        <property name="libraryCntntCreation" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Cntnt_Creation"/>
+        </property>
+        <property name="libraryCntntData" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Cntnt_Data"/>
+        </property>
+        <property name="libraryCntntHash" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Cntnt_Hash"/>
+        </property>
+        <property name="libraryCntntLnguage" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Cntnt_Lnguage"/>
+        </property>
+        <property name="libraryCntntSz" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Cntnt_Sz"/>
+        </property>
+        <property name="libraryCntntTtl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Cntnt_Ttl"/>
+        </property>
+        <property name="libraryCntntUrl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Cntnt_Url"/>
+        </property>
+        <property name="libraryCopyright" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Copyright"/>
+        </property>
+        <property name="libraryDataRqrmentCdFltrCdCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_DataRqrment_CdFltr_Cd_Cd"/>
+        </property>
+        <property name="libraryDataRqrmentCdFltrCdDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_DataRqrment_CdFltr_Cd_Dsply"/>
+        </property>
+        <property name="libraryDataRqrmentCdFltrCdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_DataRqrment_CdFltr_Cd_Sys"/>
+        </property>
+        <property name="libraryDataRqrmentCdFltrCdUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_DataRqrment_CdFltr_Cd_UsrSltd"/>
+        </property>
+        <property name="libraryDataRqrmentCdFltrCdVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_DataRqrment_CdFltr_Cd_Vrsn"/>
+        </property>
+        <property name="libraryDataRqrmentCdFltrPath" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_DataRqrment_CdFltr_Path"/>
+        </property>
+        <property name="libraryDataRqrmentCdFltrSrchParam" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_DataRqrment_CdFltr_SrchParam"/>
+        </property>
+        <property name="libraryDataRqrmentCdFltrVlSt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_DataRqrment_CdFltr_VlSt"/>
+        </property>
+        <property name="libraryDataRqrmentDtFltrPath" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_DataRqrment_DtFltr_Path"/>
+        </property>
+        <property name="libraryDataRqrmentDtFltrSrchParam" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_DataRqrment_DtFltr_SrchParam"/>
+        </property>
+        <property name="libraryDataRqrmentDtFltrVlDtTimeTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_DataRqrment_DtFltr_VlDtTimeTyp"/>
+        </property>
+        <property name="libraryDataRqrmentDtFltrVlDurationCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_DataRqrment_DtFltr_VlDuration_Cd"/>
+        </property>
+        <property name="libraryDataRqrmentDtFltrVlDurationCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_DataRqrment_DtFltr_VlDuration_Cmprtr"/>
+        </property>
+        <property name="libraryDataRqrmentDtFltrVlDurationSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_DataRqrment_DtFltr_VlDuration_Sys"/>
+        </property>
+        <property name="libraryDataRqrmentDtFltrVlDurationUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_DataRqrment_DtFltr_VlDuration_Unt"/>
+        </property>
+        <property name="libraryDataRqrmentDtFltrVlDurationVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_DataRqrment_DtFltr_VlDuration_Vl"/>
+        </property>
+        <property name="libraryDataRqrmentDtFltrVlPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_DataRqrment_DtFltr_VlPrd_End"/>
+        </property>
+        <property name="libraryDataRqrmentDtFltrVlPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_DataRqrment_DtFltr_VlPrd_Strt"/>
+        </property>
+        <property name="libraryDataRqrmentLmt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_DataRqrment_Lmt"/>
+        </property>
+        <property name="libraryDataRqrmentMustSupport" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_DataRqrment_MustSupport"/>
+        </property>
+        <property name="libraryDataRqrmentProfile" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_DataRqrment_Profile"/>
+        </property>
+        <property name="libraryDataRqrmentSortDirection" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_DataRqrment_Sort_Direction"/>
+        </property>
+        <property name="libraryDataRqrmentSortPath" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_DataRqrment_Sort_Path"/>
+        </property>
+        <property name="libraryDataRqrmentSbjctCdbleCncptCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_DataRqrment_SbjctCdbleCncpt_Cdg_Cd"/>
+        </property>
+        <property name="libraryDataRqrmentSbjctCdbleCncptCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_DataRqrment_SbjctCdbleCncpt_Cdg_Dsply"/>
+        </property>
+        <property name="libraryDataRqrmentSbjctCdbleCncptCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_DataRqrment_SbjctCdbleCncpt_Cdg_Sys"/>
+        </property>
+        <property name="libraryDataRqrmentSbjctCdbleCncptCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_DataRqrment_SbjctCdbleCncpt_Cdg_UsrSltd"/>
+        </property>
+        <property name="libraryDataRqrmentSbjctCdbleCncptCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_DataRqrment_SbjctCdbleCncpt_Cdg_Vrsn"/>
+        </property>
+        <property name="libraryDataRqrmentSbjctCdbleCncptTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_DataRqrment_SbjctCdbleCncpt_Txt"/>
+        </property>
+        <property name="libraryDataRqrmentSbjctRfrnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_DataRqrment_SbjctRfrnc"/>
+        </property>
+        <property name="libraryDataRqrmentTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_DataRqrment_Typ"/>
+        </property>
+        <property name="libraryDt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Dt"/>
+        </property>
+        <property name="libraryDscrptn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Dscrptn"/>
+        </property>
+        <property name="libraryEditorNm" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Editor_Nm"/>
+        </property>
+        <property name="libraryEditorTlcmPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Editor_Tlcm_Prd_End"/>
+        </property>
+        <property name="libraryEditorTlcmPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Editor_Tlcm_Prd_Strt"/>
+        </property>
+        <property name="libraryEditorTlcmRnk" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Editor_Tlcm_Rnk"/>
+        </property>
+        <property name="libraryEditorTlcmSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Editor_Tlcm_Sys"/>
+        </property>
+        <property name="libraryEditorTlcmUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Editor_Tlcm_Use"/>
+        </property>
+        <property name="libraryEditorTlcmVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Editor_Tlcm_Vl"/>
+        </property>
+        <property name="libraryEfctivePrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_EfctivePrd_End"/>
+        </property>
+        <property name="libraryEfctivePrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_EfctivePrd_Strt"/>
+        </property>
+        <property name="libraryEndsrNm" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Endsr_Nm"/>
+        </property>
+        <property name="libraryEndsrTlcmPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Endsr_Tlcm_Prd_End"/>
+        </property>
+        <property name="libraryEndsrTlcmPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Endsr_Tlcm_Prd_Strt"/>
+        </property>
+        <property name="libraryEndsrTlcmRnk" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Endsr_Tlcm_Rnk"/>
+        </property>
+        <property name="libraryEndsrTlcmSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Endsr_Tlcm_Sys"/>
+        </property>
+        <property name="libraryEndsrTlcmUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Endsr_Tlcm_Use"/>
+        </property>
+        <property name="libraryEndsrTlcmVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Endsr_Tlcm_Vl"/>
+        </property>
+        <property name="libraryExprmtl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Exprmtl"/>
+        </property>
+        <property name="libraryIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Id_Assigner"/>
+        </property>
+        <property name="libraryIdPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Id_Prd_End"/>
+        </property>
+        <property name="libraryIdPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Id_Prd_Strt"/>
+        </property>
+        <property name="libraryIdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Id_Sys"/>
+        </property>
+        <property name="libraryIdTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Id_Typ_Cdg_Cd"/>
+        </property>
+        <property name="libraryIdTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Id_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="libraryIdTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Id_Typ_Cdg_Sys"/>
+        </property>
+        <property name="libraryIdTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Id_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="libraryIdTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Id_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="libraryIdTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Id_Typ_Txt"/>
+        </property>
+        <property name="libraryIdUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Id_Use"/>
+        </property>
+        <property name="libraryIdVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Id_Vl"/>
+        </property>
+        <property name="libraryJrsdctnCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Jrsdctn_Cdg_Cd"/>
+        </property>
+        <property name="libraryJrsdctnCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Jrsdctn_Cdg_Dsply"/>
+        </property>
+        <property name="libraryJrsdctnCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Jrsdctn_Cdg_Sys"/>
+        </property>
+        <property name="libraryJrsdctnCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Jrsdctn_Cdg_UsrSltd"/>
+        </property>
+        <property name="libraryJrsdctnCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Jrsdctn_Cdg_Vrsn"/>
+        </property>
+        <property name="libraryJrsdctnTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Jrsdctn_Txt"/>
+        </property>
+        <property name="libraryLastReviewDt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_LastReviewDt"/>
+        </property>
+        <property name="libraryNm" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Nm"/>
+        </property>
+        <property name="libraryPrmtrDocation" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Prmtr_Docation"/>
+        </property>
+        <property name="libraryPrmtrMx" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Prmtr_Mx"/>
+        </property>
+        <property name="libraryPrmtrMin" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Prmtr_Min"/>
+        </property>
+        <property name="libraryPrmtrNm" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Prmtr_Nm"/>
+        </property>
+        <property name="libraryPrmtrProfile" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Prmtr_Profile"/>
+        </property>
+        <property name="libraryPrmtrTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Prmtr_Typ"/>
+        </property>
+        <property name="libraryPrmtrUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Prmtr_Use"/>
+        </property>
+        <property name="libraryPblshr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Pblshr"/>
+        </property>
+        <property name="libraryPrpse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Prpse"/>
+        </property>
+        <property name="libraryRltedArtfctCitation" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_RltedArtfct_Citation"/>
+        </property>
+        <property name="libraryRltedArtfctDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_RltedArtfct_Dsply"/>
+        </property>
+        <property name="libraryRltedArtfctDocCntntTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_RltedArtfct_Doc_CntntTyp"/>
+        </property>
+        <property name="libraryRltedArtfctDocCreation" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_RltedArtfct_Doc_Creation"/>
+        </property>
+        <property name="libraryRltedArtfctDocData" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_RltedArtfct_Doc_Data"/>
+        </property>
+        <property name="libraryRltedArtfctDocHash" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_RltedArtfct_Doc_Hash"/>
+        </property>
+        <property name="libraryRltedArtfctDocLnguage" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_RltedArtfct_Doc_Lnguage"/>
+        </property>
+        <property name="libraryRltedArtfctDocSz" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_RltedArtfct_Doc_Sz"/>
+        </property>
+        <property name="libraryRltedArtfctDocTtl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_RltedArtfct_Doc_Ttl"/>
+        </property>
+        <property name="libraryRltedArtfctDocUrl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_RltedArtfct_Doc_Url"/>
+        </property>
+        <property name="libraryRltedArtfctLbl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_RltedArtfct_Lbl"/>
+        </property>
+        <property name="libraryRltedArtfctRsrc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_RltedArtfct_Rsrc"/>
+        </property>
+        <property name="libraryRltedArtfctTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_RltedArtfct_Typ"/>
+        </property>
+        <property name="libraryRltedArtfctUrl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_RltedArtfct_Url"/>
+        </property>
+        <property name="libraryRviewrNm" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Rviewr_Nm"/>
+        </property>
+        <property name="libraryRviewrTlcmPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Rviewr_Tlcm_Prd_End"/>
+        </property>
+        <property name="libraryRviewrTlcmPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Rviewr_Tlcm_Prd_Strt"/>
+        </property>
+        <property name="libraryRviewrTlcmRnk" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Rviewr_Tlcm_Rnk"/>
+        </property>
+        <property name="libraryRviewrTlcmSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Rviewr_Tlcm_Sys"/>
+        </property>
+        <property name="libraryRviewrTlcmUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Rviewr_Tlcm_Use"/>
+        </property>
+        <property name="libraryRviewrTlcmVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Rviewr_Tlcm_Vl"/>
+        </property>
+        <property name="librarySts" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Sts"/>
+        </property>
+        <property name="librarySbjctCdbleCncptCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_SbjctCdbleCncpt_Cdg_Cd"/>
+        </property>
+        <property name="librarySbjctCdbleCncptCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_SbjctCdbleCncpt_Cdg_Dsply"/>
+        </property>
+        <property name="librarySbjctCdbleCncptCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_SbjctCdbleCncpt_Cdg_Sys"/>
+        </property>
+        <property name="librarySbjctCdbleCncptCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_SbjctCdbleCncpt_Cdg_UsrSltd"/>
+        </property>
+        <property name="librarySbjctCdbleCncptCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_SbjctCdbleCncpt_Cdg_Vrsn"/>
+        </property>
+        <property name="librarySbjctCdbleCncptTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_SbjctCdbleCncpt_Txt"/>
+        </property>
+        <property name="librarySbjctRfrnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_SbjctRfrnc"/>
+        </property>
+        <property name="librarySubtitle" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Subtitle"/>
+        </property>
+        <property name="libraryTtl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Ttl"/>
+        </property>
+        <property name="libraryTopicCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Topic_Cdg_Cd"/>
+        </property>
+        <property name="libraryTopicCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Topic_Cdg_Dsply"/>
+        </property>
+        <property name="libraryTopicCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Topic_Cdg_Sys"/>
+        </property>
+        <property name="libraryTopicCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Topic_Cdg_UsrSltd"/>
+        </property>
+        <property name="libraryTopicCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Topic_Cdg_Vrsn"/>
+        </property>
+        <property name="libraryTopicTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Topic_Txt"/>
+        </property>
+        <property name="libraryTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Typ_Cdg_Cd"/>
+        </property>
+        <property name="libraryTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="libraryTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Typ_Cdg_Sys"/>
+        </property>
+        <property name="libraryTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="libraryTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="libraryTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Typ_Txt"/>
+        </property>
+        <property name="libraryUrl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Url"/>
+        </property>
+        <property name="libraryUsg" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Usg"/>
+        </property>
+        <property name="libraryUseCntxtCdCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_UseCntxt_Cd_Cd"/>
+        </property>
+        <property name="libraryUseCntxtCdDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_UseCntxt_Cd_Dsply"/>
+        </property>
+        <property name="libraryUseCntxtCdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_UseCntxt_Cd_Sys"/>
+        </property>
+        <property name="libraryUseCntxtCdUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_UseCntxt_Cd_UsrSltd"/>
+        </property>
+        <property name="libraryUseCntxtCdVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_UseCntxt_Cd_Vrsn"/>
+        </property>
+        <property name="libraryUseCntxtVlCdbleCncptCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_UseCntxt_VlCdbleCncpt_Cdg_Cd"/>
+        </property>
+        <property name="libraryUseCntxtVlCdbleCncptCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_UseCntxt_VlCdbleCncpt_Cdg_Dsply"/>
+        </property>
+        <property name="libraryUseCntxtVlCdbleCncptCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_UseCntxt_VlCdbleCncpt_Cdg_Sys"/>
+        </property>
+        <property name="libraryUseCntxtVlCdbleCncptCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_UseCntxt_VlCdbleCncpt_Cdg_UsrSltd"/>
+        </property>
+        <property name="libraryUseCntxtVlCdbleCncptCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_UseCntxt_VlCdbleCncpt_Cdg_Vrsn"/>
+        </property>
+        <property name="libraryUseCntxtVlCdbleCncptTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_UseCntxt_VlCdbleCncpt_Txt"/>
+        </property>
+        <property name="libraryUseCntxtVlQntyCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_UseCntxt_VlQnty_Cd"/>
+        </property>
+        <property name="libraryUseCntxtVlQntyCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_UseCntxt_VlQnty_Cmprtr"/>
+        </property>
+        <property name="libraryUseCntxtVlQntySys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_UseCntxt_VlQnty_Sys"/>
+        </property>
+        <property name="libraryUseCntxtVlQntyUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_UseCntxt_VlQnty_Unt"/>
+        </property>
+        <property name="libraryUseCntxtVlQntyVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_UseCntxt_VlQnty_Vl"/>
+        </property>
+        <property name="libraryUseCntxtVlRngHiCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_UseCntxt_VlRng_Hi_Cd"/>
+        </property>
+        <property name="libraryUseCntxtVlRngHiCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_UseCntxt_VlRng_Hi_Cmprtr"/>
+        </property>
+        <property name="libraryUseCntxtVlRngHiSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_UseCntxt_VlRng_Hi_Sys"/>
+        </property>
+        <property name="libraryUseCntxtVlRngHiUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_UseCntxt_VlRng_Hi_Unt"/>
+        </property>
+        <property name="libraryUseCntxtVlRngHiVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_UseCntxt_VlRng_Hi_Vl"/>
+        </property>
+        <property name="libraryUseCntxtVlRngLwCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_UseCntxt_VlRng_Lw_Cd"/>
+        </property>
+        <property name="libraryUseCntxtVlRngLwCmprtr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_UseCntxt_VlRng_Lw_Cmprtr"/>
+        </property>
+        <property name="libraryUseCntxtVlRngLwSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_UseCntxt_VlRng_Lw_Sys"/>
+        </property>
+        <property name="libraryUseCntxtVlRngLwUnt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_UseCntxt_VlRng_Lw_Unt"/>
+        </property>
+        <property name="libraryUseCntxtVlRngLwVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_UseCntxt_VlRng_Lw_Vl"/>
+        </property>
+        <property name="libraryUseCntxtVlRfrnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_UseCntxt_VlRfrnc"/>
+        </property>
+        <property name="libraryVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Library_Vrsn"/>
+        </property>
+    </class>
+</hibernate-mapping>

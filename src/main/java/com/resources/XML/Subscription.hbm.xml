@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Aug 17, 2022, 11:08:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Subscription" optimistic-lock="none" table="Subscription">
+        <id name="id" type="string">
+            <column length="64" name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="subscriptionChannelEndpoint" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Subscription_Channel_Endpoint"/>
+        </property>
+        <property name="subscriptionChannelHeader" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Subscription_Channel_Header"/>
+        </property>
+        <property name="subscriptionChannelPayload" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Subscription_Channel_Payload"/>
+        </property>
+        <property name="subscriptionChannelTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Subscription_Channel_Typ"/>
+        </property>
+        <property name="subscriptionCntctPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Subscription_Cntct_Prd_End"/>
+        </property>
+        <property name="subscriptionCntctPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Subscription_Cntct_Prd_Strt"/>
+        </property>
+        <property name="subscriptionCntctRnk" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Subscription_Cntct_Rnk"/>
+        </property>
+        <property name="subscriptionCntctSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Subscription_Cntct_Sys"/>
+        </property>
+        <property name="subscriptionCntctUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Subscription_Cntct_Use"/>
+        </property>
+        <property name="subscriptionCntctVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Subscription_Cntct_Vl"/>
+        </property>
+        <property name="subscriptionCriteria" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Subscription_Criteria"/>
+        </property>
+        <property name="subscriptionEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Subscription_End"/>
+        </property>
+        <property name="subscriptionError" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Subscription_Error"/>
+        </property>
+        <property name="subscriptionRsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Subscription_Rsn"/>
+        </property>
+        <property name="subscriptionSts" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Subscription_Sts"/>
+        </property>
+    </class>
+</hibernate-mapping>

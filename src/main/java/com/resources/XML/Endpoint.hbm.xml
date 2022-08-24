@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Aug 17, 2022, 11:08:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Endpoint" optimistic-lock="none" table="Endpoint">
+        <id name="id" type="string">
+            <column length="64" name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="endpointAddr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Endpoint_Addr"/>
+        </property>
+        <property name="endpointConnectionTypCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Endpoint_ConnectionTyp_Cd"/>
+        </property>
+        <property name="endpointConnectionTypDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Endpoint_ConnectionTyp_Dsply"/>
+        </property>
+        <property name="endpointConnectionTypSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Endpoint_ConnectionTyp_Sys"/>
+        </property>
+        <property name="endpointConnectionTypUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Endpoint_ConnectionTyp_UsrSltd"/>
+        </property>
+        <property name="endpointConnectionTypVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Endpoint_ConnectionTyp_Vrsn"/>
+        </property>
+        <property name="endpointCntctPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Endpoint_Cntct_Prd_End"/>
+        </property>
+        <property name="endpointCntctPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Endpoint_Cntct_Prd_Strt"/>
+        </property>
+        <property name="endpointCntctRnk" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Endpoint_Cntct_Rnk"/>
+        </property>
+        <property name="endpointCntctSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Endpoint_Cntct_Sys"/>
+        </property>
+        <property name="endpointCntctUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Endpoint_Cntct_Use"/>
+        </property>
+        <property name="endpointCntctVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Endpoint_Cntct_Vl"/>
+        </property>
+        <property name="endpointHeader" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Endpoint_Header"/>
+        </property>
+        <property name="endpointIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Endpoint_Id_Assigner"/>
+        </property>
+        <property name="endpointIdPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Endpoint_Id_Prd_End"/>
+        </property>
+        <property name="endpointIdPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Endpoint_Id_Prd_Strt"/>
+        </property>
+        <property name="endpointIdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Endpoint_Id_Sys"/>
+        </property>
+        <property name="endpointIdTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Endpoint_Id_Typ_Cdg_Cd"/>
+        </property>
+        <property name="endpointIdTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Endpoint_Id_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="endpointIdTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Endpoint_Id_Typ_Cdg_Sys"/>
+        </property>
+        <property name="endpointIdTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Endpoint_Id_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="endpointIdTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Endpoint_Id_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="endpointIdTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Endpoint_Id_Typ_Txt"/>
+        </property>
+        <property name="endpointIdUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Endpoint_Id_Use"/>
+        </property>
+        <property name="endpointIdVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Endpoint_Id_Vl"/>
+        </property>
+        <property name="endpointManagingOrgnztn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Endpoint_ManagingOrgnztn"/>
+        </property>
+        <property name="endpointNm" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Endpoint_Nm"/>
+        </property>
+        <property name="endpointPayloadMimeTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Endpoint_PayloadMimeTyp"/>
+        </property>
+        <property name="endpointPayloadTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Endpoint_PayloadTyp_Cdg_Cd"/>
+        </property>
+        <property name="endpointPayloadTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Endpoint_PayloadTyp_Cdg_Dsply"/>
+        </property>
+        <property name="endpointPayloadTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Endpoint_PayloadTyp_Cdg_Sys"/>
+        </property>
+        <property name="endpointPayloadTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Endpoint_PayloadTyp_Cdg_UsrSltd"/>
+        </property>
+        <property name="endpointPayloadTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Endpoint_PayloadTyp_Cdg_Vrsn"/>
+        </property>
+        <property name="endpointPayloadTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Endpoint_PayloadTyp_Txt"/>
+        </property>
+        <property name="endpointPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Endpoint_Prd_End"/>
+        </property>
+        <property name="endpointPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Endpoint_Prd_Strt"/>
+        </property>
+        <property name="endpointSts" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Endpoint_Sts"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Aug 17, 2022, 11:08:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="CareTeam" optimistic-lock="none" table="CareTeam">
+        <id name="id" type="string">
+            <column length="64" name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="careTeamCtgryCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CareTeam_Ctgry_Cdg_Cd"/>
+        </property>
+        <property name="careTeamCtgryCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CareTeam_Ctgry_Cdg_Dsply"/>
+        </property>
+        <property name="careTeamCtgryCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CareTeam_Ctgry_Cdg_Sys"/>
+        </property>
+        <property name="careTeamCtgryCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CareTeam_Ctgry_Cdg_UsrSltd"/>
+        </property>
+        <property name="careTeamCtgryCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CareTeam_Ctgry_Cdg_Vrsn"/>
+        </property>
+        <property name="careTeamCtgryTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CareTeam_Ctgry_Txt"/>
+        </property>
+        <property name="careTeamEnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CareTeam_Enc"/>
+        </property>
+        <property name="careTeamIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CareTeam_Id_Assigner"/>
+        </property>
+        <property name="careTeamIdPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CareTeam_Id_Prd_End"/>
+        </property>
+        <property name="careTeamIdPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CareTeam_Id_Prd_Strt"/>
+        </property>
+        <property name="careTeamIdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CareTeam_Id_Sys"/>
+        </property>
+        <property name="careTeamIdTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CareTeam_Id_Typ_Cdg_Cd"/>
+        </property>
+        <property name="careTeamIdTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CareTeam_Id_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="careTeamIdTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CareTeam_Id_Typ_Cdg_Sys"/>
+        </property>
+        <property name="careTeamIdTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CareTeam_Id_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="careTeamIdTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CareTeam_Id_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="careTeamIdTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CareTeam_Id_Typ_Txt"/>
+        </property>
+        <property name="careTeamIdUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CareTeam_Id_Use"/>
+        </property>
+        <property name="careTeamIdVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CareTeam_Id_Vl"/>
+        </property>
+        <property name="careTeamManagingOrgnztn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CareTeam_ManagingOrgnztn"/>
+        </property>
+        <property name="careTeamNm" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CareTeam_Nm"/>
+        </property>
+        <property name="careTeamNtAthrRfrnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CareTeam_Nt_AthrRfrnc"/>
+        </property>
+        <property name="careTeamNtAthrStrgTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CareTeam_Nt_AthrStrgTyp"/>
+        </property>
+        <property name="careTeamNtTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CareTeam_Nt_Txt"/>
+        </property>
+        <property name="careTeamNtTime" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CareTeam_Nt_Time"/>
+        </property>
+        <property name="careTeamPrtcpntMmbr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CareTeam_Prtcpnt_Mmbr"/>
+        </property>
+        <property name="careTeamPrtcpntOnBehalfOf" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CareTeam_Prtcpnt_OnBehalfOf"/>
+        </property>
+        <property name="careTeamPrtcpntPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CareTeam_Prtcpnt_Prd_End"/>
+        </property>
+        <property name="careTeamPrtcpntPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CareTeam_Prtcpnt_Prd_Strt"/>
+        </property>
+        <property name="careTeamPrtcpntRoleCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CareTeam_Prtcpnt_Role_Cdg_Cd"/>
+        </property>
+        <property name="careTeamPrtcpntRoleCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CareTeam_Prtcpnt_Role_Cdg_Dsply"/>
+        </property>
+        <property name="careTeamPrtcpntRoleCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CareTeam_Prtcpnt_Role_Cdg_Sys"/>
+        </property>
+        <property name="careTeamPrtcpntRoleCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CareTeam_Prtcpnt_Role_Cdg_UsrSltd"/>
+        </property>
+        <property name="careTeamPrtcpntRoleCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CareTeam_Prtcpnt_Role_Cdg_Vrsn"/>
+        </property>
+        <property name="careTeamPrtcpntRoleTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CareTeam_Prtcpnt_Role_Txt"/>
+        </property>
+        <property name="careTeamPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CareTeam_Prd_End"/>
+        </property>
+        <property name="careTeamPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CareTeam_Prd_Strt"/>
+        </property>
+        <property name="careTeamRsnCdCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CareTeam_RsnCd_Cdg_Cd"/>
+        </property>
+        <property name="careTeamRsnCdCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CareTeam_RsnCd_Cdg_Dsply"/>
+        </property>
+        <property name="careTeamRsnCdCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CareTeam_RsnCd_Cdg_Sys"/>
+        </property>
+        <property name="careTeamRsnCdCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CareTeam_RsnCd_Cdg_UsrSltd"/>
+        </property>
+        <property name="careTeamRsnCdCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CareTeam_RsnCd_Cdg_Vrsn"/>
+        </property>
+        <property name="careTeamRsnCdTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CareTeam_RsnCd_Txt"/>
+        </property>
+        <property name="careTeamRsnRfrnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CareTeam_RsnRfrnc"/>
+        </property>
+        <property name="careTeamSts" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CareTeam_Sts"/>
+        </property>
+        <property name="careTeamSbjct" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CareTeam_Sbjct"/>
+        </property>
+        <property name="careTeamTlcmPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CareTeam_Tlcm_Prd_End"/>
+        </property>
+        <property name="careTeamTlcmPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CareTeam_Tlcm_Prd_Strt"/>
+        </property>
+        <property name="careTeamTlcmRnk" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CareTeam_Tlcm_Rnk"/>
+        </property>
+        <property name="careTeamTlcmSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CareTeam_Tlcm_Sys"/>
+        </property>
+        <property name="careTeamTlcmUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CareTeam_Tlcm_Use"/>
+        </property>
+        <property name="careTeamTlcmVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="CareTeam_Tlcm_Vl"/>
+        </property>
+    </class>
+</hibernate-mapping>

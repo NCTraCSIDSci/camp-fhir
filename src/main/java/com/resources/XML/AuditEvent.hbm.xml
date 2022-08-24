@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Aug 17, 2022, 11:08:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="AuditEvent" optimistic-lock="none" table="AuditEvent">
+        <id name="id" type="string">
+            <column length="64" name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="auditEvntActn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Actn"/>
+        </property>
+        <property name="auditEvntAgntAltId" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Agnt_AltId"/>
+        </property>
+        <property name="auditEvntAgntLctn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Agnt_Lctn"/>
+        </property>
+        <property name="auditEvntAgntMediaCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Agnt_Media_Cd"/>
+        </property>
+        <property name="auditEvntAgntMediaDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Agnt_Media_Dsply"/>
+        </property>
+        <property name="auditEvntAgntMediaSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Agnt_Media_Sys"/>
+        </property>
+        <property name="auditEvntAgntMediaUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Agnt_Media_UsrSltd"/>
+        </property>
+        <property name="auditEvntAgntMediaVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Agnt_Media_Vrsn"/>
+        </property>
+        <property name="auditEvntAgntNm" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Agnt_Nm"/>
+        </property>
+        <property name="auditEvntAgntNetworkAddr" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Agnt_Network_Addr"/>
+        </property>
+        <property name="auditEvntAgntNetworkTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Agnt_Network_Typ"/>
+        </property>
+        <property name="auditEvntAgntPolicy" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Agnt_Policy"/>
+        </property>
+        <property name="auditEvntAgntPrpseOfUseCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Agnt_PrpseOfUse_Cdg_Cd"/>
+        </property>
+        <property name="auditEvntAgntPrpseOfUseCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Agnt_PrpseOfUse_Cdg_Dsply"/>
+        </property>
+        <property name="auditEvntAgntPrpseOfUseCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Agnt_PrpseOfUse_Cdg_Sys"/>
+        </property>
+        <property name="auditEvntAgntPrpseOfUseCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Agnt_PrpseOfUse_Cdg_UsrSltd"/>
+        </property>
+        <property name="auditEvntAgntPrpseOfUseCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Agnt_PrpseOfUse_Cdg_Vrsn"/>
+        </property>
+        <property name="auditEvntAgntPrpseOfUseTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Agnt_PrpseOfUse_Txt"/>
+        </property>
+        <property name="auditEvntAgntRqstor" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Agnt_Rqstor"/>
+        </property>
+        <property name="auditEvntAgntRoleCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Agnt_Role_Cdg_Cd"/>
+        </property>
+        <property name="auditEvntAgntRoleCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Agnt_Role_Cdg_Dsply"/>
+        </property>
+        <property name="auditEvntAgntRoleCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Agnt_Role_Cdg_Sys"/>
+        </property>
+        <property name="auditEvntAgntRoleCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Agnt_Role_Cdg_UsrSltd"/>
+        </property>
+        <property name="auditEvntAgntRoleCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Agnt_Role_Cdg_Vrsn"/>
+        </property>
+        <property name="auditEvntAgntRoleTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Agnt_Role_Txt"/>
+        </property>
+        <property name="auditEvntAgntTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Agnt_Typ_Cdg_Cd"/>
+        </property>
+        <property name="auditEvntAgntTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Agnt_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="auditEvntAgntTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Agnt_Typ_Cdg_Sys"/>
+        </property>
+        <property name="auditEvntAgntTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Agnt_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="auditEvntAgntTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Agnt_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="auditEvntAgntTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Agnt_Typ_Txt"/>
+        </property>
+        <property name="auditEvntAgntWho" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Agnt_Who"/>
+        </property>
+        <property name="auditEvntEntityDscrptn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Entity_Dscrptn"/>
+        </property>
+        <property name="auditEvntEntityDtlTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Entity_Dtl_Typ"/>
+        </property>
+        <property name="auditEvntEntityDtlVlBase64binaryTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Entity_Dtl_VlBase64BinaryTyp"/>
+        </property>
+        <property name="auditEvntEntityDtlVlStrgTyp" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Entity_Dtl_VlStrgTyp"/>
+        </property>
+        <property name="auditEvntEntityLifecycleCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Entity_Lifecycle_Cd"/>
+        </property>
+        <property name="auditEvntEntityLifecycleDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Entity_Lifecycle_Dsply"/>
+        </property>
+        <property name="auditEvntEntityLifecycleSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Entity_Lifecycle_Sys"/>
+        </property>
+        <property name="auditEvntEntityLifecycleUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Entity_Lifecycle_UsrSltd"/>
+        </property>
+        <property name="auditEvntEntityLifecycleVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Entity_Lifecycle_Vrsn"/>
+        </property>
+        <property name="auditEvntEntityNm" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Entity_Nm"/>
+        </property>
+        <property name="auditEvntEntityQuery" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Entity_Query"/>
+        </property>
+        <property name="auditEvntEntityRoleCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Entity_Role_Cd"/>
+        </property>
+        <property name="auditEvntEntityRoleDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Entity_Role_Dsply"/>
+        </property>
+        <property name="auditEvntEntityRoleSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Entity_Role_Sys"/>
+        </property>
+        <property name="auditEvntEntityRoleUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Entity_Role_UsrSltd"/>
+        </property>
+        <property name="auditEvntEntityRoleVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Entity_Role_Vrsn"/>
+        </property>
+        <property name="auditEvntEntitySecurityLblCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Entity_SecurityLbl_Cd"/>
+        </property>
+        <property name="auditEvntEntitySecurityLblDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Entity_SecurityLbl_Dsply"/>
+        </property>
+        <property name="auditEvntEntitySecurityLblSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Entity_SecurityLbl_Sys"/>
+        </property>
+        <property name="auditEvntEntitySecurityLblUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Entity_SecurityLbl_UsrSltd"/>
+        </property>
+        <property name="auditEvntEntitySecurityLblVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Entity_SecurityLbl_Vrsn"/>
+        </property>
+        <property name="auditEvntEntityTypCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Entity_Typ_Cd"/>
+        </property>
+        <property name="auditEvntEntityTypDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Entity_Typ_Dsply"/>
+        </property>
+        <property name="auditEvntEntityTypSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Entity_Typ_Sys"/>
+        </property>
+        <property name="auditEvntEntityTypUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Entity_Typ_UsrSltd"/>
+        </property>
+        <property name="auditEvntEntityTypVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Entity_Typ_Vrsn"/>
+        </property>
+        <property name="auditEvntEntityWhat" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Entity_What"/>
+        </property>
+        <property name="auditEvntOutcome" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Outcome"/>
+        </property>
+        <property name="auditEvntOutcomeDesc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_OutcomeDesc"/>
+        </property>
+        <property name="auditEvntPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Prd_End"/>
+        </property>
+        <property name="auditEvntPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Prd_Strt"/>
+        </property>
+        <property name="auditEvntPrpseOfEvntCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_PrpseOfEvnt_Cdg_Cd"/>
+        </property>
+        <property name="auditEvntPrpseOfEvntCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_PrpseOfEvnt_Cdg_Dsply"/>
+        </property>
+        <property name="auditEvntPrpseOfEvntCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_PrpseOfEvnt_Cdg_Sys"/>
+        </property>
+        <property name="auditEvntPrpseOfEvntCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_PrpseOfEvnt_Cdg_UsrSltd"/>
+        </property>
+        <property name="auditEvntPrpseOfEvntCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_PrpseOfEvnt_Cdg_Vrsn"/>
+        </property>
+        <property name="auditEvntPrpseOfEvntTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_PrpseOfEvnt_Txt"/>
+        </property>
+        <property name="auditEvntRecorded" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Recorded"/>
+        </property>
+        <property name="auditEvntSrcObserver" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Src_Observer"/>
+        </property>
+        <property name="auditEvntSrcSite" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Src_Site"/>
+        </property>
+        <property name="auditEvntSrcTypCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Src_Typ_Cd"/>
+        </property>
+        <property name="auditEvntSrcTypDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Src_Typ_Dsply"/>
+        </property>
+        <property name="auditEvntSrcTypSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Src_Typ_Sys"/>
+        </property>
+        <property name="auditEvntSrcTypUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Src_Typ_UsrSltd"/>
+        </property>
+        <property name="auditEvntSrcTypVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Src_Typ_Vrsn"/>
+        </property>
+        <property name="auditEvntSubtypeCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Subtype_Cd"/>
+        </property>
+        <property name="auditEvntSubtypeDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Subtype_Dsply"/>
+        </property>
+        <property name="auditEvntSubtypeSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Subtype_Sys"/>
+        </property>
+        <property name="auditEvntSubtypeUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Subtype_UsrSltd"/>
+        </property>
+        <property name="auditEvntSubtypeVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Subtype_Vrsn"/>
+        </property>
+        <property name="auditEvntTypCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Typ_Cd"/>
+        </property>
+        <property name="auditEvntTypDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Typ_Dsply"/>
+        </property>
+        <property name="auditEvntTypSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Typ_Sys"/>
+        </property>
+        <property name="auditEvntTypUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Typ_UsrSltd"/>
+        </property>
+        <property name="auditEvntTypVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="AuditEvnt_Typ_Vrsn"/>
+        </property>
+    </class>
+</hibernate-mapping>

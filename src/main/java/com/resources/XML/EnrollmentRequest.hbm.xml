@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Aug 17, 2022, 11:08:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="EnrollmentRequest" optimistic-lock="none" table="EnrollmentRequest">
+        <id name="id" type="string">
+            <column length="64" name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="enrollmentRqstCandidate" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EnrollmentRqst_Candidate"/>
+        </property>
+        <property name="enrollmentRqstCvg" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EnrollmentRqst_Cvg"/>
+        </property>
+        <property name="enrollmentRqstCreated" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EnrollmentRqst_Created"/>
+        </property>
+        <property name="enrollmentRqstIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EnrollmentRqst_Id_Assigner"/>
+        </property>
+        <property name="enrollmentRqstIdPrdEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EnrollmentRqst_Id_Prd_End"/>
+        </property>
+        <property name="enrollmentRqstIdPrdStrt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EnrollmentRqst_Id_Prd_Strt"/>
+        </property>
+        <property name="enrollmentRqstIdSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EnrollmentRqst_Id_Sys"/>
+        </property>
+        <property name="enrollmentRqstIdTypCdgCd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EnrollmentRqst_Id_Typ_Cdg_Cd"/>
+        </property>
+        <property name="enrollmentRqstIdTypCdgDsply" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EnrollmentRqst_Id_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="enrollmentRqstIdTypCdgSys" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EnrollmentRqst_Id_Typ_Cdg_Sys"/>
+        </property>
+        <property name="enrollmentRqstIdTypCdgUsrSltd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EnrollmentRqst_Id_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="enrollmentRqstIdTypCdgVrsn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EnrollmentRqst_Id_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="enrollmentRqstIdTypTxt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EnrollmentRqst_Id_Typ_Txt"/>
+        </property>
+        <property name="enrollmentRqstIdUse" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EnrollmentRqst_Id_Use"/>
+        </property>
+        <property name="enrollmentRqstIdVl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EnrollmentRqst_Id_Vl"/>
+        </property>
+        <property name="enrollmentRqstInsurer" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EnrollmentRqst_Insurer"/>
+        </property>
+        <property name="enrollmentRqstProvider" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EnrollmentRqst_Provider"/>
+        </property>
+        <property name="enrollmentRqstSts" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="EnrollmentRqst_Sts"/>
+        </property>
+    </class>
+</hibernate-mapping>
