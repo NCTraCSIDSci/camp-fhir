@@ -1,0 +1,10 @@
+{
+	"sqldialects":"org.hibernate.dialect.Oracle12cDialect",
+	"driverclass":"oracle.jdbc.OracleDriver",
+	"dburl":"jdbc:oracle:thin:@","dbusername":"","dbpassword":"password",
+	"outputfolder":"/opt/CAMPFHIR/Patient",
+	"partition":"1000",
+	"resourceconfiguration":"",
+	"resource":"Patient",
+	"custommapping":"false"
+}

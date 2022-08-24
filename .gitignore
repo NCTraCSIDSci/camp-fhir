@@ -1,6 +1,0 @@
-scripts/ACT_2FHIR_Scripts/1_Create_and_populate_mapping_tbl_ACT.sql
-scripts/ACT_2FHIR_Scripts/2_Create_CAMPFHIR_views_ACT.sql
-scripts/ACT_2FHIR_Scripts/ACT_to_FHIR_Mapping.xlsx
-scripts/ACT_2FHIR_Validation/ACT_FHIR_Validation.sql
-scripts/ACT_2FHIR_Validation/Validation_Of_ACT_on_CAMPFHIR.docx
-scripts/ACT_2FHIR_Validation/ACT_FHIR_Validation.sql
