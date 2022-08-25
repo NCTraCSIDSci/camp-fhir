@@ -1,9 +1,7 @@
 package main.java.utils;
 import java.io.ByteArrayInputStream;
-<<<<<<< HEAD
 import java.io.File;
-=======
->>>>>>> master
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.nio.file.Path;
@@ -47,11 +45,8 @@ public class HibernateBaseDB
 	        properties.put("hibernate.connection.url", cf.getDburl());
 	        properties.put("hibernate.connection.username", cf.getDbusername());
 	        properties.put("hibernate.connection.password", cf.getDbpassword());
-<<<<<<< HEAD
 	        properties.put("show_sql", "true");
-=======
-	        properties.put("show_sql", "false");
->>>>>>> master
+
 	        configuration.setProperties(properties);
 	        
 	        byte[] ba = cf.getResourceconfiguration().getBytes();
@@ -59,15 +54,15 @@ public class HibernateBaseDB
 	       
 	        if(cf.getCustommapping().equalsIgnoreCase("false"))
 	        {
-<<<<<<< HEAD
-	        	Path path = Paths.get("./src/main/java/com/resources/XML/Patient.hbm.xml");
-	        	//System.out.println(path);
-//	        	configuration.addClass(main.java.com.campfhir.model.Patient.class); //path.toAbsolutePath().toString()
-	        	configuration.addResource("Patient.hbm.xml"); //path.toAbsolutePath().toString()
-
-=======
+//<<<<<<< HEAD
+//	        	Path path = Paths.get("./src/main/java/com/resources/XML/Patient.hbm.xml");
+//	        	//System.out.println(path);
+////	        	configuration.addClass(main.java.com.campfhir.model.Patient.class); //path.toAbsolutePath().toString()
+//	        	configuration.addResource("Patient.hbm.xml"); //path.toAbsolutePath().toString()
+//
+//=======
 	        	configuration.addResource("table.hbm.xml");
->>>>>>> master
+//>>>>>>> master
 	        }
 	        else 
 	        {
