@@ -31,9 +31,7 @@ import main.java.com.campfhir.model.Campfhir;
 */
 public class HibernateBaseDB 
 {
-	    private static FileInputStream fileInputStream;
-
-		public static SessionFactory getSessionFactory(Campfhir cf) 
+	    public static SessionFactory getSessionFactory(Campfhir cf) 
 	    		throws ParserConfigurationException, SAXException, IOException 
 	    {
 
@@ -51,24 +49,8 @@ public class HibernateBaseDB
 	        
 	        byte[] ba = cf.getResourceconfiguration().getBytes();
 	        ByteArrayInputStream f = new ByteArrayInputStream(ba);
-	       
-	        if(cf.getCustommapping().equalsIgnoreCase("false"))
-	        {
-//<<<<<<< HEAD
-//	        	Path path = Paths.get("./src/main/java/com/resources/XML/Patient.hbm.xml");
-//	        	//System.out.println(path);
-////	        	configuration.addClass(main.java.com.campfhir.model.Patient.class); //path.toAbsolutePath().toString()
-//	        	configuration.addResource("Patient.hbm.xml"); //path.toAbsolutePath().toString()
-//
-//=======
-	        	configuration.addResource("table.hbm.xml");
-//>>>>>>> master
-	        }
-	        else 
-	        {
-	        	configuration.addInputStream(f);
-	        }
-	        
+
+	        configuration.addResource(cf.getResource()+".hbm.xml");
 	        
 	        ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
 	        .applySettings(configuration.getProperties()).build();
