@@ -4,7 +4,10 @@ package main.java.com.campfhir.model;
 
 
 
-public class DocumentReference  implements java.io.Serializable {
+public class DocumentReference implements java.io.Serializable extends Resource{
+
+
+	private static final long serialVersionUID = 1L;
 
 
      private String id;
