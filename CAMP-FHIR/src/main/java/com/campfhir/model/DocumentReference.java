@@ -3,8 +3,7 @@ package main.java.com.campfhir.model;
 // Generated Aug 17, 2022, 11:08:48 AM by Hibernate Tools 5.6.1.Final
 
 
-
-public class DocumentReference implements java.io.Serializable extends Resource{
+public class DocumentReference  extends Resource {
 
 
 	private static final long serialVersionUID = 1L;
