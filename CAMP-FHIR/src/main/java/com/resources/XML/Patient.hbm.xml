@@ -434,5 +434,45 @@
    <meta attribute="resource-type"/>
    <column length="65535" name="Pnt_Tlcm_Vl"/>
   </property>
+     <property generated="never" lazy="false" name="pntAddrExtLatVl" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Addr_Ext_Lat_Vl"/>
+  </property>
+    <property generated="never" lazy="false" name="pntAddrExtLongVl" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Addr_Ext_Long_Vl"/>
+  </property>
+  <property generated="never" lazy="false" name="pntExtRace" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Ext_Race"/>
+  </property>
+  <property generated="never" lazy="false" name="pntExtRaceSys" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Ext_Race_Sys"/>
+  </property>
+  <property generated="never" lazy="false" name="pntExtRaceDsply" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Ext_Race_Dsply"/>
+  </property>
+  <property generated="never" lazy="false" name="pntExtRaceVl" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Ext_Race_Vl"/>
+  </property>
+  <property generated="never" lazy="false" name="pntExtEthn" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Ext_Ethn"/>
+  </property>
+  <property generated="never" lazy="false" name="pntExtEthnSys" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Ext_Ethn_Sys"/>
+  </property>
+  <property generated="never" lazy="false" name="pntExtEthnDsply" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Ext_Ethn_Dsply"/>
+  </property>
+  <property generated="never" lazy="false" name="pntExtRaceVl" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Ext_Ethn_Vl"/>
+  </property>
  </class>
 </hibernate-mapping>
