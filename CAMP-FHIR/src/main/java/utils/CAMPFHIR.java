@@ -13,16 +13,6 @@ import org.xml.sax.SAXException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import main.java.com.campfhir.model.Campfhir;
-import main.java.com.campfhir.service.ConditionService;
-
-import main.java.com.campfhir.service.DeviceService;
-import main.java.com.campfhir.service.DocumentReferenceService;
-import main.java.com.campfhir.service.EncounterService;
-import main.java.com.campfhir.service.MedicationRequestService;
-import main.java.com.campfhir.service.ObservationService;
-import main.java.com.campfhir.service.PatientService;
-import main.java.com.campfhir.service.PractitionerService;
-import main.java.com.campfhir.service.ProcedureService;
 import main.java.com.campfhir.service.ResourceService;
 
 /**
