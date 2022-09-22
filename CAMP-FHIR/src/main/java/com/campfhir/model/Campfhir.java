@@ -13,6 +13,7 @@ public class Campfhir
 	private String sqldialects;
 	private String custommapping;	
 	private String driverclass;
+	private String format;
 	
 	public String getResource() 
 	{
@@ -126,6 +127,14 @@ public class Campfhir
 
 	public void setDriverclass(String driverclass) {
 		this.driverclass = driverclass;
+	}
+
+	public String getFormat() {
+		return format;
+	}
+
+	public void setFormat(String format) {
+		this.format = format;
 	}
 
 
