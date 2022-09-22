@@ -5,6 +5,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.nio.charset.StandardCharsets;
@@ -94,7 +95,7 @@ public class ResourceService
 			{
 		    	session.clear();		    	
 		    	
-		    	writeFile(cf.getOutputfolder(), i, bundle);
+		    	writeFile(cf, i, bundle);
 			    bundle = new Bundle().setType(BundleType.COLLECTION);
 			}
 			
@@ -108,17 +109,19 @@ public class ResourceService
 			bundle.addEntry(b);
 	     }
 	     
-	     writeFile(cf.getOutputfolder(), i, bundle);
+	     writeFile(cf, i, bundle);
 	}
 	
-	public static void writeFile(String path, int domain, Bundle bundle)
+	public static void writeFile(Campfhir cf, int domain, Bundle bundle)
 	{			
 		FhirContext ctx = FhirContext.forR4();
-		String file = ctx.newJsonParser().setPrettyPrint(true).encodeResourceToString(bundle);
+		//String file = ctx.newJsonParser().setPrettyPrint(true).encodeResourceToString(bundle);
+		
+		String file = ctx.newRDFParser().encodeResourceToString(bundle);
 		
 		try 
 		{
-			BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(path+"/"+domain+".json", true), StandardCharsets.UTF_8));
+			BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(cf.getOutputfolder()+"/"+domain+"."+cf.getFormat(), true), StandardCharsets.UTF_8));
 		    writer.write(file);
 		    writer.close();
 		} 
@@ -127,6 +130,4 @@ public class ResourceService
 			e.printStackTrace();
 		}
 	}
-
-
 }
