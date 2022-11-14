@@ -9,6 +9,8 @@ import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.nio.charset.StandardCharsets;
+import java.util.Iterator;
+import java.util.List;
 
 import javax.xml.parsers.ParserConfigurationException;
 
@@ -103,8 +105,8 @@ public class ResourceService
 			
 			b = new BundleEntryComponent();
 			
-			b.setFullUrl("https://www.hl7.org/fhir/patient.html")
-			.setResource((Resource) method.invoke(myClassObject, records.get(0)));  	
+			b.setFullUrl("https://www.hl7.org/fhir/"+cf.getResource()+".html")
+			.setResource((Resource) method.invoke(myClassObject, records.get()));  	
 			
 			bundle.addEntry(b);
 	     }
@@ -115,9 +117,9 @@ public class ResourceService
 	public static void writeFile(Campfhir cf, int domain, Bundle bundle)
 	{			
 		FhirContext ctx = FhirContext.forR4();
-		//String file = ctx.newJsonParser().setPrettyPrint(true).encodeResourceToString(bundle);
+		String file = ctx.newJsonParser().setPrettyPrint(true).encodeResourceToString(bundle);
 		
-		String file = ctx.newRDFParser().encodeResourceToString(bundle);
+		//String file = ctx.newRDFParser().encodeResourceToString(bundle);
 		
 		try 
 		{
@@ -130,4 +132,22 @@ public class ResourceService
 			e.printStackTrace();
 		}
 	}
+	
+	public void persist(List<main.java.com.campfhir.model.Resource> patList, Campfhir cf) throws ParserConfigurationException, SAXException, IOException, ClassNotFoundException 
+	{
+		ClassLoader classLoader = this.getClass().getClassLoader();
+		Class<?> loadedMyClass = classLoader.loadClass("main.java.com.campfhir.service.bidirectionalconversion."+cf.getResource()+"BidirectionalConversion");
+		Iterator<main.java.com.campfhir.model.Resource> resourceIterator = patList.iterator();
+		
+		resourceDao.openCurrentSessionwithTransaction(cf);
+		
+		while (resourceIterator.hasNext()) 
+		{
+			resourceDao.persist((main.java.com.campfhir.model.Resource) resourceIterator.next());
+		}
+		
+		resourceDao.closeCurrentSessionwithTransaction();
+	}
+
+
 }

@@ -13,7 +13,6 @@ import javax.xml.parsers.ParserConfigurationException;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
-import org.hibernate.internal.util.xml.XmlDocument;
 import org.hibernate.service.ServiceRegistry;
 import org.xml.sax.SAXException;
 

@@ -1,11 +1,12 @@
 {
 	"sqldialects":"org.hibernate.dialect.H2Dialect",
 	"driverclass":"org.h2.Driver",
-	"dburl":"jdbc:h2:C:\\Users\\pikovach\\Downloads\\_\\CAMPFHIR_ECLIPSE\\workspace\\Demo_Database\\OMOP_H2.db"
+	"dburl":"jdbc:h2:C:\\Users\\pikovach\\Downloads\\CAMPFHIR_1.0\\CAMPFHIR_ECLIPSE\\workspace\\Demo_Database\\OMOP_H2.db"
 	,"dbusername":"demo","dbpassword":"demo",
 	"outputfolder":"C:\\Users\\pikovach\\camp-fhir-output",
 	"partition":"1000",
 	"resourceconfiguration":"",
 	"resource":"Patient",
-	"custommapping":"false"
+	"custommapping":"false",
+	"format": "json"
 }

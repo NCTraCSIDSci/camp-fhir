@@ -3,6 +3,7 @@ import java.io.File;
 
 
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
@@ -25,24 +26,24 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import ca.uhn.fhir.context.FhirContext;
 import ca.uhn.fhir.rest.client.api.IGenericClient;
 import ca.uhn.fhir.rest.gclient.TokenClientParam;
+import main.java.com.campfhir.dao.ResourceDao;
 import main.java.com.campfhir.model.Campfhir;
-import main.java.com.campfhir.service.PatientService;
+import main.java.com.campfhir.model.Resource;
+import main.java.com.campfhir.service.ResourceService;
 import main.java.com.campfhir.service.bidirectionalconversion.PatientBidirectionalConversion;
 import main.java.com.campfhir.service.conversion.PatientConversion;
-
-import main.java.com.campfhir.dao.PatientDao;
 public class PatientConversionTest {
 	
 private static PatientConversion pc;
-private static PatientService patientService;
-private static PatientDao patientDao;
+private static ResourceService patientService;
+private static ResourceDao patientDao;
 private static PatientBidirectionalConversion PatientBidirectionalConversion;
 
 
 FhirContext ctx = FhirContext.forR4();
 IGenericClient client = ctx.newRestfulGenericClient("http://hapi.fhir.org/baseR4");
 @Test
-	void testBiConversion() throws ParseException, JsonParseException, JsonMappingException, IOException, HibernateException, FHIRException, ParserConfigurationException, SAXException 
+	void testBiConversion() throws ParseException, JsonParseException, JsonMappingException, IOException, HibernateException, FHIRException, ParserConfigurationException, SAXException, ClassNotFoundException 
 	{
 
 		File directory = new File("config.json");
@@ -62,16 +63,16 @@ IGenericClient client = ctx.newRestfulGenericClient("http://hapi.fhir.org/baseR4
 			//	 .limitTo(100)
 				 .execute();
 		PatientBidirectionalConversion pbc = new PatientBidirectionalConversion();
-		List<main.java.com.campfhir.model.Patient> patList = new ArrayList<main.java.com.campfhir.model.Patient>();
+		List<main.java.com.campfhir.model.Resource> patList = new ArrayList<main.java.com.campfhir.model.Resource>();
 		System.out.println(ctx.newJsonParser().setPrettyPrint(true).encodeResourceToString(bundle));
 		for (BundleEntryComponent bec :  bundle.getEntry()) 
 		{ 
-		    Patient pat = (Patient) bec.getResource();
-		    main.java.com.campfhir.model.Patient pathibernate =  pbc.Patients(pat);
+			org.hl7.fhir.r4.model.Resource pat = bec.getResource();
+			main.java.com.campfhir.model.Resource pathibernate = (main.java.com.campfhir.model.Resource) pbc.Patients((Patient) pat);
 		    patList.add(pathibernate);
 		}
 		
-		new PatientService().persist(patList, cf);
+		new  ResourceService().persist(patList, cf);
 			     
 	//	}
 		System.out.println("Finished");
@@ -80,19 +81,13 @@ IGenericClient client = ctx.newRestfulGenericClient("http://hapi.fhir.org/baseR4
 	}
 
 	@Test
-	void testConversion() throws ParseException, JsonParseException, JsonMappingException, IOException, HibernateException, FHIRException, ParserConfigurationException, SAXException 
+	void testConversion() throws ParseException, JsonParseException, JsonMappingException, IOException, HibernateException, FHIRException, ParserConfigurationException, SAXException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, ClassNotFoundException, NoSuchMethodException, SecurityException, InstantiationException 
 	{
-	
 		File directory = new File("config.json");
 		ObjectMapper mapper = new ObjectMapper();
 	    Campfhir cf = mapper.readValue(new File(directory.getAbsolutePath()), Campfhir.class);
-	
 		int p = Integer.parseInt(cf.getPartition());
-		new PatientService().findAll(p, cf);
-		
-
-		
-			
+		new  ResourceService().findAll(cf);			
 	}
 }
 

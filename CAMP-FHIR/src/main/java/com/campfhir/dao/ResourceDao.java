@@ -13,7 +13,8 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
-import org.hl7.fhir.r4.model.Resource;
+//import org.hl7.fhir.r4.model.Resource;
+import main.java.com.campfhir.model.Resource;
 import org.xml.sax.SAXException;
 
 import main.java.com.campfhir.model.Campfhir;
@@ -43,14 +44,14 @@ public class ResourceDao implements ResourceDaoInterface<Resource, String>
 		return currentSession;
 	}
 
-//	public Session openCurrentSessionwithTransaction() 
-//			throws ParserConfigurationException, SAXException, IOException 
-//	{
-//		sessionFactory = HibernateBaseDB.getSessionFactory();
-//		currentSession = sessionFactory.openSession();
-//		currentTransaction = currentSession.beginTransaction();
-//		return currentSession;
-//	}
+	public Session openCurrentSessionwithTransaction(Campfhir cf) 
+			throws ParserConfigurationException, SAXException, IOException 
+	{
+		sessionFactory = HibernateBaseDB.getSessionFactory(cf);
+		currentSession = sessionFactory.openSession();
+		currentTransaction = currentSession.beginTransaction();
+		return currentSession;
+	}
 	
 	public void closeCurrentSession() 
 	{
@@ -92,10 +93,6 @@ public class ResourceDao implements ResourceDaoInterface<Resource, String>
 		this.currentTransaction = currentTransaction;
 	}
 
-	public void persist(Resource entity) 
-	{
-		getCurrentSession().save(entity);
-	}
 
 //	public ScrollableResults findAll(int start, int max) 
 //	{
@@ -119,5 +116,18 @@ public class ResourceDao implements ResourceDaoInterface<Resource, String>
 		    .scroll(ScrollMode.FORWARD_ONLY);
 		
 		return patients;
+	}
+
+//	@SuppressWarnings("deprecation")
+//	public void persist(Campfhir cf, main.java.com.campfhir.model.Resource resource) {
+//		getCurrentSession().save(cf.getResource(), resource);
+//
+//		
+//	}
+
+	@Override
+	public void persist(Resource entity) {
+		getCurrentSession().save(entity);
+		
 	}
 }
