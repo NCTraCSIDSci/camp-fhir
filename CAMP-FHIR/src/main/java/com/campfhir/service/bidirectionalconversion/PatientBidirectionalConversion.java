@@ -1,5 +1,10 @@
 package main.java.com.campfhir.service.bidirectionalconversion;
 import java.text.ParseException;
+
+import org.hl7.fhir.r4.model.Coding;
+import org.hl7.fhir.r4.model.Extension;
+import org.hl7.fhir.r4.model.Type;
+
 import main.java.com.campfhir.model.Patient;
 public class PatientBidirectionalConversion 
 {
@@ -1452,7 +1457,29 @@ public class PatientBidirectionalConversion
 			p.addPntManagingOrgnztn("NULL");
 		}
 
+		/******************** PNT_RACE **************************************************************************************
+		 * PNT_RACE maps to Patient / extension / race / coding / code
+		 ********************************************************************************************************************/
+		
+//		org.hl7.fhir.r4.model.Extension race = new org.hl7.fhir.r4.model.Extension().setUrl("http://hl7.org/fhir/us/core/StructureDefinition/us-core-race").setValue(new org.hl7.fhir.r4.model.Coding().setCode(p.getPntRace()).setSystem(p.getPntRaceSystem()).setDisplay(p.getPntRaceDisplay())); 
+		Extension raceex = patient.getExtensionByUrl("http://hl7.org/fhir/us/core/StructureDefinition/us-core-race");
+		if(raceex != null ) {
+			p.setPntRaceSystem(((Coding) raceex.getValue()).getSystem());
+			p.setPntRaceDisplay(((Coding) raceex.getValue()).getDisplay());
+			p.setPntRace(((Coding) raceex.getValue()).getCode());
+		}
+		/******************** PNT_ETHNICITY *********************************************************************************
+		 * PNT_ETHNICITY maps to Patient / extension / ethnicity / coding / code
+		 ********************************************************************************************************************/
+		Extension ethex = patient.getExtensionByUrl("http://terminology.hl7.org/ValueSet/v3-Ethnicity");
+		if(ethex != null ) {
+			p.setPntEthSystem(((Coding) ethex.getValue()).getSystem());
+			p.setPntEthDisplay(((Coding) ethex.getValue()).getDisplay());
+			p.setPntEth(((Coding) ethex.getValue()).getCode());
+		}
 
+//		org.hl7.fhir.r4.model.Extension ethnicity = new org.hl7.fhir.r4.model.Extension().setUrl("http://terminology.hl7.org/ValueSet/v3-Ethnicity").setValue(new org.hl7.fhir.r4.model.Coding().setCode(p.getPntEth()).setDisplay(p.getPntEthDisplay()).setSystem(p.getPntEthSystem())); 
+//		patient.addExtension(ethnicity);
 		return p;
 	}
 }
