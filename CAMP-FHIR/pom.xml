@@ -112,6 +112,12 @@
 		    <artifactId>sqlite-jdbc</artifactId>
 		    <version>3.39.3.0</version>
 		</dependency>
+<!-- https://mvnrepository.com/artifact/org.reflections/reflections -->
+<dependency>
+    <groupId>org.reflections</groupId>
+    <artifactId>reflections</artifactId>
+    <version>0.10.2</version>
+</dependency>
 
 		
 		<!-- https://mvnrepository.com/artifact/com.oracle.jdbc/ojdbc8 -->
