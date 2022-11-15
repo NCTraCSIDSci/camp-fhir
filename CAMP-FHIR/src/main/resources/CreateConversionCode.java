@@ -54,7 +54,6 @@ class CreateConversionCode
 
          	//            Set<Method> getters = ReflectionUtils.getAllMethods(cls,ReflectionUtils.withModifier(Modifier.PUBLIC), ReflectionUtils.withPrefix("get"));
          	//get all add methods with one parameters, with a return type of the fhir model class that we are in
- //       	if(className.equals("activitydefinition")) {
 	         	if(!className.equals("examplescenario") & !className.equals("structuremap") & !className.equals("graphdefinition") & !className.equals("implementationguide") & !className.equals("metadataresource")) {
 	         		//writing head of conversion file
 	         		 conversionWriter.write("package main.java.com.campfhir.service.conversion;");
