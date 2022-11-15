@@ -1,22 +1,22 @@
 package main.java.utils;
+import java.io.ByteArrayInputStream;
 import java.io.File;
+
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Properties;
 
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
-import org.apache.commons.io.IOUtils;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
-import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
+
+import main.java.com.campfhir.model.Campfhir;
 
 /**
 * HibernateBaseDB is a class that programmatically constructs
@@ -30,34 +30,26 @@ import org.xml.sax.SAXException;
 */
 public class HibernateBaseDB 
 {
-	    private static FileInputStream fileInputStream;
-
-		public static SessionFactory getSessionFactory() 
+	    public static SessionFactory getSessionFactory(Campfhir cf) 
 	    		throws ParserConfigurationException, SAXException, IOException 
 	    {
-	    	java.util.Properties properties = new Properties();
-	    	try 
-	    	{
-				//fileInputStream = new FileInputStream("//unch/dfs/home/u168465/config.properties");	
-	    		fileInputStream = new FileInputStream(System.getProperty("CONFIG").concat("/config.properties"));				
-				properties.load(fileInputStream);
-			} 
-	    	catch (FileNotFoundException e) 
-	    	{
-				e.printStackTrace();
-			} 
-	    	catch (IOException e) 
-	    	{
-				e.printStackTrace();
-			}
-	  
-	        Configuration configuration = new Configuration();
 
-	        DocumentBuilderFactory dbfac = DocumentBuilderFactory.newInstance();
-	        configuration.configure("hibernate.cfg.xml").addProperties(properties);
-			configuration.addResource("file://".concat(System.getProperty("CONFIG").concat("/table.hbm.xml")));
-			
+	        Configuration configuration = new Configuration();
 	        
+	        Properties properties = new Properties();
+	        properties.put("hibernate.dialect", cf.getSqldialects());
+	        properties.put("hibernate.connection.driver_class", cf.getDriverclass());
+	        properties.put("hibernate.connection.url", cf.getDburl());
+	        properties.put("hibernate.connection.username", cf.getDbusername());
+	        properties.put("hibernate.connection.password", cf.getDbpassword());
+	        properties.put("show_sql", "true");
+
+	        configuration.setProperties(properties);
+	        
+	        byte[] ba = cf.getResourceconfiguration().getBytes();
+	        ByteArrayInputStream f = new ByteArrayInputStream(ba);
+
+	        configuration.addResource(cf.getResource()+".hbm.xml");
 	        
 	        ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
 	        .applySettings(configuration.getProperties()).build();
@@ -66,4 +58,4 @@ public class HibernateBaseDB
 	        .buildSessionFactory(serviceRegistry);
 	        return sessionFactory;
 	    }
-	}
+}

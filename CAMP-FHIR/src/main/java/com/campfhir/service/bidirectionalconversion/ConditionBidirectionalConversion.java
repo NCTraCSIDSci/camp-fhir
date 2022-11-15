@@ -583,8 +583,10 @@ public class ConditionBidirectionalConversion
 
 		 };
 		/******************** conditiononrange ********************************************************************************/
-		org.hl7.fhir.r4.model.Range conditiononrange = condition.getOnsetRange();
-
+		 org.hl7.fhir.r4.model.Range conditiononrange = null;
+		 if(condition.hasOnsetRange()) {
+			 conditiononrange = condition.getOnsetRange();
+		 
 		/******************** conditiononrangelow ********************************************************************************/
 		org.hl7.fhir.r4.model.Quantity conditiononrangelow = conditiononrange.getLow();
 
@@ -677,10 +679,10 @@ public class ConditionBidirectionalConversion
 		} else {
 			c.addCndtnOnRngHiSys("NULL");
 		}
-
-
+		 }
 		/******************** conditionabatementperiod ********************************************************************************/
-		org.hl7.fhir.r4.model.Period conditionabatementperiod = condition.getAbatementPeriod();
+		if(condition.hasAbatementPeriod()) {
+		 org.hl7.fhir.r4.model.Period conditionabatementperiod = condition.getAbatementPeriod();
 
 		/******************** Cndtn_AbatementPrd_Strt ********************************************************************************/
 		if(conditionabatementperiod.hasStart()) {
@@ -745,7 +747,7 @@ public class ConditionBidirectionalConversion
 		} else {
 			c.addCndtnOnAgeSys("NULL");
 		}
-
+		}
 
 		/******************** conditionbodysite ********************************************************************************/
 		java.util.List<org.hl7.fhir.r4.model.CodeableConcept> conditionbodysitelist = condition.getBodySite();
@@ -832,7 +834,8 @@ public class ConditionBidirectionalConversion
 		 };
 		 };
 		/******************** conditiononperiod ********************************************************************************/
-		org.hl7.fhir.r4.model.Period conditiononperiod = condition.getOnsetPeriod();
+		if(condition.hasOnsetPeriod()) {
+		 org.hl7.fhir.r4.model.Period conditiononperiod = condition.getOnsetPeriod();
 
 		/******************** Cndtn_OnPrd_Strt ********************************************************************************/
 		if(conditiononperiod.hasStart()) {
@@ -851,7 +854,8 @@ public class ConditionBidirectionalConversion
 			c.addCndtnOnPrdEnd("NULL");
 		}
 
-
+		}
+		if(condition.hasAbatementAge()) {
 		/******************** conditionabatementage ********************************************************************************/
 		org.hl7.fhir.r4.model.Age conditionabatementage = condition.getAbatementAge();
 
@@ -898,7 +902,7 @@ public class ConditionBidirectionalConversion
 			c.addCndtnAbatementAgeSys("NULL");
 		}
 
-
+		}
 		/******************** conditionstage ********************************************************************************/
 		java.util.List<org.hl7.fhir.r4.model.Condition.ConditionStageComponent> conditionstagelist = condition.getStage();
 		for(int conditionstagei = 0; conditionstagei<conditionstagelist.size();conditionstagei++ ) {

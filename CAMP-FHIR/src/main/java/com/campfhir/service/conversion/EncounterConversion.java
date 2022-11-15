@@ -1558,6 +1558,7 @@ public class EncounterConversion
 				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {encounter.getType().get(i0).setText(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
 			}
 
+
 		}
 		return encounter;
 	}

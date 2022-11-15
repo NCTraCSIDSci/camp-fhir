@@ -1,426 +1,478 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Aug 17, 2022, 11:08:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<hibernate-mapping>
-    <class catalog="campfhir" name="Patient" optimistic-lock="none" table="Patient">
-        <id name="id" type="string">
-            <column length="64" name="id"/>
-            <generator class="identity"/>
-        </id>
-        <property name="pntActive" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Active"/>
-        </property>
-        <property name="pntAddrCity" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Addr_City"/>
-        </property>
-        <property name="pntAddrCntry" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Addr_Cntry"/>
-        </property>
-        <property name="pntAddrDistrict" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Addr_District"/>
-        </property>
-        <property name="pntAddrLine" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Addr_Line"/>
-        </property>
-        <property name="pntAddrPrdEnd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Addr_Prd_End"/>
-        </property>
-        <property name="pntAddrPrdStrt" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Addr_Prd_Strt"/>
-        </property>
-        <property name="pntAddrPostalCd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Addr_PostalCd"/>
-        </property>
-        <property name="pntAddrState" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Addr_State"/>
-        </property>
-        <property name="pntAddrTxt" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Addr_Txt"/>
-        </property>
-        <property name="pntAddrTyp" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Addr_Typ"/>
-        </property>
-        <property name="pntAddrUse" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Addr_Use"/>
-        </property>
-        <property name="pntBirthDt" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_BirthDt"/>
-        </property>
-        <property name="pntCmmnctnLnguageCdgCd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Cmmnctn_Lnguage_Cdg_Cd"/>
-        </property>
-        <property name="pntCmmnctnLnguageCdgDsply" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Cmmnctn_Lnguage_Cdg_Dsply"/>
-        </property>
-        <property name="pntCmmnctnLnguageCdgSys" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Cmmnctn_Lnguage_Cdg_Sys"/>
-        </property>
-        <property name="pntCmmnctnLnguageCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Cmmnctn_Lnguage_Cdg_UsrSltd"/>
-        </property>
-        <property name="pntCmmnctnLnguageCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Cmmnctn_Lnguage_Cdg_Vrsn"/>
-        </property>
-        <property name="pntCmmnctnLnguageTxt" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Cmmnctn_Lnguage_Txt"/>
-        </property>
-        <property name="pntCmmnctnPreferred" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Cmmnctn_Preferred"/>
-        </property>
-        <property name="pntCntctAddrCity" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Cntct_Addr_City"/>
-        </property>
-        <property name="pntCntctAddrCntry" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Cntct_Addr_Cntry"/>
-        </property>
-        <property name="pntCntctAddrDistrict" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Cntct_Addr_District"/>
-        </property>
-        <property name="pntCntctAddrLine" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Cntct_Addr_Line"/>
-        </property>
-        <property name="pntCntctAddrPrdEnd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Cntct_Addr_Prd_End"/>
-        </property>
-        <property name="pntCntctAddrPrdStrt" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Cntct_Addr_Prd_Strt"/>
-        </property>
-        <property name="pntCntctAddrPostalCd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Cntct_Addr_PostalCd"/>
-        </property>
-        <property name="pntCntctAddrState" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Cntct_Addr_State"/>
-        </property>
-        <property name="pntCntctAddrTxt" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Cntct_Addr_Txt"/>
-        </property>
-        <property name="pntCntctAddrTyp" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Cntct_Addr_Typ"/>
-        </property>
-        <property name="pntCntctAddrUse" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Cntct_Addr_Use"/>
-        </property>
-        <property name="pntCntctGender" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Cntct_Gender"/>
-        </property>
-        <property name="pntCntctNmFmly" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Cntct_Nm_Fmly"/>
-        </property>
-        <property name="pntCntctNmGiven" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Cntct_Nm_Given"/>
-        </property>
-        <property name="pntCntctNmPrdEnd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Cntct_Nm_Prd_End"/>
-        </property>
-        <property name="pntCntctNmPrdStrt" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Cntct_Nm_Prd_Strt"/>
-        </property>
-        <property name="pntCntctNmPrefix" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Cntct_Nm_Prefix"/>
-        </property>
-        <property name="pntCntctNmSuffix" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Cntct_Nm_Suffix"/>
-        </property>
-        <property name="pntCntctNmTxt" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Cntct_Nm_Txt"/>
-        </property>
-        <property name="pntCntctNmUse" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Cntct_Nm_Use"/>
-        </property>
-        <property name="pntCntctOrgnztn" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Cntct_Orgnztn"/>
-        </property>
-        <property name="pntCntctPrdEnd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Cntct_Prd_End"/>
-        </property>
-        <property name="pntCntctPrdStrt" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Cntct_Prd_Strt"/>
-        </property>
-        <property name="pntCntctRltnshipCdgCd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Cntct_Rltnship_Cdg_Cd"/>
-        </property>
-        <property name="pntCntctRltnshipCdgDsply" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Cntct_Rltnship_Cdg_Dsply"/>
-        </property>
-        <property name="pntCntctRltnshipCdgSys" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Cntct_Rltnship_Cdg_Sys"/>
-        </property>
-        <property name="pntCntctRltnshipCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Cntct_Rltnship_Cdg_UsrSltd"/>
-        </property>
-        <property name="pntCntctRltnshipCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Cntct_Rltnship_Cdg_Vrsn"/>
-        </property>
-        <property name="pntCntctRltnshipTxt" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Cntct_Rltnship_Txt"/>
-        </property>
-        <property name="pntCntctTlcmPrdEnd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Cntct_Tlcm_Prd_End"/>
-        </property>
-        <property name="pntCntctTlcmPrdStrt" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Cntct_Tlcm_Prd_Strt"/>
-        </property>
-        <property name="pntCntctTlcmRnk" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Cntct_Tlcm_Rnk"/>
-        </property>
-        <property name="pntCntctTlcmSys" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Cntct_Tlcm_Sys"/>
-        </property>
-        <property name="pntCntctTlcmUse" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Cntct_Tlcm_Use"/>
-        </property>
-        <property name="pntCntctTlcmVl" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Cntct_Tlcm_Vl"/>
-        </property>
-        <property name="pntDeceasedBooleanTyp" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_DeceasedBooleanTyp"/>
-        </property>
-        <property name="pntDeceasedDtTimeTyp" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_DeceasedDtTimeTyp"/>
-        </property>
-        <property name="pntGender" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Gender"/>
-        </property>
-        <property name="pntGeneralPrctitnr" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_GeneralPrctitnr"/>
-        </property>
-        <property name="pntIdAssigner" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Id_Assigner"/>
-        </property>
-        <property name="pntIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Id_Prd_End"/>
-        </property>
-        <property name="pntIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Id_Prd_Strt"/>
-        </property>
-        <property name="pntIdSys" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Id_Sys"/>
-        </property>
-        <property name="pntIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Id_Typ_Cdg_Cd"/>
-        </property>
-        <property name="pntIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Id_Typ_Cdg_Dsply"/>
-        </property>
-        <property name="pntIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Id_Typ_Cdg_Sys"/>
-        </property>
-        <property name="pntIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Id_Typ_Cdg_UsrSltd"/>
-        </property>
-        <property name="pntIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Id_Typ_Cdg_Vrsn"/>
-        </property>
-        <property name="pntIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Id_Typ_Txt"/>
-        </property>
-        <property name="pntIdUse" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Id_Use"/>
-        </property>
-        <property name="pntIdVl" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Id_Vl"/>
-        </property>
-        <property name="pntLinkOther" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Link_Other"/>
-        </property>
-        <property name="pntLinkTyp" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Link_Typ"/>
-        </property>
-        <property name="pntManagingOrgnztn" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_ManagingOrgnztn"/>
-        </property>
-        <property name="pntMaritalStsCdgCd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_MaritalSts_Cdg_Cd"/>
-        </property>
-        <property name="pntMaritalStsCdgDsply" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_MaritalSts_Cdg_Dsply"/>
-        </property>
-        <property name="pntMaritalStsCdgSys" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_MaritalSts_Cdg_Sys"/>
-        </property>
-        <property name="pntMaritalStsCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_MaritalSts_Cdg_UsrSltd"/>
-        </property>
-        <property name="pntMaritalStsCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_MaritalSts_Cdg_Vrsn"/>
-        </property>
-        <property name="pntMaritalStsTxt" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_MaritalSts_Txt"/>
-        </property>
-        <property name="pntMultipleBirthBooleanTyp" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_MultipleBirthBooleanTyp"/>
-        </property>
-        <property name="pntMultipleBirthIntegerTyp" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_MultipleBirthIntegerTyp"/>
-        </property>
-        <property name="pntNmFmly" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Nm_Fmly"/>
-        </property>
-        <property name="pntNmGiven" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Nm_Given"/>
-        </property>
-        <property name="pntNmPrdEnd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Nm_Prd_End"/>
-        </property>
-        <property name="pntNmPrdStrt" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Nm_Prd_Strt"/>
-        </property>
-        <property name="pntNmPrefix" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Nm_Prefix"/>
-        </property>
-        <property name="pntNmSuffix" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Nm_Suffix"/>
-        </property>
-        <property name="pntNmTxt" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Nm_Txt"/>
-        </property>
-        <property name="pntNmUse" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Nm_Use"/>
-        </property>
-        <property name="pntPhotoCntntTyp" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Photo_CntntTyp"/>
-        </property>
-        <property name="pntPhotoCreation" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Photo_Creation"/>
-        </property>
-        <property name="pntPhotoData" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Photo_Data"/>
-        </property>
-        <property name="pntPhotoHash" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Photo_Hash"/>
-        </property>
-        <property name="pntPhotoLnguage" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Photo_Lnguage"/>
-        </property>
-        <property name="pntPhotoSz" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Photo_Sz"/>
-        </property>
-        <property name="pntPhotoTtl" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Photo_Ttl"/>
-        </property>
-        <property name="pntPhotoUrl" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Photo_Url"/>
-        </property>
-        <property name="pntTlcmPrdEnd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Tlcm_Prd_End"/>
-        </property>
-        <property name="pntTlcmPrdStrt" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Tlcm_Prd_Strt"/>
-        </property>
-        <property name="pntTlcmRnk" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Tlcm_Rnk"/>
-        </property>
-        <property name="pntTlcmSys" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Tlcm_Sys"/>
-        </property>
-        <property name="pntTlcmUse" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Tlcm_Use"/>
-        </property>
-        <property name="pntTlcmVl" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Pnt_Tlcm_Vl"/>
-        </property>
-    </class>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 17, 2022, 11:08:39 AM by Hibernate Tools 5.6.1.Final -->
+<hibernate-mapping package="main.java.com.campfhir.model">
+ <class catalog="campfhir" name="Patient" optimistic-lock="none" table="Patient">
+  <id name="id" type="string">
+   <column length="64" name="id"/>
+   <generator class="uuid.hex"/>
+  </id>
+  <property generated="never" lazy="false" name="pntActive" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Active"/>
+  </property>
+  <property generated="never" lazy="false" name="pntAddrCity" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Addr_City"/>
+  </property>
+  <property generated="never" lazy="false" name="pntAddrCntry" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Addr_Cntry"/>
+  </property>
+  <property generated="never" lazy="false" name="pntAddrDistrict" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Addr_District"/>
+  </property>
+  <property generated="never" lazy="false" name="pntAddrLine" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Addr_Line"/>
+  </property>
+  <property generated="never" lazy="false" name="pntAddrPrdEnd" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Addr_Prd_End"/>
+  </property>
+  <property generated="never" lazy="false" name="pntAddrPrdStrt" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Addr_Prd_Strt"/>
+  </property>
+  <property generated="never" lazy="false" name="pntAddrPostalCd" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Addr_PostalCd"/>
+  </property>
+  <property generated="never" lazy="false" name="pntAddrState" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Addr_State"/>
+  </property>
+  <property generated="never" lazy="false" name="pntAddrTxt" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Addr_Txt"/>
+  </property>
+  <property generated="never" lazy="false" name="pntAddrTyp" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Addr_Typ"/>
+  </property>
+  <property generated="never" lazy="false" name="pntAddrUse" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Addr_Use"/>
+  </property>
+  <property generated="never" lazy="false" name="pntBirthDt" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_BirthDt"/>
+  </property>
+  <property generated="never" lazy="false" name="pntCmmnctnLnguageCdgCd" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Cmmnctn_Lnguage_Cdg_Cd"/>
+  </property>
+  <property generated="never" lazy="false"
+   name="pntCmmnctnLnguageCdgDsply" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Cmmnctn_Lnguage_Cdg_Dsply"/>
+  </property>
+  <property generated="never" lazy="false"
+   name="pntCmmnctnLnguageCdgSys" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Cmmnctn_Lnguage_Cdg_Sys"/>
+  </property>
+  <property generated="never" lazy="false"
+   name="pntCmmnctnLnguageCdgUsrSltd" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Cmmnctn_Lnguage_Cdg_UsrSltd"/>
+  </property>
+  <property generated="never" lazy="false"
+   name="pntCmmnctnLnguageCdgVrsn" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Cmmnctn_Lnguage_Cdg_Vrsn"/>
+  </property>
+  <property generated="never" lazy="false" name="pntCmmnctnLnguageTxt" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Cmmnctn_Lnguage_Txt"/>
+  </property>
+  <property generated="never" lazy="false" name="pntCmmnctnPreferred" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Cmmnctn_Preferred"/>
+  </property>
+  <property generated="never" lazy="false" name="pntCntctAddrCity" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Cntct_Addr_City"/>
+  </property>
+  <property generated="never" lazy="false" name="pntCntctAddrCntry" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Cntct_Addr_Cntry"/>
+  </property>
+  <property generated="never" lazy="false" name="pntCntctAddrDistrict" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Cntct_Addr_District"/>
+  </property>
+  <property generated="never" lazy="false" name="pntCntctAddrLine" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Cntct_Addr_Line"/>
+  </property>
+  <property generated="never" lazy="false" name="pntCntctAddrPrdEnd" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Cntct_Addr_Prd_End"/>
+  </property>
+  <property generated="never" lazy="false" name="pntCntctAddrPrdStrt" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Cntct_Addr_Prd_Strt"/>
+  </property>
+  <property generated="never" lazy="false" name="pntCntctAddrPostalCd" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Cntct_Addr_PostalCd"/>
+  </property>
+  <property generated="never" lazy="false" name="pntCntctAddrState" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Cntct_Addr_State"/>
+  </property>
+  <property generated="never" lazy="false" name="pntCntctAddrTxt" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Cntct_Addr_Txt"/>
+  </property>
+  <property generated="never" lazy="false" name="pntCntctAddrTyp" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Cntct_Addr_Typ"/>
+  </property>
+  <property generated="never" lazy="false" name="pntCntctAddrUse" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Cntct_Addr_Use"/>
+  </property>
+  <property generated="never" lazy="false" name="pntCntctGender" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Cntct_Gender"/>
+  </property>
+  <property generated="never" lazy="false" name="pntCntctNmFmly" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Cntct_Nm_Fmly"/>
+  </property>
+  <property generated="never" lazy="false" name="pntCntctNmGiven" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Cntct_Nm_Given"/>
+  </property>
+  <property generated="never" lazy="false" name="pntCntctNmPrdEnd" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Cntct_Nm_Prd_End"/>
+  </property>
+  <property generated="never" lazy="false" name="pntCntctNmPrdStrt" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Cntct_Nm_Prd_Strt"/>
+  </property>
+  <property generated="never" lazy="false" name="pntCntctNmPrefix" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Cntct_Nm_Prefix"/>
+  </property>
+  <property generated="never" lazy="false" name="pntCntctNmSuffix" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Cntct_Nm_Suffix"/>
+  </property>
+  <property generated="never" lazy="false" name="pntCntctNmTxt" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Cntct_Nm_Txt"/>
+  </property>
+  <property generated="never" lazy="false" name="pntCntctNmUse" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Cntct_Nm_Use"/>
+  </property>
+  <property generated="never" lazy="false" name="pntCntctOrgnztn" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Cntct_Orgnztn"/>
+  </property>
+  <property generated="never" lazy="false" name="pntCntctPrdEnd" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Cntct_Prd_End"/>
+  </property>
+  <property generated="never" lazy="false" name="pntCntctPrdStrt" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Cntct_Prd_Strt"/>
+  </property>
+  <property generated="never" lazy="false" name="pntCntctRltnshipCdgCd" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Cntct_Rltnship_Cdg_Cd"/>
+  </property>
+  <property generated="never" lazy="false"
+   name="pntCntctRltnshipCdgDsply" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Cntct_Rltnship_Cdg_Dsply"/>
+  </property>
+  <property generated="never" lazy="false" name="pntCntctRltnshipCdgSys" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Cntct_Rltnship_Cdg_Sys"/>
+  </property>
+  <property generated="never" lazy="false"
+   name="pntCntctRltnshipCdgUsrSltd" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Cntct_Rltnship_Cdg_UsrSltd"/>
+  </property>
+  <property generated="never" lazy="false"
+   name="pntCntctRltnshipCdgVrsn" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Cntct_Rltnship_Cdg_Vrsn"/>
+  </property>
+  <property generated="never" lazy="false" name="pntCntctRltnshipTxt" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Cntct_Rltnship_Txt"/>
+  </property>
+  <property generated="never" lazy="false" name="pntCntctTlcmPrdEnd" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Cntct_Tlcm_Prd_End"/>
+  </property>
+  <property generated="never" lazy="false" name="pntCntctTlcmPrdStrt" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Cntct_Tlcm_Prd_Strt"/>
+  </property>
+  <property generated="never" lazy="false" name="pntCntctTlcmRnk" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Cntct_Tlcm_Rnk"/>
+  </property>
+  <property generated="never" lazy="false" name="pntCntctTlcmSys" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Cntct_Tlcm_Sys"/>
+  </property>
+  <property generated="never" lazy="false" name="pntCntctTlcmUse" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Cntct_Tlcm_Use"/>
+  </property>
+  <property generated="never" lazy="false" name="pntCntctTlcmVl" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Cntct_Tlcm_Vl"/>
+  </property>
+  <property generated="never" lazy="false" name="pntDeceasedBooleanTyp" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_DeceasedBooleanTyp"/>
+  </property>
+  <property generated="never" lazy="false" name="pntDeceasedDtTimeTyp" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_DeceasedDtTimeTyp"/>
+  </property>
+  <property generated="never" lazy="false" name="pntGender" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Gender"/>
+  </property>
+  <property generated="never" lazy="false" name="pntGeneralPrctitnr" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_GeneralPrctitnr"/>
+  </property>
+  <property generated="never" lazy="false" name="pntIdAssigner" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Id_Assigner"/>
+  </property>
+  <property generated="never" lazy="false" name="pntIdPrdEnd" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Id_Prd_End"/>
+  </property>
+  <property generated="never" lazy="false" name="pntIdPrdStrt" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Id_Prd_Strt"/>
+  </property>
+  <property generated="never" lazy="false" name="pntIdSys" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Id_Sys"/>
+  </property>
+  <property generated="never" lazy="false" name="pntIdTypCdgCd" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Id_Typ_Cdg_Cd"/>
+  </property>
+  <property generated="never" lazy="false" name="pntIdTypCdgDsply" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Id_Typ_Cdg_Dsply"/>
+  </property>
+  <property generated="never" lazy="false" name="pntIdTypCdgSys" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Id_Typ_Cdg_Sys"/>
+  </property>
+  <property generated="never" lazy="false" name="pntIdTypCdgUsrSltd" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Id_Typ_Cdg_UsrSltd"/>
+  </property>
+  <property generated="never" lazy="false" name="pntIdTypCdgVrsn" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Id_Typ_Cdg_Vrsn"/>
+  </property>
+  <property generated="never" lazy="false" name="pntIdTypTxt" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Id_Typ_Txt"/>
+  </property>
+  <property generated="never" lazy="false" name="pntIdUse" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Id_Use"/>
+  </property>
+  <property generated="never" lazy="false" name="pntIdVl" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Id_Vl"/>
+  </property>
+  <property generated="never" lazy="false" name="pntLinkOther" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Link_Other"/>
+  </property>
+  <property generated="never" lazy="false" name="pntLinkTyp" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Link_Typ"/>
+  </property>
+  <property generated="never" lazy="false" name="pntManagingOrgnztn" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_ManagingOrgnztn"/>
+  </property>
+  <property generated="never" lazy="false" name="pntMaritalStsCdgCd" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_MaritalSts_Cdg_Cd"/>
+  </property>
+  <property generated="never" lazy="false" name="pntMaritalStsCdgDsply" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_MaritalSts_Cdg_Dsply"/>
+  </property>
+  <property generated="never" lazy="false" name="pntMaritalStsCdgSys" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_MaritalSts_Cdg_Sys"/>
+  </property>
+  <property generated="never" lazy="false"
+   name="pntMaritalStsCdgUsrSltd" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_MaritalSts_Cdg_UsrSltd"/>
+  </property>
+  <property generated="never" lazy="false" name="pntMaritalStsCdgVrsn" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_MaritalSts_Cdg_Vrsn"/>
+  </property>
+  <property generated="never" lazy="false" name="pntMaritalStsTxt" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_MaritalSts_Txt"/>
+  </property>
+  <property generated="never" lazy="false"
+   name="pntMultipleBirthBooleanTyp" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_MultipleBirthBooleanTyp"/>
+  </property>
+  <property generated="never" lazy="false"
+   name="pntMultipleBirthIntegerTyp" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_MultipleBirthIntegerTyp"/>
+  </property>
+  <property generated="never" lazy="false" name="pntNmFmly" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Nm_Fmly"/>
+  </property>
+  <property generated="never" lazy="false" name="pntNmGiven" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Nm_Given"/>
+  </property>
+  <property generated="never" lazy="false" name="pntNmPrdEnd" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Nm_Prd_End"/>
+  </property>
+  <property generated="never" lazy="false" name="pntNmPrdStrt" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Nm_Prd_Strt"/>
+  </property>
+  <property generated="never" lazy="false" name="pntNmPrefix" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Nm_Prefix"/>
+  </property>
+  <property generated="never" lazy="false" name="pntNmSuffix" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Nm_Suffix"/>
+  </property>
+  <property generated="never" lazy="false" name="pntNmTxt" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Nm_Txt"/>
+  </property>
+  <property generated="never" lazy="false" name="pntNmUse" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Nm_Use"/>
+  </property>
+  <property generated="never" lazy="false" name="pntPhotoCntntTyp" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Photo_CntntTyp"/>
+  </property>
+  <property generated="never" lazy="false" name="pntPhotoCreation" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Photo_Creation"/>
+  </property>
+  <property generated="never" lazy="false" name="pntPhotoData" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Photo_Data"/>
+  </property>
+  <property generated="never" lazy="false" name="pntPhotoHash" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Photo_Hash"/>
+  </property>
+  <property generated="never" lazy="false" name="pntPhotoLnguage" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Photo_Lnguage"/>
+  </property>
+  <property generated="never" lazy="false" name="pntPhotoSz" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Photo_Sz"/>
+  </property>
+  <property generated="never" lazy="false" name="pntPhotoTtl" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Photo_Ttl"/>
+  </property>
+  <property generated="never" lazy="false" name="pntPhotoUrl" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Photo_Url"/>
+  </property>
+  <property generated="never" lazy="false" name="pntTlcmPrdEnd" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Tlcm_Prd_End"/>
+  </property>
+  <property generated="never" lazy="false" name="pntTlcmPrdStrt" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Tlcm_Prd_Strt"/>
+  </property>
+  <property generated="never" lazy="false" name="pntTlcmRnk" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Tlcm_Rnk"/>
+  </property>
+  <property generated="never" lazy="false" name="pntTlcmSys" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Tlcm_Sys"/>
+  </property>
+  <property generated="never" lazy="false" name="pntTlcmUse" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Tlcm_Use"/>
+  </property>
+  <property generated="never" lazy="false" name="pntTlcmVl" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Tlcm_Vl"/>
+  </property>
+     <property generated="never" lazy="false" name="pntAddrExtLatVl" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Addr_Ext_Lat_Vl"/>
+  </property>
+    <property generated="never" lazy="false" name="pntAddrExtLongVl" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Addr_Ext_Long_Vl"/>
+  </property>
+  <property generated="never" lazy="false" name="pntExtRace" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Ext_Race"/>
+  </property>
+  <property generated="never" lazy="false" name="pntExtRaceSys" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Ext_Race_Sys"/>
+  </property>
+  <property generated="never" lazy="false" name="pntExtRaceDsply" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Ext_Race_Dsply"/>
+  </property>
+  <property generated="never" lazy="false" name="pntExtRaceVl" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Ext_Race_Vl"/>
+  </property>
+  <property generated="never" lazy="false" name="pntExtEthn" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Ext_Ethn"/>
+  </property>
+  <property generated="never" lazy="false" name="pntExtEthnSys" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Ext_Ethn_Sys"/>
+  </property>
+  <property generated="never" lazy="false" name="pntExtEthnDsply" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Ext_Ethn_Dsply"/>
+  </property>
+  <property generated="never" lazy="false" name="pntExtRaceVl" type="string">
+   <meta attribute="resource-type"/>
+   <column length="65535" name="Pnt_Ext_Ethn_Vl"/>
+  </property>
+ </class>
 </hibernate-mapping>

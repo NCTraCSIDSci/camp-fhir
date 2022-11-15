@@ -1254,6 +1254,7 @@ public class ProcedureConversion
 			procedure.addUsedReference(new org.hl7.fhir.r4.model.Reference(currListStrSplit.replace("[","").replace("]","").replace("\"","")));
 			}				}
 
+
 		}
 		return procedure;
 	}

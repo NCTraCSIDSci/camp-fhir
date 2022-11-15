@@ -1166,6 +1166,7 @@ public class ConditionConversion
 			if(c.getCndtnVrfctnStsTxt().replace("[","").replace("]","").equals("NULL") | c.getCndtnVrfctnStsTxt()==null) {} else {
 			condition.getVerificationStatus().setText(c.getCndtnVrfctnStsTxt().replace("[","").replace("]","").replace("\"",""));
 			}
+
 		}
 		return condition;
 	}

@@ -896,6 +896,7 @@ public class DocumentReferenceConversion
 			if(d.getDocRfrncTypTxt().replace("[","").replace("]","").equals("NULL") | d.getDocRfrncTypTxt()==null) {} else {
 			documentreference.getType().setText(d.getDocRfrncTypTxt().replace("[","").replace("]","").replace("\"",""));
 			}
+
 		}
 		return documentreference;
 	}

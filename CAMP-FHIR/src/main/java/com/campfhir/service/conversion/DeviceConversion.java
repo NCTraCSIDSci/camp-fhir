@@ -1225,6 +1225,7 @@ public class DeviceConversion
 				if(arrayi0[i0].replace("[","").replace("]","").replace("\"","").equals("NULL") | arrayi0[i0]==null) {} else {device.getVersion().get(i0).setValue(arrayi0[i0].replace("[","").replace("]","").replace("\"","").replace("[","").replace("]","").replace("\"","")); }
 			}
 
+
 		}
 		return device;
 	}
