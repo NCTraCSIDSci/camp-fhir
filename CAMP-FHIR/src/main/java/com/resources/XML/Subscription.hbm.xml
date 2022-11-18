@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Aug 17, 2022, 11:08:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 16, 2022, 11:34:16 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Subscription" optimistic-lock="none" table="Subscription">
         <id name="id" type="string">
@@ -7,63 +7,63 @@
             <generator class="identity"/>
         </id>
         <property name="subscriptionChannelEndpoint" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Subscription.Channel.Endpoint</meta>
             <column length="65535" name="Subscription_Channel_Endpoint"/>
         </property>
         <property name="subscriptionChannelHeader" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Subscription.Channel.Header</meta>
             <column length="65535" name="Subscription_Channel_Header"/>
         </property>
         <property name="subscriptionChannelPayload" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Subscription.Channel.Payload</meta>
             <column length="65535" name="Subscription_Channel_Payload"/>
         </property>
         <property name="subscriptionChannelTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Subscription.Channel.Type</meta>
             <column length="65535" name="Subscription_Channel_Typ"/>
         </property>
         <property name="subscriptionCntctPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Subscription.Contact.Period.End</meta>
             <column length="65535" name="Subscription_Cntct_Prd_End"/>
         </property>
         <property name="subscriptionCntctPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Subscription.Contact.Period.Start</meta>
             <column length="65535" name="Subscription_Cntct_Prd_Strt"/>
         </property>
         <property name="subscriptionCntctRnk" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Subscription.Contact.Rank</meta>
             <column length="65535" name="Subscription_Cntct_Rnk"/>
         </property>
         <property name="subscriptionCntctSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Subscription.Contact.System</meta>
             <column length="65535" name="Subscription_Cntct_Sys"/>
         </property>
         <property name="subscriptionCntctUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Subscription.Contact.Use</meta>
             <column length="65535" name="Subscription_Cntct_Use"/>
         </property>
         <property name="subscriptionCntctVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Subscription.Contact.Value</meta>
             <column length="65535" name="Subscription_Cntct_Vl"/>
         </property>
         <property name="subscriptionCriteria" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Subscription.Criteria</meta>
             <column length="65535" name="Subscription_Criteria"/>
         </property>
         <property name="subscriptionEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Subscription.End</meta>
             <column length="65535" name="Subscription_End"/>
         </property>
         <property name="subscriptionError" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Subscription.Error</meta>
             <column length="65535" name="Subscription_Error"/>
         </property>
         <property name="subscriptionRsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Subscription.Reason</meta>
             <column length="65535" name="Subscription_Rsn"/>
         </property>
         <property name="subscriptionSts" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Subscription.Status</meta>
             <column length="65535" name="Subscription_Sts"/>
         </property>
     </class>

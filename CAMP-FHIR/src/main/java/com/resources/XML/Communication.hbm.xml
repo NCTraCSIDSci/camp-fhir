@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Aug 17, 2022, 11:08:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 16, 2022, 11:34:16 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Communication" optimistic-lock="none" table="Communication">
         <id name="id" type="string">
@@ -7,287 +7,287 @@
             <generator class="identity"/>
         </id>
         <property name="cmmnctnAbout" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.About</meta>
             <column length="65535" name="Cmmnctn_About"/>
         </property>
         <property name="cmmnctnBasedOn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.BasedOn</meta>
             <column length="65535" name="Cmmnctn_BasedOn"/>
         </property>
         <property name="cmmnctnCtgryCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.Category.Coding.Code</meta>
             <column length="65535" name="Cmmnctn_Ctgry_Cdg_Cd"/>
         </property>
         <property name="cmmnctnCtgryCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.Category.Coding.Display</meta>
             <column length="65535" name="Cmmnctn_Ctgry_Cdg_Dsply"/>
         </property>
         <property name="cmmnctnCtgryCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.Category.Coding.System</meta>
             <column length="65535" name="Cmmnctn_Ctgry_Cdg_Sys"/>
         </property>
         <property name="cmmnctnCtgryCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.Category.Coding.UserSelected</meta>
             <column length="65535" name="Cmmnctn_Ctgry_Cdg_UsrSltd"/>
         </property>
         <property name="cmmnctnCtgryCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.Category.Coding.Version</meta>
             <column length="65535" name="Cmmnctn_Ctgry_Cdg_Vrsn"/>
         </property>
         <property name="cmmnctnCtgryTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.Category.Text</meta>
             <column length="65535" name="Cmmnctn_Ctgry_Txt"/>
         </property>
         <property name="cmmnctnEnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.Encounter</meta>
             <column length="65535" name="Cmmnctn_Enc"/>
         </property>
         <property name="cmmnctnIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.Identifier.Assigner</meta>
             <column length="65535" name="Cmmnctn_Id_Assigner"/>
         </property>
         <property name="cmmnctnIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.Identifier.Period.End</meta>
             <column length="65535" name="Cmmnctn_Id_Prd_End"/>
         </property>
         <property name="cmmnctnIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.Identifier.Period.Start</meta>
             <column length="65535" name="Cmmnctn_Id_Prd_Strt"/>
         </property>
         <property name="cmmnctnIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.Identifier.System</meta>
             <column length="65535" name="Cmmnctn_Id_Sys"/>
         </property>
         <property name="cmmnctnIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.Identifier.Type.Coding.Code</meta>
             <column length="65535" name="Cmmnctn_Id_Typ_Cdg_Cd"/>
         </property>
         <property name="cmmnctnIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.Identifier.Type.Coding.Display</meta>
             <column length="65535" name="Cmmnctn_Id_Typ_Cdg_Dsply"/>
         </property>
         <property name="cmmnctnIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.Identifier.Type.Coding.System</meta>
             <column length="65535" name="Cmmnctn_Id_Typ_Cdg_Sys"/>
         </property>
         <property name="cmmnctnIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.Identifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="Cmmnctn_Id_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="cmmnctnIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.Identifier.Type.Coding.Version</meta>
             <column length="65535" name="Cmmnctn_Id_Typ_Cdg_Vrsn"/>
         </property>
         <property name="cmmnctnIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.Identifier.Type.Text</meta>
             <column length="65535" name="Cmmnctn_Id_Typ_Txt"/>
         </property>
         <property name="cmmnctnIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.Identifier.Use</meta>
             <column length="65535" name="Cmmnctn_Id_Use"/>
         </property>
         <property name="cmmnctnIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.Identifier.Value</meta>
             <column length="65535" name="Cmmnctn_Id_Vl"/>
         </property>
         <property name="cmmnctnInRspsTo" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.InResponseTo</meta>
             <column length="65535" name="Cmmnctn_InRspsTo"/>
         </property>
         <property name="cmmnctnInstantiatesCanonical" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.InstantiatesCanonical</meta>
             <column length="65535" name="Cmmnctn_InstantiatesCanonical"/>
         </property>
         <property name="cmmnctnInstantiatesUri" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.InstantiatesUri</meta>
             <column length="65535" name="Cmmnctn_InstantiatesUri"/>
         </property>
         <property name="cmmnctnMediumCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.Medium.Coding.Code</meta>
             <column length="65535" name="Cmmnctn_Medium_Cdg_Cd"/>
         </property>
         <property name="cmmnctnMediumCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.Medium.Coding.Display</meta>
             <column length="65535" name="Cmmnctn_Medium_Cdg_Dsply"/>
         </property>
         <property name="cmmnctnMediumCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.Medium.Coding.System</meta>
             <column length="65535" name="Cmmnctn_Medium_Cdg_Sys"/>
         </property>
         <property name="cmmnctnMediumCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.Medium.Coding.UserSelected</meta>
             <column length="65535" name="Cmmnctn_Medium_Cdg_UsrSltd"/>
         </property>
         <property name="cmmnctnMediumCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.Medium.Coding.Version</meta>
             <column length="65535" name="Cmmnctn_Medium_Cdg_Vrsn"/>
         </property>
         <property name="cmmnctnMediumTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.Medium.Text</meta>
             <column length="65535" name="Cmmnctn_Medium_Txt"/>
         </property>
         <property name="cmmnctnNtAthrRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.Note.AuthorReference</meta>
             <column length="65535" name="Cmmnctn_Nt_AthrRfrnc"/>
         </property>
         <property name="cmmnctnNtAthrStrgTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.Note.AuthorStringType</meta>
             <column length="65535" name="Cmmnctn_Nt_AthrStrgTyp"/>
         </property>
         <property name="cmmnctnNtTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.Note.Text</meta>
             <column length="65535" name="Cmmnctn_Nt_Txt"/>
         </property>
         <property name="cmmnctnNtTime" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.Note.Time</meta>
             <column length="65535" name="Cmmnctn_Nt_Time"/>
         </property>
         <property name="cmmnctnPartOf" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.PartOf</meta>
             <column length="65535" name="Cmmnctn_PartOf"/>
         </property>
         <property name="cmmnctnPayloadCntntAttchmntCntntTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.Payload.ContentAttachment.ContentType</meta>
             <column length="65535" name="Cmmnctn_Payload_CntntAttchmnt_CntntTyp"/>
         </property>
         <property name="cmmnctnPayloadCntntAttchmntCreation" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.Payload.ContentAttachment.Creation</meta>
             <column length="65535" name="Cmmnctn_Payload_CntntAttchmnt_Creation"/>
         </property>
         <property name="cmmnctnPayloadCntntAttchmntData" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.Payload.ContentAttachment.Data</meta>
             <column length="65535" name="Cmmnctn_Payload_CntntAttchmnt_Data"/>
         </property>
         <property name="cmmnctnPayloadCntntAttchmntHash" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.Payload.ContentAttachment.Hash</meta>
             <column length="65535" name="Cmmnctn_Payload_CntntAttchmnt_Hash"/>
         </property>
         <property name="cmmnctnPayloadCntntAttchmntLnguage" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.Payload.ContentAttachment.Language</meta>
             <column length="65535" name="Cmmnctn_Payload_CntntAttchmnt_Lnguage"/>
         </property>
         <property name="cmmnctnPayloadCntntAttchmntSz" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.Payload.ContentAttachment.Size</meta>
             <column length="65535" name="Cmmnctn_Payload_CntntAttchmnt_Sz"/>
         </property>
         <property name="cmmnctnPayloadCntntAttchmntTtl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.Payload.ContentAttachment.Title</meta>
             <column length="65535" name="Cmmnctn_Payload_CntntAttchmnt_Ttl"/>
         </property>
         <property name="cmmnctnPayloadCntntAttchmntUrl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.Payload.ContentAttachment.Url</meta>
             <column length="65535" name="Cmmnctn_Payload_CntntAttchmnt_Url"/>
         </property>
         <property name="cmmnctnPayloadCntntRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.Payload.ContentReference</meta>
             <column length="65535" name="Cmmnctn_Payload_CntntRfrnc"/>
         </property>
         <property name="cmmnctnPayloadCntntStrgTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.Payload.ContentStringType</meta>
             <column length="65535" name="Cmmnctn_Payload_CntntStrgTyp"/>
         </property>
         <property name="cmmnctnPriority" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.Priority</meta>
             <column length="65535" name="Cmmnctn_Priority"/>
         </property>
         <property name="cmmnctnRsnCdCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.ReasonCode.Coding.Code</meta>
             <column length="65535" name="Cmmnctn_RsnCd_Cdg_Cd"/>
         </property>
         <property name="cmmnctnRsnCdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.ReasonCode.Coding.Display</meta>
             <column length="65535" name="Cmmnctn_RsnCd_Cdg_Dsply"/>
         </property>
         <property name="cmmnctnRsnCdCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.ReasonCode.Coding.System</meta>
             <column length="65535" name="Cmmnctn_RsnCd_Cdg_Sys"/>
         </property>
         <property name="cmmnctnRsnCdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.ReasonCode.Coding.UserSelected</meta>
             <column length="65535" name="Cmmnctn_RsnCd_Cdg_UsrSltd"/>
         </property>
         <property name="cmmnctnRsnCdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.ReasonCode.Coding.Version</meta>
             <column length="65535" name="Cmmnctn_RsnCd_Cdg_Vrsn"/>
         </property>
         <property name="cmmnctnRsnCdTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.ReasonCode.Text</meta>
             <column length="65535" name="Cmmnctn_RsnCd_Txt"/>
         </property>
         <property name="cmmnctnRsnRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.ReasonReference</meta>
             <column length="65535" name="Cmmnctn_RsnRfrnc"/>
         </property>
         <property name="cmmnctnReceived" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.Received</meta>
             <column length="65535" name="Cmmnctn_Received"/>
         </property>
         <property name="cmmnctnRecipient" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.Recipient</meta>
             <column length="65535" name="Cmmnctn_Recipient"/>
         </property>
         <property name="cmmnctnSender" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.Sender</meta>
             <column length="65535" name="Cmmnctn_Sender"/>
         </property>
         <property name="cmmnctnSent" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.Sent</meta>
             <column length="65535" name="Cmmnctn_Sent"/>
         </property>
         <property name="cmmnctnSts" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.Status</meta>
             <column length="65535" name="Cmmnctn_Sts"/>
         </property>
         <property name="cmmnctnStsRsnCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.StatusReason.Coding.Code</meta>
             <column length="65535" name="Cmmnctn_StsRsn_Cdg_Cd"/>
         </property>
         <property name="cmmnctnStsRsnCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.StatusReason.Coding.Display</meta>
             <column length="65535" name="Cmmnctn_StsRsn_Cdg_Dsply"/>
         </property>
         <property name="cmmnctnStsRsnCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.StatusReason.Coding.System</meta>
             <column length="65535" name="Cmmnctn_StsRsn_Cdg_Sys"/>
         </property>
         <property name="cmmnctnStsRsnCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.StatusReason.Coding.UserSelected</meta>
             <column length="65535" name="Cmmnctn_StsRsn_Cdg_UsrSltd"/>
         </property>
         <property name="cmmnctnStsRsnCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.StatusReason.Coding.Version</meta>
             <column length="65535" name="Cmmnctn_StsRsn_Cdg_Vrsn"/>
         </property>
         <property name="cmmnctnStsRsnTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.StatusReason.Text</meta>
             <column length="65535" name="Cmmnctn_StsRsn_Txt"/>
         </property>
         <property name="cmmnctnSbjct" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.Subject</meta>
             <column length="65535" name="Cmmnctn_Sbjct"/>
         </property>
         <property name="cmmnctnTopicCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.Topic.Coding.Code</meta>
             <column length="65535" name="Cmmnctn_Topic_Cdg_Cd"/>
         </property>
         <property name="cmmnctnTopicCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.Topic.Coding.Display</meta>
             <column length="65535" name="Cmmnctn_Topic_Cdg_Dsply"/>
         </property>
         <property name="cmmnctnTopicCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.Topic.Coding.System</meta>
             <column length="65535" name="Cmmnctn_Topic_Cdg_Sys"/>
         </property>
         <property name="cmmnctnTopicCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.Topic.Coding.UserSelected</meta>
             <column length="65535" name="Cmmnctn_Topic_Cdg_UsrSltd"/>
         </property>
         <property name="cmmnctnTopicCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.Topic.Coding.Version</meta>
             <column length="65535" name="Cmmnctn_Topic_Cdg_Vrsn"/>
         </property>
         <property name="cmmnctnTopicTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Communication.Topic.Text</meta>
             <column length="65535" name="Cmmnctn_Topic_Txt"/>
         </property>
     </class>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Aug 17, 2022, 11:08:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 16, 2022, 11:34:16 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="ResearchStudy" optimistic-lock="none" table="ResearchStudy">
         <id name="id" type="string">
@@ -7,447 +7,447 @@
             <generator class="identity"/>
         </id>
         <property name="rsrchStdyArmDscrptn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Arm.Description</meta>
             <column length="65535" name="RsrchStdy_Arm_Dscrptn"/>
         </property>
         <property name="rsrchStdyArmNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Arm.Name</meta>
             <column length="65535" name="RsrchStdy_Arm_Nm"/>
         </property>
         <property name="rsrchStdyArmTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Arm.Type.Coding.Code</meta>
             <column length="65535" name="RsrchStdy_Arm_Typ_Cdg_Cd"/>
         </property>
         <property name="rsrchStdyArmTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Arm.Type.Coding.Display</meta>
             <column length="65535" name="RsrchStdy_Arm_Typ_Cdg_Dsply"/>
         </property>
         <property name="rsrchStdyArmTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Arm.Type.Coding.System</meta>
             <column length="65535" name="RsrchStdy_Arm_Typ_Cdg_Sys"/>
         </property>
         <property name="rsrchStdyArmTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Arm.Type.Coding.UserSelected</meta>
             <column length="65535" name="RsrchStdy_Arm_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="rsrchStdyArmTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Arm.Type.Coding.Version</meta>
             <column length="65535" name="RsrchStdy_Arm_Typ_Cdg_Vrsn"/>
         </property>
         <property name="rsrchStdyArmTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Arm.Type.Text</meta>
             <column length="65535" name="RsrchStdy_Arm_Typ_Txt"/>
         </property>
         <property name="rsrchStdyCtgryCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Category.Coding.Code</meta>
             <column length="65535" name="RsrchStdy_Ctgry_Cdg_Cd"/>
         </property>
         <property name="rsrchStdyCtgryCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Category.Coding.Display</meta>
             <column length="65535" name="RsrchStdy_Ctgry_Cdg_Dsply"/>
         </property>
         <property name="rsrchStdyCtgryCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Category.Coding.System</meta>
             <column length="65535" name="RsrchStdy_Ctgry_Cdg_Sys"/>
         </property>
         <property name="rsrchStdyCtgryCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Category.Coding.UserSelected</meta>
             <column length="65535" name="RsrchStdy_Ctgry_Cdg_UsrSltd"/>
         </property>
         <property name="rsrchStdyCtgryCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Category.Coding.Version</meta>
             <column length="65535" name="RsrchStdy_Ctgry_Cdg_Vrsn"/>
         </property>
         <property name="rsrchStdyCtgryTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Category.Text</meta>
             <column length="65535" name="RsrchStdy_Ctgry_Txt"/>
         </property>
         <property name="rsrchStdyCndtnCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Condition.Coding.Code</meta>
             <column length="65535" name="RsrchStdy_Cndtn_Cdg_Cd"/>
         </property>
         <property name="rsrchStdyCndtnCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Condition.Coding.Display</meta>
             <column length="65535" name="RsrchStdy_Cndtn_Cdg_Dsply"/>
         </property>
         <property name="rsrchStdyCndtnCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Condition.Coding.System</meta>
             <column length="65535" name="RsrchStdy_Cndtn_Cdg_Sys"/>
         </property>
         <property name="rsrchStdyCndtnCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Condition.Coding.UserSelected</meta>
             <column length="65535" name="RsrchStdy_Cndtn_Cdg_UsrSltd"/>
         </property>
         <property name="rsrchStdyCndtnCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Condition.Coding.Version</meta>
             <column length="65535" name="RsrchStdy_Cndtn_Cdg_Vrsn"/>
         </property>
         <property name="rsrchStdyCndtnTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Condition.Text</meta>
             <column length="65535" name="RsrchStdy_Cndtn_Txt"/>
         </property>
         <property name="rsrchStdyCntctNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Contact.Name</meta>
             <column length="65535" name="RsrchStdy_Cntct_Nm"/>
         </property>
         <property name="rsrchStdyCntctTlcmPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Contact.Telecom.Period.End</meta>
             <column length="65535" name="RsrchStdy_Cntct_Tlcm_Prd_End"/>
         </property>
         <property name="rsrchStdyCntctTlcmPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Contact.Telecom.Period.Start</meta>
             <column length="65535" name="RsrchStdy_Cntct_Tlcm_Prd_Strt"/>
         </property>
         <property name="rsrchStdyCntctTlcmRnk" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Contact.Telecom.Rank</meta>
             <column length="65535" name="RsrchStdy_Cntct_Tlcm_Rnk"/>
         </property>
         <property name="rsrchStdyCntctTlcmSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Contact.Telecom.System</meta>
             <column length="65535" name="RsrchStdy_Cntct_Tlcm_Sys"/>
         </property>
         <property name="rsrchStdyCntctTlcmUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Contact.Telecom.Use</meta>
             <column length="65535" name="RsrchStdy_Cntct_Tlcm_Use"/>
         </property>
         <property name="rsrchStdyCntctTlcmVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Contact.Telecom.Value</meta>
             <column length="65535" name="RsrchStdy_Cntct_Tlcm_Vl"/>
         </property>
         <property name="rsrchStdyDscrptn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Description</meta>
             <column length="65535" name="RsrchStdy_Dscrptn"/>
         </property>
         <property name="rsrchStdyEnrollment" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Enrollment</meta>
             <column length="65535" name="RsrchStdy_Enrollment"/>
         </property>
         <property name="rsrchStdyFocusCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Focus.Coding.Code</meta>
             <column length="65535" name="RsrchStdy_Focus_Cdg_Cd"/>
         </property>
         <property name="rsrchStdyFocusCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Focus.Coding.Display</meta>
             <column length="65535" name="RsrchStdy_Focus_Cdg_Dsply"/>
         </property>
         <property name="rsrchStdyFocusCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Focus.Coding.System</meta>
             <column length="65535" name="RsrchStdy_Focus_Cdg_Sys"/>
         </property>
         <property name="rsrchStdyFocusCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Focus.Coding.UserSelected</meta>
             <column length="65535" name="RsrchStdy_Focus_Cdg_UsrSltd"/>
         </property>
         <property name="rsrchStdyFocusCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Focus.Coding.Version</meta>
             <column length="65535" name="RsrchStdy_Focus_Cdg_Vrsn"/>
         </property>
         <property name="rsrchStdyFocusTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Focus.Text</meta>
             <column length="65535" name="RsrchStdy_Focus_Txt"/>
         </property>
         <property name="rsrchStdyIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Identifier.Assigner</meta>
             <column length="65535" name="RsrchStdy_Id_Assigner"/>
         </property>
         <property name="rsrchStdyIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Identifier.Period.End</meta>
             <column length="65535" name="RsrchStdy_Id_Prd_End"/>
         </property>
         <property name="rsrchStdyIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Identifier.Period.Start</meta>
             <column length="65535" name="RsrchStdy_Id_Prd_Strt"/>
         </property>
         <property name="rsrchStdyIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Identifier.System</meta>
             <column length="65535" name="RsrchStdy_Id_Sys"/>
         </property>
         <property name="rsrchStdyIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Identifier.Type.Coding.Code</meta>
             <column length="65535" name="RsrchStdy_Id_Typ_Cdg_Cd"/>
         </property>
         <property name="rsrchStdyIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Identifier.Type.Coding.Display</meta>
             <column length="65535" name="RsrchStdy_Id_Typ_Cdg_Dsply"/>
         </property>
         <property name="rsrchStdyIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Identifier.Type.Coding.System</meta>
             <column length="65535" name="RsrchStdy_Id_Typ_Cdg_Sys"/>
         </property>
         <property name="rsrchStdyIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Identifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="RsrchStdy_Id_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="rsrchStdyIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Identifier.Type.Coding.Version</meta>
             <column length="65535" name="RsrchStdy_Id_Typ_Cdg_Vrsn"/>
         </property>
         <property name="rsrchStdyIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Identifier.Type.Text</meta>
             <column length="65535" name="RsrchStdy_Id_Typ_Txt"/>
         </property>
         <property name="rsrchStdyIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Identifier.Use</meta>
             <column length="65535" name="RsrchStdy_Id_Use"/>
         </property>
         <property name="rsrchStdyIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Identifier.Value</meta>
             <column length="65535" name="RsrchStdy_Id_Vl"/>
         </property>
         <property name="rsrchStdyKeywordCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Keyword.Coding.Code</meta>
             <column length="65535" name="RsrchStdy_Keyword_Cdg_Cd"/>
         </property>
         <property name="rsrchStdyKeywordCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Keyword.Coding.Display</meta>
             <column length="65535" name="RsrchStdy_Keyword_Cdg_Dsply"/>
         </property>
         <property name="rsrchStdyKeywordCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Keyword.Coding.System</meta>
             <column length="65535" name="RsrchStdy_Keyword_Cdg_Sys"/>
         </property>
         <property name="rsrchStdyKeywordCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Keyword.Coding.UserSelected</meta>
             <column length="65535" name="RsrchStdy_Keyword_Cdg_UsrSltd"/>
         </property>
         <property name="rsrchStdyKeywordCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Keyword.Coding.Version</meta>
             <column length="65535" name="RsrchStdy_Keyword_Cdg_Vrsn"/>
         </property>
         <property name="rsrchStdyKeywordTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Keyword.Text</meta>
             <column length="65535" name="RsrchStdy_Keyword_Txt"/>
         </property>
         <property name="rsrchStdyLctnCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Location.Coding.Code</meta>
             <column length="65535" name="RsrchStdy_Lctn_Cdg_Cd"/>
         </property>
         <property name="rsrchStdyLctnCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Location.Coding.Display</meta>
             <column length="65535" name="RsrchStdy_Lctn_Cdg_Dsply"/>
         </property>
         <property name="rsrchStdyLctnCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Location.Coding.System</meta>
             <column length="65535" name="RsrchStdy_Lctn_Cdg_Sys"/>
         </property>
         <property name="rsrchStdyLctnCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Location.Coding.UserSelected</meta>
             <column length="65535" name="RsrchStdy_Lctn_Cdg_UsrSltd"/>
         </property>
         <property name="rsrchStdyLctnCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Location.Coding.Version</meta>
             <column length="65535" name="RsrchStdy_Lctn_Cdg_Vrsn"/>
         </property>
         <property name="rsrchStdyLctnTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Location.Text</meta>
             <column length="65535" name="RsrchStdy_Lctn_Txt"/>
         </property>
         <property name="rsrchStdyNtAthrRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Note.AuthorReference</meta>
             <column length="65535" name="RsrchStdy_Nt_AthrRfrnc"/>
         </property>
         <property name="rsrchStdyNtAthrStrgTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Note.AuthorStringType</meta>
             <column length="65535" name="RsrchStdy_Nt_AthrStrgTyp"/>
         </property>
         <property name="rsrchStdyNtTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Note.Text</meta>
             <column length="65535" name="RsrchStdy_Nt_Txt"/>
         </property>
         <property name="rsrchStdyNtTime" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Note.Time</meta>
             <column length="65535" name="RsrchStdy_Nt_Time"/>
         </property>
         <property name="rsrchStdyObjectiveNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Objective.Name</meta>
             <column length="65535" name="RsrchStdy_Objective_Nm"/>
         </property>
         <property name="rsrchStdyObjectiveTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Objective.Type.Coding.Code</meta>
             <column length="65535" name="RsrchStdy_Objective_Typ_Cdg_Cd"/>
         </property>
         <property name="rsrchStdyObjectiveTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Objective.Type.Coding.Display</meta>
             <column length="65535" name="RsrchStdy_Objective_Typ_Cdg_Dsply"/>
         </property>
         <property name="rsrchStdyObjectiveTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Objective.Type.Coding.System</meta>
             <column length="65535" name="RsrchStdy_Objective_Typ_Cdg_Sys"/>
         </property>
         <property name="rsrchStdyObjectiveTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Objective.Type.Coding.UserSelected</meta>
             <column length="65535" name="RsrchStdy_Objective_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="rsrchStdyObjectiveTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Objective.Type.Coding.Version</meta>
             <column length="65535" name="RsrchStdy_Objective_Typ_Cdg_Vrsn"/>
         </property>
         <property name="rsrchStdyObjectiveTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Objective.Type.Text</meta>
             <column length="65535" name="RsrchStdy_Objective_Typ_Txt"/>
         </property>
         <property name="rsrchStdyPartOf" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.PartOf</meta>
             <column length="65535" name="RsrchStdy_PartOf"/>
         </property>
         <property name="rsrchStdyPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Period.End</meta>
             <column length="65535" name="RsrchStdy_Prd_End"/>
         </property>
         <property name="rsrchStdyPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Period.Start</meta>
             <column length="65535" name="RsrchStdy_Prd_Strt"/>
         </property>
         <property name="rsrchStdyPhaseCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Phase.Coding.Code</meta>
             <column length="65535" name="RsrchStdy_Phase_Cdg_Cd"/>
         </property>
         <property name="rsrchStdyPhaseCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Phase.Coding.Display</meta>
             <column length="65535" name="RsrchStdy_Phase_Cdg_Dsply"/>
         </property>
         <property name="rsrchStdyPhaseCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Phase.Coding.System</meta>
             <column length="65535" name="RsrchStdy_Phase_Cdg_Sys"/>
         </property>
         <property name="rsrchStdyPhaseCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Phase.Coding.UserSelected</meta>
             <column length="65535" name="RsrchStdy_Phase_Cdg_UsrSltd"/>
         </property>
         <property name="rsrchStdyPhaseCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Phase.Coding.Version</meta>
             <column length="65535" name="RsrchStdy_Phase_Cdg_Vrsn"/>
         </property>
         <property name="rsrchStdyPhaseTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Phase.Text</meta>
             <column length="65535" name="RsrchStdy_Phase_Txt"/>
         </property>
         <property name="rsrchStdyPrimaryPrpseTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.PrimaryPurposeType.Coding.Code</meta>
             <column length="65535" name="RsrchStdy_PrimaryPrpseTyp_Cdg_Cd"/>
         </property>
         <property name="rsrchStdyPrimaryPrpseTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.PrimaryPurposeType.Coding.Display</meta>
             <column length="65535" name="RsrchStdy_PrimaryPrpseTyp_Cdg_Dsply"/>
         </property>
         <property name="rsrchStdyPrimaryPrpseTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.PrimaryPurposeType.Coding.System</meta>
             <column length="65535" name="RsrchStdy_PrimaryPrpseTyp_Cdg_Sys"/>
         </property>
         <property name="rsrchStdyPrimaryPrpseTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.PrimaryPurposeType.Coding.UserSelected</meta>
             <column length="65535" name="RsrchStdy_PrimaryPrpseTyp_Cdg_UsrSltd"/>
         </property>
         <property name="rsrchStdyPrimaryPrpseTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.PrimaryPurposeType.Coding.Version</meta>
             <column length="65535" name="RsrchStdy_PrimaryPrpseTyp_Cdg_Vrsn"/>
         </property>
         <property name="rsrchStdyPrimaryPrpseTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.PrimaryPurposeType.Text</meta>
             <column length="65535" name="RsrchStdy_PrimaryPrpseTyp_Txt"/>
         </property>
         <property name="rsrchStdyPrincipalInvestigator" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.PrincipalInvestigator</meta>
             <column length="65535" name="RsrchStdy_PrincipalInvestigator"/>
         </property>
         <property name="rsrchStdyProtocol" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Protocol</meta>
             <column length="65535" name="RsrchStdy_Protocol"/>
         </property>
         <property name="rsrchStdyRsnStoppedCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.ReasonStopped.Coding.Code</meta>
             <column length="65535" name="RsrchStdy_RsnStopped_Cdg_Cd"/>
         </property>
         <property name="rsrchStdyRsnStoppedCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.ReasonStopped.Coding.Display</meta>
             <column length="65535" name="RsrchStdy_RsnStopped_Cdg_Dsply"/>
         </property>
         <property name="rsrchStdyRsnStoppedCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.ReasonStopped.Coding.System</meta>
             <column length="65535" name="RsrchStdy_RsnStopped_Cdg_Sys"/>
         </property>
         <property name="rsrchStdyRsnStoppedCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.ReasonStopped.Coding.UserSelected</meta>
             <column length="65535" name="RsrchStdy_RsnStopped_Cdg_UsrSltd"/>
         </property>
         <property name="rsrchStdyRsnStoppedCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.ReasonStopped.Coding.Version</meta>
             <column length="65535" name="RsrchStdy_RsnStopped_Cdg_Vrsn"/>
         </property>
         <property name="rsrchStdyRsnStoppedTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.ReasonStopped.Text</meta>
             <column length="65535" name="RsrchStdy_RsnStopped_Txt"/>
         </property>
         <property name="rsrchStdyRltedArtfctCitation" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.RelatedArtifact.Citation</meta>
             <column length="65535" name="RsrchStdy_RltedArtfct_Citation"/>
         </property>
         <property name="rsrchStdyRltedArtfctDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.RelatedArtifact.Display</meta>
             <column length="65535" name="RsrchStdy_RltedArtfct_Dsply"/>
         </property>
         <property name="rsrchStdyRltedArtfctDocCntntTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.RelatedArtifact.Document.ContentType</meta>
             <column length="65535" name="RsrchStdy_RltedArtfct_Doc_CntntTyp"/>
         </property>
         <property name="rsrchStdyRltedArtfctDocCreation" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.RelatedArtifact.Document.Creation</meta>
             <column length="65535" name="RsrchStdy_RltedArtfct_Doc_Creation"/>
         </property>
         <property name="rsrchStdyRltedArtfctDocData" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.RelatedArtifact.Document.Data</meta>
             <column length="65535" name="RsrchStdy_RltedArtfct_Doc_Data"/>
         </property>
         <property name="rsrchStdyRltedArtfctDocHash" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.RelatedArtifact.Document.Hash</meta>
             <column length="65535" name="RsrchStdy_RltedArtfct_Doc_Hash"/>
         </property>
         <property name="rsrchStdyRltedArtfctDocLnguage" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.RelatedArtifact.Document.Language</meta>
             <column length="65535" name="RsrchStdy_RltedArtfct_Doc_Lnguage"/>
         </property>
         <property name="rsrchStdyRltedArtfctDocSz" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.RelatedArtifact.Document.Size</meta>
             <column length="65535" name="RsrchStdy_RltedArtfct_Doc_Sz"/>
         </property>
         <property name="rsrchStdyRltedArtfctDocTtl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.RelatedArtifact.Document.Title</meta>
             <column length="65535" name="RsrchStdy_RltedArtfct_Doc_Ttl"/>
         </property>
         <property name="rsrchStdyRltedArtfctDocUrl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.RelatedArtifact.Document.Url</meta>
             <column length="65535" name="RsrchStdy_RltedArtfct_Doc_Url"/>
         </property>
         <property name="rsrchStdyRltedArtfctLbl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.RelatedArtifact.Label</meta>
             <column length="65535" name="RsrchStdy_RltedArtfct_Lbl"/>
         </property>
         <property name="rsrchStdyRltedArtfctRsrc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.RelatedArtifact.Resource</meta>
             <column length="65535" name="RsrchStdy_RltedArtfct_Rsrc"/>
         </property>
         <property name="rsrchStdyRltedArtfctTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.RelatedArtifact.Type</meta>
             <column length="65535" name="RsrchStdy_RltedArtfct_Typ"/>
         </property>
         <property name="rsrchStdyRltedArtfctUrl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.RelatedArtifact.Url</meta>
             <column length="65535" name="RsrchStdy_RltedArtfct_Url"/>
         </property>
         <property name="rsrchStdySite" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Site</meta>
             <column length="65535" name="RsrchStdy_Site"/>
         </property>
         <property name="rsrchStdySponsor" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Sponsor</meta>
             <column length="65535" name="RsrchStdy_Sponsor"/>
         </property>
         <property name="rsrchStdySts" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Status</meta>
             <column length="65535" name="RsrchStdy_Sts"/>
         </property>
         <property name="rsrchStdyTtl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ResearchStudy.Title</meta>
             <column length="65535" name="RsrchStdy_Ttl"/>
         </property>
     </class>

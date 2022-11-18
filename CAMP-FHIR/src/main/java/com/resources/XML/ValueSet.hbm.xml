@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Aug 17, 2022, 11:08:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 16, 2022, 11:34:16 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="ValueSet" optimistic-lock="none" table="ValueSet">
         <id name="id" type="string">
@@ -7,487 +7,487 @@
             <generator class="identity"/>
         </id>
         <property name="vlStComposeExcludeCncptCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Compose.Exclude.Concept.Code</meta>
             <column length="65535" name="VlSt_Compose_Exclude_Cncpt_Cd"/>
         </property>
         <property name="vlStComposeExcludeCncptDsgnationLnguage" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Compose.Exclude.Concept.Designation.Language</meta>
             <column length="65535" name="VlSt_Compose_Exclude_Cncpt_Dsgnation_Lnguage"/>
         </property>
         <property name="vlStComposeExcludeCncptDsgnationUseCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Compose.Exclude.Concept.Designation.Use.Code</meta>
             <column length="65535" name="VlSt_Compose_Exclude_Cncpt_Dsgnation_Use_Cd"/>
         </property>
         <property name="vlStComposeExcludeCncptDsgnationUseDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Compose.Exclude.Concept.Designation.Use.Display</meta>
             <column length="65535" name="VlSt_Compose_Exclude_Cncpt_Dsgnation_Use_Dsply"/>
         </property>
         <property name="vlStComposeExcludeCncptDsgnationUseSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Compose.Exclude.Concept.Designation.Use.System</meta>
             <column length="65535" name="VlSt_Compose_Exclude_Cncpt_Dsgnation_Use_Sys"/>
         </property>
         <property name="vlStComposeExcludeCncptDsgnationUseUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Compose.Exclude.Concept.Designation.Use.UserSelected</meta>
             <column length="65535" name="VlSt_Compose_Exclude_Cncpt_Dsgnation_Use_UsrSltd"/>
         </property>
         <property name="vlStComposeExcludeCncptDsgnationUseVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Compose.Exclude.Concept.Designation.Use.Version</meta>
             <column length="65535" name="VlSt_Compose_Exclude_Cncpt_Dsgnation_Use_Vrsn"/>
         </property>
         <property name="vlStComposeExcludeCncptDsgnationVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Compose.Exclude.Concept.Designation.Value</meta>
             <column length="65535" name="VlSt_Compose_Exclude_Cncpt_Dsgnation_Vl"/>
         </property>
         <property name="vlStComposeExcludeCncptDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Compose.Exclude.Concept.Display</meta>
             <column length="65535" name="VlSt_Compose_Exclude_Cncpt_Dsply"/>
         </property>
         <property name="vlStComposeExcludeFltrOp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Compose.Exclude.Filter.Op</meta>
             <column length="65535" name="VlSt_Compose_Exclude_Fltr_Op"/>
         </property>
         <property name="vlStComposeExcludeFltrPrpty" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Compose.Exclude.Filter.Property</meta>
             <column length="65535" name="VlSt_Compose_Exclude_Fltr_Prpty"/>
         </property>
         <property name="vlStComposeExcludeFltrVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Compose.Exclude.Filter.Value</meta>
             <column length="65535" name="VlSt_Compose_Exclude_Fltr_Vl"/>
         </property>
         <property name="vlStComposeExcludeSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Compose.Exclude.System</meta>
             <column length="65535" name="VlSt_Compose_Exclude_Sys"/>
         </property>
         <property name="vlStComposeExcludeVlSt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Compose.Exclude.ValueSet</meta>
             <column length="65535" name="VlSt_Compose_Exclude_VlSt"/>
         </property>
         <property name="vlStComposeExcludeVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Compose.Exclude.Version</meta>
             <column length="65535" name="VlSt_Compose_Exclude_Vrsn"/>
         </property>
         <property name="vlStComposeInactive" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Compose.Inactive</meta>
             <column length="65535" name="VlSt_Compose_Inactive"/>
         </property>
         <property name="vlStComposeIncludeCncptCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Compose.Include.Concept.Code</meta>
             <column length="65535" name="VlSt_Compose_Include_Cncpt_Cd"/>
         </property>
         <property name="vlStComposeIncludeCncptDsgnationLnguage" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Compose.Include.Concept.Designation.Language</meta>
             <column length="65535" name="VlSt_Compose_Include_Cncpt_Dsgnation_Lnguage"/>
         </property>
         <property name="vlStComposeIncludeCncptDsgnationUseCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Compose.Include.Concept.Designation.Use.Code</meta>
             <column length="65535" name="VlSt_Compose_Include_Cncpt_Dsgnation_Use_Cd"/>
         </property>
         <property name="vlStComposeIncludeCncptDsgnationUseDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Compose.Include.Concept.Designation.Use.Display</meta>
             <column length="65535" name="VlSt_Compose_Include_Cncpt_Dsgnation_Use_Dsply"/>
         </property>
         <property name="vlStComposeIncludeCncptDsgnationUseSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Compose.Include.Concept.Designation.Use.System</meta>
             <column length="65535" name="VlSt_Compose_Include_Cncpt_Dsgnation_Use_Sys"/>
         </property>
         <property name="vlStComposeIncludeCncptDsgnationUseUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Compose.Include.Concept.Designation.Use.UserSelected</meta>
             <column length="65535" name="VlSt_Compose_Include_Cncpt_Dsgnation_Use_UsrSltd"/>
         </property>
         <property name="vlStComposeIncludeCncptDsgnationUseVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Compose.Include.Concept.Designation.Use.Version</meta>
             <column length="65535" name="VlSt_Compose_Include_Cncpt_Dsgnation_Use_Vrsn"/>
         </property>
         <property name="vlStComposeIncludeCncptDsgnationVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Compose.Include.Concept.Designation.Value</meta>
             <column length="65535" name="VlSt_Compose_Include_Cncpt_Dsgnation_Vl"/>
         </property>
         <property name="vlStComposeIncludeCncptDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Compose.Include.Concept.Display</meta>
             <column length="65535" name="VlSt_Compose_Include_Cncpt_Dsply"/>
         </property>
         <property name="vlStComposeIncludeFltrOp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Compose.Include.Filter.Op</meta>
             <column length="65535" name="VlSt_Compose_Include_Fltr_Op"/>
         </property>
         <property name="vlStComposeIncludeFltrPrpty" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Compose.Include.Filter.Property</meta>
             <column length="65535" name="VlSt_Compose_Include_Fltr_Prpty"/>
         </property>
         <property name="vlStComposeIncludeFltrVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Compose.Include.Filter.Value</meta>
             <column length="65535" name="VlSt_Compose_Include_Fltr_Vl"/>
         </property>
         <property name="vlStComposeIncludeSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Compose.Include.System</meta>
             <column length="65535" name="VlSt_Compose_Include_Sys"/>
         </property>
         <property name="vlStComposeIncludeVlSt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Compose.Include.ValueSet</meta>
             <column length="65535" name="VlSt_Compose_Include_VlSt"/>
         </property>
         <property name="vlStComposeIncludeVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Compose.Include.Version</meta>
             <column length="65535" name="VlSt_Compose_Include_Vrsn"/>
         </property>
         <property name="vlStComposeLockedDt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Compose.LockedDate</meta>
             <column length="65535" name="VlSt_Compose_LockedDt"/>
         </property>
         <property name="vlStCntctNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Contact.Name</meta>
             <column length="65535" name="VlSt_Cntct_Nm"/>
         </property>
         <property name="vlStCntctTlcmPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Contact.Telecom.Period.End</meta>
             <column length="65535" name="VlSt_Cntct_Tlcm_Prd_End"/>
         </property>
         <property name="vlStCntctTlcmPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Contact.Telecom.Period.Start</meta>
             <column length="65535" name="VlSt_Cntct_Tlcm_Prd_Strt"/>
         </property>
         <property name="vlStCntctTlcmRnk" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Contact.Telecom.Rank</meta>
             <column length="65535" name="VlSt_Cntct_Tlcm_Rnk"/>
         </property>
         <property name="vlStCntctTlcmSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Contact.Telecom.System</meta>
             <column length="65535" name="VlSt_Cntct_Tlcm_Sys"/>
         </property>
         <property name="vlStCntctTlcmUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Contact.Telecom.Use</meta>
             <column length="65535" name="VlSt_Cntct_Tlcm_Use"/>
         </property>
         <property name="vlStCntctTlcmVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Contact.Telecom.Value</meta>
             <column length="65535" name="VlSt_Cntct_Tlcm_Vl"/>
         </property>
         <property name="vlStCopyright" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Copyright</meta>
             <column length="65535" name="VlSt_Copyright"/>
         </property>
         <property name="vlStDt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Date</meta>
             <column length="65535" name="VlSt_Dt"/>
         </property>
         <property name="vlStDscrptn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Description</meta>
             <column length="65535" name="VlSt_Dscrptn"/>
         </property>
         <property name="vlStExpansionContainsAbstract" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Expansion.Contains.Abstract</meta>
             <column length="65535" name="VlSt_Expansion_Contains_Abstract"/>
         </property>
         <property name="vlStExpansionContainsCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Expansion.Contains.Code</meta>
             <column length="65535" name="VlSt_Expansion_Contains_Cd"/>
         </property>
         <property name="vlStExpansionContainsDsgnationLnguage" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Expansion.Contains.Designation.Language</meta>
             <column length="65535" name="VlSt_Expansion_Contains_Dsgnation_Lnguage"/>
         </property>
         <property name="vlStExpansionContainsDsgnationUseCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Expansion.Contains.Designation.Use.Code</meta>
             <column length="65535" name="VlSt_Expansion_Contains_Dsgnation_Use_Cd"/>
         </property>
         <property name="vlStExpansionContainsDsgnationUseDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Expansion.Contains.Designation.Use.Display</meta>
             <column length="65535" name="VlSt_Expansion_Contains_Dsgnation_Use_Dsply"/>
         </property>
         <property name="vlStExpansionContainsDsgnationUseSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Expansion.Contains.Designation.Use.System</meta>
             <column length="65535" name="VlSt_Expansion_Contains_Dsgnation_Use_Sys"/>
         </property>
         <property name="vlStExpansionContainsDsgnationUseUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Expansion.Contains.Designation.Use.UserSelected</meta>
             <column length="65535" name="VlSt_Expansion_Contains_Dsgnation_Use_UsrSltd"/>
         </property>
         <property name="vlStExpansionContainsDsgnationUseVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Expansion.Contains.Designation.Use.Version</meta>
             <column length="65535" name="VlSt_Expansion_Contains_Dsgnation_Use_Vrsn"/>
         </property>
         <property name="vlStExpansionContainsDsgnationVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Expansion.Contains.Designation.Value</meta>
             <column length="65535" name="VlSt_Expansion_Contains_Dsgnation_Vl"/>
         </property>
         <property name="vlStExpansionContainsDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Expansion.Contains.Display</meta>
             <column length="65535" name="VlSt_Expansion_Contains_Dsply"/>
         </property>
         <property name="vlStExpansionContainsInactive" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Expansion.Contains.Inactive</meta>
             <column length="65535" name="VlSt_Expansion_Contains_Inactive"/>
         </property>
         <property name="vlStExpansionContainsSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Expansion.Contains.System</meta>
             <column length="65535" name="VlSt_Expansion_Contains_Sys"/>
         </property>
         <property name="vlStExpansionContainsVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Expansion.Contains.Version</meta>
             <column length="65535" name="VlSt_Expansion_Contains_Vrsn"/>
         </property>
         <property name="vlStExpansionId" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Expansion.Identifier</meta>
             <column length="65535" name="VlSt_Expansion_Id"/>
         </property>
         <property name="vlStExpansionOff" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Expansion.Offset</meta>
             <column length="65535" name="VlSt_Expansion_Off"/>
         </property>
         <property name="vlStExpansionPrmtrNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Expansion.Parameter.Name</meta>
             <column length="65535" name="VlSt_Expansion_Prmtr_Nm"/>
         </property>
         <property name="vlStExpansionPrmtrVlBooleanTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Expansion.Parameter.ValueBooleanType</meta>
             <column length="65535" name="VlSt_Expansion_Prmtr_VlBooleanTyp"/>
         </property>
         <property name="vlStExpansionPrmtrVlCdTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Expansion.Parameter.ValueCodeType</meta>
             <column length="65535" name="VlSt_Expansion_Prmtr_VlCdTyp"/>
         </property>
         <property name="vlStExpansionPrmtrVlDtTimeTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Expansion.Parameter.ValueDateTimeType</meta>
             <column length="65535" name="VlSt_Expansion_Prmtr_VlDtTimeTyp"/>
         </property>
         <property name="vlStExpansionPrmtrVlDecimalTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Expansion.Parameter.ValueDecimalType</meta>
             <column length="65535" name="VlSt_Expansion_Prmtr_VlDecimalTyp"/>
         </property>
         <property name="vlStExpansionPrmtrVlIntegerTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Expansion.Parameter.ValueIntegerType</meta>
             <column length="65535" name="VlSt_Expansion_Prmtr_VlIntegerTyp"/>
         </property>
         <property name="vlStExpansionPrmtrVlStrgTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Expansion.Parameter.ValueStringType</meta>
             <column length="65535" name="VlSt_Expansion_Prmtr_VlStrgTyp"/>
         </property>
         <property name="vlStExpansionPrmtrVlUriTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Expansion.Parameter.ValueUriType</meta>
             <column length="65535" name="VlSt_Expansion_Prmtr_VlUriTyp"/>
         </property>
         <property name="vlStExpansionTimestamp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Expansion.Timestamp</meta>
             <column length="65535" name="VlSt_Expansion_Timestamp"/>
         </property>
         <property name="vlStExpansionTotal" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Expansion.Total</meta>
             <column length="65535" name="VlSt_Expansion_Total"/>
         </property>
         <property name="vlStExprmtl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Experimental</meta>
             <column length="65535" name="VlSt_Exprmtl"/>
         </property>
         <property name="vlStIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Identifier.Assigner</meta>
             <column length="65535" name="VlSt_Id_Assigner"/>
         </property>
         <property name="vlStIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Identifier.Period.End</meta>
             <column length="65535" name="VlSt_Id_Prd_End"/>
         </property>
         <property name="vlStIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Identifier.Period.Start</meta>
             <column length="65535" name="VlSt_Id_Prd_Strt"/>
         </property>
         <property name="vlStIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Identifier.System</meta>
             <column length="65535" name="VlSt_Id_Sys"/>
         </property>
         <property name="vlStIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Identifier.Type.Coding.Code</meta>
             <column length="65535" name="VlSt_Id_Typ_Cdg_Cd"/>
         </property>
         <property name="vlStIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Identifier.Type.Coding.Display</meta>
             <column length="65535" name="VlSt_Id_Typ_Cdg_Dsply"/>
         </property>
         <property name="vlStIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Identifier.Type.Coding.System</meta>
             <column length="65535" name="VlSt_Id_Typ_Cdg_Sys"/>
         </property>
         <property name="vlStIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Identifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="VlSt_Id_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="vlStIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Identifier.Type.Coding.Version</meta>
             <column length="65535" name="VlSt_Id_Typ_Cdg_Vrsn"/>
         </property>
         <property name="vlStIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Identifier.Type.Text</meta>
             <column length="65535" name="VlSt_Id_Typ_Txt"/>
         </property>
         <property name="vlStIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Identifier.Use</meta>
             <column length="65535" name="VlSt_Id_Use"/>
         </property>
         <property name="vlStIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Identifier.Value</meta>
             <column length="65535" name="VlSt_Id_Vl"/>
         </property>
         <property name="vlStImmutable" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Immutable</meta>
             <column length="65535" name="VlSt_Immutable"/>
         </property>
         <property name="vlStJrsdctnCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Jurisdiction.Coding.Code</meta>
             <column length="65535" name="VlSt_Jrsdctn_Cdg_Cd"/>
         </property>
         <property name="vlStJrsdctnCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Jurisdiction.Coding.Display</meta>
             <column length="65535" name="VlSt_Jrsdctn_Cdg_Dsply"/>
         </property>
         <property name="vlStJrsdctnCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Jurisdiction.Coding.System</meta>
             <column length="65535" name="VlSt_Jrsdctn_Cdg_Sys"/>
         </property>
         <property name="vlStJrsdctnCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Jurisdiction.Coding.UserSelected</meta>
             <column length="65535" name="VlSt_Jrsdctn_Cdg_UsrSltd"/>
         </property>
         <property name="vlStJrsdctnCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Jurisdiction.Coding.Version</meta>
             <column length="65535" name="VlSt_Jrsdctn_Cdg_Vrsn"/>
         </property>
         <property name="vlStJrsdctnTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Jurisdiction.Text</meta>
             <column length="65535" name="VlSt_Jrsdctn_Txt"/>
         </property>
         <property name="vlStNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Name</meta>
             <column length="65535" name="VlSt_Nm"/>
         </property>
         <property name="vlStPblshr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Publisher</meta>
             <column length="65535" name="VlSt_Pblshr"/>
         </property>
         <property name="vlStPrpse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Purpose</meta>
             <column length="65535" name="VlSt_Prpse"/>
         </property>
         <property name="vlStSts" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Status</meta>
             <column length="65535" name="VlSt_Sts"/>
         </property>
         <property name="vlStTtl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Title</meta>
             <column length="65535" name="VlSt_Ttl"/>
         </property>
         <property name="vlStUrl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Url</meta>
             <column length="65535" name="VlSt_Url"/>
         </property>
         <property name="vlStUseCntxtCdCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.UseContext.Code.Code</meta>
             <column length="65535" name="VlSt_UseCntxt_Cd_Cd"/>
         </property>
         <property name="vlStUseCntxtCdDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.UseContext.Code.Display</meta>
             <column length="65535" name="VlSt_UseCntxt_Cd_Dsply"/>
         </property>
         <property name="vlStUseCntxtCdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.UseContext.Code.System</meta>
             <column length="65535" name="VlSt_UseCntxt_Cd_Sys"/>
         </property>
         <property name="vlStUseCntxtCdUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.UseContext.Code.UserSelected</meta>
             <column length="65535" name="VlSt_UseCntxt_Cd_UsrSltd"/>
         </property>
         <property name="vlStUseCntxtCdVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.UseContext.Code.Version</meta>
             <column length="65535" name="VlSt_UseCntxt_Cd_Vrsn"/>
         </property>
         <property name="vlStUseCntxtVlCdbleCncptCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.UseContext.ValueCodeableConcept.Coding.Code</meta>
             <column length="65535" name="VlSt_UseCntxt_VlCdbleCncpt_Cdg_Cd"/>
         </property>
         <property name="vlStUseCntxtVlCdbleCncptCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.UseContext.ValueCodeableConcept.Coding.Display</meta>
             <column length="65535" name="VlSt_UseCntxt_VlCdbleCncpt_Cdg_Dsply"/>
         </property>
         <property name="vlStUseCntxtVlCdbleCncptCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.UseContext.ValueCodeableConcept.Coding.System</meta>
             <column length="65535" name="VlSt_UseCntxt_VlCdbleCncpt_Cdg_Sys"/>
         </property>
         <property name="vlStUseCntxtVlCdbleCncptCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.UseContext.ValueCodeableConcept.Coding.UserSelected</meta>
             <column length="65535" name="VlSt_UseCntxt_VlCdbleCncpt_Cdg_UsrSltd"/>
         </property>
         <property name="vlStUseCntxtVlCdbleCncptCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.UseContext.ValueCodeableConcept.Coding.Version</meta>
             <column length="65535" name="VlSt_UseCntxt_VlCdbleCncpt_Cdg_Vrsn"/>
         </property>
         <property name="vlStUseCntxtVlCdbleCncptTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.UseContext.ValueCodeableConcept.Text</meta>
             <column length="65535" name="VlSt_UseCntxt_VlCdbleCncpt_Txt"/>
         </property>
         <property name="vlStUseCntxtVlQntyCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.UseContext.ValueQuantity.Code</meta>
             <column length="65535" name="VlSt_UseCntxt_VlQnty_Cd"/>
         </property>
         <property name="vlStUseCntxtVlQntyCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.UseContext.ValueQuantity.Comparator</meta>
             <column length="65535" name="VlSt_UseCntxt_VlQnty_Cmprtr"/>
         </property>
         <property name="vlStUseCntxtVlQntySys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.UseContext.ValueQuantity.System</meta>
             <column length="65535" name="VlSt_UseCntxt_VlQnty_Sys"/>
         </property>
         <property name="vlStUseCntxtVlQntyUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.UseContext.ValueQuantity.Unit</meta>
             <column length="65535" name="VlSt_UseCntxt_VlQnty_Unt"/>
         </property>
         <property name="vlStUseCntxtVlQntyVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.UseContext.ValueQuantity.Value</meta>
             <column length="65535" name="VlSt_UseCntxt_VlQnty_Vl"/>
         </property>
         <property name="vlStUseCntxtVlRngHiCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.UseContext.ValueRange.High.Code</meta>
             <column length="65535" name="VlSt_UseCntxt_VlRng_Hi_Cd"/>
         </property>
         <property name="vlStUseCntxtVlRngHiCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.UseContext.ValueRange.High.Comparator</meta>
             <column length="65535" name="VlSt_UseCntxt_VlRng_Hi_Cmprtr"/>
         </property>
         <property name="vlStUseCntxtVlRngHiSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.UseContext.ValueRange.High.System</meta>
             <column length="65535" name="VlSt_UseCntxt_VlRng_Hi_Sys"/>
         </property>
         <property name="vlStUseCntxtVlRngHiUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.UseContext.ValueRange.High.Unit</meta>
             <column length="65535" name="VlSt_UseCntxt_VlRng_Hi_Unt"/>
         </property>
         <property name="vlStUseCntxtVlRngHiVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.UseContext.ValueRange.High.Value</meta>
             <column length="65535" name="VlSt_UseCntxt_VlRng_Hi_Vl"/>
         </property>
         <property name="vlStUseCntxtVlRngLwCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.UseContext.ValueRange.Low.Code</meta>
             <column length="65535" name="VlSt_UseCntxt_VlRng_Lw_Cd"/>
         </property>
         <property name="vlStUseCntxtVlRngLwCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.UseContext.ValueRange.Low.Comparator</meta>
             <column length="65535" name="VlSt_UseCntxt_VlRng_Lw_Cmprtr"/>
         </property>
         <property name="vlStUseCntxtVlRngLwSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.UseContext.ValueRange.Low.System</meta>
             <column length="65535" name="VlSt_UseCntxt_VlRng_Lw_Sys"/>
         </property>
         <property name="vlStUseCntxtVlRngLwUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.UseContext.ValueRange.Low.Unit</meta>
             <column length="65535" name="VlSt_UseCntxt_VlRng_Lw_Unt"/>
         </property>
         <property name="vlStUseCntxtVlRngLwVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.UseContext.ValueRange.Low.Value</meta>
             <column length="65535" name="VlSt_UseCntxt_VlRng_Lw_Vl"/>
         </property>
         <property name="vlStUseCntxtVlRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.UseContext.ValueReference</meta>
             <column length="65535" name="VlSt_UseCntxt_VlRfrnc"/>
         </property>
         <property name="vlStVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ValueSet.Version</meta>
             <column length="65535" name="VlSt_Vrsn"/>
         </property>
     </class>

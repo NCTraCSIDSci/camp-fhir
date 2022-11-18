@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Aug 17, 2022, 11:08:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 16, 2022, 11:34:16 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="SubstanceReferenceInformation" optimistic-lock="none" table="SubstanceReferenceInformation">
         <id name="id" type="string">
@@ -7,352 +7,136 @@
             <generator class="identity"/>
         </id>
         <property name="sbstncRfrncInfoClsfctnClsfctnCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceReferenceInformation.Classification.Classification.Coding.Code</meta>
             <column length="65535" name="SbstncRfrncInfo_Clsfctn_Clsfctn_Cdg_Cd"/>
         </property>
         <property name="sbstncRfrncInfoClsfctnClsfctnCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceReferenceInformation.Classification.Classification.Coding.Display</meta>
             <column length="65535" name="SbstncRfrncInfo_Clsfctn_Clsfctn_Cdg_Dsply"/>
         </property>
         <property name="sbstncRfrncInfoClsfctnClsfctnCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceReferenceInformation.Classification.Classification.Coding.System</meta>
             <column length="65535" name="SbstncRfrncInfo_Clsfctn_Clsfctn_Cdg_Sys"/>
         </property>
         <property name="sbstncRfrncInfoClsfctnClsfctnCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceReferenceInformation.Classification.Classification.Coding.UserSelected</meta>
             <column length="65535" name="SbstncRfrncInfo_Clsfctn_Clsfctn_Cdg_UsrSltd"/>
         </property>
         <property name="sbstncRfrncInfoClsfctnClsfctnCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceReferenceInformation.Classification.Classification.Coding.Version</meta>
             <column length="65535" name="SbstncRfrncInfo_Clsfctn_Clsfctn_Cdg_Vrsn"/>
         </property>
         <property name="sbstncRfrncInfoClsfctnClsfctnTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceReferenceInformation.Classification.Classification.Text</meta>
             <column length="65535" name="SbstncRfrncInfo_Clsfctn_Clsfctn_Txt"/>
         </property>
         <property name="sbstncRfrncInfoClsfctnDomainCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceReferenceInformation.Classification.Domain.Coding.Code</meta>
             <column length="65535" name="SbstncRfrncInfo_Clsfctn_Domain_Cdg_Cd"/>
         </property>
         <property name="sbstncRfrncInfoClsfctnDomainCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceReferenceInformation.Classification.Domain.Coding.Display</meta>
             <column length="65535" name="SbstncRfrncInfo_Clsfctn_Domain_Cdg_Dsply"/>
         </property>
         <property name="sbstncRfrncInfoClsfctnDomainCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceReferenceInformation.Classification.Domain.Coding.System</meta>
             <column length="65535" name="SbstncRfrncInfo_Clsfctn_Domain_Cdg_Sys"/>
         </property>
         <property name="sbstncRfrncInfoClsfctnDomainCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceReferenceInformation.Classification.Domain.Coding.UserSelected</meta>
             <column length="65535" name="SbstncRfrncInfo_Clsfctn_Domain_Cdg_UsrSltd"/>
         </property>
         <property name="sbstncRfrncInfoClsfctnDomainCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceReferenceInformation.Classification.Domain.Coding.Version</meta>
             <column length="65535" name="SbstncRfrncInfo_Clsfctn_Domain_Cdg_Vrsn"/>
         </property>
         <property name="sbstncRfrncInfoClsfctnDomainTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceReferenceInformation.Classification.Domain.Text</meta>
             <column length="65535" name="SbstncRfrncInfo_Clsfctn_Domain_Txt"/>
         </property>
         <property name="sbstncRfrncInfoClsfctnSrc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceReferenceInformation.Classification.Source</meta>
             <column length="65535" name="SbstncRfrncInfo_Clsfctn_Src"/>
         </property>
         <property name="sbstncRfrncInfoClsfctnSubtypeCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceReferenceInformation.Classification.Subtype.Coding.Code</meta>
             <column length="65535" name="SbstncRfrncInfo_Clsfctn_Subtype_Cdg_Cd"/>
         </property>
         <property name="sbstncRfrncInfoClsfctnSubtypeCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceReferenceInformation.Classification.Subtype.Coding.Display</meta>
             <column length="65535" name="SbstncRfrncInfo_Clsfctn_Subtype_Cdg_Dsply"/>
         </property>
         <property name="sbstncRfrncInfoClsfctnSubtypeCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceReferenceInformation.Classification.Subtype.Coding.System</meta>
             <column length="65535" name="SbstncRfrncInfo_Clsfctn_Subtype_Cdg_Sys"/>
         </property>
         <property name="sbstncRfrncInfoClsfctnSubtypeCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceReferenceInformation.Classification.Subtype.Coding.UserSelected</meta>
             <column length="65535" name="SbstncRfrncInfo_Clsfctn_Subtype_Cdg_UsrSltd"/>
         </property>
         <property name="sbstncRfrncInfoClsfctnSubtypeCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceReferenceInformation.Classification.Subtype.Coding.Version</meta>
             <column length="65535" name="SbstncRfrncInfo_Clsfctn_Subtype_Cdg_Vrsn"/>
         </property>
         <property name="sbstncRfrncInfoClsfctnSubtypeTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceReferenceInformation.Classification.Subtype.Text</meta>
             <column length="65535" name="SbstncRfrncInfo_Clsfctn_Subtype_Txt"/>
         </property>
         <property name="sbstncRfrncInfoComment" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceReferenceInformation.Comment</meta>
             <column length="65535" name="SbstncRfrncInfo_Comment"/>
         </property>
         <property name="sbstncRfrncInfoGeneGeneCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceReferenceInformation.Gene.Gene.Coding.Code</meta>
             <column length="65535" name="SbstncRfrncInfo_Gene_Gene_Cdg_Cd"/>
         </property>
         <property name="sbstncRfrncInfoGeneGeneCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceReferenceInformation.Gene.Gene.Coding.Display</meta>
             <column length="65535" name="SbstncRfrncInfo_Gene_Gene_Cdg_Dsply"/>
         </property>
         <property name="sbstncRfrncInfoGeneGeneCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceReferenceInformation.Gene.Gene.Coding.System</meta>
             <column length="65535" name="SbstncRfrncInfo_Gene_Gene_Cdg_Sys"/>
         </property>
         <property name="sbstncRfrncInfoGeneGeneCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceReferenceInformation.Gene.Gene.Coding.UserSelected</meta>
             <column length="65535" name="SbstncRfrncInfo_Gene_Gene_Cdg_UsrSltd"/>
         </property>
         <property name="sbstncRfrncInfoGeneGeneCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceReferenceInformation.Gene.Gene.Coding.Version</meta>
             <column length="65535" name="SbstncRfrncInfo_Gene_Gene_Cdg_Vrsn"/>
         </property>
         <property name="sbstncRfrncInfoGeneGeneTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceReferenceInformation.Gene.Gene.Text</meta>
             <column length="65535" name="SbstncRfrncInfo_Gene_Gene_Txt"/>
         </property>
         <property name="sbstncRfrncInfoGeneGeneSqncOriginCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceReferenceInformation.Gene.GeneSequenceOrigin.Coding.Code</meta>
             <column length="65535" name="SbstncRfrncInfo_Gene_GeneSqncOrigin_Cdg_Cd"/>
         </property>
         <property name="sbstncRfrncInfoGeneGeneSqncOriginCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceReferenceInformation.Gene.GeneSequenceOrigin.Coding.Display</meta>
             <column length="65535" name="SbstncRfrncInfo_Gene_GeneSqncOrigin_Cdg_Dsply"/>
         </property>
         <property name="sbstncRfrncInfoGeneGeneSqncOriginCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceReferenceInformation.Gene.GeneSequenceOrigin.Coding.System</meta>
             <column length="65535" name="SbstncRfrncInfo_Gene_GeneSqncOrigin_Cdg_Sys"/>
         </property>
         <property name="sbstncRfrncInfoGeneGeneSqncOriginCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceReferenceInformation.Gene.GeneSequenceOrigin.Coding.UserSelected</meta>
             <column length="65535" name="SbstncRfrncInfo_Gene_GeneSqncOrigin_Cdg_UsrSltd"/>
         </property>
         <property name="sbstncRfrncInfoGeneGeneSqncOriginCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceReferenceInformation.Gene.GeneSequenceOrigin.Coding.Version</meta>
             <column length="65535" name="SbstncRfrncInfo_Gene_GeneSqncOrigin_Cdg_Vrsn"/>
         </property>
         <property name="sbstncRfrncInfoGeneGeneSqncOriginTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceReferenceInformation.Gene.GeneSequenceOrigin.Text</meta>
             <column length="65535" name="SbstncRfrncInfo_Gene_GeneSqncOrigin_Txt"/>
         </property>
         <property name="sbstncRfrncInfoGeneSrc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceReferenceInformation.Gene.Source</meta>
             <column length="65535" name="SbstncRfrncInfo_Gene_Src"/>
-        </property>
-        <property name="sbstncRfrncInfoGeneElmntSrc" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncRfrncInfo_GeneElmnt_Src"/>
-        </property>
-        <property name="sbstncRfrncInfoGeneElmntTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncRfrncInfo_GeneElmnt_Typ_Cdg_Cd"/>
-        </property>
-        <property name="sbstncRfrncInfoGeneElmntTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncRfrncInfo_GeneElmnt_Typ_Cdg_Dsply"/>
-        </property>
-        <property name="sbstncRfrncInfoGeneElmntTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncRfrncInfo_GeneElmnt_Typ_Cdg_Sys"/>
-        </property>
-        <property name="sbstncRfrncInfoGeneElmntTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncRfrncInfo_GeneElmnt_Typ_Cdg_UsrSltd"/>
-        </property>
-        <property name="sbstncRfrncInfoGeneElmntTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncRfrncInfo_GeneElmnt_Typ_Cdg_Vrsn"/>
-        </property>
-        <property name="sbstncRfrncInfoGeneElmntTypTxt" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncRfrncInfo_GeneElmnt_Typ_Txt"/>
-        </property>
-        <property name="sbstncRfrncInfoTarAmntQntyCd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncRfrncInfo_Tar_AmntQnty_Cd"/>
-        </property>
-        <property name="sbstncRfrncInfoTarAmntQntyCmprtr" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncRfrncInfo_Tar_AmntQnty_Cmprtr"/>
-        </property>
-        <property name="sbstncRfrncInfoTarAmntQntySys" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncRfrncInfo_Tar_AmntQnty_Sys"/>
-        </property>
-        <property name="sbstncRfrncInfoTarAmntQntyUnt" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncRfrncInfo_Tar_AmntQnty_Unt"/>
-        </property>
-        <property name="sbstncRfrncInfoTarAmntQntyVl" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncRfrncInfo_Tar_AmntQnty_Vl"/>
-        </property>
-        <property name="sbstncRfrncInfoTarAmntRngHiCd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncRfrncInfo_Tar_AmntRng_Hi_Cd"/>
-        </property>
-        <property name="sbstncRfrncInfoTarAmntRngHiCmprtr" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncRfrncInfo_Tar_AmntRng_Hi_Cmprtr"/>
-        </property>
-        <property name="sbstncRfrncInfoTarAmntRngHiSys" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncRfrncInfo_Tar_AmntRng_Hi_Sys"/>
-        </property>
-        <property name="sbstncRfrncInfoTarAmntRngHiUnt" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncRfrncInfo_Tar_AmntRng_Hi_Unt"/>
-        </property>
-        <property name="sbstncRfrncInfoTarAmntRngHiVl" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncRfrncInfo_Tar_AmntRng_Hi_Vl"/>
-        </property>
-        <property name="sbstncRfrncInfoTarAmntRngLwCd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncRfrncInfo_Tar_AmntRng_Lw_Cd"/>
-        </property>
-        <property name="sbstncRfrncInfoTarAmntRngLwCmprtr" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncRfrncInfo_Tar_AmntRng_Lw_Cmprtr"/>
-        </property>
-        <property name="sbstncRfrncInfoTarAmntRngLwSys" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncRfrncInfo_Tar_AmntRng_Lw_Sys"/>
-        </property>
-        <property name="sbstncRfrncInfoTarAmntRngLwUnt" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncRfrncInfo_Tar_AmntRng_Lw_Unt"/>
-        </property>
-        <property name="sbstncRfrncInfoTarAmntRngLwVl" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncRfrncInfo_Tar_AmntRng_Lw_Vl"/>
-        </property>
-        <property name="sbstncRfrncInfoTarAmntStrgTyp" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncRfrncInfo_Tar_AmntStrgTyp"/>
-        </property>
-        <property name="sbstncRfrncInfoTarAmntTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncRfrncInfo_Tar_AmntTyp_Cdg_Cd"/>
-        </property>
-        <property name="sbstncRfrncInfoTarAmntTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncRfrncInfo_Tar_AmntTyp_Cdg_Dsply"/>
-        </property>
-        <property name="sbstncRfrncInfoTarAmntTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncRfrncInfo_Tar_AmntTyp_Cdg_Sys"/>
-        </property>
-        <property name="sbstncRfrncInfoTarAmntTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncRfrncInfo_Tar_AmntTyp_Cdg_UsrSltd"/>
-        </property>
-        <property name="sbstncRfrncInfoTarAmntTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncRfrncInfo_Tar_AmntTyp_Cdg_Vrsn"/>
-        </property>
-        <property name="sbstncRfrncInfoTarAmntTypTxt" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncRfrncInfo_Tar_AmntTyp_Txt"/>
-        </property>
-        <property name="sbstncRfrncInfoTarInteractionCdgCd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncRfrncInfo_Tar_Interaction_Cdg_Cd"/>
-        </property>
-        <property name="sbstncRfrncInfoTarInteractionCdgDsply" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncRfrncInfo_Tar_Interaction_Cdg_Dsply"/>
-        </property>
-        <property name="sbstncRfrncInfoTarInteractionCdgSys" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncRfrncInfo_Tar_Interaction_Cdg_Sys"/>
-        </property>
-        <property name="sbstncRfrncInfoTarInteractionCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncRfrncInfo_Tar_Interaction_Cdg_UsrSltd"/>
-        </property>
-        <property name="sbstncRfrncInfoTarInteractionCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncRfrncInfo_Tar_Interaction_Cdg_Vrsn"/>
-        </property>
-        <property name="sbstncRfrncInfoTarInteractionTxt" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncRfrncInfo_Tar_Interaction_Txt"/>
-        </property>
-        <property name="sbstncRfrncInfoTarOrgnsmCdgCd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncRfrncInfo_Tar_Orgnsm_Cdg_Cd"/>
-        </property>
-        <property name="sbstncRfrncInfoTarOrgnsmCdgDsply" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncRfrncInfo_Tar_Orgnsm_Cdg_Dsply"/>
-        </property>
-        <property name="sbstncRfrncInfoTarOrgnsmCdgSys" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncRfrncInfo_Tar_Orgnsm_Cdg_Sys"/>
-        </property>
-        <property name="sbstncRfrncInfoTarOrgnsmCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncRfrncInfo_Tar_Orgnsm_Cdg_UsrSltd"/>
-        </property>
-        <property name="sbstncRfrncInfoTarOrgnsmCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncRfrncInfo_Tar_Orgnsm_Cdg_Vrsn"/>
-        </property>
-        <property name="sbstncRfrncInfoTarOrgnsmTxt" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncRfrncInfo_Tar_Orgnsm_Txt"/>
-        </property>
-        <property name="sbstncRfrncInfoTarOrgnsmTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncRfrncInfo_Tar_OrgnsmTyp_Cdg_Cd"/>
-        </property>
-        <property name="sbstncRfrncInfoTarOrgnsmTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncRfrncInfo_Tar_OrgnsmTyp_Cdg_Dsply"/>
-        </property>
-        <property name="sbstncRfrncInfoTarOrgnsmTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncRfrncInfo_Tar_OrgnsmTyp_Cdg_Sys"/>
-        </property>
-        <property name="sbstncRfrncInfoTarOrgnsmTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncRfrncInfo_Tar_OrgnsmTyp_Cdg_UsrSltd"/>
-        </property>
-        <property name="sbstncRfrncInfoTarOrgnsmTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncRfrncInfo_Tar_OrgnsmTyp_Cdg_Vrsn"/>
-        </property>
-        <property name="sbstncRfrncInfoTarOrgnsmTypTxt" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncRfrncInfo_Tar_OrgnsmTyp_Txt"/>
-        </property>
-        <property name="sbstncRfrncInfoTarSrc" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncRfrncInfo_Tar_Src"/>
-        </property>
-        <property name="sbstncRfrncInfoTarTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncRfrncInfo_Tar_Typ_Cdg_Cd"/>
-        </property>
-        <property name="sbstncRfrncInfoTarTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncRfrncInfo_Tar_Typ_Cdg_Dsply"/>
-        </property>
-        <property name="sbstncRfrncInfoTarTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncRfrncInfo_Tar_Typ_Cdg_Sys"/>
-        </property>
-        <property name="sbstncRfrncInfoTarTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncRfrncInfo_Tar_Typ_Cdg_UsrSltd"/>
-        </property>
-        <property name="sbstncRfrncInfoTarTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncRfrncInfo_Tar_Typ_Cdg_Vrsn"/>
-        </property>
-        <property name="sbstncRfrncInfoTarTypTxt" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="SbstncRfrncInfo_Tar_Typ_Txt"/>
         </property>
     </class>
 </hibernate-mapping>

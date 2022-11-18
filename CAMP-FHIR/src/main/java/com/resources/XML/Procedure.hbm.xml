@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Aug 17, 2022, 11:08:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 16, 2022, 11:34:16 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Procedure" optimistic-lock="none" table="Procedure">
         <id name="id" type="string">
@@ -7,475 +7,475 @@
             <generator class="identity"/>
         </id>
         <property name="prcdrAsserter" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.Asserter</meta>
             <column length="65535" name="Prcdr_Asserter"/>
         </property>
         <property name="prcdrBasedOn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.BasedOn</meta>
             <column length="65535" name="Prcdr_BasedOn"/>
         </property>
         <property name="prcdrBodySiteCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.BodySite.Coding.Code</meta>
             <column length="65535" name="Prcdr_BodySite_Cdg_Cd"/>
         </property>
         <property name="prcdrBodySiteCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.BodySite.Coding.Display</meta>
             <column length="65535" name="Prcdr_BodySite_Cdg_Dsply"/>
         </property>
         <property name="prcdrBodySiteCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.BodySite.Coding.System</meta>
             <column length="65535" name="Prcdr_BodySite_Cdg_Sys"/>
         </property>
         <property name="prcdrBodySiteCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.BodySite.Coding.UserSelected</meta>
             <column length="65535" name="Prcdr_BodySite_Cdg_UsrSltd"/>
         </property>
         <property name="prcdrBodySiteCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.BodySite.Coding.Version</meta>
             <column length="65535" name="Prcdr_BodySite_Cdg_Vrsn"/>
         </property>
         <property name="prcdrBodySiteTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.BodySite.Text</meta>
             <column length="65535" name="Prcdr_BodySite_Txt"/>
         </property>
         <property name="prcdrCtgryCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.Category.Coding.Code</meta>
             <column length="65535" name="Prcdr_Ctgry_Cdg_Cd"/>
         </property>
         <property name="prcdrCtgryCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.Category.Coding.Display</meta>
             <column length="65535" name="Prcdr_Ctgry_Cdg_Dsply"/>
         </property>
         <property name="prcdrCtgryCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.Category.Coding.System</meta>
             <column length="65535" name="Prcdr_Ctgry_Cdg_Sys"/>
         </property>
         <property name="prcdrCtgryCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.Category.Coding.UserSelected</meta>
             <column length="65535" name="Prcdr_Ctgry_Cdg_UsrSltd"/>
         </property>
         <property name="prcdrCtgryCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.Category.Coding.Version</meta>
             <column length="65535" name="Prcdr_Ctgry_Cdg_Vrsn"/>
         </property>
         <property name="prcdrCtgryTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.Category.Text</meta>
             <column length="65535" name="Prcdr_Ctgry_Txt"/>
         </property>
         <property name="prcdrCdCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.Code.Coding.Code</meta>
             <column length="65535" name="Prcdr_Cd_Cdg_Cd"/>
         </property>
         <property name="prcdrCdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.Code.Coding.Display</meta>
             <column length="65535" name="Prcdr_Cd_Cdg_Dsply"/>
         </property>
         <property name="prcdrCdCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.Code.Coding.System</meta>
             <column length="65535" name="Prcdr_Cd_Cdg_Sys"/>
         </property>
         <property name="prcdrCdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.Code.Coding.UserSelected</meta>
             <column length="65535" name="Prcdr_Cd_Cdg_UsrSltd"/>
         </property>
         <property name="prcdrCdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.Code.Coding.Version</meta>
             <column length="65535" name="Prcdr_Cd_Cdg_Vrsn"/>
         </property>
         <property name="prcdrCdTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.Code.Text</meta>
             <column length="65535" name="Prcdr_Cd_Txt"/>
         </property>
         <property name="prcdrComplicationCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.Complication.Coding.Code</meta>
             <column length="65535" name="Prcdr_Complication_Cdg_Cd"/>
         </property>
         <property name="prcdrComplicationCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.Complication.Coding.Display</meta>
             <column length="65535" name="Prcdr_Complication_Cdg_Dsply"/>
         </property>
         <property name="prcdrComplicationCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.Complication.Coding.System</meta>
             <column length="65535" name="Prcdr_Complication_Cdg_Sys"/>
         </property>
         <property name="prcdrComplicationCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.Complication.Coding.UserSelected</meta>
             <column length="65535" name="Prcdr_Complication_Cdg_UsrSltd"/>
         </property>
         <property name="prcdrComplicationCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.Complication.Coding.Version</meta>
             <column length="65535" name="Prcdr_Complication_Cdg_Vrsn"/>
         </property>
         <property name="prcdrComplicationTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.Complication.Text</meta>
             <column length="65535" name="Prcdr_Complication_Txt"/>
         </property>
         <property name="prcdrComplicationDtl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.ComplicationDetail</meta>
             <column length="65535" name="Prcdr_ComplicationDtl"/>
         </property>
         <property name="prcdrEnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.Encounter</meta>
             <column length="65535" name="Prcdr_Enc"/>
         </property>
         <property name="prcdrFocalDvcActnCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.FocalDevice.Action.Coding.Code</meta>
             <column length="65535" name="Prcdr_FocalDvc_Actn_Cdg_Cd"/>
         </property>
         <property name="prcdrFocalDvcActnCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.FocalDevice.Action.Coding.Display</meta>
             <column length="65535" name="Prcdr_FocalDvc_Actn_Cdg_Dsply"/>
         </property>
         <property name="prcdrFocalDvcActnCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.FocalDevice.Action.Coding.System</meta>
             <column length="65535" name="Prcdr_FocalDvc_Actn_Cdg_Sys"/>
         </property>
         <property name="prcdrFocalDvcActnCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.FocalDevice.Action.Coding.UserSelected</meta>
             <column length="65535" name="Prcdr_FocalDvc_Actn_Cdg_UsrSltd"/>
         </property>
         <property name="prcdrFocalDvcActnCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.FocalDevice.Action.Coding.Version</meta>
             <column length="65535" name="Prcdr_FocalDvc_Actn_Cdg_Vrsn"/>
         </property>
         <property name="prcdrFocalDvcActnTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.FocalDevice.Action.Text</meta>
             <column length="65535" name="Prcdr_FocalDvc_Actn_Txt"/>
         </property>
         <property name="prcdrFocalDvcManipulated" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.FocalDevice.Manipulated</meta>
             <column length="65535" name="Prcdr_FocalDvc_Manipulated"/>
         </property>
         <property name="prcdrFollowUpCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.FollowUp.Coding.Code</meta>
             <column length="65535" name="Prcdr_FollowUp_Cdg_Cd"/>
         </property>
         <property name="prcdrFollowUpCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.FollowUp.Coding.Display</meta>
             <column length="65535" name="Prcdr_FollowUp_Cdg_Dsply"/>
         </property>
         <property name="prcdrFollowUpCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.FollowUp.Coding.System</meta>
             <column length="65535" name="Prcdr_FollowUp_Cdg_Sys"/>
         </property>
         <property name="prcdrFollowUpCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.FollowUp.Coding.UserSelected</meta>
             <column length="65535" name="Prcdr_FollowUp_Cdg_UsrSltd"/>
         </property>
         <property name="prcdrFollowUpCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.FollowUp.Coding.Version</meta>
             <column length="65535" name="Prcdr_FollowUp_Cdg_Vrsn"/>
         </property>
         <property name="prcdrFollowUpTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.FollowUp.Text</meta>
             <column length="65535" name="Prcdr_FollowUp_Txt"/>
         </property>
         <property name="prcdrIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.Identifier.Assigner</meta>
             <column length="65535" name="Prcdr_Id_Assigner"/>
         </property>
         <property name="prcdrIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.Identifier.Period.End</meta>
             <column length="65535" name="Prcdr_Id_Prd_End"/>
         </property>
         <property name="prcdrIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.Identifier.Period.Start</meta>
             <column length="65535" name="Prcdr_Id_Prd_Strt"/>
         </property>
         <property name="prcdrIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.Identifier.System</meta>
             <column length="65535" name="Prcdr_Id_Sys"/>
         </property>
         <property name="prcdrIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.Identifier.Type.Coding.Code</meta>
             <column length="65535" name="Prcdr_Id_Typ_Cdg_Cd"/>
         </property>
         <property name="prcdrIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.Identifier.Type.Coding.Display</meta>
             <column length="65535" name="Prcdr_Id_Typ_Cdg_Dsply"/>
         </property>
         <property name="prcdrIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.Identifier.Type.Coding.System</meta>
             <column length="65535" name="Prcdr_Id_Typ_Cdg_Sys"/>
         </property>
         <property name="prcdrIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.Identifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="Prcdr_Id_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="prcdrIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.Identifier.Type.Coding.Version</meta>
             <column length="65535" name="Prcdr_Id_Typ_Cdg_Vrsn"/>
         </property>
         <property name="prcdrIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.Identifier.Type.Text</meta>
             <column length="65535" name="Prcdr_Id_Typ_Txt"/>
         </property>
         <property name="prcdrIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.Identifier.Use</meta>
             <column length="65535" name="Prcdr_Id_Use"/>
         </property>
         <property name="prcdrIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.Identifier.Value</meta>
             <column length="65535" name="Prcdr_Id_Vl"/>
         </property>
         <property name="prcdrInstantiatesCanonical" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.InstantiatesCanonical</meta>
             <column length="65535" name="Prcdr_InstantiatesCanonical"/>
         </property>
         <property name="prcdrInstantiatesUri" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.InstantiatesUri</meta>
             <column length="65535" name="Prcdr_InstantiatesUri"/>
         </property>
         <property name="prcdrLctn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.Location</meta>
             <column length="65535" name="Prcdr_Lctn"/>
         </property>
         <property name="prcdrNtAthrRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.Note.AuthorReference</meta>
             <column length="65535" name="Prcdr_Nt_AthrRfrnc"/>
         </property>
         <property name="prcdrNtAthrStrgTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.Note.AuthorStringType</meta>
             <column length="65535" name="Prcdr_Nt_AthrStrgTyp"/>
         </property>
         <property name="prcdrNtTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.Note.Text</meta>
             <column length="65535" name="Prcdr_Nt_Txt"/>
         </property>
         <property name="prcdrNtTime" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.Note.Time</meta>
             <column length="65535" name="Prcdr_Nt_Time"/>
         </property>
         <property name="prcdrOutcomeCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.Outcome.Coding.Code</meta>
             <column length="65535" name="Prcdr_Outcome_Cdg_Cd"/>
         </property>
         <property name="prcdrOutcomeCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.Outcome.Coding.Display</meta>
             <column length="65535" name="Prcdr_Outcome_Cdg_Dsply"/>
         </property>
         <property name="prcdrOutcomeCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.Outcome.Coding.System</meta>
             <column length="65535" name="Prcdr_Outcome_Cdg_Sys"/>
         </property>
         <property name="prcdrOutcomeCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.Outcome.Coding.UserSelected</meta>
             <column length="65535" name="Prcdr_Outcome_Cdg_UsrSltd"/>
         </property>
         <property name="prcdrOutcomeCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.Outcome.Coding.Version</meta>
             <column length="65535" name="Prcdr_Outcome_Cdg_Vrsn"/>
         </property>
         <property name="prcdrOutcomeTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.Outcome.Text</meta>
             <column length="65535" name="Prcdr_Outcome_Txt"/>
         </property>
         <property name="prcdrPartOf" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.PartOf</meta>
             <column length="65535" name="Prcdr_PartOf"/>
         </property>
         <property name="prcdrPerformedAgeCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.PerformedAge.Code</meta>
             <column length="65535" name="Prcdr_PerformedAge_Cd"/>
         </property>
         <property name="prcdrPerformedAgeCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.PerformedAge.Comparator</meta>
             <column length="65535" name="Prcdr_PerformedAge_Cmprtr"/>
         </property>
         <property name="prcdrPerformedAgeSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.PerformedAge.System</meta>
             <column length="65535" name="Prcdr_PerformedAge_Sys"/>
         </property>
         <property name="prcdrPerformedAgeUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.PerformedAge.Unit</meta>
             <column length="65535" name="Prcdr_PerformedAge_Unt"/>
         </property>
         <property name="prcdrPerformedAgeVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.PerformedAge.Value</meta>
             <column length="65535" name="Prcdr_PerformedAge_Vl"/>
         </property>
         <property name="prcdrPerformedDtTimeTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.PerformedDateTimeType</meta>
             <column length="65535" name="Prcdr_PerformedDtTimeTyp"/>
         </property>
         <property name="prcdrPerformedPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.PerformedPeriod.End</meta>
             <column length="65535" name="Prcdr_PerformedPrd_End"/>
         </property>
         <property name="prcdrPerformedPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.PerformedPeriod.Start</meta>
             <column length="65535" name="Prcdr_PerformedPrd_Strt"/>
         </property>
         <property name="prcdrPerformedRngHiCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.PerformedRange.High.Code</meta>
             <column length="65535" name="Prcdr_PerformedRng_Hi_Cd"/>
         </property>
         <property name="prcdrPerformedRngHiCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.PerformedRange.High.Comparator</meta>
             <column length="65535" name="Prcdr_PerformedRng_Hi_Cmprtr"/>
         </property>
         <property name="prcdrPerformedRngHiSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.PerformedRange.High.System</meta>
             <column length="65535" name="Prcdr_PerformedRng_Hi_Sys"/>
         </property>
         <property name="prcdrPerformedRngHiUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.PerformedRange.High.Unit</meta>
             <column length="65535" name="Prcdr_PerformedRng_Hi_Unt"/>
         </property>
         <property name="prcdrPerformedRngHiVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.PerformedRange.High.Value</meta>
             <column length="65535" name="Prcdr_PerformedRng_Hi_Vl"/>
         </property>
         <property name="prcdrPerformedRngLwCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.PerformedRange.Low.Code</meta>
             <column length="65535" name="Prcdr_PerformedRng_Lw_Cd"/>
         </property>
         <property name="prcdrPerformedRngLwCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.PerformedRange.Low.Comparator</meta>
             <column length="65535" name="Prcdr_PerformedRng_Lw_Cmprtr"/>
         </property>
         <property name="prcdrPerformedRngLwSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.PerformedRange.Low.System</meta>
             <column length="65535" name="Prcdr_PerformedRng_Lw_Sys"/>
         </property>
         <property name="prcdrPerformedRngLwUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.PerformedRange.Low.Unit</meta>
             <column length="65535" name="Prcdr_PerformedRng_Lw_Unt"/>
         </property>
         <property name="prcdrPerformedRngLwVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.PerformedRange.Low.Value</meta>
             <column length="65535" name="Prcdr_PerformedRng_Lw_Vl"/>
         </property>
         <property name="prcdrPerformedStrgTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.PerformedStringType</meta>
             <column length="65535" name="Prcdr_PerformedStrgTyp"/>
         </property>
         <property name="prcdrPrfrmrActor" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.Performer.Actor</meta>
             <column length="65535" name="Prcdr_Prfrmr_Actor"/>
         </property>
         <property name="prcdrPrfrmrFunctionCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.Performer.Function.Coding.Code</meta>
             <column length="65535" name="Prcdr_Prfrmr_Function_Cdg_Cd"/>
         </property>
         <property name="prcdrPrfrmrFunctionCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.Performer.Function.Coding.Display</meta>
             <column length="65535" name="Prcdr_Prfrmr_Function_Cdg_Dsply"/>
         </property>
         <property name="prcdrPrfrmrFunctionCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.Performer.Function.Coding.System</meta>
             <column length="65535" name="Prcdr_Prfrmr_Function_Cdg_Sys"/>
         </property>
         <property name="prcdrPrfrmrFunctionCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.Performer.Function.Coding.UserSelected</meta>
             <column length="65535" name="Prcdr_Prfrmr_Function_Cdg_UsrSltd"/>
         </property>
         <property name="prcdrPrfrmrFunctionCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.Performer.Function.Coding.Version</meta>
             <column length="65535" name="Prcdr_Prfrmr_Function_Cdg_Vrsn"/>
         </property>
         <property name="prcdrPrfrmrFunctionTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.Performer.Function.Text</meta>
             <column length="65535" name="Prcdr_Prfrmr_Function_Txt"/>
         </property>
         <property name="prcdrPrfrmrOnBehalfOf" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.Performer.OnBehalfOf</meta>
             <column length="65535" name="Prcdr_Prfrmr_OnBehalfOf"/>
         </property>
         <property name="prcdrRsnCdCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.ReasonCode.Coding.Code</meta>
             <column length="65535" name="Prcdr_RsnCd_Cdg_Cd"/>
         </property>
         <property name="prcdrRsnCdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.ReasonCode.Coding.Display</meta>
             <column length="65535" name="Prcdr_RsnCd_Cdg_Dsply"/>
         </property>
         <property name="prcdrRsnCdCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.ReasonCode.Coding.System</meta>
             <column length="65535" name="Prcdr_RsnCd_Cdg_Sys"/>
         </property>
         <property name="prcdrRsnCdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.ReasonCode.Coding.UserSelected</meta>
             <column length="65535" name="Prcdr_RsnCd_Cdg_UsrSltd"/>
         </property>
         <property name="prcdrRsnCdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.ReasonCode.Coding.Version</meta>
             <column length="65535" name="Prcdr_RsnCd_Cdg_Vrsn"/>
         </property>
         <property name="prcdrRsnCdTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.ReasonCode.Text</meta>
             <column length="65535" name="Prcdr_RsnCd_Txt"/>
         </property>
         <property name="prcdrRsnRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.ReasonReference</meta>
             <column length="65535" name="Prcdr_RsnRfrnc"/>
         </property>
         <property name="prcdrRecorder" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.Recorder</meta>
             <column length="65535" name="Prcdr_Recorder"/>
         </property>
         <property name="prcdrRpt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.Report</meta>
             <column length="65535" name="Prcdr_Rpt"/>
         </property>
         <property name="prcdrSts" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.Status</meta>
             <column length="65535" name="Prcdr_Sts"/>
         </property>
         <property name="prcdrStsRsnCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.StatusReason.Coding.Code</meta>
             <column length="65535" name="Prcdr_StsRsn_Cdg_Cd"/>
         </property>
         <property name="prcdrStsRsnCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.StatusReason.Coding.Display</meta>
             <column length="65535" name="Prcdr_StsRsn_Cdg_Dsply"/>
         </property>
         <property name="prcdrStsRsnCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.StatusReason.Coding.System</meta>
             <column length="65535" name="Prcdr_StsRsn_Cdg_Sys"/>
         </property>
         <property name="prcdrStsRsnCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.StatusReason.Coding.UserSelected</meta>
             <column length="65535" name="Prcdr_StsRsn_Cdg_UsrSltd"/>
         </property>
         <property name="prcdrStsRsnCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.StatusReason.Coding.Version</meta>
             <column length="65535" name="Prcdr_StsRsn_Cdg_Vrsn"/>
         </property>
         <property name="prcdrStsRsnTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.StatusReason.Text</meta>
             <column length="65535" name="Prcdr_StsRsn_Txt"/>
         </property>
         <property name="prcdrSbjct" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.Subject</meta>
             <column length="65535" name="Prcdr_Sbjct"/>
         </property>
         <property name="prcdrUsedCdCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.UsedCode.Coding.Code</meta>
             <column length="65535" name="Prcdr_UsedCd_Cdg_Cd"/>
         </property>
         <property name="prcdrUsedCdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.UsedCode.Coding.Display</meta>
             <column length="65535" name="Prcdr_UsedCd_Cdg_Dsply"/>
         </property>
         <property name="prcdrUsedCdCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.UsedCode.Coding.System</meta>
             <column length="65535" name="Prcdr_UsedCd_Cdg_Sys"/>
         </property>
         <property name="prcdrUsedCdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.UsedCode.Coding.UserSelected</meta>
             <column length="65535" name="Prcdr_UsedCd_Cdg_UsrSltd"/>
         </property>
         <property name="prcdrUsedCdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.UsedCode.Coding.Version</meta>
             <column length="65535" name="Prcdr_UsedCd_Cdg_Vrsn"/>
         </property>
         <property name="prcdrUsedCdTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.UsedCode.Text</meta>
             <column length="65535" name="Prcdr_UsedCd_Txt"/>
         </property>
         <property name="prcdrUsedRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Procedure.UsedReference</meta>
             <column length="65535" name="Prcdr_UsedRfrnc"/>
         </property>
     </class>

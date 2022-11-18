@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Aug 17, 2022, 11:08:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 16, 2022, 11:34:16 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="ListResource" optimistic-lock="none" table="ListResource">
         <id name="id" type="string">
@@ -7,203 +7,203 @@
             <generator class="identity"/>
         </id>
         <property name="listRsrcCdCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ListResource.Code.Coding.Code</meta>
             <column length="65535" name="ListRsrc_Cd_Cdg_Cd"/>
         </property>
         <property name="listRsrcCdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ListResource.Code.Coding.Display</meta>
             <column length="65535" name="ListRsrc_Cd_Cdg_Dsply"/>
         </property>
         <property name="listRsrcCdCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ListResource.Code.Coding.System</meta>
             <column length="65535" name="ListRsrc_Cd_Cdg_Sys"/>
         </property>
         <property name="listRsrcCdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ListResource.Code.Coding.UserSelected</meta>
             <column length="65535" name="ListRsrc_Cd_Cdg_UsrSltd"/>
         </property>
         <property name="listRsrcCdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ListResource.Code.Coding.Version</meta>
             <column length="65535" name="ListRsrc_Cd_Cdg_Vrsn"/>
         </property>
         <property name="listRsrcCdTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ListResource.Code.Text</meta>
             <column length="65535" name="ListRsrc_Cd_Txt"/>
         </property>
         <property name="listRsrcDt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ListResource.Date</meta>
             <column length="65535" name="ListRsrc_Dt"/>
         </property>
         <property name="listRsrcEmptyRsnCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ListResource.EmptyReason.Coding.Code</meta>
             <column length="65535" name="ListRsrc_EmptyRsn_Cdg_Cd"/>
         </property>
         <property name="listRsrcEmptyRsnCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ListResource.EmptyReason.Coding.Display</meta>
             <column length="65535" name="ListRsrc_EmptyRsn_Cdg_Dsply"/>
         </property>
         <property name="listRsrcEmptyRsnCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ListResource.EmptyReason.Coding.System</meta>
             <column length="65535" name="ListRsrc_EmptyRsn_Cdg_Sys"/>
         </property>
         <property name="listRsrcEmptyRsnCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ListResource.EmptyReason.Coding.UserSelected</meta>
             <column length="65535" name="ListRsrc_EmptyRsn_Cdg_UsrSltd"/>
         </property>
         <property name="listRsrcEmptyRsnCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ListResource.EmptyReason.Coding.Version</meta>
             <column length="65535" name="ListRsrc_EmptyRsn_Cdg_Vrsn"/>
         </property>
         <property name="listRsrcEmptyRsnTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ListResource.EmptyReason.Text</meta>
             <column length="65535" name="ListRsrc_EmptyRsn_Txt"/>
         </property>
         <property name="listRsrcEnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ListResource.Encounter</meta>
             <column length="65535" name="ListRsrc_Enc"/>
         </property>
         <property name="listRsrcEntryDt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ListResource.Entry.Date</meta>
             <column length="65535" name="ListRsrc_Entry_Dt"/>
         </property>
         <property name="listRsrcEntryDeleted" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ListResource.Entry.Deleted</meta>
             <column length="65535" name="ListRsrc_Entry_Deleted"/>
         </property>
         <property name="listRsrcEntryFlagCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ListResource.Entry.Flag.Coding.Code</meta>
             <column length="65535" name="ListRsrc_Entry_Flag_Cdg_Cd"/>
         </property>
         <property name="listRsrcEntryFlagCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ListResource.Entry.Flag.Coding.Display</meta>
             <column length="65535" name="ListRsrc_Entry_Flag_Cdg_Dsply"/>
         </property>
         <property name="listRsrcEntryFlagCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ListResource.Entry.Flag.Coding.System</meta>
             <column length="65535" name="ListRsrc_Entry_Flag_Cdg_Sys"/>
         </property>
         <property name="listRsrcEntryFlagCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ListResource.Entry.Flag.Coding.UserSelected</meta>
             <column length="65535" name="ListRsrc_Entry_Flag_Cdg_UsrSltd"/>
         </property>
         <property name="listRsrcEntryFlagCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ListResource.Entry.Flag.Coding.Version</meta>
             <column length="65535" name="ListRsrc_Entry_Flag_Cdg_Vrsn"/>
         </property>
         <property name="listRsrcEntryFlagTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ListResource.Entry.Flag.Text</meta>
             <column length="65535" name="ListRsrc_Entry_Flag_Txt"/>
         </property>
         <property name="listRsrcEntryItm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ListResource.Entry.Item</meta>
             <column length="65535" name="ListRsrc_Entry_Itm"/>
         </property>
         <property name="listRsrcIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ListResource.Identifier.Assigner</meta>
             <column length="65535" name="ListRsrc_Id_Assigner"/>
         </property>
         <property name="listRsrcIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ListResource.Identifier.Period.End</meta>
             <column length="65535" name="ListRsrc_Id_Prd_End"/>
         </property>
         <property name="listRsrcIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ListResource.Identifier.Period.Start</meta>
             <column length="65535" name="ListRsrc_Id_Prd_Strt"/>
         </property>
         <property name="listRsrcIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ListResource.Identifier.System</meta>
             <column length="65535" name="ListRsrc_Id_Sys"/>
         </property>
         <property name="listRsrcIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ListResource.Identifier.Type.Coding.Code</meta>
             <column length="65535" name="ListRsrc_Id_Typ_Cdg_Cd"/>
         </property>
         <property name="listRsrcIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ListResource.Identifier.Type.Coding.Display</meta>
             <column length="65535" name="ListRsrc_Id_Typ_Cdg_Dsply"/>
         </property>
         <property name="listRsrcIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ListResource.Identifier.Type.Coding.System</meta>
             <column length="65535" name="ListRsrc_Id_Typ_Cdg_Sys"/>
         </property>
         <property name="listRsrcIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ListResource.Identifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="ListRsrc_Id_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="listRsrcIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ListResource.Identifier.Type.Coding.Version</meta>
             <column length="65535" name="ListRsrc_Id_Typ_Cdg_Vrsn"/>
         </property>
         <property name="listRsrcIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ListResource.Identifier.Type.Text</meta>
             <column length="65535" name="ListRsrc_Id_Typ_Txt"/>
         </property>
         <property name="listRsrcIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ListResource.Identifier.Use</meta>
             <column length="65535" name="ListRsrc_Id_Use"/>
         </property>
         <property name="listRsrcIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ListResource.Identifier.Value</meta>
             <column length="65535" name="ListRsrc_Id_Vl"/>
         </property>
         <property name="listRsrcMode" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ListResource.Mode</meta>
             <column length="65535" name="ListRsrc_Mode"/>
         </property>
         <property name="listRsrcNtAthrRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ListResource.Note.AuthorReference</meta>
             <column length="65535" name="ListRsrc_Nt_AthrRfrnc"/>
         </property>
         <property name="listRsrcNtAthrStrgTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ListResource.Note.AuthorStringType</meta>
             <column length="65535" name="ListRsrc_Nt_AthrStrgTyp"/>
         </property>
         <property name="listRsrcNtTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ListResource.Note.Text</meta>
             <column length="65535" name="ListRsrc_Nt_Txt"/>
         </property>
         <property name="listRsrcNtTime" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ListResource.Note.Time</meta>
             <column length="65535" name="ListRsrc_Nt_Time"/>
         </property>
         <property name="listRsrcOrdredByCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ListResource.OrderedBy.Coding.Code</meta>
             <column length="65535" name="ListRsrc_OrdredBy_Cdg_Cd"/>
         </property>
         <property name="listRsrcOrdredByCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ListResource.OrderedBy.Coding.Display</meta>
             <column length="65535" name="ListRsrc_OrdredBy_Cdg_Dsply"/>
         </property>
         <property name="listRsrcOrdredByCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ListResource.OrderedBy.Coding.System</meta>
             <column length="65535" name="ListRsrc_OrdredBy_Cdg_Sys"/>
         </property>
         <property name="listRsrcOrdredByCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ListResource.OrderedBy.Coding.UserSelected</meta>
             <column length="65535" name="ListRsrc_OrdredBy_Cdg_UsrSltd"/>
         </property>
         <property name="listRsrcOrdredByCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ListResource.OrderedBy.Coding.Version</meta>
             <column length="65535" name="ListRsrc_OrdredBy_Cdg_Vrsn"/>
         </property>
         <property name="listRsrcOrdredByTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ListResource.OrderedBy.Text</meta>
             <column length="65535" name="ListRsrc_OrdredBy_Txt"/>
         </property>
         <property name="listRsrcSrc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ListResource.Source</meta>
             <column length="65535" name="ListRsrc_Src"/>
         </property>
         <property name="listRsrcSts" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ListResource.Status</meta>
             <column length="65535" name="ListRsrc_Sts"/>
         </property>
         <property name="listRsrcSbjct" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ListResource.Subject</meta>
             <column length="65535" name="ListRsrc_Sbjct"/>
         </property>
         <property name="listRsrcTtl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ListResource.Title</meta>
             <column length="65535" name="ListRsrc_Ttl"/>
         </property>
     </class>

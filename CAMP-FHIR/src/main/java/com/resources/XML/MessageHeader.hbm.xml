@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Aug 17, 2022, 11:08:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 16, 2022, 11:34:16 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="MessageHeader" optimistic-lock="none" table="MessageHeader">
         <id name="id" type="string">
@@ -7,139 +7,139 @@
             <generator class="identity"/>
         </id>
         <property name="msgHeaderAthr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageHeader.Author</meta>
             <column length="65535" name="MsgHeader_Athr"/>
         </property>
         <property name="msgHeaderDfn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageHeader.Definition</meta>
             <column length="65535" name="MsgHeader_Dfn"/>
         </property>
         <property name="msgHeaderDestinationEndpoint" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageHeader.Destination.Endpoint</meta>
             <column length="65535" name="MsgHeader_Destination_Endpoint"/>
         </property>
         <property name="msgHeaderDestinationNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageHeader.Destination.Name</meta>
             <column length="65535" name="MsgHeader_Destination_Nm"/>
         </property>
         <property name="msgHeaderDestinationReceiver" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageHeader.Destination.Receiver</meta>
             <column length="65535" name="MsgHeader_Destination_Receiver"/>
         </property>
         <property name="msgHeaderEnterer" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageHeader.Enterer</meta>
             <column length="65535" name="MsgHeader_Enterer"/>
         </property>
         <property name="msgHeaderEvntCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageHeader.EventCoding.Code</meta>
             <column length="65535" name="MsgHeader_EvntCdg_Cd"/>
         </property>
         <property name="msgHeaderEvntCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageHeader.EventCoding.Display</meta>
             <column length="65535" name="MsgHeader_EvntCdg_Dsply"/>
         </property>
         <property name="msgHeaderEvntCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageHeader.EventCoding.System</meta>
             <column length="65535" name="MsgHeader_EvntCdg_Sys"/>
         </property>
         <property name="msgHeaderEvntCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageHeader.EventCoding.UserSelected</meta>
             <column length="65535" name="MsgHeader_EvntCdg_UsrSltd"/>
         </property>
         <property name="msgHeaderEvntCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageHeader.EventCoding.Version</meta>
             <column length="65535" name="MsgHeader_EvntCdg_Vrsn"/>
         </property>
         <property name="msgHeaderEvntUriTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageHeader.EventUriType</meta>
             <column length="65535" name="MsgHeader_EvntUriTyp"/>
         </property>
         <property name="msgHeaderFocus" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageHeader.Focus</meta>
             <column length="65535" name="MsgHeader_Focus"/>
         </property>
         <property name="msgHeaderRsnCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageHeader.Reason.Coding.Code</meta>
             <column length="65535" name="MsgHeader_Rsn_Cdg_Cd"/>
         </property>
         <property name="msgHeaderRsnCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageHeader.Reason.Coding.Display</meta>
             <column length="65535" name="MsgHeader_Rsn_Cdg_Dsply"/>
         </property>
         <property name="msgHeaderRsnCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageHeader.Reason.Coding.System</meta>
             <column length="65535" name="MsgHeader_Rsn_Cdg_Sys"/>
         </property>
         <property name="msgHeaderRsnCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageHeader.Reason.Coding.UserSelected</meta>
             <column length="65535" name="MsgHeader_Rsn_Cdg_UsrSltd"/>
         </property>
         <property name="msgHeaderRsnCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageHeader.Reason.Coding.Version</meta>
             <column length="65535" name="MsgHeader_Rsn_Cdg_Vrsn"/>
         </property>
         <property name="msgHeaderRsnTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageHeader.Reason.Text</meta>
             <column length="65535" name="MsgHeader_Rsn_Txt"/>
         </property>
         <property name="msgHeaderRspsCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageHeader.Response.Code</meta>
             <column length="65535" name="MsgHeader_Rsps_Cd"/>
         </property>
         <property name="msgHeaderRspsDtls" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageHeader.Response.Details</meta>
             <column length="65535" name="MsgHeader_Rsps_Dtls"/>
         </property>
         <property name="msgHeaderRspsId" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageHeader.Response.Identifier</meta>
             <column length="65535" name="MsgHeader_Rsps_Id"/>
         </property>
         <property name="msgHeaderResponsible" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageHeader.Responsible</meta>
             <column length="65535" name="MsgHeader_Responsible"/>
         </property>
         <property name="msgHeaderSender" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageHeader.Sender</meta>
             <column length="65535" name="MsgHeader_Sender"/>
         </property>
         <property name="msgHeaderSrcCntctPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageHeader.Source.Contact.Period.End</meta>
             <column length="65535" name="MsgHeader_Src_Cntct_Prd_End"/>
         </property>
         <property name="msgHeaderSrcCntctPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageHeader.Source.Contact.Period.Start</meta>
             <column length="65535" name="MsgHeader_Src_Cntct_Prd_Strt"/>
         </property>
         <property name="msgHeaderSrcCntctRnk" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageHeader.Source.Contact.Rank</meta>
             <column length="65535" name="MsgHeader_Src_Cntct_Rnk"/>
         </property>
         <property name="msgHeaderSrcCntctSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageHeader.Source.Contact.System</meta>
             <column length="65535" name="MsgHeader_Src_Cntct_Sys"/>
         </property>
         <property name="msgHeaderSrcCntctUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageHeader.Source.Contact.Use</meta>
             <column length="65535" name="MsgHeader_Src_Cntct_Use"/>
         </property>
         <property name="msgHeaderSrcCntctVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageHeader.Source.Contact.Value</meta>
             <column length="65535" name="MsgHeader_Src_Cntct_Vl"/>
         </property>
         <property name="msgHeaderSrcEndpoint" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageHeader.Source.Endpoint</meta>
             <column length="65535" name="MsgHeader_Src_Endpoint"/>
         </property>
         <property name="msgHeaderSrcNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageHeader.Source.Name</meta>
             <column length="65535" name="MsgHeader_Src_Nm"/>
         </property>
         <property name="msgHeaderSrcSoftware" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageHeader.Source.Software</meta>
             <column length="65535" name="MsgHeader_Src_Software"/>
         </property>
         <property name="msgHeaderSrcVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MessageHeader.Source.Version</meta>
             <column length="65535" name="MsgHeader_Src_Vrsn"/>
         </property>
     </class>

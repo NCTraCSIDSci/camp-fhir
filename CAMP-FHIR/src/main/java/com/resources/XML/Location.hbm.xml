@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Aug 17, 2022, 11:08:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 16, 2022, 11:34:16 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Location" optimistic-lock="none" table="Location">
         <id name="id" type="string">
@@ -7,251 +7,247 @@
             <generator class="identity"/>
         </id>
         <property name="lctnAddrCity" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.Address.City</meta>
             <column length="65535" name="Lctn_Addr_City"/>
         </property>
         <property name="lctnAddrCntry" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.Address.Country</meta>
             <column length="65535" name="Lctn_Addr_Cntry"/>
         </property>
         <property name="lctnAddrDistrict" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.Address.District</meta>
             <column length="65535" name="Lctn_Addr_District"/>
         </property>
         <property name="lctnAddrLine" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.Address.Line</meta>
             <column length="65535" name="Lctn_Addr_Line"/>
         </property>
         <property name="lctnAddrPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.Address.Period.End</meta>
             <column length="65535" name="Lctn_Addr_Prd_End"/>
         </property>
         <property name="lctnAddrPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.Address.Period.Start</meta>
             <column length="65535" name="Lctn_Addr_Prd_Strt"/>
         </property>
         <property name="lctnAddrPostalCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.Address.PostalCode</meta>
             <column length="65535" name="Lctn_Addr_PostalCd"/>
         </property>
         <property name="lctnAddrState" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.Address.State</meta>
             <column length="65535" name="Lctn_Addr_State"/>
         </property>
         <property name="lctnAddrTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.Address.Text</meta>
             <column length="65535" name="Lctn_Addr_Txt"/>
         </property>
         <property name="lctnAddrTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.Address.Type</meta>
             <column length="65535" name="Lctn_Addr_Typ"/>
         </property>
         <property name="lctnAddrUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.Address.Use</meta>
             <column length="65535" name="Lctn_Addr_Use"/>
         </property>
         <property name="lctnAlias" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.Alias</meta>
             <column length="65535" name="Lctn_Alias"/>
         </property>
         <property name="lctnAvailabilityExceptions" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.AvailabilityExceptions</meta>
             <column length="65535" name="Lctn_AvailabilityExceptions"/>
         </property>
         <property name="lctnDscrptn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.Description</meta>
             <column length="65535" name="Lctn_Dscrptn"/>
         </property>
         <property name="lctnEndpoint" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.Endpoint</meta>
             <column length="65535" name="Lctn_Endpoint"/>
         </property>
         <property name="lctnHoursOfOprtnAllDay" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.HoursOfOperation.AllDay</meta>
             <column length="65535" name="Lctn_HoursOfOprtn_AllDay"/>
         </property>
         <property name="lctnHoursOfOprtnClosingTime" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.HoursOfOperation.ClosingTime</meta>
             <column length="65535" name="Lctn_HoursOfOprtn_ClosingTime"/>
         </property>
-        <property name="lctnHoursOfOprtnDaysOfWeek" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Lctn_HoursOfOprtn_DaysOfWeek"/>
-        </property>
         <property name="lctnHoursOfOprtnOpeningTime" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.HoursOfOperation.OpeningTime</meta>
             <column length="65535" name="Lctn_HoursOfOprtn_OpeningTime"/>
         </property>
         <property name="lctnIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.Identifier.Assigner</meta>
             <column length="65535" name="Lctn_Id_Assigner"/>
         </property>
         <property name="lctnIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.Identifier.Period.End</meta>
             <column length="65535" name="Lctn_Id_Prd_End"/>
         </property>
         <property name="lctnIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.Identifier.Period.Start</meta>
             <column length="65535" name="Lctn_Id_Prd_Strt"/>
         </property>
         <property name="lctnIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.Identifier.System</meta>
             <column length="65535" name="Lctn_Id_Sys"/>
         </property>
         <property name="lctnIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.Identifier.Type.Coding.Code</meta>
             <column length="65535" name="Lctn_Id_Typ_Cdg_Cd"/>
         </property>
         <property name="lctnIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.Identifier.Type.Coding.Display</meta>
             <column length="65535" name="Lctn_Id_Typ_Cdg_Dsply"/>
         </property>
         <property name="lctnIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.Identifier.Type.Coding.System</meta>
             <column length="65535" name="Lctn_Id_Typ_Cdg_Sys"/>
         </property>
         <property name="lctnIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.Identifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="Lctn_Id_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="lctnIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.Identifier.Type.Coding.Version</meta>
             <column length="65535" name="Lctn_Id_Typ_Cdg_Vrsn"/>
         </property>
         <property name="lctnIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.Identifier.Type.Text</meta>
             <column length="65535" name="Lctn_Id_Typ_Txt"/>
         </property>
         <property name="lctnIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.Identifier.Use</meta>
             <column length="65535" name="Lctn_Id_Use"/>
         </property>
         <property name="lctnIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.Identifier.Value</meta>
             <column length="65535" name="Lctn_Id_Vl"/>
         </property>
         <property name="lctnManagingOrgnztn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.ManagingOrganization</meta>
             <column length="65535" name="Lctn_ManagingOrgnztn"/>
         </property>
         <property name="lctnMode" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.Mode</meta>
             <column length="65535" name="Lctn_Mode"/>
         </property>
         <property name="lctnNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.Name</meta>
             <column length="65535" name="Lctn_Nm"/>
         </property>
         <property name="lctnOprtnalStsCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.OperationalStatus.Code</meta>
             <column length="65535" name="Lctn_OprtnalSts_Cd"/>
         </property>
         <property name="lctnOprtnalStsDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.OperationalStatus.Display</meta>
             <column length="65535" name="Lctn_OprtnalSts_Dsply"/>
         </property>
         <property name="lctnOprtnalStsSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.OperationalStatus.System</meta>
             <column length="65535" name="Lctn_OprtnalSts_Sys"/>
         </property>
         <property name="lctnOprtnalStsUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.OperationalStatus.UserSelected</meta>
             <column length="65535" name="Lctn_OprtnalSts_UsrSltd"/>
         </property>
         <property name="lctnOprtnalStsVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.OperationalStatus.Version</meta>
             <column length="65535" name="Lctn_OprtnalSts_Vrsn"/>
         </property>
         <property name="lctnPartOf" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.PartOf</meta>
             <column length="65535" name="Lctn_PartOf"/>
         </property>
         <property name="lctnPhysclTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.PhysicalType.Coding.Code</meta>
             <column length="65535" name="Lctn_PhysclTyp_Cdg_Cd"/>
         </property>
         <property name="lctnPhysclTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.PhysicalType.Coding.Display</meta>
             <column length="65535" name="Lctn_PhysclTyp_Cdg_Dsply"/>
         </property>
         <property name="lctnPhysclTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.PhysicalType.Coding.System</meta>
             <column length="65535" name="Lctn_PhysclTyp_Cdg_Sys"/>
         </property>
         <property name="lctnPhysclTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.PhysicalType.Coding.UserSelected</meta>
             <column length="65535" name="Lctn_PhysclTyp_Cdg_UsrSltd"/>
         </property>
         <property name="lctnPhysclTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.PhysicalType.Coding.Version</meta>
             <column length="65535" name="Lctn_PhysclTyp_Cdg_Vrsn"/>
         </property>
         <property name="lctnPhysclTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.PhysicalType.Text</meta>
             <column length="65535" name="Lctn_PhysclTyp_Txt"/>
         </property>
         <property name="lctnPositionAltitude" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.Position.Altitude</meta>
             <column length="65535" name="Lctn_Position_Altitude"/>
         </property>
         <property name="lctnPositionLatitude" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.Position.Latitude</meta>
             <column length="65535" name="Lctn_Position_Latitude"/>
         </property>
         <property name="lctnPositionLongitude" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.Position.Longitude</meta>
             <column length="65535" name="Lctn_Position_Longitude"/>
         </property>
         <property name="lctnSts" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.Status</meta>
             <column length="65535" name="Lctn_Sts"/>
         </property>
         <property name="lctnTlcmPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.Telecom.Period.End</meta>
             <column length="65535" name="Lctn_Tlcm_Prd_End"/>
         </property>
         <property name="lctnTlcmPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.Telecom.Period.Start</meta>
             <column length="65535" name="Lctn_Tlcm_Prd_Strt"/>
         </property>
         <property name="lctnTlcmRnk" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.Telecom.Rank</meta>
             <column length="65535" name="Lctn_Tlcm_Rnk"/>
         </property>
         <property name="lctnTlcmSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.Telecom.System</meta>
             <column length="65535" name="Lctn_Tlcm_Sys"/>
         </property>
         <property name="lctnTlcmUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.Telecom.Use</meta>
             <column length="65535" name="Lctn_Tlcm_Use"/>
         </property>
         <property name="lctnTlcmVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.Telecom.Value</meta>
             <column length="65535" name="Lctn_Tlcm_Vl"/>
         </property>
         <property name="lctnTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.Type.Coding.Code</meta>
             <column length="65535" name="Lctn_Typ_Cdg_Cd"/>
         </property>
         <property name="lctnTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.Type.Coding.Display</meta>
             <column length="65535" name="Lctn_Typ_Cdg_Dsply"/>
         </property>
         <property name="lctnTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.Type.Coding.System</meta>
             <column length="65535" name="Lctn_Typ_Cdg_Sys"/>
         </property>
         <property name="lctnTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.Type.Coding.UserSelected</meta>
             <column length="65535" name="Lctn_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="lctnTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.Type.Coding.Version</meta>
             <column length="65535" name="Lctn_Typ_Cdg_Vrsn"/>
         </property>
         <property name="lctnTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Location.Type.Text</meta>
             <column length="65535" name="Lctn_Typ_Txt"/>
         </property>
     </class>

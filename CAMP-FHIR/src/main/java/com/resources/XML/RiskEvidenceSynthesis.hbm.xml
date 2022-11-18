@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Aug 17, 2022, 11:08:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 16, 2022, 11:34:16 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="RiskEvidenceSynthesis" optimistic-lock="none" table="RiskEvidenceSynthesis">
         <id name="id" type="string">
@@ -7,747 +7,747 @@
             <generator class="identity"/>
         </id>
         <property name="rskEvdnceSynthsApprovalDt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.ApprovalDate</meta>
             <column length="65535" name="RskEvdnceSynths_ApprovalDt"/>
         </property>
         <property name="rskEvdnceSynthsAthrNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Author.Name</meta>
             <column length="65535" name="RskEvdnceSynths_Athr_Nm"/>
         </property>
         <property name="rskEvdnceSynthsAthrTlcmPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Author.Telecom.Period.End</meta>
             <column length="65535" name="RskEvdnceSynths_Athr_Tlcm_Prd_End"/>
         </property>
         <property name="rskEvdnceSynthsAthrTlcmPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Author.Telecom.Period.Start</meta>
             <column length="65535" name="RskEvdnceSynths_Athr_Tlcm_Prd_Strt"/>
         </property>
         <property name="rskEvdnceSynthsAthrTlcmRnk" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Author.Telecom.Rank</meta>
             <column length="65535" name="RskEvdnceSynths_Athr_Tlcm_Rnk"/>
         </property>
         <property name="rskEvdnceSynthsAthrTlcmSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Author.Telecom.System</meta>
             <column length="65535" name="RskEvdnceSynths_Athr_Tlcm_Sys"/>
         </property>
         <property name="rskEvdnceSynthsAthrTlcmUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Author.Telecom.Use</meta>
             <column length="65535" name="RskEvdnceSynths_Athr_Tlcm_Use"/>
         </property>
         <property name="rskEvdnceSynthsAthrTlcmVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Author.Telecom.Value</meta>
             <column length="65535" name="RskEvdnceSynths_Athr_Tlcm_Vl"/>
         </property>
         <property name="rskEvdnceSynthsCrtntyCrtntySubcomponentNtAthrRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Certainty.CertaintySubcomponent.Note.AuthorReference</meta>
             <column length="65535" name="RskEvdnceSynths_Crtnty_CrtntySubcomponent_Nt_AthrRfrnc"/>
         </property>
         <property name="rskEvdnceSynthsCrtntyCrtntySubcomponentNtAthrStrgTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Certainty.CertaintySubcomponent.Note.AuthorStringType</meta>
             <column length="65535" name="RskEvdnceSynths_Crtnty_CrtntySubcomponent_Nt_AthrStrgTyp"/>
         </property>
         <property name="rskEvdnceSynthsCrtntyCrtntySubcomponentNtTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Certainty.CertaintySubcomponent.Note.Text</meta>
             <column length="65535" name="RskEvdnceSynths_Crtnty_CrtntySubcomponent_Nt_Txt"/>
         </property>
         <property name="rskEvdnceSynthsCrtntyCrtntySubcomponentNtTime" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Certainty.CertaintySubcomponent.Note.Time</meta>
             <column length="65535" name="RskEvdnceSynths_Crtnty_CrtntySubcomponent_Nt_Time"/>
         </property>
         <property name="rskEvdnceSynthsCrtntyCrtntySubcomponentRatingCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Certainty.CertaintySubcomponent.Rating.Coding.Code</meta>
             <column length="65535" name="RskEvdnceSynths_Crtnty_CrtntySubcomponent_Rating_Cdg_Cd"/>
         </property>
         <property name="rskEvdnceSynthsCrtntyCrtntySubcomponentRatingCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Certainty.CertaintySubcomponent.Rating.Coding.Display</meta>
             <column length="65535" name="RskEvdnceSynths_Crtnty_CrtntySubcomponent_Rating_Cdg_Dsply"/>
         </property>
         <property name="rskEvdnceSynthsCrtntyCrtntySubcomponentRatingCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Certainty.CertaintySubcomponent.Rating.Coding.System</meta>
             <column length="65535" name="RskEvdnceSynths_Crtnty_CrtntySubcomponent_Rating_Cdg_Sys"/>
         </property>
         <property name="rskEvdnceSynthsCrtntyCrtntySubcomponentRatingCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Certainty.CertaintySubcomponent.Rating.Coding.UserSelected</meta>
             <column length="65535" name="RskEvdnceSynths_Crtnty_CrtntySubcomponent_Rating_Cdg_UsrSltd"/>
         </property>
         <property name="rskEvdnceSynthsCrtntyCrtntySubcomponentRatingCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Certainty.CertaintySubcomponent.Rating.Coding.Version</meta>
             <column length="65535" name="RskEvdnceSynths_Crtnty_CrtntySubcomponent_Rating_Cdg_Vrsn"/>
         </property>
         <property name="rskEvdnceSynthsCrtntyCrtntySubcomponentRatingTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Certainty.CertaintySubcomponent.Rating.Text</meta>
             <column length="65535" name="RskEvdnceSynths_Crtnty_CrtntySubcomponent_Rating_Txt"/>
         </property>
         <property name="rskEvdnceSynthsCrtntyCrtntySubcomponentTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Certainty.CertaintySubcomponent.Type.Coding.Code</meta>
             <column length="65535" name="RskEvdnceSynths_Crtnty_CrtntySubcomponent_Typ_Cdg_Cd"/>
         </property>
         <property name="rskEvdnceSynthsCrtntyCrtntySubcomponentTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Certainty.CertaintySubcomponent.Type.Coding.Display</meta>
             <column length="65535" name="RskEvdnceSynths_Crtnty_CrtntySubcomponent_Typ_Cdg_Dsply"/>
         </property>
         <property name="rskEvdnceSynthsCrtntyCrtntySubcomponentTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Certainty.CertaintySubcomponent.Type.Coding.System</meta>
             <column length="65535" name="RskEvdnceSynths_Crtnty_CrtntySubcomponent_Typ_Cdg_Sys"/>
         </property>
         <property name="rskEvdnceSynthsCrtntyCrtntySubcomponentTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Certainty.CertaintySubcomponent.Type.Coding.UserSelected</meta>
             <column length="65535" name="RskEvdnceSynths_Crtnty_CrtntySubcomponent_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="rskEvdnceSynthsCrtntyCrtntySubcomponentTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Certainty.CertaintySubcomponent.Type.Coding.Version</meta>
             <column length="65535" name="RskEvdnceSynths_Crtnty_CrtntySubcomponent_Typ_Cdg_Vrsn"/>
         </property>
         <property name="rskEvdnceSynthsCrtntyCrtntySubcomponentTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Certainty.CertaintySubcomponent.Type.Text</meta>
             <column length="65535" name="RskEvdnceSynths_Crtnty_CrtntySubcomponent_Typ_Txt"/>
         </property>
         <property name="rskEvdnceSynthsCrtntyNtAthrRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Certainty.Note.AuthorReference</meta>
             <column length="65535" name="RskEvdnceSynths_Crtnty_Nt_AthrRfrnc"/>
         </property>
         <property name="rskEvdnceSynthsCrtntyNtAthrStrgTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Certainty.Note.AuthorStringType</meta>
             <column length="65535" name="RskEvdnceSynths_Crtnty_Nt_AthrStrgTyp"/>
         </property>
         <property name="rskEvdnceSynthsCrtntyNtTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Certainty.Note.Text</meta>
             <column length="65535" name="RskEvdnceSynths_Crtnty_Nt_Txt"/>
         </property>
         <property name="rskEvdnceSynthsCrtntyNtTime" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Certainty.Note.Time</meta>
             <column length="65535" name="RskEvdnceSynths_Crtnty_Nt_Time"/>
         </property>
         <property name="rskEvdnceSynthsCrtntyRatingCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Certainty.Rating.Coding.Code</meta>
             <column length="65535" name="RskEvdnceSynths_Crtnty_Rating_Cdg_Cd"/>
         </property>
         <property name="rskEvdnceSynthsCrtntyRatingCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Certainty.Rating.Coding.Display</meta>
             <column length="65535" name="RskEvdnceSynths_Crtnty_Rating_Cdg_Dsply"/>
         </property>
         <property name="rskEvdnceSynthsCrtntyRatingCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Certainty.Rating.Coding.System</meta>
             <column length="65535" name="RskEvdnceSynths_Crtnty_Rating_Cdg_Sys"/>
         </property>
         <property name="rskEvdnceSynthsCrtntyRatingCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Certainty.Rating.Coding.UserSelected</meta>
             <column length="65535" name="RskEvdnceSynths_Crtnty_Rating_Cdg_UsrSltd"/>
         </property>
         <property name="rskEvdnceSynthsCrtntyRatingCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Certainty.Rating.Coding.Version</meta>
             <column length="65535" name="RskEvdnceSynths_Crtnty_Rating_Cdg_Vrsn"/>
         </property>
         <property name="rskEvdnceSynthsCrtntyRatingTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Certainty.Rating.Text</meta>
             <column length="65535" name="RskEvdnceSynths_Crtnty_Rating_Txt"/>
         </property>
         <property name="rskEvdnceSynthsCntctNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Contact.Name</meta>
             <column length="65535" name="RskEvdnceSynths_Cntct_Nm"/>
         </property>
         <property name="rskEvdnceSynthsCntctTlcmPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Contact.Telecom.Period.End</meta>
             <column length="65535" name="RskEvdnceSynths_Cntct_Tlcm_Prd_End"/>
         </property>
         <property name="rskEvdnceSynthsCntctTlcmPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Contact.Telecom.Period.Start</meta>
             <column length="65535" name="RskEvdnceSynths_Cntct_Tlcm_Prd_Strt"/>
         </property>
         <property name="rskEvdnceSynthsCntctTlcmRnk" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Contact.Telecom.Rank</meta>
             <column length="65535" name="RskEvdnceSynths_Cntct_Tlcm_Rnk"/>
         </property>
         <property name="rskEvdnceSynthsCntctTlcmSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Contact.Telecom.System</meta>
             <column length="65535" name="RskEvdnceSynths_Cntct_Tlcm_Sys"/>
         </property>
         <property name="rskEvdnceSynthsCntctTlcmUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Contact.Telecom.Use</meta>
             <column length="65535" name="RskEvdnceSynths_Cntct_Tlcm_Use"/>
         </property>
         <property name="rskEvdnceSynthsCntctTlcmVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Contact.Telecom.Value</meta>
             <column length="65535" name="RskEvdnceSynths_Cntct_Tlcm_Vl"/>
         </property>
         <property name="rskEvdnceSynthsCopyright" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Copyright</meta>
             <column length="65535" name="RskEvdnceSynths_Copyright"/>
         </property>
         <property name="rskEvdnceSynthsDt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Date</meta>
             <column length="65535" name="RskEvdnceSynths_Dt"/>
         </property>
         <property name="rskEvdnceSynthsDscrptn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Description</meta>
             <column length="65535" name="RskEvdnceSynths_Dscrptn"/>
         </property>
         <property name="rskEvdnceSynthsEditorNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Editor.Name</meta>
             <column length="65535" name="RskEvdnceSynths_Editor_Nm"/>
         </property>
         <property name="rskEvdnceSynthsEditorTlcmPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Editor.Telecom.Period.End</meta>
             <column length="65535" name="RskEvdnceSynths_Editor_Tlcm_Prd_End"/>
         </property>
         <property name="rskEvdnceSynthsEditorTlcmPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Editor.Telecom.Period.Start</meta>
             <column length="65535" name="RskEvdnceSynths_Editor_Tlcm_Prd_Strt"/>
         </property>
         <property name="rskEvdnceSynthsEditorTlcmRnk" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Editor.Telecom.Rank</meta>
             <column length="65535" name="RskEvdnceSynths_Editor_Tlcm_Rnk"/>
         </property>
         <property name="rskEvdnceSynthsEditorTlcmSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Editor.Telecom.System</meta>
             <column length="65535" name="RskEvdnceSynths_Editor_Tlcm_Sys"/>
         </property>
         <property name="rskEvdnceSynthsEditorTlcmUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Editor.Telecom.Use</meta>
             <column length="65535" name="RskEvdnceSynths_Editor_Tlcm_Use"/>
         </property>
         <property name="rskEvdnceSynthsEditorTlcmVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Editor.Telecom.Value</meta>
             <column length="65535" name="RskEvdnceSynths_Editor_Tlcm_Vl"/>
         </property>
         <property name="rskEvdnceSynthsEfctivePrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.EffectivePeriod.End</meta>
             <column length="65535" name="RskEvdnceSynths_EfctivePrd_End"/>
         </property>
         <property name="rskEvdnceSynthsEfctivePrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.EffectivePeriod.Start</meta>
             <column length="65535" name="RskEvdnceSynths_EfctivePrd_Strt"/>
         </property>
         <property name="rskEvdnceSynthsEndsrNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Endorser.Name</meta>
             <column length="65535" name="RskEvdnceSynths_Endsr_Nm"/>
         </property>
         <property name="rskEvdnceSynthsEndsrTlcmPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Endorser.Telecom.Period.End</meta>
             <column length="65535" name="RskEvdnceSynths_Endsr_Tlcm_Prd_End"/>
         </property>
         <property name="rskEvdnceSynthsEndsrTlcmPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Endorser.Telecom.Period.Start</meta>
             <column length="65535" name="RskEvdnceSynths_Endsr_Tlcm_Prd_Strt"/>
         </property>
         <property name="rskEvdnceSynthsEndsrTlcmRnk" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Endorser.Telecom.Rank</meta>
             <column length="65535" name="RskEvdnceSynths_Endsr_Tlcm_Rnk"/>
         </property>
         <property name="rskEvdnceSynthsEndsrTlcmSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Endorser.Telecom.System</meta>
             <column length="65535" name="RskEvdnceSynths_Endsr_Tlcm_Sys"/>
         </property>
         <property name="rskEvdnceSynthsEndsrTlcmUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Endorser.Telecom.Use</meta>
             <column length="65535" name="RskEvdnceSynths_Endsr_Tlcm_Use"/>
         </property>
         <property name="rskEvdnceSynthsEndsrTlcmVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Endorser.Telecom.Value</meta>
             <column length="65535" name="RskEvdnceSynths_Endsr_Tlcm_Vl"/>
         </property>
         <property name="rskEvdnceSynthsExposure" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Exposure</meta>
             <column length="65535" name="RskEvdnceSynths_Exposure"/>
         </property>
         <property name="rskEvdnceSynthsIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Identifier.Assigner</meta>
             <column length="65535" name="RskEvdnceSynths_Id_Assigner"/>
         </property>
         <property name="rskEvdnceSynthsIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Identifier.Period.End</meta>
             <column length="65535" name="RskEvdnceSynths_Id_Prd_End"/>
         </property>
         <property name="rskEvdnceSynthsIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Identifier.Period.Start</meta>
             <column length="65535" name="RskEvdnceSynths_Id_Prd_Strt"/>
         </property>
         <property name="rskEvdnceSynthsIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Identifier.System</meta>
             <column length="65535" name="RskEvdnceSynths_Id_Sys"/>
         </property>
         <property name="rskEvdnceSynthsIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Identifier.Type.Coding.Code</meta>
             <column length="65535" name="RskEvdnceSynths_Id_Typ_Cdg_Cd"/>
         </property>
         <property name="rskEvdnceSynthsIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Identifier.Type.Coding.Display</meta>
             <column length="65535" name="RskEvdnceSynths_Id_Typ_Cdg_Dsply"/>
         </property>
         <property name="rskEvdnceSynthsIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Identifier.Type.Coding.System</meta>
             <column length="65535" name="RskEvdnceSynths_Id_Typ_Cdg_Sys"/>
         </property>
         <property name="rskEvdnceSynthsIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Identifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="RskEvdnceSynths_Id_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="rskEvdnceSynthsIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Identifier.Type.Coding.Version</meta>
             <column length="65535" name="RskEvdnceSynths_Id_Typ_Cdg_Vrsn"/>
         </property>
         <property name="rskEvdnceSynthsIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Identifier.Type.Text</meta>
             <column length="65535" name="RskEvdnceSynths_Id_Typ_Txt"/>
         </property>
         <property name="rskEvdnceSynthsIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Identifier.Use</meta>
             <column length="65535" name="RskEvdnceSynths_Id_Use"/>
         </property>
         <property name="rskEvdnceSynthsIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Identifier.Value</meta>
             <column length="65535" name="RskEvdnceSynths_Id_Vl"/>
         </property>
         <property name="rskEvdnceSynthsJrsdctnCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Jurisdiction.Coding.Code</meta>
             <column length="65535" name="RskEvdnceSynths_Jrsdctn_Cdg_Cd"/>
         </property>
         <property name="rskEvdnceSynthsJrsdctnCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Jurisdiction.Coding.Display</meta>
             <column length="65535" name="RskEvdnceSynths_Jrsdctn_Cdg_Dsply"/>
         </property>
         <property name="rskEvdnceSynthsJrsdctnCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Jurisdiction.Coding.System</meta>
             <column length="65535" name="RskEvdnceSynths_Jrsdctn_Cdg_Sys"/>
         </property>
         <property name="rskEvdnceSynthsJrsdctnCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Jurisdiction.Coding.UserSelected</meta>
             <column length="65535" name="RskEvdnceSynths_Jrsdctn_Cdg_UsrSltd"/>
         </property>
         <property name="rskEvdnceSynthsJrsdctnCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Jurisdiction.Coding.Version</meta>
             <column length="65535" name="RskEvdnceSynths_Jrsdctn_Cdg_Vrsn"/>
         </property>
         <property name="rskEvdnceSynthsJrsdctnTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Jurisdiction.Text</meta>
             <column length="65535" name="RskEvdnceSynths_Jrsdctn_Txt"/>
         </property>
         <property name="rskEvdnceSynthsLastReviewDt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.LastReviewDate</meta>
             <column length="65535" name="RskEvdnceSynths_LastReviewDt"/>
         </property>
         <property name="rskEvdnceSynthsNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Name</meta>
             <column length="65535" name="RskEvdnceSynths_Nm"/>
         </property>
         <property name="rskEvdnceSynthsNtAthrRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Note.AuthorReference</meta>
             <column length="65535" name="RskEvdnceSynths_Nt_AthrRfrnc"/>
         </property>
         <property name="rskEvdnceSynthsNtAthrStrgTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Note.AuthorStringType</meta>
             <column length="65535" name="RskEvdnceSynths_Nt_AthrStrgTyp"/>
         </property>
         <property name="rskEvdnceSynthsNtTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Note.Text</meta>
             <column length="65535" name="RskEvdnceSynths_Nt_Txt"/>
         </property>
         <property name="rskEvdnceSynthsNtTime" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Note.Time</meta>
             <column length="65535" name="RskEvdnceSynths_Nt_Time"/>
         </property>
         <property name="rskEvdnceSynthsOutcome" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Outcome</meta>
             <column length="65535" name="RskEvdnceSynths_Outcome"/>
         </property>
         <property name="rskEvdnceSynthsPopln" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Population</meta>
             <column length="65535" name="RskEvdnceSynths_Popln"/>
         </property>
         <property name="rskEvdnceSynthsPblshr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Publisher</meta>
             <column length="65535" name="RskEvdnceSynths_Pblshr"/>
         </property>
         <property name="rskEvdnceSynthsRltedArtfctCitation" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.RelatedArtifact.Citation</meta>
             <column length="65535" name="RskEvdnceSynths_RltedArtfct_Citation"/>
         </property>
         <property name="rskEvdnceSynthsRltedArtfctDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.RelatedArtifact.Display</meta>
             <column length="65535" name="RskEvdnceSynths_RltedArtfct_Dsply"/>
         </property>
         <property name="rskEvdnceSynthsRltedArtfctDocCntntTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.RelatedArtifact.Document.ContentType</meta>
             <column length="65535" name="RskEvdnceSynths_RltedArtfct_Doc_CntntTyp"/>
         </property>
         <property name="rskEvdnceSynthsRltedArtfctDocCreation" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.RelatedArtifact.Document.Creation</meta>
             <column length="65535" name="RskEvdnceSynths_RltedArtfct_Doc_Creation"/>
         </property>
         <property name="rskEvdnceSynthsRltedArtfctDocData" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.RelatedArtifact.Document.Data</meta>
             <column length="65535" name="RskEvdnceSynths_RltedArtfct_Doc_Data"/>
         </property>
         <property name="rskEvdnceSynthsRltedArtfctDocHash" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.RelatedArtifact.Document.Hash</meta>
             <column length="65535" name="RskEvdnceSynths_RltedArtfct_Doc_Hash"/>
         </property>
         <property name="rskEvdnceSynthsRltedArtfctDocLnguage" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.RelatedArtifact.Document.Language</meta>
             <column length="65535" name="RskEvdnceSynths_RltedArtfct_Doc_Lnguage"/>
         </property>
         <property name="rskEvdnceSynthsRltedArtfctDocSz" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.RelatedArtifact.Document.Size</meta>
             <column length="65535" name="RskEvdnceSynths_RltedArtfct_Doc_Sz"/>
         </property>
         <property name="rskEvdnceSynthsRltedArtfctDocTtl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.RelatedArtifact.Document.Title</meta>
             <column length="65535" name="RskEvdnceSynths_RltedArtfct_Doc_Ttl"/>
         </property>
         <property name="rskEvdnceSynthsRltedArtfctDocUrl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.RelatedArtifact.Document.Url</meta>
             <column length="65535" name="RskEvdnceSynths_RltedArtfct_Doc_Url"/>
         </property>
         <property name="rskEvdnceSynthsRltedArtfctLbl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.RelatedArtifact.Label</meta>
             <column length="65535" name="RskEvdnceSynths_RltedArtfct_Lbl"/>
         </property>
         <property name="rskEvdnceSynthsRltedArtfctRsrc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.RelatedArtifact.Resource</meta>
             <column length="65535" name="RskEvdnceSynths_RltedArtfct_Rsrc"/>
         </property>
         <property name="rskEvdnceSynthsRltedArtfctTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.RelatedArtifact.Type</meta>
             <column length="65535" name="RskEvdnceSynths_RltedArtfct_Typ"/>
         </property>
         <property name="rskEvdnceSynthsRltedArtfctUrl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.RelatedArtifact.Url</meta>
             <column length="65535" name="RskEvdnceSynths_RltedArtfct_Url"/>
         </property>
         <property name="rskEvdnceSynthsRviewrNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Reviewer.Name</meta>
             <column length="65535" name="RskEvdnceSynths_Rviewr_Nm"/>
         </property>
         <property name="rskEvdnceSynthsRviewrTlcmPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Reviewer.Telecom.Period.End</meta>
             <column length="65535" name="RskEvdnceSynths_Rviewr_Tlcm_Prd_End"/>
         </property>
         <property name="rskEvdnceSynthsRviewrTlcmPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Reviewer.Telecom.Period.Start</meta>
             <column length="65535" name="RskEvdnceSynths_Rviewr_Tlcm_Prd_Strt"/>
         </property>
         <property name="rskEvdnceSynthsRviewrTlcmRnk" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Reviewer.Telecom.Rank</meta>
             <column length="65535" name="RskEvdnceSynths_Rviewr_Tlcm_Rnk"/>
         </property>
         <property name="rskEvdnceSynthsRviewrTlcmSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Reviewer.Telecom.System</meta>
             <column length="65535" name="RskEvdnceSynths_Rviewr_Tlcm_Sys"/>
         </property>
         <property name="rskEvdnceSynthsRviewrTlcmUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Reviewer.Telecom.Use</meta>
             <column length="65535" name="RskEvdnceSynths_Rviewr_Tlcm_Use"/>
         </property>
         <property name="rskEvdnceSynthsRviewrTlcmVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Reviewer.Telecom.Value</meta>
             <column length="65535" name="RskEvdnceSynths_Rviewr_Tlcm_Vl"/>
         </property>
         <property name="rskEvdnceSynthsRskEstmtDnmntrCnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.RiskEstimate.DenominatorCount</meta>
             <column length="65535" name="RskEvdnceSynths_RskEstmt_DnmntrCnt"/>
         </property>
         <property name="rskEvdnceSynthsRskEstmtDscrptn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.RiskEstimate.Description</meta>
             <column length="65535" name="RskEvdnceSynths_RskEstmt_Dscrptn"/>
         </property>
         <property name="rskEvdnceSynthsRskEstmtNmrtrCnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.RiskEstimate.NumeratorCount</meta>
             <column length="65535" name="RskEvdnceSynths_RskEstmt_NmrtrCnt"/>
         </property>
         <property name="rskEvdnceSynthsRskEstmtPrecisionEstmtFrom" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.RiskEstimate.PrecisionEstimate.From</meta>
             <column length="65535" name="RskEvdnceSynths_RskEstmt_PrecisionEstmt_From"/>
         </property>
         <property name="rskEvdnceSynthsRskEstmtPrecisionEstmtLevel" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.RiskEstimate.PrecisionEstimate.Level</meta>
             <column length="65535" name="RskEvdnceSynths_RskEstmt_PrecisionEstmt_Level"/>
         </property>
         <property name="rskEvdnceSynthsRskEstmtPrecisionEstmtTo" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.RiskEstimate.PrecisionEstimate.To</meta>
             <column length="65535" name="RskEvdnceSynths_RskEstmt_PrecisionEstmt_To"/>
         </property>
         <property name="rskEvdnceSynthsRskEstmtPrecisionEstmtTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.RiskEstimate.PrecisionEstimate.Type.Coding.Code</meta>
             <column length="65535" name="RskEvdnceSynths_RskEstmt_PrecisionEstmt_Typ_Cdg_Cd"/>
         </property>
         <property name="rskEvdnceSynthsRskEstmtPrecisionEstmtTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.RiskEstimate.PrecisionEstimate.Type.Coding.Display</meta>
             <column length="65535" name="RskEvdnceSynths_RskEstmt_PrecisionEstmt_Typ_Cdg_Dsply"/>
         </property>
         <property name="rskEvdnceSynthsRskEstmtPrecisionEstmtTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.RiskEstimate.PrecisionEstimate.Type.Coding.System</meta>
             <column length="65535" name="RskEvdnceSynths_RskEstmt_PrecisionEstmt_Typ_Cdg_Sys"/>
         </property>
         <property name="rskEvdnceSynthsRskEstmtPrecisionEstmtTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.RiskEstimate.PrecisionEstimate.Type.Coding.UserSelected</meta>
             <column length="65535" name="RskEvdnceSynths_RskEstmt_PrecisionEstmt_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="rskEvdnceSynthsRskEstmtPrecisionEstmtTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.RiskEstimate.PrecisionEstimate.Type.Coding.Version</meta>
             <column length="65535" name="RskEvdnceSynths_RskEstmt_PrecisionEstmt_Typ_Cdg_Vrsn"/>
         </property>
         <property name="rskEvdnceSynthsRskEstmtPrecisionEstmtTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.RiskEstimate.PrecisionEstimate.Type.Text</meta>
             <column length="65535" name="RskEvdnceSynths_RskEstmt_PrecisionEstmt_Typ_Txt"/>
         </property>
         <property name="rskEvdnceSynthsRskEstmtTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.RiskEstimate.Type.Coding.Code</meta>
             <column length="65535" name="RskEvdnceSynths_RskEstmt_Typ_Cdg_Cd"/>
         </property>
         <property name="rskEvdnceSynthsRskEstmtTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.RiskEstimate.Type.Coding.Display</meta>
             <column length="65535" name="RskEvdnceSynths_RskEstmt_Typ_Cdg_Dsply"/>
         </property>
         <property name="rskEvdnceSynthsRskEstmtTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.RiskEstimate.Type.Coding.System</meta>
             <column length="65535" name="RskEvdnceSynths_RskEstmt_Typ_Cdg_Sys"/>
         </property>
         <property name="rskEvdnceSynthsRskEstmtTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.RiskEstimate.Type.Coding.UserSelected</meta>
             <column length="65535" name="RskEvdnceSynths_RskEstmt_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="rskEvdnceSynthsRskEstmtTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.RiskEstimate.Type.Coding.Version</meta>
             <column length="65535" name="RskEvdnceSynths_RskEstmt_Typ_Cdg_Vrsn"/>
         </property>
         <property name="rskEvdnceSynthsRskEstmtTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.RiskEstimate.Type.Text</meta>
             <column length="65535" name="RskEvdnceSynths_RskEstmt_Typ_Txt"/>
         </property>
         <property name="rskEvdnceSynthsRskEstmtUntOfMsrCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.RiskEstimate.UnitOfMeasure.Coding.Code</meta>
             <column length="65535" name="RskEvdnceSynths_RskEstmt_UntOfMsr_Cdg_Cd"/>
         </property>
         <property name="rskEvdnceSynthsRskEstmtUntOfMsrCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.RiskEstimate.UnitOfMeasure.Coding.Display</meta>
             <column length="65535" name="RskEvdnceSynths_RskEstmt_UntOfMsr_Cdg_Dsply"/>
         </property>
         <property name="rskEvdnceSynthsRskEstmtUntOfMsrCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.RiskEstimate.UnitOfMeasure.Coding.System</meta>
             <column length="65535" name="RskEvdnceSynths_RskEstmt_UntOfMsr_Cdg_Sys"/>
         </property>
         <property name="rskEvdnceSynthsRskEstmtUntOfMsrCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.RiskEstimate.UnitOfMeasure.Coding.UserSelected</meta>
             <column length="65535" name="RskEvdnceSynths_RskEstmt_UntOfMsr_Cdg_UsrSltd"/>
         </property>
         <property name="rskEvdnceSynthsRskEstmtUntOfMsrCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.RiskEstimate.UnitOfMeasure.Coding.Version</meta>
             <column length="65535" name="RskEvdnceSynths_RskEstmt_UntOfMsr_Cdg_Vrsn"/>
         </property>
         <property name="rskEvdnceSynthsRskEstmtUntOfMsrTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.RiskEstimate.UnitOfMeasure.Text</meta>
             <column length="65535" name="RskEvdnceSynths_RskEstmt_UntOfMsr_Txt"/>
         </property>
         <property name="rskEvdnceSynthsRskEstmtVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.RiskEstimate.Value</meta>
             <column length="65535" name="RskEvdnceSynths_RskEstmt_Vl"/>
         </property>
         <property name="rskEvdnceSynthsSampleSzDscrptn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.SampleSize.Description</meta>
             <column length="65535" name="RskEvdnceSynths_SampleSz_Dscrptn"/>
         </property>
         <property name="rskEvdnceSynthsSampleSzNmbrOfPrtcpnts" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.SampleSize.NumberOfParticipants</meta>
             <column length="65535" name="RskEvdnceSynths_SampleSz_NmbrOfPrtcpnts"/>
         </property>
         <property name="rskEvdnceSynthsSampleSzNmbrOfStudies" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.SampleSize.NumberOfStudies</meta>
             <column length="65535" name="RskEvdnceSynths_SampleSz_NmbrOfStudies"/>
         </property>
         <property name="rskEvdnceSynthsSts" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Status</meta>
             <column length="65535" name="RskEvdnceSynths_Sts"/>
         </property>
         <property name="rskEvdnceSynthsStdyTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.StudyType.Coding.Code</meta>
             <column length="65535" name="RskEvdnceSynths_StdyTyp_Cdg_Cd"/>
         </property>
         <property name="rskEvdnceSynthsStdyTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.StudyType.Coding.Display</meta>
             <column length="65535" name="RskEvdnceSynths_StdyTyp_Cdg_Dsply"/>
         </property>
         <property name="rskEvdnceSynthsStdyTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.StudyType.Coding.System</meta>
             <column length="65535" name="RskEvdnceSynths_StdyTyp_Cdg_Sys"/>
         </property>
         <property name="rskEvdnceSynthsStdyTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.StudyType.Coding.UserSelected</meta>
             <column length="65535" name="RskEvdnceSynths_StdyTyp_Cdg_UsrSltd"/>
         </property>
         <property name="rskEvdnceSynthsStdyTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.StudyType.Coding.Version</meta>
             <column length="65535" name="RskEvdnceSynths_StdyTyp_Cdg_Vrsn"/>
         </property>
         <property name="rskEvdnceSynthsStdyTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.StudyType.Text</meta>
             <column length="65535" name="RskEvdnceSynths_StdyTyp_Txt"/>
         </property>
         <property name="rskEvdnceSynthsSynthsTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.SynthesisType.Coding.Code</meta>
             <column length="65535" name="RskEvdnceSynths_SynthsTyp_Cdg_Cd"/>
         </property>
         <property name="rskEvdnceSynthsSynthsTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.SynthesisType.Coding.Display</meta>
             <column length="65535" name="RskEvdnceSynths_SynthsTyp_Cdg_Dsply"/>
         </property>
         <property name="rskEvdnceSynthsSynthsTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.SynthesisType.Coding.System</meta>
             <column length="65535" name="RskEvdnceSynths_SynthsTyp_Cdg_Sys"/>
         </property>
         <property name="rskEvdnceSynthsSynthsTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.SynthesisType.Coding.UserSelected</meta>
             <column length="65535" name="RskEvdnceSynths_SynthsTyp_Cdg_UsrSltd"/>
         </property>
         <property name="rskEvdnceSynthsSynthsTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.SynthesisType.Coding.Version</meta>
             <column length="65535" name="RskEvdnceSynths_SynthsTyp_Cdg_Vrsn"/>
         </property>
         <property name="rskEvdnceSynthsSynthsTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.SynthesisType.Text</meta>
             <column length="65535" name="RskEvdnceSynths_SynthsTyp_Txt"/>
         </property>
         <property name="rskEvdnceSynthsTtl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Title</meta>
             <column length="65535" name="RskEvdnceSynths_Ttl"/>
         </property>
         <property name="rskEvdnceSynthsTopicCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Topic.Coding.Code</meta>
             <column length="65535" name="RskEvdnceSynths_Topic_Cdg_Cd"/>
         </property>
         <property name="rskEvdnceSynthsTopicCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Topic.Coding.Display</meta>
             <column length="65535" name="RskEvdnceSynths_Topic_Cdg_Dsply"/>
         </property>
         <property name="rskEvdnceSynthsTopicCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Topic.Coding.System</meta>
             <column length="65535" name="RskEvdnceSynths_Topic_Cdg_Sys"/>
         </property>
         <property name="rskEvdnceSynthsTopicCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Topic.Coding.UserSelected</meta>
             <column length="65535" name="RskEvdnceSynths_Topic_Cdg_UsrSltd"/>
         </property>
         <property name="rskEvdnceSynthsTopicCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Topic.Coding.Version</meta>
             <column length="65535" name="RskEvdnceSynths_Topic_Cdg_Vrsn"/>
         </property>
         <property name="rskEvdnceSynthsTopicTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Topic.Text</meta>
             <column length="65535" name="RskEvdnceSynths_Topic_Txt"/>
         </property>
         <property name="rskEvdnceSynthsUrl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Url</meta>
             <column length="65535" name="RskEvdnceSynths_Url"/>
         </property>
         <property name="rskEvdnceSynthsUseCntxtCdCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.UseContext.Code.Code</meta>
             <column length="65535" name="RskEvdnceSynths_UseCntxt_Cd_Cd"/>
         </property>
         <property name="rskEvdnceSynthsUseCntxtCdDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.UseContext.Code.Display</meta>
             <column length="65535" name="RskEvdnceSynths_UseCntxt_Cd_Dsply"/>
         </property>
         <property name="rskEvdnceSynthsUseCntxtCdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.UseContext.Code.System</meta>
             <column length="65535" name="RskEvdnceSynths_UseCntxt_Cd_Sys"/>
         </property>
         <property name="rskEvdnceSynthsUseCntxtCdUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.UseContext.Code.UserSelected</meta>
             <column length="65535" name="RskEvdnceSynths_UseCntxt_Cd_UsrSltd"/>
         </property>
         <property name="rskEvdnceSynthsUseCntxtCdVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.UseContext.Code.Version</meta>
             <column length="65535" name="RskEvdnceSynths_UseCntxt_Cd_Vrsn"/>
         </property>
         <property name="rskEvdnceSynthsUseCntxtVlCdbleCncptCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.UseContext.ValueCodeableConcept.Coding.Code</meta>
             <column length="65535" name="RskEvdnceSynths_UseCntxt_VlCdbleCncpt_Cdg_Cd"/>
         </property>
         <property name="rskEvdnceSynthsUseCntxtVlCdbleCncptCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.UseContext.ValueCodeableConcept.Coding.Display</meta>
             <column length="65535" name="RskEvdnceSynths_UseCntxt_VlCdbleCncpt_Cdg_Dsply"/>
         </property>
         <property name="rskEvdnceSynthsUseCntxtVlCdbleCncptCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.UseContext.ValueCodeableConcept.Coding.System</meta>
             <column length="65535" name="RskEvdnceSynths_UseCntxt_VlCdbleCncpt_Cdg_Sys"/>
         </property>
         <property name="rskEvdnceSynthsUseCntxtVlCdbleCncptCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.UseContext.ValueCodeableConcept.Coding.UserSelected</meta>
             <column length="65535" name="RskEvdnceSynths_UseCntxt_VlCdbleCncpt_Cdg_UsrSltd"/>
         </property>
         <property name="rskEvdnceSynthsUseCntxtVlCdbleCncptCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.UseContext.ValueCodeableConcept.Coding.Version</meta>
             <column length="65535" name="RskEvdnceSynths_UseCntxt_VlCdbleCncpt_Cdg_Vrsn"/>
         </property>
         <property name="rskEvdnceSynthsUseCntxtVlCdbleCncptTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.UseContext.ValueCodeableConcept.Text</meta>
             <column length="65535" name="RskEvdnceSynths_UseCntxt_VlCdbleCncpt_Txt"/>
         </property>
         <property name="rskEvdnceSynthsUseCntxtVlQntyCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.UseContext.ValueQuantity.Code</meta>
             <column length="65535" name="RskEvdnceSynths_UseCntxt_VlQnty_Cd"/>
         </property>
         <property name="rskEvdnceSynthsUseCntxtVlQntyCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.UseContext.ValueQuantity.Comparator</meta>
             <column length="65535" name="RskEvdnceSynths_UseCntxt_VlQnty_Cmprtr"/>
         </property>
         <property name="rskEvdnceSynthsUseCntxtVlQntySys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.UseContext.ValueQuantity.System</meta>
             <column length="65535" name="RskEvdnceSynths_UseCntxt_VlQnty_Sys"/>
         </property>
         <property name="rskEvdnceSynthsUseCntxtVlQntyUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.UseContext.ValueQuantity.Unit</meta>
             <column length="65535" name="RskEvdnceSynths_UseCntxt_VlQnty_Unt"/>
         </property>
         <property name="rskEvdnceSynthsUseCntxtVlQntyVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.UseContext.ValueQuantity.Value</meta>
             <column length="65535" name="RskEvdnceSynths_UseCntxt_VlQnty_Vl"/>
         </property>
         <property name="rskEvdnceSynthsUseCntxtVlRngHiCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.UseContext.ValueRange.High.Code</meta>
             <column length="65535" name="RskEvdnceSynths_UseCntxt_VlRng_Hi_Cd"/>
         </property>
         <property name="rskEvdnceSynthsUseCntxtVlRngHiCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.UseContext.ValueRange.High.Comparator</meta>
             <column length="65535" name="RskEvdnceSynths_UseCntxt_VlRng_Hi_Cmprtr"/>
         </property>
         <property name="rskEvdnceSynthsUseCntxtVlRngHiSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.UseContext.ValueRange.High.System</meta>
             <column length="65535" name="RskEvdnceSynths_UseCntxt_VlRng_Hi_Sys"/>
         </property>
         <property name="rskEvdnceSynthsUseCntxtVlRngHiUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.UseContext.ValueRange.High.Unit</meta>
             <column length="65535" name="RskEvdnceSynths_UseCntxt_VlRng_Hi_Unt"/>
         </property>
         <property name="rskEvdnceSynthsUseCntxtVlRngHiVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.UseContext.ValueRange.High.Value</meta>
             <column length="65535" name="RskEvdnceSynths_UseCntxt_VlRng_Hi_Vl"/>
         </property>
         <property name="rskEvdnceSynthsUseCntxtVlRngLwCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.UseContext.ValueRange.Low.Code</meta>
             <column length="65535" name="RskEvdnceSynths_UseCntxt_VlRng_Lw_Cd"/>
         </property>
         <property name="rskEvdnceSynthsUseCntxtVlRngLwCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.UseContext.ValueRange.Low.Comparator</meta>
             <column length="65535" name="RskEvdnceSynths_UseCntxt_VlRng_Lw_Cmprtr"/>
         </property>
         <property name="rskEvdnceSynthsUseCntxtVlRngLwSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.UseContext.ValueRange.Low.System</meta>
             <column length="65535" name="RskEvdnceSynths_UseCntxt_VlRng_Lw_Sys"/>
         </property>
         <property name="rskEvdnceSynthsUseCntxtVlRngLwUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.UseContext.ValueRange.Low.Unit</meta>
             <column length="65535" name="RskEvdnceSynths_UseCntxt_VlRng_Lw_Unt"/>
         </property>
         <property name="rskEvdnceSynthsUseCntxtVlRngLwVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.UseContext.ValueRange.Low.Value</meta>
             <column length="65535" name="RskEvdnceSynths_UseCntxt_VlRng_Lw_Vl"/>
         </property>
         <property name="rskEvdnceSynthsUseCntxtVlRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.UseContext.ValueReference</meta>
             <column length="65535" name="RskEvdnceSynths_UseCntxt_VlRfrnc"/>
         </property>
         <property name="rskEvdnceSynthsVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">RiskEvidenceSynthesis.Version</meta>
             <column length="65535" name="RskEvdnceSynths_Vrsn"/>
         </property>
     </class>

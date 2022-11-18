@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Aug 17, 2022, 11:08:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 16, 2022, 11:34:16 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="ImagingStudy" optimistic-lock="none" table="ImagingStudy">
         <id name="id" type="string">
@@ -7,339 +7,339 @@
             <generator class="identity"/>
         </id>
         <property name="imgngStdyBasedOn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.BasedOn</meta>
             <column length="65535" name="ImgngStdy_BasedOn"/>
         </property>
         <property name="imgngStdyDscrptn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Description</meta>
             <column length="65535" name="ImgngStdy_Dscrptn"/>
         </property>
         <property name="imgngStdyEnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Encounter</meta>
             <column length="65535" name="ImgngStdy_Enc"/>
         </property>
         <property name="imgngStdyEndpoint" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Endpoint</meta>
             <column length="65535" name="ImgngStdy_Endpoint"/>
         </property>
         <property name="imgngStdyIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Identifier.Assigner</meta>
             <column length="65535" name="ImgngStdy_Id_Assigner"/>
         </property>
         <property name="imgngStdyIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Identifier.Period.End</meta>
             <column length="65535" name="ImgngStdy_Id_Prd_End"/>
         </property>
         <property name="imgngStdyIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Identifier.Period.Start</meta>
             <column length="65535" name="ImgngStdy_Id_Prd_Strt"/>
         </property>
         <property name="imgngStdyIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Identifier.System</meta>
             <column length="65535" name="ImgngStdy_Id_Sys"/>
         </property>
         <property name="imgngStdyIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Identifier.Type.Coding.Code</meta>
             <column length="65535" name="ImgngStdy_Id_Typ_Cdg_Cd"/>
         </property>
         <property name="imgngStdyIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Identifier.Type.Coding.Display</meta>
             <column length="65535" name="ImgngStdy_Id_Typ_Cdg_Dsply"/>
         </property>
         <property name="imgngStdyIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Identifier.Type.Coding.System</meta>
             <column length="65535" name="ImgngStdy_Id_Typ_Cdg_Sys"/>
         </property>
         <property name="imgngStdyIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Identifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="ImgngStdy_Id_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="imgngStdyIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Identifier.Type.Coding.Version</meta>
             <column length="65535" name="ImgngStdy_Id_Typ_Cdg_Vrsn"/>
         </property>
         <property name="imgngStdyIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Identifier.Type.Text</meta>
             <column length="65535" name="ImgngStdy_Id_Typ_Txt"/>
         </property>
         <property name="imgngStdyIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Identifier.Use</meta>
             <column length="65535" name="ImgngStdy_Id_Use"/>
         </property>
         <property name="imgngStdyIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Identifier.Value</meta>
             <column length="65535" name="ImgngStdy_Id_Vl"/>
         </property>
         <property name="imgngStdyInterpreter" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Interpreter</meta>
             <column length="65535" name="ImgngStdy_Interpreter"/>
         </property>
         <property name="imgngStdyLctn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Location</meta>
             <column length="65535" name="ImgngStdy_Lctn"/>
         </property>
         <property name="imgngStdyModalityCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Modality.Code</meta>
             <column length="65535" name="ImgngStdy_Modality_Cd"/>
         </property>
         <property name="imgngStdyModalityDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Modality.Display</meta>
             <column length="65535" name="ImgngStdy_Modality_Dsply"/>
         </property>
         <property name="imgngStdyModalitySys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Modality.System</meta>
             <column length="65535" name="ImgngStdy_Modality_Sys"/>
         </property>
         <property name="imgngStdyModalityUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Modality.UserSelected</meta>
             <column length="65535" name="ImgngStdy_Modality_UsrSltd"/>
         </property>
         <property name="imgngStdyModalityVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Modality.Version</meta>
             <column length="65535" name="ImgngStdy_Modality_Vrsn"/>
         </property>
         <property name="imgngStdyNtAthrRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Note.AuthorReference</meta>
             <column length="65535" name="ImgngStdy_Nt_AthrRfrnc"/>
         </property>
         <property name="imgngStdyNtAthrStrgTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Note.AuthorStringType</meta>
             <column length="65535" name="ImgngStdy_Nt_AthrStrgTyp"/>
         </property>
         <property name="imgngStdyNtTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Note.Text</meta>
             <column length="65535" name="ImgngStdy_Nt_Txt"/>
         </property>
         <property name="imgngStdyNtTime" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Note.Time</meta>
             <column length="65535" name="ImgngStdy_Nt_Time"/>
         </property>
         <property name="imgngStdyNmbrOfInstances" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.NumberOfInstances</meta>
             <column length="65535" name="ImgngStdy_NmbrOfInstances"/>
         </property>
         <property name="imgngStdyNmbrOfSeries" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.NumberOfSeries</meta>
             <column length="65535" name="ImgngStdy_NmbrOfSeries"/>
         </property>
         <property name="imgngStdyPrcdrCdCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.ProcedureCode.Coding.Code</meta>
             <column length="65535" name="ImgngStdy_PrcdrCd_Cdg_Cd"/>
         </property>
         <property name="imgngStdyPrcdrCdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.ProcedureCode.Coding.Display</meta>
             <column length="65535" name="ImgngStdy_PrcdrCd_Cdg_Dsply"/>
         </property>
         <property name="imgngStdyPrcdrCdCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.ProcedureCode.Coding.System</meta>
             <column length="65535" name="ImgngStdy_PrcdrCd_Cdg_Sys"/>
         </property>
         <property name="imgngStdyPrcdrCdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.ProcedureCode.Coding.UserSelected</meta>
             <column length="65535" name="ImgngStdy_PrcdrCd_Cdg_UsrSltd"/>
         </property>
         <property name="imgngStdyPrcdrCdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.ProcedureCode.Coding.Version</meta>
             <column length="65535" name="ImgngStdy_PrcdrCd_Cdg_Vrsn"/>
         </property>
         <property name="imgngStdyPrcdrCdTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.ProcedureCode.Text</meta>
             <column length="65535" name="ImgngStdy_PrcdrCd_Txt"/>
         </property>
         <property name="imgngStdyPrcdrRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.ProcedureReference</meta>
             <column length="65535" name="ImgngStdy_PrcdrRfrnc"/>
         </property>
         <property name="imgngStdyRsnCdCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.ReasonCode.Coding.Code</meta>
             <column length="65535" name="ImgngStdy_RsnCd_Cdg_Cd"/>
         </property>
         <property name="imgngStdyRsnCdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.ReasonCode.Coding.Display</meta>
             <column length="65535" name="ImgngStdy_RsnCd_Cdg_Dsply"/>
         </property>
         <property name="imgngStdyRsnCdCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.ReasonCode.Coding.System</meta>
             <column length="65535" name="ImgngStdy_RsnCd_Cdg_Sys"/>
         </property>
         <property name="imgngStdyRsnCdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.ReasonCode.Coding.UserSelected</meta>
             <column length="65535" name="ImgngStdy_RsnCd_Cdg_UsrSltd"/>
         </property>
         <property name="imgngStdyRsnCdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.ReasonCode.Coding.Version</meta>
             <column length="65535" name="ImgngStdy_RsnCd_Cdg_Vrsn"/>
         </property>
         <property name="imgngStdyRsnCdTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.ReasonCode.Text</meta>
             <column length="65535" name="ImgngStdy_RsnCd_Txt"/>
         </property>
         <property name="imgngStdyRsnRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.ReasonReference</meta>
             <column length="65535" name="ImgngStdy_RsnRfrnc"/>
         </property>
         <property name="imgngStdyReferrer" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Referrer</meta>
             <column length="65535" name="ImgngStdy_Referrer"/>
         </property>
         <property name="imgngStdySeriesBodySiteCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Series.BodySite.Code</meta>
             <column length="65535" name="ImgngStdy_Series_BodySite_Cd"/>
         </property>
         <property name="imgngStdySeriesBodySiteDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Series.BodySite.Display</meta>
             <column length="65535" name="ImgngStdy_Series_BodySite_Dsply"/>
         </property>
         <property name="imgngStdySeriesBodySiteSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Series.BodySite.System</meta>
             <column length="65535" name="ImgngStdy_Series_BodySite_Sys"/>
         </property>
         <property name="imgngStdySeriesBodySiteUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Series.BodySite.UserSelected</meta>
             <column length="65535" name="ImgngStdy_Series_BodySite_UsrSltd"/>
         </property>
         <property name="imgngStdySeriesBodySiteVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Series.BodySite.Version</meta>
             <column length="65535" name="ImgngStdy_Series_BodySite_Vrsn"/>
         </property>
         <property name="imgngStdySeriesDscrptn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Series.Description</meta>
             <column length="65535" name="ImgngStdy_Series_Dscrptn"/>
         </property>
         <property name="imgngStdySeriesEndpoint" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Series.Endpoint</meta>
             <column length="65535" name="ImgngStdy_Series_Endpoint"/>
         </property>
         <property name="imgngStdySeriesInstanceNmbr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Series.Instance.Number</meta>
             <column length="65535" name="ImgngStdy_Series_Instance_Nmbr"/>
         </property>
         <property name="imgngStdySeriesInstanceSopClsCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Series.Instance.SopClass.Code</meta>
             <column length="65535" name="ImgngStdy_Series_Instance_SopCls_Cd"/>
         </property>
         <property name="imgngStdySeriesInstanceSopClsDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Series.Instance.SopClass.Display</meta>
             <column length="65535" name="ImgngStdy_Series_Instance_SopCls_Dsply"/>
         </property>
         <property name="imgngStdySeriesInstanceSopClsSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Series.Instance.SopClass.System</meta>
             <column length="65535" name="ImgngStdy_Series_Instance_SopCls_Sys"/>
         </property>
         <property name="imgngStdySeriesInstanceSopClsUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Series.Instance.SopClass.UserSelected</meta>
             <column length="65535" name="ImgngStdy_Series_Instance_SopCls_UsrSltd"/>
         </property>
         <property name="imgngStdySeriesInstanceSopClsVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Series.Instance.SopClass.Version</meta>
             <column length="65535" name="ImgngStdy_Series_Instance_SopCls_Vrsn"/>
         </property>
         <property name="imgngStdySeriesInstanceTtl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Series.Instance.Title</meta>
             <column length="65535" name="ImgngStdy_Series_Instance_Ttl"/>
         </property>
         <property name="imgngStdySeriesInstanceUid" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Series.Instance.Uid</meta>
             <column length="65535" name="ImgngStdy_Series_Instance_Uid"/>
         </property>
         <property name="imgngStdySeriesLateralityCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Series.Laterality.Code</meta>
             <column length="65535" name="ImgngStdy_Series_Laterality_Cd"/>
         </property>
         <property name="imgngStdySeriesLateralityDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Series.Laterality.Display</meta>
             <column length="65535" name="ImgngStdy_Series_Laterality_Dsply"/>
         </property>
         <property name="imgngStdySeriesLateralitySys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Series.Laterality.System</meta>
             <column length="65535" name="ImgngStdy_Series_Laterality_Sys"/>
         </property>
         <property name="imgngStdySeriesLateralityUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Series.Laterality.UserSelected</meta>
             <column length="65535" name="ImgngStdy_Series_Laterality_UsrSltd"/>
         </property>
         <property name="imgngStdySeriesLateralityVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Series.Laterality.Version</meta>
             <column length="65535" name="ImgngStdy_Series_Laterality_Vrsn"/>
         </property>
         <property name="imgngStdySeriesModalityCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Series.Modality.Code</meta>
             <column length="65535" name="ImgngStdy_Series_Modality_Cd"/>
         </property>
         <property name="imgngStdySeriesModalityDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Series.Modality.Display</meta>
             <column length="65535" name="ImgngStdy_Series_Modality_Dsply"/>
         </property>
         <property name="imgngStdySeriesModalitySys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Series.Modality.System</meta>
             <column length="65535" name="ImgngStdy_Series_Modality_Sys"/>
         </property>
         <property name="imgngStdySeriesModalityUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Series.Modality.UserSelected</meta>
             <column length="65535" name="ImgngStdy_Series_Modality_UsrSltd"/>
         </property>
         <property name="imgngStdySeriesModalityVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Series.Modality.Version</meta>
             <column length="65535" name="ImgngStdy_Series_Modality_Vrsn"/>
         </property>
         <property name="imgngStdySeriesNmbr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Series.Number</meta>
             <column length="65535" name="ImgngStdy_Series_Nmbr"/>
         </property>
         <property name="imgngStdySeriesNmbrOfInstances" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Series.NumberOfInstances</meta>
             <column length="65535" name="ImgngStdy_Series_NmbrOfInstances"/>
         </property>
         <property name="imgngStdySeriesPrfrmrActor" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Series.Performer.Actor</meta>
             <column length="65535" name="ImgngStdy_Series_Prfrmr_Actor"/>
         </property>
         <property name="imgngStdySeriesPrfrmrFunctionCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Series.Performer.Function.Coding.Code</meta>
             <column length="65535" name="ImgngStdy_Series_Prfrmr_Function_Cdg_Cd"/>
         </property>
         <property name="imgngStdySeriesPrfrmrFunctionCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Series.Performer.Function.Coding.Display</meta>
             <column length="65535" name="ImgngStdy_Series_Prfrmr_Function_Cdg_Dsply"/>
         </property>
         <property name="imgngStdySeriesPrfrmrFunctionCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Series.Performer.Function.Coding.System</meta>
             <column length="65535" name="ImgngStdy_Series_Prfrmr_Function_Cdg_Sys"/>
         </property>
         <property name="imgngStdySeriesPrfrmrFunctionCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Series.Performer.Function.Coding.UserSelected</meta>
             <column length="65535" name="ImgngStdy_Series_Prfrmr_Function_Cdg_UsrSltd"/>
         </property>
         <property name="imgngStdySeriesPrfrmrFunctionCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Series.Performer.Function.Coding.Version</meta>
             <column length="65535" name="ImgngStdy_Series_Prfrmr_Function_Cdg_Vrsn"/>
         </property>
         <property name="imgngStdySeriesPrfrmrFunctionTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Series.Performer.Function.Text</meta>
             <column length="65535" name="ImgngStdy_Series_Prfrmr_Function_Txt"/>
         </property>
         <property name="imgngStdySeriesSpcmn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Series.Specimen</meta>
             <column length="65535" name="ImgngStdy_Series_Spcmn"/>
         </property>
         <property name="imgngStdySeriesStrted" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Series.Started</meta>
             <column length="65535" name="ImgngStdy_Series_Strted"/>
         </property>
         <property name="imgngStdySeriesUid" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Series.Uid</meta>
             <column length="65535" name="ImgngStdy_Series_Uid"/>
         </property>
         <property name="imgngStdyStrted" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Started</meta>
             <column length="65535" name="ImgngStdy_Strted"/>
         </property>
         <property name="imgngStdySts" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Status</meta>
             <column length="65535" name="ImgngStdy_Sts"/>
         </property>
         <property name="imgngStdySbjct" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ImagingStudy.Subject</meta>
             <column length="65535" name="ImgngStdy_Sbjct"/>
         </property>
     </class>

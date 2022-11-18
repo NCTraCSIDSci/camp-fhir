@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Aug 17, 2022, 11:08:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 16, 2022, 11:34:16 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="DiagnosticReport" optimistic-lock="none" table="DiagnosticReport">
         <id name="id" type="string">
@@ -7,219 +7,219 @@
             <generator class="identity"/>
         </id>
         <property name="diagnosticRptBasedOn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DiagnosticReport.BasedOn</meta>
             <column length="65535" name="DiagnosticRpt_BasedOn"/>
         </property>
         <property name="diagnosticRptCtgryCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DiagnosticReport.Category.Coding.Code</meta>
             <column length="65535" name="DiagnosticRpt_Ctgry_Cdg_Cd"/>
         </property>
         <property name="diagnosticRptCtgryCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DiagnosticReport.Category.Coding.Display</meta>
             <column length="65535" name="DiagnosticRpt_Ctgry_Cdg_Dsply"/>
         </property>
         <property name="diagnosticRptCtgryCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DiagnosticReport.Category.Coding.System</meta>
             <column length="65535" name="DiagnosticRpt_Ctgry_Cdg_Sys"/>
         </property>
         <property name="diagnosticRptCtgryCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DiagnosticReport.Category.Coding.UserSelected</meta>
             <column length="65535" name="DiagnosticRpt_Ctgry_Cdg_UsrSltd"/>
         </property>
         <property name="diagnosticRptCtgryCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DiagnosticReport.Category.Coding.Version</meta>
             <column length="65535" name="DiagnosticRpt_Ctgry_Cdg_Vrsn"/>
         </property>
         <property name="diagnosticRptCtgryTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DiagnosticReport.Category.Text</meta>
             <column length="65535" name="DiagnosticRpt_Ctgry_Txt"/>
         </property>
         <property name="diagnosticRptCdCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DiagnosticReport.Code.Coding.Code</meta>
             <column length="65535" name="DiagnosticRpt_Cd_Cdg_Cd"/>
         </property>
         <property name="diagnosticRptCdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DiagnosticReport.Code.Coding.Display</meta>
             <column length="65535" name="DiagnosticRpt_Cd_Cdg_Dsply"/>
         </property>
         <property name="diagnosticRptCdCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DiagnosticReport.Code.Coding.System</meta>
             <column length="65535" name="DiagnosticRpt_Cd_Cdg_Sys"/>
         </property>
         <property name="diagnosticRptCdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DiagnosticReport.Code.Coding.UserSelected</meta>
             <column length="65535" name="DiagnosticRpt_Cd_Cdg_UsrSltd"/>
         </property>
         <property name="diagnosticRptCdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DiagnosticReport.Code.Coding.Version</meta>
             <column length="65535" name="DiagnosticRpt_Cd_Cdg_Vrsn"/>
         </property>
         <property name="diagnosticRptCdTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DiagnosticReport.Code.Text</meta>
             <column length="65535" name="DiagnosticRpt_Cd_Txt"/>
         </property>
         <property name="diagnosticRptConclusion" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DiagnosticReport.Conclusion</meta>
             <column length="65535" name="DiagnosticRpt_Conclusion"/>
         </property>
         <property name="diagnosticRptConclusionCdCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DiagnosticReport.ConclusionCode.Coding.Code</meta>
             <column length="65535" name="DiagnosticRpt_ConclusionCd_Cdg_Cd"/>
         </property>
         <property name="diagnosticRptConclusionCdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DiagnosticReport.ConclusionCode.Coding.Display</meta>
             <column length="65535" name="DiagnosticRpt_ConclusionCd_Cdg_Dsply"/>
         </property>
         <property name="diagnosticRptConclusionCdCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DiagnosticReport.ConclusionCode.Coding.System</meta>
             <column length="65535" name="DiagnosticRpt_ConclusionCd_Cdg_Sys"/>
         </property>
         <property name="diagnosticRptConclusionCdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DiagnosticReport.ConclusionCode.Coding.UserSelected</meta>
             <column length="65535" name="DiagnosticRpt_ConclusionCd_Cdg_UsrSltd"/>
         </property>
         <property name="diagnosticRptConclusionCdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DiagnosticReport.ConclusionCode.Coding.Version</meta>
             <column length="65535" name="DiagnosticRpt_ConclusionCd_Cdg_Vrsn"/>
         </property>
         <property name="diagnosticRptConclusionCdTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DiagnosticReport.ConclusionCode.Text</meta>
             <column length="65535" name="DiagnosticRpt_ConclusionCd_Txt"/>
         </property>
         <property name="diagnosticRptEfctiveDtTimeTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DiagnosticReport.EffectiveDateTimeType</meta>
             <column length="65535" name="DiagnosticRpt_EfctiveDtTimeTyp"/>
         </property>
         <property name="diagnosticRptEfctivePrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DiagnosticReport.EffectivePeriod.End</meta>
             <column length="65535" name="DiagnosticRpt_EfctivePrd_End"/>
         </property>
         <property name="diagnosticRptEfctivePrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DiagnosticReport.EffectivePeriod.Start</meta>
             <column length="65535" name="DiagnosticRpt_EfctivePrd_Strt"/>
         </property>
         <property name="diagnosticRptEnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DiagnosticReport.Encounter</meta>
             <column length="65535" name="DiagnosticRpt_Enc"/>
         </property>
         <property name="diagnosticRptIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DiagnosticReport.Identifier.Assigner</meta>
             <column length="65535" name="DiagnosticRpt_Id_Assigner"/>
         </property>
         <property name="diagnosticRptIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DiagnosticReport.Identifier.Period.End</meta>
             <column length="65535" name="DiagnosticRpt_Id_Prd_End"/>
         </property>
         <property name="diagnosticRptIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DiagnosticReport.Identifier.Period.Start</meta>
             <column length="65535" name="DiagnosticRpt_Id_Prd_Strt"/>
         </property>
         <property name="diagnosticRptIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DiagnosticReport.Identifier.System</meta>
             <column length="65535" name="DiagnosticRpt_Id_Sys"/>
         </property>
         <property name="diagnosticRptIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DiagnosticReport.Identifier.Type.Coding.Code</meta>
             <column length="65535" name="DiagnosticRpt_Id_Typ_Cdg_Cd"/>
         </property>
         <property name="diagnosticRptIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DiagnosticReport.Identifier.Type.Coding.Display</meta>
             <column length="65535" name="DiagnosticRpt_Id_Typ_Cdg_Dsply"/>
         </property>
         <property name="diagnosticRptIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DiagnosticReport.Identifier.Type.Coding.System</meta>
             <column length="65535" name="DiagnosticRpt_Id_Typ_Cdg_Sys"/>
         </property>
         <property name="diagnosticRptIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DiagnosticReport.Identifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="DiagnosticRpt_Id_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="diagnosticRptIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DiagnosticReport.Identifier.Type.Coding.Version</meta>
             <column length="65535" name="DiagnosticRpt_Id_Typ_Cdg_Vrsn"/>
         </property>
         <property name="diagnosticRptIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DiagnosticReport.Identifier.Type.Text</meta>
             <column length="65535" name="DiagnosticRpt_Id_Typ_Txt"/>
         </property>
         <property name="diagnosticRptIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DiagnosticReport.Identifier.Use</meta>
             <column length="65535" name="DiagnosticRpt_Id_Use"/>
         </property>
         <property name="diagnosticRptIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DiagnosticReport.Identifier.Value</meta>
             <column length="65535" name="DiagnosticRpt_Id_Vl"/>
         </property>
         <property name="diagnosticRptImgngStdy" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DiagnosticReport.ImagingStudy</meta>
             <column length="65535" name="DiagnosticRpt_ImgngStdy"/>
         </property>
         <property name="diagnosticRptIssued" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DiagnosticReport.Issued</meta>
             <column length="65535" name="DiagnosticRpt_Issued"/>
         </property>
         <property name="diagnosticRptMediaComment" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DiagnosticReport.Media.Comment</meta>
             <column length="65535" name="DiagnosticRpt_Media_Comment"/>
         </property>
         <property name="diagnosticRptMediaLink" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DiagnosticReport.Media.Link</meta>
             <column length="65535" name="DiagnosticRpt_Media_Link"/>
         </property>
         <property name="diagnosticRptPrfrmr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DiagnosticReport.Performer</meta>
             <column length="65535" name="DiagnosticRpt_Prfrmr"/>
         </property>
         <property name="diagnosticRptPresentedFrmCntntTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DiagnosticReport.PresentedForm.ContentType</meta>
             <column length="65535" name="DiagnosticRpt_PresentedFrm_CntntTyp"/>
         </property>
         <property name="diagnosticRptPresentedFrmCreation" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DiagnosticReport.PresentedForm.Creation</meta>
             <column length="65535" name="DiagnosticRpt_PresentedFrm_Creation"/>
         </property>
         <property name="diagnosticRptPresentedFrmData" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DiagnosticReport.PresentedForm.Data</meta>
             <column length="65535" name="DiagnosticRpt_PresentedFrm_Data"/>
         </property>
         <property name="diagnosticRptPresentedFrmHash" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DiagnosticReport.PresentedForm.Hash</meta>
             <column length="65535" name="DiagnosticRpt_PresentedFrm_Hash"/>
         </property>
         <property name="diagnosticRptPresentedFrmLnguage" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DiagnosticReport.PresentedForm.Language</meta>
             <column length="65535" name="DiagnosticRpt_PresentedFrm_Lnguage"/>
         </property>
         <property name="diagnosticRptPresentedFrmSz" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DiagnosticReport.PresentedForm.Size</meta>
             <column length="65535" name="DiagnosticRpt_PresentedFrm_Sz"/>
         </property>
         <property name="diagnosticRptPresentedFrmTtl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DiagnosticReport.PresentedForm.Title</meta>
             <column length="65535" name="DiagnosticRpt_PresentedFrm_Ttl"/>
         </property>
         <property name="diagnosticRptPresentedFrmUrl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DiagnosticReport.PresentedForm.Url</meta>
             <column length="65535" name="DiagnosticRpt_PresentedFrm_Url"/>
         </property>
         <property name="diagnosticRptRslt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DiagnosticReport.Result</meta>
             <column length="65535" name="DiagnosticRpt_Rslt"/>
         </property>
         <property name="diagnosticRptRsltsInterpreter" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DiagnosticReport.ResultsInterpreter</meta>
             <column length="65535" name="DiagnosticRpt_RsltsInterpreter"/>
         </property>
         <property name="diagnosticRptSpcmn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DiagnosticReport.Specimen</meta>
             <column length="65535" name="DiagnosticRpt_Spcmn"/>
         </property>
         <property name="diagnosticRptSts" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DiagnosticReport.Status</meta>
             <column length="65535" name="DiagnosticRpt_Sts"/>
         </property>
         <property name="diagnosticRptSbjct" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">DiagnosticReport.Subject</meta>
             <column length="65535" name="DiagnosticRpt_Sbjct"/>
         </property>
     </class>

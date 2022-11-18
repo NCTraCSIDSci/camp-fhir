@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Aug 17, 2022, 11:08:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 16, 2022, 11:34:16 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="BiologicallyDerivedProduct" optimistic-lock="none" table="BiologicallyDerivedProduct">
         <id name="id" type="string">
@@ -7,195 +7,195 @@
             <generator class="identity"/>
         </id>
         <property name="biologicallyDerivedPrdctCollectionCollectedDtTimeTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">BiologicallyDerivedProduct.Collection.CollectedDateTimeType</meta>
             <column length="65535" name="BiologicallyDerivedPrdct_Collection_CollectedDtTimeTyp"/>
         </property>
         <property name="biologicallyDerivedPrdctCollectionCollectedPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">BiologicallyDerivedProduct.Collection.CollectedPeriod.End</meta>
             <column length="65535" name="BiologicallyDerivedPrdct_Collection_CollectedPrd_End"/>
         </property>
         <property name="biologicallyDerivedPrdctCollectionCollectedPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">BiologicallyDerivedProduct.Collection.CollectedPeriod.Start</meta>
             <column length="65535" name="BiologicallyDerivedPrdct_Collection_CollectedPrd_Strt"/>
         </property>
         <property name="biologicallyDerivedPrdctCollectionCollector" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">BiologicallyDerivedProduct.Collection.Collector</meta>
             <column length="65535" name="BiologicallyDerivedPrdct_Collection_Collector"/>
         </property>
         <property name="biologicallyDerivedPrdctCollectionSrc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">BiologicallyDerivedProduct.Collection.Source</meta>
             <column length="65535" name="BiologicallyDerivedPrdct_Collection_Src"/>
         </property>
         <property name="biologicallyDerivedPrdctIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">BiologicallyDerivedProduct.Identifier.Assigner</meta>
             <column length="65535" name="BiologicallyDerivedPrdct_Id_Assigner"/>
         </property>
         <property name="biologicallyDerivedPrdctIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">BiologicallyDerivedProduct.Identifier.Period.End</meta>
             <column length="65535" name="BiologicallyDerivedPrdct_Id_Prd_End"/>
         </property>
         <property name="biologicallyDerivedPrdctIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">BiologicallyDerivedProduct.Identifier.Period.Start</meta>
             <column length="65535" name="BiologicallyDerivedPrdct_Id_Prd_Strt"/>
         </property>
         <property name="biologicallyDerivedPrdctIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">BiologicallyDerivedProduct.Identifier.System</meta>
             <column length="65535" name="BiologicallyDerivedPrdct_Id_Sys"/>
         </property>
         <property name="biologicallyDerivedPrdctIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">BiologicallyDerivedProduct.Identifier.Type.Coding.Code</meta>
             <column length="65535" name="BiologicallyDerivedPrdct_Id_Typ_Cdg_Cd"/>
         </property>
         <property name="biologicallyDerivedPrdctIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">BiologicallyDerivedProduct.Identifier.Type.Coding.Display</meta>
             <column length="65535" name="BiologicallyDerivedPrdct_Id_Typ_Cdg_Dsply"/>
         </property>
         <property name="biologicallyDerivedPrdctIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">BiologicallyDerivedProduct.Identifier.Type.Coding.System</meta>
             <column length="65535" name="BiologicallyDerivedPrdct_Id_Typ_Cdg_Sys"/>
         </property>
         <property name="biologicallyDerivedPrdctIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">BiologicallyDerivedProduct.Identifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="BiologicallyDerivedPrdct_Id_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="biologicallyDerivedPrdctIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">BiologicallyDerivedProduct.Identifier.Type.Coding.Version</meta>
             <column length="65535" name="BiologicallyDerivedPrdct_Id_Typ_Cdg_Vrsn"/>
         </property>
         <property name="biologicallyDerivedPrdctIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">BiologicallyDerivedProduct.Identifier.Type.Text</meta>
             <column length="65535" name="BiologicallyDerivedPrdct_Id_Typ_Txt"/>
         </property>
         <property name="biologicallyDerivedPrdctIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">BiologicallyDerivedProduct.Identifier.Use</meta>
             <column length="65535" name="BiologicallyDerivedPrdct_Id_Use"/>
         </property>
         <property name="biologicallyDerivedPrdctIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">BiologicallyDerivedProduct.Identifier.Value</meta>
             <column length="65535" name="BiologicallyDerivedPrdct_Id_Vl"/>
         </property>
         <property name="biologicallyDerivedPrdctManipulationDscrptn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">BiologicallyDerivedProduct.Manipulation.Description</meta>
             <column length="65535" name="BiologicallyDerivedPrdct_Manipulation_Dscrptn"/>
         </property>
         <property name="biologicallyDerivedPrdctManipulationTimeDtTimeTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">BiologicallyDerivedProduct.Manipulation.TimeDateTimeType</meta>
             <column length="65535" name="BiologicallyDerivedPrdct_Manipulation_TimeDtTimeTyp"/>
         </property>
         <property name="biologicallyDerivedPrdctManipulationTimePrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">BiologicallyDerivedProduct.Manipulation.TimePeriod.End</meta>
             <column length="65535" name="BiologicallyDerivedPrdct_Manipulation_TimePrd_End"/>
         </property>
         <property name="biologicallyDerivedPrdctManipulationTimePrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">BiologicallyDerivedProduct.Manipulation.TimePeriod.Start</meta>
             <column length="65535" name="BiologicallyDerivedPrdct_Manipulation_TimePrd_Strt"/>
         </property>
         <property name="biologicallyDerivedPrdctParent" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">BiologicallyDerivedProduct.Parent</meta>
             <column length="65535" name="BiologicallyDerivedPrdct_Parent"/>
         </property>
         <property name="biologicallyDerivedPrdctProcessingAddtv" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">BiologicallyDerivedProduct.Processing.Additive</meta>
             <column length="65535" name="BiologicallyDerivedPrdct_Processing_Addtv"/>
         </property>
         <property name="biologicallyDerivedPrdctProcessingDscrptn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">BiologicallyDerivedProduct.Processing.Description</meta>
             <column length="65535" name="BiologicallyDerivedPrdct_Processing_Dscrptn"/>
         </property>
         <property name="biologicallyDerivedPrdctProcessingPrcdrCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">BiologicallyDerivedProduct.Processing.Procedure.Coding.Code</meta>
             <column length="65535" name="BiologicallyDerivedPrdct_Processing_Prcdr_Cdg_Cd"/>
         </property>
         <property name="biologicallyDerivedPrdctProcessingPrcdrCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">BiologicallyDerivedProduct.Processing.Procedure.Coding.Display</meta>
             <column length="65535" name="BiologicallyDerivedPrdct_Processing_Prcdr_Cdg_Dsply"/>
         </property>
         <property name="biologicallyDerivedPrdctProcessingPrcdrCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">BiologicallyDerivedProduct.Processing.Procedure.Coding.System</meta>
             <column length="65535" name="BiologicallyDerivedPrdct_Processing_Prcdr_Cdg_Sys"/>
         </property>
         <property name="biologicallyDerivedPrdctProcessingPrcdrCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">BiologicallyDerivedProduct.Processing.Procedure.Coding.UserSelected</meta>
             <column length="65535" name="BiologicallyDerivedPrdct_Processing_Prcdr_Cdg_UsrSltd"/>
         </property>
         <property name="biologicallyDerivedPrdctProcessingPrcdrCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">BiologicallyDerivedProduct.Processing.Procedure.Coding.Version</meta>
             <column length="65535" name="BiologicallyDerivedPrdct_Processing_Prcdr_Cdg_Vrsn"/>
         </property>
         <property name="biologicallyDerivedPrdctProcessingPrcdrTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">BiologicallyDerivedProduct.Processing.Procedure.Text</meta>
             <column length="65535" name="BiologicallyDerivedPrdct_Processing_Prcdr_Txt"/>
         </property>
         <property name="biologicallyDerivedPrdctProcessingTimeDtTimeTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">BiologicallyDerivedProduct.Processing.TimeDateTimeType</meta>
             <column length="65535" name="BiologicallyDerivedPrdct_Processing_TimeDtTimeTyp"/>
         </property>
         <property name="biologicallyDerivedPrdctProcessingTimePrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">BiologicallyDerivedProduct.Processing.TimePeriod.End</meta>
             <column length="65535" name="BiologicallyDerivedPrdct_Processing_TimePrd_End"/>
         </property>
         <property name="biologicallyDerivedPrdctProcessingTimePrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">BiologicallyDerivedProduct.Processing.TimePeriod.Start</meta>
             <column length="65535" name="BiologicallyDerivedPrdct_Processing_TimePrd_Strt"/>
         </property>
         <property name="biologicallyDerivedPrdctPrdctCtgry" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">BiologicallyDerivedProduct.ProductCategory</meta>
             <column length="65535" name="BiologicallyDerivedPrdct_PrdctCtgry"/>
         </property>
         <property name="biologicallyDerivedPrdctPrdctCdCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">BiologicallyDerivedProduct.ProductCode.Coding.Code</meta>
             <column length="65535" name="BiologicallyDerivedPrdct_PrdctCd_Cdg_Cd"/>
         </property>
         <property name="biologicallyDerivedPrdctPrdctCdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">BiologicallyDerivedProduct.ProductCode.Coding.Display</meta>
             <column length="65535" name="BiologicallyDerivedPrdct_PrdctCd_Cdg_Dsply"/>
         </property>
         <property name="biologicallyDerivedPrdctPrdctCdCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">BiologicallyDerivedProduct.ProductCode.Coding.System</meta>
             <column length="65535" name="BiologicallyDerivedPrdct_PrdctCd_Cdg_Sys"/>
         </property>
         <property name="biologicallyDerivedPrdctPrdctCdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">BiologicallyDerivedProduct.ProductCode.Coding.UserSelected</meta>
             <column length="65535" name="BiologicallyDerivedPrdct_PrdctCd_Cdg_UsrSltd"/>
         </property>
         <property name="biologicallyDerivedPrdctPrdctCdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">BiologicallyDerivedProduct.ProductCode.Coding.Version</meta>
             <column length="65535" name="BiologicallyDerivedPrdct_PrdctCd_Cdg_Vrsn"/>
         </property>
         <property name="biologicallyDerivedPrdctPrdctCdTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">BiologicallyDerivedProduct.ProductCode.Text</meta>
             <column length="65535" name="BiologicallyDerivedPrdct_PrdctCd_Txt"/>
         </property>
         <property name="biologicallyDerivedPrdctQnty" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">BiologicallyDerivedProduct.Quantity</meta>
             <column length="65535" name="BiologicallyDerivedPrdct_Qnty"/>
         </property>
         <property name="biologicallyDerivedPrdctRqst" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">BiologicallyDerivedProduct.Request</meta>
             <column length="65535" name="BiologicallyDerivedPrdct_Rqst"/>
         </property>
         <property name="biologicallyDerivedPrdctSts" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">BiologicallyDerivedProduct.Status</meta>
             <column length="65535" name="BiologicallyDerivedPrdct_Sts"/>
         </property>
         <property name="biologicallyDerivedPrdctStorageDscrptn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">BiologicallyDerivedProduct.Storage.Description</meta>
             <column length="65535" name="BiologicallyDerivedPrdct_Storage_Dscrptn"/>
         </property>
         <property name="biologicallyDerivedPrdctStorageDurationEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">BiologicallyDerivedProduct.Storage.Duration.End</meta>
             <column length="65535" name="BiologicallyDerivedPrdct_Storage_Duration_End"/>
         </property>
         <property name="biologicallyDerivedPrdctStorageDurationStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">BiologicallyDerivedProduct.Storage.Duration.Start</meta>
             <column length="65535" name="BiologicallyDerivedPrdct_Storage_Duration_Strt"/>
         </property>
         <property name="biologicallyDerivedPrdctStorageScale" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">BiologicallyDerivedProduct.Storage.Scale</meta>
             <column length="65535" name="BiologicallyDerivedPrdct_Storage_Scale"/>
         </property>
         <property name="biologicallyDerivedPrdctStorageTemperature" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">BiologicallyDerivedProduct.Storage.Temperature</meta>
             <column length="65535" name="BiologicallyDerivedPrdct_Storage_Temperature"/>
         </property>
     </class>

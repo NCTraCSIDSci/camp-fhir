@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Aug 17, 2022, 11:08:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 16, 2022, 11:34:16 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Basic" optimistic-lock="none" table="Basic">
         <id name="id" type="string">
@@ -7,87 +7,87 @@
             <generator class="identity"/>
         </id>
         <property name="basicAthr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Basic.Author</meta>
             <column length="65535" name="Basic_Athr"/>
         </property>
         <property name="basicCdCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Basic.Code.Coding.Code</meta>
             <column length="65535" name="Basic_Cd_Cdg_Cd"/>
         </property>
         <property name="basicCdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Basic.Code.Coding.Display</meta>
             <column length="65535" name="Basic_Cd_Cdg_Dsply"/>
         </property>
         <property name="basicCdCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Basic.Code.Coding.System</meta>
             <column length="65535" name="Basic_Cd_Cdg_Sys"/>
         </property>
         <property name="basicCdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Basic.Code.Coding.UserSelected</meta>
             <column length="65535" name="Basic_Cd_Cdg_UsrSltd"/>
         </property>
         <property name="basicCdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Basic.Code.Coding.Version</meta>
             <column length="65535" name="Basic_Cd_Cdg_Vrsn"/>
         </property>
         <property name="basicCdTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Basic.Code.Text</meta>
             <column length="65535" name="Basic_Cd_Txt"/>
         </property>
         <property name="basicCreated" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Basic.Created</meta>
             <column length="65535" name="Basic_Created"/>
         </property>
         <property name="basicIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Basic.Identifier.Assigner</meta>
             <column length="65535" name="Basic_Id_Assigner"/>
         </property>
         <property name="basicIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Basic.Identifier.Period.End</meta>
             <column length="65535" name="Basic_Id_Prd_End"/>
         </property>
         <property name="basicIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Basic.Identifier.Period.Start</meta>
             <column length="65535" name="Basic_Id_Prd_Strt"/>
         </property>
         <property name="basicIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Basic.Identifier.System</meta>
             <column length="65535" name="Basic_Id_Sys"/>
         </property>
         <property name="basicIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Basic.Identifier.Type.Coding.Code</meta>
             <column length="65535" name="Basic_Id_Typ_Cdg_Cd"/>
         </property>
         <property name="basicIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Basic.Identifier.Type.Coding.Display</meta>
             <column length="65535" name="Basic_Id_Typ_Cdg_Dsply"/>
         </property>
         <property name="basicIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Basic.Identifier.Type.Coding.System</meta>
             <column length="65535" name="Basic_Id_Typ_Cdg_Sys"/>
         </property>
         <property name="basicIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Basic.Identifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="Basic_Id_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="basicIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Basic.Identifier.Type.Coding.Version</meta>
             <column length="65535" name="Basic_Id_Typ_Cdg_Vrsn"/>
         </property>
         <property name="basicIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Basic.Identifier.Type.Text</meta>
             <column length="65535" name="Basic_Id_Typ_Txt"/>
         </property>
         <property name="basicIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Basic.Identifier.Use</meta>
             <column length="65535" name="Basic_Id_Use"/>
         </property>
         <property name="basicIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Basic.Identifier.Value</meta>
             <column length="65535" name="Basic_Id_Vl"/>
         </property>
         <property name="basicSbjct" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Basic.Subject</meta>
             <column length="65535" name="Basic_Sbjct"/>
         </property>
     </class>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Aug 17, 2022, 11:08:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 16, 2022, 11:34:16 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="MetadataResource" optimistic-lock="none" table="MetadataResource">
         <id name="id" type="string">
@@ -7,199 +7,150 @@
             <generator class="identity"/>
         </id>
         <property name="metadataRsrcCntctNm" type="string">
-            <meta attribute="resource-type"/>
             <column length="65535" name="MetadataRsrc_Cntct_Nm"/>
         </property>
         <property name="metadataRsrcCntctTlcmPrdEnd" type="string">
-            <meta attribute="resource-type"/>
             <column length="65535" name="MetadataRsrc_Cntct_Tlcm_Prd_End"/>
         </property>
         <property name="metadataRsrcCntctTlcmPrdStrt" type="string">
-            <meta attribute="resource-type"/>
             <column length="65535" name="MetadataRsrc_Cntct_Tlcm_Prd_Strt"/>
         </property>
         <property name="metadataRsrcCntctTlcmRnk" type="string">
-            <meta attribute="resource-type"/>
             <column length="65535" name="MetadataRsrc_Cntct_Tlcm_Rnk"/>
         </property>
         <property name="metadataRsrcCntctTlcmSys" type="string">
-            <meta attribute="resource-type"/>
             <column length="65535" name="MetadataRsrc_Cntct_Tlcm_Sys"/>
         </property>
         <property name="metadataRsrcCntctTlcmUse" type="string">
-            <meta attribute="resource-type"/>
             <column length="65535" name="MetadataRsrc_Cntct_Tlcm_Use"/>
         </property>
         <property name="metadataRsrcCntctTlcmVl" type="string">
-            <meta attribute="resource-type"/>
             <column length="65535" name="MetadataRsrc_Cntct_Tlcm_Vl"/>
         </property>
         <property name="metadataRsrcDt" type="string">
-            <meta attribute="resource-type"/>
             <column length="65535" name="MetadataRsrc_Dt"/>
         </property>
         <property name="metadataRsrcDscrptn" type="string">
-            <meta attribute="resource-type"/>
             <column length="65535" name="MetadataRsrc_Dscrptn"/>
         </property>
         <property name="metadataRsrcExprmtl" type="string">
-            <meta attribute="resource-type"/>
             <column length="65535" name="MetadataRsrc_Exprmtl"/>
         </property>
         <property name="metadataRsrcJrsdctnCdgCd" type="string">
-            <meta attribute="resource-type"/>
             <column length="65535" name="MetadataRsrc_Jrsdctn_Cdg_Cd"/>
         </property>
         <property name="metadataRsrcJrsdctnCdgDsply" type="string">
-            <meta attribute="resource-type"/>
             <column length="65535" name="MetadataRsrc_Jrsdctn_Cdg_Dsply"/>
         </property>
         <property name="metadataRsrcJrsdctnCdgSys" type="string">
-            <meta attribute="resource-type"/>
             <column length="65535" name="MetadataRsrc_Jrsdctn_Cdg_Sys"/>
         </property>
         <property name="metadataRsrcJrsdctnCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
             <column length="65535" name="MetadataRsrc_Jrsdctn_Cdg_UsrSltd"/>
         </property>
         <property name="metadataRsrcJrsdctnCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
             <column length="65535" name="MetadataRsrc_Jrsdctn_Cdg_Vrsn"/>
         </property>
         <property name="metadataRsrcJrsdctnTxt" type="string">
-            <meta attribute="resource-type"/>
             <column length="65535" name="MetadataRsrc_Jrsdctn_Txt"/>
         </property>
         <property name="metadataRsrcNm" type="string">
-            <meta attribute="resource-type"/>
             <column length="65535" name="MetadataRsrc_Nm"/>
         </property>
         <property name="metadataRsrcPblshr" type="string">
-            <meta attribute="resource-type"/>
             <column length="65535" name="MetadataRsrc_Pblshr"/>
         </property>
         <property name="metadataRsrcSts" type="string">
-            <meta attribute="resource-type"/>
             <column length="65535" name="MetadataRsrc_Sts"/>
         </property>
         <property name="metadataRsrcTtl" type="string">
-            <meta attribute="resource-type"/>
             <column length="65535" name="MetadataRsrc_Ttl"/>
         </property>
         <property name="metadataRsrcUrl" type="string">
-            <meta attribute="resource-type"/>
             <column length="65535" name="MetadataRsrc_Url"/>
         </property>
         <property name="metadataRsrcUseCntxtCdCd" type="string">
-            <meta attribute="resource-type"/>
             <column length="65535" name="MetadataRsrc_UseCntxt_Cd_Cd"/>
         </property>
         <property name="metadataRsrcUseCntxtCdDsply" type="string">
-            <meta attribute="resource-type"/>
             <column length="65535" name="MetadataRsrc_UseCntxt_Cd_Dsply"/>
         </property>
         <property name="metadataRsrcUseCntxtCdSys" type="string">
-            <meta attribute="resource-type"/>
             <column length="65535" name="MetadataRsrc_UseCntxt_Cd_Sys"/>
         </property>
         <property name="metadataRsrcUseCntxtCdUsrSltd" type="string">
-            <meta attribute="resource-type"/>
             <column length="65535" name="MetadataRsrc_UseCntxt_Cd_UsrSltd"/>
         </property>
         <property name="metadataRsrcUseCntxtCdVrsn" type="string">
-            <meta attribute="resource-type"/>
             <column length="65535" name="MetadataRsrc_UseCntxt_Cd_Vrsn"/>
         </property>
         <property name="metadataRsrcUseCntxtVlCdbleCncptCdgCd" type="string">
-            <meta attribute="resource-type"/>
             <column length="65535" name="MetadataRsrc_UseCntxt_VlCdbleCncpt_Cdg_Cd"/>
         </property>
         <property name="metadataRsrcUseCntxtVlCdbleCncptCdgDsply" type="string">
-            <meta attribute="resource-type"/>
             <column length="65535" name="MetadataRsrc_UseCntxt_VlCdbleCncpt_Cdg_Dsply"/>
         </property>
         <property name="metadataRsrcUseCntxtVlCdbleCncptCdgSys" type="string">
-            <meta attribute="resource-type"/>
             <column length="65535" name="MetadataRsrc_UseCntxt_VlCdbleCncpt_Cdg_Sys"/>
         </property>
         <property name="metadataRsrcUseCntxtVlCdbleCncptCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
             <column length="65535" name="MetadataRsrc_UseCntxt_VlCdbleCncpt_Cdg_UsrSltd"/>
         </property>
         <property name="metadataRsrcUseCntxtVlCdbleCncptCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
             <column length="65535" name="MetadataRsrc_UseCntxt_VlCdbleCncpt_Cdg_Vrsn"/>
         </property>
         <property name="metadataRsrcUseCntxtVlCdbleCncptTxt" type="string">
-            <meta attribute="resource-type"/>
             <column length="65535" name="MetadataRsrc_UseCntxt_VlCdbleCncpt_Txt"/>
         </property>
         <property name="metadataRsrcUseCntxtVlQntyCd" type="string">
-            <meta attribute="resource-type"/>
             <column length="65535" name="MetadataRsrc_UseCntxt_VlQnty_Cd"/>
         </property>
         <property name="metadataRsrcUseCntxtVlQntyCmprtr" type="string">
-            <meta attribute="resource-type"/>
             <column length="65535" name="MetadataRsrc_UseCntxt_VlQnty_Cmprtr"/>
         </property>
         <property name="metadataRsrcUseCntxtVlQntySys" type="string">
-            <meta attribute="resource-type"/>
             <column length="65535" name="MetadataRsrc_UseCntxt_VlQnty_Sys"/>
         </property>
         <property name="metadataRsrcUseCntxtVlQntyUnt" type="string">
-            <meta attribute="resource-type"/>
             <column length="65535" name="MetadataRsrc_UseCntxt_VlQnty_Unt"/>
         </property>
         <property name="metadataRsrcUseCntxtVlQntyVl" type="string">
-            <meta attribute="resource-type"/>
             <column length="65535" name="MetadataRsrc_UseCntxt_VlQnty_Vl"/>
         </property>
         <property name="metadataRsrcUseCntxtVlRngHiCd" type="string">
-            <meta attribute="resource-type"/>
             <column length="65535" name="MetadataRsrc_UseCntxt_VlRng_Hi_Cd"/>
         </property>
         <property name="metadataRsrcUseCntxtVlRngHiCmprtr" type="string">
-            <meta attribute="resource-type"/>
             <column length="65535" name="MetadataRsrc_UseCntxt_VlRng_Hi_Cmprtr"/>
         </property>
         <property name="metadataRsrcUseCntxtVlRngHiSys" type="string">
-            <meta attribute="resource-type"/>
             <column length="65535" name="MetadataRsrc_UseCntxt_VlRng_Hi_Sys"/>
         </property>
         <property name="metadataRsrcUseCntxtVlRngHiUnt" type="string">
-            <meta attribute="resource-type"/>
             <column length="65535" name="MetadataRsrc_UseCntxt_VlRng_Hi_Unt"/>
         </property>
         <property name="metadataRsrcUseCntxtVlRngHiVl" type="string">
-            <meta attribute="resource-type"/>
             <column length="65535" name="MetadataRsrc_UseCntxt_VlRng_Hi_Vl"/>
         </property>
         <property name="metadataRsrcUseCntxtVlRngLwCd" type="string">
-            <meta attribute="resource-type"/>
             <column length="65535" name="MetadataRsrc_UseCntxt_VlRng_Lw_Cd"/>
         </property>
         <property name="metadataRsrcUseCntxtVlRngLwCmprtr" type="string">
-            <meta attribute="resource-type"/>
             <column length="65535" name="MetadataRsrc_UseCntxt_VlRng_Lw_Cmprtr"/>
         </property>
         <property name="metadataRsrcUseCntxtVlRngLwSys" type="string">
-            <meta attribute="resource-type"/>
             <column length="65535" name="MetadataRsrc_UseCntxt_VlRng_Lw_Sys"/>
         </property>
         <property name="metadataRsrcUseCntxtVlRngLwUnt" type="string">
-            <meta attribute="resource-type"/>
             <column length="65535" name="MetadataRsrc_UseCntxt_VlRng_Lw_Unt"/>
         </property>
         <property name="metadataRsrcUseCntxtVlRngLwVl" type="string">
-            <meta attribute="resource-type"/>
             <column length="65535" name="MetadataRsrc_UseCntxt_VlRng_Lw_Vl"/>
         </property>
         <property name="metadataRsrcUseCntxtVlRfrnc" type="string">
-            <meta attribute="resource-type"/>
             <column length="65535" name="MetadataRsrc_UseCntxt_VlRfrnc"/>
         </property>
         <property name="metadataRsrcVrsn" type="string">
-            <meta attribute="resource-type"/>
             <column length="65535" name="MetadataRsrc_Vrsn"/>
         </property>
     </class>

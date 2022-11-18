@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Aug 17, 2022, 11:08:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 16, 2022, 11:34:16 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Appointment" optimistic-lock="none" table="Appointment">
         <id name="id" type="string">
@@ -7,299 +7,299 @@
             <generator class="identity"/>
         </id>
         <property name="appmntAppmntTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.AppointmentType.Coding.Code</meta>
             <column length="65535" name="Appmnt_AppmntTyp_Cdg_Cd"/>
         </property>
         <property name="appmntAppmntTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.AppointmentType.Coding.Display</meta>
             <column length="65535" name="Appmnt_AppmntTyp_Cdg_Dsply"/>
         </property>
         <property name="appmntAppmntTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.AppointmentType.Coding.System</meta>
             <column length="65535" name="Appmnt_AppmntTyp_Cdg_Sys"/>
         </property>
         <property name="appmntAppmntTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.AppointmentType.Coding.UserSelected</meta>
             <column length="65535" name="Appmnt_AppmntTyp_Cdg_UsrSltd"/>
         </property>
         <property name="appmntAppmntTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.AppointmentType.Coding.Version</meta>
             <column length="65535" name="Appmnt_AppmntTyp_Cdg_Vrsn"/>
         </property>
         <property name="appmntAppmntTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.AppointmentType.Text</meta>
             <column length="65535" name="Appmnt_AppmntTyp_Txt"/>
         </property>
         <property name="appmntBasedOn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.BasedOn</meta>
             <column length="65535" name="Appmnt_BasedOn"/>
         </property>
         <property name="appmntCancelationRsnCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.CancelationReason.Coding.Code</meta>
             <column length="65535" name="Appmnt_CancelationRsn_Cdg_Cd"/>
         </property>
         <property name="appmntCancelationRsnCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.CancelationReason.Coding.Display</meta>
             <column length="65535" name="Appmnt_CancelationRsn_Cdg_Dsply"/>
         </property>
         <property name="appmntCancelationRsnCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.CancelationReason.Coding.System</meta>
             <column length="65535" name="Appmnt_CancelationRsn_Cdg_Sys"/>
         </property>
         <property name="appmntCancelationRsnCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.CancelationReason.Coding.UserSelected</meta>
             <column length="65535" name="Appmnt_CancelationRsn_Cdg_UsrSltd"/>
         </property>
         <property name="appmntCancelationRsnCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.CancelationReason.Coding.Version</meta>
             <column length="65535" name="Appmnt_CancelationRsn_Cdg_Vrsn"/>
         </property>
         <property name="appmntCancelationRsnTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.CancelationReason.Text</meta>
             <column length="65535" name="Appmnt_CancelationRsn_Txt"/>
         </property>
         <property name="appmntComment" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.Comment</meta>
             <column length="65535" name="Appmnt_Comment"/>
         </property>
         <property name="appmntCreated" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.Created</meta>
             <column length="65535" name="Appmnt_Created"/>
         </property>
         <property name="appmntDscrptn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.Description</meta>
             <column length="65535" name="Appmnt_Dscrptn"/>
         </property>
         <property name="appmntEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.End</meta>
             <column length="65535" name="Appmnt_End"/>
         </property>
         <property name="appmntIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.Identifier.Assigner</meta>
             <column length="65535" name="Appmnt_Id_Assigner"/>
         </property>
         <property name="appmntIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.Identifier.Period.End</meta>
             <column length="65535" name="Appmnt_Id_Prd_End"/>
         </property>
         <property name="appmntIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.Identifier.Period.Start</meta>
             <column length="65535" name="Appmnt_Id_Prd_Strt"/>
         </property>
         <property name="appmntIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.Identifier.System</meta>
             <column length="65535" name="Appmnt_Id_Sys"/>
         </property>
         <property name="appmntIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.Identifier.Type.Coding.Code</meta>
             <column length="65535" name="Appmnt_Id_Typ_Cdg_Cd"/>
         </property>
         <property name="appmntIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.Identifier.Type.Coding.Display</meta>
             <column length="65535" name="Appmnt_Id_Typ_Cdg_Dsply"/>
         </property>
         <property name="appmntIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.Identifier.Type.Coding.System</meta>
             <column length="65535" name="Appmnt_Id_Typ_Cdg_Sys"/>
         </property>
         <property name="appmntIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.Identifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="Appmnt_Id_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="appmntIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.Identifier.Type.Coding.Version</meta>
             <column length="65535" name="Appmnt_Id_Typ_Cdg_Vrsn"/>
         </property>
         <property name="appmntIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.Identifier.Type.Text</meta>
             <column length="65535" name="Appmnt_Id_Typ_Txt"/>
         </property>
         <property name="appmntIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.Identifier.Use</meta>
             <column length="65535" name="Appmnt_Id_Use"/>
         </property>
         <property name="appmntIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.Identifier.Value</meta>
             <column length="65535" name="Appmnt_Id_Vl"/>
         </property>
         <property name="appmntMinutesDuration" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.MinutesDuration</meta>
             <column length="65535" name="Appmnt_MinutesDuration"/>
         </property>
         <property name="appmntPrtcpntActor" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.Participant.Actor</meta>
             <column length="65535" name="Appmnt_Prtcpnt_Actor"/>
         </property>
         <property name="appmntPrtcpntPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.Participant.Period.End</meta>
             <column length="65535" name="Appmnt_Prtcpnt_Prd_End"/>
         </property>
         <property name="appmntPrtcpntPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.Participant.Period.Start</meta>
             <column length="65535" name="Appmnt_Prtcpnt_Prd_Strt"/>
         </property>
         <property name="appmntPrtcpntRequired" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.Participant.Required</meta>
             <column length="65535" name="Appmnt_Prtcpnt_Required"/>
         </property>
         <property name="appmntPrtcpntSts" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.Participant.Status</meta>
             <column length="65535" name="Appmnt_Prtcpnt_Sts"/>
         </property>
         <property name="appmntPrtcpntTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.Participant.Type.Coding.Code</meta>
             <column length="65535" name="Appmnt_Prtcpnt_Typ_Cdg_Cd"/>
         </property>
         <property name="appmntPrtcpntTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.Participant.Type.Coding.Display</meta>
             <column length="65535" name="Appmnt_Prtcpnt_Typ_Cdg_Dsply"/>
         </property>
         <property name="appmntPrtcpntTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.Participant.Type.Coding.System</meta>
             <column length="65535" name="Appmnt_Prtcpnt_Typ_Cdg_Sys"/>
         </property>
         <property name="appmntPrtcpntTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.Participant.Type.Coding.UserSelected</meta>
             <column length="65535" name="Appmnt_Prtcpnt_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="appmntPrtcpntTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.Participant.Type.Coding.Version</meta>
             <column length="65535" name="Appmnt_Prtcpnt_Typ_Cdg_Vrsn"/>
         </property>
         <property name="appmntPrtcpntTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.Participant.Type.Text</meta>
             <column length="65535" name="Appmnt_Prtcpnt_Typ_Txt"/>
         </property>
         <property name="appmntPntInstrctn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.PatientInstruction</meta>
             <column length="65535" name="Appmnt_PntInstrctn"/>
         </property>
         <property name="appmntPriority" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.Priority</meta>
             <column length="65535" name="Appmnt_Priority"/>
         </property>
         <property name="appmntRsnCdCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.ReasonCode.Coding.Code</meta>
             <column length="65535" name="Appmnt_RsnCd_Cdg_Cd"/>
         </property>
         <property name="appmntRsnCdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.ReasonCode.Coding.Display</meta>
             <column length="65535" name="Appmnt_RsnCd_Cdg_Dsply"/>
         </property>
         <property name="appmntRsnCdCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.ReasonCode.Coding.System</meta>
             <column length="65535" name="Appmnt_RsnCd_Cdg_Sys"/>
         </property>
         <property name="appmntRsnCdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.ReasonCode.Coding.UserSelected</meta>
             <column length="65535" name="Appmnt_RsnCd_Cdg_UsrSltd"/>
         </property>
         <property name="appmntRsnCdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.ReasonCode.Coding.Version</meta>
             <column length="65535" name="Appmnt_RsnCd_Cdg_Vrsn"/>
         </property>
         <property name="appmntRsnCdTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.ReasonCode.Text</meta>
             <column length="65535" name="Appmnt_RsnCd_Txt"/>
         </property>
         <property name="appmntRsnRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.ReasonReference</meta>
             <column length="65535" name="Appmnt_RsnRfrnc"/>
         </property>
         <property name="appmntRqstedPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.RequestedPeriod.End</meta>
             <column length="65535" name="Appmnt_RqstedPrd_End"/>
         </property>
         <property name="appmntRqstedPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.RequestedPeriod.Start</meta>
             <column length="65535" name="Appmnt_RqstedPrd_Strt"/>
         </property>
         <property name="appmntSrvCtgryCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.ServiceCategory.Coding.Code</meta>
             <column length="65535" name="Appmnt_SrvCtgry_Cdg_Cd"/>
         </property>
         <property name="appmntSrvCtgryCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.ServiceCategory.Coding.Display</meta>
             <column length="65535" name="Appmnt_SrvCtgry_Cdg_Dsply"/>
         </property>
         <property name="appmntSrvCtgryCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.ServiceCategory.Coding.System</meta>
             <column length="65535" name="Appmnt_SrvCtgry_Cdg_Sys"/>
         </property>
         <property name="appmntSrvCtgryCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.ServiceCategory.Coding.UserSelected</meta>
             <column length="65535" name="Appmnt_SrvCtgry_Cdg_UsrSltd"/>
         </property>
         <property name="appmntSrvCtgryCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.ServiceCategory.Coding.Version</meta>
             <column length="65535" name="Appmnt_SrvCtgry_Cdg_Vrsn"/>
         </property>
         <property name="appmntSrvCtgryTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.ServiceCategory.Text</meta>
             <column length="65535" name="Appmnt_SrvCtgry_Txt"/>
         </property>
         <property name="appmntSrvTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.ServiceType.Coding.Code</meta>
             <column length="65535" name="Appmnt_SrvTyp_Cdg_Cd"/>
         </property>
         <property name="appmntSrvTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.ServiceType.Coding.Display</meta>
             <column length="65535" name="Appmnt_SrvTyp_Cdg_Dsply"/>
         </property>
         <property name="appmntSrvTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.ServiceType.Coding.System</meta>
             <column length="65535" name="Appmnt_SrvTyp_Cdg_Sys"/>
         </property>
         <property name="appmntSrvTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.ServiceType.Coding.UserSelected</meta>
             <column length="65535" name="Appmnt_SrvTyp_Cdg_UsrSltd"/>
         </property>
         <property name="appmntSrvTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.ServiceType.Coding.Version</meta>
             <column length="65535" name="Appmnt_SrvTyp_Cdg_Vrsn"/>
         </property>
         <property name="appmntSrvTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.ServiceType.Text</meta>
             <column length="65535" name="Appmnt_SrvTyp_Txt"/>
         </property>
         <property name="appmntSlot" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.Slot</meta>
             <column length="65535" name="Appmnt_Slot"/>
         </property>
         <property name="appmntSpcltyCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.Specialty.Coding.Code</meta>
             <column length="65535" name="Appmnt_Spclty_Cdg_Cd"/>
         </property>
         <property name="appmntSpcltyCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.Specialty.Coding.Display</meta>
             <column length="65535" name="Appmnt_Spclty_Cdg_Dsply"/>
         </property>
         <property name="appmntSpcltyCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.Specialty.Coding.System</meta>
             <column length="65535" name="Appmnt_Spclty_Cdg_Sys"/>
         </property>
         <property name="appmntSpcltyCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.Specialty.Coding.UserSelected</meta>
             <column length="65535" name="Appmnt_Spclty_Cdg_UsrSltd"/>
         </property>
         <property name="appmntSpcltyCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.Specialty.Coding.Version</meta>
             <column length="65535" name="Appmnt_Spclty_Cdg_Vrsn"/>
         </property>
         <property name="appmntSpcltyTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.Specialty.Text</meta>
             <column length="65535" name="Appmnt_Spclty_Txt"/>
         </property>
         <property name="appmntStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.Start</meta>
             <column length="65535" name="Appmnt_Strt"/>
         </property>
         <property name="appmntSts" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.Status</meta>
             <column length="65535" name="Appmnt_Sts"/>
         </property>
         <property name="appmntSprtingInfo" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Appointment.SupportingInformation</meta>
             <column length="65535" name="Appmnt_SprtingInfo"/>
         </property>
     </class>

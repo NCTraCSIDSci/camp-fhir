@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Aug 17, 2022, 11:08:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 16, 2022, 11:34:16 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="SubstanceProtein" optimistic-lock="none" table="SubstanceProtein">
         <id name="id" type="string">
@@ -7,183 +7,183 @@
             <generator class="identity"/>
         </id>
         <property name="sbstncProteinDisulfideLinkage" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceProtein.DisulfideLinkage</meta>
             <column length="65535" name="SbstncProtein_DisulfideLinkage"/>
         </property>
         <property name="sbstncProteinNmbrOfSubunts" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceProtein.NumberOfSubunits</meta>
             <column length="65535" name="SbstncProtein_NmbrOfSubunts"/>
         </property>
         <property name="sbstncProteinSqncTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceProtein.SequenceType.Coding.Code</meta>
             <column length="65535" name="SbstncProtein_SqncTyp_Cdg_Cd"/>
         </property>
         <property name="sbstncProteinSqncTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceProtein.SequenceType.Coding.Display</meta>
             <column length="65535" name="SbstncProtein_SqncTyp_Cdg_Dsply"/>
         </property>
         <property name="sbstncProteinSqncTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceProtein.SequenceType.Coding.System</meta>
             <column length="65535" name="SbstncProtein_SqncTyp_Cdg_Sys"/>
         </property>
         <property name="sbstncProteinSqncTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceProtein.SequenceType.Coding.UserSelected</meta>
             <column length="65535" name="SbstncProtein_SqncTyp_Cdg_UsrSltd"/>
         </property>
         <property name="sbstncProteinSqncTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceProtein.SequenceType.Coding.Version</meta>
             <column length="65535" name="SbstncProtein_SqncTyp_Cdg_Vrsn"/>
         </property>
         <property name="sbstncProteinSqncTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceProtein.SequenceType.Text</meta>
             <column length="65535" name="SbstncProtein_SqncTyp_Txt"/>
         </property>
         <property name="sbstncProteinSubuntCtrminalModification" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceProtein.Subunit.CTerminalModification</meta>
             <column length="65535" name="SbstncProtein_Subunt_CtrminalModification"/>
         </property>
         <property name="sbstncProteinSubuntCtrminalModificationIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceProtein.Subunit.CTerminalModificationId.Assigner</meta>
             <column length="65535" name="SbstncProtein_Subunt_CtrminalModificationId_Assigner"/>
         </property>
         <property name="sbstncProteinSubuntCtrminalModificationIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceProtein.Subunit.CTerminalModificationId.Period.End</meta>
             <column length="65535" name="SbstncProtein_Subunt_CtrminalModificationId_Prd_End"/>
         </property>
         <property name="sbstncProteinSubuntCtrminalModificationIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceProtein.Subunit.CTerminalModificationId.Period.Start</meta>
             <column length="65535" name="SbstncProtein_Subunt_CtrminalModificationId_Prd_Strt"/>
         </property>
         <property name="sbstncProteinSubuntCtrminalModificationIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceProtein.Subunit.CTerminalModificationId.System</meta>
             <column length="65535" name="SbstncProtein_Subunt_CtrminalModificationId_Sys"/>
         </property>
         <property name="sbstncProteinSubuntCtrminalModificationIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceProtein.Subunit.CTerminalModificationId.Type.Coding.Code</meta>
             <column length="65535" name="SbstncProtein_Subunt_CtrminalModificationId_Typ_Cdg_Cd"/>
         </property>
         <property name="sbstncProteinSubuntCtrminalModificationIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceProtein.Subunit.CTerminalModificationId.Type.Coding.Display</meta>
             <column length="65535" name="SbstncProtein_Subunt_CtrminalModificationId_Typ_Cdg_Dsply"/>
         </property>
         <property name="sbstncProteinSubuntCtrminalModificationIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceProtein.Subunit.CTerminalModificationId.Type.Coding.System</meta>
             <column length="65535" name="SbstncProtein_Subunt_CtrminalModificationId_Typ_Cdg_Sys"/>
         </property>
         <property name="sbstncProteinSubuntCtrminalModificationIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceProtein.Subunit.CTerminalModificationId.Type.Coding.UserSelected</meta>
             <column length="65535" name="SbstncProtein_Subunt_CtrminalModificationId_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="sbstncProteinSubuntCtrminalModificationIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceProtein.Subunit.CTerminalModificationId.Type.Coding.Version</meta>
             <column length="65535" name="SbstncProtein_Subunt_CtrminalModificationId_Typ_Cdg_Vrsn"/>
         </property>
         <property name="sbstncProteinSubuntCtrminalModificationIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceProtein.Subunit.CTerminalModificationId.Type.Text</meta>
             <column length="65535" name="SbstncProtein_Subunt_CtrminalModificationId_Typ_Txt"/>
         </property>
         <property name="sbstncProteinSubuntCtrminalModificationIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceProtein.Subunit.CTerminalModificationId.Use</meta>
             <column length="65535" name="SbstncProtein_Subunt_CtrminalModificationId_Use"/>
         </property>
         <property name="sbstncProteinSubuntCtrminalModificationIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceProtein.Subunit.CTerminalModificationId.Value</meta>
             <column length="65535" name="SbstncProtein_Subunt_CtrminalModificationId_Vl"/>
         </property>
         <property name="sbstncProteinSubuntLength" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceProtein.Subunit.Length</meta>
             <column length="65535" name="SbstncProtein_Subunt_Length"/>
         </property>
         <property name="sbstncProteinSubuntNtrminalModification" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceProtein.Subunit.NTerminalModification</meta>
             <column length="65535" name="SbstncProtein_Subunt_NtrminalModification"/>
         </property>
         <property name="sbstncProteinSubuntNtrminalModificationIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceProtein.Subunit.NTerminalModificationId.Assigner</meta>
             <column length="65535" name="SbstncProtein_Subunt_NtrminalModificationId_Assigner"/>
         </property>
         <property name="sbstncProteinSubuntNtrminalModificationIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceProtein.Subunit.NTerminalModificationId.Period.End</meta>
             <column length="65535" name="SbstncProtein_Subunt_NtrminalModificationId_Prd_End"/>
         </property>
         <property name="sbstncProteinSubuntNtrminalModificationIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceProtein.Subunit.NTerminalModificationId.Period.Start</meta>
             <column length="65535" name="SbstncProtein_Subunt_NtrminalModificationId_Prd_Strt"/>
         </property>
         <property name="sbstncProteinSubuntNtrminalModificationIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceProtein.Subunit.NTerminalModificationId.System</meta>
             <column length="65535" name="SbstncProtein_Subunt_NtrminalModificationId_Sys"/>
         </property>
         <property name="sbstncProteinSubuntNtrminalModificationIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceProtein.Subunit.NTerminalModificationId.Type.Coding.Code</meta>
             <column length="65535" name="SbstncProtein_Subunt_NtrminalModificationId_Typ_Cdg_Cd"/>
         </property>
         <property name="sbstncProteinSubuntNtrminalModificationIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceProtein.Subunit.NTerminalModificationId.Type.Coding.Display</meta>
             <column length="65535" name="SbstncProtein_Subunt_NtrminalModificationId_Typ_Cdg_Dsply"/>
         </property>
         <property name="sbstncProteinSubuntNtrminalModificationIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceProtein.Subunit.NTerminalModificationId.Type.Coding.System</meta>
             <column length="65535" name="SbstncProtein_Subunt_NtrminalModificationId_Typ_Cdg_Sys"/>
         </property>
         <property name="sbstncProteinSubuntNtrminalModificationIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceProtein.Subunit.NTerminalModificationId.Type.Coding.UserSelected</meta>
             <column length="65535" name="SbstncProtein_Subunt_NtrminalModificationId_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="sbstncProteinSubuntNtrminalModificationIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceProtein.Subunit.NTerminalModificationId.Type.Coding.Version</meta>
             <column length="65535" name="SbstncProtein_Subunt_NtrminalModificationId_Typ_Cdg_Vrsn"/>
         </property>
         <property name="sbstncProteinSubuntNtrminalModificationIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceProtein.Subunit.NTerminalModificationId.Type.Text</meta>
             <column length="65535" name="SbstncProtein_Subunt_NtrminalModificationId_Typ_Txt"/>
         </property>
         <property name="sbstncProteinSubuntNtrminalModificationIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceProtein.Subunit.NTerminalModificationId.Use</meta>
             <column length="65535" name="SbstncProtein_Subunt_NtrminalModificationId_Use"/>
         </property>
         <property name="sbstncProteinSubuntNtrminalModificationIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceProtein.Subunit.NTerminalModificationId.Value</meta>
             <column length="65535" name="SbstncProtein_Subunt_NtrminalModificationId_Vl"/>
         </property>
         <property name="sbstncProteinSubuntSqnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceProtein.Subunit.Sequence</meta>
             <column length="65535" name="SbstncProtein_Subunt_Sqnc"/>
         </property>
         <property name="sbstncProteinSubuntSqncAttchmntCntntTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceProtein.Subunit.SequenceAttachment.ContentType</meta>
             <column length="65535" name="SbstncProtein_Subunt_SqncAttchmnt_CntntTyp"/>
         </property>
         <property name="sbstncProteinSubuntSqncAttchmntCreation" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceProtein.Subunit.SequenceAttachment.Creation</meta>
             <column length="65535" name="SbstncProtein_Subunt_SqncAttchmnt_Creation"/>
         </property>
         <property name="sbstncProteinSubuntSqncAttchmntData" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceProtein.Subunit.SequenceAttachment.Data</meta>
             <column length="65535" name="SbstncProtein_Subunt_SqncAttchmnt_Data"/>
         </property>
         <property name="sbstncProteinSubuntSqncAttchmntHash" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceProtein.Subunit.SequenceAttachment.Hash</meta>
             <column length="65535" name="SbstncProtein_Subunt_SqncAttchmnt_Hash"/>
         </property>
         <property name="sbstncProteinSubuntSqncAttchmntLnguage" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceProtein.Subunit.SequenceAttachment.Language</meta>
             <column length="65535" name="SbstncProtein_Subunt_SqncAttchmnt_Lnguage"/>
         </property>
         <property name="sbstncProteinSubuntSqncAttchmntSz" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceProtein.Subunit.SequenceAttachment.Size</meta>
             <column length="65535" name="SbstncProtein_Subunt_SqncAttchmnt_Sz"/>
         </property>
         <property name="sbstncProteinSubuntSqncAttchmntTtl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceProtein.Subunit.SequenceAttachment.Title</meta>
             <column length="65535" name="SbstncProtein_Subunt_SqncAttchmnt_Ttl"/>
         </property>
         <property name="sbstncProteinSubuntSqncAttchmntUrl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceProtein.Subunit.SequenceAttachment.Url</meta>
             <column length="65535" name="SbstncProtein_Subunt_SqncAttchmnt_Url"/>
         </property>
         <property name="sbstncProteinSubuntSubunt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SubstanceProtein.Subunit.Subunit</meta>
             <column length="65535" name="SbstncProtein_Subunt_Subunt"/>
         </property>
     </class>

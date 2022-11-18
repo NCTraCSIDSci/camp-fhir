@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Aug 17, 2022, 11:08:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 16, 2022, 11:34:16 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="SupplyDelivery" optimistic-lock="none" table="SupplyDelivery">
         <id name="id" type="string">
@@ -7,315 +7,307 @@
             <generator class="identity"/>
         </id>
         <property name="spplyDlvryBasedOn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.BasedOn</meta>
             <column length="65535" name="SpplyDlvry_BasedOn"/>
         </property>
         <property name="spplyDlvryDestination" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.Destination</meta>
             <column length="65535" name="SpplyDlvry_Destination"/>
         </property>
         <property name="spplyDlvryIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.Identifier.Assigner</meta>
             <column length="65535" name="SpplyDlvry_Id_Assigner"/>
         </property>
         <property name="spplyDlvryIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.Identifier.Period.End</meta>
             <column length="65535" name="SpplyDlvry_Id_Prd_End"/>
         </property>
         <property name="spplyDlvryIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.Identifier.Period.Start</meta>
             <column length="65535" name="SpplyDlvry_Id_Prd_Strt"/>
         </property>
         <property name="spplyDlvryIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.Identifier.System</meta>
             <column length="65535" name="SpplyDlvry_Id_Sys"/>
         </property>
         <property name="spplyDlvryIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.Identifier.Type.Coding.Code</meta>
             <column length="65535" name="SpplyDlvry_Id_Typ_Cdg_Cd"/>
         </property>
         <property name="spplyDlvryIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.Identifier.Type.Coding.Display</meta>
             <column length="65535" name="SpplyDlvry_Id_Typ_Cdg_Dsply"/>
         </property>
         <property name="spplyDlvryIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.Identifier.Type.Coding.System</meta>
             <column length="65535" name="SpplyDlvry_Id_Typ_Cdg_Sys"/>
         </property>
         <property name="spplyDlvryIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.Identifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="SpplyDlvry_Id_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="spplyDlvryIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.Identifier.Type.Coding.Version</meta>
             <column length="65535" name="SpplyDlvry_Id_Typ_Cdg_Vrsn"/>
         </property>
         <property name="spplyDlvryIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.Identifier.Type.Text</meta>
             <column length="65535" name="SpplyDlvry_Id_Typ_Txt"/>
         </property>
         <property name="spplyDlvryIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.Identifier.Use</meta>
             <column length="65535" name="SpplyDlvry_Id_Use"/>
         </property>
         <property name="spplyDlvryIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.Identifier.Value</meta>
             <column length="65535" name="SpplyDlvry_Id_Vl"/>
         </property>
         <property name="spplyDlvryOccrnceDtTimeTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.OccurrenceDateTimeType</meta>
             <column length="65535" name="SpplyDlvry_OccrnceDtTimeTyp"/>
         </property>
         <property name="spplyDlvryOccrncePrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.OccurrencePeriod.End</meta>
             <column length="65535" name="SpplyDlvry_OccrncePrd_End"/>
         </property>
         <property name="spplyDlvryOccrncePrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.OccurrencePeriod.Start</meta>
             <column length="65535" name="SpplyDlvry_OccrncePrd_Strt"/>
         </property>
         <property name="spplyDlvryOccrnceTmgCdCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.OccurrenceTiming.Code.Coding.Code</meta>
             <column length="65535" name="SpplyDlvry_OccrnceTmg_Cd_Cdg_Cd"/>
         </property>
         <property name="spplyDlvryOccrnceTmgCdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.OccurrenceTiming.Code.Coding.Display</meta>
             <column length="65535" name="SpplyDlvry_OccrnceTmg_Cd_Cdg_Dsply"/>
         </property>
         <property name="spplyDlvryOccrnceTmgCdCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.OccurrenceTiming.Code.Coding.System</meta>
             <column length="65535" name="SpplyDlvry_OccrnceTmg_Cd_Cdg_Sys"/>
         </property>
         <property name="spplyDlvryOccrnceTmgCdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.OccurrenceTiming.Code.Coding.UserSelected</meta>
             <column length="65535" name="SpplyDlvry_OccrnceTmg_Cd_Cdg_UsrSltd"/>
         </property>
         <property name="spplyDlvryOccrnceTmgCdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.OccurrenceTiming.Code.Coding.Version</meta>
             <column length="65535" name="SpplyDlvry_OccrnceTmg_Cd_Cdg_Vrsn"/>
         </property>
         <property name="spplyDlvryOccrnceTmgCdTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.OccurrenceTiming.Code.Text</meta>
             <column length="65535" name="SpplyDlvry_OccrnceTmg_Cd_Txt"/>
         </property>
         <property name="spplyDlvryOccrnceTmgEvnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.OccurrenceTiming.Event</meta>
             <column length="65535" name="SpplyDlvry_OccrnceTmg_Evnt"/>
         </property>
         <property name="spplyDlvryOccrnceTmgRptBndsDurationCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.OccurrenceTiming.Repeat.BoundsDuration.Code</meta>
             <column length="65535" name="SpplyDlvry_OccrnceTmg_Rpt_BndsDuration_Cd"/>
         </property>
         <property name="spplyDlvryOccrnceTmgRptBndsDurationCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.OccurrenceTiming.Repeat.BoundsDuration.Comparator</meta>
             <column length="65535" name="SpplyDlvry_OccrnceTmg_Rpt_BndsDuration_Cmprtr"/>
         </property>
         <property name="spplyDlvryOccrnceTmgRptBndsDurationSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.OccurrenceTiming.Repeat.BoundsDuration.System</meta>
             <column length="65535" name="SpplyDlvry_OccrnceTmg_Rpt_BndsDuration_Sys"/>
         </property>
         <property name="spplyDlvryOccrnceTmgRptBndsDurationUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.OccurrenceTiming.Repeat.BoundsDuration.Unit</meta>
             <column length="65535" name="SpplyDlvry_OccrnceTmg_Rpt_BndsDuration_Unt"/>
         </property>
         <property name="spplyDlvryOccrnceTmgRptBndsDurationVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.OccurrenceTiming.Repeat.BoundsDuration.Value</meta>
             <column length="65535" name="SpplyDlvry_OccrnceTmg_Rpt_BndsDuration_Vl"/>
         </property>
         <property name="spplyDlvryOccrnceTmgRptBndsPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.OccurrenceTiming.Repeat.BoundsPeriod.End</meta>
             <column length="65535" name="SpplyDlvry_OccrnceTmg_Rpt_BndsPrd_End"/>
         </property>
         <property name="spplyDlvryOccrnceTmgRptBndsPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.OccurrenceTiming.Repeat.BoundsPeriod.Start</meta>
             <column length="65535" name="SpplyDlvry_OccrnceTmg_Rpt_BndsPrd_Strt"/>
         </property>
         <property name="spplyDlvryOccrnceTmgRptBndsRngHiCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.OccurrenceTiming.Repeat.BoundsRange.High.Code</meta>
             <column length="65535" name="SpplyDlvry_OccrnceTmg_Rpt_BndsRng_Hi_Cd"/>
         </property>
         <property name="spplyDlvryOccrnceTmgRptBndsRngHiCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.OccurrenceTiming.Repeat.BoundsRange.High.Comparator</meta>
             <column length="65535" name="SpplyDlvry_OccrnceTmg_Rpt_BndsRng_Hi_Cmprtr"/>
         </property>
         <property name="spplyDlvryOccrnceTmgRptBndsRngHiSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.OccurrenceTiming.Repeat.BoundsRange.High.System</meta>
             <column length="65535" name="SpplyDlvry_OccrnceTmg_Rpt_BndsRng_Hi_Sys"/>
         </property>
         <property name="spplyDlvryOccrnceTmgRptBndsRngHiUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.OccurrenceTiming.Repeat.BoundsRange.High.Unit</meta>
             <column length="65535" name="SpplyDlvry_OccrnceTmg_Rpt_BndsRng_Hi_Unt"/>
         </property>
         <property name="spplyDlvryOccrnceTmgRptBndsRngHiVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.OccurrenceTiming.Repeat.BoundsRange.High.Value</meta>
             <column length="65535" name="SpplyDlvry_OccrnceTmg_Rpt_BndsRng_Hi_Vl"/>
         </property>
         <property name="spplyDlvryOccrnceTmgRptBndsRngLwCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.OccurrenceTiming.Repeat.BoundsRange.Low.Code</meta>
             <column length="65535" name="SpplyDlvry_OccrnceTmg_Rpt_BndsRng_Lw_Cd"/>
         </property>
         <property name="spplyDlvryOccrnceTmgRptBndsRngLwCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.OccurrenceTiming.Repeat.BoundsRange.Low.Comparator</meta>
             <column length="65535" name="SpplyDlvry_OccrnceTmg_Rpt_BndsRng_Lw_Cmprtr"/>
         </property>
         <property name="spplyDlvryOccrnceTmgRptBndsRngLwSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.OccurrenceTiming.Repeat.BoundsRange.Low.System</meta>
             <column length="65535" name="SpplyDlvry_OccrnceTmg_Rpt_BndsRng_Lw_Sys"/>
         </property>
         <property name="spplyDlvryOccrnceTmgRptBndsRngLwUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.OccurrenceTiming.Repeat.BoundsRange.Low.Unit</meta>
             <column length="65535" name="SpplyDlvry_OccrnceTmg_Rpt_BndsRng_Lw_Unt"/>
         </property>
         <property name="spplyDlvryOccrnceTmgRptBndsRngLwVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.OccurrenceTiming.Repeat.BoundsRange.Low.Value</meta>
             <column length="65535" name="SpplyDlvry_OccrnceTmg_Rpt_BndsRng_Lw_Vl"/>
         </property>
         <property name="spplyDlvryOccrnceTmgRptCnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.OccurrenceTiming.Repeat.Count</meta>
             <column length="65535" name="SpplyDlvry_OccrnceTmg_Rpt_Cnt"/>
         </property>
         <property name="spplyDlvryOccrnceTmgRptCntMx" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.OccurrenceTiming.Repeat.CountMax</meta>
             <column length="65535" name="SpplyDlvry_OccrnceTmg_Rpt_CntMx"/>
         </property>
-        <property name="spplyDlvryOccrnceTmgRptDayOfWeek" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="SpplyDlvry_OccrnceTmg_Rpt_DayOfWeek"/>
-        </property>
         <property name="spplyDlvryOccrnceTmgRptDuration" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.OccurrenceTiming.Repeat.Duration</meta>
             <column length="65535" name="SpplyDlvry_OccrnceTmg_Rpt_Duration"/>
         </property>
         <property name="spplyDlvryOccrnceTmgRptDurationMx" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.OccurrenceTiming.Repeat.DurationMax</meta>
             <column length="65535" name="SpplyDlvry_OccrnceTmg_Rpt_DurationMx"/>
         </property>
         <property name="spplyDlvryOccrnceTmgRptDurationUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.OccurrenceTiming.Repeat.DurationUnit</meta>
             <column length="65535" name="SpplyDlvry_OccrnceTmg_Rpt_DurationUnt"/>
         </property>
         <property name="spplyDlvryOccrnceTmgRptFrqncy" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.OccurrenceTiming.Repeat.Frequency</meta>
             <column length="65535" name="SpplyDlvry_OccrnceTmg_Rpt_Frqncy"/>
         </property>
         <property name="spplyDlvryOccrnceTmgRptFrqncyMx" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.OccurrenceTiming.Repeat.FrequencyMax</meta>
             <column length="65535" name="SpplyDlvry_OccrnceTmg_Rpt_FrqncyMx"/>
         </property>
         <property name="spplyDlvryOccrnceTmgRptOff" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.OccurrenceTiming.Repeat.Offset</meta>
             <column length="65535" name="SpplyDlvry_OccrnceTmg_Rpt_Off"/>
         </property>
         <property name="spplyDlvryOccrnceTmgRptPrd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.OccurrenceTiming.Repeat.Period</meta>
             <column length="65535" name="SpplyDlvry_OccrnceTmg_Rpt_Prd"/>
         </property>
         <property name="spplyDlvryOccrnceTmgRptPrdMx" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.OccurrenceTiming.Repeat.PeriodMax</meta>
             <column length="65535" name="SpplyDlvry_OccrnceTmg_Rpt_PrdMx"/>
         </property>
         <property name="spplyDlvryOccrnceTmgRptPrdUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.OccurrenceTiming.Repeat.PeriodUnit</meta>
             <column length="65535" name="SpplyDlvry_OccrnceTmg_Rpt_PrdUnt"/>
         </property>
         <property name="spplyDlvryOccrnceTmgRptTimeOfDay" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.OccurrenceTiming.Repeat.TimeOfDay</meta>
             <column length="65535" name="SpplyDlvry_OccrnceTmg_Rpt_TimeOfDay"/>
         </property>
-        <property name="spplyDlvryOccrnceTmgRptWhen" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="SpplyDlvry_OccrnceTmg_Rpt_When"/>
-        </property>
         <property name="spplyDlvryPartOf" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.PartOf</meta>
             <column length="65535" name="SpplyDlvry_PartOf"/>
         </property>
         <property name="spplyDlvryPnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.Patient</meta>
             <column length="65535" name="SpplyDlvry_Pnt"/>
         </property>
         <property name="spplyDlvryReceiver" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.Receiver</meta>
             <column length="65535" name="SpplyDlvry_Receiver"/>
         </property>
         <property name="spplyDlvrySts" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.Status</meta>
             <column length="65535" name="SpplyDlvry_Sts"/>
         </property>
         <property name="spplyDlvrySuppliedItmItmCdbleCncptCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.SuppliedItem.ItemCodeableConcept.Coding.Code</meta>
             <column length="65535" name="SpplyDlvry_SuppliedItm_ItmCdbleCncpt_Cdg_Cd"/>
         </property>
         <property name="spplyDlvrySuppliedItmItmCdbleCncptCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.SuppliedItem.ItemCodeableConcept.Coding.Display</meta>
             <column length="65535" name="SpplyDlvry_SuppliedItm_ItmCdbleCncpt_Cdg_Dsply"/>
         </property>
         <property name="spplyDlvrySuppliedItmItmCdbleCncptCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.SuppliedItem.ItemCodeableConcept.Coding.System</meta>
             <column length="65535" name="SpplyDlvry_SuppliedItm_ItmCdbleCncpt_Cdg_Sys"/>
         </property>
         <property name="spplyDlvrySuppliedItmItmCdbleCncptCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.SuppliedItem.ItemCodeableConcept.Coding.UserSelected</meta>
             <column length="65535" name="SpplyDlvry_SuppliedItm_ItmCdbleCncpt_Cdg_UsrSltd"/>
         </property>
         <property name="spplyDlvrySuppliedItmItmCdbleCncptCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.SuppliedItem.ItemCodeableConcept.Coding.Version</meta>
             <column length="65535" name="SpplyDlvry_SuppliedItm_ItmCdbleCncpt_Cdg_Vrsn"/>
         </property>
         <property name="spplyDlvrySuppliedItmItmCdbleCncptTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.SuppliedItem.ItemCodeableConcept.Text</meta>
             <column length="65535" name="SpplyDlvry_SuppliedItm_ItmCdbleCncpt_Txt"/>
         </property>
         <property name="spplyDlvrySuppliedItmItmRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.SuppliedItem.ItemReference</meta>
             <column length="65535" name="SpplyDlvry_SuppliedItm_ItmRfrnc"/>
         </property>
         <property name="spplyDlvrySuppliedItmQntyCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.SuppliedItem.Quantity.Code</meta>
             <column length="65535" name="SpplyDlvry_SuppliedItm_Qnty_Cd"/>
         </property>
         <property name="spplyDlvrySuppliedItmQntyCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.SuppliedItem.Quantity.Comparator</meta>
             <column length="65535" name="SpplyDlvry_SuppliedItm_Qnty_Cmprtr"/>
         </property>
         <property name="spplyDlvrySuppliedItmQntySys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.SuppliedItem.Quantity.System</meta>
             <column length="65535" name="SpplyDlvry_SuppliedItm_Qnty_Sys"/>
         </property>
         <property name="spplyDlvrySuppliedItmQntyUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.SuppliedItem.Quantity.Unit</meta>
             <column length="65535" name="SpplyDlvry_SuppliedItm_Qnty_Unt"/>
         </property>
         <property name="spplyDlvrySuppliedItmQntyVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.SuppliedItem.Quantity.Value</meta>
             <column length="65535" name="SpplyDlvry_SuppliedItm_Qnty_Vl"/>
         </property>
         <property name="spplyDlvrySupplier" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.Supplier</meta>
             <column length="65535" name="SpplyDlvry_Supplier"/>
         </property>
         <property name="spplyDlvryTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.Type.Coding.Code</meta>
             <column length="65535" name="SpplyDlvry_Typ_Cdg_Cd"/>
         </property>
         <property name="spplyDlvryTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.Type.Coding.Display</meta>
             <column length="65535" name="SpplyDlvry_Typ_Cdg_Dsply"/>
         </property>
         <property name="spplyDlvryTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.Type.Coding.System</meta>
             <column length="65535" name="SpplyDlvry_Typ_Cdg_Sys"/>
         </property>
         <property name="spplyDlvryTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.Type.Coding.UserSelected</meta>
             <column length="65535" name="SpplyDlvry_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="spplyDlvryTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.Type.Coding.Version</meta>
             <column length="65535" name="SpplyDlvry_Typ_Cdg_Vrsn"/>
         </property>
         <property name="spplyDlvryTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SupplyDelivery.Type.Text</meta>
             <column length="65535" name="SpplyDlvry_Typ_Txt"/>
         </property>
     </class>

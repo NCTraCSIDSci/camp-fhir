@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Aug 17, 2022, 11:08:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 16, 2022, 11:34:16 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Claim" optimistic-lock="none" table="Claim">
         <id name="id" type="string">
@@ -7,1495 +7,1495 @@
             <generator class="identity"/>
         </id>
         <property name="clmAccidentDt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Accident.Date</meta>
             <column length="65535" name="Clm_Accident_Dt"/>
         </property>
         <property name="clmAccidentLctnAddrCity" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Accident.LocationAddress.City</meta>
             <column length="65535" name="Clm_Accident_LctnAddr_City"/>
         </property>
         <property name="clmAccidentLctnAddrCntry" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Accident.LocationAddress.Country</meta>
             <column length="65535" name="Clm_Accident_LctnAddr_Cntry"/>
         </property>
         <property name="clmAccidentLctnAddrDistrict" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Accident.LocationAddress.District</meta>
             <column length="65535" name="Clm_Accident_LctnAddr_District"/>
         </property>
         <property name="clmAccidentLctnAddrLine" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Accident.LocationAddress.Line</meta>
             <column length="65535" name="Clm_Accident_LctnAddr_Line"/>
         </property>
         <property name="clmAccidentLctnAddrPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Accident.LocationAddress.Period.End</meta>
             <column length="65535" name="Clm_Accident_LctnAddr_Prd_End"/>
         </property>
         <property name="clmAccidentLctnAddrPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Accident.LocationAddress.Period.Start</meta>
             <column length="65535" name="Clm_Accident_LctnAddr_Prd_Strt"/>
         </property>
         <property name="clmAccidentLctnAddrPostalCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Accident.LocationAddress.PostalCode</meta>
             <column length="65535" name="Clm_Accident_LctnAddr_PostalCd"/>
         </property>
         <property name="clmAccidentLctnAddrState" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Accident.LocationAddress.State</meta>
             <column length="65535" name="Clm_Accident_LctnAddr_State"/>
         </property>
         <property name="clmAccidentLctnAddrTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Accident.LocationAddress.Text</meta>
             <column length="65535" name="Clm_Accident_LctnAddr_Txt"/>
         </property>
         <property name="clmAccidentLctnAddrTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Accident.LocationAddress.Type</meta>
             <column length="65535" name="Clm_Accident_LctnAddr_Typ"/>
         </property>
         <property name="clmAccidentLctnAddrUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Accident.LocationAddress.Use</meta>
             <column length="65535" name="Clm_Accident_LctnAddr_Use"/>
         </property>
         <property name="clmAccidentLctnRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Accident.LocationReference</meta>
             <column length="65535" name="Clm_Accident_LctnRfrnc"/>
         </property>
         <property name="clmAccidentTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Accident.Type.Coding.Code</meta>
             <column length="65535" name="Clm_Accident_Typ_Cdg_Cd"/>
         </property>
         <property name="clmAccidentTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Accident.Type.Coding.Display</meta>
             <column length="65535" name="Clm_Accident_Typ_Cdg_Dsply"/>
         </property>
         <property name="clmAccidentTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Accident.Type.Coding.System</meta>
             <column length="65535" name="Clm_Accident_Typ_Cdg_Sys"/>
         </property>
         <property name="clmAccidentTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Accident.Type.Coding.UserSelected</meta>
             <column length="65535" name="Clm_Accident_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="clmAccidentTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Accident.Type.Coding.Version</meta>
             <column length="65535" name="Clm_Accident_Typ_Cdg_Vrsn"/>
         </property>
         <property name="clmAccidentTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Accident.Type.Text</meta>
             <column length="65535" name="Clm_Accident_Typ_Txt"/>
         </property>
         <property name="clmBillablePrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.BillablePeriod.End</meta>
             <column length="65535" name="Clm_BillablePrd_End"/>
         </property>
         <property name="clmBillablePrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.BillablePeriod.Start</meta>
             <column length="65535" name="Clm_BillablePrd_Strt"/>
         </property>
         <property name="clmCareTeamProvider" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.CareTeam.Provider</meta>
             <column length="65535" name="Clm_CareTeam_Provider"/>
         </property>
         <property name="clmCareTeamQualificationCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.CareTeam.Qualification.Coding.Code</meta>
             <column length="65535" name="Clm_CareTeam_Qualification_Cdg_Cd"/>
         </property>
         <property name="clmCareTeamQualificationCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.CareTeam.Qualification.Coding.Display</meta>
             <column length="65535" name="Clm_CareTeam_Qualification_Cdg_Dsply"/>
         </property>
         <property name="clmCareTeamQualificationCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.CareTeam.Qualification.Coding.System</meta>
             <column length="65535" name="Clm_CareTeam_Qualification_Cdg_Sys"/>
         </property>
         <property name="clmCareTeamQualificationCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.CareTeam.Qualification.Coding.UserSelected</meta>
             <column length="65535" name="Clm_CareTeam_Qualification_Cdg_UsrSltd"/>
         </property>
         <property name="clmCareTeamQualificationCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.CareTeam.Qualification.Coding.Version</meta>
             <column length="65535" name="Clm_CareTeam_Qualification_Cdg_Vrsn"/>
         </property>
         <property name="clmCareTeamQualificationTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.CareTeam.Qualification.Text</meta>
             <column length="65535" name="Clm_CareTeam_Qualification_Txt"/>
         </property>
         <property name="clmCareTeamResponsible" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.CareTeam.Responsible</meta>
             <column length="65535" name="Clm_CareTeam_Responsible"/>
         </property>
         <property name="clmCareTeamRoleCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.CareTeam.Role.Coding.Code</meta>
             <column length="65535" name="Clm_CareTeam_Role_Cdg_Cd"/>
         </property>
         <property name="clmCareTeamRoleCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.CareTeam.Role.Coding.Display</meta>
             <column length="65535" name="Clm_CareTeam_Role_Cdg_Dsply"/>
         </property>
         <property name="clmCareTeamRoleCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.CareTeam.Role.Coding.System</meta>
             <column length="65535" name="Clm_CareTeam_Role_Cdg_Sys"/>
         </property>
         <property name="clmCareTeamRoleCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.CareTeam.Role.Coding.UserSelected</meta>
             <column length="65535" name="Clm_CareTeam_Role_Cdg_UsrSltd"/>
         </property>
         <property name="clmCareTeamRoleCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.CareTeam.Role.Coding.Version</meta>
             <column length="65535" name="Clm_CareTeam_Role_Cdg_Vrsn"/>
         </property>
         <property name="clmCareTeamRoleTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.CareTeam.Role.Text</meta>
             <column length="65535" name="Clm_CareTeam_Role_Txt"/>
         </property>
         <property name="clmCareTeamSqnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.CareTeam.Sequence</meta>
             <column length="65535" name="Clm_CareTeam_Sqnc"/>
         </property>
         <property name="clmCreated" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Created</meta>
             <column length="65535" name="Clm_Created"/>
         </property>
         <property name="clmDgnsisDgnsisCdbleCncptCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Diagnosis.DiagnosisCodeableConcept.Coding.Code</meta>
             <column length="65535" name="Clm_Dgnsis_DgnsisCdbleCncpt_Cdg_Cd"/>
         </property>
         <property name="clmDgnsisDgnsisCdbleCncptCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Diagnosis.DiagnosisCodeableConcept.Coding.Display</meta>
             <column length="65535" name="Clm_Dgnsis_DgnsisCdbleCncpt_Cdg_Dsply"/>
         </property>
         <property name="clmDgnsisDgnsisCdbleCncptCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Diagnosis.DiagnosisCodeableConcept.Coding.System</meta>
             <column length="65535" name="Clm_Dgnsis_DgnsisCdbleCncpt_Cdg_Sys"/>
         </property>
         <property name="clmDgnsisDgnsisCdbleCncptCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Diagnosis.DiagnosisCodeableConcept.Coding.UserSelected</meta>
             <column length="65535" name="Clm_Dgnsis_DgnsisCdbleCncpt_Cdg_UsrSltd"/>
         </property>
         <property name="clmDgnsisDgnsisCdbleCncptCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Diagnosis.DiagnosisCodeableConcept.Coding.Version</meta>
             <column length="65535" name="Clm_Dgnsis_DgnsisCdbleCncpt_Cdg_Vrsn"/>
         </property>
         <property name="clmDgnsisDgnsisCdbleCncptTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Diagnosis.DiagnosisCodeableConcept.Text</meta>
             <column length="65535" name="Clm_Dgnsis_DgnsisCdbleCncpt_Txt"/>
         </property>
         <property name="clmDgnsisDgnsisRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Diagnosis.DiagnosisReference</meta>
             <column length="65535" name="Clm_Dgnsis_DgnsisRfrnc"/>
         </property>
         <property name="clmDgnsisOnAdmissionCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Diagnosis.OnAdmission.Coding.Code</meta>
             <column length="65535" name="Clm_Dgnsis_OnAdmission_Cdg_Cd"/>
         </property>
         <property name="clmDgnsisOnAdmissionCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Diagnosis.OnAdmission.Coding.Display</meta>
             <column length="65535" name="Clm_Dgnsis_OnAdmission_Cdg_Dsply"/>
         </property>
         <property name="clmDgnsisOnAdmissionCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Diagnosis.OnAdmission.Coding.System</meta>
             <column length="65535" name="Clm_Dgnsis_OnAdmission_Cdg_Sys"/>
         </property>
         <property name="clmDgnsisOnAdmissionCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Diagnosis.OnAdmission.Coding.UserSelected</meta>
             <column length="65535" name="Clm_Dgnsis_OnAdmission_Cdg_UsrSltd"/>
         </property>
         <property name="clmDgnsisOnAdmissionCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Diagnosis.OnAdmission.Coding.Version</meta>
             <column length="65535" name="Clm_Dgnsis_OnAdmission_Cdg_Vrsn"/>
         </property>
         <property name="clmDgnsisOnAdmissionTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Diagnosis.OnAdmission.Text</meta>
             <column length="65535" name="Clm_Dgnsis_OnAdmission_Txt"/>
         </property>
         <property name="clmDgnsisPckgCdCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Diagnosis.PackageCode.Coding.Code</meta>
             <column length="65535" name="Clm_Dgnsis_PckgCd_Cdg_Cd"/>
         </property>
         <property name="clmDgnsisPckgCdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Diagnosis.PackageCode.Coding.Display</meta>
             <column length="65535" name="Clm_Dgnsis_PckgCd_Cdg_Dsply"/>
         </property>
         <property name="clmDgnsisPckgCdCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Diagnosis.PackageCode.Coding.System</meta>
             <column length="65535" name="Clm_Dgnsis_PckgCd_Cdg_Sys"/>
         </property>
         <property name="clmDgnsisPckgCdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Diagnosis.PackageCode.Coding.UserSelected</meta>
             <column length="65535" name="Clm_Dgnsis_PckgCd_Cdg_UsrSltd"/>
         </property>
         <property name="clmDgnsisPckgCdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Diagnosis.PackageCode.Coding.Version</meta>
             <column length="65535" name="Clm_Dgnsis_PckgCd_Cdg_Vrsn"/>
         </property>
         <property name="clmDgnsisPckgCdTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Diagnosis.PackageCode.Text</meta>
             <column length="65535" name="Clm_Dgnsis_PckgCd_Txt"/>
         </property>
         <property name="clmDgnsisSqnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Diagnosis.Sequence</meta>
             <column length="65535" name="Clm_Dgnsis_Sqnc"/>
         </property>
         <property name="clmDgnsisTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Diagnosis.Type.Coding.Code</meta>
             <column length="65535" name="Clm_Dgnsis_Typ_Cdg_Cd"/>
         </property>
         <property name="clmDgnsisTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Diagnosis.Type.Coding.Display</meta>
             <column length="65535" name="Clm_Dgnsis_Typ_Cdg_Dsply"/>
         </property>
         <property name="clmDgnsisTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Diagnosis.Type.Coding.System</meta>
             <column length="65535" name="Clm_Dgnsis_Typ_Cdg_Sys"/>
         </property>
         <property name="clmDgnsisTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Diagnosis.Type.Coding.UserSelected</meta>
             <column length="65535" name="Clm_Dgnsis_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="clmDgnsisTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Diagnosis.Type.Coding.Version</meta>
             <column length="65535" name="Clm_Dgnsis_Typ_Cdg_Vrsn"/>
         </property>
         <property name="clmDgnsisTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Diagnosis.Type.Text</meta>
             <column length="65535" name="Clm_Dgnsis_Typ_Txt"/>
         </property>
         <property name="clmEnterer" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Enterer</meta>
             <column length="65535" name="Clm_Enterer"/>
         </property>
         <property name="clmFacility" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Facility</meta>
             <column length="65535" name="Clm_Facility"/>
         </property>
         <property name="clmFundsReserveCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.FundsReserve.Coding.Code</meta>
             <column length="65535" name="Clm_FundsReserve_Cdg_Cd"/>
         </property>
         <property name="clmFundsReserveCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.FundsReserve.Coding.Display</meta>
             <column length="65535" name="Clm_FundsReserve_Cdg_Dsply"/>
         </property>
         <property name="clmFundsReserveCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.FundsReserve.Coding.System</meta>
             <column length="65535" name="Clm_FundsReserve_Cdg_Sys"/>
         </property>
         <property name="clmFundsReserveCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.FundsReserve.Coding.UserSelected</meta>
             <column length="65535" name="Clm_FundsReserve_Cdg_UsrSltd"/>
         </property>
         <property name="clmFundsReserveCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.FundsReserve.Coding.Version</meta>
             <column length="65535" name="Clm_FundsReserve_Cdg_Vrsn"/>
         </property>
         <property name="clmFundsReserveTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.FundsReserve.Text</meta>
             <column length="65535" name="Clm_FundsReserve_Txt"/>
         </property>
         <property name="clmIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Identifier.Assigner</meta>
             <column length="65535" name="Clm_Id_Assigner"/>
         </property>
         <property name="clmIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Identifier.Period.End</meta>
             <column length="65535" name="Clm_Id_Prd_End"/>
         </property>
         <property name="clmIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Identifier.Period.Start</meta>
             <column length="65535" name="Clm_Id_Prd_Strt"/>
         </property>
         <property name="clmIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Identifier.System</meta>
             <column length="65535" name="Clm_Id_Sys"/>
         </property>
         <property name="clmIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Identifier.Type.Coding.Code</meta>
             <column length="65535" name="Clm_Id_Typ_Cdg_Cd"/>
         </property>
         <property name="clmIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Identifier.Type.Coding.Display</meta>
             <column length="65535" name="Clm_Id_Typ_Cdg_Dsply"/>
         </property>
         <property name="clmIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Identifier.Type.Coding.System</meta>
             <column length="65535" name="Clm_Id_Typ_Cdg_Sys"/>
         </property>
         <property name="clmIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Identifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="Clm_Id_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="clmIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Identifier.Type.Coding.Version</meta>
             <column length="65535" name="Clm_Id_Typ_Cdg_Vrsn"/>
         </property>
         <property name="clmIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Identifier.Type.Text</meta>
             <column length="65535" name="Clm_Id_Typ_Txt"/>
         </property>
         <property name="clmIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Identifier.Use</meta>
             <column length="65535" name="Clm_Id_Use"/>
         </property>
         <property name="clmIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Identifier.Value</meta>
             <column length="65535" name="Clm_Id_Vl"/>
         </property>
         <property name="clmInsrncBusinessArrangement" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Insurance.BusinessArrangement</meta>
             <column length="65535" name="Clm_Insrnc_BusinessArrangement"/>
         </property>
         <property name="clmInsrncClmRsps" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Insurance.ClaimResponse</meta>
             <column length="65535" name="Clm_Insrnc_ClmRsps"/>
         </property>
         <property name="clmInsrncCvg" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Insurance.Coverage</meta>
             <column length="65535" name="Clm_Insrnc_Cvg"/>
         </property>
         <property name="clmInsrncFocal" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Insurance.Focal</meta>
             <column length="65535" name="Clm_Insrnc_Focal"/>
         </property>
         <property name="clmInsrncIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Insurance.Identifier.Assigner</meta>
             <column length="65535" name="Clm_Insrnc_Id_Assigner"/>
         </property>
         <property name="clmInsrncIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Insurance.Identifier.Period.End</meta>
             <column length="65535" name="Clm_Insrnc_Id_Prd_End"/>
         </property>
         <property name="clmInsrncIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Insurance.Identifier.Period.Start</meta>
             <column length="65535" name="Clm_Insrnc_Id_Prd_Strt"/>
         </property>
         <property name="clmInsrncIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Insurance.Identifier.System</meta>
             <column length="65535" name="Clm_Insrnc_Id_Sys"/>
         </property>
         <property name="clmInsrncIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Insurance.Identifier.Type.Coding.Code</meta>
             <column length="65535" name="Clm_Insrnc_Id_Typ_Cdg_Cd"/>
         </property>
         <property name="clmInsrncIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Insurance.Identifier.Type.Coding.Display</meta>
             <column length="65535" name="Clm_Insrnc_Id_Typ_Cdg_Dsply"/>
         </property>
         <property name="clmInsrncIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Insurance.Identifier.Type.Coding.System</meta>
             <column length="65535" name="Clm_Insrnc_Id_Typ_Cdg_Sys"/>
         </property>
         <property name="clmInsrncIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Insurance.Identifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="Clm_Insrnc_Id_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="clmInsrncIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Insurance.Identifier.Type.Coding.Version</meta>
             <column length="65535" name="Clm_Insrnc_Id_Typ_Cdg_Vrsn"/>
         </property>
         <property name="clmInsrncIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Insurance.Identifier.Type.Text</meta>
             <column length="65535" name="Clm_Insrnc_Id_Typ_Txt"/>
         </property>
         <property name="clmInsrncIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Insurance.Identifier.Use</meta>
             <column length="65535" name="Clm_Insrnc_Id_Use"/>
         </property>
         <property name="clmInsrncIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Insurance.Identifier.Value</meta>
             <column length="65535" name="Clm_Insrnc_Id_Vl"/>
         </property>
         <property name="clmInsrncPreAuthRef" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Insurance.PreAuthRef</meta>
             <column length="65535" name="Clm_Insrnc_PreAuthRef"/>
         </property>
         <property name="clmInsrncSqnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Insurance.Sequence</meta>
             <column length="65535" name="Clm_Insrnc_Sqnc"/>
         </property>
         <property name="clmInsurer" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Insurer</meta>
             <column length="65535" name="Clm_Insurer"/>
         </property>
         <property name="clmItmBodySiteCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.BodySite.Coding.Code</meta>
             <column length="65535" name="Clm_Itm_BodySite_Cdg_Cd"/>
         </property>
         <property name="clmItmBodySiteCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.BodySite.Coding.Display</meta>
             <column length="65535" name="Clm_Itm_BodySite_Cdg_Dsply"/>
         </property>
         <property name="clmItmBodySiteCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.BodySite.Coding.System</meta>
             <column length="65535" name="Clm_Itm_BodySite_Cdg_Sys"/>
         </property>
         <property name="clmItmBodySiteCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.BodySite.Coding.UserSelected</meta>
             <column length="65535" name="Clm_Itm_BodySite_Cdg_UsrSltd"/>
         </property>
         <property name="clmItmBodySiteCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.BodySite.Coding.Version</meta>
             <column length="65535" name="Clm_Itm_BodySite_Cdg_Vrsn"/>
         </property>
         <property name="clmItmBodySiteTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.BodySite.Text</meta>
             <column length="65535" name="Clm_Itm_BodySite_Txt"/>
         </property>
         <property name="clmItmCareTeamSqnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.CareTeamSequence</meta>
             <column length="65535" name="Clm_Itm_CareTeamSqnc"/>
         </property>
         <property name="clmItmCtgryCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Category.Coding.Code</meta>
             <column length="65535" name="Clm_Itm_Ctgry_Cdg_Cd"/>
         </property>
         <property name="clmItmCtgryCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Category.Coding.Display</meta>
             <column length="65535" name="Clm_Itm_Ctgry_Cdg_Dsply"/>
         </property>
         <property name="clmItmCtgryCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Category.Coding.System</meta>
             <column length="65535" name="Clm_Itm_Ctgry_Cdg_Sys"/>
         </property>
         <property name="clmItmCtgryCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Category.Coding.UserSelected</meta>
             <column length="65535" name="Clm_Itm_Ctgry_Cdg_UsrSltd"/>
         </property>
         <property name="clmItmCtgryCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Category.Coding.Version</meta>
             <column length="65535" name="Clm_Itm_Ctgry_Cdg_Vrsn"/>
         </property>
         <property name="clmItmCtgryTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Category.Text</meta>
             <column length="65535" name="Clm_Itm_Ctgry_Txt"/>
         </property>
         <property name="clmItmDtlCtgryCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.Category.Coding.Code</meta>
             <column length="65535" name="Clm_Itm_Dtl_Ctgry_Cdg_Cd"/>
         </property>
         <property name="clmItmDtlCtgryCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.Category.Coding.Display</meta>
             <column length="65535" name="Clm_Itm_Dtl_Ctgry_Cdg_Dsply"/>
         </property>
         <property name="clmItmDtlCtgryCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.Category.Coding.System</meta>
             <column length="65535" name="Clm_Itm_Dtl_Ctgry_Cdg_Sys"/>
         </property>
         <property name="clmItmDtlCtgryCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.Category.Coding.UserSelected</meta>
             <column length="65535" name="Clm_Itm_Dtl_Ctgry_Cdg_UsrSltd"/>
         </property>
         <property name="clmItmDtlCtgryCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.Category.Coding.Version</meta>
             <column length="65535" name="Clm_Itm_Dtl_Ctgry_Cdg_Vrsn"/>
         </property>
         <property name="clmItmDtlCtgryTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.Category.Text</meta>
             <column length="65535" name="Clm_Itm_Dtl_Ctgry_Txt"/>
         </property>
         <property name="clmItmDtlFactor" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.Factor</meta>
             <column length="65535" name="Clm_Itm_Dtl_Factor"/>
         </property>
         <property name="clmItmDtlMdfrCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.Modifier.Coding.Code</meta>
             <column length="65535" name="Clm_Itm_Dtl_Mdfr_Cdg_Cd"/>
         </property>
         <property name="clmItmDtlMdfrCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.Modifier.Coding.Display</meta>
             <column length="65535" name="Clm_Itm_Dtl_Mdfr_Cdg_Dsply"/>
         </property>
         <property name="clmItmDtlMdfrCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.Modifier.Coding.System</meta>
             <column length="65535" name="Clm_Itm_Dtl_Mdfr_Cdg_Sys"/>
         </property>
         <property name="clmItmDtlMdfrCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.Modifier.Coding.UserSelected</meta>
             <column length="65535" name="Clm_Itm_Dtl_Mdfr_Cdg_UsrSltd"/>
         </property>
         <property name="clmItmDtlMdfrCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.Modifier.Coding.Version</meta>
             <column length="65535" name="Clm_Itm_Dtl_Mdfr_Cdg_Vrsn"/>
         </property>
         <property name="clmItmDtlMdfrTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.Modifier.Text</meta>
             <column length="65535" name="Clm_Itm_Dtl_Mdfr_Txt"/>
         </property>
         <property name="clmItmDtlNetCrncy" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.Net.Currency</meta>
             <column length="65535" name="Clm_Itm_Dtl_Net_Crncy"/>
         </property>
         <property name="clmItmDtlNetVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.Net.Value</meta>
             <column length="65535" name="Clm_Itm_Dtl_Net_Vl"/>
         </property>
         <property name="clmItmDtlPrdctOrSrvCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.ProductOrService.Coding.Code</meta>
             <column length="65535" name="Clm_Itm_Dtl_PrdctOrSrv_Cdg_Cd"/>
         </property>
         <property name="clmItmDtlPrdctOrSrvCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.ProductOrService.Coding.Display</meta>
             <column length="65535" name="Clm_Itm_Dtl_PrdctOrSrv_Cdg_Dsply"/>
         </property>
         <property name="clmItmDtlPrdctOrSrvCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.ProductOrService.Coding.System</meta>
             <column length="65535" name="Clm_Itm_Dtl_PrdctOrSrv_Cdg_Sys"/>
         </property>
         <property name="clmItmDtlPrdctOrSrvCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.ProductOrService.Coding.UserSelected</meta>
             <column length="65535" name="Clm_Itm_Dtl_PrdctOrSrv_Cdg_UsrSltd"/>
         </property>
         <property name="clmItmDtlPrdctOrSrvCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.ProductOrService.Coding.Version</meta>
             <column length="65535" name="Clm_Itm_Dtl_PrdctOrSrv_Cdg_Vrsn"/>
         </property>
         <property name="clmItmDtlPrdctOrSrvTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.ProductOrService.Text</meta>
             <column length="65535" name="Clm_Itm_Dtl_PrdctOrSrv_Txt"/>
         </property>
         <property name="clmItmDtlPrgrmCdCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.ProgramCode.Coding.Code</meta>
             <column length="65535" name="Clm_Itm_Dtl_PrgrmCd_Cdg_Cd"/>
         </property>
         <property name="clmItmDtlPrgrmCdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.ProgramCode.Coding.Display</meta>
             <column length="65535" name="Clm_Itm_Dtl_PrgrmCd_Cdg_Dsply"/>
         </property>
         <property name="clmItmDtlPrgrmCdCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.ProgramCode.Coding.System</meta>
             <column length="65535" name="Clm_Itm_Dtl_PrgrmCd_Cdg_Sys"/>
         </property>
         <property name="clmItmDtlPrgrmCdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.ProgramCode.Coding.UserSelected</meta>
             <column length="65535" name="Clm_Itm_Dtl_PrgrmCd_Cdg_UsrSltd"/>
         </property>
         <property name="clmItmDtlPrgrmCdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.ProgramCode.Coding.Version</meta>
             <column length="65535" name="Clm_Itm_Dtl_PrgrmCd_Cdg_Vrsn"/>
         </property>
         <property name="clmItmDtlPrgrmCdTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.ProgramCode.Text</meta>
             <column length="65535" name="Clm_Itm_Dtl_PrgrmCd_Txt"/>
         </property>
         <property name="clmItmDtlQntyCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.Quantity.Code</meta>
             <column length="65535" name="Clm_Itm_Dtl_Qnty_Cd"/>
         </property>
         <property name="clmItmDtlQntyCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.Quantity.Comparator</meta>
             <column length="65535" name="Clm_Itm_Dtl_Qnty_Cmprtr"/>
         </property>
         <property name="clmItmDtlQntySys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.Quantity.System</meta>
             <column length="65535" name="Clm_Itm_Dtl_Qnty_Sys"/>
         </property>
         <property name="clmItmDtlQntyUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.Quantity.Unit</meta>
             <column length="65535" name="Clm_Itm_Dtl_Qnty_Unt"/>
         </property>
         <property name="clmItmDtlQntyVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.Quantity.Value</meta>
             <column length="65535" name="Clm_Itm_Dtl_Qnty_Vl"/>
         </property>
         <property name="clmItmDtlRevenueCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.Revenue.Coding.Code</meta>
             <column length="65535" name="Clm_Itm_Dtl_Revenue_Cdg_Cd"/>
         </property>
         <property name="clmItmDtlRevenueCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.Revenue.Coding.Display</meta>
             <column length="65535" name="Clm_Itm_Dtl_Revenue_Cdg_Dsply"/>
         </property>
         <property name="clmItmDtlRevenueCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.Revenue.Coding.System</meta>
             <column length="65535" name="Clm_Itm_Dtl_Revenue_Cdg_Sys"/>
         </property>
         <property name="clmItmDtlRevenueCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.Revenue.Coding.UserSelected</meta>
             <column length="65535" name="Clm_Itm_Dtl_Revenue_Cdg_UsrSltd"/>
         </property>
         <property name="clmItmDtlRevenueCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.Revenue.Coding.Version</meta>
             <column length="65535" name="Clm_Itm_Dtl_Revenue_Cdg_Vrsn"/>
         </property>
         <property name="clmItmDtlRevenueTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.Revenue.Text</meta>
             <column length="65535" name="Clm_Itm_Dtl_Revenue_Txt"/>
         </property>
         <property name="clmItmDtlSqnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.Sequence</meta>
             <column length="65535" name="Clm_Itm_Dtl_Sqnc"/>
         </property>
         <property name="clmItmDtlSubDtlCtgryCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.SubDetail.Category.Coding.Code</meta>
             <column length="65535" name="Clm_Itm_Dtl_SubDtl_Ctgry_Cdg_Cd"/>
         </property>
         <property name="clmItmDtlSubDtlCtgryCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.SubDetail.Category.Coding.Display</meta>
             <column length="65535" name="Clm_Itm_Dtl_SubDtl_Ctgry_Cdg_Dsply"/>
         </property>
         <property name="clmItmDtlSubDtlCtgryCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.SubDetail.Category.Coding.System</meta>
             <column length="65535" name="Clm_Itm_Dtl_SubDtl_Ctgry_Cdg_Sys"/>
         </property>
         <property name="clmItmDtlSubDtlCtgryCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.SubDetail.Category.Coding.UserSelected</meta>
             <column length="65535" name="Clm_Itm_Dtl_SubDtl_Ctgry_Cdg_UsrSltd"/>
         </property>
         <property name="clmItmDtlSubDtlCtgryCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.SubDetail.Category.Coding.Version</meta>
             <column length="65535" name="Clm_Itm_Dtl_SubDtl_Ctgry_Cdg_Vrsn"/>
         </property>
         <property name="clmItmDtlSubDtlCtgryTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.SubDetail.Category.Text</meta>
             <column length="65535" name="Clm_Itm_Dtl_SubDtl_Ctgry_Txt"/>
         </property>
         <property name="clmItmDtlSubDtlFactor" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.SubDetail.Factor</meta>
             <column length="65535" name="Clm_Itm_Dtl_SubDtl_Factor"/>
         </property>
         <property name="clmItmDtlSubDtlMdfrCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.SubDetail.Modifier.Coding.Code</meta>
             <column length="65535" name="Clm_Itm_Dtl_SubDtl_Mdfr_Cdg_Cd"/>
         </property>
         <property name="clmItmDtlSubDtlMdfrCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.SubDetail.Modifier.Coding.Display</meta>
             <column length="65535" name="Clm_Itm_Dtl_SubDtl_Mdfr_Cdg_Dsply"/>
         </property>
         <property name="clmItmDtlSubDtlMdfrCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.SubDetail.Modifier.Coding.System</meta>
             <column length="65535" name="Clm_Itm_Dtl_SubDtl_Mdfr_Cdg_Sys"/>
         </property>
         <property name="clmItmDtlSubDtlMdfrCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.SubDetail.Modifier.Coding.UserSelected</meta>
             <column length="65535" name="Clm_Itm_Dtl_SubDtl_Mdfr_Cdg_UsrSltd"/>
         </property>
         <property name="clmItmDtlSubDtlMdfrCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.SubDetail.Modifier.Coding.Version</meta>
             <column length="65535" name="Clm_Itm_Dtl_SubDtl_Mdfr_Cdg_Vrsn"/>
         </property>
         <property name="clmItmDtlSubDtlMdfrTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.SubDetail.Modifier.Text</meta>
             <column length="65535" name="Clm_Itm_Dtl_SubDtl_Mdfr_Txt"/>
         </property>
         <property name="clmItmDtlSubDtlNetCrncy" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.SubDetail.Net.Currency</meta>
             <column length="65535" name="Clm_Itm_Dtl_SubDtl_Net_Crncy"/>
         </property>
         <property name="clmItmDtlSubDtlNetVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.SubDetail.Net.Value</meta>
             <column length="65535" name="Clm_Itm_Dtl_SubDtl_Net_Vl"/>
         </property>
         <property name="clmItmDtlSubDtlPrdctOrSrvCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.SubDetail.ProductOrService.Coding.Code</meta>
             <column length="65535" name="Clm_Itm_Dtl_SubDtl_PrdctOrSrv_Cdg_Cd"/>
         </property>
         <property name="clmItmDtlSubDtlPrdctOrSrvCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.SubDetail.ProductOrService.Coding.Display</meta>
             <column length="65535" name="Clm_Itm_Dtl_SubDtl_PrdctOrSrv_Cdg_Dsply"/>
         </property>
         <property name="clmItmDtlSubDtlPrdctOrSrvCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.SubDetail.ProductOrService.Coding.System</meta>
             <column length="65535" name="Clm_Itm_Dtl_SubDtl_PrdctOrSrv_Cdg_Sys"/>
         </property>
         <property name="clmItmDtlSubDtlPrdctOrSrvCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.SubDetail.ProductOrService.Coding.UserSelected</meta>
             <column length="65535" name="Clm_Itm_Dtl_SubDtl_PrdctOrSrv_Cdg_UsrSltd"/>
         </property>
         <property name="clmItmDtlSubDtlPrdctOrSrvCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.SubDetail.ProductOrService.Coding.Version</meta>
             <column length="65535" name="Clm_Itm_Dtl_SubDtl_PrdctOrSrv_Cdg_Vrsn"/>
         </property>
         <property name="clmItmDtlSubDtlPrdctOrSrvTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.SubDetail.ProductOrService.Text</meta>
             <column length="65535" name="Clm_Itm_Dtl_SubDtl_PrdctOrSrv_Txt"/>
         </property>
         <property name="clmItmDtlSubDtlPrgrmCdCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.SubDetail.ProgramCode.Coding.Code</meta>
             <column length="65535" name="Clm_Itm_Dtl_SubDtl_PrgrmCd_Cdg_Cd"/>
         </property>
         <property name="clmItmDtlSubDtlPrgrmCdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.SubDetail.ProgramCode.Coding.Display</meta>
             <column length="65535" name="Clm_Itm_Dtl_SubDtl_PrgrmCd_Cdg_Dsply"/>
         </property>
         <property name="clmItmDtlSubDtlPrgrmCdCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.SubDetail.ProgramCode.Coding.System</meta>
             <column length="65535" name="Clm_Itm_Dtl_SubDtl_PrgrmCd_Cdg_Sys"/>
         </property>
         <property name="clmItmDtlSubDtlPrgrmCdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.SubDetail.ProgramCode.Coding.UserSelected</meta>
             <column length="65535" name="Clm_Itm_Dtl_SubDtl_PrgrmCd_Cdg_UsrSltd"/>
         </property>
         <property name="clmItmDtlSubDtlPrgrmCdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.SubDetail.ProgramCode.Coding.Version</meta>
             <column length="65535" name="Clm_Itm_Dtl_SubDtl_PrgrmCd_Cdg_Vrsn"/>
         </property>
         <property name="clmItmDtlSubDtlPrgrmCdTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.SubDetail.ProgramCode.Text</meta>
             <column length="65535" name="Clm_Itm_Dtl_SubDtl_PrgrmCd_Txt"/>
         </property>
         <property name="clmItmDtlSubDtlQntyCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.SubDetail.Quantity.Code</meta>
             <column length="65535" name="Clm_Itm_Dtl_SubDtl_Qnty_Cd"/>
         </property>
         <property name="clmItmDtlSubDtlQntyCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.SubDetail.Quantity.Comparator</meta>
             <column length="65535" name="Clm_Itm_Dtl_SubDtl_Qnty_Cmprtr"/>
         </property>
         <property name="clmItmDtlSubDtlQntySys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.SubDetail.Quantity.System</meta>
             <column length="65535" name="Clm_Itm_Dtl_SubDtl_Qnty_Sys"/>
         </property>
         <property name="clmItmDtlSubDtlQntyUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.SubDetail.Quantity.Unit</meta>
             <column length="65535" name="Clm_Itm_Dtl_SubDtl_Qnty_Unt"/>
         </property>
         <property name="clmItmDtlSubDtlQntyVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.SubDetail.Quantity.Value</meta>
             <column length="65535" name="Clm_Itm_Dtl_SubDtl_Qnty_Vl"/>
         </property>
         <property name="clmItmDtlSubDtlRevenueCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.SubDetail.Revenue.Coding.Code</meta>
             <column length="65535" name="Clm_Itm_Dtl_SubDtl_Revenue_Cdg_Cd"/>
         </property>
         <property name="clmItmDtlSubDtlRevenueCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.SubDetail.Revenue.Coding.Display</meta>
             <column length="65535" name="Clm_Itm_Dtl_SubDtl_Revenue_Cdg_Dsply"/>
         </property>
         <property name="clmItmDtlSubDtlRevenueCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.SubDetail.Revenue.Coding.System</meta>
             <column length="65535" name="Clm_Itm_Dtl_SubDtl_Revenue_Cdg_Sys"/>
         </property>
         <property name="clmItmDtlSubDtlRevenueCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.SubDetail.Revenue.Coding.UserSelected</meta>
             <column length="65535" name="Clm_Itm_Dtl_SubDtl_Revenue_Cdg_UsrSltd"/>
         </property>
         <property name="clmItmDtlSubDtlRevenueCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.SubDetail.Revenue.Coding.Version</meta>
             <column length="65535" name="Clm_Itm_Dtl_SubDtl_Revenue_Cdg_Vrsn"/>
         </property>
         <property name="clmItmDtlSubDtlRevenueTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.SubDetail.Revenue.Text</meta>
             <column length="65535" name="Clm_Itm_Dtl_SubDtl_Revenue_Txt"/>
         </property>
         <property name="clmItmDtlSubDtlSqnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.SubDetail.Sequence</meta>
             <column length="65535" name="Clm_Itm_Dtl_SubDtl_Sqnc"/>
         </property>
         <property name="clmItmDtlSubDtlUdi" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.SubDetail.Udi</meta>
             <column length="65535" name="Clm_Itm_Dtl_SubDtl_Udi"/>
         </property>
         <property name="clmItmDtlSubDtlUntPriceCrncy" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.SubDetail.UnitPrice.Currency</meta>
             <column length="65535" name="Clm_Itm_Dtl_SubDtl_UntPrice_Crncy"/>
         </property>
         <property name="clmItmDtlSubDtlUntPriceVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.SubDetail.UnitPrice.Value</meta>
             <column length="65535" name="Clm_Itm_Dtl_SubDtl_UntPrice_Vl"/>
         </property>
         <property name="clmItmDtlUdi" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.Udi</meta>
             <column length="65535" name="Clm_Itm_Dtl_Udi"/>
         </property>
         <property name="clmItmDtlUntPriceCrncy" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.UnitPrice.Currency</meta>
             <column length="65535" name="Clm_Itm_Dtl_UntPrice_Crncy"/>
         </property>
         <property name="clmItmDtlUntPriceVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Detail.UnitPrice.Value</meta>
             <column length="65535" name="Clm_Itm_Dtl_UntPrice_Vl"/>
         </property>
         <property name="clmItmDgnsisSqnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.DiagnosisSequence</meta>
             <column length="65535" name="Clm_Itm_DgnsisSqnc"/>
         </property>
         <property name="clmItmEnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Encounter</meta>
             <column length="65535" name="Clm_Itm_Enc"/>
         </property>
         <property name="clmItmFactor" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Factor</meta>
             <column length="65535" name="Clm_Itm_Factor"/>
         </property>
         <property name="clmItmInfoSqnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.InformationSequence</meta>
             <column length="65535" name="Clm_Itm_InfoSqnc"/>
         </property>
         <property name="clmItmLctnAddrCity" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.LocationAddress.City</meta>
             <column length="65535" name="Clm_Itm_LctnAddr_City"/>
         </property>
         <property name="clmItmLctnAddrCntry" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.LocationAddress.Country</meta>
             <column length="65535" name="Clm_Itm_LctnAddr_Cntry"/>
         </property>
         <property name="clmItmLctnAddrDistrict" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.LocationAddress.District</meta>
             <column length="65535" name="Clm_Itm_LctnAddr_District"/>
         </property>
         <property name="clmItmLctnAddrLine" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.LocationAddress.Line</meta>
             <column length="65535" name="Clm_Itm_LctnAddr_Line"/>
         </property>
         <property name="clmItmLctnAddrPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.LocationAddress.Period.End</meta>
             <column length="65535" name="Clm_Itm_LctnAddr_Prd_End"/>
         </property>
         <property name="clmItmLctnAddrPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.LocationAddress.Period.Start</meta>
             <column length="65535" name="Clm_Itm_LctnAddr_Prd_Strt"/>
         </property>
         <property name="clmItmLctnAddrPostalCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.LocationAddress.PostalCode</meta>
             <column length="65535" name="Clm_Itm_LctnAddr_PostalCd"/>
         </property>
         <property name="clmItmLctnAddrState" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.LocationAddress.State</meta>
             <column length="65535" name="Clm_Itm_LctnAddr_State"/>
         </property>
         <property name="clmItmLctnAddrTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.LocationAddress.Text</meta>
             <column length="65535" name="Clm_Itm_LctnAddr_Txt"/>
         </property>
         <property name="clmItmLctnAddrTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.LocationAddress.Type</meta>
             <column length="65535" name="Clm_Itm_LctnAddr_Typ"/>
         </property>
         <property name="clmItmLctnAddrUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.LocationAddress.Use</meta>
             <column length="65535" name="Clm_Itm_LctnAddr_Use"/>
         </property>
         <property name="clmItmLctnCdbleCncptCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.LocationCodeableConcept.Coding.Code</meta>
             <column length="65535" name="Clm_Itm_LctnCdbleCncpt_Cdg_Cd"/>
         </property>
         <property name="clmItmLctnCdbleCncptCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.LocationCodeableConcept.Coding.Display</meta>
             <column length="65535" name="Clm_Itm_LctnCdbleCncpt_Cdg_Dsply"/>
         </property>
         <property name="clmItmLctnCdbleCncptCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.LocationCodeableConcept.Coding.System</meta>
             <column length="65535" name="Clm_Itm_LctnCdbleCncpt_Cdg_Sys"/>
         </property>
         <property name="clmItmLctnCdbleCncptCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.LocationCodeableConcept.Coding.UserSelected</meta>
             <column length="65535" name="Clm_Itm_LctnCdbleCncpt_Cdg_UsrSltd"/>
         </property>
         <property name="clmItmLctnCdbleCncptCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.LocationCodeableConcept.Coding.Version</meta>
             <column length="65535" name="Clm_Itm_LctnCdbleCncpt_Cdg_Vrsn"/>
         </property>
         <property name="clmItmLctnCdbleCncptTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.LocationCodeableConcept.Text</meta>
             <column length="65535" name="Clm_Itm_LctnCdbleCncpt_Txt"/>
         </property>
         <property name="clmItmLctnRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.LocationReference</meta>
             <column length="65535" name="Clm_Itm_LctnRfrnc"/>
         </property>
         <property name="clmItmMdfrCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Modifier.Coding.Code</meta>
             <column length="65535" name="Clm_Itm_Mdfr_Cdg_Cd"/>
         </property>
         <property name="clmItmMdfrCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Modifier.Coding.Display</meta>
             <column length="65535" name="Clm_Itm_Mdfr_Cdg_Dsply"/>
         </property>
         <property name="clmItmMdfrCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Modifier.Coding.System</meta>
             <column length="65535" name="Clm_Itm_Mdfr_Cdg_Sys"/>
         </property>
         <property name="clmItmMdfrCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Modifier.Coding.UserSelected</meta>
             <column length="65535" name="Clm_Itm_Mdfr_Cdg_UsrSltd"/>
         </property>
         <property name="clmItmMdfrCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Modifier.Coding.Version</meta>
             <column length="65535" name="Clm_Itm_Mdfr_Cdg_Vrsn"/>
         </property>
         <property name="clmItmMdfrTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Modifier.Text</meta>
             <column length="65535" name="Clm_Itm_Mdfr_Txt"/>
         </property>
         <property name="clmItmNetCrncy" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Net.Currency</meta>
             <column length="65535" name="Clm_Itm_Net_Crncy"/>
         </property>
         <property name="clmItmNetVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Net.Value</meta>
             <column length="65535" name="Clm_Itm_Net_Vl"/>
         </property>
         <property name="clmItmPrcdrSqnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.ProcedureSequence</meta>
             <column length="65535" name="Clm_Itm_PrcdrSqnc"/>
         </property>
         <property name="clmItmPrdctOrSrvCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.ProductOrService.Coding.Code</meta>
             <column length="65535" name="Clm_Itm_PrdctOrSrv_Cdg_Cd"/>
         </property>
         <property name="clmItmPrdctOrSrvCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.ProductOrService.Coding.Display</meta>
             <column length="65535" name="Clm_Itm_PrdctOrSrv_Cdg_Dsply"/>
         </property>
         <property name="clmItmPrdctOrSrvCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.ProductOrService.Coding.System</meta>
             <column length="65535" name="Clm_Itm_PrdctOrSrv_Cdg_Sys"/>
         </property>
         <property name="clmItmPrdctOrSrvCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.ProductOrService.Coding.UserSelected</meta>
             <column length="65535" name="Clm_Itm_PrdctOrSrv_Cdg_UsrSltd"/>
         </property>
         <property name="clmItmPrdctOrSrvCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.ProductOrService.Coding.Version</meta>
             <column length="65535" name="Clm_Itm_PrdctOrSrv_Cdg_Vrsn"/>
         </property>
         <property name="clmItmPrdctOrSrvTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.ProductOrService.Text</meta>
             <column length="65535" name="Clm_Itm_PrdctOrSrv_Txt"/>
         </property>
         <property name="clmItmPrgrmCdCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.ProgramCode.Coding.Code</meta>
             <column length="65535" name="Clm_Itm_PrgrmCd_Cdg_Cd"/>
         </property>
         <property name="clmItmPrgrmCdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.ProgramCode.Coding.Display</meta>
             <column length="65535" name="Clm_Itm_PrgrmCd_Cdg_Dsply"/>
         </property>
         <property name="clmItmPrgrmCdCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.ProgramCode.Coding.System</meta>
             <column length="65535" name="Clm_Itm_PrgrmCd_Cdg_Sys"/>
         </property>
         <property name="clmItmPrgrmCdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.ProgramCode.Coding.UserSelected</meta>
             <column length="65535" name="Clm_Itm_PrgrmCd_Cdg_UsrSltd"/>
         </property>
         <property name="clmItmPrgrmCdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.ProgramCode.Coding.Version</meta>
             <column length="65535" name="Clm_Itm_PrgrmCd_Cdg_Vrsn"/>
         </property>
         <property name="clmItmPrgrmCdTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.ProgramCode.Text</meta>
             <column length="65535" name="Clm_Itm_PrgrmCd_Txt"/>
         </property>
         <property name="clmItmQntyCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Quantity.Code</meta>
             <column length="65535" name="Clm_Itm_Qnty_Cd"/>
         </property>
         <property name="clmItmQntyCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Quantity.Comparator</meta>
             <column length="65535" name="Clm_Itm_Qnty_Cmprtr"/>
         </property>
         <property name="clmItmQntySys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Quantity.System</meta>
             <column length="65535" name="Clm_Itm_Qnty_Sys"/>
         </property>
         <property name="clmItmQntyUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Quantity.Unit</meta>
             <column length="65535" name="Clm_Itm_Qnty_Unt"/>
         </property>
         <property name="clmItmQntyVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Quantity.Value</meta>
             <column length="65535" name="Clm_Itm_Qnty_Vl"/>
         </property>
         <property name="clmItmRevenueCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Revenue.Coding.Code</meta>
             <column length="65535" name="Clm_Itm_Revenue_Cdg_Cd"/>
         </property>
         <property name="clmItmRevenueCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Revenue.Coding.Display</meta>
             <column length="65535" name="Clm_Itm_Revenue_Cdg_Dsply"/>
         </property>
         <property name="clmItmRevenueCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Revenue.Coding.System</meta>
             <column length="65535" name="Clm_Itm_Revenue_Cdg_Sys"/>
         </property>
         <property name="clmItmRevenueCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Revenue.Coding.UserSelected</meta>
             <column length="65535" name="Clm_Itm_Revenue_Cdg_UsrSltd"/>
         </property>
         <property name="clmItmRevenueCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Revenue.Coding.Version</meta>
             <column length="65535" name="Clm_Itm_Revenue_Cdg_Vrsn"/>
         </property>
         <property name="clmItmRevenueTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Revenue.Text</meta>
             <column length="65535" name="Clm_Itm_Revenue_Txt"/>
         </property>
         <property name="clmItmSqnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Sequence</meta>
             <column length="65535" name="Clm_Itm_Sqnc"/>
         </property>
         <property name="clmItmSrvdDtTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.ServicedDateType</meta>
             <column length="65535" name="Clm_Itm_SrvdDtTyp"/>
         </property>
         <property name="clmItmSrvdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.ServicedPeriod.End</meta>
             <column length="65535" name="Clm_Itm_SrvdPrd_End"/>
         </property>
         <property name="clmItmSrvdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.ServicedPeriod.Start</meta>
             <column length="65535" name="Clm_Itm_SrvdPrd_Strt"/>
         </property>
         <property name="clmItmSubSiteCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.SubSite.Coding.Code</meta>
             <column length="65535" name="Clm_Itm_SubSite_Cdg_Cd"/>
         </property>
         <property name="clmItmSubSiteCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.SubSite.Coding.Display</meta>
             <column length="65535" name="Clm_Itm_SubSite_Cdg_Dsply"/>
         </property>
         <property name="clmItmSubSiteCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.SubSite.Coding.System</meta>
             <column length="65535" name="Clm_Itm_SubSite_Cdg_Sys"/>
         </property>
         <property name="clmItmSubSiteCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.SubSite.Coding.UserSelected</meta>
             <column length="65535" name="Clm_Itm_SubSite_Cdg_UsrSltd"/>
         </property>
         <property name="clmItmSubSiteCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.SubSite.Coding.Version</meta>
             <column length="65535" name="Clm_Itm_SubSite_Cdg_Vrsn"/>
         </property>
         <property name="clmItmSubSiteTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.SubSite.Text</meta>
             <column length="65535" name="Clm_Itm_SubSite_Txt"/>
         </property>
         <property name="clmItmUdi" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.Udi</meta>
             <column length="65535" name="Clm_Itm_Udi"/>
         </property>
         <property name="clmItmUntPriceCrncy" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.UnitPrice.Currency</meta>
             <column length="65535" name="Clm_Itm_UntPrice_Crncy"/>
         </property>
         <property name="clmItmUntPriceVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Item.UnitPrice.Value</meta>
             <column length="65535" name="Clm_Itm_UntPrice_Vl"/>
         </property>
         <property name="clmOriginalPrescription" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.OriginalPrescription</meta>
             <column length="65535" name="Clm_OriginalPrescription"/>
         </property>
         <property name="clmPnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Patient</meta>
             <column length="65535" name="Clm_Pnt"/>
         </property>
         <property name="clmPayeeParty" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Payee.Party</meta>
             <column length="65535" name="Clm_Payee_Party"/>
         </property>
         <property name="clmPayeeTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Payee.Type.Coding.Code</meta>
             <column length="65535" name="Clm_Payee_Typ_Cdg_Cd"/>
         </property>
         <property name="clmPayeeTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Payee.Type.Coding.Display</meta>
             <column length="65535" name="Clm_Payee_Typ_Cdg_Dsply"/>
         </property>
         <property name="clmPayeeTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Payee.Type.Coding.System</meta>
             <column length="65535" name="Clm_Payee_Typ_Cdg_Sys"/>
         </property>
         <property name="clmPayeeTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Payee.Type.Coding.UserSelected</meta>
             <column length="65535" name="Clm_Payee_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="clmPayeeTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Payee.Type.Coding.Version</meta>
             <column length="65535" name="Clm_Payee_Typ_Cdg_Vrsn"/>
         </property>
         <property name="clmPayeeTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Payee.Type.Text</meta>
             <column length="65535" name="Clm_Payee_Typ_Txt"/>
         </property>
         <property name="clmPrescription" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Prescription</meta>
             <column length="65535" name="Clm_Prescription"/>
         </property>
         <property name="clmPriorityCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Priority.Coding.Code</meta>
             <column length="65535" name="Clm_Priority_Cdg_Cd"/>
         </property>
         <property name="clmPriorityCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Priority.Coding.Display</meta>
             <column length="65535" name="Clm_Priority_Cdg_Dsply"/>
         </property>
         <property name="clmPriorityCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Priority.Coding.System</meta>
             <column length="65535" name="Clm_Priority_Cdg_Sys"/>
         </property>
         <property name="clmPriorityCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Priority.Coding.UserSelected</meta>
             <column length="65535" name="Clm_Priority_Cdg_UsrSltd"/>
         </property>
         <property name="clmPriorityCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Priority.Coding.Version</meta>
             <column length="65535" name="Clm_Priority_Cdg_Vrsn"/>
         </property>
         <property name="clmPriorityTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Priority.Text</meta>
             <column length="65535" name="Clm_Priority_Txt"/>
         </property>
         <property name="clmPrcdrDt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Procedure.Date</meta>
             <column length="65535" name="Clm_Prcdr_Dt"/>
         </property>
         <property name="clmPrcdrPrcdrCdbleCncptCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Procedure.ProcedureCodeableConcept.Coding.Code</meta>
             <column length="65535" name="Clm_Prcdr_PrcdrCdbleCncpt_Cdg_Cd"/>
         </property>
         <property name="clmPrcdrPrcdrCdbleCncptCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Procedure.ProcedureCodeableConcept.Coding.Display</meta>
             <column length="65535" name="Clm_Prcdr_PrcdrCdbleCncpt_Cdg_Dsply"/>
         </property>
         <property name="clmPrcdrPrcdrCdbleCncptCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Procedure.ProcedureCodeableConcept.Coding.System</meta>
             <column length="65535" name="Clm_Prcdr_PrcdrCdbleCncpt_Cdg_Sys"/>
         </property>
         <property name="clmPrcdrPrcdrCdbleCncptCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Procedure.ProcedureCodeableConcept.Coding.UserSelected</meta>
             <column length="65535" name="Clm_Prcdr_PrcdrCdbleCncpt_Cdg_UsrSltd"/>
         </property>
         <property name="clmPrcdrPrcdrCdbleCncptCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Procedure.ProcedureCodeableConcept.Coding.Version</meta>
             <column length="65535" name="Clm_Prcdr_PrcdrCdbleCncpt_Cdg_Vrsn"/>
         </property>
         <property name="clmPrcdrPrcdrCdbleCncptTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Procedure.ProcedureCodeableConcept.Text</meta>
             <column length="65535" name="Clm_Prcdr_PrcdrCdbleCncpt_Txt"/>
         </property>
         <property name="clmPrcdrPrcdrRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Procedure.ProcedureReference</meta>
             <column length="65535" name="Clm_Prcdr_PrcdrRfrnc"/>
         </property>
         <property name="clmPrcdrSqnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Procedure.Sequence</meta>
             <column length="65535" name="Clm_Prcdr_Sqnc"/>
         </property>
         <property name="clmPrcdrTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Procedure.Type.Coding.Code</meta>
             <column length="65535" name="Clm_Prcdr_Typ_Cdg_Cd"/>
         </property>
         <property name="clmPrcdrTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Procedure.Type.Coding.Display</meta>
             <column length="65535" name="Clm_Prcdr_Typ_Cdg_Dsply"/>
         </property>
         <property name="clmPrcdrTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Procedure.Type.Coding.System</meta>
             <column length="65535" name="Clm_Prcdr_Typ_Cdg_Sys"/>
         </property>
         <property name="clmPrcdrTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Procedure.Type.Coding.UserSelected</meta>
             <column length="65535" name="Clm_Prcdr_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="clmPrcdrTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Procedure.Type.Coding.Version</meta>
             <column length="65535" name="Clm_Prcdr_Typ_Cdg_Vrsn"/>
         </property>
         <property name="clmPrcdrTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Procedure.Type.Text</meta>
             <column length="65535" name="Clm_Prcdr_Typ_Txt"/>
         </property>
         <property name="clmPrcdrUdi" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Procedure.Udi</meta>
             <column length="65535" name="Clm_Prcdr_Udi"/>
         </property>
         <property name="clmProvider" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Provider</meta>
             <column length="65535" name="Clm_Provider"/>
         </property>
         <property name="clmReferral" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Referral</meta>
             <column length="65535" name="Clm_Referral"/>
         </property>
         <property name="clmRltedClm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Related.Claim</meta>
             <column length="65535" name="Clm_Rlted_Clm"/>
         </property>
         <property name="clmRltedRfrncAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Related.Reference.Assigner</meta>
             <column length="65535" name="Clm_Rlted_Rfrnc_Assigner"/>
         </property>
         <property name="clmRltedRfrncPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Related.Reference.Period.End</meta>
             <column length="65535" name="Clm_Rlted_Rfrnc_Prd_End"/>
         </property>
         <property name="clmRltedRfrncPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Related.Reference.Period.Start</meta>
             <column length="65535" name="Clm_Rlted_Rfrnc_Prd_Strt"/>
         </property>
         <property name="clmRltedRfrncSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Related.Reference.System</meta>
             <column length="65535" name="Clm_Rlted_Rfrnc_Sys"/>
         </property>
         <property name="clmRltedRfrncTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Related.Reference.Type.Coding.Code</meta>
             <column length="65535" name="Clm_Rlted_Rfrnc_Typ_Cdg_Cd"/>
         </property>
         <property name="clmRltedRfrncTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Related.Reference.Type.Coding.Display</meta>
             <column length="65535" name="Clm_Rlted_Rfrnc_Typ_Cdg_Dsply"/>
         </property>
         <property name="clmRltedRfrncTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Related.Reference.Type.Coding.System</meta>
             <column length="65535" name="Clm_Rlted_Rfrnc_Typ_Cdg_Sys"/>
         </property>
         <property name="clmRltedRfrncTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Related.Reference.Type.Coding.UserSelected</meta>
             <column length="65535" name="Clm_Rlted_Rfrnc_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="clmRltedRfrncTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Related.Reference.Type.Coding.Version</meta>
             <column length="65535" name="Clm_Rlted_Rfrnc_Typ_Cdg_Vrsn"/>
         </property>
         <property name="clmRltedRfrncTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Related.Reference.Type.Text</meta>
             <column length="65535" name="Clm_Rlted_Rfrnc_Typ_Txt"/>
         </property>
         <property name="clmRltedRfrncUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Related.Reference.Use</meta>
             <column length="65535" name="Clm_Rlted_Rfrnc_Use"/>
         </property>
         <property name="clmRltedRfrncVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Related.Reference.Value</meta>
             <column length="65535" name="Clm_Rlted_Rfrnc_Vl"/>
         </property>
         <property name="clmRltedRltnshipCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Related.Relationship.Coding.Code</meta>
             <column length="65535" name="Clm_Rlted_Rltnship_Cdg_Cd"/>
         </property>
         <property name="clmRltedRltnshipCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Related.Relationship.Coding.Display</meta>
             <column length="65535" name="Clm_Rlted_Rltnship_Cdg_Dsply"/>
         </property>
         <property name="clmRltedRltnshipCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Related.Relationship.Coding.System</meta>
             <column length="65535" name="Clm_Rlted_Rltnship_Cdg_Sys"/>
         </property>
         <property name="clmRltedRltnshipCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Related.Relationship.Coding.UserSelected</meta>
             <column length="65535" name="Clm_Rlted_Rltnship_Cdg_UsrSltd"/>
         </property>
         <property name="clmRltedRltnshipCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Related.Relationship.Coding.Version</meta>
             <column length="65535" name="Clm_Rlted_Rltnship_Cdg_Vrsn"/>
         </property>
         <property name="clmRltedRltnshipTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Related.Relationship.Text</meta>
             <column length="65535" name="Clm_Rlted_Rltnship_Txt"/>
         </property>
         <property name="clmSts" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Status</meta>
             <column length="65535" name="Clm_Sts"/>
         </property>
         <property name="clmSubTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.SubType.Coding.Code</meta>
             <column length="65535" name="Clm_SubTyp_Cdg_Cd"/>
         </property>
         <property name="clmSubTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.SubType.Coding.Display</meta>
             <column length="65535" name="Clm_SubTyp_Cdg_Dsply"/>
         </property>
         <property name="clmSubTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.SubType.Coding.System</meta>
             <column length="65535" name="Clm_SubTyp_Cdg_Sys"/>
         </property>
         <property name="clmSubTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.SubType.Coding.UserSelected</meta>
             <column length="65535" name="Clm_SubTyp_Cdg_UsrSltd"/>
         </property>
         <property name="clmSubTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.SubType.Coding.Version</meta>
             <column length="65535" name="Clm_SubTyp_Cdg_Vrsn"/>
         </property>
         <property name="clmSubTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.SubType.Text</meta>
             <column length="65535" name="Clm_SubTyp_Txt"/>
         </property>
         <property name="clmSprtingInfoCtgryCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.SupportingInfo.Category.Coding.Code</meta>
             <column length="65535" name="Clm_SprtingInfo_Ctgry_Cdg_Cd"/>
         </property>
         <property name="clmSprtingInfoCtgryCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.SupportingInfo.Category.Coding.Display</meta>
             <column length="65535" name="Clm_SprtingInfo_Ctgry_Cdg_Dsply"/>
         </property>
         <property name="clmSprtingInfoCtgryCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.SupportingInfo.Category.Coding.System</meta>
             <column length="65535" name="Clm_SprtingInfo_Ctgry_Cdg_Sys"/>
         </property>
         <property name="clmSprtingInfoCtgryCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.SupportingInfo.Category.Coding.UserSelected</meta>
             <column length="65535" name="Clm_SprtingInfo_Ctgry_Cdg_UsrSltd"/>
         </property>
         <property name="clmSprtingInfoCtgryCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.SupportingInfo.Category.Coding.Version</meta>
             <column length="65535" name="Clm_SprtingInfo_Ctgry_Cdg_Vrsn"/>
         </property>
         <property name="clmSprtingInfoCtgryTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.SupportingInfo.Category.Text</meta>
             <column length="65535" name="Clm_SprtingInfo_Ctgry_Txt"/>
         </property>
         <property name="clmSprtingInfoCdCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.SupportingInfo.Code.Coding.Code</meta>
             <column length="65535" name="Clm_SprtingInfo_Cd_Cdg_Cd"/>
         </property>
         <property name="clmSprtingInfoCdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.SupportingInfo.Code.Coding.Display</meta>
             <column length="65535" name="Clm_SprtingInfo_Cd_Cdg_Dsply"/>
         </property>
         <property name="clmSprtingInfoCdCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.SupportingInfo.Code.Coding.System</meta>
             <column length="65535" name="Clm_SprtingInfo_Cd_Cdg_Sys"/>
         </property>
         <property name="clmSprtingInfoCdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.SupportingInfo.Code.Coding.UserSelected</meta>
             <column length="65535" name="Clm_SprtingInfo_Cd_Cdg_UsrSltd"/>
         </property>
         <property name="clmSprtingInfoCdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.SupportingInfo.Code.Coding.Version</meta>
             <column length="65535" name="Clm_SprtingInfo_Cd_Cdg_Vrsn"/>
         </property>
         <property name="clmSprtingInfoCdTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.SupportingInfo.Code.Text</meta>
             <column length="65535" name="Clm_SprtingInfo_Cd_Txt"/>
         </property>
         <property name="clmSprtingInfoRsnCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.SupportingInfo.Reason.Coding.Code</meta>
             <column length="65535" name="Clm_SprtingInfo_Rsn_Cdg_Cd"/>
         </property>
         <property name="clmSprtingInfoRsnCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.SupportingInfo.Reason.Coding.Display</meta>
             <column length="65535" name="Clm_SprtingInfo_Rsn_Cdg_Dsply"/>
         </property>
         <property name="clmSprtingInfoRsnCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.SupportingInfo.Reason.Coding.System</meta>
             <column length="65535" name="Clm_SprtingInfo_Rsn_Cdg_Sys"/>
         </property>
         <property name="clmSprtingInfoRsnCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.SupportingInfo.Reason.Coding.UserSelected</meta>
             <column length="65535" name="Clm_SprtingInfo_Rsn_Cdg_UsrSltd"/>
         </property>
         <property name="clmSprtingInfoRsnCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.SupportingInfo.Reason.Coding.Version</meta>
             <column length="65535" name="Clm_SprtingInfo_Rsn_Cdg_Vrsn"/>
         </property>
         <property name="clmSprtingInfoRsnTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.SupportingInfo.Reason.Text</meta>
             <column length="65535" name="Clm_SprtingInfo_Rsn_Txt"/>
         </property>
         <property name="clmSprtingInfoSqnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.SupportingInfo.Sequence</meta>
             <column length="65535" name="Clm_SprtingInfo_Sqnc"/>
         </property>
         <property name="clmSprtingInfoTmgDtTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.SupportingInfo.TimingDateType</meta>
             <column length="65535" name="Clm_SprtingInfo_TmgDtTyp"/>
         </property>
         <property name="clmSprtingInfoTmgPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.SupportingInfo.TimingPeriod.End</meta>
             <column length="65535" name="Clm_SprtingInfo_TmgPrd_End"/>
         </property>
         <property name="clmSprtingInfoTmgPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.SupportingInfo.TimingPeriod.Start</meta>
             <column length="65535" name="Clm_SprtingInfo_TmgPrd_Strt"/>
         </property>
         <property name="clmSprtingInfoVlAttchmntCntntTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.SupportingInfo.ValueAttachment.ContentType</meta>
             <column length="65535" name="Clm_SprtingInfo_VlAttchmnt_CntntTyp"/>
         </property>
         <property name="clmSprtingInfoVlAttchmntCreation" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.SupportingInfo.ValueAttachment.Creation</meta>
             <column length="65535" name="Clm_SprtingInfo_VlAttchmnt_Creation"/>
         </property>
         <property name="clmSprtingInfoVlAttchmntData" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.SupportingInfo.ValueAttachment.Data</meta>
             <column length="65535" name="Clm_SprtingInfo_VlAttchmnt_Data"/>
         </property>
         <property name="clmSprtingInfoVlAttchmntHash" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.SupportingInfo.ValueAttachment.Hash</meta>
             <column length="65535" name="Clm_SprtingInfo_VlAttchmnt_Hash"/>
         </property>
         <property name="clmSprtingInfoVlAttchmntLnguage" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.SupportingInfo.ValueAttachment.Language</meta>
             <column length="65535" name="Clm_SprtingInfo_VlAttchmnt_Lnguage"/>
         </property>
         <property name="clmSprtingInfoVlAttchmntSz" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.SupportingInfo.ValueAttachment.Size</meta>
             <column length="65535" name="Clm_SprtingInfo_VlAttchmnt_Sz"/>
         </property>
         <property name="clmSprtingInfoVlAttchmntTtl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.SupportingInfo.ValueAttachment.Title</meta>
             <column length="65535" name="Clm_SprtingInfo_VlAttchmnt_Ttl"/>
         </property>
         <property name="clmSprtingInfoVlAttchmntUrl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.SupportingInfo.ValueAttachment.Url</meta>
             <column length="65535" name="Clm_SprtingInfo_VlAttchmnt_Url"/>
         </property>
         <property name="clmSprtingInfoVlBooleanTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.SupportingInfo.ValueBooleanType</meta>
             <column length="65535" name="Clm_SprtingInfo_VlBooleanTyp"/>
         </property>
         <property name="clmSprtingInfoVlQntyCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.SupportingInfo.ValueQuantity.Code</meta>
             <column length="65535" name="Clm_SprtingInfo_VlQnty_Cd"/>
         </property>
         <property name="clmSprtingInfoVlQntyCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.SupportingInfo.ValueQuantity.Comparator</meta>
             <column length="65535" name="Clm_SprtingInfo_VlQnty_Cmprtr"/>
         </property>
         <property name="clmSprtingInfoVlQntySys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.SupportingInfo.ValueQuantity.System</meta>
             <column length="65535" name="Clm_SprtingInfo_VlQnty_Sys"/>
         </property>
         <property name="clmSprtingInfoVlQntyUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.SupportingInfo.ValueQuantity.Unit</meta>
             <column length="65535" name="Clm_SprtingInfo_VlQnty_Unt"/>
         </property>
         <property name="clmSprtingInfoVlQntyVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.SupportingInfo.ValueQuantity.Value</meta>
             <column length="65535" name="Clm_SprtingInfo_VlQnty_Vl"/>
         </property>
         <property name="clmSprtingInfoVlRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.SupportingInfo.ValueReference</meta>
             <column length="65535" name="Clm_SprtingInfo_VlRfrnc"/>
         </property>
         <property name="clmSprtingInfoVlStrgTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.SupportingInfo.ValueStringType</meta>
             <column length="65535" name="Clm_SprtingInfo_VlStrgTyp"/>
         </property>
         <property name="clmTotalCrncy" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Total.Currency</meta>
             <column length="65535" name="Clm_Total_Crncy"/>
         </property>
         <property name="clmTotalVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Total.Value</meta>
             <column length="65535" name="Clm_Total_Vl"/>
         </property>
         <property name="clmTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Type.Coding.Code</meta>
             <column length="65535" name="Clm_Typ_Cdg_Cd"/>
         </property>
         <property name="clmTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Type.Coding.Display</meta>
             <column length="65535" name="Clm_Typ_Cdg_Dsply"/>
         </property>
         <property name="clmTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Type.Coding.System</meta>
             <column length="65535" name="Clm_Typ_Cdg_Sys"/>
         </property>
         <property name="clmTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Type.Coding.UserSelected</meta>
             <column length="65535" name="Clm_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="clmTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Type.Coding.Version</meta>
             <column length="65535" name="Clm_Typ_Cdg_Vrsn"/>
         </property>
         <property name="clmTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Type.Text</meta>
             <column length="65535" name="Clm_Typ_Txt"/>
         </property>
         <property name="clmUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Claim.Use</meta>
             <column length="65535" name="Clm_Use"/>
         </property>
     </class>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Aug 17, 2022, 11:08:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 16, 2022, 11:34:16 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="TestScript" optimistic-lock="none" table="TestScript">
         <id name="id" type="string">
@@ -7,835 +7,835 @@
             <generator class="identity"/>
         </id>
         <property name="tstScrptCntctNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Contact.Name</meta>
             <column length="65535" name="TstScrpt_Cntct_Nm"/>
         </property>
         <property name="tstScrptCntctTlcmPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Contact.Telecom.Period.End</meta>
             <column length="65535" name="TstScrpt_Cntct_Tlcm_Prd_End"/>
         </property>
         <property name="tstScrptCntctTlcmPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Contact.Telecom.Period.Start</meta>
             <column length="65535" name="TstScrpt_Cntct_Tlcm_Prd_Strt"/>
         </property>
         <property name="tstScrptCntctTlcmRnk" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Contact.Telecom.Rank</meta>
             <column length="65535" name="TstScrpt_Cntct_Tlcm_Rnk"/>
         </property>
         <property name="tstScrptCntctTlcmSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Contact.Telecom.System</meta>
             <column length="65535" name="TstScrpt_Cntct_Tlcm_Sys"/>
         </property>
         <property name="tstScrptCntctTlcmUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Contact.Telecom.Use</meta>
             <column length="65535" name="TstScrpt_Cntct_Tlcm_Use"/>
         </property>
         <property name="tstScrptCntctTlcmVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Contact.Telecom.Value</meta>
             <column length="65535" name="TstScrpt_Cntct_Tlcm_Vl"/>
         </property>
         <property name="tstScrptCopyright" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Copyright</meta>
             <column length="65535" name="TstScrpt_Copyright"/>
         </property>
         <property name="tstScrptDt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Date</meta>
             <column length="65535" name="TstScrpt_Dt"/>
         </property>
         <property name="tstScrptDscrptn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Description</meta>
             <column length="65535" name="TstScrpt_Dscrptn"/>
         </property>
         <property name="tstScrptDestinationIndex" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Destination.Index</meta>
             <column length="65535" name="TstScrpt_Destination_Index"/>
         </property>
         <property name="tstScrptDestinationProfileCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Destination.Profile.Code</meta>
             <column length="65535" name="TstScrpt_Destination_Profile_Cd"/>
         </property>
         <property name="tstScrptDestinationProfileDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Destination.Profile.Display</meta>
             <column length="65535" name="TstScrpt_Destination_Profile_Dsply"/>
         </property>
         <property name="tstScrptDestinationProfileSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Destination.Profile.System</meta>
             <column length="65535" name="TstScrpt_Destination_Profile_Sys"/>
         </property>
         <property name="tstScrptDestinationProfileUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Destination.Profile.UserSelected</meta>
             <column length="65535" name="TstScrpt_Destination_Profile_UsrSltd"/>
         </property>
         <property name="tstScrptDestinationProfileVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Destination.Profile.Version</meta>
             <column length="65535" name="TstScrpt_Destination_Profile_Vrsn"/>
         </property>
         <property name="tstScrptExprmtl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Experimental</meta>
             <column length="65535" name="TstScrpt_Exprmtl"/>
         </property>
         <property name="tstScrptFixtureAutocreate" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Fixture.Autocreate</meta>
             <column length="65535" name="TstScrpt_Fixture_Autocreate"/>
         </property>
         <property name="tstScrptFixtureAutodelete" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Fixture.Autodelete</meta>
             <column length="65535" name="TstScrpt_Fixture_Autodelete"/>
         </property>
         <property name="tstScrptFixtureRsrc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Fixture.Resource</meta>
             <column length="65535" name="TstScrpt_Fixture_Rsrc"/>
         </property>
         <property name="tstScrptIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Identifier.Assigner</meta>
             <column length="65535" name="TstScrpt_Id_Assigner"/>
         </property>
         <property name="tstScrptIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Identifier.Period.End</meta>
             <column length="65535" name="TstScrpt_Id_Prd_End"/>
         </property>
         <property name="tstScrptIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Identifier.Period.Start</meta>
             <column length="65535" name="TstScrpt_Id_Prd_Strt"/>
         </property>
         <property name="tstScrptIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Identifier.System</meta>
             <column length="65535" name="TstScrpt_Id_Sys"/>
         </property>
         <property name="tstScrptIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Identifier.Type.Coding.Code</meta>
             <column length="65535" name="TstScrpt_Id_Typ_Cdg_Cd"/>
         </property>
         <property name="tstScrptIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Identifier.Type.Coding.Display</meta>
             <column length="65535" name="TstScrpt_Id_Typ_Cdg_Dsply"/>
         </property>
         <property name="tstScrptIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Identifier.Type.Coding.System</meta>
             <column length="65535" name="TstScrpt_Id_Typ_Cdg_Sys"/>
         </property>
         <property name="tstScrptIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Identifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="TstScrpt_Id_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="tstScrptIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Identifier.Type.Coding.Version</meta>
             <column length="65535" name="TstScrpt_Id_Typ_Cdg_Vrsn"/>
         </property>
         <property name="tstScrptIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Identifier.Type.Text</meta>
             <column length="65535" name="TstScrpt_Id_Typ_Txt"/>
         </property>
         <property name="tstScrptIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Identifier.Use</meta>
             <column length="65535" name="TstScrpt_Id_Use"/>
         </property>
         <property name="tstScrptIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Identifier.Value</meta>
             <column length="65535" name="TstScrpt_Id_Vl"/>
         </property>
         <property name="tstScrptJrsdctnCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Jurisdiction.Coding.Code</meta>
             <column length="65535" name="TstScrpt_Jrsdctn_Cdg_Cd"/>
         </property>
         <property name="tstScrptJrsdctnCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Jurisdiction.Coding.Display</meta>
             <column length="65535" name="TstScrpt_Jrsdctn_Cdg_Dsply"/>
         </property>
         <property name="tstScrptJrsdctnCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Jurisdiction.Coding.System</meta>
             <column length="65535" name="TstScrpt_Jrsdctn_Cdg_Sys"/>
         </property>
         <property name="tstScrptJrsdctnCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Jurisdiction.Coding.UserSelected</meta>
             <column length="65535" name="TstScrpt_Jrsdctn_Cdg_UsrSltd"/>
         </property>
         <property name="tstScrptJrsdctnCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Jurisdiction.Coding.Version</meta>
             <column length="65535" name="TstScrpt_Jrsdctn_Cdg_Vrsn"/>
         </property>
         <property name="tstScrptJrsdctnTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Jurisdiction.Text</meta>
             <column length="65535" name="TstScrpt_Jrsdctn_Txt"/>
         </property>
         <property name="tstScrptMetadataCapbltyCpnlties" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Metadata.Capability.Capabilities</meta>
             <column length="65535" name="TstScrpt_Metadata_Capblty_Cpnlties"/>
         </property>
         <property name="tstScrptMetadataCapbltyDscrptn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Metadata.Capability.Description</meta>
             <column length="65535" name="TstScrpt_Metadata_Capblty_Dscrptn"/>
         </property>
         <property name="tstScrptMetadataCapbltyDestination" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Metadata.Capability.Destination</meta>
             <column length="65535" name="TstScrpt_Metadata_Capblty_Destination"/>
         </property>
         <property name="tstScrptMetadataCapbltyLink" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Metadata.Capability.Link</meta>
             <column length="65535" name="TstScrpt_Metadata_Capblty_Link"/>
         </property>
         <property name="tstScrptMetadataCapbltyOrigin" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Metadata.Capability.Origin</meta>
             <column length="65535" name="TstScrpt_Metadata_Capblty_Origin"/>
         </property>
         <property name="tstScrptMetadataCapbltyRequired" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Metadata.Capability.Required</meta>
             <column length="65535" name="TstScrpt_Metadata_Capblty_Required"/>
         </property>
         <property name="tstScrptMetadataCapbltyValidated" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Metadata.Capability.Validated</meta>
             <column length="65535" name="TstScrpt_Metadata_Capblty_Validated"/>
         </property>
         <property name="tstScrptMetadataLinkDscrptn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Metadata.Link.Description</meta>
             <column length="65535" name="TstScrpt_Metadata_Link_Dscrptn"/>
         </property>
         <property name="tstScrptMetadataLinkUrl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Metadata.Link.Url</meta>
             <column length="65535" name="TstScrpt_Metadata_Link_Url"/>
         </property>
         <property name="tstScrptNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Name</meta>
             <column length="65535" name="TstScrpt_Nm"/>
         </property>
         <property name="tstScrptOriginIndex" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Origin.Index</meta>
             <column length="65535" name="TstScrpt_Origin_Index"/>
         </property>
         <property name="tstScrptOriginProfileCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Origin.Profile.Code</meta>
             <column length="65535" name="TstScrpt_Origin_Profile_Cd"/>
         </property>
         <property name="tstScrptOriginProfileDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Origin.Profile.Display</meta>
             <column length="65535" name="TstScrpt_Origin_Profile_Dsply"/>
         </property>
         <property name="tstScrptOriginProfileSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Origin.Profile.System</meta>
             <column length="65535" name="TstScrpt_Origin_Profile_Sys"/>
         </property>
         <property name="tstScrptOriginProfileUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Origin.Profile.UserSelected</meta>
             <column length="65535" name="TstScrpt_Origin_Profile_UsrSltd"/>
         </property>
         <property name="tstScrptOriginProfileVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Origin.Profile.Version</meta>
             <column length="65535" name="TstScrpt_Origin_Profile_Vrsn"/>
         </property>
         <property name="tstScrptProfile" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Profile</meta>
             <column length="65535" name="TstScrpt_Profile"/>
         </property>
         <property name="tstScrptPblshr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Publisher</meta>
             <column length="65535" name="TstScrpt_Pblshr"/>
         </property>
         <property name="tstScrptPrpse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Purpose</meta>
             <column length="65535" name="TstScrpt_Prpse"/>
         </property>
         <property name="tstScrptStupActnAssertCompareToSrcExprsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Setup.Action.Assert.CompareToSourceExpression</meta>
             <column length="65535" name="TstScrpt_Stup_Actn_Assert_CompareToSrcExprsn"/>
         </property>
         <property name="tstScrptStupActnAssertCompareToSrcId" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Setup.Action.Assert.CompareToSourceId</meta>
             <column length="65535" name="TstScrpt_Stup_Actn_Assert_CompareToSrcId"/>
         </property>
         <property name="tstScrptStupActnAssertCompareToSrcPath" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Setup.Action.Assert.CompareToSourcePath</meta>
             <column length="65535" name="TstScrpt_Stup_Actn_Assert_CompareToSrcPath"/>
         </property>
         <property name="tstScrptStupActnAssertCntntTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Setup.Action.Assert.ContentType</meta>
             <column length="65535" name="TstScrpt_Stup_Actn_Assert_CntntTyp"/>
         </property>
         <property name="tstScrptStupActnAssertDscrptn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Setup.Action.Assert.Description</meta>
             <column length="65535" name="TstScrpt_Stup_Actn_Assert_Dscrptn"/>
         </property>
         <property name="tstScrptStupActnAssertDirection" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Setup.Action.Assert.Direction</meta>
             <column length="65535" name="TstScrpt_Stup_Actn_Assert_Direction"/>
         </property>
         <property name="tstScrptStupActnAssertExprsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Setup.Action.Assert.Expression</meta>
             <column length="65535" name="TstScrpt_Stup_Actn_Assert_Exprsn"/>
         </property>
         <property name="tstScrptStupActnAssertHeaderField" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Setup.Action.Assert.HeaderField</meta>
             <column length="65535" name="TstScrpt_Stup_Actn_Assert_HeaderField"/>
         </property>
         <property name="tstScrptStupActnAssertLbl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Setup.Action.Assert.Label</meta>
             <column length="65535" name="TstScrpt_Stup_Actn_Assert_Lbl"/>
         </property>
         <property name="tstScrptStupActnAssertMinimumId" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Setup.Action.Assert.MinimumId</meta>
             <column length="65535" name="TstScrpt_Stup_Actn_Assert_MinimumId"/>
         </property>
         <property name="tstScrptStupActnAssertNavigationLinks" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Setup.Action.Assert.NavigationLinks</meta>
             <column length="65535" name="TstScrpt_Stup_Actn_Assert_NavigationLinks"/>
         </property>
         <property name="tstScrptStupActnAssertOperator" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Setup.Action.Assert.Operator</meta>
             <column length="65535" name="TstScrpt_Stup_Actn_Assert_Operator"/>
         </property>
         <property name="tstScrptStupActnAssertPath" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Setup.Action.Assert.Path</meta>
             <column length="65535" name="TstScrpt_Stup_Actn_Assert_Path"/>
         </property>
         <property name="tstScrptStupActnAssertRqstMthd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Setup.Action.Assert.RequestMethod</meta>
             <column length="65535" name="TstScrpt_Stup_Actn_Assert_RqstMthd"/>
         </property>
         <property name="tstScrptStupActnAssertRqstUrl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Setup.Action.Assert.RequestURL</meta>
             <column length="65535" name="TstScrpt_Stup_Actn_Assert_RqstUrl"/>
         </property>
         <property name="tstScrptStupActnAssertRsrc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Setup.Action.Assert.Resource</meta>
             <column length="65535" name="TstScrpt_Stup_Actn_Assert_Rsrc"/>
         </property>
         <property name="tstScrptStupActnAssertRsps" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Setup.Action.Assert.Response</meta>
             <column length="65535" name="TstScrpt_Stup_Actn_Assert_Rsps"/>
         </property>
         <property name="tstScrptStupActnAssertRspsCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Setup.Action.Assert.ResponseCode</meta>
             <column length="65535" name="TstScrpt_Stup_Actn_Assert_RspsCd"/>
         </property>
         <property name="tstScrptStupActnAssertSrcId" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Setup.Action.Assert.SourceId</meta>
             <column length="65535" name="TstScrpt_Stup_Actn_Assert_SrcId"/>
         </property>
         <property name="tstScrptStupActnAssertValidateProfileId" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Setup.Action.Assert.ValidateProfileId</meta>
             <column length="65535" name="TstScrpt_Stup_Actn_Assert_ValidateProfileId"/>
         </property>
         <property name="tstScrptStupActnAssertVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Setup.Action.Assert.Value</meta>
             <column length="65535" name="TstScrpt_Stup_Actn_Assert_Vl"/>
         </property>
         <property name="tstScrptStupActnAssertWarningOnly" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Setup.Action.Assert.WarningOnly</meta>
             <column length="65535" name="TstScrpt_Stup_Actn_Assert_WarningOnly"/>
         </property>
         <property name="tstScrptStupActnOprtnAccept" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Setup.Action.Operation.Accept</meta>
             <column length="65535" name="TstScrpt_Stup_Actn_Oprtn_Accept"/>
         </property>
         <property name="tstScrptStupActnOprtnCntntTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Setup.Action.Operation.ContentType</meta>
             <column length="65535" name="TstScrpt_Stup_Actn_Oprtn_CntntTyp"/>
         </property>
         <property name="tstScrptStupActnOprtnDscrptn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Setup.Action.Operation.Description</meta>
             <column length="65535" name="TstScrpt_Stup_Actn_Oprtn_Dscrptn"/>
         </property>
         <property name="tstScrptStupActnOprtnDestination" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Setup.Action.Operation.Destination</meta>
             <column length="65535" name="TstScrpt_Stup_Actn_Oprtn_Destination"/>
         </property>
         <property name="tstScrptStupActnOprtnEncodeRqstUrl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Setup.Action.Operation.EncodeRequestUrl</meta>
             <column length="65535" name="TstScrpt_Stup_Actn_Oprtn_EncodeRqstUrl"/>
         </property>
         <property name="tstScrptStupActnOprtnLbl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Setup.Action.Operation.Label</meta>
             <column length="65535" name="TstScrpt_Stup_Actn_Oprtn_Lbl"/>
         </property>
         <property name="tstScrptStupActnOprtnMthd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Setup.Action.Operation.Method</meta>
             <column length="65535" name="TstScrpt_Stup_Actn_Oprtn_Mthd"/>
         </property>
         <property name="tstScrptStupActnOprtnOrigin" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Setup.Action.Operation.Origin</meta>
             <column length="65535" name="TstScrpt_Stup_Actn_Oprtn_Origin"/>
         </property>
         <property name="tstScrptStupActnOprtnParams" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Setup.Action.Operation.Params</meta>
             <column length="65535" name="TstScrpt_Stup_Actn_Oprtn_Params"/>
         </property>
         <property name="tstScrptStupActnOprtnRqstHeaderField" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Setup.Action.Operation.RequestHeader.Field</meta>
             <column length="65535" name="TstScrpt_Stup_Actn_Oprtn_RqstHeader_Field"/>
         </property>
         <property name="tstScrptStupActnOprtnRqstHeaderVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Setup.Action.Operation.RequestHeader.Value</meta>
             <column length="65535" name="TstScrpt_Stup_Actn_Oprtn_RqstHeader_Vl"/>
         </property>
         <property name="tstScrptStupActnOprtnRqstId" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Setup.Action.Operation.RequestId</meta>
             <column length="65535" name="TstScrpt_Stup_Actn_Oprtn_RqstId"/>
         </property>
         <property name="tstScrptStupActnOprtnRsrc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Setup.Action.Operation.Resource</meta>
             <column length="65535" name="TstScrpt_Stup_Actn_Oprtn_Rsrc"/>
         </property>
         <property name="tstScrptStupActnOprtnRspsId" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Setup.Action.Operation.ResponseId</meta>
             <column length="65535" name="TstScrpt_Stup_Actn_Oprtn_RspsId"/>
         </property>
         <property name="tstScrptStupActnOprtnSrcId" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Setup.Action.Operation.SourceId</meta>
             <column length="65535" name="TstScrpt_Stup_Actn_Oprtn_SrcId"/>
         </property>
         <property name="tstScrptStupActnOprtnTarId" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Setup.Action.Operation.TarId</meta>
             <column length="65535" name="TstScrpt_Stup_Actn_Oprtn_TarId"/>
         </property>
         <property name="tstScrptStupActnOprtnTypCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Setup.Action.Operation.Type.Code</meta>
             <column length="65535" name="TstScrpt_Stup_Actn_Oprtn_Typ_Cd"/>
         </property>
         <property name="tstScrptStupActnOprtnTypDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Setup.Action.Operation.Type.Display</meta>
             <column length="65535" name="TstScrpt_Stup_Actn_Oprtn_Typ_Dsply"/>
         </property>
         <property name="tstScrptStupActnOprtnTypSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Setup.Action.Operation.Type.System</meta>
             <column length="65535" name="TstScrpt_Stup_Actn_Oprtn_Typ_Sys"/>
         </property>
         <property name="tstScrptStupActnOprtnTypUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Setup.Action.Operation.Type.UserSelected</meta>
             <column length="65535" name="TstScrpt_Stup_Actn_Oprtn_Typ_UsrSltd"/>
         </property>
         <property name="tstScrptStupActnOprtnTypVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Setup.Action.Operation.Type.Version</meta>
             <column length="65535" name="TstScrpt_Stup_Actn_Oprtn_Typ_Vrsn"/>
         </property>
         <property name="tstScrptStupActnOprtnUrl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Setup.Action.Operation.Url</meta>
             <column length="65535" name="TstScrpt_Stup_Actn_Oprtn_Url"/>
         </property>
         <property name="tstScrptSts" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Status</meta>
             <column length="65535" name="TstScrpt_Sts"/>
         </property>
         <property name="tstScrptTeardownActnOprtnAccept" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Teardown.Action.Operation.Accept</meta>
             <column length="65535" name="TstScrpt_Teardown_Actn_Oprtn_Accept"/>
         </property>
         <property name="tstScrptTeardownActnOprtnCntntTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Teardown.Action.Operation.ContentType</meta>
             <column length="65535" name="TstScrpt_Teardown_Actn_Oprtn_CntntTyp"/>
         </property>
         <property name="tstScrptTeardownActnOprtnDscrptn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Teardown.Action.Operation.Description</meta>
             <column length="65535" name="TstScrpt_Teardown_Actn_Oprtn_Dscrptn"/>
         </property>
         <property name="tstScrptTeardownActnOprtnDestination" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Teardown.Action.Operation.Destination</meta>
             <column length="65535" name="TstScrpt_Teardown_Actn_Oprtn_Destination"/>
         </property>
         <property name="tstScrptTeardownActnOprtnEncodeRqstUrl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Teardown.Action.Operation.EncodeRequestUrl</meta>
             <column length="65535" name="TstScrpt_Teardown_Actn_Oprtn_EncodeRqstUrl"/>
         </property>
         <property name="tstScrptTeardownActnOprtnLbl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Teardown.Action.Operation.Label</meta>
             <column length="65535" name="TstScrpt_Teardown_Actn_Oprtn_Lbl"/>
         </property>
         <property name="tstScrptTeardownActnOprtnMthd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Teardown.Action.Operation.Method</meta>
             <column length="65535" name="TstScrpt_Teardown_Actn_Oprtn_Mthd"/>
         </property>
         <property name="tstScrptTeardownActnOprtnOrigin" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Teardown.Action.Operation.Origin</meta>
             <column length="65535" name="TstScrpt_Teardown_Actn_Oprtn_Origin"/>
         </property>
         <property name="tstScrptTeardownActnOprtnParams" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Teardown.Action.Operation.Params</meta>
             <column length="65535" name="TstScrpt_Teardown_Actn_Oprtn_Params"/>
         </property>
         <property name="tstScrptTeardownActnOprtnRqstHeaderField" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Teardown.Action.Operation.RequestHeader.Field</meta>
             <column length="65535" name="TstScrpt_Teardown_Actn_Oprtn_RqstHeader_Field"/>
         </property>
         <property name="tstScrptTeardownActnOprtnRqstHeaderVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Teardown.Action.Operation.RequestHeader.Value</meta>
             <column length="65535" name="TstScrpt_Teardown_Actn_Oprtn_RqstHeader_Vl"/>
         </property>
         <property name="tstScrptTeardownActnOprtnRqstId" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Teardown.Action.Operation.RequestId</meta>
             <column length="65535" name="TstScrpt_Teardown_Actn_Oprtn_RqstId"/>
         </property>
         <property name="tstScrptTeardownActnOprtnRsrc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Teardown.Action.Operation.Resource</meta>
             <column length="65535" name="TstScrpt_Teardown_Actn_Oprtn_Rsrc"/>
         </property>
         <property name="tstScrptTeardownActnOprtnRspsId" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Teardown.Action.Operation.ResponseId</meta>
             <column length="65535" name="TstScrpt_Teardown_Actn_Oprtn_RspsId"/>
         </property>
         <property name="tstScrptTeardownActnOprtnSrcId" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Teardown.Action.Operation.SourceId</meta>
             <column length="65535" name="TstScrpt_Teardown_Actn_Oprtn_SrcId"/>
         </property>
         <property name="tstScrptTeardownActnOprtnTarId" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Teardown.Action.Operation.TarId</meta>
             <column length="65535" name="TstScrpt_Teardown_Actn_Oprtn_TarId"/>
         </property>
         <property name="tstScrptTeardownActnOprtnTypCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Teardown.Action.Operation.Type.Code</meta>
             <column length="65535" name="TstScrpt_Teardown_Actn_Oprtn_Typ_Cd"/>
         </property>
         <property name="tstScrptTeardownActnOprtnTypDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Teardown.Action.Operation.Type.Display</meta>
             <column length="65535" name="TstScrpt_Teardown_Actn_Oprtn_Typ_Dsply"/>
         </property>
         <property name="tstScrptTeardownActnOprtnTypSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Teardown.Action.Operation.Type.System</meta>
             <column length="65535" name="TstScrpt_Teardown_Actn_Oprtn_Typ_Sys"/>
         </property>
         <property name="tstScrptTeardownActnOprtnTypUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Teardown.Action.Operation.Type.UserSelected</meta>
             <column length="65535" name="TstScrpt_Teardown_Actn_Oprtn_Typ_UsrSltd"/>
         </property>
         <property name="tstScrptTeardownActnOprtnTypVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Teardown.Action.Operation.Type.Version</meta>
             <column length="65535" name="TstScrpt_Teardown_Actn_Oprtn_Typ_Vrsn"/>
         </property>
         <property name="tstScrptTeardownActnOprtnUrl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Teardown.Action.Operation.Url</meta>
             <column length="65535" name="TstScrpt_Teardown_Actn_Oprtn_Url"/>
         </property>
         <property name="tstScrptTstActnAssertCompareToSrcExprsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Test.Action.Assert.CompareToSourceExpression</meta>
             <column length="65535" name="TstScrpt_Tst_Actn_Assert_CompareToSrcExprsn"/>
         </property>
         <property name="tstScrptTstActnAssertCompareToSrcId" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Test.Action.Assert.CompareToSourceId</meta>
             <column length="65535" name="TstScrpt_Tst_Actn_Assert_CompareToSrcId"/>
         </property>
         <property name="tstScrptTstActnAssertCompareToSrcPath" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Test.Action.Assert.CompareToSourcePath</meta>
             <column length="65535" name="TstScrpt_Tst_Actn_Assert_CompareToSrcPath"/>
         </property>
         <property name="tstScrptTstActnAssertCntntTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Test.Action.Assert.ContentType</meta>
             <column length="65535" name="TstScrpt_Tst_Actn_Assert_CntntTyp"/>
         </property>
         <property name="tstScrptTstActnAssertDscrptn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Test.Action.Assert.Description</meta>
             <column length="65535" name="TstScrpt_Tst_Actn_Assert_Dscrptn"/>
         </property>
         <property name="tstScrptTstActnAssertDirection" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Test.Action.Assert.Direction</meta>
             <column length="65535" name="TstScrpt_Tst_Actn_Assert_Direction"/>
         </property>
         <property name="tstScrptTstActnAssertExprsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Test.Action.Assert.Expression</meta>
             <column length="65535" name="TstScrpt_Tst_Actn_Assert_Exprsn"/>
         </property>
         <property name="tstScrptTstActnAssertHeaderField" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Test.Action.Assert.HeaderField</meta>
             <column length="65535" name="TstScrpt_Tst_Actn_Assert_HeaderField"/>
         </property>
         <property name="tstScrptTstActnAssertLbl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Test.Action.Assert.Label</meta>
             <column length="65535" name="TstScrpt_Tst_Actn_Assert_Lbl"/>
         </property>
         <property name="tstScrptTstActnAssertMinimumId" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Test.Action.Assert.MinimumId</meta>
             <column length="65535" name="TstScrpt_Tst_Actn_Assert_MinimumId"/>
         </property>
         <property name="tstScrptTstActnAssertNavigationLinks" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Test.Action.Assert.NavigationLinks</meta>
             <column length="65535" name="TstScrpt_Tst_Actn_Assert_NavigationLinks"/>
         </property>
         <property name="tstScrptTstActnAssertOperator" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Test.Action.Assert.Operator</meta>
             <column length="65535" name="TstScrpt_Tst_Actn_Assert_Operator"/>
         </property>
         <property name="tstScrptTstActnAssertPath" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Test.Action.Assert.Path</meta>
             <column length="65535" name="TstScrpt_Tst_Actn_Assert_Path"/>
         </property>
         <property name="tstScrptTstActnAssertRqstMthd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Test.Action.Assert.RequestMethod</meta>
             <column length="65535" name="TstScrpt_Tst_Actn_Assert_RqstMthd"/>
         </property>
         <property name="tstScrptTstActnAssertRqstUrl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Test.Action.Assert.RequestURL</meta>
             <column length="65535" name="TstScrpt_Tst_Actn_Assert_RqstUrl"/>
         </property>
         <property name="tstScrptTstActnAssertRsrc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Test.Action.Assert.Resource</meta>
             <column length="65535" name="TstScrpt_Tst_Actn_Assert_Rsrc"/>
         </property>
         <property name="tstScrptTstActnAssertRsps" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Test.Action.Assert.Response</meta>
             <column length="65535" name="TstScrpt_Tst_Actn_Assert_Rsps"/>
         </property>
         <property name="tstScrptTstActnAssertRspsCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Test.Action.Assert.ResponseCode</meta>
             <column length="65535" name="TstScrpt_Tst_Actn_Assert_RspsCd"/>
         </property>
         <property name="tstScrptTstActnAssertSrcId" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Test.Action.Assert.SourceId</meta>
             <column length="65535" name="TstScrpt_Tst_Actn_Assert_SrcId"/>
         </property>
         <property name="tstScrptTstActnAssertValidateProfileId" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Test.Action.Assert.ValidateProfileId</meta>
             <column length="65535" name="TstScrpt_Tst_Actn_Assert_ValidateProfileId"/>
         </property>
         <property name="tstScrptTstActnAssertVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Test.Action.Assert.Value</meta>
             <column length="65535" name="TstScrpt_Tst_Actn_Assert_Vl"/>
         </property>
         <property name="tstScrptTstActnAssertWarningOnly" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Test.Action.Assert.WarningOnly</meta>
             <column length="65535" name="TstScrpt_Tst_Actn_Assert_WarningOnly"/>
         </property>
         <property name="tstScrptTstActnOprtnAccept" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Test.Action.Operation.Accept</meta>
             <column length="65535" name="TstScrpt_Tst_Actn_Oprtn_Accept"/>
         </property>
         <property name="tstScrptTstActnOprtnCntntTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Test.Action.Operation.ContentType</meta>
             <column length="65535" name="TstScrpt_Tst_Actn_Oprtn_CntntTyp"/>
         </property>
         <property name="tstScrptTstActnOprtnDscrptn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Test.Action.Operation.Description</meta>
             <column length="65535" name="TstScrpt_Tst_Actn_Oprtn_Dscrptn"/>
         </property>
         <property name="tstScrptTstActnOprtnDestination" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Test.Action.Operation.Destination</meta>
             <column length="65535" name="TstScrpt_Tst_Actn_Oprtn_Destination"/>
         </property>
         <property name="tstScrptTstActnOprtnEncodeRqstUrl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Test.Action.Operation.EncodeRequestUrl</meta>
             <column length="65535" name="TstScrpt_Tst_Actn_Oprtn_EncodeRqstUrl"/>
         </property>
         <property name="tstScrptTstActnOprtnLbl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Test.Action.Operation.Label</meta>
             <column length="65535" name="TstScrpt_Tst_Actn_Oprtn_Lbl"/>
         </property>
         <property name="tstScrptTstActnOprtnMthd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Test.Action.Operation.Method</meta>
             <column length="65535" name="TstScrpt_Tst_Actn_Oprtn_Mthd"/>
         </property>
         <property name="tstScrptTstActnOprtnOrigin" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Test.Action.Operation.Origin</meta>
             <column length="65535" name="TstScrpt_Tst_Actn_Oprtn_Origin"/>
         </property>
         <property name="tstScrptTstActnOprtnParams" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Test.Action.Operation.Params</meta>
             <column length="65535" name="TstScrpt_Tst_Actn_Oprtn_Params"/>
         </property>
         <property name="tstScrptTstActnOprtnRqstHeaderField" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Test.Action.Operation.RequestHeader.Field</meta>
             <column length="65535" name="TstScrpt_Tst_Actn_Oprtn_RqstHeader_Field"/>
         </property>
         <property name="tstScrptTstActnOprtnRqstHeaderVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Test.Action.Operation.RequestHeader.Value</meta>
             <column length="65535" name="TstScrpt_Tst_Actn_Oprtn_RqstHeader_Vl"/>
         </property>
         <property name="tstScrptTstActnOprtnRqstId" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Test.Action.Operation.RequestId</meta>
             <column length="65535" name="TstScrpt_Tst_Actn_Oprtn_RqstId"/>
         </property>
         <property name="tstScrptTstActnOprtnRsrc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Test.Action.Operation.Resource</meta>
             <column length="65535" name="TstScrpt_Tst_Actn_Oprtn_Rsrc"/>
         </property>
         <property name="tstScrptTstActnOprtnRspsId" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Test.Action.Operation.ResponseId</meta>
             <column length="65535" name="TstScrpt_Tst_Actn_Oprtn_RspsId"/>
         </property>
         <property name="tstScrptTstActnOprtnSrcId" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Test.Action.Operation.SourceId</meta>
             <column length="65535" name="TstScrpt_Tst_Actn_Oprtn_SrcId"/>
         </property>
         <property name="tstScrptTstActnOprtnTarId" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Test.Action.Operation.TarId</meta>
             <column length="65535" name="TstScrpt_Tst_Actn_Oprtn_TarId"/>
         </property>
         <property name="tstScrptTstActnOprtnTypCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Test.Action.Operation.Type.Code</meta>
             <column length="65535" name="TstScrpt_Tst_Actn_Oprtn_Typ_Cd"/>
         </property>
         <property name="tstScrptTstActnOprtnTypDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Test.Action.Operation.Type.Display</meta>
             <column length="65535" name="TstScrpt_Tst_Actn_Oprtn_Typ_Dsply"/>
         </property>
         <property name="tstScrptTstActnOprtnTypSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Test.Action.Operation.Type.System</meta>
             <column length="65535" name="TstScrpt_Tst_Actn_Oprtn_Typ_Sys"/>
         </property>
         <property name="tstScrptTstActnOprtnTypUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Test.Action.Operation.Type.UserSelected</meta>
             <column length="65535" name="TstScrpt_Tst_Actn_Oprtn_Typ_UsrSltd"/>
         </property>
         <property name="tstScrptTstActnOprtnTypVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Test.Action.Operation.Type.Version</meta>
             <column length="65535" name="TstScrpt_Tst_Actn_Oprtn_Typ_Vrsn"/>
         </property>
         <property name="tstScrptTstActnOprtnUrl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Test.Action.Operation.Url</meta>
             <column length="65535" name="TstScrpt_Tst_Actn_Oprtn_Url"/>
         </property>
         <property name="tstScrptTstDscrptn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Test.Description</meta>
             <column length="65535" name="TstScrpt_Tst_Dscrptn"/>
         </property>
         <property name="tstScrptTstNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Test.Name</meta>
             <column length="65535" name="TstScrpt_Tst_Nm"/>
         </property>
         <property name="tstScrptTtl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Title</meta>
             <column length="65535" name="TstScrpt_Ttl"/>
         </property>
         <property name="tstScrptUrl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Url</meta>
             <column length="65535" name="TstScrpt_Url"/>
         </property>
         <property name="tstScrptUseCntxtCdCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.UseContext.Code.Code</meta>
             <column length="65535" name="TstScrpt_UseCntxt_Cd_Cd"/>
         </property>
         <property name="tstScrptUseCntxtCdDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.UseContext.Code.Display</meta>
             <column length="65535" name="TstScrpt_UseCntxt_Cd_Dsply"/>
         </property>
         <property name="tstScrptUseCntxtCdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.UseContext.Code.System</meta>
             <column length="65535" name="TstScrpt_UseCntxt_Cd_Sys"/>
         </property>
         <property name="tstScrptUseCntxtCdUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.UseContext.Code.UserSelected</meta>
             <column length="65535" name="TstScrpt_UseCntxt_Cd_UsrSltd"/>
         </property>
         <property name="tstScrptUseCntxtCdVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.UseContext.Code.Version</meta>
             <column length="65535" name="TstScrpt_UseCntxt_Cd_Vrsn"/>
         </property>
         <property name="tstScrptUseCntxtVlCdbleCncptCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.UseContext.ValueCodeableConcept.Coding.Code</meta>
             <column length="65535" name="TstScrpt_UseCntxt_VlCdbleCncpt_Cdg_Cd"/>
         </property>
         <property name="tstScrptUseCntxtVlCdbleCncptCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.UseContext.ValueCodeableConcept.Coding.Display</meta>
             <column length="65535" name="TstScrpt_UseCntxt_VlCdbleCncpt_Cdg_Dsply"/>
         </property>
         <property name="tstScrptUseCntxtVlCdbleCncptCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.UseContext.ValueCodeableConcept.Coding.System</meta>
             <column length="65535" name="TstScrpt_UseCntxt_VlCdbleCncpt_Cdg_Sys"/>
         </property>
         <property name="tstScrptUseCntxtVlCdbleCncptCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.UseContext.ValueCodeableConcept.Coding.UserSelected</meta>
             <column length="65535" name="TstScrpt_UseCntxt_VlCdbleCncpt_Cdg_UsrSltd"/>
         </property>
         <property name="tstScrptUseCntxtVlCdbleCncptCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.UseContext.ValueCodeableConcept.Coding.Version</meta>
             <column length="65535" name="TstScrpt_UseCntxt_VlCdbleCncpt_Cdg_Vrsn"/>
         </property>
         <property name="tstScrptUseCntxtVlCdbleCncptTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.UseContext.ValueCodeableConcept.Text</meta>
             <column length="65535" name="TstScrpt_UseCntxt_VlCdbleCncpt_Txt"/>
         </property>
         <property name="tstScrptUseCntxtVlQntyCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.UseContext.ValueQuantity.Code</meta>
             <column length="65535" name="TstScrpt_UseCntxt_VlQnty_Cd"/>
         </property>
         <property name="tstScrptUseCntxtVlQntyCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.UseContext.ValueQuantity.Comparator</meta>
             <column length="65535" name="TstScrpt_UseCntxt_VlQnty_Cmprtr"/>
         </property>
         <property name="tstScrptUseCntxtVlQntySys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.UseContext.ValueQuantity.System</meta>
             <column length="65535" name="TstScrpt_UseCntxt_VlQnty_Sys"/>
         </property>
         <property name="tstScrptUseCntxtVlQntyUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.UseContext.ValueQuantity.Unit</meta>
             <column length="65535" name="TstScrpt_UseCntxt_VlQnty_Unt"/>
         </property>
         <property name="tstScrptUseCntxtVlQntyVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.UseContext.ValueQuantity.Value</meta>
             <column length="65535" name="TstScrpt_UseCntxt_VlQnty_Vl"/>
         </property>
         <property name="tstScrptUseCntxtVlRngHiCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.UseContext.ValueRange.High.Code</meta>
             <column length="65535" name="TstScrpt_UseCntxt_VlRng_Hi_Cd"/>
         </property>
         <property name="tstScrptUseCntxtVlRngHiCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.UseContext.ValueRange.High.Comparator</meta>
             <column length="65535" name="TstScrpt_UseCntxt_VlRng_Hi_Cmprtr"/>
         </property>
         <property name="tstScrptUseCntxtVlRngHiSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.UseContext.ValueRange.High.System</meta>
             <column length="65535" name="TstScrpt_UseCntxt_VlRng_Hi_Sys"/>
         </property>
         <property name="tstScrptUseCntxtVlRngHiUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.UseContext.ValueRange.High.Unit</meta>
             <column length="65535" name="TstScrpt_UseCntxt_VlRng_Hi_Unt"/>
         </property>
         <property name="tstScrptUseCntxtVlRngHiVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.UseContext.ValueRange.High.Value</meta>
             <column length="65535" name="TstScrpt_UseCntxt_VlRng_Hi_Vl"/>
         </property>
         <property name="tstScrptUseCntxtVlRngLwCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.UseContext.ValueRange.Low.Code</meta>
             <column length="65535" name="TstScrpt_UseCntxt_VlRng_Lw_Cd"/>
         </property>
         <property name="tstScrptUseCntxtVlRngLwCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.UseContext.ValueRange.Low.Comparator</meta>
             <column length="65535" name="TstScrpt_UseCntxt_VlRng_Lw_Cmprtr"/>
         </property>
         <property name="tstScrptUseCntxtVlRngLwSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.UseContext.ValueRange.Low.System</meta>
             <column length="65535" name="TstScrpt_UseCntxt_VlRng_Lw_Sys"/>
         </property>
         <property name="tstScrptUseCntxtVlRngLwUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.UseContext.ValueRange.Low.Unit</meta>
             <column length="65535" name="TstScrpt_UseCntxt_VlRng_Lw_Unt"/>
         </property>
         <property name="tstScrptUseCntxtVlRngLwVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.UseContext.ValueRange.Low.Value</meta>
             <column length="65535" name="TstScrpt_UseCntxt_VlRng_Lw_Vl"/>
         </property>
         <property name="tstScrptUseCntxtVlRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.UseContext.ValueReference</meta>
             <column length="65535" name="TstScrpt_UseCntxt_VlRfrnc"/>
         </property>
         <property name="tstScrptVrbleDefaultVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Variable.DefaultValue</meta>
             <column length="65535" name="TstScrpt_Vrble_DefaultVl"/>
         </property>
         <property name="tstScrptVrbleDscrptn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Variable.Description</meta>
             <column length="65535" name="TstScrpt_Vrble_Dscrptn"/>
         </property>
         <property name="tstScrptVrbleExprsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Variable.Expression</meta>
             <column length="65535" name="TstScrpt_Vrble_Exprsn"/>
         </property>
         <property name="tstScrptVrbleHeaderField" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Variable.HeaderField</meta>
             <column length="65535" name="TstScrpt_Vrble_HeaderField"/>
         </property>
         <property name="tstScrptVrbleHint" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Variable.Hint</meta>
             <column length="65535" name="TstScrpt_Vrble_Hint"/>
         </property>
         <property name="tstScrptVrbleNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Variable.Name</meta>
             <column length="65535" name="TstScrpt_Vrble_Nm"/>
         </property>
         <property name="tstScrptVrblePath" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Variable.Path</meta>
             <column length="65535" name="TstScrpt_Vrble_Path"/>
         </property>
         <property name="tstScrptVrbleSrcId" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Variable.SourceId</meta>
             <column length="65535" name="TstScrpt_Vrble_SrcId"/>
         </property>
         <property name="tstScrptVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">TestScript.Version</meta>
             <column length="65535" name="TstScrpt_Vrsn"/>
         </property>
     </class>

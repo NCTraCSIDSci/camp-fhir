@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Aug 17, 2022, 11:08:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 16, 2022, 11:34:16 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="ClinicalImpression" optimistic-lock="none" table="ClinicalImpression">
         <id name="id" type="string">
@@ -7,259 +7,259 @@
             <generator class="identity"/>
         </id>
         <property name="clnclImprssnAssessor" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.Assessor</meta>
             <column length="65535" name="ClnclImprssn_Assessor"/>
         </property>
         <property name="clnclImprssnCdCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.Code.Coding.Code</meta>
             <column length="65535" name="ClnclImprssn_Cd_Cdg_Cd"/>
         </property>
         <property name="clnclImprssnCdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.Code.Coding.Display</meta>
             <column length="65535" name="ClnclImprssn_Cd_Cdg_Dsply"/>
         </property>
         <property name="clnclImprssnCdCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.Code.Coding.System</meta>
             <column length="65535" name="ClnclImprssn_Cd_Cdg_Sys"/>
         </property>
         <property name="clnclImprssnCdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.Code.Coding.UserSelected</meta>
             <column length="65535" name="ClnclImprssn_Cd_Cdg_UsrSltd"/>
         </property>
         <property name="clnclImprssnCdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.Code.Coding.Version</meta>
             <column length="65535" name="ClnclImprssn_Cd_Cdg_Vrsn"/>
         </property>
         <property name="clnclImprssnCdTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.Code.Text</meta>
             <column length="65535" name="ClnclImprssn_Cd_Txt"/>
         </property>
         <property name="clnclImprssnDt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.Date</meta>
             <column length="65535" name="ClnclImprssn_Dt"/>
         </property>
         <property name="clnclImprssnDscrptn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.Description</meta>
             <column length="65535" name="ClnclImprssn_Dscrptn"/>
         </property>
         <property name="clnclImprssnEfctiveDtTimeTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.EffectiveDateTimeType</meta>
             <column length="65535" name="ClnclImprssn_EfctiveDtTimeTyp"/>
         </property>
         <property name="clnclImprssnEfctivePrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.EffectivePeriod.End</meta>
             <column length="65535" name="ClnclImprssn_EfctivePrd_End"/>
         </property>
         <property name="clnclImprssnEfctivePrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.EffectivePeriod.Start</meta>
             <column length="65535" name="ClnclImprssn_EfctivePrd_Strt"/>
         </property>
         <property name="clnclImprssnEnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.Encounter</meta>
             <column length="65535" name="ClnclImprssn_Enc"/>
         </property>
         <property name="clnclImprssnFindingBasis" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.Finding.Basis</meta>
             <column length="65535" name="ClnclImprssn_Finding_Basis"/>
         </property>
         <property name="clnclImprssnFindingItmCdbleCncptCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.Finding.ItemCodeableConcept.Coding.Code</meta>
             <column length="65535" name="ClnclImprssn_Finding_ItmCdbleCncpt_Cdg_Cd"/>
         </property>
         <property name="clnclImprssnFindingItmCdbleCncptCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.Finding.ItemCodeableConcept.Coding.Display</meta>
             <column length="65535" name="ClnclImprssn_Finding_ItmCdbleCncpt_Cdg_Dsply"/>
         </property>
         <property name="clnclImprssnFindingItmCdbleCncptCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.Finding.ItemCodeableConcept.Coding.System</meta>
             <column length="65535" name="ClnclImprssn_Finding_ItmCdbleCncpt_Cdg_Sys"/>
         </property>
         <property name="clnclImprssnFindingItmCdbleCncptCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.Finding.ItemCodeableConcept.Coding.UserSelected</meta>
             <column length="65535" name="ClnclImprssn_Finding_ItmCdbleCncpt_Cdg_UsrSltd"/>
         </property>
         <property name="clnclImprssnFindingItmCdbleCncptCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.Finding.ItemCodeableConcept.Coding.Version</meta>
             <column length="65535" name="ClnclImprssn_Finding_ItmCdbleCncpt_Cdg_Vrsn"/>
         </property>
         <property name="clnclImprssnFindingItmCdbleCncptTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.Finding.ItemCodeableConcept.Text</meta>
             <column length="65535" name="ClnclImprssn_Finding_ItmCdbleCncpt_Txt"/>
         </property>
         <property name="clnclImprssnFindingItmRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.Finding.ItemReference</meta>
             <column length="65535" name="ClnclImprssn_Finding_ItmRfrnc"/>
         </property>
         <property name="clnclImprssnIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.Identifier.Assigner</meta>
             <column length="65535" name="ClnclImprssn_Id_Assigner"/>
         </property>
         <property name="clnclImprssnIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.Identifier.Period.End</meta>
             <column length="65535" name="ClnclImprssn_Id_Prd_End"/>
         </property>
         <property name="clnclImprssnIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.Identifier.Period.Start</meta>
             <column length="65535" name="ClnclImprssn_Id_Prd_Strt"/>
         </property>
         <property name="clnclImprssnIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.Identifier.System</meta>
             <column length="65535" name="ClnclImprssn_Id_Sys"/>
         </property>
         <property name="clnclImprssnIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.Identifier.Type.Coding.Code</meta>
             <column length="65535" name="ClnclImprssn_Id_Typ_Cdg_Cd"/>
         </property>
         <property name="clnclImprssnIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.Identifier.Type.Coding.Display</meta>
             <column length="65535" name="ClnclImprssn_Id_Typ_Cdg_Dsply"/>
         </property>
         <property name="clnclImprssnIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.Identifier.Type.Coding.System</meta>
             <column length="65535" name="ClnclImprssn_Id_Typ_Cdg_Sys"/>
         </property>
         <property name="clnclImprssnIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.Identifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="ClnclImprssn_Id_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="clnclImprssnIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.Identifier.Type.Coding.Version</meta>
             <column length="65535" name="ClnclImprssn_Id_Typ_Cdg_Vrsn"/>
         </property>
         <property name="clnclImprssnIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.Identifier.Type.Text</meta>
             <column length="65535" name="ClnclImprssn_Id_Typ_Txt"/>
         </property>
         <property name="clnclImprssnIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.Identifier.Use</meta>
             <column length="65535" name="ClnclImprssn_Id_Use"/>
         </property>
         <property name="clnclImprssnIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.Identifier.Value</meta>
             <column length="65535" name="ClnclImprssn_Id_Vl"/>
         </property>
         <property name="clnclImprssnInvestigationCdCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.Investigation.Code.Coding.Code</meta>
             <column length="65535" name="ClnclImprssn_Investigation_Cd_Cdg_Cd"/>
         </property>
         <property name="clnclImprssnInvestigationCdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.Investigation.Code.Coding.Display</meta>
             <column length="65535" name="ClnclImprssn_Investigation_Cd_Cdg_Dsply"/>
         </property>
         <property name="clnclImprssnInvestigationCdCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.Investigation.Code.Coding.System</meta>
             <column length="65535" name="ClnclImprssn_Investigation_Cd_Cdg_Sys"/>
         </property>
         <property name="clnclImprssnInvestigationCdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.Investigation.Code.Coding.UserSelected</meta>
             <column length="65535" name="ClnclImprssn_Investigation_Cd_Cdg_UsrSltd"/>
         </property>
         <property name="clnclImprssnInvestigationCdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.Investigation.Code.Coding.Version</meta>
             <column length="65535" name="ClnclImprssn_Investigation_Cd_Cdg_Vrsn"/>
         </property>
         <property name="clnclImprssnInvestigationCdTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.Investigation.Code.Text</meta>
             <column length="65535" name="ClnclImprssn_Investigation_Cd_Txt"/>
         </property>
         <property name="clnclImprssnInvestigationItm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.Investigation.Item</meta>
             <column length="65535" name="ClnclImprssn_Investigation_Itm"/>
         </property>
         <property name="clnclImprssnNtAthrRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.Note.AuthorReference</meta>
             <column length="65535" name="ClnclImprssn_Nt_AthrRfrnc"/>
         </property>
         <property name="clnclImprssnNtAthrStrgTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.Note.AuthorStringType</meta>
             <column length="65535" name="ClnclImprssn_Nt_AthrStrgTyp"/>
         </property>
         <property name="clnclImprssnNtTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.Note.Text</meta>
             <column length="65535" name="ClnclImprssn_Nt_Txt"/>
         </property>
         <property name="clnclImprssnNtTime" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.Note.Time</meta>
             <column length="65535" name="ClnclImprssn_Nt_Time"/>
         </property>
         <property name="clnclImprssnPrevious" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.Previous</meta>
             <column length="65535" name="ClnclImprssn_Previous"/>
         </property>
         <property name="clnclImprssnProblem" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.Problem</meta>
             <column length="65535" name="ClnclImprssn_Problem"/>
         </property>
         <property name="clnclImprssnPrognosisCdbleCncptCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.PrognosisCodeableConcept.Coding.Code</meta>
             <column length="65535" name="ClnclImprssn_PrognosisCdbleCncpt_Cdg_Cd"/>
         </property>
         <property name="clnclImprssnPrognosisCdbleCncptCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.PrognosisCodeableConcept.Coding.Display</meta>
             <column length="65535" name="ClnclImprssn_PrognosisCdbleCncpt_Cdg_Dsply"/>
         </property>
         <property name="clnclImprssnPrognosisCdbleCncptCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.PrognosisCodeableConcept.Coding.System</meta>
             <column length="65535" name="ClnclImprssn_PrognosisCdbleCncpt_Cdg_Sys"/>
         </property>
         <property name="clnclImprssnPrognosisCdbleCncptCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.PrognosisCodeableConcept.Coding.UserSelected</meta>
             <column length="65535" name="ClnclImprssn_PrognosisCdbleCncpt_Cdg_UsrSltd"/>
         </property>
         <property name="clnclImprssnPrognosisCdbleCncptCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.PrognosisCodeableConcept.Coding.Version</meta>
             <column length="65535" name="ClnclImprssn_PrognosisCdbleCncpt_Cdg_Vrsn"/>
         </property>
         <property name="clnclImprssnPrognosisCdbleCncptTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.PrognosisCodeableConcept.Text</meta>
             <column length="65535" name="ClnclImprssn_PrognosisCdbleCncpt_Txt"/>
         </property>
         <property name="clnclImprssnPrognosisRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.PrognosisReference</meta>
             <column length="65535" name="ClnclImprssn_PrognosisRfrnc"/>
         </property>
         <property name="clnclImprssnProtocol" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.Protocol</meta>
             <column length="65535" name="ClnclImprssn_Protocol"/>
         </property>
         <property name="clnclImprssnSts" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.Status</meta>
             <column length="65535" name="ClnclImprssn_Sts"/>
         </property>
         <property name="clnclImprssnStsRsnCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.StatusReason.Coding.Code</meta>
             <column length="65535" name="ClnclImprssn_StsRsn_Cdg_Cd"/>
         </property>
         <property name="clnclImprssnStsRsnCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.StatusReason.Coding.Display</meta>
             <column length="65535" name="ClnclImprssn_StsRsn_Cdg_Dsply"/>
         </property>
         <property name="clnclImprssnStsRsnCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.StatusReason.Coding.System</meta>
             <column length="65535" name="ClnclImprssn_StsRsn_Cdg_Sys"/>
         </property>
         <property name="clnclImprssnStsRsnCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.StatusReason.Coding.UserSelected</meta>
             <column length="65535" name="ClnclImprssn_StsRsn_Cdg_UsrSltd"/>
         </property>
         <property name="clnclImprssnStsRsnCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.StatusReason.Coding.Version</meta>
             <column length="65535" name="ClnclImprssn_StsRsn_Cdg_Vrsn"/>
         </property>
         <property name="clnclImprssnStsRsnTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.StatusReason.Text</meta>
             <column length="65535" name="ClnclImprssn_StsRsn_Txt"/>
         </property>
         <property name="clnclImprssnSbjct" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.Subject</meta>
             <column length="65535" name="ClnclImprssn_Sbjct"/>
         </property>
         <property name="clnclImprssnSummary" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.Summary</meta>
             <column length="65535" name="ClnclImprssn_Summary"/>
         </property>
         <property name="clnclImprssnSprtingInfo" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">ClinicalImpression.SupportingInfo</meta>
             <column length="65535" name="ClnclImprssn_SprtingInfo"/>
         </property>
     </class>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Aug 17, 2022, 11:08:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 16, 2022, 11:34:16 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Practitioner" optimistic-lock="none" table="Practitioner">
         <id name="id" type="string">
@@ -7,303 +7,303 @@
             <generator class="identity"/>
         </id>
         <property name="prctitnrActive" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Active</meta>
             <column length="65535" name="Prctitnr_Active"/>
         </property>
         <property name="prctitnrAddrCity" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Address.City</meta>
             <column length="65535" name="Prctitnr_Addr_City"/>
         </property>
         <property name="prctitnrAddrCntry" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Address.Country</meta>
             <column length="65535" name="Prctitnr_Addr_Cntry"/>
         </property>
         <property name="prctitnrAddrDistrict" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Address.District</meta>
             <column length="65535" name="Prctitnr_Addr_District"/>
         </property>
         <property name="prctitnrAddrLine" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Address.Line</meta>
             <column length="65535" name="Prctitnr_Addr_Line"/>
         </property>
         <property name="prctitnrAddrPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Address.Period.End</meta>
             <column length="65535" name="Prctitnr_Addr_Prd_End"/>
         </property>
         <property name="prctitnrAddrPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Address.Period.Start</meta>
             <column length="65535" name="Prctitnr_Addr_Prd_Strt"/>
         </property>
         <property name="prctitnrAddrPostalCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Address.PostalCode</meta>
             <column length="65535" name="Prctitnr_Addr_PostalCd"/>
         </property>
         <property name="prctitnrAddrState" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Address.State</meta>
             <column length="65535" name="Prctitnr_Addr_State"/>
         </property>
         <property name="prctitnrAddrTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Address.Text</meta>
             <column length="65535" name="Prctitnr_Addr_Txt"/>
         </property>
         <property name="prctitnrAddrTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Address.Type</meta>
             <column length="65535" name="Prctitnr_Addr_Typ"/>
         </property>
         <property name="prctitnrAddrUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Address.Use</meta>
             <column length="65535" name="Prctitnr_Addr_Use"/>
         </property>
         <property name="prctitnrBirthDt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.BirthDate</meta>
             <column length="65535" name="Prctitnr_BirthDt"/>
         </property>
         <property name="prctitnrCmmnctnCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Communication.Coding.Code</meta>
             <column length="65535" name="Prctitnr_Cmmnctn_Cdg_Cd"/>
         </property>
         <property name="prctitnrCmmnctnCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Communication.Coding.Display</meta>
             <column length="65535" name="Prctitnr_Cmmnctn_Cdg_Dsply"/>
         </property>
         <property name="prctitnrCmmnctnCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Communication.Coding.System</meta>
             <column length="65535" name="Prctitnr_Cmmnctn_Cdg_Sys"/>
         </property>
         <property name="prctitnrCmmnctnCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Communication.Coding.UserSelected</meta>
             <column length="65535" name="Prctitnr_Cmmnctn_Cdg_UsrSltd"/>
         </property>
         <property name="prctitnrCmmnctnCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Communication.Coding.Version</meta>
             <column length="65535" name="Prctitnr_Cmmnctn_Cdg_Vrsn"/>
         </property>
         <property name="prctitnrCmmnctnTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Communication.Text</meta>
             <column length="65535" name="Prctitnr_Cmmnctn_Txt"/>
         </property>
         <property name="prctitnrGender" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Gender</meta>
             <column length="65535" name="Prctitnr_Gender"/>
         </property>
         <property name="prctitnrIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Identifier.Assigner</meta>
             <column length="65535" name="Prctitnr_Id_Assigner"/>
         </property>
         <property name="prctitnrIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Identifier.Period.End</meta>
             <column length="65535" name="Prctitnr_Id_Prd_End"/>
         </property>
         <property name="prctitnrIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Identifier.Period.Start</meta>
             <column length="65535" name="Prctitnr_Id_Prd_Strt"/>
         </property>
         <property name="prctitnrIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Identifier.System</meta>
             <column length="65535" name="Prctitnr_Id_Sys"/>
         </property>
         <property name="prctitnrIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Identifier.Type.Coding.Code</meta>
             <column length="65535" name="Prctitnr_Id_Typ_Cdg_Cd"/>
         </property>
         <property name="prctitnrIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Identifier.Type.Coding.Display</meta>
             <column length="65535" name="Prctitnr_Id_Typ_Cdg_Dsply"/>
         </property>
         <property name="prctitnrIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Identifier.Type.Coding.System</meta>
             <column length="65535" name="Prctitnr_Id_Typ_Cdg_Sys"/>
         </property>
         <property name="prctitnrIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Identifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="Prctitnr_Id_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="prctitnrIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Identifier.Type.Coding.Version</meta>
             <column length="65535" name="Prctitnr_Id_Typ_Cdg_Vrsn"/>
         </property>
         <property name="prctitnrIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Identifier.Type.Text</meta>
             <column length="65535" name="Prctitnr_Id_Typ_Txt"/>
         </property>
         <property name="prctitnrIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Identifier.Use</meta>
             <column length="65535" name="Prctitnr_Id_Use"/>
         </property>
         <property name="prctitnrIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Identifier.Value</meta>
             <column length="65535" name="Prctitnr_Id_Vl"/>
         </property>
         <property name="prctitnrNmFmly" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Name.Family</meta>
             <column length="65535" name="Prctitnr_Nm_Fmly"/>
         </property>
         <property name="prctitnrNmGiven" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Name.Given</meta>
             <column length="65535" name="Prctitnr_Nm_Given"/>
         </property>
         <property name="prctitnrNmPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Name.Period.End</meta>
             <column length="65535" name="Prctitnr_Nm_Prd_End"/>
         </property>
         <property name="prctitnrNmPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Name.Period.Start</meta>
             <column length="65535" name="Prctitnr_Nm_Prd_Strt"/>
         </property>
         <property name="prctitnrNmPrefix" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Name.Prefix</meta>
             <column length="65535" name="Prctitnr_Nm_Prefix"/>
         </property>
         <property name="prctitnrNmSuffix" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Name.Suffix</meta>
             <column length="65535" name="Prctitnr_Nm_Suffix"/>
         </property>
         <property name="prctitnrNmTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Name.Text</meta>
             <column length="65535" name="Prctitnr_Nm_Txt"/>
         </property>
         <property name="prctitnrNmUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Name.Use</meta>
             <column length="65535" name="Prctitnr_Nm_Use"/>
         </property>
         <property name="prctitnrPhotoCntntTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Photo.ContentType</meta>
             <column length="65535" name="Prctitnr_Photo_CntntTyp"/>
         </property>
         <property name="prctitnrPhotoCreation" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Photo.Creation</meta>
             <column length="65535" name="Prctitnr_Photo_Creation"/>
         </property>
         <property name="prctitnrPhotoData" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Photo.Data</meta>
             <column length="65535" name="Prctitnr_Photo_Data"/>
         </property>
         <property name="prctitnrPhotoHash" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Photo.Hash</meta>
             <column length="65535" name="Prctitnr_Photo_Hash"/>
         </property>
         <property name="prctitnrPhotoLnguage" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Photo.Language</meta>
             <column length="65535" name="Prctitnr_Photo_Lnguage"/>
         </property>
         <property name="prctitnrPhotoSz" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Photo.Size</meta>
             <column length="65535" name="Prctitnr_Photo_Sz"/>
         </property>
         <property name="prctitnrPhotoTtl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Photo.Title</meta>
             <column length="65535" name="Prctitnr_Photo_Ttl"/>
         </property>
         <property name="prctitnrPhotoUrl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Photo.Url</meta>
             <column length="65535" name="Prctitnr_Photo_Url"/>
         </property>
         <property name="prctitnrQualificationCdCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Qualification.Code.Coding.Code</meta>
             <column length="65535" name="Prctitnr_Qualification_Cd_Cdg_Cd"/>
         </property>
         <property name="prctitnrQualificationCdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Qualification.Code.Coding.Display</meta>
             <column length="65535" name="Prctitnr_Qualification_Cd_Cdg_Dsply"/>
         </property>
         <property name="prctitnrQualificationCdCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Qualification.Code.Coding.System</meta>
             <column length="65535" name="Prctitnr_Qualification_Cd_Cdg_Sys"/>
         </property>
         <property name="prctitnrQualificationCdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Qualification.Code.Coding.UserSelected</meta>
             <column length="65535" name="Prctitnr_Qualification_Cd_Cdg_UsrSltd"/>
         </property>
         <property name="prctitnrQualificationCdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Qualification.Code.Coding.Version</meta>
             <column length="65535" name="Prctitnr_Qualification_Cd_Cdg_Vrsn"/>
         </property>
         <property name="prctitnrQualificationCdTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Qualification.Code.Text</meta>
             <column length="65535" name="Prctitnr_Qualification_Cd_Txt"/>
         </property>
         <property name="prctitnrQualificationIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Qualification.Identifier.Assigner</meta>
             <column length="65535" name="Prctitnr_Qualification_Id_Assigner"/>
         </property>
         <property name="prctitnrQualificationIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Qualification.Identifier.Period.End</meta>
             <column length="65535" name="Prctitnr_Qualification_Id_Prd_End"/>
         </property>
         <property name="prctitnrQualificationIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Qualification.Identifier.Period.Start</meta>
             <column length="65535" name="Prctitnr_Qualification_Id_Prd_Strt"/>
         </property>
         <property name="prctitnrQualificationIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Qualification.Identifier.System</meta>
             <column length="65535" name="Prctitnr_Qualification_Id_Sys"/>
         </property>
         <property name="prctitnrQualificationIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Qualification.Identifier.Type.Coding.Code</meta>
             <column length="65535" name="Prctitnr_Qualification_Id_Typ_Cdg_Cd"/>
         </property>
         <property name="prctitnrQualificationIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Qualification.Identifier.Type.Coding.Display</meta>
             <column length="65535" name="Prctitnr_Qualification_Id_Typ_Cdg_Dsply"/>
         </property>
         <property name="prctitnrQualificationIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Qualification.Identifier.Type.Coding.System</meta>
             <column length="65535" name="Prctitnr_Qualification_Id_Typ_Cdg_Sys"/>
         </property>
         <property name="prctitnrQualificationIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Qualification.Identifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="Prctitnr_Qualification_Id_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="prctitnrQualificationIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Qualification.Identifier.Type.Coding.Version</meta>
             <column length="65535" name="Prctitnr_Qualification_Id_Typ_Cdg_Vrsn"/>
         </property>
         <property name="prctitnrQualificationIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Qualification.Identifier.Type.Text</meta>
             <column length="65535" name="Prctitnr_Qualification_Id_Typ_Txt"/>
         </property>
         <property name="prctitnrQualificationIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Qualification.Identifier.Use</meta>
             <column length="65535" name="Prctitnr_Qualification_Id_Use"/>
         </property>
         <property name="prctitnrQualificationIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Qualification.Identifier.Value</meta>
             <column length="65535" name="Prctitnr_Qualification_Id_Vl"/>
         </property>
         <property name="prctitnrQualificationIssuer" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Qualification.Issuer</meta>
             <column length="65535" name="Prctitnr_Qualification_Issuer"/>
         </property>
         <property name="prctitnrQualificationPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Qualification.Period.End</meta>
             <column length="65535" name="Prctitnr_Qualification_Prd_End"/>
         </property>
         <property name="prctitnrQualificationPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Qualification.Period.Start</meta>
             <column length="65535" name="Prctitnr_Qualification_Prd_Strt"/>
         </property>
         <property name="prctitnrTlcmPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Telecom.Period.End</meta>
             <column length="65535" name="Prctitnr_Tlcm_Prd_End"/>
         </property>
         <property name="prctitnrTlcmPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Telecom.Period.Start</meta>
             <column length="65535" name="Prctitnr_Tlcm_Prd_Strt"/>
         </property>
         <property name="prctitnrTlcmRnk" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Telecom.Rank</meta>
             <column length="65535" name="Prctitnr_Tlcm_Rnk"/>
         </property>
         <property name="prctitnrTlcmSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Telecom.System</meta>
             <column length="65535" name="Prctitnr_Tlcm_Sys"/>
         </property>
         <property name="prctitnrTlcmUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Telecom.Use</meta>
             <column length="65535" name="Prctitnr_Tlcm_Use"/>
         </property>
         <property name="prctitnrTlcmVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Practitioner.Telecom.Value</meta>
             <column length="65535" name="Prctitnr_Tlcm_Vl"/>
         </property>
     </class>

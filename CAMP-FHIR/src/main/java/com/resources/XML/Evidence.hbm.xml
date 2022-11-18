@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Aug 17, 2022, 11:08:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 16, 2022, 11:34:16 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Evidence" optimistic-lock="none" table="Evidence">
         <id name="id" type="string">
@@ -7,491 +7,491 @@
             <generator class="identity"/>
         </id>
         <property name="evdnceApprovalDt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.ApprovalDate</meta>
             <column length="65535" name="Evdnce_ApprovalDt"/>
         </property>
         <property name="evdnceAthrNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Author.Name</meta>
             <column length="65535" name="Evdnce_Athr_Nm"/>
         </property>
         <property name="evdnceAthrTlcmPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Author.Telecom.Period.End</meta>
             <column length="65535" name="Evdnce_Athr_Tlcm_Prd_End"/>
         </property>
         <property name="evdnceAthrTlcmPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Author.Telecom.Period.Start</meta>
             <column length="65535" name="Evdnce_Athr_Tlcm_Prd_Strt"/>
         </property>
         <property name="evdnceAthrTlcmRnk" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Author.Telecom.Rank</meta>
             <column length="65535" name="Evdnce_Athr_Tlcm_Rnk"/>
         </property>
         <property name="evdnceAthrTlcmSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Author.Telecom.System</meta>
             <column length="65535" name="Evdnce_Athr_Tlcm_Sys"/>
         </property>
         <property name="evdnceAthrTlcmUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Author.Telecom.Use</meta>
             <column length="65535" name="Evdnce_Athr_Tlcm_Use"/>
         </property>
         <property name="evdnceAthrTlcmVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Author.Telecom.Value</meta>
             <column length="65535" name="Evdnce_Athr_Tlcm_Vl"/>
         </property>
         <property name="evdnceCntctNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Contact.Name</meta>
             <column length="65535" name="Evdnce_Cntct_Nm"/>
         </property>
         <property name="evdnceCntctTlcmPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Contact.Telecom.Period.End</meta>
             <column length="65535" name="Evdnce_Cntct_Tlcm_Prd_End"/>
         </property>
         <property name="evdnceCntctTlcmPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Contact.Telecom.Period.Start</meta>
             <column length="65535" name="Evdnce_Cntct_Tlcm_Prd_Strt"/>
         </property>
         <property name="evdnceCntctTlcmRnk" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Contact.Telecom.Rank</meta>
             <column length="65535" name="Evdnce_Cntct_Tlcm_Rnk"/>
         </property>
         <property name="evdnceCntctTlcmSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Contact.Telecom.System</meta>
             <column length="65535" name="Evdnce_Cntct_Tlcm_Sys"/>
         </property>
         <property name="evdnceCntctTlcmUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Contact.Telecom.Use</meta>
             <column length="65535" name="Evdnce_Cntct_Tlcm_Use"/>
         </property>
         <property name="evdnceCntctTlcmVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Contact.Telecom.Value</meta>
             <column length="65535" name="Evdnce_Cntct_Tlcm_Vl"/>
         </property>
         <property name="evdnceCopyright" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Copyright</meta>
             <column length="65535" name="Evdnce_Copyright"/>
         </property>
         <property name="evdnceDt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Date</meta>
             <column length="65535" name="Evdnce_Dt"/>
         </property>
         <property name="evdnceDscrptn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Description</meta>
             <column length="65535" name="Evdnce_Dscrptn"/>
         </property>
         <property name="evdnceEditorNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Editor.Name</meta>
             <column length="65535" name="Evdnce_Editor_Nm"/>
         </property>
         <property name="evdnceEditorTlcmPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Editor.Telecom.Period.End</meta>
             <column length="65535" name="Evdnce_Editor_Tlcm_Prd_End"/>
         </property>
         <property name="evdnceEditorTlcmPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Editor.Telecom.Period.Start</meta>
             <column length="65535" name="Evdnce_Editor_Tlcm_Prd_Strt"/>
         </property>
         <property name="evdnceEditorTlcmRnk" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Editor.Telecom.Rank</meta>
             <column length="65535" name="Evdnce_Editor_Tlcm_Rnk"/>
         </property>
         <property name="evdnceEditorTlcmSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Editor.Telecom.System</meta>
             <column length="65535" name="Evdnce_Editor_Tlcm_Sys"/>
         </property>
         <property name="evdnceEditorTlcmUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Editor.Telecom.Use</meta>
             <column length="65535" name="Evdnce_Editor_Tlcm_Use"/>
         </property>
         <property name="evdnceEditorTlcmVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Editor.Telecom.Value</meta>
             <column length="65535" name="Evdnce_Editor_Tlcm_Vl"/>
         </property>
         <property name="evdnceEfctivePrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.EffectivePeriod.End</meta>
             <column length="65535" name="Evdnce_EfctivePrd_End"/>
         </property>
         <property name="evdnceEfctivePrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.EffectivePeriod.Start</meta>
             <column length="65535" name="Evdnce_EfctivePrd_Strt"/>
         </property>
         <property name="evdnceEndsrNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Endorser.Name</meta>
             <column length="65535" name="Evdnce_Endsr_Nm"/>
         </property>
         <property name="evdnceEndsrTlcmPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Endorser.Telecom.Period.End</meta>
             <column length="65535" name="Evdnce_Endsr_Tlcm_Prd_End"/>
         </property>
         <property name="evdnceEndsrTlcmPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Endorser.Telecom.Period.Start</meta>
             <column length="65535" name="Evdnce_Endsr_Tlcm_Prd_Strt"/>
         </property>
         <property name="evdnceEndsrTlcmRnk" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Endorser.Telecom.Rank</meta>
             <column length="65535" name="Evdnce_Endsr_Tlcm_Rnk"/>
         </property>
         <property name="evdnceEndsrTlcmSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Endorser.Telecom.System</meta>
             <column length="65535" name="Evdnce_Endsr_Tlcm_Sys"/>
         </property>
         <property name="evdnceEndsrTlcmUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Endorser.Telecom.Use</meta>
             <column length="65535" name="Evdnce_Endsr_Tlcm_Use"/>
         </property>
         <property name="evdnceEndsrTlcmVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Endorser.Telecom.Value</meta>
             <column length="65535" name="Evdnce_Endsr_Tlcm_Vl"/>
         </property>
         <property name="evdnceExposureBackground" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.ExposureBackground</meta>
             <column length="65535" name="Evdnce_ExposureBackground"/>
         </property>
         <property name="evdnceExposureVariant" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.ExposureVariant</meta>
             <column length="65535" name="Evdnce_ExposureVariant"/>
         </property>
         <property name="evdnceIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Identifier.Assigner</meta>
             <column length="65535" name="Evdnce_Id_Assigner"/>
         </property>
         <property name="evdnceIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Identifier.Period.End</meta>
             <column length="65535" name="Evdnce_Id_Prd_End"/>
         </property>
         <property name="evdnceIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Identifier.Period.Start</meta>
             <column length="65535" name="Evdnce_Id_Prd_Strt"/>
         </property>
         <property name="evdnceIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Identifier.System</meta>
             <column length="65535" name="Evdnce_Id_Sys"/>
         </property>
         <property name="evdnceIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Identifier.Type.Coding.Code</meta>
             <column length="65535" name="Evdnce_Id_Typ_Cdg_Cd"/>
         </property>
         <property name="evdnceIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Identifier.Type.Coding.Display</meta>
             <column length="65535" name="Evdnce_Id_Typ_Cdg_Dsply"/>
         </property>
         <property name="evdnceIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Identifier.Type.Coding.System</meta>
             <column length="65535" name="Evdnce_Id_Typ_Cdg_Sys"/>
         </property>
         <property name="evdnceIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Identifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="Evdnce_Id_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="evdnceIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Identifier.Type.Coding.Version</meta>
             <column length="65535" name="Evdnce_Id_Typ_Cdg_Vrsn"/>
         </property>
         <property name="evdnceIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Identifier.Type.Text</meta>
             <column length="65535" name="Evdnce_Id_Typ_Txt"/>
         </property>
         <property name="evdnceIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Identifier.Use</meta>
             <column length="65535" name="Evdnce_Id_Use"/>
         </property>
         <property name="evdnceIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Identifier.Value</meta>
             <column length="65535" name="Evdnce_Id_Vl"/>
         </property>
         <property name="evdnceJrsdctnCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Jurisdiction.Coding.Code</meta>
             <column length="65535" name="Evdnce_Jrsdctn_Cdg_Cd"/>
         </property>
         <property name="evdnceJrsdctnCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Jurisdiction.Coding.Display</meta>
             <column length="65535" name="Evdnce_Jrsdctn_Cdg_Dsply"/>
         </property>
         <property name="evdnceJrsdctnCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Jurisdiction.Coding.System</meta>
             <column length="65535" name="Evdnce_Jrsdctn_Cdg_Sys"/>
         </property>
         <property name="evdnceJrsdctnCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Jurisdiction.Coding.UserSelected</meta>
             <column length="65535" name="Evdnce_Jrsdctn_Cdg_UsrSltd"/>
         </property>
         <property name="evdnceJrsdctnCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Jurisdiction.Coding.Version</meta>
             <column length="65535" name="Evdnce_Jrsdctn_Cdg_Vrsn"/>
         </property>
         <property name="evdnceJrsdctnTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Jurisdiction.Text</meta>
             <column length="65535" name="Evdnce_Jrsdctn_Txt"/>
         </property>
         <property name="evdnceLastReviewDt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.LastReviewDate</meta>
             <column length="65535" name="Evdnce_LastReviewDt"/>
         </property>
         <property name="evdnceNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Name</meta>
             <column length="65535" name="Evdnce_Nm"/>
         </property>
         <property name="evdnceNtAthrRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Note.AuthorReference</meta>
             <column length="65535" name="Evdnce_Nt_AthrRfrnc"/>
         </property>
         <property name="evdnceNtAthrStrgTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Note.AuthorStringType</meta>
             <column length="65535" name="Evdnce_Nt_AthrStrgTyp"/>
         </property>
         <property name="evdnceNtTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Note.Text</meta>
             <column length="65535" name="Evdnce_Nt_Txt"/>
         </property>
         <property name="evdnceNtTime" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Note.Time</meta>
             <column length="65535" name="Evdnce_Nt_Time"/>
         </property>
         <property name="evdnceOutcome" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Outcome</meta>
             <column length="65535" name="Evdnce_Outcome"/>
         </property>
         <property name="evdncePblshr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Publisher</meta>
             <column length="65535" name="Evdnce_Pblshr"/>
         </property>
         <property name="evdnceRltedArtfctCitation" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.RelatedArtifact.Citation</meta>
             <column length="65535" name="Evdnce_RltedArtfct_Citation"/>
         </property>
         <property name="evdnceRltedArtfctDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.RelatedArtifact.Display</meta>
             <column length="65535" name="Evdnce_RltedArtfct_Dsply"/>
         </property>
         <property name="evdnceRltedArtfctDocCntntTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.RelatedArtifact.Document.ContentType</meta>
             <column length="65535" name="Evdnce_RltedArtfct_Doc_CntntTyp"/>
         </property>
         <property name="evdnceRltedArtfctDocCreation" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.RelatedArtifact.Document.Creation</meta>
             <column length="65535" name="Evdnce_RltedArtfct_Doc_Creation"/>
         </property>
         <property name="evdnceRltedArtfctDocData" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.RelatedArtifact.Document.Data</meta>
             <column length="65535" name="Evdnce_RltedArtfct_Doc_Data"/>
         </property>
         <property name="evdnceRltedArtfctDocHash" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.RelatedArtifact.Document.Hash</meta>
             <column length="65535" name="Evdnce_RltedArtfct_Doc_Hash"/>
         </property>
         <property name="evdnceRltedArtfctDocLnguage" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.RelatedArtifact.Document.Language</meta>
             <column length="65535" name="Evdnce_RltedArtfct_Doc_Lnguage"/>
         </property>
         <property name="evdnceRltedArtfctDocSz" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.RelatedArtifact.Document.Size</meta>
             <column length="65535" name="Evdnce_RltedArtfct_Doc_Sz"/>
         </property>
         <property name="evdnceRltedArtfctDocTtl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.RelatedArtifact.Document.Title</meta>
             <column length="65535" name="Evdnce_RltedArtfct_Doc_Ttl"/>
         </property>
         <property name="evdnceRltedArtfctDocUrl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.RelatedArtifact.Document.Url</meta>
             <column length="65535" name="Evdnce_RltedArtfct_Doc_Url"/>
         </property>
         <property name="evdnceRltedArtfctLbl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.RelatedArtifact.Label</meta>
             <column length="65535" name="Evdnce_RltedArtfct_Lbl"/>
         </property>
         <property name="evdnceRltedArtfctRsrc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.RelatedArtifact.Resource</meta>
             <column length="65535" name="Evdnce_RltedArtfct_Rsrc"/>
         </property>
         <property name="evdnceRltedArtfctTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.RelatedArtifact.Type</meta>
             <column length="65535" name="Evdnce_RltedArtfct_Typ"/>
         </property>
         <property name="evdnceRltedArtfctUrl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.RelatedArtifact.Url</meta>
             <column length="65535" name="Evdnce_RltedArtfct_Url"/>
         </property>
         <property name="evdnceRviewrNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Reviewer.Name</meta>
             <column length="65535" name="Evdnce_Rviewr_Nm"/>
         </property>
         <property name="evdnceRviewrTlcmPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Reviewer.Telecom.Period.End</meta>
             <column length="65535" name="Evdnce_Rviewr_Tlcm_Prd_End"/>
         </property>
         <property name="evdnceRviewrTlcmPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Reviewer.Telecom.Period.Start</meta>
             <column length="65535" name="Evdnce_Rviewr_Tlcm_Prd_Strt"/>
         </property>
         <property name="evdnceRviewrTlcmRnk" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Reviewer.Telecom.Rank</meta>
             <column length="65535" name="Evdnce_Rviewr_Tlcm_Rnk"/>
         </property>
         <property name="evdnceRviewrTlcmSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Reviewer.Telecom.System</meta>
             <column length="65535" name="Evdnce_Rviewr_Tlcm_Sys"/>
         </property>
         <property name="evdnceRviewrTlcmUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Reviewer.Telecom.Use</meta>
             <column length="65535" name="Evdnce_Rviewr_Tlcm_Use"/>
         </property>
         <property name="evdnceRviewrTlcmVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Reviewer.Telecom.Value</meta>
             <column length="65535" name="Evdnce_Rviewr_Tlcm_Vl"/>
         </property>
         <property name="evdnceShortTtl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.ShortTitle</meta>
             <column length="65535" name="Evdnce_ShortTtl"/>
         </property>
         <property name="evdnceSts" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Status</meta>
             <column length="65535" name="Evdnce_Sts"/>
         </property>
         <property name="evdnceSubtitle" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Subtitle</meta>
             <column length="65535" name="Evdnce_Subtitle"/>
         </property>
         <property name="evdnceTtl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Title</meta>
             <column length="65535" name="Evdnce_Ttl"/>
         </property>
         <property name="evdnceTopicCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Topic.Coding.Code</meta>
             <column length="65535" name="Evdnce_Topic_Cdg_Cd"/>
         </property>
         <property name="evdnceTopicCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Topic.Coding.Display</meta>
             <column length="65535" name="Evdnce_Topic_Cdg_Dsply"/>
         </property>
         <property name="evdnceTopicCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Topic.Coding.System</meta>
             <column length="65535" name="Evdnce_Topic_Cdg_Sys"/>
         </property>
         <property name="evdnceTopicCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Topic.Coding.UserSelected</meta>
             <column length="65535" name="Evdnce_Topic_Cdg_UsrSltd"/>
         </property>
         <property name="evdnceTopicCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Topic.Coding.Version</meta>
             <column length="65535" name="Evdnce_Topic_Cdg_Vrsn"/>
         </property>
         <property name="evdnceTopicTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Topic.Text</meta>
             <column length="65535" name="Evdnce_Topic_Txt"/>
         </property>
         <property name="evdnceUrl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Url</meta>
             <column length="65535" name="Evdnce_Url"/>
         </property>
         <property name="evdnceUseCntxtCdCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.UseContext.Code.Code</meta>
             <column length="65535" name="Evdnce_UseCntxt_Cd_Cd"/>
         </property>
         <property name="evdnceUseCntxtCdDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.UseContext.Code.Display</meta>
             <column length="65535" name="Evdnce_UseCntxt_Cd_Dsply"/>
         </property>
         <property name="evdnceUseCntxtCdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.UseContext.Code.System</meta>
             <column length="65535" name="Evdnce_UseCntxt_Cd_Sys"/>
         </property>
         <property name="evdnceUseCntxtCdUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.UseContext.Code.UserSelected</meta>
             <column length="65535" name="Evdnce_UseCntxt_Cd_UsrSltd"/>
         </property>
         <property name="evdnceUseCntxtCdVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.UseContext.Code.Version</meta>
             <column length="65535" name="Evdnce_UseCntxt_Cd_Vrsn"/>
         </property>
         <property name="evdnceUseCntxtVlCdbleCncptCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.UseContext.ValueCodeableConcept.Coding.Code</meta>
             <column length="65535" name="Evdnce_UseCntxt_VlCdbleCncpt_Cdg_Cd"/>
         </property>
         <property name="evdnceUseCntxtVlCdbleCncptCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.UseContext.ValueCodeableConcept.Coding.Display</meta>
             <column length="65535" name="Evdnce_UseCntxt_VlCdbleCncpt_Cdg_Dsply"/>
         </property>
         <property name="evdnceUseCntxtVlCdbleCncptCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.UseContext.ValueCodeableConcept.Coding.System</meta>
             <column length="65535" name="Evdnce_UseCntxt_VlCdbleCncpt_Cdg_Sys"/>
         </property>
         <property name="evdnceUseCntxtVlCdbleCncptCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.UseContext.ValueCodeableConcept.Coding.UserSelected</meta>
             <column length="65535" name="Evdnce_UseCntxt_VlCdbleCncpt_Cdg_UsrSltd"/>
         </property>
         <property name="evdnceUseCntxtVlCdbleCncptCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.UseContext.ValueCodeableConcept.Coding.Version</meta>
             <column length="65535" name="Evdnce_UseCntxt_VlCdbleCncpt_Cdg_Vrsn"/>
         </property>
         <property name="evdnceUseCntxtVlCdbleCncptTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.UseContext.ValueCodeableConcept.Text</meta>
             <column length="65535" name="Evdnce_UseCntxt_VlCdbleCncpt_Txt"/>
         </property>
         <property name="evdnceUseCntxtVlQntyCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.UseContext.ValueQuantity.Code</meta>
             <column length="65535" name="Evdnce_UseCntxt_VlQnty_Cd"/>
         </property>
         <property name="evdnceUseCntxtVlQntyCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.UseContext.ValueQuantity.Comparator</meta>
             <column length="65535" name="Evdnce_UseCntxt_VlQnty_Cmprtr"/>
         </property>
         <property name="evdnceUseCntxtVlQntySys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.UseContext.ValueQuantity.System</meta>
             <column length="65535" name="Evdnce_UseCntxt_VlQnty_Sys"/>
         </property>
         <property name="evdnceUseCntxtVlQntyUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.UseContext.ValueQuantity.Unit</meta>
             <column length="65535" name="Evdnce_UseCntxt_VlQnty_Unt"/>
         </property>
         <property name="evdnceUseCntxtVlQntyVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.UseContext.ValueQuantity.Value</meta>
             <column length="65535" name="Evdnce_UseCntxt_VlQnty_Vl"/>
         </property>
         <property name="evdnceUseCntxtVlRngHiCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.UseContext.ValueRange.High.Code</meta>
             <column length="65535" name="Evdnce_UseCntxt_VlRng_Hi_Cd"/>
         </property>
         <property name="evdnceUseCntxtVlRngHiCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.UseContext.ValueRange.High.Comparator</meta>
             <column length="65535" name="Evdnce_UseCntxt_VlRng_Hi_Cmprtr"/>
         </property>
         <property name="evdnceUseCntxtVlRngHiSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.UseContext.ValueRange.High.System</meta>
             <column length="65535" name="Evdnce_UseCntxt_VlRng_Hi_Sys"/>
         </property>
         <property name="evdnceUseCntxtVlRngHiUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.UseContext.ValueRange.High.Unit</meta>
             <column length="65535" name="Evdnce_UseCntxt_VlRng_Hi_Unt"/>
         </property>
         <property name="evdnceUseCntxtVlRngHiVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.UseContext.ValueRange.High.Value</meta>
             <column length="65535" name="Evdnce_UseCntxt_VlRng_Hi_Vl"/>
         </property>
         <property name="evdnceUseCntxtVlRngLwCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.UseContext.ValueRange.Low.Code</meta>
             <column length="65535" name="Evdnce_UseCntxt_VlRng_Lw_Cd"/>
         </property>
         <property name="evdnceUseCntxtVlRngLwCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.UseContext.ValueRange.Low.Comparator</meta>
             <column length="65535" name="Evdnce_UseCntxt_VlRng_Lw_Cmprtr"/>
         </property>
         <property name="evdnceUseCntxtVlRngLwSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.UseContext.ValueRange.Low.System</meta>
             <column length="65535" name="Evdnce_UseCntxt_VlRng_Lw_Sys"/>
         </property>
         <property name="evdnceUseCntxtVlRngLwUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.UseContext.ValueRange.Low.Unit</meta>
             <column length="65535" name="Evdnce_UseCntxt_VlRng_Lw_Unt"/>
         </property>
         <property name="evdnceUseCntxtVlRngLwVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.UseContext.ValueRange.Low.Value</meta>
             <column length="65535" name="Evdnce_UseCntxt_VlRng_Lw_Vl"/>
         </property>
         <property name="evdnceUseCntxtVlRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.UseContext.ValueReference</meta>
             <column length="65535" name="Evdnce_UseCntxt_VlRfrnc"/>
         </property>
         <property name="evdnceVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Evidence.Version</meta>
             <column length="65535" name="Evdnce_Vrsn"/>
         </property>
     </class>

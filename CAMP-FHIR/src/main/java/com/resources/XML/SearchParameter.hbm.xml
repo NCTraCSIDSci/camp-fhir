@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Aug 17, 2022, 11:08:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 16, 2022, 11:34:16 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="SearchParameter" optimistic-lock="none" table="SearchParameter">
         <id name="id" type="string">
@@ -7,259 +7,247 @@
             <generator class="identity"/>
         </id>
         <property name="srchPrmtrBase" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.Base</meta>
             <column length="65535" name="SrchPrmtr_Base"/>
         </property>
         <property name="srchPrmtrChain" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.Chain</meta>
             <column length="65535" name="SrchPrmtr_Chain"/>
         </property>
         <property name="srchPrmtrCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.Code</meta>
             <column length="65535" name="SrchPrmtr_Cd"/>
         </property>
-        <property name="srchPrmtrCmprtr" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="SrchPrmtr_Cmprtr"/>
-        </property>
         <property name="srchPrmtrCmpntDfn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.Component.Definition</meta>
             <column length="65535" name="SrchPrmtr_Cmpnt_Dfn"/>
         </property>
         <property name="srchPrmtrCmpntExprsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.Component.Expression</meta>
             <column length="65535" name="SrchPrmtr_Cmpnt_Exprsn"/>
         </property>
         <property name="srchPrmtrCntctNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.Contact.Name</meta>
             <column length="65535" name="SrchPrmtr_Cntct_Nm"/>
         </property>
         <property name="srchPrmtrCntctTlcmPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.Contact.Telecom.Period.End</meta>
             <column length="65535" name="SrchPrmtr_Cntct_Tlcm_Prd_End"/>
         </property>
         <property name="srchPrmtrCntctTlcmPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.Contact.Telecom.Period.Start</meta>
             <column length="65535" name="SrchPrmtr_Cntct_Tlcm_Prd_Strt"/>
         </property>
         <property name="srchPrmtrCntctTlcmRnk" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.Contact.Telecom.Rank</meta>
             <column length="65535" name="SrchPrmtr_Cntct_Tlcm_Rnk"/>
         </property>
         <property name="srchPrmtrCntctTlcmSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.Contact.Telecom.System</meta>
             <column length="65535" name="SrchPrmtr_Cntct_Tlcm_Sys"/>
         </property>
         <property name="srchPrmtrCntctTlcmUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.Contact.Telecom.Use</meta>
             <column length="65535" name="SrchPrmtr_Cntct_Tlcm_Use"/>
         </property>
         <property name="srchPrmtrCntctTlcmVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.Contact.Telecom.Value</meta>
             <column length="65535" name="SrchPrmtr_Cntct_Tlcm_Vl"/>
         </property>
         <property name="srchPrmtrDt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.Date</meta>
             <column length="65535" name="SrchPrmtr_Dt"/>
         </property>
         <property name="srchPrmtrDerivedFrom" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.DerivedFrom</meta>
             <column length="65535" name="SrchPrmtr_DerivedFrom"/>
         </property>
         <property name="srchPrmtrDscrptn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.Description</meta>
             <column length="65535" name="SrchPrmtr_Dscrptn"/>
         </property>
         <property name="srchPrmtrExprmtl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.Experimental</meta>
             <column length="65535" name="SrchPrmtr_Exprmtl"/>
         </property>
         <property name="srchPrmtrExprsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.Expression</meta>
             <column length="65535" name="SrchPrmtr_Exprsn"/>
         </property>
         <property name="srchPrmtrJrsdctnCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.Jurisdiction.Coding.Code</meta>
             <column length="65535" name="SrchPrmtr_Jrsdctn_Cdg_Cd"/>
         </property>
         <property name="srchPrmtrJrsdctnCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.Jurisdiction.Coding.Display</meta>
             <column length="65535" name="SrchPrmtr_Jrsdctn_Cdg_Dsply"/>
         </property>
         <property name="srchPrmtrJrsdctnCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.Jurisdiction.Coding.System</meta>
             <column length="65535" name="SrchPrmtr_Jrsdctn_Cdg_Sys"/>
         </property>
         <property name="srchPrmtrJrsdctnCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.Jurisdiction.Coding.UserSelected</meta>
             <column length="65535" name="SrchPrmtr_Jrsdctn_Cdg_UsrSltd"/>
         </property>
         <property name="srchPrmtrJrsdctnCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.Jurisdiction.Coding.Version</meta>
             <column length="65535" name="SrchPrmtr_Jrsdctn_Cdg_Vrsn"/>
         </property>
         <property name="srchPrmtrJrsdctnTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.Jurisdiction.Text</meta>
             <column length="65535" name="SrchPrmtr_Jrsdctn_Txt"/>
         </property>
-        <property name="srchPrmtrMdfr" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="SrchPrmtr_Mdfr"/>
-        </property>
         <property name="srchPrmtrMultipleAnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.MultipleAnd</meta>
             <column length="65535" name="SrchPrmtr_MultipleAnd"/>
         </property>
         <property name="srchPrmtrMultipleOr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.MultipleOr</meta>
             <column length="65535" name="SrchPrmtr_MultipleOr"/>
         </property>
         <property name="srchPrmtrNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.Name</meta>
             <column length="65535" name="SrchPrmtr_Nm"/>
         </property>
         <property name="srchPrmtrPblshr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.Publisher</meta>
             <column length="65535" name="SrchPrmtr_Pblshr"/>
         </property>
         <property name="srchPrmtrPrpse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.Purpose</meta>
             <column length="65535" name="SrchPrmtr_Prpse"/>
         </property>
         <property name="srchPrmtrSts" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.Status</meta>
             <column length="65535" name="SrchPrmtr_Sts"/>
         </property>
-        <property name="srchPrmtrTar" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="SrchPrmtr_Tar"/>
-        </property>
         <property name="srchPrmtrTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.Type</meta>
             <column length="65535" name="SrchPrmtr_Typ"/>
         </property>
         <property name="srchPrmtrUrl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.Url</meta>
             <column length="65535" name="SrchPrmtr_Url"/>
         </property>
         <property name="srchPrmtrUseCntxtCdCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.UseContext.Code.Code</meta>
             <column length="65535" name="SrchPrmtr_UseCntxt_Cd_Cd"/>
         </property>
         <property name="srchPrmtrUseCntxtCdDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.UseContext.Code.Display</meta>
             <column length="65535" name="SrchPrmtr_UseCntxt_Cd_Dsply"/>
         </property>
         <property name="srchPrmtrUseCntxtCdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.UseContext.Code.System</meta>
             <column length="65535" name="SrchPrmtr_UseCntxt_Cd_Sys"/>
         </property>
         <property name="srchPrmtrUseCntxtCdUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.UseContext.Code.UserSelected</meta>
             <column length="65535" name="SrchPrmtr_UseCntxt_Cd_UsrSltd"/>
         </property>
         <property name="srchPrmtrUseCntxtCdVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.UseContext.Code.Version</meta>
             <column length="65535" name="SrchPrmtr_UseCntxt_Cd_Vrsn"/>
         </property>
         <property name="srchPrmtrUseCntxtVlCdbleCncptCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.UseContext.ValueCodeableConcept.Coding.Code</meta>
             <column length="65535" name="SrchPrmtr_UseCntxt_VlCdbleCncpt_Cdg_Cd"/>
         </property>
         <property name="srchPrmtrUseCntxtVlCdbleCncptCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.UseContext.ValueCodeableConcept.Coding.Display</meta>
             <column length="65535" name="SrchPrmtr_UseCntxt_VlCdbleCncpt_Cdg_Dsply"/>
         </property>
         <property name="srchPrmtrUseCntxtVlCdbleCncptCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.UseContext.ValueCodeableConcept.Coding.System</meta>
             <column length="65535" name="SrchPrmtr_UseCntxt_VlCdbleCncpt_Cdg_Sys"/>
         </property>
         <property name="srchPrmtrUseCntxtVlCdbleCncptCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.UseContext.ValueCodeableConcept.Coding.UserSelected</meta>
             <column length="65535" name="SrchPrmtr_UseCntxt_VlCdbleCncpt_Cdg_UsrSltd"/>
         </property>
         <property name="srchPrmtrUseCntxtVlCdbleCncptCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.UseContext.ValueCodeableConcept.Coding.Version</meta>
             <column length="65535" name="SrchPrmtr_UseCntxt_VlCdbleCncpt_Cdg_Vrsn"/>
         </property>
         <property name="srchPrmtrUseCntxtVlCdbleCncptTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.UseContext.ValueCodeableConcept.Text</meta>
             <column length="65535" name="SrchPrmtr_UseCntxt_VlCdbleCncpt_Txt"/>
         </property>
         <property name="srchPrmtrUseCntxtVlQntyCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.UseContext.ValueQuantity.Code</meta>
             <column length="65535" name="SrchPrmtr_UseCntxt_VlQnty_Cd"/>
         </property>
         <property name="srchPrmtrUseCntxtVlQntyCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.UseContext.ValueQuantity.Comparator</meta>
             <column length="65535" name="SrchPrmtr_UseCntxt_VlQnty_Cmprtr"/>
         </property>
         <property name="srchPrmtrUseCntxtVlQntySys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.UseContext.ValueQuantity.System</meta>
             <column length="65535" name="SrchPrmtr_UseCntxt_VlQnty_Sys"/>
         </property>
         <property name="srchPrmtrUseCntxtVlQntyUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.UseContext.ValueQuantity.Unit</meta>
             <column length="65535" name="SrchPrmtr_UseCntxt_VlQnty_Unt"/>
         </property>
         <property name="srchPrmtrUseCntxtVlQntyVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.UseContext.ValueQuantity.Value</meta>
             <column length="65535" name="SrchPrmtr_UseCntxt_VlQnty_Vl"/>
         </property>
         <property name="srchPrmtrUseCntxtVlRngHiCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.UseContext.ValueRange.High.Code</meta>
             <column length="65535" name="SrchPrmtr_UseCntxt_VlRng_Hi_Cd"/>
         </property>
         <property name="srchPrmtrUseCntxtVlRngHiCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.UseContext.ValueRange.High.Comparator</meta>
             <column length="65535" name="SrchPrmtr_UseCntxt_VlRng_Hi_Cmprtr"/>
         </property>
         <property name="srchPrmtrUseCntxtVlRngHiSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.UseContext.ValueRange.High.System</meta>
             <column length="65535" name="SrchPrmtr_UseCntxt_VlRng_Hi_Sys"/>
         </property>
         <property name="srchPrmtrUseCntxtVlRngHiUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.UseContext.ValueRange.High.Unit</meta>
             <column length="65535" name="SrchPrmtr_UseCntxt_VlRng_Hi_Unt"/>
         </property>
         <property name="srchPrmtrUseCntxtVlRngHiVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.UseContext.ValueRange.High.Value</meta>
             <column length="65535" name="SrchPrmtr_UseCntxt_VlRng_Hi_Vl"/>
         </property>
         <property name="srchPrmtrUseCntxtVlRngLwCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.UseContext.ValueRange.Low.Code</meta>
             <column length="65535" name="SrchPrmtr_UseCntxt_VlRng_Lw_Cd"/>
         </property>
         <property name="srchPrmtrUseCntxtVlRngLwCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.UseContext.ValueRange.Low.Comparator</meta>
             <column length="65535" name="SrchPrmtr_UseCntxt_VlRng_Lw_Cmprtr"/>
         </property>
         <property name="srchPrmtrUseCntxtVlRngLwSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.UseContext.ValueRange.Low.System</meta>
             <column length="65535" name="SrchPrmtr_UseCntxt_VlRng_Lw_Sys"/>
         </property>
         <property name="srchPrmtrUseCntxtVlRngLwUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.UseContext.ValueRange.Low.Unit</meta>
             <column length="65535" name="SrchPrmtr_UseCntxt_VlRng_Lw_Unt"/>
         </property>
         <property name="srchPrmtrUseCntxtVlRngLwVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.UseContext.ValueRange.Low.Value</meta>
             <column length="65535" name="SrchPrmtr_UseCntxt_VlRng_Lw_Vl"/>
         </property>
         <property name="srchPrmtrUseCntxtVlRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.UseContext.ValueReference</meta>
             <column length="65535" name="SrchPrmtr_UseCntxt_VlRfrnc"/>
         </property>
         <property name="srchPrmtrVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.Version</meta>
             <column length="65535" name="SrchPrmtr_Vrsn"/>
         </property>
         <property name="srchPrmtrXpath" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.Xpath</meta>
             <column length="65535" name="SrchPrmtr_Xpath"/>
         </property>
         <property name="srchPrmtrXpathUsg" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">SearchParameter.XpathUsage</meta>
             <column length="65535" name="SrchPrmtr_XpathUsg"/>
         </property>
     </class>

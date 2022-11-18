@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Aug 17, 2022, 11:08:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 16, 2022, 11:34:16 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="HealthcareService" optimistic-lock="none" table="HealthcareService">
         <id name="id" type="string">
@@ -7,395 +7,391 @@
             <generator class="identity"/>
         </id>
         <property name="hlthcrSrvActive" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Active</meta>
             <column length="65535" name="HlthcrSrv_Active"/>
         </property>
         <property name="hlthcrSrvAppmntRequired" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.AppointmentRequired</meta>
             <column length="65535" name="HlthcrSrv_AppmntRequired"/>
         </property>
         <property name="hlthcrSrvAvailabilityExceptions" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.AvailabilityExceptions</meta>
             <column length="65535" name="HlthcrSrv_AvailabilityExceptions"/>
         </property>
         <property name="hlthcrSrvAvailableTimeAllDay" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.AvailableTime.AllDay</meta>
             <column length="65535" name="HlthcrSrv_AvailableTime_AllDay"/>
         </property>
         <property name="hlthcrSrvAvailableTimeAvailableEndTime" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.AvailableTime.AvailableEndTime</meta>
             <column length="65535" name="HlthcrSrv_AvailableTime_AvailableEndTime"/>
         </property>
         <property name="hlthcrSrvAvailableTimeAvailableStrtTime" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.AvailableTime.AvailableStartTime</meta>
             <column length="65535" name="HlthcrSrv_AvailableTime_AvailableStrtTime"/>
         </property>
-        <property name="hlthcrSrvAvailableTimeDaysOfWeek" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="HlthcrSrv_AvailableTime_DaysOfWeek"/>
-        </property>
         <property name="hlthcrSrvCtgryCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Category.Coding.Code</meta>
             <column length="65535" name="HlthcrSrv_Ctgry_Cdg_Cd"/>
         </property>
         <property name="hlthcrSrvCtgryCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Category.Coding.Display</meta>
             <column length="65535" name="HlthcrSrv_Ctgry_Cdg_Dsply"/>
         </property>
         <property name="hlthcrSrvCtgryCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Category.Coding.System</meta>
             <column length="65535" name="HlthcrSrv_Ctgry_Cdg_Sys"/>
         </property>
         <property name="hlthcrSrvCtgryCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Category.Coding.UserSelected</meta>
             <column length="65535" name="HlthcrSrv_Ctgry_Cdg_UsrSltd"/>
         </property>
         <property name="hlthcrSrvCtgryCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Category.Coding.Version</meta>
             <column length="65535" name="HlthcrSrv_Ctgry_Cdg_Vrsn"/>
         </property>
         <property name="hlthcrSrvCtgryTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Category.Text</meta>
             <column length="65535" name="HlthcrSrv_Ctgry_Txt"/>
         </property>
         <property name="hlthcrSrvCrctrstcCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Characteristic.Coding.Code</meta>
             <column length="65535" name="HlthcrSrv_Crctrstc_Cdg_Cd"/>
         </property>
         <property name="hlthcrSrvCrctrstcCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Characteristic.Coding.Display</meta>
             <column length="65535" name="HlthcrSrv_Crctrstc_Cdg_Dsply"/>
         </property>
         <property name="hlthcrSrvCrctrstcCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Characteristic.Coding.System</meta>
             <column length="65535" name="HlthcrSrv_Crctrstc_Cdg_Sys"/>
         </property>
         <property name="hlthcrSrvCrctrstcCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Characteristic.Coding.UserSelected</meta>
             <column length="65535" name="HlthcrSrv_Crctrstc_Cdg_UsrSltd"/>
         </property>
         <property name="hlthcrSrvCrctrstcCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Characteristic.Coding.Version</meta>
             <column length="65535" name="HlthcrSrv_Crctrstc_Cdg_Vrsn"/>
         </property>
         <property name="hlthcrSrvCrctrstcTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Characteristic.Text</meta>
             <column length="65535" name="HlthcrSrv_Crctrstc_Txt"/>
         </property>
         <property name="hlthcrSrvComment" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Comment</meta>
             <column length="65535" name="HlthcrSrv_Comment"/>
         </property>
         <property name="hlthcrSrvCmmnctnCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Communication.Coding.Code</meta>
             <column length="65535" name="HlthcrSrv_Cmmnctn_Cdg_Cd"/>
         </property>
         <property name="hlthcrSrvCmmnctnCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Communication.Coding.Display</meta>
             <column length="65535" name="HlthcrSrv_Cmmnctn_Cdg_Dsply"/>
         </property>
         <property name="hlthcrSrvCmmnctnCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Communication.Coding.System</meta>
             <column length="65535" name="HlthcrSrv_Cmmnctn_Cdg_Sys"/>
         </property>
         <property name="hlthcrSrvCmmnctnCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Communication.Coding.UserSelected</meta>
             <column length="65535" name="HlthcrSrv_Cmmnctn_Cdg_UsrSltd"/>
         </property>
         <property name="hlthcrSrvCmmnctnCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Communication.Coding.Version</meta>
             <column length="65535" name="HlthcrSrv_Cmmnctn_Cdg_Vrsn"/>
         </property>
         <property name="hlthcrSrvCmmnctnTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Communication.Text</meta>
             <column length="65535" name="HlthcrSrv_Cmmnctn_Txt"/>
         </property>
         <property name="hlthcrSrvCvgArea" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.CoverageArea</meta>
             <column length="65535" name="HlthcrSrv_CvgArea"/>
         </property>
         <property name="hlthcrSrvElgbltyCdCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Eligibility.Code.Coding.Code</meta>
             <column length="65535" name="HlthcrSrv_Elgblty_Cd_Cdg_Cd"/>
         </property>
         <property name="hlthcrSrvElgbltyCdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Eligibility.Code.Coding.Display</meta>
             <column length="65535" name="HlthcrSrv_Elgblty_Cd_Cdg_Dsply"/>
         </property>
         <property name="hlthcrSrvElgbltyCdCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Eligibility.Code.Coding.System</meta>
             <column length="65535" name="HlthcrSrv_Elgblty_Cd_Cdg_Sys"/>
         </property>
         <property name="hlthcrSrvElgbltyCdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Eligibility.Code.Coding.UserSelected</meta>
             <column length="65535" name="HlthcrSrv_Elgblty_Cd_Cdg_UsrSltd"/>
         </property>
         <property name="hlthcrSrvElgbltyCdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Eligibility.Code.Coding.Version</meta>
             <column length="65535" name="HlthcrSrv_Elgblty_Cd_Cdg_Vrsn"/>
         </property>
         <property name="hlthcrSrvElgbltyCdTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Eligibility.Code.Text</meta>
             <column length="65535" name="HlthcrSrv_Elgblty_Cd_Txt"/>
         </property>
         <property name="hlthcrSrvElgbltyComment" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Eligibility.Comment</meta>
             <column length="65535" name="HlthcrSrv_Elgblty_Comment"/>
         </property>
         <property name="hlthcrSrvEndpoint" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Endpoint</meta>
             <column length="65535" name="HlthcrSrv_Endpoint"/>
         </property>
         <property name="hlthcrSrvExtraDtls" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.ExtraDetails</meta>
             <column length="65535" name="HlthcrSrv_ExtraDtls"/>
         </property>
         <property name="hlthcrSrvIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Identifier.Assigner</meta>
             <column length="65535" name="HlthcrSrv_Id_Assigner"/>
         </property>
         <property name="hlthcrSrvIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Identifier.Period.End</meta>
             <column length="65535" name="HlthcrSrv_Id_Prd_End"/>
         </property>
         <property name="hlthcrSrvIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Identifier.Period.Start</meta>
             <column length="65535" name="HlthcrSrv_Id_Prd_Strt"/>
         </property>
         <property name="hlthcrSrvIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Identifier.System</meta>
             <column length="65535" name="HlthcrSrv_Id_Sys"/>
         </property>
         <property name="hlthcrSrvIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Identifier.Type.Coding.Code</meta>
             <column length="65535" name="HlthcrSrv_Id_Typ_Cdg_Cd"/>
         </property>
         <property name="hlthcrSrvIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Identifier.Type.Coding.Display</meta>
             <column length="65535" name="HlthcrSrv_Id_Typ_Cdg_Dsply"/>
         </property>
         <property name="hlthcrSrvIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Identifier.Type.Coding.System</meta>
             <column length="65535" name="HlthcrSrv_Id_Typ_Cdg_Sys"/>
         </property>
         <property name="hlthcrSrvIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Identifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="HlthcrSrv_Id_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="hlthcrSrvIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Identifier.Type.Coding.Version</meta>
             <column length="65535" name="HlthcrSrv_Id_Typ_Cdg_Vrsn"/>
         </property>
         <property name="hlthcrSrvIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Identifier.Type.Text</meta>
             <column length="65535" name="HlthcrSrv_Id_Typ_Txt"/>
         </property>
         <property name="hlthcrSrvIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Identifier.Use</meta>
             <column length="65535" name="HlthcrSrv_Id_Use"/>
         </property>
         <property name="hlthcrSrvIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Identifier.Value</meta>
             <column length="65535" name="HlthcrSrv_Id_Vl"/>
         </property>
         <property name="hlthcrSrvLctn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Location</meta>
             <column length="65535" name="HlthcrSrv_Lctn"/>
         </property>
         <property name="hlthcrSrvNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Name</meta>
             <column length="65535" name="HlthcrSrv_Nm"/>
         </property>
         <property name="hlthcrSrvNotAvailableDscrptn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.NotAvailable.Description</meta>
             <column length="65535" name="HlthcrSrv_NotAvailable_Dscrptn"/>
         </property>
         <property name="hlthcrSrvNotAvailableDuringEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.NotAvailable.During.End</meta>
             <column length="65535" name="HlthcrSrv_NotAvailable_During_End"/>
         </property>
         <property name="hlthcrSrvNotAvailableDuringStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.NotAvailable.During.Start</meta>
             <column length="65535" name="HlthcrSrv_NotAvailable_During_Strt"/>
         </property>
         <property name="hlthcrSrvPhotoCntntTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Photo.ContentType</meta>
             <column length="65535" name="HlthcrSrv_Photo_CntntTyp"/>
         </property>
         <property name="hlthcrSrvPhotoCreation" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Photo.Creation</meta>
             <column length="65535" name="HlthcrSrv_Photo_Creation"/>
         </property>
         <property name="hlthcrSrvPhotoData" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Photo.Data</meta>
             <column length="65535" name="HlthcrSrv_Photo_Data"/>
         </property>
         <property name="hlthcrSrvPhotoHash" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Photo.Hash</meta>
             <column length="65535" name="HlthcrSrv_Photo_Hash"/>
         </property>
         <property name="hlthcrSrvPhotoLnguage" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Photo.Language</meta>
             <column length="65535" name="HlthcrSrv_Photo_Lnguage"/>
         </property>
         <property name="hlthcrSrvPhotoSz" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Photo.Size</meta>
             <column length="65535" name="HlthcrSrv_Photo_Sz"/>
         </property>
         <property name="hlthcrSrvPhotoTtl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Photo.Title</meta>
             <column length="65535" name="HlthcrSrv_Photo_Ttl"/>
         </property>
         <property name="hlthcrSrvPhotoUrl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Photo.Url</meta>
             <column length="65535" name="HlthcrSrv_Photo_Url"/>
         </property>
         <property name="hlthcrSrvPrgrmCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Program.Coding.Code</meta>
             <column length="65535" name="HlthcrSrv_Prgrm_Cdg_Cd"/>
         </property>
         <property name="hlthcrSrvPrgrmCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Program.Coding.Display</meta>
             <column length="65535" name="HlthcrSrv_Prgrm_Cdg_Dsply"/>
         </property>
         <property name="hlthcrSrvPrgrmCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Program.Coding.System</meta>
             <column length="65535" name="HlthcrSrv_Prgrm_Cdg_Sys"/>
         </property>
         <property name="hlthcrSrvPrgrmCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Program.Coding.UserSelected</meta>
             <column length="65535" name="HlthcrSrv_Prgrm_Cdg_UsrSltd"/>
         </property>
         <property name="hlthcrSrvPrgrmCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Program.Coding.Version</meta>
             <column length="65535" name="HlthcrSrv_Prgrm_Cdg_Vrsn"/>
         </property>
         <property name="hlthcrSrvPrgrmTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Program.Text</meta>
             <column length="65535" name="HlthcrSrv_Prgrm_Txt"/>
         </property>
         <property name="hlthcrSrvProvidedBy" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.ProvidedBy</meta>
             <column length="65535" name="HlthcrSrv_ProvidedBy"/>
         </property>
         <property name="hlthcrSrvReferralMthdCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.ReferralMethod.Coding.Code</meta>
             <column length="65535" name="HlthcrSrv_ReferralMthd_Cdg_Cd"/>
         </property>
         <property name="hlthcrSrvReferralMthdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.ReferralMethod.Coding.Display</meta>
             <column length="65535" name="HlthcrSrv_ReferralMthd_Cdg_Dsply"/>
         </property>
         <property name="hlthcrSrvReferralMthdCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.ReferralMethod.Coding.System</meta>
             <column length="65535" name="HlthcrSrv_ReferralMthd_Cdg_Sys"/>
         </property>
         <property name="hlthcrSrvReferralMthdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.ReferralMethod.Coding.UserSelected</meta>
             <column length="65535" name="HlthcrSrv_ReferralMthd_Cdg_UsrSltd"/>
         </property>
         <property name="hlthcrSrvReferralMthdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.ReferralMethod.Coding.Version</meta>
             <column length="65535" name="HlthcrSrv_ReferralMthd_Cdg_Vrsn"/>
         </property>
         <property name="hlthcrSrvReferralMthdTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.ReferralMethod.Text</meta>
             <column length="65535" name="HlthcrSrv_ReferralMthd_Txt"/>
         </property>
         <property name="hlthcrSrvSrvProvisionCdCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.ServiceProvisionCode.Coding.Code</meta>
             <column length="65535" name="HlthcrSrv_SrvProvisionCd_Cdg_Cd"/>
         </property>
         <property name="hlthcrSrvSrvProvisionCdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.ServiceProvisionCode.Coding.Display</meta>
             <column length="65535" name="HlthcrSrv_SrvProvisionCd_Cdg_Dsply"/>
         </property>
         <property name="hlthcrSrvSrvProvisionCdCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.ServiceProvisionCode.Coding.System</meta>
             <column length="65535" name="HlthcrSrv_SrvProvisionCd_Cdg_Sys"/>
         </property>
         <property name="hlthcrSrvSrvProvisionCdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.ServiceProvisionCode.Coding.UserSelected</meta>
             <column length="65535" name="HlthcrSrv_SrvProvisionCd_Cdg_UsrSltd"/>
         </property>
         <property name="hlthcrSrvSrvProvisionCdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.ServiceProvisionCode.Coding.Version</meta>
             <column length="65535" name="HlthcrSrv_SrvProvisionCd_Cdg_Vrsn"/>
         </property>
         <property name="hlthcrSrvSrvProvisionCdTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.ServiceProvisionCode.Text</meta>
             <column length="65535" name="HlthcrSrv_SrvProvisionCd_Txt"/>
         </property>
         <property name="hlthcrSrvSpcltyCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Specialty.Coding.Code</meta>
             <column length="65535" name="HlthcrSrv_Spclty_Cdg_Cd"/>
         </property>
         <property name="hlthcrSrvSpcltyCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Specialty.Coding.Display</meta>
             <column length="65535" name="HlthcrSrv_Spclty_Cdg_Dsply"/>
         </property>
         <property name="hlthcrSrvSpcltyCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Specialty.Coding.System</meta>
             <column length="65535" name="HlthcrSrv_Spclty_Cdg_Sys"/>
         </property>
         <property name="hlthcrSrvSpcltyCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Specialty.Coding.UserSelected</meta>
             <column length="65535" name="HlthcrSrv_Spclty_Cdg_UsrSltd"/>
         </property>
         <property name="hlthcrSrvSpcltyCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Specialty.Coding.Version</meta>
             <column length="65535" name="HlthcrSrv_Spclty_Cdg_Vrsn"/>
         </property>
         <property name="hlthcrSrvSpcltyTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Specialty.Text</meta>
             <column length="65535" name="HlthcrSrv_Spclty_Txt"/>
         </property>
         <property name="hlthcrSrvTlcmPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Telecom.Period.End</meta>
             <column length="65535" name="HlthcrSrv_Tlcm_Prd_End"/>
         </property>
         <property name="hlthcrSrvTlcmPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Telecom.Period.Start</meta>
             <column length="65535" name="HlthcrSrv_Tlcm_Prd_Strt"/>
         </property>
         <property name="hlthcrSrvTlcmRnk" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Telecom.Rank</meta>
             <column length="65535" name="HlthcrSrv_Tlcm_Rnk"/>
         </property>
         <property name="hlthcrSrvTlcmSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Telecom.System</meta>
             <column length="65535" name="HlthcrSrv_Tlcm_Sys"/>
         </property>
         <property name="hlthcrSrvTlcmUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Telecom.Use</meta>
             <column length="65535" name="HlthcrSrv_Tlcm_Use"/>
         </property>
         <property name="hlthcrSrvTlcmVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Telecom.Value</meta>
             <column length="65535" name="HlthcrSrv_Tlcm_Vl"/>
         </property>
         <property name="hlthcrSrvTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Type.Coding.Code</meta>
             <column length="65535" name="HlthcrSrv_Typ_Cdg_Cd"/>
         </property>
         <property name="hlthcrSrvTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Type.Coding.Display</meta>
             <column length="65535" name="HlthcrSrv_Typ_Cdg_Dsply"/>
         </property>
         <property name="hlthcrSrvTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Type.Coding.System</meta>
             <column length="65535" name="HlthcrSrv_Typ_Cdg_Sys"/>
         </property>
         <property name="hlthcrSrvTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Type.Coding.UserSelected</meta>
             <column length="65535" name="HlthcrSrv_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="hlthcrSrvTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Type.Coding.Version</meta>
             <column length="65535" name="HlthcrSrv_Typ_Cdg_Vrsn"/>
         </property>
         <property name="hlthcrSrvTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">HealthcareService.Type.Text</meta>
             <column length="65535" name="HlthcrSrv_Typ_Txt"/>
         </property>
     </class>

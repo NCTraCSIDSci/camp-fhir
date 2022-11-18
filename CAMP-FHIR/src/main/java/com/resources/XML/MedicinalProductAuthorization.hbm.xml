@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Aug 17, 2022, 11:08:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 16, 2022, 11:34:16 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="MedicinalProductAuthorization" optimistic-lock="none" table="MedicinalProductAuthorization">
         <id name="id" type="string">
@@ -7,403 +7,403 @@
             <generator class="identity"/>
         </id>
         <property name="mdcnlPrdctAthztnCntryCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.Country.Coding.Code</meta>
             <column length="65535" name="MdcnlPrdctAthztn_Cntry_Cdg_Cd"/>
         </property>
         <property name="mdcnlPrdctAthztnCntryCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.Country.Coding.Display</meta>
             <column length="65535" name="MdcnlPrdctAthztn_Cntry_Cdg_Dsply"/>
         </property>
         <property name="mdcnlPrdctAthztnCntryCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.Country.Coding.System</meta>
             <column length="65535" name="MdcnlPrdctAthztn_Cntry_Cdg_Sys"/>
         </property>
         <property name="mdcnlPrdctAthztnCntryCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.Country.Coding.UserSelected</meta>
             <column length="65535" name="MdcnlPrdctAthztn_Cntry_Cdg_UsrSltd"/>
         </property>
         <property name="mdcnlPrdctAthztnCntryCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.Country.Coding.Version</meta>
             <column length="65535" name="MdcnlPrdctAthztn_Cntry_Cdg_Vrsn"/>
         </property>
         <property name="mdcnlPrdctAthztnCntryTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.Country.Text</meta>
             <column length="65535" name="MdcnlPrdctAthztn_Cntry_Txt"/>
         </property>
         <property name="mdcnlPrdctAthztnDataExclusivityPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.DataExclusivityPeriod.End</meta>
             <column length="65535" name="MdcnlPrdctAthztn_DataExclusivityPrd_End"/>
         </property>
         <property name="mdcnlPrdctAthztnDataExclusivityPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.DataExclusivityPeriod.Start</meta>
             <column length="65535" name="MdcnlPrdctAthztn_DataExclusivityPrd_Strt"/>
         </property>
         <property name="mdcnlPrdctAthztnDtOfFirstAthztn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.DateOfFirstAuthorization</meta>
             <column length="65535" name="MdcnlPrdctAthztn_DtOfFirstAthztn"/>
         </property>
         <property name="mdcnlPrdctAthztnHolder" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.Holder</meta>
             <column length="65535" name="MdcnlPrdctAthztn_Holder"/>
         </property>
         <property name="mdcnlPrdctAthztnIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.Identifier.Assigner</meta>
             <column length="65535" name="MdcnlPrdctAthztn_Id_Assigner"/>
         </property>
         <property name="mdcnlPrdctAthztnIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.Identifier.Period.End</meta>
             <column length="65535" name="MdcnlPrdctAthztn_Id_Prd_End"/>
         </property>
         <property name="mdcnlPrdctAthztnIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.Identifier.Period.Start</meta>
             <column length="65535" name="MdcnlPrdctAthztn_Id_Prd_Strt"/>
         </property>
         <property name="mdcnlPrdctAthztnIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.Identifier.System</meta>
             <column length="65535" name="MdcnlPrdctAthztn_Id_Sys"/>
         </property>
         <property name="mdcnlPrdctAthztnIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.Identifier.Type.Coding.Code</meta>
             <column length="65535" name="MdcnlPrdctAthztn_Id_Typ_Cdg_Cd"/>
         </property>
         <property name="mdcnlPrdctAthztnIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.Identifier.Type.Coding.Display</meta>
             <column length="65535" name="MdcnlPrdctAthztn_Id_Typ_Cdg_Dsply"/>
         </property>
         <property name="mdcnlPrdctAthztnIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.Identifier.Type.Coding.System</meta>
             <column length="65535" name="MdcnlPrdctAthztn_Id_Typ_Cdg_Sys"/>
         </property>
         <property name="mdcnlPrdctAthztnIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.Identifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="MdcnlPrdctAthztn_Id_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="mdcnlPrdctAthztnIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.Identifier.Type.Coding.Version</meta>
             <column length="65535" name="MdcnlPrdctAthztn_Id_Typ_Cdg_Vrsn"/>
         </property>
         <property name="mdcnlPrdctAthztnIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.Identifier.Type.Text</meta>
             <column length="65535" name="MdcnlPrdctAthztn_Id_Typ_Txt"/>
         </property>
         <property name="mdcnlPrdctAthztnIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.Identifier.Use</meta>
             <column length="65535" name="MdcnlPrdctAthztn_Id_Use"/>
         </property>
         <property name="mdcnlPrdctAthztnIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.Identifier.Value</meta>
             <column length="65535" name="MdcnlPrdctAthztn_Id_Vl"/>
         </property>
         <property name="mdcnlPrdctAthztnInternationalBirthDt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.InternationalBirthDate</meta>
             <column length="65535" name="MdcnlPrdctAthztn_InternationalBirthDt"/>
         </property>
         <property name="mdcnlPrdctAthztnJrsdctnCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.Jurisdiction.Coding.Code</meta>
             <column length="65535" name="MdcnlPrdctAthztn_Jrsdctn_Cdg_Cd"/>
         </property>
         <property name="mdcnlPrdctAthztnJrsdctnCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.Jurisdiction.Coding.Display</meta>
             <column length="65535" name="MdcnlPrdctAthztn_Jrsdctn_Cdg_Dsply"/>
         </property>
         <property name="mdcnlPrdctAthztnJrsdctnCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.Jurisdiction.Coding.System</meta>
             <column length="65535" name="MdcnlPrdctAthztn_Jrsdctn_Cdg_Sys"/>
         </property>
         <property name="mdcnlPrdctAthztnJrsdctnCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.Jurisdiction.Coding.UserSelected</meta>
             <column length="65535" name="MdcnlPrdctAthztn_Jrsdctn_Cdg_UsrSltd"/>
         </property>
         <property name="mdcnlPrdctAthztnJrsdctnCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.Jurisdiction.Coding.Version</meta>
             <column length="65535" name="MdcnlPrdctAthztn_Jrsdctn_Cdg_Vrsn"/>
         </property>
         <property name="mdcnlPrdctAthztnJrsdctnTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.Jurisdiction.Text</meta>
             <column length="65535" name="MdcnlPrdctAthztn_Jrsdctn_Txt"/>
         </property>
         <property name="mdcnlPrdctAthztnJrsdctnalAthztnCntryCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.JurisdictionalAuthorization.Country.Coding.Code</meta>
             <column length="65535" name="MdcnlPrdctAthztn_JrsdctnalAthztn_Cntry_Cdg_Cd"/>
         </property>
         <property name="mdcnlPrdctAthztnJrsdctnalAthztnCntryCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.JurisdictionalAuthorization.Country.Coding.Display</meta>
             <column length="65535" name="MdcnlPrdctAthztn_JrsdctnalAthztn_Cntry_Cdg_Dsply"/>
         </property>
         <property name="mdcnlPrdctAthztnJrsdctnalAthztnCntryCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.JurisdictionalAuthorization.Country.Coding.System</meta>
             <column length="65535" name="MdcnlPrdctAthztn_JrsdctnalAthztn_Cntry_Cdg_Sys"/>
         </property>
         <property name="mdcnlPrdctAthztnJrsdctnalAthztnCntryCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.JurisdictionalAuthorization.Country.Coding.UserSelected</meta>
             <column length="65535" name="MdcnlPrdctAthztn_JrsdctnalAthztn_Cntry_Cdg_UsrSltd"/>
         </property>
         <property name="mdcnlPrdctAthztnJrsdctnalAthztnCntryCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.JurisdictionalAuthorization.Country.Coding.Version</meta>
             <column length="65535" name="MdcnlPrdctAthztn_JrsdctnalAthztn_Cntry_Cdg_Vrsn"/>
         </property>
         <property name="mdcnlPrdctAthztnJrsdctnalAthztnCntryTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.JurisdictionalAuthorization.Country.Text</meta>
             <column length="65535" name="MdcnlPrdctAthztn_JrsdctnalAthztn_Cntry_Txt"/>
         </property>
         <property name="mdcnlPrdctAthztnJrsdctnalAthztnIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.JurisdictionalAuthorization.Identifier.Assigner</meta>
             <column length="65535" name="MdcnlPrdctAthztn_JrsdctnalAthztn_Id_Assigner"/>
         </property>
         <property name="mdcnlPrdctAthztnJrsdctnalAthztnIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.JurisdictionalAuthorization.Identifier.Period.End</meta>
             <column length="65535" name="MdcnlPrdctAthztn_JrsdctnalAthztn_Id_Prd_End"/>
         </property>
         <property name="mdcnlPrdctAthztnJrsdctnalAthztnIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.JurisdictionalAuthorization.Identifier.Period.Start</meta>
             <column length="65535" name="MdcnlPrdctAthztn_JrsdctnalAthztn_Id_Prd_Strt"/>
         </property>
         <property name="mdcnlPrdctAthztnJrsdctnalAthztnIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.JurisdictionalAuthorization.Identifier.System</meta>
             <column length="65535" name="MdcnlPrdctAthztn_JrsdctnalAthztn_Id_Sys"/>
         </property>
         <property name="mdcnlPrdctAthztnJrsdctnalAthztnIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.JurisdictionalAuthorization.Identifier.Type.Coding.Code</meta>
             <column length="65535" name="MdcnlPrdctAthztn_JrsdctnalAthztn_Id_Typ_Cdg_Cd"/>
         </property>
         <property name="mdcnlPrdctAthztnJrsdctnalAthztnIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.JurisdictionalAuthorization.Identifier.Type.Coding.Display</meta>
             <column length="65535" name="MdcnlPrdctAthztn_JrsdctnalAthztn_Id_Typ_Cdg_Dsply"/>
         </property>
         <property name="mdcnlPrdctAthztnJrsdctnalAthztnIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.JurisdictionalAuthorization.Identifier.Type.Coding.System</meta>
             <column length="65535" name="MdcnlPrdctAthztn_JrsdctnalAthztn_Id_Typ_Cdg_Sys"/>
         </property>
         <property name="mdcnlPrdctAthztnJrsdctnalAthztnIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.JurisdictionalAuthorization.Identifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="MdcnlPrdctAthztn_JrsdctnalAthztn_Id_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="mdcnlPrdctAthztnJrsdctnalAthztnIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.JurisdictionalAuthorization.Identifier.Type.Coding.Version</meta>
             <column length="65535" name="MdcnlPrdctAthztn_JrsdctnalAthztn_Id_Typ_Cdg_Vrsn"/>
         </property>
         <property name="mdcnlPrdctAthztnJrsdctnalAthztnIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.JurisdictionalAuthorization.Identifier.Type.Text</meta>
             <column length="65535" name="MdcnlPrdctAthztn_JrsdctnalAthztn_Id_Typ_Txt"/>
         </property>
         <property name="mdcnlPrdctAthztnJrsdctnalAthztnIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.JurisdictionalAuthorization.Identifier.Use</meta>
             <column length="65535" name="MdcnlPrdctAthztn_JrsdctnalAthztn_Id_Use"/>
         </property>
         <property name="mdcnlPrdctAthztnJrsdctnalAthztnIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.JurisdictionalAuthorization.Identifier.Value</meta>
             <column length="65535" name="MdcnlPrdctAthztn_JrsdctnalAthztn_Id_Vl"/>
         </property>
         <property name="mdcnlPrdctAthztnJrsdctnalAthztnJrsdctnCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.JurisdictionalAuthorization.Jurisdiction.Coding.Code</meta>
             <column length="65535" name="MdcnlPrdctAthztn_JrsdctnalAthztn_Jrsdctn_Cdg_Cd"/>
         </property>
         <property name="mdcnlPrdctAthztnJrsdctnalAthztnJrsdctnCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.JurisdictionalAuthorization.Jurisdiction.Coding.Display</meta>
             <column length="65535" name="MdcnlPrdctAthztn_JrsdctnalAthztn_Jrsdctn_Cdg_Dsply"/>
         </property>
         <property name="mdcnlPrdctAthztnJrsdctnalAthztnJrsdctnCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.JurisdictionalAuthorization.Jurisdiction.Coding.System</meta>
             <column length="65535" name="MdcnlPrdctAthztn_JrsdctnalAthztn_Jrsdctn_Cdg_Sys"/>
         </property>
         <property name="mdcnlPrdctAthztnJrsdctnalAthztnJrsdctnCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.JurisdictionalAuthorization.Jurisdiction.Coding.UserSelected</meta>
             <column length="65535" name="MdcnlPrdctAthztn_JrsdctnalAthztn_Jrsdctn_Cdg_UsrSltd"/>
         </property>
         <property name="mdcnlPrdctAthztnJrsdctnalAthztnJrsdctnCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.JurisdictionalAuthorization.Jurisdiction.Coding.Version</meta>
             <column length="65535" name="MdcnlPrdctAthztn_JrsdctnalAthztn_Jrsdctn_Cdg_Vrsn"/>
         </property>
         <property name="mdcnlPrdctAthztnJrsdctnalAthztnJrsdctnTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.JurisdictionalAuthorization.Jurisdiction.Text</meta>
             <column length="65535" name="MdcnlPrdctAthztn_JrsdctnalAthztn_Jrsdctn_Txt"/>
         </property>
         <property name="mdcnlPrdctAthztnJrsdctnalAthztnLegalStsOfSpplyCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.JurisdictionalAuthorization.LegalStatusOfSupply.Coding.Code</meta>
             <column length="65535" name="MdcnlPrdctAthztn_JrsdctnalAthztn_LegalStsOfSpply_Cdg_Cd"/>
         </property>
         <property name="mdcnlPrdctAthztnJrsdctnalAthztnLegalStsOfSpplyCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.JurisdictionalAuthorization.LegalStatusOfSupply.Coding.Display</meta>
             <column length="65535" name="MdcnlPrdctAthztn_JrsdctnalAthztn_LegalStsOfSpply_Cdg_Dsply"/>
         </property>
         <property name="mdcnlPrdctAthztnJrsdctnalAthztnLegalStsOfSpplyCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.JurisdictionalAuthorization.LegalStatusOfSupply.Coding.System</meta>
             <column length="65535" name="MdcnlPrdctAthztn_JrsdctnalAthztn_LegalStsOfSpply_Cdg_Sys"/>
         </property>
         <property name="mdcnlPrdctAthztnJrsdctnalAthztnLegalStsOfSpplyCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.JurisdictionalAuthorization.LegalStatusOfSupply.Coding.UserSelected</meta>
             <column length="65535" name="MdcnlPrdctAthztn_JrsdctnalAthztn_LegalStsOfSpply_Cdg_UsrSltd"/>
         </property>
         <property name="mdcnlPrdctAthztnJrsdctnalAthztnLegalStsOfSpplyCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.JurisdictionalAuthorization.LegalStatusOfSupply.Coding.Version</meta>
             <column length="65535" name="MdcnlPrdctAthztn_JrsdctnalAthztn_LegalStsOfSpply_Cdg_Vrsn"/>
         </property>
         <property name="mdcnlPrdctAthztnJrsdctnalAthztnLegalStsOfSpplyTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.JurisdictionalAuthorization.LegalStatusOfSupply.Text</meta>
             <column length="65535" name="MdcnlPrdctAthztn_JrsdctnalAthztn_LegalStsOfSpply_Txt"/>
         </property>
         <property name="mdcnlPrdctAthztnJrsdctnalAthztnValidityPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.JurisdictionalAuthorization.ValidityPeriod.End</meta>
             <column length="65535" name="MdcnlPrdctAthztn_JrsdctnalAthztn_ValidityPrd_End"/>
         </property>
         <property name="mdcnlPrdctAthztnJrsdctnalAthztnValidityPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.JurisdictionalAuthorization.ValidityPeriod.Start</meta>
             <column length="65535" name="MdcnlPrdctAthztn_JrsdctnalAthztn_ValidityPrd_Strt"/>
         </property>
         <property name="mdcnlPrdctAthztnLegalBasisCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.LegalBasis.Coding.Code</meta>
             <column length="65535" name="MdcnlPrdctAthztn_LegalBasis_Cdg_Cd"/>
         </property>
         <property name="mdcnlPrdctAthztnLegalBasisCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.LegalBasis.Coding.Display</meta>
             <column length="65535" name="MdcnlPrdctAthztn_LegalBasis_Cdg_Dsply"/>
         </property>
         <property name="mdcnlPrdctAthztnLegalBasisCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.LegalBasis.Coding.System</meta>
             <column length="65535" name="MdcnlPrdctAthztn_LegalBasis_Cdg_Sys"/>
         </property>
         <property name="mdcnlPrdctAthztnLegalBasisCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.LegalBasis.Coding.UserSelected</meta>
             <column length="65535" name="MdcnlPrdctAthztn_LegalBasis_Cdg_UsrSltd"/>
         </property>
         <property name="mdcnlPrdctAthztnLegalBasisCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.LegalBasis.Coding.Version</meta>
             <column length="65535" name="MdcnlPrdctAthztn_LegalBasis_Cdg_Vrsn"/>
         </property>
         <property name="mdcnlPrdctAthztnLegalBasisTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.LegalBasis.Text</meta>
             <column length="65535" name="MdcnlPrdctAthztn_LegalBasis_Txt"/>
         </property>
         <property name="mdcnlPrdctAthztnPrcdrDtDtTimeTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.Procedure.DateDateTimeType</meta>
             <column length="65535" name="MdcnlPrdctAthztn_Prcdr_DtDtTimeTyp"/>
         </property>
         <property name="mdcnlPrdctAthztnPrcdrDtPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.Procedure.DatePeriod.End</meta>
             <column length="65535" name="MdcnlPrdctAthztn_Prcdr_DtPrd_End"/>
         </property>
         <property name="mdcnlPrdctAthztnPrcdrDtPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.Procedure.DatePeriod.Start</meta>
             <column length="65535" name="MdcnlPrdctAthztn_Prcdr_DtPrd_Strt"/>
         </property>
         <property name="mdcnlPrdctAthztnPrcdrIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.Procedure.Identifier.Assigner</meta>
             <column length="65535" name="MdcnlPrdctAthztn_Prcdr_Id_Assigner"/>
         </property>
         <property name="mdcnlPrdctAthztnPrcdrIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.Procedure.Identifier.Period.End</meta>
             <column length="65535" name="MdcnlPrdctAthztn_Prcdr_Id_Prd_End"/>
         </property>
         <property name="mdcnlPrdctAthztnPrcdrIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.Procedure.Identifier.Period.Start</meta>
             <column length="65535" name="MdcnlPrdctAthztn_Prcdr_Id_Prd_Strt"/>
         </property>
         <property name="mdcnlPrdctAthztnPrcdrIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.Procedure.Identifier.System</meta>
             <column length="65535" name="MdcnlPrdctAthztn_Prcdr_Id_Sys"/>
         </property>
         <property name="mdcnlPrdctAthztnPrcdrIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.Procedure.Identifier.Type.Coding.Code</meta>
             <column length="65535" name="MdcnlPrdctAthztn_Prcdr_Id_Typ_Cdg_Cd"/>
         </property>
         <property name="mdcnlPrdctAthztnPrcdrIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.Procedure.Identifier.Type.Coding.Display</meta>
             <column length="65535" name="MdcnlPrdctAthztn_Prcdr_Id_Typ_Cdg_Dsply"/>
         </property>
         <property name="mdcnlPrdctAthztnPrcdrIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.Procedure.Identifier.Type.Coding.System</meta>
             <column length="65535" name="MdcnlPrdctAthztn_Prcdr_Id_Typ_Cdg_Sys"/>
         </property>
         <property name="mdcnlPrdctAthztnPrcdrIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.Procedure.Identifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="MdcnlPrdctAthztn_Prcdr_Id_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="mdcnlPrdctAthztnPrcdrIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.Procedure.Identifier.Type.Coding.Version</meta>
             <column length="65535" name="MdcnlPrdctAthztn_Prcdr_Id_Typ_Cdg_Vrsn"/>
         </property>
         <property name="mdcnlPrdctAthztnPrcdrIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.Procedure.Identifier.Type.Text</meta>
             <column length="65535" name="MdcnlPrdctAthztn_Prcdr_Id_Typ_Txt"/>
         </property>
         <property name="mdcnlPrdctAthztnPrcdrIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.Procedure.Identifier.Use</meta>
             <column length="65535" name="MdcnlPrdctAthztn_Prcdr_Id_Use"/>
         </property>
         <property name="mdcnlPrdctAthztnPrcdrIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.Procedure.Identifier.Value</meta>
             <column length="65535" name="MdcnlPrdctAthztn_Prcdr_Id_Vl"/>
         </property>
         <property name="mdcnlPrdctAthztnPrcdrTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.Procedure.Type.Coding.Code</meta>
             <column length="65535" name="MdcnlPrdctAthztn_Prcdr_Typ_Cdg_Cd"/>
         </property>
         <property name="mdcnlPrdctAthztnPrcdrTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.Procedure.Type.Coding.Display</meta>
             <column length="65535" name="MdcnlPrdctAthztn_Prcdr_Typ_Cdg_Dsply"/>
         </property>
         <property name="mdcnlPrdctAthztnPrcdrTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.Procedure.Type.Coding.System</meta>
             <column length="65535" name="MdcnlPrdctAthztn_Prcdr_Typ_Cdg_Sys"/>
         </property>
         <property name="mdcnlPrdctAthztnPrcdrTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.Procedure.Type.Coding.UserSelected</meta>
             <column length="65535" name="MdcnlPrdctAthztn_Prcdr_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="mdcnlPrdctAthztnPrcdrTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.Procedure.Type.Coding.Version</meta>
             <column length="65535" name="MdcnlPrdctAthztn_Prcdr_Typ_Cdg_Vrsn"/>
         </property>
         <property name="mdcnlPrdctAthztnPrcdrTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.Procedure.Type.Text</meta>
             <column length="65535" name="MdcnlPrdctAthztn_Prcdr_Typ_Txt"/>
         </property>
         <property name="mdcnlPrdctAthztnRegulator" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.Regulator</meta>
             <column length="65535" name="MdcnlPrdctAthztn_Regulator"/>
         </property>
         <property name="mdcnlPrdctAthztnRestoreDt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.RestoreDate</meta>
             <column length="65535" name="MdcnlPrdctAthztn_RestoreDt"/>
         </property>
         <property name="mdcnlPrdctAthztnStsCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.Status.Coding.Code</meta>
             <column length="65535" name="MdcnlPrdctAthztn_Sts_Cdg_Cd"/>
         </property>
         <property name="mdcnlPrdctAthztnStsCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.Status.Coding.Display</meta>
             <column length="65535" name="MdcnlPrdctAthztn_Sts_Cdg_Dsply"/>
         </property>
         <property name="mdcnlPrdctAthztnStsCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.Status.Coding.System</meta>
             <column length="65535" name="MdcnlPrdctAthztn_Sts_Cdg_Sys"/>
         </property>
         <property name="mdcnlPrdctAthztnStsCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.Status.Coding.UserSelected</meta>
             <column length="65535" name="MdcnlPrdctAthztn_Sts_Cdg_UsrSltd"/>
         </property>
         <property name="mdcnlPrdctAthztnStsCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.Status.Coding.Version</meta>
             <column length="65535" name="MdcnlPrdctAthztn_Sts_Cdg_Vrsn"/>
         </property>
         <property name="mdcnlPrdctAthztnStsTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.Status.Text</meta>
             <column length="65535" name="MdcnlPrdctAthztn_Sts_Txt"/>
         </property>
         <property name="mdcnlPrdctAthztnStsDt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.StatusDate</meta>
             <column length="65535" name="MdcnlPrdctAthztn_StsDt"/>
         </property>
         <property name="mdcnlPrdctAthztnSbjct" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.Subject</meta>
             <column length="65535" name="MdcnlPrdctAthztn_Sbjct"/>
         </property>
         <property name="mdcnlPrdctAthztnValidityPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.ValidityPeriod.End</meta>
             <column length="65535" name="MdcnlPrdctAthztn_ValidityPrd_End"/>
         </property>
         <property name="mdcnlPrdctAthztnValidityPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">MedicinalProductAuthorization.ValidityPeriod.Start</meta>
             <column length="65535" name="MdcnlPrdctAthztn_ValidityPrd_Strt"/>
         </property>
     </class>

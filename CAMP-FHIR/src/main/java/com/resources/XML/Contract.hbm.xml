@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Aug 17, 2022, 11:08:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 16, 2022, 11:34:16 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Contract" optimistic-lock="none" table="Contract">
         <id name="id" type="string">
@@ -7,1891 +7,1879 @@
             <generator class="identity"/>
         </id>
         <property name="cnctAlias" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Alias</meta>
             <column length="65535" name="Cnct_Alias"/>
         </property>
         <property name="cnctAppliesEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Applies.End</meta>
             <column length="65535" name="Cnct_Applies_End"/>
         </property>
         <property name="cnctAppliesStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Applies.Start</meta>
             <column length="65535" name="Cnct_Applies_Strt"/>
         </property>
         <property name="cnctAthr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Author</meta>
             <column length="65535" name="Cnct_Athr"/>
         </property>
         <property name="cnctAthrity" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Authority</meta>
             <column length="65535" name="Cnct_Athrity"/>
         </property>
         <property name="cnctCntntDfnCopyright" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.ContentDefinition.Copyright</meta>
             <column length="65535" name="Cnct_CntntDfn_Copyright"/>
         </property>
         <property name="cnctCntntDfnPublicationDt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.ContentDefinition.PublicationDate</meta>
             <column length="65535" name="Cnct_CntntDfn_PublicationDt"/>
         </property>
         <property name="cnctCntntDfnPublicationSts" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.ContentDefinition.PublicationStatus</meta>
             <column length="65535" name="Cnct_CntntDfn_PublicationSts"/>
         </property>
         <property name="cnctCntntDfnPblshr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.ContentDefinition.Publisher</meta>
             <column length="65535" name="Cnct_CntntDfn_Pblshr"/>
         </property>
         <property name="cnctCntntDfnSubTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.ContentDefinition.SubType.Coding.Code</meta>
             <column length="65535" name="Cnct_CntntDfn_SubTyp_Cdg_Cd"/>
         </property>
         <property name="cnctCntntDfnSubTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.ContentDefinition.SubType.Coding.Display</meta>
             <column length="65535" name="Cnct_CntntDfn_SubTyp_Cdg_Dsply"/>
         </property>
         <property name="cnctCntntDfnSubTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.ContentDefinition.SubType.Coding.System</meta>
             <column length="65535" name="Cnct_CntntDfn_SubTyp_Cdg_Sys"/>
         </property>
         <property name="cnctCntntDfnSubTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.ContentDefinition.SubType.Coding.UserSelected</meta>
             <column length="65535" name="Cnct_CntntDfn_SubTyp_Cdg_UsrSltd"/>
         </property>
         <property name="cnctCntntDfnSubTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.ContentDefinition.SubType.Coding.Version</meta>
             <column length="65535" name="Cnct_CntntDfn_SubTyp_Cdg_Vrsn"/>
         </property>
         <property name="cnctCntntDfnSubTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.ContentDefinition.SubType.Text</meta>
             <column length="65535" name="Cnct_CntntDfn_SubTyp_Txt"/>
         </property>
         <property name="cnctCntntDfnTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.ContentDefinition.Type.Coding.Code</meta>
             <column length="65535" name="Cnct_CntntDfn_Typ_Cdg_Cd"/>
         </property>
         <property name="cnctCntntDfnTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.ContentDefinition.Type.Coding.Display</meta>
             <column length="65535" name="Cnct_CntntDfn_Typ_Cdg_Dsply"/>
         </property>
         <property name="cnctCntntDfnTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.ContentDefinition.Type.Coding.System</meta>
             <column length="65535" name="Cnct_CntntDfn_Typ_Cdg_Sys"/>
         </property>
         <property name="cnctCntntDfnTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.ContentDefinition.Type.Coding.UserSelected</meta>
             <column length="65535" name="Cnct_CntntDfn_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="cnctCntntDfnTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.ContentDefinition.Type.Coding.Version</meta>
             <column length="65535" name="Cnct_CntntDfn_Typ_Cdg_Vrsn"/>
         </property>
         <property name="cnctCntntDfnTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.ContentDefinition.Type.Text</meta>
             <column length="65535" name="Cnct_CntntDfn_Typ_Txt"/>
         </property>
         <property name="cnctCntntDerivativeCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.ContentDerivative.Coding.Code</meta>
             <column length="65535" name="Cnct_CntntDerivative_Cdg_Cd"/>
         </property>
         <property name="cnctCntntDerivativeCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.ContentDerivative.Coding.Display</meta>
             <column length="65535" name="Cnct_CntntDerivative_Cdg_Dsply"/>
         </property>
         <property name="cnctCntntDerivativeCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.ContentDerivative.Coding.System</meta>
             <column length="65535" name="Cnct_CntntDerivative_Cdg_Sys"/>
         </property>
         <property name="cnctCntntDerivativeCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.ContentDerivative.Coding.UserSelected</meta>
             <column length="65535" name="Cnct_CntntDerivative_Cdg_UsrSltd"/>
         </property>
         <property name="cnctCntntDerivativeCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.ContentDerivative.Coding.Version</meta>
             <column length="65535" name="Cnct_CntntDerivative_Cdg_Vrsn"/>
         </property>
         <property name="cnctCntntDerivativeTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.ContentDerivative.Text</meta>
             <column length="65535" name="Cnct_CntntDerivative_Txt"/>
         </property>
         <property name="cnctDomain" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Domain</meta>
             <column length="65535" name="Cnct_Domain"/>
         </property>
         <property name="cnctExpirationTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.ExpirationType.Coding.Code</meta>
             <column length="65535" name="Cnct_ExpirationTyp_Cdg_Cd"/>
         </property>
         <property name="cnctExpirationTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.ExpirationType.Coding.Display</meta>
             <column length="65535" name="Cnct_ExpirationTyp_Cdg_Dsply"/>
         </property>
         <property name="cnctExpirationTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.ExpirationType.Coding.System</meta>
             <column length="65535" name="Cnct_ExpirationTyp_Cdg_Sys"/>
         </property>
         <property name="cnctExpirationTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.ExpirationType.Coding.UserSelected</meta>
             <column length="65535" name="Cnct_ExpirationTyp_Cdg_UsrSltd"/>
         </property>
         <property name="cnctExpirationTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.ExpirationType.Coding.Version</meta>
             <column length="65535" name="Cnct_ExpirationTyp_Cdg_Vrsn"/>
         </property>
         <property name="cnctExpirationTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.ExpirationType.Text</meta>
             <column length="65535" name="Cnct_ExpirationTyp_Txt"/>
         </property>
         <property name="cnctFriendlyCntntAttchmntCntntTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Friendly.ContentAttachment.ContentType</meta>
             <column length="65535" name="Cnct_Friendly_CntntAttchmnt_CntntTyp"/>
         </property>
         <property name="cnctFriendlyCntntAttchmntCreation" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Friendly.ContentAttachment.Creation</meta>
             <column length="65535" name="Cnct_Friendly_CntntAttchmnt_Creation"/>
         </property>
         <property name="cnctFriendlyCntntAttchmntData" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Friendly.ContentAttachment.Data</meta>
             <column length="65535" name="Cnct_Friendly_CntntAttchmnt_Data"/>
         </property>
         <property name="cnctFriendlyCntntAttchmntHash" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Friendly.ContentAttachment.Hash</meta>
             <column length="65535" name="Cnct_Friendly_CntntAttchmnt_Hash"/>
         </property>
         <property name="cnctFriendlyCntntAttchmntLnguage" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Friendly.ContentAttachment.Language</meta>
             <column length="65535" name="Cnct_Friendly_CntntAttchmnt_Lnguage"/>
         </property>
         <property name="cnctFriendlyCntntAttchmntSz" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Friendly.ContentAttachment.Size</meta>
             <column length="65535" name="Cnct_Friendly_CntntAttchmnt_Sz"/>
         </property>
         <property name="cnctFriendlyCntntAttchmntTtl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Friendly.ContentAttachment.Title</meta>
             <column length="65535" name="Cnct_Friendly_CntntAttchmnt_Ttl"/>
         </property>
         <property name="cnctFriendlyCntntAttchmntUrl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Friendly.ContentAttachment.Url</meta>
             <column length="65535" name="Cnct_Friendly_CntntAttchmnt_Url"/>
         </property>
         <property name="cnctFriendlyCntntRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Friendly.ContentReference</meta>
             <column length="65535" name="Cnct_Friendly_CntntRfrnc"/>
         </property>
         <property name="cnctIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Identifier.Assigner</meta>
             <column length="65535" name="Cnct_Id_Assigner"/>
         </property>
         <property name="cnctIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Identifier.Period.End</meta>
             <column length="65535" name="Cnct_Id_Prd_End"/>
         </property>
         <property name="cnctIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Identifier.Period.Start</meta>
             <column length="65535" name="Cnct_Id_Prd_Strt"/>
         </property>
         <property name="cnctIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Identifier.System</meta>
             <column length="65535" name="Cnct_Id_Sys"/>
         </property>
         <property name="cnctIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Identifier.Type.Coding.Code</meta>
             <column length="65535" name="Cnct_Id_Typ_Cdg_Cd"/>
         </property>
         <property name="cnctIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Identifier.Type.Coding.Display</meta>
             <column length="65535" name="Cnct_Id_Typ_Cdg_Dsply"/>
         </property>
         <property name="cnctIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Identifier.Type.Coding.System</meta>
             <column length="65535" name="Cnct_Id_Typ_Cdg_Sys"/>
         </property>
         <property name="cnctIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Identifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="Cnct_Id_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="cnctIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Identifier.Type.Coding.Version</meta>
             <column length="65535" name="Cnct_Id_Typ_Cdg_Vrsn"/>
         </property>
         <property name="cnctIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Identifier.Type.Text</meta>
             <column length="65535" name="Cnct_Id_Typ_Txt"/>
         </property>
         <property name="cnctIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Identifier.Use</meta>
             <column length="65535" name="Cnct_Id_Use"/>
         </property>
         <property name="cnctIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Identifier.Value</meta>
             <column length="65535" name="Cnct_Id_Vl"/>
         </property>
         <property name="cnctInstantiatesCanonical" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.InstantiatesCanonical</meta>
             <column length="65535" name="Cnct_InstantiatesCanonical"/>
         </property>
         <property name="cnctInstantiatesUri" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.InstantiatesUri</meta>
             <column length="65535" name="Cnct_InstantiatesUri"/>
         </property>
         <property name="cnctIssued" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Issued</meta>
             <column length="65535" name="Cnct_Issued"/>
         </property>
         <property name="cnctLegalCntntAttchmntCntntTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Legal.ContentAttachment.ContentType</meta>
             <column length="65535" name="Cnct_Legal_CntntAttchmnt_CntntTyp"/>
         </property>
         <property name="cnctLegalCntntAttchmntCreation" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Legal.ContentAttachment.Creation</meta>
             <column length="65535" name="Cnct_Legal_CntntAttchmnt_Creation"/>
         </property>
         <property name="cnctLegalCntntAttchmntData" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Legal.ContentAttachment.Data</meta>
             <column length="65535" name="Cnct_Legal_CntntAttchmnt_Data"/>
         </property>
         <property name="cnctLegalCntntAttchmntHash" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Legal.ContentAttachment.Hash</meta>
             <column length="65535" name="Cnct_Legal_CntntAttchmnt_Hash"/>
         </property>
         <property name="cnctLegalCntntAttchmntLnguage" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Legal.ContentAttachment.Language</meta>
             <column length="65535" name="Cnct_Legal_CntntAttchmnt_Lnguage"/>
         </property>
         <property name="cnctLegalCntntAttchmntSz" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Legal.ContentAttachment.Size</meta>
             <column length="65535" name="Cnct_Legal_CntntAttchmnt_Sz"/>
         </property>
         <property name="cnctLegalCntntAttchmntTtl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Legal.ContentAttachment.Title</meta>
             <column length="65535" name="Cnct_Legal_CntntAttchmnt_Ttl"/>
         </property>
         <property name="cnctLegalCntntAttchmntUrl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Legal.ContentAttachment.Url</meta>
             <column length="65535" name="Cnct_Legal_CntntAttchmnt_Url"/>
         </property>
         <property name="cnctLegalCntntRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Legal.ContentReference</meta>
             <column length="65535" name="Cnct_Legal_CntntRfrnc"/>
         </property>
         <property name="cnctLegalStateCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.LegalState.Coding.Code</meta>
             <column length="65535" name="Cnct_LegalState_Cdg_Cd"/>
         </property>
         <property name="cnctLegalStateCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.LegalState.Coding.Display</meta>
             <column length="65535" name="Cnct_LegalState_Cdg_Dsply"/>
         </property>
         <property name="cnctLegalStateCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.LegalState.Coding.System</meta>
             <column length="65535" name="Cnct_LegalState_Cdg_Sys"/>
         </property>
         <property name="cnctLegalStateCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.LegalState.Coding.UserSelected</meta>
             <column length="65535" name="Cnct_LegalState_Cdg_UsrSltd"/>
         </property>
         <property name="cnctLegalStateCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.LegalState.Coding.Version</meta>
             <column length="65535" name="Cnct_LegalState_Cdg_Vrsn"/>
         </property>
         <property name="cnctLegalStateTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.LegalState.Text</meta>
             <column length="65535" name="Cnct_LegalState_Txt"/>
         </property>
         <property name="cnctLegallyBindingAttchmntCntntTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.LegallyBindingAttachment.ContentType</meta>
             <column length="65535" name="Cnct_LegallyBindingAttchmnt_CntntTyp"/>
         </property>
         <property name="cnctLegallyBindingAttchmntCreation" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.LegallyBindingAttachment.Creation</meta>
             <column length="65535" name="Cnct_LegallyBindingAttchmnt_Creation"/>
         </property>
         <property name="cnctLegallyBindingAttchmntData" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.LegallyBindingAttachment.Data</meta>
             <column length="65535" name="Cnct_LegallyBindingAttchmnt_Data"/>
         </property>
         <property name="cnctLegallyBindingAttchmntHash" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.LegallyBindingAttachment.Hash</meta>
             <column length="65535" name="Cnct_LegallyBindingAttchmnt_Hash"/>
         </property>
         <property name="cnctLegallyBindingAttchmntLnguage" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.LegallyBindingAttachment.Language</meta>
             <column length="65535" name="Cnct_LegallyBindingAttchmnt_Lnguage"/>
         </property>
         <property name="cnctLegallyBindingAttchmntSz" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.LegallyBindingAttachment.Size</meta>
             <column length="65535" name="Cnct_LegallyBindingAttchmnt_Sz"/>
         </property>
         <property name="cnctLegallyBindingAttchmntTtl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.LegallyBindingAttachment.Title</meta>
             <column length="65535" name="Cnct_LegallyBindingAttchmnt_Ttl"/>
         </property>
         <property name="cnctLegallyBindingAttchmntUrl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.LegallyBindingAttachment.Url</meta>
             <column length="65535" name="Cnct_LegallyBindingAttchmnt_Url"/>
         </property>
         <property name="cnctLegallyBindingRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.LegallyBindingReference</meta>
             <column length="65535" name="Cnct_LegallyBindingRfrnc"/>
         </property>
         <property name="cnctNm" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Name</meta>
             <column length="65535" name="Cnct_Nm"/>
         </property>
         <property name="cnctRelevantHis" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.RelevantHistory</meta>
             <column length="65535" name="Cnct_RelevantHis"/>
         </property>
         <property name="cnctRuleCntntAttchmntCntntTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Rule.ContentAttachment.ContentType</meta>
             <column length="65535" name="Cnct_Rule_CntntAttchmnt_CntntTyp"/>
         </property>
         <property name="cnctRuleCntntAttchmntCreation" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Rule.ContentAttachment.Creation</meta>
             <column length="65535" name="Cnct_Rule_CntntAttchmnt_Creation"/>
         </property>
         <property name="cnctRuleCntntAttchmntData" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Rule.ContentAttachment.Data</meta>
             <column length="65535" name="Cnct_Rule_CntntAttchmnt_Data"/>
         </property>
         <property name="cnctRuleCntntAttchmntHash" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Rule.ContentAttachment.Hash</meta>
             <column length="65535" name="Cnct_Rule_CntntAttchmnt_Hash"/>
         </property>
         <property name="cnctRuleCntntAttchmntLnguage" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Rule.ContentAttachment.Language</meta>
             <column length="65535" name="Cnct_Rule_CntntAttchmnt_Lnguage"/>
         </property>
         <property name="cnctRuleCntntAttchmntSz" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Rule.ContentAttachment.Size</meta>
             <column length="65535" name="Cnct_Rule_CntntAttchmnt_Sz"/>
         </property>
         <property name="cnctRuleCntntAttchmntTtl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Rule.ContentAttachment.Title</meta>
             <column length="65535" name="Cnct_Rule_CntntAttchmnt_Ttl"/>
         </property>
         <property name="cnctRuleCntntAttchmntUrl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Rule.ContentAttachment.Url</meta>
             <column length="65535" name="Cnct_Rule_CntntAttchmnt_Url"/>
         </property>
         <property name="cnctRuleCntntRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Rule.ContentReference</meta>
             <column length="65535" name="Cnct_Rule_CntntRfrnc"/>
         </property>
         <property name="cnctScopeCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Scope.Coding.Code</meta>
             <column length="65535" name="Cnct_Scope_Cdg_Cd"/>
         </property>
         <property name="cnctScopeCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Scope.Coding.Display</meta>
             <column length="65535" name="Cnct_Scope_Cdg_Dsply"/>
         </property>
         <property name="cnctScopeCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Scope.Coding.System</meta>
             <column length="65535" name="Cnct_Scope_Cdg_Sys"/>
         </property>
         <property name="cnctScopeCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Scope.Coding.UserSelected</meta>
             <column length="65535" name="Cnct_Scope_Cdg_UsrSltd"/>
         </property>
         <property name="cnctScopeCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Scope.Coding.Version</meta>
             <column length="65535" name="Cnct_Scope_Cdg_Vrsn"/>
         </property>
         <property name="cnctScopeTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Scope.Text</meta>
             <column length="65535" name="Cnct_Scope_Txt"/>
         </property>
         <property name="cnctSignerParty" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Signer.Party</meta>
             <column length="65535" name="Cnct_Signer_Party"/>
         </property>
         <property name="cnctSignerSignatureData" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Signer.Signature.Data</meta>
             <column length="65535" name="Cnct_Signer_Signature_Data"/>
         </property>
         <property name="cnctSignerSignatureOnBehalfOf" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Signer.Signature.OnBehalfOf</meta>
             <column length="65535" name="Cnct_Signer_Signature_OnBehalfOf"/>
         </property>
         <property name="cnctSignerSignatureSigFrmat" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Signer.Signature.SigFormat</meta>
             <column length="65535" name="Cnct_Signer_Signature_SigFrmat"/>
         </property>
         <property name="cnctSignerSignatureTarFrmat" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Signer.Signature.TarFormat</meta>
             <column length="65535" name="Cnct_Signer_Signature_TarFrmat"/>
         </property>
         <property name="cnctSignerSignatureTypCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Signer.Signature.Type.Code</meta>
             <column length="65535" name="Cnct_Signer_Signature_Typ_Cd"/>
         </property>
         <property name="cnctSignerSignatureTypDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Signer.Signature.Type.Display</meta>
             <column length="65535" name="Cnct_Signer_Signature_Typ_Dsply"/>
         </property>
         <property name="cnctSignerSignatureTypSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Signer.Signature.Type.System</meta>
             <column length="65535" name="Cnct_Signer_Signature_Typ_Sys"/>
         </property>
         <property name="cnctSignerSignatureTypUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Signer.Signature.Type.UserSelected</meta>
             <column length="65535" name="Cnct_Signer_Signature_Typ_UsrSltd"/>
         </property>
         <property name="cnctSignerSignatureTypVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Signer.Signature.Type.Version</meta>
             <column length="65535" name="Cnct_Signer_Signature_Typ_Vrsn"/>
         </property>
         <property name="cnctSignerSignatureWhen" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Signer.Signature.When</meta>
             <column length="65535" name="Cnct_Signer_Signature_When"/>
         </property>
         <property name="cnctSignerSignatureWho" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Signer.Signature.Who</meta>
             <column length="65535" name="Cnct_Signer_Signature_Who"/>
         </property>
         <property name="cnctSignerTypCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Signer.Type.Code</meta>
             <column length="65535" name="Cnct_Signer_Typ_Cd"/>
         </property>
         <property name="cnctSignerTypDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Signer.Type.Display</meta>
             <column length="65535" name="Cnct_Signer_Typ_Dsply"/>
         </property>
         <property name="cnctSignerTypSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Signer.Type.System</meta>
             <column length="65535" name="Cnct_Signer_Typ_Sys"/>
         </property>
         <property name="cnctSignerTypUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Signer.Type.UserSelected</meta>
             <column length="65535" name="Cnct_Signer_Typ_UsrSltd"/>
         </property>
         <property name="cnctSignerTypVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Signer.Type.Version</meta>
             <column length="65535" name="Cnct_Signer_Typ_Vrsn"/>
         </property>
         <property name="cnctSite" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Site</meta>
             <column length="65535" name="Cnct_Site"/>
         </property>
         <property name="cnctSts" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Status</meta>
             <column length="65535" name="Cnct_Sts"/>
         </property>
         <property name="cnctSubTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.SubType.Coding.Code</meta>
             <column length="65535" name="Cnct_SubTyp_Cdg_Cd"/>
         </property>
         <property name="cnctSubTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.SubType.Coding.Display</meta>
             <column length="65535" name="Cnct_SubTyp_Cdg_Dsply"/>
         </property>
         <property name="cnctSubTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.SubType.Coding.System</meta>
             <column length="65535" name="Cnct_SubTyp_Cdg_Sys"/>
         </property>
         <property name="cnctSubTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.SubType.Coding.UserSelected</meta>
             <column length="65535" name="Cnct_SubTyp_Cdg_UsrSltd"/>
         </property>
         <property name="cnctSubTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.SubType.Coding.Version</meta>
             <column length="65535" name="Cnct_SubTyp_Cdg_Vrsn"/>
         </property>
         <property name="cnctSubTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.SubType.Text</meta>
             <column length="65535" name="Cnct_SubTyp_Txt"/>
         </property>
         <property name="cnctSbjct" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Subject</meta>
             <column length="65535" name="Cnct_Sbjct"/>
         </property>
         <property name="cnctSubtitle" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Subtitle</meta>
             <column length="65535" name="Cnct_Subtitle"/>
         </property>
         <property name="cnctSprtingInfo" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.SupportingInfo</meta>
             <column length="65535" name="Cnct_SprtingInfo"/>
         </property>
         <property name="cnctTrmActnCntxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.Context</meta>
             <column length="65535" name="Cnct_Trm_Actn_Cntxt"/>
         </property>
         <property name="cnctTrmActnCntxtLinkId" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.ContextLinkId</meta>
             <column length="65535" name="Cnct_Trm_Actn_CntxtLinkId"/>
         </property>
         <property name="cnctTrmActnDoNotPerform" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.DoNotPerform</meta>
             <column length="65535" name="Cnct_Trm_Actn_DoNotPerform"/>
         </property>
         <property name="cnctTrmActnIntentCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.Intent.Coding.Code</meta>
             <column length="65535" name="Cnct_Trm_Actn_Intent_Cdg_Cd"/>
         </property>
         <property name="cnctTrmActnIntentCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.Intent.Coding.Display</meta>
             <column length="65535" name="Cnct_Trm_Actn_Intent_Cdg_Dsply"/>
         </property>
         <property name="cnctTrmActnIntentCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.Intent.Coding.System</meta>
             <column length="65535" name="Cnct_Trm_Actn_Intent_Cdg_Sys"/>
         </property>
         <property name="cnctTrmActnIntentCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.Intent.Coding.UserSelected</meta>
             <column length="65535" name="Cnct_Trm_Actn_Intent_Cdg_UsrSltd"/>
         </property>
         <property name="cnctTrmActnIntentCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.Intent.Coding.Version</meta>
             <column length="65535" name="Cnct_Trm_Actn_Intent_Cdg_Vrsn"/>
         </property>
         <property name="cnctTrmActnIntentTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.Intent.Text</meta>
             <column length="65535" name="Cnct_Trm_Actn_Intent_Txt"/>
         </property>
         <property name="cnctTrmActnLinkId" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.LinkId</meta>
             <column length="65535" name="Cnct_Trm_Actn_LinkId"/>
         </property>
         <property name="cnctTrmActnNtAthrRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.Note.AuthorReference</meta>
             <column length="65535" name="Cnct_Trm_Actn_Nt_AthrRfrnc"/>
         </property>
         <property name="cnctTrmActnNtAthrStrgTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.Note.AuthorStringType</meta>
             <column length="65535" name="Cnct_Trm_Actn_Nt_AthrStrgTyp"/>
         </property>
         <property name="cnctTrmActnNtTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.Note.Text</meta>
             <column length="65535" name="Cnct_Trm_Actn_Nt_Txt"/>
         </property>
         <property name="cnctTrmActnNtTime" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.Note.Time</meta>
             <column length="65535" name="Cnct_Trm_Actn_Nt_Time"/>
         </property>
         <property name="cnctTrmActnOccrnceDtTimeTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.OccurrenceDateTimeType</meta>
             <column length="65535" name="Cnct_Trm_Actn_OccrnceDtTimeTyp"/>
         </property>
         <property name="cnctTrmActnOccrncePrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.OccurrencePeriod.End</meta>
             <column length="65535" name="Cnct_Trm_Actn_OccrncePrd_End"/>
         </property>
         <property name="cnctTrmActnOccrncePrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.OccurrencePeriod.Start</meta>
             <column length="65535" name="Cnct_Trm_Actn_OccrncePrd_Strt"/>
         </property>
         <property name="cnctTrmActnOccrnceTmgCdCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.OccurrenceTiming.Code.Coding.Code</meta>
             <column length="65535" name="Cnct_Trm_Actn_OccrnceTmg_Cd_Cdg_Cd"/>
         </property>
         <property name="cnctTrmActnOccrnceTmgCdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.OccurrenceTiming.Code.Coding.Display</meta>
             <column length="65535" name="Cnct_Trm_Actn_OccrnceTmg_Cd_Cdg_Dsply"/>
         </property>
         <property name="cnctTrmActnOccrnceTmgCdCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.OccurrenceTiming.Code.Coding.System</meta>
             <column length="65535" name="Cnct_Trm_Actn_OccrnceTmg_Cd_Cdg_Sys"/>
         </property>
         <property name="cnctTrmActnOccrnceTmgCdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.OccurrenceTiming.Code.Coding.UserSelected</meta>
             <column length="65535" name="Cnct_Trm_Actn_OccrnceTmg_Cd_Cdg_UsrSltd"/>
         </property>
         <property name="cnctTrmActnOccrnceTmgCdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.OccurrenceTiming.Code.Coding.Version</meta>
             <column length="65535" name="Cnct_Trm_Actn_OccrnceTmg_Cd_Cdg_Vrsn"/>
         </property>
         <property name="cnctTrmActnOccrnceTmgCdTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.OccurrenceTiming.Code.Text</meta>
             <column length="65535" name="Cnct_Trm_Actn_OccrnceTmg_Cd_Txt"/>
         </property>
         <property name="cnctTrmActnOccrnceTmgEvnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.OccurrenceTiming.Event</meta>
             <column length="65535" name="Cnct_Trm_Actn_OccrnceTmg_Evnt"/>
         </property>
         <property name="cnctTrmActnOccrnceTmgRptBndsDurationCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.OccurrenceTiming.Repeat.BoundsDuration.Code</meta>
             <column length="65535" name="Cnct_Trm_Actn_OccrnceTmg_Rpt_BndsDuration_Cd"/>
         </property>
         <property name="cnctTrmActnOccrnceTmgRptBndsDurationCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.OccurrenceTiming.Repeat.BoundsDuration.Comparator</meta>
             <column length="65535" name="Cnct_Trm_Actn_OccrnceTmg_Rpt_BndsDuration_Cmprtr"/>
         </property>
         <property name="cnctTrmActnOccrnceTmgRptBndsDurationSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.OccurrenceTiming.Repeat.BoundsDuration.System</meta>
             <column length="65535" name="Cnct_Trm_Actn_OccrnceTmg_Rpt_BndsDuration_Sys"/>
         </property>
         <property name="cnctTrmActnOccrnceTmgRptBndsDurationUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.OccurrenceTiming.Repeat.BoundsDuration.Unit</meta>
             <column length="65535" name="Cnct_Trm_Actn_OccrnceTmg_Rpt_BndsDuration_Unt"/>
         </property>
         <property name="cnctTrmActnOccrnceTmgRptBndsDurationVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.OccurrenceTiming.Repeat.BoundsDuration.Value</meta>
             <column length="65535" name="Cnct_Trm_Actn_OccrnceTmg_Rpt_BndsDuration_Vl"/>
         </property>
         <property name="cnctTrmActnOccrnceTmgRptBndsPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.OccurrenceTiming.Repeat.BoundsPeriod.End</meta>
             <column length="65535" name="Cnct_Trm_Actn_OccrnceTmg_Rpt_BndsPrd_End"/>
         </property>
         <property name="cnctTrmActnOccrnceTmgRptBndsPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.OccurrenceTiming.Repeat.BoundsPeriod.Start</meta>
             <column length="65535" name="Cnct_Trm_Actn_OccrnceTmg_Rpt_BndsPrd_Strt"/>
         </property>
         <property name="cnctTrmActnOccrnceTmgRptBndsRngHiCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.OccurrenceTiming.Repeat.BoundsRange.High.Code</meta>
             <column length="65535" name="Cnct_Trm_Actn_OccrnceTmg_Rpt_BndsRng_Hi_Cd"/>
         </property>
         <property name="cnctTrmActnOccrnceTmgRptBndsRngHiCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.OccurrenceTiming.Repeat.BoundsRange.High.Comparator</meta>
             <column length="65535" name="Cnct_Trm_Actn_OccrnceTmg_Rpt_BndsRng_Hi_Cmprtr"/>
         </property>
         <property name="cnctTrmActnOccrnceTmgRptBndsRngHiSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.OccurrenceTiming.Repeat.BoundsRange.High.System</meta>
             <column length="65535" name="Cnct_Trm_Actn_OccrnceTmg_Rpt_BndsRng_Hi_Sys"/>
         </property>
         <property name="cnctTrmActnOccrnceTmgRptBndsRngHiUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.OccurrenceTiming.Repeat.BoundsRange.High.Unit</meta>
             <column length="65535" name="Cnct_Trm_Actn_OccrnceTmg_Rpt_BndsRng_Hi_Unt"/>
         </property>
         <property name="cnctTrmActnOccrnceTmgRptBndsRngHiVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.OccurrenceTiming.Repeat.BoundsRange.High.Value</meta>
             <column length="65535" name="Cnct_Trm_Actn_OccrnceTmg_Rpt_BndsRng_Hi_Vl"/>
         </property>
         <property name="cnctTrmActnOccrnceTmgRptBndsRngLwCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.OccurrenceTiming.Repeat.BoundsRange.Low.Code</meta>
             <column length="65535" name="Cnct_Trm_Actn_OccrnceTmg_Rpt_BndsRng_Lw_Cd"/>
         </property>
         <property name="cnctTrmActnOccrnceTmgRptBndsRngLwCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.OccurrenceTiming.Repeat.BoundsRange.Low.Comparator</meta>
             <column length="65535" name="Cnct_Trm_Actn_OccrnceTmg_Rpt_BndsRng_Lw_Cmprtr"/>
         </property>
         <property name="cnctTrmActnOccrnceTmgRptBndsRngLwSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.OccurrenceTiming.Repeat.BoundsRange.Low.System</meta>
             <column length="65535" name="Cnct_Trm_Actn_OccrnceTmg_Rpt_BndsRng_Lw_Sys"/>
         </property>
         <property name="cnctTrmActnOccrnceTmgRptBndsRngLwUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.OccurrenceTiming.Repeat.BoundsRange.Low.Unit</meta>
             <column length="65535" name="Cnct_Trm_Actn_OccrnceTmg_Rpt_BndsRng_Lw_Unt"/>
         </property>
         <property name="cnctTrmActnOccrnceTmgRptBndsRngLwVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.OccurrenceTiming.Repeat.BoundsRange.Low.Value</meta>
             <column length="65535" name="Cnct_Trm_Actn_OccrnceTmg_Rpt_BndsRng_Lw_Vl"/>
         </property>
         <property name="cnctTrmActnOccrnceTmgRptCnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.OccurrenceTiming.Repeat.Count</meta>
             <column length="65535" name="Cnct_Trm_Actn_OccrnceTmg_Rpt_Cnt"/>
         </property>
         <property name="cnctTrmActnOccrnceTmgRptCntMx" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.OccurrenceTiming.Repeat.CountMax</meta>
             <column length="65535" name="Cnct_Trm_Actn_OccrnceTmg_Rpt_CntMx"/>
         </property>
-        <property name="cnctTrmActnOccrnceTmgRptDayOfWeek" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_Actn_OccrnceTmg_Rpt_DayOfWeek"/>
-        </property>
         <property name="cnctTrmActnOccrnceTmgRptDuration" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.OccurrenceTiming.Repeat.Duration</meta>
             <column length="65535" name="Cnct_Trm_Actn_OccrnceTmg_Rpt_Duration"/>
         </property>
         <property name="cnctTrmActnOccrnceTmgRptDurationMx" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.OccurrenceTiming.Repeat.DurationMax</meta>
             <column length="65535" name="Cnct_Trm_Actn_OccrnceTmg_Rpt_DurationMx"/>
         </property>
         <property name="cnctTrmActnOccrnceTmgRptDurationUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.OccurrenceTiming.Repeat.DurationUnit</meta>
             <column length="65535" name="Cnct_Trm_Actn_OccrnceTmg_Rpt_DurationUnt"/>
         </property>
         <property name="cnctTrmActnOccrnceTmgRptFrqncy" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.OccurrenceTiming.Repeat.Frequency</meta>
             <column length="65535" name="Cnct_Trm_Actn_OccrnceTmg_Rpt_Frqncy"/>
         </property>
         <property name="cnctTrmActnOccrnceTmgRptFrqncyMx" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.OccurrenceTiming.Repeat.FrequencyMax</meta>
             <column length="65535" name="Cnct_Trm_Actn_OccrnceTmg_Rpt_FrqncyMx"/>
         </property>
         <property name="cnctTrmActnOccrnceTmgRptOff" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.OccurrenceTiming.Repeat.Offset</meta>
             <column length="65535" name="Cnct_Trm_Actn_OccrnceTmg_Rpt_Off"/>
         </property>
         <property name="cnctTrmActnOccrnceTmgRptPrd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.OccurrenceTiming.Repeat.Period</meta>
             <column length="65535" name="Cnct_Trm_Actn_OccrnceTmg_Rpt_Prd"/>
         </property>
         <property name="cnctTrmActnOccrnceTmgRptPrdMx" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.OccurrenceTiming.Repeat.PeriodMax</meta>
             <column length="65535" name="Cnct_Trm_Actn_OccrnceTmg_Rpt_PrdMx"/>
         </property>
         <property name="cnctTrmActnOccrnceTmgRptPrdUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.OccurrenceTiming.Repeat.PeriodUnit</meta>
             <column length="65535" name="Cnct_Trm_Actn_OccrnceTmg_Rpt_PrdUnt"/>
         </property>
         <property name="cnctTrmActnOccrnceTmgRptTimeOfDay" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.OccurrenceTiming.Repeat.TimeOfDay</meta>
             <column length="65535" name="Cnct_Trm_Actn_OccrnceTmg_Rpt_TimeOfDay"/>
         </property>
-        <property name="cnctTrmActnOccrnceTmgRptWhen" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_Actn_OccrnceTmg_Rpt_When"/>
-        </property>
         <property name="cnctTrmActnPrfrmr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.Performer</meta>
             <column length="65535" name="Cnct_Trm_Actn_Prfrmr"/>
         </property>
         <property name="cnctTrmActnPrfrmrLinkId" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.PerformerLinkId</meta>
             <column length="65535" name="Cnct_Trm_Actn_PrfrmrLinkId"/>
         </property>
         <property name="cnctTrmActnPrfrmrRoleCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.PerformerRole.Coding.Code</meta>
             <column length="65535" name="Cnct_Trm_Actn_PrfrmrRole_Cdg_Cd"/>
         </property>
         <property name="cnctTrmActnPrfrmrRoleCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.PerformerRole.Coding.Display</meta>
             <column length="65535" name="Cnct_Trm_Actn_PrfrmrRole_Cdg_Dsply"/>
         </property>
         <property name="cnctTrmActnPrfrmrRoleCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.PerformerRole.Coding.System</meta>
             <column length="65535" name="Cnct_Trm_Actn_PrfrmrRole_Cdg_Sys"/>
         </property>
         <property name="cnctTrmActnPrfrmrRoleCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.PerformerRole.Coding.UserSelected</meta>
             <column length="65535" name="Cnct_Trm_Actn_PrfrmrRole_Cdg_UsrSltd"/>
         </property>
         <property name="cnctTrmActnPrfrmrRoleCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.PerformerRole.Coding.Version</meta>
             <column length="65535" name="Cnct_Trm_Actn_PrfrmrRole_Cdg_Vrsn"/>
         </property>
         <property name="cnctTrmActnPrfrmrRoleTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.PerformerRole.Text</meta>
             <column length="65535" name="Cnct_Trm_Actn_PrfrmrRole_Txt"/>
         </property>
         <property name="cnctTrmActnPrfrmrTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.PerformerType.Coding.Code</meta>
             <column length="65535" name="Cnct_Trm_Actn_PrfrmrTyp_Cdg_Cd"/>
         </property>
         <property name="cnctTrmActnPrfrmrTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.PerformerType.Coding.Display</meta>
             <column length="65535" name="Cnct_Trm_Actn_PrfrmrTyp_Cdg_Dsply"/>
         </property>
         <property name="cnctTrmActnPrfrmrTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.PerformerType.Coding.System</meta>
             <column length="65535" name="Cnct_Trm_Actn_PrfrmrTyp_Cdg_Sys"/>
         </property>
         <property name="cnctTrmActnPrfrmrTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.PerformerType.Coding.UserSelected</meta>
             <column length="65535" name="Cnct_Trm_Actn_PrfrmrTyp_Cdg_UsrSltd"/>
         </property>
         <property name="cnctTrmActnPrfrmrTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.PerformerType.Coding.Version</meta>
             <column length="65535" name="Cnct_Trm_Actn_PrfrmrTyp_Cdg_Vrsn"/>
         </property>
         <property name="cnctTrmActnPrfrmrTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.PerformerType.Text</meta>
             <column length="65535" name="Cnct_Trm_Actn_PrfrmrTyp_Txt"/>
         </property>
-        <property name="cnctTrmActnRsn" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_Actn_Rsn"/>
+        <property name="cnctTrmActnRsnRfrnc" type="string">
+            <meta attribute="fhir-path">Contract.Term.Action.ReasonReference</meta>
+            <column length="65535" name="Cnct_Trm_Actn_RsnRfrnc"/>
         </property>
         <property name="cnctTrmActnRsnCdCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.ReasonCode.Coding.Code</meta>
             <column length="65535" name="Cnct_Trm_Actn_RsnCd_Cdg_Cd"/>
         </property>
         <property name="cnctTrmActnRsnCdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.ReasonCode.Coding.Display</meta>
             <column length="65535" name="Cnct_Trm_Actn_RsnCd_Cdg_Dsply"/>
         </property>
         <property name="cnctTrmActnRsnCdCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.ReasonCode.Coding.System</meta>
             <column length="65535" name="Cnct_Trm_Actn_RsnCd_Cdg_Sys"/>
         </property>
         <property name="cnctTrmActnRsnCdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.ReasonCode.Coding.UserSelected</meta>
             <column length="65535" name="Cnct_Trm_Actn_RsnCd_Cdg_UsrSltd"/>
         </property>
         <property name="cnctTrmActnRsnCdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.ReasonCode.Coding.Version</meta>
             <column length="65535" name="Cnct_Trm_Actn_RsnCd_Cdg_Vrsn"/>
         </property>
         <property name="cnctTrmActnRsnCdTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.ReasonCode.Text</meta>
             <column length="65535" name="Cnct_Trm_Actn_RsnCd_Txt"/>
         </property>
         <property name="cnctTrmActnRsnLinkId" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.ReasonLinkId</meta>
             <column length="65535" name="Cnct_Trm_Actn_RsnLinkId"/>
         </property>
-        <property name="cnctTrmActnRsnRfrnc" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_Actn_RsnRfrnc"/>
-        </property>
         <property name="cnctTrmActnRqster" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.Requester</meta>
             <column length="65535" name="Cnct_Trm_Actn_Rqster"/>
         </property>
         <property name="cnctTrmActnRqsterLinkId" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.RequesterLinkId</meta>
             <column length="65535" name="Cnct_Trm_Actn_RqsterLinkId"/>
         </property>
         <property name="cnctTrmActnSecurityLblNmbr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.SecurityLabelNumber</meta>
             <column length="65535" name="Cnct_Trm_Actn_SecurityLblNmbr"/>
         </property>
         <property name="cnctTrmActnStsCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.Status.Coding.Code</meta>
             <column length="65535" name="Cnct_Trm_Actn_Sts_Cdg_Cd"/>
         </property>
         <property name="cnctTrmActnStsCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.Status.Coding.Display</meta>
             <column length="65535" name="Cnct_Trm_Actn_Sts_Cdg_Dsply"/>
         </property>
         <property name="cnctTrmActnStsCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.Status.Coding.System</meta>
             <column length="65535" name="Cnct_Trm_Actn_Sts_Cdg_Sys"/>
         </property>
         <property name="cnctTrmActnStsCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.Status.Coding.UserSelected</meta>
             <column length="65535" name="Cnct_Trm_Actn_Sts_Cdg_UsrSltd"/>
         </property>
         <property name="cnctTrmActnStsCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.Status.Coding.Version</meta>
             <column length="65535" name="Cnct_Trm_Actn_Sts_Cdg_Vrsn"/>
         </property>
         <property name="cnctTrmActnStsTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.Status.Text</meta>
             <column length="65535" name="Cnct_Trm_Actn_Sts_Txt"/>
         </property>
         <property name="cnctTrmActnSbjctRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.Subject.Reference</meta>
             <column length="65535" name="Cnct_Trm_Actn_Sbjct_Rfrnc"/>
         </property>
         <property name="cnctTrmActnSbjctRoleCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.Subject.Role.Coding.Code</meta>
             <column length="65535" name="Cnct_Trm_Actn_Sbjct_Role_Cdg_Cd"/>
         </property>
         <property name="cnctTrmActnSbjctRoleCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.Subject.Role.Coding.Display</meta>
             <column length="65535" name="Cnct_Trm_Actn_Sbjct_Role_Cdg_Dsply"/>
         </property>
         <property name="cnctTrmActnSbjctRoleCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.Subject.Role.Coding.System</meta>
             <column length="65535" name="Cnct_Trm_Actn_Sbjct_Role_Cdg_Sys"/>
         </property>
         <property name="cnctTrmActnSbjctRoleCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.Subject.Role.Coding.UserSelected</meta>
             <column length="65535" name="Cnct_Trm_Actn_Sbjct_Role_Cdg_UsrSltd"/>
         </property>
         <property name="cnctTrmActnSbjctRoleCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.Subject.Role.Coding.Version</meta>
             <column length="65535" name="Cnct_Trm_Actn_Sbjct_Role_Cdg_Vrsn"/>
         </property>
         <property name="cnctTrmActnSbjctRoleTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.Subject.Role.Text</meta>
             <column length="65535" name="Cnct_Trm_Actn_Sbjct_Role_Txt"/>
         </property>
         <property name="cnctTrmActnTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.Type.Coding.Code</meta>
             <column length="65535" name="Cnct_Trm_Actn_Typ_Cdg_Cd"/>
         </property>
         <property name="cnctTrmActnTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.Type.Coding.Display</meta>
             <column length="65535" name="Cnct_Trm_Actn_Typ_Cdg_Dsply"/>
         </property>
         <property name="cnctTrmActnTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.Type.Coding.System</meta>
             <column length="65535" name="Cnct_Trm_Actn_Typ_Cdg_Sys"/>
         </property>
         <property name="cnctTrmActnTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.Type.Coding.UserSelected</meta>
             <column length="65535" name="Cnct_Trm_Actn_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="cnctTrmActnTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.Type.Coding.Version</meta>
             <column length="65535" name="Cnct_Trm_Actn_Typ_Cdg_Vrsn"/>
         </property>
         <property name="cnctTrmActnTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Action.Type.Text</meta>
             <column length="65535" name="Cnct_Trm_Actn_Typ_Txt"/>
         </property>
         <property name="cnctTrmAppliesEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Applies.End</meta>
             <column length="65535" name="Cnct_Trm_Applies_End"/>
         </property>
         <property name="cnctTrmAppliesStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Applies.Start</meta>
             <column length="65535" name="Cnct_Trm_Applies_Strt"/>
         </property>
-        <property name="cnctTrmAsAnsVlAttchmntCntntTyp" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Ans_VlAttchmnt_CntntTyp"/>
-        </property>
-        <property name="cnctTrmAsAnsVlAttchmntCreation" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Ans_VlAttchmnt_Creation"/>
-        </property>
-        <property name="cnctTrmAsAnsVlAttchmntData" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Ans_VlAttchmnt_Data"/>
-        </property>
-        <property name="cnctTrmAsAnsVlAttchmntHash" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Ans_VlAttchmnt_Hash"/>
-        </property>
-        <property name="cnctTrmAsAnsVlAttchmntLnguage" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Ans_VlAttchmnt_Lnguage"/>
-        </property>
-        <property name="cnctTrmAsAnsVlAttchmntSz" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Ans_VlAttchmnt_Sz"/>
-        </property>
-        <property name="cnctTrmAsAnsVlAttchmntTtl" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Ans_VlAttchmnt_Ttl"/>
-        </property>
-        <property name="cnctTrmAsAnsVlAttchmntUrl" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Ans_VlAttchmnt_Url"/>
-        </property>
-        <property name="cnctTrmAsAnsVlBooleanTyp" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Ans_VlBooleanTyp"/>
-        </property>
-        <property name="cnctTrmAsAnsVlCdgCd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Ans_VlCdg_Cd"/>
-        </property>
-        <property name="cnctTrmAsAnsVlCdgDsply" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Ans_VlCdg_Dsply"/>
-        </property>
-        <property name="cnctTrmAsAnsVlCdgSys" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Ans_VlCdg_Sys"/>
-        </property>
-        <property name="cnctTrmAsAnsVlCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Ans_VlCdg_UsrSltd"/>
-        </property>
-        <property name="cnctTrmAsAnsVlCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Ans_VlCdg_Vrsn"/>
-        </property>
-        <property name="cnctTrmAsAnsVlDtTimeTyp" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Ans_VlDtTimeTyp"/>
-        </property>
-        <property name="cnctTrmAsAnsVlDtTyp" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Ans_VlDtTyp"/>
-        </property>
-        <property name="cnctTrmAsAnsVlDecimalTyp" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Ans_VlDecimalTyp"/>
-        </property>
-        <property name="cnctTrmAsAnsVlIntegerTyp" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Ans_VlIntegerTyp"/>
-        </property>
-        <property name="cnctTrmAsAnsVlQntyCd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Ans_VlQnty_Cd"/>
-        </property>
-        <property name="cnctTrmAsAnsVlQntyCmprtr" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Ans_VlQnty_Cmprtr"/>
-        </property>
-        <property name="cnctTrmAsAnsVlQntySys" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Ans_VlQnty_Sys"/>
-        </property>
-        <property name="cnctTrmAsAnsVlQntyUnt" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Ans_VlQnty_Unt"/>
-        </property>
-        <property name="cnctTrmAsAnsVlQntyVl" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Ans_VlQnty_Vl"/>
-        </property>
-        <property name="cnctTrmAsAnsVlRfrnc" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Ans_VlRfrnc"/>
-        </property>
-        <property name="cnctTrmAsAnsVlStrgTyp" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Ans_VlStrgTyp"/>
-        </property>
-        <property name="cnctTrmAsAnsVlTimeTyp" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Ans_VlTimeTyp"/>
-        </property>
-        <property name="cnctTrmAsAnsVlUriTyp" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Ans_VlUriTyp"/>
-        </property>
-        <property name="cnctTrmAsCndtn" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Cndtn"/>
-        </property>
-        <property name="cnctTrmAsCntxtCdCdgCd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Cntxt_Cd_Cdg_Cd"/>
-        </property>
-        <property name="cnctTrmAsCntxtCdCdgDsply" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Cntxt_Cd_Cdg_Dsply"/>
-        </property>
-        <property name="cnctTrmAsCntxtCdCdgSys" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Cntxt_Cd_Cdg_Sys"/>
-        </property>
-        <property name="cnctTrmAsCntxtCdCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Cntxt_Cd_Cdg_UsrSltd"/>
-        </property>
-        <property name="cnctTrmAsCntxtCdCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Cntxt_Cd_Cdg_Vrsn"/>
-        </property>
-        <property name="cnctTrmAsCntxtCdTxt" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Cntxt_Cd_Txt"/>
-        </property>
-        <property name="cnctTrmAsCntxtRfrnc" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Cntxt_Rfrnc"/>
-        </property>
-        <property name="cnctTrmAsCntxtTxt" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Cntxt_Txt"/>
-        </property>
-        <property name="cnctTrmAsLinkId" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_LinkId"/>
-        </property>
-        <property name="cnctTrmAsPrdEnd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Prd_End"/>
-        </property>
-        <property name="cnctTrmAsPrdStrt" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Prd_Strt"/>
-        </property>
-        <property name="cnctTrmAsPrdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_PrdTyp_Cdg_Cd"/>
-        </property>
-        <property name="cnctTrmAsPrdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_PrdTyp_Cdg_Dsply"/>
-        </property>
-        <property name="cnctTrmAsPrdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_PrdTyp_Cdg_Sys"/>
-        </property>
-        <property name="cnctTrmAsPrdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_PrdTyp_Cdg_UsrSltd"/>
-        </property>
-        <property name="cnctTrmAsPrdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_PrdTyp_Cdg_Vrsn"/>
-        </property>
-        <property name="cnctTrmAsPrdTypTxt" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_PrdTyp_Txt"/>
-        </property>
-        <property name="cnctTrmAsRltnshipCd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Rltnship_Cd"/>
-        </property>
-        <property name="cnctTrmAsRltnshipDsply" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Rltnship_Dsply"/>
-        </property>
-        <property name="cnctTrmAsRltnshipSys" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Rltnship_Sys"/>
-        </property>
-        <property name="cnctTrmAsRltnshipUsrSltd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Rltnship_UsrSltd"/>
-        </property>
-        <property name="cnctTrmAsRltnshipVrsn" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Rltnship_Vrsn"/>
-        </property>
-        <property name="cnctTrmAsScopeCdgCd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Scope_Cdg_Cd"/>
-        </property>
-        <property name="cnctTrmAsScopeCdgDsply" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Scope_Cdg_Dsply"/>
-        </property>
-        <property name="cnctTrmAsScopeCdgSys" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Scope_Cdg_Sys"/>
-        </property>
-        <property name="cnctTrmAsScopeCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Scope_Cdg_UsrSltd"/>
-        </property>
-        <property name="cnctTrmAsScopeCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Scope_Cdg_Vrsn"/>
-        </property>
-        <property name="cnctTrmAsScopeTxt" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Scope_Txt"/>
-        </property>
-        <property name="cnctTrmAsSecurityLblNmbr" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_SecurityLblNmbr"/>
-        </property>
-        <property name="cnctTrmAsSubtypeCdgCd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Subtype_Cdg_Cd"/>
-        </property>
-        <property name="cnctTrmAsSubtypeCdgDsply" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Subtype_Cdg_Dsply"/>
-        </property>
-        <property name="cnctTrmAsSubtypeCdgSys" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Subtype_Cdg_Sys"/>
-        </property>
-        <property name="cnctTrmAsSubtypeCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Subtype_Cdg_UsrSltd"/>
-        </property>
-        <property name="cnctTrmAsSubtypeCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Subtype_Cdg_Vrsn"/>
-        </property>
-        <property name="cnctTrmAsSubtypeTxt" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Subtype_Txt"/>
-        </property>
-        <property name="cnctTrmAsTxt" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Txt"/>
-        </property>
-        <property name="cnctTrmAsTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Typ_Cdg_Cd"/>
-        </property>
-        <property name="cnctTrmAsTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Typ_Cdg_Dsply"/>
-        </property>
-        <property name="cnctTrmAsTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Typ_Cdg_Sys"/>
-        </property>
-        <property name="cnctTrmAsTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Typ_Cdg_UsrSltd"/>
-        </property>
-        <property name="cnctTrmAsTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Typ_Cdg_Vrsn"/>
-        </property>
-        <property name="cnctTrmAsTypTxt" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_Typ_Txt"/>
-        </property>
-        <property name="cnctTrmAsTypRfrnc" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_TypRfrnc"/>
-        </property>
-        <property name="cnctTrmAsUsePrdEnd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_UsePrd_End"/>
-        </property>
-        <property name="cnctTrmAsUsePrdStrt" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_UsePrd_Strt"/>
-        </property>
-        <property name="cnctTrmAsVldItmEfctiveTime" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_VldItm_EfctiveTime"/>
-        </property>
-        <property name="cnctTrmAsVldItmEntityCdbleCncptCdgCd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_VldItm_EntityCdbleCncpt_Cdg_Cd"/>
-        </property>
-        <property name="cnctTrmAsVldItmEntityCdbleCncptCdgDsply" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_VldItm_EntityCdbleCncpt_Cdg_Dsply"/>
-        </property>
-        <property name="cnctTrmAsVldItmEntityCdbleCncptCdgSys" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_VldItm_EntityCdbleCncpt_Cdg_Sys"/>
-        </property>
-        <property name="cnctTrmAsVldItmEntityCdbleCncptCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_VldItm_EntityCdbleCncpt_Cdg_UsrSltd"/>
-        </property>
-        <property name="cnctTrmAsVldItmEntityCdbleCncptCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_VldItm_EntityCdbleCncpt_Cdg_Vrsn"/>
-        </property>
-        <property name="cnctTrmAsVldItmEntityCdbleCncptTxt" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_VldItm_EntityCdbleCncpt_Txt"/>
-        </property>
-        <property name="cnctTrmAsVldItmEntityRfrnc" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_VldItm_EntityRfrnc"/>
-        </property>
-        <property name="cnctTrmAsVldItmFactor" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_VldItm_Factor"/>
-        </property>
-        <property name="cnctTrmAsVldItmIdAssigner" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_VldItm_Id_Assigner"/>
-        </property>
-        <property name="cnctTrmAsVldItmIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_VldItm_Id_Prd_End"/>
-        </property>
-        <property name="cnctTrmAsVldItmIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_VldItm_Id_Prd_Strt"/>
-        </property>
-        <property name="cnctTrmAsVldItmIdSys" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_VldItm_Id_Sys"/>
-        </property>
-        <property name="cnctTrmAsVldItmIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_VldItm_Id_Typ_Cdg_Cd"/>
-        </property>
-        <property name="cnctTrmAsVldItmIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_VldItm_Id_Typ_Cdg_Dsply"/>
-        </property>
-        <property name="cnctTrmAsVldItmIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_VldItm_Id_Typ_Cdg_Sys"/>
-        </property>
-        <property name="cnctTrmAsVldItmIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_VldItm_Id_Typ_Cdg_UsrSltd"/>
-        </property>
-        <property name="cnctTrmAsVldItmIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_VldItm_Id_Typ_Cdg_Vrsn"/>
-        </property>
-        <property name="cnctTrmAsVldItmIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_VldItm_Id_Typ_Txt"/>
-        </property>
-        <property name="cnctTrmAsVldItmIdUse" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_VldItm_Id_Use"/>
-        </property>
-        <property name="cnctTrmAsVldItmIdVl" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_VldItm_Id_Vl"/>
-        </property>
-        <property name="cnctTrmAsVldItmLinkId" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_VldItm_LinkId"/>
-        </property>
-        <property name="cnctTrmAsVldItmNetCrncy" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_VldItm_Net_Crncy"/>
-        </property>
-        <property name="cnctTrmAsVldItmNetVl" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_VldItm_Net_Vl"/>
-        </property>
-        <property name="cnctTrmAsVldItmPymnt" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_VldItm_Pymnt"/>
-        </property>
-        <property name="cnctTrmAsVldItmPymntDt" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_VldItm_PymntDt"/>
-        </property>
-        <property name="cnctTrmAsVldItmPoints" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_VldItm_Points"/>
-        </property>
-        <property name="cnctTrmAsVldItmQntyCd" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_VldItm_Qnty_Cd"/>
-        </property>
-        <property name="cnctTrmAsVldItmQntyCmprtr" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_VldItm_Qnty_Cmprtr"/>
-        </property>
-        <property name="cnctTrmAsVldItmQntySys" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_VldItm_Qnty_Sys"/>
-        </property>
-        <property name="cnctTrmAsVldItmQntyUnt" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_VldItm_Qnty_Unt"/>
-        </property>
-        <property name="cnctTrmAsVldItmQntyVl" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_VldItm_Qnty_Vl"/>
-        </property>
-        <property name="cnctTrmAsVldItmRecipient" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_VldItm_Recipient"/>
-        </property>
-        <property name="cnctTrmAsVldItmResponsible" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_VldItm_Responsible"/>
-        </property>
-        <property name="cnctTrmAsVldItmSecurityLblNmbr" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_VldItm_SecurityLblNmbr"/>
-        </property>
-        <property name="cnctTrmAsVldItmUntPriceCrncy" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_VldItm_UntPrice_Crncy"/>
-        </property>
-        <property name="cnctTrmAsVldItmUntPriceVl" type="string">
-            <meta attribute="resource-type"/>
-            <column length="65535" name="Cnct_Trm_As_VldItm_UntPrice_Vl"/>
+        <property name="cnctTrmAssetAnsVlAttchmntCntntTyp" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Answer.ValueAttachment.ContentType</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Ans_VlAttchmnt_CntntTyp"/>
+        </property>
+        <property name="cnctTrmAssetAnsVlAttchmntCreation" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Answer.ValueAttachment.Creation</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Ans_VlAttchmnt_Creation"/>
+        </property>
+        <property name="cnctTrmAssetAnsVlAttchmntData" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Answer.ValueAttachment.Data</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Ans_VlAttchmnt_Data"/>
+        </property>
+        <property name="cnctTrmAssetAnsVlAttchmntHash" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Answer.ValueAttachment.Hash</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Ans_VlAttchmnt_Hash"/>
+        </property>
+        <property name="cnctTrmAssetAnsVlAttchmntLnguage" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Answer.ValueAttachment.Language</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Ans_VlAttchmnt_Lnguage"/>
+        </property>
+        <property name="cnctTrmAssetAnsVlAttchmntSz" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Answer.ValueAttachment.Size</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Ans_VlAttchmnt_Sz"/>
+        </property>
+        <property name="cnctTrmAssetAnsVlAttchmntTtl" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Answer.ValueAttachment.Title</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Ans_VlAttchmnt_Ttl"/>
+        </property>
+        <property name="cnctTrmAssetAnsVlAttchmntUrl" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Answer.ValueAttachment.Url</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Ans_VlAttchmnt_Url"/>
+        </property>
+        <property name="cnctTrmAssetAnsVlBooleanTyp" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Answer.ValueBooleanType</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Ans_VlBooleanTyp"/>
+        </property>
+        <property name="cnctTrmAssetAnsVlCdgCd" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Answer.ValueCoding.Code</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Ans_VlCdg_Cd"/>
+        </property>
+        <property name="cnctTrmAssetAnsVlCdgDsply" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Answer.ValueCoding.Display</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Ans_VlCdg_Dsply"/>
+        </property>
+        <property name="cnctTrmAssetAnsVlCdgSys" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Answer.ValueCoding.System</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Ans_VlCdg_Sys"/>
+        </property>
+        <property name="cnctTrmAssetAnsVlCdgUsrSltd" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Answer.ValueCoding.UserSelected</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Ans_VlCdg_UsrSltd"/>
+        </property>
+        <property name="cnctTrmAssetAnsVlCdgVrsn" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Answer.ValueCoding.Version</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Ans_VlCdg_Vrsn"/>
+        </property>
+        <property name="cnctTrmAssetAnsVlDtTimeTyp" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Answer.ValueDateTimeType</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Ans_VlDtTimeTyp"/>
+        </property>
+        <property name="cnctTrmAssetAnsVlDtTyp" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Answer.ValueDateType</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Ans_VlDtTyp"/>
+        </property>
+        <property name="cnctTrmAssetAnsVlDecimalTyp" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Answer.ValueDecimalType</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Ans_VlDecimalTyp"/>
+        </property>
+        <property name="cnctTrmAssetAnsVlIntegerTyp" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Answer.ValueIntegerType</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Ans_VlIntegerTyp"/>
+        </property>
+        <property name="cnctTrmAssetAnsVlQntyCd" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Answer.ValueQuantity.Code</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Ans_VlQnty_Cd"/>
+        </property>
+        <property name="cnctTrmAssetAnsVlQntyCmprtr" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Answer.ValueQuantity.Comparator</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Ans_VlQnty_Cmprtr"/>
+        </property>
+        <property name="cnctTrmAssetAnsVlQntySys" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Answer.ValueQuantity.System</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Ans_VlQnty_Sys"/>
+        </property>
+        <property name="cnctTrmAssetAnsVlQntyUnt" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Answer.ValueQuantity.Unit</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Ans_VlQnty_Unt"/>
+        </property>
+        <property name="cnctTrmAssetAnsVlQntyVl" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Answer.ValueQuantity.Value</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Ans_VlQnty_Vl"/>
+        </property>
+        <property name="cnctTrmAssetAnsVlRfrnc" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Answer.ValueReference</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Ans_VlRfrnc"/>
+        </property>
+        <property name="cnctTrmAssetAnsVlStrgTyp" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Answer.ValueStringType</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Ans_VlStrgTyp"/>
+        </property>
+        <property name="cnctTrmAssetAnsVlTimeTyp" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Answer.ValueTimeType</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Ans_VlTimeTyp"/>
+        </property>
+        <property name="cnctTrmAssetAnsVlUriTyp" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Answer.ValueUriType</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Ans_VlUriTyp"/>
+        </property>
+        <property name="cnctTrmAssetCndtn" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Condition</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Cndtn"/>
+        </property>
+        <property name="cnctTrmAssetCntxtCdCdgCd" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Context.Code.Coding.Code</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Cntxt_Cd_Cdg_Cd"/>
+        </property>
+        <property name="cnctTrmAssetCntxtCdCdgDsply" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Context.Code.Coding.Display</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Cntxt_Cd_Cdg_Dsply"/>
+        </property>
+        <property name="cnctTrmAssetCntxtCdCdgSys" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Context.Code.Coding.System</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Cntxt_Cd_Cdg_Sys"/>
+        </property>
+        <property name="cnctTrmAssetCntxtCdCdgUsrSltd" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Context.Code.Coding.UserSelected</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Cntxt_Cd_Cdg_UsrSltd"/>
+        </property>
+        <property name="cnctTrmAssetCntxtCdCdgVrsn" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Context.Code.Coding.Version</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Cntxt_Cd_Cdg_Vrsn"/>
+        </property>
+        <property name="cnctTrmAssetCntxtCdTxt" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Context.Code.Text</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Cntxt_Cd_Txt"/>
+        </property>
+        <property name="cnctTrmAssetCntxtRfrnc" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Context.Reference</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Cntxt_Rfrnc"/>
+        </property>
+        <property name="cnctTrmAssetCntxtTxt" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Context.Text</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Cntxt_Txt"/>
+        </property>
+        <property name="cnctTrmAssetLinkId" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.LinkId</meta>
+            <column length="65535" name="Cnct_Trm_Asset_LinkId"/>
+        </property>
+        <property name="cnctTrmAssetPrdEnd" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Period.End</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Prd_End"/>
+        </property>
+        <property name="cnctTrmAssetPrdStrt" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Period.Start</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Prd_Strt"/>
+        </property>
+        <property name="cnctTrmAssetPrdTypCdgCd" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.PeriodType.Coding.Code</meta>
+            <column length="65535" name="Cnct_Trm_Asset_PrdTyp_Cdg_Cd"/>
+        </property>
+        <property name="cnctTrmAssetPrdTypCdgDsply" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.PeriodType.Coding.Display</meta>
+            <column length="65535" name="Cnct_Trm_Asset_PrdTyp_Cdg_Dsply"/>
+        </property>
+        <property name="cnctTrmAssetPrdTypCdgSys" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.PeriodType.Coding.System</meta>
+            <column length="65535" name="Cnct_Trm_Asset_PrdTyp_Cdg_Sys"/>
+        </property>
+        <property name="cnctTrmAssetPrdTypCdgUsrSltd" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.PeriodType.Coding.UserSelected</meta>
+            <column length="65535" name="Cnct_Trm_Asset_PrdTyp_Cdg_UsrSltd"/>
+        </property>
+        <property name="cnctTrmAssetPrdTypCdgVrsn" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.PeriodType.Coding.Version</meta>
+            <column length="65535" name="Cnct_Trm_Asset_PrdTyp_Cdg_Vrsn"/>
+        </property>
+        <property name="cnctTrmAssetPrdTypTxt" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.PeriodType.Text</meta>
+            <column length="65535" name="Cnct_Trm_Asset_PrdTyp_Txt"/>
+        </property>
+        <property name="cnctTrmAssetRltnshipCd" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Relationship.Code</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Rltnship_Cd"/>
+        </property>
+        <property name="cnctTrmAssetRltnshipDsply" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Relationship.Display</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Rltnship_Dsply"/>
+        </property>
+        <property name="cnctTrmAssetRltnshipSys" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Relationship.System</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Rltnship_Sys"/>
+        </property>
+        <property name="cnctTrmAssetRltnshipUsrSltd" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Relationship.UserSelected</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Rltnship_UsrSltd"/>
+        </property>
+        <property name="cnctTrmAssetRltnshipVrsn" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Relationship.Version</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Rltnship_Vrsn"/>
+        </property>
+        <property name="cnctTrmAssetScopeCdgCd" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Scope.Coding.Code</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Scope_Cdg_Cd"/>
+        </property>
+        <property name="cnctTrmAssetScopeCdgDsply" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Scope.Coding.Display</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Scope_Cdg_Dsply"/>
+        </property>
+        <property name="cnctTrmAssetScopeCdgSys" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Scope.Coding.System</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Scope_Cdg_Sys"/>
+        </property>
+        <property name="cnctTrmAssetScopeCdgUsrSltd" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Scope.Coding.UserSelected</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Scope_Cdg_UsrSltd"/>
+        </property>
+        <property name="cnctTrmAssetScopeCdgVrsn" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Scope.Coding.Version</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Scope_Cdg_Vrsn"/>
+        </property>
+        <property name="cnctTrmAssetScopeTxt" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Scope.Text</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Scope_Txt"/>
+        </property>
+        <property name="cnctTrmAssetSecurityLblNmbr" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.SecurityLabelNumber</meta>
+            <column length="65535" name="Cnct_Trm_Asset_SecurityLblNmbr"/>
+        </property>
+        <property name="cnctTrmAssetSubtypeCdgCd" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Subtype.Coding.Code</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Subtype_Cdg_Cd"/>
+        </property>
+        <property name="cnctTrmAssetSubtypeCdgDsply" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Subtype.Coding.Display</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Subtype_Cdg_Dsply"/>
+        </property>
+        <property name="cnctTrmAssetSubtypeCdgSys" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Subtype.Coding.System</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Subtype_Cdg_Sys"/>
+        </property>
+        <property name="cnctTrmAssetSubtypeCdgUsrSltd" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Subtype.Coding.UserSelected</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Subtype_Cdg_UsrSltd"/>
+        </property>
+        <property name="cnctTrmAssetSubtypeCdgVrsn" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Subtype.Coding.Version</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Subtype_Cdg_Vrsn"/>
+        </property>
+        <property name="cnctTrmAssetSubtypeTxt" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Subtype.Text</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Subtype_Txt"/>
+        </property>
+        <property name="cnctTrmAssetTxt" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Text</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Txt"/>
+        </property>
+        <property name="cnctTrmAssetTypCdgCd" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Type.Coding.Code</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Typ_Cdg_Cd"/>
+        </property>
+        <property name="cnctTrmAssetTypCdgDsply" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Type.Coding.Display</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="cnctTrmAssetTypCdgSys" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Type.Coding.System</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Typ_Cdg_Sys"/>
+        </property>
+        <property name="cnctTrmAssetTypCdgUsrSltd" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Type.Coding.UserSelected</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="cnctTrmAssetTypCdgVrsn" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Type.Coding.Version</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="cnctTrmAssetTypTxt" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.Type.Text</meta>
+            <column length="65535" name="Cnct_Trm_Asset_Typ_Txt"/>
+        </property>
+        <property name="cnctTrmAssetTypRfrnc" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.TypeReference</meta>
+            <column length="65535" name="Cnct_Trm_Asset_TypRfrnc"/>
+        </property>
+        <property name="cnctTrmAssetUsePrdEnd" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.UsePeriod.End</meta>
+            <column length="65535" name="Cnct_Trm_Asset_UsePrd_End"/>
+        </property>
+        <property name="cnctTrmAssetUsePrdStrt" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.UsePeriod.Start</meta>
+            <column length="65535" name="Cnct_Trm_Asset_UsePrd_Strt"/>
+        </property>
+        <property name="cnctTrmAssetVldItmEfctiveTime" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.ValuedItem.EffectiveTime</meta>
+            <column length="65535" name="Cnct_Trm_Asset_VldItm_EfctiveTime"/>
+        </property>
+        <property name="cnctTrmAssetVldItmEntityCdbleCncptCdgCd" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.ValuedItem.EntityCodeableConcept.Coding.Code</meta>
+            <column length="65535" name="Cnct_Trm_Asset_VldItm_EntityCdbleCncpt_Cdg_Cd"/>
+        </property>
+        <property name="cnctTrmAssetVldItmEntityCdbleCncptCdgDsply" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.ValuedItem.EntityCodeableConcept.Coding.Display</meta>
+            <column length="65535" name="Cnct_Trm_Asset_VldItm_EntityCdbleCncpt_Cdg_Dsply"/>
+        </property>
+        <property name="cnctTrmAssetVldItmEntityCdbleCncptCdgSys" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.ValuedItem.EntityCodeableConcept.Coding.System</meta>
+            <column length="65535" name="Cnct_Trm_Asset_VldItm_EntityCdbleCncpt_Cdg_Sys"/>
+        </property>
+        <property name="cnctTrmAssetVldItmEntityCdbleCncptCdgUsrSltd" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.ValuedItem.EntityCodeableConcept.Coding.UserSelected</meta>
+            <column length="65535" name="Cnct_Trm_Asset_VldItm_EntityCdbleCncpt_Cdg_UsrSltd"/>
+        </property>
+        <property name="cnctTrmAssetVldItmEntityCdbleCncptCdgVrsn" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.ValuedItem.EntityCodeableConcept.Coding.Version</meta>
+            <column length="65535" name="Cnct_Trm_Asset_VldItm_EntityCdbleCncpt_Cdg_Vrsn"/>
+        </property>
+        <property name="cnctTrmAssetVldItmEntityCdbleCncptTxt" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.ValuedItem.EntityCodeableConcept.Text</meta>
+            <column length="65535" name="Cnct_Trm_Asset_VldItm_EntityCdbleCncpt_Txt"/>
+        </property>
+        <property name="cnctTrmAssetVldItmEntityRfrnc" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.ValuedItem.EntityReference</meta>
+            <column length="65535" name="Cnct_Trm_Asset_VldItm_EntityRfrnc"/>
+        </property>
+        <property name="cnctTrmAssetVldItmFactor" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.ValuedItem.Factor</meta>
+            <column length="65535" name="Cnct_Trm_Asset_VldItm_Factor"/>
+        </property>
+        <property name="cnctTrmAssetVldItmIdAssigner" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.ValuedItem.Identifier.Assigner</meta>
+            <column length="65535" name="Cnct_Trm_Asset_VldItm_Id_Assigner"/>
+        </property>
+        <property name="cnctTrmAssetVldItmIdPrdEnd" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.ValuedItem.Identifier.Period.End</meta>
+            <column length="65535" name="Cnct_Trm_Asset_VldItm_Id_Prd_End"/>
+        </property>
+        <property name="cnctTrmAssetVldItmIdPrdStrt" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.ValuedItem.Identifier.Period.Start</meta>
+            <column length="65535" name="Cnct_Trm_Asset_VldItm_Id_Prd_Strt"/>
+        </property>
+        <property name="cnctTrmAssetVldItmIdSys" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.ValuedItem.Identifier.System</meta>
+            <column length="65535" name="Cnct_Trm_Asset_VldItm_Id_Sys"/>
+        </property>
+        <property name="cnctTrmAssetVldItmIdTypCdgCd" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.ValuedItem.Identifier.Type.Coding.Code</meta>
+            <column length="65535" name="Cnct_Trm_Asset_VldItm_Id_Typ_Cdg_Cd"/>
+        </property>
+        <property name="cnctTrmAssetVldItmIdTypCdgDsply" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.ValuedItem.Identifier.Type.Coding.Display</meta>
+            <column length="65535" name="Cnct_Trm_Asset_VldItm_Id_Typ_Cdg_Dsply"/>
+        </property>
+        <property name="cnctTrmAssetVldItmIdTypCdgSys" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.ValuedItem.Identifier.Type.Coding.System</meta>
+            <column length="65535" name="Cnct_Trm_Asset_VldItm_Id_Typ_Cdg_Sys"/>
+        </property>
+        <property name="cnctTrmAssetVldItmIdTypCdgUsrSltd" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.ValuedItem.Identifier.Type.Coding.UserSelected</meta>
+            <column length="65535" name="Cnct_Trm_Asset_VldItm_Id_Typ_Cdg_UsrSltd"/>
+        </property>
+        <property name="cnctTrmAssetVldItmIdTypCdgVrsn" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.ValuedItem.Identifier.Type.Coding.Version</meta>
+            <column length="65535" name="Cnct_Trm_Asset_VldItm_Id_Typ_Cdg_Vrsn"/>
+        </property>
+        <property name="cnctTrmAssetVldItmIdTypTxt" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.ValuedItem.Identifier.Type.Text</meta>
+            <column length="65535" name="Cnct_Trm_Asset_VldItm_Id_Typ_Txt"/>
+        </property>
+        <property name="cnctTrmAssetVldItmIdUse" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.ValuedItem.Identifier.Use</meta>
+            <column length="65535" name="Cnct_Trm_Asset_VldItm_Id_Use"/>
+        </property>
+        <property name="cnctTrmAssetVldItmIdVl" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.ValuedItem.Identifier.Value</meta>
+            <column length="65535" name="Cnct_Trm_Asset_VldItm_Id_Vl"/>
+        </property>
+        <property name="cnctTrmAssetVldItmLinkId" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.ValuedItem.LinkId</meta>
+            <column length="65535" name="Cnct_Trm_Asset_VldItm_LinkId"/>
+        </property>
+        <property name="cnctTrmAssetVldItmNetCrncy" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.ValuedItem.Net.Currency</meta>
+            <column length="65535" name="Cnct_Trm_Asset_VldItm_Net_Crncy"/>
+        </property>
+        <property name="cnctTrmAssetVldItmNetVl" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.ValuedItem.Net.Value</meta>
+            <column length="65535" name="Cnct_Trm_Asset_VldItm_Net_Vl"/>
+        </property>
+        <property name="cnctTrmAssetVldItmPymnt" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.ValuedItem.Payment</meta>
+            <column length="65535" name="Cnct_Trm_Asset_VldItm_Pymnt"/>
+        </property>
+        <property name="cnctTrmAssetVldItmPymntDt" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.ValuedItem.PaymentDate</meta>
+            <column length="65535" name="Cnct_Trm_Asset_VldItm_PymntDt"/>
+        </property>
+        <property name="cnctTrmAssetVldItmPoints" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.ValuedItem.Points</meta>
+            <column length="65535" name="Cnct_Trm_Asset_VldItm_Points"/>
+        </property>
+        <property name="cnctTrmAssetVldItmQntyCd" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.ValuedItem.Quantity.Code</meta>
+            <column length="65535" name="Cnct_Trm_Asset_VldItm_Qnty_Cd"/>
+        </property>
+        <property name="cnctTrmAssetVldItmQntyCmprtr" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.ValuedItem.Quantity.Comparator</meta>
+            <column length="65535" name="Cnct_Trm_Asset_VldItm_Qnty_Cmprtr"/>
+        </property>
+        <property name="cnctTrmAssetVldItmQntySys" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.ValuedItem.Quantity.System</meta>
+            <column length="65535" name="Cnct_Trm_Asset_VldItm_Qnty_Sys"/>
+        </property>
+        <property name="cnctTrmAssetVldItmQntyUnt" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.ValuedItem.Quantity.Unit</meta>
+            <column length="65535" name="Cnct_Trm_Asset_VldItm_Qnty_Unt"/>
+        </property>
+        <property name="cnctTrmAssetVldItmQntyVl" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.ValuedItem.Quantity.Value</meta>
+            <column length="65535" name="Cnct_Trm_Asset_VldItm_Qnty_Vl"/>
+        </property>
+        <property name="cnctTrmAssetVldItmRecipient" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.ValuedItem.Recipient</meta>
+            <column length="65535" name="Cnct_Trm_Asset_VldItm_Recipient"/>
+        </property>
+        <property name="cnctTrmAssetVldItmResponsible" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.ValuedItem.Responsible</meta>
+            <column length="65535" name="Cnct_Trm_Asset_VldItm_Responsible"/>
+        </property>
+        <property name="cnctTrmAssetVldItmSecurityLblNmbr" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.ValuedItem.SecurityLabelNumber</meta>
+            <column length="65535" name="Cnct_Trm_Asset_VldItm_SecurityLblNmbr"/>
+        </property>
+        <property name="cnctTrmAssetVldItmUntPriceCrncy" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.ValuedItem.UnitPrice.Currency</meta>
+            <column length="65535" name="Cnct_Trm_Asset_VldItm_UntPrice_Crncy"/>
+        </property>
+        <property name="cnctTrmAssetVldItmUntPriceVl" type="string">
+            <meta attribute="fhir-path">Contract.Term.Asset.ValuedItem.UnitPrice.Value</meta>
+            <column length="65535" name="Cnct_Trm_Asset_VldItm_UntPrice_Vl"/>
         </property>
         <property name="cnctTrmIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Identifier.Assigner</meta>
             <column length="65535" name="Cnct_Trm_Id_Assigner"/>
         </property>
         <property name="cnctTrmIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Identifier.Period.End</meta>
             <column length="65535" name="Cnct_Trm_Id_Prd_End"/>
         </property>
         <property name="cnctTrmIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Identifier.Period.Start</meta>
             <column length="65535" name="Cnct_Trm_Id_Prd_Strt"/>
         </property>
         <property name="cnctTrmIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Identifier.System</meta>
             <column length="65535" name="Cnct_Trm_Id_Sys"/>
         </property>
         <property name="cnctTrmIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Identifier.Type.Coding.Code</meta>
             <column length="65535" name="Cnct_Trm_Id_Typ_Cdg_Cd"/>
         </property>
         <property name="cnctTrmIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Identifier.Type.Coding.Display</meta>
             <column length="65535" name="Cnct_Trm_Id_Typ_Cdg_Dsply"/>
         </property>
         <property name="cnctTrmIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Identifier.Type.Coding.System</meta>
             <column length="65535" name="Cnct_Trm_Id_Typ_Cdg_Sys"/>
         </property>
         <property name="cnctTrmIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Identifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="Cnct_Trm_Id_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="cnctTrmIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Identifier.Type.Coding.Version</meta>
             <column length="65535" name="Cnct_Trm_Id_Typ_Cdg_Vrsn"/>
         </property>
         <property name="cnctTrmIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Identifier.Type.Text</meta>
             <column length="65535" name="Cnct_Trm_Id_Typ_Txt"/>
         </property>
         <property name="cnctTrmIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Identifier.Use</meta>
             <column length="65535" name="Cnct_Trm_Id_Use"/>
         </property>
         <property name="cnctTrmIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Identifier.Value</meta>
             <column length="65535" name="Cnct_Trm_Id_Vl"/>
         </property>
         <property name="cnctTrmIssued" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Issued</meta>
             <column length="65535" name="Cnct_Trm_Issued"/>
         </property>
         <property name="cnctTrmOffrAnsVlAttchmntCntntTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Answer.ValueAttachment.ContentType</meta>
             <column length="65535" name="Cnct_Trm_Offr_Ans_VlAttchmnt_CntntTyp"/>
         </property>
         <property name="cnctTrmOffrAnsVlAttchmntCreation" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Answer.ValueAttachment.Creation</meta>
             <column length="65535" name="Cnct_Trm_Offr_Ans_VlAttchmnt_Creation"/>
         </property>
         <property name="cnctTrmOffrAnsVlAttchmntData" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Answer.ValueAttachment.Data</meta>
             <column length="65535" name="Cnct_Trm_Offr_Ans_VlAttchmnt_Data"/>
         </property>
         <property name="cnctTrmOffrAnsVlAttchmntHash" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Answer.ValueAttachment.Hash</meta>
             <column length="65535" name="Cnct_Trm_Offr_Ans_VlAttchmnt_Hash"/>
         </property>
         <property name="cnctTrmOffrAnsVlAttchmntLnguage" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Answer.ValueAttachment.Language</meta>
             <column length="65535" name="Cnct_Trm_Offr_Ans_VlAttchmnt_Lnguage"/>
         </property>
         <property name="cnctTrmOffrAnsVlAttchmntSz" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Answer.ValueAttachment.Size</meta>
             <column length="65535" name="Cnct_Trm_Offr_Ans_VlAttchmnt_Sz"/>
         </property>
         <property name="cnctTrmOffrAnsVlAttchmntTtl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Answer.ValueAttachment.Title</meta>
             <column length="65535" name="Cnct_Trm_Offr_Ans_VlAttchmnt_Ttl"/>
         </property>
         <property name="cnctTrmOffrAnsVlAttchmntUrl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Answer.ValueAttachment.Url</meta>
             <column length="65535" name="Cnct_Trm_Offr_Ans_VlAttchmnt_Url"/>
         </property>
         <property name="cnctTrmOffrAnsVlBooleanTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Answer.ValueBooleanType</meta>
             <column length="65535" name="Cnct_Trm_Offr_Ans_VlBooleanTyp"/>
         </property>
         <property name="cnctTrmOffrAnsVlCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Answer.ValueCoding.Code</meta>
             <column length="65535" name="Cnct_Trm_Offr_Ans_VlCdg_Cd"/>
         </property>
         <property name="cnctTrmOffrAnsVlCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Answer.ValueCoding.Display</meta>
             <column length="65535" name="Cnct_Trm_Offr_Ans_VlCdg_Dsply"/>
         </property>
         <property name="cnctTrmOffrAnsVlCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Answer.ValueCoding.System</meta>
             <column length="65535" name="Cnct_Trm_Offr_Ans_VlCdg_Sys"/>
         </property>
         <property name="cnctTrmOffrAnsVlCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Answer.ValueCoding.UserSelected</meta>
             <column length="65535" name="Cnct_Trm_Offr_Ans_VlCdg_UsrSltd"/>
         </property>
         <property name="cnctTrmOffrAnsVlCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Answer.ValueCoding.Version</meta>
             <column length="65535" name="Cnct_Trm_Offr_Ans_VlCdg_Vrsn"/>
         </property>
         <property name="cnctTrmOffrAnsVlDtTimeTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Answer.ValueDateTimeType</meta>
             <column length="65535" name="Cnct_Trm_Offr_Ans_VlDtTimeTyp"/>
         </property>
         <property name="cnctTrmOffrAnsVlDtTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Answer.ValueDateType</meta>
             <column length="65535" name="Cnct_Trm_Offr_Ans_VlDtTyp"/>
         </property>
         <property name="cnctTrmOffrAnsVlDecimalTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Answer.ValueDecimalType</meta>
             <column length="65535" name="Cnct_Trm_Offr_Ans_VlDecimalTyp"/>
         </property>
         <property name="cnctTrmOffrAnsVlIntegerTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Answer.ValueIntegerType</meta>
             <column length="65535" name="Cnct_Trm_Offr_Ans_VlIntegerTyp"/>
         </property>
         <property name="cnctTrmOffrAnsVlQntyCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Answer.ValueQuantity.Code</meta>
             <column length="65535" name="Cnct_Trm_Offr_Ans_VlQnty_Cd"/>
         </property>
         <property name="cnctTrmOffrAnsVlQntyCmprtr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Answer.ValueQuantity.Comparator</meta>
             <column length="65535" name="Cnct_Trm_Offr_Ans_VlQnty_Cmprtr"/>
         </property>
         <property name="cnctTrmOffrAnsVlQntySys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Answer.ValueQuantity.System</meta>
             <column length="65535" name="Cnct_Trm_Offr_Ans_VlQnty_Sys"/>
         </property>
         <property name="cnctTrmOffrAnsVlQntyUnt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Answer.ValueQuantity.Unit</meta>
             <column length="65535" name="Cnct_Trm_Offr_Ans_VlQnty_Unt"/>
         </property>
         <property name="cnctTrmOffrAnsVlQntyVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Answer.ValueQuantity.Value</meta>
             <column length="65535" name="Cnct_Trm_Offr_Ans_VlQnty_Vl"/>
         </property>
         <property name="cnctTrmOffrAnsVlRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Answer.ValueReference</meta>
             <column length="65535" name="Cnct_Trm_Offr_Ans_VlRfrnc"/>
         </property>
         <property name="cnctTrmOffrAnsVlStrgTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Answer.ValueStringType</meta>
             <column length="65535" name="Cnct_Trm_Offr_Ans_VlStrgTyp"/>
         </property>
         <property name="cnctTrmOffrAnsVlTimeTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Answer.ValueTimeType</meta>
             <column length="65535" name="Cnct_Trm_Offr_Ans_VlTimeTyp"/>
         </property>
         <property name="cnctTrmOffrAnsVlUriTyp" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Answer.ValueUriType</meta>
             <column length="65535" name="Cnct_Trm_Offr_Ans_VlUriTyp"/>
         </property>
         <property name="cnctTrmOffrDecisionCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Decision.Coding.Code</meta>
             <column length="65535" name="Cnct_Trm_Offr_Decision_Cdg_Cd"/>
         </property>
         <property name="cnctTrmOffrDecisionCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Decision.Coding.Display</meta>
             <column length="65535" name="Cnct_Trm_Offr_Decision_Cdg_Dsply"/>
         </property>
         <property name="cnctTrmOffrDecisionCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Decision.Coding.System</meta>
             <column length="65535" name="Cnct_Trm_Offr_Decision_Cdg_Sys"/>
         </property>
         <property name="cnctTrmOffrDecisionCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Decision.Coding.UserSelected</meta>
             <column length="65535" name="Cnct_Trm_Offr_Decision_Cdg_UsrSltd"/>
         </property>
         <property name="cnctTrmOffrDecisionCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Decision.Coding.Version</meta>
             <column length="65535" name="Cnct_Trm_Offr_Decision_Cdg_Vrsn"/>
         </property>
         <property name="cnctTrmOffrDecisionTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Decision.Text</meta>
             <column length="65535" name="Cnct_Trm_Offr_Decision_Txt"/>
         </property>
         <property name="cnctTrmOffrDecisionModeCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.DecisionMode.Coding.Code</meta>
             <column length="65535" name="Cnct_Trm_Offr_DecisionMode_Cdg_Cd"/>
         </property>
         <property name="cnctTrmOffrDecisionModeCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.DecisionMode.Coding.Display</meta>
             <column length="65535" name="Cnct_Trm_Offr_DecisionMode_Cdg_Dsply"/>
         </property>
         <property name="cnctTrmOffrDecisionModeCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.DecisionMode.Coding.System</meta>
             <column length="65535" name="Cnct_Trm_Offr_DecisionMode_Cdg_Sys"/>
         </property>
         <property name="cnctTrmOffrDecisionModeCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.DecisionMode.Coding.UserSelected</meta>
             <column length="65535" name="Cnct_Trm_Offr_DecisionMode_Cdg_UsrSltd"/>
         </property>
         <property name="cnctTrmOffrDecisionModeCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.DecisionMode.Coding.Version</meta>
             <column length="65535" name="Cnct_Trm_Offr_DecisionMode_Cdg_Vrsn"/>
         </property>
         <property name="cnctTrmOffrDecisionModeTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.DecisionMode.Text</meta>
             <column length="65535" name="Cnct_Trm_Offr_DecisionMode_Txt"/>
         </property>
         <property name="cnctTrmOffrIdAssigner" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Identifier.Assigner</meta>
             <column length="65535" name="Cnct_Trm_Offr_Id_Assigner"/>
         </property>
         <property name="cnctTrmOffrIdPrdEnd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Identifier.Period.End</meta>
             <column length="65535" name="Cnct_Trm_Offr_Id_Prd_End"/>
         </property>
         <property name="cnctTrmOffrIdPrdStrt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Identifier.Period.Start</meta>
             <column length="65535" name="Cnct_Trm_Offr_Id_Prd_Strt"/>
         </property>
         <property name="cnctTrmOffrIdSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Identifier.System</meta>
             <column length="65535" name="Cnct_Trm_Offr_Id_Sys"/>
         </property>
         <property name="cnctTrmOffrIdTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Identifier.Type.Coding.Code</meta>
             <column length="65535" name="Cnct_Trm_Offr_Id_Typ_Cdg_Cd"/>
         </property>
         <property name="cnctTrmOffrIdTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Identifier.Type.Coding.Display</meta>
             <column length="65535" name="Cnct_Trm_Offr_Id_Typ_Cdg_Dsply"/>
         </property>
         <property name="cnctTrmOffrIdTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Identifier.Type.Coding.System</meta>
             <column length="65535" name="Cnct_Trm_Offr_Id_Typ_Cdg_Sys"/>
         </property>
         <property name="cnctTrmOffrIdTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Identifier.Type.Coding.UserSelected</meta>
             <column length="65535" name="Cnct_Trm_Offr_Id_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="cnctTrmOffrIdTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Identifier.Type.Coding.Version</meta>
             <column length="65535" name="Cnct_Trm_Offr_Id_Typ_Cdg_Vrsn"/>
         </property>
         <property name="cnctTrmOffrIdTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Identifier.Type.Text</meta>
             <column length="65535" name="Cnct_Trm_Offr_Id_Typ_Txt"/>
         </property>
         <property name="cnctTrmOffrIdUse" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Identifier.Use</meta>
             <column length="65535" name="Cnct_Trm_Offr_Id_Use"/>
         </property>
         <property name="cnctTrmOffrIdVl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Identifier.Value</meta>
             <column length="65535" name="Cnct_Trm_Offr_Id_Vl"/>
         </property>
         <property name="cnctTrmOffrLinkId" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.LinkId</meta>
             <column length="65535" name="Cnct_Trm_Offr_LinkId"/>
         </property>
         <property name="cnctTrmOffrPartyRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Party.Reference</meta>
             <column length="65535" name="Cnct_Trm_Offr_Party_Rfrnc"/>
         </property>
         <property name="cnctTrmOffrPartyRoleCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Party.Role.Coding.Code</meta>
             <column length="65535" name="Cnct_Trm_Offr_Party_Role_Cdg_Cd"/>
         </property>
         <property name="cnctTrmOffrPartyRoleCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Party.Role.Coding.Display</meta>
             <column length="65535" name="Cnct_Trm_Offr_Party_Role_Cdg_Dsply"/>
         </property>
         <property name="cnctTrmOffrPartyRoleCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Party.Role.Coding.System</meta>
             <column length="65535" name="Cnct_Trm_Offr_Party_Role_Cdg_Sys"/>
         </property>
         <property name="cnctTrmOffrPartyRoleCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Party.Role.Coding.UserSelected</meta>
             <column length="65535" name="Cnct_Trm_Offr_Party_Role_Cdg_UsrSltd"/>
         </property>
         <property name="cnctTrmOffrPartyRoleCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Party.Role.Coding.Version</meta>
             <column length="65535" name="Cnct_Trm_Offr_Party_Role_Cdg_Vrsn"/>
         </property>
         <property name="cnctTrmOffrPartyRoleTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Party.Role.Text</meta>
             <column length="65535" name="Cnct_Trm_Offr_Party_Role_Txt"/>
         </property>
         <property name="cnctTrmOffrSecurityLblNmbr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.SecurityLabelNumber</meta>
             <column length="65535" name="Cnct_Trm_Offr_SecurityLblNmbr"/>
         </property>
         <property name="cnctTrmOffrTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Text</meta>
             <column length="65535" name="Cnct_Trm_Offr_Txt"/>
         </property>
         <property name="cnctTrmOffrTopic" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Topic</meta>
             <column length="65535" name="Cnct_Trm_Offr_Topic"/>
         </property>
         <property name="cnctTrmOffrTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Type.Coding.Code</meta>
             <column length="65535" name="Cnct_Trm_Offr_Typ_Cdg_Cd"/>
         </property>
         <property name="cnctTrmOffrTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Type.Coding.Display</meta>
             <column length="65535" name="Cnct_Trm_Offr_Typ_Cdg_Dsply"/>
         </property>
         <property name="cnctTrmOffrTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Type.Coding.System</meta>
             <column length="65535" name="Cnct_Trm_Offr_Typ_Cdg_Sys"/>
         </property>
         <property name="cnctTrmOffrTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Type.Coding.UserSelected</meta>
             <column length="65535" name="Cnct_Trm_Offr_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="cnctTrmOffrTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Type.Coding.Version</meta>
             <column length="65535" name="Cnct_Trm_Offr_Typ_Cdg_Vrsn"/>
         </property>
         <property name="cnctTrmOffrTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Offer.Type.Text</meta>
             <column length="65535" name="Cnct_Trm_Offr_Typ_Txt"/>
         </property>
         <property name="cnctTrmSecurityLblCtgryCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.SecurityLabel.Category.Code</meta>
             <column length="65535" name="Cnct_Trm_SecurityLbl_Ctgry_Cd"/>
         </property>
         <property name="cnctTrmSecurityLblCtgryDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.SecurityLabel.Category.Display</meta>
             <column length="65535" name="Cnct_Trm_SecurityLbl_Ctgry_Dsply"/>
         </property>
         <property name="cnctTrmSecurityLblCtgrySys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.SecurityLabel.Category.System</meta>
             <column length="65535" name="Cnct_Trm_SecurityLbl_Ctgry_Sys"/>
         </property>
         <property name="cnctTrmSecurityLblCtgryUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.SecurityLabel.Category.UserSelected</meta>
             <column length="65535" name="Cnct_Trm_SecurityLbl_Ctgry_UsrSltd"/>
         </property>
         <property name="cnctTrmSecurityLblCtgryVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.SecurityLabel.Category.Version</meta>
             <column length="65535" name="Cnct_Trm_SecurityLbl_Ctgry_Vrsn"/>
         </property>
         <property name="cnctTrmSecurityLblClsfctnCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.SecurityLabel.Classification.Code</meta>
             <column length="65535" name="Cnct_Trm_SecurityLbl_Clsfctn_Cd"/>
         </property>
         <property name="cnctTrmSecurityLblClsfctnDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.SecurityLabel.Classification.Display</meta>
             <column length="65535" name="Cnct_Trm_SecurityLbl_Clsfctn_Dsply"/>
         </property>
         <property name="cnctTrmSecurityLblClsfctnSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.SecurityLabel.Classification.System</meta>
             <column length="65535" name="Cnct_Trm_SecurityLbl_Clsfctn_Sys"/>
         </property>
         <property name="cnctTrmSecurityLblClsfctnUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.SecurityLabel.Classification.UserSelected</meta>
             <column length="65535" name="Cnct_Trm_SecurityLbl_Clsfctn_UsrSltd"/>
         </property>
         <property name="cnctTrmSecurityLblClsfctnVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.SecurityLabel.Classification.Version</meta>
             <column length="65535" name="Cnct_Trm_SecurityLbl_Clsfctn_Vrsn"/>
         </property>
         <property name="cnctTrmSecurityLblControlCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.SecurityLabel.Control.Code</meta>
             <column length="65535" name="Cnct_Trm_SecurityLbl_Control_Cd"/>
         </property>
         <property name="cnctTrmSecurityLblControlDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.SecurityLabel.Control.Display</meta>
             <column length="65535" name="Cnct_Trm_SecurityLbl_Control_Dsply"/>
         </property>
         <property name="cnctTrmSecurityLblControlSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.SecurityLabel.Control.System</meta>
             <column length="65535" name="Cnct_Trm_SecurityLbl_Control_Sys"/>
         </property>
         <property name="cnctTrmSecurityLblControlUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.SecurityLabel.Control.UserSelected</meta>
             <column length="65535" name="Cnct_Trm_SecurityLbl_Control_UsrSltd"/>
         </property>
         <property name="cnctTrmSecurityLblControlVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.SecurityLabel.Control.Version</meta>
             <column length="65535" name="Cnct_Trm_SecurityLbl_Control_Vrsn"/>
         </property>
         <property name="cnctTrmSecurityLblNmbr" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.SecurityLabel.Number</meta>
             <column length="65535" name="Cnct_Trm_SecurityLbl_Nmbr"/>
         </property>
         <property name="cnctTrmSubTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.SubType.Coding.Code</meta>
             <column length="65535" name="Cnct_Trm_SubTyp_Cdg_Cd"/>
         </property>
         <property name="cnctTrmSubTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.SubType.Coding.Display</meta>
             <column length="65535" name="Cnct_Trm_SubTyp_Cdg_Dsply"/>
         </property>
         <property name="cnctTrmSubTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.SubType.Coding.System</meta>
             <column length="65535" name="Cnct_Trm_SubTyp_Cdg_Sys"/>
         </property>
         <property name="cnctTrmSubTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.SubType.Coding.UserSelected</meta>
             <column length="65535" name="Cnct_Trm_SubTyp_Cdg_UsrSltd"/>
         </property>
         <property name="cnctTrmSubTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.SubType.Coding.Version</meta>
             <column length="65535" name="Cnct_Trm_SubTyp_Cdg_Vrsn"/>
         </property>
         <property name="cnctTrmSubTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.SubType.Text</meta>
             <column length="65535" name="Cnct_Trm_SubTyp_Txt"/>
         </property>
         <property name="cnctTrmTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Text</meta>
             <column length="65535" name="Cnct_Trm_Txt"/>
         </property>
         <property name="cnctTrmTopicCdbleCncptCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.TopicCodeableConcept.Coding.Code</meta>
             <column length="65535" name="Cnct_Trm_TopicCdbleCncpt_Cdg_Cd"/>
         </property>
         <property name="cnctTrmTopicCdbleCncptCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.TopicCodeableConcept.Coding.Display</meta>
             <column length="65535" name="Cnct_Trm_TopicCdbleCncpt_Cdg_Dsply"/>
         </property>
         <property name="cnctTrmTopicCdbleCncptCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.TopicCodeableConcept.Coding.System</meta>
             <column length="65535" name="Cnct_Trm_TopicCdbleCncpt_Cdg_Sys"/>
         </property>
         <property name="cnctTrmTopicCdbleCncptCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.TopicCodeableConcept.Coding.UserSelected</meta>
             <column length="65535" name="Cnct_Trm_TopicCdbleCncpt_Cdg_UsrSltd"/>
         </property>
         <property name="cnctTrmTopicCdbleCncptCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.TopicCodeableConcept.Coding.Version</meta>
             <column length="65535" name="Cnct_Trm_TopicCdbleCncpt_Cdg_Vrsn"/>
         </property>
         <property name="cnctTrmTopicCdbleCncptTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.TopicCodeableConcept.Text</meta>
             <column length="65535" name="Cnct_Trm_TopicCdbleCncpt_Txt"/>
         </property>
         <property name="cnctTrmTopicRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.TopicReference</meta>
             <column length="65535" name="Cnct_Trm_TopicRfrnc"/>
         </property>
         <property name="cnctTrmTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Type.Coding.Code</meta>
             <column length="65535" name="Cnct_Trm_Typ_Cdg_Cd"/>
         </property>
         <property name="cnctTrmTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Type.Coding.Display</meta>
             <column length="65535" name="Cnct_Trm_Typ_Cdg_Dsply"/>
         </property>
         <property name="cnctTrmTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Type.Coding.System</meta>
             <column length="65535" name="Cnct_Trm_Typ_Cdg_Sys"/>
         </property>
         <property name="cnctTrmTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Type.Coding.UserSelected</meta>
             <column length="65535" name="Cnct_Trm_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="cnctTrmTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Type.Coding.Version</meta>
             <column length="65535" name="Cnct_Trm_Typ_Cdg_Vrsn"/>
         </property>
         <property name="cnctTrmTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Term.Type.Text</meta>
             <column length="65535" name="Cnct_Trm_Typ_Txt"/>
         </property>
         <property name="cnctTtl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Title</meta>
             <column length="65535" name="Cnct_Ttl"/>
         </property>
         <property name="cnctTopicCdbleCncptCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.TopicCodeableConcept.Coding.Code</meta>
             <column length="65535" name="Cnct_TopicCdbleCncpt_Cdg_Cd"/>
         </property>
         <property name="cnctTopicCdbleCncptCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.TopicCodeableConcept.Coding.Display</meta>
             <column length="65535" name="Cnct_TopicCdbleCncpt_Cdg_Dsply"/>
         </property>
         <property name="cnctTopicCdbleCncptCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.TopicCodeableConcept.Coding.System</meta>
             <column length="65535" name="Cnct_TopicCdbleCncpt_Cdg_Sys"/>
         </property>
         <property name="cnctTopicCdbleCncptCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.TopicCodeableConcept.Coding.UserSelected</meta>
             <column length="65535" name="Cnct_TopicCdbleCncpt_Cdg_UsrSltd"/>
         </property>
         <property name="cnctTopicCdbleCncptCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.TopicCodeableConcept.Coding.Version</meta>
             <column length="65535" name="Cnct_TopicCdbleCncpt_Cdg_Vrsn"/>
         </property>
         <property name="cnctTopicCdbleCncptTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.TopicCodeableConcept.Text</meta>
             <column length="65535" name="Cnct_TopicCdbleCncpt_Txt"/>
         </property>
         <property name="cnctTopicRfrnc" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.TopicReference</meta>
             <column length="65535" name="Cnct_TopicRfrnc"/>
         </property>
         <property name="cnctTypCdgCd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Type.Coding.Code</meta>
             <column length="65535" name="Cnct_Typ_Cdg_Cd"/>
         </property>
         <property name="cnctTypCdgDsply" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Type.Coding.Display</meta>
             <column length="65535" name="Cnct_Typ_Cdg_Dsply"/>
         </property>
         <property name="cnctTypCdgSys" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Type.Coding.System</meta>
             <column length="65535" name="Cnct_Typ_Cdg_Sys"/>
         </property>
         <property name="cnctTypCdgUsrSltd" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Type.Coding.UserSelected</meta>
             <column length="65535" name="Cnct_Typ_Cdg_UsrSltd"/>
         </property>
         <property name="cnctTypCdgVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Type.Coding.Version</meta>
             <column length="65535" name="Cnct_Typ_Cdg_Vrsn"/>
         </property>
         <property name="cnctTypTxt" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Type.Text</meta>
             <column length="65535" name="Cnct_Typ_Txt"/>
         </property>
         <property name="cnctUrl" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Url</meta>
             <column length="65535" name="Cnct_Url"/>
         </property>
         <property name="cnctVrsn" type="string">
-            <meta attribute="resource-type"/>
+            <meta attribute="fhir-path">Contract.Version</meta>
             <column length="65535" name="Cnct_Vrsn"/>
         </property>
     </class>
