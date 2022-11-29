@@ -40,6 +40,9 @@ class CreateConversionCode
        	
        	//get abbreviations from csv for later use
        	CreateConversionCode.abbreviations = getAbbreviations();
+       	FileWriter csvWriter = createFileToWrite("C:\\Users\\pikovach\\camp-fhir\\CAMP-FHIR\\src\\main\\resources\\MappingCSV.csv");
+     	csvWriter.append("local_source, local_table, local_column, local_in_code, local_in_char, fhir_out_code, fhir_out_char, fhir_system, fhir_urn_oid_system, fhir_out_column, comments\n");
+       	csvWriter.append("");
        	
        	//looping through each model in hapi fhir model package 
        	while (iter.hasNext()) {
@@ -82,7 +85,7 @@ class CreateConversionCode
 	                 //writing head of sql file
 	                 sqlWriter.write("drop table if exists `" + cls.getName().split("\\.")[cls.getName().split("\\.").length -1]+ "`;\r\nCREATE TABLE `" + cls.getName().split("\\.")[cls.getName().split("\\.").length -1] + "` (\r\n id varchar(64),\r\n" );
 	
-	                 recurseThroughClasses(cls, "", null ,conversionWriter, sqlWriter, "");
+	                 recurseThroughClasses(cls, "","", null ,conversionWriter, sqlWriter, "");
 	                 
 	                 //writing end of sql file and conversion files
 	                 sqlWriter.write("PRIMARY KEY(id)) ENGINE=MyISAM\r\n"
@@ -104,13 +107,15 @@ class CreateConversionCode
 
 
 
-	public static void recurseThroughClasses(Class<?> cls, String hibernateFieldName, Method parentMethod, FileWriter conversionWriter, FileWriter sqlWriter, String parentMethodChain) throws IOException {
+	public static void recurseThroughClasses(Class<?> cls, String hibernateFieldName, String fhirPath, Method parentMethod, FileWriter conversionWriter, FileWriter sqlWriter, String parentMethodChain) throws IOException {
 	      String className = cls.getName().split("\\.")[cls.getName().split("\\.").length -1].replaceAll(".*\\$", "").replace(hibernateFieldName, "");
 	      
 	       // hibernateFieldName = hibernateFieldName == "" ? className : className.endsWith("Component") ? hibernateFieldName+"_"+ className.replace("Component", "") : hibernateFieldName+"_"+ className;
 	      	
 	        hibernateFieldName = hibernateFieldName == "" ? className : hibernateFieldName+ "_" +  parentMethod.getName().replaceFirst("set", "").replaceFirst("add", "").replaceFirst("get", "") ;
-	    	Set<Method> allSetters =  generateSetters(cls);
+	    	fhirPath = fhirPath == "" ? className : fhirPath+ "." +  parentMethod.getName().replaceFirst("set", "").replaceFirst("add", "").replaceFirst("get", "") ;
+	    	
+	        Set<Method> allSetters =  generateSetters(cls);
 	    	//System.out.println(allSetters);
 	    	Iterator<Method> methodIterator = allSetters.iterator();
 	    	String XmethodName = "DO NOT MATCH";
@@ -189,7 +194,7 @@ class CreateConversionCode
 	 			}
  			if((returnClassIsParentClassORreturnTypeIsPrimitiveType & parameterIsNotAModelThatNeedsToBeRecursed) | returnType.equals("org.hl7.fhir.r4.model.Reference")) {	//end of recursion, print to file
 
- 				writeMethodToFiles( currentMethod, cls,hibernateFieldName, XmethodName, parentMethod, conversionWriter, sqlWriter,isCurrentClassAList,  parentMethodChain);
+ 				writeMethodToFiles( currentMethod, cls,hibernateFieldName,fhirPath, XmethodName, parentMethod, conversionWriter, sqlWriter,isCurrentClassAList,  parentMethodChain);
 				
 
  			} else {
@@ -199,7 +204,7 @@ class CreateConversionCode
  				
 // 				
 	 				if(returnType.contains("EnumFactory")) { //java.lang.Character.toLowerCase(hibernateFieldName.charAt(0)) + ".get" + newhibernateFieldName.replace("_", "") + "()"
-			 				writeMethodToFiles( currentMethod, cls,hibernateFieldName, XmethodName, parentMethod, conversionWriter, sqlWriter,isCurrentClassAList,  parentMethodChain);
+			 				writeMethodToFiles( currentMethod, cls,hibernateFieldName,fhirPath, XmethodName, parentMethod, conversionWriter, sqlWriter,isCurrentClassAList,  parentMethodChain);
 	
 	 	 			}
  					
@@ -214,11 +219,11 @@ class CreateConversionCode
 		 				if(!parameterClass.getName().equals("org.hl7.fhir.r4.model.Reference")) {
 		 					if((parameterClass.getName().contains(".Age") |parameterClass.getName().contains(".Count")|parameterClass.getName().contains(".Duration"))) {
 		 						org.hl7.fhir.r4.model.Quantity quant = new org.hl7.fhir.r4.model.Quantity();
-			 					recurseThroughClasses(quant.getClass(), hibernateFieldName, currentMethod,  conversionWriter,  sqlWriter, parentMethodChain);
+			 					recurseThroughClasses(quant.getClass(), hibernateFieldName,fhirPath, currentMethod,  conversionWriter,  sqlWriter, parentMethodChain);
 			 					
 		 					} else {
 //		 						System.out.println(currentMethod.getName() + cls.getName());
-			 					recurseThroughClasses(parameterClass, hibernateFieldName , currentMethod, conversionWriter,  sqlWriter, parentMethodChain); 
+			 					recurseThroughClasses(parameterClass, hibernateFieldName , fhirPath,currentMethod, conversionWriter,  sqlWriter, parentMethodChain); 
 			 					
 		 					}
 		 				}
@@ -228,10 +233,10 @@ class CreateConversionCode
 		 				if(!returncls.getName().equals("org.hl7.fhir.r4.model.Reference")) { 
 		 					if((returncls.getName().contains(".Age") |returncls.getName().contains(".Count")|returncls.getName().contains(".Duration"))) {
 		 						org.hl7.fhir.r4.model.Quantity quant = new org.hl7.fhir.r4.model.Quantity();
-			 					recurseThroughClasses(quant.getClass(), hibernateFieldName, currentMethod,  conversionWriter,  sqlWriter,parentMethodChain); 
+			 					recurseThroughClasses(quant.getClass(), hibernateFieldName,fhirPath, currentMethod,  conversionWriter,  sqlWriter,parentMethodChain); 
 			 					
 		 					} else {
-			 					recurseThroughClasses(returncls, hibernateFieldName, currentMethod,  conversionWriter,  sqlWriter, parentMethodChain); 
+			 					recurseThroughClasses(returncls, hibernateFieldName,fhirPath, currentMethod,  conversionWriter,  sqlWriter, parentMethodChain); 
 			 				}
 			 			}
 		 			}
@@ -244,8 +249,12 @@ class CreateConversionCode
  		 }
  		
     }
-    
-    public static void writeMethodToFiles(Method currentMethod, Class parentClass , String hibernateFieldName, String XmethodName, Method  parentMethod, FileWriter conversionWriter, FileWriter sqlWriter, boolean isCurrentClassAList, String parentMethodChain) throws IOException {
+
+
+
+
+
+	public static void writeMethodToFiles(Method currentMethod, Class parentClass , String hibernateFieldName, String fhirPath, String XmethodName, Method  parentMethod, FileWriter conversionWriter, FileWriter sqlWriter, boolean isCurrentClassAList, String parentMethodChain) throws IOException {
     		//carries over the methodName if the current method deals with an X typed field
     	
     		String methodName =  !XmethodName.equals("DO NOT MATCH") ? XmethodName.startsWith("get") ? XmethodName.replaceFirst("get", "set") : XmethodName : currentMethod.getName();
@@ -264,6 +273,7 @@ class CreateConversionCode
     		}
 			//System.out.println(currentMethod.toString());
 			String newhibernateFieldName= hibernateFieldName+"_" +currentMethod.getName().replaceFirst("set","").replaceFirst("add","").replaceFirst("get", "");
+			 fhirPath = fhirPath +"." + currentMethod.getName().replaceFirst("set","").replaceFirst("add","").replaceFirst("get", "");
 			newhibernateFieldName = replaceTermsWithAbbreviations(newhibernateFieldName);
 			String newMethodNameToChainOffOf  = "";
 			newMethodNameToChainOffOf = hibernateFieldName.toLowerCase().replaceFirst("_[^_]+$", "").replace("_", "").replaceAll(".*\\$", ".");
@@ -405,7 +415,7 @@ class CreateConversionCode
 	 			if(newhibernateFieldName.length() > 64) {
 	 				System.out.println(newhibernateFieldName);
 	 			}
-	    		sqlWriter.write(newhibernateFieldName + " TEXT,\r\n");
+	    		sqlWriter.write(newhibernateFieldName + " TEXT COMMENT '"+fhirPath+"',\r\n");
 			}
     }
     
