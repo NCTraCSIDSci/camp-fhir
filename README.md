@@ -13,14 +13,15 @@ CAMP FHIR was created and is maintained by the NC TraCS Institute, home of the N
 There are three basic steps to transform clinical data using CAMP FHIR, along with a few prerequisities. (More detailed documentation is available in the docs directory--this is just an overview.)
 
 ### Prerequisites:
-1. Your clinical data is stored in an RDBMS. (Our SQL scripts assume you're using Oracle, but you can translate our scripts to work with whatever RDBMS you're using.)
-2. You have the ability to create views in that database.
-3. You have cloned this repo to an environment with the ability to connect to/read from that database.
+1. Your clinical data is stored in an RDBMS (with the ability to create Views/Tables). Our release includes a H2 Database that includes a sythetic OMOP Patient and OMOP Condition Domain for testing purposes if desired. 
+2. Java (Java 18+ suggested). Link for latest release of OpenJDK release against which CAMPFHIR has been tested is availble [here](https://jdk.java.net/19/) if needed.
+3. Download and unpack the latest release from our Github release page [here](https://github.com/NCTraCSIDSci/camp-fhir/releases/). There are two options for download. One is a eclipse-based user iterface for users (CAMPFHIR-GUI.zip). The other is everything needed for running CAMPFHIR from command-line (CAMPFHIR-COMMANDLINE.zip).
+
 
 ### High-level steps:
-1. Run our mapping table creation script (or your own script, based off of ours) to map your local codes to FHIR codes. The mapping table creation script in this repo will already map codesets in the PCORnet 4.1 Common Data Model to FHIR codesets. If your source data model is different, you can fill in this table to suit your needs, so long as you keep the structure consistent with what's in the script.
-2. Run our view creation script (or your own script, based off of ours) to create views of your clinical data that CAMP FHIR expects as inputs. (The view creation scripts in this repo will work to transform source data in the PCORnet 4.1 Common Data Model. If your source data model is different, you can alter our scripts to suit your needs: it will work so long as the views you create have the same columns / column names as the ones in this repo.)
+1. Run our mapping table creation scripts or your own script, based off of ours. ([example](https://github.com/NCTraCSIDSci/camp-fhir/tree/master/scripts/Postgres)) to map your local codes to FHIR codes. The mapping table included in our demo H2 Database in our release has mapping tables for OMOP 5.4. that maps a limited number of codesets from OMOP 5.4 Common Data Model to FHIR codesets. If your source data model is different, you can fill in this table to suit your needs, so long as you keep the structure consistent with what's in the script. We also have provided mapping table scripts for PCORNET 4.1 CDM if needed.
+2. Run our view creation script (or your own script, based off of ours) to create views of your clinical data that CAMP FHIR expects as inputs. (The views included in the demo dataset will work to transform source data in the OMOP 5.4 Common Data Model. If your source data model is different, you can alter our scripts to suit your needs: it will work so long as the views you create have the same columns / column names as the ones in [this](https://github.com/NCTraCSIDSci/camp-fhir/tree/master/scripts/Postgres) repo.) We also have provided view creation scripts for PCORNET 4.1 CDM if needed.
 3. Run the CAMP FHIR to transform the desired domain(s)\. This can be achieved two different ways\:
-    - Run CAMP FHIR from command\-line simply by setting your configuration file and running the command java \-jar CAMPFHIR\.jar\.
+    - Run CAMP FHIR from command\-line simply by setting your configuration file (config.json) and running the command java \-jar CAMPFHIR\.jar\.
     - Run CAMP FHIR using our new graphical user interface which provides a visual and user friendly alternative to running CAMP FHIR from command\-line\. The GUI focuses on allowing users to create a script that runs CAMPFHIR once the inputs are filled\. The user has access to all of the available resources and has the option to activate database resource mapping through the GUI\. 
-![ss](https://user-images.githubusercontent.com/958978/156379971-0c756651-8f50-4841-91db-76c9dd840b8e.png)
+
