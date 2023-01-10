@@ -10,12 +10,12 @@ CAMP FHIR reads input data from custom views that we've built to align relationa
 CAMP FHIR was created and is maintained by the NC TraCS Institute, home of the NIH CTSA at University of North Carolina at Chapel Hill. CAMP FHIR is open source, but if you use it for a project, we kindly request that users of this service provide proper attribution for any products (e.g., manuscripts, podium presentations, software) derived from work related to CAMP FHIR. Attribution should include acknowledgement of the funder (National Institutes of Health, National Center for Advancing Translational Sciences, Biomedical Data Translator Program [awards OT3TR002020 and OT2TR002514] and Center for Translational Science Program [award UL1TR002489]), UNC Hospitals and Health Care System, and all team members who contributed to the work.
 
 ## How do I use CAMP FHIR?
-There are three basic steps to transform clinical data using CAMP FHIR, along with a few prerequisities. (More detailed documentation is available in the docs directory--this is just an overview.)
+There are three basic steps to transform clinical data using CAMP FHIR, along with a few prerequisites. (More detailed documentation is available in the docs directory--this is just an overview.)
 
 ### Prerequisites:
-1. Your clinical data is stored in an RDBMS (with the ability to create Views/Tables). Our release includes a H2 Database that includes a sythetic OMOP Patient and OMOP Condition Domain for testing purposes if desired. 
-2. Java (Java 18+ suggested). Link for latest release of OpenJDK release against which CAMPFHIR has been tested is availble [here](https://jdk.java.net/19/) if needed.
-3. Download and unpack the latest release from our Github release page [here](https://github.com/NCTraCSIDSci/camp-fhir/releases/). There are two options for download. One is a eclipse-based user iterface for users (CAMPFHIR-GUI.zip). The other is everything needed for running CAMPFHIR from command-line (CAMPFHIR-COMMANDLINE.zip).
+1. Your clinical data is stored in an RDBMS (with the ability to create Views/Tables). Our release includes a H2 Database that includes a synthetic OMOP Patient and OMOP Condition Domain for testing purposes if desired. 
+2. Java (Java 18+ suggested). Link for latest release of OpenJDK release against which CAMPFHIR has been tested is available  [here](https://jdk.java.net/19/) if needed.
+3. Download and unpack the latest release from our Github release page [here](https://github.com/NCTraCSIDSci/camp-fhir/releases/). There are two options for download. One is a eclipse-based user interface for users (CAMPFHIR-GUI.zip). The other is everything needed for running CAMPFHIR from command-line (CAMPFHIR-COMMANDLINE.zip).
 
 
 ### High-level steps:
